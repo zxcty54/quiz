@@ -197,7 +197,9 @@ def clean_title(title):
     junk_titles = [
         "skip to main content", "skip to content", "home", "about us", 
         "contact us", "feedback", "sitemap", "disclaimer", "privacy policy",
-        "accessibility options", "screen reader access", "search"
+        "accessibility options", "screen reader access", "search",
+        "order/circular/notification", "order / circular / notification",
+        "circulars / notifications", "office orders"
     ]
     if title.lower().strip() in junk_titles or len(title.strip()) < 15:
         return ""
@@ -212,7 +214,7 @@ def clean_title(title):
 
 
 # ============================================================
-# CONTENT QUALITY & WORD LIMITERS
+# CONTENT QUALITY
 # ============================================================
 
 def word_count(text):
@@ -669,7 +671,7 @@ def fetch_generic_article_content(url, source=""):
 
 
 # ============================================================
-# ITEM BUILDER WITH HARD WORD COUNT CHECK
+# ITEM BUILDER WITH HARD WORD & CONTENT DATE CHECK
 # ============================================================
 
 def make_item(source, title, url, date=None, content="", item_type="Scraped"):
@@ -680,7 +682,12 @@ def make_item(source, title, url, date=None, content="", item_type="Scraped"):
     if not clean_title_str or not clean_url_str:
         return None
 
-    # STRICT WORD COUNT CHECK: Discard short snippets
+    # Block Generic Circular Table Index Pages
+    if "order/circular/notification" in clean_title_str.lower() or "rowid=2951" in clean_url_str.lower():
+        warn(f"REJECTED CIRCULAR INDEX PAGE | {source} | {clean_title_str[:45]}")
+        return None
+
+    # STRICT WORD COUNT CHECK: Discard short 20-30 word snippets
     words_total = word_count(clean_content_str)
     if words_total < MIN_CONTENT_WORDS:
         warn(f"REJECTED TOO SHORT ({words_total} words < {MIN_CONTENT_WORDS}) | {source} | {clean_title_str[:45]}")
@@ -690,7 +697,6 @@ def make_item(source, title, url, date=None, content="", item_type="Scraped"):
     if words_total > MAX_CONTENT_WORDS:
         clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
         words_total = word_count(clean_content_str)
-        debug(f"CONTENT CAPPED TO MAX {MAX_CONTENT_WORDS} WORDS | {source} | {clean_title_str[:45]}")
 
     parsed_date = date or parse_date(clean_title_str) or now_ist()
     if parsed_date.tzinfo is None:
@@ -706,6 +712,15 @@ def make_item(source, title, url, date=None, content="", item_type="Scraped"):
             f"{clean_title_str[:100]}"
         )
         return None
+
+    # CONTENT BODY DATE VERIFICATION: Check for stale dates inside text (e.g., 31/07/2026, 28/07/2026)
+    dates_in_content = re.findall(r'\b\d{2}/\d{2}/\d{4}\b', clean_content_str[:300])
+    if dates_in_content:
+        for d_str in dates_in_content[:3]:
+            d_parsed = parse_date(d_str)
+            if d_parsed and not is_within_rolling_window(d_parsed):
+                warn(f"REJECTED STALE BODY DATE ({d_str}) | {source} | {clean_title_str[:45]}")
+                return None
 
     if is_bad_portal_content(clean_content_str):
         warn(f"DEBUG PORTAL CONTENT REJECTED | {source} | {clean_title_str[:100]}")
@@ -881,6 +896,7 @@ IPRD_PAGES = [
     "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8931",
     "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8930",
     "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=6996",
+    "https://state.bihar.gov.in/csd/SectionInformation.html?editForm&rowId=8929",
 ]
 
 
@@ -904,7 +920,7 @@ def scrape_iprd_bihar():
                 continue
 
             low = title.lower()
-            if any(x in low for x in ["home", "contact", "feedback", "copyright", "web information manager", "accessibility", "previous", "next", "department"]):
+            if any(x in low for x in ["home", "contact", "feedback", "copyright", "web information manager", "accessibility", "previous", "next", "department", "order/circular"]):
                 continue
 
             candidates.append((title, href))
@@ -1104,10 +1120,6 @@ def scrape_bihar_cm():
 
             if title and len(title) > 10:
                 content, date = fetch_generic_article_content(href, "CMO Bihar")
-                
-                # Use deep content or full press title context
-                if not content or word_count(content) < MIN_CONTENT_WORDS:
-                    content = f"Official Press Release issued by Chief Minister Office (CMO) Bihar: {title}. Focuses on state development, administrative decisions, and public welfare execution."
 
                 obj = make_item(
                     source="Bihar CM Office",
@@ -1147,11 +1159,9 @@ def scrape_google_bihar():
                 pub_date = item.find('pubDate').text if item.find('pubDate') is not None else ""
 
                 if title and link:
-                    # Unpack actual publisher URL from Google RSS link
                     real_url = get_real_publisher_url(link)
                     content, date = fetch_generic_article_content(real_url or link, "Google News Bihar")
 
-                    # STRICT WORD COUNT CHECK: Must have at least MIN_CONTENT_WORDS (100 words)
                     if not content or word_count(content) < MIN_CONTENT_WORDS:
                         desc_tag = item.find('description')
                         desc_text = clean_text(desc_tag.text) if desc_tag is not None else ""
