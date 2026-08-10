@@ -35,7 +35,7 @@ TIMEOUT = 20
 MAX_PER_SOURCE = 10
 
 MIN_CONTENT_WORDS = 60      # Strictly Minimum 60 words required
-MAX_CONTENT_WORDS = 2000    # Maximum 2000 words limit
+MAX_CONTENT_WORDS = 1500   # Maximum 2000 words limit
 
 # STRICT 24-HOUR ROLLING WINDOW
 DEFAULT_MAX_AGE_HOURS = 24
