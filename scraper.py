@@ -82,38 +82,73 @@ gov_session.mount('https://', CustomGovSSLAdapter())
 gov_session.mount('http://', CustomGovSSLAdapter())
 
 # ============================================================
-# EXCLUDE KEYWORDS BLACKLIST (Stock Market, Crime, Offtopic & Astrology)
+# ============================================================
+# EXCLUDE KEYWORDS BLACKLIST (ALL OTHER STATES, CRIME, STOCK & ASTROLOGY)
 # ============================================================
 
 EXCLUDE_KEYWORDS = [
-    # 1. Stock Market, Share Market & Intraday Trading Blocking
+    # -------------------------------------------------------------
+    # 1. OTHER INDIAN STATES & UTS BLOCKLIST (EXCEPT BIHAR)
+    # -------------------------------------------------------------
+    # Uttar Pradesh
+    "uttar pradesh", "up news", "lucknow", "yogi adityanath", "kanpur", "varanasi", "prayagraj", "ayodhya", "noida",
+    # Jharkhand
+    "jharkhand", "ranchi", "jamshedpur", "dhanbad", "hemant soren",
+    # Madhya Pradesh & Chhattisgarh
+    "madhya pradesh", "mp news", "bhopal", "indore", "chhattisgarh", "raipur",
+    # Rajasthan & Gujarat
+    "rajasthan", "jaipur", "jodhpur", "udaipur", "gujarat", "ahmedabad", "gandhinagar", "surat",
+    # Maharashtra & Goa
+    "maharashtra", "mumbai", "pune", "nagpur", "goa", "panaji",
+    # Delhi & Haryana & Punjab
+    "delhi news", "arvind kejriwal", "haryana", "gurugram", "chandigarh", "punjab", "amritsar", "ludhiana",
+    # Uttarakhand & Himachal Pradesh
+    "uttarakhand", "dehradun", "himachal pradesh", "shimla",
+    # West Bengal & Odisha
+    "west bengal", "kolkata", "mamata banerjee", "odisha", "bhubaneswar",
+    # South India (Tamil Nadu, Karnataka, Kerala, Andhra, Telangana)
+    "karnataka", "bengaluru", "tamil nadu", "chennai", "kerala", "thiruvananthapuram", 
+    "andhra pradesh", "amaravati", "telangana", "hyderabad",
+    # North-East States
+    "assam", "guwahati", "manipur", "imphal", "meghalaya", "shillong", "mizoram", "aizawl",
+    "nagaland", "kohima", "tripura", "agartala", "arunachal pradesh", "sikkim",
+    # Union Territories (J&K, Ladakh, etc.)
+    "jammu and kashmir", "srinagar", "jammu", "ladakh", "leh", "puducherry",
+
+    # -------------------------------------------------------------
+    # 2. STOCK MARKET, SHARE MARKET & INTRADAY TRADING BLOCKING
+    # -------------------------------------------------------------
     "stock market", "share market", "sensex", "nifty", "intraday", "bse", "nse",
     "shares rise", "shares fall", "stocks to buy", "stocks in news", "equity market",
     "bulls", "bears", "ipo", "trading call", "share price", "gainers", "losers",
+    "rupee falls", "rupee rises", "rupee opens", "dollar vs rupee",
     "सेंसेक्स", "निफ्टी", "शेयर बाजार", "स्टॉक मार्केट", "इक्विटी",
 
-    # 2. Local Incidents, Offtopic & Domestic Affairs
+    # -------------------------------------------------------------
+    # 3. LOCAL INCIDENTS, OFFTOPIC & DOMESTIC AFFAIRS
+    # -------------------------------------------------------------
     "bride", "groom", "marriage", "wedding", "abscond", "dulhan", "dulha", "shadi", "vidai",
     "love affair", "lover", "premi", "presika", "husband", "wife", "divorce", "suicide",
     "दुल्हन", "दूल्हा", "शादी", "विदाई", "फरार", "प्रेमी", "प्रेमिका", "पति", "पत्नी", "खुदकुशी",
 
-    # 3. Astrology / Rashifal / Horoscope Blocking
+    # -------------------------------------------------------------
+    # 4. ASTROLOGY / RASHIFAL / HOROSCOPE BLOCKING
+    # -------------------------------------------------------------
     "rashifal", "horoscope", "astrology", "kundali", "panchang", "jyotish", "grah nakshatra",
     "rashi", "mesh", "vrishabh", "mithun", "kark", "sinh", "kanya", "tula", "vrishchik",
     "dhanu", "makar", "kumbh", "meen", "zodiac", "astrological", "भविष्यफल", "राशिफल", "पंचांग",
 
-    # 4. Crime & Accidents Blocking
+    # -------------------------------------------------------------
+    # 5. CRIME & ACCIDENTS BLOCKING
+    # -------------------------------------------------------------
     "murder", "police", "arrest", "theft", "accident", "rape", "crime", "fir", "killed", "dead", "gang",
     "हत्या", "गिरफ्तार", "हादसा", "चोरी", "मौत", "शव",
 
-    # 5. Local Political Rallies
-    "election campaign", "rally", "by-poll",
-
-    # 6. Other Non-Bihar States Blocking
-    "uttar pradesh news", "madhya pradesh news", "rajasthan news", "maharashtra news", "mumbai news",
-    "delhi news", "punjab news", "haryana news", "karnataka news", "tamil nadu news", "kerala news"
+    # -------------------------------------------------------------
+    # 6. LOCAL POLITICAL RALLIES
+    # -------------------------------------------------------------
+    "election campaign", "rally", "by-poll"
 ]
-
 def check_blacklist_reason(title, content=""):
     text = (title + " " + content).lower()
     for bad_word in EXCLUDE_KEYWORDS:
