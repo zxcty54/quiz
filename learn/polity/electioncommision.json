@@ -1,0 +1,1451 @@
+
+{
+  "topic_id": "polity_election_commission",
+  "topic_title": "Election Commission of India",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 50,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 50
+      },
+      "intro_payload": {
+        "title": "Election Commission of India",
+        "icon": "🗳️",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Understand Constitutional provisions (Articles 324-329)",
+          "Master composition, appointment & removal of Election Commissioners",
+          "Learn powers, functions & independence of Election Commission",
+          "Decode BPSC/SSC traps on Chief Election Commissioner vs Election Commissioners",
+          "Grasp Model Code of Conduct, EVM, VVPAT & electoral reforms"
+        ],
+        "estimated_time": "45 minutes",
+        "total_concepts": 8
+      },
+      "navigation": {
+        "next": "card_02_election_daily_life",
+        "button_text": "शुरू करें ➔"
+      }
+    },
+    {
+      "card_id": "card_02_election_daily_life",
+      "card_slug": "card_02_election_daily_life",
+      "type": "chat",
+      "concept_id": "election_introduction",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, तुमने देखा होगा हर 5 साल में गाँव, शहर, राज्य और पूरे देश में चुनाव होते हैं। TV पर नेता भाषण देते हैं, पोस्टर लगते हैं, फिर एक दिन लोग वोट डालने जाते हैं। लेकिन सोचो, इतने बड़े देश में करोड़ों लोगों का चुनाव कराना - किसकी जिम्मेदारी है?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, शायद सरकार करवाती होगी? या फिर कोई खास department?"
+        },
+        {
+          "speaker": "aman",
+          "text": "बहुत करीब पहुँच गए! देखो, अगर चुनाव करवाने की जिम्मेदारी सरकार के पास हो, तो एक बड़ी समस्या होगी। मान लो जो सरकार अभी सत्ता में है, वो ही चुनाव करवाए - तो वो अपने पक्ष में धांधली कर सकती है ना? इसलिए हमारे Constitution ने एक स्वतंत्र संस्था बनाई - Election Commission of India। यह सरकार से बिल्कुल अलग है और केवल चुनाव कराने का काम करती है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Matlab जो चुनाव करवाता है वो सरकार से अलग होना चाहिए ताकि निष्पक्ष हो सके!"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_constitutional_provision",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_03_constitutional_provision",
+      "card_slug": "card_03_constitutional_provision",
+      "type": "chat",
+      "concept_id": "article_324_introduction",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "बिल्कुल सही समझे! अब संविधान की बात करते हैं। Article 324 से 329 तक Election Commission और चुनाव प्रक्रिया के बारे में लिखा है। सबसे महत्वपूर्ण है Article 324 - यह कहता है कि चुनावों की देखरेख, निर्देशन और नियंत्रण Election Commission में निहित होगा। यानी President, Parliament, Prime Minister से चुनाव के मामले में Election Commission पूरी तरह स्वतंत्र है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, तो क्या PM भी Election Commission को order नहीं दे सकते?"
+        },
+        {
+          "speaker": "aman",
+          "text": "बिल्कुल नहीं! यही तो Election Commission की ताकत है। Article 324 बहुत शक्तिशाली provision है। ⭐ BPSC/UPSC Favorite: Election Commission को 'Superintendence, Direction and Control' की शक्ति दी गई है - यानी चुनाव से जुड़े सभी मामलों में यह सर्वोच्च है। कोई सरकार, कोई नेता इसे प्रभावित नहीं कर सकता।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Matlab पूरी आजादी है चुनाव के मामले में!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_composition_structure",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_04_composition_structure",
+      "card_slug": "card_04_composition_structure",
+      "type": "chat",
+      "concept_id": "ec_composition",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "अब Election Commission की संरचना समझते हैं। Article 324 कहता है - Election Commission में Chief Election Commissioner (CEC) और ऐसे अन्य Election Commissioners होंगे जिन्हें President समय-समय पर नियुक्त करे। मतलब कम से कम 1 CEC तो होगा ही, बाकी की संख्या बदल सकती है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, अभी कितने Commissioners हैं? और क्या हमेशा से इतने ही थे?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ SSC/Railway Favorite Fact: 1950 में जब पहली बार बना तब केवल 1 Chief Election Commissioner था। 1989 में पहली बार 2 और Election Commissioners जोड़े गए। 1993 से लेकर अब तक स्थायी रूप से 3 members हैं - 1 CEC + 2 ECs। तीनों की शक्ति बराबर होती है, decision majority से लिया जाता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! तो CEC अकेला boss नहीं है, तीनों मिलकर decide करते हैं!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz_article_324",
+        "button_text": "Quiz लें ➔"
+      }
+    },
+    {
+      "card_id": "card_05_quiz_article_324",
+      "card_slug": "card_05_quiz_article_324",
+      "type": "quiz",
+      "concept_id": "article_324_quiz",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "चुनावों की देखरेख, निर्देशन और नियंत्रण किस Article में दिया गया है?",
+        "options": [
+          { "id": "A", "text": "Article 324" },
+          { "id": "B", "text": "Article 325" },
+          { "id": "C", "text": "Article 326" },
+          { "id": "D", "text": "Article 329" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Article 324 Election Commission को चुनावों के 'Superintendence, Direction and Control' की शक्ति देता है। यह चुनाव प्रक्रिया से संबंधित सबसे महत्वपूर्ण Article है और BPSC/UPSC में बार-बार पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_06_quiz_composition",
+        "button_text": "अगला प्रश्न ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_composition",
+      "card_slug": "card_06_quiz_composition",
+      "type": "quiz",
+      "concept_id": "composition_quiz",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "वर्तमान में Election Commission में कितने सदस्य हैं?",
+        "options": [
+          { "id": "A", "text": "केवल 1 (CEC)" },
+          { "id": "B", "text": "2 (1 CEC + 1 EC)" },
+          { "id": "C", "text": "3 (1 CEC + 2 ECs)" },
+          { "id": "D", "text": "5 (1 CEC + 4 ECs)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "1993 से वर्तमान तक Election Commission में 3 सदस्य हैं - 1 Chief Election Commissioner और 2 Election Commissioners। 1950-1989 तक केवल CEC था, 1989-1993 में 2 members थे। यह numerical fact SSC/Railway में frequently पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_07_quiz_year_1989",
+        "button_text": "अगला प्रश्न ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_year_1989",
+      "card_slug": "card_07_quiz_year_1989",
+      "type": "quiz",
+      "concept_id": "year_1989_quiz",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: किस वर्ष पहली बार 2 Election Commissioners जोड़े गए?",
+        "options": [
+          { "id": "A", "text": "1950" },
+          { "id": "B", "text": "1989" },
+          { "id": "C", "text": "1993" },
+          { "id": "D", "text": "2000" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "1989 में पहली बार multi-member Election Commission बना जब 2 Election Commissioners जोड़े गए। 1950 से 1989 तक single-member (केवल CEC) था। 1993 से permanently 3-member system है। ये chronological facts BPSC में अक्सर पूछे जाते हैं।"
+      },
+      "navigation": {
+        "next": "card_08_milestone_basic_structure",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_08_milestone_basic_structure",
+      "card_slug": "card_08_milestone_basic_structure",
+      "type": "milestone",
+      "concept_id": "basic_structure_complete",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🎯 Module 1 Complete!",
+        "badge_emoji": "🗳️",
+        "completed_topic": "Election Commission की बुनियादी संरचना",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "Article 324 और 3-member structure अब आपकी जेब में! आगे और रोचक facts आ रहे हैं।"
+      },
+      "navigation": {
+        "next": "card_09_appointment_process",
+        "button_text": "अगला Module शुरू करें ➔"
+      }
+    },
+    {
+      "card_id": "card_09_appointment_process",
+      "card_slug": "card_09_appointment_process",
+      "type": "chat",
+      "concept_id": "appointment_intro",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "अब appointment की बात करते हैं। CEC और ECs दोनों को President नियुक्त करते हैं। लेकिन यहाँ एक बहुत बड़ा difference है जो UPSC/BPSC हमेशा पूछता है। Dekho - Chief Election Commissioner और अन्य Election Commissioners की appointment तो President करते हैं, लेकिन removal (हटाने) की प्रक्रिया अलग-अलग है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, appointment तो दोनों की President करते हैं। Removal में क्या फर्क है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Gold Trap! CEC को हटाने के लिए Supreme Court के judge की तरह impeachment चाहिए - Parliament के दोनों सदनों में विशेष बहुमत से। लेकिन अन्य Election Commissioners को CEC की सिफारिश पर President हटा सकते हैं। यानी CEC को ज्यादा security दी गई है ताकि वो पूरी तरह स्वतंत्र रहे।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! CEC को Judge जितनी protection मिली है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_tenure_salary",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_10_tenure_salary",
+      "card_slug": "card_10_tenure_salary",
+      "type": "chat",
+      "concept_id": "tenure_salary_details",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Term और Salary की बात करें। CEC और ECs का कार्यकाल 6 वर्ष या 65 वर्ष की आयु, जो भी पहले हो। Salary और सेवा शर्तें Parliament तय करती है लेकिन कार्यकाल के दौरान इनमें कोई प्रतिकूल बदलाव नहीं हो सकता। ⭐ SSC Fact: वर्तमान में CEC का वेतन Supreme Court के Judge के बराबर है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, 6 साल या 65 साल - ये क्यों दो conditions हैं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Smart question! मान लो कोई 62 साल की उम्र में CEC बना। तो उसे 6 साल नहीं मिलेंगे, केवल 3 साल मिलेंगे (65 तक)। इसलिए 'whichever is earlier' यानी जो भी पहले आए। यह provision independence सुनिश्चित करता है - ना तो बहुत कम term ताकि pressure में ना आए, ना तो बहुत लंबा ताकि accountability रहे।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Balance है independence और accountability के बीच।"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_removal_difference",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_11_removal_difference",
+      "card_slug": "card_11_removal_difference",
+      "type": "chat",
+      "concept_id": "removal_comparison",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab removal की detailed comparison करते हैं:\n\nCEC Removal: (1) Proved misbehaviour या incapacity के आधार पर (2) Parliament के दोनों सदनों में Special Majority से address (3) Same procedure as Supreme Court Judge\n\nEC Removal: (1) CEC की recommendation पर (2) President द्वारा\n\nयह difference constitutional है और बदला नहीं जा सकता। इससे CEC की supremacy और independence बनी रहती है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab अगर EC कुछ गलत करे तो CEC उसे हटा सकते हैं, लेकिन CEC को हटाने के लिए पूरी Parliament चाहिए!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely correct! और देखो एक और महत्वपूर्ण point - CEC के बिना किसी EC की salary, allowances या सेवा शर्तों में भी बदलाव नहीं हो सकता। यानी सभी matters में CEC की सहमति जरूरी है। यह check and balance का perfect example है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ये तो CEC को बहुत ज्यादा power दे दी!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_quiz_cec_removal",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_12_quiz_cec_removal",
+      "card_slug": "card_12_quiz_cec_removal",
+      "type": "quiz",
+      "concept_id": "cec_removal_quiz",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Chief Election Commissioner को कैसे हटाया जा सकता है?",
+        "options": [
+          { "id": "A", "text": "President द्वारा सीधे" },
+          { "id": "B", "text": "Prime Minister की सिफारिश पर" },
+          { "id": "C", "text": "Parliament में impeachment द्वारा (Supreme Court Judge की तरह)" },
+          { "id": "D", "text": "Cabinet की सिफारिश पर" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ UPSC/BPSC Gold! CEC को केवल Parliament में impeachment द्वारा हटाया जा सकता है - exactly वैसे ही जैसे Supreme Court के Judge को। Proved misbehaviour या incapacity के आधार पर दोनों सदनों में Special Majority से address पास करना होता है। यह CEC को maximum independence देता है।"
+      },
+      "navigation": {
+        "next": "card_13_quiz_ec_removal",
+        "button_text": "अगला प्रश्न ➔"
+      }
+    },
+    {
+      "card_id": "card_13_quiz_ec_removal",
+      "card_slug": "card_13_quiz_ec_removal",
+      "type": "quiz",
+      "concept_id": "ec_removal_quiz",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "अन्य Election Commissioners को कौन हटा सकता है?",
+        "options": [
+          { "id": "A", "text": "President, CEC की सिफारिश पर" },
+          { "id": "B", "text": "President, स्वयं के विवेक से" },
+          { "id": "C", "text": "Parliament में impeachment द्वारा" },
+          { "id": "D", "text": "Prime Minister" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ BPSC Trap! अन्य Election Commissioners को President, Chief Election Commissioner की सिफारिश पर ही हटा सकते हैं। President अपने विवेक से नहीं हटा सकते। यह provision CEC को ECs पर नियंत्रण देता है और साथ ही ECs को भी सुरक्षा प्रदान करता है।"
+      },
+      "navigation": {
+        "next": "card_14_quiz_tenure",
+        "button_text": "अगला प्रश्न ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_tenure",
+      "card_slug": "card_14_quiz_tenure",
+      "type": "quiz",
+      "concept_id": "tenure_quiz",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "CEC और ECs का कार्यकाल कितना है?",
+        "options": [
+          { "id": "A", "text": "5 वर्ष या 62 वर्ष की आयु, जो भी पहले हो" },
+          { "id": "B", "text": "6 वर्ष या 65 वर्ष की आयु, जो भी पहले हो" },
+          { "id": "C", "text": "7 वर्ष या 70 वर्ष की आयु, जो भी पहले हो" },
+          { "id": "D", "text": "President के प्रसादपर्यंत" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CEC और ECs दोनों का कार्यकाल 6 वर्ष या 65 वर्ष की आयु, जो भी पहले हो। यह fixed term independence सुनिश्चित करता है। President के 'pleasure' पर नहीं है, इसलिए political pressure से मुक्त रहते हैं। SSC/Railway में यह numerical fact frequently पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_15_milestone_appointment_removal",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_15_milestone_appointment_removal",
+      "card_slug": "card_15_milestone_appointment_removal",
+      "type": "milestone",
+      "concept_id": "appointment_removal_complete",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "⚖️ Module 2 Complete!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Appointment, Tenure & Removal",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "CEC vs EC का difference अब crystal clear! अब powers और functions की दुनिया में चलते हैं।"
+      },
+      "navigation": {
+        "next": "card_16_powers_functions_intro",
+        "button_text": "अगला Module ➔"
+      }
+    },
+    {
+      "card_id": "card_16_powers_functions_intro",
+      "card_slug": "card_16_powers_functions_intro",
+      "type": "chat",
+      "concept_id": "powers_introduction",
+      "level": 3,
+      "progress": {
+        "current": 16,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "अब Election Commission की powers और functions देखते हैं। Article 324 बहुत व्यापक शक्ति देता है। Election Commission निम्नलिखित चुनाव करवाती है: (1) President और Vice-President (2) Lok Sabha और Rajya Sabha (3) State Legislative Assemblies (4) State Legislative Councils। ⭐ BPSC Trap: Panchayat और Municipality के चुनाव EC नहीं, बल्कि State Election Commission करवाती है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, तो गाँव के चुनाव EC नहीं करवाती? ये मुझे नहीं पता था!"
+        },
+        {
+          "speaker": "aman",
+          "text": "बिल्कुल! यह बहुत important distinction है। Article 243K और 243ZA में State Election Commission का provision है जो Panchayats और Municipalities के चुनाव करवाती है। Election Commission of India केवल Parliament, State Legislatures और President/VP के चुनाव देखती है। यह confusion BPSC/SSC में हमेशा trap के रूप में आता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Matlab दो अलग commissions हैं - एक केंद्र के लिए, एक local bodies के लिए!"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_major_powers",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_17_major_powers",
+      "card_slug": "card_17_major_powers",
+      "type": "chat",
+      "concept_id": "major_powers_list",
+      "level": 3,
+      "progress": {
+        "current": 17,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Election Commission की major powers:\n\n1. चुनाव कार्यक्रम तय करना (dates, phases)\n2. Voter lists तैयार करना और revise करना\n3. Political parties को मान्यता देना और symbols allot करना\n4. Model Code of Conduct लागू करना\n5. चुनाव खर्च की निगरानी करना\n6. चुनाव में गड़बड़ी पर action लेना (re-poll, results cancel)\n7. Disqualification के मामलों पर राय देना (President/Governor को)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, Model Code of Conduct क्या होता है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ UPSC Favorite! Model Code of Conduct (MCC) election period के दौरान political parties और candidates के लिए आचार संहिता है। यह कहती है कि कैसे campaign करना है, सरकारी संसाधनों का दुरुपयोग नहीं करना, धर्म/जाति के आधार पर appeal नहीं करनी आदि। Interesting बात - MCC statutory नहीं है (कानून में नहीं लिखा), लेकिन EC इसे enforce करवाती है और सभी मानते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! बिना कानून के भी सब follow करते हैं क्योंकि EC की authority है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_symbols_recognition",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_18_symbols_recognition",
+      "card_slug": "card_18_symbols_recognition",
+      "type": "chat",
+      "concept_id": "party_symbols_recognition",
+      "level": 3,
+      "progress": {
+        "current": 18,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Political parties की recognition और symbols की बात करें। EC parties को तीन categories में रखती है:\n\n1. National Parties: 4 या अधिक राज्यों में recognized + specific % votes\n2. State Parties: एक राज्य में recognized\n3. Registered (Unrecognized) Parties\n\nNational/State parties को reserved symbols मिलते हैं (जैसे हाथ, कमल, झाड़ू)। Others को free symbols में से चुनना पड़ता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, अगर दो parties एक ही symbol चाहें तो?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ SSC Pattern! Symbol disputes में EC का निर्णय अंतिम होता है। जैसे किसी party में split हो जाए और दोनों group वही symbol मांगें, तो EC decide करती है कि असली party कौन सी है और symbol किसे मिलेगा। EC ने कई famous disputes solve किए हैं - Shiv Sena split (2023), AIADMK dispute (2017) आदि।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab party के झगड़ों में भी EC ही referee है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_quiz_jurisdiction",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_19_quiz_jurisdiction",
+      "card_slug": "card_19_quiz_jurisdiction",
+      "type": "quiz",
+      "concept_id": "jurisdiction_quiz",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Trap: निम्नलिखित में से किसके चुनाव Election Commission of India नहीं करवाती?",
+        "options": [
+          { "id": "A", "text": "President और Vice-President" },
+          { "id": "B", "text": "Lok Sabha और Rajya Sabha" },
+          { "id": "C", "text": "State Legislative Assembly" },
+          { "id": "D", "text": "Panchayats और Municipalities" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Panchayats और Municipalities के चुनाव State Election Commission करवाती है (Article 243K और 243ZA), Election Commission of India नहीं। EC केवल Parliament, State Legislatures और President/VP के चुनाव करवाती है। यह BPSC/SSC का favorite confusion है।"
+      },
+      "navigation": {
+        "next": "card_20_quiz_mcc",
+        "button_text": "अगला प्रश्न ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz_mcc",
+      "card_slug": "card_20_quiz_mcc",
+      "type": "quiz",
+      "concept_id": "mcc_quiz",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Model Code of Conduct के बारे में क्या सही है?",
+        "options": [
+          { "id": "A", "text": "यह statutory है (कानून में लिखा है)" },
+          { "id": "B", "text": "यह केवल ruling party पर लागू होता है" },
+          { "id": "C", "text": "यह non-statutory है लेकिन EC इसे enforce करवाती है" },
+          { "id": "D", "text": "इसका उल्लंघन करने पर jail हो सकती है" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ UPSC Pattern! Model Code of Conduct (MCC) statutory नहीं है - यानी यह किसी Act में नहीं लिखा। यह Election Commission द्वारा बनाया गया है और सभी parties/candidates पर लागू होता है। Violation पर EC चेतावनी दे सकती है, candidate को disqualify कर सकती है, लेकिन direct jail नहीं। EC की moral authority से सब follow करते हैं।"
+      },
+      "navigation": {
+        "next": "card_21_quiz_symbols",
+        "button_text": "अगला प्रश्न ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_symbols",
+      "card_slug": "card_21_quiz_symbols",
+      "type": "quiz",
+      "concept_id": "symbols_quiz",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Political parties को recognition और symbols कौन allot करता है?",
+        "options": [
+          { "id": "A", "text": "President" },
+          { "id": "B", "text": "Parliament" },
+          { "id": "C", "text": "Election Commission" },
+          { "id": "D", "text": "Supreme Court" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Election Commission political parties को National/State/Unrecognized के रूप में recognize करती है और election symbols allot करती है। Symbol disputes में भी EC का निर्णय अंतिम होता है। यह power EC को political landscape पर significant influence देती है।"
+      },
+      "navigation": {
+        "next": "card_22_milestone_powers",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_22_milestone_powers",
+      "card_slug": "card_22_milestone_powers",
+      "type": "milestone",
+      "concept_id": "powers_functions_complete",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "💪 Module 3 Complete!",
+        "badge_emoji": "🗳️",
+        "completed_topic": "Powers & Functions of EC",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "EC vs SEC, MCC, Symbol allocation - अब आप expert हो गए! Technology के युग में चलते हैं।"
+      },
+      "navigation": {
+        "next": "card_23_evm_intro",
+        "button_text": "अगला Module ➔"
+      }
+    },
+    {
+      "card_id": "card_23_evm_intro",
+      "card_slug": "card_23_evm_intro",
+      "type": "chat",
+      "concept_id": "evm_introduction",
+      "level": 4,
+      "progress": {
+        "current": 23,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "अब technology की बात करें। पहले ballot paper पर मुहर लगाकर vote होता था। लेकिन उसमें booth capturing, ballot stuffing जैसी problems थीं। 1990s से Electronic Voting Machine (EVM) आई। ⭐ SSC Fact: पहली बार 1982 में Kerala के 50 polling stations में trial हुआ। 2004 से पूरे देश में EVM का इस्तेमाल होने लगा।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, EVM से क्या फायदा हुआ?"
+        },
+        {
+          "speaker": "aman",
+          "text": "बहुत फायदे! (1) Faster counting - घंटों की जगह मिनटों में (2) Invalid votes नहीं - machine गलत vote accept नहीं करती (3) Booth capturing मुश्किल (4) Paper बचता है - eco-friendly (5) Transport और storage आसान। लेकिन criticism भी है - कुछ लोग कहते हैं EVM hack हो सकती है, इसलिए paper trail चाहिए।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, मैंने सुना है VVPAT के बारे में!"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_vvpat_explanation",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_24_vvpat_explanation",
+      "card_slug": "card_24_vvpat_explanation",
+      "type": "chat",
+      "concept_id": "vvpat_details",
+      "level": 4,
+      "progress": {
+        "current": 24,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "VVPAT = Voter Verifiable Paper Audit Trail। यह EVM के साथ attach होता है। जब आप vote करते हो, तो एक printed paper slip निकलती है जिसमें आपका vote दिखता है (7 seconds के लिए)। फिर वो automatically sealed box में गिर जाती है। ⭐ UPSC Fact: 2013 में Nagaland में पहली बार use हुआ। 2019 से सभी polling stations में VVPAT mandatory है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, तो अब दो records हैं - electronic और paper?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! अगर किसी को doubt हो तो VVPAT slips को manually count किया जा सकता है। Supreme Court के निर्देश पर अब हर Assembly Constituency की 5 randomly selected polling stations के VVPAT slips count होते हैं verification के लिए। यह EVM की transparency और credibility बढ़ाता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab अब EVM भी है और paper proof भी - best of both worlds!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_nota_introduction",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_25_nota_introduction",
+      "card_slug": "card_25_nota_introduction",
+      "type": "chat",
+      "concept_id": "nota_concept",
+      "level": 4,
+      "progress": {
+        "current": 25,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "एक और interesting feature - NOTA (None of the Above)। 2013 में Supreme Court के निर्देश पर EC ने NOTA option शुरू किया। अगर आपको कोई भी candidate पसंद नहीं है, तो NOTA दबा सकते हो। यह negative voting का अधिकार है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, अगर सबसे ज्यादा votes NOTA को मिलें तो क्या होगा?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Trap! Currently, अगर NOTA सबसे ज्यादा votes पाए तब भी वो जीत नहीं सकता। जिस candidate को maximum valid votes (NOTA को छोड़कर) मिले, वही जीतता है। NOTA केवल voter sentiment दिखाता है, लेकिन legally binding नहीं है। कुछ लोग मांग करते हैं कि अगर NOTA जीते तो re-election हो, लेकिन अभी वो provision नहीं है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! NOTA से protest तो कर सकते हैं लेकिन result नहीं बदल सकते।"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_quiz_evm_year",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_26_quiz_evm_year",
+      "card_slug": "card_26_quiz_evm_year",
+      "type": "quiz",
+      "concept_id": "evm_year_quiz",
+      "level": 4,
+      "progress": {
+        "current": 26,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC Pattern: पूरे देश में EVM का व्यापक उपयोग किस election से शुरू हुआ?",
+        "options": [
+          { "id": "A", "text": "1999" },
+          { "id": "B", "text": "2004" },
+          { "id": "C", "text": "2009" },
+          { "id": "D", "text": "2014" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "2004 के General Elections से पूरे देश में EVM का व्यापक उपयोग शुरू हुआ। पहला trial 1982 में Kerala में हुआ था। यह chronological fact SSC/Railway में frequently पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_27_quiz_vvpat_full_form",
+        "button_text": "अगला प्रश्न ➔"
+      }
+    },
+    {
+      "card_id": "card_27_quiz_vvpat_full_form",
+      "card_slug": "card_27_quiz_vvpat_full_form",
+      "type": "quiz",
+      "concept_id": "vvpat_full_form_quiz",
+      "level": 4,
+      "progress": {
+        "current": 27,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "VVPAT का full form क्या है?",
+        "options": [
+          { "id": "A", "text": "Voter Verification Paper Audit Trail" },
+          { "id": "B", "text": "Voter Verifiable Paper Audit Trail" },
+          { "id": "C", "text": "Valid Voter Paper Audit Trail" },
+          { "id": "D", "text": "Verified Voter Paper Authentication Trail" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "VVPAT = Voter Verifiable Paper Audit Trail। 'Verifiable' का मतलब voter खुद verify कर सकता है कि उसका vote सही record हुआ। यह printed slip के through होता है जो 7 seconds दिखती है। Full forms SSC/Railway में direct पूछे जाते हैं।"
+      },
+      "navigation": {
+        "next": "card_28_quiz_nota",
+        "button_text": "अगला प्रश्न ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_nota",
+      "card_slug": "card_28_quiz_nota",
+      "type": "quiz",
+      "concept_id": "nota_quiz",
+      "level": 4,
+      "progress": {
+        "current": 28,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "NOTA के बारे में क्या सही है?",
+        "options": [
+          { "id": "A", "text": "NOTA सबसे ज्यादा votes पाने पर re-election होता है" },
+          { "id": "B", "text": "NOTA votes को invalid माना जाता है" },
+          { "id": "C", "text": "NOTA voter sentiment दिखाता है लेकिन legally binding नहीं" },
+          { "id": "D", "text": "NOTA केवल Presidential elections में available है" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC Pattern! NOTA (None of the Above) 2013 से available है और यह voter sentiment express करने का तरीका है। लेकिन currently, NOTA legally binding नहीं है - अगर NOTA को maximum votes मिलें तब भी जो candidate को सबसे ज्यादा valid votes (NOTA को छोड़कर) मिले, वही जीतता है।"
+      },
+      "navigation": {
+        "next": "card_29_milestone_technology",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_29_milestone_technology",
+      "card_slug": "card_29_milestone_technology",
+      "type": "milestone",
+      "concept_id": "technology_complete",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🖥️ Module 4 Complete!",
+        "badge_emoji": "📱",
+        "completed_topic": "EVM, VVPAT & NOTA",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "Technology और voting rights अब आपकी मुट्ठी में! अब recent reforms देखते हैं।"
+      },
+      "navigation": {
+        "next": "card_30_independence_judiciary",
+        "button_text": "अगला Module ➔"
+      }
+    },
+    {
+      "card_id": "card_30_independence_judiciary",
+      "card_slug": "card_30_independence_judiciary",
+      "type": "chat",
+      "concept_id": "ec_independence",
+      "level": 5,
+      "progress": {
+        "current": 30,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "EC की independence को मजबूत बनाने के लिए कई constitutional और legal safeguards हैं। जैसे हमने पढ़ा - CEC को impeachment से ही हटाया जा सकता है, salary कम नहीं हो सकती, fixed tenure है। लेकिन एक debate है - क्या EC पूरी तरह independent है?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, debate क्यों है? आपने तो बताया independence के safeguards हैं!"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ UPSC Current Affairs! Critics कहते हैं: (1) CEC/ECs की appointment अभी भी President (यानी Government) करते हैं - independent collegium नहीं है (2) EC के पास कोई permanent staff नहीं, सरकार से deputation पर लेना पड़ता है (3) EC के decisions को court में challenge किया जा सकता है - judicial review है। लेकिन supporters कहते हैं ये checks necessary हैं, EC abuse of power न करे इसलिए।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab perfect independence कहीं नहीं होती, balance चाहिए!"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_recent_reforms",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_31_recent_reforms",
+      "card_slug": "card_31_recent_reforms",
+      "type": "chat",
+      "concept_id": "electoral_reforms",
+      "level": 5,
+      "progress": {
+        "current": 31,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Recent Electoral Reforms जो EC और Courts ने किए:\n\n1. VVPAT mandatory (2019 से)\n2. Aadhaar-Voter ID linking (proposed, controversial)\n3. Remote voting for migrant workers (pilot stage)\n4. Lowering of expenditure limit revisions\n5. Candidate criminal background declaration mandatory\n6. Criminalization of paid news\n7. Online registration और correction facilities"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, criminal background declaration matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Social Awareness! Supreme Court ने कहा है कि हर candidate को अपने nomination papers में सभी pending criminal cases की details देनी होंगी। Political parties को भी publicly declare करना होगा कि उन्होंने क्यों criminal background वाले candidates को ticket दिया। यह transparency बढ़ाने का प्रयास है, लेकिन implementation में अभी भी challenges हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Voters को पता चले कि candidate की background क्या है।"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_state_election_commission",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_32_state_election_commission",
+      "card_slug": "card_32_state_election_commission",
+      "type": "chat",
+      "concept_id": "sec_comparison",
+      "level": 5,
+      "progress": {
+        "current": 32,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "State Election Commission की बात करें। Article 243K (Panchayats) और 243ZA (Municipalities) में provision है। हर राज्य में एक State Election Commissioner होता है जो Governor द्वारा नियुक्त होता है। Removal भी High Court Judge की तरह impeachment से।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, EC और SEC में क्या difference है powers में?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Comparison Trap!\n\nEC: Parliament/State Legislature elections, Multi-member (3), Article 324, President appoints\n\nSEC: Panchayat/Municipality elections, Single-member (1 State EC), Article 243K/243ZA, Governor appoints\n\nDono independent hain apne-apne sphere में। Overlap नहीं है - EC local bodies में interfere नहीं कर सकती, SEC parliamentary elections में नहीं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Clear! दोनों का अपना-अपना domain है।"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_quiz_independence",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_33_quiz_independence",
+      "card_slug": "card_33_quiz_independence",
+      "type": "quiz",
+      "concept_id": "independence_quiz",
+      "level": 5,
+      "progress": {
+        "current": 33,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "EC की independence को कौन सा factor सबसे ज्यादा सुनिश्चित करता है?",
+        "options": [
+          { "id": "A", "text": "High salary" },
+          { "id": "B", "text": "CEC को impeachment से ही हटाया जा सकता है" },
+          { "id": "C", "text": "President द्वारा appointment" },
+          { "id": "D", "text": "Parliament द्वारा budget allocation" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CEC को केवल impeachment (Supreme Court Judge की तरह) से ही हटाया जा सकता है - यह सबसे बड़ी constitutional safeguard है independence के लिए। President arbitrarily हटा नहीं सकते, इसलिए political pressure resist कर सकते हैं। यह provision EC की autonomy का cornerstone है।"
+      },
+      "navigation": {
+        "next": "card_34_quiz_sec_article",
+        "button_text": "अगला प्रश्न ➔"
+      }
+    },
+    {
+      "card_id": "card_34_quiz_sec_article",
+      "card_slug": "card_34_quiz_sec_article",
+      "type": "quiz",
+      "concept_id": "sec_article_quiz",
+      "level": 5,
+      "progress": {
+        "current": 34,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "State Election Commission का provision किस Article में है?",
+        "options": [
+          { "id": "A", "text": "Article 324" },
+          { "id": "B", "text": "Article 243K और 243ZA" },
+          { "id": "C", "text": "Article 325" },
+          { "id": "D", "text": "Article 330" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC/UPSC Favorite! Article 243K (Part IX - Panchayats) और Article 243ZA (Part IXA - Municipalities) में State Election Commission का provision है। Article 324 तो Election Commission of India के लिए है। यह confusion बहुत common है।"
+      },
+      "navigation": {
+        "next": "card_35_quiz_reforms",
+        "button_text": "अगला प्रश्न ➔"
+      }
+    },
+    {
+      "card_id": "card_35_quiz_reforms",
+      "card_slug": "card_35_quiz_reforms",
+      "type": "quiz",
+      "concept_id": "reforms_quiz",
+      "level": 5,
+      "progress": {
+        "current": 35,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "किस reform के तहत candidates को criminal background publicly declare करना अनिवार्य किया गया?",
+        "options": [
+          { "id": "A", "text": "Constitutional Amendment" },
+          { "id": "B", "text": "Supreme Court के निर्देश पर" },
+          { "id": "C", "text": "Election Commission के circular द्वारा" },
+          { "id": "D", "text": "Parliament Act द्वारा" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Supreme Court ने कई judgments में निर्देश दिया है कि candidates को pending criminal cases publicly declare करने होंगे। Political parties को भी reasons देने होंगे कि क्यों criminal background वाले को ticket दिया। यह judicial activism का example है। EC इन निर्देशों को implement करवाती है।"
+      },
+      "navigation": {
+        "next": "card_36_milestone_reforms",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_36_milestone_reforms",
+      "card_slug": "card_36_milestone_reforms",
+      "type": "milestone",
+      "concept_id": "reforms_independence_complete",
+      "level": 5,
+      "progress": {
+        "current": 36,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🔒 Module 5 Complete!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Independence, Reforms & SEC",
+        "xp_earned": 50,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "Constitutional safeguards, reforms, EC vs SEC - सब aspects cover हो गए! अब famous cases देखते हैं।"
+      },
+      "navigation": {
+        "next": "card_37_landmark_cases",
+        "button_text": "अगला Module ➔"
+      }
+    },
+    {
+      "card_id": "card_37_landmark_cases",
+      "card_slug": "card_37_landmark_cases",
+      "type": "chat",
+      "concept_id": "important_judgments",
+      "level": 6,
+      "progress": {
+        "current": 37,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "कुछ landmark Supreme Court cases जो EC की powers को define करती हैं:\n\n1. Mohinder Singh Gill vs CEC (1978): EC के decisions को court में challenge किया जा सकता है\n2. T.N. Seshan vs Union of India (1995): Multi-member EC में majority से decision\n3. PUCL vs Union of India (2013): NOTA mandatory\n4. Lily Thomas vs Union (2013): Convicted persons immediately disqualified"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, T.N. Seshan कौन थे?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ SSC Personality! T.N. Seshan 1990-96 में Chief Election Commissioner थे और बहुत strict थे। उन्होंने पहली बार Model Code of Conduct को aggressively enforce किया, powerful politicians को भी notice भेजे। उन्हें 'Strong CEC' का example माना जाता है। उनके tenure में ही Government ने 2 और ECs add किए ताकि power dilute हो - इसी पर 1995 का case था।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! एक officer ने पूरे system को हिला दिया!"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_challenges_issues",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_38_challenges_issues",
+      "card_slug": "card_38_challenges_issues",
+      "type": "chat",
+      "concept_id": "current_challenges",
+      "level": 6,
+      "progress": {
+        "current": 38,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "EC के सामने current challenges:\n\n1. Money power और black money का चुनावों में प्रभाव\n2. Muscle power - criminal elements का political entry\n3. Misuse of social media और fake news\n4. Hate speech और communal polarization\n5. Delay in deciding disqualification cases\n6. Enforcement of expenditure limits की कठिनाई\n7. Paid news और media bias"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, इन problems का solution क्या है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "कुछ suggestions:\n- State funding of elections (Government पैसा दे candidates को)\n- Stronger laws against hate speech\n- Fast-track courts for election offences\n- Real-time expenditure monitoring (technology से)\n- Social media regulation\n- Permanent EC staff (deputation पर निर्भरता कम हो)\n\nलेकिन ये सब political will चाहिए। EC खुद law नहीं बना सकती, Parliament को करना होगा।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab problems तो identified हैं, implementation चाहिए!"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_quiz_tn_seshan",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz_tn_seshan",
+      "card_slug": "card_39_quiz_tn_seshan",
+      "type": "quiz",
+      "concept_id": "tn_seshan_quiz",
+      "level": 6,
+      "progress": {
+        "current": 39,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC Pattern: T.N. Seshan के CEC tenure में क्या महत्वपूर्ण हुआ?",
+        "options": [
+          { "id": "A", "text": "EVM की शुरुआत" },
+          { "id": "B", "text": "Model Code of Conduct का strict enforcement" },
+          { "id": "C", "text": "NOTA की शुरुआत" },
+          { "id": "D", "text": "VVPAT की शुरुआत" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "T.N. Seshan (1990-96) ने पहली बार Model Code of Conduct को बहुत strictly enforce किया। उन्होंने elections को cleaner बनाने के aggressive steps लिए। EVM (2004 से widespread), NOTA (2013), VVPAT (2019) सब बाद में आए। Seshan का personality-based question SSC में common है।"
+      },
+      "navigation": {
+        "next": "card_40_quiz_article_74_analogy",
+        "button_text": "अगला प्रश्न ➔"
+      }
+    },
+    {
+      "card_id": "card_40_quiz_article_74_analogy",
+      "card_slug": "card_40_quiz_article_74_analogy",
+      "type": "quiz",
+      "concept_id": "article_74_analogy_quiz",
+      "level": 6,
+      "progress": {
+        "current": 40,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा EC की limitation है?",
+        "options": [
+          { "id": "A", "text": "EC चुनाव dates तय नहीं कर सकती" },
+          { "id": "B", "text": "EC खुद electoral laws नहीं बना सकती, Parliament बनाती है" },
+          { "id": "C", "text": "EC symbols allot नहीं कर सकती" },
+          { "id": "D", "text": "EC Model Code enforce नहीं कर सकती" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ UPSC Critical Thinking! EC खुद laws नहीं बना सकती - वो केवल existing laws को implement करती है। Electoral reforms के लिए Parliament को laws बनाने पड़ते हैं। EC recommendations दे सकती है लेकिन enforce नहीं कर सकती। यह important limitation है जो candidates को confuse करती है।"
+      },
+      "navigation": {
+        "next": "card_41_quiz_challenges",
+        "button_text": "अगला प्रश्न ➔"
+      }
+    },
+    {
+      "card_id": "card_41_quiz_challenges",
+      "card_slug": "card_41_quiz_challenges",
+      "type": "quiz",
+      "concept_id": "challenges_quiz",
+      "level": 6,
+      "progress": {
+        "current": 41,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "State funding of elections का मुख्य उद्देश्य क्या है?",
+        "options": [
+          { "id": "A", "text": "Government का खर्च बढ़ाना" },
+          { "id": "B", "text": "Money power और black money का प्रभाव कम करना" },
+          { "id": "C", "text": "केवल बड़ी parties को फायदा देना" },
+          { "id": "D", "text": "Voter turnout बढ़ाना" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "State funding of elections का proposed objective है कि candidates को government की तरफ से चुनाव खर्च के लिए पैसा मिले, ताकि वो private donations और black money पर निर्भर न रहें। यह money power और corruption कम करने का attempt है। Law Commission ने recommend किया है लेकिन अभी implement नहीं हुआ।"
+      },
+      "navigation": {
+        "next": "card_42_milestone_cases_challenges",
+        "button_text": "आगे बढ़ें ➔"
+      }
+    },
+    {
+      "card_id": "card_42_milestone_cases_challenges",
+      "card_slug": "card_42_milestone_cases_challenges",
+      "type": "milestone",
+      "concept_id": "cases_challenges_complete",
+      "level": 6,
+      "progress": {
+        "current": 42,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "⚖️ Module 6 Complete!",
+        "badge_emoji": "📚",
+        "completed_topic": "Landmark Cases & Current Challenges",
+        "xp_earned": 50,
+        "milestone_progress": "Module 6/8 Clear",
+        "motivational_quote": "T.N. Seshan से लेकर modern challenges तक - EC का पूरा journey समझ आ गया! अब final revision।"
+      },
+      "navigation": {
+        "next": "card_43_officer_revision",
+        "button_text": "Final Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_43_officer_revision",
+      "card_slug": "card_43_officer_revision",
+      "type": "summary",
+      "concept_id": "final_officer_revision",
+      "level": 7,
+      "progress": {
+        "current": 43,
+        "total": 50
+      },
+      "summary_payload": {
+        "title": "⚡ Officer Level Quick Revision",
+        "revision_points": [
+          {
+            "topic": "Constitutional Base",
+            "point": "Article 324-329 (324 सबसे important - Superintendence, Direction, Control). EC conducts Parliament/State Legislature/President/VP elections. NOT Panchayat/Municipality (SEC does - Art 243K, 243ZA)."
+          },
+          {
+            "topic": "Composition & Appointment",
+            "point": "1950: 1 CEC only. 1989: 2 ECs added. 1993-now: 3 members (1 CEC + 2 ECs). President appoints. Tenure: 6 years या 65 age. Decisions by majority."
+          },
+          {
+            "topic": "Removal - Critical Difference",
+            "point": "⭐ BPSC Gold: CEC removal = Impeachment (like SC Judge). EC removal = President on CEC recommendation. Salary = SC Judge level. Cannot be reduced during tenure."
+          },
+          {
+            "topic": "Powers & Functions",
+            "point": "Schedule elections, prepare voter lists, allot symbols, recognize parties (National/State/Unrecognized), enforce Model Code of Conduct (non-statutory but binding), monitor expenditure, advise on disqualifications."
+          },
+          {
+            "topic": "Technology",
+            "point": "EVM: 1982 trial (Kerala), 2004 nationwide. VVPAT: 2013 pilot (Nagaland), 2019 mandatory. NOTA: 2013 (SC order) - expresses dissent but not legally binding (candidate with max valid votes wins)."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_44_final_quiz_1",
+        "button_text": "Final Master Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_44_final_quiz_1",
+      "card_slug": "card_44_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_multi_statement_1",
+      "level": 7,
+      "progress": {
+        "current": 44,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Multi-Statement Pattern:\n\nनिम्नलिखित कथनों पर विचार कीजिए:\n\n1. Election Commission of India राष्ट्रपति, उपराष्ट्रपति और संसद के चुनाव कराती है।\n2. Panchayats और Municipalities के चुनाव भी EC ही कराती है।\n3. Chief Election Commissioner को Supreme Court के Judge की तरह impeachment से हटाया जा सकता है।\n4. Model Code of Conduct एक statutory provision है।\n\nउपर्युक्त कथनों में से कौन से सही हैं?",
+        "options": [
+          { "id": "A", "text": "केवल 1 और 2" },
+          { "id": "B", "text": "केवल 1 और 3" },
+          { "id": "C", "text": "केवल 2, 3 और 4" },
+          { "id": "D", "text": "1, 2, 3 और 4" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "कथन 1 सही है। कथन 2 गलत - Panchayats/Municipalities के चुनाव State Election Commission कराती है (Art 243K, 243ZA)। कथन 3 सही - CEC को impeachment से हटाया जाता है। कथन 4 गलत - MCC non-statutory है लेकिन EC इसे enforce करवाती है। BPSC का classic trap!"
+      },
+      "navigation": {
+        "next": "card_45_final_quiz_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_45_final_quiz_2",
+      "card_slug": "card_45_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_assertion_reason",
+      "level": 7,
+      "progress": {
+        "current": 45,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC Assertion-Reason Pattern:\n\nAssertion (A): Chief Election Commissioner को केवल impeachment द्वारा ही हटाया जा सकता है।\n\nReason (R): यह provision Election Commission की independence सुनिश्चित करने के लिए बनाया गया है।\n\nनिम्नलिखित में से कौन सा सही है?",
+        "options": [
+          { "id": "A", "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है" },
+          { "id": "B", "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है" },
+          { "id": "C", "text": "A सही है लेकिन R गलत है" },
+          { "id": "D", "text": "A गलत है लेकिन R सही है" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "दोनों statements सही हैं और R, A की perfect व्याख्या करता है। CEC को impeachment (proved misbehaviour/incapacity + Parliament के दोनों सदनों में special majority) से ही हटाया जा सकता है। यह provision deliberately रखा गया है ताकि CEC पर political pressure न हो और वो स्वतंत्र रूप से काम कर सके।"
+      },
+      "navigation": {
+        "next": "card_46_final_quiz_3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_46_final_quiz_3",
+      "card_slug": "card_46_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_chronological",
+      "level": 7,
+      "progress": {
+        "current": 46,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC Chronological Pattern:\n\nनिम्नलिखित को chronological order में व्यवस्थित करें:\n\n1. EVM का nationwide उपयोग शुरू\n2. NOTA की शुरुआत\n3. पहली बार 2 Election Commissioners जोड़े गए\n4. VVPAT का mandatory implementation\n\nसही क्रम है:",
+        "options": [
+          { "id": "A", "text": "3, 1, 2, 4" },
+          { "id": "B", "text": "1, 3, 2, 4" },
+          { "id": "C", "text": "3, 2, 1, 4" },
+          { "id": "D", "text": "1, 2, 3, 4" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Correct chronology: (3) 1989 - पहली बार 2 ECs जोड़े गए, (1) 2004 - EVM nationwide, (2) 2013 - NOTA शुरू (SC order), (4) 2019 - VVPAT mandatory। Chronological questions SSC/Railway में बहुत common हैं।"
+      },
+      "navigation": {
+        "next": "card_47_final_quiz_4",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_47_final_quiz_4",
+      "card_slug": "card_47_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "final_exception_trap",
+      "level": 7,
+      "progress": {
+        "current": 47,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Exception Trap:\n\nनिम्नलिखित में से कौन सा कथन सही नहीं है?",
+        "options": [
+          { "id": "A", "text": "EC के decisions को Supreme Court में challenge किया जा सकता है" },
+          { "id": "B", "text": "NOTA को सबसे ज्यादा votes मिलने पर re-election होता है" },
+          { "id": "C", "text": "Multi-member EC में decisions majority से लिए जाते हैं" },
+          { "id": "D", "text": "T.N. Seshan ने Model Code को strictly enforce किया" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC Classic Trap! Statement B गलत है। Currently, NOTA को सबसे ज्यादा votes मिलने पर भी re-election नहीं होता। Candidate जिसे maximum valid votes (NOTA को छोड़कर) मिले, वही जीतता है। NOTA केवल dissent express करता है, legally binding नहीं। बाकी सब statements सही हैं।"
+      },
+      "navigation": {
+        "next": "card_48_final_quiz_5",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_48_final_quiz_5",
+      "card_slug": "card_48_final_quiz_5",
+      "type": "final_quiz",
+      "concept_id": "final_comparison",
+      "level": 7,
+      "progress": {
+        "current": 48,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC Analytical:\n\nEC और SEC में क्या मुख्य अंतर नहीं है?",
+        "options": [
+          { "id": "A", "text": "EC multi-member है, SEC single-member" },
+          { "id": "B", "text": "EC का Article 324, SEC का Article 243K/243ZA" },
+          { "id": "C", "text": "EC को President appoint करते हैं, SEC को Governor" },
+          { "id": "D", "text": "EC के members को Governor हटा सकते हैं, SEC को President" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Statement D गलत है इसलिए यह answer है। EC के CEC को Parliament impeachment से हटाती है (President नहीं), ECs को President (CEC recommendation पर) हटाते हैं। SEC को Governor नहीं हटाते - SEC को भी HC Judge की तरह impeachment-like procedure से हटाया जाता है। Negative questioning pattern UPSC का favorite है।"
+      },
+      "navigation": {
+        "next": "card_49_key_takeaways",
+        "button_text": "Final Summary ➔"
+      }
+    },
+    {
+      "card_id": "card_49_key_takeaways",
+      "card_slug": "card_49_key_takeaways",
+      "type": "summary",
+      "concept_id": "ultimate_key_points",
+      "level": 7,
+      "progress": {
+        "current": 49,
+        "total": 50
+      },
+      "summary_payload": {
+        "title": "🎯 Ultimate Exam Ammunition",
+        "revision_points": [
+          {
+            "topic": "Article Master List",
+            "point": "324 (EC powers), 325 (No discrimination), 326 (Adult suffrage), 327 (Parliament makes election laws), 328 (State Legislature laws), 329 (Bars court interference), 243K (SEC for Panchayats), 243ZA (SEC for Municipalities)."
+          },
+          {
+            "topic": "Numerical Facts (SSC Gold)",
+            "point": "1950: Single CEC. 1982: EVM trial. 1989: 2 ECs added. 1993: 3-member permanent. 2004: EVM nationwide. 2013: NOTA + VVPAT pilot. 2019: VVPAT mandatory. Tenure: 6 years/65 age."
+          },
+          {
+            "topic": "BPSC Traps to Remember",
+            "point": "(1) EC ≠ SEC (jurisdiction different). (2) MCC = non-statutory. (3) NOTA = not legally binding. (4) CEC removal ≠ EC removal. (5) President appoints but can't arbitrarily remove CEC."
+          },
+          {
+            "topic": "Power Limitations",
+            "point": "EC cannot make laws (only Parliament/State Legislatures). EC decisions subject to judicial review. EC depends on government machinery for enforcement. No permanent staff - deputation based."
+          },
+          {
+            "topic": "Famous Personalities",
+            "point": "T.N. Seshan (1990-96): Strict MCC enforcer. Sukumar Sen: First CEC (1950). VVPAT idea: Citizen groups post-EVM controversy. NOTA: PUCL PIL result (2013 SC judgment)."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_50_final_milestone",
+        "button_text": "Chapter Complete! 🏆"
+      }
+    },
+    {
+      "card_id": "card_50_final_milestone",
+      "card_slug": "card_50_final_milestone",
+      "type": "milestone",
+      "concept_id": "chapter_completion_trophy",
+      "level": 7,
+      "progress": {
+        "current": 50,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🗳️",
+        "completed_topic": "Election Commission of India - Complete",
+        "xp_earned": 500,
+        "milestone_progress": "8/8 Modules Complete ✅",
+        "motivational_quote": "Article 324 से लेकर T.N. Seshan तक, EVM से NOTA तक - अब आप Election Commission के Officer-level expert हैं! 🎯 BPSC/SSC/UPSC में इस topic से कोई सवाल नहीं छूटेगा। Keep crushing it! 🔥"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
+```
