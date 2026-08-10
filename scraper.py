@@ -5,7 +5,7 @@ import time
 import hashlib
 import feedparser
 import warnings
-from urllib.parse import quote, unquote
+from urllib.parse import quote, unquote, urlparse, parse_qs
 from datetime import datetime, timedelta, timezone
 
 from curl_cffi import requests as curl_requests
@@ -22,12 +22,9 @@ OUTPUT_FILE = "rawnews.json"
 TIMEOUT = 25
 MAX_PER_CATEGORY = 5
 
-# Strict Word Count Rules (No garbage/short content allowed)
-MIN_CONTENT_WORDS = 60      # Minimum 60 words (Chota content reject ho jayega)
+MIN_CONTENT_WORDS = 60      # Minimum 60 words (no short text)
 MAX_CONTENT_WORDS = 1500    # Maximum 1500 words limit
-
-# Rolling Window Limit (24 Hours)
-DEFAULT_MAX_AGE_HOURS = 24
+DEFAULT_MAX_AGE_HOURS = 48  # 48 Hours window for stable daily news
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -91,7 +88,7 @@ def clean_text(text):
 
 def clean_title(title):
     title = clean_text(title)
-    title = re.sub(r'\s*[-|–—]\s*(The Hindu|Indian Express|Hindustan Times|Times of India|NDTV|Aaj Tak|ABP News).*$', '', title, flags=re.I)
+    title = re.sub(r'\s*[-|–—]\s*(The Hindu|Indian Express|Hindustan Times|Times of India|NDTV|Aaj Tak|ABP News|PIB).*$', '', title, flags=re.I)
     return title.strip()
 
 def word_count(text):
@@ -104,11 +101,11 @@ def trim_to_max_words(text, max_words=MAX_CONTENT_WORDS):
     return text
 
 # ============================================================
-# FETCH ENGINE WITH DIRECT URL RESOLUTION
+# GOOGLE LINK UNPACKER & WEB SCRAPER
 # ============================================================
 
-def resolve_google_url(google_url):
-    """Resolves Google RSS redirect URL to actual news source URL"""
+def resolve_real_url(google_url):
+    """Resolves Google RSS redirect URL to actual news article URL"""
     try:
         r = curl_requests.get(google_url, headers=HEADERS, timeout=12, impersonate="chrome", allow_redirects=True)
         if r.status_code < 400 and r.url and "news.google.com" not in r.url:
@@ -121,7 +118,7 @@ def fetch_web_article(url):
     url = clean_url(url)
     if not url: return "", ""
 
-    resolved_url, html_raw = resolve_google_url(url)
+    resolved_url, html_raw = resolve_real_url(url)
     
     if not html_raw:
         try:
@@ -134,7 +131,7 @@ def fetch_web_article(url):
     if not html_raw: return "", resolved_url
 
     soup = BeautifulSoup(html_raw, "lxml")
-    for tag in soup(["script", "style", "noscript", "svg", "nav", "footer", "form", "aside"]):
+    for tag in soup(["script", "style", "noscript", "svg", "nav", "footer", "form", "aside", "header"]):
         tag.decompose()
 
     candidates = []
@@ -150,7 +147,7 @@ def fetch_web_article(url):
         except Exception:
             pass
 
-    # 2. DOM Article Selectors
+    # 2. Main Article Selectors
     selectors = [
         "[itemprop='articleBody']", "article", ".article-body", ".articleBody",
         ".article-content", ".story-content", ".news-content", "main", ".entry-content"
@@ -161,9 +158,9 @@ def fetch_web_article(url):
             if word_count(txt) >= MIN_CONTENT_WORDS:
                 candidates.append(txt)
 
-    # 3. Paragraph Aggregation Fallback
+    # 3. Paragraph Fallback
     paragraphs = [clean_text(p.get_text(" ", strip=True)) for p in soup.find_all("p")]
-    paragraphs = [p for p in paragraphs if word_count(p) >= 10]
+    paragraphs = [p for p in paragraphs if word_count(p) >= 8]
     if paragraphs:
         joined = clean_text(" ".join(paragraphs))
         if word_count(joined) >= MIN_CONTENT_WORDS:
@@ -183,30 +180,30 @@ def make_item(source, title, url, date=None, content="", item_type="Google News"
     clean_url_str = clean_url(url)
     clean_content_str = clean_text(content)
 
-    # CHECK 1: Content missing ya Title se identical hona REJECT karega
+    # STRICT CHECK 1: Title & Content must NOT be same / empty
     if not clean_content_str or clean_content_str.lower() == clean_title_str.lower():
-        warn(f"REJECTED (Content same as title or empty) | Title: {clean_title_str[:60]}")
+        warn(f"REJECTED (Content same as title or empty) | Title: {clean_title_str[:50]}")
         return None
 
-    # CHECK 2: Strict Minimum Word Count
+    # STRICT CHECK 2: Minimum word count threshold
     total_words = word_count(clean_content_str)
     if total_words < MIN_CONTENT_WORDS:
-        warn(f"REJECTED (Too Short: {total_words} words < min {MIN_CONTENT_WORDS}) | Title: {clean_title_str[:60]}")
+        warn(f"REJECTED (Too Short: {total_words} words < min {MIN_CONTENT_WORDS}) | Title: {clean_title_str[:50]}")
         return None
 
-    # CHECK 3: Max 1500 words trim
+    # STRICT CHECK 3: Max 1500 words limit
     if total_words > MAX_CONTENT_WORDS:
         clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
 
-    # CHECK 4: Exclusion Filter
+    # STRICT CHECK 4: Exclusion Filter
     matched_bad_word = check_blacklist_reason(clean_title_str, clean_content_str)
     if matched_bad_word:
-        warn(f"REJECTED (Blacklist Keyword: '{matched_bad_word}') | Title: {clean_title_str[:60]}")
+        warn(f"REJECTED (Blacklisted: '{matched_bad_word}') | Title: {clean_title_str[:50]}")
         return None
 
     parsed_date = date or now_ist()
 
-    success(f"ACCEPTED | Words: {word_count(clean_content_str)} | Title: {clean_title_str[:60]}")
+    success(f"ACCEPTED | Words: {word_count(clean_content_str)} | Title: {clean_title_str[:50]}")
 
     return {
         "source": source,
@@ -232,12 +229,12 @@ def deduplicate(items):
     return output
 
 # ============================================================
-# CATEGORY DEFINITIONS
+# CATEGORY DEFINITIONS & PIB SOURCES
 # ============================================================
 
 NATIONAL_CATEGORIES = {
-    "Polity & Governance": '("Supreme Court" OR "Act" OR "Bill" OR "Constitutional Amendment") -crime -politics',
-    "Govt Schemes & Welfare": '("Govt Scheme" OR "Pradhan Mantri" OR "Cabinet Approves") -crime',
+    "Polity & Governance": '("Supreme Court" OR "Act" OR "Bill" OR "Constitutional Amendment")',
+    "Govt Schemes & Welfare": '("Govt Scheme" OR "Pradhan Mantri" OR "Cabinet Approves")',
     "Economy & Banking": '("RBI Policy" OR "Union Budget" OR "Economic Survey" OR "GST Council")',
     "International Relations": '("Bilateral" OR "G20" OR "BRICS" OR "Quad" OR "Summit")',
     "Science, Tech & Defense": '("ISRO" OR "NASA" OR "Defense Exercise" OR "DRDO")',
@@ -245,16 +242,46 @@ NATIONAL_CATEGORIES = {
 }
 
 BIHAR_CATEGORIES = {
-    "Bihar Schemes & Welfare": '("Bihar Scheme" OR "Mukhyamantri Scheme" OR "Bihar Welfare") -politics -crime',
-    "Bihar Development": '("Bihar Expressway" OR "Patna Metro" OR "Bihar Infrastructure") -crime'
+    "Bihar Schemes & Welfare": '("Bihar Scheme" OR "Mukhyamantri Scheme" OR "Bihar Welfare")',
+    "Bihar Development": '("Bihar Expressway" OR "Patna Metro" OR "Bihar Infrastructure" OR "Bihar Development")'
 }
+
+# Guaranteed Government Source (PIB RSS)
+PIB_FEEDS = {
+    "Govt Schemes & Welfare": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1",
+    "Polity & Governance": "https://pib.gov.in/RssMain.aspx?ModId=1&Lang=1",
+}
+
+def fetch_pib_news():
+    print(f"\n🌐 SCRAPING DIRECT GOVT SOURCE: PIB India")
+    pib_items = []
+    for cat_name, rss_url in PIB_FEEDS.items():
+        feed = feedparser.parse(rss_url)
+        for entry in (feed.entries or [])[:3]:
+            title = clean_title(getattr(entry, 'title', ''))
+            link = clean_url(getattr(entry, 'link', ''))
+            if not title or not link: continue
+
+            content, final_url = fetch_web_article(link)
+            if content and word_count(content) >= MIN_CONTENT_WORDS:
+                obj = make_item(
+                    source="PIB India",
+                    title=title,
+                    url=final_url or link,
+                    date=now_ist(),
+                    content=content,
+                    item_type="National News",
+                    category=cat_name
+                )
+                if obj: pib_items.append(obj)
+    return pib_items
 
 def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
     print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING SOURCE: {source_label}\n" + "=" * 70)
     category_results = []
 
     for cat_name, query in categories_dict.items():
-        encoded_q = quote(f"{query} when:1d")
+        encoded_q = quote(f"{query} when:3d")  # 3 days window for rich candidate availability
         rss_url = f"https://news.google.com/rss/search?q={encoded_q}&hl=en-IN&gl=IN&ceid=IN:en"
 
         feed = feedparser.parse(rss_url)
@@ -262,18 +289,17 @@ def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
         debug(f"RSS returned {len(entries)} items for [{cat_name}]")
 
         count = 0
-        for entry in entries[:MAX_PER_CATEGORY * 3]:
+        for entry in entries[:MAX_PER_CATEGORY * 4]:
             title = clean_title(getattr(entry, 'title', ''))
             rss_link = clean_url(getattr(entry, 'link', ''))
 
             if not title or not rss_link: continue
 
-            # Direct Web Scrape (NO fake title/summary fallback)
+            # Direct Web Scrape with Google URL Decoder
             content, final_url = fetch_web_article(rss_link)
 
-            # Agar full web scraping se content >= 60 words nahi mila, to drop kar do
+            # Strict Drop if < 60 words
             if not content or word_count(content) < MIN_CONTENT_WORDS:
-                warn(f"DROPPED (Full web scraping failed or < {MIN_CONTENT_WORDS} words) | {title[:50]}")
                 continue
 
             obj = make_item(
@@ -297,14 +323,18 @@ def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
 
 def build_news():
     national = fetch_google_news_feed(NATIONAL_CATEGORIES, "National", is_bihar=False)
+    pib = fetch_pib_news()
     bihar = fetch_google_news_feed(BIHAR_CATEGORIES, "Bihar", is_bihar=True)
+
+    national_all = deduplicate(national + pib)
 
     breakdown = {
         "Google News National": len(national),
+        "PIB Govt Portal": len(pib),
         "Google News Bihar": len(bihar)
     }
 
-    return national, bihar, breakdown
+    return national_all, bihar, breakdown
 
 def save_output(national, bihar, breakdown):
     all_news = national + bihar
@@ -323,7 +353,7 @@ def save_output(national, bihar, breakdown):
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 {OUTPUT_FILE} saved successfully with {len(all_news)} high-quality items!")
+    print(f"💾 {OUTPUT_FILE} saved successfully with {len(all_news)} full-length items!")
     print("=" * 80)
 
 if __name__ == "__main__":
