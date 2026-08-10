@@ -14,21 +14,16 @@ OUTPUT_FILE = "finalnews.json"
 GROQ_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
-# Strictly Using 70B Versatile Model
 MODEL_NAME = "llama-3.3-70b-versatile"
 
 IST = timezone(timedelta(hours=5, minutes=30))
 TODAY_DATE = datetime.now(IST).strftime("%d %b %Y")
 
 SYSTEM_PROMPT = """
-You are an expert Current Affairs editor for competitive civil services exams (BPSC, SSC CGL, UPSC).
-Your strict task is to analyze the provided article's TITLE and CONTENT, then FILTER, CATEGORIZE, and SUMMARIZE it.
+You are a Current Affairs editor for civil services exams (BPSC, SSC CGL, UPSC).
+Analyze the title and text, then filter, categorize, and summarize into valid JSON.
 
-CRITICAL INSTRUCTION ON CATEGORIZATION:
-- IGNORE any pre-existing category or tags provided in the input.
-- Re-analyze the full text independently and assign the 'category' key ONLY from the strict list of ALLOWED TOPICS below.
-
-STRICT ALLOWED TOPICS (Assign 'category' strictly to one of these exact names):
+ALLOWED CATEGORIES:
 1. National Polity, Judiciary & Governance
 2. Govt Schemes, Policies & Social Welfare
 3. National Economy, Union Budget & Banking
@@ -37,26 +32,15 @@ STRICT ALLOWED TOPICS (Assign 'category' strictly to one of these exact names):
 6. Agriculture, Environment, Climate & GI Tags
 7. Infrastructure, Energy & Digital Projects
 8. Awards, Appointments, Sports, Persons & Indexes
-9. Bihar Special Affairs (strictly for Bihar state news)
+9. Bihar Special Affairs
 
-REJECTION RULES (CRITICAL):
-- If the news is about stock market daily movements, Sensex/Nifty fluctuations, share prices, Rupee value changes, company IPOs, intraday trading, local crime, accidents, viral videos, entertainment, gossip, local domestic disputes, murder, or un-important political rhetoric, set "is_relevant": false.
-- ONLY accept Macroeconomic news (e.g., Union Budget, Economic Survey, RBI Policy, GST, Inflation) and genuine exam-aligned topics.
-
-OUTPUT FORMAT REQUIREMENTS:
-Output MUST be strictly valid JSON format with keys:
-- "is_relevant": true or false
-- "title": A crisp, factual headline in English
-- "category": Exact name matched from ALLOWED TOPICS
-- "bullets": Array of 2 to 3 exam-relevant factual bullet points
-- "exam_tag": 
-   - For National: "🎯 National Special / <Category Name>"
-   - For Bihar: "🏛️ Bihar Special / <Topic Name>"
+RULES:
+- Set "is_relevant": false if news is about stock market daily movements, Sensex/Nifty, Rupee fluctuations, local crime, accidents, viral videos, entertainment, gossip, or audio portal listings.
+- Output MUST be valid JSON only with keys: "is_relevant", "title", "category", "bullets", "exam_tag".
 """
 
 
-def trim_content_for_ai(text, max_words=120):
-    """Trims content to top 120 words to reduce token footprint by 80% and prevent 429 rate limits"""
+def trim_content_for_ai(text, max_words=100):
     if not text:
         return ""
     words = text.split()
@@ -66,7 +50,6 @@ def trim_content_for_ai(text, max_words=120):
 
 
 def call_groq_versatile(user_prompt, max_retries=5):
-    """Calls Groq llama-3.3-70b-versatile with rate limit protection"""
     if not client:
         print("❌ Groq Client is not initialized! Check GROQ_API_KEY.")
         return None
@@ -80,16 +63,20 @@ def call_groq_versatile(user_prompt, max_retries=5):
                     {"role": "user", "content": user_prompt}
                 ],
                 response_format={"type": "json_object"},
-                temperature=0.2
+                temperature=0.2,
+                max_tokens=600  # Strictly caps output length to prevent broken JSON & token exhaust
             )
             return json.loads(response.choices[0].message.content.strip())
 
         except Exception as e:
             err_msg = str(e).lower()
             if "429" in err_msg or "rate limit" in err_msg or "token" in err_msg:
-                wait_time = (attempt + 1) * 15
-                print(f"⚠️ Rate/Token limit hit for {MODEL_NAME}. Pausing {wait_time}s to reset quota (Attempt {attempt + 1}/{max_retries})...")
+                wait_time = (attempt + 1) * 12
+                print(f"⚠️ Rate/Token limit hit. Waiting {wait_time}s (Attempt {attempt + 1}/{max_retries})...")
                 time.sleep(wait_time)
+            elif "400" in err_msg or "json_validate_failed" in err_msg:
+                print(f"⚠️ JSON Format error on attempt {attempt + 1}. Retrying...")
+                time.sleep(2)
             else:
                 print(f"⚠️ Groq Error on attempt {attempt + 1}: {e}")
                 time.sleep(3)
@@ -101,15 +88,19 @@ def summarize_article(item, is_bihar=False):
     title = item.get("title", "")
     content = item.get("content", "")
 
-    # Optimize token payload
-    trimmed_content = trim_content_for_ai(content, max_words=160)
+    # Quick check to skip audio archive index listings without sending to API
+    if "audios:" in title.lower() or "news & current affairs" in title.lower():
+        print(f"  ⏭️ SKIPPED (Audio Listing): {title[:45]}...")
+        return None
+
+    trimmed_content = trim_content_for_ai(content, max_words=100)
 
     news_type = "Bihar State News" if is_bihar else "National Current Affairs"
     user_prompt = (
-        f"News Domain: {news_type}\n"
+        f"Domain: {news_type}\n"
         f"Title: {title}\n"
-        f"Content Body: {trimmed_content}\n\n"
-        "Analyze text, filter out stock market/crime/offtopic news, assign strict syllabus category, and output JSON:"
+        f"Content: {trimmed_content}\n\n"
+        "Return strictly JSON with keys: is_relevant (bool), title (string), category (string), bullets (array of 2-3 strings), exam_tag (string)."
     )
 
     parsed = call_groq_versatile(user_prompt)
@@ -119,7 +110,7 @@ def summarize_article(item, is_bihar=False):
         return None
 
     if not parsed.get("is_relevant", True):
-        print(f"  ⏭️ SKIPPED (Irrelevant / Stock Market / Local): {title[:50]}...")
+        print(f"  ⏭️ SKIPPED (Irrelevant / Stock / Local): {title[:45]}...")
         return None
 
     assigned_category = parsed.get("category") or ("Bihar Special Affairs" if is_bihar else "National Polity, Judiciary & Governance")
@@ -146,7 +137,7 @@ def process_all_news():
     national_raw = raw_data.get("national_raw_news", [])
     bihar_raw = raw_data.get("bihar_raw_news", [])
 
-    print(f"🚀 Starting Token-Safe AI Summarization using [{MODEL_NAME}]...")
+    print(f"🚀 Starting Optimized AI Summarization [{MODEL_NAME}]...")
     print(f"📦 Raw Inputs -> National: {len(national_raw)} | Bihar: {len(bihar_raw)}")
 
     national_cards = []
@@ -156,7 +147,7 @@ def process_all_news():
     print("\n🇮🇳 Processing National News...")
     nat_idx = 1
     for item in national_raw:
-        print(f"[National {nat_idx}/{len(national_raw)}] Summarizing: {item.get('title', '')[:50]}...")
+        print(f"[National {nat_idx}/{len(national_raw)}] Summarizing: {item.get('title', '')[:45]}...")
         card_data = summarize_article(item, is_bihar=False)
         
         if card_data:
@@ -171,13 +162,13 @@ def process_all_news():
             national_cards.append(formatted_card)
             nat_idx += 1
             
-        time.sleep(3)  # Safe 3-second delay between requests
+        time.sleep(3)
 
     # Process Bihar News
     print("\n🏛️ Processing Bihar News...")
     bih_idx = 1
     for item in bihar_raw:
-        print(f"[Bihar {bih_idx}/{len(bihar_raw)}] Summarizing: {item.get('title', '')[:50]}...")
+        print(f"[Bihar {bih_idx}/{len(bihar_raw)}] Summarizing: {item.get('title', '')[:45]}...")
         card_data = summarize_article(item, is_bihar=True)
 
         if card_data:
@@ -207,7 +198,7 @@ def process_all_news():
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 Successfully generated '{OUTPUT_FILE}' using {MODEL_NAME}!")
+    print(f"💾 Successfully generated '{OUTPUT_FILE}'!")
     print(f"📊 Accepted -> National: {len(national_cards)} | Bihar: {len(bihar_cards)}")
     print("=" * 80)
 
