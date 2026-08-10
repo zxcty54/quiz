@@ -44,7 +44,8 @@ REJECTION RULES (CRITICAL):
 - ONLY accept news that genuinely fits into one of the ALLOWED TOPICS above.
 
 OUTPUT FORMAT REQUIREMENTS:
-Output MUST be strictly valid JSON format with keys:
+Output MUST be strictly valid raw JSON format starting with '{' and ending with '}'. Do NOT use markdown code block syntax.
+JSON Keys:
 - "is_relevant": true or false
 - "title": A crisp, factual headline in English
 - "category": Exact name matched from ALLOWED TOPICS
@@ -54,8 +55,17 @@ Output MUST be strictly valid JSON format with keys:
    - For Bihar: "🏛️ Bihar Special / <Topic Name>"
 """
 
-def call_groq_versatile(user_prompt, max_retries=5):
-    """Calls Groq llama-3.3-70b-versatile with backoff handling to prevent token expiry/limits"""
+def trim_content_for_tokens(text, max_words=400):
+    """Trims input article body to 400 words to strictly save Groq TPM quota"""
+    if not text:
+        return ""
+    words = text.split()
+    if len(words) > max_words:
+        return " ".join(words[:max_words]) + "..."
+    return text
+
+def call_groq_versatile(user_prompt, max_retries=2):
+    """Calls Groq 70B Versatile model with maximum 2 retries on rate limits"""
     if not client:
         print("❌ Groq Client is not initialized! Check GROQ_API_KEY.")
         return None
@@ -69,20 +79,19 @@ def call_groq_versatile(user_prompt, max_retries=5):
                     {"role": "user", "content": user_prompt}
                 ],
                 response_format={"type": "json_object"},
-                temperature=0.2
+                temperature=0.2,
+                max_tokens=480  # Prevents output truncation and limits response token overhead
             )
             return json.loads(response.choices[0].message.content.strip())
 
         except Exception as e:
             err_msg = str(e).lower()
             if "429" in err_msg or "rate limit" in err_msg or "token" in err_msg:
-                # Exponential backoff: 15s, 30s, 45s wait if token limit hits
-                wait_time = (attempt + 1) * 15
-                print(f"⚠️ Rate/Token limit hit for {MODEL_NAME}. Pausing for {wait_time}s to reset limit (Retry {attempt + 1}/{max_retries})...")
-                time.sleep(wait_time)
+                print(f"⚠️ Rate limit hit. Waiting 45s (Attempt {attempt + 1}/{max_retries})...")
+                time.sleep(45)
             else:
                 print(f"⚠️ Groq Error on attempt {attempt + 1}: {e}")
-                time.sleep(5)
+                time.sleep(3)
                 
     return None
 
@@ -91,15 +100,18 @@ def summarize_article(item, is_bihar=False):
     title = item.get("title", "")
     content = item.get("content", "")
 
+    # Truncate raw content to 300 words max before sending to API
+    trimmed_content = trim_content_for_tokens(content, max_words=300)
+
     news_type = "Bihar State News" if is_bihar else "National Current Affairs"
     user_prompt = (
         f"News Domain: {news_type}\n"
         f"Title: {title}\n"
-        f"Content Body: {content}\n\n"
+        f"Content Body: {trimmed_content}\n\n"
         "Analyze text, filter, assign strict category from syllabus, and output JSON:"
     )
 
-    parsed = call_groq_versatile(user_prompt)
+    parsed = call_groq_versatile(user_prompt, max_retries=2)
 
     if not parsed:
         print(f"❌ Skipping [{title[:30]}...] due to persistent API limits/failure.")
@@ -116,7 +128,7 @@ def summarize_article(item, is_bihar=False):
     return {
         "title": parsed.get("title", title),
         "category": assigned_category,
-        "bullets": parsed.get("bullets", [content[:150] + "..."]),
+        "bullets": parsed.get("bullets", [trimmed_content[:150] + "..."]),
         "exam_tag": exam_tag,
         "date": TODAY_DATE
     }
@@ -158,7 +170,7 @@ def process_all_news():
             national_cards.append(formatted_card)
             nat_idx += 1
             
-        time.sleep(5)  # 5-second safe delay for Versatile 70B model
+        time.sleep(6)  # Safe 6-second delay between requests for 70B Versatile model
 
     # Process Bihar News
     print("\n🏛️ Processing Bihar News...")
@@ -179,7 +191,7 @@ def process_all_news():
             bihar_cards.append(formatted_card)
             bih_idx += 1
             
-        time.sleep(5)  # 5-second safe delay
+        time.sleep(6)  # Safe 6-second delay
 
     output_data = {
         "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
