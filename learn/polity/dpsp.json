@@ -1,0 +1,1629 @@
+
+{
+  "topic_id": "dpsp_polity_complete",
+  "topic_title": "Directive Principles of State Policy (DPSP)",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 50,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "dpsp_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 50
+      },
+      "intro_payload": {
+        "title": "Directive Principles of State Policy (DPSP)",
+        "icon": "📜",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Understanding DPSP: Part IV of Constitution (Articles 36-51)",
+          "Difference between Fundamental Rights and DPSP",
+          "Classification: Socialistic, Gandhian, Liberal-Intellectual Principles",
+          "Non-justiciable nature and importance",
+          "Conflict resolution: Article 31C and Supreme Court judgments",
+          "PYQ Traps: Article numbers, amendments, classification tricks"
+        ],
+        "estimated_time": "22 mins",
+        "total_xp": 300
+      },
+      "navigation": {
+        "next": "card_02_village_analogy",
+        "button_text": "शुरू करें ➔"
+      }
+    },
+    {
+      "card_id": "card_02_village_analogy",
+      "card_slug": "card_02_village_analogy",
+      "type": "chat",
+      "concept_id": "dpsp_daily_life_intro",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, kal gaon mein ek meeting thi. Sarpanch ne kaha ki har ghar mein shauchalay hona chahiye, bachon ko school bhejana chahiye. Par ye sirf suggestion tha, koi zabardasti nahi thi. Aisa kyun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut accha observation Raju! Dekho, kuch cheezein tumhe force nahi kar sakte, lekin wo important guidelines hain jo society ko behtar banane ke liye follow karni chahiye. Constitution mein bhi aisa hi kuch hai - jise Directive Principles of State Policy kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ye rules nahi hain, suggestions hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi samjhe! DPSP government ke liye guidelines hain - jaise tumhare papa tumhe kehte hain 'padhai karo, achhe dost banao' - wo force nahi karte but wo tumhare bhale ke liye important advice hai. Isi tarah DPSP government ko direction dete hain ki country ko kaise chalana hai, welfare kaise karna hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_what_is_dpsp",
+        "button_text": "DPSP kya hai? ➔"
+      }
+    },
+    {
+      "card_id": "card_03_what_is_dpsp",
+      "card_slug": "card_03_what_is_dpsp",
+      "type": "chat",
+      "concept_id": "dpsp_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DPSP yani Directive Principles of State Policy - Constitution ke Part IV mein hain (Articles 36 se 51 tak). Ye principles government ko batate hain ki laws banate waqt aur policies implement karte waqt kis direction mein jaana chahiye. Jaise economic equality, social justice, education for all!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye Fundamental Rights se alag hain kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Fundamental Rights (Part III) justiciable hain - matlab agar wo violate hon toh tum court ja sakte ho. Lekin DPSP non-justiciable hain - matlab court mein enforce nahi kar sakte. But ye bahut important hain kyunki ye government ko welfare state banane ki direction dete hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh DPSP ko follow karna zaruri nahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Legal compulsion nahi hai, but Article 37 kehta hai ki ye principles 'fundamental in the governance of the country' hain aur government ka duty hai inhe apply karne ki try karna. Yaad rakho - Rights tumhe protect karte hain, DPSP tumhari welfare karte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_quiz_basic",
+        "button_text": "Test करो ➔"
+      }
+    },
+    {
+      "card_id": "card_04_quiz_basic",
+      "card_slug": "card_04_quiz_basic",
+      "type": "quiz",
+      "concept_id": "dpsp_basics_test",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "DPSP (Directive Principles of State Policy) संविधान के किस भाग में हैं?",
+        "options": [
+          { "id": "A", "text": "Part III (अनुच्छेद 12-35)" },
+          { "id": "B", "text": "Part IV (अनुच्छेद 36-51)" },
+          { "id": "C", "text": "Part V (अनुच्छेद 52-151)" },
+          { "id": "D", "text": "Part VI (अनुच्छेद 152-237)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "DPSP संविधान के Part IV में हैं और Articles 36 से 51 तक फैले हैं। Part III में Fundamental Rights हैं (12-35), Part V में Union Government (52-151), और Part VI में State Governments (152-237) का वर्णन है। यह SSC और Railway में direct पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_05_origin_ireland",
+        "button_text": "Origin कहाँ से? ➔"
+      }
+    },
+    {
+      "card_id": "card_05_origin_ireland",
+      "card_slug": "card_05_origin_ireland",
+      "type": "chat",
+      "concept_id": "dpsp_origin",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, DPSP ka idea kahan se aaya? Kisi aur country se copy kiya kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! DPSP ka concept Ireland (Irish Constitution 1937) se liya gaya hai. Ireland ne Spanish Constitution se ye idea liya tha. Indian Constitution makers ne dekha ki Ireland mein ye principles achhe kaam kar rahe hain welfare state banane mein, toh unhone bhi adopt kar liya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh DPSP completely Ireland jaisa hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! India ne apne according modify kiya. Ireland ke DPSP mein mainly Christian values the, lekin India ne apne socialist, Gandhian aur liberal values add kiye. Jaise cow protection (Gandhian), uniform civil code (liberal), workers' participation in management (socialist) - ye sab India-specific additions hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_article_37",
+        "button_text": "Article 37 ➔"
+      }
+    },
+    {
+      "card_id": "card_06_article_37",
+      "card_slug": "card_06_article_37",
+      "type": "chat",
+      "concept_id": "article_37_importance",
+      "level": 2,
+      "progress": {
+        "current": 6,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 37 DPSP ka soul hai! Ye clearly kehta hai: 'DPSP shall NOT be enforceable by any court, BUT the principles are nevertheless FUNDAMENTAL in the governance of the country and it shall be the DUTY of the State to apply these principles in making laws.'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab court enforce nahi kar sakti, lekin government ki duty hai follow karna?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ye contradiction lagta hai na? But samjho - agar court enforce kar sake toh financial burden bahut zyada ho jayega. Jaise 'right to work' DPSP hai - agar ye enforceable ho toh government har unemployed ko job deni padegi, jo practically impossible hai! Isliye non-justiciable rakha gaya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh DPSP weak hain? Koi power nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi Raju! Courts directly enforce nahi kar sakte, but judgments mein DPSP ko guide ki tarah use karte hain. Jaise Right to Education (originally DPSP tha Article 45 mein) later Fundamental Right ban gaya (Article 21A)! Plus Article 31C kehta hai kuch DPSP implement karne ke liye agar Fundamental Rights bhi violate ho toh chalta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_milestone_intro",
+        "button_text": "Module 1 Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_07_milestone_intro",
+      "card_slug": "card_07_milestone_intro",
+      "type": "milestone",
+      "concept_id": "intro_module_complete",
+      "level": 2,
+      "progress": {
+        "current": 7,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 1 COMPLETED!",
+        "badge_emoji": "📜",
+        "completed_topic": "Introduction to DPSP",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/5 Clear",
+        "motivational_quote": "Great start! अब DPSP की तीन categories समझेंगे - Socialistic, Gandhian, Liberal! 💪"
+      },
+      "navigation": {
+        "next": "card_08_classification_intro",
+        "button_text": "Start Module 2 ➔"
+      }
+    },
+    {
+      "card_id": "card_08_classification_intro",
+      "card_slug": "card_08_classification_intro",
+      "type": "chat",
+      "concept_id": "dpsp_classification",
+      "level": 2,
+      "progress": {
+        "current": 8,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DPSP ko teen main categories mein divide kiya jata hai based on their nature: (1) Socialistic Principles - economic equality, workers' rights (2) Gandhian Principles - village panchayats, cottage industries, cow protection (3) Liberal-Intellectual Principles - uniform civil code, separation of judiciary, free legal aid!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye classification Constitution mein diya hai kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Constitution mein Article 36 se 51 tak seedhe principles diye hain. Lekin scholars ne study karke dekha ki kuch principles socialist ideology se inspired hain, kuch Gandhi ji ke ideas se, kuch liberal Western thoughts se - isliye ye classification banaya gaya easy understanding ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh exam mein puchha jata hai kya ye classification?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! UPSC aur BPSC mein bahut puchha jata hai - 'Which Article is a Gandhian Principle?', 'Which DPSP is Socialistic in nature?' - ye type ke questions common hain. Ab hum ek-ek category detail mein samjhenge!"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_socialistic_principles",
+        "button_text": "Socialistic ➔"
+      }
+    },
+    {
+      "card_id": "card_09_socialistic_principles",
+      "card_slug": "card_09_socialistic_principles",
+      "type": "chat",
+      "concept_id": "socialistic_dpsp",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Socialistic Principles ka focus hai economic equality aur social justice. Main Articles: Article 38 - State shall promote welfare by securing social, economic and political justice; Article 39 - Equal pay for equal work (men & women), ownership of material resources, children not exploited; Article 41 - Right to work, education, public assistance!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Article 39 mein kya exact hai? Details mein batao!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Article 39 mein 6 points hain: (a) Men and women equally have right to adequate means of livelihood (b) Ownership and control of material resources of community so distributed as to subserve common good (c) Economic system should not result in concentration of wealth (d) Equal pay for equal work for men and women (e) Workers' health and strength not abused (f) Children not forced by economic necessity into unsuitable occupations!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Article 39 bahut detailed hai! Aur bhi socialistic principles hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Article 42 - Humane conditions of work and maternity relief; Article 43 - Living wage for workers, Article 43A - Workers' participation in management (ye 42nd Amendment se add hua 1976 mein); Article 47 - Raise level of nutrition and standard of living, improve public health. Ye sab socialist welfare state ke indicators hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_quiz_socialistic",
+        "button_text": "Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_10_quiz_socialistic",
+      "card_slug": "card_10_quiz_socialistic",
+      "type": "quiz",
+      "concept_id": "socialistic_test_1",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा Article 'equal pay for equal work for men and women' से संबंधित है?",
+        "options": [
+          { "id": "A", "text": "Article 38" },
+          { "id": "B", "text": "Article 39(d)" },
+          { "id": "C", "text": "Article 41" },
+          { "id": "D", "text": "Article 43" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 39(d) specifically कहता है 'equal pay for equal work for both men and women'। यह एक Socialistic Principle है जो gender equality और economic justice सुनिश्चित करता है। Article 38 general welfare की बात करता है, Article 41 right to work, और Article 43 living wage से संबंधित है। यह SSC और BPSC में बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_11_quiz_socialistic_2",
+        "button_text": "Q2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_11_quiz_socialistic_2",
+      "card_slug": "card_11_quiz_socialistic_2",
+      "type": "quiz",
+      "concept_id": "socialistic_test_2",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Article 43A (workers' participation in management) किस संशोधन द्वारा जोड़ा गया?",
+        "options": [
+          { "id": "A", "text": "44वां संशोधन, 1978" },
+          { "id": "B", "text": "42वां संशोधन, 1976" },
+          { "id": "C", "text": "86वां संशोधन, 2002" },
+          { "id": "D", "text": "73वां संशोधन, 1992" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 43A - 'workers' participation in management of industries' को 42वें संशोधन अधिनियम, 1976 द्वारा जोड़ा गया। यह Emergency के दौरान Indira Gandhi सरकार द्वारा लाया गया था जो socialist policies को बढ़ावा दे रही थी। यह UPSC और Railway में amendment-based questions में आता है!"
+      },
+      "navigation": {
+        "next": "card_12_quiz_socialistic_3",
+        "button_text": "Q3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_12_quiz_socialistic_3",
+      "card_slug": "card_12_quiz_socialistic_3",
+      "type": "quiz",
+      "concept_id": "socialistic_test_3",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा कथन सही है?\n1. Article 38 - State shall promote welfare\n2. Article 39 - Equal pay for equal work\n3. Article 43A - Cottage industries को प्रोत्साहन\n4. Article 47 - Public health में सुधार",
+        "options": [
+          { "id": "A", "text": "1, 2 और 4 सही हैं" },
+          { "id": "B", "text": "1, 2 और 3 सही हैं" },
+          { "id": "C", "text": "केवल 1 और 2 सही हैं" },
+          { "id": "D", "text": "सभी सही हैं" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 3 गलत है। Article 43A 'workers' participation in management' से संबंधित है, cottage industries नहीं। Cottage industries को promote करना Article 43 (Gandhian Principle) में आता है। 1, 2 और 4 सही हैं। यह BPSC का classic multi-statement trap है!"
+      },
+      "navigation": {
+        "next": "card_13_gandhian_principles",
+        "button_text": "Gandhian ➔"
+      }
+    },
+    {
+      "card_id": "card_13_gandhian_principles",
+      "card_slug": "card_13_gandhian_principles",
+      "type": "chat",
+      "concept_id": "gandhian_dpsp",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Gandhian Principles Gandhi ji ke rural development aur self-reliance ke ideas se inspired hain. Main Articles: Article 40 - Organisation of village panchayats (gram sabha strengthen); Article 43 - Cottage industries in rural areas promote; Article 46 - Educational and economic interests of SCs, STs and weaker sections; Article 47 - Prohibition of intoxicating drinks and harmful drugs; Article 48 - Prohibition of cow slaughter!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir cow slaughter prohibition bhi DPSP mein hai? Ye toh bahut controversial topic hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! Article 48 kehta hai 'State shall prohibit slaughter of cows, calves and other milch and draught cattle.' Gandhi ji cattle ko economic asset mante the - agriculture aur dairy ke liye zaroori. Lekin dhyan do - ye 'State' ki responsibility hai, not enforceable individual right. Different states ne alag-alag laws banaye hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Article 40 village panchayats ke bare mein hai - matlab 73rd Amendment se pehle bhi ye concept tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Article 40 (1950 se) kehta tha ki panchayats ko organise karo. Lekin ye non-justiciable tha toh implementation weak tha. 73rd Amendment (1992) ne Panchayati Raj ko constitutional status diya Part IX banake, tab jakar strong implementation hua! Ye DPSP to Fundamental structure ka example hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_liberal_principles",
+        "button_text": "Liberal ➔"
+      }
+    },
+    {
+      "card_id": "card_14_liberal_principles",
+      "card_slug": "card_14_liberal_principles",
+      "type": "chat",
+      "concept_id": "liberal_dpsp",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Liberal-Intellectual Principles modern governance aur Western democratic values se inspired hain. Main Articles: Article 44 - Uniform Civil Code (UCC) throughout India; Article 45 - Free and compulsory education for children (now Article 21A); Article 48A - Protection of environment and wildlife (42nd Amendment); Article 49 - Protection of monuments and places of national importance; Article 50 - Separation of judiciary from executive; Article 51 - Promotion of international peace and security!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir UCC toh bahut sunne mein aata hai! Ye kya hai exactly?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Article 44 kehta hai 'State shall endeavour to secure for citizens a Uniform Civil Code throughout India.' Matlab ek hi law for marriage, divorce, inheritance for all religions. Abhi different personal laws hain - Hindu Code, Muslim Personal Law, Christian Marriage Act. UCC implement karna politically sensitive hai, isliye abhi tak fully implement nahi hua!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Article 48A environment protection - ye bhi 42nd Amendment mein aaya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! 1976 mein jab worldwide environment consciousness badh rahi thi (Stockholm Conference 1972 ke baad), tab Article 48A add kiya gaya. Isme protection and improvement of environment, forests, wildlife ka zikar hai. Corresponding Fundamental Duty bhi Article 51A(g) mein add hui - dono saath mein aaye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_quiz_classification",
+        "button_text": "Classification Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_classification",
+      "card_slug": "card_15_quiz_classification",
+      "type": "quiz",
+      "concept_id": "classification_test",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित को सही categorize करें:\n1. Article 40 - Village Panchayats\n2. Article 44 - Uniform Civil Code\n3. Article 39(d) - Equal pay for equal work\n4. Article 48 - Prohibition of cow slaughter",
+        "options": [
+          { "id": "A", "text": "1,4-Gandhian; 2-Liberal; 3-Socialistic" },
+          { "id": "B", "text": "1,2-Liberal; 3,4-Socialistic" },
+          { "id": "C", "text": "1,3-Socialistic; 2,4-Gandhian" },
+          { "id": "D", "text": "सभी Gandhian हैं" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Correct classification: Article 40 (Village Panchayats) और Article 48 (Cow slaughter prohibition) Gandhian Principles हैं। Article 44 (Uniform Civil Code) Liberal-Intellectual Principle है। Article 39(d) (Equal pay) Socialistic Principle है। यह UPSC और BPSC का बहुत महत्वपूर्ण classification question है!"
+      },
+      "navigation": {
+        "next": "card_16_milestone_classification",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_16_milestone_classification",
+      "card_slug": "card_16_milestone_classification",
+      "type": "milestone",
+      "concept_id": "classification_module_complete",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 2 MASTERED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Classification of DPSP",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/5 Clear",
+        "motivational_quote": "Excellent! अब DPSP vs Fundamental Rights का महत्वपूर्ण comparison देखेंगे! 🚀"
+      },
+      "navigation": {
+        "next": "card_17_rights_vs_dpsp",
+        "button_text": "Start Module 3 ➔"
+      }
+    },
+    {
+      "card_id": "card_17_rights_vs_dpsp",
+      "card_slug": "card_17_rights_vs_dpsp",
+      "type": "chat",
+      "concept_id": "rights_dpsp_comparison",
+      "level": 3,
+      "progress": {
+        "current": 17,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, Fundamental Rights aur DPSP mein kya main differences hain? Dono important lagti hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut important question! Main differences: (1) Nature: Rights are negative (State ko rokti hain - 'State shall not'), DPSP are positive (State ko direction deti hain - 'State shall promote'). (2) Justiciability: Rights enforceable in court, DPSP non-enforceable. (3) Origin: Rights individual liberty ke liye (Western democracies se), DPSP welfare state ke liye (Ireland se)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Rights zyada powerful hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Originally haan! But Dr. Ambedkar ne kaha tha 'DPSP are like a cheque on a bank, payable when the resources permit.' Matlab jab country develop hoga, DPSP implement hongi. Actually dono complementary hain - Rights individual freedom, DPSP social welfare. Balance chahiye dono mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Agar dono mein conflict ho toh kya hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye bahut interesting question hai! Initially Supreme Court ne kaha Rights supreme hain (Champakam Dorairajan case 1951). Phir Parliament ne Article 31C banaya (1971) - kaha ki Article 39(b)(c) implement karne ke liye Rights violate kar sakte hain. Phir Kesavananda Bharati case (1973) mein balance approach aaya - dono ko harmoniously construct karo!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_article_31c",
+        "button_text": "Article 31C detail ➔"
+      }
+    },
+    {
+      "card_id": "card_18_article_31c",
+      "card_slug": "card_18_article_31c",
+      "type": "chat",
+      "concept_id": "article_31c_detail",
+      "level": 3,
+      "progress": {
+        "current": 18,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 31C bahut important hai! Originally 1971 mein 25th Amendment dwara add kiya gaya. Ye kehta hai: Agar koi law Article 39(b) - equal distribution of material resources - ya Article 39(c) - prevent concentration of wealth - implement karne ke liye bana hai, toh wo law Article 14, 19 violate kar sakta hai aur court usko challenge nahi kar sakti!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab government property laws, land reforms banate waqt Fundamental Rights ignore kar sakti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, initially ye idea tha. 42nd Amendment (1976) ne Article 31C ko aur expand karke kaha ki koi bhi DPSP implement karne ke liye Rights violate kar sakte hain. But Minerva Mills case (1980) mein Supreme Court ne 42nd Amendment ka ye part unconstitutional declare kar diya - kaha sirf 39(b)(c) ke liye hi apply hoga!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh ab Article 31C sirf Article 39(b)(c) ke liye valid hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Minerva Mills judgment ne balance restore kiya. Court ne kaha Rights aur DPSP dono Constitution ke essential features hain - ek ko completely sacrifice karke doosra implement nahi kar sakte. Ye UPSC Prelims mein bahut puchha jata hai - '31C applies to which Articles?'"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_quiz_rights_dpsp",
+        "button_text": "Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_19_quiz_rights_dpsp",
+      "card_slug": "card_19_quiz_rights_dpsp",
+      "type": "quiz",
+      "concept_id": "rights_dpsp_test_1",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Minerva Mills case (1980) में Supreme Court ने क्या निर्णय दिया?",
+        "options": [
+          { "id": "A", "text": "Article 31C को पूरी तरह unconstitutional घोषित कर दिया" },
+          { "id": "B", "text": "Article 31C को सभी DPSP पर लागू रखा" },
+          { "id": "C", "text": "Article 31C को केवल Article 39(b)(c) तक सीमित कर दिया" },
+          { "id": "D", "text": "Fundamental Rights को DPSP से ऊपर घोषित कर दिया" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Minerva Mills case (1980) में Supreme Court ने 42nd Amendment द्वारा Article 31C के विस्तार को unconstitutional घोषित किया और कहा कि Article 31C केवल Article 39(b) - equal distribution of material resources - और Article 39(c) - prevent concentration of wealth - को implement करने के लिए ही Fundamental Rights को override कर सकता है, सभी DPSP के लिए नहीं। यह UPSC और BPSC में case-based questions में आता है!"
+      },
+      "navigation": {
+        "next": "card_20_quiz_comparison",
+        "button_text": "Q2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz_comparison",
+      "card_slug": "card_20_quiz_comparison",
+      "type": "quiz",
+      "concept_id": "rights_dpsp_test_2",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Fundamental Rights और DPSP में क्या अंतर है?\n1. Rights justiciable हैं, DPSP non-justiciable\n2. Rights negative हैं, DPSP positive\n3. Rights Part III में, DPSP Part IV में\n4. Rights सभी के लिए, DPSP केवल citizens के लिए",
+        "options": [
+          { "id": "A", "text": "1, 2 और 3 सही हैं" },
+          { "id": "B", "text": "केवल 1 और 2 सही हैं" },
+          { "id": "C", "text": "सभी सही हैं" },
+          { "id": "D", "text": "केवल 1, 2 और 4 सही हैं" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 4 गलत है। DPSP 'State' को direction देते हैं, individual citizens को नहीं। State में government, legislature, executive सब आते हैं। Rights में कुछ सभी persons के लिए हैं (Article 14-18, 20-22) और कुछ केवल citizens के लिए (Article 19), लेकिन DPSP का target 'State' है। 1, 2 और 3 सही हैं। यह BPSC का subtle trap है!"
+      },
+      "navigation": {
+        "next": "card_21_quiz_article_numbers",
+        "button_text": "Q3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_article_numbers",
+      "card_slug": "card_21_quiz_article_numbers",
+      "type": "quiz",
+      "concept_id": "article_numbers_test",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित को सही match करें:\n1. Article 44 - A. Equal pay for equal work\n2. Article 39(d) - B. Uniform Civil Code\n3. Article 40 - C. Village Panchayats\n4. Article 48 - D. Cow slaughter prohibition",
+        "options": [
+          { "id": "A", "text": "1-B, 2-A, 3-C, 4-D" },
+          { "id": "B", "text": "1-A, 2-B, 3-D, 4-C" },
+          { "id": "C", "text": "1-C, 2-D, 3-A, 4-B" },
+          { "id": "D", "text": "1-D, 2-C, 3-B, 4-A" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Correct matching: Article 44 - Uniform Civil Code (Liberal principle), Article 39(d) - Equal pay for equal work (Socialistic principle), Article 40 - Organisation of village panchayats (Gandhian principle), Article 48 - Prohibition of cow slaughter (Gandhian principle)। यह SSC और Railway में matching type question के रूप में बार-बार पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_22_milestone_comparison",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_22_milestone_comparison",
+      "card_slug": "card_22_milestone_comparison",
+      "type": "milestone",
+      "concept_id": "comparison_module_complete",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 3 CONQUERED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "DPSP vs Fundamental Rights",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/5 Clear",
+        "motivational_quote": "Outstanding! अब DPSP के implementation और amendments देखेंगे! 💪"
+      },
+      "navigation": {
+        "next": "card_23_implementation",
+        "button_text": "Start Module 4 ➔"
+      }
+    },
+    {
+      "card_id": "card_23_implementation",
+      "card_slug": "card_23_implementation",
+      "type": "chat",
+      "concept_id": "dpsp_implementation",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, DPSP non-justiciable hain toh practically implement hui hain kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut achha question! Haan, bahut saari DPSP implement ho chuki hain laws aur schemes ke through. Example: Article 45 (free education to children) - implemented through Right to Education Act 2009, ab Article 21A Fundamental Right ban gaya! Article 39(d) (equal pay) - Equal Remuneration Act 1976; Article 43 (living wage) - Minimum Wages Act 1948!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Article 44 UCC ka kya hua? Wo toh abhi bhi implement nahi hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sahi kaha! UCC abhi fully implement nahi hua kyunki ye politically aur socially sensitive hai. Different religions apne personal laws follow karte hain. Lekin partially implementation hai - Goa mein Uniform Civil Code hai! Recently 2024 mein Uttarakhand ne bhi UCC implement kiya. Central level par abhi debate chal rahi hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Article 48A environment protection?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bohot implementation hua! Wildlife Protection Act 1972, Forest Conservation Act 1980, Environment Protection Act 1986, National Green Tribunal 2010 - ye sab Article 48A implement karne ke steps hain. Supreme Court ne bhi bahut cases mein Article 48A cite kiya hai - M.C. Mehta cases jaise pollution control!"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_amendments",
+        "button_text": "Amendments ➔"
+      }
+    },
+    {
+      "card_id": "card_24_amendments",
+      "card_slug": "card_24_amendments",
+      "type": "chat",
+      "concept_id": "dpsp_amendments",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DPSP mein important amendments: (1) 42nd Amendment (1976) - Added Article 39A (free legal aid), Article 43A (workers' participation in management), Article 48A (environment protection). Ye sab socialist aur environment consciousness ke saath aaye! (2) 44th Amendment (1978) - Article 38 ko modify kiya, social, economic and political justice par focus badhaaya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 42nd Amendment toh bahut important lagta hai! Usne 3 naye articles add kiye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! 42nd Amendment 'Mini Constitution' kehlaata hai kyunki usne bahut saare changes kiye - DPSP mein naye principles, Preamble mein Socialist, Secular, Integrity add kiya, Fundamental Duties (Part IV-A) add kiye! Emergency period (1975-77) ke time aaya tha, Indira Gandhi government ne pass kiya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "86th Amendment ka kya role hai DPSP mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "86th Amendment (2002) ne Article 45 ko modify kiya. Originally Article 45 kehta tha 'State shall provide free and compulsory education to children until 14 years' (DPSP). 86th Amendment ne ye delete karke Article 21A banaya (Fundamental Right - 6-14 years education). Naya Article 45 ab kehta hai 'early childhood care and education for children below 6 years' - ye DPSP hi raha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_quiz_implementation",
+        "button_text": "Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_25_quiz_implementation",
+      "card_slug": "card_25_quiz_implementation",
+      "type": "quiz",
+      "concept_id": "implementation_test_1",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "42nd Amendment (1976) ने DPSP में कौन से Articles जोड़े?",
+        "options": [
+          { "id": "A", "text": "केवल Article 48A (environment)" },
+          { "id": "B", "text": "Article 39A, 43A और 48A" },
+          { "id": "C", "text": "केवल Article 43A (workers' participation)" },
+          { "id": "D", "text": "Article 44 (UCC)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "42nd Amendment, 1976 ने तीन नए DPSP जोड़े: Article 39A - free legal aid to poor, Article 43A - workers' participation in management of industries, Article 48A - protection and improvement of environment and forests। यह 'Mini Constitution' के रूप में जाना जाता है। Article 44 (UCC) मूल Constitution में था। यह Railway और SSC में amendment-based questions में आता है!"
+      },
+      "navigation": {
+        "next": "card_26_quiz_transformation",
+        "button_text": "Q2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_26_quiz_transformation",
+      "card_slug": "card_26_quiz_transformation",
+      "type": "quiz",
+      "concept_id": "implementation_test_2",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा DPSP बाद में Fundamental Right बन गया?",
+        "options": [
+          { "id": "A", "text": "Article 44 - Uniform Civil Code" },
+          { "id": "B", "text": "Article 45 - Free education to children (अब Article 21A)" },
+          { "id": "C", "text": "Article 48 - Cow slaughter prohibition" },
+          { "id": "D", "text": "Article 47 - Public health" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 45 (free and compulsory education for children) originally DPSP था। 86th Amendment, 2002 ने इसे Fundamental Right बनाया - Article 21A (Right to Education for children aged 6-14 years)। यह DPSP से Fundamental Right में transformation का बेहतरीन उदाहरण है। UCC (44), cow slaughter (48), और public health (47) अभी भी DPSP ही हैं। यह UPSC Prelims में conceptual question है!"
+      },
+      "navigation": {
+        "next": "card_27_quiz_states_ucc",
+        "button_text": "Q3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_27_quiz_states_ucc",
+      "card_slug": "card_27_quiz_states_ucc",
+      "type": "quiz",
+      "concept_id": "ucc_implementation_test",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "भारत में Uniform Civil Code (UCC) पूर्ण रूप से किस राज्य में लागू है?",
+        "options": [
+          { "id": "A", "text": "केरल" },
+          { "id": "B", "text": "गोवा" },
+          { "id": "C", "text": "उत्तराखंड" },
+          { "id": "D", "text": "तमिलनाडु" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Goa एकमात्र राज्य है जहाँ पूर्ण रूप से Uniform Civil Code लागू है (Portuguese Civil Code का adapted version)। यह 1961 से जब Goa India में merge हुआ तब से जारी है। Uttarakhand ने 2024 में UCC पास किया लेकिन अभी पूर्ण implementation नहीं हुआ। यह current affairs और DPSP implementation का महत्वपूर्ण example है!"
+      },
+      "navigation": {
+        "next": "card_28_milestone_implementation",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_28_milestone_implementation",
+      "card_slug": "card_28_milestone_implementation",
+      "type": "milestone",
+      "concept_id": "implementation_module_complete",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 4 CLEARED!",
+        "badge_emoji": "📊",
+        "completed_topic": "Implementation & Amendments of DPSP",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/5 Clear",
+        "motivational_quote": "Superb! अब criticisms और importance देखेंगे! 🚀"
+      },
+      "navigation": {
+        "next": "card_29_criticisms",
+        "button_text": "Start Module 5 ➔"
+      }
+    },
+    {
+      "card_id": "card_29_criticisms",
+      "card_slug": "card_29_criticisms",
+      "type": "chat",
+      "concept_id": "dpsp_criticisms",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, DPSP ko lekar koi criticisms hain kya? Agar implement nahi ho sakte toh Constitution mein kyun rakhe?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut valid criticism hai! Main criticisms: (1) Non-justiciable - courts enforce nahi kar sakte toh kya guarantee ki government follow karegi? (2) Illusory - kuch principles unrealistic hain jaise 'right to work for all' - financially impossible! (3) Vague and ambiguous - 'living wage', 'adequate means of livelihood' - ye kya exact mean karta hai define nahi! (4) Conflicting with each other - cow slaughter ban (48) vs export of cattle (economic policy)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh critics kehte hain DPSP waste hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kuch critics bolte hain ye 'pious declarations' hain, 'moral sermons' hain with no teeth! But ye extreme view hai. Moderate view ye hai ki DPSP ideals hain jo gradually achieve karne hain as economy grows. Jaise Article 45 (education) originally DPSP tha - bahut time laga, but finally 2002 mein Fundamental Right ban gaya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Classification mein bhi problem hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Kuch critics kehte hain Gandhian principles (cow protection, cottage industries) outdated hain modern economy ke liye. Kuch kehte hain socialist principles (nationalization, wealth distribution) economic growth ko slow karte hain. But ye political debates hain - exam mein factual criticisms yaad rakho!"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_importance",
+        "button_text": "Importance ➔"
+      }
+    },
+    {
+      "card_id": "card_30_importance",
+      "card_slug": "card_30_importance",
+      "type": "chat",
+      "concept_id": "dpsp_importance",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DPSP ki importance bahut hai! (1) Welfare State का blueprint - DPSP batate hain India ko kis direction mein jana hai. (2) Legislation का guide - Courts laws interpret karte waqt DPSP consider karte hain. Supreme Court ne bahut cases mein DPSP cite kiye - Minerva Mills, Kesavananda Bharati! (3) Government Performance का yardstick - elections mein opposition government ko challenge karti hai DPSP implement na karne par!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Courts kaise use karte hain DPSP ko agar wo non-justiciable hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut accha question! Courts directly DPSP enforce nahi kar sakte, but laws interpret karte waqt DPSP ko 'guide' ki tarah use karte hain. Example: Unnikrishnan case (1993) - Court ne kaha Article 21 (Right to Life) mein education bhi include hai, aur Article 45 (DPSP) cite kiya! Mohini Jain case - free education for poor. DPSP se Courts Fundamental Rights ko expand karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab DPSP indirectly powerful hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Dr. Ambedkar ne kaha tha - 'DPSP are like instruments of instructions which are issued to the State by the Constitution.' Government schemes bhi DPSP se inspired hain - MGNREGA (Article 41 - right to work), Mid-Day Meal (Article 47 - nutrition), Maternity Benefit (Article 42). DPSP slow but steady implementation ka model hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_judicial_interpretation",
+        "button_text": "Court Cases ➔"
+      }
+    },
+    {
+      "card_id": "card_31_judicial_interpretation",
+      "card_slug": "card_31_judicial_interpretation",
+      "type": "chat",
+      "concept_id": "judicial_cases",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Important Supreme Court cases on DPSP: (1) Champakam Dorairajan (1951) - Initially Court ne kaha Fundamental Rights supreme hain, DPSP subordinate. But ye narrow view tha! (2) Kesavananda Bharati (1973) - Court ne kaha Rights aur DPSP dono complementary hain, harmonious balance chahiye. Basic Structure doctrine mein dono include hain! (3) Minerva Mills (1980) - Confirmed ki Rights aur DPSP ka balance Constitution ka essential feature hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab initially Rights zyada important the, phir equal ho gaye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Evolution hua judicial thinking mein. (4) Unnikrishnan case (1993) - Article 21 mein education read kiya using Article 45 (DPSP). (5) Vishaka case (1997) - Workplace sexual harassment guidelines banaye using Article 42 (humane work conditions). (6) M.C. Mehta cases - Environment protection using Article 48A. DPSP se Courts ne Rights ko expand aur strengthen kiya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Article 39A free legal aid ka koi case hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Hussainara Khatoon case (1979) - Court ne kaha Article 39A aur Article 21 together milke free legal aid ka right dete hain poor accused ko. Legal Services Authorities Act 1987 bhi banaya gaya. Ye perfect example hai kaise DPSP se concrete rights emerge karte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_quiz_criticism",
+        "button_text": "Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz_criticism",
+      "card_slug": "card_32_quiz_criticism",
+      "type": "quiz",
+      "concept_id": "criticism_test",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "DPSP की मुख्य आलोचना क्या है?",
+        "options": [
+          { "id": "A", "text": "ये बहुत detailed और complex हैं" },
+          { "id": "B", "text": "ये non-justiciable हैं इसलिए courts में enforce नहीं हो सकते" },
+          { "id": "C", "text": "ये केवल minorities के लिए हैं" },
+          { "id": "D", "text": "ये Fundamental Rights से ज्यादा powerful हैं" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "DPSP की सबसे बड़ी आलोचना यह है कि ये non-justiciable हैं - Article 37 स्पष्ट कहता है 'shall NOT be enforceable by any court'। Critics का कहना है कि बिना legal enforcement के ये केवल 'pious declarations' हैं। हालांकि, defenders का तर्क है कि ये moral और political obligation create करते हैं। यह UPSC Mains और conceptual questions में आता है!"
+      },
+      "navigation": {
+        "next": "card_33_quiz_cases",
+        "button_text": "Q2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_33_quiz_cases",
+      "card_slug": "card_33_quiz_cases",
+      "type": "quiz",
+      "concept_id": "judicial_cases_test",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Kesavananda Bharati case (1973) में Supreme Court ने DPSP के बारे में क्या कहा?",
+        "options": [
+          { "id": "A", "text": "DPSP Fundamental Rights से superior हैं" },
+          { "id": "B", "text": "DPSP और Fundamental Rights दोनों complementary हैं और harmoniously interpret होने चाहिए" },
+          { "id": "C", "text": "DPSP को Constitution से हटा देना चाहिए" },
+          { "id": "D", "text": "DPSP justiciable बना देने चाहिए" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Kesavananda Bharati case (1973) में Supreme Court ने landmark judgment दिया कि Fundamental Rights और DPSP दोनों Constitution के essential features हैं और दोनों को harmoniously और complementary manner में interpret करना चाहिए। एक को दूसरे से ऊपर नहीं रखा जा सकता - balance जरूरी है। यह Basic Structure doctrine का हिस्सा बना। यह BPSC और UPSC में case-based questions में आता है!"
+      },
+      "navigation": {
+        "next": "card_34_quiz_expansion",
+        "button_text": "Q3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_34_quiz_expansion",
+      "card_slug": "card_34_quiz_expansion",
+      "type": "quiz",
+      "concept_id": "rights_expansion_test",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से किस case में Court ने DPSP का use करके Fundamental Rights को expand किया?\n1. Unnikrishnan - Article 21 में education read किया using Article 45\n2. Vishaka - Workplace harassment guidelines using Article 42\n3. Champakam Dorairajan - DPSP को subordinate बताया",
+        "options": [
+          { "id": "A", "text": "केवल 1 और 2" },
+          { "id": "B", "text": "केवल 1" },
+          { "id": "C", "text": "सभी 1, 2 और 3" },
+          { "id": "D", "text": "केवल 2 और 3" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "केवल 1 और 2 सही हैं। Unnikrishnan case में Article 21 में education को read किया गया Article 45 (DPSP) का use करके। Vishaka case में workplace sexual harassment के लिए guidelines बनाए गए Article 42 (humane work conditions - DPSP) का use करके। लेकिन Champakam Dorairajan (1951) में Court ने DPSP को subordinate बताया था - यह Rights expand करने का example नहीं है। यह BPSC का multi-statement trap है!"
+      },
+      "navigation": {
+        "next": "card_35_milestone_final_module",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_35_milestone_final_module",
+      "card_slug": "card_35_milestone_final_module",
+      "type": "milestone",
+      "concept_id": "final_module_complete",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 5 MASTERED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Criticisms, Importance & Judicial Interpretation",
+        "xp_earned": 70,
+        "milestone_progress": "Module 5/5 Clear",
+        "motivational_quote": "Excellent! सभी modules clear! अब Officer-level revision और final quiz! 🎯"
+      },
+      "navigation": {
+        "next": "card_36_summary_revision",
+        "button_text": "Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_36_summary_revision",
+      "card_slug": "card_36_summary_revision",
+      "type": "summary",
+      "concept_id": "dpsp_complete_summary",
+      "level": 4,
+      "progress": {
+        "current": 36,
+        "total": 50
+      },
+      "summary_payload": {
+        "title": "⚡ DPSP Officer-Level Quick Revision",
+        "revision_points": [
+          {
+            "topic": "🔹 Basic Structure",
+            "point": "Part IV (Articles 36-51) | Non-justiciable (Article 37) | Origin: Ireland Constitution 1937 | Nature: Positive obligations on State | Fundamental in governance but NOT enforceable in courts"
+          },
+          {
+            "topic": "🔹 Three Classifications",
+            "point": "SOCIALISTIC: 38 (welfare), 39 (equal pay, material resources), 41 (work/education), 42 (maternity), 43 (living wage), 43A (workers' mgmt), 47 (nutrition/health). GANDHIAN: 40 (panchayats), 43 (cottage industries), 46 (SC/ST), 47 (prohibition), 48 (cow slaughter). LIBERAL: 44 (UCC), 45 (education <6yrs), 48A (environment), 49 (monuments), 50 (judiciary separation), 51 (international peace)"
+          },
+          {
+            "topic": "🔹 vs Fundamental Rights",
+            "point": "Rights: Negative, Justiciable, Part III, Individual liberty | DPSP: Positive, Non-justiciable, Part IV, Social welfare | Initially Rights supreme (Champakam 1951) → Now complementary (Kesavananda 1973) | Article 31C: Laws for 39(b)(c) can override Rights 14,19"
+          },
+          {
+            "topic": "🔹 Key Amendments",
+            "point": "42nd (1976) - Added 39A (free legal aid), 43A (workers' participation), 48A (environment) | 44th (1978) - Modified Article 38 | 86th (2002) - Article 45 changed: education 6-14 became 21A (FR), new 45 for below 6 years"
+          },
+          {
+            "topic": "🔹 Implementation Examples",
+            "point": "Article 45 → Article 21A (RTE 2009) | Article 39(d) → Equal Remuneration Act 1976 | Article 43 → Minimum Wages Act | Article 44 → Goa UCC (only state) | Article 48A → Wildlife Act 1972, EPA 1986 | Article 39A → Legal Services Act 1987"
+          },
+          {
+            "topic": "🔹 Landmark Cases",
+            "point": "Champakam (1951) - Rights > DPSP | Kesavananda (1973) - Both complementary, Basic Structure | Minerva Mills (1980) - 31C limited to 39(b)(c) only | Unnikrishnan (1993) - Education in Art 21 via Art 45 | Vishaka (1997) - Guidelines via Art 42 | Hussainara - Free legal aid via 39A+21"
+          },
+          {
+            "topic": "🔹 Criticisms vs Importance",
+            "point": "CRITICISMS: Non-justiciable (no teeth), Vague terms, Some unrealistic (right to work for all), Conflicting (cow ban vs economy). IMPORTANCE: Welfare state blueprint, Legislative guide for Courts, Political accountability tool, Gradual implementation model (45→21A example)"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_37_final_quiz_1",
+        "button_text": "Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_37_final_quiz_1",
+      "card_slug": "card_37_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_dpsp_assessment_1",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार कीजिए:\n1. DPSP संविधान के Part IV में हैं और non-justiciable हैं।\n2. Article 31C के अनुसार, किसी भी DPSP को implement करने के लिए Fundamental Rights को override किया जा सकता है।\n3. 42वें संशोधन ने Article 39A, 43A और 48A जोड़े।\n4. Article 44 (UCC) पूरे भारत में लागू है।\n\nउपर्युक्त में से कौन से कथन सही हैं?",
+        "options": [
+          { "id": "A", "text": "केवल 1 और 3" },
+          { "id": "B", "text": "केवल 1, 2 और 3" },
+          { "id": "C", "text": "केवल 1, 3 और 4" },
+          { "id": "D", "text": "सभी सही हैं" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "केवल कथन 1 और 3 सही हैं। (2) गलत है - Minerva Mills (1980) के बाद Article 31C केवल Article 39(b) और 39(c) के लिए ही Fundamental Rights override कर सकता है, सभी DPSP के लिए नहीं। (4) गलत है - UCC केवल Goa में पूर्णतः लागू है, पूरे भारत में नहीं। यह BPSC/UPSC का classic multi-statement trap है!"
+      },
+      "navigation": {
+        "next": "card_38_final_quiz_2",
+        "button_text": "Q2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_38_final_quiz_2",
+      "card_slug": "card_38_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_dpsp_assessment_2",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): DPSP non-justiciable हैं इसलिए इनका कोई legal significance नहीं है।\n\nReason (R): Supreme Court ने कई cases में DPSP का उपयोग करके Fundamental Rights को expand किया है और laws को interpret किया है।\n\nसही विकल्प चुनें:",
+        "options": [
+          { "id": "A", "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है" },
+          { "id": "B", "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है" },
+          { "id": "C", "text": "A सही है लेकिन R गलत है" },
+          { "id": "D", "text": "A गलत है लेकिन R सही है" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Assertion गलत है, Reason सही है। DPSP non-justiciable होने के बावजूद बहुत legal और constitutional significance रखते हैं। Supreme Court ने Unnikrishnan, Vishaka, M.C. Mehta जैसे cases में DPSP का उपयोग करके Fundamental Rights को expand किया है। Article 37 कहता है DPSP 'fundamental in the governance' हैं। इसलिए A (no legal significance) गलत है, लेकिन R (Courts use DPSP) सही है। यह UPSC Prelims का classic Assertion-Reason trap है!"
+      },
+      "navigation": {
+        "next": "card_39_final_quiz_3",
+        "button_text": "Q3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_39_final_quiz_3",
+      "card_slug": "card_39_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_dpsp_assessment_3",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित Articles को उनकी सही category से match करें:\n\nArticle 39(d) - Equal pay\nArticle 40 - Village panchayats\nArticle 44 - Uniform Civil Code\nArticle 48A - Environment protection\n\nकौन सा classification सही है?",
+        "options": [
+          { "id": "A", "text": "39(d)-Socialistic, 40-Gandhian, 44-Liberal, 48A-Liberal" },
+          { "id": "B", "text": "39(d)-Liberal, 40-Socialistic, 44-Gandhian, 48A-Socialistic" },
+          { "id": "C", "text": "39(d)-Gandhian, 40-Liberal, 44-Socialistic, 48A-Gandhian" },
+          { "id": "D", "text": "सभी Socialistic हैं" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Correct classification: Article 39(d) - Equal pay for equal work (Socialistic - economic equality), Article 40 - Organisation of village panchayats (Gandhian - rural development), Article 44 - Uniform Civil Code (Liberal-Intellectual - modern governance), Article 48A - Environment protection (Liberal-Intellectual - added by 42nd Amendment 1976 after Stockholm Conference)। यह SSC, Railway और BPSC में बहुत पूछा जाने वाला classification question है!"
+      },
+      "navigation": {
+        "next": "card_40_mnemonic_tricks",
+        "button_text": "Memory Tricks ➔"
+      }
+    },
+    {
+      "card_id": "card_40_mnemonic_tricks",
+      "card_slug": "card_40_mnemonic_tricks",
+      "type": "chat",
+      "concept_id": "memory_techniques",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, itne saare articles hain! Classification yaad kaise rakhun? Koi trick batao!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! Mnemonics banate hain:\n\n**SOCIALISTIC (Economic):** 'WELFARE 39-43' - Article 38 Welfare, 39 Equal resources, 41 Work/Education, 42 Maternity, 43 Living wage, 43A Workers' participation, 47 Health/Nutrition\n\n**GANDHIAN (Rural):** 'Village Cow Cottage' - 40 Village panchayats, 43 Cottage industries, 46 SC/ST welfare, 47 Prohibition, 48 Cow protection"
+        },
+        {
+          "speaker": "raju",
+          "text": "Liberal ke liye kya trick hai sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "**LIBERAL (Modern):** 'UJEPS' - 44 Uniform Civil Code, 50 Judiciary separation, 51 international Peace, 48A Environment, 49 monumentS\n\nYa simple: UCC (44), Education below 6 (45), Environment (48A), Monuments (49), Judiciary (50), Peace (51)\n\nAmendments ke liye: '42 is MAGIC' - 42nd Amendment ne 3 add kiye (39A, 43A, 48A)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Article 31C ke liye trick?"
+        },
+        {
+          "speaker": "aman",
+          "text": "'31C = 39 BC only' - Article 31C applies to only Article 39(b) aur 39(c), not all DPSP! (After Minerva Mills 1980)\n\nPart numbers: 'Rights III, DPSP IV' - Part III Rights, Part IV DPSP\n\nYe tricks exam hall mein bahut kaam aayengi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_exam_strategy",
+        "button_text": "Exam Strategy ➔"
+      }
+    },
+    {
+      "card_id": "card_41_exam_strategy",
+      "card_slug": "card_41_exam_strategy",
+      "type": "chat",
+      "concept_id": "exam_preparation_tips",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DPSP se exam mein kaise questions aate hain? Pattern samjho:\n\n**BPSC/UPSC:** Multi-statement questions (4 statements, find correct ones), Assertion-Reason format, Classification-based (which is Gandhian?), Amendment-based (which added when?), Case-based (Kesavananda judgment kya thi?)\n\n**SSC/Railway:** Direct Article numbers (Article 44 kya hai?), Matching type (Article ko category se match), True/False statements, Years (42nd Amendment kab?)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Common traps kya hain sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Top 5 Traps:\n\n1. **Justiciability:** 'DPSP are justiciable' - FALSE! Article 37 clearly says NOT enforceable\n\n2. **Article 31C scope:** 'Applies to all DPSP' - FALSE! Only 39(b)(c) after Minerva Mills\n\n3. **UCC implementation:** 'UCC लागू है पूरे India में' - FALSE! Only Goa\n\n4. **Article 45 confusion:** Original Article 45 (education 6-14) ab 21A ban gaya, naya 45 below 6 years ke liye\n\n5. **Classification mix:** Article 48A को Gandhian mat samjho - Liberal hai (environment consciousness modern concept hai)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Strategy kya honi chahiye sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exam Strategy:\n\n✅ Article numbers rote mat karo - classification se yaad rakho (Socialistic economic, Gandhian rural, Liberal modern)\n\n✅ Amendments focus: 42nd (39A, 43A, 48A), 86th (45 changed)\n\n✅ Cases concepts: Champakam vs Kesavananda evolution, Minerva Mills 31C limitation\n\n✅ Implementation examples ready rakho (45→21A, 39A→Legal Services Act)\n\n✅ Rights vs DPSP comparison table bana lo\n\nAll the best! DPSP master ho gaya! 🎯"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_pyq_analysis",
+        "button_text": "PYQ Pattern ➔"
+      }
+    },
+    {
+      "card_id": "card_42_pyq_analysis",
+      "card_slug": "card_42_pyq_analysis",
+      "type": "chat",
+      "concept_id": "previous_year_questions",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, actual PYQs mein kya pattern hai? Kya frequently puchha jata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "**Most Frequent Topics in PYQs:**\n\n1. **Classification** (30% questions) - 'Article 40 kis category mein?', 'Gandhian principle identify karo'\n\n2. **Article 31C** (20%) - 'Kis Article par apply hota?', 'Minerva Mills kya kehta?'\n\n3. **Amendments** (20%) - '42nd mein kya add hua?', '86th ne kya change kiya?'\n\n4. **Rights vs DPSP** (15%) - Comparison tables, complementary nature\n\n5. **Implementation** (15%) - 'Article 45 ka kya hua?', 'Goa mein UCC?'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Specific articles jo zyada aate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "**High-Frequency Articles:**\n\n🔥 Article 39(b)(c) - 31C connection, land reforms\n\n🔥 Article 40 - Panchayati Raj connection, 73rd Amendment\n\n🔥 Article 44 - UCC controversy, Goa example\n\n🔥 Article 45 - Transformation to 21A, 86th Amendment\n\n🔥 Article 48A - Environment, 42nd Amendment\n\n🔥 Article 51 - International relations (कम आता but conceptual)\n\nYe 6 articles pakka prepare karo!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Case-based questions ka kya scene hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "**Must-Know Cases for PYQs:**\n\n⭐ Champakam Dorairajan (1951) - Rights supreme (old view)\n\n⭐ Kesavananda Bharati (1973) - Complementary, Basic Structure\n\n⭐ Minerva Mills (1980) - 31C limited to 39(b)(c)\n\n⭐ Unnikrishnan (1993) - Education in Article 21 via DPSP\n\nBPSC/UPSC mein case name se zyada judgment kya tha wo puchha jata hai. Railway/SSC mein mostly Article numbers aur classification direct aata hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_current_relevance",
+        "button_text": "Current Affairs Link ➔"
+      }
+    },
+    {
+      "card_id": "card_43_current_relevance",
+      "card_slug": "card_43_current_relevance",
+      "type": "chat",
+      "concept_id": "dpsp_current_affairs",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, current affairs mein DPSP kaise relevant hai? Koi recent developments?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut relevant hai!\n\n**Article 44 (UCC):** 2024 mein Uttarakhand ne UCC pass kiya (Goa ke baad). Central level par debate chal rahi hai. Law Commission ne 2018 mein report di. Ye hot topic hai!\n\n**Article 48A (Environment):** Paris Agreement (2015), COP summits, National Green Tribunal judgments - sab Article 48A implement karne ke steps hain. Climate change ke context mein bahut relevant!\n\n**Article 39A (Free Legal Aid):** Tele-Law scheme (2017), NALSA (National Legal Services Authority) expansion"
+        },
+        {
+          "speaker": "raju",
+          "text": "Government schemes ka bhi connection hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Schemes DPSP se directly linked hain:\n\n**Article 41 (Right to work):** MGNREGA (2005) - guaranteed 100 days work\n\n**Article 42 (Maternity):** Maternity Benefit Amendment 2017 - 26 weeks paid leave\n\n**Article 47 (Nutrition):** Mid-Day Meal Scheme, POSHAN Abhiyaan\n\n**Article 46 (SC/ST welfare):** SC/ST Sub-Plan, scholarships\n\nElections mein parties apne manifesto mein DPSP implementation ka promise karti hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Controversies bhi hain kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan!\n\n**Article 48 (Cow slaughter ban):** Different states mein different laws - politically sensitive\n\n**Article 44 (UCC):** Muslim Personal Law Board opposition, triple talaq debate\n\n**Article 40 (Panchayats):** Women reservation in local bodies - implementation issues\n\nYe topics exam mein essay/mains mein aate hain, prelims mein factual focus rakho!"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_common_mistakes",
+        "button_text": "Common Mistakes ➔"
+      }
+    },
+    {
+      "card_id": "card_44_common_mistakes",
+      "card_slug": "card_44_common_mistakes",
+      "type": "chat",
+      "concept_id": "common_errors",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Students jo common mistakes karte hain DPSP mein:\n\n❌ **Mistake 1:** 'DPSP Part V mein hain' - WRONG! Part IV mein hain\n\n❌ **Mistake 2:** 'Article 31C all DPSP par apply' - WRONG! Only 39(b)(c) after Minerva Mills\n\n❌ **Mistake 3:** 'DPSP justiciable hain' - WRONG! Article 37 clearly non-justiciable kehta\n\n❌ **Mistake 4:** 'UCC India mein lagu hai' - WRONG! Only Goa mein fully implemented"
+        },
+        {
+          "speaker": "raju",
+          "text": "Classification mein kya mistakes hoti hain sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "❌ **Mistake 5:** 'Article 48A Gandhian hai (environment+Gandhi)' - WRONG! Liberal hai, 42nd Amendment mein modern environmental consciousness se aaya\n\n❌ **Mistake 6:** 'Article 43A cottage industries' - WRONG! 43A workers' participation hai, 43 cottage industries\n\n❌ **Mistake 7:** 'Article 40 socialist hai' - WRONG! Village panchayats Gandhian principle hai\n\n❌ **Mistake 8:** 'Original Article 45 abhi bhi education 6-14' - WRONG! 86th Amendment ne 21A bana diya, naya 45 below 6 years"
+        },
+        {
+          "speaker": "raju",
+          "text": "Cases mein kya confusion hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "❌ **Mistake 9:** 'Kesavananda ne Rights ko supreme declare kiya' - WRONG! Complementary declare kiya\n\n❌ **Mistake 10:** 'Champakam ne DPSP ko supreme kaha' - WRONG! Rights ko supreme kaha\n\nYe 10 mistakes avoid karo, 90% accuracy aa jayegi! Clarity rakho concepts mein, rote learning se bachna!"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_final_tips",
+        "button_text": "Final Tips ➔"
+      }
+    },
+    {
+      "card_id": "card_45_final_tips",
+      "card_slug": "card_45_final_tips",
+      "type": "chat",
+      "concept_id": "last_minute_tips",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, last minute exam tips do DPSP ke liye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "**24 Hours Before Exam:**\n\n✅ Classification table revise karo (Socialistic, Gandhian, Liberal)\n\n✅ Article numbers: 39(b)(c), 40, 44, 45, 48, 48A - ye 6 pakka yaad rakho\n\n✅ Amendments: 42nd (39A, 43A, 48A), 86th (45 changed)\n\n✅ Cases one-liners: Champakam (Rights>DPSP), Kesavananda (Complementary), Minerva (31C limited)\n\n✅ Rights vs DPSP differences (5 points)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Exam hall mein strategy kya ho?"
+        },
+        {
+          "speaker": "aman",
+          "text": "**In Exam Hall:**\n\n1️⃣ Multi-statement questions mein pehle obviously wrong eliminate karo (justiciable, Part V, etc.)\n\n2️⃣ Classification questions mein economic=Socialist, rural=Gandhian, modern=Liberal logic use karo\n\n3️⃣ Article 31C dekho toh 'only 39(b)(c)' yaad rakho\n\n4️⃣ UCC dekho toh 'Goa only' याद rakho\n\n5️⃣ Time bachao - DPSP straight questions hain, overthink mat karo!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you sir! Ab confident feel ho raha hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect Raju! DPSP conceptual clarity ke saath factual accuracy chahiye. Classification strong rakho, amendments yaad rakho, cases ka gist samjho. Tumne pura chapter master kar liya - ab exam mein khud par vishwas rakho! All the very best! 🎯🚀"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_visual_summary",
+        "button_text": "Visual Summary ➔"
+      }
+    },
+    {
+      "card_id": "card_46_visual_summary",
+      "card_slug": "card_46_visual_summary",
+      "type": "summary",
+      "concept_id": "visual_quick_recap",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 50
+      },
+      "summary_payload": {
+        "title": "🎯 One-Page Visual Summary",
+        "revision_points": [
+          {
+            "topic": "📍 Location & Nature",
+            "point": "Part IV | Articles 36-51 | Non-justiciable (Art 37) | Positive obligations | Origin: Ireland 1937"
+          },
+          {
+            "topic": "🔵 SOCIALISTIC (Economic)",
+            "point": "38-Welfare | 39-Equal pay(d), Resources(b)(c) | 41-Work/Education | 42-Maternity | 43-Wage | 43A-Workers' mgmt | 47-Health"
+          },
+          {
+            "topic": "🟢 GANDHIAN (Rural)",
+            "point": "40-Panchayats | 43-Cottage | 46-SC/ST | 47-Prohibition | 48-Cow"
+          },
+          {
+            "topic": "🟡 LIBERAL (Modern)",
+            "point": "44-UCC | 45-Education<6 | 48A-Environment | 49-Monuments | 50-Judiciary | 51-Peace"
+          },
+          {
+            "topic": "⚖️ vs Rights",
+            "point": "Rights: Negative, Justiciable, Part III, Individual | DPSP: Positive, Non-justiciable, Part IV, State welfare | Champakam→Rights>DPSP | Kesavananda→Complementary | Art 31C→39(b)(c) only (Minerva)"
+          },
+          {
+            "topic": "🔄 Key Amendments",
+            "point": "42nd (1976): +39A(legal aid), +43A(workers), +48A(environment) | 86th (2002): 45(6-14)→21A(FR), new 45(<6yrs)"
+          },
+          {
+            "topic": "💡 Must Remember",
+            "point": "UCC: Goa only | 31C: 39bc only | Cases: CKMU (Champakam-Kesavananda-Minerva-Unnikrishnan) | Mnemonics: WELFARE39-43, VillageCowCottage, UJEPS"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_47_bonus_quiz",
+        "button_text": "Bonus Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_47_bonus_quiz",
+      "card_slug": "card_47_bonus_quiz",
+      "type": "quiz",
+      "concept_id": "bonus_challenge_question",
+      "level": 4,
+      "progress": {
+        "current": 47,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित pairs को match करें और INCORRECT pair चुनें:\n\nA. Article 39A - Free legal aid (42nd Amendment)\nB. Article 43A - Cottage industries (42nd Amendment)\nC. Article 48A - Environment (42nd Amendment)\nD. Article 21A - Right to Education (86th Amendment)",
+        "options": [
+          { "id": "A", "text": "केवल B गलत है" },
+          { "id": "B", "text": "केवल D गलत है" },
+          { "id": "C", "text": "A और C गलत हैं" },
+          { "id": "D", "text": "सभी सही हैं" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Option B गलत है। Article 43A 'workers' participation in management of industries' से संबंधित है, cottage industries से नहीं। Cottage industries को promote करना Article 43 (original, Gandhian principle) में है। बाकी सभी pairs सही हैं - 39A, 43A, 48A तीनों 42nd Amendment (1976) में जोड़े गए, और 21A 86th Amendment (2002) में। यह BPSC का fine-detail trap है!"
+      },
+      "navigation": {
+        "next": "card_48_thank_you",
+        "button_text": "Completion Message ➔"
+      }
+    },
+    {
+      "card_id": "card_48_thank_you",
+      "card_slug": "card_48_thank_you",
+      "type": "chat",
+      "concept_id": "completion_message",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, aaj tumne DPSP ka complete chapter master kar liya! Part IV ke saare Articles, Classification, Rights vs DPSP comparison, Amendments, Cases - sab kuch clear ho gaya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Pehle lagta tha DPSP boring hai kyunki non-justiciable hai, ab samajh aaya ki ye kitna important hai welfare state ke liye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Dr. Ambedkar ne kaha tha - 'DPSP are the aims and objects which the Legislature and the Executive must keep in view.' Ye India ko ek fair, just, and humane society banane ka roadmap hai. Rights tumhe protect karti, DPSP tumhe prosper karati hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ab exam mein DPSP se darr nahi lagega Sir! Classification, Article numbers, cases sab yaad hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Yaad rakho - conceptual clarity se questions automatically solve ho jayenge. Classification logic samjho (economic-rural-modern), amendments timeline yaad rakho (42nd, 86th), aur Rights-DPSP ka balance samjho. Tumhara DPSP foundation ab rock-solid hai! Go ace your exam! 🎯🏆"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_practical_application",
+        "button_text": "Real World Connect ➔"
+      }
+    },
+    {
+      "card_id": "card_49_practical_application",
+      "card_slug": "card_49_practical_application",
+      "type": "chat",
+      "concept_id": "real_world_relevance",
+      "level": 4,
+      "progress": {
+        "current": 49,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir ek last question - DPSP ko real life mein kaise connect karun? Sirf exam ke liye nahi, samajhne ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! Dekho apne aas-paas:\n\n📚 **Tumhari school mein Mid-Day Meal** - Article 47 (nutrition)\n\n🏥 **Government hospital mein free treatment** - Article 41 (public assistance)\n\n👩‍🏫 **RTE ke under free education** - Article 45 (originally DPSP, ab 21A)\n\n🌳 **Plastic ban, tree plantation drives** - Article 48A (environment)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab DPSP sirf books mein nahi, daily life mein implement ho rahe hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Jab tum news dekhte ho:\n\n📰 UCC debate - Article 44\n\n📰 MGNREGA wage increase - Article 41, 43\n\n📰 Women safety laws - Article 39(d), 42\n\n📰 Cow slaughter ban cases - Article 48\n\nDPSP ek living document hai jo India ko shape kar raha hai. As a future officer, tum bhi DPSP implement karoge policies ke through. Constitution sirf exam nahi, tumhara governance manual hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you Sir! Ab DPSP ek alag hi level par samajh aaya!"
+        },
+        {
+          "speaker": "aman",
+          "text": "That's the spirit Raju! Remember - 'Rights without DPSP is a body without soul, DPSP without Rights is a soul without body.' Dono together ek complete Constitutional vision banate hain. Keep learning, keep questioning! All the best! 🇮🇳📚✨"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_completion_trophy",
+        "button_text": "Claim Your Trophy ➔"
+      }
+    },
+    {
+      "card_id": "card_50_completion_trophy",
+      "card_slug": "card_50_completion_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_completion_trophy",
+      "level": 4,
+      "progress": {
+        "current": 50,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🏆 DPSP CHAPTER MASTERED!",
+        "badge_emoji": "📜",
+        "completed_topic": "Directive Principles of State Policy - Complete",
+        "xp_earned": 100,
+        "milestone_progress": "Chapter 100% Complete! 🎉",
+        "motivational_quote": "🎊 OUTSTANDING ACHIEVEMENT! आपने DPSP का complete chapter master कर लिया - Part IV (Articles 36-51), तीनों classifications (Socialistic, Gandhian, Liberal), सभी key amendments (42nd, 86th), landmark cases (Champakam to Minerva Mills), Rights vs DPSP comparison, और implementation examples सब कुछ! अब आप BPSC, UPSC, SSC, Railway में DPSP से related किसी भी multi-statement, assertion-reason, classification, या case-based question को आसानी से solve कर सकते हैं! याद रखें - DPSP भारत के welfare state vision का blueprint है। As future officers, आप इन principles को ground पर implement करेंगे। Constitution केवल एक document नहीं, India की आत्मा है! Keep this knowledge alive! 🇮🇳💪📚"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Home 🏠"
+      }
+    }
+  ]
+}
+```
