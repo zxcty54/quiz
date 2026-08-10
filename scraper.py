@@ -6,6 +6,7 @@ import base64
 import hashlib
 import feedparser
 import warnings
+from collections import defaultdict
 from urllib.parse import quote
 from datetime import datetime, timedelta, timezone
 
@@ -15,7 +16,7 @@ import requests as normal_requests
 from bs4 import BeautifulSoup
 from bs4 import MarkupResemblesLocatorWarning
 
-# Safe import for googlenewsdecoder if available
+# Safe import for googlenewsdecoder
 decoding_func = None
 try:
     from googlenewsdecoder import new_decodurl as decoding_func
@@ -30,16 +31,16 @@ except ImportError:
 # ============================================================
 
 OUTPUT_FILE = "rawnews.json"
-TIMEOUT = 25
-MAX_PER_CATEGORY = 10
+TIMEOUT = 20
+MAX_PER_SOURCE = 10
 
-MIN_CONTENT_WORDS = 35      # Min 35 words for valid news
-MAX_CONTENT_WORDS = 2000    # Max 2000 words limit
+MIN_CONTENT_WORDS = 60      # Strictly Minimum 60 words required
+MAX_CONTENT_WORDS = 2000    # Maximum 2000 words limit
+
+# STRICT 24-HOUR ROLLING WINDOW
+DEFAULT_MAX_AGE_HOURS = 24
 
 IST = timezone(timedelta(hours=5, minutes=30))
-
-# Automatically pick up ScrapingAnt Key from GitHub Secrets
-SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "").strip()
 
 HEADERS = {
     "User-Agent": (
@@ -54,6 +55,9 @@ HEADERS = {
 }
 
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
+
+# Source Performance Tracking
+SOURCE_STATS = defaultdict(lambda: {"fetched": 0, "accepted": 0, "rejected": 0, "reasons": defaultdict(int)})
 
 # ============================================================
 # EXCLUDE KEYWORDS BLACKLIST (Crime & Non-Bihar Local States)
@@ -80,7 +84,76 @@ def warn(msg): print(f"⚠️ {msg}")
 def success(msg): print(f"✅ {msg}")
 
 # ============================================================
-# TEXT CLEANING
+# DATE PARSER & 24-HOUR FILTER ENGINE
+# ============================================================
+
+DATE_FORMATS = [
+    "%a, %d %b %Y %H:%M:%S %z",
+    "%a, %d %b %Y %H:%M:%S GMT",
+    "%Y-%m-%dT%H:%M:%S%z",
+    "%Y-%m-%dT%H:%M:%S.%f%z",
+    "%Y-%m-%d %H:%M:%S",
+    "%d-%b-%Y", "%d-%B-%Y", "%d/%m/%Y", "%d-%m-%Y",
+    "%Y-%m-%d", "%d %b %Y", "%d %B %Y"
+]
+
+def parse_date(value):
+    if not value:
+        return None
+
+    value = clean_text(str(value))
+    lower_val = value.lower()
+    current_now = now_ist()
+
+    if any(k in lower_val for k in ["ago", "today", "yesterday", "घंटे पहले", "दिन पहले", "आज", "कल"]):
+        if "today" in lower_val or "आज" in lower_val:
+            return current_now
+        if "yesterday" in lower_val or "कल" in lower_val:
+            return current_now - timedelta(days=1)
+
+        match = re.search(r'(\d+)\s*(hour|hr|day|min|minute|घंटे|मिनट|दिन)s?\s*(ago|पहले)?', lower_val)
+        if match:
+            num = int(match.group(1))
+            unit = match.group(2)
+            if "day" in unit or "दिन" in unit:
+                return current_now - timedelta(days=num)
+            elif "hour" in unit or "hr" in unit or "घंटे" in unit:
+                return current_now - timedelta(hours=num)
+            elif "min" in unit or "मिनट" in unit:
+                return current_now - timedelta(minutes=num)
+
+    value2 = re.sub(r'\b(IST|GMT|UTC)\b', '', value, flags=re.I).strip()
+
+    for fmt in DATE_FORMATS:
+        try:
+            d = datetime.strptime(value2, fmt)
+            if d.tzinfo is None:
+                d = d.replace(tzinfo=IST)
+            return d.astimezone(IST)
+        except Exception:
+            continue
+
+    return None
+
+def get_age_hours(parsed_date):
+    if not parsed_date:
+        return 0.0
+    current_time = now_ist()
+    if parsed_date.tzinfo is None:
+        parsed_date = parsed_date.replace(tzinfo=IST)
+    else:
+        parsed_date = parsed_date.astimezone(IST)
+    time_difference = current_time - parsed_date
+    return time_difference.total_seconds() / 3600.0
+
+def is_within_24_hours(parsed_date, max_age_hours=DEFAULT_MAX_AGE_HOURS):
+    if not parsed_date:
+        return True
+    hours_diff = get_age_hours(parsed_date)
+    return -24.0 <= hours_diff <= max_age_hours
+
+# ============================================================
+# TEXT CLEANING & HELPERS
 # ============================================================
 
 def clean_url(url):
@@ -100,7 +173,7 @@ def clean_text(text):
 
 def clean_title(title):
     title = clean_text(title)
-    title = re.sub(r'\s*[-|–—]\s*(The Hindu|Indian Express|Hindustan Times|Times of India|NDTV|Aaj Tak|ABP News|PIB|Livemint|Business Standard).*$', '', title, flags=re.I)
+    title = re.sub(r'\s*[-|–—]\s*(The Hindu|Indian Express|Hindustan Times|Times of India|NDTV|Aaj Tak|ABP News|PIB|Livemint|Business Standard|Dainik Jagran|Amar Ujala).*$', '', title, flags=re.I)
     return title.strip()
 
 def word_count(text):
@@ -122,29 +195,10 @@ def is_content_too_similar_to_title(title, content):
     return False
 
 # ============================================================
-# SCRAPINGANT PROXY FALLBACK (BYPASSES DATACENTER IP BLOCKS)
-# ============================================================
-
-def fetch_via_scrapingant(url):
-    """Uses ScrapingAnt API to bypass Cloudflare/Datacenter IP blocks on GitHub Actions"""
-    if not SCRAPINGANT_API_KEY:
-        return None
-    try:
-        sa_endpoint = f"https://api.scrapingant.com/v2/general?url={quote(url)}&x-api-key={SCRAPINGANT_API_KEY}&browser=false"
-        r = normal_requests.get(sa_endpoint, timeout=30)
-        if r.status_code == 200:
-            res_json = r.json()
-            return res_json.get("html", "")
-    except Exception as e:
-        warn(f"ScrapingAnt fallback failed for {url}: {e}")
-    return None
-
-# ============================================================
-# RELIABLE GOOGLE URL DECODER & NETWORK FETCHERS
+# GOOGLE RSS URL DECODER & NETWORK FETCHERS
 # ============================================================
 
 def fallback_decode_google_url(google_url):
-    """Base64/String parser fallback for Google RSS URLs"""
     try:
         match = re.search(r'articles/([^?]+)', google_url)
         if match:
@@ -161,11 +215,9 @@ def fallback_decode_google_url(google_url):
     return google_url
 
 def get_real_publisher_url(google_rss_url):
-    """Resolves google news RSS links to real domain"""
     if not google_rss_url or "news.google.com" not in google_rss_url:
         return google_rss_url
 
-    # Method 1: Library
     if decoding_func is not None:
         try:
             decoded = decoding_func(google_rss_url)
@@ -176,14 +228,12 @@ def get_real_publisher_url(google_rss_url):
         except Exception:
             pass
 
-    # Method 2: Custom Base64 Protobuf Parser
     decoded_url = fallback_decode_google_url(google_rss_url)
     if decoded_url and "news.google.com" not in decoded_url:
         return decoded_url
 
-    # Method 3: HTTP Redirect Follow
     try:
-        r = curl_requests.get(google_rss_url, headers=HEADERS, timeout=12, impersonate="chrome", allow_redirects=True)
+        r = curl_requests.get(google_rss_url, headers=HEADERS, timeout=10, impersonate="chrome", allow_redirects=True)
         if r.url and "news.google.com" not in r.url:
             return r.url
     except Exception:
@@ -192,16 +242,15 @@ def get_real_publisher_url(google_rss_url):
     return google_rss_url
 
 def fetch_rss_xml(url):
-    """Downloads RSS XML bypassing SSL / User-Agent blocks"""
     try:
-        r = curl_requests.get(url, headers=HEADERS, timeout=15, impersonate="chrome", allow_redirects=True)
+        r = curl_requests.get(url, headers=HEADERS, timeout=12, impersonate="chrome", allow_redirects=True)
         if r.status_code < 400 and r.text:
             return r.text
     except Exception:
         pass
 
     try:
-        r = normal_requests.get(url, headers=HEADERS, timeout=15, allow_redirects=True, verify=False)
+        r = normal_requests.get(url, headers=HEADERS, timeout=12, allow_redirects=True, verify=False)
         if r.status_code < 400 and r.text:
             return r.text
     except Exception:
@@ -209,21 +258,24 @@ def fetch_rss_xml(url):
 
     return None
 
-def fetch_web_article(url):
+# ============================================================
+# WEB SCRAPER ENGINE
+# ============================================================
+
+def fetch_web_article(url, source_name="Unknown"):
     real_url = get_real_publisher_url(url)
     if not real_url or "news.google.com" in real_url: 
+        warn(f"[{source_name}] Failed to resolve Google URL: {url[:50]}")
         return "", real_url
-
-    # PIB Special URL Handling: Convert Iframe URL to Printable Full Page URL
-    if "pib.gov.in" in real_url and "PressReleaseIframePage.aspx" in real_url:
-        real_url = real_url.replace("PressReleaseIframePage.aspx", "PressReleasePage.aspx")
 
     html_raw = None
     try:
         r = curl_requests.get(real_url, headers=HEADERS, timeout=TIMEOUT, impersonate="chrome", allow_redirects=True)
         if r.status_code < 400: 
             html_raw = r.text
-    except Exception:
+        else:
+            warn(f"[{source_name}] HTTP {r.status_code} for {real_url[:50]}")
+    except Exception as e:
         pass
 
     if not html_raw:
@@ -231,13 +283,11 @@ def fetch_web_article(url):
             r = normal_requests.get(real_url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True, verify=False)
             if r.status_code < 400: 
                 html_raw = r.text
-        except Exception:
-            pass
-
-    # FALLBACK: Use ScrapingAnt API if direct requests are blocked by Datacenter IP filters
-    if not html_raw and SCRAPINGANT_API_KEY:
-        debug(f"Direct request blocked. Retrying via ScrapingAnt: {real_url[:50]}")
-        html_raw = fetch_via_scrapingant(real_url)
+            else:
+                warn(f"[{source_name}] Fallback HTTP {r.status_code} for {real_url[:50]}")
+        except Exception as e:
+            warn(f"[{source_name}] Request Failed: {e}")
+            return "", real_url
 
     if not html_raw: 
         return "", real_url
@@ -248,15 +298,7 @@ def fetch_web_article(url):
 
     candidates = []
 
-    # 1. PIB Specific Selectors
-    pib_selectors = [".ReleaseText", "#pnlPrint", "#ReleaseText", ".content-area", "#divPrint"]
-    for sel in pib_selectors:
-        for el in soup.select(sel):
-            txt = clean_text(el.get_text(" ", strip=True))
-            if word_count(txt) >= MIN_CONTENT_WORDS:
-                candidates.append(txt)
-
-    # 2. JSON-LD Extraction
+    # 1. JSON-LD Extraction
     for script in soup.find_all("script", type="application/ld+json"):
         try:
             data = json.loads(script.string or script.get_text())
@@ -269,11 +311,12 @@ def fetch_web_article(url):
         except Exception:
             pass
 
-    # 3. Main Article Selectors
+    # 2. Article Body Selectors
     selectors = [
         "[itemprop='articleBody']", "article", ".article-body", ".articleBody",
         ".article-content", ".story-content", ".news-content", "main", ".entry-content",
-        "#article-body", ".full-article", ".post-content", ".td-post-content"
+        "#article-body", ".full-article", ".post-content", ".td-post-content",
+        ".artText", ".story-description", ".content_text"
     ]
     for selector in selectors:
         for el in soup.select(selector):
@@ -281,7 +324,7 @@ def fetch_web_article(url):
             if word_count(txt) >= MIN_CONTENT_WORDS:
                 candidates.append(txt)
 
-    # 4. Paragraph Aggregation Fallback
+    # 3. Paragraph Aggregation Fallback
     paragraphs = [clean_text(p.get_text(" ", strip=True)) for p in soup.find_all("p")]
     paragraphs = [p for p in paragraphs if word_count(p) >= 6]
     if paragraphs:
@@ -289,40 +332,69 @@ def fetch_web_article(url):
         if word_count(joined) >= MIN_CONTENT_WORDS:
             candidates.append(joined)
 
-    if not candidates: return "", real_url
+    if not candidates: 
+        return "", real_url
 
     best_text = max(candidates, key=lambda t: word_count(t))
     return best_text, real_url
 
 # ============================================================
-# ITEM BUILDER
+# ITEM BUILDER WITH DEBUG LOGGING
 # ============================================================
 
 def make_item(source, title, url, date=None, content="", item_type="General News", category="General"):
+    SOURCE_STATS[source]["fetched"] += 1
     clean_title_str = clean_title(title)
     clean_url_str = clean_url(url)
     clean_content_str = clean_text(content)
 
-    if not clean_content_str or is_content_too_similar_to_title(clean_title_str, clean_content_str):
-        warn(f"REJECTED (Content same as Title) | {clean_title_str[:50]}")
+    if not clean_content_str:
+        reason = "Empty Content / Scraping Failed"
+        warn(f"❌ REJECTED [{source}] ({reason}) | {clean_title_str[:50]}")
+        SOURCE_STATS[source]["rejected"] += 1
+        SOURCE_STATS[source]["reasons"][reason] += 1
         return None
 
+    if is_content_too_similar_to_title(clean_title_str, clean_content_str):
+        reason = "Content Same as Title"
+        warn(f"❌ REJECTED [{source}] ({reason}) | {clean_title_str[:50]}")
+        SOURCE_STATS[source]["rejected"] += 1
+        SOURCE_STATS[source]["reasons"][reason] += 1
+        return None
+
+    # STRICT CHECK 1: Minimum word count check (>= 60 words)
     total_words = word_count(clean_content_str)
     if total_words < MIN_CONTENT_WORDS:
-        warn(f"REJECTED ({total_words} words < min {MIN_CONTENT_WORDS}) | {clean_title_str[:50]}")
+        reason = f"Word count too low ({total_words} < {MIN_CONTENT_WORDS})"
+        warn(f"❌ REJECTED [{source}] ({reason}) | {clean_title_str[:50]}")
+        SOURCE_STATS[source]["rejected"] += 1
+        SOURCE_STATS[source]["reasons"][reason] += 1
+        return None
+
+    # STRICT CHECK 2: Last 24 Hours Date Filter Check
+    parsed_date = date or now_ist()
+    age_hrs = round(get_age_hours(parsed_date), 1)
+    if not is_within_24_hours(parsed_date):
+        reason = f"Date older than 24h ({age_hrs} hrs old)"
+        warn(f"❌ REJECTED [{source}] ({reason}) | {clean_title_str[:50]}")
+        SOURCE_STATS[source]["rejected"] += 1
+        SOURCE_STATS[source]["reasons"][reason] += 1
         return None
 
     if total_words > MAX_CONTENT_WORDS:
         clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
 
+    # STRICT CHECK 3: Blacklist Check
     matched_bad_word = check_blacklist_reason(clean_title_str, clean_content_str)
     if matched_bad_word:
-        warn(f"REJECTED (Blacklisted: '{matched_bad_word}') | {clean_title_str[:50]}")
+        reason = f"Blacklisted word: '{matched_bad_word}'"
+        warn(f"❌ REJECTED [{source}] ({reason}) | {clean_title_str[:50]}")
+        SOURCE_STATS[source]["rejected"] += 1
+        SOURCE_STATS[source]["reasons"][reason] += 1
         return None
 
-    parsed_date = date or now_ist()
-
-    success(f"ACCEPTED | Words: {word_count(clean_content_str)} | Title: {clean_title_str[:50]}")
+    success(f"✅ ACCEPTED [{source}] ({total_words} words | {age_hrs}h old) | Title: {clean_title_str[:50]}")
+    SOURCE_STATS[source]["accepted"] += 1
 
     return {
         "source": source,
@@ -332,7 +404,7 @@ def make_item(source, title, url, date=None, content="", item_type="General News
         "date": parsed_date.strftime("%a, %d %b %Y %H:%M:%S GMT"),
         "content": clean_content_str,
         "content_chars": len(clean_content_str),
-        "content_words": word_count(clean_content_str),
+        "content_words": total_words,
         "type": item_type,
     }
 
@@ -348,122 +420,110 @@ def deduplicate(items):
     return output
 
 # ============================================================
-# MAIN SCRAPING PIPELINE
+# COMPREHENSIVE PUBLIC RSS FEEDS LIST (24H WINDOW FILTER)
 # ============================================================
 
-NATIONAL_CATEGORIES = {
-    "Polity & Governance": 'Supreme Court OR "Cabinet Approves" OR Act OR Bill',
-    "Govt Schemes & Welfare": '"Govt Scheme" OR "Pradhan Mantri" OR Welfare',
-    "Economy & Banking": '"RBI Policy" OR "Union Budget" OR "Economic Survey" OR "GST Council"',
-    "International Relations": 'Bilateral OR G20 OR BRICS OR Quad OR Summit',
-    "Science, Tech & Defense": 'ISRO OR NASA OR "Defense Exercise" OR DRDO',
-    "Environment & Infrastructure": '"Ramsar Site" OR Expressway OR "Renewable Energy" OR "GI Tag"'
+PUBLIC_RSS_SOURCES = {
+    # Direct Media RSS Feeds
+    "The Hindu National": ("National News", "https://www.thehindu.com/news/national/feeder/default.rss"),
+    "The Hindu Business": ("Economy & Banking", "https://www.thehindu.com/business/feeder/default.rss"),
+    "Indian Express National": ("National News", "https://indianexpress.com/section/india/feed/"),
+    "Indian Express Economy": ("Economy & Banking", "https://indianexpress.com/section/business/economy/feed/"),
+    "Business Standard": ("Economy & Banking", "https://www.business-standard.com/rss/home_page_top_stories.rss"),
+    "Livemint Economy": ("Economy & Banking", "https://www.livemint.com/rss/news"),
+    "Times of India India": ("National News", "https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms"),
+    "Aaj Tak National (Hindi)": ("National News", "https://www.aajtak.in/rss/national-news.xml"),
+    "Amar Ujala National (Hindi)": ("National News", "https://www.amarujala.com/rss/national-news.xml"),
+    "Dainik Jagran National (Hindi)": ("National News", "https://www.jagran.com/rss/news/national.xml"),
+    "NDTV India": ("National News", "https://feeds.feedburner.com/ndtvnews-india-news"),
+    
+    # Google News Targeted Categories
+    "GNews Polity": ("Polity & Governance", "https://news.google.com/rss/search?q=Supreme+Court+OR+Act+OR+Bill+when:1d&hl=en-IN&gl=IN&ceid=IN:en"),
+    "GNews Schemes": ("Govt Schemes & Welfare", "https://news.google.com/rss/search?q=Govt+Scheme+OR+Pradhan+Mantri+OR+Welfare+when:1d&hl=en-IN&gl=IN&ceid=IN:en"),
+    "GNews Science Tech": ("Science, Tech & Defense", "https://news.google.com/rss/search?q=ISRO+OR+NASA+OR+DRDO+OR+Defense+when:1d&hl=en-IN&gl=IN&ceid=IN:en"),
+    "GNews Environment": ("Environment & Infrastructure", "https://news.google.com/rss/search?q=Ramsar+Site+OR+Expressway+OR+Renewable+Energy+when:1d&hl=en-IN&gl=IN&ceid=IN:en"),
+    "GNews Bihar Schemes": ("Bihar Schemes", "https://news.google.com/rss/search?q=Bihar+scheme+OR+Mukhyamantri+yojana+OR+Bihar+welfare+when:1d&hl=hi&gl=IN&ceid=IN:hi"),
+    "GNews Bihar Development": ("Bihar Development", "https://news.google.com/rss/search?q=Patna+Metro+OR+Bihar+expressway+OR+Bihar+infrastructure+when:1d&hl=hi&gl=IN&ceid=IN:hi")
 }
 
-BIHAR_CATEGORIES = {
-    "Bihar Schemes & Welfare": 'Bihar scheme OR Mukhyamantri yojana OR Bihar welfare',
-    "Bihar Development": 'Patna Metro OR Bihar expressway OR Bihar infrastructure OR Bihar development'
-}
+def fetch_all_public_rss():
+    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING ALL PUBLIC RSS SOURCES (DEBUG ENABLED)\n" + "=" * 70)
+    all_results = []
 
-PIB_HINDI_FEEDS = {
-    "PIB General Release": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1",
-    "PIB Finance & Economy": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3"
-}
-
-def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
-    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING SOURCE: {source_label}\n" + "=" * 70)
-    category_results = []
-
-    for cat_name, query in categories_dict.items():
-        encoded_q = quote(query)
-        rss_url = f"https://news.google.com/rss/search?q={encoded_q}&hl=en-IN&gl=IN&ceid=IN:en"
-
+    for source_name, (category, rss_url) in PUBLIC_RSS_SOURCES.items():
+        print(f"\n📡 Connecting to RSS Source: [{source_name}]")
         xml_raw = fetch_rss_xml(rss_url)
         feed = feedparser.parse(xml_raw) if xml_raw else feedparser.parse(rss_url)
         entries = feed.entries or []
-        debug(f"RSS returned {len(entries)} items for [{cat_name}]")
+        
+        if not entries:
+            warn(f"⚠️ [{source_name}] Returned 0 RSS items!")
+            continue
+            
+        debug(f"[{source_name}] Found {len(entries)} items in feed. Processing top {MAX_PER_SOURCE}...")
 
-        count = 0
-        for entry in entries[:MAX_PER_CATEGORY * 3]:
-            title = clean_title(getattr(entry, 'title', ''))
-            rss_link = clean_url(getattr(entry, 'link', ''))
-
-            if not title or not rss_link: continue
-
-            content, final_url = fetch_web_article(rss_link)
-
-            if not content or word_count(content) < MIN_CONTENT_WORDS:
-                warn(f"REJECTED (Scraping Failed/Blocked) | {title[:50]}")
-                continue
-
-            obj = make_item(
-                source="Google News Central" if not is_bihar else "Google News Bihar",
-                title=title,
-                url=final_url or rss_link,
-                date=now_ist(),
-                content=content,
-                item_type="National News" if not is_bihar else "Bihar News",
-                category=cat_name
-            )
-
-            if obj:
-                category_results.append(obj)
-                count += 1
-
-            if count >= MAX_PER_CATEGORY:
-                break
-
-    return deduplicate(category_results)
-
-def fetch_all_pib_news():
-    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING ALL PIB HINDI RELEASES\n" + "=" * 70)
-    pib_results = []
-
-    for feed_name, feed_url in PIB_HINDI_FEEDS.items():
-        xml_raw = fetch_rss_xml(feed_url)
-        feed = feedparser.parse(xml_raw) if xml_raw else feedparser.parse(feed_url)
-        entries = feed.entries or []
-        debug(f"PIB RSS returned {len(entries)} raw items for [{feed_name}]")
-
-        for entry in entries:
+        for entry in entries[:MAX_PER_SOURCE]:
             title = clean_title(getattr(entry, 'title', ''))
             link = clean_url(getattr(entry, 'link', ''))
+            pub_date = parse_date(getattr(entry, 'published', None) or getattr(entry, 'updated', None))
 
             if not title or not link: continue
 
-            content, final_url = fetch_web_article(link)
-
-            if not content or word_count(content) < MIN_CONTENT_WORDS:
-                continue
+            # Direct Web Extraction
+            content, final_url = fetch_web_article(link, source_name)
 
             obj = make_item(
-                source="PIB Press Release",
+                source=source_name,
                 title=title,
                 url=final_url or link,
-                date=now_ist(),
+                date=pub_date or now_ist(),
                 content=content,
-                item_type="National News",
-                category="PIB Release"
+                item_type="Bihar News" if "Bihar" in source_name else "National News",
+                category=category
             )
 
             if obj:
-                pib_results.append(obj)
+                all_results.append(obj)
 
-    return deduplicate(pib_results)
+    return deduplicate(all_results)
+
+def print_source_performance_summary():
+    print("\n" + "=" * 80)
+    print("📊 SOURCE ACCURACY & PERFORMANCE SUMMARY")
+    print("=" * 80)
+    print(f"{'Source Name':<32} | {'Fetched':<8} | {'Accepted':<8} | {'Rejected':<8} | {'Status'}")
+    print("-" * 80)
+
+    for source_name in PUBLIC_RSS_SOURCES.keys():
+        stats = SOURCE_STATS[source_name]
+        fetched = stats["fetched"]
+        accepted = stats["accepted"]
+        rejected = stats["rejected"]
+
+        if fetched == 0:
+            status = "❌ BROKEN (0 Items)"
+        elif accepted == 0:
+            status = "⚠️ ALL REJECTED"
+        elif accepted / fetched >= 0.5:
+            status = "✅ EXCELLENT"
+        else:
+            status = "⚠️ POOR YIELD"
+
+        print(f"{source_name:<32} | {fetched:<8} | {accepted:<8} | {rejected:<8} | {status}")
+    print("=" * 80)
 
 def build_news():
-    national = fetch_google_news_feed(NATIONAL_CATEGORIES, "National", is_bihar=False)
-    pib_news = fetch_all_pib_news()
+    raw_items = fetch_all_public_rss()
     
-    national = deduplicate(national + pib_news)
-    bihar = fetch_google_news_feed(BIHAR_CATEGORIES, "Bihar", is_bihar=True)
+    national = [item for item in raw_items if item["type"] == "National News"]
+    bihar = [item for item in raw_items if item["type"] == "Bihar News"]
 
     breakdown = {
-        "Google News National": len(national),
-        "Google News Bihar": len(bihar),
-        "PIB Releases": len(pib_news)
+        "National Accepted (<24h)": len(national),
+        "Bihar Accepted (<24h)": len(bihar)
     }
 
+    print_source_performance_summary()
     return national, bihar, breakdown
 
 def save_output(national, bihar, breakdown):
@@ -483,7 +543,7 @@ def save_output(national, bihar, breakdown):
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 {OUTPUT_FILE} saved successfully with {len(all_news)} full-length items!")
+    print(f"💾 {OUTPUT_FILE} saved successfully with {len(all_news)} items (>60 words & <24h old)!")
     print("=" * 80)
 
 if __name__ == "__main__":
