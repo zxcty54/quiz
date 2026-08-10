@@ -6,12 +6,15 @@ import base64
 import hashlib
 import feedparser
 import warnings
+import ssl
 from collections import defaultdict
-from urllib.parse import quote
+from urllib.parse import quote, urljoin
 from datetime import datetime, timedelta, timezone
 
 from curl_cffi import requests as curl_requests
 import requests as normal_requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.ssl_ import create_urllib3_context
 
 from bs4 import BeautifulSoup
 from bs4 import MarkupResemblesLocatorWarning
@@ -31,7 +34,7 @@ except ImportError:
 # ============================================================
 
 OUTPUT_FILE = "rawnews.json"
-TIMEOUT = 20
+TIMEOUT = 25
 MAX_PER_SOURCE = 7
 
 MIN_CONTENT_WORDS = 60      # Strictly Minimum 60 words required
@@ -41,6 +44,7 @@ MAX_CONTENT_WORDS = 300     # Hard Limit 300 words to strictly avoid "line too l
 DEFAULT_MAX_AGE_HOURS = 24
 
 IST = timezone(timedelta(hours=5, minutes=30))
+SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "").strip()
 
 HEADERS = {
     "User-Agent": (
@@ -60,7 +64,25 @@ warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 SOURCE_STATS = defaultdict(lambda: {"fetched": 0, "accepted": 0, "rejected": 0, "reasons": defaultdict(int)})
 
 # ============================================================
-# EXCLUDE KEYWORDS BLACKLIST (Crime, Stock Market, Local Incidents & Astrology)
+# SPECIAL NIC / GOV SSL ADAPTER
+# ============================================================
+
+class CustomGovSSLAdapter(HTTPAdapter):
+    """Bypasses legacy SSL/TLS ciphers for Government portals"""
+    def init_poolmanager(self, *args, **kwargs):
+        ctx = create_urllib3_context()
+        ctx.set_ciphers('DEFAULT@SECLEVEL=1')
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        kwargs['ssl_context'] = ctx
+        return super().init_poolmanager(*args, **kwargs)
+
+gov_session = normal_requests.Session()
+gov_session.mount('https://', CustomGovSSLAdapter())
+gov_session.mount('http://', CustomGovSSLAdapter())
+
+# ============================================================
+# EXCLUDE KEYWORDS BLACKLIST (Stock Market, Crime, Offtopic & Astrology)
 # ============================================================
 
 EXCLUDE_KEYWORDS = [
@@ -194,7 +216,7 @@ def clean_text(text):
 
 def clean_title(title):
     title = clean_text(title)
-    title = re.sub(r'\s*[-|–—]\s*(The Hindu|Indian Express|Hindustan Times|Times of India|NDTV|Aaj Tak|ABP News|PIB|Livemint|Business Standard|Dainik Jagran|Amar Ujala|Prabhat Khabar|Live Hindustan|AIR News|Akashvani|News On AIR).*$', '', title, flags=re.I)
+    title = re.sub(r'\s*[-|–—]\s*(The Hindu|Indian Express|Hindustan Times|Times of India|NDTV|Aaj Tak|ABP News|PIB|Livemint|Business Standard|Dainik Jagran|Amar Ujala|Prabhat Khabar|Live Hindustan|News On AIR|Akashvani|Prasar Bharati).*$', '', title, flags=re.I)
     return title.strip()
 
 def word_count(text):
@@ -279,6 +301,33 @@ def fetch_rss_xml(url):
 
     return None
 
+def fetch_url_html(url):
+    """Resilient fetcher with support for gov.in and curl_cffi"""
+    url = clean_url(url)
+    if not url: return None
+
+    if ".gov.in" in url.lower():
+        try:
+            r = gov_session.get(url, headers=HEADERS, timeout=TIMEOUT, verify=False)
+            if r.status_code < 400 and len(r.text) > 100:
+                return r.text
+        except Exception:
+            pass
+
+    try:
+        r = curl_requests.get(url, headers=HEADERS, timeout=TIMEOUT, impersonate="chrome", allow_redirects=True)
+        if r.status_code < 400: return r.text
+    except Exception:
+        pass
+
+    try:
+        r = normal_requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True, verify=False)
+        if r.status_code < 400: return r.text
+    except Exception:
+        pass
+
+    return None
+
 # ============================================================
 # WEB SCRAPER ENGINE
 # ============================================================
@@ -288,22 +337,7 @@ def fetch_web_article(url, source_name="Unknown"):
     if not real_url or "news.google.com" in real_url: 
         return "", real_url
 
-    html_raw = None
-    try:
-        r = curl_requests.get(real_url, headers=HEADERS, timeout=TIMEOUT, impersonate="chrome", allow_redirects=True)
-        if r.status_code < 400: 
-            html_raw = r.text
-    except Exception:
-        pass
-
-    if not html_raw:
-        try:
-            r = normal_requests.get(real_url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True, verify=False)
-            if r.status_code < 400: 
-                html_raw = r.text
-        except Exception:
-            return "", real_url
-
+    html_raw = fetch_url_html(real_url)
     if not html_raw: 
         return "", real_url
 
@@ -313,7 +347,7 @@ def fetch_web_article(url, source_name="Unknown"):
 
     candidates = []
 
-    # 1. AIR / NewsOnAIR Specific Selectors
+    # 1. News On AIR Specific Selectors
     air_selectors = [".news-detail-content", ".full-story-content", "#content-area", ".story-text"]
     for sel in air_selectors:
         for el in soup.select(sel):
@@ -360,6 +394,63 @@ def fetch_web_article(url, source_name="Unknown"):
 
     best_text = max(candidates, key=lambda t: word_count(t))
     return best_text, real_url
+
+# ============================================================
+# NEWS ON AIR DIRECT PORTAL SCRAPER
+# ============================================================
+
+NEWS_ON_AIR_URLS = [
+    "https://newsonair.gov.in/",
+    "https://newsonair.gov.in/category/news/",
+    "https://newsonair.gov.in/category/national-news/",
+]
+
+def scrape_news_on_air_direct():
+    print(f"\n📡 Scraping Direct Portal: [News On AIR Portal]")
+    candidates = []
+
+    for page_url in NEWS_ON_AIR_URLS:
+        html = fetch_url_html(page_url)
+        if not html: continue
+
+        soup = BeautifulSoup(html, "lxml")
+        for a in soup.find_all("a", href=True):
+            href = clean_url(urljoin(page_url, a.get("href")))
+            title = clean_title(a.get_text(" ", strip=True))
+
+            if not href or len(title) < 20: continue
+            if "newsonair.gov.in" not in href: continue
+
+            candidates.append((title, href))
+
+    unique = []
+    seen = set()
+    for title, url in candidates:
+        if url not in seen:
+            seen.add(url)
+            unique.append((title, url))
+
+    results = []
+    for title, url in unique:
+        content, final_url = fetch_web_article(url, "News On AIR Portal")
+        if not content: continue
+
+        obj = make_item(
+            source="News On AIR",
+            title=title,
+            url=final_url or url,
+            date=now_ist(),
+            content=content,
+            item_type="National News",
+            category="National News"
+        )
+        if obj:
+            results.append(obj)
+
+        if len(results) >= MAX_PER_SOURCE:
+            break
+
+    return results
 
 # ============================================================
 # ITEM BUILDER WITH STRICT VALIDATION
@@ -444,10 +535,9 @@ def deduplicate(items):
 # ============================================================
 
 PUBLIC_RSS_SOURCES = {
-    # ------------------ ALL INDIA RADIO (AIR / AKASHVANI) FEEDS ------------------
-    "AIR News National": ("National News", "https://newsonair.gov.in/feed/"),
+    # ------------------ ALL INDIA RADIO FEEDS ------------------
+    "AIR News RSS": ("National News", "https://newsonair.gov.in/feed/"),
     "Akashvani Hindi News": ("National News", "https://news.google.com/rss/search?q=Akashvani+News+when:1d&hl=hi&gl=IN&ceid=IN:hi"),
-    "AIR News Bihar (Regional)": ("Bihar News", "https://news.google.com/rss/search?q=Akashvani+Patna+OR+AIR+News+Patna+when:1d&hl=hi&gl=IN&ceid=IN:hi"),
 
     # ------------------ NATIONAL MEDIA FEEDS ------------------
     "The Hindu National": ("National News", "https://www.thehindu.com/news/national/feeder/default.rss"),
@@ -472,9 +562,17 @@ PUBLIC_RSS_SOURCES = {
 }
 
 def fetch_all_public_rss():
-    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING ALL PUBLIC RSS SOURCES (INCLUDING AIR NEWS)\n" + "=" * 70)
+    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING ALL PUBLIC RSS SOURCES & AIR PORTAL\n" + "=" * 70)
     all_results = []
 
+    # 1. Scrape Direct News On AIR Portal First
+    try:
+        air_direct_items = scrape_news_on_air_direct()
+        all_results.extend(air_direct_items)
+    except Exception as e:
+        warn(f"News On AIR Direct Scraper Exception: {e}")
+
+    # 2. Scrape All RSS Feeds
     for source_name, (category, rss_url) in PUBLIC_RSS_SOURCES.items():
         print(f"\n📡 Connecting to RSS Source: [{source_name}]")
         xml_raw = fetch_rss_xml(rss_url)
