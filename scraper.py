@@ -15,7 +15,15 @@ import requests as normal_requests
 
 from bs4 import BeautifulSoup
 from bs4 import MarkupResemblesLocatorWarning
-from googlenewsdecoder import new_decodurl
+
+# Safe import for googlenewsdecoder across different package versions
+try:
+    from googlenewsdecoder.new_decodurl import new_decodurl
+except ImportError:
+    try:
+        from googlenewsdecoder import new_decodurl
+    except ImportError:
+        new_decodurl = None
 
 # ============================================================
 # CONFIGURATION
@@ -110,14 +118,32 @@ def resolve_google_news_url(google_url):
         return ""
     if "news.google.com" not in google_url:
         return google_url
+
+    # 1. Try decoding via googlenewsdecoder
+    if new_decodurl is not None:
+        try:
+            res = new_decodurl(google_url)
+            if isinstance(res, dict) and res.get("status"):
+                decoded = res.get("decoded_url")
+                if decoded:
+                    return decoded
+        except Exception as e:
+            warn(f"googlenewsdecoder failed for {google_url}: {e}")
+
+    # 2. Fallback: Request header redirect resolution
     try:
-        res = new_decodurl(google_url)
-        if isinstance(res, dict) and res.get("status"):
-            decoded = res.get("decoded_url")
-            if decoded:
-                return decoded
+        r = curl_requests.get(
+            google_url,
+            headers=HEADERS,
+            timeout=10,
+            impersonate="chrome",
+            allow_redirects=True
+        )
+        if r.url and "news.google.com" not in r.url:
+            return r.url
     except Exception as e:
-        warn(f"Failed to decode Google URL {google_url}: {e}")
+        warn(f"HTTP Redirect fallback failed for {google_url}: {e}")
+
     return google_url
 
 
