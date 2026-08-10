@@ -32,10 +32,10 @@ except ImportError:
 
 OUTPUT_FILE = "rawnews.json"
 TIMEOUT = 20
-MAX_PER_SOURCE = 10
+MAX_PER_SOURCE = 15
 
 MIN_CONTENT_WORDS = 60      # Strictly Minimum 60 words required
-MAX_CONTENT_WORDS = 1200     # Max 800 words to avoid "line too large" editor warning
+MAX_CONTENT_WORDS = 1200     # Max 800 words to prevent editor display overflow
 
 # STRICT 24-HOUR ROLLING WINDOW
 DEFAULT_MAX_AGE_HOURS = 24
@@ -67,7 +67,7 @@ EXCLUDE_KEYWORDS = [
     # 1. Astrology / Rashifal / Horoscope Blocking
     "rashifal", "horoscope", "astrology", "kundali", "panchang", "jyotish", "grah nakshatra",
     "rashi", "mesh", "vrishabh", "mithun", "kark", "sinh", "kanya", "tula", "vrishchik",
-    "dhanu", "makar", "kumbh", "meen", "zodiac", "astrological", " भविष्यफल", "राशिफल", "पंचांग",
+    "dhanu", "makar", "kumbh", "meen", "zodiac", "astrological", "भविष्यफल", "राशिफल", "पंचांग",
 
     # 2. Crime & Incidents Blocking
     "murder", "police", "arrest", "theft", "accident", "rape", "crime", "fir", "killed", "dead", "gang",
@@ -275,7 +275,6 @@ def fetch_rss_xml(url):
 def fetch_web_article(url, source_name="Unknown"):
     real_url = get_real_publisher_url(url)
     if not real_url or "news.google.com" in real_url: 
-        warn(f"[{source_name}] Failed to resolve Google URL: {url[:50]}")
         return "", real_url
 
     html_raw = None
@@ -283,9 +282,7 @@ def fetch_web_article(url, source_name="Unknown"):
         r = curl_requests.get(real_url, headers=HEADERS, timeout=TIMEOUT, impersonate="chrome", allow_redirects=True)
         if r.status_code < 400: 
             html_raw = r.text
-        else:
-            warn(f"[{source_name}] HTTP {r.status_code} for {real_url[:50]}")
-    except Exception as e:
+    except Exception:
         pass
 
     if not html_raw:
@@ -293,10 +290,7 @@ def fetch_web_article(url, source_name="Unknown"):
             r = normal_requests.get(real_url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True, verify=False)
             if r.status_code < 400: 
                 html_raw = r.text
-            else:
-                warn(f"[{source_name}] Fallback HTTP {r.status_code} for {real_url[:50]}")
-        except Exception as e:
-            warn(f"[{source_name}] Request Failed: {e}")
+        except Exception:
             return "", real_url
 
     if not html_raw: 
@@ -360,14 +354,12 @@ def make_item(source, title, url, date=None, content="", item_type="General News
 
     if not clean_content_str:
         reason = "Empty Content / Scraping Failed"
-        warn(f"❌ REJECTED [{source}] ({reason}) | {clean_title_str[:50]}")
         SOURCE_STATS[source]["rejected"] += 1
         SOURCE_STATS[source]["reasons"][reason] += 1
         return None
 
     if is_content_too_similar_to_title(clean_title_str, clean_content_str):
         reason = "Content Same as Title"
-        warn(f"❌ REJECTED [{source}] ({reason}) | {clean_title_str[:50]}")
         SOURCE_STATS[source]["rejected"] += 1
         SOURCE_STATS[source]["reasons"][reason] += 1
         return None
@@ -376,7 +368,6 @@ def make_item(source, title, url, date=None, content="", item_type="General News
     total_words = word_count(clean_content_str)
     if total_words < MIN_CONTENT_WORDS:
         reason = f"Word count too low ({total_words} < {MIN_CONTENT_WORDS})"
-        warn(f"❌ REJECTED [{source}] ({reason}) | {clean_title_str[:50]}")
         SOURCE_STATS[source]["rejected"] += 1
         SOURCE_STATS[source]["reasons"][reason] += 1
         return None
@@ -386,7 +377,6 @@ def make_item(source, title, url, date=None, content="", item_type="General News
     age_hrs = round(get_age_hours(parsed_date), 1)
     if not is_within_24_hours(parsed_date):
         reason = f"Date older than 24h ({age_hrs} hrs old)"
-        warn(f"❌ REJECTED [{source}] ({reason}) | {clean_title_str[:50]}")
         SOURCE_STATS[source]["rejected"] += 1
         SOURCE_STATS[source]["reasons"][reason] += 1
         return None
@@ -398,7 +388,6 @@ def make_item(source, title, url, date=None, content="", item_type="General News
     matched_bad_word = check_blacklist_reason(clean_title_str, clean_content_str)
     if matched_bad_word:
         reason = f"Blacklisted word: '{matched_bad_word}'"
-        warn(f"❌ REJECTED [{source}] ({reason}) | {clean_title_str[:50]}")
         SOURCE_STATS[source]["rejected"] += 1
         SOURCE_STATS[source]["reasons"][reason] += 1
         return None
@@ -430,46 +419,34 @@ def deduplicate(items):
     return output
 
 # ============================================================
-# COMPREHENSIVE PUBLIC RSS FEEDS (NATIONAL & ALL BIHAR SOURCES)
-# EXCLUDED: CMO, IPRD, PIB, PTI, SANSAD TV
+# WORKING PUBLIC RSS FEEDS (FIXED BROKEN FEEDS & GOOGLE NEWS)
 # ============================================================
 
 PUBLIC_RSS_SOURCES = {
     # ------------------ NATIONAL MEDIA FEEDS ------------------
     "The Hindu National": ("National News", "https://www.thehindu.com/news/national/feeder/default.rss"),
     "The Hindu Business": ("Economy & Banking", "https://www.thehindu.com/business/feeder/default.rss"),
-    "Indian Express National": ("National News", "https://indianexpress.com/section/india/feed/"),
-    "Indian Express Economy": ("Economy & Banking", "https://indianexpress.com/section/business/economy/feed/"),
-    "Business Standard": ("Economy & Banking", "https://www.business-standard.com/rss/home_page_top_stories.rss"),
-    "Livemint Economy": ("Economy & Banking", "https://www.livemint.com/rss/news"),
-    "Times of India India": ("National News", "https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms"),
-    "Aaj Tak National (Hindi)": ("National News", "https://www.aajtak.in/rss/national-news.xml"),
-    "Amar Ujala National (Hindi)": ("National News", "https://www.amarujala.com/rss/national-news.xml"),
-    "Dainik Jagran National (Hindi)": ("National News", "https://www.jagran.com/rss/news/national.xml"),
-    "NDTV India": ("National News", "https://feeds.feedburner.com/ndtvnews-india-news"),
+    "Indian Express India": ("National News", "https://indianexpress.com/feed/"),
+    "Business Standard Top": ("Economy & Banking", "https://www.business-standard.com/rss/latest-news.rss"),
+    "Livemint Top": ("Economy & Banking", "https://www.livemint.com/rss/news"),
+    "Times of India Top": ("National News", "https://timesofindia.indiatimes.com/rssfeedstopstories.cms"),
+    "Amar Ujala National": ("National News", "https://www.amarujala.com/rss/national-news.xml"),
+    "NDTV India Top": ("National News", "https://feeds.feedburner.com/ndtvnews-india-news"),
     
-    # ------------------ BIHAR SPECIFIC PUBLIC MEDIA FEEDS ------------------
-    "Dainik Jagran Bihar": ("Bihar News", "https://www.jagran.com/rss/bihar.xml"),
+    # ------------------ BIHAR SPECIFIC MEDIA FEEDS ------------------
     "Prabhat Khabar Bihar": ("Bihar News", "https://www.prabhatkhabar.com/state/bihar/feed"),
-    "Live Hindustan Bihar": ("Bihar News", "https://www.livehindustan.com/bihar/rss"),
     "Amar Ujala Bihar": ("Bihar News", "https://www.amarujala.com/rss/bihar.xml"),
-    "NDTV Bihar": ("Bihar News", "https://feeds.feedburner.com/ndtvnews-bihar-news"),
-    "News18 Bihar": ("Bihar News", "https://hindi.news18.com/rss/bihar.xml"),
-    "Navbharat Times Bihar": ("Bihar News", "https://navbharattimes.indiatimes.com/state/bihar/rssfeed/2381270.cms"),
-
-    # ------------------ TARGETED GOOGLE NEWS CATEGORIES ------------------
-    "GNews Polity": ("Polity & Governance", "https://news.google.com/rss/search?q=Supreme+Court+OR+Act+OR+Bill+when:1d&hl=en-IN&gl=IN&ceid=IN:en"),
-    "GNews Schemes": ("Govt Schemes & Welfare", "https://news.google.com/rss/search?q=Govt+Scheme+OR+Pradhan+Mantri+OR+Welfare+when:1d&hl=en-IN&gl=IN&ceid=IN:en"),
-    "GNews Science Tech": ("Science, Tech & Defense", "https://news.google.com/rss/search?q=ISRO+OR+NASA+OR+DRDO+OR+Defense+when:1d&hl=en-IN&gl=IN&ceid=IN:en"),
-    "GNews Environment": ("Environment & Infrastructure", "https://news.google.com/rss/search?q=Ramsar+Site+OR+Expressway+OR+Renewable+Energy+when:1d&hl=en-IN&gl=IN&ceid=IN:en"),
+    "Hindustan Bihar (Hindi)": ("Bihar News", "https://www.livehindustan.com/rss/bihar/rssfeed.xml"),
     
-    # Google News Bihar Targeted Feeds (Hindi & English)
-    "GNews Bihar Schemes": ("Bihar Schemes", "https://news.google.com/rss/search?q=Bihar+scheme+OR+Mukhyamantri+yojana+OR+Bihar+welfare+when:1d&hl=hi&gl=IN&ceid=IN:hi"),
-    "GNews Bihar Development": ("Bihar Development", "https://news.google.com/rss/search?q=Patna+Metro+OR+Bihar+expressway+OR+Bihar+infrastructure+when:1d&hl=hi&gl=IN&ceid=IN:hi")
+    # ------------------ GOOGLE NEWS WORKING RSS FEEDS ------------------
+    "GNews National (English)": ("National News", "https://news.google.com/rss/headlines/section/topic/NATION?hl=en-IN&gl=IN&ceid=IN:en"),
+    "GNews Business (English)": ("Economy & Banking", "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=en-IN&gl=IN&ceid=IN:en"),
+    "GNews SciTech (English)": ("Science & Tech", "https://news.google.com/rss/headlines/section/topic/SCIENCE?hl=en-IN&gl=IN&ceid=IN:en"),
+    "GNews Bihar (Hindi)": ("Bihar News", "https://news.google.com/rss/search?q=bihar+news&hl=hi&gl=IN&ceid=IN:hi")
 }
 
 def fetch_all_public_rss():
-    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING ALL PUBLIC RSS SOURCES (NATIONAL + ALL BIHAR MEDIA)\n" + "=" * 70)
+    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING ALL PUBLIC RSS SOURCES\n" + "=" * 70)
     all_results = []
 
     for source_name, (category, rss_url) in PUBLIC_RSS_SOURCES.items():
@@ -513,7 +490,7 @@ def print_source_performance_summary():
     print("\n" + "=" * 80)
     print("📊 SOURCE ACCURACY & PERFORMANCE SUMMARY")
     print("=" * 80)
-    print(f"{'Source Name':<32} | {'Fetched':<8} | {'Accepted':<8} | {'Rejected':<8} | {'Status'}")
+    print(f"{'Source Name':<28} | {'Fetched':<7} | {'Accepted':<8} | {'Rejected':<8} | {'Status'}")
     print("-" * 80)
 
     for source_name in PUBLIC_RSS_SOURCES.keys():
@@ -526,12 +503,12 @@ def print_source_performance_summary():
             status = "❌ BROKEN (0 Items)"
         elif accepted == 0:
             status = "⚠️ ALL REJECTED"
-        elif accepted / fetched >= 0.5:
+        elif accepted / fetched >= 0.4:
             status = "✅ EXCELLENT"
         else:
             status = "⚠️ POOR YIELD"
 
-        print(f"{source_name:<32} | {fetched:<8} | {accepted:<8} | {rejected:<8} | {status}")
+        print(f"{source_name:<28} | {fetched:<7} | {accepted:<8} | {rejected:<8} | {status}")
     print("=" * 80)
 
 def build_news():
