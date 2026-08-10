@@ -1,6 +1,7 @@
 import os
 import json
 import time
+import re
 from datetime import datetime, timezone, timedelta
 from groq import Groq
 
@@ -36,10 +37,49 @@ ALLOWED CATEGORIES:
 9. Bihar Special Affairs
 
 STRICT REJECTION RULES (CRITICAL):
+- GARBAGE & NAVIGATION TITLES BLOCK: Set "is_relevant": false if the title/content contains website navigation phrases like "Skip to Main Content", "Accessibility Options", "Home", "Contact Us", etc.
 - OTHER STATES NEWS BLOCK: If the news is specifically about OTHER Indian states (e.g., Uttar Pradesh, Madhya Pradesh, Rajasthan, Delhi, Maharashtra, Punjab, Haryana, Tamil Nadu, Karnataka, etc.) and is NOT a Central/National scheme or decision, set "is_relevant": false.
 - Set "is_relevant": false if news is about stock market daily movements, Sensex/Nifty, Rupee fluctuations, local crime, accidents, viral videos, entertainment, gossip, or audio portal listings.
-- Output MUST be valid JSON only with keys: "is_relevant", "title", "category", "bullets", "exam_tag".
+
+OUTPUT FORMAT REQUIREMENTS:
+Output MUST be strictly valid JSON format with keys:
+- "is_relevant": true or false
+- "title": A crisp, factual headline in English
+- "category": Exact name matched from ALLOWED CATEGORIES
+- "bullets": Array of EXACTLY 2 to 3 exam-relevant factual points. NEVER leave this empty.
+- "exam_tag": Exam tag name
 """
+
+# ============================================================
+# DEDUPLICATION HELPERS
+# ============================================================
+
+def normalize_title(title):
+    """Extract key words for similarity comparison"""
+    title = re.sub(r'[^a-zA-Z0-9\s]', '', title.lower())
+    words = set(w for w in title.split() if len(w) > 3)
+    return words
+
+
+def is_duplicate_story(new_title, existing_titles, threshold=0.55):
+    """Checks if the same news story has already been accepted"""
+    new_words = normalize_title(new_title)
+    if not new_words:
+        return False
+
+    for exist_title in existing_titles:
+        exist_words = normalize_title(exist_title)
+        if not exist_words:
+            continue
+        
+        intersection = new_words.intersection(exist_words)
+        union = new_words.union(exist_words)
+        similarity = len(intersection) / len(union) if union else 0
+
+        if similarity >= threshold:
+            return True
+
+    return False
 
 
 def trim_content_for_ai(text, max_words=90):
@@ -90,6 +130,12 @@ def summarize_article(item, is_bihar=False):
     title = item.get("title", "")
     content = item.get("content", "")
 
+    # Skip navigation/boilerplate titles before making API call
+    junk_phrases = ["skip to main content", "accessibility options", "screen reader access", "home", "search"]
+    if any(phrase in title.lower() for phrase in junk_phrases):
+        print(f"  ⏭️ SKIPPED (Navigation Garbage): {title[:45]}...")
+        return None
+
     # Skip portal indexes/audio archives before making API call
     if "audios:" in title.lower() or "news & current affairs" in title.lower():
         print(f"  ⏭️ SKIPPED (Audio Listing): {title[:45]}...")
@@ -102,7 +148,7 @@ def summarize_article(item, is_bihar=False):
         f"Domain: {news_type}\n"
         f"Title: {title}\n"
         f"Content: {trimmed_content}\n\n"
-        "Return strictly valid JSON format."
+        "Return strictly valid JSON format with keys: is_relevant, title, category, bullets (array of 2-3 points), exam_tag."
     )
 
     parsed = call_groq_api(user_prompt)
@@ -119,10 +165,19 @@ def summarize_article(item, is_bihar=False):
     default_prefix = "🏛️ Bihar Special" if is_bihar else "🎯 National Special"
     exam_tag = parsed.get("exam_tag") or f"{default_prefix} / {assigned_category}"
 
+    # GUARANTEED NON-EMPTY BULLETS FALLBACK
+    bullets = parsed.get("bullets", [])
+    if not isinstance(bullets, list) or len(bullets) == 0:
+        clean_text_snippet = trimmed_content if len(trimmed_content) > 30 else title
+        bullets = [
+            f"Key update regarding {title[:60]}.",
+            f"Overview: {clean_text_snippet[:120]}..."
+        ]
+
     return {
         "title": parsed.get("title", title),
         "category": assigned_category,
-        "bullets": parsed.get("bullets", [trimmed_content[:150] + "..."]),
+        "bullets": bullets,
         "exam_tag": exam_tag,
         "date": TODAY_DATE
     }
@@ -143,7 +198,10 @@ def process_all_news():
     print(f"📦 Raw Inputs -> National: {len(national_raw)} | Bihar: {len(bihar_raw)}")
 
     national_cards = []
+    seen_national_titles = []
+
     bihar_cards = []
+    seen_bihar_titles = []
 
     # Process National News
     print("\n🇮🇳 Processing National News...")
@@ -153,15 +211,21 @@ def process_all_news():
         card_data = summarize_article(item, is_bihar=False)
         
         if card_data:
-            formatted_card = {
-                "id": f"nat_{nat_idx:02d}",
-                "title": card_data["title"],
-                "category": card_data["category"],
-                "bullets": card_data["bullets"],
-                "exam_tag": card_data["exam_tag"],
-                "date": card_data["date"]
-            }
-            national_cards.append(formatted_card)
+            c_title = card_data["title"]
+            if not is_duplicate_story(c_title, seen_national_titles):
+                seen_national_titles.append(c_title)
+                formatted_card = {
+                    "id": f"nat_{len(national_cards) + 1:02d}",
+                    "title": card_data["title"],
+                    "category": card_data["category"],
+                    "bullets": card_data["bullets"],
+                    "exam_tag": card_data["exam_tag"],
+                    "date": card_data["date"]
+                }
+                national_cards.append(formatted_card)
+            else:
+                print(f"  🧹 DROPPED DUPLICATE: {c_title[:45]}...")
+
             nat_idx += 1
             
         time.sleep(1.5)  # Optimal delay for 8b instant model
@@ -174,15 +238,21 @@ def process_all_news():
         card_data = summarize_article(item, is_bihar=True)
 
         if card_data:
-            formatted_card = {
-                "id": f"bih_{bih_idx:02d}",
-                "title": card_data["title"],
-                "category": card_data["category"],
-                "bullets": card_data["bullets"],
-                "exam_tag": card_data["exam_tag"],
-                "date": card_data["date"]
-            }
-            bihar_cards.append(formatted_card)
+            c_title = card_data["title"]
+            if not is_duplicate_story(c_title, seen_bihar_titles):
+                seen_bihar_titles.append(c_title)
+                formatted_card = {
+                    "id": f"bih_{len(bihar_cards) + 1:02d}",
+                    "title": card_data["title"],
+                    "category": card_data["category"],
+                    "bullets": card_data["bullets"],
+                    "exam_tag": card_data["exam_tag"],
+                    "date": card_data["date"]
+                }
+                bihar_cards.append(formatted_card)
+            else:
+                print(f"  🧹 DROPPED DUPLICATE: {c_title[:45]}...")
+
             bih_idx += 1
             
         time.sleep(1.5)
