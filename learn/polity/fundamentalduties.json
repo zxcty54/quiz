@@ -1,0 +1,1644 @@
+
+{
+  "topic_id": "fundamental_duties_polity",
+  "topic_title": "Fundamental Duties (Article 51A)",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 50,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "fundamental_duties_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 50
+      },
+      "intro_payload": {
+        "title": "Fundamental Duties (Article 51A)",
+        "icon": "🇮🇳",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Origin and Evolution of Fundamental Duties",
+          "Swaran Singh Committee Recommendations",
+          "All 11 Fundamental Duties - Complete Coverage",
+          "42nd and 86th Constitutional Amendments",
+          "Nature: Non-Justiciable vs Rights",
+          "PYQ Traps: Count, Year, Article Number, Exceptions"
+        ],
+        "estimated_time": "18 mins",
+        "total_xp": 280
+      },
+      "navigation": {
+        "next": "card_02_daily_context",
+        "button_text": "शुरू करें ➔"
+      }
+    },
+    {
+      "card_id": "card_02_daily_context",
+      "card_slug": "card_02_daily_context",
+      "type": "chat",
+      "concept_id": "daily_life_duties",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, kal Independence Day pe principal ne bola ki national anthem ke time sabko khada hona chahiye. Par kuch students nahi khade hue. Kya ye galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul galat hai Raju! National anthem ke samay khada hona sirf ek ritual nahi, ye tumhari duty hai as an Indian citizen. Constitution mein jo Fundamental Rights hain, unke saath-saath kuch Fundamental Duties bhi hain jo har citizen ko follow karni chahiye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab sir, rights ke saath duties bhi hain? Ye toh school mein nahi padhaya!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Rights aur Duties ek coin ke do sides hain. Jab tumhe freedom of speech ka right hai, toh tumhari duty bhi hai ki national symbols ko respect karo, communal harmony maintain karo. Aaj hum samjhenge Article 51A - Fundamental Duties, jo originally Constitution mein nahi the but baad mein add kiye gaye. Ye BPSC/UPSC ka favorite topic hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_origin_story",
+        "button_text": "कैसे आईं? ➔"
+      }
+    },
+    {
+      "card_id": "card_03_origin_story",
+      "card_slug": "card_03_origin_story",
+      "type": "chat",
+      "concept_id": "origin_evolution",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Fundamental Duties originally Constitution mein nahi the! 1950 mein jab Constitution bana tab sirf Fundamental Rights the (Part III). 1976 mein Emergency ke time 42nd Amendment Act dwara Article 51A add kiya gaya aur 10 Fundamental Duties diye gaye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Emergency? 1976? Matlab Indira Gandhi ke time?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! 1975-77 Emergency period tha. Swaran Singh Committee (1976) ne recommend kiya ki citizens ko unki duties bhi yaad dilani chahiye, sirf rights nahi. USSR (Soviet Union) Constitution se ye idea liya gaya tha. Baad mein 2002 mein 86th Amendment ne ek aur duty add ki - total 11 ho gayi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh pehle 10 the, ab 11 hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! 42nd Amendment (1976) - 10 duties, 86th Amendment (2002) - 11th duty add hui (parents/guardians ka duty 6-14 saal ke bachon ko education dena). Ye timeline BPSC mein zaroor puchha jata hai - 1976, 2002, aur total count 11!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_quiz_origin",
+        "button_text": "Quiz time ➔"
+      }
+    },
+    {
+      "card_id": "card_04_quiz_origin",
+      "card_slug": "card_04_quiz_origin",
+      "type": "quiz",
+      "concept_id": "origin_basic",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Fundamental Duties को संविधान में किस संशोधन द्वारा जोड़ा गया?",
+        "options": [
+          { "id": "A", "text": "44वें संशोधन अधिनियम, 1978" },
+          { "id": "B", "text": "42वें संशोधन अधिनियम, 1976" },
+          { "id": "C", "text": "86वें संशोधन अधिनियम, 2002" },
+          { "id": "D", "text": "52वें संशोधन अधिनियम, 1985" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "42वें संशोधन अधिनियम, 1976 द्वारा Article 51A को संविधान में जोड़ा गया और 10 Fundamental Duties दी गईं। यह Emergency period (1975-77) के दौरान Swaran Singh Committee की सिफारिश पर किया गया। बाद में 86वें संशोधन, 2002 ने 11वीं duty जोड़ी। यह SSC, Railway और BPSC में बार-बार पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_05_swaran_singh",
+        "button_text": "Committee details ➔"
+      }
+    },
+    {
+      "card_id": "card_05_swaran_singh",
+      "card_slug": "card_05_swaran_singh",
+      "type": "chat",
+      "concept_id": "swaran_singh_committee",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, ye Swaran Singh Committee kaun thi? Kyun duties add karne ki sifaarish ki?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Swaran Singh Committee 1976 mein bani thi to suggest constitutional amendments. Iska ek major recommendation tha ki citizens ko rights ke saath-saath duties bhi pata honi chahiye. Committee ne USSR Constitution se inspiration liya - wahan citizens ke duties clearly defined the."
+        },
+        {
+          "speaker": "raju",
+          "text": "Lekin sir, Emergency mein toh bahut sare rights suspend ho gaye the na? Tab duties kyun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut sharp observation! Critics kehte hain ki Emergency ke time duties add karna government ko justify karne ka tareeka tha. But positive side ye hai ki duties citizens ko responsible banati hain. Aaj bhi Fundamental Duties relevant hain - environment protection, communal harmony, scientific temper develop karna - ye sab important hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_article_51a_intro",
+        "button_text": "Article 51A ➔"
+      }
+    },
+    {
+      "card_id": "card_06_article_51a_intro",
+      "card_slug": "card_06_article_51a_intro",
+      "type": "chat",
+      "concept_id": "article_51a_structure",
+      "level": 2,
+      "progress": {
+        "current": 6,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 51A Constitution ke Part IV-A mein hai (Fundamental Rights Part III mein hain, Duties Part IV-A mein). Isme 11 clauses hain - (a) se (k) tak. Har clause ek specific duty define karta hai. Dhyan do - ye duties sirf citizens ke liye hain, foreigners ke liye nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab jaise Fundamental Rights sabko nahi milte (Article 19 sirf citizens ko), waise hi Duties bhi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Fundamental Duties sirf Indian citizens ke liye hain. Aur ek bahut important point - ye duties non-justiciable hain, matlab court mein enforce nahi ho sakti jaise rights hote hain. Agar koi duty nahi follow kare toh direct legal action nahi ho sakta (except specific laws ban ho)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh duties optional hain kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Legal enforcement nahi hai, but moral aur civic obligation hai! Plus kuch duties ko specific laws se enforce kiya jata hai - jaise Prevention of Insults to National Honour Act, 1971 (national anthem/flag respect), Wildlife Protection Act (environment), etc. Ab ek-ek duty detail mein samjhte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_milestone_intro",
+        "button_text": "Module complete ➔"
+      }
+    },
+    {
+      "card_id": "card_07_milestone_intro",
+      "card_slug": "card_07_milestone_intro",
+      "type": "milestone",
+      "concept_id": "intro_complete",
+      "level": 2,
+      "progress": {
+        "current": 7,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 1 CLEARED!",
+        "badge_emoji": "📜",
+        "completed_topic": "Origin & Evolution of Fundamental Duties",
+        "xp_earned": 40,
+        "milestone_progress": "Module 1/6 Clear",
+        "motivational_quote": "Great start! अब सभी 11 Duties को detail में समझेंगे! 💪"
+      },
+      "navigation": {
+        "next": "card_08_duty_a",
+        "button_text": "Start Module 2 ➔"
+      }
+    },
+    {
+      "card_id": "card_08_duty_a",
+      "card_slug": "card_08_duty_a",
+      "type": "chat",
+      "concept_id": "duty_clause_a",
+      "level": 2,
+      "progress": {
+        "current": 8,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Duty (a): 'To abide by the Constitution and respect its ideals and institutions, the National Flag and the National Anthem.' Matlab Constitution ko follow karo, respect karo; National Flag aur National Anthem ka samman karo. Ye sabse pehli aur fundamental duty hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir iska matlab hai flag ko damage karna ya anthem ke time na khada hona wrong hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Prevention of Insults to National Honour Act, 1971 is law specifically bana hai flag aur anthem ki protection ke liye. Agar koi national flag burn kare, disrespect kare, ya anthem ke time deliberately na khada ho - punishable offence hai. Ye duty legal enforcement bhi hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "'Ideals and institutions' matlab kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ideals matlab Constitution ki core values - Justice, Liberty, Equality, Fraternity (Preamble mein likhe). Institutions matlab Parliament, Judiciary, Executive - ye sabka respect karna. Example: Court ka order manna, voting mein participate karna - ye sab is duty ka part hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_duty_b",
+        "button_text": "Duty (b) ➔"
+      }
+    },
+    {
+      "card_id": "card_09_duty_b",
+      "card_slug": "card_09_duty_b",
+      "type": "chat",
+      "concept_id": "duty_clause_b",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Duty (b): 'To cherish and follow the noble ideals which inspired our national struggle for freedom.' Matlab freedom struggle ke ideals ko yaad rakho aur follow karo - Gandhi ji ka non-violence, Nehru ka secularism, Ambedkar ka social justice!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Lekin sir, freedom struggle toh history hai na? Ab kaise follow karein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Good question! Freedom struggle sirf 1947 tak nahi tha - usme jo values the wo aaj bhi relevant hain. Jaise Gandhiji ne communal harmony sikhayi, equality ki baat ki - ye values aaj bhi follow karni chahiye. Corruption ke against fight, social reform - ye sab freedom struggle ke ideals hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_duty_c",
+        "button_text": "Duty (c) ➔"
+      }
+    },
+    {
+      "card_id": "card_10_duty_c",
+      "card_slug": "card_10_duty_c",
+      "type": "chat",
+      "concept_id": "duty_clause_c",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Duty (c): 'To uphold and protect the sovereignty, unity and integrity of India.' Ye bahut critical duty hai - desh ki sovereignty (independence), unity (ekta) aur integrity (akhndta) ko protect karna har citizen ki zimmedari hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sovereignty matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sovereignty matlab India kisi aur country ke control mein nahi hai - independent hai. Unity matlab sabhi states aur communities ek saath hain. Integrity matlab geographical boundaries intact hain - koi bhi part alag nahi ho sakta. Agar koi anti-national activities kare, separatist movements support kare - ye duty violate hoti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Kashmir issue, North-East issues - ye sab yahan relate hote hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Agar koi separatist propaganda failaye ya violence karke country ki unity disturb kare, toh wo is duty ke against hai. Unlawful Activities Prevention Act (UAPA), Sedition laws - ye sab is duty ko enforce karne ke tools hain. UPSC mein ye conceptual questions mein aata hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_quiz_abc",
+        "button_text": "Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_11_quiz_abc",
+      "card_slug": "card_11_quiz_abc",
+      "type": "quiz",
+      "concept_id": "duties_abc_test",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा कानून Article 51A(a) - राष्ट्रीय ध्वज और राष्ट्रगान के सम्मान से सीधे जुड़ा है?",
+        "options": [
+          { "id": "A", "text": "Unlawful Activities Prevention Act (UAPA)" },
+          { "id": "B", "text": "Prevention of Insults to National Honour Act, 1971" },
+          { "id": "C", "text": "Right to Information Act, 2005" },
+          { "id": "D", "text": "Wildlife Protection Act, 1972" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Prevention of Insults to National Honour Act, 1971 विशेष रूप से राष्ट्रीय ध्वज, राष्ट्रगान और संविधान के अपमान को रोकने के लिए बनाया गया है। यह Article 51A(a) की Fundamental Duty को legal enforcement देता है। UAPA separatism/terrorism के लिए है। यह Railway और SSC में direct पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_12_duty_d",
+        "button_text": "Duty (d) ➔"
+      }
+    },
+    {
+      "card_id": "card_12_duty_d",
+      "card_slug": "card_12_duty_d",
+      "type": "chat",
+      "concept_id": "duty_clause_d",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Duty (d): 'To defend the country and render national service when called upon to do so.' Matlab jab zarurat pade, desh ki raksha ke liye tayyar rahna chahiye - chahe military service ho ya civil defence ya disaster management mein help!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir iska matlab har kisi ko army mein jaana padega kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi Raju! Compulsory military service India mein nahi hai (kuch countries jaise Israel mein hai). But agar war ho, emergency ho, natural disaster ho - tab citizens ko cooperate karna chahiye. National Service Scheme (NSS), National Cadet Corps (NCC) - ye voluntary hain but is duty ke spirit ko promote karte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_duty_e",
+        "button_text": "Duty (e) ➔"
+      }
+    },
+    {
+      "card_id": "card_13_duty_e",
+      "card_slug": "card_13_duty_e",
+      "type": "chat",
+      "concept_id": "duty_clause_e",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Duty (e): 'To promote harmony and the spirit of common brotherhood amongst all the people of India transcending religious, linguistic and regional or sectional diversities; to renounce practices derogatory to the dignity of women.' Ye sabse lengthy aur important duty hai - 2 parts mein hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab communal harmony promote karna aur women ki dignity respect karna?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Part 1: Religion, language, region ke basis par discrimination nahi karna - sab Indians ek hain. Communal riots, hate speech, regionalism - ye sab is duty ke against hain. Part 2: Women ke against derogatory practices - dowry, female foeticide, domestic violence, sexual harassment - ye sab renounce (tyagna) karna hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh dowry lena galat hai is duty ke according?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Dowry Prohibition Act, 1961 already law hai. Protection of Women from Domestic Violence Act, POCSO Act, Sexual Harassment at Workplace Act - ye sab is duty ko enforce karte hain. BPSC mein ye duty bahut relevant hai kyunki Bihar mein social issues zyada hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_duty_f",
+        "button_text": "Duty (f) ➔"
+      }
+    },
+    {
+      "card_id": "card_14_duty_f",
+      "card_slug": "card_14_duty_f",
+      "type": "chat",
+      "concept_id": "duty_clause_f",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Duty (f): 'To value and preserve the rich heritage of our composite culture.' India ki cultural diversity - languages, religions, art forms, traditions, monuments - sabko preserve karna hai. Archaeological Survey of India (ASI), Sangeet Natak Akademi - ye sab is duty ko implement karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Composite culture matlab sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Composite matlab mixed, diverse. India mein Hindu, Muslim, Sikh, Christian, Buddhist - sabki cultures mili hui hain. Classical dances (Bharatanatyam, Kathak), monuments (Taj Mahal, Qutub Minar), languages (22 scheduled languages) - ye sab humari composite culture hain. Inka preservation important hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_quiz_def",
+        "button_text": "Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_def",
+      "card_slug": "card_15_quiz_def",
+      "type": "quiz",
+      "concept_id": "duties_def_test",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Article 51A(e) में किन practices को renounce करने की बात कही गई है?",
+        "options": [
+          { "id": "A", "text": "केवल communal violence" },
+          { "id": "B", "text": "Practices derogatory to the dignity of women" },
+          { "id": "C", "text": "केवल dowry system" },
+          { "id": "D", "text": "Environmental pollution" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 51A(e) का दूसरा भाग specifically कहता है 'to renounce practices derogatory to the dignity of women' - अर्थात महिलाओं की गरिमा के विरुद्ध सभी प्रथाओं (dowry, female foeticide, domestic violence, etc.) को त्यागना। यह general statement है जो सभी gender-discriminatory practices को cover करता है। UPSC में यह conceptual form में पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_16_duty_g",
+        "button_text": "Duty (g) ➔"
+      }
+    },
+    {
+      "card_id": "card_16_duty_g",
+      "card_slug": "card_16_duty_g",
+      "type": "chat",
+      "concept_id": "duty_clause_g",
+      "level": 3,
+      "progress": {
+        "current": 16,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Duty (g): 'To protect and improve the natural environment including forests, lakes, rivers and wildlife, and to have compassion for living creatures.' Ye duty bahut current hai kyunki climate change, pollution, deforestation - ye sab major issues hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir iska matlab plastic use mat karo, trees lagao?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, plus rivers clean rakho, animals ko harm mat karo, wildlife protect karo. Wildlife Protection Act (1972), Forest Conservation Act (1980), Environment Protection Act (1986) - ye sab laws is duty ko implement karte hain. Single-use plastic ban, Swachh Bharat - ye sab is duty ka part hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Living creatures mein insects bhi aate hain kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Technically haan! 'Compassion for living creatures' bahut broad hai - animals, birds, even insects. Prevention of Cruelty to Animals Act iska example hai. Lekin practical mein focus wildlife aur domestic animals par zyada hai. UPSC mein environment-related questions is duty se link karke aate hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_duty_h",
+        "button_text": "Duty (h) ➔"
+      }
+    },
+    {
+      "card_id": "card_17_duty_h",
+      "card_slug": "card_17_duty_h",
+      "type": "chat",
+      "concept_id": "duty_clause_h",
+      "level": 3,
+      "progress": {
+        "current": 17,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Duty (h): 'To develop the scientific temper, humanism and the spirit of inquiry and reform.' Scientific temper matlab rational thinking, superstitions ko reject karna, evidence-based decisions lena. Humanism matlab humanity aur compassion. Inquiry aur reform matlab questions puchho, improvements lao!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir scientific temper matlab science padhna?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Scientific temper ek mindset hai - logical thinking, questioning blind beliefs, experimental approach. Example: Agar koi bole ki black cat raasta cut kare toh unlucky hai, tum superstition mat maano - rational socho. Jawaharlal Nehru strongly believed in scientific temper - unhone research institutes promote kiye (CSIR, ISRO ke predecessors)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Reform matlab kya exactly?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Reform matlab outdated practices ko change karna. Jaise Raja Ram Mohan Roy ne Sati pratha abolish karwayi - wo reform tha. Aaj bhi caste discrimination, gender inequality ko challenge karna - ye reform hai. Rationalist movements jaise Dabholkar, Narendra Dabholkar ke - ye sab scientific temper promote karte the!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_duty_i",
+        "button_text": "Duty (i) ➔"
+      }
+    },
+    {
+      "card_id": "card_18_duty_i",
+      "card_slug": "card_18_duty_i",
+      "type": "chat",
+      "concept_id": "duty_clause_i",
+      "level": 3,
+      "progress": {
+        "current": 18,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Duty (i): 'To safeguard public property and to abjure violence.' Public property matlab roads, bridges, government buildings, buses, trains, parks - jo sab ke liye bane hain. Inka nuksan karna galat hai. Abjure violence matlab violence reject karna, peaceful methods use karna!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab sir agar protest karna hai toh violent nahi hona chahiye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Peaceful protest constitutional right hai (Article 19 - freedom to assemble peacefully). Lekin agar protest mein buses jalayi, property damage ki, violence hui - toh ye duty violate hoti hai. Prevention of Damage to Public Property Act, 1984 specifically is duty ke liye hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir agar koi government bus mein deliberately seat tod de toh?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Punishable offence hai! Public property damage karna not just moral wrong, legal crime bhi hai. Jab 2010 mein Jat reservation agitation hua, ya 2017 mein Dera Sacha Sauda violence - crores ka public property damage hua. Courts ne strict action liya - ye is duty ko enforce karne ka example hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_quiz_ghi",
+        "button_text": "Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_19_quiz_ghi",
+      "card_slug": "card_19_quiz_ghi",
+      "type": "quiz",
+      "concept_id": "duties_ghi_test",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा Act, Article 51A(i) - सार्वजनिक संपत्ति की सुरक्षा से संबंधित है?",
+        "options": [
+          { "id": "A", "text": "Wildlife Protection Act, 1972" },
+          { "id": "B", "text": "Prevention of Damage to Public Property Act, 1984" },
+          { "id": "C", "text": "Forest Conservation Act, 1980" },
+          { "id": "D", "text": "Prevention of Corruption Act, 1988" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Prevention of Damage to Public Property Act, 1984 विशेष रूप से सार्वजनिक संपत्ति को नुकसान पहुंचाने को अपराध घोषित करता है और Article 51A(i) की duty को legal enforcement देता है। Wildlife Protection Act (g) से, Forest Conservation Act (g) से, Prevention of Corruption Act अन्य विषय से संबंधित है। SSC और Railway में यह matching question आता है!"
+      },
+      "navigation": {
+        "next": "card_20_duty_j",
+        "button_text": "Duty (j) ➔"
+      }
+    },
+    {
+      "card_id": "card_20_duty_j",
+      "card_slug": "card_20_duty_j",
+      "type": "chat",
+      "concept_id": "duty_clause_j",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Duty (j): 'To strive towards excellence in all spheres of individual and collective activity so that the nation constantly rises to higher levels of endeavour and achievement.' Matlab har field mein - education, sports, science, arts, business - excellence ke liye努力 karna!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir iska matlab kya sirf toppers hi is duty follow karte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi Raju! 'Strive towards excellence' matlab best efforts dena - result se zyada effort important hai. Agar tum honest work karo, apne field mein improve hone ki koshish karo - chahe tum student ho, worker ho, farmer ho - tum is duty follow kar rahe ho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "'Collective activity' matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Matlab individual success ke saath-saath team/community success bhi. Example: Olympics mein individual medals ke saath team performance bhi matter karta hai. Scientific research mein collaboration. Social work mein community development. Ye sab collective excellence hai. Nation building ek collective effort hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_duty_k",
+        "button_text": "Duty (k) - 11th ➔"
+      }
+    },
+    {
+      "card_id": "card_21_duty_k",
+      "card_slug": "card_21_duty_k",
+      "type": "chat",
+      "concept_id": "duty_clause_k",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Duty (k): 'Who is a parent or guardian, to provide opportunities for education to his child or, as the case may be, ward between the age of 6-14 years.' Ye 11th duty hai jo 86th Amendment Act, 2002 dwara add hui. Ye originally 10 duties the (1976), ye baad mein judi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye toh parents ki duty hai, sabki nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Ye specific duty hai - sirf parents/guardians ke liye. 6-14 saal ke bachon ko education provide karna unki zimmedari hai. Ye Right to Education Act (RTE), 2009 se connected hai. Article 21A mein State ki duty hai free education dena, Article 51A(k) mein parents ki duty hai bachon ko bhejne ki!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Agar koi parent bachhe ko school nahi bhejta toh kya hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "RTE Act ke under punishable hai! But practically enforcement weak hai. Lekin legally ye duty hai aur government schemes (Mid-Day Meal, free books) is duty ko support karti hain. BPSC mein ye duty bahut puchhi jati hai kyunki ye latest addition hai (2002) aur education focus area hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_quiz_jk",
+        "button_text": "Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_jk",
+      "card_slug": "card_22_quiz_jk",
+      "type": "quiz",
+      "concept_id": "duties_jk_test",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Article 51A(k) - 11वीं Fundamental Duty को किस संशोधन द्वारा जोड़ा गया?",
+        "options": [
+          { "id": "A", "text": "42वें संशोधन अधिनियम, 1976" },
+          { "id": "B", "text": "44वें संशोधन अधिनियम, 1978" },
+          { "id": "C", "text": "86वें संशोधन अधिनियम, 2002" },
+          { "id": "D", "text": "93वें संशोधन अधिनियम, 2005" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "86वें संशोधन अधिनियम, 2002 ने Article 51A में clause (k) जोड़ा - parents/guardians की duty 6-14 वर्ष के बच्चों को education provide करने की। यही Amendment Article 21A (Right to Education) भी लाया। 42nd Amendment ने पहली 10 duties (1976) जोड़ीं। यह BPSC, SSC, Railway में बार-बार पूछा जाता है - latest addition!"
+      },
+      "navigation": {
+        "next": "card_23_milestone_duties",
+        "button_text": "Module complete ➔"
+      }
+    },
+    {
+      "card_id": "card_23_milestone_duties",
+      "card_slug": "card_23_milestone_duties",
+      "type": "milestone",
+      "concept_id": "all_duties_complete",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 2 MASTERED!",
+        "badge_emoji": "📋",
+        "completed_topic": "All 11 Fundamental Duties (a-k)",
+        "xp_earned": 70,
+        "milestone_progress": "Module 2/6 Clear",
+        "motivational_quote": "Excellent! सभी 11 Duties clear! अब nature और enforcement देखते हैं! 🚀"
+      },
+      "navigation": {
+        "next": "card_24_nature_non_justiciable",
+        "button_text": "Start Module 3 ➔"
+      }
+    },
+    {
+      "card_id": "card_24_nature_non_justiciable",
+      "card_slug": "card_24_nature_non_justiciable",
+      "type": "chat",
+      "concept_id": "non_justiciable_nature",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, agar koi Fundamental Duty follow nahi kare toh kya Court mein case kar sakte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi Raju! Fundamental Duties non-justiciable hain - matlab court mein directly enforce nahi ho sakti. Ye Fundamental Rights se bilkul opposite hain. Rights justiciable hain (Article 32/226 ke through court ja sakte ho), Duties non-justiciable!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Duties optional hain? Koi follow na kare toh koi problem nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Legal enforcement directly nahi hai, BUT moral obligation hai. Plus bahut saari duties ko indirect enforcement specific laws ke through milta hai - jaise national anthem disrespect (Prevention of Insults Act), public property damage (PDPP Act), environment harm (EPA), dowry (Dowry Prohibition Act)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh some duties enforceable hain through laws?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Duties khud non-justiciable hain, but unhein support karne wale laws justiciable hain. Example: Duty (g) environment protect karna - non-justiciable. But Wildlife Protection Act, Forest Act - justiciable! Court action le sakta hai. Ye distinction UPSC Prelims mein bahut puchha jata hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_rights_vs_duties",
+        "button_text": "Rights vs Duties ➔"
+      }
+    },
+    {
+      "card_id": "card_25_rights_vs_duties",
+      "card_slug": "card_25_rights_vs_duties",
+      "type": "chat",
+      "concept_id": "comparison_rights_duties",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Fundamental Rights vs Fundamental Duties - clear differences samjho:\n\nRights: (1) Part III, (2) Original Constitution 1950 mein the, (3) Justiciable - court enforce kar sakta hai, (4) Negative in nature - State ko rokti hain, (5) Citizens + some to non-citizens bhi"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Duties sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Duties: (1) Part IV-A, (2) Baad mein add hui - 1976/2002, (3) Non-justiciable - court directly enforce nahi, (4) Positive in nature - citizens ko kuch karne ko kehti hain, (5) Sirf citizens ke liye!\n\nDono complementary hain - Rights tumhe freedom dete, Duties responsibility!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Example dijiye sir ek clear?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Right to Freedom of Speech (Article 19) - tum kuch bhi bol sakte ho. Duty (a) - National symbols respect karo, Duty (e) - communal harmony maintain karo. Matlab rights unlimited nahi, duties balance karti hain. Rights bina duties ke misuse ho sakte hain, Duties bina rights ke oppression ban sakti hain. Dono chahiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_quiz_nature",
+        "button_text": "Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_26_quiz_nature",
+      "card_slug": "card_26_quiz_nature",
+      "type": "quiz",
+      "concept_id": "justiciability_test",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Fundamental Duties के बारे में कौन सा कथन सही है?",
+        "options": [
+          { "id": "A", "text": "ये justiciable हैं और court में enforce हो सकती हैं" },
+          { "id": "B", "text": "ये non-justiciable हैं लेकिन कुछ duties को specific laws के through enforce किया जाता है" },
+          { "id": "C", "text": "ये सभी नागरिकों और विदेशियों पर लागू होती हैं" },
+          { "id": "D", "text": "इनका उल्लंघन करने पर सीधे जेल हो सकती है" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Fundamental Duties non-justiciable हैं - court में सीधे enforce नहीं हो सकतीं। लेकिन कई duties को specific laws के through indirect enforcement मिलता है (जैसे Prevention of Insults to National Honour Act - duty a, Wildlife Protection Act - duty g, PDPP Act - duty i)। ये केवल citizens पर लागू हैं, foreigners पर नहीं। यह UPSC और BPSC का बहुत महत्वपूर्ण conceptual point है!"
+      },
+      "navigation": {
+        "next": "card_27_verma_committee",
+        "button_text": "Verma Committee ➔"
+      }
+    },
+    {
+      "card_id": "card_27_verma_committee",
+      "card_slug": "card_27_verma_committee",
+      "type": "chat",
+      "concept_id": "verma_committee_report",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Justice Verma Committee (1999) ne Fundamental Duties ke review aur implementation par important recommendations di. Committee ne kaha ki duties ko enforce karne ke liye better mechanism chahiye, awareness campaigns chalani chahiye, curriculum mein include karna chahiye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh implementation weak hai kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Bahut kam log jaante hain ki Fundamental Duties kya hain. Schools mein Rights padhate hain but Duties nahi. Verma Committee ne suggest kiya: (1) Educational institutions mein compulsory teaching, (2) Public awareness campaigns, (3) Parliament should make laws to enforce duties better."
+        },
+        {
+          "speaker": "raju",
+          "text": "Koi implementation hua recommendations ka?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Partial! NCERT textbooks mein Fundamental Duties ab include hain. Some states ne school curriculum mein add kiya. But overall awareness abhi bhi kam hai. BPSC mein conceptual question aata hai - 'Why are Fundamental Duties not widely known?' Answer: Non-justiciable nature, lack of awareness, no punishment mechanism!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_milestone_nature",
+        "button_text": "Module complete ➔"
+      }
+    },
+    {
+      "card_id": "card_28_milestone_nature",
+      "card_slug": "card_28_milestone_nature",
+      "type": "milestone",
+      "concept_id": "nature_complete",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "⚖️ MODULE 3 CLEARED!",
+        "badge_emoji": "📖",
+        "completed_topic": "Nature, Justiciability & Enforcement",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/6 Clear",
+        "motivational_quote": "Great! अब specific laws और connections देखते हैं! 💪"
+      },
+      "navigation": {
+        "next": "card_29_laws_enforcement",
+        "button_text": "Start Module 4 ➔"
+      }
+    },
+    {
+      "card_id": "card_29_laws_enforcement",
+      "card_slug": "card_29_laws_enforcement",
+      "type": "chat",
+      "concept_id": "laws_supporting_duties",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab dekhte hain kaun se specific laws Fundamental Duties ko support karte hain:\n\nDuty (a) - National Flag/Anthem: Prevention of Insults to National Honour Act, 1971\nDuty (e) - Women dignity: Dowry Prohibition Act, 1961; Domestic Violence Act, 2005\nDuty (g) - Environment: Wildlife Protection Act, 1972; Forest Conservation Act, 1980; EPA, 1986"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur bhi laws hain kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan!\nDuty (i) - Public property: Prevention of Damage to Public Property Act, 1984\nDuty (k) - Education: Right to Education Act, 2009\n\nYe laws Fundamental Duties ko practical enforcement dete hain. BPSC mein matching questions aate hain - 'Duty (g) is supported by which Act?'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sabhi duties ke liye specific laws hain kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Kuch duties purely moral/ethical hain - jaise (b) freedom struggle ideals follow karna, (h) scientific temper develop karna, (j) excellence strive karna. Inke liye direct law nahi hai, but schemes aur policies hain - Vigyan Prasar (scientific temper), National Awards (excellence), etc."
+        }
+      ],
+      "navigation": {
+        "next": "card_30_quiz_laws",
+        "button_text": "Laws Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_laws",
+      "card_slug": "card_30_quiz_laws",
+      "type": "quiz",
+      "concept_id": "laws_matching_test",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?\n\nDuty - Supporting Law",
+        "options": [
+          { "id": "A", "text": "Duty (a) National symbols - Prevention of Insults to National Honour Act, 1971" },
+          { "id": "B", "text": "Duty (g) Environment - Wildlife Protection Act, 1972" },
+          { "id": "C", "text": "Duty (i) Public property - Right to Information Act, 2005" },
+          { "id": "D", "text": "Duty (k) Education - Right to Education Act, 2009" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Option C गलत है। Duty (i) - सार्वजनिक संपत्ति की सुरक्षा को Prevention of Damage to Public Property Act, 1984 support करता है, RTI Act 2005 नहीं। RTI transparency और accountability के लिए है। अन्य सभी युग्म सही हैं। यह SSC और Railway में matching format में बार-बार पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_31_criticisms",
+        "button_text": "Criticisms ➔"
+      }
+    },
+    {
+      "card_id": "card_31_criticisms",
+      "card_slug": "card_31_criticisms",
+      "type": "chat",
+      "concept_id": "criticisms_limitations",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, Fundamental Duties ko lekar koi criticism hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, bahut criticisms hain:\n\n(1) Non-justiciable - Legal enforcement nahi hai toh inka kya matlab?\n(2) Vague language - 'Scientific temper', 'Excellence', 'Composite culture' - ye clear define nahi hain\n(3) Incomplete list - Voting, tax payment jaisi basic duties missing hain\n(4) Emergency addition - 1976 Emergency mein add hui, democratic process questionable"
+        },
+        {
+          "speaker": "raju",
+          "text": "Voting duty nahi hai? Main toh samajhta tha mandatory hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Voting ek right hai (Representation of People Act), duty nahi. Tax payment bhi duty nahi hai list mein (though Income Tax Act compulsory banata hai). Critics kehte hain ki ye important duties list mein honi chahiye thi. Also, duties sirf citizens ke liye hain - State/government ki duties define nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Fundamental Duties useless hain sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Criticism hai but importance bhi hai. Duties moral compass deti hain, civic consciousness badhati hain, rights aur duties ka balance sikhati hain. Courts bhi decisions mein Fundamental Duties refer karte hain - jaise environment cases mein Duty (g) cite hoti hai. Useless nahi, improvement ki zaroorat hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_importance",
+        "button_text": "Importance ➔"
+      }
+    },
+    {
+      "card_id": "card_32_importance",
+      "card_slug": "card_32_importance",
+      "type": "chat",
+      "concept_id": "significance_relevance",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Fundamental Duties ki importance:\n\n(1) Remind citizens of responsibilities - Rights ke saath duties bhi hain\n(2) Promote patriotism and national unity\n(3) Guide legislation - Courts duties ko refer karte hain laws interpret karte waqt\n(4) Moral check - Misuse of rights ko balance karta hai"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, courts mein kaise use hote hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Example: M.C. Mehta vs Union of India (Taj Mahal pollution case) - Supreme Court ne Duty (g) environment protection cite kiya. Bijoe Emmanuel case (national anthem) - Duty (a) cite hua. Courts kehte hain ki Fundamental Duties Constitutional goals hain jo laws interpret karte waqt consider karni chahiye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab indirect importance hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Direct enforcement nahi but indirect influence bahut hai - judicial decisions, policy making, public awareness campaigns. Recent mein Swachh Bharat (Duty g), Beti Bachao Beti Padhao (Duty e), Digital India (Duty j) - ye sab schemes Fundamental Duties se inspired hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_quiz_criticism",
+        "button_text": "Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_33_quiz_criticism",
+      "card_slug": "card_33_quiz_criticism",
+      "type": "quiz",
+      "concept_id": "criticism_test",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Fundamental Duties की मुख्य आलोचना क्या है?",
+        "options": [
+          { "id": "A", "text": "ये बहुत अधिक हैं - 11 duties बहुत ज्यादा" },
+          { "id": "B", "text": "ये non-justiciable हैं और कोई legal enforcement mechanism नहीं है" },
+          { "id": "C", "text": "ये केवल minorities पर लागू होती हैं" },
+          { "id": "D", "text": "ये केवल government officials के लिए हैं" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Fundamental Duties की सबसे बड़ी आलोचना यह है कि ये non-justiciable हैं - इनका उल्लंघन करने पर कोई direct legal action नहीं लिया जा सकता। Critics का मानना है कि बिना enforcement mechanism के ये केवल 'moral exhortation' बनकर रह जाती हैं। 11 duties ज्यादा नहीं हैं, और ये सभी citizens पर लागू हैं। यह UPSC Mains और interview में conceptual discussion topic है!"
+      },
+      "navigation": {
+        "next": "card_34_milestone_laws",
+        "button_text": "Module complete ➔"
+      }
+    },
+    {
+      "card_id": "card_34_milestone_laws",
+      "card_slug": "card_34_milestone_laws",
+      "type": "milestone",
+      "concept_id": "laws_criticism_complete",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "📚 MODULE 4 DONE!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Laws, Criticisms & Importance",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/6 Clear",
+        "motivational_quote": "Superb! अब international comparison और cases देखते हैं! 🌍"
+      },
+      "navigation": {
+        "next": "card_35_international_comparison",
+        "button_text": "Start Module 5 ➔"
+      }
+    },
+    {
+      "card_id": "card_35_international_comparison",
+      "card_slug": "card_35_international_comparison",
+      "type": "chat",
+      "concept_id": "international_perspective",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, kya dusre countries mein bhi Fundamental Duties hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! India ne USSR (Soviet Union) Constitution se idea liya tha. USSR mein citizens ke duties clearly listed thi. Japan, China, Russia, Germany - in sabke Constitutions mein duties hain. Lekin USA, UK, France jaise purane democracies mein formal duties nahi - sirf rights focus hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh duties ka concept communism se aaya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Partially! Socialist countries (USSR, China) mein duties ka emphasis zyada tha kyunki unka philosophy tha ki individual sirf rights nahi, society ke liye duties bhi nibhaye. Democratic countries mein rights focus tha. India ne middle path choose kiya - democratic system with fundamental duties!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Japan mein kaisi duties hain sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Japan mein education ka duty hai bachon ko, work ka duty (able-bodied citizens), tax payment ka duty - ye explicitly mentioned hain. China mein bahut detailed duties hain - national unity maintain karna, state secrets protect karna. India ki duties moral aur broad hain, kuch countries ki zyada specific!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_landmark_cases",
+        "button_text": "Court Cases ➔"
+      }
+    },
+    {
+      "card_id": "card_36_landmark_cases",
+      "card_slug": "card_36_landmark_cases",
+      "type": "chat",
+      "concept_id": "important_judgments",
+      "level": 4,
+      "progress": {
+        "current": 36,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Important Supreme Court cases jahan Fundamental Duties refer hui:\n\n(1) Bijoe Emmanuel vs State of Kerala (1986) - Jehovah's Witnesses students ne national anthem gaane se mana kiya. Court ne kaha ki Duty (a) force nahi kar sakti agar genuine religious belief ho, but respect zaroor chahiye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab anthem gaana compulsory nahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Gaana compulsory nahi but respectfully khada hona chahiye! 2017 mein Supreme Court ne cinema halls mein national anthem mandatory kiya (later modified). Balance hai - Duty (a) respect, but Right to Freedom of Conscience bhi!\n\n(2) M.C. Mehta vs Union of India (1987) - Taj Mahal pollution case. Court ne Duty (g) environment protection cite kiya aur industries ko relocate karne ka order diya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur cases hain sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "(3) AIIMS Students Union vs AIIMS (2001) - Court ne kaha students ko Fundamental Duties padhani chahiye, awareness hona chahiye.\n\n(4) Arjun Gopal vs Union of India (2018) - Firecracker ban case, Duty (g) environment cite hua.\n\nCourts increasingly Fundamental Duties use kar rahe hain judgments justify karne ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_quiz_cases",
+        "button_text": "Cases Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_cases",
+      "card_slug": "card_37_quiz_cases",
+      "type": "quiz",
+      "concept_id": "cases_test",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Bijoe Emmanuel vs State of Kerala (1986) case किस Fundamental Duty से संबंधित है?",
+        "options": [
+          { "id": "A", "text": "Duty (e) - Communal harmony" },
+          { "id": "B", "text": "Duty (a) - राष्ट्रगान का सम्मान" },
+          { "id": "C", "text": "Duty (g) - Environment protection" },
+          { "id": "D", "text": "Duty (h) - Scientific temper" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bijoe Emmanuel case राष्ट्रगान से संबंधित था - Jehovah's Witnesses students ने धार्मिक कारणों से national anthem गाने से मना किया। यह Duty (a) - 'राष्ट्रगान का सम्मान करना' से जुड़ा है। Supreme Court ने कहा कि गाना compulsory नहीं but respectfully खड़े होना चाहिए। M.C. Mehta case Duty (g) environment से जुड़ा है। यह UPSC Prelims में case-based questions में आता है!"
+      },
+      "navigation": {
+        "next": "card_38_current_relevance",
+        "button_text": "Current Relevance ➔"
+      }
+    },
+    {
+      "card_id": "card_38_current_relevance",
+      "card_slug": "card_38_current_relevance",
+      "type": "chat",
+      "concept_id": "modern_context",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, aaj ke time mein Fundamental Duties kitni relevant hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut relevant! Dekhte hain:\n\nDuty (g) Environment - Climate change, pollution, deforestation ke time par bahut important!\nDuty (h) Scientific temper - Fake news, superstitions, pseudoscience ke against zaruri!\nDuty (e) Women dignity - #MeToo, gender equality movements se connected!\nDuty (a) National symbols - Social media par flag code violations common hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Social media par toh log kuch bhi karte hain sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Social media ne Fundamental Duties aur important bana di hain. Duty (e) communal harmony - hate speech viral hoti hai. Duty (i) abjure violence - mob lynching videos share hoti hain. Duty (h) scientific temper - COVID misinformation failta hai. Citizens ko awareness chahiye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Government kya kar rahi hai sir awareness ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kuch initiatives hain: (1) NCERT books mein inclusion, (2) MyGov platform par campaigns, (3) Independence Day/Republic Day speeches mein mention, (4) Some states ne school assemblies mein Fundamental Duties recitation shuru ki. But still bahut kam awareness hai - zyada efforts chahiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_milestone_international",
+        "button_text": "Module complete ➔"
+      }
+    },
+    {
+      "card_id": "card_39_milestone_international",
+      "card_slug": "card_39_milestone_international",
+      "type": "milestone",
+      "concept_id": "international_cases_complete",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🌍 MODULE 5 CONQUERED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "International Comparison, Cases & Current Relevance",
+        "xp_earned": 50,
+        "milestone_progress": "Module 5/6 Clear",
+        "motivational_quote": "Outstanding! अब Officer-level revision और final quiz! 🔥"
+      },
+      "navigation": {
+        "next": "card_40_summary_revision",
+        "button_text": "Start Module 6 ➔"
+      }
+    },
+    {
+      "card_id": "card_40_summary_revision",
+      "card_slug": "card_40_summary_revision",
+      "type": "summary",
+      "concept_id": "fundamental_duties_summary",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 50
+      },
+      "summary_payload": {
+        "title": "⚡ Officer-Level Quick Revision",
+        "revision_points": [
+          {
+            "topic": "मूल तथ्य",
+            "point": "Article 51A, Part IV-A। 42nd Amendment (1976) - 10 duties, 86th Amendment (2002) - 11वीं duty। Swaran Singh Committee recommendation। USSR से प्रेरित। केवल citizens के लिए, non-justiciable।"
+          },
+          {
+            "topic": "सभी 11 Duties (a-k)",
+            "point": "(a) संविधान, ध्वज, राष्ट्रगान सम्मान (b) स्वतंत्रता संग्राम आदर्श (c) एकता-अखंडता (d) देश रक्षा (e) सद्भाव, महिला गरिमा (f) संस्कृति संरक्षण (g) पर्यावरण संरक्षण (h) वैज्ञानिक दृष्टिकोण (i) सार्वजनिक संपत्ति, हिंसा त्याग (j) उत्कृष्टता (k) 6-14 शिक्षा (parents/guardians)"
+          },
+          {
+            "topic": "Supporting Laws",
+            "point": "(a) Prevention of Insults Act 1971 (e) Dowry Act 1961, DV Act 2005 (g) Wildlife Act 1972, Forest Act 1980, EPA 1986 (i) PDPP Act 1984 (k) RTE Act 2009"
+          },
+          {
+            "topic": "Rights vs Duties",
+            "point": "Rights: Part III, 1950, Justiciable, Negative, Citizens+some non-citizens। Duties: Part IV-A, 1976/2002, Non-justiciable, Positive, केवल citizens। Complementary nature!"
+          },
+          {
+            "topic": "Criticisms",
+            "point": "Non-justiciable, vague language, incomplete list (voting, tax missing), Emergency addition, limited awareness, no enforcement mechanism। BUT moral importance, judicial reference, policy inspiration!"
+          },
+          {
+            "topic": "Landmark Cases",
+            "point": "Bijoe Emmanuel (1986) - Duty (a) national anthem। M.C. Mehta (1987) - Duty (g) Taj pollution। AIIMS (2001) - awareness। Arjun Gopal (2018) - firecracker ban Duty (g)"
+          },
+          {
+            "topic": "Current Relevance",
+            "point": "Climate change (g), fake news/scientific temper (h), gender equality (e), social media hate speech (e,i), COVID misinformation (h)। Modern challenges को address करने में महत्वपूर्ण!"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_41_final_quiz_1",
+        "button_text": "Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_41_final_quiz_1",
+      "card_slug": "card_41_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_1",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार कीजिए:\n1. Fundamental Duties मूल संविधान 1950 में थीं।\n2. 42वें संशोधन ने 10 duties जोड़ीं।\n3. 86वें संशोधन ने parents/guardians की duty जोड़ी।\n4. Fundamental Duties justiciable हैं और court में enforce हो सकती हैं।\n\nउपर्युक्त में से कौन से कथन सही हैं?",
+        "options": [
+          { "id": "A", "text": "केवल 1 और 2" },
+          { "id": "B", "text": "केवल 2 और 3" },
+          { "id": "C", "text": "केवल 1, 2 और 3" },
+          { "id": "D", "text": "केवल 2, 3 और 4" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "केवल कथन 2 और 3 सही हैं। (1) गलत - Fundamental Duties मूल संविधान में नहीं थीं, 1976 में 42nd Amendment द्वारा जोड़ी गईं। (2) सही - 42nd Amendment ने 10 duties जोड़ीं। (3) सही - 86th Amendment, 2002 ने 11वीं duty - parents/guardians को 6-14 वर्ष के बच्चों को education देना - जोड़ी। (4) गलत - Fundamental Duties non-justiciable हैं, court में directly enforce नहीं हो सकतीं। यह BPSC/UPSC का क्लासिक multi-statement trap है!"
+      },
+      "navigation": {
+        "next": "card_42_final_quiz_2",
+        "button_text": "Q2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_42_final_quiz_2",
+      "card_slug": "card_42_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_2",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): Fundamental Duties non-justiciable हैं इसलिए इनका कोई practical महत्व नहीं है।\n\nReason (R): कई Fundamental Duties को specific laws के माध्यम से indirect enforcement मिलता है और Courts भी judgments में इन्हें refer करते हैं।\n\nनिम्नलिखित में से सही विकल्प चुनिए:",
+        "options": [
+          { "id": "A", "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है" },
+          { "id": "B", "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है" },
+          { "id": "C", "text": "A सही है लेकिन R गलत है" },
+          { "id": "D", "text": "A गलत है लेकिन R सही है" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Assertion गलत है, Reason सही है। Fundamental Duties non-justiciable होने के बावजूद बहुत practical महत्व रखती हैं क्योंकि: (1) कई duties को specific laws (Prevention of Insults Act, Wildlife Act, PDPP Act, RTE Act) के through enforce किया जाता है, (2) Supreme Court judgments में duties को refer किया जाता है (M.C. Mehta, Bijoe Emmanuel cases), (3) ये moral compass और civic awareness provide करती हैं। इसलिए A (no practical importance) गलत है लेकिन R (indirect enforcement exists) सही है। यह UPSC का क्लासिक Assertion-Reason conceptual trap है!"
+      },
+      "navigation": {
+        "next": "card_43_final_quiz_3",
+        "button_text": "Q3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_43_final_quiz_3",
+      "card_slug": "card_43_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_3",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित युग्मों पर विचार कीजिए:\n\nFundamental Duty - Supporting Law/Act\n1. Duty (a) राष्ट्रीय प्रतीक - Prevention of Insults to National Honour Act, 1971\n2. Duty (e) महिला गरिमा - Domestic Violence Act, 2005\n3. Duty (g) पर्यावरण - Right to Information Act, 2005\n4. Duty (k) शिक्षा - Right to Education Act, 2009\n\nउपर्युक्त में से कौन से युग्म सही सुमेलित हैं?",
+        "options": [
+          { "id": "A", "text": "केवल 1, 2 और 4" },
+          { "id": "B", "text": "केवल 1, 3 और 4" },
+          { "id": "C", "text": "केवल 2, 3 और 4" },
+          { "id": "D", "text": "सभी 1, 2, 3 और 4" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "युग्म 1, 2 और 4 सही हैं। (1) सही - Prevention of Insults to National Honour Act, 1971 राष्ट्रीय ध्वज और राष्ट्रगान के सम्मान से संबंधित है। (2) सही - Domestic Violence Act, 2005 महिलाओं की गरिमा protect करता है। (3) गलत - RTI Act, 2005 पर्यावरण से नहीं, transparency से संबंधित है। Duty (g) को Wildlife Protection Act 1972, EPA 1986 support करते हैं। (4) सही - RTE Act, 2009 शिक्षा का अधिकार देता है। यह SSC, Railway और BPSC में matching format का favorite question है!"
+      },
+      "navigation": {
+        "next": "card_44_mnemonic_tricks",
+        "button_text": "Memory Tricks ➔"
+      }
+    },
+    {
+      "card_id": "card_44_mnemonic_tricks",
+      "card_slug": "card_44_mnemonic_tricks",
+      "type": "chat",
+      "concept_id": "memory_techniques",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, 11 duties yaad kaise rakhun? Bohot confusing ho jata hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Mnemonic banate hain! 11 Duties ke keywords:\n\n'Con-Free-Unity-Defend-Harmony-Culture-Environment-Science-Public-Excel-Educate'\n\nYa simple Hindi: 'संविधान स्वतंत्रता एकता रक्षा सद्भाव संस्कृति पर्यावरण विज्ञान संपत्ति उत्कृष्टता शिक्षा'\n\nPehle letters: C-F-U-D-H-C-E-S-P-E-E"
+        },
+        {
+          "speaker": "raju",
+          "text": "Amendments ka kya trick hai sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "42-86 yaad rakho:\n42 (1976) = 4+2 = 6, reverse 42 → Original 10 duties\n86 (2002) = 8+6 = 14, close to 14 (education age 6-14) → 11th duty education!\n\nSwaran Singh Committee (1976) - 'SS' = Swaran Singh\n\nNon-justiciable - 'NJ' = Not Judicial enforcement!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Laws ka trick sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Key laws years:\n1971 - National Honour (1971 = 71 = 7+1=8, 'Anthem' starts with 'A' 1st letter)\n1972 - Wildlife (72 = wild 'animals' protection started)\n1984 - Public Property (84 = Orwell's '1984' dystopia, property damage)\n2009 - RTE (09 = 0-9 age group, education!)\n\nYe tricks exam hall mein kaam aayengi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_pyq_patterns",
+        "button_text": "PYQ Patterns ➔"
+      }
+    },
+    {
+      "card_id": "card_45_pyq_patterns",
+      "card_slug": "card_45_pyq_patterns",
+      "type": "chat",
+      "concept_id": "exam_pattern_analysis",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PYQ Analysis - Fundamental Duties se kya-kya puchha jata hai:\n\nBPSC/UPSC Pattern:\n- Multi-statement (4 statements, 2 sahi)\n- Amendment numbers (42nd, 86th confusion)\n- Justiciable vs Non-justiciable\n- Rights vs Duties comparison table\n- Which duty is NOT in Article 51A? (Voting, Tax payment)"
+        },
+        {
+          "speaker": "raju",
+          "text": "SSC aur Railway mein kya aata hai sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "SSC/Railway Pattern:\n- Direct count - 'Kitni Fundamental Duties hain? 11'\n- Amendment year - '86th kab? 2002'\n- Matching - 'Duty (g) - Environment'\n- Supporting Law - 'Prevention of Insults Act kis duty se? (a)'\n- Committee - 'Swaran Singh Committee 1976'\n- Part number - 'Part IV-A'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Common mistakes kya hain sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Top 5 Mistakes:\n1. Count 10 likh dete (11 hai!)\n2. Justiciable samajh lete (Non-justiciable hai)\n3. 1950 original samajh lete (1976 mein aaye)\n4. Voting duty samajh lete (Nahi hai list mein)\n5. Foreigners par bhi lagu samajh lete (Sirf citizens)\n\nYe 5 avoid karo, 70% questions automatic correct!"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_last_tips",
+        "button_text": "Last Tips ➔"
+      }
+    },
+    {
+      "card_id": "card_46_last_tips",
+      "card_slug": "card_46_last_tips",
+      "type": "chat",
+      "concept_id": "final_strategy",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Final Exam Tips:\n\n✅ Must Remember:\n- Article 51A, Part IV-A\n- 11 duties (not 10)\n- 42nd (1976) + 86th (2002)\n- Swaran Singh Committee\n- Non-justiciable\n- Citizens only (not foreigners)\n- USSR inspiration"
+        },
+        {
+          "speaker": "raju",
+          "text": "Individual duties mein kya important hai sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Priority Duties for exam:\n- (a) National symbols - Prevention of Insults Act\n- (e) Women dignity, communal harmony - current affairs link\n- (g) Environment - Climate change, pollution questions\n- (k) Education - Latest addition 2002, RTE link\n- (h) Scientific temper - Conceptual questions\n\nYe 5 duties agar solid hain, exam clear hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Statement-type questions ka strategy sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Strategy:\n1. Pehle obviously WRONG statements eliminate karo\n2. Count check karo (10 vs 11)\n3. Year check (1950 vs 1976)\n4. Justiciability check (Justiciable WRONG)\n5. Applicability check (Foreigners WRONG)\n6. Laws ko duties se match karo carefully\n\nAll the best Raju! Fundamental Duties clear! 🎯"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_bonus_quiz",
+        "button_text": "Bonus Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_47_bonus_quiz",
+      "card_slug": "card_47_bonus_quiz",
+      "type": "quiz",
+      "concept_id": "bonus_challenge",
+      "level": 4,
+      "progress": {
+        "current": 47,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सी duties मूल 42वें संशोधन (1976) में नहीं थी?",
+        "options": [
+          { "id": "A", "text": "राष्ट्रीय ध्वज और राष्ट्रगान का सम्मान करना" },
+          { "id": "B", "text": "6-14 वर्ष के बच्चों को शिक्षा प्रदान करना (parents/guardians)" },
+          { "id": "C", "text": "पर्यावरण और वन्यजीवों की रक्षा करना" },
+          { "id": "D", "text": "वैज्ञानिक दृष्टिकोण विकसित करना" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Option B - 6-14 वर्ष के बच्चों को शिक्षा प्रदान करना [Duty (k)] - यह 86वें संशोधन, 2002 द्वारा जोड़ी गई 11वीं duty है। बाकी सभी duties (a, g, h) मूल 42वें संशोधन, 1976 में शामिल थीं जब पहली बार 10 Fundamental Duties जोड़ी गईं। यह BPSC और UPSC का favorite chronological trap है - students confuse कर जाते हैं कि कौन सी duty बाद में आई!"
+      },
+      "navigation": {
+        "next": "card_48_real_life_connection",
+        "button_text": "Real Life Connection ➔"
+      }
+    },
+    {
+      "card_id": "card_48_real_life_connection",
+      "card_slug": "card_48_real_life_connection",
+      "type": "chat",
+      "concept_id": "practical_application",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, Fundamental Duties ko real life mein kaise apply karein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Daily life examples:\n\nDuty (a) - Independence Day par national anthem mein khade ho, flag properly display karo\nDuty (e) - Gender discrimination mat karo, communal jokes/hate speech avoid karo\nDuty (g) - Plastic bags kam use karo, trees lagao, animals ko harm mat karo\nDuty (h) - WhatsApp fake news forward mat karo, superstitions challenge karo"
+        },
+        {
+          "speaker": "raju",
+          "text": "Student ke tor par kya kar sakte hain sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Students ke liye:\nDuty (f) - Cultural programs participate karo, heritage sites visit karo\nDuty (i) - School property damage mat karo, peaceful protests karo\nDuty (j) - Studies/sports mein excellence strive karo\nDuty (k) - Agar tumhare younger siblings hain toh unki education ensure karo\n\nHar duty ko daily action mein convert kar sakte ho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you sir! Fundamental Duties ab clear hain aur life mein bhi apply karunga!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect Raju! Yaad rakho - Rights tumhe empower karti hain, Duties tumhe responsible banati hain. Dono balance mein honi chahiye for a healthy democracy. Ab exam clear karo aur ek responsible citizen bano! All the best! 🇮🇳💪"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_visual_summary",
+        "button_text": "Visual Summary ➔"
+      }
+    },
+    {
+      "card_id": "card_49_visual_summary",
+      "card_slug": "card_49_visual_summary",
+      "type": "summary",
+      "concept_id": "visual_quick_recap",
+      "level": 4,
+      "progress": {
+        "current": 49,
+        "total": 50
+      },
+      "summary_payload": {
+        "title": "🎯 1-Minute Visual Recap",
+        "revision_points": [
+          {
+            "topic": "⚡ Core Facts",
+            "point": "Article 51A | Part IV-A | 11 duties | 42nd (1976) 10 duties + 86th (2002) 1 duty | Swaran Singh Committee | USSR inspired | Citizens only | Non-justiciable"
+          },
+          {
+            "topic": "📋 All 11 Keywords",
+            "point": "(a) Constitution-Flag-Anthem (b) Freedom struggle (c) Unity-Integrity (d) Defend country (e) Harmony-Women dignity (f) Culture (g) Environment (h) Scientific temper (i) Public property-Abjure violence (j) Excellence (k) Education 6-14"
+          },
+          {
+            "topic": "⚖️ Key Laws",
+            "point": "Insults Act 1971 (a) | Dowry/DV Acts (e) | Wildlife/Forest/EPA (g) | PDPP 1984 (i) | RTE 2009 (k)"
+          },
+          {
+            "topic": "🔥 BPSC Traps",
+            "point": "Count 11 NOT 10 | Year 1976 NOT 1950 | Non-justiciable NOT justiciable | Citizens only NOT all | 86th added (k) NOT 42nd | Voting NOT in list | Tax NOT in list"
+          },
+          {
+            "topic": "📚 Cases",
+            "point": "Bijoe Emmanuel - anthem (a) | M.C. Mehta - Taj pollution (g) | Arjun Gopal - firecracker (g)"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_50_completion",
+        "button_text": "Complete Chapter ➔"
+      }
+    },
+    {
+      "card_id": "card_50_completion",
+      "card_slug": "card_50_completion",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 4,
+      "progress": {
+        "current": 50,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🏆 FUNDAMENTAL DUTIES MASTERED!",
+        "badge_emoji": "🇮🇳",
+        "completed_topic": "Complete Fundamental Duties (Article 51A)",
+        "xp_earned": 100,
+        "milestone_progress": "Chapter 100% Complete! 🎉",
+        "motivational_quote": "🎊 Outstanding Achievement! आपने Fundamental Duties का पूरा chapter master कर लिया - सभी 11 duties, amendments (42nd, 86th), Swaran Singh Committee, supporting laws, landmark cases, criticisms, और PYQ traps सब कुछ! अब आप BPSC, UPSC, SSC, Railway में Fundamental Duties से related किसी भी multi-statement, assertion-reason, या matching question को आसानी से solve कर सकते हैं! याद रखें - Rights आपको सशक्त बनाते हैं, Duties आपको जिम्मेदार बनाती हैं। दोनों एक सिक्के के दो पहलू हैं। Be a responsible citizen! Jai Hind! 🇮🇳💪"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Home 🏠"
+      }
+    }
+  ]
+}
+```
