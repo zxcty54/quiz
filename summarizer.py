@@ -1,171 +1,456 @@
 import os
 import json
+import re
 import time
-from datetime import datetime
-from groq import Groq
+import hashlib
+import feedparser
+import warnings
+from urllib.parse import quote
+from datetime import datetime, timedelta, timezone
 
-# -------------------------------------------------------------
-# API Client Setup
-# -------------------------------------------------------------
-GROQ_KEY = os.environ.get("GROQ_API_KEY")
-client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
-MODELS = ["llama-3.1-8b-instant", "llama-3.3-70b-versatile"]
+from curl_cffi import requests as curl_requests
+import requests as normal_requests
 
-def call_groq_safe(prompt, system_role="You are a JSON generator assistant."):
-    time.sleep(1)
-    for model_name in MODELS:
+from bs4 import BeautifulSoup
+from bs4 import MarkupResemblesLocatorWarning
+
+# ============================================================
+# SAFE GOOGLENEWSDECODER IMPORT (HANDLES ALL VERSIONS)
+# ============================================================
+decoding_func = None
+
+try:
+    from googlenewsdecoder import new_decodurl as decoding_func
+except ImportError:
+    try:
+        from googlenewsdecoder.new_decodurl import new_decodurl as decoding_func
+    except ImportError:
         try:
-            response = client.chat.completions.create(
-                model=model_name,
-                messages=[
-                    {"role": "system", "content": system_role},
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=0.01,
-                response_format={"type": "json_object"},
-                max_tokens=3000,
-                timeout=45,
-            )
-            print(f"⚡ Groq LLM Success using [{model_name}]!")
-            return response.choices[0].message.content
-        except Exception as e:
-            print(f"⚠️ Model [{model_name}] skipped ({e}). Trying next...")
-            time.sleep(1)
-    return ""
+            from googlenewsdecoder import gdecoderv1 as decoding_func
+        except ImportError:
+            try:
+                from googlenewsdecoder import gdecoder as decoding_func
+            except ImportError:
+                decoding_func = None
 
-def generate_clean_summary(raw_news_list, target_date_str, is_national=False):
-    raw_text = "\n".join(raw_news_list)[:6500]
+# ============================================================
+# CONFIGURATION
+# ============================================================
 
-    if not raw_text.strip():
-        print(f"⚠️ No raw news text found for {'National' if is_national else 'Bihar'}.")
+OUTPUT_FILE = "rawnews.json"
+TIMEOUT = 25
+MAX_PER_CATEGORY = 5
+
+MIN_CONTENT_WORDS = 60      # Minimum 60 words for full articles
+MAX_CONTENT_WORDS = 1500    # Maximum 1500 words limit
+
+IST = timezone(timedelta(hours=5, minutes=30))
+
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "hi-IN,hi;q=0.9,en-IN;q=0.8,en;q=0.7",
+    "Referer": "https://www.google.com/",
+    "Upgrade-Insecure-Requests": "1"
+}
+
+warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
+
+# ============================================================
+# EXCLUDE KEYWORDS BLACKLIST
+# ============================================================
+
+EXCLUDE_KEYWORDS = [
+    "murder", "police", "arrest", "theft", "accident", "rape", "crime", "fir", "killed", "dead", "gang",
+    "bjp", "congress", "rjd", "jdu", "aap", "election campaign", "rally", "neta", "mp", "mla",
+    "party", "opposition", "voter", "vote", "seat", "by-poll",
+    "uttar pradesh news", "madhya pradesh news", "rajasthan news", "maharashtra news", "mumbai news",
+    "delhi news", "punjab news", "haryana news", "karnataka news", "tamil nadu news", "kerala news",
+    "yogi", "siddaramaiah", "stalin", "mamata", "kejriwal", "hemant", "fadnavis", "shinde", "gehlot", "chouhan"
+]
+
+CATEGORY_VERIFICATION_KEYWORDS = {
+    "Polity & Governance": ["supreme court", "high court", "bill", "act", "amendment", "constitutional", "election commission", "parliament", "judgement", "cabinet", "governance", "law", "मंत्रिमंडल", "विधेयक", "अधिनियम"],
+    "Govt Schemes & Welfare": ["scheme", "yojana", "welfare", "pradhan mantri", "subsidy", "beneficiary", "mission", "pension", "portal", "grant", "allowance", "financial assistance", "योजना", "कल्याण", "प्रधानमंत्री", "लाभार्थी"],
+    "Economy & Banking": ["rbi", "repo rate", "gdp", "inflation", "gst", "budget", "sebi", "banking", "economy", "finance", "fiscal", "export", "import", "taxation", "sensex", "वित्त", "आर्थिक", "बैंक", "बजट"],
+    "International Relations": ["bilateral", "g20", "brics", "quad", "sco", "summit", "diplomatic", "mou", "pact", "foreign policy", "envoy", "ambassador", "treaty", "द्विपक्षीय", "शिखर सम्मेलन", "समझौता"],
+    "Science, Tech & Defense": ["isro", "nasa", "drdo", "satellite", "defense", "military", "exercise", "navy", "army", "air force", "missile", "artificial intelligence", "technology", "अंतरिक्ष", "रक्षा", "सेना", "नौसेना", "उपग्रह"],
+    "Environment & Infrastructure": ["ramsar", "expressway", "renewable energy", "gi tag", "tiger reserve", "solar", "climate change", "pollution", "smart city", "metro", "green hydrogen", "पर्यावरण", "मेट्रो", "एक्सप्रेसवे"],
+    "Bihar Schemes & Welfare": ["bihar", "mukhyamantri", "scheme", "yojana", "patna", "welfare", "subsidy", "bihar cabinet", "बिहार", "मुख्यमंत्री", "पटना"],
+    "Bihar Development": ["bihar", "patna", "expressway", "metro", "infrastructure", "bridge", "development", "project", "बिहार", "पटना", "विकास", "पुल"]
+}
+
+def check_blacklist_reason(title, content=""):
+    text = (title + " " + content).lower()
+    for bad_word in EXCLUDE_KEYWORDS:
+        if re.search(r'\b' + re.escape(bad_word) + r'\b', text):
+            return bad_word
+    return None
+
+def verify_category_relevance(title, content, category):
+    keywords = CATEGORY_VERIFICATION_KEYWORDS.get(category, [])
+    if not keywords: return True
+    full_text = (title + " " + content).lower()
+    for kw in keywords:
+        if re.search(r'\b' + re.escape(kw) + r'\b', full_text):
+            return True
+    return False
+
+def now_ist(): return datetime.now(IST)
+def debug(msg): print(f"🔍 {msg}")
+def warn(msg): print(f"⚠️ {msg}")
+def success(msg): print(f"✅ {msg}")
+
+# ============================================================
+# TEXT CLEANING
+# ============================================================
+
+def clean_url(url):
+    if not url: return ""
+    url = str(url).strip()
+    m = re.search(r'\]\((https?://[^)]+)\)', url)
+    if m: url = m.group(1)
+    url = re.sub(r'^\[.*?\]\(', '', url)
+    url = re.sub(r'\)$', '', url)
+    return url if url.startswith(("http://", "https://")) else ""
+
+def clean_text(text):
+    if not text: return ""
+    text = BeautifulSoup(str(text), "html.parser").get_text(" ", strip=True)
+    text = text.replace("\xa0", " ").replace("\u200b", " ").replace("\ufeff", " ")
+    return re.sub(r'\s+', ' ', text).strip()
+
+def clean_title(title):
+    title = clean_text(title)
+    title = re.sub(r'\s*[-|–—]\s*(The Hindu|Indian Express|Hindustan Times|Times of India|NDTV|Aaj Tak|ABP News|PIB|Livemint|Business Standard).*$', '', title, flags=re.I)
+    return title.strip()
+
+def word_count(text):
+    return len(re.findall(r'\S+', text)) if text else 0
+
+def trim_to_max_words(text, max_words=MAX_CONTENT_WORDS):
+    words = re.findall(r'\S+', text)
+    if len(words) > max_words:
+        return " ".join(words[:max_words]) + "..."
+    return text
+
+def is_content_too_similar_to_title(title, content):
+    title_words = set(re.findall(r'\w+', title.lower()))
+    content_words = set(re.findall(r'\w+', content.lower()))
+    if not title_words or not content_words: return True
+    overlap = title_words.intersection(content_words)
+    if len(overlap) / len(title_words) > 0.70 and len(content_words) < len(title_words) + 15:
+        return True
+    return False
+
+# ============================================================
+# WEB SCRAPER ENGINE (WITH PIB SUPPORT)
+# ============================================================
+
+def get_real_publisher_url(google_rss_url):
+    """Safely decodes Google RSS URLs with library + fallback to HTTP redirect"""
+    if not google_rss_url or "news.google.com" not in google_rss_url:
+        return google_rss_url
+
+    if decoding_func is not None:
+        try:
+            decoded = decoding_func(google_rss_url)
+            if isinstance(decoded, dict) and decoded.get("status") and decoded.get("decoded_url"):
+                return decoded["decoded_url"]
+            elif isinstance(decoded, str) and decoded.startswith("http"):
+                return decoded
+        except Exception:
+            pass
+
+    try:
+        r = curl_requests.get(google_rss_url, headers=HEADERS, timeout=10, impersonate="chrome", allow_redirects=True)
+        if r.url and "news.google.com" not in r.url:
+            return r.url
+    except Exception:
+        pass
+
+    return google_rss_url
+
+def fetch_web_article(url):
+    real_url = get_real_publisher_url(url)
+    if not real_url or "news.google.com" in real_url: 
+        return "", real_url
+
+    # PIB Special URL Handling: Convert Iframe URL to Printable Full Page URL
+    if "pib.gov.in" in real_url and "PressReleaseIframePage.aspx" in real_url:
+        real_url = real_url.replace("PressReleaseIframePage.aspx", "PressReleasePage.aspx")
+
+    html_raw = None
+    try:
+        r = curl_requests.get(real_url, headers=HEADERS, timeout=TIMEOUT, impersonate="chrome", allow_redirects=True)
+        if r.status_code < 400: html_raw = r.text
+    except Exception:
+        pass
+
+    if not html_raw:
+        try:
+            r = normal_requests.get(real_url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True, verify=False)
+            if r.status_code < 400: html_raw = r.text
+        except Exception:
+            return "", real_url
+
+    if not html_raw: return "", real_url
+
+    soup = BeautifulSoup(html_raw, "lxml")
+    for tag in soup(["script", "style", "noscript", "svg", "nav", "footer", "form", "aside", "header"]):
+        tag.decompose()
+
+    candidates = []
+
+    # 1. PIB Specific Selectors
+    pib_selectors = [".ReleaseText", "#pnlPrint", "#ReleaseText", ".content-area"]
+    for sel in pib_selectors:
+        for el in soup.select(sel):
+            txt = clean_text(el.get_text(" ", strip=True))
+            if word_count(txt) >= MIN_CONTENT_WORDS:
+                candidates.append(txt)
+
+    # 2. JSON-LD Extraction
+    for script in soup.find_all("script", type="application/ld+json"):
+        try:
+            data = json.loads(script.string or script.get_text())
+            objects = data if isinstance(data, list) else [data]
+            for obj in objects:
+                if isinstance(obj, dict) and obj.get("articleBody"):
+                    txt = clean_text(obj.get("articleBody"))
+                    if word_count(txt) >= MIN_CONTENT_WORDS:
+                        candidates.append(txt)
+        except Exception:
+            pass
+
+    # 3. Main Article Selectors
+    selectors = [
+        "[itemprop='articleBody']", "article", ".article-body", ".articleBody",
+        ".article-content", ".story-content", ".news-content", "main", ".entry-content",
+        "#article-body", ".full-article", ".post-content"
+    ]
+    for selector in selectors:
+        for el in soup.select(selector):
+            txt = clean_text(el.get_text(" ", strip=True))
+            if word_count(txt) >= MIN_CONTENT_WORDS:
+                candidates.append(txt)
+
+    # 4. Paragraph Aggregation Fallback
+    paragraphs = [clean_text(p.get_text(" ", strip=True)) for p in soup.find_all("p")]
+    paragraphs = [p for p in paragraphs if word_count(p) >= 6]
+    if paragraphs:
+        joined = clean_text(" ".join(paragraphs))
+        if word_count(joined) >= MIN_CONTENT_WORDS:
+            candidates.append(joined)
+
+    if not candidates: return "", real_url
+
+    best_text = max(candidates, key=lambda t: word_count(t))
+    return best_text, real_url
+
+# ============================================================
+# ITEM BUILDER
+# ============================================================
+
+def make_item(source, title, url, date=None, content="", item_type="Google News", category="General"):
+    clean_title_str = clean_title(title)
+    clean_url_str = clean_url(url)
+    clean_content_str = clean_text(content)
+
+    # STRICT RULE 1: Reject if content is empty or title repeated
+    if not clean_content_str or is_content_too_similar_to_title(clean_title_str, clean_content_str):
+        warn(f"REJECTED (Content same as Title) | {clean_title_str[:50]}")
         return None
 
-    scope_name = "India National" if is_national else "Bihar State"
-    tag_name = "🎯 National Special / India Affairs" if is_national else "🎯 BPSC Special / Bihar Current Affairs"
+    # STRICT RULE 2: Minimum word count check
+    total_words = word_count(clean_content_str)
+    if total_words < MIN_CONTENT_WORDS:
+        warn(f"REJECTED ({total_words} words < min {MIN_CONTENT_WORDS}) | {clean_title_str[:50]}")
+        return None
 
-    prompt = f"""
-    You are a Senior News Summarizer & Editor.
-    Below is raw news text scraped for yesterday ({target_date_str}) at {scope_name} Level:
+    # STRICT RULE 3: Category Verification
+    if not verify_category_relevance(clean_title_str, clean_content_str, category):
+        warn(f"REJECTED (Category Mismatch '{category}') | {clean_title_str[:50]}")
+        return None
+
+    if total_words > MAX_CONTENT_WORDS:
+        clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
+
+    # STRICT RULE 4: Blacklist Check
+    matched_bad_word = check_blacklist_reason(clean_title_str, clean_content_str)
+    if matched_bad_word:
+        warn(f"REJECTED (Blacklisted: '{matched_bad_word}') | {clean_title_str[:50]}")
+        return None
+
+    parsed_date = date or now_ist()
+
+    success(f"ACCEPTED | Words: {word_count(clean_content_str)} | Category: {category} | Title: {clean_title_str[:50]}")
+
+    return {
+        "source": source,
+        "category": category,
+        "title": clean_title_str,
+        "url": clean_url_str,
+        "date": parsed_date.strftime("%a, %d %b %Y %H:%M:%S GMT"),
+        "content": clean_content_str,
+        "content_chars": len(clean_content_str),
+        "content_words": word_count(clean_content_str),
+        "type": item_type,
+    }
+
+def deduplicate(items):
+    seen = set()
+    output = []
+    for item in items:
+        key = item.get("url") or item.get("title")
+        key_hash = hashlib.sha1(key.lower().encode("utf-8")).hexdigest()
+        if key_hash not in seen:
+            seen.add(key_hash)
+            output.append(item)
+    return output
+
+# ============================================================
+# MAIN SCRAPING PIPELINE
+# ============================================================
+
+NATIONAL_CATEGORIES = {
+    "Polity & Governance": '("Supreme Court" OR "Cabinet Approves" OR "Act" OR "Bill")',
+    "Govt Schemes & Welfare": '("Govt Scheme" OR "Pradhan Mantri" OR "Welfare")',
+    "Economy & Banking": '("RBI Policy" OR "Union Budget" OR "Economic Survey" OR "GST Council")',
+    "International Relations": '("Bilateral" OR "G20" OR "BRICS" OR "Quad" OR "Summit")',
+    "Science, Tech & Defense": '("ISRO" OR "NASA" OR "Defense Exercise" OR "DRDO")',
+    "Environment & Infrastructure": '("Ramsar Site" OR "Expressway" OR "Renewable Energy" OR "GI Tag")'
+}
+
+BIHAR_CATEGORIES = {
+    "Bihar Schemes & Welfare": '("Bihar Scheme" OR "Mukhyamantri Scheme" OR "Bihar Welfare")',
+    "Bihar Development": '("Bihar Expressway" OR "Patna Metro" OR "Bihar Infrastructure" OR "Bihar Development")'
+}
+
+PIB_HINDI_FEEDS = {
+    "Economy & Banking": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    "Polity & Governance": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1"
+}
+
+def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
+    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING SOURCE: {source_label}\n" + "=" * 70)
+    category_results = []
+
+    for cat_name, query in categories_dict.items():
+        encoded_q = quote(f"{query} when:3d")
+        rss_url = f"https://news.google.com/rss/search?q={encoded_q}&hl=en-IN&gl=IN&ceid=IN:en"
+
+        feed = feedparser.parse(rss_url)
+        entries = feed.entries or []
+        debug(f"RSS returned {len(entries)} items for [{cat_name}]")
+
+        count = 0
+        for entry in entries[:MAX_PER_CATEGORY * 3]:
+            title = clean_title(getattr(entry, 'title', ''))
+            rss_link = clean_url(getattr(entry, 'link', ''))
+
+            if not title or not rss_link: continue
+
+            content, final_url = fetch_web_article(rss_link)
+
+            if not content or word_count(content) < MIN_CONTENT_WORDS:
+                warn(f"REJECTED (Scraping Failed/Blocked) | {title[:50]}")
+                continue
+
+            obj = make_item(
+                source="Google News Central" if not is_bihar else "Google News Bihar",
+                title=title,
+                url=final_url or rss_link,
+                date=now_ist(),
+                content=content,
+                item_type="National News" if not is_bihar else "Bihar News",
+                category=cat_name
+            )
+
+            if obj:
+                category_results.append(obj)
+                count += 1
+
+            if count >= MAX_PER_CATEGORY:
+                break
+
+    return deduplicate(category_results)
+
+def fetch_pib_news():
+    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING SOURCE: PIB Official Hindi Feeds\n" + "=" * 70)
+    pib_results = []
+
+    for cat_name, feed_url in PIB_HINDI_FEEDS.items():
+        feed = feedparser.parse(feed_url)
+        entries = feed.entries or []
+        debug(f"PIB RSS returned {len(entries)} items for [{cat_name}]")
+
+        count = 0
+        for entry in entries[:3]:
+            title = clean_title(getattr(entry, 'title', ''))
+            link = clean_url(getattr(entry, 'link', ''))
+
+            if not title or not link: continue
+
+            content, final_url = fetch_web_article(link)
+
+            if not content or word_count(content) < MIN_CONTENT_WORDS:
+                continue
+
+            obj = make_item(
+                source="PIB Press Release",
+                title=title,
+                url=final_url or link,
+                date=now_ist(),
+                content=content,
+                item_type="National News",
+                category=cat_name
+            )
+
+            if obj:
+                pib_results.append(obj)
+                count += 1
+
+    return deduplicate(pib_results)
+
+def build_news():
+    national = fetch_google_news_feed(NATIONAL_CATEGORIES, "National", is_bihar=False)
+    pib_news = fetch_pib_news()
+    national = deduplicate(national + pib_news)
     
-    {raw_text}
-    
-    STRICT ALLOWED CATEGORIES (Pick ONLY from these 5 exact names):
-    1. "Govt Schemes & Policies"
-    2. "Infrastructure, Economy & Reports"
-    3. "Science, Defense & Environment"
-    4. "International Affairs & Summits"
-    5. "Appointments, Awards & Sports"
+    bihar = fetch_google_news_feed(BIHAR_CATEGORIES, "Bihar", is_bihar=True)
 
-    STRICT REJECTION & DISCARD RULES:
-    1. REJECT routine administrative instructions, local politics, crime, and accidents.
-    2. REJECT Education, Schools, University, Vacancies, Exam Notices, Admit Cards, and Results.
-    3. ACCEPT ALL important Government schemes, MoUs, infrastructure projects, environment updates, and national/state reports.
+    breakdown = {
+        "Google News National": len(national),
+        "Google News Bihar": len(bihar)
+    }
 
-    CRITICAL BULLET POINT RULES (PURE NEWS EXPLANATION ONLY):
-    - Write ALL 3 Bullets in **Hinglish** (Hindi written in Roman English script).
-    - Focus STRICTLY on explaining WHAT happened in the news (Facts, Figures, Details).
-    - STRICTLY FORBIDDEN: Do NOT write "importance", "strategic significance", "exam value", or filler opinions.
-    - Bullet 1 (What Happened): Core event, decision, Ministry/Department, or location.
-    - Bullet 2 (Numbers & Facts): Specific budget outlay, target date, numerical figures, MoU amount, or rank.
-    - Bullet 3 (Further News Detail): Additional factual details about how the scheme/event works or implementation steps.
-    - Do NOT use Markdown asterisks (**).
+    return national, bihar, breakdown
 
-    JSON SCHEMA OUTPUT:
-    {{
-      "news_cards": [
-        {{
-          "id": "news_01",
-          "title": "Clean Detailed Hinglish Headline with Specific Fact",
-          "category": "Select EXACT matching category",
-          "bullets": [
-            "Bullet 1: Pure news fact / decision in Hinglish",
-            "Bullet 2: Exact numerical data / budget / details in Hinglish",
-            "Bullet 3: Further news explanation / implementation details in Hinglish"
-          ],
-          "exam_tag": "{tag_name}",
-          "date": "{target_date_str}"
-        }}
-      ]
-    }}
-    """
-    return call_groq_safe(prompt, system_role="Senior News Editor")
+def save_output(national, bihar, breakdown):
+    all_news = national + bihar
 
-def append_to_master_history(news_cards, yesterday_key, is_national=False):
-    master_file = "all_national_news_history.json" if is_national else "all_bihar_news_history.json"
-    
-    master_data = {}
-    if os.path.exists(master_file):
-        try:
-            with open(master_file, "r", encoding="utf-8") as f:
-                master_data = json.load(f)
-        except Exception as e:
-            print(f"⚠️ Master History file read error ({master_file}): {e}")
-            
-    master_data[yesterday_key] = news_cards
-    
-    if len(master_data) > 60:
-        oldest_key = sorted(master_data.keys())[0]
-        del master_data[oldest_key]
+    output = {
+        "generated_at": now_ist().strftime("%Y-%m-%d %H:%M:%S"),
+        "bihar_raw_count": len(bihar),
+        "national_raw_count": len(national),
+        "total_raw_count": len(all_news),
+        "bihar_raw_news": bihar,
+        "national_raw_news": national,
+        "source_breakdown": breakdown,
+    }
 
-    with open(master_file, "w", encoding="utf-8") as f:
-        json.dump(master_data, f, ensure_ascii=False, indent=2)
-    print(f"✅ Appended under key '{yesterday_key}' into '{master_file}'!")
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
 
-# -------------------------------------------------------------
-# MAIN SUMMARIZER PIPELINE
-# -------------------------------------------------------------
-def run_summarizer():
-    if not GROQ_KEY:
-        print("❌ Error: GROQ_API_KEY environment variable not found!")
-        exit(1)
-
-    if not os.path.exists("rawnews.json"):
-        print("❌ Error: 'rawnews.json' does not exist. Run 'scraper.py' first!")
-        exit(1)
-
-    with open("rawnews.json", "r", encoding="utf-8") as f:
-        raw_data = json.load(f)
-
-    date_str = raw_data.get("target_date_str", datetime.now().strftime("%d %b %Y"))
-    key_str = raw_data.get("target_key_str", datetime.now().strftime("%Y-%m-%d"))
-
-    print(f"🤖 Processing AI Summaries for Date: {date_str}\n")
-
-    # === A. PROCESS BIHAR NEWS ===
-    print("📍 --- AI PROCESSING: BIHAR NEWS ---")
-    bihar_raw_list = raw_data.get("bihar_raw_news", [])
-    if bihar_raw_list:
-        ai_bihar = generate_clean_summary(bihar_raw_list, date_str, is_national=False)
-        if ai_bihar:
-            try:
-                parsed_bihar = json.loads(ai_bihar.strip())
-                with open("bihar_news.json", "w", encoding="utf-8") as f:
-                    json.dump(parsed_bihar, f, ensure_ascii=False, indent=2)
-                print("✅ bihar_news.json successfully updated!")
-                if "news_cards" in parsed_bihar and len(parsed_bihar["news_cards"]) > 0:
-                    append_to_master_history(parsed_bihar["news_cards"], key_str, is_national=False)
-            except Exception as e:
-                print(f"❌ Bihar JSON Error: {e}")
-
-    print("\n------------------------------------\n")
-
-    # === B. PROCESS NATIONAL NEWS ===
-    print("🇮🇳 --- AI PROCESSING: NATIONAL NEWS ---")
-    national_raw_list = raw_data.get("national_raw_news", [])
-    if national_raw_list:
-        ai_national = generate_clean_summary(national_raw_list, date_str, is_national=True)
-        if ai_national:
-            try:
-                parsed_national = json.loads(ai_national.strip())
-                with open("national_news.json", "w", encoding="utf-8") as f:
-                    json.dump(parsed_national, f, ensure_ascii=False, indent=2)
-                print("✅ national_news.json successfully updated!")
-                if "news_cards" in parsed_national and len(parsed_national["news_cards"]) > 0:
-                    append_to_master_history(parsed_national["news_cards"], key_str, is_national=True)
-        except Exception as e:
-            print(f"❌ National JSON Error: {e}")
-
-    print("\n🚀 Step 2 Done: Summaries generated & saved successfully.")
+    print("\n" + "=" * 80)
+    print(f"💾 {OUTPUT_FILE} saved successfully with {len(all_news)} full-length items!")
+    print("=" * 80)
 
 if __name__ == "__main__":
-    run_summarizer()
+    national, bihar, breakdown = build_news()
+    save_output(national, bihar, breakdown)
