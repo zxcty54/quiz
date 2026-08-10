@@ -1,0 +1,1409 @@
+
+{
+  "topic_id": "nhrc_polity_full",
+  "topic_title": "National Human Rights Commission (NHRC)",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 45,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "nhrc_chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 45
+      },
+      "intro_payload": {
+        "title": "National Human Rights Commission (NHRC)",
+        "icon": "⚖️",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Constitutional Basis & Legal Framework of NHRC",
+          "Structure, Composition & Appointment Process",
+          "Powers, Functions & Jurisdiction of NHRC",
+          "State Human Rights Commissions (SHRCs)",
+          "Limitations & Recent Amendments",
+          "PYQ Traps: Multi-statement & Assertion-Reason Questions"
+        ],
+        "estimated_time": "18 mins",
+        "total_xp": 250
+      },
+      "navigation": {
+        "next": "card_02_newspaper_story",
+        "button_text": "शुरू करें ➔"
+      }
+    },
+    {
+      "card_id": "card_02_newspaper_story",
+      "card_slug": "card_02_newspaper_story",
+      "type": "chat",
+      "concept_id": "nhrc_intro_motivation",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, kal newspaper mein padha tha ki NHRC ne ek police custody death ka case liya hai. Ye NHRC kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut accha observation Raju! Jab bhi kisi ka Human Right violate hota hai — matlab police torture, jail mein assault, ya illegal detention — tab NHRC ek watchdog ki tarah kaam karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Watchdog matlab Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Matlab jo government aur police ki harkatein dekhta rahe aur agar galat ho toh sab ko bataye. NHRC ek independent body hai jo citizen ke rights protect karti hai. Aaj hum iska pura structure, powers, aur exam traps samjhenge!"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_origin_paris_principles",
+        "button_text": "Aage badhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_03_origin_paris_principles",
+      "card_slug": "card_03_origin_paris_principles",
+      "type": "chat",
+      "concept_id": "nhrc_origin_international",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sabse pehle origin samjho. 1991 mein United Nations ne Paris mein ek conference rakhi jisme 'Paris Principles' banayi gayi. Yeh principles kehte hain ki har desh mein ek independent Human Rights body honi chahiye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh India ne bhi usko follow kiya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! India ne 1993 mein Protection of Human Rights Act banaya aur NHRC ko officially establish kiya. Yaad rakho: Act = 1993, Paris Principles = 1991. BPSC isme ulta puchta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... toh NHRC ek statutory body hai, constitutional nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! NHRC ek Statutory Body hai kyunki yeh Parliament ke Act (Protection of Human Rights Act, 1993) se bani hai, Constitution se nahi. Yeh bahut bada PYQ trap hai Raju!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_quiz_origin",
+        "button_text": "Samajh gaya ➔"
+      }
+    },
+    {
+      "card_id": "card_04_quiz_origin",
+      "card_slug": "card_04_quiz_origin",
+      "type": "quiz",
+      "concept_id": "nhrc_origin_international",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 45
+      },
+      "quiz_payload": {
+        "question": "NHRC की स्थापना किस अधिनियम के तहत हुई थी?",
+        "options": [
+          { "id": "A", "text": "संविधान का अनुच्छेद 32" },
+          { "id": "B", "text": "Protection of Human Rights Act, 1993" },
+          { "id": "C", "text": "Right to Information Act, 2005" },
+          { "id": "D", "text": "National Security Act, 1980" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NHRC की स्थापना Protection of Human Rights Act, 1993 के तहत हुई थी। यह एक Statutory Body है, Constitutional Body नहीं। Paris Principles (1991) की सिफारिश के बाद भारत ने 1993 में यह Act बनाया।"
+      },
+      "navigation": {
+        "next": "card_05_composition_chairperson",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_05_composition_chairperson",
+      "card_slug": "card_05_composition_chairperson",
+      "type": "chat",
+      "concept_id": "nhrc_composition_chairperson",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, NHRC ka head kaun hota hai? President ya Prime Minister appoint karte hain kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "NHRC ka head 'Chairperson' hota hai. Aur appointment ka process bahut transparent hai. Chairperson ko President appoint karta hai, BUT ek high-level committee ki recommendation par."
+        },
+        {
+          "speaker": "raju",
+          "text": "Committee mein kaun kaun hote hain Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Committee mein 6 log hote hain: (1) Prime Minister — Chairman, (2) Lok Sabha Speaker, (3) Rajya Sabha Deputy Chairman, (4) Lok Sabha ka Opposition Leader, (5) Rajya Sabha ka Opposition Leader, (6) Union Home Minister. Ye multi-party committee ensure karti hai ki appointment politically biased na ho!"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_chairperson_eligibility",
+        "button_text": "Aur details ➔"
+      }
+    },
+    {
+      "card_id": "card_06_chairperson_eligibility",
+      "card_slug": "card_06_chairperson_eligibility",
+      "type": "chat",
+      "concept_id": "nhrc_chairperson_qualification",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Koi bhi bada officer ban sakta hai kya Chairperson?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi Raju. Chairperson sirf ek hi category se aata hai: Retired Chief Justice of India. Isse ensure hota hai ki wo judicial experience aur constitutional values samajhta ho."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab koi retired IAS, IPS, ya Supreme Court judge nahi ban sakta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Retired Supreme Court judge toh NHRC ka Member ban sakta hai, lekin Chairperson sirf Retired CJI hi ho sakta hai. Ye UPSC aur BPSC ka favorite confusion point hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_members_structure",
+        "button_text": "Samjhe ➔"
+      }
+    },
+    {
+      "card_id": "card_07_members_structure",
+      "card_slug": "card_07_members_structure",
+      "type": "chat",
+      "concept_id": "nhrc_members_composition",
+      "level": 2,
+      "progress": {
+        "current": 7,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Members ki baat karte hain. NHRC mein total 7 members hote hain (including Chairperson). Breakdown ye hai: (1) Chairperson — Retired CJI, (2) 1 Serving or Retired SC Judge, (3) 1 Serving or Retired Chief Justice of High Court, (4) 2 Persons with knowledge of Human Rights (academics, activists, etc.), (5) Chairperson of National Commission for Minorities (ex-officio), (6) Chairperson of National Commission for SCs (ex-officio), (7) Chairperson of National Commission for STs (ex-officio)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ex-officio matlab Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ex-officio ka matlab hai 'by virtue of office'. Matlab wo already apne post par hain (like Minorities Commission ke Head), aur automatically NHRC ke Member bhi ban jaate hain. Unhe alag se appoint nahi karna padta."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab NHRC mein total kitne log hue? 4 + 3 ex-officio = 7?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Chairperson + 3 appointed members + 3 ex-officio members = Total 7. Isko UPSC Prelims mein statement type questions mein ulta seedha likh kar puchte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_quiz_composition",
+        "button_text": "Quiz lagao ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_composition",
+      "card_slug": "card_08_quiz_composition",
+      "type": "quiz",
+      "concept_id": "nhrc_members_composition",
+      "level": 2,
+      "progress": {
+        "current": 8,
+        "total": 45
+      },
+      "quiz_payload": {
+        "question": "NHRC के Chairperson के रूप में कौन नियुक्त हो सकता है?",
+        "options": [
+          { "id": "A", "text": "कोई भी सेवानिवृत्त Supreme Court Judge" },
+          { "id": "B", "text": "सेवानिवृत्त Chief Justice of India (CJI)" },
+          { "id": "C", "text": "सेवानिवृत्त Chief Justice of High Court" },
+          { "id": "D", "text": "मानवाधिकार के क्षेत्र में अनुभवी व्यक्ति" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "केवल सेवानिवृत्त Chief Justice of India (CJI) ही NHRC के Chairperson बन सकते हैं। यह सुनिश्चित करता है कि Chairperson को सर्वोच्च न्यायिक अनुभव हो। अन्य Supreme Court Judges या HC Chief Justices केवल Members बन सकते हैं, Chairperson नहीं।"
+      },
+      "navigation": {
+        "next": "card_09_tenure_salary",
+        "button_text": "Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_09_tenure_salary",
+      "card_slug": "card_09_tenure_salary",
+      "type": "chat",
+      "concept_id": "nhrc_tenure_salary_removal",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, Chairperson aur Members kitne saal ke liye appoint hote hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Tenure bahut clear hai Raju: Chairperson aur Members dono ki tenure 3 saal ya 70 saal ki age, jo bhi pehle ho. Matlab agar koi 68 saal ki age mein appoint hua, toh sirf 2 saal tak rahega, 3 nahi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur salary kitni hoti hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Chairperson ko Supreme Court ke sitting judge ke barabar salary milti hai. Members ko bhi achhi salary milti hai jo Act mein define hai. Lekin SSC aur BPSC mein tenure aur age limit zyada puchha jata hai, salary kam."
+        }
+      ],
+      "navigation": {
+        "next": "card_10_removal_process",
+        "button_text": "Removal process? ➔"
+      }
+    },
+    {
+      "card_id": "card_10_removal_process",
+      "card_slug": "card_10_removal_process",
+      "type": "chat",
+      "concept_id": "nhrc_removal_procedure",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, agar koi Chairperson apna kaam theek se nahi kare toh kya hata sakte hain use?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, lekin process bohot strict hai. Removal ka procedure Supreme Court Judge ke removal jaisa hai. President issue karega removal order, BUT Supreme Court ke inquiry ke baad, jismein proved misconduct ya incapacity honi chahiye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab President apne mann se nahi hata sakta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul nahi! Ye independence ensure karta hai. Agar President khud hi hata sake toh NHRC government ka puppet ban jayega. Isliye judicial inquiry mandatory hai. Ye UPSC Prelims mein Assertion-Reason format mein aata hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_quiz_tenure_removal",
+        "button_text": "Test karo ➔"
+      }
+    },
+    {
+      "card_id": "card_11_quiz_tenure_removal",
+      "card_slug": "card_11_quiz_tenure_removal",
+      "type": "quiz",
+      "concept_id": "nhrc_tenure_salary_removal",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 45
+      },
+      "quiz_payload": {
+        "question": "NHRC के Chairperson और Members का कार्यकाल कितना होता है?",
+        "options": [
+          { "id": "A", "text": "5 वर्ष या 65 वर्ष की आयु, जो भी पहले हो" },
+          { "id": "B", "text": "3 वर्ष या 70 वर्ष की आयु, जो भी पहले हो" },
+          { "id": "C", "text": "6 वर्ष या 70 वर्ष की आयु, जो भी पहले हो" },
+          { "id": "D", "text": "कार्यकाल की कोई सीमा नहीं" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NHRC के Chairperson और Members का कार्यकाल 3 वर्ष या 70 वर्ष की आयु, जो भी पहले हो, होता है। यह Protection of Human Rights Act, 1993 में स्पष्ट रूप से उल्लिखित है। BPSC अक्सर इसे 5 वर्ष या 65 वर्ष लिखकर confuse करता है।"
+      },
+      "navigation": {
+        "next": "card_12_milestone_composition",
+        "button_text": "Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_12_milestone_composition",
+      "card_slug": "card_12_milestone_composition",
+      "type": "milestone",
+      "concept_id": "nhrc_composition_complete",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 45
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 1 COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "NHRC: Origin, Composition & Appointment",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/4 Clear",
+        "motivational_quote": "You've mastered the foundation! अब NHRC की powers और functions समझने का time है! 💪"
+      },
+      "navigation": {
+        "next": "card_13_functions_intro",
+        "button_text": "Start Module 2 ➔"
+      }
+    },
+    {
+      "card_id": "card_13_functions_intro",
+      "card_slug": "card_13_functions_intro",
+      "type": "chat",
+      "concept_id": "nhrc_functions_introduction",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab sabse important part — NHRC karta kya hai? Iske functions ko 3 categories mein samjho: (1) Inquiry & Investigation, (2) Advisory & Recommendation, (3) Awareness & Research."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir pehle Inquiry wala samjhaiye. Koi bhi complaint kar sakta hai NHRC mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Koi bhi victim ya uski behalf par koi NGO, social worker, ya family member complaint file kar sakta hai. NHRC ko suo-moto (apne aap) bhi case uthane ka power hai agar newspaper ya media mein koi human rights violation dikhe."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab NHRC khud bhi case shuru kar sakta hai bina kisi complaint ke?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ye suo-moto power bahut powerful hai. Agar kal koi custodial death ki news aaye, NHRC turant notice bhej sakta hai police ko bina kisi ki complaint ke. Ye BPSC mein bahut puchha jata hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_inquiry_limitations",
+        "button_text": "Limitations? ➔"
+      }
+    },
+    {
+      "card_id": "card_14_inquiry_limitations",
+      "card_slug": "card_14_inquiry_limitations",
+      "type": "chat",
+      "concept_id": "nhrc_inquiry_time_limit",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, matlab NHRC kisi bhi purane case ko utha sakta hai? 10 saal puraana bhi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ruko Raju! Yahin sabse bada trap hai. NHRC sirf un cases ko dekh sakta hai jo 1 saal se zyada purane nahi hain. Matlab incident ke 1 saal ke andar complaint karni hogi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Matlab 2 saal purana case NHRC nahi dekhega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul nahi! Ye 1-year time limit bahut strict hai. SSC aur Railway mein direct question aata hai: 'NHRC can inquire into matters that occurred within how many years?' Answer = 1 year. Isko pakka yaad rakho!"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_armed_forces_exception",
+        "button_text": "Aur koi exception? ➔"
+      }
+    },
+    {
+      "card_id": "card_15_armed_forces_exception",
+      "card_slug": "card_15_armed_forces_exception",
+      "type": "chat",
+      "concept_id": "nhrc_armed_forces_limitation",
+      "level": 3,
+      "progress": {
+        "current": 15,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Aur ek bahut bada limitation: NHRC directly Armed Forces (Army, Navy, Air Force, BSF, CRPF, etc.) ke against inquiry nahi kar sakta!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Seriously Sir? Matlab agar koi jawan torture kare toh NHRC kuch nahi kar sakta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "NHRC inquiry kar sakta hai, BUT pehle Central Government ki permission leni padti hai. Aur actual inquiry Armed Forces ke apne internal mechanism (like court-martial) ke through hoti hai. NHRC sirf recommendation de sakta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to exam me pakka confuse karega Sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Isliye yaad rakho: Police, Jail, Government servants — NHRC directly inquire kar sakta hai. BUT Armed Forces — Permission chahiye + NHRC sirf recommendation de sakta hai. UPSC Prelims ka favorite multi-statement trap!"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_quiz_limitations",
+        "button_text": "Quiz time ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz_limitations",
+      "card_slug": "card_16_quiz_limitations",
+      "type": "quiz",
+      "concept_id": "nhrc_inquiry_time_limit",
+      "level": 3,
+      "progress": {
+        "current": 16,
+        "total": 45
+      },
+      "quiz_payload": {
+        "question": "NHRC किसी मानवाधिकार उल्लंघन की जांच कब तक कर सकता है?",
+        "options": [
+          { "id": "A", "text": "घटना के 6 महीने के भीतर" },
+          { "id": "B", "text": "घटना के 1 वर्ष के भीतर" },
+          { "id": "C", "text": "घटना के 2 वर्ष के भीतर" },
+          { "id": "D", "text": "किसी भी समय सीमा के बिना" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NHRC केवल उन मामलों की जांच कर सकता है जो घटना के 1 वर्ष के भीतर हों। यदि घटना 1 वर्ष से अधिक पुरानी है, तो NHRC उस मामले को नहीं ले सकता। यह SSC CGL और Railway में बार-बार पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_17_quiz_armed_forces",
+        "button_text": "Next Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_17_quiz_armed_forces",
+      "card_slug": "card_17_quiz_armed_forces",
+      "type": "quiz",
+      "concept_id": "nhrc_armed_forces_limitation",
+      "level": 3,
+      "progress": {
+        "current": 17,
+        "total": 45
+      },
+      "quiz_payload": {
+        "question": "NHRC के बारे में निम्नलिखित में से कौन सा कथन सत्य है?",
+        "options": [
+          { "id": "A", "text": "NHRC सशस्त्र बलों के विरुद्ध सीधे जांच कर सकता है" },
+          { "id": "B", "text": "NHRC सशस्त्र बलों की जांच के लिए केंद्र सरकार की अनुमति चाहिए" },
+          { "id": "C", "text": "NHRC किसी भी सरकारी संस्था की जांच नहीं कर सकता" },
+          { "id": "D", "text": "NHRC को केवल न्यायपालिका की जांच का अधिकार है" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NHRC सशस्त्र बलों (Army, Navy, Air Force, Paramilitary) के विरुद्ध सीधे जांच नहीं कर सकता। इसके लिए केंद्र सरकार की पूर्व अनुमति आवश्यक है। यह UPSC और BPSC का बहुत बड़ा trap है जहां Statement-based questions पूछे जाते हैं।"
+      },
+      "navigation": {
+        "next": "card_18_advisory_functions",
+        "button_text": "Advisory Functions ➔"
+      }
+    },
+    {
+      "card_id": "card_18_advisory_functions",
+      "card_slug": "card_18_advisory_functions",
+      "type": "chat",
+      "concept_id": "nhrc_advisory_role",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab doosra major function: Advisory Role. NHRC government ko advice de sakta hai human rights se related constitution, laws, policies, ya international treaties ke baare mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab NHRC kisi law ko change kar sakta hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi Raju! NHRC sirf RECOMMEND kar sakta hai. Actual law change karne ka power Parliament ke paas hai. NHRC advisory body hai, legislative body nahi. Yaad rakho: Recommendations binding nahi hoti!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab government NHRC ki recommendation ignore bhi kar sakti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Legally haan, ignore kar sakti hai. Lekin practically agar NHRC koi strong report publish kare toh media pressure aur public opinion ke chalte government action lene par majboor ho jaati hai. Ye soft power hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_research_awareness",
+        "button_text": "Research function? ➔"
+      }
+    },
+    {
+      "card_id": "card_19_research_awareness",
+      "card_slug": "card_19_research_awareness",
+      "type": "chat",
+      "concept_id": "nhrc_research_promotion",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Teesra function: NHRC human rights ke field mein research, education, aur awareness promote karta hai. Universities, NGOs, aur schools ke saath workshops aur seminars organize karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab NHRC sirf cases nahi dekhta, awareness bhi failata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! NHRC publications bhi nikalti hai — annual reports, bulletins, human rights education material. Ye preventive measure hai — jitna zyada awareness hoga, utna kam violations honge. BPSC mein yeh 'promotional role' ke naam se puchha jata hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_visit_powers",
+        "button_text": "Visit powers? ➔"
+      }
+    },
+    {
+      "card_id": "card_20_visit_powers",
+      "card_slug": "card_20_visit_powers",
+      "type": "chat",
+      "concept_id": "nhrc_jail_visit_powers",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, agar NHRC ko lagta hai ki kisi jail mein torture ho raha hai, toh kya kar sakta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut accha question! NHRC ko jail visit karne ka full power hai. Wo bina kisi prior notice ke jail, police station, ya detention center ja sakta hai aur prisoners se directly baat kar sakta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab police rok nahi sakti?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul nahi! NHRC ko Civil Court jaisi powers hain. Wo documents talabh kar sakta hai, witnesses ko summon kar sakta hai, aur evidence collect kar sakta hai. Yeh quasi-judicial powers BPSC mein bahut puchi jati hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_quiz_functions",
+        "button_text": "Functions Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_functions",
+      "card_slug": "card_21_quiz_functions",
+      "type": "quiz",
+      "concept_id": "nhrc_advisory_role",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 45
+      },
+      "quiz_payload": {
+        "question": "NHRC की सिफारिशों (recommendations) की प्रकृति क्या है?",
+        "options": [
+          { "id": "A", "text": "सिफारिशें सरकार पर बाध्यकारी (binding) होती हैं" },
+          { "id": "B", "text": "सिफारिशें केवल सलाहकारी (advisory) होती हैं, बाध्यकारी नहीं" },
+          { "id": "C", "text": "सिफारिशें Supreme Court के आदेश के समान हैं" },
+          { "id": "D", "text": "NHRC को सिफारिश देने का अधिकार नहीं है" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NHRC की सिफारिशें केवल सलाहकारी (advisory) प्रकृति की होती हैं, बाध्यकारी (binding) नहीं। सरकार कानूनी रूप से इन्हें अस्वीकार कर सकती है, लेकिन व्यावहारिक रूप से मीडिया और जनता के दबाव के कारण अक्सर इन्हें लागू किया जाता है। यह UPSC Prelims में assertion-reason format में आता है।"
+      },
+      "navigation": {
+        "next": "card_22_milestone_functions",
+        "button_text": "Module Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_22_milestone_functions",
+      "card_slug": "card_22_milestone_functions",
+      "type": "milestone",
+      "concept_id": "nhrc_functions_complete",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 45
+      },
+      "milestone_payload": {
+        "title": "🔥 MODULE 2 MASTERED!",
+        "badge_emoji": "🔍",
+        "completed_topic": "Powers & Functions of NHRC",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/4 Clear",
+        "motivational_quote": "Armed Forces exception, 1-year limit, advisory powers — सब clear! अब State Commissions समझने की बारी! 🚀"
+      },
+      "navigation": {
+        "next": "card_23_shrc_intro",
+        "button_text": "Start Module 3 ➔"
+      }
+    },
+    {
+      "card_id": "card_23_shrc_intro",
+      "card_slug": "card_23_shrc_intro",
+      "type": "chat",
+      "concept_id": "shrc_introduction",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, NHRC to national level par hai. States mein bhi koi aisa commission hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! States mein State Human Rights Commission (SHRC) hota hai. Ye bhi Protection of Human Rights Act, 1993 ke under hi banta hai. Structure thoda similar hai NHRC jaisa, lekin kuch differences hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Har state mein compulsory hai kya SHRC banana?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! SHRC banana optional hai. State Government decide karti hai ki wo banaye ya na banaye. Currently bahut se states ne banaya hai — jaise Bihar, UP, Maharashtra — lekin kuch chhote states ne nahi banaya. Ye BPSC ka favorite confusion point hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_shrc_composition",
+        "button_text": "Composition? ➔"
+      }
+    },
+    {
+      "card_id": "card_24_shrc_composition",
+      "card_slug": "card_24_shrc_composition",
+      "type": "chat",
+      "concept_id": "shrc_composition_structure",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "SHRC ka structure: (1) Chairperson — Retired Chief Justice of High Court, (2) 1 Serving or Retired Judge of High Court, (3) 1 District Judge (having experience in that state), (4) 2 Persons with knowledge of Human Rights."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, NHRC ka Chairperson toh Retired CJI tha, yahan High Court Chief Justice kyun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi notice kiya! Kyunki SHRC state level body hai, isliye High Court level ka judicial experience kaafi hai. National level par Supreme Court ka experience chahiye tha. Ye hierarchy logic UPSC mein bahut puchha jata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur appointment kaun karta hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Governor appoint karta hai, BUT ek committee ki recommendation par. Committee mein: Chief Minister (Chairman), State Home Minister, Speaker of Legislative Assembly, Leader of Opposition in Assembly, aur Leader of Opposition in Council (agar bicameral state hai)."
+        }
+      ],
+      "navigation": {
+        "next": "card_25_shrc_tenure_powers",
+        "button_text": "Powers same hain? ➔"
+      }
+    },
+    {
+      "card_id": "card_25_shrc_tenure_powers",
+      "card_slug": "card_25_shrc_tenure_powers",
+      "type": "chat",
+      "concept_id": "shrc_tenure_powers_comparison",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "SHRC ki powers bhi NHRC jaisi hi hain kya Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Mostly haan, lekin ek bada difference: SHRC sirf STATE matters dekh sakta hai. Central government agencies (like CBI, CRPF at central level) ke against SHRC kuch nahi kar sakta. Wo NHRC ka jurisdiction hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur tenure Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "SHRC ka bhi tenure same hai: 5 years ya 70 years of age, jo bhi pehle ho. Wait Raju! Maine galat kaha — Actually 3 years ya 70 years, NHRC jaisa hi! Ye deliberately confuse karne ke liye maine bola tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain Sir? Matlab 3 years ya 70 years, dono NHRC aur SHRC ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! Dono ke liye same tenure: 3 years ya 70 years. BPSC exam mein ek option '5 years' daal dete hain deliberately. Tum trap mein mat aana!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_quiz_shrc_composition",
+        "button_text": "Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_26_quiz_shrc_composition",
+      "card_slug": "card_26_quiz_shrc_composition",
+      "type": "quiz",
+      "concept_id": "shrc_composition_structure",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 45
+      },
+      "quiz_payload": {
+        "question": "State Human Rights Commission (SHRC) के Chairperson के रूप में कौन नियुक्त हो सकता है?",
+        "options": [
+          { "id": "A", "text": "सेवानिवृत्त Chief Justice of India" },
+          { "id": "B", "text": "सेवानिवृत्त Chief Justice of High Court" },
+          { "id": "C", "text": "सेवानिवृत्त Supreme Court Judge" },
+          { "id": "D", "text": "सेवानिवृत्त District Judge" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "SHRC के Chairperson के रूप में सेवानिवृत्त Chief Justice of High Court नियुक्त होते हैं। यह NHRC से अलग है, जहां सेवानिवृत्त Chief Justice of India (CJI) Chairperson बनते हैं। यह state-level और national-level की hierarchy को reflect करता है।"
+      },
+      "navigation": {
+        "next": "card_27_nhrc_vs_shrc",
+        "button_text": "NHRC vs SHRC ➔"
+      }
+    },
+    {
+      "card_id": "card_27_nhrc_vs_shrc",
+      "card_slug": "card_27_nhrc_vs_shrc",
+      "type": "chat",
+      "concept_id": "nhrc_shrc_comparison",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek comparative table dimaag mein bana lo: NHRC — National level, Chairperson = Retired CJI, Central matters. SHRC — State level, Chairperson = Retired HC Chief Justice, State matters only. Dono ka tenure same: 3 years/70 years."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, agar koi case dono ke beech overlap ho jaye? Matlab state police aur central agency dono involved hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Tab NHRC automatically superior ho jata hai. NHRC ko power hai ki wo SHRC se koi case transfer karwa le apne paas. SHRC se NHRC tak appeal bhi ja sakti hai. Ye hierarchical structure hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_quiz_nhrc_shrc",
+        "button_text": "Comparison Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_nhrc_shrc",
+      "card_slug": "card_28_quiz_nhrc_shrc",
+      "type": "quiz",
+      "concept_id": "nhrc_shrc_comparison",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 45
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा कथन सही है?\n1. NHRC केवल केंद्रीय मामलों की जांच कर सकता है।\n2. SHRC राज्य स्तरीय मामलों की जांच करता है।\n3. NHRC, SHRC से मामले transfer कर सकता है।\n4. दोनों का कार्यकाल 5 वर्ष है।",
+        "options": [
+          { "id": "A", "text": "केवल 1, 2 और 3 सही हैं" },
+          { "id": "B", "text": "केवल 2 और 3 सही हैं" },
+          { "id": "C", "text": "केवल 1, 3 और 4 सही हैं" },
+          { "id": "D", "text": "सभी सही हैं" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "कथन 2 और 3 सही हैं। NHRC केवल केंद्रीय मामलों तक सीमित नहीं है; यह राष्ट्रीय महत्व के किसी भी मानवाधिकार उल्लंघन की जांच कर सकता है। SHRC राज्य स्तरीय मामलों को देखता है। NHRC को SHRC से मामले transfer करने का अधिकार है। दोनों का कार्यकाल 3 वर्ष है, 5 नहीं। यह BPSC का क्लासिक multi-statement trap है।"
+      },
+      "navigation": {
+        "next": "card_29_milestone_shrc",
+        "button_text": "Module Clear ➔"
+      }
+    },
+    {
+      "card_id": "card_29_milestone_shrc",
+      "card_slug": "card_29_milestone_shrc",
+      "type": "milestone",
+      "concept_id": "shrc_module_complete",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 45
+      },
+      "milestone_payload": {
+        "title": "💪 MODULE 3 CONQUERED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "State Human Rights Commissions (SHRC)",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/4 Clear",
+        "motivational_quote": "NHRC vs SHRC अब crystal clear! अब limitations, recent amendments और PYQ traps समझने का समय! 🎯"
+      },
+      "navigation": {
+        "next": "card_30_limitations_intro",
+        "button_text": "Final Module ➔"
+      }
+    },
+    {
+      "card_id": "card_30_limitations_intro",
+      "card_slug": "card_30_limitations_intro",
+      "type": "chat",
+      "concept_id": "nhrc_limitations_overview",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, NHRC itne saare powers hain, toh kya ye bahut powerful body hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Powers toh hain Raju, lekin NHRC ki kuch serious limitations bhi hain jo exam mein bahut puchi jati hain. Sabse pehli limitation: NHRC ke recommendations binding nahi hain. Government ignore kar sakti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab NHRC ka order government ko manna zaruri nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! NHRC ek advisory body hai, enforcement body nahi. Agar kisi victim ko actual relief chahiye, toh use court jaana padega. NHRC sirf moral pressure aur public awareness create karta hai. Ye 'toothless tiger' criticism bahut famous hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_no_contempt_power",
+        "button_text": "Aur limitations? ➔"
+      }
+    },
+    {
+      "card_id": "card_31_no_contempt_power",
+      "card_slug": "card_31_no_contempt_power",
+      "type": "chat",
+      "concept_id": "nhrc_contempt_limitation",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Doosri badi limitation: NHRC ko contempt power nahi hai. Matlab agar koi police officer NHRC ka summon ignore kare ya evidence nahi de, toh NHRC usko punish nahi kar sakta directly."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Matlab NHRC ke samne koi bhi aa sakta hai ya nahi aa sakta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Practically nahi aayega toh bura lagega, media pressure banega, senior officers naraz honge. Lekin legally NHRC jail nahi bhej sakta contempt ke liye jaise court kar sakta hai. Iske liye NHRC ko court ka sahaara lena padta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab NHRC ek Court nahi hai, quasi-judicial body hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! NHRC quasi-judicial hai — some judicial powers hain (summon, evidence collect), but full court jaisi powers nahi. UPSC Prelims mein 'NHRC is a court' statement deliberately galat diya jata hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_1year_armed_recap",
+        "button_text": "Recapkarein ➔"
+      }
+    },
+    {
+      "card_id": "card_32_1year_armed_recap",
+      "card_slug": "card_32_1year_armed_recap",
+      "type": "chat",
+      "concept_id": "nhrc_major_limitations_recap",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Chalo major limitations ka quick recap karte hain: (1) 1-year time limit — purane cases nahi le sakta, (2) Armed Forces — Central Government ki permission chahiye, (3) No binding power — recommendations advisory hain, (4) No contempt power — summon ignore karne par jail nahi bhej sakta."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, toh NHRC actually mein kitna effective hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Effectiveness limited hai legal powers se, BUT moral authority aur media pressure se bahut kaam hota hai. NHRC ki reports Parliament mein discuss hoti hain, media cover karti hai, NGOs use karti hain. Ye 'soft power' mechanism bahut important hai democratic system mein!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_2019_amendment",
+        "button_text": "Recent Changes? ➔"
+      }
+    },
+    {
+      "card_id": "card_33_2019_amendment",
+      "card_slug": "card_33_2019_amendment",
+      "type": "chat",
+      "concept_id": "nhrc_2019_amendment",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab recent changes ki baat karte hain. 2019 mein Protection of Human Rights (Amendment) Act aaya. Usme kuch important changes hue jo UPSC 2020 ke baad se frequently puch raha hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya changes hue Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Pehla change: NHRC mein ab Chairperson of National Commission for Protection of Child Rights (NCPCR) aur Chairperson of National Commission for Women (NCW) ko bhi ex-officio members bana diya gaya. Matlab ab total members aur badh gaye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab pehle sirf Minorities, SC, ST Commission ke Chairpersons the, ab Women aur Child Rights ke bhi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ye inclusion bahut important hai kyunki women aur children sabse vulnerable groups hain human rights violations mein. SSC aur Railway mein 'total members kitne hain' wala question ab updated answer ke saath puchha ja raha hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_tenure_amendment_2019",
+        "button_text": "Aur kya badla? ➔"
+      }
+    },
+    {
+      "card_id": "card_34_tenure_amendment_2019",
+      "card_slug": "card_34_tenure_amendment_2019",
+      "type": "chat",
+      "concept_id": "nhrc_tenure_change_2019",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Doosra major change: Pehle Chairperson aur Members ka tenure fixed tha — 5 saal ya 70 saal ki age. Lekin 2019 Amendment ne tenure ko flexible bana diya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ab kitna hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ruko Raju! Maine pehle tumhe 3 years bataya tha na? Wahi sahi hai actually. Originally 5 years tha, but 2006 mein ek aur amendment aayi thi jisne tenure 3 years kar diya tha. 2019 Amendment ne tenure ko 'as prescribed' kar diya — matlab government rules se decide hoga."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to bahut confusing ho gaya Sir! Exam mein kya likhun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Current rule yaad rakho: Chairperson aur Members ka tenure 3 years YA 70 years of age, whichever is earlier. Lekin 2019 Amendment ne yeh power di ki future mein government isko modify kar sakti hai through rules. BPSC deliberately purane options daal deta hai — 5 years, 6 years — tum confused ho jaoge. 3 years latest hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_quiz_2019_amendment",
+        "button_text": "Amendment Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_35_quiz_2019_amendment",
+      "card_slug": "card_35_quiz_2019_amendment",
+      "type": "quiz",
+      "concept_id": "nhrc_2019_amendment",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 45
+      },
+      "quiz_payload": {
+        "question": "2019 के संशोधन के बाद NHRC में निम्नलिखित में से किसे ex-officio member बनाया गया?",
+        "options": [
+          { "id": "A", "text": "National Commission for Women (NCW) की Chairperson" },
+          { "id": "B", "text": "National Commission for Backward Classes (NCBC) की Chairperson" },
+          { "id": "C", "text": "Chief Election Commissioner" },
+          { "id": "D", "text": "Comptroller and Auditor General (CAG)" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "2019 के Protection of Human Rights (Amendment) Act के तहत National Commission for Women (NCW) और National Commission for Protection of Child Rights (NCPCR) के Chairpersons को NHRC में ex-officio members बनाया गया। यह महिलाओं और बच्चों के मानवाधिकारों को बेहतर representation देने के लिए किया गया था। यह 2020 के बाद के UPSC Prelims में frequently पूछा जा रहा है।"
+      },
+      "navigation": {
+        "next": "card_36_annual_report",
+        "button_text": "Annual Report ➔"
+      }
+    },
+    {
+      "card_id": "card_36_annual_report",
+      "card_slug": "card_36_annual_report",
+      "type": "chat",
+      "concept_id": "nhrc_annual_report_parliament",
+      "level": 4,
+      "progress": {
+        "current": 36,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, NHRC apna kaam kaise report karta hai? Kisko batata hai ki kitne cases solve hue?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut accha question! NHRC har saal ek Annual Report Parliament ke saamne rakhta hai. Usme details hoti hain — kitne complaints aaye, kitne inquire kiye, kaunse recommendations di, government ne kya action liya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Parliament discuss karti hai us report ko?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, discuss hoti hai. Lekin yahan bhi ek trap hai: Report ko Parliament ke dono Houses — Lok Sabha aur Rajya Sabha — ke saamne rakha jata hai. BPSC mein deliberately likha hota hai 'only Lok Sabha' — galat! Dono houses mein jaani chahiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_ncm_integration",
+        "button_text": "Other Commissions ➔"
+      }
+    },
+    {
+      "card_id": "card_37_ncm_integration",
+      "card_slug": "card_37_ncm_integration",
+      "type": "chat",
+      "concept_id": "nhrc_other_commissions_link",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek aur important point: NHRC sirf akela nahi kaam karta. Ye National Commission for Minorities (NCM), National Commission for SCs, National Commission for STs, NCW, NCPCR — sabke saath coordinate karta hai. Isliye in sabke Chairpersons ko ex-officio member banaya gaya hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab agar kisi minority pe atrocity ho, toh NHRC aur NCM dono dekh sakte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Overlapping jurisdiction hai. Lekin practically dono collaborate karte hain. Agar NCM ko lagta hai ki case serious hai aur national attention chahiye, toh wo NHRC ko refer kar sakta hai. Ye integrated mechanism hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_quiz_limitations",
+        "button_text": "Limitations Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_limitations",
+      "card_slug": "card_38_quiz_limitations",
+      "type": "quiz",
+      "concept_id": "nhrc_limitations_overview",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 45
+      },
+      "quiz_payload": {
+        "question": "NHRC की निम्नलिखित में से कौन सी limitation सही है?\n1. NHRC की सिफारिशें बाध्यकारी नहीं हैं।\n2. NHRC को contempt of court जैसी शक्ति नहीं है।\n3. NHRC सशस्त्र बलों की जांच स्वतंत्र रूप से कर सकता है।\n4. NHRC केवल 1 वर्ष से कम पुरानी घटनाओं की जांच कर सकता है।",
+        "options": [
+          { "id": "A", "text": "केवल 1, 2 और 4 सही हैं" },
+          { "id": "B", "text": "केवल 1 और 2 सही हैं" },
+          { "id": "C", "text": "केवल 2, 3 और 4 सही हैं" },
+          { "id": "D", "text": "सभी सही हैं" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "कथन 1, 2 और 4 सही हैं। NHRC की सिफारिशें सलाहकारी होती हैं, बाध्यकारी नहीं। NHRC को contempt power नहीं है, इसलिए summon ignore करने पर सीधे सजा नहीं दे सकता। NHRC केवल 1 वर्ष के भीतर हुई घटनाओं की जांच कर सकता है। लेकिन कथन 3 गलत है — NHRC सशस्त्र बलों की जांच के लिए केंद्र सरकार की अनुमति चाहिए। यह BPSC का क्लासिक multi-statement trap है।"
+      },
+      "navigation": {
+        "next": "card_39_pyq_assertion_reason",
+        "button_text": "PYQ Practice ➔"
+      }
+    },
+    {
+      "card_id": "card_39_pyq_assertion_reason",
+      "card_slug": "card_39_pyq_assertion_reason",
+      "type": "quiz",
+      "concept_id": "nhrc_pyq_assertion_reason",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 45
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): NHRC एक statutory body है।\nReason (R): NHRC की स्थापना Protection of Human Rights Act, 1993 के तहत हुई थी, न कि संविधान के किसी अनुच्छेद से।\n\nसही विकल्प चुनें:",
+        "options": [
+          { "id": "A", "text": "A और R दोनों सही हैं, और R, A की सही व्याख्या है" },
+          { "id": "B", "text": "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है" },
+          { "id": "C", "text": "A सही है लेकिन R गलत है" },
+          { "id": "D", "text": "A गलत है लेकिन R सही है" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Assertion और Reason दोनों सही हैं, और Reason, Assertion की सही व्याख्या करता है। NHRC एक statutory body है क्योंकि यह Parliament द्वारा पारित Protection of Human Rights Act, 1993 के तहत बनाई गई है। यह संविधान (Constitutional Body) के तहत नहीं बनी है। यह UPSC Prelims और BPSC में बहुत पूछा जाने वाला assertion-reason format है।"
+      },
+      "navigation": {
+        "next": "card_40_summary_officer_revision",
+        "button_text": "Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_40_summary_officer_revision",
+      "card_slug": "card_40_summary_officer_revision",
+      "type": "summary",
+      "concept_id": "nhrc_full_chapter_summary",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 45
+      },
+      "summary_payload": {
+        "title": "⚡ NHRC Officer-Level Quick Revision",
+        "revision_points": [
+          {
+            "topic": "🔹 Origin & Legal Basis",
+            "point": "NHRC = Statutory Body (not Constitutional) | Act: Protection of Human Rights Act, 1993 | Inspiration: Paris Principles, 1991"
+          },
+          {
+            "topic": "🔹 Composition & Appointment",
+            "point": "Chairperson: Retired CJI | Members: SC/HC Judges + HR experts + Ex-officio (NCM, SC, ST, NCW, NCPCR) | Total 7 members | Appointment: President on recommendation of 6-member committee (PM, Speaker, Dy Chairman RS, LoP LS/RS, Home Minister)"
+          },
+          {
+            "topic": "🔹 Tenure & Removal",
+            "point": "Tenure: 3 years YA 70 years age (whichever earlier) | Removal: Supreme Court inquiry + President's order (same as SC Judge removal)"
+          },
+          {
+            "topic": "🔹 Powers & Functions",
+            "point": "Inquiry (suo-moto + complaint-based) | Advisory (recommendations — NOT binding) | Quasi-judicial (summon, evidence, jail visit) | NO contempt power | Research & Awareness"
+          },
+          {
+            "topic": "🔹 Major Limitations (PYQ Traps)",
+            "point": "1-year time limit | Armed Forces — need Central Govt permission | Recommendations — advisory, NOT binding | NO contempt power | Annual Report to Parliament (both Houses)"
+          },
+          {
+            "topic": "🔹 SHRC (State Level)",
+            "point": "Optional for states | Chairperson: Retired HC Chief Justice | Appointed by Governor | Same tenure: 3 years/70 years | State matters only | NHRC can transfer cases from SHRC"
+          },
+          {
+            "topic": "🔹 2019 Amendment",
+            "point": "NCW & NCPCR Chairpersons added as ex-officio members | Tenure made flexible ('as prescribed' by Govt rules) | Current: 3 years/70 years"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_41_final_quiz_q1",
+        "button_text": "Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_41_final_quiz_q1",
+      "card_slug": "card_41_final_quiz_q1",
+      "type": "final_quiz",
+      "concept_id": "nhrc_final_assessment_q1",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 45
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार कीजिए:\n1. NHRC की स्थापना संविधान के अनुच्छेद 32 के तहत हुई थी।\n2. NHRC का Chairperson सेवानिवृत्त Chief Justice of India होता है।\n3. NHRC सशस्त्र बलों के विरुद्ध स्वतंत्र रूप से जांच कर सकता है।\n4. NHRC की सिफारिशें सरकार पर बाध्यकारी होती हैं।\n\nउपर्युक्त में से कौन से कथन सही हैं?",
+        "options": [
+          { "id": "A", "text": "केवल 1 और 2" },
+          { "id": "B", "text": "केवल 2" },
+          { "id": "C", "text": "केवल 2 और 3" },
+          { "id": "D", "text": "केवल 1, 2 और 4" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "केवल कथन 2 सही है। कथन 1 गलत है क्योंकि NHRC की स्थापना Protection of Human Rights Act, 1993 के तहत हुई, न कि संविधान के अनुच्छेद 32 से। कथन 3 गलत है क्योंकि NHRC सशस्त्र बलों की जांच के लिए केंद्र सरकार की अनुमति चाहिए। कथन 4 गलत है क्योंकि NHRC की सिफारिशें केवल सलाहकारी होती हैं, बाध्यकारी नहीं। यह UPSC Prelims स्तर का multi-statement question है।"
+      },
+      "navigation": {
+        "next": "card_42_final_quiz_q2",
+        "button_text": "Q2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_42_final_quiz_q2",
+      "card_slug": "card_42_final_quiz_q2",
+      "type": "final_quiz",
+      "concept_id": "nhrc_final_assessment_q2",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 45
+      },
+      "quiz_payload": {
+        "question": "NHRC और SHRC के संदर्भ में निम्नलिखित युग्मों पर विचार कीजिए:\n\n1. NHRC Chairperson — सेवानिवृत्त CJI\n2. SHRC Chairperson — सेवानिवृत्त HC Chief Justice\n3. NHRC का कार्यकाल — 5 वर्ष या 70 वर्ष\n4. SHRC का कार्यकाल — 3 वर्ष या 70 वर्ष\n\nउपर्युक्त में से कौन से युग्म सही सुमेलित हैं?",
+        "options": [
+          { "id": "A", "text": "केवल 1, 2 और 3" },
+          { "id": "B", "text": "केवल 1, 2 और 4" },
+          { "id": "C", "text": "केवल 1 और 2" },
+          { "id": "D", "text": "सभी सही हैं" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "युग्म 1, 2 और 4 सही सुमेलित हैं। युग्म 3 गलत है क्योंकि NHRC का कार्यकाल 3 वर्ष या 70 वर्ष की आयु है, 5 वर्ष नहीं। यह बहुत बड़ा BPSC trap है जहां deliberately 5 वर्ष लिखा जाता है। NHRC और SHRC दोनों का कार्यकाल समान है: 3 वर्ष या 70 वर्ष, जो भी पहले हो। यह matching-type question BPSC में बार-बार पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_43_final_quiz_q3",
+        "button_text": "Q3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_43_final_quiz_q3",
+      "card_slug": "card_43_final_quiz_q3",
+      "type": "final_quiz",
+      "concept_id": "nhrc_final_assessment_q3",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 45
+      },
+      "quiz_payload": {
+        "question": "2019 के Protection of Human Rights (Amendment) Act के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n1. National Commission for Women की Chairperson को NHRC में ex-officio member बनाया गया।\n2. NHRC के Members का कार्यकाल 5 वर्ष से बढ़ाकर 6 वर्ष किया गया।\n3. National Commission for Protection of Child Rights की Chairperson को NHRC में शामिल किया गया।\n\nउपर्युक्त में से कौन से कथन सही हैं?",
+        "options": [
+          { "id": "A", "text": "केवल 1 और 2" },
+          { "id": "B", "text": "केवल 1 और 3" },
+          { "id": "C", "text": "केवल 2 और 3" },
+          { "id": "D", "text": "सभी सही हैं" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "कथन 1 और 3 सही हैं। 2019 के Amendment में NCW और NCPCR के Chairpersons को NHRC में ex-officio members बनाया गया। कथन 2 गलत है क्योंकि Members का कार्यकाल 5 या 6 वर्ष नहीं किया गया; यह पहले से ही 3 वर्ष या 70 वर्ष है और यही बना रहा। 2019 Amendment ने tenure को 'as prescribed' बनाया लेकिन currently 3 वर्ष ही है। यह 2020-2023 के UPSC Prelims में बार-बार पूछा गया है।"
+      },
+      "navigation": {
+        "next": "card_44_mnemonic_card",
+        "button_text": "Mnemonic Trick ➔"
+      }
+    },
+    {
+      "card_id": "card_44_mnemonic_card",
+      "card_slug": "card_44_mnemonic_card",
+      "type": "chat",
+      "concept_id": "nhrc_mnemonic_tricks",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 45
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, itna sab kaise yaad rakhu exam mein? Koi shortcut hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! Kuch mnemonics bana leta hoon:\n\n🔹 NHRC Chairperson: 'CJI Retired' (C = Chief Justice of India)\n🔹 SHRC Chairperson: 'HC Chief' (High Court Chief Justice)\n🔹 Tenure: '3-70' (3 years YA 70 age) — dono ke liye same!\n🔹 Time Limit: '1 Year Rule' — 1 saal se purana case nahi\n🔹 Armed Forces: 'Need Permission' — directly nahi\n🔹 Recommendations: 'Advisory Only' — binding nahi"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to easy ho gaya Sir! Thank you!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ek aur: Ex-officio members yaad karne ke liye 'MSCWC' — Minorities, SC, ST, Women, Child. Yeh 5 Commission ke Heads NHRC mein automatically members hain! Ab tum BPSC officer level questions solve kar sakte ho! 💪"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_final_milestone",
+        "button_text": "Chapter Complete ➔"
+      }
+    },
+    {
+      "card_id": "card_45_final_milestone",
+      "card_slug": "card_45_final_milestone",
+      "type": "milestone",
+      "concept_id": "nhrc_chapter_complete",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 45
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "National Human Rights Commission (NHRC) — Complete",
+        "xp_earned": 100,
+        "milestone_progress": "Full Chapter Clear ✅",
+        "motivational_quote": "Congratulations! 🎉 आपने NHRC का पूरा chapter conquer कर लिया — Origin से लेकर 2019 Amendment तक, NHRC vs SHRC, Powers, Limitations, और सभी PYQ traps! अब आप BPSC, UPSC, SSC, Railway में NHRC से related किसी भी multi-statement, assertion-reason question को solve कर सकते हैं! Keep learning, keep growing! 🚀📚"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Home 🏠"
+      }
+    }
+  ]
+}
+```
