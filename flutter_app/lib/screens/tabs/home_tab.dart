@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../widgets/home_widgets.dart';
 import '../../widgets/latest_jobs_widget.dart';
-import '../../widgets/daily_bulletin_widget.dart'; // 👈 1. IMPORT NEW BULLETIN WIDGET
+import '../../widgets/daily_bulletin_widget.dart';
+import '../../widgets/trust_hero_banner.dart';
+import '../../widgets/launch_roadmap_card.dart';
 import '../sprint_challenge_screen.dart';
 
 class HomeTab extends StatefulWidget {
@@ -35,7 +37,7 @@ class HomeTab extends StatefulWidget {
 }
 
 class _HomeTabState extends State<HomeTab> {
-  // 🔑 Keys to trigger Refresh on Pull-to-Refresh
+  // GlobalKeys for Pull-To-Refresh Trigger
   final GlobalKey<LatestJobsWidgetState> _jobsWidgetKey = GlobalKey<LatestJobsWidgetState>();
   final GlobalKey<DailyBulletinWidgetState> _bulletinWidgetKey = GlobalKey<DailyBulletinWidgetState>();
 
@@ -45,7 +47,6 @@ class _HomeTabState extends State<HomeTab> {
       color: const Color(0xFF4F46E5),
       backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
       onRefresh: () async {
-        // 🔄 PULL-TO-REFRESH: Both Widgets Refresh Simultaneously
         await Future.wait<dynamic>([
           _bulletinWidgetKey.currentState?.fetchDailyBulletins(forceRefresh: true) ?? Future.value(),
           _jobsWidgetKey.currentState?.fetchLatestJobs() ?? Future.value(),
@@ -63,18 +64,18 @@ class _HomeTabState extends State<HomeTab> {
               const SizedBox(height: 16),
             ],
 
-            // 🛡️ 2. HERO TRUST BANNER
-            _buildTrustHeroBanner(),
+            // 🛡️ 2. HERO TRUST BANNER WIDGET
+            TrustHeroBannerWidget(isDarkMode: widget.isDarkMode),
             const SizedBox(height: 18),
 
-            // 📰 3. CLEAN & SEPARATED DAILY BULLETIN WIDGET
+            // 📰 3. DAILY BULLETIN WIDGET
             DailyBulletinWidget(
               key: _bulletinWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 📢 4. LATEST JOBS ALERT WIDGET
+            // 📢 4. LATEST JOBS WIDGET
             LatestJobsWidget(
               key: _jobsWidgetKey,
               isDarkMode: widget.isDarkMode,
@@ -97,136 +98,17 @@ class _HomeTabState extends State<HomeTab> {
             EligibilityCheckerWidget(isDarkMode: widget.isDarkMode, onTapUrl: widget.onTapUrl),
             const SizedBox(height: 18),
 
-            // 📅 9. LAUNCH ROADMAP
-            _buildLaunchRoadmapCard(),
+            // 📅 9. LAUNCH ROADMAP WIDGET
+            LaunchRoadmapCardWidget(
+              appConfig: widget.appConfig,
+              isDarkMode: widget.isDarkMode,
+            ),
             const SizedBox(height: 18),
 
             // 10. TELEGRAM COMMUNITY
             const TelegramCreatorWidget(),
           ],
         ),
-      ),
-    );
-  }
-
-  // 🛡️ HERO BANNER
-  Widget _buildTrustHeroBanner() {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: widget.isDarkMode
-              ? [const Color(0xFF1E1B4B), const Color(0xFF0F172A)]
-              : [const Color(0xFF312E81), const Color(0xFF1E293B)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(22),
-        boxShadow: [
-          BoxShadow(
-            color: const Color(0xFF312E81).withOpacity(widget.isDarkMode ? 0.35 : 0.2),
-            blurRadius: 16,
-            offset: const Offset(0, 6),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF59E0B).withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: const Color(0xFFF59E0B), width: 1),
-                ),
-                child: const Row(
-                  children: [
-                    Text('🛡️ ', style: TextStyle(fontSize: 10)),
-                    Text(
-                      'STUDENT-FIRST INITIATIVE',
-                      style: TextStyle(
-                        color: Color(0xFFFBBF24),
-                        fontSize: 10,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 0.3,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.12),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: const Text(
-                  'BPSC • BSSC • SSC',
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 10,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 14),
-          RichText(
-            text: const TextSpan(
-              children: [
-                TextSpan(
-                  text: 'Mehnga Subscription Kyun?\n',
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
-                    height: 1.3,
-                  ),
-                ),
-                TextSpan(
-                  text: 'Padhai Pe Sabka Haq Hai! 🎓',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w800,
-                    height: 1.3,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 12),
-          Container(
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.06),
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: Colors.white.withOpacity(0.12)),
-            ),
-            child: Row(
-              children: [
-                const Icon(Icons.verified_rounded, size: 16, color: Color(0xFF22C55E)),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Text(
-                    '100% Free & Latest CBT Pattern Exam Mocks',
-                    style: TextStyle(
-                      color: Colors.white.withOpacity(0.9),
-                      fontSize: 11.5,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
       ),
     );
   }
@@ -594,99 +476,6 @@ class _HomeTabState extends State<HomeTab> {
           ),
         );
       }).toList(),
-    );
-  }
-
-  Widget _buildLaunchRoadmapCard() {
-    final List roadmapList = widget.appConfig['launch_roadmap'] ?? [
-      {"text": "🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs", "color": "0xFFFF4757"},
-      {"text": "✅ Just Added: Current Affairs Bulletin 2026", "color": "0xFF059669"},
-      {"text": "📌 Next Week: BPSC Mains Answer Writing Practice", "color": "0xFF2563EB"}
-    ];
-
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(
-          color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
-          width: 1.2,
-        ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(6),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF2563EB).withOpacity(0.12),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: const Icon(Icons.rocket_launch_rounded, size: 16, color: Color(0xFF2563EB)),
-              ),
-              const SizedBox(width: 8),
-              Text(
-                'Launch Roadmap & Live Updates',
-                style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  fontSize: 14.5,
-                  color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 14),
-          ...roadmapList.map((item) {
-            final String text = item['text'] ?? '';
-            Color textColor = const Color(0xFF2563EB);
-            try {
-              if (item['color'] != null) textColor = Color(int.parse(item['color']));
-            } catch (_) {}
-
-            return Container(
-              margin: const EdgeInsets.only(bottom: 8),
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-              decoration: BoxDecoration(
-                color: widget.isDarkMode
-                    ? const Color(0xFF0F172A).withOpacity(0.5)
-                    : const Color(0xFFE2E8F0),
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(
-                  color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
-                  width: 0.8,
-                ),
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    width: 8,
-                    height: 8,
-                    decoration: BoxDecoration(
-                      color: textColor,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Text(
-                      text,
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: widget.isDarkMode ? Colors.white.withOpacity(0.9) : const Color(0xFF1E293B),
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            );
-          }),
-        ],
-      ),
     );
   }
 }
