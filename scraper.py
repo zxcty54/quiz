@@ -27,8 +27,8 @@ OUTPUT_FILE = "rawnews.json"
 TIMEOUT = 25
 MAX_PER_SOURCE = 15
 
-MIN_CONTENT_CHARS = 200
-MIN_CONTENT_WORDS = 40
+MIN_CONTENT_CHARS = 400
+MIN_CONTENT_WORDS = 150
 MAX_CONTENT_CHARS = 25000  # Strictly enforce max 25k characters (~4000-5000 words)
 
 # Rolling 36 Hours Window for max coverage
