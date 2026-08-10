@@ -39,10 +39,10 @@ except ImportError:
 
 OUTPUT_FILE = "rawnews.json"
 TIMEOUT = 25
-MAX_PER_CATEGORY = 5
+MAX_PER_CATEGORY = 10
 
-MIN_CONTENT_WORDS = 60      # Minimum 60 words for full articles
-MAX_CONTENT_WORDS = 1500    # Maximum 1500 words limit
+MIN_CONTENT_WORDS = 40      # Minimum 40 words for full articles
+MAX_CONTENT_WORDS = 2000    # Maximum 2000 words limit
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -61,7 +61,7 @@ HEADERS = {
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 # ============================================================
-# EXCLUDE KEYWORDS BLACKLIST
+# EXCLUDE KEYWORDS BLACKLIST (Crime & Non-Bihar Local States)
 # ============================================================
 
 EXCLUDE_KEYWORDS = [
@@ -69,20 +69,8 @@ EXCLUDE_KEYWORDS = [
     "bjp", "congress", "rjd", "jdu", "aap", "election campaign", "rally", "neta", "mp", "mla",
     "party", "opposition", "voter", "vote", "seat", "by-poll",
     "uttar pradesh news", "madhya pradesh news", "rajasthan news", "maharashtra news", "mumbai news",
-    "delhi news", "punjab news", "haryana news", "karnataka news", "tamil nadu news", "kerala news",
-    "yogi", "siddaramaiah", "stalin", "mamata", "kejriwal", "hemant", "fadnavis", "shinde", "gehlot", "chouhan"
+    "delhi news", "punjab news", "haryana news", "karnataka news", "tamil nadu news", "kerala news"
 ]
-
-CATEGORY_VERIFICATION_KEYWORDS = {
-    "Polity & Governance": ["supreme court", "high court", "bill", "act", "amendment", "constitutional", "election commission", "parliament", "judgement", "cabinet", "governance", "law", "मंत्रिमंडल", "विधेयक", "अधिनियम"],
-    "Govt Schemes & Welfare": ["scheme", "yojana", "welfare", "pradhan mantri", "subsidy", "beneficiary", "mission", "pension", "portal", "grant", "allowance", "financial assistance", "योजना", "कल्याण", "प्रधानमंत्री", "लाभार्थी"],
-    "Economy & Banking": ["rbi", "repo rate", "gdp", "inflation", "gst", "budget", "sebi", "banking", "economy", "finance", "fiscal", "export", "import", "taxation", "sensex", "वित्त", "आर्थिक", "बैंक", "बजट"],
-    "International Relations": ["bilateral", "g20", "brics", "quad", "sco", "summit", "diplomatic", "mou", "pact", "foreign policy", "envoy", "ambassador", "treaty", "द्विपक्षीय", "शिखर सम्मेलन", "समझौता"],
-    "Science, Tech & Defense": ["isro", "nasa", "drdo", "satellite", "defense", "military", "exercise", "navy", "army", "air force", "missile", "artificial intelligence", "technology", "अंतरिक्ष", "रक्षा", "सेना", "नौसेना", "उपग्रह"],
-    "Environment & Infrastructure": ["ramsar", "expressway", "renewable energy", "gi tag", "tiger reserve", "solar", "climate change", "pollution", "smart city", "metro", "green hydrogen", "पर्यावरण", "मेट्रो", "एक्सप्रेसवे"],
-    "Bihar Schemes & Welfare": ["bihar", "mukhyamantri", "scheme", "yojana", "patna", "welfare", "subsidy", "bihar cabinet", "बिहार", "मुख्यमंत्री", "पटना"],
-    "Bihar Development": ["bihar", "patna", "expressway", "metro", "infrastructure", "bridge", "development", "project", "बिहार", "पटना", "विकास", "पुल"]
-}
 
 def check_blacklist_reason(title, content=""):
     text = (title + " " + content).lower()
@@ -90,15 +78,6 @@ def check_blacklist_reason(title, content=""):
         if re.search(r'\b' + re.escape(bad_word) + r'\b', text):
             return bad_word
     return None
-
-def verify_category_relevance(title, content, category):
-    keywords = CATEGORY_VERIFICATION_KEYWORDS.get(category, [])
-    if not keywords: return True
-    full_text = (title + " " + content).lower()
-    for kw in keywords:
-        if re.search(r'\b' + re.escape(kw) + r'\b', full_text):
-            return True
-    return False
 
 def now_ist(): return datetime.now(IST)
 def debug(msg): print(f"🔍 {msg}")
@@ -256,7 +235,7 @@ def fetch_web_article(url):
 # ITEM BUILDER
 # ============================================================
 
-def make_item(source, title, url, date=None, content="", item_type="Google News", category="General"):
+def make_item(source, title, url, date=None, content="", item_type="General News", category="General"):
     clean_title_str = clean_title(title)
     clean_url_str = clean_url(url)
     clean_content_str = clean_text(content)
@@ -272,15 +251,10 @@ def make_item(source, title, url, date=None, content="", item_type="Google News"
         warn(f"REJECTED ({total_words} words < min {MIN_CONTENT_WORDS}) | {clean_title_str[:50]}")
         return None
 
-    # STRICT RULE 3: Category Verification
-    if not verify_category_relevance(clean_title_str, clean_content_str, category):
-        warn(f"REJECTED (Category Mismatch '{category}') | {clean_title_str[:50]}")
-        return None
-
     if total_words > MAX_CONTENT_WORDS:
         clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
 
-    # STRICT RULE 4: Blacklist Check
+    # STRICT RULE 3: Blacklist Check
     matched_bad_word = check_blacklist_reason(clean_title_str, clean_content_str)
     if matched_bad_word:
         warn(f"REJECTED (Blacklisted: '{matched_bad_word}') | {clean_title_str[:50]}")
@@ -288,7 +262,7 @@ def make_item(source, title, url, date=None, content="", item_type="Google News"
 
     parsed_date = date or now_ist()
 
-    success(f"ACCEPTED | Words: {word_count(clean_content_str)} | Category: {category} | Title: {clean_title_str[:50]}")
+    success(f"ACCEPTED | Words: {word_count(clean_content_str)} | Title: {clean_title_str[:50]}")
 
     return {
         "source": source,
@@ -331,9 +305,10 @@ BIHAR_CATEGORIES = {
     "Bihar Development": '("Bihar Expressway" OR "Patna Metro" OR "Bihar Infrastructure" OR "Bihar Development")'
 }
 
+# ALL PIB FEEDS INCLUDED
 PIB_HINDI_FEEDS = {
-    "Economy & Banking": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
-    "Polity & Governance": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1"
+    "PIB General Release": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1",
+    "PIB Finance & Economy": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3"
 }
 
 def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
@@ -380,17 +355,16 @@ def fetch_google_news_feed(categories_dict, source_label, is_bihar=False):
 
     return deduplicate(category_results)
 
-def fetch_pib_news():
-    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING SOURCE: PIB Official Hindi Feeds\n" + "=" * 70)
+def fetch_all_pib_news():
+    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING ALL PIB HINDI RELEASES\n" + "=" * 70)
     pib_results = []
 
-    for cat_name, feed_url in PIB_HINDI_FEEDS.items():
+    for feed_name, feed_url in PIB_HINDI_FEEDS.items():
         feed = feedparser.parse(feed_url)
         entries = feed.entries or []
-        debug(f"PIB RSS returned {len(entries)} items for [{cat_name}]")
+        debug(f"PIB RSS returned {len(entries)} raw items for [{feed_name}]")
 
-        count = 0
-        for entry in entries[:3]:
+        for entry in entries:  # PIB Feed ka sabhi item process hoga
             title = clean_title(getattr(entry, 'title', ''))
             link = clean_url(getattr(entry, 'link', ''))
 
@@ -408,25 +382,25 @@ def fetch_pib_news():
                 date=now_ist(),
                 content=content,
                 item_type="National News",
-                category=cat_name
+                category="PIB Release"
             )
 
             if obj:
                 pib_results.append(obj)
-                count += 1
 
     return deduplicate(pib_results)
 
 def build_news():
     national = fetch_google_news_feed(NATIONAL_CATEGORIES, "National", is_bihar=False)
-    pib_news = fetch_pib_news()
-    national = deduplicate(national + pib_news)
+    pib_news = fetch_all_pib_news()
     
+    national = deduplicate(national + pib_news)
     bihar = fetch_google_news_feed(BIHAR_CATEGORIES, "Bihar", is_bihar=True)
 
     breakdown = {
         "Google News National": len(national),
-        "Google News Bihar": len(bihar)
+        "Google News Bihar": len(bihar),
+        "PIB Releases": len(pib_news)
     }
 
     return national, bihar, breakdown
