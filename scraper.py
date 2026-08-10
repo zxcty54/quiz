@@ -135,6 +135,16 @@ def clean_text(text):
 
 def clean_title(title):
     title = clean_text(title)
+
+    # NAVIGATION & BOILERPLATE TITLES BLOCKING
+    junk_titles = [
+        "skip to main content", "skip to content", "home", "about us", 
+        "contact us", "feedback", "sitemap", "disclaimer", "privacy policy",
+        "accessibility options", "screen reader access", "search"
+    ]
+    if title.lower().strip() in junk_titles or len(title.strip()) < 15:
+        return ""
+
     title = re.sub(
         r'\s*[-|–—]\s*(News On AIR|Prasar Bharati|MyGov)\s*$',
         '',
@@ -1088,7 +1098,7 @@ def build_news():
 
     print(f"\n🇮🇳 National / Other : {len(national)}")
     print(f"🏛️ Bihar               : {len(bihar)}")
-    print(f"📰 Total               : {len(all_results)}")
+    print(f"📰 Total                : {len(all_results)}")
 
     print("\n⚠️ SOURCE ZERO REPORT")
     for source, count in breakdown.items():
