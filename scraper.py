@@ -32,10 +32,10 @@ except ImportError:
 
 OUTPUT_FILE = "rawnews.json"
 TIMEOUT = 20
-MAX_PER_SOURCE = 5
+MAX_PER_SOURCE = 2
 
 MIN_CONTENT_WORDS = 60      # Strictly Minimum 60 words required
-MAX_CONTENT_WORDS = 500     # Hard Limit 500 words to strictly avoid "line too large" editor warning
+MAX_CONTENT_WORDS = 300     # Hard Limit 500 words to strictly avoid "line too large" editor warning
 
 # STRICT 24-HOUR ROLLING WINDOW
 DEFAULT_MAX_AGE_HOURS = 24
