@@ -1,0 +1,2170 @@
+```json
+{
+  "topic_id": "polity_governor_cm_council",
+  "topic_title": "Governor, Chief Minister & Council of Ministers",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "Governor, Chief Minister & Council of Ministers",
+        "icon": "🏛️",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "राज्यपाल की संवैधानिक स्थिति और नियुक्ति प्रक्रिया",
+          "मुख्यमंत्री और मंत्रिपरिषद की शक्तियां और कार्य",
+          "राज्यपाल की विवेकाधीन शक्तियां (Discretionary Powers)",
+          "BPSC में पूछे जाने वाले Multi-Statement Traps",
+          "केंद्र-राज्य संबंध और राज्यपाल की भूमिका"
+        ],
+        "estimated_time": "50 minutes",
+        "total_concepts": 9
+      },
+      "navigation": {
+        "next": "card_02_raj_bhavan_intro",
+        "button_text": "शुरू करें ➔"
+      }
+    },
+    {
+      "card_id": "card_02_raj_bhavan_intro",
+      "card_slug": "card_02_raj_bhavan_intro",
+      "type": "chat",
+      "concept_id": "governor_introduction",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne देखा होगा हर राज्य में एक Raj Bhavan होता है - जैसे Patna में Bihar का Raj Bhavan। वहां कौन रहता है?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, Governor रहते हैं! लेकिन मुझे लगता था Governor ही राज्य को चलाते हैं जैसे President देश को चलाते हैं!"
+        },
+        {
+          "speaker": "aman",
+          "text": "बहुत अच्छी comparison! लेकिन यहीं BPSC का सबसे बड़ा trap है। जैसे President 'Nominal Head' हैं केंद्र में, वैसे ही Governor राज्य का 'Nominal/Constitutional Head' है। असली शक्ति किसके पास है?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa... तो मुख्यमंत्री और उनकी Council के पास real power होगी?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_nominal_real_state",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_03_nominal_real_state",
+      "card_slug": "card_03_nominal_real_state",
+      "type": "chat",
+      "concept_id": "governor_nominal_cm_real",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Article 153 कहता है - हर राज्य का एक Governor होगा। Article 163 कहता है - Governor को aid and advice देने के लिए एक Council of Ministers होगी जिसका head मुख्यमंत्री होगा।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab केंद्र जैसा ही structure है - Governor = President, CM = PM!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect analogy! लेकिन एक बड़ा difference है। President तो elected होते हैं Electoral College द्वारा, लेकिन Governor को कौन नियुक्त करता है? ⭐ BPSC Favorite: Governor को राष्ट्रपति नियुक्त करते हैं Article 155 के तहत। यानी Governor केंद्र सरकार का representative है राज्य में!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Toh Governor election से नहीं आते, appointment से आते हैं!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_governor_appointment",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_04_governor_appointment",
+      "card_slug": "card_04_governor_appointment",
+      "type": "chat",
+      "concept_id": "governor_appointment_process",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 155: राष्ट्रपति Governor को नियुक्त करते हैं। लेकिन वास्तव में Prime Minister और Cabinet की सलाह पर ही नियुक्ति होती है। एक और महत्वपूर्ण बात - एक ही व्यक्ति को दो या अधिक राज्यों का Governor नियुक्त किया जा सकता है (Article 153)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek hi Governor दो states के लिए? Ye कैसे possible है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ SSC & Railway Trap! हाँ, छोटे या पड़ोसी राज्यों के लिए ऐसा होता है। उदाहरण: कभी-कभी Punjab और Haryana, या Manipur और Tripura का एक ही Governor होता है। इससे खर्च कम होता है। लेकिन ध्यान दो - यह President की power है, automatic नहीं होता।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Ab Governor बनने के लिए क्या qualifications चाहिए?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_governor_qualifications",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_05_governor_qualifications",
+      "card_slug": "card_05_governor_qualifications",
+      "type": "chat",
+      "concept_id": "governor_eligibility_criteria",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 157 में Governor की qualifications दी गई हैं:\n(1) भारत का नागरिक हो\n(2) 35 वर्ष की आयु पूरी कर चुका हो\n\nबस इतना ही! कोई educational qualification नहीं चाहिए। लेकिन Article 158 में कुछ disqualifications हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir disqualifications kya hain? Matlab कौन Governor नहीं बन सकता?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Article 158(2): Governor संसद या राज्य विधानमंडल का सदस्य नहीं हो सकता। अगर कोई MP/MLA Governor बनता है तो उसकी seat खाली हो जाती है। साथ ही वो कोई profit का पद धारण नहीं कर सकता - बस Governor का official residence और emoluments मिलते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab पूरी तरह Governor के काम में ही focus करना पड़ता है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_governor_term",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_06_governor_term",
+      "card_slug": "card_06_governor_term",
+      "type": "chat",
+      "concept_id": "governor_term_salary",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 156: Governor का कार्यकाल राष्ट्रपति के 'pleasure' (प्रसादपर्यंत) तक होता है। Normally 5 वर्ष माना जाता है, लेकिन President कभी भी हटा सकते हैं या कार्यकाल बढ़ा सकते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'pleasure' matlab? President जब चाहें हटा सकते hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ UPSC Pattern! Theoretically हाँ, लेकिन practically बिना कारण नहीं हटाते। यह एक controversial provision है। Supreme Court ने B.P. Singhal case (2010) में कहा था कि Governor को arbitrarily नहीं हटाया जा सकता। लेकिन constitutionally President को यह power है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye तो थोड़ा complex hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_sarkaria_commission",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_07_sarkaria_commission",
+      "card_slug": "card_07_sarkaria_commission",
+      "type": "chat",
+      "concept_id": "sarkaria_punchi_recommendations",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ruko, यहाँ important बात बताता हूँ। Sarkaria Commission (1983) और Punchhi Commission (2007) ने Governor की appointment और removal पर recommendations दी थीं। उन्होंने कहा:\n(1) Governor को 5 साल का पूरा term दिया जाए\n(2) उसी राज्य का निवासी Governor न बनाया जाए\n(3) केवल eminent persons को ही बनाया जाए"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir लेकिन ये तो recommendations हैं, law नहीं है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! ये सब conventions और recommendations हैं, binding नहीं। BPSC में अक्सर पूछते हैं - 'Sarkaria Commission की सिफारिशें constitutional provisions हैं' - यह WRONG है! ये केवल सुझाव हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Convention और Constitution में फर्क समझ आया!"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_quiz_governor_age",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_governor_age",
+      "card_slug": "card_08_quiz_governor_age",
+      "type": "quiz",
+      "concept_id": "governor_age_qualification_quiz",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "राज्यपाल बनने के लिए न्यूनतम आयु कितनी होनी चाहिए?",
+        "options": [
+          { "id": "A", "text": "25 वर्ष" },
+          { "id": "B", "text": "30 वर्ष" },
+          { "id": "C", "text": "35 वर्ष" },
+          { "id": "D", "text": "40 वर्ष" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 157 के अनुसार राज्यपाल बनने के लिए व्यक्ति की आयु कम से कम 35 वर्ष होनी चाहिए। यह राष्ट्रपति के लिए भी same है। Confusion trap: Lok Sabha के लिए 25, Rajya Sabha के लिए 30, लेकिन Governor/President के लिए 35 वर्ष।"
+      },
+      "navigation": {
+        "next": "card_09_quiz_governor_appointment",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_09_quiz_governor_appointment",
+      "card_slug": "card_09_quiz_governor_appointment",
+      "type": "quiz",
+      "concept_id": "governor_appointment_quiz",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "राज्यपाल की नियुक्ति कौन करता है?",
+        "options": [
+          { "id": "A", "text": "राज्य विधानसभा" },
+          { "id": "B", "text": "मुख्यमंत्री" },
+          { "id": "C", "text": "राष्ट्रपति" },
+          { "id": "D", "text": "प्रधानमंत्री" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ SSC Favorite! Article 155 के अनुसार राज्यपाल की नियुक्ति राष्ट्रपति करते हैं। हालांकि वास्तव में यह नियुक्ति PM और Cabinet की सलाह पर होती है। राज्यपाल केंद्र सरकार का representative होता है राज्य में।"
+      },
+      "navigation": {
+        "next": "card_10_quiz_two_states",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_10_quiz_two_states",
+      "card_slug": "card_10_quiz_two_states",
+      "type": "quiz",
+      "concept_id": "governor_multiple_states_quiz",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "क्या एक ही व्यक्ति को दो या अधिक राज्यों का राज्यपाल नियुक्त किया जा सकता है?",
+        "options": [
+          { "id": "A", "text": "नहीं, संविधान यह मना करता है" },
+          { "id": "B", "text": "हाँ, Article 153 इसकी अनुमति देता है" },
+          { "id": "C", "text": "केवल आपातकाल में" },
+          { "id": "D", "text": "केवल पड़ोसी राज्यों के लिए" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ Railway & BPSC Trap! Article 153 स्पष्ट रूप से कहता है कि राष्ट्रपति एक ही व्यक्ति को दो या अधिक राज्यों के लिए राज्यपाल नियुक्त कर सकते हैं। यह आमतौर पर छोटे या पड़ोसी राज्यों के लिए किया जाता है, लेकिन यह केवल convention है, constitutional restriction नहीं।"
+      },
+      "navigation": {
+        "next": "card_11_milestone_governor_basics",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_11_milestone_governor_basics",
+      "card_slug": "card_11_milestone_governor_basics",
+      "type": "milestone",
+      "concept_id": "governor_introduction_complete",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 1 COMPLETE!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "राज्यपाल का परिचय, नियुक्ति और योग्यताएं",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/9 Clear",
+        "motivational_quote": "Nominal Head लेकिन Important Position - राज्यपाल की basics अब आपकी मुट्ठी में!"
+      },
+      "navigation": {
+        "next": "card_12_governor_oath",
+        "button_text": "Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_12_governor_oath",
+      "card_slug": "card_12_governor_oath",
+      "type": "chat",
+      "concept_id": "governor_oath_administration",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, राष्ट्रपति को शपथ CJI दिलाते हैं - याद है? लेकिन Governor को शपथ कौन दिलाता है?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, शायद राज्य के High Court के Chief Justice?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Article 159: राज्यपाल को उस राज्य के High Court के Chief Justice (या उनकी अनुपस्थिति में सबसे senior judge) शपथ दिलाते हैं। Oath का format Third Schedule में दिया गया है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! State level पर High Court CJ, national level पर Supreme Court CJI!"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_governor_powers_intro",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_13_governor_powers_intro",
+      "card_slug": "card_13_governor_powers_intro",
+      "type": "chat",
+      "concept_id": "governor_powers_classification",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab आते हैं Governor की Powers पर! यहीं से BPSC के सारे tricky questions आते हैं। Powers को हम 7 categories में समझेंगे:\n(1) Executive\n(2) Legislative\n(3) Financial\n(4) Judicial\n(5) Discretionary (सबसे important!)\n(6) Special responsibilities\n(7) Ordinance making"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Discretionary powers matlab? और बाकी powers से कैसे अलग हैं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect question! ज्यादातर powers में Governor को Council of Ministers की advice माननी पड़ती है (जैसे President को)। लेकिन कुछ मामलों में Governor अपनी 'discretion' यानी विवेक से decision ले सकते हैं - बिना CM की सलाह के! यही सबसे controversial और exam-favorite part है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Matlab कुछ cases में Governor independent decision ले सकते hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_executive_powers",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_14_executive_powers",
+      "card_slug": "card_14_executive_powers",
+      "type": "chat",
+      "concept_id": "governor_executive_powers",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Executive Powers (Article 154-167):\n(1) मुख्यमंत्री की नियुक्ति\n(2) CM की सलाह पर अन्य मंत्रियों की नियुक्ति\n(3) Advocate General की नियुक्ति\n(4) State Public Service Commission के Chairman और members की नियुक्ति\n(5) Vice-Chancellors की नियुक्ति (universities के)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir CM की appointment kaise hoti hai? Koi rule hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Article 164(1): Governor उस व्यक्ति को CM नियुक्त करते हैं जो Vidhan Sabha में majority party का leader हो। यहाँ normally discretion नहीं है - clear majority होने पर। लेकिन अगर hung assembly हो (किसी को clear majority न हो), तब Governor अपनी discretion use करते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab जैसे President hung parliament में PM appointment में discretion use करते हैं!"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_cm_appointment_discretion",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_15_cm_appointment_discretion",
+      "card_slug": "card_15_cm_appointment_discretion",
+      "type": "chat",
+      "concept_id": "cm_appointment_hung_assembly",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC & UPSC Favorite Scenario! Hung Assembly में Governor की भूमिका:\n(1) सबसे बड़ी party/coalition के leader को invite करते हैं\n(2) उसे कुछ समय (normally 15 days) में majority prove करने को कहते हैं\n(3) अगर majority साबित नहीं हो पाती, तो दूसरी party को मौका देते हैं\n\nयहाँ Governor independent judgment use करते हैं - यह discretionary power है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir क्या Governor किसी को भी CM बना सकते hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Bommai Case (1994) में Supreme Court ने clear किया - Governor को constitutionally sound manner में काम करना होता है। वो arbitrarily किसी को भी CM नहीं बना सकते। Floor test करवाना mandatory है अगर majority पर doubt हो।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Supreme Court ने guidelines दी हैं Governor के discretion पर!"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_legislative_powers",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_16_legislative_powers",
+      "card_slug": "card_16_legislative_powers",
+      "type": "chat",
+      "concept_id": "governor_legislative_powers",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Legislative Powers:\n(1) राज्य विधानमंडल का हिस्सा हैं (Article 168 - Legislature = Governor + Vidhan Sabha + Vidhan Parishad if exists)\n(2) Bills पर assent देना\n(3) Vidhan Sabha को summon, prorogue और dissolve करना\n(4) Sessions के शुरू में address करना"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Governor के पास bhi veto powers hain kya जैसे President के पास?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! लेकिन ध्यान से सुनो - Governor के पास 4 options हैं जब कोई bill आता है:\n(1) Assent दे दें\n(2) Withhold करें (Absolute Veto)\n(3) Bill को reconsideration के लिए वापस भेजें (Suspensive Veto - लेकिन Money Bill पर नहीं)\n(4) ⭐ Special Power: Bill को राष्ट्रपति के विचार के लिए reserve कर दें (Article 200)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wait! राष्ट्रपति के लिए reserve? Ye तो नया option hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_reservation_president",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_17_reservation_president",
+      "card_slug": "card_17_reservation_president",
+      "type": "chat",
+      "concept_id": "bill_reservation_president",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ UPSC & BPSC High-Level Trap! Article 200 कहता है - Governor किसी भी bill को राष्ट्रपति के विचार के लिए reserve कर सकते हैं। दो cases होते हैं:\n\n(A) Compulsory Reservation: अगर bill High Court की powers को affect करता हो, तो राष्ट्रपति के लिए reserve करना अनिवार्य है।\n\n(B) Discretionary Reservation: Governor अपनी discretion से किसी भी विवादास्पद bill को राष्ट्रपति के लिए reserve कर सकते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab राष्ट्रपति फिर decide करेंगे कि bill को assent दें या नहीं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! और सबसे interesting बात - अगर राष्ट्रपति ने assent दे दिया, तो bill law बन जाता है। अगर राष्ट्रपति ने reconsideration के लिए वापस भेजा और State Legislature फिर से pass कर दिया, तो भी राष्ट्रपति को assent देना जरूरी नहीं है! यह President के case से अलग है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Matlab राष्ट्रपति state bill पर absolute veto use कर सकते hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_ordinance_power_governor",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_18_ordinance_power_governor",
+      "card_slug": "card_18_ordinance_power_governor",
+      "type": "chat",
+      "concept_id": "governor_ordinance_making",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 213: जब State Legislature का session नहीं चल रहा हो और तुरंत कानून बनाना जरूरी हो, तब Governor ordinance जारी कर सकते हैं। लेकिन यहाँ एक important condition है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir kya condition hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Trap! अगर ordinance उन मामलों से संबंधित है जिन पर bill बनाने के लिए राष्ट्रपति की पूर्व स्वीकृति चाहिए (जैसे कुछ financial matters), तो ordinance जारी करने से पहले भी राष्ट्रपति की अनुमति लेनी पड़ती है। Validity फिर भी 6 weeks है Legislature के reassemble होने के बाद।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Ordinance power bhi fully independent नहीं है Governor की!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_financial_powers",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_19_financial_powers",
+      "card_slug": "card_19_financial_powers",
+      "type": "chat",
+      "concept_id": "governor_financial_powers",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Financial Powers:\n(1) Money Bill केवल Governor की recommendation से ही Vidhan Sabha में introduce हो सकता है\n(2) Annual Financial Statement (State Budget) Governor के नाम से पेश होता है\n(3) Contingency Fund of State पर Governor का control\n(4) Finance Commission की सिफारिशों की implementation"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Judicial powers kya hain Governor की?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Article 161: Governor को भी pardoning power है, लेकिन President से कम। Governor केवल state laws के खिलाफ अपराधों में ही pardon दे सकते हैं। ⭐ Critical Difference: Governor मृत्युदंड को माफ नहीं कर सकते - केवल suspend, remit या commute कर सकते हैं। Death penalty pardon की power केवल President के पास है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye तो important difference hai President और Governor की powers में!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_quiz_veto_options",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz_veto_options",
+      "card_slug": "card_20_quiz_veto_options",
+      "type": "quiz",
+      "concept_id": "governor_veto_quiz",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "जब कोई बिल राज्यपाल के पास आता है, तो उनके पास कितने विकल्प होते हैं?",
+        "options": [
+          { "id": "A", "text": "2 विकल्प" },
+          { "id": "B", "text": "3 विकल्प" },
+          { "id": "C", "text": "4 विकल्प" },
+          { "id": "D", "text": "5 विकल्प" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ SSC & Railway Pattern! राज्यपाल के पास 4 विकल्प होते हैं: (1) Assent देना, (2) Withhold करना (Absolute Veto), (3) Reconsideration के लिए वापस भेजना (Suspensive Veto - Money Bill पर नहीं), (4) राष्ट्रपति के विचार के लिए Reserve करना (Article 200)। चौथा option Governor के लिए unique है।"
+      },
+      "navigation": {
+        "next": "card_21_quiz_death_penalty",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_death_penalty",
+      "card_slug": "card_21_quiz_death_penalty",
+      "type": "quiz",
+      "concept_id": "governor_pardon_death_quiz",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "राज्यपाल की क्षमादान शक्ति (Pardoning Power) के संदर्भ में कौन सा कथन सही है?",
+        "options": [
+          { "id": "A", "text": "राज्यपाल मृत्युदंड को पूर्ण रूप से क्षमा कर सकते हैं" },
+          { "id": "B", "text": "राज्यपाल मृत्युदंड को केवल suspend, remit या commute कर सकते हैं, पूर्ण क्षमा नहीं" },
+          { "id": "C", "text": "राज्यपाल के पास कोई pardoning power नहीं है" },
+          { "id": "D", "text": "राज्यपाल केवल court martial के मामलों में क्षमा दे सकते हैं" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC Favorite Trap! Article 161 के तहत राज्यपाल मृत्युदंड को पूर्ण रूप से क्षमा (Pardon) नहीं कर सकते - केवल suspend, remit या commute कर सकते हैं। मृत्युदंड को पूर्ण क्षमा करने की शक्ति केवल राष्ट्रपति (Article 72) के पास है। यह President और Governor की powers का महत्वपूर्ण अंतर है।"
+      },
+      "navigation": {
+        "next": "card_22_quiz_ordinance_validity",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_ordinance_validity",
+      "card_slug": "card_22_quiz_ordinance_validity",
+      "type": "quiz",
+      "concept_id": "governor_ordinance_validity_quiz",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "राज्यपाल द्वारा जारी अध्यादेश (Ordinance) की अधिकतम वैधता अवधि क्या है?",
+        "options": [
+          { "id": "A", "text": "विधानमंडल के पुनः समवेत होने से 4 सप्ताह" },
+          { "id": "B", "text": "विधानमंडल के पुनः समवेत होने से 6 सप्ताह" },
+          { "id": "C", "text": "जारी होने से 3 महीने" },
+          { "id": "D", "text": "जारी होने से 6 महीने" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 213: राज्यपाल द्वारा जारी ordinance की validity विधानमंडल के दोनों सदनों (यदि दो हों) या एक सदन के पुनः समवेत होने से 6 weeks (6 सप्ताह) तक होती है। यह राष्ट्रपति के ordinance (Article 123) के समान ही है। यदि इस अवधि में Legislature approve नहीं करता तो ordinance lapse हो जाता है।"
+      },
+      "navigation": {
+        "next": "card_23_milestone_powers",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_23_milestone_powers",
+      "card_slug": "card_23_milestone_powers",
+      "type": "milestone",
+      "concept_id": "governor_powers_complete",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "💪 MODULE 2 COMPLETE!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "राज्यपाल की शक्तियाँ (Executive, Legislative, Financial, Judicial)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/9 Clear",
+        "motivational_quote": "4 Veto Options, Bill Reservation, Ordinance Power - हर trap अब clear!"
+      },
+      "navigation": {
+        "next": "card_24_discretionary_intro",
+        "button_text": "Next: Discretionary Powers ➔"
+      }
+    },
+    {
+      "card_id": "card_24_discretionary_intro",
+      "card_slug": "card_24_discretionary_intro",
+      "type": "chat",
+      "concept_id": "discretionary_powers_introduction",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab आता है सबसे important और controversial part - Governor की Discretionary Powers! Article 163(1) कहता है - कुछ matters में Governor अपने विवेक से decision ले सकते हैं, Council of Ministers की advice binding नहीं होगी।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir लेकिन कौन से matters हैं जहां Governor independent decision ले सकते hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ UPSC & BPSC Gold Mine! यह constitution में clearly नहीं दिया गया - यही controversy है! लेकिन कुछ situations courts और conventions ने identify की हैं। आओ एक-एक करके समझते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye तो tricky lag raha hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_discretion_situations",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_25_discretion_situations",
+      "card_slug": "card_25_discretion_situations",
+      "type": "chat",
+      "concept_id": "discretionary_power_cases",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Governor अपनी discretion use कर सकते हैं:\n\n(1) ⭐ CM की appointment - जब hung assembly हो\n(2) ⭐ Vidhan Sabha को dissolve करना - जब CM ने majority खो दी हो\n(3) ⭐ Ministry की advice पर action - जब doubt हो कि Council of Ministers का Vidhan Sabha में majority है या नहीं\n(4) राष्ट्रपति को State administration पर report भेजना (Article 356 के लिए)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir तो basically जब majority unclear हो, तब Governor independent decision ले सकते hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! और एक special case है - कुछ राज्यों में Governor को extra discretionary powers मिली हैं। Article 371 में Special Provisions दिए गए हैं कुछ राज्यों के लिए।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kaunse states Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_special_provisions_371",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_26_special_provisions_371",
+      "card_slug": "card_26_special_provisions_371",
+      "type": "chat",
+      "concept_id": "article_371_special_states",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC & UPSC Favorite! Article 371 Series में special provisions:\n\n• Article 371A - Nagaland: Governor को law and order, tribal affairs में wide discretionary powers\n• Article 371G - Mizoram: Similar powers\n• Article 371H - Arunachal Pradesh\n• Article 371J - Karnataka (Hyderabad-Karnataka region development)\n\nइन states में Governor CM की advice के बिना भी कुछ decisions ले सकते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir iska matlab ये states अलग treatment पाते hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Special historical, cultural या geographical reasons से। उदाहरण: Nagaland में Governor अलग से decide करते हैं tribal land और customs के मामलों में। ये provisions tribal rights protect करने के लिए हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Special states = Extra discretionary powers!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_bommai_case",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_27_bommai_case",
+      "card_slug": "card_27_bommai_case",
+      "type": "chat",
+      "concept_id": "bommai_judgment_importance",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab एक landmark case जो हर UPSC/BPSC student को पता होना चाहिए - S.R. Bommai vs Union of India (1994)। यह case Governor की discretionary powers के misuse के बारे में था।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir क्या हुआ था इस case में?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Supreme Court ने important guidelines दीं:\n(1) Governor अपनी discretion का misuse नहीं कर सकते\n(2) अगर majority पर doubt हो, तो floor test mandatory है\n(3) Governor की Article 356 (President's Rule) की recommendation को court में challenge किया जा सकता है\n(4) Governor को apolitical तरीके से काम करना चाहिए - political interests serve नहीं करने चाहिए"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Court ने Governor की powers पर check लगाई!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_nabam_rebia_case",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_28_nabam_rebia_case",
+      "card_slug": "card_28_nabam_rebia_case",
+      "type": "chat",
+      "concept_id": "nabam_rebia_judgment",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "एक और recent important case - Nabam Rebia vs Deputy Speaker (2016), Arunachal Pradesh का मामला। Supreme Court ने कहा:\n\n(1) Governor Vidhan Sabha की proceedings में interfere नहीं कर सकते जब तक Assembly चल रही हो\n(2) Governor arbitrarily messages नहीं भेज सकते Speaker को\n(3) Governor Speaker के decisions को override नहीं कर सकते"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir तो Governor की powers पर और भी limitations आ गईं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Judiciary ने gradually Governor की unchecked discretion को limit किया है। Message यह है - Governor को constitutionally और democratically काम करना होगा, अपनी मनमानी नहीं चला सकते।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Cases ने Governor को accountable बनाया है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_quiz_discretion_cm",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_discretion_cm",
+      "card_slug": "card_29_quiz_discretion_cm",
+      "type": "quiz",
+      "concept_id": "governor_discretion_cm_quiz",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "राज्यपाल किस स्थिति में मुख्यमंत्री की नियुक्ति में अपनी विवेकाधीन शक्ति का प्रयोग कर सकते हैं?",
+        "options": [
+          { "id": "A", "text": "सभी स्थितियों में" },
+          { "id": "B", "text": "केवल जब विधानसभा में किसी दल को स्पष्ट बहुमत न हो (Hung Assembly)" },
+          { "id": "C", "text": "केवल Article 371 वाले राज्यों में" },
+          { "id": "D", "text": "राज्यपाल के पास यह शक्ति नहीं है" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC & UPSC Favorite! राज्यपाल आमतौर पर विधानसभा में बहुमत दल के नेता को CM नियुक्त करते हैं - यहाँ कोई discretion नहीं। लेकिन जब Hung Assembly हो (किसी दल को स्पष्ट बहुमत न हो), तब Governor अपने विवेक से सबसे बड़ी party/coalition के leader को invite करते हैं और majority prove करने को कहते हैं।"
+      },
+      "navigation": {
+        "next": "card_30_quiz_article_371a",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_article_371a",
+      "card_slug": "card_30_quiz_article_371a",
+      "type": "quiz",
+      "concept_id": "article_371a_quiz",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Article 371A किस राज्य के लिए विशेष प्रावधान करता है?",
+        "options": [
+          { "id": "A", "text": "Arunachal Pradesh" },
+          { "id": "B", "text": "Nagaland" },
+          { "id": "C", "text": "Mizoram" },
+          { "id": "D", "text": "Sikkim" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ SSC & Railway Pattern! Article 371A Nagaland के लिए विशेष प्रावधान करता है। इसके तहत Governor को tribal land, resources और customary laws के मामलों में विशेष discretionary powers मिली हैं। Similarly, Article 371G Mizoram के लिए और Article 371H Arunachal Pradesh के लिए है।"
+      },
+      "navigation": {
+        "next": "card_31_quiz_bommai_case",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quiz_bommai_case",
+      "card_slug": "card_31_quiz_bommai_case",
+      "type": "quiz",
+      "concept_id": "bommai_case_quiz",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "S.R. Bommai vs Union of India (1994) के संदर्भ में कौन सा कथन सही नहीं है?",
+        "options": [
+          { "id": "A", "text": "राज्यपाल की Article 356 की सिफारिश को न्यायालय में चुनौती दी जा सकती है" },
+          { "id": "B", "text": "बहुमत पर संदेह होने पर floor test अनिवार्य है" },
+          { "id": "C", "text": "राज्यपाल को पूर्ण स्वतंत्रता है मुख्यमंत्री को हटाने की" },
+          { "id": "D", "text": "राज्यपाल को apolitical तरीके से कार्य करना चाहिए" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ UPSC Pattern! Bommai case (1994) में Supreme Court ने स्पष्ट किया कि Governor को पूर्ण स्वतंत्रता नहीं है CM को हटाने की। यदि majority पर doubt हो, तो floor test mandatory है। Governor arbitrarily या political reasons से CM को dismiss नहीं कर सकते। यह judgment Governor की powers पर महत्वपूर्ण judicial check था।"
+      },
+      "navigation": {
+        "next": "card_32_milestone_discretion",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_32_milestone_discretion",
+      "card_slug": "card_32_milestone_discretion",
+      "type": "milestone",
+      "concept_id": "discretionary_powers_complete",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 3 COMPLETE!",
+        "badge_emoji": "⚡",
+        "completed_topic": "राज्यपाल की विवेकाधीन शक्तियाँ और Landmark Cases",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/9 Clear",
+        "motivational_quote": "Discretion कब, कहाँ, कैसे - Bommai और Nabam Rebia अब पूरी तरह clear!"
+      },
+      "navigation": {
+        "next": "card_33_cm_introduction",
+        "button_text": "Next: Chief Minister ➔"
+      }
+    },
+    {
+      "card_id": "card_33_cm_introduction",
+      "card_slug": "card_33_cm_introduction",
+      "type": "chat",
+      "concept_id": "chief_minister_introduction",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, अब आते हैं राज्य के असली boss पर - मुख्यमंत्री! जैसे PM केंद्र में real executive head हैं, वैसे ही CM राज्य में। Article 164 में CM की position दी गई है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir CM बनने के लिए कोई qualification chahiye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Important Point! Constitution में CM की कोई specific qualification नहीं दी गई - age, education कुछ भी नहीं! लेकिन वो State Legislature (Vidhan Sabha या Vidhan Parishad) का member होना चाहिए। अगर non-member CM बनता है, तो 6 महीने के अंदर member बनना पड़ता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab PM जैसा ही rule hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_cm_appointment_process",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_34_cm_appointment_process",
+      "card_slug": "card_34_cm_appointment_process",
+      "type": "chat",
+      "concept_id": "cm_appointment_details",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 164(1): राज्यपाल मुख्यमंत्री को नियुक्त करते हैं। Normally, विधानसभा में majority party का leader CM बनता है। CM ही अपनी Council of Ministers के बाकी members को चुनते हैं - फिर Governor उन्हें formally appoint करते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir क्या CM Vidhan Parishad (Upper House) से हो सकते hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Constitutionally कोई रोक नहीं, लेकिन यह बहुत rare है। Practically हमेशा Vidhan Sabha (Lower House) से ही CM बनते हैं क्योंकि वहीं असली power है - money bills वहीं से pass होते हैं और CM को Vidhan Sabha में majority चाहिए। इतिहास में कुछ ही cases हैं जब Vidhan Parishad member CM बने।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Real power Vidhan Sabha में hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_cm_term_removal",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_35_cm_term_removal",
+      "card_slug": "card_35_cm_term_removal",
+      "type": "chat",
+      "concept_id": "cm_tenure_removal",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "CM का कोई fixed term नहीं - जब तक Vidhan Sabha में majority का confidence है, तब तक CM रहते हैं। Normally Vidhan Sabha का term 5 साल है, तो CM भी 5 साल। Removal के तरीके:\n(1) Vidhan Sabha में no-confidence motion pass हो जाए\n(2) Resignation दे दें\n(3) Death"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir क्या Governor CM को हटा सकते hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Trap! Constitutionally Governor CM को dismiss कर सकते हैं, लेकिन केवल अगर यह clear हो कि CM ने Vidhan Sabha में majority खो दी है। Arbitrarily या political reasons से नहीं हटा सकते - Bommai judgment याद है? Floor test mandatory है doubt होने पर।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Majority ही सब कुछ decide करती hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_cm_powers",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_36_cm_powers",
+      "card_slug": "card_36_cm_powers",
+      "type": "chat",
+      "concept_id": "cm_powers_functions",
+      "level": 4,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "CM की Powers और Functions:\n(1) Council of Ministers का गठन - ministers को चुनना, portfolios allocate करना\n(2) Cabinet meetings की अध्यक्षता करना\n(3) Governor को सलाह देना - appointments, bills, dissolution etc.\n(4) Governor और Cabinet के बीच कड़ी - Cabinet decisions Governor को communicate करना CM की जिम्मेदारी"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir CM Leader of Vidhan Sabha bhi hote hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! CM Vidhan Sabha में Leader of the House होते हैं (अगर वो Vidhan Sabha member हों)। वो ही decide करते हैं कि कौन सा bill कब लाना है, legislature की business कैसे चलेगी। Government की policy direction CM ही देते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab राज्य का पूरा administration CM के control में!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_council_of_ministers",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_37_council_of_ministers",
+      "card_slug": "card_37_council_of_ministers",
+      "type": "chat",
+      "concept_id": "state_council_ministers_structure",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 163-164: राज्य में भी Council of Ministers होती है जो मुख्यमंत्री की अध्यक्षता में Governor को aid and advice देती है। Structure:\n\n(1) Cabinet Ministers - सबसे senior, major portfolios, Cabinet meetings में बैठते हैं\n(2) Ministers of State (MoS) - junior ministers\n(3) Ministers of State (Independent Charge) - अपने विभाग के प्रमुख"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Council of Ministers की size की कोई limit hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ SSC & Railway Favorite! Haan! 91st Amendment Act (2003) ने add किया - Council of Ministers की total संख्या Vidhan Sabha की total strength के 15% से ज्यादा नहीं हो सकती। Minimum 12 ministers होने चाहिए (छोटे राज्यों के लिए)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye तो important constitutional limit hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_collective_responsibility_state",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_38_collective_responsibility_state",
+      "card_slug": "card_38_collective_responsibility_state",
+      "type": "chat",
+      "concept_id": "collective_responsibility_state_level",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 164(2): Council of Ministers collectively Vidhan Sabha के प्रति उत्तरदायी है - बिल्कुल वैसे ही जैसे केंद्र में Lok Sabha के प्रति। Matlab अगर no-confidence motion pass हो जाए, तो पूरी Cabinet को resign करना पड़ता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir individual responsibility bhi hoti hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! हर Minister अपने विभाग के लिए individually responsible है। अगर किसी department में scam या failure हो, तो उस Minister को resign करना पड़ सकता है। लेकिन constitutionally main responsibility collective है Vidhan Sabha के प्रति।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect! Collective + Individual दोनों levels पर accountability!"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_quiz_cm_vidhan_parishad",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz_cm_vidhan_parishad",
+      "card_slug": "card_39_quiz_cm_vidhan_parishad",
+      "type": "quiz",
+      "concept_id": "cm_upper_house_quiz",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "क्या मुख्यमंत्री विधान परिषद (Vidhan Parishad) का सदस्य हो सकता है?",
+        "options": [
+          { "id": "A", "text": "नहीं, CM को विधानसभा का सदस्य होना अनिवार्य है" },
+          { "id": "B", "text": "हाँ, लेकिन व्यावहारिक रूप से यह बहुत दुर्लभ है" },
+          { "id": "C", "text": "केवल द्विसदनीय राज्यों में" },
+          { "id": "D", "text": "केवल राज्यपाल की अनुमति से" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Constitutionally कोई रोक नहीं है कि CM विधान परिषद का सदस्य हो, लेकिन व्यावहारिक रूप से यह बहुत दुर्लभ है। हमेशा विधानसभा (Lower House) से ही CM बनते हैं क्योंकि वहीं real power है - money bills, majority, no-confidence motion सब विधानसभा में होते हैं। विधान परिषद के प्रति Council कोई collective responsibility नहीं।"
+      },
+      "navigation": {
+        "next": "card_40_quiz_council_size",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_40_quiz_council_size",
+      "card_slug": "card_40_quiz_council_size",
+      "type": "quiz",
+      "concept_id": "council_size_limit_quiz",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "91वें संविधान संशोधन (2003) के अनुसार, राज्य में मंत्रिपरिषद की अधिकतम संख्या क्या हो सकती है?",
+        "options": [
+          { "id": "A", "text": "विधानसभा की कुल संख्या का 10%" },
+          { "id": "B", "text": "विधानसभा की कुल संख्या का 15%" },
+          { "id": "C", "text": "विधानसभा की कुल संख्या का 20%" },
+          { "id": "D", "text": "कोई सीमा नहीं" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ SSC & BPSC Pattern! 91st Amendment Act (2003) ने Article 164(1A) जोड़ा जिसके अनुसार Council of Ministers की कुल संख्या (CM सहित) Vidhan Sabha की total strength के 15% से अधिक नहीं हो सकती। हालांकि minimum 12 ministers होने चाहिए (छोटे राज्यों के लिए यह provision)।"
+      },
+      "navigation": {
+        "next": "card_41_quiz_collective_responsibility",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_41_quiz_collective_responsibility",
+      "card_slug": "card_41_quiz_collective_responsibility",
+      "type": "quiz",
+      "concept_id": "collective_responsibility_state_quiz",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "राज्य में मंत्रिपरिषद किसके प्रति सामूहिक रूप से उत्तरदायी है?",
+        "options": [
+          { "id": "A", "text": "राज्यपाल" },
+          { "id": "B", "text": "विधानसभा" },
+          { "id": "C", "text": "विधान परिषद" },
+          { "id": "D", "text": "राष्ट्रपति" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 164(2) स्पष्ट करता है कि Council of Ministers collectively विधानसभा (Vidhan Sabha) के प्रति उत्तरदायी है, न कि राज्यपाल या विधान परिषद के प्रति। यदि विधानसभा में no-confidence motion pass हो जाए, तो पूरी मंत्रिपरिषद को resign करना पड़ता है। यह Parliamentary system की core principle है।"
+      },
+      "navigation": {
+        "next": "card_42_milestone_cm_council",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_42_milestone_cm_council",
+      "card_slug": "card_42_milestone_cm_council",
+      "type": "milestone",
+      "concept_id": "cm_council_complete",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "👑 MODULE 4 COMPLETE!",
+        "badge_emoji": "💼",
+        "completed_topic": "मुख्यमंत्री और मंत्रिपरिषद की शक्तियाँ",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/9 Clear",
+        "motivational_quote": "CM = Real State Boss! 15% limit, Collective Responsibility - सब clear!"
+      },
+      "navigation": {
+        "next": "card_43_advocate_general",
+        "button_text": "Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_43_advocate_general",
+      "card_slug": "card_43_advocate_general",
+      "type": "chat",
+      "concept_id": "advocate_general_introduction",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, अब एक important constitutional post - Advocate General of State (Article 165)। जैसे केंद्र में Attorney General होते हैं, वैसे ही हर राज्य में Advocate General होते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Advocate General ka kya kaam hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Advocate General राज्य सरकार के chief legal advisor होते हैं। काम:\n(1) राज्य सरकार को legal matters में advice देना\n(2) Legal character के matters perform करना जो Governor refer करें\n(3) High Court और subordinate courts में राज्य सरकार का representation करना"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir appointment कैसे होती hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_ag_appointment_qualifications",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_44_ag_appointment_qualifications",
+      "card_slug": "card_44_ag_appointment_qualifications",
+      "type": "chat",
+      "concept_id": "advocate_general_appointment",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 165: राज्यपाल Advocate General को नियुक्त करते हैं। Qualification - वो person जो High Court Judge बनने की योग्यता रखता हो (यानी 10 साल का advocate experience या 10 साल judicial officer)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir tenure kya hai? Aur removal kaise hoti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Trap! Advocate General Governor के 'pleasure' पर काम करते हैं - यानी कोई fixed term नहीं। Governor कभी भी हटा सकते हैं। Remuneration भी Governor decide करते हैं। AG को State Legislature में बोलने का अधिकार है (लेकिन vote का नहीं) - बिल्कुल Attorney General की तरह।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! State level पर AG = Central level पर Attorney General!"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_state_legislature_intro",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_45_state_legislature_intro",
+      "card_slug": "card_45_state_legislature_intro",
+      "type": "chat",
+      "concept_id": "state_legislature_structure",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab quick recap करते हैं State Legislature का। Article 168: राज्य विधानमंडल में Governor + Vidhan Sabha (और कुछ राज्यों में Vidhan Parishad भी) होते हैं। Currently केवल 6 राज्यों में द्विसदनीय व्यवस्था है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir कौन से 6 states में Vidhan Parishad hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Railway & SSC Favorite! ये याद रखो: (1) Andhra Pradesh, (2) Bihar, (3) Karnataka, (4) Maharashtra, (5) Telangana, (6) Uttar Pradesh। बाकी सभी राज्यों में unicameral (एकसदनीय) Legislature है - केवल Vidhan Sabha।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ज्यादातर states में केवल Vidhan Sabha hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_vidhan_sabha_parishad",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_46_vidhan_sabha_parishad",
+      "card_slug": "card_46_vidhan_sabha_parishad",
+      "type": "chat",
+      "concept_id": "vidhan_sabha_parishad_comparison",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Vidhan Sabha (Lower House):\n- Maximum strength: 500, Minimum: 60 (Article 170)\n- Term: 5 years (extendable during emergency)\n- Money Bills केवल यहीं introduce हो सकते हैं\n- CM इसके प्रति accountable\n\nVidhan Parishad (Upper House):\n- Maximum: Vidhan Sabha की 1/3 strength\n- Minimum: 40 members\n- 1/3 members हर 2 साल में retire होते हैं (permanent body)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Vidhan Parishad को create ya abolish kaise karte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ UPSC Pattern! Article 169: Parliament special majority से (2/3 present + voting और absolute majority) Vidhan Parishad create या abolish कर सकती है, लेकिन State Legislature की demand पर ही! State Legislature को resolution pass करना पड़ता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! State की demand + Parliament की approval दोनों जरूरी!"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_quiz_ag_qualification",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_47_quiz_ag_qualification",
+      "card_slug": "card_47_quiz_ag_qualification",
+      "type": "quiz",
+      "concept_id": "advocate_general_qualification_quiz",
+      "level": 4,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Advocate General बनने के लिए क्या योग्यता होनी चाहिए?",
+        "options": [
+          { "id": "A", "text": "वह व्यक्ति जो सर्वोच्च न्यायालय का न्यायाधीश बनने योग्य हो" },
+          { "id": "B", "text": "वह व्यक्ति जो उच्च न्यायालय का न्यायाधीश बनने योग्य हो" },
+          { "id": "C", "text": "कम से कम 5 वर्ष का वकालत अनुभव" },
+          { "id": "D", "text": "कानून की डिग्री" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 165 के अनुसार Advocate General वह व्यक्ति होना चाहिए जो High Court Judge बनने की योग्यता रखता हो। इसका मतलब है - (1) भारतीय नागरिक, (2) कम से कम 10 साल High Court में advocate रहा हो, या (3) 10 साल judicial office में रहा हो। यह Attorney General के लिए भी similar है।"
+      },
+      "navigation": {
+        "next": "card_48_quiz_bicameral_states",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_48_quiz_bicameral_states",
+      "card_slug": "card_48_quiz_bicameral_states",
+      "type": "quiz",
+      "concept_id": "bicameral_states_quiz",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "वर्तमान में कितने राज्यों में द्विसदनीय विधानमंडल (Bicameral Legislature) है?",
+        "options": [
+          { "id": "A", "text": "5 राज्य" },
+          { "id": "B", "text": "6 राज्य" },
+          { "id": "C", "text": "7 राज्य" },
+          { "id": "D", "text": "8 राज्य" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ SSC & Railway Favorite! वर्तमान में केवल 6 राज्यों में Vidhan Parishad (Legislative Council) है: (1) Andhra Pradesh, (2) Bihar, (3) Karnataka, (4) Maharashtra, (5) Telangana, (6) Uttar Pradesh। बाकी सभी राज्यों में unicameral legislature है - केवल Vidhan Sabha। यह संख्या Parliament द्वारा बदली जा सकती है (Article 169)।"
+      },
+      "navigation": {
+        "next": "card_49_quiz_vidhan_parishad_creation",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_49_quiz_vidhan_parishad_creation",
+      "card_slug": "card_49_quiz_vidhan_parishad_creation",
+      "type": "quiz",
+      "concept_id": "vidhan_parishad_creation_quiz",
+      "level": 4,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "विधान परिषद को create या abolish करने की शक्ति किसके पास है?",
+        "options": [
+          { "id": "A", "text": "राज्यपाल" },
+          { "id": "B", "text": "राज्य विधानसभा" },
+          { "id": "C", "text": "संसद (राज्य विधानमंडल के resolution की demand पर)" },
+          { "id": "D", "text": "राष्ट्रपति" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ UPSC Pattern! Article 169 के अनुसार Parliament (संसद) विधान परिषद को create या abolish कर सकती है, लेकिन केवल तब जब संबंधित राज्य की विधानसभा ने इस आशय का resolution विशेष बहुमत (2/3 उपस्थित + मतदान करने वाले) से pass किया हो। इसके बाद Parliament special majority से law बनाती है।"
+      },
+      "navigation": {
+        "next": "card_50_milestone_other_institutions",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_50_milestone_other_institutions",
+      "card_slug": "card_50_milestone_other_institutions",
+      "type": "milestone",
+      "concept_id": "advocate_general_legislature_complete",
+      "level": 4,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎓 MODULE 5 COMPLETE!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Advocate General और State Legislature",
+        "xp_earned": 50,
+        "milestone_progress": "Module 5/9 Clear",
+        "motivational_quote": "AG की नियुक्ति, 6 Bicameral States - अब कोई confusion नहीं!"
+      },
+      "navigation": {
+        "next": "card_51_center_state_relations",
+        "button_text": "Next: Center-State Relations ➔"
+      }
+    },
+    {
+      "card_id": "card_51_center_state_relations",
+      "card_slug": "card_51_center_state_relations",
+      "type": "chat",
+      "concept_id": "center_state_relations_intro",
+      "level": 5,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, अब एक बहुत important topic - केंद्र-राज्य संबंध में Governor की भूमिका। याद है हमने शुरू में कहा था कि Governor केंद्र का representative है राज्य में?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Matlab Governor केंद्र और राज्य के बीच की कड़ी हैं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Article 356 (President's Rule) में Governor की report बहुत महत्वपूर्ण होती है। Governor राष्ट्रपति को report भेजते हैं कि राज्य में constitutional machinery fail हो गई है। इसी report के आधार पर President's Rule लग सकता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir तो Governor की recommendation पर ही President's Rule lagta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_article_356_controversy",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_52_article_356_controversy",
+      "card_slug": "card_52_article_356_controversy",
+      "type": "chat",
+      "concept_id": "article_356_governor_role",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ UPSC & BPSC High-Importance! Article 356 का misuse बहुत हुआ है history में। कभी-कभी Governor politically motivated report भेजते थे और opposition party की government गिरा दी जाती थी। इसीलिए Bommai case में Supreme Court ने guidelines दीं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bommai case में क्या guidelines दी गईं Article 356 के लिए?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bommai Case Guidelines:\n(1) Governor की report में material evidence होना चाहिए\n(2) Floor test mandatory है अगर majority पर doubt हो\n(3) President's Rule की proclamation को court में challenge किया जा सकता है\n(4) Governor को objective manner में काम करना चाहिए - political bias नहीं दिखाना चाहिए"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Court ने Governor की arbitrary powers को check किया!"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_governor_interstate_relations",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_53_governor_interstate_relations",
+      "card_slug": "card_53_governor_interstate_relations",
+      "type": "chat",
+      "concept_id": "governor_multiple_roles",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Governor के कुछ और important roles:\n\n(1) केंद्रीय कानूनों की जानकारी राज्य सरकार को देना\n(2) राष्ट्रपति को राज्य के मामलों की जानकारी देना\n(3) Special responsibilities - कुछ राज्यों में (Article 371 series)\n(4) Universities के Chancellor - ज्यादातर state universities में Governor ही Chancellor होते हैं"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Chancellor matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Chancellor university का ceremonial head होता है। Vice-Chancellor की appointment में Governor (as Chancellor) की भूमिका होती है। Convocations में भाग लेते हैं, degrees award करते हैं। यह Governor की एक अलग टोपी है - academic head के रूप में।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Governor की बहुत सारी roles हैं!"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_quiz_article_356_report",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_54_quiz_article_356_report",
+      "card_slug": "card_54_quiz_article_356_report",
+      "type": "quiz",
+      "concept_id": "article_356_report_quiz",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "राष्ट्रपति शासन (Article 356) लगाने के लिए किसकी रिपोर्ट आधार बनती है?",
+        "options": [
+          { "id": "A", "text": "मुख्यमंत्री" },
+          { "id": "B", "text": "राज्यपाल" },
+          { "id": "C", "text": "उच्च न्यायालय के मुख्य न्यायाधीश" },
+          { "id": "D", "text": "राज्य विधानसभा अध्यक्ष" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 356 के अनुसार राष्ट्रपति शासन राज्यपाल की रिपोर्ट के आधार पर या अन्य sources से राष्ट्रपति के इस निष्कर्ष पर लगाया जाता है कि राज्य में संवैधानिक तंत्र विफल हो गया है। हालांकि Bommai case (1994) में Supreme Court ने कहा कि Governor की report में material evidence होना चाहिए और इसे court में challenge किया जा सकता है।"
+      },
+      "navigation": {
+        "next": "card_55_quiz_governor_chancellor",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_55_quiz_governor_chancellor",
+      "card_slug": "card_55_quiz_governor_chancellor",
+      "type": "quiz",
+      "concept_id": "governor_chancellor_quiz",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "राज्य के विश्वविद्यालयों (State Universities) में राज्यपाल की क्या भूमिका होती है?",
+        "options": [
+          { "id": "A", "text": "Vice-Chancellor" },
+          { "id": "B", "text": "Chancellor (कुलाधिपति)" },
+          { "id": "C", "text": "Registrar" },
+          { "id": "D", "text": "कोई भूमिका नहीं" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ Railway & SSC Pattern! ज्यादातर राज्य विश्वविद्यालयों में राज्यपाल ex-officio Chancellor (कुलाधिपति) होते हैं। Chancellor university का ceremonial head होता है। Vice-Chancellor की नियुक्ति में Governor की महत्वपूर्ण भूमिका होती है। Convocations में भाग लेना और degrees award करना Chancellor के कार्य हैं।"
+      },
+      "navigation": {
+        "next": "card_56_quiz_multistatement_governor",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_56_quiz_multistatement_governor",
+      "card_slug": "card_56_quiz_multistatement_governor",
+      "type": "quiz",
+      "concept_id": "governor_multistatement_quiz",
+      "level": 5,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "राज्यपाल के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n1. राज्यपाल की नियुक्ति राष्ट्रपति करते हैं।\n2. राज्यपाल का कार्यकाल 5 वर्ष निश्चित है।\n3. एक व्यक्ति को दो राज्यों का राज्यपाल नियुक्त किया जा सकता है।\n4. राज्यपाल मृत्युदंड को पूर्णतः क्षमा कर सकते हैं।\n\nउपर्युक्त में से कौन से कथन सही हैं?",
+        "options": [
+          { "id": "A", "text": "केवल 1 और 2" },
+          { "id": "B", "text": "केवल 1 और 3" },
+          { "id": "C", "text": "केवल 1, 3 और 4" },
+          { "id": "D", "text": "1, 2, 3 और 4 सभी" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC Multi-Statement Master! कथन 1 सही (Art 155)। कथन 2 गलत - कार्यकाल राष्ट्रपति के 'pleasure' तक है, normally 5 वर्ष लेकिन निश्चित नहीं। कथन 3 सही (Art 153)। कथन 4 गलत - Governor मृत्युदंड को suspend/commute कर सकते हैं लेकिन पूर्णतः क्षमा नहीं कर सकते (Art 161), यह power केवल President (Art 72) के पास है।"
+      },
+      "navigation": {
+        "next": "card_57_milestone_center_state",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_57_milestone_center_state",
+      "card_slug": "card_57_milestone_center_state",
+      "type": "milestone",
+      "concept_id": "center_state_relations_complete",
+      "level": 5,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🌉 MODULE 6 COMPLETE!",
+        "badge_emoji": "🔗",
+        "completed_topic": "केंद्र-राज्य संबंध में राज्यपाल की भूमिका",
+        "xp_earned": 50,
+        "milestone_progress": "Module 6/9 Clear",
+        "motivational_quote": "Article 356, Bommai Guidelines, Chancellor Role - सब अब crystal clear!"
+      },
+      "navigation": {
+        "next": "card_58_important_amendments",
+        "button_text": "Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_58_important_amendments",
+      "card_slug": "card_58_important_amendments",
+      "type": "chat",
+      "concept_id": "key_constitutional_amendments",
+      "level": 5,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab quickly देखते हैं कुछ महत्वपूर्ण constitutional amendments जो Governor/CM से related हैं:\n\n⭐ 7th Amendment (1956): States Reorganisation - राज्यों का पुनर्गठन\n⭐ 42nd Amendment (1976): Anti-defection provisions\n⭐ 52nd Amendment (1985): Anti-Defection Law - floor crossing को रोकने के लिए\n⭐ 91st Amendment (2003): Council size 15% limit"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Anti-Defection Law kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC & UPSC Favorite! 52nd Amendment ने Tenth Schedule add की। अगर कोई MLA अपनी party के खिलाफ vote करे या party छोड़ दे, तो उसे disqualify किया जा सकता है। Decision Speaker/Chairman लेते हैं। यह 'Aaya Ram Gaya Ram' politics को रोकने के लिए लाया गया था।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Matlab party-switching को rok दिया!"
+        }
+      ],
+      "navigation": {
+        "next": "card_59_controversies_debates",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_59_controversies_debates",
+      "card_slug": "card_59_controversies_debates",
+      "type": "chat",
+      "concept_id": "governor_controversies",
+      "level": 5,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Governor के पद को लेकर कुछ ongoing controversies और debates:\n\n(1) Governors को केंद्र की 'rubber stamp' की तरह use किया जाता है?\n(2) Same-party Governor ज्यादा cooperative, opposition-party Governor confrontational?\n(3) Bills पर indefinite delay - कई bills Governor के पास महीनों पड़े रहते हैं\n(4) क्या Governor का पद abolish होना चाहिए?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir experts क्या कहते hain इन issues पर?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sarkaria और Punchhi Commission ने recommend किया था:\n- Governor eminent persons हों, political figures नहीं\n- Same state का resident Governor न बनाया जाए\n- Fixed 5-year term हो\n- Bills पर decision के लिए time limit हो\n\nलेकिन ये सब recommendations हैं, constitutional changes नहीं हुए।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Governor का पद अभी भी controversial hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_bihar_context",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_60_bihar_context",
+      "card_slug": "card_60_bihar_context",
+      "type": "chat",
+      "concept_id": "bihar_governor_cm_context",
+      "level": 5,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Specific! Bihar के context में:\n\n- Bihar Vidhan Sabha: 243 seats (maximum allowed is 500)\n- Bihar Vidhan Parishad: 75 seats (उन 6 राज्यों में से एक जहां Upper House है)\n- Raj Bhavan Patna में स्थित है\n- Bihar में कई बार President's Rule लगा है (1968, 1972, 2005 etc.)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar में Vidhan Parishad की क्या विशेषता hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bihar की Vidhan Parishad भारत की oldest में से एक है (1936 से)। यहाँ भी वही structure - 1/3 members Vidhan Sabha द्वारा elect होते हैं, 1/3 local bodies द्वारा, कुछ Governor द्वारा nominate, कुछ graduates/teachers द्वारा। लेकिन real power Vidhan Sabha में ही है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Bihar specific details bhi important hain BPSC TRE ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_61_quiz_anti_defection",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_61_quiz_anti_defection",
+      "card_slug": "card_61_quiz_anti_defection",
+      "type": "quiz",
+      "concept_id": "anti_defection_quiz",
+      "level": 5,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Anti-Defection Law किस संविधान संशोधन द्वारा लाया गया?",
+        "options": [
+          { "id": "A", "text": "42वाँ संशोधन" },
+          { "id": "B", "text": "44वाँ संशोधन" },
+          { "id": "C", "text": "52वाँ संशोधन" },
+          { "id": "D", "text": "91वाँ संशोधन" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ SSC & BPSC Favorite! 52nd Constitutional Amendment Act (1985) ने Anti-Defection Law लाया और Tenth Schedule add की। यह 'Aaya Ram Gaya Ram' politics (frequent party-switching) को रोकने के लिए लाया गया था। अगर कोई सदस्य party whip के खिलाफ vote करे या party छोड़े तो disqualification हो सकती है।"
+      },
+      "navigation": {
+        "next": "card_62_quiz_bihar_vidhan_sabha",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_62_quiz_bihar_vidhan_sabha",
+      "card_slug": "card_62_quiz_bihar_vidhan_sabha",
+      "type": "quiz",
+      "concept_id": "bihar_vidhan_sabha_quiz",
+      "level": 5,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE Special: बिहार विधानसभा में कुल कितनी सीटें हैं?",
+        "options": [
+          { "id": "A", "text": "200" },
+          { "id": "B", "text": "243" },
+          { "id": "C", "text": "288" },
+          { "id": "D", "text": "294" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Favorite! बिहार विधानसभा में कुल 243 सीटें हैं। यह संख्या Article 170 की limit (60 minimum, 500 maximum) के अंदर है। बिहार उन 6 राज्यों में से एक है जहां Vidhan Parishad भी है (75 members)। यह Bihar-specific fact BPSC TRE में frequently पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_63_quiz_sarkaria_recommendation",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_63_quiz_sarkaria_recommendation",
+      "card_slug": "card_63_quiz_sarkaria_recommendation",
+      "type": "quiz",
+      "concept_id": "sarkaria_commission_quiz",
+      "level": 5,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Sarkaria Commission (1983) ने राज्यपाल की नियुक्ति के संबंध में क्या सिफारिश की थी?",
+        "options": [
+          { "id": "A", "text": "राज्यपाल को जनता द्वारा चुना जाना चाहिए" },
+          { "id": "B", "text": "उसी राज्य के निवासी को राज्यपाल नहीं बनाना चाहिए" },
+          { "id": "C", "text": "राज्यपाल का कार्यकाल 7 वर्ष होना चाहिए" },
+          { "id": "D", "text": "राज्यपाल का पद समाप्त कर देना चाहिए" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sarkaria Commission (1983) ने recommend किया था कि उसी राज्य के निवासी को उस राज्य का राज्यपाल नहीं बनाया जाना चाहिए ताकि local politics में interference न हो। अन्य recommendations: (1) Eminent persons को नियुक्त करें, (2) 5 साल का पूरा term दें, (3) राज्य के CM से consult करें। हालांकि ये सब केवल recommendations हैं, binding नहीं।"
+      },
+      "navigation": {
+        "next": "card_64_milestone_amendments_controversies",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_64_milestone_amendments_controversies",
+      "card_slug": "card_64_milestone_amendments_controversies",
+      "type": "milestone",
+      "concept_id": "amendments_controversies_complete",
+      "level": 5,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "📚 MODULE 7 COMPLETE!",
+        "badge_emoji": "📖",
+        "completed_topic": "Amendments, Controversies और Bihar Context",
+        "xp_earned": 50,
+        "milestone_progress": "Module 7/9 Clear",
+        "motivational_quote": "52nd Amendment, Bihar की 243 seats, Sarkaria Commission - अब सब याद!"
+      },
+      "navigation": {
+        "next": "card_65_final_summary",
+        "button_text": "Final Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_65_final_summary",
+      "card_slug": "card_65_final_summary",
+      "type": "summary",
+      "concept_id": "chapter_final_revision",
+      "level": 6,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ Officer Level Quick Revision",
+        "revision_points": [
+          {
+            "topic": "राज्यपाल - Appointment & Qualification",
+            "point": "Art 155: राष्ट्रपति द्वारा नियुक्ति। Art 157: 35 वर्ष आयु, भारतीय नागरिक। Art 153: एक व्यक्ति दो राज्यों का Governor हो सकता है। Pleasure तक कार्यकाल (normally 5 years)।"
+          },
+          {
+            "topic": "राज्यपाल की Powers",
+            "point": "Executive: CM व अन्य appointments। Legislative: 4 veto options (Assent, Withhold, Return, Reserve for President - Art 200)। Ordinance (Art 213, 6 weeks)। Judicial: Pardoning (Art 161) - death penalty को suspend/commute कर सकते हैं, पूर्ण क्षमा नहीं।"
+          },
+          {
+            "topic": "Discretionary Powers",
+            "point": "Art 163: Hung assembly में CM appointment, Assembly dissolution (majority doubt होने पर), Art 356 report। Art 371 series: Nagaland (371A), Mizoram (371G), Arunachal (371H) में extra powers। Bommai Case: Floor test mandatory।"
+          },
+          {
+            "topic": "मुख्यमंत्री - Appointment & Powers",
+            "point": "Art 164: Governor द्वारा नियुक्ति (majority party leader)। कोई specific qualification नहीं, Legislature member होना चाहिए। Cabinet formation, portfolios allocation, Leader of House। No fixed term - majority तक।"
+          },
+          {
+            "topic": "Council of Ministers",
+            "point": "91st Amendment (2003): Size limit 15% of Vidhan Sabha, minimum 12। Art 164(2): Collectively Vidhan Sabha के प्रति उत्तरदायी। Cabinet = inner core। MoS, MoS (Independent Charge)।"
+          },
+          {
+            "topic": "Advocate General & Legislature",
+            "point": "Art 165: Governor द्वारा नियुक्ति। High Court judge योग्यता। Pleasure पर tenure। State Legislature: Art 168 (Governor + Vidhan Sabha + Vidhan Parishad if any)। 6 Bicameral states: AP, Bihar, Karnataka, Maharashtra, Telangana, UP।"
+          },
+          {
+            "topic": "Landmark Cases & Amendments",
+            "point": "Bommai (1994): Floor test mandatory, Art 356 में judicial review। Nabam Rebia (2016): Governor Assembly proceedings में interfere नहीं कर सकते। 52nd Amendment (1985): Anti-Defection Law (Tenth Schedule)। Art 169: Parliament द्वारा Vidhan Parishad creation/abolition।"
+          },
+          {
+            "topic": "⭐ BPSC TRE Special: Bihar",
+            "point": "Bihar Vidhan Sabha: 243 seats। Vidhan Parishad: 75 seats (6 bicameral states में से एक)। Raj Bhavan: Patna। Vidhan Parishad 1936 से (oldest में से एक)। Multiple President's Rule instances।"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_66_final_quiz_1",
+        "button_text": "Final Master Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_66_final_quiz_1",
+      "card_slug": "card_66_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_1",
+      "level": 6,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार कीजिए:\n1. राज्यपाल किसी विधेयक को राष्ट्रपति के विचार के लिए आरक्षित कर सकते हैं।\n2. राज्यपाल मृत्युदंड को पूर्णतः क्षमा कर सकते हैं।\n3. मंत्रिपरिषद की संख्या विधानसभा की कुल संख्या के 15% से अधिक नहीं हो सकती।\n4. Advocate General को High Court Judge बनने की योग्यता होनी चाहिए।\n\nउपर्युक्त में से कौन से कथन सही हैं?",
+        "options": [
+          { "id": "A", "text": "केवल 1, 2 और 3" },
+          { "id": "B", "text": "केवल 1, 3 और 4" },
+          { "id": "C", "text": "केवल 2, 3 और 4" },
+          { "id": "D", "text": "1, 2, 3 और 4 सभी" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC Multi-Statement Master! कथन 1 सही (Art 200 - Governor can reserve bill for President)। कथन 2 गलत - Governor मृत्युदंड को केवल suspend/commute कर सकते हैं, पूर्णतः क्षमा नहीं (Art 161), यह power केवल President के पास (Art 72)। कथन 3 सही (91st Amendment - 15% limit)। कथन 4 सही (Art 165 - AG qualification)।"
+      },
+      "navigation": {
+        "next": "card_67_final_quiz_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_67_final_quiz_2",
+      "card_slug": "card_67_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_2",
+      "level": 6,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "S.R. Bommai vs Union of India (1994) के संदर्भ में निम्नलिखित में से कौन सा कथन सही नहीं है?",
+        "options": [
+          { "id": "A", "text": "राज्यपाल की Article 356 की सिफारिश को न्यायिक समीक्षा के अधीन किया जा सकता है" },
+          { "id": "B", "text": "बहुमत पर संदेह होने पर floor test अनिवार्य है" },
+          { "id": "C", "text": "राज्यपाल को राजनीतिक हितों से प्रभावित नहीं होना चाहिए" },
+          { "id": "D", "text": "राज्यपाल मुख्यमंत्री को किसी भी समय हटा सकते हैं" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "⭐ UPSC Pattern! Bommai judgment में Supreme Court ने स्पष्ट किया कि Governor arbitrarily या political reasons से CM को dismiss नहीं कर सकते। यदि majority पर doubt हो तो floor test mandatory है। Governor को objective और apolitical manner में काम करना चाहिए। Option D गलत है - Governor की यह unlimited power नहीं है।"
+      },
+      "navigation": {
+        "next": "card_68_final_quiz_3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_68_final_quiz_3",
+      "card_slug": "card_68_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_3",
+      "level": 6,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से किस Article के तहत विधान परिषद का सृजन या उन्मूलन किया जा सकता है?",
+        "options": [
+          { "id": "A", "text": "Article 168" },
+          { "id": "B", "text": "Article 169" },
+          { "id": "C", "text": "Article 170" },
+          { "id": "D", "text": "Article 171" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 169 के तहत संसद विधान परिषद का सृजन या उन्मूलन कर सकती है, लेकिन केवल तब जब संबंधित राज्य की विधानसभा ने विशेष बहुमत (उपस्थित और मतदान करने वाले सदस्यों के 2/3) से इस आशय का प्रस्ताव पारित किया हो। इसके बाद Parliament special majority से law बनाती है।"
+      },
+      "navigation": {
+        "next": "card_69_final_quiz_4",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_69_final_quiz_4",
+      "card_slug": "card_69_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_4",
+      "level": 6,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE विशेष प्रश्न:\n\nनिम्नलिखित में से कौन सा कथन बिहार के संदर्भ में सही है?\n1. बिहार में विधान परिषद है।\n2. बिहार विधानसभा में 243 सीटें हैं।\n3. बिहार विधान परिषद में 75 सदस्य हैं।\n4. बिहार की विधान परिषद 1936 से कार्यरत है।",
+        "options": [
+          { "id": "A", "text": "केवल 1 और 2" },
+          { "id": "B", "text": "केवल 1, 2 और 3" },
+          { "id": "C", "text": "केवल 2, 3 और 4" },
+          { "id": "D", "text": "1, 2, 3 और 4 सभी" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "⭐ BPSC TRE Gold! सभी कथन सही हैं। बिहार उन 6 राज्यों में से एक है जहाँ विधान परिषद है (AP, Bihar, Karnataka, Maharashtra, Telangana, UP)। बिहार विधानसभा में 243 seats और विधान परिषद में 75 members हैं। बिहार की विधान परिषद भारत की सबसे पुरानी में से एक है (1936 से कार्यरत)।"
+      },
+      "navigation": {
+        "next": "card_70_final_quiz_5",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_70_final_quiz_5",
+      "card_slug": "card_70_final_quiz_5",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_5",
+      "level": 6,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): राज्यपाल किसी विधेयक को अनिश्चित काल के लिए लंबित रख सकते हैं।\n\nReason (R): संविधान में राज्यपाल द्वारा विधेयक पर निर्णय के लिए कोई समय सीमा निर्धारित नहीं है।\n\nसही विकल्प चुनिए:",
+        "options": [
+          { "id": "A", "text": "A और R दोनों सही हैं, और R, A की सही व्याख्या है" },
+          { "id": "B", "text": "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है" },
+          { "id": "C", "text": "A सही है लेकिन R गलत है" },
+          { "id": "D", "text": "A गलत है लेकिन R सही है" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ UPSC Assertion-Reason Pattern! दोनों कथन सही हैं और R, A की सही व्याख्या करता है। राज्यपाल के पास Pocket Veto की power है - वो किसी bill पर न assent दें, न reject करें, बस pending रखें। संविधान में इसकी कोई time limit नहीं दी गई (जबकि President के ordinance की 6 weeks limit है)। यह controversial power है।"
+      },
+      "navigation": {
+        "next": "card_71_comparison_chart",
+        "button_text": "Comparison Chart ➔"
+      }
+    },
+    {
+      "card_id": "card_71_comparison_chart",
+      "card_slug": "card_71_comparison_chart",
+      "type": "summary",
+      "concept_id": "governor_president_comparison",
+      "level": 6,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "📊 राज्यपाल vs राष्ट्रपति - Quick Comparison",
+        "revision_points": [
+          {
+            "topic": "Appointment",
+            "point": "Governor: राष्ट्रपति द्वारा नियुक्ति (Art 155) | President: Electoral College द्वारा चुनाव (Art 54-55)"
+          },
+          {
+            "topic": "Qualification",
+            "point": "दोनों: 35 वर्ष आयु, भारतीय नागरिक। President के लिए Lok Sabha qualification, Governor के लिए नहीं दी गई।"
+          },
+          {
+            "topic": "Term",
+            "point": "Governor: Pleasure तक (normally 5 years) | President: 5 years fixed (लेकिन re-election possible)"
+          },
+          {
+            "topic": "Pardoning Power",
+            "point": "Governor (Art 161): State laws, मृत्युदंड को suspend/commute only | President (Art 72): सभी laws, मृत्युदंड को पूर्ण क्षमा भी"
+          },
+          {
+            "topic": "Veto Powers",
+            "point": "Governor: 4 options (Assent, Withhold, Return, Reserve for President) | President: 3 options (Assent, Withhold, Return)"
+          },
+          {
+            "topic": "Discretionary Powers",
+            "point": "Governor: Hung assembly में CM appointment, Art 356 report, Art 371 states में extra | President: Hung parliament में PM appointment (बहुत limited)"
+          },
+          {
+            "topic": "Ordinance",
+            "point": "दोनों: 6 weeks validity Legislature reassemble के बाद। Governor को कुछ cases में President approval चाहिए।"
+          },
+          {
+            "topic": "Removal",
+            "point": "Governor: President द्वारा किसी भी समय (pleasure doctrine) | President: Impeachment (Art 61, violation of Constitution)"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_72_final_milestone",
+        "button_text": "Chapter Complete 🏆"
+      }
+    },
+    {
+      "card_id": "card_72_final_milestone",
+      "card_slug": "card_72_final_milestone",
+      "type": "milestone",
+      "concept_id": "chapter_completion_final",
+      "level": 6,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎊 CHAPTER MASTERED! 🎊",
+        "badge_emoji": "🏆",
+        "completed_topic": "Governor, Chief Minister & Council of Ministers - Complete State Executive Module",
+        "xp_earned": 100,
+        "milestone_progress": "9/9 Modules Complete ✅",
+        "motivational_quote": "राज्यपाल की हर power से लेकर Bommai Case, Bihar के 243 seats तक - हर Article, हर Trap, हर PYQ Pattern अब आपके दिमाग में permanently stored! 🔥\n\nBPSC में Governor-CM के questions = आपके लिए FREE MARKS! 💯\n\nArt 153 से Art 371 तक - सब कुछ CRYSTAL CLEAR! 🚀\n\nKeep Learning, Keep Growing, Future Officer! 🎯"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
+```
