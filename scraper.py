@@ -32,10 +32,10 @@ except ImportError:
 
 OUTPUT_FILE = "rawnews.json"
 TIMEOUT = 20
-MAX_PER_SOURCE = 2
+MAX_PER_SOURCE = 7
 
 MIN_CONTENT_WORDS = 60      # Strictly Minimum 60 words required
-MAX_CONTENT_WORDS = 300     # Hard Limit 500 words to strictly avoid "line too large" editor warning
+MAX_CONTENT_WORDS = 300     # Hard Limit 300 words to strictly avoid "line too large" editor warning
 
 # STRICT 24-HOUR ROLLING WINDOW
 DEFAULT_MAX_AGE_HOURS = 24
@@ -60,28 +60,34 @@ warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 SOURCE_STATS = defaultdict(lambda: {"fetched": 0, "accepted": 0, "rejected": 0, "reasons": defaultdict(int)})
 
 # ============================================================
-# EXCLUDE KEYWORDS BLACKLIST (Crime, Offtopic Local Incidents & Astrology)
+# EXCLUDE KEYWORDS BLACKLIST (Crime, Stock Market, Local Incidents & Astrology)
 # ============================================================
 
 EXCLUDE_KEYWORDS = [
-    # 1. Local Incidents, Offtopic & Domestic Affairs
+    # 1. Stock Market, Share Market & Intraday Trading Blocking
+    "stock market", "share market", "sensex", "nifty", "intraday", "bse", "nse",
+    "shares rise", "shares fall", "stocks to buy", "stocks in news", "equity market",
+    "bulls", "bears", "ipo", "trading call", "share price", "gainers", "losers",
+    "सेंसेक्स", "निफ्टी", "शेयर बाजार", "स्टॉक मार्केट", "इक्विटी",
+
+    # 2. Local Incidents, Offtopic & Domestic Affairs
     "bride", "groom", "marriage", "wedding", "abscond", "dulhan", "dulha", "shadi", "vidai",
     "love affair", "lover", "premi", "presika", "husband", "wife", "divorce", "suicide",
     "दुल्हन", "दूल्हा", "शादी", "विदाई", "फरार", "प्रेमी", "प्रेमिका", "पति", "पत्नी", "खुदकुशी",
 
-    # 2. Astrology / Rashifal / Horoscope Blocking
+    # 3. Astrology / Rashifal / Horoscope Blocking
     "rashifal", "horoscope", "astrology", "kundali", "panchang", "jyotish", "grah nakshatra",
     "rashi", "mesh", "vrishabh", "mithun", "kark", "sinh", "kanya", "tula", "vrishchik",
     "dhanu", "makar", "kumbh", "meen", "zodiac", "astrological", "भविष्यफल", "राशिफल", "पंचांग",
 
-    # 3. Crime & Accidents Blocking
+    # 4. Crime & Accidents Blocking
     "murder", "police", "arrest", "theft", "accident", "rape", "crime", "fir", "killed", "dead", "gang",
     "हत्या", "गिरफ्तार", "हादसा", "चोरी", "मौत", "शव",
 
-    # 4. Local Political Rallies
+    # 5. Local Political Rallies
     "election campaign", "rally", "by-poll",
 
-    # 5. Other Non-Bihar States Blocking
+    # 6. Other Non-Bihar States Blocking
     "uttar pradesh news", "madhya pradesh news", "rajasthan news", "maharashtra news", "mumbai news",
     "delhi news", "punjab news", "haryana news", "karnataka news", "tamil nadu news", "kerala news"
 ]
@@ -188,7 +194,7 @@ def clean_text(text):
 
 def clean_title(title):
     title = clean_text(title)
-    title = re.sub(r'\s*[-|–—]\s*(The Hindu|Indian Express|Hindustan Times|Times of India|NDTV|Aaj Tak|ABP News|PIB|Livemint|Business Standard|Dainik Jagran|Amar Ujala|Prabhat Khabar|Live Hindustan).*$', '', title, flags=re.I)
+    title = re.sub(r'\s*[-|–—]\s*(The Hindu|Indian Express|Hindustan Times|Times of India|NDTV|Aaj Tak|ABP News|PIB|Livemint|Business Standard|Dainik Jagran|Amar Ujala|Prabhat Khabar|Live Hindustan|AIR News|Akashvani|News On AIR).*$', '', title, flags=re.I)
     return title.strip()
 
 def word_count(text):
@@ -307,7 +313,15 @@ def fetch_web_article(url, source_name="Unknown"):
 
     candidates = []
 
-    # 1. JSON-LD Extraction
+    # 1. AIR / NewsOnAIR Specific Selectors
+    air_selectors = [".news-detail-content", ".full-story-content", "#content-area", ".story-text"]
+    for sel in air_selectors:
+        for el in soup.select(sel):
+            txt = clean_text(el.get_text(" ", strip=True))
+            if word_count(txt) >= MIN_CONTENT_WORDS:
+                candidates.append(txt)
+
+    # 2. JSON-LD Extraction
     for script in soup.find_all("script", type="application/ld+json"):
         try:
             data = json.loads(script.string or script.get_text())
@@ -320,7 +334,7 @@ def fetch_web_article(url, source_name="Unknown"):
         except Exception:
             pass
 
-    # 2. Article Body Selectors
+    # 3. Article Body Selectors
     selectors = [
         "[itemprop='articleBody']", "article", ".article-body", ".articleBody",
         ".article-content", ".story-content", ".news-content", "main", ".entry-content",
@@ -333,7 +347,7 @@ def fetch_web_article(url, source_name="Unknown"):
             if word_count(txt) >= MIN_CONTENT_WORDS:
                 candidates.append(txt)
 
-    # 3. Paragraph Aggregation Fallback
+    # 4. Paragraph Aggregation Fallback
     paragraphs = [clean_text(p.get_text(" ", strip=True)) for p in soup.find_all("p")]
     paragraphs = [p for p in paragraphs if word_count(p) >= 6]
     if paragraphs:
@@ -348,7 +362,7 @@ def fetch_web_article(url, source_name="Unknown"):
     return best_text, real_url
 
 # ============================================================
-# ITEM BUILDER WITH HARD CONTENT TRIMMING
+# ITEM BUILDER WITH STRICT VALIDATION
 # ============================================================
 
 def make_item(source, title, url, date=None, content="", item_type="General News", category="General"):
@@ -377,11 +391,6 @@ def make_item(source, title, url, date=None, content="", item_type="General News
         SOURCE_STATS[source]["reasons"][reason] += 1
         return None
 
-    # STRICT HARD LIMIT TRIMMING TO PREVENT EDITOR WARNINGS
-    if total_words > MAX_CONTENT_WORDS:
-        clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
-        total_words = word_count(clean_content_str)
-
     # STRICT CHECK 2: Last 24 Hours Date Filter Check
     parsed_date = date or now_ist()
     age_hrs = round(get_age_hours(parsed_date), 1)
@@ -391,13 +400,18 @@ def make_item(source, title, url, date=None, content="", item_type="General News
         SOURCE_STATS[source]["reasons"][reason] += 1
         return None
 
-    # STRICT CHECK 3: Blacklist, Local Crime & Astrology Check
+    # STRICT CHECK 3: Blacklist, Stock Market & Astrology Check
     matched_bad_word = check_blacklist_reason(clean_title_str, clean_content_str)
     if matched_bad_word:
         reason = f"Blacklisted word: '{matched_bad_word}'"
         SOURCE_STATS[source]["rejected"] += 1
         SOURCE_STATS[source]["reasons"][reason] += 1
         return None
+
+    # HARD LIMIT TRIMMING (MAX 300 WORDS)
+    if total_words > MAX_CONTENT_WORDS:
+        clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
+        total_words = word_count(clean_content_str)
 
     success(f"✅ ACCEPTED [{source}] ({total_words} words | {age_hrs}h old) | Title: {clean_title_str[:50]}")
     SOURCE_STATS[source]["accepted"] += 1
@@ -426,10 +440,15 @@ def deduplicate(items):
     return output
 
 # ============================================================
-# WORKING PUBLIC RSS FEEDS (NATIONAL & BIHAR)
+# WORKING PUBLIC RSS FEEDS (NATIONAL, AIR NEWS & BIHAR)
 # ============================================================
 
 PUBLIC_RSS_SOURCES = {
+    # ------------------ ALL INDIA RADIO (AIR / AKASHVANI) FEEDS ------------------
+    "AIR News National": ("National News", "https://newsonair.gov.in/feed/"),
+    "Akashvani Hindi News": ("National News", "https://news.google.com/rss/search?q=Akashvani+News+when:1d&hl=hi&gl=IN&ceid=IN:hi"),
+    "AIR News Bihar (Regional)": ("Bihar News", "https://news.google.com/rss/search?q=Akashvani+Patna+OR+AIR+News+Patna+when:1d&hl=hi&gl=IN&ceid=IN:hi"),
+
     # ------------------ NATIONAL MEDIA FEEDS ------------------
     "The Hindu National": ("National News", "https://www.thehindu.com/news/national/feeder/default.rss"),
     "The Hindu Business": ("Economy & Banking", "https://www.thehindu.com/business/feeder/default.rss"),
@@ -453,7 +472,7 @@ PUBLIC_RSS_SOURCES = {
 }
 
 def fetch_all_public_rss():
-    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING ALL PUBLIC RSS SOURCES\n" + "=" * 70)
+    print(f"\n" + "=" * 70 + f"\n🌐 SCRAPING ALL PUBLIC RSS SOURCES (INCLUDING AIR NEWS)\n" + "=" * 70)
     all_results = []
 
     for source_name, (category, rss_url) in PUBLIC_RSS_SOURCES.items():
@@ -549,7 +568,7 @@ def save_output(national, bihar, breakdown):
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 {OUTPUT_FILE} saved successfully with {len(all_news)} items (Cleaned & <=500 words)!")
+    print(f"💾 {OUTPUT_FILE} saved successfully with {len(all_news)} items (Cleaned & <=300 words)!")
     print("=" * 80)
 
 if __name__ == "__main__":
