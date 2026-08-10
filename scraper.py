@@ -1043,6 +1043,115 @@ def scrape_india_gov():
     return results
 
 
+# 6. BIHAR CM PRESS RELEASE
+BIHAR_CM_URL = "https://cm.bihar.gov.in/users/preessrelease.aspx"
+
+
+def scrape_bihar_cm():
+    print("\n" + "=" * 70 + "\n🏛️ BIHAR CM PRESS RELEASE\n" + "=" * 70)
+    html = fetch_url(BIHAR_CM_URL)
+    if not html:
+        return []
+
+    soup = BeautifulSoup(html, "lxml")
+    candidates = []
+
+    for a in soup.find_all("a", href=True):
+        href = clean_url(urljoin(BIHAR_CM_URL, a.get("href")))
+        title = clean_title(a.get_text(" ", strip=True))
+
+        if not href or len(title) < 15:
+            continue
+        if "cm.bihar.gov.in" not in href.lower():
+            continue
+
+        candidates.append((title, href))
+
+    unique = []
+    seen = set()
+    for title, url in candidates:
+        if url not in seen:
+            seen.add(url)
+            unique.append((title, url))
+
+    results = []
+    for title, url in unique:
+        content, date = fetch_generic_article_content(url, "Bihar CM Office")
+        if not content:
+            continue
+
+        obj = make_item(
+            source="Bihar CM Office",
+            title=title,
+            url=url,
+            date=date,
+            content=content,
+            item_type="Press Release"
+        )
+        if obj:
+            results.append(obj)
+
+        if len(results) >= MAX_PER_SOURCE:
+            break
+
+    results = deduplicate(results)
+    if not results:
+        debug("BIHAR CM OFFICE: Recent rolling window ka koi data nahi mila.")
+
+    print(f"✅ Bihar CM Office usable: {len(results)}")
+    return results
+
+
+# 7. GOOGLE NEWS BIHAR SCHEMES & INFRA
+GOOGLE_BIHAR_RSS = "https://news.google.com/rss/search?q=Bihar+Government+Schemes+OR+Infrastructure+OR+Economy+OR+Agriculture+when:2d&hl=hi&gl=IN&ceid=IN:hi"
+
+
+def scrape_google_bihar():
+    print("\n" + "=" * 70 + "\n🌐 GOOGLE NEWS BIHAR SCHEMES & INFRA\n" + "=" * 70)
+    feed = feedparser.parse(GOOGLE_BIHAR_RSS)
+    results = []
+
+    for entry in feed.entries[:MAX_PER_SOURCE * 2]:
+        title = clean_title(getattr(entry, 'title', ''))
+        url = clean_url(getattr(entry, 'link', ''))
+        if not title or not url:
+            continue
+
+        content, date = fetch_generic_article_content(url, "Google News Bihar")
+
+        if not content:
+            summary = clean_text(getattr(entry, 'summary', '') or getattr(entry, 'description', ''))
+            if len(summary) >= MIN_CONTENT_CHARS:
+                content = summary
+
+        if not content:
+            continue
+
+        if not date and hasattr(entry, 'published'):
+            date = parse_date(entry.published)
+
+        obj = make_item(
+            source="Google News Bihar",
+            title=title,
+            url=url,
+            date=date,
+            content=content,
+            item_type="News Article"
+        )
+        if obj:
+            results.append(obj)
+
+        if len(results) >= MAX_PER_SOURCE:
+            break
+
+    results = deduplicate(results)
+    if not results:
+        debug("GOOGLE NEWS BIHAR: Recent rolling window ka koi data nahi mila.")
+
+    print(f"✅ Google News Bihar usable: {len(results)}")
+    return results
+
+
 # ============================================================
 # SOURCE RUNNER
 # ============================================================
@@ -1071,6 +1180,8 @@ def build_news():
     source_results["IPRD Bihar"] = safe_source("IPRD Bihar", scrape_iprd_bihar)
     source_results["Bihar Cabinet"] = safe_source("Bihar Cabinet", scrape_bihar_cabinet)
     source_results["India.gov.in"] = safe_source("India.gov.in", scrape_india_gov)
+    source_results["Bihar CM Office"] = safe_source("Bihar CM Office", scrape_bihar_cm)
+    source_results["Google News Bihar"] = safe_source("Google News Bihar", scrape_google_bihar)
 
     breakdown = {}
 
@@ -1082,7 +1193,7 @@ def build_news():
 
     all_results = deduplicate(all_results)
 
-    bihar_sources = {"IPRD Bihar", "Bihar Cabinet"}
+    bihar_sources = {"IPRD Bihar", "Bihar Cabinet", "Bihar CM Office", "Google News Bihar"}
     bihar = []
     national = []
 
