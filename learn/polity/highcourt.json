@@ -1,0 +1,2167 @@
+{
+  "topic_id": "polity_high_court",
+  "topic_title": "High Courts in India",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "High Courts in India",
+        "icon": "⚖️",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Understand the constitutional position of High Courts (Articles 214-231)",
+          "Master appointment, qualifications, and removal of judges",
+          "Learn Original, Appellate, and Writ Jurisdictions",
+          "Decode BPSC/SSC multi-statement traps on High Court powers",
+          "Grasp subordinate courts and judicial administration"
+        ],
+        "estimated_time": "55 minutes",
+        "total_concepts": 10
+      },
+      "navigation": {
+        "next": "card_02_hc_intro",
+        "button_text": "शुरू करें ➔"
+      }
+    },
+    {
+      "card_id": "card_02_hc_intro",
+      "card_slug": "card_02_hc_intro",
+      "type": "chat",
+      "concept_id": "high_court_introduction",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne सुना होगा कि Patna High Court में कोई बड़ा case चल रहा है या Allahabad High Court ने कोई important order दिया। ये High Courts क्या होती हैं? Supreme Court से कैसे अलग हैं?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, मुझे लगता है Supreme Court सबसे ऊपर है पूरे देश के लिए, और High Court हर राज्य में होती है? लेकिन confuse हूं कि कौन ज्यादा powerful है!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi direction में सोच रहे हो! देखो, भारत में तीन levels की courts हैं - Supreme Court (सबसे ऊपर, पूरे देश के लिए एक), फिर High Courts (राज्य स्तर पर, currently 25 High Courts हैं), और सबसे नीचे Subordinate Courts (District courts, Sessions courts)। High Court अपने राज्य/राज्यों की सबसे ऊंची अदालत होती है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Matlab High Court राज्य की Supreme Court जैसी है? और 25 High Courts... har state में एक?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_hc_structure",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_03_hc_structure",
+      "card_slug": "card_03_hc_structure",
+      "type": "chat",
+      "concept_id": "high_court_structure",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC & SSC Favorite Fact! नहीं, हर राज्य में एक High Court नहीं है। कुछ High Courts एक से ज्यादा राज्यों या Union Territories के लिए काम करती हैं। जैसे - Patna High Court केवल Bihar के लिए, लेकिन Guwahati High Court चार राज्यों के लिए (Assam, Nagaland, Mizoram, Arunachal Pradesh)। Article 214 कहता है - 'There shall be a High Court for each State' - लेकिन Parliament एक HC को कई states के लिए या vice versa establish कर सकती है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Toh ek High Court multiple states को cover कर सकती है! Sir, कौन से major High Courts हैं जो exam में पूछे जाते हैं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Railway & SSC Exam Alert! कुछ important facts याद रखो:\n\n• सबसे पुरानी High Court: Calcutta High Court (1862)\n• सबसे बड़ी bench strength: Allahabad High Court (160 judges की sanctioned strength)\n• सबसे छोटी: Sikkim High Court\n• Bihar के लिए: Patna High Court (1916 में establish हुई, उससे पहले Calcutta HC के अंतर्गत थी)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye तो factual GK hai! Patna HC 1916 में - ye BPSC में जरूर आएगा!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_constitutional_provisions",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_04_constitutional_provisions",
+      "card_slug": "card_04_constitutional_provisions",
+      "type": "chat",
+      "concept_id": "constitutional_provisions_hc",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab constitutional provisions की बात करते हैं। High Courts के बारे में Articles 214 से 231 तक में लिखा है। Article 214 establishment के बारे में बताता है। हर High Court में एक Chief Justice और अन्य judges होते हैं। Judge की संख्या President तय करते हैं (Parliament की recommendation पर)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, High Court के judges कितने होते हैं? Fixed number hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi, fixed नहीं। हर High Court की judge strength अलग-अलग है और जरूरत के अनुसार बदलती रहती है। जैसे Allahabad HC में सबसे ज्यादा (160 sanctioned), जबकि Sikkim में सबसे कम (3 judges)। President, Chief Justice की recommendation पर judges की संख्या बढ़ा या घटा सकते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab flexibility है! Workload के अनुसार judges बढ़ा सकते hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz_oldest_hc",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_05_quiz_oldest_hc",
+      "card_slug": "card_05_quiz_oldest_hc",
+      "type": "quiz",
+      "concept_id": "oldest_high_court_quiz",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत की सबसे पुरानी High Court कौन सी है?",
+        "options": [
+          {"id": "A", "text": "Bombay High Court"},
+          {"id": "B", "text": "Madras High Court"},
+          {"id": "C", "text": "Calcutta High Court"},
+          {"id": "D", "text": "Allahabad High Court"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ SSC & Railway Favorite! Calcutta High Court भारत की सबसे पुरानी High Court है, जो 1862 में स्थापित हुई। इसके बाद Bombay और Madras High Courts आईं (दोनों 1862 में ही)। ये तीनों British India के Presidency Towns की original High Courts थीं।"
+      },
+      "navigation": {
+        "next": "card_06_quiz_patna_hc",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_patna_hc",
+      "card_slug": "card_06_quiz_patna_hc",
+      "type": "quiz",
+      "concept_id": "patna_hc_quiz",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE Special: Patna High Court की स्थापना किस वर्ष हुई?",
+        "options": [
+          {"id": "A", "text": "1912"},
+          {"id": "B", "text": "1916"},
+          {"id": "C", "text": "1920"},
+          {"id": "D", "text": "1936"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Favorite! Patna High Court की स्थापना 1916 में हुई थी। इससे पहले Bihar, Calcutta High Court के अधिकार क्षेत्र में आता था। 1912 में Bengal का विभाजन हुआ और Bihar अलग प्रांत बना, लेकिन High Court 1916 में establish हुई। यह fact BPSC में repeatedly पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_07_quiz_article_214",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_article_214",
+      "card_slug": "card_07_quiz_article_214",
+      "type": "quiz",
+      "concept_id": "article_214_quiz",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "High Courts की स्थापना किस Article में दी गई है?",
+        "options": [
+          {"id": "A", "text": "Article 124"},
+          {"id": "B", "text": "Article 214"},
+          {"id": "C", "text": "Article 226"},
+          {"id": "D", "text": "Article 233"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 214 High Courts की establishment के बारे में बताता है - 'There shall be a High Court for each State'। याद रखो: Art 214-231 पूरा High Court chapter है। Art 124-147 Supreme Court के लिए, Art 214-231 High Courts के लिए।"
+      },
+      "navigation": {
+        "next": "card_08_milestone_intro",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_08_milestone_intro",
+      "card_slug": "card_08_milestone_intro",
+      "type": "milestone",
+      "concept_id": "introduction_complete",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 1 COMPLETE!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "High Court का परिचय और संरचना",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/10 Clear",
+        "motivational_quote": "25 High Courts, Calcutta oldest, Patna 1916 - अब ये facts हमेशा याद!"
+      },
+      "navigation": {
+        "next": "card_09_appointment_intro",
+        "button_text": "Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_09_appointment_intro",
+      "card_slug": "card_09_appointment_intro",
+      "type": "chat",
+      "concept_id": "appointment_introduction",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, अब सबसे interesting part - High Court के judges कैसे बनते हैं? Article 217 में appointment process दिया है। बताओ, तुम्हारे हिसाब से कौन appoint करता होगा - President या Governor?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, Governor राज्य के head हैं तो शायद वो appoint करते होंगे? Ya फिर President क्योंकि Supreme Court judges भी President ही appoint करते हैं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Smart thinking! President ही High Court judges को appoint करते हैं (Article 217(1))। लेकिन यहाँ एक बड़ा twist है - यह appointment अकेले President की मर्जी से नहीं होती। Consultation जरूरी है तीन लोगों से: (1) Chief Justice of India, (2) Governor of the State, (3) जिस High Court में appointment हो रही है, उसके Chief Justice।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab तीनों से सलाह लेनी पड़ती है! Ye तो complex process hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_collegium_hc",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_10_collegium_hc",
+      "card_slug": "card_10_collegium_hc",
+      "type": "chat",
+      "concept_id": "collegium_system_hc",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ UPSC & BPSC Gold! Supreme Court के तीन Judges Cases (1981, 1993, 1998) ने Collegium System establish किया। High Court judges के लिए भी यही system लागू होता है। Chief Justice of India की अध्यक्षता में एक Collegium recommendations देती है। Governor की भूमिका केवल consultative है, binding नहीं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Chief Justice को appoint कैसे करते hain? Wo bhi President?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! High Court के Chief Justice को भी President appoint करते हैं। Article 217(2) कहता है - President, CJI से consultation करके किसी High Court के judge को उस court या किसी दूसरी High Court का Chief Justice बना सकते हैं। आमतौर पर सबसे senior judge को Chief Justice बनाया जाता है (seniority principle)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Toh judge बनना और Chief Justice बनना दो अलग appointments हैं!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_qualifications",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_11_qualifications",
+      "card_slug": "card_11_qualifications",
+      "type": "chat",
+      "concept_id": "judge_qualifications",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab qualifications (Article 217(2)):\n\n1) भारत का नागरिक हो\n2) (a) कम से कम 10 साल भारत में judicial office में रहा हो, या\n   (b) कम से कम 10 साल High Court या courts में advocate रहा हो\n\nध्यान दो - Supreme Court judge बनने के लिए 5 years High Court judge या 10 years advocate चाहिए, लेकिन High Court judge बनने के लिए 10 years judicial service या 10 years advocacy।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, 'judicial office' matlab क्या? District judge bhi judicial office hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Trap! Haan! Judicial office में District Judge, Additional District Judge, Sessions Judge जैसे पद आते हैं। तो कोई व्यक्ति जो 10 साल District Judge रहा है, वो High Court judge बन सकता है। लेकिन retired judges को नहीं बनाया जा सकता - in service होना चाहिए।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Judicial service या advocacy - दोनों routes हैं!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_tenure_age",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_12_tenure_age",
+      "card_slug": "card_12_tenure_age",
+      "type": "chat",
+      "concept_id": "tenure_retirement_age",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 217(1): High Court judge 62 वर्ष की आयु तक या जब तक वो resign न करें या remove न हों, तब तक पद पर रहते हैं। ⭐ Confusion Alert! Supreme Court judges 65 वर्ष में retire होते हैं, लेकिन High Court judges 62 वर्ष में। यह 3 साल का difference exam का favorite है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, Oath कौन दिलाता hai High Court judges को?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Article 219: राज्य के Governor शपथ दिलाते हैं। Oath का format Third Schedule में दिया गया है। Judge शपथ लेता है कि Constitution और laws को uphold करेगा, और अपने कर्तव्यों को faithfully निभाएगा।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Interesting! Governor oath dilate hain लेकिन appointment President करते hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_salary_allowances",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_13_salary_allowances",
+      "card_slug": "card_13_salary_allowances",
+      "type": "chat",
+      "concept_id": "salary_allowances",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 221: High Court judges की salaries, allowances और पेंशन Parliament द्वारा तय की जाती हैं (Second Schedule में दिया है)। Currently, Chief Justice को लगभग ₹2.50 lakh per month और other judges को ₹2.25 lakh per month मिलता है। ये salaries Consolidated Fund of India से आती हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, क्या judges की salary बीच में कम की जा सकती hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Pattern! Nahi! Article 221(2) कहता है - किसी judge की appointment के बाद उसकी salaries और allowances को उसके disadvantage के लिए vary नहीं किया जा सकता। यह judicial independence की guarantee है। Emergency के दौरान भी यह protection है (हालांकि सभी को proportionate cut लग सकता है)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Financial security भी hai judges को!"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_quiz_appointment",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_appointment",
+      "card_slug": "card_14_quiz_appointment",
+      "type": "quiz",
+      "concept_id": "appointment_quiz",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "High Court के judges को कौन नियुक्त करता है?",
+        "options": [
+          {"id": "A", "text": "राज्य का Governor"},
+          {"id": "B", "text": "राष्ट्रपति"},
+          {"id": "C", "text": "Chief Justice of India"},
+          {"id": "D", "text": "High Court का Chief Justice"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 217(1) के अनुसार राष्ट्रपति High Court के judges को नियुक्त करते हैं। लेकिन यह appointment CJI, राज्य के Governor, और concerned High Court के Chief Justice से consultation के बाद होती है। Collegium System के तहत यह process चलता है।"
+      },
+      "navigation": {
+        "next": "card_15_quiz_retirement_age",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_retirement_age",
+      "card_slug": "card_15_quiz_retirement_age",
+      "type": "quiz",
+      "concept_id": "retirement_age_quiz",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "High Court के judges की retirement age क्या है?",
+        "options": [
+          {"id": "A", "text": "60 वर्ष"},
+          {"id": "B", "text": "62 वर्ष"},
+          {"id": "C", "text": "65 वर्ष"},
+          {"id": "D", "text": "70 वर्ष"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ SSC & Railway Favorite! High Court judges 62 वर्ष की आयु में retire होते हैं। Confusion trap से बचो: Supreme Court judges 65 वर्ष में retire होते हैं। यह 3 साल का difference बहुत important है और frequently exam में पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_16_quiz_qualifications",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz_qualifications",
+      "card_slug": "card_16_quiz_qualifications",
+      "type": "quiz",
+      "concept_id": "qualifications_quiz",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "High Court judge बनने के लिए कितने वर्षों की judicial service या advocacy का अनुभव चाहिए?",
+        "options": [
+          {"id": "A", "text": "5 वर्ष"},
+          {"id": "B", "text": "7 वर्ष"},
+          {"id": "C", "text": "10 वर्ष"},
+          {"id": "D", "text": "12 वर्ष"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 217(2) के अनुसार High Court judge बनने के लिए कम से कम 10 वर्ष भारत में judicial office में या High Court/courts में advocate के रूप में अनुभव होना चाहिए। यह Supreme Court judge बनने के लिए जरूरी 5 years HC judge या 10 years advocacy से अलग है।"
+      },
+      "navigation": {
+        "next": "card_17_milestone_appointment",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_17_milestone_appointment",
+      "card_slug": "card_17_milestone_appointment",
+      "type": "milestone",
+      "concept_id": "appointment_complete",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "💪 MODULE 2 COMPLETE!",
+        "badge_emoji": "👨‍⚖️",
+        "completed_topic": "High Court Judges की नियुक्ति, योग्यता और कार्यकाल",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/10 Clear",
+        "motivational_quote": "62 years retirement, 10 years experience, President appointment - सब याद!"
+      },
+      "navigation": {
+        "next": "card_18_removal_intro",
+        "button_text": "Next: Removal Process ➔"
+      }
+    },
+    {
+      "card_id": "card_18_removal_intro",
+      "card_slug": "card_18_removal_intro",
+      "type": "chat",
+      "concept_id": "removal_introduction",
+      "level": 3,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, अब एक serious topic - High Court judge को कैसे हटाया जा सकता है? Supreme Court judges की तरह ही High Court judges को भी हटाने के लिए impeachment process है। Article 217(1)(b) और Article 124(4) & (5) में दिया है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, matlab वही process jo Supreme Court judges के लिए? Same grounds aur same procedure?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Removal के grounds same हैं: (1) Proven Misbehaviour, या (2) Incapacity (शारीरिक/मानसिक अक्षमता)। Process भी same है जो Supreme Court judges के लिए है - Parliament के किसी भी House से motion शुरू हो सकता है, 100 Lok Sabha members या 50 Rajya Sabha members के signature चाहिए।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur फिर Special Majority से pass hona padega दोनों Houses में?"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_removal_process",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_19_removal_process",
+      "card_slug": "card_19_removal_process",
+      "type": "chat",
+      "concept_id": "removal_detailed_process",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Special Majority का matlab: (1) उस House की total membership का majority, और (2) present और voting members का 2/3 majority। Dono conditions together satisfy होनी चाहिए। एक House में pass होने के बाद दूसरे House में investigation होती है, फिर वहां भी pass होना चाहिए। Finally, President removal order issue करते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir President क्या direct हटा नहीं सकते? Unhone appoint kiya tha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Trap! Nahi! यही judicial independence की beauty है। Article 124(2) clearly कहता है - judge को केवल impeachment process द्वारा ही हटाया जा सकता है। President arbitrarily remove नहीं कर सकते। यह Supreme Court और High Court judges दोनों के लिए same protection है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Great! Judges politically independent रहें, इसलिए यह safeguard!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_transfer_power",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_20_transfer_power",
+      "card_slug": "card_20_transfer_power",
+      "type": "chat",
+      "concept_id": "transfer_of_judges",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ UPSC Pattern! Ab एक unique power - Article 222: President किसी High Court के judge को दूसरी High Court में transfer कर सकते हैं। लेकिन यह transfer CJI से consultation के बाद ही हो सकता है। Transferred judge को transfer allowance मिलता है (compensatory allowance)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir transfer aur removal में kya difference hai? Dono mein judge हट तो जाते hain us court se!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant observation! Transfer में judge अपनी post पर रहते हैं, बस दूसरी High Court में जाते हैं। Removal में judge को पूरी तरह से post से हटा दिया जाता है। Transfer administrative reason से हो सकता है (like workload balance), लेकिन removal केवल misconduct या incapacity के लिए।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Transfer = relocation, Removal = termination!"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_quiz_removal_grounds",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_removal_grounds",
+      "card_slug": "card_21_quiz_removal_grounds",
+      "type": "quiz",
+      "concept_id": "removal_grounds_quiz",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "High Court judge को किन grounds पर remove किया जा सकता है?",
+        "options": [
+          {"id": "A", "text": "केवल Proven Misbehaviour"},
+          {"id": "B", "text": "केवल Incapacity"},
+          {"id": "C", "text": "Proven Misbehaviour या Incapacity"},
+          {"id": "D", "text": "राजनीतिक कारणों से"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "High Court judges को Supreme Court judges की तरह ही केवल दो grounds पर remove किया जा सकता है: (1) Proven Misbehaviour (साबित दुर्व्यवहार), या (2) Incapacity (शारीरिक/मानसिक अक्षमता)। Political reasons पर removal नहीं हो सकता - यह judicial independence की गारंटी है।"
+      },
+      "navigation": {
+        "next": "card_22_quiz_transfer",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_transfer",
+      "card_slug": "card_22_quiz_transfer",
+      "type": "quiz",
+      "concept_id": "transfer_quiz",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "High Court के judges को एक court से दूसरी court में transfer करने की power किस Article में दी गई है?",
+        "options": [
+          {"id": "A", "text": "Article 217"},
+          {"id": "B", "text": "Article 222"},
+          {"id": "C", "text": "Article 226"},
+          {"id": "D", "text": "Article 233"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ UPSC Favorite! Article 222 राष्ट्रपति को power देता है कि वो किसी High Court के judge को दूसरी High Court में transfer कर सकें। यह transfer CJI से consultation के बाद होता है और transferred judge को compensatory allowance मिलता है।"
+      },
+      "navigation": {
+        "next": "card_23_quiz_special_majority",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_23_quiz_special_majority",
+      "card_slug": "card_23_quiz_special_majority",
+      "type": "quiz",
+      "concept_id": "special_majority_quiz",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "High Court judge के impeachment के लिए Parliament में कौन सी majority चाहिए?",
+        "options": [
+          {"id": "A", "text": "Simple Majority"},
+          {"id": "B", "text": "Absolute Majority"},
+          {"id": "C", "text": "Special Majority (Total membership का majority + Present का 2/3)"},
+          {"id": "D", "text": "केवल Present और Voting का 2/3"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "High Court judge के impeachment के लिए Supreme Court judges की तरह ही Special Majority चाहिए: (1) उस House की total membership का majority, AND (2) Present और vote करने वाले members का 2/3 majority। दोनों conditions together satisfy होनी चाहिए।"
+      },
+      "navigation": {
+        "next": "card_24_milestone_removal",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_24_milestone_removal",
+      "card_slug": "card_24_milestone_removal",
+      "type": "milestone",
+      "concept_id": "removal_complete",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 3 COMPLETE!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "High Court Judge का Removal और Transfer",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/10 Clear",
+        "motivational_quote": "Impeachment process, Article 222 transfer - judicial independence अब clear!"
+      },
+      "navigation": {
+        "next": "card_25_jurisdiction_intro",
+        "button_text": "Next: Jurisdictions ➔"
+      }
+    },
+    {
+      "card_id": "card_25_jurisdiction_intro",
+      "card_slug": "card_25_jurisdiction_intro",
+      "type": "chat",
+      "concept_id": "jurisdiction_introduction",
+      "level": 4,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab सबसे interesting और exam-important part - High Court की Powers और Jurisdictions! High Court के पास 5 तरह के jurisdictions हैं:\n(1) Original Jurisdiction\n(2) Writ Jurisdiction\n(3) Appellate Jurisdiction\n(4) Supervisory Jurisdiction\n(5) Court of Record"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Supreme Court के jurisdictions से match kar rahe hain! लेकिन शायद कुछ differences होंगे?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! कुछ similarities हैं, कुछ major differences भी। सबसे बड़ा difference - High Court की Writ Jurisdiction Supreme Court से wider है। आओ एक-एक करके समझते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir wider matlab? High Court ज्यादा powerful hai kya writ में?"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_original_jurisdiction",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_26_original_jurisdiction",
+      "card_slug": "card_26_original_jurisdiction",
+      "type": "chat",
+      "concept_id": "original_jurisdiction_explained",
+      "level": 4,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Original Jurisdiction matlab वो cases जो directly High Court में शुरू होते हैं। High Court की original jurisdiction बहुत wide है:\n\n• Wills, marriage, divorce, company matters\n• Contempt of court\n• Election petitions (MPs/MLAs के)\n• Revenue matters (कुछ High Courts में)\n• Admiralty jurisdiction (समुद्री मामले - Bombay, Calcutta, Madras HC में)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Matlab बहुत variety hai! Supreme Court की तो केवल center-state disputes थी याद hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Exam Alert! Exactly! Supreme Court की original jurisdiction बहुत limited है (केवल federal disputes), लेकिन High Court की बहुत wide है। यह एक major difference है जो UPSC और BPSC में frequently पूछा जाता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! High Court original jurisdiction में broader hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_writ_jurisdiction",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_27_writ_jurisdiction",
+      "card_slug": "card_27_writ_jurisdiction",
+      "type": "chat",
+      "concept_id": "writ_jurisdiction_explained",
+      "level": 4,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC & UPSC Gold! अब सबसे important - Writ Jurisdiction (Article 226)। High Court पाँच writs issue कर सकती है: Habeas Corpus, Mandamus, Prohibition, Certiorari, Quo Warranto। लेकिन यहाँ twist है - Supreme Court (Article 32) केवल Fundamental Rights के enforcement के लिए writs issue करती है, जबकि High Court (Article 226) किसी भी purpose के लिए - FR + any other legal right!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab High Court की writ jurisdiction Supreme Court से ज्यादा wide hai? Ye तो उल्टा lag raha hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! यह counterintuitive लगता है लेकिन सच है। Art 226: 'for the enforcement of any of the fundamental rights and for any other purpose'। तो अगर तुम्हारा कोई non-FR legal right violate हो रहा है, तो तुम High Court जा सकते हो (Supreme Court नहीं, जब तक SLP न हो)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Ye तो major difference hai! Art 32 vs Art 226!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_appellate_jurisdiction",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_28_appellate_jurisdiction",
+      "card_slug": "card_28_appellate_jurisdiction",
+      "type": "chat",
+      "concept_id": "appellate_jurisdiction_explained",
+      "level": 4,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Appellate Jurisdiction (Article 225): High Court subordinate courts के decisions के against appeals सुनती है। Civil appeals, criminal appeals, revenue appeals - सब High Court में आते हैं। यह High Court का सबसे बड़ा workload है। District Courts, Sessions Courts से cases appeal में आते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, हर case में appeal हो सकती hai High Court में?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Specific conditions होती हैं। जैसे criminal में - अगर sentence 7 years से ज्यादा है तो appeal right है। Civil में - property value एक limit से ज्यादा हो। लेकिन Constitution और laws ने कुछ matters में appeal का right दिया है, कुछ में नहीं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Conditional appeal rights hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_supervisory_jurisdiction",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_29_supervisory_jurisdiction",
+      "card_slug": "card_29_supervisory_jurisdiction",
+      "type": "chat",
+      "concept_id": "supervisory_jurisdiction_explained",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ UPSC Favorite! Supervisory Jurisdiction (Article 227): यह High Court की unique power है। High Court अपने अधिकार क्षेत्र की सभी courts और tribunals का superintendent (निगरानी) करती है। ध्यान दो - यह केवल 'superintendence' है, not 'control'। High Court निचली अदालतों को directions दे सकती है कि वो properly function करें।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir superintendence aur control में kya difference hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Smart question! Superintendence matlab oversight, monitoring - यह देखना कि courts ठीक से काम कर रही हैं। Control matlab direct orders देना हर छोटी बात में। High Court केवल superintendence करती है - general supervision, not day-to-day interference। लेकिन अगर कोई lower court गलत कर रही है, तो HC intervene कर सकती है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! General oversight, not micromanagement!"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_quiz_writ_comparison",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_writ_comparison",
+      "card_slug": "card_30_quiz_writ_comparison",
+      "type": "quiz",
+      "concept_id": "writ_comparison_quiz",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "High Court (Article 226) और Supreme Court (Article 32) की writ jurisdiction में मुख्य अंतर क्या है?",
+        "options": [
+          {"id": "A", "text": "दोनों में कोई अंतर नहीं"},
+          {"id": "B", "text": "HC केवल FR के लिए, SC किसी भी purpose के लिए"},
+          {"id": "C", "text": "HC, FR और any other purpose के लिए; SC केवल FR के लिए"},
+          {"id": "D", "text": "HC केवल criminal matters में, SC केवल civil matters में"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC & UPSC Gold! यह बहुत important difference है। Article 226: High Court writs issue कर सकती है 'for enforcement of fundamental rights AND for any other purpose'। Article 32: Supreme Court writs केवल 'for enforcement of fundamental rights' के लिए। इसलिए HC की writ jurisdiction wider है।"
+      },
+      "navigation": {
+        "next": "card_31_quiz_supervisory",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quiz_supervisory",
+      "card_slug": "card_31_quiz_supervisory",
+      "type": "quiz",
+      "concept_id": "supervisory_quiz",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "High Court की superintendence power किस Article में दी गई है?",
+        "options": [
+          {"id": "A", "text": "Article 226"},
+          {"id": "B", "text": "Article 227"},
+          {"id": "C", "text": "Article 228"},
+          {"id": "D", "text": "Article 229"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 227 High Court को अपने territorial jurisdiction की सभी courts और tribunals पर superintendence (निगरानी) की power देता है। यह 'control' नहीं है बल्कि 'superintendence' है - यानी general oversight और monitoring।"
+      },
+      "navigation": {
+        "next": "card_32_quiz_original_jurisdiction",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz_original_jurisdiction",
+      "card_slug": "card_32_quiz_original_jurisdiction",
+      "type": "quiz",
+      "concept_id": "original_jurisdiction_quiz",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा matter High Court की original jurisdiction में नहीं आता?",
+        "options": [
+          {"id": "A", "text": "Wills और Marriage"},
+          {"id": "B", "text": "Company Law matters"},
+          {"id": "C", "text": "केंद्र और राज्यों के बीच disputes"},
+          {"id": "D", "text": "Election petitions"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ UPSC Pattern! केंद्र और राज्यों के बीच disputes Supreme Court की original jurisdiction (Article 131) में आते हैं, High Court की नहीं। High Court की original jurisdiction में wills, marriage, company matters, contempt, election petitions आदि आते हैं।"
+      },
+      "navigation": {
+        "next": "card_33_milestone_jurisdictions",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_33_milestone_jurisdictions",
+      "card_slug": "card_33_milestone_jurisdictions",
+      "type": "milestone",
+      "concept_id": "jurisdictions_complete",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎓 MODULE 4 COMPLETE!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "High Court के Jurisdictions",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/10 Clear",
+        "motivational_quote": "Art 226 wider than Art 32, Art 227 superintendence - अब ये clear!"
+      },
+      "navigation": {
+        "next": "card_34_writs_detail_intro",
+        "button_text": "Next: Writs in Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_34_writs_detail_intro",
+      "card_slug": "card_34_writs_detail_intro",
+      "type": "chat",
+      "concept_id": "writs_detailed_introduction",
+      "level": 5,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, पाँचों writs की details समझते हैं - ये High Court का सबसे powerful weapon हैं। याद है Supreme Court वाले chapter में हमने writs सीखी थीं? वही 5 writs High Court भी issue करती है, बस scope थोड़ा अलग है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Habeas Corpus, Mandamus, Prohibition, Certiorari, Quo Warranto। लेकिन High Court context में कुछ different hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Writs same हैं, लेकिन Article 226 की वजह से High Court इन्हें न केवल FR protection के लिए, बल्कि किसी भी legal right के लिए issue कर सकती है। जैसे contractual rights, statutory rights, property rights - anything! यही major advantage है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab flexibility ज्यादा hai High Court में!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_habeas_corpus_detail",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_35_habeas_corpus_detail",
+      "card_slug": "card_35_habeas_corpus_detail",
+      "type": "chat",
+      "concept_id": "habeas_corpus_detailed",
+      "level": 5,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ (1) HABEAS CORPUS ('have the body'): Illegal detention के against। अगर कोई व्यक्ति गलत तरीके से jail में है या detain है, तो High Court order करती है कि उस व्यक्ति को court में पेश किया जाए। Court detention की legality check करती है। Personal liberty की सबसे बड़ी रक्षक writ है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, State High Court में file करें ya Supreme Court में?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Practical Tip! आमतौर पर लोग पहले High Court जाते हैं क्योंकि वो geographically नजदीक होती है और Art 226 के तहत wider scope है। लेकिन अगर FR violation है, तो दोनों options हैं - Art 32 (SC) या Art 226 (HC)। अक्सर HC में जाना ज्यादा convenient होता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! HC नजदीक aur accessible hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_mandamus_prohibition",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_36_mandamus_prohibition",
+      "card_slug": "card_36_mandamus_prohibition",
+      "type": "chat",
+      "concept_id": "mandamus_prohibition_detailed",
+      "level": 5,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ (2) MANDAMUS ('we command'): Public officials को उनकी legal duty करने के लिए command। जैसे - government job में appointment letter देने से मना करे, pension release न हो, public records न मिलें - तो Mandamus issue होती है।\n\n⭐ (3) PROHIBITION: Lower court को उसके jurisdiction से बाहर के case सुनने से रोकना। Preventive writ है - case सुनने से पहले ही रोक देती है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Mandamus में discretionary powers के लिए bhi issue hoti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Trap! Nahi! Mandamus केवल 'legal duty' के लिए issue होती है, 'discretionary powers' के लिए नहीं। अगर authority के पास discretion है (जैसे Governor का कुछ matters में), तो court Mandamus issue नहीं कर सकती। यह एक important limitation है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Legal duty compulsory, discretion optional!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_certiorari_quo_warranto",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_37_certiorari_quo_warranto",
+      "card_slug": "card_37_certiorari_quo_warranto",
+      "type": "chat",
+      "concept_id": "certiorari_quo_warranto_detailed",
+      "level": 5,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ (4) CERTIORARI: Lower court या tribunal के order को quash (रद्द) करना। Curative writ है - decision हो जाने के बाद उसे cancel करती है। अगर lower court ने jurisdiction से बाहर जाकर या against natural justice decision दिया है।\n\n⭐ (5) QUO WARRANTO ('by what authority'): Public office के illegal occupation को challenge करना। अगर कोई बिना proper qualification के किसी public office पर बैठा है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Certiorari और Prohibition में फर्क याद है - Prohibition before decision, Certiorari after decision!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Prohibition = preventive (proceedings रोकना), Certiorari = curative (order cancel करना)। Quo Warranto में interesting बात - कोई भी interested person petition file कर सकता है, खुद affected होना जरूरी नहीं। Public interest में है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Quo Warranto में public interest litigation जैसा hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_quiz_mandamus_limitation",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_mandamus_limitation",
+      "card_slug": "card_38_quiz_mandamus_limitation",
+      "type": "quiz",
+      "concept_id": "mandamus_limitation_quiz",
+      "level": 5,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Mandamus writ किस case में issue नहीं की जा सकती?",
+        "options": [
+          {"id": "A", "text": "Public official अपनी legal duty नहीं कर रहा"},
+          {"id": "B", "text": "Public official discretionary power का उपयोग नहीं कर रहा"},
+          {"id": "C", "text": "Government appointment letter नहीं दे रही"},
+          {"id": "D", "text": "Pension release नहीं हो रहा"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC Pattern! Mandamus केवल 'legal duty' को enforce करने के लिए issue होती है। Discretionary powers के मामले में Mandamus issue नहीं की जा सकती क्योंकि discretion का मतलब ही है कि authority के पास choice है - वो compulsory duty नहीं है।"
+      },
+      "navigation": {
+        "next": "card_39_quiz_writ_identification",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz_writ_identification",
+      "card_slug": "card_39_quiz_writ_identification",
+      "type": "quiz",
+      "concept_id": "writ_identification_quiz",
+      "level": 5,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "यदि कोई lower court अपने jurisdiction से बाहर जाकर कोई case सुन रही है, तो कौन सी writ appropriate होगी (decision से पहले)?",
+        "options": [
+          {"id": "A", "text": "Habeas Corpus"},
+          {"id": "B", "text": "Mandamus"},
+          {"id": "C", "text": "Prohibition"},
+          {"id": "D", "text": "Certiorari"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "Prohibition writ lower court को उसके jurisdiction से बाहर के case सुनने से रोकती है। यह preventive writ है जो decision से BEFORE issue होती है। अगर decision हो चुका है, तो Certiorari issue होगी।"
+      },
+      "navigation": {
+        "next": "card_40_quiz_quo_warranto_condition",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_40_quiz_quo_warranto_condition",
+      "card_slug": "card_40_quiz_quo_warranto_condition",
+      "type": "quiz",
+      "concept_id": "quo_warranto_condition_quiz",
+      "level": 5,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Quo Warranto writ के बारे में कौन सा कथन सही है?",
+        "options": [
+          {"id": "A", "text": "केवल affected person ही file कर सकता है"},
+          {"id": "B", "text": "कोई भी interested person file कर सकता है"},
+          {"id": "C", "text": "केवल Attorney General file कर सकते हैं"},
+          {"id": "D", "text": "केवल private office के लिए issue होती है"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Quo Warranto writ में कोई भी interested person या concerned citizen petition file कर सकता है - खुद affected होना जरूरी नहीं। यह public office के illegal occupation को challenge करने के लिए है, इसलिए public interest में कोई भी आगे आ सकता है।"
+      },
+      "navigation": {
+        "next": "card_41_milestone_writs",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_41_milestone_writs",
+      "card_slug": "card_41_milestone_writs",
+      "type": "milestone",
+      "concept_id": "writs_detailed_complete",
+      "level": 5,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 5 COMPLETE!",
+        "badge_emoji": "📜",
+        "completed_topic": "पाँचों Writs की विस्तृत समझ",
+        "xp_earned": 70,
+        "milestone_progress": "Module 5/10 Clear",
+        "motivational_quote": "Writs की हर limitation और scope अब fingertips पर!"
+      },
+      "navigation": {
+        "next": "card_42_subordinate_courts_intro",
+        "button_text": "Next: Subordinate Courts ➔"
+      }
+    },
+    {
+      "card_id": "card_42_subordinate_courts_intro",
+      "card_slug": "card_42_subordinate_courts_intro",
+      "type": "chat",
+      "concept_id": "subordinate_courts_introduction",
+      "level": 6,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, High Court के नीचे की courts को Subordinate Courts कहते हैं। ये हैं District Courts, Sessions Courts, Magistrate Courts। Article 233-237 में Subordinate Courts के बारे में provisions दिए गए हैं। इन courts में judges की appointment कैसे होती है - यह भी important है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ये subordinate courts कौन appoint करता hai? High Court?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Pattern! Article 233: District Judges की appointment Governor करते हैं, लेकिन High Court से consultation के बाद। District Judges से नीचे के judges (like Additional District Judges, Civil Judges) की appointment Governor करते हैं High Court की recommendation पर। तो practically High Court का ही control है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Governor formally appoint karte hain लेकिन High Court decide करती hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_district_judges",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_43_district_judges",
+      "card_slug": "card_43_district_judges",
+      "type": "chat",
+      "concept_id": "district_judges_appointment",
+      "level": 6,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "District Judge बनने की qualifications (Article 233):\n\n1) भारत का नागरिक हो\n2) कम से कम 7 साल advocate रहा हो, या\n3) कम से कम 7 साल judicial service में रहा हो, या\n4) उस state में judicial service में हो और High Court द्वारा recommended हो\n\nDistrict Judge civil side का highest judicial officer होता है district level पर।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Sessions Judge aur District Judge mein kya difference hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Good question! District Judge civil cases देखते हैं, Sessions Judge criminal cases। लेकिन आजकल एक ही officer दोनों काम करता है - District & Sessions Judge। Civil jurisdiction में District Judge, criminal jurisdiction में Sessions Judge। Same person, different hats!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Civil aur Criminal के लिए अलग titles!"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_control_subordinate_courts",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_44_control_subordinate_courts",
+      "card_slug": "card_44_control_subordinate_courts",
+      "type": "chat",
+      "concept_id": "control_over_subordinate_courts",
+      "level": 6,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 235: Subordinate courts का control और supervision High Court के पास है। यह बहुत important provision है। High Court:\n\n• Judges का posting/transfer कर सकती है\n• Leave और conduct rules बना सकती है\n• Disciplinary action ले सकती है\n• Administrative control रखती है\n\nलेकिन appointment और removal में Governor की role है (formally)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir तो administrative control High Court, लेकिन appointment Governor?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ UPSC Favorite Confusion! Exactly! यह separation of powers का example है। Appointment में Executive (Governor) की role है (लेकिन HC से consultation), control में Judiciary (High Court) की। इससे checks and balances बनते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Dual control system - appointment aur supervision अलग!"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_quiz_district_judge_qualification",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz_district_judge_qualification",
+      "card_slug": "card_45_quiz_district_judge_qualification",
+      "type": "quiz",
+      "concept_id": "district_judge_qualification_quiz",
+      "level": 6,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "District Judge बनने के लिए कितने वर्षों की advocacy या judicial service का अनुभव चाहिए?",
+        "options": [
+          {"id": "A", "text": "5 वर्ष"},
+          {"id": "B", "text": "7 वर्ष"},
+          {"id": "C", "text": "10 वर्ष"},
+          {"id": "D", "text": "12 वर्ष"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 233 के अनुसार District Judge बनने के लिए कम से कम 7 वर्ष advocate या judicial service में अनुभव होना चाहिए। यह High Court judge (10 years) और Supreme Court judge (10 years advocacy/5 years HC judge) से कम है।"
+      },
+      "navigation": {
+        "next": "card_46_quiz_subordinate_control",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_46_quiz_subordinate_control",
+      "card_slug": "card_46_quiz_subordinate_control",
+      "type": "quiz",
+      "concept_id": "subordinate_control_quiz",
+      "level": 6,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Subordinate courts का control और supervision किसके पास है?",
+        "options": [
+          {"id": "A", "text": "राज्य सरकार"},
+          {"id": "B", "text": "राज्यपाल"},
+          {"id": "C", "text": "High Court"},
+          {"id": "D", "text": "Supreme Court"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 235 के अनुसार subordinate courts का control और supervision उस राज्य की High Court के पास है। High Court posting, transfer, leave rules, disciplinary actions आदि में control रखती है। यह judicial independence और efficiency के लिए है।"
+      },
+      "navigation": {
+        "next": "card_47_quiz_district_sessions_difference",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_47_quiz_district_sessions_difference",
+      "card_slug": "card_47_quiz_district_sessions_difference",
+      "type": "quiz",
+      "concept_id": "district_sessions_difference_quiz",
+      "level": 6,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "District Judge और Sessions Judge में क्या मुख्य अंतर है?",
+        "options": [
+          {"id": "A", "text": "District Judge civil cases, Sessions Judge criminal cases देखते हैं"},
+          {"id": "B", "text": "District Judge senior होते हैं Sessions Judge से"},
+          {"id": "C", "text": "District Judge राज्य स्तर पर, Sessions Judge जिला स्तर पर"},
+          {"id": "D", "text": "कोई अंतर नहीं, दोनों same हैं"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "District Judge civil jurisdiction में highest judicial officer होते हैं district level पर, जबकि Sessions Judge criminal jurisdiction में। आजकल आमतौर पर एक ही officer दोनों capacities में काम करता है - District & Sessions Judge - लेकिन jurisdictions अलग हैं।"
+      },
+      "navigation": {
+        "next": "card_48_milestone_subordinate_courts",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_48_milestone_subordinate_courts",
+      "card_slug": "card_48_milestone_subordinate_courts",
+      "type": "milestone",
+      "concept_id": "subordinate_courts_complete",
+      "level": 6,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "⚡ MODULE 6 COMPLETE!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Subordinate Courts और Judicial Administration",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/10 Clear",
+        "motivational_quote": "Article 233-237, HC का control, 7 years qualification - सब clear!"
+      },
+      "navigation": {
+        "next": "card_49_court_of_record",
+        "button_text": "Next: Court of Record ➔"
+      }
+    },
+    {
+      "card_id": "card_49_court_of_record",
+      "card_slug": "card_49_court_of_record",
+      "type": "chat",
+      "concept_id": "court_of_record_concept",
+      "level": 7,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, Article 215 कहता है - 'Every High Court shall be a court of record'। Court of Record का मतलब:\n\n1) इसके सभी decisions और proceedings permanently record किए जाते हैं\n2) इसके decisions को evidentiary value है - बाद में proof के रूप में use किए जा सकते हैं\n3) इसे contempt of court के लिए punish करने की power है"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, contempt of court kya hoti hai? TV पर सुना hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Favorite! Contempt of court matlab court का अपमान या उसके orders को disobey करना। दो types हैं:\n\n(1) Civil Contempt: Court के orders को willfully disobey करना\n(2) Criminal Contempt: Court की dignity को hurt करना, justice administration में interference करना\n\nHigh Court contempt के लिए fine या imprisonment (6 months तक) दे सकती है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Court की authority maintain करने के लिए ye power!"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_precedent_value",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_50_precedent_value",
+      "card_slug": "card_50_precedent_value",
+      "type": "chat",
+      "concept_id": "precedent_and_binding",
+      "level": 7,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Court of Record होने का एक और मतलब - High Court के decisions को precedent value है। Doctrine of Precedent (Stare Decisis) लागू होता है। High Court का decision उस राज्य की सभी subordinate courts के लिए binding होता है। लेकिन ध्यान दो - एक High Court का decision दूसरी High Court के लिए binding नहीं, केवल persuasive है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Patna HC का decision Bihar की lower courts को मानना पड़ेगा, लेकिन Allahabad HC को नहीं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ UPSC Gold! Exactly! Patna HC का decision:\n• Bihar की सभी lower courts के लिए BINDING\n• Allahabad HC या अन्य HCs के लिए PERSUASIVE (मान सकते हैं, जरूरी नहीं)\n• Supreme Court का decision सभी के लिए BINDING (Article 141)\n\nयह hierarchy of courts का natural consequence है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect! Vertical binding, horizontal persuasive!"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_hc_sc_comparison",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_51_hc_sc_comparison",
+      "card_slug": "card_51_hc_sc_comparison",
+      "type": "chat",
+      "concept_id": "high_court_supreme_court_comparison",
+      "level": 7,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab quick comparison - High Court vs Supreme Court:\n\n• HC: State level, currently 25 HCs\n• SC: National level, only 1\n\n• HC judges: 62 years retirement\n• SC judges: 65 years retirement\n\n• HC: Art 226 writ (FR + any purpose)\n• SC: Art 32 writ (केवल FR)\n\n• HC: Wider original jurisdiction\n• SC: Limited original jurisdiction (federal disputes)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir तो कुछ powers में High Court ज्यादा wide hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Writ jurisdiction और original jurisdiction में HC wider है। लेकिन SC सबसे ऊपर है - final court of appeal। SC के decisions सभी को मानने पड़ते हैं (Art 141), HC के केवल अपनी subordinate courts को। Hierarchy में SC supreme है, लेकिन accessibility और scope में HC important है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! SC apex but HC accessible and wider in some aspects!"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_quiz_court_of_record",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_52_quiz_court_of_record",
+      "card_slug": "card_52_quiz_court_of_record",
+      "type": "quiz",
+      "concept_id": "court_of_record_quiz",
+      "level": 7,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "High Court को 'Court of Record' किस Article में कहा गया है?",
+        "options": [
+          {"id": "A", "text": "Article 214"},
+          {"id": "B", "text": "Article 215"},
+          {"id": "C", "text": "Article 226"},
+          {"id": "D", "text": "Article 227"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 215 में कहा गया है - 'Every High Court shall be a court of record'। Court of Record का मतलब: permanent records, evidentiary value, contempt power। Supreme Court भी Court of Record है (Article 129)।"
+      },
+      "navigation": {
+        "next": "card_53_quiz_contempt_types",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_53_quiz_contempt_types",
+      "card_slug": "card_53_quiz_contempt_types",
+      "type": "quiz",
+      "concept_id": "contempt_types_quiz",
+      "level": 7,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Court के order को willfully disobey करना किस type की contempt है?",
+        "options": [
+          {"id": "A", "text": "Civil Contempt"},
+          {"id": "B", "text": "Criminal Contempt"},
+          {"id": "C", "text": "Constitutional Contempt"},
+          {"id": "D", "text": "Administrative Contempt"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "Civil Contempt का मतलब है court के किसी order या judgment को willfully disobey करना। Criminal Contempt में court की dignity को hurt करना, justice administration में interference आदि आते हैं। दोनों के लिए court punishment दे सकती है।"
+      },
+      "navigation": {
+        "next": "card_54_quiz_precedent_binding",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_54_quiz_precedent_binding",
+      "card_slug": "card_54_quiz_precedent_binding",
+      "type": "quiz",
+      "concept_id": "precedent_binding_quiz",
+      "level": 7,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Patna High Court का decision किसके लिए binding है?",
+        "options": [
+          {"id": "A", "text": "केवल Patna HC के लिए"},
+          {"id": "B", "text": "Bihar की सभी subordinate courts के लिए"},
+          {"id": "C", "text": "भारत की सभी High Courts के लिए"},
+          {"id": "D", "text": "भारत की सभी courts के लिए"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC Special! किसी High Court का decision उस राज्य की सभी subordinate courts के लिए binding होता है। दूसरी High Courts के लिए केवल persuasive है (मान सकते हैं, जरूरी नहीं)। Supreme Court का decision सभी courts के लिए binding है (Article 141)।"
+      },
+      "navigation": {
+        "next": "card_55_milestone_court_of_record",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_55_milestone_court_of_record",
+      "card_slug": "card_55_milestone_court_of_record",
+      "type": "milestone",
+      "concept_id": "court_of_record_complete",
+      "level": 7,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🛡️ MODULE 7 COMPLETE!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Court of Record और Precedent System",
+        "xp_earned": 60,
+        "milestone_progress": "Module 7/10 Clear",
+        "motivational_quote": "Article 215, contempt power, binding vs persuasive - सब crystal clear!"
+      },
+      "navigation": {
+        "next": "card_56_other_provisions",
+        "button_text": "Next: Other Provisions ➔"
+      }
+    },
+    {
+      "card_id": "card_56_other_provisions",
+      "card_slug": "card_56_other_provisions",
+      "type": "chat",
+      "concept_id": "other_important_provisions",
+      "level": 8,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, कुछ और important provisions:\n\nArticle 229: High Court officers और servants की appointment HC के Chief Justice या उनके द्वारा नियुक्त judge/officer द्वारा।\n\nArticle 230: High Court की seat का extension - CJI की approval से Chief Justice कभी-कभी HC को दूसरे स्थान पर बैठने की permission दे सकते हैं।\n\nArticle 231: दो या अधिक राज्यों के लिए common High Court।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Article 231 matlab? Kya example hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Railway & SSC Fact! Parliament Act द्वारा दो या अधिक states के लिए एक common High Court establish कर सकती है। Examples:\n\n• Guwahati HC: Assam, Nagaland, Mizoram, Arunachal Pradesh\n• Bombay HC: Maharashtra, Goa, Dadra & Nagar Haveli, Daman & Diu\n• Punjab & Haryana HC (common)\n\nयह administrative convenience के लिए है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! छोटे states को अलग HC maintain करने की जरूरत नहीं!"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_double_bench_full_bench",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_57_double_bench_full_bench",
+      "card_slug": "card_57_double_bench_full_bench",
+      "type": "chat",
+      "concept_id": "bench_system_explained",
+      "level": 8,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "High Courts में benches की system होती है:\n\n• Single Bench: एक judge - routine matters के लिए\n• Division Bench (Double Bench): दो judges - ज्यादातर appeals और writs\n• Full Bench: तीन या अधिक judges - important constitutional/legal questions के लिए\n\nअगर Division Bench में दोनों judges का opinion अलग हो (disagreement), तो matter Full Bench को refer हो जाता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir larger bench का decision ज्यादा weightage रखता hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ UPSC Pattern! Haan! Precedent value में:\n\nFull Bench > Division Bench > Single Bench\n\nअगर Single Bench का decision Division Bench के decision से contradict करे, तो Division Bench वाला prevail करेगा। यही hierarchy है। Important और complex matters Full Bench को refer किए जाते हैं ताकि authoritative decision हो।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! More judges = more authority!"
+        }
+      ],
+      "navigation": {
+        "next": "card_58_PIL_in_HC",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_58_PIL_in_HC",
+      "card_slug": "card_58_PIL_in_HC",
+      "type": "chat",
+      "concept_id": "public_interest_litigation_hc",
+      "level": 8,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Social Impact! PIL (Public Interest Litigation) - High Courts ने इसे बहुत develop किया है। Article 226 के तहत कोई भी व्यक्ति public interest में writ petition file कर सकता है। अपने rights के लिए नहीं, बल्कि समाज के गरीब/marginalized लोगों के rights के लिए।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Supreme Court में bhi PIL hoti hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! लेकिन High Court में PIL ज्यादा accessible है - geographically नजदीक, local issues पर focus। कई landmark cases High Courts से शुरू हुए। जैसे environment protection, bonded labour, women rights, child labour - सब PIL के through। Justice Krishna Iyer और Justice Bhagwati ने PIL को popularize किया।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Great! Common man के लिए justice का door खुला!"
+        }
+      ],
+      "navigation": {
+        "next": "card_59_quiz_common_hc",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_59_quiz_common_hc",
+      "card_slug": "card_59_quiz_common_hc",
+      "type": "quiz",
+      "concept_id": "common_hc_quiz",
+      "level": 8,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सी High Court multiple states/UTs को cover करती है?",
+        "options": [
+          {"id": "A", "text": "Patna High Court"},
+          {"id": "B", "text": "Delhi High Court"},
+          {"id": "C", "text": "Guwahati High Court"},
+          {"id": "D", "text": "Karnataka High Court"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ Railway Favorite! Guwahati High Court चार राज्यों को cover करती है: Assam, Nagaland, Mizoram, और Arunachal Pradesh। ऐसे ही Bombay HC (Maharashtra, Goa + UTs), Punjab & Haryana HC (common) भी हैं। Article 231 इसकी provision देता है।"
+      },
+      "navigation": {
+        "next": "card_60_quiz_bench_hierarchy",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_60_quiz_bench_hierarchy",
+      "card_slug": "card_60_quiz_bench_hierarchy",
+      "type": "quiz",
+      "concept_id": "bench_hierarchy_quiz",
+      "level": 8,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Precedent value में सही hierarchy क्या है?",
+        "options": [
+          {"id": "A", "text": "Single Bench > Division Bench > Full Bench"},
+          {"id": "B", "text": "Full Bench > Division Bench > Single Bench"},
+          {"id": "C", "text": "Division Bench > Full Bench > Single Bench"},
+          {"id": "D", "text": "सभी equal precedent value रखते हैं"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Precedent value में hierarchy: Full Bench (3+ judges) > Division Bench (2 judges) > Single Bench (1 judge)। जितने अधिक judges, उतनी अधिक authority। अगर छोटी bench का decision बड़ी bench से contradict करे, तो बड़ी bench वाला prevail करेगा।"
+      },
+      "navigation": {
+        "next": "card_61_quiz_article_231",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_61_quiz_article_231",
+      "card_slug": "card_61_quiz_article_231",
+      "type": "quiz",
+      "concept_id": "article_231_quiz",
+      "level": 8,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "दो या अधिक states के लिए common High Court establish करने का provision किस Article में है?",
+        "options": [
+          {"id": "A", "text": "Article 226"},
+          {"id": "B", "text": "Article 229"},
+          {"id": "C", "text": "Article 230"},
+          {"id": "D", "text": "Article 231"}
+        ],
+        "correct_option_id": "D",
+        "explanation": "Article 231 Parliament को power देता है कि वो दो या अधिक states के लिए एक common High Court establish कर सके। यह administrative convenience और smaller states की जरूरतों को ध्यान में रखकर किया जाता है।"
+      },
+      "navigation": {
+        "next": "card_62_milestone_other_provisions",
+        "button_text": "Check & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_62_milestone_other_provisions",
+      "card_slug": "card_62_milestone_other_provisions",
+      "type": "milestone",
+      "concept_id": "other_provisions_complete",
+      "level": 8,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "📚 MODULE 8 COMPLETE!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Other Provisions और Bench System",
+        "xp_earned": 60,
+        "milestone_progress": "Module 8/10 Clear",
+        "motivational_quote": "Article 229-231, Bench hierarchy, PIL - सब अब mastered!"
+      },
+      "navigation": {
+        "next": "card_63_final_summary",
+        "button_text": "Final Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_63_final_summary",
+      "card_slug": "card_63_final_summary",
+      "type": "summary",
+      "concept_id": "chapter_final_revision",
+      "level": 9,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ Officer Level Quick Revision",
+        "revision_points": [
+          {
+            "topic": "Structure & History",
+            "point": "Currently 25 HCs। Calcutta HC oldest (1862)। Patna HC 1916। Art 214-231। Chief Justice + other judges। Strength varies - Allahabad largest (160)।"
+          },
+          {
+            "topic": "Appointment & Qualifications",
+            "point": "President appoints (Art 217)। Consultation: CJI, Governor, HC CJ। Qualifications: Citizen, 10 years judicial service/advocacy। Retirement: 62 years। Oath: Governor। Salary: Consolidated Fund।"
+          },
+          {
+            "topic": "Removal & Transfer",
+            "point": "Impeachment (same as SC): Proven Misbehaviour/Incapacity। Special Majority both Houses। Art 222: Transfer power। President transfers after CJI consultation। Compensatory allowance।"
+          },
+          {
+            "topic": "Jurisdictions",
+            "point": "Original: Wills, marriage, company, contempt, elections। Writ (Art 226): FR + any purpose (wider than SC's Art 32)। Appellate: From subordinate courts। Supervisory (Art 227): Superintendence over lower courts।"
+          },
+          {
+            "topic": "Writs",
+            "point": "5 writs: Habeas Corpus (detention), Mandamus (legal duty), Prohibition (before decision), Certiorari (after decision), Quo Warranto (public office)। Mandamus not for discretionary powers।"
+          },
+          {
+            "topic": "Subordinate Courts",
+            "point": "Art 233-237। District Judges: Governor appoints, HC consults। Qualification: 7 years advocacy/judicial service। Art 235: HC controls subordinate courts। Sessions Judge (criminal), District Judge (civil)।"
+          },
+          {
+            "topic": "Court of Record",
+            "point": "Art 215। Permanent records, evidentiary value, contempt power। Civil contempt (disobey order), Criminal contempt (hurt dignity)। Binding on subordinate courts, persuasive for other HCs।"
+          },
+          {
+            "topic": "Other Provisions",
+            "point": "Art 229: Officers appointment। Art 230: Seat extension। Art 231: Common HC for states। Benches: Single, Division (2), Full (3+)। Full Bench > Division > Single in precedent। PIL under Art 226।"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_64_final_quiz_1",
+        "button_text": "Final Master Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_64_final_quiz_1",
+      "card_slug": "card_64_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_1",
+      "level": 9,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Multi-Statement:\n\nHigh Courts के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. High Court judges की retirement age 62 वर्ष है।\n2. High Court की writ jurisdiction केवल Fundamental Rights के enforcement के लिए है।\n3. Subordinate courts का control High Court के पास है।\n4. Patna High Court 1916 में स्थापित हुई।\n\nउपरोक्त में से कौन से कथन सही हैं?",
+        "options": [
+          {"id": "A", "text": "केवल 1, 2 और 3"},
+          {"id": "B", "text": "केवल 1, 3 और 4"},
+          {"id": "C", "text": "केवल 2, 3 और 4"},
+          {"id": "D", "text": "1, 2, 3 और 4 सभी"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "कथन 1 सही (62 years)। कथन 2 गलत - HC की writ jurisdiction (Art 226) FR + any other purpose के लिए है, केवल FR के लिए नहीं। कथन 3 सही (Art 235)। कथन 4 सही (Patna HC 1916)। इसलिए 1, 3 और 4 सही हैं।"
+      },
+      "navigation": {
+        "next": "card_65_final_quiz_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_65_final_quiz_2",
+      "card_slug": "card_65_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_2",
+      "level": 9,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC Assertion-Reason:\n\nAssertion (A): High Court की writ jurisdiction Supreme Court से wider है।\n\nReason (R): Article 226 writs को 'enforcement of fundamental rights and for any other purpose' के लिए allow करता है।\n\nसही विकल्प चुनिए:",
+        "options": [
+          {"id": "A", "text": "A और R दोनों सही हैं, और R, A की सही व्याख्या है"},
+          {"id": "B", "text": "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है"},
+          {"id": "C", "text": "A सही है लेकिन R गलत है"},
+          {"id": "D", "text": "A गलत है लेकिन R सही है"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "दोनों statements सही हैं और R, A की perfect व्याख्या करता है। HC की writ jurisdiction (Art 226) wider है क्योंकि यह FR + any other purpose के लिए है, जबकि SC की writ jurisdiction (Art 32) केवल FR के लिए। यह counterintuitive लगता है लेकिन constitutional fact है।"
+      },
+      "navigation": {
+        "next": "card_66_final_quiz_3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_66_final_quiz_3",
+      "card_slug": "card_66_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_3",
+      "level": 9,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Article Matching:\n\nनिम्नलिखित को सुमेलित कीजिए:\n\nArticle --- Provision\n\n1. Article 217 --- (i) Superintendence over subordinate courts\n2. Article 226 --- (ii) Appointment of HC judges\n3. Article 227 --- (iii) Writ jurisdiction\n4. Article 235 --- (iv) Control of subordinate courts\n\nसही सुमेलन है:",
+        "options": [
+          {"id": "A", "text": "1-(ii), 2-(iii), 3-(i), 4-(iv)"},
+          {"id": "B", "text": "1-(i), 2-(ii), 3-(iii), 4-(iv)"},
+          {"id": "C", "text": "1-(iii), 2-(iv), 3-(i), 4-(ii)"},
+          {"id": "D", "text": "1-(iv), 2-(i), 3-(ii), 4-(iii)"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ Perfect Matching! Art 217: HC judges की appointment। Art 226: Writ jurisdiction। Art 227: Superintendence over subordinate courts। Art 235: Control of subordinate courts। यह matching BPSC/UPSC का favorite pattern है।"
+      },
+      "navigation": {
+        "next": "card_67_final_quiz_4",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_67_final_quiz_4",
+      "card_slug": "card_67_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_4",
+      "level": 9,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC Comparative:\n\nनिम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?\n\nHigh Court Feature --- Supreme Court Feature",
+        "options": [
+          {"id": "A", "text": "Retirement age: 62 years --- Retirement age: 65 years"},
+          {"id": "B", "text": "Writ: Art 226 (FR + any purpose) --- Writ: Art 32 (केवल FR)"},
+          {"id": "C", "text": "Appointment qualification: 10 years --- Appointment qualification: 10 years advocacy"},
+          {"id": "D", "text": "Court of Record: Art 215 --- Court of Record: Art 129"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "Option C गलत है। HC के लिए 10 years judicial service या advocacy चाहिए (Art 217), जबकि SC के लिए 5 years HC judge या 10 years HC advocacy (Art 124)। बाकी सभी युग्म सही हैं।"
+      },
+      "navigation": {
+        "next": "card_68_final_quiz_5",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_68_final_quiz_5",
+      "card_slug": "card_68_final_quiz_5",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_5",
+      "level": 9,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE Bihar Special:\n\nPatna High Court के बारे में कौन सा कथन सही नहीं है?",
+        "options": [
+          {"id": "A", "text": "1916 में स्थापित हुई"},
+          {"id": "B", "text": "इससे पहले Bihar, Calcutta HC के अधिकार क्षेत्र में था"},
+          {"id": "C", "text": "यह भारत की सबसे पुरानी High Court है"},
+          {"id": "D", "text": "यह केवल Bihar राज्य के लिए है"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC TRE Alert! Option C गलत है। Patna HC सबसे पुरानी नहीं है - Calcutta HC (1862) सबसे पुरानी है। Patna HC 1916 में establish हुई। बाकी सभी statements सही हैं - यह Bihar-specific fact BPSC TRE में frequently पूछा जाता है।"
+      },
+      "navigation": {
+        "next": "card_69_comparison_chart",
+        "button_text": "Comparison Chart ➔"
+      }
+    },
+    {
+      "card_id": "card_69_comparison_chart",
+      "card_slug": "card_69_comparison_chart",
+      "type": "summary",
+      "concept_id": "hc_sc_comparison_chart",
+      "level": 9,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "📊 High Court vs Supreme Court - Complete Comparison",
+        "revision_points": [
+          {
+            "topic": "Level & Number",
+            "point": "HC: State level, 25 HCs। SC: National level, only 1।"
+          },
+          {
+            "topic": "Retirement Age",
+            "point": "HC: 62 years (Art 217)। SC: 65 years (Art 124)। 3 साल का difference - exam favorite!"
+          },
+          {
+            "topic": "Appointment Qualification",
+            "point": "HC: 10 years judicial service/advocacy। SC: 5 years HC judge या 10 years HC advocacy या distinguished jurist।"
+          },
+          {
+            "topic": "Writ Jurisdiction",
+            "point": "HC (Art 226): FR + any other purpose (wider!)। SC (Art 32): केवल FR के लिए।"
+          },
+          {
+            "topic": "Original Jurisdiction",
+            "point": "HC: Very wide - wills, marriage, company, contempt, elections। SC: Very limited - केवल federal disputes (center-state)।"
+          },
+          {
+            "topic": "Appellate Jurisdiction",
+            "point": "HC: From subordinate courts। SC: From High Courts (और HC से ऊपर final court)।"
+          },
+          {
+            "topic": "Territorial Jurisdiction",
+            "point": "HC: अपने state/states के लिए। SC: पूरे भारत के लिए।"
+          },
+          {
+            "topic": "Binding Nature",
+            "point": "HC: अपनी subordinate courts के लिए binding, other HCs के लिए persuasive। SC (Art 141): सभी courts के लिए binding।"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_70_bihar_context",
+        "button_text": "Bihar Context ➔"
+      }
+    },
+    {
+      "card_id": "card_70_bihar_context",
+      "card_slug": "card_70_bihar_context",
+      "type": "summary",
+      "concept_id": "bihar_high_court_context",
+      "level": 9,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⭐ BPSC TRE Special: Patna High Court",
+        "revision_points": [
+          {
+            "topic": "स्थापना",
+            "point": "Patna High Court 3 February 1916 को स्थापित हुई। इससे पहले Bihar, Calcutta High Court के jurisdiction में था।"
+          },
+          {
+            "topic": "Historical Context",
+            "point": "1912 में Bengal का विभाजन हुआ और Bihar-Orissa अलग province बना। 1916 में Patna HC establish हुई। 1936 में Orissa अलग हुआ तो Orissa HC बनी।"
+          },
+          {
+            "topic": "Jurisdiction",
+            "point": "Patna HC केवल Bihar राज्य के लिए है। इसके अंतर्गत सभी district courts और subordinate courts आते हैं।"
+          },
+          {
+            "topic": "Bench System",
+            "point": "Patna HC का principal seat Patna में है। कभी-कभी circuit benches अन्य cities में भी बैठती हैं (administrative convenience के लिए)।"
+          },
+          {
+            "topic": "Current Strength",
+            "point": "Patna HC की sanctioned strength लगभग 53 judges है (Chief Justice सहित)। यह समय-समय पर बदलती रहती है workload के अनुसार।"
+          },
+          {
+            "topic": "Exam Importance",
+            "point": "⭐ BPSC TRE में Patna HC से related facts frequently पूछे जाते हैं - establishment year (1916), principal seat (Patna), jurisdiction (केवल Bihar)।"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_71_key_differences_summary",
+        "button_text": "Key Differences ➔"
+      }
+    },
+    {
+      "card_id": "card_71_key_differences_summary",
+      "card_slug": "card_71_key_differences_summary",
+      "type": "summary",
+      "concept_id": "key_differences_summary",
+      "level": 9,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "🔑 Golden Exam Tricks - Never Forget!",
+        "revision_points": [
+          {
+            "topic": "62 vs 65",
+            "point": "HC judges: 62 years। SC judges: 65 years। यह 3 साल का difference हर exam में पूछा जाता है।"
+          },
+          {
+            "topic": "Art 226 vs Art 32",
+            "point": "HC (226): FR + ANY PURPOSE (wider)। SC (32): ONLY FR। Counterintuitive but true - HC wider in writ!"
+          },
+          {
+            "topic": "10 years vs 5+10",
+            "point": "HC qualification: 10 years judicial/advocacy। SC qualification: 5 years HC judge OR 10 years HC advocacy।"
+          },
+          {
+            "topic": "Superintendence vs Control",
+            "point": "Art 227: Superintendence (oversight, monitoring)। Art 235: Control (administrative, posting, transfer)। Different concepts!"
+          },
+          {
+            "topic": "Prohibition vs Certiorari",
+            "point": "Prohibition = BEFORE decision (preventive)। Certiorari = AFTER decision (curative)। Timing is key!"
+          },
+          {
+            "topic": "Mandamus Limitation",
+            "point": "Mandamus for LEGAL DUTY only, NOT for discretionary powers। Biggest trap in writ questions!"
+          },
+          {
+            "topic": "Patna HC - 1916",
+            "point": "⭐ BPSC TRE Gold! Patna HC established 1916। Before: Calcutta HC jurisdiction। Oldest HC: Calcutta (1862)।"
+          },
+          {
+            "topic": "Common High Courts",
+            "point": "Guwahati HC: 4 states (Assam, Nagaland, Mizoram, Arunachal)। Bombay HC: Maharashtra + Goa + UTs। Article 231।"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_72_final_milestone",
+        "button_text": "Chapter Complete 🏆"
+      }
+    },
+    {
+      "card_id": "card_72_final_milestone",
+      "card_slug": "card_72_final_milestone",
+      "type": "milestone",
+      "concept_id": "chapter_completion_final",
+      "level": 10,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎊 HIGH COURTS MASTERED! 🎊",
+        "badge_emoji": "⚖️",
+        "completed_topic": "High Courts of India - Complete Constitutional & Judicial Module",
+        "xp_earned": 150,
+        "milestone_progress": "10/10 Modules Complete ✅",
+        "motivational_quote": "From Article 214 to 231, from Patna HC (1916) to Art 226 (wider writ!), from 62 years retirement to superintendence power - हर single provision अब आपके दिमाग में permanently carved! 🔥\n\nBPSC/UPSC में High Court के questions = आपके लिए FREE MARKS! 💯\n\nJudiciary के इस crucial pillar को अब आप जानते हैं अंदर-बाहर से! ⚖️\n\nPatna HC 1916, Art 226 wider than Art 32, 62 vs 65 - ये facts अब कभी भूलेंगे नहीं! 🚀\n\nKeep Learning, Keep Growing, Future Officer! 🇮🇳"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
