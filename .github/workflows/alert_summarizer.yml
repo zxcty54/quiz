@@ -53,22 +53,23 @@ jobs:
           python alerts_summarizer.py
 
       # =====================================================
-      # 5. COMMIT & PUSH final_alerts_news.json
+      # 5. COMMIT & PUSH BOTH JSON FILES (Website + App)
       # =====================================================
-      - name: Commit and Push Summary JSON
+      - name: Commit and Push Summary JSONs
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
 
-          git add final_alerts_news.json
+          # Website Master File + App Rolling 3-Day File
+          git add final_alerts_news.json app_alerts_news.json
 
           if git diff --cached --quiet; then
-            echo "ℹ️ No changes to commit in final_alerts_news.json"
+            echo "ℹ️ No changes to commit in JSON files"
             exit 0
           fi
 
-          git commit -m "Update Final Google Alerts Summary JSON [skip ci]"
+          git commit -m "Update Final Google Alerts Summary JSONs [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
 
-          echo "✅ final_alerts_news.json pushed successfully."
+          echo "✅ JSON files pushed successfully."
