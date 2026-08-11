@@ -1,9 +1,9 @@
-name: 3. Run Google Alerts Scraper
+Name: 3. Run Google Alerts Scraper
 
 on:
   schedule:
-    # 02:30 UTC = 08:00 AM IST (Daily)
-    - cron: '30 2 * * *'
+    # Runs every 4 hours (At minute 0 of UTC 00, 04, 08, 12, 16, 20)
+    - cron: '0 */4 * * *'
   workflow_dispatch: # GitHub Actions tab se manual run karne ke liye
 
 concurrency:
