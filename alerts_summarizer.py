@@ -3,10 +3,12 @@ import json
 import time
 import re
 from datetime import datetime, timezone, timedelta
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from threading import Lock
 from groq import Groq
 
 # ============================================================
-# CONFIGURATION
+# EXCLUSIVE "FIRST IN INDIA" SUMMARIZER CONFIGURATION
 # ============================================================
 
 INPUT_FILE = "alerts_news.json"
@@ -16,49 +18,74 @@ GROQ_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
 MODEL_NAME = "llama-3.1-8b-instant"
+MAX_WORKERS = 2  # Exactly 2 parallel threads for Groq RPM safety
 
 IST = timezone(timedelta(hours=5, minutes=30))
 TODAY_DATE = datetime.now(IST).strftime("%d %b %Y")
 
-# SMART & ADAPTIVE SYSTEM PROMPT
+# ============================================================
+# STRICT "FIRST IN INDIA" STATIC GK PROMPT WITH EXACT CATEGORIES
+# ============================================================
+
 SYSTEM_PROMPT = """
-You are an expert Current Affairs Analyst for competitive civil services exams (UPSC, BPSC, SSC CGL).
-Your task is to analyze raw news articles and intelligently extract high-value exam facts into structured JSON.
+You are an expert Static GK & National Milestones Analyst for UPSC, BPSC, and Competitive Exams.
+Your ONLY objective is to extract genuine "First in India" (भारत में प्रथम) milestones that create permanent Static GK questions.
 
-NEWS EVALUATION & FILTERING:
-- Set "is_relevant": true ONLY IF the article contains substantial administrative, technological, national, state, or policy significance.
-- Set "is_relevant": false for daily stock market movements, routine local crimes, corporate quarterly profits, or pure marketing PR.
+STRICT ALLOWED CATEGORIES (Choose EXACTLY ONE from this list for "category"):
+1. Space, Science & Technology
+2. Environment, Climate & Sustainability
+3. Governance, Judiciary & Public Administration
+4. Internal Security & Emergency Services
+5. Aviation & Transport
+6. Banking, Finance & FinTech
+7. Maritime, Shipping & Defence Manufacturing
+8. Education & Research
+9. Health & Medical Sciences
+10. Agriculture, Fisheries & Biodiversity
+11. Sports & Gaming
 
-SMART BULLET EXTRACTION INSTRUCTIONS:
-- Analyze the full content and identify all critical exam facts: entities, ministries, locations, target years, budgets, ISO/statutory certifications, technical mechanisms, and underlying significance.
-- Dynamically extract these facts into concise, high-density bullet points in Hinglish/English.
-- Adapt the number of bullets (typically 2 to 4) naturally based on content depth—never pad with fluff and never omit a crucial fact.
-- Every bullet point must be purely fact-driven. Avoid generic opinions or filler lines like "Yeh ek accha kadam hai".
+✅ MANDATORY ACCEPTANCE CRITERIA (Set "is_relevant": true ONLY IF the news is a genuine "FIRST IN INDIA"):
+1. India's First infrastructure/tech projects (e.g., India's first geothermal plant, first paperless court, first vertical lift bridge, first AI university, first solar-powered village).
+2. India's First scientific/space/defence achievements by Govt or Public Bodies (e.g., ISRO, DRDO, CSIR, Indian Navy, IITs).
+3. India's First environmental or geographic designations (e.g., India's first dark sky reserve, first biodiversity heritage site).
+4. Major public sector or national level "Firsts" that form permanent Static GK for competitive exams.
 
-JSON OUTPUT STRUCTURE ONLY:
+❌ HARD REJECTION RULES (Set "is_relevant": false for ALL of these):
+1. PRIVATE COMMERCIAL PRODUCTS: Private brand launches, private pharmaceutical company drugs (e.g., Zydus, Glenmark), commercial private gadgets, or company product releases.
+2. CEREMONIAL & GREETINGS: ISS cosmonaut wishes, Independence Day greetings, speeches, or diplomatic goodwill gestures.
+3. GENERAL GOVT REPORTS & INDICES: Routine NITI Aayog reports, rankings, annual budget releases, or regular policy circulars (unless it specifically marks a historic "First in India").
+4. MARKET & COMMERCIAL NOISE: Stock market updates, private investments, corporate quarterly profits, or business deals.
+
+FACTUAL BULLET EXTRACTION RULES:
+- Focus ONLY on the Static Fact: What is the "First in India" achievement, where is it located, which ministry/agency built it, and what is its specific capacity/significance?
+- Write 2 to 3 high-density factual bullet points in Hinglish/English.
+- NO filler phrases (e.g., DO NOT write "Yeh ek mahatvapurna uplabdhi hai").
+
+JSON OUTPUT FORMAT ONLY:
 {
   "is_relevant": true or false,
-  "title": "Crisp, Factual Headline in English",
-  "category": "Science & Tech OR Infrastructure & Energy OR Govt Schemes & Policy OR Environment & Climate OR Awards & Milestones",
+  "title": "Clean Headline Highlighting the 'First in India' Milestone",
+  "category": "EXACT CATEGORY NAME FROM ALLOWED LIST",
   "bullets": [
-    "Fact-packed point covering core event, key agency/ministry, and location",
-    "Fact-packed point covering specific figures, targets, or technical parameters",
-    "Fact-packed point covering statutory background, implications, or policy scope"
+    "Core Static Fact: What is India's first achievement, location, and statutory/govt agency involved",
+    "Specific Parameters: Capacity, target year, outlay, or technical mechanism"
   ],
-  "exam_tag": "🎯 Special Affairs / National Milestones"
+  "exam_tag": "🏆 First in India / Static GK"
 }
 """
 
 # ============================================================
-# DEDUPLICATION HELPERS
+# DEDUPLICATION & THREAD SAFETY
 # ============================================================
+
+lock = Lock()
 
 def normalize_title(title):
     title = re.sub(r'[^a-zA-Z0-9\s]', '', title.lower())
     words = set(w for w in title.split() if len(w) > 3)
     return words
 
-def is_duplicate_story(new_title, existing_titles, threshold=0.55):
+def is_duplicate_story(new_title, existing_titles, threshold=0.50):
     new_words = normalize_title(new_title)
     if not new_words:
         return False
@@ -78,12 +105,12 @@ def is_duplicate_story(new_title, existing_titles, threshold=0.55):
     return False
 
 # ============================================================
-# API CALL & PROCESSING
+# GROQ API INTEGRATION
 # ============================================================
 
 def call_groq_api(user_prompt, max_retries=3):
     if not client:
-        print("❌ Groq Client is not initialized! Check GROQ_API_KEY.")
+        print("❌ Groq Client is not initialized! Set GROQ_API_KEY environment variable.")
         return None
 
     for attempt in range(max_retries):
@@ -95,7 +122,7 @@ def call_groq_api(user_prompt, max_retries=3):
                     {"role": "user", "content": user_prompt}
                 ],
                 response_format={"type": "json_object"},
-                temperature=0.1,
+                temperature=0.0,  # Zero randomness for strict filtering
                 max_tokens=600
             )
             return json.loads(response.choices[0].message.content.strip())
@@ -103,11 +130,11 @@ def call_groq_api(user_prompt, max_retries=3):
         except Exception as e:
             err_msg = str(e).lower()
             if "429" in err_msg or "rate limit" in err_msg or "token" in err_msg:
-                wait_time = (attempt + 1) * 8
-                print(f"⚠️ Rate/Token limit hit. Pausing {wait_time}s (Attempt {attempt + 1}/{max_retries})...")
+                wait_time = (attempt + 1) * 6
+                print(f"⚠️ Rate limit encountered. Pausing {wait_time}s (Attempt {attempt + 1}/{max_retries})...")
                 time.sleep(wait_time)
             else:
-                print(f"⚠️ Groq Error on attempt {attempt + 1}: {e}")
+                print(f"⚠️ Groq API Error: {e}")
                 time.sleep(2)
                 
     return None
@@ -118,75 +145,85 @@ def summarize_alert_item(item):
     content = item.get("content", "")
 
     user_prompt = (
-        f"Feed Context: {feed_name}\n"
+        f"Alert Feed: {feed_name}\n"
         f"Article Title: {title}\n"
         f"Article Content: {content[:2500]}\n\n"
-        "Extract all key exam-relevant details smartly into JSON."
+        "Evaluate if this is a genuine 'First in India' Static GK milestone. If yes, extract static facts into JSON."
     )
 
     parsed = call_groq_api(user_prompt)
 
     if not parsed:
-        print(f"❌ Skipping [{title[:30]}...] due to API failure.")
         return None
 
-    if not parsed.get("is_relevant", True):
-        print(f"  ⏭️ SKIPPED (Irrelevant / Low Value): {title[:45]}...")
+    if not parsed.get("is_relevant", False):
+        print(f"  ⏭️ REJECTED (Not a genuine First in India Milestone): {title[:50]}...")
         return None
 
     bullets = parsed.get("bullets", [])
     if not isinstance(bullets, list) or len(bullets) == 0:
-        print(f"  ⚠️ SKIPPED (No valid bullets extracted): {title[:45]}...")
         return None
 
     return {
         "title": parsed.get("title", title),
-        "category": parsed.get("category", "Special Current Affairs"),
+        "category": parsed.get("category", "Space, Science & Technology"),
         "bullets": bullets,
-        "exam_tag": parsed.get("exam_tag", "🎯 Special Affairs / National Milestones"),
+        "exam_tag": parsed.get("exam_tag", "🏆 First in India / Static GK"),
         "date": TODAY_DATE,
         "url": item.get("url", "")
     }
 
-def process_all_alerts():
+# ============================================================
+# PARALLEL PIPELINE EXECUTOR
+# ============================================================
+
+def process_alerts_pipeline():
     if not os.path.exists(INPUT_FILE):
-        print(f"❌ {INPUT_FILE} not found!")
+        print(f"❌ Input file '{INPUT_FILE}' not found! Run alerts_scraper.py first.")
         return
 
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
         raw_payload = json.load(f)
 
     articles = raw_payload.get("articles", [])
-    print(f"🚀 Starting AI Summarization for Google Alerts [{MODEL_NAME}]...")
-    print(f"📦 Total Input Articles: {len(articles)}")
+    print(f"🚀 Starting 'First in India' AI Summarizer [{MODEL_NAME}]")
+    print(f"📦 Input Records: {len(articles)} | Worker Threads: {MAX_WORKERS}\n")
 
     final_cards = []
     seen_titles = []
 
-    for idx, item in enumerate(articles, 1):
+    def worker(item):
         raw_title = item.get("title", "")
-        print(f"[{idx}/{len(articles)}] Summarizing: {raw_title[:45]}...")
-
+        print(f"⚡ Evaluating: {raw_title[:50]}...")
         card_data = summarize_alert_item(item)
 
         if card_data:
             c_title = card_data["title"]
-            if not is_duplicate_story(c_title, seen_titles):
-                seen_titles.append(c_title)
-                formatted_card = {
-                    "id": f"alert_{len(final_cards) + 1:02d}",
-                    "title": card_data["title"],
-                    "category": card_data["category"],
-                    "bullets": card_data["bullets"],
-                    "exam_tag": card_data["exam_tag"],
-                    "date": card_data["date"],
-                    "url": card_data["url"]
-                }
-                final_cards.append(formatted_card)
-            else:
-                print(f"  🧹 DROPPED DUPLICATE: {c_title[:45]}...")
+            
+            with lock:
+                if not is_duplicate_story(c_title, seen_titles):
+                    seen_titles.append(c_title)
+                    formatted_card = {
+                        "id": f"first_in_india_{len(final_cards) + 1:02d}",
+                        "title": card_data["title"],
+                        "category": card_data["category"],
+                        "bullets": card_data["bullets"],
+                        "exam_tag": card_data["exam_tag"],
+                        "date": card_data["date"],
+                        "url": card_data["url"]
+                    }
+                    final_cards.append(formatted_card)
+                    print(f"  🏆 PASSED (First in India): {c_title[:50]}...")
+                else:
+                    print(f"  🧹 DROPPED DUPLICATE: {c_title[:45]}...")
 
-        time.sleep(1.5)
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        futures = [executor.submit(worker, item) for item in articles]
+        for future in as_completed(futures):
+            try:
+                future.result()
+            except Exception as e:
+                print(f"⚠️ Thread Execution Error: {e}")
 
     output_data = {
         "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
@@ -198,9 +235,9 @@ def process_all_alerts():
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 Successfully generated '{OUTPUT_FILE}'!")
-    print(f"📊 Accepted Summary Cards: {len(final_cards)}")
+    print(f"💾 Successfully generated '{OUTPUT_FILE}'")
+    print(f"📊 Pure 'First in India' Cards Created: {len(final_cards)} / {len(articles)}")
     print("=" * 80)
 
 if __name__ == "__main__":
-    process_all_alerts()
+    process_alerts_pipeline()
