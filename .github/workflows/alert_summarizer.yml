@@ -1,9 +1,10 @@
-name: 4. Run Google Alerts Summarizer Only
+Name: 4. Run Google Alerts Summarizer Only
 
 on:
   schedule:
-    # 03:00 UTC = 08:30 AM IST (Daily - 30 mins after Alerts Scraper)
-    - cron: '0 3 * * *'
+    # Runs every 4.5 hours (Intervals: 00:00, 04:30, 09:00, 13:30, 18:00, 22:30 UTC)
+    - cron: '0 0,9,18 * * *'
+    - cron: '30 4,13,22 * * *'
   workflow_dispatch: # Manual trigger for testing
 
 concurrency:
