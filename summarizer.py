@@ -11,6 +11,7 @@ from groq import Groq
 
 INPUT_FILE = "rawnews.json"
 OUTPUT_FILE = "finalnews.json"
+ARCHIVE_FILE = "all_current_affairs.json"
 
 GROQ_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
@@ -257,6 +258,9 @@ def process_all_news():
             
         time.sleep(1.5)
 
+    # ------------------------------------------------------------
+    # 1. SAVE DAILY OVERWRITTEN FILE (finalnews.json)
+    # ------------------------------------------------------------
     output_data = {
         "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
         "national_count": len(national_cards),
@@ -269,9 +273,67 @@ def process_all_news():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
+    print(f"\n💾 Daily summary successfully saved to '{OUTPUT_FILE}'!")
+
+    # ------------------------------------------------------------
+    # 2. SAVE & APPEND TO MASTER ARCHIVE FILE (all_current_affairs.json)
+    # ------------------------------------------------------------
+    master_archive = {
+        "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
+        "total_national": 0,
+        "total_bihar": 0,
+        "total_count": 0,
+        "national_news": [],
+        "bihar_news": []
+    }
+
+    if os.path.exists(ARCHIVE_FILE):
+        try:
+            with open(ARCHIVE_FILE, "r", encoding="utf-8") as f:
+                master_archive = json.load(f)
+        except Exception as e:
+            print(f"⚠️ Could not load master archive, creating new one: {e}")
+
+    existing_nat = master_archive.get("national_news", [])
+    existing_bih = master_archive.get("bihar_news", [])
+
+    existing_nat_titles = {item.get("title", "").strip().lower() for item in existing_nat}
+    existing_bih_titles = {item.get("title", "").strip().lower() for item in existing_bih}
+
+    # Append new national news (Newest on top)
+    for item in national_cards:
+        t_clean = item.get("title", "").strip().lower()
+        if t_clean and t_clean not in existing_nat_titles:
+            existing_nat.insert(0, item)
+            existing_nat_titles.add(t_clean)
+
+    # Append new bihar news (Newest on top)
+    for item in bihar_cards:
+        t_clean = item.get("title", "").strip().lower()
+        if t_clean and t_clean not in existing_bih_titles:
+            existing_bih.insert(0, item)
+            existing_bih_titles.add(t_clean)
+
+    # Re-assign clean IDs for master archive
+    for idx, item in enumerate(existing_nat, 1):
+        item["id"] = f"nat_{idx:03d}"
+
+    for idx, item in enumerate(existing_bih, 1):
+        item["id"] = f"bih_{idx:03d}"
+
+    master_archive["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S")
+    master_archive["national_news"] = existing_nat
+    master_archive["bihar_news"] = existing_bih
+    master_archive["total_national"] = len(existing_nat)
+    master_archive["total_bihar"] = len(existing_bih)
+    master_archive["total_count"] = len(existing_nat) + len(existing_bih)
+
+    with open(ARCHIVE_FILE, "w", encoding="utf-8") as f:
+        json.dump(master_archive, f, ensure_ascii=False, indent=2)
+
     print("\n" + "=" * 80)
-    print(f"💾 Successfully generated '{OUTPUT_FILE}'!")
-    print(f"📊 Accepted -> National: {len(national_cards)} | Bihar: {len(bihar_cards)}")
+    print(f"💾 Master Archive successfully updated in '{ARCHIVE_FILE}'!")
+    print(f"📊 Total Archived -> National: {len(existing_nat)} | Bihar: {len(existing_bih)}")
     print("=" * 80)
 
 
