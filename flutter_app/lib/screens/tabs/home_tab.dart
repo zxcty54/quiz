@@ -62,11 +62,14 @@ class _HomeTabState extends State<HomeTab> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 1. TODAY TICKER
-            if (widget.appConfig['today_update']?['show'] == true) ...[
-              TodayUpdateTickerWidget(updateData: widget.appConfig['today_update'], onTapUrl: widget.onTapUrl),
-              const SizedBox(height: 16),
-            ],
+            // 1. TODAY TICKER (Short Version)
+if (widget.appConfig['today_update']?['show'] == true) ...[
+  TodayUpdateTickerWidget(
+    updateData: widget.appConfig['today_update'],
+    onTapUrl: widget.onTapUrl,
+  ),
+  const SizedBox(height: 16),
+],
 
             // 🛡️ 2. HERO TRUST BANNER WIDGET
             TrustHeroBannerWidget(isDarkMode: widget.isDarkMode),
