@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import '../../widgets/home_widgets.dart';
 import '../../widgets/latest_jobs_widget.dart';
 import '../../widgets/daily_bulletin_widget.dart';
+import '../../widgets/first_in_india_widget.dart';
 import '../../widgets/trust_hero_banner.dart';
-import '../../widgets/launch_roadmap_card.dart';
+import '../../widgets/launch_roadmap_card.dart'; // 👈 Launch Roadmap Widget Included
 import '../sprint_challenge_screen.dart';
 
 class HomeTab extends StatefulWidget {
@@ -40,6 +41,7 @@ class _HomeTabState extends State<HomeTab> {
   // GlobalKeys for Pull-To-Refresh Trigger
   final GlobalKey<LatestJobsWidgetState> _jobsWidgetKey = GlobalKey<LatestJobsWidgetState>();
   final GlobalKey<DailyBulletinWidgetState> _bulletinWidgetKey = GlobalKey<DailyBulletinWidgetState>();
+  final GlobalKey<FirstInIndiaWidgetState> _firstInIndiaWidgetKey = GlobalKey<FirstInIndiaWidgetState>();
 
   @override
   Widget build(BuildContext context) {
@@ -47,9 +49,11 @@ class _HomeTabState extends State<HomeTab> {
       color: const Color(0xFF4F46E5),
       backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
       onRefresh: () async {
+        // 🔄 REFRESH ALL THREE LIVE WIDGETS ON PULL
         await Future.wait<dynamic>([
           _bulletinWidgetKey.currentState?.fetchDailyBulletins(forceRefresh: true) ?? Future.value(),
           _jobsWidgetKey.currentState?.fetchLatestJobs() ?? Future.value(),
+          _firstInIndiaWidgetKey.currentState?.fetchFirstInIndia(forceRefresh: true) ?? Future.value(),
         ]);
       },
       child: SingleChildScrollView(
@@ -82,30 +86,37 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // 👨‍🏫 5. LEARN PREVIEW CARD
+            // 🏆 5. FIRST IN INDIA EXPRESS WIDGET (Sarkari Job ke theek niche)
+            FirstInIndiaWidget(
+              key: _firstInIndiaWidgetKey,
+              isDarkMode: widget.isDarkMode,
+            ),
+            const SizedBox(height: 18),
+
+            // 👨‍🏫 6. LEARN PREVIEW CARD
             _buildLearnPreviewCard(context),
             const SizedBox(height: 18),
 
-            // ⚔️ 6. SPEED RUN DUEL CARD
+            // ⚔️ 7. SPEED RUN DUEL CARD
             _buildSpeedRunChallengeCard(context),
             const SizedBox(height: 18),
 
-            // 🌐 7. DYNAMIC WEB HUB
+            // 🌐 8. DYNAMIC WEB HUB
             _buildDynamicWebHubSection(context),
             const SizedBox(height: 18),
 
-            // 8. ELIGIBILITY CHECKER
+            // 9. ELIGIBILITY CHECKER
             EligibilityCheckerWidget(isDarkMode: widget.isDarkMode, onTapUrl: widget.onTapUrl),
             const SizedBox(height: 18),
 
-            // 📅 9. LAUNCH ROADMAP WIDGET
+            // 📅 10. LAUNCH ROADMAP WIDGET (Included)
             LaunchRoadmapCardWidget(
               appConfig: widget.appConfig,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 10. TELEGRAM COMMUNITY
+            // 11. TELEGRAM COMMUNITY
             const TelegramCreatorWidget(),
           ],
         ),
