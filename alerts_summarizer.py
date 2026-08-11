@@ -12,7 +12,8 @@ from groq import Groq
 # ============================================================
 
 INPUT_FILE = "alerts_news.json"
-OUTPUT_FILE = "final_alerts_news.json"
+MASTER_FILE = "final_alerts_news.json"  # Full Year Master Archive (Website)
+APP_FILE = "app_alerts_news.json"        # Rolling 3-Day Archive (Mobile App)
 
 GROQ_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
@@ -170,6 +171,7 @@ def summarize_alert_item(item):
         "bullets": bullets,
         "exam_tag": parsed.get("exam_tag", "🏆 First in India / Static GK"),
         "date": TODAY_DATE,
+        "timestamp": int(datetime.now(IST).timestamp()),  # Required for 3-day filtering
         "url": item.get("url", "")
     }
 
@@ -182,6 +184,17 @@ def process_alerts_pipeline():
         print(f"❌ Input file '{INPUT_FILE}' not found! Run alerts_scraper.py first.")
         return
 
+    # 1. Load Master Existing Data (for Append & Deduplication)
+    existing_master_cards = []
+    if os.path.exists(MASTER_FILE):
+        try:
+            with open(MASTER_FILE, "r", encoding="utf-8") as f:
+                existing_master_cards = json.load(f).get("alert_news", [])
+        except Exception:
+            existing_master_cards = []
+
+    seen_titles = [c.get("title", "") for c in existing_master_cards]
+
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
         raw_payload = json.load(f)
 
@@ -189,8 +202,7 @@ def process_alerts_pipeline():
     print(f"🚀 Starting 'First in India' AI Summarizer [{MODEL_NAME}]")
     print(f"📦 Input Records: {len(articles)} | Worker Threads: {MAX_WORKERS}\n")
 
-    final_cards = []
-    seen_titles = []
+    new_approved_cards = []
 
     def worker(item):
         raw_title = item.get("title", "")
@@ -203,16 +215,7 @@ def process_alerts_pipeline():
             with lock:
                 if not is_duplicate_story(c_title, seen_titles):
                     seen_titles.append(c_title)
-                    formatted_card = {
-                        "id": f"first_in_india_{len(final_cards) + 1:02d}",
-                        "title": card_data["title"],
-                        "category": card_data["category"],
-                        "bullets": card_data["bullets"],
-                        "exam_tag": card_data["exam_tag"],
-                        "date": card_data["date"],
-                        "url": card_data["url"]
-                    }
-                    final_cards.append(formatted_card)
+                    new_approved_cards.append(card_data)
                     print(f"  🏆 PASSED (First in India): {c_title[:50]}...")
                 else:
                     print(f"  🧹 DROPPED DUPLICATE: {c_title[:45]}...")
@@ -225,18 +228,45 @@ def process_alerts_pipeline():
             except Exception as e:
                 print(f"⚠️ Thread Execution Error: {e}")
 
-    output_data = {
+    # 2. Combine New Approved Cards + Existing Master Cards (Newest on top)
+    combined_master = new_approved_cards + existing_master_cards
+
+    # Re-assign clean IDs
+    for idx, card in enumerate(combined_master, 1):
+        card["id"] = f"first_in_india_{idx:03d}"
+
+    # 3. Save Master File for Website
+    master_output_data = {
         "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
-        "total_count": len(final_cards),
-        "alert_news": final_cards
+        "total_count": len(combined_master),
+        "alert_news": combined_master
     }
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(output_data, f, ensure_ascii=False, indent=2)
+    with open(MASTER_FILE, "w", encoding="utf-8") as f:
+        json.dump(master_output_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 Successfully generated '{OUTPUT_FILE}'")
-    print(f"📊 Pure 'First in India' Cards Created: {len(final_cards)} / {len(articles)}")
+    print(f"💾 Master Website JSON '{MASTER_FILE}' updated ({len(combined_master)} total records)!")
+
+    # 4. Filter Rolling 3-Day Window for App
+    three_days_ago_ts = int((datetime.now(IST) - timedelta(days=3)).timestamp())
+
+    app_cards = [
+        c for c in combined_master 
+        if c.get("timestamp", 0) >= three_days_ago_ts
+    ]
+
+    # Save Rolling 3-Day File for App
+    app_output_data = {
+        "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
+        "total_count": len(app_cards),
+        "alert_news": app_cards
+    }
+
+    with open(APP_FILE, "w", encoding="utf-8") as f:
+        json.dump(app_output_data, f, ensure_ascii=False, indent=2)
+
+    print(f"📱 App JSON '{APP_FILE}' updated with rolling 3-day window ({len(app_cards)} active records)!")
     print("=" * 80)
 
 if __name__ == "__main__":
