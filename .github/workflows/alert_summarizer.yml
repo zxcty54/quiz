@@ -1,0 +1,74 @@
+name: 4. Run Google Alerts Summarizer Only
+
+on:
+  schedule:
+    # 03:00 UTC = 08:30 AM IST (Daily - 30 mins after Alerts Scraper)
+    - cron: '0 3 * * *'
+  workflow_dispatch: # Manual trigger for testing
+
+concurrency:
+  group: alerts-summarizer
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  summarize-alerts:
+    runs-on: ubuntu-latest
+
+    steps:
+      # =====================================================
+      # 1. CHECKOUT CODE
+      # =====================================================
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      # =====================================================
+      # 2. SETUP PYTHON
+      # =====================================================
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      # =====================================================
+      # 3. INSTALL DEPENDENCIES
+      # =====================================================
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install groq requests
+
+      # =====================================================
+      # 4. RUN ALERTS SUMMARIZER SCRIPT
+      # =====================================================
+      - name: Run Alerts Summarizer
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          python alerts_summarizer.py
+
+      # =====================================================
+      # 5. COMMIT & PUSH final_alerts_news.json
+      # =====================================================
+      - name: Commit and Push Summary JSON
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+
+          git add final_alerts_news.json
+
+          if git diff --cached --quiet; then
+            echo "ℹ️ No changes to commit in final_alerts_news.json"
+            exit 0
+          fi
+
+          git commit -m "Update Final Google Alerts Summary JSON [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+          echo "✅ final_alerts_news.json pushed successfully."
