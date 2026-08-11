@@ -71,31 +71,33 @@ class _HomeTabState extends State<HomeTab> {
             // 🛡️ 2. HERO TRUST BANNER WIDGET
             TrustHeroBannerWidget(isDarkMode: widget.isDarkMode),
             const SizedBox(height: 18),
+            
+             // 👨‍🏫 3. LEARN PREVIEW CARD
+            _buildLearnPreviewCard(context),
+            const SizedBox(height: 18),
 
-            // 📰 3. DAILY BULLETIN WIDGET
+            // 📰 4. DAILY BULLETIN WIDGET
             DailyBulletinWidget(
               key: _bulletinWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 📢 4. LATEST JOBS WIDGET
+            // 📢 5. LATEST JOBS WIDGET
             LatestJobsWidget(
               key: _jobsWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 🏆 5. FIRST IN INDIA EXPRESS WIDGET (Sarkari Job ke theek niche)
+            // 🏆 6. FIRST IN INDIA EXPRESS WIDGET (Sarkari Job ke theek niche)
             FirstInIndiaWidget(
               key: _firstInIndiaWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 👨‍🏫 6. LEARN PREVIEW CARD
-            _buildLearnPreviewCard(context),
-            const SizedBox(height: 18),
+           
 
             // ⚔️ 7. SPEED RUN DUEL CARD
             _buildSpeedRunChallengeCard(context),
