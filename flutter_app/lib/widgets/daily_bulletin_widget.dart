@@ -209,6 +209,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
+        // HEADER ROW WITH TOGGLE BUTTONS
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -253,6 +254,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
           ],
         ),
         const SizedBox(height: 10),
+
         if (activeList.isEmpty)
           Container(
             padding: const EdgeInsets.all(20),
@@ -266,8 +268,9 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
             ),
           )
         else ...[
-          // DYNAMIC HEIGHT CAROUSEL
+          // DYNAMIC EXPANDABLE PAGE VIEW (WITHOUT VERTICAL SCROLL)
           ExpandablePageView(
+            key: ValueKey(_selectedNewsTab), // Reset on tab switch
             controller: _newsPageController,
             itemCount: activeList.length,
             onPageChanged: (index) {
@@ -277,7 +280,9 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
               return _buildUltraPremiumNewsCard(activeList[index]);
             },
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 10),
+
+          // INDICATOR DOTS
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(activeList.length, (index) {
@@ -337,6 +342,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
     );
   }
 
+  // 📇 FULL NEWS CARD (CLEAN & DYNAMIC)
   Widget _buildUltraPremiumNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
     bool isSaved = _savedNewsList.any((item) => item['title'] == news['title']);
@@ -361,8 +367,9 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min, // 👈 Content ke hisab se height wrap karega
+        mainAxisSize: MainAxisSize.min,
         children: [
+          // 1. EXAM TAG, DATE & BOOKMARK
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -380,7 +387,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                   news['exam_tag'] ?? '🎯 Exam Special',
                   style: TextStyle(
                     color: widget.isDarkMode ? const Color(0xFFC7D2FE) : const Color(0xFF3730A3),
-                    fontSize: 11.5, // 👈 Slightly larger font
+                    fontSize: 11,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -389,7 +396,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                 children: [
                   Icon(
                     Icons.access_time_rounded,
-                    size: 13,
+                    size: 12,
                     color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
                   ),
                   const SizedBox(width: 4),
@@ -397,7 +404,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                     news['date'] ?? '',
                     style: TextStyle(
                       color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
-                      fontSize: 11.5, // 👈 Slightly larger font
+                      fontSize: 11,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -409,7 +416,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                       padding: const EdgeInsets.all(4.0),
                       child: Icon(
                         isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
-                        size: 21,
+                        size: 20,
                         color: isSaved
                             ? const Color(0xFFF59E0B)
                             : (widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B)),
@@ -422,20 +429,20 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
           ),
           const SizedBox(height: 10),
 
-          // 📰 TITLE (NO MAX LINES / FULL TEXT VISIBILITY)
+          // 2. FULL TITLE (NO CUTTING / NO TRUNCATION)
           Text(
             news['title'] ?? '',
             style: TextStyle(
-              fontSize: 16.0, // 👈 Increased font size & High visibility
+              fontSize: 15,
               fontWeight: FontWeight.w800,
               color: widget.isDarkMode ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A),
               letterSpacing: -0.2,
-              height: 1.3,
+              height: 1.28,
             ),
           ),
           const SizedBox(height: 10),
 
-          // 📌 BULLETS (SHOWS ALL LINES WITHOUT TRUNCATION)
+          // 3. BULLET POINTS
           Column(
             children: bullets.map((bullet) {
               return Padding(
@@ -447,7 +454,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                       padding: EdgeInsets.only(top: 2),
                       child: Icon(
                         Icons.arrow_right_rounded,
-                        size: 18,
+                        size: 16,
                         color: Color(0xFF4F46E5),
                       ),
                     ),
@@ -456,10 +463,10 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                       child: Text(
                         bullet.toString(),
                         style: TextStyle(
-                          fontSize: 13.0, // 👈 Increased font size for legibility
+                          fontSize: 12.5,
                           fontWeight: FontWeight.w500,
                           color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
-                          height: 1.35,
+                          height: 1.3,
                         ),
                       ),
                     ),
@@ -474,7 +481,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
   }
 }
 
-// 📐 DYNAMIC EXPANDABLE PAGE VIEW HELPER
+// 📏 EXPANDABLE PAGE VIEW HELPER (FIXED HEIGHT CALCULATION BUG)
 class ExpandablePageView extends StatefulWidget {
   final PageController controller;
   final int itemCount;
@@ -498,7 +505,9 @@ class _ExpandablePageViewState extends State<ExpandablePageView> {
   int _currentPage = 0;
 
   double get _currentHeight =>
-      _heights.isEmpty ? 200 : _heights[_currentPage];
+      (_heights.isEmpty || _currentPage >= _heights.length || _heights[_currentPage] == 0)
+          ? 220
+          : _heights[_currentPage];
 
   @override
   void initState() {
@@ -509,7 +518,7 @@ class _ExpandablePageViewState extends State<ExpandablePageView> {
 
   void _updatePage() {
     final newPage = widget.controller.page?.round() ?? 0;
-    if (_currentPage != newPage) {
+    if (_currentPage != newPage && newPage < _heights.length) {
       setState(() {
         _currentPage = newPage;
       });
@@ -524,16 +533,10 @@ class _ExpandablePageViewState extends State<ExpandablePageView> {
 
   @override
   Widget build(BuildContext context) {
-    return TweenAnimationBuilder<double>(
-      curve: Curves.easeInOutCubic,
-      duration: const Duration(milliseconds: 200),
-      tween: Tween<double>(begin: _currentHeight, end: _currentHeight),
-      builder: (context, height, child) {
-        return SizedBox(
-          height: height == 0 ? null : height,
-          child: child,
-        );
-      },
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 150),
+      curve: Curves.easeInOut,
+      height: _currentHeight,
       child: PageView.builder(
         controller: widget.controller,
         itemCount: widget.itemCount,
@@ -560,7 +563,7 @@ class _ExpandablePageViewState extends State<ExpandablePageView> {
   }
 }
 
-// 📏 SIZE REPORTING HELPER
+// 📐 SIZE REPORTING HELPER
 class SizeReportingWidget extends StatefulWidget {
   final Widget child;
   final ValueChanged<Size> onSizeChange;
