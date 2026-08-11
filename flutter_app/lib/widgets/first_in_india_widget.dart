@@ -18,7 +18,8 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
   int _activeIndex = 0;
   final PageController _pageController = PageController();
 
-  const String _websiteFullDataUrl = "https://www.mocktester.online/p/indias-first-in-news-2026.html";
+  // ✅ FIX: 'static const' added here
+  static const String _websiteFullDataUrl = "https://www.mocktester.online/p/indias-first-in-news-2026.html";
 
   @override
   void initState() {
@@ -284,10 +285,10 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
               padding: const EdgeInsets.only(bottom: 6.0),
               child: Text(
                 '📌 ${item['category']}',
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 11.5,
                   fontWeight: FontWeight.bold,
-                  color: const Color(0xFFD97706),
+                  color: Color(0xFFD97706),
                 ),
               ),
             ),
