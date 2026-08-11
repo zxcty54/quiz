@@ -1,6 +1,9 @@
-name: 2. Run AI Summarizer Only
+Name: 2. Run AI Summarizer Only
 
 on:
+  schedule:
+    # 02:00 UTC = 07:30 AM IST (Daily - Exactly 30 Mins after Scraper)
+    - cron: '0 2 * * *'
   workflow_dispatch: # GitHub Actions tab se manual run karne ke liye
 
 jobs:
