@@ -266,18 +266,16 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
             ),
           )
         else ...[
-          SizedBox(
-            height: 210,
-            child: PageView.builder(
-              controller: _newsPageController,
-              itemCount: activeList.length,
-              onPageChanged: (index) {
-                setState(() => _activeNewsIndex = index);
-              },
-              itemBuilder: (context, index) {
-                return _buildUltraPremiumNewsCard(activeList[index]);
-              },
-            ),
+          // DYNAMIC HEIGHT CAROUSEL
+          ExpandablePageView(
+            controller: _newsPageController,
+            itemCount: activeList.length,
+            onPageChanged: (index) {
+              setState(() => _activeNewsIndex = index);
+            },
+            itemBuilder: (context, index) {
+              return _buildUltraPremiumNewsCard(activeList[index]);
+            },
           ),
           const SizedBox(height: 8),
           Row(
@@ -345,7 +343,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
 
     return Container(
       margin: const EdgeInsets.only(right: 6),
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
         color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
         borderRadius: BorderRadius.circular(18),
@@ -363,7 +361,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
+        mainAxisSize: MainAxisSize.min, // 👈 Content ke hisab se height wrap karega
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -382,7 +380,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                   news['exam_tag'] ?? '🎯 Exam Special',
                   style: TextStyle(
                     color: widget.isDarkMode ? const Color(0xFFC7D2FE) : const Color(0xFF3730A3),
-                    fontSize: 10.5,
+                    fontSize: 11.5, // 👈 Slightly larger font
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -391,7 +389,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                 children: [
                   Icon(
                     Icons.access_time_rounded,
-                    size: 12,
+                    size: 13,
                     color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
                   ),
                   const SizedBox(width: 4),
@@ -399,7 +397,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                     news['date'] ?? '',
                     style: TextStyle(
                       color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
-                      fontSize: 11,
+                      fontSize: 11.5, // 👈 Slightly larger font
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -411,7 +409,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                       padding: const EdgeInsets.all(4.0),
                       child: Icon(
                         isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
-                        size: 20,
+                        size: 21,
                         color: isSaved
                             ? const Color(0xFFF59E0B)
                             : (widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B)),
@@ -422,32 +420,34 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
               )
             ],
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 10),
+
+          // 📰 TITLE (NO MAX LINES / FULL TEXT VISIBILITY)
           Text(
             news['title'] ?? '',
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
             style: TextStyle(
-              fontSize: 14,
+              fontSize: 16.0, // 👈 Increased font size & High visibility
               fontWeight: FontWeight.w800,
               color: widget.isDarkMode ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A),
               letterSpacing: -0.2,
-              height: 1.25,
+              height: 1.3,
             ),
           ),
-          const SizedBox(height: 6),
+          const SizedBox(height: 10),
+
+          // 📌 BULLETS (SHOWS ALL LINES WITHOUT TRUNCATION)
           Column(
-            children: bullets.take(3).map((bullet) {
+            children: bullets.map((bullet) {
               return Padding(
-                padding: const EdgeInsets.only(bottom: 4.0),
+                padding: const EdgeInsets.only(bottom: 6.0),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Padding(
-                      padding: EdgeInsets.only(top: 1),
+                      padding: EdgeInsets.only(top: 2),
                       child: Icon(
                         Icons.arrow_right_rounded,
-                        size: 16,
+                        size: 18,
                         color: Color(0xFF4F46E5),
                       ),
                     ),
@@ -455,13 +455,11 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                     Expanded(
                       child: Text(
                         bullet.toString(),
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                          fontSize: 11.5,
+                          fontSize: 13.0, // 👈 Increased font size for legibility
                           fontWeight: FontWeight.w500,
                           color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
-                          height: 1.25,
+                          height: 1.35,
                         ),
                       ),
                     ),
@@ -473,5 +471,124 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
         ],
       ),
     );
+  }
+}
+
+// 📐 DYNAMIC EXPANDABLE PAGE VIEW HELPER
+class ExpandablePageView extends StatefulWidget {
+  final PageController controller;
+  final int itemCount;
+  final IndexedWidgetBuilder itemBuilder;
+  final ValueChanged<int>? onPageChanged;
+
+  const ExpandablePageView({
+    super.key,
+    required this.controller,
+    required this.itemCount,
+    required this.itemBuilder,
+    this.onPageChanged,
+  });
+
+  @override
+  State<ExpandablePageView> createState() => _ExpandablePageViewState();
+}
+
+class _ExpandablePageViewState extends State<ExpandablePageView> {
+  late List<double> _heights;
+  int _currentPage = 0;
+
+  double get _currentHeight =>
+      _heights.isEmpty ? 200 : _heights[_currentPage];
+
+  @override
+  void initState() {
+    super.initState();
+    _heights = List.filled(widget.itemCount, 0.0);
+    widget.controller.addListener(_updatePage);
+  }
+
+  void _updatePage() {
+    final newPage = widget.controller.page?.round() ?? 0;
+    if (_currentPage != newPage) {
+      setState(() {
+        _currentPage = newPage;
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    widget.controller.removeListener(_updatePage);
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return TweenAnimationBuilder<double>(
+      curve: Curves.easeInOutCubic,
+      duration: const Duration(milliseconds: 200),
+      tween: Tween<double>(begin: _currentHeight, end: _currentHeight),
+      builder: (context, height, child) {
+        return SizedBox(
+          height: height == 0 ? null : height,
+          child: child,
+        );
+      },
+      child: PageView.builder(
+        controller: widget.controller,
+        itemCount: widget.itemCount,
+        onPageChanged: widget.onPageChanged,
+        itemBuilder: (context, index) {
+          return OverflowBox(
+            minHeight: 0,
+            maxHeight: double.infinity,
+            alignment: Alignment.topCenter,
+            child: SizeReportingWidget(
+              onSizeChange: (size) {
+                if (index < _heights.length && _heights[index] != size.height) {
+                  setState(() {
+                    _heights[index] = size.height;
+                  });
+                }
+              },
+              child: widget.itemBuilder(context, index),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+// 📏 SIZE REPORTING HELPER
+class SizeReportingWidget extends StatefulWidget {
+  final Widget child;
+  final ValueChanged<Size> onSizeChange;
+
+  const SizeReportingWidget({
+    super.key,
+    required this.child,
+    required this.onSizeChange,
+  });
+
+  @override
+  State<SizeReportingWidget> createState() => _SizeReportingWidgetState();
+}
+
+class _SizeReportingWidgetState extends State<SizeReportingWidget> {
+  Size _oldSize = Size.zero;
+
+  @override
+  Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) {
+        final newSize = context.size;
+        if (newSize != null && _oldSize != newSize) {
+          _oldSize = newSize;
+          widget.onSizeChange(newSize);
+        }
+      }
+    });
+    return widget.child;
   }
 }
