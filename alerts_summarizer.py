@@ -165,15 +165,36 @@ def summarize_alert_item(item):
     if not isinstance(bullets, list) or len(bullets) == 0:
         return None
 
+    current_dt = datetime.now(IST)
+
     return {
         "title": parsed.get("title", title),
         "category": parsed.get("category", "Space, Science & Technology"),
         "bullets": bullets,
         "exam_tag": parsed.get("exam_tag", "🏆 First in India / Static GK"),
         "date": TODAY_DATE,
-        "timestamp": int(datetime.now(IST).timestamp()),  # Required for 3-day filtering
+        "timestamp": int(current_dt.timestamp()),  # Exact IST Timestamp
         "url": item.get("url", "")
     }
+
+# Safe date parser for older master cards
+def parse_card_date(card):
+    # 1. Try direct timestamp if exists and valid
+    ts = card.get("timestamp", 0)
+    if ts and isinstance(ts, (int, float)) and ts > 0:
+        return datetime.fromtimestamp(ts, tz=IST)
+    
+    # 2. Try parsing string date format e.g., "11 Aug 2026"
+    date_str = card.get("date", "")
+    if date_str:
+        try:
+            parsed = datetime.strptime(date_str, "%d %b %Y")
+            return parsed.replace(tzinfo=IST)
+        except Exception:
+            pass
+            
+    # Fallback to current time if unparseable
+    return datetime.now(IST)
 
 # ============================================================
 # PARALLEL PIPELINE EXECUTOR
@@ -248,17 +269,19 @@ def process_alerts_pipeline():
     print("\n" + "=" * 80)
     print(f"💾 Master Website JSON '{MASTER_FILE}' updated ({len(combined_master)} total records)!")
 
-    # 4. Filter Rolling 3-Day Window for App
-    three_days_ago_ts = int((datetime.now(IST) - timedelta(days=3)).timestamp())
+    # 4. Robust 3-Day Filtering for App
+    now_dt = datetime.now(IST)
+    three_days_ago_dt = now_dt - timedelta(days=3)
 
-    app_cards = [
-        c for c in combined_master 
-        if c.get("timestamp", 0) >= three_days_ago_ts
-    ]
+    app_cards = []
+    for card in combined_master:
+        card_dt = parse_card_date(card)
+        if card_dt >= three_days_ago_dt:
+            app_cards.append(card)
 
     # Save Rolling 3-Day File for App
     app_output_data = {
-        "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
+        "generated_at": now_dt.strftime("%Y-%m-%d %H:%M:%S"),
         "total_count": len(app_cards),
         "alert_news": app_cards
     }
