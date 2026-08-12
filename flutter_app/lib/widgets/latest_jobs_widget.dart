@@ -16,8 +16,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
   bool _isLoading = true;
   String _selectedCategory = 'all'; // Categories: 'all', 'bihar', 'central'
 
-  static const String _allJobsWebUrl = "https://www.mocktester.online/search/label/Jobs";
-
   @override
   void initState() {
     super.initState();
@@ -93,13 +91,90 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
     }).toList();
   }
 
-  // 3. LAUNCH EXTERNAL URL
+  // 3. LAUNCH EXTERNAL URL (FOR APPLY BUTTON)
   Future<void> _openLink(String link) async {
     if (link.isEmpty) return;
     final Uri uri = Uri.parse(link);
     try {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
     } catch (_) {}
+  }
+
+  // 4. IN-APP BOTTOM SHEET SCREEN FOR ALL JOBS
+  void _showAllJobsBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: widget.isDarkMode ? const Color(0xFF0F172A) : Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (context) {
+        final textColor = widget.isDarkMode ? Colors.white : const Color(0xFF0F172A);
+
+        return DraggableScrollableSheet(
+          initialChildSize: 0.85,
+          maxChildSize: 0.95,
+          minChildSize: 0.5,
+          expand: false,
+          builder: (context, scrollController) {
+            return Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Center(
+                    child: Container(
+                      width: 36,
+                      height: 4,
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade400,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          const Icon(Icons.work_rounded, size: 20, color: Color(0xFF2563EB)),
+                          const SizedBox(width: 8),
+                          Text(
+                            'Sarkari Job Alerts (${_allJobs.length})',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: textColor,
+                            ),
+                          ),
+                        ],
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.close_rounded, size: 20),
+                        onPressed: () => Navigator.pop(context),
+                      )
+                    ],
+                  ),
+                  const Divider(height: 1),
+                  const SizedBox(height: 12),
+                  Expanded(
+                    child: ListView.builder(
+                      controller: scrollController,
+                      itemCount: _allJobs.length,
+                      itemBuilder: (context, index) {
+                        return _buildDetailedJobCard(_allJobs[index], textColor);
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
   }
 
   @override
@@ -123,7 +198,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
     final cardBg = widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC);
     final textColor = widget.isDarkMode ? Colors.white : const Color(0xFF0F172A);
     
-    // SIRF TOP 2 JOBS
+    // SIRF TOP 2 JOBS FOR HOME SCREEN
     final displayedJobs = _filteredJobs.take(2).toList();
 
     return Container(
@@ -140,7 +215,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 📢 HEADER (Sarkari Job Title Updated Here)
+          // 📢 HEADER WITH "Sarkari Job Alerts"
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -156,7 +231,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    'Sarkari Job Alerts', // 👈 Title Updated
+                    'Sarkari Job Alerts',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
@@ -200,7 +275,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
           const SizedBox(height: 12),
 
-          // TOP 2 JOBS LIST (NO VERTICAL SCROLLBAR/CONFLICT)
+          // TOP 2 JOBS LIST (NO VERTICAL SCROLL CONFLICT)
           displayedJobs.isEmpty
               ? const Padding(
                   padding: EdgeInsets.symmetric(vertical: 20),
@@ -223,9 +298,9 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
 
           const SizedBox(height: 8),
 
-          // VIEW ALL JOBS BUTTON
+          // 📲 VIEW ALL JOBS IN-APP SCREEN TRIGGER
           InkWell(
-            onTap: () => _openLink(_allJobsWebUrl),
+            onTap: _showAllJobsBottomSheet,
             borderRadius: BorderRadius.circular(8),
             child: const Padding(
               padding: EdgeInsets.symmetric(vertical: 6.0),
