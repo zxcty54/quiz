@@ -1,0 +1,1456 @@
+
+{
+  "topic_id": "planning_commission_india",
+  "topic_title": "Planning Commission of India",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 50,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "planning_commission_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 50
+      },
+      "intro_payload": {
+        "title": "📊 Planning Commission of India",
+        "subtitle": "Nation Ki Development Ka Blueprint",
+        "icon": "🏛️",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Planning Commission ki formation aur objectives",
+          "Five Year Plans ka complete structure",
+          "NITI Aayog mein transformation (2015)",
+          "Planning Commission vs NITI Aayog differences",
+          "PYQ traps: dates, chairpersons, constitutional status",
+          "⭐ Bihar-specific planning bodies aur schemes"
+        ],
+        "estimated_time": "18 minutes",
+        "total_modules": 5
+      },
+      "navigation": {
+        "next": "card_02_daily_hook",
+        "button_text": "Shuru Karo 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_hook",
+      "card_slug": "card_02_daily_hook",
+      "type": "chat",
+      "concept_id": "daily_life_planning",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhare ghar mein jab koi bada kaam hota hai — jaise shaadi ya ghar banana — tab kya sabse pehle kya karte hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, sabse pehle toh planning karte hain na! Kitna paisa lagega, kitne din mein hoga, kaunsa kaam pehle karenge — sab list banate hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Agar planning nahi hogi toh paisa barbad, time waste aur kaam adhoora. Yahi concept poore desh ke liye bhi lagta hai. 1947 mein jab India independent hua, tab desh ko develop karne ke liye ek body chahiye thi jo systematic planning kare. Uska naam tha — Planning Commission!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab government ne ek special team banayi planning ke liye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_formation_story",
+        "button_text": "Haan! Story Suno ➔"
+      }
+    },
+    {
+      "card_id": "card_03_formation_story",
+      "card_slug": "card_03_formation_story",
+      "type": "chat",
+      "concept_id": "formation_history",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "15 March 1950 ko Planning Commission bana — remember ye date, UPSC/BPSC mein pakka aata hai! Ise banaya Prime Minister Jawaharlal Nehru ne through a Cabinet Resolution, matlab Parliament ka Act nahi tha. Ye ek extra-constitutional body thi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Extra-constitutional matlab Sir? Constitution mein mention nahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi samjhe! Constitution of India mein Planning Commission ka koi direct mention nahi hai. Ye ek executive decision se bana, isliye isko 'extra-constitutional body' kehte hain. Lekin bahut powerful tha — paise ka allocation, schemes ka approval, sab isi ke haath mein tha! Ex-officio Chairman kaun hota tha?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Prime Minister hoga shayad?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_structure_composition",
+        "button_text": "Sahi Jawab! ➔"
+      }
+    },
+    {
+      "card_id": "card_04_structure_composition",
+      "card_slug": "card_04_structure_composition",
+      "type": "chat",
+      "concept_id": "structure_members",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Planning Commission ki structure dekho: Chairman — Prime Minister (ex-officio), Deputy Chairman — PM appoint karta tha (cabinet minister rank ka), Members — experts aur ministers, Member Secretary — senior bureaucrat. Total members fixed nahi the, PM decide karta tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Deputy Chairman kaun-kaun the? Koi famous naam?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut famous log! Gulzarilal Nanda (first Deputy Chairman), C. Subramaniam, D.R. Gadgil, aur last Deputy Chairman tha Montek Singh Ahluwalia (2004-2014). Ye naam exams mein aate hain! Ab main objectives batata hoon..."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir objectives matlab isko banaya kyun?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_objectives_quiz",
+        "button_text": "Objectives Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_05_objectives_quiz",
+      "card_slug": "card_05_objectives_quiz",
+      "type": "guess",
+      "concept_id": "objectives_guess",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Tumhe kya lagta hai, Planning Commission ka SABSE MAIN objective kya tha?",
+        "options": [
+          { "id": "A", "text": "Sirf budget banana" },
+          { "id": "B", "text": "Resources ka best use karke balanced economic development" },
+          { "id": "C", "text": "Foreign aid lana" },
+          { "id": "D", "text": "Sirf Five Year Plans banana" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Planning Commission ka main objective tha: desh ke limited resources ka efficient aur equitable use karke balanced economic development achieve karna. Isme sab sectors — agriculture, industry, education, health — ka coordination tha. Five Year Plans sirf ek tool the, main goal development tha!"
+      },
+      "navigation": {
+        "next": "card_06_objectives_detail",
+        "button_text": "Detail Mein Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_06_objectives_detail",
+      "card_slug": "card_06_objectives_detail",
+      "type": "chat",
+      "concept_id": "objectives_functions",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Planning Commission ke main functions: (1) Five Year Plans banana aur monitor karna, (2) Resources allocation — kaun se state/sector ko kitna paisa, (3) Schemes approve karna, (4) Progress evaluation — targets achieve hue ya nahi. Simple bhasha mein — ye ek 'Soch-Samajh ke Paise Baantne wali Body' thi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye Five Year Plans kya hoti thi? Har 5 saal mein kuch naya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi! Har 5 saal mein ek plan banate the jisme specific targets hote the — kitna steel production badhana hai, kitne schools kholne hain, agriculture mein kya improvement. Soviet Union se inspired tha ye model. Pehli Five Year Plan 1951 mein shuru hui. Ab quiz!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Tayar hoon Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_quiz_1",
+        "button_text": "Quiz Shuru! 📝"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_1",
+      "card_slug": "card_07_quiz_1",
+      "type": "quiz",
+      "concept_id": "quiz_formation",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Planning Commission of India kab form hui thi?",
+        "options": [
+          { "id": "A", "text": "15 August 1947" },
+          { "id": "B", "text": "26 January 1950" },
+          { "id": "C", "text": "15 March 1950" },
+          { "id": "D", "text": "1 April 1951" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Planning Commission 15 March 1950 ko form hui through a Cabinet Resolution by Prime Minister Jawaharlal Nehru. Ye date UPSC/BPSC/SSC mein frequently puchhi jaati hai. 26 January 1950 ko Constitution lagu hua tha (Republic Day), confusion mat karna!"
+      },
+      "navigation": {
+        "next": "card_08_quiz_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_2",
+      "card_slug": "card_08_quiz_2",
+      "type": "quiz",
+      "concept_id": "quiz_chairman",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Planning Commission ka ex-officio Chairman kaun hota tha?",
+        "options": [
+          { "id": "A", "text": "President of India" },
+          { "id": "B", "text": "Prime Minister of India" },
+          { "id": "C", "text": "Finance Minister" },
+          { "id": "D", "text": "Deputy Chairman of Planning Commission" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Planning Commission ka ex-officio Chairman Prime Minister hota tha. 'Ex-officio' matlab by virtue of office — PM hai to automatically Chairman hai. Deputy Chairman alag se appoint hota tha (Cabinet Minister rank ka). Ye distinction BPSC mein trap hai!"
+      },
+      "navigation": {
+        "next": "card_09_quiz_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_09_quiz_3",
+      "card_slug": "card_09_quiz_3",
+      "type": "quiz",
+      "concept_id": "quiz_constitutional_status",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Planning Commission ki constitutional status kya thi?",
+        "options": [
+          { "id": "A", "text": "Constitutional body (Constitution mein mention hai)" },
+          { "id": "B", "text": "Statutory body (Parliament Act se bani)" },
+          { "id": "C", "text": "Extra-constitutional body (Cabinet Resolution se bani)" },
+          { "id": "D", "text": "Autonomous body (independent authority)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Planning Commission ek EXTRA-CONSTITUTIONAL body thi — matlab Constitution of India mein iska koi mention nahi hai. Ye Cabinet Resolution se bani, Parliament Act se nahi. Isliye legally isko kisi bhi time dissolve kiya ja sakta tha (jo 2014 mein hua bhi). UPSC ka favorite conceptual question!"
+      },
+      "navigation": {
+        "next": "card_10_milestone_1",
+        "button_text": "Module Complete 🎯"
+      }
+    },
+    {
+      "card_id": "card_10_milestone_1",
+      "card_slug": "card_10_milestone_1",
+      "type": "milestone",
+      "concept_id": "milestone_basics",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 COMPLETE!",
+        "badge_emoji": "📊",
+        "completed_topic": "Planning Commission: Formation & Structure",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/5 Clear",
+        "motivational_quote": "Shabash! Planning Commission ki neev samajh li! Ab Five Year Plans ka safar shuru karte hain! 🚀"
+      },
+      "navigation": {
+        "next": "card_11_five_year_plans_intro",
+        "button_text": "Next Module: Five Year Plans ➔"
+      }
+    },
+    {
+      "card_id": "card_11_five_year_plans_intro",
+      "card_slug": "card_11_five_year_plans_intro",
+      "type": "chat",
+      "concept_id": "five_year_plans_intro",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Planning Commission ka sabse famous kaam — Five Year Plans! Total 12 Five Year Plans bane (1951-2017). Har plan ka ek specific focus area hota tha. Example: Pehli Plan mein agriculture pe focus, doosri mein industry. Ye Soviet model se inspired tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir har plan ke baare mein yaad rakhna mushkil ho jayega! Koi trick hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, main kuch important plans batata hoon jo exams mein pakka aate hain. Dekho — First Plan (1951-56): Agriculture focus, Hirakud Dam bana. Second Plan (1956-61): Heavy industry focus, Steel Plants (Bhilai, Rourkela, Durgapur). Third Plan (1961-66): Self-sufficiency ka goal. Iske baad 3 saal Plan Holiday kyunki Indo-China aur Indo-Pak wars!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Plan Holiday matlab koi plan nahi bana?"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_plan_holiday",
+        "button_text": "Plan Holiday Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_12_plan_holiday",
+      "card_slug": "card_12_plan_holiday",
+      "type": "chat",
+      "concept_id": "plan_holiday_concept",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "1966-1969 tak teen saal Plan Holiday rahi. Reason — 1962 mein China ke saath war, 1965 mein Pakistan ke saath war, aur uske baad drought. Economy bigad gayi, resources khatam, toh planning ruk gayi. Ye period 'Annual Plans' se chala."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa, emergency situation thi isliye regular plan nahi ban payi!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Iske baad Fourth Plan shuru hui 1969 se. Ab main kuch special plans batata hoon jo exams ka favorite hain: Fifth Plan (1974-79) — Garibi Hatao slogan, Indira Gandhi ka focus. Sixth Plan (1980-85) — Economic liberalization ki shuruaat. Seventh Plan (1985-90) — Productivity aur employment."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Garibi Hatao to suna hai! Ye Fifth Plan mein tha?"
+        }
+      },
+      "navigation": {
+        "next": "card_13_important_plans",
+        "button_text": "Important Plans Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_13_important_plans",
+      "card_slug": "card_13_important_plans",
+      "type": "chat",
+      "concept_id": "key_plans_detail",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exam ke liye yaad rakho: Eighth Plan (1992-97) — LPG reforms (Liberalization, Privatization, Globalization) start, Narasimha Rao aur Manmohan Singh era. Tenth Plan (2002-07) — Average 7.6% growth achieve ki! Eleventh Plan (2007-12) — 'Faster, Sustainable, Inclusive Growth' slogan. Twelfth Plan (2012-17) — Last Five Year Plan tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 12th ke baad kya hua? Planning Commission band ho gayi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! 1 January 2015 ko Planning Commission ko dissolve kar diya gaya aur uski jagah NITI Aayog bana. Twelfth Plan technically 2017 tak thi but usko mid-way hi rok diya. Ye transformation bahut important hai — UPSC/BPSC ka guaranteed question! Pehle quiz solve karo."
+        },
+        {
+          "speaker": "raju",
+          "text": "Chalo Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_quiz_4",
+        "button_text": "Quiz Time! 📝"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_4",
+      "card_slug": "card_14_quiz_4",
+      "type": "quiz",
+      "concept_id": "quiz_first_plan",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "India ki First Five Year Plan (1951-56) ka main focus area kya tha?",
+        "options": [
+          { "id": "A", "text": "Heavy Industry aur Steel Plants" },
+          { "id": "B", "text": "Agriculture aur Irrigation" },
+          { "id": "C", "text": "Education aur Health" },
+          { "id": "D", "text": "Defense aur Military" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "First Five Year Plan (1951-56) ka main focus AGRICULTURE aur IRRIGATION tha. Hirakud Dam, Bhakra Nangal Dam jaise projects isme shuru hue. Heavy industry focus SECOND Plan (1956-61) mein tha jahan Bhilai, Rourkela, Durgapur Steel Plants bane. BPSC frequently ye swap karke puchta hai!"
+      },
+      "navigation": {
+        "next": "card_15_quiz_5",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_5",
+      "card_slug": "card_15_quiz_5",
+      "type": "quiz",
+      "concept_id": "quiz_plan_holiday",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Plan Holiday (1966-1969) kyun declare ki gayi thi?",
+        "options": [
+          { "id": "A", "text": "Economic boom ke karan planning ki zarurat nahi thi" },
+          { "id": "B", "text": "Indo-China war, Indo-Pak war aur drought ke karan resources ka crisis" },
+          { "id": "C", "text": "Planning Commission dissolve ho gayi thi" },
+          { "id": "D", "text": "Constitution amendment ke karan" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "1966-69 mein Plan Holiday declare hui kyunki: (1) 1962 Indo-China war, (2) 1965 Indo-Pak war, (3) Severe drought conditions. In emergencies ke karan resources khatam ho gaye aur economy crisis mein aa gayi. Isliye regular Five Year Plan nahi ban payi, Annual Plans se kaam chala. SSC/Railway ka direct factual question!"
+      },
+      "navigation": {
+        "next": "card_16_quiz_6",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz_6",
+      "card_slug": "card_16_quiz_6",
+      "type": "quiz",
+      "concept_id": "quiz_last_plan",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "India ki LAST Five Year Plan kaun si thi?",
+        "options": [
+          { "id": "A", "text": "Tenth Plan (2002-2007)" },
+          { "id": "B", "text": "Eleventh Plan (2007-2012)" },
+          { "id": "C", "text": "Twelfth Plan (2012-2017)" },
+          { "id": "D", "text": "Thirteenth Plan (2017-2022)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "TWELFTH Plan (2012-2017) India ki last Five Year Plan thi. Planning Commission 1 January 2015 ko dissolve ho gayi aur NITI Aayog ban gayi. 12th Plan technically 2017 tak thi lekin mid-way mein hi system change ho gaya. 13th Plan kabhi bani hi nahi. UPSC Prelims ka confirmed question!"
+      },
+      "navigation": {
+        "next": "card_17_milestone_2",
+        "button_text": "Module Complete 🎯"
+      }
+    },
+    {
+      "card_id": "card_17_milestone_2",
+      "card_slug": "card_17_milestone_2",
+      "type": "milestone",
+      "concept_id": "milestone_plans",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 2 COMPLETE!",
+        "badge_emoji": "📈",
+        "completed_topic": "Five Year Plans Era (1951-2017)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/5 Clear",
+        "motivational_quote": "Kamaal! 12 Plans ka poora safar cover kar liya! Ab Planning Commission se NITI Aayog tak ka transformation dekhte hain! 💪"
+      },
+      "navigation": {
+        "next": "card_18_niti_aayog_intro",
+        "button_text": "Next Module: NITI Aayog ➔"
+      }
+    },
+    {
+      "card_id": "card_18_niti_aayog_intro",
+      "card_slug": "card_18_niti_aayog_intro",
+      "type": "chat",
+      "concept_id": "niti_aayog_formation",
+      "level": 3,
+      "progress": {
+        "current": 18,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "1 January 2015 — historic date! Planning Commission dissolve hui aur uski jagah NITI Aayog (National Institution for Transforming India) bani. PM Narendra Modi ne ye decision liya. Reason — Planning Commission top-down approach tha (upar se order aate the), NITI Aayog bottom-up approach hai (states ki bhi participation)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab Planning Commission mein koi problem thi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, criticism bahut thi: (1) States ko zyada powers nahi the — Planning Commission sab decide karta tha, (2) One-size-fits-all approach — har state ki alag zarurat hoti hai, (3) Money allocation mein states ki kam involvement. NITI Aayog mein ye sab improve kiya gaya. Ab dekho NITI Aayog ka structure..."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir isme bhi PM Chairman hai kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_niti_structure",
+        "button_text": "Structure Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_19_niti_structure",
+      "card_slug": "card_19_niti_structure",
+      "type": "chat",
+      "concept_id": "niti_aayog_structure",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NITI Aayog Structure: Chairperson — Prime Minister, Vice-Chairperson — PM appoint karta hai (currently Suman Bery), Full-time Members — experts, Part-time Members — Ministers, Ex-officio Members — All Chief Ministers aur Lt. Governors (ye naya addition hai!), Special Invitees — experts as needed, CEO — senior bureaucrat."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To isme sabhi CMs included hain, Planning Commission mein nahi the?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ye sabse bada difference hai. NITI Aayog mein cooperative federalism hai — Centre aur States milke decide karte hain. Planning Commission mein sirf Deputy Chairman aur kuch members hote the, CMs kabhi-kabhi consult hote the. Ab functions dekho — NITI Aayog kya karta hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, batao!"
+        }
+      },
+      "navigation": {
+        "next": "card_20_niti_functions",
+        "button_text": "Functions Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_20_niti_functions",
+      "card_slug": "card_20_niti_functions",
+      "type": "chat",
+      "concept_id": "niti_aayog_functions",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NITI Aayog ke main functions: (1) Long-term vision documents banana (Vision 2030, Vision 2047), (2) States ke saath partnership — har state ki specific strategy, (3) Monitoring aur evaluation of schemes, (4) Think Tank ka role — research aur innovation, (5) Knowledge hub — best practices share karna. Lekin ek badi change — NITI Aayog ke paas money allocation power NAHI hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Planning Commission paisa allocate karti thi, NITI Aayog nahi karti?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ye critical difference hai. Planning Commission ke paas financial powers the — kitna paisa kis state/sector ko dena, wo decide karte the. NITI Aayog sirf advisory aur strategic role nibhati hai. Finance Ministry ab paise decide karti hai. BPSC ka favorite comparison question!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To NITI Aayog zyada powerful hai ya Planning Commission?"
+        }
+      },
+      "navigation": {
+        "next": "card_21_comparison_table",
+        "button_text": "Comparison Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_21_comparison_table",
+      "card_slug": "card_21_comparison_table",
+      "type": "chat",
+      "concept_id": "planning_vs_niti_comparison",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Comparison yaad rakho: Planning Commission — (1) Top-down approach, (2) Financial powers the, (3) Five Year Plans banata tha, (4) Extra-constitutional body. NITI Aayog — (1) Bottom-up + cooperative federalism, (2) Advisory role only, (3) Vision documents banata hai, (4) Ye bhi extra-constitutional hai. Dono mein ek similarity — Prime Minister Chairman!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to overall dekha jaye to kaunsa better tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exam answer: Dono ke apne-apne advantages the. Planning Commission — strong implementation, clear targets. NITI Aayog — more democratic, states ki participation, flexible. Critics kehte hain NITI Aayog ke paas teeth nahi (enforcement power nahi). Supporters kehte hain ye modern aur inclusive hai. Ab quiz!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ready hoon!"
+        }
+      },
+      "navigation": {
+        "next": "card_22_quiz_7",
+        "button_text": "Quiz Shuru! 📝"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_7",
+      "card_slug": "card_22_quiz_7",
+      "type": "quiz",
+      "concept_id": "quiz_niti_formation",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "NITI Aayog kab form hui thi?",
+        "options": [
+          { "id": "A", "text": "1 April 2014" },
+          { "id": "B", "text": "26 January 2015" },
+          { "id": "C", "text": "1 January 2015" },
+          { "id": "D", "text": "15 August 2015" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "NITI Aayog 1 January 2015 ko form hui jab Planning Commission dissolve kar di gayi. Ye PM Narendra Modi ki government ka major administrative reform tha. Cabinet Resolution ke through bani, same jaise Planning Commission bani thi. SSC/BPSC/Railway — sabhi mein ye date puchhi jaati hai!"
+      },
+      "navigation": {
+        "next": "card_23_quiz_8",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_23_quiz_8",
+      "card_slug": "card_23_quiz_8",
+      "type": "quiz",
+      "concept_id": "quiz_niti_members",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "NITI Aayog mein kaun ex-officio members hote hain?",
+        "options": [
+          { "id": "A", "text": "Sirf Cabinet Ministers" },
+          { "id": "B", "text": "All Chief Ministers aur Lt. Governors" },
+          { "id": "C", "text": "Sirf Planning experts" },
+          { "id": "D", "text": "Supreme Court Judges" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NITI Aayog mein ALL Chief Ministers (of states) aur Lt. Governors (of UTs) ex-officio members hote hain. Ye major improvement hai Planning Commission se — jahan CMs regular members nahi the. Ye cooperative federalism ko promote karta hai. UPSC Prelims ka conceptual question!"
+      },
+      "navigation": {
+        "next": "card_24_quiz_9",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_24_quiz_9",
+      "card_slug": "card_24_quiz_9",
+      "type": "quiz",
+      "concept_id": "quiz_financial_powers",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Planning Commission aur NITI Aayog mein sabse important difference kya hai?",
+        "options": [
+          { "id": "A", "text": "Planning Commission constitutional thi, NITI Aayog extra-constitutional" },
+          { "id": "B", "text": "Planning Commission ke paas financial allocation powers the, NITI Aayog sirf advisory hai" },
+          { "id": "C", "text": "NITI Aayog ke paas zyada budget hai" },
+          { "id": "D", "text": "Dono bilkul same hain, sirf naam change hua" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sabse important difference: Planning Commission ke paas FINANCIAL ALLOCATION POWERS the — wo decide karti thi kis state/sector ko kitna paisa milega. NITI Aayog sirf ADVISORY aur THINK TANK hai — recommend karti hai, but final financial decisions Finance Ministry karta hai. BPSC ka guaranteed comparison trap!"
+      },
+      "navigation": {
+        "next": "card_25_milestone_3",
+        "button_text": "Module Complete 🎯"
+      }
+    },
+    {
+      "card_id": "card_25_milestone_3",
+      "card_slug": "card_25_milestone_3",
+      "type": "milestone",
+      "concept_id": "milestone_niti",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🌟 MODULE 3 COMPLETE!",
+        "badge_emoji": "🆕",
+        "completed_topic": "NITI Aayog: New Era of Planning",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/5 Clear",
+        "motivational_quote": "Zabardast! Planning Commission se NITI Aayog tak ka transformation samajh gaya! Ab Bihar-specific planning dekhte hain! ⭐"
+      },
+      "navigation": {
+        "next": "card_26_bihar_planning_intro",
+        "button_text": "Next Module: Bihar Planning ➔"
+      }
+    },
+    {
+      "card_id": "card_26_bihar_planning_intro",
+      "card_slug": "card_26_bihar_planning_intro",
+      "type": "chat",
+      "concept_id": "bihar_planning_intro",
+      "level": 4,
+      "progress": {
+        "current": 26,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite! Ab Bihar-specific planning bodies dekhte hain. Bihar mein bhi State Planning Board hai jo state-level planning karta hai. Iske alawa Bihar State Finance Commission bhi hai jo local bodies (Panchayats, Municipalities) ko fund allocation ke bare mein recommend karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir State Planning Board kya karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "State Planning Board Bihar ki Annual Plans aur long-term development strategies banata hai. Chief Minister iska Chairman hota hai. Ye NITI Aayog ke recommendations ko Bihar ke context mein implement karne mein help karta hai. Bihar ka focus areas — agriculture modernization, education, infrastructure, aur law & order improvement."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir koi special Bihar schemes hain jo Planning se related ho?"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_bihar_schemes",
+        "button_text": "Bihar Schemes Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_27_bihar_schemes",
+      "card_slug": "card_27_bihar_schemes",
+      "type": "chat",
+      "concept_id": "bihar_development_schemes",
+      "level": 4,
+      "progress": {
+        "current": 27,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Bihar ki important planned schemes: (1) Mukhyamantri Balika Cycle Yojana — girls ko 9th class mein cycle, (2) Saat Nischay Programme — 7 key areas mein development (employment, roads, education, electricity, water, toilets, poverty reduction), (3) Bihar Student Credit Card — higher education ke liye loan, (4) Har Ghar Nal Ka Jal — clean drinking water."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye Saat Nischay Programme kaafi famous hai! Kab shuru hua tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Saat Nischay Programme 2015 mein CM Nitish Kumar ne launch kiya tha — same year jab NITI Aayog bani! Coincidence hai but yaad rakhna easy ho jata hai. Ye seven promises (nischay) Bihar ke holistic development ke liye the. Exams mein ye bahut puchha jata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar ka economic planning mein kya challenges hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_bihar_challenges",
+        "button_text": "Challenges Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_28_bihar_challenges",
+      "card_slug": "card_28_bihar_challenges",
+      "type": "chat",
+      "concept_id": "bihar_planning_challenges",
+      "level": 4,
+      "progress": {
+        "current": 28,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Bihar Planning Challenges: (1) High population density — resources ka limited availability, (2) Flood prone areas (North Bihar) — infrastructure damage har saal, (3) Low per capita income — economic base kamzor, (4) Migration — skilled youth bahar chale jate hain (Delhi, Mumbai), (5) Limited industrialization — agriculture dependent economy. Ye sab BPSC Mains mein puchhe jate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir in challenges ka solution kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Government efforts: Skill development programs, attracting industries (incentives de rahe hain), improving connectivity (roads, railways), focusing on education quality. NITI Aayog ne Bihar ke liye specific recommendations bhi di hain — agriculture value addition, rural infrastructure, aur healthcare improvement. Ab quiz karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chalo Sir!"
+        }
+      },
+      "navigation": {
+        "next": "card_29_quiz_10",
+        "button_text": "Quiz Shuru! 📝"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_10",
+      "card_slug": "card_29_quiz_10",
+      "type": "quiz",
+      "concept_id": "quiz_bihar_planning",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar State Planning Board ka Chairman kaun hota hai?",
+        "options": [
+          { "id": "A", "text": "Governor of Bihar" },
+          { "id": "B", "text": "Chief Minister of Bihar" },
+          { "id": "C", "text": "Finance Minister of Bihar" },
+          { "id": "D", "text": "Chief Secretary of Bihar" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Answer: Bihar State Planning Board ka Chairman CHIEF MINISTER of Bihar hota hai. Ye state-level planning body hai jo Bihar ki Annual Plans aur development strategies prepare karti hai. National level par jaise PM Planning Commission ka Chairman tha, waise state level par CM State Planning Board ka Chairman hai!"
+      },
+      "navigation": {
+        "next": "card_30_quiz_11",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_11",
+      "card_slug": "card_30_quiz_11",
+      "type": "quiz",
+      "concept_id": "quiz_saat_nischay",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar ka 'Saat Nischay Programme' kab launch hua tha?",
+        "options": [
+          { "id": "A", "text": "2010" },
+          { "id": "B", "text": "2012" },
+          { "id": "C", "text": "2015" },
+          { "id": "D", "text": "2017" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC TRE Critical Fact: 'Saat Nischay' (Seven Resolves) Programme 2015 mein CM Nitish Kumar ne launch kiya. Ye seven key development areas cover karta hai: youth employment, roads, education, electricity, drinking water, toilets, poverty reduction. Same year NITI Aayog bhi bani thi (coincidence for memory trick)!"
+      },
+      "navigation": {
+        "next": "card_31_quiz_12",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quiz_12",
+      "card_slug": "card_31_quiz_12",
+      "type": "quiz",
+      "concept_id": "quiz_bihar_challenges",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar ki economic planning mein sabse badi challenge kya hai?",
+        "options": [
+          { "id": "A", "text": "Excess industrialization" },
+          { "id": "B", "text": "High per capita income" },
+          { "id": "C", "text": "High population density aur limited resources" },
+          { "id": "D", "text": "Excess foreign investment" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC Mains Focus: Bihar ki major planning challenge hai HIGH POPULATION DENSITY (India ke sabse zyada densely populated states mein se ek) coupled with LIMITED RESOURCES. Iske saath flood prone areas (North Bihar), low industrialization, aur youth migration bhi major issues hain. Development planning mein ye constraints consider karne padte hain!"
+      },
+      "navigation": {
+        "next": "card_32_milestone_4",
+        "button_text": "Module Complete 🎯"
+      }
+    },
+    {
+      "card_id": "card_32_milestone_4",
+      "card_slug": "card_32_milestone_4",
+      "type": "milestone",
+      "concept_id": "milestone_bihar",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "⭐ MODULE 4 COMPLETE!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Bihar-Specific Planning & Schemes",
+        "xp_earned": 80,
+        "milestone_progress": "Module 4/5 Clear",
+        "motivational_quote": "Lajawab! Bihar context bhi perfect! Ab critical analysis aur PYQ patterns dekhte hain! 🎯"
+      },
+      "navigation": {
+        "next": "card_33_criticisms_intro",
+        "button_text": "Next Module: Critical Analysis ➔"
+      }
+    },
+    {
+      "card_id": "card_33_criticisms_intro",
+      "card_slug": "card_33_criticisms_intro",
+      "type": "chat",
+      "concept_id": "planning_criticisms",
+      "level": 5,
+      "progress": {
+        "current": 33,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab critical analysis — Planning Commission ko kaafi criticisms mili thi. Main issues: (1) 'One size fits all' approach — har state ki alag zarurat hoti hai, (2) Top-down planning — states ki rai nahi li jati thi, (3) Implementation gap — plans achhe, execution weak, (4) Centralized power — states dependent the Centre pe."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to ye sab problems the isliye NITI Aayog banayi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! NITI Aayog ne in problems ko address karne ki koshish ki — cooperative federalism, states ko zyada say, flexible approach. Lekin ab NITI Aayog ki bhi criticisms hain: (1) Teeth nahi hain — enforcement power nahi, (2) Finance Ministry dominates — paisa wahi decide karti hai, (3) Vision documents achhe, implementation ka follow-up weak."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab perfect system abhi bhi nahi hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_both_sides",
+        "button_text": "Both Sides Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_34_both_sides",
+      "card_slug": "card_34_both_sides",
+      "type": "chat",
+      "concept_id": "balanced_view",
+      "level": 5,
+      "progress": {
+        "current": 34,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Balanced view (UPSC Mains ke liye): Planning Commission Era — Positives: Strong implementation, clear targets, infrastructure development hua. Negatives: Centralized, inflexible. NITI Aayog Era — Positives: Democratic, inclusive, modern approach. Negatives: Less enforcement, coordination issues. Dono apne time ke hisaab se relevant the!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir exam mein agar puchhe ki kaunsa better tha, to kya likhen?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Safe answer: 'Both had their merits and demerits. Planning Commission suited the initial phase of planned development post-independence when centralized approach was needed. NITI Aayog aligns better with current federal structure and cooperative governance model.' Kabhi ek-sided mat likhna UPSC mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Balanced answer!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_pyq_patterns",
+        "button_text": "PYQ Patterns ➔"
+      }
+    },
+    {
+      "card_id": "card_35_pyq_patterns",
+      "card_slug": "card_35_pyq_patterns",
+      "type": "chat",
+      "concept_id": "pyq_analysis",
+      "level": 5,
+      "progress": {
+        "current": 35,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PYQ Pattern Analysis: UPSC — Constitutional status, comparison questions, recent reforms. BPSC — Dates (15 March 1950, 1 Jan 2015), Chairpersons, Five Year Plan focus areas, Bihar State Planning. SSC — Direct factual (formation date, last Deputy Chairman). Railway — Basic facts. Ab tumhara final revision ka time!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek baar saari important dates bata do!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Critical Dates Memory List: 15 March 1950 — Planning Commission bani. 1951-56 — First Five Year Plan. 1966-69 — Plan Holiday. 1 January 2015 — NITI Aayog bani, Planning Commission dissolved. 2012-17 — Twelfth (last) Five Year Plan. ⭐ 2015 — Bihar Saat Nischay launch."
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect Sir! Ab quiz!"
+        }
+      },
+      "navigation": {
+        "next": "card_36_quiz_13",
+        "button_text": "Quiz Shuru! 📝"
+      }
+    },
+    {
+      "card_id": "card_36_quiz_13",
+      "card_slug": "card_36_quiz_13",
+      "type": "quiz",
+      "concept_id": "quiz_criticism",
+      "level": 5,
+      "progress": {
+        "current": 36,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Planning Commission ki main criticism kya thi?",
+        "options": [
+          { "id": "A", "text": "Too much state participation" },
+          { "id": "B", "text": "Top-down approach aur centralized power, states ki limited involvement" },
+          { "id": "C", "text": "Very weak implementation" },
+          { "id": "D", "text": "Foreign experts ka dominance" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Planning Commission ki major criticism thi: TOP-DOWN approach (upar se orders) aur CENTRALIZED decision making. States ki limited involvement thi planning mein. 'One size fits all' model har state ki unique needs ko address nahi karta tha. Isliye NITI Aayog mein cooperative federalism aur bottom-up approach adopt kiya gaya!"
+      },
+      "navigation": {
+        "next": "card_37_quiz_14",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_14",
+      "card_slug": "card_37_quiz_14",
+      "type": "quiz",
+      "concept_id": "quiz_niti_criticism",
+      "level": 5,
+      "progress": {
+        "current": 37,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "NITI Aayog ki main limitation kya hai?",
+        "options": [
+          { "id": "A", "text": "PM Chairman nahi hai" },
+          { "id": "B", "text": "Financial allocation powers nahi hain, sirf advisory role hai" },
+          { "id": "C", "text": "States involved nahi hain" },
+          { "id": "D", "text": "Constitutional body hai isliye rigid hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NITI Aayog ki main limitation: Iske paas FINANCIAL ALLOCATION POWERS nahi hain. Ye sirf ADVISORY aur THINK TANK role nibhati hai. Final financial decisions Finance Ministry karta hai. Critics kehte hain isse 'teeth nahi hain' (enforcement power nahi). Planning Commission ke paas ye powers the, jo NITI Aayog ko nahi mili!"
+      },
+      "navigation": {
+        "next": "card_38_quiz_15",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_15",
+      "card_slug": "card_38_quiz_15",
+      "type": "quiz",
+      "concept_id": "quiz_balanced_view",
+      "level": 5,
+      "progress": {
+        "current": 38,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Planning Commission aur NITI Aayog dono mein ek common feature kya hai?",
+        "options": [
+          { "id": "A", "text": "Dono Constitutional bodies hain" },
+          { "id": "B", "text": "Dono ke paas financial allocation powers hain" },
+          { "id": "C", "text": "Dono extra-constitutional bodies hain aur Prime Minister Chairman hai" },
+          { "id": "D", "text": "Dono Parliament Act se bani hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Common features: (1) Dono EXTRA-CONSTITUTIONAL bodies hain — Constitution mein mention nahi, Cabinet Resolution se bani. (2) Dono mein PRIME MINISTER Chairperson/Chairman hai. (3) Dono development planning se related hain. Differences: Planning Commission — financial powers, top-down. NITI Aayog — advisory, cooperative federalism. UPSC comparison question!"
+      },
+      "navigation": {
+        "next": "card_39_milestone_5",
+        "button_text": "Final Module Complete 🎯"
+      }
+    },
+    {
+      "card_id": "card_39_milestone_5",
+      "card_slug": "card_39_milestone_5",
+      "type": "milestone",
+      "concept_id": "milestone_critical_analysis",
+      "level": 5,
+      "progress": {
+        "current": 39,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🔥 MODULE 5 COMPLETE!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Critical Analysis & PYQ Patterns",
+        "xp_earned": 90,
+        "milestone_progress": "All 5 Modules Cleared!",
+        "motivational_quote": "Outstanding! Poora topic master kar liya! Ab Officer-level revision aur final quiz! You're unstoppable! 💪🔥"
+      },
+      "navigation": {
+        "next": "card_40_officer_revision",
+        "button_text": "Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_40_officer_revision",
+      "card_slug": "card_40_officer_revision",
+      "type": "summary",
+      "concept_id": "officer_revision_summary",
+      "level": 5,
+      "progress": {
+        "current": 40,
+        "total": 50
+      },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision",
+        "revision_points": [
+          {
+            "topic": "Formation & Status",
+            "point": "Planning Commission: 15 March 1950, Extra-constitutional (Cabinet Resolution), PM Chairman, Montek Singh Ahluwalia last Dy. Chairman. NITI Aayog: 1 Jan 2015, Extra-constitutional, PM Chairperson, All CMs ex-officio members."
+          },
+          {
+            "topic": "Five Year Plans",
+            "point": "Total 12 Plans (1951-2017). First Plan: Agriculture focus. Second Plan: Heavy Industry (Steel Plants). Plan Holiday: 1966-69 (wars + drought). Eighth Plan: LPG reforms. Twelfth Plan: Last FYP."
+          },
+          {
+            "topic": "Key Differences",
+            "point": "Planning Commission: Top-down, Financial powers, Target-based. NITI Aayog: Bottom-up, Advisory only, Vision-based, Cooperative federalism, No money allocation power."
+          },
+          {
+            "topic": "⭐ Bihar Context",
+            "point": "State Planning Board (CM Chairman), Saat Nischay Programme (2015), Challenges: High density, floods, low industrialization, migration. Focus: Agriculture, education, infrastructure."
+          },
+          {
+            "topic": "Critical Points",
+            "point": "Both extra-constitutional, PM heads both. Planning Commission criticized for centralization. NITI Aayog criticized for lack of enforcement. Transformation reflects shift from command economy to cooperative governance."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_41_multi_statement_1",
+        "button_text": "Final Quiz Series ➔"
+      }
+    },
+    {
+      "card_id": "card_41_multi_statement_1",
+      "card_slug": "card_41_multi_statement_1",
+      "type": "quiz",
+      "concept_id": "multi_statement_q1",
+      "level": 5,
+      "progress": {
+        "current": 41,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements:\n1. Planning Commission was a constitutional body mentioned in Part IV of the Constitution.\n2. NITI Aayog has financial allocation powers similar to Planning Commission.\n3. All Chief Ministers are ex-officio members of NITI Aayog.\n4. The First Five Year Plan focused on heavy industry development.\n\nHow many statements are CORRECT?",
+        "options": [
+          { "id": "A", "text": "Only one" },
+          { "id": "B", "text": "Only two" },
+          { "id": "C", "text": "Only three" },
+          { "id": "D", "text": "All four" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Analysis: Statement 1 — WRONG (extra-constitutional, not in Constitution). Statement 2 — WRONG (NITI Aayog advisory only, no financial powers). Statement 3 — CORRECT (All CMs are ex-officio members). Statement 4 — WRONG (First Plan focused on agriculture, Second Plan on heavy industry). Only ONE statement correct! BPSC multi-statement trap!"
+      },
+      "navigation": {
+        "next": "card_42_multi_statement_2",
+        "button_text": "Next Multi-Statement ➔"
+      }
+    },
+    {
+      "card_id": "card_42_multi_statement_2",
+      "card_slug": "card_42_multi_statement_2",
+      "type": "quiz",
+      "concept_id": "multi_statement_q2",
+      "level": 5,
+      "progress": {
+        "current": 42,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Consider the following:\n1. Planning Commission was dissolved on 1 January 2015.\n2. Plan Holiday occurred during 1966-1969 due to wars and drought.\n3. Montek Singh Ahluwalia was the first Deputy Chairman of Planning Commission.\n4. NITI Aayog follows a bottom-up and cooperative federalism approach.\n\nHow many statements are CORRECT?",
+        "options": [
+          { "id": "A", "text": "Only one" },
+          { "id": "B", "text": "Only two" },
+          { "id": "C", "text": "Only three" },
+          { "id": "D", "text": "All four" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Check: Statement 1 — CORRECT (dissolved 1 Jan 2015). Statement 2 — CORRECT (1966-69 Plan Holiday). Statement 3 — WRONG (Gulzarilal Nanda was first Dy. Chairman, Montek was LAST). Statement 4 — CORRECT (NITI Aayog's key feature). THREE statements correct! UPSC Prelims accuracy test!"
+      },
+      "navigation": {
+        "next": "card_43_assertion_reason_1",
+        "button_text": "Assertion-Reason ➔"
+      }
+    },
+    {
+      "card_id": "card_43_assertion_reason_1",
+      "card_slug": "card_43_assertion_reason_1",
+      "type": "quiz",
+      "concept_id": "assertion_reason_q1",
+      "level": 5,
+      "progress": {
+        "current": 43,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): NITI Aayog is considered weaker than Planning Commission in terms of implementation power.\n\nReason (R): NITI Aayog does not have financial allocation powers and works only as an advisory body.\n\nWhich of the following is correct?",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is not the correct explanation of A" },
+          { "id": "C", "text": "A is true but R is false" },
+          { "id": "D", "text": "A is false but R is true" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Both CORRECT and R explains A! Assertion TRUE: Critics say NITI Aayog 'lacks teeth' (weak implementation). Reason TRUE: NITI Aayog sirf advisory hai, financial powers nahi. R explains A perfectly: Implementation power weak BECAUSE financial powers nahi hain. Planning Commission ke paas ye powers the! BPSC Assertion-Reason classic!"
+      },
+      "navigation": {
+        "next": "card_44_assertion_reason_2",
+        "button_text": "Next A-R ➔"
+      }
+    },
+    {
+      "card_id": "card_44_assertion_reason_2",
+      "card_slug": "card_44_assertion_reason_2",
+      "type": "quiz",
+      "concept_id": "assertion_reason_q2",
+      "level": 5,
+      "progress": {
+        "current": 44,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ Assertion (A): Bihar's Saat Nischay Programme was launched in 2015.\n\nReason (R): The programme focuses on seven key development areas including employment, education, and infrastructure.\n\nWhich is correct?",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is not the correct explanation of A" },
+          { "id": "C", "text": "A is true but R is false" },
+          { "id": "D", "text": "A is false but R is true" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Analysis: Both TRUE but R doesn't EXPLAIN A! Assertion TRUE: Saat Nischay launched in 2015 (CM Nitish Kumar). Reason TRUE: Yes, seven areas — employment, roads, education, electricity, water, toilets, poverty. BUT Reason states WHAT the programme contains, not WHY it was launched in 2015. R describes content, doesn't explain timing!"
+      },
+      "navigation": {
+        "next": "card_45_final_master_quiz",
+        "button_text": "FINAL MASTER QUIZ 🏆"
+      }
+    },
+    {
+      "card_id": "card_45_final_master_quiz",
+      "card_slug": "card_45_final_master_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_officer_quiz",
+      "level": 5,
+      "progress": {
+        "current": 45,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "🏆 FINAL OFFICER CHALLENGE:\n\nConsider the following statements about Planning in India:\n\n1. Both Planning Commission and NITI Aayog were established through Cabinet Resolutions.\n2. The Prime Minister is the ex-officio head of both bodies.\n3. Five Year Plans continued after NITI Aayog was formed.\n4. NITI Aayog has greater financial allocation powers than Planning Commission had.\n5. ⭐ Bihar State Planning Board is headed by the Chief Minister.\n\nHow many statements are CORRECT?",
+        "options": [
+          { "id": "A", "text": "Only two" },
+          { "id": "B", "text": "Only three" },
+          { "id": "C", "text": "Only four" },
+          { "id": "D", "text": "All five" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "DETAILED ANALYSIS:\n\n1. CORRECT ✓ — Both formed by Cabinet Resolution (extra-constitutional).\n\n2. CORRECT ✓ — PM is Chairman/Chairperson of both.\n\n3. WRONG ✗ — Five Year Plans DISCONTINUED after Planning Commission dissolved. 12th Plan (2012-17) was last. NITI Aayog makes Vision documents, not FYPs.\n\n4. WRONG ✗ — OPPOSITE! NITI Aayog has NO financial powers, Planning Commission had extensive allocation powers. Major difference!\n\n5. CORRECT ✓ — ⭐ Bihar State Planning Board headed by CM (state-level equivalent).\n\nTHREE correct! Officer-level accuracy achieved! 🎯"
+      },
+      "navigation": {
+        "next": "card_46_pyq_pattern_1",
+        "button_text": "Bonus PYQ Patterns ➔"
+      }
+    },
+    {
+      "card_id": "card_46_pyq_pattern_1",
+      "card_slug": "card_46_pyq_pattern_1",
+      "type": "quiz",
+      "concept_id": "pyq_pattern_upsc",
+      "level": 5,
+      "progress": {
+        "current": 46,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "UPSC Prelims 2016 Pattern: Which of the following correctly describes the constitutional status of the Planning Commission?\n\n(Actual UPSC style question)",
+        "options": [
+          { "id": "A", "text": "It was a constitutional body under Article 280" },
+          { "id": "B", "text": "It was a statutory body created by an Act of Parliament" },
+          { "id": "C", "text": "It was an extra-constitutional body created by an executive resolution" },
+          { "id": "D", "text": "It was an autonomous body with constitutional backing" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "UPSC Answer: EXTRA-CONSTITUTIONAL body created by EXECUTIVE RESOLUTION (Cabinet Resolution, 15 March 1950). Not in Constitution, not by Parliament Act. This is the most frequently tested concept about Planning Commission. Remember: Extra-constitutional = formed by executive decision, can be dissolved same way (which happened in 2015)!"
+      },
+      "navigation": {
+        "next": "card_47_pyq_pattern_2",
+        "button_text": "BPSC Pattern ➔"
+      }
+    },
+    {
+      "card_id": "card_47_pyq_pattern_2",
+      "card_slug": "card_47_pyq_pattern_2",
+      "type": "quiz",
+      "concept_id": "pyq_pattern_bpsc",
+      "level": 5,
+      "progress": {
+        "current": 47,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: निम्नलिखित में से कौन सा कथन सही है?\n\n(Which statement is correct?)\n\n1. योजना आयोग का गठन संविधान के अनुच्छेद 280 के तहत हुआ था।\n2. नीति आयोग में सभी मुख्यमंत्री पदेन सदस्य हैं।\n3. बिहार का 'सात निश्चय' कार्यक्रम 2017 में शुरू हुआ।",
+        "options": [
+          { "id": "A", "text": "केवल 1 (Only 1)" },
+          { "id": "B", "text": "केवल 2 (Only 2)" },
+          { "id": "C", "text": "केवल 1 और 2 (Only 1 and 2)" },
+          { "id": "D", "text": "सभी सही हैं (All correct)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Answer: केवल कथन 2 सही है।\n\nAnalysis:\n1. WRONG — Planning Commission Article 280 (Finance Commission) के तहत नहीं, बल्कि Cabinet Resolution से बना।\n2. CORRECT — NITI Aayog में All Chief Ministers ex-officio members हैं।\n3. WRONG — Saat Nischay 2015 में launch हुआ, 2017 में नहीं।\n\nBPSC Hindi + facts mix करता है!"
+      },
+      "navigation": {
+        "next": "card_48_memory_tricks",
+        "button_text": "Memory Tricks ➔"
+      }
+    },
+    {
+      "card_id": "card_48_memory_tricks",
+      "card_slug": "card_48_memory_tricks",
+      "type": "chat",
+      "concept_id": "memory_techniques",
+      "level": 5,
+      "progress": {
+        "current": 48,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "🧠 Memory Tricks for Exams:\n\n📅 Dates: '15-3-1950' Planning born, '1-1-2015' NITI born (notice 15 appears in both!)\n\n🔢 Plans: 'First-Agriculture, Second-Steel, Third-Self' (A-S-S sequence)\n\n⭐ Bihar: 'Saat Nischay same year as NITI' (both 2015)\n\n🎯 Difference: 'Planning had Power (financial), NITI has Participation (states)'\n\n👑 Chairman: 'PM = Always Boss' (both mein PM head)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to perfect hai Sir! Kabhi nahi bhoolenge!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ek aur: Constitutional Status — 'PC aur NITI dono EXTRA hai' (Extra-constitutional). Finance Commission CONSTITUTIONAL hai (Article 280) — confusion mat karna! Planning Commission ≠ Finance Commission. Ye BPSC ka biggest trap hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Crystal clear Sir! Ab to pakka hai sab!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_final_tips",
+        "button_text": "Final Exam Tips ➔"
+      }
+    },
+    {
+      "card_id": "card_49_final_tips",
+      "card_slug": "card_49_final_tips",
+      "type": "chat",
+      "concept_id": "exam_strategy",
+      "level": 5,
+      "progress": {
+        "current": 49,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "🎯 Final Exam Strategy:\n\n✅ UPSC Prelims: Conceptual depth — constitutional status, comparison, reforms\n✅ BPSC: Dates, names, Bihar context, multi-statement traps\n✅ SSC/Railway: Direct facts — formation date, chairman, last plan\n\nDon't confuse: Planning Commission ≠ Finance Commission\nNITI Aayog ≠ Finance Ministry\nState Planning Board ≠ State Finance Commission"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir bilkul ready hoon! Thank you for this amazing journey from Planning Commission to NITI Aayog!"
+        },
+        {
+          "speaker": "aman",
+          "text": "You've mastered it completely! From 1950 se 2015 tak ka poora evolution, Five Year Plans ka era, Bihar context, critical analysis — sab kuch. Ab exam mein confidently attempt karo! All the best! 🌟"
+        },
+        {
+          "speaker": "raju",
+          "text": "Dhanyavaad Sir! BPSC/UPSC mein pakka crack karunga! 🙏"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_completion",
+        "button_text": "Chapter Complete! 🏆"
+      }
+    },
+    {
+      "card_id": "card_50_completion",
+      "card_slug": "card_50_completion",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 5,
+      "progress": {
+        "current": 50,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Planning Commission & NITI Aayog — Complete Journey",
+        "xp_earned": 500,
+        "milestone_progress": "100% Complete — Officer Level Unlocked!",
+        "motivational_quote": "PHENOMENAL ACHIEVEMENT! 🎉\n\nTumne master kar liya:\n✅ Planning Commission (1950-2015) — Formation to Dissolution\n✅ Five Year Plans (1951-2017) — Complete Evolution\n✅ NITI Aayog (2015-Present) — New Era\n✅ ⭐ Bihar Planning & Saat Nischay\n✅ Critical Analysis & PYQ Patterns\n\nFrom zero to BPSC/UPSC Officer level — congratulations! This topic is now your STRENGTH in exams! Keep this momentum going! 🚀🔥\n\n\"Planning is bringing the future into the present so you can do something about it now!\" — You're ready! 💪"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
+```
