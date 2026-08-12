@@ -1,0 +1,2256 @@
+
+{
+  "topic_id": "inflation_tax_structure_economy",
+  "topic_title": "Inflation and Tax Structure in Economy",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 65,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "intro_inflation_tax",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 65
+      },
+      "intro_payload": {
+        "title": "📈 Inflation & Tax Structure",
+        "subtitle": "Economy ka Backbone - Prices aur Government Revenue",
+        "icon": "💰",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Inflation ki complete definition aur daily life impact",
+          "Types of Inflation - Demand-Pull, Cost-Push, Stagflation",
+          "CPI, WPI aur measurement methods",
+          "Tax Structure - Direct vs Indirect Taxes",
+          "GST Revolution aur uska impact",
+          "Progressive vs Regressive taxation system",
+          "Bihar-specific tax examples aur local context"
+        ],
+        "estimated_time": "25 minutes",
+        "total_modules": 6
+      },
+      "navigation": {
+        "next": "card_02_daily_price_hook",
+        "button_text": "Shuru Karo 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_price_hook",
+      "card_slug": "card_02_daily_price_hook",
+      "type": "chat",
+      "concept_id": "inflation_daily_life_intro",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne kabhi Mummy ko kehte suna hai — 'Pehle ₹50 mein poora sabji aa jaata tha, ab toh ₹100 bhi kam pad jaata hai'?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Bilkul! Mere Papa bhi bolte hain ki pehle ₹10 mein Parle-G biscuit ka bada packet milta tha, ab chota wala ₹20 ka hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect observation! Ye jo cheezein mahagi hoti ja rahi hain time ke saath, isse hi economics mein INFLATION kehte hain. Matlab prices continuously badhna. Aaj hum isko detail mein samjhenge — kyun hota hai, kaise measure karte hain, aur iski wajah se government ko taxes kaise adjust karne padte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir lekin kya inflation hamesha buri cheez hai? Ya kabhi achhi bhi hoti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_what_is_inflation",
+        "button_text": "Inflation Definition ➔"
+      }
+    },
+    {
+      "card_id": "card_03_what_is_inflation",
+      "card_slug": "card_03_what_is_inflation",
+      "type": "chat",
+      "concept_id": "inflation_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Inflation ki exact definition: Yeh ek sustained aur general increase hai prices ka, jo commodities aur services mein hota hai over a period of time. Matlab ek-do din ki price badhotri nahi, continuous trend hona chahiye. Aur sirf ek cheez nahi, bahut saari cheezein mahagi ho rahi hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab agar sirf petrol ka price badha aur baaki sab same hai, to wo inflation nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi samjhe! Sirf ek item ka price fluctuation ko inflation nahi kehte. Jab overall price level badhta hai across the economy — vegetables, petrol, clothes, medicines sabka — tab inflation hota hai. Aur ye ek-two months ki baat nahi, sustained hona chahiye. BPSC mein yahi definition ka trap aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to sustained + general increase = Inflation!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_inflation_good_bad",
+        "button_text": "Good or Bad? ➔"
+      }
+    },
+    {
+      "card_id": "card_04_inflation_good_bad",
+      "card_slug": "card_04_inflation_good_bad",
+      "type": "chat",
+      "concept_id": "inflation_impact_spectrum",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab tumhare sawal ka jawab: Moderate inflation (2-3% per year) actually healthy hai economy ke liye! Isse producers ko motivation milti hai production badhane ki. Lekin HIGH inflation (7-8%+) harmful hai — common man ki purchasing power ghat jaati hai. Zero inflation bhi achha nahi, isse deflation ka risk hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Deflation matlab kya Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Deflation matlab prices ka continuously GIREGA! Sunne mein achha lagta hai na? Lekin bahut dangerous hai — logon ko lagta hai prices aur gir jayenge, to wo buying postpone kar dete hain. Isse demand ghat jaati hai, businesses close hote hain. Japan ne 1990s mein ye dekha tha. Isliye RBI target karti hai 4% (+/- 2%) ka moderate inflation."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab thoda inflation good, zyada bad, zero bhi bad! Balance chahiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz_inflation_basics_1",
+        "button_text": "Quiz Karo 📝"
+      }
+    },
+    {
+      "card_id": "card_05_quiz_inflation_basics_1",
+      "card_slug": "card_05_quiz_inflation_basics_1",
+      "type": "quiz",
+      "concept_id": "quiz_inflation_def_1",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Inflation ki correct definition kya hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf ek specific item ki price mein sudden increase"
+          },
+          {
+            "id": "B",
+            "text": "Sustained aur general increase in overall price level over time"
+          },
+          {
+            "id": "C",
+            "text": "Short-term price fluctuations jo seasonal hote hain"
+          },
+          {
+            "id": "D",
+            "text": "Sirf luxury items ki prices ka badhna"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Inflation matlab SUSTAINED (continuous) aur GENERAL (across many commodities) increase in price level over time. Ek-do items ya short-term fluctuations ko inflation nahi kehte. BPSC/UPSC frequently yahi conceptual clarity test karte hain."
+      },
+      "navigation": {
+        "next": "card_06_quiz_inflation_basics_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_inflation_basics_2",
+      "card_slug": "card_06_quiz_inflation_basics_2",
+      "type": "quiz",
+      "concept_id": "quiz_inflation_def_2",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "RBI ka current inflation target kya hai India ke liye?",
+        "options": [
+          {
+            "id": "A",
+            "text": "2% (+/- 1%)"
+          },
+          {
+            "id": "B",
+            "text": "4% (+/- 2%)"
+          },
+          {
+            "id": "C",
+            "text": "6% (+/- 3%)"
+          },
+          {
+            "id": "D",
+            "text": "Zero inflation"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RBI ka official inflation target hai 4% (+/- 2%), matlab acceptable range 2% se 6% ke beech. Ye flexible inflation targeting framework 2016 se implement hai. Too low ya too high dono harmful hain. SSC aur BPSC dono mein ye exact figure puchha jaata hai."
+      },
+      "navigation": {
+        "next": "card_07_quiz_inflation_basics_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_inflation_basics_3",
+      "card_slug": "card_07_quiz_inflation_basics_3",
+      "type": "quiz",
+      "concept_id": "quiz_inflation_def_3",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Deflation kya hai aur ye kyun harmful hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Prices ka continuously badhna, jo economy ke liye good hai"
+          },
+          {
+            "id": "B",
+            "text": "Prices ka continuously girna, jo demand reduction aur economic slowdown ka cause banta hai"
+          },
+          {
+            "id": "C",
+            "text": "Prices stable rehna, jo ideal situation hai"
+          },
+          {
+            "id": "D",
+            "text": "Sirf imported goods ki prices ka girna"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Deflation matlab prices continuously DECREASE hona. Ye harmful hai kyunki consumers buying postpone karte hain (thinking prices aur girenge), isse demand collapse hoti hai, businesses suffer karte hain. Japan ne 1990s mein ye crisis face kiya tha. Moderate inflation (2-4%) healthy hai economy ke liye."
+      },
+      "navigation": {
+        "next": "card_08_milestone_module_1",
+        "button_text": "Check Result 🎯"
+      }
+    },
+    {
+      "card_id": "card_08_milestone_module_1",
+      "card_slug": "card_08_milestone_module_1",
+      "type": "milestone",
+      "concept_id": "milestone_inflation_basics",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 65
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 CLEARED!",
+        "badge_emoji": "📊",
+        "completed_topic": "Inflation Basics & Definition",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Complete",
+        "motivational_quote": "Zabardast! Tumne inflation ki foundation strong kar li! Ab types of inflation samajhte hain! 💪"
+      },
+      "navigation": {
+        "next": "card_09_types_of_inflation_intro",
+        "button_text": "Module 2: Types of Inflation ➔"
+      }
+    },
+    {
+      "card_id": "card_09_types_of_inflation_intro",
+      "card_slug": "card_09_types_of_inflation_intro",
+      "type": "chat",
+      "concept_id": "types_inflation_intro",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab samajhte hain inflation KYUN hota hai! Based on causes, teen main types hain: 1) Demand-Pull Inflation, 2) Cost-Push Inflation, aur 3) Built-in Inflation. BPSC aur UPSC dono mein yahi classification important hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye names se hi confusing lag raha hai! Simple example se samjhaiye please!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Socho tumhare gaon mein aam ki demand bahut badh gayi (festive season), lekin aam utne hi hain. Kya hoga? Prices badh jayenge! Ye hai Demand-Pull. Ab socho petrol ka price badh gaya, to transport cost badha, to sabzi bhi mahagi ho gayi. Ye hai Cost-Push. Samjh aaya?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Pehle demand zyada, doosre mein cost badhi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_demand_pull_inflation",
+        "button_text": "Demand-Pull Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_10_demand_pull_inflation",
+      "card_slug": "card_10_demand_pull_inflation",
+      "type": "chat",
+      "concept_id": "demand_pull_inflation",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DEMAND-PULL INFLATION: Jab economy mein bahut paisa aa jaata hai (government spending badha, loans saste ho gaye, ya logon ki income badhi), to demand badh jaati hai. Lekin supply utni jaldi nahi badh paati. Isse prices upar jaate hain. Classical economics mein kehte hain: 'Too much money chasing too few goods.'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab jaise COVID ke baad lockdown khula, to sabne shopping karna start kiya, demand badhi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Post-lockdown pent-up demand ne prices badha diye many sectors mein. Ek aur example: Jab government employees ko 7th Pay Commission ke baad salary increase mili, to unki purchasing power badhi, demand badhi, kuch categories mein inflation aaya. Ye Demand-Pull ka real-life case hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to achhi baat (salary increase) se bhi inflation ho sakta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_cost_push_inflation",
+        "button_text": "Cost-Push Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_11_cost_push_inflation",
+      "card_slug": "card_11_cost_push_inflation",
+      "type": "chat",
+      "concept_id": "cost_push_inflation",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "COST-PUSH INFLATION: Jab production cost badh jaata hai (raw materials expensive ho gaye, wages badh gaye, ya taxes badh gaye), to producers apni costs recover karne ke liye prices badha dete hain. Supply side ki problem hai ye. Example: Crude oil prices international market mein badhe, to India mein petrol-diesel mehanga hua, isse transport costs badhe, ultimately sab products mehange ho gaye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye to chain reaction jaisa hai! Ek cheez ki cost badhi to baaki sab bhi badh gaye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! Isse hi 'ripple effect' kehte hain. ⭐ BPSC TRE Favorite: Bihar mein jab monsoon weak hota hai, crops ki yield kam hoti hai, food prices badh jaate hain — ye bhi cost-push inflation ka example hai. Natural calamities, supply chain disruptions — ye sab cost-push causes hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab demand-pull mein demand zyada, cost-push mein supply side problem!"
+        }
+      },
+      "navigation": {
+        "next": "card_12_stagflation_concept",
+        "button_text": "Stagflation Kya Hai? ➔"
+      }
+    },
+    {
+      "card_id": "card_12_stagflation_concept",
+      "card_slug": "card_12_stagflation_concept",
+      "type": "chat",
+      "concept_id": "stagflation_concept",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek advanced concept — STAGFLATION! Ye combination hai stagnation (economic slowdown) aur inflation ka. Matlab economy grow nahi kar rahi, unemployment badh raha hai, LEKIN prices bhi badh rahe hain! Ye sabse dangerous situation hai. 1970s mein USA ne ye face kiya tha oil crisis ke time."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Matlab economy kharab chal rahi hai fir bhi mehangai badh rahi hai? Ye to bahut bura hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Normally theory kehta hai — recession mein demand kam hoti hai to prices bhi kam hone chahiye. Lekin stagflation mein aisa nahi hota. Supply shocks (jaise oil prices ka suddenly badhna) ya wrong government policies iska cause ban sakti hain. UPSC mein ye frequently assertion-reason format mein puchha jaata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab stagflation = worst of both worlds!"
+        }
+      },
+      "navigation": {
+        "next": "card_13_quiz_types_inflation_1",
+        "button_text": "Quiz Time 📝"
+      }
+    },
+    {
+      "card_id": "card_13_quiz_types_inflation_1",
+      "card_slug": "card_13_quiz_types_inflation_1",
+      "type": "quiz",
+      "concept_id": "quiz_types_1",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Demand-Pull Inflation kab hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Jab production costs badh jaate hain"
+          },
+          {
+            "id": "B",
+            "text": "Jab aggregate demand economy mein supply se zyada badh jaata hai"
+          },
+          {
+            "id": "C",
+            "text": "Jab government taxes kam kar deti hai"
+          },
+          {
+            "id": "D",
+            "text": "Jab import costs badh jaate hain"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Demand-Pull Inflation tab hota hai jab economy mein total demand (aggregate demand) available supply se zyada hoti hai. Isse 'too much money chasing too few goods' situation create hoti hai. Causes: government spending increase, easy credit availability, income rise, etc. Option C partial cause ho sakta hai, lekin direct definition B hai."
+      },
+      "navigation": {
+        "next": "card_14_quiz_types_inflation_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_types_inflation_2",
+      "card_slug": "card_14_quiz_types_inflation_2",
+      "type": "quiz",
+      "concept_id": "quiz_types_2",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar mein weak monsoon ke karan food prices mein sudden increase kis type ka inflation hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Demand-Pull Inflation"
+          },
+          {
+            "id": "B",
+            "text": "Cost-Push Inflation"
+          },
+          {
+            "id": "C",
+            "text": "Stagflation"
+          },
+          {
+            "id": "D",
+            "text": "Built-in Inflation"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Favorite: Weak monsoon → crop yield kam → supply kam → production cost badha → prices badhe. Ye COST-PUSH inflation ka classic example hai. Supply-side shock ne prices badha diye. Demand nahi badhi, supply reduce hui. Bihar context mein agriculture-dependent economy hone ke kaaran ye frequently hota hai."
+      },
+      "navigation": {
+        "next": "card_15_quiz_types_inflation_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_types_inflation_3",
+      "card_slug": "card_15_quiz_types_inflation_3",
+      "type": "quiz",
+      "concept_id": "quiz_types_3",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Stagflation ki correct definition kya hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "High inflation aur high economic growth ka combination"
+          },
+          {
+            "id": "B",
+            "text": "Stagnant economy (low growth/recession) aur high inflation ka combination"
+          },
+          {
+            "id": "C",
+            "text": "Deflation aur unemployment ka combination"
+          },
+          {
+            "id": "D",
+            "text": "Moderate inflation aur stable growth"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "STAGFLATION = Stagnation (economic slowdown/recession) + Inflation (rising prices). Ye worst situation hai jahan economy grow nahi kar rahi, unemployment badh raha hai, LEKIN mehangai bhi badh rahi hai. 1970s oil crisis ne USA/UK mein ye situation create ki thi. UPSC/BPSC ka favorite tricky concept."
+      },
+      "navigation": {
+        "next": "card_16_milestone_module_2",
+        "button_text": "Result Check Karo 🎯"
+      }
+    },
+    {
+      "card_id": "card_16_milestone_module_2",
+      "card_slug": "card_16_milestone_module_2",
+      "type": "milestone",
+      "concept_id": "milestone_types_inflation",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 65
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 2 CLEARED!",
+        "badge_emoji": "📈",
+        "completed_topic": "Types of Inflation",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/6 Complete",
+        "motivational_quote": "Fantastic! Demand-Pull, Cost-Push, Stagflation sab clear! Ab measurement methods dekhte hain — CPI aur WPI! 🚀"
+      },
+      "navigation": {
+        "next": "card_17_measurement_intro",
+        "button_text": "Module 3: Inflation Measurement ➔"
+      }
+    },
+    {
+      "card_id": "card_17_measurement_intro",
+      "card_slug": "card_17_measurement_intro",
+      "type": "chat",
+      "concept_id": "measurement_intro",
+      "level": 3,
+      "progress": {
+        "current": 17,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek critical question: Inflation kitna hai ye pata kaise chalega? Har cheez ka price alag-alag badh raha hai — sabji 10%, petrol 5%, electricity 8%. Overall inflation calculate kaise karenge? India mein do main indices hain: CPI (Consumer Price Index) aur WPI (Wholesale Price Index)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir CPI aur WPI mein kya difference hai? Dono inflation measure hi karte hain na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan dono inflation measure karte hain, lekin different perspectives se. CPI consumer (final buyer) ki perspective se dekhta hai — jo tum market mein jaake kharidoge uska price. WPI wholesale level pe dekhta hai — jo retailers/businesses bulk mein kharidenge. BPSC/UPSC mein yahi difference ka trap frequently aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab CPI = retail price, WPI = wholesale price?"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_cpi_detail",
+        "button_text": "CPI Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_18_cpi_detail",
+      "card_slug": "card_18_cpi_detail",
+      "type": "chat",
+      "concept_id": "cpi_detail",
+      "level": 3,
+      "progress": {
+        "current": 18,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "CPI (Consumer Price Index): Ye measure karta hai ek typical household ka cost of living kitna badh raha hai. Isme food, housing, clothing, transport, healthcare, education — sab ka weighted average price change dekha jaata hai. Base year = 2012. Ministry of Statistics and Programme Implementation (MOSPI) isse calculate karti hai monthly."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'weighted average' matlab kya? Sabka equal importance nahi hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul nahi! Food aur beverages ka weight CPI mein sabse zyada hai (~46%), kyunki average Indian household ka sabse bada expense yahi hai. Housing ka ~10%, clothing ~6% weight hai. Different items ka different weightage hota hai importance ke hisaab se. Ye weightage household consumption survey se milta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! Matlab jo cheez zyada use hoti hai usko zyada weightage!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_wpi_detail",
+        "button_text": "WPI Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_19_wpi_detail",
+      "card_slug": "card_19_wpi_detail",
+      "type": "chat",
+      "concept_id": "wpi_detail",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "WPI (Wholesale Price Index): Ye measure karta hai wholesale level (bulk purchases) pe commodities ki prices. Isme mainly Primary Articles (farm products), Fuel & Power, aur Manufactured Products aate hain. Base year = 2011-12. Office of Economic Adviser, Department of Industrial Policy & Promotion isse calculate karti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to CPI common man ko affect karta hai, WPI businesses ko?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isliye RBI apne monetary policy mein CPI inflation ko target karti hai, WPI ko nahi. Kyunki common people ki purchasing power CPI se represent hoti hai. Lekin WPI bhi important hai kyunki ye early indicator hai — wholesale prices badhenge to eventually retail prices bhi badhenge. UPSC mein yahi policy angle puchha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek confusion — CPI headline inflation aur core inflation kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_headline_vs_core",
+        "button_text": "Headline vs Core ➔"
+      }
+    },
+    {
+      "card_id": "card_20_headline_vs_core",
+      "card_slug": "card_20_headline_vs_core",
+      "type": "chat",
+      "concept_id": "headline_core_inflation",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! HEADLINE INFLATION: Total CPI, jisme sab items included hain — food, fuel sab kuch. CORE INFLATION: CPI minus food aur fuel prices. Kyunki food aur fuel ki prices bohot volatile hoti hain (monsoon, global oil prices se fluctuate karti hain), to core inflation zyada stable picture deta hai underlying inflation ka."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab jab RBI policy banati hai to konsa dekhti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "RBI DONO dekhti hai! Headline inflation public ko affect karta hai directly, isliye important hai. Lekin core inflation batata hai ki long-term inflation trend kya hai without temporary shocks. Policy decisions mein dono ka consideration hota hai. BPSC mein yahi nuance test hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Ab quiz mein test ho jayega ye sab!"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_quiz_measurement_1",
+        "button_text": "Quiz Shuru Karo 📝"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_measurement_1",
+      "card_slug": "card_21_quiz_measurement_1",
+      "type": "quiz",
+      "concept_id": "quiz_measurement_1",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "CPI (Consumer Price Index) ko kaun calculate karta hai aur base year kya hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "RBI, Base Year 2011-12"
+          },
+          {
+            "id": "B",
+            "text": "MOSPI (Ministry of Statistics), Base Year 2012"
+          },
+          {
+            "id": "C",
+            "text": "NITI Aayog, Base Year 2015"
+          },
+          {
+            "id": "D",
+            "text": "Finance Ministry, Base Year 2010"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CPI ko MOSPI (Ministry of Statistics and Programme Implementation) calculate karti hai monthly. Current base year hai 2012 (earlier 2010 tha). RBI CPI data use karti hai monetary policy ke liye, but calculate nahi karti. SSC aur BPSC mein ye institutional detail frequently puchhi jaati hai."
+      },
+      "navigation": {
+        "next": "card_22_quiz_measurement_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_measurement_2",
+      "card_slug": "card_22_quiz_measurement_2",
+      "type": "quiz",
+      "concept_id": "quiz_measurement_2",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "RBI apne monetary policy decisions mein primarily kis inflation measure ko target karti hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "WPI (Wholesale Price Index)"
+          },
+          {
+            "id": "B",
+            "text": "CPI (Consumer Price Index)"
+          },
+          {
+            "id": "C",
+            "text": "GDP Deflator"
+          },
+          {
+            "id": "D",
+            "text": "Core Inflation only"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RBI primarily CPI (Consumer Price Index) ko target karti hai, kyunki ye common people ki purchasing power aur cost of living ko reflect karta hai. Target: 4% (+/- 2%). Earlier WPI use hota tha, but 2014 se CPI-based targeting shuru hui. UPSC/BPSC ka favorite policy shift question!"
+      },
+      "navigation": {
+        "next": "card_23_quiz_measurement_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_23_quiz_measurement_3",
+      "card_slug": "card_23_quiz_measurement_3",
+      "type": "quiz",
+      "concept_id": "quiz_measurement_3",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Core Inflation aur Headline Inflation mein kya difference hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Core = sirf food prices, Headline = sirf fuel prices"
+          },
+          {
+            "id": "B",
+            "text": "Core = CPI minus food & fuel, Headline = total CPI including all items"
+          },
+          {
+            "id": "C",
+            "text": "Core = WPI, Headline = CPI"
+          },
+          {
+            "id": "D",
+            "text": "Dono same hain, sirf terminology different hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "HEADLINE Inflation = Total CPI (sab items included). CORE Inflation = CPI minus food aur fuel prices, kyunki ye dono bohot volatile hain. Core inflation zyada stable picture deta hai underlying inflation trend ka. RBI dono ko monitor karti hai policy making mein. BPSC frequently ye conceptual difference puchti hai."
+      },
+      "navigation": {
+        "next": "card_24_milestone_module_3",
+        "button_text": "Result Dekho 🎯"
+      }
+    },
+    {
+      "card_id": "card_24_milestone_module_3",
+      "card_slug": "card_24_milestone_module_3",
+      "type": "milestone",
+      "concept_id": "milestone_measurement",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 65
+      },
+      "milestone_payload": {
+        "title": "🎊 MODULE 3 COMPLETE!",
+        "badge_emoji": "📊",
+        "completed_topic": "Inflation Measurement - CPI & WPI",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/6 Complete",
+        "motivational_quote": "Superb! CPI, WPI, Headline, Core sab crystal clear! Ab Tax Structure ki taraf chalte hain! 💪"
+      },
+      "navigation": {
+        "next": "card_25_tax_structure_intro",
+        "button_text": "Module 4: Tax Structure ➔"
+      }
+    },
+    {
+      "card_id": "card_25_tax_structure_intro",
+      "card_slug": "card_25_tax_structure_intro",
+      "type": "chat",
+      "concept_id": "tax_intro",
+      "level": 4,
+      "progress": {
+        "current": 25,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab inflation se tax structure ki taraf! Dekho, government ko paisa chahiye public services provide karne ke liye — roads, schools, hospitals. Ye paisa aata hai mainly TAXES se. Tax structure matlab — kis-kis tarah ke taxes hain, kaun kitna pay karta hai, aur kitna efficient/fair hai system."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir tax to bas Income Tax aur GST hain na? Baaki kya-kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi nahi! Bohot saare types hain. Pehle ek fundamental classification samjho: DIRECT TAX aur INDIRECT TAX. Direct Tax = jo person jis par laga hai wo khud hi pay karta hai (Income Tax, Property Tax). Indirect Tax = jo ek person par laga hai lekin burden dusre par shift ho jaata hai (GST, Excise Duty)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Burden shift kaise ho jaata hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_direct_tax_detail",
+        "button_text": "Direct Tax Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_26_direct_tax_detail",
+      "card_slug": "card_26_direct_tax_detail",
+      "type": "chat",
+      "concept_id": "direct_tax_detail",
+      "level": 4,
+      "progress": {
+        "current": 26,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DIRECT TAX: Jis person/entity ki income/wealth par tax lagta hai, wahi pay bhi karta hai. Burden shift nahi hota. Examples: Income Tax (salary/business income par), Corporate Tax (companies ke profit par), Property Tax, Wealth Tax (ab abolished), Capital Gains Tax. Ye progressive hote hain — zyada kama rahe ho to zyada tax."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir progressive matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Progressive Tax System: Jiska income zyada, uska tax rate bhi zyada. Example: ₹5 lakh income par 20% tax, ₹10 lakh par 30% tax. Ye equity/fairness laata hai — rich log apni capacity ke hisaab se zyada contribute karte hain. India ka income tax progressive hai. ⭐ BPSC TRE Favorite concept!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To ameer log zyada percentage mein tax dete hain!"
+        }
+      },
+      "navigation": {
+        "next": "card_27_indirect_tax_detail",
+        "button_text": "Indirect Tax Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_27_indirect_tax_detail",
+      "card_slug": "card_27_indirect_tax_detail",
+      "type": "chat",
+      "concept_id": "indirect_tax_detail",
+      "level": 4,
+      "progress": {
+        "current": 27,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "INDIRECT TAX: Ye goods aur services par lagta hai. Seller tax government ko deta hai, lekin actual burden consumer (final buyer) par hota hai through higher prices. Examples: GST, Customs Duty (import/export par), Excise Duty (manufacturing par — ab GST mein merge). Ye regressive nature ke hote hain — rich-poor sabke liye same rate."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir example dijiye burden shift ka!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho: Tum chocolate kharido ₹20 ki. Usme 18% GST included hai matlab ₹3 tax. Shopkeeper wo ₹3 government ko dega, lekin actually tumne pay kiya! Shopkeeper ne price mein include kar diya. Burden shift ho gaya tumhare upar. Isliye indirect tax regressive hai — ameer-gareeb dono same ₹3 tax pay karenge chocolate par."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh! Matlab direct tax mein main khud pay karta hoon, indirect mein koi aur collect karke deta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_gst_revolution",
+        "button_text": "GST Revolution ➔"
+      }
+    },
+    {
+      "card_id": "card_28_gst_revolution",
+      "card_slug": "card_28_gst_revolution",
+      "type": "chat",
+      "concept_id": "gst_revolution",
+      "level": 4,
+      "progress": {
+        "current": 28,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai GST (Goods and Services Tax) — India ka biggest tax reform! July 1, 2017 se implement hua. Isse pehle bahut saare alag-alag indirect taxes the — VAT, Service Tax, Excise, Entry Tax, Luxury Tax — total 17+ taxes! GST ne sabko replace kar diya. 'One Nation, One Tax' ka dream realize hua!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab pehle bohot confusion tha, ab ek hi GST hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Lekin GST bhi teen types ka hai: CGST (Central GST — jab goods/services same state mein bechte ho), SGST (State GST — same state), IGST (Integrated GST — jab different states ke beech transaction ho). Example: Bihar se Delhi mein sale = IGST. Bihar ke andar sale = CGST + SGST. ⭐ BPSC TRE Favorite!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To intra-state = CGST+SGST, inter-state = IGST!"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_quiz_tax_structure_1",
+        "button_text": "Quiz Time 📝"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_tax_structure_1",
+      "card_slug": "card_29_quiz_tax_structure_1",
+      "type": "quiz",
+      "concept_id": "quiz_tax_1",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Direct Tax aur Indirect Tax mein fundamental difference kya hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Direct tax businesses pay karte hain, Indirect tax individuals"
+          },
+          {
+            "id": "B",
+            "text": "Direct tax ka burden shift nahi hota, Indirect tax ka burden final consumer par shift ho jaata hai"
+          },
+          {
+            "id": "C",
+            "text": "Direct tax zyada hota hai, Indirect tax kam"
+          },
+          {
+            "id": "D",
+            "text": "Direct tax state government collect karti hai, Indirect tax central"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Direct Tax: Jis person/entity par laga hai wahi pay karta hai, burden shift nahi hota (Income Tax, Property Tax). Indirect Tax: Burden final consumer par shift hota hai (GST, Excise). Ye fundamental classification UPSC/BPSC dono mein repeatedly puchhi jaati hai."
+      },
+      "navigation": {
+        "next": "card_30_quiz_tax_structure_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_tax_structure_2",
+      "card_slug": "card_30_quiz_tax_structure_2",
+      "type": "quiz",
+      "concept_id": "quiz_tax_2",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "GST (Goods and Services Tax) kab implement hua India mein?",
+        "options": [
+          {
+            "id": "A",
+            "text": "1st April 2016"
+          },
+          {
+            "id": "B",
+            "text": "1st July 2017"
+          },
+          {
+            "id": "C",
+            "text": "1st January 2018"
+          },
+          {
+            "id": "D",
+            "text": "1st April 2019"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "GST implement hua 1st July 2017 ko — historic midnight session Parliament mein. Isse 17+ indirect taxes replace hue. Ye India ka biggest tax reform tha post-independence. SSC aur BPSC dono mein exact date frequently puchhi jaati hai."
+      },
+      "navigation": {
+        "next": "card_31_quiz_tax_structure_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quiz_tax_structure_3",
+      "card_slug": "card_31_quiz_tax_structure_3",
+      "type": "quiz",
+      "concept_id": "quiz_tax_3",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "⭐ Agar Bihar se goods Delhi mein bechte hain, to kaun sa GST lagega?",
+        "options": [
+          {
+            "id": "A",
+            "text": "CGST + SGST"
+          },
+          {
+            "id": "B",
+            "text": "IGST (Integrated GST)"
+          },
+          {
+            "id": "C",
+            "text": "Sirf CGST"
+          },
+          {
+            "id": "D",
+            "text": "Koi GST nahi"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Favorite: Inter-state transaction (different states ke beech) mein IGST lagta hai. Bihar se Delhi = IGST. Same state ke andar (intra-state) transaction mein CGST + SGST lagta hai. Ye GST mechanism ka core concept hai jo BPSC/SSC mein frequently test hota hai."
+      },
+      "navigation": {
+        "next": "card_32_milestone_module_4",
+        "button_text": "Module Complete 🎯"
+      }
+    },
+    {
+      "card_id": "card_32_milestone_module_4",
+      "card_slug": "card_32_milestone_module_4",
+      "type": "milestone",
+      "concept_id": "milestone_tax_structure",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 65
+      },
+      "milestone_payload": {
+        "title": "🔥 MODULE 4 MASTERED!",
+        "badge_emoji": "💸",
+        "completed_topic": "Tax Structure - Direct, Indirect, GST",
+        "xp_earned": 80,
+        "milestone_progress": "Module 4/6 Complete",
+        "motivational_quote": "Outstanding! Tax structure clear! Ab advanced concepts — Progressive vs Regressive taxation dekhte hain! 🚀"
+      },
+      "navigation": {
+        "next": "card_33_progressive_regressive_intro",
+        "button_text": "Module 5: Tax Systems ➔"
+      }
+    },
+    {
+      "card_id": "card_33_progressive_regressive_intro",
+      "card_slug": "card_33_progressive_regressive_intro",
+      "type": "chat",
+      "concept_id": "progressive_regressive_intro",
+      "level": 5,
+      "progress": {
+        "current": 33,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab samajhte hain tax systems ki fairness/equity ka angle. Taxes teen types ke hote hain nature ke hisaab se: 1) PROGRESSIVE (ameer par zyada burden), 2) REGRESSIVE (gareeb par relatively zyada burden), 3) PROPORTIONAL (sabke liye same percentage). Ye classification UPSC/BPSC ka favorite hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir pehle aapne bola tha Income Tax progressive hai. Matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Progressive Tax mein tax RATE income ke saath badhta hai. Example: ₹2.5 lakh tak nil tax, ₹5 lakh tak 5%, ₹10 lakh tak 20%, ₹10 lakh+ par 30%. Jaise income badhti hai, rate bhi badhta hai. Ye equity ensure karta hai — ability to pay principle. Rich log apni capacity ke hisaab se zyada contribute karte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To progressive matlab rate income ke saath increase hota hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_regressive_tax",
+        "button_text": "Regressive Tax ➔"
+      }
+    },
+    {
+      "card_id": "card_34_regressive_tax",
+      "card_slug": "card_34_regressive_tax",
+      "type": "chat",
+      "concept_id": "regressive_tax",
+      "level": 5,
+      "progress": {
+        "current": 34,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "REGRESSIVE TAX: Jisme gareeb logo par relatively ZYADA burden padta hai unke income ke proportion mein. Indirect taxes (GST, Excise) generally regressive hote hain. Example: Chocolate par ₹3 GST — ameer aadmi ke liye negligible, lekin daily wage worker ke liye significant. Same absolute amount, but different relative impact."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ameer-gareeb dono ₹3 pay kar rahe hain, lekin gareeb ke liye ₹3 ka value zyada hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isliye indirect taxes ko regressive kehte hain — ye income level ko consider nahi karte. ₹1 crore income wala bhi same GST, ₹10,000 income wala bhi. Proportionally gareeb par zyada burden. BPSC mein yahi equity/inequality ka angle puchha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to proportional tax kya hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_proportional_tax",
+        "button_text": "Proportional Tax ➔"
+      }
+    },
+    {
+      "card_id": "card_35_proportional_tax",
+      "card_slug": "card_35_proportional_tax",
+      "type": "chat",
+      "concept_id": "proportional_tax",
+      "level": 5,
+      "progress": {
+        "current": 35,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PROPORTIONAL TAX (Flat Tax): Jisme sabke liye SAME RATE hota hai income ke percentage ke roop mein, chahe income kitni bhi ho. Example: Agar flat 10% tax hai — ₹1 lakh income par ₹10,000 tax, ₹10 lakh par ₹1 lakh tax. Rate same (10%), absolute amount alag. Currently India mein pure proportional tax system nahi hai income tax mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to teen types: Progressive = rate badhta, Regressive = gareeb par zyada burden, Proportional = same rate sabke liye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect summary! Ab ek BPSC trap batata hoon: Corporate Tax (30% flat) proportional lag sakta hai, lekin actually progressive nature ka hai kyunki only profit-making entities pay karte hain. Small businesses exemptions milte hain. Ye nuance UPSC/BPSC mein test hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to tricky hai! Classification simple nahi hai hamesha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_tax_equity_efficiency",
+        "button_text": "Equity vs Efficiency ➔"
+      }
+    },
+    {
+      "card_id": "card_36_tax_equity_efficiency",
+      "card_slug": "card_36_tax_equity_efficiency",
+      "type": "chat",
+      "concept_id": "tax_equity_efficiency",
+      "level": 5,
+      "progress": {
+        "current": 36,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Tax system design mein do competing objectives hain: EQUITY (fairness — sabke saath nyay) aur EFFICIENCY (economic growth disturb na ho). Progressive taxes zyada equitable hain but complexity badhti hai. Indirect taxes efficient hain (collect karna easy) but regressive hain. Ideal system dono balance karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab koi perfect tax system nahi hai? Trade-off hamesha rahega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Har system mein pros-cons hain. India mixed approach use karta hai — Direct taxes (progressive, equitable) + Indirect taxes (efficient, broad-based). GST ne efficiency improve ki, lekin equity concerns abhi bhi hain. ⭐ BPSC TRE mein frequently policy analysis questions mein ye angle aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Mixed system best compromise hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_quiz_tax_systems_1",
+        "button_text": "Quiz Shuru Karo 📝"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_tax_systems_1",
+      "card_slug": "card_37_quiz_tax_systems_1",
+      "type": "quiz",
+      "concept_id": "quiz_systems_1",
+      "level": 5,
+      "progress": {
+        "current": 37,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Progressive Tax system ka kya characteristic hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sabke liye same absolute amount of tax"
+          },
+          {
+            "id": "B",
+            "text": "Tax rate income ke saath badhta hai"
+          },
+          {
+            "id": "C",
+            "text": "Gareeb logo par zyada burden"
+          },
+          {
+            "id": "D",
+            "text": "Sirf indirect taxes progressive hote hain"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Progressive Tax: Tax RATE income ke saath increase hota hai. Higher income → higher tax rate. Example: India ka income tax — ₹5 lakh tak 5%, ₹10 lakh+ par 30%. Ye equity/fairness ensure karta hai — ability to pay principle. Direct taxes (especially income tax) generally progressive hote hain."
+      },
+      "navigation": {
+        "next": "card_38_quiz_tax_systems_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_tax_systems_2",
+      "card_slug": "card_38_quiz_tax_systems_2",
+      "type": "quiz",
+      "concept_id": "quiz_systems_2",
+      "level": 5,
+      "progress": {
+        "current": 38,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Indirect taxes (jaise GST) ko generally kyun 'regressive' nature ka mana jaata hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki ye sirf gareeb logo par lagta hai"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki same absolute tax amount proportionally gareeb ke income ka zyada hissa hota hai"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki ye sirf luxury goods par lagta hai"
+          },
+          {
+            "id": "D",
+            "text": "Kyunki government collect nahi kar paati"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Regressive Tax: Lower income groups par proportionally ZYADA burden. Example: ₹100 GST on goods — ₹10,000 monthly income wale ke liye 1%, ₹1 lakh wale ke liye 0.1%. Same absolute tax, different relative impact. Isliye indirect taxes equity concerns raise karte hain, despite being efficient to collect."
+      },
+      "navigation": {
+        "next": "card_39_quiz_tax_systems_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz_tax_systems_3",
+      "card_slug": "card_39_quiz_tax_systems_3",
+      "type": "quiz",
+      "concept_id": "quiz_systems_3",
+      "level": 5,
+      "progress": {
+        "current": 39,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Proportional Tax (Flat Tax) system mein kya hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Tax rate income ke saath decrease hota hai"
+          },
+          {
+            "id": "B",
+            "text": "Sabke liye same absolute amount tax"
+          },
+          {
+            "id": "C",
+            "text": "Same tax RATE (percentage) sabke liye, chahe income kitni bhi ho"
+          },
+          {
+            "id": "D",
+            "text": "Sirf ameer log tax pay karte hain"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Proportional/Flat Tax: Same tax RATE (percentage) for all income levels. Example: 10% flat — ₹1 lakh income par ₹10k, ₹10 lakh par ₹1 lakh. Rate same, absolute amount alag. Currently India pure proportional system use nahi karta income tax mein — progressive slabs hain. UPSC mein ye conceptual clarity test hoti hai."
+      },
+      "navigation": {
+        "next": "card_40_milestone_module_5",
+        "button_text": "Result Check 🎯"
+      }
+    },
+    {
+      "card_id": "card_40_milestone_module_5",
+      "card_slug": "card_40_milestone_module_5",
+      "type": "milestone",
+      "concept_id": "milestone_tax_systems",
+      "level": 5,
+      "progress": {
+        "current": 40,
+        "total": 65
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 5 CONQUERED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Tax Systems - Progressive, Regressive, Proportional",
+        "xp_earned": 90,
+        "milestone_progress": "Module 5/6 Complete",
+        "motivational_quote": "Brilliant! Tax equity aur efficiency clear! Ab last module — Bihar-specific applications! 🚀"
+      },
+      "navigation": {
+        "next": "card_41_bihar_inflation_context",
+        "button_text": "Module 6: Bihar Context ➔"
+      }
+    },
+    {
+      "card_id": "card_41_bihar_inflation_context",
+      "card_slug": "card_41_bihar_inflation_context",
+      "type": "chat",
+      "concept_id": "bihar_inflation",
+      "level": 6,
+      "progress": {
+        "current": 41,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite! Ab Bihar-specific application dekhte hain. Bihar agriculture-dependent economy hai — 80%+ population directly/indirectly agriculture pe dependent. Iska matlab monsoon, crop prices, aur food inflation directly Bihar ke common people ko affect karte hain. Kharif-Rabi seasons ka inflation pattern bhi different hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab Bihar mein food inflation zyada critical hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! CPI mein food & beverages ka weight 46% hai, lekin Bihar jaise states mein practical impact isse bhi zyada hai kyunki average household income mein food expenses ka share zyada hota hai. Jab rice, wheat, vegetables expensive hote hain, common Bihari family directly affect hoti hai. BPSC frequently Bihar's inflation pattern vs national average compare karti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Sir Bihar mein kaunse crops inflation ko influence karte hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_bihar_crops_inflation",
+        "button_text": "Bihar Crops Impact ➔"
+      }
+    },
+    {
+      "card_id": "card_42_bihar_crops_inflation",
+      "card_slug": "card_42_bihar_crops_inflation",
+      "type": "chat",
+      "concept_id": "bihar_crops_impact",
+      "level": 6,
+      "progress": {
+        "current": 42,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Bihar ke main crops: Rice (Paddy), Wheat, Maize, Pulses (Arhar, Masoor), Vegetables (Potato, Onion, Tomato). Jab in crops ki production kam hoti hai (flood/drought ke kaaran), prices spike karte hain. Example: 2020 mein North Bihar floods ne vegetable supply disrupt kiya, local inflation badh gaya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir flood to har saal aata hai Bihar mein! To har saal inflation problem?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sahi observation! North Bihar (especially Kosi-Gandak belt) mein recurrent floods ek structural problem hain jo food inflation ko volatile banate hain. Government measures jaise buffer stocks, MSP (Minimum Support Price), PDS (Public Distribution System) isse counter karne ke liye hain. BPSC mein Bihar's disaster-inflation linkage frequently discuss hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Sir PDS Bihar mein kaise kaam karta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_bihar_pds",
+        "button_text": "Bihar PDS ➔"
+      }
+    },
+    {
+      "card_id": "card_43_bihar_pds",
+      "card_slug": "card_43_bihar_pds",
+      "type": "chat",
+      "concept_id": "bihar_pds",
+      "level": 6,
+      "progress": {
+        "current": 43,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Bihar mein PDS (Public Distribution System): Government subsidized rates par ration deti hai BPL (Below Poverty Line) families ko through Fair Price Shops. Rice ₹3/kg, Wheat ₹2/kg jaise rates. Ye food inflation ka burden kam karta hai poor families par. National Food Security Act (NFSA) 2013 ke under ye operate hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir lekin maine suna hai PDS mein leakages hote hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, historically PDS mein leakages/corruption ek issue tha. Lekin recent years mein digitalization (Aadhaar linkage, e-PoS machines) se improvement hua hai. Bihar government ne bhi transparency badhane ke efforts kiye hain. BPSC TRE mein frequently PDS reforms aur challenges discuss hote hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Ab tax structure mein Bihar-specific kya hai Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_bihar_tax_revenue",
+        "button_text": "Bihar Tax Revenue ➔"
+      }
+    },
+    {
+      "card_id": "card_44_bihar_tax_revenue",
+      "card_slug": "card_44_bihar_tax_revenue",
+      "type": "chat",
+      "concept_id": "bihar_tax_revenue",
+      "level": 6,
+      "progress": {
+        "current": 44,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Bihar Government Revenue Sources: 1) SGST (State GST) — goods & services par state ka share, 2) Excise Duty — alcohol par (lekin prohibition ke baad minimal), 3) Stamp Duty & Registration — property transactions, 4) Vehicle Tax, 5) Professional Tax, 6) Central Grants/Transfers (Finance Commission recommendations). Bihar revenue generation mein challenge face karta hai limited industrial base ke kaaran."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir prohibition matlab liquor ban? Isse revenue loss hua?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! April 2016 se Bihar mein total alcohol prohibition hai. Earlier excise revenue ₹3500-4000 crore tha annually, ab almost nil. Ye massive revenue loss tha. Lekin government argument hai ki social benefits (health, crime reduction, family welfare) long-term mein economic benefits denge. ⭐ BPSC TRE ka favorite policy debate topic!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab short-term revenue loss, long-term social gain ka trade-off?"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_bihar_gst_impact",
+        "button_text": "Bihar GST Impact ➔"
+      }
+    },
+    {
+      "card_id": "card_45_bihar_gst_impact",
+      "card_slug": "card_45_bihar_gst_impact",
+      "type": "chat",
+      "concept_id": "bihar_gst_impact",
+      "level": 6,
+      "progress": {
+        "current": 45,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ GST ka Bihar par impact: GST implementation se Bihar ko mixed results mile. Positive: Tax collection simplified, VAT evasion kam hua. Negative: Initial transition challenges, small businesses (especially Patna, Muzaffarpur ke traders) ko compliance burden. Lekin overall GST se Bihar ko bhi national common market mein better integration mila."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir GST compensation Bihar ko milta hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! GST Council ne initially 5-year compensation mechanism rakha tha (2017-2022) jisme agar states ko revenue loss hota to Central government compensate karti. Bihar bhi iska beneficiary tha. Lekin 2022 ke baad ye end ho gaya, ab states apne collection pe dependent hain. Ye fiscal federalism ka important aspect hai — UPSC/BPSC favourite!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Ab final quiz ready hoon!"
+        }
+      },
+      "navigation": {
+        "next": "card_46_quiz_bihar_1",
+        "button_text": "Bihar Quiz 📝"
+      }
+    },
+    {
+      "card_id": "card_46_quiz_bihar_1",
+      "card_slug": "card_46_quiz_bihar_1",
+      "type": "quiz",
+      "concept_id": "quiz_bihar_1",
+      "level": 6,
+      "progress": {
+        "current": 46,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar mein agriculture-dependent economy hone ke kaaran kis type ka inflation zyada critical hai common people ke liye?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Asset price inflation"
+          },
+          {
+            "id": "B",
+            "text": "Food & beverages inflation"
+          },
+          {
+            "id": "C",
+            "text": "Housing inflation"
+          },
+          {
+            "id": "D",
+            "text": "Education inflation"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Specific: Bihar mein 80%+ population agriculture-dependent hai aur average household income mein food expenses ka share bohot zyada hai. Isliye FOOD & BEVERAGES inflation directly aur severely common Biharis ko affect karta hai. Monsoon, floods, crop failures directly food prices impact karte hain."
+      },
+      "navigation": {
+        "next": "card_47_quiz_bihar_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_47_quiz_bihar_2",
+      "card_slug": "card_47_quiz_bihar_2",
+      "type": "quiz",
+      "concept_id": "quiz_bihar_2",
+      "level": 6,
+      "progress": {
+        "current": 47,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar mein alcohol prohibition (2016 se) ka government revenue par kya impact pada?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Excise revenue significantly decrease hua (~₹3500-4000 crore loss annually)"
+          },
+          {
+            "id": "B",
+            "text": "Revenue mein koi change nahi hua"
+          },
+          {
+            "id": "C",
+            "text": "Other taxes se compensate ho gaya completely"
+          },
+          {
+            "id": "D",
+            "text": "Revenue actually badh gaya"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ BPSC TRE Critical Fact: April 2016 se Bihar mein total liquor ban implemented hui. Isse annual excise revenue ₹3500-4000 crore se almost nil ho gaya — massive revenue loss. Government ka argument hai ki long-term social benefits (health, reduced crime, family welfare) economic gains denge. Ye policy trade-off BPSC mein frequently discuss hota hai."
+      },
+      "navigation": {
+        "next": "card_48_quiz_bihar_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_48_quiz_bihar_3",
+      "card_slug": "card_48_quiz_bihar_3",
+      "type": "quiz",
+      "concept_id": "quiz_bihar_3",
+      "level": 6,
+      "progress": {
+        "current": 48,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "⭐ PDS (Public Distribution System) Bihar mein kis Act ke under operate hota hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Bihar Food Security Act 2010"
+          },
+          {
+            "id": "B",
+            "text": "National Food Security Act (NFSA) 2013"
+          },
+          {
+            "id": "C",
+            "text": "Essential Commodities Act 1955"
+          },
+          {
+            "id": "D",
+            "text": "Consumer Protection Act 2019"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ Bihar PDS operates under NATIONAL FOOD SECURITY ACT (NFSA) 2013 — central legislation jo subsidized food grains (rice ₹3/kg, wheat ₹2/kg) provide karti hai eligible families ko. Ye food inflation ka burden reduce karta hai poor/vulnerable sections par. Bihar mein digitalization (Aadhaar linkage) se leakages kam hue hain recently."
+      },
+      "navigation": {
+        "next": "card_49_milestone_module_6",
+        "button_text": "Final Module Done! 🎯"
+      }
+    },
+    {
+      "card_id": "card_49_milestone_module_6",
+      "card_slug": "card_49_milestone_module_6",
+      "type": "milestone",
+      "concept_id": "milestone_bihar_context",
+      "level": 6,
+      "progress": {
+        "current": 49,
+        "total": 65
+      },
+      "milestone_payload": {
+        "title": "🎊 MODULE 6 COMPLETE!",
+        "badge_emoji": "🌾",
+        "completed_topic": "Bihar-Specific Inflation & Tax Applications",
+        "xp_earned": 100,
+        "milestone_progress": "All 6 Modules Cleared!",
+        "motivational_quote": "Phenomenal! Bihar context bhi crystal clear! Ab Officer-level revision aur final quiz! You're unstoppable! 💪🔥"
+      },
+      "navigation": {
+        "next": "card_50_summary_revision",
+        "button_text": "⚡ Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_50_summary_revision",
+      "card_slug": "card_50_summary_revision",
+      "type": "summary",
+      "concept_id": "summary_revision",
+      "level": 6,
+      "progress": {
+        "current": 50,
+        "total": 65
+      },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Inflation & Tax Structure",
+        "revision_points": [
+          {
+            "topic": "Inflation Basics",
+            "point": "Sustained + General price increase. RBI target: 4% (+/- 2%). Moderate good, high/zero bad. Deflation = dangerous (demand collapse)."
+          },
+          {
+            "topic": "Types of Inflation",
+            "point": "Demand-Pull (demand > supply, 'too much money chasing few goods'), Cost-Push (production cost ↑), Stagflation (recession + inflation together — worst case, 1970s USA oil crisis)."
+          },
+          {
+            "topic": "Measurement Indices",
+            "point": "CPI (consumer perspective, MOSPI, base 2012, food 46% weight, RBI targets this). WPI (wholesale, base 2011-12). Headline (total) vs Core (minus food-fuel, stable indicator)."
+          },
+          {
+            "topic": "Tax Classification",
+            "point": "Direct (burden nahi shift — Income, Corporate, Property) vs Indirect (burden shifts to consumer — GST, Excise). GST: July 1, 2017 | CGST+SGST (intra-state), IGST (inter-state). Replaced 17+ taxes."
+          },
+          {
+            "topic": "Tax Systems",
+            "point": "Progressive (rate ↑ with income — Income Tax, equitable), Regressive (gareeb par relatively zyada burden — GST), Proportional (flat rate — not used in India income tax). Equity vs Efficiency trade-off."
+          },
+          {
+            "topic": "⭐ Bihar Context",
+            "point": "Agriculture-dependent (80%+), food inflation critical. Floods → supply shock → cost-push. Prohibition (2016) → ₹3500-4000 cr excise loss. PDS under NFSA 2013. GST compensation ended 2022."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_51_final_quiz_multi_1",
+        "button_text": "Final Officer Quiz 🎯"
+      }
+    },
+    {
+      "card_id": "card_51_final_quiz_multi_1",
+      "card_slug": "card_51_final_quiz_multi_1",
+      "type": "quiz",
+      "concept_id": "final_multi_1",
+      "level": 6,
+      "progress": {
+        "current": 51,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about Inflation:\n\n1. Deflation means continuous decrease in price level and is beneficial for economy.\n2. RBI's inflation target is 4% with a tolerance band of +/- 2%.\n3. Cost-Push inflation occurs when aggregate demand exceeds supply.\n4. Stagflation is combination of economic stagnation and high inflation.\n\nKitne statements SAHI hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf 1 aur 2"
+          },
+          {
+            "id": "B",
+            "text": "Sirf 2 aur 4"
+          },
+          {
+            "id": "C",
+            "text": "Sirf 2, 3 aur 4"
+          },
+          {
+            "id": "D",
+            "text": "Sabhi sahi hain"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement Analysis:\n\n1. ❌ GALAT - Deflation harmful hai, not beneficial. Consumer spending postpone karte hain, demand collapse, recession risk.\n\n2. ✅ SAHI - RBI target 4% (+/- 2%), matlab 2-6% acceptable range.\n\n3. ❌ GALAT - Ye DEMAND-PULL inflation ki definition hai. Cost-Push mein production cost badhta hai (not demand exceeding supply).\n\n4. ✅ SAHI - Stagflation = Stagnation + Inflation. Economic slowdown + rising prices (1970s oil crisis example).\n\nSirf 2 aur 4 sahi. BPSC ka classic multi-statement trap!"
+      },
+      "navigation": {
+        "next": "card_52_final_quiz_multi_2",
+        "button_text": "Next Multi-Statement ➔"
+      }
+    },
+    {
+      "card_id": "card_52_final_quiz_multi_2",
+      "card_slug": "card_52_final_quiz_multi_2",
+      "type": "quiz",
+      "concept_id": "final_multi_2",
+      "level": 6,
+      "progress": {
+        "current": 52,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Consider the following about CPI and WPI:\n\n1. CPI measures price changes from consumer's perspective.\n2. WPI has higher weightage for food items than CPI.\n3. RBI uses CPI for monetary policy targeting.\n4. Both CPI and WPI have same base year (2012).\n\nKitne statements CORRECT hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf 1 aur 2"
+          },
+          {
+            "id": "B",
+            "text": "Sirf 1 aur 3"
+          },
+          {
+            "id": "C",
+            "text": "Sirf 2 aur 4"
+          },
+          {
+            "id": "D",
+            "text": "Sabhi correct hain"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement Check:\n\n1. ✅ SAHI - CPI consumer (retail) perspective.\n\n2. ❌ GALAT - CPI mein food weight zyada (~46%), WPI mein kam. WPI mainly manufactured goods, fuel focus karta hai.\n\n3. ✅ SAHI - RBI uses CPI inflation target (4% +/- 2%) for monetary policy since 2014.\n\n4. ❌ GALAT - CPI base year 2012, WPI base year 2011-12. Different base years!\n\nSirf 1 aur 3 correct. UPSC Prelims pattern!"
+      },
+      "navigation": {
+        "next": "card_53_final_quiz_multi_3",
+        "button_text": "Next Multi-Statement ➔"
+      }
+    },
+    {
+      "card_id": "card_53_final_quiz_multi_3",
+      "card_slug": "card_53_final_quiz_multi_3",
+      "type": "quiz",
+      "concept_id": "final_multi_3",
+      "level": 6,
+      "progress": {
+        "current": 53,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Consider the following about Tax Structure:\n\n1. Direct tax ka burden taxpayer shift kar sakta hai consumer par.\n2. GST ek indirect tax hai jo July 1, 2017 ko implement hua.\n3. Progressive tax system mein tax rate income ke saath badhta hai.\n4. Regressive taxes equitable hote hain kyunki sabke liye same rate.\n\nKitne statements SAHI hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf 2 aur 3"
+          },
+          {
+            "id": "B",
+            "text": "Sirf 1, 2 aur 3"
+          },
+          {
+            "id": "C",
+            "text": "Sirf 2, 3 aur 4"
+          },
+          {
+            "id": "D",
+            "text": "Sabhi sahi hain"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Analysis:\n\n1. ❌ GALAT - Direct tax ka burden NAHI shift hota. Ye fundamental property hai. Indirect tax ka burden shifts.\n\n2. ✅ SAHI - GST indirect tax, implemented July 1, 2017 (midnight session).\n\n3. ✅ SAHI - Progressive = higher income → higher rate (India's income tax).\n\n4. ❌ GALAT - Regressive taxes NOT equitable. Proportionally gareeb par zyada burden. Same absolute amount = different relative impact.\n\nSirf 2 aur 3 sahi. BPSC favorite conceptual trap!"
+      },
+      "navigation": {
+        "next": "card_54_final_quiz_assertion",
+        "button_text": "Assertion-Reason ➔"
+      }
+    },
+    {
+      "card_id": "card_54_final_quiz_assertion",
+      "card_slug": "card_54_final_quiz_assertion",
+      "type": "final_quiz",
+      "concept_id": "final_assertion_reason",
+      "level": 6,
+      "progress": {
+        "current": 54,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "🎯 BPSC-Style Assertion-Reason:\n\nAssertion (A): RBI primarily targets CPI inflation rather than WPI for monetary policy decisions.\n\nReason (R): CPI better reflects the cost of living for common people and includes services sector.\n\nSelect correct option:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Both A and R are true, and R is correct explanation of A"
+          },
+          {
+            "id": "B",
+            "text": "Both A and R are true, but R is NOT correct explanation of A"
+          },
+          {
+            "id": "C",
+            "text": "A is true, but R is false"
+          },
+          {
+            "id": "D",
+            "text": "A is false, but R is true"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "BOTH TRUE, R EXPLAINS A:\n\nAssertion TRUE: RBI uses CPI inflation targeting (4% +/- 2%) since 2014 for monetary policy.\n\nReason TRUE: CPI measures consumer price changes across goods & services, directly impacting common people's purchasing power. WPI mainly wholesale commodities.\n\nR CORRECTLY EXPLAINS A: RBI chose CPI exactly because it better represents household cost of living and includes services (40%+ economy) which WPI doesn't adequately cover.\n\nAnswer: A. Classic UPSC/BPSC pattern!"
+      },
+      "navigation": {
+        "next": "card_55_final_bihar_multi",
+        "button_text": "⭐ Bihar-Specific Multi ➔"
+      }
+    },
+    {
+      "card_id": "card_55_final_bihar_multi",
+      "card_slug": "card_55_final_bihar_multi",
+      "type": "quiz",
+      "concept_id": "final_bihar_multi",
+      "level": 6,
+      "progress": {
+        "current": 55,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE Specific Multi-Statement:\n\nConsider the following about Bihar's economy:\n\n1. Bihar mein 80%+ population agriculture par directly/indirectly dependent hai.\n2. Alcohol prohibition (2016) se Bihar ka excise revenue significantly increase hua.\n3. Bihar mein recurrent floods cost-push inflation ka major cause hain.\n4. PDS Bihar mein State Food Security Act 2015 ke under operate hota hai.\n\nKitne statements SAHI hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf 1 aur 2"
+          },
+          {
+            "id": "B",
+            "text": "Sirf 1 aur 3"
+          },
+          {
+            "id": "C",
+            "text": "Sirf 2 aur 4"
+          },
+          {
+            "id": "D",
+            "text": "Sirf 1, 3 aur 4"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ Bihar-Specific Analysis:\n\n1. ✅ SAHI - Bihar agriculture-dominated, 80%+ dependency.\n\n2. ❌ GALAT - Prohibition se excise revenue DECREASE hua dramatically (₹3500-4000 cr loss), increase nahi.\n\n3. ✅ SAHI - North Bihar floods → crop damage → supply reduction → cost-push inflation (food prices ↑).\n\n4. ❌ GALAT - PDS operates under NATIONAL Food Security Act (NFSA) 2013, not state act.\n\nSirf 1 aur 3 sahi. BPSC TRE ka favorite Bihar-context integration!"
+      },
+      "navigation": {
+        "next": "card_56_bonus_conceptual",
+        "button_text": "Bonus Conceptual ➔"
+      }
+    },
+    {
+      "card_id": "card_56_bonus_conceptual",
+      "card_slug": "card_56_bonus_conceptual",
+      "type": "quiz",
+      "concept_id": "bonus_conceptual",
+      "level": 6,
+      "progress": {
+        "current": 56,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "💎 BONUS Officer-Level Conceptual:\n\nCore Inflation ko Headline Inflation se zyada stable kyun mana jaata hai monetary policy perspective se?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki core inflation mein sirf essential items hote hain"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki core inflation food aur fuel prices exclude karta hai jo volatile aur temporary shocks se affect hote hain"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki core inflation sirf services sector ko measure karta hai"
+          },
+          {
+            "id": "D",
+            "text": "Kyunki core inflation government dwara controlled hota hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CORE INFLATION = CPI minus food & fuel prices.\n\nWhy stable? Food prices monsoon/weather se fluctuate karte hain. Fuel prices international crude oil se. Ye temporary/external shocks hain.\n\nCore inflation underlying/structural inflation trend dikhata hai without volatile components. Monetary policy makers ko long-term inflation dynamics samajhne mein help karta hai.\n\nHeadline (total CPI) short-term volatility dikhata, Core long-term trend.\n\nUPSC/BPSC analytical reasoning favorite!"
+      },
+      "navigation": {
+        "next": "card_57_bonus_gst_mechanism",
+        "button_text": "GST Mechanism ➔"
+      }
+    },
+    {
+      "card_id": "card_57_bonus_gst_mechanism",
+      "card_slug": "card_57_bonus_gst_mechanism",
+      "type": "quiz",
+      "concept_id": "bonus_gst",
+      "level": 6,
+      "progress": {
+        "current": 57,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "⚡ Rapid Fire: Bihar (Patna) se goods kharide, Delhi mein consume kiye. Kis type ka GST applicable hai aur revenue kis state ko jayega?",
+        "options": [
+          {
+            "id": "A",
+            "text": "CGST+SGST, revenue Bihar ko"
+          },
+          {
+            "id": "B",
+            "text": "IGST, revenue consuming state (Delhi) ko after settlement"
+          },
+          {
+            "id": "C",
+            "text": "IGST, revenue producing state (Bihar) ko"
+          },
+          {
+            "id": "D",
+            "text": "CGST only, revenue central govt ko"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Inter-State Transaction (Bihar → Delhi):\n\nApplicable: IGST (Integrated GST)\n\nMechanism: Initially entire IGST Central govt collect karti hai. Phir settlement mein:\n- CGST component → Centre\n- SGST component → CONSUMING state (Delhi)\n\nPrinciple: Destination-based taxation. Revenue consuming state ko jaata hai, not originating state.\n\nYe GST Council ka fundamental design hai — BPSC/UPSC favorite mechanism question!"
+      },
+      "navigation": {
+        "next": "card_58_bonus_inflation_tax_link",
+        "button_text": "Inflation-Tax Linkage ➔"
+      }
+    },
+    {
+      "card_id": "card_58_bonus_inflation_tax_link",
+      "card_slug": "card_58_bonus_inflation_tax_link",
+      "type": "quiz",
+      "concept_id": "bonus_linkage",
+      "level": 6,
+      "progress": {
+        "current": 58,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "🔗 Advanced Linkage: High inflation ke time mein government ko tax revenue kyun automatically badh jaata hai (real terms mein evaluate karne se pehle)?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kyunki log zyada kaam karne lagte hain"
+          },
+          {
+            "id": "B",
+            "text": "Kyunki higher prices mean higher GST collection (percentage of higher base) aur bracket creep in income tax"
+          },
+          {
+            "id": "C",
+            "text": "Kyunki RBI interest rate badhata hai"
+          },
+          {
+            "id": "D",
+            "text": "Kyunki government tax rates automatically adjust kar deti hai"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Inflation-Tax Linkage:\n\n1. INDIRECT TAX: GST % of price. Jab prices badh jaati hain (inflation), same goods par zyada absolute GST collection (18% of ₹120 > 18% of ₹100).\n\n2. DIRECT TAX: Bracket Creep — nominal income badh jaati hai inflation se (salary ₹5L → ₹6L) lekin real purchasing power same. Higher tax bracket mein aa jaate ho, zyada tax.\n\nYe 'Fiscal Drag' phenomenon hai. Real terms mein evaluate karne par effective tax burden badh jaata hai without policy change.\n\nUPSC Mains/BPSC analytical favorite!"
+      },
+      "navigation": {
+        "next": "card_59_pro_tips",
+        "button_text": "Pro Exam Tips 💡"
+      }
+    },
+    {
+      "card_id": "card_59_pro_tips",
+      "card_slug": "card_59_pro_tips",
+      "type": "chat",
+      "concept_id": "pro_tips",
+      "level": 6,
+      "progress": {
+        "current": 59,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "💡 PRO EXAM TIPS - Inflation & Tax:\n\n1️⃣ Definitions crystal clear rakho: Sustained, General, Demand-Pull vs Cost-Push\n2️⃣ Numbers yaad: RBI 4% (+/-2%), GST July 1 2017, CPI base 2012, WPI 2011-12\n3️⃣ Direct vs Indirect: Burden shift concept pakki\n4️⃣ Progressive vs Regressive: Equity angle samjho\n5️⃣ Bihar specifics: Agriculture 80%+, Prohibition loss, Floods-inflation link, PDS under NFSA 2013"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir multi-statement questions mein kya strategy?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Each statement INDEPENDENTLY evaluate karo. Common traps:\n✅ Deflation beneficial (NO!)\n✅ Cost-push = demand (NO!)\n✅ Direct tax burden shifts (NO!)\n✅ Regressive equitable (NO!)\n✅ Bihar prohibition revenue increase (NO - decrease!)\n\nYe repeated PYQ patterns hain. Practice karo!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you Sir! Poora chapter clear hai ab! 💯"
+        },
+        {
+          "speaker": "aman",
+          "text": "Outstanding Raju! Inflation se lekar tax structure tak, Bihar context tak — sab mastered! Remember: Concepts > Rote. Linkages > Isolated facts. All the best! 🚀🔥"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_summary_end",
+        "button_text": "Final Summary ➔"
+      }
+    },
+    {
+      "card_id": "card_60_summary_end",
+      "card_slug": "card_60_summary_end",
+      "type": "summary",
+      "concept_id": "final_summary",
+      "level": 6,
+      "progress": {
+        "current": 60,
+        "total": 65
+      },
+      "summary_payload": {
+        "title": "📋 MASTER SUMMARY - One-Page Revision",
+        "revision_points": [
+          {
+            "topic": "Inflation Core",
+            "point": "Sustained + general price ↑. Moderate (2-4%) healthy, high harmful, deflation dangerous. Types: Demand-Pull (demand>supply), Cost-Push (cost↑), Stagflation (recession+inflation)."
+          },
+          {
+            "topic": "Measurement",
+            "point": "CPI (consumer, MOSPI, 2012, food 46%, RBI targets). WPI (wholesale, 2011-12). Headline (total) vs Core (minus food-fuel, stable)."
+          },
+          {
+            "topic": "Tax Fundamentals",
+            "point": "Direct (burden nahi shift — Income, Corporate) vs Indirect (burden shifts — GST, Excise). GST: 1 July 2017, replaced 17+ taxes. Intra-state: CGST+SGST, Inter-state: IGST."
+          },
+          {
+            "topic": "Tax Systems",
+            "point": "Progressive (rate↑ with income, equitable — Income Tax). Regressive (gareeb par relatively ↑ burden — GST). Proportional (flat rate — not used India). Equity-Efficiency trade-off."
+          },
+          {
+            "topic": "⭐ Bihar Context",
+            "point": "Agriculture 80%+ dependency → food inflation critical. Floods (North Bihar) → cost-push. Prohibition (April 2016) → ₹3500-4000cr excise loss. PDS: NFSA 2013. GST compensation ended 2022."
+          },
+          {
+            "topic": "Key Numbers",
+            "point": "RBI: 4%(+/-2%). CPI: 2012. WPI: 2011-12. GST: 1 July 2017. Bihar prohibition: April 2016. NFSA: 2013. Food weight CPI: ~46%."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_61_case_study",
+        "button_text": "Real Case Study ➔"
+      }
+    },
+    {
+      "card_id": "card_61_case_study",
+      "card_slug": "card_61_case_study",
+      "type": "chat",
+      "concept_id": "case_study",
+      "level": 6,
+      "progress": {
+        "current": 61,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "📚 REAL CASE STUDY: 2022 mein Russia-Ukraine war ne global crude oil prices spike kara diye. Isse India mein petrol-diesel expensive hue, jiska ripple effect sabzi, transport, manufacturing — sab par pada. CPI inflation 7%+ touch kar gaya (RBI target 6% se upar!). RBI ne repo rate badha di demand cool karne ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye kaun sa type ka inflation tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "COST-PUSH inflation! External shock (oil price ↑) → production costs ↑ → prices ↑. Ye classic supply-side inflation hai. RBI ka response = monetary tightening (interest rate ↑) to demand ko control kare. Lekin structural problem supply-side ki thi, so complete solution nahi."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Bihar mein bhi same impact hua?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Bihar agriculture-dependent hai, transport costs badhe to farm inputs (fertilizers, diesel for tractors) expensive hue. Farmers ke cost of production badhi. Plus vegetables ki transportation cost badhi. Double whammy — cost-push through multiple channels. BPSC TRE current affairs ka favorite angle!"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_policy_insight",
+        "button_text": "Policy Insight ➔"
+      }
+    },
+    {
+      "card_id": "card_62_policy_insight",
+      "card_slug": "card_62_policy_insight",
+      "type": "chat",
+      "concept_id": "policy_insight",
+      "level": 6,
+      "progress": {
+        "current": 62,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "🎯 POLICY INSIGHT: Inflation control aur tax collection dono government ke main concerns hain. High inflation → RBI tightens → growth slow. Low tax revenue → fiscal deficit ↑ → borrowing ↑ → debt burden. Balance zaroori hai — growth maintain karo, inflation control karo, revenue generate karo."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye to bohot complex trade-offs hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isliye policymaking mein economists, bureaucrats, politicians sab involved hote hain. Perfect solution nahi hota, optimal solution dhundhte hain given constraints. UPSC Mains aur BPSC Mains mein yahi critical thinking test hoti hai — you need to appreciate complexities, not give simplistic answers!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Real world mein everything interconnected hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_exam_strategy",
+        "button_text": "Final Exam Strategy ➔"
+      }
+    },
+    {
+      "card_id": "card_63_exam_strategy",
+      "card_slug": "card_63_exam_strategy",
+      "type": "chat",
+      "concept_id": "exam_strategy",
+      "level": 6,
+      "progress": {
+        "current": 63,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "🎯 FINAL EXAM STRATEGY:\n\n✅ BPSC: Multi-statement, assertion-reason focus. Bihar context mandatory.\n✅ SSC: Direct factual — dates, numbers, institutions.\n✅ UPSC Prelims: Conceptual clarity + current affairs linkage.\n✅ BPSC TRE: Bihar-specific examples, local economy impact.\n\nSab exams mein DEFINITIONS pakki honi chahiye — inflation types, tax classifications."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir last advice?"
+        },
+        {
+          "speaker": "aman",
+          "text": "1️⃣ Concepts > Rote. Samjho, mat ratto.\n2️⃣ Current affairs se link karo — recent inflation data, GST collections, Bihar budget.\n3️⃣ Practice PYQs — pattern recognition important.\n4️⃣ Revision mein summary cards use karo — rapid recall.\n\nTum ready ho! Go conquer BPSC/SSC/UPSC! 🔥🚀"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you so much Sir! Confidence full hai ab! 💯💪"
+        }
+      ],
+      "navigation": {
+        "next": "card_64_motivational_quote",
+        "button_text": "Motivation ➔"
+      }
+    },
+    {
+      "card_id": "card_64_motivational_quote",
+      "card_slug": "card_64_motivational_quote",
+      "type": "chat",
+      "concept_id": "motivational_end",
+      "level": 6,
+      "progress": {
+        "current": 64,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "🌟 Remember Raju:\n\n'Economics is not just about numbers and graphs — it's about understanding how decisions affect millions of lives. Every inflation percentage point impacts someone's daily bread. Every tax policy shapes opportunities.'\n\nTumne jo seekha hai — Demand-Pull se lekar Progressive Taxation tak — ye sirf exam ke liye nahi, real world ko samajhne ke liye hai. Officer banne ka matlab hai informed decisions lena public welfare ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir aapne economics ko itna interesting bana diya! Pehle dry subject lagta tha, ab real-life connections dikh rahe hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "That's the spirit! Tum ab ek informed citizen ho, future officer candidate ho. Inflation aur Tax sirf chapter nahi, society ko samajhne ki lens hai. All the very best for your exams! Go make Bihar and India proud! 🇮🇳✨"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you Sir! Will do my best! Jai Hind! 🙏"
+        }
+      ],
+      "navigation": {
+        "next": "card_65_completion_trophy",
+        "button_text": "Chapter Complete! 🏆"
+      }
+    },
+    {
+      "card_id": "card_65_completion_trophy",
+      "card_slug": "card_65_completion_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 6,
+      "progress": {
+        "current": 65,
+        "total": 65
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Inflation & Tax Structure — Complete Mastery",
+        "xp_earned": 500,
+        "milestone_progress": "100% Complete — All 6 Modules Conquered!",
+        "motivational_quote": "🎊 PHENOMENAL ACHIEVEMENT! 🎊\n\nYou've mastered:\n✅ Inflation dynamics (Demand-Pull, Cost-Push, Stagflation)\n✅ Measurement systems (CPI, WPI, Core vs Headline)\n✅ Tax architecture (Direct, Indirect, GST)\n✅ Tax equity (Progressive, Regressive, Proportional)\n✅ Bihar-specific applications (Agriculture dependency, Prohibition impact, PDS)\n✅ Policy linkages & real-world case studies\n\nYou're now equipped with OFFICER-LEVEL understanding!\n\n📈 BPSC Ready | 💼 SSC Ready | 🎯 UPSC Ready\n\nNext chapter awaits! Keep this momentum! 🚀🔥\n\n\"Knowledge applied is wisdom earned.\""
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Home 🏠"
+      }
+    }
+  ]
+}
+```
