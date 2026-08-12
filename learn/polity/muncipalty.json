@@ -1,0 +1,1820 @@
+
+{
+  "topic_id": "municipality_polity",
+  "topic_title": "Municipality in Indian Polity",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 60,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "intro_municipality",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 60
+      },
+      "intro_payload": {
+        "title": "Municipality in Indian Polity",
+        "icon": "🏙️",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Understanding Urban Local Self-Government",
+          "74th Constitutional Amendment (1992) - Game Changer",
+          "Three Types: Nagar Panchayat, Municipal Council, Corporation",
+          "Powers, Functions & 12th Schedule",
+          "Bihar Municipal Corporation Act - BPSC TRE Special",
+          "BPSC/SSC Favorite Traps & PYQ Patterns"
+        ],
+        "estimated_time": "28 minutes",
+        "total_xp": 550
+      },
+      "navigation": {
+        "next": "card_02_daily_life_city",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_life_city",
+      "card_slug": "card_02_daily_life_city",
+      "type": "chat",
+      "concept_id": "daily_life_city",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, jab tum Patna ya apne shehar me sadak pe garbage dekhte ho, street light nahi jalti, ya pani ki samasya hoti hai — toh kissko phone karte ho?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, Papa kehte hain Municipal Corporation ko complain karo! Lekin ye Municipal Corporation hai kya exactly?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect question! Municipal Corporation, Municipal Council, Nagar Panchayat — ye sab URBAN LOCAL BODIES hain. Jaise gaon me Gram Panchayat hoti hai, waise hi shehar me Municipality hoti hai. Ye local self-government ka urban version hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to shehar ki choti-choti problems handle karne ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_why_municipality",
+        "button_text": "Bilkul sahi! Aage dekho 🏙️"
+      }
+    },
+    {
+      "card_id": "card_03_why_municipality",
+      "card_slug": "card_03_why_municipality",
+      "type": "chat",
+      "concept_id": "why_municipality",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "India me 31% log ab cities me rehte hain (Census 2011). Ye log gaon se alag problems face karte hain — sewage system, traffic management, slums, pollution, water supply. Isliye alag urban governance system chahiye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To villages ke liye Panchayati Raj hai, cities ke liye Municipality?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Jaise 73rd Amendment ne Panchayati Raj ko constitutional status diya (1992), waise hi 74th Amendment ne Municipalities ko! Dono ek saath aaye — 73rd rural ke liye, 74th urban ke liye. Ye samajhna zaroori hai exams ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 74th Amendment kab aaya exactly?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_74th_amendment_intro",
+        "button_text": "Dekhte hain history! 📜"
+      }
+    },
+    {
+      "card_id": "card_04_74th_amendment_intro",
+      "card_slug": "card_04_74th_amendment_intro",
+      "type": "chat",
+      "concept_id": "74th_amendment_intro",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "74th Constitutional Amendment Act, 1992 — 1 June 1993 se force me aaya! Prime Minister P.V. Narasimha Rao ki government ne pass kiya. Isse Municipalities ko constitutional status mila — Part IX-A (Article 243-P se 243-ZG) add hua!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab pehle municipalities nahi thi kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Thi! Pehli municipality 1687 me Madras me bani thi British time me. Par ye sab state laws ke under chalti thi — koi constitutional guarantee nahi thi. 74th Amendment ne uniform structure diya, mandatory provisions diye, aur states ko compulsory kar diya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To ab har state me municipality hona compulsory hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_pre_74th_history",
+        "button_text": "Haan! Pehle history dekhte hain 🕰️"
+      }
+    },
+    {
+      "card_id": "card_05_pre_74th_history",
+      "card_slug": "card_05_pre_74th_history",
+      "type": "chat",
+      "concept_id": "pre_74th_history",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Pre-Independence: 1687 — First Municipality in Madras (British ne banayi). 1882 — Lord Ripon ka resolution (Father of Local Self-Government in India). 1919 — Government of India Act ne local bodies ko provincial subjects banaya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Lord Ripon important hai kya exams ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Bahut important! BPSC/UPSC me Lord Ripon ko 'Father of Local Self-Government' puuchte hain. Post-Independence: Article 40 (DPSP) me mention tha par non-justiciable. 1992 me finally 74th Amendment laya gaya constitutional status dene ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Ab municipalities ke types bataiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_three_types_intro",
+        "button_text": "Teen types hain! Dekhte hain 🏘️"
+      }
+    },
+    {
+      "card_id": "card_06_three_types_intro",
+      "card_slug": "card_06_three_types_intro",
+      "type": "chat",
+      "concept_id": "three_types_intro",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "74th Amendment ne teen types mandatory kiye (Article 243-Q): (1) Nagar Panchayat — transitional area (gaon se shehar ban raha hai), (2) Municipal Council — chhote aur medium cities, (3) Municipal Corporation — bade cities. States decide karte hain exact population criteria!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab population ke base pe decide hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Generally: Nagar Panchayat (10,000-20,000 population), Municipal Council (20,000 se 3 lakh tak), Municipal Corporation (3 lakh+). Par ye state-specific vary karta hai. Patna Municipal Corporation hai kyunki population bahut zyada hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to Patna me Corporation, chhote shahar me Council!"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_quiz_intro_1",
+        "button_text": "Pehle quiz! Check karo 🎯"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_intro_1",
+      "card_slug": "card_07_quiz_intro_1",
+      "type": "quiz",
+      "concept_id": "quiz_intro_1",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC 2023 Pattern: The 74th Constitutional Amendment Act came into force on: (Q1/3)",
+        "options": [
+          { "id": "A", "text": "26 January 1993" },
+          { "id": "B", "text": "1 June 1993" },
+          { "id": "C", "text": "24 April 1993" },
+          { "id": "D", "text": "2 October 1992" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The 74th Constitutional Amendment Act came into force on 1 June 1993. It gave constitutional status to urban local bodies (Municipalities). Don't confuse with 73rd Amendment which came into force on 24 April 1993 (for Panchayati Raj). Both amendments were passed in 1992 but came into force in 1993. This date confusion is a classic BPSC trap!"
+      },
+      "navigation": {
+        "next": "card_08_quiz_intro_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_intro_2",
+      "card_slug": "card_08_quiz_intro_2",
+      "type": "quiz",
+      "concept_id": "quiz_intro_2",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC CGL Favorite: Who is known as 'Father of Local Self-Government in India'? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "Lord Curzon" },
+          { "id": "B", "text": "Lord Ripon" },
+          { "id": "C", "text": "Lord Dalhousie" },
+          { "id": "D", "text": "Lord Mountbatten" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Lord Ripon (1880-84) is called 'Father of Local Self-Government in India'. His 1882 Resolution on Local Self-Government gave significant powers to local bodies. He introduced elected representation in municipalities. This is a highly repeated question in SSC CGL, Railway RRB, and BPSC exams. Don't confuse with Lord Curzon who actually weakened local bodies!"
+      },
+      "navigation": {
+        "next": "card_09_quiz_intro_3",
+        "button_text": "Last one! 💪"
+      }
+    },
+    {
+      "card_id": "card_09_quiz_intro_3",
+      "card_slug": "card_09_quiz_intro_3",
+      "type": "quiz",
+      "concept_id": "quiz_intro_3",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ RRB NTPC Pattern: How many types of municipalities are mentioned in Article 243-Q? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Two types" },
+          { "id": "B", "text": "Three types" },
+          { "id": "C", "text": "Four types" },
+          { "id": "D", "text": "Five types" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 243-Q mentions THREE types of municipalities: (1) Nagar Panchayat (transitional area), (2) Municipal Council (smaller urban areas), (3) Municipal Corporation (larger urban areas). The exact population criteria is decided by state laws, but the Constitution mandates these three categories. This is frequently tested in Railway RRB and SSC exams!"
+      },
+      "navigation": {
+        "next": "card_10_milestone_intro",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_10_milestone_intro",
+      "card_slug": "card_10_milestone_intro",
+      "type": "milestone",
+      "concept_id": "milestone_intro",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 COMPLETED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Introduction to Municipalities & 74th Amendment",
+        "xp_earned": 100,
+        "milestone_progress": "Module 1/5 Clear ✅",
+        "motivational_quote": "Great start! You know why municipalities exist and the game-changing 74th Amendment. Next: Constitutional provisions in detail! 🔥"
+      },
+      "navigation": {
+        "next": "card_11_74th_provisions_detail",
+        "button_text": "Start Module 2: 74th Amendment Provisions 🚀"
+      }
+    },
+    {
+      "card_id": "card_11_74th_provisions_detail",
+      "card_slug": "card_11_74th_provisions_detail",
+      "type": "chat",
+      "concept_id": "74th_provisions_detail",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "74th Amendment ke main provisions: (1) Three types mandatory (Nagar Panchayat, Council, Corporation). (2) Constitution of Municipalities by State Law. (3) Composition — all seats by DIRECT election. (4) Reservation for SC/ST/Women. (5) Term — 5 years!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sab seats direct election se bharte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Article 243-T kehta hai municipality ke ward members direct election se aayenge. Par Mayor/Chairperson ke liye STATE decide karta hai — direct ya indirect election. Ye flexibility state law pe chhod diya gaya hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Mayor direct bhi elect ho sakta hai, indirect bhi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_mayor_election_methods",
+        "button_text": "Haan! Ye important hai 📝"
+      }
+    },
+    {
+      "card_id": "card_12_mayor_election_methods",
+      "card_slug": "card_12_mayor_election_methods",
+      "type": "chat",
+      "concept_id": "mayor_election_methods",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Mayor Election Methods (varies by state): Direct Method — voters directly elect Mayor (example: Delhi, Maharashtra ka kuch cities). Indirect Method — elected councillors apne beech se elect karte hain (example: Punjab, West Bengal). Nomination Method — kuch states me State Government nominate karti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To har state alag tarike se kar sakta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Exactly! Ye flexibility 74th Amendment me rakhi gayi hai kyunki local conditions vary karte hain. Par ward members ka election sabhi jagah DIRECT hona chahiye — ye mandatory hai! Mayor term bhi vary karta hai — 1 year, 2.5 years, ya puri 5 years!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to bahut confusing hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_reservation_provisions",
+        "button_text": "Haan! Ab reservation dekho 🎯"
+      }
+    },
+    {
+      "card_id": "card_13_reservation_provisions",
+      "card_slug": "card_13_reservation_provisions",
+      "type": "chat",
+      "concept_id": "reservation_provisions",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 243-T: Reservation provisions municipalities me: (1) SC/ST ke liye — population proportion me (jaise agar 15% SC population hai, to 15% seats reserve). (2) Women ke liye — NOT LESS THAN 1/3 total seats (minimum 33%). (3) OBC reservation bhi ho sakta hai (state law pe depend)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab women ko minimum 33% guarantee hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur ye 33% SC/ST women ko include karke hota hai. Chairperson (Mayor) posts me bhi 1/3 seats women ke liye reserve hain. Important: Constitution me OBC reservation directly nahi hai — state law decision hai. Kuch states provide karte hain, kuch nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar me kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_duration_dissolution",
+        "button_text": "Wo alag se dekhenge! Pehle duration 📅"
+      }
+    },
+    {
+      "card_id": "card_14_duration_dissolution",
+      "card_slug": "card_14_duration_dissolution",
+      "type": "chat",
+      "concept_id": "duration_dissolution",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 243-U: Duration & Dissolution: (1) Every Municipality — 5 years ka term. (2) Agar dissolve ho jaye, to 6 MONTHS ke andar fresh election hona chahiye. (3) Fresh election se jo body banti hai, wo sirf REMAINING period serve karegi (puri 5 saal nahi — ye Panchayats jaisa rule hai!)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 3 saal baad dissolve hua to naya election sirf 2 saal ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Remaining term ka rule 73rd aur 74th dono me same hai. Par agar remaining period 6 months se kam hai, to fresh election ki zaroorat nahi! Ye exception bahut important hai exams ke liye — BPSC/UPSC puuchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Ab functions kya hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_state_bodies_mandatory",
+        "button_text": "Pehle State bodies dekho! 🏛️"
+      }
+    },
+    {
+      "card_id": "card_15_state_bodies_mandatory",
+      "card_slug": "card_15_state_bodies_mandatory",
+      "type": "chat",
+      "concept_id": "state_bodies_mandatory",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "74th Amendment ne do bodies mandatory ki: (1) State Election Commission (Article 243-K) — municipal elections conduct karayega (Panchayat ke liye bhi yehi). (2) State Finance Commission (Article 243-I) — har 5 saal me review karega municipalities ko kitna paisa dena hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to Panchayati Raj jaisa hi hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! 73rd aur 74th Amendment parallel chalte hain — ek rural, ek urban. State Election Commission dono conduct karata hai. State Finance Commission dono ko paisa distribution recommend karata hai. Par ek aur important body hai — District Planning Committee!"
+        },
+        {
+          "speaker": "raju",
+          "text": "District Planning Committee kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_district_planning_committee",
+        "button_text": "Important provision! Dekho 📋"
+      }
+    },
+    {
+      "card_id": "card_16_district_planning_committee",
+      "card_slug": "card_16_district_planning_committee",
+      "type": "chat",
+      "concept_id": "district_planning_committee",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 243-ZD: District Planning Committee (DPC) — ye district level pe Panchayats aur Municipalities dono ke development plans ko CONSOLIDATE karati hai. Composition: 4/5 members elected representatives (Panchayat aur Municipality se proportionally). Chairperson: State decide karata hai kaise select hoga!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab rural aur urban planning ko milati hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Agar ek district me kuch area rural hai (Panchayat) aur kuch urban (Municipality), to DPC dono ke plans integrate karati hai — coordinated development ke liye. Ye 74th Amendment ki unique provision hai jo 73rd me nahi hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to planning ek saath hoti hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_quiz_provisions_1",
+        "button_text": "Quiz time! Test karo 🎯"
+      }
+    },
+    {
+      "card_id": "card_17_quiz_provisions_1",
+      "card_slug": "card_17_quiz_provisions_1",
+      "type": "quiz",
+      "concept_id": "quiz_provisions_1",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Favorite: Reservation for women in Municipalities is: (Q1/3)",
+        "options": [
+          { "id": "A", "text": "Not less than 50%" },
+          { "id": "B", "text": "Not less than 33%" },
+          { "id": "C", "text": "Exactly 33%" },
+          { "id": "D", "text": "Not more than 33%" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 243-T states 'not less than one-third' (33%) of total seats shall be reserved for women. This is a MINIMUM guarantee — states can provide more. The phrase 'not less than' is crucial because BPSC often sets traps using 'exactly 33%'. Also applies to Chairperson positions. Similar to Panchayats (Article 243-D)!"
+      },
+      "navigation": {
+        "next": "card_18_quiz_provisions_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_18_quiz_provisions_2",
+      "card_slug": "card_18_quiz_provisions_2",
+      "type": "quiz",
+      "concept_id": "quiz_provisions_2",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC CGL Pattern: District Planning Committee is constituted under which Article? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "Article 243-D" },
+          { "id": "B", "text": "Article 243-I" },
+          { "id": "C", "text": "Article 243-ZD" },
+          { "id": "D", "text": "Article 280" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "District Planning Committee (DPC) is constituted under Article 243-ZD. It consolidates development plans of Panchayats and Municipalities at district level. At least 4/5 members must be elected representatives. Article 243-D deals with reservation in Panchayats. Article 243-I is State Finance Commission. Article 280 is Finance Commission (Centre-State)."
+      },
+      "navigation": {
+        "next": "card_19_quiz_provisions_3",
+        "button_text": "Last one! 💪"
+      }
+    },
+    {
+      "card_id": "card_19_quiz_provisions_3",
+      "card_slug": "card_19_quiz_provisions_3",
+      "type": "quiz",
+      "concept_id": "quiz_provisions_3",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC Pattern: If a Municipality is dissolved after 3.5 years, the newly elected body will continue for: (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Full 5 years (fresh term)" },
+          { "id": "B", "text": "1.5 years (remaining period)" },
+          { "id": "C", "text": "3 years" },
+          { "id": "D", "text": "2 years" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 243-U: If a Municipality is dissolved before its 5-year term, the newly elected body continues ONLY for the REMAINING PERIOD (not full 5 years). Here: 5 - 3.5 = 1.5 years remaining. However, if remaining period is less than 6 months, no fresh election needed. Classic UPSC/BPSC trap — many think fresh elections = fresh term!"
+      },
+      "navigation": {
+        "next": "card_20_milestone_provisions",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_20_milestone_provisions",
+      "card_slug": "card_20_milestone_provisions",
+      "type": "milestone",
+      "concept_id": "milestone_provisions",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 2 COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "74th Amendment - Key Provisions",
+        "xp_earned": 110,
+        "milestone_progress": "Module 2/5 Clear ✅",
+        "motivational_quote": "Elections, Reservations, State bodies — all clear! Next: The actual POWERS and FUNCTIONS of Municipalities! 💪"
+      },
+      "navigation": {
+        "next": "card_21_functions_intro",
+        "button_text": "Start Module 3: Functions & 12th Schedule 📜"
+      }
+    },
+    {
+      "card_id": "card_21_functions_intro",
+      "card_slug": "card_21_functions_intro",
+      "type": "chat",
+      "concept_id": "functions_intro",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 243-W: State Legislature LAW banayegi jo municipalities ko powers aur responsibilities degi. 12th Schedule me 18 subjects diye gaye hain as GUIDANCE (Panchayats me 11th Schedule me 29 subjects the). Ye subjects devolution ke liye suggested hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab municipalities automatically ye powers nahi rakhti?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! State Law chahiye. Constitution ne sirf framework diya hai. Actual implementation state pe depend karta hai — kitne subjects transfer karenge, kitna power denge. Isliye ek state me municipality powerful hai, dusre me weak!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 12th Schedule me konse subjects hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_twelve_schedule_subjects",
+        "button_text": "Dekhte hain list! 📋"
+      }
+    },
+    {
+      "card_id": "card_22_twelve_schedule_subjects",
+      "card_slug": "card_22_twelve_schedule_subjects",
+      "type": "chat",
+      "concept_id": "twelve_schedule_subjects",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "12th Schedule — 18 Subjects (Article 243-W): (1) Urban planning including town planning. (2) Regulation of land use and construction of buildings. (3) Planning for economic and social development. (4) Roads and bridges. (5) Water supply for domestic, industrial and commercial purposes."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to city ke basic functions lag rahe hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "(6) Public health, sanitation conservancy, solid waste management. (7) Fire services. (8) Urban forestry, protection of environment and ecology. (9) Safeguarding interests of weaker sections including handicapped and mentally retarded. (10) Slum improvement and upgradation."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur baki 8 subjects?"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_twelve_schedule_continue",
+        "button_text": "Dekhte hain! 📝"
+      }
+    },
+    {
+      "card_id": "card_23_twelve_schedule_continue",
+      "card_slug": "card_23_twelve_schedule_continue",
+      "type": "chat",
+      "concept_id": "twelve_schedule_continue",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "(11) Urban poverty alleviation. (12) Provision of urban amenities like parks, gardens, playgrounds. (13) Promotion of cultural, educational and aesthetic aspects. (14) Burials and burial grounds, cremations and cremation grounds, electric crematoriums."
+        },
+        {
+          "speaker": "raju",
+          "text": "Crematorium bhi municipality dekh sakti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! City functions hain ye sab. Remaining: (15) Cattle pounds, prevention of cruelty to animals. (16) Vital statistics including registration of births and deaths. (17) Public amenities including street lighting, parking lots, bus stops, public conveniences. (18) Regulation of slaughter houses and tanneries."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Sir total 18 yaad rakhna hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_twelve_vs_eleven",
+        "button_text": "Number important! Comparison dekho 🔍"
+      }
+    },
+    {
+      "card_id": "card_24_twelve_vs_eleven",
+      "card_slug": "card_24_twelve_vs_eleven",
+      "type": "chat",
+      "concept_id": "twelve_vs_eleven",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ EXAM TRAP: 11th Schedule (Panchayats) — 29 subjects (rural focus: agriculture, irrigation, animal husbandry). 12th Schedule (Municipalities) — 18 subjects (urban focus: town planning, slums, fire services, street lighting). Dono alag hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To urban me kam subjects kyunki focused hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Urban needs different hain. Example: Agriculture 11th me hai, 12th me nahi. Slum improvement 12th me hai, 11th me nahi. Fire services 12th me hai (cities me zaroori), 11th me nahi. Ye differentiation BPSC/SSC bahut puuchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Municipal Corporation ka kaam kya hai exactly?"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_municipal_corporation_structure",
+        "button_text": "Dekhte hain structure! 🏛️"
+      }
+    },
+    {
+      "card_id": "card_25_municipal_corporation_structure",
+      "card_slug": "card_25_municipal_corporation_structure",
+      "type": "chat",
+      "concept_id": "municipal_corporation_structure",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Municipal Corporation Structure: (1) Council/General Body — elected Councillors (wards se). Decision-making body. (2) Mayor — Head (directly/indirectly elected, state law pe depend). Ceremonial head mostly. (3) Standing Committee — permanent committees for specific functions (health, finance, etc.)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir real power kiske paas hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "(4) Municipal Commissioner — ye IAS officer hota hai jo State Government appoint karata hai. Ye EXECUTIVE head hai — real administrative power iske paas! Mayor political head, Commissioner administrative head. Ye dual control system hai — democratic + bureaucratic!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to Mayor elected, Commissioner appointed!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_mayor_vs_commissioner",
+        "button_text": "Important distinction! Dekho 🎯"
+      }
+    },
+    {
+      "card_id": "card_26_mayor_vs_commissioner",
+      "card_slug": "card_26_mayor_vs_commissioner",
+      "type": "chat",
+      "concept_id": "mayor_vs_commissioner",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Trap: Mayor vs Municipal Commissioner: Mayor — Elected (directly/indirectly), Political head, Presides over council meetings, Limited executive powers (ceremonial mostly). Commissioner — Appointed by State Government (usually IAS), Executive/Administrative head, Implements decisions, Real day-to-day control!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Commissioner powerful hai Mayor se?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Administrative powers me haan! Par democratic legitimacy Mayor ki hai (elected). Ideally dono coordinate karte hain. Par practically Commissioner dominant hota hai kyunki bureaucratic expertise hai, state support hai. Ye tension kaafi cities me hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Municipal Council ka structure kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_municipal_council_structure",
+        "button_text": "Thoda simple hai! Dekho 🏘️"
+      }
+    },
+    {
+      "card_id": "card_27_municipal_council_structure",
+      "card_slug": "card_27_municipal_council_structure",
+      "type": "chat",
+      "concept_id": "municipal_council_structure",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Municipal Council (smaller cities): (1) Council — elected Councillors. (2) President/Chairperson — Head (elected from among councillors usually). (3) Chief Executive Officer (CEO) — appointed officer (similar to Commissioner but lower rank, may be State Service officer, not necessarily IAS)."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Municipal Council chhota version hai Corporation ka?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Structure similar par scale chhota. Nagar Panchayat (transitional areas) me aur bhi simple hota hai — elected body + Executive Officer (lowest rank). Hierarchy: Corporation (biggest cities) > Municipal Council (medium) > Nagar Panchayat (small/transitional)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Ab quiz!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_quiz_functions_1",
+        "button_text": "Test karo! 🎯"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_functions_1",
+      "card_slug": "card_28_quiz_functions_1",
+      "type": "quiz",
+      "concept_id": "quiz_functions_1",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE Favorite: How many subjects are listed in the 12th Schedule? (Q1/3)",
+        "options": [
+          { "id": "A", "text": "16 subjects" },
+          { "id": "B", "text": "18 subjects" },
+          { "id": "C", "text": "29 subjects" },
+          { "id": "D", "text": "20 subjects" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The 12th Schedule (added by 74th Amendment) contains 18 subjects for Municipalities. Don't confuse with 11th Schedule which has 29 subjects for Panchayats. This number confusion is a BPSC/SSC favorite trap! Remember: 11th = 29 (rural), 12th = 18 (urban). The subjects include urban planning, slum improvement, fire services, etc."
+      },
+      "navigation": {
+        "next": "card_29_quiz_functions_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_functions_2",
+      "card_slug": "card_29_quiz_functions_2",
+      "type": "quiz",
+      "concept_id": "quiz_functions_2",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC CGL Pattern: The executive head of a Municipal Corporation is: (Q2/3)",
+        "options": [
+          { "id": "A", "text": "Mayor" },
+          { "id": "B", "text": "Municipal Commissioner" },
+          { "id": "C", "text": "District Magistrate" },
+          { "id": "D", "text": "Chief Executive Officer" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Municipal Commissioner is the executive/administrative head of a Municipal Corporation. He/she is appointed by the State Government (usually an IAS officer) and handles day-to-day administration. Mayor is the political/ceremonial head. Don't confuse: Mayor = elected political head, Commissioner = appointed administrative head. This is repeatedly asked in SSC CGL and Railway exams!"
+      },
+      "navigation": {
+        "next": "card_30_quiz_functions_3",
+        "button_text": "Last one! 💪"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_functions_3",
+      "card_slug": "card_30_quiz_functions_3",
+      "type": "quiz",
+      "concept_id": "quiz_functions_3",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC Pattern: Which of the following is NOT in the 12th Schedule? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Fire services" },
+          { "id": "B", "text": "Slum improvement" },
+          { "id": "C", "text": "Agriculture and irrigation" },
+          { "id": "D", "text": "Urban forestry" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Agriculture and irrigation are in the 11th Schedule (for Panchayats), NOT in 12th Schedule (for Municipalities). 12th Schedule focuses on urban functions like fire services, slum improvement, urban planning, street lighting, etc. This is a classic UPSC trap testing whether you can differentiate between rural (11th) and urban (12th) functions!"
+      },
+      "navigation": {
+        "next": "card_31_milestone_functions",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_31_milestone_functions",
+      "card_slug": "card_31_milestone_functions",
+      "type": "milestone",
+      "concept_id": "milestone_functions",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 3 COMPLETED!",
+        "badge_emoji": "📜",
+        "completed_topic": "Functions, 12th Schedule & Municipal Structure",
+        "xp_earned": 120,
+        "milestone_progress": "Module 3/5 Clear ✅",
+        "motivational_quote": "Excellent! 18 subjects, Mayor vs Commissioner — all mastered! Next: Bihar-specific Municipal provisions for BPSC TRE! 🔥"
+      },
+      "navigation": {
+        "next": "card_32_bihar_municipality_intro",
+        "button_text": "Start Module 4: Bihar Municipalities (BPSC TRE) 📍"
+      }
+    },
+    {
+      "card_id": "card_32_bihar_municipality_intro",
+      "card_slug": "card_32_bihar_municipality_intro",
+      "type": "chat",
+      "concept_id": "bihar_municipality_intro",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE candidates dhyaan se suno! Bihar Municipal Act 2007 & Bihar Municipal Corporation Act 2011 special provisions: (1) Patna Municipal Corporation — biggest in Bihar. (2) Women reservation — 50% (national se zyada!). (3) OBC aur EBC ko bhi reservation!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bihar me bhi 50% women reservation? Panchayats jaisa!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Bihar progressive hai is mamle me. National constitutional minimum 33% hai, par Bihar 50% provide karta hai municipalities aur panchayats dono me. Ye BPSC TRE ka high-frequency question hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar me kitne Municipal Corporations hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_bihar_municipal_corporations",
+        "button_text": "Dekhte hain numbers! 📊"
+      }
+    },
+    {
+      "card_id": "card_33_bihar_municipal_corporations",
+      "card_slug": "card_33_bihar_municipal_corporations",
+      "type": "chat",
+      "concept_id": "bihar_municipal_corporations",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Bihar Urban Local Bodies (as of 2024): (1) Municipal Corporations — 12 (Patna, Gaya, Bhagalpur, Muzaffarpur, Darbhanga, Bihar Sharif, Purnia, Katihar, Sasaram, Munger, Chapra, Begusarai). (2) Municipal Councils (Nagar Parishad) — around 50+. (3) Nagar Panchayats — around 90+!"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Sir ye 12 corporations yaad rakhne hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "BPSC TRE ke liye zaroor! Patna sabse bada hai. Recent additions: Begusarai (2021 me corporation bana). Numbers change ho sakte hain (new corporations bante rehte hain), par major cities yaad rakho. Bihar me rapid urbanization ho raha hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Patna Municipal Corporation ka structure kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_patna_corporation_structure",
+        "button_text": "Dekhte hain detail! 🏛️"
+      }
+    },
+    {
+      "card_id": "card_34_patna_corporation_structure",
+      "card_slug": "card_34_patna_corporation_structure",
+      "type": "chat",
+      "concept_id": "patna_corporation_structure",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Patna Municipal Corporation: (1) Wards — total 75 wards (councillors elected from each). (2) Mayor — elected by councillors (INDIRECT election in Bihar). Term: 5 years. (3) Deputy Mayor — bhi councillors elect karte hain. (4) Municipal Commissioner — State Government appoint karta hai (IAS officer)."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Bihar me Mayor direct election se nahi aata?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Bihar me indirect system hai — pehle councillors elect hote hain wards se, phir wo apne beech se Mayor choose karte hain. Ye state-specific provision hai. Standing Committees bhi hain — Finance, Health, Education, etc. — specific functions ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir reservation ka formula kya hai Bihar me?"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_bihar_reservation_formula",
+        "button_text": "Important hai! Dekho 🎯"
+      }
+    },
+    {
+      "card_id": "card_35_bihar_reservation_formula",
+      "card_slug": "card_35_bihar_reservation_formula",
+      "type": "chat",
+      "concept_id": "bihar_reservation_formula",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Bihar Municipal Reservation Pattern: (1) SC — Population proportion (around 16%). (2) ST — Population proportion (around 1%). (3) EBC — around 18% (Bihar-specific category). (4) Women — 50% of total (including SC/ST/EBC women). (5) General — remaining!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir EBC kya hai? Ye to national me nahi hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "EBC (Extremely Backward Classes) — Bihar-specific socio-economic category. Constitutional me sirf SC/ST/Women mention hai. OBC/EBC state discretion hai. Bihar ne historically marginalized communities ko representation dene ke liye EBC category banayi. Ye BPSC TRE favorite topic hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Mayor ke powers kya hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_mayor_powers_bihar",
+        "button_text": "Dekhte hain! 🏛️"
+      }
+    },
+    {
+      "card_id": "card_36_mayor_powers_bihar",
+      "card_slug": "card_36_mayor_powers_bihar",
+      "type": "chat",
+      "concept_id": "mayor_powers_bihar",
+      "level": 4,
+      "progress": {
+        "current": 36,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Mayor's Powers (Bihar): (1) Presides over Corporation meetings. (2) Represents Corporation in official functions (ceremonial role). (3) Can constitute committees. (4) Approves agenda for meetings. Par EXECUTIVE POWERS limited hain — Municipal Commissioner ke paas administrative control hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Mayor symbolic head hai mostly?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Democratic legitimacy hai par administrative muscle nahi! Real power equation: Municipal Commissioner (bureaucrat, State control) vs Mayor (elected, people's representative). Ideally collaboration honi chahiye, par practically Commissioner dominant. Ye tension municipal governance ka chronic issue hai India me!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar me municipal elections kaun conduct karata hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_bihar_state_election_commission",
+        "button_text": "State Election Commission! ⚖️"
+      }
+    },
+    {
+      "card_id": "card_37_bihar_state_election_commission",
+      "card_slug": "card_37_bihar_state_election_commission",
+      "type": "chat",
+      "concept_id": "bihar_state_election_commission",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bihar State Election Commission (Article 243-K) — same body jo Panchayat elections bhi conduct karati hai. Commissioner: Governor appoint karta hai. Term: 5 years. Removal: High Court judge jaise (impeachment process). Independence ensure karne ke liye constitutional safeguards hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Bihar me regular municipal elections hote hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Theoretically har 5 saal, par practical challenges hain — delimitation issues, reservation roster finalization, political will. Kai baar delay hoti hai. Supreme Court ne guidelines diye hain ki elections time pe hone chahiye. Bihar me 2022-23 me municipal elections hue the after long gap!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Ab finances ke baare me bataiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_quiz_bihar_1",
+        "button_text": "Pehle quiz! Test karo 🎯"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_bihar_1",
+      "card_slug": "card_38_quiz_bihar_1",
+      "type": "quiz",
+      "concept_id": "quiz_bihar_1",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE 2024 Pattern: Women reservation in Bihar Municipalities is: (Q1/3)",
+        "options": [
+          { "id": "A", "text": "33%" },
+          { "id": "B", "text": "40%" },
+          { "id": "C", "text": "50%" },
+          { "id": "D", "text": "60%" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC TRE Favorite! Bihar provides 50% reservation for women in Municipalities under Bihar Municipal Acts (2007/2011). This is HIGHER than constitutional minimum of 33%. Similar to Panchayats, Bihar is progressive in women's representation. Other states with 50% include Madhya Pradesh, Odisha. This is one of the MOST asked questions in BPSC TRE!"
+      },
+      "navigation": {
+        "next": "card_39_quiz_bihar_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz_bihar_2",
+      "card_slug": "card_39_quiz_bihar_2",
+      "type": "quiz",
+      "concept_id": "quiz_bihar_2",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE Pattern: How many Municipal Corporations are there in Bihar currently? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "8" },
+          { "id": "B", "text": "10" },
+          { "id": "C", "text": "12" },
+          { "id": "D", "text": "15" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC TRE Critical! Bihar currently has 12 Municipal Corporations (as of 2024): Patna, Gaya, Bhagalpur, Muzaffarpur, Darbhanga, Bihar Sharif, Purnia, Katihar, Sasaram, Munger, Chapra, Begusarai. The number has increased over time (Begusarai was added in 2021). For BPSC TRE, know at least the major ones. This number is frequently tested!"
+      },
+      "navigation": {
+        "next": "card_40_quiz_bihar_3",
+        "button_text": "Last one! 💪"
+      }
+    },
+    {
+      "card_id": "card_40_quiz_bihar_3",
+      "card_slug": "card_40_quiz_bihar_3",
+      "type": "quiz",
+      "concept_id": "quiz_bihar_3",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: In Bihar, the Mayor of Municipal Corporation is elected: (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Directly by voters" },
+          { "id": "B", "text": "Indirectly by elected councillors" },
+          { "id": "C", "text": "Appointed by Governor" },
+          { "id": "D", "text": "Nominated by Chief Minister" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "In Bihar, the Mayor of Municipal Corporation is elected INDIRECTLY by elected councillors (not directly by voters). This is a state-specific provision. Different states have different methods: some have direct election (like Delhi), some indirect (like Bihar, West Bengal). The Constitution gives flexibility to states on this matter. This is a BPSC favorite state-specific question!"
+      },
+      "navigation": {
+        "next": "card_41_milestone_bihar",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_41_milestone_bihar",
+      "card_slug": "card_41_milestone_bihar",
+      "type": "milestone",
+      "concept_id": "milestone_bihar",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 4 COMPLETED!",
+        "badge_emoji": "📍",
+        "completed_topic": "Bihar Municipal System (BPSC TRE Special)",
+        "xp_earned": 130,
+        "milestone_progress": "Module 4/5 Clear ✅",
+        "motivational_quote": "BPSC TRE ready! 12 corporations, 50% women, EBC reservation — all mastered! Final module: Challenges, Finances & Recent Reforms! 🚀"
+      },
+      "navigation": {
+        "next": "card_42_finance_intro",
+        "button_text": "Start Module 5: Finances & Challenges 💰"
+      }
+    },
+    {
+      "card_id": "card_42_finance_intro",
+      "card_slug": "card_42_finance_intro",
+      "type": "chat",
+      "concept_id": "finance_intro",
+      "level": 5,
+      "progress": {
+        "current": 42,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Municipal Finances — sabse bada problem! Municipalities ke paas kaam bahut hain par paisa kam hai. Sources of Income: (1) Own Revenue — Property tax, water charges, sewerage tax, advertisement tax, parking fees. (2) State Government grants. (3) Central Finance Commission grants!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To municipalities taxes lagati hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Par collection weak hai. Property tax — main source hai par evasion bahut hai. Logo ko lagta hai 'municipality kaam nahi karti to tax kyun dein?' Vicious cycle bann jata hai — paisa nahi, kaam nahi; kaam nahi, paisa nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir State Finance Commission kya role play karati hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_state_finance_commission",
+        "button_text": "Important body! Dekho 💰"
+      }
+    },
+    {
+      "card_id": "card_43_state_finance_commission",
+      "card_slug": "card_43_state_finance_commission",
+      "type": "chat",
+      "concept_id": "state_finance_commission",
+      "level": 5,
+      "progress": {
+        "current": 43,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "State Finance Commission (Article 243-I) — har 5 saal me Governor constitute karata hai. Ye review karata hai: (1) State taxes me se Municipalities ko kitna share dena chahiye. (2) State grants kitni hongi. (3) Municipalities ki financial health kaise improve ho. Recommendations State Government ko!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To ye recommendations binding hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Recommendatory hain. State Government accept kar sakti hai ya nahi. Par usually kuch to implement hoti hain. Centre ka Finance Commission (Article 280) bhi municipalities ko grants deta hai — 15th Finance Commission ne ₹1,21,055 crore allocate kiye hain urban local bodies ke liye (2021-26)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir challenges kya hain municipalities me?"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_challenges_municipalities",
+        "button_text": "Bahut saari hain! Dekhte hain 😟"
+      }
+    },
+    {
+      "card_id": "card_44_challenges_municipalities",
+      "card_slug": "card_44_challenges_municipalities",
+      "type": "chat",
+      "concept_id": "challenges_municipalities",
+      "level": 5,
+      "progress": {
+        "current": 44,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Major Challenges: (1) Financial Crisis — own revenue weak, dependence on state grants. (2) Lack of Devolution — 12th Schedule me 18 subjects hain par states transfer kam karte hain. (3) Dual Control — Mayor vs Commissioner conflict. (4) Capacity Deficit — trained staff ki kami, technical expertise nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur bhi problems hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "(5) Corruption & Accountability — contracts me corruption, transparency ki kami. (6) Urbanization Pressure — rapid population growth, slums, infrastructure burden. (7) Delayed Elections — kai states me elections time pe nahi hote. (8) Overlapping Functions — State departments interfere, clarity nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To solutions kya hain Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_solutions_reforms",
+        "button_text": "Dekhte hain suggestions! 💡"
+      }
+    },
+    {
+      "card_id": "card_45_solutions_reforms",
+      "card_slug": "card_45_solutions_reforms",
+      "type": "chat",
+      "concept_id": "solutions_reforms",
+      "level": 5,
+      "progress": {
+        "current": 45,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Suggested Reforms: (1) Financial Empowerment — property tax collection improve karo, new revenue sources (parking, advertisement). (2) Complete Devolution — 12th Schedule subjects practically transfer karo. (3) Capacity Building — IAS Urban Fellows, training programs, technical assistance."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur governance me?"
+        },
+        {
+          "speaker": "aman",
+          "text": "(4) Clarity in Powers — Mayor ko zyada executive powers do (directly elected ho to better). (5) Technology Integration — e-governance, online payment systems, citizen grievance portals. (6) Metropolitan Planning — nearby cities ko coordinate karo (like NCR, MMR). (7) Regular Elections — Supreme Court guidelines implement!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Smart Cities Mission ke baare me suna hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_smart_cities_mission",
+        "button_text": "Government initiative! Dekho 🏙️"
+      }
+    },
+    {
+      "card_id": "card_46_smart_cities_mission",
+      "card_slug": "card_46_smart_cities_mission",
+      "type": "chat",
+      "concept_id": "smart_cities_mission",
+      "level": 5,
+      "progress": {
+        "current": 46,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Smart Cities Mission (2015) — 100 cities select kiye gaye hain technology-driven development ke liye. Focus: (1) Smart infrastructure (wifi, sensors, IoT). (2) Better urban services (water, electricity, waste management). (3) Sustainable development. Bihar me — Patna, Muzaffarpur, Bihar Sharif, Biharsharif selected hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To technology se cities improve hongi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Digital governance, real-time monitoring, citizen apps. Par challenges bhi hain — implementation slow, funding gaps, coordination issues. Other initiatives: AMRUT (Atal Mission for Rejuvenation and Urban Transformation), Swachh Bharat Urban, PM Awas Yojana Urban — sab municipalities through implement!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Metropolitan areas kya hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_metropolitan_planning",
+        "button_text": "Bade cities ka planning! 🌆"
+      }
+    },
+    {
+      "card_id": "card_47_metropolitan_planning",
+      "card_slug": "card_47_metropolitan_planning",
+      "type": "chat",
+      "concept_id": "metropolitan_planning",
+      "level": 5,
+      "progress": {
+        "current": 47,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 243-ZE: Metropolitan Planning Committee — jahan 10 lakh+ population ho (metropolitan area), wahan MPC constitute hona chahiye. Function: Area level development planning — transport, water supply, infrastructure coordination. Composition: 2/3 members elected representatives (municipalities + panchayats)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab DPC (District Planning Committee) jaisa par bigger area ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! DPC district level (rural + urban integration), MPC metropolitan area level (bigger cities ka regional planning). Examples: Delhi NCR, Mumbai Metropolitan Region, Bangalore Metropolitan Area. Ye coordination bodies hain — multiple municipalities ek saath plan kar sakte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to fragmentation kam hoti hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_recent_developments",
+        "button_text": "Haan! Recent developments dekho 📰"
+      }
+    },
+    {
+      "card_id": "card_48_recent_developments",
+      "card_slug": "card_48_recent_developments",
+      "type": "chat",
+      "concept_id": "recent_developments",
+      "level": 5,
+      "progress": {
+        "current": 48,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Recent Developments: (1) 15th Finance Commission (2021-26) — urban local bodies ko highest ever allocation. (2) Swachh Survekshan — annual cleanliness ranking of cities (competitive federalism!). (3) Municipal Bonds — some cities capital market se funds raise kar rahe hain (Pune, Hyderabad)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Municipal Bonds kya hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Large infrastructure projects ke liye municipalities public se loan lete hain bonds issue karke. Investors ko interest milta hai, municipality ko capital milta hai. Par sirf financially strong cities kar sakti hain. Ye new trend hai India me — decentralized finance!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Interesting! Ab sab clear hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_quiz_final_1",
+        "button_text": "Final module quiz! 🎯"
+      }
+    },
+    {
+      "card_id": "card_49_quiz_final_1",
+      "card_slug": "card_49_quiz_final_1",
+      "type": "quiz",
+      "concept_id": "quiz_final_1",
+      "level": 5,
+      "progress": {
+        "current": 49,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC Pattern: Metropolitan Planning Committee is constituted under which Article? (Q1/3)",
+        "options": [
+          { "id": "A", "text": "Article 243-ZD" },
+          { "id": "B", "text": "Article 243-ZE" },
+          { "id": "C", "text": "Article 243-W" },
+          { "id": "D", "text": "Article 280" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Metropolitan Planning Committee (MPC) is constituted under Article 243-ZE for metropolitan areas with population exceeding 10 lakh. It prepares draft development plans for the metropolitan area. Article 243-ZD is for District Planning Committee. Article 243-W deals with devolution of powers to municipalities. Article 280 is Finance Commission (Centre-State)."
+      },
+      "navigation": {
+        "next": "card_50_quiz_final_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_50_quiz_final_2",
+      "card_slug": "card_50_quiz_final_2",
+      "type": "quiz",
+      "concept_id": "quiz_final_2",
+      "level": 5,
+      "progress": {
+        "current": 50,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: State Finance Commission reviews financial position of: (Q2/3)",
+        "options": [
+          { "id": "A", "text": "Only Panchayats" },
+          { "id": "B", "text": "Only Municipalities" },
+          { "id": "C", "text": "Both Panchayats and Municipalities" },
+          { "id": "D", "text": "Only State Government departments" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "State Finance Commission (Article 243-I) reviews financial position of BOTH Panchayats and Municipalities. It is constituted every 5 years and recommends distribution of state taxes and grants between State Government and local bodies (rural + urban). This is frequently confused — remember SFC covers both rural and urban local bodies!"
+      },
+      "navigation": {
+        "next": "card_51_quiz_final_3",
+        "button_text": "Last one! 💪"
+      }
+    },
+    {
+      "card_id": "card_51_quiz_final_3",
+      "card_slug": "card_51_quiz_final_3",
+      "type": "quiz",
+      "concept_id": "quiz_final_3",
+      "level": 5,
+      "progress": {
+        "current": 51,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC CGL Pattern: Smart Cities Mission was launched in which year? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "2014" },
+          { "id": "B", "text": "2015" },
+          { "id": "C", "text": "2016" },
+          { "id": "D", "text": "2017" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Smart Cities Mission was launched in 2015 (25 June 2015) by Government of India. It aims to develop 100 smart cities across India with focus on technology-driven infrastructure, sustainable development, and better urban services. From Bihar: Patna, Muzaffarpur, Biharsharif were selected. This is a popular current affairs question in SSC and Railway exams!"
+      },
+      "navigation": {
+        "next": "card_52_milestone_final",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_52_milestone_final",
+      "card_slug": "card_52_milestone_final",
+      "type": "milestone",
+      "concept_id": "milestone_final",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 5 COMPLETED!",
+        "badge_emoji": "💰",
+        "completed_topic": "Finances, Challenges & Recent Reforms",
+        "xp_earned": 140,
+        "milestone_progress": "Module 5/5 Clear ✅",
+        "motivational_quote": "Outstanding! Finances, Smart Cities, Municipal Bonds — everything covered! Time for Officer-Level Revision and Ultimate Quiz! 🏆"
+      },
+      "navigation": {
+        "next": "card_53_comparison_73_74",
+        "button_text": "Quick Comparison: 73rd vs 74th 🔍"
+      }
+    },
+    {
+      "card_id": "card_53_comparison_73_74",
+      "card_slug": "card_53_comparison_73_74",
+      "type": "chat",
+      "concept_id": "comparison_73_74",
+      "level": 6,
+      "progress": {
+        "current": 53,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ EXAM TRAP: 73rd vs 74th Amendment: 73rd (1992, force 24 April 1993) — Panchayati Raj, Part IX, Art 243-243O, 11th Schedule (29 subjects), Rural. 74th (1992, force 1 June 1993) — Municipalities, Part IX-A, Art 243P-243ZG, 12th Schedule (18 subjects), Urban!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To dono parallel systems hain — ek rural, ek urban!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Common features: 5 year term, women 1/3 reservation, State Election Commission, State Finance Commission, dissolution rules same. Different: Subjects (agriculture vs urban planning), levels (3-tier vs 3 types), Mayor election (varies) vs Mukhiya (direct)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect comparison Sir! Ab final revision!"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_officer_revision",
+        "button_text": "Officer Revision! 📚"
+      }
+    },
+    {
+      "card_id": "card_54_officer_revision",
+      "card_slug": "card_54_officer_revision",
+      "type": "summary",
+      "concept_id": "officer_revision",
+      "level": 6,
+      "progress": {
+        "current": 54,
+        "total": 60
+      },
+      "summary_payload": {
+        "title": "⚡ Officer-Level Quick Revision: Municipalities",
+        "revision_points": [
+          {
+            "topic": "Constitutional Framework",
+            "point": "74th Amendment (1992) — Part IX-A (Art 243-P to 243-ZG). Force: 1 June 1993. Three types mandatory: Nagar Panchayat (transitional), Municipal Council (small cities), Municipal Corporation (large cities). Lord Ripon — Father of Local Self-Government. First Municipality: 1687 Madras."
+          },
+          {
+            "topic": "Structure & Elections",
+            "point": "All ward members DIRECTLY elected. Mayor/Chairperson — State decides (direct/indirect). Term: 5 years. Dissolution: Fresh election within 6 months, new body serves remaining period only. SC/ST: population proportion. Women: NOT less than 1/3 (minimum 33%). ⭐ Bihar: 50% women, indirect Mayor election!"
+          },
+          {
+            "topic": "Functions & Bodies",
+            "point": "12th Schedule: 18 subjects (urban planning, fire services, slums, street lighting — NOT agriculture). Mayor: Political head (ceremonial mostly). Municipal Commissioner: Administrative head (IAS, appointed). State Election Commission (Art 243-K), State Finance Commission (Art 243-I) for both Panchayat + Municipality!"
+          },
+          {
+            "topic": "Planning Committees",
+            "point": "District Planning Committee (Art 243-ZD): District level, consolidates Panchayat + Municipality plans, 4/5 elected members. Metropolitan Planning Committee (Art 243-ZE): Metropolitan areas (10 lakh+), regional planning, 2/3 elected members. Both ensure coordination!"
+          },
+          {
+            "topic": "Bihar & Recent Initiatives",
+            "point": "⭐ Bihar: 12 Municipal Corporations (Patna biggest), 50% women reservation, EBC category, indirect Mayor. Finances: Property tax + State grants + Central FC grants. Smart Cities Mission (2015): 100 cities, Bihar — Patna, Muzaffarpur, Biharsharif. Municipal Bonds: New funding source. Swachh Survekshan: Annual ranking!"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_55_final_multistatement_quiz",
+        "button_text": "Final Officer Quiz! 🎖️"
+      }
+    },
+    {
+      "card_id": "card_55_final_multistatement_quiz",
+      "card_slug": "card_55_final_multistatement_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_multistatement_quiz",
+      "level": 6,
+      "progress": {
+        "current": 55,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC 2024 Officer Pattern (Multi-Statement): Consider the following statements about Municipalities in India:\n\n1. The 74th Amendment added Part IX-A to the Constitution.\n2. The 12th Schedule contains 18 subjects for Municipalities.\n3. All members of a Municipality including the Mayor are directly elected as per Constitution.\n4. Bihar provides 50% reservation for women in Municipalities.\n5. State Finance Commission reviews financial position of only Municipalities, not Panchayats.\n\nHow many statements are CORRECT?",
+        "options": [
+          { "id": "A", "text": "Only two statements" },
+          { "id": "B", "text": "Only three statements" },
+          { "id": "C", "text": "Only four statements" },
+          { "id": "D", "text": "All five statements" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement Analysis:\n\n1. CORRECT — 74th Amendment (1992) added Part IX-A (Article 243-P to 243-ZG) for Municipalities.\n\n2. CORRECT — 12th Schedule contains 18 subjects (NOT 29 like 11th Schedule for Panchayats).\n\n3. INCORRECT — All WARD MEMBERS are directly elected (Article 243-T), but MAYOR/CHAIRPERSON election method is decided by STATE LAW (can be direct or indirect). Constitution doesn't mandate direct election for Mayor. Classic BPSC trap!\n\n4. CORRECT — Bihar provides 50% women reservation in Municipalities under Bihar Municipal Acts (higher than constitutional minimum 33%).\n\n5. INCORRECT — State Finance Commission (Article 243-I) reviews financial position of BOTH Panchayats AND Municipalities (not just municipalities). Major confusion trap!\n\nAnswer: 3 statements correct (1, 2, 4).\n\n⭐ This combines multiple BPSC traps: direct vs state-decided election, schedule numbers, SFC jurisdiction, Bihar-specific facts!"
+      },
+      "navigation": {
+        "next": "card_56_assertion_reason_quiz",
+        "button_text": "One More Officer Quiz! 🔥"
+      }
+    },
+    {
+      "card_id": "card_56_assertion_reason_quiz",
+      "card_slug": "card_56_assertion_reason_quiz",
+      "type": "final_quiz",
+      "concept_id": "assertion_reason_quiz",
+      "level": 6,
+      "progress": {
+        "current": 56,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC Prelims Pattern (Assertion-Reason):\n\nAssertion (A): Municipal Commissioner has more executive powers than the Mayor in most Indian cities.\n\nReason (R): Municipal Commissioner is appointed by the State Government and is usually an IAS officer with administrative expertise.\n\nSelect the correct answer:",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is NOT the correct explanation of A" },
+          { "id": "C", "text": "A is true, but R is false" },
+          { "id": "D", "text": "A is false, but R is true" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Both Assertion and Reason are TRUE, and Reason correctly explains Assertion.\n\nAssertion Analysis: In practice, Municipal Commissioner has MORE executive/administrative powers than Mayor in most cities. Mayor is largely ceremonial/political head (presides over meetings, represents corporation). Real day-to-day administration is handled by Commissioner.\n\nReason Analysis: Commissioner is appointed by State Government (not elected), usually an IAS officer with bureaucratic expertise, technical knowledge, and state backing. This gives him/her administrative muscle.\n\nThe Reason DIRECTLY explains WHY Commissioner is more powerful — because of appointment system, bureaucratic background, and state support (vs Mayor's democratic but limited authority).\n\nThis power imbalance is a chronic issue in Indian urban governance — elected representatives have legitimacy but appointed bureaucrats have execution power. Understanding this duality is crucial for UPSC interviews and mains!"
+      },
+      "navigation": {
+        "next": "card_57_application_quiz",
+        "button_text": "Last Challenge! Application Question 🎯"
+      }
+    },
+    {
+      "card_id": "card_57_application_quiz",
+      "card_slug": "card_57_application_quiz",
+      "type": "quiz",
+      "concept_id": "application_quiz",
+      "level": 6,
+      "progress": {
+        "current": 57,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC Mains/BPSC Application Pattern:\n\nA Municipal Corporation with 100 wards has to implement reservation as per constitutional provisions. If SC population is 15%, ST is 2%, and women reservation is to be provided:\n\nHow many wards will be reserved for women candidates (including SC/ST women)?",
+        "options": [
+          { "id": "A", "text": "Exactly 33 wards" },
+          { "id": "B", "text": "At least 33 wards" },
+          { "id": "C", "text": "At least 50 wards" },
+          { "id": "D", "text": "Exactly 50 wards" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Correct Answer: B — At least 33 wards\n\nConstitutional Calculation:\n\nArticle 243-T: Women reservation is 'NOT LESS THAN one-third' of total seats.\n\nMinimum calculation: 1/3 of 100 = 33.33, so AT LEAST 33 wards.\n\nKey Point: 'Not less than' means MINIMUM 33 — states can provide MORE (like Bihar provides 50%). The Constitution sets floor, not ceiling.\n\nSC/ST Calculation (separate): SC = 15 wards, ST = 2 wards (total 17 for SC/ST). These 17 include some women seats (within the 33+ women quota).\n\nTrap: Option A says 'exactly 33' — wrong because Constitution says 'not less than' (minimum, not exact). Option C/D assume Bihar's 50% which is state-specific, not constitutional mandate.\n\nThis application question tests:\n• Understanding of 'not less than' language\n• Calculation skills\n• Difference between constitutional minimum and state provisions\n\n⭐ BPSC Mains loves such numerical application questions!"
+      },
+      "navigation": {
+        "next": "card_58_comparison_table",
+        "button_text": "Quick Comparison Table! 📊"
+      }
+    },
+    {
+      "card_id": "card_58_comparison_table",
+      "card_slug": "card_58_comparison_table",
+      "type": "chat",
+      "concept_id": "comparison_table",
+      "level": 6,
+      "progress": {
+        "current": 58,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Final Comparison — 73rd vs 74th Amendment: Amendment: 73rd (Panchayati Raj) vs 74th (Municipalities). Part: IX vs IX-A. Articles: 243 to 243-O vs 243-P to 243-ZG. Force Date: 24 April 1993 vs 1 June 1993. Schedule: 11th (29 subjects) vs 12th (18 subjects)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye comparison bahut helpful hai exam ke liye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Levels: 3-tier (Gram/Block/District) vs 3 types (Nagar Panchayat/Council/Corporation). Head Election: Mukhiya (Direct) vs Mayor (State decides). Bodies: Same — State Election Commission + State Finance Commission. Planning: District Planning Committee integrates both!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect Sir! Ab main puri Municipality samajh gaya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_59_final_milestone",
+        "button_text": "Chapter Complete! 🏆"
+      }
+    },
+    {
+      "card_id": "card_59_final_milestone",
+      "card_slug": "card_59_final_milestone",
+      "type": "milestone",
+      "concept_id": "final_milestone",
+      "level": 6,
+      "progress": {
+        "current": 59,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED! 🎉",
+        "badge_emoji": "🏙️",
+        "completed_topic": "Municipality in Indian Polity — Complete Mastery",
+        "xp_earned": 550,
+        "milestone_progress": "5/5 Modules + All Quizzes Clear ✅",
+        "motivational_quote": "PHENOMENAL ACHIEVEMENT! 🌟\n\nYou've conquered the entire Municipal system from grassroots to constitutional framework!\n\n✅ 74th Amendment — Complete mastery\n✅ Three types & structures — Crystal clear\n✅ 12th Schedule (18 subjects) — Memorized\n✅ Bihar Municipal System — BPSC TRE ready\n✅ Mayor vs Commissioner — No confusion\n✅ Planning Committees (DPC, MPC) — Understood\n✅ Multi-statement, Assertion-Reason — Solved!\n\nYou can now tackle:\n• BPSC Prelims & Mains (Bihar-specific questions)\n• SSC CGL (factual + comparison questions)\n• Railway RRB NTPC (dates, articles, numbers)\n• UPSC Prelims & Mains (application questions)\n• BPSC TRE (Bihar Municipal Corporation facts)\n\n🔥 Pro Tips for Exam Day:\n1. Don't confuse: 73rd (rural) vs 74th (urban)\n2. Remember: 11th Schedule (29) vs 12th Schedule (18)\n3. Mayor election: Constitution silent, STATE decides\n4. Bihar specifics: 12 corporations, 50% women\n5. Dates: 74th force = 1 June 1993 (NOT 24 April)\n6. SFC = both Panchayat + Municipality review\n\nKey Mnemonics:\n• 12-18: 12th Schedule has 18 subjects\n• Mayor-Maybe: Mayor election method maybe direct, maybe indirect (state decides)\n• Bihar-Bigger: Bihar gives bigger reservation (50% vs 33%)\n\nNext Chapter Recommendations:\n• Parliament & Legislative Procedures\n• Judiciary & Constitutional Courts\n• Federal System & Centre-State Relations\n\nKeep practicing PYQs and stay updated on urban governance reforms!\n\nAll the best! You're ready to govern cities! 🇮🇳💪"
+      },
+      "navigation": {
+        "next": "card_60_thank_you",
+        "button_text": "Final Words! 💬"
+      }
+    },
+    {
+      "card_id": "card_60_thank_you",
+      "card_slug": "card_60_thank_you",
+      "type": "chat",
+      "concept_id": "thank_you",
+      "level": 6,
+      "progress": {
+        "current": 60,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne pura chapter complete kar liya — from village Nagar Panchayats to Metropolitan Planning Committees! From Lord Ripon's era to Smart Cities Mission. Kaisa laga?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ekdum maza aaya! Pehle lagta tha Municipality boring hai, par ab samajh gaya ye urban India ke liye kitna zaroori hai. Bihar ke 12 corporations bhi yaad ho gaye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Municipality democracy ki urban foundation hai — 31% Indians cities me rehte hain aur ye increasing trend hai. Ab tum BPSC, SSC, Railway, UPSC — sabhi exams me Municipality questions confidently solve kar sakte ho. Keep revising and stay updated on urban reforms!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you so much Sir! Ab main next Polity chapter padhne jaa raha hoon! 🚀"
+        }
+      ],
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Home 🏠"
+      }
+    }
+  ]
+}
+```
