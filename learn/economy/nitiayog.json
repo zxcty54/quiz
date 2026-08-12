@@ -1,0 +1,1470 @@
+
+{
+  "topic_id": "niti_aayog_economy",
+  "topic_title": "NITI Aayog in Indian Economy",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 50,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "niti_aayog_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 50
+      },
+      "intro_payload": {
+        "title": "NITI Aayog in Indian Economy",
+        "subtitle": "From Planning Commission to Transformative Think Tank",
+        "icon": "🏛️",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "SSC CGL", "UPSC Prelims", "RRB NTPC"],
+        "learning_outcomes": [
+          "Full form, formation date & replacement of Planning Commission",
+          "Organizational structure: Vice-Chairperson, Governing Council, Regional Councils",
+          "Key objectives and functions in cooperative federalism",
+          "Major initiatives: Aspirational Districts, Atal Innovation Mission, SDG India Index",
+          "NITI Aayog vs Planning Commission comparison",
+          "⭐ Bihar-specific development programs linked to NITI Aayog"
+        ],
+        "estimated_time": "12 minutes",
+        "total_modules": 5
+      },
+      "navigation": {
+        "next": "card_02_daily_hook",
+        "button_text": "Shuru Karte Hain! 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_hook",
+      "card_slug": "card_02_daily_hook",
+      "type": "chat",
+      "concept_id": "daily_life_planning",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, jab tumhare ghar mein koi bada kaam hota hai — jaise shaadi ya renovation — toh sabse pehle kya karte hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sabse pehle toh planning karte hain na! Budget kitna hai, kaun kya karega, kab tak khatam hoga — sab list banate hain."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Aur agar planning galat ho jaye ya parivaar ke sabhi members ki rai na li jaye toh? Problems aa jaati hain. Desh ke liye bhi yahi hota hai. Pehle Planning Commission tha jo desh ki planning karti thi, lekin 2015 mein ek nayi body bani jisko NITI Aayog kehte hain. Aaj hum iske baare mein hi padhenge!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir NITI Aayog matlab kya hai? Aur yeh Planning Commission se alag kaise hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_full_form",
+        "button_text": "Pehle Full Form Samjhte Hain ➔"
+      }
+    },
+    {
+      "card_id": "card_03_full_form",
+      "card_slug": "card_03_full_form",
+      "type": "chat",
+      "concept_id": "niti_full_form",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NITI Aayog ka full form hai — National Institution for Transforming India. Hindi mein isko 'Rashtriya Bharat Parivartan Sansthan' kehte hain. Dhyan do, yeh sirf planning body nahi hai, yeh ek 'transforming' institution hai — matlab India ko badalna, sudhaarna aur aage badhana iska kaam hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir yeh kab bani thi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "1 January 2015 ko NITI Aayog ban gayi aur usi din Planning Commission ko dissolve kar diya gaya. Ye Prime Minister Narendra Modi ke naye approach ka hissa tha. Planning Commission 1950 se chal rahi thi — almost 65 saal! Lekin ek modern, flexible aur cooperative system ki zaroorat thi, isliye NITI Aayog aayi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Planning Commission ki jagah NITI Aayog ne le li?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_planning_to_niti",
+        "button_text": "Haan, Lekin Kaafi Fark Hai ➔"
+      }
+    },
+    {
+      "card_id": "card_04_planning_to_niti",
+      "card_slug": "card_04_planning_to_niti",
+      "type": "chat",
+      "concept_id": "planning_replacement",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Planning Commission mein ek dikkat thi — sab decisions Delhi se aate the, states ko bas follow karna padta tha. Isko 'top-down approach' kehte hain. NITI Aayog ne 'bottom-up approach' apnaya — matlab states ki bhi baat suni jaati hai. Isko 'cooperative federalism' kehte hain — Centre aur States milkar kaam karte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... matlab pehle sirf Centre decide karta tha, ab States ki bhi rai li jaati hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur ek bada fark — Planning Commission 'Five Year Plans' banati thi jo rigid hote the. NITI Aayog flexible strategies banati hai jo changing situations ke according adjust ho sakti hain. Ab iska structure samajhte hain — kaun-kaun members hote hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, batao kaun Chair karta hai isko?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_structure_guess",
+        "button_text": "Guess Karo Pehle! 🤔"
+      }
+    },
+    {
+      "card_id": "card_05_structure_guess",
+      "card_slug": "card_05_structure_guess",
+      "type": "guess",
+      "concept_id": "chairperson_guess",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Tumhe kya lagta hai, NITI Aayog ka Chairperson kaun hota hai?",
+        "options": [
+          { "id": "A", "text": "President of India" },
+          { "id": "B", "text": "Prime Minister of India" },
+          { "id": "C", "text": "Finance Minister" },
+          { "id": "D", "text": "Vice-Chairperson specially appointed hote hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NITI Aayog ka Chairperson Prime Minister of India hote hain! Yeh bahut important hai exam ke liye. Currently PM Narendra Modi NITI Aayog ke Chairperson hain. President nahi, Finance Minister nahi — yaad rakhna!"
+      },
+      "navigation": {
+        "next": "card_06_structure_detail",
+        "button_text": "Poora Structure Dekhte Hain ➔"
+      }
+    },
+    {
+      "card_id": "card_06_structure_detail",
+      "card_slug": "card_06_structure_detail",
+      "type": "chat",
+      "concept_id": "organizational_structure",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NITI Aayog ka structure samjho: (1) Chairperson — Prime Minister, (2) Vice-Chairperson — PM appoint karte hain (currently Dr. Suman Bery hain), (3) Full-time members — experts jo permanent hote hain, (4) Ex-officio members — kuch Union Ministers, (5) Part-time members — specialists jab zaroorat ho, (6) Chief Executive Officer (CEO) — day-to-day operations handle karte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sabse important kaun hai isme? Vice-Chairperson?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Vice-Chairperson practically sabse zyada active hote hain. PM toh bahut busy hote hain, isliye Vice-Chairperson meetings chair karte hain, policies draft karte hain. Lekin sabse unique cheez hai — Governing Council aur Regional Councils. Isme sabhi Chief Ministers included hote hain! Yahi toh cooperative federalism hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab sabhi states ke CM bhi part hain? Ye toh Planning Commission se bahut alag hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_councils_detail",
+        "button_text": "Councils Ki Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_07_councils_detail",
+      "card_slug": "card_07_councils_detail",
+      "type": "chat",
+      "concept_id": "governing_council",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Governing Council mein PM (Chairperson), sabhi state Chief Ministers, aur Union Territory Lt. Governors hote hain. Ye national level issues discuss karte hain. Regional Councils specific regions ke liye bante hain — jaise North-East ke liye alag, Eastern states ke liye alag. ⭐ Bihar bhi Eastern Regional Council ka hissa hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Bihar ke CM bhi NITI Aayog ki meetings mein jaate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Bihar ke Chief Minister Governing Council ke member hain. Jab bhi national policies banti hain — jaise Aspirational Districts Programme (jisme Bihar ke Muzaffarpur, Gaya, Banka jaise districts shamil hain) — Bihar ki bhi rai li jaati hai. Pehle Planning Commission mein aisa nahi hota tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh bahut achha system hai! Toh NITI Aayog kya-kya kaam karti hai?"
+        }
+      },
+      "navigation": {
+        "next": "card_08_quiz_1",
+        "button_text": "Pehle Quiz Karte Hain! 📝"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_1",
+      "card_slug": "card_08_quiz_1",
+      "type": "quiz",
+      "concept_id": "quiz_formation",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "NITI Aayog kab form hui thi?",
+        "options": [
+          { "id": "A", "text": "1 January 2014" },
+          { "id": "B", "text": "1 January 2015" },
+          { "id": "C", "text": "15 August 2014" },
+          { "id": "D", "text": "26 January 2015" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NITI Aayog 1 January 2015 ko form hui thi. Usi din Planning Commission ko dissolve kar diya gaya tha. Ye date bahut important hai — SSC, Railway, BPSC sabhi exams mein puchhi jaati hai. 2014 nahi, 2015 yaad rakhna!"
+      },
+      "navigation": {
+        "next": "card_09_quiz_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_09_quiz_2",
+      "card_slug": "card_09_quiz_2",
+      "type": "quiz",
+      "concept_id": "quiz_chairperson",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "NITI Aayog ka Chairperson kaun hota hai?",
+        "options": [
+          { "id": "A", "text": "President of India" },
+          { "id": "B", "text": "Prime Minister of India" },
+          { "id": "C", "text": "Vice-Chairperson (appointed)" },
+          { "id": "D", "text": "Finance Minister" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NITI Aayog ka Chairperson Prime Minister of India hote hain. Currently PM Narendra Modi hain. Vice-Chairperson alag se appoint hote hain (currently Dr. Suman Bery). President ya Finance Minister nahi — ye UPSC ka favorite confusion trap hai!"
+      },
+      "navigation": {
+        "next": "card_10_quiz_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_10_quiz_3",
+      "card_slug": "card_10_quiz_3",
+      "type": "quiz",
+      "concept_id": "quiz_full_form",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "NITI Aayog ka full form kya hai?",
+        "options": [
+          { "id": "A", "text": "National Institute for Training India" },
+          { "id": "B", "text": "National Institution for Transforming India" },
+          { "id": "C", "text": "National Initiative for Total Integration" },
+          { "id": "D", "text": "New India Transformation Initiative" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NITI Aayog = National Institution for Transforming India. 'Transforming' word important hai — ye sirf planning nahi, India ko transform karna iska goal hai. Railway aur SSC CGL mein ye direct question aata hai!"
+      },
+      "navigation": {
+        "next": "card_11_milestone_1",
+        "button_text": "Module Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_11_milestone_1",
+      "card_slug": "card_11_milestone_1",
+      "type": "milestone",
+      "concept_id": "milestone_basics",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "MODULE 1 CLEARED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "NITI Aayog Basics & Structure",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/5 Clear",
+        "motivational_quote": "Shabash! NITI Aayog ki formation aur structure clear ho gayi! Ab objectives aur functions samjhenge! 💪"
+      },
+      "navigation": {
+        "next": "card_12_objectives_intro",
+        "button_text": "Next Module: Objectives & Functions ➔"
+      }
+    },
+    {
+      "card_id": "card_12_objectives_intro",
+      "card_slug": "card_12_objectives_intro",
+      "type": "chat",
+      "concept_id": "objectives_introduction",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NITI Aayog ke main objectives samjho: (1) Long-term vision aur strategy banana — like Vision 2030, Vision 2047, (2) Cooperative federalism promote karna — Centre aur States milkar kaam karein, (3) Innovation aur entrepreneurship encourage karna, (4) Sustainable Development Goals (SDGs) achieve karna. Ye sirf advisor nahi, think tank hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Think tank matlab kya Sir? Advice deti hai government ko?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Think tank matlab expert body jo research kare, data analyze kare, innovative ideas de. NITI Aayog government ko policy suggestions deti hai, lekin final decision government ka hota hai. Planning Commission ki tarah ye orders nahi deti, recommendations deti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Planning Commission zyada powerful thi? NITI Aayog sirf advice deti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_planning_vs_niti",
+        "button_text": "Ye Bada Difference Hai ➔"
+      }
+    },
+    {
+      "card_id": "card_13_planning_vs_niti",
+      "card_slug": "card_13_planning_vs_niti",
+      "type": "chat",
+      "concept_id": "comparison_planning",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Important comparison! Planning Commission ke paas financial powers the — wo decide karti thi ki states ko kitna budget milega. NITI Aayog ke paas ye power nahi hai! Budget allocation Finance Ministry karta hai ab. NITI Aayog sirf suggest karti hai — 'iss sector mein focus karo, us state ko help karo' — lekin paisa dene ka decision Finance Ministry ka hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh NITI Aayog less powerful hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Power ka type alag hai. Planning Commission 'order' deti thi, NITI Aayog 'empower' karti hai. Ye states ko guide karti hai, data provide karti hai, best practices share karti hai. Jaise ek teacher force nahi karta par inspire karta hai — waise hi NITI Aayog hai. Ab iske main functions dekhte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, kya-kya functions hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_functions_detail",
+        "button_text": "Functions Detail Mein ➔"
+      }
+    },
+    {
+      "card_id": "card_14_functions_detail",
+      "card_slug": "card_14_functions_detail",
+      "type": "chat",
+      "concept_id": "key_functions",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NITI Aayog ke key functions: (1) National Development Agenda banana, (2) States ke saath partnership — har state ke liye customized strategy, (3) Innovation hub — Atal Innovation Mission chalana, (4) Monitoring aur evaluation — programmes kaise chal rahe hain, (5) Knowledge aur innovation hub — research papers, reports, data analytics."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye Atal Innovation Mission kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut important programme! Atal Innovation Mission (AIM) schools aur colleges mein innovation labs (Atal Tinkering Labs) setup karti hai jahan students robotics, AI, coding seekhte hain. ⭐ Bihar mein bhi kaafi schools mein Atal Tinkering Labs hain — Patna, Muzaffarpur, Gaya mein. Ye future entrepreneurs banane ka programme hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Toh NITI Aayog students ke liye bhi kaam karti hai!"
+        }
+      },
+      "navigation": {
+        "next": "card_15_major_initiatives",
+        "button_text": "Aur Bhi Initiatives Hain ➔"
+      }
+    },
+    {
+      "card_id": "card_15_major_initiatives",
+      "card_slug": "card_15_major_initiatives",
+      "type": "chat",
+      "concept_id": "flagship_initiatives",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NITI Aayog ki major initiatives: (1) Aspirational Districts Programme — India ke sabse backward 112 districts ko develop karna, (2) SDG India Index — states ko Sustainable Development Goals mein rank karna, (3) SATH Programme — states ko technical help, (4) Women Entrepreneurship Platform — mahilaaon ko business shuru karne mein madad."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Aspirational Districts mein kaun-kaun se Bihar ke districts hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite! Bihar se 13 districts Aspirational Districts Programme mein hain: Araria, Aurangabad, Banka, Begusarai, Gaya, Jamui, Katihar, Khagaria, Muzaffarpur, Nalanda, Nawada, Purnia, Sheikhpura. Ye districts health, education, agriculture, infrastructure mein improve ho rahe hain NITI Aayog ke support se."
+        },
+        {
+          "speaker": "raju",
+          "text": "Itne saare districts! Matlab Bihar ko bahut focus mil raha hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_quiz_4",
+        "button_text": "Quiz Time! 📝"
+      }
+    },
+    {
+      "card_id": "card_16_quiz_4",
+      "card_slug": "card_16_quiz_4",
+      "type": "quiz",
+      "concept_id": "quiz_functions",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Planning Commission aur NITI Aayog mein sabse bada fark kya hai?",
+        "options": [
+          { "id": "A", "text": "NITI Aayog foreign aid manage karti hai" },
+          { "id": "B", "text": "NITI Aayog ke paas financial allocation powers nahi hain, sirf advisory role hai" },
+          { "id": "C", "text": "NITI Aayog sirf education sector ke liye kaam karti hai" },
+          { "id": "D", "text": "NITI Aayog Five Year Plans banati hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sabse bada fark: NITI Aayog ke paas financial allocation powers NAHI hain! Planning Commission budget decide karti thi, lekin NITI Aayog sirf advisory/think tank hai. Budget allocation Finance Ministry karta hai. Ye UPSC/BPSC ka bahut common question hai!"
+      },
+      "navigation": {
+        "next": "card_17_quiz_5",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_17_quiz_5",
+      "card_slug": "card_17_quiz_5",
+      "type": "quiz",
+      "concept_id": "quiz_initiatives",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Aspirational Districts Programme mein India ke kitne districts shamil hain?",
+        "options": [
+          { "id": "A", "text": "75 districts" },
+          { "id": "B", "text": "100 districts" },
+          { "id": "C", "text": "112 districts" },
+          { "id": "D", "text": "125 districts" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Aspirational Districts Programme mein total 112 backward districts hain jo health, education, agriculture, infrastructure mein improve ho rahe hain. Bihar se 13 districts hain. Ye exact number Railway aur SSC exams mein puchha jaata hai!"
+      },
+      "navigation": {
+        "next": "card_18_quiz_6",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_18_quiz_6",
+      "card_slug": "card_18_quiz_6",
+      "type": "quiz",
+      "concept_id": "quiz_aim",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Atal Innovation Mission (AIM) ka main objective kya hai?",
+        "options": [
+          { "id": "A", "text": "Foreign investment attract karna" },
+          { "id": "B", "text": "Schools aur colleges mein innovation aur entrepreneurship promote karna through Atal Tinkering Labs" },
+          { "id": "C", "text": "Agricultural productivity badhana" },
+          { "id": "D", "text": "Urban infrastructure develop karna" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Atal Innovation Mission (AIM) schools aur colleges mein innovation culture promote karta hai Atal Tinkering Labs (ATL) ke through. Students robotics, AI, coding, design thinking seekhte hain. Future innovators aur entrepreneurs banane ka programme hai. Bihar mein bhi kaafi ATLs hain!"
+      },
+      "navigation": {
+        "next": "card_19_milestone_2",
+        "button_text": "Module Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_19_milestone_2",
+      "card_slug": "card_19_milestone_2",
+      "type": "milestone",
+      "concept_id": "milestone_objectives",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "MODULE 2 CLEARED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "NITI Aayog Objectives & Functions",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/5 Clear",
+        "motivational_quote": "Kamaal! Functions aur major initiatives samajh gaye! Ab cooperative federalism aur comparison detail mein dekhenge! 🔥"
+      },
+      "navigation": {
+        "next": "card_20_coop_federalism",
+        "button_text": "Next Module: Cooperative Federalism ➔"
+      }
+    },
+    {
+      "card_id": "card_20_coop_federalism",
+      "card_slug": "card_20_coop_federalism",
+      "type": "chat",
+      "concept_id": "cooperative_federalism_concept",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NITI Aayog ka sabse important contribution hai — Cooperative Federalism. Matlab Centre aur States equal partners ki tarah kaam karte hain, master-servant nahi. Planning Commission mein Centre dominant tha, states ko follow karna padta tha. NITI Aayog mein Governing Council hai jisme sabhi Chief Ministers hain — sab barabar!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh meetings mein Bihar ke CM bhi PM ke saath baith kar discuss karte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Governing Council ki meetings hoti hain jahan PM aur sabhi CMs milte hain. ⭐ Bihar ke specific issues — jaise floods in North Bihar, Ganga erosion, migration — ye sab national level pe discuss hote hain. States apni problems share karte hain aur solutions milkar dhoondhe jaate hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh bahut achha system hai! Pehle states ki awaaz nahi sunai deti thi kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_bottom_up",
+        "button_text": "Bottom-Up Approach ➔"
+      }
+    },
+    {
+      "card_id": "card_21_bottom_up",
+      "card_slug": "card_21_bottom_up",
+      "type": "chat",
+      "concept_id": "bottom_up_approach",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Planning Commission mein 'top-down' tha — Delhi se orders aate the, states implement karte the. NITI Aayog mein 'bottom-up' hai — states apni local problems batate hain, local solutions suggest karte hain, phir national policy banti hai. Example: Aspirational Districts Programme mein har district ki specific needs ke hisaab se planning hoti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab one-size-fits-all nahi, customized solution?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Exactly ye baat! Kerala ki problems alag hain, Bihar ki alag, Rajasthan ki alag. NITI Aayog samajhti hai ki har state unique hai. ⭐ Bihar ke liye agriculture aur flood management priority hai, toh uske hisaab se programmes design hote hain. Gujarat ke liye industrial growth, North-East ke liye connectivity — sab different!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh NITI Aayog zyada flexible hai Planning Commission se?"
+        }
+      },
+      "navigation": {
+        "next": "card_22_comparison_table",
+        "button_text": "Detailed Comparison Dekhte Hain ➔"
+      }
+    },
+    {
+      "card_id": "card_22_comparison_table",
+      "card_slug": "card_22_comparison_table",
+      "type": "chat",
+      "concept_id": "detailed_comparison",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Planning Commission vs NITI Aayog: (1) Powers — PC had financial allocation, NITI advisory only. (2) Approach — PC was top-down, NITI bottom-up. (3) Plans — PC made rigid 5-year plans, NITI makes flexible strategies. (4) State participation — PC mein minimal, NITI mein full participation through Governing Council. (5) Focus — PC allocation-centric, NITI innovation-centric."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh NITI Aayog democratic zyada hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Lekin ek criticism bhi hai — kyunki NITI Aayog ke paas financial powers nahi hain, kuch log kehte hain ki ye 'toothless' hai, sirf suggestions de sakti hai. But supporters kehte hain ki ye modern governance ka tareeka hai — collaboration, not command. Ab quiz karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chalo Sir!"
+        }
+      },
+      "navigation": {
+        "next": "card_23_quiz_7",
+        "button_text": "Quiz Time! 📝"
+      }
+    },
+    {
+      "card_id": "card_23_quiz_7",
+      "card_slug": "card_23_quiz_7",
+      "type": "quiz",
+      "concept_id": "quiz_federalism",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Cooperative Federalism ka kya matlab hai NITI Aayog ke context mein?",
+        "options": [
+          { "id": "A", "text": "Centre aur States competition mein hain" },
+          { "id": "B", "text": "Centre orders deta hai, States follow karte hain" },
+          { "id": "C", "text": "Centre aur States equal partners ki tarah milkar kaam karte hain" },
+          { "id": "D", "text": "Sirf States decide karte hain, Centre involved nahi hai" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Cooperative Federalism matlab Centre aur States equal partners hain, milkar kaam karte hain. NITI Aayog ki Governing Council mein PM aur sabhi Chief Ministers hote hain — sab barabar! Top-down nahi, bottom-up approach. Ye UPSC ka favorite conceptual question hai!"
+      },
+      "navigation": {
+        "next": "card_24_quiz_8",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_24_quiz_8",
+      "card_slug": "card_24_quiz_8",
+      "type": "quiz",
+      "concept_id": "quiz_approach",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Planning Commission kis approach ko follow karti thi?",
+        "options": [
+          { "id": "A", "text": "Bottom-up approach" },
+          { "id": "B", "text": "Top-down approach (Centre se orders)" },
+          { "id": "C", "text": "Cooperative approach" },
+          { "id": "D", "text": "Federal approach" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Planning Commission TOP-DOWN approach follow karti thi — Centre (Delhi) se decisions aate the, States ko bas implement karna hota tha. NITI Aayog BOTTOM-UP approach follow karti hai — States ki inputs li jaati hain, phir policy banti hai. Ye comparison BPSC/SSC mein bar-bar aata hai!"
+      },
+      "navigation": {
+        "next": "card_25_quiz_9",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_25_quiz_9",
+      "card_slug": "card_25_quiz_9",
+      "type": "quiz",
+      "concept_id": "quiz_five_year",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Kya NITI Aayog Five Year Plans banati hai?",
+        "options": [
+          { "id": "A", "text": "Haan, regular Five Year Plans banati hai" },
+          { "id": "B", "text": "Nahi, NITI Aayog Five Year Plans nahi banati, flexible strategies banati hai" },
+          { "id": "C", "text": "Sirf Three Year Plans banati hai" },
+          { "id": "D", "text": "Haan, lekin sirf economic sector ke liye" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NITI Aayog Five Year Plans NAHI banati! Planning Commission Five Year Plans banati thi (1951-2017 tak). NITI Aayog long-term vision documents aur flexible strategies banati hai — jaise Vision 2030, Vision 2047. Rigid plans nahi, adaptable strategies. Railway/SSC ka direct factual question!"
+      },
+      "navigation": {
+        "next": "card_26_milestone_3",
+        "button_text": "Module Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_26_milestone_3",
+      "card_slug": "card_26_milestone_3",
+      "type": "milestone",
+      "concept_id": "milestone_federalism",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "MODULE 3 CLEARED!",
+        "badge_emoji": "🤝",
+        "completed_topic": "Cooperative Federalism & Comparison",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/5 Clear",
+        "motivational_quote": "Lajawab! Cooperative federalism aur Planning Commission vs NITI Aayog comparison bilkul clear! Ab SDG aur rankings dekhte hain! 🌟"
+      },
+      "navigation": {
+        "next": "card_27_sdg_intro",
+        "button_text": "Next Module: SDG & Rankings ➔"
+      }
+    },
+    {
+      "card_id": "card_27_sdg_intro",
+      "card_slug": "card_27_sdg_intro",
+      "type": "chat",
+      "concept_id": "sdg_introduction",
+      "level": 4,
+      "progress": {
+        "current": 27,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NITI Aayog ek bahut important kaam karti hai — SDG India Index banana! SDG matlab Sustainable Development Goals — ye 17 goals hain jo United Nations ne 2015 mein set kiye the. Jaise poverty khatam karna, quality education, gender equality, clean water — sab SDGs hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh NITI Aayog check karti hai ki India kitna progress kar raha hai in goals mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur sirf India nahi, NITI Aayog har STATE ko rank karti hai — kaun sa state best perform kar raha hai SDGs mein. Ye har saal report aati hai jisko 'SDG India Index' kehte hain. States compete karte hain better rank ke liye, aur isse development hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bihar ka rank kaisa hai Sir?"
+        }
+      },
+      "navigation": {
+        "next": "card_28_bihar_sdg",
+        "button_text": "Bihar Ki Performance ➔"
+      }
+    },
+    {
+      "card_id": "card_28_bihar_sdg",
+      "card_slug": "card_28_bihar_sdg",
+      "type": "chat",
+      "concept_id": "bihar_sdg_ranking",
+      "level": 4,
+      "progress": {
+        "current": 28,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Important! Bihar SDG Index mein 'Performer' category mein hai (2021-22 data). Earlier 'Aspirant' category mein tha, lekin improve ho raha hai. Education (especially girls' education), health infrastructure, rural development mein progress hui hai. Kerala, Tamil Nadu, Himachal Pradesh top performers hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Bihar aage badh raha hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Especially 'No Poverty', 'Zero Hunger', aur 'Quality Education' goals mein. ⭐ Bihar ki schemes jaise Mukhyamantri Balika Cycle Yojana (girls ko free cycle), Jeevika (women self-help groups) SDG goals se aligned hain. NITI Aayog in efforts ko recognize karti hai rankings mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "NITI Aayog aur kya-kya rankings nikalti hai?"
+        }
+      },
+      "navigation": {
+        "next": "card_29_other_rankings",
+        "button_text": "Other Rankings ➔"
+      }
+    },
+    {
+      "card_id": "card_29_other_rankings",
+      "card_slug": "card_29_other_rankings",
+      "type": "chat",
+      "concept_id": "niti_rankings",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NITI Aayog ki important rankings: (1) SDG India Index — overall sustainable development, (2) Export Preparedness Index — states kitne export-ready hain, (3) School Education Quality Index (SEQI) — education quality ranking, (4) India Innovation Index — innovation aur R&D mein performance, (5) Composite Water Management Index — water resources management."
+        },
+        {
+          "speaker": "raju",
+          "text": "Itni saari rankings! Ye sab ka purpose kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Purpose hai — Competitive Federalism! Jab states ko rank kiya jaata hai, toh wo improve karne ki koshish karte hain. Agar Gujarat top hai exports mein, toh Bihar bhi seekhta hai Gujarat se. Ye healthy competition create karta hai aur sabka development hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! Jaise school mein toppers se seekhte hain, waise states bhi!"
+        }
+      },
+      "navigation": {
+        "next": "card_30_quiz_10",
+        "button_text": "Quiz Time! 📝"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_10",
+      "card_slug": "card_30_quiz_10",
+      "type": "quiz",
+      "concept_id": "quiz_sdg",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "SDG India Index kis organization dwara publish kiya jaata hai?",
+        "options": [
+          { "id": "A", "text": "United Nations" },
+          { "id": "B", "text": "World Bank" },
+          { "id": "C", "text": "NITI Aayog" },
+          { "id": "D", "text": "Reserve Bank of India" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "SDG India Index NITI Aayog publish karti hai! Ye Indian states aur UTs ko rank karta hai 17 Sustainable Development Goals ke performance par. United Nations ne SDGs set kiye the (2015), lekin India ke context mein state-wise ranking NITI Aayog karti hai. SSC/BPSC mein ye confusion trap hai!"
+      },
+      "navigation": {
+        "next": "card_31_quiz_11",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quiz_11",
+      "card_slug": "card_31_quiz_11",
+      "type": "quiz",
+      "concept_id": "quiz_competitive",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "NITI Aayog ki rankings ka main purpose kya hai?",
+        "options": [
+          { "id": "A", "text": "States ko punish karna" },
+          { "id": "B", "text": "Competitive Federalism promote karna — states compete karke improve karein" },
+          { "id": "C", "text": "Sirf data collection" },
+          { "id": "D", "text": "Foreign investors ko attract karna" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NITI Aayog ki rankings ka purpose hai Competitive Federalism — jab states ko rank kiya jaata hai, wo compete karte hain better performance ke liye. Best practices share hoti hain, learning hoti hai. Ye healthy competition overall development laati hai. Punishment nahi, motivation hai!"
+      },
+      "navigation": {
+        "next": "card_32_quiz_12",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz_12",
+      "card_slug": "card_32_quiz_12",
+      "type": "quiz",
+      "concept_id": "quiz_sdg_goals",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Kitne Sustainable Development Goals (SDGs) hain?",
+        "options": [
+          { "id": "A", "text": "10" },
+          { "id": "B", "text": "15" },
+          { "id": "C", "text": "17" },
+          { "id": "D", "text": "20" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Total 17 Sustainable Development Goals hain jo United Nations ne 2015 mein adopt kiye (target: 2030 tak achieve karna). Jaise No Poverty, Zero Hunger, Quality Education, Gender Equality, Clean Water, Climate Action etc. Ye number Railway/SSC mein direct puchha jaata hai — 17 yaad rakhna!"
+      },
+      "navigation": {
+        "next": "card_33_milestone_4",
+        "button_text": "Module Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_33_milestone_4",
+      "card_slug": "card_33_milestone_4",
+      "type": "milestone",
+      "concept_id": "milestone_sdg",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "MODULE 4 CLEARED!",
+        "badge_emoji": "📊",
+        "completed_topic": "SDG India Index & Rankings",
+        "xp_earned": 80,
+        "milestone_progress": "Module 4/5 Clear",
+        "motivational_quote": "Fantastic! SDG rankings aur competitive federalism bilkul clear! Ab challenges aur future dekhte hain! 💯"
+      },
+      "navigation": {
+        "next": "card_34_challenges_intro",
+        "button_text": "Next Module: Challenges & Future ➔"
+      }
+    },
+    {
+      "card_id": "card_34_challenges_intro",
+      "card_slug": "card_34_challenges_intro",
+      "type": "chat",
+      "concept_id": "challenges_introduction",
+      "level": 5,
+      "progress": {
+        "current": 34,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Har system mein kuch challenges hote hain. NITI Aayog ki bhi kuch limitations hain: (1) Financial powers nahi hain — sirf suggest kar sakti hai, implement nahi, (2) States cooperation par dependent — agar koi state cooperate na kare toh dikkat, (3) Short-term political pressures — elections ke time focus shift ho jaata hai, (4) Data availability aur quality — accurate data milna mushkil."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sabse badi problem kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sabse badi criticism ye hai ki NITI Aayog 'toothless' hai — bite nahi hai iske paas. Planning Commission orders de sakti thi aur budget bhi allocate karti thi. NITI Aayog sirf suggestions de sakti hai, implementation Finance Ministry aur states par depend karta hai. Kuch experts kehte hain ye ek 'think tank' zaroor hai par effective nahi hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh kya NITI Aayog ko zyada powers deni chahiye?"
+        }
+      },
+      "navigation": {
+        "next": "card_35_debate",
+        "button_text": "Ye Debate Hai ➔"
+      }
+    },
+    {
+      "card_id": "card_35_debate",
+      "card_slug": "card_35_debate",
+      "type": "chat",
+      "concept_id": "debate_powers",
+      "level": 5,
+      "progress": {
+        "current": 35,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Do views hain: (1) Supporters kehte hain — advisory role better hai, kyunki ye democratic hai, states ki autonomy respect karti hai. Financial powers dene se wahi purani Planning Commission ban jayegi. (2) Critics kehte hain — bina powers ke recommendations koi seriously nahi leta, implementation weak rehta hai, accountability nahi hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab dono sides ki baat sahi hai thodi-thodi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Balance chahiye. NITI Aayog ne kuch achhe kaam kiye hain — Aspirational Districts, innovation ecosystem, data analytics. Lekin implementation mein gaps hain. Future mein shayad isko thodi aur teeth milni chahiye — at least monitoring aur evaluation mein stricter role."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir future mein NITI Aayog ka role kya hoga?"
+        }
+      },
+      "navigation": {
+        "next": "card_36_future_role",
+        "button_text": "Future Roadmap ➔"
+      }
+    },
+    {
+      "card_id": "card_36_future_role",
+      "card_slug": "card_36_future_role",
+      "type": "chat",
+      "concept_id": "future_roadmap",
+      "level": 5,
+      "progress": {
+        "current": 36,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NITI Aayog ka future focus: (1) Digital India aur AI integration — data-driven policy making, (2) Climate change aur green economy — sustainable development, (3) Atmanirbhar Bharat — self-reliance promote karna, (4) Vision 2047 — India@100 ke liye roadmap, (5) Technology aur innovation — startups aur R&D ecosystem strengthen karna."
+        },
+        {
+          "speaker": "raju",
+          "text": "Vision 2047 matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "2047 mein India ki independence ke 100 saal complete honge. NITI Aayog ek vision document bana rahi hai — 2047 tak India kaisa hoga, kya goals achieve karne hain. ⭐ Bihar ke context mein bhi — flood management, agricultural productivity, migration control — ye long-term planning ho rahi hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab NITI Aayog bahut door tak sochti hai!"
+        }
+      },
+      "navigation": {
+        "next": "card_37_quiz_13",
+        "button_text": "Final Quiz Round! 📝"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_13",
+      "card_slug": "card_37_quiz_13",
+      "type": "quiz",
+      "concept_id": "quiz_limitation",
+      "level": 5,
+      "progress": {
+        "current": 37,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "NITI Aayog ki sabse badi limitation kya hai critics ke according?",
+        "options": [
+          { "id": "A", "text": "Bahut zyada members hain" },
+          { "id": "B", "text": "Financial allocation powers nahi hain, sirf advisory body hai" },
+          { "id": "C", "text": "International organizations se consult nahi karti" },
+          { "id": "D", "text": "Sirf urban areas pe focus karti hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sabse badi criticism: NITI Aayog ke paas financial allocation powers nahi hain! Ye sirf suggestions de sakti hai, budget Finance Ministry decide karti hai. Critics kehte hain ye 'toothless' body hai. Planning Commission ke paas ye powers the. UPSC Mains mein ye analysis question hai!"
+      },
+      "navigation": {
+        "next": "card_38_quiz_14",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_14",
+      "card_slug": "card_38_quiz_14",
+      "type": "quiz",
+      "concept_id": "quiz_vision",
+      "level": 5,
+      "progress": {
+        "current": 38,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Vision 2047 document kis purpose ke liye hai?",
+        "options": [
+          { "id": "A", "text": "Next 5 years ki planning" },
+          { "id": "B", "text": "India ki independence ke 100 years (2047) tak ka long-term roadmap" },
+          { "id": "C", "text": "Sirf agricultural development" },
+          { "id": "D", "text": "Foreign policy guidelines" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Vision 2047 ek long-term roadmap hai jo NITI Aayog bana rahi hai — India@100 ke liye! 2047 mein independence ke 100 saal honge. Document mein economic, social, environmental goals hain jo 2047 tak achieve karne hain. Short-term nahi, 25+ saal ka vision!"
+      },
+      "navigation": {
+        "next": "card_39_quiz_15",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz_15",
+      "card_slug": "card_39_quiz_15",
+      "type": "quiz",
+      "concept_id": "quiz_atmanirbhar",
+      "level": 5,
+      "progress": {
+        "current": 39,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar mein NITI Aayog ne kis sector mein major focus diya hai?",
+        "options": [
+          { "id": "A", "text": "Automobile manufacturing" },
+          { "id": "B", "text": "Agriculture modernization, flood management, aur education (especially girls' education)" },
+          { "id": "C", "text": "Sirf IT sector" },
+          { "id": "D", "text": "Only infrastructure" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Answer: Bihar mein NITI Aayog ka focus agriculture modernization, flood management (North Bihar problem), education (especially girls — Mukhyamantri Balika Cycle Yojana), aur rural development par hai. Aspirational Districts Programme mein 13 Bihar districts hain jo holistic development kar rahe hain!"
+      },
+      "navigation": {
+        "next": "card_40_milestone_5",
+        "button_text": "Module Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_40_milestone_5",
+      "card_slug": "card_40_milestone_5",
+      "type": "milestone",
+      "concept_id": "milestone_challenges",
+      "level": 5,
+      "progress": {
+        "current": 40,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "MODULE 5 CLEARED!",
+        "badge_emoji": "🚀",
+        "completed_topic": "Challenges & Future of NITI Aayog",
+        "xp_earned": 90,
+        "milestone_progress": "All 5 Modules Clear!",
+        "motivational_quote": "Kamaal ka performance! Saare modules complete! Ab final revision aur officer-level quiz! 🔥💪"
+      },
+      "navigation": {
+        "next": "card_41_officer_revision",
+        "button_text": "Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_41_officer_revision",
+      "card_slug": "card_41_officer_revision",
+      "type": "summary",
+      "concept_id": "officer_summary",
+      "level": 5,
+      "progress": {
+        "current": 41,
+        "total": 50
+      },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision",
+        "revision_points": [
+          {
+            "topic": "Formation & Structure",
+            "point": "NITI Aayog = National Institution for Transforming India. Formed 1 Jan 2015, replaced Planning Commission. Chairperson: PM. Vice-Chair: Appointed (currently Dr. Suman Bery). Governing Council: All Chief Ministers. CEO handles operations."
+          },
+          {
+            "topic": "Key Differences",
+            "point": "Planning Commission: Top-down, financial powers, rigid 5-year plans, limited state participation. NITI Aayog: Bottom-up, advisory only, flexible strategies, full state participation (Governing Council), cooperative federalism."
+          },
+          {
+            "topic": "Major Initiatives",
+            "point": "Aspirational Districts (112 backward districts, Bihar has 13), Atal Innovation Mission (ATLs in schools), SDG India Index (ranks states), SATH Programme, Women Entrepreneurship Platform, School Education Quality Index."
+          },
+          {
+            "topic": "⭐ Bihar Context",
+            "point": "13 Aspirational Districts: Araria, Aurangabad, Banka, Begusarai, Gaya, Jamui, Katihar, Khagaria, Muzaffarpur, Nalanda, Nawada, Purnia, Sheikhpura. Focus: Agriculture, flood management, education (girls). Bihar in 'Performer' category in SDG Index."
+          },
+          {
+            "topic": "Challenges & Future",
+            "point": "Limitation: No financial powers (toothless critique). Depends on states' cooperation. Future focus: Vision 2047, Digital India, AI integration, Climate action, Atmanirbhar Bharat, green economy."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_42_final_quiz",
+        "button_text": "Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_42_final_quiz",
+      "card_slug": "card_42_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_officer_test",
+      "level": 5,
+      "progress": {
+        "current": 42,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about NITI Aayog:\n\n1. NITI Aayog was formed on 1st January 2015.\n2. It has financial allocation powers similar to Planning Commission.\n3. All Chief Ministers are members of the Governing Council.\n4. It publishes SDG India Index annually.\n\nWhich of the statements given above are correct?",
+        "options": [
+          { "id": "A", "text": "1, 2 and 3 only" },
+          { "id": "B", "text": "1, 3 and 4 only" },
+          { "id": "C", "text": "2, 3 and 4 only" },
+          { "id": "D", "text": "All 1, 2, 3 and 4" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement-wise analysis:\n\n1. CORRECT ✓ — NITI Aayog formed 1 Jan 2015.\n\n2. WRONG ✗ — NITI Aayog has NO financial allocation powers! Ye Planning Commission se major difference hai. NITI advisory body hai, Finance Ministry budget allocate karti hai.\n\n3. CORRECT ✓ — Sabhi Chief Ministers Governing Council ke members hain. Ye cooperative federalism ka foundation hai.\n\n4. CORRECT ✓ — NITI Aayog har saal SDG India Index publish karti hai jo states ko rank karti hai.\n\nAnswer: 1, 3, 4 correct (Option B). Statement 2 classic UPSC/BPSC trap hai!"
+      },
+      "navigation": {
+        "next": "card_43_assertion_reason",
+        "button_text": "Assertion-Reason Question ➔"
+      }
+    },
+    {
+      "card_id": "card_43_assertion_reason",
+      "card_slug": "card_43_assertion_reason",
+      "type": "quiz",
+      "concept_id": "assertion_reason_test",
+      "level": 5,
+      "progress": {
+        "current": 43,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): NITI Aayog promotes cooperative federalism in India.\n\nReason (R): All Chief Ministers are members of NITI Aayog's Governing Council and participate in decision-making.\n\nChoose the correct option:",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is not the correct explanation of A" },
+          { "id": "C", "text": "A is true but R is false" },
+          { "id": "D", "text": "A is false but R is true" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Perfect BPSC-style question!\n\nAssertion TRUE ✓ — NITI Aayog cooperative federalism promote karti hai (Centre + States equal partners).\n\nReason TRUE ✓ — Sabhi Chief Ministers Governing Council members hain aur decision-making mein participate karte hain.\n\nR is CORRECT EXPLANATION of A ✓ — Kyunki CMs ki participation hi cooperative federalism ka practical implementation hai! Planning Commission mein ye nahi tha.\n\nAnswer: Option A. Dono sahi aur R, A ko explain karta hai!"
+      },
+      "navigation": {
+        "next": "card_44_pyq_style_1",
+        "button_text": "PYQ-Style Question 1 ➔"
+      }
+    },
+    {
+      "card_id": "card_44_pyq_style_1",
+      "card_slug": "card_44_pyq_style_1",
+      "type": "quiz",
+      "concept_id": "pyq_style_question_1",
+      "level": 5,
+      "progress": {
+        "current": 44,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Which of the following is NOT a function of NITI Aayog?\n\n(UPSC Prelims style)",
+        "options": [
+          { "id": "A", "text": "Formulating Five Year Plans" },
+          { "id": "B", "text": "Fostering cooperative federalism" },
+          { "id": "C", "text": "Monitoring Sustainable Development Goals" },
+          { "id": "D", "text": "Promoting innovation and entrepreneurship" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "NOT a function: Formulating Five Year Plans!\n\nPlanning Commission Five Year Plans banati thi (1951-2017), lekin NITI Aayog ye nahi karti. NITI Aayog long-term vision documents (Vision 2030, Vision 2047) aur flexible strategies banati hai, rigid 5-year plans nahi.\n\nBaaki sab NITI Aayog ke functions hain:\n✓ Cooperative federalism\n✓ SDG monitoring\n✓ Innovation (Atal Innovation Mission)\n\nYe negative question format UPSC ka favorite hai!"
+      },
+      "navigation": {
+        "next": "card_45_pyq_style_2",
+        "button_text": "PYQ-Style Question 2 ➔"
+      }
+    },
+    {
+      "card_id": "card_45_pyq_style_2",
+      "card_slug": "card_45_pyq_style_2",
+      "type": "quiz",
+      "concept_id": "pyq_style_question_2",
+      "level": 5,
+      "progress": {
+        "current": 45,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ With reference to Aspirational Districts Programme, consider:\n\n1. It covers 112 backward districts across India.\n2. Bihar has maximum number of Aspirational Districts.\n3. Districts are ranked on health, education, agriculture and infrastructure.\n\nWhich statements are correct?",
+        "options": [
+          { "id": "A", "text": "1 and 2 only" },
+          { "id": "B", "text": "1 and 3 only" },
+          { "id": "C", "text": "2 and 3 only" },
+          { "id": "D", "text": "All 1, 2 and 3" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Analysis:\n\n1. CORRECT ✓ — Total 112 Aspirational Districts hain (most backward).\n\n2. WRONG ✗ — Bihar mein 13 districts hain (bahut zyada, lekin maximum nahi). Uttar Pradesh mein sabse zyada hain!\n\n3. CORRECT ✓ — Districts health, nutrition, education, agriculture, financial inclusion, skill development aur infrastructure par ranked hote hain.\n\nBihar ke 13 Aspirational Districts: Araria, Aurangabad, Banka, Begusarai, Gaya, Jamui, Katihar, Khagaria, Muzaffarpur, Nalanda, Nawada, Purnia, Sheikhpura.\n\nAnswer: 1 and 3 only!"
+      },
+      "navigation": {
+        "next": "card_46_pyq_style_3",
+        "button_text": "PYQ-Style Question 3 ➔"
+      }
+    },
+    {
+      "card_id": "card_46_pyq_style_3",
+      "card_slug": "card_46_pyq_style_3",
+      "type": "quiz",
+      "concept_id": "pyq_style_question_3",
+      "level": 5,
+      "progress": {
+        "current": 46,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Which of the following best describes the approach difference between Planning Commission and NITI Aayog?\n\n(SSC CGL style)",
+        "options": [
+          { "id": "A", "text": "Planning Commission: Bottom-up, NITI Aayog: Top-down" },
+          { "id": "B", "text": "Planning Commission: Top-down, NITI Aayog: Bottom-up" },
+          { "id": "C", "text": "Both follow top-down approach" },
+          { "id": "D", "text": "Both follow bottom-up approach" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Correct approach difference:\n\nPlanning Commission = TOP-DOWN\n• Centre se decisions aate the\n• States ko implement karna hota tha\n• Limited consultation\n• Rigid plans\n\nNITI Aayog = BOTTOM-UP\n• States ki inputs li jaati hain\n• Customized strategies\n• Cooperative federalism\n• Flexible approach\n\nYe fundamental difference hai jo har exam mein important hai — UPSC, BPSC, SSC, Railway sabhi mein!"
+      },
+      "navigation": {
+        "next": "card_47_mains_perspective",
+        "button_text": "Mains Perspective ➔"
+      }
+    },
+    {
+      "card_id": "card_47_mains_perspective",
+      "card_slug": "card_47_mains_perspective",
+      "type": "chat",
+      "concept_id": "mains_analysis",
+      "level": 5,
+      "progress": {
+        "current": 47,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "UPSC Mains/BPSC Mains ke liye critical analysis: NITI Aayog ek 'paradigm shift' hai — command economy se cooperative governance ki taraf. Positive: Democratic, inclusive, innovation-focused, state autonomy. Negative: Lack of financial teeth, implementation gaps, accountability issues, over-dependence on states' willingness."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir balanced answer kaise likhein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Structure: (1) Introduction — transformation from Planning Commission to NITI Aayog, (2) Positives — cooperative federalism, flexibility, innovation ecosystem, (3) Challenges — financial limitations, implementation gaps, (4) Way forward — strengthen monitoring, selective financial powers, better Centre-State coordination, (5) Conclusion — right direction but needs refinement."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Bihar ke context mein kya add karein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_bihar_integration",
+        "button_text": "Bihar Integration ➔"
+      }
+    },
+    {
+      "card_id": "card_48_bihar_integration",
+      "card_slug": "card_48_bihar_integration",
+      "type": "chat",
+      "concept_id": "bihar_answer_integration",
+      "level": 5,
+      "progress": {
+        "current": 48,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Mains Answer Integration: Bihar context mein mention karo — (1) 13 Aspirational Districts aur unka progress, (2) SDG Index mein 'Performer' category — earlier 'Aspirant' se improvement, (3) Atal Tinkering Labs — innovation ecosystem, (4) Specific schemes alignment — Jeevika, Mukhyamantri Balika Cycle Yojana with SDG goals, (5) Challenges — flood management, migration, agricultural productivity."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab state-specific examples dena important hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! BPSC TRE mein local context bohot important hai. Generic answer nahi chalega. Bihar ke real problems (floods, migration, poverty), real schemes (Saat Nishchay, Jeevika), real data (13 Aspirational Districts) — ye sab mention karo. Ye hi difference banata hai average aur top answer mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect Sir! Ab poora topic clear hai!"
+        }
+      },
+      "navigation": {
+        "next": "card_49_final_tips",
+        "button_text": "Final Exam Tips ➔"
+      }
+    },
+    {
+      "card_id": "card_49_final_tips",
+      "card_slug": "card_49_final_tips",
+      "type": "chat",
+      "concept_id": "exam_strategy",
+      "level": 5,
+      "progress": {
+        "current": 49,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Final Exam Tips:\n\n✅ Remember date: 1 Jan 2015\n✅ Full form: National Institution for Transforming India\n✅ Chairperson: PM (not President!)\n✅ Key difference: No financial powers\n✅ Approach: Bottom-up (not top-down)\n✅ SDGs: 17 total\n✅ Aspirational Districts: 112 (Bihar has 13)\n✅ Major initiative: Atal Innovation Mission"
+        },
+        {
+          "speaker": "raju",
+          "text": "Common mistakes kya avoid karni hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⚠️ Mistakes to avoid:\n\n❌ NITI Aayog banati hai Five Year Plans (WRONG — Planning Commission banati thi)\n❌ Financial powers hain (WRONG — nahi hain)\n❌ President is Chairperson (WRONG — PM hai)\n❌ Top-down approach (WRONG — bottom-up hai)\n❌ SDG India Index UN publish karti hai (WRONG — NITI Aayog karti hai)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Dhanyavaad Sir! Sab crystal clear ho gaya! Ready for exam! 💪"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_completion",
+        "button_text": "Chapter Complete! 🏆"
+      }
+    },
+    {
+      "card_id": "card_50_completion",
+      "card_slug": "card_50_completion",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 5,
+      "progress": {
+        "current": 50,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER COMPLETED!",
+        "badge_emoji": "🎓",
+        "completed_topic": "NITI Aayog in Indian Economy — Complete Mastery",
+        "xp_earned": 500,
+        "milestone_progress": "100% Complete — Officer Level Achieved!",
+        "motivational_quote": "🎉 PHENOMENAL ACHIEVEMENT! 🎉\n\nTumne master kar liya:\n✅ NITI Aayog ki complete formation aur structure\n✅ Planning Commission se comparison\n✅ Cooperative federalism ka concept\n✅ Major initiatives — Aspirational Districts, SDG Index, AIM\n✅ ⭐ Bihar-specific integration (13 districts, schemes)\n✅ Challenges, criticisms aur future roadmap\n✅ UPSC/BPSC level multi-statement aur assertion-reason questions\n\nAb ye topic tumhara STRENGTH hai! UPSC, BPSC, SSC, Railway — kahin bhi confident answer de sakte ho!\n\n\"NITI Aayog is not just a policy think tank, it's a transformation partner\" — aur tum ab iske expert ho! 🌟\n\nKeep learning, keep growing! All the best for your exams! 🚀📚"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Home 🏠"
+      }
+    }
+  ]
+}
+```
