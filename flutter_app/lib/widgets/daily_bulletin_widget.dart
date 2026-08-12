@@ -12,7 +12,8 @@ class DailyBulletinWidget extends StatefulWidget {
 }
 
 class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
-  List<dynamic> _allNewsList = [];
+  List<dynamic> _biharNewsList = [];
+  List<dynamic> _nationalNewsList = [];
   List<dynamic> _savedNewsList = [];
   bool _isLoadingNews = true;
 
@@ -95,10 +96,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
         try {
           final data = jsonDecode(cachedJson);
           if (mounted) {
-            setState(() {
-              _allNewsList = _parseNewsList(data);
-              _isLoadingNews = false;
-            });
+            _parseAndSetNews(data);
             return;
           }
         } catch (_) {}
@@ -116,10 +114,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
         final data = jsonDecode(decoded);
 
         if (mounted) {
-          setState(() {
-            _allNewsList = _parseNewsList(data);
-            _isLoadingNews = false;
-          });
+          _parseAndSetNews(data);
         }
 
         await prefs.setString(cacheNewsData, decoded);
@@ -133,43 +128,28 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
     }
   }
 
-  List<dynamic> _parseNewsList(dynamic data) {
-    if (data is List) {
-      return data;
-    } else if (data is Map) {
-      if (data.containsKey('bihar_news') || data.containsKey('national_news')) {
-        List combined = [];
-        if (data['bihar_news'] is List) combined.addAll(data['bihar_news']);
-        if (data['national_news'] is List) combined.addAll(data['national_news']);
-        return combined;
-      } else if (data.containsKey('news')) {
-        return data['news'] as List;
+  // 🎯 PURE STRUCTURAL SEPARATION (BIHAR vs NATIONAL)
+  void _parseAndSetNews(dynamic data) {
+    List<dynamic> bihar = [];
+    List<dynamic> national = [];
+
+    if (data is Map) {
+      if (data.containsKey('bihar_news') && data['bihar_news'] is List) {
+        bihar = data['bihar_news'];
       }
+      if (data.containsKey('national_news') && data['national_news'] is List) {
+        national = data['national_news'];
+      }
+    } else if (data is List) {
+      // Fallback in case JSON is flat list
+      national = data;
     }
-    return [];
-  }
 
-  // 🔍 AUTO FILTER BIHAR VS NATIONAL
-  List<dynamic> get _biharNewsList {
-    return _allNewsList.where((news) {
-      if (news is! Map) return false;
-      final id = (news['id'] ?? '').toString().toLowerCase();
-      final tag = (news['exam_tag'] ?? '').toString().toLowerCase();
-      final title = (news['title'] ?? '').toString().toLowerCase();
-      final cat = (news['category'] ?? '').toString().toLowerCase();
-
-      return id.startsWith('bih') ||
-          tag.contains('bpsc') ||
-          tag.contains('bssc') ||
-          tag.contains('bihar') ||
-          title.contains('bihar') ||
-          cat.contains('bihar');
-    }).toList();
-  }
-
-  List<dynamic> get _nationalNewsList {
-    final biharSet = _biharNewsList.toSet();
-    return _allNewsList.where((news) => !biharSet.contains(news)).toList();
+    setState(() {
+      _biharNewsList = bihar;
+      _nationalNewsList = national;
+      _isLoadingNews = false;
+    });
   }
 
   @override
@@ -201,9 +181,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
       );
     }
 
-    final biharList = _biharNewsList;
-    final nationalList = _nationalNewsList;
-    final activeList = _selectedNewsTab == 0 ? biharList : nationalList;
+    final activeList = _selectedNewsTab == 0 ? _biharNewsList : _nationalNewsList;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -246,8 +224,8 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
               ),
               child: Row(
                 children: [
-                  _buildNewsToggleChip('📍 Bihar (${biharList.length})', 0),
-                  _buildNewsToggleChip('🇮🇳 National (${nationalList.length})', 1),
+                  _buildNewsToggleChip('📍 Bihar (${_biharNewsList.length})', 0),
+                  _buildNewsToggleChip('🇮🇳 National (${_nationalNewsList.length})', 1),
                 ],
               ),
             ),
@@ -481,7 +459,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
   }
 }
 
-// 📏 EXPANDABLE PAGE VIEW HELPER (FIXED HEIGHT CALCULATION BUG)
+// 📏 EXPANDABLE PAGE VIEW HELPER
 class ExpandablePageView extends StatefulWidget {
   final PageController controller;
   final int itemCount;
