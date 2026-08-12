@@ -2,7 +2,7 @@ name: 5. Run PIB Google Alerts Scraper
 
 on:
   schedule:
-    # Har 4 ghante par automatic chalega (At minute 0 of UTC 00, 04, 08, 12, 16, 20)
+    # Har 4 ghante par automatic chalega
     - cron: '0 */4 * * *'
   workflow_dispatch: # GitHub Actions tab se manual run karne ke liye
 
@@ -59,22 +59,22 @@ jobs:
           python pib_alerts_scraper.py
 
       # =====================================================
-      # 5. COMMIT & PUSH JSON FILE
+      # 5. COMMIT & PUSH RAWNEWS.JSON
       # =====================================================
-      - name: Commit and Push pib_alerts_raw.json
+      - name: Commit and Push rawnews.json
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
 
-          git add pib_alerts_raw.json
+          git add rawnews.json
 
           if git diff --cached --quiet; then
-            echo "ℹ️ No changes to commit in pib_alerts_raw.json"
+            echo "ℹ️ No changes to commit in rawnews.json"
             exit 0
           fi
 
-          git commit -m "Update PIB Google Alerts Raw JSON [skip ci]"
+          git commit -m "Update PIB Google Alerts Raw JSON in rawnews.json [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
 
-          echo "✅ pib_alerts_raw.json pushed successfully."
+          echo "✅ rawnews.json pushed successfully."
