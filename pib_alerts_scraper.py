@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import html
 import requests
@@ -17,6 +18,9 @@ FEED_URL = os.environ.get(
 
 RAW_NEWS_FILE = "rawnews.json"
 IST = timezone(timedelta(hours=5, minutes=30))
+
+MIN_CONTENT_WORDS = 100  # Minimum 100 words required
+MAX_CONTENT_WORDS = 500  # Maximum 500 words strictly enforced
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -42,6 +46,33 @@ def clean_text(text):
     return html.unescape(" ".join(text.split())).strip()
 
 
+def word_count(text):
+    """Calculates exact word count in text"""
+    if not text:
+        return 0
+    return len(re.findall(r'\S+', text))
+
+
+def process_content_limits(text, min_words=100, max_words=500):
+    """
+    Enforces minimum and maximum word limits:
+    - Trims text to max_words if longer than max_words.
+    - Discards text if shorter than min_words.
+    """
+    text = clean_text(text)
+    total_words = word_count(text)
+
+    if total_words < min_words:
+        return "", 0  # Rejects content shorter than 100 words
+
+    words = text.split()
+    if len(words) > max_words:
+        text = " ".join(words[:max_words]) + "..."
+        total_words = max_words
+
+    return text, total_words
+
+
 def scrape_full_url_content(target_url):
     """URL Par Visit Karke Page ka Entire/Full Article Text Scrape Karta Hai"""
     try:
@@ -61,12 +92,7 @@ def scrape_full_url_content(target_url):
             else:
                 full_text = soup.get_text(separator=" ")
 
-            cleaned = clean_text(full_text)
-            # Max 500 words limit matching target rawnews.json standard
-            words = cleaned.split()
-            if len(words) > 500:
-                return " ".join(words[:500]) + "..."
-            return cleaned
+            return clean_text(full_text)
 
     except Exception as e:
         print(f"  ⚠️ Could not fetch full webpage content for {target_url[:40]}: {e}")
@@ -116,6 +142,7 @@ def scrape_pib_alerts():
     # Duplicate check using existing URLs
     seen_urls = {item.get("url") for item in existing_national if item.get("url")}
     added_count = 0
+    rejected_count = 0
 
     for idx, entry in enumerate(entries, 1):
         raw_title = entry.get("title", "")
@@ -137,14 +164,26 @@ def scrape_pib_alerts():
         print(f"🌐 [{idx}/{len(entries)}] Scraping Full Page Content: {clean_title_text[:45]}...")
         
         # Open URL and Scrape Full Webpage Content
-        full_article_content = scrape_full_url_content(real_target_url)
+        raw_article_content = scrape_full_url_content(real_target_url)
 
-        # Fallback to RSS snippet if URL scraping fails
-        if not full_article_content:
-            full_article_content = clean_text(BeautifulSoup(feed_snippet, "html.parser").get_text())
+        # Fallback to RSS snippet if URL scraping fails or is empty
+        if not raw_article_content:
+            raw_article_content = clean_text(BeautifulSoup(feed_snippet, "html.parser").get_text())
 
-        content_words = len(full_article_content.split())
-        content_chars = len(full_article_content)
+        # Enforce Minimum 100 Words and Maximum 500 Words Limits
+        final_content, words_total = process_content_limits(
+            raw_article_content, 
+            min_words=MIN_CONTENT_WORDS, 
+            max_words=MAX_CONTENT_WORDS
+        )
+
+        # Reject content if less than 100 words
+        if not final_content or words_total < MIN_CONTENT_WORDS:
+            print(f"🚫 Discarded (Too short: {words_total} words < {MIN_CONTENT_WORDS}): {clean_title_text[:40]}...")
+            rejected_count += 1
+            continue
+
+        content_chars = len(final_content)
 
         # Target structure item
         item = {
@@ -152,9 +191,9 @@ def scrape_pib_alerts():
             "title": clean_title_text,
             "url": real_target_url,
             "date": formatted_date,
-            "content": full_article_content,
+            "content": final_content,
             "content_chars": content_chars,
-            "content_words": content_words,
+            "content_words": words_total,
             "type": "Press Release"
         }
 
@@ -179,7 +218,7 @@ def scrape_pib_alerts():
         json.dump(raw_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 70)
-    print(f"💾 Successfully appended {added_count} items to '{RAW_NEWS_FILE}'!")
+    print(f"💾 Appended {added_count} items to '{RAW_NEWS_FILE}' (Rejected {rejected_count} items < 100 words).")
     print(f"📊 Total National: {raw_data['national_raw_count']} | Grand Total: {raw_data['total_raw_count']}")
     print("=" * 70)
 
