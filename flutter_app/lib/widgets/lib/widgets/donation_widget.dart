@@ -12,7 +12,7 @@ class DonationWidget extends StatefulWidget {
 
 class _DonationWidgetState extends State<DonationWidget> {
   // 📌 APNI UPI ID YAHAN CHANGE KAREIN
-  static const String upiId = "YOUR_UPI_ID_HERE@upi"; 
+  static const String upiId = "me.nitesh47@okhdfcbank"; 
   static const String payeeName = "MockTester Student Fund";
 
   int _selectedAmount = 30; // Default ₹30
@@ -114,7 +114,7 @@ class _DonationWidgetState extends State<DonationWidget> {
               decoration: BoxDecoration(
                 color: widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.orange.shade300),
+                border: Border.all(color: const Color(0xFF818CF8)),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -139,9 +139,9 @@ class _DonationWidgetState extends State<DonationWidget> {
                       );
                     },
                     child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                       decoration: BoxDecoration(
-                        color: const Color(0xFFF97316),
+                        color: const Color(0xFF4F46E5),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: const Text(
@@ -171,23 +171,21 @@ class _DonationWidgetState extends State<DonationWidget> {
         ? (int.tryParse(_customAmountController.text) ?? 0)
         : _selectedAmount;
 
+    final cardBg = widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC);
+    final borderColor = widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+    final titleColor = widget.isDarkMode ? Colors.white : const Color(0xFF0F172A);
+    final descColor = widget.isDarkMode ? Colors.white70 : const Color(0xFF475569);
+
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: widget.isDarkMode ? const Color(0xFF1E1917) : const Color(0xFFFFFBEB),
-        borderRadius: BorderRadius.circular(22),
+        color: cardBg,
+        borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: widget.isDarkMode ? const Color(0xFF443631) : const Color(0xFFFDE68A),
+          color: borderColor,
           width: 1.2,
         ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.orange.withOpacity(widget.isDarkMode ? 0.1 : 0.08),
-            blurRadius: 12,
-            offset: const Offset(0, 4),
-          ),
-        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -196,19 +194,19 @@ class _DonationWidgetState extends State<DonationWidget> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: BoxDecoration(
-              color: const Color(0xFFF97316).withOpacity(0.12),
+              color: const Color(0xFF4F46E5).withOpacity(0.1),
               borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: const Color(0xFFF97316).withOpacity(0.3)),
+              border: Border.all(color: const Color(0xFF4F46E5).withOpacity(0.25)),
             ),
             child: const Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                CircleAvatar(radius: 3, backgroundColor: Color(0xFFF97316)),
+                CircleAvatar(radius: 3, backgroundColor: Color(0xFF4F46E5)),
                 SizedBox(width: 6),
                 Text(
                   'COMMUNITY FUNDED PLATFORM',
                   style: TextStyle(
-                    color: Color(0xFFFB923C),
+                    color: Color(0xFF4F46E5),
                     fontSize: 10,
                     fontWeight: FontWeight.w800,
                     letterSpacing: 0.5,
@@ -223,9 +221,9 @@ class _DonationWidgetState extends State<DonationWidget> {
           Text(
             'Help Us Keep MockTester 100% Free ❤️',
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 17,
               fontWeight: FontWeight.w800,
-              color: widget.isDarkMode ? const Color(0xFFFAFAF9) : const Color(0xFF78350F),
+              color: titleColor,
               letterSpacing: -0.2,
             ),
           ),
@@ -233,22 +231,20 @@ class _DonationWidgetState extends State<DonationWidget> {
           Text(
             'Hum education par ₹499/yr paywalls nahi lagate. Apna contribution choose karein aur Bihar ke rural aspirants ke liye high-quality tests free rakhne mein madad karein.',
             style: TextStyle(
-              fontSize: 12.5,
-              height: 1.4,
-              color: widget.isDarkMode ? const Color(0xFFD6D3D1) : const Color(0xFF92400E),
+              fontSize: 12,
+              height: 1.45,
+              color: descColor,
             ),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 14),
 
           // 📊 METER CARD
           Container(
-            padding: const EdgeInsets.all(14),
+            padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: widget.isDarkMode ? const Color(0xFF141110) : Colors.white,
+              color: widget.isDarkMode ? const Color(0xFF0F172A) : Colors.white,
               borderRadius: BorderRadius.circular(14),
-              border: Border.all(
-                color: widget.isDarkMode ? const Color(0xFF3B2D29) : const Color(0xFFFDE68A),
-              ),
+              border: Border.all(color: borderColor),
             ),
             child: Column(
               children: [
@@ -260,7 +256,7 @@ class _DonationWidgetState extends State<DonationWidget> {
                       style: TextStyle(
                         fontSize: 11.5,
                         fontWeight: FontWeight.bold,
-                        color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                        color: titleColor,
                       ),
                     ),
                     const Text(
@@ -268,7 +264,7 @@ class _DonationWidgetState extends State<DonationWidget> {
                       style: TextStyle(
                         fontSize: 11.5,
                         fontWeight: FontWeight.w900,
-                        color: Color(0xFFF97316),
+                        color: Color(0xFF4F46E5),
                       ),
                     ),
                   ],
@@ -278,11 +274,11 @@ class _DonationWidgetState extends State<DonationWidget> {
                 // PROGRESS BAR
                 ClipRRect(
                   borderRadius: BorderRadius.circular(10),
-                  child: const LinearProgressIndicator(
+                  child: LinearProgressIndicator(
                     value: 0.42, // 42%
                     minHeight: 7,
-                    backgroundColor: Color(0xFF26201E),
-                    valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFF97316)),
+                    backgroundColor: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                    valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF4F46E5)),
                   ),
                 ),
                 const SizedBox(height: 6),
@@ -297,7 +293,7 @@ class _DonationWidgetState extends State<DonationWidget> {
               ],
             ),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 14),
 
           // 💰 PRESET CHIPS (₹30, ₹50, ₹100, Custom)
           Text(
@@ -305,7 +301,7 @@ class _DonationWidgetState extends State<DonationWidget> {
             style: TextStyle(
               fontSize: 11.5,
               fontWeight: FontWeight.bold,
-              color: widget.isDarkMode ? const Color(0xFFD6D3D1) : const Color(0xFF78350F),
+              color: titleColor,
             ),
           ),
           const SizedBox(height: 8),
@@ -328,7 +324,7 @@ class _DonationWidgetState extends State<DonationWidget> {
             TextField(
               controller: _customAmountController,
               keyboardType: TextInputType.number,
-              style: TextStyle(color: widget.isDarkMode ? Colors.white : Colors.black),
+              style: TextStyle(color: titleColor, fontSize: 13),
               decoration: InputDecoration(
                 hintText: 'Enter Custom Amount in ₹',
                 hintStyle: const TextStyle(fontSize: 12, color: Colors.grey),
@@ -336,13 +332,13 @@ class _DonationWidgetState extends State<DonationWidget> {
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
-                  borderSide: const BorderSide(color: Color(0xFFF97316)),
+                  borderSide: const BorderSide(color: Color(0xFF4F46E5)),
                 ),
               ),
               onChanged: (_) => setState(() {}),
             ),
           ],
-          const SizedBox(height: 16),
+          const SizedBox(height: 14),
 
           // 💳 DONATE CTA BUTTON
           SizedBox(
@@ -350,10 +346,10 @@ class _DonationWidgetState extends State<DonationWidget> {
             child: ElevatedButton(
               onPressed: _processUpiPayment,
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFF97316),
+                backgroundColor: const Color(0xFF4F46E5),
                 foregroundColor: Colors.white,
-                elevation: 3,
-                padding: const EdgeInsets.symmetric(vertical: 13),
+                elevation: 0,
+                padding: const EdgeInsets.symmetric(vertical: 12),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
               ),
               child: Row(
@@ -363,7 +359,7 @@ class _DonationWidgetState extends State<DonationWidget> {
                   const SizedBox(width: 8),
                   Text(
                     'Donate ₹$currentAmount via UPI',
-                    style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w900),
+                    style: const TextStyle(fontSize: 13.5, fontWeight: FontWeight.w800),
                   ),
                 ],
               ),
@@ -390,19 +386,21 @@ class _DonationWidgetState extends State<DonationWidget> {
           alignment: Alignment.center,
           decoration: BoxDecoration(
             color: isSelected
-                ? const Color(0xFFF97316)
-                : (widget.isDarkMode ? const Color(0xFF26201E) : const Color(0xFFFEF3C7)),
+                ? const Color(0xFF4F46E5)
+                : (widget.isDarkMode ? const Color(0xFF0F172A) : Colors.white),
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
-              color: isSelected ? const Color(0xFFF97316) : const Color(0xFFFDE68A),
+              color: isSelected
+                  ? const Color(0xFF4F46E5)
+                  : (widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1)),
             ),
           ),
           child: Text(
             label,
             style: TextStyle(
-              fontSize: 12.5,
+              fontSize: 12,
               fontWeight: FontWeight.bold,
-              color: isSelected ? Colors.white : (widget.isDarkMode ? Colors.white : const Color(0xFF92400E)),
+              color: isSelected ? Colors.white : (widget.isDarkMode ? Colors.white70 : const Color(0xFF334155)),
             ),
           ),
         ),
@@ -424,19 +422,21 @@ class _DonationWidgetState extends State<DonationWidget> {
           alignment: Alignment.center,
           decoration: BoxDecoration(
             color: _isCustom
-                ? const Color(0xFFF97316)
-                : (widget.isDarkMode ? const Color(0xFF26201E) : const Color(0xFFFEF3C7)),
+                ? const Color(0xFF4F46E5)
+                : (widget.isDarkMode ? const Color(0xFF0F172A) : Colors.white),
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
-              color: _isCustom ? const Color(0xFFF97316) : const Color(0xFFFDE68A),
+              color: _isCustom
+                  ? const Color(0xFF4F46E5)
+                  : (widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1)),
             ),
           ),
           child: Text(
             'Custom',
             style: TextStyle(
-              fontSize: 12.5,
+              fontSize: 12,
               fontWeight: FontWeight.bold,
-              color: _isCustom ? Colors.white : (widget.isDarkMode ? Colors.white : const Color(0xFF92400E)),
+              color: _isCustom ? Colors.white : (widget.isDarkMode ? Colors.white70 : const Color(0xFF334155)),
             ),
           ),
         ),
