@@ -123,7 +123,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
     final cardBg = widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC);
     final textColor = widget.isDarkMode ? Colors.white : const Color(0xFF0F172A);
     
-    // 🎯 SIRF TOP 2 JOBS FILTER KARENGE
+    // SIRF TOP 2 JOBS
     final displayedJobs = _filteredJobs.take(2).toList();
 
     return Container(
@@ -140,18 +140,31 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // HEADER
+          // 📢 HEADER (Sarkari Job Title Updated Here)
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Latest Notifications',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: -0.2,
-                  color: textColor,
-                ),
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(6),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF2563EB).withOpacity(0.12),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Icon(Icons.work_rounded, size: 18, color: Color(0xFF2563EB)),
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    'Sarkari Job Alerts', // 👈 Title Updated
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: -0.2,
+                      color: textColor,
+                    ),
+                  ),
+                ],
               ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2.5),
@@ -187,7 +200,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
           const SizedBox(height: 12),
 
-          // 🎯 TOP 2 JOBS LIST (NO SCROLL CONFLICT, CLEAN SCREEN SCROLL)
+          // TOP 2 JOBS LIST (NO VERTICAL SCROLLBAR/CONFLICT)
           displayedJobs.isEmpty
               ? const Padding(
                   padding: EdgeInsets.symmetric(vertical: 20),
@@ -199,8 +212,8 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
                   ),
                 )
               : ListView.builder(
-                  shrinkWrap: true, // 👈 Height utni hi lega jitni 2 items ki hai
-                  physics: const NeverScrollableScrollPhysics(), // 👈 Scroll conflict complete removed!
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: displayedJobs.length,
                   itemBuilder: (context, index) {
                     final job = displayedJobs[index];
@@ -210,7 +223,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
 
           const SizedBox(height: 8),
 
-          // "VIEW ALL JOBS" BUTTON
+          // VIEW ALL JOBS BUTTON
           InkWell(
             onTap: () => _openLink(_allJobsWebUrl),
             borderRadius: BorderRadius.circular(8),
