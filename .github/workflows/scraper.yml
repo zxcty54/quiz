@@ -1,4 +1,4 @@
-Name: 1. Run Web Scraper Only
+name: 1. Run Web Scraper Only
 
 on:
   schedule:
@@ -6,7 +6,6 @@ on:
     - cron: '30 1 * * *'
   workflow_dispatch:
 
-# Ek time par sirf ek scraper run hoga
 concurrency:
   group: news-scraper
   cancel-in-progress: false
@@ -19,26 +18,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # =====================================================
       # 1. CHECKOUT
-      # =====================================================
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: main
 
-      # =====================================================
       # 2. SETUP PYTHON
-      # =====================================================
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      # =====================================================
       # 3. INSTALL DEPENDENCIES
-      # =====================================================
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
@@ -52,18 +45,14 @@ jobs:
             feedparser \
             googlenewsdecoder
 
-      # =====================================================
       # 4. RUN SCRAPER
-      # =====================================================
       - name: Run Scraper Script
         env:
           SCRAPINGANT_API_KEY: ${{ secrets.SCRAPINGANT_API_KEY }}
         run: |
           python scraper.py
 
-      # =====================================================
       # 5. CHECK JSON
-      # =====================================================
       - name: Check rawnews.json
         run: |
           if [ ! -f rawnews.json ]; then
@@ -82,138 +71,75 @@ jobs:
           echo ""
           echo "🔎 JSON validation:"
 
-          python - <<'PY'
+          python - << 'PY'
           import json
+          import sys
 
-          with open("rawnews.json", "r", encoding="utf-8") as f:
-              data = json.load(f)
+          try:
+              with open("rawnews.json", "r", encoding="utf-8") as f:
+                  data = json.load(f)
 
-          print("✅ Valid JSON")
+              print("✅ Valid JSON")
+              print("🇮🇳 National:", data.get("national_raw_count", 0))
+              print("🏛️ Bihar:", data.get("bihar_raw_count", 0))
 
-          print(
-              "🇮🇳 National:",
-              data.get("national_raw_count", 0)
-          )
+              national = data.get("national_raw_news", [])
+              bihar = data.get("bihar_raw_news", [])
 
-          print(
-              "🏛️ Bihar:",
-              data.get("bihar_raw_count", 0)
-          )
+              print("\nNational records:", len(national))
+              print("Bihar records:", len(bihar))
 
-          print(
-              "📰 Sources:",
-              json.dumps(
-                  data.get("source_breakdown", {}),
-                  ensure_ascii=False,
-                  indent=2
-              )
-          )
+              if len(national) == 0 and len(bihar) == 0:
+                  print("\n❌ SCRAPER RETURNED ZERO NEWS")
+                  print("❌ Existing rawnews.json will NOT be committed.")
+                  sys.exit(2)
 
-          national = data.get("national_raw_news", [])
-          bihar = data.get("bihar_raw_news", [])
+              all_items = national + bihar
+              bad = 0
 
-          print("")
-          print("National records:", len(national))
-          print("Bihar records:", len(bihar))
+              for i, item in enumerate(all_items, 1):
+                  title = str(item.get("title", "")).strip()
+                  content = str(item.get("content", "")).strip()
+                  url = str(item.get("url", "")).strip()
 
-          # -----------------------------------------
-          # IMPORTANT:
-          # Do not allow an accidentally empty scrape
-          # to overwrite the existing JSON.
-          # -----------------------------------------
+                  if not title or not url or not content or content == title:
+                      bad += 1
 
-          if len(national) == 0 and len(bihar) == 0:
-              print("")
-              print("❌ SCRAPER RETURNED ZERO NEWS")
-              print("❌ Existing rawnews.json will NOT be committed.")
-              raise SystemExit(2)
+              print(f"\n⚠️ Content validation warnings: {bad}")
+              print("✅ JSON check completed.")
 
-          # -----------------------------------------
-          # Content validation
-          # -----------------------------------------
-
-          all_items = national + bihar
-
-          bad = 0
-
-          for i, item in enumerate(all_items, 1):
-
-              title = str(item.get("title", "")).strip()
-              content = str(item.get("content", "")).strip()
-              url = str(item.get("url", "")).strip()
-
-              if not title:
-                  print(f"⚠️ Item {i}: missing title")
-                  bad += 1
-
-              if not url:
-                  print(f"⚠️ Item {i}: missing URL")
-                  bad += 1
-
-              if not content:
-                  print(
-                      f"⚠️ Item {i}: EMPTY CONTENT | "
-                      f"{title[:100]}"
-                  )
-                  bad += 1
-
-              # Title must NEVER become content
-              if content == title:
-                  print(
-                      f"⚠️ Item {i}: CONTENT == TITLE | "
-                      f"{title[:100]}"
-                  )
-                  bad += 1
-
-          print("")
-          print(f"⚠️ Content validation warnings: {bad}")
-
-          print("")
-          print("✅ JSON check completed.")
+          except Exception as e:
+              print(f"❌ JSON Reading Error: {e}")
+              sys.exit(1)
           PY
 
-      # =====================================================
       # 6. SAVE GENERATED JSON TEMPORARILY
-      # =====================================================
       - name: Protect Generated JSON
         run: |
           cp rawnews.json /tmp/rawnews.generated.json
-
           echo "✅ Generated rawnews.json backed up."
 
-      # =====================================================
       # 7. SYNC WITH LATEST MAIN
-      # =====================================================
       - name: Sync With Latest Main
         run: |
           echo "🔄 Fetching latest main..."
-
           git fetch origin main
-
           echo "🔄 Resetting working tree to latest main..."
-
           git reset --hard origin/main
-
           echo "✅ Repository synchronized with latest main."
 
-      # =====================================================
       # 8. RESTORE SCRAPED JSON
-      # =====================================================
       - name: Restore Generated JSON
         run: |
           cp /tmp/rawnews.generated.json rawnews.json
-
           echo "✅ New scraped rawnews.json restored."
 
-      # =====================================================
       # 9. CHECK DIFF
-      # =====================================================
       - name: Check Changes
         run: |
           echo "========================================="
           echo "📊 Git changes"
           echo "========================================="
-
           git status --short
 
           if git diff --quiet -- rawnews.json; then
@@ -222,9 +148,7 @@ jobs:
             echo "📝 rawnews.json has changed."
           fi
 
-      # =====================================================
       # 10. COMMIT AND PUSH
-      # =====================================================
       - name: Commit and Push rawnews.json
         run: |
           git config --local user.email "action@github.com"
