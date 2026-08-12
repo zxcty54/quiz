@@ -27,6 +27,32 @@ HEADERS = {
 }
 
 
+# ============================================================
+# BANNED TOPICS & EXAM IRRELEVANCE REGEX FILTER
+# ============================================================
+
+BANNED_TOPICS_REGEX = r'\b(' + '|'.join([
+    # Routine Defense Yards & Vessels (Non-Policy Routine Launches)
+    r'patrol vessel', r'offshore patrol', r'ngopv', r'yard \d+', r'launch of next generation',
+    # Speculative Finance & Private Commercial Market Rankings
+    r'upi transaction', r'upi transactions', r'upi charges', r'top 5 indian states', r'ev registrations', r'ev adoption',
+    # Fact Checks, Gossip & Viral Items
+    r'fact check', r'fact-check', r'viral video', r'fake news',
+    # Corporate Lawsuits, Scams & Stock Fluctuations
+    r'corporate fraud', r'bribery', r'court lawsuit', r'adani', r'stock market', r'sensex', r'nifty', r'share price',
+    # Foreign Visa & Local Protests/Clashes
+    r'visa policy', r'immigration rule', r'lathi-charge', r'lathi charge', r'protest', r'student strike', r'bandh'
+]) + r')\b'
+
+
+def is_topic_banned(title, content):
+    """Returns True if news contains exam-irrelevant or banned topic keywords."""
+    combined_text = f"{title} {content}".lower()
+    if re.search(BANNED_TOPICS_REGEX, combined_text, flags=re.IGNORECASE):
+        return True
+    return False
+
+
 def extract_real_url(google_url):
     """Google Alert Redirect URL se Real Target Link Extract karta hai"""
     try:
@@ -170,6 +196,12 @@ def scrape_pib_alerts():
         if not raw_article_content:
             raw_article_content = clean_text(BeautifulSoup(feed_snippet, "html.parser").get_text())
 
+        # 🚫 BANNED TOPICS CHECK
+        if is_topic_banned(clean_title_text, raw_article_content):
+            print(f"🚫 Discarded (Banned Topic): {clean_title_text[:40]}...")
+            rejected_count += 1
+            continue
+
         # Enforce Minimum 100 Words and Maximum 500 Words Limits
         final_content, words_total = process_content_limits(
             raw_article_content, 
@@ -218,7 +250,7 @@ def scrape_pib_alerts():
         json.dump(raw_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 70)
-    print(f"💾 Appended {added_count} items to '{RAW_NEWS_FILE}' (Rejected {rejected_count} items < 100 words).")
+    print(f"💾 Appended {added_count} items to '{RAW_NEWS_FILE}' (Rejected/Skipped {rejected_count} items).")
     print(f"📊 Total National: {raw_data['national_raw_count']} | Grand Total: {raw_data['total_raw_count']}")
     print("=" * 70)
 
