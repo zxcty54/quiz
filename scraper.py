@@ -57,6 +57,32 @@ warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 
 # ============================================================
+# BANNED TOPICS & EXAM IRRELEVANCE REGEX FILTER
+# ============================================================
+
+BANNED_TOPICS_REGEX = r'\b(' + '|'.join([
+    # Routine Defense Yards & Vessels (Non-Policy Routine Launches)
+    r'patrol vessel', r'offshore patrol', r'ngopv', r'yard \d+', 
+    # Speculative Finance & Private Commercial Market Rankings
+    r'upi transaction', r'upi transactions', r'upi charges', r'ev registrations', r'ev adoption',
+    # Fact Checks, Gossip & Viral Items
+    r'fact check', r'fact-check', r'viral video', r'fake news',
+    # Corporate Lawsuits, Scams & Stock Fluctuations
+    r'corporate fraud', r'bribery', r'court lawsuit', r'adani', r'stock market', r'sensex', r'nifty', r'share price',
+    # Foreign Visa & Local Protests/Clashes
+    r'visa policy', r'immigration rule', r'lathi-charge', r'lathi charge', r'protest', r'student strike', r'bandh'
+]) + r')\b'
+
+
+def is_topic_banned(title, content):
+    """Returns True if news contains exam-irrelevant or banned topic keywords."""
+    combined_text = f"{title} {content}".lower()
+    if re.search(BANNED_TOPICS_REGEX, combined_text, flags=re.IGNORECASE):
+        return True
+    return False
+
+
+# ============================================================
 # SPECIAL NIC BIHAR GOVT SSL ADAPTER
 # ============================================================
 
@@ -628,6 +654,11 @@ def make_item(source, title, url, date=None, content="", item_type="Scraped", is
     # Block Generic Circular Table Index Pages
     if "order/circular/notification" in clean_title_str.lower() or "rowid=2951" in clean_url_str.lower():
         warn(f"REJECTED CIRCULAR INDEX PAGE | {source} | {clean_title_str[:45]}")
+        return None
+
+    # BANNED TOPICS & EXAM IRRELEVANCE REGEX FILTER
+    if is_topic_banned(clean_title_str, clean_content_str):
+        warn(f"REJECTED BANNED TOPIC | {source} | {clean_title_str[:45]}")
         return None
 
     # STRICT WORD COUNT CHECK: Discard short 20-30 word snippets
