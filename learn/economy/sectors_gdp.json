@@ -1,0 +1,2453 @@
+
+{
+  "topic_id": "sectors_gdp_indian_economy",
+  "topic_title": "Sectors and GDP in Indian Economy",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "📊 Sectors and GDP in Indian Economy",
+        "icon": "💰",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Understanding Primary, Secondary & Tertiary Sectors with real-life examples",
+          "Classification of economic activities in India",
+          "GDP calculation and measurement techniques",
+          "Historical shifts in sector contributions (BPSC favorite)",
+          "Employment vs Production paradoxes (PYQ traps)",
+          "Organized vs Unorganized sectors",
+          "Public vs Private sectors with Bihar examples",
+          "NREGA, unemployment types & government interventions"
+        ],
+        "estimated_time": "18 minutes",
+        "badge_to_earn": "🏆 Economy Expert"
+      },
+      "navigation": {
+        "next": "card_02_daily_work",
+        "button_text": "शुरू करें ➔"
+      }
+    },
+    {
+      "card_id": "card_02_daily_work",
+      "card_slug": "card_02_daily_work",
+      "type": "chat",
+      "concept_id": "intro_economic_activities",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhare Papa kya kaam karte hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Papa factory mein kaam karte hain, aur Mummy school mein padhati hain."
+        },
+        {
+          "speaker": "aman",
+          "text": "Accha! Aur tumhare dada ji?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wo gaon mein kheti karte hain Sir."
+        }
+      ],
+      "navigation": {
+        "next": "card_03_economic_activity",
+        "button_text": "Aage badhein ➔"
+      }
+    },
+    {
+      "card_id": "card_03_economic_activity",
+      "card_slug": "card_03_economic_activity",
+      "type": "chat",
+      "concept_id": "economic_activities_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect! Tumhare ghar mein teen log teen alag kaam kar rahe hain - kheti, factory ka kaam, aur teaching. Jab log paisa kamane ke liye koi kaam karte hain, use hum 'Economic Activity' kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir har kaam jo paisa kamaye wo economic activity hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Par sirf wo kaam jo production ya service provide kare. Jaise agar tum ghar mein Mummy ki help karo bina paisa liye, wo economic activity NAHI hai. Par agar kisi aur ke ghar mein kaam karke paisa lo, tab economic activity ho jayegi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa... to economic activity mein paisa involved hona zaroori hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_three_types",
+        "button_text": "Samjha ➔"
+      }
+    },
+    {
+      "card_id": "card_04_three_types",
+      "card_slug": "card_04_three_types",
+      "type": "chat",
+      "concept_id": "intro_three_sectors",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab dekho, tumhare Dada ji kheti karte hain - wo PRAKRITI se directly cheezein paida karte hain. Tumhare Papa factory mein kaam karte hain - wo kheti ki cheez ko convert karke naya product banate hain. Aur Mummy padhati hain - wo na kuch ugati hain na banati hain, bas service deti hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain? Matlab teen tarah ke kaam hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Economy mein saare kaam ko hum TEEN sectors mein baant sakte hain. Aur ye teen sectors ka concept BPSC aur SSC mein bahut important hai - har saal 2-3 sawal pakka aate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir in teeno ka naam kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_primary_sector_intro",
+        "button_text": "Batao Sir ➔"
+      }
+    },
+    {
+      "card_id": "card_05_primary_sector_intro",
+      "card_slug": "card_05_primary_sector_intro",
+      "type": "chat",
+      "concept_id": "primary_sector_definition",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Pehla sector hai PRIMARY SECTOR. Jahan log prakriti (nature) se directly cheezein nikalte hain ya paida karte hain. Jaise tumhare Dada ji kheti karte hain - wo zameen se directly crops ugaate hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir mining bhi primary sector mein aayega? Kyunki wo bhi zameen se nikaalte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Waah Raju! Bilkul sahi! Mining, fishing, forestry, dairy farming - ye sab PRIMARY SECTOR ke part hain. Inhe hum 'Agriculture and Allied Activities' bhi kehte hain kyunki ye sab natural resources se jude hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha Sir! To primary matlab 'pehli baar prakriti se nikalna'!"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_secondary_sector",
+        "button_text": "Next Sector ➔"
+      }
+    },
+    {
+      "card_id": "card_06_secondary_sector",
+      "card_slug": "card_06_secondary_sector",
+      "type": "chat",
+      "concept_id": "secondary_sector_definition",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Doosra hai SECONDARY SECTOR. Jahan log primary sector ki cheezein lekar unhe convert karte hain - matlab manufacturing karte hain! Tumhare Papa ki factory mein agar cotton se kapda banta hai, to wo secondary sector hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir, jaise gaon se wheat aati hai aur factory mein bread ban jaati hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect example Raju! Wheat (Primary) ko bread (Secondary) mein convert karna - ye MANUFACTURING hai. Isi liye Secondary Sector ko 'INDUSTRIAL SECTOR' bhi kehte hain. Construction work bhi ismein aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Construction bhi? Wo to building banate hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_construction_clarification",
+        "button_text": "Haan Sir ➔"
+      }
+    },
+    {
+      "card_id": "card_07_construction_clarification",
+      "card_slug": "card_07_construction_clarification",
+      "type": "chat",
+      "concept_id": "secondary_construction",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dekho, construction mein cement, iron rods, bricks leke ek naya product (building/road/bridge) banate hain. Raw materials ko convert karke final product - to ye manufacturing hi hua na!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Cement + Iron = Building. Ye to manufacturing jaisa hi hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "⚠️ BPSC Trap: Exam mein confused karte hain ki construction kaun se sector mein hai. Yaad rakho - SECONDARY SECTOR. Kyunki raw material se final product ban raha hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Pakka yaad rakhunga Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_tertiary_sector",
+        "button_text": "Teesra Sector ➔"
+      }
+    },
+    {
+      "card_id": "card_08_tertiary_sector",
+      "card_slug": "card_08_tertiary_sector",
+      "type": "chat",
+      "concept_id": "tertiary_sector_definition",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai teesra aur sabse interesting - TERTIARY SECTOR! Ye log na kuch ugate hain, na kuch banate hain. Ye log SERVICES provide karte hain. Tumhari Mummy teaching karti hain - ye service hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir doctor, lawyer, driver sab tertiary sector mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! Doctor treatment service deta hai, lawyer legal service, driver transport service. Shopkeeper bhi tertiary mein aata hai kyunki wo selling service provide karta hai. Isko 'SERVICE SECTOR' bhi kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa... to koi physical product nahi banta, bas kaam kiya aur service di!"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_guess_sectors",
+        "button_text": "Test karo ➔"
+      }
+    },
+    {
+      "card_id": "card_09_guess_sectors",
+      "card_slug": "card_09_guess_sectors",
+      "type": "guess",
+      "concept_id": "sectors_identification_game",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "guess_payload": {
+        "question": "Ek fisherman machli pakadta hai aur market mein bechta hai. Machli pakadna kaun sa sector hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Primary Sector"
+          },
+          {
+            "id": "B",
+            "text": "Secondary Sector"
+          },
+          {
+            "id": "C",
+            "text": "Tertiary Sector"
+          },
+          {
+            "id": "D",
+            "text": "Dono Primary aur Tertiary"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Machli pakadna (Fishing) PRIMARY SECTOR hai kyunki ye nature (samundar/river) se direct product nikalna hai. Bechna alag activity hai jo tertiary hai, par yahan sirf 'pakadne' ki baat ho rahi hai - to answer PRIMARY hai! ⭐ BPSC TRE Favorite confusion point!"
+      },
+      "navigation": {
+        "next": "card_10_quiz_1",
+        "button_text": "Samajh gaya ➔"
+      }
+    },
+    {
+      "card_id": "card_10_quiz_1",
+      "card_slug": "card_10_quiz_1",
+      "type": "quiz",
+      "concept_id": "sectors_basic_quiz",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सी गतिविधि द्वितीयक क्षेत्र (Secondary Sector) का हिस्सा है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "गेहूं की खेती करना"
+          },
+          {
+            "id": "B",
+            "text": "आटे की चक्की चलाना"
+          },
+          {
+            "id": "C",
+            "text": "आटा बेचने की दुकान चलाना"
+          },
+          {
+            "id": "D",
+            "text": "खेत में ट्यूबवेल लगाना"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "आटे की चक्की (Flour Mill) में गेहूं (Primary product) को आटे (Manufactured product) में convert किया जाता है - यह Manufacturing/Secondary Sector है। (A) Primary है, (C) Tertiary (selling service), (D) भी Primary sector की supporting activity है। ⭐ BPSC & SSC PYQ pattern!"
+      },
+      "navigation": {
+        "next": "card_11_quiz_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_11_quiz_2",
+      "card_slug": "card_11_quiz_2",
+      "type": "quiz",
+      "concept_id": "sectors_application_quiz",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "बिहार में पटना के एक व्यक्ति ने मछली पालन (Fish Farming) शुरू किया। यह किस क्षेत्र में आएगा? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "प्राथमिक क्षेत्र (Primary Sector)"
+          },
+          {
+            "id": "B",
+            "text": "द्वितीयक क्षेत्र (Secondary Sector)"
+          },
+          {
+            "id": "C",
+            "text": "तृतीयक क्षेत्र (Tertiary Sector)"
+          },
+          {
+            "id": "D",
+            "text": "इनमें से कोई नहीं"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Fish Farming (मत्स्य पालन) PRIMARY SECTOR की गतिविधि है क्योंकि यह प्राकृतिक संसाधनों (जल) का उपयोग करके सीधे उत्पादन करता है। Agriculture and Allied Activities के अंतर्गत आता है। ⭐ Bihar SCERT example - बिहार में Aquaculture प्राथमिक क्षेत्र का महत्वपूर्ण हिस्सा है!"
+      },
+      "navigation": {
+        "next": "card_12_quiz_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_12_quiz_3",
+      "card_slug": "card_12_quiz_3",
+      "type": "quiz",
+      "concept_id": "sectors_tricky_quiz",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक व्यक्ति कपड़े की फैक्ट्री में मशीन ऑपरेटर है, दूसरा व्यक्ति उसी फैक्ट्री में security guard है। दोनों किस sector में कार्यरत हैं? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "दोनों Secondary Sector में"
+          },
+          {
+            "id": "B",
+            "text": "पहला Secondary, दूसरा Tertiary"
+          },
+          {
+            "id": "C",
+            "text": "दोनों Tertiary Sector में"
+          },
+          {
+            "id": "D",
+            "text": "पहला Tertiary, दूसरा Secondary"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⚠️ BPSC Trap Question! Machine Operator directly manufacturing में involve है - SECONDARY। लेकिन Security Guard एक SERVICE provide कर रहा है (security service) - TERTIARY। Same factory में भी अलग-अलग sector के workers हो सकते हैं! Exam में बहुत confuse करते हैं यह concept!"
+      },
+      "navigation": {
+        "next": "card_13_milestone_1",
+        "button_text": "Check Progress ➔"
+      }
+    },
+    {
+      "card_id": "card_13_milestone_1",
+      "card_slug": "card_13_milestone_1",
+      "type": "milestone",
+      "concept_id": "module_1_complete",
+      "level": 1,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 CLEARED!",
+        "badge_emoji": "🏭",
+        "completed_topic": "Three Sectors of Economy",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Complete",
+        "motivational_quote": "Shabaash! Tumne Primary, Secondary aur Tertiary sectors ko master kar liya. Ab aage GDP aur Real Economy ki duniya mein chalte hain! 💪"
+      },
+      "navigation": {
+        "next": "card_14_comparing_sectors",
+        "button_text": "Next Module शुरू करें ➔"
+      }
+    },
+    {
+      "card_id": "card_14_comparing_sectors",
+      "card_slug": "card_14_comparing_sectors",
+      "type": "chat",
+      "concept_id": "sector_comparison_intro",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, teen sectors samajh aa gaye. Par kaun sa sector sabse zyada important hai India mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant question Raju! Aur ye exact question BPSC, SSC aur Railway mein har baar poochte hain! Dekho, importance do tarike se measure karte hain - ek GDP contribution se, doosra Employment se."
+        },
+        {
+          "speaker": "raju",
+          "text": "GDP? Ye kya hota hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ruko ruko... pehle ye samjho ki sectors ko compare kaise karte hain, phir GDP detail mein padhenge!"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_historical_shift",
+        "button_text": "Samjhao Sir ➔"
+      }
+    },
+    {
+      "card_id": "card_15_historical_shift",
+      "card_slug": "card_15_historical_shift",
+      "type": "chat",
+      "concept_id": "historical_sector_dominance",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "1950 mein jab India independent hua tha, tab PRIMARY SECTOR (Agriculture) sabse bada tha - GDP mein 50-55% contribution! Kyunki zyada log kheti karte the."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir pehle kheti sabse zyada important thi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Par ab 2023 mein picture completely ulti hai. Ab TERTIARY SECTOR (Services) sabse bada hai - GDP mein 55-60% contribution! Banking, IT, education, healthcare sab badh gaya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To India ab service-based economy ban gaya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_current_gdp_share",
+        "button_text": "Aur batao ➔"
+      }
+    },
+    {
+      "card_id": "card_16_current_gdp_share",
+      "card_slug": "card_16_current_gdp_share",
+      "type": "chat",
+      "concept_id": "current_gdp_distribution",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Current India mein approximate GDP share (2022-23 data): PRIMARY - 18%, SECONDARY - 25%, TERTIARY - 57%. Ye figures exam mein bahut poocha jaata hai, especially UPSC aur BPSC mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir par Primary itna kam kaise ho gaya? Abhi bhi to bahut log kheti karte hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Waah Raju! Tumne sabse bada PARADOX pakad liya jo BPSC ka favorite trap hai! Employment aur Production alag-alag cheezein hain. Primary sector mein abhi bhi 45-50% log kaam karte hain par GDP contribution sirf 18%!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Matlab zyada log kaam kar rahe hain par kam production? Ye kaise possible hai Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_paradox_explanation",
+        "button_text": "Batao Sir ➔"
+      }
+    },
+    {
+      "card_id": "card_17_paradox_explanation",
+      "card_slug": "card_17_paradox_explanation",
+      "type": "chat",
+      "concept_id": "employment_production_paradox",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dekho Raju, ek IT company mein 100 log kaam karte hain aur 1000 crore ka revenue generate karte hain. Agriculture mein 1000 log kaam karte hain par 100 crore ki hi income hoti hai. Samjhe?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Matlab agriculture mein PRODUCTIVITY kam hai? Zyada log lagane par bhi kam paisa ban raha hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isko hum 'Disguised Unemployment' bhi kehte hain. Primary sector mein zaroori se zyada log kaam kar rahe hain. Agar kuch log hata bhi do, tab bhi production same rahega!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Seriously? Matlab extra log bekar mein khade hain? Ye to exam mein pakka poochenge!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_disguised_unemployment",
+        "button_text": "Detail mein samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_18_disguised_unemployment",
+      "card_slug": "card_18_disguised_unemployment",
+      "type": "chat",
+      "concept_id": "disguised_unemployment_concept",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DISGUISED UNEMPLOYMENT (छिपी बेरोजगारी): Jab kaam mein zaroori se zyada log lag jaayein. Example - ek farm par 4 log kaafi hain par 8 log kaam kar rahe hain. Baaki 4 ka koi productivity nahi, par dikhai de rahe hain 'employed'."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir wo technically unemployed nahi hain par practically koi kaam nahi kar rahe?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! ⭐ BPSC TRE & SSC Favorite: Disguised unemployment PRIMARY SECTOR (especially agriculture) mein sabse zyada milti hai. Bihar aur UP jaise states mein ye problem bahut common hai kyunki chhote farms par poora family kaam karti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha Sir! To isliye logo ko agriculture se hatakar factories aur services mein lagana chahiye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_sectoral_shift_need",
+        "button_text": "Haan bilkul ➔"
+      }
+    },
+    {
+      "card_id": "card_19_sectoral_shift_need",
+      "card_slug": "card_19_sectoral_shift_need",
+      "type": "chat",
+      "concept_id": "need_for_sectoral_shift",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly Raju! Developed countries (USA, UK) mein Primary sector mein bahut kam log (5% se bhi kam) kaam karte hain. Most people Secondary aur Tertiary mein shifted ho gaye. India abhi bhi shifting phase mein hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Par Sir shift kaise karenge? Agriculture chhod kar factory mein kaam kaise karenge log?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye bahut important question hai! Iske liye GOVERNMENT ko zyada factories lagani padengi (Secondary boost), aur services sector ko bhi barhana padega. Par India mein ek twist hai..."
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya twist Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_india_service_jump",
+        "button_text": "Batao ➔"
+      }
+    },
+    {
+      "card_id": "card_20_india_service_jump",
+      "card_slug": "card_20_india_service_jump",
+      "type": "chat",
+      "concept_id": "india_service_sector_jump",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Normal pattern ye hota hai: Primary → Secondary → Tertiary. Pehle agriculture, phir manufacturing boom, phir services. Par India ne ek JUMP maar diya! Primary se seedha Tertiary mein jump - manufacturing ko skip kar diya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kaise Sir? Factories nahi bane kya India mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bane, par kam. 1990s mein IT boom aa gaya (Infosys, TCS, Wipro), BPO culture shuru hua, aur seedha SERVICE SECTOR ne takeover kar liya! Manufacturing abhi bhi weak hai - sirf 25% GDP."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Isliye 'Make in India' jaise schemes laayi gayi manufacturing ko badhane ke liye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_quiz_4",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_4",
+      "card_slug": "card_21_quiz_4",
+      "type": "quiz",
+      "concept_id": "sector_comparison_quiz_1",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "वर्तमान भारत में GDP में सबसे अधिक योगदान किस क्षेत्र का है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "प्राथमिक क्षेत्र (Primary Sector)"
+          },
+          {
+            "id": "B",
+            "text": "द्वितीयक क्षेत्र (Secondary Sector)"
+          },
+          {
+            "id": "C",
+            "text": "तृतीयक क्षेत्र (Tertiary Sector)"
+          },
+          {
+            "id": "D",
+            "text": "सभी बराबर हैं"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "वर्तमान में (2022-23) भारत में Tertiary Sector (Service Sector) का GDP में सबसे अधिक योगदान है - लगभग 55-60%। Primary लगभग 18% और Secondary लगभग 25%। ⭐ BPSC, SSC, Railway PYQ - हर साल पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_22_quiz_5",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_5",
+      "card_slug": "card_22_quiz_5",
+      "type": "quiz",
+      "concept_id": "sector_comparison_quiz_2",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत में सबसे अधिक लोग किस क्षेत्र में रोजगार पाते हैं? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "प्राथमिक क्षेत्र (Agriculture & Allied)"
+          },
+          {
+            "id": "B",
+            "text": "द्वितीयक क्षेत्र (Manufacturing)"
+          },
+          {
+            "id": "C",
+            "text": "तृतीयक क्षेत्र (Services)"
+          },
+          {
+            "id": "D",
+            "text": "Secondary और Tertiary बराबर"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "⚠️ Biggest BPSC Trap! GDP में Tertiary सबसे बड़ा है (57%) लेकिन EMPLOYMENT में Primary Sector सबसे बड़ा है - लगभग 45-50% लोग अभी भी कृषि क्षेत्र में कार्यरत हैं। यही Employment-Production Paradox है!"
+      },
+      "navigation": {
+        "next": "card_23_quiz_6",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_23_quiz_6",
+      "card_slug": "card_23_quiz_6",
+      "type": "quiz",
+      "concept_id": "disguised_unemployment_quiz",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा कथन 'Disguised Unemployment' को सही परिभाषित करता है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "जब लोग बिल्कुल बेरोजगार हों"
+          },
+          {
+            "id": "B",
+            "text": "जब आवश्यकता से अधिक लोग एक काम में लगे हों और कुछ हटाने पर भी उत्पादन समान रहे"
+          },
+          {
+            "id": "C",
+            "text": "जब लोग अस्थायी रूप से बेरोजगार हों"
+          },
+          {
+            "id": "D",
+            "text": "जब लोग कम वेतन पर काम करें"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Disguised Unemployment (छिपी बेरोज़गारी) = जब किसी कार्य में आवश्यकता से अधिक लोग लगे हों, और कुछ को हटाने पर भी production में कोई कमी न आए। यह Primary Sector (especially agriculture) में सबसे आम है। ⭐ NCERT Class 10 + BPSC TRE Direct Definition!"
+      },
+      "navigation": {
+        "next": "card_24_milestone_2",
+        "button_text": "Check ➔"
+      }
+    },
+    {
+      "card_id": "card_24_milestone_2",
+      "card_slug": "card_24_milestone_2",
+      "type": "milestone",
+      "concept_id": "module_2_complete",
+      "level": 2,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🔥 MODULE 2 MASTERED!",
+        "badge_emoji": "📊",
+        "completed_topic": "Comparing Sectors & Employment Paradox",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/8 Complete",
+        "motivational_quote": "Zabardast! Ab tum sectors ke comparison aur India ke employment-production paradox ko samajh gaye. GDP concept ab detail mein samjhenge! 🚀"
+      },
+      "navigation": {
+        "next": "card_25_gdp_intro",
+        "button_text": "GDP Module Start ➔"
+      }
+    },
+    {
+      "card_id": "card_25_gdp_intro",
+      "card_slug": "card_25_gdp_intro",
+      "type": "chat",
+      "concept_id": "gdp_concept_introduction",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir ab ye GDP kya hota hai? Aapne pehle bola tha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ab time aa gaya hai sabse important concept samajhne ka. GDP = Gross Domestic Product. Ye batata hai ki ek country ne ek saal mein kitni value ki total cheezein aur services produce ki!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir saari factories, farms, shops sab ka total production?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Agar tum ek saal mein India ki saari final goods aur services ka total rupee value jodo, wo GDP hai. Ye batata hai ki economy kitni badi hai aur kitna kama rahi hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_gdp_detailed",
+        "button_text": "Aur detail ➔"
+      }
+    },
+    {
+      "card_id": "card_26_gdp_detailed",
+      "card_slug": "card_26_gdp_detailed",
+      "type": "chat",
+      "concept_id": "gdp_definition_detailed",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "GDP ki exact definition: 'The total monetary value of all FINAL goods and services produced within a country's borders in ONE YEAR.' Teen important words hain - FINAL, WITHIN BORDERS, ONE YEAR."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'FINAL' goods ka matlab? Kya intermediate goods count nahi hote?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Waah Raju! Exam trap pakad liya! Dekho, agar kisan ne wheat becha factory ko (intermediate good), aur factory ne bread banayi aur becha consumer ko (final good), to GDP mein sirf BREAD ki value count hogi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kyun Sir? Wheat ki value kyun nahi count karenge?"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_double_counting",
+        "button_text": "Samjhao ➔"
+      }
+    },
+    {
+      "card_id": "card_27_double_counting",
+      "card_slug": "card_27_double_counting",
+      "type": "chat",
+      "concept_id": "avoiding_double_counting",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kyunki agar wheat aur bread dono count karenge, to DOUBLE COUNTING ho jayega! Wheat ki value to bread mein already included hai na? Agar alag se wheat bhi count kiya, to same cheez do baar count ho jayegi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Matlab final product ki value mein sab kuch include hai - raw material, processing, sab!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely right! ⚠️ BPSC Trap: Exam mein poochte hain 'Cotton aur Shirt dono GDP mein count honge kya?' Answer: NAHI! Sirf SHIRT (final product) count hoga. Cotton to intermediate hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Pakka yaad rakhunga Sir! Sirf final goods!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_within_borders",
+        "button_text": "Next concept ➔"
+      }
+    },
+    {
+      "card_id": "card_28_within_borders",
+      "card_slug": "card_28_within_borders",
+      "type": "chat",
+      "concept_id": "gdp_territorial_boundaries",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab doosra keyword - 'WITHIN BORDERS'. GDP sirf India ki geographical boundaries ke andar produce hui cheezein count karta hai. Chahe Indian ne banaya ya foreigner ne!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir agar koi Japanese company India mein factory lagakar car banaye, to wo India ke GDP mein count hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Suzuki ki Manesar (Haryana) factory India mein hai, to wahan bani cars India ke GDP mein count hongi. Chahe company Japanese ki ho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Sir agar koi Indian engineer America mein kaam kare?"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_gdp_vs_gnp",
+        "button_text": "Good question ➔"
+      }
+    },
+    {
+      "card_id": "card_29_gdp_vs_gnp",
+      "card_slug": "card_29_gdp_vs_gnp",
+      "type": "chat",
+      "concept_id": "gdp_gnp_difference",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Tab wo America ke GDP mein count hoga, India ke GDP mein NAHI! Par yahan twist hai - wo India ke GNP (Gross National Product) mein count hoga!"
+        },
+        {
+          "speaker": "raju",
+          "text": "GNP? Ye kya naya term aa gaya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "GDP = DOMESTIC (borders ke andar). GNP = NATIONAL (Indian citizens ka, chahe kahan bhi ho). ⭐ BPSC Favorite: GDP counts LOCATION, GNP counts NATIONALITY!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To NRI (Non-Resident Indians) ki foreign income GNP mein count hogi par GDP mein nahi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_gdp_gnp_formula",
+        "button_text": "Exactly ➔"
+      }
+    },
+    {
+      "card_id": "card_30_gdp_gnp_formula",
+      "card_slug": "card_30_gdp_gnp_formula",
+      "type": "chat",
+      "concept_id": "gdp_gnp_relationship",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Correct Raju! Formula yaad rakho: GNP = GDP + Net Factor Income from Abroad (NFIA). NFIA = Indians ki foreign income MINUS foreigners ki India mein income."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir agar zyada Indians bahar kama rahe hain, to GNP > GDP hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! India mein NFIA positive hai (bahut saare NRIs remittance bhejte hain), to India ka GNP slightly GDP se zyada hai. Par exam mein mostly GDP hi poocha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha Sir! To GDP = country ki earning, GNP = citizens ki earning!"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_one_year_concept",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_31_one_year_concept",
+      "card_slug": "card_31_one_year_concept",
+      "type": "chat",
+      "concept_id": "gdp_time_period",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Teesra keyword - 'ONE YEAR'. GDP hamesha ek fixed time period ke liye calculate hota hai - usually 1st April se 31st March (India ka Financial Year)."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir har saal naya GDP calculate hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur comparison bhi hota hai - 'Is saal GDP kitna badha pichle saal se?' Isko GDP GROWTH RATE kehte hain. Agar India ka GDP 7% growth rate se badh raha hai, matlab economy healthy hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! News mein sunta tha 'India ki GDP growth 8%' - ye isi cheez ki baat kar rahe the!"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_quiz_7",
+        "button_text": "Quiz ले लो ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz_7",
+      "card_slug": "card_32_quiz_7",
+      "type": "quiz",
+      "concept_id": "gdp_basic_quiz",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "GDP (Gross Domestic Product) में कौन सी वस्तुएं शामिल होती हैं? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल Final Goods"
+          },
+          {
+            "id": "B",
+            "text": "केवल Intermediate Goods"
+          },
+          {
+            "id": "C",
+            "text": "Final Goods और Services दोनों"
+          },
+          {
+            "id": "D",
+            "text": "सभी प्रकार की Goods (Intermediate + Final)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "GDP में केवल FINAL Goods और Services शामिल होती हैं। Intermediate goods नहीं गिनी जातीं क्योंकि उनकी value already final product में include होती है। Double counting से बचने के लिए यह rule है। ⭐ NCERT Class 10 + SSC CGL Direct concept!"
+      },
+      "navigation": {
+        "next": "card_33_quiz_8",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_33_quiz_8",
+      "card_slug": "card_33_quiz_8",
+      "type": "quiz",
+      "concept_id": "gdp_gnp_quiz",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक भारतीय इंजीनियर अमेरिका में काम करके $50,000 कमाता है। यह रकम किसमें शामिल होगी? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल भारत के GDP में"
+          },
+          {
+            "id": "B",
+            "text": "केवल भारत के GNP में"
+          },
+          {
+            "id": "C",
+            "text": "अमेरिका के GDP और भारत के GNP दोनों में"
+          },
+          {
+            "id": "D",
+            "text": "किसी में भी नहीं"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⚠️ BPSC/UPSC Trap! यह income अमेरिका की boundaries में कमाई गई है, इसलिए अमेरिका के GDP में count होगी। लेकिन यह भारतीय नागरिक की कमाई है, इसलिए भारत के GNP में भी count होगी। GDP = Location based, GNP = Nationality based!"
+      },
+      "navigation": {
+        "next": "card_34_quiz_9",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_34_quiz_9",
+      "card_slug": "card_34_quiz_9",
+      "type": "quiz",
+      "concept_id": "double_counting_quiz",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "एक किसान ₹500 की कपास बेचता है मिल को। मिल ₹2000 के कपड़े बनाती है। दर्जी उससे ₹3500 की कमीज बनाता है। GDP में क्या count होगा? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "₹6000 (सभी का जोड़)"
+          },
+          {
+            "id": "B",
+            "text": "केवल ₹3500 (Final Product)"
+          },
+          {
+            "id": "C",
+            "text": "₹2500 (कपड़ा + कमीज)"
+          },
+          {
+            "id": "D",
+            "text": "₹500 (कपास की value)"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "GDP में केवल FINAL PRODUCT की value count होती है = ₹3500 (कमीज)। Cotton (₹500) और Cloth (₹2000) intermediate goods हैं, उनकी value already कमीज में included है। अगर सबको जोड़ें तो Double Counting हो जाएगी! ⭐ BPSC TRE & SSC का Classic Numerical Trap!"
+      },
+      "navigation": {
+        "next": "card_35_milestone_3",
+        "button_text": "Check Progress ➔"
+      }
+    },
+    {
+      "card_id": "card_35_milestone_3",
+      "card_slug": "card_35_milestone_3",
+      "type": "milestone",
+      "concept_id": "module_3_complete",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "💎 MODULE 3 CONQUERED!",
+        "badge_emoji": "💰",
+        "completed_topic": "GDP Concept & Calculation",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/8 Complete",
+        "motivational_quote": "Kya baat hai! GDP, GNP, Final Goods, Double Counting - sab clear! Ab Per Capita Income aur real-life applications dekhenge! 🎯"
+      },
+      "navigation": {
+        "next": "card_36_per_capita_intro",
+        "button_text": "Continue Learning ➔"
+      }
+    },
+    {
+      "card_id": "card_36_per_capita_intro",
+      "card_slug": "card_36_per_capita_intro",
+      "type": "chat",
+      "concept_id": "per_capita_income_intro",
+      "level": 4,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir GDP se to pata chal gaya country kitna kama rahi hai. Par ye kaise pata chalega ki log ameer hain ya gareeb?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant Raju! Dekho, agar India ka GDP 300 lakh crore hai aur China ka bhi 300 lakh crore, to kya dono equally developed hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hmmm... shayad nahi Sir? Kyunki population different hogi!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! Isi liye hum PER CAPITA INCOME dekhte hain - matlab AVERAGE income per person!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_per_capita_formula",
+        "button_text": "Formula batao ➔"
+      }
+    },
+    {
+      "card_id": "card_37_per_capita_formula",
+      "card_slug": "card_37_per_capita_formula",
+      "type": "chat",
+      "concept_id": "per_capita_calculation",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PER CAPITA INCOME = Total National Income ÷ Total Population. Ye batata hai ki agar poori country ki kamai equally baant di jaaye, to har person ko kitna milega (theoretically)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! To agar India ka GDP bahut zyada hai par population bhi bahut zyada, to per capita income kam ho sakti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! India ka total GDP USA se kam hai, par India ki population USA se 4 guna zyada hai. Isliye India ki per capita income USA se bahut kam hai - roughly USA: $70,000, India: $2,500 per year!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Itna difference?"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_development_measure",
+        "button_text": "Aur batao ➔"
+      }
+    },
+    {
+      "card_id": "card_38_development_measure",
+      "card_slug": "card_38_development_measure",
+      "type": "chat",
+      "concept_id": "per_capita_as_development_indicator",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC/UPSC Important: World Bank countries ko classify karta hai Per Capita Income ke basis par - Low Income, Middle Income, High Income. India 'Lower Middle Income' category mein hai (2023 data)."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir per capita income zyada matlab developed country?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Usually haan! Par complete development measure nahi hai. Agar 10 log hain aur 1 person ke paas 100 crore hai aur baaki 9 ke paas kuch nahi, tab bhi average 10 crore per person aayega! Par practically 9 log gareeb hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Matlab average misleading ho sakta hai? Income distribution unequal ho sakti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_inequality_issue",
+        "button_text": "Bilkul ➔"
+      }
+    },
+    {
+      "card_id": "card_39_inequality_issue",
+      "card_slug": "card_39_inequality_issue",
+      "type": "chat",
+      "concept_id": "income_inequality_limitation",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly Raju! Per Capita Income ek AVERAGE hai. Ye income distribution nahi batata. India mein kuch log bahut ameer hain (Ambani, Adani) aur crores log poverty line ke neeche. Average isse hide kar deta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir development measure karne ke liye aur kya dekhna chahiye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut sahi question! UNDP (United Nations) ne ek better indicator banaya - HDI (Human Development Index). Ye sirf income nahi, balki Education, Health, Life Expectancy sab dekh kar development measure karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir paisa ke saath-saath quality of life bhi important hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_hdi_intro",
+        "button_text": "Haan exactly ➔"
+      }
+    },
+    {
+      "card_id": "card_40_hdi_intro",
+      "card_slug": "card_40_hdi_intro",
+      "type": "chat",
+      "concept_id": "hdi_human_development_index",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "HDI (Human Development Index) teen parameters use karta hai: 1) Per Capita Income (Economic), 2) Education Level (Literacy Rate, Schooling Years), 3) Health (Life Expectancy at birth). Teen ka combined score!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To agar kisi country mein paisa zyada hai par education aur health kharab hai, to HDI kam hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! Saudi Arabia jaise oil-rich countries ka per capita income bahut high hai, par education indicators weak hain, to HDI moderate hai. Norway, Switzerland ka HDI top par hai kyunki sab parameters mein strong hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur India ka HDI rank kaisa hai Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_india_hdi",
+        "button_text": "Batao ➔"
+      }
+    },
+    {
+      "card_id": "card_41_india_hdi",
+      "card_slug": "card_41_india_hdi",
+      "type": "chat",
+      "concept_id": "india_hdi_ranking",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "India ka HDI rank 2022 mein 132nd tha (out of 191 countries) - 'Medium Human Development' category. Per Capita income badh raha hai par health aur education indicators abhi bhi weak hain, especially rural areas mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ BPSC TRE Note: Bihar ka HDI national average se bhi kam hai! Education aur maternal health indicators weak hain. Government bahut schemes laa rahi hai improve karne ke liye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi observation Raju! State-wise HDI mein bhi bahut difference hai - Kerala top par, Bihar aur UP bottom mein. Ye exam mein bahut poocha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Development sirf GDP nahi, overall well-being hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_quiz_10",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_42_quiz_10",
+      "card_slug": "card_42_quiz_10",
+      "type": "quiz",
+      "concept_id": "per_capita_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Per Capita Income की गणना कैसे की जाती है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Total GDP × Total Population"
+          },
+          {
+            "id": "B",
+            "text": "Total GDP ÷ Total Population"
+          },
+          {
+            "id": "C",
+            "text": "Total National Income × 100"
+          },
+          {
+            "id": "D",
+            "text": "GDP Growth Rate ÷ Population Growth Rate"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Per Capita Income = Total National Income (or GDP) ÷ Total Population. यह average income per person बताता है। ⭐ NCERT Class 10 Direct Formula + BPSC/SSC हर साल पूछता है!"
+      },
+      "navigation": {
+        "next": "card_43_quiz_11",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_43_quiz_11",
+      "card_slug": "card_43_quiz_11",
+      "type": "quiz",
+      "concept_id": "hdi_quiz",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Human Development Index (HDI) में कौन से parameters शामिल होते हैं? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल Per Capita Income"
+          },
+          {
+            "id": "B",
+            "text": "Income, Education, और Health"
+          },
+          {
+            "id": "C",
+            "text": "केवल Literacy Rate"
+          },
+          {
+            "id": "D",
+            "text": "GDP और Population"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "HDI (Human Development Index) तीन parameters पर आधारित है: 1) Per Capita Income (आर्थिक), 2) Education (साक्षरता, स्कूलिंग), 3) Health (जीवन प्रत्याशा)। UNDP द्वारा developed। ⭐ UPSC/BPSC Prelims favorite concept!"
+      },
+      "navigation": {
+        "next": "card_44_quiz_12",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_44_quiz_12",
+      "card_slug": "card_44_quiz_12",
+      "type": "quiz",
+      "concept_id": "per_capita_limitation_quiz",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Per Capita Income की सीमा (Limitation) क्या है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "यह GDP नहीं बताता"
+          },
+          {
+            "id": "B",
+            "text": "यह income distribution (असमानता) नहीं दिखाता"
+          },
+          {
+            "id": "C",
+            "text": "यह population नहीं बताता"
+          },
+          {
+            "id": "D",
+            "text": "इसमें कोई limitation नहीं है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⚠️ BPSC Critical Concept: Per Capita Income एक AVERAGE है। यह income inequality (धन का असमान वितरण) नहीं दिखाता। अगर कुछ लोग बहुत अमीर और बाकी बहुत गरीब हैं, तब भी average high दिख सकता है। इसलिए HDI जैसे composite indicators बेहतर हैं!"
+      },
+      "navigation": {
+        "next": "card_45_milestone_4",
+        "button_text": "Check ➔"
+      }
+    },
+    {
+      "card_id": "card_45_milestone_4",
+      "card_slug": "card_45_milestone_4",
+      "type": "milestone",
+      "concept_id": "module_4_complete",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🌟 MODULE 4 CLEARED!",
+        "badge_emoji": "📈",
+        "completed_topic": "Per Capita Income & HDI",
+        "xp_earned": 80,
+        "milestone_progress": "Module 4/8 Complete",
+        "motivational_quote": "Fantastic! Ab tum development indicators ko samajh gaye - GDP se HDI tak! Aage Public vs Private sectors dekhenge! 💪"
+      },
+      "navigation": {
+        "next": "card_46_organized_unorganized_intro",
+        "button_text": "Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_46_organized_unorganized_intro",
+      "card_slug": "card_46_organized_unorganized_intro",
+      "type": "chat",
+      "concept_id": "organized_unorganized_intro",
+      "level": 5,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhare Papa factory mein kaam karte hain. Unko har mahine fixed salary milti hai, PF katata hai, chutti milti hai. Par tumhare chacha cycle repair ki dukaan chalate hain - koi fixed salary nahi, koi leave nahi. Ye dono alag types hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Papa ki job permanent hai, Chacha ka business temporary jaisa lagta hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Tumhare Papa ORGANIZED SECTOR mein hain, aur Chacha UNORGANIZED SECTOR mein. Ye classification employment security aur government rules ke basis par hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir organized matlab organized tarike se kaam? Aur unorganized matlab bekabu?"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_organized_sector",
+        "button_text": "Nahi nahi ➔"
+      }
+    },
+    {
+      "card_id": "card_47_organized_sector",
+      "card_slug": "card_47_organized_sector",
+      "type": "chat",
+      "concept_id": "organized_sector_definition",
+      "level": 5,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ORGANIZED SECTOR = Jahan government rules aur regulations properly follow hote hain. Fixed working hours (8 hours/day), paid leave, Provident Fund (PF), medical benefits, job security - sab milta hai! Workers ko protection hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Matlab officially registered companies, government jobs, banks - ye sab organized sector?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Companies Act ke under registered firms, sarkari naukri, PSUs (Public Sector Undertakings), organized factories - sab organized sector mein aate hain. Employer ko laws follow karne PADTE hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To organized mein workers ke rights protected hain government laws se?"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_unorganized_sector",
+        "button_text": "Bilkul ➔"
+      }
+    },
+    {
+      "card_id": "card_48_unorganized_sector",
+      "card_slug": "card_48_unorganized_sector",
+      "type": "chat",
+      "concept_id": "unorganized_sector_definition",
+      "level": 5,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "UNORGANIZED SECTOR = Jahan government rules제대로 follow nahi hote ya exempt hain. Chhoti dukaan, street vendors, domestic workers, daily wage labourers, small farms - inhe job security, PF, leave kuch nahi milta!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir agar kaam nahi hai to income nahi? Aur bimar ho gaye to bhi paid leave nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly Raju! Unorganized sector mein workers bahut vulnerable hain. ⭐ BPSC TRE Important: India mein lagbhag 85-90% workforce UNORGANIZED sector mein hi kaam karta hai! Organized sirf 10-15%."
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya?? Itne kam log organized mein? Par production to tertiary sector zyada kar raha hai na?"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_paradox_organized",
+        "button_text": "Haan twist hai ➔"
+      }
+    },
+    {
+      "card_id": "card_49_paradox_organized",
+      "card_slug": "card_49_paradox_organized",
+      "type": "chat",
+      "concept_id": "organized_unorganized_paradox",
+      "level": 5,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dekho Raju, Organized sector GDP mein zyada contribution deta hai (better productivity, technology), par employment kam deta hai. Unorganized sector mein productivity kam par employment zyada! Ek aur paradox!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Jaise ek IT company 100 employees se 100 crore kamaati hai, par ek gaon ke 1000 farmers 10 crore kamate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect analogy! ⚠️ BPSC Trap: 'Organized sector employs majority of Indian workers' - GALAT! Unorganized sector employs majority. Par GDP mein organized ka share badh raha hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to bahut confusing hai Sir! Employment aur Production hamesha opposite direction mein!"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_protection_needed",
+        "button_text": "Haan ➔"
+      }
+    },
+    {
+      "card_id": "card_50_protection_needed",
+      "card_slug": "card_50_protection_needed",
+      "type": "chat",
+      "concept_id": "unorganized_sector_protection",
+      "level": 5,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kyunki unorganized sector mein itne log vulnerable hain, isliye government ko special protection deni padti hai. NREGA (National Rural Employment Guarantee Act) ek example hai - 100 days ki guaranteed employment rural areas mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "NREGA? Ye kya hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite: NREGA (2005 mein MGNREGA ban gaya - Mahatma Gandhi NREGA) - Har rural household ko saal mein kam se kam 100 din ki wage employment ki guarantee! Unorganized sector ko support karne ka sabse bada program!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir agar gaon mein kaam nahi hai to government kaam degi compulsorily?"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_nrega_details",
+        "button_text": "Haan ➔"
+      }
+    },
+    {
+      "card_id": "card_51_nrega_details",
+      "card_slug": "card_51_nrega_details",
+      "type": "chat",
+      "concept_id": "nrega_mgnrega_details",
+      "level": 5,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Agar 15 din mein kaam nahi mila to unemployment allowance bhi milta hai. Bihar mein bhi MGNREGA active hai - roads, ponds, wells banane mein daily wage workers ko lagaya jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To ye ek safety net hai unorganized workers ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Aur bhi schemes hain - PM-SVANidhi (street vendors ko loan), Ayushman Bharat (health insurance), PM-KISAN (farmers ko direct cash). Sab unorganized sector ko support karne ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Unorganized sector vulnerable hai to government protection deti hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_quiz_13",
+        "button_text": "Quiz lo ➔"
+      }
+    },
+    {
+      "card_id": "card_52_quiz_13",
+      "card_slug": "card_52_quiz_13",
+      "type": "quiz",
+      "concept_id": "organized_unorganized_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा कार्य ORGANIZED SECTOR में आता है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "एक रिक्शा चालक का काम"
+          },
+          {
+            "id": "B",
+            "text": "एक बैंक में कैशियर की नौकरी"
+          },
+          {
+            "id": "C",
+            "text": "सड़क किनारे सब्जी बेचना"
+          },
+          {
+            "id": "D",
+            "text": "छोटे खेत में मजदूरी"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "बैंक में कैशियर की नौकरी ORGANIZED SECTOR में आती है क्योंकि banks registered entities हैं, fixed salary, PF, leave, job security सब मिलता है। बाकी सभी (A, C, D) UNORGANIZED SECTOR के उदाहरण हैं। ⭐ NCERT Class 10 + BPSC Direct concept!"
+      },
+      "navigation": {
+        "next": "card_53_quiz_14",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_53_quiz_14",
+      "card_slug": "card_53_quiz_14",
+      "type": "quiz",
+      "concept_id": "organized_unorganized_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत में लगभग कितने प्रतिशत workforce UNORGANIZED SECTOR में कार्यरत है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "लगभग 25-30%"
+          },
+          {
+            "id": "B",
+            "text": "लगभग 50%"
+          },
+          {
+            "id": "C",
+            "text": "लगभग 85-90%"
+          },
+          {
+            "id": "D",
+            "text": "लगभग 10-15%"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⚠️ BPSC/SSC Critical Fact: भारत में लगभग 85-90% workforce UNORGANIZED SECTOR में कार्यरत है! Organized sector में केवल 10-15% ही हैं। यह India की सबसे बड़ी employment challenges में से एक है। ⭐ Exam में बार-बार पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_54_quiz_15",
+        "button_text": "Last ➔"
+      }
+    },
+    {
+      "card_id": "card_54_quiz_15",
+      "card_slug": "card_54_quiz_15",
+      "type": "quiz",
+      "concept_id": "nrega_quiz",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "MGNREGA (महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार गारंटी अधिनियम) के तहत प्रत्येक ग्रामीण परिवार को साल में कम से कम कितने दिनों की रोजगार गारंटी मिलती है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "50 दिन"
+          },
+          {
+            "id": "B",
+            "text": "100 दिन"
+          },
+          {
+            "id": "C",
+            "text": "150 दिन"
+          },
+          {
+            "id": "D",
+            "text": "200 दिन"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "MGNREGA (2005 में NREGA से बना) के तहत हर rural household को सालाना कम से कम 100 दिनों की wage employment की guarantee है। यह unorganized sector workers के लिए सबसे बड़ा social security program है। ⭐ BPSC TRE, SSC, Railway - हर साल guaranteed question!"
+      },
+      "navigation": {
+        "next": "card_55_milestone_5",
+        "button_text": "Progress Check ➔"
+      }
+    },
+    {
+      "card_id": "card_55_milestone_5",
+      "card_slug": "card_55_milestone_5",
+      "type": "milestone",
+      "concept_id": "module_5_complete",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🔥 MODULE 5 MASTERED!",
+        "badge_emoji": "👷",
+        "completed_topic": "Organized vs Unorganized Sectors",
+        "xp_earned": 90,
+        "milestone_progress": "Module 5/8 Complete",
+        "motivational_quote": "Outstanding! Organized-Unorganized aur MGNREGA clear! Ab Public vs Private sector dekhte hain - last major classification! 🎯"
+      },
+      "navigation": {
+        "next": "card_56_public_private_intro",
+        "button_text": "Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_56_public_private_intro",
+      "card_slug": "card_56_public_private_intro",
+      "type": "chat",
+      "concept_id": "public_private_intro",
+      "level": 6,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir ab tak Primary-Secondary-Tertiary dekha, Organized-Unorganized bhi dekha. Aur koi classification hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! Ek aur bahut important classification hai - PUBLIC SECTOR vs PRIVATE SECTOR. Ye ownership ke basis par hota hai - company ka malik kaun hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ownership? Matlab government ki company ya private logo ki?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! PUBLIC SECTOR = Government owned & controlled. PRIVATE SECTOR = Individual ya private companies owned. Dono ke objectives aur functions alag hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_public_sector",
+        "button_text": "Detail mein ➔"
+      }
+    },
+    {
+      "card_id": "card_57_public_sector",
+      "card_slug": "card_57_public_sector",
+      "type": "chat",
+      "concept_id": "public_sector_definition",
+      "level": 6,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PUBLIC SECTOR = Government (Central/State) owns aur operates. Main aim PROFIT nahi, balki PUBLIC WELFARE hai! Railways, BSNL, SBI (majority govt stake), SAIL, BHEL - ye sab public sector companies (PSUs) hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To public sector mein loss mein bhi chal sakte hain agar public ko benefit ho raha hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Railways bahut routes par loss mein chalti hai par band nahi karti kyunki public connectivity zaroori hai. ⭐ BPSC TRE: Bihar mein bhi state PSUs hain - Bihar State Milk Cooperative, Bihar State Power companies!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir public sector ka main goal social welfare hai, profit secondary?"
+        }
+      ],
+      "navigation": {
+        "next": "card_58_private_sector",
+        "button_text": "Haan ➔"
+      }
+    },
+    {
+      "card_id": "card_58_private_sector",
+      "card_slug": "card_58_private_sector",
+      "type": "chat",
+      "concept_id": "private_sector_definition",
+      "level": 6,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PRIVATE SECTOR = Private individuals/companies own karte hain. Main aim PROFIT maximization hai! Reliance, Tata, Infosys, Flipkart, local shops - sab private sector. Efficiency aur innovation zyada hota hai competition ke kaaran!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir private companies loss afford nahi kar sakti? Unhe profit banana zaroori hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Agar continuously loss hoga to company band ho jayegi. Par innovation aur customer satisfaction par zyada focus hota hai kyunki competition hai. Public sector mein monopoly hone se sometimes efficiency kam ho jaati hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir dono mein trade-off hai? Public welfare vs Efficiency?"
+        }
+      ],
+      "navigation": {
+        "next": "card_59_why_public_needed",
+        "button_text": "Bilkul ➔"
+      }
+    },
+    {
+      "card_id": "card_59_why_public_needed",
+      "card_slug": "card_59_why_public_needed",
+      "type": "chat",
+      "concept_id": "need_for_public_sector",
+      "level": 6,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly Raju! Par Public Sector zaroori kyun hai? Kyunki kuch activities profit-based nahi ho sakti - jaise defence, police, primary education, rural roads. Private companies yahan invest nahi karenge kyunki profit kam hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To essential services jo sabko affordable mein chahiye, wo public sector provide karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! ⭐ NCERT Point: Public sector heavy industries bhi set up karta hai jo bahut capital-intensive hain - jaise steel plants, power plants. Private sector initially invest nahi kar sakta tha independence ke baad!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir 1950s mein jab India gareeb tha, tab government ne industries banaye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_mixed_economy",
+        "button_text": "Haan exactly ➔"
+      }
+    },
+    {
+      "card_id": "card_60_mixed_economy",
+      "card_slug": "card_60_mixed_economy",
+      "type": "chat",
+      "concept_id": "mixed_economy_india",
+      "level": 6,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! 1950-1990 tak India mein PUBLIC SECTOR dominance tha - BHEL, SAIL, HAL, IOC sab banaye gaye. Par 1991 mein economic reforms ke baad PRIVATE SECTOR ko bhi encourage kiya gaya. Ab India MIXED ECONOMY hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Mixed economy matlab Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "MIXED ECONOMY = Public aur Private dono sectors co-exist karte hain! Essential services Public, competitive industries Private. Best of both worlds! China, USA bhi mixed economies hain, sirf degree alag hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! To India mein banks, railways public hain par IT, automobile private dominant hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_61_privatization",
+        "button_text": "Exactly ➔"
+      }
+    },
+    {
+      "card_id": "card_61_privatization",
+      "card_slug": "card_61_privatization",
+      "type": "chat",
+      "concept_id": "privatization_concept",
+      "level": 6,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur ab ek trend chal raha hai - PRIVATIZATION. Matlab kuch PSUs (Public Sector Undertakings) ko private companies ko bech dena! Jaise Air India (jo pehle government ki thi) ko Tata ko bech diya 2022 mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Par kyun Sir? Government companies ko kyun bech rahe hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki kai PSUs loss mein chal rahi hain, inefficient ho gayi hain, government ka burden ban gayi hain. Private companies zyada efficiently chalayengi aur profit mein la sakti hain - ye argument hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Par Sir public welfare ka kya hoga? Private to profit dekhenge na?"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_privatization_debate",
+        "button_text": "Sahi bola ➔"
+      }
+    },
+    {
+      "card_id": "card_62_privatization_debate",
+      "card_slug": "card_62_privatization_debate",
+      "type": "chat",
+      "concept_id": "privatization_debate",
+      "level": 6,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ye ek badi debate hai Raju! Supporters kehte hain - efficiency badhegi, government ka fiscal burden kamega. Critics kehte hain - public welfare suffer karega, job losses honge, monopoly ban jayega!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir kya sahi hai? Public sector better ya private?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⚠️ BPSC/UPSC Perspective: Dono ki jagah hai! Strategic sectors (defence, atomic energy, railways) mein public control zaroori. Competitive sectors (telecom, aviation) mein private zyada efficient. Balance banana zaroori hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Context ke hisaab se decision lena padta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_quiz_16",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_63_quiz_16",
+      "card_slug": "card_63_quiz_16",
+      "type": "quiz",
+      "concept_id": "public_private_quiz_1",
+      "level": 6,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "PUBLIC SECTOR का मुख्य उद्देश्य क्या है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "अधिकतम लाभ (Profit Maximization)"
+          },
+          {
+            "id": "B",
+            "text": "जनकल्याण (Public Welfare)"
+          },
+          {
+            "id": "C",
+            "text": "निजी संपत्ति बढ़ाना"
+          },
+          {
+            "id": "D",
+            "text": "केवल शहरी क्षेत्रों में सेवा देना"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "PUBLIC SECTOR का मुख्य उद्देश्य PUBLIC WELFARE (जनकल्याण) है, न कि profit maximization। Government owned entities essential services provide करती हैं भले ही loss हो। Railways, BSNL, SBI (majority govt) examples हैं। ⭐ NCERT Class 10 + BPSC Direct definition!"
+      },
+      "navigation": {
+        "next": "card_64_quiz_17",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_64_quiz_17",
+      "card_slug": "card_64_quiz_17",
+      "type": "quiz",
+      "concept_id": "public_private_quiz_2",
+      "level": 6,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा PRIVATE SECTOR का उदाहरण है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Indian Railways"
+          },
+          {
+            "id": "B",
+            "text": "Reliance Industries"
+          },
+          {
+            "id": "C",
+            "text": "BHEL (Bharat Heavy Electricals Limited)"
+          },
+          {
+            "id": "D",
+            "text": "BSNL (Bharat Sanchar Nigam Limited)"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Reliance Industries PRIVATE SECTOR company है (Mukesh Ambani owned)। Railways, BHEL, और BSNL सभी PUBLIC SECTOR (Government owned PSUs) हैं। ⭐ SSC/Railway frequently asked - PSU vs Private distinction!"
+      },
+      "navigation": {
+        "next": "card_65_quiz_18",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_65_quiz_18",
+      "card_slug": "card_65_quiz_18",
+      "type": "quiz",
+      "concept_id": "mixed_economy_quiz",
+      "level": 6,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत की अर्थव्यवस्था किस प्रकार की है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "पूर्णतः समाजवादी (Socialist)"
+          },
+          {
+            "id": "B",
+            "text": "पूर्णतः पूंजीवादी (Capitalist)"
+          },
+          {
+            "id": "C",
+            "text": "मिश्रित अर्थव्यवस्था (Mixed Economy)"
+          },
+          {
+            "id": "D",
+            "text": "साम्यवादी (Communist)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "भारत की अर्थव्यवस्था MIXED ECONOMY है जिसमें Public और Private दोनों sectors co-exist करते हैं। न पूर्णतः socialist (सब government controlled) न पूर्णतः capitalist (सब private)। Strategic sectors में public, competitive में private dominance। ⭐ UPSC/BPSC Prelims guaranteed concept!"
+      },
+      "navigation": {
+        "next": "card_66_milestone_6",
+        "button_text": "Progress Check ➔"
+      }
+    },
+    {
+      "card_id": "card_66_milestone_6",
+      "card_slug": "card_66_milestone_6",
+      "type": "milestone",
+      "concept_id": "module_6_complete",
+      "level": 6,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "💎 MODULE 6 CONQUERED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Public vs Private Sectors",
+        "xp_earned": 100,
+        "milestone_progress": "Module 6/8 Complete",
+        "motivational_quote": "Incredible! Public-Private sectors aur Mixed Economy master kar liya! Ab final revision aur Officer-level quiz! 🔥"
+      },
+      "navigation": {
+        "next": "card_67_summary",
+        "button_text": "Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_67_summary",
+      "card_slug": "card_67_summary",
+      "type": "summary",
+      "concept_id": "chapter_summary",
+      "level": 7,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER QUICK REVISION - Sectors & GDP",
+        "revision_points": [
+          {
+            "topic": "तीन आर्थिक क्षेत्र (Three Sectors)",
+            "point": "PRIMARY (कृषि, मछली पालन, mining) - प्रकृति से सीधा उत्पादन। SECONDARY (Manufacturing, Construction) - कच्चे माल को final product में convert। TERTIARY (Services - बैंक, शिक्षा, परिवहन) - सेवाएं प्रदान करना।"
+          },
+          {
+            "topic": "GDP में योगदान (Current India)",
+            "point": "Primary: ~18%, Secondary: ~25%, Tertiary: ~57%. Tertiary sector अब सबसे बड़ा! ⚠️ Trap: Employment में अभी भी Primary सबसे बड़ा (~45-50%) - यह Employment-Production Paradox है!"
+          },
+          {
+            "topic": "GDP vs GNP",
+            "point": "GDP = Gross Domestic Product (देश की सीमा के अंदर उत्पादन, Final goods only)। GNP = GDP + Net Factor Income from Abroad। GDP counts LOCATION, GNP counts NATIONALITY। Double counting से बचने के लिए केवल Final goods count होती हैं।"
+          },
+          {
+            "topic": "Per Capita Income & HDI",
+            "point": "Per Capita = GDP ÷ Population (average income)। Limitation: Income inequality नहीं दिखाता। HDI = Income + Education + Health (UNDP द्वारा) - बेहतर development indicator। India: 132nd rank (2022), Medium category।"
+          },
+          {
+            "topic": "Organized vs Unorganized",
+            "point": "ORGANIZED: Government rules follow, job security, PF, paid leave (10-15% workforce)। UNORGANIZED: No security, vulnerable, 85-90% workforce! MGNREGA = 100 days guaranteed employment (rural)।"
+          },
+          {
+            "topic": "Public vs Private Sector",
+            "point": "PUBLIC: Government owned, welfare focus, loss afford kar sakta (Railways, PSUs)। PRIVATE: Profit focus, efficiency high (Reliance, Tata)। India = MIXED ECONOMY (दोनों co-exist)। Privatization debate ongoing!"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_68_final_quiz_1",
+        "button_text": "Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_68_final_quiz_1",
+      "card_slug": "card_68_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_1",
+      "level": 7,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC STYLE MULTI-STATEMENT: निम्नलिखित कथनों पर विचार करें:\n1. भारत में वर्तमान में Tertiary Sector का GDP में सबसे अधिक योगदान है।\n2. भारत में सबसे अधिक लोग Tertiary Sector में रोजगार पाते हैं।\n3. Disguised Unemployment मुख्यतः Primary Sector में पाई जाती है।\n\nसही कथन हैं:",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 2"
+          },
+          {
+            "id": "B",
+            "text": "केवल 1 और 3"
+          },
+          {
+            "id": "C",
+            "text": "केवल 2 और 3"
+          },
+          {
+            "id": "D",
+            "text": "1, 2 और 3 सभी"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⚠️ Classic BPSC Trap! कथन 1 सही: Tertiary sector GDP में ~57% (सबसे बड़ा)। कथन 2 गलत: Employment में Primary sector सबसे बड़ा है (~45-50%), न कि Tertiary! यह Employment-Production Paradox है। कथन 3 सही: Disguised unemployment खासकर agriculture/Primary में। Answer: केवल 1 और 3 सही!"
+      },
+      "navigation": {
+        "next": "card_69_final_quiz_2",
+        "button_text": "Next Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_69_final_quiz_2",
+      "card_slug": "card_69_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_2",
+      "level": 7,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC/UPSC NUMERICAL: एक किसान ₹1000 का गेहूं बेचता है आटा मिल को। आटा मिल ₹1500 का आटा बनाकर बेकरी को बेचती है। बेकरी ₹3000 की ब्रेड बनाकर consumer को बेचती है। GDP में इस chain से कितना जोड़ा जाएगा?",
+        "options": [
+          {
+            "id": "A",
+            "text": "₹5500 (सभी का योग)"
+          },
+          {
+            "id": "B",
+            "text": "₹3000 (केवल final product)"
+          },
+          {
+            "id": "C",
+            "text": "₹4500 (आटा + ब्रेड)"
+          },
+          {
+            "id": "D",
+            "text": "₹2500 (गेहूं + आटा)"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "GDP में केवल FINAL PRODUCT की value count होती है = ₹3000 (ब्रेड)। गेहूं (₹1000) और आटा (₹1500) intermediate goods हैं, इनकी value already ब्रेड में included है। अगर सबको जोड़ें (₹5500) तो DOUBLE COUNTING हो जाएगी! यह SSC/Railway का favorite numerical trap है!"
+      },
+      "navigation": {
+        "next": "card_70_final_quiz_3",
+        "button_text": "Last Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_70_final_quiz_3",
+      "card_slug": "card_70_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_3",
+      "level": 7,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC/UPSC ASSERTION-REASON:\n\nअभिकथन (A): भारत में लगभग 85-90% कार्यबल Unorganized Sector में कार्यरत है।\n\nकारण (R): Unorganized Sector में सरकारी नियमों का पालन नहीं होता और job security नहीं होती।\n\nसही विकल्प चुनें:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A और R दोनों सही हैं, और R, A की सही व्याख्या है"
+          },
+          {
+            "id": "B",
+            "text": "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है"
+          },
+          {
+            "id": "C",
+            "text": "A सही है लेकिन R गलत है"
+          },
+          {
+            "id": "D",
+            "text": "A गलत है लेकिन R सही है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⚠️ BPSC Tricky! दोनों statements अलग-अलग सही हैं। (A) सही: India में ~85-90% workforce unorganized में। (R) भी सही: Unorganized में rules follow नहीं, security नहीं। लेकिन R, A का DIRECT REASON नहीं है! Unorganized में ज्यादा लोग इसलिए हैं क्योंकि agriculture dominant है, छोटे businesses ज्यादा हैं - सिर्फ 'security न होना' reason नहीं। Answer: B!"
+      },
+      "navigation": {
+        "next": "card_71_final_quiz_4",
+        "button_text": "One More ➔"
+      }
+    },
+    {
+      "card_id": "card_71_final_quiz_4",
+      "card_slug": "card_71_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_4",
+      "level": 7,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC/SSC CONCEPTUAL: एक भारतीय कंपनी अमेरिका में factory खोलकर cars बनाती है। एक अमेरिकी कंपनी भारत में IT services provide करती है। निम्नलिखित में से कौन सा कथन सही है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "दोनों activities भारत के GDP में count होंगी"
+          },
+          {
+            "id": "B",
+            "text": "Cars अमेरिका के GDP में, IT services भारत के GDP में count होगी"
+          },
+          {
+            "id": "C",
+            "text": "दोनों भारत के GNP में count होंगी"
+          },
+          {
+            "id": "D",
+            "text": "Cars भारत के GDP में, IT services अमेरिका के GDP में count होगी"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⚠️ GDP vs GNP Master Trap! GDP = LOCATION based (कहाँ produce हुआ), GNP = NATIONALITY based (किसने produce किया)। Cars अमेरिका में बनी = अमेरिका के GDP में (चाहे Indian company हो)। IT services भारत में provide की गई = भारत के GDP में (चाहे American company हो)। दोनों भारत के GNP में भी count होंगी क्योंकि Indian entities involved हैं। Answer: B (GDP के लिए)!"
+      },
+      "navigation": {
+        "next": "card_72_completion",
+        "button_text": "Complete Chapter ➔"
+      }
+    },
+    {
+      "card_id": "card_72_completion",
+      "card_slug": "card_72_completion",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 7,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER COMPLETED!",
+        "badge_emoji": "👑",
+        "completed_topic": "Sectors and GDP in Indian Economy",
+        "xp_earned": 500,
+        "milestone_progress": "100% Complete - Officer Level Achieved!",
+        "motivational_quote": "OUTSTANDING RAJU! 🎉\n\nTumne complete 'Sectors and GDP' chapter master kar liya:\n✅ Primary, Secondary, Tertiary sectors\n✅ GDP, GNP, Per Capita Income\n✅ HDI & Development indicators\n✅ Employment-Production Paradox\n✅ Organized vs Unorganized sectors\n✅ Public vs Private sectors\n✅ MGNREGA & Government schemes\n\nAb tum BPSC/SSC/Railway/UPSC ke kisi bhi question ko tackle kar sakte ho! Keep learning, keep growing! 💪🔥\n\n- Aman Sir"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "🏠 Back to Home"
+      }
+    }
+  ]
+}
+```
