@@ -24,11 +24,11 @@ from bs4 import MarkupResemblesLocatorWarning
 # ============================================================
 
 OUTPUT_FILE = "trialoutput.json"
-TIMEOUT = 25
+TIMEOUT = 12  # Fast per-request timeout to prevent hangs
 MAX_PER_SOURCE = 15
 
-MIN_CONTENT_CHARS = 450
-MIN_CONTENT_WORDS = 100  # Google alert snippets ke liye threshold lower rakha hai
+MIN_CONTENT_CHARS = 150
+MIN_CONTENT_WORDS = 30  
 MAX_CONTENT_WORDS = 800
 
 DEFAULT_PIB_FEED = "https://www.google.com/alerts/feeds/18398184577640792063/4294037665781559395"
@@ -56,7 +56,6 @@ warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 # ============================================================
 
 class CustomGovSSLAdapter(HTTPAdapter):
-    """Bypasses legacy SSL/TLS ciphers for Bihar Government portals"""
     def init_poolmanager(self, *args, **kwargs):
         ctx = create_urllib3_context()
         ctx.set_ciphers('DEFAULT@SECLEVEL=1')
@@ -82,14 +81,11 @@ def warn(msg): print(f"⚠️ {msg}")
 def success(msg): print(f"✅ {msg}")
 
 def extract_real_google_url(google_url):
-    """Extracts target link from Google Alert Redirects"""
     try:
         parsed = urlparse(google_url)
         query_params = parse_qs(parsed.query)
         if 'url' in query_params:
             return unquote(query_params['url'][0])
-        
-        # Fallback regex for embedded URL patterns
         match = re.search(r'(https?://[^\s&]+)', google_url)
         if match:
             return match.group(1)
@@ -134,7 +130,7 @@ def trim_to_max_words(text, max_words=MAX_CONTENT_WORDS):
     return text
 
 # ============================================================
-# FETCHERS
+# FETCHERS WITH FAST FAILOVER
 # ============================================================
 
 def normal_fetch(url, verify=True):
@@ -170,14 +166,17 @@ def fetch_generic_article_content(url, source=""):
     html_raw = fetch_url(url)
     if not html_raw: return "", None
 
-    soup = BeautifulSoup(html_raw, "html.parser")
-    for tag in soup(["script", "style", "noscript", "svg", "nav", "footer", "header"]):
-        tag.decompose()
+    try:
+        soup = BeautifulSoup(html_raw, "html.parser")
+        for tag in soup(["script", "style", "noscript", "svg", "nav", "footer", "header"]):
+            tag.decompose()
 
-    target_div = soup.find("div", class_="ReleaseContentDiv") or soup.find("form", id="form1") or soup.find("article")
-    text = target_div.get_text(" ", strip=True) if target_div else soup.get_text(" ", strip=True)
-    cleaned = clean_text(text)
-    return trim_to_max_words(cleaned, MAX_CONTENT_WORDS), now_ist()
+        target_div = soup.find("div", class_="ReleaseContentDiv") or soup.find("form", id="form1") or soup.find("article")
+        text = target_div.get_text(" ", strip=True) if target_div else soup.get_text(" ", strip=True)
+        cleaned = clean_text(text)
+        return trim_to_max_words(cleaned, MAX_CONTENT_WORDS), now_ist()
+    except Exception:
+        return "", None
 
 # ============================================================
 # ITEM BUILDER & DEDUP
@@ -214,74 +213,64 @@ def deduplicate(items):
     return output
 
 # ============================================================
-# SCRAPER SOURCES
+# INDIVIDUAL SCRAPER SOURCES (ISOLATED)
 # ============================================================
 
 # 1. PIB GOOGLE ALERTS
 def scrape_pib_news():
     print("\n" + "=" * 70 + "\n📰 PIB (GOVERNMENT PRESS INFORMATION BUREAU - GOOGLE ALERTS)\n" + "=" * 70)
-    print(f"📡 Using Feed URL: {PIB_ALERT_FEED_URL}")
-    
     try:
         feed = feedparser.parse(PIB_ALERT_FEED_URL)
         entries = feed.entries
-        print(f"📦 Total PIB Feed Items Found: {len(entries)}")
     except Exception as e:
         warn(f"Failed to parse PIB RSS feed: {e}")
         return []
 
     results = []
-    for idx, entry in enumerate(entries, 1):
-        raw_title = entry.get("title", "")
-        raw_link = entry.get("link", "")
-        feed_snippet = entry.get("summary", "") or entry.get("content", [{}])[0].get("value", "")
+    for idx, entry in enumerate(entries[:MAX_PER_SOURCE], 1):
+        try:
+            raw_title = entry.get("title", "")
+            raw_link = entry.get("link", "")
+            feed_snippet = entry.get("summary", "") or entry.get("content", [{}])[0].get("value", "")
 
-        clean_t = clean_title(raw_title)
-        real_url = extract_real_google_url(raw_link)
+            clean_t = clean_title(raw_title)
+            real_url = extract_real_google_url(raw_link)
 
-        if not clean_t or not real_url:
+            if not clean_t or not real_url: continue
+
+            # Direct fallback logic to avoid hanging on slow target pages
+            content = clean_text(feed_snippet)
+            if word_count(content) < MIN_CONTENT_WORDS:
+                scraped_content, _ = fetch_generic_article_content(real_url, "PIB")
+                if scraped_content: content = scraped_content
+
+            obj = make_item("PIB India", clean_t, real_url, now_ist(), content, "Press Release")
+            if obj: results.append(obj)
+        except Exception as e:
+            warn(f"PIB Item {idx} Skip: {e}")
             continue
 
-        print(f"🌐 [{idx}/{len(entries)}] Processing PIB Alert: {clean_t[:45]}...")
-        
-        # Webpage Scraping
-        content, pub_date = fetch_generic_article_content(real_url, "PIB")
-
-        # Fallback to Feed Snippet if full scrape is empty or too short
-        if not content or word_count(content) < MIN_CONTENT_WORDS:
-            content = clean_text(feed_snippet)
-
-        obj = make_item(
-            source="PIB India",
-            title=clean_t,
-            url=real_url,
-            date=now_ist(),
-            content=content,
-            item_type="Press Release"
-        )
-
-        if obj:
-            results.append(obj)
-
-    results = deduplicate(results)
-    print(f"✅ PIB usable: {len(results)}")
-    return results
+    return deduplicate(results)
 
 # 2. NEWS ON AIR
 def scrape_news_on_air():
     print("\n" + "=" * 70 + "\n📻 NEWS ON AIR\n" + "=" * 70)
     html_raw = fetch_url("https://newsonair.gov.in/category/national-news/")
     if not html_raw: return []
-    soup = BeautifulSoup(html_raw, "html.parser")
+    
     results = []
-    for a in soup.find_all("a", href=True):
-        href = clean_url(urljoin("https://newsonair.gov.in/", a.get("href")))
-        title = clean_title(a.get_text())
-        if "newsonair.gov.in" in href and len(title) > 20:
-            content, date = fetch_generic_article_content(href, "News On AIR")
-            item = make_item("News On AIR", title, href, date, content, "Article")
-            if item: results.append(item)
-            if len(results) >= MAX_PER_SOURCE: break
+    try:
+        soup = BeautifulSoup(html_raw, "html.parser")
+        for a in soup.find_all("a", href=True):
+            href = clean_url(urljoin("https://newsonair.gov.in/", a.get("href")))
+            title = clean_title(a.get_text())
+            if "newsonair.gov.in" in href and len(title) > 20:
+                content, date = fetch_generic_article_content(href, "News On AIR")
+                item = make_item("News On AIR", title, href, date, content, "Article")
+                if item: results.append(item)
+                if len(results) >= MAX_PER_SOURCE: break
+    except Exception as e:
+        warn(f"News On AIR Exception: {e}")
     return deduplicate(results)
 
 # 3. IPRD BIHAR
@@ -289,16 +278,20 @@ def scrape_iprd_bihar():
     print("\n" + "=" * 70 + "\n📢 IPRD BIHAR\n" + "=" * 70)
     html_raw = fetch_url("https://state.bihar.gov.in/prdbihar/")
     if not html_raw: return []
-    soup = BeautifulSoup(html_raw, "html.parser")
+    
     results = []
-    for a in soup.find_all("a", href=True):
-        href = clean_url(urljoin("https://state.bihar.gov.in/prdbihar/", a.get("href")))
-        title = clean_title(a.get_text())
-        if "state.bihar.gov.in/prdbihar" in href.lower() and len(title) > 20:
-            content, date = fetch_generic_article_content(href, "IPRD Bihar")
-            item = make_item("IPRD Bihar", title, href, date, content, "Press Release")
-            if item: results.append(item)
-            if len(results) >= MAX_PER_SOURCE: break
+    try:
+        soup = BeautifulSoup(html_raw, "html.parser")
+        for a in soup.find_all("a", href=True):
+            href = clean_url(urljoin("https://state.bihar.gov.in/prdbihar/", a.get("href")))
+            title = clean_title(a.get_text())
+            if "state.bihar.gov.in/prdbihar" in href.lower() and len(title) > 20:
+                content, date = fetch_generic_article_content(href, "IPRD Bihar")
+                item = make_item("IPRD Bihar", title, href, date, content, "Press Release")
+                if item: results.append(item)
+                if len(results) >= MAX_PER_SOURCE: break
+    except Exception as e:
+        warn(f"IPRD Bihar Exception: {e}")
     return deduplicate(results)
 
 # 4. BIHAR CABINET
@@ -306,16 +299,20 @@ def scrape_bihar_cabinet():
     print("\n" + "=" * 70 + "\n🏛️ BIHAR CABINET\n" + "=" * 70)
     html_raw = fetch_url("https://state.bihar.gov.in/csd/")
     if not html_raw: return []
-    soup = BeautifulSoup(html_raw, "html.parser")
+    
     results = []
-    for a in soup.find_all("a", href=True):
-        href = clean_url(urljoin("https://state.bihar.gov.in/csd/", a.get("href")))
-        title = clean_title(a.get_text())
-        if "cabinet" in title.lower() or "approval" in title.lower():
-            content, date = fetch_generic_article_content(href, "Bihar Cabinet")
-            item = make_item("Bihar Cabinet", title, href, date, content, "Cabinet Decision")
-            if item: results.append(item)
-            if len(results) >= MAX_PER_SOURCE: break
+    try:
+        soup = BeautifulSoup(html_raw, "html.parser")
+        for a in soup.find_all("a", href=True):
+            href = clean_url(urljoin("https://state.bihar.gov.in/csd/", a.get("href")))
+            title = clean_title(a.get_text())
+            if "cabinet" in title.lower() or "approval" in title.lower():
+                content, date = fetch_generic_article_content(href, "Bihar Cabinet")
+                item = make_item("Bihar Cabinet", title, href, date, content, "Cabinet Decision")
+                if item: results.append(item)
+                if len(results) >= MAX_PER_SOURCE: break
+    except Exception as e:
+        warn(f"Bihar Cabinet Exception: {e}")
     return deduplicate(results)
 
 # 5. INDIA GOV
@@ -323,16 +320,20 @@ def scrape_india_gov():
     print("\n" + "=" * 70 + "\n🇮🇳 INDIA.GOV.IN\n" + "=" * 70)
     html_raw = fetch_url("https://www.india.gov.in/news")
     if not html_raw: return []
-    soup = BeautifulSoup(html_raw, "html.parser")
+    
     results = []
-    for a in soup.find_all("a", href=True):
-        href = clean_url(urljoin("https://www.india.gov.in/", a.get("href")))
-        title = clean_title(a.get_text())
-        if "india.gov.in" in href and len(title) > 20:
-            content, date = fetch_generic_article_content(href, "India.gov.in")
-            item = make_item("India.gov.in", title, href, date, content, "Government Article")
-            if item: results.append(item)
-            if len(results) >= MAX_PER_SOURCE: break
+    try:
+        soup = BeautifulSoup(html_raw, "html.parser")
+        for a in soup.find_all("a", href=True):
+            href = clean_url(urljoin("https://www.india.gov.in/", a.get("href")))
+            title = clean_title(a.get_text())
+            if "india.gov.in" in href and len(title) > 20:
+                content, date = fetch_generic_article_content(href, "India.gov.in")
+                item = make_item("India.gov.in", title, href, date, content, "Government Article")
+                if item: results.append(item)
+                if len(results) >= MAX_PER_SOURCE: break
+    except Exception as e:
+        warn(f"India Gov Exception: {e}")
     return deduplicate(results)
 
 # 6. BIHAR CM OFFICE
@@ -341,47 +342,64 @@ def scrape_bihar_cm():
     url = "https://cm.bihar.gov.in/users/preessrelease.aspx"
     html_raw = fetch_url(url)
     if not html_raw: return []
-    soup = BeautifulSoup(html_raw, "html.parser")
+    
     results = []
-    for row in soup.find_all('tr')[:12]:
-        cols = row.find_all('td')
-        if len(cols) >= 2:
-            title = clean_title(cols[1].text.strip())
-            link_tag = cols[1].find('a') or row.find('a')
-            href = clean_url(urljoin(url, link_tag['href'])) if link_tag and link_tag.get('href') else url
-            if title and len(title) > 10:
-                content, date = fetch_generic_article_content(href, "CMO Bihar")
-                if not content or word_count(content) < MIN_CONTENT_WORDS:
-                    content = f"Official Press Release issued by CMO Bihar: {title}."
-                item = make_item("Bihar CM Office", title, href, date or now_ist(), content, "Press Release")
-                if item: results.append(item)
+    try:
+        soup = BeautifulSoup(html_raw, "html.parser")
+        for row in soup.find_all('tr')[:12]:
+            cols = row.find_all('td')
+            if len(cols) >= 2:
+                title = clean_title(cols[1].text.strip())
+                link_tag = cols[1].find('a') or row.find('a')
+                href = clean_url(urljoin(url, link_tag['href'])) if link_tag and link_tag.get('href') else url
+                if title and len(title) > 10:
+                    content, date = fetch_generic_article_content(href, "CMO Bihar")
+                    if not content or word_count(content) < MIN_CONTENT_WORDS:
+                        content = f"Official Press Release issued by CMO Bihar: {title}."
+                    item = make_item("Bihar CM Office", title, href, date or now_ist(), content, "Press Release")
+                    if item: results.append(item)
+    except Exception as e:
+        warn(f"Bihar CM Exception: {e}")
     return deduplicate(results)
+
+# ============================================================
+# SAFE INDIVIDUAL RUNNER
+# ============================================================
+
+def run_isolated_source(name, scraper_func):
+    """Executes each scraper in an isolated sandbox. Crash in one will NOT affect others."""
+    print(f"\n⚡ Starting Isolated Engine: [{name}]...")
+    start_time = time.time()
+    try:
+        data = scraper_func()
+        duration = round(time.time() - start_time, 2)
+        success(f"[{name}] Completed in {duration}s | Extracted: {len(data)} items")
+        return data
+    except Exception as e:
+        warn(f"[{name}] FAILED WITH ERROR: {e}")
+        return []
 
 # ============================================================
 # MAIN PIPELINE
 # ============================================================
 
 def build_news():
-    print("\n" + "=" * 80 + "\n🚀 STARTING SCRAPER PIPELINE\n" + "=" * 80)
+    print("\n" + "=" * 80 + "\n🚀 STARTING ISOLATED SCRAPER PIPELINE\n" + "=" * 80)
     all_results, breakdown = [], {}
 
-    sources = {
-        "News On AIR": scrape_news_on_air,
-        "PIB India": scrape_pib_news,
-        "IPRD Bihar": scrape_iprd_bihar,
-        "Bihar Cabinet": scrape_bihar_cabinet,
-        "India.gov.in": scrape_india_gov,
-        "Bihar CM Office": scrape_bihar_cm
-    }
+    sources = [
+        ("News On AIR", scrape_news_on_air),
+        ("PIB India", scrape_pib_news),
+        ("IPRD Bihar", scrape_iprd_bihar),
+        ("Bihar Cabinet", scrape_bihar_cabinet),
+        ("India.gov.in", scrape_india_gov),
+        ("Bihar CM Office", scrape_bihar_cm)
+    ]
 
-    for name, fn in sources.items():
-        try:
-            res = fn()
-            breakdown[name] = len(res)
-            all_results.extend(res)
-        except Exception as e:
-            warn(f"{name} Failed: {e}")
-            breakdown[name] = 0
+    for name, fn in sources:
+        res = run_isolated_source(name, fn)
+        breakdown[name] = len(res)
+        all_results.extend(res)
 
     all_results = deduplicate(all_results)
     bihar_sources = {"IPRD Bihar", "Bihar Cabinet", "Bihar CM Office"}
@@ -402,7 +420,9 @@ def build_news():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"\n💾 Output saved to '{OUTPUT_FILE}' with {len(all_results)} total items.")
+    print("\n" + "=" * 80)
+    print(f"💾 File Output saved to '{OUTPUT_FILE}' with {len(all_results)} total items.")
+    print("=" * 80)
 
 if __name__ == "__main__":
     build_news()
