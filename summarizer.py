@@ -41,10 +41,10 @@ STRICT REJECTION RULES (CRITICAL):
 - BANNED TOPICS BLOCK (STRICT DROP): Set "is_relevant": false for ALL news related to:
   1. Corporate fraud, bribery, court lawsuits involving business personalities (e.g., Adani bribery/fraud cases, corporate scam court trials).
   2. Foreign immigration rules, visa policy changes for other countries, US/UK/Canada immigration updates (unless directly related to Indian bilateral treaties).
-  3. Local protests, lathi-charge incidents, student strikes, hunger strikes, political party Bandhs, and political clashes.
+  3. Local protests, lathi-charge incidents, student strikes, hunger strikes, political party Bandhs, and political clashes,fact check.
 - GARBAGE & NAVIGATION TITLES BLOCK: Set "is_relevant": false if the title/content contains website navigation phrases like "Skip to Main Content", "Accessibility Options", "Home", "Contact Us", etc.
 - OTHER STATES NEWS BLOCK: If the news is specifically about OTHER Indian states (e.g., Uttar Pradesh, Madhya Pradesh, Rajasthan, Delhi, Maharashtra, Punjab, Haryana, Tamil Nadu, Karnataka, etc.) and is NOT a Central/National scheme or decision, set "is_relevant": false.
-- Set "is_relevant": false if news is about stock market daily movements, Sensex/Nifty, Rupee fluctuations, local crime, accidents, viral videos, entertainment, gossip, or audio portal listings.
+- Set "is_relevant": false if news is about stock market daily movements,fact check, Sensex/Nifty, Rupee fluctuations, local crime, accidents, viral videos, entertainment, gossip, or audio portal listings.
 
 OUTPUT FORMAT REQUIREMENTS:
 Output MUST be strictly valid JSON format with keys:
