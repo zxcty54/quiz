@@ -1,0 +1,1484 @@
+
+{
+  "topic_id": "soils_indian_geography",
+  "topic_title": "Soils in Indian Geography",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 50,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 50
+      },
+      "intro_payload": {
+        "title": "🌱 Soils in Indian Geography",
+        "icon": "🏞️",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Understanding soil formation, profile, and components",
+          "Classification of Indian soils: Alluvial, Black, Red, Laterite, Desert, Mountain",
+          "Regional distribution patterns across states and Bihar",
+          "Soil degradation, erosion, and conservation techniques",
+          "BPSC/SSC favorite traps: Color, texture, crop suitability",
+          "ICAR soil classification vs traditional names",
+          "Soil testing, pH concepts, and fertility management"
+        ],
+        "estimated_time": "18 minutes",
+        "badge_to_earn": "🏆 Soil Expert"
+      },
+      "navigation": {
+        "next": "card_02_kitchen_observation",
+        "button_text": "शुरू करें ➔"
+      }
+    },
+    {
+      "card_id": "card_02_kitchen_observation",
+      "card_slug": "card_02_kitchen_observation",
+      "type": "chat",
+      "concept_id": "soil_basic_understanding",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne ghar mein gमले में पौधा लगाया hai kabhi?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Mummy ne tulsi ka पौधा lagaya tha. Usme mitti daali thi."
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Wo mitti jo tumne dekhi, wo सिर्फ धूल nahi hai. Usmein छोटे-छोटे पत्थर के टुकड़े, सड़े हुए पत्ते, और बहुत कुछ hota hai. Isko hum SOIL kehte hain - ek complex mixture!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa... matlab soil sirf mitti nahi, usme aur bhi चीज़ें mixed hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_soil_definition",
+        "button_text": "Aage badhein ➔"
+      }
+    },
+    {
+      "card_id": "card_03_soil_definition",
+      "card_slug": "card_03_soil_definition",
+      "type": "chat",
+      "concept_id": "soil_composition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Soil में CHAR main चीज़ें hoti hain: 1) Mineral matter (45%) - टूटे हुए rocks, 2) Organic matter (5%) - सड़े पत्ते/जानवरों के अवशेष, 3) Water (25%), 4) Air (25%). Ye percentages average hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir minerals rocks se aate hain? Matlab पत्थर टूटकर soil बनता है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely right! Ye process ko WEATHERING kehte hain. Baadल, हवा, सूर्य की गर्मी-ठंड se बड़े rocks धीरे-धीरे टूटकर छोटे particles बन जाते हैं। Hazaaron saal lagते हैं soil बनने में!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Matlab जो mitti हम रोज़ देखते हैं, wo itने लंबे process का result hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_soil_formation",
+        "button_text": "Haan bilkul ➔"
+      }
+    },
+    {
+      "card_id": "card_04_soil_formation",
+      "card_slug": "card_04_soil_formation",
+      "type": "chat",
+      "concept_id": "soil_formation_factors",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! Soil formation में PAANCH main factors kaam karte hain - yaad rakho इस mnemonic से: 'Parent rocks, Climate, Organisms, Relief (slope), Time' - **PCORT**! Har factor soil की property बदल देता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Parent rocks matlab जो मूल पत्थर था? Aur climate kaise affect करता है Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Parent rock decide करता है soil का mineral composition. Climate bahut important hai - ज़्यादा बारिश wale areas में thick soil layer बनती है, desert में bahut patli. Temperature bhi rocks को तोड़ने में help करता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To अलग-अलग जगह अलग soil kyunki climate aur rocks different hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_soil_profile",
+        "button_text": "Exactly ➔"
+      }
+    },
+    {
+      "card_id": "card_05_soil_profile",
+      "card_slug": "card_05_soil_profile",
+      "type": "chat",
+      "concept_id": "soil_horizons",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! Ab dekho, agar तुम ज़मीन में गहरा गड्ढा खोदो, to तुम्हें layers दिखेंगी - ऊपर गहरा, फिर हल्का, फिर पत्थर। Isko SOIL PROFILE kehte hain with layers called HORIZONS - O, A, B, C, R!"
+        },
+        {
+          "speaker": "raju",
+          "text": "O, A, B, C, R? Ye kya hain Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "O = Organic layer (सड़े पत्ते सबसे ऊपर), A = Topsoil (सबसे fertile, गहरा रंग, खेती के लिए best), B = Subsoil (minerals जमा होती हैं), C = Weathered rock pieces, R = Bedrock (मूल पत्थर)। ⭐ BPSC Trap: 'A Horizon' सबसे महत्वपूर्ण है agriculture के लिए!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab topsoil (A) को बचाना ज़रूरी है kyunki usमें ही पौधे उगते हैं?"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_quiz_1",
+        "button_text": "Test karo ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_1",
+      "card_slug": "card_06_quiz_1",
+      "type": "quiz",
+      "concept_id": "soil_basics_quiz",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Soil में mineral matter का लगभग कितना प्रतिशत होता है? (Q1/3)",
+        "options": [
+          {"id": "A", "text": "लगभग 25%"},
+          {"id": "B", "text": "लगभग 45%"},
+          {"id": "C", "text": "लगभग 70%"},
+          {"id": "D", "text": "लगभग 5%"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Soil में mineral matter (rocks के weathering से बने particles) लगभग 45% होता है। Organic matter 5%, Water 25%, Air 25% (ये average values हैं)। ⭐ SSC/Railway frequently पूछते हैं composition percentages!"
+      },
+      "navigation": {
+        "next": "card_07_quiz_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_2",
+      "card_slug": "card_07_quiz_2",
+      "type": "quiz",
+      "concept_id": "soil_formation_quiz",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Soil formation में सबसे महत्वपूर्ण factors में से कौन सा नहीं है? (Q2/3)",
+        "options": [
+          {"id": "A", "text": "Parent Rock"},
+          {"id": "B", "text": "Climate"},
+          {"id": "C", "text": "Human Population"},
+          {"id": "D", "text": "Time"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⚠️ BPSC Trap! Soil formation के 5 प्राकृतिक factors हैं: Parent material, Climate, Organisms (plants/animals), Relief/Topography, Time (PCORT)। Human Population direct factor नहीं है (हालांकि humans soil को degrade कर सकते हैं)।"
+      },
+      "navigation": {
+        "next": "card_08_quiz_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_3",
+      "card_slug": "card_08_quiz_3",
+      "type": "quiz",
+      "concept_id": "soil_horizon_quiz",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Soil profile में कृषि के लिए सबसे महत्वपूर्ण horizon कौन सी है? (Q3/3)",
+        "options": [
+          {"id": "A", "text": "O Horizon (Organic layer)"},
+          {"id": "B", "text": "A Horizon (Topsoil)"},
+          {"id": "C", "text": "B Horizon (Subsoil)"},
+          {"id": "D", "text": "C Horizon (Weathered rock)"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "A Horizon (Topsoil) कृषि के लिए सबसे महत्वपूर्ण है क्योंकि इसमें सबसे ज़्यादा organic matter, nutrients, और biological activity होती है। ⭐ NCERT Class 7 + BPSC favorite - Topsoil loss (erosion) से productivity घटती है!"
+      },
+      "navigation": {
+        "next": "card_09_milestone_1",
+        "button_text": "Check Progress ➔"
+      }
+    },
+    {
+      "card_id": "card_09_milestone_1",
+      "card_slug": "card_09_milestone_1",
+      "type": "milestone",
+      "concept_id": "module_1_complete",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 CLEARED!",
+        "badge_emoji": "🌱",
+        "completed_topic": "Soil Formation & Profile",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Complete",
+        "motivational_quote": "Zabardast Raju! Ab tumhe पता है soil कैसे बनती है। अब India की different soil types सीखेंगे! 🚀"
+      },
+      "navigation": {
+        "next": "card_10_alluvial_intro",
+        "button_text": "Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_10_alluvial_intro",
+      "card_slug": "card_10_alluvial_intro",
+      "type": "chat",
+      "concept_id": "alluvial_soil_introduction",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, India में कितने types की soil hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "NCERT के अनुसार India में मुख्यतः 6 types: 1) Alluvial, 2) Black, 3) Red, 4) Laterite, 5) Arid/Desert, 6) Mountain/Forest। सबसे पहले सबसे important देखते हैं - ALLUVIAL SOIL! India की ~43% भूमि पर यही है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "43%? Matlab आधे से ज़्यादा? Ye itna common kyun hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki ये नदियों द्वारा लाई गई soil है! Ganga, Brahmaputra, Indus जैसी बड़ी नदियाँ पहाड़ों से sediments लाकर plains में बिछा देती हैं। ⭐ BPSC TRE: Bihar की लगभग पूरी soil ALLUVIAL है - Ganga का gift!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_alluvial_types",
+        "button_text": "Types batao ➔"
+      }
+    },
+    {
+      "card_id": "card_11_alluvial_types",
+      "card_slug": "card_11_alluvial_types",
+      "type": "chat",
+      "concept_id": "alluvial_classification",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Alluvial soil दो types की होती है based on age: 1) **KHADAR** (नई alluvial) - नदी के किनारे, हर साल flood से नई layer आती है, बहुत fertile! 2) **BHANGAR** (पुरानी alluvial) - नदी से दूर ऊँची ज़मीन, कम fertile, कंकड़ मिलते हैं (kankar/calcified nodules)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir नदी के पास वाली ज़्यादा अच्छी kyunki har saal fresh mitti आती है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! ⚠️ SSC Trap: 'Khadar नई है, Bhangar पुरानी' - ये age difference याद रखो। Khadar में flood risk ज़्यादा but fertility bhi ज़्यादा। Bhangar safer but कम fertile। Both alluvial हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Sir, alluvial soil में kaun se crops achhe होते hैं?"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_alluvial_crops",
+        "button_text": "Crops देखो ➔"
+      }
+    },
+    {
+      "card_id": "card_12_alluvial_crops",
+      "card_slug": "card_12_alluvial_crops",
+      "type": "chat",
+      "concept_id": "alluvial_agriculture",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Alluvial soil बहुत fertile है! इसमें potash ज़्यादा होता है but nitrogen और phosphorus कम। Best crops: Rice, Wheat, Sugarcane, Cotton, Jute - India की major food crops यहीं उगती हैं! ⭐ UPSC Fact: Indo-Gangetic Plain की alluvial soil ने India को agricultural economy बनाया।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir color kaisa होता है iska?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Color vary करता है - light grey से dark grey तक, depending on organic content। Texture भी fine (clay/silt) से लेकर coarse (sand/gravel) तक हो सकता है। ⭐ Bihar में North Bihar (Kosi region) में sandy alluvial, South Bihar में clayey alluvial ज़्यादा।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To texture भी region के हिसाब से बदलता है?"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_black_soil_intro",
+        "button_text": "Next soil type ➔"
+      }
+    },
+    {
+      "card_id": "card_13_black_soil_intro",
+      "card_slug": "card_13_black_soil_intro",
+      "type": "chat",
+      "concept_id": "black_soil_introduction",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "अब आती है India की दूसरी सबसे important soil - **BLACK SOIL** या **REGUR**! इसे 'BLACK COTTON SOIL' भी कहते हैं क्योंकि ये cotton उगाने के लिए perfect है। Maharashtra, Gujarat, Madhya Pradesh में mainly पाई जाती है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Black kyun होती है Sir? Aur ये regur kya naam hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Black color titaniferous magnetite और organic matter की वजह से होता है। 'Regur' Telugu/Kannada word है जिसका मतलब 'cotton' होता है। ⚠️ BPSC Trap: Ye soil **volcanic rocks** (Basalt/Deccan Trap) के weathering से बनी है, alluvial से nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! To ye पुराने volcanic areas में मिलती है?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_black_soil_properties",
+        "button_text": "Properties dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_14_black_soil_properties",
+      "card_slug": "card_14_black_soil_properties",
+      "type": "chat",
+      "concept_id": "black_soil_characteristics",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Black soil की खास property: **SELF-PLOUGHING**! गर्मी में cracks पड़ जाती हैं (सूखकर), बरसात में फूल जाती है (swell)। ये expansion-contraction खुद ही मिट्टी को तोड़ देता है, कम जुताई चाहिए! High clay content (montmorillonite mineral) की वजह से।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Self-ploughing matlab apne आप जुताई? Farmers को kam मेहनत?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! लेकिन इसमें एक problem है - ये sticky हो जाती है जब wet, और बहुत hard जब dry। इसमें Calcium, Potassium, Magnesium ज़्यादा लेकिन Nitrogen, Phosphorus, Organic matter कम। ⭐ SSC Favorite: 'Moisture retention capacity' बहुत high!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir ये पानी hold कर लेती है achhe से?"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_quiz_4",
+        "button_text": "Bilkul! Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_4",
+      "card_slug": "card_15_quiz_4",
+      "type": "quiz",
+      "concept_id": "alluvial_black_quiz",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "भारत में सबसे अधिक क्षेत्र पर पाई जाने वाली मिट्टी कौन सी है? (Q1/3)",
+        "options": [
+          {"id": "A", "text": "Black Soil"},
+          {"id": "B", "text": "Alluvial Soil"},
+          {"id": "C", "text": "Red Soil"},
+          {"id": "D", "text": "Laterite Soil"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "ALLUVIAL SOIL भारत की लगभग 43% भूमि पर पाई जाती है - सबसे ज़्यादा! ⭐ NCERT Class 10 + BPSC/SSC/Railway frequent question। ये Indo-Gangetic Plains, Brahmaputra valley में mainly है। Black soil दूसरे नंबर पर (~15%)।"
+      },
+      "navigation": {
+        "next": "card_16_quiz_5",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz_5",
+      "card_slug": "card_16_quiz_5",
+      "type": "quiz",
+      "concept_id": "khadar_bhangar_quiz",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Khadar और Bhangar में मुख्य अंतर क्या है? (Q2/3)",
+        "options": [
+          {"id": "A", "text": "Khadar पुरानी alluvial है, Bhangar नई"},
+          {"id": "B", "text": "Khadar नई alluvial है (नदी के पास), Bhangar पुरानी (ऊँची ज़मीन)"},
+          {"id": "C", "text": "Khadar black soil है, Bhangar red"},
+          {"id": "D", "text": "दोनों में कोई अंतर नहीं"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⚠️ SSC/BPSC Classic Trap! KHADAR = नई alluvial (नदी के किनारे, हर साल नई layer, ज़्यादा fertile)। BHANGAR = पुरानी alluvial (नदी से दूर ऊँची ज़मीन, कम fertile, kankar nodules मिलते हैं)। Age और location का difference है!"
+      },
+      "navigation": {
+        "next": "card_17_quiz_6",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_17_quiz_6",
+      "card_slug": "card_17_quiz_6",
+      "type": "quiz",
+      "concept_id": "black_soil_quiz",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Black soil की 'Self-ploughing' property किसके कारण होती है? (Q3/3)",
+        "options": [
+          {"id": "A", "text": "High nitrogen content"},
+          {"id": "B", "text": "Expansion और contraction (गर्मी में crack, बरसात में swell)"},
+          {"id": "C", "text": "River deposits"},
+          {"id": "D", "text": "Very low clay content"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Black soil में high clay content (montmorillonite) होने से ये गर्मी में सूखकर crack करती है, बरसात में पानी सोखकर swell करती है। ये expansion-contraction cycle मिट्टी को naturally तोड़ देता है - इसे 'SELF-PLOUGHING' कहते हैं। ⭐ UPSC/BPSC favorite mechanism!"
+      },
+      "navigation": {
+        "next": "card_18_milestone_2",
+        "button_text": "Progress Check ➔"
+      }
+    },
+    {
+      "card_id": "card_18_milestone_2",
+      "card_slug": "card_18_milestone_2",
+      "type": "milestone",
+      "concept_id": "module_2_complete",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "💪 MODULE 2 MASTERED!",
+        "badge_emoji": "🌾",
+        "completed_topic": "Alluvial & Black Soils",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/6 Complete",
+        "motivational_quote": "Excellent! Alluvial और Black soil clear। अब Red, Laterite देखते हैं! 🔥"
+      },
+      "navigation": {
+        "next": "card_19_red_soil_intro",
+        "button_text": "Continue Learning ➔"
+      }
+    },
+    {
+      "card_id": "card_19_red_soil_intro",
+      "card_slug": "card_19_red_soil_intro",
+      "type": "chat",
+      "concept_id": "red_soil_introduction",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "अब आती है **RED SOIL**! Naam se ही पता चल रहा - ये लाल रंग की होती है। India के ~18% area में पाई जाती है - mainly Deccan Plateau के parts (Tamil Nadu, Karnataka, Andhra Pradesh, Odisha, Jharkhand, Chhattisgarh)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Red color kyun होता है Sir? Koi special mineral hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect guess! Red color **IRON OXIDE (Fe₂O₃)** की वजह से होता है - जैसे लोहे में ज़ंग लगती है वैसे ही। ⚠️ BPSC Trap: ये crystalline igneous rocks (granite, gneiss) के weathering से बनती है। जब hydrated होती है तो YELLOW दिखती है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir सूखी हो तो red, गीली हो तो yellow?"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_red_soil_properties",
+        "button_text": "Haan! Properties ➔"
+      }
+    },
+    {
+      "card_id": "card_20_red_soil_properties",
+      "card_slug": "card_20_red_soil_properties",
+      "type": "chat",
+      "concept_id": "red_soil_characteristics",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Red soil की texture sandy to clayey हो सकती है। Generally ये porous (छिद्रयुक्त) होती है - पानी जल्दी drain हो जाता है। Fertility: Generally LOW - Nitrogen, Phosphorus, Humus सब कम। Iron और Aluminium ज़्यादा लेकिन ये nutrients नहीं हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir ये कम fertile है? To इसमें crops achhe nahi होंगे?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Fertilizers डालकर improve कर सकते हैं। इसमें उगते हैं: Millets (Bajra, Jowar), Groundnut, Potato, Cotton (कम पैदावार)। ⭐ SSC Point: Red soil ACIDIC होती है (pH < 7), इसमें lime (calcium) डालकर neutralize करते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Acidic matlab खट्टी जैसे?"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_laterite_intro",
+        "button_text": "Haan! Next type ➔"
+      }
+    },
+    {
+      "card_id": "card_21_laterite_intro",
+      "card_slug": "card_21_laterite_intro",
+      "type": "chat",
+      "concept_id": "laterite_soil_introduction",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "चौथी important soil - **LATERITE SOIL**! 'Laterite' Latin word 'Later' से आया जिसका मतलब 'brick' होता है। ⭐ UPSC Favorite: ये heavy rainfall areas (>200 cm/year) में बनती है - Kerala, Karnataka, Tamil Nadu के coastal parts, Western Ghats, Odisha, Assam।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Brick kyun Sir? Kya इससे ईंटें बनती हैं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! जब ये soil सूखती है to brick जैसी hard हो जाती है! इससे actually construction में use करते हैं। ⚠️ BPSC Trap: Heavy rainfall के कारण इसमें से soluble nutrients (Nitrogen, Potash, Lime) बह जाते हैं - process को 'LEACHING' कहते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir बारिश ज़्यादा तो अच्छा nutrients धो जाते हैं?"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_laterite_properties",
+        "button_text": "Exactly ➔"
+      }
+    },
+    {
+      "card_id": "card_22_laterite_properties",
+      "card_slug": "card_22_laterite_properties",
+      "type": "chat",
+      "concept_id": "laterite_characteristics",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Laterite में Iron oxide और Aluminium compounds ज़्यादा रह जाते हैं (ये leach नहीं होते)। Color: Red से reddish-brown। Fertility: बहुत LOW - organic matter, Nitrogen, Phosphorus सब कम। Acidic nature। लेकिन manure डालकर इसमें Tea, Coffee, Rubber, Cashew जैसे plantation crops उगा सकते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Tea aur coffee? Matlab Sir special crops के लिए?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Normal food crops के लिए ये suitable नहीं। ⭐ BPSC TRE: Bihar में laterite soil नहीं पाई जाती (rainfall कम है)। Kerala/Karnataka में mainly है। Ye soil highly weathered होती है - लाखों साल का weathering!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! अब desert soil batao?"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_arid_mountain_soils",
+        "button_text": "Desert & Mountain ➔"
+      }
+    },
+    {
+      "card_id": "card_23_arid_mountain_soils",
+      "card_slug": "card_23_arid_mountain_soils",
+      "type": "chat",
+      "concept_id": "arid_mountain_soils",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**ARID/DESERT SOIL**: Rajasthan, Gujarat के desert areas में। Sandy texture, low moisture, low organic content। Salt concentration high (evaporation ज़्यादा)। Irrigation से मरुस्थल में भी खेती संभव - जैसे Indira Gandhi Canal Project। **MOUNTAIN/FOREST SOIL**: Himalayan regions में। अलग altitudes पर अलग types - acidic से alkaline तक।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir mountain soil में kya crops?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Forest products mainly - fruits (apple, pear), tea (Darjeeling), spices। Terrace farming करनी पड़ती है। ⚠️ SSC Trap: Arid soil में **Potash** ज़्यादा होता है but **Nitrogen** बहुत कम। Pulses (Bajra, Gram) कम पानी में उग सकते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! अब मुझे सभी 6 types आ गए!"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_quiz_7",
+        "button_text": "Test करो ➔"
+      }
+    },
+    {
+      "card_id": "card_24_quiz_7",
+      "card_slug": "card_24_quiz_7",
+      "type": "quiz",
+      "concept_id": "red_laterite_quiz",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Red soil का लाल रंग किसके कारण होता है? (Q1/3)",
+        "options": [
+          {"id": "A", "text": "Nitrogen content"},
+          {"id": "B", "text": "Iron oxide (Fe₂O₃) की उपस्थिति"},
+          {"id": "C", "text": "High organic matter"},
+          {"id": "D", "text": "Calcium carbonate"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Red soil का लाल रंग IRON OXIDE (Fe₂O₃) की उपस्थिति के कारण होता है - जैसे लोहे में ज़ंग। ⭐ NCERT Class 10 + BPSC/SSC frequently asked! जब hydrated (गीली) होती है तो yellow दिखती है।"
+      },
+      "navigation": {
+        "next": "card_25_quiz_8",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_25_quiz_8",
+      "card_slug": "card_25_quiz_8",
+      "type": "quiz",
+      "concept_id": "laterite_leaching_quiz",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Laterite soil में nutrients की कमी का मुख्य कारण क्या है? (Q2/3)",
+        "options": [
+          {"id": "A", "text": "कम वर्षा"},
+          {"id": "B", "text": "Leaching - भारी वर्षा से nutrients का बह जाना"},
+          {"id": "C", "text": "अत्यधिक ठंडा तापमान"},
+          {"id": "D", "text": "अधिक जुताई"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⚠️ UPSC/BPSC Critical Concept! Laterite soil भारी वर्षा areas (>200 cm) में पाई जाती है। Heavy rainfall से LEACHING होती है - soluble nutrients (N, K, Ca) बह जाते हैं, केवल Iron और Aluminium oxides रह जाते हैं। इसीलिए ये soil कम fertile होती है!"
+      },
+      "navigation": {
+        "next": "card_26_quiz_9",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_26_quiz_9",
+      "card_slug": "card_26_quiz_9",
+      "type": "quiz",
+      "concept_id": "soil_crop_matching_quiz",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सी soil-crop matching सही नहीं है? (Q3/3)",
+        "options": [
+          {"id": "A", "text": "Alluvial Soil - Rice, Wheat"},
+          {"id": "B", "text": "Black Soil - Cotton"},
+          {"id": "C", "text": "Laterite Soil - Tea, Coffee"},
+          {"id": "D", "text": "Red Soil - Rice (paddy) की सबसे अच्छी पैदावार"}
+        ],
+        "correct_option_id": "D",
+        "explanation": "⚠️ BPSC Trap! Red soil generally कम fertile है और Rice (जिसे ज़्यादा पानी और nutrients चाहिए) के लिए सबसे अच्छी नहीं है। Rice के लिए ALLUVIAL soil best है। Red soil में Millets, Groundnut, Potato अच्छे होते हैं। (A), (B), (C) सही matches हैं!"
+      },
+      "navigation": {
+        "next": "card_27_milestone_3",
+        "button_text": "Check Progress ➔"
+      }
+    },
+    {
+      "card_id": "card_27_milestone_3",
+      "card_slug": "card_27_milestone_3",
+      "type": "milestone",
+      "concept_id": "module_3_complete",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🔥 MODULE 3 CONQUERED!",
+        "badge_emoji": "🏜️",
+        "completed_topic": "Red, Laterite, Arid & Mountain Soils",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/6 Complete",
+        "motivational_quote": "Outstanding! अब सभी 6 soil types clear। अब regional distribution और degradation देखेंगे! 🌍"
+      },
+      "navigation": {
+        "next": "card_28_distribution_intro",
+        "button_text": "Distribution Module ➔"
+      }
+    },
+    {
+      "card_id": "card_28_distribution_intro",
+      "card_slug": "card_28_distribution_intro",
+      "type": "chat",
+      "concept_id": "regional_distribution",
+      "level": 4,
+      "progress": {
+        "current": 28,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, ये soils India में exact कहाँ-कहाँ पाई जाती हैं? Map में yaad kaise karूँ?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC/SSC का favorite topic! **ALLUVIAL**: Indo-Gangetic Plain (Punjab, Haryana, UP, Bihar, West Bengal), Brahmaputra Valley (Assam), Coastal strips। **BLACK**: Deccan Plateau - Maharashtra, Gujarat, MP, Karnataka, Andhra Pradesh (volcanic regions)। **RED**: Tamil Nadu, Karnataka (non-black Deccan), Odisha, Jharkhand, Chhattisgarh।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Laterite, Desert Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "**LATERITE**: High rainfall coastal areas - Kerala, Karnataka coast, Western Ghats slopes, Odisha-Jharkhand borders, Assam hills। **ARID**: Rajasthan (Thar Desert), Gujarat (Kutch)। **MOUNTAIN**: Himalayan regions - J&K, Himachal, Uttarakhand, Sikkim, Arunachal। ⭐ Bihar में mainly ALLUVIAL (Ganga belt) + कुछ Red (South Bihar hills)!"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_bihar_soils",
+        "button_text": "Bihar Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_29_bihar_soils",
+      "card_slug": "card_29_bihar_soils",
+      "type": "chat",
+      "concept_id": "bihar_specific_soils",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Special! Bihar की लगभग 90%+ soil ALLUVIAL है - Ganga, Gandak, Kosi, Son नदियों के deposits। **North Bihar** (Champaran, Muzaffarpur, Darbhanga): Sandy alluvial, flood-prone। **Middle Bihar** (Patna, Vaishali): Clayey alluvial, fertile। **South Bihar** (Gaya, Rohtas hills): कुछ Red और mixed soil।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Kosi area में problem ज़्यादा kyun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kosi 'Sorrow of Bihar' - बार-बार flood, course बदलती रहती है। Sandy alluvial + flood = soil erosion। South Bihar की soil कम fertile (red/mixed) so ज़्यादा fertilizer चाहिए। ⭐ Bihar में Black, Laterite, Desert soil नहीं पाई जाती!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To Bihar mainly alluvial state hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_soil_degradation",
+        "button_text": "Degradation देखो ➔"
+      }
+    },
+    {
+      "card_id": "card_30_soil_degradation",
+      "card_slug": "card_30_soil_degradation",
+      "type": "chat",
+      "concept_id": "soil_degradation_types",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "अब serious problem - **SOIL DEGRADATION** (मिट्टी का ख़राब होना)! Types: 1) **EROSION** - पानी/हवा से topsoil का बह/उड़ जाना, 2) **WATERLOGGING** - ज़्यादा irrigation से पानी जमा, 3) **SALINITY/ALKALINITY** - नमक की मात्रा बढ़ना, 4) **LOSS OF NUTRIENTS** - over-cropping से।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Erosion सबसे ज़्यादा कहाँ होता है Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "**Water erosion**: Heavy rainfall areas, ढलान वाली ज़मीन (Himalayas, Western Ghats)। **GULLY erosion** - गहरी खाईयाँ बन जाती हैं (Chambal ravines - MP/UP)। **Wind erosion**: Desert areas (Rajasthan)। ⭐ UPSC Fact: India में ~130 million hectares land degraded है - ~40% geographical area!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Itna ज़्यादा? Ye to bahut serious hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_soil_conservation",
+        "button_text": "Conservation methods ➔"
+      }
+    },
+    {
+      "card_id": "card_31_soil_conservation",
+      "card_slug": "card_31_soil_conservation",
+      "type": "chat",
+      "concept_id": "soil_conservation_methods",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Soil को बचाने के methods: 1) **CONTOUR PLOUGHING** - ढलान के साथ नहीं, across ढलान जुताई, 2) **TERRACE FARMING** - पहाड़ों में सीढ़ीनुमा खेत, 3) **SHELTER BELTS** - पेड़ों की पंक्तियाँ wind erosion रोकने के लिए, 4) **CROP ROTATION** - अलग-अलग crops से nutrients balanced रहते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir contour ploughing कैसे काम करती है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "जब तुम ढलान के perpendicular जोतते हो, तो furrows (खाँचे) पानी को रोक लेती हैं - सीधे नीचे नहीं बहता। ⭐ SSC Favorite: **STRIP CROPPING** (पट्टियों में crops), **MULCHING** (dry leaves cover से moisture retain), **AFFORESTATION** (tree plantation) भी important methods!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Trees बहुत important हैं soil conservation में?"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_quiz_10",
+        "button_text": "Bilkul! Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz_10",
+      "card_slug": "card_32_quiz_10",
+      "type": "quiz",
+      "concept_id": "distribution_quiz",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Bihar में मुख्यतः कौन सी soil पाई जाती है? (Q1/3)",
+        "options": [
+          {"id": "A", "text": "Black Soil"},
+          {"id": "B", "text": "Red Soil"},
+          {"id": "C", "text": "Alluvial Soil"},
+          {"id": "D", "text": "Laterite Soil"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC TRE Critical! Bihar में लगभग 90%+ भूमि पर ALLUVIAL SOIL पाई जाती है - Ganga, Gandak, Kosi नदियों के deposits। North Bihar में sandy alluvial, Middle में clayey alluvial, South Bihar के कुछ hills में Red soil। Black, Laterite, Desert soil Bihar में नहीं!"
+      },
+      "navigation": {
+        "next": "card_33_quiz_11",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_33_quiz_11",
+      "card_slug": "card_33_quiz_11",
+      "type": "quiz",
+      "concept_id": "degradation_quiz",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Gully erosion का सबसे अच्छा उदाहरण कहाँ मिलता है? (Q2/3)",
+        "options": [
+          {"id": "A", "text": "Chambal ravines (Madhya Pradesh/Uttar Pradesh)"},
+          {"id": "B", "text": "Thar Desert"},
+          {"id": "C", "text": "Kerala coast"},
+          {"id": "D", "text": "Punjab plains"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ UPSC/SSC Classic Example! CHAMBAL RAVINES (MP/UP border) Gully erosion का सबसे प्रसिद्ध उदाहरण है - पानी के तेज़ बहाव से गहरी खाईयाँ (gullies) बन गई हैं। यहाँ 'बीहड़' (badlands) हैं जो कृषि के लिए अनुपयुक्त हो गए हैं।"
+      },
+      "navigation": {
+        "next": "card_34_quiz_12",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_34_quiz_12",
+      "card_slug": "card_34_quiz_12",
+      "type": "quiz",
+      "concept_id": "conservation_quiz",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Contour ploughing किस प्रकार के erosion को रोकने में सहायक है? (Q3/3)",
+        "options": [
+          {"id": "A", "text": "Wind erosion"},
+          {"id": "B", "text": "Water erosion (ढलान वाली भूमि पर)"},
+          {"id": "C", "text": "Chemical degradation"},
+          {"id": "D", "text": "Salinity"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Contour ploughing (ढलान के perpendicular जुताई) WATER EROSION को रोकती है। जब furrows (खाँचे) ढलान के across होती हैं, तो पानी सीधे नीचे नहीं बहता, रुक जाता है - topsoil नहीं बहती। ⭐ NCERT Class 10 + SSC favorite conservation method!"
+      },
+      "navigation": {
+        "next": "card_35_milestone_4",
+        "button_text": "Progress Check ➔"
+      }
+    },
+    {
+      "card_id": "card_35_milestone_4",
+      "card_slug": "card_35_milestone_4",
+      "type": "milestone",
+      "concept_id": "module_4_complete",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🌍 MODULE 4 CLEARED!",
+        "badge_emoji": "🛡️",
+        "completed_topic": "Distribution, Degradation & Conservation",
+        "xp_earned": 80,
+        "milestone_progress": "Module 4/6 Complete",
+        "motivational_quote": "Fantastic! Regional distribution और conservation clear। अब pH, testing, और ICAR classification देखेंगे! 🔬"
+      },
+      "navigation": {
+        "next": "card_36_soil_ph",
+        "button_text": "Advanced Concepts ➔"
+      }
+    },
+    {
+      "card_id": "card_36_soil_ph",
+      "card_slug": "card_36_soil_ph",
+      "type": "chat",
+      "concept_id": "soil_ph_acidity",
+      "level": 5,
+      "progress": {
+        "current": 36,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir आपने कहा था कुछ soil acidic होती है, कुछ alkaline। ये क्या होता है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Excellent question! Soil की **pH** (power of Hydrogen) बताती है कि soil acidic है, neutral या alkaline। **pH scale**: 0-14। pH < 7 = ACIDIC (खट्टी), pH = 7 = NEUTRAL, pH > 7 = ALKALINE/BASIC (क्षारीय)। Most crops को pH 6-7.5 चाहिए।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kaunsi soils acidic hain Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ SSC Pattern: **ACIDIC**: Red, Laterite, Mountain (heavy rainfall areas)। **NEUTRAL to ALKALINE**: Alluvial, Black। **HIGHLY ALKALINE**: कुछ Desert/Saline soils। ⚠️ BPSC Trap: Acidic soil में LIME (calcium carbonate) डालकर neutralize करते हैं, Alkaline में GYPSUM (calcium sulfate) डालते हैं!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_nutrients_npk",
+        "button_text": "Nutrients ➔"
+      }
+    },
+    {
+      "card_id": "card_37_nutrients_npk",
+      "card_slug": "card_37_nutrients_npk",
+      "type": "chat",
+      "concept_id": "soil_nutrients_npk",
+      "level": 5,
+      "progress": {
+        "current": 37,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Soil fertility mainly तीन macro-nutrients पर depend करती है - **NPK**: **N = Nitrogen** (पत्तियों की growth), **P = Phosphorus** (जड़ों और फूलों की growth), **K = Potassium/Potash** (overall plant health, disease resistance)। ⭐ UPSC: इन्हें 'Primary Nutrients' कहते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir fertilizer packets पर 10-26-26 जैसे numbers होते हैं - wo kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect observation! Wo N-P-K ratio बताते हैं! 10-26-26 matlab 10% Nitrogen, 26% Phosphorus, 26% Potassium। Different crops को different ratios चाहिए। ⭐ SSC: **Secondary nutrients** = Calcium, Magnesium, Sulphur। **Micro-nutrients** = Iron, Zinc, Copper (बहुत कम मात्रा में चाहिए)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To soil testing से पता चलता है कौन सा nutrient कम है?"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_soil_testing",
+        "button_text": "Testing ➔"
+      }
+    },
+    {
+      "card_id": "card_38_soil_testing",
+      "card_slug": "card_38_soil_testing",
+      "type": "chat",
+      "concept_id": "soil_testing_health_card",
+      "level": 5,
+      "progress": {
+        "current": 38,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! **SOIL TESTING** labs में soil sample लेकर test करते हैं - pH, NPK levels, organic carbon, conductivity सब check करते हैं। Based on results, specific fertilizers recommend करते हैं। ⭐ Government scheme: **SOIL HEALTH CARD** - हर farmer को उसकी soil की detailed report card मिलता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir जैसे doctor blood test करता है वैसे soil test?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect analogy! Soil Health Card scheme 2015 में launch हुई - हर 2 साल में farmers को card मिलता है जिसमें soil की health और fertilizer recommendations होती हैं। ⭐ BPSC Current Affairs: ये Sustainable Agriculture को promote करता है - सिर्फ ज़रूरत के हिसाब से fertilizer use!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Over-fertilization भी problem है kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_organic_carbon",
+        "button_text": "Haan bilkul ➔"
+      }
+    },
+    {
+      "card_id": "card_39_organic_carbon",
+      "card_slug": "card_39_organic_carbon",
+      "type": "chat",
+      "concept_id": "organic_matter_importance",
+      "level": 5,
+      "progress": {
+        "current": 39,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! ज़्यादा chemical fertilizers से soil structure खराब होता है, groundwater pollute होता है। Ideal soil में **ORGANIC CARBON/HUMUS** होना चाहिए (सड़े पत्ते, गोबर की खाद से)। ⭐ UPSC: Organic matter soil को 'spongy' बनाता है - water retention और aeration दोनों improve होती हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to vermicompost जो Mummy banati hai wo bhi organic matter hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! **VERMICOMPOST** (earthworm compost) बहुत अच्छा organic fertilizer है। Green manure (हरी खाद), FYM (farmyard manure - गोबर), compost - सब soil health improve करते हैं। ⭐ Bihar में भी organic farming promote हो रही है - chemical dependency कम करने के लिए।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Organic better है लेकिन slow acting?"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_icar_classification",
+        "button_text": "ICAR system ➔"
+      }
+    },
+    {
+      "card_id": "card_40_icar_classification",
+      "card_slug": "card_40_icar_classification",
+      "type": "chat",
+      "concept_id": "icar_soil_orders",
+      "level": 5,
+      "progress": {
+        "current": 40,
+        "total": 50
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "अब advanced classification! **ICAR (Indian Council of Agricultural Research)** ने scientific soil classification किया - 8 major ORDERS: Alfisols, Aridisols, Entisols, Inceptisols, Mollisols, Oxisols, Ultisols, Vertisols। ⚠️ UPSC Prelims में sometimes पूछा जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye तो बहुत technical लग रहा! Traditional names से kaise related hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Good question! **Vertisols** = Black soil (clay-rich, swelling), **Inceptisols/Entisols** = Alluvial (young soils), **Aridisols** = Desert, **Alfisols** = कुछ Red soils। ⭐ BPSC generally traditional names (Alluvial, Black, Red) से पूछता है, लेकिन UPSC में ICAR names भी आ सकते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Traditional याद रखूँगा, ICAR awareness के लिए!"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_quiz_13",
+        "button_text": "Advanced Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_41_quiz_13",
+      "card_slug": "card_41_quiz_13",
+      "type": "quiz",
+      "concept_id": "ph_nutrients_quiz",
+      "level": 5,
+      "progress": {
+        "current": 41,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Acidic soil को neutralize करने के लिए क्या मिलाया जाता है? (Q1/3)",
+        "options": [
+          {"id": "A", "text": "Gypsum"},
+          {"id": "B", "text": "Lime (Calcium Carbonate)"},
+          {"id": "C", "text": "Sulphuric acid"},
+          {"id": "D", "text": "Sand"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC/SSC Important! Acidic soil (pH < 7) को neutralize करने के लिए LIME (Calcium Carbonate - CaCO₃) मिलाया जाता है। ये pH बढ़ाता है। Alkaline soil के लिए GYPSUM (Calcium Sulphate) use होता है। Red और Laterite soils में lime application common है।"
+      },
+      "navigation": {
+        "next": "card_42_quiz_14",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_42_quiz_14",
+      "card_slug": "card_42_quiz_14",
+      "type": "quiz",
+      "concept_id": "npk_quiz",
+      "level": 5,
+      "progress": {
+        "current": 42,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "NPK में 'P' किसके लिए खड़ा है और ये मुख्यतः किसकी growth में मदद करता है? (Q2/3)",
+        "options": [
+          {"id": "A", "text": "Potassium - पत्तियों की growth"},
+          {"id": "B", "text": "Phosphorus - जड़ों और फूलों की growth"},
+          {"id": "C", "text": "Phosphate - तने की growth"},
+          {"id": "D", "text": "Protein - फलों की growth"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "NPK में P = PHOSPHORUS (फॉस्फोरस) है जो मुख्यतः ROOTS (जड़ों) और FLOWERS (फूलों) की growth में महत्वपूर्ण है। N = Nitrogen (पत्तियाँ), K = Potassium/Potash (overall health)। ⭐ SSC/Railway frequently asked - fertilizer composition!"
+      },
+      "navigation": {
+        "next": "card_43_quiz_15",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_43_quiz_15",
+      "card_slug": "card_43_quiz_15",
+      "type": "quiz",
+      "concept_id": "soil_health_card_quiz",
+      "level": 5,
+      "progress": {
+        "current": 43,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "Soil Health Card Scheme कब launch की गई थी? (Q3/3)",
+        "options": [
+          {"id": "A", "text": "2010"},
+          {"id": "B", "text": "2015"},
+          {"id": "C", "text": "2018"},
+          {"id": "D", "text": "2020"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Soil Health Card Scheme **2015** में launch की गई थी। इसके तहत हर farmer को हर 2-3 साल में soil testing के बाद एक card मिलता है जिसमें soil की health status और fertilizer recommendations होती हैं। ⭐ BPSC/SSC Current Affairs + Scheme-based questions में important!"
+      },
+      "navigation": {
+        "next": "card_44_milestone_5",
+        "button_text": "Check Progress ➔"
+      }
+    },
+    {
+      "card_id": "card_44_milestone_5",
+      "card_slug": "card_44_milestone_5",
+      "type": "milestone",
+      "concept_id": "module_5_complete",
+      "level": 5,
+      "progress": {
+        "current": 44,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🔬 MODULE 5 MASTERED!",
+        "badge_emoji": "⚗️",
+        "completed_topic": "pH, Nutrients, Testing & ICAR Classification",
+        "xp_earned": 90,
+        "milestone_progress": "Module 5/6 Complete",
+        "motivational_quote": "Brilliant! Advanced concepts clear हो गए। अब final revision और Officer-level quiz! 💪"
+      },
+      "navigation": {
+        "next": "card_45_summary",
+        "button_text": "Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_45_summary",
+      "card_slug": "card_45_summary",
+      "type": "summary",
+      "concept_id": "chapter_summary",
+      "level": 6,
+      "progress": {
+        "current": 45,
+        "total": 50
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER QUICK REVISION",
+        "revision_points": [
+          {
+            "topic": "Soil Formation & Profile",
+            "point": "Factors: PCORT (Parent rock, Climate, Organisms, Relief, Time)। Horizons: O-A-B-C-R। A Horizon (Topsoil) सबसे fertile। Composition: 45% minerals, 25% water, 25% air, 5% organic।"
+          },
+          {
+            "topic": "6 Major Soil Types",
+            "point": "1) ALLUVIAL (43% area, Khadar-Bhangar, Ganga plains)। 2) BLACK/Regur (cotton, self-ploughing, Deccan volcanic)। 3) RED (iron oxide, acidic, low fertility)। 4) LATERITE (heavy rain, leaching, brick-like)। 5) ARID (desert, low organic)। 6) MOUNTAIN (Himalayan, varied)।"
+          },
+          {
+            "topic": "Regional Distribution - BPSC Focus",
+            "point": "Alluvial: Punjab-Bihar-Bengal, Brahmaputra। Black: Maharashtra-Gujarat-MP। Red: TN-Karnataka-Odisha। Laterite: Kerala-Karnataka coast। ⭐ Bihar: 90%+ Alluvial (North sandy, Middle clayey, South कुछ red)।"
+          },
+          {
+            "topic": "Degradation & Conservation",
+            "point": "Types: Erosion (water/wind), Waterlogging, Salinity। Conservation: Contour ploughing, Terrace farming, Shelter belts, Crop rotation, Afforestation। Chambal ravines = Gully erosion example।"
+          },
+          {
+            "topic": "pH & Nutrients - Advanced",
+            "point": "pH < 7 = Acidic (Red, Laterite) → Add Lime। pH > 7 = Alkaline → Add Gypsum। NPK = N (leaves), P (roots/flowers), K (overall)। Soil Health Card (2015)। ICAR: Vertisols=Black, Inceptisols=Alluvial।"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_46_final_quiz_1",
+        "button_text": "Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_46_final_quiz_1",
+      "card_slug": "card_46_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_1",
+      "level": 6,
+      "progress": {
+        "current": 46,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC MULTI-STATEMENT:\n\nनिम्नलिखित कथनों पर विचार करें:\n1. Alluvial soil भारत में सबसे अधिक क्षेत्र पर पाई जाती है।\n2. Black soil में 'self-ploughing' property high clay content के कारण होती है।\n3. Laterite soil उच्च वर्षा क्षेत्रों में leaching के कारण कम fertile होती है।\n\nसही कथन हैं:",
+        "options": [
+          {"id": "A", "text": "केवल 1 और 2"},
+          {"id": "B", "text": "केवल 2 और 3"},
+          {"id": "C", "text": "केवल 1 और 3"},
+          {"id": "D", "text": "1, 2 और 3 सभी"}
+        ],
+        "correct_option_id": "D",
+        "explanation": "⭐ All three सही हैं! (1) Alluvial ~43% area cover करती है - maximum। (2) Black soil में montmorillonite clay की high content से expansion-contraction होता है → self-ploughing। (3) Laterite >200 cm rainfall areas में heavy leaching से soluble nutrients बह जाते हैं → low fertility। BPSC/UPSC pattern!"
+      },
+      "navigation": {
+        "next": "card_47_final_quiz_2",
+        "button_text": "Next Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_47_final_quiz_2",
+      "card_slug": "card_47_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_2",
+      "level": 6,
+      "progress": {
+        "current": 47,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC ASSERTION-REASON:\n\nअभिकथन (A): Red soil का रंग लाल होता है।\n\nकारण (R): इसमें iron oxide (Fe₂O₃) की उपस्थिति होती है।\n\nसही विकल्प चुनें:",
+        "options": [
+          {"id": "A", "text": "A और R दोनों सही हैं, और R, A की सही व्याख्या है"},
+          {"id": "B", "text": "A और R दोनों सही हैं, लेकिन R, A की व्याख्या नहीं है"},
+          {"id": "C", "text": "A सही है लेकिन R गलत है"},
+          {"id": "D", "text": "A गलत है लेकिन R सही है"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ Perfect UPSC Pattern! (A) सही - Red soil लाल रंग की होती है। (R) भी सही - ये iron oxide (Fe₂O₃) के कारण है, exactly जैसे लोहे में ज़ंग। और R, A की सही व्याख्या है - iron oxide ही red color का कारण है। Answer: A!"
+      },
+      "navigation": {
+        "next": "card_48_final_quiz_3",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_48_final_quiz_3",
+      "card_slug": "card_48_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_3",
+      "level": 6,
+      "progress": {
+        "current": 48,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC/BPSC MATCHING:\n\nनिम्नलिखित में से कौन सा युग्म गलत है?",
+        "options": [
+          {"id": "A", "text": "Khadar - नई alluvial soil"},
+          {"id": "B", "text": "Regur - Black soil"},
+          {"id": "C", "text": "Laterite - Desert areas में पाई जाने वाली soil"},
+          {"id": "D", "text": "Bhangar - पुरानी alluvial soil"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "⚠️ Classic BPSC Trap! (C) गलत है - LATERITE soil heavy rainfall areas (>200 cm) में पाई जाती है, Desert में नहीं! Kerala, Karnataka coast, Western Ghats में मिलती है। Desert में ARID/SANDY soil होती है। (A), (B), (D) सभी सही matches हैं। Confusion trap!"
+      },
+      "navigation": {
+        "next": "card_49_final_quiz_4",
+        "button_text": "Last Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_49_final_quiz_4",
+      "card_slug": "card_49_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_4",
+      "level": 6,
+      "progress": {
+        "current": 49,
+        "total": 50
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE SPECIFIC:\n\nबिहार के संदर्भ में निम्नलिखित कथनों पर विचार करें:\n1. बिहार में मुख्यतः Alluvial soil पाई जाती है।\n2. North Bihar में sandy alluvial और flood की समस्या ज़्यादा है।\n3. South Bihar के पहाड़ी क्षेत्रों में कुछ Red soil भी मिलती है।\n\nसही कथन हैं:",
+        "options": [
+          {"id": "A", "text": "केवल 1"},
+          {"id": "B", "text": "केवल 1 और 2"},
+          {"id": "C", "text": "केवल 1 और 3"},
+          {"id": "D", "text": "1, 2 और 3 सभी"}
+        ],
+        "correct_option_id": "D",
+        "explanation": "⭐ BPSC TRE Critical! सभी तीनों कथन सही हैं। (1) Bihar की 90%+ भूमि Alluvial (Ganga belt)। (2) North Bihar (Champaran, Muzaffarpur, Kosi region) में sandy alluvial + recurring floods। (3) South Bihar (Gaya, Rohtas hills) में mixed/red soil भी मिलती है। Complete Bihar soil profile!"
+      },
+      "navigation": {
+        "next": "card_50_completion",
+        "button_text": "Complete Chapter ➔"
+      }
+    },
+    {
+      "card_id": "card_50_completion",
+      "card_slug": "card_50_completion",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 6,
+      "progress": {
+        "current": 50,
+        "total": 50
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "👑",
+        "completed_topic": "Soils in Indian Geography",
+        "xp_earned": 500,
+        "milestone_progress": "100% Complete - Officer Level Achieved!",
+        "motivational_quote": "OUTSTANDING RAJU! 🎉\n\nTumne पूरा 'Soils in Indian Geography' chapter master कर लिया:\n✅ Soil formation, profile, components\n✅ All 6 soil types with properties\n✅ Regional distribution (India + Bihar)\n✅ Degradation types & conservation methods\n✅ pH, NPK, Soil Health Card\n✅ ICAR classification awareness\n\nअब तुम BPSC/SSC/Railway/UPSC के किसी भी soil-based question को confidently tackle कर सकते हो!\n\nYaad रखो - Soil हमारा सबसे precious natural resource है। इसे बचाना हम सबकी जिम्मेदारी है! 🌱\n\n- Aman Sir"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "🏠 Back to Home"
+      }
+    }
+  ]
+}
+```
