@@ -1,0 +1,2025 @@
+
+{
+  "topic_id": "banking_rbi_indian_economy",
+  "topic_title": "Banking and RBI Policies in Indian Economy",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 69,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "intro_banking_rbi",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 69
+      },
+      "intro_payload": {
+        "title": "🏦 Banking and RBI Policies",
+        "subtitle": "Master the Heart of Indian Economy",
+        "icon": "💰",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "SSC CGL", "UPSC Prelims", "RRB NTPC"],
+        "learning_outcomes": [
+          "Structure of Indian Banking System - Commercial Banks, RRBs, Co-operative Banks",
+          "Reserve Bank of India - Functions, Monetary Policy Tools",
+          "Banking Reforms - Nationalization, LPG Era, NPAs",
+          "Key Policy Instruments - CRR, SLR, Repo Rate, Reverse Repo",
+          "Financial Inclusion & Digital Banking - Jan Dhan, UPI, NEFT/RTGS",
+          "⭐ BPSC TRE: Bihar-specific banking development & SHG models"
+        ],
+        "estimated_time": "25 minutes",
+        "total_modules": 7
+      },
+      "navigation": {
+        "next": "card_02_daily_banking",
+        "button_text": "Shuru Karte Hain! 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_banking",
+      "card_slug": "card_02_daily_banking",
+      "type": "chat",
+      "concept_id": "daily_banking_intro",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhare Papa apni salary kahan rakhte hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bank mein Sir! State Bank of India mein unka account hai."
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Aur agar tumhe cycle khareedni hai par paisa kam pad raha hai, to kya kar sakte ho?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Udhaar maang sakte hain... ya Papa se loan le sakte hain... par bank se bhi to loan milta hai na?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_bank_basic_role",
+        "button_text": "Haan! Exactly ➔"
+      }
+    },
+    {
+      "card_id": "card_03_bank_basic_role",
+      "card_slug": "card_03_bank_basic_role",
+      "type": "chat",
+      "concept_id": "bank_basic_functions",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bank do basic kaam karta hai - pehla, logon ka paisa safe rakhna (Deposits accept karna). Doosra, zarooratmand logon ko paisa udhar dena (Loans provide karna). Jaise tumhare Papa ki salary bank mein safe hai, aur kisi businessman ko factory lagani hai to bank se loan mil jaata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab bank ek middleman hai? Jo paisa rakhta bhi hai aur deta bhi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Bank 'financial intermediary' hai - jo savers (jinhone paisa bachaya) aur borrowers (jinhe paisa chahiye) ke beech connection banata hai. Lekin yeh sara system kaun control karta hai? Kaun decide karta hai ki banks kaise kaam karein?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hmmm... shayad government?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_rbi_introduction",
+        "button_text": "Nahi, RBI! Samjhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_04_rbi_introduction",
+      "card_slug": "card_04_rbi_introduction",
+      "type": "chat",
+      "concept_id": "rbi_intro_role",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Reserve Bank of India (RBI) sabhi banks ka 'boss' hai! Yeh India ka Central Bank hai jo 1935 mein establish hua tha. RBI ka main kaam hai - currency issue karna (notes print karna), banking system ko regulate karna, aur economy mein inflation control karna."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab jo notes hote hain uspe 'Reserve Bank of India' likha hota hai - wahi RBI print karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! Sirf ₹1 ka note chodkar (jo Finance Ministry print karti hai), baaki sabhi notes - ₹2, ₹5, ₹10, ₹20, ₹50, ₹100, ₹200, ₹500, ₹2000 - sab RBI issue karta hai. Yeh 'Banker to Banks' bhi hai - matlab banks apna paisa RBI mein rakhte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Waah! Banks ka bhi bank hai RBI!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz_1",
+        "button_text": "Pehla Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_05_quiz_1",
+      "card_slug": "card_05_quiz_1",
+      "type": "quiz",
+      "concept_id": "quiz_rbi_establishment",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Reserve Bank of India (RBI) ki establishment kab hui thi?",
+        "options": [
+          { "id": "A", "text": "1925" },
+          { "id": "B", "text": "1935" },
+          { "id": "C", "text": "1947" },
+          { "id": "D", "text": "1950" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RBI ki establishment 1 April 1935 ko hui thi, British India ke time mein. Independence ke baad 1949 mein isko nationalize kar diya gaya. Yeh SSC aur Railway exams ka favorite question hai!"
+      },
+      "navigation": {
+        "next": "card_06_quiz_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_2",
+      "card_slug": "card_06_quiz_2",
+      "type": "quiz",
+      "concept_id": "quiz_currency_issuer",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Kaun sa note RBI issue NAHI karta?",
+        "options": [
+          { "id": "A", "text": "₹1 ka note" },
+          { "id": "B", "text": "₹5 ka note" },
+          { "id": "C", "text": "₹10 ka note" },
+          { "id": "D", "text": "₹500 ka note" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "₹1 ka note (aur coins) Finance Ministry issue karti hai, RBI nahi! Baaki sabhi notes (₹2 se ₹2000 tak) RBI issue karta hai. Yeh UPSC Prelims ka classic trap question hai!"
+      },
+      "navigation": {
+        "next": "card_07_quiz_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_3",
+      "card_slug": "card_07_quiz_3",
+      "type": "quiz",
+      "concept_id": "quiz_bank_basic_function",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Bank ka primary function kya hai?",
+        "options": [
+          { "id": "A", "text": "Sirf paisa safe rakhna" },
+          { "id": "B", "text": "Sirf loan dena" },
+          { "id": "C", "text": "Deposits accept karna aur Loans dena dono" },
+          { "id": "D", "text": "Share market mein trading karna" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Bank ka primary function hai deposits accept karna (savers se) aur loans dena (borrowers ko). Yeh 'financial intermediation' kehlata hai. Share trading secondary activity hai, primary nahi!"
+      },
+      "navigation": {
+        "next": "card_08_milestone_1",
+        "button_text": "Module Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_08_milestone_1",
+      "card_slug": "card_08_milestone_1",
+      "type": "milestone",
+      "concept_id": "milestone_banking_basics",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 69
+      },
+      "milestone_payload": {
+        "title": "🎯 Banking Basics Cleared!",
+        "badge_emoji": "🏦",
+        "completed_topic": "Introduction to Banking & RBI",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/7 Clear",
+        "motivational_quote": "Shabash! Banking ki basics clear! Ab Indian Banking Structure detail mein samjhenge!"
+      },
+      "navigation": {
+        "next": "card_09_banking_structure_intro",
+        "button_text": "Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_09_banking_structure_intro",
+      "card_slug": "card_09_banking_structure_intro",
+      "type": "chat",
+      "concept_id": "banking_structure_types",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "India mein teen main types ke banks hain - Commercial Banks (jaise SBI, HDFC), Regional Rural Banks (RRBs - gaon mein), aur Co-operative Banks (sahkaari banks). Sabka alag role hai economy mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Commercial Banks to suna hai... par RRBs aur Co-operative Banks kya hote hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Pehle Commercial Banks samjhte hain. Yeh do types ke hote hain - Public Sector Banks (government ke hain, jaise SBI, PNB) aur Private Sector Banks (private companies ke hain, jaise HDFC, ICICI). Public Sector Banks mein government ka majority ownership hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab SBI sarkar ka bank hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_public_sector_banks",
+        "button_text": "Haan! Detail mein ➔"
+      }
+    },
+    {
+      "card_id": "card_10_public_sector_banks",
+      "card_slug": "card_10_public_sector_banks",
+      "type": "chat",
+      "concept_id": "public_sector_banks_detail",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Public Sector Banks (PSBs) mein government ka 51% se zyada ownership hota hai. SBI (State Bank of India) sabse bada PSB hai. 1969 aur 1980 mein 20 private banks ko nationalize karke PSBs banaya gaya tha taaki har gaon tak banking services pahunche."
+        },
+        {
+          "speaker": "raju",
+          "text": "Nationalization matlab Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nationalization matlab private banks ko government ne apne control mein le liya. Yeh isliye kiya gaya kyunki private banks sirf shahar aur ameer logo ko focus karte the, gareeb aur gaon wale neglect ho rahe the. Indira Gandhi ne yeh step liya tha 'Garibi Hatao' ke under."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... social welfare ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_private_banks",
+        "button_text": "Private Banks ➔"
+      }
+    },
+    {
+      "card_id": "card_11_private_banks",
+      "card_slug": "card_11_private_banks",
+      "type": "chat",
+      "concept_id": "private_sector_banks",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Private Sector Banks mein private companies ka ownership hota hai - jaise HDFC Bank, ICICI Bank, Axis Bank. 1991 ke economic reforms ke baad inhe license diya gaya. Yeh modern technology aur customer service mein achhe hote hain, par generally PSBs se zyada interest rate lete hain loans pe."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to dono mein kya better hai - Public ya Private?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dono ka apna role hai! PSBs social banking karte hain (priority sector lending - farmers, small businesses ko loan). Private banks commercial banking pe focus karte hain. RBI dono ko regulate karta hai. Ab Regional Rural Banks (RRBs) samjhte hain jo specially rural areas ke liye bane hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, gaon ke banks batao!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_rrbs_detail",
+        "button_text": "RRBs Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_12_rrbs_detail",
+      "card_slug": "card_12_rrbs_detail",
+      "type": "chat",
+      "concept_id": "regional_rural_banks",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Regional Rural Banks (RRBs) 1975 mein establish hue the specially rural aur semi-urban areas mein banking facilities dene ke liye. Yeh jointly sponsored hote hain - Central Government (50%), State Government (15%), aur Sponsor Bank (35%) ke dwara. ⭐ BPSC TRE: Bihar mein bhi RRBs hain jaise Bihar Gramin Bank."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sponsor bank kaun hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sponsor bank koi bada commercial bank hota hai jo RRB ko technical support deta hai - jaise SBI sponsor karta hai kaafi RRBs ko. RRBs ka main focus hai farmers, artisans, aur small entrepreneurs ko affordable loans dena. Cooperative Banks bhi aise hi rural credit provide karte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab gaon mein teen types - RRBs, Co-operative Banks, aur commercial banks ki branches!"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_cooperative_banks",
+        "button_text": "Co-operative Banks ➔"
+      }
+    },
+    {
+      "card_id": "card_13_cooperative_banks",
+      "card_slug": "card_13_cooperative_banks",
+      "type": "chat",
+      "concept_id": "cooperative_banks_structure",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Co-operative Banks members ke dwara owned aur controlled hote hain - matlab jo log members hain woh apna bank chalate hain! Teen tier structure hai - Village level (Primary Agricultural Credit Societies - PACS), District level (District Central Co-operative Banks), aur State level (State Co-operative Banks). ⭐ Bihar mein 'Bihar State Co-operative Bank' sabse upar hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir yeh to democratic banking hai - members khud decide karte hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Par problem bhi hai - kaafi cooperative banks mein mismanagement aur corruption ke cases hain. RBI ab inhe zyada strictly regulate kar raha hai. Tumne PMC Bank scandal suna hoga 2019 mein - woh cooperative bank tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, news mein tha! To banking structure clear hai - Commercial, RRBs, Co-operative!"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_quiz_4",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_4",
+      "card_slug": "card_14_quiz_4",
+      "type": "quiz",
+      "concept_id": "quiz_bank_nationalization",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "India mein major bank nationalization kab hua tha?",
+        "options": [
+          { "id": "A", "text": "1947 aur 1950" },
+          { "id": "B", "text": "1955 aur 1965" },
+          { "id": "C", "text": "1969 aur 1980" },
+          { "id": "D", "text": "1991 aur 2000" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "1969 mein Indira Gandhi ne 14 major private banks ko nationalize kiya, aur 1980 mein 6 aur banks ko. Total 20 banks nationalize hue. Yeh BPSC aur SSC ka high-frequency question hai!"
+      },
+      "navigation": {
+        "next": "card_15_quiz_5",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_5",
+      "card_slug": "card_15_quiz_5",
+      "type": "quiz",
+      "concept_id": "quiz_rrb_establishment",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Regional Rural Banks (RRBs) kab establish hue the?",
+        "options": [
+          { "id": "A", "text": "1969" },
+          { "id": "B", "text": "1975" },
+          { "id": "C", "text": "1980" },
+          { "id": "D", "text": "1991" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RRBs 1975 mein establish hue the rural aur semi-urban areas mein banking services dene ke liye. Pehla RRB tha Prathama Bank (Uttar Pradesh mein). Railway exams mein ye direct puchha jaata hai!"
+      },
+      "navigation": {
+        "next": "card_16_quiz_6",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz_6",
+      "card_slug": "card_16_quiz_6",
+      "type": "quiz",
+      "concept_id": "quiz_rrb_ownership",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "RRBs mein Central Government ka ownership kitna hota hai?",
+        "options": [
+          { "id": "A", "text": "35%" },
+          { "id": "B", "text": "50%" },
+          { "id": "C", "text": "51%" },
+          { "id": "D", "text": "100%" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RRBs mein ownership pattern: Central Govt - 50%, State Govt - 15%, Sponsor Bank - 35%. Yeh exact ratio SSC aur UPSC Prelims mein puchha jaata hai!"
+      },
+      "navigation": {
+        "next": "card_17_milestone_2",
+        "button_text": "Module Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_17_milestone_2",
+      "card_slug": "card_17_milestone_2",
+      "type": "milestone",
+      "concept_id": "milestone_banking_structure",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 69
+      },
+      "milestone_payload": {
+        "title": "🏆 Banking Structure Mastered!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Types of Banks in India",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/7 Clear",
+        "motivational_quote": "Excellent! Ab RBI ke functions aur powers detail mein samjhenge!"
+      },
+      "navigation": {
+        "next": "card_18_rbi_functions_intro",
+        "button_text": "RBI Functions ➔"
+      }
+    },
+    {
+      "card_id": "card_18_rbi_functions_intro",
+      "card_slug": "card_18_rbi_functions_intro",
+      "type": "chat",
+      "concept_id": "rbi_main_functions",
+      "level": 3,
+      "progress": {
+        "current": 18,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "RBI ke main functions yaad rakho - 'MISBRIC' acronym se! M=Monetary Authority (monetary policy banata hai), I=Issuer of Currency (notes issue karta hai), S=Supervisor of Banks, B=Banker to Government, R=Regulator of financial system, I=Manager of Foreign Exchange, C=Controller of Credit."
+        },
+        {
+          "speaker": "raju",
+          "text": "MISBRIC! Ye to exam mein help karega Sir! Par inka detail batao na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sabse important hai Monetary Policy - iska matlab hai RBI economy mein money supply aur interest rates control karta hai. Jab inflation badh raha ho (mehengai), to RBI 'tight monetary policy' laata hai - loans expensive kar deta hai. Jab growth slow ho, to 'loose monetary policy' - loans saste kar deta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... inflation control karne ke liye RBI interest rates badhata hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_monetary_policy_tools",
+        "button_text": "Policy Tools ➔"
+      }
+    },
+    {
+      "card_id": "card_19_monetary_policy_tools",
+      "card_slug": "card_19_monetary_policy_tools",
+      "type": "chat",
+      "concept_id": "monetary_policy_instruments",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "RBI ke paas chaar main policy tools hain - Repo Rate, Reverse Repo Rate, CRR (Cash Reserve Ratio), aur SLR (Statutory Liquidity Ratio). Yeh sab economy mein money supply control karte hain. Pehle Repo Rate samajhte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Repo Rate kya hota hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Repo Rate woh interest rate hai jis par RBI commercial banks ko overnight loan deta hai. Agar Repo Rate 6% hai, matlab banks ko RBI se loan lene par 6% interest dena padega. Jab RBI Repo Rate badhata hai, to banks ka loan lena expensive ho jata hai, banks bhi apne customers ko expensive loans dete hain, aur economy mein money supply kam ho jati hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Repo Rate badha = loans expensive = kam log loan lenge = inflation control!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_reverse_repo",
+        "button_text": "Reverse Repo ➔"
+      }
+    },
+    {
+      "card_id": "card_20_reverse_repo",
+      "card_slug": "card_20_reverse_repo",
+      "type": "chat",
+      "concept_id": "reverse_repo_rate",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Reverse Repo Rate ulta hai - yeh woh rate hai jis par RBI commercial banks se paisa le leta hai (deposit ke liye). Jab banks ke paas extra cash hota hai, wo RBI mein park kar sakte hain aur Reverse Repo Rate ke hisaab se interest earn karte hain. Agar RBI Reverse Repo badhata hai, banks zyada paisa RBI mein park karenge, market mein kam paise rahenge."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Repo mein RBI deta hai banks ko, aur Reverse Repo mein banks dete hain RBI ko!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ekdum sahi samjhe! Repo aur Reverse Repo ke beech ka difference 'Repo Spread' kehlata hai. Exam mein yeh confusion trap hota hai - yaad rakho Repo = RBI lends, Reverse Repo = RBI borrows."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir CRR aur SLR kya hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_crr_slr",
+        "button_text": "CRR & SLR Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_21_crr_slr",
+      "card_slug": "card_21_crr_slr",
+      "type": "chat",
+      "concept_id": "crr_slr_explanation",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "CRR (Cash Reserve Ratio) - har bank ko apne total deposits ka ek percentage RBI ke paas cash ke roop mein rakhna hota hai. Agar CRR 4% hai aur kisi bank ke paas ₹100 crore deposits hain, to ₹4 crore RBI ke paas cash rakhna mandatory hai. Is paisy par bank ko koi interest nahi milta!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab bank apna sara paisa loan nahi de sakta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Yeh liquidity maintain karne ke liye hai. SLR (Statutory Liquidity Ratio) thoda alag hai - banks ko apne deposits ka ek percentage government securities (bonds, treasury bills) mein invest karna hota hai. CRR mein cash RBI ke paas, SLR mein securities khud bank ke paas! Currently CRR around 4% aur SLR around 18% hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Waah! To RBI in tools se control karta hai kitna paisa market mein ja sakta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_quiz_7",
+        "button_text": "Quiz Time! ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_7",
+      "card_slug": "card_22_quiz_7",
+      "type": "quiz",
+      "concept_id": "quiz_repo_rate",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Repo Rate kya hai?",
+        "options": [
+          { "id": "A", "text": "Woh rate jis par banks customers ko loan dete hain" },
+          { "id": "B", "text": "Woh rate jis par RBI banks ko loan deta hai" },
+          { "id": "C", "text": "Woh rate jis par banks RBI se paisa lete hain" },
+          { "id": "D", "text": "B aur C dono sahi hain" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Repo Rate woh rate hai jis par RBI commercial banks ko short-term loan deta hai (usually overnight). Option B aur C dono technically sahi hain. UPSC aur BPSC mein exact wording pe dhyan dena zaroori hai!"
+      },
+      "navigation": {
+        "next": "card_23_quiz_8",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_23_quiz_8",
+      "card_slug": "card_23_quiz_8",
+      "type": "quiz",
+      "concept_id": "quiz_crr_interest",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "CRR (Cash Reserve Ratio) ke under banks ko RBI ke paas rakhe paisy par kya milta hai?",
+        "options": [
+          { "id": "A", "text": "Repo Rate ke barabar interest" },
+          { "id": "B", "text": "Reverse Repo Rate ke barabar interest" },
+          { "id": "C", "text": "Koi interest nahi milta" },
+          { "id": "D", "text": "Bank Rate ke barabar interest" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "CRR ke under banks ko RBI ke paas rakhe cash par KUCH BHI INTEREST NAHI MILTA! Yeh idle money hai. SLR mein government securities hote hain jinpe interest milta hai. Yeh SSC ka favorite confusion trap hai!"
+      },
+      "navigation": {
+        "next": "card_24_quiz_9",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_24_quiz_9",
+      "card_slug": "card_24_quiz_9",
+      "type": "quiz",
+      "concept_id": "quiz_slr_investment",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "SLR (Statutory Liquidity Ratio) ke under banks ko invest karna hota hai:",
+        "options": [
+          { "id": "A", "text": "Share market mein" },
+          { "id": "B", "text": "Real estate mein" },
+          { "id": "C", "text": "Government securities, gold, aur approved securities mein" },
+          { "id": "D", "text": "Foreign currency mein" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "SLR ke under banks ko government securities (treasury bills, government bonds), gold, aur RBI-approved securities mein invest karna hota hai. Share market ya real estate allowed nahi! Railway aur SSC mein yeh direct puchha jaata hai!"
+      },
+      "navigation": {
+        "next": "card_25_milestone_3",
+        "button_text": "Module Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_25_milestone_3",
+      "card_slug": "card_25_milestone_3",
+      "type": "milestone",
+      "concept_id": "milestone_rbi_functions",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 69
+      },
+      "milestone_payload": {
+        "title": "💪 RBI Functions Conquered!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Monetary Policy Tools",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/7 Clear",
+        "motivational_quote": "Outstanding! Policy tools clear! Ab banking reforms aur NPAs dekhte hain!"
+      },
+      "navigation": {
+        "next": "card_26_banking_reforms_intro",
+        "button_text": "Banking Reforms ➔"
+      }
+    },
+    {
+      "card_id": "card_26_banking_reforms_intro",
+      "card_slug": "card_26_banking_reforms_intro",
+      "type": "chat",
+      "concept_id": "banking_reforms_history",
+      "level": 4,
+      "progress": {
+        "current": 26,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "1991 mein India ne economic liberalization shuru ki - LPG reforms (Liberalization, Privatization, Globalization). Banking sector mein bhi major reforms aaye. Narasimha Rao Committee (1991) ne recommend kiya ki private banks ko license diya jaye, aur PSBs ko zyada autonomy di jaye."
+        },
+        {
+          "speaker": "raju",
+          "text": "1991 se pehle private banks nahi the kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "1969-1980 ke nationalization ke baad new private banks ko license nahi diya ja raha tha. 1991 ke baad HDFC Bank, ICICI Bank, Axis Bank jaise new generation private banks aaye. 1993 mein pehli baar licenses diye gaye. Yeh 'Second Generation Reforms' kehlate hain banking mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir par PSBs mein abhi problem kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_npa_problem",
+        "button_text": "NPAs - Biggest Problem ➔"
+      }
+    },
+    {
+      "card_id": "card_27_npa_problem",
+      "card_slug": "card_27_npa_problem",
+      "type": "chat",
+      "concept_id": "npa_explanation",
+      "level": 4,
+      "progress": {
+        "current": 27,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NPA matlab Non-Performing Asset - jab koi borrower apna loan repay nahi karta (principal ya interest), to woh loan NPA ban jaata hai. Agar 90 din tak payment nahi aaya, to technically NPA declare ho jata hai. PSBs mein NPAs bahut zyada hain - especially corporate loans mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab bank ne loan diya, par wapas nahi aa raha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isse bank ka financial health kharab hota hai. 2017-18 mein India ke PSBs mein NPA ratio 11% se bhi zyada tha - matlab har ₹100 loan mein se ₹11 dubious tha! Vijay Mallya, Nirav Modi jaise cases famous hain jahan bade defaulters bhaag gaye. Government ne IBC (Insolvency and Bankruptcy Code) 2016 mein laaya tha is problem solve karne ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "To ab recovery kaise ho rahi hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_npa_resolution",
+        "button_text": "NPA Resolution ➔"
+      }
+    },
+    {
+      "card_id": "card_28_npa_resolution",
+      "card_slug": "card_28_npa_resolution",
+      "type": "chat",
+      "concept_id": "npa_recovery_mechanisms",
+      "level": 4,
+      "progress": {
+        "current": 28,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NPA recovery ke liye kayi mechanisms hain - SARFAESI Act (2002) - banks bina court gaye property attach kar sakte hain, DRT (Debt Recovery Tribunals), aur NCLT (National Company Law Tribunal) under IBC. Recently government ne 'Bad Bank' bhi banaya - NARCL (National Asset Reconstruction Company Limited) jo NPAs buy karega banks se."
+        },
+        {
+          "speaker": "raju",
+          "text": "Bad Bank matlab Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bad Bank ek special entity hai jo sirf NPAs (bad loans) ko buy karti hai banks se, taaki banks ka balance sheet clean ho jaye. Phir Bad Bank apne level pe recovery try karti hai. Yeh concept internationally successful raha hai. ⭐ BPSC mains mein Bad Bank ka pros-cons puchha ja sakta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... banks ka burden kam karne ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_bank_mergers",
+        "button_text": "Bank Mergers ➔"
+      }
+    },
+    {
+      "card_id": "card_29_bank_mergers",
+      "card_slug": "card_29_bank_mergers",
+      "type": "chat",
+      "concept_id": "bank_consolidation",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Recent years mein government ne PSBs ko merge kiya hai efficiency badhane ke liye. 2019-20 mein 10 PSBs ko merge karke 4 bana diya - Punjab National Bank, Canara Bank, Union Bank of India, aur Indian Bank mein chhote banks merge hue. Idea hai ki bade banks zyada strong aur globally competitive honge."
+        },
+        {
+          "speaker": "raju",
+          "text": "Par Sir chhote banks ka kya faida tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Good question! Critics kehte hain ki merger se personalized service kam ho jati hai, aur cultural integration mushkil hota hai. Par supporters kehte hain ki economies of scale milti hai, NPAs better manage ho sakte hain, aur technology investment asaan hota hai. Abhi 12 PSBs hain total (earlier 27 the before mergers)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab banking sector streamline ho raha hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_quiz_10",
+        "button_text": "Quiz Time! ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_10",
+      "card_slug": "card_30_quiz_10",
+      "type": "quiz",
+      "concept_id": "quiz_npa_definition",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Koi loan technically NPA kab declare hota hai?",
+        "options": [
+          { "id": "A", "text": "30 din payment nahi aane par" },
+          { "id": "B", "text": "60 din payment nahi aane par" },
+          { "id": "C", "text": "90 din payment nahi aane par" },
+          { "id": "D", "text": "180 din payment nahi aane par" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "90 DIN tak agar principal ya interest payment nahi aata, to loan NPA (Non-Performing Asset) declare ho jata hai. Yeh RBI ka standard guideline hai. Earlier ye 180 din tha, 2004 mein 90 din kar diya gaya. UPSC aur SSC ka favorite question!"
+      },
+      "navigation": {
+        "next": "card_31_quiz_11",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quiz_11",
+      "card_slug": "card_31_quiz_11",
+      "type": "quiz",
+      "concept_id": "quiz_ibc_year",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Insolvency and Bankruptcy Code (IBC) kab pass hua tha?",
+        "options": [
+          { "id": "A", "text": "2014" },
+          { "id": "B", "text": "2016" },
+          { "id": "C", "text": "2018" },
+          { "id": "D", "text": "2020" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "IBC 2016 mein pass hua aur 2016 se hi implement hai. Yeh NPA resolution ko fast-track karne ke liye laya gaya tha. NCLT (National Company Law Tribunal) is code ke under operate karti hai. Railway aur SSC mein year puchha jaata hai!"
+      },
+      "navigation": {
+        "next": "card_32_quiz_12",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz_12",
+      "card_slug": "card_32_quiz_12",
+      "type": "quiz",
+      "concept_id": "quiz_psb_count",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Recent mergers ke baad India mein kitne Public Sector Banks hain (2023 tak)?",
+        "options": [
+          { "id": "A", "text": "27" },
+          { "id": "B", "text": "21" },
+          { "id": "C", "text": "12" },
+          { "id": "D", "text": "10" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "2019-2020 ke mergers ke baad India mein 12 PUBLIC SECTOR BANKS hain (including SBI aur iske associates). Earlier 27 PSBs the. Yeh current affairs ka important part hai - BPSC aur UPSC dono mein puchha jaata hai!"
+      },
+      "navigation": {
+        "next": "card_33_milestone_4",
+        "button_text": "Module Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_33_milestone_4",
+      "card_slug": "card_33_milestone_4",
+      "type": "milestone",
+      "concept_id": "milestone_banking_reforms",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 69
+      },
+      "milestone_payload": {
+        "title": "🚀 Banking Reforms Mastered!",
+        "badge_emoji": "📈",
+        "completed_topic": "NPAs & Banking Consolidation",
+        "xp_earned": 80,
+        "milestone_progress": "Module 4/7 Clear",
+        "motivational_quote": "Fantastic! Ab financial inclusion aur digital banking ka journey!"
+      },
+      "navigation": {
+        "next": "card_34_financial_inclusion_intro",
+        "button_text": "Financial Inclusion ➔"
+      }
+    },
+    {
+      "card_id": "card_34_financial_inclusion_intro",
+      "card_slug": "card_34_financial_inclusion_intro",
+      "type": "chat",
+      "concept_id": "financial_inclusion_concept",
+      "level": 5,
+      "progress": {
+        "current": 34,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Financial Inclusion ka matlab hai har garib aur rural area ke insaan tak banking services pohchana. India mein kaafi log abhi bhi 'unbanked' hain - matlab unka koi bank account nahi. Government ne Jan Dhan Yojana (2014) launch kiya tha isi gap ko fill karne ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Jan Dhan Yojana mein kya special hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Pradhan Mantri Jan Dhan Yojana (PMJDY) - zero balance account khol sakte ho, free RuPay debit card milta hai, ₹10,000 ka overdraft facility (eligible accounts ko), aur ₹2 lakh ka accident insurance! Yeh duniya ki sabse badi financial inclusion drive hai - 45 crore+ accounts khule hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To gareeb log bhi banking facility use kar sakte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_jan_dhan_impact",
+        "button_text": "Impact & Benefits ➔"
+      }
+    },
+    {
+      "card_id": "card_35_jan_dhan_impact",
+      "card_slug": "card_35_jan_dhan_impact",
+      "type": "chat",
+      "concept_id": "jan_dhan_benefits",
+      "level": 5,
+      "progress": {
+        "current": 35,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Jan Dhan ka impact: Direct Benefit Transfer (DBT) mein help - government subsidies seedha bank account mein jaati hain (LPG subsidy, MGNREGA wages), financial literacy badhti hai, aur women empowerment (majority accounts women ke hain). ⭐ BPSC TRE: Bihar mein bhi Jan Dhan penetration achhi hai, especially SHG (Self Help Group) model ke saath."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir SHG kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Self Help Group - 10-20 women ka group jo savings karti hain aur apas mein chhote loans deti hain. Banks SHGs ko group loan dete hain. ⭐ Bihar mein 'JEEViKA' program famous hai - yeh World Bank supported SHG initiative hai jo rural women ko financial independence deta hai. Yeh NABARD model pe based hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab women groups apna bank jaisa system chalati hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_digital_banking",
+        "button_text": "Digital Banking ➔"
+      }
+    },
+    {
+      "card_id": "card_36_digital_banking",
+      "card_slug": "card_36_digital_banking",
+      "type": "chat",
+      "concept_id": "digital_banking_revolution",
+      "level": 5,
+      "progress": {
+        "current": 36,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Digital Banking revolution India mein tezi se aa raha hai! UPI (Unified Payments Interface) - phone se instant money transfer (Google Pay, PhonePe, Paytm sab UPI use karte hain). NEFT/RTGS - electronic fund transfer, IMPS - instant payment service. India ka UPI model duniya mein sabse successful hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir NEFT aur RTGS mein kya difference hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "NEFT (National Electronic Funds Transfer) - hourly batches mein settle hota hai, koi minimum amount limit nahi. RTGS (Real Time Gross Settlement) - instant settlement, ₹2 lakh se zyada ke transactions ke liye preferred. Dono RBI manage karta hai. UPI sabse fast aur convenient hai - QR code scan karke turant payment!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, meine bhi shop mein QR code dekha hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_payment_banks",
+        "button_text": "Payment Banks ➔"
+      }
+    },
+    {
+      "card_id": "card_37_payment_banks",
+      "card_slug": "card_37_payment_banks",
+      "type": "chat",
+      "concept_id": "payment_banks_concept",
+      "level": 5,
+      "progress": {
+        "current": 37,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Payment Banks ek naya type ka bank hai jo 2015 mein introduce hua. Yeh deposits accept kar sakte hain (maximum ₹2 lakh per customer), payments aur remittances kar sakte hain, PAR loans nahi de sakte! Examples: Paytm Payments Bank, Airtel Payments Bank, India Post Payments Bank."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab yeh proper bank nahi hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Limited banking hain - financial inclusion ke liye design kiye gaye hain. Chote shopkeepers, migrant workers, low income groups jo traditional banks use nahi karte, unke liye convenient hain. Par loan facility nahi hone se yeh full-fledged commercial banks se alag hain. Small Finance Banks (like Ujjivan, Equitas) loans bhi de sakte hain par yeh bhi niche segment ko target karte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... different types banking needs ke liye different banks!"
+        }
+      },
+      "navigation": {
+        "next": "card_38_quiz_13",
+        "button_text": "Quiz Time! ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_13",
+      "card_slug": "card_38_quiz_13",
+      "type": "quiz",
+      "concept_id": "quiz_jan_dhan_launch",
+      "level": 5,
+      "progress": {
+        "current": 38,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Pradhan Mantri Jan Dhan Yojana (PMJDY) kab launch hui thi?",
+        "options": [
+          { "id": "A", "text": "2010" },
+          { "id": "B", "text": "2012" },
+          { "id": "C", "text": "2014" },
+          { "id": "D", "text": "2016" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "PMJDY 28 August 2014 ko launch hui thi PM Narendra Modi ke tenure mein. Yeh financial inclusion ka flagship program hai. Launch date SSC aur Railway exams mein frequently puchha jaata hai!"
+      },
+      "navigation": {
+        "next": "card_39_quiz_14",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz_14",
+      "card_slug": "card_39_quiz_14",
+      "type": "quiz",
+      "concept_id": "quiz_payment_bank_limit",
+      "level": 5,
+      "progress": {
+        "current": 39,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Payment Banks mein per customer maximum kitni deposit limit hai?",
+        "options": [
+          { "id": "A", "text": "₹50,000" },
+          { "id": "B", "text": "₹1,00,000" },
+          { "id": "C", "text": "₹2,00,000" },
+          { "id": "D", "text": "Koi limit nahi" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Payment Banks mein per customer MAXIMUM ₹2 LAKH (₹2,00,000) deposit kar sakte hain. Yeh RBI guideline hai. Isse zyada deposit regular commercial banks mein hi possible hai. UPSC Prelims ka favorite numerical question!"
+      },
+      "navigation": {
+        "next": "card_40_quiz_15",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_40_quiz_15",
+      "card_slug": "card_40_quiz_15",
+      "type": "quiz",
+      "concept_id": "quiz_upi_full_form",
+      "level": 5,
+      "progress": {
+        "current": 40,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "UPI ka full form kya hai?",
+        "options": [
+          { "id": "A", "text": "Universal Payment Interface" },
+          { "id": "B", "text": "Unified Payments Interface" },
+          { "id": "C", "text": "United Payment Integration" },
+          { "id": "D", "text": "Uniform Payment Interface" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "UPI = UNIFIED PAYMENTS INTERFACE. Yeh NPCI (National Payments Corporation of India) ka product hai jo 2016 mein launch hua. Full form confusion trap hai exams mein - Universal nahi, UNIFIED!"
+      },
+      "navigation": {
+        "next": "card_41_milestone_5",
+        "button_text": "Module Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_41_milestone_5",
+      "card_slug": "card_41_milestone_5",
+      "type": "milestone",
+      "concept_id": "milestone_financial_inclusion",
+      "level": 5,
+      "progress": {
+        "current": 41,
+        "total": 69
+      },
+      "milestone_payload": {
+        "title": "🌟 Financial Inclusion Pro!",
+        "badge_emoji": "💳",
+        "completed_topic": "Digital Banking & Inclusion",
+        "xp_earned": 90,
+        "milestone_progress": "Module 5/7 Clear",
+        "motivational_quote": "Superb! Ab recent banking initiatives aur current affairs!"
+      },
+      "navigation": {
+        "next": "card_42_recent_initiatives",
+        "button_text": "Recent Initiatives ➔"
+      }
+    },
+    {
+      "card_id": "card_42_recent_initiatives",
+      "card_slug": "card_42_recent_initiatives",
+      "type": "chat",
+      "concept_id": "recent_banking_schemes",
+      "level": 6,
+      "progress": {
+        "current": 42,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Recent initiatives: PMMY (Pradhan Mantri Mudra Yojana) - micro-entrepreneurs ko loans (₹10 lakh tak) without collateral. Stand-Up India - SC/ST aur women entrepreneurs ko ₹10 lakh se ₹1 crore tak loans. Credit Guarantee Scheme - MSMEs ke liye guarantee cover taaki banks easily loan dein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Mudra Yojana mein teen categories hain kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Shishu (₹50,000 tak), Kishore (₹50,000 se ₹5 lakh), aur Tarun (₹5 lakh se ₹10 lakh). Yeh classification business size ke hisaab se hai. ⭐ BPSC mains mein Mudra Yojana ki impact aur challenges pe question aa sakta hai - especially women entrepreneurship angle se."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir aur koi recent scheme?"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_atmanirbhar_banking",
+        "button_text": "Atmanirbhar Banking ➔"
+      }
+    },
+    {
+      "card_id": "card_43_atmanirbhar_banking",
+      "card_slug": "card_43_atmanirbhar_banking",
+      "type": "chat",
+      "concept_id": "atmanirbhar_package",
+      "level": 6,
+      "progress": {
+        "current": 43,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "COVID-19 ke time PM Modi ne Atmanirbhar Bharat Package announce kiya - ₹20 lakh crore! Banking part mein: Emergency Credit Line Guarantee Scheme (ECLGS) - MSMEs ko collateral-free loans, Subordinate Debt Scheme - stressed MSMEs ko support, aur PSBs mein ₹20,000 crore capital infusion."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to bahut bada package tha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, lekin critics kehte hain ki actual fiscal spending kam thi - mostly loan guarantees aur liquidity measures the. Nonetheless, banking sector ko stabilize karne mein help kiya. RBI ne bhi moratorium (loan repayment holiday) diya tha pandemic mein - though later Supreme Court ne interest-on-interest waiver case mein intervention kiya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir RBI Governor kaun hain current mein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_rbi_governor_current",
+        "button_text": "Current Affairs ➔"
+      }
+    },
+    {
+      "card_id": "card_44_rbi_governor_current",
+      "card_slug": "card_44_rbi_governor_current",
+      "type": "chat",
+      "concept_id": "rbi_current_governor",
+      "level": 6,
+      "progress": {
+        "current": 44,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Current RBI Governor hain Shaktikanta Das (December 2018 se). Unse pehle Urjit Patel the (jinhone resign kar diya). RBI Governor ka tenure 3 saal hota hai (renewable). First RBI Governor the Sir Osborne Smith (British), aur first Indian Governor the C.D. Deshmukh (1943)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir tenure 3 saal hi kyun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "RBI Act ke according 3 saal hai, par extend ho sakta hai. Independence chahiye central bank ko political pressure se bachne ke liye, isliye fixed tenure hota hai. Kabhi-kabhi government aur RBI ke beech disagreements hote hain - jaise demonetization (2016) ke time, ya NPAs handling pe. Yeh 'central bank autonomy' ka issue hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab RBI independent hai par puri tarah bhi nahi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_quiz_16",
+        "button_text": "Quiz Time! ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz_16",
+      "card_slug": "card_45_quiz_16",
+      "type": "quiz",
+      "concept_id": "quiz_mudra_categories",
+      "level": 6,
+      "progress": {
+        "current": 45,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Pradhan Mantri Mudra Yojana mein 'Kishore' category ki loan limit kya hai?",
+        "options": [
+          { "id": "A", "text": "₹50,000 tak" },
+          { "id": "B", "text": "₹50,000 se ₹5 lakh tak" },
+          { "id": "C", "text": "₹5 lakh se ₹10 lakh tak" },
+          { "id": "D", "text": "₹10 lakh se zyada" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Mudra Yojana categories: Shishu (up to ₹50,000), KISHORE (₹50,000 to ₹5 lakh), Tarun (₹5 lakh to ₹10 lakh). Yeh exact limits SSC aur Railway mein puchhe jaate hain!"
+      },
+      "navigation": {
+        "next": "card_46_quiz_17",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_46_quiz_17",
+      "card_slug": "card_46_quiz_17",
+      "type": "quiz",
+      "concept_id": "quiz_rbi_governor_tenure",
+      "level": 6,
+      "progress": {
+        "current": 46,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "RBI Governor ka tenure kitna hota hai?",
+        "options": [
+          { "id": "A", "text": "2 saal" },
+          { "id": "B", "text": "3 saal" },
+          { "id": "C", "text": "5 saal" },
+          { "id": "D", "text": "6 saal" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RBI Governor ka tenure 3 SAAL hota hai (renewable). RBI Act ke according appointment hoti hai. Current Governor Shaktikanta Das hain. Yeh UPSC aur BPSC ka standard question hai!"
+      },
+      "navigation": {
+        "next": "card_47_quiz_18",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_47_quiz_18",
+      "card_slug": "card_47_quiz_18",
+      "type": "quiz",
+      "concept_id": "quiz_first_indian_governor",
+      "level": 6,
+      "progress": {
+        "current": 47,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "RBI ke pehle Indian Governor kaun the?",
+        "options": [
+          { "id": "A", "text": "Sir Osborne Smith" },
+          { "id": "B", "text": "C.D. Deshmukh" },
+          { "id": "C", "text": "Raghuram Rajan" },
+          { "id": "D", "text": "Manmohan Singh" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "C.D. DESHMUKH (1943-1949) RBI ke PEHLE INDIAN GOVERNOR the. Sir Osborne Smith pehle governor the but British the. Yeh Railway aur SSC ka favorite factual question hai!"
+      },
+      "navigation": {
+        "next": "card_48_milestone_6",
+        "button_text": "Module Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_48_milestone_6",
+      "card_slug": "card_48_milestone_6",
+      "type": "milestone",
+      "concept_id": "milestone_recent_initiatives",
+      "level": 6,
+      "progress": {
+        "current": 48,
+        "total": 69
+      },
+      "milestone_payload": {
+        "title": "🔥 Current Affairs Champion!",
+        "badge_emoji": "📰",
+        "completed_topic": "Recent Banking Initiatives",
+        "xp_earned": 100,
+        "milestone_progress": "Module 6/7 Clear",
+        "motivational_quote": "Outstanding! Ab Bihar-specific banking development detail mein!"
+      },
+      "navigation": {
+        "next": "card_49_bihar_banking_intro",
+        "button_text": "Bihar Banking ➔"
+      }
+    },
+    {
+      "card_id": "card_49_bihar_banking_intro",
+      "card_slug": "card_49_bihar_banking_intro",
+      "type": "chat",
+      "concept_id": "bihar_banking_overview",
+      "level": 7,
+      "progress": {
+        "current": 49,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Special! Bihar mein banking penetration national average se kam hai par improve ho raha hai. Major banks: SBI (sabse zyada branches), Punjab National Bank, Bank of Baroda. Bihar Gramin Bank (RRB) rural areas mein active hai. Credit-Deposit Ratio (CDR) kam hai - matlab deposits zyada hain par loans kam."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir CDR kam hone ka matlab kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "CDR kam matlab banks Bihar se deposits collect kar rahe hain par loans local economy mein nahi de rahe - paisa bahar ja raha hai. Yeh 'capital flight' problem hai. Government ne State Level Bankers Committee (SLBC) banaya hai coordination improve karne ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Bihar ka paisa Bihar mein invest nahi ho raha?"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_bihar_shg_model",
+        "button_text": "SHG Model ➔"
+      }
+    },
+    {
+      "card_id": "card_50_bihar_shg_model",
+      "card_slug": "card_50_bihar_shg_model",
+      "type": "chat",
+      "concept_id": "bihar_jeevika_program",
+      "level": 7,
+      "progress": {
+        "current": 50,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Bihar Rural Livelihoods Project - JEEViKA (Jeevika) ek bohot successful SHG (Self Help Group) model hai. World Bank supported program hai jo 1 crore+ rural women ko mobilize kar chuka hai. Women groups banate hain, savings karte hain, aur banks se group loans lete hain micro-enterprises ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye NABARD model jaisa hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! NABARD (National Bank for Agriculture and Rural Development) ka SHG-Bank Linkage model follow karta hai. JEEViKA Bihar ka flagship program hai - women ko financial literacy training, skill development, aur market linkages provide karta hai. Yeh financial inclusion ka bahut effective tarika hai grassroots level pe."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Matlab Bihar mein women empowerment banking ke through ho rahi hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_bihar_challenges",
+        "button_text": "Bihar Banking Challenges ➔"
+      }
+    },
+    {
+      "card_id": "card_51_bihar_challenges",
+      "card_slug": "card_51_bihar_challenges",
+      "type": "chat",
+      "concept_id": "bihar_banking_challenges",
+      "level": 7,
+      "progress": {
+        "current": 51,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Bihar banking challenges: Low Credit-Deposit Ratio (around 40%, national average 75%), Limited industrial credit (kyunki industrialization kam hai), High dependence on agriculture loans, Infrastructure gaps (especially rural branches mein ATMs), aur Financial literacy kam hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir solutions kya hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Government efforts: Business Correspondent (BC) model - local agents banking services provide karte hain, CSC (Common Service Centers) mein banking, Digital literacy programs, aur PMJDY ke through account opening drives. Bihar mein mobile banking adoption bhi badh raha hai. Par infrastructure aur trust-building abhi bhi issues hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ BPSC mains mein yeh sab factors analyze karne padenge!"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_quiz_19",
+        "button_text": "Bihar Quiz! ➔"
+      }
+    },
+    {
+      "card_id": "card_52_quiz_19",
+      "card_slug": "card_52_quiz_19",
+      "type": "quiz",
+      "concept_id": "quiz_bihar_rrb",
+      "level": 7,
+      "progress": {
+        "current": 52,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar ka Regional Rural Bank (RRB) kaunsa hai?",
+        "options": [
+          { "id": "A", "text": "Uttar Bihar Gramin Bank" },
+          { "id": "B", "text": "Bihar Gramin Bank" },
+          { "id": "C", "text": "Madhya Bihar Gramin Bank" },
+          { "id": "D", "text": "Dakshin Bihar Gramin Bank" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Answer: BIHAR GRAMIN BANK, Bihar ka RRB hai (SBI sponsored). Pehle alag-alag regional banks the jo merge karke Bihar Gramin Bank bana. Headquarters Patna mein hai."
+      },
+      "navigation": {
+        "next": "card_53_quiz_20",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_53_quiz_20",
+      "card_slug": "card_53_quiz_20",
+      "type": "quiz",
+      "concept_id": "quiz_jeevika_support",
+      "level": 7,
+      "progress": {
+        "current": 53,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar ka JEEViKA program kis international organization se supported hai?",
+        "options": [
+          { "id": "A", "text": "IMF (International Monetary Fund)" },
+          { "id": "B", "text": "World Bank" },
+          { "id": "C", "text": "ADB (Asian Development Bank)" },
+          { "id": "D", "text": "WHO" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Critical: JEEViKA (Bihar Rural Livelihoods Project) WORLD BANK supported program hai. Yeh SHG model follow karta hai aur rural women empowerment pe focus hai. State-specific question!"
+      },
+      "navigation": {
+        "next": "card_54_quiz_21",
+        "button_text": "Last Bihar Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_54_quiz_21",
+      "card_slug": "card_54_quiz_21",
+      "type": "quiz",
+      "concept_id": "quiz_bihar_cdr",
+      "level": 7,
+      "progress": {
+        "current": 54,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar ka Credit-Deposit Ratio (CDR) national average se kya hai?",
+        "options": [
+          { "id": "A", "text": "Zyada hai (surplus credit)" },
+          { "id": "B", "text": "Kam hai (capital outflow problem)" },
+          { "id": "C", "text": "Barabar hai" },
+          { "id": "D", "text": "Data available nahi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Analysis: Bihar ka CDR NATIONAL AVERAGE SE KAM hai (around 40% vs 75% national). Matlab deposits Bihar se collect hote hain par loans local economy mein nahi jate - yeh development issue hai. Mains question angle!"
+      },
+      "navigation": {
+        "next": "card_55_milestone_7",
+        "button_text": "Final Module Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_55_milestone_7",
+      "card_slug": "card_55_milestone_7",
+      "type": "milestone",
+      "concept_id": "milestone_bihar_banking",
+      "level": 7,
+      "progress": {
+        "current": 55,
+        "total": 69
+      },
+      "milestone_payload": {
+        "title": "⭐ Bihar Banking Expert!",
+        "badge_emoji": "🏦",
+        "completed_topic": "Bihar-Specific Banking Development",
+        "xp_earned": 110,
+        "milestone_progress": "All 7 Modules Clear!",
+        "motivational_quote": "Phenomenal! BPSC TRE level cleared! Ab Officer Revision aur Final Quiz!"
+      },
+      "navigation": {
+        "next": "card_56_officer_revision",
+        "button_text": "Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_56_officer_revision",
+      "card_slug": "card_56_officer_revision",
+      "type": "summary",
+      "concept_id": "officer_level_revision",
+      "level": 7,
+      "progress": {
+        "current": 56,
+        "total": 69
+      },
+      "summary_payload": {
+        "title": "⚡ Officer-Level Quick Revision",
+        "revision_points": [
+          {
+            "topic": "RBI Basics",
+            "point": "Established: 1 April 1935. Nationalized: 1949. HQ: Mumbai. Governor Tenure: 3 years. Current: Shaktikanta Das. First Indian Governor: C.D. Deshmukh (1943). Issues all notes except ₹1."
+          },
+          {
+            "topic": "Banking Structure",
+            "point": "Types: Commercial (PSBs-12 after mergers, Private), RRBs (1975, Central 50%, State 15%, Sponsor 35%), Co-operative (3-tier). Nationalization: 1969 (14 banks), 1980 (6 banks)."
+          },
+          {
+            "topic": "Monetary Policy Tools",
+            "point": "Repo Rate (RBI lends to banks), Reverse Repo (RBI borrows), CRR (~4%, no interest), SLR (~18%, govt securities). Repo > Reverse Repo always. MISBRIC functions."
+          },
+          {
+            "topic": "Banking Reforms & NPAs",
+            "point": "LPG Reforms (1991). NPA: 90-day default rule. IBC (2016). Bad Bank: NARCL. SARFAESI Act (2002). PSB mergers: 27→12. Payment Banks: ₹2L limit, no loans."
+          },
+          {
+            "topic": "Financial Inclusion",
+            "point": "PMJDY (2014): 45Cr+ accounts, zero balance, ₹10K overdraft, ₹2L insurance. UPI (2016): Unified Payments Interface. Mudra: Shishu/Kishore/Tarun. Stand-Up India."
+          },
+          {
+            "topic": "⭐ Bihar Banking",
+            "point": "Bihar Gramin Bank (RRB). JEEViKA (World Bank SHG program, 1Cr+ women). Low CDR (~40% vs 75%). SLBC coordination. Challenges: capital flight, low industrial credit, financial literacy."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_57_final_quiz_intro",
+        "button_text": "Final Master Quiz! ➔"
+      }
+    },
+    {
+      "card_id": "card_57_final_quiz_intro",
+      "card_slug": "card_57_final_quiz_intro",
+      "type": "chat",
+      "concept_id": "final_quiz_prep",
+      "level": 7,
+      "progress": {
+        "current": 57,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab final Officer-level quiz! Yeh BPSC/UPSC Prelims type ka multi-statement aur assertion-reason based hoga. Dhyan se padho har statement ko!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir main ready hoon! Poora chapter revise ho gaya hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Remember - elimination technique use karo, obviously wrong options ko pehle eliminate karo. All the best!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you Sir! Let's do this!"
+        }
+      ],
+      "navigation": {
+        "next": "card_58_final_quiz_1",
+        "button_text": "Start Final Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_58_final_quiz_1",
+      "card_slug": "card_58_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_multi_statement_1",
+      "level": 7,
+      "progress": {
+        "current": 58,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about RBI:\n\n1. RBI was established in 1935 and nationalized in 1949.\n2. RBI issues all currency notes including ₹1 note.\n3. The tenure of RBI Governor is 3 years.\n4. C.D. Deshmukh was the first Governor of RBI.\n\nWhich of the above statements are correct?",
+        "options": [
+          { "id": "A", "text": "1 and 3 only" },
+          { "id": "B", "text": "1, 2 and 3 only" },
+          { "id": "C", "text": "2, 3 and 4 only" },
+          { "id": "D", "text": "1, 3 and 4 only" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement Analysis:\n1. CORRECT - RBI established 1935, nationalized 1949.\n2. WRONG - ₹1 note Finance Ministry issue karti hai, RBI nahi!\n3. CORRECT - Governor tenure 3 years.\n4. WRONG - First Governor Sir Osborne Smith (British). C.D. Deshmukh first INDIAN Governor the.\n\nAnswer: 1 and 3 only (Option A). Classic UPSC multi-statement trap!"
+      },
+      "navigation": {
+        "next": "card_59_final_quiz_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_59_final_quiz_2",
+      "card_slug": "card_59_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_multi_statement_2",
+      "level": 7,
+      "progress": {
+        "current": 59,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about Regional Rural Banks (RRBs):\n\n1. RRBs were established in 1975.\n2. Central Government holds 50% ownership in RRBs.\n3. RRBs can operate only in rural areas.\n4. The first RRB was Prathama Bank in Bihar.\n\nWhich statements are correct?",
+        "options": [
+          { "id": "A", "text": "1 and 2 only" },
+          { "id": "B", "text": "1, 2 and 3 only" },
+          { "id": "C", "text": "2, 3 and 4 only" },
+          { "id": "D", "text": "All are correct" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Analysis:\n1. CORRECT - RRBs established 1975.\n2. CORRECT - Central Govt 50%, State 15%, Sponsor Bank 35%.\n3. WRONG - RRBs operate in rural AND semi-urban areas.\n4. WRONG - First RRB was Prathama Bank in UTTAR PRADESH, not Bihar!\n\nAnswer: 1 and 2 only (Option A). Statement 4 is state-specific trap!"
+      },
+      "navigation": {
+        "next": "card_60_final_quiz_3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_60_final_quiz_3",
+      "card_slug": "card_60_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_assertion_reason",
+      "level": 7,
+      "progress": {
+        "current": 60,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): Banks are required to maintain CRR with RBI.\n\nReason (R): CRR helps RBI control money supply in the economy.\n\nChoose the correct option:",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is not the correct explanation of A" },
+          { "id": "C", "text": "A is true but R is false" },
+          { "id": "D", "text": "A is false but R is true" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "BOTH TRUE AND R CORRECTLY EXPLAINS A!\n\nAssertion: Banks ko CRR (Cash Reserve Ratio) RBI ke paas maintain karna mandatory hai - TRUE.\n\nReason: CRR se RBI money supply control karta hai. Jab CRR badhata hai, banks ke paas lending ke liye kam paisa → money supply kam. - TRUE aur yeh A ka CORRECT EXPLANATION hai!\n\nAnswer: Option A. Perfect BPSC-style assertion-reason!"
+      },
+      "navigation": {
+        "next": "card_61_final_quiz_4",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_61_final_quiz_4",
+      "card_slug": "card_61_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "final_multi_statement_3",
+      "level": 7,
+      "progress": {
+        "current": 61,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "⭐ Consider the following about Bihar's banking:\n\n1. Bihar Gramin Bank is the RRB of Bihar.\n2. JEEViKA is supported by World Bank.\n3. Bihar's Credit-Deposit Ratio is higher than national average.\n4. Bihar has no Public Sector Banks.\n\nWhich are correct?",
+        "options": [
+          { "id": "A", "text": "1 and 2 only" },
+          { "id": "B", "text": "1, 2 and 3 only" },
+          { "id": "C", "text": "2 and 3 only" },
+          { "id": "D", "text": "All are correct" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ BPSC TRE Analysis:\n1. CORRECT - Bihar Gramin Bank hai (SBI sponsored).\n2. CORRECT - JEEViKA World Bank supported SHG program.\n3. WRONG - Bihar ka CDR LOWER than national (40% vs 75%)!\n4. WRONG - SBI, PNB, etc. sabhi PSBs Bihar mein operate karte hain!\n\nAnswer: 1 and 2 only (A). State-specific facts critical!"
+      },
+      "navigation": {
+        "next": "card_62_final_quiz_5",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_62_final_quiz_5",
+      "card_slug": "card_62_final_quiz_5",
+      "type": "final_quiz",
+      "concept_id": "final_multi_statement_4",
+      "level": 7,
+      "progress": {
+        "current": 62,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Consider the following about NPAs and Banking Reforms:\n\n1. A loan becomes NPA after 90 days of default.\n2. IBC (Insolvency and Bankruptcy Code) was enacted in 2016.\n3. NARCL is India's Bad Bank for NPA resolution.\n4. SARFAESI Act allows banks to auction property without court.\n\nHow many statements are correct?",
+        "options": [
+          { "id": "A", "text": "Only two" },
+          { "id": "B", "text": "Only three" },
+          { "id": "C", "text": "All four" },
+          { "id": "D", "text": "None" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "All Four CORRECT!\n\n1. CORRECT - 90-day default rule for NPA.\n2. CORRECT - IBC enacted 2016.\n3. CORRECT - NARCL (National Asset Reconstruction Company Ltd) is Bad Bank formed recently.\n4. CORRECT - SARFAESI Act 2002 allows property seizure without court intervention.\n\nAnswer: All four correct (C). Comprehensive banking reforms knowledge tested!"
+      },
+      "navigation": {
+        "next": "card_63_bonus_quiz_1",
+        "button_text": "Bonus Questions! ➔"
+      }
+    },
+    {
+      "card_id": "card_63_bonus_quiz_1",
+      "card_slug": "card_63_bonus_quiz_1",
+      "type": "quiz",
+      "concept_id": "bonus_payment_bank",
+      "level": 7,
+      "progress": {
+        "current": 63,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Payment Banks ki kaunsi characteristic GALAT hai?",
+        "options": [
+          { "id": "A", "text": "Maximum ₹2 lakh deposit per customer" },
+          { "id": "B", "text": "Cannot give loans to customers" },
+          { "id": "C", "text": "Can issue credit cards" },
+          { "id": "D", "text": "Can provide remittance services" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Payment Banks CREDIT CARDS ISSUE NAHI KAR SAKTE! Unhe loans aur credit products dene ki permission nahi. Baaki sab sahi - ₹2L deposit limit, no loan facility, remittance allowed. Yeh negative question format UPSC ka favorite!"
+      },
+      "navigation": {
+        "next": "card_64_bonus_quiz_2",
+        "button_text": "Next Bonus ➔"
+      }
+    },
+    {
+      "card_id": "card_64_bonus_quiz_2",
+      "card_slug": "card_64_bonus_quiz_2",
+      "type": "quiz",
+      "concept_id": "bonus_repo_spread",
+      "level": 7,
+      "progress": {
+        "current": 64,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "Agar Repo Rate 6% hai aur Reverse Repo Rate 5.5% hai, to Repo Spread kya hai?",
+        "options": [
+          { "id": "A", "text": "0.5%" },
+          { "id": "B", "text": "11.5%" },
+          { "id": "C", "text": "1%" },
+          { "id": "D", "text": "5.75%" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Repo Spread = Repo Rate - Reverse Repo Rate = 6% - 5.5% = 0.5%\n\nYeh spread RBI ka profit margin hai. Generally 0.25% to 0.5% ke beech hota hai. Numerical calculation questions SSC mein frequently aate hain!"
+      },
+      "navigation": {
+        "next": "card_65_bonus_quiz_3",
+        "button_text": "Last Bonus ➔"
+      }
+    },
+    {
+      "card_id": "card_65_bonus_quiz_3",
+      "card_slug": "card_65_bonus_quiz_3",
+      "type": "quiz",
+      "concept_id": "bonus_slr_crr",
+      "level": 7,
+      "progress": {
+        "current": 65,
+        "total": 69
+      },
+      "quiz_payload": {
+        "question": "CRR aur SLR mein kya fundamental difference hai?",
+        "options": [
+          { "id": "A", "text": "CRR cash hai RBI ke paas, SLR securities mein bank ke paas" },
+          { "id": "B", "text": "CRR pe interest milta hai, SLR pe nahi" },
+          { "id": "C", "text": "CRR zyada hota hai SLR se" },
+          { "id": "D", "text": "Dono ek hi cheez hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "FUNDAMENTAL DIFFERENCE:\n\nCRR - CASH form mein RBI ke paas maintain karna (no interest).\nSLR - Government SECURITIES/bonds mein invest karna bank ke paas (interest milta hai).\n\nCurrently: CRR ~4%, SLR ~18%. Conceptual clarity BPSC/UPSC mein zaroori!"
+      },
+      "navigation": {
+        "next": "card_66_expert_tips",
+        "button_text": "Expert Tips ➔"
+      }
+    },
+    {
+      "card_id": "card_66_expert_tips",
+      "card_slug": "card_66_expert_tips",
+      "type": "chat",
+      "concept_id": "exam_expert_tips",
+      "level": 7,
+      "progress": {
+        "current": 66,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "🎯 Exam Strategy Tips:\n\n1. BPSC: Multi-statement mein har statement individually check karo. Assertion-Reason mein R truly explains A ya nahi - yeh critical hai!\n\n2. SSC/Railway: Direct facts yaad rakho - years, first persons, percentages. MISBRIC, Mudra categories (Shishu/Kishore/Tarun) jaise acronyms useful hain.\n\n3. ⭐ BPSC TRE: Bihar-specific - JEEViKA, Bihar Gramin Bank, CDR issue - yeh distinctly mention karna."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir confusion clear karne ka koi trick?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Common Confusions:\n❌ ₹1 note RBI (WRONG - Finance Ministry)\n❌ CRR pe interest (WRONG - no interest)\n❌ Repo = RBI borrows (WRONG - RBI lends)\n❌ Payment Banks can give loans (WRONG)\n❌ C.D. Deshmukh first Governor (WRONG - first INDIAN)\n❌ RRBs sirf rural (WRONG - semi-urban bhi)\n\nYeh traps consciously yaad rakho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect Sir! Ab confidence 100% hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_67_motivational_end",
+        "button_text": "Final Message ➔"
+      }
+    },
+    {
+      "card_id": "card_67_motivational_end",
+      "card_slug": "card_67_motivational_end",
+      "type": "chat",
+      "concept_id": "final_motivation",
+      "level": 7,
+      "progress": {
+        "current": 67,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne Banking & RBI ka pura chapter complete kar liya - basic concepts se lekar officer-level NPAs, monetary policy tools, aur ⭐ Bihar-specific JEEViKA tak! Ye topic BPSC, SSC, Railway, UPSC sabhi mein high weightage rakhta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir pehle bahut confusing lagta tha - Repo, Reverse Repo, CRR, SLR... ab sab crystal clear hai! Thank you!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Banking economy ka heart hai - isko samajhne se financial literacy bhi badhti hai. Exam mein confidence se attempt karna. Remember - elimination technique aur careful reading tumhare weapons hain. All the very best! 🌟"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you so much Sir! Ab main ready hoon exam ke liye! 🙏"
+        }
+      ],
+      "navigation": {
+        "next": "card_68_practice_recommendation",
+        "button_text": "Practice Tips ➔"
+      }
+    },
+    {
+      "card_id": "card_68_practice_recommendation",
+      "card_slug": "card_68_practice_recommendation",
+      "type": "chat",
+      "concept_id": "practice_recommendations",
+      "level": 7,
+      "progress": {
+        "current": 68,
+        "total": 69
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "📚 Practice Recommendations:\n\n1. Daily current affairs - RBI policy rate changes, new banking schemes\n2. Previous Year Questions - BPSC last 10 years, UPSC Prelims Economics section\n3. Economic Survey ke Banking Chapter ko briefly scan karo\n4. ⭐ Bihar Economic Survey mein banking sector statistics dekho"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir koi specific topic aur revise karna chahiye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "🔥 High-Priority Topics:\n\n✅ Monetary Policy Tools (Repo, CRR, SLR definitions)\n✅ NPAs aur IBC (current reforms)\n✅ Financial Inclusion (PMJDY, Payment Banks)\n✅ Banking Structure (PSB count after mergers)\n✅ ⭐ Bihar: JEEViKA, Bihar Gramin Bank, CDR issue\n\nIn 5 topics se 60-70% questions ban jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect checklist Sir! Main regular revise karunga!"
+        }
+      },
+      "navigation": {
+        "next": "card_69_final_trophy",
+        "button_text": "Get Your Trophy! 🏆"
+      }
+    },
+    {
+      "card_id": "card_69_final_trophy",
+      "card_slug": "card_69_final_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_completion_trophy",
+      "level": 7,
+      "progress": {
+        "current": 69,
+        "total": 69
+      },
+      "milestone_payload": {
+        "title": "🏆 BANKING CHAMPION! 🏆",
+        "badge_emoji": "💎",
+        "completed_topic": "Complete Banking & RBI Policies Mastery",
+        "xp_earned": 500,
+        "milestone_progress": "100% Chapter Complete",
+        "motivational_quote": "PHENOMENAL ACHIEVEMENT! 🎉\n\nYou've mastered:\n✅ RBI Functions & Monetary Policy (MISBRIC)\n✅ Banking Structure (PSBs, RRBs, Co-ops)\n✅ Policy Tools (Repo, Reverse Repo, CRR, SLR)\n✅ NPAs & Reforms (IBC, NARCL, Mergers)\n✅ Financial Inclusion (PMJDY, UPI, Digital Banking)\n✅ Current Affairs (Mudra, Stand-Up India, Atmanirbhar)\n✅ ⭐ Bihar Banking (JEEViKA, Bihar Gramin Bank, CDR)\n\nYou're now OFFICER-LEVEL ready for:\n🎯 BPSC Prelims + Mains\n🎯 SSC CGL Economics\n🎯 Railway RRB NTPC\n🎯 UPSC Prelims\n🎯 ⭐ BPSC TRE (Bihar specifics)\n\nKeep practicing PYQs and stay updated with current affairs!\n\n\"Banking samajh gaye, Economy ka 50% clear!\" 💪🔥"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Home 🏠"
+      }
+    }
+  ]
+}
+```
