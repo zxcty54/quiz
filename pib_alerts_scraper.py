@@ -19,7 +19,7 @@ FEED_URL = os.environ.get(
 RAW_NEWS_FILE = "rawnews.json"
 IST = timezone(timedelta(hours=5, minutes=30))
 
-MIN_CONTENT_WORDS = 100  # Minimum 100 words required
+MIN_CONTENT_WORDS = 150  # Minimum 100 words required
 MAX_CONTENT_WORDS = 500  # Maximum 500 words strictly enforced
 
 HEADERS = {
