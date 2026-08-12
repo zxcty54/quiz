@@ -15,7 +15,7 @@ FEED_URL = os.environ.get(
     "https://www.google.com/alerts/feeds/18398184577640792063/4294037665781559395"
 )
 
-OUTPUT_FILE = "pib_alerts_raw.json"
+RAW_NEWS_FILE = "rawnews.json"
 IST = timezone(timedelta(hours=5, minutes=30))
 
 HEADERS = {
@@ -62,10 +62,10 @@ def scrape_full_url_content(target_url):
                 full_text = soup.get_text(separator=" ")
 
             cleaned = clean_text(full_text)
-            # Max 800 words limit so AI prompt handles it easily
+            # Max 500 words limit matching target rawnews.json standard
             words = cleaned.split()
-            if len(words) > 800:
-                return " ".join(words[:800])
+            if len(words) > 500:
+                return " ".join(words[:500]) + "..."
             return cleaned
 
     except Exception as e:
@@ -75,11 +75,31 @@ def scrape_full_url_content(target_url):
 
 
 def parse_feed_date(entry):
-    """Published date format '12 Aug 2026'"""
+    """Published date format matching rawnews.json standard"""
     if hasattr(entry, 'published_parsed') and entry.published_parsed:
         dt = datetime(*entry.published_parsed[:6])
-        return dt.strftime("%d %b %Y")
-    return datetime.now(IST).strftime("%d %b %Y")
+        return dt.strftime("%a, %d %b %Y %H:%M:%S IST")
+    return datetime.now(IST).strftime("%a, %d %b %Y %H:%M:%S IST")
+
+
+def load_existing_raw_news():
+    """`rawnews.json` load karta hai, agar file na mile toh default structure banata hai"""
+    if os.path.exists(RAW_NEWS_FILE):
+        try:
+            with open(RAW_NEWS_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"⚠️ Could not read {RAW_NEWS_FILE}, creating fresh structure. Error: {e}")
+
+    return {
+        "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
+        "bihar_raw_count": 0,
+        "national_raw_count": 0,
+        "total_raw_count": 0,
+        "bihar_raw_news": [],
+        "national_raw_news": [],
+        "source_breakdown": {}
+    }
 
 
 def scrape_pib_alerts():
@@ -89,7 +109,13 @@ def scrape_pib_alerts():
     entries = feed.entries
     print(f"📦 Total Feed Entries Found: {len(entries)}")
 
-    scraped_news = []
+    # Load existing rawnews.json structure
+    raw_data = load_existing_raw_news()
+    existing_national = raw_data.get("national_raw_news", [])
+
+    # Duplicate check using existing URLs
+    seen_urls = {item.get("url") for item in existing_national if item.get("url")}
+    added_count = 0
 
     for idx, entry in enumerate(entries, 1):
         raw_title = entry.get("title", "")
@@ -103,36 +129,58 @@ def scrape_pib_alerts():
         if not clean_title_text or not real_target_url:
             continue
 
+        # Skip duplicate items
+        if real_target_url in seen_urls:
+            print(f"⏭️ Skipping duplicate: {clean_title_text[:40]}...")
+            continue
+
         print(f"🌐 [{idx}/{len(entries)}] Scraping Full Page Content: {clean_title_text[:45]}...")
         
-        # 🔍 Step: Open URL and Scrape Full Webpage Content
+        # Open URL and Scrape Full Webpage Content
         full_article_content = scrape_full_url_content(real_target_url)
 
         # Fallback to RSS snippet if URL scraping fails
         if not full_article_content:
             full_article_content = clean_text(BeautifulSoup(feed_snippet, "html.parser").get_text())
 
+        content_words = len(full_article_content.split())
+        content_chars = len(full_article_content)
+
+        # Target structure item
         item = {
-            "id": f"pib_alert_{idx:03d}",
+            "source": "PIB India",
             "title": clean_title_text,
             "url": real_target_url,
+            "date": formatted_date,
             "content": full_article_content,
-            "date": formatted_date
+            "content_chars": content_chars,
+            "content_words": content_words,
+            "type": "Press Release"
         }
 
-        scraped_news.append(item)
+        existing_national.append(item)
+        seen_urls.add(real_target_url)
+        added_count += 1
 
-    output_data = {
-        "scraped_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
-        "total_count": len(scraped_news),
-        "raw_news": scraped_news
-    }
+    # Update metadata
+    raw_data["national_raw_news"] = existing_national
+    raw_data["national_raw_count"] = len(existing_national)
+    raw_data["bihar_raw_count"] = len(raw_data.get("bihar_raw_news", []))
+    raw_data["total_raw_count"] = raw_data["national_raw_count"] + raw_data["bihar_raw_count"]
+    raw_data["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S")
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(output_data, f, ensure_ascii=False, indent=2)
+    # Update source breakdown count
+    source_breakdown = raw_data.get("source_breakdown", {})
+    source_breakdown["PIB India"] = sum(1 for x in existing_national if x.get("source") == "PIB India")
+    raw_data["source_breakdown"] = source_breakdown
+
+    # Save output directly to rawnews.json
+    with open(RAW_NEWS_FILE, "w", encoding="utf-8") as f:
+        json.dump(raw_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 70)
-    print(f"💾 Successfully scraped full content and saved to '{OUTPUT_FILE}'!")
+    print(f"💾 Successfully appended {added_count} items to '{RAW_NEWS_FILE}'!")
+    print(f"📊 Total National: {raw_data['national_raw_count']} | Grand Total: {raw_data['total_raw_count']}")
     print("=" * 70)
 
 
