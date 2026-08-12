@@ -1,0 +1,2448 @@
+
+{
+  "topic_id": "agriculture_land_reforms_indian_economy",
+  "topic_title": "Agriculture and Land Reforms in Indian Economy",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_introduction",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "🌾 Agriculture and Land Reforms in Indian Economy",
+        "icon": "🚜",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Understanding India's agricultural dependency and its evolution",
+          "Green Revolution - achievements, limitations, and regional disparities",
+          "Land reforms - Zamindari abolition, ceiling laws, and consolidation",
+          "Cropping patterns and seasons (Kharif, Rabi, Zayad)",
+          "Major crops distribution across Indian states (BPSC favorite)",
+          "Agricultural challenges - fragmentation, credit, marketing",
+          "Government interventions - MSP, subsidies, procurement systems",
+          "Bihar's agriculture profile and local land tenure systems"
+        ],
+        "estimated_time": "22 minutes",
+        "badge_to_earn": "🏆 Agriculture Expert"
+      },
+      "navigation": {
+        "next": "card_02_dada_farm",
+        "button_text": "शुरू करें ➔"
+      }
+    },
+    {
+      "card_id": "card_02_dada_farm",
+      "card_slug": "card_02_dada_farm",
+      "type": "chat",
+      "concept_id": "agriculture_importance_intro",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhare gaon mein tumhare Dada ji kya karte hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir wo kheti karte hain! Dhan (chawal), gehun, aur kuch sabziyan bhi ugate hain."
+        },
+        {
+          "speaker": "aman",
+          "text": "Aur gaon mein aur kitne families kheti pe depend karte hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir almost sab log! Kuch log toh sirf kheti hi karte hain, kuch log sath mein koi aur kaam bhi karte hain."
+        }
+      ],
+      "navigation": {
+        "next": "card_03_agriculture_backbone",
+        "button_text": "Aage badhein ➔"
+      }
+    },
+    {
+      "card_id": "card_03_agriculture_backbone",
+      "card_slug": "card_03_agriculture_backbone",
+      "type": "chat",
+      "concept_id": "agriculture_indian_economy_role",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! India mein agriculture (kheti) sirf ek kaam nahi, balki economy ka backbone hai. Samjho - 1950 mein jab India independent hua, tab GDP mein agriculture ka contribution 50-55% tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir aadhe se zyada country ki kamai kheti se hi aa rahi thi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Aur abhi 2023 mein bhi, GDP mein contribution to kam ho gaya hai (~18%), par abhi bhi lagbhag 45-50% logon ki livelihood (rozgar) agriculture se judi hai! Ye paradox hum pehle padh chuke hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Employment zyada par production contribution kam - wo Disguised Unemployment wala concept!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_why_agriculture_important",
+        "button_text": "Bilkul sahi ➔"
+      }
+    },
+    {
+      "card_id": "card_04_why_agriculture_important",
+      "card_slug": "card_04_why_agriculture_important",
+      "type": "chat",
+      "concept_id": "agriculture_multidimensional_importance",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Par Raju, agriculture sirf employment ke liye important nahi hai. Sochlo - sabko roti, chawal, dal, sabzi sab agriculture se milta hai. Industries ko raw material (cotton, jute, sugarcane) bhi agriculture se milta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Matlab Sir food security ke liye bhi zaroori hai, aur industries ko bhi support karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! ⭐ BPSC TRE Favorite: Agriculture ke FOUR major roles hain - 1) Food Security (khana provide karna), 2) Employment (rozgar), 3) Raw Material for Industries (kapde ki factory ko cotton), 4) Export Earnings (basmati rice, tea export karke foreign exchange)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow Sir! Itne saare roles? To agriculture improve karna bahut zaroori hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_1947_situation",
+        "button_text": "Haan bilkul ➔"
+      }
+    },
+    {
+      "card_id": "card_05_1947_situation",
+      "card_slug": "card_05_1947_situation",
+      "type": "chat",
+      "concept_id": "agriculture_at_independence",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Par 1947 mein jab India independent hua, tab agriculture ki halat bahut kharab thi. Productivity bahut kam - ek hectare zameen se bahut kam fasal milti thi. Technology zero - sab traditional tarike se kheti."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir uss time modern machines nahi the? Tractors nahi the?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul nahi! Hal-bail se kheti, koi chemical fertilizers nahi, koi high-yield seeds nahi. Aur sabse badi problem - LAND OWNERSHIP ka issue! Zamindari System tha jismein kisan apni zameen ka malik bhi nahi hota tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Kisan kheti karta tha par zameen uski nahi thi? Ye kaise Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_zamindari_intro",
+        "button_text": "Samjhata hoon ➔"
+      }
+    },
+    {
+      "card_id": "card_06_zamindari_intro",
+      "card_slug": "card_06_zamindari_intro",
+      "type": "chat",
+      "concept_id": "zamindari_system_introduction",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dekho Raju, British time mein ZAMINDARI SYSTEM tha. Zamindars (big landlords) zameen ke malik the. Actual kisan (cultivator) sirf tenant (kiraye par kaam karne wala) tha. Fasal ugata kisan, par zameen ka malik Zamindar!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To kisan ko kya milta tha Sir? Uski mehnat ka phal to Zamindar le leta hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Kisan ko apni fasal ka bahut chhota hissa milta tha. Zyada hissa Zamindar rent ke naam par le leta tha - kabhi-kabhi 50-60% bhi! ⭐ Bihar SCERT Note: Bihar mein Zamindari bahut cruel thi - Champaran Satyagraha (1917) isi ke against tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir kisan garib hi rehta tha, chahe kitni bhi mehnat kare?"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_need_land_reforms",
+        "button_text": "Haan exactly ➔"
+      }
+    },
+    {
+      "card_id": "card_07_need_land_reforms",
+      "card_slug": "card_07_need_land_reforms",
+      "type": "chat",
+      "concept_id": "need_for_land_reforms",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isliye independence ke baad government ki priority thi - LAND REFORMS. Matlab zameen ka ownership system change karna, kisanon ko unki mehnat ka pura fayda dena, aur productivity badhana!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Land Reforms matlab Sir zameen related sudhar? Kya-kya kiya government ne?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Land Reforms ke TEEN major components the - 1) Zamindari Abolition (Zamindari system khatam karna), 2) Land Ceiling (ek vyakti maximum kitni zameen rakh sakta hai), 3) Land Consolidation (chhote tukdon ko jodna). Teen important steps!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir pehle Zamindari Abolition ka matlab samjhao detail mein!"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_zamindari_abolition",
+        "button_text": "Zaroor ➔"
+      }
+    },
+    {
+      "card_id": "card_08_zamindari_abolition",
+      "card_slug": "card_08_zamindari_abolition",
+      "type": "chat",
+      "concept_id": "zamindari_abolition_details",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ZAMINDARI ABOLITION (1950s mein shuru): Government ne law banaya ki ab Zamindars zameen ke malik nahi rahenge. Jo kisan actual kheti kar raha hai, wo zameen ka owner banega! Zamindars ko thoda compensation (muawza) diya gaya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To ab kisan apni zameen ka malik ban gaya? Ye to bahut acchi baat hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, theoretically bahut achha! Par practically kaafi problems aaye. ⚠️ BPSC Trap: Zamindari Abolition COMPLETELY successful nahi hua! Bahut Zamindars ne apni zameen benami (fake names) mein transfer kar di, ya apne relatives ke naam kar di!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir loopholes the? Law to bana par implement properly nahi hua?"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_abolition_limitations",
+        "button_text": "Haan yahi twist ➔"
+      }
+    },
+    {
+      "card_id": "card_09_abolition_limitations",
+      "card_slug": "card_09_abolition_limitations",
+      "type": "chat",
+      "concept_id": "zamindari_abolition_limitations",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly Raju! Implementation weak raha. Different states mein different results - Uttar Pradesh aur Bihar mein kaafi resistance tha Zamindars ki taraf se. West Bengal aur Kerala mein zyada successful raha kyunki strong political will tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir har state mein alag-alag result? Kuch states mein achha, kuch mein kharab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! ⭐ BPSC TRE Important: Bihar mein Zamindari Abolition Act 1950 mein pass hua par complete implementation mein decades lag gaye. Abhi bhi kuch areas mein feudal mindset baaki hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Ab doosra reform batao - Land Ceiling kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_land_ceiling",
+        "button_text": "Batata hoon ➔"
+      }
+    },
+    {
+      "card_id": "card_10_land_ceiling",
+      "card_slug": "card_10_land_ceiling",
+      "type": "chat",
+      "concept_id": "land_ceiling_laws",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "LAND CEILING LAWS (1960s-70s): Government ne limit lagayi ki ek family maximum kitni zameen rakh sakti hai. Jaise kisi state mein limit 10 hectare, kisi mein 15 hectare. Jyada zameen hai to wo government le legi aur landless kisanon ko distribute karegi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Matlab Sir agar kisi ke paas 50 hectare hai aur limit 10 hai, to baaki 40 hectare government le legi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Theoretically haan! Objective tha land ka EQUAL DISTRIBUTION - chhote kisanon ko bhi zameen mile. Par ye bhi properly implement nahi hua. Big landowners ne apni zameen family members ke naam kar di, fake divisions banaye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Phir se loopholes? Ye to problem hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_consolidation",
+        "button_text": "Haan ➔"
+      }
+    },
+    {
+      "card_id": "card_11_consolidation",
+      "card_slug": "card_11_consolidation",
+      "type": "chat",
+      "concept_id": "land_consolidation",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Teesra reform - LAND CONSOLIDATION. Dekho, kisi kisan ki 5 acre zameen hai par wo 10 chhote-chhote tukdon mein bikhra hua hai - yahan thoda, wahan thoda. Isse efficiently kheti mushkil hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Ek jagah se doosri jagah jaane mein time waste hoga, irrigation bhi mushkil!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! Consolidation ka matlab - un 10 tukdon ko exchange karke EK continuous plot banana. Neighboring farmers ke saath adjust karke. Punjab, Haryana mein ye successfully hua, par Bihar jaise states mein bahut kam!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir land reforms partially successful the - kuch achha hua, kuch nahi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_quiz_1",
+        "button_text": "Quiz time ➔"
+      }
+    },
+    {
+      "card_id": "card_12_quiz_1",
+      "card_slug": "card_12_quiz_1",
+      "type": "quiz",
+      "concept_id": "land_reforms_quiz_1",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Zamindari System के तहत भूमि का वास्तविक स्वामी (owner) कौन होता था? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "वह किसान जो खेती करता था"
+          },
+          {
+            "id": "B",
+            "text": "Zamindar (जमींदार)"
+          },
+          {
+            "id": "C",
+            "text": "सरकार"
+          },
+          {
+            "id": "D",
+            "text": "ग्राम पंचायत"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Zamindari System में ZAMINDAR (जमींदार) भूमि का स्वामी होता था। किसान केवल tenant (किरायेदार) की तरह खेती करता था और अपनी फसल का बड़ा हिस्सा rent के रूप में जमींदार को देता था। ⭐ NCERT Class 9 + BPSC TRE Direct concept - Bihar में यह व्यवस्था बहुत क्रूर थी!"
+      },
+      "navigation": {
+        "next": "card_13_quiz_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_13_quiz_2",
+      "card_slug": "card_13_quiz_2",
+      "type": "quiz",
+      "concept_id": "land_reforms_quiz_2",
+      "level": 1,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Land Ceiling Laws का मुख्य उद्देश्य क्या था? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "सभी भूमि सरकार के नियंत्रण में लाना"
+          },
+          {
+            "id": "B",
+            "text": "एक परिवार द्वारा रखी जा सकने वाली अधिकतम भूमि को सीमित करना और भूमिहीनों में वितरण"
+          },
+          {
+            "id": "C",
+            "text": "केवल बड़े किसानों को लाभ पहुंचाना"
+          },
+          {
+            "id": "D",
+            "text": "खेती पर टैक्स लगाना"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Land Ceiling Laws का उद्देश्य एक परिवार द्वारा रखी जाने वाली MAXIMUM भूमि को सीमित करना था, और अतिरिक्त भूमि को landless किसानों में distribute करना था। यह land का EQUAL DISTRIBUTION सुनिश्चित करने के लिए था। ⚠️ BPSC Trap: Implementation weak रहा - loopholes exploit किए गए!"
+      },
+      "navigation": {
+        "next": "card_14_quiz_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_3",
+      "card_slug": "card_14_quiz_3",
+      "type": "quiz",
+      "concept_id": "land_reforms_quiz_3",
+      "level": 1,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Land Consolidation का क्या अर्थ है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "सभी भूमि को सरकारी नियंत्रण में लाना"
+          },
+          {
+            "id": "B",
+            "text": "छोटे-छोटे बिखरे हुए भूमि टुकड़ों को एक सतत plot में बदलना"
+          },
+          {
+            "id": "C",
+            "text": "भूमि की कीमत बढ़ाना"
+          },
+          {
+            "id": "D",
+            "text": "भूमि पर कर लगाना"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Land Consolidation का अर्थ है किसान के छोटे-छोटे बिखरे हुए (fragmented) भूमि टुकड़ों को exchange और adjustment के माध्यम से एक CONTINUOUS PLOT में बदलना। इससे खेती की efficiency बढ़ती है, irrigation आसान होता है। ⭐ Punjab, Haryana में successful; Bihar में weak implementation!"
+      },
+      "navigation": {
+        "next": "card_15_milestone_1",
+        "button_text": "Check Progress ➔"
+      }
+    },
+    {
+      "card_id": "card_15_milestone_1",
+      "card_slug": "card_15_milestone_1",
+      "type": "milestone",
+      "concept_id": "module_1_complete",
+      "level": 1,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 CLEARED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Land Reforms in India",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Complete",
+        "motivational_quote": "Zabardast Raju! Tumne Zamindari Abolition, Land Ceiling aur Consolidation ko master kar liya. Ab Green Revolution ki exciting journey mein chalte hain! 🌾"
+      },
+      "navigation": {
+        "next": "card_16_green_revolution_intro",
+        "button_text": "Green Revolution Start ➔"
+      }
+    },
+    {
+      "card_id": "card_16_green_revolution_intro",
+      "card_slug": "card_16_green_revolution_intro",
+      "type": "chat",
+      "concept_id": "green_revolution_introduction",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir land reforms ke baad bhi productivity kam thi. Phir production kaise badha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! 1960s tak India ki sthiti bahut critical thi - population badh rahi thi par food production nahi. 1965-66 mein bahut bhayankar drought (sukha) aaya, famine jaisa haalat! India ko America se wheat import karni padi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir apne desh mein hi khana kaafi nahi tha? Ye to sharmnaak hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! Isi crisis ne ek REVOLUTION ko janam diya - GREEN REVOLUTION! 1960s ke end se start hua, jisne India ko food shortage se food surplus country bana diya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_green_revolution_meaning",
+        "button_text": "Kaise hua ➔"
+      }
+    },
+    {
+      "card_id": "card_17_green_revolution_meaning",
+      "card_slug": "card_17_green_revolution_meaning",
+      "type": "chat",
+      "concept_id": "green_revolution_definition",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "GREEN REVOLUTION ka matlab hai - modern scientific techniques use karke agricultural productivity ko dramatically badhana! High Yield Variety (HYV) seeds, chemical fertilizers, pesticides, aur irrigation facilities - ye sab combine karke production multiply kiya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "HYV seeds? Ye kya hote hain Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "HIGH YIELD VARIETY SEEDS - scientifically developed special beej jo traditional seeds se 3-4 guna zyada fasal dete hain! Dr. M.S. Swaminathan ko 'Father of Green Revolution in India' kehte hain. Unhone Mexican dwarf wheat varieties India mein introduce kiya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! To scientist ne special beej banaye jo zyada production dete hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_green_revolution_components",
+        "button_text": "Haan bilkul ➔"
+      }
+    },
+    {
+      "card_id": "card_18_green_revolution_components",
+      "card_slug": "card_18_green_revolution_components",
+      "type": "chat",
+      "concept_id": "green_revolution_components",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Green Revolution ke PAANCH major components the - 1) HYV Seeds (High Yield beej), 2) Chemical Fertilizers (urea, DAP), 3) Pesticides (keeton se bachane ke liye), 4) Irrigation (paani ki vyavastha), 5) Farm Mechanization (tractors, harvesters)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir ek package tha - beej bhi acche, fertilizer bhi, paani bhi, machines bhi!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isko 'PACKAGE OF PRACTICES' kehte the. ⭐ BPSC/SSC Favorite: Sab cheezein saath mein zaroori thi - sirf HYV seeds se kaam nahi chalta, fertilizer aur irrigation bhi chahiye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! To kya result mila Sir? Sach mein production badha?"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_green_revolution_success",
+        "button_text": "Haan dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_19_green_revolution_success",
+      "card_slug": "card_19_green_revolution_success",
+      "type": "chat",
+      "concept_id": "green_revolution_achievements",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Results zabardast the Raju! Wheat production 1960 mein 11 million tonnes tha, 1990 tak 55 million tonnes - 5 guna badh gaya! Rice production bhi double ho gaya. India SELF-SUFFICIENT ban gaya food grains mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow Sir! To ab import nahi karna pada?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul nahi! Ulta India ab export karne laga - especially basmati rice. ⭐ UPSC Point: 1970s tak India ne 'Ship to Mouth' existence (America se import) se 'Self-Reliance' tak ka safar complete kar liya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to bahut badi achievement hai! Par Sir kya saare states mein equally successful hua?"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_regional_disparity",
+        "button_text": "Nahi yahi twist ➔"
+      }
+    },
+    {
+      "card_id": "card_20_regional_disparity",
+      "card_slug": "card_20_regional_disparity",
+      "type": "chat",
+      "concept_id": "green_revolution_regional_inequality",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⚠️ BPSC Biggest Trap: Green Revolution SABHI states mein equally successful NAHI hua! Sabse zyada success Punjab, Haryana, Western UP mein mili. Bihar, Eastern UP, Odisha, West Bengal mein bahut kam impact!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kyun Sir? Sabko same technology mili thi na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Technology same thi par CONDITIONS different! Punjab-Haryana mein achhi irrigation facilities thi (canals, tubewells), flat land tha, kisan financially strong the. Bihar mein irregular rainfall, floods, chhote landholdings, poor irrigation - challenges zyada the!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! To infrastructure aur resources ka difference tha?"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_crop_specific",
+        "button_text": "Haan exactly ➔"
+      }
+    },
+    {
+      "card_id": "card_21_crop_specific",
+      "card_slug": "card_21_crop_specific",
+      "type": "chat",
+      "concept_id": "green_revolution_crop_limitation",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Aur ek limitation - Green Revolution mainly WHEAT aur RICE ke liye successful raha! Pulses (dal), oilseeds (sarson, til), coarse grains (bajra, jowar) mein koi khaas progress nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir sirf do faslein benefit hui, baaki crops neglect ho gaye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isliye abhi bhi India mein pulses aur edible oils import karne padte hain. ⭐ BPSC TRE Note: Bihar mein traditional crops (maize, pulses) Green Revolution se zyada benefit nahi le sake!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir Green Revolution ke kuch negative effects bhi the kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_negative_impacts",
+        "button_text": "Haan dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_22_negative_impacts",
+      "card_slug": "card_22_negative_impacts",
+      "type": "chat",
+      "concept_id": "green_revolution_negative_effects",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan Raju, kuch serious negative impacts bhi aaye: 1) SOIL DEGRADATION - baar-baar chemical fertilizers se zameen ki natural fertility kam ho gayi, 2) WATER TABLE DEPLETION - over-irrigation se underground water khatam hone laga, 3) ENVIRONMENTAL POLLUTION - pesticides se!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain Sir? Matlab short-term mein production badha par long-term damage bhi hua?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Punjab mein ab soil salinity (namkeen zameen) aur water crisis major problems hain. Aur 4) REGIONAL INEQUALITY badh gayi - ameer states aur ameer ho gaye, garib states peeche reh gaye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to serious hai Sir! To ab kya karna chahiye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_sustainable_agriculture",
+        "button_text": "Batata hoon ➔"
+      }
+    },
+    {
+      "card_id": "card_23_sustainable_agriculture",
+      "card_slug": "card_23_sustainable_agriculture",
+      "type": "chat",
+      "concept_id": "sustainable_agriculture_need",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab focus SUSTAINABLE AGRICULTURE par hai - aise tarike jo production bhi de aur environment ko bhi nuksaan na ho! Organic farming, crop rotation, integrated pest management - ye sab promote kiye ja rahe hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Organic farming matlab bina chemicals ke?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Natural fertilizers (gobar ki khad, compost) aur biological pest control. Healthier bhi hai aur sustainable bhi. Par production thoda kam hota hai chemicals ke mukable, isliye balance banana padta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Green Revolution great tha par ab Second Green Revolution chahiye jo sustainable ho!"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_quiz_4",
+        "button_text": "Quiz lo ➔"
+      }
+    },
+    {
+      "card_id": "card_24_quiz_4",
+      "card_slug": "card_24_quiz_4",
+      "type": "quiz",
+      "concept_id": "green_revolution_quiz_1",
+      "level": 2,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "'Father of Green Revolution in India' किसे कहा जाता है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Dr. Norman Borlaug"
+          },
+          {
+            "id": "B",
+            "text": "Dr. M.S. Swaminathan"
+          },
+          {
+            "id": "C",
+            "text": "Dr. Verghese Kurien"
+          },
+          {
+            "id": "D",
+            "text": "Lal Bahadur Shastri"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Dr. M.S. Swaminathan को 'Father of Green Revolution in India' कहा जाता है। उन्होंने Mexican dwarf wheat varieties को India में introduce किया और HYV seeds के development में key role निभाया। ⭐ SSC/Railway/BPSC में हर साल पूछा जाता है! (Note: Dr. Norman Borlaug को Father of Green Revolution in WORLD कहते हैं)"
+      },
+      "navigation": {
+        "next": "card_25_quiz_5",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_25_quiz_5",
+      "card_slug": "card_25_quiz_5",
+      "type": "quiz",
+      "concept_id": "green_revolution_quiz_2",
+      "level": 2,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Green Revolution सबसे अधिक सफल किन राज्यों में रहा? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Bihar, Odisha, West Bengal"
+          },
+          {
+            "id": "B",
+            "text": "Punjab, Haryana, Western UP"
+          },
+          {
+            "id": "C",
+            "text": "Kerala, Tamil Nadu, Karnataka"
+          },
+          {
+            "id": "D",
+            "text": "Rajasthan, Gujarat, Maharashtra"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Green Revolution PUNJAB, HARYANA और WESTERN UP में सबसे अधिक सफल रहा। इन राज्यों में अच्छी irrigation facilities, flat land, और financially strong farmers थे। ⚠️ BPSC Trap: Bihar और Eastern states में बहुत कम impact था - यह REGIONAL INEQUALITY का major example है!"
+      },
+      "navigation": {
+        "next": "card_26_quiz_6",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_26_quiz_6",
+      "card_slug": "card_26_quiz_6",
+      "type": "quiz",
+      "concept_id": "green_revolution_quiz_3",
+      "level": 2,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Green Revolution की एक प्रमुख LIMITATION (सीमा) क्या थी? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "यह केवल wheat और rice तक सीमित था, pulses और oilseeds में कम सफल"
+          },
+          {
+            "id": "B",
+            "text": "इससे production बिल्कुल नहीं बढ़ा"
+          },
+          {
+            "id": "C",
+            "text": "यह सभी states में equally successful रहा"
+          },
+          {
+            "id": "D",
+            "text": "इसमें कोई technology use नहीं हुई"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "⚠️ BPSC/UPSC Critical Point: Green Revolution मुख्यतः WHEAT और RICE तक सीमित था। PULSES (दालें), OILSEEDS (तिलहन), और COARSE GRAINS (मोटे अनाज) में कोई खास progress नहीं हुआ। इसीलिए India अभी भी pulses और edible oils import करता है!"
+      },
+      "navigation": {
+        "next": "card_27_milestone_2",
+        "button_text": "Progress Check ➔"
+      }
+    },
+    {
+      "card_id": "card_27_milestone_2",
+      "card_slug": "card_27_milestone_2",
+      "type": "milestone",
+      "concept_id": "module_2_complete",
+      "level": 2,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🌾 MODULE 2 MASTERED!",
+        "badge_emoji": "🚜",
+        "completed_topic": "Green Revolution - Success & Limitations",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/8 Complete",
+        "motivational_quote": "Excellent Raju! Green Revolution ke achievements aur limitations dono clear. Ab cropping patterns aur major crops distribution dekhenge! 🌱"
+      },
+      "navigation": {
+        "next": "card_28_cropping_seasons",
+        "button_text": "Cropping Patterns ➔"
+      }
+    },
+    {
+      "card_id": "card_28_cropping_seasons",
+      "card_slug": "card_28_cropping_seasons",
+      "type": "chat",
+      "concept_id": "cropping_seasons_introduction",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, mere Dada ji kehte hain ki kharif season mein dhan ugayenge aur rabi mein gehun. Ye kharif-rabi kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut accha question Raju! India mein crops ko ugane ke TIME (season) ke basis par TEEN categories mein baanta jaata hai - KHARIF, RABI aur ZAYAD. Ye India ki monsoon-based agriculture ki khaasiyat hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Teen seasons? Matlab alag-alag time par alag-alag fasal?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur ye classification BPSC, SSC, Railway mein bahut poocha jaata hai - kon si crop kaun se season mein ugti hai. Chalo ek-ek karke samjhte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_kharif_season",
+        "button_text": "Kharif batao ➔"
+      }
+    },
+    {
+      "card_id": "card_29_kharif_season",
+      "card_slug": "card_29_kharif_season",
+      "type": "chat",
+      "concept_id": "kharif_season_details",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "KHARIF CROPS: June-July mein boya jaata hai (monsoon ki shuruat), October-November mein kaata jaata hai. Ye crops ko BAHUT PAANI chahiye, isliye monsoon season mein ugate hain. Main crops: Dhan (Rice), Maize, Cotton, Jute, Bajra, Jowar!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Matlab jab barish hoti hai tab ye faslein ugti hain kyunki paani chahiye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! ⭐ BPSC TRE Mnemonic: 'Kharif = Khareef (Autumn)' yaad rakho. Rice/Paddy sabse important kharif crop hai - India world's 2nd largest rice producer (China ke baad)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Sir rabi crops kab ugte hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_rabi_season",
+        "button_text": "Batata hoon ➔"
+      }
+    },
+    {
+      "card_id": "card_30_rabi_season",
+      "card_slug": "card_30_rabi_season",
+      "type": "chat",
+      "concept_id": "rabi_season_details",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "RABI CROPS: October-November mein boya jaata hai (winter ki shuruat), March-April mein kaata jaata hai. Ye crops ko KAM PAANI chahiye, winter season ki moderate temperature chahiye. Main crops: Gehun (Wheat), Gram/Chana, Peas, Mustard (Sarson), Barley!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir rabi mein gehun! Punjab-Haryana mein to bahut gehun ugta hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! ⭐ SSC Favorite: Wheat India ki sabse important RABI crop hai. UP, Punjab, Haryana, MP - major wheat producing states. Rabi = Spring season yaad rakho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur teesra season - Zayad kya hai Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_zayad_season",
+        "button_text": "Ye bhi important ➔"
+      }
+    },
+    {
+      "card_id": "card_31_zayad_season",
+      "card_slug": "card_31_zayad_season",
+      "type": "chat",
+      "concept_id": "zayad_season_details",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ZAYAD CROPS: March-April mein boya jaata hai, June-July mein kaata jaata hai. Ye rabi aur kharif ke BEECH ka short season hai. Mainly VEGETABLES aur FRUITS. Examples: Watermelon (tarbooz), Muskmelon (kharbuja), Cucumber (kheera), Pumpkin (kaddu)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Matlab summer fruits jo garmi mein milte hain wo zayad mein ugte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! ⚠️ BPSC Trap: Zayad ko sometimes 'summer season crops' bhi kehte hain. Ye kharif se chhoti duration ki hoti hai aur mainly artificial irrigation (tubewell, canals) par depend karti hai kyunki monsoon abhi shuru nahi hota!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Kharif = Monsoon/Barish, Rabi = Winter, Zayad = Summer between season!"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_major_crops_rice",
+        "button_text": "Ab crops detail ➔"
+      }
+    },
+    {
+      "card_id": "card_32_major_crops_rice",
+      "card_slug": "card_32_major_crops_rice",
+      "type": "chat",
+      "concept_id": "rice_crop_distribution",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab major crops ka state-wise distribution dekhte hain - ye BPSC/SSC ka favorite topic hai! RICE (DHAN): West Bengal, UP, Punjab, Tamil Nadu, Andhra Pradesh major producers. ⭐ West Bengal India mein SABSE ZYADA rice ugata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "West Bengal? Maine socha tha Punjab sabse zyada ugata hoga!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Punjab wheat mein number 1 hai. Rice ke liye West Bengal, phir UP. ⭐ BPSC TRE: Bihar bhi major rice producer hai - especially North Bihar (Champaran, Muzaffarpur, Darbhanga districts). Dhan Bihar ki MAIN CROP hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha Sir! Aur wheat kahan ugta hai sabse zyada?"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_major_crops_wheat",
+        "button_text": "Wheat dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_33_major_crops_wheat",
+      "card_slug": "card_33_major_crops_wheat",
+      "type": "chat",
+      "concept_id": "wheat_crop_distribution",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "WHEAT (GEHUN): UP (largest producer), Punjab, Haryana, MP, Rajasthan. ⭐ SSC/Railway Favorite: UP India mein SABSE ZYADA wheat produce karta hai, lekin Punjab ki PER HECTARE productivity (yield) sabse zyada hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir total production UP ka zyada par quality/efficiency Punjab ki zyada?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! UP ki zameen zyada hai to total zyada, par Punjab ki modern farming techniques better hain to productivity zyada. ⭐ BPSC TRE: Bihar mein wheat South Bihar (Gaya, Patna, Bhojpur) mein zyada ugta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Aur baaki crops?"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_other_major_crops",
+        "button_text": "Aur batao ➔"
+      }
+    },
+    {
+      "card_id": "card_34_other_major_crops",
+      "card_slug": "card_34_other_major_crops",
+      "type": "chat",
+      "concept_id": "other_crops_distribution",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "COTTON: Gujarat (largest), Maharashtra, Telangana, Punjab. SUGARCANE: UP (largest), Maharashtra, Karnataka. JUTE: West Bengal (90% production!), Bihar, Assam. TEA: Assam (largest), West Bengal (Darjeeling), Tamil Nadu (Nilgiri)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Itne saare! Sir ye yaad kaise rakhun? Exam mein confuse ho jaunga!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho Raju, pattern samjho - jo state jis climate/soil mein hai, wahi crop best ugta hai. Rice = paani zyada (West Bengal rivers), Wheat = moderate climate (North plains), Cotton = black soil (Gujarat-Maharashtra), Jute = Delta regions (Bengal)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Climate aur soil ke hisaab se crops distribute hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_quiz_7",
+        "button_text": "Test karo ➔"
+      }
+    },
+    {
+      "card_id": "card_35_quiz_7",
+      "card_slug": "card_35_quiz_7",
+      "type": "quiz",
+      "concept_id": "cropping_seasons_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सी फसल KHARIF season में उगाई जाती है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "गेहूं (Wheat)"
+          },
+          {
+            "id": "B",
+            "text": "चना (Gram)"
+          },
+          {
+            "id": "C",
+            "text": "धान (Rice/Paddy)"
+          },
+          {
+            "id": "D",
+            "text": "सरसों (Mustard)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "धान (Rice/Paddy) एक KHARIF फसल है जो June-July में बोई जाती है और October-November में काटी जाती है। इसे बहुत पानी चाहिए इसलिए monsoon season में उगाई जाती है। ⭐ गेहूं, चना, सरसों सभी RABI crops हैं। BPSC/SSC में हर साल पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_36_quiz_8",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_36_quiz_8",
+      "card_slug": "card_36_quiz_8",
+      "type": "quiz",
+      "concept_id": "cropping_seasons_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत में RICE (चावल) का सबसे बड़ा उत्पादक राज्य कौन सा है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Punjab"
+          },
+          {
+            "id": "B",
+            "text": "West Bengal"
+          },
+          {
+            "id": "C",
+            "text": "Uttar Pradesh"
+          },
+          {
+            "id": "D",
+            "text": "Bihar"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC/SSC Critical Fact: WEST BENGAL भारत में चावल का सबसे बड़ा उत्पादक राज्य है! Punjab गेहूं में number 1 है, चावल में नहीं। UP second position पर है। Bihar भी major producer है लेकिन West Bengal से कम। यह confusion बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_37_quiz_9",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_9",
+      "card_slug": "card_37_quiz_9",
+      "type": "quiz",
+      "concept_id": "cropping_seasons_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "ZAYAD season की फसलें मुख्यतः किस पर निर्भर करती हैं? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Monsoon rainfall"
+          },
+          {
+            "id": "B",
+            "text": "Artificial irrigation (tubewell, canals)"
+          },
+          {
+            "id": "C",
+            "text": "Winter rainfall"
+          },
+          {
+            "id": "D",
+            "text": "बिना पानी के उग जाती हैं"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⚠️ BPSC Trap: ZAYAD season की फसलें (March-July) मुख्यतः ARTIFICIAL IRRIGATION पर निर्भर करती हैं क्योंकि यह rabi और kharif के बीच का समय है जब न monsoon है न winter rain। Tubewells, canals से irrigation करनी पड़ती है। इसलिए ये mainly vegetables/fruits हैं जो controlled irrigation में उग सकें!"
+      },
+      "navigation": {
+        "next": "card_38_milestone_3",
+        "button_text": "Check Progress ➔"
+      }
+    },
+    {
+      "card_id": "card_38_milestone_3",
+      "card_slug": "card_38_milestone_3",
+      "type": "milestone",
+      "concept_id": "module_3_complete",
+      "level": 3,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🌱 MODULE 3 CONQUERED!",
+        "badge_emoji": "🌾",
+        "completed_topic": "Cropping Patterns & Major Crops",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/8 Complete",
+        "motivational_quote": "Fantastic! Kharif-Rabi-Zayad aur major crops distribution complete. Ab agricultural challenges dekhenge! 💪"
+      },
+      "navigation": {
+        "next": "card_39_fragmentation_intro",
+        "button_text": "Challenges Module ➔"
+      }
+    },
+    {
+      "card_id": "card_39_fragmentation_intro",
+      "card_slug": "card_39_fragmentation_intro",
+      "type": "chat",
+      "concept_id": "land_fragmentation_problem",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir itni saari schemes hain, technology hai, phir bhi agriculture mein problems kyun hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut achha observation Raju! India ki agriculture ko KAAFI challenges face karne pad rahe hain. Sabse badi problem hai - LAND FRAGMENTATION. Matlab zameen ka chhote-chhote tukdon mein bant jaana!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye kaise hota hai Sir? Zameen kaise chhoti hoti jaati hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho, ek kisan ke paas 10 acre zameen thi. Wo mar gaya to uske 4 beton mein bant gayi - har ek ko 2.5 acre. Phir unke bache hue, to aur bant gayi. 3-4 generations mein 10 acre se 0.5-1 acre plots ban gaye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_fragmentation_impact",
+        "button_text": "Problem kya hai ➔"
+      }
+    },
+    {
+      "card_id": "card_40_fragmentation_impact",
+      "card_slug": "card_40_fragmentation_impact",
+      "type": "chat",
+      "concept_id": "fragmentation_negative_effects",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Chhoti zameen par modern farming mushkil hai - tractor chalana, irrigation system lagana, mechanization karna sab uneconomical ho jaata hai. ⭐ BPSC TRE: Bihar mein AVERAGE LANDHOLDING sirf 0.66 hectare (1.6 acre) hai - bahut chhota!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Itna kam? To modern machines kaise use karenge?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isliye productivity kam rehti hai. Aur agar zameen 10 alag-alag jagah bikhra hua hai to time aur energy waste hota hai ek plot se doosre jaane mein. Consolidation zaruri hai jo humne pehle padha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Aur kya problems hain Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_credit_problem",
+        "button_text": "Credit issue ➔"
+      }
+    },
+    {
+      "card_id": "card_41_credit_problem",
+      "card_slug": "card_41_credit_problem",
+      "type": "chat",
+      "concept_id": "agricultural_credit_issue",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Doosri badi problem - LACK OF CREDIT (karz/loan ki kami). Kisan ko seeds, fertilizers, pesticides kharidne ke liye paisa chahiye. Par banks se loan milna mushkil, process lambi. To wo MONEYLENDERS (sahukar) se lete hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sahukar se lene mein kya problem hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Problem ye hai ki sahukar bahut HIGH INTEREST RATE lete hain - 30-40% bhi! Agar fasal kharab ho gayi (drought/flood), to kisan loan chuka nahi pata. Phir wo DEBT TRAP mein phas jaata hai - karz ke bojh tale dab jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to bahut serious hai Sir! Isliye farmer suicides hote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_marketing_problem",
+        "button_text": "Haan ➔"
+      }
+    },
+    {
+      "card_id": "card_42_marketing_problem",
+      "card_slug": "card_42_marketing_problem",
+      "type": "chat",
+      "concept_id": "agricultural_marketing_issues",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan Raju, bahut tragic! Teesri problem - MARKETING. Kisan apni fasal ugata hai par usko SAHI PRICE nahi milta. Middlemen (bichauliye) exploit karte hain. Kisan ko ₹10/kg milta hai, consumer ₹40/kg pay karta hai - beech ka ₹30 middlemen le jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya?? Matlab kisan ko uski mehnat ka pura paisa nahi milta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur agar kisan directly market jaaye to transport cost, storage cost, market fee - ye sab bhi lagta hai. ⭐ BPSC Important: Isliye government APMC (Agricultural Produce Market Committee) mandis chalati hai jahan MSP (Minimum Support Price) milta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "MSP kya hai Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_msp_concept",
+        "button_text": "Important concept ➔"
+      }
+    },
+    {
+      "card_id": "card_43_msp_concept",
+      "card_slug": "card_43_msp_concept",
+      "type": "chat",
+      "concept_id": "msp_minimum_support_price",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MSP = MINIMUM SUPPORT PRICE. Government har saal declare karti hai ki is fasal ka minimum price itna hoga. Kisan ko guarantee hai ki chahe market price kuch bhi ho, government MSP par kharid legi. Protection hai price crash se!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! To agar market mein wheat ka price ₹15/kg hai aur MSP ₹20/kg, to government ₹20 degi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! ⭐ SSC/Railway Favorite: MSP mainly wheat, paddy, pulses ke liye announce hota hai. Commission for Agricultural Costs and Prices (CACP) MSP recommend karta hai, government final decision leti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir ye kisan ke liye safety net hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_other_challenges",
+        "button_text": "Aur issues ➔"
+      }
+    },
+    {
+      "card_id": "card_44_other_challenges",
+      "card_slug": "card_44_other_challenges",
+      "type": "chat",
+      "concept_id": "other_agricultural_challenges",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Aur bhi challenges hain - 1) IRRIGATION ki kami (abhi bhi 60% agriculture rain-dependent), 2) LACK OF STORAGE facilities (fasal kharab ho jaati hai), 3) CLIMATE CHANGE effects (erratic rainfall, extreme weather), 4) CROP INSURANCE ki awareness kam!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir itni problems! Government kuch kar rahi hai ya nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! Government bahut schemes laayi hai - PM-KISAN (direct cash), Kisan Credit Card (easy loan), Pradhan Mantri Fasal Bima Yojana (crop insurance), e-NAM (online marketing platform). Par implementation mein gaps hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Schemes achhi hain par ground level par properly reach nahi kar rahi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_quiz_10",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz_10",
+      "card_slug": "card_45_quiz_10",
+      "type": "quiz",
+      "concept_id": "agricultural_challenges_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारतीय कृषि की सबसे बड़ी समस्या क्या है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "भूमि का बड़े खेतों में consolidation"
+          },
+          {
+            "id": "B",
+            "text": "भूमि का छोटे-छोटे टुकड़ों में विभाजन (Fragmentation)"
+          },
+          {
+            "id": "C",
+            "text": "बहुत अधिक mechanization"
+          },
+          {
+            "id": "D",
+            "text": "सरकारी सहायता की अधिकता"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "भारतीय कृषि की सबसे बड़ी समस्याओं में से एक LAND FRAGMENTATION (भूमि विखंडन) है। विरासत में बंटवारे के कारण जोत का आकार छोटा होता जा रहा है, जिससे modern farming techniques का उपयोग uneconomical हो जाता है। ⭐ BPSC TRE: Bihar में average landholding सिर्फ 0.66 hectare है!"
+      },
+      "navigation": {
+        "next": "card_46_quiz_11",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_46_quiz_11",
+      "card_slug": "card_46_quiz_11",
+      "type": "quiz",
+      "concept_id": "agricultural_challenges_quiz_2",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "MSP (Minimum Support Price) कौन तय करता है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "State governments"
+          },
+          {
+            "id": "B",
+            "text": "CACP की recommendation पर Central Government"
+          },
+          {
+            "id": "C",
+            "text": "किसान संगठन"
+          },
+          {
+            "id": "D",
+            "text": "Private companies"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "MSP (Minimum Support Price) CACP (Commission for Agricultural Costs and Prices) की recommendation के आधार पर CENTRAL GOVERNMENT तय करती है। CACP cost of production, market trends, demand-supply आदि देखकर MSP suggest करता है। ⭐ SSC/Railway Direct fact - हर साल पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_47_quiz_12",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_47_quiz_12",
+      "card_slug": "card_47_quiz_12",
+      "type": "quiz",
+      "concept_id": "agricultural_challenges_quiz_3",
+      "level": 4,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत में लगभग कितने प्रतिशत कृषि अभी भी MONSOON rainfall पर निर्भर है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "लगभग 20-30%"
+          },
+          {
+            "id": "B",
+            "text": "लगभग 40-50%"
+          },
+          {
+            "id": "C",
+            "text": "लगभग 60%"
+          },
+          {
+            "id": "D",
+            "text": "लगभग 80-90%"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⚠️ BPSC/UPSC Critical: भारत में अभी भी लगभग 60% कृषि RAIN-DEPENDENT (वर्षा आधारित) है। केवल 40% के पास ही assured irrigation facilities हैं। इसलिए अच्छा monsoon = अच्छी फसल, weak monsoon = drought और crop failure! यह भारतीय कृषि की सबसे बड़ी vulnerability है!"
+      },
+      "navigation": {
+        "next": "card_48_milestone_4",
+        "button_text": "Progress Check ➔"
+      }
+    },
+    {
+      "card_id": "card_48_milestone_4",
+      "card_slug": "card_48_milestone_4",
+      "type": "milestone",
+      "concept_id": "module_4_complete",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "💪 MODULE 4 MASTERED!",
+        "badge_emoji": "⚠️",
+        "completed_topic": "Agricultural Challenges & Government Interventions",
+        "xp_earned": 80,
+        "milestone_progress": "Module 4/8 Complete",
+        "motivational_quote": "Excellent! Fragmentation, Credit, Marketing, MSP sab clear. Ab allied activities aur diversification dekhenge! 🐄"
+      },
+      "navigation": {
+        "next": "card_49_allied_activities_intro",
+        "button_text": "Allied Activities ➔"
+      }
+    },
+    {
+      "card_id": "card_49_allied_activities_intro",
+      "card_slug": "card_49_allied_activities_intro",
+      "type": "chat",
+      "concept_id": "allied_activities_introduction",
+      "level": 5,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir agriculture sirf crops ugana hi hai kya? Mere gaon mein log gaay-bhains bhi paalte hain, machli bhi paalte hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi observation Raju! Agriculture ka matlab sirf crop production nahi hai. ALLIED ACTIVITIES bhi agriculture ka important part hain - Animal Husbandry (pashupalan), Fishery (matsya palan), Poultry (murgi palan), Beekeeping (madhumakhi palan)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Allied matlab Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Allied matlab 'saath-saath chalne wala'. Ye activities agriculture ke saath-saath ki jaati hain aur kisanon ki income badhane mein help karti hain. ⭐ BPSC TRE: Bihar mein dairy farming aur fishery bahut important allied activities hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_animal_husbandry",
+        "button_text": "Detail mein ➔"
+      }
+    },
+    {
+      "card_id": "card_50_animal_husbandry",
+      "card_slug": "card_50_animal_husbandry",
+      "type": "chat",
+      "concept_id": "animal_husbandry_dairy",
+      "level": 5,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ANIMAL HUSBANDRY (Pashupalan): Mainly DAIRY (doodh ka vyavasaya). India duniya ka LARGEST milk producer hai! White Revolution (Operation Flood - 1970) ne India ko milk surplus bana diya. Dr. Verghese Kurien ko 'Father of White Revolution' kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "White Revolution? Green ke baad White bhi? Matlab har cheez mein revolution hua?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Green = Crops, White = Milk, Blue = Fish, Yellow = Oil seeds! ⭐ SSC Favorite: Amul cooperative model Gujarat mein start hua (Dr. Kurien ne), jo ab poore India mein successful hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! To allied activities bhi important income source hain kisanon ke liye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_fishery_poultry",
+        "button_text": "Haan bilkul ➔"
+      }
+    },
+    {
+      "card_id": "card_51_fishery_poultry",
+      "card_slug": "card_51_fishery_poultry",
+      "type": "chat",
+      "concept_id": "fishery_poultry_activities",
+      "level": 5,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Absolutely! FISHERY: India 2nd largest fish producer (China ke baad). West Bengal, Andhra Pradesh, Kerala major states. ⭐ Bihar mein bhi fishery badh rahi hai - ponds mein fish farming! POULTRY: Egg aur chicken production - Andhra Pradesh leader hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye sab side business ki tarah hai? Main kheti, side mein dairy ya fishery?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isko DIVERSIFICATION kehte hain - ek hi source par dependent mat raho, multiple income sources banao. Agar crop fail ho jaye to dairy/fishery se income aayegi. Risk kam ho jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Smart strategy Sir! Sab eggs ek basket mein mat rakho wala concept!"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_horticulture",
+        "button_text": "Aur activities ➔"
+      }
+    },
+    {
+      "card_id": "card_52_horticulture",
+      "card_slug": "card_52_horticulture",
+      "type": "chat",
+      "concept_id": "horticulture_floriculture",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "HORTICULTURE: Fruits aur vegetables ki kheti. India mango, banana, citrus fruits mein world leader hai. FLORICULTURE: Phoolon ki kheti - roses, marigold, orchids. Export bhi hota hai Netherlands, UAE ko!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Phool bhi export hote hain? Maine socha nahi tha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! High-value products hain. ⭐ BPSC/UPSC: Government 'National Horticulture Mission' chala rahi hai horticulture ko promote karne ke liye. Traditional crops se zyada income potential hai isme!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir message ye hai ki sirf wheat-rice nahi, allied activities aur high-value crops bhi ugao?"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_organic_farming",
+        "button_text": "Bilkul ➔"
+      }
+    },
+    {
+      "card_id": "card_53_organic_farming",
+      "card_slug": "card_53_organic_farming",
+      "type": "chat",
+      "concept_id": "organic_sustainable_farming",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! Aur ab ek naya trend aa raha hai - ORGANIC FARMING. Chemical fertilizers/pesticides ke bina, natural tarike se kheti. Healthier produce, premium price milta hai, environment friendly bhi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Par Sir production to kam hoga na chemical ke bina?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan thoda kam, par PRICE zyada milta hai! Organic vegetables market mein 2-3x price par bikte hain. ⭐ Sikkim India ka PEHLA fully organic state ban gaya! Health-conscious consumers organic prefer kar rahe hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! To niche market hai par profitable!"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_quiz_13",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_54_quiz_13",
+      "card_slug": "card_54_quiz_13",
+      "type": "quiz",
+      "concept_id": "allied_activities_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "'Father of White Revolution in India' किसे कहा जाता है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Dr. M.S. Swaminathan"
+          },
+          {
+            "id": "B",
+            "text": "Dr. Verghese Kurien"
+          },
+          {
+            "id": "C",
+            "text": "Dr. Norman Borlaug"
+          },
+          {
+            "id": "D",
+            "text": "Lal Bahadur Shastri"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Dr. Verghese Kurien को 'Father of White Revolution in India' कहा जाता है। उन्होंने Operation Flood (1970) के through India को दुनिया का सबसे बड़ा दूध उत्पादक बनाया। Amul cooperative model उनकी देन है। ⭐ SSC/Railway/BPSC में frequent question! (Note: M.S. Swaminathan = Green Revolution)"
+      },
+      "navigation": {
+        "next": "card_55_quiz_14",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_55_quiz_14",
+      "card_slug": "card_55_quiz_14",
+      "type": "quiz",
+      "concept_id": "allied_activities_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत दुनिया में दूध उत्पादन में कौन से स्थान पर है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "दूसरा (China के बाद)"
+          },
+          {
+            "id": "B",
+            "text": "पहला (Largest producer)"
+          },
+          {
+            "id": "C",
+            "text": "तीसरा"
+          },
+          {
+            "id": "D",
+            "text": "पांचवां"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC/SSC Critical Fact: भारत दुनिया का LARGEST (सबसे बड़ा) दूध उत्पादक देश है! White Revolution (Operation Flood) की सफलता से यह संभव हुआ। UP, Rajasthan, MP major milk producing states हैं। यह frequently asked question है!"
+      },
+      "navigation": {
+        "next": "card_56_quiz_15",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_56_quiz_15",
+      "card_slug": "card_56_quiz_15",
+      "type": "quiz",
+      "concept_id": "allied_activities_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत का पहला पूर्णतः Organic राज्य कौन सा है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "Kerala"
+          },
+          {
+            "id": "B",
+            "text": "Himachal Pradesh"
+          },
+          {
+            "id": "C",
+            "text": "Sikkim"
+          },
+          {
+            "id": "D",
+            "text": "Uttarakhand"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "SIKKIM भारत का पहला पूर्णतः ORGANIC STATE है (2016 में declared)। यहां chemical fertilizers और pesticides का उपयोग पूरी तरह banned है, केवल organic farming होती है। ⭐ UPSC/BPSC Prelims में पूछा गया था! यह sustainable agriculture का उत्कृष्ट उदाहरण है।"
+      },
+      "navigation": {
+        "next": "card_57_milestone_5",
+        "button_text": "Progress Check ➔"
+      }
+    },
+    {
+      "card_id": "card_57_milestone_5",
+      "card_slug": "card_57_milestone_5",
+      "type": "milestone",
+      "concept_id": "module_5_complete",
+      "level": 5,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🐄 MODULE 5 CONQUERED!",
+        "badge_emoji": "🌻",
+        "completed_topic": "Allied Activities & Diversification",
+        "xp_earned": 90,
+        "milestone_progress": "Module 5/8 Complete",
+        "motivational_quote": "Outstanding! Allied activities, Organic farming, Diversification sab clear. Ab government schemes aur current reforms dekhenge! 🎯"
+      },
+      "navigation": {
+        "next": "card_58_government_schemes",
+        "button_text": "Government Schemes ➔"
+      }
+    },
+    {
+      "card_id": "card_58_government_schemes",
+      "card_slug": "card_58_government_schemes",
+      "type": "chat",
+      "concept_id": "major_government_schemes",
+      "level": 6,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir government ne kisanon ke liye kya-kya schemes shuru ki hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut saari Raju! Main important ones dekhte hain: 1) PM-KISAN (Pradhan Mantri Kisan Samman Nidhi) - har saal ₹6000 direct bank account mein (₹2000 three installments), 2) KISAN CREDIT CARD - easy loan milta hai kam interest par!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Direct cash transfer? Ye to achha hai, beech mein koi commission nahi katega!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! DBT (Direct Benefit Transfer) se corruption kam hota hai. ⭐ BPSC TRE: Bihar mein bhi PM-KISAN beneficiaries kaafi hain. Par kuch eligible farmers abhi bhi registration nahi kara paye - awareness issue!"
+        }
+      ],
+      "navigation": {
+        "next": "card_59_crop_insurance",
+        "button_text": "Aur schemes ➔"
+      }
+    },
+    {
+      "card_id": "card_59_crop_insurance",
+      "card_slug": "card_59_crop_insurance",
+      "type": "chat",
+      "concept_id": "crop_insurance_scheme",
+      "level": 6,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "3) PRADHAN MANTRI FASAL BIMA YOJANA (PMFBY) - Crop Insurance! Agar flood/drought/pest attack se fasal barbaad ho jaye, to government compensation deti hai. Kisan ko bahut kam premium dena padta hai (2% for kharif, 1.5% for rabi)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir agar fasal kharab ho gayi to nuksan nahi hoga? Government cover karega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Theoretically haan! Par implementation mein problems hain - claim settlement mein delay, complicated process. ⚠️ BPSC Issue: Bahut kisanon ko claim milne mein 1-2 saal lag jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Phir se implementation problem! Scheme achhi par ground level execution weak!"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_enam_platform",
+        "button_text": "Haan ➔"
+      }
+    },
+    {
+      "card_id": "card_60_enam_platform",
+      "card_slug": "card_60_enam_platform",
+      "type": "chat",
+      "concept_id": "enam_marketing_platform",
+      "level": 6,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "4) e-NAM (electronic National Agriculture Market) - Online platform jahan kisan apni fasal ka best price dekh sakte hain, directly buyers se connect ho sakte hain. Middlemen ka role kam ho jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir ek online market? Jaise Amazon par saman bechte hain waise fasal?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan concept similar hai! Different mandis ke prices compare kar sakte ho, transparency badhi. Par rural areas mein internet connectivity aur digital literacy kam hai, isliye adoption slow hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir infrastructure bhi improve karna padega schemes ke saath-saath?"
+        }
+      ],
+      "navigation": {
+        "next": "card_61_recent_farm_laws",
+        "button_text": "Bilkul ➔"
+      }
+    },
+    {
+      "card_id": "card_61_recent_farm_laws",
+      "card_slug": "card_61_recent_farm_laws",
+      "type": "chat",
+      "concept_id": "farm_laws_controversy",
+      "level": 6,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Recent controversy: 2020 mein government ne TEEN FARM LAWS pass kiye the jo bahut debate mein aaye. Objective tha - kisanon ko kahi bhi bechne ki azaadi, contract farming promote karna, private sector ko encourage karna!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To kya problem thi Sir? Azaadi to achhi cheez hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Farmers ko dar tha ki isse APMC mandis khatam ho jayengi, MSP system khatam ho jayega, big corporates chhote kisanon ko exploit karenge. Bahut bade protests hue (mainly Punjab-Haryana), aur finally 2021 mein government ne laws REPEAL kar diye (wapas le liye)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir reforms ke naam par jo laws aaye unhe hi wapas lena pada?"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_future_challenges",
+        "button_text": "Haan complex issue ➔"
+      }
+    },
+    {
+      "card_id": "card_62_future_challenges",
+      "card_slug": "card_62_future_challenges",
+      "type": "chat",
+      "concept_id": "agriculture_future_outlook",
+      "level": 6,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan Raju! Agriculture reforms bahut sensitive issue hai kyunki 45% population involved hai. Future challenges: 1) Climate Change adaptation, 2) Water scarcity management, 3) Making agriculture profitable for youth (abhi youth farming chhod rahe hain), 4) Sustainable intensification!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Youth farming chhod rahe hain? Kyun Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki income kam aur uncertain, mehnat zyada, social status bhi kam. Isliye padhe-likhe youth cities mein jobs prefer kar rahe hain. ⭐ UPSC Point: 'Agrarian Crisis' ek serious concern hai - agriculture attractive banana zaroori hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir holistic approach chahiye - technology, credit, marketing, insurance sab improve karna padega?"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_quiz_16",
+        "button_text": "Bilkul sahi ➔"
+      }
+    },
+    {
+      "card_id": "card_63_quiz_16",
+      "card_slug": "card_63_quiz_16",
+      "type": "quiz",
+      "concept_id": "government_schemes_quiz_1",
+      "level": 6,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "PM-KISAN योजना के तहत किसानों को सालाना कितनी राशि मिलती है? (Q1/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "₹4,000"
+          },
+          {
+            "id": "B",
+            "text": "₹6,000 (तीन किस्तों में ₹2000 प्रत्येक)"
+          },
+          {
+            "id": "C",
+            "text": "₹10,000"
+          },
+          {
+            "id": "D",
+            "text": "₹12,000"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi) योजना के तहत eligible किसानों को सालाना ₹6,000 मिलते हैं, जो तीन बराबर किस्तों (₹2000 प्रत्येक) में Direct Benefit Transfer के माध्यम से सीधे bank account में आते हैं। ⭐ SSC/Railway/BPSC में हर साल पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_64_quiz_17",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_64_quiz_17",
+      "card_slug": "card_64_quiz_17",
+      "type": "quiz",
+      "concept_id": "government_schemes_quiz_2",
+      "level": 6,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "e-NAM (electronic National Agriculture Market) का मुख्य उद्देश्य क्या है? (Q2/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "किसानों को मुफ्त बीज देना"
+          },
+          {
+            "id": "B",
+            "text": "Online platform के माध्यम से transparent marketing और better price discovery"
+          },
+          {
+            "id": "C",
+            "text": "केवल सरकारी खरीद बढ़ाना"
+          },
+          {
+            "id": "D",
+            "text": "Crop insurance provide करना"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "e-NAM का मुख्य उद्देश्य एक ONLINE PLATFORM बनाना है जहां different mandis के prices transparent हों, किसान best price पा सकें, और middlemen की भूमिका कम हो। यह agricultural marketing में transparency और efficiency लाता है। ⭐ UPSC/BPSC Current Affairs topic!"
+      },
+      "navigation": {
+        "next": "card_65_quiz_18",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_65_quiz_18",
+      "card_slug": "card_65_quiz_18",
+      "type": "quiz",
+      "concept_id": "government_schemes_quiz_3",
+      "level": 6,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Pradhan Mantri Fasal Bima Yojana (PMFBY) में किसानों को KHARIF crops के लिए कितना premium देना पड़ता है? (Q3/3)",
+        "options": [
+          {
+            "id": "A",
+            "text": "10%"
+          },
+          {
+            "id": "B",
+            "text": "5%"
+          },
+          {
+            "id": "C",
+            "text": "2%"
+          },
+          {
+            "id": "D",
+            "text": "0% (पूरी तरह मुफ्त)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC/SSC Numerical: PMFBY में किसानों को KHARIF crops के लिए केवल 2% premium देना पड़ता है, RABI के लिए 1.5%। बाकी premium government subsidize करती है। यह किसानों को natural calamities से होने वाले नुकसान से बचाने के लिए है। Implementation issues के बावजूद यह important safety net है!"
+      },
+      "navigation": {
+        "next": "card_66_milestone_6",
+        "button_text": "Progress Check ➔"
+      }
+    },
+    {
+      "card_id": "card_66_milestone_6",
+      "card_slug": "card_66_milestone_6",
+      "type": "milestone",
+      "concept_id": "module_6_complete",
+      "level": 6,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 6 CLEARED!",
+        "badge_emoji": "📋",
+        "completed_topic": "Government Schemes & Recent Reforms",
+        "xp_earned": 100,
+        "milestone_progress": "Module 6/8 Complete",
+        "motivational_quote": "Incredible! PM-KISAN, PMFBY, e-NAM, Farm Laws sab covered. Ab final revision aur Officer-level quiz! 🔥"
+      },
+      "navigation": {
+        "next": "card_67_summary",
+        "button_text": "Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_67_summary",
+      "card_slug": "card_67_summary",
+      "type": "summary",
+      "concept_id": "chapter_summary",
+      "level": 7,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER QUICK REVISION - Agriculture & Land Reforms",
+        "revision_points": [
+          {
+            "topic": "Land Reforms (1950s-70s)",
+            "point": "तीन components: 1) Zamindari Abolition - किसानों को ownership, 2) Land Ceiling - maximum holding limit, 3) Consolidation - fragmented plots को जोड़ना। ⚠️ Implementation weak - loopholes exploit किए गए, regional disparities।"
+          },
+          {
+            "topic": "Green Revolution (1960s-70s)",
+            "point": "HYV seeds + Chemical fertilizers + Pesticides + Irrigation + Mechanization = Production multiply! Father: Dr. M.S. Swaminathan। ⚠️ Limitations: Punjab-Haryana तक सीमित, wheat-rice only, pulses/oilseeds neglected, environmental damage (soil/water)।"
+          },
+          {
+            "topic": "Cropping Seasons & Major Crops",
+            "point": "KHARIF (June-Oct): Rice, Cotton, Jute। RABI (Oct-March): Wheat, Gram, Mustard। ZAYAD (March-June): Summer vegetables। ⭐ Rice - West Bengal largest, Wheat - UP largest (Punjab highest yield)।"
+          },
+          {
+            "topic": "Agricultural Challenges",
+            "point": "1) Land Fragmentation (Bihar avg 0.66 ha!), 2) Credit shortage → Moneylenders → Debt trap, 3) Marketing issues → Middlemen exploitation, 4) 60% rain-dependent, 5) Storage/Infrastructure deficit।"
+          },
+          {
+            "topic": "Allied Activities & Revolutions",
+            "point": "White Revolution (Milk) - Dr. Verghese Kurien, Operation Flood। India = Largest milk producer। Blue (Fish), Yellow (Oilseeds), Pink (Shrimp)। Sikkim = पहला fully organic state।"
+          },
+          {
+            "topic": "Government Interventions",
+            "point": "MSP (CACP recommend), PM-KISAN (₹6000/year DBT), Kisan Credit Card, PMFBY (2% kharif premium), e-NAM (online market)। 2020 Farm Laws repealed after protests। Implementation gaps persist!"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_68_final_quiz_1",
+        "button_text": "Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_68_final_quiz_1",
+      "card_slug": "card_68_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_1",
+      "level": 7,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC STYLE MULTI-STATEMENT: निम्नलिखित कथनों पर विचार करें:\n1. Green Revolution मुख्यतः Punjab, Haryana और Western UP में सफल रहा।\n2. Green Revolution ने pulses और oilseeds के production में भी उल्लेखनीय वृद्धि की।\n3. Dr. M.S. Swaminathan को 'Father of Green Revolution in India' कहा जाता है।\n\nसही कथन हैं:",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 2"
+          },
+          {
+            "id": "B",
+            "text": "केवल 1 और 3"
+          },
+          {
+            "id": "C",
+            "text": "केवल 2 और 3"
+          },
+          {
+            "id": "D",
+            "text": "1, 2 और 3 सभी"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⚠️ Classic BPSC Trap! कथन 1 सही: Green Revolution Punjab, Haryana, Western UP में सबसे सफल। कथन 2 गलत: यह मुख्यतः WHEAT और RICE तक सीमित था, pulses/oilseeds में कोई खास progress नहीं - यही इसकी major limitation थी! कथन 3 सही: Dr. M.S. Swaminathan = Father of GR in India। Answer: केवल 1 और 3!"
+      },
+      "navigation": {
+        "next": "card_69_final_quiz_2",
+        "button_text": "Next Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_69_final_quiz_2",
+      "card_slug": "card_69_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_2",
+      "level": 7,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC/SSC ANALYTICAL: Land Ceiling Laws के implementation में मुख्य समस्या क्या थी?",
+        "options": [
+          {
+            "id": "A",
+            "text": "किसानों ने इसका विरोध किया"
+          },
+          {
+            "id": "B",
+            "text": "बड़े landowners ने अपनी ज़मीन family members/benami के नाम transfer कर दी"
+          },
+          {
+            "id": "C",
+            "text": "Government के पास पर्याप्त भूमि नहीं थी distribute करने के लिए"
+          },
+          {
+            "id": "D",
+            "text": "कोई समस्या नहीं थी, पूरी तरह सफल रहा"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⚠️ BPSC/UPSC Critical: Land Ceiling Laws की सबसे बड़ी समस्या थी कि बड़े landowners ने LOOPHOLES exploit किए - अपनी excess land को family members, relatives या BENAMI (fake names) में transfer कर दी। इससे law की spirit defeat हो गई और land redistribution का objective पूरा नहीं हुआ। यही weak implementation का classic example है!"
+      },
+      "navigation": {
+        "next": "card_70_final_quiz_3",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_70_final_quiz_3",
+      "card_slug": "card_70_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_3",
+      "level": 7,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC ASSERTION-REASON:\n\nअभिकथन (A): भारत अभी भी दालों (pulses) और खाद्य तेलों (edible oils) का आयात करता है।\n\nकारण (R): Green Revolution मुख्यतः गेहूं और चावल पर केंद्रित था, दालों और तिलहनों को नज़रअंदाज़ किया गया।\n\nसही विकल्प चुनें:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A और R दोनों सही हैं, और R, A की सही व्याख्या है"
+          },
+          {
+            "id": "B",
+            "text": "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है"
+          },
+          {
+            "id": "C",
+            "text": "A सही है लेकिन R गलत है"
+          },
+          {
+            "id": "D",
+            "text": "A गलत है लेकिन R सही है"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ Perfect BPSC Question! दोनों statements सही हैं और R, A का सही कारण है। (A) सही: India अभी भी pulses (Canada, Myanmar से) और edible oils (Indonesia, Malaysia से palm oil) import करता है। (R) भी सही और यही DIRECT REASON है: Green Revolution ने wheat-rice पर focus किया, pulses/oilseeds neglect हुए, इसलिए आज भी उनमें self-sufficiency नहीं। Answer: A!"
+      },
+      "navigation": {
+        "next": "card_71_final_quiz_4",
+        "button_text": "Last Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_71_final_quiz_4",
+      "card_slug": "card_71_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_4",
+      "level": 7,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC/Railway CONCEPTUAL TRICKY:\n\nयदि West Bengal चावल का सबसे बड़ा उत्पादक है और Punjab की per hectare productivity सबसे अधिक है, तो निम्नलिखित में से कौन सा कथन सही है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "West Bengal का total cultivated area Punjab से अधिक होगा"
+          },
+          {
+            "id": "B",
+            "text": "Punjab की agricultural technology West Bengal से पिछड़ी होगी"
+          },
+          {
+            "id": "C",
+            "text": "West Bengal में प्रति हेक्टेयर उत्पादन Punjab से अधिक है"
+          },
+          {
+            "id": "D",
+            "text": "दोनों राज्यों की productivity समान है"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "⚠️ Tricky Conceptual! अगर West Bengal TOTAL production में सबसे बड़ा है लेकिन PER HECTARE productivity (yield) Punjab की ज्यादा है, तो इसका मतलब West Bengal का TOTAL CULTIVATED AREA ज्यादा होगा! Formula: Total Production = Area × Yield। यही UP (wheat largest) vs Punjab (highest yield) में भी है। यह efficiency vs scale का classic example है!"
+      },
+      "navigation": {
+        "next": "card_72_completion",
+        "button_text": "Complete Chapter ➔"
+      }
+    },
+    {
+      "card_id": "card_72_completion",
+      "card_slug": "card_72_completion",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 7,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "👑",
+        "completed_topic": "Agriculture and Land Reforms in Indian Economy",
+        "xp_earned": 500,
+        "milestone_progress": "100% Complete - Officer Level Achieved!",
+        "motivational_quote": "PHENOMENAL ACHIEVEMENT RAJU! 🎉🌾\n\nTumne पूरा 'Agriculture & Land Reforms' chapter conquer kar liya:\n✅ Land Reforms - Zamindari, Ceiling, Consolidation\n✅ Green Revolution - Success, Limitations, Regional disparities\n✅ Cropping Patterns - Kharif, Rabi, Zayad\n✅ Major Crops Distribution across states\n✅ Agricultural Challenges - Fragmentation, Credit, Marketing\n✅ MSP, Government Schemes, Recent Reforms\n✅ Allied Activities - White/Blue/Yellow Revolutions\n✅ Bihar-specific agriculture facts\n\nAb tum BPSC/SSC/Railway/UPSC के किसी भी agriculture question को confidently tackle कर सकते हो! \n\nYaad rakho - Agriculture is not just an economic activity, it's the BACKBONE of rural India and livelihood of millions! 🇮🇳💪\n\n- Aman Sir"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "🏠 Back to Home"
+      }
+    }
+  ]
+}
+```
