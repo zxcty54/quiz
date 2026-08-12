@@ -1,0 +1,1858 @@
+
+{
+  "topic_id": "federal_system_polity",
+  "topic_title": "Federal System in Indian Polity",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 60,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "intro_federal_system",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 60
+      },
+      "intro_payload": {
+        "title": "Federal System in Indian Polity",
+        "icon": "🏛️",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Understanding Federal vs Unitary Systems",
+          "Centre-State Relations & Power Distribution",
+          "Three Lists: Union, State & Concurrent",
+          "Emergency Provisions & Federal Balance",
+          "Inter-State Relations & Disputes",
+          "BPSC/SSC Favorite Traps & PYQ Patterns"
+        ],
+        "estimated_time": "25 minutes",
+        "total_xp": 500
+      },
+      "navigation": {
+        "next": "card_02_daily_life_intro",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_life_intro",
+      "card_slug": "card_02_daily_life_intro",
+      "type": "chat",
+      "concept_id": "daily_life_federal_concept",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne kabhi notice kiya, apne ghar me sab kaam kaise hote hain? Jaise Papa kamate hain, Mummy ghar sambhalti hain, tum padhai karte ho?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Sab apna apna kaam karte hain... lekin bade decisions Papa lete hain."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Ab socho agar Papa sab kuch khud karne lage — khana banana, bartan dhona, padhai karwana — kya hoga?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ekdum pareshan ho jayenge! Sab kaam thik se nahi hoga."
+        }
+      ],
+      "navigation": {
+        "next": "card_03_why_divide_power",
+        "button_text": "Samjha next 💡"
+      }
+    },
+    {
+      "card_id": "card_03_why_divide_power",
+      "card_slug": "card_03_why_divide_power",
+      "type": "chat",
+      "concept_id": "why_divide_power",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isliye ghar me kaam baant dete hain. Desh me bhi yahi hota hai! Ek hi sarkar agar sab kuch control kare — roads, schools, police, defence — to kaam nahi chalega."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Sir, kaam kaise baatenge? Kaun kya karega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahi hai Federal System ka concept! Power ko do levels me divide karte hain — Centre (Kendriya Sarkar) aur States (Rajya Sarkar). Dono apne apne kaam karte hain independently."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to Centre alag kaam karega, State alag kaam karega?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_federal_definition",
+        "button_text": "Haan! Aage samjho 📖"
+      }
+    },
+    {
+      "card_id": "card_04_federal_definition",
+      "card_slug": "card_04_federal_definition",
+      "type": "chat",
+      "concept_id": "federal_definition",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Suno definition carefully: Federal System matlab power ka vibhajan (division) do levels of government ke beech — Centre aur States. Dono apne subjects pe independently kaam karte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Centre ki apni list hai kaam ki, State ki apni list?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Centre ki list ko 'Union List' bolte hain — jaise Defence, Foreign Affairs. State ki list ko 'State List' bolte hain — jaise Police, Agriculture. Aur ek 'Concurrent List' bhi hai jisme dono kaam kar sakte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wah Sir! Teen lists! Ye to exam me zaroor aayega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_unitary_vs_federal",
+        "button_text": "Teen lists detail me padhenge 🎯"
+      }
+    },
+    {
+      "card_id": "card_05_unitary_vs_federal",
+      "card_slug": "card_05_unitary_vs_federal",
+      "type": "chat",
+      "concept_id": "unitary_vs_federal",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Par pehle ek comparison samjho: Federal System ke opposite hai Unitary System. Jaise UK me — wahan Central Government hi sabkuch control karti hai. States zyada powerful nahi hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "To India Federal hai ya Unitary?"
+        },
+        {
+          "speaker": "aman",
+          "text": "India 'Quasi-Federal' hai — matlab partially federal! States ko power hai, par Centre zyada powerful hai. Emergency me to Centre puri power le sakta hai. Ye BPSC ka favorite trap topic hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? To Federal hai ya nahi? Confusing hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_quasi_federal_features",
+        "button_text": "Confusion clear karte hain! 🔥"
+      }
+    },
+    {
+      "card_id": "card_06_quasi_federal_features",
+      "card_slug": "card_06_quasi_federal_features",
+      "type": "chat",
+      "concept_id": "quasi_federal_features",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dekho, Constitution me 'Federation' word nahi hai! Article 1 kehta hai 'India is a Union of States'. 'Union' word deliberately use kiya gaya — iska matlab States ko alag hone ka right nahi hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab States tod nahi sakte India ko?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! USA me 'Federation' hai — wahan states ne milkar central government banayi. India me ulta hai — Constitution ne Centre aur States dono banaye. Isliye 'Union of States' likha, not 'Federation of States'."
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! To India me Centre strong hai, States weak nahi par limited!"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_federal_features_india",
+        "button_text": "Ab features dekhte hain! 💪"
+      }
+    },
+    {
+      "card_id": "card_07_federal_features_india",
+      "card_slug": "card_07_federal_features_india",
+      "type": "chat",
+      "concept_id": "federal_features_india",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "India me Federal features kya hain? Pehla — Written Constitution hai jo Centre aur States ki powers define karta hai. Dusra — Powers ka division teen lists me (Union, State, Concurrent)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur kya features hain Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Teesra — Independent Judiciary (Supreme Court) jo Centre-State disputes solve karti hai. Chautha — Bicameral Legislature (Rajya Sabha me States ka representation). Panchwa — Rigid Constitution (amendment mushkil hai)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye sab to bilkul Federal lag raha hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_unitary_features_india",
+        "button_text": "Lekin Unitary features bhi hain! 😮"
+      }
+    },
+    {
+      "card_id": "card_08_unitary_features_india",
+      "card_slug": "card_08_unitary_features_india",
+      "type": "chat",
+      "concept_id": "unitary_features_india",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Unitary features suno jo India ko 'Quasi-Federal' banate hain: Pehla — Strong Centre (Residuary Powers Centre ke paas). Dusra — Single Constitution (USA me har state ka apna constitution hai)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Residuary Powers matlab kya Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Jo subject teen lists me nahi hai, wo Centre ka hoga! Jaise Internet laws — ye teen lists me nahi tha 1950 me, to Centre ne banaya. Teesra — Single Citizenship (sirf Indian citizen, koi Bihar citizen nahi)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... aur bhi Unitary features?"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_unitary_features_continue",
+        "button_text": "Haan, bahut important hain! 📝"
+      }
+    },
+    {
+      "card_id": "card_09_unitary_features_continue",
+      "card_slug": "card_09_unitary_features_continue",
+      "type": "chat",
+      "concept_id": "unitary_features_continue",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Chautha — Integrated Judiciary (Supreme Court sabke liye — Centre aur States dono). Panchwa — Governor ki niyukti Centre karti hai, States nahi! Governor Centre ka agent jaisa kaam karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Governor State ke log nahi chunte?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! President appoint karta hai Governor ko. Chhata — All India Services (IAS, IPS) — Centre control karta hai par ye officers States me kaam karte hain. Saatva — Emergency Provisions — National Emergency me Centre puri power le leta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To Emergency me federal system khatam ho jata hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_quiz_federal_vs_unitary",
+        "button_text": "Bilkul! Pehle quiz solve karo 🎯"
+      }
+    },
+    {
+      "card_id": "card_10_quiz_federal_vs_unitary",
+      "card_slug": "card_10_quiz_federal_vs_unitary",
+      "type": "quiz",
+      "concept_id": "quiz_federal_vs_unitary",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Which of the following is NOT a Unitary feature of the Indian Constitution?",
+        "options": [
+          { "id": "A", "text": "Single Citizenship" },
+          { "id": "B", "text": "Integrated Judiciary" },
+          { "id": "C", "text": "Division of Powers through three lists" },
+          { "id": "D", "text": "Governor appointed by President" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Division of Powers through Union List, State List, and Concurrent List is a FEDERAL feature. It ensures both Centre and States have defined powers. Single Citizenship, Integrated Judiciary, and Governor's appointment by President are Unitary features that strengthen the Centre. ⭐ BPSC/SSC Favorite: They often ask which feature makes India Federal vs Unitary!"
+      },
+      "navigation": {
+        "next": "card_11_three_lists_intro",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_11_three_lists_intro",
+      "card_slug": "card_11_three_lists_intro",
+      "type": "chat",
+      "concept_id": "three_lists_intro",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aate hain sabse important topic pe — Teen Lists! Ye Seventh Schedule, Article 246 me diye gaye hain. Ye BPSC/SSC me sabse zyada questions aate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir teen lists ke naam kya hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Pehli — Union List (List I), Dusri — State List (List II), Teesri — Concurrent List (List III). Union List me sabse zyada subjects hain (originally 97, ab 100+). State List me 61 subjects. Concurrent List me 52 subjects."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye numbers yaad rakhne hain kya? Exam me aayega?"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_union_list_details",
+        "button_text": "Haan! SSC me exact numbers puuchte hain! 🔢"
+      }
+    },
+    {
+      "card_id": "card_12_union_list_details",
+      "card_slug": "card_12_union_list_details",
+      "type": "chat",
+      "concept_id": "union_list_details",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Union List (List I) — ye sirf Parliament (Centre) ke liye hai. Ismein national importance ke subjects hain: Defence, Foreign Affairs, Atomic Energy, Railways, Airways, Currency, Banking, Citizenship, Census."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab jo pure desh ko affect kare, wo Centre sambhalega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Socho agar har state apni army bana le, apna currency chhaap le — kya hoga? Isliye Defence, Currency jaise subjects Centre ke paas hain. Union List originally 97 subjects tha 1950 me. Ab 100+ hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir kaise badhega subjects? Amendment se?"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_state_list_details",
+        "button_text": "Haan! Ab State List samjho 🏡"
+      }
+    },
+    {
+      "card_id": "card_13_state_list_details",
+      "card_slug": "card_13_state_list_details",
+      "type": "chat",
+      "concept_id": "state_list_details",
+      "level": 1,
+      "progress": {
+        "current": 13,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "State List (List II) — ye State Legislature (Vidhan Sabha/Parishad) ke liye hai. Local importance ke subjects: Police, Public Order, Agriculture, Irrigation, Land Revenue, Local Government, Public Health, Fisheries."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Police State ke control me hai? Maine suna tha Centre bhi police bhejti hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sharp observation! 'Police' State List me hai — to Bihar Police, UP Police sab State Government ke under hain. Lekin 'Railways Police' aur 'Delhi Police' Union List me hain — Centre control karta hai. Ye exam trap hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh! Matlab exception bhi hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_concurrent_list_details",
+        "button_text": "Bilkul! Ab Concurrent List dekho 🤝"
+      }
+    },
+    {
+      "card_id": "card_14_concurrent_list_details",
+      "card_slug": "card_14_concurrent_list_details",
+      "type": "chat",
+      "concept_id": "concurrent_list_details",
+      "level": 1,
+      "progress": {
+        "current": 14,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Concurrent List (List III) — ismein DONO (Centre aur State) law bana sakte hain! Subjects hain: Education, Forest, Wildlife Protection, Marriage & Divorce, Adoption, Contracts, Economic & Social Planning, Electricity, Labour Welfare."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir agar dono law banayenge to confusion nahi hoga? Kiska law chalega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut important question! Rule hai — agar conflict ho, to Central Law prevail karega (Article 254). Lekin agar State Law ko President ne assent de diya aur wo Central Law se pehle bana hai, to State Law chal sakta hai us state me."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab normally Centre ki priority hai Concurrent List me?"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_residuary_powers",
+        "button_text": "Haan! Ab Residuary Powers 🔥"
+      }
+    },
+    {
+      "card_id": "card_15_residuary_powers",
+      "card_slug": "card_15_residuary_powers",
+      "type": "chat",
+      "concept_id": "residuary_powers",
+      "level": 1,
+      "progress": {
+        "current": 15,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Residuary Powers (Article 248) — jo subjects teen lists me NAHI hain, unpe Parliament (Centre) law bana sakti hai. Example: 1950 me Internet, Cyber Crime nahi tha. Jab aaya, to Centre ne IT Act banaya."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Centre ke paas sabse zyada power hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ye Canada se inspired hai. USA me Residuary Powers States ke paas hain. India me Centre ko diya isliye kyunki strong Centre chahiye tha national unity ke liye. Ye UPSC/BPSC favorite comparison question hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Canada jaisa, USA jaisa nahi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_quiz_three_lists_1",
+        "button_text": "Quiz time! 🎯"
+      }
+    },
+    {
+      "card_id": "card_16_quiz_three_lists_1",
+      "card_slug": "card_16_quiz_three_lists_1",
+      "type": "quiz",
+      "concept_id": "quiz_three_lists_1",
+      "level": 1,
+      "progress": {
+        "current": 16,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: Which subject is in the State List? (Q1/3)",
+        "options": [
+          { "id": "A", "text": "Defence" },
+          { "id": "B", "text": "Agriculture" },
+          { "id": "C", "text": "Currency" },
+          { "id": "D", "text": "Foreign Affairs" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Agriculture is in the State List (List II) because it is a local subject. Each state has different soil, climate, and cropping patterns, so states manage agriculture policies. Defence, Currency, and Foreign Affairs are in the Union List as they are of national importance and require uniformity across the country."
+      },
+      "navigation": {
+        "next": "card_17_quiz_three_lists_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_17_quiz_three_lists_2",
+      "card_slug": "card_17_quiz_three_lists_2",
+      "type": "quiz",
+      "concept_id": "quiz_three_lists_2",
+      "level": 1,
+      "progress": {
+        "current": 17,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC CGL Pattern: Which of the following is in the Concurrent List? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "Police" },
+          { "id": "B", "text": "Education" },
+          { "id": "C", "text": "Railways" },
+          { "id": "D", "text": "Public Health" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Education is in the Concurrent List (List III), meaning both Centre and States can make laws on it. Originally, Education was in the State List, but the 42nd Amendment (1976) shifted it to the Concurrent List to ensure national standards. Police and Public Health are in the State List. Railways is in the Union List."
+      },
+      "navigation": {
+        "next": "card_18_quiz_three_lists_3",
+        "button_text": "Last question of this set! 💪"
+      }
+    },
+    {
+      "card_id": "card_18_quiz_three_lists_3",
+      "card_slug": "card_18_quiz_three_lists_3",
+      "type": "quiz",
+      "concept_id": "quiz_three_lists_3",
+      "level": 1,
+      "progress": {
+        "current": 18,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ RRB NTPC Favorite: Residuary Powers in India are vested with: (Q3/3)",
+        "options": [
+          { "id": "A", "text": "State Government" },
+          { "id": "B", "text": "Union Government (Parliament)" },
+          { "id": "C", "text": "Both Centre and States equally" },
+          { "id": "D", "text": "Supreme Court" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Residuary Powers (Article 248) are vested with the Union Government (Parliament). Any subject NOT mentioned in Union, State, or Concurrent List automatically belongs to the Centre. This is similar to Canada's model. In the USA, residuary powers belong to States. This difference is a UPSC/BPSC favorite trap question!"
+      },
+      "navigation": {
+        "next": "card_19_milestone_lists",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_19_milestone_lists",
+      "card_slug": "card_19_milestone_lists",
+      "type": "milestone",
+      "concept_id": "milestone_lists",
+      "level": 1,
+      "progress": {
+        "current": 19,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 COMPLETED!",
+        "badge_emoji": "📜",
+        "completed_topic": "Three Lists & Power Distribution",
+        "xp_earned": 100,
+        "milestone_progress": "Module 1/5 Clear ✅",
+        "motivational_quote": "You've mastered the foundation! Centre vs State power distribution is now crystal clear. Next up: How Centre can control States during emergencies! 🔥"
+      },
+      "navigation": {
+        "next": "card_20_centre_state_relations_intro",
+        "button_text": "Start Module 2: Centre-State Relations 🚀"
+      }
+    },
+    {
+      "card_id": "card_20_centre_state_relations_intro",
+      "card_slug": "card_20_centre_state_relations_intro",
+      "type": "chat",
+      "concept_id": "centre_state_relations_intro",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab samjhte hain Centre aur States ke beech relations kaise hain — Legislative (Kanoon banane me), Administrative (Kaam karne me), aur Financial (Paisa dene me)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir teen tarike ke relations hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Legislative Relations matlab kaun kaunsa kanoon bana sakta hai. Administrative Relations matlab governors, officers ka control. Financial Relations matlab taxes kaun lagayega, kaun collect karega, States ko paisa kaise milega."
+        },
+        {
+          "speaker": "raju",
+          "text": "Thik hai Sir, pehle Legislative Relations samjhaiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_legislative_relations",
+        "button_text": "Legislative Relations start! 📖"
+      }
+    },
+    {
+      "card_id": "card_21_legislative_relations",
+      "card_slug": "card_21_legislative_relations",
+      "type": "chat",
+      "concept_id": "legislative_relations",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Legislative Relations me teen main points hain: Pehla — Normally Parliament Union List pe, State Legislature State List pe kanoon banati hai. Dusra — Concurrent List me dono bana sakte hain par conflict me Centre jeetega (Article 254)."
+        },
+        {
+          "speaker": "raju",
+          "text": "To States kabhi State List ke alawa kuch nahi kar sakti?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Normally nahi. Par teesra point dhyaan se suno — Parliament SPECIAL circumstances me State List pe bhi kanoon bana sakti hai! Teen cases hain ye hone ke: National Interest (Article 249), Emergency (Article 250-252), aur States ka Request (Article 252)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya?? Parliament State ke subjects pe bhi law bana sakti hai? Ye to federal nahi laga!"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_parliament_state_list_laws",
+        "button_text": "Ye hai Unitary feature! Dekhte hain kaise 🔍"
+      }
+    },
+    {
+      "card_id": "card_22_parliament_state_list_laws",
+      "card_slug": "card_22_parliament_state_list_laws",
+      "type": "chat",
+      "concept_id": "parliament_state_list_laws",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 249: Agar Rajya Sabha (not Lok Sabha!) 2/3 majority se resolution pass kare ki national interest me koi State List subject zaroori hai, to Parliament us pe law bana sakti hai 1 saal ke liye (extend ho sakta hai)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Rajya Sabha States ka ghar hai, wo hi permission deti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Rajya Sabha represents States. Article 250: Emergency (National Emergency — Article 352) me bina kisi permission ke Parliament puri State List pe law bana sakti hai! Emergency khatam hone ke 6 mahine baad wo law expire ho jata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Emergency me to Centre puri power le leta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_article_252_state_request",
+        "button_text": "Haan! Ek aur case hai — State khud request kare! 🙏"
+      }
+    },
+    {
+      "card_id": "card_23_article_252_state_request",
+      "card_slug": "card_23_article_252_state_request",
+      "type": "chat",
+      "concept_id": "article_252_state_request",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 252: Agar do ya zyada States apni Legislature se resolution pass karke request karein ki Parliament unke liye State List ke kisi subject pe law banaye, to Parliament bana sakti hai. Ye law sirf un requesting states me lagega."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab States khud kehte hain 'Centre please hamare liye law banao'?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ye voluntary hai. Baad me koi aur state bhi is law ko adopt kar sakta hai apni Legislature se resolution pass karke. Ye cooperative federalism ka example hai. UPSC Interview me puuch sakte hain — recent example do!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir example kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_administrative_relations",
+        "button_text": "Example baad me, pehle Administrative Relations! 🏢"
+      }
+    },
+    {
+      "card_id": "card_24_administrative_relations",
+      "card_slug": "card_24_administrative_relations",
+      "type": "chat",
+      "concept_id": "administrative_relations",
+      "level": 2,
+      "progress": {
+        "current": 24,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Administrative Relations (Article 256-263): Centre States ko 'Directions' de sakta hai kaise administration chalani hai. Article 256 kehta hai — States apni executive power aise use karein ki Central laws me koi baadha na aaye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab State apne hisaab se kaam nahi kar sakti?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kar sakti hai, par Central laws ka respect karna padega. Agar State Centre ki directions nahi maane, to Article 356 (President's Rule) lag sakta hai! Ye control mechanism hai Centre ke paas."
+        },
+        {
+          "speaker": "raju",
+          "text": "President's Rule matlab State Government hi dismiss kar dete hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_all_india_services",
+        "button_text": "Haan! Pehle All India Services samjho 👮"
+      }
+    },
+    {
+      "card_id": "card_25_all_india_services",
+      "card_slug": "card_25_all_india_services",
+      "type": "chat",
+      "concept_id": "all_india_services",
+      "level": 2,
+      "progress": {
+        "current": 25,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 312: All India Services (IAS, IPS, IFoS) Centre create aur control karti hai (UPSC recruit karti hai), par ye officers States me kaam karte hain. Ye ek aur Unitary feature hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Bihar me jo IAS Officer hai, wo Centre ka hai ya State ka?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Centre ka hai! Centre uski salary deta hai, transfers karti hai. Par wo Bihar Government ke under kaam karta hai. Ye dual control hai — posting State me, control Centre ka. States ko IAS officer chahiye, par control nahi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wah! To Centre States pe nazar rakh sakta hai officers ke through!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_financial_relations_intro",
+        "button_text": "Bilkul! Ab Financial Relations — Paisa! 💰"
+      }
+    },
+    {
+      "card_id": "card_26_financial_relations_intro",
+      "card_slug": "card_26_financial_relations_intro",
+      "type": "chat",
+      "concept_id": "financial_relations_intro",
+      "level": 2,
+      "progress": {
+        "current": 26,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Financial Relations sabse important hai! Taxes Centre lagati hai (Income Tax, GST ka central part, Customs), States lagati hain (Land Revenue, Stamp Duty, GST ka state part, Excise on liquor)."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Centre aur State dono taxes lagate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Par problem ye hai — Centre ke paas zyada sources hain income ke (Income Tax, Corporate Tax), States ke paas kam. Lekin States ka expenditure zyada hai (Police, Health, Education sab State List me hain). Isliye Centre States ko grants deta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh! To Centre ameer hai, States gareeb hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_finance_commission",
+        "button_text": "Exactly! Isliye Finance Commission hai 📊"
+      }
+    },
+    {
+      "card_id": "card_27_finance_commission",
+      "card_slug": "card_27_finance_commission",
+      "type": "chat",
+      "concept_id": "finance_commission",
+      "level": 2,
+      "progress": {
+        "current": 27,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 280: Finance Commission har 5 saal me banti hai. Ye recommend karti hai — Centre ko apne taxes me se kitna percentage States ko dena chahiye. Currently 41% Central taxes ka States ko jaata hai (15th Finance Commission)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Centre apna kamaya hua paisa States ko deta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Kyunki Constitution ne kaha hai. States ko do tarah se paisa milta hai — Tax Devolution (Centre ke taxes me se share) aur Grants-in-Aid (Article 275 — special grants poor states ko)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Finance Commission ke members kaun hote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_fc_composition",
+        "button_text": "Dekhte hain composition! 🧑‍⚖️"
+      }
+    },
+    {
+      "card_id": "card_28_fc_composition",
+      "card_slug": "card_28_fc_composition",
+      "type": "chat",
+      "concept_id": "fc_composition",
+      "level": 2,
+      "progress": {
+        "current": 28,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Finance Commission me Chairman aur 4 members hote hain. President appoint karta hai. Chairman Supreme Court Judge ya economic expert hona chahiye. Iska kaam sirf recommendations dena hai — binding nahi hai Government pe, par usually maani jaati hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "To government maan bhi sakti hai, na bhi maane?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Theoretically haan, par practically usually recommendations accept hoti hain. Abhi 15th Finance Commission ki recommendations chal rahi hain (2021-2026). ⭐ BPSC me puuchte hain — current Finance Commission kaun sa hai, Chairman kaun hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Planning Commission bhi to tha na? Wo kya tha?"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_planning_commission_niti",
+        "button_text": "Good question! Planning vs Finance 🏛️"
+      }
+    },
+    {
+      "card_id": "card_29_planning_commission_niti",
+      "card_slug": "card_29_planning_commission_niti",
+      "type": "chat",
+      "concept_id": "planning_commission_niti",
+      "level": 2,
+      "progress": {
+        "current": 29,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Planning Commission (1950-2014) ek Non-Constitutional body thi jo 5-year plans banati thi aur States ko Plan Grants deti thi. 2015 me Planning Commission abolish karke NITI Aayog (National Institution for Transforming India) banayi gayi."
+        },
+        {
+          "speaker": "raju",
+          "text": "NITI Aayog kya karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "NITI Aayog cooperative federalism promote karta hai — States ko advice deta hai development policies ke liye. Lekin Planning Commission jaisi financial powers nahi hain. Finance Commission constitutional body hai, NITI Aayog nahi. Ye UPSC Prelims ka repeat question hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Finance Commission taxes baatne ke liye, NITI Aayog planning advice ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_quiz_relations_1",
+        "button_text": "Perfect! Quiz time 🎯"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_relations_1",
+      "card_slug": "card_30_quiz_relations_1",
+      "type": "quiz",
+      "concept_id": "quiz_relations_1",
+      "level": 2,
+      "progress": {
+        "current": 30,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC 2023 Pattern: Under which Article can Rajya Sabha authorize Parliament to legislate on a State List subject in national interest? (Q1/3)",
+        "options": [
+          { "id": "A", "text": "Article 249" },
+          { "id": "B", "text": "Article 250" },
+          { "id": "C", "text": "Article 252" },
+          { "id": "D", "text": "Article 256" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Article 249 empowers Rajya Sabha to pass a resolution by 2/3 majority declaring that it is necessary in national interest for Parliament to make laws on a State List subject. This law remains in force for 1 year (extendable). Article 250 is for Emergency. Article 252 is when States themselves request. Article 256 is about Centre's directions to States."
+      },
+      "navigation": {
+        "next": "card_31_quiz_relations_2",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quiz_relations_2",
+      "card_slug": "card_31_quiz_relations_2",
+      "type": "quiz",
+      "concept_id": "quiz_relations_2",
+      "level": 2,
+      "progress": {
+        "current": 31,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Which Article provides for Finance Commission? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "Article 270" },
+          { "id": "B", "text": "Article 275" },
+          { "id": "C", "text": "Article 280" },
+          { "id": "D", "text": "Article 293" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 280 provides for the constitution of Finance Commission every 5 years to recommend distribution of tax revenues between Centre and States. Article 270 is about distribution of Income Tax. Article 275 is about Grants-in-Aid from Centre to States. Article 293 is about States' borrowing powers. ⭐ SSC CGL repeats this frequently!"
+      },
+      "navigation": {
+        "next": "card_32_quiz_relations_3",
+        "button_text": "Last one! 💪"
+      }
+    },
+    {
+      "card_id": "card_32_quiz_relations_3",
+      "card_slug": "card_32_quiz_relations_3",
+      "type": "quiz",
+      "concept_id": "quiz_relations_3",
+      "level": 2,
+      "progress": {
+        "current": 32,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ RRB NTPC Favorite: All India Services (IAS, IPS, IFoS) are created under which Article? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Article 310" },
+          { "id": "B", "text": "Article 312" },
+          { "id": "C", "text": "Article 315" },
+          { "id": "D", "text": "Article 320" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 312 empowers Parliament to create new All India Services if Rajya Sabha passes a resolution by 2/3 majority. Currently, three All India Services exist: IAS (1946), IPS (1948), IFoS (1966). Article 310 is about tenure of civil servants. Article 315 is about Public Service Commissions. Article 320 is about functions of UPSC."
+      },
+      "navigation": {
+        "next": "card_33_milestone_relations",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_33_milestone_relations",
+      "card_slug": "card_33_milestone_relations",
+      "type": "milestone",
+      "concept_id": "milestone_relations",
+      "level": 2,
+      "progress": {
+        "current": 33,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 2 COMPLETED!",
+        "badge_emoji": "🤝",
+        "completed_topic": "Centre-State Relations (Legislative, Administrative, Financial)",
+        "xp_earned": 120,
+        "milestone_progress": "Module 2/5 Clear ✅",
+        "motivational_quote": "You now understand how Centre controls States even in a federal setup! Next: Emergency Provisions — when federal structure collapses! 🚨"
+      },
+      "navigation": {
+        "next": "card_34_emergency_intro",
+        "button_text": "Start Module 3: Emergency Provisions 🚨"
+      }
+    },
+    {
+      "card_id": "card_34_emergency_intro",
+      "card_slug": "card_34_emergency_intro",
+      "type": "chat",
+      "concept_id": "emergency_intro",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Emergency Provisions (Part XVIII, Article 352-360) — ye India ke federal structure ko temporarily unitary bana dete hain! Teen tarah ki emergencies hain: National Emergency (Article 352), State Emergency/President's Rule (Article 356), Financial Emergency (Article 360)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Emergency matlab kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Jab desh ya kisi state me aisi exceptional situation ho ki normal governance possible na ho — jaise war, external aggression, armed rebellion, constitutional breakdown — tab President Emergency declare karta hai aur Centre ki powers bahut badh jaati hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab States ki powers khatam ho jaati hain Emergency me?"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_national_emergency",
+        "button_text": "Haan! Dekhte hain kaise 🔥"
+      }
+    },
+    {
+      "card_id": "card_35_national_emergency",
+      "card_slug": "card_35_national_emergency",
+      "type": "chat",
+      "concept_id": "national_emergency",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "National Emergency (Article 352) — President impose kar sakta hai teen grounds pe: War (external aggression), External Aggression (threat of attack), Armed Rebellion (internal armed revolt). Originally 'Internal Disturbance' tha, 44th Amendment (1978) ne isse 'Armed Rebellion' kar diya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye change kyun kiya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "1975-77 me Emergency lagi thi 'Internal Disturbance' ke naam pe (Indira Gandhi government). Wo misuse hui thi — fundamental rights suspend ho gaye the. Isliye 44th Amendment ne safeguards add kiye. Ab sirf 'Armed Rebellion' pe lag sakti hai, simple disturbance pe nahi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ab aasani se Emergency nahi lag sakti?"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_national_emergency_procedure",
+        "button_text": "Haan! Procedure dekho strict hai 📜"
+      }
+    },
+    {
+      "card_id": "card_36_national_emergency_procedure",
+      "card_slug": "card_36_national_emergency_procedure",
+      "type": "chat",
+      "concept_id": "national_emergency_procedure",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "National Emergency declare karne ke liye: President ko Cabinet ki written recommendation chahiye (44th Amendment ne ye mandatory kiya). Parliament ka approval chahiye — 1 month ke andar. Approval ke liye special majority: Lok Sabha aur Rajya Sabha dono me 2/3 majority (present & voting)."
+        },
+        {
+          "speaker": "raju",
+          "text": "To President akele declare nahi kar sakta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Cabinet recommend kare, then Parliament approve kare. Agar Parliament approve na kare to Emergency automatically revoke ho jayegi. Approved Emergency 6 months tak valid rahti hai, uske baad dubara Parliament approval chahiye. Indefinitely extend ho sakti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Emergency me kya kya hota hai Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_national_emergency_effects",
+        "button_text": "Bahut bade changes! Dekhte hain 😮"
+      }
+    },
+    {
+      "card_id": "card_37_national_emergency_effects",
+      "card_slug": "card_37_national_emergency_effects",
+      "type": "chat",
+      "concept_id": "national_emergency_effects",
+      "level": 3,
+      "progress": {
+        "current": 37,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "National Emergency ke effects: (1) Centre ka legislative power badh jata hai — Parliament State List pe bhi law bana sakti hai (Article 250). (2) Executive power Centre ke paas — President States ko directions de sakta hai kaise kaam karein (Article 353)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab States ki independence khatam?"
+        },
+        {
+          "speaker": "aman",
+          "text": "(3) Fundamental Rights suspend ho sakte hain (Article 19 — freedom of speech, assembly, movement — automatically suspend). (4) Finance: States ko Centre se milne wale funds reduce ho sakte hain. (5) Lok Sabha aur State Assemblies ka tenure 1-1 saal extend ho sakta hai (Emergency khatam hone ke 6 months baad election hona chahiye)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Ye to bilkul dictatorial lag raha hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_presidents_rule",
+        "button_text": "Emergency hai! Ab President's Rule dekho 🏛️"
+      }
+    },
+    {
+      "card_id": "card_38_presidents_rule",
+      "card_slug": "card_38_presidents_rule",
+      "type": "chat",
+      "concept_id": "presidents_rule",
+      "level": 3,
+      "progress": {
+        "current": 38,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "President's Rule (Article 356) — jab kisi state me constitutional machinery fail ho jaye (government nahi ban rahi, law & order collapse, governor report kare), to President us state me Central rule impose kar sakta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab State Government dismiss ho jati hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! State Legislature dissolve ya suspend ho sakti hai. Governor Centre ke agent ki tarah kaam karta hai. State ka administration Governor (Centre ki taraf se) sambhalta hai. State ke laws Parliament banati hai. Ye unitary system jaisa ban jata hai temporarily."
+        },
+        {
+          "speaker": "raju",
+          "text": "Kitne time tak chalti hai President's Rule?"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_presidents_rule_duration",
+        "button_text": "Limits hain! Dekhte hain ⏱️"
+      }
+    },
+    {
+      "card_id": "card_39_presidents_rule_duration",
+      "card_slug": "card_39_presidents_rule_duration",
+      "type": "chat",
+      "concept_id": "presidents_rule_duration",
+      "level": 3,
+      "progress": {
+        "current": 39,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "President's Rule ka duration: Initially 6 months. Extend ho sakta hai har 6 months (Parliament approval se). Maximum duration: 3 years! Lekin 3rd year ke liye do conditions hain: (1) National Emergency lagi ho pure desh me, (2) Election Commission certify kare ki us state me election possible nahi hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "To normally maximum 1 saal?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Normally haan, par exceptional cases me 3 saal. Punjab me 1987-92 me 5 saal se zyada chali thi President's Rule (terrorism ki wajah se). ⭐ BPSC me puuchte hain — S.R. Bommai Case (1994): Supreme Court ne safeguards diye ki President's Rule arbitrarily nahi lagayi ja sakti, judicial review hoga!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to ab asaani se nahi laga sakte!"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_financial_emergency",
+        "button_text": "Haan! Ab Financial Emergency 💸"
+      }
+    },
+    {
+      "card_id": "card_40_financial_emergency",
+      "card_slug": "card_40_financial_emergency",
+      "type": "chat",
+      "concept_id": "financial_emergency",
+      "level": 3,
+      "progress": {
+        "current": 40,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Financial Emergency (Article 360) — agar desh ki financial stability ya credit threat me ho (jaise war ki wajah se), to President Financial Emergency declare kar sakta hai. Lekin abhi tak kabhi declare nahi hui!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kabhi lagi hi nahi? To ye provision kyun hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Precautionary provision hai! Agar lage to Centre ki financial powers bahut badh jayengi: (1) States ko direction de sakta hai financial matters me. (2) Money Bills reserved for President's approval. (3) Salaries reduce ho sakti hain — Supreme Court & High Court judges ki bhi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya?? Judges ki salary bhi cut? Ye to bahut serious hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_quiz_emergency_1",
+        "button_text": "Haan! Quiz me dekho kitna yaad raha 🎯"
+      }
+    },
+    {
+      "card_id": "card_41_quiz_emergency_1",
+      "card_slug": "card_41_quiz_emergency_1",
+      "type": "quiz",
+      "concept_id": "quiz_emergency_1",
+      "level": 3,
+      "progress": {
+        "current": 41,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Favorite: The 44th Amendment changed the ground for National Emergency from 'Internal Disturbance' to: (Q1/3)",
+        "options": [
+          { "id": "A", "text": "Internal Emergency" },
+          { "id": "B", "text": "Armed Rebellion" },
+          { "id": "C", "text": "Civil War" },
+          { "id": "D", "text": "National Security Threat" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The 44th Constitutional Amendment Act, 1978 replaced 'Internal Disturbance' with 'Armed Rebellion' as a ground for declaring National Emergency under Article 352. This change was made to prevent misuse of Emergency provisions like what happened during 1975-77 Emergency. The amendment made it harder to declare Emergency on vague grounds. ⭐ UPSC/BPSC repeatedly ask this!"
+      },
+      "navigation": {
+        "next": "card_42_quiz_emergency_2",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_42_quiz_emergency_2",
+      "card_slug": "card_42_quiz_emergency_2",
+      "type": "quiz",
+      "concept_id": "quiz_emergency_2",
+      "level": 3,
+      "progress": {
+        "current": 42,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Maximum duration of President's Rule in a state under normal circumstances (without National Emergency) is: (Q2/3)",
+        "options": [
+          { "id": "A", "text": "6 months" },
+          { "id": "B", "text": "1 year" },
+          { "id": "C", "text": "2 years" },
+          { "id": "D", "text": "3 years" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "President's Rule under Article 356 can be extended maximum up to 3 years, but the 3rd year requires two conditions: (1) National Emergency must be in operation in the whole country, (2) Election Commission must certify that elections cannot be held in that state. Without these conditions, practical maximum is usually 1 year. Initial proclamation is for 6 months, extendable by 6 months each time with Parliament approval."
+      },
+      "navigation": {
+        "next": "card_43_quiz_emergency_3",
+        "button_text": "Last one! 💪"
+      }
+    },
+    {
+      "card_id": "card_43_quiz_emergency_3",
+      "card_slug": "card_43_quiz_emergency_3",
+      "type": "quiz",
+      "concept_id": "quiz_emergency_3",
+      "level": 3,
+      "progress": {
+        "current": 43,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC CGL Pattern: Which Article of the Constitution deals with Financial Emergency? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Article 352" },
+          { "id": "B", "text": "Article 356" },
+          { "id": "C", "text": "Article 360" },
+          { "id": "D", "text": "Article 365" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 360 deals with Financial Emergency, which can be declared if the President is satisfied that the financial stability or credit of India or any part thereof is threatened. This type of emergency has NEVER been declared in India so far. Article 352 is for National Emergency. Article 356 is for President's Rule (State Emergency). Article 365 deals with failure of state to comply with Centre's directions."
+      },
+      "navigation": {
+        "next": "card_44_milestone_emergency",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_44_milestone_emergency",
+      "card_slug": "card_44_milestone_emergency",
+      "type": "milestone",
+      "concept_id": "milestone_emergency",
+      "level": 3,
+      "progress": {
+        "current": 44,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 3 COMPLETED!",
+        "badge_emoji": "🚨",
+        "completed_topic": "Emergency Provisions (National, State, Financial)",
+        "xp_earned": 130,
+        "milestone_progress": "Module 3/5 Clear ✅",
+        "motivational_quote": "You now know when India becomes fully Unitary! Next up: Inter-State Relations & Disputes — how states interact with each other! 🤝"
+      },
+      "navigation": {
+        "next": "card_45_interstate_intro",
+        "button_text": "Start Module 4: Inter-State Relations 🗺️"
+      }
+    },
+    {
+      "card_id": "card_45_interstate_intro",
+      "card_slug": "card_45_interstate_intro",
+      "type": "chat",
+      "concept_id": "interstate_intro",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Inter-State Relations (Article 131-137, 261-263) — ye define karte hain states ek dusre ke saath kaise deal karein. Jaise Bihar aur Jharkhand ke beech water dispute, UP aur Delhi ke beech border issue — ye sab yahan covered hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir agar do states ke beech jhagda ho jaye to kaun solve karega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Teen mechanisms hain: (1) Supreme Court ka Original Jurisdiction (Article 131) — direct SC me case kar sakte hain states. (2) Inter-State Council (Article 263) — disputes discussion ke liye. (3) President/Parliament intervene kar sakte hain special cases me."
+        },
+        {
+          "speaker": "raju",
+          "text": "Supreme Court directly case le sakta hai states ka?"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_supreme_court_jurisdiction",
+        "button_text": "Haan! Original Jurisdiction hai 🏛️"
+      }
+    },
+    {
+      "card_id": "card_46_supreme_court_jurisdiction",
+      "card_slug": "card_46_supreme_court_jurisdiction",
+      "type": "chat",
+      "concept_id": "supreme_court_jurisdiction",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 131 — Supreme Court ko Exclusive Original Jurisdiction hai inter-state disputes me. Matlab aise cases seedha Supreme Court me file hote hain, lower courts me nahi. Example: Kaveri Water Dispute (Karnataka vs Tamil Nadu), Krishna Water Dispute (Maharashtra vs Karnataka)."
+        },
+        {
+          "speaker": "raju",
+          "text": "To har state vs state case Supreme Court me jaata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Sirf legal disputes. Water disputes ke liye alag mechanism hai — Inter-State Water Disputes Act (1956). President ek Tribunal bana deta hai jo decide karta hai. Tribunal ka decision final & binding hota hai. Example: Cauvery Water Disputes Tribunal."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Inter-State Council kya karta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_interstate_council",
+        "button_text": "Bahut important body hai! 🤝"
+      }
+    },
+    {
+      "card_id": "card_47_interstate_council",
+      "card_slug": "card_47_interstate_council",
+      "type": "chat",
+      "concept_id": "interstate_council",
+      "level": 4,
+      "progress": {
+        "current": 47,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Inter-State Council (Article 263) — ye Centre aur States ke beech coordination body hai. Prime Minister iska Chairman hota hai. Chief Ministers, Union Ministers members hote hain. Ye advisory body hai — disputes discuss karte hain, recommendations dete hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "To ye court jaisa nahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Ye discussion forum hai. Sarkaria Commission (1983) ne recommend kiya tha isko regular banane ke liye. 1990 me pehli baar Inter-State Council banayi gayi. ⭐ BPSC me puuchte hain — Inter-State Council ka formation kaun recommend karta hai? Sarkaria Commission aur Punchhi Commission."
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Council discussion ke liye, Court decision ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_full_faith_credit",
+        "button_text": "Perfect! Ab Article 261 dekho 📜"
+      }
+    },
+    {
+      "card_id": "card_48_full_faith_credit",
+      "card_slug": "card_48_full_faith_credit",
+      "type": "chat",
+      "concept_id": "full_faith_credit",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 261 — 'Full Faith and Credit' clause (USA se inspired). Iska matlab — ek state ke public acts, records, judicial proceedings ko dusre states me bhi recognize karna padega. Example: Bihar ki High Court ka judgment UP me bhi valid hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Bihar ka driving license Delhi me chalega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Birth certificate, educational degrees, court orders — sab cross-state valid hain. Ye national integration ke liye zaroori hai. Agar har state dusre state ke documents ko reject kare to problem ho jayegi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir inter-state trade me koi restriction hai kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_freedom_trade",
+        "button_text": "Good question! Article 301-307 📦"
+      }
+    },
+    {
+      "card_id": "card_49_freedom_trade",
+      "card_slug": "card_49_freedom_trade",
+      "type": "chat",
+      "concept_id": "freedom_trade",
+      "level": 4,
+      "progress": {
+        "current": 49,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 301 — Trade, commerce, and intercourse throughout India shall be FREE. Matlab ek state dusre state ke goods pe tax nahi laga sakta normally. Lekin Article 302-303 me exceptions hain — Parliament public interest me reasonable restrictions laga sakti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Bihar dusre states se aane wale saman pe tax nahi laga sakti?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Ye economic unity ke liye zaroori hai. Socho agar har state apni boundary pe check-post lagaye aur tax vasool kare — desh ek single market nahi rahega. GST (2017) ne ye aur simple kar diya — ab pure desh me ek hi tax system hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wah Sir! GST ne to bahut simplify kar diya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_quiz_interstate_1",
+        "button_text": "Haan! Quiz me check karo 🎯"
+      }
+    },
+    {
+      "card_id": "card_50_quiz_interstate_1",
+      "card_slug": "card_50_quiz_interstate_1",
+      "type": "quiz",
+      "concept_id": "quiz_interstate_1",
+      "level": 4,
+      "progress": {
+        "current": 50,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC Prelims 2019: Which Article gives the Supreme Court exclusive original jurisdiction in disputes between Centre and States? (Q1/3)",
+        "options": [
+          { "id": "A", "text": "Article 131" },
+          { "id": "B", "text": "Article 132" },
+          { "id": "C", "text": "Article 136" },
+          { "id": "D", "text": "Article 143" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Article 131 provides the Supreme Court with exclusive original jurisdiction in disputes: (a) between Centre and States, (b) between Centre and any State(s) on one side and one or more States on the other, (c) between two or more States. Article 132 is about appellate jurisdiction in constitutional matters. Article 136 is about Special Leave Petition. Article 143 is about advisory jurisdiction."
+      },
+      "navigation": {
+        "next": "card_51_quiz_interstate_2",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_51_quiz_interstate_2",
+      "card_slug": "card_51_quiz_interstate_2",
+      "type": "quiz",
+      "concept_id": "quiz_interstate_2",
+      "level": 4,
+      "progress": {
+        "current": 51,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Who is the Chairman of the Inter-State Council? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "President of India" },
+          { "id": "B", "text": "Prime Minister" },
+          { "id": "C", "text": "Vice President" },
+          { "id": "D", "text": "Chief Justice of India" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The Prime Minister is the Chairman of the Inter-State Council (Article 263). The Council was established in 1990 based on the recommendations of the Sarkaria Commission (1983). It includes Chief Ministers of all states, Union Cabinet Ministers, and Administrators of Union Territories. It is a recommendatory body to discuss inter-governmental issues and promote Centre-State cooperation."
+      },
+      "navigation": {
+        "next": "card_52_quiz_interstate_3",
+        "button_text": "Last one! 🔥"
+      }
+    },
+    {
+      "card_id": "card_52_quiz_interstate_3",
+      "card_slug": "card_52_quiz_interstate_3",
+      "type": "quiz",
+      "concept_id": "quiz_interstate_3",
+      "level": 4,
+      "progress": {
+        "current": 52,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC Pattern: Article 301 guarantees freedom of trade and commerce throughout India. Which Articles provide for reasonable restrictions? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Article 302-303" },
+          { "id": "B", "text": "Article 304-305" },
+          { "id": "C", "text": "Article 310-311" },
+          { "id": "D", "text": "Article 320-321" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Article 301 declares freedom of trade, commerce, and intercourse throughout India. However, Articles 302 and 303 allow Parliament to impose reasonable restrictions in public interest. Article 302 empowers Parliament to impose restrictions, while Article 303 restricts Parliament from giving preferential treatment to any state. Article 304 deals with state restrictions on inter-state trade. ⭐ BPSC loves Article number-based questions!"
+      },
+      "navigation": {
+        "next": "card_53_milestone_interstate",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_53_milestone_interstate",
+      "card_slug": "card_53_milestone_interstate",
+      "type": "milestone",
+      "concept_id": "milestone_interstate",
+      "level": 4,
+      "progress": {
+        "current": 53,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 4 COMPLETED!",
+        "badge_emoji": "🗺️",
+        "completed_topic": "Inter-State Relations & Dispute Resolution",
+        "xp_earned": 110,
+        "milestone_progress": "Module 4/5 Clear ✅",
+        "motivational_quote": "States can now cooperate and resolve disputes — you've mastered federal harmony! Final Module: Zonal Councils & Recent Developments! 🚀"
+      },
+      "navigation": {
+        "next": "card_54_zonal_councils_intro",
+        "button_text": "Start Module 5: Zonal Councils & Reforms 🌏"
+      }
+    },
+    {
+      "card_id": "card_54_zonal_councils_intro",
+      "card_slug": "card_54_zonal_councils_intro",
+      "type": "chat",
+      "concept_id": "zonal_councils_intro",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Zonal Councils — ye Constitutional bodies NAHI hain, ye States Reorganisation Act (1956) ke under banayi gayi hain. India ko 5 zones me divide kiya gaya hai regional cooperation ke liye: Northern, Central, Eastern, Western, Southern, aur North-Eastern (1971 me add hua)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye Inter-State Council se alag hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Inter-State Council (Article 263) constitutional hai aur poore desh ke liye hai. Zonal Councils regional hain — paas-paas ke states milkar apne regional issues discuss karte hain jaise infrastructure, water sharing, tourism. Union Home Minister sabhi Zonal Councils ka common Chairman hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Bihar kaunse zone me hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_zonal_councils_zones",
+        "button_text": "Good question! Zones dekho 🗺️"
+      }
+    },
+    {
+      "card_id": "card_55_zonal_councils_zones",
+      "card_slug": "card_55_zonal_councils_zones",
+      "type": "chat",
+      "concept_id": "zonal_councils_zones",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "5 Zonal Councils: (1) Northern — J&K, Punjab, Haryana, Himachal, Rajasthan, Delhi, Chandigarh. (2) Central — UP, MP, Chhattisgarh, Uttarakhand. (3) Eastern — Bihar, Jharkhand, Odisha, West Bengal. (4) Western — Gujarat, Maharashtra, Goa, Dadra & Nagar Haveli, Daman & Diu. (5) Southern — Andhra, Karnataka, Kerala, Tamil Nadu, Telangana, Puducherry. (6) North-Eastern — Assam aur 7 sister states."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Bihar Eastern Zone me hai! Ye councils kya karte hain Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye advisory hain — recommendations dete hain Centre ko regional development ke liye. Economic planning, language issues, border disputes, inter-state transport — sab discuss hota hai. But binding power nahi hai. ⭐ BPSC TRE Favorite: Bihar kis Zonal Council me hai? Eastern!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_cooperative_federalism",
+        "button_text": "Ab recent reforms dekho! 🔥"
+      }
+    },
+    {
+      "card_id": "card_56_cooperative_federalism",
+      "card_slug": "card_56_cooperative_federalism",
+      "type": "chat",
+      "concept_id": "cooperative_federalism",
+      "level": 5,
+      "progress": {
+        "current": 56,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Modern trend — 'Cooperative Federalism' aur 'Competitive Federalism'. Cooperative Federalism matlab Centre aur States milkar kaam karte hain (Example: GST Council — Centre aur States dono members hain). NITI Aayog bhi cooperative approach follow karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Competitive Federalism kya hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "States ek dusre se compete karte hain development me — kaun zyada FDI laye, kaun better infrastructure banaye. NITI Aayog rankings publish karta hai (SDG India Index, Health Index, Education Index) — ye competition create karta hai states ke beech improvement ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to ab states ek dusre se competition kar rahe hain development me!"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_gst_council",
+        "button_text": "Haan! GST Council perfect example! 💡"
+      }
+    },
+    {
+      "card_id": "card_57_gst_council",
+      "card_slug": "card_57_gst_council",
+      "type": "chat",
+      "concept_id": "gst_council",
+      "level": 5,
+      "progress": {
+        "current": 57,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "GST Council (Article 279A — 101st Amendment, 2016) — ye cooperative federalism ka sabse bada example hai. Finance Minister (Centre) Chairman hai, State Finance Ministers members hain. Decisions consensus se hote hain — voting me Centre ka 1/3 weightage, States ka 2/3 weightage!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To States ki zyada power hai GST Council me?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ye intentional hai — kyunki States ne apni taxation powers sacrifice ki GST ke liye. Pehle States apne hisaab se VAT, Sales Tax lagate the. Ab ek uniform GST hai. Isliye decision-making me States ko zyada say diya. ⭐ UPSC loves this — GST Council composition aur voting pattern!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect Sir! Ab samajh gaya poora federal system!"
+        }
+      ],
+      "navigation": {
+        "next": "card_58_summary",
+        "button_text": "Last Officer Revision! 📝"
+      }
+    },
+    {
+      "card_id": "card_58_summary",
+      "card_slug": "card_58_summary",
+      "type": "summary",
+      "concept_id": "summary_federal_system",
+      "level": 5,
+      "progress": {
+        "current": 58,
+        "total": 60
+      },
+      "summary_payload": {
+        "title": "⚡ Officer-Level Revision: Federal System",
+        "revision_points": [
+          {
+            "topic": "Quasi-Federal Nature",
+            "point": "India is 'Union of States' (not Federation). Federal features: 3 Lists, Written Constitution, Independent Judiciary. Unitary features: Strong Centre, Single Citizenship, Emergency Provisions, Governor appointment, Residuary Powers with Centre."
+          },
+          {
+            "topic": "Three Lists (7th Schedule)",
+            "point": "Union List (97→100+ subjects): Defence, Foreign Affairs, Currency. State List (66→61 subjects): Police, Agriculture, Public Health. Concurrent List (47→52 subjects): Education, Forest, Marriage. Residuary Powers → Centre (Article 248). In conflict → Central Law prevails (Article 254)."
+          },
+          {
+            "topic": "Emergency Provisions",
+            "point": "National Emergency (Article 352): War/External Aggression/Armed Rebellion. 44th Amendment: Cabinet recommendation mandatory, 'Internal Disturbance' → 'Armed Rebellion'. President's Rule (Article 356): Max 3 years, S.R. Bommai safeguards. Financial Emergency (Article 360): Never declared."
+          },
+          {
+            "topic": "Inter-State Relations",
+            "point": "Supreme Court (Article 131): Exclusive Original Jurisdiction. Inter-State Council (Article 263): PM Chairman, advisory. Full Faith & Credit (Article 261): Cross-state recognition. Freedom of Trade (Article 301): No inter-state barriers (GST unified market)."
+          },
+          {
+            "topic": "Cooperative Federalism",
+            "point": "GST Council (Article 279A, 101st Amendment 2016): Centre 1/3 vote, States 2/3 vote. NITI Aayog: Cooperative planning. Zonal Councils: 5 regional zones (Eastern zone: Bihar, Jharkhand, Odisha, WB). Competitive Federalism: States compete via rankings (SDG, Health Index)."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_59_final_quiz",
+        "button_text": "Final Officer-Level Quiz! 🎖️"
+      }
+    },
+    {
+      "card_id": "card_59_final_quiz",
+      "card_slug": "card_59_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_federal",
+      "level": 5,
+      "progress": {
+        "current": 59,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC 2024 Officer Pattern (Multi-Statement): Consider the following statements about the Federal System in India:\n\n1. Article 1 describes India as a 'Federation of States'.\n2. Residuary powers are vested with the Union Parliament.\n3. In case of conflict between Central and State law on Concurrent List subjects, State law prevails if it received Presidential assent.\n4. The 44th Amendment changed the ground for National Emergency from 'Internal Disturbance' to 'Armed Rebellion'.\n\nHow many statements are correct?",
+        "options": [
+          { "id": "A", "text": "Only one statement" },
+          { "id": "B", "text": "Only two statements" },
+          { "id": "C", "text": "Only three statements" },
+          { "id": "D", "text": "All four statements" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Statement Analysis:\n\n1. INCORRECT — Article 1 describes India as 'Union of States', NOT 'Federation of States'. This was deliberate to indicate states cannot secede.\n\n2. CORRECT — Article 248 vests residuary powers with Parliament. Subjects not in any of the three lists belong to Centre (e.g., Cyber laws).\n\n3. CORRECT — Article 254(2): If a State law on a Concurrent subject received Presidential assent and was made earlier than or repugnant to Central law, it can prevail in that state.\n\n4. CORRECT — 44th Amendment (1978) replaced 'Internal Disturbance' with 'Armed Rebellion' to prevent misuse like 1975 Emergency.\n\nAnswer: 3 statements correct (2, 3, 4). ⭐ Classic BPSC trap — testing Article 1 terminology and Article 254 exceptions!"
+      },
+      "navigation": {
+        "next": "card_60_completion",
+        "button_text": "Complete Chapter! 🏆"
+      }
+    },
+    {
+      "card_id": "card_60_completion",
+      "card_slug": "card_60_completion",
+      "type": "milestone",
+      "concept_id": "completion_federal_system",
+      "level": 5,
+      "progress": {
+        "current": 60,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER COMPLETED! 🎉",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Federal System in Indian Polity (Complete)",
+        "xp_earned": 500,
+        "milestone_progress": "5/5 Modules Mastered ✅",
+        "motivational_quote": "Congratulations! You've mastered the entire Federal System — from basic concepts to Officer-level traps. You now understand:\n\n✅ Quasi-Federal nature (Federal + Unitary features)\n✅ Three Lists & Power Distribution\n✅ Centre-State Relations (Legislative, Administrative, Financial)\n✅ Emergency Provisions (National, State, Financial)\n✅ Inter-State mechanisms & Cooperative Federalism\n\nYou're now ready to tackle any BPSC/SSC/UPSC question on Federal System! Keep practicing PYQs and stay updated on recent developments like GST Council decisions and NITI Aayog rankings.\n\n🔥 Next Chapter Suggestion: Parliament & Legislative Procedures\n\nAll the best for your exam! 🚀"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Home 🏠"
+      }
+    }
+  ]
+}
+```
