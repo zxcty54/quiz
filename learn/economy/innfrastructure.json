@@ -1,0 +1,1917 @@
+
+{
+  "topic_id": "industry_infrastructure_indian_economy",
+  "topic_title": "Industry and Infrastructure in Indian Economy",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 65,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "intro_industry_infrastructure",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 65
+      },
+      "intro_payload": {
+        "title": "🏭 Industry & Infrastructure in Indian Economy",
+        "subtitle": "Building the Backbone of Modern India",
+        "icon": "🏗️",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "SSC CGL", "UPSC Prelims", "RRB NTPC"],
+        "learning_outcomes": [
+          "Industrial classification: Primary, Secondary, Tertiary sectors",
+          "Major industries: Steel, Cement, Textile, Automobile, IT",
+          "Infrastructure components: Transport, Energy, Communication",
+          "Government initiatives: Make in India, Startup India, Smart Cities",
+          "⭐ Bihar-specific industrial development & infrastructure projects",
+          "PYQ traps on FDI, SEZ, Industrial corridors"
+        ],
+        "estimated_time": "18 minutes",
+        "total_modules": 6
+      },
+      "navigation": {
+        "next": "card_02_daily_hook",
+        "button_text": "Shuru Karte Hain! 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_hook",
+      "card_slug": "card_02_daily_hook",
+      "type": "chat",
+      "concept_id": "daily_life_connection",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kal tum cycle se school aaye the na? Cycle kahan bani hogi?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir cycle to Hero company ki hai... shayad factory mein banti hogi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Cycle banana ek 'industry' hai. Aur uss factory tak raw material pohchane ke liye roads, railways chahiye — wo 'infrastructure' hai. Aaj hum yahi samajhne wale hain — Industry aur Infrastructure kya hai aur India ki economy mein kya role hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab industry matlab factories? Aur infrastructure matlab roads-railway?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_industry_definition",
+        "button_text": "Exact Definition Samajhte Hain ➔"
+      }
+    },
+    {
+      "card_id": "card_03_industry_definition",
+      "card_slug": "card_03_industry_definition",
+      "type": "chat",
+      "concept_id": "industry_basic_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Industry matlab kisi bhi economic activity jahan raw materials ko transform karke finished goods ya services banaye jaate hain. Jaise — iron ore se steel banana, cotton se kapda banana, ya software development. Economy ko teen sectors mein baante hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Teen sectors? Kaunse hain wo Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Primary Sector — seedhe nature se resources nikalna (farming, mining, fishing). Secondary Sector — manufacturing aur construction (factories). Tertiary Sector — services jaise banking, education, IT. Yahi classification UPSC aur BPSC mein hamesha puchha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to cycle factory Secondary Sector mein aayegi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_sector_classification",
+        "button_text": "Classification Detail Mein ➔"
+      }
+    },
+    {
+      "card_id": "card_04_sector_classification",
+      "card_slug": "card_04_sector_classification",
+      "type": "chat",
+      "concept_id": "three_sector_classification",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Primary — khet se dhan (agriculture). Secondary — dhan ko machine se process karke rice banao (manufacturing). Tertiary — us rice ko sell karna shops mein (services). India abhi Tertiary Sector dominant hai — GDP mein 55% contribution!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Secondary Sector kitna contribute karta hai GDP mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Lagbhag 25-28% around. Lekin employment zyada hai — kaafi log factories aur construction mein kaam karte hain. ⭐ BPSC TRE Favorite: Bihar mein Primary Sector abhi bhi dominant hai employment mein (60%+), but GDP mein contribution kam ho raha hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Bihar zyada agriculture dependent hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz_1",
+        "button_text": "Pehla Quiz 📝"
+      }
+    },
+    {
+      "card_id": "card_05_quiz_1",
+      "card_slug": "card_05_quiz_1",
+      "type": "quiz",
+      "concept_id": "quiz_sector_classification",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Cotton se kapda banana kis sector mein aata hai?",
+        "options": [
+          { "id": "A", "text": "Primary Sector" },
+          { "id": "B", "text": "Secondary Sector (Manufacturing)" },
+          { "id": "C", "text": "Tertiary Sector" },
+          { "id": "D", "text": "Quaternary Sector" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Cotton se kapda banana MANUFACTURING hai jo Secondary Sector mein aata hai. Cotton ugana Primary Sector hai, aur kapda bechna Tertiary Sector (services). Yeh classification SSC aur Railway exams mein direct puchha jaata hai!"
+      },
+      "navigation": {
+        "next": "card_06_quiz_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_2",
+      "card_slug": "card_06_quiz_2",
+      "type": "quiz",
+      "concept_id": "quiz_gdp_contribution",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "India ki GDP mein sabse zyada contribution kaunse sector ka hai (2023 data)?",
+        "options": [
+          { "id": "A", "text": "Primary Sector (Agriculture)" },
+          { "id": "B", "text": "Secondary Sector (Industry)" },
+          { "id": "C", "text": "Tertiary Sector (Services)" },
+          { "id": "D", "text": "Sabhi equal hai" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "India ki GDP mein Tertiary Sector (Services) sabse zyada contribute karta hai — around 55%. IT, banking, tourism sab isme aata hai. Secondary Sector 25-28%, aur Primary Sector 15-18% around. UPSC Prelims mein yeh data-based question hai!"
+      },
+      "navigation": {
+        "next": "card_07_quiz_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_3",
+      "card_slug": "card_07_quiz_3",
+      "type": "quiz",
+      "concept_id": "quiz_bihar_sector",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar mein employment mein sabse zyada logon ko kaun sa sector employ karta hai?",
+        "options": [
+          { "id": "A", "text": "IT Sector" },
+          { "id": "B", "text": "Manufacturing Industry" },
+          { "id": "C", "text": "Agriculture (Primary Sector)" },
+          { "id": "D", "text": "Banking Services" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC TRE Important: Bihar mein abhi bhi 60%+ workforce agriculture mein hai, jabki GDP contribution kam hai (20% around). Yeh structural issue hai — low productivity in agriculture. Bihar mein industrialization slow hai compared to other states."
+      },
+      "navigation": {
+        "next": "card_08_milestone_1",
+        "button_text": "Module 1 Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_08_milestone_1",
+      "card_slug": "card_08_milestone_1",
+      "type": "milestone",
+      "concept_id": "milestone_basics",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 65
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 1 CLEARED!",
+        "badge_emoji": "🏭",
+        "completed_topic": "Industrial Classification Basics",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Clear",
+        "motivational_quote": "Shabash! Sector classification clear ho gaya! Ab major industries detail mein padhenge! 💪"
+      },
+      "navigation": {
+        "next": "card_09_major_industries_intro",
+        "button_text": "Module 2 Shuru Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_09_major_industries_intro",
+      "card_slug": "card_09_major_industries_intro",
+      "type": "chat",
+      "concept_id": "major_industries_introduction",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab hum India ki major industries dekhenge. Steel Industry — Jamshedpur, Bhilai mein plants hain. Textile Industry — Ahmedabad 'Manchester of India' kehlata hai. Automobile — Maruti, Tata, Mahindra. IT — Bangalore 'Silicon Valley of India'."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Jamshedpur mein steel kyun famous hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki Tata Steel ka pehla plant wahan bana tha (1907 mein Jamshedji Tata ne). Wahan iron ore, coal paas mein milta hai — raw material ki availability. Location advantage! Industry location theory mein yeh important hai — raw material, market, transport sab factors hote hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab industry kahan lagegi wo depend karta hai resources pe?"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_steel_industry",
+        "button_text": "Steel Industry Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_10_steel_industry",
+      "card_slug": "card_10_steel_industry",
+      "type": "chat",
+      "concept_id": "steel_industry_detail",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Steel Industry — India dusra sabse bada steel producer hai world mein (China ke baad). Major plants: TISCO Jamshedpur, SAIL Bhilai (Chhattisgarh), Rourkela (Odisha), Bokaro (Jharkhand). Steel se railway tracks, bridges, machines, buildings banti hain — 'backbone of industry' kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar mein koi steel plant hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE: Bihar mein major steel plant toh nahi, lekin Bokaro (Jharkhand border pe) aur Jamshedpur paas hain. Bihar mein iron ore deposits hain Gaya, Rohtas areas mein but large-scale plants nahi developed hue. Government efforts chal rahe hain Bihar mein steel sector develop karne ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... resources hain but plants nahi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_textile_industry",
+        "button_text": "Textile Industry ➔"
+      }
+    },
+    {
+      "card_id": "card_11_textile_industry",
+      "card_slug": "card_11_textile_industry",
+      "type": "chat",
+      "concept_id": "textile_industry_detail",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Textile Industry — India ki oldest industries mein se ek! Cotton textile — Ahmedabad, Mumbai, Coimbatore famous hain. Silk — Karnataka (Mysore silk). Jute — West Bengal (Kolkata paas). Textile industry mein employment bahut zyada hai — especially women workforce ko opportunities milti hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Ahmedabad ko Manchester of India kyun kehte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki pehle wahan bahut cotton mills thi — jaise Manchester (England) mein. Ab textile mills kam ho gayi hain wahan. ⭐ BPSC Favorite: Mumbai ko bhi 'Manchester of India' keha jaata tha pehle, lekin ab Ahmedabad zyada prominent hai. Exam mein confusion trap hai yeh!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar mein textile industry kaisi hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_automobile_it",
+        "button_text": "Automobile & IT ➔"
+      }
+    },
+    {
+      "card_id": "card_12_automobile_it",
+      "card_slug": "card_12_automobile_it",
+      "type": "chat",
+      "concept_id": "automobile_it_industry",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Automobile Industry — Maruti (Gurugram, Manesar), Tata Motors (Pune), Hyundai (Chennai). India 4th largest automobile market hai world mein! IT Industry — Bangalore, Hyderabad, Pune tech hubs hain. TCS, Infosys, Wipro jaise companies India ki global reputation banate hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar mein IT sector kaisa hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE: Bihar mein IT sector emerging hai. Patna mein NIT Patna, IIT Patna se talent hai but major IT companies ka presence limited hai. Government IT parks develop kar rahi hai — Rajgir mein Nalanda University ke paas, Patna mein. Brain drain bada issue hai — talented students bahar chale jaate hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Bihar se talent to hai but opportunities kam hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_quiz_4",
+        "button_text": "Quiz Time 📝"
+      }
+    },
+    {
+      "card_id": "card_13_quiz_4",
+      "card_slug": "card_13_quiz_4",
+      "type": "quiz",
+      "concept_id": "quiz_steel_producer",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "India world mein kitne number ka steel producer hai?",
+        "options": [
+          { "id": "A", "text": "Pehla (1st)" },
+          { "id": "B", "text": "Dusra (2nd)" },
+          { "id": "C", "text": "Teesra (3rd)" },
+          { "id": "D", "text": "Chautha (4th)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "India DUSRA (2nd) sabse bada steel producer hai world mein — China ke baad. Yeh fact SSC, Railway aur BPSC sabhi exams mein puchha jaata hai. Current rankings yaad rakhna important hai!"
+      },
+      "navigation": {
+        "next": "card_14_quiz_5",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_5",
+      "card_slug": "card_14_quiz_5",
+      "type": "quiz",
+      "concept_id": "quiz_manchester_india",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Kaunsa city 'Manchester of India' kehlata hai (currently)?",
+        "options": [
+          { "id": "A", "text": "Mumbai" },
+          { "id": "B", "text": "Ahmedabad" },
+          { "id": "C", "text": "Surat" },
+          { "id": "D", "text": "Coimbatore" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "AHMEDABAD ko 'Manchester of India' keha jaata hai cotton textile industry ke liye. Pehle Mumbai bhi keha jaata tha lekin ab Ahmedabad zyada prominent hai. BPSC mein yeh confusion trap hai — dono cities textile ke liye famous hain!"
+      },
+      "navigation": {
+        "next": "card_15_quiz_6",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_6",
+      "card_slug": "card_15_quiz_6",
+      "type": "quiz",
+      "concept_id": "quiz_silicon_valley",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Kaunsa city 'Silicon Valley of India' kehlata hai?",
+        "options": [
+          { "id": "A", "text": "Delhi" },
+          { "id": "B", "text": "Mumbai" },
+          { "id": "C", "text": "Bangalore (Bengaluru)" },
+          { "id": "D", "text": "Hyderabad" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "BANGALORE (Bengaluru) ko 'Silicon Valley of India' keha jaata hai IT industry ke liye. TCS, Infosys, Wipro jaise companies yahan headquartered hain. Hyderabad bhi major IT hub hai lekin Bangalore zyada famous hai nickname se. Railway/SSC direct question!"
+      },
+      "navigation": {
+        "next": "card_16_milestone_2",
+        "button_text": "Module 2 Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_16_milestone_2",
+      "card_slug": "card_16_milestone_2",
+      "type": "milestone",
+      "concept_id": "milestone_major_industries",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 65
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 2 CLEARED!",
+        "badge_emoji": "🏗️",
+        "completed_topic": "Major Industries of India",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/6 Clear",
+        "motivational_quote": "Excellent! Major industries samajh gaye! Ab infrastructure — roads, railways, energy — sabkuch detail mein! 🚀"
+      },
+      "navigation": {
+        "next": "card_17_infrastructure_intro",
+        "button_text": "Module 3 Shuru Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_17_infrastructure_intro",
+      "card_slug": "card_17_infrastructure_intro",
+      "type": "chat",
+      "concept_id": "infrastructure_definition",
+      "level": 3,
+      "progress": {
+        "current": 17,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Infrastructure matlab basic facilities jo economy ko run karne ke liye zaruri hain — Transport (roads, railways), Energy (electricity, coal), Communication (internet, telecom), Social Infrastructure (schools, hospitals). Yeh 'backbone' hai development ka!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab infrastructure ke bina industry nahi chal sakti?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Socho factory ban gayi but electricity nahi hai to machine kaise chalega? Goods bane but roads nahi hain to market tak kaise pohchenge? Isliye infrastructure aur industry ek-dusre pe dependent hain. India mein infrastructure gap hai — hum invest kar rahe hain but abhi bhi gaps hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir transport infrastructure kaunse-kaunse hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_transport_infrastructure",
+        "button_text": "Transport Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_18_transport_infrastructure",
+      "card_slug": "card_18_transport_infrastructure",
+      "type": "chat",
+      "concept_id": "transport_infrastructure",
+      "level": 3,
+      "progress": {
+        "current": 18,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Transport Infrastructure — (1) Roads: National Highways (NH), State Highways, Rural Roads (PMGSY scheme). (2) Railways: Indian Railways — world ka 4th largest network! (3) Ports: Mumbai, Chennai, Kolkata major ports. (4) Airports: Delhi, Mumbai busiest hain. (5) Waterways: Ganga, Brahmaputra rivers."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir PMGSY kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Pradhan Mantri Gram Sadak Yojana — rural areas mein all-weather roads banane ka programme (2000 se). ⭐ BPSC TRE: Bihar mein PMGSY ke under lakhs kilometers roads bane hain — villages ko connectivity mili. Pehle barish mein kaafi areas isolated ho jaate the!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... gaon ki roads ab better hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_energy_infrastructure",
+        "button_text": "Energy Infrastructure ➔"
+      }
+    },
+    {
+      "card_id": "card_19_energy_infrastructure",
+      "card_slug": "card_19_energy_infrastructure",
+      "type": "chat",
+      "concept_id": "energy_infrastructure",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Energy Infrastructure — (1) Thermal Power: Coal-based (NTPC plants), Gas-based. (2) Hydro Power: Bhakra Nangal, Tehri Dam. (3) Nuclear Power: Tarapur, Kudankulam. (4) Renewable: Solar (Gujarat, Rajasthan), Wind (Tamil Nadu). India renewable energy capacity mein 4th rank hai globally!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar mein energy situation kaisi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Important: Bihar mein energy deficit hai — demand zyada, supply kam. Kanti Thermal Power Station (Muzaffarpur) hai, Barauni Thermal bhi. But Bihar mainly bahar se electricity import karta hai — Jharkhand, West Bengal se. Per capita electricity consumption India average se kam hai Bihar mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Bihar ko zyada power plants chahiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_communication_infrastructure",
+        "button_text": "Communication ➔"
+      }
+    },
+    {
+      "card_id": "card_20_communication_infrastructure",
+      "card_slug": "card_20_communication_infrastructure",
+      "type": "chat",
+      "concept_id": "communication_infrastructure",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Communication Infrastructure — (1) Telecom: Jio, Airtel, Vi — India mein 1 billion+ mobile subscribers! (2) Internet: BharatNet project rural areas mein fiber connectivity de rahi hai. (3) Postal Network: India Post — world ka largest postal network. Digital India initiative se sab kuch online ho raha hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar mein internet connectivity kaisi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE: Bihar mein internet penetration badhh raha hai but national average se kam hai. Urban areas (Patna, Gaya, Bhagalpur) mein better hai, but rural areas mein abhi gaps hain. Government fiber optic network expand kar rahi hai — BharatNet ke under villages ko connect kar rahe hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab digital divide hai Bihar mein!"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_quiz_7",
+        "button_text": "Quiz Time 📝"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_7",
+      "card_slug": "card_21_quiz_7",
+      "type": "quiz",
+      "concept_id": "quiz_pmgsy",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "PMGSY (Pradhan Mantri Gram Sadak Yojana) ka main objective kya hai?",
+        "options": [
+          { "id": "A", "text": "Urban metro rail banana" },
+          { "id": "B", "text": "Rural areas mein all-weather roads banana" },
+          { "id": "C", "text": "National highways widening karna" },
+          { "id": "D", "text": "Ports develop karna" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "PMGSY ka objective hai RURAL AREAS mein all-weather roads banana taaki villages ko year-round connectivity mile. 2000 mein launch hua tha. Bihar jaise states mein ye scheme bahut important rahi hai connectivity improve karne ke liye!"
+      },
+      "navigation": {
+        "next": "card_22_quiz_8",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_8",
+      "card_slug": "card_22_quiz_8",
+      "type": "quiz",
+      "concept_id": "quiz_railway_rank",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Indian Railways world mein kitne number ka largest network hai?",
+        "options": [
+          { "id": "A", "text": "1st largest" },
+          { "id": "B", "text": "2nd largest" },
+          { "id": "C", "text": "3rd largest" },
+          { "id": "D", "text": "4th largest" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Indian Railways WORLD KA 4TH LARGEST railway network hai (route length ke basis pe). USA, Russia, China ke baad. Lekin passenger traffic mein bahut zyada hai! Ye ranking Railway exams mein zaroor puchhi jaati hai!"
+      },
+      "navigation": {
+        "next": "card_23_quiz_9",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_23_quiz_9",
+      "card_slug": "card_23_quiz_9",
+      "type": "quiz",
+      "concept_id": "quiz_renewable_rank",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "India renewable energy capacity mein world mein kaunse rank par hai?",
+        "options": [
+          { "id": "A", "text": "1st" },
+          { "id": "B", "text": "2nd" },
+          { "id": "C", "text": "3rd" },
+          { "id": "D", "text": "4th" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "India RENEWABLE ENERGY capacity mein 4TH rank hai globally (China, USA, Brazil ke baad). Solar aur wind energy mein India fast growing hai. Ye fact UPSC Environment/Economy mein important hai!"
+      },
+      "navigation": {
+        "next": "card_24_milestone_3",
+        "button_text": "Module 3 Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_24_milestone_3",
+      "card_slug": "card_24_milestone_3",
+      "type": "milestone",
+      "concept_id": "milestone_infrastructure",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 65
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 3 CLEARED!",
+        "badge_emoji": "🚄",
+        "completed_topic": "Infrastructure Components",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/6 Clear",
+        "motivational_quote": "Zabardast! Infrastructure ke saare components clear! Ab government initiatives — Make in India, Smart Cities — sabkuch! 💡"
+      },
+      "navigation": {
+        "next": "card_25_govt_initiatives_intro",
+        "button_text": "Module 4 Shuru Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_25_govt_initiatives_intro",
+      "card_slug": "card_25_govt_initiatives_intro",
+      "type": "chat",
+      "concept_id": "govt_initiatives_introduction",
+      "level": 4,
+      "progress": {
+        "current": 25,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Government ne industry aur infrastructure boost karne ke liye kaafi schemes launch ki hain. Make in India (2014) — India mein manufacturing promote karna. Startup India (2016) — naye entrepreneurs ko support. Smart Cities Mission (2015) — 100 cities ko smart banana. Atmanirbhar Bharat (2020) — self-reliant India!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Make in India ka kya matlab hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Make in India ka objective hai ki jitna zyada ho sake utna saman India mein hi manufacture ho — foreign companies bhi India mein factories lagayein. FDI (Foreign Direct Investment) attract karna, jobs create karna. Logo: Lion — strength aur courage dikhata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab foreign companies India mein invest karein!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_make_in_india_detail",
+        "button_text": "Make in India Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_26_make_in_india_detail",
+      "card_slug": "card_26_make_in_india_detail",
+      "type": "chat",
+      "concept_id": "make_in_india_details",
+      "level": 4,
+      "progress": {
+        "current": 26,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Make in India focus sectors: Automobiles, Chemicals, IT, Pharmaceuticals, Textiles, Defense Manufacturing, Electronics. FDI limits relaxed ki gayi — retail, aviation, defense mein. Apple ab India mein iPhones manufacture kar raha hai (Chennai, Karnataka mein)! Samsung bhi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir iska impact kya hua?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Positive: Jobs increase, Technology transfer, Export boost. Challenges: Land acquisition issues, Labor reforms slow, Infrastructure gaps abhi bhi hain. ⭐ BPSC Favorite: Ye initiative ki success mixed hai — kuch sectors mein achha response, kuch mein slow. Critical analysis questions mein yeh puchha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Smart Cities Mission kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_smart_cities",
+        "button_text": "Smart Cities ➔"
+      }
+    },
+    {
+      "card_id": "card_27_smart_cities",
+      "card_slug": "card_27_smart_cities",
+      "type": "chat",
+      "concept_id": "smart_cities_mission",
+      "level": 4,
+      "progress": {
+        "current": 27,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Smart Cities Mission (2015) — 100 cities ko technology aur innovation se modern banana. Features: Smart traffic management, 24x7 water/electricity, Wi-Fi zones, e-governance, waste management. Cities select hui competition ke through — score-based ranking!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar mein kaunse cities Smart Cities list mein hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Critical: Bihar se PATNA, MUZAFFARPUR, BHAGALPUR, aur BIHARSHARIF Smart Cities Mission mein selected hue! Patna mein smart traffic signals, water supply management, LED street lights lage hain. But implementation slow raha hai — funding aur coordination issues."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab plan to achha hai but execution mein time lag raha hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_startup_india",
+        "button_text": "Startup India ➔"
+      }
+    },
+    {
+      "card_id": "card_28_startup_india",
+      "card_slug": "card_28_startup_india",
+      "type": "chat",
+      "concept_id": "startup_india_initiative",
+      "level": 4,
+      "progress": {
+        "current": 28,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Startup India (2016) — naye entrepreneurs ko promote karna. Tax benefits (3 saal tax exemption), Easy registration, Funding support, Incubation centers. India ab 3rd largest startup ecosystem hai world mein (USA, China ke baad). Unicorns (1 billion dollar+ valuation) 100+ hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Unicorn matlab kya Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Unicorn matlab wo startup jiska valuation $1 billion ya usse zyada ho jaye. Example: Flipkart, Paytm, Ola, Swiggy, Zomato — sab unicorns hain! ⭐ Bihar mein startup ecosystem emerging hai but compared to Bangalore, Delhi slow hai. Government incubation centers khol rahi hai — NIT Patna, IIT Patna mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Bihar mein bhi opportunities badh rahi hain!"
+        }
+      },
+      "navigation": {
+        "next": "card_29_quiz_10",
+        "button_text": "Quiz Time 📝"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_10",
+      "card_slug": "card_29_quiz_10",
+      "type": "quiz",
+      "concept_id": "quiz_make_in_india_launch",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Make in India initiative kab launch hui thi?",
+        "options": [
+          { "id": "A", "text": "2010" },
+          { "id": "B", "text": "2014" },
+          { "id": "C", "text": "2016" },
+          { "id": "D", "text": "2020" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Make in India 25 September 2014 ko launch hui thi PM Narendra Modi ke leadership mein. Logo mein Lion hai. Ye SSC aur Railway exams ka common factual question hai — year aur logo dono yaad rakhna!"
+      },
+      "navigation": {
+        "next": "card_30_quiz_11",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_11",
+      "card_slug": "card_30_quiz_11",
+      "type": "quiz",
+      "concept_id": "quiz_smart_cities_total",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Smart Cities Mission ke under kitne cities ko develop karne ka target hai?",
+        "options": [
+          { "id": "A", "text": "50 cities" },
+          { "id": "B", "text": "75 cities" },
+          { "id": "C", "text": "100 cities" },
+          { "id": "D", "text": "150 cities" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Smart Cities Mission (2015) ke under 100 CITIES ko smart banana target hai. Competition-based selection hua tha. Bihar se 4 cities selected hui: Patna, Muzaffarpur, Bhagalpur, Biharsharif. Total number UPSC aur SSC mein puchha jaata hai!"
+      },
+      "navigation": {
+        "next": "card_31_quiz_12",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quiz_12",
+      "card_slug": "card_31_quiz_12",
+      "type": "quiz",
+      "concept_id": "quiz_startup_ecosystem_rank",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "India ki startup ecosystem globally kaunse rank par hai?",
+        "options": [
+          { "id": "A", "text": "1st largest" },
+          { "id": "B", "text": "2nd largest" },
+          { "id": "C", "text": "3rd largest" },
+          { "id": "D", "text": "5th largest" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "India 3RD LARGEST startup ecosystem hai world mein — USA aur China ke baad. 100+ unicorns hain India mein. Startup India initiative (2016) se ecosystem boost hua hai. Current affairs mein ye data important hai!"
+      },
+      "navigation": {
+        "next": "card_32_milestone_4",
+        "button_text": "Module 4 Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_32_milestone_4",
+      "card_slug": "card_32_milestone_4",
+      "type": "milestone",
+      "concept_id": "milestone_govt_initiatives",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 65
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 4 CLEARED!",
+        "badge_emoji": "🚀",
+        "completed_topic": "Government Initiatives & Schemes",
+        "xp_earned": 80,
+        "milestone_progress": "Module 4/6 Clear",
+        "motivational_quote": "Fantastic! Make in India, Smart Cities, Startup India sab clear! Ab FDI, SEZ, Industrial Corridors — advanced concepts! 🔥"
+      },
+      "navigation": {
+        "next": "card_33_fdi_intro",
+        "button_text": "Module 5 Shuru Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_33_fdi_intro",
+      "card_slug": "card_33_fdi_intro",
+      "type": "chat",
+      "concept_id": "fdi_introduction",
+      "level": 5,
+      "progress": {
+        "current": 33,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "FDI matlab Foreign Direct Investment — jab foreign companies India mein directly invest karti hain business mein. Two routes hain: Automatic Route (approval ki zarurat nahi) aur Government Route (approval chahiye). Sectors mein different limits hain — kuch mein 100% FDI allowed, kuch mein restricted."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir example dijiye na!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Example: Walmart ne Flipkart mein invest kiya ($16 billion). Samsung ne India mein factory lagayi. 100% FDI allowed: IT, Manufacturing, Renewable Energy. Restricted: Defense (74% limit), Multi-brand Retail (prohibition hai). Yeh limits UPSC aur BPSC mein confuse karne ke liye puchhe jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir SEZ kya hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_sez_concept",
+        "button_text": "SEZ Concept ➔"
+      }
+    },
+    {
+      "card_id": "card_34_sez_concept",
+      "card_slug": "card_34_sez_concept",
+      "type": "chat",
+      "concept_id": "sez_special_economic_zone",
+      "level": 5,
+      "progress": {
+        "current": 34,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "SEZ matlab Special Economic Zone — specific geographical areas jahan special incentives milti hain businesses ko. Tax exemptions, Customs duty relaxation, Single-window clearance. Pehla SEZ Kandla (Gujarat) mein bana tha (1965 mein). India mein 200+ SEZs operational hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir SEZ ke fayde kya hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Fayde: Export promotion, Employment generation, FDI attract karna, Technology transfer. Criticism: Land acquisition issues, Displacement of farmers, Tax revenue loss to government. ⭐ BPSC Mains: SEZ ke pros-cons critical analysis mein puchhe jaate hain — balanced answer likhna important hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab SEZ achha bhi hai aur kuch problems bhi hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_industrial_corridors",
+        "button_text": "Industrial Corridors ➔"
+      }
+    },
+    {
+      "card_id": "card_35_industrial_corridors",
+      "card_slug": "card_35_industrial_corridors",
+      "type": "chat",
+      "concept_id": "industrial_corridors_concept",
+      "level": 5,
+      "progress": {
+        "current": 35,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Industrial Corridors — major highways/railways ke along planned industrial zones. DMIC (Delhi-Mumbai Industrial Corridor) — sabse bada project. CBIC (Chennai-Bangalore Industrial Corridor), AKIC (Amritsar-Kolkata Industrial Corridor). Aim: Manufacturing hubs banana, connectivity improve karna."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar kisi corridor mein aata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Critical: Bihar AKIC (Amritsar-Kolkata Industrial Corridor) mein aata hai! Patna, Muzaffarpur regions development zones mein hain. But implementation slow hai — land acquisition aur funding issues. Potential bahut hai but utilization kam hua abhi tak."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Bihar mein bhi industrial corridor planned hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_msme_sector",
+        "button_text": "MSME Sector ➔"
+      }
+    },
+    {
+      "card_id": "card_36_msme_sector",
+      "card_slug": "card_36_msme_sector",
+      "type": "chat",
+      "concept_id": "msme_sector_importance",
+      "level": 5,
+      "progress": {
+        "current": 36,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MSME — Micro, Small, Medium Enterprises. Classification investment ke basis pe hota hai. Micro: ₹1 crore tak, Small: ₹10 crore tak, Medium: ₹50 crore tak (manufacturing). MSME sector India ki GDP mein 30% contribute karta hai aur employment mein 40%+ role hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab MSME bahut important hai economy ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! MSME sector ko 'backbone of economy' kehte hain. Small businesses, local manufacturing, handicrafts sab isme aata hai. ⭐ Bihar mein MSME sector potential hai — food processing, handicrafts (Madhubani painting), leather goods. But credit access aur technology adoption challenges hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Madhubani painting to famous hai Bihar ki!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_quiz_13",
+        "button_text": "Quiz Time 📝"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_13",
+      "card_slug": "card_37_quiz_13",
+      "type": "quiz",
+      "concept_id": "quiz_fdi_routes",
+      "level": 5,
+      "progress": {
+        "current": 37,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "FDI ke kitne routes hain India mein?",
+        "options": [
+          { "id": "A", "text": "Ek hi route — Government Route" },
+          { "id": "B", "text": "Do routes — Automatic aur Government Route" },
+          { "id": "C", "text": "Teen routes — Automatic, Government, RBI Route" },
+          { "id": "D", "text": "Koi specific route nahi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "FDI ke DO ROUTES hain: (1) AUTOMATIC ROUTE — kisi approval ki zarurat nahi (IT, Manufacturing mein). (2) GOVERNMENT ROUTE — approval chahiye (Defense, Multi-brand Retail). Ye classification UPSC aur SSC mein important hai!"
+      },
+      "navigation": {
+        "next": "card_38_quiz_14",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_14",
+      "card_slug": "card_38_quiz_14",
+      "type": "quiz",
+      "concept_id": "quiz_first_sez",
+      "level": 5,
+      "progress": {
+        "current": 38,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "India ka pehla SEZ (Special Economic Zone) kahan bana tha?",
+        "options": [
+          { "id": "A", "text": "Mumbai" },
+          { "id": "B", "text": "Kandla (Gujarat)" },
+          { "id": "C", "text": "Chennai" },
+          { "id": "D", "text": "Vishakhapatnam" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "India ka PEHLA SEZ KANDLA (Gujarat) mein 1965 mein establish hua tha. Export Processing Zone (EPZ) ke naam se start hua tha, baad mein SEZ concept aaya. Ye historical fact Railway aur SSC exams mein puchha jaata hai!"
+      },
+      "navigation": {
+        "next": "card_39_quiz_15",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz_15",
+      "card_slug": "card_39_quiz_15",
+      "type": "quiz",
+      "concept_id": "quiz_dmic_full_form",
+      "level": 5,
+      "progress": {
+        "current": 39,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "DMIC ka full form kya hai?",
+        "options": [
+          { "id": "A", "text": "Delhi-Maharashtra Industrial Corridor" },
+          { "id": "B", "text": "Delhi-Mumbai Industrial Corridor" },
+          { "id": "C", "text": "Delhi-Madhya Pradesh Industrial Corridor" },
+          { "id": "D", "text": "Delhi-Mysore Industrial Corridor" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "DMIC = DELHI-MUMBAI INDUSTRIAL CORRIDOR. Ye India ki sabse badi infrastructure project hai — Japanese collaboration se. 6 states cover karti hai. Full form confusion trap hai exams mein — Maharashtra nahi, MUMBAI!"
+      },
+      "navigation": {
+        "next": "card_40_milestone_5",
+        "button_text": "Module 5 Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_40_milestone_5",
+      "card_slug": "card_40_milestone_5",
+      "type": "milestone",
+      "concept_id": "milestone_advanced_concepts",
+      "level": 5,
+      "progress": {
+        "current": 40,
+        "total": 65
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 5 CLEARED!",
+        "badge_emoji": "💼",
+        "completed_topic": "FDI, SEZ, Industrial Corridors",
+        "xp_earned": 90,
+        "milestone_progress": "Module 5/6 Clear",
+        "motivational_quote": "Outstanding! Advanced concepts bhi clear! Ab last module — Bihar-specific industrial development detail mein! 🌟"
+      },
+      "navigation": {
+        "next": "card_41_bihar_industry_intro",
+        "button_text": "Module 6 Shuru Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_41_bihar_industry_intro",
+      "card_slug": "card_41_bihar_industry_intro",
+      "type": "chat",
+      "concept_id": "bihar_industry_overview",
+      "level": 6,
+      "progress": {
+        "current": 41,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Focus: Bihar ki industrial profile — historically slow industrialization, but recent years mein improvement. Major industries: Food Processing (dairy, fruits), Sugar mills (North Bihar), Textile (Bhagalpur silk), Small-scale industries (handicrafts, leather)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar mein industrialization slow kyun raha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Reasons: (1) Jharkhand alag hone se (2000) mineral resources chale gaye. (2) Poor infrastructure — electricity, roads. (3) Frequent floods (North Bihar). (4) Law & order perception issues. (5) Limited private investment. But ab government efforts se improvement ho raha hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir kya-kya efforts chal rahe hain?"
+        }
+      },
+      "navigation": {
+        "next": "card_42_bihar_govt_efforts",
+        "button_text": "Government Efforts ➔"
+      }
+    },
+    {
+      "card_id": "card_42_bihar_govt_efforts",
+      "card_slug": "card_42_bihar_govt_efforts",
+      "type": "chat",
+      "concept_id": "bihar_government_initiatives",
+      "level": 6,
+      "progress": {
+        "current": 42,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Bihar Government Initiatives: (1) Bihar Industrial Investment Promotion Policy — tax incentives, subsidies. (2) Single Window Clearance System — ease of doing business. (3) Industrial Areas Development — Patna, Gaya, Muzaffarpur mein. (4) Sector-specific push — Food processing (Makhana, Litchi), Leather (Kosi region)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Makhana to famous hai Bihar ka!"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite: Haan! Bihar produces 90%+ of India's Makhana (Fox nut) — mainly Darbhanga, Madhubani, Samastipur districts. GI Tag (Geographical Indication) bhi mila hai! Government processing units promote kar rahi hai — value addition se farmers ko zyada income."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... raw material to hai, processing improve karni hai!"
+        }
+      },
+      "navigation": {
+        "next": "card_43_bihar_infrastructure",
+        "button_text": "Bihar Infrastructure ➔"
+      }
+    },
+    {
+      "card_id": "card_43_bihar_infrastructure",
+      "card_slug": "card_43_bihar_infrastructure",
+      "type": "chat",
+      "concept_id": "bihar_infrastructure_status",
+      "level": 6,
+      "progress": {
+        "current": 43,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Bihar Infrastructure Status: Roads — PMGSY se rural connectivity better hui. Railways — East Central Railway (Hajipur headquarter). Energy — deficit state, thermal plants (Kanti, Barauni) insufficient. Airports — Patna (Jay Prakash Narayan Airport), Gaya operational."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Ganga par bridge to ban rahe hain kaafi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Critical: Haan! Gandhi Setu (Patna), Arrah-Chhapra Bridge, Digha-Sonpur bridge — major connectivity projects. Ganga navigation (waterways) bhi develop ho raha hai — Haldia to Varanasi route operational hai jo Bihar se pass karti hai. Multi-modal transport improve ho raha hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir challenges kya-kya hain abhi bhi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_bihar_challenges",
+        "button_text": "Challenges Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_44_bihar_challenges",
+      "card_slug": "card_44_bihar_challenges",
+      "type": "chat",
+      "concept_id": "bihar_challenges_detailed",
+      "level": 6,
+      "progress": {
+        "current": 44,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Bihar Challenges: (1) Energy deficit — per capita consumption bahut kam. (2) Flood management — Kosi, Gandak rivers har saal damage karte hain. (3) Skill gap — educated youth ko suitable jobs nahi milti. (4) Migration — talented workforce bahar chala jaata hai. (5) Investment climate — perception aur actual mein gap hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir solutions kya hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Way Forward: (1) Renewable energy push — solar potential high hai. (2) Skill development centers — ITIs, polytechnics expand karna. (3) Flood-resistant infrastructure. (4) Branding Bihar — positive perception create karna. (5) PPP model — Public-Private Partnership se investment attract karna. Ye sab BPSC Mains answer writing mein likhna!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye to complete roadmap hai Bihar ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_quiz_16",
+        "button_text": "Quiz Time 📝"
+      }
+    },
+    {
+      "card_id": "card_45_quiz_16",
+      "card_slug": "card_45_quiz_16",
+      "type": "quiz",
+      "concept_id": "quiz_bihar_makhana",
+      "level": 6,
+      "progress": {
+        "current": 45,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar India ke kitne percent Makhana (Fox nut) production karta hai?",
+        "options": [
+          { "id": "A", "text": "50% around" },
+          { "id": "B", "text": "70% around" },
+          { "id": "C", "text": "90% se zyada" },
+          { "id": "D", "text": "30% around" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC TRE Answer: Bihar India ke 90% SE ZYADA Makhana produce karta hai! Mainly Darbhanga, Madhubani, Samastipur districts. GI Tag (Geographical Indication) bhi mila hai. Export potential bhi high hai international markets mein!"
+      },
+      "navigation": {
+        "next": "card_46_quiz_17",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_46_quiz_17",
+      "card_slug": "card_46_quiz_17",
+      "type": "quiz",
+      "concept_id": "quiz_bihar_smart_cities",
+      "level": 6,
+      "progress": {
+        "current": 46,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar se kitne cities Smart Cities Mission mein select hui thi?",
+        "options": [
+          { "id": "A", "text": "2 cities" },
+          { "id": "B", "text": "3 cities" },
+          { "id": "C", "text": "4 cities" },
+          { "id": "D", "text": "5 cities" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC TRE: Bihar se CHAR (4) cities select hui: Patna, Muzaffarpur, Bhagalpur, Biharsharif. Total 100 cities India mein select hui thi Smart Cities Mission (2015) mein. Exact number exams mein puchha jaata hai!"
+      },
+      "navigation": {
+        "next": "card_47_quiz_18",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_47_quiz_18",
+      "card_slug": "card_47_quiz_18",
+      "type": "quiz",
+      "concept_id": "quiz_bihar_railway_hq",
+      "level": 6,
+      "progress": {
+        "current": 47,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "⭐ East Central Railway ka headquarters kahan hai?",
+        "options": [
+          { "id": "A", "text": "Patna" },
+          { "id": "B", "text": "Hajipur" },
+          { "id": "C", "text": "Danapur" },
+          { "id": "D", "text": "Muzaffarpur" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Critical: East Central Railway ka headquarters HAJIPUR (Vaishali district) mein hai! Patna nahi. Ye confusion trap hai exams mein. East Central Railway Bihar, Jharkhand ke kaafi parts cover karti hai!"
+      },
+      "navigation": {
+        "next": "card_48_milestone_6",
+        "button_text": "Module 6 Complete! 🎉"
+      }
+    },
+    {
+      "card_id": "card_48_milestone_6",
+      "card_slug": "card_48_milestone_6",
+      "type": "milestone",
+      "concept_id": "milestone_bihar_specific",
+      "level": 6,
+      "progress": {
+        "current": 48,
+        "total": 65
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 6 CLEARED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Bihar-Specific Industrial Development",
+        "xp_earned": 100,
+        "milestone_progress": "All 6 Modules Complete!",
+        "motivational_quote": "Phenomenal! Saare modules clear! Ab Officer-level Revision aur Final Quiz — tayyar raho! 🔥🎯"
+      },
+      "navigation": {
+        "next": "card_49_officer_revision",
+        "button_text": "Officer Revision Shuru Karo ➔"
+      }
+    },
+    {
+      "card_id": "card_49_officer_revision",
+      "card_slug": "card_49_officer_revision",
+      "type": "summary",
+      "concept_id": "officer_revision_summary",
+      "level": 6,
+      "progress": {
+        "current": 49,
+        "total": 65
+      },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision",
+        "revision_points": [
+          {
+            "topic": "Sector Classification",
+            "point": "Primary (agriculture, mining), Secondary (manufacturing, construction), Tertiary (services). India: Tertiary 55% GDP, Secondary 25-28%, Primary 15-18%. Bihar: Primary dominant in employment (60%+) but not in GDP."
+          },
+          {
+            "topic": "Major Industries",
+            "point": "Steel: India 2nd largest producer. Textile: Ahmedabad 'Manchester of India'. IT: Bangalore 'Silicon Valley'. Automobile: India 4th largest market. Bihar: Food processing, handicrafts, limited large-scale industry."
+          },
+          {
+            "topic": "Infrastructure",
+            "point": "Transport: PMGSY (rural roads), Indian Railways 4th largest. Energy: India 4th in renewable capacity. Communication: BharatNet, Digital India. Bihar: Energy deficit, PMGSY successful, East Central Railway HQ Hajipur."
+          },
+          {
+            "topic": "Govt Initiatives",
+            "point": "Make in India (2014), Smart Cities (100 cities, Bihar: 4), Startup India (2016, India 3rd largest ecosystem), Atmanirbhar Bharat. FDI: Automatic & Government routes. SEZ: First in Kandla (1965)."
+          },
+          {
+            "topic": "Industrial Corridors & MSME",
+            "point": "DMIC (Delhi-Mumbai biggest), AKIC (Bihar included). MSME: 30% GDP, 40%+ employment. Micro: ₹1cr, Small: ₹10cr, Medium: ₹50cr investment. Bihar MSME: Makhana (90%+ production), Madhubani art, leather."
+          },
+          {
+            "topic": "⭐ Bihar Focus",
+            "point": "Smart Cities: Patna, Muzaffarpur, Bhagalpur, Biharsharif. Makhana 90%+ production (GI Tag). Challenges: Energy deficit, floods, migration. ECR HQ: Hajipur. AKIC industrial corridor includes Bihar. Ganga waterways operational."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_50_final_quiz_intro",
+        "button_text": "Final Master Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_50_final_quiz_intro",
+      "card_slug": "card_50_final_quiz_intro",
+      "type": "chat",
+      "concept_id": "final_quiz_introduction",
+      "level": 6,
+      "progress": {
+        "current": 50,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab final master quiz hai — BPSC aur UPSC level ka! Multi-statement questions hain. Carefully analyze karna each statement ko. Ready?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ji Sir! Thoda nervous hoon but poora revision ho gaya hai. Let's do this!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect attitude! Remember — eliminate obviously wrong options pehle, phir careful comparison. Chalo shuru karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Yes Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_final_quiz_1",
+        "button_text": "Quiz 1 Start ➔"
+      }
+    },
+    {
+      "card_id": "card_51_final_quiz_1",
+      "card_slug": "card_51_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_multi_statement_1",
+      "level": 6,
+      "progress": {
+        "current": 51,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements:\n\n1. India is the 2nd largest steel producer in the world.\n2. Ahmedabad is called 'Manchester of India' for cotton textile industry.\n3. Indian Railways is the 4th largest railway network globally.\n4. Bihar has 5 cities selected under Smart Cities Mission.\n\nWhich of the above statements are correct?",
+        "options": [
+          { "id": "A", "text": "1, 2 and 3 only" },
+          { "id": "B", "text": "1, 2 and 4 only" },
+          { "id": "C", "text": "2, 3 and 4 only" },
+          { "id": "D", "text": "1, 2, 3 and 4" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Analysis: Statement 1 — CORRECT (India 2nd largest steel producer after China). Statement 2 — CORRECT (Ahmedabad called Manchester of India). Statement 3 — CORRECT (Indian Railways 4th largest network). Statement 4 — WRONG (Bihar has 4 cities, not 5: Patna, Muzaffarpur, Bhagalpur, Biharsharif). Answer: A (1, 2, 3 only)."
+      },
+      "navigation": {
+        "next": "card_52_final_quiz_2",
+        "button_text": "Quiz 2 ➔"
+      }
+    },
+    {
+      "card_id": "card_52_final_quiz_2",
+      "card_slug": "card_52_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_multi_statement_2",
+      "level": 6,
+      "progress": {
+        "current": 52,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about FDI in India:\n\n1. FDI has two routes — Automatic and Government Route.\n2. 100% FDI is allowed in multi-brand retail.\n3. Defense sector allows 74% FDI under automatic route.\n4. IT sector allows 100% FDI under automatic route.\n\nWhich statements are correct?",
+        "options": [
+          { "id": "A", "text": "1 and 4 only" },
+          { "id": "B", "text": "1, 3 and 4 only" },
+          { "id": "C", "text": "1, 2 and 4 only" },
+          { "id": "D", "text": "All are correct" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Analysis: Statement 1 — CORRECT (Two routes exist). Statement 2 — WRONG (Multi-brand retail FDI prohibited/highly restricted). Statement 3 — WRONG (Defense mein 74% allowed but Government Route se, automatic nahi). Statement 4 — CORRECT (IT sector 100% FDI automatic). Answer: A (1 and 4 only)."
+      },
+      "navigation": {
+        "next": "card_53_final_quiz_3",
+        "button_text": "Quiz 3 ➔"
+      }
+    },
+    {
+      "card_id": "card_53_final_quiz_3",
+      "card_slug": "card_53_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_assertion_reason",
+      "level": 6,
+      "progress": {
+        "current": 53,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "⭐ Assertion (A): Bihar produces more than 90% of India's Makhana (Fox nut).\n\nReason (R): Darbhanga, Madhubani and Samastipur districts have suitable wetlands for Makhana cultivation.\n\nChoose the correct option:",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is not the correct explanation of A" },
+          { "id": "C", "text": "A is true but R is false" },
+          { "id": "D", "text": "A is false but R is true" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ BPSC TRE Answer: Both statements TRUE and R correctly EXPLAINS A. Bihar produces 90%+ Makhana BECAUSE specific districts (Darbhanga, Madhubani, Samastipur) have suitable wetland ecology (ponds, jhils). Geographical condition (wetlands) is the reason for high production. Answer: A."
+      },
+      "navigation": {
+        "next": "card_54_final_quiz_4",
+        "button_text": "Quiz 4 ➔"
+      }
+    },
+    {
+      "card_id": "card_54_final_quiz_4",
+      "card_slug": "card_54_final_quiz_4",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_multi_statement_3",
+      "level": 6,
+      "progress": {
+        "current": 54,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Consider the following about Infrastructure:\n\n1. PMGSY is for rural road connectivity.\n2. India's renewable energy capacity ranks 4th globally.\n3. BharatNet project aims to provide fiber connectivity to rural areas.\n4. India's startup ecosystem ranks 2nd in the world.\n\nHow many statements are correct?",
+        "options": [
+          { "id": "A", "text": "Only one" },
+          { "id": "B", "text": "Only two" },
+          { "id": "C", "text": "Only three" },
+          { "id": "D", "text": "All four" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Analysis: Statement 1 — CORRECT (PMGSY for rural all-weather roads). Statement 2 — CORRECT (India 4th in renewable energy). Statement 3 — CORRECT (BharatNet for rural fiber). Statement 4 — WRONG (India's startup ecosystem ranks 3rd, not 2nd — after USA and China). Answer: C (Three correct)."
+      },
+      "navigation": {
+        "next": "card_55_final_quiz_5",
+        "button_text": "Quiz 5 ➔"
+      }
+    },
+    {
+      "card_id": "card_55_final_quiz_5",
+      "card_slug": "card_55_final_quiz_5",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_multi_statement_4",
+      "level": 6,
+      "progress": {
+        "current": 55,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar-specific: Consider the following:\n\n1. East Central Railway headquarters is in Patna.\n2. Bihar is part of Amritsar-Kolkata Industrial Corridor.\n3. Bihar has major steel plants operational currently.\n4. Kanti Thermal Power Station is in Muzaffarpur district.\n\nWhich statements are correct?",
+        "options": [
+          { "id": "A", "text": "1 and 3 only" },
+          { "id": "B", "text": "2 and 4 only" },
+          { "id": "C", "text": "1, 2 and 4 only" },
+          { "id": "D", "text": "All are correct" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Analysis: Statement 1 — WRONG (ECR HQ is in HAJIPUR, not Patna — common trap!). Statement 2 — CORRECT (Bihar part of AKIC). Statement 3 — WRONG (Bihar has no major steel plants currently operational — nearby Bokaro, Jamshedpur in Jharkhand). Statement 4 — CORRECT (Kanti TPS in Muzaffarpur). Answer: B (2 and 4 only)."
+      },
+      "navigation": {
+        "next": "card_56_final_quiz_6",
+        "button_text": "Last Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_56_final_quiz_6",
+      "card_slug": "card_56_final_quiz_6",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_msme",
+      "level": 6,
+      "progress": {
+        "current": 56,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "MSME classification (manufacturing) ke according:\n\n1. Micro enterprise: Investment up to ₹1 crore\n2. Small enterprise: Investment up to ₹10 crore\n3. Medium enterprise: Investment up to ₹50 crore\n4. MSME sector contributes 30% to India's GDP\n\nWhich statements are correct?",
+        "options": [
+          { "id": "A", "text": "1, 2 and 3 only" },
+          { "id": "B", "text": "1, 2 and 4 only" },
+          { "id": "C", "text": "1, 3 and 4 only" },
+          { "id": "D", "text": "All are correct" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Analysis: Statement 1 — CORRECT (Micro: up to ₹1 crore investment). Statement 2 — CORRECT (Small: up to ₹10 crore). Statement 3 — CORRECT (Medium: up to ₹50 crore). Statement 4 — CORRECT (MSME contributes around 30% to GDP). All definitions correct! Answer: D."
+      },
+      "navigation": {
+        "next": "card_57_congratulations_pre_final",
+        "button_text": "Results ➔"
+      }
+    },
+    {
+      "card_id": "card_57_congratulations_pre_final",
+      "card_slug": "card_57_congratulations_pre_final",
+      "type": "chat",
+      "concept_id": "congratulations_before_final",
+      "level": 6,
+      "progress": {
+        "current": 57,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne saare quizzes complete kar liye! Industry aur Infrastructure ke saare concepts — classification se lekar Bihar-specific details tak — sab cover ho gaya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you Sir! Pehle to bahut confusing lagta tha, ab saaf samajh aa gaya. Specially Bihar ke facts bahut helpful rahe BPSC TRE ke liye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Make in India, Smart Cities, MSME, FDI, SEZ — ye sab UPSC, BPSC, SSC sabhi exams mein zaroori hain. Aur ⭐ Bihar specifics (Makhana, ECR Hajipur, Smart Cities 4) yaad rakhna — direct marks milenge!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir aap bahut acche se padhate hain! Ab confidence hai exam mein!"
+        }
+      ],
+      "navigation": {
+        "next": "card_58_bonus_tricks",
+        "button_text": "Bonus Memory Tricks ➔"
+      }
+    },
+    {
+      "card_id": "card_58_bonus_tricks",
+      "card_slug": "card_58_bonus_tricks",
+      "type": "chat",
+      "concept_id": "memory_tricks_bonus",
+      "level": 6,
+      "progress": {
+        "current": 58,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bonus Memory Tricks! 🧠\n\n1. '2-4-4' Rule: India 2nd (steel), 4th (railways), 4th (renewable)\n2. 'Smart 4': Bihar Smart Cities = 4 (PMMB — Patna, Muzaffarpur, Muzaffarpur [wait!], Bhagalpur, Biharsharif)\n3. 'Makhana 90+': Bihar dominates\n4. 'Hajipur ECR': Not Patna!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye to bahut helpful hai! Aise hi kuch aur bhi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! 5. 'FDI A-G': Automatic & Government (2 routes)\n6. 'SEZ Kandla 1965': First SEZ\n7. 'DMIC D-M': Delhi-MUMBAI (not Maharashtra)\n8. 'Startup 3rd': India 3rd ecosystem (USA, China ke baad)\n9. '100 Smart Cities': Total target\n10. 'MSME 1-10-50': Micro ₹1cr, Small ₹10cr, Medium ₹50cr"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect Sir! Ab to yaad rahega pakka!"
+        }
+      ],
+      "navigation": {
+        "next": "card_59_pyq_patterns",
+        "button_text": "PYQ Patterns ➔"
+      }
+    },
+    {
+      "card_id": "card_59_pyq_patterns",
+      "card_slug": "card_59_pyq_patterns",
+      "type": "chat",
+      "concept_id": "pyq_pattern_analysis",
+      "level": 6,
+      "progress": {
+        "current": 59,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PYQ Patterns samjho:\n\n📌 BPSC: Multi-statement (3-4 statements check karo), Assertion-Reason, Bihar specifics (Makhana, ECR HQ, Smart Cities count)\n📌 SSC: Direct facts (Make in India year, DMIC full form, Railway rank)\n📌 Railway: Ranks (2nd, 3rd, 4th), Infrastructure schemes (PMGSY, BharatNet)\n📌 UPSC: Conceptual (FDI routes, SEZ criticism, MSME importance)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir common mistakes kya avoid karni chahiye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⚠️ Common Traps:\n❌ Mumbai = Manchester (Ab Ahmedabad zyada accepted)\n❌ ECR HQ = Patna (Galat! Hajipur hai)\n❌ Bihar Smart Cities = 5 (Galat! 4 hain)\n❌ Multi-brand retail = 100% FDI (Galat! Prohibited)\n❌ Startup ecosystem = 2nd (Galat! 3rd hai)\n❌ DMIC = Delhi-Maharashtra (Galat! Delhi-Mumbai)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye sab notes mein likh liye! Ab final completion!"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_exam_strategy",
+        "button_text": "Exam Strategy ➔"
+      }
+    },
+    {
+      "card_id": "card_60_exam_strategy",
+      "card_slug": "card_60_exam_strategy",
+      "type": "chat",
+      "concept_id": "exam_strategy_tips",
+      "level": 6,
+      "progress": {
+        "current": 60,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exam Strategy for Industry & Infrastructure:\n\n✅ Read question twice — especially multi-statement (ek galat statement se wrong answer)\n✅ Eliminate obvious wrongs first\n✅ Current data important — ranks, percentages update hote hain\n✅ Bihar questions mein — specific numbers (4 cities, 90% Makhana, ECR Hajipur)\n✅ Conceptual clarity — FDI routes, SEZ benefits-criticism, MSME classification"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir BPSC Mains answer writing ke liye tips?"
+        },
+        {
+          "speaker": "aman",
+          "text": "✍️ Mains Strategy:\n1. Balanced approach — pros & cons dono likho (SEZ, Make in India)\n2. Bihar context integrate karo (challenges, government efforts)\n3. Data use karo (90% Makhana, 60% employment agriculture)\n4. Way forward/Suggestions always add karo\n5. Diagram/flowchart (sector classification, infrastructure components) impactful hote hain"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect Sir! Ab completely ready hoon!"
+        }
+      ],
+      "navigation": {
+        "next": "card_61_motivational_message",
+        "button_text": "Final Message ➔"
+      }
+    },
+    {
+      "card_id": "card_61_motivational_message",
+      "card_slug": "card_61_motivational_message",
+      "type": "chat",
+      "concept_id": "final_motivation",
+      "level": 6,
+      "progress": {
+        "current": 61,
+        "total": 65
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne Industry & Infrastructure ka complete chapter master kar liya — classification se lekar government schemes tak, national level se lekar Bihar specifics tak! Ye topic BPSC, UPSC, SSC sabhi mein important hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir aapki teaching style se sab easy lagta hai! Dhanyavaad!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Remember: Industry aur Infrastructure desh ki backbone hain. Understanding these concepts matlab economy ka pulse samajhna. Exam mein confidence se attempt karna — tumhara preparation solid hai! All the best! 🌟"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you so much Sir! Ab exam mein fearless feel karunga is topic mein! 🙏"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_additional_quiz_1",
+        "button_text": "Bonus Quizzes ➔"
+      }
+    },
+    {
+      "card_id": "card_62_additional_quiz_1",
+      "card_slug": "card_62_additional_quiz_1",
+      "type": "quiz",
+      "concept_id": "bonus_quiz_1",
+      "level": 6,
+      "progress": {
+        "current": 62,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "India ki GDP mein Tertiary Sector (Services) ka approximate contribution kitna hai?",
+        "options": [
+          { "id": "A", "text": "Around 30%" },
+          { "id": "B", "text": "Around 45%" },
+          { "id": "C", "text": "Around 55%" },
+          { "id": "D", "text": "Around 70%" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Tertiary Sector (Services) India ki GDP mein AROUND 55% contribute karta hai — IT, banking, tourism, education sab isme aata hai. Secondary Sector 25-28%, Primary Sector 15-18%. Ye composition UPSC Economic Survey se frequently puchha jaata hai!"
+      },
+      "navigation": {
+        "next": "card_63_additional_quiz_2",
+        "button_text": "Next Bonus ➔"
+      }
+    },
+    {
+      "card_id": "card_63_additional_quiz_2",
+      "card_slug": "card_63_additional_quiz_2",
+      "type": "quiz",
+      "concept_id": "bonus_quiz_2",
+      "level": 6,
+      "progress": {
+        "current": 63,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "Make in India initiative ka logo kya hai?",
+        "options": [
+          { "id": "A", "text": "Tiger" },
+          { "id": "B", "text": "Lion" },
+          { "id": "C", "text": "Elephant" },
+          { "id": "D", "text": "Peacock" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Make in India ka logo LION hai — jo strength, courage aur leadership ko symbolize karta hai. Logo mein geometric pattern mein lion bana hai. Tiger nahi (confusion trap!). Direct factual question hai Railway/SSC exams mein!"
+      },
+      "navigation": {
+        "next": "card_64_additional_quiz_3",
+        "button_text": "Last Bonus ➔"
+      }
+    },
+    {
+      "card_id": "card_64_additional_quiz_3",
+      "card_slug": "card_64_additional_quiz_3",
+      "type": "quiz",
+      "concept_id": "bonus_quiz_3",
+      "level": 6,
+      "progress": {
+        "current": 64,
+        "total": 65
+      },
+      "quiz_payload": {
+        "question": "⭐ Bhagalpur kis industry ke liye historically famous hai?",
+        "options": [
+          { "id": "A", "text": "Steel industry" },
+          { "id": "B", "text": "Silk industry (Tussar silk)" },
+          { "id": "C", "text": "Jute industry" },
+          { "id": "D", "text": "Cotton textile" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE: Bhagalpur SILK INDUSTRY ke liye famous hai — specifically Tussar Silk (wild silk). 'Silk City of Bihar' bhi keha jaata hai. Historically important industry thi, ab bhi kuch production hai lekin decline ho gaya hai. Bihar GK questions mein puchha jaata hai!"
+      },
+      "navigation": {
+        "next": "card_65_final_trophy",
+        "button_text": "Chapter Complete! 🏆"
+      }
+    },
+    {
+      "card_id": "card_65_final_trophy",
+      "card_slug": "card_65_final_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_completion_trophy",
+      "level": 6,
+      "progress": {
+        "current": 65,
+        "total": 65
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Industry & Infrastructure in Indian Economy — Complete!",
+        "xp_earned": 500,
+        "milestone_progress": "100% Complete — Officer Level Achieved!",
+        "motivational_quote": "🎉 OUTSTANDING ACHIEVEMENT! 🎉\n\nTumne master kar liya:\n✅ Sector Classification (Primary, Secondary, Tertiary)\n✅ Major Industries (Steel, Textile, IT, Automobile)\n✅ Infrastructure (Transport, Energy, Communication)\n✅ Government Initiatives (Make in India, Smart Cities, Startup India)\n✅ Advanced Concepts (FDI, SEZ, Industrial Corridors, MSME)\n✅ ⭐ Bihar-Specific Details (Makhana, Smart Cities, ECR Hajipur, Challenges)\n\nExam Strategy clear, PYQ patterns samajh gaye, Memory tricks ready!\n\nAb BPSC, SSC, Railway, UPSC — kahin bhi ye topic tumhara STRENGTH hai!\n\nKeep learning, keep achieving! 🚀📚🌟"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Home 🏠"
+      }
+    }
+  ]
+}
+```
