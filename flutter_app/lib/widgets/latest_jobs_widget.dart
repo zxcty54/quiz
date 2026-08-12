@@ -16,13 +16,15 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
   bool _isLoading = true;
   String _selectedCategory = 'all'; // Categories: 'all', 'bihar', 'central'
 
+  static const String _allJobsWebUrl = "https://www.mocktester.online/search/label/Jobs";
+
   @override
   void initState() {
     super.initState();
     fetchLatestJobs();
   }
 
-  // 1. FETCH LIVE JOBS FROM STATICALLY CDN (BLOCK-PROOF & UNLIMITED)
+  // 1. FETCH LIVE JOBS FROM STATICALLY CDN
   Future<void> fetchLatestJobs() async {
     final int timestamp = DateTime.now().millisecondsSinceEpoch;
     final String url =
@@ -120,7 +122,9 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
 
     final cardBg = widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC);
     final textColor = widget.isDarkMode ? Colors.white : const Color(0xFF0F172A);
-    final displayedJobs = _filteredJobs;
+    
+    // 🎯 SIRF TOP 2 JOBS FILTER KARENGE
+    final displayedJobs = _filteredJobs.take(2).toList();
 
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
@@ -136,6 +140,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // HEADER
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -167,6 +172,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
           const SizedBox(height: 12),
 
+          // CATEGORY CHIPS
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -181,29 +187,32 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
           const SizedBox(height: 12),
 
-          SizedBox(
-            height: 340,
-            child: displayedJobs.isEmpty
-                ? const Center(
+          // 🎯 TOP 2 JOBS LIST (NO SCROLL CONFLICT, CLEAN SCREEN SCROLL)
+          displayedJobs.isEmpty
+              ? const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 20),
+                  child: Center(
                     child: Text(
                       'Is category mein koi notification nahi mila.',
                       style: TextStyle(fontSize: 12, color: Colors.grey),
                     ),
-                  )
-                : ListView.builder(
-                    itemCount: displayedJobs.length,
-                    physics: const BouncingScrollPhysics(),
-                    itemBuilder: (context, index) {
-                      final job = displayedJobs[index];
-                      return _buildDetailedJobCard(job, textColor);
-                    },
                   ),
-          ),
+                )
+              : ListView.builder(
+                  shrinkWrap: true, // 👈 Height utni hi lega jitni 2 items ki hai
+                  physics: const NeverScrollableScrollPhysics(), // 👈 Scroll conflict complete removed!
+                  itemCount: displayedJobs.length,
+                  itemBuilder: (context, index) {
+                    final job = displayedJobs[index];
+                    return _buildDetailedJobCard(job, textColor);
+                  },
+                ),
 
           const SizedBox(height: 8),
 
+          // "VIEW ALL JOBS" BUTTON
           InkWell(
-            onTap: _showAllJobsBottomSheet,
+            onTap: () => _openLink(_allJobsWebUrl),
             borderRadius: BorderRadius.circular(8),
             child: const Padding(
               padding: EdgeInsets.symmetric(vertical: 6.0),
@@ -420,76 +429,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
         ],
       ),
-    );
-  }
-
-  void _showAllJobsBottomSheet() {
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: widget.isDarkMode ? const Color(0xFF0F172A) : Colors.white,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (context) {
-        final textColor = widget.isDarkMode ? Colors.white : const Color(0xFF0F172A);
-
-        return DraggableScrollableSheet(
-          initialChildSize: 0.85,
-          maxChildSize: 0.95,
-          minChildSize: 0.5,
-          expand: false,
-          builder: (context, scrollController) {
-            return Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Center(
-                    child: Container(
-                      width: 36,
-                      height: 4,
-                      decoration: BoxDecoration(
-                        color: Colors.grey.shade300,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 12),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'All Notifications (${_allJobs.length})',
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          color: textColor,
-                        ),
-                      ),
-                      IconButton(
-                        icon: const Icon(Icons.close_rounded, size: 20),
-                        onPressed: () => Navigator.pop(context),
-                      )
-                    ],
-                  ),
-                  const Divider(height: 1),
-                  const SizedBox(height: 10),
-                  Expanded(
-                    child: ListView.builder(
-                      controller: scrollController,
-                      itemCount: _allJobs.length,
-                      itemBuilder: (context, index) {
-                        return _buildDetailedJobCard(_allJobs[index], textColor);
-                      },
-                    ),
-                  ),
-                ],
-              ),
-            );
-          },
-        );
-      },
     );
   }
 }
