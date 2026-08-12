@@ -7,6 +7,7 @@ import '../services/user_stats_service.dart';
 import 'saved_questions_screen.dart';
 import 'wrong_questions_screen.dart';
 import 'saved_current_affairs_screen.dart'; // 👈 NEW VAULT SCREEN IMPORT
+import '../../widgets/donation_widget.dart'; // 👈 YAHAN IMPORT KAREIN
 
 class ProfileScreen extends StatefulWidget {
   final bool isHindi;
