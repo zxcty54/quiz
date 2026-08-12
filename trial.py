@@ -27,19 +27,12 @@ OUTPUT_FILE = "trialoutput.json"
 TIMEOUT = 25
 MAX_PER_SOURCE = 15
 
-MIN_CONTENT_CHARS = 200
-MIN_CONTENT_WORDS = 100
+MIN_CONTENT_CHARS = 450
+MIN_CONTENT_WORDS = 100  # Google alert snippets ke liye threshold lower rakha hai
 MAX_CONTENT_WORDS = 800
 
-# DUAL TIME WINDOW CONFIGURATION
-NATIONAL_AGE_HOURS = 24  # National News: Strict 24 Hours
-BIHAR_AGE_HOURS = 48     # Bihar News: 48 Hours
-
-SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "").strip()
-PIB_ALERT_FEED_URL = os.environ.get(
-    "PIB_ALERT_FEED_URL",
-    "https://www.google.com/alerts/feeds/18398184577640792063/4294037665781559395"
-).strip()
+DEFAULT_PIB_FEED = "https://www.google.com/alerts/feeds/18398184577640792063/4294037665781559395"
+PIB_ALERT_FEED_URL = os.environ.get("PIB_ALERT_FEED_URL", "").strip() or DEFAULT_PIB_FEED
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -89,11 +82,17 @@ def warn(msg): print(f"⚠️ {msg}")
 def success(msg): print(f"✅ {msg}")
 
 def extract_real_google_url(google_url):
+    """Extracts target link from Google Alert Redirects"""
     try:
         parsed = urlparse(google_url)
         query_params = parse_qs(parsed.query)
         if 'url' in query_params:
             return unquote(query_params['url'][0])
+        
+        # Fallback regex for embedded URL patterns
+        match = re.search(r'(https?://[^\s&]+)', google_url)
+        if match:
+            return match.group(1)
     except Exception as e:
         warn(f"URL Extraction Error: {e}")
     return google_url
@@ -218,13 +217,11 @@ def deduplicate(items):
 # SCRAPER SOURCES
 # ============================================================
 
-# 1. PIB GOOGLE ALERTS (FIXED DIRECT SCRAPER)
+# 1. PIB GOOGLE ALERTS
 def scrape_pib_news():
     print("\n" + "=" * 70 + "\n📰 PIB (GOVERNMENT PRESS INFORMATION BUREAU - GOOGLE ALERTS)\n" + "=" * 70)
-    if not PIB_ALERT_FEED_URL:
-        warn("PIB_ALERT_FEED_URL not configured.")
-        return []
-
+    print(f"📡 Using Feed URL: {PIB_ALERT_FEED_URL}")
+    
     try:
         feed = feedparser.parse(PIB_ALERT_FEED_URL)
         entries = feed.entries
@@ -247,10 +244,10 @@ def scrape_pib_news():
 
         print(f"🌐 [{idx}/{len(entries)}] Processing PIB Alert: {clean_t[:45]}...")
         
-        # Scrape Webpage First
+        # Webpage Scraping
         content, pub_date = fetch_generic_article_content(real_url, "PIB")
 
-        # Fallback to Feed Snippet
+        # Fallback to Feed Snippet if full scrape is empty or too short
         if not content or word_count(content) < MIN_CONTENT_WORDS:
             content = clean_text(feed_snippet)
 
