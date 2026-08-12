@@ -1,0 +1,1777 @@
+
+{
+  "topic_id": "public_finance_economy",
+  "topic_title": "Public Finance in Economy",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 60,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "intro_public_finance",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 60
+      },
+      "intro_payload": {
+        "title": "💰 Public Finance in Economy",
+        "subtitle": "Government Ka Paisa Kahan Se Aata Hai, Kahan Jata Hai?",
+        "icon": "🏛️",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Public Finance vs Private Finance - Complete distinction",
+          "Government Revenue: Tax & Non-Tax Sources (Bihar specific included)",
+          "Government Expenditure: Revenue vs Capital",
+          "Budget: Types, Components, Fiscal Deficit",
+          "Public Debt: Internal vs External",
+          "Fiscal Policy & Monetary Policy differences"
+        ],
+        "estimated_time": "22 minutes",
+        "total_modules": 6
+      },
+      "navigation": {
+        "next": "card_02_daily_hook",
+        "button_text": "Shuru Karo 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_hook",
+      "card_slug": "card_02_daily_hook",
+      "type": "chat",
+      "concept_id": "daily_life_hook",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhare ghar mein mahine ka budget banta hai? Jaise Papa ki salary aati hai, phir kharcha hota hai - groceries, bijli ka bill, school fees?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Mummy har mahine planning karti hain ki kitna paisa kahan lagega. Kabhi-kabhi loan bhi lena padta hai agar zyada kharcha ho jaye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Tumhare ghar ka ye budget jo hai, ye Private Finance kehlata hai. Ab ek sawal - Government ka bhi budget hota hai kya? Jaise sadak banani hai, school kholna hai, police ko salary deni hai - iska paisa kahan se aata hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hmmm... shayad tax se? Jaise GST, Income Tax jo log dete hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_public_finance_intro",
+        "button_text": "Bilkul Sahi! ➔"
+      }
+    },
+    {
+      "card_id": "card_03_public_finance_intro",
+      "card_slug": "card_03_public_finance_intro",
+      "type": "chat",
+      "concept_id": "public_finance_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect thinking! Government ke income aur expenditure ko manage karne ka jo process hai, usse PUBLIC FINANCE kehte hain. Ye study karti hai - Government ko paisa kahan se milta hai (Revenue), aur wo paisa kahan kharch karta hai (Expenditure)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Private Finance = Ghar ka budget, Public Finance = Government ka budget?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum correct! Lekin ek bada difference hai - Tumhare Papa loan leke interest dete hain, return karna padta hai. Government bhi loan leta hai - isse Public Debt kehte hain. Aur sabse important - Government tax laga sakti hai forcefully, tumhare Papa nahi laga sakte!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan ye to hai! Government tax zabardasti le sakti hai, Papa sirf kama sakte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_private_vs_public",
+        "button_text": "Difference Detail Mein Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_04_private_vs_public",
+      "card_slug": "card_04_private_vs_public",
+      "type": "chat",
+      "concept_id": "private_vs_public_finance",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab PYQ favorite comparison dekho - Private Finance vs Public Finance:\n\n1️⃣ Objective: Private = Profit kamana, Public = Public Welfare (janta ki bhalayi)\n2️⃣ Income Source: Private = Salary/Business, Public = Tax + Non-Tax Revenue\n3️⃣ Compulsion: Private mein tax dena optional nahi, Public mein government tax laga sakti hai\n4️⃣ Secrecy: Private finance secret rehta hai, Public finance Parliament mein discuss hota hai (Budget)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye to samajh gaya! Lekin government ka exact paisa kahan se aata hai? Sirf Income Tax?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi nahi! Bohot saare sources hain - Tax Revenue (Income Tax, GST, Customs) aur Non-Tax Revenue (Railways ka profit, Interest receipts). Isko detail mein next module mein padhenge. Pehle quiz solve karo!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chalo Sir, ready hoon!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz_1",
+        "button_text": "Quiz Shuru Karo 📝"
+      }
+    },
+    {
+      "card_id": "card_05_quiz_1",
+      "card_slug": "card_05_quiz_1",
+      "type": "quiz",
+      "concept_id": "quiz_basic_1",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Public Finance ka main objective kya hai?",
+        "options": [
+          { "id": "A", "text": "Maximum profit kamana" },
+          { "id": "B", "text": "Public welfare aur resource allocation" },
+          { "id": "C", "text": "Tax collection maximize karna" },
+          { "id": "D", "text": "Foreign investment attract karna" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Public Finance ka main objective PUBLIC WELFARE hai - yaani samaj ki bhalayi ke liye resources ko efficiently allocate karna. Private Finance profit-oriented hoti hai, lekin Government ka focus social welfare par hota hai. BPSC/SSC frequently ye fundamental difference puchte hain!"
+      },
+      "navigation": {
+        "next": "card_06_quiz_2",
+        "button_text": "Agla Question ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_2",
+      "card_slug": "card_06_quiz_2",
+      "type": "quiz",
+      "concept_id": "quiz_basic_2",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Private Finance aur Public Finance mein sabse bada difference kya hai income source ke terms mein?",
+        "options": [
+          { "id": "A", "text": "Private finance mein loan nahi milta" },
+          { "id": "B", "text": "Public finance mein tax lagane ka compulsory power hai" },
+          { "id": "C", "text": "Private finance zyada transparent hoti hai" },
+          { "id": "D", "text": "Public finance mein profit mandatory hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sabse bada difference ye hai ki Government ko TAX lagane ka sovereign power hai - wo zabardasti log se paisa le sakti hai (legally). Private individual ya company ko ye power nahi hoti. Ye constitutional provision hai aur UPSC Prelims ka favorite conceptual trap hai!"
+      },
+      "navigation": {
+        "next": "card_07_quiz_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_3",
+      "card_slug": "card_07_quiz_3",
+      "type": "quiz",
+      "concept_id": "quiz_basic_3",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Public Finance ki study primarily focus karti hai kis par?",
+        "options": [
+          { "id": "A", "text": "Sirf government expenditure par" },
+          { "id": "B", "text": "Sirf tax collection par" },
+          { "id": "C", "text": "Government revenue, expenditure aur debt - teeno par" },
+          { "id": "D", "text": "Sirf budget preparation par" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Public Finance ek comprehensive study hai jo teen main pillars par focus karti hai:\n1. Revenue (Tax + Non-Tax sources)\n2. Expenditure (Revenue + Capital)\n3. Public Debt (Internal + External)\n\nYe teeno interconnected hain aur BPSC mein multi-statement questions mein frequently aate hain!"
+      },
+      "navigation": {
+        "next": "card_08_milestone_1",
+        "button_text": "Result Dekho 🎯"
+      }
+    },
+    {
+      "card_id": "card_08_milestone_1",
+      "card_slug": "card_08_milestone_1",
+      "type": "milestone",
+      "concept_id": "milestone_module_1",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 COMPLETE!",
+        "badge_emoji": "💰",
+        "completed_topic": "Introduction to Public Finance",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Clear",
+        "motivational_quote": "Zabardast! Tumne Public Finance ki foundation strong kar li! Ab government ke paisa ka raaz khulne wala hai! 🚀"
+      },
+      "navigation": {
+        "next": "card_09_revenue_intro",
+        "button_text": "Module 2: Government Revenue 💵"
+      }
+    },
+    {
+      "card_id": "card_09_revenue_intro",
+      "card_slug": "card_09_revenue_intro",
+      "type": "chat",
+      "concept_id": "government_revenue_intro",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab sabse important topic - Government Revenue! Yaad hai tumne bola tha tax se paisa aata hai? Wo sirf ek hissa hai. Government Revenue ke DO main types hote hain - TAX REVENUE aur NON-TAX REVENUE."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab tax ke alawa bhi government paisa kamati hai? Kaise?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Jaise Railway tickets se earning, Government companies ka profit (ONGC, Coal India), Foreign aid, Interest receipts - ye sab Non-Tax Revenue hain. Lekin Tax Revenue zyada important hai kyunki wo maximum contribution deta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To dono categories separately padhni padegi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_tax_revenue_intro",
+        "button_text": "Pehle Tax Revenue Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_10_tax_revenue_intro",
+      "card_slug": "card_10_tax_revenue_intro",
+      "type": "chat",
+      "concept_id": "tax_revenue_basics",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Tax Revenue ko samjhne se pehle TAX ki definition dekho - Ye ek COMPULSORY payment hai jo citizen government ko deta hai, WITHOUT any direct benefit. Matlab tum Income Tax do, lekin tumhe direct koi service nahi milti. Government public services provide karti hai sabko."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Matlab hum tax dete hain aur kuch return nahi milta directly?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Direct nahi, lekin indirect milta hai! Jaise government sadak banati hai, hospital kholta hai, school chalata hai - ye sab tax ke paiso se. Lekin tumhe individual receipt nahi milti ki 'tumhara ₹10,000 tax se ye sadak bani'. Tax ek COLLECTIVE contribution hai society ke welfare ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Ab ye tax kitne types ka hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_direct_indirect_tax",
+        "button_text": "Tax Types Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_11_direct_indirect_tax",
+      "card_slug": "card_11_direct_indirect_tax",
+      "type": "chat",
+      "concept_id": "direct_indirect_tax",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Tax ke DO main types hain - DIRECT TAX aur INDIRECT TAX.\n\nDirect Tax: Jo person/company par lagta hai aur wo khud hi pay karta hai. Example - Income Tax, Corporation Tax, Property Tax.\n\nIndirect Tax: Jo goods/services par lagta hai aur final consumer pay karta hai. Example - GST, Customs Duty, Excise Duty."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek example se samjhaiye please! Confuse ho raha hoon!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho - Tumhare Papa ki salary pe 30% Income Tax lagta hai. Ye Direct Tax hai kyunki Papa khud pay kar rahe hain, kisi aur par shift nahi kar sakte.\n\nLekin jab tum chocolate kharidne jao, uske price mein 18% GST include hota hai. Shopkeeper tax add karta hai, lekin actually tum (consumer) pay kar rahe ho. Ye Indirect Tax hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh! Direct mein burden shift nahi hota, Indirect mein shift ho jata hai consumer par!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_direct_tax_examples",
+        "button_text": "Examples Detail Mein ➔"
+      }
+    },
+    {
+      "card_id": "card_12_direct_tax_examples",
+      "card_slug": "card_12_direct_tax_examples",
+      "type": "chat",
+      "concept_id": "direct_tax_examples",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Direct Tax ki main categories:\n\n1️⃣ Income Tax - Individual ki salary/business income par\n2️⃣ Corporation Tax - Companies ke profit par\n3️⃣ Wealth Tax - (Ab abolished hai India mein 2015 se)\n4️⃣ Capital Gains Tax - Property/shares bechne par profit ke upar\n5️⃣ Property Tax - Ghar/zameen par (Municipal Corporation collect karti hai)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye jo Property Tax bole, wo to local level par lagta hai na? Wo bhi Direct Tax?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi observation! Property Tax municipal level par lagta hai (Nagar Nigam), lekin classification mein ye Direct Tax hi hai kyunki property owner directly pay karta hai. BPSC frequently confuse karti hai central vs state vs local taxes ko!"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Bihar mein koi special tax hai kya Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_bihar_taxes",
+        "button_text": "Bihar Specific Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_13_bihar_taxes",
+      "card_slug": "card_13_bihar_taxes",
+      "type": "chat",
+      "concept_id": "bihar_specific_taxes",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite!\n\nBihar Government ke main revenue sources:\n1️⃣ Professional Tax - Local level income tax\n2️⃣ Stamp Duty & Registration Fees - Property transactions par\n3️⃣ State Excise Revenue - Sharab ki bikri par (Bihar mein prohibition hai, so minimal)\n4️⃣ Vehicle Tax - Gadi registration par\n5️⃣ Bihar State GST (SGST) - Goods & Services par state ka share"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar mein to sharab banned hai, phir bhi excise revenue?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! 2016 se Bihar mein total prohibition hai, isliye abhi excise revenue almost negligible hai. Pehle ye major source tha! BPSC PYQ mein ye specific case study aati hai ki prohibition se revenue loss hua lekin social benefit bhi hua."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab government ko revenue ka loss hua?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_indirect_tax_details",
+        "button_text": "Indirect Tax Padho ➔"
+      }
+    },
+    {
+      "card_id": "card_14_indirect_tax_details",
+      "card_slug": "card_14_indirect_tax_details",
+      "type": "chat",
+      "concept_id": "indirect_tax_details",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Indirect Tax ki main types:\n\n1️⃣ GST (Goods & Services Tax) - 2017 se implement, sabse important!\n2️⃣ Customs Duty - Import/Export par\n3️⃣ Excise Duty - Manufacturing par (ab GST mein merge)\n4️⃣ Service Tax - Services par (ab GST mein merge)\n\nYaad rakho - GST ke pehle bohot saare alag taxes the, ab sabko GST mein consolidate kar diya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye GST ke pehle kya-kya alag taxes the?"
+        },
+        {
+          "speaker": "aman",
+          "text": "GST se pehle nightmare tha - VAT, Service Tax, Excise Duty, Entry Tax, Luxury Tax, Entertainment Tax - 17+ alag taxes! GST ne inhe ek kar diya. Ye 'One Nation, One Tax' concept hai. UPSC Prelims ka favorite reform topic!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! To GST ne simplification kiya hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_quiz_revenue_1",
+        "button_text": "Quiz Solve Karo 📝"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_revenue_1",
+      "card_slug": "card_15_quiz_revenue_1",
+      "type": "quiz",
+      "concept_id": "quiz_revenue_1",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Direct Tax aur Indirect Tax mein fundamental difference kya hai?",
+        "options": [
+          { "id": "A", "text": "Direct Tax rich par lagta hai, Indirect Tax poor par" },
+          { "id": "B", "text": "Direct Tax ka burden shift nahi hota, Indirect Tax ka burden consumer par shift hota hai" },
+          { "id": "C", "text": "Direct Tax central govt collect karti hai, Indirect Tax state govt" },
+          { "id": "D", "text": "Direct Tax zyada hota hai, Indirect Tax kam" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Fundamental difference TAX BURDEN SHIFTING mein hai:\n\nDirect Tax: Jo person/company par lagta hai, wahi pay karta hai. Burden shift nahi kar sakte. Example - Income Tax tumhare Papa pay karenge, kisi aur ko transfer nahi kar sakte.\n\nIndirect Tax: Manufacturer/seller par lagta hai lekin burden consumer par shift ho jata hai through higher prices. Example - GST shopkeeper collect karta hai lekin tum pay karte ho.\n\nYe BPSC/SSC ka most-asked conceptual question hai!"
+      },
+      "navigation": {
+        "next": "card_16_quiz_revenue_2",
+        "button_text": "Agla Question ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz_revenue_2",
+      "card_slug": "card_16_quiz_revenue_2",
+      "type": "quiz",
+      "concept_id": "quiz_revenue_2",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar mein Prohibition (2016 se) ka Government Revenue par kya impact pada?",
+        "options": [
+          { "id": "A", "text": "Revenue mein massive increase hua" },
+          { "id": "B", "text": "Excise revenue significantly reduce hua" },
+          { "id": "C", "text": "Koi impact nahi pada" },
+          { "id": "D", "text": "Sirf Property Tax increase hua" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Specific:\n\nBihar mein April 2016 se Total Prohibition laga (sharab ban). Isse State Excise Revenue drastically reduce ho gaya kyunki pehle alcohol sale par heavy tax milta tha.\n\nLekin Government ka argument tha ki ye social welfare measure hai - health benefits, crime reduction, family welfare.\n\nYe trade-off hai Revenue vs Social Welfare ka - BPSC frequently isse case study mein puchti hai!"
+      },
+      "navigation": {
+        "next": "card_17_quiz_revenue_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_17_quiz_revenue_3",
+      "card_slug": "card_17_quiz_revenue_3",
+      "type": "quiz",
+      "concept_id": "quiz_revenue_3",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "GST (2017 se implement) ne kitne alag-alag taxes ko replace kiya approximately?",
+        "options": [
+          { "id": "A", "text": "5 taxes" },
+          { "id": "B", "text": "10 taxes" },
+          { "id": "C", "text": "17+ taxes" },
+          { "id": "D", "text": "25 taxes" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "GST (1st July 2017 se) ne 17+ alag-alag Central aur State taxes ko replace kiya:\n\nCentral Taxes: Excise Duty, Service Tax, CVD, SAD, etc.\nState Taxes: VAT, Entertainment Tax, Luxury Tax, Entry Tax, Purchase Tax, etc.\n\nYe biggest indirect tax reform tha independent India mein - 'One Nation, One Tax' concept. UPSC/SSC ka favorite factual question hai!"
+      },
+      "navigation": {
+        "next": "card_18_milestone_2",
+        "button_text": "Result Check Karo 🎯"
+      }
+    },
+    {
+      "card_id": "card_18_milestone_2",
+      "card_slug": "card_18_milestone_2",
+      "type": "milestone",
+      "concept_id": "milestone_module_2",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎊 MODULE 2 CLEARED!",
+        "badge_emoji": "💵",
+        "completed_topic": "Government Revenue - Tax Sources",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/6 Clear",
+        "motivational_quote": "Fantastic! Direct vs Indirect Tax clear! Ab Non-Tax Revenue aur fir Expenditure dekhenge! Keep going! 💪"
+      },
+      "navigation": {
+        "next": "card_19_nontax_revenue",
+        "button_text": "Module 3: Non-Tax Revenue 📊"
+      }
+    },
+    {
+      "card_id": "card_19_nontax_revenue",
+      "card_slug": "card_19_nontax_revenue",
+      "type": "chat",
+      "concept_id": "nontax_revenue_intro",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai Non-Tax Revenue! Ye wo income hai jo government bina TAX lagaye earn karti hai. Matlab voluntary ya business activities se. Tax se paisa ZABARDASTI aata hai, Non-Tax Revenue mein NO COMPULSION."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir example dijiye! Kaise government bina tax lagaye paisa kama sakti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho simple examples:\n\n1️⃣ Railways ka ticket sale (revenue earning)\n2️⃣ Post Office ki services\n3️⃣ Government companies ka profit (Dividend) - ONGC, Coal India\n4️⃣ Interest receipts - States ko loan diya hai, uska interest\n5️⃣ Fees & Penalties - Passport fee, Court fee, Traffic challan\n6️⃣ Grants & Gifts - Foreign countries se aid"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To ye sab voluntary transactions hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_nontax_categories",
+        "button_text": "Categories Detail Mein ➔"
+      }
+    },
+    {
+      "card_id": "card_20_nontax_categories",
+      "card_slug": "card_20_nontax_categories",
+      "type": "chat",
+      "concept_id": "nontax_categories",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Non-Tax Revenue ko hum 4 main heads mein divide kar sakte hain:\n\n1️⃣ Commercial Revenue: PSUs ka profit/dividend (SAIL, BHEL, ONGC)\n2️⃣ Administrative Revenue: Fees, fines, penalties\n3️⃣ Interest Receipts: Loans par interest\n4️⃣ Grants-in-Aid: Dusre countries se help\n\nSabse bada contribution COMMERCIAL REVENUE ka hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir PSU matlab kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "PSU = Public Sector Undertaking. Matlab government ki company. Jaise ONGC (oil company), Coal India (coal production), Indian Railways - ye sab government ke hain. Jab profit hota hai, to government ko dividend milta hai. Ye Non-Tax Revenue hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Bihar ke koi PSU hain kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_bihar_nontax",
+        "button_text": "Bihar Specific ➔"
+      }
+    },
+    {
+      "card_id": "card_21_bihar_nontax",
+      "card_slug": "card_21_bihar_nontax",
+      "type": "chat",
+      "concept_id": "bihar_nontax_revenue",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Important!\n\nBihar ke main Non-Tax Revenue sources:\n\n1️⃣ Mining Royalty - Coal, stone, minerals se\n2️⃣ Forest Revenue - Timber, minor forest produce\n3️⃣ Interest Receipts - Cooperative societies ko diye loans par\n4️⃣ Administrative Services - Fees, fines\n5️⃣ Power Sector Revenue - BSPHCL (Bihar State Power Holding Company)\n6️⃣ Central Grants - Central govt se funds"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar mein coal bohot hai na? To mining royalty zyada milti hogi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Bihar mein Jharkhand border area (jaise Rohtas, Gaya districts) mein coal deposits hain. Lekin mining ka major hissa ab Jharkhand mein chala gaya (2000 mein Bihar division ke baad). Phir bhi Bihar ko royalty milti hai coal production se!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Non-Tax Revenue mein bhi geographical advantage matter karta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_tax_vs_nontax",
+        "button_text": "Tax vs Non-Tax Comparison ➔"
+      }
+    },
+    {
+      "card_id": "card_22_tax_vs_nontax",
+      "card_slug": "card_22_tax_vs_nontax",
+      "type": "chat",
+      "concept_id": "tax_vs_nontax_comparison",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek critical comparison jo BPSC/UPSC frequently puchte hain:\n\nTax Revenue:\n✅ Compulsory payment\n✅ No direct quid pro quo (kuch return nahi)\n✅ Maximum contribution (70-75% of total revenue)\n✅ Stable source\n\nNon-Tax Revenue:\n✅ Voluntary/commercial\n✅ Direct service ke badle (ticket liya to train mili)\n✅ Smaller contribution (20-25%)\n✅ Fluctuating nature"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab Tax Revenue zyada reliable hai government ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isliye every government focus karti hai TAX BASE badhane par. Non-Tax Revenue important hai but predictable nahi hai - jaise PSU ka profit kabhi zyada, kabhi kam. Lekin tax relatively stable rehta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Ab quiz time!"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_quiz_nontax_1",
+        "button_text": "Quiz Shuru Karo 📝"
+      }
+    },
+    {
+      "card_id": "card_23_quiz_nontax_1",
+      "card_slug": "card_23_quiz_nontax_1",
+      "type": "quiz",
+      "concept_id": "quiz_nontax_1",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Non-Tax Revenue mein SABSE BADA contribution kis source se aata hai?",
+        "options": [
+          { "id": "A", "text": "Fees aur Fines se" },
+          { "id": "B", "text": "Interest Receipts se" },
+          { "id": "C", "text": "PSUs ka Profit/Dividend se" },
+          { "id": "D", "text": "Foreign Grants se" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Non-Tax Revenue mein COMMERCIAL REVENUE (yaani PSUs ka profit aur dividend) sabse bada contributor hai. Companies jaise ONGC, Coal India, NTPC, SAIL - inke profits se government ko dividend milta hai.\n\nInterest receipts, fees, grants ye sab secondary sources hain.\n\nBPSC/SSC frequently ye sequence puchte hain!"
+      },
+      "navigation": {
+        "next": "card_24_quiz_nontax_2",
+        "button_text": "Agla Question ➔"
+      }
+    },
+    {
+      "card_id": "card_24_quiz_nontax_2",
+      "card_slug": "card_24_quiz_nontax_2",
+      "type": "quiz",
+      "concept_id": "quiz_nontax_2",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar ke Non-Tax Revenue mein Mining Royalty kis district cluster se mainly aati hai?",
+        "options": [
+          { "id": "A", "text": "Patna-Nalanda cluster" },
+          { "id": "B", "text": "Rohtas-Gaya cluster (Jharkhand border)" },
+          { "id": "C", "text": "Muzaffarpur-Darbhanga cluster" },
+          { "id": "D", "text": "Bhagalpur-Munger cluster" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Specific:\n\nBihar mein coal aur mineral deposits mainly Jharkhand border areas mein hain - particularly Rohtas, Gaya, Aurangabad, Kaimur districts mein.\n\n2000 mein Bihar division ke baad major mining areas Jharkhand mein chale gaye, lekin Bihar ko abhi bhi royalty milti hai remaining deposits se.\n\nYe geographical knowledge BPSC mein direct/indirect dono tarah se puchhi jati hai!"
+      },
+      "navigation": {
+        "next": "card_25_quiz_nontax_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_25_quiz_nontax_3",
+      "card_slug": "card_25_quiz_nontax_3",
+      "type": "quiz",
+      "concept_id": "quiz_nontax_3",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Tax Revenue aur Non-Tax Revenue mein fundamental difference kya hai 'compulsion' ke terms mein?",
+        "options": [
+          { "id": "A", "text": "Dono compulsory hain" },
+          { "id": "B", "text": "Tax compulsory hai, Non-Tax voluntary/commercial hai" },
+          { "id": "C", "text": "Tax voluntary hai, Non-Tax compulsory hai" },
+          { "id": "D", "text": "Dono voluntary hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Fundamental difference:\n\nTax Revenue = COMPULSORY payment. Government zabardasti le sakti hai (legally). Tum refuse nahi kar sakte - Income Tax, GST dena hi padega.\n\nNon-Tax Revenue = VOLUNTARY/COMMERCIAL. Tum service lete ho to pay karte ho - Railway ticket liya to paisa diya. Nahi chahiye to mat lo, koi compulsion nahi.\n\nYe conceptual clarity UPSC Prelims aur BPSC mains dono mein zaroori hai!"
+      },
+      "navigation": {
+        "next": "card_26_milestone_3",
+        "button_text": "Module Complete 🎯"
+      }
+    },
+    {
+      "card_id": "card_26_milestone_3",
+      "card_slug": "card_26_milestone_3",
+      "type": "milestone",
+      "concept_id": "milestone_module_3",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 3 CONQUERED!",
+        "badge_emoji": "📊",
+        "completed_topic": "Non-Tax Revenue Sources",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/6 Clear",
+        "motivational_quote": "Superb! Revenue ka complete picture clear! Ab Expenditure dekhte hain - Government paisa kharch kahan karti hai! 🚀"
+      },
+      "navigation": {
+        "next": "card_27_expenditure_intro",
+        "button_text": "Module 4: Government Expenditure 💸"
+      }
+    },
+    {
+      "card_id": "card_27_expenditure_intro",
+      "card_slug": "card_27_expenditure_intro",
+      "type": "chat",
+      "concept_id": "expenditure_intro",
+      "level": 4,
+      "progress": {
+        "current": 27,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Revenue ke baad ab Expenditure! Government jo paisa earn karti hai (Tax + Non-Tax), use KAHAN kharch karti hai? Ye Public Expenditure kehlata hai. Isko DO main categories mein divide karte hain - REVENUE Expenditure aur CAPITAL Expenditure."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye dono ka kya difference hai? Revenue Expenditure matlab revenue par kharch?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi nahi! Confusing name hai but meaning alag hai. Dekho simple rule:\n\nREVENUE Expenditure = Jo recurring/regular kharch hai, har saal hota hai, asset create nahi karta. Example - Salaries, pensions, interest payment.\n\nCAPITAL Expenditure = Jo one-time/long-term investment hai, asset create karta hai. Example - Bridge banana, dam banana, machinery kharidna."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh! Revenue = day-to-day running cost, Capital = long-term investment!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_revenue_expenditure",
+        "button_text": "Revenue Expenditure Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_28_revenue_expenditure",
+      "card_slug": "card_28_revenue_expenditure",
+      "type": "chat",
+      "concept_id": "revenue_expenditure_detail",
+      "level": 4,
+      "progress": {
+        "current": 28,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Revenue Expenditure ki main heads:\n\n1️⃣ Interest Payments - Past loans ka interest (BIGGEST item!)\n2️⃣ Salaries & Pensions - Govt employees ko payment\n3️⃣ Subsidies - Fertilizer, food, fuel subsidy\n4️⃣ Defence (Revenue portion) - Army ki regular expenses\n5️⃣ Grants to States - Central govt states ko deti hai\n6️⃣ Administrative Expenses - Office running costs"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Interest Payment sabse bada item?? Matlab government ne bohot loan liya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! India ka Revenue Expenditure mein 40-45% sirf INTEREST payment mein jaata hai. Ye burden hai past borrowings ka. Isliye fiscal deficit control karna important hai. UPSC ka favorite analytical question!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab agar loan kam lenge to interest bhi kam dena padega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_capital_expenditure",
+        "button_text": "Capital Expenditure Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_29_capital_expenditure",
+      "card_slug": "card_29_capital_expenditure",
+      "type": "chat",
+      "concept_id": "capital_expenditure_detail",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Capital Expenditure ki main heads:\n\n1️⃣ Infrastructure Development - Roads, bridges, ports, airports\n2️⃣ Defence (Capital) - Weapons, aircraft, ships kharidna\n3️⃣ Loans to States/PSUs - Investment ke liye\n4️⃣ Buildings & Machinery - Physical assets\n5️⃣ Irrigation Projects - Dams, canals\n\nYe sab ASSET creation hai - benefit long-term milta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek sadak ban gayi to wo 20-30 saal chalegi, isliye Capital Expenditure!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! Ek BPSC trap yaad rakho - Jab government loan leta hai, wo Capital Receipt hai. Lekin jab us loan ka interest pay karta hai, wo Revenue Expenditure hai! Ye confusing lag sakta hai but logic samjho - loan lena asset hai (paisa aaya), interest dena expense hai (paisa gaya regularly)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Loan = Capital Receipt, Interest on loan = Revenue Expenditure! Ye to pakka yaad rakhna padega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_bihar_expenditure",
+        "button_text": "⭐ Bihar Expenditure ➔"
+      }
+    },
+    {
+      "card_id": "card_30_bihar_expenditure",
+      "card_slug": "card_30_bihar_expenditure",
+      "type": "chat",
+      "concept_id": "bihar_expenditure_pattern",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Important!\n\nBihar Government ke main expenditure areas:\n\n1️⃣ Education (30%+) - Schools, scholarships, mid-day meal\n2️⃣ Social Welfare - Pensions, women schemes (Mukhyamantri Kanya Vivah Yojana)\n3️⃣ Rural Development - MGNREGA, roads\n4️⃣ Health - PHCs, hospitals, COVID response\n5️⃣ Agriculture & allied - Irrigation, subsidies\n6️⃣ Police & Law order"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar mein Education pe itna zyada kharch??"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Bihar population mein youth percentage bohot high hai, aur literacy rate improve karna priority hai. Isliye Education sector pe maximum allocation hota hai - free uniforms, cycles to girl students (Mukhyamantri Cycle Yojana), scholarships.\n\nBPSC frequently Bihar-specific schemes ki details puchti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Ye Cycle Yojana to famous hai! Girls ko 9th-12th mein cycle milti hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_quiz_expenditure_1",
+        "button_text": "Quiz Time 📝"
+      }
+    },
+    {
+      "card_id": "card_31_quiz_expenditure_1",
+      "card_slug": "card_31_quiz_expenditure_1",
+      "type": "quiz",
+      "concept_id": "quiz_expenditure_1",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Revenue Expenditure aur Capital Expenditure mein fundamental difference kya hai?",
+        "options": [
+          { "id": "A", "text": "Revenue Expenditure zyada hota hai, Capital kam" },
+          { "id": "B", "text": "Revenue Expenditure recurring hai aur asset create nahi karta, Capital Expenditure long-term investment hai jo asset create karta hai" },
+          { "id": "C", "text": "Revenue Expenditure sirf salaries hai, Capital sirf defence" },
+          { "id": "D", "text": "Dono same hain, sirf accounting mein alag dikhate hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Fundamental difference:\n\nREVENUE Expenditure:\n✅ Recurring/regular nature\n✅ No asset creation\n✅ Examples: Salaries, Interest, Subsidies\n\nCAPITAL Expenditure:\n✅ One-time/long-term investment\n✅ Asset creation hota hai\n✅ Examples: Roads, dams, buildings\n\nYe distinction BPSC/UPSC ka evergreen conceptual question hai. Budget analysis mein critically important!"
+      },
+      "navigation": {
+        "next": "card_32_quiz_expenditure_2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz_expenditure_2",
+      "card_slug": "card_32_quiz_expenditure_2",
+      "type": "quiz",
+      "concept_id": "quiz_expenditure_2",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "India ke Revenue Expenditure mein SABSE BADA single item kya hai?",
+        "options": [
+          { "id": "A", "text": "Defence Expenditure" },
+          { "id": "B", "text": "Salaries & Pensions" },
+          { "id": "C", "text": "Interest Payments on past borrowings" },
+          { "id": "D", "text": "Subsidies" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "India ke Revenue Expenditure mein INTEREST PAYMENTS sabse bada item hai - approximately 40-45% of total revenue expenditure!\n\nYe past borrowings (loans) ka burden hai. Jitna zyada loan, utna zyada interest.\n\nIsliye fiscal prudence (jimmedari se loan lena) important hai.\n\nSSC/UPSC ka favorite factual + analytical question!"
+      },
+      "navigation": {
+        "next": "card_33_quiz_expenditure_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_33_quiz_expenditure_3",
+      "card_slug": "card_33_quiz_expenditure_3",
+      "type": "quiz",
+      "concept_id": "quiz_expenditure_3",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar Government ke Budget allocation mein SABSE BADA sector kaun sa hai typically?",
+        "options": [
+          { "id": "A", "text": "Defence" },
+          { "id": "B", "text": "Education" },
+          { "id": "C", "text": "Health" },
+          { "id": "D", "text": "Agriculture" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Specific:\n\nBihar Budget mein EDUCATION sector ko maximum allocation milta hai (approximately 30%+ of total budget).\n\nReasons:\n1. High youth population\n2. Literacy rate improvement priority\n3. Multiple schemes - Mid-Day Meal, Uniforms, Cycles (Mukhyamantri Cycle Yojana), Scholarships\n\nNote: Defence state budget item nahi hai, wo central budget mein aata hai!\n\nBPSC frequently sector-wise allocation priorities puchti hai!"
+      },
+      "navigation": {
+        "next": "card_34_milestone_4",
+        "button_text": "Module Complete 🎯"
+      }
+    },
+    {
+      "card_id": "card_34_milestone_4",
+      "card_slug": "card_34_milestone_4",
+      "type": "milestone",
+      "concept_id": "milestone_module_4",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🎖️ MODULE 4 MASTERED!",
+        "badge_emoji": "💸",
+        "completed_topic": "Government Expenditure - Revenue & Capital",
+        "xp_earned": 80,
+        "milestone_progress": "Module 4/6 Clear",
+        "motivational_quote": "Outstanding! Expenditure classification clear! Ab Budget aur Deficit concepts - ye Officer-level hai! 💪"
+      },
+      "navigation": {
+        "next": "card_35_budget_intro",
+        "button_text": "Module 5: Budget & Deficits 📑"
+      }
+    },
+    {
+      "card_id": "card_35_budget_intro",
+      "card_slug": "card_35_budget_intro",
+      "type": "chat",
+      "concept_id": "budget_introduction",
+      "level": 5,
+      "progress": {
+        "current": 35,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai BUDGET - sabse important document! Budget ek ANNUAL FINANCIAL STATEMENT hai jo government ke estimated receipts aur expenditure ko dikhata hai next financial year ke liye. India mein Budget har saal 1st February ko present hota hai Parliament mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir pehle 28 February ko hota tha na? Kab change hua?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! 2017 se date change hui - 28 Feb se 1st Feb. Reason tha ki ministries ko implementation ke liye zyada time mile before financial year starts (1st April se). UPSC ka favorite timeline question!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To ab financial year start hone se pehle planning ready hogi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_budget_types",
+        "button_text": "Budget Types Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_36_budget_types",
+      "card_slug": "card_36_budget_types",
+      "type": "chat",
+      "concept_id": "budget_types",
+      "level": 5,
+      "progress": {
+        "current": 36,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Budget teen types ka hota hai:\n\n1️⃣ BALANCED Budget - Revenue = Expenditure (ideal but impractical)\n2️⃣ SURPLUS Budget - Revenue > Expenditure (rare, very good sign)\n3️⃣ DEFICIT Budget - Revenue < Expenditure (most common, India ka bhi yehi hai)\n\nDeveloping countries mein almost hamesha Deficit Budget hota hai kyunki development ke liye zyada kharch karna padta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Deficit matlab government ko loss ho raha hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Deficit ka matlab ye NAHI ki loss hai. Deficit ka matlab hai - government apne revenue se zyada kharch kar rahi hai, to wo extra paisa BORROWING se la rahi hai. Jaise tum agar ₹100 kama rahe ho but ₹150 kharch kar rahe ho, to ₹50 loan lena padega. Wo ₹50 DEFICIT hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh! To deficit cover karne ke liye loan lena padta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_fiscal_deficit",
+        "button_text": "Fiscal Deficit Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_37_fiscal_deficit",
+      "card_slug": "card_37_fiscal_deficit",
+      "type": "chat",
+      "concept_id": "fiscal_deficit_concept",
+      "level": 5,
+      "progress": {
+        "current": 37,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab FISCAL DEFICIT - ye MOST IMPORTANT indicator hai!\n\nFiscal Deficit = Total Expenditure - Total Revenue (excluding borrowings)\n\nMATLAB: Government kitna BORROW kar rahi hai apni zarooraton ko pura karne ke liye.\n\nExample: Agar govt ka total expenditure ₹100 lakh crore hai aur revenue ₹70 lakh crore, to Fiscal Deficit = ₹30 lakh crore. Ye ₹30 lakh crore LOAN leke bharni padegi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir to zyada Fiscal Deficit matlab zyada loan, matlab zyada interest dena padega future mein!"
+        },
+        {
+          "speaker": "aman",
+          "text": "PERFECT logic! Isliye Fiscal Deficit ko control karna bohot important hai. FRBM Act (Fiscal Responsibility & Budget Management Act, 2003) kehta hai ki Fiscal Deficit GDP ke 3% se zyada nahi hona chahiye. Lekin practically ye limit breach hoti rehti hai emergency situations mein (jaise COVID)."
+        },
+        {
+          "speaker": "raju",
+          "text": "To Fiscal Deficit ek limit mein hona chahiye, warna debt burden badh jayega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_deficit_types",
+        "button_text": "Other Deficits ➔"
+      }
+    },
+    {
+      "card_id": "card_38_deficit_types",
+      "card_slug": "card_38_deficit_types",
+      "type": "chat",
+      "concept_id": "other_deficit_types",
+      "level": 5,
+      "progress": {
+        "current": 38,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Fiscal Deficit ke alawa do aur deficits hain:\n\n1️⃣ REVENUE Deficit = Revenue Expenditure - Revenue Receipts\n(Matlab: Regular income se regular kharch cover nahi ho raha)\n\n2️⃣ PRIMARY Deficit = Fiscal Deficit - Interest Payments\n(Matlab: Fiscal Deficit mein se interest payment hata do, pure borrowing ka pata chalega)\n\nSab interconnected hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye to thoda complex lag raha hai! Koi easy way hai yaad rakhne ka?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Dekho:\n\nRevenue Deficit = Day-to-day expenses bhi apni earning se nahi chal rahe (serious problem!)\nFiscal Deficit = Total kitna borrow kar rahe (overall picture)\nPrimary Deficit = Interest hata ke dekho kitna fresh borrowing (actual new loan)\n\nBPSC/UPSC mein frequently definitions aur calculations puchte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Ab quiz mein test hoga!"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_quiz_budget_1",
+        "button_text": "Quiz Solve Karo 📝"
+      }
+    },
+    {
+      "card_id": "card_39_quiz_budget_1",
+      "card_slug": "card_39_quiz_budget_1",
+      "type": "quiz",
+      "concept_id": "quiz_budget_1",
+      "level": 5,
+      "progress": {
+        "current": 39,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Union Budget ka presentation date kab change hua - 28 February se 1st February?",
+        "options": [
+          { "id": "A", "text": "2015" },
+          { "id": "B", "text": "2016" },
+          { "id": "C", "text": "2017" },
+          { "id": "D", "text": "2018" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "2017 se Union Budget presentation date change hua:\n\nOLD: 28 February (last working day of Feb)\nNEW: 1st February (from Budget 2017-18 onwards)\n\nReason: Ministries ko implementation time zyada mile before financial year (1 April) starts.\n\nYe procedural change tha jo PM Modi government ne kiya.\n\nSSC/UPSC ka favorite timeline question!"
+      },
+      "navigation": {
+        "next": "card_40_quiz_budget_2",
+        "button_text": "Agla Question ➔"
+      }
+    },
+    {
+      "card_id": "card_40_quiz_budget_2",
+      "card_slug": "card_40_quiz_budget_2",
+      "type": "quiz",
+      "concept_id": "quiz_budget_2",
+      "level": 5,
+      "progress": {
+        "current": 40,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Fiscal Deficit ki calculation kaise hoti hai?",
+        "options": [
+          { "id": "A", "text": "Total Revenue - Total Expenditure" },
+          { "id": "B", "text": "Total Expenditure - Total Revenue (excluding borrowings)" },
+          { "id": "C", "text": "Revenue Expenditure - Revenue Receipts" },
+          { "id": "D", "text": "Capital Expenditure - Capital Receipts" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "FISCAL DEFICIT = Total Expenditure - Total Revenue (excluding borrowings)\n\nMATLAB: Government ko kitna BORROW karna pad raha hai apni expenditure needs ko meet karne ke liye.\n\nYe sabse important macroeconomic indicator hai.\n\nFRBM Act target: Fiscal Deficit ≤ 3% of GDP\n\nOption C = Revenue Deficit ka formula\n\nBPSC/UPSC dono mein formula-based questions extremely common!"
+      },
+      "navigation": {
+        "next": "card_41_quiz_budget_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_41_quiz_budget_3",
+      "card_slug": "card_41_quiz_budget_3",
+      "type": "quiz",
+      "concept_id": "quiz_budget_3",
+      "level": 5,
+      "progress": {
+        "current": 41,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "FRBM Act (Fiscal Responsibility & Budget Management Act) kis saal pass hua?",
+        "options": [
+          { "id": "A", "text": "2000" },
+          { "id": "B", "text": "2003" },
+          { "id": "C", "text": "2005" },
+          { "id": "D", "text": "2010" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "FRBM Act, 2003 mein pass hua (effective from 2004).\n\nObjective: Fiscal discipline maintain karna - deficits ko control mein rakhna.\n\nKey Targets:\n✅ Fiscal Deficit ≤ 3% of GDP\n✅ Revenue Deficit eliminate karna\n\nLekin practically ye targets achieve karna mushkil hota hai - especially during economic slowdown ya crisis (jaise COVID-19).\n\nUPSC/BPSC ka favorite act + year combination!"
+      },
+      "navigation": {
+        "next": "card_42_milestone_5",
+        "button_text": "Module Complete 🎯"
+      }
+    },
+    {
+      "card_id": "card_42_milestone_5",
+      "card_slug": "card_42_milestone_5",
+      "type": "milestone",
+      "concept_id": "milestone_module_5",
+      "level": 5,
+      "progress": {
+        "current": 42,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🔥 MODULE 5 CLEARED!",
+        "badge_emoji": "📑",
+        "completed_topic": "Budget & Deficit Concepts",
+        "xp_earned": 90,
+        "milestone_progress": "Module 5/6 Clear",
+        "motivational_quote": "Brilliant! Fiscal Deficit jaise complex concepts bhi crystal clear! Ab last module - Public Debt! Almost Officer ban gaye! 🎯"
+      },
+      "navigation": {
+        "next": "card_43_public_debt_intro",
+        "button_text": "Module 6: Public Debt 💳"
+      }
+    },
+    {
+      "card_id": "card_43_public_debt_intro",
+      "card_slug": "card_43_public_debt_intro",
+      "type": "chat",
+      "concept_id": "public_debt_introduction",
+      "level": 6,
+      "progress": {
+        "current": 43,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Last module - PUBLIC DEBT! Jab government ko Fiscal Deficit cover karna hota hai, to wo LOAN leta hai. Iss total accumulated loan ko PUBLIC DEBT kehte hain. Ye government ki liability hai jo future mein repay karni hogi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab debt matlab loan ka total burden?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Public Debt = Total outstanding loans + liabilities of government. Isko DO categories mein divide karte hain:\n\n1️⃣ INTERNAL Debt - Apne hi desh ke andar se loan (banks, citizens, RBI)\n2️⃣ EXTERNAL Debt - Dusre desh ya international institutions se loan (World Bank, IMF, foreign govts)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir dono mein kya difference hai practically?"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_internal_debt",
+        "button_text": "Internal Debt Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_44_internal_debt",
+      "card_slug": "card_44_internal_debt",
+      "type": "chat",
+      "concept_id": "internal_debt_detail",
+      "level": 6,
+      "progress": {
+        "current": 44,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "INTERNAL DEBT ke main sources:\n\n1️⃣ Market Loans (Government Securities/Bonds) - Sabse bada source! Banks, companies, citizens inhe kharidti hain\n2️⃣ Treasury Bills (T-Bills) - Short-term borrowing (91 days, 182 days, 364 days)\n3️⃣ Small Savings (PPF, NSC, Post Office) - Citizens ka paisa\n4️⃣ Provident Funds - Employees ka PF paisa\n\nYe sab RUPEE mein hota hai, dollar mein nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab jab Papa PPF mein paisa dalte hain, wo actually government ko loan de rahe hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "EXACTLY! Perfect understanding! PPF, NSC, Sukanya Samriddhi - ye sab government ki borrowing schemes hain. Tumhare Papa ko interest milta hai, aur government tumhare paiso ko development projects mein use karti hai. Ek tarah se tum government ke creditor (udhaar dene wale) ban jaate ho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Ye to maine kabhi socha nahi tha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_external_debt",
+        "button_text": "External Debt Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_45_external_debt",
+      "card_slug": "card_45_external_debt",
+      "type": "chat",
+      "concept_id": "external_debt_detail",
+      "level": 6,
+      "progress": {
+        "current": 45,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "EXTERNAL DEBT ke main sources:\n\n1️⃣ Multilateral Institutions - World Bank, IMF, Asian Development Bank (ADB)\n2️⃣ Bilateral Loans - Dusre countries se (Japan, US, Germany)\n3️⃣ Commercial Borrowings - Foreign banks/institutions se\n4️⃣ External Commercial Borrowings (ECBs)\n\nYe usually DOLLAR ya dusri foreign currency mein hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Internal aur External mein kaun sa better hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Good question! INTERNAL debt generally better hai kyunki:\n\n✅ No foreign exchange risk (rupee stable rahe ya gire, effect kam)\n✅ Interest payment bhi apne desh ke andar rehta (money stays in economy)\n\nExternal debt risky kyunki:\n❌ If rupee depreciates (weak hota hai), to repayment burden badh jata!\n❌ Foreign conditions/interference ki possibility\n\nLekin dono zaroori hain balanced development ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Internal debt safer but limited, External debt risky but zyada available!"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_debt_sustainability",
+        "button_text": "Debt Sustainability ➔"
+      }
+    },
+    {
+      "card_id": "card_46_debt_sustainability",
+      "card_slug": "card_46_debt_sustainability",
+      "type": "chat",
+      "concept_id": "debt_sustainability",
+      "level": 6,
+      "progress": {
+        "current": 46,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab critical concept - DEBT SUSTAINABILITY! Matlab kya government ka debt level manageable hai ya dangerous?\n\nMain indicator: DEBT-to-GDP RATIO\n\nFormula: (Total Public Debt / GDP) × 100\n\nGeneral guideline: Agar ye ratio 60% se kam hai, to sustainable. Agar 80-90% cross kare, to risky zone!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir India ka Debt-to-GDP ratio kitna hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "India ka currently approximately 85-90% hai (Central + State combined). COVID ke baad thoda badh gaya tha. Ye concerning level hai lekin crisis level nahi. Developed countries jaise Japan ka 250%+ hai!\n\nImportant hai ki ye ratio STABLE rahe ya reduce ho. Agar continuously badhta rahe, to problem!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab debt level ko monitor karna zaroori hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_fiscal_vs_monetary",
+        "button_text": "Fiscal vs Monetary Policy ➔"
+      }
+    },
+    {
+      "card_id": "card_47_fiscal_vs_monetary",
+      "card_slug": "card_47_fiscal_vs_monetary",
+      "type": "chat",
+      "concept_id": "fiscal_vs_monetary_policy",
+      "level": 6,
+      "progress": {
+        "current": 47,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Last important comparison - FISCAL POLICY vs MONETARY POLICY! Dono economy manage karte hain but different ways mein:\n\nFISCAL Policy:\n✅ Government ka tool\n✅ Tax aur Expenditure se related\n✅ Budget ke through implement\n✅ Ministry of Finance handles\n\nMONETARY Policy:\n✅ Reserve Bank of India (RBI) ka tool\n✅ Interest rates aur Money Supply se related\n✅ Repo Rate, CRR, SLR changes\n✅ RBI independently handles"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh! To Fiscal = Government, Monetary = RBI!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Example:\n\nFiscal Policy: Government subsidy de, tax kam kare, infrastructure pe kharch badaye\n\nMonetary Policy: RBI interest rate kam kare (loan sasta), ya CRR badaye (banks ka lending capacity reduce)\n\nDono COMPLEMENTARY hain - sath mein kaam karte hain economy stabilize karne ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to clear ho gaya! Ab final quiz ready hoon!"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_quiz_debt_1",
+        "button_text": "Quiz Time 📝"
+      }
+    },
+    {
+      "card_id": "card_48_quiz_debt_1",
+      "card_slug": "card_48_quiz_debt_1",
+      "type": "quiz",
+      "concept_id": "quiz_debt_1",
+      "level": 6,
+      "progress": {
+        "current": 48,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Internal Debt aur External Debt mein sabse bada difference kya hai risk ke terms mein?",
+        "options": [
+          { "id": "A", "text": "Internal debt ka interest zyada hota hai" },
+          { "id": "B", "text": "External debt mein foreign exchange risk (currency fluctuation) hota hai" },
+          { "id": "C", "text": "Internal debt repay nahi karna padta" },
+          { "id": "D", "text": "External debt sirf dollar mein hota hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sabse bada difference FOREIGN EXCHANGE RISK mein hai:\n\nExternal Debt: Foreign currency (dollar/euro) mein hota hai. Agar rupee weak hota hai (depreciation), to repayment burden significantly badh jata hai!\n\nExample: $1 billion loan liya jab ₹1 = $0.015 (₹67 per dollar). Jab repay karna hai tab ₹1 = $0.012 (₹83 per dollar). To same $1 billion ke liye zyada rupees lagenge!\n\nInternal Debt mein ye problem nahi - sab rupee mein.\n\nUPSC/BPSC ka favorite conceptual trap!"
+      },
+      "navigation": {
+        "next": "card_49_quiz_debt_2",
+        "button_text": "Agla Question ➔"
+      }
+    },
+    {
+      "card_id": "card_49_quiz_debt_2",
+      "card_slug": "card_49_quiz_debt_2",
+      "type": "quiz",
+      "concept_id": "quiz_debt_2",
+      "level": 6,
+      "progress": {
+        "current": 49,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Debt Sustainability measure karne ka main indicator kya hai?",
+        "options": [
+          { "id": "A", "text": "Total Debt amount" },
+          { "id": "B", "text": "Debt-to-GDP Ratio" },
+          { "id": "C", "text": "Per capita debt" },
+          { "id": "D", "text": "Annual borrowing rate" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "DEBT-TO-GDP RATIO main indicator hai debt sustainability measure karne ka.\n\nFormula: (Total Public Debt / GDP) × 100\n\nYe ratio batata hai ki country ki earning (GDP) ke compared to debt kitna hai.\n\nGeneral Guideline:\n✅ <60% = Sustainable\n⚠️ 60-80% = Manageable but caution\n❌ >80% = Risky zone\n\nIndia: ~85-90% (Central+State combined)\n\nIMF, World Bank ye ratio closely monitor karte hain.\n\nBPSC/UPSC frequently calculation + interpretation puchte hain!"
+      },
+      "navigation": {
+        "next": "card_50_quiz_debt_3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_50_quiz_debt_3",
+      "card_slug": "card_50_quiz_debt_3",
+      "type": "quiz",
+      "concept_id": "quiz_debt_3",
+      "level": 6,
+      "progress": {
+        "current": 50,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Fiscal Policy aur Monetary Policy mein kaun government ke direct control mein hai?",
+        "options": [
+          { "id": "A", "text": "Dono government control mein" },
+          { "id": "B", "text": "Sirf Fiscal Policy government control mein, Monetary Policy RBI control mein" },
+          { "id": "C", "text": "Sirf Monetary Policy government control mein" },
+          { "id": "D", "text": "Dono RBI control mein" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "FISCAL POLICY:\n✅ Government (Ministry of Finance) ke control mein\n✅ Budget, Tax, Expenditure decisions\n✅ Political process - Parliament approval chahiye\n\nMONETARY POLICY:\n✅ RBI (Reserve Bank of India) ke control mein\n✅ Interest rates, Money Supply, CRR/SLR decisions\n✅ Independent body - government interference nahi (ideally)\n\nYe separation of powers important hai - monetary policy ko political pressure se bachane ke liye.\n\nUPSC/BPSC ka must-know institutional framework!"
+      },
+      "navigation": {
+        "next": "card_51_milestone_6",
+        "button_text": "Final Module Complete! 🎯"
+      }
+    },
+    {
+      "card_id": "card_51_milestone_6",
+      "card_slug": "card_51_milestone_6",
+      "type": "milestone",
+      "concept_id": "milestone_module_6",
+      "level": 6,
+      "progress": {
+        "current": 51,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 6 CONQUERED!",
+        "badge_emoji": "💳",
+        "completed_topic": "Public Debt & Policy Framework",
+        "xp_earned": 100,
+        "milestone_progress": "Module 6/6 Clear - ALL MODULES DONE!",
+        "motivational_quote": "PHENOMENAL! Saare 6 modules complete! Ab final revision aur Officer-level quiz! You're unstoppable! 🚀🔥"
+      },
+      "navigation": {
+        "next": "card_52_summary",
+        "button_text": "⚡ Officer Revision Card ➔"
+      }
+    },
+    {
+      "card_id": "card_52_summary",
+      "card_slug": "card_52_summary",
+      "type": "summary",
+      "concept_id": "final_summary",
+      "level": 6,
+      "progress": {
+        "current": 52,
+        "total": 60
+      },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Public Finance",
+        "revision_points": [
+          {
+            "topic": "Public vs Private Finance",
+            "point": "Public = Govt budget, objective welfare, tax power. Private = Individual/firm, profit motive, no tax power. Public Finance: Revenue + Expenditure + Debt management."
+          },
+          {
+            "topic": "Government Revenue Sources",
+            "point": "Tax Revenue (70-75%): Direct (Income, Corporation, Property) + Indirect (GST, Customs). Non-Tax (20-25%): PSU dividend, Interest, Fees. Bihar: Professional Tax, SGST, Mining Royalty, Prohibition impact on Excise."
+          },
+          {
+            "topic": "Government Expenditure",
+            "point": "Revenue Exp: Recurring, no asset (Salaries, Interest 40-45%, Subsidies). Capital Exp: Long-term, asset creation (Infrastructure, Defence capital). Bihar: Education 30%+, Mukhyamantri Cycle Yojana."
+          },
+          {
+            "topic": "Budget & Deficits",
+            "point": "Budget Date: 1st Feb (since 2017). Types: Balanced/Surplus/Deficit. Fiscal Deficit = Total Exp - Total Revenue (excl. borrowings). FRBM Act 2003: Target ≤3% GDP. Revenue Deficit, Primary Deficit concepts."
+          },
+          {
+            "topic": "Public Debt",
+            "point": "Internal (Rupee): Bonds, T-Bills, PPF, PF - safer. External (Dollar): World Bank, IMF, Bilateral - forex risk. Debt-to-GDP ratio: India ~85-90%. Sustainability critical."
+          },
+          {
+            "topic": "Fiscal vs Monetary Policy",
+            "point": "Fiscal: Govt tool, Tax+Expenditure, Budget, MoF. Monetary: RBI tool, Interest rates+Money Supply, Repo/CRR/SLR, Independent. Complementary for economy stabilization."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_53_statement_quiz_1",
+        "button_text": "Multi-Statement Quiz 1 ➔"
+      }
+    },
+    {
+      "card_id": "card_53_statement_quiz_1",
+      "card_slug": "card_53_statement_quiz_1",
+      "type": "quiz",
+      "concept_id": "multi_statement_1",
+      "level": 6,
+      "progress": {
+        "current": 53,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about Public Finance:\n\n1. Public Finance mein government ko tax lagane ka compulsory power hota hai.\n2. Revenue Expenditure mein asset creation hota hai.\n3. GST ek Direct Tax hai.\n4. Bihar mein total prohibition ke baad Excise Revenue significantly reduce hua.\n\nKitne statements SAHI hain?",
+        "options": [
+          { "id": "A", "text": "Sirf 1" },
+          { "id": "B", "text": "1 aur 4" },
+          { "id": "C", "text": "2 aur 3" },
+          { "id": "D", "text": "Sabhi sahi hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement-wise analysis:\n\n1. ✅ SAHI - Public Finance mein government ko sovereign power hai tax lagane ka, compulsory payment.\n\n2. ❌ GALAT - Revenue Expenditure mein NO asset creation. Asset creation = Capital Expenditure. Revenue Exp = recurring costs (salaries, interest).\n\n3. ❌ GALAT - GST ek INDIRECT Tax hai, goods/services par. Burden consumer par shift hota hai.\n\n4. ✅ SAHI - Bihar 2016 prohibition ke baad alcohol sale pe tax revenue drastically reduce hua.\n\nSirf 1 aur 4 sahi = Answer B\n\nBPSC ka classic multi-statement trap!"
+      },
+      "navigation": {
+        "next": "card_54_statement_quiz_2",
+        "button_text": "Multi-Statement Quiz 2 ➔"
+      }
+    },
+    {
+      "card_id": "card_54_statement_quiz_2",
+      "card_slug": "card_54_statement_quiz_2",
+      "type": "quiz",
+      "concept_id": "multi_statement_2",
+      "level": 6,
+      "progress": {
+        "current": 54,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements:\n\n1. India ka Revenue Expenditure mein sabse bada item Interest Payment hai.\n2. Budget presentation date 2017 se 1st February kar diya gaya.\n3. FRBM Act ka target Fiscal Deficit ko GDP ke 5% se kam rakhna hai.\n4. External Debt mein foreign exchange risk hota hai.\n\nKitne statements SAHI hain?",
+        "options": [
+          { "id": "A", "text": "1, 2 aur 3" },
+          { "id": "B", "text": "1, 2 aur 4" },
+          { "id": "C", "text": "2, 3 aur 4" },
+          { "id": "D", "text": "Sabhi sahi hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement analysis:\n\n1. ✅ SAHI - Interest Payments (past borrowings ka) sabse bada item hai Revenue Expenditure mein (~40-45%).\n\n2. ✅ SAHI - Budget date 2017 se change - 28 Feb se 1st Feb. Reason: Implementation time badhana.\n\n3. ❌ GALAT - FRBM Act 2003 ka target Fiscal Deficit ≤ 3% of GDP hai, 5% nahi! Ye common numerical trap hai.\n\n4. ✅ SAHI - External Debt (dollar/foreign currency) mein currency depreciation risk hota hai. Rupee weak ho to repayment burden badh jata.\n\n1, 2, 4 sahi = Answer B\n\nUPSC Prelims favorite combination!"
+      },
+      "navigation": {
+        "next": "card_55_statement_quiz_3",
+        "button_text": "Multi-Statement Quiz 3 ➔"
+      }
+    },
+    {
+      "card_id": "card_55_statement_quiz_3",
+      "card_slug": "card_55_statement_quiz_3",
+      "type": "quiz",
+      "concept_id": "multi_statement_3",
+      "level": 6,
+      "progress": {
+        "current": 55,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "⭐ Bihar-specific: Consider the following:\n\n1. Bihar Budget mein Education sector ko maximum allocation milta hai.\n2. Mukhyamantri Cycle Yojana Capital Expenditure ka hissa hai.\n3. Bihar mein Mining Royalty mainly Rohtas-Gaya cluster se aati hai.\n4. Bihar State Election Commission Budget mein autonomous allocation hota hai.\n\nKitne statements SAHI hain?",
+        "options": [
+          { "id": "A", "text": "Sirf 1 aur 3" },
+          { "id": "B", "text": "1, 2 aur 3" },
+          { "id": "C", "text": "1, 3 aur 4" },
+          { "id": "D", "text": "Sabhi sahi hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ BPSC TRE Analysis:\n\n1. ✅ SAHI - Bihar mein Education sector ko ~30%+ allocation - highest among sectors. Mid-day meal, uniforms, scholarships.\n\n2. ❌ GALAT - Cycle Yojana (cycles distribute karna) REVENUE Expenditure hai, Capital nahi. Ye recurring scheme hai, asset creation nahi (cycle student ka ho jata hai, govt ka asset nahi).\n\n3. ✅ SAHI - Mining royalty mainly Jharkhand border areas se - Rohtas, Gaya, Kaimur districts (coal, minerals).\n\n4. ❌ GALAT - SEC autonomous body hai but budget allocation state budget ka part hai, separate autonomous nahi. Finance dept allocate karti hai.\n\nSirf 1 aur 3 sahi = Answer A\n\nBPSC TRE ka favorite Bihar-specific trap!"
+      },
+      "navigation": {
+        "next": "card_56_assertion_reason",
+        "button_text": "Assertion-Reason Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_56_assertion_reason",
+      "card_slug": "card_56_assertion_reason",
+      "type": "quiz",
+      "concept_id": "assertion_reason",
+      "level": 6,
+      "progress": {
+        "current": 56,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): Internal Debt generally preferred hai External Debt ke comparison mein.\n\nReason (R): Internal Debt mein foreign exchange risk nahi hota aur interest payment bhi domestic economy mein hi rehta hai.\n\nSelect the correct answer:",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is NOT the correct explanation of A" },
+          { "id": "C", "text": "A is true, but R is false" },
+          { "id": "D", "text": "A is false, but R is true" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "BPSC-style Assertion-Reason:\n\nAssertion (A): ✅ TRUE\nInternal Debt generally safer aur preferred hai kyunki:\n- Stable (no currency risk)\n- Domestic control\n- Less political interference\n\nReason (R): ✅ TRUE\n- No forex risk (sab rupee mein)\n- Interest payment economy ke andar circulate hota, GDP leak nahi\n\nR is CORRECT EXPLANATION of A:\nKyunki ye exactly wo reasons hain jo Internal Debt ko preferred banate hain!\n\nAnswer: A (Both true, R explains A)\n\nUPSC/BPSC favorite format!"
+      },
+      "navigation": {
+        "next": "card_57_final_quiz",
+        "button_text": "🔥 FINAL OFFICER QUIZ ➔"
+      }
+    },
+    {
+      "card_id": "card_57_final_quiz",
+      "card_slug": "card_57_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 6,
+      "progress": {
+        "current": 57,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "🎯 FINAL OFFICER-LEVEL QUESTION:\n\nConsider the following about Public Finance in India:\n\n1. Fiscal Deficit formula mein borrowings ko EXCLUDE karte hain total revenue se.\n2. PPF (Public Provident Fund) mein citizens ka investment government ke liye Internal Debt hai.\n3. Direct Tax ka burden taxpayer se consumer par shift ho sakta hai.\n4. Debt-to-GDP ratio agar 60% se kam hai to generally sustainable mana jata hai.\n5. Monetary Policy RBI implement karti hai, lekin government ke directives ke under.\n\nKitne statements COMPLETELY SAHI hain?",
+        "options": [
+          { "id": "A", "text": "Sirf 1, 2 aur 4" },
+          { "id": "B", "text": "1, 2, 3 aur 4" },
+          { "id": "C", "text": "2, 3 aur 5" },
+          { "id": "D", "text": "Sabhi sahi hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "🔥 MASTER-LEVEL ANALYSIS:\n\n1. ✅ SAHI - Fiscal Deficit = Total Expenditure - Total Revenue (EXCLUDING borrowings). Borrowings nikaal do, pure deficit pata chalta.\n\n2. ✅ SAHI - PPF, NSC, etc. mein citizens ka paisa government ke liye INTERNAL DEBT hai. Tum creditor, govt debtor.\n\n3. ❌ GALAT - Direct Tax ka burden SHIFT NAHI hota! Ye fundamental property hai. Income Tax papa pay karenge, kisi aur par transfer nahi. INDIRECT tax ka burden shift hota hai.\n\n4. ✅ SAHI - Debt-to-GDP <60% = sustainable. 60-80% = caution zone. >80% = risky (India ~85-90%).\n\n5. ❌ GALAT - RBI INDEPENDENT hai monetary policy mein. Government directives nahi, autonomous decisions (interest rates, CRR/SLR). Ye separation critical hai!\n\nSirf 1, 2, 4 completely sahi = Answer A\n\nBPSC/UPSC Officer-level multi-concept integration question!\n\nStatement 3 aur 5 classic conceptual traps hain!"
+      },
+      "navigation": {
+        "next": "card_58_bonus_pyq",
+        "button_text": "💎 Bonus PYQ ➔"
+      }
+    },
+    {
+      "card_id": "card_58_bonus_pyq",
+      "card_slug": "card_58_bonus_pyq",
+      "type": "quiz",
+      "concept_id": "bonus_pyq",
+      "level": 6,
+      "progress": {
+        "current": 58,
+        "total": 60
+      },
+      "quiz_payload": {
+        "question": "💎 BONUS PYQ-STYLE:\n\n⭐ Bihar context: Bihar Government ne agar ek fiscal year mein:\n- Tax Revenue = ₹1,00,000 crore\n- Non-Tax Revenue = ₹30,000 crore\n- Revenue Expenditure = ₹1,50,000 crore\n- Capital Expenditure = ₹40,000 crore\n\nTo REVENUE DEFICIT kitna hoga?",
+        "options": [
+          { "id": "A", "text": "₹20,000 crore" },
+          { "id": "B", "text": "₹60,000 crore" },
+          { "id": "C", "text": "₹10,000 crore" },
+          { "id": "D", "text": "₹50,000 crore" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "💎 CALCULATION MASTER-CLASS:\n\nRevenue Deficit formula:\n= Revenue Expenditure - Revenue Receipts\n\nRevenue Receipts = Tax Revenue + Non-Tax Revenue\n= ₹1,00,000 + ₹30,000\n= ₹1,30,000 crore\n\nRevenue Expenditure = ₹1,50,000 crore (given)\n\nRevenue Deficit:\n= ₹1,50,000 - ₹1,30,000\n= ₹20,000 crore ✅\n\nAnswer: A\n\n⚠️ TRAP ALERT:\nOption B (₹60,000) = Agar Total Expenditure (Revenue+Capital) mein se receipts minus karte (galat approach - ye fiscal deficit ka method hai)\n\nRevenue Deficit mein SIRF Revenue items consider karte hain!\n\nBPSC/SSC numerical ka favorite pattern - formula mixing trap!\n\n⭐ Bihar Budget analysis questions mein ye type frequently aata hai!"
+      },
+      "navigation": {
+        "next": "card_59_pro_tip",
+        "button_text": "💡 Pro Tips ➔"
+      }
+    },
+    {
+      "card_id": "card_59_pro_tip",
+      "card_slug": "card_59_pro_tip",
+      "type": "chat",
+      "concept_id": "pro_tips",
+      "level": 6,
+      "progress": {
+        "current": 59,
+        "total": 60
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "💡 EXAM PRO TIPS - Public Finance:\n\n1️⃣ Article numbers yaad rakho (243K, 243ZA - SEC related)\n2️⃣ Years critical: GST 2017, FRBM 2003, Budget date change 2017\n3️⃣ Formulas crystal clear: Fiscal Deficit, Revenue Deficit, Primary Deficit\n4️⃣ Direct vs Indirect - burden shifting concept pakki\n5️⃣ Bihar specifics: Education 30%+, Prohibition impact, Mining Royalty districts"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye sab to perfect hai! Koi last strategy?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Multi-statement questions mein:\n✅ Har statement ko INDEPENDENTLY evaluate karo\n✅ Common traps: Direct-Indirect confusion, Revenue-Capital swap, Formula mixing\n✅ Bihar-specific: Local schemes, geographical details (Rohtas-Gaya mining)\n✅ Current affairs link: Latest Budget highlights, Debt-GDP ratio updates\n\nTum ab READY ho BPSC/SSC/UPSC ke liye! 🔥"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you Sir! Puri clarity aa gayi! Public Finance ab strong hai! 💪"
+        },
+        {
+          "speaker": "aman",
+          "text": "All the best Raju! Remember - Revenue aata kahan se, jata kahan, aur borrowing ka burden kya - ye teen pillars hain Public Finance ke! Keep revising! 🚀"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_completion",
+        "button_text": "🏆 Chapter Complete! ➔"
+      }
+    },
+    {
+      "card_id": "card_60_completion",
+      "card_slug": "card_60_completion",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 6,
+      "progress": {
+        "current": 60,
+        "total": 60
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER COMPLETED!",
+        "badge_emoji": "💰",
+        "completed_topic": "Public Finance in Economy - COMPLETE MASTERY",
+        "xp_earned": 500,
+        "milestone_progress": "100% Complete - ALL 60 CARDS CLEARED!",
+        "motivational_quote": "🎉 PHENOMENAL ACHIEVEMENT! 🎉\n\nTumne master kar liya:\n✅ Revenue sources (Tax + Non-Tax)\n✅ Expenditure classification\n✅ Budget & Deficit concepts\n✅ Public Debt framework\n✅ Bihar-specific details\n✅ Multi-statement PYQ patterns\n\nYe Officer-level knowledge hai! BPSC/SSC/UPSC mein ab Public Finance tumhara STRENGTH hai!\n\n💪 Keep this momentum!\n🚀 Next topic conquer karo!\n🔥 You're unstoppable!\n\n\"Knowledge is power, and you just became POWERFUL!\" 💯"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
+```
