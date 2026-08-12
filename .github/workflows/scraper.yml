@@ -19,7 +19,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       # =====================================================
       # 1. CHECKOUT
       # =====================================================
@@ -224,9 +223,9 @@ jobs:
           fi
 
       # =====================================================
-      # 10. COMMIT
+      # 10. COMMIT AND PUSH
       # =====================================================
-      - name: Commit rawnews.json
+      - name: Commit and Push rawnews.json
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
@@ -239,16 +238,7 @@ jobs:
           fi
 
           git commit -m "Update rawnews.json [skip ci]"
-
-          echo "✅ Commit created."
-
-      # =====================================================
-      # 11. PUSH
-      # =====================================================
-      - name: Push rawnews.json
-        run: |
-          echo "🚀 Pushing to main..."
-
+          git pull --rebase origin main
           git push origin HEAD:main
 
           echo "✅ rawnews.json pushed successfully."
