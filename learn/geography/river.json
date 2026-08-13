@@ -1,0 +1,1856 @@
+
+{
+  "topic_id": "rivers_indian_geography",
+  "topic_title": "Rivers in Indian Geography",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "Rivers in Indian Geography",
+        "icon": "🌊",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Understand drainage systems and drainage patterns",
+          "Master Himalayan river systems (Indus, Ganga, Brahmaputra)",
+          "Learn Peninsular river systems (Godavari, Krishna, Narmada, Tapi, Kaveri, Mahanadi)",
+          "Explore river features - tributaries, deltas, estuaries",
+          "Understand perennial vs seasonal rivers",
+          "Cover Bihar's river system comprehensively (BPSC TRE focus)",
+          "Learn about river pollution and conservation"
+        ],
+        "estimated_time": "55 minutes",
+        "difficulty_label": "Foundation to Officer Level"
+      },
+      "navigation": {
+        "next": "card_02_river_intro",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_river_intro",
+      "card_slug": "card_02_river_intro",
+      "type": "chat",
+      "concept_id": "what_is_river",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne apne gaon ya sheher mein nadi dekhi hai kabhi?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Hamare yahan se thodi door ek nadi behti hai. Barish mein bahut paani aa jaata hai usme!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! RIVER ya NADI ek naturally flowing watercourse hai jo pahadon, glaciers ya springs se shuru hoti hai aur samudra (sea), jheel (lake) ya kisi badi nadi mein ja kar milti hai. Isko hum DRAINAGE SYSTEM kehte hain - jaise ghar mein paani ka nalla drainage karta hai, waise hi nadi poori land ka paani drain karti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Toh nadi ka paani kahan se aata hai Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_river_source",
+        "button_text": "Jaante hain ➔"
+      }
+    },
+    {
+      "card_id": "card_03_river_source",
+      "card_slug": "card_03_river_source",
+      "type": "chat",
+      "concept_id": "river_source_concept",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Nadi ka paani mainly teen jagah se aata hai - (1) GLACIER (barf ka pighalna - Himalayas mein), (2) RAINFALL (barish), (3) SPRINGS (zameen ke neeche se paani nikalna). Nadi jahan se shuru hoti hai use SOURCE ya ORIGIN kehte hain, aur jahan jakar milti hai use MOUTH kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir, Himalaya ke pahadon se nikalti hai toh glacier se, aur jो barish ke paani se chalti hai woh rainfall se?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum perfect understanding! Himalayan nadiyaan GLACIER + RAINFALL dono se paani paati hain, isliye PERENNIAL (barah maas) behti hain. Lekin jo sirf rainfall par depend kare woh SEASONAL (mausami) hoti hain - barish ke baad hi paani hota hai. Ye bahut important difference hai exams ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Ganga perennial hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_drainage_system",
+        "button_text": "Haan! Aage samajhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_04_drainage_system",
+      "card_slug": "card_04_drainage_system",
+      "type": "chat",
+      "concept_id": "drainage_system_definition",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ab DRAINAGE SYSTEM samajhte hain properly. Ek main river hoti hai (jaise Ganga) aur choti-choti nadiyan jo aake usmein milti hain unhe TRIBUTARIES kehte hain. Jaise ped ki shaakhayein (branches) hoti hain, waise hi tributaries hoti hain. In sabko milake complete RIVER SYSTEM banta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Yamuna bhi ek tributary hai Ganga ki?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely right! Yamuna Ganga ki sabse badi tributary hai. Ab India mein broadly DO main drainage systems hain - (1) HIMALAYAN RIVERS aur (2) PENINSULAR RIVERS. Dono ke characteristics bahut different hain. Pehle Himalayan rivers detail mein samajhte hain kyunki ye zyada important hain BPSC aur SSC ke liye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ji Sir, Himalayan rivers se shuru karte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_himalayan_intro",
+        "button_text": "Himalayan Rivers ➔"
+      }
+    },
+    {
+      "card_id": "card_05_himalayan_intro",
+      "card_slug": "card_05_himalayan_intro",
+      "type": "chat",
+      "concept_id": "himalayan_rivers_intro",
+      "level": 2,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Himalayan Rivers ki teen MAIN systems hain - (1) INDUS (sabse western), (2) GANGA (middle - sabse important), (3) BRAHMAPUTRA (eastern). Teeno Tibet/Himalayas se nikalti hain aur glaciers + rain se PERENNIAL hain. Inki valleys DEEP aur NARROW hoti hain mountains mein, lekin plains mein WIDE ho jaati hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye teen hi main hain? Aur nadiyaan nahi hain Himalayas mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut saari hain! Par ye TEEN MAJOR RIVER SYSTEMS hain. Baki choti nadiyaan inhi mein tributaries ki tarah aa jaati hain. Ab sabse pehle INDUS river system samajhte hain - ye sabse purani civilization mein se ek thi! Mohenjo-daro aur Harappa yaad hai na?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! History mein padha tha Indus Valley Civilization!"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_indus_system",
+        "button_text": "Indus System ➔"
+      }
+    },
+    {
+      "card_id": "card_06_indus_system",
+      "card_slug": "card_06_indus_system",
+      "type": "chat",
+      "concept_id": "indus_river_system",
+      "level": 2,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "INDUS (Sanskrit mein SINDHU) Tibet ke Mansarovar lake ke paas se nikalti hai. Ye mainly PAKISTAN mein behti hai, lekin India mein bhi Ladakh, Jammu-Kashmir mein aati hai. Indus ki FIVE major tributaries hain jo Punjab mein milti hain - JHELUM, CHENAB, RAVI, BEAS, SUTLEJ. Isliye hi iska naam PUNJAB pada - 'Punj' matlab paanch aur 'aab' matlab paani!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Toh Punjab ka naam hi paanch nadiyon se aaya! Lekin Sir, ye sab India mein hain ya Pakistan mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut achha sawaal! 1947 partition ke baad, teeno eastern tributaries (Ravi, Beas, Sutlej) India mein hain aur do western (Jhelum, Chenab) Pakistan mein. 1960 mein INDUS WATER TREATY hua tha jisme decide hua ki kaun sa paani India use karega aur kaun sa Pakistan. Ye UPSC ka bahut favorite topic hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Ab Ganga ke baare mein bataiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_ganga_intro",
+        "button_text": "Ganga System ➔"
+      }
+    },
+    {
+      "card_id": "card_07_ganga_intro",
+      "card_slug": "card_07_ganga_intro",
+      "type": "chat",
+      "concept_id": "ganga_river_intro",
+      "level": 2,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "GANGA - India ki sabse sacred aur sabse IMPORTANT river! Uttarakhand mein GANGOTRI glacier se BHAGIRATHI aur ALAKNANDA ke roop mein nikalti hai. DEVPRAYAG mein in dono ka sangam hota hai aur wahan se aage isko GANGA kehte hain. Total length lagbhag 2525 km hai. Ye Uttar Pradesh, Bihar, Jharkhand, West Bengal se behkar Bay of Bengal mein girти hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Ganga ki tributaries kaun kaun si hain? Bahut saari hongi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! LEFT BANK tributaries (north se aane wali - Himalayan origin): RAMGANGA, GOMTI, GHAGHARA, GANDAK, KOSI. RIGHT BANK tributaries (south se - Peninsular origin): YAMUNA (sabse badi), SON, Punpun. ⭐ BPSC TRE ke liye bahut important - Bihar mein Ganga ke NORTH mein Ghaghara, Gandak, Kosi milti hain jo flood laati hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, Bihar mein toh har saal flood aati hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_ganga_tributaries",
+        "button_text": "Tributaries detail ➔"
+      }
+    },
+    {
+      "card_id": "card_08_ganga_tributaries",
+      "card_slug": "card_08_ganga_tributaries",
+      "type": "chat",
+      "concept_id": "ganga_tributaries_detail",
+      "level": 2,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Chalo ek ek karke samajhte hain important tributaries: YAMUNA - Yamunotri glacier se nikalti hai, Prayagraj (Allahabad) mein Ganga se milti hai. GHAGHARA - Nepal se, Bihar mein Chhapra ke paas milti hai. GANDAK - Nepal se, Patna ke paas Hajipur mein milti hai. KOSI - 'Bihar ka Shok' kehte hain kyunki bahut destructive floods laati hai, Kursela ke paas milti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Kosi ko 'Bihar ka Shok' kyun kehte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki KOSI apna course bahut frequently change karti hai - isko 'SORROW OF BIHAR' kehte hain. Ye Nepal se aati hai aur bahut silt (mitti) laati hai jo riverbed ko raise kar deti hai, phir flood ho jaati hai. Every year thousands of people affected hote hain. ⭐ BPSC mein Kosi se related questions bahut aate hain - embankments, flood management sab!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir. Kosi bahut dangerous hai Bihar ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_quiz_ganga_1",
+        "button_text": "Quick Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_09_quiz_ganga_1",
+      "card_slug": "card_09_quiz_ganga_1",
+      "type": "quiz",
+      "concept_id": "ganga_quiz_1",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Ganga river किस स्थान पर officially अपना नाम 'Ganga' प्राप्त करती है?",
+        "options": [
+          {"id": "A", "text": "Gangotri"},
+          {"id": "B", "text": "Devprayag (Bhagirathi + Alaknanda का संगम)"},
+          {"id": "C", "text": "Haridwar"},
+          {"id": "D", "text": "Prayagraj"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ganga river को officially 'Ganga' नाम DEVPRAYAG में मिलता है जहां BHAGIRATHI और ALAKNANDA दो नदियों का संगम (confluence) होता है। Gangotri से Bhagirathi के रूप में निकलती है, लेकिन Devprayag के बाद ही 'Ganga' कहलाती है। ⭐ SSC और Railway में यह direct question बार-बार आता है!"
+      },
+      "navigation": {
+        "next": "card_10_quiz_ganga_2",
+        "button_text": "अगला प्रश्न (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_10_quiz_ganga_2",
+      "card_slug": "card_10_quiz_ganga_2",
+      "type": "quiz",
+      "concept_id": "ganga_quiz_2",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: Kosi नदी को 'Bihar का शोक' (Sorrow of Bihar) क्यों कहा जाता है?",
+        "options": [
+          {"id": "A", "text": "क्योंकि यह सूख जाती है गर्मियों में"},
+          {"id": "B", "text": "क्योंकि यह अपना course बदलती है और विनाशकारी floods लाती है"},
+          {"id": "C", "text": "क्योंकि इसका पानी खारा है"},
+          {"id": "D", "text": "क्योंकि इसमें मछलियां नहीं होती"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "KOSI नदी को 'Bihar का शोक' (Sorrow of Bihar) इसलिए कहा जाता है क्योंकि यह अपना COURSE (मार्ग) बहुत frequently बदलती रहती है और विनाशकारी बाढ़ (destructive floods) लाती है। Nepal से आने के कारण यह भारी मात्रा में silt (गाद) लाती है जो riverbed को ऊंचा कर देती है, जिससे बाढ़ आती है। हर साल हजारों लोग प्रभावित होते हैं। ⭐ BPSC TRE में Kosi embankments और flood management पर प्रश्न जरूर आते हैं!"
+      },
+      "navigation": {
+        "next": "card_11_quiz_ganga_3",
+        "button_text": "अगला प्रश्न (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_11_quiz_ganga_3",
+      "card_slug": "card_11_quiz_ganga_3",
+      "type": "quiz",
+      "concept_id": "ganga_quiz_3",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Ganga की सबसे बड़ी tributary (सहायक नदी) कौन सी है?",
+        "options": [
+          {"id": "A", "text": "Son"},
+          {"id": "B", "text": "Yamuna"},
+          {"id": "C", "text": "Ghaghara"},
+          {"id": "D", "text": "Gandak"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "YAMUNA, Ganga की सबसे बड़ी tributary (सहायक नदी) है। यह Yamunotri glacier (Uttarakhand) से निकलती है और Prayagraj (Allahabad) में Ganga से मिलती है - इस संगम को 'Triveni Sangam' कहते हैं। Yamuna की length लगभग 1376 km है। Delhi इसी के किनारे बसी है। ⭐ UPSC और BPSC में Yamuna pollution और Delhi water crisis से related questions भी आते हैं!"
+      },
+      "navigation": {
+        "next": "card_12_milestone_ganga",
+        "button_text": "Result देखें ➔"
+      }
+    },
+    {
+      "card_id": "card_12_milestone_ganga",
+      "card_slug": "card_12_milestone_ganga",
+      "type": "milestone",
+      "concept_id": "ganga_system_complete",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 Ganga System Mastered!",
+        "badge_emoji": "🌊",
+        "completed_topic": "Ganga River System & Tributaries",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Clear",
+        "motivational_quote": "Bahut badhiya! Ganga system complete! Ab Brahmaputra - world's largest braided river dekhte hain! 💪"
+      },
+      "navigation": {
+        "next": "card_13_brahmaputra_intro",
+        "button_text": "Brahmaputra System ➔"
+      }
+    },
+    {
+      "card_id": "card_13_brahmaputra_intro",
+      "card_slug": "card_13_brahmaputra_intro",
+      "type": "chat",
+      "concept_id": "brahmaputra_intro",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BRAHMAPUTRA ek bahut hi unique river hai! Tibet mein isko TSANGPO, Arunachal Pradesh mein DIHANG aur Assam mein BRAHMAPUTRA kehte hain. Bangladesh mein jakar isko JAMUNA kehte hain (dhyan rakhna - ye alag hai Yamuna se!). Ye duniya ki sabse badi BRAIDED river hai - matlab bahut saare channels mein bahti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir braided ka matlab kya hai? Aur ye itne naam kyun change karti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "BRAIDED matlab jaise choti ladki ki choti (braid) hoti hai na, waise hi river multiple channels mein bant jaati hai aur phir se mil jaati hai - ye silt (mitti) zyada hone ke karan hota hai. Different regions mein different names hain kyunki alag-alag languages mein log different naam dete hain. Brahmaputra Tibet se nikalti hai, Arunachal Pradesh mein India enter karti hai, phir Assam se behkar Bangladesh mein Ganga se milti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh ye Ganga se badi hai kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_brahmaputra_features",
+        "button_text": "Features samajhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_14_brahmaputra_features",
+      "card_slug": "card_14_brahmaputra_features",
+      "type": "chat",
+      "concept_id": "brahmaputra_characteristics",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Water volume mein haan! Brahmaputra bahut zyada paani carry karti hai kyunki high rainfall area (Assam, Arunachal Pradesh) se guzarti hai. Ye bahut YOUNG aur VIGOROUS river hai - matlab erosion power bahut zyada hai. Assam mein iska channel bahut WIDE hai (3-4 km kahin kahin!). Ye bhi har saal floods laati hai jaise Kosi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir iske tributaries bhi hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! LEFT BANK (north se): DIBANG, LOHIT, SUBANSIRI (sab Arunachal Pradesh/Tibet se). RIGHT BANK (south se - Assam/Meghalaya se): KAMENG, MANAS, SANKOSH. ⭐ UPSC Favorite Fact: Brahmaputra ek ANTECEDENT river hai - matlab ye Himalayas banne se PEHLE se behti aa rahi hai! Jab Himalayas upar uthe, tab bhi ye apna rasta maintain karti rahi aur mountains ko cut karti gayi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Ye toh Himalayas se bhi purani hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_peninsular_intro",
+        "button_text": "Ab Peninsular Rivers ➔"
+      }
+    },
+    {
+      "card_id": "card_15_peninsular_intro",
+      "card_slug": "card_15_peninsular_intro",
+      "type": "chat",
+      "concept_id": "peninsular_rivers_intro",
+      "level": 3,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aate hain PENINSULAR RIVERS par! Ye Himalayan rivers se bahut DIFFERENT hain. Pehla difference - ye SEASONAL hain (sirf barish ke time paani zyada), kyunki glacier nahi hai source mein. Dusra - ye OLDER hain aur MATURE stage mein hain. Teesra - in rivers ki valleys BROAD aur SHALLOW hain. Chautha - most importantly, ye do types mein divide hoti hain - EAST FLOWING aur WEST FLOWING!"
+        },
+        {
+          "speaker": "raju",
+          "text": "East aur West flowing ka matlab Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho, EAST FLOWING rivers Bay of Bengal mein girती hain - jaise MAHANADI, GODAVARI, KRISHNA, KAVERI. WEST FLOWING rivers Arabian Sea mein girती hain - jaise NARMADA aur TAPI. ⭐ BPSC Trap: East flowing rivers DELTAS banati hain (fertile land), lekin West flowing ESTUARIES banati hain! Ye difference bahut important hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Delta aur Estuary mein kya farak hai Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_delta_estuary",
+        "button_text": "Critical Difference ➔"
+      }
+    },
+    {
+      "card_id": "card_16_delta_estuary",
+      "card_slug": "card_16_delta_estuary",
+      "type": "chat",
+      "concept_id": "delta_vs_estuary",
+      "level": 3,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut important difference! DELTA tab banta hai jab nadi samudra mein milte waqt apni SILT (mitti/sediments) deposit kar deti hai aur ek triangular shape ka land form ban jaata hai - jaise Greek letter 'Δ' (Delta). Ye bahut FERTILE hota hai agriculture ke liye. ESTUARY tab banta hai jab nadi ka mouth (muhaana) BROAD ho aur sea water andar aa jaaye - isme silt deposit nahi hoti, direct sea mein beh jaati hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Ganga bhi delta banati hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ganga-Brahmaputra DELTA duniya ka LARGEST delta hai - isko SUNDERBAN DELTA kehte hain (West Bengal aur Bangladesh mein). ⭐ SSC Favorite: 'World's largest delta' - Sunderban Delta. Ye mangrove forests ke liye famous hai aur yahan Royal Bengal Tiger milte hain! Ab Peninsular rivers ek ek karke samajhte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ji Sir, pehle kaun si nadi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_godavari",
+        "button_text": "Godavari - Largest Peninsular ➔"
+      }
+    },
+    {
+      "card_id": "card_17_godavari",
+      "card_slug": "card_17_godavari",
+      "type": "chat",
+      "concept_id": "godavari_river",
+      "level": 3,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "GODAVARI - Peninsular India ki LARGEST aur LONGEST river! Isko 'Dakshin Ganga' (South ki Ganga) bhi kehte hain. Maharashtra ke Nashik district ke paas TRIMBAKESHWAR se nikalti hai, phir Maharashtra, Telangana, Andhra Pradesh se behkar Bay of Bengal mein girती hai. Total length lagbhag 1465 km. Important tributaries: PRANHITA, INDRAVATI, MANJRA."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir isko Dakshin Ganga kyun kehte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki ye South India ki sabse important river hai jaise North mein Ganga hai - religious aur economic dono tarah se! Nashik mein Kumbh Mela bhi hota hai Godavari ke kinare. Ye ek large delta banati hai - rice cultivation ke liye bahut important. ⭐ UPSC/BPSC mein Godavari basin se related irrigation projects bhi puchhe jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Agли river?"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_krishna",
+        "button_text": "Krishna River ➔"
+      }
+    },
+    {
+      "card_id": "card_18_krishna",
+      "card_slug": "card_18_krishna",
+      "type": "chat",
+      "concept_id": "krishna_river",
+      "level": 3,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "KRISHNA - Peninsular ki दूसरी सबसे बड़ी river। Maharashtra के Mahabaleshwar के पास Western Ghats से निकलती है। Length लगभग 1400 km। Maharashtra, Karnataka, Telangana, Andhra Pradesh से होकर Bay of Bengal में गिरती है। Important tributaries: TUNGABHADRA, BHIMA, KOYNA। Krishna delta भी बहुत fertile है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Godavari aur Krishna dono Maharashtra se nikalti hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Western Ghats एक major water divide है - यहाँ से बहुत सारी rivers निकलती हैं। East flowing (Godavari, Krishna) aur West flowing (Narmada, Tapi) dono। Ab West flowing rivers dekhte hain - inka behavior bilkul alag hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ji Sir, Narmada ke baare mein bataiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_narmada",
+        "button_text": "Narmada - Rift Valley River ➔"
+      }
+    },
+    {
+      "card_id": "card_19_narmada",
+      "card_slug": "card_19_narmada",
+      "type": "chat",
+      "concept_id": "narmada_river",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "NARMADA - Ye bahut UNIQUE river hai! Madhya Pradesh ke Amarkantak से निकलती है aur RIFT VALLEY में बहती है - matlab do parallel fault lines के बीच। Ye WESTWARD behती है (उल्टी direction!) aur Gujarat होकर Arabian Sea (Gulf of Khambhat) में गिरती है। Length लगभग 1312 km। ⭐ UPSC Trap: Narmada DELTA nahi banati, ESTUARY banati hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Rift valley matlab kya Sir? Aur ye westward kyun behti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "RIFT VALLEY matlab zameen ke do tukde alag ho gaye (tectonic movement se) aur beech mein ek valley ban gayi - usi mein Narmada behती है। Westward isliye behती hai kyunki Peninsular plateau का slope east से west की taraf है iss region mein। Narmada bahut FAST behती है aur iske kinare bahut saare WATERFALLS hain - jaise DHUANDHAR Falls (Jabalpur)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Toh ye बहुत alag type की river hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_tapi_mahanadi",
+        "button_text": "Tapi & Mahanadi ➔"
+      }
+    },
+    {
+      "card_id": "card_20_tapi_mahanadi",
+      "card_slug": "card_20_tapi_mahanadi",
+      "type": "chat",
+      "concept_id": "tapi_mahanadi",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "TAPI (या TAPTI) - Ye bhi Narmada जैसी ही westward बहती है। Madhya Pradesh के Multai से निकलती है, Maharashtra, Gujarat होकर Arabian Sea (Gulf of Khambhat) में गिरती है। Narmada के parallel बहती है। Length लगभग 724 km। MAHANADI - Chhattisgarh के Sihawa से निकलती है, Odisha से होकर Bay of Bengal में गिरती है। Hirakud Dam इसी पर है - India का longest dam!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir aur कौन सी important Peninsular river है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "KAVERI (या CAUVERY) - South की बहुत important river! Karnataka के Western Ghats (Brahmagiri hills) से निकलती है, Karnataka aur Tamil Nadu से होकर Bay of Bengal में गिरती है। Isko 'Ganga of South' भी कहते हैं। Mysore, Bengaluru region को paani deti है। ⭐ BPSC/UPSC: Kaveri water dispute - Karnataka vs Tamil Nadu - ek famous inter-state river dispute है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh states के बीच river का झगड़ा भी होता है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_quiz_peninsular_1",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_peninsular_1",
+      "card_slug": "card_21_quiz_peninsular_1",
+      "type": "quiz",
+      "concept_id": "peninsular_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Peninsular India की सबसे लंबी नदी कौन सी है?",
+        "options": [
+          {"id": "A", "text": "Krishna"},
+          {"id": "B", "text": "Godavari"},
+          {"id": "C", "text": "Narmada"},
+          {"id": "D", "text": "Mahanadi"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "GODAVARI Peninsular India की सबसे लंबी नदी है (लगभग 1465 km)। इसे 'Dakshin Ganga' (South की Ganga) भी कहते हैं। यह Maharashtra के Nashik district में Trimbakeshwar से निकलती है और Bay of Bengal में गिरती है। Krishna दूसरी सबसे बड़ी peninsular river है। ⭐ SSC और Railway में यह direct question बहुत बार आता है!"
+      },
+      "navigation": {
+        "next": "card_22_quiz_peninsular_2",
+        "button_text": "अगला प्रश्न (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_peninsular_2",
+      "card_slug": "card_22_quiz_peninsular_2",
+      "type": "quiz",
+      "concept_id": "peninsular_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सी नदी RIFT VALLEY में बहती है?",
+        "options": [
+          {"id": "A", "text": "Godavari"},
+          {"id": "B", "text": "Krishna"},
+          {"id": "C", "text": "Narmada"},
+          {"id": "D", "text": "Kaveri"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "NARMADA नदी RIFT VALLEY में बहती है - यह दो parallel fault lines के बीच की valley में बहती है। यह Madhya Pradesh के Amarkantak से निकलती है और WESTWARD (पश्चिम की ओर) बहकर Arabian Sea में गिरती है। Tapi नदी भी Narmada के parallel rift valley में बहती है। ⭐ UPSC और BPSC में rift valley rivers का concept जरूर पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_23_quiz_peninsular_3",
+        "button_text": "अगला प्रश्न (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_23_quiz_peninsular_3",
+      "card_slug": "card_23_quiz_peninsular_3",
+      "type": "quiz",
+      "concept_id": "peninsular_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "East flowing rivers (Bay of Bengal में गिरने वाली) क्या बनाती हैं?",
+        "options": [
+          {"id": "A", "text": "Estuaries (मुहाना)"},
+          {"id": "B", "text": "Deltas (डेल्टा)"},
+          {"id": "C", "text": "Gorges (गॉर्ज)"},
+          {"id": "D", "text": "Canyons (कैन्यन)"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "East flowing rivers (जो Bay of Bengal में गिरती हैं) DELTAS बनाती हैं - जैसे Godavari delta, Krishna delta, Mahanadi delta, Kaveri delta। Delta तब बनता है जब नदी अपनी silt (गाद) समुद्र में मिलने के स्थान पर जमा कर देती है। ये deltas बहुत fertile होते हैं। West flowing rivers (Arabian Sea में गिरने वाली - Narmada, Tapi) ESTUARIES बनाती हैं क्योंकि उनकी silt समुद्र में बह जाती है। ⭐ BPSC Trap: Delta vs Estuary का difference!"
+      },
+      "navigation": {
+        "next": "card_24_milestone_peninsular",
+        "button_text": "Result देखें ➔"
+      }
+    },
+    {
+      "card_id": "card_24_milestone_peninsular",
+      "card_slug": "card_24_milestone_peninsular",
+      "type": "milestone",
+      "concept_id": "peninsular_complete",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 Peninsular Rivers Mastered!",
+        "badge_emoji": "🏔️",
+        "completed_topic": "Peninsular River System Complete",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/6 Clear",
+        "motivational_quote": "Excellent! Himalayan aur Peninsular dono systems clear! Ab Bihar ki rivers detail mein dekhte hain - BPSC TRE के लिए बहुत important! 🌊"
+      },
+      "navigation": {
+        "next": "card_25_bihar_rivers_intro",
+        "button_text": "Bihar Rivers System ➔"
+      }
+    },
+    {
+      "card_id": "card_25_bihar_rivers_intro",
+      "card_slug": "card_25_bihar_rivers_intro",
+      "type": "chat",
+      "concept_id": "bihar_rivers_intro",
+      "level": 4,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Super Important! Bihar में मुख्यतः Ganga river system के rivers हैं। GANGA खुद Bihar को दो भागों में divide करती है - NORTH BIHAR (Ganga के उत्तर - मैदानी इलाका, बहुत fertile) aur SOUTH BIHAR (Ganga के दक्षिण - पठारी इलाका)। North Bihar में Nepal से आने वाली rivers बाढ़ लाती हैं, South Bihar में कम पानी वाली rivers हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar में कितनी rivers हैं कुल?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Main rivers की बात करें तो लगभग 10-12 important हैं। Ganga के LEFT (north) में: GHAGHRA, GANDAK, BURHI GANDAK, BAGMATI, KAMLA-BALAN, KOSI, MAHANANDA। RIGHT (south) में: SON, PUNPUN, PHALGU, SAKRI। हर एक के अलग characteristics हैं। Pहले North Bihar की rivers detail में समझते हैं क्योंकि ये flood के लिए notorious हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ji Sir, North Bihar wali rivers बताइये!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_ghaghra_gandak",
+        "button_text": "Ghaghra & Gandak ➔"
+      }
+    },
+    {
+      "card_id": "card_26_ghaghra_gandak",
+      "card_slug": "card_26_ghaghra_gandak",
+      "type": "chat",
+      "concept_id": "ghaghra_gandak_detail",
+      "level": 4,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "GHAGHRA (या GOGRA/KARNALI) - Nepal से निकलती है, Uttar Pradesh होते हुए Bihar में Chhapra (Saran district) के पास Ganga में मिलती है। Total length लगभग 1080 km। Flood लाती है। GANDAK (या NARAYANI) - Nepal से, Patna के पास HAJIPUR में Ganga से मिलती है। Ye बहुत sacred मानी जाती है - Sonepur Cattle Fair इसी के किनारे लगता है (Asia का सबसे बड़ा cattle fair!)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Sonepur Mela तो बहुत famous है!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Kartik Purnima पर Ganga-Gandak के संगम पर लगता है। ⭐ BPSC TRE Favorite: Gandak Project - India-Nepal joint project है irrigation के लिए। BURHI GANDAK भी है जो Gandak से अलग है - 'Burhi' matlab old। Ye भी North Bihar में floods में contribute करती है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Kosi के बारे में detail में बताइये Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_kosi_detail",
+        "button_text": "Kosi - The Sorrow ➔"
+      }
+    },
+    {
+      "card_id": "card_27_kosi_detail",
+      "card_slug": "card_27_kosi_detail",
+      "type": "chat",
+      "concept_id": "kosi_river_detail",
+      "level": 4,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "KOSI - 'Bihar ka Shok' (Sorrow of Bihar)! Nepal के Tibet border से निकलती है। Ye actually SAAT nadियों का combined form है - इसलिए इसे 'SAPTAKOSI' भी कहते हैं। Bihar में Supaul-Saharsa-Khagaria districts से गुजरती है और Kursela (Katihar) के पास Ganga में मिलती है। Length लगभग 720 km (India में)। Problem: ये अपना COURSE हर साल बदल देती है - पिछले 200 सालों में 120 km तक shift कर चुकी है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "120 km shift! Ye toh bahut zyada hai Sir! Aise kyun hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nepal से आते समय ये भारी मात्रा में SILT (गाद) लाती है जो riverbed को ऊंचा कर देती है। Phir pानी बाहर निकल जाता है aur नया रास्ता बना लेती है। Isliye embankments (तटबंध) बनाये गए हैं, लेकिन वो भी कई बार टूट जाते हैं। ⭐ BPSC TRE: Kosi embankments, Kosi Barrage (Bhimnagar, Nepal में), Kosi-Mechi Intrastate Link - सब पूछे जाते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir। Bahut serious problem hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_mahananda_kamla",
+        "button_text": "Other North Bihar Rivers ➔"
+      }
+    },
+    {
+      "card_id": "card_28_mahananda_kamla",
+      "card_slug": "card_28_mahananda_kamla",
+      "type": "chat",
+      "concept_id": "mahananda_kamla_bagmati",
+      "level": 4,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MAHANANDA - West Bengal में Darjeeling hills से निकलती है, North Bihar के Katihar-Purnia districts से होकर West Bengal में Ganga से मिलती है। KAMLA-BALAN (या KAMALA) - Nepal से, Madhubani-Darbhanga districts से गुजरती है। BAGMATI - Nepal से (Kathmandu के पास से निकलती है - Nepal की sacred river), Sitamarhi-Muzaffarpur होकर Kosi में मिल जाती है। ⭐ BPSC: Bagमति को 'Sita' नदी भी कहते हैं क्योंकि Janakpur (Sita का जन्मस्थान) इसी के किनारे है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh North Bihar की सब rivers Nepal से आती हैं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, लगभग सारी Himalayan origin हैं जो Nepal से होकर Bihar आती हैं। Ye सब PERENNIAL हैं (glacier + monsoon), लेकिन बहुत सिल्ट लाती हैं जो flood का कारण बनती है। Ab South Bihar की rivers देखते हैं - ये बिल्कुल अलग nature की हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ji Sir, South Bihar wali bataiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_son_punpun",
+        "button_text": "South Bihar Rivers ➔"
+      }
+    },
+    {
+      "card_id": "card_29_son_punpun",
+      "card_slug": "card_29_son_punpun",
+      "type": "chat",
+      "concept_id": "son_punpun_phalgu",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "SON - South Bihar की सबसे बड़ी river! Madhya Pradesh के Amarkantak plateau (जहाँ से Narmada भी निकलती है) से निकलती है। MP-Chhattisgarh-Jharkhand-UP होते हुए Bihar में Rohtas district के पास Ganga में मिलती है (Patna के पास Dighaghat/Koilwar area)। Length लगभग 780 km। PUNPUN - Chhotanagpur plateau (Jharkhand-Bihar border) से, Gaya-Patna होकर Fatuha के पास Ganga में मिलती है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ये rivers भी flood लाती हैं क्या?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! South Bihar की rivers mostly SEASONAL हैं - monsoon में ही ज्यादा पानी होता है, गर्मी में सूख जाती हैं या बहुत कम पानी होता है। PHALGU river तो Gaya में almost dry रहती है गर्मी में (Vishnupad Temple इसी के किनारे है)। ⭐ BPSC TRE: Phalgu को 'शापित नदी' कहा जाता है - religious belief है कि Sita ने श्राप दिया था। Geographically, ye सिर्फ monsoon river है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Interesting! Toh North-South Bihar की rivers बहुत अलग हैं!"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_quiz_bihar_1",
+        "button_text": "Bihar Rivers Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_bihar_1",
+      "card_slug": "card_30_quiz_bihar_1",
+      "type": "quiz",
+      "concept_id": "bihar_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: Kosi नदी को 'Bihar का शोक' क्यों कहा जाता है?",
+        "options": [
+          {"id": "A", "text": "क्योंकि यह सबसे लंबी नदी है"},
+          {"id": "B", "text": "क्योंकि यह अपना course बदलती रहती है और विनाशकारी बाढ़ लाती है"},
+          {"id": "C", "text": "क्योंकि यह गर्मियों में सूख जाती है"},
+          {"id": "D", "text": "क्योंकि इसका पानी खारा है"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Kosi नदी को 'Bihar का शोक' (Sorrow of Bihar) इसलिए कहा जाता है क्योंकि यह अपना COURSE (मार्ग) बार-बार बदलती रहती है और विनाशकारी बाढ़ लाती है। पिछले 200 सालों में यह 120 km तक shift कर चुकी है! Nepal से आते समय यह भारी मात्रा में silt (गाद) लाती है जो riverbed को ऊंचा कर देती है, जिससे पानी बाहर निकल जाता है। इसे 'Saptakosi' भी कहते हैं क्योंकि यह 7 नदियों का संयुक्त रूप है। ⭐ BPSC TRE में Kosi embankments और flood management पर सवाल जरूर आते हैं!"
+      },
+      "navigation": {
+        "next": "card_31_quiz_bihar_2",
+        "button_text": "अगला प्रश्न (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quiz_bihar_2",
+      "card_slug": "card_31_quiz_bihar_2",
+      "type": "quiz",
+      "concept_id": "bihar_quiz_2",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: Gandak नदी Ganga में किस स्थान पर मिलती है?",
+        "options": [
+          {"id": "A", "text": "Patna"},
+          {"id": "B", "text": "Hajipur (Sonepur के पास)"},
+          {"id": "C", "text": "Chhapra"},
+          {"id": "D", "text": "Kursela"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "GANDAK (या Narayani) नदी Ganga में HAJIPUR (Patna के पास, Sonepur के निकट) में मिलती है। यह संगम स्थल बहुत पवित्र माना जाता है और यहाँ Kartik Purnima पर Asia का सबसे बड़ा SONEPUR CATTLE FAIR (पशु मेला) लगता है। Gandak Nepal से निकलती है और Bihar में irrigation के लिए बहुत महत्वपूर्ण है। Gandak Project India-Nepal का joint venture है। ⭐ BPSC TRE में Gandak-Ganga संगम और Sonepur Mela जरूर पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_32_quiz_bihar_3",
+        "button_text": "अगला प्रश्न (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz_bihar_3",
+      "card_slug": "card_32_quiz_bihar_3",
+      "type": "quiz",
+      "concept_id": "bihar_quiz_3",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: South Bihar की सबसे बड़ी नदी कौन सी है?",
+        "options": [
+          {"id": "A", "text": "Punpun"},
+          {"id": "B", "text": "Phalgu"},
+          {"id": "C", "text": "Son"},
+          {"id": "D", "text": "Sakri"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "SON नदी South Bihar की सबसे बड़ी नदी है। यह Madhya Pradesh के Amarkantak plateau (जहाँ से Narmada भी निकलती है) से निकलती है और MP, Chhattisgarh, Jharkhand, UP होते हुए Bihar में Rohtas district के पास Ganga में मिलती है (Patna के निकट Dighaghat/Koilwar area में)। Length लगभग 780 km है। Son नदी Ganga की RIGHT BANK tributary है। ⭐ BPSC TRE में Son नदी पर irrigation projects भी पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_33_milestone_bihar",
+        "button_text": "Result देखें ➔"
+      }
+    },
+    {
+      "card_id": "card_33_milestone_bihar",
+      "card_slug": "card_33_milestone_bihar",
+      "type": "milestone",
+      "concept_id": "bihar_rivers_complete",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 Bihar Rivers Mastered!",
+        "badge_emoji": "🌊",
+        "completed_topic": "Complete Bihar River System",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/6 Clear",
+        "motivational_quote": "Outstanding! Bihar की rivers पूरी detail में clear हो गईं! BPSC TRE के लिए बहुत important था! Ab river features - deltas, estuaries, dams समझते हैं! 🏆"
+      },
+      "navigation": {
+        "next": "card_34_river_features_intro",
+        "button_text": "River Features ➔"
+      }
+    },
+    {
+      "card_id": "card_34_river_features_intro",
+      "card_slug": "card_34_river_features_intro",
+      "type": "chat",
+      "concept_id": "river_features_intro",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab हम rivers के important FEATURES समझते हैं जो exams में बहुत पूछे जाते हैं - DELTAS, ESTUARIES, MEANDERS, OXBOW LAKES, WATERFALLS, GORGES। पहले DELTA detail में समझ लेते हैं क्योंकि ये बहुत confusing topic है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir delta तो पहले भी बताया था - triangle shape का land?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Delta tab बनता है जब नदी समुद्र में मिलते समय अपनी speed कम हो जाती है और वो जो silt (मिट्टी/sediments) carry कर रही होती है, वो deposit हो जाती है। Gradually ये मिट्टी जमा होकर land बना देती है जो Greek letter 'Δ' (Delta) की shape में होता है। ⭐ UPSC Fact: India के major deltas हैं - Ganga-Brahmaputra (Sunderban - world's largest), Godavari, Krishna, Mahanadi, Kaveri!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh सारी East flowing rivers deltas बनाती हैं?"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_delta_types",
+        "button_text": "Delta Types ➔"
+      }
+    },
+    {
+      "card_id": "card_35_delta_types",
+      "card_slug": "card_35_delta_types",
+      "type": "chat",
+      "concept_id": "delta_types_detail",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Mostly haan! Delta भी अलग-अलग types के होते हैं: (1) ARCUATE DELTA - arc (धनुष) shape जैसा - example: Nile delta। (2) BIRD'S FOOT DELTA - चिड़िया के पैर जैसा - example: Mississippi। (3) CUSPATE DELTA - pointed triangular - example: Ebro (Spain)। India में mostly arcuate deltas हैं। ⭐ BPSC: Sunderban Delta - world का largest delta, mangrove forests, Royal Bengal Tigers!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Estuary kya hota hai Sir? Ye confuse ho jata hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "ESTUARY ek funnel-shaped river mouth है जहाँ sea water river में mix हो जाता है। Yahan silt deposit nahi होती, directly sea में बह जाती है (strong currents/tides के कारण)। Example: Narmada aur Tapi estuaries बनाती हैं Arabian Sea में। ⭐ SSC Trap: 'Narmada delta banti hai' - WRONG! Narmada estuary banti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ab clear hai Sir! Delta mein silt जमा, estuary में nahi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_other_features",
+        "button_text": "Other Features ➔"
+      }
+    },
+    {
+      "card_id": "card_36_other_features",
+      "card_slug": "card_36_other_features",
+      "type": "chat",
+      "concept_id": "meander_oxbow_features",
+      "level": 4,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MEANDER - Plain areas में rivers सीधी नहीं बहतीं, बल्कि घूम-घूम कर (curves बनाकर) बहती हैं - इन curves को MEANDERS कहते हैं। Jab कोई meander loop पूरा अलग हो जाता है, तो ek OXBOW LAKE (घोड़े की नाल shape की झील) बन जाती है। WATERFALL - जब नदी ऊंचाई से नीचे गिरती है। Example: Jog Falls (Sharavati river, Karnataka), Dhuandhar Falls (Narmada, MP)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir GORGE kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "GORGE ek deep, narrow valley होती है जो नदी ने hard rocks को काटकर (erosion से) बनाई होती है। Example: Marble Rocks Gorge (Narmada, Jabalpur)। ⭐ UPSC: V-shaped valley (young river), U-shaped valley (glacier)। Ab major DAMS के बारे में जानते हैं - ये भी rivers पर ही बनते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, dams ke बारे में बताइये!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_major_dams",
+        "button_text": "Major Dams ➔"
+      }
+    },
+    {
+      "card_id": "card_37_major_dams",
+      "card_slug": "card_37_major_dams",
+      "type": "chat",
+      "concept_id": "major_dams_india",
+      "level": 5,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "India के major dams (river-wise): BHAKRA DAM - Sutlej river (Punjab-Himachal) - Asia का दूसरा highest gravity dam। HIRAKUD DAM - Mahanadi (Odisha) - India का LONGEST dam (length में)। SARDAR SAROVAR - Narmada (Gujarat) - Narmada Valley Project का part। TEHRI DAM - Bhagirathi (Uttarakhand) - India का HIGHEST dam। NAGARJUNA SAGAR - Krishna (Telangana-AP)। ⭐ SSC/Railway Favorite: 'Longest dam' - Hirakud, 'Highest dam' - Tehri!"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Sir Bihar में कोई major dam है क्या?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bihar में बहुत बड़े dams नहीं हैं (topography flat है), लेकिन BARRAGES हैं - GANDAK BARRAGE (Nepal border पर, Gandak river), KOSI BARRAGE (Bhimnagar, Nepal में लेकिन Bihar के लिए important), FARAKKA BARRAGE (West Bengal में Ganga पर - लेकिन Bihar को affect करता है water distribution में)। ⭐ BPSC TRE: Gandak और Kosi barrages irrigation के लिए critical हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_quiz_features_1",
+        "button_text": "Features Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_features_1",
+      "card_slug": "card_38_quiz_features_1",
+      "type": "quiz",
+      "concept_id": "features_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ World का सबसे बड़ा delta कौन सा है?",
+        "options": [
+          {"id": "A", "text": "Godavari Delta"},
+          {"id": "B", "text": "Nile Delta"},
+          {"id": "C", "text": "Sunderban Delta (Ganga-Brahmaputra)"},
+          {"id": "D", "text": "Mississippi Delta"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "SUNDERBAN DELTA (Ganga-Brahmaputra Delta) दुनिया का सबसे बड़ा delta है। यह West Bengal (India) और Bangladesh में फैला हुआ है। इसका क्षेत्रफल लगभग 1,05,000 sq km है। यहाँ MANGROVE FORESTS हैं (Sundari trees - जिनसे नाम Sunderban पड़ा) और ROYAL BENGAL TIGERS पाये जाते हैं। ⭐ SSC और Railway में 'World's largest delta' बहुत common question है - Sunderban याद रखें!"
+      },
+      "navigation": {
+        "next": "card_39_quiz_features_2",
+        "button_text": "अगला प्रश्न (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz_features_2",
+      "card_slug": "card_39_quiz_features_2",
+      "type": "quiz",
+      "concept_id": "features_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "India का सबसे ऊंचा (highest) dam कौन सा है?",
+        "options": [
+          {"id": "A", "text": "Bhakra Dam (Sutlej)"},
+          {"id": "B", "text": "Tehri Dam (Bhagirathi)"},
+          {"id": "C", "text": "Hirakud Dam (Mahanadi)"},
+          {"id": "D", "text": "Sardar Sarovar (Narmada)"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "TEHRI DAM (Bhagirathi river, Uttarakhand पर) India का सबसे ऊंचा (highest) dam है - height लगभग 260.5 meters। यह एक earth and rock-fill dam है और hydroelectric power generation के लिए बनाया गया है। Bhakra Dam (Sutlej पर) Asia का दूसरा highest gravity dam है। Hirakud Dam (Mahanadi पर) India का LONGEST dam है (length में)। ⭐ SSC Trap: 'Highest' - Tehri, 'Longest' - Hirakud - confuse मत होना!"
+      },
+      "navigation": {
+        "next": "card_40_quiz_features_3",
+        "button_text": "अगला प्रश्न (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_40_quiz_features_3",
+      "card_slug": "card_40_quiz_features_3",
+      "type": "quiz",
+      "concept_id": "features_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Narmada और Tapi नदियां क्या बनाती हैं?",
+        "options": [
+          {"id": "A", "text": "Deltas (डेल्टा)"},
+          {"id": "B", "text": "Estuaries (मुहाना)"},
+          {"id": "C", "text": "Oxbow Lakes"},
+          {"id": "D", "text": "Gorges"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Narmada और Tapi नदियां ESTUARIES (मुहाना) बनाती हैं, deltas नहीं! ये दोनों West flowing rivers हैं जो Arabian Sea (Gulf of Khambhat) में गिरती हैं। Estuaries में sea water river में mix हो जाता है और strong currents/tides के कारण silt deposit नहीं होती, directly समुद्र में बह जाती है। ⭐ BPSC Trap: 'Narmada delta' - WRONG! Narmada estuary बनाती है। East flowing rivers (Bay of Bengal में) deltas बनाती हैं!"
+      },
+      "navigation": {
+        "next": "card_41_milestone_features",
+        "button_text": "Result देखें ➔"
+      }
+    },
+    {
+      "card_id": "card_41_milestone_features",
+      "card_slug": "card_41_milestone_features",
+      "type": "milestone",
+      "concept_id": "features_complete",
+      "level": 5,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 River Features Mastered!",
+        "badge_emoji": "🏞️",
+        "completed_topic": "Deltas, Estuaries, Dams Complete",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/6 Clear",
+        "motivational_quote": "Superb! River features सब clear! Ab drainage patterns और river pollution - दोनों exams में बहुत पूछे जाते हैं! 📚"
+      },
+      "navigation": {
+        "next": "card_42_drainage_patterns",
+        "button_text": "Drainage Patterns ➔"
+      }
+    },
+    {
+      "card_id": "card_42_drainage_patterns",
+      "card_slug": "card_42_drainage_patterns",
+      "type": "chat",
+      "concept_id": "drainage_patterns_intro",
+      "level": 5,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "DRAINAGE PATTERN matlab किस तरह से rivers और उनकी tributaries arrange होती हैं जब ऊपर से देखो (map पर)। Ye topography (ज़मीन का shape), rock structure, slopes पर depend करता है। Main patterns हैं: (1) DENDRITIC - ped की branches जैसा (सबसे common), (2) TRELLIS - parallel tributaries, (3) RADIAL - एक central point से सब directions में, (4) RECTANGULAR - right angles पर मिलती हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir example से समझाइये!"
+        },
+        {
+          "speaker": "aman",
+          "text": "DENDRITIC - Ganga-Yamuna system (uniform rock structure)। RADIAL - Amarkantak plateau से Narmada, Son, Mahanadi different directions में निकलती हैं। TRELLIS - Himalayan rivers कुछ areas में (folded mountains)। RECTANGULAR - Hard rock areas जहाँ fractures/joints हैं। ⭐ UPSC: Drainage pattern से geology का पता चल जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Interesting! Sir ab pollution के बारे में बताइये!"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_river_pollution",
+        "button_text": "River Pollution ➔"
+      }
+    },
+    {
+      "card_id": "card_43_river_pollution",
+      "card_slug": "card_43_river_pollution",
+      "type": "chat",
+      "concept_id": "river_pollution_intro",
+      "level": 5,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "RIVER POLLUTION ek bahut serious problem hai India में! Main sources: (1) SEWAGE - ghar aur cities ka ganda paani directly rivers में, (2) INDUSTRIAL WASTE - factories ka chemical waste, (3) AGRICULTURAL RUNOFF - pesticides, fertilizers, (4) RELIGIOUS PRACTICES - flowers, idols visarjan, (5) SOLID WASTE - plastic, garbage। Sabसे zyada polluted: Ganga, Yamuna, Sabarmati!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Ganga toh sacred river hai, phir bhi polluted?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, bahut sad reality! Cities jaise Kanpur (tanneries - चमड़े की factories), Varanasi, Allahabad, Patna सब Ganga में waste डालते हैं। ⭐ UPSC/BPSC: 'NAMAMI GANGE' programme (2014) - Ganga को clean करने के लिए government का major project। Yamuna भी Delhi में bahut polluted hai - mostly sewage!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya solutions hain Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_pollution_solutions",
+        "button_text": "Solutions & Conservation ➔"
+      }
+    },
+    {
+      "card_id": "card_44_pollution_solutions",
+      "card_slug": "card_44_pollution_solutions",
+      "type": "chat",
+      "concept_id": "river_conservation",
+      "level": 5,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Solutions: (1) SEWAGE TREATMENT PLANTS (STPs) - har city में sewage ko treat karke rivers में डालना, (2) INDUSTRIAL EFFLUENT TREATMENT - factories को waste treat karna mandatory, (3) BAN ON PLASTIC - single-use plastic ban, (4) AWARENESS - logo ko educate karna, (5) AFFORESTATION - riverbanks पर trees, (6) MONITORING - pollution levels check karna (BOD, COD parameters)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir BOD kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "BOD = Biological Oxygen Demand - पानी में कितनी oxygen organic matter decompose होने में use होती है। High BOD मतलब high pollution! ⭐ BPSC: National Green Tribunal (NGT) ने कई बार Ganga pollution पर orders दिए हैं। 'Ganga Action Plan' (1986) first था, leकिन zyada successful nahi। Namami Gange अब बेहतर काम कर रहा है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Rivers bachani bahut important hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_interlinking",
+        "button_text": "River Interlinking ➔"
+      }
+    },
+    {
+      "card_id": "card_45_interlinking",
+      "card_slug": "card_45_interlinking",
+      "type": "chat",
+      "concept_id": "river_interlinking_project",
+      "level": 5,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "RIVER INTERLINKING ek ambitious project है - surplus water वाली rivers को deficit वाली rivers से जोड़ना (canals के through)। Idea: Brahmaputra, Ganga (जहाँ flood आती है) का extra पानी South India, Rajasthan (जहाँ scarcity है) को देना। ⭐ UPSC Controversial Topic: Supporters कहते हैं - drought aur flood dono solve, opponents कहते हैं - ecological damage, displacement!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye implement हो रहा है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "कुछ pilot projects शुरू हुए हैं - Ken-Betwa Link (first one, MP-UP), but बहुत slow progress है क्योंकि (1) बहुत expensive, (2) states के बीच disputes, (3) environmental concerns। ⭐ BPSC: Bihar को भी benefit होगा Ken-Betwa link से (Ganga flood management)। Lekin ye bahut long-term project hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Complex issue hai Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_quiz_advanced_1",
+        "button_text": "Advanced Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_46_quiz_advanced_1",
+      "card_slug": "card_46_quiz_advanced_1",
+      "type": "quiz",
+      "concept_id": "advanced_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC: 'Namami Gange' programme किस वर्ष launch हुआ?",
+        "options": [
+          {"id": "A", "text": "1986 (Ganga Action Plan के साथ)"},
+          {"id": "B", "text": "2009"},
+          {"id": "C", "text": "2014"},
+          {"id": "D", "text": "2019"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "'NAMAMI GANGE' (National Mission for Clean Ganga) programme 2014 में launch हुआ था। यह Ganga river को clean करने का एक integrated conservation mission है जिसमें pollution abatement, riverfront development, biodiversity conservation, awareness शामिल हैं। Budget लगभग ₹20,000 crore रखा गया था। पहला 'Ganga Action Plan' 1986 में आया था लेकिन ज्यादा successful नहीं रहा। ⭐ UPSC और BPSC दोनों में Namami Gange के objectives और progress पर questions आते हैं!"
+      },
+      "navigation": {
+        "next": "card_47_quiz_advanced_2",
+        "button_text": "अगला प्रश्न (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_47_quiz_advanced_2",
+      "card_slug": "card_47_quiz_advanced_2",
+      "type": "quiz",
+      "concept_id": "advanced_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "BOD (Biological Oxygen Demand) क्या indicate करता है?",
+        "options": [
+          {"id": "A", "text": "पानी में dissolved oxygen की मात्रा"},
+          {"id": "B", "text": "पानी में organic pollution का level"},
+          {"id": "C", "text": "पानी का temperature"},
+          {"id": "D", "text": "पानी की hardness"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "BOD (Biological Oxygen Demand) पानी में ORGANIC POLLUTION के level को indicate करता है। यह measure करता है कि organic matter को decompose करने के लिए microorganisms को कितनी oxygen की जरूरत पड़ेगी। HIGH BOD मतलब HIGH POLLUTION - बहुत सारा organic waste है। Clean water का BOD कम होता है (1-2 mg/L), polluted water का high (5+ mg/L)। ⭐ UPSC/BPSC में water quality parameters (BOD, COD, pH) environmental questions में आते हैं!"
+      },
+      "navigation": {
+        "next": "card_48_quiz_advanced_3",
+        "button_text": "अगला प्रश्न (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_48_quiz_advanced_3",
+      "card_slug": "card_48_quiz_advanced_3",
+      "type": "quiz",
+      "concept_id": "advanced_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "River Interlinking Project का पहला implemented link कौन सा है?",
+        "options": [
+          {"id": "A", "text": "Ganga-Kaveri Link"},
+          {"id": "B", "text": "Ken-Betwa Link"},
+          {"id": "C", "text": "Brahmaputra-Ganga Link"},
+          {"id": "D", "text": "Godavari-Krishna Link"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "River Interlinking Project का पहला implemented link KEN-BETWA LINK है। Ken और Betwa दोनों Yamuna की tributaries हैं। यह link Madhya Pradesh और Uttar Pradesh के बीच है। Ken river (surplus water) से Betwa river (deficit area - Bundelkhand region) को पानी transfer करने के लिए बनाया जा रहा है। इससे irrigation, drinking water और power generation में मदद मिलेगी। ⭐ UPSC में river interlinking के benefits और challenges दोनों पर questions आते हैं!"
+      },
+      "navigation": {
+        "next": "card_49_milestone_advanced",
+        "button_text": "Result देखें ➔"
+      }
+    },
+    {
+      "card_id": "card_49_milestone_advanced",
+      "card_slug": "card_49_milestone_advanced",
+      "type": "milestone",
+      "concept_id": "advanced_topics_complete",
+      "level": 5,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 Advanced Topics Cleared!",
+        "badge_emoji": "🧠",
+        "completed_topic": "Pollution, Conservation & Interlinking",
+        "xp_earned": 70,
+        "milestone_progress": "Module 5/6 Clear",
+        "motivational_quote": "Brilliant! Drainage patterns से लेकर pollution solutions तक सब cover हो गया! Ab final module - Important Facts & PYQ Traps! 🎯"
+      },
+      "navigation": {
+        "next": "card_50_important_facts",
+        "button_text": "Important Facts ➔"
+      }
+    },
+    {
+      "card_id": "card_50_important_facts",
+      "card_slug": "card_50_important_facts",
+      "type": "chat",
+      "concept_id": "important_river_facts",
+      "level": 5,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab कुछ EXAM FAVORITE FACTS जो हर साल पूछे जाते हैं: (1) LONGEST RIVER IN INDIA - Ganga (2525 km in India)। (2) LONGEST RIVER ORIGINATING IN INDIA - Godavari। (3) LARGEST RIVER BASIN - Ganga basin। (4) HIGHEST WATERFALL - Jog Falls (Sharavati river, Karnataka, 253m)। (5) PERENNIAL vs SEASONAL - Himalayan (perennial), Peninsular (seasonal)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Brahmaputra की length तो zyada hogi Ganga से?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Total length toh haan (2900 km), leकिन INDIA MEIN sirf 916 km है! Mostly Tibet-China aur Bangladesh में behती है। ⭐ SSC Trap: 'Longest river IN India' - Ganga, 'Longest river flowing THROUGH India' - debate hai (Brahmaputra total length zyada but India में kam)। Question carefully पढ़ना!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Tricky question hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_river_nicknames",
+        "button_text": "River Nicknames ➔"
+      }
+    },
+    {
+      "card_id": "card_51_river_nicknames",
+      "card_slug": "card_51_river_nicknames",
+      "type": "chat",
+      "concept_id": "river_nicknames_exam",
+      "level": 5,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "RIVER NICKNAMES - ये बहुत पूछे जाते हैं! GANGA - 'Holy River', 'National River of India' (2008 declared)। GODAVARI - 'Dakshin Ganga', 'Vriddha Ganga'। KAVERI - 'Ganga of South'। KOSI - 'Sorrow of Bihar', 'Bihar ka Shok'। BRAHMAPUTRA - 'Red River' (high silt), Tibet में 'Tsangpo', Arunachal में 'Dihang', Bangladesh में 'Jamuna'। NARMADA - 'Lifeline of Madhya Pradesh'।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek hi river के इतने naam! Confusing!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Isliye mnemonics बनाओ! 'TDJ' - Tibet (Tsangpo), Dihang, Jamuna - Brahmaputra। ⭐ BPSC TRE: Bagमति को 'Sita' river bhi kehte hैं (Janakpur connection)। PUNJ-AB = 5 rivers (Jhelum, Chenab, Ravi, Beas, Sutlej)। Ye सब nicknames directly पूछे जाते हैं MCQs में!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Noted Sir! Mnemonics helpful hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_confluences",
+        "button_text": "Famous Confluences ➔"
+      }
+    },
+    {
+      "card_id": "card_52_confluences",
+      "card_slug": "card_52_confluences",
+      "type": "chat",
+      "concept_id": "river_confluences_sangam",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "FAMOUS CONFLUENCES (SANGAM): TRIVENI SANGAM - Ganga + Yamuna + Saraswati (mythical) at Prayagraj (Allahabad) - Kumbh Mela यहीं होता है। DEVPRAYAG - Bhagirathi + Alaknanda = Ganga (Uttarakhand)। RUDRAPRAYAG - Alaknanda + Mandakini। KARNAPRAYAG - Alaknanda + Pindar। VISHNUPRAYAG - Alaknanda + Dhauli Ganga। ⭐ SSC: Uttarakhand में 'PANCH PRAYAG' concept - 5 prayags!"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Sir Bihar में कोई famous sangam hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! HAJIPUR (Sonepur) - Ganga + Gandak का संगम - Sonepur Mela (cattle fair) यहीं होता है। MUNGER area - Ganga curves beautifully। ⭐ BPSC TRE: हर संगम के पास religious/economic importance होती है - ghats, temples, fairs। Patna में भी Ganga के dono banks पर important ghats हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_pyq_traps",
+        "button_text": "PYQ Traps ➔"
+      }
+    },
+    {
+      "card_id": "card_53_pyq_traps",
+      "card_slug": "card_53_pyq_traps",
+      "type": "chat",
+      "concept_id": "pyq_traps_rivers",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab COMMON PYQ TRAPS जो students को confuse करते हैं: (1) 'Yamuna या Gandak - Ganga की सबसे बड़ी tributary?' - YAMUNA (length/basin area दोनों में)। (2) 'Narmada delta या estuary?' - ESTUARY! (3) 'India का longest dam?' - HIRAKUD (Mahanadi), not Bhakra। (4) 'World's largest delta?' - SUNDERBAN (Ganga-Brahmaputra), not Godavari।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye toh bahut confusing points hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "(5) 'Brahmaputra - male river, others female?' - Myth! Geographically sab same। (6) 'Kosi - 7 tributaries?' - Haan, SAPTAKOSI। (7) ⭐ BPSC Trap: 'Son - Ganga की tributary या Yamuna की?' - GANGA ki! Direct milti hai। (8) 'Amarkantak se कौन-कौन निकलती है?' - Narmada, Son, Mahanadi (Johila tributaries)। Ye सब DIRECT questions hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab pूरा confidence hai! Quiz दीजिये!"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_quiz_final_prep_1",
+        "button_text": "Final Preparation Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_54_quiz_final_prep_1",
+      "card_slug": "card_54_quiz_final_prep_1",
+      "type": "quiz",
+      "concept_id": "final_prep_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC/Railway Trap: Ganga की सबसे लंबी tributary कौन सी है?",
+        "options": [
+          {"id": "A", "text": "Yamuna"},
+          {"id": "B", "text": "Gandak"},
+          {"id": "C", "text": "Ghaghara"},
+          {"id": "D", "text": "Son"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "YAMUNA गंगा की सबसे लंबी tributary है (लगभग 1376 km length)। यह Yamunotri glacier (Uttarakhand) से निकलती है और Prayagraj (Allahabad) में Ganga से मिलती है। Basin area के हिसाब से भी Yamuna सबसे बड़ी है। Ghaghara दूसरी सबसे बड़ी tributary है। ⭐ SSC में यह confusion-based question बार-बार आता है - students अक्सर Ghaghara या Gandak mark कर देते हैं!"
+      },
+      "navigation": {
+        "next": "card_55_quiz_final_prep_2",
+        "button_text": "अगला प्रश्न (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_55_quiz_final_prep_2",
+      "card_slug": "card_55_quiz_final_prep_2",
+      "type": "quiz",
+      "concept_id": "final_prep_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सी नदी 'Antecedent River' का उदाहरण है?",
+        "options": [
+          {"id": "A", "text": "Godavari"},
+          {"id": "B", "text": "Brahmaputra"},
+          {"id": "C", "text": "Narmada"},
+          {"id": "D", "text": "Kaveri"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "BRAHMAPUTRA एक ANTECEDENT RIVER है - मतलब यह Himalayas के बनने से पहले से बहती आ रही है। जब Himalayas uplift हुए (tectonic activity से), तब भी Brahmaputra ने अपना रास्ता maintain किया और mountains को काटती गई (gorges बनाते हुए)। Tibet में यह 'Tsangpo' के नाम से बहती है और Himalayas को काटकर India में प्रवेश करती है। ⭐ UPSC में antecedent, consequent, superimposed river types पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_56_quiz_final_prep_3",
+        "button_text": "अगला प्रश्न (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_56_quiz_final_prep_3",
+      "card_slug": "card_56_quiz_final_prep_3",
+      "type": "quiz",
+      "concept_id": "final_prep_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: 'Panch Prayag' (5 संगम) किस राज्य में स्थित हैं?",
+        "options": [
+          {"id": "A", "text": "Bihar"},
+          {"id": "B", "text": "Uttar Pradesh"},
+          {"id": "C", "text": "Uttarakhand"},
+          {"id": "D", "text": "Himachal Pradesh"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "'PANCH PRAYAG' (5 पवित्र संगम) UTTARAKHAND में स्थित हैं जहाँ Alaknanda river अपनी tributaries से मिलती है: (1) VISHNU PRAYAG - Alaknanda + Dhauli Ganga, (2) NAND PRAYAG - Alaknanda + Nandakini, (3) KARN PRAYAG - Alaknanda + Pindar, (4) RUDRA PRAYAG - Alaknanda + Mandakini, (5) DEV PRAYAG - Alaknanda + Bhagirathi (यहाँ से 'Ganga' नाम मिलता है)। ⭐ SSC और UPSC में यह fact-based question आता है!"
+      },
+      "navigation": {
+        "next": "card_57_milestone_final",
+        "button_text": "Result देखें ➔"
+      }
+    },
+    {
+      "card_id": "card_57_milestone_final",
+      "card_slug": "card_57_milestone_final",
+      "type": "milestone",
+      "concept_id": "all_modules_complete",
+      "level": 5,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 All Modules Completed!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Complete River Systems of India",
+        "xp_earned": 80,
+        "milestone_progress": "Module 6/6 Clear",
+        "motivational_quote": "Outstanding! Himalayan से लेकर Peninsular, Bihar rivers से लेकर pollution - सब clear! Ab Officer-level revision और final quiz! You're ready! 💪🌊"
+      },
+      "navigation": {
+        "next": "card_58_officer_revision",
+        "button_text": "Officer Revision ⚡"
+      }
+    },
+    {
+      "card_id": "card_58_officer_revision",
+      "card_slug": "card_58_officer_revision",
+      "type": "summary",
+      "concept_id": "officer_revision_summary",
+      "level": 5,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER-LEVEL LIGHTNING REVISION",
+        "revision_points": [
+          {
+            "topic": "Himalayan Rivers (PERENNIAL)",
+            "point": "INDUS: Mansarovar → Pakistan (Jhelum, Chenab, Ravi, Beas, Sutlej - PUNJAB!)। GANGA: Gangotri (Bhagirathi) + Alaknanda = Devprayag → 2525 km → Bay of Bengal (Sunderban Delta - world's largest)। Tributaries: Left (Ramganga, Gomti, Ghaghara, Gandak, Kosi), Right (YAMUNA-largest, Son, Punpun)। BRAHMAPUTRA: Tibet (Tsangpo) → Arunachal (Dihang) → Assam → Bangladesh (Jamuna) → Antecedent river, braided, high silt।"
+          },
+          {
+            "topic": "Peninsular Rivers (SEASONAL - mostly East flowing)",
+            "point": "GODAVARI (1465 km - longest peninsular, 'Dakshin Ganga')। KRISHNA (1400 km - Mahabaleshwar → Bay of Bengal)। NARMADA & TAPI (WEST flowing → Arabian Sea, RIFT VALLEY, ESTUARIES not deltas!)। MAHANADI (Hirakud Dam - longest)। KAVERI ('Ganga of South', Karnataka-TN dispute)। East = Deltas (fertile), West = Estuaries।"
+          },
+          {
+            "topic": "⭐ Bihar Rivers (BPSC TRE Critical)",
+            "point": "GANGA divides: North (fertile plains, floods) vs South (plateau, seasonal)। NORTH (Nepal-origin, perennial): Ghaghra (Chhapra), GANDAK (Hajipur - Sonepur Mela), Burhi Gandak, Bagmati ('Sita'), Kamla-Balan, KOSI ('Bihar ka Shok' - course changing, Saptakosi, embankments), Mahananda। SOUTH (plateau-origin, seasonal): SON (largest - Amarkantak → Ganga near Patna), Punपun, PHALGU ('cursed' - dry in summer, Gaya)।"
+          },
+          {
+            "topic": "River Features & Dams",
+            "point": "DELTA: Sediment deposit, triangular, fertile (Sunderban-largest, Godavari, Krishna, Kaveri, Mahanadi)। ESTUARY: Funnel mouth, sea water mix, no sediment (Narmada, Tapi)। DAMS: Tehri (Bhagirathi-HIGHEST 260m), Bhakra (Sutlej-2nd highest gravity), HIRAKUD (Mahanadi-LONGEST), Sardar Sarovar (Narmada), Nagarjuna Sagar (Krishna)। BIHAR: Gandak Barrage, Kosi Barrage (Nepal), Farakka (WB-affects Bihar)।"
+          },
+          {
+            "topic": "Pollution & Conservation + PYQ Traps",
+            "point": "Sources: Sewage, industrial waste, agri-runoff, religious practices। NAMAMI GANGE (2014) - Ganga cleaning। BOD (Biological Oxygen Demand) - pollution indicator। River Interlinking: Ken-Betwa (first)। ⭐ TRAPS: Longest IN India = Ganga (2525), Originating = Godavari। Yamuna = largest Ganga tributary। Narmada = ESTUARY not delta। Highest dam = Tehri, Longest = Hirakud। Panch Prayag = Uttarakhand। Sunderban = world's largest delta।"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_59_final_quiz_1",
+        "button_text": "Final Officer Quiz 🎯"
+      }
+    },
+    {
+      "card_id": "card_59_final_quiz_1",
+      "card_slug": "card_59_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_officer_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC OFFICER LEVEL (Multi-Statement):\n\nनिम्नलिखित कथनों पर विचार कीजिये:\n\n1. Ganga नदी Devprayag में Bhagirathi और Alaknanda के संगम से बनती है।\n2. Yamuna, Ganga की सबसे बड़ी tributary है।\n3. Kosi नदी को 'Bihar का शोक' इसलिए कहा जाता है क्योंकि यह गर्मियों में सूख जाती है।\n4. Narmada और Tapi नदियां deltas बनाती हैं।\n\nउपरोक्त में से कितने कथन सही हैं?",
+        "options": [
+          {"id": "A", "text": "केवल एक"},
+          {"id": "B", "text": "केवल दो"},
+          {"id": "C", "text": "तीन"},
+          {"id": "D", "text": "सभी चार"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "कथन 1 सही: Ganga नदी DEVPRAYAG (Uttarakhand) में Bhagirathi और Alaknanda के संगम से officially बनती है।\n\nकथन 2 सही: YAMUNA गंगा की सबसे बड़ी tributary है (length और basin area दोनों में)।\n\nकथन 3 गलत: Kosi को 'Bihar का शोक' इसलिए कहा जाता है क्योंकि यह अपना COURSE (मार्ग) बार-बार बदलती है और विनाशकारी बाढ़ लाती है, न कि सूखने के कारण। यह PERENNIAL river है।\n\nकथन 4 गलत: Narmada और Tapi ESTUARIES बनाती हैं, deltas नहीं! ये West flowing rivers हैं और Arabian Sea में गिरती हैं।\n\n✅ सही उत्तर: केवल दो कथन सही (1 और 2)। ⭐ BPSC में ऐसे multi-statement questions बहुत आते हैं!"
+      },
+      "navigation": {
+        "next": "card_60_final_quiz_2",
+        "button_text": "Next Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_60_final_quiz_2",
+      "card_slug": "card_60_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_officer_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC PRELIMS LEVEL (Assertion-Reason):\n\nअभिकथन (A): East flowing peninsular rivers deltas बनाती हैं जबकि West flowing rivers estuaries बनाती हैं।\n\nकारण (R): East flowing rivers की speed कम होती है और वे अपनी silt deposit कर देती हैं, जबकि West flowing rivers में strong currents होती हैं जो silt को बहा ले जाती हैं।\n\nनिम्नलिखित में से कौन सा सही है?",
+        "options": [
+          {"id": "A", "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है।"},
+          {"id": "B", "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है।"},
+          {"id": "C", "text": "A सही है लेकिन R गलत है।"},
+          {"id": "D", "text": "A गलत है लेकिन R सही है।"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "अभिकथन (A) सही है: East flowing peninsular rivers (Godavari, Krishna, Mahanadi, Kaveri) Bay of Bengal में गिरती हैं और DELTAS बनाती हैं। West flowing rivers (Narmada, Tapi) Arabian Sea में गिरती हैं और ESTUARIES बनाती हैं।\n\nकारण (R) भी सही है और A की सही व्याख्या है: East flowing rivers gentle slopes पर बहती हैं, speed कम होती है, इसलिए sediments settle हो जाते हैं और deltas बनते हैं। West flowing rivers steep slopes और rift valleys में बहती हैं, तेज़ currents और strong tides (Arabian Sea में) sediments को बहा ले जाती हैं, इसलिए estuaries बनती हैं।\n\n✅ सही उत्तर: A और R दोनों सही हैं और R, A की सही व्याख्या है। ⭐ UPSC में Assertion-Reason type questions geographical processes की समझ test करते हैं!"
+      },
+      "navigation": {
+        "next": "card_61_final_quiz_3",
+        "button_text": "Last Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_61_final_quiz_3",
+      "card_slug": "card_61_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_officer_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE SPECIAL (Bihar Focus):\n\nनिम्नलिखित में से कौन से कथन सही हैं?\n\n1. Gandak नदी Hajipur (Sonepur) के पास Ganga में मिलती है जहाँ Asia का सबसे बड़ा cattle fair लगता है।\n2. Son नदी South Bihar की सबसे बड़ी नदी है जो Ganga की RIGHT BANK tributary है।\n3. Bagmati नदी को 'Sita' नदी भी कहा जाता है।\n4. Phalgu नदी गर्मियों में भी पूरे साल पानी से भरी रहती है।\n\nसही कूट चुनिए:",
+        "options": [
+          {"id": "A", "text": "केवल 1, 2 और 3"},
+          {"id": "B", "text": "केवल 1 और 2"},
+          {"id": "C", "text": "केवल 2, 3 और 4"},
+          {"id": "D", "text": "सभी 1, 2, 3 और 4"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "कथन 1 सही: GANDAK नदी Hajipur (Patna के पास, Sonepur के निकट) में Ganga से मिलती है। यहाँ Kartik Purnima पर SONEPUR CATTLE FAIR (पशु मेला) लगता है जो Asia का सबसे बड़ा है।\n\nकथन 2 सही: SON नदी South Bihar की सबसे बड़ी नदी है। यह Amarkantak (MP) से निकलती है और Patna के पास Ganga की RIGHT BANK tributary के रूप में मिलती है।\n\nकथन 3 सही: BAGMATI नदी को 'SITA' नदी भी कहा जाता है क्योंकि यह Nepal के Janakpur (Sita का जन्मस्थान) से होकर बहती है।\n\nकथन 4 गलत: PHALGU नदी SEASONAL है और गर्मियों में लगभग सूख जाती है (Gaya में)। इसे 'शापित नदी' भी कहा जाता है।\n\n✅ सही उत्तर: केवल 1, 2 और 3 सही। ⭐ BPSC TRE में Bihar की rivers पर detailed questions आते हैं!"
+      },
+      "navigation": {
+        "next": "card_62_completion_milestone",
+        "button_text": "Chapter Complete! 🏆"
+      }
+    },
+    {
+      "card_id": "card_62_completion_milestone",
+      "card_slug": "card_62_completion_milestone",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 5,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 RIVERS CHAPTER - COMPLETE MASTERY!",
+        "badge_emoji": "🌊",
+        "completed_topic": "Rivers in Indian Geography - Full Coverage",
+        "xp_earned": 100,
+        "milestone_progress": "100% Complete ✅",
+        "motivational_quote": "🎉 PHENOMENAL ACHIEVEMENT! 🎉\n\nTumne 'Rivers in Indian Geography' को COMPLETELY master कर लिया:\n\n✅ Himalayan Rivers (Indus, Ganga, Brahmaputra) - सभी tributaries के साथ\n✅ Peninsular Rivers (Godavari, Krishna, Narmada, Tapi, Kaveri) - Delta vs Estuary clear\n✅ Bihar Rivers System - North (Kosi, Gandak, Ghaghara) vs South (Son, Punpun, Phalgu)\n✅ River Features - Deltas, Estuaries, Dams, Waterfalls\n✅ Drainage Patterns, Pollution, Conservation (Namami Gange)\n✅ All PYQ Traps और Exam-Ready Facts\n\nAb tum BPSC, BPSC TRE, SSC, Railway, UPSC के किसी भी rivers question को confidently solve कर सकते हो! 💪\n\nFrom Source to Mouth, From Gangotri to Sunderban - सब याद है!\n\nKeep Learning, Keep Growing! 🚀🌊"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Go to Dashboard 🏠"
+      }
+    }
+  ]
+}
+```
