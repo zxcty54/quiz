@@ -1,0 +1,2459 @@
+{
+  "topic_id": "prepositions_english_grammar_sbi_po",
+  "topic_title": "Prepositions - SBI PO Error Detection Mastery",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "SBI PO", "UPSC Prelims"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "preposition_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "Prepositions - Error Detection Mastery",
+        "icon": "📍",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "SBI PO", "UPSC"],
+        "learning_outcomes": [
+          "Master 150+ Preposition Rules tested in Banking & SSC exams",
+          "Identify Preposition Errors in 3 seconds (SBI PO Speed)",
+          "Crack Assertion-Reason & Multi-Statement BPSC Traps",
+          "Learn Idiomatic Prepositions with Adjectives, Verbs & Nouns",
+          "Zero-Error Accuracy in Sentence Correction"
+        ],
+        "estimated_time": "45 mins",
+        "total_modules": 8
+      },
+      "navigation": {
+        "next": "card_02_daily_life_intro",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_life_intro",
+      "card_slug": "card_02_daily_life_intro",
+      "type": "chat",
+      "concept_id": "preposition_concept_building",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kal tum school kaise gaye the?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, main cycle 'se' gaya tha. Aur school 'mein' 9 baje pahuncha."
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Tumne abhi do chhote words use kiye - 'se' aur 'mein'. English mein inhe kehte hain PREPOSITIONS. Ye chhote words hain jo batate hain ki koi cheez KAHAN hai, KAB hai, ya KAISE hui."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'by cycle' aur 'at school' jaise words?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_definition",
+        "button_text": "Bilkul sahi! Next ➔"
+      }
+    },
+    {
+      "card_id": "card_03_definition",
+      "card_slug": "card_03_definition",
+      "type": "chat",
+      "concept_id": "preposition_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! PREPOSITION ek aisa word hai jo ek Noun ya Pronoun ke pehle aata hai aur uska relation dikhata hai kisi aur word ke saath. Jaise - The book is ON the table. Yahan 'ON' batata hai book aur table ka position relationship."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... to 'in', 'on', 'at', 'by', 'with' ye sab prepositions hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum correct! Lekin SBI PO aur SSC mein sabse zyada errors aate hain kyunki har situation ke liye ALAG preposition hota hai. Jaise TIME ke liye alag, PLACE ke liye alag, DIRECTION ke liye alag. Yahin sab confuse ho jaate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Matlab ek hi jagah 'in' nahi laga sakte har baar?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_three_types",
+        "button_text": "Samajhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_04_three_types",
+      "card_slug": "card_04_three_types",
+      "type": "chat",
+      "concept_id": "preposition_types",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Nahi Raju! Dekho, Prepositions teen bade categories mein divide hote hain: 1) TIME ke liye (in, on, at, since, for), 2) PLACE ke liye (in, on, at, above, below), 3) DIRECTION/MOVEMENT ke liye (to, towards, into, from). Ek galat preposition = exam mein zero marks!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir lekin 'in', 'on', 'at' to dono jagah aa rahe hain - Time mein bhi, Place mein bhi! Ye to pakka confuse karega exam mein!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahin pe 99% students galti karte hain! Isliye hum ab ek-ek category ko Raju ke ghar, school, aur mohalle ke examples se samjhenge. Tumhe RULES nahi, LOGIC yaad rahega!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chalo Sir, pehle Time wale sikhao!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_time_in_on_at",
+        "button_text": "Module 1 Start ➔"
+      }
+    },
+    {
+      "card_id": "card_05_time_in_on_at",
+      "card_slug": "card_05_time_in_on_at",
+      "type": "chat",
+      "concept_id": "time_prepositions_in_on_at",
+      "level": 2,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Time ke liye golden rule hai: IN = Bade time period (months, years, centuries), ON = Specific dates aur days, AT = Exact time point. Jaise - I was born IN 1995, ON 15th August, AT 6:30 AM."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab IN January, ON Monday, AT 5 o'clock?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! Lekin yaad rakho - IN the morning/afternoon/evening LEKIN AT night (exception hai ye!). SSC mein yahi trap aata hai - 'in night' galat hai, 'at night' sahi hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Arre wah! To 'at dawn', 'at noon', 'at midnight' bhi sahi hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_time_since_for",
+        "button_text": "Haan! Next Rule ➔"
+      }
+    },
+    {
+      "card_id": "card_06_time_since_for",
+      "card_slug": "card_06_time_since_for",
+      "type": "chat",
+      "concept_id": "time_since_for",
+      "level": 2,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai SBI PO ka favorite - SINCE vs FOR. Rule dekho: SINCE = Starting Point batata hai (specific time se), FOR = Duration batata hai (kitne time tak). Example: I have been studying SINCE 6 AM (starting point), I have been studying FOR 3 hours (duration)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! To 'since Monday' sahi hai, 'for Monday' galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi! SINCE ke saath hamesha specific point aayega - since 2010, since January, since childhood. FOR ke saath hamesha duration - for 5 years, for two months, for a long time. Banking exams mein 80% isi mein error hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek doubt - 'from' ka kya? Wo bhi to starting point hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_from_vs_since",
+        "button_text": "Brilliant Question! ➔"
+      }
+    },
+    {
+      "card_id": "card_07_from_vs_since",
+      "card_slug": "card_07_from_vs_since",
+      "type": "chat",
+      "concept_id": "from_vs_since",
+      "level": 2,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Shabaash Raju! FROM aur SINCE dono starting point batate hain LEKIN farak hai: SINCE = Present Perfect/Present Perfect Continuous ke saath (has/have been), FROM = Simple Past ya Future ke saath. Example: He has been working SINCE morning (abhi bhi chal raha hai). He worked FROM 9 to 5 yesterday (khatam ho gaya)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab SINCE = continuing action, FROM = completed action?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur ek aur trap: FROM...TO use karte hain range batane ke liye. The shop is open FROM 10 AM TO 8 PM. Kabhi 'since...to' nahi likhte!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Got it Sir! Ye to clear ho gaya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_quiz_time_1",
+        "button_text": "Test karte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_time_1",
+      "card_slug": "card_08_quiz_time_1",
+      "type": "quiz",
+      "concept_id": "time_prepositions_quiz",
+      "level": 2,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the error: 'She has been waiting for the bus since two hours.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "No error - sentence is correct"
+          },
+          {
+            "id": "B",
+            "text": "'since' should be replaced with 'for'"
+          },
+          {
+            "id": "C",
+            "text": "'waiting' should be 'waited'"
+          },
+          {
+            "id": "D",
+            "text": "'has been' should be 'was'"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "SINCE is used with a specific starting point (since 6 AM, since Monday), whereas FOR is used with duration (for two hours, for a week). Here 'two hours' is a duration, so correct preposition is FOR. Correct sentence: 'She has been waiting for the bus FOR two hours.'"
+      },
+      "navigation": {
+        "next": "card_09_quiz_time_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_09_quiz_time_2",
+      "card_slug": "card_09_quiz_time_2",
+      "type": "quiz",
+      "concept_id": "time_prepositions_quiz",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The meeting is scheduled in Monday."
+          },
+          {
+            "id": "B",
+            "text": "The meeting is scheduled on Monday."
+          },
+          {
+            "id": "C",
+            "text": "The meeting is scheduled at Monday."
+          },
+          {
+            "id": "D",
+            "text": "The meeting is scheduled by Monday."
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "ON is used with specific days and dates. IN is used with months, years, seasons. AT is used with exact time. BY indicates deadline. Monday is a specific day, so we use ON. Correct: 'The meeting is scheduled ON Monday.' This is a high-frequency SSC CGL trap!"
+      },
+      "navigation": {
+        "next": "card_10_quiz_time_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_10_quiz_time_3",
+      "card_slug": "card_10_quiz_time_3",
+      "type": "quiz",
+      "concept_id": "time_prepositions_quiz",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Spot the error: 'I prefer to study in night because it is quiet.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'in night' with 'at night'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'to study' with 'studying'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'because' with 'as'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Exception Rule! We say IN the morning, IN the afternoon, IN the evening BUT AT night (not 'in night'). This is one of the most tested traps in SBI PO and SSC CGL Error Detection. Correct sentence: 'I prefer to study AT night because it is quiet.'"
+      },
+      "navigation": {
+        "next": "card_11_milestone_time",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_11_milestone_time",
+      "card_slug": "card_11_milestone_time",
+      "type": "milestone",
+      "concept_id": "time_prepositions_milestone",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 1 COMPLETED!",
+        "badge_emoji": "⏰",
+        "completed_topic": "Time Prepositions (IN, ON, AT, SINCE, FOR)",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "You just mastered 40% of SBI PO Time-based errors! Keep going!"
+      },
+      "navigation": {
+        "next": "card_12_place_intro",
+        "button_text": "Start Module 2: Place Prepositions ➔"
+      }
+    },
+    {
+      "card_id": "card_12_place_intro",
+      "card_slug": "card_12_place_intro",
+      "type": "chat",
+      "concept_id": "place_prepositions_intro",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab baat karte hain PLACE prepositions ki. Tum apne ghar mein kahan baithe ho abhi?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir main apne room mein hoon, chair par baitha hoon, aur table ke paas."
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect translation! I am IN my room, sitting ON the chair, near the table. Dekha? IN (enclosed space), ON (surface), NEAR (proximity). Place ke liye bhi IN/ON/AT ka rule alag hai Time se!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye to confusing hai! IN/ON/AT fir se?"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_place_in_on_at",
+        "button_text": "Logic samjhao ➔"
+      }
+    },
+    {
+      "card_id": "card_13_place_in_on_at",
+      "card_slug": "card_13_place_in_on_at",
+      "type": "chat",
+      "concept_id": "place_in_on_at_rule",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Place ke liye yaad rakho: IN = Enclosed/Big areas (countries, cities, rooms), ON = Surfaces (table, wall, floor), AT = Specific points/locations (address, building name). Example: I live IN India, IN Bihar, IN Patna, AT Station Road, AT my uncle's house."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To 'on the table', 'in the box', 'at the bus stop' sahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Lekin SBI trap dekho - Hum kehte hain AT the airport/station/office (specific location point) LEKIN IN the hospital/school/university (enclosed institution). Yahan confuse hote hain sab!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'at school' aur 'in school' dono sahi hain kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_at_vs_in_institutions",
+        "button_text": "Yahin twist hai! ➔"
+      }
+    },
+    {
+      "card_id": "card_14_at_vs_in_institutions",
+      "card_slug": "card_14_at_vs_in_institutions",
+      "type": "chat",
+      "concept_id": "at_vs_in_institutions",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dono sahi hain LEKIN meaning alag hai! AT school = physically present at that location (general sense). IN school = inside the building ya enrolled as student. Similarly: He is AT the hospital (visiting/working there), He is IN the hospital (admitted as patient)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Matlab context se meaning change ho jaata hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ek aur example: She is AT church (attending prayer), The antique is IN the church (physically inside the building). BPSC mein yahi contextual meaning ka trap aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, 'on the bus' ya 'in the bus' kya sahi hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_on_vs_in_vehicles",
+        "button_text": "Brilliant Question! ➔"
+      }
+    },
+    {
+      "card_id": "card_15_on_vs_in_vehicles",
+      "card_slug": "card_15_on_vs_in_vehicles",
+      "type": "chat",
+      "concept_id": "vehicle_prepositions",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Golden Rule for vehicles: ON = Public transport jisme tum khade bhi ho sakte ho (bus, train, plane, ship). IN = Private/small vehicles (car, taxi, auto, rickshaw). Reason: Bus/train mein tum walk kar sakte ho, car mein nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'on the bus', 'on the train', lekin 'in the car', 'in the taxi'?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Lekin American English mein kabhi kabhi 'in the bus/train' bhi use hota hai, but Indian exams (SSC/Banking/Railways) British English follow karte hain, so ON the bus standard hai. Ek aur twist - We say 'on a bicycle/bike' (surface par baithe ho), not 'in a bicycle'!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'by car' aur 'in the car' mein kya farak hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_by_vs_in_transport",
+        "button_text": "Superb Doubt! ➔"
+      }
+    },
+    {
+      "card_id": "card_16_by_vs_in_transport",
+      "card_slug": "card_16_by_vs_in_transport",
+      "type": "chat",
+      "concept_id": "by_vs_in_transport",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BY = Mode of transport batata hai (general). IN/ON = Specific vehicle batata hai. Example: I go to school BY bus (mode), I am sitting IN the bus (specific vehicle). Similarly: He travels BY car (mode) vs He is IN the car right now (specific)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! To 'by car', 'by train', 'by air' sab general mode hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yes! Lekin yaad rakho - BY ke saath article (a/an/the) NAHI aata! Galat: 'by the car', Sahi: 'by car'. But exception hai - 'by the 5 o'clock train' (specific train number/time batane ke liye article aa sakta hai). SSC mein yahi article trap aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'by bus' sahi, 'by a bus' galat, lekin 'by the morning bus' sahi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_above_below_over_under",
+        "button_text": "Absolutely! Next ➔"
+      }
+    },
+    {
+      "card_id": "card_17_above_below_over_under",
+      "card_slug": "card_17_above_below_over_under",
+      "type": "chat",
+      "concept_id": "above_below_over_under",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab positional prepositions: ABOVE vs OVER, BELOW vs UNDER. ABOVE/BELOW = General upar/neeche (no direct contact). OVER/UNDER = Exactly upar/neeche (often covering). Example: The fan is ABOVE my head (general position). The bridge is OVER the river (covering). The book is UNDER the table (directly beneath)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab helicopter 'above' the building hai, lekin roof 'over' the building hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi samjhe! OVER often implies covering ya movement across. The plane flew OVER the city (movement). The temperature is ABOVE 40 degrees (general comparison - yahan OVER galat hoga). UNDER vs BELOW bhi same logic: UNDER = directly beneath, BELOW = lower level (not necessarily directly beneath)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir example do BELOW ka?"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_below_examples",
+        "button_text": "Zaroor! ➔"
+      }
+    },
+    {
+      "card_id": "card_18_below_examples",
+      "card_slug": "card_18_below_examples",
+      "type": "chat",
+      "concept_id": "below_examples",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BELOW examples: The valley is BELOW the mountain (general lower position). The temperature is BELOW freezing point (comparison). His marks are BELOW average (standard comparison). UNDER examples: The cat is UNDER the bed (directly beneath). He is UNDER pressure (idiomatic - control/influence mein)."
+        },
+        {
+          "speaker": "raju",
+          "text": "To numerical comparison mein ABOVE/BELOW use karte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Above 50 marks, below 100 rupees, above sea level - ye sab comparison hai. Lekin physical covering mein OVER/UNDER: He wore a sweater OVER his shirt (covering). The paper is UNDER the file (direct contact/covering)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Got it Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_quiz_place_1",
+        "button_text": "Quiz Time! ➔"
+      }
+    },
+    {
+      "card_id": "card_19_quiz_place_1",
+      "card_slug": "card_19_quiz_place_1",
+      "type": "quiz",
+      "concept_id": "place_prepositions_quiz",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "She lives at Mumbai."
+          },
+          {
+            "id": "B",
+            "text": "She lives in Mumbai."
+          },
+          {
+            "id": "C",
+            "text": "She lives on Mumbai."
+          },
+          {
+            "id": "D",
+            "text": "She lives by Mumbai."
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "IN is used with cities, countries, states (enclosed geographical areas). AT is used with specific points/addresses. ON is used with surfaces. Mumbai is a city, so we use IN. Correct: 'She lives IN Mumbai.' But we say 'She lives AT 5th Avenue, Mumbai' (specific address)."
+      },
+      "navigation": {
+        "next": "card_20_quiz_place_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz_place_2",
+      "card_slug": "card_20_quiz_place_2",
+      "type": "quiz",
+      "concept_id": "place_prepositions_quiz",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the error: 'I traveled to Delhi in the train yesterday.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'in the train' with 'by train'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'in the train' with 'on the train'"
+          },
+          {
+            "id": "C",
+            "text": "Both A and B are correct"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Both corrections are acceptable depending on context. 'BY train' (mode of transport - general usage), 'ON the train' (specific vehicle - British English standard for public transport). 'IN the train' is incorrect in standard British English. SBI PO and SSC follow British English norms. Both A and B are acceptable corrections, but B is more precise for the sentence structure."
+      },
+      "navigation": {
+        "next": "card_21_quiz_place_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_place_3",
+      "card_slug": "card_21_quiz_place_3",
+      "type": "quiz",
+      "concept_id": "place_prepositions_quiz",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Spot the error: 'The picture is hanged over the wall.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'over' with 'on'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'hanged' with 'hung'"
+          },
+          {
+            "id": "C",
+            "text": "Both A and B"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Two errors! (1) Picture is attached to wall surface, so ON the wall (not OVER - OVER means above without contact or covering). (2) HANGED is used for execution (capital punishment), HUNG is used for objects. Correct: 'The picture is HUNG ON the wall.' This is a classic SBI PO double-error trap!"
+      },
+      "navigation": {
+        "next": "card_22_milestone_place",
+        "button_text": "Check Score ➔"
+      }
+    },
+    {
+      "card_id": "card_22_milestone_place",
+      "card_slug": "card_22_milestone_place",
+      "type": "milestone",
+      "concept_id": "place_prepositions_milestone",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 2 MASTERED!",
+        "badge_emoji": "📍",
+        "completed_topic": "Place Prepositions (IN, ON, AT, ABOVE, BELOW, OVER, UNDER)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "70% Error Detection accuracy unlocked! Direction prepositions coming next!"
+      },
+      "navigation": {
+        "next": "card_23_direction_intro",
+        "button_text": "Start Module 3: Direction & Movement ➔"
+      }
+    },
+    {
+      "card_id": "card_23_direction_intro",
+      "card_slug": "card_23_direction_intro",
+      "type": "chat",
+      "concept_id": "direction_prepositions_intro",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tum school jaate ho ya school ko jaate ho?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir dono hi bolte hain na log? 'School jaana' aur 'school ko jaana'?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Hindi mein chalta hai, lekin English mein TO, TOWARDS, INTO, FROM - in sab ka specific use hai direction batane ke liye. Galat preposition = awkward sentence! Jaise - I go TO school (correct), I go TOWARDS school (different meaning - direction mein ja raha hoon, lekin zaruri nahi pahunchun)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab TO aur TOWARDS mein farak hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_to_vs_towards",
+        "button_text": "Bilkul! Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_24_to_vs_towards",
+      "card_slug": "card_24_to_vs_towards",
+      "type": "chat",
+      "concept_id": "to_vs_towards",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "TO = Destination (wahan pahunchne ka intention). TOWARDS = Direction (us taraf ja rahe ho, lekin final destination nahi). Example: I am going TO the hospital (main wahan pahunchunga). I am walking TOWARDS the hospital (us direction mein ja raha hoon, par shayad raste mein kahin aur ruk jaaun)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To 'He ran towards me and gave me the letter' galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi nahi, bilkul sahi hai! Kyunki yahan focus direction par hai (mere taraf aaya), destination par nahi. Lekin agar 'He came TO me and gave the letter' likho to matlab hai exactly mere paas aaya. Subtle difference hai, but exam mein decisive hoti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir INTO kab use karte hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_into_in_usage",
+        "button_text": "Important question! ➔"
+      }
+    },
+    {
+      "card_id": "card_25_into_in_usage",
+      "card_slug": "card_25_into_in_usage",
+      "type": "chat",
+      "concept_id": "into_vs_in",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "INTO = Movement INSIDE kisi enclosed space mein (entering action). IN = Already inside (static position). Example: He jumped INTO the swimming pool (action of entering). He is swimming IN the pool (already inside - position). Similarly: She walked INTO the room vs She is IN the room."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab verb of movement ke saath INTO, aur stative verb ke saath IN?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Movement verbs: go, come, jump, fall, walk, run, dive - in sab ke saath INTO use hota hai entering sense mein. Stative verbs: is, was, live, sit, stay - in ke saath IN. Lekin ek twist - Transformation bhi INTO se dikhate hain: Water turned INTO ice. The frog turned INTO a prince."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Matlab change dikhane ke liye bhi INTO?"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_from_usage",
+        "button_text": "Haan! Next ➔"
+      }
+    },
+    {
+      "card_id": "card_26_from_usage",
+      "card_slug": "card_26_from_usage",
+      "type": "chat",
+      "concept_id": "from_usage",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "FROM ka use 3 jagah hota hai: 1) Starting Point (I came FROM Delhi), 2) Source/Origin (This table is made FROM wood), 3) Distance (My house is 2 km FROM the station). Banking exams mein sabse zyada error 'made from' vs 'made of' mein aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain? 'Made from' aur 'made of' alag hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! MADE FROM = Raw material completely change ho gaya (transformation, original form visible nahi hai). Example: Paper is made FROM wood (lakdi ka form nahi dikhta). MADE OF = Material ka original form abhi bhi visible hai. Example: The table is made OF wood (lakdi dikhti hai). Yahi SBI PO ka favorite trap hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To 'Bread is made from flour' sahi hai kyunki flour ka form change ho gaya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_made_from_of_examples",
+        "button_text": "Perfect understanding! ➔"
+      }
+    },
+    {
+      "card_id": "card_27_made_from_of_examples",
+      "card_slug": "card_27_made_from_of_examples",
+      "type": "chat",
+      "concept_id": "made_from_of_examples",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi! More examples: Wine is made FROM grapes (transformation), Cheese is made FROM milk, Plastic is made FROM petroleum. BUT: The chair is made OF plastic (visible), The necklace is made OF gold (visible), The house is made OF bricks (visible)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek confusion - 'The house is made from bricks' to galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Technically galat nahi, lekin MADE OF standard hai jab final product mein material visible ho. MADE FROM tab jab chemical/physical transformation complete ho. Lekin exams mein safe rule: visible material = OF, transformed material = FROM. Aur haan, MADE WITH bhi hota hai jab mixing/combining batani ho: This dish is made WITH fresh vegetables."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab three forms hain - FROM, OF, WITH?"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_quiz_direction_1",
+        "button_text": "Haan! Quiz mein test karenge ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_direction_1",
+      "card_slug": "card_28_quiz_direction_1",
+      "type": "quiz",
+      "concept_id": "direction_prepositions_quiz",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the error: 'She jumped in the river to save the child.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'in' with 'into'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'to save' with 'for saving'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'the child' with 'a child'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Jumped' is a movement verb indicating entry INTO an enclosed space (water). IN indicates static position. Correct sentence: 'She jumped INTO the river to save the child.' This is a high-frequency SSC CGL and SBI PO trap testing movement vs position prepositions."
+      },
+      "navigation": {
+        "next": "card_29_quiz_direction_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_direction_2",
+      "card_slug": "card_29_quiz_direction_2",
+      "type": "quiz",
+      "concept_id": "direction_prepositions_quiz",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The ring is made from gold."
+          },
+          {
+            "id": "B",
+            "text": "The ring is made of gold."
+          },
+          {
+            "id": "C",
+            "text": "The ring is made by gold."
+          },
+          {
+            "id": "D",
+            "text": "The ring is made with gold."
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "MADE OF is used when the original material is visible in the final product. Gold is clearly visible in the ring. MADE FROM is used when raw material undergoes transformation (e.g., paper from wood). MADE BY indicates the maker/agent. MADE WITH indicates ingredients/components mixed together. Correct: 'The ring is made OF gold.'"
+      },
+      "navigation": {
+        "next": "card_30_quiz_direction_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_direction_3",
+      "card_slug": "card_30_quiz_direction_3",
+      "type": "quiz",
+      "concept_id": "direction_prepositions_quiz",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Spot the error: 'He is walking towards to the market.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Remove 'to' (towards the market)"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'towards to' with 'to'"
+          },
+          {
+            "id": "C",
+            "text": "Both A and B are correct"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Towards' already indicates direction, so adding 'to' is redundant and grammatically incorrect. Either use 'towards the market' OR 'to the market', but NEVER 'towards to'. Both corrections A and B eliminate the error. This redundancy trap appears frequently in Banking and SSC exams."
+      },
+      "navigation": {
+        "next": "card_31_milestone_direction",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_31_milestone_direction",
+      "card_slug": "card_31_milestone_direction",
+      "type": "milestone",
+      "concept_id": "direction_milestone",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🚀 MODULE 3 CONQUERED!",
+        "badge_emoji": "🧭",
+        "completed_topic": "Direction & Movement (TO, TOWARDS, INTO, FROM)",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "You're mastering Officer-level preposition rules! 50% syllabus done!"
+      },
+      "navigation": {
+        "next": "card_32_adjective_prep_intro",
+        "button_text": "Module 4: Adjective + Preposition Pairs ➔"
+      }
+    },
+    {
+      "card_id": "card_32_adjective_prep_intro",
+      "card_slug": "card_32_adjective_prep_intro",
+      "type": "chat",
+      "concept_id": "adjective_preposition_intro",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab aati hai sabse tricky category - ADJECTIVE + PREPOSITION fixed pairs! Yahan rule nahi, MEMORY game hai. Jaise - Afraid OF (not from/with), Proud OF (not for/with), Different FROM (not than/of in British English)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab har adjective ke saath fixed preposition hai jo yaad karna padega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! SBI PO aur SSC CGL mein 60% errors yahi se aate hain. Kyunki students assume kar lete hain - 'angry' ke baad 'at' ya 'with' dono chal jayega. But exam mein context matter karta hai: Angry WITH a person (kisi se naraz), Angry AT/ABOUT a situation (kisi baat se naraz)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to bahut confusing hai! Context bhi dekhna padega?"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_angry_with_at",
+        "button_text": "Haan, pattern sikhaata hoon ➔"
+      }
+    },
+    {
+      "card_id": "card_33_angry_with_at",
+      "card_slug": "card_33_angry_with_at",
+      "type": "chat",
+      "concept_id": "angry_with_at_about",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Pattern dekho: PERSON ke saath = WITH/AT. THING/SITUATION ke saath = AT/ABOUT. Examples: I am angry WITH my brother (person). I am angry AT/ABOUT the delay (situation). Similarly: Disappointed WITH a person, Disappointed AT/ABOUT an outcome."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab emotion adjectives mein person = WITH, situation = AT/ABOUT?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Smart observation! Mostly yes, lekin exceptions bhi hain. Jaise 'pleased' - Pleased WITH (general), Pleased AT (specific event). Example: I am pleased WITH your performance (overall). I am pleased AT your success (specific event). Banking mein yahi nuance test hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir list do common adjective-preposition pairs ki jo exams mein aate hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_common_adj_prep_list_1",
+        "button_text": "Zaroor! Dhyaan se padho ➔"
+      }
+    },
+    {
+      "card_id": "card_34_common_adj_prep_list_1",
+      "card_slug": "card_34_common_adj_prep_list_1",
+      "type": "chat",
+      "concept_id": "common_adjective_prepositions_1",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ SBI PO High-Frequency List Part 1: Afraid OF, Proud OF, Ashamed OF, Aware OF, Capable OF, Fond OF, Independent OF, Sure OF/ABOUT, Tired OF, Accused OF, Confident OF/ABOUT, Jealous OF."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye sab OF ke saath! Koi pattern hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Mostly emotions aur states OF ke saath aate hain. Lekin exceptions yaad rakho: Afraid OF (not from), Tired OF (not from/with). Students often write 'afraid from' (galat!). Similarly 'bored' - Bored WITH something (not 'bored of' in formal British English, though American English mein 'bored of' chalta hai)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir aur prepositions ke saath kaun se adjectives hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_common_adj_prep_list_2",
+        "button_text": "List 2 ➔"
+      }
+    },
+    {
+      "card_id": "card_35_common_adj_prep_list_2",
+      "card_slug": "card_35_common_adj_prep_list_2",
+      "type": "chat",
+      "concept_id": "common_adjective_prepositions_2",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Part 2 - WITH pairs: Angry WITH (person), Pleased WITH, Satisfied WITH, Concerned WITH, Familiar WITH, Popular WITH, Crowded WITH, Covered WITH, Fed up WITH, Bored WITH."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'satisfied of' galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely galat! Always 'satisfied WITH'. Similarly 'familiar' - Familiar WITH (not 'familiar to'). BUT ek twist - 'known TO' (not 'known with'): He is known TO everyone. Yahi cross-confusion SBI mein trap banata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'different' ke saath kya aata hai? Different 'from' ya 'than'?"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_different_from_than",
+        "button_text": "BPSC Favorite Trap! ➔"
+      }
+    },
+    {
+      "card_id": "card_36_different_from_than",
+      "card_slug": "card_36_different_from_than",
+      "type": "chat",
+      "concept_id": "different_from_than_to",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Golden Rule: British English (jo Indian exams follow karte hain) mein Different FROM is standard. American English mein 'different than' bhi acceptable hai. 'Different to' British informal mein sometimes use hota hai, lekin exams mein safest = Different FROM. Example: This book is different FROM that one."
+        },
+        {
+          "speaker": "raju",
+          "text": "To exam mein hamesha 'different from' mark karoon sahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yes! Similarly 'compared' - We say Compared TO (similarity highlight karne ke liye) OR Compared WITH (differences examine karne ke liye). Example: Compared TO a cheetah, he runs fast (exaggeration/similarity). Compared WITH last year, sales increased (factual comparison). But exam mein dono acceptable hain mostly!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir thoda confusing hai, lekin samajh aa raha hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_quiz_adjective_prep_1",
+        "button_text": "Practice se clear hoga! ➔"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_adjective_prep_1",
+      "card_slug": "card_37_quiz_adjective_prep_1",
+      "type": "quiz",
+      "concept_id": "adjective_preposition_quiz",
+      "level": 3,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the error: 'She is afraid from lizards since childhood.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'from' with 'of'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'since' with 'for'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'childhood' with 'her childhood'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "The correct collocation is 'afraid OF' (not 'afraid from'). This is one of the most common errors in SSC and Banking exams. Students confuse Hindi translation 'se darna' and use FROM, but English requires OF. Correct: 'She is afraid OF lizards since childhood.' (SINCE is correct here as childhood is a starting point, not a duration)."
+      },
+      "navigation": {
+        "next": "card_38_quiz_adjective_prep_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_adjective_prep_2",
+      "card_slug": "card_38_quiz_adjective_prep_2",
+      "type": "quiz",
+      "concept_id": "adjective_preposition_quiz",
+      "level": 3,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "This problem is different than the previous one."
+          },
+          {
+            "id": "B",
+            "text": "This problem is different from the previous one."
+          },
+          {
+            "id": "C",
+            "text": "This problem is different of the previous one."
+          },
+          {
+            "id": "D",
+            "text": "This problem is different to the previous one."
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "In British English (followed by Indian competitive exams), 'different FROM' is the standard and preferred usage. 'Different than' is American English. 'Different of' is always incorrect. 'Different to' is informal British usage but not accepted in formal exams. Correct: 'This problem is different FROM the previous one.' SBI PO favorite trap!"
+      },
+      "navigation": {
+        "next": "card_39_quiz_adjective_prep_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz_adjective_prep_3",
+      "card_slug": "card_39_quiz_adjective_prep_3",
+      "type": "quiz",
+      "concept_id": "adjective_preposition_quiz",
+      "level": 3,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Spot the error: 'I am not satisfied of your explanation.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'of' with 'with'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'of' with 'by'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'not satisfied' with 'unsatisfied'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "The correct collocation is 'satisfied WITH' (not 'satisfied of'). This is a high-frequency error in SSC CGL and SBI PO Error Detection. Students often confuse it with 'proud OF' or 'capable OF'. Correct sentence: 'I am not satisfied WITH your explanation.'"
+      },
+      "navigation": {
+        "next": "card_40_milestone_adjective",
+        "button_text": "Check Score ➔"
+      }
+    },
+    {
+      "card_id": "card_40_milestone_adjective",
+      "card_slug": "card_40_milestone_adjective",
+      "type": "milestone",
+      "concept_id": "adjective_preposition_milestone",
+      "level": 3,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "💎 MODULE 4 CLEARED!",
+        "badge_emoji": "📚",
+        "completed_topic": "Adjective + Preposition Fixed Pairs",
+        "xp_earned": 80,
+        "milestone_progress": "Module 4/8 Complete",
+        "motivational_quote": "You're cracking SBI PO level collocations! Verb patterns next!"
+      },
+      "navigation": {
+        "next": "card_41_verb_prep_intro",
+        "button_text": "Module 5: Verb + Preposition Pairs ➔"
+      }
+    },
+    {
+      "card_id": "card_41_verb_prep_intro",
+      "card_slug": "card_41_verb_prep_intro",
+      "type": "chat",
+      "concept_id": "verb_preposition_intro",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai Officer-level topic - VERB + PREPOSITION combinations! Yahan bahut saare verbs apna meaning change kar dete hain preposition ke saath. Jaise - Look (dekhna), Look AT (kisi cheez ko dekhna), Look FOR (dhoondhna), Look AFTER (care karna), Look INTO (investigate karna)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Matlab ek 'look' ke itne meanings?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Inhe kehte hain PHRASAL VERBS. Lekin yahan hum focus karenge fixed Verb + Preposition pairs par jo sentence correction mein test hote hain. Jaise - Depend ON (not 'depend of'), Belong TO (not 'belong of'), Consist OF (not 'consist from')."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir list do common verb-preposition pairs ki!"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_common_verb_prep_list_1",
+        "button_text": "High-frequency list! ➔"
+      }
+    },
+    {
+      "card_id": "card_42_common_verb_prep_list_1",
+      "card_slug": "card_42_common_verb_prep_list_1",
+      "type": "chat",
+      "concept_id": "common_verb_prepositions_1",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ SBI PO Must-Know Part 1: Depend ON, Rely ON, Insist ON, Concentrate ON, Agree WITH (person)/TO (proposal)/ON (point), Laugh AT, Smile AT, Stare AT, Look AT, Aim AT, Arrive AT (small place)/IN (city/country)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'agree' ke teen forms hain? Confusing hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, context se decide hota hai: Agree WITH a person (I agree with you), Agree TO a proposal/plan (I agree to your plan), Agree ON a decision/point (We agreed on the price). Banking exams mein yahi contextual trap aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur 'arrive' bhi do prepositions le sakta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_arrive_at_in",
+        "button_text": "Bilkul! Rule hai ➔"
+      }
+    },
+    {
+      "card_id": "card_43_arrive_at_in",
+      "card_slug": "card_43_arrive_at_in",
+      "type": "chat",
+      "concept_id": "arrive_at_in_rule",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ARRIVE ka rule place size se decide hota hai: AT = Small/specific places (station, airport, office, building). IN = Large areas (cities, countries). Examples: I arrived AT the station, I arrived IN Delhi, I arrived IN India. Same logic jaise Place prepositions mein IN/AT use hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To arrive 'to' kabhi nahi aata?"
+        },
+        {
+          "speaker": "aman",
+          "text": "NEVER! 'Arrive to' grammatically galat hai. Lekin ek exception - 'arrive at a conclusion/decision' (idiomatic use). Similarly 'reach' - We say 'reach Delhi' (NO preposition needed!), NOT 'reach to Delhi' (super common error!)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! 'Reach' ke saath preposition nahi chahiye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_reach_usage",
+        "button_text": "Bilkul nahi! ➔"
+      }
+    },
+    {
+      "card_id": "card_44_reach_usage",
+      "card_slug": "card_44_reach_usage",
+      "type": "chat",
+      "concept_id": "reach_no_preposition",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "REACH is a transitive verb - iska matlab hai iske baad directly object aata hai, preposition nahi chahiye. Correct: I reached home, I reached the office, I reached Delhi. Galat: I reached to home, I reached at office (ye sabse common error hai SSC mein!)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'reached to' ya 'reached at' dono galat hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! Lekin confusion kyun hoti hai? Kyunki ARRIVE AT/IN use karte hain, to students sochte hain REACH ke saath bhi preposition aayega. Yaad rakho - ARRIVE intransitive hai (preposition chahiye), REACH transitive hai (preposition nahi chahiye). Yahi contrast exam mein trap ban jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir aur konse verbs hain jahan galti hoti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_common_verb_prep_list_2",
+        "button_text": "More traps! ➔"
+      }
+    },
+    {
+      "card_id": "card_45_common_verb_prep_list_2",
+      "card_slug": "card_45_common_verb_prep_list_2",
+      "type": "chat",
+      "concept_id": "common_verb_prepositions_2",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Part 2 - Tricky Verbs: Consist OF (not from/with), Comprised OF (controversial - purists say just 'comprises', not 'comprised of'), Apologize TO someone FOR something, Complain TO someone ABOUT something, Congratulate someone ON something, Prevent FROM, Prohibit FROM, Suffer FROM."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'comprised of' galat hai kya? Maine to suna hai ye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Controversial hai! Traditional grammar kehta hai: The team COMPRISES 11 players (no preposition). Lekin modern usage mein 'is comprised of' bhi common ho gaya hai, though purists ise galat maante hain. Safe rule for exams: Use CONSISTS OF (always correct), avoid 'comprised of' confusion!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Got it! Aur 'prevent' aur 'prohibit' dono FROM ke saath?"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_prevent_prohibit",
+        "button_text": "Haan, pattern hai! ➔"
+      }
+    },
+    {
+      "card_id": "card_46_prevent_prohibit",
+      "card_slug": "card_46_prevent_prohibit",
+      "type": "chat",
+      "concept_id": "prevent_prohibit_from",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Verbs jo 'rokna' ya 'mana karna' indicate karte hain, mostly FROM ke saath aate hain: Prevent FROM, Prohibit FROM, Refrain FROM, Abstain FROM, Dissuade FROM, Discourage FROM, Debar FROM, Restrain FROM. Pattern yaad rakho - Negative action verbs = FROM!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'prevent to' galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely galat! Always Prevent someone FROM doing something. Similarly: The rain prevented me FROM going out (not 'prevent to go'). Yahi infinitive (to + verb) vs gerund (verb+ing) ka confusion bhi test hota hai exams mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye gerund kya hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_gerund_infinitive_prep",
+        "button_text": "Important concept! ➔"
+      }
+    },
+    {
+      "card_id": "card_47_gerund_infinitive_prep",
+      "card_slug": "card_47_gerund_infinitive_prep",
+      "type": "chat",
+      "concept_id": "gerund_after_preposition",
+      "level": 4,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Golden Rule: PREPOSITION ke baad hamesha GERUND (verb+ing) aata hai, NEVER infinitive (to+verb). Examples: I am interested IN learning (not 'in to learn'), He is good AT playing cricket (not 'at to play'), She insisted ON going alone (not 'on to go')."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab preposition + verb ho to hamesha verb+ing form?"
+        },
+        {
+          "speaker": "aman",
+          "text": "100% correct! Ye SBI PO ka ultra-favorite trap hai! Students likhte hain 'afraid of to fail' (galat), sahi hai 'afraid of failing'. Similarly: 'tired of to work' (galat), 'tired of working' (sahi). Preposition = gerund, ye rule kabhi nahi tootta!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Quiz mein test karo!"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_quiz_verb_prep_1",
+        "button_text": "Challenge time! ➔"
+      }
+    },
+    {
+      "card_id": "card_48_quiz_verb_prep_1",
+      "card_slug": "card_48_quiz_verb_prep_1",
+      "type": "quiz",
+      "concept_id": "verb_preposition_quiz",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the error: 'I reached to the office late yesterday.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Remove 'to' (reached the office)"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'reached to' with 'arrived at'"
+          },
+          {
+            "id": "C",
+            "text": "Both A and B are correct"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "REACH is a transitive verb and takes direct object without preposition. 'Reached to' is grammatically incorrect. Correct: 'I reached the office' OR 'I arrived at the office'. Both corrections eliminate the error. This is the MOST COMMON error in SSC CGL, SBI PO, and Railway exams!"
+      },
+      "navigation": {
+        "next": "card_49_quiz_verb_prep_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_49_quiz_verb_prep_2",
+      "card_slug": "card_49_quiz_verb_prep_2",
+      "type": "quiz",
+      "concept_id": "verb_preposition_quiz",
+      "level": 4,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Spot the error: 'She insisted on to complete the work herself.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'on to complete' with 'on completing'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'on to' with 'to'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'herself' with 'her own'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "After a preposition, we must use GERUND (verb+ing), not infinitive (to+verb). 'Insisted on' is correct collocation, but it must be followed by gerund. Correct: 'She insisted on completing the work herself.' This gerund-after-preposition rule is tested heavily in SBI PO and SSC CGL!"
+      },
+      "navigation": {
+        "next": "card_50_quiz_verb_prep_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_50_quiz_verb_prep_3",
+      "card_slug": "card_50_quiz_verb_prep_3",
+      "type": "quiz",
+      "concept_id": "verb_preposition_quiz",
+      "level": 4,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The class consists from 30 students."
+          },
+          {
+            "id": "B",
+            "text": "The class consists of 30 students."
+          },
+          {
+            "id": "C",
+            "text": "The class consists with 30 students."
+          },
+          {
+            "id": "D",
+            "text": "The class consists in 30 students."
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CONSIST OF is the correct fixed collocation (never 'consist from/with/in'). This preposition pair is unchangeable. Correct: 'The class consists OF 30 students.' High-frequency trap in Banking and SSC exams - students confuse it with 'made from' and write 'consists from'."
+      },
+      "navigation": {
+        "next": "card_51_milestone_verb",
+        "button_text": "Check Score ➔"
+      }
+    },
+    {
+      "card_id": "card_51_milestone_verb",
+      "card_slug": "card_51_milestone_verb",
+      "type": "milestone",
+      "concept_id": "verb_preposition_milestone",
+      "level": 4,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏅 MODULE 5 MASTERED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Verb + Preposition Fixed Pairs & Gerund Rule",
+        "xp_earned": 90,
+        "milestone_progress": "Module 5/8 Complete",
+        "motivational_quote": "You're at Officer-level accuracy! Noun patterns loading..."
+      },
+      "navigation": {
+        "next": "card_52_noun_prep_intro",
+        "button_text": "Module 6: Noun + Preposition Pairs ➔"
+      }
+    },
+    {
+      "card_id": "card_52_noun_prep_intro",
+      "card_slug": "card_52_noun_prep_intro",
+      "type": "chat",
+      "concept_id": "noun_preposition_intro",
+      "level": 4,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab seekhte hain NOUN + PREPOSITION fixed pairs! Jaise adjectives aur verbs ke saath, nouns ke saath bhi specific prepositions fixed hote hain. Example: Interest IN (not 'interest for'), Access TO (not 'access of'), Solution TO (not 'solution of')."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir matlab 'solution of the problem' galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Technically yes! Standard British English mein we say 'solution TO the problem'. Lekin bahut log 'solution for' bhi use karte hain informally. Exam mein safest = TO. Similarly: Answer TO a question (not 'answer of'), Key TO success (not 'key of'), Approach TO (not 'approach of')."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to tough hai yaad rakhna!"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_common_noun_prep_list",
+        "button_text": "List bana lete hain ➔"
+      }
+    },
+    {
+      "card_id": "card_53_common_noun_prep_list",
+      "card_slug": "card_53_common_noun_prep_list",
+      "type": "chat",
+      "concept_id": "common_noun_prepositions",
+      "level": 4,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ High-Frequency Noun + Prep: Access TO, Solution TO, Answer TO, Key TO, Approach TO, Damage TO, Threat TO, Exception TO, Addiction TO, Reaction TO, Alternative TO, Increase IN, Decrease IN, Rise IN, Fall IN, Confidence IN, Faith IN, Belief IN, Interest IN."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'increase of' galat hai kya? Maine suna hai ye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Confusing point! We say 'increase IN population' (population badh rahi hai), but 'a 10% increase' (percentage/amount batate waqt preposition nahi). Similarly: There is a rise IN prices (IN use hua), Prices showed a 5% rise (preposition nahi). Context matter karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab jab change ho raha hai tab IN, jab measure bata rahe hain tab preposition nahi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_more_noun_prep",
+        "button_text": "Smart thinking! More pairs ➔"
+      }
+    },
+    {
+      "card_id": "card_54_more_noun_prep",
+      "card_slug": "card_54_more_noun_prep",
+      "type": "chat",
+      "concept_id": "more_noun_prepositions",
+      "level": 4,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ More pairs: Need FOR, Demand FOR, Respect FOR, Sympathy FOR, Appetite FOR, Admiration FOR, Reason FOR, Cure FOR, Care FOR, Search FOR, Thirst FOR (knowledge), Hunger FOR (success). Notice - FOR mostly 'desire/need' express karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To 'need of' galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Confusion hai yahan! 'Need FOR' standard hai (There is a need FOR change), lekin 'in need OF' bhi sahi hai (He is in need OF help). Similarly 'want' - We say 'want FOR nothing' (idiom - kuch ki kami nahi), but 'in want OF' (kisi cheez ki zarurat). Subtle differences!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir quiz do, practice se yaad rahega!"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_quiz_noun_prep_1",
+        "button_text": "Test time! ➔"
+      }
+    },
+    {
+      "card_id": "card_55_quiz_noun_prep_1",
+      "card_slug": "card_55_quiz_noun_prep_1",
+      "type": "quiz",
+      "concept_id": "noun_preposition_quiz",
+      "level": 4,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the error: 'We need to find a solution of this problem quickly.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'of' with 'to'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'of' with 'for'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'need to' with 'need for'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "The correct collocation is 'solution TO' (not 'solution of/for'). This is a classic SBI PO trap where students confuse similar-sounding patterns. Correct: 'We need to find a solution TO this problem quickly.' Remember: Answer TO, Solution TO, Key TO, Approach TO - all use TO!"
+      },
+      "navigation": {
+        "next": "card_56_quiz_noun_prep_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_56_quiz_noun_prep_2",
+      "card_slug": "card_56_quiz_noun_prep_2",
+      "type": "quiz",
+      "concept_id": "noun_preposition_quiz",
+      "level": 4,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "There is a great demand of skilled workers."
+          },
+          {
+            "id": "B",
+            "text": "There is a great demand for skilled workers."
+          },
+          {
+            "id": "C",
+            "text": "There is a great demand to skilled workers."
+          },
+          {
+            "id": "D",
+            "text": "There is a great demand in skilled workers."
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "DEMAND FOR is the correct fixed collocation. FOR indicates the object/thing that is needed or desired. Correct: 'There is a great demand FOR skilled workers.' This pattern also applies to: need FOR, respect FOR, appetite FOR, search FOR. High-frequency SSC CGL pattern!"
+      },
+      "navigation": {
+        "next": "card_57_quiz_noun_prep_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_57_quiz_noun_prep_3",
+      "card_slug": "card_57_quiz_noun_prep_3",
+      "type": "quiz",
+      "concept_id": "noun_preposition_quiz",
+      "level": 4,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Spot the error: 'His reaction on the news was unexpected.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'on' with 'to'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'on' with 'of'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'was' with 'is'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "The correct collocation is 'reaction TO' (not 'reaction on/of'). This tests the noun-preposition pairing. Correct: 'His reaction TO the news was unexpected.' Similar pattern: response TO, attitude TO, approach TO. Banking exam favorite!"
+      },
+      "navigation": {
+        "next": "card_58_milestone_noun",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_58_milestone_noun",
+      "card_slug": "card_58_milestone_noun",
+      "type": "milestone",
+      "concept_id": "noun_preposition_milestone",
+      "level": 4,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎖️ MODULE 6 CONQUERED!",
+        "badge_emoji": "📝",
+        "completed_topic": "Noun + Preposition Fixed Pairs",
+        "xp_earned": 85,
+        "milestone_progress": "Module 6/8 Complete",
+        "motivational_quote": "75% course finished! Special idioms & traps ahead!"
+      },
+      "navigation": {
+        "next": "card_59_idiomatic_prep_intro",
+        "button_text": "Module 7: Idiomatic Prepositions ➔"
+      }
+    },
+    {
+      "card_id": "card_59_idiomatic_prep_intro",
+      "card_slug": "card_59_idiomatic_prep_intro",
+      "type": "chat",
+      "concept_id": "idiomatic_prepositions_intro",
+      "level": 5,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab aate hain special idiomatic expressions jahan preposition logic se nahi, MEMORY se yaad rakhna padta hai! Jaise - By heart (not 'in heart'), At random (not 'in random'), In fact (not 'on fact'), On purpose (not 'with purpose'), By mistake (not 'with mistake')."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to bilkul unpredictable hain! Koi pattern nahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Limited pattern hai. Jaise BY mostly 'means/method' dikhata hai (by train, by mistake, by chance, by heart). ON mostly 'basis/condition' (on purpose, on time, on duty, on fire). IN mostly 'state/condition' (in danger, in trouble, in hurry). Lekin exceptions bahut hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'on time' aur 'in time' mein kya farak hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_on_time_in_time",
+        "button_text": "Super important! ➔"
+      }
+    },
+    {
+      "card_id": "card_60_on_time_in_time",
+      "card_slug": "card_60_on_time_in_time",
+      "type": "chat",
+      "concept_id": "on_time_vs_in_time",
+      "level": 5,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Golden difference! ON TIME = Exactly scheduled time par (punctual). IN TIME = Before deadline, before it's too late. Example: The train arrived ON TIME (exactly 5 PM par aayi). I reached IN TIME to catch the train (train jane se pehle pahunch gaya, just in time!). SBI ka ultra-favorite trap!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To ON TIME = punctuality, IN TIME = before deadline?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Similarly AT TIME = At a particular time (At what time did you come?), IN TIME = Eventually/gradually (You will understand IN time - matlab gradually samajh aaega). Multiple meanings ka confusion exam trap banta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir aur important idioms batao jo exams mein aate hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_61_common_idioms_list",
+        "button_text": "Must-know list! ➔"
+      }
+    },
+    {
+      "card_id": "card_61_common_idioms_list",
+      "card_slug": "card_61_common_idioms_list",
+      "type": "chat",
+      "concept_id": "common_idiomatic_prepositions",
+      "level": 5,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Banking Exam Favorites: By heart, By chance, By mistake, By accident, By degrees, On purpose, On duty, On fire, On time, On foot, On sale, In fact, In general, In particular, In detail, In short, In brief, In time, In danger, In trouble, In a hurry, At once, At random, At least, At most, At all."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'in detail' aur 'in details' dono sahi hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! IN DETAIL (no 's') is correct (Explain in detail). 'In details' galat hai! Similarly: IN SHORT (not 'in shorts'), IN BRIEF (not 'in briefs'). Ye plural confusion SBI mein trap hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Got it Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_more_idioms",
+        "button_text": "More traps! ➔"
+      }
+    },
+    {
+      "card_id": "card_62_more_idioms",
+      "card_slug": "card_62_more_idioms",
+      "type": "chat",
+      "concept_id": "more_idiomatic_expressions",
+      "level": 5,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ More critical ones: At a glance (quick look), At stake (risk mein), At random (bina soche), At large (free, not captured), In vain (bekaar mein), In spite of (despite), In case of (agar aisa ho), In favor of (support mein), On behalf of (kisi ki taraf se), By virtue of (because of quality/position)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'in spite of' aur 'despite' mein kya farak hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Great question! DESPITE = preposition (iske baad noun/gerund). IN SPITE OF = prepositional phrase (meaning same, but 'of' add hota hai). Example: Despite the rain = In spite of the rain. Lekin NEVER 'despite of' (ye galat hai!). Yahi confusion SBI ka trap!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'despite of' hamesha galat?"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_despite_inspite",
+        "button_text": "100% galat! ➔"
+      }
+    },
+    {
+      "card_id": "card_63_despite_inspite",
+      "card_slug": "card_63_despite_inspite",
+      "type": "chat",
+      "concept_id": "despite_vs_inspite",
+      "level": 5,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! DESPITE already ek preposition hai, to uske baad 'of' add karna redundant aur grammatically wrong hai. Correct: Despite his efforts, Despite the weather. Wrong: Despite of his efforts. Lekin IN SPITE OF correct hai (yahan 'of' part of phrase hai). Bahut common error!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Quiz do Sir, confidence build hoga!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ye idiomatic prepositions hi SBI PO mein maximum marks dilate hain, kyunki yahi sabse zyada confused hote hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ready hoon!"
+        }
+      ],
+      "navigation": {
+        "next": "card_64_quiz_idioms_1",
+        "button_text": "Challenge Start! ➔"
+      }
+    },
+    {
+      "card_id": "card_64_quiz_idioms_1",
+      "card_slug": "card_64_quiz_idioms_1",
+      "type": "quiz",
+      "concept_id": "idiomatic_prepositions_quiz",
+      "level": 5,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the error: 'He learned the poem in heart for the competition.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'in heart' with 'by heart'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'learned' with 'learnt'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'for' with 'to'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "The correct idiom is 'BY heart' (memorize karna), not 'IN heart'. This is one of the most tested idiomatic expressions in SSC and Banking exams. Correct: 'He learned the poem BY heart for the competition.' BY indicates the method/means of learning."
+      },
+      "navigation": {
+        "next": "card_65_quiz_idioms_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_65_quiz_idioms_2",
+      "card_slug": "card_65_quiz_idioms_2",
+      "type": "quiz",
+      "concept_id": "idiomatic_prepositions_quiz",
+      "level": 5,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Despite of the challenges, she succeeded."
+          },
+          {
+            "id": "B",
+            "text": "Despite the challenges, she succeeded."
+          },
+          {
+            "id": "C",
+            "text": "Despite to the challenges, she succeeded."
+          },
+          {
+            "id": "D",
+            "text": "Despite from the challenges, she succeeded."
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "DESPITE is itself a preposition and should NOT be followed by 'of'. 'Despite of' is a common error. Correct: 'Despite the challenges' OR 'In spite of the challenges'. NEVER 'despite of'. This trap appears in nearly every SBI PO and SSC CGL exam!"
+      },
+      "navigation": {
+        "next": "card_66_quiz_idioms_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_66_quiz_idioms_3",
+      "card_slug": "card_66_quiz_idioms_3",
+      "type": "quiz",
+      "concept_id": "idiomatic_prepositions_quiz",
+      "level": 5,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Spot the error: 'I reached in time to catch the bus, so I was on time for the meeting.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'in time' with 'on time'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'on time' with 'in time'"
+          },
+          {
+            "id": "C",
+            "text": "Both are incorrectly used"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "No error! Both are correctly used in proper context. IN TIME = before deadline/before too late (I reached before the bus left). ON TIME = punctual, at scheduled time (I reached the meeting exactly at scheduled time). This sentence demonstrates correct contextual usage of both idioms."
+      },
+      "navigation": {
+        "next": "card_67_milestone_idioms",
+        "button_text": "Check Score ➔"
+      }
+    },
+    {
+      "card_id": "card_67_milestone_idioms",
+      "card_slug": "card_67_milestone_idioms",
+      "type": "milestone",
+      "concept_id": "idiomatic_prepositions_milestone",
+      "level": 5,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🔥 MODULE 7 CLEARED!",
+        "badge_emoji": "💡",
+        "completed_topic": "Idiomatic Prepositions & Fixed Expressions",
+        "xp_earned": 95,
+        "milestone_progress": "Module 7/8 Complete",
+        "motivational_quote": "You're an idiom master now! Final revision module loading..."
+      },
+      "navigation": {
+        "next": "card_68_summary_intro",
+        "button_text": "Module 8: Officer Revision & Final Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_68_summary_intro",
+      "card_slug": "card_68_summary_intro",
+      "type": "summary",
+      "concept_id": "complete_revision",
+      "level": 5,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER-LEVEL QUICK REVISION",
+        "revision_points": [
+          {
+            "topic": "Time: IN/ON/AT Rule",
+            "point": "IN = Big periods (months/years), ON = Dates/Days, AT = Exact time. Exception: AT night (not IN night)."
+          },
+          {
+            "topic": "Place: IN/ON/AT Logic",
+            "point": "IN = Enclosed areas, ON = Surfaces, AT = Specific points. Vehicles: ON public transport, IN private cars."
+          },
+          {
+            "topic": "SINCE vs FOR",
+            "point": "SINCE = Starting point (since Monday), FOR = Duration (for 3 hours). SINCE needs Present Perfect tense."
+          },
+          {
+            "topic": "INTO vs IN",
+            "point": "INTO = Movement entering inside (jumped INTO), IN = Static position (sitting IN). INTO also shows transformation."
+          },
+          {
+            "topic": "REACH - No Preposition!",
+            "point": "REACH is transitive - NEVER 'reached to/at'. Correct: reached home/office/Delhi. ARRIVE needs AT/IN."
+          },
+          {
+            "topic": "MADE FROM vs OF",
+            "point": "FROM = Transformed material (paper FROM wood), OF = Visible material (table OF wood)."
+          },
+          {
+            "topic": "Adjective Pairs",
+            "point": "Afraid OF, Different FROM, Angry WITH (person)/AT (situation), Satisfied WITH, Proud OF."
+          },
+          {
+            "topic": "Verb Pairs",
+            "point": "Depend ON, Consist OF, Prevent FROM, Insist ON, Agree WITH/TO/ON (context-based)."
+          },
+          {
+            "topic": "Preposition + Gerund",
+            "point": "After preposition, ALWAYS use verb+ing (gerund), NEVER infinitive. Example: interested IN learning (not 'in to learn')."
+          },
+          {
+            "topic": "Critical Idioms",
+            "point": "BY heart, ON time (punctual), IN time (before deadline), DESPITE (never 'despite of'), IN SPITE OF."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_69_final_quiz_1",
+        "button_text": "Take Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_69_final_quiz_1",
+      "card_slug": "card_69_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_assessment",
+      "level": 5,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Multi-Statement Analysis (BPSC Style): \n(A) She has been living in Delhi since five years.\n(B) The meeting is scheduled on Monday at 10 AM.\n(C) He reached to the office late yesterday.\n(D) I am not satisfied with your performance.\n\nWhich statements contain errors?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only A and C"
+          },
+          {
+            "id": "B",
+            "text": "Only A, B and C"
+          },
+          {
+            "id": "C",
+            "text": "Only B and D"
+          },
+          {
+            "id": "D",
+            "text": "All are correct"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Errors: (A) 'since five years' should be 'FOR five years' (duration needs FOR, not SINCE). (C) 'reached to' should be 'reached' (REACH is transitive, no preposition needed). (B) is CORRECT - ON Monday, AT 10 AM both correct. (D) is CORRECT - satisfied WITH is the right collocation. This multi-statement format is SBI PO and BPSC favorite!"
+      },
+      "navigation": {
+        "next": "card_70_final_quiz_2",
+        "button_text": "Next Challenge (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_70_final_quiz_2",
+      "card_slug": "card_70_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_assessment",
+      "level": 5,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Assertion-Reason (BPSC/UPSC Style):\nAssertion (A): The sentence 'Despite of the heavy rain, the match continued' is grammatically incorrect.\nReason (R): DESPITE is already a preposition and should not be followed by 'of'.\n\nChoose the correct option:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Both A and R are true, and R is the correct explanation of A"
+          },
+          {
+            "id": "B",
+            "text": "Both A and R are true, but R is NOT the correct explanation of A"
+          },
+          {
+            "id": "C",
+            "text": "A is true, but R is false"
+          },
+          {
+            "id": "D",
+            "text": "A is false, but R is true"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Both Assertion and Reason are TRUE, and R correctly explains A. DESPITE is a preposition itself, so adding 'of' makes it redundant and incorrect. The correct form is either 'Despite the rain' OR 'In spite of the rain'. The Reason perfectly explains why the Assertion is true. This Assertion-Reason format is heavily tested in BPSC and UPSC Prelims!"
+      },
+      "navigation": {
+        "next": "card_71_final_quiz_3",
+        "button_text": "Last Challenge (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_71_final_quiz_3",
+      "card_slug": "card_71_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_assessment",
+      "level": 5,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Complex Error Detection (SBI PO Style):\n'The furniture, which is made from teak wood, was purchased by my grandfather in 1985, and he was very proud for this achievement.'\n\nIdentify ALL errors:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only 'made from' is incorrect (should be 'made of')"
+          },
+          {
+            "id": "B",
+            "text": "Only 'proud for' is incorrect (should be 'proud of')"
+          },
+          {
+            "id": "C",
+            "text": "Both 'made from' and 'proud for' are incorrect"
+          },
+          {
+            "id": "D",
+            "text": "No errors - sentence is correct"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Two errors: (1) 'made FROM' should be 'made OF' - teak wood is visible in furniture, so OF is correct (FROM is for transformed materials). (2) 'proud FOR' should be 'proud OF' - correct collocation is 'proud of'. Correct sentence: 'The furniture, which is made OF teak wood, was purchased by my grandfather in 1985, and he was very proud OF this achievement.' This multi-error detection is SBI PO's toughest question type!"
+      },
+      "navigation": {
+        "next": "card_72_completion",
+        "button_text": "See Final Score ➔"
+      }
+    },
+    {
+      "card_id": "card_72_completion",
+      "card_slug": "card_72_completion",
+      "type": "milestone",
+      "concept_id": "course_completion",
+      "level": 5,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 COURSE MASTERED!",
+        "badge_emoji": "👑",
+        "completed_topic": "Complete Preposition Mastery - SBI PO Level",
+        "xp_earned": 500,
+        "milestone_progress": "8/8 Modules Conquered",
+        "motivational_quote": "Congratulations! You've mastered Officer-level Preposition rules. You can now crack Error Detection in SBI PO, SSC CGL, BPSC, and all competitive exams with confidence. Keep practicing PYQs!"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "🎯 Practice More Topics"
+      }
+    }
+  ]
+}
