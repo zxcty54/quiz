@@ -285,7 +285,7 @@ class _DonationWidgetState extends State<DonationWidget>
                       ),
                     ),
                     Text(
-                      '₹420 / ₹1,500',
+                      '₹0 / ₹6,500',
                       style: TextStyle(
                         fontSize: 11.5,
                         fontWeight: FontWeight.w900,
@@ -300,7 +300,7 @@ class _DonationWidgetState extends State<DonationWidget>
                 ClipRRect(
                   borderRadius: BorderRadius.circular(10),
                   child: const LinearProgressIndicator(
-                    value: 0.42, // 42%
+                    value: 0.0, // 0%
                     minHeight: 8,
                     backgroundColor: Color(0xFF1E293B),
                     valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF10B981)),
@@ -311,9 +311,9 @@ class _DonationWidgetState extends State<DonationWidget>
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('42% Funded This Month',
+                    Text('0% Funded This Month',
                         style: TextStyle(fontSize: 10, color: Color(0xFFA7F3D0), fontWeight: FontWeight.bold)),
-                    Text('⚡ ₹1,080 Remaining',
+                    Text('⚡ ₹6,500 Remaining',
                         style: TextStyle(fontSize: 10, color: Color(0xFFFCA5A5), fontWeight: FontWeight.bold)),
                   ],
                 ),
