@@ -1,0 +1,1682 @@
+
+{
+  "topic_id": "articles_english_grammar",
+  "topic_title": "Articles in English Grammar",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "SBI PO"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "Articles in English Grammar",
+        "icon": "📝",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "SBI PO"],
+        "learning_outcomes": [
+          "Master the three articles: A, An, The",
+          "Understand when to use Definite vs Indefinite articles",
+          "Learn Zero Article (No Article) situations",
+          "Identify common article errors in competitive exams",
+          "Practice SBI PO level error detection patterns",
+          "Apply article rules to BPSC/SSC question patterns",
+          "Master exception cases and tricky scenarios"
+        ],
+        "estimated_time": "45 minutes",
+        "difficulty_label": "Foundation to Officer Level"
+      },
+      "navigation": {
+        "next": "card_02_what_is_article",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_what_is_article",
+      "card_slug": "card_02_what_is_article",
+      "type": "chat",
+      "concept_id": "article_basics",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne kabhi notice kiya hai ki English mein hum kehte hain 'I saw A dog' ya 'I saw THE dog'? Yeh 'A' aur 'THE' kya hain? Inhe ARTICLES kehte hain. Articles woh chote words hain jo noun (किसी व्यक्ति, स्थान या वस्तु) ke pehle aate hain aur batate hain ki woh noun specific hai ya general."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sir, 'A dog' general dog hai aur 'THE dog' koi particular dog?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! English mein sirf TEEN articles hain: A, AN, aur THE. 'A' aur 'AN' ko INDEFINITE ARTICLES kehte hain (kyunki ye kisi specific cheez ko point nahi karte, general hote hain). 'THE' ko DEFINITE ARTICLE kehte hain (kyunki ye ek particular cheez ko point karta hai). Aur kabhi kabhi article ki zaroorat hi nahi hoti - ise ZERO ARTICLE kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "'A' aur 'AN' mein kya difference hai Sir? Dono indefinite hain toh?"
+        }
+      },
+      "navigation": {
+        "next": "card_03_a_vs_an",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_03_a_vs_an",
+      "card_slug": "card_03_a_vs_an",
+      "type": "chat",
+      "concept_id": "a_an_difference",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut important rule! 'A' aur 'AN' ka difference SOUND par depend karta hai, spelling par nahi. Agar agle word ka pehla sound VOWEL sound (a, e, i, o, u jaise) hai toh 'AN' use hota hai. Agar CONSONANT sound hai toh 'A' use hota hai. Dhyan raho - SOUND dekhte hain, spelling nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh 'AN apple' kyunki 'apple' vowel 'a' se start hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! 'AN apple', 'AN egg', 'AN ice-cream'. LEKIN dekho trap: 'A university' (kyunki 'university' ka sound 'YOO-' hai jo consonant sound hai, vowel nahi!), 'A European' (sound 'YU-' hai). Aur ulta: 'AN honest man' (kyunki 'h' silent hai, sound 'O-' vowel hai), 'AN hour' (h silent). ⭐ SSC/SBI PO ka favorite trap - spelling dekh ke confuse mat hona, sound suno!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Toh 'A uniform' bhi hoga kyunki sound 'YU-' hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_a_an_practice",
+        "button_text": "Practice करते हैं ➔"
+      }
+    },
+    {
+      "card_id": "card_04_a_an_practice",
+      "card_slug": "card_04_a_an_practice",
+      "type": "guess",
+      "concept_id": "a_an_sound_rule",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Correct article choose karo: ___ MP (Member of Parliament)",
+        "options": [
+          { "id": "A", "text": "A" },
+          { "id": "B", "text": "AN" },
+          { "id": "C", "text": "THE" },
+          { "id": "D", "text": "No article needed" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ Exam Trap! 'AN MP' correct hai kyunki 'MP' ka pronunciation 'EM-PEE' hai - yahan 'M' ka sound 'EM' hai jo vowel sound hai! Spelling 'M' consonant hai but SOUND vowel hai. Similarly: AN MLA, AN MBA, AN MRI, AN X-ray (sound 'EKS'), AN FBI agent. Rule yaad rakho: SOUND matters, spelling doesn't!"
+      },
+      "navigation": {
+        "next": "card_05_quiz_a_an_1",
+        "button_text": "Check करो ➔"
+      }
+    },
+    {
+      "card_id": "card_05_quiz_a_an_1",
+      "card_slug": "card_05_quiz_a_an_1",
+      "type": "quiz",
+      "concept_id": "a_an_quiz_1",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct article: He is ___ honest officer.",
+        "options": [
+          { "id": "A", "text": "a" },
+          { "id": "B", "text": "an" },
+          { "id": "C", "text": "the" },
+          { "id": "D", "text": "No article" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'AN honest officer' correct hai kyunki 'honest' mein 'h' SILENT hai, pehla sound 'O' (vowel sound) hai. 'Honest' ka pronunciation 'ON-est' hai. Similarly: AN hour, AN heir, AN honour. ⭐ BPSC/SSC regular question pattern - silent 'h' words mein 'AN' use hota hai!"
+      },
+      "navigation": {
+        "next": "card_06_quiz_a_an_2",
+        "button_text": "Question 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_a_an_2",
+      "card_slug": "card_06_quiz_a_an_2",
+      "type": "quiz",
+      "concept_id": "a_an_quiz_2",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the CORRECT sentence:",
+        "options": [
+          { "id": "A", "text": "He bought an uniform." },
+          { "id": "B", "text": "He bought a uniform." },
+          { "id": "C", "text": "He bought the uniform." },
+          { "id": "D", "text": "He bought uniform." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'A uniform' correct hai! 'Uniform' ka pronunciation 'YOO-ni-form' hai - pehla sound 'YU' consonant sound hai (vowel nahi). Similarly: A university, A European, A one-rupee note (sound 'WUN'), A useful book. ⭐ SBI PO/SSC CGL trap - 'U' vowel hai but sound consonant ho sakta hai!"
+      },
+      "navigation": {
+        "next": "card_07_quiz_a_an_3",
+        "button_text": "Question 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_a_an_3",
+      "card_slug": "card_07_quiz_a_an_3",
+      "type": "quiz",
+      "concept_id": "a_an_quiz_3",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose correct: She is ___ M.A. in English.",
+        "options": [
+          { "id": "A", "text": "a" },
+          { "id": "B", "text": "an" },
+          { "id": "C", "text": "the" },
+          { "id": "D", "text": "No article needed" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'AN M.A.' correct hai kyunki 'M' ka sound 'EM' hai jo vowel sound hai. Abbreviations/Acronyms mein pehle letter ka PRONUNCIATION dekho: AN MBA, AN MLA, AN NGO (sound 'EN-jee-oh'), AN FIR, lekin A BA (sound 'BEE-AY'), A BSc. ⭐ Railway/BPSC regular pattern!"
+      },
+      "navigation": {
+        "next": "card_08_milestone_a_an",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_08_milestone_a_an",
+      "card_slug": "card_08_milestone_a_an",
+      "type": "milestone",
+      "concept_id": "a_an_complete",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 A vs AN Mastered!",
+        "badge_emoji": "📘",
+        "completed_topic": "Indefinite Articles (A/AN)",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/5 Complete",
+        "motivational_quote": "Great! Sound rule clear! Ab THE (Definite Article) samajhte hain!"
+      },
+      "navigation": {
+        "next": "card_09_the_intro",
+        "button_text": "Next Module: THE ➔"
+      }
+    },
+    {
+      "card_id": "card_09_the_intro",
+      "card_slug": "card_09_the_intro",
+      "type": "chat",
+      "concept_id": "definite_article_the",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai sabse important article - THE! Isko DEFINITE ARTICLE kehte hain kyunki yeh ek PARTICULAR/SPECIFIC cheez ko point karta hai. Jab speaker aur listener DONO ko pata ho ki kis cheez ki baat ho rahi hai, tab 'THE' use hota hai. Example: 'Close THE door' - kaun sa door? Woh door jo room mein hai, particular door!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh jab specific baat karo toh THE, general mein A/AN?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! 'I saw A dog yesterday' (koi bhi dog, pehli baar mention). 'THE dog was black' (wahi dog, second mention). THE ke bohot saare rules hain - kuch situations mein hamesha THE use hota hai. Sabse pehle samajhte hain: THE ka use UNIQUE/ONE-OF-A-KIND cheezों ke liye hota hai - THE sun, THE moon, THE earth, THE sky (kyunki ek hi hai!)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Toh THE Taj Mahal bhi kyunki ek hi hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_the_unique_things",
+        "button_text": "Haan! Rules dekhte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_10_the_unique_things",
+      "card_slug": "card_10_the_unique_things",
+      "type": "chat",
+      "concept_id": "the_unique_proper",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan, but careful! Monument names mein article nahi hota normally - 'Taj Mahal' (no article), 'India Gate'. LEKIN agar monument plural naam ho ya specific type ho: THE Qutub Minar (exception), THE Red Fort (adjective+noun). Rule 1: THE ka use UNIQUE natural cheezों mein - THE sun, THE moon, THE earth, THE sky, THE universe, THE equator."
+        },
+        {
+          "speaker": "raju",
+          "text": "Rivers, mountains, oceans mein kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC/SSC ka favorite rule! RIVERS - hamesha THE: THE Ganga, THE Yamuna, THE Nile, THE Amazon. MOUNTAIN RANGES - THE: THE Himalayas, THE Alps, THE Andes. LEKIN single mountain peak - NO article: Mount Everest, K2, Kanchenjunga. OCEANS/SEAS - THE: THE Indian Ocean, THE Pacific, THE Arabian Sea. DESERTS - THE: THE Thar, THE Sahara."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh THE Himalayas but Mount Everest? Confusing hai!"
+        }
+      },
+      "navigation": {
+        "next": "card_11_the_geography",
+        "button_text": "Aur rules hain ➔"
+      }
+    },
+    {
+      "card_id": "card_11_the_geography",
+      "card_slug": "card_11_the_geography",
+      "type": "chat",
+      "concept_id": "the_geographical_names",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Islands groups - THE: THE Andaman and Nicobar, THE Maldives, THE Philippines. LEKIN single island - NO: Sri Lanka, Iceland. Countries - Generally NO article: India, America, China. LEKIN kuch countries mein THE: THE USA, THE UK, THE UAE, THE Philippines, THE Netherlands (jo plural form mein hain ya 'United/Union' wale). Newspapers - THE: THE Times of India, THE Hindu."
+        },
+        {
+          "speaker": "raju",
+          "text": "Buildings aur public places?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Hotels/Restaurants - THE: THE Taj Hotel, THE Oberoi. Theaters/Cinemas - THE: THE Regal Cinema. Museums/Galleries - THE: THE National Museum. Temples/Churches/Mosques - Generally NO: Kashi Vishwanath Temple, St. Paul's Cathedral. LEKIN THE Golden Temple (exception). ⭐ SBI PO loves these exceptions!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Superlatives mein THE hota hai na? Like THE best?"
+        }
+      },
+      "navigation": {
+        "next": "card_12_the_superlatives",
+        "button_text": "Bilkul! ➔"
+      }
+    },
+    {
+      "card_id": "card_12_the_superlatives",
+      "card_slug": "card_12_the_superlatives",
+      "type": "chat",
+      "concept_id": "the_superlatives_ordinals",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! SUPERLATIVES (highest degree) - hamesha THE: THE best, THE worst, THE tallest, THE most beautiful, THE highest, THE only. ORDINALS (sequence numbers) - THE: THE first, THE second, THE last. Musical instruments - THE: He plays THE guitar, THE piano, THE tabla. Directions - THE: THE north, THE south, THE east, THE west."
+        },
+        {
+          "speaker": "raju",
+          "text": "Seasons, months, days mein article?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Generally NO article: in summer, in January, on Monday. LEKIN agar specific ho: in THE summer of 2020 (particular summer). Same/next/last ke saath NO: same day, next week, last year. ⭐ Common error: 'in the summer' generally wrong hai, 'in summer' correct. But 'in the rainy season' correct (specific season India mein)."
+        },
+        {
+          "speaker": "raju",
+          "text": "School, college, hospital, prison mein?"
+        }
+      },
+      "navigation": {
+        "next": "card_13_the_institutions",
+        "button_text": "Important rule ➔"
+      }
+    },
+    {
+      "card_id": "card_13_the_institutions",
+      "card_slug": "card_13_the_institutions",
+      "type": "chat",
+      "concept_id": "the_institutions_purpose",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ SBI PO/SSC ka BIGGEST trap! Jab institution apne PURPOSE ke liye use ho toh NO article, jab building/place ke taur par toh THE. 'Go to school' (padhne jana - purpose), 'Go to THE school' (building dekhne jana). 'In hospital' (patient - treatment purpose), 'In THE hospital' (visitor - place). 'Go to church' (prayer), 'THE church is old' (building)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to confusing hai! Purpose vs Place?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Examples: 'Children go to school' (study purpose - NO article). 'I went to THE school to meet the principal' (building visit - THE). 'He is in prison' (criminal - serving sentence). 'I visited THE prison' (tour/visit). ⭐ BPSC/Railway mein yahi pattern se error detection hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "University, college?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_quiz_the_1",
+        "button_text": "Quiz mein practice ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_the_1",
+      "card_slug": "card_14_quiz_the_1",
+      "type": "quiz",
+      "concept_id": "the_quiz_1",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the CORRECT sentence:",
+        "options": [
+          { "id": "A", "text": "He is studying in university." },
+          { "id": "B", "text": "He is studying at university." },
+          { "id": "C", "text": "He is studying at the university." },
+          { "id": "D", "text": "Both B and C are correct" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Dono correct hain! 'At university' (British English - purpose/study). 'At THE university' (American English ya specific university building). Similarly: 'at college' vs 'at THE college'. ⭐ Exam mein dono acceptable unless context specific building demand kare. 'IN university' wrong hai - preposition 'at' chahiye!"
+      },
+      "navigation": {
+        "next": "card_15_quiz_the_2",
+        "button_text": "Question 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_the_2",
+      "card_slug": "card_15_quiz_the_2",
+      "type": "quiz",
+      "concept_id": "the_quiz_2",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the INCORRECT sentence:",
+        "options": [
+          { "id": "A", "text": "The Ganga is a holy river." },
+          { "id": "B", "text": "The Mount Everest is the highest peak." },
+          { "id": "C", "text": "The Himalayas are in India." },
+          { "id": "D", "text": "The Indian Ocean is vast." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ Common Error! 'THE Mount Everest' WRONG hai - correct: 'Mount Everest is the highest peak' (NO article before single mountain peak). THE Himalayas (range - correct), THE Ganga (river - correct), THE Indian Ocean (ocean - correct). Rule: Mountain RANGES - THE, Single PEAKS - NO article!"
+      },
+      "navigation": {
+        "next": "card_16_quiz_the_3",
+        "button_text": "Question 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz_the_3",
+      "card_slug": "card_16_quiz_the_3",
+      "type": "quiz",
+      "concept_id": "the_quiz_3",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose correct: He plays ___ guitar very well.",
+        "options": [
+          { "id": "A", "text": "a" },
+          { "id": "B", "text": "an" },
+          { "id": "C", "text": "the" },
+          { "id": "D", "text": "No article" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'THE guitar' correct hai! Musical instruments ke saath hamesha THE use hota hai: play THE guitar, THE piano, THE violin, THE flute, THE tabla, THE harmonium. ⭐ SSC/Railway regular rule. Exception: He plays guitar (casual mention - rare), but 'plays THE guitar' standard hai!"
+      },
+      "navigation": {
+        "next": "card_17_milestone_the",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_17_milestone_the",
+      "card_slug": "card_17_milestone_the",
+      "type": "milestone",
+      "concept_id": "the_complete",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 THE Rules Mastered!",
+        "badge_emoji": "📗",
+        "completed_topic": "Definite Article (THE)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/5 Complete",
+        "motivational_quote": "Superb! THE ke sab rules clear! Ab ZERO Article (No Article) cases!"
+      },
+      "navigation": {
+        "next": "card_18_zero_article_intro",
+        "button_text": "Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_18_zero_article_intro",
+      "card_slug": "card_18_zero_article_intro",
+      "type": "chat",
+      "concept_id": "zero_article_concept",
+      "level": 3,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai tricky concept - ZERO ARTICLE (Null Article)! Matlab kab article ki zaroorat hi nahi hoti. Yeh SBI PO/SSC CGL mein bahut errors aati hain - log unnecessary article laga dete hain. Rule 1: PLURAL GENERAL nouns - NO article. 'Dogs are faithful' (sab dogs, general). 'THE dogs are faithful' (specific dogs). 'Books are useful' (general)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Singular mein toh article chahiye na? Like 'A dog is faithful'?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, singular countable mein A/AN/THE chahiye. LEKIN UNCOUNTABLE nouns (water, milk, rice, information, advice, furniture) ke saath NO article general statement mein: 'Water is essential' (NOT 'A water' or 'THE water' unless specific). 'Milk is white', 'Rice is grown in India', 'Information is power'."
+        },
+        {
+          "speaker": "raju",
+          "text": "Names, languages, subjects mein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_zero_article_cases",
+        "button_text": "Important cases ➔"
+      }
+    },
+    {
+      "card_id": "card_19_zero_article_cases",
+      "card_slug": "card_19_zero_article_cases",
+      "type": "chat",
+      "concept_id": "zero_article_rules",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PROPER NAMES - NO article: Raju, Delhi, India, January, Monday (except THE USA, THE UK types). LANGUAGES - NO: He speaks Hindi, English, French (NOT THE Hindi). SUBJECTS - NO: I study Mathematics, Physics, History (NOT THE Mathematics). MEALS - NO: breakfast, lunch, dinner. 'I had breakfast', NOT 'I had THE breakfast'. GAMES/SPORTS - NO: play cricket, football, chess."
+        },
+        {
+          "speaker": "raju",
+          "text": "Diseases mein kya rule hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Generally NO article: He has fever, cancer, diabetes, malaria, cholera. LEKIN kuch diseases mein THE: THE flu, THE measles, THE mumps, THE plague. ⭐ BPSC trap: 'THE Covid' wrong hai, 'Covid' ya 'THE Covid-19 pandemic' correct. Titles with names - NO: President Biden, Dr. Sharma, Professor Khan (NOT THE President Biden)."
+        },
+        {
+          "speaker": "raju",
+          "text": "'By' ke baad transport means?"
+        }
+      },
+      "navigation": {
+        "next": "card_20_zero_transport_phrases",
+        "button_text": "Haan! ➔"
+      }
+    },
+    {
+      "card_id": "card_20_zero_transport_phrases",
+      "card_slug": "card_20_zero_transport_phrases",
+      "type": "chat",
+      "concept_id": "zero_by_transport",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "'By' के बाद mode of transport - NO article: by car, by bus, by train, by air, by sea, by bicycle. LEKIN 'in/on' के साथ article chahiye: in THE car, on THE bus, on A bicycle. Fixed phrases - NO article: at home, at work, at night, by day, by hand, in bed, on foot, from door to door, face to face, day by day."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh 'by THE car' wrong hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ SBI PO favorite error! 'By THE car' WRONG - correct: 'by car' (mode). Ya 'in my car' (specific vehicle). 'Go to office' (NO article - purpose/routine). 'Go to THE office' (specific building/non-routine). Man/woman/person - NO article general sense: 'Man is mortal', 'Woman is powerful'. THE man/woman (specific person)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Both/All/Double/Half ke saath?"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_zero_determiners",
+        "button_text": "Special cases ➔"
+      }
+    },
+    {
+      "card_id": "card_21_zero_determiners",
+      "card_slug": "card_21_zero_determiners",
+      "type": "chat",
+      "concept_id": "zero_special_determiners",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "'Both THE boys' (correct - specific boys), 'Both boys' (general). 'All THE students' vs 'All students'. 'Half THE apple' (specific), 'Half an apple' (general). 'Double THE price' (specific), 'Double price' (wrong - 'AT double THE price' correct). Nature/environment - NO: nature is beautiful, environment is important (general abstract)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Professions mein - 'He is a doctor' ya 'He is doctor'?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Important! Professions (singular) - ARTICLE chahiye: 'He is A doctor', 'She is AN engineer', 'I am A teacher'. NO article WRONG hai! 'He is doctor' incorrect. Plural mein: 'They are doctors' (NO article - plural). Unique positions - article optional: 'He became (THE) President', 'She is (THE) Principal'."
+        },
+        {
+          "speaker": "raju",
+          "text": "Exam mein error detection kaise kare?"
+        }
+      },
+      "navigation": {
+        "next": "card_22_quiz_zero_1",
+        "button_text": "Practice karte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_zero_1",
+      "card_slug": "card_22_quiz_zero_1",
+      "type": "quiz",
+      "concept_id": "zero_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the INCORRECT sentence:",
+        "options": [
+          { "id": "A", "text": "I go to office by the car." },
+          { "id": "B", "text": "He speaks Hindi fluently." },
+          { "id": "C", "text": "Water is essential for life." },
+          { "id": "D", "text": "She plays cricket every day." }
+        ],
+        "correct_option_id": "A",
+        "explanation": "⭐ Classic Error! 'By THE car' WRONG - correct: 'by car' (mode of transport). 'By' के बाद transport means में NO article! Correct: 'I go to THE office by car' या 'I go to office in my car'. Options B, C, D सब correct: Hindi (language - NO article), Water (uncountable general - NO), cricket (game - NO)."
+      },
+      "navigation": {
+        "next": "card_23_quiz_zero_2",
+        "button_text": "Question 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_23_quiz_zero_2",
+      "card_slug": "card_23_quiz_zero_2",
+      "type": "quiz",
+      "concept_id": "zero_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the CORRECT sentence:",
+        "options": [
+          { "id": "A", "text": "He is doctor." },
+          { "id": "B", "text": "He is a doctor." },
+          { "id": "C", "text": "He is the doctor." },
+          { "id": "D", "text": "Both B and C are correct" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Dono correct hain context ke according! 'He is A doctor' (profession - general, one among many doctors). 'He is THE doctor' (specific/particular - wahi doctor jiska pehle mention). 'He is doctor' (NO article) WRONG hai - professions (singular) mein article mandatory! ⭐ SBI PO pattern!"
+      },
+      "navigation": {
+        "next": "card_24_quiz_zero_3",
+        "button_text": "Question 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_24_quiz_zero_3",
+      "card_slug": "card_24_quiz_zero_3",
+      "type": "quiz",
+      "concept_id": "zero_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Find the error: 'I had the breakfast at 8 AM and went to the school.'",
+        "options": [
+          { "id": "A", "text": "Error in 'the breakfast'" },
+          { "id": "B", "text": "Error in 'the school'" },
+          { "id": "C", "text": "Errors in both" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ Double Error! (1) 'THE breakfast' wrong - meals ke saath NO article: 'I had breakfast'. (2) 'Went to THE school' - agar padhne gaye (purpose) toh 'went to school' (NO article). THE school sirf tab jab building visit (non-purpose). Correct: 'I had breakfast at 8 AM and went to school.' ⭐ BPSC/SSC common error pattern!"
+      },
+      "navigation": {
+        "next": "card_25_milestone_zero",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_25_milestone_zero",
+      "card_slug": "card_25_milestone_zero",
+      "type": "milestone",
+      "concept_id": "zero_complete",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 Zero Article Mastered!",
+        "badge_emoji": "📕",
+        "completed_topic": "No Article Cases",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/5 Complete",
+        "motivational_quote": "Excellent! Ab tricky error detection patterns dekhte hain!"
+      },
+      "navigation": {
+        "next": "card_26_error_detection_intro",
+        "button_text": "Error Detection Module ➔"
+      }
+    },
+    {
+      "card_id": "card_26_error_detection_intro",
+      "card_slug": "card_26_error_detection_intro",
+      "type": "chat",
+      "concept_id": "error_detection_strategy",
+      "level": 4,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab SBI PO/SSC CGL level ERROR DETECTION! Article errors sabse common hain. Strategy: (1) Singular countable noun check karo - article hai ya nahi? (2) Uncountable/Plural general - unnecessary article toh nahi? (3) Fixed phrases (by car, at home) - wrong article? (4) Geographical names - THE ka galat use? (5) School/hospital type institutions - purpose vs place confusion?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sentence mein article error kaise spot karein quickly?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Quick Checklist: (1) A/AN confusion - sound check karo. (2) THE ke saath: rivers, oceans, ranges - ok. Mountains, countries (India), languages - THE nahi! (3) Plural/uncountable general mein THE check - unnecessary toh nahi? (4) Fixed expressions (by heart, at large, in detail) - article add toh nahi kiya? Ab patterns dekhte hain examples se!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, examples dijiye!"
+        }
+      },
+      "navigation": {
+        "next": "card_27_error_pattern_1",
+        "button_text": "Pattern 1 ➔"
+      }
+    },
+    {
+      "card_id": "card_27_error_pattern_1",
+      "card_slug": "card_27_error_pattern_1",
+      "type": "chat",
+      "concept_id": "error_a_an_confusion",
+      "level": 4,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ERROR PATTERN 1 - A/AN Sound Confusion: 'He is a honest man' (WRONG - 'AN honest'), 'She bought an uniform' (WRONG - 'A uniform' - sound YU-). 'It was a European country' (CORRECT - sound YU-), 'An MP visited' (CORRECT - sound EM). ⭐ SBI PO loves: 'a university', 'an hour', 'a one-way street', 'an X-ray'."
+        },
+        {
+          "speaker": "raju",
+          "text": "Numbers 8, 11, 18 mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "'AN eight' (sound AYT - vowel!), 'AN eleven' (sound I-), 'AN eighteen'. But 'A one' (sound WUN - consonant). 'AN 80-year-old man' (sound AY-tee), 'A 100-rupee note' (sound HUN-dred or WUN-hundred - consonant). ⭐ Tricky: 'AN heir' (h silent), 'A historical event' (h pronounced - old rule AN historical now outdated)."
+        },
+        {
+          "speaker": "raju",
+          "text": "THE ka unnecessary use pattern?"
+        }
+      },
+      "navigation": {
+        "next": "card_28_error_pattern_2",
+        "button_text": "Pattern 2 ➔"
+      }
+    },
+    {
+      "card_id": "card_28_error_pattern_2",
+      "card_slug": "card_28_error_pattern_2",
+      "type": "chat",
+      "concept_id": "error_unnecessary_the",
+      "level": 4,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ERROR PATTERN 2 - Unnecessary THE: 'The life is beautiful' (WRONG - 'Life is beautiful' - abstract general). 'The Mount Everest' (WRONG - 'Mount Everest'). 'I study the Mathematics' (WRONG - 'Mathematics'). 'He speaks the Hindi' (WRONG - 'Hindi'). 'The children are playing' - यह CORRECT हो सकता है अगर specific children हों, WRONG अगर general statement!"
+        },
+        {
+          "speaker": "raju",
+          "text": "'The India is my country' toh wrong hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Common Error! 'THE India' WRONG - 'India is my country' correct. Countries generally NO article (exceptions: THE USA, THE UK). 'THE man is mortal' (WRONG - 'Man is mortal' - mankind). 'I like the tea' (WRONG general - 'I like tea'). 'I like THE tea you made' (CORRECT - specific tea)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Missing article ka pattern?"
+        }
+      },
+      "navigation": {
+        "next": "card_29_error_pattern_3",
+        "button_text": "Pattern 3 ➔"
+      }
+    },
+    {
+      "card_id": "card_29_error_pattern_3",
+      "card_slug": "card_29_error_pattern_3",
+      "type": "chat",
+      "concept_id": "error_missing_article",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ERROR PATTERN 3 - Missing Article: 'He is doctor' (WRONG - 'a doctor'). 'Sun rises in east' (WRONG - 'THE sun rises in THE east'). 'I saw elephant' (WRONG - 'an elephant' ya 'THE elephant'). 'She is tallest girl' (WRONG - 'THE tallest'). Singular countable noun ALWAYS needs article (A/AN/THE) - yeh fundamental rule hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Fixed phrases mein galti?"
+        },
+        {
+          "speaker": "aman",
+          "text": "ERROR PATTERN 4 - Fixed Phrase Corruption: 'By THE heart' (WRONG - 'by heart'), 'At the large' (WRONG - 'at large'), 'In the detail' (WRONG - 'in detail'), 'By the car' (WRONG - 'by car'), 'At the home' (WRONG - 'at home'). ⭐ SBI PO loves corrupting fixed phrases! 'Face to THE face' (WRONG), 'Day by THE day' (WRONG)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ab practice karein Sir!"
+        }
+      },
+      "navigation": {
+        "next": "card_30_error_quiz_1",
+        "button_text": "Error Detection Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_30_error_quiz_1",
+      "card_slug": "card_30_error_quiz_1",
+      "type": "quiz",
+      "concept_id": "error_detection_1",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SBI PO Pattern: Find the error:\n'The honesty is the best policy and we should follow it in our life.'",
+        "options": [
+          { "id": "A", "text": "Error in 'The honesty'" },
+          { "id": "B", "text": "Error in 'the best policy'" },
+          { "id": "C", "text": "Error in 'in our life'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Error Part A! 'THE honesty' WRONG - abstract nouns (honesty, patience, wisdom) general sense mein NO article! Correct: 'Honesty is the best policy'. Part B correct - 'THE best' (superlative - THE chahiye). Part C correct - 'our life' possessive hai toh article optional. ⭐ Common trap: abstract nouns mein unnecessary THE!"
+      },
+      "navigation": {
+        "next": "card_31_error_quiz_2",
+        "button_text": "Question 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_31_error_quiz_2",
+      "card_slug": "card_31_error_quiz_2",
+      "type": "quiz",
+      "concept_id": "error_detection_2",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC CGL: Detect error:\n'He gave me an one-hundred rupee note for the taxi fare.'",
+        "options": [
+          { "id": "A", "text": "Error in 'an one-hundred'" },
+          { "id": "B", "text": "Error in 'rupee note'" },
+          { "id": "C", "text": "Error in 'the taxi fare'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Error Part A! 'AN one-hundred' WRONG - 'one' ka sound 'WUN' (consonant sound) hai toh 'A one-hundred rupee note' correct! 'One' number hai but sound 'W-' consonant. Part B correct (compound noun). Part C correct (specific taxi fare - THE ok). ⭐ Sound-based A/AN trap!"
+      },
+      "navigation": {
+        "next": "card_32_error_quiz_3",
+        "button_text": "Question 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_32_error_quiz_3",
+      "card_slug": "card_32_error_quiz_3",
+      "type": "quiz",
+      "concept_id": "error_detection_3",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC: Find error:\n'The Mount Everest is the highest peak in the Himalayas.'",
+        "options": [
+          { "id": "A", "text": "Error in 'The Mount Everest'" },
+          { "id": "B", "text": "Error in 'the highest peak'" },
+          { "id": "C", "text": "Error in 'the Himalayas'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Error Part A! 'THE Mount Everest' WRONG - single mountain peak mein NO article: 'Mount Everest is the highest peak'. Part B correct (superlative - THE). Part C correct (THE Himalayas - mountain range). ⭐ Classic trap: THE Himalayas (range - correct) vs Mount Everest (peak - NO article)!"
+      },
+      "navigation": {
+        "next": "card_33_milestone_error",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_33_milestone_error",
+      "card_slug": "card_33_milestone_error",
+      "type": "milestone",
+      "concept_id": "error_detection_complete",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 Error Detection Master!",
+        "badge_emoji": "🔍",
+        "completed_topic": "Article Error Patterns",
+        "xp_earned": 70,
+        "milestone_progress": "Module 4/5 Complete",
+        "motivational_quote": "Superb! Ab advanced traps aur special cases!"
+      },
+      "navigation": {
+        "next": "card_34_advanced_intro",
+        "button_text": "Advanced Module ➔"
+      }
+    },
+    {
+      "card_id": "card_34_advanced_intro",
+      "card_slug": "card_34_advanced_intro",
+      "type": "chat",
+      "concept_id": "advanced_traps_intro",
+      "level": 5,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab Officer-level ADVANCED TRAPS! (1) Double article error: 'A THE book' (obviously wrong). (2) Article with possessives: 'The my book' (WRONG - 'my book' ya 'THE book'), 'A his pen' (WRONG - 'his pen'). Possessive (my, his, her, their) aur article TOGETHER nahi! (3) Article with demonstratives: 'The this boy' (WRONG - 'this boy' ya 'THE boy')."
+        },
+        {
+          "speaker": "raju",
+          "text": "Possessive ke saath kabhi article nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Never together! 'My THE book', 'THE my book', 'A my pen' - sab WRONG. 'My book', 'THE book', 'A book' - individual use. Same with demonstratives (this, that, these, those): 'The that car' WRONG - 'that car' correct. ⭐ SBI PO advanced error! (4) Countable singular without article: 'Book is on table' (WRONG - 'A book is on THE table')."
+        },
+        {
+          "speaker": "raju",
+          "text": "Proper nouns with article special cases?"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_advanced_proper_nouns",
+        "button_text": "Special cases ➔"
+      }
+    },
+    {
+      "card_id": "card_35_advanced_proper_nouns",
+      "card_slug": "card_35_advanced_proper_nouns",
+      "type": "chat",
+      "concept_id": "advanced_proper_nouns",
+      "level": 5,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "When proper noun is MODIFIED (adjective/phrase se), THE use ho sakta hai: 'Kalidas' (NO article), but 'THE great Kalidas' (modified). 'India' (NO), 'THE India of my dreams' (modified/specific). 'Shakespeare' (NO), 'THE Shakespeare of 20th century' (comparison). Family names (plural) - THE: THE Sharmas, THE Pandavas, THE Kapoors."
+        },
+        {
+          "speaker": "raju",
+          "text": "Holy books, religious texts?"
+        },
+        {
+          "speaker": "aman",
+          "text": "THE: THE Ramayana, THE Mahabharata, THE Quran, THE Bible, THE Gita. ⭐ But 'Ramayana says' (as subject, article optional in casual). Official/Formal writing mein THE prefer. Newspapers, magazines - THE: THE Times of India, THE Economist. Ships, trains - THE: THE Rajdhani, THE Titanic. Buildings/monuments - mixed: Taj Mahal (NO), THE Qutub Minar (exception), THE Red Fort."
+        },
+        {
+          "speaker": "raju",
+          "text": "Comparative structures mein?"
+        }
+      },
+      "navigation": {
+        "next": "card_36_advanced_comparative",
+        "button_text": "Comparatives ➔"
+      }
+    },
+    {
+      "card_id": "card_36_advanced_comparative",
+      "card_slug": "card_36_advanced_comparative",
+      "type": "chat",
+      "concept_id": "advanced_comparative_structures",
+      "level": 5,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "'THE + comparative, THE + comparative' structure: 'THE more you study, THE better you perform'. 'THE sooner, THE better'. 'THE higher you go, THE colder it gets'. Dono mein THE mandatory! 'The more, the merrier'. ⭐ SBI PO tests this! 'All THE + comparative': 'All THE better', 'All THE more reason'. 'None THE + comparative': 'None THE worse'."
+        },
+        {
+          "speaker": "raju",
+          "text": "'A kind of', 'sort of' mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "'A kind of flower' (correct), 'Kind of a flower' (informal/colloquial). 'A sort of problem', 'What sort of book'. 'What kind of a person' (colloquial ok). 'THE same': hamesha THE - 'THE same boy', 'at THE same time'. 'THE only': 'THE only solution', 'THE only one'. 'THE very': 'THE very person', 'THE very idea'."
+        },
+        {
+          "speaker": "raju",
+          "text": "Some, any, few, little ke saath?"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_advanced_quantifiers",
+        "button_text": "Quantifiers ➔"
+      }
+    },
+    {
+      "card_id": "card_37_advanced_quantifiers",
+      "card_slug": "card_37_advanced_quantifiers",
+      "type": "chat",
+      "concept_id": "advanced_quantifiers",
+      "level": 5,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "'Some books' (NO article before some), 'Some of THE books' (specific books mein se kuch). 'Few students' (countable - NO article), 'A few students' (some students), 'THE few students' (specific wale jo hain). 'Little water' (uncountable), 'A little water' (some water), 'THE little water' (specific water). ⭐ 'THE' makes it SPECIFIC!"
+        },
+        {
+          "speaker": "raju",
+          "text": "'Many', 'much' ke saath?"
+        },
+        {
+          "speaker": "aman",
+          "text": "'Many books' (NO article), 'Many of THE books' (specific). 'Much water' (NO), 'Much of THE water' (specific). 'Most people' (general - NO), 'Most of THE people' (specific). 'All students' (general), 'All THE students' ya 'All OF THE students' (specific class). Pattern dekho: Quantifier + noun (NO THE), Quantifier + OF THE + noun (specific)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Percent, fractions?"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_advanced_numbers",
+        "button_text": "Numbers & Fractions ➔"
+      }
+    },
+    {
+      "card_id": "card_38_advanced_numbers",
+      "card_slug": "card_38_advanced_numbers",
+      "type": "chat",
+      "concept_id": "advanced_numbers_fractions",
+      "level": 5,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "'50 percent of students' (NO article), '50 percent of THE students' (specific). 'Half (of) THE apple' (specific), 'Half an apple' (general piece). 'A quarter of THE population', 'One-third of THE budget'. 'Twice THE price', 'Double THE quantity' (THE specific price/quantity). Cardinal numbers - NO article: 'Chapter 5', 'Page 10', 'Room 302'."
+        },
+        {
+          "speaker": "raju",
+          "text": "Time expressions mein - 'in THE morning'?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Tricky! Parts of day: 'in THE morning', 'in THE afternoon', 'in THE evening' (THE chahiye). LEKIN 'at night', 'at noon', 'at midnight' (NO article). 'All THE day' (formal/old), 'All day' (common). 'By THE time', 'For THE time being', 'At THE moment', 'At THE present time'. 'On time' (punctual), 'In time' (before deadline)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Body parts, illnesses?"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_advanced_body_illness",
+        "button_text": "Body & Illness ➔"
+      }
+    },
+    {
+      "card_id": "card_39_advanced_body_illness",
+      "card_slug": "card_39_advanced_body_illness",
+      "type": "chat",
+      "concept_id": "advanced_body_illness",
+      "level": 5,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Body parts with possessive: 'He broke HIS leg' (NOT 'He broke THE leg' - in English possessive preferred). 'She raised HER hand', 'I hurt MY foot'. Illnesses: Generally NO article - 'He has fever', 'cancer', 'diabetes'. THE chahiye: THE flu, THE measles, THE mumps, THE plague, THE common cold. 'A headache', 'A cold', 'A cough' (A/AN ok for common ailments)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Colors, materials?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Generally NO: 'Red is beautiful', 'I like blue'. With noun: 'A red shirt', 'THE blue car' (specific). Materials: 'Gold is precious', 'Silver shines', 'Iron is strong' (NO article - general). 'THE gold in this ring' (specific). Nature elements: 'Fire is hot', 'Water is life', 'Air is essential' (general - NO). 'THE fire in the kitchen' (specific)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ab advanced quiz dijiye Sir!"
+        }
+      },
+      "navigation": {
+        "next": "card_40_advanced_quiz_1",
+        "button_text": "Advanced Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_40_advanced_quiz_1",
+      "card_slug": "card_40_advanced_quiz_1",
+      "type": "quiz",
+      "concept_id": "advanced_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SBI PO Advanced: Find error:\n'The my father works in a hospital and he is the best doctor.'",
+        "options": [
+          { "id": "A", "text": "Error in 'The my father'" },
+          { "id": "B", "text": "Error in 'a hospital'" },
+          { "id": "C", "text": "Error in 'the best doctor'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Error Part A! 'THE my father' WRONG - article aur possessive TOGETHER nahi use hote! Correct: 'My father' (possessive alone). Part B correct (a hospital - general). Part C correct (THE best - superlative). ⭐ Advanced trap: Article + Possessive/Demonstrative = Always WRONG!"
+      },
+      "navigation": {
+        "next": "card_41_advanced_quiz_2",
+        "button_text": "Question 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_41_advanced_quiz_2",
+      "card_slug": "card_41_advanced_quiz_2",
+      "type": "quiz",
+      "concept_id": "advanced_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC CGL: Choose CORRECT:\n'___ more you practice, ___ better you become.'",
+        "options": [
+          { "id": "A", "text": "A, a" },
+          { "id": "B", "text": "The, the" },
+          { "id": "C", "text": "No article needed in both" },
+          { "id": "D", "text": "The, a" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'THE more... THE better' - यह fixed comparative structure है! Dono comparative degree ke pehle THE mandatory: 'THE more you practice, THE better you become'. 'THE sooner THE better', 'THE higher THE colder'. ⭐ Common pattern in SBI PO/SSC!"
+      },
+      "navigation": {
+        "next": "card_42_advanced_quiz_3",
+        "button_text": "Question 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_42_advanced_quiz_3",
+      "card_slug": "card_42_advanced_quiz_3",
+      "type": "quiz",
+      "concept_id": "advanced_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC: Identify CORRECT sentence:",
+        "options": [
+          { "id": "A", "text": "He is suffering from the fever." },
+          { "id": "B", "text": "He is suffering from the flu." },
+          { "id": "C", "text": "He is suffering from the cancer." },
+          { "id": "D", "text": "He is suffering from the diabetes." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'THE flu' CORRECT! Most diseases - NO article: fever (NO THE), cancer (NO), diabetes (NO), malaria. LEKIN specific diseases mein THE: THE flu, THE measles, THE mumps, THE plague, THE common cold. ⭐ Exception याद रखो: THE flu (standard), 'a cold/headache/cough' (A/AN ok)!"
+      },
+      "navigation": {
+        "next": "card_43_milestone_advanced",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_43_milestone_advanced",
+      "card_slug": "card_43_milestone_advanced",
+      "type": "milestone",
+      "concept_id": "advanced_complete",
+      "level": 5,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 Advanced Traps Conquered!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Officer-Level Article Rules",
+        "xp_earned": 80,
+        "milestone_progress": "Module 5/5 Complete",
+        "motivational_quote": "Outstanding! Ab final SBI PO level mixed practice!"
+      },
+      "navigation": {
+        "next": "card_44_final_practice_intro",
+        "button_text": "Final Practice ➔"
+      }
+    },
+    {
+      "card_id": "card_44_final_practice_intro",
+      "card_slug": "card_44_final_practice_intro",
+      "type": "chat",
+      "concept_id": "final_practice_strategy",
+      "level": 5,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab final SBI PO/SSC level MIXED ERROR DETECTION! Strategy revise karo: (1) Singular countable - article present? (2) Sound-based A/AN correct? (3) THE unnecessary (languages, countries, abstract general)? (4) Fixed phrases corrupted? (5) Possessive/Demonstrative + Article together? (6) Geographical names - THE pattern check? Ab real exam level sentences practice!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ek sentence mein multiple errors ho sakte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ SBI PO mein generally ONE error per sentence (4 parts mein ek part wrong). BPSC/SSC mein bhi same. Strategy: systematically har part check karo - article, noun agreement, verb, preposition. Article errors 30-40% questions mein hote hain! Ab 10 challenging questions - SBI PO level!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ready hoon Sir!"
+        }
+      },
+      "navigation": {
+        "next": "card_45_practice_1",
+        "button_text": "Practice Q1 ➔"
+      }
+    },
+    {
+      "card_id": "card_45_practice_1",
+      "card_slug": "card_45_practice_1",
+      "type": "quiz",
+      "concept_id": "final_practice_1",
+      "level": 5,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SBI PO Mock: Error detection:\n'The Ganga is a sacred river / and flows through the India / before meeting the Bay of Bengal / in West Bengal.' Find error part.",
+        "options": [
+          { "id": "A", "text": "Part 1: The Ganga..." },
+          { "id": "B", "text": "Part 2: ...the India" },
+          { "id": "C", "text": "Part 3: ...the Bay of Bengal" },
+          { "id": "D", "text": "Part 4 or No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Error Part 2! 'THE India' WRONG - 'India' country hai, NO article (exception: THE USA/UK types). Correct: 'flows through India'. Part 1 correct (THE Ganga - river), Part 3 correct (THE Bay of Bengal - sea/bay), Part 4 correct. ⭐ Classic country name trap!"
+      },
+      "navigation": {
+        "next": "card_46_practice_2",
+        "button_text": "Q2/10 ➔"
+      }
+    },
+    {
+      "card_id": "card_46_practice_2",
+      "card_slug": "card_46_practice_2",
+      "type": "quiz",
+      "concept_id": "final_practice_2",
+      "level": 5,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC CGL: Error detection:\n'He went to the school / by the bus and reached / on time for the / annual function.' Find error.",
+        "options": [
+          { "id": "A", "text": "Part 1: ...the school" },
+          { "id": "B", "text": "Part 2: ...by the bus" },
+          { "id": "C", "text": "Part 3: ...on time for the" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Error Part 2! 'By THE bus' WRONG - 'by' के बाद mode of transport में NO article: 'by bus'. Part 1 - 'the school' ok if specific building visit; 'to school' if study purpose (context unclear toh both acceptable). Part 3 correct. ⭐ Classic fixed phrase trap!"
+      },
+      "navigation": {
+        "next": "card_47_practice_3",
+        "button_text": "Q3/10 ➔"
+      }
+    },
+    {
+      "card_id": "card_47_practice_3",
+      "card_slug": "card_47_practice_3",
+      "type": "quiz",
+      "concept_id": "final_practice_3",
+      "level": 5,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway: Find error:\n'An university professor / delivered a lecture / on the importance of / moral values.' Error in?",
+        "options": [
+          { "id": "A", "text": "Part 1: An university" },
+          { "id": "B", "text": "Part 2: delivered a lecture" },
+          { "id": "C", "text": "Part 3: the importance" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Error Part 1! 'AN university' WRONG - 'university' ka sound 'YOO-' (consonant sound) hai toh 'A university' correct! Sound rule: A/AN depends on SOUND not spelling. Parts 2,3 correct. ⭐ Most common A/AN trap in exams!"
+      },
+      "navigation": {
+        "next": "card_48_practice_4",
+        "button_text": "Q4/10 ➔"
+      }
+    },
+    {
+      "card_id": "card_48_practice_4",
+      "card_slug": "card_48_practice_4",
+      "type": "quiz",
+      "concept_id": "final_practice_4",
+      "level": 5,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC: Detect error:\n'The Mount Everest, / the highest peak in world, / is located in / the Himalayas.' Error?",
+        "options": [
+          { "id": "A", "text": "Part 1: The Mount Everest" },
+          { "id": "B", "text": "Part 2: ...in world" },
+          { "id": "C", "text": "Part 3: is located in" },
+          { "id": "D", "text": "Part 4: the Himalayas" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Error Part 1! 'THE Mount Everest' WRONG - single peak mein NO article: 'Mount Everest'. Part 2 also error: 'in THE world' correct (but question mein ek hi error generally). Part 4 correct (THE Himalayas - range). ⭐ Mountain peak vs range confusion!"
+      },
+      "navigation": {
+        "next": "card_49_practice_5",
+        "button_text": "Q5/10 ➔"
+      }
+    },
+    {
+      "card_id": "card_49_practice_5",
+      "card_slug": "card_49_practice_5",
+      "type": "quiz",
+      "concept_id": "final_practice_5",
+      "level": 5,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SBI PO: Find error:\n'He is an honest man / who always speaks / the truth and never / tells the lies.' Error in?",
+        "options": [
+          { "id": "A", "text": "Part 1: an honest" },
+          { "id": "B", "text": "Part 2: always speaks" },
+          { "id": "C", "text": "Part 3: the truth" },
+          { "id": "D", "text": "Part 4: the lies" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Error Part 4! 'THE lies' WRONG - 'lies' plural general hai toh NO article: 'tells lies'. 'Truth' abstract/general mein 'THE truth' (universal concept - acceptable). Part 1 correct (AN honest - h silent). ⭐ Plural general statement trap!"
+      },
+      "navigation": {
+        "next": "card_50_practice_6",
+        "button_text": "Q6/10 ➔"
+      }
+    },
+    {
+      "card_id": "card_50_practice_6",
+      "card_slug": "card_50_practice_6",
+      "type": "quiz",
+      "concept_id": "final_practice_6",
+      "level": 5,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC: Error detection:\n'The life is full of / challenges and we must / face them with / courage and patience.' Error?",
+        "options": [
+          { "id": "A", "text": "Part 1: The life" },
+          { "id": "B", "text": "Part 2: challenges and" },
+          { "id": "C", "text": "Part 3: face them" },
+          { "id": "D", "text": "Part 4: No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Error Part 1! 'THE life' WRONG in general abstract sense - correct: 'Life is full of...' (abstract noun general mein NO article). 'THE life of a student' (specific) ok, but general statement mein NO THE. Parts 2,3 correct. ⭐ Abstract noun trap!"
+      },
+      "navigation": {
+        "next": "card_51_practice_7",
+        "button_text": "Q7/10 ➔"
+      }
+    },
+    {
+      "card_id": "card_51_practice_7",
+      "card_slug": "card_51_practice_7",
+      "type": "quiz",
+      "concept_id": "final_practice_7",
+      "level": 5,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ Railway: Find error:\n'She is / a best student / in the class / and works hard.' Error in?",
+        "options": [
+          { "id": "A", "text": "Part 1: She is" },
+          { "id": "B", "text": "Part 2: a best student" },
+          { "id": "C", "text": "Part 3: in the class" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Error Part 2! 'A best' WRONG - superlative degree ke saath THE chahiye: 'THE best student'. 'A good student' (ok), 'THE best student' (correct). Superlatives: THE tallest, THE most, THE worst - hamesha THE! ⭐ Superlative article rule!"
+      },
+      "navigation": {
+        "next": "card_52_practice_8",
+        "button_text": "Q8/10 ➔"
+      }
+    },
+    {
+      "card_id": "card_52_practice_8",
+      "card_slug": "card_52_practice_8",
+      "type": "quiz",
+      "concept_id": "final_practice_8",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC: Detect error:\n'I met him / in evening when / he was returning / from office.' Error?",
+        "options": [
+          { "id": "A", "text": "Part 1: I met" },
+          { "id": "B", "text": "Part 2: in evening" },
+          { "id": "C", "text": "Part 3: was returning" },
+          { "id": "D", "text": "Part 4: from office" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Error Part 2! 'In evening' WRONG - parts of day mein article chahiye: 'in THE evening' (also: in THE morning, in THE afternoon). Part 4: 'from office' ok (routine purpose). ⭐ Time expression article rule!"
+      },
+      "navigation": {
+        "next": "card_53_practice_9",
+        "button_text": "Q9/10 ➔"
+      }
+    },
+    {
+      "card_id": "card_53_practice_9",
+      "card_slug": "card_53_practice_9",
+      "type": "quiz",
+      "concept_id": "final_practice_9",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SBI PO: Error in:\n'The French language / is spoken in / many countries including / the France and Belgium.' Find error.",
+        "options": [
+          { "id": "A", "text": "Part 1: The French language" },
+          { "id": "B", "text": "Part 2: is spoken in" },
+          { "id": "C", "text": "Part 3: many countries" },
+          { "id": "D", "text": "Part 4: the France" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Error Part 4! 'THE France' WRONG - 'France' country hai, NO article: 'France and Belgium'. Part 1: 'THE French language' ok (specific language with word 'language'). 'French' alone mein NO article, but 'THE French language' acceptable. ⭐ Country name trap!"
+      },
+      "navigation": {
+        "next": "card_54_practice_10",
+        "button_text": "Q10/10 (Last!) ➔"
+      }
+    },
+    {
+      "card_id": "card_54_practice_10",
+      "card_slug": "card_54_practice_10",
+      "type": "quiz",
+      "concept_id": "final_practice_10",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ SSC CGL: Find error:\n'He broke his leg / while playing the football / and was taken to / hospital immediately.' Error?",
+        "options": [
+          { "id": "A", "text": "Part 1: broke his leg" },
+          { "id": "B", "text": "Part 2: the football" },
+          { "id": "C", "text": "Part 3: was taken to" },
+          { "id": "D", "text": "Part 4: No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Error Part 2! 'Playing THE football' WRONG - games/sports mein NO article: 'playing football'. 'Play cricket', 'play tennis', 'play chess'. Part 1 correct (his leg - possessive ok). Part 3: 'to hospital' (treatment purpose - NO article) correct! ⭐ Games + Institution purpose - dono common traps!"
+      },
+      "navigation": {
+        "next": "card_55_practice_milestone",
+        "button_text": "Check Results ➔"
+      }
+    },
+    {
+      "card_id": "card_55_practice_milestone",
+      "card_slug": "card_55_practice_milestone",
+      "type": "milestone",
+      "concept_id": "practice_complete",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 Practice Master!",
+        "badge_emoji": "💯",
+        "completed_topic": "SBI PO Level Error Detection",
+        "xp_earned": 100,
+        "milestone_progress": "Practice Complete",
+        "motivational_quote": "Phenomenal! Ab Officer-level revision aur final quiz!"
+      },
+      "navigation": {
+        "next": "card_56_officer_revision",
+        "button_text": "Officer Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_56_officer_revision",
+      "card_slug": "card_56_officer_revision",
+      "type": "summary",
+      "concept_id": "final_revision",
+      "level": 5,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ Officer-Level Quick Revision",
+        "revision_points": [
+          {
+            "topic": "A vs AN Rule",
+            "point": "⭐ SOUND matters, spelling doesn't! 'AN honest' (h silent), 'A university' (sound YU-), 'AN MP' (sound EM), 'A one-rupee note' (sound WUN). 'AN hour, heir, honour' but 'A European, uniform, university'. Test: Say word aloud - vowel sound = AN, consonant sound = A."
+          },
+          {
+            "topic": "THE with Geography",
+            "point": "⭐ Rivers/Oceans/Seas = THE (Ganga, Pacific, Arabian Sea). Mountain RANGES = THE (Himalayas, Alps). Single PEAKS = NO (Mount Everest, K2). Countries = NO (India, France) except THE USA, UK, UAE, Netherlands. Deserts = THE (Thar, Sahara). Islands groups = THE (Andamans), single = NO (Sri Lanka)."
+          },
+          {
+            "topic": "ZERO Article Cases",
+            "point": "⭐ NO article: Languages (Hindi, English), Subjects (Mathematics), Meals (breakfast, lunch), Games (cricket, chess), 'By' + transport (by car, bus), Abstract general (Life is beautiful, Man is mortal), Plural general (Dogs bark), Uncountable general (Water is essential). Fixed phrases: at home, by heart, in detail, on foot."
+          },
+          {
+            "topic": "THE Mandatory Cases",
+            "point": "⭐ MUST use THE: Superlatives (best, worst, tallest), Ordinals (first, second, last), Musical instruments (guitar, piano), Directions (north, south), Unique (sun, moon, earth), 'Same' (the same), 'Only' (the only), Parts of day (morning, afternoon, evening - but NOT night/noon/midnight!)."
+          },
+          {
+            "topic": "Common Exam Traps",
+            "point": "⭐ TRAPS: (1) Article + Possessive together = WRONG ('the my book' ❌). (2) 'The India, The Mount Everest' ❌. (3) 'By the car, at the home, in the summer' ❌. (4) 'Playing the cricket' ❌. (5) 'The life/honesty' (abstract general) ❌. (6) Singular countable without article ❌. (7) 'The children are intelligent' - ok if SPECIFIC, wrong if GENERAL statement!"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_57_final_quiz",
+        "button_text": "Final Master Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_57_final_quiz",
+      "card_slug": "card_57_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 5,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ MASTER CHALLENGE (SBI PO/BPSC Level):\n\nRead the passage and find ALL errors:\n\n'The honesty is a best quality in (A) / person and we should always (B) / speak truth whether we are (C) / at the home or in office. (D)'\n\nHow many parts contain article errors?",
+        "options": [
+          { "id": "A", "text": "Only Part A has error" },
+          { "id": "B", "text": "Parts A and B have errors" },
+          { "id": "C", "text": "Parts A, B, C, and D ALL have errors" },
+          { "id": "D", "text": "Parts A, B, and D have errors" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "⭐ COMPLETE ANALYSIS:\n\nPart A: TWO errors! (1) 'THE honesty' WRONG - abstract general mein NO article. (2) 'A best' WRONG - superlative mein THE chahiye: 'THE best'.\n\nPart B: 'in person' incomplete - 'in A person' chahiye (singular countable).\n\nPart C: 'speak truth' - debatable! 'Speak THE truth' (universal concept) preferred, but 'speak truth' colloquially acceptable. Considering strict grammar: 'THE truth' better.\n\nPart D: 'At THE home' WRONG - fixed phrase: 'at home' (NO article).\n\n✅ Definite errors: A, B, D (3 parts)!\n\nCorrected: 'Honesty is THE best quality in A person and we should always speak THE truth whether we are at home or in office.'\n\n⭐ This combines MULTIPLE traps - exactly how SBI PO/BPSC tests integration of rules!"
+      },
+      "navigation": {
+        "next": "card_58_trophy",
+        "button_text": "See Final Result ➔"
+      }
+    },
+    {
+      "card_id": "card_58_trophy",
+      "card_slug": "card_58_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 5,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 ARTICLES MASTERY ACHIEVED!",
+        "badge_emoji": "👑",
+        "completed_topic": "Complete Articles in English Grammar",
+        "xp_earned": 500,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "🎉 CONGRATULATIONS! 🎉\n\nTumne Article ke sab rules master kar liye - A/AN sound rules se lekar advanced THE traps tak! Ab tum SBI PO, SSC CGL, BPSC, Railway ke article questions confidently solve kar sakte ho!\n\n✅ Sound-based A/AN selection\n✅ THE with geography (rivers, mountains, oceans)\n✅ Zero Article situations (languages, games, meals)\n✅ Fixed phrases and idioms\n✅ Institution purpose vs place\n✅ Error detection strategies\n✅ Advanced traps (possessives, superlatives, comparatives)\n\nRemember: SOUND (not spelling) for A/AN, THE for specific/unique, NO article for general plural/uncountable!\n\nKeep practicing! 📚✨"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
+```
