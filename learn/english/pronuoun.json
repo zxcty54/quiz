@@ -1,0 +1,1764 @@
+
+{
+  "topic_id": "pronoun_error_detection_sbi_po",
+  "topic_title": "Pronoun in English Grammar – SBI PO Level Error Detection",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 100,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 100 },
+      "intro_payload": {
+        "title": "Pronoun Mastery: SBI PO Level Error Detection",
+        "icon": "🔤",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Master all 9 types of Pronouns from zero level to Officer level",
+          "Crack Case Errors (I/me, he/him, who/whom) like SBI PO toppers",
+          "Solve Pronoun-Antecedent Agreement traps (everyone...their)",
+          "Decode Reflexive, Reciprocal & Demonstrative Pronoun exceptions",
+          "Handle Ambiguous Reference & Dummy 'It' errors confidently",
+          "Practice 36+ SBI PO style Error Detection questions"
+        ]
+      },
+      "navigation": { "next": "card_02_repeating_noun_problem", "button_text": "Start Learning ➔" }
+    },
+    {
+      "card_id": "card_02_repeating_noun_problem",
+      "card_slug": "card_02_repeating_noun_problem",
+      "type": "chat",
+      "concept_id": "pronoun_need",
+      "level": 1,
+      "progress": { "current": 2, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ek sentence bol - 'Sita ne Sita ki kitab Sita ke bag mein rakhi.' Kaisa lag raha hai sunne mein?" },
+        { "speaker": "raju", "text": "Sir bahut ajeeb lag raha hai, baar baar 'Sita' aa raha hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Isiliye hum bolte hain - 'Sita ne apni kitab apne bag mein rakhi.' Yahan 'apni/apne' ne 'Sita' ki jagah le li." },
+        { "speaker": "raju", "text": "Achhaaaa! Toh ye jo naam ki jagah wala word aaya, wahi kuch special cheez hai?" }
+      ],
+      "navigation": { "next": "card_03_pronoun_definition", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_pronoun_definition",
+      "card_slug": "card_03_pronoun_definition",
+      "type": "chat",
+      "concept_id": "pronoun_definition",
+      "level": 1,
+      "progress": { "current": 3, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi, Raju. Us word ko English grammar mein 'PRONOUN' kehte hain. Definition yaad rakho: 'A Pronoun is a word used INSTEAD OF a Noun, to avoid its repetition.'" },
+        { "speaker": "raju", "text": "Toh he, she, it, they - ye sab pronoun hain?" },
+        { "speaker": "aman", "text": "Exactly! I, we, you, he, she, it, they, this, that, who, which - ye sab noun ki jagah use hote hain. Naam bhool jao, kaam yaad rakho - 'noun ki jagah lena'." },
+        { "speaker": "raju", "text": "Samajh gaya sir, matlab pronoun ek 'substitute player' hai noun ke liye, cricket team jaisa!" }
+      ],
+      "navigation": { "next": "card_04_antecedent_concept", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_antecedent_concept",
+      "card_slug": "card_04_antecedent_concept",
+      "type": "chat",
+      "concept_id": "antecedent",
+      "level": 1,
+      "progress": { "current": 4, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek zaroori cheez suno - jis original noun (Sita) ki jagah pronoun (apni) aaya, use grammar mein 'ANTECEDENT' kehte hain. Antecedent matlab 'jispehle aaya' - wo noun jisse pronoun ka connection hota hai." },
+        { "speaker": "raju", "text": "Sir ye 'Antecedent' word toh exam mein bahut hard lag raha hai!" },
+        { "speaker": "aman", "text": "Ghabrao mat! Ye sirf ek naam hai concept ka - 'Antecedent' = original noun. BPSC aur SBI PO dono mein pronoun ka apne Antecedent se match hona (number, gender, person mein) sabse bada testing point hai." },
+        { "speaker": "raju", "text": "Match hona? Matlab agar Antecedent singular hai toh pronoun bhi singular hona chahiye?" }
+      ],
+      "navigation": { "next": "card_05_types_overview", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_types_overview",
+      "card_slug": "card_05_types_overview",
+      "type": "chat",
+      "concept_id": "pronoun_types_overview",
+      "level": 1,
+      "progress": { "current": 5, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Exactly, isi pe pura chapter khada hai! Ab sun lo Pronoun ke 9 types jo hum pura chapter mein cover karenge: Personal, Possessive, Reflexive, Intensive, Demonstrative, Interrogative, Relative, Indefinite, aur Reciprocal." },
+        { "speaker": "raju", "text": "Itne saare?? Sir ye sab yaad kaise rahenge, mix ho jayenge!" },
+        { "speaker": "aman", "text": "Tension mat lo, hum ek-ek karke, daily life examples se, step by step seekhenge. Har type ke baad SBI PO level error-detection practice bhi karenge." },
+        { "speaker": "raju", "text": "Chalo sir, start karte hain - sabse pehla type kaunsa?" }
+      ],
+      "navigation": { "next": "card_06_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_06_quiz1",
+      "card_slug": "card_06_quiz1",
+      "type": "quiz",
+      "concept_id": "pronoun_definition",
+      "level": 1,
+      "progress": { "current": 6, "total": 100 },
+      "quiz_payload": {
+        "question": "A Pronoun is best defined as:",
+        "options": [
+          { "id": "A", "text": "A word that describes a noun" },
+          { "id": "B", "text": "A word used instead of a noun to avoid repetition" },
+          { "id": "C", "text": "A word that joins two sentences" },
+          { "id": "D", "text": "A word that shows action" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Pronoun ki core definition yahi hai - noun ki jagah use hokar uski repetition avoid karna. Option A adjective ka kaam hai, C conjunction ka, D verb ka."
+      },
+      "navigation": { "next": "card_07_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz2",
+      "card_slug": "card_07_quiz2",
+      "type": "quiz",
+      "concept_id": "antecedent",
+      "level": 1,
+      "progress": { "current": 7, "total": 100 },
+      "quiz_payload": {
+        "question": "In the sentence 'Ravi lost his bag', what is the Antecedent of the pronoun 'his'?",
+        "options": [
+          { "id": "A", "text": "lost" },
+          { "id": "B", "text": "bag" },
+          { "id": "C", "text": "Ravi" },
+          { "id": "D", "text": "his" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Antecedent wo noun hai jiski jagah/reference mein pronoun use hota hai. Yahan 'his' Ravi ko refer kar raha hai, isliye Antecedent = Ravi."
+      },
+      "navigation": { "next": "card_08_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_quiz3",
+      "card_slug": "card_08_quiz3",
+      "type": "quiz",
+      "concept_id": "pronoun_types_overview",
+      "level": 1,
+      "progress": { "current": 8, "total": 100 },
+      "quiz_payload": {
+        "question": "Which of the following is NOT a recognized type of Pronoun in English Grammar?",
+        "options": [
+          { "id": "A", "text": "Reciprocal Pronoun" },
+          { "id": "B", "text": "Intensive Pronoun" },
+          { "id": "C", "text": "Descriptive Pronoun" },
+          { "id": "D", "text": "Demonstrative Pronoun" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Descriptive Pronoun' koi standard grammar category nahi hai - ye trap option hai. Standard types: Personal, Possessive, Reflexive, Intensive, Demonstrative, Interrogative, Relative, Indefinite, Reciprocal."
+      },
+      "navigation": { "next": "card_09_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_09_milestone1",
+      "card_slug": "card_09_milestone1",
+      "type": "milestone",
+      "concept_id": "pronoun_basics_complete",
+      "level": 1,
+      "progress": { "current": 9, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Pronoun Basics & Antecedent",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/12 Clear",
+        "motivational_quote": "Foundation strong hai toh officer banna pakka hai! Chalo ab Personal Pronoun ke case system mein ghuste hain."
+      },
+      "navigation": { "next": "card_10_subjective_case", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_10_subjective_case",
+      "card_slug": "card_10_subjective_case",
+      "type": "chat",
+      "concept_id": "subjective_case",
+      "level": 2,
+      "progress": { "current": 10, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, sochte hain school mein attendance ho rahi hai. Teacher poochti hai 'Who did this?' Tum jawab doge 'I did it' ya 'Me did it'?" },
+        { "speaker": "raju", "text": "Sir 'I did it' bolenge, 'Me did it' toh galat lagta hai." },
+        { "speaker": "aman", "text": "Perfect! Jab pronoun sentence ka SUBJECT (jo kaam kar raha hai) hota hai, tab I, we, you, he, she, it, they use hote hain - ye 'Subjective Case' kehlata hai." },
+        { "speaker": "raju", "text": "Toh subject wale pronoun hamesha sentence ke shuru mein hi aayenge?" }
+      ],
+      "navigation": { "next": "card_11_objective_case", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_objective_case",
+      "card_slug": "card_11_objective_case",
+      "type": "chat",
+      "concept_id": "objective_case",
+      "level": 2,
+      "progress": { "current": 11, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Mostly haan, lekin asli test hai jab pronoun sentence ka OBJECT banta hai - matlab jispe kaam ho raha hai. Jaise 'Teacher scolded me' - yahan 'me' hai, 'I' nahi." },
+        { "speaker": "raju", "text": "Achha! Toh me, us, you, him, her, it, them - ye sab OBJECT wale pronoun hain?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Isse 'Objective Case' kehte hain. Ye tab use hote hain jab pronoun kisi verb ka object ho ya kisi preposition (to, for, with, at, from) ke baad aaye." },
+        { "speaker": "raju", "text": "Sir ye preposition wala part thoda confusing lag raha hai, example doge?" }
+      ],
+      "navigation": { "next": "card_12_possessive_pronoun_vs_adjective", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_possessive_pronoun_vs_adjective",
+      "card_slug": "card_12_possessive_pronoun_vs_adjective",
+      "type": "chat",
+      "concept_id": "possessive_pronoun_vs_adjective",
+      "level": 2,
+      "progress": { "current": 12, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Zaroor, ruko pehle ek aur important cheez sun lo. 'This is my book' aur 'This book is mine' - dono mein possession dikha rahe hain, but 'my' aur 'mine' mein farak hai." },
+        { "speaker": "raju", "text": "Sir dono ka matlab toh same hai - kitab meri hai!" },
+        { "speaker": "aman", "text": "Matlab same hai, but 'my' ke baad hamesha noun aayega (my book), isliye ye Possessive ADJECTIVE hai. 'Mine' akela khada hoke pura noun replace karta hai (This book is mine), isliye ye Possessive PRONOUN hai." },
+        { "speaker": "raju", "text": "Ohhh! Toh 'my/his/her/our/their' adjective hain aur 'mine/his/hers/ours/theirs' pronoun hain? SBI PO mein ye mix karke poochenge kya?" }
+      ],
+      "navigation": { "next": "card_13_case_after_preposition", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_case_after_preposition",
+      "card_slug": "card_13_case_after_preposition",
+      "type": "chat",
+      "concept_id": "case_after_preposition",
+      "level": 2,
+      "progress": { "current": 13, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul poochenge, isliye yahi golden rule gaanth baandh lo: PREPOSITION (to, for, with, between, of, at) ke turant baad hamesha OBJECTIVE case aayega - never Subjective." },
+        { "speaker": "raju", "text": "Toh 'between you and I' galat hoga? Ye toh log bolte hain!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda tumne SBI PO ka sabse famous trap! 'Between' ek preposition hai, isliye correct hoga 'between you and ME'. 'Between you and I' 90% logo ki galti hai but exam mein error hai." },
+        { "speaker": "raju", "text": "Hain?? Ye toh mummy bhi bolti hain aise, ab pata chala galat hai!" }
+      ],
+      "navigation": { "next": "card_14_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_14_quiz1",
+      "card_slug": "card_14_quiz1",
+      "type": "quiz",
+      "concept_id": "subjective_case",
+      "level": 2,
+      "progress": { "current": 14, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Him and his brother / (B) are going to the market / (C) to buy some vegetables / (D) No error",
+        "options": [
+          { "id": "A", "text": "Him and his brother" },
+          { "id": "B", "text": "are going to the market" },
+          { "id": "C", "text": "to buy some vegetables" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Him and his brother' subject hai sentence ka (going action kar raha hai), isliye Subjective case 'He' aayega, na ki Objective 'Him'. Correct: 'He and his brother are going...'"
+      },
+      "navigation": { "next": "card_15_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz2",
+      "card_slug": "card_15_quiz2",
+      "type": "quiz",
+      "concept_id": "case_after_preposition",
+      "level": 2,
+      "progress": { "current": 15, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) This matter is / (B) strictly confidential / (C) between you and I / (D) No error",
+        "options": [
+          { "id": "A", "text": "This matter is" },
+          { "id": "B", "text": "strictly confidential" },
+          { "id": "C", "text": "between you and I" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Between' ek preposition hai, uske baad Objective case aana chahiye. Correct: 'between you and me'. 'Between you and I' classic SBI PO/high-level trap hai."
+      },
+      "navigation": { "next": "card_16_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_quiz3",
+      "card_slug": "card_16_quiz3",
+      "type": "quiz",
+      "concept_id": "possessive_pronoun_vs_adjective",
+      "level": 2,
+      "progress": { "current": 16, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) This house is / (B) more bigger than / (C) her's / (D) No error",
+        "options": [
+          { "id": "A", "text": "This house is" },
+          { "id": "B", "text": "more bigger than" },
+          { "id": "C", "text": "her's" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Possessive Pronouns (mine, yours, his, hers, ours, theirs) mein KABHI apostrophe (') nahi lagta. 'Her's' galat hai, correct hoga 'hers'. (Bonus trap: 'more bigger' bhi galat hai but yahan bade error 'her's' ko highlight kiya gaya hai as per SBI PO pattern of picking the clearest violation)."
+      },
+      "navigation": { "next": "card_17_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_17_milestone2",
+      "card_slug": "card_17_milestone2",
+      "type": "milestone",
+      "concept_id": "personal_pronoun_case_complete",
+      "level": 2,
+      "progress": { "current": 17, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Personal Pronoun Case System",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/12 Clear",
+        "motivational_quote": "Case system clear ho gaya! Ab hum case ke aur bhi khatarnak traps dekhenge - comparison wale sentences."
+      },
+      "navigation": { "next": "card_18_than_as_trap", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_18_than_as_trap",
+      "card_slug": "card_18_than_as_trap",
+      "type": "chat",
+      "concept_id": "than_as_trap",
+      "level": 2,
+      "progress": { "current": 18, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, 'Ram is taller than I' aur 'Ram is taller than me' - dono mein se kaunsa sahi hai?" },
+        { "speaker": "raju", "text": "Sir mujhe toh 'than me' zyada natural lagta hai bolne mein." },
+        { "speaker": "aman", "text": "Natural lagta hai, but grammar rule kehta hai - 'than' aur 'as' ke baad wo case use hoga jo poora sentence complete karne pe sahi baithe. Yahan poora sentence hai 'Ram is taller than I AM (tall)' - isliye 'I' sahi hai." },
+        { "speaker": "raju", "text": "Matlab hidden verb sochni padegi 'than/as' ke baad? Ye toh naya trick hai sir!" }
+      ],
+      "navigation": { "next": "card_19_between_you_and_i_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_between_you_and_i_trap",
+      "card_slug": "card_19_between_you_and_i_trap",
+      "type": "chat",
+      "concept_id": "hypercorrection_trap",
+      "level": 2,
+      "progress": { "current": 19, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Aur ye 'I/me' confusion ki wajah se logo ne ek galat aadat bana li hai jise 'Hypercorrection' kehte hain - hamesha 'I' use karna sochke ki wo zyada polite/correct lagta hai." },
+        { "speaker": "raju", "text": "Matlab jaise humne pichhle card mein 'between you and I' dekha tha?" },
+        { "speaker": "aman", "text": "Exactly wahi! Log sochte hain 'me' bolna galat/rude hai isliye har jagah 'I' thok dete hain - 'He gave the book to Ram and I' - ye bhi galat hai kyunki 'to' preposition hai, 'me' aayega." },
+        { "speaker": "raju", "text": "Toh trick ye hai - sentence ko chota karke check karo ki akela 'I' ya 'me' theek lagta hai kya?" }
+      ],
+      "navigation": { "next": "card_20_compound_object_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_compound_object_trap",
+      "card_slug": "card_20_compound_object_trap",
+      "type": "chat",
+      "concept_id": "compound_object_trap",
+      "level": 2,
+      "progress": { "current": 20, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ekdum sahi trick pakdi tumne! Ye 'shortening trick' SBI PO mein bahut kaam aati hai. 'Ram and (I/me) went to the market' - kaunsa sahi hoga?" },
+        { "speaker": "raju", "text": "Sir ise chota karke check karta hoon - '(I/me) went to market' - toh 'I went' sahi lagta hai!" },
+        { "speaker": "aman", "text": "Perfect application! Toh correct hoga 'Ram and I went to the market'. Yahi trick 'him and me/he and I' jaise compound subjects aur objects mein hamesha use karo." },
+        { "speaker": "raju", "text": "Wah sir, ye toh ek hi trick se saare compound pronoun errors solve ho jayenge!" }
+      ],
+      "navigation": { "next": "card_21_it_is_i_vs_it_is_me", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_it_is_i_vs_it_is_me",
+      "card_slug": "card_21_it_is_i_vs_it_is_me",
+      "type": "chat",
+      "concept_id": "it_is_i_rule",
+      "level": 2,
+      "progress": { "current": 21, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aakhri twist. Formal/grammatical rule kehta hai: 'It is I' sahi hai kyunki 'is' ek Linking Verb hai, aur linking verb ke baad Subjective case aata hai, Objective nahi." },
+        { "speaker": "raju", "text": "Par sir 'It's me' toh sab bolte hain, phone pe bhi!" },
+        { "speaker": "aman", "text": "Bilkul sahi observe kiya - 'It's me' spoken/informal English mein widely accepted hai, but competitive exams mein FORMAL rule follow hota hai: 'It was he who called' - not 'It was him who called'." },
+        { "speaker": "raju", "text": "Samajh gaya sir, exam mein formal rule, ghar pe jo marzi bolo!" }
+      ],
+      "navigation": { "next": "card_22_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_22_quiz1",
+      "card_slug": "card_22_quiz1",
+      "type": "quiz",
+      "concept_id": "than_as_trap",
+      "level": 2,
+      "progress": { "current": 22, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) My sister is / (B) much more intelligent / (C) than me / (D) No error",
+        "options": [
+          { "id": "A", "text": "My sister is" },
+          { "id": "B", "text": "much more intelligent" },
+          { "id": "C", "text": "than me" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Hidden verb trick lagao: '...than I (am)'. Poora sentence 'than I am intelligent' banega, isliye Subjective 'I' sahi hai, 'me' nahi. Correct: 'than I'."
+      },
+      "navigation": { "next": "card_23_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_quiz2",
+      "card_slug": "card_23_quiz2",
+      "type": "quiz",
+      "concept_id": "compound_object_trap",
+      "level": 2,
+      "progress": { "current": 23, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The manager gave / (B) the appraisal letters / (C) to Ravi and I / (D) No error",
+        "options": [
+          { "id": "A", "text": "The manager gave" },
+          { "id": "B", "text": "the appraisal letters" },
+          { "id": "C", "text": "to Ravi and I" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'To' preposition hai, uske baad Objective case aayega. Shortening trick: 'gave the letters to (I/me)' - 'to me' sahi hai. Correct: 'to Ravi and me'."
+      },
+      "navigation": { "next": "card_24_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_24_quiz3",
+      "card_slug": "card_24_quiz3",
+      "type": "quiz",
+      "concept_id": "it_is_i_rule",
+      "level": 2,
+      "progress": { "current": 24, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) When the phone rang / (B) everyone thought / (C) it was him who had called / (D) No error",
+        "options": [
+          { "id": "A", "text": "When the phone rang" },
+          { "id": "B", "text": "everyone thought" },
+          { "id": "C", "text": "it was him who had called" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Linking verb 'was' ke baad Subjective case aayega as per formal rule. Correct: 'it was he who had called'."
+      },
+      "navigation": { "next": "card_25_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_25_milestone3",
+      "card_slug": "card_25_milestone3",
+      "type": "milestone",
+      "concept_id": "case_traps_complete",
+      "level": 2,
+      "progress": { "current": 25, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔥",
+        "completed_topic": "Pronoun Case Traps",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/12 Clear",
+        "motivational_quote": "Case traps ab tumse dar ke bhagenge! Agla module hai sabse zyada exam mein aane wala - Pronoun-Antecedent Agreement."
+      },
+      "navigation": { "next": "card_26_number_gender_agreement", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_26_number_gender_agreement",
+      "card_slug": "card_26_number_gender_agreement",
+      "type": "chat",
+      "concept_id": "number_gender_agreement",
+      "level": 3,
+      "progress": { "current": 26, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, apartment ka guard bolta hai 'Sab resident apna apna gate pass dikhaye' - ek resident ke liye ya sab ke liye?" },
+        { "speaker": "raju", "text": "Sab ke liye sir, isiliye 'apna apna' bola." },
+        { "speaker": "aman", "text": "Bilkul! Yahi hai Agreement ka rule - Pronoun apne Antecedent ke NUMBER (singular/plural) aur GENDER (male/female) se match hona chahiye. 'The girl lost HER bag' - singular, feminine match ho raha hai." },
+        { "speaker": "raju", "text": "Toh 'The boys lost their bags' bhi isi rule se sahi hai? Plural se plural match ho raha hai?" }
+      ],
+      "navigation": { "next": "card_27_collective_noun_agreement", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_27_collective_noun_agreement",
+      "card_slug": "card_27_collective_noun_agreement",
+      "type": "chat",
+      "concept_id": "collective_noun_agreement",
+      "level": 3,
+      "progress": { "current": 27, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab BPSC ka favorite trap suno - Collective Nouns jaise 'team', 'jury', 'family', 'committee'. Ye ek group hain, ekta mein hain toh SINGULAR pronoun (it/its) lete hain." },
+        { "speaker": "raju", "text": "Toh 'The team celebrated ITS victory' sahi hoga, na ki 'their victory'?" },
+        { "speaker": "aman", "text": "Perfect! Lekin twist - agar team ke members alag-alag kaam kar rahe hain (disunity dikhani hai), tab PLURAL pronoun bhi chalta hai: 'The jury gave THEIR individual opinions'. Yeh exception professors ka favorite hai." },
+        { "speaker": "raju", "text": "Hain?? Same word 'team/jury' kabhi singular kabhi plural? Ye toh confusing hai sir!" }
+      ],
+      "navigation": { "next": "card_28_compound_subject_and_or", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_28_compound_subject_and_or",
+      "card_slug": "card_28_compound_subject_and_or",
+      "type": "chat",
+      "concept_id": "compound_subject_and_or",
+      "level": 3,
+      "progress": { "current": 28, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur zaroori rule: Jab do subjects 'AND' se juden ho, toh pronoun PLURAL aayega - 'Ram and Shyam finished THEIR work'. Lekin jab 'OR/NOR' se jude ho, toh pronoun sabse NAZDEEK wale subject se match karega." },
+        { "speaker": "raju", "text": "Matlab 'Either Ram or the girls have lost THEIR bags' - yahan 'girls' pass hai isliye 'their'?" },
+        { "speaker": "aman", "text": "Ekdum sahi! Aur agar order palat de - 'Either the girls or Ram has lost HIS bag' - ab 'Ram' pass hai toh singular 'his' aayega. Ye 'Proximity Rule' kehlata hai." },
+        { "speaker": "raju", "text": "Wah! Toh 'or/nor' mein last wale subject ko dekho, 'and' mein hamesha plural - yaad rakh liya sir!" }
+      ],
+      "navigation": { "next": "card_29_indefinite_antecedent_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_29_indefinite_antecedent_trap",
+      "card_slug": "card_29_indefinite_antecedent_trap",
+      "type": "chat",
+      "concept_id": "indefinite_antecedent_trap",
+      "level": 3,
+      "progress": { "current": 29, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab sabse bada SBI PO/BPSC trap suno - 'Everyone', 'Everybody', 'Someone', 'Each' - ye sab grammatically SINGULAR maane jaate hain, chahe matlab 'sabka' ho." },
+        { "speaker": "raju", "text": "Toh 'Everyone must submit their assignment' galat hai kya? Ye toh main hamesha bolta hoon!" },
+        { "speaker": "aman", "text": "Formal/exam grammar mein haan, ye galat maana jaata hai. Correct hoga - 'Everyone must submit HIS OR HER assignment' ya simply 'HIS assignment' (traditional rule). 'Their' ko modern spoken English mein accept karte hain, but exams mein 'his/her' expect karte hain." },
+        { "speaker": "raju", "text": "Achhaaaa, matlab 'everyone/each/everybody' dikhe toh dimaag mein singular pronoun bajna chahiye - alarm bell jaisa!" }
+      ],
+      "navigation": { "next": "card_30_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_30_quiz1",
+      "card_slug": "card_30_quiz1",
+      "type": "quiz",
+      "concept_id": "collective_noun_agreement",
+      "level": 3,
+      "progress": { "current": 30, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The committee has / (B) submitted their / (C) final report to the board / (D) No error",
+        "options": [
+          { "id": "A", "text": "The committee has" },
+          { "id": "B", "text": "submitted their" },
+          { "id": "C", "text": "final report to the board" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Committee' ek unified action (submitted one report) kar raha hai, isliye Collective Noun singular treat hoga. Correct: 'submitted its final report'."
+      },
+      "navigation": { "next": "card_31_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_31_quiz2",
+      "card_slug": "card_31_quiz2",
+      "type": "quiz",
+      "concept_id": "indefinite_antecedent_trap",
+      "level": 3,
+      "progress": { "current": 31, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Every student / (B) must bring / (C) their own laptop tomorrow / (D) No error",
+        "options": [
+          { "id": "A", "text": "Every student" },
+          { "id": "B", "text": "must bring" },
+          { "id": "C", "text": "their own laptop tomorrow" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Every student' singular hai, isliye pronoun bhi singular aayega. Correct: 'his or her own laptop' / 'his own laptop' (traditional exam rule)."
+      },
+      "navigation": { "next": "card_32_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_32_quiz3",
+      "card_slug": "card_32_quiz3",
+      "type": "quiz",
+      "concept_id": "compound_subject_and_or",
+      "level": 3,
+      "progress": { "current": 32, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Neither the teacher nor the students / (B) have submitted / (C) his report yet / (D) No error",
+        "options": [
+          { "id": "A", "text": "Neither the teacher nor the students" },
+          { "id": "B", "text": "have submitted" },
+          { "id": "C", "text": "his report yet" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Proximity Rule ke hisaab se, 'nor' ke baad nazdeek wala subject 'students' (plural) hai, isliye pronoun bhi plural aayega. Correct: 'their reports yet'."
+      },
+      "navigation": { "next": "card_33_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_33_milestone4",
+      "card_slug": "card_33_milestone4",
+      "type": "milestone",
+      "concept_id": "agreement_module_complete",
+      "level": 3,
+      "progress": { "current": 33, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🧠",
+        "completed_topic": "Pronoun-Antecedent Agreement",
+        "xp_earned": 70,
+        "milestone_progress": "Module 4/12 Clear",
+        "motivational_quote": "Ye sabse important module tha - clear kar liya! Ab chalte hain Reflexive aur Intensive Pronoun ki duniya mein."
+      },
+      "navigation": { "next": "card_34_reflexive_list", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_34_reflexive_list",
+      "card_slug": "card_34_reflexive_list",
+      "type": "chat",
+      "concept_id": "reflexive_list",
+      "level": 3,
+      "progress": { "current": 34, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, cycle chalate waqt tum gir gaye aur khud ko hi chot lagi - is situation ko English mein kaise bologe? 'I hurt me' ya kuch aur?" },
+        { "speaker": "raju", "text": "Sir 'I hurt me' bol sakte hain kya?" },
+        { "speaker": "aman", "text": "Nahi, jab action wapas subject pe hi aata hai (khud ko), tab 'self/selves' wale special pronoun use hote hain: myself, yourself, himself, herself, itself, ourselves, yourselves, themselves. Correct: 'I hurt MYSELF'." },
+        { "speaker": "raju", "text": "Achha! Toh ye 'self' wale pronoun 'khud' ke liye hain - is liye inhe 'Reflexive' kehte honge, jaise mirror mein reflection?" }
+      ],
+      "navigation": { "next": "card_35_reflexive_correct_usage", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_35_reflexive_correct_usage",
+      "card_slug": "card_35_reflexive_correct_usage",
+      "type": "chat",
+      "concept_id": "reflexive_correct_usage",
+      "level": 3,
+      "progress": { "current": 35, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Wah, mirror wala analogy bilkul sahi hai! Golden Rule: Reflexive pronoun tabhi use hoga jab Subject aur Object DONO SAME PERSON ho. 'He cut himself' - He hi kaat raha hai, He hi kat raha hai." },
+        { "speaker": "raju", "text": "Toh 'He cut him' galat hoga kya sir?" },
+        { "speaker": "aman", "text": "'He cut him' ka matlab badal jaata hai - 'usne kisi doosre ko kaata'. Jabki 'He cut himself' ka matlab hai 'usne khud ko kaata'. Grammar mein dono ALAG meanings hain - dhyan se!" },
+        { "speaker": "raju", "text": "Ohh, matlab meaning hi badal jayega agar 'himself' ki jagah 'him' likh diya toh? Bahut risky point hai ye!" }
+      ],
+      "navigation": { "next": "card_36_myself_misuse_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_36_myself_misuse_trap",
+      "card_slug": "card_36_myself_misuse_trap",
+      "type": "chat",
+      "concept_id": "myself_misuse_trap",
+      "level": 3,
+      "progress": { "current": 36, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab sabse bada SBI PO trap - office/corporate emails mein log galti se bolte hain 'Please contact Ravi or myself for details'. Kya ye sahi hai?" },
+        { "speaker": "raju", "text": "Sir lagta toh polite hai sunne mein!" },
+        { "speaker": "aman", "text": "Polite lagta hai but WRONG hai! 'Myself' sirf tab use hoga jab 'I' pehle se sentence mein subject ki तरह maujood ho, jaise 'I hurt myself'. Yahan koi 'I' subject nahi hai, isliye correct hoga 'Please contact Ravi or ME'." },
+        { "speaker": "raju", "text": "Seriously?? Ye toh mere office wale bhaiya bhi galat bolte hain phir! 'Myself Raju' bolna bhi galat hoga kya, jaise interview mein bolte hain?" }
+      ],
+      "navigation": { "next": "card_37_intensive_pronoun", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_37_intensive_pronoun",
+      "card_slug": "card_37_intensive_pronoun",
+      "type": "chat",
+      "concept_id": "intensive_pronoun",
+      "level": 3,
+      "progress": { "current": 37, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda! 'Myself Raju' Indian English ki galti hai, correct hoga 'I am Raju' ya 'Myself, Raju' informal introduction mein. Ab suno same 'self' words ka doosra use bhi hota hai - EMPHASIS ke liye." },
+        { "speaker": "raju", "text": "Matlab sir, jaise zor dene ke liye?" },
+        { "speaker": "aman", "text": "Exactly! 'The Principal HIMSELF gave the prize' - yahan 'himself' emphasis de raha hai ki khud Principal ne diya, na ki koi assistant. Ise 'Intensive Pronoun' kehte hain. Trick: Ise sentence se hata do, meaning wahi rahega, sirf emphasis kam ho jayega." },
+        { "speaker": "raju", "text": "Toh Reflexive hata nahi sakte (meaning badal jayega), but Intensive hata sakte hain (sirf zor kam hoga)? Ye toh smart difference hai!" }
+      ],
+      "navigation": { "next": "card_38_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_38_quiz1",
+      "card_slug": "card_38_quiz1",
+      "type": "quiz",
+      "concept_id": "myself_misuse_trap",
+      "level": 3,
+      "progress": { "current": 38, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The manager requested / (B) Rina and myself / (C) to complete the project by Friday / (D) No error",
+        "options": [
+          { "id": "A", "text": "The manager requested" },
+          { "id": "B", "text": "Rina and myself" },
+          { "id": "C", "text": "to complete the project by Friday" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Reflexive pronoun 'myself' tabhi chalega jab 'I' subject roop mein pehle se maujood ho. Yahan subject 'The manager' hai, 'I' nahi. Correct: 'Rina and me'."
+      },
+      "navigation": { "next": "card_39_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_39_quiz2",
+      "card_slug": "card_39_quiz2",
+      "type": "quiz",
+      "concept_id": "reflexive_correct_usage",
+      "level": 3,
+      "progress": { "current": 39, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) She always blames / (B) her for every / (C) small mistake she makes / (D) No error",
+        "options": [
+          { "id": "A", "text": "She always blames" },
+          { "id": "B", "text": "her for every" },
+          { "id": "C", "text": "small mistake she makes" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Subject 'She' aur Object dono same person hain (khud ko blame kar rahi hai), isliye Reflexive pronoun aayega. Correct: 'blames herself for every'."
+      },
+      "navigation": { "next": "card_40_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_40_quiz3",
+      "card_slug": "card_40_quiz3",
+      "type": "quiz",
+      "concept_id": "intensive_pronoun",
+      "level": 3,
+      "progress": { "current": 40, "total": 100 },
+      "quiz_payload": {
+        "question": "Identify the function of 'himself' in: 'The Principal himself distributed the prizes.'",
+        "options": [
+          { "id": "A", "text": "Reflexive Pronoun (action returns to subject)" },
+          { "id": "B", "text": "Intensive Pronoun (adds emphasis)" },
+          { "id": "C", "text": "Reciprocal Pronoun" },
+          { "id": "D", "text": "Demonstrative Pronoun" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Himself' yahan sirf emphasis de raha hai ki khud Principal ne prizes diye, koi object 'distribute' nahi ho raha khud pe. Isliye ye Intensive Pronoun hai, Reflexive nahi."
+      },
+      "navigation": { "next": "card_41_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_41_milestone5",
+      "card_slug": "card_41_milestone5",
+      "type": "milestone",
+      "concept_id": "reflexive_intensive_complete",
+      "level": 3,
+      "progress": { "current": 41, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💪",
+        "completed_topic": "Reflexive & Intensive Pronouns",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/12 Clear",
+        "motivational_quote": "Corporate email trap crack kar liya! Ab dekhte hain do logo ke beech wale special pronouns - Reciprocal."
+      },
+      "navigation": { "next": "card_42_reciprocal_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_42_reciprocal_intro",
+      "card_slug": "card_42_reciprocal_intro",
+      "type": "chat",
+      "concept_id": "reciprocal_intro",
+      "level": 4,
+      "progress": { "current": 42, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, tum aur tumhara best friend ek doosre ko birthday gift dete ho - 'We give gifts to ___ ' - kya word aayega?" },
+        { "speaker": "raju", "text": "Sir 'each other' bolte hain shayad?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Jab do ya zyada log ek MUTUAL action kar rahe ho (ek doosre pe), tab RECIPROCAL Pronoun use hota hai: 'each other' aur 'one another'." },
+        { "speaker": "raju", "text": "Sir dono ka matlab toh same hai, inme farak kya hai?" }
+      ],
+      "navigation": { "next": "card_43_each_other_two", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_43_each_other_two",
+      "card_slug": "card_43_each_other_two",
+      "type": "chat",
+      "concept_id": "each_other_two",
+      "level": 4,
+      "progress": { "current": 43, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Traditional grammar rule (jo BPSC/SSC officer level pe poocha jata hai): 'EACH OTHER' use hota hai jab sirf DO (2) persons/things ke beech action ho." },
+        { "speaker": "raju", "text": "Toh 'Ram and Shyam help each other' sahi hai, kyunki dono hi hain?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye sabse common example hai. Do dosto, do bhai-behen, husband-wife - jahan bhi sankhya '2' hai, wahan 'each other'." },
+        { "speaker": "raju", "text": "Achha! Toh agar teen ya usse zyada log ho toh?" }
+      ],
+      "navigation": { "next": "card_44_one_another_more_than_two", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_44_one_another_more_than_two",
+      "card_slug": "card_44_one_another_more_than_two",
+      "type": "chat",
+      "concept_id": "one_another_more_than_two",
+      "level": 4,
+      "progress": { "current": 44, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Tab hum use karte hain 'ONE ANOTHER' - jab TWO SE ZYADA (more than two) persons ke beech mutual action ho. Jaise 'All the students of the class help ONE ANOTHER'." },
+        { "speaker": "raju", "text": "Sir yaad rakhne ka koi tarika hai? 'Each' aur 'One' mein confuse ho jaunga!" },
+        { "speaker": "aman", "text": "Simple trick: 'EACH' sunte hi 'do haath' (dono taraf) imagine karo - 2 logo ka hi kaam hai. Aur 'ONE ANOTHER' mein socho 'ek se doosra, doosre se teesra' - chain jaisi, jo group mein chalti hai." },
+        { "speaker": "raju", "text": "Wah! Ab clear hai - competitive exam mein ye bahut strictly follow karte honge?" }
+      ],
+      "navigation": { "next": "card_45_reciprocal_possessive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_45_reciprocal_possessive",
+      "card_slug": "card_45_reciprocal_possessive",
+      "type": "guess",
+      "concept_id": "reciprocal_possessive",
+      "level": 4,
+      "progress": { "current": 45, "total": 100 },
+      "guess_payload": {
+        "question": "Raju ko ek sentence mila: 'The five friends often visit ___ houses during Diwali.' Kaunsa correct hoga - guess karo!",
+        "options": [
+          { "id": "A", "text": "each other's" },
+          { "id": "B", "text": "one another's" },
+          { "id": "C", "text": "themselves" },
+          { "id": "D", "text": "their own" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Five friends' matlab do se zyada log hain, isliye 'one another's' sahi hoga (possessive form). Note: Dono reciprocal pronouns ka possessive form banta hai apostrophe-s lagakar - 'each other's' / 'one another's', jaise normal noun mein banta hai."
+      },
+      "navigation": { "next": "card_46_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_46_quiz1",
+      "card_slug": "card_46_quiz1",
+      "type": "quiz",
+      "concept_id": "each_other_two",
+      "level": 4,
+      "progress": { "current": 46, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The two neighbouring countries / (B) have been fighting / (C) with one another for decades / (D) No error",
+        "options": [
+          { "id": "A", "text": "The two neighbouring countries" },
+          { "id": "B", "text": "have been fighting" },
+          { "id": "C", "text": "with one another for decades" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Two countries' matlab sirf DO parties hain, isliye 'each other' aayega, na ki 'one another' (jo do se zyada ke liye hai). Correct: 'with each other for decades'."
+      },
+      "navigation": { "next": "card_47_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_47_quiz2",
+      "card_slug": "card_47_quiz2",
+      "type": "quiz",
+      "concept_id": "one_another_more_than_two",
+      "level": 4,
+      "progress": { "current": 47, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) All the ten members of the club / (B) respect and / (C) trust each other completely / (D) No error",
+        "options": [
+          { "id": "A", "text": "All the ten members of the club" },
+          { "id": "B", "text": "respect and" },
+          { "id": "C", "text": "trust each other completely" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Ten members' matlab do se zyada log hain, isliye 'one another' use hoga (strictly), na ki 'each other'. Correct: 'trust one another completely'."
+      },
+      "navigation": { "next": "card_48_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_48_quiz3",
+      "card_slug": "card_48_quiz3",
+      "type": "quiz",
+      "concept_id": "reciprocal_possessive",
+      "level": 4,
+      "progress": { "current": 48, "total": 100 },
+      "quiz_payload": {
+        "question": "Choose the correctly formed possessive Reciprocal Pronoun sentence:",
+        "options": [
+          { "id": "A", "text": "The two sisters borrowed each others clothes." },
+          { "id": "B", "text": "The two sisters borrowed each other clothes." },
+          { "id": "C", "text": "The two sisters borrowed each other's clothes." },
+          { "id": "D", "text": "The two sisters borrowed each other' clothes." }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Reciprocal pronoun ka possessive form apostrophe + s se banta hai - 'each other's'. Option A mein apostrophe missing hai, D mein galat position pe hai."
+      },
+      "navigation": { "next": "card_49_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_49_milestone6",
+      "card_slug": "card_49_milestone6",
+      "type": "milestone",
+      "concept_id": "reciprocal_complete",
+      "level": 4,
+      "progress": { "current": 49, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🤝",
+        "completed_topic": "Reciprocal Pronouns",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/12 Clear",
+        "motivational_quote": "Each other vs One another - ab kabhi confuse nahi hoge! Aage chalte hain 'this/that' wale Demonstrative Pronouns ki taraf."
+      },
+      "navigation": { "next": "card_50_demonstrative_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_50_demonstrative_intro",
+      "card_slug": "card_50_demonstrative_intro",
+      "type": "chat",
+      "concept_id": "demonstrative_intro",
+      "level": 4,
+      "progress": { "current": 50, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, dukaan pe khada hoke ungli se dikhate hue bolo - 'ye wala' aur 'wo wala' - English mein kya bologe?" },
+        { "speaker": "raju", "text": "Sir 'this one' aur 'that one'?" },
+        { "speaker": "aman", "text": "Bilkul sahi! This, That, These, Those - ye words kisi specific cheez ko POINT OUT (dikhana) karte hain, isliye inhe DEMONSTRATIVE Pronoun kehte hain - 'Demonstrate' matlab dikhana." },
+        { "speaker": "raju", "text": "Toh 'this/that' paas-door ke liye hain aur 'these/those' bhi kuch aisa hi hoga?" }
+      ],
+      "navigation": { "next": "card_51_this_these_that_those_number", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_51_this_these_that_those_number",
+      "card_slug": "card_51_this_these_that_those_number",
+      "type": "chat",
+      "concept_id": "this_these_that_those_number",
+      "level": 4,
+      "progress": { "current": 51, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi socha! Do rules ek saath yaad rakho: DISTANCE (paas/door) aur NUMBER (singular/plural). This=paas+singular, That=door+singular, These=paas+plural, Those=door+plural." },
+        { "speaker": "raju", "text": "Toh 'This are my books' galat hoga kya, kyunki 'books' plural hai?" },
+        { "speaker": "aman", "text": "Bilkul galat! 'This' singular hai, 'books' plural - number match nahi ho raha. Correct: 'These are my books'. Ye exam mein bahut common error hai." },
+        { "speaker": "raju", "text": "Achha, toh distance ke saath saath number bhi check karna padega, do cheezein ek saath dekhni hongi!" }
+      ],
+      "navigation": { "next": "card_52_demonstrative_vs_adjective", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_52_demonstrative_vs_adjective",
+      "card_slug": "card_52_demonstrative_vs_adjective",
+      "type": "chat",
+      "concept_id": "demonstrative_vs_adjective",
+      "level": 4,
+      "progress": { "current": 52, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek subtle point suno - 'This is my pen' mein 'this' Pronoun hai (akela khada hai, noun ki jagah). Lekin 'This pen is mine' mein 'this' ke baad 'pen' noun aa gaya - ab ye Demonstrative ADJECTIVE ban gaya, Pronoun nahi." },
+        { "speaker": "raju", "text": "Sir yahi toh possessive wale case mein bhi dekha tha - akela khade toh pronoun, noun ke saath toh adjective!" },
+        { "speaker": "aman", "text": "Bilkul sahi connection banaya tumne! Yehi pattern hai - jab bhi koi word akele khada hoke noun replace kare, wo Pronoun hai; jab word ke baad noun aaye aur uski quality/pointer bataye, wo Adjective hai." },
+        { "speaker": "raju", "text": "Toh exam mein 'This/That book' dikhega toh wo adjective hai, akela 'This/That' dikhega toh pronoun?" }
+      ],
+      "navigation": { "next": "card_53_kind_of_sort_of_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_53_kind_of_sort_of_trap",
+      "card_slug": "card_53_kind_of_sort_of_trap",
+      "type": "chat",
+      "concept_id": "kind_of_sort_of_trap",
+      "level": 4,
+      "progress": { "current": 53, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab ek high-level SBI PO trap - 'this kind of' aur 'these kind of' mein se kaunsa sahi hai?" },
+        { "speaker": "raju", "text": "Sir mujhe toh 'these kind of' hi sahi lagta hai kyunki aage plural noun aata hai jaise 'these kind of books'." },
+        { "speaker": "aman", "text": "Yehi sabse bada trap hai! Rule kehta hai - 'this/that' hamesha 'KIND/SORT/TYPE' (singular word) se match karega, 'books' se nahi. Correct: 'THIS kind of books' ya better 'THESE kinds of books'." },
+        { "speaker": "raju", "text": "Hain?? Matlab 'kind' ke singular hone se match karna hai, jo aage noun hai usse nahi? Ye toh dimaag ghuma diya sir!" }
+      ],
+      "navigation": { "next": "card_54_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_54_quiz1",
+      "card_slug": "card_54_quiz1",
+      "type": "quiz",
+      "concept_id": "this_these_that_those_number",
+      "level": 4,
+      "progress": { "current": 54, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The problems in / (B) this chapter are much / (C) tougher than those in the last one / (D) No error",
+        "options": [
+          { "id": "A", "text": "The problems in" },
+          { "id": "B", "text": "this chapter are much" },
+          { "id": "C", "text": "tougher than those in the last one" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "No Error - 'this chapter' singular hai (correct), aur 'those' plural pronoun 'problems' ko refer karke correctly compare kar raha hai. Sentence structurally aur grammatically sahi hai."
+      },
+      "navigation": { "next": "card_55_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_55_quiz2",
+      "card_slug": "card_55_quiz2",
+      "type": "quiz",
+      "concept_id": "kind_of_sort_of_trap",
+      "level": 4,
+      "progress": { "current": 55, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) I have never seen / (B) these kind of / (C) mangoes anywhere else / (D) No error",
+        "options": [
+          { "id": "A", "text": "I have never seen" },
+          { "id": "B", "text": "these kind of" },
+          { "id": "C", "text": "mangoes anywhere else" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'This/That' ko 'kind/sort/type' (singular word) ke saath match karna hai, na ki aage aane wale plural noun se. Correct: 'this kind of'."
+      },
+      "navigation": { "next": "card_56_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_56_quiz3",
+      "card_slug": "card_56_quiz3",
+      "type": "quiz",
+      "concept_id": "demonstrative_vs_adjective",
+      "level": 4,
+      "progress": { "current": 56, "total": 100 },
+      "quiz_payload": {
+        "question": "In the sentence 'That is a beautiful painting', what is the grammatical function of 'That'?",
+        "options": [
+          { "id": "A", "text": "Demonstrative Adjective" },
+          { "id": "B", "text": "Demonstrative Pronoun" },
+          { "id": "C", "text": "Relative Pronoun" },
+          { "id": "D", "text": "Interrogative Pronoun" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'That' akela khada hai (no noun follows it directly), aur pura sentence ka subject bana raha hai - isliye ye Demonstrative Pronoun hai, na ki Adjective (jo 'that painting' jaisa hota)."
+      },
+      "navigation": { "next": "card_57_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_57_milestone7",
+      "card_slug": "card_57_milestone7",
+      "type": "milestone",
+      "concept_id": "demonstrative_complete",
+      "level": 4,
+      "progress": { "current": 57, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "👉",
+        "completed_topic": "Demonstrative Pronouns",
+        "xp_earned": 60,
+        "milestone_progress": "Module 7/12 Clear",
+        "motivational_quote": "'This kind of' trap ab tumhe fasa nahi sakta! Ab chalo sawaal poochne wale Interrogative Pronouns ki taraf."
+      },
+      "navigation": { "next": "card_58_interrogative_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_58_interrogative_intro",
+      "card_slug": "card_58_interrogative_intro",
+      "type": "chat",
+      "concept_id": "interrogative_intro",
+      "level": 5,
+      "progress": { "current": 58, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, dukaan pe koi cheez toot gayi aur mummy poochti hain - 'Ye kisne kiya?' English mein kya bologe?" },
+        { "speaker": "raju", "text": "Sir 'Who did this?'" },
+        { "speaker": "aman", "text": "Bilkul! Who, Whom, Whose, Which, What - jab ye words SAWAAL (question) poochne ke liye use hote hain, tab inhe INTERROGATIVE Pronoun kehte hain. 'Interrogate' matlab poochtaachh karna." },
+        { "speaker": "raju", "text": "Sir 'who' aur 'whom' dono hi 'kaun' ke liye lagte hain, inme farak kaise pata karein?" }
+      ],
+      "navigation": { "next": "card_59_who_vs_whom_rule", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_59_who_vs_whom_rule",
+      "card_slug": "card_59_who_vs_whom_rule",
+      "type": "chat",
+      "concept_id": "who_vs_whom_rule",
+      "level": 5,
+      "progress": { "current": 59, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Yahi sabse bada exam-favorite topic hai! Simple rule: 'WHO' Subjective case hai (kaam karne wale ke liye), 'WHOM' Objective case hai (jispe kaam ho raha hai ya preposition ke baad)." },
+        { "speaker": "raju", "text": "Sir example se samjhao na, confuse ho raha hoon!" },
+        { "speaker": "aman", "text": "'WHO called you?' - yahan 'who' subject hai (call karne wala). 'WHOM did you call?' - yahan 'whom' object hai (jisse call kiya gaya). Trick: sentence ko jawab do 'he/him' se - agar 'he' fit ho toh 'who', agar 'him' fit ho toh 'whom'." },
+        { "speaker": "raju", "text": "Achha! 'He called' - toh who sahi. 'You called him' - toh whom sahi. Wah, ye trick toh mast hai sir!" }
+      ],
+      "navigation": { "next": "card_60_whose_vs_whom_confusion", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_60_whose_vs_whom_confusion",
+      "card_slug": "card_60_whose_vs_whom_confusion",
+      "type": "chat",
+      "concept_id": "whose_vs_whom_confusion",
+      "level": 5,
+      "progress": { "current": 60, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek aur trap - 'WHOSE' ka use hota hai POSSESSION (kiska/kiski) dikhane ke liye - 'WHOSE bag is this?' matlab 'ye bag kiska hai?'" },
+        { "speaker": "raju", "text": "Sir spelling mein 'Who's' aur 'Whose' dekhke bhi confuse ho jata hoon!" },
+        { "speaker": "aman", "text": "Bahut important pakda! 'Who's' = 'Who is' ya 'Who has' (contraction hai, apostrophe wala). 'Whose' = possession (bina apostrophe). 'Who's coming?' vs 'Whose book is this?' - dono bilkul alag hain." },
+        { "speaker": "raju", "text": "Ohh! Toh apostrophe (') dekh ke pehchan sakte hain - agar apostrophe hai toh 'who is/has', nahi hai toh 'kiska'!" }
+      ],
+      "navigation": { "next": "card_61_which_vs_what", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_61_which_vs_what",
+      "card_slug": "card_61_which_vs_what",
+      "type": "chat",
+      "concept_id": "which_vs_what",
+      "level": 5,
+      "progress": { "current": 61, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aakhri fark suno - 'WHICH' use hota hai jab OPTIONS/CHOICES limited/known ho. 'WHAT' use hota hai jab choices open/unlimited ho." },
+        { "speaker": "raju", "text": "Matlab sir?" },
+        { "speaker": "aman", "text": "Jaise dukaan mein sirf 2 shirts dikh rahi hain - 'WHICH shirt do you want, red or blue?' Lekin agar koi limit nahi hai - 'WHAT do you want to eat?' (kuch bhi ho sakta hai)." },
+        { "speaker": "raju", "text": "Achha! Toh limited options = which, unlimited/open questions = what. Samajh gaya sir!" }
+      ],
+      "navigation": { "next": "card_62_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_62_quiz1",
+      "card_slug": "card_62_quiz1",
+      "type": "quiz",
+      "concept_id": "who_vs_whom_rule",
+      "level": 5,
+      "progress": { "current": 62, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Who did you / (B) invite to the / (C) farewell party yesterday / (D) No error",
+        "options": [
+          { "id": "A", "text": "Who did you" },
+          { "id": "B", "text": "invite to the" },
+          { "id": "C", "text": "farewell party yesterday" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Shortening trick: 'You invited (who/whom)' - 'You invited him' fit hota hai, isliye Objective 'WHOM' sahi hai, na ki 'Who'. Correct: 'Whom did you invite'."
+      },
+      "navigation": { "next": "card_63_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_63_quiz2",
+      "card_slug": "card_63_quiz2",
+      "type": "quiz",
+      "concept_id": "whose_vs_whom_confusion",
+      "level": 5,
+      "progress": { "current": 63, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) I do not know / (B) whose going to / (C) win the match tonight / (D) No error",
+        "options": [
+          { "id": "A", "text": "I do not know" },
+          { "id": "B", "text": "whose going to" },
+          { "id": "C", "text": "win the match tonight" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Yahan matlab 'who is going' hai, isliye contraction 'Who's' chahiye, possessive 'Whose' nahi. Correct: 'who's going to'."
+      },
+      "navigation": { "next": "card_64_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_64_quiz3",
+      "card_slug": "card_64_quiz3",
+      "type": "quiz",
+      "concept_id": "which_vs_what",
+      "level": 5,
+      "progress": { "current": 64, "total": 100 },
+      "quiz_payload": {
+        "question": "Choose the correctly formed sentence when the speaker is holding only two pens and asking the listener to choose:",
+        "options": [
+          { "id": "A", "text": "What pen do you want, blue or black?" },
+          { "id": "B", "text": "Which pen do you want, blue or black?" },
+          { "id": "C", "text": "Who pen do you want, blue or black?" },
+          { "id": "D", "text": "Whom pen do you want, blue or black?" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Jab options limited/known hon (yahan sirf 2 pens - blue ya black), tab 'Which' use hota hai, 'What' nahi."
+      },
+      "navigation": { "next": "card_65_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_65_milestone8",
+      "card_slug": "card_65_milestone8",
+      "type": "milestone",
+      "concept_id": "interrogative_complete",
+      "level": 5,
+      "progress": { "current": 65, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "❓",
+        "completed_topic": "Interrogative Pronouns",
+        "xp_earned": 65,
+        "milestone_progress": "Module 8/12 Clear",
+        "motivational_quote": "Who/Whom ka boss ban gaye tum! Ab dekhते hain wahi words dobara - lekin is baar sentences JODNE (connect) ke liye - Relative Pronouns."
+      },
+      "navigation": { "next": "card_66_relative_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_66_relative_intro",
+      "card_slug": "card_66_relative_intro",
+      "type": "chat",
+      "concept_id": "relative_intro",
+      "level": 5,
+      "progress": { "current": 66, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, in do sentences ko jodo: 'This is the boy.' + 'The boy won the race.'" },
+        { "speaker": "raju", "text": "Sir 'This is the boy AND he won the race'?" },
+        { "speaker": "aman", "text": "Achha attempt! Better/formal way: 'This is the boy WHO won the race.' Yahan 'who' do sentences ko JOD raha hai AND ek pronoun ki tarah 'boy' ko bhi replace kar raha hai - isliye ye RELATIVE Pronoun hai." },
+        { "speaker": "raju", "text": "Ohh matlab ye pronoun bhi hai aur conjunction (joड़ne wala) bhi - double kaam kar raha hai!" }
+      ],
+      "navigation": { "next": "card_67_who_whom_whose_relative", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_67_who_whom_whose_relative",
+      "card_slug": "card_67_who_whom_whose_relative",
+      "type": "chat",
+      "concept_id": "who_whom_whose_relative",
+      "level": 5,
+      "progress": { "current": 67, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab relative pronoun mein bhi wahi WHO/WHOM ka rule chalega - PERSON ke liye 'who' (subject) aur 'whom' (object) use hota hai." },
+        { "speaker": "raju", "text": "Toh 'The man WHOM I met yesterday is a doctor' - yahan 'whom' object hai kyunki 'I met him' fit ho raha hai?" },
+        { "speaker": "aman", "text": "Perfect application! Aur 'whose' relative pronoun ke roop mein possession dikhata hai, jaise 'The boy WHOSE bicycle was stolen cried a lot' - yahan bicycle boy ki thi." },
+        { "speaker": "raju", "text": "Achha! Toh insaan (person) ke liye who/whom/whose fix hai - cheez (things) ke liye kya use hoga sir?" }
+      ],
+      "navigation": { "next": "card_68_which_that_restrictive_nonrestrictive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_68_which_that_restrictive_nonrestrictive",
+      "card_slug": "card_68_which_that_restrictive_nonrestrictive",
+      "type": "chat",
+      "concept_id": "which_that_restrictive_nonrestrictive",
+      "level": 5,
+      "progress": { "current": 68, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Cheezon/animals ke liye 'WHICH' aur 'THAT' use hote hain. Lekin inme ek deep exam-level fark hai - COMMA ka role samjho. 'WHICH' comma ke saath aata hai (extra info), 'THAT' bina comma ke (zaroori info)." },
+        { "speaker": "raju", "text": "Matlab sir?" },
+        { "speaker": "aman", "text": "'My car, WHICH is red, is fast' - comma wala 'which' clause hataoge toh bhi sentence complete rahega (extra/non-essential info). Lekin 'The car THAT is parked outside is mine' - 'that' clause zaroori hai, hataoge toh sentence ka matlab hi kho jayega." },
+        { "speaker": "raju", "text": "Achha! Toh comma ke saath 'which' = extra jaankari, bina comma 'that' = zaroori jaankari. Bahut fine difference hai sir ye toh!" }
+      ],
+      "navigation": { "next": "card_69_omission_of_relative_pronoun", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_69_omission_of_relative_pronoun",
+      "card_slug": "card_69_omission_of_relative_pronoun",
+      "type": "chat",
+      "concept_id": "omission_of_relative_pronoun",
+      "level": 5,
+      "progress": { "current": 69, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur important fact - 'THAT' (as Object) ko sentence se HATA bhi sakte hain, meaning wahi rahega. 'The book (that) I bought is nice' - dono sahi hain." },
+        { "speaker": "raju", "text": "Sir toh 'which/who' ko bhi hata sakte hain kya?" },
+        { "speaker": "aman", "text": "Nahi! Jab relative pronoun SUBJECT ho (verb se pehle) tab kabhi hata nahi sakte. 'The man WHO called you is my uncle' - 'who' yahan subject hai, isse hataoge toh sentence hi tut jayega." },
+        { "speaker": "raju", "text": "Toh sirf OBJECT wale 'that' ko drop kar sakte hain, subject wale kabhi nahi - clear ho gaya sir!" }
+      ],
+      "navigation": { "next": "card_70_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_70_quiz1",
+      "card_slug": "card_70_quiz1",
+      "type": "quiz",
+      "concept_id": "who_whom_whose_relative",
+      "level": 5,
+      "progress": { "current": 70, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The candidate / (B) who the company selected / (C) was interviewed by three panels / (D) No error",
+        "options": [
+          { "id": "A", "text": "The candidate" },
+          { "id": "B", "text": "who the company selected" },
+          { "id": "C", "text": "was interviewed by three panels" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Shortening trick: 'the company selected (who/whom)' - 'the company selected him' fit ho raha hai, isliye Objective 'WHOM' sahi hai. Correct: 'whom the company selected'."
+      },
+      "navigation": { "next": "card_71_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_71_quiz2",
+      "card_slug": "card_71_quiz2",
+      "type": "quiz",
+      "concept_id": "which_that_restrictive_nonrestrictive",
+      "level": 5,
+      "progress": { "current": 71, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The Taj Mahal / (B) that is located in Agra / (C) attracts millions of tourists every year / (D) No error",
+        "options": [
+          { "id": "A", "text": "The Taj Mahal" },
+          { "id": "B", "text": "that is located in Agra" },
+          { "id": "C", "text": "attracts millions of tourists every year" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Taj Mahal' ek unique/specific proper noun hai jiske baare mein extra (non-essential) info di ja rahi hai, isliye comma ke saath 'WHICH' use hoga, 'that' nahi. Correct: 'which is located in Agra,'."
+      },
+      "navigation": { "next": "card_72_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_72_quiz3",
+      "card_slug": "card_72_quiz3",
+      "type": "quiz",
+      "concept_id": "omission_of_relative_pronoun",
+      "level": 5,
+      "progress": { "current": 72, "total": 100 },
+      "quiz_payload": {
+        "question": "Which sentence correctly omits the relative pronoun?",
+        "options": [
+          { "id": "A", "text": "The teacher called was very strict." },
+          { "id": "B", "text": "The teacher I met yesterday was very strict." },
+          { "id": "C", "text": "The teacher called me was very strict." },
+          { "id": "D", "text": "The teacher scolded students was very strict." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'The teacher (whom) I met yesterday' - yahan relative pronoun OBJECT position mein hai, isliye drop kar sakte hain. Options A, C, D mein relative pronoun SUBJECT position mein tha, jise drop nahi kar sakte - wo sentences galat hain."
+      },
+      "navigation": { "next": "card_73_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_73_milestone9",
+      "card_slug": "card_73_milestone9",
+      "type": "milestone",
+      "concept_id": "relative_complete",
+      "level": 5,
+      "progress": { "current": 73, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔗",
+        "completed_topic": "Relative Pronouns",
+        "xp_earned": 65,
+        "milestone_progress": "Module 9/12 Clear",
+        "motivational_quote": "Which/That ka comma-trick pakad liya tumne! Ab chalte hain 'each, either, neither' jaise Indefinite Pronouns ki taraf."
+      },
+      "navigation": { "next": "card_74_indefinite_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_74_indefinite_intro",
+      "card_slug": "card_74_indefinite_intro",
+      "type": "chat",
+      "concept_id": "indefinite_intro",
+      "level": 6,
+      "progress": { "current": 74, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, gaon mein mela lag raha hai, aur tumhe pata nahi kaun aaya - tum bologe 'KOI toh aaya hai andar'. English mein?" },
+        { "speaker": "raju", "text": "Sir 'Someone has come inside'?" },
+        { "speaker": "aman", "text": "Bilkul! 'Someone' - yahan specific naam nahi bataya, DEFINITE nahi hai kaun hai. Isiliye some, any, no, every ke compounds (someone, anybody, nothing, everyone) ko INDEFINITE Pronoun kehte hain." },
+        { "speaker": "raju", "text": "Achha! Toh 'each, either, neither, none, all, few, many' bhi isi family mein aayenge?" }
+      ],
+      "navigation": { "next": "card_75_each_either_neither_singular", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_75_each_either_neither_singular",
+      "card_slug": "card_75_each_either_neither_singular",
+      "type": "chat",
+      "concept_id": "each_either_neither_singular",
+      "level": 6,
+      "progress": { "current": 75, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab strict rule yaad karo: EACH, EITHER, NEITHER - ye teeno hamesha SINGULAR verb aur SINGULAR pronoun lete hain, chahe unke saath 'of' + plural noun kyun na ho." },
+        { "speaker": "raju", "text": "Sir example dijiye, samajhna hai achhe se!" },
+        { "speaker": "aman", "text": "'EACH of the students HAS submitted HIS assignment' - dhyan do, 'students' plural hai lekin verb 'has' aur pronoun 'his' singular hai, kyunki 'Each' asli subject hai." },
+        { "speaker": "raju", "text": "Ohh! Toh 'of the students' ko ignore karke 'Each' pe focus karna hai - ye toh bahut common trap lagta hai exam mein!" }
+      ],
+      "navigation": { "next": "card_76_some_any_no_compounds", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_76_some_any_no_compounds",
+      "card_slug": "card_76_some_any_no_compounds",
+      "type": "chat",
+      "concept_id": "some_any_no_compounds",
+      "level": 6,
+      "progress": { "current": 76, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Aisa hi rule 'Some/Any/No/Every + one/body/thing' compounds pe bhi lagta hai - Everyone, Everybody, Everything, Someone, Anybody, Nothing - sab SINGULAR maane jaate hain." },
+        { "speaker": "raju", "text": "Sir ye toh humne pichhle module mein 'everyone...their' wale trap mein dekha tha!" },
+        { "speaker": "aman", "text": "Bilkul sahi yaad rakha! Yehi connection hai - saare indefinite pronoun jo 'one/body/thing' se khatam hote hain, wo singular hote hain: 'Everybody IS ready', 'Nothing HAS happened', 'Someone IS calling'." },
+        { "speaker": "raju", "text": "Achha! Toh ek pattern se saari indefinite pronoun family ki singular rule yaad ho gayi!" }
+      ],
+      "navigation": { "next": "card_77_none_singular_plural_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_77_none_singular_plural_trap",
+      "card_slug": "card_77_none_singular_plural_trap",
+      "type": "chat",
+      "concept_id": "none_singular_plural_trap",
+      "level": 6,
+      "progress": { "current": 77, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab sabse professor-level trap - 'NONE'. Ye word 'no one' se banta hai, isliye traditionally SINGULAR hota hai. Lekin jab 'None of + plural noun' ho, tab modern usage mein PLURAL bhi chalta hai." },
+        { "speaker": "raju", "text": "Sir ye toh double confusion hai - kabhi singular kabhi plural?" },
+        { "speaker": "aman", "text": "Exam ka safe rule: agar 'none' matlab 'not a single one' (ek bhi nahi) ho, toh singular use karo - 'None of the boys HAS come'. Agar matlab 'not any' (koi nahi, general) ho, toh plural bhi accept hota hai - 'None of them ARE here'. BPSC/SBI PO mein SINGULAR wala option zyada safe maana jaata hai." },
+        { "speaker": "raju", "text": "Toh agar dono options diye ho quiz mein, singular wala choose karunga - noted sir!" }
+      ],
+      "navigation": { "next": "card_78_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_78_quiz1",
+      "card_slug": "card_78_quiz1",
+      "type": "quiz",
+      "concept_id": "each_either_neither_singular",
+      "level": 6,
+      "progress": { "current": 78, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Either of the two roads / (B) lead to the / (C) railway station from here / (D) No error",
+        "options": [
+          { "id": "A", "text": "Either of the two roads" },
+          { "id": "B", "text": "lead to the" },
+          { "id": "C", "text": "railway station from here" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Either' hamesha singular verb leta hai, 'two roads' ko ignore karo. Correct: 'leads to the'."
+      },
+      "navigation": { "next": "card_79_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_79_quiz2",
+      "card_slug": "card_79_quiz2",
+      "type": "quiz",
+      "concept_id": "some_any_no_compounds",
+      "level": 6,
+      "progress": { "current": 79, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Nothing except lies / (B) come out of / (C) his mouth these days / (D) No error",
+        "options": [
+          { "id": "A", "text": "Nothing except lies" },
+          { "id": "B", "text": "come out of" },
+          { "id": "C", "text": "his mouth these days" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Nothing' ek indefinite pronoun hai jo hamesha SINGULAR verb leta hai. 'Except lies' ek phrase hai jo ignore hoga. Correct: 'comes out of'."
+      },
+      "navigation": { "next": "card_80_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_80_quiz3",
+      "card_slug": "card_80_quiz3",
+      "type": "quiz",
+      "concept_id": "none_singular_plural_trap",
+      "level": 6,
+      "progress": { "current": 80, "total": 100 },
+      "quiz_payload": {
+        "question": "Choose the most grammatically preferred (traditional/exam-safe) sentence:",
+        "options": [
+          { "id": "A", "text": "None of the students has completed their homework." },
+          { "id": "B", "text": "None of the students have completed their homework." },
+          { "id": "C", "text": "None of the students has completed his homework." },
+          { "id": "D", "text": "None of the students having completed his homework." }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Exam-safe traditional rule: 'None' = 'not one', isliye singular verb 'has' aur singular pronoun 'his' dono match karke aana chahiye for full grammatical consistency, jo option C mein hai."
+      },
+      "navigation": { "next": "card_81_milestone10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_81_milestone10",
+      "card_slug": "card_81_milestone10",
+      "type": "milestone",
+      "concept_id": "indefinite_complete",
+      "level": 6,
+      "progress": { "current": 81, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎲",
+        "completed_topic": "Indefinite Pronouns",
+        "xp_earned": 65,
+        "milestone_progress": "Module 10/12 Clear",
+        "motivational_quote": "Each/Either/Neither/None ka singular rule pakka ho gaya! Ab dekhте hain ek nayi tarah ki galti - jab pronoun ka matlab hi unclear ho jaaye."
+      },
+      "navigation": { "next": "card_82_ambiguous_reference_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_82_ambiguous_reference_intro",
+      "card_slug": "card_82_ambiguous_reference_intro",
+      "type": "chat",
+      "concept_id": "ambiguous_reference_intro",
+      "level": 6,
+      "progress": { "current": 82, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju suno ye sentence: 'Ravi told Suresh that HE had passed the exam.' Batao, 'HE' kaun hai - Ravi ya Suresh?" },
+        { "speaker": "raju", "text": "Sir... pata nahi, dono ho sakte hain!" },
+        { "speaker": "aman", "text": "Exactly yehi problem hai! Jab pronoun ka Antecedent CLEAR na ho (do options ho sakte hon), use 'AMBIGUOUS REFERENCE' error kehte hain - ye SBI PO/high level exams ka favorite hidden error hai." },
+        { "speaker": "raju", "text": "Hain?? Ye toh sabse tricky lag raha hai, kyunki sentence dekhne mein bilkul sahi lagta hai!" }
+      ],
+      "navigation": { "next": "card_83_vague_this_that_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_83_vague_this_that_trap",
+      "card_slug": "card_83_vague_this_that_trap",
+      "type": "chat",
+      "concept_id": "vague_this_that_trap",
+      "level": 6,
+      "progress": { "current": 83, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi observe kiya, dikhne mein bilkul theek lagta hai isliye khatarnak hai! Aisi hi galti hoti hai jab 'THIS/THAT/IT' kisi POORE IDEA ya PARAGRAPH ko refer karta hai, kisi specific noun ko nahi." },
+        { "speaker": "raju", "text": "Matlab sir?" },
+        { "speaker": "aman", "text": "'He failed the exam and got scolded by his father. THIS made him work harder.' - yahan 'This' kis specific noun ko refer kar raha hai? Kisi ek word ko nahi, PURE IDEA ko - ye vague/unclear reference hai." },
+        { "speaker": "raju", "text": "Achha, toh 'this/that/it' agar kisi single clear noun ki jagah nahi le raha, poore sentence ka matlab hi le raha hai, toh wo error hai?" }
+      ],
+      "navigation": { "next": "card_84_expletive_it_dummy_subject", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_84_expletive_it_dummy_subject",
+      "card_slug": "card_84_expletive_it_dummy_subject",
+      "type": "chat",
+      "concept_id": "expletive_it_dummy_subject",
+      "level": 6,
+      "progress": { "current": 84, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab suno 'IT' ka ek bilkul alag, special use bhi hota hai - mausam, waqt aur distance batane mein. 'IT is raining', 'IT is 5 O'clock', 'IT is 10 km from here'." },
+        { "speaker": "raju", "text": "Sir yahan 'IT' kisko refer kar raha hai? Koi antecedent toh nahi dikh raha!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda - yahan 'IT' KISI KO refer NAHI karta, ye sirf ek 'Dummy Subject' ya 'Expletive IT' hai jo sirf grammatical structure poora karne ke liye lagaya jaata hai. Isko koi Antecedent dhoondhne ki zaroorat nahi." },
+        { "speaker": "raju", "text": "Ohh! Toh 'It' ka special VIP use bhi hai jahan koi Antecedent rule follow nahi hota - exception yaad rakh liya sir!" }
+      ],
+      "navigation": { "next": "card_85_broad_reference_which_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_85_broad_reference_which_trap",
+      "card_slug": "card_85_broad_reference_which_trap",
+      "type": "chat",
+      "concept_id": "broad_reference_which_trap",
+      "level": 6,
+      "progress": { "current": 85, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Aakhri type dekho - jab 'WHICH' kisi poore preceding clause ko refer kare, informal mein chalta hai but formal/exam grammar isse bhi error maanta hai." },
+        { "speaker": "raju", "text": "Example dijiye sir!" },
+        { "speaker": "aman", "text": "'He did not attend the meeting, WHICH surprised everyone.' - Yahan 'which' 'meeting' ko refer nahi kar raha, balki 'he not attending' wale poore idea ko refer kar raha hai. Formal English mein isse improve karke likhte hain: 'His absence from the meeting surprised everyone.'" },
+        { "speaker": "raju", "text": "Achha, toh ye subtle error hai jo direct dikhta bhi nahi - officer level exam isi liye tough hota hai!" }
+      ],
+      "navigation": { "next": "card_86_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_86_quiz1",
+      "card_slug": "card_86_quiz1",
+      "type": "quiz",
+      "concept_id": "ambiguous_reference_intro",
+      "level": 6,
+      "progress": { "current": 86, "total": 100 },
+      "quiz_payload": {
+        "question": "Identify the type of error in: 'Rahul told his father that he had won the scholarship.'",
+        "options": [
+          { "id": "A", "text": "Subject-Verb Agreement error" },
+          { "id": "B", "text": "Ambiguous Pronoun Reference (unclear antecedent for 'he')" },
+          { "id": "C", "text": "Wrong Case error" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'He' Rahul ko refer kar raha hai ya uske father ko - dono possible hain, isliye ye Ambiguous Reference error hai. Correction ke liye direct speech ya name repeat karna padega: 'Rahul told his father, \"I have won the scholarship.\"'"
+      },
+      "navigation": { "next": "card_87_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_87_quiz2",
+      "card_slug": "card_87_quiz2",
+      "type": "quiz",
+      "concept_id": "expletive_it_dummy_subject",
+      "level": 6,
+      "progress": { "current": 87, "total": 100 },
+      "quiz_payload": {
+        "question": "In the sentence 'It is very hot today', what is the grammatical role of 'It'?",
+        "options": [
+          { "id": "A", "text": "Personal Pronoun referring to the weather" },
+          { "id": "B", "text": "Demonstrative Pronoun" },
+          { "id": "C", "text": "Expletive/Dummy subject with no antecedent" },
+          { "id": "D", "text": "Indefinite Pronoun" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Weather, time, aur distance batane mein 'It' sirf ek grammatical placeholder (Dummy Subject/Expletive) hota hai - iska koi real antecedent nahi hota."
+      },
+      "navigation": { "next": "card_88_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_88_quiz3",
+      "card_slug": "card_88_quiz3",
+      "type": "quiz",
+      "concept_id": "broad_reference_which_trap",
+      "level": 6,
+      "progress": { "current": 88, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The train arrived late / (B) which upset all / (C) the passengers waiting at the station / (D) No error",
+        "options": [
+          { "id": "A", "text": "The train arrived late" },
+          { "id": "B", "text": "which upset all" },
+          { "id": "C", "text": "the passengers waiting at the station" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Which' yahan pure clause 'the train arrived late' ko refer kar raha hai, na ki kisi specific noun ko - ye formal grammar mein broad/vague reference error maana jaata hai."
+      },
+      "navigation": { "next": "card_89_milestone11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_89_milestone11",
+      "card_slug": "card_89_milestone11",
+      "type": "milestone",
+      "concept_id": "ambiguous_reference_complete",
+      "level": 6,
+      "progress": { "current": 89, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🕵️",
+        "completed_topic": "Ambiguous Reference & Dummy It",
+        "xp_earned": 70,
+        "milestone_progress": "Module 11/12 Clear",
+        "motivational_quote": "Hidden errors ab tumse chhup nahi sakte! Aakhri module - special pronoun 'ONE' - jo bahut hi formal writing mein use hota hai."
+      },
+      "navigation": { "next": "card_90_one_formal_pronoun", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_90_one_formal_pronoun",
+      "card_slug": "card_90_one_formal_pronoun",
+      "type": "chat",
+      "concept_id": "one_formal_pronoun",
+      "level": 7,
+      "progress": { "current": 90, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, kabhi newspaper ya formal speech mein suna hai - 'ONE must always speak the truth'? Yahan 'One' kisko refer kar raha hai?" },
+        { "speaker": "raju", "text": "Sir 'One' matlab koi ek specific insaan?" },
+        { "speaker": "aman", "text": "Nahi Raju, yahan 'ONE' matlab GENERAL/ANY PERSON hai, sabke liye ek general statement - jaise Hindi mein 'insaan ko hamesha sach bolna chahiye'. Ye highly FORMAL writing mein use hota hai." },
+        { "speaker": "raju", "text": "Achha! Toh ye 'One' bhi ek pronoun hai jo koi specific naam ki jagah general baat karta hai?" }
+      ],
+      "navigation": { "next": "card_91_one_consistency_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_91_one_consistency_trap",
+      "card_slug": "card_91_one_consistency_trap",
+      "type": "chat",
+      "concept_id": "one_consistency_trap",
+      "level": 7,
+      "progress": { "current": 91, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab officer-level trap: agar sentence 'One' se start kiya hai, toh usi sentence mein aage bhi 'ONE/ONE'S/ONESELF' hi consistently use karna hoga - beech mein 'he/his' switch nahi kar sakte." },
+        { "speaker": "raju", "text": "Matlab sir 'One should always respect HIS parents' galat hai kya?" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Formal British rule: 'One should always respect ONE'S parents' - consistency maintain karni hai, 'One' se 'his' pe kabhi switch nahi karna, chahe ye American English mein thoda accept ho jaaye." },
+        { "speaker": "raju", "text": "Achha! Toh 'One' start kiya matlab poore sentence mein 'One' ka hi family use karna hai - noted sir!" }
+      ],
+      "navigation": { "next": "card_92_ones_oneself", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_92_ones_oneself",
+      "card_slug": "card_92_ones_oneself",
+      "type": "chat",
+      "concept_id": "ones_oneself",
+      "level": 7,
+      "progress": { "current": 92, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab pura family yaad karo - 'One' ka Possessive form hai 'ONE'S' (apostrophe-s ke saath), aur Reflexive form hai 'ONESELF' - jaise 'himself/herself' tha, waise hi 'oneself'." },
+        { "speaker": "raju", "text": "Toh 'One should not deceive ONESELF' - yahan 'oneself' reflexive hai, khud ko dhoka?" },
+        { "speaker": "aman", "text": "Ekdum sahi! Aur remember - 'One's' mein apostrophe LAGTA hai (possessive adjective jaisa), lekin baaki possessive pronouns (his, hers, its, ours, theirs) mein apostrophe NAHI lagta. 'One's' ek exception hai!" },
+        { "speaker": "raju", "text": "Ohh! Toh 'One's' hi ek aisa possessive hai jisme apostrophe lagta hai, baaki sab mein nahi - special case yaad rakhunga!" }
+      ],
+      "navigation": { "next": "card_93_one_of_the_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_93_one_of_the_trap",
+      "card_slug": "card_93_one_of_the_trap",
+      "type": "chat",
+      "concept_id": "one_of_the_trap",
+      "level": 7,
+      "progress": { "current": 93, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Aakhri aur bahut hi high-level trap: 'ONE OF THE + plural noun + WHO/THAT + verb'. Yahan verb PLURAL aayega, kyunki 'who/that' plural noun ko refer kar raha hai, 'one' ko nahi!" },
+        { "speaker": "raju", "text": "Hain?? 'One' toh singular hai sir, phir verb plural kaise?" },
+        { "speaker": "aman", "text": "Yahi toh sabse bada trap hai! 'He is ONE OF THE STUDENTS WHO HAVE passed' - 'who' yahan 'students' (plural, saare pass hue students mein se) ko refer kar raha hai, isliye 'have' plural aayega, na ki 'has'." },
+        { "speaker": "raju", "text": "Wah sir, ye toh bahut khatarnak trap hai - main toh 'has' hi likhta har baar!" }
+      ],
+      "navigation": { "next": "card_94_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_94_quiz1",
+      "card_slug": "card_94_quiz1",
+      "type": "quiz",
+      "concept_id": "one_consistency_trap",
+      "level": 7,
+      "progress": { "current": 94, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) One should always / (B) try to complete / (C) his duty honestly / (D) No error",
+        "options": [
+          { "id": "A", "text": "One should always" },
+          { "id": "B", "text": "try to complete" },
+          { "id": "C", "text": "his duty honestly" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Sentence 'One' se start hua hai, isliye consistency maintain karte hue 'his' ki jagah 'one's' aana chahiye. Correct: 'one's duty honestly'."
+      },
+      "navigation": { "next": "card_95_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_95_quiz2",
+      "card_slug": "card_95_quiz2",
+      "type": "quiz",
+      "concept_id": "one_of_the_trap",
+      "level": 7,
+      "progress": { "current": 95, "total": 100 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Ramesh is one of / (B) the best students / (C) who has ever joined this college / (D) No error",
+        "options": [
+          { "id": "A", "text": "Ramesh is one of" },
+          { "id": "B", "text": "the best students" },
+          { "id": "C", "text": "who has ever joined this college" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Who' yahan 'students' (plural) ko refer kar raha hai, isliye plural verb aayega. Correct: 'who have ever joined this college'."
+      },
+      "navigation": { "next": "card_96_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_96_quiz3",
+      "card_slug": "card_96_quiz3",
+      "type": "quiz",
+      "concept_id": "ones_oneself",
+      "level": 7,
+      "progress": { "current": 96, "total": 100 },
+      "quiz_payload": {
+        "question": "Choose the correctly written sentence:",
+        "options": [
+          { "id": "A", "text": "One must always believe in oneself." },
+          { "id": "B", "text": "One must always believe in himself." },
+          { "id": "C", "text": "One must always believe in ones self." },
+          { "id": "D", "text": "One must always believe in one self." }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Reflexive form of 'One' hai 'ONESELF' (ek hi word mein, no space, no apostrophe). 'Himself' consistency todta hai, aur 'ones self'/'one self' galat spelling forms hain."
+      },
+      "navigation": { "next": "card_97_milestone12", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_97_milestone12",
+      "card_slug": "card_97_milestone12",
+      "type": "milestone",
+      "concept_id": "one_pronoun_complete",
+      "level": 7,
+      "progress": { "current": 97, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎓",
+        "completed_topic": "'One' as a Formal Pronoun",
+        "xp_earned": 70,
+        "milestone_progress": "Module 12/12 Clear",
+        "motivational_quote": "Saare 12 modules clear! Ab officer level ki final revision aur master quiz baaki hai - chalo pura chapter ek baar mein revise karte hain!"
+      },
+      "navigation": { "next": "card_98_officer_revision", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_98_officer_revision",
+      "card_slug": "card_98_officer_revision",
+      "type": "summary",
+      "concept_id": "chapter_revision",
+      "level": 8,
+      "progress": { "current": 98, "total": 100 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Pronoun",
+        "revision_points": [
+          {
+            "topic": "Statement Check - Case Rule",
+            "point": "Statement I: After a preposition, always use Objective case ('between you and me'). Statement II: After 'than/as', use the case that fits the hidden verb ('taller than I am'). Both statements are CORRECT and frequently combined in multi-statement BPSC/SBI PO questions."
+          },
+          {
+            "topic": "Statement Check - Agreement Rule",
+            "point": "Statement I: Collective nouns (team, jury, family) take singular pronoun when acting as one unit. Statement II: Indefinite pronouns (everyone, each, everybody) always take singular pronoun (his/her). Both statements are CORRECT - this combination is a BPSC favorite trap."
+          },
+          {
+            "topic": "Statement Check - Reflexive vs Intensive",
+            "point": "Statement I: 'Myself' can replace 'I/me' as a subject/object in any sentence. Statement II: 'Himself' after a noun for emphasis is called an Intensive Pronoun. Statement I is INCORRECT (reflexive needs a matching subject first); Statement II is CORRECT."
+          },
+          {
+            "topic": "Statement Check - Reciprocal & Relative",
+            "point": "Statement I: 'Each other' is used for two persons, 'one another' for more than two. Statement II: 'Which' takes a comma for non-essential info, 'that' never takes a comma. Both statements are CORRECT."
+          },
+          {
+            "topic": "Statement Check - 'One' & 'None'",
+            "point": "Statement I: A sentence starting with 'One' must consistently use 'one's/oneself', never 'his/himself'. Statement II: 'None' traditionally takes a singular verb, meaning 'not a single one'. Both statements are CORRECT and are Officer-level favorites."
+          }
+        ]
+      },
+      "navigation": { "next": "card_99_final_master_quiz", "button_text": "Attempt Final Master Quiz ➔" }
+    },
+    {
+      "card_id": "card_99_final_master_quiz",
+      "card_slug": "card_99_final_master_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_assessment",
+      "level": 8,
+      "progress": { "current": 99, "total": 100 },
+      "quiz_payload": {
+        "question": "Consider the following statements regarding Pronoun usage:\nStatement I: In the sentence 'Neither of the answers are correct', the verb should be singular ('is') because 'Neither' is grammatically singular.\nStatement II: In the sentence 'Each of the players have their own kit', the verb should be singular ('has') because 'Each' is grammatically singular.\nStatement III: In 'Ravi is one of the boys who has topped the exam', the verb 'has' is correct because 'one' controls the verb.\nWhich of the above statements is/are CORRECT?",
+        "options": [
+          { "id": "A", "text": "Only Statement I is correct" },
+          { "id": "B", "text": "Statements I and II are correct" },
+          { "id": "C", "text": "Statements I, II and III are correct" },
+          { "id": "D", "text": "Only Statement III is correct" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement I is CORRECT: 'Neither' is always singular, so 'is correct' is right, not 'are correct'. Statement II is CORRECT: 'Each' is always singular, so verb should be 'has', not 'have' (also pronoun should be 'his', not 'their'). Statement III is INCORRECT: In 'one of the boys WHO...', the relative pronoun 'who' refers to 'boys' (plural), so the verb must be 'have', not 'has'. Hence only I and II are correct - Option B."
+      },
+      "navigation": { "next": "card_100_trophy", "button_text": "Submit & See Result ➔" }
+    },
+    {
+      "card_id": "card_100_trophy",
+      "card_slug": "card_100_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 8,
+      "progress": { "current": 100, "total": 100 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER CHAMPION! 🏆",
+        "badge_emoji": "🏅",
+        "completed_topic": "Pronoun - Complete SBI PO Level Mastery",
+        "xp_earned": 150,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Raju se Officer tak ka safar poora hua! Ab tum Pronoun ke har trap - Case, Agreement, Reflexive, Reciprocal, Relative, Indefinite aur 'One' - sabko SBI PO level pe crack kar sakte ho. Ab practice sets mein jaake apni speed test karo, Officer banna tay hai!"
+      },
+      "navigation": { "next": "card_01_intro", "button_text": "Restart Chapter 🔄" }
+    }
+  ]
+}
+```
