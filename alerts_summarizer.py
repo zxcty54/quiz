@@ -46,7 +46,7 @@ STRICT ALLOWED CATEGORIES (Choose EXACTLY ONE from this list for "category"):
 11. Sports & Gaming
 
 ✅ MANDATORY ACCEPTANCE CRITERIA (Set "is_relevant": true ONLY IF the news is a genuine "FIRST IN INDIA"):
-1. India's First infrastructure/tech projects (e.g., India's first geothermal plant, first paperless court, first vertical lift bridge, first AI university, first solar-powered village).
+1. India's First infrastructure/tech projects/payment technology (e.g., India's first geothermal plant, first paperless court, first vertical lift bridge, first AI university, first solar-powered village).
 2. India's First scientific/space/defence achievements by Govt or Public Bodies (e.g., ISRO, DRDO, CSIR, Indian Navy, IITs).
 3. India's First environmental or geographic designations (e.g., India's first dark sky reserve, first biodiversity heritage site).
 4. Major public sector or national level "Firsts" that form permanent Static GK for competitive exams.
