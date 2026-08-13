@@ -1,0 +1,2074 @@
+
+{
+  "topic_id": "industries_indian_geography",
+  "topic_title": "Industries in Indian Geography",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "Industries in Indian Geography",
+        "icon": "🏭",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Understand what industries are and their classification",
+          "Learn about agro-based industries (Cotton, Jute, Sugar, Tea)",
+          "Master mineral-based industries (Iron & Steel, Aluminium, Cement)",
+          "Explore chemical and fertilizer industries",
+          "Understand automobile and IT industries",
+          "Learn industrial regions and policies in India",
+          "Cover Bihar-specific industrial development (BPSC TRE focus)"
+        ],
+        "estimated_time": "50 minutes",
+        "difficulty_label": "Foundation to Officer Level"
+      },
+      "navigation": {
+        "next": "card_02_industry_intro",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_industry_intro",
+      "card_slug": "card_02_industry_intro",
+      "type": "chat",
+      "concept_id": "what_is_industry",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhare ghar mein jo chini (sugar) hai, woh kahan se aayi?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, dukaan se kharidi!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, lekin dukaan ko mili kahan se? Suno - kisaan ne ganna (sugarcane) ugaya, phir ganne ko FACTORY mein le jaaya gaya, wahan machines se ganna crush hua, juice nikla, usse chini bani. Ye poori process jo factory mein hoti hai - isko hi INDUSTRY kehte hain! Industry matlab raw material ko useful finished product mein convert karna, usually machines ki madad se."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa... toh khet mein farming hui, factory mein industry!"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_manufacturing_concept",
+        "button_text": "Exactly! ➔"
+      }
+    },
+    {
+      "card_id": "card_03_manufacturing_concept",
+      "card_slug": "card_03_manufacturing_concept",
+      "type": "chat",
+      "concept_id": "manufacturing_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! Industry ko MANUFACTURING bhi kehte hain. Dekho, tumhare cycle, mobile phone, kapde, sabun, petrol - sab industries mein bante hain. Bina industries ke modern life imagine nahi kar sakte! India ki economy mein industries ka bahut bada contribution hai - GDP mein lagbhag 25-30% manufacturing sector se aata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, industries kitne types ki hoti hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut achha sawal! Industries ko hum MAIN 3 TAREEKON se classify karte hain - (1) RAW MATERIAL ke basis par, (2) SIZE ke basis par, aur (3) OWNERSHIP ke basis par. Pehle raw material wala classification samajhte hain kyunki ye sabse important hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ji sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_classification_raw",
+        "button_text": "Classification Start ➔"
+      }
+    },
+    {
+      "card_id": "card_04_classification_raw",
+      "card_slug": "card_04_classification_raw",
+      "type": "chat",
+      "concept_id": "raw_material_classification",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "RAW MATERIAL ke basis par industries 4 types ki hoti hain: (1) AGRO-BASED - jo agricultural products use karti hain jaise cotton textile (kapas se), sugar (ganna se), tea processing, jute. (2) MINERAL-BASED - jo minerals use karti hain jaise iron & steel (iron ore se), cement (limestone se), aluminium (bauxite se). (3) MARINE-BASED - samudri resources se jaise fish processing, salt. (4) FOREST-BASED - jungle se milne wali cheezein jaise paper (wood/bamboo se), furniture, lac."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, India mein sabse zyada kaun si type ki industries hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_agro_dominance",
+        "button_text": "Great Question ➔"
+      }
+    },
+    {
+      "card_id": "card_05_agro_dominance",
+      "card_slug": "card_05_agro_dominance",
+      "type": "chat",
+      "concept_id": "agro_based_dominance",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "India ek agricultural country hai, toh historically AGRO-BASED industries sabse zyada hain! Cotton textile industry toh India ki sabse purani aur sabse badi organized industry hai. Lekin ab mineral-based industries bhi tezi se badh rahi hain kyunki infrastructure development ho raha hai. Ab SIZE ke basis par classification dekho - SMALL SCALE (chhoti factories - investment kam), LARGE SCALE (badi factories - Tata Steel jaise), aur COTTAGE industries (ghar par banne wali - handicrafts, pottery)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Cottage matlab ghar par hi ban jaaye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Jaise Bihar mein Madhubani painting, Sujani embroidery - ye sab cottage industries hain. ⭐ BPSC TRE mein Bihar ki cottage industries zaroor puchhi jaati hain! Ab OWNERSHIP ke basis par - PUBLIC sector (sarkar ki - SAIL, BHEL), PRIVATE sector (private companies - Reliance, Tata), aur JOINT sector (sarkar + private dono)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_quiz_1",
+        "button_text": "Quick Check ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_1",
+      "card_slug": "card_06_quiz_1",
+      "type": "quiz",
+      "concept_id": "classification_quiz_1",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Cotton Textile Industry को किस category में रखेंगे?",
+        "options": [
+          {"id": "A", "text": "Mineral-Based Industry"},
+          {"id": "B", "text": "Agro-Based Industry"},
+          {"id": "C", "text": "Forest-Based Industry"},
+          {"id": "D", "text": "Marine-Based Industry"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "Cotton Textile Industry एक AGRO-BASED industry है क्योंकि इसका raw material COTTON (कपास) है जो एक agricultural product है। कपास की खेती खेतों में होती है। India दुनिया का दूसरा सबसे बड़ा cotton producer है और textile industry India की सबसे पुरानी organized industry है। ⭐ SSC और Railway में यह direct question बार-बार आता है!"
+      },
+      "navigation": {
+        "next": "card_07_quiz_2",
+        "button_text": "Next (Q2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_2",
+      "card_slug": "card_07_quiz_2",
+      "type": "quiz",
+      "concept_id": "classification_quiz_2",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: Madhubani Painting और Sujani Embroidery किस प्रकार की industry का उदाहरण है?",
+        "options": [
+          {"id": "A", "text": "Large Scale Industry"},
+          {"id": "B", "text": "Public Sector Industry"},
+          {"id": "C", "text": "Cottage Industry"},
+          {"id": "D", "text": "Joint Sector Industry"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "Madhubani Painting (मिथिला/मधुबनी कला) और Sujani Embroidery (सुजनी कढ़ाई) बिहार की प्रसिद्ध COTTAGE INDUSTRIES हैं। Cottage industries वे होती हैं जो घरों में या बहुत छोटे स्तर पर, परंपरागत तरीकों से, हाथ के औजारों से बनाई जाती हैं। ये बिहार की सांस्कृतिक धरोहर हैं और महिलाओं को रोजगार देती हैं। ⭐ BPSC TRE में बिहार की handicrafts और cottage industries बहुत महत्वपूर्ण हैं!"
+      },
+      "navigation": {
+        "next": "card_08_quiz_3",
+        "button_text": "Next (Q3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_3",
+      "card_slug": "card_08_quiz_3",
+      "type": "quiz",
+      "concept_id": "classification_quiz_3",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "SAIL (Steel Authority of India Limited) किस sector की industry है?",
+        "options": [
+          {"id": "A", "text": "Private Sector"},
+          {"id": "B", "text": "Public Sector"},
+          {"id": "C", "text": "Joint Sector"},
+          {"id": "D", "text": "Cooperative Sector"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "SAIL (Steel Authority of India Limited) एक PUBLIC SECTOR industry है - मतलब यह Government of India की company है। SAIL भारत की सबसे बड़ी steel producing company है जिसके अंतर्गत Bhilai (Chhattisgarh), Bokaro (Jharkhand), Rourkela (Odisha), Durgapur (West Bengal) जैसे steel plants आते हैं। Public sector industries वे होती हैं जो सरकार के स्वामित्व और नियंत्रण में होती हैं। ⭐ BPSC और SSC में Public vs Private sector का अंतर जरूर पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_09_milestone_1",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_09_milestone_1",
+      "card_slug": "card_09_milestone_1",
+      "type": "milestone",
+      "concept_id": "module_1_complete",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 INDUSTRY BASICS CLEARED!",
+        "badge_emoji": "🏭",
+        "completed_topic": "Industry Classification Mastered",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/7 Clear",
+        "motivational_quote": "Shabash! Industry ke sab classifications clear! Ab chalte hain India ki sabse important industries detail mein dekhne - Cotton Textile se shuru karte hain! 🧵"
+      },
+      "navigation": {
+        "next": "card_10_cotton_intro",
+        "button_text": "Start Cotton Textile ➔"
+      }
+    },
+    {
+      "card_id": "card_10_cotton_intro",
+      "card_slug": "card_10_cotton_intro",
+      "type": "chat",
+      "concept_id": "cotton_textile_intro",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhari shirt cotton ki hai ya synthetic?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, cotton ki! Garmi mein comfortable hoti hai."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Cotton Textile Industry India ki OLDEST aur LARGEST organized industry hai। Ye industry India mein British time se pehle bhi thi - handlooms se khadi banti thi. Lekin modern power loom mills 1854 mein Bombay (ab Mumbai) mein shuru hui - first cotton mill: Bombay Spinning & Weaving Company. ⭐ UPSC aur BPSC mein first cotton mill ka naam aur location puchha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Mumbai mein sabse pehle shuru hui?"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_cotton_mumbai",
+        "button_text": "Mumbai = Cotton Hub ➔"
+      }
+    },
+    {
+      "card_id": "card_11_cotton_mumbai",
+      "card_slug": "card_11_cotton_mumbai",
+      "type": "chat",
+      "concept_id": "cotton_mumbai_hub",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Mumbai ko 'COTTONOPOLIS of India' kehte the (Manchester of India bhi bolte hain). Kyun? Dekho factors: (1) PORT hai toh raw cotton import kar sakte the aur finished goods export, (2) Humid climate (cotton thread टूटता नहीं), (3) Skilled labour, (4) Gujarat se cotton milta hai paas mein. Lekin ab situation change hui hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya hua sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ab cotton textile mills DECENTRALIZED ho gayi hain - matlab Mumbai se hatt kar Gujarat (Ahmedabad - सबसे बड़ा center अब), Maharashtra (Solapur, Pune), Tamil Nadu (Coimbatore), Karnataka, Telangana mein fail gayi hain. Ahmedabad ko ab 'Manchester of India' bolte hain kyunki wahan सबसे ज्यादा mills hain! ⭐ SSC Trap: 'Manchester of India' - Mumbai (old) ya Ahmedabad (current)? Dono context mein sahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh confusing hai exam mein!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_cotton_distribution",
+        "button_text": "Distribution Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_12_cotton_distribution",
+      "card_slug": "card_12_cotton_distribution",
+      "type": "chat",
+      "concept_id": "cotton_state_wise",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Isliye dono yaad rakho context ke saath! Ab state-wise production dekho: GUJARAT (सबसे ज्यादा mills - Ahmedabad, Surat), MAHARASHTRA (Mumbai, Solapur, Nagpur), TAMIL NADU (Coimbatore, Madurai, Chennai - South India mein leader), WEST BENGAL (Kolkata - jute bhi hai), UTTAR PRADESH (Kanpur), MADHYA PRADESH (Indore). Cotton textile industry mein India दुनिया का दूसरा सबसे बड़ा producer है (China के बाद)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Sir Bihar mein cotton textile mills hain kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_bihar_textile",
+        "button_text": "Bihar Focus ➔"
+      }
+    },
+    {
+      "card_id": "card_13_bihar_textile",
+      "card_slug": "card_13_bihar_textile",
+      "type": "chat",
+      "concept_id": "bihar_textile_status",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Important: Bihar में cotton textile की बड़ी organized mills नहीं हैं क्योंकि यहां cotton production बहुत कम होता है (raw material नहीं)। LEKIN Bihar में traditional HANDLOOM industry है - खासकर Bhagalpur का SILK (Tussar Silk - Bhagalpur को 'Silk City' कहते हैं)। ये cottage industry sector में आता है और GI Tag (Geographical Indication) प्राप्त है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Bhagalpur silk famous hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Bhagalpur Silk sarees पूरे India में famous हैं। Ab next major agro-based industry dekhte hain - JUTE!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir jute se kya banta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_jute_intro",
+        "button_text": "Jute Industry ➔"
+      }
+    },
+    {
+      "card_id": "card_14_jute_intro",
+      "card_slug": "card_14_jute_intro",
+      "type": "chat",
+      "concept_id": "jute_industry_intro",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Jute se BAGS, ropes, mats, carpet backing, sackcloth banta hai। Jute ko 'GOLDEN FIBRE' kehte hain kyunki iski रंगत सुनहरी होती है। India JUTE PRODUCTION में दुनिया में दूसरे नंबर पर है (Bangladesh first), lekin JUTE GOODS MANUFACTURING में FIRST है! Jute industry ka sabse bada concentration WEST BENGAL mein hai - Hooghly river के किनारे।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kyun sir, Hooghly river kyun important hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut badhiya sawal! Jute processing ke liye SOFT WATER chahiye (hard water se fiber damage hota hai) - Hooghly river soft water provide karti hai। Plus, Kolkata PORT hai toh export easy. West Bengal (Kolkata area - Rishra, Shibpur), ANDHRA PRADESH, BIHAR (limited), ASSAM, ODISHA mein jute mills hain। ⭐ SSC Favorite Fact: India में first jute mill 1855 में Rishra (near Kolkata) में lagi - Britishers ne!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Kolkata jute industry ka center hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_sugar_intro",
+        "button_text": "Next: Sugar Industry ➔"
+      }
+    },
+    {
+      "card_id": "card_15_sugar_intro",
+      "card_slug": "card_15_sugar_intro",
+      "type": "chat",
+      "concept_id": "sugar_industry_intro",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aati hai SUGAR INDUSTRY - ye India ki second largest agro-based industry hai (textile के बाद)। Sugar का raw material SUGARCANE (गन्ना) है। India दुनिया का SECOND LARGEST sugar producer है (Brazil first)। Ek important baat - sugar mills SEASONAL hoti hain - मतलब साल भर नहीं चलती, सिर्फ crushing season (October-March) में!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kyun sir, baaki time kya karte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki sugarcane jaldi kharab ho jaata hai (perishable)! Kaatne के 24 घंटे के अंदर crush करना पड़ता है, nahi toh sucrose content kam ho jaata hai। Isliye sugar mills SUGARCANE PRODUCING AREAS के बिल्कुल paas होनी chahiye - ye ek 'RAW MATERIAL ORIENTED' industry है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab factory ko farm ke paas hona zaroori hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_sugar_distribution",
+        "button_text": "State Distribution ➔"
+      }
+    },
+    {
+      "card_id": "card_16_sugar_distribution",
+      "card_slug": "card_16_sugar_distribution",
+      "type": "chat",
+      "concept_id": "sugar_state_wise",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly! Sugar production state-wise: UTTAR PRADESH (सबसे ज्यादा - लगभग 50% production!), MAHARASHTRA (दूसरे नंबर पर), KARNATAKA, TAMIL NADU, BIHAR, PUNJAB, HARYANA। UP mein इतना ज्यादा क्यों? Kyunki UP India का सबसे बड़ा sugarcane producer है - Meerut, Muzaffarnagar, Saharanpur belt famous hai। ⭐ UPSC/BPSC Trap: 'सबसे ज्यादा sugar production' - UP, lekin 'सबसे ज्यादा yield/efficiency' - Maharashtra (cooperative sector model)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Bihar ka kya scene hai sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_bihar_sugar",
+        "button_text": "Bihar Sugar Industry ➔"
+      }
+    },
+    {
+      "card_id": "card_17_bihar_sugar",
+      "card_slug": "card_17_bihar_sugar",
+      "type": "chat",
+      "concept_id": "bihar_sugar_industry",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Very Important: बिहार में sugarcane अच्छी मात्रा में होता है - खासकर उत्तरी बिहार (Champaran, Muzaffarpur, Darbhanga belt) में। बिहार में कई sugar mills हैं - Marhaura (Saran), Motipur (Muzaffarpur), Sugauli (East Champaran)। LEKIN problem यह है कि बहुत सारी mills बंद या irregular चल रही हैं - financial और management issues के कारण। सरकार revival plans ला रही है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh potential hai but mills properly nahi chal rahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Raw material (गन्ना) तो है but processing infrastructure weak है। ⭐ BPSC TRE में Bihar की sugar mills और उनकी problems जरूर पूछी जाती हैं। Ab agle industry - TEA!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir chai toh roz peete hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_quiz_agro_1",
+        "button_text": "Quick Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_18_quiz_agro_1",
+      "card_slug": "card_18_quiz_agro_1",
+      "type": "quiz",
+      "concept_id": "agro_quiz_1",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत में सबसे पहली cotton textile mill कहाँ और कब स्थापित हुई?",
+        "options": [
+          {"id": "A", "text": "1854, Mumbai (Bombay Spinning & Weaving Co.)"},
+          {"id": "B", "text": "1855, Kolkata (Rishra Jute Mill)"},
+          {"id": "C", "text": "1850, Ahmedabad"},
+          {"id": "D", "text": "1860, Surat"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "भारत में पहली modern cotton textile mill 1854 में MUMBAI (तब Bombay) में स्थापित हुई - 'Bombay Spinning & Weaving Company'। यह भारत की organized textile industry की शुरुआत थी। Mumbai को उस समय 'Cottonopolis of India' कहा जाता था। ⭐ UPSC और BPSC में यह factual question बार-बार आता है - 1854, Mumbai याद रखें! (1855 Kolkata में first JUTE mill लगी थी - confuse मत होना!)"
+      },
+      "navigation": {
+        "next": "card_19_quiz_agro_2",
+        "button_text": "Next (Q2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_19_quiz_agro_2",
+      "card_slug": "card_19_quiz_agro_2",
+      "type": "quiz",
+      "concept_id": "agro_quiz_2",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ 'Manchester of India' वर्तमान में किसे कहा जाता है?",
+        "options": [
+          {"id": "A", "text": "Mumbai (सबसे पुराना textile hub)"},
+          {"id": "B", "text": "Ahmedabad (सबसे ज्यादा cotton mills)"},
+          {"id": "C", "text": "Coimbatore (South India hub)"},
+          {"id": "D", "text": "Surat (synthetic textiles)"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "CURRENTLY 'Manchester of India' AHMEDABAD (Gujarat) को कहा जाता है क्योंकि यहां सबसे ज्यादा cotton textile mills हैं। Historically Mumbai को 'Cottonopolis/Manchester of India' कहते थे, लेकिन अब cotton industry decentralize हो गई है और Gujarat (especially Ahmedabad) सबसे बड़ा center बन गया है। ⭐ SSC Trap: दोनों options सही हो सकते हैं context के अनुसार - 'Historically' = Mumbai, 'Currently' = Ahmedabad। Question ध्यान से पढ़ें!"
+      },
+      "navigation": {
+        "next": "card_20_quiz_agro_3",
+        "button_text": "Next (Q3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz_agro_3",
+      "card_slug": "card_20_quiz_agro_3",
+      "type": "quiz",
+      "concept_id": "agro_quiz_3",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: Bhagalpur किस industry के लिए प्रसिद्ध है?",
+        "options": [
+          {"id": "A", "text": "Cotton Textile"},
+          {"id": "B", "text": "Jute Manufacturing"},
+          {"id": "C", "text": "Silk (Tussar Silk) Production"},
+          {"id": "D", "text": "Sugar Mills"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "Bhagalpur (बिहार) SILK उत्पादन के लिए प्रसिद्ध है, विशेषकर TUSSAR SILK (कोसा रेशम)। Bhagalpur को 'SILK CITY of India' कहते हैं। यहां की silk sarees पूरे भारत में famous हैं और इन्हें GI Tag (Geographical Indication) मिला हुआ है। यह एक cottage/handloom industry है जो बिहार की सांस्कृतिक और आर्थिक धरोहर है। ⭐ BPSC TRE में Bhagalpur Silk बहुत important topic है - हर साल पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_21_milestone_2",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_21_milestone_2",
+      "card_slug": "card_21_milestone_2",
+      "type": "milestone",
+      "concept_id": "module_2_complete",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 AGRO-BASED INDUSTRIES MASTERED!",
+        "badge_emoji": "🧵",
+        "completed_topic": "Cotton, Jute, Sugar Industries",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/7 Clear",
+        "motivational_quote": "Excellent! Tumne agro-based industries ke major players samajh liye! Ab chalte hain mineral-based industries mein - Iron & Steel se shuru karte hain! 🏗️"
+      },
+      "navigation": {
+        "next": "card_22_iron_steel_intro",
+        "button_text": "Start Mineral-Based ➔"
+      }
+    },
+    {
+      "card_id": "card_22_iron_steel_intro",
+      "card_slug": "card_22_iron_steel_intro",
+      "type": "chat",
+      "concept_id": "iron_steel_intro",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, kisi bhi desh ki development measure karne ka ek tarika hai - wahan kitna STEEL production hota hai! Steel se hi buildings, bridges, railways, machines sab bante hain। Iron & Steel Industry ko 'BASIC INDUSTRY' ya 'BACKBONE OF INDUSTRIAL DEVELOPMENT' kehte hain। India steel production mein दुनिया में SECOND position पर है (China first)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! India itna steel banata hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Steel industry ke लिए 4 चीजें बहुत जरूरी हैं: (1) IRON ORE (raw material), (2) COKING COAL (fuel - iron ore गलाने के लिए), (3) LIMESTONE (flux - impurities remove करने के लिए), (4) WATER (cooling के लिए)। Isliye steel plants aise areas mein लगाए जाते हैं जहां ये सब पास-पास मिलें!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab location planning bahut important hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_steel_plants",
+        "button_text": "Major Steel Plants ➔"
+      }
+    },
+    {
+      "card_id": "card_23_steel_plants",
+      "card_slug": "card_23_steel_plants",
+      "type": "chat",
+      "concept_id": "major_steel_plants",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ab India ke MAJOR INTEGRATED STEEL PLANTS dekho (PUBLIC SECTOR - SAIL के under): (1) BHILAI (Chhattisgarh) - Russian collaboration, 1959, (2) BOKARO (Jharkhand) - Russian help, 1964, (3) ROURKELA (Odisha) - German collaboration, 1959, (4) DURGAPUR (West Bengal) - British help, 1959, (5) BURNPUR (West Bengal) - IISCO, (6) JAMSHEDPUR (Jharkhand) - TATA Steel (PRIVATE), 1907 - India की FIRST modern steel plant!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Jamshedpur sabse purani hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_tata_steel",
+        "button_text": "Tata Steel Special ➔"
+      }
+    },
+    {
+      "card_id": "card_24_tata_steel",
+      "card_slug": "card_24_tata_steel",
+      "type": "chat",
+      "concept_id": "tata_steel_jamshedpur",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! TATA STEEL (Jamshedpur, झारखंड) 1907 में JAMSETJI TATA ने स्थापित की - ये भारत की पहली modern integrated steel plant है। ⭐ UPSC/BPSC Favorite: 'India's first steel plant' = TATA Steel, Jamshedpur, 1907। Jamshedpur को 'STEEL CITY of India' / 'PITTSBURG of India' (जैसे America में Pittsburgh steel के लिए famous) कहते हैं। Ye location perfect hai - iron ore (Odisha-Jharkhand border), coal (Jharia coalfields), limestone (nearby), water (Subarnarekha river)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ye sab plants eastern India mein ही क्यों hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant observation! Kyunki CHOTA NAGPUR PLATEAU region (Jharkhand, Odisha, West Bengal, Chhattisgarh) में iron ore, coal, limestone सब concentrated hain - इसे 'MINERAL BELT' कहते हैं। ⭐ BPSC Important: 2000 में जब झारखंड अलग राज्य बना, तो बिहार को steel industry loss हो गया - Bokaro, Jamshedpur सब झारखंड में चले गए!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Bihar mein ab steel plant nahi hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_cement_intro",
+        "button_text": "Next: Cement Industry ➔"
+      }
+    },
+    {
+      "card_id": "card_25_cement_intro",
+      "card_slug": "card_25_cement_intro",
+      "type": "chat",
+      "concept_id": "cement_industry_intro",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Currently बिहार में कोई major integrated steel plant नहीं है। LEKIN अब CEMENT INDUSTRY की बात करें - यह भी बहुत important है क्योंकि construction sector में cement चाहिए। Cement बनाने के लिए main raw material LIMESTONE (चूना पत्थर) है - साथ में gypsum, clay, coal (fuel)। India cement production में SECOND है globally (China first)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir cement plants kahan hote hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Cement industry BULKY और WEIGHT-LOSING है - मतलब raw material भारी है, isliye limestone deposits के पास plants लगते हैं। Major cement producing states: RAJASTHAN (सबसे ज्यादा), MADHYA PRADESH, TAMIL NADU, ANDHRA PRADESH, CHHATTISGARH, BIHAR (हां, बिहार में है!)। ⭐ BPSC TRE: Bihar में limestone Kaimur, Rohtas, Munger जिलों में है - यहां cement plants हैं जैसे Banjari (Kaimur)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Bihar mein cement industry present hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_aluminium_intro",
+        "button_text": "Aluminium Industry ➔"
+      }
+    },
+    {
+      "card_id": "card_26_aluminium_intro",
+      "card_slug": "card_26_aluminium_intro",
+      "type": "chat",
+      "concept_id": "aluminium_industry",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Ab ALUMINIUM INDUSTRY dekhte hain - ye lightweight metal है, corrosion resistant, isliye aircraft, automobiles, packaging (foil) mein use hota hai। Aluminium BAUXITE ore से banta hai। India में bauxite के अच्छे reserves हैं - ODISHA (सबसे ज्यादा), GUJARAT, JHARKHAND, MAHARASHTRA। Aluminium smelting mein BAHUT ZYADA ELECTRICITY lagti hai - isliye isko 'POWER-INTENSIVE' industry kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh plants cheap electricity wale areas mein honge?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Major plants: NALCO (National Aluminium Company) - Odisha (bauxite + hydro power), HINDALCO - UP, Odisha, BALCO (Bharat Aluminium) - Chhattisgarh। ⭐ SSC Fact: India aluminium production में 5th position पर है globally।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_quiz_mineral_1",
+        "button_text": "Quiz Round ➔"
+      }
+    },
+    {
+      "card_id": "card_27_quiz_mineral_1",
+      "card_slug": "card_27_quiz_mineral_1",
+      "type": "quiz",
+      "concept_id": "mineral_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत की पहली आधुनिक लौह-इस्पात (Iron & Steel) Plant कौन सी थी?",
+        "options": [
+          {"id": "A", "text": "Bhilai Steel Plant (1959)"},
+          {"id": "B", "text": "Bokaro Steel Plant (1964)"},
+          {"id": "C", "text": "Tata Steel, Jamshedpur (1907)"},
+          {"id": "D", "text": "Rourkela Steel Plant (1959)"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "भारत की पहली आधुनिक integrated steel plant TATA STEEL (Jamshedpur, झारखंड) थी जिसे 1907 में JAMSETJI TATA ने स्थापित किया। यह PRIVATE SECTOR की plant है। बाकी सभी plants (Bhilai, Bokaro, Rourkela, Durgapur) PUBLIC SECTOR (SAIL के अंतर्गत) हैं और 1950s-60s में स्थापित हुईं। Jamshedpur को 'Steel City of India' / 'Pittsburgh of India' कहते हैं। ⭐ UPSC और BPSC में यह बार-बार पूछा जाने वाला factual question है - 1907, Tata Steel, Jamshedpur याद रखें!"
+      },
+      "navigation": {
+        "next": "card_28_quiz_mineral_2",
+        "button_text": "Next (Q2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_mineral_2",
+      "card_slug": "card_28_quiz_mineral_2",
+      "type": "quiz",
+      "concept_id": "mineral_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा कारक Iron & Steel Industry के location को प्रभावित नहीं करता?",
+        "options": [
+          {"id": "A", "text": "Iron Ore की उपलब्धता"},
+          {"id": "B", "text": "Coking Coal की उपलब्धता"},
+          {"id": "C", "text": "Limestone (flux) की उपलब्धता"},
+          {"id": "D", "text": "Cotton की उपलब्धता"}
+        ],
+        "correct_option_id": "D",
+        "explanation": "COTTON की उपलब्धता Iron & Steel Industry के location को प्रभावित Nहीं करती - cotton textile industry के लिए महत्वपूर्ण है। Steel industry के लिए जरूरी factors: (1) IRON ORE (raw material), (2) COKING COAL (fuel), (3) LIMESTONE (flux - impurities हटाने के लिए), (4) WATER (cooling), (5) Transport facilities। इसीलिए Chota Nagpur Plateau region (जहां ये सब मिलते हैं) में सबसे ज्यादा steel plants हैं। ⭐ BPSC में location factors बहुत पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_29_quiz_mineral_3",
+        "button_text": "Next (Q3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_mineral_3",
+      "card_slug": "card_29_quiz_mineral_3",
+      "type": "quiz",
+      "concept_id": "mineral_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: बिहार में Cement Industry के लिए आवश्यक Limestone मुख्यतः किन जिलों में पाया जाता है?",
+        "options": [
+          {"id": "A", "text": "Patna, Nalanda, Gaya"},
+          {"id": "B", "text": "Kaimur, Rohtas, Munger"},
+          {"id": "C", "text": "Muzaffarpur, Darbhanga, Samastipur"},
+          {"id": "D", "text": "Bhagalpur, Purnia, Katihar"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "बिहार में Limestone (चूना पत्थर) मुख्यतः KAIMUR, ROHTAS, और MUNGER जिलों में पाया जाता है। ये दक्षिणी बिहार के जिले हैं जो Vindhyan Range के पास स्थित हैं। यहां limestone deposits के आधार पर cement plants स्थापित हैं - जैसे Banjari Cement Plant (Kaimur)। Cement industry के लिए limestone सबसे महत्वपूर्ण raw material है। ⭐ BPSC TRE में बिहार के खनिज और उद्योग distribution बहुत important है!"
+      },
+      "navigation": {
+        "next": "card_30_milestone_3",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_30_milestone_3",
+      "card_slug": "card_30_milestone_3",
+      "type": "milestone",
+      "concept_id": "module_3_complete",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MINERAL-BASED INDUSTRIES CLEARED!",
+        "badge_emoji": "🏗️",
+        "completed_topic": "Iron-Steel, Cement, Aluminium",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/7 Clear",
+        "motivational_quote": "Superb! Heavy industries samajh gayi! Ab chemical aur fertilizer industries dekhte hain - ye bhi bahut scoring topics hain BPSC aur SSC mein! 🧪"
+      },
+      "navigation": {
+        "next": "card_31_chemical_intro",
+        "button_text": "Chemical Industries ➔"
+      }
+    },
+    {
+      "card_id": "card_31_chemical_intro",
+      "card_slug": "card_31_chemical_intro",
+      "type": "chat",
+      "concept_id": "chemical_industry_intro",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhare ghar mein jo soap, detergent, paint, medicines, plastics hain - ye sab CHEMICAL INDUSTRY की देन हैं। Chemical Industry bahut diverse hai - inorganic chemicals (acids, alkalis), organic chemicals (petrochemicals, plastics), fertilizers, pesticides, pharmaceuticals sab इसी में आते हैं। Ye एक fast-growing sector है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, sabse important chemicals kaun se hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Industry ke लिए BASIC CHEMICALS: SULPHURIC ACID (सबसे ज्यादा produced chemical - fertilizers, batteries, explosives में use), NITRIC ACID, CAUSTIC SODA (NaOH - soap, paper), SODA ASH (Na2CO3 - glass बनाने में)। India में chemical industry Gujarat (सबसे बड़ा hub - petrochemicals), Maharashtra, Tamil Nadu, West Bengal में concentrated है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Petrochemicals kya hote hain sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_petrochemicals",
+        "button_text": "Petrochemicals ➔"
+      }
+    },
+    {
+      "card_id": "card_32_petrochemicals",
+      "card_slug": "card_32_petrochemicals",
+      "type": "chat",
+      "concept_id": "petrochemicals_concept",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PETROCHEMICALS = Petroleum/Natural Gas से बने chemicals। Examples: PLASTICS, SYNTHETIC FIBRES (polyester, nylon), SYNTHETIC RUBBER, detergents। India का सबसे बड़ा petrochemical complex JAMNAGAR (Gujarat) में है - RELIANCE का, दुनिया की सबसे बड़ी oil refinery भी यहीं है! ⭐ SSC Favorite: 'World's largest oil refinery' = Jamnagar (Reliance)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Reliance ka plant itna bada hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Ab FERTILIZER INDUSTRY dekhte hain - ye agriculture के लिए बहुत critical है। India दुनिया का second largest fertilizer consumer है (China first)। Main fertilizers: UREA (nitrogen देता है), DAP (Di-Ammonium Phosphate), MOP (Muriate of Potash), SSP (Single Super Phosphate)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye sab NPK hain na sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_fertilizers",
+        "button_text": "Fertilizers Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_33_fertilizers",
+      "card_slug": "card_33_fertilizers",
+      "type": "chat",
+      "concept_id": "fertilizer_npk",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Fertilizers मुख्यतः 3 nutrients provide करते हैं: N (Nitrogen - पत्तों की growth), P (Phosphorus - जड़ों और फूलों के लिए), K (Potassium - overall health)। UREA (46% N) सबसे ज्यादा used fertilizer है India में। Fertilizer plants NATURAL GAS/NAPHTHA (raw material) aur POWER के पास होते हैं। Major producers: Gujarat, UP, Punjab, Andhra Pradesh, Tamil Nadu।"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Bihar mein fertilizer plants hain kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Important: Haan! Bihar में BARAUNI (Begusarai) में IOC (Indian Oil Corporation) की oil refinery है और साथ में fertilizer plant भी था - अब बंद है, revival plans चल रहे हैं। Sindri (अब झारखंड में - पहले बिहार में था) में भी fertilizer plant था - यह India की FIRST fertilizer plant थी (1951)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Sindri important hai history में!"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_pharma_intro",
+        "button_text": "Pharmaceutical Industry ➔"
+      }
+    },
+    {
+      "card_id": "card_34_pharma_intro",
+      "card_slug": "card_34_pharma_intro",
+      "type": "chat",
+      "concept_id": "pharmaceutical_industry",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly! ⭐ SSC Fact: First fertilizer plant = Sindri, 1951। Ab PHARMACEUTICAL INDUSTRY (दवाइयों का उद्योग) - ये India की बहुत strong industry है! India को 'PHARMACY OF THE WORLD' कहते हैं क्योंकि हम generic medicines का सबसे बड़ा producer हैं - दुनिया भर में export करते हैं, खासकर developing countries को affordable medicines!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir generic medicine kya hoti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Generic = बिना brand के, सस्ती medicines जो same composition की होती हैं। India pharma में globally 3rd position पर है (volume में), value में 14th। Major pharma hubs: HYDERABAD (सबसे बड़ा - 'Pharma City'), Maharashtra (Pune, Mumbai), Gujarat (Ahmedabad), Goa। ⭐ UPSC: India vaccines production में भी leader है - COVID vaccines (Covaxin, Covishield) याद hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan sir! India ne poori duniya ko vaccines di!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_quiz_chemical_1",
+        "button_text": "Quiz Time ➔"
+      }
+    },
+    {
+      "card_id": "card_35_quiz_chemical_1",
+      "card_slug": "card_35_quiz_chemical_1",
+      "type": "quiz",
+      "concept_id": "chemical_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "दुनिया की सबसे बड़ी oil refinery (capacity में) कहाँ स्थित है?",
+        "options": [
+          {"id": "A", "text": "Mumbai High, Maharashtra"},
+          {"id": "B", "text": "Jamnagar, Gujarat (Reliance)"},
+          {"id": "C", "text": "Digboi, Assam"},
+          {"id": "D", "text": "Visakhapatnam, Andhra Pradesh"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "दुनिया की सबसे बड़ी oil refinery (refining capacity के आधार पर) JAMNAGAR (Gujarat) में स्थित है - यह RELIANCE की है। इसकी combined capacity लगभग 1.24 million barrels per day है। यहीं पर विशाल petrochemical complex भी है। Digboi (Assam) भारत की सबसे पुरानी refinery है (1901)। Mumbai High एक offshore oil field है, refinery नहीं। ⭐ SSC और Railway में यह factual question बहुत बार आया है - Jamnagar, Reliance याद रखें!"
+      },
+      "navigation": {
+        "next": "card_36_quiz_chemical_2",
+        "button_text": "Next (Q2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_36_quiz_chemical_2",
+      "card_slug": "card_36_quiz_chemical_2",
+      "type": "quiz",
+      "concept_id": "chemical_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत की पहली fertilizer plant कहाँ और कब स्थापित हुई?",
+        "options": [
+          {"id": "A", "text": "1951, Sindri (अब झारखंड)"},
+          {"id": "B", "text": "1960, Trombay (Maharashtra)"},
+          {"id": "C", "text": "1965, Barauni (Bihar)"},
+          {"id": "D", "text": "1950, Nangal (Punjab)"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "भारत की पहली fertilizer plant 1951 में SINDRI (तब बिहार में, अब झारखंड में) स्थापित हुई। यह ammonium sulphate और urea बनाती थी। ⭐ BPSC Important: 2000 में झारखंड अलग होने से पहले Sindri बिहार का गौरव था। अब यह plant बंद हो चुकी है लेकिन इसका historical importance बहुत है। Barauni (Bihar) में भी बाद में fertilizer plant आया। SSC और UPSC में 'First fertilizer plant' - Sindri, 1951 जरूर पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_37_quiz_chemical_3",
+        "button_text": "Next (Q3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_chemical_3",
+      "card_slug": "card_37_quiz_chemical_3",
+      "type": "quiz",
+      "concept_id": "chemical_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत को 'Pharmacy of the World' क्यों कहा जाता है?",
+        "options": [
+          {"id": "A", "text": "सबसे ज्यादा medicines consume करता है"},
+          {"id": "B", "text": "Generic medicines का सबसे बड़ा producer और exporter"},
+          {"id": "C", "text": "सबसे महंगी medicines बनाता है"},
+          {"id": "D", "text": "सबसे पुरानी pharma industry है"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "भारत को 'PHARMACY OF THE WORLD' कहा जाता है क्योंकि India GENERIC MEDICINES (affordable, non-branded medicines) का दुनिया का सबसे बड़ा producer और exporter है। भारत दुनिया भर में, खासकर developing countries को, सस्ती और quality medicines supply करता है। Volume के हिसाब से India 3rd largest pharma producer है। COVID-19 के दौरान भारत ने vaccines (Covaxin, Covishield) का भी बड़े पैमाने पर उत्पादन और export किया। ⭐ UPSC Prelims में India's pharma sector बहुत पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_38_milestone_4",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_38_milestone_4",
+      "card_slug": "card_38_milestone_4",
+      "type": "milestone",
+      "concept_id": "module_4_complete",
+      "level": 3,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 CHEMICAL INDUSTRIES CONQUERED!",
+        "badge_emoji": "🧪",
+        "completed_topic": "Petrochemicals, Fertilizers, Pharma",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/7 Clear",
+        "motivational_quote": "Fantastic! Chemical sector complete! Ab modern industries - Automobile aur IT/Software - India ki growth engines! Let's go! 🚗💻"
+      },
+      "navigation": {
+        "next": "card_39_automobile_intro",
+        "button_text": "Automobile Industry ➔"
+      }
+    },
+    {
+      "card_id": "card_39_automobile_intro",
+      "card_slug": "card_39_automobile_intro",
+      "type": "chat",
+      "concept_id": "automobile_industry_intro",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, sadak par kitni gadiyan dekhte ho - cars, bikes, trucks, buses! AUTOMOBILE INDUSTRY India की fastest growing industries mein se ek hai। India automobile production में दुनिया में 4th position पर है (China, USA, Japan ke baad)। Two-wheelers में तो India LARGEST producer है globally!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! India itni gadiyan banata hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! India में automobile industry 1940s में शुरू हुई - Premier Automobiles (Mumbai) aur Hindustan Motors (Kolkata - famous 'Ambassador' car!)। But real growth 1980s-90s के बाद आई जब foreign companies (Maruti-Suzuki, Hyundai) India आईं। Ab India domestic demand + export dono ke lिए produce karta hai।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Maruti kab aayi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_maruti_liberalization",
+        "button_text": "Maruti Story ➔"
+      }
+    },
+    {
+      "card_id": "card_40_maruti_liberalization",
+      "card_slug": "card_40_maruti_liberalization",
+      "type": "chat",
+      "concept_id": "maruti_suzuki_history",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MARUTI SUZUKI 1983 में शुरू हुई - Japan की Suzuki company के साथ joint venture (Government of India + Suzuki)। Maruti 800 car ने Indian market में revolution la diya - affordable, fuel-efficient! ⭐ UPSC Context: 1991 में Economic LIBERALIZATION के बाद foreign companies openly India आईं - automobile sector boom हो गया। GURUGRAM (Haryana - पहले Gurgaon) Maruti का hub बना!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab kaun kaun si companies hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut saari! Passenger cars: Maruti Suzuki (leader - 40%+ market share), Hyundai, Tata Motors, Mahindra, Honda। Two-wheelers: Hero MotoCorp (largest), Bajaj, TVS, Honda। Commercial vehicles: Tata Motors, Ashok Leyland। Major hubs: HARYANA (Gurugram, Manesar), TAMIL NADU (Chennai - 'Detroit of India'), MAHARASHTRA (Pune), GUJARAT (Sanand)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chennai ko Detroit kyun kehte hain sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_chennai_detroit",
+        "button_text": "Detroit Connection ➔"
+      }
+    },
+    {
+      "card_id": "card_41_chennai_detroit",
+      "card_slug": "card_41_chennai_detroit",
+      "type": "chat",
+      "concept_id": "chennai_detroit_india",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Detroit (USA) automobile industry का global center था। Chennai में bahut saari car companies hain - Hyundai, Ford (band ho gayi), Renault-Nissan, BMW, Daimler। Tamil Nadu में auto-component manufacturers bhi hain, isliye 'DETROIT OF INDIA' / 'DETROIT OF ASIA' bolte hain! ⭐ SSC Favorite Question: 'Detroit of India' = Chennai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Noted sir! Ab IT industry ke baare mein bataiye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut badhiya! IT/SOFTWARE INDUSTRY India ki सबसे successful modern industry है - इसने India को globally brand kiya! India IT services aur software export में world leader hai। IT industry GDP में लगभग 8% contribute करती है और crores of jobs देती है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bangalore ka kya role hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_it_bangalore",
+        "button_text": "IT Hub Bangalore ➔"
+      }
+    },
+    {
+      "card_id": "card_42_it_bangalore",
+      "card_slug": "card_42_it_bangalore",
+      "type": "chat",
+      "concept_id": "bangalore_silicon_valley",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BANGALORE (अब Bengaluru) को 'SILICON VALLEY OF INDIA' कहते हैं! Silicon Valley California (USA) में है जहां सारी tech companies हैं - Google, Apple, Facebook। India में Bangalore IT का biggest hub है - Infosys, Wipro, TCS के बड़े offices यहीं हैं। Pleasant climate, good infrastructure, IITs/IIMs से talent pool - sab factors perfect!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sirf Bangalore mein hi IT hai kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi nahi! Other major IT hubs: HYDERABAD (HITEC City - Microsoft, Google), PUNE (Maharashtra), CHENNAI, NCR (Noida, Gurugram), KOLKATA (Sector V)। ⭐ BPSC TRE: Bihar mein bhi IT sector develop ho raha hai - Patna में software companies aa rahi hain, but scale अभी छोटा है। Government IT parks develop kar rahi hai।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Good! Bihar bhi progress kar raha hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_quiz_modern_1",
+        "button_text": "Modern Industries Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_43_quiz_modern_1",
+      "card_slug": "card_43_quiz_modern_1",
+      "type": "quiz",
+      "concept_id": "modern_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "'Detroit of India' किस शहर को कहा जाता है?",
+        "options": [
+          {"id": "A", "text": "Gurugram (Maruti hub)"},
+          {"id": "B", "text": "Chennai (automobile cluster)"},
+          {"id": "C", "text": "Pune (multiple manufacturers)"},
+          {"id": "D", "text": "Mumbai (port city)"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "CHENNAI (Tamil Nadu) को 'DETROIT OF INDIA' या 'DETROIT OF ASIA' कहा जाता है क्योंकि यहां बहुत सारी automobile companies हैं - Hyundai, Renault-Nissan, BMW, Daimler (Ford बंद हो गई)। Detroit (USA) दुनिया का famous automobile hub है। Chennai में auto-component industry भी बहुत developed है। ⭐ SSC CGL और Railway में यह nickname बार-बार पूछा जाता है - Chennai = Detroit of India याद रखें!"
+      },
+      "navigation": {
+        "next": "card_44_quiz_modern_2",
+        "button_text": "Next (Q2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_44_quiz_modern_2",
+      "card_slug": "card_44_quiz_modern_2",
+      "type": "quiz",
+      "concept_id": "modern_quiz_2",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "'Silicon Valley of India' किसे कहते हैं?",
+        "options": [
+          {"id": "A", "text": "Hyderabad (HITEC City)"},
+          {"id": "B", "text": "Pune (IT hub)"},
+          {"id": "C", "text": "Bengaluru (Bangalore)"},
+          {"id": "D", "text": "Noida (NCR region)"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "BENGALURU (पहले Bangalore - Karnataka) को 'SILICON VALLEY OF INDIA' कहते हैं। यह भारत का सबसे बड़ा IT/Software hub है। Silicon Valley California (USA) में tech companies का global center है - वहां से inspire होकर Bangalore को यह nickname मिला। Infosys, Wipro, TCS जैसी बड़ी IT companies के headquarters/major offices यहीं हैं। Pleasant climate, skilled workforce, और excellent infrastructure के कारण Bangalore IT industry के लिए ideal है। ⭐ BPSC और SSC में यह बहुत पूछा जाने वाला question है!"
+      },
+      "navigation": {
+        "next": "card_45_quiz_modern_3",
+        "button_text": "Next (Q3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz_modern_3",
+      "card_slug": "card_45_quiz_modern_3",
+      "type": "quiz",
+      "concept_id": "modern_quiz_3",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Maruti Suzuki की स्थापना कब हुई और इसने कौन सी car से Indian market में क्रांति लाई?",
+        "options": [
+          {"id": "A", "text": "1980, Maruti Alto"},
+          {"id": "B", "text": "1983, Maruti 800"},
+          {"id": "C", "text": "1990, Maruti Omni"},
+          {"id": "D", "text": "1975, Ambassador"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "MARUTI SUZUKI की स्थापना 1983 में हुई - यह Government of India और Japan की Suzuki company का joint venture था। MARUTI 800 car ने Indian automobile market में revolution ला दिया - यह affordable, fuel-efficient, और reliable थी। 1983 से लेकर decades तक Maruti 800 India की सबसे popular car रही। Ambassador Hindustan Motors की car थी (पुरानी)। 1991 के economic liberalization के बाद automobile sector में और तेजी आई। ⭐ UPSC और SSC में Maruti Suzuki का history पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_46_milestone_5",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_46_milestone_5",
+      "card_slug": "card_46_milestone_5",
+      "type": "milestone",
+      "concept_id": "module_5_complete",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODERN INDUSTRIES MASTERED!",
+        "badge_emoji": "🚗",
+        "completed_topic": "Automobile & IT Industries",
+        "xp_earned": 70,
+        "milestone_progress": "Module 5/7 Clear",
+        "motivational_quote": "Superb progress! Ab crucial topics - Industrial Regions of India aur Government Policies! Ye BPSC aur UPSC ke liye bahut important hain! 🗺️"
+      },
+      "navigation": {
+        "next": "card_47_industrial_regions",
+        "button_text": "Industrial Regions ➔"
+      }
+    },
+    {
+      "card_id": "card_47_industrial_regions",
+      "card_slug": "card_47_industrial_regions",
+      "type": "chat",
+      "concept_id": "industrial_regions_intro",
+      "level": 4,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, India mein industries uniformly नहीं फैली हैं - kuch regions mein bahut concentration hai। Ye INDUSTRIAL REGIONS kehlaते हैं। Main factors: raw material, power, transport, market, skilled labour। India ke MAJOR industrial regions dekho: (1) MUMBAI-PUNE belt (Maharashtra), (2) BANGALORE-CHENNAI belt (South), (3) HOOGHLY belt (Kolkata around), (4) AHMEDABAD-VADODARA belt (Gujarat), (5) DELHI-NCR region।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Mumbai-Pune mein kya kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_mumbai_pune",
+        "button_text": "Mumbai-Pune Belt ➔"
+      }
+    },
+    {
+      "card_id": "card_48_mumbai_pune",
+      "card_slug": "card_48_mumbai_pune",
+      "type": "chat",
+      "concept_id": "mumbai_pune_belt",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MUMBAI-PUNE BELT सबसे diversified industrial region है! Mumbai: PORT (import-export), textiles (historically), petrochemicals, pharmaceuticals, engineering। Pune: automobiles (lots of companies), IT, engineering। Thane-Nashik bhi industrial hain। Advantage: Port, capital availability, skilled labour, good connectivity। ⭐ BPSC: Mumbai India की 'Financial Capital' bhi hai - BSE (Bombay Stock Exchange), RBI headquarters!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Kolkata wala belt?"
+        },
+        {
+          "speaker": "aman",
+          "text": "HOOGHLY BELT (Kolkata around - West Bengal): India का सबसे OLDEST industrial region! British time से developed। Jute mills, engineering (Chittaranjan Locomotive Works), chemicals, pharmaceuticals। Problem: purana infrastructure, कुछ decline hua hai। But still significant!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Kolkata pehle bahut important tha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_other_regions",
+        "button_text": "Other Regions ➔"
+      }
+    },
+    {
+      "card_id": "card_49_other_regions",
+      "card_slug": "card_49_other_regions",
+      "type": "chat",
+      "concept_id": "other_industrial_regions",
+      "level": 4,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! Kolkata British India की capital thi। Ab baki: AHMEDABAD-VADODARA (Gujarat): Textiles, petrochemicals, pharmaceuticals, chemicals - port (Kandla) access। BANGALORE-CHENNAI: IT-Software (Bangalore), automobiles (Chennai), aerospace, electronics। DELHI-NCR: Automobiles (Gurugram, Manesar), IT (Noida), electronics, light engineering। ⭐ UPSC: New industrial regions emerge kar rahe hain - Visakhapatnam (Andhra), Kochi (Kerala)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir government industries ko promote kaise karti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_industrial_policy",
+        "button_text": "Industrial Policies ➔"
+      }
+    },
+    {
+      "card_id": "card_50_industrial_policy",
+      "card_slug": "card_50_industrial_policy",
+      "type": "chat",
+      "concept_id": "industrial_policy_intro",
+      "level": 5,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut important sawal! Government INDUSTRIAL POLICIES laati hai। Major milestones: (1) INDUSTRIAL POLICY RESOLUTION 1948 - independence ke baad, mixed economy model (public + private dono), (2) INDUSTRIAL POLICY 1956 - heavy industries ko public sector mein rakha, (3) LIBERALIZATION 1991 - private sector ko boost, license raj khatam, FDI allowed। ⭐ UPSC ka favorite - 1991 reforms!"
+        },
+        {
+          "speaker": "raju",
+          "text": "1991 mein kya hua tha sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "1991 mein India economic crisis mein tha - foreign exchange reserves almost khatam! Tab Dr. MANMOHAN SINGH (Finance Minister, PM Narasimha Rao के under) ne ECONOMIC LIBERALIZATION ki - LPG reforms: Liberalization, Privatization, Globalization। License system remove, foreign companies ko welcome, PSUs को disinvest। Result: economy boom hui, GDP growth badhi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh 1991 turning point tha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_make_in_india",
+        "button_text": "Modern Initiatives ➔"
+      }
+    },
+    {
+      "card_id": "card_51_make_in_india",
+      "card_slug": "card_51_make_in_india",
+      "type": "chat",
+      "concept_id": "make_in_india_initiatives",
+      "level": 5,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Absolutely! Ab modern initiatives: (1) MAKE IN INDIA (2014) - manufacturing ko boost, 'Made in India' products promote, FDI attract करना। (2) STARTUP INDIA (2016) - new entrepreneurs ko support, tax benefits, funding। (3) ATMANIRBHAR BHARAT (2020) - self-reliant India, especially post-COVID, domestic manufacturing strengthen। (4) PLI Scheme (Production Linked Incentive) - specific sectors (electronics, pharma, auto) ko incentives।"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Bihar mein koi special industrial policy hai kya sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_bihar_industrial_policy",
+        "button_text": "Bihar Industrial Policy ➔"
+      }
+    },
+    {
+      "card_id": "card_52_bihar_industrial_policy",
+      "card_slug": "card_52_bihar_industrial_policy",
+      "type": "chat",
+      "concept_id": "bihar_industrial_policy",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Very Important: हां! Bihar Industrial Investment Promotion Policy - समय-समय पर update होती है। उद्देश्य: (1) New industries attract करना (tax exemptions, subsidies), (2) Food processing को promote (बिहार agri-based state है), (3) IT/ITES parks develop करना, (4) MSME sector को strengthen करना। Challenges: Infrastructure deficit, power shortage (improving), skilled labour migration (reverse migration efforts)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Bihar mein kaun se sectors promising hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "FOOD PROCESSING (फल-सब्जी, dairy - Sudha brand famous), TEXTILES (Bhagalpur silk), LEATHER (export potential), TOURISM-based industries, IT (slowly growing), ETHANOL production (गन्ना से)। Government industrial corridors plan kar rahi hai - Patna-Bihta, Hajipur areas। ⭐ BPSC TRE में Bihar की industrial potential और challenges दोनों पूछे जाते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Potential hai, infrastructure chahiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_industrial_problems",
+        "button_text": "Industrial Problems ➔"
+      }
+    },
+    {
+      "card_id": "card_53_industrial_problems",
+      "card_slug": "card_53_industrial_problems",
+      "type": "chat",
+      "concept_id": "industrial_problems_india",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ab India की industrial sector ki GENERAL PROBLEMS dekho: (1) INFRASTRUCTURE gaps (roads, ports, power), (2) SKILL shortage (trained workforce ki kami), (3) ENVIRONMENTAL concerns (pollution, waste), (4) REGIONAL imbalance (कुछ areas developed, कुछ backward), (5) Technology upgradation (old machinery), (6) Finance access (MSMEs को loans mushkil)। Government schemes इन problems address kar rahi hain।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir environmental pollution ki problem serious hai na?"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_environmental_concerns",
+        "button_text": "Environmental Angle ➔"
+      }
+    },
+    {
+      "card_id": "card_54_environmental_concerns",
+      "card_slug": "card_54_environmental_concerns",
+      "type": "chat",
+      "concept_id": "industrial_pollution",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut serious! Industrial pollution 3 types: (1) AIR pollution (factories se smoke, chemicals), (2) WATER pollution (industrial waste नदियों में), (3) SOIL pollution (toxic chemicals)। Examples: Yamuna river (Delhi industrial waste), Ganga (tanneries, chemical units), Bhopal Gas Tragedy (1984 - Union Carbide)। ⭐ UPSC: Bhopal Gas Tragedy दुनिया की worst industrial disaster - thousands मरे!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Solution kya hai sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "GREEN TECHNOLOGIES adopt करना - cleaner production, renewable energy use, waste treatment plants mandatory, POLLUTION CONTROL BOARDS (State PCBs, Central PCB) monitoring करते हैं, strict environmental laws (Environment Protection Act 1986), industries को EIA (Environmental Impact Assessment) mandatory। Sustainable development zaroori hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_quiz_policy_1",
+        "button_text": "Final Quiz Round ➔"
+      }
+    },
+    {
+      "card_id": "card_55_quiz_policy_1",
+      "card_slug": "card_55_quiz_policy_1",
+      "type": "quiz",
+      "concept_id": "policy_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत में Economic Liberalization किस वर्ष शुरू हुई और किसने इसे लागू किया?",
+        "options": [
+          {"id": "A", "text": "1985, Rajiv Gandhi"},
+          {"id": "B", "text": "1991, Dr. Manmohan Singh (FM under PM Narasimha Rao)"},
+          {"id": "C", "text": "2000, Atal Bihari Vajpayee"},
+          {"id": "D", "text": "1980, Indira Gandhi"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "भारत में ECONOMIC LIBERALIZATION 1991 में शुरू हुई। Dr. MANMOHAN SINGH (तत्कालीन Finance Minister, PM P.V. Narasimha Rao की सरकार में) ने LPG reforms (Liberalization, Privatization, Globalization) लागू किए। 1991 में India आर्थिक संकट में था - foreign exchange reserves लगभग खत्म। Liberalization के बाद license raj समाप्त, FDI allowed, private sector को boost मिला, और Indian economy तेजी से grow हुई। ⭐ UPSC और BPSC में 1991 reforms बहुत महत्वपूर्ण topic है!"
+      },
+      "navigation": {
+        "next": "card_56_quiz_policy_2",
+        "button_text": "Next (Q2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_56_quiz_policy_2",
+      "card_slug": "card_56_quiz_policy_2",
+      "type": "quiz",
+      "concept_id": "policy_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ 'Make in India' initiative कब launch हुई और इसका मुख्य उद्देश्य क्या है?",
+        "options": [
+          {"id": "A", "text": "2010, Service sector को promote करना"},
+          {"id": "B", "text": "2014, Manufacturing sector को boost करना और FDI attract करना"},
+          {"id": "C", "text": "2016, Startup ecosystem develop करना"},
+          {"id": "D", "text": "2020, आत्मनिर्भरता achieve करना"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "'MAKE IN INDIA' initiative 2014 में (PM Narendra Modi की सरकार द्वारा) launch हुई। इसका मुख्य उद्देश्य: (1) MANUFACTURING sector को boost करना, (2) Foreign Direct Investment (FDI) attract करना, (3) 'Made in India' products को globally promote करना, (4) रोजगार सृजन करना। Target: Manufacturing को GDP में 25% तक ले जाना। 'Startup India' 2016 में आई (option C), 'Atmanirbhar Bharat' 2020 में (option D)। ⭐ SSC और Railway में government schemes और उनके launch year जरूर पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_57_quiz_policy_3",
+        "button_text": "Next (Q3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_57_quiz_policy_3",
+      "card_slug": "card_57_quiz_policy_3",
+      "type": "quiz",
+      "concept_id": "policy_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ UPSC: 1984 की Bhopal Gas Tragedy किस company से संबंधित थी?",
+        "options": [
+          {"id": "A", "text": "Dow Chemical"},
+          {"id": "B", "text": "Union Carbide India Limited"},
+          {"id": "C", "text": "BASF India"},
+          {"id": "D", "text": "Hindustan Insecticides Limited"}
+        ],
+        "correct_option_id": "B",
+        "explanation": "1984 की Bhopal Gas Tragedy (2-3 December, 1984) UNION CARBIDE INDIA LIMITED की pesticide plant से संबंधित थी। Methyl Isocyanate (MIC) gas leak हुई जिससे हजारों लोगों की मौत हुई और लाखों प्रभावित हुए। यह दुनिया की WORST INDUSTRIAL DISASTER मानी जाती है। Bhopal (Madhya Pradesh) में हुई। बाद में Union Carbide को Dow Chemical ने acquire किया लेकिन tragedy के समय Union Carbide जिम्मेदार थी। ⭐ UPSC Prelims में industrial disasters और environmental issues जरूर आते हैं!"
+      },
+      "navigation": {
+        "next": "card_58_milestone_6",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_58_milestone_6",
+      "card_slug": "card_58_milestone_6",
+      "type": "milestone",
+      "concept_id": "module_6_complete",
+      "level": 5,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 INDUSTRIAL POLICIES & REGIONS MASTERED!",
+        "badge_emoji": "🗺️",
+        "completed_topic": "Regions, Policies, Problems & Solutions",
+        "xp_earned": 70,
+        "milestone_progress": "Module 6/7 Clear",
+        "motivational_quote": "Outstanding! Ab last module - MSME sector aur cottage industries! These are heart of Indian economy! Final push! 💪"
+      },
+      "navigation": {
+        "next": "card_59_msme_intro",
+        "button_text": "MSME & Cottage Industries ➔"
+      }
+    },
+    {
+      "card_id": "card_59_msme_intro",
+      "card_slug": "card_59_msme_intro",
+      "type": "chat",
+      "concept_id": "msme_introduction",
+      "level": 5,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, jab hum Tata Steel ya Reliance ki baat karte hain toh ye LARGE industries hain। Lekin India की economy ka BACKBONE actually SMALL industries hain - MSME! MSME = Micro, Small & Medium Enterprises। Ye छोटी-मध्यम factories/units hain jo employment generation में SABSE ZYADA contribute karti hain - लगभग 11 crore+ jobs!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Micro, Small, Medium mein kya difference hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_msme_classification",
+        "button_text": "Classification ➔"
+      }
+    },
+    {
+      "card_id": "card_60_msme_classification",
+      "card_slug": "card_60_msme_classification",
+      "type": "chat",
+      "concept_id": "msme_classification_detail",
+      "level": 5,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "INVESTMENT aur TURNOVER ke basis par classify hote hain (2020 revision): MICRO - Investment < ₹1 crore, Turnover < ₹5 crore। SMALL - Investment < ₹10 crore, Turnover < ₹50 crore। MEDIUM - Investment < ₹50 crore, Turnover < ₹250 crore। ⭐ UPSC Important: पहले sirf investment देखते थे, अब turnover भी criteria है। MSME sector GDP में लगभग 30% contribute करता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Itna bada contribution!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Examples: Local bakery, printing press, garment units, furniture workshops, auto parts manufacturers - ye sab MSMEs hain। Ab COTTAGE INDUSTRIES - ye तो घरों में ही बनती हैं, family members काम करते हैं। Examples: Handicrafts, pottery, weaving, embroidery। ⭐ BPSC TRE: Bihar की Madhubani painting, Sujani embroidery, Bhagalpur silk - sab cottage industries!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir cottage industries ki kya importance hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_61_cottage_importance",
+        "button_text": "Cottage Industries Role ➔"
+      }
+    },
+    {
+      "card_id": "card_61_cottage_importance",
+      "card_slug": "card_61_cottage_importance",
+      "type": "chat",
+      "concept_id": "cottage_industries_importance",
+      "level": 5,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Cottage industries बहुत important हैं: (1) EMPLOYMENT - especially rural areas aur women को, (2) LOW CAPITAL - zyada investment nahi chahiye, (3) SKILL PRESERVATION - traditional arts bachti hain, (4) EXPORT potential - Indian handicrafts globally famous, (5) REGIONAL BALANCE - backward areas mein bhi ho sakti hain। Government Khadi and Village Industries Commission (KVIC) के through promote karti hai।"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Sir Bihar mein GI Tag wali products kaun si hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_bihar_gi_tags",
+        "button_text": "Bihar GI Products ➔"
+      }
+    },
+    {
+      "card_id": "card_62_bihar_gi_tags",
+      "card_slug": "card_62_bihar_gi_tags",
+      "type": "chat",
+      "concept_id": "bihar_gi_tag_products",
+      "level": 5,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Super Important! Bihar की GI Tag (Geographical Indication) प्राप्त products: (1) BHAGALPUR SILK (Tussar silk), (2) MADHUBANI PAINTING (Mithila art), (3) SUJANI EMBROIDERY (traditional stitching), (4) KATARNI RICE (aromatic rice - Katihar/Purnea), (5) MAGAHI PAAN, (6) SHAHI LITCHI (Muzaffarpur)। GI Tag मतलब ये products सिर्फ उन specific regions में ही authentically बनते/उगते हैं - legal protection मिलता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab fake product नहीं बन सकता!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! GI Tag quality aur authenticity guarantee करता है। ⭐ BPSC TRE में Bihar के GI products और उनके districts जरूर पूछे जाते हैं - Bhagalpur = Silk, Madhubani = Painting, Muzaffarpur = Litchi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Noted sir! Bahut important hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_msme_problems",
+        "button_text": "MSME Challenges ➔"
+      }
+    },
+    {
+      "card_id": "card_63_msme_problems",
+      "card_slug": "card_63_msme_problems",
+      "type": "chat",
+      "concept_id": "msme_challenges",
+      "level": 5,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MSMEs aur cottage industries ko kaafi problems face karni padti hain: (1) CREDIT/FINANCE - banks se loan milna mushkil (collateral nahi hota), (2) TECHNOLOGY - outdated machinery, (3) MARKETING - large companies compete karna mushkil, (4) RAW MATERIAL - costly aur irregular supply, (5) SKILLED LABOUR shortage, (6) GST compliance burden (छोटी units के लिए)। Government schemes se help kar rahi hai।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Government kya schemes hain sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_64_msme_schemes",
+        "button_text": "Government Schemes ➔"
+      }
+    },
+    {
+      "card_id": "card_64_msme_schemes",
+      "card_slug": "card_64_msme_schemes",
+      "type": "chat",
+      "concept_id": "msme_government_schemes",
+      "level": 5,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MSME support schemes: (1) MUDRA YOJANA (Micro Units Development & Refinance Agency) - small loans for micro enterprises (Shishu, Kishor, Tarun categories), (2) CREDIT GUARANTEE SCHEME - collateral-free loans, (3) PM VISHWAKARMA SCHEME (2023) - traditional artisans/craftspeople को toolkits, training, credit, (4) STAND-UP INDIA - SC/ST/Women entrepreneurs को loans, (5) TECHNOLOGY UPGRADATION schemes। ⭐ SSC Favorite: Mudra Yojana!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir PM Vishwakarma kya hai? Ye naya hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! 2023 में launch hua - specially traditional artisans (carpenters, blacksmiths, potters, weavers, cobblers) के लिए। Unhe skill training, modern tools, collateral-free loans (up to ₹3 lakh) milते हैं। ⭐ BPSC/SSC में latest schemes पूछी जाती हैं - PM Vishwakarma याद रखो!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Traditional skills ko modernize karna!"
+        }
+      ],
+      "navigation": {
+        "next": "card_65_quiz_msme_1",
+        "button_text": "Final Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_65_quiz_msme_1",
+      "card_slug": "card_65_quiz_msme_1",
+      "type": "quiz",
+      "concept_id": "msme_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "MSME sector भारत की GDP में लगभग कितना योगदान देता है?",
+        "options": [
+          {"id": "A", "text": "लगभग 10%"},
+          {"id": "B", "text": "लगभग 20%"},
+          {"id": "C", "text": "लगभग 30%"},
+          {"id": "D", "text": "लगभग 50%"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "MSME sector (Micro, Small & Medium Enterprises) भारत की GDP में लगभग 30% योगदान देता है। यह सबसे बड़ा EMPLOYMENT GENERATOR भी है - लगभग 11 करोड़+ jobs create करता है। MSMEs manufacturing output में लगभग 45% और exports में लगभग 40% contribute करते हैं। ये छोटी-मध्यम इकाइयां हैं लेकिन Indian economy की रीढ़ हैं। ⭐ BPSC और SSC में MSME का economic contribution जरूर पूछा जाता है - 30% GDP याद रखें!"
+      },
+      "navigation": {
+        "next": "card_66_quiz_msme_2",
+        "button_text": "Next (Q2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_66_quiz_msme_2",
+      "card_slug": "card_66_quiz_msme_2",
+      "type": "quiz",
+      "concept_id": "msme_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: निम्नलिखित में से कौन सा बिहार का GI Tag प्राप्त product NAHI है?",
+        "options": [
+          {"id": "A", "text": "Bhagalpur Silk"},
+          {"id": "B", "text": "Madhubani Painting"},
+          {"id": "C", "text": "Banarasi Saree"},
+          {"id": "D", "text": "Katarni Rice"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "BANARASI SAREE उत्तर प्रदेश (Varanasi/Banaras) की GI Tag product है, बिहार की नहीं। Bihar के GI Tag products: (1) BHAGALPUR SILK (Tussar Silk), (2) MADHUBANI PAINTING (Mithila Art), (3) SUJANI EMBROIDERY, (4) KATARNI RICE (Katihar), (5) MUZAFFARPUR SHAHI LITCHI, (6) MAGAHI PAAN। ⭐ BPSC TRE में Bihar vs neighboring states के GI products में confusion-based questions आते हैं - ध्यान से याद रखें!"
+      },
+      "navigation": {
+        "next": "card_67_quiz_msme_3",
+        "button_text": "Next (Q3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_67_quiz_msme_3",
+      "card_slug": "card_67_quiz_msme_3",
+      "type": "quiz",
+      "concept_id": "msme_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ PM Vishwakarma Scheme (2023) किस category के लिए विशेष रूप से बनाई गई है?",
+        "options": [
+          {"id": "A", "text": "IT Startups"},
+          {"id": "B", "text": "Large Manufacturing Units"},
+          {"id": "C", "text": "Traditional Artisans and Craftspeople"},
+          {"id": "D", "text": "Export-oriented Industries"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "PM VISHWAKARMA SCHEME (2023 में launch) विशेष रूप से TRADITIONAL ARTISANS और CRAFTSPEOPLE के लिए बनाई गई है - जैसे carpenters (बढ़ई), blacksmiths (लोहार), potters (कुम्हार), weavers (बुनकर), cobblers (मोची), sculptors। उद्देश्य: (1) Skill training, (2) Modern toolkits provide करना, (3) Collateral-free loans (up to ₹3 lakh), (4) Traditional skills को modernize करना। ⭐ SSC और BPSC में latest government schemes और उनके target beneficiaries पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_68_milestone_7",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_68_milestone_7",
+      "card_slug": "card_68_milestone_7",
+      "type": "milestone",
+      "concept_id": "module_7_complete",
+      "level": 5,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 ALL MODULES COMPLETED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "MSME, Cottage Industries & GI Tags",
+        "xp_earned": 70,
+        "milestone_progress": "Module 7/7 Clear ✅",
+        "motivational_quote": "PHENOMENAL! Tumne पूरा Industries chapter master kar liya - Agro-based se लेकर IT तक, Tata Steel से लेकर Madhubani painting तक! Ab final Officer revision aur ultimate quiz! 🚀"
+      },
+      "navigation": {
+        "next": "card_69_officer_revision",
+        "button_text": "Officer Revision ⚡"
+      }
+    },
+    {
+      "card_id": "card_69_officer_revision",
+      "card_slug": "card_69_officer_revision",
+      "type": "summary",
+      "concept_id": "chapter_revision",
+      "level": 5,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER-LEVEL LIGHTNING REVISION",
+        "revision_points": [
+          {
+            "topic": "Industry Classification & Major Industries",
+            "point": "Raw Material Based: Agro (Cotton-Ahmedabad/Mumbai, Jute-Kolkata, Sugar-UP/Maharashtra, Tea), Mineral (Iron&Steel, Cement, Aluminium), Marine, Forest। Size: Small/Large/Cottage। Ownership: Public (SAIL)/Private (Tata)/Joint। ⭐ BPSC TRE: Bihar - Bhagalpur Silk, Sugar mills (Marhaura, Motipur), Cement (Kaimur-Rohtas), No major steel (lost to Jharkhand 2000)"
+          },
+          {
+            "topic": "Cotton & Jute (Agro-Based)",
+            "point": "Cotton: Oldest organized industry। First mill - 1854 Mumbai (Bombay Spinning)। Manchester of India = Ahmedabad (current), Mumbai (historical)। Major: Gujarat, Maharashtra, TN, WB। Jute: Golden Fibre। First mill - 1855 Rishra (Kolkata)। Hooghly river (soft water)। India 1st in jute goods manufacturing। ⭐ SSC Trap: 1854 Cotton vs 1855 Jute"
+          },
+          {
+            "topic": "Sugar, Steel, Cement (Critical Industries)",
+            "point": "Sugar: 2nd largest agro-industry। Seasonal (Oct-Mar)। Raw material oriented (perishable ganna)। UP 1st (50%), Maharashtra 2nd। ⭐ BPSC: Bihar sugar mills revival issues। Steel: Basic industry। 1st plant = Tata Steel, Jamshedpur, 1907। SAIL plants: Bhilai, Bokaro, Rourkela, Durgapur (1950s-60s)। Cement: Limestone-based। Rajasthan, MP leaders। ⭐ Bihar: Limestone in Kaimur-Rohtas-Munger"
+          },
+          {
+            "topic": "Chemical, Pharma, Automobile, IT",
+            "point": "Petrochemicals: Jamnagar (Reliance - world's largest refinery)। Fertilizers: Urea (46% N) most used। 1st plant = Sindri 1951 (now Jharkhand)। Pharma: 'Pharmacy of World' - generic medicines leader। Hyderabad pharma hub। Auto: 4th globally। Maruti 1983 (Maruti 800)। Gurugram, Chennai (Detroit of India), Pune। IT: Bangalore (Silicon Valley), Hyderabad (HITEC), Pune, Chennai। ⭐ 1991 Liberalization (Manmohan Singh) - turning point"
+          },
+          {
+            "topic": "Industrial Regions, Policies & MSME",
+            "point": "Regions: Mumbai-Pune (diversified), Hooghly (oldest), Ahmedabad-Vadodara (petrochem), Bangalore-Chennai (IT-Auto), Delhi-NCR। Policies: 1948 (mixed economy), 1956 (heavy in public), 1991 Liberalization (LPG reforms), Make in India 2014, PM Vishwakarma 2023 (artisans)। MSME: 30% GDP, 11cr+ jobs। ⭐ BPSC TRE: Bihar GI Tags - Bhagalpur Silk, Madhubani Painting, Katarni Rice, Muzaffarpur Litchi, Sujani, Magahi Paan"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_70_final_quiz",
+        "button_text": "Final Officer Quiz 🎯"
+      }
+    },
+    {
+      "card_id": "card_70_final_quiz",
+      "card_slug": "card_70_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_assessment",
+      "level": 5,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC OFFICER LEVEL (Multi-Statement):\n\nनिम्नलिखित कथनों पर विचार कीजिए:\n\n1. भारत की पहली आधुनिक cotton textile mill 1854 में Mumbai में स्थापित हुई।\n2. भारत की पहली modern steel plant Bhilai (Chhattisgarh) थी।\n3. बिहार में Limestone मुख्यतः Kaimur और Rohtas जिलों में पाया जाता है।\n4. Economic Liberalization 1991 में Dr. Manmohan Singh द्वारा लागू की गई।\n\nउपरोक्त में से कितने कथन सही हैं?",
+        "options": [
+          {"id": "A", "text": "केवल एक"},
+          {"id": "B", "text": "केवल दो"},
+          {"id": "C", "text": "तीन"},
+          {"id": "D", "text": "सभी चार"}
+        ],
+        "correct_option_id": "C",
+        "explanation": "कथन 1 सही: भारत की पहली modern cotton textile mill 1854 में Mumbai में स्थापित हुई - 'Bombay Spinning & Weaving Company'।\n\nकथन 2 गलत: भारत की पहली modern steel plant TATA STEEL (Jamshedpur, 1907) थी, Bhilai नहीं। Bhilai 1959 में Russian collaboration से बनी।\n\nकथन 3 सही: बिहार में limestone मुख्यतः Kaimur, Rohtas, और Munger जिलों में पाया जाता है - यहां cement industry है।\n\nकथन 4 सही: 1991 में Economic Liberalization Dr. Manmohan Singh (Finance Minister, PM Narasimha Rao की सरकार में) द्वारा लागू की गई - LPG reforms।\n\n⭐ Answer: तीन कथन सही (C)। BPSC में ऐसे multi-statement questions बहुत आते हैं - हर कथन को individually verify करें!"
+      },
+      "navigation": {
+        "next": "card_71_assertion_reason",
+        "button_text": "Assertion-Reason Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_71_assertion_reason",
+      "card_slug": "card_71_assertion_reason",
+      "type": "final_quiz",
+      "concept_id": "assertion_reason_quiz",
+      "level": 5,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC ASSERTION-REASON TYPE:\n\nअभिकथन (A): Sugar mills को sugarcane उत्पादन क्षेत्रों के बिल्कुल निकट स्थापित किया जाता है।\n\nकारण (R): Sugarcane एक perishable (जल्दी खराब होने वाला) raw material है और काटने के 24 घंटे के अंदर crush करना आवश्यक है।\n\nसही विकल्प चुनिए:",
+        "options": [
+          {"id": "A", "text": "A और R दोनों सही हैं, और R, A की सही व्याख्या है।"},
+          {"id": "B", "text": "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।"},
+          {"id": "C", "text": "A सही है, लेकिन R गलत है।"},
+          {"id": "D", "text": "A गलत है, लेकिन R सही है।"}
+        ],
+        "correct_option_id": "A",
+        "explanation": "Assertion (A) सही है: Sugar mills को sugarcane उत्पादन क्षेत्रों के बिल्कुल निकट (गन्ना खेतों के पास) स्थापित किया जाता है - यह एक RAW MATERIAL ORIENTED industry है।\n\nReason (R) भी सही है: Sugarcane एक PERISHABLE (जल्दी खराब होने वाला) raw material है। काटने के बाद इसमें sucrose content तेजी से कम होने लगता है, इसलिए 24 घंटे के अंदर crush करना जरूरी है।\n\nऔर R, A की सही व्याख्या भी है: Sugar mills इसीलिए गन्ना क्षेत्रों के पास होती हैं क्योंकि ganna perishable है और जल्दी process करना पड़ता है।\n\n⭐ Answer: (A) - दोनों सही और R सही explanation। BPSC और UPSC में industrial location factors और उनके कारणों पर Assertion-Reason questions आते हैं!"
+      },
+      "navigation": {
+        "next": "card_72_completion",
+        "button_text": "Chapter Complete! 🏆"
+      }
+    },
+    {
+      "card_id": "card_72_completion",
+      "card_slug": "card_72_completion",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 5,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 INDUSTRIES CHAPTER - COMPLETE MASTERY!",
+        "badge_emoji": "🎖️",
+        "completed_topic": "Industries in Indian Geography - EXHAUSTIVE COVERAGE",
+        "xp_earned": 100,
+        "milestone_progress": "100% Complete ✅",
+        "motivational_quote": "🎉 PHENOMENAL ACHIEVEMENT RAJU! 🎉\n\nTumne पूरा 'Industries in Indian Geography' chapter master कर लिया:\n\n✅ Industry Classification (Agro/Mineral/Marine/Forest)\n✅ Major Industries (Cotton, Jute, Sugar, Steel, Cement, Aluminium)\n✅ Chemical & Pharma (Petrochemicals, Fertilizers, 'Pharmacy of World')\n✅ Modern Industries (Automobile - Maruti, IT - Silicon Valley)\n✅ Industrial Regions & Policies (1991 Liberalization, Make in India)\n✅ MSME & Cottage Industries (Bihar GI Tags)\n✅ Bihar-specific industries (Bhagalpur Silk, Sugar mills, Cement, challenges)\n\nAb tum BPSC, BPSC TRE, SSC, Railway, UPSC के किसी भी industry-related question को confidently solve कर सकते हो! 💪\n\nFrom Tata Steel (1907) to PM Vishwakarma (2023) - सब याद है!\n\nKeep Learning, Keep Growing! 🚀🏭"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Go to Dashboard 🏠"
+      }
+    }
+  ]
+}
+```
