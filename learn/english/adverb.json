@@ -1,0 +1,1746 @@
+
+{
+  "topic_id": "english_grammar_adverb_sbi_po",
+  "topic_title": "Adverb – Complete Mastery for SBI PO Level Error Detection",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 96,
+  "characters": {
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 96 },
+      "intro_payload": {
+        "title": "Adverb Master Class",
+        "icon": "🏃‍♂️💨",
+        "subtitle": "From Zero Knowledge to SBI PO Error Detection Officer",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Understand what an Adverb is and its 3 core functions (modifies Verb, Adjective, Adverb)",
+          "Master all 9 types of Adverbs: Manner, Place, Time, Frequency, Degree, Affirmation/Negation, Interrogative, Relative, Conjunctive",
+          "Learn correct Adverb formation rules (-ly) and spelling exceptions",
+          "Crack the most confusing look-alike pairs: hard/hardly, late/lately, near/nearly, high/highly, most/almost",
+          "Master Degrees of Comparison of Adverbs including irregular forms",
+          "Learn exact Position & Order rules (Manner-Place-Time)",
+          "Master Too/Very/Enough/So/Such usage traps",
+          "Understand Double Negatives and hardly/scarcely/barely inversion rules",
+          "Master 'Only' placement — the No.1 SBI PO Error Detection trap",
+          "Solve BPSC/SSC/SBI PO style multi-statement and error-spotting questions"
+        ]
+      },
+      "navigation": { "next": "card_02_daily_observation", "button_text": "Start Learning ➔" }
+    },
+    {
+      "card_id": "card_02_daily_observation",
+      "card_slug": "card_02_daily_observation",
+      "type": "chat",
+      "concept_id": "adverb_intro",
+      "level": 1,
+      "progress": { "current": 2, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, kal tumne apni cycle chalayi thi na? Bolo, kaise chalayi thi - tez ya dheere?" },
+        { "speaker": "raju", "text": "Sir, thodi tez chalayi thi, isliye turn pe gir gaya tha!" },
+        { "speaker": "aman", "text": "Bilkul sahi bataya! Gaur karo - 'tez' shabd ne 'chalayi' (yani kaam) ke baare mein extra jaankari di - kaise chalayi. Yehi kaam English mein ek special shabd karta hai!" },
+        { "speaker": "raju", "text": "Matlab sir, jo shabd batata hai kaam KAISE hua, wo shabd kuch khaas hota hai?" }
+      ],
+      "navigation": { "next": "card_03_definition_adverb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_definition_adverb",
+      "card_slug": "card_03_definition_adverb",
+      "type": "chat",
+      "concept_id": "adverb_intro",
+      "level": 1,
+      "progress": { "current": 3, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul Raju, aise shabd ko 'Adverb' kehte hain! Adverb wo shabd hai jo Verb (kriya) ke baare mein extra jaankari deta hai - kaise, kab, kahan ya kitna. Jaise: 'He runs fast' - 'fast' bata raha hai 'runs' kaise ho raha hai." },
+        { "speaker": "raju", "text": "Achha sir, to jaise Adjective Noun ko describe karta hai, waise Adverb Verb ko describe karta hai? Dono ka kaam alag hai?" },
+        { "speaker": "aman", "text": "Exactly pakad liya! Lekin ruko, Adverb sirf Verb tak seemित nahi hai - ye Adjective aur khud dusre Adverb ko bhi modify kar sakta hai." },
+        { "speaker": "raju", "text": "Hain?? Ek Adverb dusre Adverb ko bhi modify kar sakta hai? Ye to naya twist hai sir!" }
+      ],
+      "navigation": { "next": "card_04_modifies_adj_adverb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_modifies_adj_adverb",
+      "card_slug": "card_04_modifies_adj_adverb",
+      "type": "chat",
+      "concept_id": "adverb_intro",
+      "level": 1,
+      "progress": { "current": 4, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Dekho example: 'She is very beautiful' - yahan 'very' Adjective 'beautiful' ko modify kar raha hai, batata hai KITNI beautiful. Aur 'She runs very fast' - yahan 'very' Adverb 'fast' ko modify kar raha hai!" },
+        { "speaker": "raju", "text": "Ohhh! Matlab Adverb teen kaam kar sakta hai - Verb ko, Adjective ko, aur dusre Adverb ko modify karna?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Yaad rakho ye teen-tarफा role - BPSC aur SSC dono is definition pe direct question puchte hain. Ab exam ka pehla trap dekhte hain agle card mein!" },
+        { "speaker": "raju", "text": "Trap?? Sir jaldi batao, mujhe dar lag raha hai!" }
+      ],
+      "navigation": { "next": "card_05_quiz_definition", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_quiz_definition",
+      "card_slug": "card_05_quiz_definition",
+      "type": "quiz",
+      "concept_id": "adverb_intro",
+      "level": 1,
+      "progress": { "current": 5, "total": 96 },
+      "quiz_payload": {
+        "question": "Adverb ka mukhya kaam kya hota hai?",
+        "options": [
+          { "id": "A", "text": "Sirf Noun ko modify karna" },
+          { "id": "B", "text": "Verb, Adjective aur dusre Adverb ko modify karna" },
+          { "id": "C", "text": "Sirf Pronoun ko modify karna" },
+          { "id": "D", "text": "Sirf Preposition ko modify karna" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Adverb Verb, Adjective aur dusre Adverb teeno ko modify karta hai. Noun ko modify karna Adjective ka kaam hota hai, Adverb ka nahi."
+      },
+      "navigation": { "next": "card_06_quiz_identify_adverb", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_06_quiz_identify_adverb",
+      "card_slug": "card_06_quiz_identify_adverb",
+      "type": "quiz",
+      "concept_id": "adverb_intro",
+      "level": 1,
+      "progress": { "current": 6, "total": 96 },
+      "quiz_payload": {
+        "question": "Identify the Adverb in: 'Raju solved the question quickly.'",
+        "options": [
+          { "id": "A", "text": "Raju" },
+          { "id": "B", "text": "solved" },
+          { "id": "C", "text": "question" },
+          { "id": "D", "text": "quickly" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "'Quickly' modifies the verb 'solved', batata hai kaise solve kiya - yehi Adverb hai."
+      },
+      "navigation": { "next": "card_07_quiz_modifies_what", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz_modifies_what",
+      "card_slug": "card_07_quiz_modifies_what",
+      "type": "quiz",
+      "concept_id": "adverb_intro",
+      "level": 1,
+      "progress": { "current": 7, "total": 96 },
+      "quiz_payload": {
+        "question": "In the sentence 'She is extremely intelligent,' what does 'extremely' modify?",
+        "options": [
+          { "id": "A", "text": "The verb 'is'" },
+          { "id": "B", "text": "The adjective 'intelligent'" },
+          { "id": "C", "text": "The noun 'She'" },
+          { "id": "D", "text": "Nothing, it is meaningless" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Extremely' ek Adverb of Degree hai jo Adjective 'intelligent' ko modify kar raha hai, batata hai kitni intelligent."
+      },
+      "navigation": { "next": "card_08_milestone_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_milestone_m1",
+      "card_slug": "card_08_milestone_m1",
+      "type": "milestone",
+      "concept_id": "adverb_intro",
+      "level": 1,
+      "progress": { "current": 8, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Introduction to Adverb",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/12 Clear",
+        "motivational_quote": "Foundation strong hai! Ab types of Adverb ki duniya mein chalte hain!"
+      },
+      "navigation": { "next": "card_09_manner_adverb", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_09_manner_adverb",
+      "card_slug": "card_09_manner_adverb",
+      "type": "chat",
+      "concept_id": "adverb_types_mpt",
+      "level": 1,
+      "progress": { "current": 9, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhte hain Adverb ke types. Pehla hai Adverb of Manner - ye batata hai KAISE kaam hua. Jaise: slowly, carefully, quickly, honestly, badly." },
+        { "speaker": "raju", "text": "Sir jaise mummy bolti hai 'dheere se chalo' - waisa hi kuch hoga na English mein?" },
+        { "speaker": "aman", "text": "Bilkul! 'He walks slowly' mein 'slowly' Manner Adverb hai. Yaad rakho, zyadatar Manner Adverbs Adjective+'ly' se bante hain." },
+        { "speaker": "raju", "text": "Achha! Agla type kya hai sir?" }
+      ],
+      "navigation": { "next": "card_10_place_adverb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_10_place_adverb",
+      "card_slug": "card_10_place_adverb",
+      "type": "chat",
+      "concept_id": "adverb_types_mpt",
+      "level": 1,
+      "progress": { "current": 10, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Agla hai Adverb of Place - ye batata hai KAHAN kaam hua. Jaise: here, there, everywhere, inside, outside, nearby, abroad." },
+        { "speaker": "raju", "text": "Sir 'He went there' mein 'there' Adverb of Place hoga na?" },
+        { "speaker": "aman", "text": "Ekdum sahi! Ye words generally sentence ke end mein aate hain. Ab teesra type dekho - Time!" },
+        { "speaker": "raju", "text": "Time wala to easy hoga, kal-aaj-kal jaisa!" }
+      ],
+      "navigation": { "next": "card_11_time_adverb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_time_adverb",
+      "card_slug": "card_11_time_adverb",
+      "type": "chat",
+      "concept_id": "adverb_types_mpt",
+      "level": 1,
+      "progress": { "current": 11, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi soch rahe ho! Adverb of Time batata hai KAB kaam hua - yesterday, today, tomorrow, now, soon, already, yet, still." },
+        { "speaker": "raju", "text": "Sir 'yet' aur 'still' bhi Time Adverb hain? Ye to hamesha confuse karte hain!" },
+        { "speaker": "aman", "text": "Haan, aur inka use bhi tricky hai - 'still' positive/negative dono mein chalta hai, 'yet' zyadatar negative/question mein. Ye SSC ka favorite trap hai, note kar lo!" },
+        { "speaker": "raju", "text": "Sir example do na please, warna exam mein ghotala ho jayega!" }
+      ],
+      "navigation": { "next": "card_12_guess_identify_type", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_guess_identify_type",
+      "card_slug": "card_12_guess_identify_type",
+      "type": "guess",
+      "concept_id": "adverb_types_mpt",
+      "level": 1,
+      "progress": { "current": 12, "total": 96 },
+      "guess_payload": {
+        "question": "'The train arrived here yesterday.' - What type of adverb is 'here'?",
+        "options": [
+          { "id": "A", "text": "Adverb of Manner" },
+          { "id": "B", "text": "Adverb of Place" },
+          { "id": "C", "text": "Adverb of Time" },
+          { "id": "D", "text": "Adverb of Frequency" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Here' batata hai KAHAN train arrive hui - ye Adverb of Place hai. Note: 'yesterday' Adverb of Time hai, dono ek hi sentence mein aa sakte hain."
+      },
+      "navigation": { "next": "card_13_quiz_manner", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_13_quiz_manner",
+      "card_slug": "card_13_quiz_manner",
+      "type": "quiz",
+      "concept_id": "adverb_types_mpt",
+      "level": 1,
+      "progress": { "current": 13, "total": 96 },
+      "quiz_payload": {
+        "question": "Which sentence correctly uses an Adverb of Manner?",
+        "options": [
+          { "id": "A", "text": "He came here" },
+          { "id": "B", "text": "He speaks softly" },
+          { "id": "C", "text": "He came yesterday" },
+          { "id": "D", "text": "He never lies" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Softly' batata hai KAISE bola gaya - yeh Adverb of Manner hai."
+      },
+      "navigation": { "next": "card_14_quiz_time_stillyet", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_14_quiz_time_stillyet",
+      "card_slug": "card_14_quiz_time_stillyet",
+      "type": "quiz",
+      "concept_id": "adverb_types_mpt",
+      "level": 1,
+      "progress": { "current": 14, "total": 96 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          { "id": "A", "text": "Has he come yet?" },
+          { "id": "B", "text": "Has he come still?" },
+          { "id": "C", "text": "He is still not coming" },
+          { "id": "D", "text": "Both A and C are correct" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "'Yet' questions/negatives mein use hota hai ('Has he come yet?'), aur 'still' continuation dikhata hai ('He is still not coming'). Dono sahi hain apni apni jagah par."
+      },
+      "navigation": { "next": "card_15_quiz_multitype", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz_multitype",
+      "card_slug": "card_15_quiz_multitype",
+      "type": "quiz",
+      "concept_id": "adverb_types_mpt",
+      "level": 1,
+      "progress": { "current": 15, "total": 96 },
+      "quiz_payload": {
+        "question": "In 'She sang beautifully here yesterday,' identify the adverbs and their types correctly:",
+        "options": [
+          { "id": "A", "text": "beautifully-Place, here-Manner, yesterday-Time" },
+          { "id": "B", "text": "beautifully-Manner, here-Place, yesterday-Time" },
+          { "id": "C", "text": "beautifully-Time, here-Manner, yesterday-Place" },
+          { "id": "D", "text": "All three are Adverbs of Manner" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "beautifully=Manner (kaise), here=Place (kahan), yesterday=Time (kab). Teeno alag types hain."
+      },
+      "navigation": { "next": "card_16_milestone_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_milestone_m2",
+      "card_slug": "card_16_milestone_m2",
+      "type": "milestone",
+      "concept_id": "adverb_types_mpt",
+      "level": 1,
+      "progress": { "current": 16, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📍",
+        "completed_topic": "Manner, Place & Time Adverbs",
+        "xp_earned": 55,
+        "milestone_progress": "Module 2/12 Clear",
+        "motivational_quote": "3 types clear! Ab Frequency aur Degree ki baari hai!"
+      },
+      "navigation": { "next": "card_17_frequency_adverb", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_17_frequency_adverb",
+      "card_slug": "card_17_frequency_adverb",
+      "type": "chat",
+      "concept_id": "adverb_types_freq_degree",
+      "level": 2,
+      "progress": { "current": 17, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho Adverb of Frequency - ye batata hai KITNI BAAR kaam hota hai. Jaise: always, usually, often, sometimes, rarely, seldom, never." },
+        { "speaker": "raju", "text": "Sir 'never' bhi Frequency Adverb hai? Wo to negative jaisa lagta hai!" },
+        { "speaker": "aman", "text": "Haan Raju, 'never' zero frequency dikhata hai - 'kabhi nahi'. Aur inki ek khaas position hoti hai sentence mein - hamesha main verb se PEHLE aur 'be' verb ke BAAD." },
+        { "speaker": "raju", "text": "Matlab 'He always comes late' sahi hai but 'He comes always late' galat?" }
+      ],
+      "navigation": { "next": "card_18_degree_adverb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_18_degree_adverb",
+      "card_slug": "card_18_degree_adverb",
+      "type": "chat",
+      "concept_id": "adverb_types_freq_degree",
+      "level": 2,
+      "progress": { "current": 18, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Ab dusra type - Adverb of Degree ya Quantity - ye batata hai KITNA. Jaise: very, quite, too, almost, nearly, enough, extremely, completely." },
+        { "speaker": "raju", "text": "Sir 'very' aur 'too' dono to 'bahut' jaise lagte hain, fark kya hai?" },
+        { "speaker": "aman", "text": "Bahut acha doubt! 'Very' sirf intensity dikhata hai, lekin 'Too' ka matlab hota hai 'zaroorat se zyada' - jisse problem create ho." },
+        { "speaker": "raju", "text": "Sir isse to seedhe seedhe example se hi samajh aayega!" }
+      ],
+      "navigation": { "next": "card_19_too_vs_very_intro", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_too_vs_very_intro",
+      "card_slug": "card_19_too_vs_very_intro",
+      "type": "chat",
+      "concept_id": "adverb_types_freq_degree",
+      "level": 2,
+      "progress": { "current": 19, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Dekho: 'She is very tired' (bas bata raha hai kitni tired) vs 'She is too tired to walk' (itni tired ki chal NAHI sakti - negative result)." },
+        { "speaker": "raju", "text": "Achhaaa! Matlab 'too' ke baad problem/negative result aana chahiye?" },
+        { "speaker": "aman", "text": "Bilkul sahi samjhe! Ye SBI PO error detection mein bahut aata hai - log 'too' ko 'very' ki jagah galat use kar dete hain." },
+        { "speaker": "raju", "text": "Sir ye to bada trap hai, note kar liya!" }
+      ],
+      "navigation": { "next": "card_20_guess_too_error", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_guess_too_error",
+      "card_slug": "card_20_guess_too_error",
+      "type": "guess",
+      "concept_id": "adverb_types_freq_degree",
+      "level": 2,
+      "progress": { "current": 20, "total": 96 },
+      "guess_payload": {
+        "question": "Error spot: 'This tea is too good, I loved it.'",
+        "options": [
+          { "id": "A", "text": "'too' should be 'very'" },
+          { "id": "B", "text": "'good' should be 'well'" },
+          { "id": "C", "text": "'loved' should be 'like'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Too' negative/problem ke sath use hota hai. Positive appreciation ke liye 'very' sahi hai - 'This tea is very good.'"
+      },
+      "navigation": { "next": "card_21_quiz_frequency_position", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_21_quiz_frequency_position",
+      "card_slug": "card_21_quiz_frequency_position",
+      "type": "quiz",
+      "concept_id": "adverb_types_freq_degree",
+      "level": 2,
+      "progress": { "current": 21, "total": 96 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          { "id": "A", "text": "She always is happy" },
+          { "id": "B", "text": "She is always happy" },
+          { "id": "C", "text": "Always she is happy" },
+          { "id": "D", "text": "She happy is always" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Be' verb ke saath frequency adverb uske BAAD aata hai: 'She is always happy.'"
+      },
+      "navigation": { "next": "card_22_quiz_too_to", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_22_quiz_too_to",
+      "card_slug": "card_22_quiz_too_to",
+      "type": "quiz",
+      "concept_id": "adverb_types_freq_degree",
+      "level": 2,
+      "progress": { "current": 22, "total": 96 },
+      "quiz_payload": {
+        "question": "Fill in the blank: 'The bag is _____ heavy for me to lift.'",
+        "options": [
+          { "id": "A", "text": "very" },
+          { "id": "B", "text": "too" },
+          { "id": "C", "text": "so" },
+          { "id": "D", "text": "quite" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Too...for...to' structure dikhata hai negative result/inability - bag itna heavy hai ki lift NAHI kar sakte."
+      },
+      "navigation": { "next": "card_23_quiz_multistatement_freq", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_quiz_multistatement_freq",
+      "card_slug": "card_23_quiz_multistatement_freq",
+      "type": "quiz",
+      "concept_id": "adverb_types_freq_degree",
+      "level": 2,
+      "progress": { "current": 23, "total": 96 },
+      "quiz_payload": {
+        "question": "Consider the statements: I. Adverbs of Frequency show how often an action occurs. II. They always come after the main verb. III. 'Never' is a frequency adverb showing zero frequency. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & II only" },
+          { "id": "B", "text": "I & III only" },
+          { "id": "C", "text": "II & III only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement II galat hai - frequency adverbs main verb se PEHLE aate hain, baad mein nahi. I aur III sahi hain."
+      },
+      "navigation": { "next": "card_24_milestone_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_24_milestone_m3",
+      "card_slug": "card_24_milestone_m3",
+      "type": "milestone",
+      "concept_id": "adverb_types_freq_degree",
+      "level": 2,
+      "progress": { "current": 24, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔁",
+        "completed_topic": "Frequency & Degree Adverbs",
+        "xp_earned": 55,
+        "milestone_progress": "Module 3/12 Clear",
+        "motivational_quote": "Too vs Very ka trap crack ho gaya! Aage badho officer!"
+      },
+      "navigation": { "next": "card_25_affirmation_negation", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_25_affirmation_negation",
+      "card_slug": "card_25_affirmation_negation",
+      "type": "chat",
+      "concept_id": "adverb_affirm_neg_interrog",
+      "level": 2,
+      "progress": { "current": 25, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek aur type - Adverb of Affirmation/Negation. Ye kisi baat ko HAAN ya NA mein confirm karta hai. Jaise: certainly, surely, definitely, undoubtedly (affirmation) aur not, never, hardly (negation)." },
+        { "speaker": "raju", "text": "Sir 'not' bhi Adverb hai? Mujhe laga wo alag category hai!" },
+        { "speaker": "aman", "text": "Haan Raju, grammatically 'not' ek Negative Adverb hi hai jo verb ko negate karta hai - 'He is not coming.'" },
+        { "speaker": "raju", "text": "Ye to interesting hai sir, matlab 'not' bhi officially Adverb family ka member hai!" }
+      ],
+      "navigation": { "next": "card_26_interrogative_adverb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_26_interrogative_adverb",
+      "card_slug": "card_26_interrogative_adverb",
+      "type": "chat",
+      "concept_id": "adverb_affirm_neg_interrog",
+      "level": 2,
+      "progress": { "current": 26, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho Interrogative Adverbs - ye sawaal poochne ke kaam aate hain: When, Where, Why, How. Jaise 'When will you come?', 'How did you do this?'" },
+        { "speaker": "raju", "text": "Sir ye to Wh-questions wale words hain na jo hum roz use karte hain!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Jab ye words question banate hain to Interrogative Adverb kehlate hain, aur jab clause connect karte hain to Relative Adverb - agle module mein detail se dekhenge!" },
+        { "speaker": "raju", "text": "Hain? Same words do alag roles nibhate hain? Ye to confusing hai sir!" }
+      ],
+      "navigation": { "next": "card_27_guess_why_function", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_27_guess_why_function",
+      "card_slug": "card_27_guess_why_function",
+      "type": "guess",
+      "concept_id": "adverb_affirm_neg_interrog",
+      "level": 2,
+      "progress": { "current": 27, "total": 96 },
+      "guess_payload": {
+        "question": "'Why did you not attend the class?' - Here 'Why' functions as:",
+        "options": [
+          { "id": "A", "text": "Relative Adverb" },
+          { "id": "B", "text": "Interrogative Adverb" },
+          { "id": "C", "text": "Adverb of Manner" },
+          { "id": "D", "text": "Adverb of Degree" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Why' yahan directly sawaal pooch raha hai, isliye ye Interrogative Adverb hai."
+      },
+      "navigation": { "next": "card_28_quiz_affirmation", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_28_quiz_affirmation",
+      "card_slug": "card_28_quiz_affirmation",
+      "type": "quiz",
+      "concept_id": "adverb_affirm_neg_interrog",
+      "level": 2,
+      "progress": { "current": 28, "total": 96 },
+      "quiz_payload": {
+        "question": "Which of the following is an Adverb of Affirmation?",
+        "options": [
+          { "id": "A", "text": "never" },
+          { "id": "B", "text": "certainly" },
+          { "id": "C", "text": "hardly" },
+          { "id": "D", "text": "not" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Certainly' kisi baat ko confirm/haan mein batata hai - ye Affirmation Adverb hai."
+      },
+      "navigation": { "next": "card_29_quiz_not_negation", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_29_quiz_not_negation",
+      "card_slug": "card_29_quiz_not_negation",
+      "type": "quiz",
+      "concept_id": "adverb_affirm_neg_interrog",
+      "level": 2,
+      "progress": { "current": 29, "total": 96 },
+      "quiz_payload": {
+        "question": "'Not' in 'She is not ready' functions as which type of Adverb?",
+        "options": [
+          { "id": "A", "text": "Manner" },
+          { "id": "B", "text": "Negation" },
+          { "id": "C", "text": "Frequency" },
+          { "id": "D", "text": "Place" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Not' verb ko negate karta hai, isliye ye Adverb of Negation hai."
+      },
+      "navigation": { "next": "card_30_quiz_multistatement_interrog", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_30_quiz_multistatement_interrog",
+      "card_slug": "card_30_quiz_multistatement_interrog",
+      "type": "quiz",
+      "concept_id": "adverb_affirm_neg_interrog",
+      "level": 2,
+      "progress": { "current": 30, "total": 96 },
+      "quiz_payload": {
+        "question": "Statements: I. Interrogative adverbs ask direct questions. II. 'How' can never be an interrogative adverb. III. Certainly and surely are affirmation adverbs. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "II only" },
+          { "id": "C", "text": "I, II & III" },
+          { "id": "D", "text": "I only" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - 'How' bhi Interrogative Adverb ho sakta hai ('How are you?'). I aur III sahi hain."
+      },
+      "navigation": { "next": "card_31_milestone_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_31_milestone_m4",
+      "card_slug": "card_31_milestone_m4",
+      "type": "milestone",
+      "concept_id": "adverb_affirm_neg_interrog",
+      "level": 2,
+      "progress": { "current": 31, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "❓",
+        "completed_topic": "Affirmation, Negation & Interrogative Adverbs",
+        "xp_earned": 55,
+        "milestone_progress": "Module 4/12 Clear",
+        "motivational_quote": "Sawaal poochna ab tumhe aata hai grammatically bhi! Aage chalo!"
+      },
+      "navigation": { "next": "card_32_relative_adverb", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_32_relative_adverb",
+      "card_slug": "card_32_relative_adverb",
+      "type": "chat",
+      "concept_id": "adverb_relative_conjunctive",
+      "level": 2,
+      "progress": { "current": 32, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Dekho Raju, jab 'when, where, why' kisi sentence ke do parts (clauses) ko jodte hain, tab wo Relative Adverb ban jaate hain. Jaise: 'This is the house where I was born.'" },
+        { "speaker": "raju", "text": "Sir yahan 'where' question nahi pooch raha, balki 'house' ke baare mein extra info de raha hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Relative Adverb ek Noun (jise Antecedent kehte hain) ke baad aata hai aur usse related clause jodta hai." },
+        { "speaker": "raju", "text": "Achha, to Interrogative wala sawaal poochta hai aur Relative wala clause jodta hai - yahi fark hai!" }
+      ],
+      "navigation": { "next": "card_33_conjunctive_adverb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_33_conjunctive_adverb",
+      "card_slug": "card_33_conjunctive_adverb",
+      "type": "chat",
+      "concept_id": "adverb_relative_conjunctive",
+      "level": 2,
+      "progress": { "current": 33, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab last type - Conjunctive Adverb. Ye do independent sentences ko jodta hai aur logical relation dikhata hai. Jaise: however, therefore, moreover, nevertheless, consequently." },
+        { "speaker": "raju", "text": "Sir ye to 'Conjunction' jaisa lag raha hai, fark kya hai?" },
+        { "speaker": "aman", "text": "Bahut badhiya doubt! Conjunctive Adverb se pehle usually Semicolon (;) lagta hai. Jaise: 'He was tired; however, he continued working.'" },
+        { "speaker": "raju", "text": "Ohh, semicolon ka use bhi yaad rakhna padega! BPSC mein ye punctuation ke sath bhi pooch sakte hain na sir?" }
+      ],
+      "navigation": { "next": "card_34_guess_therefore", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_34_guess_therefore",
+      "card_slug": "card_34_guess_therefore",
+      "type": "guess",
+      "concept_id": "adverb_relative_conjunctive",
+      "level": 2,
+      "progress": { "current": 34, "total": 96 },
+      "guess_payload": {
+        "question": "'He failed the exam; therefore, he is sad.' - 'therefore' here is a:",
+        "options": [
+          { "id": "A", "text": "Interrogative Adverb" },
+          { "id": "B", "text": "Relative Adverb" },
+          { "id": "C", "text": "Conjunctive Adverb" },
+          { "id": "D", "text": "Adverb of Place" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Therefore' do independent clauses ko jodta hai logical result dikhate hue - ye Conjunctive Adverb hai."
+      },
+      "navigation": { "next": "card_35_quiz_relative_when", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_35_quiz_relative_when",
+      "card_slug": "card_35_quiz_relative_when",
+      "type": "quiz",
+      "concept_id": "adverb_relative_conjunctive",
+      "level": 2,
+      "progress": { "current": 35, "total": 96 },
+      "quiz_payload": {
+        "question": "'I remember the day when we first met.' - 'when' here is a:",
+        "options": [
+          { "id": "A", "text": "Interrogative Adverb" },
+          { "id": "B", "text": "Relative Adverb" },
+          { "id": "C", "text": "Conjunctive Adverb" },
+          { "id": "D", "text": "Adverb of Frequency" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'When' yahan 'day' (antecedent) se related clause jod raha hai - ye Relative Adverb hai."
+      },
+      "navigation": { "next": "card_36_quiz_semicolon", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_36_quiz_semicolon",
+      "card_slug": "card_36_quiz_semicolon",
+      "type": "quiz",
+      "concept_id": "adverb_relative_conjunctive",
+      "level": 2,
+      "progress": { "current": 36, "total": 96 },
+      "quiz_payload": {
+        "question": "Which punctuation mark typically precedes a Conjunctive Adverb joining two independent clauses?",
+        "options": [
+          { "id": "A", "text": "Comma" },
+          { "id": "B", "text": "Full stop" },
+          { "id": "C", "text": "Semicolon" },
+          { "id": "D", "text": "Colon" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Conjunctive Adverbs (however, therefore, moreover) se pehle Semicolon (;) lagta hai aur unke baad Comma (,)."
+      },
+      "navigation": { "next": "card_37_quiz_multistatement_relative", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_37_quiz_multistatement_relative",
+      "card_slug": "card_37_quiz_multistatement_relative",
+      "type": "quiz",
+      "concept_id": "adverb_relative_conjunctive",
+      "level": 2,
+      "progress": { "current": 37, "total": 96 },
+      "quiz_payload": {
+        "question": "Statements: I. Relative adverbs connect a clause to an antecedent noun. II. Conjunctive adverbs like 'however' need a comma after them when following a semicolon. III. 'Where' can function as both interrogative and relative adverb. Which are correct?",
+        "options": [
+          { "id": "A", "text": "I & III only" },
+          { "id": "B", "text": "All three" },
+          { "id": "C", "text": "II only" },
+          { "id": "D", "text": "I only" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Teeno statements sahi hain - ye standard grammar rules hain jo BPSC/SSC mein directly puche jaate hain."
+      },
+      "navigation": { "next": "card_38_milestone_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_38_milestone_m5",
+      "card_slug": "card_38_milestone_m5",
+      "type": "milestone",
+      "concept_id": "adverb_relative_conjunctive",
+      "level": 2,
+      "progress": { "current": 38, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔗",
+        "completed_topic": "Relative & Conjunctive Adverbs",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/12 Clear",
+        "motivational_quote": "Saare 9 types of Adverb clear ho gaye! Ab formation rules seekhte hain!"
+      },
+      "navigation": { "next": "card_39_ly_rule", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_39_ly_rule",
+      "card_slug": "card_39_ly_rule",
+      "type": "chat",
+      "concept_id": "adverb_formation",
+      "level": 3,
+      "progress": { "current": 39, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhte hain Adverb kaise banta hai. Sabse common rule: Adjective + 'ly' = Adverb. Jaise: slow+ly=slowly, quick+ly=quickly, careful+ly=carefully, honest+ly=honestly." },
+        { "speaker": "raju", "text": "Sir ye to easy hai, bas 'ly' laga do!" },
+        { "speaker": "aman", "text": "Ruko ruko, itna simple nahi hai - kuch spelling rules follow karne padte hain. Jaise agar adjective consonant+'y' se khatam hota hai, to 'y' ko 'i' karke 'ly' lagate hain - happy->happily, easy->easily." },
+        { "speaker": "raju", "text": "Achha! Aur bhi koi spelling twist hai kya sir?" }
+      ],
+      "navigation": { "next": "card_40_spelling_changes", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_40_spelling_changes",
+      "card_slug": "card_40_spelling_changes",
+      "type": "chat",
+      "concept_id": "adverb_formation",
+      "level": 3,
+      "progress": { "current": 40, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan! Agar adjective '-le' se khatam hota hai, to 'le' hata kar 'ly' lagta hai - jaise: possible->possibly, gentle->gently, simple->simply, true->truly (yahan 'e' bhi hat jata hai)." },
+        { "speaker": "raju", "text": "Sir 'true' se 'truly' kyun, 'truely' kyun nahi? Ye to alag rule ho gaya!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda ye exception hai - 'true->truly', 'due->duly', 'whole->wholly' (yahan double 'l' bhi note karo). Ye SSC/Railway ka favorite spelling trap hai!" },
+        { "speaker": "raju", "text": "Sir ye to yaad karke hi jaana padega, koi shortcut nahi hai?" }
+      ],
+      "navigation": { "next": "card_41_ly_ending_adjectives_exception", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_41_ly_ending_adjectives_exception",
+      "card_slug": "card_41_ly_ending_adjectives_exception",
+      "type": "chat",
+      "concept_id": "adverb_formation",
+      "level": 3,
+      "progress": { "current": 41, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab sabse bada trap - kuch words jo '-ly' se khatam hote hain, wo khud Adjective hote hain, unka koi separate Adverb form nahi banta! Jaise: friendly, lovely, silly, lonely, elderly, costly, deadly." },
+        { "speaker": "raju", "text": "Matlab sir, 'friendly' khud ek Adjective hai, 'friendlily' jaisa koi word nahi hota?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye words already Adjective hain kyunki inme Noun+ly pattern hai (friend+ly). Inka adverb banane ke liye 'in a friendly manner' jaisa phrase use karte hain." },
+        { "speaker": "raju", "text": "Ye to bada trap hai sir, exam mein 'friendlily' likh ke fasa sakte hain!" }
+      ],
+      "navigation": { "next": "card_42_same_form_adj_adverb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_42_same_form_adj_adverb",
+      "card_slug": "card_42_same_form_adj_adverb",
+      "type": "chat",
+      "concept_id": "adverb_formation",
+      "level": 3,
+      "progress": { "current": 42, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek aur important group - kuch words bina 'ly' lagaye hi Adjective aur Adverb dono ka kaam karte hain: fast, hard, late, early, daily, weekly, monthly, straight, high, low, near, far, long, well." },
+        { "speaker": "raju", "text": "Sir example do na, warna yaad nahi rahega!" },
+        { "speaker": "aman", "text": "Jaise: 'He is a fast runner' (Adjective) aur 'He runs fast' (Adverb) - same word 'fast' dono jagah! Isi tarah 'daily' - 'daily newspaper' (Adjective) aur 'He comes daily' (Adverb)." },
+        { "speaker": "raju", "text": "Ohh matlab shabd same, kaam alag! Ye samajh aa gaya sir!" }
+      ],
+      "navigation": { "next": "card_43_quiz_happily", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_43_quiz_happily",
+      "card_slug": "card_43_quiz_happily",
+      "type": "quiz",
+      "concept_id": "adverb_formation",
+      "level": 3,
+      "progress": { "current": 43, "total": 96 },
+      "quiz_payload": {
+        "question": "Correct adverb form of 'happy':",
+        "options": [
+          { "id": "A", "text": "happyly" },
+          { "id": "B", "text": "happily" },
+          { "id": "C", "text": "happilly" },
+          { "id": "D", "text": "happyley" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Consonant+'y' ending adjective mein 'y' ko 'i' karke 'ly' lagta hai: happy->happily."
+      },
+      "navigation": { "next": "card_44_quiz_friendly_exception", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_44_quiz_friendly_exception",
+      "card_slug": "card_44_quiz_friendly_exception",
+      "type": "quiz",
+      "concept_id": "adverb_formation",
+      "level": 3,
+      "progress": { "current": 44, "total": 96 },
+      "quiz_payload": {
+        "question": "Which word is already an Adjective and does NOT have a valid '-lily' adverb form?",
+        "options": [
+          { "id": "A", "text": "quick" },
+          { "id": "B", "text": "friendly" },
+          { "id": "C", "text": "careful" },
+          { "id": "D", "text": "honest" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Friendly' pehle se hi Adjective hai (friend+ly), iska koi 'friendlily' wala Adverb form exist nahi karta."
+      },
+      "navigation": { "next": "card_45_quiz_multistatement_spelling", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_45_quiz_multistatement_spelling",
+      "card_slug": "card_45_quiz_multistatement_spelling",
+      "type": "quiz",
+      "concept_id": "adverb_formation",
+      "level": 3,
+      "progress": { "current": 45, "total": 96 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Truly' is the correct adverb of 'true'. II. 'Wholly' is the correct adverb of 'whole' with double L. III. 'Duely' is the correct adverb of 'due'. Which are correct?",
+        "options": [
+          { "id": "A", "text": "I & II" },
+          { "id": "B", "text": "II & III" },
+          { "id": "C", "text": "I only" },
+          { "id": "D", "text": "I, II & III" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement III galat hai - sahi spelling 'duly' hai, 'duely' nahi. I aur II sahi hain."
+      },
+      "navigation": { "next": "card_46_milestone_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_46_milestone_m6",
+      "card_slug": "card_46_milestone_m6",
+      "type": "milestone",
+      "concept_id": "adverb_formation",
+      "level": 3,
+      "progress": { "current": 46, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "✍️",
+        "completed_topic": "Formation of Adverbs & Spelling Rules",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/12 Clear",
+        "motivational_quote": "Spelling traps clear! Ab sabse dangerous module - Look-alike Pairs!"
+      },
+      "navigation": { "next": "card_47_hard_vs_hardly", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_47_hard_vs_hardly",
+      "card_slug": "card_47_hard_vs_hardly",
+      "type": "chat",
+      "concept_id": "adverb_lookalike_pairs",
+      "level": 3,
+      "progress": { "current": 47, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab aata hai SBI PO ka sabse bada favorite trap - similar looking words jo matlab mein poles apart hain! Pehla pair: HARD vs HARDLY." },
+        { "speaker": "raju", "text": "Sir ye to same lagte hain, 'hardly' matlab 'hard'+'ly' hoga na, jaise 'bahut hard'?" },
+        { "speaker": "aman", "text": "Yahi sabse bada trap hai Raju! 'Hard' ka matlab hai 'mehnat se/sakht' - 'He works hard'. Lekin 'Hardly' ka matlab bilkul ulta hai - 'mushkil se/lagbhag nahi' - 'He hardly works' (wo mushkil se kaam karta hai, yani kaam nahi karta!)" },
+        { "speaker": "raju", "text": "Hain?? Sir ye to bilkul opposite matlab hai! Isse to exam mein pakka fasenge!" }
+      ],
+      "navigation": { "next": "card_48_late_lately_near_nearly", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_48_late_lately_near_nearly",
+      "card_slug": "card_48_late_lately_near_nearly",
+      "type": "chat",
+      "concept_id": "adverb_lookalike_pairs",
+      "level": 3,
+      "progress": { "current": 48, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Aise hi doosra pair: LATE vs LATELY. 'Late' matlab 'der se' - 'He came late'. Lekin 'Lately' matlab 'haal hi mein/recently' - 'I haven't seen him lately.'" },
+        { "speaker": "raju", "text": "Sir aur 'near' aur 'nearly'?" },
+        { "speaker": "aman", "text": "'Near' matlab 'paas' - 'He lives near my house'. Lekin 'Nearly' matlab 'lagbhag/almost' - 'He nearly fell down' (wo girte-girte bacha, gira nahi)." },
+        { "speaker": "raju", "text": "Sir ye 'nearly' wala to 'almost' jaisa hi hai na!" }
+      ],
+      "navigation": { "next": "card_49_high_highly_most_almost", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_49_high_highly_most_almost",
+      "card_slug": "card_49_high_highly_most_almost",
+      "type": "chat",
+      "concept_id": "adverb_lookalike_pairs",
+      "level": 3,
+      "progress": { "current": 49, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab agla pair: HIGH vs HIGHLY. 'High' matlab 'ooncha' physically - 'The bird flies high'. Lekin 'Highly' matlab 'bahut zyada' (degree) - 'He is highly qualified.'" },
+        { "speaker": "raju", "text": "Aur 'most' vs 'almost' sir?" },
+        { "speaker": "aman", "text": "'Most' superlative degree dikhata hai - 'the most beautiful girl'. Lekin 'Almost' matlab 'lagbhag' - 'I almost finished my homework' (poora nahi kiya, lagbhag kiya)." },
+        { "speaker": "raju", "text": "Sir ye sab pairs to ek dusre ka opposite ya bilkul alag hi nikalte hain!" }
+      ],
+      "navigation": { "next": "card_50_guess_short_shortly", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_50_guess_short_shortly",
+      "card_slug": "card_50_guess_short_shortly",
+      "type": "guess",
+      "concept_id": "adverb_lookalike_pairs",
+      "level": 3,
+      "progress": { "current": 50, "total": 96 },
+      "guess_payload": {
+        "question": "'The manager will arrive _____.' (matlab: jald hi/soon) - Choose the correct word:",
+        "options": [
+          { "id": "A", "text": "short" },
+          { "id": "B", "text": "shortly" },
+          { "id": "C", "text": "shorted" },
+          { "id": "D", "text": "shortness" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Shortly' ka matlab hai 'soon/jald hi'. 'Short' physically not tall ke liye adjective hai."
+      },
+      "navigation": { "next": "card_51_quiz_hard_works", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_51_quiz_hard_works",
+      "card_slug": "card_51_quiz_hard_works",
+      "type": "quiz",
+      "concept_id": "adverb_lookalike_pairs",
+      "level": 3,
+      "progress": { "current": 51, "total": 96 },
+      "quiz_payload": {
+        "question": "Error detection: 'He hard works to pass the exam.'",
+        "options": [
+          { "id": "A", "text": "'hard' should be 'hardly'" },
+          { "id": "B", "text": "'works' should be 'work'" },
+          { "id": "C", "text": "Should be 'He works hard'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Hard' (mehnat se) sahi word hai, lekin position galat hai - Adverb 'hard' verb ke baad aana chahiye: 'He works hard.'"
+      },
+      "navigation": { "next": "card_52_quiz_hardly_fillblank", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_52_quiz_hardly_fillblank",
+      "card_slug": "card_52_quiz_hardly_fillblank",
+      "type": "quiz",
+      "concept_id": "adverb_lookalike_pairs",
+      "level": 3,
+      "progress": { "current": 52, "total": 96 },
+      "quiz_payload": {
+        "question": "Fill blank: 'I have _____ received any letter from him.' (matlab: bilkul nahi mila)",
+        "options": [
+          { "id": "A", "text": "hard" },
+          { "id": "B", "text": "hardly" },
+          { "id": "C", "text": "near" },
+          { "id": "D", "text": "nearly" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Hardly' matlab 'lagbhag nahi/mushkil se' - is sentence ka bhaav negative hai."
+      },
+      "navigation": { "next": "card_53_quiz_multistatement_lookalike", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_53_quiz_multistatement_lookalike",
+      "card_slug": "card_53_quiz_multistatement_lookalike",
+      "type": "quiz",
+      "concept_id": "adverb_lookalike_pairs",
+      "level": 3,
+      "progress": { "current": 53, "total": 96 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Hardly' means 'with great effort'. II. 'Nearly' means 'almost'. III. 'Highly' is used for abstract degree, not physical height. Which are correct?",
+        "options": [
+          { "id": "A", "text": "II & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "I only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement I galat hai - ye meaning 'hard' ki hai, 'hardly' ki nahi. II aur III sahi hain."
+      },
+      "navigation": { "next": "card_54_milestone_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_54_milestone_m7",
+      "card_slug": "card_54_milestone_m7",
+      "type": "milestone",
+      "concept_id": "adverb_lookalike_pairs",
+      "level": 3,
+      "progress": { "current": 54, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚠️",
+        "completed_topic": "Look-Alike Tricky Adverb Pairs",
+        "xp_earned": 65,
+        "milestone_progress": "Module 7/12 Clear",
+        "motivational_quote": "Sabse bada trap crack ho gaya! Ab Degrees of Comparison seekhte hain!"
+      },
+      "navigation": { "next": "card_55_degrees_positive_comp_super", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_55_degrees_positive_comp_super",
+      "card_slug": "card_55_degrees_positive_comp_super",
+      "type": "chat",
+      "concept_id": "adverb_degrees_comparison",
+      "level": 3,
+      "progress": { "current": 55, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, jaise Adjectives ki degree hoti hai (tall-taller-tallest), waise hi Adverbs ki bhi 3 degrees hoti hain: Positive, Comparative, Superlative. Jaise: fast - faster - fastest." },
+        { "speaker": "raju", "text": "Sir 'He runs fast, faster than me, fastest in class' - aise?" },
+        { "speaker": "aman", "text": "Bilkul sahi! One-syllable adverbs mein 'er/est' lagta hai. Lekin lambe '-ly' wale adverbs mein 'more/most' use hota hai - carefully -> more carefully -> most carefully." },
+        { "speaker": "raju", "text": "Sir 'more fast' bol sakte hain kya?" }
+      ],
+      "navigation": { "next": "card_56_irregular_forms", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_56_irregular_forms",
+      "card_slug": "card_56_irregular_forms",
+      "type": "chat",
+      "concept_id": "adverb_degrees_comparison",
+      "level": 3,
+      "progress": { "current": 56, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Nahi Raju! 'More fast' galat hai - common error hai. Ya to 'faster' bolo, dono mat mix karo ('more faster' double comparative error hai). Ab kuch Irregular Adverbs yaad karo: well->better->best, badly->worse->worst, little->less->least, much->more->most, far->farther/further->farthest/furthest." },
+        { "speaker": "raju", "text": "Sir 'good' aur 'well' dono 'better-best' ban jate hain? Confusion ho raha hai!" },
+        { "speaker": "aman", "text": "Haan dhyan do - 'Good' Adjective hai (a good boy), 'Well' Adverb hai (He plays well), lekin dono ka comparative same hai 'better' aur superlative 'best'. Ye BPSC ka classic trap hai!" },
+        { "speaker": "raju", "text": "Achha! Ye to yaad rakhna hi padega sir!" }
+      ],
+      "navigation": { "next": "card_57_guess_sings_better", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_57_guess_sings_better",
+      "card_slug": "card_57_guess_sings_better",
+      "type": "guess",
+      "concept_id": "adverb_degrees_comparison",
+      "level": 3,
+      "progress": { "current": 57, "total": 96 },
+      "guess_payload": {
+        "question": "Choose correct: 'She sings _____ than her sister.'",
+        "options": [
+          { "id": "A", "text": "good" },
+          { "id": "B", "text": "well" },
+          { "id": "C", "text": "better" },
+          { "id": "D", "text": "best" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Do logon ke beech comparison ke liye Comparative degree chahiye - 'better', na ki Positive 'good/well' ya Superlative 'best'."
+      },
+      "navigation": { "next": "card_58_quiz_double_superlative", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_58_quiz_double_superlative",
+      "card_slug": "card_58_quiz_double_superlative",
+      "type": "quiz",
+      "concept_id": "adverb_degrees_comparison",
+      "level": 3,
+      "progress": { "current": 58, "total": 96 },
+      "quiz_payload": {
+        "question": "Error spot: 'This is the most best solution.'",
+        "options": [
+          { "id": "A", "text": "'most best' is double superlative, should be just 'the best'" },
+          { "id": "B", "text": "'solution' should be 'solutions'" },
+          { "id": "C", "text": "'This' should be 'These'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Best' already superlative hai, uske pehle 'most' lagana redundant/galat hai - classic double superlative error."
+      },
+      "navigation": { "next": "card_59_quiz_farther_farthest", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_59_quiz_farther_farthest",
+      "card_slug": "card_59_quiz_farther_farthest",
+      "type": "quiz",
+      "concept_id": "adverb_degrees_comparison",
+      "level": 3,
+      "progress": { "current": 59, "total": 96 },
+      "quiz_payload": {
+        "question": "'He walks _____ of all the students.' (sabse zyada dur - physical distance)",
+        "options": [
+          { "id": "A", "text": "farther" },
+          { "id": "B", "text": "farthest" },
+          { "id": "C", "text": "further" },
+          { "id": "D", "text": "furthest" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Farther/Farthest' physical distance ke liye use hote hain. Yahan group mein sabse zyada dur - superlative 'farthest' sahi hai."
+      },
+      "navigation": { "next": "card_60_quiz_multistatement_degrees", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_60_quiz_multistatement_degrees",
+      "card_slug": "card_60_quiz_multistatement_degrees",
+      "type": "quiz",
+      "concept_id": "adverb_degrees_comparison",
+      "level": 3,
+      "progress": { "current": 60, "total": 96 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Farther' is used for physical distance, 'Further' for degree/additional. II. Double comparatives like 'more better' are grammatically correct for emphasis. III. 'Well' as adverb has comparative 'better' and superlative 'best'. Which are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "II & III" },
+          { "id": "C", "text": "I, II & III" },
+          { "id": "D", "text": "I only" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - double comparatives Standard English mein hamesha galat hote hain."
+      },
+      "navigation": { "next": "card_61_milestone_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_61_milestone_m8",
+      "card_slug": "card_61_milestone_m8",
+      "type": "milestone",
+      "concept_id": "adverb_degrees_comparison",
+      "level": 3,
+      "progress": { "current": 61, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📊",
+        "completed_topic": "Degrees of Comparison of Adverbs",
+        "xp_earned": 60,
+        "milestone_progress": "Module 8/12 Clear",
+        "motivational_quote": "Comparison master ban gaye! Ab Position & Order seekhte hain!"
+      },
+      "navigation": { "next": "card_62_front_mid_end_position", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_62_front_mid_end_position",
+      "card_slug": "card_62_front_mid_end_position",
+      "type": "chat",
+      "concept_id": "adverb_position_order",
+      "level": 4,
+      "progress": { "current": 62, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhte hain Adverb sentence mein KAHAN baithta hai. Teen positions hoti hain: Front Position (sentence shuru mein), Mid Position (verb ke aas-paas), End Position (sentence ke akhir mein)." },
+        { "speaker": "raju", "text": "Sir jaise 'Suddenly, he left' - ye Front Position hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur 'He suddenly left' Mid Position, aur 'He left suddenly' End Position - teeno grammatically correct hain, bas emphasis alag hota hai." },
+        { "speaker": "raju", "text": "Achha to hum kahin bhi laga sakte hain adverb?" }
+      ],
+      "navigation": { "next": "card_63_mid_position_rules", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_63_mid_position_rules",
+      "card_slug": "card_63_mid_position_rules",
+      "type": "chat",
+      "concept_id": "adverb_position_order",
+      "level": 4,
+      "progress": { "current": 63, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Nahi Raju, Mid Position ke strict rules hain! Frequency, Degree, aur kuch Negation adverbs (always, never, often, also, just, hardly) hamesha: Main verb se PEHLE, Auxiliary verb ke BAAD, aur 'is/am/are/was/were' ke BAAD aate hain." },
+        { "speaker": "raju", "text": "Matlab 'He always is late' galat hai, 'He is always late' sahi hai?" },
+        { "speaker": "aman", "text": "Ekdum sahi pakda! Aur 'She has never seen a tiger' - 'has' ke baad 'never'. Ye rule SSC-Railway mein bahut common error detection mein aata hai!" },
+        { "speaker": "raju", "text": "Sir ab agar ek sentence mein 3-3 adverb aa jaye to order kya hoga?" }
+      ],
+      "navigation": { "next": "card_64_order_mpt", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_64_order_mpt",
+      "card_slug": "card_64_order_mpt",
+      "type": "chat",
+      "concept_id": "adverb_position_order",
+      "level": 4,
+      "progress": { "current": 64, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut acha sawaal! Jab ek sentence mein Manner, Place, aur Time teeno adverbs saath aayein, to fixed order hota hai: MANNER pehle, phir PLACE, phir TIME. Yaad rakho short-form 'M-P-T'." },
+        { "speaker": "raju", "text": "Sir example do please!" },
+        { "speaker": "aman", "text": "'She sang beautifully (Manner) at the concert (Place) last night (Time).' Agar order badal diya to sentence galat sound karta hai aur exams mein error maana jata hai." },
+        { "speaker": "raju", "text": "M-P-T... Manner-Place-Time, yaad rakh lunga sir!" }
+      ],
+      "navigation": { "next": "card_65_guess_correct_order", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_65_guess_correct_order",
+      "card_slug": "card_65_guess_correct_order",
+      "type": "guess",
+      "concept_id": "adverb_position_order",
+      "level": 4,
+      "progress": { "current": 65, "total": 96 },
+      "guess_payload": {
+        "question": "Choose the sentence with correct adverb order (Manner-Place-Time):",
+        "options": [
+          { "id": "A", "text": "He spoke yesterday clearly in the meeting" },
+          { "id": "B", "text": "He spoke clearly in the meeting yesterday" },
+          { "id": "C", "text": "He spoke in the meeting clearly yesterday" },
+          { "id": "D", "text": "He spoke clearly yesterday in the meeting" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sahi order: Manner(clearly) - Place(in the meeting) - Time(yesterday)."
+      },
+      "navigation": { "next": "card_66_quiz_never_has_visited", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_66_quiz_never_has_visited",
+      "card_slug": "card_66_quiz_never_has_visited",
+      "type": "quiz",
+      "concept_id": "adverb_position_order",
+      "level": 4,
+      "progress": { "current": 66, "total": 96 },
+      "quiz_payload": {
+        "question": "Error detection: 'She never has visited Bihar.'",
+        "options": [
+          { "id": "A", "text": "'never' should come after 'has': 'has never'" },
+          { "id": "B", "text": "'visited' should be 'visits'" },
+          { "id": "C", "text": "'Bihar' should be lowercase" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Auxiliary verb 'has' ke saath frequency adverb 'never' uske BAAD aata hai: 'has never visited'."
+      },
+      "navigation": { "next": "card_67_quiz_correct_order_choose", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_67_quiz_correct_order_choose",
+      "card_slug": "card_67_quiz_correct_order_choose",
+      "type": "quiz",
+      "concept_id": "adverb_position_order",
+      "level": 4,
+      "progress": { "current": 67, "total": 96 },
+      "quiz_payload": {
+        "question": "Choose the correctly ordered sentence:",
+        "options": [
+          { "id": "A", "text": "They played happily in the park every evening" },
+          { "id": "B", "text": "They played every evening happily in the park" },
+          { "id": "C", "text": "They played in the park every evening happily" },
+          { "id": "D", "text": "They played happily every evening in the park" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Sahi order: Manner(happily) - Place(in the park) - Time(every evening)."
+      },
+      "navigation": { "next": "card_68_quiz_multistatement_position", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_68_quiz_multistatement_position",
+      "card_slug": "card_68_quiz_multistatement_position",
+      "type": "quiz",
+      "concept_id": "adverb_position_order",
+      "level": 4,
+      "progress": { "current": 68, "total": 96 },
+      "quiz_payload": {
+        "question": "Statements: I. Frequency adverbs generally occupy Mid Position. II. When Manner, Place and Time occur together, the correct order is Time-Place-Manner. III. Adverbs in Front Position are often followed by a comma. Which are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "I, II & III" },
+          { "id": "C", "text": "II only" },
+          { "id": "D", "text": "I only" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - correct order Manner-Place-Time (MPT) hai, Time-Place-Manner nahi."
+      },
+      "navigation": { "next": "card_69_milestone_m9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_69_milestone_m9",
+      "card_slug": "card_69_milestone_m9",
+      "type": "milestone",
+      "concept_id": "adverb_position_order",
+      "level": 4,
+      "progress": { "current": 69, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📍",
+        "completed_topic": "Position & Order of Adverbs",
+        "xp_earned": 65,
+        "milestone_progress": "Module 9/12 Clear",
+        "motivational_quote": "MPT order yaad ho gaya! Ab Too/Very/Enough/So/Such ka module!"
+      },
+      "navigation": { "next": "card_70_too_vs_very_recap", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_70_too_vs_very_recap",
+      "card_slug": "card_70_too_vs_very_recap",
+      "type": "chat",
+      "concept_id": "adverb_too_very_enough_so_such",
+      "level": 4,
+      "progress": { "current": 70, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab bahut important trap - TOO vs VERY, isse thoda aur pakka karte hain. 'Very' sirf degree dikhata hai (neutral), 'Too' hamesha negative result/problem dikhata hai." },
+        { "speaker": "raju", "text": "Sir already bataya tha ye, thoda aur clear karo!" },
+        { "speaker": "aman", "text": "'It is very cold' - bas fact bata raha hai. 'It is too cold to swim' - itna cold ki swim NAHI kar sakte, 'to+verb' negative consequence attach hota hai." },
+        { "speaker": "raju", "text": "Achha, matlab 'too' ke saath hamesha ek reason/result jud'ta hai!" }
+      ],
+      "navigation": { "next": "card_71_enough_position", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_71_enough_position",
+      "card_slug": "card_71_enough_position",
+      "type": "chat",
+      "concept_id": "adverb_too_very_enough_so_such",
+      "level": 4,
+      "progress": { "current": 71, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ENOUGH ka position dekho - ye hamesha Adjective/Adverb ke BAAD aata hai, lekin Noun se PEHLE. Jaise: 'He is old enough' (adjective ke baad) but 'He has enough money' (noun se pehle)." },
+        { "speaker": "raju", "text": "Sir 'enough big' bol sakte hain kya?" },
+        { "speaker": "aman", "text": "Bilkul nahi! 'Enough big' galat hai, sahi hoga 'big enough' - ye classic SSC/SBI trap hai, log 'enough' ko adjective se pehle laga dete hain!" },
+        { "speaker": "raju", "text": "Sir ye to ekdum ulta rule hai, yaad rakhna padega!" }
+      ],
+      "navigation": { "next": "card_72_so_vs_such", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_72_so_vs_such",
+      "card_slug": "card_72_so_vs_such",
+      "type": "chat",
+      "concept_id": "adverb_too_very_enough_so_such",
+      "level": 4,
+      "progress": { "current": 72, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab SO vs SUCH ka fark samjho. 'So' Adjective/Adverb ke saath akela use hota hai - 'She is so beautiful'. 'Such' Noun (with adjective) ke saath use hota hai - 'She is such a beautiful girl'." },
+        { "speaker": "raju", "text": "Sir 'such beautiful' bol sakte hain kya bina noun ke?" },
+        { "speaker": "aman", "text": "Nahi Raju! Bina Noun ke 'such' akela nahi chalega - 'such beautiful' galat hai, 'so beautiful' sahi hai. Noun ho to 'such a beautiful girl' sahi hai." },
+        { "speaker": "raju", "text": "Achha, matlab Noun hai ya nahi, isi se decide hoga So ya Such!" }
+      ],
+      "navigation": { "next": "card_73_guess_enough_good", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_73_guess_enough_good",
+      "card_slug": "card_73_guess_enough_good",
+      "type": "guess",
+      "concept_id": "adverb_too_very_enough_so_such",
+      "level": 4,
+      "progress": { "current": 73, "total": 96 },
+      "guess_payload": {
+        "question": "Error spot: 'This laptop is enough good for daily use.'",
+        "options": [
+          { "id": "A", "text": "'enough good' should be 'good enough'" },
+          { "id": "B", "text": "'laptop' should be 'Laptop'" },
+          { "id": "C", "text": "'daily' should be 'dailyly'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Enough' hamesha Adjective ke BAAD aata hai - sahi hoga 'good enough'."
+      },
+      "navigation": { "next": "card_74_quiz_so_that", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_74_quiz_so_that",
+      "card_slug": "card_74_quiz_so_that",
+      "type": "quiz",
+      "concept_id": "adverb_too_very_enough_so_such",
+      "level": 4,
+      "progress": { "current": 74, "total": 96 },
+      "quiz_payload": {
+        "question": "Choose correct: 'The tea was _____ hot that I couldn't drink it.'",
+        "options": [
+          { "id": "A", "text": "so" },
+          { "id": "B", "text": "such" },
+          { "id": "C", "text": "too" },
+          { "id": "D", "text": "very" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'So + adjective + that' structure result clause dikhata hai without a following noun."
+      },
+      "navigation": { "next": "card_75_quiz_such_a", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_75_quiz_such_a",
+      "card_slug": "card_75_quiz_such_a",
+      "type": "quiz",
+      "concept_id": "adverb_too_very_enough_so_such",
+      "level": 4,
+      "progress": { "current": 75, "total": 96 },
+      "quiz_payload": {
+        "question": "Choose correct: 'He is _____ intelligent boy that everyone likes him.'",
+        "options": [
+          { "id": "A", "text": "so" },
+          { "id": "B", "text": "such" },
+          { "id": "C", "text": "too" },
+          { "id": "D", "text": "as" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Such + a + adjective + noun + that' structure - yahan 'boy' (noun) hai, isliye 'such' sahi hai."
+      },
+      "navigation": { "next": "card_76_quiz_multistatement_toosuch", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_76_quiz_multistatement_toosuch",
+      "card_slug": "card_76_quiz_multistatement_toosuch",
+      "type": "quiz",
+      "concept_id": "adverb_too_very_enough_so_such",
+      "level": 4,
+      "progress": { "current": 76, "total": 96 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Too' always indicates a negative/undesirable result. II. 'Enough' comes after adjectives but before nouns. III. 'Such' can be used without a noun. Which are correct?",
+        "options": [
+          { "id": "A", "text": "I & II" },
+          { "id": "B", "text": "I only" },
+          { "id": "C", "text": "II & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement III galat hai - 'such' ko hamesha noun chahiye, bina noun ke 'so' use hota hai."
+      },
+      "navigation": { "next": "card_77_milestone_m10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_77_milestone_m10",
+      "card_slug": "card_77_milestone_m10",
+      "type": "milestone",
+      "concept_id": "adverb_too_very_enough_so_such",
+      "level": 4,
+      "progress": { "current": 77, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Too/Very/Enough/So/Such Usage",
+        "xp_earned": 65,
+        "milestone_progress": "Module 10/12 Clear",
+        "motivational_quote": "Bahut bada trap zone clear hua! Ab Double Negatives ka module!"
+      },
+      "navigation": { "next": "card_78_double_negative", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_78_double_negative",
+      "card_slug": "card_78_double_negative",
+      "type": "chat",
+      "concept_id": "adverb_double_negative_hardly",
+      "level": 4,
+      "progress": { "current": 78, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho ek bahut common spoken mistake jo exams mein trap banti hai - Double Negative. English mein ek sentence mein sirf EK negative word use hota hai, do nahi!" },
+        { "speaker": "raju", "text": "Sir jaise Hindi mein bolte hain 'mujhe kuch nahi pata nahi'? Waise hi kya?" },
+        { "speaker": "aman", "text": "Bilkul sahi example! 'I don't know nothing' GALAT hai kyunki 'don't' aur 'nothing' dono negative hain. Sahi hoga: 'I don't know anything' ya 'I know nothing'." },
+        { "speaker": "raju", "text": "Achhaaa! Matlab dono negative words ek saath sentence ko galat bana dete hain?" }
+      ],
+      "navigation": { "next": "card_79_hardly_scarcely_barely", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_79_hardly_scarcely_barely",
+      "card_slug": "card_79_hardly_scarcely_barely",
+      "type": "chat",
+      "concept_id": "adverb_double_negative_hardly",
+      "level": 4,
+      "progress": { "current": 79, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Yahi sabse bada trap hai Raju - HARDLY, SCARCELY, BARELY khud hi NEGATIVE words hain, inka matlab hai 'lagbhag nahi/mushkil se'. Isliye inke saath dusra negative word (not/no) kabhi mat lagao!" },
+        { "speaker": "raju", "text": "Matlab 'He can't hardly work' galat hoga, 'He can hardly work' sahi?" },
+        { "speaker": "aman", "text": "Ekdum sahi pakda! Ye BPSC/SSC ka sabse favorite Error Detection trap hai - log 'hardly not' ya 'can't hardly' likh dete hain, dono galat!" },
+        { "speaker": "raju", "text": "Sir ye to note kar liya, bahut kaam ka hai!" }
+      ],
+      "navigation": { "next": "card_80_no_sooner_inversion", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_80_no_sooner_inversion",
+      "card_slug": "card_80_no_sooner_inversion",
+      "type": "chat",
+      "concept_id": "adverb_double_negative_hardly",
+      "level": 4,
+      "progress": { "current": 80, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek advanced twist - jab sentence 'No sooner' ya 'Hardly/Scarcely' se shuru hoti hai, to Subject-Verb ka order ulta (invert) ho jata hai! Jaise: 'No sooner had he arrived than it started raining' ya 'Hardly had he arrived when it started raining'." },
+        { "speaker": "raju", "text": "Hain?? Sir ye to bilkul naya structure hai, 'had he' aisa kyun?" },
+        { "speaker": "aman", "text": "Ye Inversion rule hai - jab negative adverb sentence shuru mein aata hai, auxiliary verb subject se PEHLE aata hai, jaise question mein hota hai. Yaad rakho: 'No sooner...than' aur 'Hardly/Scarcely...when'." },
+        { "speaker": "raju", "text": "Sir ye 'than' aur 'when' bhi fix rehta hai kya inke saath?" }
+      ],
+      "navigation": { "next": "card_81_guess_cant_hardly", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_81_guess_cant_hardly",
+      "card_slug": "card_81_guess_cant_hardly",
+      "type": "guess",
+      "concept_id": "adverb_double_negative_hardly",
+      "level": 4,
+      "progress": { "current": 81, "total": 96 },
+      "guess_payload": {
+        "question": "Error spot: 'I can't hardly see anything in this fog.'",
+        "options": [
+          { "id": "A", "text": "'can't hardly' should be 'can hardly'" },
+          { "id": "B", "text": "'anything' should be 'nothing'" },
+          { "id": "C", "text": "'fog' should be 'Fog'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Hardly' pehle se negative hai, 'can't' ke saath use karna double negative error hai. Sahi: 'I can hardly see anything.'"
+      },
+      "navigation": { "next": "card_82_quiz_no_money", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_82_quiz_no_money",
+      "card_slug": "card_82_quiz_no_money",
+      "type": "quiz",
+      "concept_id": "adverb_double_negative_hardly",
+      "level": 4,
+      "progress": { "current": 82, "total": 96 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence(s):",
+        "options": [
+          { "id": "A", "text": "He hasn't got no money" },
+          { "id": "B", "text": "He has got no money" },
+          { "id": "C", "text": "He hasn't got any money" },
+          { "id": "D", "text": "Both B and C are correct" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "'He has got no money' aur 'He hasn't got any money' dono single-negative constructions hain aur sahi hain. A double negative hone se galat hai."
+      },
+      "navigation": { "next": "card_83_quiz_no_sooner_fillblank", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_83_quiz_no_sooner_fillblank",
+      "card_slug": "card_83_quiz_no_sooner_fillblank",
+      "type": "quiz",
+      "concept_id": "adverb_double_negative_hardly",
+      "level": 4,
+      "progress": { "current": 83, "total": 96 },
+      "quiz_payload": {
+        "question": "Fill in the blank: 'No sooner _____ than it started raining.'",
+        "options": [
+          { "id": "A", "text": "he had arrived" },
+          { "id": "B", "text": "did he arrive" },
+          { "id": "C", "text": "had he arrived" },
+          { "id": "D", "text": "he arrived" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'No sooner' ke baad Inversion hoga: Auxiliary+Subject+Main Verb - 'had he arrived'."
+      },
+      "navigation": { "next": "card_84_quiz_multistatement_negatives", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_84_quiz_multistatement_negatives",
+      "card_slug": "card_84_quiz_multistatement_negatives",
+      "type": "quiz",
+      "concept_id": "adverb_double_negative_hardly",
+      "level": 4,
+      "progress": { "current": 84, "total": 96 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Hardly', 'Scarcely', and 'Barely' are inherently negative words. II. Using 'not' with 'hardly' is grammatically acceptable for emphasis. III. Sentences starting with 'Hardly' require subject-auxiliary inversion. Which are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "I only" },
+          { "id": "C", "text": "I, II & III" },
+          { "id": "D", "text": "II & III" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - 'not' ke saath 'hardly' lagane se double negative error banta hai."
+      },
+      "navigation": { "next": "card_85_milestone_m11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_85_milestone_m11",
+      "card_slug": "card_85_milestone_m11",
+      "type": "milestone",
+      "concept_id": "adverb_double_negative_hardly",
+      "level": 4,
+      "progress": { "current": 85, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🚫",
+        "completed_topic": "Double Negatives & Hardly/Scarcely/Barely",
+        "xp_earned": 65,
+        "milestone_progress": "Module 11/12 Clear",
+        "motivational_quote": "Inversion rules pakad liye! Last module - Only Placement aur Misc Traps!"
+      },
+      "navigation": { "next": "card_86_only_placement", "button_text": "Start Final Module ➔" }
+    },
+    {
+      "card_id": "card_86_only_placement",
+      "card_slug": "card_86_only_placement",
+      "type": "chat",
+      "concept_id": "adverb_only_misc_traps",
+      "level": 5,
+      "progress": { "current": 86, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab last aur sabse important trap - 'ONLY' ki position sentence ka poora matlab badal deti hai! Dekho: 'Only I love you' vs 'I only love you' vs 'I love only you' - teeno ka matlab alag hai." },
+        { "speaker": "raju", "text": "Hain?? Sir same words, different jagah, aur matlab bilkul alag?? Ye to sabse khatarnak trap hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi Raju! SBI PO mein ye sabse zyada pucha jaane wala concept hai - 'only' hamesha us word ke turant PEHLE lagta hai jisko wo modify kar raha ho." },
+        { "speaker": "raju", "text": "Sir isse to har sentence dobara padhna padega exam mein!" }
+      ],
+      "navigation": { "next": "card_87_comparative_errors_farther", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_87_comparative_errors_farther",
+      "card_slug": "card_87_comparative_errors_farther",
+      "type": "chat",
+      "concept_id": "adverb_only_misc_traps",
+      "level": 5,
+      "progress": { "current": 87, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab kuch aur common Error Detection traps yaad karo: 'More better', 'More easier', 'Most best' - ye sab DOUBLE COMPARATIVE/SUPERLATIVE errors hain, kabhi use mat karna." },
+        { "speaker": "raju", "text": "Sir 'farther' aur 'further' wala bhi confuse karta hai!" },
+        { "speaker": "aman", "text": "Yaad rakho: Farther = physical distance (The station is farther than the school), Further = additional/abstract (I need further information). Ye BPSC officer level favorite hai!" },
+        { "speaker": "raju", "text": "Achha, physical ke liye Farther, abstract ke liye Further - yaad rakh lunga!" }
+      ],
+      "navigation": { "next": "card_88_adverb_vs_adjective_asas", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_88_adverb_vs_adjective_asas",
+      "card_slug": "card_88_adverb_vs_adjective_asas",
+      "type": "chat",
+      "concept_id": "adverb_only_misc_traps",
+      "level": 5,
+      "progress": { "current": 88, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur bahut common galti - Adjective ki jagah galat use, jaise 'He drives careful' GALAT hai, sahi hai 'He drives carefully' kyunki verb 'drives' ko modify karna hai, Adjective nahi Adverb chahiye." },
+        { "speaker": "raju", "text": "Sir 'as...as' comparison mein bhi kuch trap hai kya?" },
+        { "speaker": "aman", "text": "Haan! 'As + adverb + as' equal comparison ke liye use hota hai - 'She runs as fast as her brother.' Beech mein 'fast' hi rahega, 'faster' nahi - double comparison mat karna is structure mein!" },
+        { "speaker": "raju", "text": "Sir ab lagta hai maine saare traps seekh liye, ab test karo!" }
+      ],
+      "navigation": { "next": "card_89_guess_toomuchintelligent", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_89_guess_toomuchintelligent",
+      "card_slug": "card_89_guess_toomuchintelligent",
+      "type": "guess",
+      "concept_id": "adverb_only_misc_traps",
+      "level": 5,
+      "progress": { "current": 89, "total": 96 },
+      "guess_payload": {
+        "question": "Find the error segment: 'He is (A)/ too much intelligent (B)/ to fail in (C)/ the examination. (D)'",
+        "options": [
+          { "id": "A", "text": "A" },
+          { "id": "B", "text": "B" },
+          { "id": "C", "text": "C" },
+          { "id": "D", "text": "D" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Too much intelligent' galat hai - 'too' ke baad seedha adjective aata hai bina 'much' ke: 'too intelligent'. 'Much' yahan zaroorat nahi."
+      },
+      "navigation": { "next": "card_90_quiz_only_raju", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_90_quiz_only_raju",
+      "card_slug": "card_90_quiz_only_raju",
+      "type": "quiz",
+      "concept_id": "adverb_only_misc_traps",
+      "level": 5,
+      "progress": { "current": 90, "total": 96 },
+      "quiz_payload": {
+        "question": "Choose the sentence that correctly means: 'Nobody else except Raju can answer this question.'",
+        "options": [
+          { "id": "A", "text": "Only Raju can answer this question" },
+          { "id": "B", "text": "Raju can only answer this question" },
+          { "id": "C", "text": "Raju can answer only this question" },
+          { "id": "D", "text": "Raju only can answer this question" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Only' Raju ke turant pehle lagne se subject restrict hota hai - matlab koi aur nahi, sirf Raju."
+      },
+      "navigation": { "next": "card_91_quiz_more_preferable", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_91_quiz_more_preferable",
+      "card_slug": "card_91_quiz_more_preferable",
+      "type": "quiz",
+      "concept_id": "adverb_only_misc_traps",
+      "level": 5,
+      "progress": { "current": 91, "total": 96 },
+      "quiz_payload": {
+        "question": "Error detection: 'This is more preferable than that one.'",
+        "options": [
+          { "id": "A", "text": "'more preferable' is redundant - 'preferable' already means 'more desirable'" },
+          { "id": "B", "text": "'that one' should be 'that once'" },
+          { "id": "C", "text": "'This' should be 'These'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Preferable' apne aap mein comparative meaning rakhta hai, isliye 'more' lagana redundancy error hai."
+      },
+      "navigation": { "next": "card_92_quiz_multistatement_final_traps", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_92_quiz_multistatement_final_traps",
+      "card_slug": "card_92_quiz_multistatement_final_traps",
+      "type": "quiz",
+      "concept_id": "adverb_only_misc_traps",
+      "level": 5,
+      "progress": { "current": 92, "total": 96 },
+      "quiz_payload": {
+        "question": "Statements: I. Position of 'only' can change the entire meaning of a sentence. II. 'Farther' is used for abstract/additional sense while 'Further' is for physical distance. III. 'He drives careful' is grammatically correct. Which statement(s) is/are CORRECT?",
+        "options": [
+          { "id": "A", "text": "I only" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "II & III" },
+          { "id": "D", "text": "I, II & III" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II reversed hai (galat) - Farther=physical, Further=abstract. Statement III galat hai, sahi hoga 'He drives carefully'."
+      },
+      "navigation": { "next": "card_93_milestone_m12", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_93_milestone_m12",
+      "card_slug": "card_93_milestone_m12",
+      "type": "milestone",
+      "concept_id": "adverb_only_misc_traps",
+      "level": 5,
+      "progress": { "current": 93, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Only Placement & Miscellaneous SBI PO Traps",
+        "xp_earned": 70,
+        "milestone_progress": "Module 12/12 Clear",
+        "motivational_quote": "Saare 12 modules clear! Ab Officer Level Final Revision ki baari hai!"
+      },
+      "navigation": { "next": "card_94_summary_revision", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_94_summary_revision",
+      "card_slug": "card_94_summary_revision",
+      "type": "summary",
+      "concept_id": "adverb_full_revision",
+      "level": 5,
+      "progress": { "current": 94, "total": 96 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Adverb",
+        "revision_points": [
+          {
+            "topic": "Adverb Definition",
+            "point": "Ek Adverb Verb, Adjective, ya dusre Adverb ko modify karta hai — batata hai How, When, Where, How much, How often."
+          },
+          {
+            "topic": "Tricky Look-Alike Pairs",
+            "point": "hard(mehnat se) ≠ hardly(lagbhag nahi); late(der se) ≠ lately(haal hi mein); near(paas) ≠ nearly(lagbhag); high(ooncha) ≠ highly(bahut zyada); most(superlative) ≠ almost(lagbhag)."
+          },
+          {
+            "topic": "Position & Order",
+            "point": "Frequency adverbs main verb se pehle, auxiliary/be-verb ke baad aate hain. Multiple adverbs ka fixed order: Manner-Place-Time (MPT)."
+          },
+          {
+            "topic": "Negative Words",
+            "point": "Hardly/Scarcely/Barely pehle se negative hain — inke saath 'not/no' kabhi mat lagao (Double Negative error). 'No sooner...than' aur 'Hardly...when' mein Subject-Auxiliary Inversion hota hai."
+          },
+          {
+            "topic": "SBI PO Special Traps",
+            "point": "'Only' ki position poora meaning badal deti hai; Double Comparatives (more better ✗) aur Redundancy (more preferable ✗) se bacho; 'too+adj+to' negative result dikhata hai, 'enough' Adjective ke BAAD aata hai."
+          }
+        ]
+      },
+      "navigation": { "next": "card_95_final_quiz", "button_text": "Take Final Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_95_final_quiz",
+      "card_slug": "card_95_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "adverb_full_revision",
+      "level": 5,
+      "progress": { "current": 95, "total": 96 },
+      "quiz_payload": {
+        "question": "Read the following statements about Adverbs carefully:\nI. Adverbs of Manner are mostly formed by adding '-ly' to adjectives, but words like 'friendly' and 'lovely' remain adjectives despite ending in '-ly'.\nII. 'Hardly', 'Scarcely', and 'Barely' are negative adverbs and should never be combined with another negative word like 'not'.\nIII. When Manner, Place, and Time adverbs occur together, the correct order is Time-Manner-Place.\nIV. The word 'only' must always be placed immediately before the word or phrase it modifies to avoid ambiguity.\nWhich of the above statements are CORRECT?",
+        "options": [
+          { "id": "A", "text": "I, II and IV only" },
+          { "id": "B", "text": "I, III and IV only" },
+          { "id": "C", "text": "II and III only" },
+          { "id": "D", "text": "All four statements are correct" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement III galat hai - sahi order Manner-Place-Time (MPT) hai, Time-Manner-Place nahi. Statements I, II, aur IV standard grammar rules ke anusar sahi hain jo BPSC/SBI PO Error Detection mein directly use hote hain."
+      },
+      "navigation": { "next": "card_96_trophy", "button_text": "See Final Result ➔" }
+    },
+    {
+      "card_id": "card_96_trophy",
+      "card_slug": "card_96_trophy",
+      "type": "milestone",
+      "concept_id": "adverb_full_revision",
+      "level": 5,
+      "progress": { "current": 96, "total": 96 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Adverb - Complete Mastery (SBI PO Error Detection Level)",
+        "xp_earned": 200,
+        "milestone_progress": "12/12 Modules Clear - 100% Complete",
+        "motivational_quote": "Shabaash Officer! Ab tum Adverb ke har type, har trap, aur har SBI PO/BPSC error detection question ko crack kar sakte ho. Ab practice karo aur exam mein topper bano!"
+      },
+      "navigation": { "next": "course_complete", "button_text": "Finish Chapter 🎉" }
+    }
+  ]
+}
+```
