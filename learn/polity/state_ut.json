@@ -1,0 +1,1826 @@
+
+{
+  "topic_id": "states_uts_indian_geography",
+  "topic_title": "States and Union Territories of India",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "intro_states_uts",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "States and Union Territories of India",
+        "subtitle": "Complete Political Geography",
+        "icon": "🗺️",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "28 States + 8 UTs: Names, Capitals, Formation Dates",
+          "Article 1 & Constitutional Provisions",
+          "State Reorganization Acts (1956, 2000, 2014, 2019)",
+          "Largest/Smallest States by Area & Population",
+          "Special Status States (Art 370, 371)",
+          "Lieutenant Governors vs Governors",
+          "Bihar's Formation & Reorganization History",
+          "BPSC/SSC/Railway PYQ Traps"
+        ],
+        "estimated_time": "45 minutes",
+        "difficulty_label": "Zero to Officer Level"
+      },
+      "navigation": {
+        "next": "card_02_daily_context",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_context",
+      "card_slug": "card_02_daily_context",
+      "type": "chat",
+      "concept_id": "intro_political_map",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne kabhi socha hai ki India mein kitne states hain? Jab tum newspaper padhte ho ya TV dekhte ho, toh kabhi 'Uttar Pradesh ke CM ne...', 'Bihar ki rajdhani Patna mein...' sunta hona?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Par exact number toh pata nahi... 25-26 hoge shayad?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut ache! Dekho, iska answer time ke saath badalta raha hai. 2024 mein India mein **28 States** aur **8 Union Territories** hain. Lekin ye number hamesha same nahi tha - 1950 mein alag tha, 2000 mein badla, 2019 mein fir badla. Aaj hum samjhenge kaise aur kyun ye changes hue, aur BPSC/SSC mein isse related saare traps!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, State aur Union Territory mein kya difference hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_state_vs_ut",
+        "button_text": "Difference Samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_03_state_vs_ut",
+      "card_slug": "card_03_state_vs_ut",
+      "type": "chat",
+      "concept_id": "state_vs_ut_concept",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect question! **State** ka apna elected government hota hai - Chief Minister, State Assembly. Example: Bihar ka CM, Bihar Vidhan Sabha. **Union Territory (UT)** directly Central Government ke control mein hota hai - zyada tar Lieutenant Governor (LG) se chalte hain, kuch mein Assembly bhi hai. Example: Delhi (CM + LG dono), Ladakh (sirf LG, no Assembly)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab State zyada independent hai, UT kam?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi! State ko **Article 1** Constitution mein 'State' kaha gaya hai - apni powers, own legislature. UT ko Central Government zyada control karta hai. ⭐ **BPSC Trap**: 'Delhi aur Puducherry mein CM hai' - TRUE, par ye **special UTs** hain with Assembly. Baaki UTs (Ladakh, Chandigarh, etc.) sirf LG se chalte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to confusing hai! Delhi UT hai par CM bhi hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_constitutional_provision",
+        "button_text": "Constitutional Basis ➔"
+      }
+    },
+    {
+      "card_id": "card_04_constitutional_provision",
+      "card_slug": "card_04_constitutional_provision",
+      "type": "chat",
+      "concept_id": "article_1_provision",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Constitution ke **Article 1** mein likha hai: 'India, that is Bharat, shall be a **Union of States**'. Yahan 'States' mein States + Union Territories dono included hain. **Article 2**: Parliament naye States admit kar sakti hai. **Article 3**: Parliament existing States ko alter, rename, merge kar sakti hai (but state ki Assembly ka opinion lena padta hai, binding nahi hai)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Parliament chahe toh koi bhi State tod sakti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Theoretically haan, but practically bahut complex process hai. State Assembly ka opinion lena **mandatory** hai (though non-binding). Recent example: **Jammu & Kashmir** ko 2019 mein 2 UTs (J&K + Ladakh) mein divide kiya gaya - **Article 370** abolish karke. ⭐ **UPSC/BPSC Favorite**: 'Can Parliament unilaterally alter state boundaries?' - YES (Article 3), but consultation mandatory."
+        },
+        {
+          "speaker": "raju",
+          "text": "Article 370 toh news mein bahut suna tha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_quiz_basics_q1",
+        "button_text": "Test Your Understanding 📝"
+      }
+    },
+    {
+      "card_id": "card_05_quiz_basics_q1",
+      "card_slug": "card_05_quiz_basics_q1",
+      "type": "quiz",
+      "concept_id": "quiz_state_ut_basics_1",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "As of 2024, India mein kitne States aur kitne Union Territories hain?",
+        "options": [
+          { "id": "A", "text": "29 States, 7 UTs" },
+          { "id": "B", "text": "28 States, 8 UTs" },
+          { "id": "C", "text": "28 States, 9 UTs" },
+          { "id": "D", "text": "27 States, 9 UTs" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "2024 mein India mein **28 States** aur **8 Union Territories** hain. 2019 mein Jammu & Kashmir ko State se 2 UTs (J&K + Ladakh) banaya gaya, isliye total States 29 se 28 ho gaye, aur UTs 7 se 9, fir Dadra & Nagar Haveli aur Daman & Diu merge hoke 1 UT bane, toh UTs 9 se 8 ho gaye. ⭐ SSC/Railway mein ye number frequently change hone ki wajah se confusing question banta hai!"
+      },
+      "navigation": {
+        "next": "card_06_quiz_basics_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_basics_q2",
+      "card_slug": "card_06_quiz_basics_q2",
+      "type": "quiz",
+      "concept_id": "quiz_state_ut_basics_2",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "State aur Union Territory mein mukhya antar kya hai?",
+        "options": [
+          { "id": "A", "text": "State mein Governor hota hai, UT mein nahi" },
+          { "id": "B", "text": "State ka apna elected government (CM + Assembly) hota hai, UT Central Government ke control mein" },
+          { "id": "C", "text": "UT zyada bade hote hain area mein" },
+          { "id": "D", "text": "Koi antar nahi hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "**State** ka apna elected government hota hai with Chief Minister aur State Legislative Assembly (Article 168). **Union Territory** directly Central Government ke control mein hota hai, zyada tar Lieutenant Governor (LG) se chalte hain. Exception: Delhi aur Puducherry mein CM + Assembly hai (special UTs), but LG ka bhi role hai. ⭐ BPSC mein ye conceptual difference bahut poocha jata hai!"
+      },
+      "navigation": {
+        "next": "card_07_quiz_basics_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_basics_q3",
+      "card_slug": "card_07_quiz_basics_q3",
+      "type": "quiz",
+      "concept_id": "quiz_state_ut_basics_3",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Constitution ke kis Article mein Parliament ko States ko alter/merge karne ki power di gayi hai?",
+        "options": [
+          { "id": "A", "text": "Article 1" },
+          { "id": "B", "text": "Article 2" },
+          { "id": "C", "text": "Article 3" },
+          { "id": "D", "text": "Article 370" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "**Article 3** Parliament ko power deta hai existing States ko alter, rename, increase/decrease area, merge karne ki. Article 1 mein 'Union of States' definition hai. Article 2 mein new States admit karne ki power hai. Article 370 (ab abolished) J&K ko special status deta tha. ⭐ UPSC/BPSC mein Article 3 provisions bahut important hain - State Reorganization ke saare cases isi ke under!"
+      },
+      "navigation": {
+        "next": "card_08_milestone_basics",
+        "button_text": "Check Result 🎯"
+      }
+    },
+    {
+      "card_id": "card_08_milestone_basics",
+      "card_slug": "card_08_milestone_basics",
+      "type": "milestone",
+      "concept_id": "milestone_basics_complete",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 COMPLETE!",
+        "badge_emoji": "🗺️",
+        "completed_topic": "Basics: State vs UT & Constitutional Provisions",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Clear",
+        "motivational_quote": "Solid foundation ban gaya! Ab historical reorganization ki journey pe chalte hain!"
+      },
+      "navigation": {
+        "next": "card_09_reorganization_1956",
+        "button_text": "Start Module 2 🚀"
+      }
+    },
+    {
+      "card_id": "card_09_reorganization_1956",
+      "card_slug": "card_09_reorganization_1956",
+      "type": "chat",
+      "concept_id": "states_reorganization_act_1956",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "1950 mein jab India independent hua, tab Part A, B, C, D States tha - bahut complicated! 1956 mein **States Reorganization Act** lagu hua - ye India ki political map ko **linguistic basis** (bhasha ke aadhar par) reshape kiya. Pehla linguistic state **Andhra Pradesh** (1953) Telugu speakers ke liye bana tha, fir 1956 mein pure India ko re-organize kiya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab pehle states language ke base par nahi the?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! British time mein provinces administrative convenience se bane the. 1956 Act ne **14 States + 6 UTs** banaye. Important: **Fazl Ali Commission (1953)** ne ye recommend kiya tha. ⭐ **BPSC TRE Favorite**: 'Bihar ka formation linguistic basis par tha?' - NO! Bihar 1912 mein Bengal se alag hua tha (administrative reasons), 1956 reorganization mein koi change nahi. Lekin **Bihar se 2000 mein Jharkhand** bana (tribal demand)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Jharkhand Bihar se 2000 mein nikla! Ye toh recent hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_reorganization_2000",
+        "button_text": "2000 का बड़ा बदलाव ➔"
+      }
+    },
+    {
+      "card_id": "card_10_reorganization_2000",
+      "card_slug": "card_10_reorganization_2000",
+      "type": "chat",
+      "concept_id": "states_formation_2000",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**2000 - Teen naye states ek saal mein!** (1) **Chhattisgarh** (1 Nov 2000) - Madhya Pradesh se, (2) **Uttarakhand** (9 Nov 2000, pehle Uttaranchal) - Uttar Pradesh se, (3) **Jharkhand** (15 Nov 2000) - Bihar se. Teeno **tribal/regional demand** aur **better administration** ke liye bane. ⭐ **SSC/Railway Trap**: Formation dates confuse hote hain - November 2000 sabka, but tareekh alag!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, Bihar se Jharkhand nikalne se Bihar chhota ho gaya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Bihar ka **area 40% kam** ho gaya (mineral-rich southern districts Jharkhand mein chale gaye - Ranchi, Dhanbad, etc.). Population bhi kam hua. **Patna** Bihar ki capital rahi. Jharkhand ki capital **Ranchi** bani. ⭐ **BPSC TRE Special**: 'Bihar ki economy par Jharkhand formation ka impact' - mineral revenue loss, but administrative load kam."
+        },
+        {
+          "speaker": "raju",
+          "text": "Patna Bihar mein hi raha, achha hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_telangana_2014",
+        "button_text": "Telangana Formation ➔"
+      }
+    },
+    {
+      "card_id": "card_11_telangana_2014",
+      "card_slug": "card_11_telangana_2014",
+      "type": "chat",
+      "concept_id": "telangana_formation_2014",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Telangana** - India ka **29th State** (2 June 2014), **Andhra Pradesh** se alag hoke bana. Capital **Hyderabad** - unique case! Hyderabad dono states (Telangana + Andhra Pradesh) ki **joint capital** 10 saal ke liye (2024 tak). Ab Andhra Pradesh apni nayi capital **Amaravati** bana raha hai. Ye linguistic state nahi tha - **regional imbalance** aur **separate identity demand** ke liye bana."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ek hi city 2 states ki capital? Ye toh ajeeb hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, temporary arrangement thi. ⭐ **UPSC Current Affairs**: 'Hyderabad joint capital status 2024 mein khatam - ab sirf Telangana ki capital.' Andhra Pradesh gradually Amaravati shift kar raha hai. **BPSC Trap**: '29th state kaun tha?' - Telangana (2014), lekin 2019 mein J&K reorganization ke baad total states **28** ho gaye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 29 tha, fir 28 ho gaya! Confusing!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_jk_reorganization_2019",
+        "button_text": "2019 का सबसे बड़ा बदलाव ➔"
+      }
+    },
+    {
+      "card_id": "card_12_jk_reorganization_2019",
+      "card_slug": "card_12_jk_reorganization_2019",
+      "type": "chat",
+      "concept_id": "jk_reorganization_2019",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**5 August 2019** - Historic day! **Article 370** (J&K ko special status) aur **Article 35A** abolish kiye gaye. **Jammu & Kashmir State** ko 2 Union Territories mein divide kiya: (1) **Jammu & Kashmir (UT)** - with Legislature (Assembly), capital Srinagar (summer) + Jammu (winter), (2) **Ladakh (UT)** - without Legislature, capital Leh. Ye **J&K Reorganization Act, 2019** ke through hua."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, Article 370 kya tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Article 370 J&K ko **special autonomous status** deta tha - apna constitution, flag, separate laws (except defence, foreign affairs, communications). ⭐ **BPSC/UPSC Assertion-Reason Favorite**: 'Statement 1: Article 370 abolished in 2019. Statement 2: J&K is now a UT.' - Both TRUE and Statement 2 is correct consequence of Statement 1. Ab J&K mein bhi **regular Indian laws** apply hote hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh bahut important change tha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_quiz_reorganization_q1",
+        "button_text": "Test करो 📝"
+      }
+    },
+    {
+      "card_id": "card_13_quiz_reorganization_q1",
+      "card_slug": "card_13_quiz_reorganization_q1",
+      "type": "quiz",
+      "concept_id": "quiz_reorganization_1",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "2000 mein ek saath kitne aur kaun se states bane?",
+        "options": [
+          { "id": "A", "text": "2 states: Jharkhand, Chhattisgarh" },
+          { "id": "B", "text": "3 states: Chhattisgarh, Uttarakhand, Jharkhand" },
+          { "id": "C", "text": "3 states: Telangana, Jharkhand, Chhattisgarh" },
+          { "id": "D", "text": "2 states: Uttarakhand, Telangana" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "**2000 mein teen states** bane: (1) **Chhattisgarh** (1 Nov) - MP se, (2) **Uttarakhand** (9 Nov, pehle Uttaranchal) - UP se, (3) **Jharkhand** (15 Nov) - Bihar se. Telangana 2014 mein bana tha. ⭐ SSC/Railway mein ye numeric trap hai - 'kitne states 2000 mein' answer 3 hai!"
+      },
+      "navigation": {
+        "next": "card_14_quiz_reorganization_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_reorganization_q2",
+      "card_slug": "card_14_quiz_reorganization_q2",
+      "type": "quiz",
+      "concept_id": "quiz_reorganization_2",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: Bihar se Jharkhand kab alag hua?",
+        "options": [
+          { "id": "A", "text": "1 November 2000" },
+          { "id": "B", "text": "9 November 2000" },
+          { "id": "C", "text": "15 November 2000" },
+          { "id": "D", "text": "2 June 2014" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "**Jharkhand** Bihar se **15 November 2000** ko alag hoke bana. 1 Nov - Chhattisgarh (MP se), 9 Nov - Uttarakhand (UP se), 15 Nov - Jharkhand (Bihar se). 2 June 2014 - Telangana (AP se). ⭐ BPSC TRE mein Bihar-specific dates bahut important hain - '15 Nov Jharkhand Day' Bihar mein bhi significant hai."
+      },
+      "navigation": {
+        "next": "card_15_quiz_reorganization_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_reorganization_q3",
+      "card_slug": "card_15_quiz_reorganization_q3",
+      "type": "quiz",
+      "concept_id": "quiz_reorganization_3",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Article 370 kab abolish kiya gaya?",
+        "options": [
+          { "id": "A", "text": "26 January 2019" },
+          { "id": "B", "text": "5 August 2019" },
+          { "id": "C", "text": "15 August 2019" },
+          { "id": "D", "text": "2 October 2019" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "**Article 370** (J&K ko special status) **5 August 2019** ko abolish kiya gaya through Presidential Order. Iske saath hi J&K State ko 2 UTs (J&K + Ladakh) mein divide kiya gaya. ⭐ UPSC/SSC Current Affairs mein ye date bahut important hai - '5 August 2019' J&K Reorganization ka din."
+      },
+      "navigation": {
+        "next": "card_16_milestone_reorganization",
+        "button_text": "Check Result 🎯"
+      }
+    },
+    {
+      "card_id": "card_16_milestone_reorganization",
+      "card_slug": "card_16_milestone_reorganization",
+      "type": "milestone",
+      "concept_id": "milestone_reorganization_complete",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 2 COMPLETE!",
+        "badge_emoji": "📜",
+        "completed_topic": "State Reorganization (1956, 2000, 2014, 2019)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/6 Clear",
+        "motivational_quote": "Historical timeline clear! Ab current 28 States aur 8 UTs ki detailed list!"
+      },
+      "navigation": {
+        "next": "card_17_current_states_intro",
+        "button_text": "Start Module 3 🗺️"
+      }
+    },
+    {
+      "card_id": "card_17_current_states_intro",
+      "card_slug": "card_17_current_states_intro",
+      "type": "chat",
+      "concept_id": "current_28_states_intro",
+      "level": 3,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab 28 States ki complete list - region-wise grouping se yaad karna easy hoga. **North**: Haryana, Himachal Pradesh, Punjab, Rajasthan, Uttarakhand. **East**: Bihar, Jharkhand, Odisha, West Bengal. **Northeast (Seven Sisters + Sikkim)**: Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura. **West**: Goa, Gujarat, Maharashtra. **South**: Andhra Pradesh, Karnataka, Kerala, Tamil Nadu, Telangana. **Central**: Chhattisgarh, Madhya Pradesh, Uttar Pradesh."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ye Seven Sisters kaun hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Northeast ke 7 states: Arunachal, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Tripura. **Sikkim** 1975 mein India mein merge hua (36th Amendment), isliye technically '8th sister' hai. ⭐ **SSC Trap**: 'Northeast mein kitne states' - 8 (Seven Sisters + Sikkim)."
+        },
+        {
+          "speaker": "raju",
+          "text": "8 hain total! Trick question hai ye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_capitals_intro",
+        "button_text": "Capitals याद करो 🏛️"
+      }
+    },
+    {
+      "card_id": "card_18_capitals_intro",
+      "card_slug": "card_18_capitals_intro",
+      "type": "chat",
+      "concept_id": "state_capitals_important",
+      "level": 3,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Capitals** - BPSC/SSC mein direct matching questions aate hain. Kuch important: **Maharashtra** - Mumbai (financial capital of India bhi), **Gujarat** - Gandhinagar (NOT Ahmedabad - common trap!), **Punjab & Haryana** - SHARED capital **Chandigarh** (UT hai, dono states ki capital), **Uttarakhand** - Dehradun (winter) + Gairsain (summer - declared 2020), **J&K** - Srinagar (summer) + Jammu (winter - seasonal capitals)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Chandigarh 2 states ki capital? Ajeeb!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! 1966 mein Punjab reorganization ke baad banaya gaya. **Himachal Pradesh** - Shimla (summer) + Dharamshala (winter session - recent). ⭐ **BPSC TRE Special**: **Bihar** - **Patna** (ancient name: Pataliputra - Mauryan/Gupta empire ki capital bhi thi). Railway mein 'financial capital' (Mumbai), 'political capital' (New Delhi) confusion hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Patna toh bahut purani capital hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_ut_list",
+        "button_text": "8 UTs की List ➔"
+      }
+    },
+    {
+      "card_id": "card_19_ut_list",
+      "card_slug": "card_19_ut_list",
+      "type": "chat",
+      "concept_id": "current_8_uts",
+      "level": 3,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**8 Union Territories**: (1) **Delhi** - National Capital Territory (NCT), Assembly + LG, (2) **Puducherry** (Pondicherry) - Assembly + LG, 4 regions (Puducherry, Karaikal, Mahe, Yanam), (3) **Chandigarh** - Punjab+Haryana ki shared capital, (4) **Dadra & Nagar Haveli and Daman & Diu** (2020 mein merged), (5) **Lakshadweep** - smallest UT (area), (6) **Andaman & Nicobar Islands** - largest UT (area), capital Port Blair, (7) **Jammu & Kashmir** - with Assembly, (8) **Ladakh** - without Assembly."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, Delhi NCT kya hai? UT hai ya nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "**Delhi** ek **special UT** hai - **NCT (National Capital Territory)** status hai (69th Amendment, 1991). Assembly hai (CM - Arvind Kejriwal type), but **LG ka bhi power** hai (Centre appoint karta hai). Recent Supreme Court judgments ne powers define kiye - LG aur CM ke beech conflicts hote hain. ⭐ **UPSC/BPSC Constitutional Question**: 'Delhi mein real power LG ke paas ya CM ke?' - Debatable, but SC ne kaha services (police, land, law & order) LG ke under."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh complicated hai! CM aur LG dono!"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_quiz_states_uts_q1",
+        "button_text": "Test करो 📝"
+      }
+    },
+    {
+      "card_id": "card_20_quiz_states_uts_q1",
+      "card_slug": "card_20_quiz_states_uts_q1",
+      "type": "quiz",
+      "concept_id": "quiz_states_uts_1",
+      "level": 3,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Northeast India mein total kitne states hain?",
+        "options": [
+          { "id": "A", "text": "7 (Seven Sisters)" },
+          { "id": "B", "text": "8 (Seven Sisters + Sikkim)" },
+          { "id": "C", "text": "6" },
+          { "id": "D", "text": "9" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Northeast India mein **8 states** hain: Seven Sisters (Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Tripura) + **Sikkim** (1975 mein 36th Amendment se India mein merge hua). ⭐ SSC/Railway Trap: 'Seven Sisters' sirf 7 hain, but total Northeast states 8!"
+      },
+      "navigation": {
+        "next": "card_21_quiz_states_uts_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_21_quiz_states_uts_q2",
+      "card_slug": "card_21_quiz_states_uts_q2",
+      "type": "quiz",
+      "concept_id": "quiz_states_uts_2",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Gujarat ki capital kaun si hai?",
+        "options": [
+          { "id": "A", "text": "Ahmedabad" },
+          { "id": "B", "text": "Surat" },
+          { "id": "C", "text": "Gandhinagar" },
+          { "id": "D", "text": "Vadodara" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Gujarat ki capital **Gandhinagar** hai (planned city, Sabarmati river ke kinare). Ahmedabad Gujarat ka largest city hai (former capital bhi tha), lekin **current capital Gandhinagar** hai. ⭐ BPSC/SSC mein ye classic trap question hai - 'Gujarat capital' options mein Ahmedabad dete hain confusion ke liye!"
+      },
+      "navigation": {
+        "next": "card_22_quiz_states_uts_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz_states_uts_q3",
+      "card_slug": "card_22_quiz_states_uts_q3",
+      "type": "quiz",
+      "concept_id": "quiz_states_uts_3",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Kaun se do states ek hi UT ko apni capital ke roop mein share karte hain?",
+        "options": [
+          { "id": "A", "text": "Uttar Pradesh aur Uttarakhand" },
+          { "id": "B", "text": "Punjab aur Haryana" },
+          { "id": "C", "text": "Andhra Pradesh aur Telangana" },
+          { "id": "D", "text": "Bihar aur Jharkhand" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "**Punjab** aur **Haryana** dono states **Chandigarh** (UT) ko apni capital ke roop mein share karti hain. 1966 mein Punjab reorganization ke baad ye arrangement hua. Chandigarh khud ek UT hai with LG. ⭐ SSC/Railway mein ye unique case frequently puchha jata hai!"
+      },
+      "navigation": {
+        "next": "card_23_milestone_current_list",
+        "button_text": "Check Result 🎯"
+      }
+    },
+    {
+      "card_id": "card_23_milestone_current_list",
+      "card_slug": "card_23_milestone_current_list",
+      "type": "milestone",
+      "concept_id": "milestone_current_list_complete",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 3 COMPLETE!",
+        "badge_emoji": "🗺️",
+        "completed_topic": "28 States + 8 UTs Complete List",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/6 Clear",
+        "motivational_quote": "Puri list clear! Ab comparative facts - largest/smallest!"
+      },
+      "navigation": {
+        "next": "card_24_largest_smallest_area",
+        "button_text": "Start Module 4 📏"
+      }
+    },
+    {
+      "card_id": "card_24_largest_smallest_area",
+      "card_slug": "card_24_largest_smallest_area",
+      "type": "chat",
+      "concept_id": "area_comparisons",
+      "level": 4,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Area-wise Largest/Smallest** - direct SSC/Railway questions! **Largest State (Area)**: **Rajasthan** (342,239 sq km) - 'Land of Kings', Thar Desert. **Smallest State (Area)**: **Goa** (3,702 sq km) - beach tourism, Konkan coast. **Largest UT (Area)**: **Ladakh** (after 2019 - pehle A&N Islands tha). **Smallest UT (Area)**: **Lakshadweep** (32 sq km - 36 islands, Arabian Sea)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, pehle kaun largest tha if Ladakh UT nahi tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Good catch! **2019 se pehle** Rajasthan largest state tha (ab bhi hai), but **Jammu & Kashmir State** area mein bada tha (including Ladakh). 2019 mein J&K + Ladakh dono UTs bane, toh **Ladakh** largest UT ban gaya. ⭐ **BPSC Trap**: 'Which was largest state before 2019?' - J&K (if we count it as state). Current answer: Rajasthan!"
+        },
+        {
+          "speaker": "raju",
+          "text": "2019 ke pehle aur baad mein answer change! Tricky!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_population_comparisons",
+        "button_text": "Population-wise 👥"
+      }
+    },
+    {
+      "card_id": "card_25_population_comparisons",
+      "card_slug": "card_25_population_comparisons",
+      "type": "chat",
+      "concept_id": "population_comparisons",
+      "level": 4,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Population-wise** (Census 2011 latest available): **Most Populous State**: **Uttar Pradesh** (~20 crore) - India ki sabse zyada Lok Sabha seats (80). **Least Populous State**: **Sikkim** (~6 lakh). **Most Populous UT**: **Delhi** (NCT, ~1.7 crore). **Least Populous UT**: **Lakshadweep** (~64,000). ⭐ **SSC/Railway Numerical Trap**: 'India ki population mein UP ka contribution kitna %?' - ~16-17%!"
+        },
+        {
+          "speaker": "raju",
+          "text": "UP itna bada hai! Bihar kahan hai list mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "**Bihar** - 3rd most populous state (~10.4 crore after UP, Maharashtra). ⭐ **BPSC TRE Favorite**: 'Bihar ki population density' - sabse zyada (1102 per sq km, Census 2011) kyunki area chhota but population zyada. Jharkhand nikalne se area kam ho gaya but population density aur badh gayi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bihar ki density sabse zyada! Ye important fact hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_literacy_comparisons",
+        "button_text": "Literacy & Other Facts 📚"
+      }
+    },
+    {
+      "card_id": "card_26_literacy_comparisons",
+      "card_slug": "card_26_literacy_comparisons",
+      "type": "chat",
+      "concept_id": "literacy_other_comparisons",
+      "level": 4,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Literacy Rate** (Census 2011): **Highest**: **Kerala** (93.91%) - 'God's Own Country', best HDI. **Lowest**: **Bihar** (63.82%). National average: 74.04%. **Sex Ratio (Females per 1000 Males)**: **Highest**: **Kerala** (1084). **Lowest**: **Haryana** (877). **Longest Coastline State**: **Gujarat** (~1600 km). **No Coastline (Landlocked)**: Haryana, MP, Chhattisgarh, Jharkhand, Delhi (UT)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Bihar literacy lowest! Ye toh problem hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, but improvement ho raha hai gradually. ⭐ **BPSC TRE Focus**: Bihar government schemes like 'Mukhyamantri Balika Cycle Yojana', 'Mid-Day Meal' literacy aur school enrollment badhane ke liye. **SSC Trap**: 'Longest coastline' - Gujarat (NOT Tamil Nadu - jo 2nd hai). Mnemonic: G for Gujarat, G for Greatest coastline!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Gujarat coastline mein first! Yaad rakhunga!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_quiz_comparisons_q1",
+        "button_text": "Test करो 📝"
+      }
+    },
+    {
+      "card_id": "card_27_quiz_comparisons_q1",
+      "card_slug": "card_27_quiz_comparisons_q1",
+      "type": "quiz",
+      "concept_id": "quiz_comparisons_1",
+      "level": 4,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Area ki drishti se sabse bada state kaun sa hai?",
+        "options": [
+          { "id": "A", "text": "Madhya Pradesh" },
+          { "id": "B", "text": "Maharashtra" },
+          { "id": "C", "text": "Rajasthan" },
+          { "id": "D", "text": "Uttar Pradesh" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "**Rajasthan** area ki drishti se India ka sabse bada state hai (342,239 sq km). 'Land of Kings' - Thar Desert, historical forts. Madhya Pradesh 2nd largest hai. ⭐ SSC/Railway mein ye direct factual question bahut aata hai!"
+      },
+      "navigation": {
+        "next": "card_28_quiz_comparisons_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_comparisons_q2",
+      "card_slug": "card_28_quiz_comparisons_q2",
+      "type": "quiz",
+      "concept_id": "quiz_comparisons_2",
+      "level": 4,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: Population density ki drishti se kaun sa state sabse upar hai (Census 2011)?",
+        "options": [
+          { "id": "A", "text": "West Bengal" },
+          { "id": "B", "text": "Kerala" },
+          { "id": "C", "text": "Bihar" },
+          { "id": "D", "text": "Uttar Pradesh" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "**Bihar** ki population density sabse zyada hai - **1102 persons per sq km** (Census 2011). Reason: Jharkhand alag hone se area 40% kam ho gaya but population concentration badh gayi. West Bengal 2nd hai (~1028). ⭐ BPSC TRE mein ye Bihar-specific important fact hai!"
+      },
+      "navigation": {
+        "next": "card_29_quiz_comparisons_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_comparisons_q3",
+      "card_slug": "card_29_quiz_comparisons_q3",
+      "type": "quiz",
+      "concept_id": "quiz_comparisons_3",
+      "level": 4,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Literacy rate ki drishti se sabse upar kaun sa state hai (Census 2011)?",
+        "options": [
+          { "id": "A", "text": "Tamil Nadu" },
+          { "id": "B", "text": "Kerala" },
+          { "id": "C", "text": "Goa" },
+          { "id": "D", "text": "Himachal Pradesh" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "**Kerala** ki literacy rate sabse zyada hai - **93.91%** (Census 2011). 'God's Own Country' - best HDI, health, education indicators. Mizoram 2nd (91.58%). ⭐ SSC/Railway mein Kerala ka literacy rate standard comparison question hai!"
+      },
+      "navigation": {
+        "next": "card_30_milestone_comparisons",
+        "button_text": "Check Result 🎯"
+      }
+    },
+    {
+      "card_id": "card_30_milestone_comparisons",
+      "card_slug": "card_30_milestone_comparisons",
+      "type": "milestone",
+      "concept_id": "milestone_comparisons_complete",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 4 COMPLETE!",
+        "badge_emoji": "📊",
+        "completed_topic": "Comparative Facts: Area, Population, Literacy",
+        "xp_earned": 75,
+        "milestone_progress": "Module 4/6 Clear",
+        "motivational_quote": "Statistical mastery achieved! Ab special provisions aur unique states!"
+      },
+      "navigation": {
+        "next": "card_31_special_status_intro",
+        "button_text": "Start Module 5 ⭐"
+      }
+    },
+    {
+      "card_id": "card_31_special_status_intro",
+      "card_slug": "card_31_special_status_intro",
+      "type": "chat",
+      "concept_id": "special_provisions_intro",
+      "level": 5,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch states ko Constitution mein **Special Provisions** diye gaye hain - **Article 370** (ab abolished - J&K), **Article 371** series (different states ko different provisions). Example: **Article 371A** - Nagaland (land, resources par local control), **Article 371G** - Mizoram (similar), **Article 371J** - Karnataka (Hyderabad-Karnataka region development), **Article 371 (without alphabet)** - Maharashtra aur Gujarat ko special governor powers."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, special status ka matlab kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Special status ka matlab - **financial benefits, autonomy, protection to local culture/traditions**. **Article 370** (ab nahi hai) sabse zyada autonomy deta tha J&K ko. **Article 371** series mostly northeastern states, Karnataka, Maharashtra/Gujarat ko special provisions dete hain. ⭐ **UPSC/BPSC Constitutional Law**: 'Difference between Art 370 (abolished) and Art 371 (still active)' - 370 temporary tha, 371 permanent provisions hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "371 abhi bhi hai, 370 gaya! Samajh gaya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_special_category_status",
+        "button_text": "Special Category Status 💰"
+      }
+    },
+    {
+      "card_id": "card_32_special_category_status",
+      "card_slug": "card_32_special_category_status",
+      "type": "chat",
+      "concept_id": "special_category_status_concept",
+      "level": 5,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Special Category Status (SCS)** - ye **financial classification** hai, constitutional nahi. **Gadgil Formula (1969)** ne criteria define kiye: hilly terrain, low population density, strategic location (borders), tribal population, economic backwardness. **11 States** ko mila tha (mostly Northeast + 3 hill states). But **14th Finance Commission (2014)** ne ye status abolish kar diya - ab direct grants ke through help."
+        },
+        {
+          "speaker": "raju",
+          "text": "Kaun se states the SCS mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "**11 States**: Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura (8 NE states), + Himachal Pradesh, Uttarakhand, Jammu & Kashmir (pehle state tha). ⭐ **BPSC/UPSC Current Affairs Trap**: 'Andhra Pradesh/Bihar ko SCS chahiye' - demand hai but nahi mila (14th FC ne system hi change kar diya). Ab 'special package' dete hain SCS ke bajaye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Bihar ko bhi chahiye tha par nahi mila!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_governor_vs_lg",
+        "button_text": "Governor vs LG 👔"
+      }
+    },
+    {
+      "card_id": "card_33_governor_vs_lg",
+      "card_slug": "card_33_governor_vs_lg",
+      "type": "chat",
+      "concept_id": "governor_lg_difference",
+      "level": 5,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Governor** (States mein) vs **Lieutenant Governor (LG)** (UTs mein): **Governor**: President appoint karta hai (Article 155), 5-year term, ceremonial head (Chief Minister aur Council of Ministers actual power), state legislature convene karta hai. **LG**: President appoint karta hai, UT ka administrator, direct Central govt ke under kaam karta hai. Delhi/Puducherry mein LG + CM dono (power conflicts hote hain!)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Delhi mein LG aur CM dono! Kaun zyada powerful?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye **2023 Supreme Court judgment** tak debate tha! SC ne kaha: **CM ko elected government hone ka advantage**, but **services (police, land, law & order) LG ke domain** mein. ⭐ **UPSC Polity Hot Topic**: 'Delhi LG vs CM power tussle' - recent cases (Arvind Kejriwal govt vs LGs). Governor states mein rubber stamp (mostly), LG UTs mein zyada active role."
+        },
+        {
+          "speaker": "raju",
+          "text": "Complicated system hai Delhi ka!"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_quiz_special_q1",
+        "button_text": "Test करो 📝"
+      }
+    },
+    {
+      "card_id": "card_34_quiz_special_q1",
+      "card_slug": "card_34_quiz_special_q1",
+      "type": "quiz",
+      "concept_id": "quiz_special_1",
+      "level": 5,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Kaun sa Article Nagaland ko special provisions deta hai?",
+        "options": [
+          { "id": "A", "text": "Article 370" },
+          { "id": "B", "text": "Article 371A" },
+          { "id": "C", "text": "Article 356" },
+          { "id": "D", "text": "Article 368" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "**Article 371A** Nagaland ko special provisions deta hai - religious/social practices, customary law, land ownership par local control. Article 370 (abolished) J&K ke liye tha. Article 356 - President's Rule. Article 368 - Constitutional Amendment process. ⭐ UPSC/BPSC mein Article 371 series (A, B, C...J) different states ke liye frequently puchhe jate hain!"
+      },
+      "navigation": {
+        "next": "card_35_quiz_special_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_35_quiz_special_q2",
+      "card_slug": "card_35_quiz_special_q2",
+      "type": "quiz",
+      "concept_id": "quiz_special_2",
+      "level": 5,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Special Category Status (SCS) kaun decide karta tha?",
+        "options": [
+          { "id": "A", "text": "Constitution" },
+          { "id": "B", "text": "Planning Commission (ab NITI Aayog)" },
+          { "id": "C", "text": "Supreme Court" },
+          { "id": "D", "text": "State Governments" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "**Special Category Status** constitutional provision nahi tha - **Planning Commission** (ab NITI Aayog) decide karta tha **Gadgil Formula** ke basis par. 14th Finance Commission (2014) ne ye status abolish kar diya - ab states ko direct grants/special packages diye jate hain. ⭐ BPSC/UPSC mein 'Constitutional vs Administrative classification' ka difference important hai!"
+      },
+      "navigation": {
+        "next": "card_36_quiz_special_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_36_quiz_special_q3",
+      "card_slug": "card_36_quiz_special_q3",
+      "type": "quiz",
+      "concept_id": "quiz_special_3",
+      "level": 5,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Union Territories mein Lieutenant Governor (LG) kaun appoint karta hai?",
+        "options": [
+          { "id": "A", "text": "Prime Minister" },
+          { "id": "B", "text": "Chief Justice of India" },
+          { "id": "C", "text": "President of India" },
+          { "id": "D", "text": "Parliament" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "**President of India** Union Territories mein **Lieutenant Governor (LG)** appoint karta hai. LG Central Government ke representative ke roop mein kaam karta hai. States mein **Governor** bhi President appoint karta hai (Article 155). ⭐ SSC/Railway mein ye Polity ka basic factual question hai!"
+      },
+      "navigation": {
+        "next": "card_37_milestone_special",
+        "button_text": "Check Result 🎯"
+      }
+    },
+    {
+      "card_id": "card_37_milestone_special",
+      "card_slug": "card_37_milestone_special",
+      "type": "milestone",
+      "concept_id": "milestone_special_complete",
+      "level": 5,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 5 COMPLETE!",
+        "badge_emoji": "⭐",
+        "completed_topic": "Special Provisions & Constitutional Status",
+        "xp_earned": 80,
+        "milestone_progress": "Module 5/6 Clear",
+        "motivational_quote": "Constitutional depth clear! Last module - PYQ traps aur exam tricks!"
+      },
+      "navigation": {
+        "next": "card_38_pyq_traps_intro",
+        "button_text": "Start Module 6 🎯"
+      }
+    },
+    {
+      "card_id": "card_38_pyq_traps_intro",
+      "card_slug": "card_38_pyq_traps_intro",
+      "type": "chat",
+      "concept_id": "pyq_common_traps",
+      "level": 6,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab BPSC/SSC/Railway ke **favorite traps**! (1) **Capital confusion**: Gujarat - Gandhinagar (NOT Ahmedabad), Maharashtra - Mumbai (NOT Pune), Punjab+Haryana - Chandigarh. (2) **Number trap**: '28 States, 8 UTs' (2024), pehle '29 States, 7 UTs' tha (pre-2019). (3) **Largest/Smallest**: Area - Rajasthan/Goa, Population - UP/Sikkim, Density - Bihar (highest!)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, formation dates bhi confuse karte hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! (4) **Formation dates**: 2000 November - Chhattisgarh (1st), Uttarakhand (9th), Jharkhand (15th). 2014 June 2 - Telangana. 2019 Aug 5 - J&K reorganization. (5) **Article confusion**: 370 (abolished), 371 series (active). ⭐ **BPSC Multi-Statement Trap**: 'Statement 1: J&K is a state. Statement 2: Article 370 is still active.' - Both FALSE (2024 mein)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Multi-statement mein dono parts check karne hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_mnemonic_tricks",
+        "button_text": "Mnemonics & Tricks 🧠"
+      }
+    },
+    {
+      "card_id": "card_39_mnemonic_tricks",
+      "card_slug": "card_39_mnemonic_tricks",
+      "type": "chat",
+      "concept_id": "mnemonics_memory_tricks",
+      "level": 6,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Mnemonics** yaad karne ke liye: **Seven Sisters (NE)**: 'A Mango Man Made Naughty Trips' - Arunachal, Manipur, Meghalaya, Mizoram, Nagaland, Tripura (+ Assam aur Sikkim separately yaad rakho). **3 States formed in 2000**: 'CUJ' - Chhattisgarh, Uttarakhand, Jharkhand. **UTs with Assembly**: 'Delhi-Pondy-JK' - Delhi, Puducherry, Jammu & Kashmir."
+        },
+        {
+          "speaker": "raju",
+          "text": "A Mango Man Made Naughty Trips! Perfect!"
+        },
+        {
+          "speaker": "aman",
+          "text": "**Map practice** bhi karo! Political map par states locate karo, capitals mark karo. **Shared capitals**: Chandigarh (Punjab+Haryana), Hyderabad (Telangana+AP till 2024 - ab sirf Telangana). **Seasonal capitals**: J&K (Srinagar-summer, Jammu-winter), Uttarakhand (Dehradun-winter, Gairsain-summer session), HP (Shimla-summer, Dharamshala-winter session). ⭐ **Railway/SSC** mein map-based questions bhi aate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Map practice zaroori hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_bihar_special_focus",
+        "button_text": "⭐ Bihar Special Focus"
+      }
+    },
+    {
+      "card_id": "card_40_bihar_special_focus",
+      "card_slug": "card_40_bihar_special_focus",
+      "type": "chat",
+      "concept_id": "bihar_state_details",
+      "level": 6,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ **BPSC TRE Special - Bihar Deep Dive**: **Formation**: 1912 mein Bengal Presidency se alag (British time). **Reorganization**: 2000 mein Jharkhand alag hua (15 Nov - Jharkhand Formation Day). **Capital**: Patna (ancient Pataliputra - Mauryan/Gupta empire). **Area**: 94,163 sq km (12th largest). **Population**: ~10.4 crore (3rd largest), **Density**: 1102/sq km (HIGHEST in India - Census 2011)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Bihar ki density India mein sabse zyada!"
+        },
+        {
+          "speaker": "aman",
+          "text": "**Literacy**: 63.82% (lowest - Census 2011, but improving). **Sex Ratio**: 918 females/1000 males. **Bordering States/Countries**: West - UP, East - West Bengal, North - Nepal (international border), South - Jharkhand. **Major Cities**: Patna (capital), Gaya, Bhagalpur, Muzaffarpur, Darbhanga. ⭐ **BPSC TRE** mein Bihar ki geographical, historical, statistical facts bahut detail mein puchhe jate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bihar ka pura profile yaad kar lunga!"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_quiz_pyq_traps_q1",
+        "button_text": "PYQ-Style Test 📝"
+      }
+    },
+    {
+      "card_id": "card_41_quiz_pyq_traps_q1",
+      "card_slug": "card_41_quiz_pyq_traps_q1",
+      "type": "quiz",
+      "concept_id": "quiz_pyq_traps_1",
+      "level": 6,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "2000 mein sabse pehle kaun sa state bana (chronologically)?",
+        "options": [
+          { "id": "A", "text": "Jharkhand" },
+          { "id": "B", "text": "Chhattisgarh" },
+          { "id": "C", "text": "Uttarakhand" },
+          { "id": "D", "text": "Telangana" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "2000 mein sabse pehle **Chhattisgarh** bana (1 November 2000), fir Uttarakhand (9 Nov), fir Jharkhand (15 Nov). Telangana 2014 mein bana. ⭐ SSC/Railway mein ye chronological order trap question hai - 'first in 2000' Chhattisgarh!"
+      },
+      "navigation": {
+        "next": "card_42_quiz_pyq_traps_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_42_quiz_pyq_traps_q2",
+      "card_slug": "card_42_quiz_pyq_traps_q2",
+      "type": "quiz",
+      "concept_id": "quiz_pyq_traps_2",
+      "level": 6,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: Bihar se Jharkhand kab alag hua?",
+        "options": [
+          { "id": "A", "text": "1 November 2000" },
+          { "id": "B", "text": "9 November 2000" },
+          { "id": "C", "text": "15 November 2000" },
+          { "id": "D", "text": "26 January 2001" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "**Jharkhand** Bihar se **15 November 2000** ko alag hua. Ye date **Jharkhand Foundation Day/Statehood Day** ke roop mein celebrate hoti hai. ⭐ BPSC TRE mein Bihar-related dates bahut important hain - '15 Nov 2000' yaad rakho!"
+      },
+      "navigation": {
+        "next": "card_43_quiz_pyq_traps_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_43_quiz_pyq_traps_q3",
+      "card_slug": "card_43_quiz_pyq_traps_q3",
+      "type": "quiz",
+      "concept_id": "quiz_pyq_traps_3",
+      "level": 6,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Kaun se 2 states ek hi UT (Chandigarh) ko apni capital ke roop mein share karte hain?",
+        "options": [
+          { "id": "A", "text": "Haryana aur Himachal Pradesh" },
+          { "id": "B", "text": "Punjab aur Haryana" },
+          { "id": "C", "text": "Punjab aur Himachal Pradesh" },
+          { "id": "D", "text": "Rajasthan aur Haryana" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "**Punjab** aur **Haryana** dono states **Chandigarh** (UT) ko apni capital ke roop mein share karti hain. 1966 mein Punjab reorganization ke baad ye arrangement bana. Chandigarh khud ek Union Territory hai with Lieutenant Governor. ⭐ SSC/Railway mein ye unique arrangement frequently puchha jata hai!"
+      },
+      "navigation": {
+        "next": "card_44_milestone_pyq",
+        "button_text": "Check Result 🎯"
+      }
+    },
+    {
+      "card_id": "card_44_milestone_pyq",
+      "card_slug": "card_44_milestone_pyq",
+      "type": "milestone",
+      "concept_id": "milestone_pyq_complete",
+      "level": 6,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 6 COMPLETE!",
+        "badge_emoji": "🎯",
+        "completed_topic": "PYQ Traps & Exam Strategies",
+        "xp_earned": 85,
+        "milestone_progress": "All 6 Modules Clear - 100% Syllabus Done!",
+        "motivational_quote": "Complete mastery! Ab final officer-level revision aur master quiz!"
+      },
+      "navigation": {
+        "next": "card_45_officer_revision",
+        "button_text": "Officer Revision ⚡"
+      }
+    },
+    {
+      "card_id": "card_45_officer_revision",
+      "card_slug": "card_45_officer_revision",
+      "type": "summary",
+      "concept_id": "officer_level_revision",
+      "level": 7,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ Officer-Level Quick Revision",
+        "revision_points": [
+          {
+            "topic": "Current Count (2024)",
+            "point": "28 States + 8 Union Territories. 2019 mein J&K reorganization se 29→28 states, 7→9→8 UTs (Dadra-Daman merge). Article 1: Union of States."
+          },
+          {
+            "topic": "Major Reorganizations",
+            "point": "1956: Linguistic basis (14 states). 2000: Chhattisgarh (1 Nov), Uttarakhand (9 Nov), Jharkhand (15 Nov). 2014: Telangana (29th state, 2 June). 2019: J&K→2 UTs (Aug 5, Art 370 abolished)."
+          },
+          {
+            "topic": "Largest/Smallest",
+            "point": "Area: Rajasthan (largest state), Goa (smallest state), Ladakh (largest UT), Lakshadweep (smallest UT). Population: UP (most populous), Sikkim (least populous state). Density: Bihar HIGHEST (1102/sq km)."
+          },
+          {
+            "topic": "Special Status",
+            "point": "Article 370 (J&K - abolished 2019). Article 371 series (Nagaland-371A, Mizoram-371G, etc. - ACTIVE). Special Category Status abolished by 14th FC (2014) - pehle 11 states the."
+          },
+          {
+            "topic": "⭐ Bihar Facts (BPSC TRE)",
+            "point": "Formation: 1912 (Bengal se). Jharkhand separation: 15 Nov 2000. Capital: Patna. Area: 94,163 sq km. Population: 3rd (10.4 cr). Density: HIGHEST (1102). Literacy: Lowest (63.82% - improving)."
+          },
+          {
+            "topic": "Capital Traps",
+            "point": "Gujarat→Gandhinagar (NOT Ahmedabad). Chandigarh→Punjab+Haryana shared. Hyderabad→Telangana (AP shifting to Amaravati). J&K→Srinagar (summer) + Jammu (winter). UTs with Assembly: Delhi, Puducherry, J&K."
+          },
+          {
+            "topic": "Constitutional Provisions",
+            "point": "Article 1: Union of States. Article 2: Admit new states. Article 3: Alter/rename/merge states (state assembly opinion mandatory but non-binding). Governor (states) vs LG (UTs) - President appoints both."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_46_final_quiz_intro",
+        "button_text": "Final Master Quiz 🏆"
+      }
+    },
+    {
+      "card_id": "card_46_final_quiz_intro",
+      "card_slug": "card_46_final_quiz_intro",
+      "type": "chat",
+      "concept_id": "final_quiz_introduction",
+      "level": 7,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab **Officer-Level Final Master Quiz** - BPSC/UPSC style multi-statement, assertion-reason, aur tricky options! Ye tumhare complete understanding ko test karega. Har question carefully padho - ek ek word matter karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ready hoon! Multi-statement mein har statement individually check karna hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi approach! Assertion-Reason mein dono parts sahi hain ya nahi CHECK karo, aur agar dono sahi hain toh kya Reason actually Assertion ko explain kar raha hai ya coincidence hai. All the best! 🎯"
+        },
+        {
+          "speaker": "raju",
+          "text": "Let's crack it!"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_final_quiz_q1",
+        "button_text": "Start Final Quiz 🚀"
+      }
+    },
+    {
+      "card_id": "card_47_final_quiz_q1",
+      "card_slug": "card_47_final_quiz_q1",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_multistatement_1",
+      "level": 7,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements:\n1. As of 2024, India has 28 States and 8 Union Territories.\n2. Article 370 of the Constitution has been abolished.\n3. Bihar has the highest population density among all Indian states.\n\nWhich of the above statements is/are correct?",
+        "options": [
+          { "id": "A", "text": "1 and 2 only" },
+          { "id": "B", "text": "2 and 3 only" },
+          { "id": "C", "text": "1 and 3 only" },
+          { "id": "D", "text": "All 1, 2 and 3" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "**All three statements are correct.** Statement 1: TRUE - 2024 mein 28 States + 8 UTs hain (2019 J&K reorganization ke baad). Statement 2: TRUE - Article 370 (J&K special status) 5 August 2019 ko abolish kiya gaya. Statement 3: TRUE - Bihar ki population density sabse zyada hai - 1102 persons/sq km (Census 2011), Jharkhand separation ke baad area kam but population concentration badh gayi. ⭐ BPSC Multi-Statement Classic - sabhi facts verify karo!"
+      },
+      "navigation": {
+        "next": "card_48_final_quiz_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_48_final_quiz_q2",
+      "card_slug": "card_48_final_quiz_q2",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_assertion_reason_1",
+      "level": 7,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): Chandigarh is a Union Territory.\n\nReason (R): Chandigarh serves as the capital of both Punjab and Haryana.\n\nSelect the correct answer:",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is NOT the correct explanation of A" },
+          { "id": "C", "text": "A is true, but R is false" },
+          { "id": "D", "text": "A is false, but R is true" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "**Both A and R are true, but R is NOT the correct explanation of A.** Assertion TRUE: Chandigarh ek Union Territory hai (LG ke under). Reason TRUE: Chandigarh Punjab aur Haryana dono ki capital hai (1966 reorganization ke baad shared arrangement). BUT, R is NOT correct explanation of A - Chandigarh UT isliye NAHI hai kyunki wo dono states ki capital hai, balki 1966 mein UT banaya gaya tha as administrative decision. Causality relationship nahi hai dono mein. ⭐ UPSC/BPSC Assertion-Reason mein ye subtle logic check karte hain!"
+      },
+      "navigation": {
+        "next": "card_49_final_quiz_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_49_final_quiz_q3",
+      "card_slug": "card_49_final_quiz_q3",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_multistatement_2",
+      "level": 7,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Consider the following statements about State Reorganization:\n1. States Reorganization Act, 1956 reorganized states on linguistic basis.\n2. Telangana was formed from Andhra Pradesh in 2014.\n3. Jharkhand was formed from Bihar on 1 November 2000.\n\nWhich of the statements given above is/are correct?",
+        "options": [
+          { "id": "A", "text": "1 and 2 only" },
+          { "id": "B", "text": "2 and 3 only" },
+          { "id": "C", "text": "1 and 3 only" },
+          { "id": "D", "text": "All 1, 2 and 3" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "**Statements 1 and 2 are correct, Statement 3 is INCORRECT.** Statement 1: TRUE - 1956 Act ne linguistic basis par states reorganize kiye (Fazl Ali Commission recommendations). Statement 2: TRUE - Telangana 2 June 2014 ko AP se alag hoke 29th state bana. Statement 3: FALSE - Jharkhand **15 November 2000** ko bana (NOT 1 November). 1 Nov 2000 - Chhattisgarh (MP se), 9 Nov - Uttarakhand (UP se), 15 Nov - Jharkhand (Bihar se). ⭐ BPSC TRE Trap - dates carefully check karo!"
+      },
+      "navigation": {
+        "next": "card_50_final_quiz_q4",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_50_final_quiz_q4",
+      "card_slug": "card_50_final_quiz_q4",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_negative_1",
+      "level": 7,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of the following Union Territories does NOT have a Legislative Assembly?",
+        "options": [
+          { "id": "A", "text": "Delhi" },
+          { "id": "B", "text": "Puducherry" },
+          { "id": "C", "text": "Jammu & Kashmir" },
+          { "id": "D", "text": "Ladakh" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "**Ladakh** mein Legislative Assembly NAHI hai - sirf LG ke through administrate hota hai. **Delhi (NCT)**, **Puducherry**, aur **Jammu & Kashmir** (UT) mein Assembly + LG dono hain. 2019 mein J&K reorganization ke baad J&K UT bana with Assembly, lekin Ladakh without Assembly. ⭐ SSC/Railway mein 'NOT' wale negative questions mein carefully options eliminate karo!"
+      },
+      "navigation": {
+        "next": "card_51_final_quiz_q5",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_51_final_quiz_q5",
+      "card_slug": "card_51_final_quiz_q5",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_matching_1",
+      "level": 7,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Match the following:\n\nList-I (State) --- List-II (Capital)\nA. Gujarat --- 1. Mumbai\nB. Maharashtra --- 2. Gandhinagar\nC. Goa --- 3. Panaji\nD. Karnataka --- 4. Bengaluru\n\nCorrect matching:",
+        "options": [
+          { "id": "A", "text": "A-2, B-1, C-3, D-4" },
+          { "id": "B", "text": "A-1, B-2, C-4, D-3" },
+          { "id": "C", "text": "A-2, B-3, C-1, D-4" },
+          { "id": "D", "text": "A-3, B-1, C-2, D-4" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "**Correct matching: A-2, B-1, C-3, D-4.** Gujarat ki capital **Gandhinagar** hai (Ahmedabad NAHI - common trap!). Maharashtra - Mumbai. Goa - Panaji. Karnataka - Bengaluru (pehle Bangalore). ⭐ BPSC/SSC mein matching questions mein Gujarat-Ahmedabad trap bahut common hai - Gandhinagar yaad rakho!"
+      },
+      "navigation": {
+        "next": "card_52_final_quiz_q6",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_52_final_quiz_q6",
+      "card_slug": "card_52_final_quiz_q6",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_article_1",
+      "level": 7,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Under which Article of the Constitution can Parliament alter the boundaries of states?",
+        "options": [
+          { "id": "A", "text": "Article 1" },
+          { "id": "B", "text": "Article 2" },
+          { "id": "C", "text": "Article 3" },
+          { "id": "D", "text": "Article 4" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "**Article 3** Parliament ko power deta hai existing states ko alter, increase/decrease area, rename, merge karne ki. State Assembly ka opinion lena mandatory hai but binding nahi (non-binding). Article 1 - 'Union of States' definition. Article 2 - Admit new states. Article 4 - Article 2 aur 3 mein amendments Article 368 procedure se exempt. ⭐ UPSC Polity standard question - Article 3 provisions State Reorganization ke liye fundamental hain!"
+      },
+      "navigation": {
+        "next": "card_53_final_quiz_q7",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_53_final_quiz_q7",
+      "card_slug": "card_53_final_quiz_q7",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_bihar_special_1",
+      "level": 7,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE Special: Consider the following about Bihar:\n1. Bihar was separated from Bengal Presidency in 1912.\n2. Jharkhand was carved out from Bihar in 2000.\n3. Bihar has the lowest literacy rate among major Indian states (Census 2011).\n\nWhich statements are correct?",
+        "options": [
+          { "id": "A", "text": "1 and 2 only" },
+          { "id": "B", "text": "2 and 3 only" },
+          { "id": "C", "text": "1 and 3 only" },
+          { "id": "D", "text": "All 1, 2 and 3" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "**All three statements are correct.** Statement 1: TRUE - Bihar British time mein 1912 mein Bengal Presidency se administrative reasons se alag hua. Statement 2: TRUE - Jharkhand 15 November 2000 ko Bihar se tribal/regional demand par bana. Statement 3: TRUE - Bihar ki literacy rate 63.82% hai jo major states mein sabse kam hai (Census 2011), though recent efforts se improvement ho raha hai. ⭐ BPSC TRE mein Bihar ki historical, geographical, social facts detail mein aati hain!"
+      },
+      "navigation": {
+        "next": "card_54_final_quiz_q8",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_54_final_quiz_q8",
+      "card_slug": "card_54_final_quiz_q8",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_assertion_reason_2",
+      "level": 7,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): Rajasthan is the largest state of India by area.\n\nReason (R): Rajasthan has the Thar Desert which covers a vast area.\n\nSelect the correct answer:",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is NOT the correct explanation of A" },
+          { "id": "C", "text": "A is true, but R is false" },
+          { "id": "D", "text": "A is false, but R is true" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "**Both A and R are true, but R is NOT the correct explanation of A.** Assertion TRUE: Rajasthan area ki drishti se India ka largest state hai (342,239 sq km). Reason TRUE: Rajasthan mein Thar Desert hai jo vast area cover karta hai. BUT, Rajasthan largest state isliye NAHI hai kyunki usमें desert hai - ये coincidence hai. Rajasthan ki total geographical area (desert + non-desert regions combined) use largest banati hai. Causality establish nahi hota. ⭐ UPSC Assertion-Reason logic test!"
+      },
+      "navigation": {
+        "next": "card_55_final_quiz_q9",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_55_final_quiz_q9",
+      "card_slug": "card_55_final_quiz_q9",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_comparative_1",
+      "level": 7,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Arrange the following states in descending order of their area:\n1. Madhya Pradesh\n2. Maharashtra\n3. Rajasthan\n4. Uttar Pradesh\n\nCorrect sequence:",
+        "options": [
+          { "id": "A", "text": "3-1-2-4" },
+          { "id": "B", "text": "3-2-1-4" },
+          { "id": "C", "text": "1-3-2-4" },
+          { "id": "D", "text": "3-1-4-2" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "**Correct descending order by area: Rajasthan > Madhya Pradesh > Maharashtra > Uttar Pradesh (3-1-2-4).** Rajasthan largest (342,239 sq km), MP 2nd (308,245 sq km), Maharashtra 3rd (307,713 sq km), UP 4th (240,928 sq km). ⭐ SSC/Railway mein comparative ranking questions frequent hain - top 5 states by area yaad rakho!"
+      },
+      "navigation": {
+        "next": "card_56_final_quiz_q10",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_56_final_quiz_q10",
+      "card_slug": "card_56_final_quiz_q10",
+      "type": "final_quiz",
+      "concept_id": "final_quiz_current_affairs_1",
+      "level": 7,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Which of the following statements about India's political reorganization in 2019 is/are correct?\n1. Article 370 was abrogated on 5 August 2019.\n2. Jammu & Kashmir was bifurcated into two Union Territories.\n3. Ladakh was given Legislative Assembly.\n\nSelect the correct answer:",
+        "options": [
+          { "id": "A", "text": "1 only" },
+          { "id": "B", "text": "1 and 2 only" },
+          { "id": "C", "text": "2 and 3 only" },
+          { "id": "D", "text": "All 1, 2 and 3" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "**Statements 1 and 2 are correct, Statement 3 is INCORRECT.** Statement 1: TRUE - Article 370 (J&K special status) 5 August 2019 ko Presidential Order se abolish kiya gaya. Statement 2: TRUE - J&K State ko 2 UTs mein divide kiya - (i) Jammu & Kashmir (with Assembly), (ii) Ladakh (without Assembly). Statement 3: FALSE - Ladakh ko Assembly NAHI di gayi, sirf LG administration hai. ⭐ UPSC/BPSC Current Affairs + Polity integration - 2019 reorganization bahut important topic hai!"
+      },
+      "navigation": {
+        "next": "card_57_final_quiz_complete",
+        "button_text": "Check Final Score 🏆"
+      }
+    },
+    {
+      "card_id": "card_57_final_quiz_complete",
+      "card_slug": "card_57_final_quiz_complete",
+      "type": "milestone",
+      "concept_id": "final_quiz_completion",
+      "level": 7,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 FINAL MASTER QUIZ COMPLETE!",
+        "badge_emoji": "🎖️",
+        "completed_topic": "Officer-Level Assessment Cleared",
+        "xp_earned": 100,
+        "milestone_progress": "Final Quiz Done!",
+        "motivational_quote": "Outstanding! Officer-level multi-statement, assertion-reason sab handle kar liye! Ab last lap - additional facts aur closing!"
+      },
+      "navigation": {
+        "next": "card_58_additional_facts",
+        "button_text": "Additional Facts 📌"
+      }
+    },
+    {
+      "card_id": "card_58_additional_facts",
+      "card_slug": "card_58_additional_facts",
+      "type": "chat",
+      "concept_id": "additional_important_facts",
+      "level": 8,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch **additional facts** jo exams mein useful hain: **Youngest State**: Telangana (2014). **Oldest Reorganization**: Andhra Pradesh (1953 - pehla linguistic state). **International Borders**: J&K/Ladakh (China, Pakistan), Punjab (Pakistan), Rajasthan/Gujarat (Pakistan), West Bengal/Sikkim/Arunachal/Nagaland/Manipur/Mizoram (Bangladesh/Myanmar/China/Bhutan). **Island UTs**: Andaman & Nicobar, Lakshadweep."
+        },
+        {
+          "speaker": "raju",
+          "text": "International borders wale states important hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! **Strategic importance** bhi hai. **Sikkim** - 1975 mein India join kiya (36th Amendment - referendum ke baad, pehle kingdom thi). **Goa** - 1961 mein Portuguese rule se liberate hua (Operation Vijay), 1987 mein separate state bana (pehle Daman & Diu ke saath UT tha). ⭐ **UPSC/BPSC Historical Context**: State formation ke behind stories bhi puchhe jate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sikkim aur Goa ki special history hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_59_exam_strategy",
+        "button_text": "Exam Strategy Tips 🎯"
+      }
+    },
+    {
+      "card_id": "card_59_exam_strategy",
+      "card_slug": "card_59_exam_strategy",
+      "type": "chat",
+      "concept_id": "exam_preparation_strategy",
+      "level": 8,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Exam Strategy**: (1) **Political map** regularly dekho - states, capitals locate karo. (2) **Chronology** yaad rakho - 1956, 2000 (3 states), 2014 (Telangana), 2019 (J&K). (3) **Current numbers**: 28+8 (2024) - pehle ke numbers mat likhna! (4) **Comparative data**: Largest/Smallest (area, population, density, literacy) - top 3 yaad rakho. (5) **Articles**: 1, 2, 3, 370 (abolished), 371 series."
+        },
+        {
+          "speaker": "raju",
+          "text": "Map practice zaroori hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "**Common mistakes avoid karo**: (1) Gujarat→Ahmedabad (WRONG! Gandhinagar hai). (2) J&K abhi bhi state (WRONG! UT hai 2019 se). (3) Northeast mein 7 states (INCOMPLETE! Sikkim bhi include karo = 8). (4) Jharkhand 1 Nov 2000 (WRONG! 15 Nov hai). ⭐ **BPSC TRE Special**: Bihar se related sab facts (Jharkhand separation, density, literacy, Patna) detail mein tayyar rakho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Common traps se bacha rahunga!"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_final_summary_checklist",
+        "button_text": "Final Checklist ✅"
+      }
+    },
+    {
+      "card_id": "card_60_final_summary_checklist",
+      "card_slug": "card_60_final_summary_checklist",
+      "type": "summary",
+      "concept_id": "final_summary_checklist",
+      "level": 8,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "✅ Final Exam Checklist",
+        "revision_points": [
+          {
+            "topic": "Must Remember Numbers",
+            "point": "28 States, 8 UTs (2024). 7 NE Sisters + Sikkim = 8 NE states. 3 states in 2000 (CUJ). Telangana 29th (2014), then 28 after J&K split (2019)."
+          },
+          {
+            "topic": "Capital Traps to Avoid",
+            "point": "Gujarat→Gandhinagar (NOT Ahmedabad). Chandigarh→Punjab+Haryana shared. Hyderabad→Telangana only (AP→Amaravati). J&K→Srinagar+Jammu (seasonal)."
+          },
+          {
+            "topic": "Formation Dates Critical",
+            "point": "Jharkhand: 15 Nov 2000 (Bihar se). Telangana: 2 June 2014 (AP se). J&K reorganization: 5 Aug 2019 (Art 370 abolished). Chhattisgarh: 1 Nov, Uttarakhand: 9 Nov 2000."
+          },
+          {
+            "topic": "Largest/Smallest Quick List",
+            "point": "Area: Rajasthan/Goa (states), Ladakh/Lakshadweep (UTs). Population: UP/Sikkim (states). Density: BIHAR highest (1102). Literacy: Kerala/Bihar (highest/lowest)."
+          },
+          {
+            "topic": "Constitutional Articles",
+            "point": "Art 1 (Union of States), Art 2 (Admit new), Art 3 (Alter/merge). Art 370 (ABOLISHED 2019). Art 371 series (ACTIVE - Nagaland, Mizoram, etc.)."
+          },
+          {
+            "topic": "⭐ Bihar Complete Profile",
+            "point": "Formation: 1912 (Bengal se). Jharkhand: 15 Nov 2000. Capital: Patna. Rank: Area-12th, Population-3rd, Density-1st (HIGHEST). Literacy: Lowest (improving). Borders: UP, WB, Nepal, Jharkhand."
+          },
+          {
+            "topic": "UT Special Cases",
+            "point": "With Assembly: Delhi (NCT), Puducherry, J&K. Without: Ladakh, Chandigarh, Dadra-Daman-Diu, Lakshadweep, A&N. LG-CM conflicts: Delhi/Puducherry."
+          },
+          {
+            "topic": "Map Practice Essential",
+            "point": "Political map par states locate karo. Bordering states/countries identify karo. Capitals mark karo. Regional grouping (North, South, East, West, NE, Central) se yaad rakho."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_61_congratulations",
+        "button_text": "Congratulations! 🎉"
+      }
+    },
+    {
+      "card_id": "card_61_congratulations",
+      "card_slug": "card_61_congratulations",
+      "type": "chat",
+      "concept_id": "final_congratulations",
+      "level": 8,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, **CONGRATULATIONS!** 🎊 Tumne **States and Union Territories** ka complete chapter master kar liya! 28 States + 8 UTs ki list se lekar constitutional provisions, reorganization history, comparative facts, special status - sab kuch cover ho gaya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you Sir! Ab mujhe 28+8 याद hai, Bihar ki complete profile bhi, aur sab traps bhi pata hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Ab tumhe **BPSC/SSC/Railway/UPSC** mein is topic se koi question nahi darega. Multi-statement ho, assertion-reason ho, capital matching ho, formation dates ho - sab handle kar loge! Regular revision karte raho, map practice karo, aur current affairs (state-related news) follow karo. All the best for your exams! 🚀"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bilkul Sir! Daily revision karunga aur map practice bhi! 🙏"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_chapter_complete",
+        "button_text": "Chapter Complete 🏆"
+      }
+    },
+    {
+      "card_id": "card_62_chapter_complete",
+      "card_slug": "card_62_chapter_complete",
+      "type": "milestone",
+      "concept_id": "chapter_final_completion",
+      "level": 8,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERY ACHIEVED!",
+        "badge_emoji": "🗺️",
+        "completed_topic": "States & Union Territories - Complete Indian Geography",
+        "xp_earned": 500,
+        "milestone_progress": "100% Complete - All Modules + Final Quiz",
+        "motivational_quote": "From zero knowledge to officer-level mastery! 28 States, 8 UTs, constitutional provisions, reorganization history, comparative facts - everything conquered! You're exam-ready! 🎯🇮🇳"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
+```
