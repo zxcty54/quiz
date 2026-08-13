@@ -1,0 +1,2470 @@
+
+{
+  "topic_id": "nouns_english_grammar_sbi_po",
+  "topic_title": "Nouns - SBI PO Error Detection Mastery",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "SBI PO", "UPSC Prelims"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "nouns_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "Nouns - SBI PO Error Detection Mastery",
+        "icon": "📝",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "SBI PO", "UPSC"],
+        "learning_outcomes": [
+          "Master all 8 Types of Nouns with Banking Exam traps",
+          "Crack Number errors: Singular-Plural confusions",
+          "Identify Gender & Case mistakes in 3 seconds",
+          "Learn Countable vs Uncountable Noun rules",
+          "Spot Article-Noun agreement errors instantly",
+          "Master Possessive & Compound Noun formations"
+        ],
+        "estimated_time": "50 mins",
+        "total_modules": 8
+      },
+      "navigation": {
+        "next": "card_02_daily_life_start",
+        "button_text": "शुरू करें 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_daily_life_start",
+      "card_slug": "card_02_daily_life_start",
+      "type": "chat",
+      "concept_id": "noun_intro_daily",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhare ghar mein kaun kaun hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, mere ghar mein Papa, Mummy, didi aur main hoon. Ek kutta bhi hai, uska naam Tommy hai."
+        },
+        {
+          "speaker": "aman",
+          "text": "Shabash! Tumne abhi kitne words bole? Papa, Mummy, didi, Tommy, kutta, ghar - ye sab NOUNS hain. Noun matlab wo word jo kisi PERSON (Papa), PLACE (ghar), ANIMAL (kutta), ya THING (chair, book) ka naam batata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Matlab naam wale sab words noun hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_noun_definition",
+        "button_text": "Bilkul sahi! ➔"
+      }
+    },
+    {
+      "card_id": "card_03_noun_definition",
+      "card_slug": "card_03_noun_definition",
+      "type": "chat",
+      "concept_id": "noun_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan! NOUN ka exact definition hai: A word used as the NAME of a person, place, animal, thing, idea, or quality. Jaise Raju (person), Patna (place), honesty (quality), happiness (idea) - sab nouns hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'happiness' bhi noun hai? Wo to feeling hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi sawaal! Haan, feelings aur ideas ko bhi hum NAME de sakte hain - love, anger, freedom, childhood - ye sab ABSTRACT NOUNS hain. Lekin SBI PO mein 8 types ke nouns hote hain, aur har type ke alag errors aate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Itne types? Confusing to nahi hoga?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_types_overview",
+        "button_text": "Ek ek karke samjhenge ➔"
+      }
+    },
+    {
+      "card_id": "card_04_types_overview",
+      "card_slug": "card_04_types_overview",
+      "type": "chat",
+      "concept_id": "noun_types_overview",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul nahi! Dekho, 8 types hain: 1) Proper Noun (Ram, Delhi), 2) Common Noun (boy, city), 3) Collective Noun (team, crowd), 4) Material Noun (gold, water), 5) Abstract Noun (love, beauty), 6) Countable Noun (books, apples), 7) Uncountable Noun (milk, information), 8) Compound Noun (mother-in-law, classroom)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir itne saare! Exam mein sab yaad rakhne honge?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yaad nahi, SAMAJHNA hoga! Kyunki SBI PO mein errors isi classification se bante hain - jaise 'informations' likhna (galat!), ya 'furnitures' (galat!). Pehle Proper vs Common Noun se start karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chalo Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_proper_noun_intro",
+        "button_text": "Module 1 शुरू ➔"
+      }
+    },
+    {
+      "card_id": "card_05_proper_noun_intro",
+      "card_slug": "card_05_proper_noun_intro",
+      "type": "chat",
+      "concept_id": "proper_noun_concept",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PROPER NOUN = Kisi SPECIFIC person, place, ya thing ka naam. Iska pehla letter HAMESHA CAPITAL hota hai. Examples: Raju (specific boy), India (specific country), Monday (specific day), Ganga (specific river), Tata Motors (specific company)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab jab bhi koi naam likhun, capital letter se start karun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Lekin dhyan do - 'boy' common noun hai (koi bhi ladka), 'Raju' proper noun hai (specific ladka). Similarly, 'river' common hai, 'Ganga' proper hai. SBI mein capitalization errors aate hain - 'i live in patna' galat hai, 'I live in Patna' sahi hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To proper noun ka opposite common noun hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_common_noun",
+        "button_text": "Ekdum sahi! ➔"
+      }
+    },
+    {
+      "card_id": "card_06_common_noun",
+      "card_slug": "card_06_common_noun",
+      "type": "chat",
+      "concept_id": "common_noun_concept",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "COMMON NOUN = Kisi CLASS ya TYPE of person/place/thing ka general naam. No specific identity. Examples: boy, girl, city, river, book, teacher, hospital. Ye small letter se start hote hain (agar sentence start nahi hai to)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'teacher' common hai, lekin 'Mr. Sharma' proper hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! Ek aur trap dekho - Agar proper noun ko common noun ki tarah use karein, to small letter hota hai. Example: 'He is a real einstein' (matlab genius, not the actual Einstein). Lekin exam mein rarely aata hai ye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ab collective noun kya hota hai? Team, crowd wale?"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_collective_noun",
+        "button_text": "Bahut important! ➔"
+      }
+    },
+    {
+      "card_id": "card_07_collective_noun",
+      "card_slug": "card_07_collective_noun",
+      "type": "chat",
+      "concept_id": "collective_noun_concept",
+      "level": 2,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "COLLECTIVE NOUN = Ek word jo GROUP of people/animals/things ko represent kare. Examples: team (group of players), family (group of members), crowd (group of people), herd (group of cattle), fleet (group of ships), bunch (group of keys/bananas)."
+        },
+        {
+          "speaker": "raju",
+          "text": "To 'team' ek noun hai ya bahut saare log?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant question! Yahin pe SBI ka trap hai! Collective noun SINGULAR treat hota hai jab pura group as ONE UNIT act kare. 'The team IS playing well' (sahi). Lekin agar individual members ki baat ho to PLURAL verb: 'The team ARE fighting among themselves' (members alag alag fight kar rahe)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Matlab kabhi singular kabhi plural?"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_collective_singular_plural",
+        "button_text": "Yahin confuse hote hain! ➔"
+      }
+    },
+    {
+      "card_id": "card_08_collective_singular_plural",
+      "card_slug": "card_08_collective_singular_plural",
+      "type": "chat",
+      "concept_id": "collective_number_agreement",
+      "level": 2,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Rule yaad rakho: Collective noun + SINGULAR verb jab group unity mein hai. 'The committee HAS decided' (ek decision). Collective noun + PLURAL verb jab members individually act karein. 'The committee HAVE different opinions' (alag alag opinions). British English mein mostly plural verb prefer karte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir exam mein kaun sa sahi maanenge?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Indian exams British English follow karte hain, to dono acceptable hain agar context sahi ho. Lekin safe rule: Unity = Singular verb, Individual action = Plural verb. Common collective nouns: team, family, committee, jury, audience, staff, police (hamesha plural verb - 'Police ARE investigating')."
+        },
+        {
+          "speaker": "raju",
+          "text": "Police hamesha plural? Ye to new hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_quiz_proper_common_collective_1",
+        "button_text": "Quiz mein test karenge! ➔"
+      }
+    },
+    {
+      "card_id": "card_09_quiz_proper_common_collective_1",
+      "card_slug": "card_09_quiz_proper_common_collective_1",
+      "type": "quiz",
+      "concept_id": "proper_common_collective_quiz",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the error: 'my brother lives in delhi and works at tata motors.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "No error - sentence is correct"
+          },
+          {
+            "id": "B",
+            "text": "'my' should be 'My', 'delhi' should be 'Delhi', 'tata motors' should be 'Tata Motors'"
+          },
+          {
+            "id": "C",
+            "text": "Only 'delhi' needs capitalization"
+          },
+          {
+            "id": "D",
+            "text": "'works at' should be 'works in'"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Three capitalization errors! (1) Sentence starts with 'my' so it should be 'My'. (2) 'Delhi' is a proper noun (specific city) so must start with capital letter. (3) 'Tata Motors' is a proper noun (specific company name) so both words need capitals. Correct: 'My brother lives in Delhi and works at Tata Motors.' This capitalization trap is SBI PO favorite!"
+      },
+      "navigation": {
+        "next": "card_10_quiz_proper_common_collective_2",
+        "button_text": "Question 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_10_quiz_proper_common_collective_2",
+      "card_slug": "card_10_quiz_proper_common_collective_2",
+      "type": "quiz",
+      "concept_id": "proper_common_collective_quiz",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The jury have reached a unanimous verdict."
+          },
+          {
+            "id": "B",
+            "text": "The jury has reached a unanimous verdict."
+          },
+          {
+            "id": "C",
+            "text": "The juries has reached a unanimous verdict."
+          },
+          {
+            "id": "D",
+            "text": "Both A and B are correct"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Both A and B are acceptable! Collective nouns can take singular OR plural verbs depending on whether the group acts as ONE UNIT (singular) or as INDIVIDUALS (plural). Here 'unanimous verdict' suggests unity, so SINGULAR verb 'has' is preferred in American English. But British English (followed in India) often uses PLURAL verb 'have' with collective nouns. Both are grammatically correct. Option C is wrong because 'juries' (plural of jury) doesn't match 'has' (singular verb)."
+      },
+      "navigation": {
+        "next": "card_11_quiz_proper_common_collective_3",
+        "button_text": "Question 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_11_quiz_proper_common_collective_3",
+      "card_slug": "card_11_quiz_proper_common_collective_3",
+      "type": "quiz",
+      "concept_id": "proper_common_collective_quiz",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Spot the error: 'The Police is investigating the case thoroughly.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'is' with 'are'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'Police' with 'police'"
+          },
+          {
+            "id": "C",
+            "text": "Both A and B"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Two errors! (1) 'Police' is a collective noun that ALWAYS takes PLURAL verb in British English (Indian exams follow this). So 'is' should be 'are'. (2) 'Police' when used as institution doesn't need capital P unless it's part of proper noun like 'Bihar Police'. Here it should be 'police' (small p). Correct: 'The police are investigating the case thoroughly.' This is SSC CGL & SBI PO high-frequency trap!"
+      },
+      "navigation": {
+        "next": "card_12_milestone_module_1",
+        "button_text": "देखें Result ➔"
+      }
+    },
+    {
+      "card_id": "card_12_milestone_module_1",
+      "card_slug": "card_12_milestone_module_1",
+      "type": "milestone",
+      "concept_id": "module_1_completion",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 1 COMPLETE!",
+        "badge_emoji": "✅",
+        "completed_topic": "Proper, Common & Collective Nouns",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "Capitalization और collective noun traps clear! Next: Material Nouns!"
+      },
+      "navigation": {
+        "next": "card_13_material_noun_intro",
+        "button_text": "Module 2 Start ➔"
+      }
+    },
+    {
+      "card_id": "card_13_material_noun_intro",
+      "card_slug": "card_13_material_noun_intro",
+      "type": "chat",
+      "concept_id": "material_noun_intro",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhari mummy khana banati hain kis cheez se?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, rice, wheat, vegetables, oil se banati hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Rice, wheat, oil - ye sab MATERIAL NOUNS hain. Material Noun matlab wo substance/material jisse cheezon ko banaya jata hai. Examples: gold, silver, iron, wood, plastic, cotton, milk, water, oil. Ye sab UNCOUNTABLE hote hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Uncountable matlab?"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_material_uncountable",
+        "button_text": "Important concept! ➔"
+      }
+    },
+    {
+      "card_id": "card_14_material_uncountable",
+      "card_slug": "card_14_material_uncountable",
+      "type": "chat",
+      "concept_id": "material_uncountable_nature",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Uncountable matlab jin cheezon ko COUNT nahi kar sakte - 1 water, 2 waters, 3 waters (galat!). Material nouns ko measure karte hain: a glass of water, a kilo of rice, a litre of milk. NEVER 'a water' ya 'two golds' (galat!). Ye SBI ka top trap hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To 'I bought two breads' galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly galat! 'Bread' material noun hai (uncountable). Sahi hai: 'I bought two loaves of bread' ya 'two pieces of bread'. Similarly: 'furnitures' (galat) → 'pieces of furniture' (sahi), 'informations' (galat) → 'pieces of information' (sahi)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! To material noun ka plural form nahi hota?"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_material_plural_exception",
+        "button_text": "Mostly nahi, lekin... ➔"
+      }
+    },
+    {
+      "card_id": "card_15_material_plural_exception",
+      "card_slug": "card_15_material_plural_exception",
+      "type": "chat",
+      "concept_id": "material_plural_exceptions",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Exception hai! Jab material noun DIFFERENT TYPES ki baat ho, tab plural ban sakta hai. Example: 'This shop sells various wines' (different types of wine), 'Indian teas are famous worldwide' (different varieties). Lekin general use mein NO PLURAL!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab context se decide hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Lekin SBI exam mein safest rule: Material noun = Uncountable = No plural 's'. Common material nouns jo confuse karte hain: furniture, luggage, equipment, machinery, jewellery, poetry, scenery - IN SABKA PLURAL NAHI HOTA!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to bahut important hai! 'Luggages' galat hai to?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_abstract_noun_intro",
+        "button_text": "100% galat! Ab abstract ➔"
+      }
+    },
+    {
+      "card_id": "card_16_abstract_noun_intro",
+      "card_slug": "card_16_abstract_noun_intro",
+      "type": "chat",
+      "concept_id": "abstract_noun_intro",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "ABSTRACT NOUN = Wo cheez jise hum physically touch/see/smell nahi kar sakte, sirf FEEL kar sakte hain ya THINK kar sakte hain. Examples: love, happiness, honesty, childhood, freedom, beauty, intelligence, advice, knowledge."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab feelings aur ideas?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Qualities (honesty, bravery), Emotions (love, anger), States (childhood, slavery), Concepts (freedom, time). Abstract nouns bhi mostly UNCOUNTABLE hote hain. 'Advices' galat hai, 'advice' ya 'pieces of advice' sahi hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To 'informations', 'knowledges' sab galat?"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_abstract_uncountable_list",
+        "button_text": "Absolutely! List dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_17_abstract_uncountable_list",
+      "card_slug": "card_17_abstract_uncountable_list",
+      "type": "chat",
+      "concept_id": "abstract_uncountable_list",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ SBI PO Trap List - Ye HAMESHA UNCOUNTABLE hain (plural 's' NAHI lagta): Information, Advice, Knowledge, Evidence, Progress, Luggage, Baggage, Furniture, Equipment, Machinery, Homework, Work, News, Poetry, Scenery, Music."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'news' singular hai? Par 's' to hai last mein!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Brilliant observation! 'News' LOOKS plural but is SINGULAR! 'The news IS good' (sahi), NOT 'The news are good' (galat). Similarly: Mathematics, Physics, Economics - ye sab 's' se end hote hain but SINGULAR hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to confusing trap hai exam ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_quiz_material_abstract_1",
+        "button_text": "Quiz mein practice! ➔"
+      }
+    },
+    {
+      "card_id": "card_18_quiz_material_abstract_1",
+      "card_slug": "card_18_quiz_material_abstract_1",
+      "type": "quiz",
+      "concept_id": "material_abstract_quiz",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the error: 'She gave me some useful advices about my career.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'advices' with 'advice'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'some' with 'many'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'useful' with 'usefully'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Advice' is an UNCOUNTABLE abstract noun. It NEVER takes plural 's'. Correct forms: 'advice' (uncountable), 'a piece of advice' (countable unit), 'some advice' (uncountable with 'some'). NEVER 'advices'. This is the MOST COMMON error in SBI PO, SSC CGL, and all banking exams! Correct sentence: 'She gave me some useful advice about my career.'"
+      },
+      "navigation": {
+        "next": "card_19_quiz_material_abstract_2",
+        "button_text": "Question 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_19_quiz_material_abstract_2",
+      "card_slug": "card_19_quiz_material_abstract_2",
+      "type": "quiz",
+      "concept_id": "material_abstract_quiz",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "We need to buy some new furnitures for the office."
+          },
+          {
+            "id": "B",
+            "text": "We need to buy some new furniture for the office."
+          },
+          {
+            "id": "C",
+            "text": "We need to buy a new furniture for the office."
+          },
+          {
+            "id": "D",
+            "text": "We need to buy many furnitures for the office."
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Furniture' is an UNCOUNTABLE material noun. It has NO plural form. We say: 'furniture' (uncountable), 'a piece of furniture' (one item), 'some furniture' (quantity), BUT NEVER 'a furniture' or 'furnitures'. Option B is correct: 'some new furniture'. This trap appears in 80% of banking exams!"
+      },
+      "navigation": {
+        "next": "card_20_quiz_material_abstract_3",
+        "button_text": "Question 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_20_quiz_material_abstract_3",
+      "card_slug": "card_20_quiz_material_abstract_3",
+      "type": "quiz",
+      "concept_id": "material_abstract_quiz",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Spot the error: 'The news about the accident were shocking to everyone.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'were' with 'was'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'news' with 'informations'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'shocking' with 'shocked'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'News' is SINGULAR even though it ends with 's'. It takes SINGULAR verb. 'The news IS...' NOT 'The news are...'. This is a classic SBI PO trap! Similarly: Mathematics IS my favorite subject (not 'are'). Correct: 'The news about the accident WAS shocking to everyone.' Remember: News, Mathematics, Physics, Economics - all singular!"
+      },
+      "navigation": {
+        "next": "card_21_milestone_module_2",
+        "button_text": "Check Score ➔"
+      }
+    },
+    {
+      "card_id": "card_21_milestone_module_2",
+      "card_slug": "card_21_milestone_module_2",
+      "type": "milestone",
+      "concept_id": "module_2_completion",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🔥 MODULE 2 MASTERED!",
+        "badge_emoji": "💎",
+        "completed_topic": "Material & Abstract Nouns (Uncountable Traps)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "Furniture, Advice, News traps conquered! Countable vs Uncountable next!"
+      },
+      "navigation": {
+        "next": "card_22_countable_intro",
+        "button_text": "Module 3: Countable Nouns ➔"
+      }
+    },
+    {
+      "card_id": "card_22_countable_intro",
+      "card_slug": "card_22_countable_intro",
+      "type": "chat",
+      "concept_id": "countable_noun_intro",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aate hain COUNTABLE vs UNCOUNTABLE nouns - SBI ka favourite battleground! COUNTABLE NOUN = Jin cheezon ko GIN sakte hain: 1 book, 2 books, 3 books. Examples: apple, chair, student, car, idea (yes, idea countable hai!)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab jin par 1, 2, 3 laga sakte hain wo countable?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Countable nouns ke TWO forms hote hain: SINGULAR (book) aur PLURAL (books). Aur SINGULAR countable noun ke saamne ARTICLE (a/an/the) zaruri hai. 'I bought book' (galat) → 'I bought a book' (sahi)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Article nahi lagayen to error?"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_article_countable_rule",
+        "button_text": "Bilkul! Important rule ➔"
+      }
+    },
+    {
+      "card_id": "card_23_article_countable_rule",
+      "card_slug": "card_23_article_countable_rule",
+      "type": "chat",
+      "concept_id": "article_countable_rule",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Golden Rule: SINGULAR COUNTABLE NOUN kabhi ALONE nahi aa sakta! Uske saamne ya to ARTICLE (a/an/the) hona chahiye, ya POSSESSIVE (my/his/her), ya DEMONSTRATIVE (this/that). Examples: 'He is teacher' (GALAT) → 'He is a teacher' (sahi)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'I have car' galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "100% galat! Sahi options: 'I have a car' (article), 'I have my car' (possessive), 'I have this car' (demonstrative). But plural mein article optional hai: 'I have cars' (sahi), 'I have books' (sahi). Yahi difference SBI mein test hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir uncountable ke saath article ka kya rule hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_uncountable_article_rule",
+        "button_text": "Opposite rule! ➔"
+      }
+    },
+    {
+      "card_id": "card_24_uncountable_article_rule",
+      "card_slug": "card_24_uncountable_article_rule",
+      "type": "chat",
+      "concept_id": "uncountable_article_rule",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "UNCOUNTABLE NOUN ke saamne 'A/AN' KABHI NAHI aata! 'A water' (galat), 'An information' (galat), 'A furniture' (galat). Lekin 'THE' aa sakta hai agar specific ho: 'The water in this bottle is pure' (specific water - sahi)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab uncountable = no a/an, but 'the' ok?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Aur uncountable ko measure karne ke liye use karo: a glass of water, a piece of advice, a loaf of bread, a bar of chocolate, a slice of pizza. Common quantifiers: some, much, a lot of, plenty of."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'much' aur 'many' mein kya fark hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_much_many_rule",
+        "button_text": "Banking ka top trap! ➔"
+      }
+    },
+    {
+      "card_id": "card_25_much_many_rule",
+      "card_slug": "card_25_much_many_rule",
+      "type": "chat",
+      "concept_id": "much_many_quantifiers",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "MANY = Countable plural ke saath (many books, many students, many apples). MUCH = Uncountable ke saath (much water, much money, much time). 'How many books?' (sahi), 'How much books?' (galat). 'How much money?' (sahi), 'How many money?' (galat)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! To countable = many, uncountable = much?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur negative/questions mein: MUCH/MANY use karte hain. Positive sentences mein: 'a lot of' / 'plenty of' (dono ke saath). 'I have many books' ya 'I have a lot of books' (dono sahi). Lekin 'I have much books' (galat!)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'less' aur 'fewer' ka bhi same farak?"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_less_fewer_rule",
+        "button_text": "Ekdum sahi thinking! ➔"
+      }
+    },
+    {
+      "card_id": "card_26_less_fewer_rule",
+      "card_slug": "card_26_less_fewer_rule",
+      "type": "chat",
+      "concept_id": "less_fewer_rule",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect connection! FEWER = Countable plural (fewer books, fewer students). LESS = Uncountable (less water, less time, less money). 'Less people' (galat), 'Fewer people' (sahi). 'Fewer milk' (galat), 'Less milk' (sahi). Yahi SBI PO ka top 5 trap hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To many-much, fewer-less - same pattern!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! Aur ek twist - 'NUMBER OF' = countable plural ke saath (a number of students ARE...). 'AMOUNT OF' = uncountable ke saath (a large amount of money WAS...). Mixing these is common error!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bahut saare rules! Quiz do Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_quiz_countable_uncountable_1",
+        "button_text": "Test time! ➔"
+      }
+    },
+    {
+      "card_id": "card_27_quiz_countable_uncountable_1",
+      "card_slug": "card_27_quiz_countable_uncountable_1",
+      "type": "quiz",
+      "concept_id": "countable_uncountable_quiz",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the error: 'She doesn't have many patience to deal with children.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'many' with 'much'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'doesn't' with 'don't'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'to deal' with 'for dealing'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Patience' is an UNCOUNTABLE abstract noun. We use MUCH with uncountable nouns, not MANY. 'Many' is used only with countable plural nouns. Correct: 'She doesn't have MUCH patience to deal with children.' This many-much confusion is tested in every SBI PO exam!"
+      },
+      "navigation": {
+        "next": "card_28_quiz_countable_uncountable_2",
+        "button_text": "Question 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_countable_uncountable_2",
+      "card_slug": "card_28_quiz_countable_uncountable_2",
+      "type": "quiz",
+      "concept_id": "countable_uncountable_quiz",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "He is honest boy."
+          },
+          {
+            "id": "B",
+            "text": "He is an honest boy."
+          },
+          {
+            "id": "C",
+            "text": "He is the honest boy."
+          },
+          {
+            "id": "D",
+            "text": "Both B and C are correct"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Boy' is a SINGULAR COUNTABLE noun - it CANNOT stand alone without article/possessive/demonstrative. Option A is wrong (no article). 'Honest' starts with vowel SOUND (silent 'h'), so we use 'AN' not 'A'. Option B is correct: 'He is AN honest boy.' Option C changes meaning (specific honest boy known to listener). This article rule is SSC & Banking favorite!"
+      },
+      "navigation": {
+        "next": "card_29_quiz_countable_uncountable_3",
+        "button_text": "Question 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_countable_uncountable_3",
+      "card_slug": "card_29_quiz_countable_uncountable_3",
+      "type": "quiz",
+      "concept_id": "countable_uncountable_quiz",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Spot the error: 'There are less students in the class today than yesterday.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'less' with 'fewer'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'are' with 'is'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'than' with 'then'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Students' is COUNTABLE PLURAL. We use FEWER with countable nouns, not LESS. LESS is for uncountable nouns (less water, less time). Correct: 'There are FEWER students in the class today than yesterday.' This less-fewer trap appears in 90% of SBI PO and SSC CGL exams!"
+      },
+      "navigation": {
+        "next": "card_30_milestone_module_3",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_30_milestone_module_3",
+      "card_slug": "card_30_milestone_module_3",
+      "type": "milestone",
+      "concept_id": "module_3_completion",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎖️ MODULE 3 CONQUERED!",
+        "badge_emoji": "🔢",
+        "completed_topic": "Countable vs Uncountable Nouns (Many/Much/Fewer/Less)",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "Article-noun agreement और quantifier rules mastered! Number errors next!"
+      },
+      "navigation": {
+        "next": "card_31_singular_plural_intro",
+        "button_text": "Module 4: Singular-Plural Rules ➔"
+      }
+    },
+    {
+      "card_id": "card_31_singular_plural_intro",
+      "card_slug": "card_31_singular_plural_intro",
+      "type": "chat",
+      "concept_id": "singular_plural_intro",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, 'book' ka plural kya hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Books! Sir 's' laga dete hain na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Mostly haan, but 12 types ke plural rules hain! Regular plural (books), Irregular plural (children), Unchanged plural (sheep), Foreign plurals (criteria), Compound plurals (mothers-in-law). SBI mein ye sab test hote hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Itne types?"
+        }
+      ],
+      "navigation": {
+        "next": "card_32_regular_plural_rules",
+        "button_text": "Ek ek karke! ➔"
+      }
+    },
+    {
+      "card_id": "card_32_regular_plural_rules",
+      "card_slug": "card_32_regular_plural_rules",
+      "type": "chat",
+      "concept_id": "regular_plural_rules",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "REGULAR PLURAL RULES: 1) Most nouns: +S (book→books, pen→pens). 2) Ending in S/X/Z/CH/SH: +ES (bus→buses, box→boxes, watch→watches). 3) Ending in consonant+Y: Y→IES (baby→babies, city→cities). 4) Ending in vowel+Y: +S (boy→boys, key→keys)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'citys' galat hai? 'Cities' sahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! 'City' ends with consonant T + Y, so Y changes to IES → cities. But 'boy' ends with vowel O + Y, so just +S → boys. Common errors: 'childs' (galat) → children (sahi), 'mans' (galat) → men (sahi)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye irregular hain na?"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_irregular_plurals",
+        "button_text": "Bilkul! List dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_33_irregular_plurals",
+      "card_slug": "card_33_irregular_plurals",
+      "type": "chat",
+      "concept_id": "irregular_plural_list",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ IRREGULAR PLURALS (yaad karo!): man→men, woman→women, child→children, tooth→teeth, foot→feet, mouse→mice, goose→geese, ox→oxen, person→people (common), louse→lice. Ye sabke apne unique plurals hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'persons' nahi bolte?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Good question! 'Persons' technically correct hai but formal/legal language mein use hota hai (interested persons may apply). Common use mein 'people' standard hai. Similarly 'staffs' galat hai, 'staff' ya 'staff members' sahi hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur 'sheep' ka plural kya hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_unchanged_plurals",
+        "button_text": "Same word! ➔"
+      }
+    },
+    {
+      "card_id": "card_34_unchanged_plurals",
+      "card_slug": "card_34_unchanged_plurals",
+      "type": "chat",
+      "concept_id": "unchanged_plural_forms",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ UNCHANGED PLURALS (singular = plural): sheep (one sheep, two sheep), deer, fish (ya fishes for different species), aircraft, spacecraft, series, species, means. 'Sheeps' likhna galat hai! 'There are many sheep' (sahi)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'fishes' kabhi sahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! 'Fish' normally unchanged hai (I caught five fish). But different species ki baat ho to 'fishes': 'This aquarium has many exotic fishes' (different types). Context matter karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir compound nouns ka kya? Mother-in-law?"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_compound_noun_plurals",
+        "button_text": "Tricky rule! ➔"
+      }
+    },
+    {
+      "card_id": "card_35_compound_noun_plurals",
+      "card_slug": "card_35_compound_noun_plurals",
+      "type": "chat",
+      "concept_id": "compound_noun_plural_rules",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "COMPOUND NOUN PLURAL: Main noun (principal word) ko plural banao. Mother-in-law → mothers-in-law (mother main hai). Passer-by → passers-by, Commander-in-chief → Commanders-in-chief. But toothbrush → toothbrushes (brush main hai)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'mother-in-laws' galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "100% galat! SBI ka favorite trap! 'Mother' principal noun hai, 'in-law' modifier hai, so plural 'mothers-in-law'. Similarly: sons-in-law, editors-in-chief, courts-martial. But agar no hyphen: spoonfuls (not spoonsful)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to bahut confusing hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_foreign_plurals",
+        "button_text": "Aur bhi hai! Foreign words ➔"
+      }
+    },
+    {
+      "card_id": "card_36_foreign_plurals",
+      "card_slug": "card_36_foreign_plurals",
+      "type": "chat",
+      "concept_id": "foreign_origin_plurals",
+      "level": 4,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ FOREIGN PLURALS (Latin/Greek origin): -us→-i (cactus→cacti, radius→radii, stimulus→stimuli), -is→-es (crisis→crises, analysis→analyses, thesis→theses), -on→-a (criterion→criteria, phenomenon→phenomena), -um→-a (datum→data, medium→media)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'datas' nahi hota?"
+        },
+        {
+          "speaker": "aman",
+          "text": "NEVER! 'Data' already plural hai (datum ka plural). But modern English mein 'data' ko uncountable treat karte hain: 'The data IS accurate' (singular verb). Similarly 'media' plural hai (medium ka), but 'The media IS powerful' (as institution)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Bahut zyada rules! Quiz do Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_quiz_plural_1",
+        "button_text": "Zaroor! ➔"
+      }
+    },
+    {
+      "card_id": "card_37_quiz_plural_1",
+      "card_slug": "card_37_quiz_plural_1",
+      "type": "quiz",
+      "concept_id": "singular_plural_quiz",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the error: 'The criteria for selection is very strict this year.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'criteria' with 'criterion'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'is' with 'are'"
+          },
+          {
+            "id": "C",
+            "text": "Both A and B are acceptable corrections"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Criteria' is PLURAL (singular = criterion). So it should take plural verb 'are' not 'is'. Correct option 1: 'The criteria ARE very strict' (using plural form). Correct option 2: 'The criterion IS very strict' (using singular form). Both corrections work! This Latin plural trap appears frequently in SBI PO exams!"
+      },
+      "navigation": {
+        "next": "card_38_quiz_plural_2",
+        "button_text": "Question 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_plural_2",
+      "card_slug": "card_38_quiz_plural_2",
+      "type": "quiz",
+      "concept_id": "singular_plural_quiz",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "My mother-in-laws are visiting us tomorrow."
+          },
+          {
+            "id": "B",
+            "text": "My mothers-in-law are visiting us tomorrow."
+          },
+          {
+            "id": "C",
+            "text": "My mother-in-law are visiting us tomorrow."
+          },
+          {
+            "id": "D",
+            "text": "My mothers-in-laws are visiting us tomorrow."
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "In compound nouns with hyphens, the PRINCIPAL noun (main word) becomes plural. Here 'mother' is principal, 'in-law' is modifier. So plural = mothers-in-law. Option B is correct. Common similar words: sons-in-law, fathers-in-law, passers-by, editors-in-chief. This is a high-frequency SSC CGL and Banking exam trap!"
+      },
+      "navigation": {
+        "next": "card_39_quiz_plural_3",
+        "button_text": "Question 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz_plural_3",
+      "card_slug": "card_39_quiz_plural_3",
+      "type": "quiz",
+      "concept_id": "singular_plural_quiz",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Spot the error: 'The farmer has twenty sheeps and five deers on his farm.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'sheeps' with 'sheep' and 'deers' with 'deer'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'has' with 'have'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'twenty' with 'twenty-one'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Sheep' and 'deer' are UNCHANGED PLURALS - singular and plural forms are SAME. 'Sheeps' and 'deers' are WRONG. Correct: 'The farmer has twenty SHEEP and five DEER on his farm.' Other unchanged plurals: fish, aircraft, series, species. This trap appears in every competitive exam!"
+      },
+      "navigation": {
+        "next": "card_40_milestone_module_4",
+        "button_text": "Check Score ➔"
+      }
+    },
+    {
+      "card_id": "card_40_milestone_module_4",
+      "card_slug": "card_40_milestone_module_4",
+      "type": "milestone",
+      "concept_id": "module_4_completion",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 MODULE 4 CLEARED!",
+        "badge_emoji": "📊",
+        "completed_topic": "Singular-Plural Rules (Regular, Irregular, Foreign, Compound)",
+        "xp_earned": 80,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "Criteria, Sheep, Mothers-in-law mastered! Gender & Case next!"
+      },
+      "navigation": {
+        "next": "card_41_gender_intro",
+        "button_text": "Module 5: Gender of Nouns ➔"
+      }
+    },
+    {
+      "card_id": "card_41_gender_intro",
+      "card_slug": "card_41_gender_intro",
+      "type": "chat",
+      "concept_id": "gender_noun_intro",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, English mein nouns ke 4 genders hote hain: MASCULINE (male - boy, king), FEMININE (female - girl, queen), COMMON (both - teacher, student), NEUTER (lifeless - book, chair). Hindi mein sab kuch gender hai, but English mein kam!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'teacher' common gender hai? Male-female dono?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Modern English mein profession nouns mostly gender-neutral hain: teacher, doctor, engineer, pilot (no separate forms). Purani English mein 'poetess', 'actress' tha, but ab 'poet', 'actor' dono genders ke liye use hote hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "To exam mein gender errors kaise aate hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_gender_pronoun_agreement",
+        "button_text": "Pronoun agreement mein! ➔"
+      }
+    },
+    {
+      "card_id": "card_42_gender_pronoun_agreement",
+      "card_slug": "card_42_gender_pronoun_agreement",
+      "type": "chat",
+      "concept_id": "gender_pronoun_agreement",
+      "level": 4,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Gender error pronoun mismatch se aata hai. 'The queen lost his crown' (GALAT - queen feminine, his masculine). 'The king lost her crown' (GALAT). Sahi: 'The queen lost HER crown', 'The king lost HIS crown'. Pronoun ko noun ke gender se match karna padta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir animals ka kya? Dog masculine hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Good question! Animals ko mostly NEUTER treat karte hain (IT pronoun): 'The dog wagged ITS tail'. But agar gender known ho to HE/SHE: 'The lioness protected HER cubs'. Pets ko often HE/SHE bhi boltein hain: 'My dog loves his food'."
+        },
+        {
+          "speaker": "raju",
+          "text": "Thoda confusing hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_feminine_forms",
+        "button_text": "Common pairs dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_43_feminine_forms",
+      "card_slug": "card_43_feminine_forms",
+      "type": "chat",
+      "concept_id": "masculine_feminine_pairs",
+      "level": 4,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Common Masculine-Feminine pairs: king-queen, prince-princess, hero-heroine, host-hostess, author-authoress (old), waiter-waitress, actor-actress (traditional), lion-lioness, tiger-tigress, bull-cow, horse-mare, nephew-niece, bachelor-spinster, widower-widow."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'authoress' old hai to ab kya use karein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Modern English mein 'author' for both genders! Similarly 'poet' (not poetess), 'heir' (not heiress commonly). But 'actress' abhi bhi common hai, though 'actor' bhi acceptable for females. Language evolving hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Ab case kya hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_case_intro",
+        "button_text": "Important concept! ➔"
+      }
+    },
+    {
+      "card_id": "card_44_case_intro",
+      "card_slug": "card_44_case_intro",
+      "type": "chat",
+      "concept_id": "noun_case_intro",
+      "level": 4,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "CASE = Noun ka sentence mein role/position. English mein 5 cases: 1) NOMINATIVE (subject - Ram reads), 2) OBJECTIVE (object - I met Ram), 3) POSSESSIVE (ownership - Ram's book), 4) VOCATIVE (calling - O Ram!), 5) DATIVE (indirect object - Give Ram the book)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye sab cases mein noun ka form change hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! English mein sirf POSSESSIVE CASE mein apostrophe 's lagta hai. Baki cases mein position se decide hota hai. Lekin pronouns ka form change hota hai: I (nominative) → me (objective) → my/mine (possessive)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Possessive case ka detail batao Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_possessive_case_rules",
+        "button_text": "SBI ka favorite! ➔"
+      }
+    },
+    {
+      "card_id": "card_45_possessive_case_rules",
+      "card_slug": "card_45_possessive_case_rules",
+      "type": "chat",
+      "concept_id": "possessive_case_rules",
+      "level": 4,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "POSSESSIVE CASE RULES: 1) Singular noun: +'S (Ram's book, the boy's bag). 2) Plural ending in S: +' only (boys' hostel, girls' school). 3) Plural NOT ending in S: +'S (children's park, men's room). 4) Proper nouns ending in S: +'S or +' both ok (James's/James' book)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'boys's' galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely galat! 'Boys' already plural with S, so just apostrophe: boys' (not boys's). But 'boy's' = singular possessive. 'The boy's book' (one boy), 'The boys' books' (many boys). Apostrophe position changes meaning!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to confusing hai placement!"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_quiz_gender_case_1",
+        "button_text": "Practice karenge! ➔"
+      }
+    },
+    {
+      "card_id": "card_46_quiz_gender_case_1",
+      "card_slug": "card_46_quiz_gender_case_1",
+      "type": "quiz",
+      "concept_id": "gender_case_quiz",
+      "level": 4,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the error: 'The lioness protected his cubs from the hunters.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'his' with 'her'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'lioness' with 'lion'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'protected' with 'was protecting'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Lioness' is FEMININE gender, so pronoun should be 'HER' not 'HIS' (masculine). Correct: 'The lioness protected HER cubs from the hunters.' This gender-pronoun agreement error is very common in SSC and Banking exams!"
+      },
+      "navigation": {
+        "next": "card_47_quiz_gender_case_2",
+        "button_text": "Question 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_47_quiz_gender_case_2",
+      "card_slug": "card_47_quiz_gender_case_2",
+      "type": "quiz",
+      "concept_id": "gender_case_quiz",
+      "level": 4,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "This is my brother's-in-law car."
+          },
+          {
+            "id": "B",
+            "text": "This is my brother-in-law's car."
+          },
+          {
+            "id": "C",
+            "text": "This is my brothers-in-law's car."
+          },
+          {
+            "id": "D",
+            "text": "Both B and C are correct"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "For compound nouns, possessive apostrophe goes at the END of the complete word. Brother-in-law is one unit, so possessive = brother-in-law's (not brother's-in-law). Option B is correct for ONE brother-in-law. Option C would be correct for MULTIPLE brothers-in-law. Since 'my' suggests singular, B is the answer. This compound possessive trap is SBI PO favorite!"
+      },
+      "navigation": {
+        "next": "card_48_quiz_gender_case_3",
+        "button_text": "Question 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_48_quiz_gender_case_3",
+      "card_slug": "card_48_quiz_gender_case_3",
+      "type": "quiz",
+      "concept_id": "gender_case_quiz",
+      "level": 4,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Spot the error: 'The childrens' toys are scattered all over the room.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'childrens'' with 'children's'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'are' with 'is'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'scattered' with 'scattering'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Children' is already PLURAL (irregular plural of child). For plural nouns NOT ending in S, we add 'S (apostrophe S), not just apostrophe. Correct: children's (not childrens'). 'Childrens' itself is wrong - no such word! Correct: 'The children's toys are scattered all over the room.' Similar: men's, women's. High-frequency Banking exam error!"
+      },
+      "navigation": {
+        "next": "card_49_milestone_module_5",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_49_milestone_module_5",
+      "card_slug": "card_49_milestone_module_5",
+      "type": "milestone",
+      "concept_id": "module_5_completion",
+      "level": 4,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "💪 MODULE 5 MASTERED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Gender & Possessive Case Rules",
+        "xp_earned": 85,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "Pronoun agreement और apostrophe placement conquered! Advanced traps ahead!"
+      },
+      "navigation": {
+        "next": "card_50_noun_verb_agreement_intro",
+        "button_text": "Module 6: Subject-Verb Agreement ➔"
+      }
+    },
+    {
+      "card_id": "card_50_noun_verb_agreement_intro",
+      "card_slug": "card_50_noun_verb_agreement_intro",
+      "type": "chat",
+      "concept_id": "subject_verb_agreement_intro",
+      "level": 5,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai Officer-level topic - SUBJECT-VERB AGREEMENT! Rule: SINGULAR subject → SINGULAR verb, PLURAL subject → PLURAL verb. 'He goes' (sahi), 'He go' (galat). 'They go' (sahi), 'They goes' (galat). Simple lagta hai, but traps bahut hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir trap kahan hai isme?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Jab subject aur verb ke beech mein prepositional phrase aa jaye! 'The quality of these mangoes ARE good' (GALAT). Yahin confuse hote hain - 'mangoes' plural hai, so 'are' lagaya. But subject 'quality' hai (singular), so 'IS' hona chahiye!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! Subject identify karna important hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_intervening_phrase_trap",
+        "button_text": "Biggest trap! ➔"
+      }
+    },
+    {
+      "card_id": "card_51_intervening_phrase_trap",
+      "card_slug": "card_51_intervening_phrase_trap",
+      "type": "chat",
+      "concept_id": "intervening_phrase_agreement",
+      "level": 5,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Golden Rule: Subject ke baad agar OF/IN/WITH/ALONG WITH/AS WELL AS phrase aaye, to verb PEHLE WALE subject se agree karega. 'A basket of apples IS here' (basket = subject). 'The books on the table ARE mine' (books = subject). Ignore the middle phrase!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab phrase ko mentally hata do aur subject-verb match dekho?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect strategy! 'Ram, along with his friends, IS going' (Ram = singular subject, friends = phrase). 'The students, as well as the teacher, WERE present' (students = plural subject). SBI mein yahi trap 60% questions mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'either-or', 'neither-nor' ka kya rule?"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_either_or_neither_nor",
+        "button_text": "Tricky rule! ➔"
+      }
+    },
+    {
+      "card_id": "card_52_either_or_neither_nor",
+      "card_slug": "card_52_either_or_neither_nor",
+      "type": "chat",
+      "concept_id": "either_or_agreement",
+      "level": 5,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "EITHER-OR / NEITHER-NOR rule: Verb will agree with the NEAREST subject! 'Either Ram or his friends ARE responsible' (friends nearest - plural). 'Either the students or the teacher IS responsible' (teacher nearest - singular). Yahi proximity rule kehte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab jo subject 'or/nor' ke baad hai, usse match karo?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! 'Neither the teacher nor the students WERE present' (students nearest - plural). 'Neither the students nor the teacher WAS present' (teacher nearest - singular). Order change karne se verb change! SBI ka top trap!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur 'each', 'every' wale?"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_indefinite_pronouns",
+        "button_text": "Hamesha singular! ➔"
+      }
+    },
+    {
+      "card_id": "card_53_indefinite_pronouns",
+      "card_slug": "card_53_indefinite_pronouns",
+      "type": "chat",
+      "concept_id": "indefinite_pronoun_agreement",
+      "level": 5,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ ALWAYS SINGULAR verb: Each, Every, Either, Neither, One, Someone, Anyone, Everyone, No one, Somebody, Anybody, Nobody, Nothing. 'Each student HAS a book' (NOT have). 'Everyone IS present' (NOT are). 'Neither of them IS correct' (NOT are)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'Neither of them' mein 'them' plural hai, phir bhi singular verb?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! 'Neither/Either' SINGULAR hai, 'of them' sirf prepositional phrase hai. Subject = Neither (singular). 'Neither of the boys IS here' (sahi). Yahi 'of' phrase wala trap hai! Similarly 'Each of the students HAS...' (not have)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Quiz do Sir, practice chahiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_quiz_agreement_1",
+        "button_text": "Tough questions! ➔"
+      }
+    },
+    {
+      "card_id": "card_54_quiz_agreement_1",
+      "card_slug": "card_54_quiz_agreement_1",
+      "type": "quiz",
+      "concept_id": "subject_verb_agreement_quiz",
+      "level": 5,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the error: 'The quality of these products are not up to the mark.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'are' with 'is'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'quality' with 'qualities'"
+          },
+          {
+            "id": "C",
+            "text": "Replace 'not' with 'never'"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Subject is 'quality' (SINGULAR), not 'products'. 'Of these products' is just a prepositional phrase modifying quality. Singular subject needs singular verb. Correct: 'The quality of these products IS not up to the mark.' This intervening phrase trap is the #1 error in SBI PO Error Detection!"
+      },
+      "navigation": {
+        "next": "card_55_quiz_agreement_2",
+        "button_text": "Question 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_55_quiz_agreement_2",
+      "card_slug": "card_55_quiz_agreement_2",
+      "type": "quiz",
+      "concept_id": "subject_verb_agreement_quiz",
+      "level": 5,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Either the manager or his assistants is responsible for this mistake."
+          },
+          {
+            "id": "B",
+            "text": "Either the manager or his assistants are responsible for this mistake."
+          },
+          {
+            "id": "C",
+            "text": "Either the manager or his assistants were responsible for this mistake."
+          },
+          {
+            "id": "D",
+            "text": "Both B and C are acceptable"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "In 'Either...or' constructions, verb agrees with the NEAREST subject (proximity rule). Here 'assistants' (plural) is nearest to the verb, so plural verb 'ARE' is correct. If order was reversed ('Either the assistants or the manager'), then 'IS' would be correct. Option B uses present tense correctly. This Either-Or trap appears in every SBI PO exam!"
+      },
+      "navigation": {
+        "next": "card_56_quiz_agreement_3",
+        "button_text": "Question 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_56_quiz_agreement_3",
+      "card_slug": "card_56_quiz_agreement_3",
+      "type": "quiz",
+      "concept_id": "subject_verb_agreement_quiz",
+      "level": 5,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Spot the error: 'Each of the candidates have submitted their forms on time.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'have' with 'has'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'their' with 'his or her'"
+          },
+          {
+            "id": "C",
+            "text": "Both A and B"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Two errors! (1) 'Each' is SINGULAR, so verb should be 'HAS' not 'HAVE' (ignoring 'of the candidates' phrase). (2) 'Each' is singular, so pronoun should be 'his or her' not 'their' (though modern English accepts 'their' for gender neutrality). Correct: 'Each of the candidates HAS submitted HIS OR HER form on time.' This double-error trap is Banking exam favorite!"
+      },
+      "navigation": {
+        "next": "card_57_milestone_module_6",
+        "button_text": "Check Score ➔"
+      }
+    },
+    {
+      "card_id": "card_57_milestone_module_6",
+      "card_slug": "card_57_milestone_module_6",
+      "type": "milestone",
+      "concept_id": "module_6_completion",
+      "level": 5,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎯 MODULE 6 CONQUERED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Subject-Verb Agreement (Intervening Phrases, Either-Or, Indefinites)",
+        "xp_earned": 90,
+        "milestone_progress": "Module 6/8 Clear",
+        "motivational_quote": "SBI PO's toughest agreement traps mastered! Articles & determiners next!"
+      },
+      "navigation": {
+        "next": "card_58_article_noun_intro",
+        "button_text": "Module 7: Article-Noun Rules ➔"
+      }
+    },
+    {
+      "card_id": "card_58_article_noun_intro",
+      "card_slug": "card_58_article_noun_intro",
+      "type": "chat",
+      "concept_id": "article_noun_agreement_intro",
+      "level": 5,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aate hain ARTICLE-NOUN agreement errors! A/AN/THE ka sahi use bahut important hai. Rule: A/AN = Indefinite (koi bhi ek), THE = Definite (specific). 'A book' (koi bhi book), 'THE book' (specific book jo dono jaante hain)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir A aur AN mein kya farak?"
+        },
+        {
+          "speaker": "aman",
+          "text": "A = Consonant SOUND se start hone wale words (a boy, a university - 'yu' sound). AN = Vowel SOUND se start hone wale words (an apple, an hour - 'h' silent, 'a' sound). SPELLING nahi, SOUND matter karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'an university' galat hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_59_a_an_sound_rule",
+        "button_text": "Bilkul galat! ➔"
+      }
+    },
+    {
+      "card_id": "card_59_a_an_sound_rule",
+      "card_slug": "card_59_a_an_sound_rule",
+      "type": "chat",
+      "concept_id": "a_an_sound_based_rule",
+      "level": 5,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sound-based examples: A university (yu sound - consonant), AN umbrella (u sound - vowel), A European (yu sound), AN honest man ('h' silent - 'o' sound), A one-rupee note (wa sound - consonant), AN hour ('h' silent - 'au' sound). Bolke dekho, sound se decide karo!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 'THE' kab use karte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "THE tab jab specific/particular ho: 1) Already mentioned (I saw a dog. THE dog was brown), 2) Unique things (THE sun, THE moon, THE earth), 3) Superlatives (THE best, THE tallest), 4) Musical instruments (play THE piano), 5) Rivers, oceans (THE Ganga, THE Pacific)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur kab article NAHI lagta?"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_zero_article_cases",
+        "button_text": "Important cases! ➔"
+      }
+    },
+    {
+      "card_id": "card_60_zero_article_cases",
+      "card_slug": "card_60_zero_article_cases",
+      "type": "chat",
+      "concept_id": "zero_article_usage",
+      "level": 5,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ NO ARTICLE needed: 1) Plural countable general sense (I like books - general), 2) Uncountable general (Water is essential), 3) Proper nouns (India, Ram - but 'the United States'), 4) Sports (play cricket - but 'play the piano'), 5) Languages (speak English), 6) Meals (have breakfast)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'I play the cricket' galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "100% galat! Sports ke saath NO article: play cricket, play football. But musical instruments = THE: play THE guitar, play THE tabla. 'Have the breakfast' bhi galat, 'have breakfast' sahi. But 'The breakfast was delicious' sahi (specific breakfast)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Context se change hota hai meaning!"
+        }
+      ],
+      "navigation": {
+        "next": "card_61_quiz_article_1",
+        "button_text": "Quiz mein test! ➔"
+      }
+    },
+    {
+      "card_id": "card_61_quiz_article_1",
+      "card_slug": "card_61_quiz_article_1",
+      "type": "quiz",
+      "concept_id": "article_noun_quiz",
+      "level": 5,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Identify the error: 'She is studying to become a engineer at an university.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Replace 'a engineer' with 'an engineer'"
+          },
+          {
+            "id": "B",
+            "text": "Replace 'an university' with 'a university'"
+          },
+          {
+            "id": "C",
+            "text": "Both A and B"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Two article errors! (1) 'Engineer' starts with vowel SOUND 'e', so AN engineer (not 'a engineer'). (2) 'University' starts with consonant SOUND 'yu', so A university (not 'an university'). Article choice depends on SOUND not spelling! Correct: 'She is studying to become AN engineer at A university.' This A/AN trap is in every Banking exam!"
+      },
+      "navigation": {
+        "next": "card_62_quiz_article_2",
+        "button_text": "Question 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_62_quiz_article_2",
+      "card_slug": "card_62_quiz_article_2",
+      "type": "quiz",
+      "concept_id": "article_noun_quiz",
+      "level": 5,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "He plays the cricket every evening."
+          },
+          {
+            "id": "B",
+            "text": "He plays cricket every evening."
+          },
+          {
+            "id": "C",
+            "text": "He plays a cricket every evening."
+          },
+          {
+            "id": "D",
+            "text": "He plays an cricket every evening."
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sports names do NOT take articles. 'Play cricket' is correct (no article). We say: play football, play tennis, play hockey. But musical instruments take 'THE': play THE guitar, play THE piano. Option B is correct. This sport-article trap is SSC CGL high-frequency error!"
+      },
+      "navigation": {
+        "next": "card_63_quiz_article_3",
+        "button_text": "Question 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_63_quiz_article_3",
+      "card_slug": "card_63_quiz_article_3",
+      "type": "quiz",
+      "concept_id": "article_noun_quiz",
+      "level": 5,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Spot the error: 'The honesty is the best policy in life.'",
+        "options": [
+          {
+            "id": "A",
+            "text": "Remove first 'the' (before honesty)"
+          },
+          {
+            "id": "B",
+            "text": "Remove second 'the' (before best)"
+          },
+          {
+            "id": "C",
+            "text": "Both A and B"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Abstract nouns used in GENERAL sense do NOT take 'THE'. 'Honesty' (general quality) should not have 'the'. But 'THE best' is correct because superlatives always take 'THE'. Correct: 'Honesty is THE best policy in life.' If honesty was specific ('The honesty shown by him...'), then 'the' would be ok. This abstract noun article trap is Banking exam favorite!"
+      },
+      "navigation": {
+        "next": "card_64_milestone_module_7",
+        "button_text": "Check Score ➔"
+      }
+    },
+    {
+      "card_id": "card_64_milestone_module_7",
+      "card_slug": "card_64_milestone_module_7",
+      "type": "milestone",
+      "concept_id": "module_7_completion",
+      "level": 5,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🔥 MODULE 7 MASTERED!",
+        "badge_emoji": "📰",
+        "completed_topic": "Article-Noun Agreement (A/AN/THE, Zero Article)",
+        "xp_earned": 95,
+        "milestone_progress": "Module 7/8 Clear",
+        "motivational_quote": "Sound-based article rules conquered! Final module - Advanced traps!"
+      },
+      "navigation": {
+        "next": "card_65_advanced_traps_intro",
+        "button_text": "Module 8: Advanced Noun Traps ➔"
+      }
+    },
+    {
+      "card_id": "card_65_advanced_traps_intro",
+      "card_slug": "card_65_advanced_traps_intro",
+      "type": "chat",
+      "concept_id": "advanced_noun_traps",
+      "level": 5,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Final module mein SBI PO ke sabse tricky traps! 1) Double possessives (a friend of mine - NOT a friend of me), 2) Noun as adjective (shoe shop - NOT shoes shop), 3) Concrete vs Abstract confusion, 4) Material noun with articles. Ye sab Officer-level hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir double possessive kya hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Jab 'of' ke baad possessive form aaye: 'A friend OF MINE' (sahi), 'A friend OF ME' (galat). 'That book OF YOURS' (sahi), 'That book OF YOU' (galat). After 'of', hamesha possessive pronoun: mine, yours, his, hers, ours, theirs."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur noun as adjective?"
+        }
+      ],
+      "navigation": {
+        "next": "card_66_noun_as_adjective",
+        "button_text": "Important rule! ➔"
+      }
+    },
+    {
+      "card_id": "card_66_noun_as_adjective",
+      "card_slug": "card_66_noun_as_adjective",
+      "type": "chat",
+      "concept_id": "noun_as_adjective_rule",
+      "level": 5,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Jab noun ko adjective ki tarah use karein (modifier), to wo SINGULAR form mein rahta hai. 'A shoe shop' (NOT shoes shop - shoe modifier hai). 'A three-hour journey' (NOT hours). 'A ten-rupee note' (NOT rupees). 'A five-year plan' (NOT years). Modifier noun hamesha singular!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab 'books store' galat, 'book store' sahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! But 'sports car' exception hai kyunki 'sports' as adjective established ho gaya hai. Generally rule: modifier noun = singular. But 'a women's college' sahi hai kyunki possessive form hai, modifier nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir material noun ke saath article ka kya scene?"
+        }
+      ],
+      "navigation": {
+        "next": "card_67_material_article_trap",
+        "button_text": "Confusion point! ➔"
+      }
+    },
+    {
+      "card_id": "card_67_material_article_trap",
+      "card_slug": "card_67_material_article_trap",
+      "type": "chat",
+      "concept_id": "material_noun_article_usage",
+      "level": 5,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Material noun (gold, water, milk) normally NO article in general sense: 'Gold is precious' (sahi). But agar specific ho to THE use hota hai: 'THE gold in this ring is pure' (specific gold). Aur agar product ban jaye to countable: 'I bought a gold ring' (ring countable hai, gold nahi)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab material se product bane to countable?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! 'Iron is strong' (material - uncountable). 'I bought an iron' (pressing iron - product - countable). Context se decide hota hai. Similarly: 'Glass is fragile' (material) vs 'a glass of water' (container - countable)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Bahut layers hain noun mein!"
+        }
+      ],
+      "navigation": {
+        "next": "card_68_final_summary",
+        "button_text": "Summary dekho! ➔"
+      }
+    },
+    {
+      "card_id": "card_68_final_summary",
+      "card_slug": "card_68_final_summary",
+      "type": "summary",
+      "concept_id": "complete_noun_revision",
+      "level": 5,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER-LEVEL QUICK REVISION",
+        "revision_points": [
+          {
+            "topic": "Uncountable Nouns - No Plural 's'",
+            "point": "NEVER: advices, furnitures, informations, luggages, equipments. ALWAYS singular!"
+          },
+          {
+            "topic": "News, Mathematics - Singular Verb",
+            "point": "The news IS good. Mathematics IS my subject. Looks plural but takes singular verb!"
+          },
+          {
+            "topic": "Many vs Much, Fewer vs Less",
+            "point": "MANY/FEWER = Countable plural. MUCH/LESS = Uncountable. 'Less people' WRONG!"
+          },
+          {
+            "topic": "Criteria, Data, Media - Latin Plurals",
+            "point": "Criterion→Criteria, Datum→Data. 'The criteria ARE strict' OR 'criterion IS strict'."
+          },
+          {
+            "topic": "Compound Possessives",
+            "point": "Mother-in-law → mothers-in-law (plural), mother-in-law's (possessive). NOT mother-in-laws!"
+          },
+          {
+            "topic": "Unchanged Plurals",
+            "point": "Sheep, deer, fish, aircraft, series - NO 's' in plural. 'Many sheep' NOT 'sheeps'."
+          },
+          {
+            "topic": "Subject-Verb Agreement",
+            "point": "Ignore 'of' phrases! 'Quality of products IS' NOT 'are'. Subject = quality (singular)."
+          },
+          {
+            "topic": "Either-Or Proximity Rule",
+            "point": "Verb agrees with NEAREST subject. 'Either Ram or friends ARE' (friends nearest)."
+          },
+          {
+            "topic": "Each, Every, Everyone - Singular",
+            "point": "'Each HAS', 'Everyone IS', 'Neither of them IS'. Always singular verb!"
+          },
+          {
+            "topic": "A vs AN - Sound Based",
+            "point": "AN hour (silent h), A university ('yu' sound). SOUND matters, not spelling!"
+          },
+          {
+            "topic": "No Article with Sports/Meals",
+            "point": "Play cricket (NO 'the'). Have breakfast (NO 'the'). But play THE piano (instrument)!"
+          },
+          {
+            "topic": "Double Possessive",
+            "point": "'A friend OF MINE' NOT 'of me'. After 'of' use possessive: mine/yours/his/hers."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_69_final_quiz_1",
+        "button_text": "Take Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_69_final_quiz_1",
+      "card_slug": "card_69_final_quiz_1",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_nouns",
+      "level": 5,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Multi-Statement Analysis (BPSC Style):\n(A) The furnitures in the office needs replacement.\n(B) Neither of the students have submitted their assignments.\n(C) She gave me some useful advice about career planning.\n(D) The news about the elections were quite surprising.\n\nWhich statements are CORRECT?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only C"
+          },
+          {
+            "id": "B",
+            "text": "Only A and C"
+          },
+          {
+            "id": "C",
+            "text": "Only C and D"
+          },
+          {
+            "id": "D",
+            "text": "Only B and C"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Only C is CORRECT! (A) WRONG: 'Furnitures' doesn't exist - should be 'furniture' (uncountable). Also 'needs' should be 'need' if we correct to 'furniture pieces'. (B) WRONG: 'Neither' is singular - should be 'has' not 'have'. (C) CORRECT: 'Advice' uncountable, 'some' ok. (D) WRONG: 'News' is singular - should be 'was' not 'were'. This multi-error detection is SBI PO ultimate test!"
+      },
+      "navigation": {
+        "next": "card_70_final_quiz_2",
+        "button_text": "Challenge 2/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_70_final_quiz_2",
+      "card_slug": "card_70_final_quiz_2",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_nouns",
+      "level": 5,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Assertion-Reason (BPSC/UPSC Style):\nAssertion (A): In the sentence 'Each of the boys have their own books', there is a subject-verb agreement error.\nReason (R): 'Each' is always treated as singular and takes singular verb 'has', regardless of the plural noun in the prepositional phrase.\n\nChoose correct option:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Both A and R are true, and R correctly explains A"
+          },
+          {
+            "id": "B",
+            "text": "Both A and R are true, but R does NOT explain A"
+          },
+          {
+            "id": "C",
+            "text": "A is true but R is false"
+          },
+          {
+            "id": "D",
+            "text": "A is false but R is true"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Both A and R are TRUE, and R CORRECTLY EXPLAINS A! The sentence has error because 'each' requires singular verb 'has' not 'have'. The phrase 'of the boys' is just prepositional phrase - ignore it! Subject = 'Each' (singular). Also 'their' should be 'his' for strict grammar (though modern usage accepts 'their'). Reason perfectly explains why Assertion is true. This Assertion-Reasoning format tests deep understanding - BPSC/UPSC favorite!"
+      },
+      "navigation": {
+        "next": "card_71_final_quiz_3",
+        "button_text": "Final Challenge 3/3 ➔"
+      }
+    },
+    {
+      "card_id": "card_71_final_quiz_3",
+      "card_slug": "card_71_final_quiz_3",
+      "type": "final_quiz",
+      "concept_id": "final_assessment_nouns",
+      "level": 5,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Complex Error Detection (SBI PO Style):\n'The criteria for selecting candidates are very strict, and each of the criterions are evaluated carefully by the committee members.'\n\nIdentify ALL errors:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only 'criterions' is wrong (should be 'criteria')"
+          },
+          {
+            "id": "B",
+            "text": "Only second 'are' is wrong (should be 'is')"
+          },
+          {
+            "id": "C",
+            "text": "'Criterions' should be 'criteria' AND second 'are' should be 'is'"
+          },
+          {
+            "id": "D",
+            "text": "No error - sentence is completely correct"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "TWO ERRORS! (1) 'Criterions' is WRONG - plural of criterion is 'criteria' (Latin plural), not criterions. (2) 'Each' takes SINGULAR verb, so 'are' should be 'IS'. Correct: 'The criteria for selecting candidates are very strict, and each of the CRITERIA IS evaluated carefully by the committee members.' First 'are' is correct because 'criteria' is plural. This multi-layered trap tests Latin plurals + each-agreement - SBI PO toughest pattern!"
+      },
+      "navigation": {
+        "next": "card_72_completion",
+        "button_text": "See Final Score 🏆"
+      }
+    },
+    {
+      "card_id": "card_72_completion",
+      "card_slug": "card_72_completion",
+      "type": "milestone",
+      "concept_id": "course_complete",
+      "level": 5,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "👑 NOUNS MASTERY COMPLETE!",
+        "badge_emoji": "🎖️",
+        "completed_topic": "Complete Noun Error Detection - SBI PO Level",
+        "xp_earned": 500,
+        "milestone_progress": "8/8 Modules Conquered",
+        "motivational_quote": "Congratulations! You've mastered all 8 types of nouns, uncountable traps, plural rules, agreement errors, article usage, and Officer-level traps. You can now crack Noun-based Error Detection in SBI PO, SSC CGL, BPSC, and all competitive exams with 95%+ accuracy! Keep practicing PYQs! 🚀"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "🎯 Practice More Grammar Topics"
+      }
+    }
+  ]
+}
+```
