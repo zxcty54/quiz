@@ -40,9 +40,13 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   @override
   void initState() {
     super.initState();
-    _isHindi = widget.subFolder.contains('bssc') ||
-        widget.subFolder.contains('bpsc') ||
-        widget.subFolder.contains('bihar_si');
+    // Auto-detect Hindi preference for Bihar Exams
+    final folderLower = widget.subFolder.toLowerCase();
+    _isHindi = folderLower.contains('bssc') ||
+        folderLower.contains('bpsc') ||
+        folderLower.contains('bihar_si') ||
+        folderLower.contains('si');
+
     _startTimers();
     _checkBookmarkStatus();
   }
@@ -84,11 +88,13 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   // 📌 Check if Current Question is already Bookmarked
   void _checkBookmarkStatus() async {
     final savedList = await UserStatsService.getSavedQuestions();
+    if (widget.questions.isEmpty) return;
+
     final currentQ = widget.questions[_currentIndex];
     String currentText = currentQ.getText(_isHindi);
 
     bool exists = savedList.any((item) {
-      String qText = item['qe'] ?? item['qh'] ?? '';
+      String qText = item['qe'] ?? item['qh'] ?? item['question'] ?? '';
       return qText == currentText || qText == currentQ.qe;
     });
 
@@ -99,6 +105,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
   // 📌 Toggle Bookmark Action
   void _toggleBookmarkQuestion() async {
+    if (widget.questions.isEmpty) return;
     final currentQ = widget.questions[_currentIndex];
     final currentOpts = currentQ.getOptions(_isHindi);
 
@@ -154,6 +161,10 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         } else {
           wrongCount++;
           // ❌ ONLY ATTEMPTED BUT WRONG QUESTIONS GO TO VAULT!
+          String selectedOptText = (userAns < currentOpts.length)
+              ? currentOpts[userAns]
+              : 'Selected Option';
+
           await UserStatsService.recordQuestionAttempt(
             isCorrect: false,
             chapterName: widget.testTitle,
@@ -169,7 +180,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
               'answerIndex': q.answerIndex,
               'explanation': q.explanation,
             },
-            userSelectedOption: currentOpts[userAns],
+            userSelectedOption: selectedOptText,
           );
         }
       }
@@ -192,6 +203,13 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   @override
   Widget build(BuildContext context) {
     if (_isExamSubmitted) return _buildResultReportScreen();
+
+    if (widget.questions.isEmpty) {
+      return Scaffold(
+        appBar: AppBar(title: Text(widget.testTitle)),
+        body: const Center(child: Text("No Questions Loaded!")),
+      );
+    }
 
     final currentQ = widget.questions[_currentIndex];
     final String qText = currentQ.getText(_isHindi);
@@ -402,15 +420,17 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     double cutoffTarget = 22.00;
     String examName = "SSC / Central Exams";
 
-    if (widget.subFolder.contains('bssc')) {
+    final pathLower = widget.subFolder.toLowerCase();
+
+    if (pathLower.contains('bssc')) {
       score = (correct * 4) - (wrong * 1.0);
       cutoffTarget = 88.00;
       examName = "BSSC Graduate Level";
-    } else if (widget.subFolder.contains('bpsc')) {
+    } else if (pathLower.contains('bpsc')) {
       score = (correct * 1.0) - (wrong * 0.33);
       cutoffTarget = 21.00;
       examName = "BPSC Prelims";
-    } else if (widget.subFolder.contains('bihar_si')) {
+    } else if (pathLower.contains('bihar_si') || pathLower.contains('si')) {
       score = (correct * 2.0) - (wrong * 0.40);
       cutoffTarget = 130.00;
       examName = "Bihar SI Prelims";
@@ -504,8 +524,8 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                     children: [
                       Text("Q${i + 1}. ${q.getText(_isHindi)}", style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black87, fontSize: 14)),
                       const SizedBox(height: 6),
-                      Text("Your Answer: ${userAns != null ? qOpts[userAns] : 'Skipped'}", style: TextStyle(color: isCorrect ? Colors.green : Colors.red, fontWeight: FontWeight.bold, fontSize: 13)),
-                      Text("Correct Answer: ${qOpts[q.answerIndex]}", style: const TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 13)),
+                      Text("Your Answer: ${userAns != null && userAns < qOpts.length ? qOpts[userAns] : 'Skipped'}", style: TextStyle(color: isCorrect ? Colors.green : Colors.red, fontWeight: FontWeight.bold, fontSize: 13)),
+                      Text("Correct Answer: ${q.answerIndex < qOpts.length ? qOpts[q.answerIndex] : 'N/A'}", style: const TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 13)),
                       const SizedBox(height: 4),
                       Text("⏱️ Time Spent: ${timeSpent}s", style: const TextStyle(fontSize: 11, color: Colors.grey)),
                       const SizedBox(height: 8),
@@ -518,7 +538,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                             LatexText("Explanation: ${q.explanation.isNotEmpty ? q.explanation : 'N/A'}", style: const TextStyle(fontSize: 12, color: Colors.black87)),
                             const SizedBox(height: 10),
 
-                            // 💡 Smart Direction Message for Wrong Questions only
                             if (!isCorrect && userAns != null) ...[
                               Container(
                                 padding: const EdgeInsets.all(8),
