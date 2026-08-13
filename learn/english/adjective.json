@@ -1,0 +1,1785 @@
+{
+  "topic_id": "english_grammar_adjective_sbi_po",
+  "topic_title": "Adjective – Complete Mastery for SBI PO Level Error Detection",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 98,
+  "characters": {
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 98 },
+      "intro_payload": {
+        "title": "Adjective Master Class",
+        "icon": "🍎🎨",
+        "subtitle": "From Zero Knowledge to SBI PO Error Detection Officer",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Understand what an Adjective is and how it modifies Noun/Pronoun",
+          "Master all types: Descriptive, Quantitative, Numeral, Demonstrative, Interrogative, Possessive, Distributive, Exclamatory, Proper",
+          "Learn the Royal Order of Adjectives (Opinion-Size-Age-Shape-Colour-Origin-Material-Purpose)",
+          "Master Degrees of Comparison, spelling rules and Irregular forms",
+          "Identify Absolute/Non-gradable Adjectives that cannot take more/most",
+          "Crack Few/A few/The few, Little/A little/The little, Many/Much traps",
+          "Master Elder/Older, Later/Latter, Farther/Further, Nearest/Next confusions",
+          "Solve Good/Well and -ed/-ing Adjective traps",
+          "Learn Adjectives taking 'to' instead of 'than' (senior, junior, superior, inferior, prior)",
+          "Master Each/Every/Either/Neither agreement and As...as/So...as structures",
+          "Solve BPSC/SSC/SBI PO style multi-statement and error-spotting questions"
+        ]
+      },
+      "navigation": { "next": "card_02_daily_observation", "button_text": "Start Learning ➔" }
+    },
+    {
+      "card_id": "card_02_daily_observation",
+      "card_slug": "card_02_daily_observation",
+      "type": "chat",
+      "concept_id": "adjective_intro",
+      "level": 1,
+      "progress": { "current": 2, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, mummy ne kal sabzi mandi se kaisa aam mangwaya tha? Zara batao uska rang, size, taste?" },
+        { "speaker": "raju", "text": "Sir bahut bada, peela aur mithha aam tha! Ekdum tasty!" },
+        { "speaker": "aman", "text": "Wah! Dekho tumne 'bada', 'peela', 'mithha' - ye teeno shabd 'aam' (Noun) ke baare mein extra jaankari de rahe hain, uski quality batate hain." },
+        { "speaker": "raju", "text": "Achha sir, matlab ye shabd Noun ko describe kar rahe the?" }
+      ],
+      "navigation": { "next": "card_03_definition_adjective", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_definition_adjective",
+      "card_slug": "card_03_definition_adjective",
+      "type": "chat",
+      "concept_id": "adjective_intro",
+      "level": 1,
+      "progress": { "current": 3, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi Raju! Aise shabd ko 'Adjective' kehte hain. Adjective wo shabd hai jo Noun ya Pronoun ke baare mein extra jaankari deta hai - uski quality, quantity, ya number batakar. Jaise: 'big mango', 'yellow mango', 'sweet mango'." },
+        { "speaker": "raju", "text": "Sir Adverb bhi to extra jaankari deta hai na, phir dono mein fark kya hai?" },
+        { "speaker": "aman", "text": "Bahut acha doubt! Adverb Verb/Adjective/Adverb ko modify karta hai, lekin Adjective sirf aur sirf NOUN ya PRONOUN ko modify karta hai. Jaise 'She is beautiful' - 'beautiful' pronoun 'She' ko describe kar raha hai." },
+        { "speaker": "raju", "text": "Achhaaa! Matlab Adjective ka target hamesha Noun/Pronoun hi hoga, Verb nahi?" }
+      ],
+      "navigation": { "next": "card_04_wh_questions_adjective", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_wh_questions_adjective",
+      "card_slug": "card_04_wh_questions_adjective",
+      "type": "chat",
+      "concept_id": "adjective_intro",
+      "level": 1,
+      "progress": { "current": 4, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab yaad rakhne ka easy tareeka - Adjective hamesha teen sawaalon ka jawab deta hai: What kind? (kaisa), Which one? (kaunsa), How many/much? (kitna)." },
+        { "speaker": "raju", "text": "Sir example se samjhao please!" },
+        { "speaker": "aman", "text": "'Red car' - What kind? Red. 'This car' - Which one? This. 'Five cars' - How many? Five. Teeno alag sawaal, teeno Adjective!" },
+        { "speaker": "raju", "text": "Sir ye to bahut helpful trick hai, ab main identify kar sakta hun!" }
+      ],
+      "navigation": { "next": "card_05_guess_identify_adjective", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_guess_identify_adjective",
+      "card_slug": "card_05_guess_identify_adjective",
+      "type": "guess",
+      "concept_id": "adjective_intro",
+      "level": 1,
+      "progress": { "current": 5, "total": 98 },
+      "guess_payload": {
+        "question": "Identify the Adjective in: 'The clever fox escaped quickly.'",
+        "options": [
+          { "id": "A", "text": "fox" },
+          { "id": "B", "text": "clever" },
+          { "id": "C", "text": "escaped" },
+          { "id": "D", "text": "quickly" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Clever' Noun 'fox' ki quality batata hai (what kind of fox) - ye Adjective hai. 'Quickly' Adverb hai jo 'escaped' ko modify karta hai."
+      },
+      "navigation": { "next": "card_06_quiz_definition", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_06_quiz_definition",
+      "card_slug": "card_06_quiz_definition",
+      "type": "quiz",
+      "concept_id": "adjective_intro",
+      "level": 1,
+      "progress": { "current": 6, "total": 98 },
+      "quiz_payload": {
+        "question": "An Adjective always qualifies/modifies:",
+        "options": [
+          { "id": "A", "text": "A Verb only" },
+          { "id": "B", "text": "A Noun or Pronoun" },
+          { "id": "C", "text": "An Adverb only" },
+          { "id": "D", "text": "A Preposition" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Adjective ka mukhya kaam Noun ya Pronoun ko qualify karna hai, uski quality, quantity ya number batana."
+      },
+      "navigation": { "next": "card_07_quiz_which_one", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz_which_one",
+      "card_slug": "card_07_quiz_which_one",
+      "type": "quiz",
+      "concept_id": "adjective_intro",
+      "level": 1,
+      "progress": { "current": 7, "total": 98 },
+      "quiz_payload": {
+        "question": "In the sentence 'She bought ten apples,' which word is the Adjective and what question does it answer?",
+        "options": [
+          { "id": "A", "text": "'apples' - What kind?" },
+          { "id": "B", "text": "'bought' - How?" },
+          { "id": "C", "text": "'ten' - How many?" },
+          { "id": "D", "text": "'She' - Which one?" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Ten' Noun 'apples' ki sankhya (number) batata hai, jawab deta hai 'How many apples?' - ye Numeral Adjective hai."
+      },
+      "navigation": { "next": "card_08_quiz_multistatement_intro", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_quiz_multistatement_intro",
+      "card_slug": "card_08_quiz_multistatement_intro",
+      "type": "quiz",
+      "concept_id": "adjective_intro",
+      "level": 1,
+      "progress": { "current": 8, "total": 98 },
+      "quiz_payload": {
+        "question": "Statements: I. Adjective always modifies a Verb. II. Adjective can answer 'What kind', 'Which one' and 'How many/much'. III. Adjective's target is Noun or Pronoun only. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & II only" },
+          { "id": "B", "text": "II & III only" },
+          { "id": "C", "text": "I & III only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement I galat hai - Adjective Verb ko modify nahi karta, wo Adverb ka kaam hai. II aur III sahi hain."
+      },
+      "navigation": { "next": "card_09_milestone_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_09_milestone_m1",
+      "card_slug": "card_09_milestone_m1",
+      "type": "milestone",
+      "concept_id": "adjective_intro",
+      "level": 1,
+      "progress": { "current": 9, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🍎",
+        "completed_topic": "Introduction to Adjective",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/12 Clear",
+        "motivational_quote": "Foundation strong hai! Ab Adjective ke types ki duniya mein chalte hain!"
+      },
+      "navigation": { "next": "card_10_descriptive_adjective", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_10_descriptive_adjective",
+      "card_slug": "card_10_descriptive_adjective",
+      "type": "chat",
+      "concept_id": "adjective_types_1",
+      "level": 1,
+      "progress": { "current": 10, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhte hain Adjective ke types. Pehla aur sabse common hai Descriptive Adjective (Adjective of Quality) - ye Noun ki QUALITY batata hai. Jaise: honest, tall, beautiful, brave, wise, wooden." },
+        { "speaker": "raju", "text": "Sir 'wooden table' mein 'wooden' bhi Adjective hai?" },
+        { "speaker": "aman", "text": "Bilkul! 'Wooden' table ka material bata raha hai - kaisi table hai (What kind). Ye sab Descriptive Adjective ke examples hain." },
+        { "speaker": "raju", "text": "Achha sir, aur type kaunse hain?" }
+      ],
+      "navigation": { "next": "card_11_quantitative_adjective", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_quantitative_adjective",
+      "card_slug": "card_11_quantitative_adjective",
+      "type": "chat",
+      "concept_id": "adjective_types_1",
+      "level": 1,
+      "progress": { "current": 11, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Dusra hai Quantitative Adjective - ye batata hai KITNA (exact number nahi, general quantity). Jaise: some, much, little, enough, all, no, any, whole, half." },
+        { "speaker": "raju", "text": "Sir 'some milk' mein 'some' Quantitative Adjective hoga?" },
+        { "speaker": "aman", "text": "Ekdum sahi! 'Some milk' - exact quantity nahi bataya, bas general idea diya. Yaad rakho, ye hamesha uncountable ya group nouns ke saath use hote hain." },
+        { "speaker": "raju", "text": "Achha! Ab teesra type kya hai sir?" }
+      ],
+      "navigation": { "next": "card_12_numeral_adjective", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_numeral_adjective",
+      "card_slug": "card_12_numeral_adjective",
+      "type": "chat",
+      "concept_id": "adjective_types_1",
+      "level": 1,
+      "progress": { "current": 12, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Teesra hai Numeral Adjective - ye exact NUMBER batata hai. Iske do sub-types hain: Definite Numeral (one, two, first, second - exact number pata hai) aur Indefinite Numeral (many, few, several - exact number pata nahi)." },
+        { "speaker": "raju", "text": "Sir 'five students' Definite hoga aur 'many students' Indefinite?" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! 'Five' se exact count pata chal raha hai, lekin 'many' se sirf itna pata hai ki zyada hain, exact number nahi. BPSC isi definite/indefinite classification pe direct question puchta hai!" },
+        { "speaker": "raju", "text": "Sir ye to interesting hai, matlab 'much' aur 'many' dono Indefinite Numeral honge?" }
+      ],
+      "navigation": { "next": "card_13_guess_quantitative_numeral", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_guess_quantitative_numeral",
+      "card_slug": "card_13_guess_quantitative_numeral",
+      "type": "guess",
+      "concept_id": "adjective_types_1",
+      "level": 1,
+      "progress": { "current": 13, "total": 98 },
+      "guess_payload": {
+        "question": "Identify the type: 'He has seven books but very little patience.'",
+        "options": [
+          { "id": "A", "text": "'seven'-Descriptive, 'little'-Numeral" },
+          { "id": "B", "text": "'seven'-Definite Numeral, 'little'-Quantitative" },
+          { "id": "C", "text": "'seven'-Quantitative, 'little'-Descriptive" },
+          { "id": "D", "text": "Both are Descriptive" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Seven' exact count deta hai - Definite Numeral Adjective. 'Little' uncountable noun 'patience' ki quantity batata hai - Quantitative Adjective."
+      },
+      "navigation": { "next": "card_14_quiz_wooden", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_14_quiz_wooden",
+      "card_slug": "card_14_quiz_wooden",
+      "type": "quiz",
+      "concept_id": "adjective_types_1",
+      "level": 1,
+      "progress": { "current": 14, "total": 98 },
+      "quiz_payload": {
+        "question": "'She bought a wooden chair.' - 'wooden' is an example of:",
+        "options": [
+          { "id": "A", "text": "Numeral Adjective" },
+          { "id": "B", "text": "Quantitative Adjective" },
+          { "id": "C", "text": "Descriptive Adjective" },
+          { "id": "D", "text": "Proper Adjective" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Wooden' chair ki quality/material batata hai (what kind of chair) - ye Descriptive Adjective hai."
+      },
+      "navigation": { "next": "card_15_quiz_indefinite_numeral", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz_indefinite_numeral",
+      "card_slug": "card_15_quiz_indefinite_numeral",
+      "type": "quiz",
+      "concept_id": "adjective_types_1",
+      "level": 1,
+      "progress": { "current": 15, "total": 98 },
+      "quiz_payload": {
+        "question": "Which word below is an Indefinite Numeral Adjective?",
+        "options": [
+          { "id": "A", "text": "first" },
+          { "id": "B", "text": "ten" },
+          { "id": "C", "text": "several" },
+          { "id": "D", "text": "second" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Several' exact number nahi batata, bas general 'kayi/kuch' idea deta hai - ye Indefinite Numeral Adjective hai. First, ten, second sab Definite Numeral hain."
+      },
+      "navigation": { "next": "card_16_quiz_multistatement_types1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_quiz_multistatement_types1",
+      "card_slug": "card_16_quiz_multistatement_types1",
+      "type": "quiz",
+      "concept_id": "adjective_types_1",
+      "level": 1,
+      "progress": { "current": 16, "total": 98 },
+      "quiz_payload": {
+        "question": "Statements: I. Quantitative adjectives tell exact number. II. 'Whole', 'enough', 'all' are Quantitative Adjectives. III. Definite Numeral Adjectives give exact count while Indefinite do not. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & II" },
+          { "id": "B", "text": "II & III" },
+          { "id": "C", "text": "I & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement I galat hai - Quantitative Adjective exact number nahi, general quantity batata hai (that is Numeral's job). II aur III sahi hain."
+      },
+      "navigation": { "next": "card_17_milestone_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_17_milestone_m2",
+      "card_slug": "card_17_milestone_m2",
+      "type": "milestone",
+      "concept_id": "adjective_types_1",
+      "level": 1,
+      "progress": { "current": 17, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔢",
+        "completed_topic": "Descriptive, Quantitative & Numeral Adjectives",
+        "xp_earned": 55,
+        "milestone_progress": "Module 2/12 Clear",
+        "motivational_quote": "3 types clear! Ab baaki 6 types dekhte hain!"
+      },
+      "navigation": { "next": "card_18_demonstrative_adjective", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_18_demonstrative_adjective",
+      "card_slug": "card_18_demonstrative_adjective",
+      "type": "chat",
+      "concept_id": "adjective_types_2",
+      "level": 2,
+      "progress": { "current": 18, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho Demonstrative Adjective - ye kisi particular Noun ko point out/dikhata hai. Jaise: this, that, these, those. 'This book is mine', 'Those mangoes are sweet'." },
+        { "speaker": "raju", "text": "Sir ye to 'this/that' pronoun jaise lagte hain, adjective kaise ho gaye?" },
+        { "speaker": "aman", "text": "Bahut acha doubt! Jab 'this/that' akele Noun ki jagah use ho ('This is mine'), tab wo Pronoun hain. Lekin jab Noun ke SAATH aayein ('This book is mine'), tab wo Demonstrative Adjective ban jaate hain." },
+        { "speaker": "raju", "text": "Ohh! Matlab agar Noun sath mein hai to Adjective, akela hai to Pronoun - yaad rakh lunga!" }
+      ],
+      "navigation": { "next": "card_19_interrogative_possessive_adjective", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_interrogative_possessive_adjective",
+      "card_slug": "card_19_interrogative_possessive_adjective",
+      "type": "chat",
+      "concept_id": "adjective_types_2",
+      "level": 2,
+      "progress": { "current": 19, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi rule! Ab agla type - Interrogative Adjective: which, what, whose - jab Noun ke saath sawaal poochte hain. 'Which book do you want?' Aur Possessive Adjective: my, your, his, her, its, our, their - ownership dikhate hain." },
+        { "speaker": "raju", "text": "Sir 'whose' aur 'who's' mein confusion hoti hai mujhe!" },
+        { "speaker": "aman", "text": "Ye SSC ka common trap hai! 'Whose' possession dikhata hai (Whose book is this?), 'Who's' matlab 'Who is' (Who's coming?) - dono bilkul alag hain, spelling se dhyan se pehchano." },
+        { "speaker": "raju", "text": "Achha! Ab isse to exam mein galti nahi hogi!" }
+      ],
+      "navigation": { "next": "card_20_distributive_exclamatory_proper", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_distributive_exclamatory_proper",
+      "card_slug": "card_20_distributive_exclamatory_proper",
+      "type": "chat",
+      "concept_id": "adjective_types_2",
+      "level": 2,
+      "progress": { "current": 20, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab teen aur types ek saath dekho: Distributive Adjective (each, every, either, neither - individually refer karte hain), Exclamatory Adjective ('What' feeling dikhane ke liye - 'What a beautiful day!'), aur Proper Adjective (Proper Noun se bana - Indian, Bihari, Shakespearean)." },
+        { "speaker": "raju", "text": "Sir 'Bihari' bhi Adjective hai? Wo to jagah ka naam lagta hai!" },
+        { "speaker": "aman", "text": "Haan Raju! 'Bihar' Proper Noun hai, uska Adjective form 'Bihari' hai - jaise 'Bihari culture', 'Indian flag'. ⭐ BPSC TRE Favorite: Bihar SCERT mein 'Bihari' aur 'Magadhi' jaise Proper Adjectives ke examples common hain." },
+        { "speaker": "raju", "text": "Achha sir! Ab total 9 types ho gaye - Descriptive, Quantitative, Numeral, Demonstrative, Interrogative, Possessive, Distributive, Exclamatory, Proper!" }
+      ],
+      "navigation": { "next": "card_21_guess_which_type", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_guess_which_type",
+      "card_slug": "card_21_guess_which_type",
+      "type": "guess",
+      "concept_id": "adjective_types_2",
+      "level": 2,
+      "progress": { "current": 21, "total": 98 },
+      "guess_payload": {
+        "question": "'What a wonderful view!' - 'What' here functions as:",
+        "options": [
+          { "id": "A", "text": "Interrogative Adjective" },
+          { "id": "B", "text": "Exclamatory Adjective" },
+          { "id": "C", "text": "Demonstrative Adjective" },
+          { "id": "D", "text": "Distributive Adjective" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Yahan 'What' sawaal nahi pooch raha, balki feeling/emotion (wonder/surprise) express kar raha hai - ye Exclamatory Adjective hai."
+      },
+      "navigation": { "next": "card_22_quiz_this_that", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_22_quiz_this_that",
+      "card_slug": "card_22_quiz_this_that",
+      "type": "quiz",
+      "concept_id": "adjective_types_2",
+      "level": 2,
+      "progress": { "current": 22, "total": 98 },
+      "quiz_payload": {
+        "question": "In 'That car belongs to my uncle,' identify all adjectives and their types:",
+        "options": [
+          { "id": "A", "text": "'That'-Demonstrative, 'my'-Possessive" },
+          { "id": "B", "text": "'That'-Interrogative, 'my'-Distributive" },
+          { "id": "C", "text": "'That'-Possessive, 'my'-Demonstrative" },
+          { "id": "D", "text": "Only 'That' is an adjective" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'That' Noun 'car' ko point out kar raha hai - Demonstrative. 'My' ownership dikha raha hai - Possessive Adjective."
+      },
+      "navigation": { "next": "card_23_quiz_each_every", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_quiz_each_every",
+      "card_slug": "card_23_quiz_each_every",
+      "type": "quiz",
+      "concept_id": "adjective_types_2",
+      "level": 2,
+      "progress": { "current": 23, "total": 98 },
+      "quiz_payload": {
+        "question": "'Each student has submitted his assignment.' - 'Each' is which type of Adjective?",
+        "options": [
+          { "id": "A", "text": "Descriptive" },
+          { "id": "B", "text": "Distributive" },
+          { "id": "C", "text": "Interrogative" },
+          { "id": "D", "text": "Numeral" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Each' students ko individually/separately refer karta hai - ye Distributive Adjective hai."
+      },
+      "navigation": { "next": "card_24_quiz_multistatement_types2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_24_quiz_multistatement_types2",
+      "card_slug": "card_24_quiz_multistatement_types2",
+      "type": "quiz",
+      "concept_id": "adjective_types_2",
+      "level": 2,
+      "progress": { "current": 24, "total": 98 },
+      "quiz_payload": {
+        "question": "Statements: I. 'This/That' are Demonstrative Adjectives only when used with a Noun. II. 'Whose' and 'Who's' mean the same thing. III. Proper Adjectives are formed from Proper Nouns, e.g., Indian, Bihari. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III only" },
+          { "id": "B", "text": "II & III only" },
+          { "id": "C", "text": "I only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - 'Whose' possession dikhata hai, 'Who's' matlab 'Who is' hai, dono alag hain."
+      },
+      "navigation": { "next": "card_25_milestone_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_25_milestone_m3",
+      "card_slug": "card_25_milestone_m3",
+      "type": "milestone",
+      "concept_id": "adjective_types_2",
+      "level": 2,
+      "progress": { "current": 25, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎭",
+        "completed_topic": "Demonstrative, Interrogative, Possessive, Distributive, Exclamatory & Proper Adjectives",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/12 Clear",
+        "motivational_quote": "Saare 9 types clear ho gaye! Ab Adjective ka Royal Order seekhte hain!"
+      },
+      "navigation": { "next": "card_26_royal_order_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_26_royal_order_intro",
+      "card_slug": "card_26_royal_order_intro",
+      "type": "chat",
+      "concept_id": "adjective_order",
+      "level": 2,
+      "progress": { "current": 26, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ek sawaal - jab ek Noun ke saath multiple Adjectives use karte hain, kya unko kisi bhi order mein laga sakte hain? Jaise 'beautiful old small red' - ye order sahi hai kya?" },
+        { "speaker": "raju", "text": "Sir mujhe to pata nahi, main to jaise dil kare waise laga deta!" },
+        { "speaker": "aman", "text": "Yahin sabse bada twist hai - English mein Adjectives ka ek FIXED order hota hai jise 'Royal Order of Adjectives' kehte hain. Order galat hone se native speakers ko bhi ajeeb lagta hai!" },
+        { "speaker": "raju", "text": "Hain?? Sir ye to naya hi concept hai, jaldi batao poora order!" }
+      ],
+      "navigation": { "next": "card_27_royal_order_full_sequence", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_27_royal_order_full_sequence",
+      "card_slug": "card_27_royal_order_full_sequence",
+      "type": "chat",
+      "concept_id": "adjective_order",
+      "level": 2,
+      "progress": { "current": 27, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Poora order yaad karo (OSASCOMP): Opinion - Size - Age - Shape - Colour - Origin - Material - Purpose - phir Noun. Jaise: 'a lovely (opinion) small (size) old (age) round (shape) red (colour) Indian (origin) wooden (material) dining (purpose) table'." },
+        { "speaker": "raju", "text": "Sir itne saare adjectives ek sath kaun use karta hai! Par order to samajh aa gaya." },
+        { "speaker": "aman", "text": "Haan real life mein 2-3 hi use hote hain, lekin jab bhi 2 ya usse zyada Adjective ek Noun ke sath aayein, ye order follow hota hai. Determiner (a/the/this/my) sabse pehle aata hai." },
+        { "speaker": "raju", "text": "Achha! Ab ek example do jisme galat order ho, taaki main pehchan sakun!" }
+      ],
+      "navigation": { "next": "card_28_order_example_correction", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_28_order_example_correction",
+      "card_slug": "card_28_order_example_correction",
+      "type": "chat",
+      "concept_id": "adjective_order",
+      "level": 2,
+      "progress": { "current": 28, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Dekho ye galat hai: 'a red big ball' - yahan Colour(red) pehle aur Size(big) baad mein hai, ulta order hai! Sahi hoga: 'a big red ball' (Size pehle, Colour baad mein)." },
+        { "speaker": "raju", "text": "Achhaaa! Matlab 'red big ball' sunne mein bhi ajeeb lagta hai, ab samajh aaya!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye SBI PO/SSC ka error detection mein directly aata hai - do adjectives ka wrong order pakadna hota hai. Chalo isse practice karte hain!" },
+        { "speaker": "raju", "text": "Sir ready hun, laao sawaal!" }
+      ],
+      "navigation": { "next": "card_29_guess_correct_order", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_29_guess_correct_order",
+      "card_slug": "card_29_guess_correct_order",
+      "type": "guess",
+      "concept_id": "adjective_order",
+      "level": 2,
+      "progress": { "current": 29, "total": 98 },
+      "guess_payload": {
+        "question": "Choose the correctly ordered phrase:",
+        "options": [
+          { "id": "A", "text": "an Indian old beautiful vase" },
+          { "id": "B", "text": "a beautiful old Indian vase" },
+          { "id": "C", "text": "an old Indian beautiful vase" },
+          { "id": "D", "text": "a beautiful Indian old vase" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sahi order (OSASCOMP): Opinion(beautiful) - Age(old) - Origin(Indian) - Noun(vase)."
+      },
+      "navigation": { "next": "card_30_quiz_size_shape", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_30_quiz_size_shape",
+      "card_slug": "card_30_quiz_size_shape",
+      "type": "quiz",
+      "concept_id": "adjective_order",
+      "level": 2,
+      "progress": { "current": 30, "total": 98 },
+      "quiz_payload": {
+        "question": "Choose the correct order:",
+        "options": [
+          { "id": "A", "text": "a round small table" },
+          { "id": "B", "text": "a small round table" },
+          { "id": "C", "text": "a table small round" },
+          { "id": "D", "text": "round a small table" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sahi order: Size(small) pehle aata hai, phir Shape(round) - 'a small round table'."
+      },
+      "navigation": { "next": "card_31_quiz_material_purpose", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_31_quiz_material_purpose",
+      "card_slug": "card_31_quiz_material_purpose",
+      "type": "quiz",
+      "concept_id": "adjective_order",
+      "level": 2,
+      "progress": { "current": 31, "total": 98 },
+      "quiz_payload": {
+        "question": "Choose the correct order:",
+        "options": [
+          { "id": "A", "text": "a dining wooden table" },
+          { "id": "B", "text": "a wooden dining table" },
+          { "id": "C", "text": "a table wooden dining" },
+          { "id": "D", "text": "wooden a dining table" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sahi order: Material(wooden) Purpose(dining) se pehle aata hai - 'a wooden dining table'."
+      },
+      "navigation": { "next": "card_32_quiz_multistatement_order", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_32_quiz_multistatement_order",
+      "card_slug": "card_32_quiz_multistatement_order",
+      "type": "quiz",
+      "concept_id": "adjective_order",
+      "level": 2,
+      "progress": { "current": 32, "total": 98 },
+      "quiz_payload": {
+        "question": "Statements: I. In the Royal Order, Opinion adjectives come first. II. Colour adjectives come before Origin adjectives. III. Purpose adjectives come immediately before the Noun. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & II only" },
+          { "id": "B", "text": "I, II & III" },
+          { "id": "C", "text": "II only" },
+          { "id": "D", "text": "I & III only" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Teeno statements sahi hain - OSASCOMP order ke anusar: Opinion-Size-Age-Shape-Colour-Origin-Material-Purpose-Noun."
+      },
+      "navigation": { "next": "card_33_milestone_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_33_milestone_m4",
+      "card_slug": "card_33_milestone_m4",
+      "type": "milestone",
+      "concept_id": "adjective_order",
+      "level": 2,
+      "progress": { "current": 33, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "👑",
+        "completed_topic": "Royal Order of Adjectives (OSASCOMP)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/12 Clear",
+        "motivational_quote": "Order master ban gaye! Ab Degrees of Comparison seekhte hain!"
+      },
+      "navigation": { "next": "card_34_three_degrees_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_34_three_degrees_intro",
+      "card_slug": "card_34_three_degrees_intro",
+      "type": "chat",
+      "concept_id": "adjective_degrees_formation",
+      "level": 3,
+      "progress": { "current": 34, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, jab tum apne aur apne dost ki height compare karte ho, ya class mein sabse lambe ladke ko dhoondte ho - tab tum kya use karte ho? 'Tall', 'Taller', ya 'Tallest'?" },
+        { "speaker": "raju", "text": "Sir agar do logon mein compare kare to 'taller' bolte hain, aur sabse zyada ho to 'tallest'!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Yehi hai Adjective ki teen Degrees: Positive (tall - simple quality), Comparative (taller - do cheezon ke beech), Superlative (tallest - teen ya usse zyada mein sabse zyada/kam)." },
+        { "speaker": "raju", "text": "Achha sir, ye to Adverb wale degrees jaisa hi hai na!" }
+      ],
+      "navigation": { "next": "card_35_er_est_vs_more_most", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_35_er_est_vs_more_most",
+      "card_slug": "card_35_er_est_vs_more_most",
+      "type": "chat",
+      "concept_id": "adjective_degrees_formation",
+      "level": 3,
+      "progress": { "current": 35, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab rule samjho: One-syllable words mein '-er/-est' lagta hai (tall-taller-tallest). Two-syllable words jo '-y' se khatam hote hain unme bhi '-er/-est' lagta hai (happy-happier-happiest). Baaki lambe words (3+ syllable) mein 'more/most' use hota hai (beautiful-more beautiful-most beautiful)." },
+        { "speaker": "raju", "text": "Sir 'intelligent' to lamba word hai, to 'intelligenter' nahi bolenge?" },
+        { "speaker": "aman", "text": "Bilkul sahi socha! 'Intelligenter' GALAT hai - 'more intelligent, most intelligent' sahi hai. Ye classic SBI PO error detection trap hai - log lambe words mein bhi '-er/-est' laga dete hain!" },
+        { "speaker": "raju", "text": "Sir isse to bahut dhyan se dekhna padega, kaunsa word chota hai kaunsa bada!" }
+      ],
+      "navigation": { "next": "card_36_spelling_changes_comparison", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_36_spelling_changes_comparison",
+      "card_slug": "card_36_spelling_changes_comparison",
+      "type": "chat",
+      "concept_id": "adjective_degrees_formation",
+      "level": 3,
+      "progress": { "current": 36, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab kuch spelling rules yaad karo: (1) Single vowel+single consonant ending word mein consonant double hota hai - big->bigger->biggest, hot->hotter->hottest. (2) Consonant+'y' ending mein 'y' ko 'i' karke '-er/-est' - happy->happier->happiest. (3) Silent 'e' ending mein sirf 'r/st' lagta hai - large->larger->largest." },
+        { "speaker": "raju", "text": "Sir 'big' mein 'g' double kyun hota hai?" },
+        { "speaker": "aman", "text": "Kyunki 'big' mein ek hi vowel (i) hai aur ek hi consonant (g) hai end mein - CVC pattern. Isliye consonant double hoke 'bigger' banta hai, warna 'biger' galat pronunciation degi." },
+        { "speaker": "raju", "text": "Achha sir, ye spelling rules to yaad rakhne honge exam ke liye!" }
+      ],
+      "navigation": { "next": "card_37_guess_intelligenter", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_37_guess_intelligenter",
+      "card_slug": "card_37_guess_intelligenter",
+      "type": "guess",
+      "concept_id": "adjective_degrees_formation",
+      "level": 3,
+      "progress": { "current": 37, "total": 98 },
+      "guess_payload": {
+        "question": "Error spot: 'She is more taller than her sister.'",
+        "options": [
+          { "id": "A", "text": "'more taller' should be just 'taller'" },
+          { "id": "B", "text": "'sister' should be 'sisters'" },
+          { "id": "C", "text": "'than' should be 'then'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Taller' already Comparative hai, uske pehle 'more' lagana Double Comparative error hai - redundant."
+      },
+      "navigation": { "next": "card_38_quiz_hotter_spelling", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_38_quiz_hotter_spelling",
+      "card_slug": "card_38_quiz_hotter_spelling",
+      "type": "quiz",
+      "concept_id": "adjective_degrees_formation",
+      "level": 3,
+      "progress": { "current": 38, "total": 98 },
+      "quiz_payload": {
+        "question": "Correct Superlative form of 'hot':",
+        "options": [
+          { "id": "A", "text": "hotest" },
+          { "id": "B", "text": "hottest" },
+          { "id": "C", "text": "more hot" },
+          { "id": "D", "text": "most hot" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Hot' CVC pattern hai (single vowel+single consonant), isliye consonant double hoga: hot->hotter->hottest."
+      },
+      "navigation": { "next": "card_39_quiz_beautiful_form", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_39_quiz_beautiful_form",
+      "card_slug": "card_39_quiz_beautiful_form",
+      "type": "quiz",
+      "concept_id": "adjective_degrees_formation",
+      "level": 3,
+      "progress": { "current": 39, "total": 98 },
+      "quiz_payload": {
+        "question": "Correct Comparative form of 'beautiful':",
+        "options": [
+          { "id": "A", "text": "beautifuller" },
+          { "id": "B", "text": "beautifullier" },
+          { "id": "C", "text": "more beautiful" },
+          { "id": "D", "text": "most beautiful" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Beautiful' 3-syllable word hai, isliye '-er' nahi lagta, 'more' use hota hai - 'more beautiful' Comparative hai."
+      },
+      "navigation": { "next": "card_40_quiz_multistatement_formation", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_40_quiz_multistatement_formation",
+      "card_slug": "card_40_quiz_multistatement_formation",
+      "type": "quiz",
+      "concept_id": "adjective_degrees_formation",
+      "level": 3,
+      "progress": { "current": 40, "total": 98 },
+      "quiz_payload": {
+        "question": "Statements: I. One-syllable adjectives take '-er/-est'. II. All two-syllable adjectives take 'more/most' without exception. III. Adjectives ending in consonant+y change y to i before adding -er/-est. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "II & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - two-syllable words jo '-y' se khatam hote hain (happy, easy) wo '-er/-est' hi lete hain, 'more/most' nahi."
+      },
+      "navigation": { "next": "card_41_milestone_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_41_milestone_m5",
+      "card_slug": "card_41_milestone_m5",
+      "type": "milestone",
+      "concept_id": "adjective_degrees_formation",
+      "level": 3,
+      "progress": { "current": 41, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📈",
+        "completed_topic": "Degrees of Comparison - Formation Rules",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/12 Clear",
+        "motivational_quote": "Formation rules clear! Ab Irregular forms yaad karte hain!"
+      },
+      "navigation": { "next": "card_42_irregular_good_bad", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_42_irregular_good_bad",
+      "card_slug": "card_42_irregular_good_bad",
+      "type": "chat",
+      "concept_id": "adjective_irregular",
+      "level": 3,
+      "progress": { "current": 42, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab kuch Adjectives hain jo rule follow nahi karte, inko Irregular Adjectives kehte hain, ratna padega: good->better->best, bad->worse->worst, little->less->least (uncountable), much/many->more->most." },
+        { "speaker": "raju", "text": "Sir 'gooder' ya 'goodest' bolna galat hoga na?" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'Gooder/goodest' bilkul galat hain - kabhi bhi mat bolna. Sahi hai 'better/best'. Ye SSC/Railway ka bahut common direct question hai." },
+        { "speaker": "raju", "text": "Achha sir, aur koi irregular hain kya?" }
+      ],
+      "navigation": { "next": "card_43_irregular_old_late_far", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_43_irregular_old_late_far",
+      "card_slug": "card_43_irregular_old_late_far",
+      "type": "chat",
+      "concept_id": "adjective_irregular",
+      "level": 3,
+      "progress": { "current": 43, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan! Ab teen special Irregular Adjectives dekho jinke DO comparative/superlative forms hain, matlab based hain: old->older/elder->oldest/eldest; late->later/latter->latest/last; far->farther/further->farthest/furthest." },
+        { "speaker": "raju", "text": "Sir do-do forms? Ye to bahut confusing hai, kaunsa kab use hoga?" },
+        { "speaker": "aman", "text": "Bilkul valid confusion! Isiliye agle module mein hum inhe deeply, ek-ek karke, alag se seekhenge - ye BPSC/BPSC TRE ka sabse favorite trap hai, dhyan se samajhna!" },
+        { "speaker": "raju", "text": "Achha sir, abhi ke liye main good-better-best, bad-worse-worst yaad kar leta hun!" }
+      ],
+      "navigation": { "next": "card_44_guess_littler", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_44_guess_littler",
+      "card_slug": "card_44_guess_littler",
+      "type": "guess",
+      "concept_id": "adjective_irregular",
+      "level": 3,
+      "progress": { "current": 44, "total": 98 },
+      "guess_payload": {
+        "question": "Error spot: 'She has more littler interest in music than me.'",
+        "options": [
+          { "id": "A", "text": "'littler' should be 'less'" },
+          { "id": "B", "text": "'interest' should be 'interests'" },
+          { "id": "C", "text": "'music' should be 'musics'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Little' (uncountable quantity) ka comparative 'less' hai, na ki 'littler'. Sahi: 'She has less interest in music than me.'"
+      },
+      "navigation": { "next": "card_45_quiz_worse_worst", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_45_quiz_worse_worst",
+      "card_slug": "card_45_quiz_worse_worst",
+      "type": "quiz",
+      "concept_id": "adjective_irregular",
+      "level": 3,
+      "progress": { "current": 45, "total": 98 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          { "id": "A", "text": "This is the baddest movie I have seen" },
+          { "id": "B", "text": "This is the worst movie I have seen" },
+          { "id": "C", "text": "This is the more bad movie I have seen" },
+          { "id": "D", "text": "This is the badder movie I have seen" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Bad' ka irregular superlative form 'worst' hai, 'baddest' galat hai."
+      },
+      "navigation": { "next": "card_46_quiz_more_most_manymuch", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_46_quiz_more_most_manymuch",
+      "card_slug": "card_46_quiz_more_most_manymuch",
+      "type": "quiz",
+      "concept_id": "adjective_irregular",
+      "level": 3,
+      "progress": { "current": 46, "total": 98 },
+      "quiz_payload": {
+        "question": "'Many/Much' ka Comparative aur Superlative form kya hai?",
+        "options": [
+          { "id": "A", "text": "manyer, manyest" },
+          { "id": "B", "text": "more, most" },
+          { "id": "C", "text": "much-er, much-est" },
+          { "id": "D", "text": "muchier, muchiest" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Many/Much' dono ka irregular comparative 'more' aur superlative 'most' hota hai."
+      },
+      "navigation": { "next": "card_47_quiz_multistatement_irregular", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_47_quiz_multistatement_irregular",
+      "card_slug": "card_47_quiz_multistatement_irregular",
+      "type": "quiz",
+      "concept_id": "adjective_irregular",
+      "level": 3,
+      "progress": { "current": 47, "total": 98 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Good' becomes 'gooder' in Comparative degree. II. 'Little' (quantity) has irregular forms less-least. III. 'Old', 'late' and 'far' each have two distinct sets of comparative/superlative forms. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "II & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "I only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement I galat hai - 'good' ka sahi comparative 'better' hai, 'gooder' nahi. II aur III sahi hain."
+      },
+      "navigation": { "next": "card_48_milestone_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_48_milestone_m6",
+      "card_slug": "card_48_milestone_m6",
+      "type": "milestone",
+      "concept_id": "adjective_irregular",
+      "level": 3,
+      "progress": { "current": 48, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔀",
+        "completed_topic": "Irregular Adjectives (Good/Bad/Little/Much)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/12 Clear",
+        "motivational_quote": "Irregular forms yaad ho gaye! Ab ek unique concept - Absolute Adjectives!"
+      },
+      "navigation": { "next": "card_49_absolute_adjective_concept", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_49_absolute_adjective_concept",
+      "card_slug": "card_49_absolute_adjective_concept",
+      "type": "chat",
+      "concept_id": "adjective_absolute",
+      "level": 3,
+      "progress": { "current": 49, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho - kya koi cheez 'thodi si unique' ya 'sabse zyada unique' ho sakti hai? Ya to wo unique hogi, ya nahi hogi!" },
+        { "speaker": "raju", "text": "Sir sahi baat hai, unique ka matlab hi hai ki koi doosra jaisa nahi - isme kam zyada kaise hoga?" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Aise Adjectives jo already ek COMPLETE/ABSOLUTE state batate hain, unhe Absolute ya Non-gradable Adjectives kehte hain - inki koi degree nahi hoti. Jaise: unique, perfect, complete, full, empty, round, square, dead, correct, ideal, supreme." },
+        { "speaker": "raju", "text": "Achha! Matlab inke saath 'more/most' ya '-er/-est' kabhi nahi lagega?" }
+      ],
+      "navigation": { "next": "card_50_common_absolute_errors", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_50_common_absolute_errors",
+      "card_slug": "card_50_common_absolute_errors",
+      "type": "chat",
+      "concept_id": "adjective_absolute",
+      "level": 3,
+      "progress": { "current": 50, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! 'More unique', 'most perfect', 'more complete', 'most correct' - ye sab GALAT hain, kyunki ye words already apne aap mein complete state express karte hain. Agar zor dena hai to 'almost', 'nearly', 'quite' laga sakte ho - 'almost perfect', 'nearly complete'." },
+        { "speaker": "raju", "text": "Sir ye to bahut bada trap hai, log likhte hain 'This is more unique than that' interview mein bhi!" },
+        { "speaker": "aman", "text": "Bilkul sahi observation! Yehi SBI PO/BPSC ka favorite Error Detection sentence hota hai - 'more unique', 'most unique' jaise phrases dhoondh ke error mark karna hai." },
+        { "speaker": "raju", "text": "Sir ab main isse pehchan sakta hun, chalo practice karte hain!" }
+      ],
+      "navigation": { "next": "card_51_guess_more_perfect", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_51_guess_more_perfect",
+      "card_slug": "card_51_guess_more_perfect",
+      "type": "guess",
+      "concept_id": "adjective_absolute",
+      "level": 3,
+      "progress": { "current": 51, "total": 98 },
+      "guess_payload": {
+        "question": "Error spot: 'This plan seems more perfect than the previous one.'",
+        "options": [
+          { "id": "A", "text": "'more perfect' should be just 'perfect' (or 'nearly perfect')" },
+          { "id": "B", "text": "'previous' should be 'previously'" },
+          { "id": "C", "text": "'seems' should be 'seem'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Perfect' ek Absolute Adjective hai, iski koi degree nahi hoti - 'more perfect' galat hai."
+      },
+      "navigation": { "next": "card_52_quiz_full_empty", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_52_quiz_full_empty",
+      "card_slug": "card_52_quiz_full_empty",
+      "type": "quiz",
+      "concept_id": "adjective_absolute",
+      "level": 3,
+      "progress": { "current": 52, "total": 98 },
+      "quiz_payload": {
+        "question": "Which sentence is grammatically CORRECT regarding an Absolute Adjective?",
+        "options": [
+          { "id": "A", "text": "The glass is more full than that one" },
+          { "id": "B", "text": "The glass is fuller than that one is empty" },
+          { "id": "C", "text": "The bottle is almost empty" },
+          { "id": "D", "text": "This bottle is emptiest of all" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Almost empty' sahi hai kyunki 'almost' se degree nahi, closeness dikhayi ja rahi hai. 'Full/empty' ki apni degree nahi banti - 'fuller', 'emptiest' avoid karna chahiye standard usage mein."
+      },
+      "navigation": { "next": "card_53_quiz_round_square", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_53_quiz_round_square",
+      "card_slug": "card_53_quiz_round_square",
+      "type": "quiz",
+      "concept_id": "adjective_absolute",
+      "level": 3,
+      "progress": { "current": 53, "total": 98 },
+      "quiz_payload": {
+        "question": "Identify the error: 'This is the most round table in the shop.'",
+        "options": [
+          { "id": "A", "text": "'most round' should just be 'round' or 'the roundest' avoided too" },
+          { "id": "B", "text": "'shop' should be 'shops'" },
+          { "id": "C", "text": "'table' should be 'tables'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Round' Absolute Adjective hai (either it's round or it's not) - 'most round' redundant/incorrect hai."
+      },
+      "navigation": { "next": "card_54_quiz_multistatement_absolute", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_54_quiz_multistatement_absolute",
+      "card_slug": "card_54_quiz_multistatement_absolute",
+      "type": "quiz",
+      "concept_id": "adjective_absolute",
+      "level": 3,
+      "progress": { "current": 54, "total": 98 },
+      "quiz_payload": {
+        "question": "Statements: I. Absolute adjectives like unique, perfect, complete cannot take comparative/superlative forms. II. 'Almost' and 'nearly' can be used before absolute adjectives to show closeness. III. 'Dead' can have a comparative form 'deader'. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & II" },
+          { "id": "B", "text": "II & III" },
+          { "id": "C", "text": "I only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement III galat hai - 'dead' ek absolute state hai, 'deader' standard English mein galat hai."
+      },
+      "navigation": { "next": "card_55_milestone_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_55_milestone_m7",
+      "card_slug": "card_55_milestone_m7",
+      "type": "milestone",
+      "concept_id": "adjective_absolute",
+      "level": 3,
+      "progress": { "current": 55, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💯",
+        "completed_topic": "Absolute / Non-gradable Adjectives",
+        "xp_earned": 65,
+        "milestone_progress": "Module 7/12 Clear",
+        "motivational_quote": "Ek unique trap crack ho gaya! Ab Few/Little/Many/Much ka bada module!"
+      },
+      "navigation": { "next": "card_56_few_afew_thefew", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_56_few_afew_thefew",
+      "card_slug": "card_56_few_afew_thefew",
+      "type": "chat",
+      "concept_id": "adjective_few_little_many_much",
+      "level": 4,
+      "progress": { "current": 56, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek bahut famous SBI PO/BPSC trap - Few, A few, aur The few mein fark. In teeno ka use COUNTABLE Nouns ke saath hota hai, lekin matlab bilkul alag hai!" },
+        { "speaker": "raju", "text": "Sir teeno alag matlab? Ye to seedhe 'kam' jaisa lagta hai sabme!" },
+        { "speaker": "aman", "text": "Yahin twist hai - 'Few' matlab 'bahut kam, almost NAHI' (negative sense) - 'Few students passed' (bahut kam pass hue, afsos ki baat). 'A few' matlab 'thoda sa, kuch to hai' (positive sense) - 'A few students passed' (kuch pass hue, achi baat)." },
+        { "speaker": "raju", "text": "Hain?? Sir 'a' laga dene se poora matlab positive se negative ho gaya?? Ye to khatarnak trap hai!" }
+      ],
+      "navigation": { "next": "card_57_little_alittle_thelittle", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_57_little_alittle_thelittle",
+      "card_slug": "card_57_little_alittle_thelittle",
+      "type": "chat",
+      "concept_id": "adjective_few_little_many_much",
+      "level": 4,
+      "progress": { "current": 57, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi Raju, isiliye ye BPSC ka favorite trap hai! Aur 'The few' matlab 'jo thode se log/cheezein hain, wahi specific' - 'The few students who came were attentive'. Ab isi tarah UNCOUNTABLE Nouns ke sath: Little (bahut kam, negative), A little (thoda sa, positive), The little (jo thoda hai, wahi specific)." },
+        { "speaker": "raju", "text": "Sir example do please, warna dimag ghoom raha hai!" },
+        { "speaker": "aman", "text": "'He has little hope' (bahut kam ummeed, lagbhag nahi - negative). 'He has a little hope' (thodi ummeed hai - positive). 'The little hope he had, was destroyed' (jo thodi ummeed thi, wahi khatam ho gayi)." },
+        { "speaker": "raju", "text": "Achha! Ab samajh aaya - 'a' ka matlab hai 'kuch to hai', bina 'a' ka matlab hai 'nahi ke barabar'!" }
+      ],
+      "navigation": { "next": "card_58_many_much_less_fewer", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_58_many_much_less_fewer",
+      "card_slug": "card_58_many_much_less_fewer",
+      "type": "chat",
+      "concept_id": "adjective_few_little_many_much",
+      "level": 4,
+      "progress": { "current": 58, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek aur classic trap - MANY (countable ke saath - many books) vs MUCH (uncountable ke saath - much water). Aur FEWER (countable ke saath comparative - fewer mistakes) vs LESS (uncountable ke saath comparative - less water)." },
+        { "speaker": "raju", "text": "Sir log 'less mistakes' bolte hain, wo galat hai kya?" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! 'Less mistakes' GALAT hai kyunki 'mistakes' countable noun hai, sahi hoga 'fewer mistakes'. Ye Railway aur SSC ka bahut common Error Detection question hai - '10 items or less' jaisi galtiyan supermarket mein bhi dikhti hain!" },
+        { "speaker": "raju", "text": "Sir ab is puri family ko test karo, mujhe confidence aa gaya hai!" }
+      ],
+      "navigation": { "next": "card_59_guess_few_students", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_59_guess_few_students",
+      "card_slug": "card_59_guess_few_students",
+      "type": "guess",
+      "concept_id": "adjective_few_little_many_much",
+      "level": 4,
+      "progress": { "current": 59, "total": 98 },
+      "guess_payload": {
+        "question": "Choose correct: 'Fortunately, _____ students failed the exam this year.' (matlab: sirf kuch, achi baat hai)",
+        "options": [
+          { "id": "A", "text": "few" },
+          { "id": "B", "text": "a few" },
+          { "id": "C", "text": "the few" },
+          { "id": "D", "text": "much" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Fortunately' word positive tone dikha raha hai, aur 'a few' bhi positive/neutral sense deta hai (kuch fail hue par overall theek hai). 'Few' negative/alarming tone dega."
+      },
+      "navigation": { "next": "card_60_quiz_little_hope", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_60_quiz_little_hope",
+      "card_slug": "card_60_quiz_little_hope",
+      "type": "quiz",
+      "concept_id": "adjective_few_little_many_much",
+      "level": 4,
+      "progress": { "current": 60, "total": 98 },
+      "quiz_payload": {
+        "question": "Choose correct: 'Sadly, he has _____ hope of recovery.' (matlab: lagbhag koi ummeed nahi, negative)",
+        "options": [
+          { "id": "A", "text": "little" },
+          { "id": "B", "text": "a little" },
+          { "id": "C", "text": "the little" },
+          { "id": "D", "text": "many" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Sadly' negative tone dikha raha hai, aur 'little' (bina 'a' ke) negative sense deta hai - lagbhag ummeed nahi hai."
+      },
+      "navigation": { "next": "card_61_quiz_fewer_mistakes", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_61_quiz_fewer_mistakes",
+      "card_slug": "card_61_quiz_fewer_mistakes",
+      "type": "quiz",
+      "concept_id": "adjective_few_little_many_much",
+      "level": 4,
+      "progress": { "current": 61, "total": 98 },
+      "quiz_payload": {
+        "question": "Error detection: 'This year, we had less complaints than last year.'",
+        "options": [
+          { "id": "A", "text": "'less' should be 'fewer' (complaints is countable)" },
+          { "id": "B", "text": "'had' should be 'have'" },
+          { "id": "C", "text": "'than' should be 'then'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Complaints' countable noun hai, isliye comparative degree mein 'fewer' aayega, 'less' nahi (less sirf uncountable ke saath)."
+      },
+      "navigation": { "next": "card_62_quiz_multistatement_fewlittle", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_62_quiz_multistatement_fewlittle",
+      "card_slug": "card_62_quiz_multistatement_fewlittle",
+      "type": "quiz",
+      "concept_id": "adjective_few_little_many_much",
+      "level": 4,
+      "progress": { "current": 62, "total": 98 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Few' gives a negative sense (almost none) while 'A few' gives a positive sense (some). II. 'Much' is used with countable nouns. III. 'Fewer' is used with countable nouns, 'Less' with uncountable nouns. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "II & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - 'Much' uncountable nouns ke saath use hota hai (much water), 'Many' countable ke saath."
+      },
+      "navigation": { "next": "card_63_milestone_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_63_milestone_m8",
+      "card_slug": "card_63_milestone_m8",
+      "type": "milestone",
+      "concept_id": "adjective_few_little_many_much",
+      "level": 4,
+      "progress": { "current": 63, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Few/A few/The few, Little/A little/The little, Many/Much/Less/Fewer",
+        "xp_earned": 70,
+        "milestone_progress": "Module 8/12 Clear",
+        "motivational_quote": "Ye sabse bada trap zone tha, crack kar liya! Ab Elder/Older jaisi confusing pairs!"
+      },
+      "navigation": { "next": "card_64_elder_older", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_64_elder_older",
+      "card_slug": "card_64_elder_older",
+      "type": "chat",
+      "concept_id": "adjective_confusing_pairs",
+      "level": 4,
+      "progress": { "current": 64, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhte hain 'old' ke do comparative forms - ELDER vs OLDER. 'Elder' sirf FAMILY relationships ke liye use hota hai (brother, sister) aur 'than' ke saath kabhi nahi aata. 'Older' general use ke liye hai aur 'than' ke saath aata hai." },
+        { "speaker": "raju", "text": "Sir matlab 'elder than' bilkul nahi bol sakte?" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'My elder brother' sahi hai, lekin 'He is elder than me' GALAT hai - sahi hoga 'He is older than me' YA 'He is my elder brother'. Ye BPSC officer level ka bahut common trap hai!" },
+        { "speaker": "raju", "text": "Achha! Matlab 'elder' ke sath 'than' kabhi nahi, sirf 'older' ke saath 'than' aayega!" }
+      ],
+      "navigation": { "next": "card_65_later_latter", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_65_later_latter",
+      "card_slug": "card_65_later_latter",
+      "type": "chat",
+      "concept_id": "adjective_confusing_pairs",
+      "level": 4,
+      "progress": { "current": 65, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab dekho LATER vs LATTER. 'Later' TIME dikhata hai (baad mein) - 'I will meet you later'. 'Latter' do cheezon mein se DOOSRI ka reference deta hai - 'Of the two options, I prefer the latter' (dusre wale option ko)." },
+        { "speaker": "raju", "text": "Sir 'latter' ka opposite bhi koi hoga na, jaise pehla wala?" },
+        { "speaker": "aman", "text": "Haan, uska opposite hai 'Former' - jo pehli cheez ka reference deta hai. 'Former' aur 'Latter' hamesha pair mein use hote hain jab do options ki baat ho rahi ho." },
+        { "speaker": "raju", "text": "Achha! Former=pehla, Latter=dusra, Later=time wala 'baad mein' - teeno alag!" }
+      ],
+      "navigation": { "next": "card_66_nearest_next", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_66_nearest_next",
+      "card_slug": "card_66_nearest_next",
+      "type": "chat",
+      "concept_id": "adjective_confusing_pairs",
+      "level": 4,
+      "progress": { "current": 66, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab last pair - NEAREST vs NEXT. 'Nearest' physical DISTANCE dikhata hai (sabse paas) - 'The nearest hospital is 2 km away'. 'Next' ORDER/SEQUENCE dikhata hai (agla number/turn) - 'The next station is Patna'." },
+        { "speaker": "raju", "text": "Sir 'far' ke bhi do forms the na - farther aur further, wo kya tha?" },
+        { "speaker": "aman", "text": "Bilkul yaad rakha! Farther = physical distance (The school is farther than the market), Further = additional/abstract (I need further information, no more discussion needed). Ye Adverb wale module mein bhi tha, Adjective mein bhi same rule chalta hai!" },
+        { "speaker": "raju", "text": "Achha sir, ab in sab pairs ko test karo please!" }
+      ],
+      "navigation": { "next": "card_67_guess_elder_than", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_67_guess_elder_than",
+      "card_slug": "card_67_guess_elder_than",
+      "type": "guess",
+      "concept_id": "adjective_confusing_pairs",
+      "level": 4,
+      "progress": { "current": 67, "total": 98 },
+      "guess_payload": {
+        "question": "Error spot: 'Ramesh is elder than his cousin by three years.'",
+        "options": [
+          { "id": "A", "text": "'elder than' should be 'older than'" },
+          { "id": "B", "text": "'cousin' should be 'cousins'" },
+          { "id": "C", "text": "'three years' should be 'three year'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Elder' kabhi 'than' ke saath use nahi hota. Sahi hoga: 'Ramesh is older than his cousin by three years.'"
+      },
+      "navigation": { "next": "card_68_quiz_former_latter", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_68_quiz_former_latter",
+      "card_slug": "card_68_quiz_former_latter",
+      "type": "quiz",
+      "concept_id": "adjective_confusing_pairs",
+      "level": 4,
+      "progress": { "current": 68, "total": 98 },
+      "quiz_payload": {
+        "question": "'Of Mohan and Sohan, the _____ is a doctor and the _____ is an engineer.' Choose correct pair:",
+        "options": [
+          { "id": "A", "text": "latter, former" },
+          { "id": "B", "text": "former, latter" },
+          { "id": "C", "text": "later, latter" },
+          { "id": "D", "text": "elder, younger" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Former' pehle mentioned (Mohan) ke liye, 'Latter' dusre mentioned (Sohan) ke liye use hota hai."
+      },
+      "navigation": { "next": "card_69_quiz_further_information", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_69_quiz_further_information",
+      "card_slug": "card_69_quiz_further_information",
+      "type": "quiz",
+      "concept_id": "adjective_confusing_pairs",
+      "level": 4,
+      "progress": { "current": 69, "total": 98 },
+      "quiz_payload": {
+        "question": "Choose correct: 'For _____ details, please contact the office.'",
+        "options": [
+          { "id": "A", "text": "farther" },
+          { "id": "B", "text": "further" },
+          { "id": "C", "text": "father" },
+          { "id": "D", "text": "farthest" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Further' abstract/additional information ke liye use hota hai, physical distance ke liye nahi."
+      },
+      "navigation": { "next": "card_70_quiz_multistatement_confusingpairs", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_70_quiz_multistatement_confusingpairs",
+      "card_slug": "card_70_quiz_multistatement_confusingpairs",
+      "type": "quiz",
+      "concept_id": "adjective_confusing_pairs",
+      "level": 4,
+      "progress": { "current": 70, "total": 98 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Elder' can be used with 'than'. II. 'Nearest' indicates physical distance while 'Next' indicates order/sequence. III. 'Farther' is used for physical distance, 'Further' for abstract/additional sense. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "II & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "I, II & III" },
+          { "id": "D", "text": "III only" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement I galat hai - 'Elder' kabhi 'than' ke saath use nahi hota. II aur III sahi hain."
+      },
+      "navigation": { "next": "card_71_milestone_m9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_71_milestone_m9",
+      "card_slug": "card_71_milestone_m9",
+      "type": "milestone",
+      "concept_id": "adjective_confusing_pairs",
+      "level": 4,
+      "progress": { "current": 71, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚔️",
+        "completed_topic": "Elder/Older, Later/Latter, Farther/Further, Nearest/Next",
+        "xp_earned": 65,
+        "milestone_progress": "Module 9/12 Clear",
+        "motivational_quote": "Confusing pairs crack ho gaye! Ab Good/Well aur -ed/-ing traps!"
+      },
+      "navigation": { "next": "card_72_good_well", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_72_good_well",
+      "card_slug": "card_72_good_well",
+      "type": "chat",
+      "concept_id": "adjective_vs_adverb_eded_ing",
+      "level": 5,
+      "progress": { "current": 72, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, jab koi tumse pooche 'How are you?', tum kya bologe - 'I am good' ya 'I am well'?" },
+        { "speaker": "raju", "text": "Sir dono bolte hue sunta hun log, konsa sahi hai?" },
+        { "speaker": "aman", "text": "Dono sahi hain, par different context mein! 'Good' Adjective hai jo general quality dikhata hai ('I am good' - main theek/khush hun). 'Well' normally Adverb hai, lekin HEALTH ke context mein ye khud Adjective ban jata hai - 'I am well' (main swasth hun, bimaar nahi)." },
+        { "speaker": "raju", "text": "Achha! Matlab health ki baat ho to 'well' bhi Adjective ban jata hai! Interesting hai sir!" }
+      ],
+      "navigation": { "next": "card_73_ed_ing_adjectives", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_73_ed_ing_adjectives",
+      "card_slug": "card_73_ed_ing_adjectives",
+      "type": "chat",
+      "concept_id": "adjective_vs_adverb_eded_ing",
+      "level": 5,
+      "progress": { "current": 73, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho ek bahut important pair - '-ed' Adjectives vs '-ing' Adjectives. '-ed' wala Adjective batata hai PERSON KAISA FEEL kar raha hai. '-ing' wala batata hai CHEEZ/SITUATION kaisi hai (feeling cause kar rahi hai)." },
+        { "speaker": "raju", "text": "Sir example do, thoda samajh nahi aaya!" },
+        { "speaker": "aman", "text": "'I am bored' (main bore ho raha hun - main feel kar raha hun) vs 'This movie is boring' (ye movie boring hai - ye feeling cause kar rahi hai). Isi tarah: interested/interesting, excited/exciting, confused/confusing, tired/tiring." },
+        { "speaker": "raju", "text": "Achhaaa! Matlab 'I am boring' bolna galat hoga, kyunki uska matlab hoga 'main khud ek boring insaan hun'!" }
+      ],
+      "navigation": { "next": "card_74_linking_verb_adjective", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_74_linking_verb_adjective",
+      "card_slug": "card_74_linking_verb_adjective",
+      "type": "chat",
+      "concept_id": "adjective_vs_adverb_eded_ing",
+      "level": 5,
+      "progress": { "current": 74, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda ye trap! Ab ek aur rule - Linking Verbs (feel, look, smell, taste, sound, seem, appear, become) ke baad hamesha ADJECTIVE aata hai, Adverb NAHI. Jaise: 'She looks beautiful' (Adjective) NOT 'She looks beautifully'." },
+        { "speaker": "raju", "text": "Sir 'She looks beautifully' kyun galat hai? 'Beautifully' to Verb ko modify kar raha hoga na?" },
+        { "speaker": "aman", "text": "Yahin trap hai - 'looks' yahan Linking Verb hai (action nahi kar rahi, bas link kar rahi hai Subject ko uski quality se). Isliye Subject 'She' ki quality batani hai - Adjective 'beautiful' chahiye, Adverb nahi." },
+        { "speaker": "raju", "text": "Achha! 'I feel bad' sahi hai 'I feel badly' galat - isi rule se?" }
+      ],
+      "navigation": { "next": "card_75_guess_feel_badly", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_75_guess_feel_badly",
+      "card_slug": "card_75_guess_feel_badly",
+      "type": "guess",
+      "concept_id": "adjective_vs_adverb_eded_ing",
+      "level": 5,
+      "progress": { "current": 75, "total": 98 },
+      "guess_payload": {
+        "question": "Error spot: 'I feel badly about missing your birthday party.'",
+        "options": [
+          { "id": "A", "text": "'badly' should be 'bad'" },
+          { "id": "B", "text": "'missing' should be 'miss'" },
+          { "id": "C", "text": "'party' should be 'parties'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Feel' yahan Linking Verb hai, uske baad Adjective aayega - 'I feel bad', na ki Adverb 'badly'."
+      },
+      "navigation": { "next": "card_76_quiz_interested_interesting", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_76_quiz_interested_interesting",
+      "card_slug": "card_76_quiz_interested_interesting",
+      "type": "quiz",
+      "concept_id": "adjective_vs_adverb_eded_ing",
+      "level": 5,
+      "progress": { "current": 76, "total": 98 },
+      "quiz_payload": {
+        "question": "Choose correct: 'I found the lecture very _____, so I stayed fully _____ throughout.'",
+        "options": [
+          { "id": "A", "text": "interesting, interested" },
+          { "id": "B", "text": "interested, interesting" },
+          { "id": "C", "text": "interesting, interesting" },
+          { "id": "D", "text": "interested, interested" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Lecture (cheez) feeling cause kar rahi hai - 'interesting'. 'I' (person) feel kar raha hai - 'interested'."
+      },
+      "navigation": { "next": "card_77_quiz_smells_good", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_77_quiz_smells_good",
+      "card_slug": "card_77_quiz_smells_good",
+      "type": "quiz",
+      "concept_id": "adjective_vs_adverb_eded_ing",
+      "level": 5,
+      "progress": { "current": 77, "total": 98 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          { "id": "A", "text": "This soup smells deliciously" },
+          { "id": "B", "text": "This soup smells delicious" },
+          { "id": "C", "text": "This soup smell delicious" },
+          { "id": "D", "text": "This soup is smelling deliciously" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Smells' yahan Linking Verb hai, uske baad Adjective 'delicious' aayega, Adverb 'deliciously' nahi."
+      },
+      "navigation": { "next": "card_78_quiz_multistatement_goodwell", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_78_quiz_multistatement_goodwell",
+      "card_slug": "card_78_quiz_multistatement_goodwell",
+      "type": "quiz",
+      "concept_id": "adjective_vs_adverb_eded_ing",
+      "level": 5,
+      "progress": { "current": 78, "total": 98 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Well' can function as an Adjective when referring to health. II. Linking verbs like feel, look, taste are always followed by an Adverb. III. '-ed' adjectives describe the feeling of a person, '-ing' adjectives describe the cause of that feeling. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "II & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - Linking verbs ke baad Adjective aata hai, Adverb nahi."
+      },
+      "navigation": { "next": "card_79_milestone_m10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_79_milestone_m10",
+      "card_slug": "card_79_milestone_m10",
+      "type": "milestone",
+      "concept_id": "adjective_vs_adverb_eded_ing",
+      "level": 5,
+      "progress": { "current": 79, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "😊",
+        "completed_topic": "Good/Well, -ed/-ing Adjectives & Linking Verbs",
+        "xp_earned": 65,
+        "milestone_progress": "Module 10/12 Clear",
+        "motivational_quote": "Feeling wale traps clear! Ab 'To' wale Adjectives ka bada module!"
+      },
+      "navigation": { "next": "card_80_senior_junior_to", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_80_senior_junior_to",
+      "card_slug": "card_80_senior_junior_to",
+      "type": "chat",
+      "concept_id": "adjective_to_not_than_position",
+      "level": 5,
+      "progress": { "current": 80, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek sabse dangerous SBI PO trap - kuch Adjectives 'than' ke saath NAHI, balki 'TO' ke saath use hote hain, kyunki ye Latin origin ke comparative words hain! Jaise: senior, junior, superior, inferior, prior." },
+        { "speaker": "raju", "text": "Hain?? Sir comparative hai to 'than' hi aana chahiye na, jaise 'taller than'!" },
+        { "speaker": "aman", "text": "Yahi to trap hai! 'He is senior than me' GALAT hai. Sahi hoga 'He is senior TO me'. Ye words Latin se aaye hain (senior, junior, superior, inferior, prior) isliye inka rule alag hai." },
+        { "speaker": "raju", "text": "Sir ye to bilkul unexpected hai, exam mein log 'than' hi likh denge inke saath!" }
+      ],
+      "navigation": { "next": "card_81_more_to_examples", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_81_more_to_examples",
+      "card_slug": "card_81_more_to_examples",
+      "type": "chat",
+      "concept_id": "adjective_to_not_than_position",
+      "level": 5,
+      "progress": { "current": 81, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo examples se pakka karte hain: 'She is senior TO me in the department' (mujse senior hai). 'This design is superior TO that one' (usse behtar hai). 'His health is inferior TO before' (pehle se kamzor). 'Prior TO the meeting, please read this' (meeting se pehle)." },
+        { "speaker": "raju", "text": "Sir 'prior' to time ke liye use hota hai, wo bhi 'to' ke saath?" },
+        { "speaker": "aman", "text": "Haan bilkul! 'Prior to' matlab 'pehle' - hamesha 'to' ke saath aata hai, 'prior than' kabhi nahi bolna. Ye BPSC officer level ka bahut favorite question hai, note kar lo!" },
+        { "speaker": "raju", "text": "Sir isse yaad karne ka koi tarika hai kya?" }
+      ],
+      "navigation": { "next": "card_82_attributive_predicative_position", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_82_attributive_predicative_position",
+      "card_slug": "card_82_attributive_predicative_position",
+      "type": "chat",
+      "concept_id": "adjective_to_not_than_position",
+      "level": 5,
+      "progress": { "current": 82, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bas 'S-J-S-I-P' (Senior-Junior-Superior-Inferior-Prior) yaad rakho, sabke sath 'TO' aayega. Ab ek aur position wala concept - kuch Adjectives sirf Noun ke BAAD (Predicative position) aa sakte hain, Noun ke PEHLE (Attributive) nahi: alive, asleep, alone, afraid, awake, ashamed." },
+        { "speaker": "raju", "text": "Sir matlab 'an alive man' nahi bol sakte?" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'An alive man' GALAT hai, sahi hoga 'a living man' (attributive ke liye 'living' use hota hai) YA 'The man is alive' (predicative position mein 'alive' sahi hai)." },
+        { "speaker": "raju", "text": "Achha! Matlab ye words Noun ke pehle kabhi nahi aa sakte, sirf 'is/was' ke baad!" }
+      ],
+      "navigation": { "next": "card_83_guess_senior_than", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_83_guess_senior_than",
+      "card_slug": "card_83_guess_senior_than",
+      "type": "guess",
+      "concept_id": "adjective_to_not_than_position",
+      "level": 5,
+      "progress": { "current": 83, "total": 98 },
+      "guess_payload": {
+        "question": "Error spot: 'Rahul is senior than Karan by two years in the company.'",
+        "options": [
+          { "id": "A", "text": "'senior than' should be 'senior to'" },
+          { "id": "B", "text": "'company' should be 'companies'" },
+          { "id": "C", "text": "'two years' should be 'two year'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Senior' Latin comparative hai, iske saath 'to' aata hai, 'than' nahi. Sahi: 'Rahul is senior to Karan.'"
+      },
+      "navigation": { "next": "card_84_quiz_superior_inferior", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_84_quiz_superior_inferior",
+      "card_slug": "card_84_quiz_superior_inferior",
+      "type": "quiz",
+      "concept_id": "adjective_to_not_than_position",
+      "level": 5,
+      "progress": { "current": 84, "total": 98 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          { "id": "A", "text": "This product is superior than the other" },
+          { "id": "B", "text": "This product is superior to the other" },
+          { "id": "C", "text": "This product is more superior to the other" },
+          { "id": "D", "text": "This product is superior from the other" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Superior' ke saath 'to' aata hai, aur 'more superior' bhi galat hoga (redundant, kyunki superior already comparative hai)."
+      },
+      "navigation": { "next": "card_85_quiz_alive_position", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_85_quiz_alive_position",
+      "card_slug": "card_85_quiz_alive_position",
+      "type": "quiz",
+      "concept_id": "adjective_to_not_than_position",
+      "level": 5,
+      "progress": { "current": 85, "total": 98 },
+      "quiz_payload": {
+        "question": "Error detection: 'They found an alive snake in the garden.'",
+        "options": [
+          { "id": "A", "text": "'an alive snake' should be 'a living snake'" },
+          { "id": "B", "text": "'found' should be 'find'" },
+          { "id": "C", "text": "'garden' should be 'Garden'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Alive' Noun se pehle (Attributive) use nahi ho sakta. Sahi hoga 'a living snake' ya 'The snake was alive.'"
+      },
+      "navigation": { "next": "card_86_quiz_multistatement_toposition", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_86_quiz_multistatement_toposition",
+      "card_slug": "card_86_quiz_multistatement_toposition",
+      "type": "quiz",
+      "concept_id": "adjective_to_not_than_position",
+      "level": 5,
+      "progress": { "current": 86, "total": 98 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Prior', 'senior', 'junior', 'superior', 'inferior' take 'to' instead of 'than'. II. 'Alone', 'asleep', 'ashamed' can be used both before and after a noun freely. III. 'More superior' is a correct expression for emphasis. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I only" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "II & III" },
+          { "id": "D", "text": "I, II & III" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - ye Adjectives sirf Predicative position mein use hote hain, Noun se pehle nahi. Statement III bhi galat hai - 'more superior' redundant/incorrect hai."
+      },
+      "navigation": { "next": "card_87_milestone_m11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_87_milestone_m11",
+      "card_slug": "card_87_milestone_m11",
+      "type": "milestone",
+      "concept_id": "adjective_to_not_than_position",
+      "level": 5,
+      "progress": { "current": 87, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎖️",
+        "completed_topic": "Senior/Junior/Superior/Inferior/Prior 'to' + Position Rules",
+        "xp_earned": 70,
+        "milestone_progress": "Module 11/12 Clear",
+        "motivational_quote": "Officer level trap crack! Ab last module - Distributive Agreement & As...as!"
+      },
+      "navigation": { "next": "card_88_each_every_agreement", "button_text": "Start Final Module ➔" }
+    },
+    {
+      "card_id": "card_88_each_every_agreement",
+      "card_slug": "card_88_each_every_agreement",
+      "type": "chat",
+      "concept_id": "adjective_distributive_asas",
+      "level": 5,
+      "progress": { "current": 88, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab last module ka pehla concept - Distributive Adjectives EACH aur EVERY ke saath hamesha SINGULAR Noun aur SINGULAR Verb use hota hai, chahe overall matlab plural jaisa lage." },
+        { "speaker": "raju", "text": "Sir 'Each students have' galat hoga to? Ye to bahut common galti karte hain log!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! 'Each students have submitted' GALAT hai. Sahi hoga 'Each student HAS submitted'. Yaad rakho - Each/Every ke turant baad Singular Noun aayega aur Verb bhi Singular." },
+        { "speaker": "raju", "text": "Achha, chahe 100 students hon, phir bhi 'each student HAS' bolna hoga?" }
+      ],
+      "navigation": { "next": "card_89_either_neither_agreement", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_89_either_neither_agreement",
+      "card_slug": "card_89_either_neither_agreement",
+      "type": "chat",
+      "concept_id": "adjective_distributive_asas",
+      "level": 5,
+      "progress": { "current": 89, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Chahe kitne bhi log hon, 'each/every' ke sath hamesha Singular. Ab EITHER (in do mein se koi ek) aur NEITHER (in do mein se koi nahi) - ye bhi Singular Noun/Verb lete hain. 'Either boy IS right', 'Neither answer IS correct'." },
+        { "speaker": "raju", "text": "Sir 'either...or' aur 'neither...nor' bhi isi tarah kaam karte hain?" },
+        { "speaker": "aman", "text": "Haan! 'Either...or' aur 'Neither...nor' mein Verb hamesha nazdeeki (nearest) Subject ke hisaab se match hota hai. 'Either Raju or his friends ARE coming' (friends ke hisaab se plural verb, kyunki 'friends' Verb ke paas hai)." },
+        { "speaker": "raju", "text": "Ohh! Matlab jo subject Verb ke sabse paas hoga, usi se match karenge! Ye to naya rule hai!" }
+      ],
+      "navigation": { "next": "card_90_as_as_so_as", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_90_as_as_so_as",
+      "card_slug": "card_90_as_as_so_as",
+      "type": "chat",
+      "concept_id": "adjective_distributive_asas",
+      "level": 5,
+      "progress": { "current": 90, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab last concept - AS + Adjective + AS structure equal comparison ke liye use hota hai (positive sentence mein): 'She is as tall as her brother' (dono same height ke hain). Negative sentence mein 'so...as' bhi use ho sakta hai: 'She is not so tall as her brother'." },
+        { "speaker": "raju", "text": "Sir negative mein 'as...as' use nahi kar sakte kya?" },
+        { "speaker": "aman", "text": "Kar sakte ho! 'She is not as tall as her brother' bhi sahi hai. Bas traditional grammar rule kehta hai negative mein 'so...as' prefer kiya jata hai, lekin modern usage mein 'as...as' bhi widely accepted hai. Positive sentence mein SIRF 'as...as' aayega, 'so...as' nahi." },
+        { "speaker": "raju", "text": "Achha! Matlab positive mein 'as...as' fix hai, negative mein dono chal sakte hain!" }
+      ],
+      "navigation": { "next": "card_91_guess_each_student", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_91_guess_each_student",
+      "card_slug": "card_91_guess_each_student",
+      "type": "guess",
+      "concept_id": "adjective_distributive_asas",
+      "level": 5,
+      "progress": { "current": 91, "total": 98 },
+      "guess_payload": {
+        "question": "Error spot: 'Every boy and girl were present in the assembly.'",
+        "options": [
+          { "id": "A", "text": "'were' should be 'was'" },
+          { "id": "B", "text": "'boy' should be 'boys'" },
+          { "id": "C", "text": "'assembly' should be 'assemblies'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Every' ke saath connected do Nouns (boy and girl) bhi Singular Verb hi lete hain - 'Every boy and girl WAS present.'"
+      },
+      "navigation": { "next": "card_92_quiz_neither_nor_verb", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_92_quiz_neither_nor_verb",
+      "card_slug": "card_92_quiz_neither_nor_verb",
+      "type": "quiz",
+      "concept_id": "adjective_distributive_asas",
+      "level": 5,
+      "progress": { "current": 92, "total": 98 },
+      "quiz_payload": {
+        "question": "Choose correct: 'Neither the teacher nor the students _____ ready for the test.'",
+        "options": [
+          { "id": "A", "text": "is" },
+          { "id": "B", "text": "was" },
+          { "id": "C", "text": "are" },
+          { "id": "D", "text": "has" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Neither...nor' mein Verb nearest subject 'students' (plural) se match karega - 'are'."
+      },
+      "navigation": { "next": "card_93_quiz_as_tall_as", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_93_quiz_as_tall_as",
+      "card_slug": "card_93_quiz_as_tall_as",
+      "type": "quiz",
+      "concept_id": "adjective_distributive_asas",
+      "level": 5,
+      "progress": { "current": 93, "total": 98 },
+      "quiz_payload": {
+        "question": "Error detection: 'She is so intelligent as her sister.'",
+        "options": [
+          { "id": "A", "text": "'so...as' should be 'as...as' in positive sentence" },
+          { "id": "B", "text": "'intelligent' should be 'intelligently'" },
+          { "id": "C", "text": "'sister' should be 'sisters'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Positive sentence mein equal comparison ke liye 'as...as' use hota hai, 'so...as' sirf negative sentence mein aata hai."
+      },
+      "navigation": { "next": "card_94_quiz_multistatement_distributive", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_94_quiz_multistatement_distributive",
+      "card_slug": "card_94_quiz_multistatement_distributive",
+      "type": "quiz",
+      "concept_id": "adjective_distributive_asas",
+      "level": 5,
+      "progress": { "current": 94, "total": 98 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Each' and 'Every' always take Singular Verb regardless of overall number. II. In 'Either...or' and 'Neither...nor', the verb agrees with the nearer subject. III. 'So...as' can be used in positive sentences for equal comparison. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & II" },
+          { "id": "B", "text": "II & III" },
+          { "id": "C", "text": "I only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement III galat hai - 'so...as' sirf negative sentences mein use hota hai, positive mein 'as...as' aata hai."
+      },
+      "navigation": { "next": "card_95_milestone_m12", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_95_milestone_m12",
+      "card_slug": "card_95_milestone_m12",
+      "type": "milestone",
+      "concept_id": "adjective_distributive_asas",
+      "level": 5,
+      "progress": { "current": 95, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏅",
+        "completed_topic": "Distributive Agreement & As...as/So...as",
+        "xp_earned": 70,
+        "milestone_progress": "Module 12/12 Clear",
+        "motivational_quote": "Saare 12 modules clear! Ab Officer Level Final Revision ki baari hai!"
+      },
+      "navigation": { "next": "card_96_summary_revision", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_96_summary_revision",
+      "card_slug": "card_96_summary_revision",
+      "type": "summary",
+      "concept_id": "adjective_full_revision",
+      "level": 5,
+      "progress": { "current": 96, "total": 98 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Adjective",
+        "revision_points": [
+          {
+            "topic": "Adjective Definition & Order",
+            "point": "Adjective Noun/Pronoun ko modify karta hai (quality, quantity, number). Multiple adjectives ka fixed order: Opinion-Size-Age-Shape-Colour-Origin-Material-Purpose (OSASCOMP)."
+          },
+          {
+            "topic": "Few/Little Family",
+            "point": "Few/Little (bina 'a') = negative sense (almost none); A few/A little = positive sense (some); The few/The little = specific reference. Many/Fewer with countable, Much/Less with uncountable."
+          },
+          {
+            "topic": "Confusing Comparative Pairs",
+            "point": "Elder(family, no 'than')≠Older(general, with 'than'); Later(time)≠Latter(2nd of two); Farther(physical)≠Further(abstract); Nearest(distance)≠Next(sequence)."
+          },
+          {
+            "topic": "Absolute Adjectives & Linking Verbs",
+            "point": "Unique/Perfect/Complete/Round/Full/Dead cannot take more/most (use almost/nearly instead). Linking verbs (feel, look, taste, smell, seem) are followed by Adjective, not Adverb."
+          },
+          {
+            "topic": "SBI PO Special 'To' Traps",
+            "point": "Senior/Junior/Superior/Inferior/Prior take 'TO' not 'than'. Each/Every always Singular Verb. Positive equal comparison uses 'as...as', negative can use 'so...as'."
+          }
+        ]
+      },
+      "navigation": { "next": "card_97_final_quiz", "button_text": "Take Final Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_97_final_quiz",
+      "card_slug": "card_97_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "adjective_full_revision",
+      "level": 5,
+      "progress": { "current": 97, "total": 98 },
+      "quiz_payload": {
+        "question": "Read the following statements about Adjectives carefully:\nI. 'Elder' and 'Senior' can both be used correctly with 'than' to show comparison.\nII. Absolute Adjectives like 'unique', 'perfect', and 'complete' cannot logically take comparative or superlative forms since they already denote a complete state.\nIII. 'Few' conveys a negative sense (almost none), while 'A few' conveys a positive sense (some), even though both are used with countable nouns.\nIV. In the Royal Order of Adjectives, Colour always comes before Age.\nWhich of the above statements are CORRECT?",
+        "options": [
+          { "id": "A", "text": "II and III only" },
+          { "id": "B", "text": "I, II and III only" },
+          { "id": "C", "text": "II, III and IV only" },
+          { "id": "D", "text": "All four statements are correct" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement I galat hai - 'Elder' kabhi 'than' ke saath use nahi hota (sirf 'Older' 'than' ke saath aata hai; 'Senior' 'to' ke saath aata hai, 'than' ke saath nahi). Statement IV bhi galat hai - Royal Order mein Age, Colour se PEHLE aata hai (Opinion-Size-Age-Shape-Colour-Origin-Material-Purpose), Colour Age ke baad hai. Statements II aur III sahi hain jo BPSC/SBI PO Error Detection mein directly test hote hain."
+      },
+      "navigation": { "next": "card_98_trophy", "button_text": "See Final Result ➔" }
+    },
+    {
+      "card_id": "card_98_trophy",
+      "card_slug": "card_98_trophy",
+      "type": "milestone",
+      "concept_id": "adjective_full_revision",
+      "level": 5,
+      "progress": { "current": 98, "total": 98 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Adjective - Complete Mastery (SBI PO Error Detection Level)",
+        "xp_earned": 220,
+        "milestone_progress": "12/12 Modules Clear - 100% Complete",
+        "motivational_quote": "Shabaash Officer! Ab tum Adjective ke har type, har order, har degree, aur har SBI PO/BPSC error detection trap ko crack kar sakte ho. Practice karte raho aur exam mein topper bano!"
+      },
+      "navigation": { "next": "course_complete", "button_text": "Finish Chapter 🎉" }
+    }
+  ]
+}
