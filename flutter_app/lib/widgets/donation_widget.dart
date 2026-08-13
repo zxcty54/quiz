@@ -10,22 +10,41 @@ class DonationWidget extends StatefulWidget {
   State<DonationWidget> createState() => _DonationWidgetState();
 }
 
-class _DonationWidgetState extends State<DonationWidget> {
+class _DonationWidgetState extends State<DonationWidget>
+    with SingleTickerProviderStateMixin {
   // 📌 APNI UPI ID YAHAN CHANGE KAREIN
-  static const String upiId = "me.nitesh47@okhdfcbank"; 
+  static const String upiId = "me.nitesh47@okhdfcbank";
   static const String payeeName = "MockTester Student Fund";
 
   int _selectedAmount = 30; // Default ₹30
   bool _isCustom = false;
   final TextEditingController _customAmountController = TextEditingController();
 
+  late AnimationController _pulseController;
+  late Animation<double> _scaleAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    // 🌟 SUBTLE PULSE ANIMATION FOR CTA BUTTON
+    _pulseController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1200),
+    )..repeat(reverse: true);
+
+    _scaleAnimation = Tween<double>(begin: 1.0, end: 1.025).animate(
+      CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut),
+    );
+  }
+
   @override
   void dispose() {
+    _pulseController.dispose();
     _customAmountController.dispose();
     super.dispose();
   }
 
-  // 🚀 UPI PAYMENT TRIGGER (Deep-Link to GPay/PhonePe/Paytm)
+  // 🚀 UPI PAYMENT TRIGGER
   Future<void> _processUpiPayment() async {
     final int amount = _isCustom
         ? (int.tryParse(_customAmountController.text) ?? 10)
@@ -53,7 +72,7 @@ class _DonationWidgetState extends State<DonationWidget> {
     }
   }
 
-  // 🖼️ QR CODE DIALOG FOR ALTERNATIVE PAYMENT
+  // 🖼️ QR CODE DIALOG
   void _showQrCodeDialog(int amount) {
     final String upiUri =
         "upi://pay?pa=$upiId&pn=${Uri.encodeComponent(payeeName)}&am=$amount&cu=INR&tn=${Uri.encodeComponent('MockTester Community Fund')}";
@@ -63,24 +82,24 @@ class _DonationWidgetState extends State<DonationWidget> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+        backgroundColor: const Color(0xFF1E1B4B),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         title: Column(
           children: [
             Text(
               'Scan & Pay ₹$amount 📲',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                color: Colors.white,
               ),
             ),
             const SizedBox(height: 4),
-            Text(
+            const Text(
               'GPay, PhonePe, Paytm ya BHIM se scan karein',
               style: TextStyle(
                 fontSize: 11.5,
-                color: widget.isDarkMode ? Colors.white60 : Colors.grey.shade600,
+                color: Color(0xFFE0E7FF),
               ),
             ),
           ],
@@ -93,7 +112,6 @@ class _DonationWidgetState extends State<DonationWidget> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: Colors.grey.shade300),
               ),
               child: Image.network(
                 qrApiUrl,
@@ -112,9 +130,9 @@ class _DonationWidgetState extends State<DonationWidget> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               decoration: BoxDecoration(
-                color: widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
+                color: const Color(0xFF312E81),
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: const Color(0xFF818CF8)),
+                border: Border.all(color: const Color(0xFF4338CA)),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -124,10 +142,10 @@ class _DonationWidgetState extends State<DonationWidget> {
                       'UPI: $upiId',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
-                        color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                        color: Colors.white,
                       ),
                     ),
                   ),
@@ -141,12 +159,16 @@ class _DonationWidgetState extends State<DonationWidget> {
                     child: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF4F46E5),
+                        color: const Color(0xFFF59E0B),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: const Text(
                         'Copy',
-                        style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                          color: Color(0xFF0F172A),
+                          fontSize: 11,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
@@ -158,7 +180,7 @@ class _DonationWidgetState extends State<DonationWidget> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Close', style: TextStyle(color: Colors.grey)),
+            child: const Text('Close', style: TextStyle(color: Color(0xFFE0E7FF))),
           ),
         ],
       ),
@@ -171,45 +193,48 @@ class _DonationWidgetState extends State<DonationWidget> {
         ? (int.tryParse(_customAmountController.text) ?? 0)
         : _selectedAmount;
 
-    final cardBg = widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC);
-    final borderColor = widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
-    final titleColor = widget.isDarkMode ? Colors.white : const Color(0xFF0F172A);
-    final descColor = widget.isDarkMode ? Colors.white70 : const Color(0xFF475569);
-
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(18),
+      padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: cardBg,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(
-          color: borderColor,
-          width: 1.2,
+        // 🔮 HIGH-CONTRAST DEEP INDIGO TO ROYAL BLUE GRADIENT
+        gradient: const LinearGradient(
+          colors: [Color(0xFF1E1B4B), Color(0xFF312E81), Color(0xFF4338CA)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
         ),
+        borderRadius: BorderRadius.circular(22),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF1E1B4B).withOpacity(0.4),
+            blurRadius: 16,
+            offset: const Offset(0, 6),
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🏷️ BADGE
+          // 🏷️ NEON AMBER BADGE
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: BoxDecoration(
-              color: const Color(0xFF4F46E5).withOpacity(0.1),
+              color: const Color(0xFFF59E0B).withOpacity(0.15),
               borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: const Color(0xFF4F46E5).withOpacity(0.25)),
+              border: Border.all(color: const Color(0xFFF59E0B).withOpacity(0.4)),
             ),
             child: const Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                CircleAvatar(radius: 3, backgroundColor: Color(0xFF4F46E5)),
+                CircleAvatar(radius: 3.5, backgroundColor: Color(0xFFF59E0B)),
                 SizedBox(width: 6),
                 Text(
                   'COMMUNITY FUNDED PLATFORM',
                   style: TextStyle(
-                    color: Color(0xFF4F46E5),
+                    color: Color(0xFFFBF3D5),
                     fontSize: 10,
                     fontWeight: FontWeight.w800,
-                    letterSpacing: 0.5,
+                    letterSpacing: 0.6,
                   ),
                 ),
               ],
@@ -217,38 +242,38 @@ class _DonationWidgetState extends State<DonationWidget> {
           ),
           const SizedBox(height: 12),
 
-          // 🎯 TITLE & DESC
-          Text(
+          // 🎯 CRISP WHITE TITLE & SUBTITLE
+          const Text(
             'Help Us Keep MockTester 100% Free ❤️',
             style: TextStyle(
-              fontSize: 17,
+              fontSize: 18,
               fontWeight: FontWeight.w800,
-              color: titleColor,
+              color: Colors.white,
               letterSpacing: -0.2,
             ),
           ),
           const SizedBox(height: 6),
-          Text(
+          const Text(
             'Hum education par ₹499/yr paywalls nahi lagate. Apna contribution choose karein aur Bihar ke rural aspirants ke liye high-quality tests free rakhne mein madad karein.',
             style: TextStyle(
               fontSize: 12,
               height: 1.45,
-              color: descColor,
+              color: Color(0xFFE0E7FF),
             ),
           ),
-          const SizedBox(height: 14),
+          const SizedBox(height: 16),
 
-          // 📊 METER CARD
+          // 📊 SERVER FUND METER CARD
           Container(
-            padding: const EdgeInsets.all(12),
+            padding: const EdgeInsets.all(14),
             decoration: BoxDecoration(
-              color: widget.isDarkMode ? const Color(0xFF0F172A) : Colors.white,
+              color: const Color(0xFF0F172A).withOpacity(0.6),
               borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: borderColor),
+              border: Border.all(color: Colors.white.withOpacity(0.1)),
             ),
             child: Column(
               children: [
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
@@ -256,29 +281,29 @@ class _DonationWidgetState extends State<DonationWidget> {
                       style: TextStyle(
                         fontSize: 11.5,
                         fontWeight: FontWeight.bold,
-                        color: titleColor,
+                        color: Colors.white,
                       ),
                     ),
-                    const Text(
+                    Text(
                       '₹420 / ₹1,500',
                       style: TextStyle(
                         fontSize: 11.5,
                         fontWeight: FontWeight.w900,
-                        color: Color(0xFF4F46E5),
+                        color: Color(0xFF34D399),
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 8),
 
-                // PROGRESS BAR
+                // ⚡ ELECTRIC GREEN PROGRESS BAR
                 ClipRRect(
                   borderRadius: BorderRadius.circular(10),
-                  child: LinearProgressIndicator(
+                  child: const LinearProgressIndicator(
                     value: 0.42, // 42%
-                    minHeight: 7,
-                    backgroundColor: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
-                    valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF4F46E5)),
+                    minHeight: 8,
+                    backgroundColor: Color(0xFF1E293B),
+                    valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF10B981)),
                   ),
                 ),
                 const SizedBox(height: 6),
@@ -286,22 +311,24 @@ class _DonationWidgetState extends State<DonationWidget> {
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('42% Funded This Month', style: TextStyle(fontSize: 10, color: Colors.grey)),
-                    Text('58% Remaining', style: TextStyle(fontSize: 10, color: Colors.grey)),
+                    Text('42% Funded This Month',
+                        style: TextStyle(fontSize: 10, color: Color(0xFFA7F3D0), fontWeight: FontWeight.bold)),
+                    Text('⚡ ₹1,080 Remaining',
+                        style: TextStyle(fontSize: 10, color: Color(0xFFFCA5A5), fontWeight: FontWeight.bold)),
                   ],
                 ),
               ],
             ),
           ),
-          const SizedBox(height: 14),
+          const SizedBox(height: 16),
 
-          // 💰 PRESET CHIPS (₹30, ₹50, ₹100, Custom)
-          Text(
+          // 💰 PRESET CHIPS
+          const Text(
             'Select Contribution Amount:',
             style: TextStyle(
               fontSize: 11.5,
               fontWeight: FontWeight.bold,
-              color: titleColor,
+              color: Color(0xFFE0E7FF),
             ),
           ),
           const SizedBox(height: 8),
@@ -318,50 +345,59 @@ class _DonationWidgetState extends State<DonationWidget> {
             ],
           ),
 
-          // CUSTOM INPUT FIELD
           if (_isCustom) ...[
             const SizedBox(height: 10),
             TextField(
               controller: _customAmountController,
               keyboardType: TextInputType.number,
-              style: TextStyle(color: titleColor, fontSize: 13),
+              style: const TextStyle(color: Colors.white, fontSize: 13),
               decoration: InputDecoration(
                 hintText: 'Enter Custom Amount in ₹',
                 hintStyle: const TextStyle(fontSize: 12, color: Colors.grey),
+                filled: true,
+                fillColor: const Color(0xFF1E293B),
                 contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
-                  borderSide: const BorderSide(color: Color(0xFF4F46E5)),
+                  borderSide: const BorderSide(color: Color(0xFFF59E0B)),
                 ),
               ),
               onChanged: (_) => setState(() {}),
             ),
           ],
-          const SizedBox(height: 14),
+          const SizedBox(height: 16),
 
-          // 💳 DONATE CTA BUTTON
-          SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(
-              onPressed: _processUpiPayment,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF4F46E5),
-                foregroundColor: Colors.white,
-                elevation: 0,
-                padding: const EdgeInsets.symmetric(vertical: 12),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.volunteer_activism_rounded, size: 18),
-                  const SizedBox(width: 8),
-                  Text(
-                    'Donate ₹$currentAmount via UPI',
-                    style: const TextStyle(fontSize: 13.5, fontWeight: FontWeight.w800),
-                  ),
-                ],
+          // 💳 VIBRANT AMBER/GOLD CTA WITH SUBTLE PULSE ANIMATION
+          ScaleTransition(
+            scale: _scaleAnimation,
+            child: SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: _processUpiPayment,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFFF59E0B), // Vibrant Amber Gold
+                  foregroundColor: const Color(0xFF0F172A), // Dark High Contrast Text
+                  elevation: 4,
+                  padding: const EdgeInsets.symmetric(vertical: 13),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(Icons.volunteer_activism_rounded, size: 18, color: Color(0xFF0F172A)),
+                    const SizedBox(width: 8),
+                    Text(
+                      'Donate ₹$currentAmount via UPI',
+                      style: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 0.2,
+                        color: Color(0xFF0F172A),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -385,14 +421,10 @@ class _DonationWidgetState extends State<DonationWidget> {
           padding: const EdgeInsets.symmetric(vertical: 8),
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            color: isSelected
-                ? const Color(0xFF4F46E5)
-                : (widget.isDarkMode ? const Color(0xFF0F172A) : Colors.white),
+            color: isSelected ? const Color(0xFFF59E0B) : const Color(0xFF1E293B),
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
-              color: isSelected
-                  ? const Color(0xFF4F46E5)
-                  : (widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1)),
+              color: isSelected ? const Color(0xFFF59E0B) : Colors.white.withOpacity(0.15),
             ),
           ),
           child: Text(
@@ -400,7 +432,7 @@ class _DonationWidgetState extends State<DonationWidget> {
             style: TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.bold,
-              color: isSelected ? Colors.white : (widget.isDarkMode ? Colors.white70 : const Color(0xFF334155)),
+              color: isSelected ? const Color(0xFF0F172A) : Colors.white,
             ),
           ),
         ),
@@ -421,14 +453,10 @@ class _DonationWidgetState extends State<DonationWidget> {
           padding: const EdgeInsets.symmetric(vertical: 8),
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            color: _isCustom
-                ? const Color(0xFF4F46E5)
-                : (widget.isDarkMode ? const Color(0xFF0F172A) : Colors.white),
+            color: _isCustom ? const Color(0xFFF59E0B) : const Color(0xFF1E293B),
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
-              color: _isCustom
-                  ? const Color(0xFF4F46E5)
-                  : (widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1)),
+              color: _isCustom ? const Color(0xFFF59E0B) : Colors.white.withOpacity(0.15),
             ),
           ),
           child: Text(
@@ -436,7 +464,7 @@ class _DonationWidgetState extends State<DonationWidget> {
             style: TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.bold,
-              color: _isCustom ? Colors.white : (widget.isDarkMode ? Colors.white70 : const Color(0xFF334155)),
+              color: _isCustom ? const Color(0xFF0F172A) : Colors.white,
             ),
           ),
         ),
