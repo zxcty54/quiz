@@ -19,7 +19,7 @@ from dateutil import parser as date_parser
 
 OUTPUT_FILE = "alerts_news.json"
 TIMEOUT = 20
-MAX_PER_FEED = 15
+MAX_PER_FEED = 20
 
 MIN_CONTENT_WORDS = 80
 MAX_CONTENT_WORDS = 500
@@ -169,7 +169,7 @@ def process_alerts():
             # Fallback to feed content if webpage scraping failed
             if word_count(article_text) < MIN_CONTENT_WORDS:
                 snippet_text = clean_text(raw_content)
-                if word_count(snippet_text) >= 20:
+                if word_count(snippet_text) >= 100:
                     article_text = snippet_text
                 else:
                     print(f"   ⚠️ Skipped (Low Content): {clean_title_str[:40]}...")
