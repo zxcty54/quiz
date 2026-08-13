@@ -43,6 +43,8 @@ class _SectionalTabState extends State<SectionalTab> {
               _examSelectorCard('SSC / NTPC', 'TCS PATTERN', const Color(0xFF166534), 'ssc'),
               _examSelectorCard('BSSC CGL', 'GRADUATE', const Color(0xFF6B21A8), 'bssc_cgl'),
               _examSelectorCard('BSSC 10+2', 'INTER LEVEL', const Color(0xFF075985), 'bssc_inter'),
+              // 👮 BIHAR SI CARD ADDED (ONLY ADDITION)
+              _examSelectorCard('BIHAR SI', 'POLICE / DAROGA', const Color(0xFFD97706), 'bihar_si'),
             ],
           ),
           const SizedBox(height: 20),
