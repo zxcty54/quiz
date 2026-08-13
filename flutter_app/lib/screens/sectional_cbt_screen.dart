@@ -5,7 +5,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 class SectionalCbtListScreen extends StatefulWidget {
   final bool isDarkMode;
   const SectionalCbtListScreen({super.key, required this.isDarkMode});
-
   @override
   State<SectionalCbtListScreen> createState() => _SectionalCbtListScreenState();
 }
