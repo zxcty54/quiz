@@ -1,0 +1,1699 @@
+
+{
+  "topic_id": "verb_error_detection_sbi_po",
+  "topic_title": "Verb in English Grammar – SBI PO Level Error Detection",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 96,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 96 },
+      "intro_payload": {
+        "title": "Verb Mastery: SBI PO Level Error Detection",
+        "icon": "⚙️",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Master Finite vs Non-Finite Verbs and Auxiliary/Modal traps",
+          "Crack Transitive-Intransitive and Linking Verb errors",
+          "Solve every Subject-Verb Agreement trap (collective, uncountable, pair nouns)",
+          "Handle Indefinite Pronoun, Each/Every/Either/Neither agreement rules",
+          "Decode Gerund vs Participle and Causative Verb confusions",
+          "Practice 36+ SBI PO style Error Detection questions on Verbs"
+        ]
+      },
+      "navigation": { "next": "card_02_verb_daily_life_intro", "button_text": "Start Learning ➔" }
+    },
+    {
+      "card_id": "card_02_verb_daily_life_intro",
+      "card_slug": "card_02_verb_daily_life_intro",
+      "type": "chat",
+      "concept_id": "verb_need",
+      "level": 1,
+      "progress": { "current": 2, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, subah school jaane se pehle tum kya-kya karte ho? Jaldi se 3 kaam bolo!" },
+        { "speaker": "raju", "text": "Sir main uthta hoon, brush karta hoon, aur nashta khata hoon." },
+        { "speaker": "aman", "text": "Bahut badhiya! Tumne 'uthta hoon', 'karta hoon', 'khata hoon' - ye teeno KAAM (action) batane wale words bole. Inhi ko English grammar mein hum aaj seekhenge." },
+        { "speaker": "raju", "text": "Achha! Toh jo bhi kaam batata hai wo shabd important hota hai grammar mein?" }
+      ],
+      "navigation": { "next": "card_03_verb_definition", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_verb_definition",
+      "card_slug": "card_03_verb_definition",
+      "type": "chat",
+      "concept_id": "verb_definition",
+      "level": 1,
+      "progress": { "current": 3, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi Raju! Is kaam batane wale word ko English mein 'VERB' kehte hain. Definition yaad rakho: 'A Verb is a word that expresses an action, occurrence, or state of being.'" },
+        { "speaker": "raju", "text": "Sir 'occurrence' aur 'state of being' kya hota hai? Sirf action hi hota hai na verb?" },
+        { "speaker": "aman", "text": "Achha doubt hai! Action jaise 'run, eat, play' toh verb hai hi. Lekin 'happen, become' jaise occurrence bhi verb hai, aur 'is, am, are, seems' jaise STATE (halat) batana bhi verb hai - jaise 'Ram IS happy'." },
+        { "speaker": "raju", "text": "Ohh! Toh 'is/am/are' bhi verb hote hain? Mujhe laga wo alag category hoga!" }
+      ],
+      "navigation": { "next": "card_04_finite_verb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_finite_verb",
+      "card_slug": "card_04_finite_verb",
+      "type": "chat",
+      "concept_id": "finite_verb",
+      "level": 1,
+      "progress": { "current": 4, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul verb hi hain! Ab suno pehla important classification - Verb do type ke hote hain: FINITE aur NON-FINITE. Finite Verb wo hota hai jo Subject ke Number aur Tense ke hisaab se BADALTA hai." },
+        { "speaker": "raju", "text": "Matlab sir?" },
+        { "speaker": "aman", "text": "Jaise 'He PLAYS' (singular, present) but 'They PLAY' (plural, present), aur 'He PLAYED' (past). Verb ka form Subject aur Tense ke saath change ho raha hai - yehi Finite Verb hai, jo sentence ka main verb banta hai." },
+        { "speaker": "raju", "text": "Achha! Toh finite verb hi sentence ko complete karta hai, subject ke hisaab se apna roop badal ke?" }
+      ],
+      "navigation": { "next": "card_05_nonfinite_verb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_nonfinite_verb",
+      "card_slug": "card_05_nonfinite_verb",
+      "type": "chat",
+      "concept_id": "nonfinite_verb",
+      "level": 1,
+      "progress": { "current": 5, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab dusra type - NON-FINITE Verb, jo Subject ya Tense ke hisaab se KABHI nahi badalta. Ye 3 form mein aata hai: Infinitive (to+verb), Gerund (verb+ing as noun), aur Participle." },
+        { "speaker": "raju", "text": "Example dijiye sir, samajh nahi aaya!" },
+        { "speaker": "aman", "text": "'I like TO SWIM' - yahan 'to swim' kabhi nahi badlega chahe subject 'He/They/I' kuch bhi ho. Isiliye ise Non-Finite kehte hain - subject se independent hota hai." },
+        { "speaker": "raju", "text": "Achha! Toh Finite verb subject ka gulam hai (uske hisaab se badalta hai), Non-finite verb aazad hai - kabhi nahi badalta!" }
+      ],
+      "navigation": { "next": "card_06_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_06_quiz1",
+      "card_slug": "card_06_quiz1",
+      "type": "quiz",
+      "concept_id": "verb_definition",
+      "level": 1,
+      "progress": { "current": 6, "total": 96 },
+      "quiz_payload": {
+        "question": "Which of the following best completes the definition: A Verb is a word that expresses:",
+        "options": [
+          { "id": "A", "text": "Only a physical action" },
+          { "id": "B", "text": "Action, occurrence, or state of being" },
+          { "id": "C", "text": "A person, place or thing" },
+          { "id": "D", "text": "Quality of a noun" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Verb ki full definition mein action ke saath saath occurrence (happen, become) aur state of being (is, seems) bhi shamil hai, sirf physical action nahi."
+      },
+      "navigation": { "next": "card_07_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz2",
+      "card_slug": "card_07_quiz2",
+      "type": "quiz",
+      "concept_id": "finite_verb",
+      "level": 1,
+      "progress": { "current": 7, "total": 96 },
+      "quiz_payload": {
+        "question": "Identify the FINITE verb in the sentence: 'She wants to travel to Paris every year.'",
+        "options": [
+          { "id": "A", "text": "wants" },
+          { "id": "B", "text": "to travel" },
+          { "id": "C", "text": "travel" },
+          { "id": "D", "text": "every" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Wants' subject aur tense ke hisaab se badalta hai (want/wants/wanted), isliye ye Finite hai. 'To travel' Infinitive hai, kabhi nahi badalta - Non-Finite."
+      },
+      "navigation": { "next": "card_08_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_quiz3",
+      "card_slug": "card_08_quiz3",
+      "type": "quiz",
+      "concept_id": "finite_verb",
+      "level": 1,
+      "progress": { "current": 8, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The train reaching / (B) the station at 6 PM / (C) according to the new timetable / (D) No error",
+        "options": [
+          { "id": "A", "text": "The train reaching" },
+          { "id": "B", "text": "the station at 6 PM" },
+          { "id": "C", "text": "according to the new timetable" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Sentence mein koi Finite verb nahi hai - 'reaching' akele (bina auxiliary ke) main verb ka kaam nahi kar sakta. Correct: 'The train reaches' or 'The train is reaching'."
+      },
+      "navigation": { "next": "card_09_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_09_milestone1",
+      "card_slug": "card_09_milestone1",
+      "type": "milestone",
+      "concept_id": "verb_basics_complete",
+      "level": 1,
+      "progress": { "current": 9, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Verb Basics: Finite & Non-Finite",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/12 Clear",
+        "motivational_quote": "Foundation strong ho gaya! Ab chalte hain Main Verb aur Helping Verb ke fark ki taraf."
+      },
+      "navigation": { "next": "card_10_auxiliary_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_10_auxiliary_intro",
+      "card_slug": "card_10_auxiliary_intro",
+      "type": "chat",
+      "concept_id": "auxiliary_intro",
+      "level": 2,
+      "progress": { "current": 10, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, tumne kaha 'Main khana kha RAHA HOON' - isme do parts hain 'kha' (main action) aur 'raha hoon' (helping). Dono ka role alag hai." },
+        { "speaker": "raju", "text": "Sir 'raha hoon' bhi verb hai kya?" },
+        { "speaker": "aman", "text": "Haan! Aisa helping word English mein hota hai 'AM/IS/ARE, HAS/HAVE/HAD, DO/DOES/DID' - inhe AUXILIARY (Helping) Verb kehte hain, jo Main Verb ki madad karte hain." },
+        { "speaker": "raju", "text": "Achha! Toh Main verb akela 'khana' bata raha hai, aur helping verb time/tense bata raha hai?" }
+      ],
+      "navigation": { "next": "card_11_be_do_have_auxiliary", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_be_do_have_auxiliary",
+      "card_slug": "card_11_be_do_have_auxiliary",
+      "type": "chat",
+      "concept_id": "be_do_have_auxiliary",
+      "level": 2,
+      "progress": { "current": 11, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! In auxiliary verbs ki 3 primary families hain: BE (is,am,are,was,were), DO (do,does,did), aur HAVE (has,have,had). Ye Tense, Negative aur Question banane mein use hote hain." },
+        { "speaker": "raju", "text": "Sir example dijiye teeno ka!" },
+        { "speaker": "aman", "text": "'She IS singing' (BE-continuous), 'She DOES not sing' (DO-negative), 'She HAS sung' (HAVE-perfect). Teeno alag kaam kar rahe hain lekin sab Auxiliary Verb hain." },
+        { "speaker": "raju", "text": "Achha! Toh jab bhi ye words dikhe, samajh jaunga ye helping verb hai?" }
+      ],
+      "navigation": { "next": "card_12_auxiliary_vs_main_same_word", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_auxiliary_vs_main_same_word",
+      "card_slug": "card_12_auxiliary_vs_main_same_word",
+      "type": "chat",
+      "concept_id": "auxiliary_vs_main_same_word",
+      "level": 2,
+      "progress": { "current": 12, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ruko Raju, yahin sabse bada twist hai! 'HAVE, DO, BE' kabhi MAIN VERB bhi ban sakte hain apne aap mein, helping verb nahi." },
+        { "speaker": "raju", "text": "Matlab? Confuse ho gaya!" },
+        { "speaker": "aman", "text": "Dekho - 'I HAVE a car' - yahan 'have' matlab 'possess karna', ye khud MAIN verb hai. Lekin 'I HAVE eaten' mein 'have' helping hai kyunki 'eaten' main verb hai." },
+        { "speaker": "raju", "text": "Ohh! Toh check karna padega - akela khada hai (rakhna/karna) toh main verb, kisi aur verb ki madad kar raha hai toh helping verb!" }
+      ],
+      "navigation": { "next": "card_13_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_quiz1",
+      "card_slug": "card_13_quiz1",
+      "type": "quiz",
+      "concept_id": "be_do_have_auxiliary",
+      "level": 2,
+      "progress": { "current": 13, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) He do not / (B) like to eat / (C) spicy food at all / (D) No error",
+        "options": [
+          { "id": "A", "text": "He do not" },
+          { "id": "B", "text": "like to eat" },
+          { "id": "C", "text": "spicy food at all" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Subject 'He' third person singular hai, isliye auxiliary 'does' aayega, 'do' nahi. Correct: 'He does not'."
+      },
+      "navigation": { "next": "card_14_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_14_quiz2",
+      "card_slug": "card_14_quiz2",
+      "type": "quiz",
+      "concept_id": "auxiliary_vs_main_same_word",
+      "level": 2,
+      "progress": { "current": 14, "total": 96 },
+      "quiz_payload": {
+        "question": "In the sentence 'They have two houses in Patna', the word 'have' functions as:",
+        "options": [
+          { "id": "A", "text": "Auxiliary verb for perfect tense" },
+          { "id": "B", "text": "Main verb meaning 'possess'" },
+          { "id": "C", "text": "Modal verb" },
+          { "id": "D", "text": "Linking verb" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Yahan 'have' akela khada hai bina kisi doosre main verb ke, aur matlab hai 'rakhna/possess karna' - isliye ye Main Verb hai, Auxiliary nahi."
+      },
+      "navigation": { "next": "card_15_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz3",
+      "card_slug": "card_15_quiz3",
+      "type": "quiz",
+      "concept_id": "be_do_have_auxiliary",
+      "level": 2,
+      "progress": { "current": 15, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) She don't know / (B) how to solve / (C) this difficult problem / (D) No error",
+        "options": [
+          { "id": "A", "text": "She don't know" },
+          { "id": "B", "text": "how to solve" },
+          { "id": "C", "text": "this difficult problem" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'She' third person singular ke saath 'doesn't' aana chahiye, 'don't' nahi. Correct: 'She doesn't know'."
+      },
+      "navigation": { "next": "card_16_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_milestone2",
+      "card_slug": "card_16_milestone2",
+      "type": "milestone",
+      "concept_id": "auxiliary_module_complete",
+      "level": 2,
+      "progress": { "current": 16, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔧",
+        "completed_topic": "Main Verb vs Auxiliary Verb",
+        "xp_earned": 55,
+        "milestone_progress": "Module 2/12 Clear",
+        "motivational_quote": "Helping verb ka double role ab clear hai! Ab dekhte hain Transitive aur Intransitive Verb ka fark."
+      },
+      "navigation": { "next": "card_17_transitive_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_17_transitive_intro",
+      "card_slug": "card_17_transitive_intro",
+      "type": "chat",
+      "concept_id": "transitive_intro",
+      "level": 2,
+      "progress": { "current": 17, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, bolo 'Ram khata hai' - complete sentence lagta hai kya, ya kuch aur puchna padega?" },
+        { "speaker": "raju", "text": "Sir puchna padega - 'Ram KYA khata hai?' Roti? Chawal?" },
+        { "speaker": "aman", "text": "Bilkul sahi observation! Jab verb ke baad ek OBJECT (jispe action ho raha hai) zaroori ho sentence complete karne ke liye, use TRANSITIVE Verb kehte hain. 'Ram eats RICE' - rice hai object." },
+        { "speaker": "raju", "text": "Achha! Toh transitive verb ko hamesha ek object chahiye hota hai, warna sentence adhura lagta hai?" }
+      ],
+      "navigation": { "next": "card_18_intransitive_intro", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_18_intransitive_intro",
+      "card_slug": "card_18_intransitive_intro",
+      "type": "chat",
+      "concept_id": "intransitive_intro",
+      "level": 2,
+      "progress": { "current": 18, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab dusra type suno - 'Ram SOTA hai' (Ram sleeps) - iske baad kya 'Ram KYA sota hai?' poochoge?" },
+        { "speaker": "raju", "text": "Nahi sir, ye toh apne aap mein complete lag raha hai!" },
+        { "speaker": "aman", "text": "Exactly! Jab verb ke baad koi object ki zaroorat nahi hoti, use INTRANSITIVE Verb kehte hain - jaise sleep, cry, laugh, arrive, die." },
+        { "speaker": "raju", "text": "Achha! Toh transitive ko object chahiye, intransitive ko nahi - dono ka pehchaan yahi hai?" }
+      ],
+      "navigation": { "next": "card_19_same_verb_both_uses", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_same_verb_both_uses",
+      "card_slug": "card_19_same_verb_both_uses",
+      "type": "chat",
+      "concept_id": "same_verb_both_uses",
+      "level": 2,
+      "progress": { "current": 19, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "BPSC ka favorite trap suno - kuch verbs DONO roop mein use ho sakte hain, matlab badal jaata hai! Jaise 'RUN'." },
+        { "speaker": "raju", "text": "Matlab sir?" },
+        { "speaker": "aman", "text": "'He RUNS fast' - koi object nahi, ye Intransitive hai (bhaagna). Lekin 'He RUNS a business' - 'business' object hai, ye Transitive hai (chalana). Same word, alag meaning!" },
+        { "speaker": "raju", "text": "Hain?? Ye toh exam mein pakka confuse karega - same word dekh ke pata nahi chalega kaunsa type hai!" }
+      ],
+      "navigation": { "next": "card_20_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_quiz1",
+      "card_slug": "card_20_quiz1",
+      "type": "quiz",
+      "concept_id": "intransitive_intro",
+      "level": 2,
+      "progress": { "current": 20, "total": 96 },
+      "quiz_payload": {
+        "question": "In 'The baby cried all night', the verb 'cried' is:",
+        "options": [
+          { "id": "A", "text": "Transitive" },
+          { "id": "B", "text": "Intransitive" },
+          { "id": "C", "text": "Linking" },
+          { "id": "D", "text": "Modal" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Cried' ke baad koi object nahi hai jispe action ho raha ho, isliye ye Intransitive Verb hai."
+      },
+      "navigation": { "next": "card_21_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_21_quiz2",
+      "card_slug": "card_21_quiz2",
+      "type": "quiz",
+      "concept_id": "same_verb_both_uses",
+      "level": 2,
+      "progress": { "current": 21, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The thief entered / (B) into the house / (C) through the back door / (D) No error",
+        "options": [
+          { "id": "A", "text": "The thief entered" },
+          { "id": "B", "text": "into the house" },
+          { "id": "C", "text": "through the back door" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Enter' physical jagah ke liye transitive verb hai jo direct object leta hai, preposition 'into' nahi chahiye. Correct: 'entered the house'. 'Enter into' sirf agreement/contract/discussion jaise abstract cheezon ke liye use hota hai."
+      },
+      "navigation": { "next": "card_22_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_22_quiz3",
+      "card_slug": "card_22_quiz3",
+      "type": "quiz",
+      "concept_id": "same_verb_both_uses",
+      "level": 2,
+      "progress": { "current": 22, "total": 96 },
+      "quiz_payload": {
+        "question": "Choose the sentence where 'grow' is used TRANSITIVELY:",
+        "options": [
+          { "id": "A", "text": "Plants grow quickly in summer." },
+          { "id": "B", "text": "Farmers grow wheat in this region." },
+          { "id": "C", "text": "She grew tired of waiting." },
+          { "id": "D", "text": "The city has grown rapidly." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Grow wheat' mein 'wheat' object hai, isliye ye Transitive use hai. Baaki sentences mein koi object nahi hai, wo Intransitive/Linking use hai."
+      },
+      "navigation": { "next": "card_23_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_milestone3",
+      "card_slug": "card_23_milestone3",
+      "type": "milestone",
+      "concept_id": "transitive_intransitive_complete",
+      "level": 2,
+      "progress": { "current": 23, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎪",
+        "completed_topic": "Transitive vs Intransitive Verbs",
+        "xp_earned": 55,
+        "milestone_progress": "Module 3/12 Clear",
+        "motivational_quote": "Object wali pehchaan pakki ho gayi! Ab chalo Linking Verbs ki duniya mein - jahan koi action nahi, sirf jodh hota hai."
+      },
+      "navigation": { "next": "card_24_linking_verb_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_24_linking_verb_intro",
+      "card_slug": "card_24_linking_verb_intro",
+      "type": "chat",
+      "concept_id": "linking_verb_intro",
+      "level": 3,
+      "progress": { "current": 24, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, bolo 'Ye phal MEETHA HAI' - yahan 'hai' kya kaam kar raha hai, koi action dikha raha hai?" },
+        { "speaker": "raju", "text": "Nahi sir, koi action nahi hai, bas ye bata raha hai ki phal kaisa hai - meetha." },
+        { "speaker": "aman", "text": "Bilkul sahi! Jab verb koi action nahi dikhata, balki Subject ko uske baad aane wale ADJECTIVE/NOUN se JOD deta hai, use LINKING Verb kehte hain. 'This fruit IS sweet'." },
+        { "speaker": "raju", "text": "Achha! Toh 'is/am/are/was/were' jab action nahi dikha rahe sirf jodh rahe hain, tab wo Linking Verb hain?" }
+      ],
+      "navigation": { "next": "card_25_sense_verbs_linking", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_25_sense_verbs_linking",
+      "card_slug": "card_25_sense_verbs_linking",
+      "type": "chat",
+      "concept_id": "sense_verbs_linking",
+      "level": 3,
+      "progress": { "current": 25, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul! Ab sabse interesting part - kuch SENSE verbs (feel, look, smell, taste, sound) bhi LINKING verb ki tarah kaam karte hain jab wo QUALITY describe karte hain." },
+        { "speaker": "raju", "text": "Example dijiye sir!" },
+        { "speaker": "aman", "text": "'The soup TASTES good' - yahan 'tastes' action nahi dikha raha (soup khud kuch taste nahi kar raha), balki soup ki QUALITY 'good' se link kar raha hai." },
+        { "speaker": "raju", "text": "Achha! Toh ye sense verbs bhi kabhi Linking ban jaate hain jab quality describe karte hain?" }
+      ],
+      "navigation": { "next": "card_26_linking_vs_action_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_26_linking_vs_action_trap",
+      "card_slug": "card_26_linking_vs_action_trap",
+      "type": "chat",
+      "concept_id": "linking_vs_action_trap",
+      "level": 3,
+      "progress": { "current": 26, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Yahi sabse bada SBI PO trap hai! Linking verb ke baad hamesha ADJECTIVE aana chahiye, ADVERB nahi - kyunki Subject ko describe kar rahe hain, action ko nahi." },
+        { "speaker": "raju", "text": "Matlab? 'She feels BAD' ya 'She feels BADLY' - dono sahi hain kya?" },
+        { "speaker": "aman", "text": "'Feels' yahan Linking verb hai (uski emotional state batata hai), isliye adjective 'BAD' sahi hai. 'She feels BADLY' galat hai kyunki 'badly' adverb hai, wo action ko describe karta hai." },
+        { "speaker": "raju", "text": "Ohh! Toh Linking verb ke baad kabhi bhi '-ly' wala adverb nahi aana chahiye, sirf simple adjective aayega?" }
+      ],
+      "navigation": { "next": "card_27_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_27_quiz1",
+      "card_slug": "card_27_quiz1",
+      "type": "quiz",
+      "concept_id": "linking_vs_action_trap",
+      "level": 3,
+      "progress": { "current": 27, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The cake smells / (B) deliciously / (C) after baking / (D) No error",
+        "options": [
+          { "id": "A", "text": "The cake smells" },
+          { "id": "B", "text": "deliciously" },
+          { "id": "C", "text": "after baking" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Smells' yahan Linking verb hai (cake ki quality bata raha hai), isliye adjective 'delicious' aana chahiye, adverb 'deliciously' nahi."
+      },
+      "navigation": { "next": "card_28_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_28_quiz2",
+      "card_slug": "card_28_quiz2",
+      "type": "quiz",
+      "concept_id": "linking_vs_action_trap",
+      "level": 3,
+      "progress": { "current": 28, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) She felt badly / (B) about missing / (C) her best friend's wedding / (D) No error",
+        "options": [
+          { "id": "A", "text": "She felt badly" },
+          { "id": "B", "text": "about missing" },
+          { "id": "C", "text": "her best friend's wedding" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Felt' Linking verb hai (uski emotional state describe kar raha hai), isliye adjective 'bad' chahiye. Correct: 'She felt bad'."
+      },
+      "navigation": { "next": "card_29_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_29_quiz3",
+      "card_slug": "card_29_quiz3",
+      "type": "quiz",
+      "concept_id": "sense_verbs_linking",
+      "level": 3,
+      "progress": { "current": 29, "total": 96 },
+      "quiz_payload": {
+        "question": "Choose the sentence where 'looked' is used as a LINKING verb:",
+        "options": [
+          { "id": "A", "text": "He looked at the painting carefully." },
+          { "id": "B", "text": "She looked tired after the journey." },
+          { "id": "C", "text": "The policeman looked around the room." },
+          { "id": "D", "text": "They looked for the missing keys." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Looked tired' subject ki state describe kar raha hai (adjective follow ho raha hai), isliye ye Linking use hai. Baaki sentences mein 'looked' physical action (dekhna) dikha raha hai."
+      },
+      "navigation": { "next": "card_30_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_30_milestone4",
+      "card_slug": "card_30_milestone4",
+      "type": "milestone",
+      "concept_id": "linking_verb_complete",
+      "level": 3,
+      "progress": { "current": 30, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔗",
+        "completed_topic": "Linking Verbs",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/12 Clear",
+        "motivational_quote": "Adjective vs Adverb trap ab tumse dar ke bhagega! Ab chalte hain Modal Verbs ki taraf."
+      },
+      "navigation": { "next": "card_31_modal_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_31_modal_intro",
+      "card_slug": "card_31_modal_intro",
+      "type": "chat",
+      "concept_id": "modal_intro",
+      "level": 3,
+      "progress": { "current": 31, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, tumne kabhi mummy se suna 'Tum abhi ja SAKTE ho' ya 'Tumhe ye kaam karna CHAHIYE'? Ye 'sakte/chahiye' kya bata rahe hain?" },
+        { "speaker": "raju", "text": "Sir ye toh possibility ya zaroorat jaisa kuch bata rahe hain - 'sakte ho' matlab ability, 'chahiye' matlab advice." },
+        { "speaker": "aman", "text": "Bilkul sahi! English mein aise words - CAN, COULD, MAY, MIGHT, SHALL, SHOULD, WILL, WOULD, MUST - inhe MODAL Auxiliary Verb kehte hain, jo ability, possibility, permission, obligation batate hain." },
+        { "speaker": "raju", "text": "Achha! Toh ye bhi ek tarah ke helping verb hi hain, bas special kaam karte hain?" }
+      ],
+      "navigation": { "next": "card_32_modal_no_s_no_to", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_32_modal_no_s_no_to",
+      "card_slug": "card_32_modal_no_s_no_to",
+      "type": "chat",
+      "concept_id": "modal_no_s_no_to",
+      "level": 3,
+      "progress": { "current": 32, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab do STRICT rules jo SBI PO mein bahut poochhe jaate hain: Rule 1 - Modal ke baad kabhi 's' nahi lagta chahe subject 'He/She/It' ho. Rule 2 - Modal ke baad hamesha verb ka BASE FORM (bina 'to' ke) aata hai." },
+        { "speaker": "raju", "text": "Matlab 'He CANS swim' galat hai?" },
+        { "speaker": "aman", "text": "Bilkul galat! Correct hoga 'He CAN swim'. Aur 'He can TO swim' bhi galat hai, correct hai 'He CAN SWIM' - bina 'to' ke direct base verb." },
+        { "speaker": "raju", "text": "Achha! Toh Modal dikhte hi dimaag mein alarm bajna chahiye - na 's' na 'to', sirf plain verb!" }
+      ],
+      "navigation": { "next": "card_33_must_have_to_should_ought", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_33_must_have_to_should_ought",
+      "card_slug": "card_33_must_have_to_should_ought",
+      "type": "chat",
+      "concept_id": "must_have_to_should_ought",
+      "level": 3,
+      "progress": { "current": 33, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab obligation wale modals ka fark samjho - MUST matlab strong personal obligation, HAVE TO matlab external obligation (bahar se majboori), SHOULD/OUGHT TO matlab advice." },
+        { "speaker": "raju", "text": "Example dijiye sir, alag alag situation mein!" },
+        { "speaker": "aman", "text": "'I MUST complete this project' (khud ko zaroori lagna). 'I HAVE TO wear uniform' (school ka rule). 'You SHOULD drink more water' (sirf advice). Aur 'OUGHT TO' bhi 'should' jaisa hi hai but iske baad 'to' lagta hai - ye exception hai!" },
+        { "speaker": "raju", "text": "Achha! Toh 'ought to' hi ek aisa modal hai jisme 'to' lagta hai, baaki sab mein nahi?" }
+      ],
+      "navigation": { "next": "card_34_need_dare_semi_modal", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_34_need_dare_semi_modal",
+      "card_slug": "card_34_need_dare_semi_modal",
+      "type": "chat",
+      "concept_id": "need_dare_semi_modal",
+      "level": 3,
+      "progress": { "current": 34, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aakhri twist - NEED aur DARE ko 'Semi-Modal' kehte hain kyunki dono roop mein use ho sakte hain - kabhi Modal jaisa, kabhi Main verb jaisa." },
+        { "speaker": "raju", "text": "Matlab sir, dono tarah kaise?" },
+        { "speaker": "aman", "text": "Negative/Question mein Modal ki tarah: 'He NEED not worry' (na 's', na 'to'). Positive mein Main Verb ki tarah: 'He NEEDS to worry' (yahan 's' aur 'to' dono lagte hain)." },
+        { "speaker": "raju", "text": "Hain?? Ye toh double confusion hai - kabhi modal jaisa kabhi normal verb jaisa!" }
+      ],
+      "navigation": { "next": "card_35_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_35_quiz1",
+      "card_slug": "card_35_quiz1",
+      "type": "quiz",
+      "concept_id": "modal_no_s_no_to",
+      "level": 3,
+      "progress": { "current": 35, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) She musts / (B) complete her homework / (C) before going out to play / (D) No error",
+        "options": [
+          { "id": "A", "text": "She musts" },
+          { "id": "B", "text": "complete her homework" },
+          { "id": "C", "text": "before going out to play" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Modal verbs kabhi 's' nahi lete, chahe subject singular ho. Correct: 'She must'."
+      },
+      "navigation": { "next": "card_36_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_36_quiz2",
+      "card_slug": "card_36_quiz2",
+      "type": "quiz",
+      "concept_id": "modal_no_s_no_to",
+      "level": 3,
+      "progress": { "current": 36, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) You should to / (B) respect your / (C) elders and teachers / (D) No error",
+        "options": [
+          { "id": "A", "text": "You should to" },
+          { "id": "B", "text": "respect your" },
+          { "id": "C", "text": "elders and teachers" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Modal ke baad direct base verb aata hai, 'to' nahi lagta. Correct: 'You should respect'."
+      },
+      "navigation": { "next": "card_37_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_37_quiz3",
+      "card_slug": "card_37_quiz3",
+      "type": "quiz",
+      "concept_id": "need_dare_semi_modal",
+      "level": 3,
+      "progress": { "current": 37, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) He need not / (B) to worry about / (C) the result of the exam / (D) No error",
+        "options": [
+          { "id": "A", "text": "He need not" },
+          { "id": "B", "text": "to worry about" },
+          { "id": "C", "text": "the result of the exam" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Need' negative mein Modal ki tarah use hua hai, isliye baad mein 'to' nahi aayega. Correct: 'He need not worry about'."
+      },
+      "navigation": { "next": "card_38_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_38_milestone5",
+      "card_slug": "card_38_milestone5",
+      "type": "milestone",
+      "concept_id": "modal_complete",
+      "level": 3,
+      "progress": { "current": 38, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💪",
+        "completed_topic": "Modal Auxiliary Verbs",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/12 Clear",
+        "motivational_quote": "Modal ka 'no-s-no-to' rule pakka ho gaya! Ab shuru hota hai sabse important topic - Subject-Verb Agreement."
+      },
+      "navigation": { "next": "card_39_sva_basic_rule", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_39_sva_basic_rule",
+      "card_slug": "card_39_sva_basic_rule",
+      "type": "chat",
+      "concept_id": "sva_basic_rule",
+      "level": 4,
+      "progress": { "current": 39, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, 'Ram khelta hai' but 'Ram aur Shyam khelte hain' - notice kiya verb badal gaya 'khelta' se 'khelte'?" },
+        { "speaker": "raju", "text": "Haan sir, subject ek se do hua toh verb bhi badal gaya!" },
+        { "speaker": "aman", "text": "Bilkul! Isi ko SUBJECT-VERB AGREEMENT kehte hain - Universal Rule: Singular Subject lega Singular Verb, Plural Subject lega Plural Verb. 'He PLAYS' vs 'They PLAY'." },
+        { "speaker": "raju", "text": "Achha! Toh matching karna hai subject aur verb ka number, jaise puzzle ke pieces?" }
+      ],
+      "navigation": { "next": "card_40_sva_number_person", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_40_sva_number_person",
+      "card_slug": "card_40_sva_number_person",
+      "type": "chat",
+      "concept_id": "sva_number_person",
+      "level": 4,
+      "progress": { "current": 40, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi analogy! Ek extra layer - Third Person Singular (He/She/It/Ram) mein Present Tense verb mein 'S/ES' lagta hai. Baaki sab (I/We/You/They) mein plain verb aata hai." },
+        { "speaker": "raju", "text": "Toh 'I plays' galat hoga?" },
+        { "speaker": "aman", "text": "Bilkul galat! 'I PLAY' sahi hai (first person, 's' nahi). 'He PLAYS' sahi hai (third person singular, 's' lagega)." },
+        { "speaker": "raju", "text": "Achha! Toh 's/es' sirf He/She/It/Ram jaise singular third person ke saath hi lagta hai?" }
+      ],
+      "navigation": { "next": "card_41_intervening_phrase_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_41_intervening_phrase_trap",
+      "card_slug": "card_41_intervening_phrase_trap",
+      "type": "chat",
+      "concept_id": "intervening_phrase_trap",
+      "level": 4,
+      "progress": { "current": 41, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab BPSC ka favorite trap suno - jab Subject aur Verb ke BEECH mein ek lamba phrase aa jaaye, log confuse ho jaate hain." },
+        { "speaker": "raju", "text": "Matlab sir, example dijiye!" },
+        { "speaker": "aman", "text": "'The quality of these mangoes IS excellent' - asli subject hai 'quality' (singular), 'mangoes' sirf beech ka phrase hai. Verb hamesha ASLI SUBJECT se match karega!" },
+        { "speaker": "raju", "text": "Ohh! Toh 'of' ke baad jo bhi noun aaye, use ignore karke pehle wale asli subject ko dekhna hai?" }
+      ],
+      "navigation": { "next": "card_42_words_between_subject_verb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_42_words_between_subject_verb",
+      "card_slug": "card_42_words_between_subject_verb",
+      "type": "chat",
+      "concept_id": "words_between_subject_verb",
+      "level": 4,
+      "progress": { "current": 42, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Yehi sabse important exception hai - 'WITH, ALONG WITH, AS WELL AS, TOGETHER WITH' - ye subject ko PLURAL nahi banate, chahe kitne bhi naam jod diye jayein." },
+        { "speaker": "raju", "text": "Matlab? Example dijiye!" },
+        { "speaker": "aman", "text": "'The teacher, ALONG WITH her students, IS visiting the museum' - asli subject sirf 'teacher' hai (singular), baaki sirf extra info hai. Verb 'IS' singular hi rahega." },
+        { "speaker": "raju", "text": "Achha! Toh 'and' se subject plural banta hai but 'along with/as well as' se subject singular hi rehta hai - bahut tricky exception hai ye!" }
+      ],
+      "navigation": { "next": "card_43_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_43_quiz1",
+      "card_slug": "card_43_quiz1",
+      "type": "quiz",
+      "concept_id": "intervening_phrase_trap",
+      "level": 4,
+      "progress": { "current": 43, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The bunch of flowers / (B) on the table / (C) are looking very fresh / (D) No error",
+        "options": [
+          { "id": "A", "text": "The bunch of flowers" },
+          { "id": "B", "text": "on the table" },
+          { "id": "C", "text": "are looking very fresh" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Asli subject 'bunch' singular hai, 'flowers' sirf 'of' phrase ka hissa hai. Correct: 'is looking very fresh'."
+      },
+      "navigation": { "next": "card_44_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_44_quiz2",
+      "card_slug": "card_44_quiz2",
+      "type": "quiz",
+      "concept_id": "words_between_subject_verb",
+      "level": 4,
+      "progress": { "current": 44, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The Chief Minister, along with his cabinet ministers, / (B) were present / (C) at the inauguration ceremony / (D) No error",
+        "options": [
+          { "id": "A", "text": "The Chief Minister, along with his cabinet ministers," },
+          { "id": "B", "text": "were present" },
+          { "id": "C", "text": "at the inauguration ceremony" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Along with' subject ko plural nahi banata, asli subject 'Chief Minister' singular hai. Correct: 'was present'."
+      },
+      "navigation": { "next": "card_45_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_45_quiz3",
+      "card_slug": "card_45_quiz3",
+      "type": "quiz",
+      "concept_id": "intervening_phrase_trap",
+      "level": 4,
+      "progress": { "current": 45, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) One of the main reasons / (B) for his failure / (C) were his lack of preparation / (D) No error",
+        "options": [
+          { "id": "A", "text": "One of the main reasons" },
+          { "id": "B", "text": "for his failure" },
+          { "id": "C", "text": "were his lack of preparation" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'One' asli singular subject hai ('One of the reasons'), 'reasons' sirf preposition ka object hai. Correct: 'was his lack of preparation'."
+      },
+      "navigation": { "next": "card_46_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_46_milestone6",
+      "card_slug": "card_46_milestone6",
+      "type": "milestone",
+      "concept_id": "sva_basics_complete",
+      "level": 4,
+      "progress": { "current": 46, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🧩",
+        "completed_topic": "SVA Basics & Intervening Phrase Trap",
+        "xp_earned": 65,
+        "milestone_progress": "Module 6/12 Clear",
+        "motivational_quote": "Beech ke phrase ka trap ab pakad lete ho! Ab dekhте hain Collective, Uncountable aur Pair Nouns ka special agreement."
+      },
+      "navigation": { "next": "card_47_collective_noun_sva", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_47_collective_noun_sva",
+      "card_slug": "card_47_collective_noun_sva",
+      "type": "chat",
+      "concept_id": "collective_noun_sva",
+      "level": 4,
+      "progress": { "current": 47, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, 'The team IS playing well' ya 'The team ARE playing well' - kaunsa sahi hai?" },
+        { "speaker": "raju", "text": "Sir 'team' toh bahut logo se milkar bana hai, toh 'are' sahi lagta hai!" },
+        { "speaker": "aman", "text": "Achha guess but exam rule kehta hai - Collective Nouns (team, family, jury, class, committee) jab EK UNIT ki tarah act karte hain, tab SINGULAR verb lete hain: 'The team IS playing well'." },
+        { "speaker": "raju", "text": "Achha! Toh 'team/family/jury' jaise group words hamesha singular treat honge?" }
+      ],
+      "navigation": { "next": "card_48_uncountable_noun_sva", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_48_uncountable_noun_sva",
+      "card_slug": "card_48_uncountable_noun_sva",
+      "type": "chat",
+      "concept_id": "uncountable_noun_sva",
+      "level": 4,
+      "progress": { "current": 48, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur important category - UNCOUNTABLE Nouns jaise ADVICE, NEWS, FURNITURE, INFORMATION - ye dikhte plural jaise hain but hamesha SINGULAR verb lete hain." },
+        { "speaker": "raju", "text": "'News' plural lagta hai sir, 's' se khatam ho raha hai!" },
+        { "speaker": "aman", "text": "Bilkul yehi trap hai jo BPSC/SBI PO exploit karte hain! 'The NEWS IS shocking' sahi hai, 'The news ARE shocking' galat hai, chahe 'news' 's' se khatam hota ho." },
+        { "speaker": "raju", "text": "Hain?? 's' dekh ke toh main plural hi samjhunga, ye toh bahut bada trap hai sir!" }
+      ],
+      "navigation": { "next": "card_49_pair_noun_sva", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_49_pair_noun_sva",
+      "card_slug": "card_49_pair_noun_sva",
+      "type": "chat",
+      "concept_id": "pair_noun_sva",
+      "level": 4,
+      "progress": { "current": 49, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab isse ulta ek category - PAIR Nouns jaise SCISSORS, TROUSERS, SPECTACLES, GLASSES - ye hamesha PLURAL verb lete hain, chahe ek hi cheez ki baat ho rahi ho." },
+        { "speaker": "raju", "text": "Matlab sir 'ek scissors' bhi plural verb lega?" },
+        { "speaker": "aman", "text": "Bilkul! 'The SCISSORS ARE sharp' - ek hi scissors hai but do blades milke bante hain, isliye Plural treat hota hai. Agar 'PAIR OF' laga do toh 'A pair of scissors IS sharp' - tab singular ban jaata hai." },
+        { "speaker": "raju", "text": "Achha! Toh 'pair of' laga do toh singular, warna akela scissors/trousers hamesha plural!" }
+      ],
+      "navigation": { "next": "card_50_plural_form_singular_meaning", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_50_plural_form_singular_meaning",
+      "card_slug": "card_50_plural_form_singular_meaning",
+      "type": "chat",
+      "concept_id": "plural_form_singular_meaning",
+      "level": 4,
+      "progress": { "current": 50, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aakhri twist - kuch words 's' se khatam hote hain but ek SUBJECT/DISEASE/GAME ka naam hain, isliye SINGULAR verb lete hain: MATHEMATICS, PHYSICS, MEASLES, BILLIARDS." },
+        { "speaker": "raju", "text": "Sir ye toh bilkul 'news' jaisa hi hai na?" },
+        { "speaker": "aman", "text": "Bilkul sahi connection! 'MATHEMATICS IS my favourite subject', 'MEASLES IS a contagious disease' - dono singular. Ek Subject/disease/game ka naam ho toh singular hi lega." },
+        { "speaker": "raju", "text": "Achha! Toh ek pattern pakad liya - 'S' dekhke plural mat samjho, pehle check karo ye kaunsi category hai!" }
+      ],
+      "navigation": { "next": "card_51_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_51_quiz1",
+      "card_slug": "card_51_quiz1",
+      "type": "quiz",
+      "concept_id": "uncountable_noun_sva",
+      "level": 4,
+      "progress": { "current": 51, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The furniture in this house / (B) are very old / (C) and needs replacement / (D) No error",
+        "options": [
+          { "id": "A", "text": "The furniture in this house" },
+          { "id": "B", "text": "are very old" },
+          { "id": "C", "text": "and needs replacement" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Furniture' ek uncountable noun hai, isliye hamesha singular verb leta hai. Correct: 'is very old'."
+      },
+      "navigation": { "next": "card_52_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_52_quiz2",
+      "card_slug": "card_52_quiz2",
+      "type": "quiz",
+      "concept_id": "pair_noun_sva",
+      "level": 4,
+      "progress": { "current": 52, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) My new pair of trousers / (B) have shrunk / (C) after the first wash / (D) No error",
+        "options": [
+          { "id": "A", "text": "My new pair of trousers" },
+          { "id": "B", "text": "have shrunk" },
+          { "id": "C", "text": "after the first wash" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'A pair of' laga hone se asli subject 'pair' singular ban gaya hai. Correct: 'has shrunk'."
+      },
+      "navigation": { "next": "card_53_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_53_quiz3",
+      "card_slug": "card_53_quiz3",
+      "type": "quiz",
+      "concept_id": "plural_form_singular_meaning",
+      "level": 4,
+      "progress": { "current": 53, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Physics / (B) are considered / (C) a tough subject by most students / (D) No error",
+        "options": [
+          { "id": "A", "text": "Physics" },
+          { "id": "B", "text": "are considered" },
+          { "id": "C", "text": "a tough subject by most students" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Physics' ek subject ka naam hai, isliye 's' se khatam hone ke bawajood singular treat hoga. Correct: 'is considered'."
+      },
+      "navigation": { "next": "card_54_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_54_milestone7",
+      "card_slug": "card_54_milestone7",
+      "type": "milestone",
+      "concept_id": "special_nouns_sva_complete",
+      "level": 4,
+      "progress": { "current": 54, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📚",
+        "completed_topic": "Collective, Uncountable & Pair Noun Agreement",
+        "xp_earned": 65,
+        "milestone_progress": "Module 7/12 Clear",
+        "motivational_quote": "'S' dekhke dhoka khana ab band! Ab chalte hain Indefinite Pronoun aur Each/Every/Either/Neither ki taraf."
+      },
+      "navigation": { "next": "card_55_indefinite_pronoun_sva", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_55_indefinite_pronoun_sva",
+      "card_slug": "card_55_indefinite_pronoun_sva",
+      "type": "chat",
+      "concept_id": "indefinite_pronoun_sva",
+      "level": 5,
+      "progress": { "current": 55, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, 'EVERYONE IS ready' ya 'EVERYONE ARE ready' - kaunsa sahi lagta hai?" },
+        { "speaker": "raju", "text": "Sir 'everyone' matlab sab log, toh 'are' sahi lagna chahiye!" },
+        { "speaker": "aman", "text": "Yehi sabse common exam trap hai! Indefinite Pronouns jo 'ONE/BODY/THING' se khatam hote hain - EVERYONE, EVERYBODY, SOMEONE, NOBODY - sab grammatically SINGULAR hote hain." },
+        { "speaker": "raju", "text": "Achha! Toh 'EVERYONE IS ready' hi sahi hoga, chahe matlab 'sabka' feel aaye, verb singular hi rahega!" }
+      ],
+      "navigation": { "next": "card_56_each_every_sva", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_56_each_every_sva",
+      "card_slug": "card_56_each_every_sva",
+      "type": "chat",
+      "concept_id": "each_every_sva",
+      "level": 5,
+      "progress": { "current": 56, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab EACH aur EVERY ka rule suno - jab ye kisi Noun ke pehle aate hain, tab bhi subject SINGULAR hi treat hota hai." },
+        { "speaker": "raju", "text": "Example dijiye sir!" },
+        { "speaker": "aman", "text": "'EACH of the students HAS a laptop' - dhyan do, 'students' plural hai lekin 'Each' asli subject hai, isliye verb SINGULAR (has) hi rahega." },
+        { "speaker": "raju", "text": "Ohh! Toh 'each/every' dikhte hi turant singular verb bolna hai, chahe baad mein plural noun kyun na ho!" }
+      ],
+      "navigation": { "next": "card_57_either_neither_sva", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_57_either_neither_sva",
+      "card_slug": "card_57_either_neither_sva",
+      "type": "chat",
+      "concept_id": "either_neither_sva",
+      "level": 5,
+      "progress": { "current": 57, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Same rule EITHER aur NEITHER pe bhi lagta hai - dono hamesha SINGULAR verb lete hain jab akele use ho." },
+        { "speaker": "raju", "text": "'EITHER of the answers IS correct' - aisa hoga sir?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Lekin twist suno - jab EITHER...OR ya NEITHER...NOR do subjects ko jodta hai, tab verb NAZDEEK wale subject se match karta hai - 'Proximity Rule'." },
+        { "speaker": "raju", "text": "Achha! Toh 'Neither Ram nor his friends WERE present' - yahan 'friends' pass hai (plural) isliye 'were' aaya?" }
+      ],
+      "navigation": { "next": "card_58_many_a_sva", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_58_many_a_sva",
+      "card_slug": "card_58_many_a_sva",
+      "type": "chat",
+      "concept_id": "many_a_sva",
+      "level": 5,
+      "progress": { "current": 58, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aakhri interesting phrase - 'MANY A' hamesha SINGULAR noun aur SINGULAR verb leta hai, jabki sirf 'MANY' PLURAL leta hai." },
+        { "speaker": "raju", "text": "Sir 'Many a' aur 'Many' mein sirf 'a' ka hi toh farak hai, itna bada difference kaise?" },
+        { "speaker": "aman", "text": "Yahi exam ka favorite trick hai! 'MANY A STUDENT HAS failed' (singular). 'MANY STUDENTS HAVE failed' (plural). Chota sa 'a' pura structure singular bana deta hai." },
+        { "speaker": "raju", "text": "Achha! Toh chota sa 'a' pura sentence ka structure hi badal deta hai - dhyan se dekhna padega!" }
+      ],
+      "navigation": { "next": "card_59_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_59_quiz1",
+      "card_slug": "card_59_quiz1",
+      "type": "quiz",
+      "concept_id": "indefinite_pronoun_sva",
+      "level": 5,
+      "progress": { "current": 59, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Everybody in the class / (B) were excited / (C) about the upcoming picnic / (D) No error",
+        "options": [
+          { "id": "A", "text": "Everybody in the class" },
+          { "id": "B", "text": "were excited" },
+          { "id": "C", "text": "about the upcoming picnic" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Everybody' grammatically hamesha singular hota hai. Correct: 'was excited'."
+      },
+      "navigation": { "next": "card_60_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_60_quiz2",
+      "card_slug": "card_60_quiz2",
+      "type": "quiz",
+      "concept_id": "either_neither_sva",
+      "level": 5,
+      "progress": { "current": 60, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Neither of the two candidates / (B) have submitted / (C) the application form on time / (D) No error",
+        "options": [
+          { "id": "A", "text": "Neither of the two candidates" },
+          { "id": "B", "text": "have submitted" },
+          { "id": "C", "text": "the application form on time" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Neither' akele use hone par hamesha singular verb leta hai. Correct: 'has submitted'."
+      },
+      "navigation": { "next": "card_61_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_61_quiz3",
+      "card_slug": "card_61_quiz3",
+      "type": "quiz",
+      "concept_id": "many_a_sva",
+      "level": 5,
+      "progress": { "current": 61, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Many a soldier / (B) have sacrificed / (C) his life for the nation / (D) No error",
+        "options": [
+          { "id": "A", "text": "Many a soldier" },
+          { "id": "B", "text": "have sacrificed" },
+          { "id": "C", "text": "his life for the nation" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Many a' hamesha singular noun aur singular verb leta hai. Correct: 'has sacrificed'."
+      },
+      "navigation": { "next": "card_62_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_62_milestone8",
+      "card_slug": "card_62_milestone8",
+      "type": "milestone",
+      "concept_id": "indefinite_pronoun_module_complete",
+      "level": 5,
+      "progress": { "current": 62, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎲",
+        "completed_topic": "Indefinite Pronoun & Each/Every/Either/Neither",
+        "xp_earned": 65,
+        "milestone_progress": "Module 8/12 Clear",
+        "motivational_quote": "Everyone/Each/Neither ka singular rule pakka! Ab dekhte hain And/Or/Nor aur Inversion ke rules."
+      },
+      "navigation": { "next": "card_63_and_connector_sva", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_63_and_connector_sva",
+      "card_slug": "card_63_and_connector_sva",
+      "type": "chat",
+      "concept_id": "and_connector_sva",
+      "level": 5,
+      "progress": { "current": 63, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, 'Ram AND Shyam ARE going to market' - dekho 'and' se dono naam jud gaye, verb kaisa aaya?" },
+        { "speaker": "raju", "text": "Sir 'are' aaya, plural!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Universal Rule: Jab do subjects 'AND' se jude hon, verb hamesha PLURAL aata hai - ab do log mil ke ek combined subject ban gaye." },
+        { "speaker": "raju", "text": "Achha! Toh 'and' dekhte hi turant plural verb bol dena chahiye?" }
+      ],
+      "navigation": { "next": "card_64_or_nor_proximity_sva", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_64_or_nor_proximity_sva",
+      "card_slug": "card_64_or_nor_proximity_sva",
+      "type": "chat",
+      "concept_id": "or_nor_proximity_sva",
+      "level": 5,
+      "progress": { "current": 64, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul, lekin exception suno - 'OR' aur 'NOR' 'and' jaisa combine nahi karte, CHOICE dikhate hain. Isliye verb NAZDEEK wale subject se match hota hai." },
+        { "speaker": "raju", "text": "'Either Ram or his FRIENDS ARE coming' - yahan 'friends' pass hai isliye 'are'?" },
+        { "speaker": "aman", "text": "Ekdum sahi! Agar order palat do - 'Either his friends or RAM IS coming' - ab 'Ram' pass hai (singular) toh 'is' aayega. Ye 'Proximity Rule' hai." },
+        { "speaker": "raju", "text": "Achha! Toh 'and' = hamesha plural, 'or/nor' = jo pass hai usse match karo - dono rule clear ho gaye!" }
+      ],
+      "navigation": { "next": "card_65_there_here_inversion", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_65_there_here_inversion",
+      "card_slug": "card_65_there_here_inversion",
+      "type": "chat",
+      "concept_id": "there_here_inversion",
+      "level": 5,
+      "progress": { "current": 65, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab naya twist - jab sentence 'THERE' ya 'HERE' se start hota hai, tab verb apne saamne wale ASLI subject se match karta hai, na ki 'there/here' se." },
+        { "speaker": "raju", "text": "Matlab sir? Example dijiye!" },
+        { "speaker": "aman", "text": "'THERE IS a book on the table' (asli subject 'book' singular) vs 'THERE ARE many books on the table' (asli subject 'books' plural). Isse hi 'INVERSION' kehte hain kyunki verb pehle aa gaya, subject baad mein." },
+        { "speaker": "raju", "text": "Ohh! Toh 'there/here' ke baad wale asli noun ko dekh ke hi verb decide karna hai!" }
+      ],
+      "navigation": { "next": "card_66_question_inversion", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_66_question_inversion",
+      "card_slug": "card_66_question_inversion",
+      "type": "chat",
+      "concept_id": "question_inversion",
+      "level": 5,
+      "progress": { "current": 66, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aakhri example - Questions mein bhi Inversion hota hai, jaise 'IS he coming?' (normal order hota 'He is coming')." },
+        { "speaker": "raju", "text": "Sir toh questions mein bhi wahi purana rule - subject ko dhoondo, chahe kahin bhi ho?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Chahe verb pehle aaye ya baad mein, Subject-Verb Agreement ka rule kabhi nahi badalta - sirf position badalti hai." },
+        { "speaker": "raju", "text": "Achha, matlab position se dhoka nahi khana, asli subject dhoondh ke hi verb match karna hai!" }
+      ],
+      "navigation": { "next": "card_67_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_67_quiz1",
+      "card_slug": "card_67_quiz1",
+      "type": "quiz",
+      "concept_id": "there_here_inversion",
+      "level": 5,
+      "progress": { "current": 67, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) There is / (B) several reasons / (C) behind his sudden resignation / (D) No error",
+        "options": [
+          { "id": "A", "text": "There is" },
+          { "id": "B", "text": "several reasons" },
+          { "id": "C", "text": "behind his sudden resignation" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Asli subject 'reasons' plural hai, isliye 'there' ke baad plural verb aayega. Correct: 'There are'."
+      },
+      "navigation": { "next": "card_68_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_68_quiz2",
+      "card_slug": "card_68_quiz2",
+      "type": "quiz",
+      "concept_id": "or_nor_proximity_sva",
+      "level": 5,
+      "progress": { "current": 68, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Either the manager or the employees / (B) is responsible / (C) for this huge loss / (D) No error",
+        "options": [
+          { "id": "A", "text": "Either the manager or the employees" },
+          { "id": "B", "text": "is responsible" },
+          { "id": "C", "text": "for this huge loss" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Proximity Rule ke hisaab se nazdeek wala subject 'employees' plural hai. Correct: 'are responsible'."
+      },
+      "navigation": { "next": "card_69_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_69_quiz3",
+      "card_slug": "card_69_quiz3",
+      "type": "quiz",
+      "concept_id": "and_connector_sva",
+      "level": 5,
+      "progress": { "current": 69, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Ravi and his brother / (B) has decided / (C) to start a new business together / (D) No error",
+        "options": [
+          { "id": "A", "text": "Ravi and his brother" },
+          { "id": "B", "text": "has decided" },
+          { "id": "C", "text": "to start a new business together" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'And' se jude subjects plural verb lete hain. Correct: 'have decided'."
+      },
+      "navigation": { "next": "card_70_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_70_milestone9",
+      "card_slug": "card_70_milestone9",
+      "type": "milestone",
+      "concept_id": "connectors_inversion_complete",
+      "level": 5,
+      "progress": { "current": 70, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔀",
+        "completed_topic": "And/Or/Nor Connectors & Inversion",
+        "xp_earned": 65,
+        "milestone_progress": "Module 9/12 Clear",
+        "motivational_quote": "Proximity Rule aur Inversion mein expert ban gaye! Ab dekhте hain Distance/Money/Time aur Percentage ka special agreement."
+      },
+      "navigation": { "next": "card_71_distance_money_time_singular", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_71_distance_money_time_singular",
+      "card_slug": "card_71_distance_money_time_singular",
+      "type": "chat",
+      "concept_id": "distance_money_time_singular",
+      "level": 6,
+      "progress": { "current": 71, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, 'Ten kilometers IS a long distance' ya 'ARE a long distance' - kaunsa sahi?" },
+        { "speaker": "raju", "text": "Sir '10 km' plural jaisa lagta hai, 'are' bolna chahiye?" },
+        { "speaker": "aman", "text": "Yahi trap hai! Jab Distance, Money, Time ek SINGLE UNIT (poori matra) ki tarah treat ho, tab SINGULAR verb aata hai: 'Ten kilometers IS a long distance', 'Two hours IS enough time'." },
+        { "speaker": "raju", "text": "Achha! Toh 'quantity' ko ek poora block maan ke singular treat karna hai, alag-alag units nahi ginne?" }
+      ],
+      "navigation": { "next": "card_72_number_of_vs_a_number_of", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_72_number_of_vs_a_number_of",
+      "card_slug": "card_72_number_of_vs_a_number_of",
+      "type": "chat",
+      "concept_id": "number_of_vs_a_number_of",
+      "level": 6,
+      "progress": { "current": 72, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab bahut hi high-level trap suno - 'A NUMBER OF' matlab 'kayi/bahut se' - PLURAL verb leta hai. 'THE NUMBER OF' matlab 'sankhya' khud - SINGULAR verb leta hai." },
+        { "speaker": "raju", "text": "Sir ye toh bahut confusing hai, dono mein sirf 'A/The' ka hi farak hai!" },
+        { "speaker": "aman", "text": "Bilkul yehi officer-level trap hai! 'A NUMBER OF students HAVE passed' (plural). 'THE NUMBER OF students IN this class IS 40' (singular). Chota sa article poora meaning badal deta hai." },
+        { "speaker": "raju", "text": "Ohh! Toh 'A number of' = bahut se (plural), 'The number of' = ginti khud (singular) - yaad rakh liya sir!" }
+      ],
+      "navigation": { "next": "card_73_percentage_fraction_of_sva", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_73_percentage_fraction_of_sva",
+      "card_slug": "card_73_percentage_fraction_of_sva",
+      "type": "chat",
+      "concept_id": "percentage_fraction_of_sva",
+      "level": 6,
+      "progress": { "current": 73, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Aakhri important rule - Percentage aur Fraction ke baad verb 'OF' ke baad wale NOUN se match karta hai, khud percentage se nahi." },
+        { "speaker": "raju", "text": "Example dijiye sir!" },
+        { "speaker": "aman", "text": "'50% of the STUDENTS ARE present' (students plural). '50% of the WORK IS done' (work singular). Same '50%' but verb badal gaya kyunki 'of' ke baad wala noun badal gaya!" },
+        { "speaker": "raju", "text": "Achha! Toh percentage/fraction khud kuch decide nahi karta, jo uske baad 'of' mein noun hai wahi decide karega singular ya plural!" }
+      ],
+      "navigation": { "next": "card_74_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_74_quiz1",
+      "card_slug": "card_74_quiz1",
+      "type": "quiz",
+      "concept_id": "distance_money_time_singular",
+      "level": 6,
+      "progress": { "current": 74, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Twenty kilometers / (B) are too long a distance / (C) to walk in this heat / (D) No error",
+        "options": [
+          { "id": "A", "text": "Twenty kilometers" },
+          { "id": "B", "text": "are too long a distance" },
+          { "id": "C", "text": "to walk in this heat" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Distance ek single unit/quantity ki tarah treat hoti hai, isliye singular verb aayega. Correct: 'is too long a distance'."
+      },
+      "navigation": { "next": "card_75_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_75_quiz2",
+      "card_slug": "card_75_quiz2",
+      "type": "quiz",
+      "concept_id": "number_of_vs_a_number_of",
+      "level": 6,
+      "progress": { "current": 75, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The number of accidents / (B) on this highway / (C) have increased alarmingly / (D) No error",
+        "options": [
+          { "id": "A", "text": "The number of accidents" },
+          { "id": "B", "text": "on this highway" },
+          { "id": "C", "text": "have increased alarmingly" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'The number of' hamesha singular verb leta hai. Correct: 'has increased alarmingly'."
+      },
+      "navigation": { "next": "card_76_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_76_quiz3",
+      "card_slug": "card_76_quiz3",
+      "type": "quiz",
+      "concept_id": "percentage_fraction_of_sva",
+      "level": 6,
+      "progress": { "current": 76, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Nearly 30% of / (B) the mangoes in this basket / (C) is rotten / (D) No error",
+        "options": [
+          { "id": "A", "text": "Nearly 30% of" },
+          { "id": "B", "text": "the mangoes in this basket" },
+          { "id": "C", "text": "is rotten" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Of' ke baad 'mangoes' plural hai, isliye verb bhi plural aayega. Correct: 'are rotten'."
+      },
+      "navigation": { "next": "card_77_milestone10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_77_milestone10",
+      "card_slug": "card_77_milestone10",
+      "type": "milestone",
+      "concept_id": "quantity_sva_complete",
+      "level": 6,
+      "progress": { "current": 77, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💰",
+        "completed_topic": "Distance/Money/Time/Percentage Agreement",
+        "xp_earned": 65,
+        "milestone_progress": "Module 10/12 Clear",
+        "motivational_quote": "'A number of' vs 'The number of' ka trap pakad liya! Ab chalte hain Non-Finite Verbs ki gehrai mein."
+      },
+      "navigation": { "next": "card_78_infinitive_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_78_infinitive_intro",
+      "card_slug": "card_78_infinitive_intro",
+      "type": "chat",
+      "concept_id": "infinitive_intro",
+      "level": 6,
+      "progress": { "current": 78, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, 'TO WIN this match is my dream' - yahan 'to win' kya role play kar raha hai, verb hai ya kuch aur?" },
+        { "speaker": "raju", "text": "Sir action jaisa lag raha hai but 'is' bhi hai sentence mein, confusion ho raha hai!" },
+        { "speaker": "aman", "text": "Achha observation! 'TO WIN' yahan NOUN ki tarah kaam kar raha hai (subject bana hua hai). Isko INFINITIVE kehte hain - 'TO + Base Verb' jo Noun, Adjective, ya Adverb ki tarah use ho sakta hai." },
+        { "speaker": "raju", "text": "Achha! Toh 'to win' sentence ka asli subject hai, aur 'is' hi asli (finite) verb hai?" }
+      ],
+      "navigation": { "next": "card_79_gerund_intro", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_79_gerund_intro",
+      "card_slug": "card_79_gerund_intro",
+      "type": "chat",
+      "concept_id": "gerund_intro",
+      "level": 6,
+      "progress": { "current": 79, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek aur form dekho - 'SWIMMING is my favourite exercise.' Yahan 'swimming' bhi ek verb form hai but noun ki tarah use ho raha hai (subject hai)." },
+        { "speaker": "raju", "text": "Sir ye toh 'to win' jaisa hi kaam kar raha hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi observe kiya! Farak sirf itna hai - 'Verb+ING' jab NOUN ki tarah use ho, use GERUND kehte hain." },
+        { "speaker": "raju", "text": "Achha! Toh Infinitive (to+verb) aur Gerund (verb+ing) dono NOUN ki tarah kaam kar sakte hain?" }
+      ],
+      "navigation": { "next": "card_80_participle_intro", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_80_participle_intro",
+      "card_slug": "card_80_participle_intro",
+      "type": "chat",
+      "concept_id": "participle_intro",
+      "level": 6,
+      "progress": { "current": 80, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab teesra form suno - 'The CRYING baby needs attention.' Yahan 'crying' bhi 'verb+ing' hai but ye NOUN nahi, ADJECTIVE ki tarah 'baby' ko describe kar raha hai." },
+        { "speaker": "raju", "text": "Sir ye toh 'swimming' jaisa hi dikhta hai but kaam alag kar raha hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Yahi hai PARTICIPLE - verb ka wo form jo ADJECTIVE ki tarah kaam karta hai. Present Participle (crying baby), aur Past Participle jaise 'BROKEN chair'." },
+        { "speaker": "raju", "text": "Achha! Toh 'Verb+ing' dekhke turant pata nahi chalega Gerund hai ya Participle - dekhna padega wo kis role mein hai?" }
+      ],
+      "navigation": { "next": "card_81_gerund_vs_participle_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_81_gerund_vs_participle_trap",
+      "card_slug": "card_81_gerund_vs_participle_trap",
+      "type": "chat",
+      "concept_id": "gerund_vs_participle_trap",
+      "level": 6,
+      "progress": { "current": 81, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi doubt! Trick yaad rakho: agar 'Verb+ing' SUBJECT/OBJECT (naam ki jagah) hai, toh GERUND. Agar 'Verb+ing' kisi NOUN ko describe kar raha hai, toh PARTICIPLE." },
+        { "speaker": "raju", "text": "Ek confusing example dijiye jisme dono ek jaise dikhein!" },
+        { "speaker": "aman", "text": "'I saw him SWIMMING in the river' - 'swimming' yahan 'him' ko describe kar raha hai, isliye Participle hai. Lekin 'SWIMMING is good exercise' - yahan 'swimming' khud subject hai, isliye Gerund hai." },
+        { "speaker": "raju", "text": "Hain?? Same spelling but role dekh ke naam badal jaata hai - ye toh exam mein pakka trap banega sir!" }
+      ],
+      "navigation": { "next": "card_82_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_82_quiz1",
+      "card_slug": "card_82_quiz1",
+      "type": "quiz",
+      "concept_id": "gerund_intro",
+      "level": 6,
+      "progress": { "current": 82, "total": 96 },
+      "quiz_payload": {
+        "question": "Identify the function of the underlined word: 'READING novels is her favourite hobby.'",
+        "options": [
+          { "id": "A", "text": "Gerund (acting as subject)" },
+          { "id": "B", "text": "Present Participle (acting as adjective)" },
+          { "id": "C", "text": "Infinitive" },
+          { "id": "D", "text": "Finite verb" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Reading' yahan sentence ka subject bana hua hai (naam ki jagah), isliye ye Gerund hai."
+      },
+      "navigation": { "next": "card_83_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_83_quiz2",
+      "card_slug": "card_83_quiz2",
+      "type": "quiz",
+      "concept_id": "participle_intro",
+      "level": 6,
+      "progress": { "current": 83, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) Being a rainy day, / (B) we decided to / (C) stay indoors and watch a movie / (D) No error",
+        "options": [
+          { "id": "A", "text": "Being a rainy day," },
+          { "id": "B", "text": "we decided to" },
+          { "id": "C", "text": "stay indoors and watch a movie" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Being a rainy day' ek dangling participle hai - ye illogically 'we' ko modify kar raha hai (hum toh 'rainy day' nahi hain). Correct: 'It being a rainy day,' or 'As it was a rainy day,'."
+      },
+      "navigation": { "next": "card_84_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_84_quiz3",
+      "card_slug": "card_84_quiz3",
+      "type": "quiz",
+      "concept_id": "gerund_vs_participle_trap",
+      "level": 6,
+      "progress": { "current": 84, "total": 96 },
+      "quiz_payload": {
+        "question": "Choose the sentence where the '-ing' word functions as a PARTICIPLE (adjective), not a Gerund:",
+        "options": [
+          { "id": "A", "text": "Cooking is a useful skill." },
+          { "id": "B", "text": "I enjoy cooking on weekends." },
+          { "id": "C", "text": "The cooking oil spilled on the floor." },
+          { "id": "D", "text": "Her cooking is excellent." }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Cooking oil' mein 'cooking' 'oil' ko describe kar raha hai (adjective), baaki sab options mein 'cooking' subject/object (Gerund) ki tarah use hua hai."
+      },
+      "navigation": { "next": "card_85_milestone11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_85_milestone11",
+      "card_slug": "card_85_milestone11",
+      "type": "milestone",
+      "concept_id": "nonfinite_module_complete",
+      "level": 6,
+      "progress": { "current": 85, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎭",
+        "completed_topic": "Non-Finite Verbs: Infinitive, Gerund & Participle",
+        "xp_earned": 70,
+        "milestone_progress": "Module 11/12 Clear",
+        "motivational_quote": "Gerund vs Participle trap ab tumse dar ke bhagega! Aakhri module - Confusing Verb Pairs aur Causative Verbs."
+      },
+      "navigation": { "next": "card_86_lay_lie_trap", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_86_lay_lie_trap",
+      "card_slug": "card_86_lay_lie_trap",
+      "type": "chat",
+      "concept_id": "lay_lie_trap",
+      "level": 7,
+      "progress": { "current": 86, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, 'Main roz raat ko bistar pe LETTA hoon' - English mein 'I LAY down' ya 'I LIE down' bologe?" },
+        { "speaker": "raju", "text": "Sir mujhe lagta hai 'lay' sahi hoga, log aisa hi bolte hain!" },
+        { "speaker": "aman", "text": "Yahi sabse bada confusion hai! 'LIE' (lie-lay-lain) matlab khud LETNA (intransitive) - 'I LIE down every night'. 'LAY' (lay-laid-laid) matlab kisi cheez ko RAKHNA (transitive) - 'I LAY the book on the table'." },
+        { "speaker": "raju", "text": "Sir isse toh aur confuse ho gaya - 'lay' khud 'lie' ka past tense bhi hai aur alag verb bhi hai?" }
+      ],
+      "navigation": { "next": "card_87_rise_raise_arise_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_87_rise_raise_arise_trap",
+      "card_slug": "card_87_rise_raise_arise_trap",
+      "type": "chat",
+      "concept_id": "rise_raise_arise_trap",
+      "level": 7,
+      "progress": { "current": 87, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda tricky part! 'LIE' ka past tense hai 'LAY', isliye 'Yesterday, I LAY down' bhi sahi hai. Ab isi tarah RISE, RAISE, ARISE ka fark bhi samjho." },
+        { "speaker": "raju", "text": "Sir example dijiye teeno ka!" },
+        { "speaker": "aman", "text": "'RISE' (khud upar jaana, intransitive) - 'The sun RISES'. 'RAISE' (kisi ko upar uthana, transitive) - 'Please RAISE your hand'. 'ARISE' (problem/situation paida hona) - 'A problem HAS ARISEN'." },
+        { "speaker": "raju", "text": "Achha! Toh 'Rise' physical upar jaana, 'Raise' kisi ko upar uthana, 'Arise' sirf problem/situation ke liye - teeno alag!" }
+      ],
+      "navigation": { "next": "card_88_sit_set_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_88_sit_set_trap",
+      "card_slug": "card_88_sit_set_trap",
+      "type": "chat",
+      "concept_id": "sit_set_trap",
+      "level": 7,
+      "progress": { "current": 88, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aakhri jodi - SIT aur SET. 'SIT' (sit-sat-sat) matlab khud BAITHNA (intransitive) - 'Please SIT here'. 'SET' (set-set-set) matlab kisi cheez ko RAKHNA (transitive) - 'She SET the plate on the table'." },
+        { "speaker": "raju", "text": "Sir 'set' ka past tense bhi 'set' hi hai? Wo toh bilkul nahi badla!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! 'SET' ek IRREGULAR verb hai jiska base, past, aur past participle - teeno form SAME rehte hain: set-set-set. Ye exception yaad rakhna zaroori hai." },
+        { "speaker": "raju", "text": "Achha! Toh SIT/RISE/LIE apne aap kuch karte hain (intransitive), aur SET/RAISE/LAY kisi doosri cheez pe kaam karte hain (transitive) - ye pattern yaad rakh sakta hoon!" }
+      ],
+      "navigation": { "next": "card_89_causative_verbs", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_89_causative_verbs",
+      "card_slug": "card_89_causative_verbs",
+      "type": "chat",
+      "concept_id": "causative_verbs",
+      "level": 7,
+      "progress": { "current": 89, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek naya concept - CAUSATIVE Verbs (Make, Let, Have, Get) - jab Subject khud kaam nahi karta, balki KISI AUR SE karwata hai." },
+        { "speaker": "raju", "text": "Matlab sir?" },
+        { "speaker": "aman", "text": "'I HAD my hair CUT' - maine khud baal nahi kaate, kisi barber se katwaye. Pattern: HAVE/GET + Object + Past Participle. Aur MAKE/LET + Object + Base Verb (bina 'to' ke) - 'He MADE me CRY'." },
+        { "speaker": "raju", "text": "Sir ye 'Make' ke baad 'to' kyun nahi laga, jabki normal verb ke baad toh 'to' lagta hai?" }
+      ],
+      "navigation": { "next": "card_90_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_90_quiz1",
+      "card_slug": "card_90_quiz1",
+      "type": "quiz",
+      "concept_id": "lay_lie_trap",
+      "level": 7,
+      "progress": { "current": 90, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The old man / (B) laid down on the bench / (C) and fell asleep instantly / (D) No error",
+        "options": [
+          { "id": "A", "text": "The old man" },
+          { "id": "B", "text": "laid down on the bench" },
+          { "id": "C", "text": "and fell asleep instantly" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Yahan koi object nahi hai (khud reclined kiya), isliye intransitive 'LAY' (past of LIE) chahiye, 'laid' nahi. Correct: 'lay down on the bench'."
+      },
+      "navigation": { "next": "card_91_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_91_quiz2",
+      "card_slug": "card_91_quiz2",
+      "type": "quiz",
+      "concept_id": "rise_raise_arise_trap",
+      "level": 7,
+      "progress": { "current": 91, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) The price of vegetables / (B) has raised sharply / (C) due to the recent floods / (D) No error",
+        "options": [
+          { "id": "A", "text": "The price of vegetables" },
+          { "id": "B", "text": "has raised sharply" },
+          { "id": "C", "text": "due to the recent floods" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Price' khud upar gaya, koi object nahi hai, isliye intransitive 'risen' chahiye. Correct: 'has risen sharply'."
+      },
+      "navigation": { "next": "card_92_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_92_quiz3",
+      "card_slug": "card_92_quiz3",
+      "type": "quiz",
+      "concept_id": "causative_verbs",
+      "level": 7,
+      "progress": { "current": 92, "total": 96 },
+      "quiz_payload": {
+        "question": "Find the error (SBI PO Style): (A) I will get my house / (B) paint before / (C) the wedding next month / (D) No error",
+        "options": [
+          { "id": "A", "text": "I will get my house" },
+          { "id": "B", "text": "paint before" },
+          { "id": "C", "text": "the wedding next month" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Causative structure 'GET + Object + Past Participle' chahiye kyunki kaam kisi aur se karwaya ja raha hai. Correct: 'get my house painted before'."
+      },
+      "navigation": { "next": "card_93_milestone12", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_93_milestone12",
+      "card_slug": "card_93_milestone12",
+      "type": "milestone",
+      "concept_id": "confusing_pairs_causative_complete",
+      "level": 7,
+      "progress": { "current": 93, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔥",
+        "completed_topic": "Confusing Verb Pairs & Causative Verbs",
+        "xp_earned": 70,
+        "milestone_progress": "Module 12/12 Clear",
+        "motivational_quote": "Saare 12 modules clear! Lay/Lie, Rise/Raise, Sit/Set ab kabhi confuse nahi karenge. Ab chalo officer-level final revision ki taraf!"
+      },
+      "navigation": { "next": "card_94_officer_revision", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_94_officer_revision",
+      "card_slug": "card_94_officer_revision",
+      "type": "summary",
+      "concept_id": "chapter_revision",
+      "level": 8,
+      "progress": { "current": 94, "total": 96 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Verb",
+        "revision_points": [
+          {
+            "topic": "Statement Check - Finite/Non-Finite & Modal Rule",
+            "point": "Statement I: A Finite verb changes with subject and tense, while a Non-Finite verb (infinitive/gerund/participle) never changes. Statement II: Modal verbs never take 's' with third person singular subjects, nor are they followed directly by 'to' (except 'ought to'). Both statements are CORRECT."
+          },
+          {
+            "topic": "Statement Check - Collective/Uncountable Noun Agreement",
+            "point": "Statement I: Collective nouns take singular verbs when acting as one unit, but can take plural verbs when members act individually. Statement II: Uncountable nouns like 'news', 'furniture', 'advice' always take singular verbs despite looking plural. Both statements are CORRECT."
+          },
+          {
+            "topic": "Statement Check - Indefinite Pronoun & Many a",
+            "point": "Statement I: Indefinite pronouns ending in -one/-body/-thing are always singular. Statement II: 'Many a + singular noun' takes a singular verb, while 'Many + plural noun' takes a plural verb. Both statements are CORRECT."
+          },
+          {
+            "topic": "Statement Check - And/Or/Nor Connector Rule",
+            "point": "Statement I: Subjects joined by 'and' always take a plural verb. Statement II: Subjects joined by 'or/nor' make the verb agree with the nearest subject (Proximity Rule). Both statements are CORRECT."
+          },
+          {
+            "topic": "Statement Check - Confusing Verb Pairs",
+            "point": "Statement I: 'Lie' (intransitive, no object) means to recline, while 'Lay' (transitive, needs object) means to place something down. Statement II: The past tense of 'Lie' is also spelled 'Lay', which frequently causes confusion. Both statements are CORRECT."
+          }
+        ]
+      },
+      "navigation": { "next": "card_95_final_master_quiz", "button_text": "Attempt Final Master Quiz ➔" }
+    },
+    {
+      "card_id": "card_95_final_master_quiz",
+      "card_slug": "card_95_final_master_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_assessment",
+      "level": 8,
+      "progress": { "current": 95, "total": 96 },
+      "quiz_payload": {
+        "question": "Consider the following statements regarding Verb usage and Subject-Verb Agreement:\nStatement I: In 'The jury have given their verdict', the plural verb 'have' is correct because the members of the jury are acting individually with differing opinions.\nStatement II: In 'A number of students has failed the exam', the singular verb 'has' is correct because 'a number of' always takes a singular verb.\nStatement III: In 'Neither the manager nor the employees was informed', the verb 'was' is correct as per the Proximity Rule.\nWhich of the above statements is/are CORRECT?",
+        "options": [
+          { "id": "A", "text": "Only Statement I" },
+          { "id": "B", "text": "Statements I and II" },
+          { "id": "C", "text": "Statements II and III" },
+          { "id": "D", "text": "All three statements" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement I is CORRECT: When jury members act individually (differing verdicts), plural verb 'have' is used. Statement II is INCORRECT: 'A number of' ALWAYS takes a PLURAL verb ('have failed'), not singular - this is a reversed trap with 'The number of' (which is singular). Statement III is INCORRECT: By Proximity Rule, the nearer subject 'employees' is plural, so the verb should be 'were', not 'was'. Hence only Statement I is correct - Option A."
+      },
+      "navigation": { "next": "card_96_trophy", "button_text": "Submit & See Result ➔" }
+    },
+    {
+      "card_id": "card_96_trophy",
+      "card_slug": "card_96_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 8,
+      "progress": { "current": 96, "total": 96 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER CHAMPION! 🏆",
+        "badge_emoji": "🏅",
+        "completed_topic": "Verb - Complete SBI PO Level Mastery",
+        "xp_earned": 150,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Raju se Officer tak ka safar poora hua! Finite/Non-Finite, Modals, Subject-Verb Agreement ke saare traps, Gerund vs Participle, aur Confusing Verb Pairs - sab kuch SBI PO level pe crack kar sakte ho. Ab practice sets mein jaake apni speed test karo, Officer banna tay hai!"
+      },
+      "navigation": { "next": "card_01_intro", "button_text": "Restart Chapter 🔄" }
+    }
+  ]
+}
+```
