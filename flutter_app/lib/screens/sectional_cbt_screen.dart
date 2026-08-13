@@ -40,7 +40,9 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   @override
   void initState() {
     super.initState();
-    _isHindi = widget.subFolder.contains('bssc') || widget.subFolder.contains('bpsc');
+    _isHindi = widget.subFolder.contains('bssc') ||
+        widget.subFolder.contains('bpsc') ||
+        widget.subFolder.contains('bihar_si');
     _startTimers();
     _checkBookmarkStatus();
   }
@@ -98,12 +100,16 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   // 📌 Toggle Bookmark Action
   void _toggleBookmarkQuestion() async {
     final currentQ = widget.questions[_currentIndex];
+    final currentOpts = currentQ.getOptions(_isHindi);
+
     Map<String, dynamic> qJson = {
       'qe': currentQ.qe,
       'qh': currentQ.qh,
       'se': currentQ.se,
       'sh': currentQ.sh,
-      'options': currentQ.options,
+      'oe': currentQ.oe,
+      'oh': currentQ.oh,
+      'options': currentOpts,
       'answerIndex': currentQ.answerIndex,
       'explanation': currentQ.explanation,
     };
@@ -133,6 +139,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     for (int i = 0; i < widget.questions.length; i++) {
       final q = widget.questions[i];
       final userAns = _userAnswers[i]; // null if skipped / unattempted
+      final currentOpts = q.getOptions(_isHindi);
 
       if (userAns != null) {
         bool isCorrect = (userAns == q.answerIndex);
@@ -156,11 +163,13 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
               'qh': q.qh,
               'se': q.se,
               'sh': q.sh,
-              'options': q.options,
+              'oe': q.oe,
+              'oh': q.oh,
+              'options': currentOpts,
               'answerIndex': q.answerIndex,
               'explanation': q.explanation,
             },
-            userSelectedOption: q.options[userAns],
+            userSelectedOption: currentOpts[userAns],
           );
         }
       }
@@ -186,6 +195,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
     final currentQ = widget.questions[_currentIndex];
     final String qText = currentQ.getText(_isHindi);
+    final List<String> currentOpts = currentQ.getOptions(_isHindi);
     final List<String>? statements = _isHindi ? currentQ.sh : currentQ.se;
 
     return Scaffold(
@@ -291,7 +301,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                     const SizedBox(height: 12),
                   ],
 
-                  ...List.generate(currentQ.options.length, (optIdx) {
+                  ...List.generate(currentOpts.length, (optIdx) {
                     final isSelected = _userAnswers[_currentIndex] == optIdx;
                     return Container(
                       margin: const EdgeInsets.symmetric(vertical: 6),
@@ -313,7 +323,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                                 child: Text(String.fromCharCode(65 + optIdx), style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: isSelected ? Colors.white : Colors.black87)),
                               ),
                               const SizedBox(width: 12),
-                              Expanded(child: LatexText(currentQ.options[optIdx], style: TextStyle(fontSize: 13.5, color: Colors.black87, fontWeight: isSelected ? FontWeight.bold : FontWeight.normal))),
+                              Expanded(child: LatexText(currentOpts[optIdx], style: TextStyle(fontSize: 13.5, color: Colors.black87, fontWeight: isSelected ? FontWeight.bold : FontWeight.normal))),
                             ],
                           ),
                         ),
@@ -400,6 +410,10 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       score = (correct * 1.0) - (wrong * 0.33);
       cutoffTarget = 21.00;
       examName = "BPSC Prelims";
+    } else if (widget.subFolder.contains('bihar_si')) {
+      score = (correct * 2.0) - (wrong * 0.40);
+      cutoffTarget = 130.00;
+      examName = "Bihar SI Prelims";
     } else {
       score = (correct * 1.0) - (wrong * 0.25);
       cutoffTarget = 22.00;
@@ -479,6 +493,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
               final userAns = _userAnswers[i];
               final isCorrect = userAns == q.answerIndex;
               final timeSpent = _questionTimers[i] ?? 0;
+              final qOpts = q.getOptions(_isHindi);
 
               return Card(
                 margin: const EdgeInsets.symmetric(vertical: 8),
@@ -487,10 +502,10 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Q${i + 1}. ${q.qe}", style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black87, fontSize: 14)),
+                      Text("Q${i + 1}. ${q.getText(_isHindi)}", style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black87, fontSize: 14)),
                       const SizedBox(height: 6),
-                      Text("Your Answer: ${userAns != null ? q.options[userAns] : 'Skipped'}", style: TextStyle(color: isCorrect ? Colors.green : Colors.red, fontWeight: FontWeight.bold, fontSize: 13)),
-                      Text("Correct Answer: ${q.options[q.answerIndex]}", style: const TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 13)),
+                      Text("Your Answer: ${userAns != null ? qOpts[userAns] : 'Skipped'}", style: TextStyle(color: isCorrect ? Colors.green : Colors.red, fontWeight: FontWeight.bold, fontSize: 13)),
+                      Text("Correct Answer: ${qOpts[q.answerIndex]}", style: const TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 13)),
                       const SizedBox(height: 4),
                       Text("⏱️ Time Spent: ${timeSpent}s", style: const TextStyle(fontSize: 11, color: Colors.grey)),
                       const SizedBox(height: 8),
@@ -531,7 +546,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                             WikiContributionBox(
                               subFolder: widget.subFolder,
                               qIndex: i,
-                              questionSnippet: q.qe,
+                              questionSnippet: q.getText(_isHindi),
                             ),
                           ],
                         ),
