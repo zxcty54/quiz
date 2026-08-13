@@ -1,0 +1,2484 @@
+{
+  "topic_id": "solar_system_full",
+  "topic_title": "Solar System - Complete Geography & Space Science",
+  "target_exams": [
+    "BPSC",
+    "BSSC",
+    "RRB NTPC",
+    "SSC CGL",
+    "NEET",
+    "UPSC Prelims",
+    "BPSC TRE"
+  ],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "intro_solar_system",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "🌌 Solar System",
+        "subtitle": "Complete Space Science for Competitive Exams",
+        "icon": "🪐",
+        "target_exams": [
+          "BPSC",
+          "BSSC",
+          "Railway RRB NTPC",
+          "SSC CGL",
+          "NEET",
+          "UPSC Prelims",
+          "BPSC TRE"
+        ],
+        "learning_outcomes": [
+          "Formation & Structure of Solar System",
+          "Sun - Nuclear Reactions & Properties",
+          "All 8 Planets - Complete Classification",
+          "Dwarf Planets, Asteroids, Comets, Meteors",
+          "Earth-Moon System & Eclipses",
+          "Kepler's Laws & Orbital Mechanics",
+          "Space Missions & Recent Discoveries",
+          "PYQ Traps from BPSC, SSC, Railway, UPSC"
+        ],
+        "estimated_time": "45 minutes",
+        "total_modules": 8
+      },
+      "navigation": {
+        "next": "card_02_start_curiosity",
+        "button_text": "शुरू करें 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_start_curiosity",
+      "card_slug": "card_02_start_curiosity",
+      "type": "chat",
+      "concept_id": "intro_daily_life",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tum raat ko aasman me chamakti hui cheezein dekhte ho na? Kya tumhe lagta hai wo sab chhote dibbe jaise hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, stars to chhote dikhte hain... par school me suna tha wo bahut bade hote hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Aur tumhara ye ghar, mohalla, Patna, Bihar, India... ye sab ek choti si ball (Earth) pe hai jo ek aur bahut badi aag ki gola (Sun) ke chakkar laga rahi hai. Isse kehte hain Solar System!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab hum ghoom rahe hain?? Par humko feel nahi hota!"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_solar_system_definition",
+        "button_text": "Aage samjho 🌍"
+      }
+    },
+    {
+      "card_id": "card_03_solar_system_definition",
+      "card_slug": "card_03_solar_system_definition",
+      "type": "chat",
+      "concept_id": "solar_system_basic",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Solar System matlab: Sun (Surya) + uske chakkar lagane wale 8 planets + chhote dwarf planets + asteroids + comets... sab milke ek PARIWAR! Sun sabse bada hai, uski gravity sab ko bandhe rakhi hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ye Solar System kahan hai? Kisi country me?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haha! Ye ek Galaxy ke andar hai jiska naam 'Milky Way' hai. Aur Milky Way me crores stars hain! Hamara Sun un me se ek medium size ka star hai. Solar System Universe ka ek chhota sa hissa hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... matlab Universe > Galaxy > Solar System > Planets!"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_formation_nebular",
+        "button_text": "Solar System bana kaise? 🌀"
+      }
+    },
+    {
+      "card_id": "card_04_formation_nebular",
+      "card_slug": "card_04_formation_nebular",
+      "type": "chat",
+      "concept_id": "nebular_hypothesis",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Lagbhag 4.6 billion (460 crore) saal pehle ek bada gas aur dust ka cloud tha, jise kehte hain 'Nebula'. Ye ghoomte-ghoomte collapse ho gaya apni hi gravity se. Center me Sun bana, aur baaki material chakkar lagati rahi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Fir planets kaise bane Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Wo ghoomte hue particles aapas me takra-takra ke bade hote gaye... chhote particles se patthar, patthar se chhote gole, fir bade gole... isse kehte hain 'Accretion'. Yahi theory hai 'Nebular Hypothesis' - scientist Immanuel Kant aur Laplace ne diya tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye BPSC me puchha jata hai kya Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_nebular_pyq_trap",
+        "button_text": "Haan, trap dekho! ⚠️"
+      }
+    },
+    {
+      "card_id": "card_05_nebular_pyq_trap",
+      "card_slug": "card_05_nebular_pyq_trap",
+      "type": "chat",
+      "concept_id": "nebular_exam_trap",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Favorite Trap: 'Solar System ki origin ko explain karne wali theory ka naam kya hai?' Options: (A) Big Bang (B) Nebular Hypothesis (C) Steady State (D) Tidal Theory. Kaafi log (A) Big Bang mark kar dete hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Big Bang galat hai? Maine suna tha wo Universe ko banata hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi pakda! Big Bang UNIVERSE ki origin explain karta hai (13.8 billion years ago). Lekin SOLAR SYSTEM ki origin 'Nebular Hypothesis' explain karta hai (4.6 billion years ago). Ye difference yaad rakho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Oooh! Universe pehle bana, uske baad Solar System bana usme se!"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_quiz_nebular_q1",
+        "button_text": "Test karo 📝"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_nebular_q1",
+      "card_slug": "card_06_quiz_nebular_q1",
+      "type": "quiz",
+      "concept_id": "nebular_quiz_1",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Solar System ki formation ko explain karne wali theory kaun si hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Big Bang Theory"
+          },
+          {
+            "id": "B",
+            "text": "Nebular Hypothesis"
+          },
+          {
+            "id": "C",
+            "text": "Steady State Theory"
+          },
+          {
+            "id": "D",
+            "text": "Black Hole Theory"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Nebular Hypothesis (Immanuel Kant & Laplace) explain karta hai ki Solar System ek rotating gas-dust cloud (Nebula) se bana lagbhag 4.6 billion years pehle. Big Bang Universe ki origin explain karta hai, Solar System ki nahi."
+      },
+      "navigation": {
+        "next": "card_07_quiz_nebular_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_nebular_q2",
+      "card_slug": "card_07_quiz_nebular_q2",
+      "type": "quiz",
+      "concept_id": "nebular_quiz_2",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Solar System ki approximate age kitni hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "13.8 billion years"
+          },
+          {
+            "id": "B",
+            "text": "4.6 billion years"
+          },
+          {
+            "id": "C",
+            "text": "2.5 billion years"
+          },
+          {
+            "id": "D",
+            "text": "1 billion years"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Solar System ki age lagbhag 4.6 billion (460 crore) years hai. 13.8 billion years Universe ki age hai (Big Bang ke baad se). SSC & Railway me ye number-based question frequently aata hai."
+      },
+      "navigation": {
+        "next": "card_08_quiz_nebular_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_nebular_q3",
+      "card_slug": "card_08_quiz_nebular_q3",
+      "type": "quiz",
+      "concept_id": "nebular_quiz_3",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Planets ke formation me chhote particles ke aapas me takrakar bade hone ki process ko kya kehte hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Accretion"
+          },
+          {
+            "id": "B",
+            "text": "Nuclear Fusion"
+          },
+          {
+            "id": "C",
+            "text": "Fission"
+          },
+          {
+            "id": "D",
+            "text": "Sublimation"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Accretion wo process hai jisme chhote particles (dust, gas) aapas me takrakar gradually bade bodies (planetesimals, fir planets) banate hain. Nuclear Fusion Sun ke andar energy production ka process hai."
+      },
+      "navigation": {
+        "next": "card_09_milestone_formation",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_09_milestone_formation",
+      "card_slug": "card_09_milestone_formation",
+      "type": "milestone",
+      "concept_id": "milestone_solar_origin",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 COMPLETED!",
+        "badge_emoji": "🌌",
+        "completed_topic": "Solar System - Origin & Formation",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "Tumne Universe aur Solar System ka farak samajh liya! Ab asli journey shuru hoti hai - Sun aur Planets ki duniya me! 🚀"
+      },
+      "navigation": {
+        "next": "card_10_sun_intro",
+        "button_text": "Sun ko samjho ☀️"
+      }
+    },
+    {
+      "card_id": "card_10_sun_intro",
+      "card_slug": "card_10_sun_intro",
+      "type": "chat",
+      "concept_id": "sun_basic",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, Solar System ke sab planets Sun ke chakkar lagate hain. Sun Solar System ka BOSS hai! Iska mass poore Solar System ke total mass ka 99.86% hai. Baaki sab planets, moons, asteroids milke sirf 0.14%!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Itna bada hai?? Matlab Sun ke saamne sab kuch chhota hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Sun ek 'Star' hai - matlab khud ki roshni deta hai nuclear reactions se. Planets roshni nahi banate, wo sirf Sun ki roshni reflect karte hain. Isliye raat ko Moon chamakta dikhta hai, wo apni roshni nahi, Sun ki reflected light hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! Star = khud roshni dena, Planet = roshni reflect karna!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_sun_composition",
+        "button_text": "Sun bana kaise? 🔥"
+      }
+    },
+    {
+      "card_id": "card_11_sun_composition",
+      "card_slug": "card_11_sun_composition",
+      "type": "chat",
+      "concept_id": "sun_composition",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sun ek bada gola hai gas ka! Isme koi solid surface nahi hai. Iska composition: 73% Hydrogen (sabse halki gas), 25% Helium, aur 2% baaki heavy elements (Oxygen, Carbon, Iron etc). Ye sab gases bahut high pressure aur temperature me hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, agar gas hai to fire kaise jal rahi hai? Hum match jalate hain tab oxygen chahiye hoti hai na!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Waah! Ekdum sahi sawaal! Sun me normal 'burning' nahi ho rahi. Ye ek nuclear reaction hai jise kehte hain 'Nuclear Fusion'. Isme 4 Hydrogen atoms milke 1 Helium atom banate hain, aur bahut badi energy release hoti hai. Einstein ka formula: E=mc²"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sun ek nuclear reactor hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_sun_fusion_detail",
+        "button_text": "Nuclear Fusion detail me 🧪"
+      }
+    },
+    {
+      "card_id": "card_12_sun_fusion_detail",
+      "card_slug": "card_12_sun_fusion_detail",
+      "type": "chat",
+      "concept_id": "nuclear_fusion_sun",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sun ke core (center) me temperature lagbhag 15 million °C hai! Is extreme temperature aur pressure me 4 Hydrogen nuclei (protons) aapas me fuse hoke 1 Helium nucleus banate hain. Is process me thoda mass 'energy' me convert ho jata hai (E=mc²). Yahi energy light aur heat ke form me bahar aati hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye energy kitni powerful hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Itni powerful ki ek second me Sun jo energy produce karta hai, wo puri duniya ki electricity ki zarurat ko laakhon saal tak pura kar sakti hai! Aur ye process lagbhag 5 billion years se chal raha hai, aur agle 5 billion years tak chalega."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Sun ka fuel khatam nahi hoga jaldi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_sun_structure_layers",
+        "button_text": "Sun ki layers dekho 🎯"
+      }
+    },
+    {
+      "card_id": "card_13_sun_structure_layers",
+      "card_slug": "card_13_sun_structure_layers",
+      "type": "chat",
+      "concept_id": "sun_layers",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sun ke andar se bahar ki taraf layers hain: (1) Core - nuclear fusion hota hai yahan, (2) Radiative Zone - energy radiation se bahar jaati hai, (3) Convection Zone - hot gas upar aati hai, (4) Photosphere - jo hum dekhte hain (visible surface), (5) Chromosphere - laal color layer, (6) Corona - sabse bahar wali bahut hot layer."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ye to bahut complicated hai! Exam me itna detail aata hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "UPSC aur SSC me Photosphere aur Corona zaroor aata hai! Photosphere wo hai jo humko yellow dikhai deta hai (surface temperature ~5500°C). Corona solar eclipse ke waqt white glow ke roop me dikhta hai, aur iska temperature 1-2 million °C hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Bahar wali layer zyada garam hai andar se??"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_sun_corona_paradox",
+        "button_text": "Ye mystery solve karo! 🔍"
+      }
+    },
+    {
+      "card_id": "card_14_sun_corona_paradox",
+      "card_slug": "card_14_sun_corona_paradox",
+      "type": "chat",
+      "concept_id": "corona_heating_problem",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ye 'Coronal Heating Problem' kehlaata hai - ek mystery! Scientists abhi bhi puri tarah se samajh nahi paaye ki Corona itna hot kaise hai jabki Photosphere (niche) sirf 5500°C hai. Theory hai ki magnetic fields aur solar flares energy transfer karte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab science me abhi bhi kuch unsolved hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Exam me agar ye puche: 'Which layer of Sun is hottest visible during solar eclipse?' Answer: Corona. Aur agar puche: 'Sun ki visible surface layer kaun si hai?' Answer: Photosphere. Dono alag concepts hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye pakka BPSC trap ban sakta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_15_sun_spots_flares",
+        "button_text": "Sunspots kya hain? 🌑"
+      }
+    },
+    {
+      "card_id": "card_15_sun_spots_flares",
+      "card_slug": "card_15_sun_spots_flares",
+      "type": "chat",
+      "concept_id": "sunspots_solar_flares",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sun ki surface pe kabhi-kabhi dark spots dikhte hain - inhe 'Sunspots' kehte hain. Ye actually thande regions hain (lagbhag 3800°C, baaki surface 5500°C). Ye Sun ke strong magnetic fields ki wajah se bante hain. Sunspots ka cycle lagbhag 11 years ka hota hai - kabhi zyada, kabhi kam."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Solar Flares kya hain Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Solar Flares wo sudden explosions hain jab Sun apni surface se badi matra me energy aur charged particles space me release karta hai. Ye bahut powerful hote hain! Agar Earth ki taraf aaye to satellites aur communication systems ko damage kar sakte hain. Isse 'Solar Storm' ya 'Geomagnetic Storm' kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye dangerous hai humारे liye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_sun_solar_wind",
+        "button_text": "Solar Wind samjho 🌬️"
+      }
+    },
+    {
+      "card_id": "card_16_sun_solar_wind",
+      "card_slug": "card_16_sun_solar_wind",
+      "type": "chat",
+      "concept_id": "solar_wind_aurora",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sun continuously charged particles (electrons aur protons) ko space me release karta hai - isse 'Solar Wind' kehte hain. Ye particles bahut fast speed se travel karte hain. Jab ye Earth ke magnetic field se takrate hain, to Earth ke poles (North aur South) ke paas colourful lights dikhai deti hain - inhe 'Aurora' kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wo green aur purple waali lights jo photos me dikhti hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! North Pole ke paas isse 'Aurora Borealis' (Northern Lights) kehte hain, aur South Pole ke paas 'Aurora Australis' (Southern Lights). ⭐ BPSC/SSC me frequently puchha jata hai: 'Aurora kis pole pe dikhta hai?' - Answer dono poles pe!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye bahut sundar hoga dekhne me!"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_quiz_sun_q1",
+        "button_text": "Sun Quiz shuru karo 📝"
+      }
+    },
+    {
+      "card_id": "card_17_quiz_sun_q1",
+      "card_slug": "card_17_quiz_sun_q1",
+      "type": "quiz",
+      "concept_id": "sun_quiz_1",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Sun me energy production ka primary source kya hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Coal burning"
+          },
+          {
+            "id": "B",
+            "text": "Nuclear Fission"
+          },
+          {
+            "id": "C",
+            "text": "Nuclear Fusion"
+          },
+          {
+            "id": "D",
+            "text": "Chemical reaction"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Sun me Nuclear Fusion hota hai jisme 4 Hydrogen atoms milke 1 Helium atom banate hain aur massive energy release hoti hai (E=mc²). Ye process Sun ke core me lagbhag 15 million °C temperature pe hota hai. Nuclear Fission wo process hai jo nuclear power plants me hota hai (atom ka split hona)."
+      },
+      "navigation": {
+        "next": "card_18_quiz_sun_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_18_quiz_sun_q2",
+      "card_slug": "card_18_quiz_sun_q2",
+      "type": "quiz",
+      "concept_id": "sun_quiz_2",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Sun ki visible surface layer ko kya kehte hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Corona"
+          },
+          {
+            "id": "B",
+            "text": "Chromosphere"
+          },
+          {
+            "id": "C",
+            "text": "Photosphere"
+          },
+          {
+            "id": "D",
+            "text": "Core"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Photosphere Sun ki visible surface layer hai jiska temperature lagbhag 5500°C hai. Ye wo layer hai jo humko yellow/orange dikhai deti hai. Corona sabse bahar wali layer hai jo solar eclipse me dikhti hai aur bahut hot hoti hai (~1-2 million °C). SSC & Railway me baar-baar puchha jata hai!"
+      },
+      "navigation": {
+        "next": "card_19_quiz_sun_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_19_quiz_sun_q3",
+      "card_slug": "card_19_quiz_sun_q3",
+      "type": "quiz",
+      "concept_id": "sun_quiz_3",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Aurora Borealis (Northern Lights) kahan dikhai deti hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Equator ke paas"
+          },
+          {
+            "id": "B",
+            "text": "Sirf North Pole ke paas"
+          },
+          {
+            "id": "C",
+            "text": "Sirf South Pole ke paas"
+          },
+          {
+            "id": "D",
+            "text": "Dono poles ke paas"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Aurora dono poles ke paas dikhti hai - North Pole pe 'Aurora Borealis' aur South Pole pe 'Aurora Australis'. Ye Solar Wind (Sun se aane wale charged particles) aur Earth ke magnetic field ke interaction se banti hai. Exam trap: 'Only North Pole' option galat hai!"
+      },
+      "navigation": {
+        "next": "card_20_milestone_sun",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_20_milestone_sun",
+      "card_slug": "card_20_milestone_sun",
+      "type": "milestone",
+      "concept_id": "milestone_sun_complete",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "☀️ SUN MODULE MASTERED!",
+        "badge_emoji": "🌟",
+        "completed_topic": "Sun - Nuclear Fusion, Layers, Solar Phenomena",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "Tumne Solar System ke Boss ko samajh liya! Ab 8 Planets ki duniya explore karte hain! 🪐"
+      },
+      "navigation": {
+        "next": "card_21_planets_intro",
+        "button_text": "Planets ki journey shuru! 🌍"
+      }
+    },
+    {
+      "card_id": "card_21_planets_intro",
+      "card_slug": "card_21_planets_intro",
+      "type": "chat",
+      "concept_id": "planets_classification",
+      "level": 3,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, Solar System me kitne planets hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, 9 hain! Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune... aur Pluto!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Galat! 2006 me International Astronomical Union (IAU) ne Pluto ko 'Dwarf Planet' bana diya. Ab officially sirf 8 planets hain. Ye exam ka sabse bada trap hai! Kaafi students abhi bhi 9 likh dete hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh! To Pluto ab planet nahi hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_planet_definition",
+        "button_text": "Planet ki definition kya hai? 🤔"
+      }
+    },
+    {
+      "card_id": "card_22_planet_definition",
+      "card_slug": "card_22_planet_definition",
+      "type": "chat",
+      "concept_id": "planet_iau_definition",
+      "level": 3,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "IAU ke according, Planet banne ke liye 3 conditions zaruri hain: (1) Sun ke chakkar lagata ho (Orbit the Sun), (2) Itna bada ho ki apni gravity se round shape ban jaaye, (3) Apne orbit ke aas-paas ka area 'clear' kar diya ho (nearby debris hata diya)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Pluto ne kaun si condition fail ki?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Teesri condition! Pluto apne orbit me bahut saare chhote objects (debris) ke saath share karta hai - usne apna area clear nahi kiya. Isliye wo ab 'Dwarf Planet' category me hai. ⭐ UPSC/BPSC trap: 'Pluto ko planet category se kab nikala gaya?' - 2006!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! Ye trick question hota hoga exams me!"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_planet_classification_types",
+        "button_text": "Planets ki categories 🏔️"
+      }
+    },
+    {
+      "card_id": "card_23_planet_classification_types",
+      "card_slug": "card_23_planet_classification_types",
+      "type": "chat",
+      "concept_id": "terrestrial_jovian",
+      "level": 3,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "8 Planets ko 2 categories me divide karte hain: (1) Terrestrial Planets (Inner/Rocky Planets) - Mercury, Venus, Earth, Mars. Ye solid rocky surface wale hain, chhote hain. (2) Jovian Planets (Outer/Gas Giants) - Jupiter, Saturn, Uranus, Neptune. Ye bade hain, gas se bane hain, rings hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ye Terrestrial matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Terrestrial ka matlab 'Earth-like' - solid rocky surface wale. Jovian ka matlab 'Jupiter-like' - giant gas balls. Aur ek classification hai: Inner Planets (Sun ke paas) aur Outer Planets (Sun se door). Inner = Terrestrial, Outer = Jovian. Ye BPSC/SSC ka hot topic hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab chhote wale paas, bade wale door!"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_planets_order_mnemonic",
+        "button_text": "Planets ka order yaad karo! 🧠"
+      }
+    },
+    {
+      "card_id": "card_24_planets_order_mnemonic",
+      "card_slug": "card_24_planets_order_mnemonic",
+      "type": "chat",
+      "concept_id": "planets_order_trick",
+      "level": 3,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sun se distance ke order me (paas se door): Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune. Yaad rakhne ka trick: 'My Very Educated Mother Just Served Us Noodles' - har word ka pehla letter ek planet hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haha! Ye to easy ho gaya! My=Mercury, Very=Venus, Educated=Earth..."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Lekin exam me order ke saath-saath ye bhi puchte hain: 'Sabse bada planet?' - Jupiter. 'Sabse chhota planet?' - Mercury. 'Sabse garam planet?' - Venus (Mercury nahi, trap hai!). 'Rings wale planets?' - Jupiter, Saturn, Uranus, Neptune (sab Jovian planets)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wait Sir! Mercury Sun ke sabse paas hai, fir wo sabse garam kaise nahi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_venus_hottest_trap",
+        "button_text": "Ye confusion clear karo! 🔥"
+      }
+    },
+    {
+      "card_id": "card_25_venus_hottest_trap",
+      "card_slug": "card_25_venus_hottest_trap",
+      "type": "chat",
+      "concept_id": "venus_greenhouse_effect",
+      "level": 3,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut badhiya sawaal! Mercury Sun ke paas hai, but Venus sabse garam hai kyunki Venus ke paas bahut thick atmosphere hai jo Carbon Dioxide (CO₂) se bhara hua hai. Ye 'Greenhouse Effect' create karta hai - heat andar fas jati hai aur bahar nahi nikal pati. Venus ka temperature ~465°C hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab atmosphere ne blanket ki tarah cover kar rakha hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Mercury ka surface temperature din me 430°C tak jata hai, lekin raat me -180°C! Kyunki Mercury ke paas atmosphere nahi hai heat retain karne ke liye. ⭐ BPSC Trap Question: 'Solar System ka hottest planet?' - Venus (not Mercury)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to pakka galat kar deta main!"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_mercury_detail",
+        "button_text": "Mercury detail me 🪐"
+      }
+    },
+    {
+      "card_id": "card_26_mercury_detail",
+      "card_slug": "card_26_mercury_detail",
+      "type": "chat",
+      "concept_id": "mercury_planet",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Mercury: (1) Sabse chhota planet, (2) Sun ke sabse paas, (3) Koi atmosphere nahi (no air, no wind), (4) Koi moon/satellite nahi, (5) Surface craters se bhara hua (Moon jaisa dikhta hai), (6) Ek saal = 88 Earth days (Sun ka ek chakkar lagane me)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ye itni jaldi chakkar kaise lagata hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki wo Sun ke bahut paas hai! Kepler's Law kehta hai: paas wale planets fast move karte hain. Mercury ka naam Roman God 'Mercury' (messenger of gods, bahut fast) ke naam pe rakha gaya. Exam me puchte hain: 'Shortest year wala planet?' - Mercury!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur uska din kitna lamba hoga?"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_venus_detail",
+        "button_text": "Venus dekho 🌟"
+      }
+    },
+    {
+      "card_id": "card_27_venus_detail",
+      "card_slug": "card_27_venus_detail",
+      "type": "chat",
+      "concept_id": "venus_planet",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Venus: (1) Earth ka 'Twin Planet' (size me almost same), (2) Hottest planet (~465°C), (3) Thick CO₂ atmosphere - extreme Greenhouse Effect, (4) Ulta (clockwise) rotate karta hai - isse 'Retrograde Rotation' kehte hain, (5) Morning/Evening Star (subah ya shaam ko sabse bright dikhai deta hai)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ulta rotate?? Matlab clockwise?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Baaki sab planets anticlockwise (West se East) rotate karte hain, lekin Venus aur Uranus ulte (East se West) rotate karte hain. Isliye Venus pe Sun West me nikalta hai aur East me dubta hai! ⭐ SSC/Railway Favorite: 'Which planet has retrograde rotation?' - Venus aur Uranus dono!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to bahut interesting hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_earth_detail",
+        "button_text": "Earth - Apna Ghar! 🌍"
+      }
+    },
+    {
+      "card_id": "card_28_earth_detail",
+      "card_slug": "card_28_earth_detail",
+      "type": "chat",
+      "concept_id": "earth_planet",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Earth: (1) Ek-lauta planet jahan LIFE hai, (2) 71% paani se dhaka hua - 'Blue Planet', (3) Atmosphere: 78% Nitrogen, 21% Oxygen, (4) Ek natural satellite - Moon, (5) Tilted axis (23.5°) - isse seasons bante hain, (6) Ozone layer harmful UV rays ko rokti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, baaki planets pe life kyu nahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki life ke liye chahiye: (1) Paani (liquid form me), (2) Sahi temperature (na bahut garam, na bahut thanda), (3) Oxygen, (4) Atmosphere (protection). Earth pe ye sab perfect hai - isse 'Goldilocks Zone' kehte hain (not too hot, not too cold, just right!)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Earth bahut lucky planet hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_mars_detail",
+        "button_text": "Mars - Red Planet 🔴"
+      }
+    },
+    {
+      "card_id": "card_29_mars_detail",
+      "card_slug": "card_29_mars_detail",
+      "type": "chat",
+      "concept_id": "mars_planet",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Mars: (1) 'Red Planet' - surface pe iron oxide (rust/zang) ki wajah se laal dikhta hai, (2) Do moons - Phobos & Deimos, (3) Sabse bada volcano - Olympus Mons (Solar System ka tallest mountain!), (4) Thin CO₂ atmosphere, (5) Scientists yahan life ke traces dhundh rahe hain - past me paani tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, NASA wahan rovers bhejta hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Curiosity, Perseverance jaise rovers Mars pe research kar rahe hain. Mars ko future colonization ke liye study kiya ja raha hai. ⭐ Current Affairs: India ka 'Mangalyaan' (Mars Orbiter Mission - 2014) pehli hi baar me successful raha - ye BPSC/UPSC me bahut puchha jata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! India ne bhi Mars pe mission bheja!"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_quiz_inner_planets_q1",
+        "button_text": "Inner Planets Quiz 📝"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_inner_planets_q1",
+      "card_slug": "card_30_quiz_inner_planets_q1",
+      "type": "quiz",
+      "concept_id": "inner_planets_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Solar System ka sabse garam planet kaun sa hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Mercury (kyunki Sun ke sabse paas hai)"
+          },
+          {
+            "id": "B",
+            "text": "Venus (kyunki thick CO₂ atmosphere hai)"
+          },
+          {
+            "id": "C",
+            "text": "Earth"
+          },
+          {
+            "id": "D",
+            "text": "Mars"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Venus sabse garam planet hai (~465°C) kyunki iska thick Carbon Dioxide atmosphere extreme Greenhouse Effect create karta hai. Mercury Sun ke paas hone ke bawajood hottest nahi hai kyunki uske paas atmosphere nahi hai heat retain karne ke liye. BPSC/SSC ka famous trap question!"
+      },
+      "navigation": {
+        "next": "card_31_quiz_inner_planets_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quiz_inner_planets_q2",
+      "card_slug": "card_31_quiz_inner_planets_q2",
+      "type": "quiz",
+      "concept_id": "inner_planets_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Kaun se planets 'Retrograde Rotation' karte hain (ulta/clockwise rotation)?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf Venus"
+          },
+          {
+            "id": "B",
+            "text": "Venus aur Uranus"
+          },
+          {
+            "id": "C",
+            "text": "Mars aur Mercury"
+          },
+          {
+            "id": "D",
+            "text": "Sirf Uranus"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Venus aur Uranus dono retrograde rotation karte hain - matlab clockwise/East to West rotate karte hain. Baaki sab planets anticlockwise (West to East) rotate karte hain. Isliye Venus aur Uranus pe Sun West me nikalta hai! SSC/Railway me frequently puchha jata hai."
+      },
+      "navigation": {
+        "next": "card_32_quiz_inner_planets_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz_inner_planets_q3",
+      "card_slug": "card_32_quiz_inner_planets_q3",
+      "type": "quiz",
+      "concept_id": "inner_planets_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "India ka Mars Orbiter Mission (Mangalyaan) kab successful hua?",
+        "options": [
+          {
+            "id": "A",
+            "text": "2008"
+          },
+          {
+            "id": "B",
+            "text": "2014"
+          },
+          {
+            "id": "C",
+            "text": "2019"
+          },
+          {
+            "id": "D",
+            "text": "2020"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "India ka Mars Orbiter Mission (Mangalyaan) 2014 me successful raha. Ye pehli hi attempt me successful hua tha, jo ek badi achievement hai. ISRO ne isse kam budget me achieve kiya. BPSC/UPSC Current Affairs ka important question!"
+      },
+      "navigation": {
+        "next": "card_33_milestone_inner_planets",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_33_milestone_inner_planets",
+      "card_slug": "card_33_milestone_inner_planets",
+      "type": "milestone",
+      "concept_id": "milestone_inner_planets_done",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏔️ INNER PLANETS CONQUERED!",
+        "badge_emoji": "🌍",
+        "completed_topic": "Terrestrial Planets - Mercury, Venus, Earth, Mars",
+        "xp_earned": 70,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "Rocky planets clear! Ab Giant Gas Balls ki duniya me entry - Jupiter, Saturn, Uranus, Neptune! 🪐"
+      },
+      "navigation": {
+        "next": "card_34_jupiter_intro",
+        "button_text": "Gas Giants explore karo! 🌌"
+      }
+    },
+    {
+      "card_id": "card_34_jupiter_intro",
+      "card_slug": "card_34_jupiter_intro",
+      "type": "chat",
+      "concept_id": "jupiter_planet",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Jupiter: (1) Solar System ka SABSE BADA planet - baaki sab planets ko mila do, tab bhi Jupiter bada hai!, (2) Gas Giant (mostly Hydrogen & Helium), (3) Famous 'Great Red Spot' - ek giant storm jo 300+ years se chal raha hai, (4) Sabse zyada moons - 79+ confirmed satellites!"
+        },
+        {
+          "speaker": "raju",
+          "text": "300 saal se ek storm chal raha hai?? Ye kaise possible hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kyunki Jupiter ek gas ball hai, solid surface nahi hai! Storms ko rokne ke liye koi zameen nahi hai. Great Red Spot itna bada hai ki uske andar 2-3 Earth samaaye! Jupiter ko 'Failed Star' bhi kehte hain - agar thoda aur bada hota to nuclear fusion start ho jata aur wo ek star ban jata."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Jupiter almost ek star ban sakte tha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_jupiter_galilean_moons",
+        "button_text": "Jupiter ke special moons 🌙"
+      }
+    },
+    {
+      "card_id": "card_35_jupiter_galilean_moons",
+      "card_slug": "card_35_jupiter_galilean_moons",
+      "type": "chat",
+      "concept_id": "galilean_satellites",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Jupiter ke 4 sabse bade moons ko 'Galilean Moons' kehte hain kyunki scientist Galileo Galilei ne 1610 me inhe discover kiya tha. Ye hain: (1) Io - active volcanoes, (2) Europa - ice se dhaka, niche liquid water ocean (life possible!), (3) Ganymede - Solar System ka sabse bada moon, (4) Callisto - craters se bhara."
+        },
+        {
+          "speaker": "raju",
+          "text": "Europa me paani hai? Matlab wahan life ho sakti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! NASA Europa ko study kar raha hai. Uski ice layer ke niche warm liquid ocean ho sakta hai jahan microbial life possible hai. ⭐ UPSC/BPSC: 'Solar System ka largest moon?' - Ganymede (Jupiter ka moon). Titan (Saturn ka moon) second largest hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye trick question ban sakta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_saturn_detail",
+        "button_text": "Saturn - Ring Master 💍"
+      }
+    },
+    {
+      "card_id": "card_36_saturn_detail",
+      "card_slug": "card_36_saturn_detail",
+      "type": "chat",
+      "concept_id": "saturn_planet",
+      "level": 4,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Saturn: (1) Sabse khoobsurat rings wala planet (ice aur rock particles se bani rings), (2) Second largest planet, (3) Gas Giant (Hydrogen & Helium), (4) Sabse kam density - pani me float kar sakta hai!, (5) 80+ moons, sabse famous - Titan (iska apna thick atmosphere hai)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Pani me float?? Planet pani me kaise float karega Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye hypothetical example hai - agar itna bada ocean hota! Saturn ki density pani se kam hai (0.687 g/cm³). Ye samajhne ke liye ki wo kitna 'light' hai apne size ke compared me. Baaki planets sink ho jayenge. ⭐ SSC Trap: 'Lowest density planet?' - Saturn!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to bahut unique fact hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_uranus_neptune",
+        "button_text": "Uranus & Neptune - Ice Giants ❄️"
+      }
+    },
+    {
+      "card_id": "card_37_uranus_neptune",
+      "card_slug": "card_37_uranus_neptune",
+      "type": "chat",
+      "concept_id": "ice_giants",
+      "level": 4,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Uranus: (1) 'Sideways Planet' - 98° tilted axis, matlab누wo apni side pe leta hua ghoomता hai!, (2) Retrograde rotation (ulta), (3) Coldest planet (-224°C), (4) Faint rings hain, (5) 27 moons. Neptune: (1) Sabse तेज winds (2000 km/h!), (2) Deep blue color - methane gas ki wajah se, (3) 14 moons, sabसे bada - Triton."
+        },
+        {
+          "speaker": "raju",
+          "text": "Uranus sideways kaise ghoomta hai Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Scientists ka theory hai ki Solar System ke early days me kisi bade object se collision hua jisse wo tilt ho gaya. Isliye Uranus ke poles Sun की taraf point karte hain! Ek pole पर 42 saal din, 42 saal raat! ⭐ BPSC: 'Coldest planet?' - Uranus (Neptune nahi, trap!)."
+        },
+        {
+          "speaker": "raju",
+          "text": "42 saal raat!! Ye to imagineभी nahi ho sakta!"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_quiz_outer_planets_q1",
+        "button_text": "Outer Planets Quiz 📝"
+      }
+    },
+    {
+      "card_id": "card_38_quiz_outer_planets_q1",
+      "card_slug": "card_38_quiz_outer_planets_q1",
+      "type": "quiz",
+      "concept_id": "outer_planets_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Solar System ka sabse bada planet kaun sa hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Saturn"
+          },
+          {
+            "id": "B",
+            "text": "Jupiter"
+          },
+          {
+            "id": "C",
+            "text": "Uranus"
+          },
+          {
+            "id": "D",
+            "text": "Neptune"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Jupiter Solar System ka sabse bada planet hai. Iska mass itna hai ki baaki sab planets ko mila do tab bhi Jupiter bada rahega! Jupiter ek Gas Giant है mostly Hydrogen aur Helium se bana. Ye SSC/Railway/BPSC me baar-baar puchha jata hai."
+      },
+      "navigation": {
+        "next": "card_39_quiz_outer_planets_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz_outer_planets_q2",
+      "card_slug": "card_39_quiz_outer_planets_q2",
+      "type": "quiz",
+      "concept_id": "outer_planets_quiz_2",
+      "level": 4,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Solar System ka sabसे bada moon (satellite) kaun sa hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Titan (Saturn ka moon)"
+          },
+          {
+            "id": "B",
+            "text": "Ganymede (Jupiter ka moon)"
+          },
+          {
+            "id": "C",
+            "text": "Europa (Jupiter ka moon)"
+          },
+          {
+            "id": "D",
+            "text": "Earth ka Moon"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ganymede (Jupiter ka moon) Solar System ka sabसे bada moon hai - Mercury planet से भी bada! Titan (Saturn ka moon) second largest hai. Ye UPSC/BPSC ka favorite trap question है - kaafi log Titan lिख dete hain."
+      },
+      "navigation": {
+        "next": "card_40_quiz_outer_planets_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_40_quiz_outer_planets_q3",
+      "card_slug": "card_40_quiz_outer_planets_q3",
+      "type": "quiz",
+      "concept_id": "outer_planets_quiz_3",
+      "level": 4,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Sabse kam density wala planet kaun sa hai (theoretically pani me float kar sake)?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Jupiter"
+          },
+          {
+            "id": "B",
+            "text": "Saturn"
+          },
+          {
+            "id": "C",
+            "text": "Uranus"
+          },
+          {
+            "id": "D",
+            "text": "Neptune"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Saturn ki density sabसे kam है (0.687 g/cm³) - pani की density (1 g/cm³) से bhi kam! Theoretically agar itना bada ocean hota to Saturn float karta. Ye Gas Giant hai mostly Hydrogen से bana. SSC/Railway का popular question!"
+      },
+      "navigation": {
+        "next": "card_41_milestone_outer_planets",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_41_milestone_outer_planets",
+      "card_slug": "card_41_milestone_outer_planets",
+      "type": "milestone",
+      "concept_id": "milestone_outer_planets_done",
+      "level": 4,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🪐 GAS GIANTS MASTERED!",
+        "badge_emoji": "💫",
+        "completed_topic": "Jovian Planets - Jupiter, Saturn, Uranus, Neptune",
+        "xp_earned": 80,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "Tumne सभी 8 planets conquer kar liye! Ab chhote celestial bodies की duniya explore karte hain! ☄️"
+      },
+      "navigation": {
+        "next": "card_42_dwarf_planets_intro",
+        "button_text": "Dwarf Planets & More 🌠"
+      }
+    },
+    {
+      "card_id": "card_42_dwarf_planets_intro",
+      "card_slug": "card_42_dwarf_planets_intro",
+      "type": "chat",
+      "concept_id": "dwarf_planets",
+      "level": 5,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dwarf Planets wo celestial bodies hain jo planet जैसी hain lekin IAU की teesri condition fail kar deti hain - apने orbit के area ko 'clear' nahi kar paaye. Currently 5 recognized dwarf planets हैं: (1) Pluto, (2) Eris, (3) Ceres, (4) Makemake, (5) Haumea."
+        },
+        {
+          "speaker": "raju",
+          "text": "Pluto सबसे famous है! Usko planet se dwarf kab banaya Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "24 August 2006 को International Astronomical Union (IAU) ने Pluto को dwarf planet declare किया। Pluto के orbit में Kuiper Belt के bahut saare objects हैं - isliye wo apna area clear nahi kar paya. ⭐ BPSC/UPSC Hot Topic: 'Pluto ko dwarf planet kab banaya?' - 2006!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Ceres kya है Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_ceres_asteroid_belt",
+        "button_text": "Ceres & Asteroid Belt 🪨"
+      }
+    },
+    {
+      "card_id": "card_43_ceres_asteroid_belt",
+      "card_slug": "card_43_ceres_asteroid_belt",
+      "type": "chat",
+      "concept_id": "asteroid_belt_ceres",
+      "level": 5,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Mars aur Jupiter के बीच में ek 'Asteroid Belt' hai - laakhon chhote-bade rocky objects (asteroids) का region. Ceres इसी belt का sabसे bada object hai, isliye use dwarf planet बनाया गया। Asteroids wo leftover material हैं जो planets नहीं बन paaye formation के time."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ये incomplete planets हैं?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Jupiter की strong gravity ने in rocky pieces को combine होकर planet बनने से रोक दिया। Asteroids mostly rocky aur metallic composition के होते हैं। Kabhi-kabhi ये Earth के paas आते हैं - inhe 'Near-Earth Asteroids' kehte हैं। ⭐ SSC Trap: 'Asteroid Belt कहाँ है?' - Mars & Jupiter के बीच!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye dangerous हो sakte hैं Earth के liye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_comets_meteors",
+        "button_text": "Comets & Meteors ☄️"
+      }
+    },
+    {
+      "card_id": "card_44_comets_meteors",
+      "card_slug": "card_44_comets_meteors",
+      "type": "chat",
+      "concept_id": "comets_meteors_meteorites",
+      "level": 5,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Comets: Ice, dust aur rock की dirty snowballs! Jab ye Sun के paas आते हैं to गर्मी से evaporate होकर ek चमकती tail बनती है। Famous: Halley's Comet (har 76 saal में दिखता है, अगली बार 2061)। Meteors: Space के chhote particles जो Earth के atmosphere में जलते हुए 'shooting stars' की tarah दिखते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Shooting star matlab asली star नहीं hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul nahi! Wo sirf ek chhota sa rock/dust particle hai जो atmosphere में जलकर light देता है - isse 'Meteor' kehते हैं। Agar ye zameen तक पहुँच जाये (जल के khatam ना हो) to isse 'Meteorite' kehते hैं। ⭐ BPSC Trap: Meteor (आकाश में जलता), Meteorite (zameen पर गिरta)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! Meteor aur Meteorite अलग हैं!"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_kuiper_oort",
+        "button_text": "Kuiper Belt & Oort Cloud 🌌"
+      }
+    },
+    {
+      "card_id": "card_45_kuiper_oort",
+      "card_slug": "card_45_kuiper_oort",
+      "type": "chat",
+      "concept_id": "kuiper_belt_oort_cloud",
+      "level": 5,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Neptune के बाद दो regions हैं: (1) Kuiper Belt - icy bodies aur dwarf planets (Pluto, Eris यहीं हैं), short-period comets यहाँ से आते hैं। (2) Oort Cloud - Solar System की सबसे बाहरी boundary, ek गोलाकार shell जहाँ से long-period comets आते हैं। Ye bahut दूर है - lagbhag 1 light year!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Solar System यहाँ तक फैला हुआ है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Oort Cloud को Solar System की edge माना जाता है जहाँ Sun की gravity का effect खत्म होता है। UPSC में पूछा जाता है: 'Kuiper Belt किन planets के बाद है?' - Neptune के बाद। 'Long-period comets कहाँ से आते हैं?' - Oort Cloud से!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye तो bahut bada system hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_quiz_small_bodies_q1",
+        "button_text": "Small Bodies Quiz 📝"
+      }
+    },
+    {
+      "card_id": "card_46_quiz_small_bodies_q1",
+      "card_slug": "card_46_quiz_small_bodies_q1",
+      "type": "quiz",
+      "concept_id": "small_bodies_quiz_1",
+      "level": 5,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Asteroid Belt Solar System में कहाँ स्थित है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Earth aur Mars के बीच"
+          },
+          {
+            "id": "B",
+            "text": "Mars aur Jupiter के बीच"
+          },
+          {
+            "id": "C",
+            "text": "Jupiter aur Saturn के बीच"
+          },
+          {
+            "id": "D",
+            "text": "Neptune के बाद"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Asteroid Belt Mars aur Jupiter की orbits के बीच स्थित है। इसमें लाखों rocky objects (asteroids) हैं जो planets नहीं बन पाए। Ceres इस belt का सबसे बड़ा object है (dwarf planet category में)। SSC/Railway का frequent question!"
+      },
+      "navigation": {
+        "next": "card_47_quiz_small_bodies_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_47_quiz_small_bodies_q2",
+      "card_slug": "card_47_quiz_small_bodies_q2",
+      "type": "quiz",
+      "concept_id": "small_bodies_quiz_2",
+      "level": 5,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "'Shooting Star' वास्तव में क्या है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Ek chhota star जो gir raha hai"
+          },
+          {
+            "id": "B",
+            "text": "Ek meteor जो atmosphere में जल रहा है"
+          },
+          {
+            "id": "C",
+            "text": "Ek satellite जो crash हो रहा है"
+          },
+          {
+            "id": "D",
+            "text": "Ek comet"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Shooting star वास्तव में ek 'Meteor' है - ek छोटा space particle जो Earth के atmosphere में जलता हुआ light produce करता है। Agar ye जमीन तक पहुँच जाए (जल के खत्म ना हो) तो isse 'Meteorite' कहते हैं। Ye BPSC/SSC का common misconception trap है!"
+      },
+      "navigation": {
+        "next": "card_48_quiz_small_bodies_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_48_quiz_small_bodies_q3",
+      "card_slug": "card_48_quiz_small_bodies_q3",
+      "type": "quiz",
+      "concept_id": "small_bodies_quiz_3",
+      "level": 5,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Pluto को dwarf planet कब घोषित किया गया?",
+        "options": [
+          {
+            "id": "A",
+            "text": "2000"
+          },
+          {
+            "id": "B",
+            "text": "2006"
+          },
+          {
+            "id": "C",
+            "text": "2010"
+          },
+          {
+            "id": "D",
+            "text": "2015"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "24 August 2006 को International Astronomical Union (IAU) ने Pluto को dwarf planet declare किया क्योंकि wo अपने orbit के area को clear नहीं कर पाया (planet की तीसरी condition fail)। Ye BPSC/UPSC/SSC सभी exams में repeatedly पूछा जाता है - exact year याद रखें!"
+      },
+      "navigation": {
+        "next": "card_49_milestone_small_bodies",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_49_milestone_small_bodies",
+      "card_slug": "card_49_milestone_small_bodies",
+      "type": "milestone",
+      "concept_id": "milestone_small_bodies_done",
+      "level": 5,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "☄️ CELESTIAL BODIES CLEAR!",
+        "badge_emoji": "🌠",
+        "completed_topic": "Dwarf Planets, Asteroids, Comets, Meteors",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "Chhote bodies से लेकर giant planets तक - सब समझ आ गया! Ab Earth-Moon system की mysteries unlock करते हैं! 🌍🌙"
+      },
+      "navigation": {
+        "next": "card_50_earth_moon_system",
+        "button_text": "Earth-Moon System 🌙"
+      }
+    },
+    {
+      "card_id": "card_50_earth_moon_system",
+      "card_slug": "card_50_earth_moon_system",
+      "type": "chat",
+      "concept_id": "moon_origin_formation",
+      "level": 6,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Moon Earth का एकमात्र natural satellite है। Moon की origin का सबसे accepted theory है 'Giant Impact Hypothesis' - lagbhag 4.5 billion years पहले एक Mars-size का object ('Theia' नाम दिया गया) Earth से टकराया, उससे निकली debris से Moon बना।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Moon एक accident से बना?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Collision itना powerful था कि Earth का कुछ हिस्सा space में उड़ गया aur orbit में घूमते-घूमते combine होकर Moon बना। Moon की average distance Earth से लगभग 3,84,400 km है। Moon apni roshni नहीं देता - jo chamak दिखती है wo Sun की reflected light है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Moon हमेशा ek hi side क्यों दिखाता है Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_moon_synchronous_rotation",
+        "button_text": "Synchronous Rotation 🔄"
+      }
+    },
+    {
+      "card_id": "card_51_moon_synchronous_rotation",
+      "card_slug": "card_51_moon_synchronous_rotation",
+      "type": "chat",
+      "concept_id": "tidal_locking_moon",
+      "level": 6,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Moon को Earth का ek chakkar lagane में aur apni धुरी पर ek rotation complete करने में बराबर time लगता है - लगभग 27.3 दिन! Isse 'Synchronous Rotation' या 'Tidal Locking' कहते हैं। इसीलिए Moon का एक ही side हमेशा Earth की taraf रहता है - दूसरा side हम कभी नहीं देख पाते ('Dark Side of the Moon')!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Moon का दूसरा side हमेशा छिपा रहता है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! 'Dark Side' का matlab ये नहीं कि वहाँ अंधेरा है - वो भी sunlight पाता है। Dark का matlab 'hidden from Earth'। ⭐ SSC/BPSC Trap: 'Moon का rotation aur revolution period?' - Dono बराबर (~27.3 days)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye तो interesting synchronization hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_moon_phases",
+        "button_text": "Moon के Phases 🌑🌓🌕"
+      }
+    },
+    {
+      "card_id": "card_52_moon_phases",
+      "card_slug": "card_52_moon_phases",
+      "type": "chat",
+      "concept_id": "lunar_phases",
+      "level": 6,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Moon Earth के चारों ओर घूमता है तो Sun की रोशनी अलग-अलग angles से पड़ती है - इससे हमें अलग-अलग shapes दिखते हैं। Main phases: (1) New Moon (अमावस्या - invisible), (2) Waxing Crescent, (3) First Quarter, (4) Waxing Gibbous, (5) Full Moon (पूर्णिमा), (6) Waning Gibbous, (7) Last Quarter, (8) Waning Crescent। Pura cycle ~29.5 days (ek lunar month)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Waxing aur Waning matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Waxing = बढ़ता हुआ (New Moon से Full Moon तक), Waning = घटता हुआ (Full Moon से New Moon तक)। Hindi calendar में Shukla Paksha (Waxing) aur Krishna Paksha (Waning) यही concept है! ⭐ Railway/SSC: 'Lunar month की अवधि?' - ~29.5 days!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! Science aur culture connected hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_eclipses_intro",
+        "button_text": "Eclipses समझो 🌑☀️"
+      }
+    },
+    {
+      "card_id": "card_53_eclipses_intro",
+      "card_slug": "card_53_eclipses_intro",
+      "type": "chat",
+      "concept_id": "solar_lunar_eclipse",
+      "level": 6,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Eclipse तब होता है जब Sun, Earth aur Moon एक सीध में आते हैं। (1) Solar Eclipse (सूर्य ग्रहण): Moon, Sun aur Earth के बीच आता है - Moon Sun को ढक लेता है। Sirf New Moon के दिन होता है। (2) Lunar Eclipse (चंद्र ग्रहण): Earth, Sun aur Moon के बीच आती है - Earth की shadow Moon पर पड़ती है। Sirf Full Moon के दिन होता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Solar Eclipse में Moon बीच में, Lunar में Earth बीच में?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Solar Eclipse खतरनाक है आँखों के लिए - directly नहीं देखना चाहिए। Lunar Eclipse safe है। ⭐ BPSC Multi-Statement Trap: 'Statement 1: Solar Eclipse Full Moon को होता है। Statement 2: Lunar Eclipse safe है देखने के लिए।' - S1 गलत (New Moon को होता है), S2 सही!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye पक्का confusion create करेगा exam में!"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_tides_gravitational",
+        "button_text": "Tides - Gravity Magic 🌊"
+      }
+    },
+    {
+      "card_id": "card_54_tides_gravitational",
+      "card_slug": "card_54_tides_gravitational",
+      "type": "chat",
+      "concept_id": "tides_moon_sun",
+      "level": 6,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Samundar में पानी का उठना-गिरना (Tides/ज्वार-भाटा) Moon aur Sun की gravitational pull की वजह से होता है। Moon ज्यादा effect करता है क्योंकि wo Earth के पास है। Spring Tides (तेज़ ज्वार): Jab Sun, Moon aur Earth एक line में हों (Full/New Moon) - सबसे ऊँचे tides। Neap Tides (मंद ज्वार): Jab Moon right angle पर हो (Quarter phases) - कम ऊँचे।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Moon इतनी दूर है फिर भी पानी खींच लेता है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Gravity की power hai! Moon की gravity Earth के पानी को अपनी taraf pull करती है। Opposite side पर भी tide बनता है (centrifugal force से)। ⭐ UPSC Trap: 'Tides पर सबसे ज्यादा प्रभाव?' - Moon (Sun नहीं, हालाँकि Sun भी contribute करता है)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye तो daily life में visible phenomenon hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_quiz_earth_moon_q1",
+        "button_text": "Earth-Moon Quiz 📝"
+      }
+    },
+    {
+      "card_id": "card_55_quiz_earth_moon_q1",
+      "card_slug": "card_55_quiz_earth_moon_q1",
+      "type": "quiz",
+      "concept_id": "earth_moon_quiz_1",
+      "level": 6,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Solar Eclipse (सूर्य ग्रहण) किस Moon phase के दौरान होता है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Full Moon (पूर्णिमा)"
+          },
+          {
+            "id": "B",
+            "text": "New Moon (अमावस्या)"
+          },
+          {
+            "id": "C",
+            "text": "First Quarter"
+          },
+          {
+            "id": "D",
+            "text": "Last Quarter"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Solar Eclipse सिर्फ New Moon (अमावस्या) के दिन होता है जब Moon, Sun aur Earth के बीच में आता है। Full Moon पर Lunar Eclipse होता है। Ye BPSC/SSC का बहुत बड़ा trap है - काफी students Full Moon लिख देते हैं!"
+      },
+      "navigation": {
+        "next": "card_56_quiz_earth_moon_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_56_quiz_earth_moon_q2",
+      "card_slug": "card_56_quiz_earth_moon_q2",
+      "type": "quiz",
+      "concept_id": "earth_moon_quiz_2",
+      "level": 6,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Moon का rotation period aur revolution period लगभग कितना है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Rotation ~27.3 days, Revolution ~29.5 days"
+          },
+          {
+            "id": "B",
+            "text": "Dono लगभग 27.3 days (बराबर)"
+          },
+          {
+            "id": "C",
+            "text": "Rotation 24 hours, Revolution 27.3 days"
+          },
+          {
+            "id": "D",
+            "text": "Dono 29.5 days"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Moon का rotation period (apni धुरी पर घूमना) aur revolution period (Earth का चक्कर) दोनों लगभग 27.3 days हैं। इसे 'Synchronous Rotation' या 'Tidal Locking' कहते हैं। इसीलिए Moon का एक ही side हमेशा Earth की ओर रहता है। SSC/Railway frequently पूछता है!"
+      },
+      "navigation": {
+        "next": "card_57_quiz_earth_moon_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_57_quiz_earth_moon_q3",
+      "card_slug": "card_57_quiz_earth_moon_q3",
+      "type": "quiz",
+      "concept_id": "earth_moon_quiz_3",
+      "level": 6,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Ocean tides (ज्वार-भाटा) पर सबसे अधिक प्रभाव किसका है?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sun की gravity"
+          },
+          {
+            "id": "B",
+            "text": "Moon की gravity"
+          },
+          {
+            "id": "C",
+            "text": "Earth की rotation"
+          },
+          {
+            "id": "D",
+            "text": "Wind patterns"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Moon की gravitational pull का tides पर सबसे अधिक प्रभाव है क्योंकि Moon Earth के बहुत पास है। Sun भी tides को प्रभावित करता है लेकिन Moon का effect ज्यादा है। Spring Tides तब बनते हैं जब Sun aur Moon दोनों एक line में होते हैं। UPSC/BPSC का favorite question!"
+      },
+      "navigation": {
+        "next": "card_58_milestone_earth_moon",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_58_milestone_earth_moon",
+      "card_slug": "card_58_milestone_earth_moon",
+      "type": "milestone",
+      "concept_id": "milestone_earth_moon_done",
+      "level": 6,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🌍🌙 EARTH-MOON MASTERED!",
+        "badge_emoji": "🌔",
+        "completed_topic": "Moon Origin, Phases, Eclipses, Tides",
+        "xp_earned": 70,
+        "milestone_progress": "Module 6/8 Clear",
+        "motivational_quote": "Eclipses aur Tides के secrets unlock! Ab Kepler's Laws aur orbital mechanics की duniya में! 🚀"
+      },
+      "navigation": {
+        "next": "card_59_kepler_laws_intro",
+        "button_text": "Kepler's Laws 🌌"
+      }
+    },
+    {
+      "card_id": "card_59_kepler_laws_intro",
+      "card_slug": "card_59_kepler_laws_intro",
+      "type": "chat",
+      "concept_id": "kepler_first_law",
+      "level": 7,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Johannes Kepler (German astronomer) ने 17th century में planetary motion के 3 laws दिए जो आज भी valid हैं। First Law (Law of Ellipses): सभी planets elliptical (oval-shaped) orbits में Sun के चारों ओर घूमते हैं, aur Sun ek focus point पर होता है। Perfectly circular orbits नहीं होते!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab planets का रास्ता गोल नहीं, अंडे जैसा है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Ellipse matlab थोड़ा stretched circle। Sun center में नहीं बल्कि ek focus point पर होता है। Isliye kabhi planet Sun के पास होता है (Perihelion) aur kabhi दूर (Aphelion)। ⭐ UPSC: Earth का Perihelion (सबसे पास) January में, Aphelion July में!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Oooh! January में Earth Sun के पास होती है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_60_kepler_second_third",
+        "button_text": "2nd & 3rd Laws 🔬"
+      }
+    },
+    {
+      "card_id": "card_60_kepler_second_third",
+      "card_slug": "card_60_kepler_second_third",
+      "type": "chat",
+      "concept_id": "kepler_laws_234",
+      "level": 7,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Second Law (Law of Equal Areas): Planet अपनी orbit में जब Sun के पास होता है तो fast चलता है, aur दूर होने पर slow। Equal time में equal area cover करता है। Third Law (Law of Periods): Planet जितना Sun से दूर, उतना ज्यादा time लेगा ek revolution में। Formula: T² ∝ R³ (T=period, R=distance)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Mercury fast aur Neptune slow?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Mercury: 88 Earth days (सबसे fast), Neptune: 165 Earth years (सबसे slow)! Ye laws sirf planets पर नहीं, satellites aur comets पर भी लागू होते हैं। ⭐ SSC/Railway: 'Kepler के laws किसने दिए?' - Johannes Kepler (1609-1619)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye laws Universal हैं!"
+        }
+      ],
+      "navigation": {
+        "next": "card_61_space_missions",
+        "button_text": "Space Missions 🛰️"
+      }
+    },
+    {
+      "card_id": "card_61_space_missions",
+      "card_slug": "card_61_space_missions",
+      "type": "chat",
+      "concept_id": "major_space_missions",
+      "level": 7,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Major Space Missions (Current Affairs के लिए important!): (1) Voyager 1 & 2 (NASA) - अब तक के सबसे दूर के missions, interstellar space में, (2) Chandrayaan-1, 2, 3 (India-ISRO) - Moon missions, (3) Mangalyaan (India) - Mars mission, (4) Parker Solar Probe (NASA) - Sun के सबसे पास, (5) James Webb Space Telescope - Universe की सबसे गहरी images।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chandrayaan-3 कब successful हुआ Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "23 August 2023 को Chandrayaan-3 Moon के South Pole पर successfully land किया - India पहला देश बना South Pole पर landing करने वाला! ⭐ BPSC/SSC Hot Topic: 'Chandrayaan-3 landing date?' - 23 Aug 2023। 'Landing site?' - South Pole region!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye तो recent achievement है!"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_quiz_kepler_missions_q1",
+        "button_text": "Final Module Quiz 📝"
+      }
+    },
+    {
+      "card_id": "card_62_quiz_kepler_missions_q1",
+      "card_slug": "card_62_quiz_kepler_missions_q1",
+      "type": "quiz",
+      "concept_id": "kepler_missions_quiz_1",
+      "level": 7,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Kepler के First Law के अनुसार, planets किस shape की orbit में घूमते हैं?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Perfect Circular"
+          },
+          {
+            "id": "B",
+            "text": "Elliptical (अंडाकार)"
+          },
+          {
+            "id": "C",
+            "text": "Parabolic"
+          },
+          {
+            "id": "D",
+            "text": "Hyperbolic"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Kepler का First Law (Law of Ellipses) कहता है कि सभी planets elliptical orbits में Sun के चारों ओर घूमते हैं, aur Sun ek focus point पर होता है। Perfect circular orbits नहीं होते। Johannes Kepler ने ये law 1609 में दिया था। UPSC/SSC frequently पूछता है!"
+      },
+      "navigation": {
+        "next": "card_63_quiz_kepler_missions_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_63_quiz_kepler_missions_q2",
+      "card_slug": "card_63_quiz_kepler_missions_q2",
+      "type": "quiz",
+      "concept_id": "kepler_missions_quiz_2",
+      "level": 7,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Chandrayaan-3 ने Moon के किस region पर landing की?",
+        "options": [
+          {
+            "id": "A",
+            "text": "North Pole"
+          },
+          {
+            "id": "B",
+            "text": "Equator"
+          },
+          {
+            "id": "C",
+            "text": "South Pole"
+          },
+          {
+            "id": "D",
+            "text": "Far Side"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Chandrayaan-3 ने 23 August 2023 को Moon के South Pole region पर successfully landing की। India पहला देश बना जिसने South Pole पर soft landing achieve की। Ye BPSC/SSC/Railway सभी exams में 2023-24 का hottest current affairs topic है!"
+      },
+      "navigation": {
+        "next": "card_64_quiz_kepler_missions_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_64_quiz_kepler_missions_q3",
+      "card_slug": "card_64_quiz_kepler_missions_q3",
+      "type": "quiz",
+      "concept_id": "kepler_missions_quiz_3",
+      "level": 7,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "India का Mars Orbiter Mission (Mangalyaan) किस space agency ने launch किया?",
+        "options": [
+          {
+            "id": "A",
+            "text": "NASA"
+          },
+          {
+            "id": "B",
+            "text": "ESA"
+          },
+          {
+            "id": "C",
+            "text": "ISRO"
+          },
+          {
+            "id": "D",
+            "text": "JAXA"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "ISRO (Indian Space Research Organisation) ने Mangalyaan (Mars Orbiter Mission) को 2013 में launch किया जो 2014 में successfully Mars की orbit में पहुँचा। Ye पहली ही attempt में successful रहा - एक unique achievement! BPSC/UPSC का standard question!"
+      },
+      "navigation": {
+        "next": "card_65_milestone_kepler_missions",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_65_milestone_kepler_missions",
+      "card_slug": "card_65_milestone_kepler_missions",
+      "type": "milestone",
+      "concept_id": "milestone_kepler_done",
+      "level": 7,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🚀 ORBITAL MECHANICS UNLOCKED!",
+        "badge_emoji": "🛰️",
+        "completed_topic": "Kepler's Laws & Space Missions",
+        "xp_earned": 60,
+        "milestone_progress": "Module 7/8 Clear",
+        "motivational_quote": "Laws of planetary motion से लेकर cutting-edge missions तक! अब final revision & officer-level quiz! 🎯"
+      },
+      "navigation": {
+        "next": "card_66_officer_revision",
+        "button_text": "Officer Revision ⚡"
+      }
+    },
+    {
+      "card_id": "card_66_officer_revision",
+      "card_slug": "card_66_officer_revision",
+      "type": "summary",
+      "concept_id": "officer_level_revision",
+      "level": 8,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ BPSC/UPSC Officer Revision - Lightning Facts",
+        "revision_points": [
+          {
+            "topic": "Solar System Formation",
+            "point": "Nebular Hypothesis (Kant & Laplace) - 4.6 billion years ago, Nebula collapse → Sun + Planets। Big Bang (13.8 billion years) ≠ Solar System origin!"
+          },
+          {
+            "topic": "Sun - Nuclear Powerhouse",
+            "point": "73% H, 25% He। Nuclear Fusion: 4H → 1He + Energy (E=mc²)। Core: 15 million°C। Photosphere: visible (5500°C)। Corona: hottest layer (1-2 million°C), solar eclipse में visible।"
+          },
+          {
+            "topic": "8 Planets Classification",
+            "point": "Terrestrial (Inner/Rocky): Mercury, Venus, Earth, Mars। Jovian (Outer/Gas Giants): Jupiter, Saturn, Uranus, Neptune। Pluto = Dwarf Planet (2006 IAU decision)।"
+          },
+          {
+            "topic": "Planet Traps",
+            "point": "Hottest: Venus (not Mercury) - Greenhouse Effect। Largest: Jupiter। Smallest: Mercury। Lowest Density: Saturn। Coldest: Uranus। Retrograde Rotation: Venus & Uranus।"
+          },
+          {
+            "topic": "Moons & Satellites",
+            "point": "Largest moon: Ganymede (Jupiter)। Galilean Moons: Io, Europa, Ganymede, Callisto। Moon rotation = revolution = 27.3 days (Synchronous Rotation)।"
+          },
+          {
+            "topic": "Celestial Bodies",
+            "point": "Asteroid Belt: Mars-Jupiter बीच। Ceres = largest (dwarf planet)। Meteor (आकाश में जलता), Meteorite (ज़मीन पर)। Halley's Comet: 76 years।"
+          },
+          {
+            "topic": "Eclipses & Tides",
+            "point": "Solar Eclipse: New Moon (अमावस्या), dangerous। Lunar Eclipse: Full Moon (पूर्णिमा), safe। Tides: Moon gravity > Sun gravity। Spring Tides (तेज): Full/New Moon।"
+          },
+          {
+            "topic": "Kepler's Laws",
+            "point": "1st: Elliptical orbits। 2nd: Equal areas in equal time। 3rd: T²∝R³। Perihelion (पास): Jan। Aphelion (दूर): July।"
+          },
+          {
+            "topic": "Indian Space Missions",
+            "point": "Chandrayaan-3: 23 Aug 2023, South Pole landing। Mangalyaan (2014): Mars mission, पहली attempt में success। ISRO = Indian Space Research Organisation।"
+          },
+          {
+            "topic": "Multi-Statement BPSC Traps",
+            "point": "S1: 'Pluto is 9th planet' (❌ 2006 से dwarf)। S2: 'Mercury hottest' (❌ Venus hottest)। S3: 'Solar eclipse on Full Moon' (❌ New Moon पर)। S4: 'Sun does fission' (❌ Fusion)।"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_67_final_quiz_q1",
+        "button_text": "Final Officer Quiz 🎯"
+      }
+    },
+    {
+      "card_id": "card_67_final_quiz_q1",
+      "card_slug": "card_67_final_quiz_q1",
+      "type": "final_quiz",
+      "concept_id": "final_officer_quiz_1",
+      "level": 8,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित कथनों पर विचार कीजिए:\n\n1. Solar System की origin को Big Bang Theory explain करती है।\n2. Sun में Nuclear Fusion होता है।\n3. Venus सबसे गर्म planet है क्योंकि वो Sun के सबसे पास है।\n\nउपरोक्त में से कौन सा/से कथन सही है/हैं?",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 2"
+          },
+          {
+            "id": "B",
+            "text": "केवल 2"
+          },
+          {
+            "id": "C",
+            "text": "केवल 2 और 3"
+          },
+          {
+            "id": "D",
+            "text": "1, 2 और 3"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "केवल कथन 2 सही है। कथन 1 गलत: Big Bang Universe की origin explain करता है (13.8 billion years), Solar System की नहीं (Nebular Hypothesis, 4.6 billion years)। कथन 2 सही: Sun में Nuclear Fusion (4H→1He) होता है। कथन 3 गलत: Venus hottest है thick CO₂ atmosphere (Greenhouse Effect) की वजह से, Sun के पास होने की वजह से नहीं (Mercury सबसे पास है)। Classic BPSC multi-statement trap!"
+      },
+      "navigation": {
+        "next": "card_68_final_quiz_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_68_final_quiz_q2",
+      "card_slug": "card_68_final_quiz_q2",
+      "type": "final_quiz",
+      "concept_id": "final_officer_quiz_2",
+      "level": 8,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा युग्म सही सुमेलित है?\n\n1. Largest Planet - Jupiter\n2. Largest Moon - Titan\n3. Coldest Planet - Neptune\n4. Lowest Density Planet - Saturn",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 4"
+          },
+          {
+            "id": "B",
+            "text": "केवल 1, 2 और 4"
+          },
+          {
+            "id": "C",
+            "text": "केवल 1, 3 और 4"
+          },
+          {
+            "id": "D",
+            "text": "सभी सही हैं"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "केवल 1 और 4 सही हैं। 1. सही: Jupiter सबसे बड़ा planet। 2. गलत: Ganymede (Jupiter का moon) सबसे बड़ा moon है, Titan (Saturn का) दूसरा सबसे बड़ा। 3. गलत: Uranus सबसे ठंडा planet है (-224°C), Neptune नहीं। 4. सही: Saturn की density सबसे कम (0.687 g/cm³, पानी से भी कम)। UPSC/BPSC matching type question!"
+      },
+      "navigation": {
+        "next": "card_69_final_quiz_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_69_final_quiz_q3",
+      "card_slug": "card_69_final_quiz_q3",
+      "type": "final_quiz",
+      "concept_id": "final_officer_quiz_3",
+      "level": 8,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Assertion (A): Solar Eclipse को नंगी आँखों से देखना खतरनाक है।\n\nReason (R): Solar Eclipse New Moon के दिन होता है जब Moon, Sun और Earth के बीच आता है।",
+        "options": [
+          {
+            "id": "A",
+            "text": "A और R दोनों सही हैं, और R, A की सही व्याख्या है"
+          },
+          {
+            "id": "B",
+            "text": "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है"
+          },
+          {
+            "id": "C",
+            "text": "A सही है लेकिन R गलत है"
+          },
+          {
+            "id": "D",
+            "text": "A गलत है लेकिन R सही है"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है। Assertion सही: Solar Eclipse को directly देखना खतरनाक है क्योंकि Sun की harmful UV rays आँखों को damage कर सकती हैं। Reason सही: Solar Eclipse New Moon पर होता है जब Moon बीच में आता है। लेकिन R, A को explain नहीं करता - खतरनाक होने की वजह UV rays है, न कि New Moon का timing। BPSC Assertion-Reason pattern!"
+      },
+      "navigation": {
+        "next": "card_70_final_quiz_q4",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_70_final_quiz_q4",
+      "card_slug": "card_70_final_quiz_q4",
+      "type": "final_quiz",
+      "concept_id": "final_officer_quiz_4",
+      "level": 8,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत के अंतरिक्ष कार्यक्रम के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. Chandrayaan-3 ने 2023 में Moon के South Pole पर landing की।\n2. Mangalyaan (Mars Orbiter Mission) 2014 में successful रहा।\n3. ISRO ने पहली attempt में ही Mars mission में success प्राप्त की।\n\nउपरोक्त में से कौन सा/से कथन सही है/हैं?",
+        "options": [
+          {
+            "id": "A",
+            "text": "केवल 1 और 2"
+          },
+          {
+            "id": "B",
+            "text": "केवल 2 और 3"
+          },
+          {
+            "id": "C",
+            "text": "केवल 1 और 3"
+          },
+          {
+            "id": "D",
+            "text": "1, 2 और 3 सभी"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "सभी तीनों कथन सही हैं। 1. सही: Chandrayaan-3 ने 23 August 2023 को Moon के South Pole region पर successfully landing की - India पहला देश बना South Pole पर soft landing करने वाला। 2. सही: Mangalyaan (Mars Orbiter Mission) 2014 में Mars की orbit में successfully पहुँचा। 3. सही: ISRO ने पहली ही attempt में Mars mission में success प्राप्त की जो एक unique achievement है। BPSC/UPSC Current Affairs का hottest topic!"
+      },
+      "navigation": {
+        "next": "card_71_final_milestone",
+        "button_text": "Results देखो 🏆"
+      }
+    },
+    {
+      "card_id": "card_71_final_milestone",
+      "card_slug": "card_71_final_milestone",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 8,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 SOLAR SYSTEM CHAMPION!",
+        "badge_emoji": "🌌",
+        "completed_topic": "Complete Solar System - NCERT + PYQ Level",
+        "xp_earned": 500,
+        "milestone_progress": "8/8 Modules Complete - 100%",
+        "motivational_quote": "Sun से लेकर Oort Cloud तक, Nebular Hypothesis से लेकर Chandrayaan-3 तक - पूरा Solar System tumhare दिमाग में है! अब BPSC/SSC/Railway/UPSC में कोई question नहीं छूटेगा! Keep learning, keep growing! 🚀✨"
+      },
+      "navigation": {
+        "next": "card_72_thank_you",
+        "button_text": "Complete Chapter 🎓"
+      }
+    },
+    {
+      "card_id": "card_72_thank_you",
+      "card_slug": "card_72_thank_you",
+      "type": "chat",
+      "concept_id": "conclusion",
+      "level": 8,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumne पूरा Solar System master kar liya! Formation से लेकर Kepler's Laws तक, Sun की nuclear fusion से लेकर Moon के phases तक, planets की classification से लेकर space missions तक - sab kuch!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, मुझे नहीं पता था कि Space Science इतना interesting होगा! Ab exam में confidence आएगा!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Yaad रखो: हर BPSC/SSC/Railway/UPSC exam में Solar System से 3-5 questions pakka आते हैं। Tumne सभी traps, PYQ patterns, और current affairs cover कर लिए। अब practice करते रहो और Officer बनने का सपना पूरा करो! All the best! 🌟"
+        },
+        {
+          "speaker": "raju",
+          "text": "Thank you Sir! Ab मैं Solar System का expert बन गया! 🚀🌌"
+        }
+      ],
+      "navigation": {
+        "next": null,
+        "button_text": "Chapter Complete ✅"
+      }
+    }
+  ]
+}
