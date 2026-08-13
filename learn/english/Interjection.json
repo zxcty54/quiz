@@ -1,0 +1,1277 @@
+
+{
+  "topic_id": "english_grammar_interjection_sbi_po",
+  "topic_title": "Interjection – Complete Mastery for SBI PO Level Error Detection",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 70,
+  "characters": {
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 70 },
+      "intro_payload": {
+        "title": "Interjection Master Class",
+        "icon": "😲❗",
+        "subtitle": "From Zero Knowledge to SBI PO Error Detection Officer",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Understand what an Interjection is and its unique grammatical independence",
+          "Master Exclamation Mark (!) vs Comma (,) punctuation rules with Interjections",
+          "Learn all 8 types of Interjections by emotion: Joy, Sorrow, Surprise, Approval, Greeting, Attention, Disgust, Pain",
+          "Master Primary (Pure) vs Secondary (Derived) Interjections",
+          "Crack the classic 'Oh' vs 'O' trap - capitalization, punctuation and usage",
+          "Identify words that function as Interjection vs other Parts of Speech based on context (Well, Right, Now)",
+          "Learn Position rules and Multi-word/Phrasal Interjections",
+          "Understand why Hindi interjections (Wah, Arre) are avoided in formal English (BPSC TRE special)",
+          "Solve BPSC/SSC/SBI PO style multi-statement and error-spotting questions"
+        ]
+      },
+      "navigation": { "next": "card_02_daily_observation", "button_text": "Start Learning ➔" }
+    },
+    {
+      "card_id": "card_02_daily_observation",
+      "card_slug": "card_02_daily_observation",
+      "type": "chat",
+      "concept_id": "interjection_intro",
+      "level": 1,
+      "progress": { "current": 2, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, kal tumhari cycle se ungli kat gayi thi na? Us waqt mooh se pehla shabd kya nikla tha?" },
+        { "speaker": "raju", "text": "Sir bas 'Ouch!' nikla tha, dard ke maare aur kuch soch hi nahi paya!" },
+        { "speaker": "aman", "text": "Bilkul sahi example! Dekho, 'Ouch' ek achanak feeling - yahan PAIN - ko express kar raha hai, bina kisi Subject ya Verb ke. Isi tarah ke shabd English mein bhi hote hain." },
+        { "speaker": "raju", "text": "Achha sir! Matlab jo shabd achanak feeling dikhata hai, uska koi special naam hoga?" }
+      ],
+      "navigation": { "next": "card_03_definition_interjection", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_definition_interjection",
+      "card_slug": "card_03_definition_interjection",
+      "type": "chat",
+      "concept_id": "interjection_intro",
+      "level": 1,
+      "progress": { "current": 3, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi Raju! Aise shabd ko 'Interjection' kehte hain. Interjection wo shabd ya phrase hai jo achanak feeling ya emotion express karta hai - joy, surprise, pain, sorrow, disgust. Jaise: Ouch! Wow! Alas! Hurrah!" },
+        { "speaker": "raju", "text": "Sir ye to bahut chhota shabd type lagta hai, sentence mein kaam kya karta hai?" },
+        { "speaker": "aman", "text": "Yahin sabse interesting baat hai - Interjection ka baaki sentence ke saath koi GRAMMATICAL CONNECTION nahi hota! Ye Noun, Verb, Adjective kisi ka bhi role nahi nibhata, bas ek standalone emotion show karta hai." },
+        { "speaker": "raju", "text": "Hain?? Matlab ye sentence ke rules follow hi nahi karta?" }
+      ],
+      "navigation": { "next": "card_04_grammatical_independence", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_grammatical_independence",
+      "card_slug": "card_04_grammatical_independence",
+      "type": "chat",
+      "concept_id": "interjection_intro",
+      "level": 1,
+      "progress": { "current": 4, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Isko yaad rakho - Interjection sentence se GRAMMATICALLY INDEPENDENT hota hai. Agar tum ise sentence se hata bhi do, to baaki sentence ka structure bilkul sahi rehta hai. 'Wow! She won the match' - 'Wow' hata do to bhi 'She won the match' poora correct sentence hai." },
+        { "speaker": "raju", "text": "Achha! To baaki sabhi Parts of Speech (Noun, Verb, Adjective) to sentence mein grammatically zaroori hote hain, par Interjection akela bhi survive kar sakta hai?" },
+        { "speaker": "aman", "text": "Ekdum sahi pakda! Yehi property Interjection ko baaki 8 Parts of Speech se alag banati hai. Ye sirf FEELING dikhane ke liye hota hai, sentence banane ke liye nahi." },
+        { "speaker": "raju", "text": "Sir ab mujhe test karo, main pehchan sakta hun ab Interjection ko!" }
+      ],
+      "navigation": { "next": "card_05_guess_identify_interjection", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_guess_identify_interjection",
+      "card_slug": "card_05_guess_identify_interjection",
+      "type": "guess",
+      "concept_id": "interjection_intro",
+      "level": 1,
+      "progress": { "current": 5, "total": 70 },
+      "guess_payload": {
+        "question": "Identify the Interjection in: 'Alas! The old man died of hunger.'",
+        "options": [
+          { "id": "A", "text": "old" },
+          { "id": "B", "text": "Alas" },
+          { "id": "C", "text": "died" },
+          { "id": "D", "text": "hunger" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Alas' ek achanak feeling (sorrow/grief) express kar raha hai aur baaki sentence se grammatically independent hai - ye Interjection hai."
+      },
+      "navigation": { "next": "card_06_quiz_definition", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_06_quiz_definition",
+      "card_slug": "card_06_quiz_definition",
+      "type": "quiz",
+      "concept_id": "interjection_intro",
+      "level": 1,
+      "progress": { "current": 6, "total": 70 },
+      "quiz_payload": {
+        "question": "An Interjection is primarily used to:",
+        "options": [
+          { "id": "A", "text": "Modify a Noun" },
+          { "id": "B", "text": "Express sudden feeling or emotion" },
+          { "id": "C", "text": "Join two clauses" },
+          { "id": "D", "text": "Show the tense of a Verb" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Interjection ka mukhya kaam achanak emotion ya feeling express karna hai - joy, surprise, pain, sorrow, etc."
+      },
+      "navigation": { "next": "card_07_quiz_independence", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz_independence",
+      "card_slug": "card_07_quiz_independence",
+      "type": "quiz",
+      "concept_id": "interjection_intro",
+      "level": 1,
+      "progress": { "current": 7, "total": 70 },
+      "quiz_payload": {
+        "question": "Which statement correctly describes the grammatical nature of an Interjection?",
+        "options": [
+          { "id": "A", "text": "It must always agree with the subject of the sentence" },
+          { "id": "B", "text": "It has no grammatical connection with the rest of the sentence" },
+          { "id": "C", "text": "It always functions as the main verb" },
+          { "id": "D", "text": "It must be placed only at the end of a sentence" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Interjection grammatically independent hota hai - ise hata dene par bhi baaki sentence ka structure sahi rehta hai."
+      },
+      "navigation": { "next": "card_08_quiz_multistatement_intro", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_quiz_multistatement_intro",
+      "card_slug": "card_08_quiz_multistatement_intro",
+      "type": "quiz",
+      "concept_id": "interjection_intro",
+      "level": 1,
+      "progress": { "current": 8, "total": 70 },
+      "quiz_payload": {
+        "question": "Statements: I. Interjections are one of the 8 Parts of Speech. II. An Interjection must always be grammatically linked to the Subject of the sentence. III. Removing an Interjection does not affect the grammatical correctness of the rest of the sentence. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III only" },
+          { "id": "B", "text": "I & II only" },
+          { "id": "C", "text": "II only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - Interjection ka Subject se koi grammatical link nahi hota, ye completely independent hota hai."
+      },
+      "navigation": { "next": "card_09_milestone_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_09_milestone_m1",
+      "card_slug": "card_09_milestone_m1",
+      "type": "milestone",
+      "concept_id": "interjection_intro",
+      "level": 1,
+      "progress": { "current": 9, "total": 70 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "😲",
+        "completed_topic": "Introduction to Interjection",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "Foundation strong hai! Ab Punctuation Rules seekhते hain!"
+      },
+      "navigation": { "next": "card_10_exclamation_mark_rule", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_10_exclamation_mark_rule",
+      "card_slug": "card_10_exclamation_mark_rule",
+      "type": "chat",
+      "concept_id": "interjection_punctuation",
+      "level": 1,
+      "progress": { "current": 10, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho Interjection ke saath PUNCTUATION ka rule. Jab emotion bahut STRONG ho (khushi, dard, dukh zyada intense ho), to Interjection ke turant baad EXCLAMATION MARK (!) lagta hai. Jaise: 'Wow! What a goal!'" },
+        { "speaker": "raju", "text": "Sir '!' ke baad next word capital hoga ya small?" },
+        { "speaker": "aman", "text": "Bahut acha doubt! Exclamation mark ek Full Stop jaisa kaam karta hai - matlab wo sentence khatam ho jata hai. Isliye uske baad naya sentence CAPITAL letter se hi shuru hoga: 'Wow! What a goal!'" },
+        { "speaker": "raju", "text": "Achha! Matlab '!' ke baad chhota letter lagana galat hoga?" }
+      ],
+      "navigation": { "next": "card_11_comma_mild_emotion", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_comma_mild_emotion",
+      "card_slug": "card_11_comma_mild_emotion",
+      "type": "chat",
+      "concept_id": "interjection_punctuation",
+      "level": 1,
+      "progress": { "current": 11, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab dusra case - jab emotion MILD/HALKA ho, to Interjection ke baad sirf COMMA (,) lagta hai aur ussi sentence mein baaki baat continue hoti hai. Jaise: 'Well, I am not sure about this.'" },
+        { "speaker": "raju", "text": "Sir 'Well' ke baad comma laga aur sentence continue ho gaya, exclamation mark nahi laga!" },
+        { "speaker": "aman", "text": "Bilkul sahi observation! 'Well,' yahan halki hesitation dikha raha hai, koi strong emotion nahi. Isliye comma ke baad chhota letter aur wahi sentence continue hota hai." },
+        { "speaker": "raju", "text": "Achha! To decide karna hoga ki emotion strong hai ya mild, tabhi punctuation decide hoga!" }
+      ],
+      "navigation": { "next": "card_12_capital_after_exclamation", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_capital_after_exclamation",
+      "card_slug": "card_12_capital_after_exclamation",
+      "type": "chat",
+      "concept_id": "interjection_punctuation",
+      "level": 1,
+      "progress": { "current": 12, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek important trap yaad karo - SSC/Railway mein error detection mein log '!' ke baad small letter likh dete hain, jo galat hai. Sahi: 'Alas! He has lost his job.' Galat: 'Alas! he has lost his job.'" },
+        { "speaker": "raju", "text": "Sir comma wale case mein bhi small letter hi aayega baad mein, capital nahi?" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Comma ke baad sentence CONTINUE hota hai, isliye next word small letter mein hi rahega (jab tak wo Proper Noun na ho). 'Oh, it is raining' - 'it' small letter mein hi sahi hai." },
+        { "speaker": "raju", "text": "Achha! Ab in dono punctuation rules ko test karo mujhpe!" }
+      ],
+      "navigation": { "next": "card_13_guess_punctuation_choice", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_guess_punctuation_choice",
+      "card_slug": "card_13_guess_punctuation_choice",
+      "type": "guess",
+      "concept_id": "interjection_punctuation",
+      "level": 1,
+      "progress": { "current": 13, "total": 70 },
+      "guess_payload": {
+        "question": "Choose correct punctuation: 'Hurrah _____ We won the championship!'",
+        "options": [
+          { "id": "A", "text": "Hurrah, we won" },
+          { "id": "B", "text": "Hurrah! We won" },
+          { "id": "C", "text": "Hurrah. we won" },
+          { "id": "D", "text": "Hurrah; We won" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Hurrah' strong joy dikha raha hai (championship jeetna), isliye Exclamation mark aur uske baad Capital letter 'We' sahi hai."
+      },
+      "navigation": { "next": "card_14_quiz_punctuation_error", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_14_quiz_punctuation_error",
+      "card_slug": "card_14_quiz_punctuation_error",
+      "type": "quiz",
+      "concept_id": "interjection_punctuation",
+      "level": 1,
+      "progress": { "current": 14, "total": 70 },
+      "quiz_payload": {
+        "question": "Error detection: 'Ouch! that really hurt my leg.'",
+        "options": [
+          { "id": "A", "text": "'that' should be capitalized to 'That'" },
+          { "id": "B", "text": "'Ouch' should be lowercase" },
+          { "id": "C", "text": "The exclamation mark should be a comma" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Exclamation mark ke baad naya sentence shuru hota hai, isliye 'that' ko capital 'That' hona chahiye."
+      },
+      "navigation": { "next": "card_15_quiz_mild_vs_strong", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz_mild_vs_strong",
+      "card_slug": "card_15_quiz_mild_vs_strong",
+      "type": "quiz",
+      "concept_id": "interjection_punctuation",
+      "level": 1,
+      "progress": { "current": 15, "total": 70 },
+      "quiz_payload": {
+        "question": "Choose correct punctuation: 'Well _____ I suppose you are right.'",
+        "options": [
+          { "id": "A", "text": "Well! I suppose" },
+          { "id": "B", "text": "Well, I suppose" },
+          { "id": "C", "text": "Well. I suppose" },
+          { "id": "D", "text": "Well: I suppose" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Well' yahan halki hesitation/mild feeling dikha raha hai, strong emotion nahi - isliye comma sahi hai, exclamation mark nahi."
+      },
+      "navigation": { "next": "card_16_quiz_multistatement_punctuation", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_quiz_multistatement_punctuation",
+      "card_slug": "card_16_quiz_multistatement_punctuation",
+      "type": "quiz",
+      "concept_id": "interjection_punctuation",
+      "level": 1,
+      "progress": { "current": 16, "total": 70 },
+      "quiz_payload": {
+        "question": "Statements: I. Strong emotions require an exclamation mark after the Interjection. II. A comma is used after an Interjection when the emotion is mild. III. The word following an exclamation mark must always start with a capital letter. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & II only" },
+          { "id": "B", "text": "II & III only" },
+          { "id": "C", "text": "I & III only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Teeno statements sahi hain - ye standard punctuation rules hain jo SBI PO/SSC error detection mein directly test hote hain."
+      },
+      "navigation": { "next": "card_17_milestone_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_17_milestone_m2",
+      "card_slug": "card_17_milestone_m2",
+      "type": "milestone",
+      "concept_id": "interjection_punctuation",
+      "level": 1,
+      "progress": { "current": 17, "total": 70 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "❗",
+        "completed_topic": "Punctuation Rules - Exclamation Mark vs Comma",
+        "xp_earned": 55,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "Punctuation pakka ho gaya! Ab Interjection ke saare emotion-types seekhते hain - Part 1!"
+      },
+      "navigation": { "next": "card_18_joy_interjections", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_18_joy_interjections",
+      "card_slug": "card_18_joy_interjections",
+      "type": "chat",
+      "concept_id": "interjection_types_1",
+      "level": 2,
+      "progress": { "current": 18, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho Interjections ko emotion ke hisab se group karte hain. Pehla type - JOY/HAPPINESS ke liye: Hurrah! Wow! Yippee! Bravo! Hooray! Jaise: 'Hurrah! We got a holiday tomorrow.'" },
+        { "speaker": "raju", "text": "Sir 'Bravo' to appreciation ke liye bhi use hota hai na?" },
+        { "speaker": "aman", "text": "Bilkul sahi observation! 'Bravo' dono jagah fit hota hai - khushi aur approval, dono. Ye overlap hona common hai, context se pehchano." },
+        { "speaker": "raju", "text": "Achha, ab agla type kya hai sir?" }
+      ],
+      "navigation": { "next": "card_19_sorrow_interjections", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_sorrow_interjections",
+      "card_slug": "card_19_sorrow_interjections",
+      "type": "chat",
+      "concept_id": "interjection_types_1",
+      "level": 2,
+      "progress": { "current": 19, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Dusra type - SORROW/GRIEF (dukh/gam) ke liye: Alas! Ah! Oh! Jaise: 'Alas! She lost her father.' Ye tab use hota hai jab koi dukhad/sad baat ho." },
+        { "speaker": "raju", "text": "Sir 'Oh' to bahut jagah use hota hai, joy mein bhi, sorrow mein bhi?" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! 'Oh' ek MULTI-PURPOSE Interjection hai jo context ke hisab se joy, sorrow, surprise sab dikha sakta hai. Sentence ka overall matlab dekh kar hi decide karenge ki 'Oh' kaunsi emotion dikha raha hai." },
+        { "speaker": "raju", "text": "Achha! Ye to context-dependent nikla, dhyan rakhna hoga!" }
+      ],
+      "navigation": { "next": "card_20_surprise_interjections", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_surprise_interjections",
+      "card_slug": "card_20_surprise_interjections",
+      "type": "chat",
+      "concept_id": "interjection_types_1",
+      "level": 2,
+      "progress": { "current": 20, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Teesra type - SURPRISE (aashcharya) ke liye: Oh! What! Eh! Ha! Jaise: 'What! You failed the exam?' Yahan achanak hairani express ho rahi hai." },
+        { "speaker": "raju", "text": "Sir 'What' bhi Interjection ban sakta hai? Wo to hamesha question mein use hota hai na!" },
+        { "speaker": "aman", "text": "Yahin twist hai Raju - 'What' normally Interrogative Pronoun/Adjective hota hai ('What is your name?'), lekin jab wo AKELA surprise dikhane ke liye use ho ('What! Really?'), tab wo Interjection ban jata hai." },
+        { "speaker": "raju", "text": "Achha! Matlab ek hi shabd context ke hisab se Interjection bhi ban sakta hai!" }
+      ],
+      "navigation": { "next": "card_21_approval_interjections", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_approval_interjections",
+      "card_slug": "card_21_approval_interjections",
+      "type": "chat",
+      "concept_id": "interjection_types_1",
+      "level": 2,
+      "progress": { "current": 21, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Chautha type - APPROVAL/PRAISE ke liye: Bravo! Well done! Hear, hear! Good! Jaise: 'Well done! You have passed with flying colours.' Ye tab use hota hai jab kisi ki tareef karni ho." },
+        { "speaker": "raju", "text": "Sir 'Well done' do words hain, phir bhi ek Interjection hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Interjection sirf ek word ka nahi hota, PHRASE bhi ho sakta hai jo ek saath ek hi emotion dikhaye - isko 'Phrasal Interjection' kehte hain, isko hum aage detail mein dekhenge!" },
+        { "speaker": "raju", "text": "Achha sir, ab in char types (Joy, Sorrow, Surprise, Approval) pe test karo mujhe!" }
+      ],
+      "navigation": { "next": "card_22_guess_type1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_22_guess_type1",
+      "card_slug": "card_22_guess_type1",
+      "type": "guess",
+      "concept_id": "interjection_types_1",
+      "level": 2,
+      "progress": { "current": 22, "total": 70 },
+      "guess_payload": {
+        "question": "'Alas! The poor beggar died of starvation.' - Which emotion does 'Alas' express?",
+        "options": [
+          { "id": "A", "text": "Joy" },
+          { "id": "B", "text": "Sorrow/Grief" },
+          { "id": "C", "text": "Approval" },
+          { "id": "D", "text": "Surprise" },
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Alas' hamesha Sorrow/Grief (dukh) express karta hai - ye ek sad/tragic situation ko dikhata hai."
+      },
+      "navigation": { "next": "card_23_quiz_joy_identify", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_quiz_joy_identify",
+      "card_slug": "card_23_quiz_joy_identify",
+      "type": "quiz",
+      "concept_id": "interjection_types_1",
+      "level": 2,
+      "progress": { "current": 23, "total": 70 },
+      "quiz_payload": {
+        "question": "Which of the following Interjections expresses JOY?",
+        "options": [
+          { "id": "A", "text": "Alas" },
+          { "id": "B", "text": "Fie" },
+          { "id": "C", "text": "Hurrah" },
+          { "id": "D", "text": "Ugh" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Hurrah' khushi/joy dikhata hai, jaise jeet ya achi khabar par khushi zahir karna."
+      },
+      "navigation": { "next": "card_24_quiz_approval_praise", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_24_quiz_approval_praise",
+      "card_slug": "card_24_quiz_approval_praise",
+      "type": "quiz",
+      "concept_id": "interjection_types_1",
+      "level": 2,
+      "progress": { "current": 24, "total": 70 },
+      "quiz_payload": {
+        "question": "'Bravo! You gave a wonderful performance.' - What emotion is 'Bravo' expressing here?",
+        "options": [
+          { "id": "A", "text": "Sorrow" },
+          { "id": "B", "text": "Approval/Praise" },
+          { "id": "C", "text": "Disgust" },
+          { "id": "D", "text": "Pain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Bravo' yahan performance ki tareef (approval/praise) kar raha hai."
+      },
+      "navigation": { "next": "card_25_quiz_multistatement_types1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_25_quiz_multistatement_types1",
+      "card_slug": "card_25_quiz_multistatement_types1",
+      "type": "quiz",
+      "concept_id": "interjection_types_1",
+      "level": 2,
+      "progress": { "current": 25, "total": 70 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Oh' can express joy, sorrow, or surprise depending on context. II. 'What' can never function as an Interjection since it is always an Interrogative word. III. 'Well done' is an example of a phrasal (multi-word) Interjection. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "II & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - 'What' jab akela surprise dikhata hai, tab wo Interjection ban jata hai, hamesha Interrogative nahi rehta."
+      },
+      "navigation": { "next": "card_26_milestone_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_26_milestone_m3",
+      "card_slug": "card_26_milestone_m3",
+      "type": "milestone",
+      "concept_id": "interjection_types_1",
+      "level": 2,
+      "progress": { "current": 26, "total": 70 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "😄",
+        "completed_topic": "Types of Interjection - Joy, Sorrow, Surprise, Approval",
+        "xp_earned": 55,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "4 emotions clear ho gaye! Ab baaki 4 types seekhते hain - Part 2!"
+      },
+      "navigation": { "next": "card_27_greeting_interjections", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_27_greeting_interjections",
+      "card_slug": "card_27_greeting_interjections",
+      "type": "chat",
+      "concept_id": "interjection_types_2",
+      "level": 2,
+      "progress": { "current": 27, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab agle 4 types dekhते hain. Paanchwa type - GREETING/FAREWELL ke liye: Hello! Hi! Goodbye! Bye! Adieu! Jaise: 'Hello! How are you?' aur 'Goodbye! See you soon.'" },
+        { "speaker": "raju", "text": "Sir ye to roz use karte hain hum, kabhi socha nahi tha ye Interjection hain!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Daily life mein hum bahut saare Interjections use karte hain bina notice kiye. Ab agla type - ATTENTION/COMMAND ke liye: Hush! Hark! Look! Listen! Jaise: 'Hush! The baby is sleeping.'" },
+        { "speaker": "raju", "text": "Sir 'Look' aur 'Listen' to Verb bhi hote hain na?" }
+      ],
+      "navigation": { "next": "card_28_attention_interjections", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_28_attention_interjections",
+      "card_slug": "card_28_attention_interjections",
+      "type": "chat",
+      "concept_id": "interjection_types_2",
+      "level": 2,
+      "progress": { "current": 28, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda tumhara doubt! 'Look' aur 'Listen' normally Verb hote hain, lekin jab wo AKELE, achanak attention grab karne ke liye use ho ('Look! A tiger!'), tab wo Interjection ban jate hain, na ki command wale Verb." },
+        { "speaker": "raju", "text": "Achha! Ye to bahut saare words repeat ho rahe hain - kabhi Verb, kabhi Interjection!" },
+        { "speaker": "aman", "text": "Yehi to English grammar ki khoobsurati hai - context hi decide karta hai role. Ab agla type - DISGUST/CONTEMPT ke liye: Fie! Ugh! Pooh! Fudge! Jaise: 'Fie! What a shame!' (ghrina/nafrat dikhane ke liye)." },
+        { "speaker": "raju", "text": "Sir 'Ugh' to main bhi bolta hun jab kuch ganda dekhta hun!" }
+      ],
+      "navigation": { "next": "card_29_disgust_pain_interjections", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_29_disgust_pain_interjections",
+      "card_slug": "card_29_disgust_pain_interjections",
+      "type": "chat",
+      "concept_id": "interjection_types_2",
+      "level": 2,
+      "progress": { "current": 29, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab last type - PAIN ke liye: Ouch! Oh! Ah! Jaise 'Ouch! That hurts!' - jaisa tumhari cycle wali ghatna mein use hua tha. Ab total 8 types ho gaye: Joy, Sorrow, Surprise, Approval, Greeting, Attention, Disgust, Pain." },
+        { "speaker": "raju", "text": "Sir 'Oh' to fir se aa gaya! Ye sabme fit ho jata hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi observation! 'Oh' universal Interjection hai jo joy, sorrow, surprise, aur pain sabme use ho sakta hai - context hi bataega ki kaunsi feeling hai. Yehi SBI PO ka common testing point hai." },
+        { "speaker": "raju", "text": "Achha! Ab in char types (Greeting, Attention, Disgust, Pain) pe test karo mujhe!" }
+      ],
+      "navigation": { "next": "card_30_guess_type2", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_30_guess_type2",
+      "card_slug": "card_30_guess_type2",
+      "type": "guess",
+      "concept_id": "interjection_types_2",
+      "level": 2,
+      "progress": { "current": 30, "total": 70 },
+      "guess_payload": {
+        "question": "'Hush! Don't make any noise in the library.' - Which type of Interjection is 'Hush'?",
+        "options": [
+          { "id": "A", "text": "Greeting" },
+          { "id": "B", "text": "Attention/Command" },
+          { "id": "C", "text": "Disgust" },
+          { "id": "D", "text": "Joy" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Hush' logon ka attention grab karke unhe shant rehne ka command deta hai - ye Attention/Command category ka Interjection hai."
+      },
+      "navigation": { "next": "card_31_quiz_disgust", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_31_quiz_disgust",
+      "card_slug": "card_31_quiz_disgust",
+      "type": "quiz",
+      "concept_id": "interjection_types_2",
+      "level": 2,
+      "progress": { "current": 31, "total": 70 },
+      "quiz_payload": {
+        "question": "'Fie! Such a dirty habit!' - This sentence expresses which emotion?",
+        "options": [
+          { "id": "A", "text": "Joy" },
+          { "id": "B", "text": "Disgust/Contempt" },
+          { "id": "C", "text": "Greeting" },
+          { "id": "D", "text": "Approval" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Fie' ghrina/contempt dikhata hai kisi ganda habit ke prati - ye Disgust category ka Interjection hai."
+      },
+      "navigation": { "next": "card_32_quiz_pain_identify", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_32_quiz_pain_identify",
+      "card_slug": "card_32_quiz_pain_identify",
+      "type": "quiz",
+      "concept_id": "interjection_types_2",
+      "level": 2,
+      "progress": { "current": 32, "total": 70 },
+      "quiz_payload": {
+        "question": "Which Interjection is used to express sudden physical PAIN?",
+        "options": [
+          { "id": "A", "text": "Hurrah" },
+          { "id": "B", "text": "Ouch" },
+          { "id": "C", "text": "Bravo" },
+          { "id": "D", "text": "Hello" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Ouch' achanak physical pain (chot lagna) ko express karta hai."
+      },
+      "navigation": { "next": "card_33_quiz_multistatement_types2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_33_quiz_multistatement_types2",
+      "card_slug": "card_33_quiz_multistatement_types2",
+      "type": "quiz",
+      "concept_id": "interjection_types_2",
+      "level": 2,
+      "progress": { "current": 33, "total": 70 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Look' and 'Listen' always function as verbs, never as interjections. II. 'Fie', 'Ugh', and 'Pooh' express disgust or contempt. III. Interjections are broadly classified into 8 emotion-based categories. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "II & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "I only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement I galat hai - jab 'Look/Listen' akele achanak attention pane ke liye use hote hain, tab wo Interjection ban jaate hain, hamesha Verb nahi rehte."
+      },
+      "navigation": { "next": "card_34_milestone_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_34_milestone_m4",
+      "card_slug": "card_34_milestone_m4",
+      "type": "milestone",
+      "concept_id": "interjection_types_2",
+      "level": 2,
+      "progress": { "current": 34, "total": 70 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎭",
+        "completed_topic": "Types of Interjection - Greeting, Attention, Disgust, Pain",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "Saare 8 types clear ho gaye! Ab Primary vs Secondary Interjection seekhते hain!"
+      },
+      "navigation": { "next": "card_35_primary_interjections", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_35_primary_interjections",
+      "card_slug": "card_35_primary_interjections",
+      "type": "chat",
+      "concept_id": "interjection_primary_secondary",
+      "level": 3,
+      "progress": { "current": 35, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho ek important classification - PRIMARY (ya Pure) Interjections. Ye wo words hain jo SIRF aur SIRF Interjection ki tarah hi use hote hain - inka koi doosra kaam (Noun, Verb, Adjective) nahi hota. Jaise: Oh, Ah, Alas, Hurrah, Wow, Ouch, Fie, Hush." },
+        { "speaker": "raju", "text": "Sir matlab 'Alas' kabhi kisi doosre role mein use nahi hota?" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'Alas' hamesha Interjection hi rahega, wo Noun ya Verb kabhi nahi banta - isi wajah se ise PURE/PRIMARY Interjection kehte hain." },
+        { "speaker": "raju", "text": "Achha! Ab isse ULTA type bhi hoga - jo doosre roles mein bhi use hote hon?" }
+      ],
+      "navigation": { "next": "card_36_secondary_interjections", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_36_secondary_interjections",
+      "card_slug": "card_36_secondary_interjections",
+      "type": "chat",
+      "concept_id": "interjection_primary_secondary",
+      "level": 3,
+      "progress": { "current": 36, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi socha! Ye SECONDARY (ya Derived) Interjections kehlate hain - ye words normally kisi aur Part of Speech (Noun/Adjective/Verb) ki tarah kaam karte hain, lekin jab AKELE, standalone use hokar emotion dikhaते hain, tab Interjection ban jate hain." },
+        { "speaker": "raju", "text": "Sir example do please, samajhna hai!" },
+        { "speaker": "aman", "text": "Dekho: 'Nonsense!' (normally Noun hai, matlab 'bakwaas', lekin akela use hone par disgust dikhata hai - Interjection). 'Good!' (normally Adjective, lekin akela use hone par approval dikhata hai). 'Hush!' (normally koi kaam nahi, seedha attention/command)." },
+        { "speaker": "raju", "text": "Achhaaa! Matlab 'Good' jab poore sentence mein Adjective ki tarah Noun describe kare, tab Adjective hai, lekin jab AKELA standalone ho, tab Interjection!" }
+      ],
+      "navigation": { "next": "card_37_more_secondary_examples", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_37_more_secondary_examples",
+      "card_slug": "card_37_more_secondary_examples",
+      "type": "chat",
+      "concept_id": "interjection_primary_secondary",
+      "level": 3,
+      "progress": { "current": 37, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Kuch aur examples yaad karo: 'Indeed!' (surprise ke liye, normally Adverb hai 'sach mein'), 'Shame!' (normally Noun, lekin akela disapproval dikhata hai), 'Bravo!' (yahan bhi originally Italian word Adjective hai, English mein pure Interjection ban gaya)." },
+        { "speaker": "raju", "text": "Sir to 'Bravo' Primary hai ya Secondary?" },
+        { "speaker": "aman", "text": "Bahut acha sawaal! English mein 'Bravo' ab sirf Interjection ki tarah hi use hota hai (koi aur role nahi), isliye ise Primary maana jata hai, chahe uska origin doosri language se ho." },
+        { "speaker": "raju", "text": "Achha! Ab in dono categories pe test karo mujhe!" }
+      ],
+      "navigation": { "next": "card_38_guess_primary_or_secondary", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_38_guess_primary_or_secondary",
+      "card_slug": "card_38_guess_primary_or_secondary",
+      "type": "guess",
+      "concept_id": "interjection_primary_secondary",
+      "level": 3,
+      "progress": { "current": 38, "total": 70 },
+      "guess_payload": {
+        "question": "'Nonsense! I don't believe a word you said.' - 'Nonsense' here is an example of:",
+        "options": [
+          { "id": "A", "text": "Primary Interjection" },
+          { "id": "B", "text": "Secondary (Derived) Interjection" },
+          { "id": "C", "text": "Correlative Interjection" },
+          { "id": "D", "text": "Not an Interjection at all" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Nonsense' normally ek Noun hai, lekin yahan akele use hoke disgust/disbelief dikha raha hai - ye Secondary/Derived Interjection hai."
+      },
+      "navigation": { "next": "card_39_quiz_pure_interjection", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_39_quiz_pure_interjection",
+      "card_slug": "card_39_quiz_pure_interjection",
+      "type": "quiz",
+      "concept_id": "interjection_primary_secondary",
+      "level": 3,
+      "progress": { "current": 39, "total": 70 },
+      "quiz_payload": {
+        "question": "Which of the following is a PRIMARY (Pure) Interjection, having no other grammatical role?",
+        "options": [
+          { "id": "A", "text": "Good" },
+          { "id": "B", "text": "Alas" },
+          { "id": "C", "text": "Shame" },
+          { "id": "D", "text": "Nonsense" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Alas' hamesha sirf Interjection ki tarah hi use hota hai, iska koi doosra Part of Speech role nahi hota - ye Primary Interjection hai."
+      },
+      "navigation": { "next": "card_40_quiz_good_secondary", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_40_quiz_good_secondary",
+      "card_slug": "card_40_quiz_good_secondary",
+      "type": "quiz",
+      "concept_id": "interjection_primary_secondary",
+      "level": 3,
+      "progress": { "current": 40, "total": 70 },
+      "quiz_payload": {
+        "question": "'Good! You have finally arrived.' - 'Good' here functions as a Secondary Interjection because:",
+        "options": [
+          { "id": "A", "text": "It normally functions as an Adjective describing a Noun" },
+          { "id": "B", "text": "It is always an Interjection in every context" },
+          { "id": "C", "text": "It is a Verb in this sentence" },
+          { "id": "D", "text": "It cannot express any emotion" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Good' normally Adjective hai (a good boy), lekin akele standalone use hone par approval dikhane ke liye Secondary Interjection ban jata hai."
+      },
+      "navigation": { "next": "card_41_quiz_multistatement_primarysecondary", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_41_quiz_multistatement_primarysecondary",
+      "card_slug": "card_41_quiz_multistatement_primarysecondary",
+      "type": "quiz",
+      "concept_id": "interjection_primary_secondary",
+      "level": 3,
+      "progress": { "current": 41, "total": 70 },
+      "quiz_payload": {
+        "question": "Statements: I. Primary Interjections have no grammatical function other than expressing emotion. II. Secondary Interjections are words borrowed from other Parts of Speech used independently to show feeling. III. 'Indeed' can function as both an Adverb and an Interjection. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & II" },
+          { "id": "B", "text": "II & III" },
+          { "id": "C", "text": "I only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Teeno statements sahi hain - ye standard classification hai jo Primary aur Secondary Interjections ko define karti hai."
+      },
+      "navigation": { "next": "card_42_milestone_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_42_milestone_m5",
+      "card_slug": "card_42_milestone_m5",
+      "type": "milestone",
+      "concept_id": "interjection_primary_secondary",
+      "level": 3,
+      "progress": { "current": 42, "total": 70 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔀",
+        "completed_topic": "Primary (Pure) vs Secondary (Derived) Interjections",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "Classification pakki ho gayi! Ab sabse bada exam trap - Oh vs O!"
+      },
+      "navigation": { "next": "card_43_oh_vs_o_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_43_oh_vs_o_intro",
+      "card_slug": "card_43_oh_vs_o_intro",
+      "type": "chat",
+      "concept_id": "interjection_oh_vs_o",
+      "level": 3,
+      "progress": { "current": 43, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ab sabse tricky aur SBI PO ka favorite trap - 'OH' aur 'O' mein kya fark hai? Dono ek jaisa dikhte hain, matlab bhi kabhi kabhi same lagta hai!" },
+        { "speaker": "raju", "text": "Sir mujhe to lagta hai dono same hi hain, bas spelling ka fark hai!" },
+        { "speaker": "aman", "text": "Yahi sabse bada misconception hai jo exams mein trap banta hai! 'Oh' aur 'O' bilkul alag use aur grammar rules follow karte hain. Chalo dono ko alag-alag detail se samajhte hain." },
+        { "speaker": "raju", "text": "Sir jaldi batao, main confuse ho raha hun!" }
+      ],
+      "navigation": { "next": "card_44_oh_usage_rules", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_44_oh_usage_rules",
+      "card_slug": "card_44_oh_usage_rules",
+      "type": "chat",
+      "concept_id": "interjection_oh_vs_o",
+      "level": 3,
+      "progress": { "current": 44, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "'OH' ek COMMON/GENERAL Interjection hai jo kayi emotions dikha sakta hai - surprise, pain, sorrow, joy. Ye Exclamation mark (!) ya Comma (,) ke saath use hota hai, aur akela bhi khada ho sakta hai. Jaise: 'Oh! I forgot my bag.' ya 'Oh, that's nice.'" },
+        { "speaker": "raju", "text": "Sir matlab 'Oh' bahut flexible hai - kahin bhi, kisi bhi emotion ke sath fit ho jata hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ab dekho 'O' - ye bahut SPECIFIC aur FORMAL/POETIC use ke liye hota hai. 'O' sirf SOLEMN INVOCATION ya ADDRESS (kisi ko pukarna, especially poetry/prayer mein) ke liye use hota hai." },
+        { "speaker": "raju", "text": "Sir 'invocation' matlab kya hota hai?" }
+      ],
+      "navigation": { "next": "card_45_o_usage_rules", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_45_o_usage_rules",
+      "card_slug": "card_45_o_usage_rules",
+      "type": "chat",
+      "concept_id": "interjection_oh_vs_o",
+      "level": 3,
+      "progress": { "current": 45, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "'Invocation' matlab kisi ko (God, desh, prakriti) sammaan ke saath pukarna. Jaise: 'O God! Save us.' ya 'O Motherland! We salute thee.' Yahan 'O' hamesha ek NOUN (jise pukara ja raha hai) ke saath, USSE PEHLE aata hai." },
+        { "speaker": "raju", "text": "Sir 'O' ke baad kya punctuation lagega, '!' ya ','?" },
+        { "speaker": "aman", "text": "Yahi sabse bada trap hai - 'O' ke TURANT BAAD KOI PUNCTUATION NAHI LAGTA! 'O' aur uske baad wala Noun ek saath, bina comma/exclamation ke likhe jate hain: 'O God, save us!' (comma God ke baad, O ke baad nahi)." },
+        { "speaker": "raju", "text": "Achhaaa! Matlab 'O,' likhna galat hai, seedha 'O God' likhna hai bina beech mein kuch lagaye!" }
+      ],
+      "navigation": { "next": "card_46_o_always_capital", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_46_o_always_capital",
+      "card_slug": "card_46_o_always_capital",
+      "type": "chat",
+      "concept_id": "interjection_oh_vs_o",
+      "level": 3,
+      "progress": { "current": 46, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Ek aur rule - 'O' hamesha CAPITAL letter mein likha jata hai, chahe wo sentence ke beech mein hi kyun na ho. 'Oh' normal sentence rule follow karta hai (sirf sentence-start mein capital)." },
+        { "speaker": "raju", "text": "Sir to short mein yaad rakhne ka tareeka kya hai?" },
+        { "speaker": "aman", "text": "Yaad rakho: OH = General emotion, punctuation ke saath, kabhi bhi use ho sakta hai. O = Sirf address/invocation (kisi ko pukarna), hamesha Capital, NO punctuation baad mein, Noun ke turant pehle." },
+        { "speaker": "raju", "text": "Achha sir, ab isse test karo, ye bahut important lag raha hai!" }
+      ],
+      "navigation": { "next": "card_47_guess_o_god", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_47_guess_o_god",
+      "card_slug": "card_47_guess_o_god",
+      "type": "guess",
+      "concept_id": "interjection_oh_vs_o",
+      "level": 3,
+      "progress": { "current": 47, "total": 70 },
+      "guess_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          { "id": "A", "text": "O, God! Help me." },
+          { "id": "B", "text": "Oh God, help me!" },
+          { "id": "C", "text": "O god! help me." },
+          { "id": "D", "text": "oh, God help me." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Oh' general emotion (plea/appeal) dikha raha hai, uske baad Noun 'God' aata hai, phir comma, phir exclamation - ye correct structure hai. 'O' style hoti to 'O God, help me!' (bina comma O ke baad) likha jata, capital 'God' bhi zaroori hai."
+      },
+      "navigation": { "next": "card_48_quiz_o_no_punctuation", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_48_quiz_o_no_punctuation",
+      "card_slug": "card_48_quiz_o_no_punctuation",
+      "type": "quiz",
+      "concept_id": "interjection_oh_vs_o",
+      "level": 3,
+      "progress": { "current": 48, "total": 70 },
+      "quiz_payload": {
+        "question": "Error detection: 'O, Motherland! We salute thee.'",
+        "options": [
+          { "id": "A", "text": "Remove the comma after 'O' - it should be 'O Motherland!'" },
+          { "id": "B", "text": "'Motherland' should be lowercase" },
+          { "id": "C", "text": "'salute' should be 'saluted'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'O' (invocation) ke baad koi punctuation nahi lagta - seedha Noun aata hai: 'O Motherland!' na ki 'O, Motherland!'"
+      },
+      "navigation": { "next": "card_49_quiz_capital_o", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_49_quiz_capital_o",
+      "card_slug": "card_49_quiz_capital_o",
+      "type": "quiz",
+      "concept_id": "interjection_oh_vs_o",
+      "level": 3,
+      "progress": { "current": 49, "total": 70 },
+      "quiz_payload": {
+        "question": "Which rule is UNIQUE to 'O' but does NOT apply to 'Oh'?",
+        "options": [
+          { "id": "A", "text": "It is always written in capital letter" },
+          { "id": "B", "text": "It can express surprise" },
+          { "id": "C", "text": "It is used with an exclamation mark" },
+          { "id": "D", "text": "It can appear at the start of a sentence" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'O' hamesha capital letter mein likha jata hai, chahe sentence ke beech mein ho. 'Oh' normal capitalization rule follow karta hai."
+      },
+      "navigation": { "next": "card_50_quiz_multistatement_ohvso", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_50_quiz_multistatement_ohvso",
+      "card_slug": "card_50_quiz_multistatement_ohvso",
+      "type": "quiz",
+      "concept_id": "interjection_oh_vs_o",
+      "level": 3,
+      "progress": { "current": 50, "total": 70 },
+      "quiz_payload": {
+        "question": "Statements: I. 'O' is used only for solemn invocation or address, typically before a Noun. II. No punctuation mark is placed immediately after 'O'. III. 'Oh' is always written with a capital letter regardless of position in the sentence. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & II" },
+          { "id": "B", "text": "II & III" },
+          { "id": "C", "text": "I & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement III galat hai - 'Oh' hamesha capital nahi hota, ye normal sentence capitalization rule follow karta hai (sirf sentence-start mein capital hoga)."
+      },
+      "navigation": { "next": "card_51_milestone_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_51_milestone_m6",
+      "card_slug": "card_51_milestone_m6",
+      "type": "milestone",
+      "concept_id": "interjection_oh_vs_o",
+      "level": 3,
+      "progress": { "current": 51, "total": 70 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Oh vs O - The Classic Distinction",
+        "xp_earned": 65,
+        "milestone_progress": "Module 6/8 Clear",
+        "motivational_quote": "Sabse bada trap crack ho gaya! Ab Context-Dependent words seekhते hain!"
+      },
+      "navigation": { "next": "card_52_well_context", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_52_well_context",
+      "card_slug": "card_52_well_context",
+      "type": "chat",
+      "concept_id": "interjection_context_dependent",
+      "level": 4,
+      "progress": { "current": 52, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ab dekho ek aur important trap - kuch words CONTEXT ke hisab se Interjection bhi ban sakte hain, aur doosri Parts of Speech bhi. Pehla example - 'WELL'." },
+        { "speaker": "raju", "text": "Sir 'Well' to Adverb hai na, jaise 'She sings well'?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Wahan 'well' Adverb hai (kaise sings). Lekin dekho: 'Well, I am not sure about this plan.' - yahan 'Well,' sentence ke SHURU mein akela use hokar HESITATION/THOUGHT dikha raha hai - ye Interjection hai!" },
+        { "speaker": "raju", "text": "Achha! Matlab sentence ke shuru mein akela ho aur comma lage, to Interjection samjho!" }
+      ],
+      "navigation": { "next": "card_53_right_context", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_53_right_context",
+      "card_slug": "card_53_right_context",
+      "type": "chat",
+      "concept_id": "interjection_context_dependent",
+      "level": 4,
+      "progress": { "current": 53, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda ye pattern! Ab dusra example - 'RIGHT'. Normal use mein 'Right' Adjective hai ('the right answer') ya Adverb ('turn right'). Lekin akela use hone par: 'Right! Let's begin the meeting.' - ye agreement/acknowledgment dikhata hai, Interjection ban gaya!" },
+        { "speaker": "raju", "text": "Sir 'Now' bhi aisa hi kaam karta hai kya?" },
+        { "speaker": "aman", "text": "Bilkul sahi guess! 'Now' normally Adverb of Time hai ('I am busy now'). Lekin jab attention grab karne ke liye akela use ho: 'Now, listen carefully!' - ye Interjection ban jata hai, time ka matlab nahi rehta yahan." },
+        { "speaker": "raju", "text": "Achha! To ye teeno words - Well, Right, Now - context ke hisab se apna role badalte hain!" }
+      ],
+      "navigation": { "next": "card_54_identification_trick", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_54_identification_trick",
+      "card_slug": "card_54_identification_trick",
+      "type": "chat",
+      "concept_id": "interjection_context_dependent",
+      "level": 4,
+      "progress": { "current": 54, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Yaad rakhne ka easy trick: agar ye words AKELE, sentence ke shuru mein, COMMA/EXCLAMATION ke saath aayein, aur baaki sentence se GRAMMATICALLY INDEPENDENT hon, to wo Interjection hain. Agar wo Noun/Adjective/Adverb ki tarah sentence structure ka HISSA hon, to normal POS hain." },
+        { "speaker": "raju", "text": "Sir ye to bahut helpful trick hai! Ab isse test karo mujhpe please!" },
+        { "speaker": "aman", "text": "Chalo, dekhते hain kitna acha pakda hai tumne!" },
+        { "speaker": "raju", "text": "Sir ready hun!" }
+      ],
+      "navigation": { "next": "card_55_guess_well_role", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_55_guess_well_role",
+      "card_slug": "card_55_guess_well_role",
+      "type": "guess",
+      "concept_id": "interjection_context_dependent",
+      "level": 4,
+      "progress": { "current": 55, "total": 70 },
+      "guess_payload": {
+        "question": "'Well, I never expected this result.' - What role does 'Well' play here?",
+        "options": [
+          { "id": "A", "text": "Adverb modifying 'expected'" },
+          { "id": "B", "text": "Interjection showing hesitation/surprise" },
+          { "id": "C", "text": "Adjective describing 'result'" },
+          { "id": "D", "text": "Noun" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Well,' yahan akela, sentence ke shuru mein hesitation/mild surprise dikha raha hai aur grammatically independent hai - ye Interjection hai."
+      },
+      "navigation": { "next": "card_56_quiz_right_agreement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_56_quiz_right_agreement",
+      "card_slug": "card_56_quiz_right_agreement",
+      "type": "quiz",
+      "concept_id": "interjection_context_dependent",
+      "level": 4,
+      "progress": { "current": 56, "total": 70 },
+      "quiz_payload": {
+        "question": "In which sentence does 'Right' function as an Interjection?",
+        "options": [
+          { "id": "A", "text": "She gave the right answer." },
+          { "id": "B", "text": "Turn right at the signal." },
+          { "id": "C", "text": "Right! Let's get started with the plan." },
+          { "id": "D", "text": "He has a right to vote." }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Yahan 'Right!' akela use hokar agreement/acknowledgment dikha raha hai - ye Interjection hai. Baaki options mein 'right' Adjective, Adverb, ya Noun hai."
+      },
+      "navigation": { "next": "card_57_quiz_now_attention", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_57_quiz_now_attention",
+      "card_slug": "card_57_quiz_now_attention",
+      "type": "quiz",
+      "concept_id": "interjection_context_dependent",
+      "level": 4,
+      "progress": { "current": 57, "total": 70 },
+      "quiz_payload": {
+        "question": "'Now, listen carefully to what I say.' - Here, 'Now' functions as:",
+        "options": [
+          { "id": "A", "text": "Adverb of Time" },
+          { "id": "B", "text": "Interjection grabbing attention" },
+          { "id": "C", "text": "Conjunction" },
+          { "id": "D", "text": "Preposition" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Yahan 'Now' TIME nahi dikha raha, balki attention grab kar raha hai command dene se pehle - ye Interjection hai."
+      },
+      "navigation": { "next": "card_58_quiz_multistatement_contextwords", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_58_quiz_multistatement_contextwords",
+      "card_slug": "card_58_quiz_multistatement_contextwords",
+      "type": "quiz",
+      "concept_id": "interjection_context_dependent",
+      "level": 4,
+      "progress": { "current": 58, "total": 70 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Well' functions as an Interjection only when used at the start of a sentence to show hesitation. II. 'Right' is always an Adjective and can never act as an Interjection. III. A word's function as an Interjection depends on how it is used in context, not on its dictionary category alone. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "II & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - 'Right' bhi context ke hisab se Interjection ban sakta hai (agreement dikhane ke liye), hamesha Adjective nahi rehta."
+      },
+      "navigation": { "next": "card_59_milestone_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_59_milestone_m7",
+      "card_slug": "card_59_milestone_m7",
+      "type": "milestone",
+      "concept_id": "interjection_context_dependent",
+      "level": 4,
+      "progress": { "current": 59, "total": 70 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔄",
+        "completed_topic": "Interjection vs Other Parts of Speech (Well/Right/Now)",
+        "xp_earned": 65,
+        "milestone_progress": "Module 7/8 Clear",
+        "motivational_quote": "Context-dependent trap crack ho gaya! Ab last module - Position & Multi-word Interjections!"
+      },
+      "navigation": { "next": "card_60_position_rule", "button_text": "Start Final Module ➔" }
+    },
+    {
+      "card_id": "card_60_position_rule",
+      "card_slug": "card_60_position_rule",
+      "type": "chat",
+      "concept_id": "interjection_position_multiword",
+      "level": 4,
+      "progress": { "current": 60, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho Interjection ki POSITION - ye zyadatar sentence ke SHURU mein aata hai, kyunki emotion sabse pehle aati hai, phir baaki baat. Lekin ye poori tarah STANDALONE bhi ho sakta hai, matlab akela ek separate sentence ki tarah." },
+        { "speaker": "raju", "text": "Sir matlab 'Wow!' akela bhi likh sakte hain, uske baad naya sentence?" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'Wow! That's amazing.' - dono 'Wow!' aur 'That's amazing' apne aap mein separate hain. Kabhi kabhi bahut informal writing mein Interjection sentence ke beech ya end mein bhi aa sakta hai, lekin standard/formal use mein SHURU mein hi common hai." },
+        { "speaker": "raju", "text": "Achha sir, ab agla concept kya hai?" }
+      ],
+      "navigation": { "next": "card_61_multiword_interjections", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_61_multiword_interjections",
+      "card_slug": "card_61_multiword_interjections",
+      "type": "chat",
+      "concept_id": "interjection_position_multiword",
+      "level": 4,
+      "progress": { "current": 61, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho MULTI-WORD (Phrasal) Interjections - do ya zyada words milkar ek Interjection ki tarah kaam karte hain. Common examples: Oh no! Oh dear! Good heavens! Thank God! My God! Good gracious! Oh my God!" },
+        { "speaker": "raju", "text": "Sir 'Thank God' to normal sentence jaisa lagta hai, phir Interjection kaise hua?" },
+        { "speaker": "aman", "text": "Bahut acha doubt! Jab ye phrase AKELA, achanak relief/gratitude dikhane ke liye use ho ('Thank God! We are safe.'), tab ye ek fixed Interjection expression ban jata hai, na ki normal Subject-Verb sentence." },
+        { "speaker": "raju", "text": "Achha! Matlab ye poore phrase ek unit ki tarah kaam karte hain, ek emotion dikhane ke liye!" }
+      ],
+      "navigation": { "next": "card_62_hindi_interjections_bpsc", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_62_hindi_interjections_bpsc",
+      "card_slug": "card_62_hindi_interjections_bpsc",
+      "type": "chat",
+      "concept_id": "interjection_position_multiword",
+      "level": 4,
+      "progress": { "current": 62, "total": 70 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Bihar SCERT mein students ko batalaya jata hai ki Hindi ke Interjections jaise 'Wah!', 'Arre!', 'Chhi!', 'Are wah!' FORMAL ENGLISH WRITING mein NAHI use kiye jate - ye sirf Hindi/regional bhasha ke liye hote hain." },
+        { "speaker": "raju", "text": "Sir matlab exam mein English essay likhte waqt 'Wah!' galti se bhi nahi likhna?" },
+        { "speaker": "aman", "text": "Bilkul sahi! English mein equivalent Interjections use karna hoga - 'Wah!' ki jagah 'Wow!' ya 'Bravo!', 'Arre!' ki jagah 'Oh!' ya 'Hey!'. Ye BPSC TRE mein English teaching methodology ke question mein bhi puchha ja sakta hai." },
+        { "speaker": "raju", "text": "Achha sir, ab mujhe in sab concepts pe final test karo!" }
+      ],
+      "navigation": { "next": "card_63_guess_standalone_interjection", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_63_guess_standalone_interjection",
+      "card_slug": "card_63_guess_standalone_interjection",
+      "type": "guess",
+      "concept_id": "interjection_position_multiword",
+      "level": 4,
+      "progress": { "current": 63, "total": 70 },
+      "guess_payload": {
+        "question": "Which of the following is a correct Multi-word (Phrasal) Interjection?",
+        "options": [
+          { "id": "A", "text": "Good heavens!" },
+          { "id": "B", "text": "The good heavens" },
+          { "id": "C", "text": "Heavens are good" },
+          { "id": "D", "text": "Good, heaven is here" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Good heavens!' ek fixed Phrasal Interjection hai jo surprise/shock dikhane ke liye use hota hai, ek unit ki tarah."
+      },
+      "navigation": { "next": "card_64_quiz_position_standard", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_64_quiz_position_standard",
+      "card_slug": "card_64_quiz_position_standard",
+      "type": "quiz",
+      "concept_id": "interjection_position_multiword",
+      "level": 4,
+      "progress": { "current": 64, "total": 70 },
+      "quiz_payload": {
+        "question": "In standard/formal English writing, an Interjection is MOST commonly placed:",
+        "options": [
+          { "id": "A", "text": "At the end of the sentence only" },
+          { "id": "B", "text": "In the middle of the main clause" },
+          { "id": "C", "text": "At the beginning of the sentence, often standalone" },
+          { "id": "D", "text": "It cannot be used in written English at all" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Interjection zyadatar sentence ke shuru mein aata hai, standalone bhi ho sakta hai, kyunki emotion sabse pehle express hoti hai."
+      },
+      "navigation": { "next": "card_65_quiz_hindi_avoid", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_65_quiz_hindi_avoid",
+      "card_slug": "card_65_quiz_hindi_avoid",
+      "type": "quiz",
+      "concept_id": "interjection_position_multiword",
+      "level": 4,
+      "progress": { "current": 65, "total": 70 },
+      "quiz_payload": {
+        "question": "Which of the following is NOT considered a standard English Interjection and should be avoided in formal English writing?",
+        "options": [
+          { "id": "A", "text": "Wow" },
+          { "id": "B", "text": "Alas" },
+          { "id": "C", "text": "Arre" },
+          { "id": "D", "text": "Hurrah" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Arre' ek Hindi/regional Interjection hai, standard formal English writing mein iski jagah 'Oh' ya 'Hey' jaisa English equivalent use karna chahiye."
+      },
+      "navigation": { "next": "card_66_quiz_multistatement_positionmultiword", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_66_quiz_multistatement_positionmultiword",
+      "card_slug": "card_66_quiz_multistatement_positionmultiword",
+      "type": "quiz",
+      "concept_id": "interjection_position_multiword",
+      "level": 4,
+      "progress": { "current": 66, "total": 70 },
+      "quiz_payload": {
+        "question": "Statements: I. Multi-word Interjections like 'Thank God!' function as a single emotional unit. II. Interjections can never appear standalone as their own sentence. III. Regional/Hindi interjections like 'Wah' and 'Arre' are not standard in formal English writing. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "II & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - Interjections standalone bhi ho sakte hain, ek independent sentence ki tarah, jaise 'Wow!' akela likha ja sakta hai."
+      },
+      "navigation": { "next": "card_67_milestone_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_67_milestone_m8",
+      "card_slug": "card_67_milestone_m8",
+      "type": "milestone",
+      "concept_id": "interjection_position_multiword",
+      "level": 4,
+      "progress": { "current": 67, "total": 70 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏅",
+        "completed_topic": "Position, Multi-word Interjections & Hindi vs English Usage",
+        "xp_earned": 70,
+        "milestone_progress": "Module 8/8 Clear",
+        "motivational_quote": "Saare 8 modules clear! Ab Officer Level Final Revision ki baari hai!"
+      },
+      "navigation": { "next": "card_68_summary_revision", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_68_summary_revision",
+      "card_slug": "card_68_summary_revision",
+      "type": "summary",
+      "concept_id": "interjection_full_revision",
+      "level": 4,
+      "progress": { "current": 68, "total": 70 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Interjection",
+        "revision_points": [
+          {
+            "topic": "Definition & Independence",
+            "point": "Interjection achanak emotion express karta hai aur baaki sentence se grammatically independent hota hai - ise hata dene par bhi sentence sahi rehta hai."
+          },
+          {
+            "topic": "Punctuation Rules",
+            "point": "Strong emotion = Exclamation mark (!) + next word Capital. Mild emotion = Comma (,) + next word small letter (sentence continues)."
+          },
+          {
+            "topic": "8 Types by Emotion",
+            "point": "Joy(Hurrah), Sorrow(Alas), Surprise(What), Approval(Bravo), Greeting(Hello), Attention(Hush), Disgust(Fie), Pain(Ouch). 'Oh' is multi-purpose across categories."
+          },
+          {
+            "topic": "Primary vs Secondary & Oh vs O",
+            "point": "Primary Interjections (Alas, Wow) have NO other grammatical role; Secondary ones (Good!, Nonsense!) are derived from other POS. 'O' = only for solemn invocation, always Capital, NO punctuation after it, before a Noun; 'Oh' = general emotion with normal punctuation."
+          },
+          {
+            "topic": "Context-Dependent Words",
+            "point": "Well/Right/Now become Interjections only when used standalone at sentence-start with a comma to show hesitation/agreement/attention - otherwise they are Adverb/Adjective. Hindi words (Wah, Arre) are NOT standard English Interjections."
+          }
+        ]
+      },
+      "navigation": { "next": "card_69_final_quiz", "button_text": "Take Final Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_69_final_quiz",
+      "card_slug": "card_69_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "interjection_full_revision",
+      "level": 4,
+      "progress": { "current": 69, "total": 70 },
+      "quiz_payload": {
+        "question": "Read the following statements about Interjections carefully:\nI. An Interjection has no grammatical connection with the rest of the sentence, and removing it does not affect the sentence's correctness.\nII. 'O' and 'Oh' are used interchangeably and follow the exact same punctuation and capitalization rules.\nIII. Words like 'Well', 'Right', and 'Now' function as Interjections only when they stand alone, typically at the beginning of a sentence, expressing hesitation, agreement, or seeking attention.\nIV. Secondary Interjections are words originally belonging to other Parts of Speech (Noun, Adjective) that function as Interjections only when used independently to express emotion.\nWhich of the above statements are CORRECT?",
+        "options": [
+          { "id": "A", "text": "I, III and IV only" },
+          { "id": "B", "text": "I, II and III only" },
+          { "id": "C", "text": "II, III and IV only" },
+          { "id": "D", "text": "All four statements are correct" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - 'O' aur 'Oh' bilkul alag rules follow karte hain: 'O' hamesha Capital hota hai, koi punctuation baad mein nahi lagta aur ye sirf solemn invocation ke liye use hota hai; 'Oh' normal capitalization aur punctuation (comma/exclamation) rules follow karta hai general emotions ke liye. Statements I, III, aur IV standard grammar rules ke anusar sahi hain jo BPSC/SBI PO Error Detection mein directly test hote hain."
+      },
+      "navigation": { "next": "card_70_trophy", "button_text": "See Final Result ➔" }
+    },
+    {
+      "card_id": "card_70_trophy",
+      "card_slug": "card_70_trophy",
+      "type": "milestone",
+      "concept_id": "interjection_full_revision",
+      "level": 4,
+      "progress": { "current": 70, "total": 70 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Interjection - Complete Mastery (SBI PO Error Detection Level)",
+        "xp_earned": 200,
+        "milestone_progress": "8/8 Modules Clear - 100% Complete",
+        "motivational_quote": "Shabaash Officer! Ab tum Interjection ke har type, har punctuation rule, Oh vs O ka trap, aur har SBI PO/BPSC error detection question ko crack kar sakte ho. Practice karte raho aur exam mein topper bano!"
+      },
+      "navigation": { "next": "course_complete", "button_text": "Finish Chapter 🎉" }
+    }
+  ]
+}
+```
