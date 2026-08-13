@@ -1,0 +1,1817 @@
+{
+  "topic_id": "english_grammar_conjunction_sbi_po",
+  "topic_title": "Conjunction – Complete Mastery for SBI PO Level Error Detection",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 100,
+  "characters": {
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 100 },
+      "intro_payload": {
+        "title": "Conjunction Master Class",
+        "icon": "🔗📝",
+        "subtitle": "From Zero Knowledge to SBI PO Error Detection Officer",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Understand what a Conjunction is and how it joins words, phrases and clauses",
+          "Master Coordinating Conjunctions (FANBOYS) and comma rules",
+          "Master Correlative Conjunctions and their parallel structure requirement",
+          "Master Subordinating Conjunctions by function: Time, Cause, Condition, Purpose, Concession, Comparison",
+          "Crack Because/As/Since/For confusion - same meaning, different usage rules",
+          "Master Although/Though vs Despite/In spite of - the biggest Conjunction vs Preposition trap",
+          "Identify Double Conjunction Redundancy errors (Although...but, Because...so)",
+          "Master Unless (no double negative) and Lest+should structure",
+          "Crack Neither-nor/Either-or subject-verb agreement rules",
+          "Master As...as/So...as and So that/So...that purpose vs result clauses",
+          "Master Not only...but also inversion and position rules",
+          "Learn Provided that, Whether...or, As if/As though usage",
+          "Solve BPSC/SSC/SBI PO style multi-statement and error-spotting questions"
+        ]
+      },
+      "navigation": { "next": "card_02_daily_observation", "button_text": "Start Learning ➔" }
+    },
+    {
+      "card_id": "card_02_daily_observation",
+      "card_slug": "card_02_daily_observation",
+      "type": "chat",
+      "concept_id": "conjunction_intro",
+      "level": 1,
+      "progress": { "current": 2, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, jab tum mummy se kehte ho 'Mujhe bhookh lagi hai AUR neend bhi aa rahi hai' - yahan 'aur' kya kaam kar raha hai?" },
+        { "speaker": "raju", "text": "Sir 'aur' to do baatein jod raha hai - bhookh wali baat aur neend wali baat!" },
+        { "speaker": "aman", "text": "Bilkul sahi! English mein bhi aisa hi ek shabd hota hai jo do words, phrases ya poore sentences ko jodta hai. Jaise 'I am hungry AND sleepy'." },
+        { "speaker": "raju", "text": "Achha sir, to ye 'and' jaisa shabd kis category mein aata hai?" }
+      ],
+      "navigation": { "next": "card_03_definition_conjunction", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_definition_conjunction",
+      "card_slug": "card_03_definition_conjunction",
+      "type": "chat",
+      "concept_id": "conjunction_intro",
+      "level": 1,
+      "progress": { "current": 3, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Aise shabd ko 'Conjunction' kehte hain. Conjunction wo shabd hai jo do words, phrases ya clauses ko aapas mein jodta hai. Jaise: and, but, or, because, although." },
+        { "speaker": "raju", "text": "Sir ye Preposition jaisa nahi lagta? Wo bhi to jodta hai na sentence mein cheezon ko?" },
+        { "speaker": "aman", "text": "Bahut acha doubt! Preposition Noun/Pronoun ko baaki sentence se relate karta hai (jaise 'on the table'), lekin Conjunction do COMPLETE units - words, phrases ya clauses - ko jodta hai. Ye fark aage aur clear hoga." },
+        { "speaker": "raju", "text": "Achhaaa! Matlab Conjunction ka kaam sirf JODNA hai, relation batana nahi?" }
+      ],
+      "navigation": { "next": "card_04_three_types_preview", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_three_types_preview",
+      "card_slug": "card_04_three_types_preview",
+      "type": "chat",
+      "concept_id": "conjunction_intro",
+      "level": 1,
+      "progress": { "current": 4, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab Conjunction ke teen mukhya types yaad rakho: (1) Coordinating - equal cheezon ko jodta hai (and, but, or), (2) Subordinating - ek main clause aur ek dependent clause ko jodta hai (because, although, if), (3) Correlative - pairs mein aate hain (either...or, neither...nor)." },
+        { "speaker": "raju", "text": "Sir teeno alag kaise pehchanenge? Ye to exam mein confuse karega!" },
+        { "speaker": "aman", "text": "Ghabrao mat, hum ek-ek karke poori detail mein seekhenge, saath mein SBI PO level ke saare traps bhi! Chalo pehle Coordinating se shuru karte hain." },
+        { "speaker": "raju", "text": "Sir ready hun, batao pehla type!" }
+      ],
+      "navigation": { "next": "card_05_guess_identify_conjunction", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_guess_identify_conjunction",
+      "card_slug": "card_05_guess_identify_conjunction",
+      "type": "guess",
+      "concept_id": "conjunction_intro",
+      "level": 1,
+      "progress": { "current": 5, "total": 100 },
+      "guess_payload": {
+        "question": "Identify the Conjunction in: 'Raju studied hard but he failed the test.'",
+        "options": [
+          { "id": "A", "text": "studied" },
+          { "id": "B", "text": "but" },
+          { "id": "C", "text": "failed" },
+          { "id": "D", "text": "test" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'But' do clauses ko jodta hai ('Raju studied hard' aur 'he failed the test') aur contrast dikhata hai - ye Conjunction hai."
+      },
+      "navigation": { "next": "card_06_quiz_definition", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_06_quiz_definition",
+      "card_slug": "card_06_quiz_definition",
+      "type": "quiz",
+      "concept_id": "conjunction_intro",
+      "level": 1,
+      "progress": { "current": 6, "total": 100 },
+      "quiz_payload": {
+        "question": "A Conjunction's main function is to:",
+        "options": [
+          { "id": "A", "text": "Describe a Noun" },
+          { "id": "B", "text": "Join words, phrases or clauses" },
+          { "id": "C", "text": "Show the relation of a Noun to the rest of the sentence" },
+          { "id": "D", "text": "Modify a Verb" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Conjunction ka mukhya kaam do units - words, phrases ya clauses - ko aapas mein jodna hai."
+      },
+      "navigation": { "next": "card_07_quiz_types_count", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz_types_count",
+      "card_slug": "card_07_quiz_types_count",
+      "type": "quiz",
+      "concept_id": "conjunction_intro",
+      "level": 1,
+      "progress": { "current": 7, "total": 100 },
+      "quiz_payload": {
+        "question": "Which of the following is an example of a Correlative Conjunction?",
+        "options": [
+          { "id": "A", "text": "and" },
+          { "id": "B", "text": "because" },
+          { "id": "C", "text": "either...or" },
+          { "id": "D", "text": "although" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Either...or' pair mein aata hai, isliye ye Correlative Conjunction hai. 'And' Coordinating hai, 'because/although' Subordinating hain."
+      },
+      "navigation": { "next": "card_08_quiz_multistatement_intro", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_quiz_multistatement_intro",
+      "card_slug": "card_08_quiz_multistatement_intro",
+      "type": "quiz",
+      "concept_id": "conjunction_intro",
+      "level": 1,
+      "progress": { "current": 8, "total": 100 },
+      "quiz_payload": {
+        "question": "Statements: I. Conjunctions join equal or unequal grammatical units. II. A Preposition and a Conjunction perform the exact same function. III. There are three main types of Conjunctions - Coordinating, Subordinating, and Correlative. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III only" },
+          { "id": "B", "text": "I & II only" },
+          { "id": "C", "text": "II only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - Preposition Noun ko relate karta hai, Conjunction poore units ko jodta hai, dono alag kaam karte hain."
+      },
+      "navigation": { "next": "card_09_milestone_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_09_milestone_m1",
+      "card_slug": "card_09_milestone_m1",
+      "type": "milestone",
+      "concept_id": "conjunction_intro",
+      "level": 1,
+      "progress": { "current": 9, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔗",
+        "completed_topic": "Introduction to Conjunction",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/12 Clear",
+        "motivational_quote": "Foundation strong hai! Ab Coordinating Conjunctions - FANBOYS seekhते hain!"
+      },
+      "navigation": { "next": "card_10_fanboys_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_10_fanboys_intro",
+      "card_slug": "card_10_fanboys_intro",
+      "type": "chat",
+      "concept_id": "conjunction_coordinating",
+      "level": 1,
+      "progress": { "current": 10, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho Coordinating Conjunctions - ye do EQUAL/SAME grammatical units ko jodte hain (do Noun, do Verb, ya do Independent Clause). Inko yaad rakhne ka easy tareeka hai - FANBOYS: For, And, Nor, But, Or, Yet, So." },
+        { "speaker": "raju", "text": "Sir 'FANBOYS' matlab? Ye to interesting naam hai!" },
+        { "speaker": "aman", "text": "Haan, har letter ek Conjunction dikhata hai - F(for), A(and), N(nor), B(but), O(or), Y(yet), S(so). Ye saat conjunctions hi Coordinating category mein aate hain, bas!" },
+        { "speaker": "raju", "text": "Achha sir, sirf saat hi hain? Ye to yaad rakhna easy hai!" }
+      ],
+      "navigation": { "next": "card_11_comma_rule_fanboys", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_comma_rule_fanboys",
+      "card_slug": "card_11_comma_rule_fanboys",
+      "type": "chat",
+      "concept_id": "conjunction_coordinating",
+      "level": 1,
+      "progress": { "current": 11, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek important rule - jab FANBOYS DO INDEPENDENT CLAUSES (jo apne aap mein complete sentence ho sakte hain) ko jodta hai, to us conjunction se PEHLE COMMA lagta hai. Jaise: 'I wanted to go, but it was raining.'" },
+        { "speaker": "raju", "text": "Sir har jagah comma lagega FANBOYS ke pehle?" },
+        { "speaker": "aman", "text": "Nahi Raju, sirf jab dono taraf COMPLETE sentence ho. Jaise 'I like tea and coffee' mein comma nahi chahiye kyunki 'coffee' akela complete sentence nahi hai, bas Noun hai. Ye SSC/Railway ka common punctuation trap hai!" },
+        { "speaker": "raju", "text": "Achha! Matlab pehle check karna hoga ki dono side poora sentence hai ya nahi, tabhi comma lagega!" }
+      ],
+      "navigation": { "next": "card_12_for_preposition_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_for_preposition_trap",
+      "card_slug": "card_12_for_preposition_trap",
+      "type": "chat",
+      "concept_id": "conjunction_coordinating",
+      "level": 1,
+      "progress": { "current": 12, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek bada trap - 'FOR' word do jagah use hota hai: Preposition ki tarah ('This gift is for you') aur Conjunction ki tarah (formal, matlab 'because') - 'He left early, for he had work to do.'" },
+        { "speaker": "raju", "text": "Sir kaise pehchanenge kaunsa 'for' hai?" },
+        { "speaker": "aman", "text": "Jab 'for' ke baad ek COMPLETE clause (subject+verb) ho aur wo reason bata raha ho, tab wo Conjunction hai. Jab 'for' ke baad sirf Noun/Pronoun ho, tab wo Preposition hai. Ye BPSC officer level ka favorite identification trap hai!" },
+        { "speaker": "raju", "text": "Achha, ab in sab concepts ko test karo sir!" }
+      ],
+      "navigation": { "next": "card_13_guess_comma_needed", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_guess_comma_needed",
+      "card_slug": "card_13_guess_comma_needed",
+      "type": "guess",
+      "concept_id": "conjunction_coordinating",
+      "level": 1,
+      "progress": { "current": 13, "total": 100 },
+      "guess_payload": {
+        "question": "Which sentence correctly uses a comma before the Coordinating Conjunction?",
+        "options": [
+          { "id": "A", "text": "I bought apples, and oranges." },
+          { "id": "B", "text": "She sings, and dances well." },
+          { "id": "C", "text": "He worked hard, and he passed the exam." },
+          { "id": "D", "text": "I like tea, and coffee." }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Comma sirf tab lagta hai jab dono taraf Independent Clause (complete sentence) ho. 'He worked hard' aur 'he passed the exam' dono complete sentences hain."
+      },
+      "navigation": { "next": "card_14_quiz_nor_usage", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_14_quiz_nor_usage",
+      "card_slug": "card_14_quiz_nor_usage",
+      "type": "quiz",
+      "concept_id": "conjunction_coordinating",
+      "level": 1,
+      "progress": { "current": 14, "total": 100 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          { "id": "A", "text": "He neither smokes nor drinks." },
+          { "id": "B", "text": "He neither smokes or drinks." },
+          { "id": "C", "text": "He not smokes nor drinks." },
+          { "id": "D", "text": "He neither smokes drinks." }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Neither' hamesha 'nor' ke saath aata hai, 'or' ke saath nahi - ye classic Correlative pairing error hai."
+      },
+      "navigation": { "next": "card_15_quiz_for_identify", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz_for_identify",
+      "card_slug": "card_15_quiz_for_identify",
+      "type": "quiz",
+      "concept_id": "conjunction_coordinating",
+      "level": 1,
+      "progress": { "current": 15, "total": 100 },
+      "quiz_payload": {
+        "question": "In 'She was happy, for she had passed the exam,' the word 'for' functions as a:",
+        "options": [
+          { "id": "A", "text": "Preposition" },
+          { "id": "B", "text": "Coordinating Conjunction (meaning 'because')" },
+          { "id": "C", "text": "Adjective" },
+          { "id": "D", "text": "Adverb" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'For' yahan ek complete clause ('she had passed the exam') ko reason ki tarah joड़ raha hai - ye Coordinating Conjunction hai."
+      },
+      "navigation": { "next": "card_16_quiz_multistatement_fanboys", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_quiz_multistatement_fanboys",
+      "card_slug": "card_16_quiz_multistatement_fanboys",
+      "type": "quiz",
+      "concept_id": "conjunction_coordinating",
+      "level": 1,
+      "progress": { "current": 16, "total": 100 },
+      "quiz_payload": {
+        "question": "Statements: I. FANBOYS stands for For, And, Nor, But, Or, Yet, So. II. A comma is always required before every FANBOYS conjunction. III. Coordinating conjunctions join grammatically equal elements. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "II & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - comma sirf tab lagta hai jab dono taraf Independent (complete) clauses ho, hamesha nahi."
+      },
+      "navigation": { "next": "card_17_milestone_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_17_milestone_m2",
+      "card_slug": "card_17_milestone_m2",
+      "type": "milestone",
+      "concept_id": "conjunction_coordinating",
+      "level": 1,
+      "progress": { "current": 17, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔤",
+        "completed_topic": "Coordinating Conjunctions (FANBOYS)",
+        "xp_earned": 55,
+        "milestone_progress": "Module 2/12 Clear",
+        "motivational_quote": "FANBOYS pakka ho gaya! Ab Correlative Conjunctions ki baari hai!"
+      },
+      "navigation": { "next": "card_18_correlative_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_18_correlative_intro",
+      "card_slug": "card_18_correlative_intro",
+      "type": "chat",
+      "concept_id": "conjunction_correlative",
+      "level": 2,
+      "progress": { "current": 18, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho Correlative Conjunctions - ye hamesha PAIRS mein aate hain aur do cheezon ko relate karte hain. Ek akela nahi aa sakta, dono sath mein zaroori hain." },
+        { "speaker": "raju", "text": "Sir jaise 'either' akela use nahi kar sakte?" },
+        { "speaker": "aman", "text": "Bilkul sahi socha! 'Either' hamesha 'or' ke sath aayega. Poori list yaad karo: either...or, neither...nor, not only...but also, both...and, whether...or." },
+        { "speaker": "raju", "text": "Achha sir, in sabka use kaise hoga sentence mein?" }
+      ],
+      "navigation": { "next": "card_19_correlative_list_examples", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_correlative_list_examples",
+      "card_slug": "card_19_correlative_list_examples",
+      "type": "chat",
+      "concept_id": "conjunction_correlative",
+      "level": 2,
+      "progress": { "current": 19, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Examples dekho: 'Either you apologize or you leave' (do options), 'Neither Ram nor Shyam came' (dono nahi), 'She is both intelligent and hardworking' (dono qualities), 'Not only did he apologize but he also helped' (dono actions)." },
+        { "speaker": "raju", "text": "Sir 'whether...or' kahan use hota hai?" },
+        { "speaker": "aman", "text": "'Whether...or' do options/possibilities dikhata hai, especially doubt ya choice mein - 'I don't know whether he will come or not', 'Whether it rains or shines, we will go'." },
+        { "speaker": "raju", "text": "Achha! Ab ek bada rule bhi bata do jo exam mein important ho!" }
+      ],
+      "navigation": { "next": "card_20_parallel_structure_rule", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_parallel_structure_rule",
+      "card_slug": "card_20_parallel_structure_rule",
+      "type": "chat",
+      "concept_id": "conjunction_correlative",
+      "level": 2,
+      "progress": { "current": 20, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Yahin sabse bada twist hai - Correlative Conjunctions ke baad jo grammatical structure aata hai, wo dono jagah SAME (Parallel) hona chahiye. Jaise 'She likes not only singing but also dancing' - dono 'ing' form mein hain, parallel hai." },
+        { "speaker": "raju", "text": "Sir agar parallel na ho to kya problem hogi?" },
+        { "speaker": "aman", "text": "Galat sentence banega! 'She likes not only to sing but also dancing' GALAT hai - 'to sing' (infinitive) aur 'dancing' (gerund) match nahi karte. Sahi hoga 'not only to sing but also to dance' YA 'not only singing but also dancing'." },
+        { "speaker": "raju", "text": "Ye to bahut bada trap hai sir, dhyan se dekhna hoga structure!" }
+      ],
+      "navigation": { "next": "card_21_guess_parallel_error", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_guess_parallel_error",
+      "card_slug": "card_21_guess_parallel_error",
+      "type": "guess",
+      "concept_id": "conjunction_correlative",
+      "level": 2,
+      "progress": { "current": 21, "total": 100 },
+      "guess_payload": {
+        "question": "Error spot: 'He is both intelligent and a hard worker.'",
+        "options": [
+          { "id": "A", "text": "'a hard worker' should be 'hardworking' to match adjective 'intelligent'" },
+          { "id": "B", "text": "'both' should be 'either'" },
+          { "id": "C", "text": "'and' should be 'or'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Both...and' ke baad parallel structure chahiye - 'intelligent' Adjective hai, isliye dusri taraf bhi Adjective 'hardworking' hona chahiye, Noun phrase 'a hard worker' nahi."
+      },
+      "navigation": { "next": "card_22_quiz_neither_nor_pairing", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_22_quiz_neither_nor_pairing",
+      "card_slug": "card_22_quiz_neither_nor_pairing",
+      "type": "quiz",
+      "concept_id": "conjunction_correlative",
+      "level": 2,
+      "progress": { "current": 22, "total": 100 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          { "id": "A", "text": "Neither he nor his friends is coming." },
+          { "id": "B", "text": "Neither he or his friends are coming." },
+          { "id": "C", "text": "Neither he nor his friends are coming." },
+          { "id": "D", "text": "Either he or his friends is coming." }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Neither' hamesha 'nor' ke sath aata hai (not 'or'). Verb 'are' nearest subject 'friends' (plural) ke sath match karega."
+      },
+      "navigation": { "next": "card_23_quiz_not_only_position", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_quiz_not_only_position",
+      "card_slug": "card_23_quiz_not_only_position",
+      "type": "quiz",
+      "concept_id": "conjunction_correlative",
+      "level": 2,
+      "progress": { "current": 23, "total": 100 },
+      "quiz_payload": {
+        "question": "Error detection: 'She not only cooks the food but also she cleans the house.'",
+        "options": [
+          { "id": "A", "text": "'but also she cleans' should be 'but also cleans' for parallel structure" },
+          { "id": "B", "text": "'not only' should be 'either'" },
+          { "id": "C", "text": "'cooks' should be 'cooking'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Subject 'She' pehle hi mention ho chuka hai. Parallel structure ke liye dono side sirf Verb hona chahiye: 'not only cooks...but also cleans', dusra subject repeat nahi karna."
+      },
+      "navigation": { "next": "card_24_quiz_multistatement_correlative", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_24_quiz_multistatement_correlative",
+      "card_slug": "card_24_quiz_multistatement_correlative",
+      "type": "quiz",
+      "concept_id": "conjunction_correlative",
+      "level": 2,
+      "progress": { "current": 24, "total": 100 },
+      "quiz_payload": {
+        "question": "Statements: I. Correlative conjunctions always occur in pairs. II. The structure following each part of a correlative pair must be grammatically parallel. III. 'Whether...or' is used only for yes/no direct questions. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & II" },
+          { "id": "B", "text": "II & III" },
+          { "id": "C", "text": "I only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement III galat hai - 'whether...or' indirect questions aur alternatives/possibilities dikhane ke liye bhi use hota hai, sirf direct yes/no questions ke liye nahi."
+      },
+      "navigation": { "next": "card_25_milestone_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_25_milestone_m3",
+      "card_slug": "card_25_milestone_m3",
+      "type": "milestone",
+      "concept_id": "conjunction_correlative",
+      "level": 2,
+      "progress": { "current": 25, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "👯",
+        "completed_topic": "Correlative Conjunctions & Parallel Structure",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/12 Clear",
+        "motivational_quote": "Parallel structure ka rule pakka ho gaya! Ab Subordinating Conjunctions seekhते hain!"
+      },
+      "navigation": { "next": "card_26_subordinating_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_26_subordinating_intro",
+      "card_slug": "card_26_subordinating_intro",
+      "type": "chat",
+      "concept_id": "conjunction_subordinating",
+      "level": 2,
+      "progress": { "current": 26, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho Subordinating Conjunctions - ye ek MAIN (Independent) clause ko ek DEPENDENT (Subordinate) clause se jodte hain. Dependent clause akela khada nahi ho sakta, main clause ke bina adhoora lagta hai." },
+        { "speaker": "raju", "text": "Sir matlab? Ek example do na!" },
+        { "speaker": "aman", "text": "'Because it was raining, we stayed home.' Yahan 'it was raining' akela sentence lagta to hai, lekin 'Because' lagne se ye adhoora feel deta hai - 'we stayed home' (main clause) ke bina poora matlab nahi banta." },
+        { "speaker": "raju", "text": "Achha! Matlab Subordinating Conjunction wale clause ko doosre clause ki zaroorat padti hai poora matlab banane ke liye!" }
+      ],
+      "navigation": { "next": "card_27_subordinating_categories", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_27_subordinating_categories",
+      "card_slug": "card_27_subordinating_categories",
+      "type": "chat",
+      "concept_id": "conjunction_subordinating",
+      "level": 2,
+      "progress": { "current": 27, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Subordinating Conjunctions ko function ke hisab se group karo: TIME (when, while, before, after, until, as soon as), CAUSE (because, since, as), CONDITION (if, unless, provided that), PURPOSE (so that, in order that), CONCESSION (although, though, even though), COMPARISON (than, as...as)." },
+        { "speaker": "raju", "text": "Sir itne saare! Ye to yaad karna mushkil hoga!" },
+        { "speaker": "aman", "text": "Ghabrao mat, hum har category ko alag se, deeply, agle modules mein seekhenge. Abhi bas ye samajh lo ki inka kaam REASON, TIME, CONDITION, PURPOSE ya CONTRAST dikhana hota hai." },
+        { "speaker": "raju", "text": "Achha! Matlab ye conjunction batate hain KYUN, KAB, KAISE aur AGAR wali baatein!" }
+      ],
+      "navigation": { "next": "card_28_examples_each_category", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_28_examples_each_category",
+      "card_slug": "card_28_examples_each_category",
+      "type": "chat",
+      "concept_id": "conjunction_subordinating",
+      "level": 2,
+      "progress": { "current": 28, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo har category ka ek-ek example dekhте hain: Time - 'I will call you when I reach.' Cause - 'She cried because she was hurt.' Condition - 'If you study, you will pass.' Purpose - 'He worked hard so that he could succeed.' Concession - 'Although he was tired, he continued.' Comparison - 'She is taller than her brother.'" },
+        { "speaker": "raju", "text": "Sir ye sab samajh aa gaya, par 'because/as/since' teeno same matlab dete hain na, confuse ho jata hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda tumhara doubt! Yahi to agla bada module hai - Because/As/Since/For ka detailed comparison, jisme SBI PO ke sabse zyada trap chhupe hain!" },
+        { "speaker": "raju", "text": "Sir jaldi batao, main tayyar hun!" }
+      ],
+      "navigation": { "next": "card_29_guess_identify_category", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_29_guess_identify_category",
+      "card_slug": "card_29_guess_identify_category",
+      "type": "guess",
+      "concept_id": "conjunction_subordinating",
+      "level": 2,
+      "progress": { "current": 29, "total": 100 },
+      "guess_payload": {
+        "question": "'She left before the meeting started.' - 'before' here indicates which category of Subordinating Conjunction?",
+        "options": [
+          { "id": "A", "text": "Cause" },
+          { "id": "B", "text": "Time" },
+          { "id": "C", "text": "Condition" },
+          { "id": "D", "text": "Comparison" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Before' TIME relationship dikhata hai - kab ek action doosre se pehle hua, isliye ye Time category ka Subordinating Conjunction hai."
+      },
+      "navigation": { "next": "card_30_quiz_dependent_clause", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_30_quiz_dependent_clause",
+      "card_slug": "card_30_quiz_dependent_clause",
+      "type": "quiz",
+      "concept_id": "conjunction_subordinating",
+      "level": 2,
+      "progress": { "current": 30, "total": 100 },
+      "quiz_payload": {
+        "question": "Which statement about Subordinating Conjunctions is TRUE?",
+        "options": [
+          { "id": "A", "text": "They join two equal/independent clauses" },
+          { "id": "B", "text": "They join a main clause with a dependent clause" },
+          { "id": "C", "text": "They always come in pairs" },
+          { "id": "D", "text": "They can never appear at the start of a sentence" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Subordinating Conjunction ek Main (Independent) clause ko ek Dependent (Subordinate) clause se jodta hai."
+      },
+      "navigation": { "next": "card_31_quiz_purpose_category", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_31_quiz_purpose_category",
+      "card_slug": "card_31_quiz_purpose_category",
+      "type": "quiz",
+      "concept_id": "conjunction_subordinating",
+      "level": 2,
+      "progress": { "current": 31, "total": 100 },
+      "quiz_payload": {
+        "question": "'He saved money so that he could buy a car.' - 'so that' shows which category?",
+        "options": [
+          { "id": "A", "text": "Purpose" },
+          { "id": "B", "text": "Cause" },
+          { "id": "C", "text": "Concession" },
+          { "id": "D", "text": "Comparison" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'So that' PURPOSE dikhata hai - kis maksad se ek action kiya gaya."
+      },
+      "navigation": { "next": "card_32_quiz_multistatement_subordinating", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_32_quiz_multistatement_subordinating",
+      "card_slug": "card_32_quiz_multistatement_subordinating",
+      "type": "quiz",
+      "concept_id": "conjunction_subordinating",
+      "level": 2,
+      "progress": { "current": 32, "total": 100 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Unless' falls under the Condition category. II. 'Although' falls under the Comparison category. III. A dependent clause cannot stand alone as a complete sentence. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "II & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - 'Although' Concession category mein aata hai (contrast dikhata hai), Comparison mein nahi."
+      },
+      "navigation": { "next": "card_33_milestone_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_33_milestone_m4",
+      "card_slug": "card_33_milestone_m4",
+      "type": "milestone",
+      "concept_id": "conjunction_subordinating",
+      "level": 2,
+      "progress": { "current": 33, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🧩",
+        "completed_topic": "Subordinating Conjunctions - Categories & Functions",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/12 Clear",
+        "motivational_quote": "Categories clear ho gayi! Ab sabse bada trap - Because/As/Since/For!"
+      },
+      "navigation": { "next": "card_34_because_as_since_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_34_because_as_since_intro",
+      "card_slug": "card_34_because_as_since_intro",
+      "type": "chat",
+      "concept_id": "conjunction_because_as_since_for",
+      "level": 3,
+      "progress": { "current": 34, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho ek bahut common confusion - Because, As, Since teeno ka Hindi matlab 'kyunki' hota hai, lekin inka use alag-alag situation mein hota hai. Raju, tumhe lagta hai teeno ek jaise use ho sakte hain?" },
+        { "speaker": "raju", "text": "Sir mujhe to lagta hai teeno same hain, jahan 'kyunki' bolna ho wahan koi bhi laga do!" },
+        { "speaker": "aman", "text": "Yahi sabse bada trap hai! 'Because' MAIN aur DIRECT reason ke liye use hota hai, jab reason par emphasis dena ho. 'As' aur 'Since' ka reason usually already pata hota hai ya less important hota hai, wo more like additional info dete hain." },
+        { "speaker": "raju", "text": "Hain?? Sir ye to bahut subtle fark hai, example do please!" }
+      ],
+      "navigation": { "next": "card_35_because_emphasis_example", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_35_because_emphasis_example",
+      "card_slug": "card_35_because_emphasis_example",
+      "type": "chat",
+      "concept_id": "conjunction_because_as_since_for",
+      "level": 3,
+      "progress": { "current": 35, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Dekho: 'He failed BECAUSE he didn't study' - yahan reason (na padhna) pe seedha emphasis hai, ye MAIN reason hai. 'AS/SINCE he didn't study, he failed' - yahan reason ko background info ki tarah treat kiya, focus result pe zyada hai." },
+        { "speaker": "raju", "text": "Sir 'since' to time ke liye bhi use hota hai na? 'Since Monday' jaisa!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! 'Since' do jagah use hota hai - Time marker ki tarah ('I haven't seen him since Monday' - matlab Monday se lekar ab tak) aur Reason Conjunction ki tarah ('Since it's raining, let's stay home')." },
+        { "speaker": "raju", "text": "Achha! Matlab context dekhkar samajhna padega 'since' time hai ya reason!" }
+      ],
+      "navigation": { "next": "card_36_for_as_conjunction", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_36_for_as_conjunction",
+      "card_slug": "card_36_for_as_conjunction",
+      "type": "chat",
+      "concept_id": "conjunction_because_as_since_for",
+      "level": 3,
+      "progress": { "current": 36, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab 'FOR' ko reason ki tarah dekho - ye bahut FORMAL hai aur ek IMPORTANT rule hai: 'For' Conjunction hamesha do INDEPENDENT clauses ko jodta hai aur SENTENCE ke SHURU mein kabhi nahi aata, sirf beech mein aata hai (comma ke baad)." },
+        { "speaker": "raju", "text": "Sir matlab 'For it was raining, we stayed home' galat hoga?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye GALAT hai. 'Because' sentence ke shuru mein bhi aa sakta hai ('Because it was raining, we stayed home'), lekin 'For' sirf beech mein aayega: 'We stayed home, for it was raining.' Ye BPSC ka bahut subtle aur favorite trap hai!" },
+        { "speaker": "raju", "text": "Sir isse to bahut dhyan se yaad rakhna padega, ab test karo mujhe!" }
+      ],
+      "navigation": { "next": "card_37_guess_since_time_or_reason", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_37_guess_since_time_or_reason",
+      "card_slug": "card_37_guess_since_time_or_reason",
+      "type": "guess",
+      "concept_id": "conjunction_because_as_since_for",
+      "level": 3,
+      "progress": { "current": 37, "total": 100 },
+      "guess_payload": {
+        "question": "'Since you are here, let's discuss the plan.' - 'Since' here functions as:",
+        "options": [
+          { "id": "A", "text": "Time marker" },
+          { "id": "B", "text": "Reason Conjunction" },
+          { "id": "C", "text": "Preposition" },
+          { "id": "D", "text": "Correlative Conjunction" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Yahan 'Since' time nahi, REASON dikha raha hai (kyunki tum yahan ho) - ye Reason Conjunction hai, na ki time marker."
+      },
+      "navigation": { "next": "card_38_quiz_for_start_error", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_38_quiz_for_start_error",
+      "card_slug": "card_38_quiz_for_start_error",
+      "type": "quiz",
+      "concept_id": "conjunction_because_as_since_for",
+      "level": 3,
+      "progress": { "current": 38, "total": 100 },
+      "quiz_payload": {
+        "question": "Error detection: 'For he was late, the teacher scolded him.'",
+        "options": [
+          { "id": "A", "text": "'For' should not start the sentence; use 'Because' instead" },
+          { "id": "B", "text": "'scolded' should be 'scold'" },
+          { "id": "C", "text": "'teacher' should be 'Teacher'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'For' (as a conjunction meaning because) sentence ke shuru mein use nahi ho sakta. Sahi hoga: 'Because he was late, the teacher scolded him.'"
+      },
+      "navigation": { "next": "card_39_quiz_because_emphasis", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_39_quiz_because_emphasis",
+      "card_slug": "card_39_quiz_because_emphasis",
+      "type": "quiz",
+      "concept_id": "conjunction_because_as_since_for",
+      "level": 3,
+      "progress": { "current": 39, "total": 100 },
+      "quiz_payload": {
+        "question": "Which sentence puts the STRONGEST direct emphasis on the reason?",
+        "options": [
+          { "id": "A", "text": "As it was late, we left." },
+          { "id": "B", "text": "Since it was late, we left." },
+          { "id": "C", "text": "We left because it was late." },
+          { "id": "D", "text": "It being late, we left." }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Because' seedha aur direct emphasis deta hai reason par - ye sabse strong reason-Conjunction hai."
+      },
+      "navigation": { "next": "card_40_quiz_multistatement_becauseas", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_40_quiz_multistatement_becauseas",
+      "card_slug": "card_40_quiz_multistatement_becauseas",
+      "type": "quiz",
+      "concept_id": "conjunction_because_as_since_for",
+      "level": 3,
+      "progress": { "current": 40, "total": 100 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Since' can function both as a time marker and a reason conjunction. II. 'For' (as a conjunction) can begin a sentence just like 'Because'. III. 'Because' places direct, strong emphasis on the reason. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "II & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - 'For' (Conjunction ki tarah) sentence ke shuru mein kabhi nahi aata, ye sirf beech mein comma ke baad aata hai."
+      },
+      "navigation": { "next": "card_41_milestone_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_41_milestone_m5",
+      "card_slug": "card_41_milestone_m5",
+      "type": "milestone",
+      "concept_id": "conjunction_because_as_since_for",
+      "level": 3,
+      "progress": { "current": 41, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Because/As/Since/For - Reason Conjunctions",
+        "xp_earned": 65,
+        "milestone_progress": "Module 5/12 Clear",
+        "motivational_quote": "Sabse subtle trap crack ho gaya! Ab Although/Though vs Despite/In spite of ka bada module!"
+      },
+      "navigation": { "next": "card_42_although_though_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_42_although_though_intro",
+      "card_slug": "card_42_although_though_intro",
+      "type": "chat",
+      "concept_id": "conjunction_although_despite",
+      "level": 3,
+      "progress": { "current": 42, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ab ek sabse zyada exam mein pucha jaane wala trap - ALTHOUGH/THOUGH/EVEN THOUGH ye teeno CONJUNCTION hain, matlab inke baad hamesha ek COMPLETE CLAUSE (Subject+Verb) aayega." },
+        { "speaker": "raju", "text": "Sir matlab 'Although he was tired' - yahan 'he was tired' clause hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'He'=Subject, 'was'=Verb - complete clause hai. Ab isse compare karo DESPITE aur IN SPITE OF se - ye dono PREPOSITION hain, inke baad Clause nahi, sirf NOUN ya GERUND (-ing form) aata hai!" },
+        { "speaker": "raju", "text": "Hain?? Sir ye to same matlab ('phir bhi/ke bavjood') dete hain lekin grammar structure alag hai?" }
+      ],
+      "navigation": { "next": "card_43_despite_inspiteof_examples", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_43_despite_inspiteof_examples",
+      "card_slug": "card_43_despite_inspiteof_examples",
+      "type": "chat",
+      "concept_id": "conjunction_although_despite",
+      "level": 3,
+      "progress": { "current": 43, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi Raju! Yahi to sabse bada SBI PO trap hai. Dekho examples: 'ALTHOUGH he was tired, he continued working' (Clause) vs 'DESPITE his tiredness/being tired, he continued working' (Noun/Gerund, NO subject-verb clause)." },
+        { "speaker": "raju", "text": "Sir 'Despite he was tired' bol sakte hain kya?" },
+        { "speaker": "aman", "text": "Bilkul NAHI! Ye sabse common error hai jo candidates karte hain - 'Despite he was tired' GALAT hai kyunki Despite ke baad clause nahi aa sakta. Sahi hoga 'Despite BEING tired' ya 'Despite HIS tiredness' YA phir 'ALTHOUGH he was tired'." },
+        { "speaker": "raju", "text": "Achha! Ye to bahut carefully dekhna padega - agar Subject+Verb hai to Although/Though, agar Noun/Gerund hai to Despite/In spite of!" }
+      ],
+      "navigation": { "next": "card_44_though_end_position", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_44_though_end_position",
+      "card_slug": "card_44_though_end_position",
+      "type": "chat",
+      "concept_id": "conjunction_although_despite",
+      "level": 3,
+      "progress": { "current": 44, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur chhota par important fark - 'THOUGH' informal use mein SENTENCE ke AKHIR mein bhi aa sakta hai, jaise 'I like him. He is lazy, though.' Lekin 'ALTHOUGH' kabhi end mein nahi aata, hamesha clause ke shuru mein hi rahega." },
+        { "speaker": "raju", "text": "Sir 'even though' bhi 'although' jaisa hi hai?" },
+        { "speaker": "aman", "text": "Haan, 'Even though' bhi Conjunction hai aur Clause leta hai, bas 'although' se thoda zyada STRONG emphasis deta hai contrast pe. Structure same rehta hai - Subject+Verb chahiye." },
+        { "speaker": "raju", "text": "Achha sir, ab mujhe test karo, main ready hun!" }
+      ],
+      "navigation": { "next": "card_45_guess_despite_error", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_45_guess_despite_error",
+      "card_slug": "card_45_guess_despite_error",
+      "type": "guess",
+      "concept_id": "conjunction_although_despite",
+      "level": 3,
+      "progress": { "current": 45, "total": 100 },
+      "guess_payload": {
+        "question": "Error spot: 'Despite he worked hard, he did not succeed.'",
+        "options": [
+          { "id": "A", "text": "'Despite he worked hard' should be 'Although he worked hard'" },
+          { "id": "B", "text": "'succeed' should be 'succeeded'" },
+          { "id": "C", "text": "'hard' should be 'hardly'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Despite' Preposition hai, iske baad Clause (Subject+Verb) nahi aa sakta. Sahi hoga 'Although he worked hard' YA 'Despite working hard'."
+      },
+      "navigation": { "next": "card_46_quiz_in_spite_of_gerund", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_46_quiz_in_spite_of_gerund",
+      "card_slug": "card_46_quiz_in_spite_of_gerund",
+      "type": "quiz",
+      "concept_id": "conjunction_although_despite",
+      "level": 3,
+      "progress": { "current": 46, "total": 100 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          { "id": "A", "text": "In spite of it was raining, they went out." },
+          { "id": "B", "text": "In spite of the rain, they went out." },
+          { "id": "C", "text": "In spite the rain, they went out." },
+          { "id": "D", "text": "In spite of raining, they went out." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'In spite of' Preposition phrase hai, iske baad Noun aayega ('the rain'), Clause nahi. Note: 'in spite OF' mein 'of' zaroori hai."
+      },
+      "navigation": { "next": "card_47_quiz_although_clause", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_47_quiz_although_clause",
+      "card_slug": "card_47_quiz_although_clause",
+      "type": "quiz",
+      "concept_id": "conjunction_although_despite",
+      "level": 3,
+      "progress": { "current": 47, "total": 100 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence:",
+        "options": [
+          { "id": "A", "text": "Although being rich, he is unhappy." },
+          { "id": "B", "text": "Although he is rich, he is unhappy." },
+          { "id": "C", "text": "Although his richness, he is unhappy." },
+          { "id": "D", "text": "Although rich, but he is unhappy." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Although' ke baad complete Clause (Subject+Verb: 'he is rich') aana chahiye. Option D mein double conjunction error bhi hai (Although...but)."
+      },
+      "navigation": { "next": "card_48_quiz_multistatement_althoughdespite", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_48_quiz_multistatement_althoughdespite",
+      "card_slug": "card_48_quiz_multistatement_althoughdespite",
+      "type": "quiz",
+      "concept_id": "conjunction_although_despite",
+      "level": 3,
+      "progress": { "current": 48, "total": 100 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Although', 'Though', and 'Even though' are Conjunctions and must be followed by a full clause. II. 'Despite' and 'In spite of' are Prepositions and are followed by a Noun or Gerund, not a clause. III. 'Though' can be used at the end of an informal sentence. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & II" },
+          { "id": "B", "text": "II & III" },
+          { "id": "C", "text": "I only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Teeno statements sahi hain - ye standard rule hai jo SBI PO/BPSC mein bahut common trap ke roop mein aata hai."
+      },
+      "navigation": { "next": "card_49_milestone_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_49_milestone_m6",
+      "card_slug": "card_49_milestone_m6",
+      "type": "milestone",
+      "concept_id": "conjunction_although_despite",
+      "level": 3,
+      "progress": { "current": 49, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Although/Though vs Despite/In spite of",
+        "xp_earned": 70,
+        "milestone_progress": "Module 6/12 Clear",
+        "motivational_quote": "Sabse bada SBI PO trap crack ho gaya! Ab Double Conjunction Redundancy!"
+      },
+      "navigation": { "next": "card_50_double_conjunction_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_50_double_conjunction_intro",
+      "card_slug": "card_50_double_conjunction_intro",
+      "type": "chat",
+      "concept_id": "conjunction_double_redundancy",
+      "level": 4,
+      "progress": { "current": 50, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ek sentence dekho: 'Although he was tired, but he continued working.' Kya isme kuch galat lag raha hai?" },
+        { "speaker": "raju", "text": "Sir mujhe to sahi lag raha hai, contrast dikha raha hai na!" },
+        { "speaker": "aman", "text": "Yahin log galti karte hain! English mein ek hi sentence mein DO Conjunctions jo SAME kaam kar rahe hon (dono contrast dikha rahe hon), wo use nahi karte. 'Although' pehle se contrast dikha raha hai, 'but' lagane ki zaroorat hi nahi hai." },
+        { "speaker": "raju", "text": "Hain?? Sir ye to bahut common galti hai, log to hamesha aise hi bolte hain!" }
+      ],
+      "navigation": { "next": "card_51_because_so_redundancy", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_51_because_so_redundancy",
+      "card_slug": "card_51_because_so_redundancy",
+      "type": "chat",
+      "concept_id": "conjunction_double_redundancy",
+      "level": 4,
+      "progress": { "current": 51, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi observation Raju! Isi tarah ek aur classic galti: 'Because it was raining, so we stayed home.' Yahan bhi 'because' aur 'so' dono ek hi Cause-Effect relationship dikha rahe hain - ye redundant hai." },
+        { "speaker": "raju", "text": "Sir to sahi kaise likhenge?" },
+        { "speaker": "aman", "text": "Do options hain: (1) 'Because it was raining, we stayed home.' (sirf because) YA (2) 'It was raining, so we stayed home.' (sirf so) - dono mein se koi ek Conjunction rakhna hai, dono nahi." },
+        { "speaker": "raju", "text": "Achha! Matlab ek hi relationship (contrast ya cause-effect) ke liye ek hi Conjunction kaafi hai!" }
+      ],
+      "navigation": { "next": "card_52_general_rule_one_conjunction", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_52_general_rule_one_conjunction",
+      "card_slug": "card_52_general_rule_one_conjunction",
+      "type": "chat",
+      "concept_id": "conjunction_double_redundancy",
+      "level": 4,
+      "progress": { "current": 52, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Universal rule yaad rakho: Ek Complex Sentence (main clause + dependent clause) mein ek hi relationship ko dikhane ke liye SIRF EK Conjunction use hoga. Common pairs jo GALAT hain: Although...but, Because...so, As...so, Though...yet (in formal writing)." },
+        { "speaker": "raju", "text": "Sir 'though...yet' bhi galat hai? Ye to poetry mein bhi dekha hai maine!" },
+        { "speaker": "aman", "text": "Formal/exam English mein 'though...yet' avoid karna chahiye - ye bhi redundant maana jata hai standard grammar mein. Bas ek Conjunction rakho, chahe wo subordinating ho ya uska corresponding coordinating." },
+        { "speaker": "raju", "text": "Sir ab mujhe practice karao, main is trap ko pehchan sakta hun ab!" }
+      ],
+      "navigation": { "next": "card_53_guess_although_but_error", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_53_guess_although_but_error",
+      "card_slug": "card_53_guess_although_but_error",
+      "type": "guess",
+      "concept_id": "conjunction_double_redundancy",
+      "level": 4,
+      "progress": { "current": 53, "total": 100 },
+      "guess_payload": {
+        "question": "Error spot: 'Although she scored well, but she was not satisfied.'",
+        "options": [
+          { "id": "A", "text": "Remove 'but' - it is redundant with 'Although'" },
+          { "id": "B", "text": "'scored' should be 'score'" },
+          { "id": "C", "text": "'satisfied' should be 'satisfying'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Although' aur 'but' dono contrast dikhate hain - ek sentence mein dono ka use redundant/galat hai. Sahi: 'Although she scored well, she was not satisfied.'"
+      },
+      "navigation": { "next": "card_54_quiz_since_so_error", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_54_quiz_since_so_error",
+      "card_slug": "card_54_quiz_since_so_error",
+      "type": "quiz",
+      "concept_id": "conjunction_double_redundancy",
+      "level": 4,
+      "progress": { "current": 54, "total": 100 },
+      "quiz_payload": {
+        "question": "Error detection: 'Since he was late, so he missed the train.'",
+        "options": [
+          { "id": "A", "text": "Remove 'so' - it is redundant with 'Since'" },
+          { "id": "B", "text": "'was' should be 'is'" },
+          { "id": "C", "text": "'missed' should be 'miss'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Since' pehle se reason/cause dikha raha hai, 'so' lagana redundant hai. Sahi: 'Since he was late, he missed the train.'"
+      },
+      "navigation": { "next": "card_55_quiz_correct_single_conjunction", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_55_quiz_correct_single_conjunction",
+      "card_slug": "card_55_quiz_correct_single_conjunction",
+      "type": "quiz",
+      "concept_id": "conjunction_double_redundancy",
+      "level": 4,
+      "progress": { "current": 55, "total": 100 },
+      "quiz_payload": {
+        "question": "Which sentence is grammatically CORRECT (no redundancy)?",
+        "options": [
+          { "id": "A", "text": "Though he apologized, yet she was angry." },
+          { "id": "B", "text": "Though he apologized, she was angry." },
+          { "id": "C", "text": "Because he apologized, so she forgave him." },
+          { "id": "D", "text": "Although he tried hard, but he failed." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sirf option B mein ek hi Conjunction ('Though') use hua hai, baaki sabme double conjunction redundancy error hai."
+      },
+      "navigation": { "next": "card_56_quiz_multistatement_redundancy", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_56_quiz_multistatement_redundancy",
+      "card_slug": "card_56_quiz_multistatement_redundancy",
+      "type": "quiz",
+      "concept_id": "conjunction_double_redundancy",
+      "level": 4,
+      "progress": { "current": 56, "total": 100 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Although...but' together in one sentence is a common redundancy error. II. 'Because...so' together in one sentence is grammatically correct for emphasis. III. Standard formal English requires only ONE conjunction to express a single relationship in a complex sentence. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "II & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - 'Because...so' redundant/incorrect hai, emphasis ke liye bhi allowed nahi hai standard grammar mein."
+      },
+      "navigation": { "next": "card_57_milestone_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_57_milestone_m7",
+      "card_slug": "card_57_milestone_m7",
+      "type": "milestone",
+      "concept_id": "conjunction_double_redundancy",
+      "level": 4,
+      "progress": { "current": 57, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🚫",
+        "completed_topic": "Double Conjunction Redundancy Errors",
+        "xp_earned": 65,
+        "milestone_progress": "Module 7/12 Clear",
+        "motivational_quote": "Bahut common galti clear ho gayi! Ab Unless aur Lest ka module!"
+      },
+      "navigation": { "next": "card_58_unless_if_not", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_58_unless_if_not",
+      "card_slug": "card_58_unless_if_not",
+      "type": "chat",
+      "concept_id": "conjunction_unless_lest",
+      "level": 4,
+      "progress": { "current": 58, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho 'UNLESS' - iska matlab hota hai 'IF NOT' (agar nahi). Jaise: 'Unless you work hard, you will not succeed' matlab 'If you do not work hard, you will not succeed'." },
+        { "speaker": "raju", "text": "Sir matlab 'unless' already negative hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur yahi sabse bada trap hai - kyunki 'unless' khud negative hai (matlab 'if not'), iske sath dobara NEGATIVE VERB (not) laga dena Double Negative error banata hai!" },
+        { "speaker": "raju", "text": "Hain?? Matlab 'unless...not' kabhi saath mein use nahi karenge?" }
+      ],
+      "navigation": { "next": "card_59_unless_not_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_59_unless_not_trap",
+      "card_slug": "card_59_unless_not_trap",
+      "type": "chat",
+      "concept_id": "conjunction_unless_lest",
+      "level": 4,
+      "progress": { "current": 59, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi Raju! 'Unless you don't come, I will start' - ye GALAT hai kyunki 'unless' matlab 'if not' hai, to sentence ka matlab ban jaata hai 'if you don't not come' - double negative confusion! Sahi hoga: 'Unless you come, I will start.'" },
+        { "speaker": "raju", "text": "Achha! Matlab 'unless' ke baad seedha POSITIVE verb aayega, 'not' nahi lagega!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ab dekho LEST - iska matlab hai 'kahin aisa na ho ki' (for fear that). Special rule: 'Lest' ke baad HAMESHA 'should' aata hai. Jaise: 'He ran fast lest he SHOULD miss the train.'" },
+        { "speaker": "raju", "text": "Sir 'lest' ke baad 'should' kyun zaroori hai, kya wo skip nahi kar sakte?" }
+      ],
+      "navigation": { "next": "card_60_lest_should_forfearthat", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_60_lest_should_forfearthat",
+      "card_slug": "card_60_lest_should_forfearthat",
+      "type": "chat",
+      "concept_id": "conjunction_unless_lest",
+      "level": 4,
+      "progress": { "current": 60, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Nahi Raju, 'should' skip nahi kar sakte - ye 'lest' ka fixed grammatical rule hai. 'He ran fast lest he miss the train' GALAT hai, sahi hai 'lest he SHOULD miss the train'. Ye bahut hi common BPSC officer level trap hai!" },
+        { "speaker": "raju", "text": "Sir 'for fear that' bhi 'lest' jaisa hi hota hai kya?" },
+        { "speaker": "aman", "text": "Haan, matlab same hai 'for fear that' bhi 'kahin aisa na ho' dikhata hai, lekin uske baad 'should' zaroori nahi, normal clause bhi chal sakta hai - 'He ran fast for fear that he would miss the train.'" },
+        { "speaker": "raju", "text": "Achha sir, ab mujhe practice karao in dono concepts pe!" }
+      ],
+      "navigation": { "next": "card_61_guess_unless_dont", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_61_guess_unless_dont",
+      "card_slug": "card_61_guess_unless_dont",
+      "type": "guess",
+      "concept_id": "conjunction_unless_lest",
+      "level": 4,
+      "progress": { "current": 61, "total": 100 },
+      "guess_payload": {
+        "question": "Error spot: 'Unless you don't apologize, I won't forgive you.'",
+        "options": [
+          { "id": "A", "text": "'don't apologize' should be 'apologize' (remove double negative)" },
+          { "id": "B", "text": "'forgive' should be 'forgiving'" },
+          { "id": "C", "text": "'won't' should be 'will'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Unless' pehle se 'if not' ka matlab rakhta hai, isliye 'don't' lagana Double Negative error hai. Sahi: 'Unless you apologize, I won't forgive you.'"
+      },
+      "navigation": { "next": "card_62_quiz_lest_should", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_62_quiz_lest_should",
+      "card_slug": "card_62_quiz_lest_should",
+      "type": "quiz",
+      "concept_id": "conjunction_unless_lest",
+      "level": 4,
+      "progress": { "current": 62, "total": 100 },
+      "quiz_payload": {
+        "question": "Fill in the blank: 'Study hard lest you _____ fail.'",
+        "options": [
+          { "id": "A", "text": "will" },
+          { "id": "B", "text": "should" },
+          { "id": "C", "text": "would" },
+          { "id": "D", "text": "shall" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Lest' ke baad hamesha 'should' aata hai - ye fixed grammatical structure hai."
+      },
+      "navigation": { "next": "card_63_quiz_unless_meaning", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_63_quiz_unless_meaning",
+      "card_slug": "card_63_quiz_unless_meaning",
+      "type": "quiz",
+      "concept_id": "conjunction_unless_lest",
+      "level": 4,
+      "progress": { "current": 63, "total": 100 },
+      "quiz_payload": {
+        "question": "'Unless' is grammatically equivalent to:",
+        "options": [
+          { "id": "A", "text": "If" },
+          { "id": "B", "text": "If not" },
+          { "id": "C", "text": "Because" },
+          { "id": "D", "text": "Although" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Unless' ka matlab hota hai 'if not' - ye pehle se negative condition dikhata hai."
+      },
+      "navigation": { "next": "card_64_quiz_multistatement_unlesslest", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_64_quiz_multistatement_unlesslest",
+      "card_slug": "card_64_quiz_multistatement_unlesslest",
+      "type": "quiz",
+      "concept_id": "conjunction_unless_lest",
+      "level": 4,
+      "progress": { "current": 64, "total": 100 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Unless' should never be followed by another negative verb like 'not'. II. 'Lest' is always followed by 'should' in formal grammar. III. 'For fear that' functions similarly to 'lest' but does not require 'should'. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & II" },
+          { "id": "B", "text": "II & III" },
+          { "id": "C", "text": "I only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Teeno statements sahi hain - ye standard rules hain jo Unless/Lest ke saath directly test hote hain exams mein."
+      },
+      "navigation": { "next": "card_65_milestone_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_65_milestone_m8",
+      "card_slug": "card_65_milestone_m8",
+      "type": "milestone",
+      "concept_id": "conjunction_unless_lest",
+      "level": 4,
+      "progress": { "current": 65, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔒",
+        "completed_topic": "Unless (Double Negative) & Lest+Should",
+        "xp_earned": 65,
+        "milestone_progress": "Module 8/12 Clear",
+        "motivational_quote": "Negative traps clear! Ab Neither-nor/Either-or agreement seekhते hain!"
+      },
+      "navigation": { "next": "card_66_neither_either_agreement_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_66_neither_either_agreement_intro",
+      "card_slug": "card_66_neither_either_agreement_intro",
+      "type": "chat",
+      "concept_id": "conjunction_neither_either_agreement",
+      "level": 4,
+      "progress": { "current": 66, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ab dekho Verb Agreement ka ek bahut common trap - jab Neither...nor ya Either...or do SUBJECTS ko jodते hain, to Verb kis subject ke sath match karega?" },
+        { "speaker": "raju", "text": "Sir shayad dono ko jodkar plural verb aayega, jaise 'and' mein hota hai?" },
+        { "speaker": "aman", "text": "Yahi galat guess hai jo zyadatar students karte hain! 'Neither...nor' aur 'Either...or' mein Verb hamesha NEAREST (sabse paas wale) Subject ke hisab se match hota hai, dono ko jodkar plural nahi banta." },
+        { "speaker": "raju", "text": "Hain?? Sir ye to naya rule hai, example do please!" }
+      ],
+      "navigation": { "next": "card_67_nearest_subject_rule", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_67_nearest_subject_rule",
+      "card_slug": "card_67_nearest_subject_rule",
+      "type": "chat",
+      "concept_id": "conjunction_neither_either_agreement",
+      "level": 4,
+      "progress": { "current": 67, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Dekho: 'Neither the teacher nor the students ARE ready' - yahan 'students' (plural) Verb ke sabse paas hai, isliye 'are' aayega. Agar order ulta ho - 'Neither the students nor the teacher IS ready' - ab 'teacher' (singular) paas hai, to 'is' aayega." },
+        { "speaker": "raju", "text": "Achhaaa! Matlab jo bhi word Verb ke sabse nazdeek hoga, usi ke according Verb badlega, chahe pehla subject kuch bhi ho!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Isko 'Rule of Proximity' kehte hain - ye BPSC/SSC ka ek bahut favorite Error Detection concept hai, khaaskar jab ek Subject singular aur doosra plural ho." },
+        { "speaker": "raju", "text": "Sir agar dono singular hon to?" }
+      ],
+      "navigation": { "next": "card_68_both_singular_case", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_68_both_singular_case",
+      "card_slug": "card_68_both_singular_case",
+      "type": "chat",
+      "concept_id": "conjunction_neither_either_agreement",
+      "level": 4,
+      "progress": { "current": 68, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Agar dono Subjects Singular hain, to Verb bhi Singular hi rahega, koi confusion nahi: 'Neither Ram nor Shyam IS coming.' Aur Pronoun agreement bhi nearest subject se hoga: 'Neither Ram nor his friends have brought THEIR books' (nearest 'friends' plural, to 'their' bhi plural)." },
+        { "speaker": "raju", "text": "Sir 'Either' bhi akela (without 'or') use ho sakta hai kya, jaise Adjective ki tarah?" },
+        { "speaker": "aman", "text": "Haan! 'Either' aur 'Neither' akele bhi use ho sakte hain matlab 'in do mein se koi ek/koi nahi' - 'Either book is fine' (in do books mein se koi bhi), 'Neither answer is correct' (dono galat)." },
+        { "speaker": "raju", "text": "Achha sir, ab test karo mujhe is Rule of Proximity pe!" }
+      ],
+      "navigation": { "next": "card_69_guess_nearest_subject_verb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_69_guess_nearest_subject_verb",
+      "card_slug": "card_69_guess_nearest_subject_verb",
+      "type": "guess",
+      "concept_id": "conjunction_neither_either_agreement",
+      "level": 4,
+      "progress": { "current": 69, "total": 100 },
+      "guess_payload": {
+        "question": "Choose correct: 'Either the manager or the employees _____ responsible for this delay.'",
+        "options": [
+          { "id": "A", "text": "is" },
+          { "id": "B", "text": "are" },
+          { "id": "C", "text": "was" },
+          { "id": "D", "text": "has been" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Nearest subject 'employees' (plural) hai, isliye Verb 'are' aayega - Rule of Proximity."
+      },
+      "navigation": { "next": "card_70_quiz_neither_singular", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_70_quiz_neither_singular",
+      "card_slug": "card_70_quiz_neither_singular",
+      "type": "quiz",
+      "concept_id": "conjunction_neither_either_agreement",
+      "level": 4,
+      "progress": { "current": 70, "total": 100 },
+      "quiz_payload": {
+        "question": "Choose correct: 'Neither Sita nor Gita _____ interested in the project.'",
+        "options": [
+          { "id": "A", "text": "was" },
+          { "id": "B", "text": "were" },
+          { "id": "C", "text": "are" },
+          { "id": "D", "text": "have been" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Dono subjects (Sita, Gita) Singular hain, isliye Verb bhi Singular ('was') aayega."
+      },
+      "navigation": { "next": "card_71_quiz_reversed_order", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_71_quiz_reversed_order",
+      "card_slug": "card_71_quiz_reversed_order",
+      "type": "quiz",
+      "concept_id": "conjunction_neither_either_agreement",
+      "level": 4,
+      "progress": { "current": 71, "total": 100 },
+      "quiz_payload": {
+        "question": "Choose correct: 'Neither the players nor the coach _____ satisfied with the result.'",
+        "options": [
+          { "id": "A", "text": "are" },
+          { "id": "B", "text": "is" },
+          { "id": "C", "text": "were" },
+          { "id": "D", "text": "have" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Nearest subject 'coach' (singular) hai, isliye Verb 'is' aayega, chahe 'players' plural ho."
+      },
+      "navigation": { "next": "card_72_quiz_multistatement_neitheragreement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_72_quiz_multistatement_neitheragreement",
+      "card_slug": "card_72_quiz_multistatement_neitheragreement",
+      "type": "quiz",
+      "concept_id": "conjunction_neither_either_agreement",
+      "level": 4,
+      "progress": { "current": 72, "total": 100 },
+      "quiz_payload": {
+        "question": "Statements: I. In Either...or/Neither...nor, the verb always agrees with the first subject. II. The Rule of Proximity states that the verb agrees with the nearer subject. III. If both subjects joined by neither...nor are singular, the verb must be singular. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "II & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "I & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement I galat hai - Verb PEHLE subject se nahi, NEAREST (dusre/closer) subject se match karta hai."
+      },
+      "navigation": { "next": "card_73_milestone_m9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_73_milestone_m9",
+      "card_slug": "card_73_milestone_m9",
+      "type": "milestone",
+      "concept_id": "conjunction_neither_either_agreement",
+      "level": 4,
+      "progress": { "current": 73, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📏",
+        "completed_topic": "Neither-nor/Either-or Subject-Verb Agreement (Rule of Proximity)",
+        "xp_earned": 70,
+        "milestone_progress": "Module 9/12 Clear",
+        "motivational_quote": "Rule of Proximity master ho gaye! Ab As...as/So...as aur So that traps!"
+      },
+      "navigation": { "next": "card_74_as_as_so_as", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_74_as_as_so_as",
+      "card_slug": "card_74_as_as_so_as",
+      "type": "chat",
+      "concept_id": "conjunction_asas_sothat",
+      "level": 5,
+      "progress": { "current": 74, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho AS...AS aur SO...AS - dono equal comparison ke liye use hote hain, lekin fark hai POSITIVE aur NEGATIVE sentence ka. Positive sentence mein sirf 'as...as' aayega: 'She is as tall as her brother.'" },
+        { "speaker": "raju", "text": "Sir negative mein kya hoga?" },
+        { "speaker": "aman", "text": "Negative sentence mein traditional grammar rule 'so...as' prefer karta hai: 'She is not so tall as her brother.' Lekin modern usage mein 'not as...as' bhi widely accepted hai - dono chal jaate hain negative mein." },
+        { "speaker": "raju", "text": "Achha! Matlab Positive mein SIRF 'as...as' fix hai, Negative mein dono chalega!" }
+      ],
+      "navigation": { "next": "card_75_so_that_purpose", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_75_so_that_purpose",
+      "card_slug": "card_75_so_that_purpose",
+      "type": "chat",
+      "concept_id": "conjunction_asas_sothat",
+      "level": 5,
+      "progress": { "current": 75, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab dekho 'SO THAT' aur 'IN ORDER THAT' - ye PURPOSE (maksad) dikhate hain aur inke baad hamesha can/could/may/might/will/would jaise Modal Verb aata hai. Jaise: 'He worked hard so that he COULD pass.'" },
+        { "speaker": "raju", "text": "Sir 'so that' bina modal ke use kar sakte hain kya?" },
+        { "speaker": "aman", "text": "Nahi Raju, standard grammar mein 'so that' ke baad Modal Verb (can/could/may/might) zaroori hai purpose dikhane ke liye. 'He worked hard so that he passed' thoda informal/incorrect lagega formal exams mein." },
+        { "speaker": "raju", "text": "Achha, ab isse 'so...that' (bina 'in order') se kaise alag karenge?" }
+      ],
+      "navigation": { "next": "card_76_sothat_result_vs_purpose", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_76_sothat_result_vs_purpose",
+      "card_slug": "card_76_sothat_result_vs_purpose",
+      "type": "chat",
+      "concept_id": "conjunction_asas_sothat",
+      "level": 5,
+      "progress": { "current": 76, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Yahin sabse bada twist hai - 'SO...THAT' (adjective/adverb 'so' ke baad, phir 'that') RESULT dikhata hai, na ki purpose! Jaise: 'He was SO tired THAT he fell asleep immediately' (result - kya hua, no modal verb needed)." },
+        { "speaker": "raju", "text": "Sir 'so that' aur 'so...that' dikhne mein to same lagte hain!" },
+        { "speaker": "aman", "text": "Yehi confusion sabko hoti hai! 'So that' (purpose) mein 'so' aur 'that' saath-saath aate hain, adjective ke bina. 'So...that' (result) mein beech mein ek Adjective/Adverb hota hai ('so TIRED that'). Ye structure dekh kar pehchano!" },
+        { "speaker": "raju", "text": "Achha! Beech mein Adjective ho to Result, na ho to Purpose - yaad rakh lunga!" }
+      ],
+      "navigation": { "next": "card_77_guess_notasold", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_77_guess_notasold",
+      "card_slug": "card_77_guess_notasold",
+      "type": "guess",
+      "concept_id": "conjunction_asas_sothat",
+      "level": 5,
+      "progress": { "current": 77, "total": 100 },
+      "guess_payload": {
+        "question": "Choose correct: 'This building is _____ tall as that one.'",
+        "options": [
+          { "id": "A", "text": "so" },
+          { "id": "B", "text": "as" },
+          { "id": "C", "text": "such" },
+          { "id": "D", "text": "too" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Positive equal comparison sentence mein sirf 'as...as' aata hai, 'so...as' nahi (wo sirf negative sentence ke liye hai)."
+      },
+      "navigation": { "next": "card_78_quiz_sothat_modal", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_78_quiz_sothat_modal",
+      "card_slug": "card_78_quiz_sothat_modal",
+      "type": "quiz",
+      "concept_id": "conjunction_asas_sothat",
+      "level": 5,
+      "progress": { "current": 78, "total": 100 },
+      "quiz_payload": {
+        "question": "Choose correct: 'She saved money so that she _____ buy a house.'",
+        "options": [
+          { "id": "A", "text": "buys" },
+          { "id": "B", "text": "bought" },
+          { "id": "C", "text": "could" },
+          { "id": "D", "text": "buying" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'So that' (Purpose) ke baad Modal Verb (can/could/may/might) zaroori hai. 'Could' sahi hai past tense context mein."
+      },
+      "navigation": { "next": "card_79_quiz_so_that_result", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_79_quiz_so_that_result",
+      "card_slug": "card_79_quiz_so_that_result",
+      "type": "quiz",
+      "concept_id": "conjunction_asas_sothat",
+      "level": 5,
+      "progress": { "current": 79, "total": 100 },
+      "quiz_payload": {
+        "question": "Identify the function: 'The music was so loud that everyone covered their ears.'",
+        "options": [
+          { "id": "A", "text": "Purpose clause" },
+          { "id": "B", "text": "Result clause" },
+          { "id": "C", "text": "Condition clause" },
+          { "id": "D", "text": "Time clause" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'So loud that' RESULT dikha raha hai (kya hua as a consequence), na ki purpose - 'so' ke baad Adjective 'loud' hai isliye ye Result clause hai."
+      },
+      "navigation": { "next": "card_80_quiz_multistatement_asasthat", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_80_quiz_multistatement_asasthat",
+      "card_slug": "card_80_quiz_multistatement_asasthat",
+      "type": "quiz",
+      "concept_id": "conjunction_asas_sothat",
+      "level": 5,
+      "progress": { "current": 80, "total": 100 },
+      "quiz_payload": {
+        "question": "Statements: I. Positive equal comparisons use 'as...as', not 'so...as'. II. 'So that' expressing purpose is typically followed by a modal verb. III. 'So + adjective + that' expresses purpose, not result. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & II" },
+          { "id": "B", "text": "II & III" },
+          { "id": "C", "text": "I & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement III galat hai - 'So + adjective + that' RESULT dikhata hai, purpose nahi. Purpose ke liye 'so that' (bina adjective ke) use hota hai."
+      },
+      "navigation": { "next": "card_81_milestone_m10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_81_milestone_m10",
+      "card_slug": "card_81_milestone_m10",
+      "type": "milestone",
+      "concept_id": "conjunction_asas_sothat",
+      "level": 5,
+      "progress": { "current": 81, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "As...as/So...as & So that (Purpose) vs So...that (Result)",
+        "xp_earned": 70,
+        "milestone_progress": "Module 10/12 Clear",
+        "motivational_quote": "Purpose vs Result crack ho gaya! Ab Not only...but also Inversion module!"
+      },
+      "navigation": { "next": "card_82_not_only_parallel_recap", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_82_not_only_parallel_recap",
+      "card_slug": "card_82_not_only_parallel_recap",
+      "type": "chat",
+      "concept_id": "conjunction_notonly_inversion",
+      "level": 5,
+      "progress": { "current": 82, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ab dekho ek advanced twist - jab 'NOT ONLY' sentence ke SHURU mein aata hai (emphasis dene ke liye), to Subject-Verb order ULTA (invert) ho jata hai, jaise question mein hota hai!" },
+        { "speaker": "raju", "text": "Hain?? Sir aise kaise? Example do please!" },
+        { "speaker": "aman", "text": "Normal: 'He not only came but also helped us.' Lekin agar 'Not only' shuru mein zor dene ke liye laayein: 'NOT ONLY DID HE come, but he also helped us.' Dekho, 'did he' - auxiliary Subject se pehle aa gaya!" },
+        { "speaker": "raju", "text": "Achha! Matlab 'Not only' agar sentence ke bilkul shuru mein hai, to 'did/does/is/was' Subject se pehle aayega!" }
+      ],
+      "navigation": { "next": "card_83_and_aswellas_agreement", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_83_and_aswellas_agreement",
+      "card_slug": "card_83_and_aswellas_agreement",
+      "type": "chat",
+      "concept_id": "conjunction_notonly_inversion",
+      "level": 5,
+      "progress": { "current": 83, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab ek aur bahut common trap - 'AND' vs 'AS WELL AS'. 'And' do Subjects ko jodkar unhe PLURAL bana deta hai - 'Ram and Shyam ARE friends'. Lekin 'AS WELL AS' Subject ko plural NAHI banata!" },
+        { "speaker": "raju", "text": "Sir matlab 'as well as' se Verb singular hi rahega?" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'Ram, as well as Shyam, IS coming' - yahan 'as well as Shyam' ek additional/parenthetical info hai, main Subject sirf 'Ram' (singular) hai. Isliye Verb bhi singular rahega, 'are' nahi." },
+        { "speaker": "raju", "text": "Ye to bahut bada trap hai sir, 'and' aur 'as well as' dikhne mein similar lagte hain par grammar mein alag!" }
+      ],
+      "navigation": { "next": "card_84_together_with_along_with", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_84_together_with_along_with",
+      "card_slug": "card_84_together_with_along_with",
+      "type": "chat",
+      "concept_id": "conjunction_notonly_inversion",
+      "level": 5,
+      "progress": { "current": 84, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Yahi rule 'TOGETHER WITH', 'ALONG WITH', 'ACCOMPANIED BY', 'IN ADDITION TO' pe bhi lagta hai - ye sab Prepositions hain (Conjunction nahi), Subject ko plural nahi banate. 'The teacher, along with the students, IS going on a trip.'" },
+        { "speaker": "raju", "text": "Sir ye to interesting hai - ye words 'and' jaisa dikhte hain par kaam nahi karte 'and' jaisa!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Yaad rakho - sirf 'AND' hi TRUE Conjunction hai jo Subjects ko jodkar Plural banata hai. Baaki 'as well as, along with, together with, accompanied by' sab Prepositional phrases hain jo main subject ko change nahi karte." },
+        { "speaker": "raju", "text": "Achha sir, ab test karo mujhe in sabpe!" }
+      ],
+      "navigation": { "next": "card_85_guess_notonly_inversion", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_85_guess_notonly_inversion",
+      "card_slug": "card_85_guess_notonly_inversion",
+      "type": "guess",
+      "concept_id": "conjunction_notonly_inversion",
+      "level": 5,
+      "progress": { "current": 85, "total": 100 },
+      "guess_payload": {
+        "question": "Choose the correctly inverted sentence:",
+        "options": [
+          { "id": "A", "text": "Not only he sang but also he danced." },
+          { "id": "B", "text": "Not only did he sing but he also danced." },
+          { "id": "C", "text": "Not only he did sing but also danced he." },
+          { "id": "D", "text": "Not only sang he but also danced." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Not only' sentence ke shuru mein hone se Auxiliary 'did' Subject 'he' se pehle aayega (Inversion) - 'Not only did he sing...'"
+      },
+      "navigation": { "next": "card_86_quiz_as_well_as_verb", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_86_quiz_as_well_as_verb",
+      "card_slug": "card_86_quiz_as_well_as_verb",
+      "type": "quiz",
+      "concept_id": "conjunction_notonly_inversion",
+      "level": 5,
+      "progress": { "current": 86, "total": 100 },
+      "quiz_payload": {
+        "question": "Choose correct: 'The manager, as well as his employees, _____ working on the project.'",
+        "options": [
+          { "id": "A", "text": "are" },
+          { "id": "B", "text": "is" },
+          { "id": "C", "text": "were" },
+          { "id": "D", "text": "have been" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'As well as' Subject ko plural nahi banata. Main Subject 'The manager' (singular) hai, isliye Verb 'is' aayega."
+      },
+      "navigation": { "next": "card_87_quiz_and_vs_aswellas", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_87_quiz_and_vs_aswellas",
+      "card_slug": "card_87_quiz_and_vs_aswellas",
+      "type": "quiz",
+      "concept_id": "conjunction_notonly_inversion",
+      "level": 5,
+      "progress": { "current": 87, "total": 100 },
+      "quiz_payload": {
+        "question": "Error detection: 'The player, together with his coach, were seen at the airport.'",
+        "options": [
+          { "id": "A", "text": "'were' should be 'was'" },
+          { "id": "B", "text": "'seen' should be 'saw'" },
+          { "id": "C", "text": "'coach' should be 'coaches'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Together with' Subject ko plural nahi banata. Main Subject 'The player' (singular), isliye Verb 'was' aayega."
+      },
+      "navigation": { "next": "card_88_quiz_multistatement_notonly", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_88_quiz_multistatement_notonly",
+      "card_slug": "card_88_quiz_multistatement_notonly",
+      "type": "quiz",
+      "concept_id": "conjunction_notonly_inversion",
+      "level": 5,
+      "progress": { "current": 88, "total": 100 },
+      "quiz_payload": {
+        "question": "Statements: I. When 'Not only' starts a sentence, subject-auxiliary inversion is required. II. 'As well as' functions exactly like 'and' and makes the subject plural. III. 'Along with', 'together with', and 'accompanied by' are prepositional phrases, not true conjunctions. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & III" },
+          { "id": "B", "text": "I & II" },
+          { "id": "C", "text": "II & III" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - 'As well as' Subject ko plural NAHI banata, iska use 'and' se bilkul alag hai."
+      },
+      "navigation": { "next": "card_89_milestone_m11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_89_milestone_m11",
+      "card_slug": "card_89_milestone_m11",
+      "type": "milestone",
+      "concept_id": "conjunction_notonly_inversion",
+      "level": 5,
+      "progress": { "current": 89, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔄",
+        "completed_topic": "Not only Inversion & And vs As well as Agreement",
+        "xp_earned": 70,
+        "milestone_progress": "Module 11/12 Clear",
+        "motivational_quote": "Officer level inversion crack ho gaya! Ab last module - Provided that/Whether/As if!"
+      },
+      "navigation": { "next": "card_90_provided_that", "button_text": "Start Final Module ➔" }
+    },
+    {
+      "card_id": "card_90_provided_that",
+      "card_slug": "card_90_provided_that",
+      "type": "chat",
+      "concept_id": "conjunction_provided_whether_asif",
+      "level": 5,
+      "progress": { "current": 90, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab last module ka pehla concept - PROVIDED THAT ya PROVIDING THAT - iska matlab hota hai 'agar/sharte ye hai ki' (condition). Ye 'If' jaisa hi kaam karta hai lekin thoda formal hai. Jaise: 'You can go out, provided that you finish your homework.'" },
+        { "speaker": "raju", "text": "Sir ye 'if' se kaise alag hai matlab mein?" },
+        { "speaker": "aman", "text": "Matlab same hai, bas 'provided that' STRICT CONDITION pe zyada zor deta hai - jaise ek 'zaroori sharat'. Formal writing aur legal documents mein 'provided that' zyada use hota hai." },
+        { "speaker": "raju", "text": "Achha, ab agla concept batao sir!" }
+      ],
+      "navigation": { "next": "card_91_whether_or_indirect", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_91_whether_or_indirect",
+      "card_slug": "card_91_whether_or_indirect",
+      "type": "chat",
+      "concept_id": "conjunction_provided_whether_asif",
+      "level": 5,
+      "progress": { "current": 91, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho WHETHER...OR - ye alternatives/possibilities dikhata hai. Ek bada trap: Indirect Questions mein 'IF' ki jagah 'WHETHER' zyada sahi maana jata hai, khaaskar jab 'or not' ka option ho. 'I don't know whether he will come or not.'" },
+        { "speaker": "raju", "text": "Sir 'if' use karna galat hoga wahan?" },
+        { "speaker": "aman", "text": "'If' informal English mein chal jata hai, lekin formal/exam level English mein jab do options ('yes/no' ya 'or not') dikhane ho, tab 'whether' zyada correct/preferred hota hai. 'Whether or not' ek fixed phrase bhi hai." },
+        { "speaker": "raju", "text": "Achha! Ab last concept kya hai sir?" }
+      ],
+      "navigation": { "next": "card_92_asif_asthough_subjunctive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_92_asif_asthough_subjunctive",
+      "card_slug": "card_92_asif_asthough_subjunctive",
+      "type": "chat",
+      "concept_id": "conjunction_provided_whether_asif",
+      "level": 5,
+      "progress": { "current": 92, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Last aur bahut important - AS IF / AS THOUGH - ye hypothetical/imaginary (kalpanik) situation dikhate hain, aur inke baad SUBJUNCTIVE MOOD use hota hai - matlab 'was' ki jagah 'WERE' aata hai, chahe subject singular ho!" },
+        { "speaker": "raju", "text": "Hain?? Sir 'He talks as if he WERE rich' - 'he' singular hai, phir 'were' kyun?" },
+        { "speaker": "aman", "text": "Yahi hai Subjunctive Mood ka trap - jab baat IMAGINARY/UNREAL ho (matlab wo actually rich nahi hai), to Singular Subject ke saath bhi 'were' use hota hai, 'was' nahi! Ye BPSC officer level ka sabse advanced trap hai!" },
+        { "speaker": "raju", "text": "Achha sir! Matlab 'as if/as though' ke baad fake/imaginary baat ho to 'were' aayega, chahe subject 'he/she/it' ho!" }
+      ],
+      "navigation": { "next": "card_93_guess_provided_that", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_93_guess_provided_that",
+      "card_slug": "card_93_guess_provided_that",
+      "type": "guess",
+      "concept_id": "conjunction_provided_whether_asif",
+      "level": 5,
+      "progress": { "current": 93, "total": 100 },
+      "guess_payload": {
+        "question": "Choose correct: 'You will get the job, _____ you clear the interview.'",
+        "options": [
+          { "id": "A", "text": "provided that" },
+          { "id": "B", "text": "as if" },
+          { "id": "C", "text": "lest" },
+          { "id": "D", "text": "whether" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Provided that' strict condition (sharat) dikhata hai - job milegi bas ek condition ke sath (interview clear karna)."
+      },
+      "navigation": { "next": "card_94_quiz_whether_ornot", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_94_quiz_whether_ornot",
+      "card_slug": "card_94_quiz_whether_ornot",
+      "type": "quiz",
+      "concept_id": "conjunction_provided_whether_asif",
+      "level": 5,
+      "progress": { "current": 94, "total": 100 },
+      "quiz_payload": {
+        "question": "Choose the more grammatically appropriate sentence in formal English:",
+        "options": [
+          { "id": "A", "text": "I am not sure if he will attend or not." },
+          { "id": "B", "text": "I am not sure whether he will attend or not." },
+          { "id": "C", "text": "I am not sure whether if he will attend." },
+          { "id": "D", "text": "I am not sure that he will attend or not." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Jab 'or not' ka option ho, formal/exam English mein 'whether' 'if' se zyada preferred/correct hota hai."
+      },
+      "navigation": { "next": "card_95_quiz_as_if_were", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_95_quiz_as_if_were",
+      "card_slug": "card_95_quiz_as_if_were",
+      "type": "quiz",
+      "concept_id": "conjunction_provided_whether_asif",
+      "level": 5,
+      "progress": { "current": 95, "total": 100 },
+      "quiz_payload": {
+        "question": "Error detection: 'She behaves as if she was the boss of this office.'",
+        "options": [
+          { "id": "A", "text": "'was' should be 'were' (Subjunctive Mood)" },
+          { "id": "B", "text": "'behaves' should be 'behave'" },
+          { "id": "C", "text": "'office' should be 'offices'" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'As if' hypothetical/unreal situation dikhata hai (she is NOT actually the boss), isliye Subjunctive Mood 'were' aayega, 'was' nahi - chahe subject singular ho."
+      },
+      "navigation": { "next": "card_96_quiz_multistatement_finalmisc", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_96_quiz_multistatement_finalmisc",
+      "card_slug": "card_96_quiz_multistatement_finalmisc",
+      "type": "quiz",
+      "concept_id": "conjunction_provided_whether_asif",
+      "level": 5,
+      "progress": { "current": 96, "total": 100 },
+      "quiz_payload": {
+        "question": "Statements: I. 'Provided that' expresses a strict, formal condition similar to 'if'. II. 'Whether' is preferred over 'if' in formal English when presenting alternatives with 'or not'. III. 'As if/As though' followed by a hypothetical situation always uses 'was' for singular subjects. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "I & II" },
+          { "id": "B", "text": "II & III" },
+          { "id": "C", "text": "I only" },
+          { "id": "D", "text": "All three" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement III galat hai - hypothetical situations mein 'as if/as though' ke baad Subjunctive 'were' aata hai, singular subject ke sath bhi, 'was' nahi."
+      },
+      "navigation": { "next": "card_97_milestone_m12", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_97_milestone_m12",
+      "card_slug": "card_97_milestone_m12",
+      "type": "milestone",
+      "concept_id": "conjunction_provided_whether_asif",
+      "level": 5,
+      "progress": { "current": 97, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏅",
+        "completed_topic": "Provided that, Whether...or, As if/As though (Subjunctive)",
+        "xp_earned": 75,
+        "milestone_progress": "Module 12/12 Clear",
+        "motivational_quote": "Saare 12 modules clear! Ab Officer Level Final Revision ki baari hai!"
+      },
+      "navigation": { "next": "card_98_summary_revision", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_98_summary_revision",
+      "card_slug": "card_98_summary_revision",
+      "type": "summary",
+      "concept_id": "conjunction_full_revision",
+      "level": 5,
+      "progress": { "current": 98, "total": 100 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Conjunction",
+        "revision_points": [
+          {
+            "topic": "Three Types & FANBOYS",
+            "point": "Coordinating (For-And-Nor-But-Or-Yet-So) joins equal units; Subordinating joins main+dependent clause; Correlative comes in pairs with mandatory parallel structure."
+          },
+          {
+            "topic": "Although/Though vs Despite/In spite of",
+            "point": "Although/Though/Even though = Conjunctions, need full Clause (Subject+Verb). Despite/In spite of = Prepositions, need Noun/Gerund only, NEVER a clause."
+          },
+          {
+            "topic": "Double Conjunction & Unless/Lest",
+            "point": "Never use two conjunctions for one relation (Although...but ✗, Because...so ✗). 'Unless' = 'if not' (no double negative). 'Lest' always takes 'should'."
+          },
+          {
+            "topic": "Neither-nor/Either-or Agreement",
+            "point": "Verb agrees with the NEAREST subject (Rule of Proximity), not the first one. 'As well as/Along with/Together with' do NOT make subject plural (unlike 'and')."
+          },
+          {
+            "topic": "Not Only Inversion & As if Subjunctive",
+            "point": "'Not only' at sentence start needs Subject-Auxiliary Inversion. 'As if/As though' for hypothetical situations always take 'WERE', even with singular subjects."
+          }
+        ]
+      },
+      "navigation": { "next": "card_99_final_quiz", "button_text": "Take Final Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_99_final_quiz",
+      "card_slug": "card_99_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "conjunction_full_revision",
+      "level": 5,
+      "progress": { "current": 99, "total": 100 },
+      "quiz_payload": {
+        "question": "Read the following statements about Conjunctions carefully:\nI. 'Despite' and 'In spite of' are prepositions and must be followed by a noun or gerund, never a full clause with subject and verb.\nII. In sentences with 'Neither...nor' or 'Either...or', the verb always agrees with the first-mentioned subject regardless of its position.\nIII. Using 'Although' and 'but' together in the same sentence (e.g., 'Although he was rich, but he was unhappy') is a redundancy error.\nIV. 'As if' and 'as though', when describing a hypothetical or unreal situation, require the subjunctive form 'were' even with singular subjects like he/she/it.\nWhich of the above statements are CORRECT?",
+        "options": [
+          { "id": "A", "text": "I, III and IV only" },
+          { "id": "B", "text": "I, II and III only" },
+          { "id": "C", "text": "II, III and IV only" },
+          { "id": "D", "text": "All four statements are correct" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement II galat hai - in Neither...nor/Either...or constructions, verb agreement follows the Rule of Proximity (agrees with the NEARER subject), not the first-mentioned one. Statements I, III, aur IV standard grammar rules ke anusar sahi hain jo BPSC/SBI PO Error Detection mein directly test hote hain."
+      },
+      "navigation": { "next": "card_100_trophy", "button_text": "See Final Result ➔" }
+    },
+    {
+      "card_id": "card_100_trophy",
+      "card_slug": "card_100_trophy",
+      "type": "milestone",
+      "concept_id": "conjunction_full_revision",
+      "level": 5,
+      "progress": { "current": 100, "total": 100 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Conjunction - Complete Mastery (SBI PO Error Detection Level)",
+        "xp_earned": 230,
+        "milestone_progress": "12/12 Modules Clear - 100% Complete",
+        "motivational_quote": "Shabaash Officer! Ab tum Conjunction ke har type, har trap, aur har SBI PO/BPSC error detection question ko crack kar sakte ho. Practice karte raho aur exam mein topper bano!"
+      },
+      "navigation": { "next": "course_complete", "button_text": "Finish Chapter 🎉" }
+    }
+  ]
+}
