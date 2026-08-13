@@ -1,0 +1,2170 @@
+
+{
+  "topic_id": "resources_indian_geography",
+  "topic_title": "Resources in Indian Geography",
+  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+  "total_cards": 72,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": {
+        "current": 1,
+        "total": 72
+      },
+      "intro_payload": {
+        "title": "Resources in Indian Geography",
+        "icon": "🌾",
+        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Understand what resources are and their types",
+          "Learn classification of resources based on origin, ownership, and development",
+          "Master soil types across India and their distribution",
+          "Explore water resources - rivers, groundwater, and conservation",
+          "Understand forest resources and their importance",
+          "Learn about mineral and energy resources of India",
+          "Cover Bihar-specific resource distribution (BPSC TRE focus)"
+        ],
+        "estimated_time": "45 minutes",
+        "difficulty_label": "Foundation to Officer Level"
+      },
+      "navigation": {
+        "next": "card_02_resource_concept",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_resource_concept",
+      "card_slug": "card_02_resource_concept",
+      "type": "chat",
+      "concept_id": "what_is_resource",
+      "level": 1,
+      "progress": {
+        "current": 2,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhare ghar mein khana pakane ke liye kya chahiye hota hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, gas cylinder, chawal, daal, pani... aur bhi bahut kuch!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Aur ye sab cheezein tumhe milti kahan se hain? Chawal khet se, pani kuwe ya nal se, gas petroleum se... dekho, ye sab RESOURCES hain! Resource ka matlab hai - koi bhi cheez jo hamare kaam aaye aur uski kuch VALUE ho."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab sir, jo bhi cheez useful ho woh resource hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_resource_definition",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_03_resource_definition",
+      "card_slug": "card_03_resource_definition",
+      "type": "chat",
+      "concept_id": "resource_definition",
+      "level": 1,
+      "progress": {
+        "current": 3,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan, lekin ek twist hai! Koi cheez tab hi resource banti hai jab usse use karne ki TECHNOLOGY aur NEED dono ho. Dekho, 200 saal pehle petroleum zameen ke neeche tha, lekin tab woh resource nahi tha kyunki use karne ka tarika maloom nahi tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa... matlab technology develop hui, tab petroleum resource ban gaya!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Toh yaad rakho - Resource = Something USEFUL + Available in NATURE or Created by HUMANS + We have TECHNOLOGY to use it. BPSC mein ye concept zaroor poochha jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, resources kitne type ke hote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_classification_intro",
+        "button_text": "Next ➔"
+      }
+    },
+    {
+      "card_id": "card_04_classification_intro",
+      "card_slug": "card_04_classification_intro",
+      "type": "chat",
+      "concept_id": "classification_basis",
+      "level": 1,
+      "progress": {
+        "current": 4,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Resources ko hum 4 tareekon se classify karte hain - (1) ORIGIN ke basis par, (2) EXHAUSTIBILITY ke basis par, (3) OWNERSHIP ke basis par, aur (4) DEVELOPMENT ke basis par. Pehle Origin se samajhte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Origin matlab sir, woh kahan se aaye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Origin ke basis par do types hain - BIOTIC (living things se bane) aur ABIOTIC (non-living things se bane). Jaise coal, petroleum -ये पेड़-पौधों और जानवरों के अवशेषों से बने, toh BIOTIC hain. Lekin minerals like iron, copper - ये चट्टानों से मिलते हैं, toh ABIOTIC hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh sir, soil aur water konse type ke honge?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_origin_guess",
+        "button_text": "Guess Time! 🤔"
+      }
+    },
+    {
+      "card_id": "card_05_origin_guess",
+      "card_slug": "card_05_origin_guess",
+      "type": "guess",
+      "concept_id": "biotic_abiotic_guess",
+      "level": 1,
+      "progress": {
+        "current": 5,
+        "total": 72
+      },
+      "guess_payload": {
+        "question": "Water (पानी) को classify karo - Biotic ya Abiotic?",
+        "options": [
+          { "id": "A", "text": "Biotic (क्योंकि इसमें जीव रहते हैं)" },
+          { "id": "B", "text": "Abiotic (क्योंकि यह non-living है)" },
+          { "id": "C", "text": "Dono (कभी Biotic, कभी Abiotic)" },
+          { "id": "D", "text": "Koi bhi nahi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Water ek ABIOTIC resource hai kyunki yeh khud ek non-living substance hai. Haan, isme living organisms रह सकते हैं, lekin paani khud non-living hai isliye ABIOTIC category mein aata hai. Soil bhi ABIOTIC hai, lekin usme organic matter hota hai toh confuse mat hona!"
+      },
+      "navigation": {
+        "next": "card_06_exhaustibility",
+        "button_text": "Check Answer ➔"
+      }
+    },
+    {
+      "card_id": "card_06_exhaustibility",
+      "card_slug": "card_06_exhaustibility",
+      "type": "chat",
+      "concept_id": "renewable_nonrenewable",
+      "level": 1,
+      "progress": {
+        "current": 6,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aata hai sabse important classification - EXHAUSTIBILITY! Matlab kya resource khatam ho sakta hai ya nahi. Dekho Raju, tumhare mobile ki battery charge hoti hai na - woh recharge kar sakte ho. Lekin agar battery fully dead ho jaye permanently, toh?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh sir naya battery lena padega! Purana khatam ho gaya."
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Isi tarah, RENEWABLE resources woh hain jo baar-baar replenish ho sakte hain jaise solar energy, wind, water. Aur NON-RENEWABLE woh hain jo limited hain aur khatam ho jayenge jaise coal, petroleum, natural gas. Inhe FOSSIL FUELS bhi kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir lekin trees toh renewable hain na? Woh phir se uga sakte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_07_renewable_trap",
+        "button_text": "Good Question! ➔"
+      }
+    },
+    {
+      "card_id": "card_07_renewable_trap",
+      "card_slug": "card_07_renewable_trap",
+      "type": "chat",
+      "concept_id": "renewable_overuse_trap",
+      "level": 1,
+      "progress": {
+        "current": 7,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut badhiya sawal! Haan, forests RENEWABLE hain, LEKIN yahin BPSC ka sabse bada trap hai! Agar hum trees ko use karne ki speed zyada kar dein aur replantation ki speed kam ho, toh renewable bhi khatam ho sakta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab overuse se renewable bhi non-renewable jaise ban sakta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi samjhe! Isliye careful utilization zaroori hai. Aur ek special category hai - STOCK resources. Ye woh hain jo present toh hain lekin hum use nahi kar sakte kyunki technology nahi hai. Jaise hydrogen (in water) - bahut energy hai, lekin abhi properly use karne ka advanced technology developed nahi hua!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh interesting hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_08_ownership",
+        "button_text": "Next Classification ➔"
+      }
+    },
+    {
+      "card_id": "card_08_ownership",
+      "card_slug": "card_08_ownership",
+      "type": "chat",
+      "concept_id": "ownership_classification",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab OWNERSHIP ke basis par samajhte hain. Kuch resources kisi ek individual ke hote hain, kuch poore community ke, aur kuch puri nation ke! Jaise tumhare ghar ki zameen - woh INDIVIDUAL resource hai. Lekin park, mandir, talab - ye COMMUNITY resources hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur sir, railway tracks, roads ye sab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ye NATIONAL resources hain! Inpar government ka control hai. Railways, minerals (6 km andar tak ki depth), wildlife sanctuaries - ye sab nation ke hain. Aur ek special category hai - INTERNATIONAL resources! Jaise 200 nautical miles (approximately 370 km) ke baad ka oceanic area - yeh kisi ek country ka nahi, sabka hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye nautical miles kya hota hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_09_eez_concept",
+        "button_text": "समझते हैं ➔"
+      }
+    },
+    {
+      "card_id": "card_09_eez_concept",
+      "card_slug": "card_09_eez_concept",
+      "type": "chat",
+      "concept_id": "eez_international_waters",
+      "level": 2,
+      "progress": {
+        "current": 9,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Nautical mile ek maritime measurement hai - 1 nautical mile = 1.852 km. Ab dekho, coastline se 12 nautical miles tak TERRITORIAL WATERS hain (India ka full control). 12 se 200 nautical miles tak EXCLUSIVE ECONOMIC ZONE (EEZ) hai - yahan India resources use kar sakta hai. 200 ke baad INTERNATIONAL WATERS - sabka hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Ye toh UPSC aur SSC mein zaroor aayega!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! EEZ ka concept bahut important hai. Aur last classification hai - DEVELOPMENT ke basis par. Isme 4 types hain: POTENTIAL (available hai but developed nahi), DEVELOPED (fully use ho raha), STOCK (technology nahi hai), aur RESERVE (technology hai but use nahi kar rahe, future ke liye bacha rahe)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir example se samjhao na!"
+        }
+      ],
+      "navigation": {
+        "next": "card_10_development_examples",
+        "button_text": "Examples ➔"
+      }
+    },
+    {
+      "card_id": "card_10_development_examples",
+      "card_slug": "card_10_development_examples",
+      "type": "chat",
+      "concept_id": "development_classification_examples",
+      "level": 2,
+      "progress": {
+        "current": 10,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Dekho, Rajasthan aur Gujarat mein wind energy ki bahut potential hai, lekin abhi puri tarah develop nahi hua - ye POTENTIAL resource hai. Coal abhi fully mine aur use ho raha hai toh DEVELOPED resource hai. Hydrogen in water (abhi technology complete nahi) - STOCK hai. Aur dam ke peeche paani roka gaya emergency ke liye - woh RESERVE resource hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha sir, STOCK aur RESERVE mein farak samajh aa gaya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_quiz_1",
+        "button_text": "Quiz Time! 📝"
+      }
+    },
+    {
+      "card_id": "card_11_quiz_1",
+      "card_slug": "card_11_quiz_1",
+      "type": "quiz",
+      "concept_id": "classification_quiz_1",
+      "level": 2,
+      "progress": {
+        "current": 11,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा युग्म सही नहीं है? (BPSC Style)",
+        "options": [
+          { "id": "A", "text": "Coal - Non-Renewable, Biotic" },
+          { "id": "B", "text": "Iron Ore - Non-Renewable, Abiotic" },
+          { "id": "C", "text": "Solar Energy - Renewable, Abiotic" },
+          { "id": "D", "text": "Wind Energy - Non-Renewable, Abiotic" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Wind Energy एक RENEWABLE resource है, Non-Renewable नहीं! यह continuously replenish होती रहती है। यह Abiotic जरूर है क्योंकि non-living source है। Coal Biotic है (पेड़-पौधों के अवशेष से), Iron Ore Abiotic है (चट्टानों से)। ⭐ BPSC में ऐसे pair-based questions बहुत आते हैं!"
+      },
+      "navigation": {
+        "next": "card_12_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_12_quiz_2",
+      "card_slug": "card_12_quiz_2",
+      "type": "quiz",
+      "concept_id": "classification_quiz_2",
+      "level": 2,
+      "progress": {
+        "current": 12,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत की तटरेखा से 200 nautical miles के बाद का समुद्री क्षेत्र क्या कहलाता है?",
+        "options": [
+          { "id": "A", "text": "Territorial Waters" },
+          { "id": "B", "text": "Exclusive Economic Zone (EEZ)" },
+          { "id": "C", "text": "International Waters / High Seas" },
+          { "id": "D", "text": "Continental Shelf" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "200 nautical miles (लगभग 370 km) के बाद का समुद्री क्षेत्र INTERNATIONAL WATERS या HIGH SEAS कहलाता है - यह किसी भी देश के exclusive control में नहीं है। 0-12 nm = Territorial Waters (पूर्ण नियंत्रण), 12-200 nm = EEZ (संसाधनों पर अधिकार)। Continental Shelf समुद्र तल का उथला हिस्सा है। ⭐ SSC CGL और UPSC Prelims में EEZ से जरूर प्रश्न आता है!"
+      },
+      "navigation": {
+        "next": "card_13_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_13_quiz_3",
+      "card_slug": "card_13_quiz_3",
+      "type": "quiz",
+      "concept_id": "classification_quiz_3",
+      "level": 2,
+      "progress": {
+        "current": 13,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा STOCK resource का सबसे अच्छा उदाहरण है?",
+        "options": [
+          { "id": "A", "text": "Solar Energy (क्योंकि unlimited है)" },
+          { "id": "B", "text": "Dam में stored water (future use के लिए)" },
+          { "id": "C", "text": "Hydrogen in water (technology develop नहीं हुई)" },
+          { "id": "D", "text": "Forest in protected areas (conservation के लिए)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "STOCK resources वे हैं जो available तो हैं लेकिन उन्हें use करने की proper TECHNOLOGY develop नहीं हुई है। Hydrogen पानी में abundant है और भविष्य में clean energy source बन सकता है, लेकिन अभी large scale पर use करने का commercially viable technology नहीं है। Dam में stored water RESERVE resource है (technology है, deliberately बचाया गया)। ⭐ BPSC में STOCK vs RESERVE का difference पूछा जाता है!"
+      },
+      "navigation": {
+        "next": "card_14_milestone_1",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_14_milestone_1",
+      "card_slug": "card_14_milestone_1",
+      "type": "milestone",
+      "concept_id": "module_1_complete",
+      "level": 2,
+      "progress": {
+        "current": 14,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 COMPLETED!",
+        "badge_emoji": "📚",
+        "completed_topic": "Resource Classification Mastered",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/6 Clear",
+        "motivational_quote": "Bahut badhiya! Tumne resources ke sab types samajh liye - Origin, Exhaustibility, Ownership aur Development! Ab chalte hain India ki actual resources dekhne! 🚀"
+      },
+      "navigation": {
+        "next": "card_15_soil_intro",
+        "button_text": "Start Soil Resources ➔"
+      }
+    },
+    {
+      "card_id": "card_15_soil_intro",
+      "card_slug": "card_15_soil_intro",
+      "type": "chat",
+      "concept_id": "soil_introduction",
+      "level": 2,
+      "progress": {
+        "current": 15,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, agar tumse poochha jaye ki India ka sabse important natural resource kaunsa hai, kya bologe?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir shayad paani? Ya phir minerals?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Soch achhi hai, lekin ek resource hai jiske bina agriculture hi nahi ho sakti - aur woh hai SOIL (मिट्टी)! Dekho, soil formation mein hazaaron saal lagte hain. Rocks weathering se break hote hain, organic matter milta hai, microorganisms kaam karte hain - tab jaake fertile soil banti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab sir, ye renewable hai ya non-renewable?"
+        }
+      ],
+      "navigation": {
+        "next": "card_16_soil_formation",
+        "button_text": "Critical Concept ➔"
+      }
+    },
+    {
+      "card_id": "card_16_soil_formation",
+      "card_slug": "card_16_soil_formation",
+      "type": "chat",
+      "concept_id": "soil_renewable_debate",
+      "level": 2,
+      "progress": {
+        "current": 16,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ye sabse tricky question hai! Technically soil RENEWABLE hai, kyunki formation process continue hota hai. LEKIN formation bahut slow hai (1 cm mitti banने में 100-1000 saal!). Agar hum erosion aur depletion ki speed zyada rakhe, toh practically NON-RENEWABLE jaise behave karta hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhh... toh conservation zaruri hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ekdum correct! Ab India mein major soil types samajhte hain. BPSC aur SSC mein soil types aur unka distribution bahut important hai. India mein mainly 6 types ki soil hain, aur inhe classify karne ka kaam ICAR (Indian Council of Agricultural Research) karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir konsi 6 types hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_17_alluvial_soil",
+        "button_text": "Type 1: Alluvial ➔"
+      }
+    },
+    {
+      "card_id": "card_17_alluvial_soil",
+      "card_slug": "card_17_alluvial_soil",
+      "type": "chat",
+      "concept_id": "alluvial_soil_detail",
+      "level": 2,
+      "progress": {
+        "current": 17,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sabse important aur sabse zyada area cover karne wali hai - ALLUVIAL SOIL (जलोढ़ मिट्टी)! Ye India ke lagbhag 40% area mein hai. Ganga, Brahmaputra, aur unki tributaries ke plains mein ye milti hai. Bihar का लगभग पूरा उत्तरी भाग alluvial soil है - यह BPSC TRE के लिए बेहद महत्वपूर्ण है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ye banti kaise hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nadiyon ke deposit se! Rivers apne saath silt, sand, clay laati hain aur plains mein deposit kar deti hain. Ye bahut fertile hoti hai kyunki इसमें potash, phosphoric acid, aur lime होता है। Isme wheat, rice, sugarcane, cotton sab achhe se hote hain. Isko do parts mein divide karte hain - KHADAR (नवीन जलोढ़ - नदी के पास, ज्यादा उपजाऊ) aur BHANGAR (पुरानी जलोढ़ - नदी से दूर, kankar deposits)."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Toh Bihar mein mainly Khadar hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_18_bihar_alluvial",
+        "button_text": "Bihar Focus ➔"
+      }
+    },
+    {
+      "card_id": "card_18_bihar_alluvial",
+      "card_slug": "card_18_bihar_alluvial",
+      "type": "chat",
+      "concept_id": "bihar_alluvial_special",
+      "level": 2,
+      "progress": {
+        "current": 18,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! ⭐ BPSC TRE Favorite: उत्तरी बिहार में गंगा और उसकी सहायक नदियों (गंडक, कोसी, महानंदा) द्वारा लाई गई नवीन जलोढ़ मिट्टी (Khadar) है। यह अत्यधिक उपजाऊ है। दक्षिणी बिहार में पुरानी जलोढ़ (Bhangar) और कुछ हिस्सों में लाल-पीली मिट्टी मिलती है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir flood se problem hoti hogi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, khaaskar Kosi region mein. Lekin floods नई मिट्टी भी लाते हैं जो fertility बढ़ाती है। यह एक double-edged sword है। Bihar में rice, wheat, maize, sugarcane की खेती mainly alluvial soil में ही होती है। ⭐ BPSC में flood-prone areas और soil fertility का relation पूछा जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_19_black_soil",
+        "button_text": "Type 2: Black Soil ➔"
+      }
+    },
+    {
+      "card_id": "card_19_black_soil",
+      "card_slug": "card_19_black_soil",
+      "type": "chat",
+      "concept_id": "black_soil_regur",
+      "level": 2,
+      "progress": {
+        "current": 19,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aati hai BLACK SOIL (काली मिट्टी) - isko REGUR soil bhi kehte hain. Ye mainly Deccan Plateau (Maharashtra, Gujarat, Madhya Pradesh) mein milti hai। Ye volcanic rocks (basalt) के weathering से banti hai, isliye इसमें iron, lime, aluminium, magnesium bahut hota hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir iska color black kyun hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Titanium oxide aur organic matter ki wajah se! Ek special property hai - ye moisture retain bahut achhe se karti hai। Gile hone par ye expand hoti hai (swells) aur sukh jaane par shrink aur crack ho jaati hai। Isko 'self-ploughing' soil kehte hain kyunki cracking se khud hi tillage jaise ho jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ismein konsi crop best hai sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_black_soil_crops",
+        "button_text": "Cotton Connection ➔"
+      }
+    },
+    {
+      "card_id": "card_20_black_soil_crops",
+      "card_slug": "card_20_black_soil_crops",
+      "type": "chat",
+      "concept_id": "black_soil_cotton",
+      "level": 2,
+      "progress": {
+        "current": 20,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "COTTON! Isliye isko 'Black Cotton Soil' bhi bolte hain। Maharashtra India ka सबसे बड़ा cotton producer hai, mainly black soil की वजह से। Besides cotton, इसमें jowar, wheat, linseed, tobacco, sunflower भी अच्छे से होते हैं। ⭐ SSC और Railway में direct पूछा जाता है - 'Regur soil is ideal for which crop?'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Answer: Cotton! Got it sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_red_yellow_soil",
+        "button_text": "Type 3: Red & Yellow ➔"
+      }
+    },
+    {
+      "card_id": "card_21_red_yellow_soil",
+      "card_slug": "card_21_red_yellow_soil",
+      "type": "chat",
+      "concept_id": "red_yellow_soil",
+      "level": 2,
+      "progress": {
+        "current": 21,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Teesri type hai RED and YELLOW SOIL (लाल और पीली मिट्टी)। Ye mainly peninsular India के कम वर्षा वाले क्षेत्रों में मिलती है - parts of Odisha, Chhattisgarh, southern parts of Middle Ganga Plain (including दक्षिणी बिहार के कुछ हिस्से), Western Ghats piedmont regions."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir iska color red aur yellow dono kyun hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Red color iron की presence से आता है (iron oxide/rust)। Jab ye hydrated form mein hota hai toh YELLOW दिखता है। Ye crystalline and metamorphic rocks के weathering से बनती है। Isme iron तो है but nitrogen, phosphorus aur humus (organic matter) KI KAMI hota है, isliye ये उतनी fertile नहीं है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh ismein kya hota hai sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_red_yellow_crops",
+        "button_text": "Crops & Fertilizer ➔"
+      }
+    },
+    {
+      "card_id": "card_22_red_yellow_crops",
+      "card_slug": "card_22_red_yellow_crops",
+      "type": "chat",
+      "concept_id": "red_yellow_crops_fertilizer",
+      "level": 2,
+      "progress": {
+        "current": 22,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Isme millets (bajra, jowar), groundnut, potato, tobacco अच्छे से होते हैं। Lekin fertilizers (especially nitrogen-based) डालने पड़ते हैं productivity बढ़ाने के लिए। ⭐ BPSC TRE Important: दक्षिणी बिहार (गया, नवादा, औरंगाबाद districts) में लाल-पीली मिट्टी मिलती है, जहां धान और दलहन की खेती होती है लेकिन उत्तरी बिहार की तुलना में कम उपजाऊ है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha matlab Bihar mein दोनों types - alluvial (north) aur red-yellow (south)!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! BPSC TRE में यह जरूर पूछा जाता है। Ab अगली types dekhte hain।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir aur kitni baaki hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_laterite_soil",
+        "button_text": "Type 4: Laterite ➔"
+      }
+    },
+    {
+      "card_id": "card_23_laterite_soil",
+      "card_slug": "card_23_laterite_soil",
+      "type": "chat",
+      "concept_id": "laterite_soil",
+      "level": 2,
+      "progress": {
+        "current": 23,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Fourth है LATERITE SOIL (लैटराइट मिट्टी)। 'Laterite' शब्द Latin word 'Later' से आया है जिसका मतलब है 'brick'। Kyun? Kyunki ye मिट्टी सूखने पर पत्थर जैसी सख्त हो जाती है और इसे ईंट बनाने में use किया जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Soil se brick! Ye कहां मिलती है sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "High temperature aur HIGH RAINFALL वाले areas में - Western Ghats, Eastern Ghats, Assam, Odisha, झारखंड के कुछ भाग। Heavy rainfall की वजह से leaching होती है - मतलब पानी के साथ lime, silica जैसे nutrients बह जाते हैं, सिर्फ iron oxide और aluminium oxide बचता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab ये कम fertile hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_24_laterite_use",
+        "button_text": "Uses & Crops ➔"
+      }
+    },
+    {
+      "card_id": "card_24_laterite_use",
+      "card_slug": "card_24_laterite_use",
+      "type": "chat",
+      "concept_id": "laterite_crops_use",
+      "level": 2,
+      "progress": {
+        "current": 24,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan, ये काफी कम fertile है। But isme TEA, COFFEE, CASHEW, RUBBER जैसी plantation crops अच्छे से होती हैं क्योंकि ये crops acidic soil prefer करती हैं। Karnataka, Kerala, Tamil Nadu में आपको tea और coffee estates laterite soil में ही मिलेंगे!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur building material के लिए भी use होती है?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! South India में बहुत सारी पुरानी buildings laterite blocks से बनी हैं। ⭐ SSC में पूछा गया है: 'Which soil is used for making bricks?' - Answer: Laterite. Leaching process ko bhi yaad rakho - यह BPSC का favorite topic है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Noted sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_25_arid_soil",
+        "button_text": "Type 5: Desert Soil ➔"
+      }
+    },
+    {
+      "card_id": "card_25_arid_soil",
+      "card_slug": "card_25_arid_soil",
+      "type": "chat",
+      "concept_id": "arid_desert_soil",
+      "level": 2,
+      "progress": {
+        "current": 25,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Fifth type है ARID / DESERT SOIL (मरुस्थलीय मिट्टी)। Jaise naam se pata chal raha hai, ye Rajasthan, Gujarat, Punjab, Haryana के dry areas में मिलती है। Rainfall bahut kam hota hai (below 50 cm), isliye organic content aur moisture bahut kam hai।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye sandy hoti hogi na sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Texture coarse aur sandy hai, color halka (light brown/grey)। Interesting baat - isme phosphate ZYADA hota hai lekin nitrogen KI KAMI hai। Aur ek special problem - SALINITY (नमक की मात्रा)। Low rainfall ki wajah se salts surface par accumulate ho jaate hain।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh crops mushkil se hote honge?"
+        }
+      ],
+      "navigation": {
+        "next": "card_26_arid_irrigation",
+        "button_text": "Solution: Irrigation ➔"
+      }
+    },
+    {
+      "card_id": "card_26_arid_irrigation",
+      "card_slug": "card_26_arid_irrigation",
+      "type": "chat",
+      "concept_id": "arid_soil_irrigation",
+      "level": 2,
+      "progress": {
+        "current": 26,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan, naturally toh bahut kam hota. LEKIN agar IRRIGATION provide karo toh ye bahut productive ban jaati hai! Indira Gandhi Canal (Rajasthan Canal) ne Rajasthan के बड़े हिस्से को cultivable बना दिया। Irrigation से wheat, cotton, bajra, pulses अच्छे से होते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Matlab irrigation se desert को भी fertile बनाया जा सकता है!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! Ye UPSC aur SSC का favorite example है - 'How technology (irrigation) can convert potential resource into developed resource'. Ab last type dekhte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sixth kaunsi hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_mountain_soil",
+        "button_text": "Type 6: Mountain Soil ➔"
+      }
+    },
+    {
+      "card_id": "card_27_mountain_soil",
+      "card_slug": "card_27_mountain_soil",
+      "type": "chat",
+      "concept_id": "mountain_forest_soil",
+      "level": 2,
+      "progress": {
+        "current": 27,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Last है MOUNTAIN / FOREST SOIL (पर्वतीय मिट्टी)। Ye Himalayan regions aur hilly areas में मिलती है - J&K, Himachal, Uttarakhand, northeastern states, aur Western & Eastern Ghats के कुछ भागों में। Iska formation snow melting aur organic matter decomposition से होता है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye fertile hoti hai kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Valley regions aur lower slopes में ye BAHUT fertile hoti है kyunki organic content high होता है। But higher altitudes में ये shallow aur less fertile ho jaati hai। Isme tea (Darjeeling, Assam), coffee, spices (cardamom, pepper), fruits (apples in Himachal, oranges in Sikkim) अच्छे से होते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh different altitudes pe different fertility?"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_soil_quiz_1",
+        "button_text": "Correct! Ab Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_28_soil_quiz_1",
+      "card_slug": "card_28_soil_quiz_1",
+      "type": "quiz",
+      "concept_id": "soil_quiz_1",
+      "level": 2,
+      "progress": {
+        "current": 28,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: उत्तरी बिहार में मुख्यतः किस प्रकार की मिट्टी पाई जाती है?",
+        "options": [
+          { "id": "A", "text": "लाल और पीली मिट्टी" },
+          { "id": "B", "text": "काली मिट्टी (रेगुर)" },
+          { "id": "C", "text": "जलोढ़ मिट्टी (Khadar)" },
+          { "id": "D", "text": "लैटराइट मिट्टी" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "उत्तरी बिहार में गंगा और उसकी सहायक नदियों (गंडक, कोसी, बागमती, महानंदा, कमला) द्वारा लाई गई नवीन जलोढ़ मिट्टी (Khadar/Alluvial Soil) पाई जाती है। यह अत्यधिक उपजाऊ है और यहां धान, गेहूं, गन्ना, मक्का की खेती होती है। दक्षिणी बिहार में पुरानी जलोढ़ (Bhangar) और लाल-पीली मिट्टी के क्षेत्र हैं। ⭐ BPSC TRE में बिहार की मिट्टी का distribution बहुत महत्वपूर्ण है!"
+      },
+      "navigation": {
+        "next": "card_29_soil_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_29_soil_quiz_2",
+      "card_slug": "card_29_soil_quiz_2",
+      "type": "quiz",
+      "concept_id": "soil_quiz_2",
+      "level": 2,
+      "progress": {
+        "current": 29,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा कथन सही है? (SSC CGL Style)\n\n1. काली मिट्टी को 'रेगुर' कहा जाता है।\n2. काली मिट्टी कपास की खेती के लिए सर्वोत्तम है।\n3. काली मिट्टी ग्रेनाइट चट्टानों के अपक्षयन से बनती है।\n4. काली मिट्टी में टाइटेनियम ऑक्साइड होता है।",
+        "options": [
+          { "id": "A", "text": "केवल 1, 2 और 3" },
+          { "id": "B", "text": "केवल 1, 2 और 4" },
+          { "id": "C", "text": "केवल 2, 3 और 4" },
+          { "id": "D", "text": "सभी 1, 2, 3 और 4" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "कथन 3 गलत है! काली मिट्टी BASALT (volcanic rocks) के weathering से बनती है, ग्रेनाइट से नहीं। कथन 1 सही है (Regur soil), कथन 2 सही है (cotton के लिए ideal - इसे Black Cotton Soil कहते हैं), कथन 4 सही है (titanium oxide की उपस्थिति से काला रंग)। ⭐ BPSC और SSC में parent rock material पूछा जाता है - याद रखें: Black Soil = Basalt (volcanic), Red-Yellow Soil = Crystalline & Metamorphic rocks!"
+      },
+      "navigation": {
+        "next": "card_30_soil_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_30_soil_quiz_3",
+      "card_slug": "card_30_soil_quiz_3",
+      "type": "quiz",
+      "concept_id": "soil_quiz_3",
+      "level": 2,
+      "progress": {
+        "current": 30,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "'Leaching' process का सबसे अच्छा उदाहरण किस मिट्टी में देखा जाता है?",
+        "options": [
+          { "id": "A", "text": "Alluvial Soil (अधिक वर्षा से nutrients wash हो जाते हैं)" },
+          { "id": "B", "text": "Black Soil (moisture retention के कारण)" },
+          { "id": "C", "text": "Laterite Soil (heavy rainfall से lime और silica बह जाते हैं)" },
+          { "id": "D", "text": "Arid Soil (कम वर्षा से salt accumulation)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "LEACHING process का सबसे prominent example LATERITE SOIL में देखा जाता है। High temperature और HEAVY RAINFALL वाले areas में तेज बारिश के कारण पानी मिट्टी में से lime, silica, और अन्य soluble nutrients को बहा ले जाता है, सिर्फ iron oxide और aluminium oxide जैसे insoluble elements बच जाते हैं - इसी को Leaching कहते हैं। यही कारण है कि Laterite Soil कम उपजाऊ होती है। ⭐ UPSC Prelims में leaching की process और इसके effects जरूर पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_31_milestone_2",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_31_milestone_2",
+      "card_slug": "card_31_milestone_2",
+      "type": "milestone",
+      "concept_id": "module_2_complete",
+      "level": 2,
+      "progress": {
+        "current": 31,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 SOIL RESOURCES MASTERED!",
+        "badge_emoji": "🌾",
+        "completed_topic": "All 6 Soil Types of India",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/6 Clear",
+        "motivational_quote": "Zabardast! Tumne Alluvial se lekar Laterite tak sab soil types samajh liye! Ab chalte hain India ke water resources dekhne! 💧"
+      },
+      "navigation": {
+        "next": "card_32_water_intro",
+        "button_text": "Start Water Resources ➔"
+      }
+    },
+    {
+      "card_id": "card_32_water_intro",
+      "card_slug": "card_32_water_intro",
+      "type": "chat",
+      "concept_id": "water_resource_intro",
+      "level": 3,
+      "progress": {
+        "current": 32,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, Earth ko 'Blue Planet' kyun kehte hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kyunki 70% paani hai sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Correct! Lekin ek shocking fact - sirf 2.5% hi FRESHWATER hai, aur uska bhi majority (around 70%) glaciers aur ice caps mein frozen hai। Sirf 1% se bhi kam freshwater readily available hai humans ke liye - rivers, lakes, groundwater में। India mein paani ki availability aur distribution dono hi critical issues hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir India mein paani ke sources kya hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_water_sources",
+        "button_text": "Sources Samajhte Hain ➔"
+      }
+    },
+    {
+      "card_id": "card_33_water_sources",
+      "card_slug": "card_33_water_sources",
+      "type": "chat",
+      "concept_id": "water_sources_india",
+      "level": 3,
+      "progress": {
+        "current": 33,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "India में freshwater के mainly 3 sources hain: (1) SURFACE WATER - Rivers, Lakes, Ponds, (2) GROUNDWATER - Wells, Tube-wells, aur (3) RAINFALL। India mein average annual rainfall lagbhag 1170 mm hai, lekin distribution bahut UNEVEN hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Uneven matlab sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho, Mawsynram (Meghalaya) mein 11,000 mm+ rainfall hoti hai (world's wettest place), jabki Rajasthan ke kuch parts mein sirf 100-200 mm! ⭐ BPSC और UPSC में rainfall distribution का map-based question bahut aata hai। Aur rivers ki baat karein toh India mainly do river systems mein divided hai - HIMALAYAN rivers aur PENINSULAR rivers."
+        },
+        {
+          "speaker": "raju",
+          "text": "Inme kya difference hai sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_himalayan_vs_peninsular",
+        "button_text": "Critical Difference ➔"
+      }
+    },
+    {
+      "card_id": "card_34_himalayan_vs_peninsular",
+      "card_slug": "card_34_himalayan_vs_peninsular",
+      "type": "chat",
+      "concept_id": "himalayan_peninsular_rivers",
+      "level": 3,
+      "progress": {
+        "current": 34,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "HIMALAYAN rivers: (a) PERENNIAL (barah mahine paani) - kyunki inhe glacier melt + rainfall dono se paani milta hai, (b) LARGE basins cover karte hain, (c) MEANDERING nature (ghoomte-phirte plains mein), (d) Examples: Ganga, Brahmaputra, Indus. PENINSULAR rivers: (a) SEASONAL (monsoon dependent), (b) Smaller basins, (c) STRAIGHT flow (rocky terrain), (d) Examples: Godavari, Krishna, Kaveri, Narmada, Tapi."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Toh Ganga kabhi sukh nahi sakti but Narmada sukh sakti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Theoretically haan! Lekin recent years mein Ganga bhi summer mein कई जगह low flow ho jaati hai due to over-extraction aur climate change। ⭐ BPSC TRE Important: बिहार की प्रमुख नदियां - Ganga (मुख्य), Gandak, Kosi, Sone, Punpun, Phalgu सभी Himalayan origin की हैं और perennial nature की हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir groundwater ke baare mein bataiye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_groundwater",
+        "button_text": "Groundwater Deep Dive ➔"
+      }
+    },
+    {
+      "card_id": "card_35_groundwater",
+      "card_slug": "card_35_groundwater",
+      "type": "chat",
+      "concept_id": "groundwater_concept",
+      "level": 3,
+      "progress": {
+        "current": 35,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "GROUNDWATER bahut critical hai kyunki India की कुल freshwater usage में से लगभग 60% groundwater से आती है। Ye underground rocks aur soil layers mein stored rainwater hai। Jab rain hoti hai, kuch paani surface runoff banta hai (nadiyon mein), kuch evaporate hota hai, aur kuch INFILTRATION द्वारा zameen ke andar chala jaata hai - yahi groundwater ban jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh ye renewable hai na? Rain se recharge hota rahega!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan LEKIN yahin biggest problem hai! Hum jis speed se groundwater निकाल रहे हैं (tube-wells, borewells through), usse zyada fast recharge nahi ho raha। Result: WATER TABLE gir raha hai। Punjab, Haryana, Rajasthan, Gujarat mein groundwater depletion bahut critical level pe hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye toh serious problem hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_water_scarcity",
+        "button_text": "Problem Ki Depth ➔"
+      }
+    },
+    {
+      "card_id": "card_36_water_scarcity",
+      "card_slug": "card_36_water_scarcity",
+      "type": "chat",
+      "concept_id": "water_scarcity_india",
+      "level": 3,
+      "progress": {
+        "current": 36,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Water scarcity ke mainly teen reasons hain: (1) INCREASING POPULATION (zyada log = zyada demand), (2) UNEQUAL DISTRIBUTION (kuch areas mein bahut kam paani), (3) POLLUTION (rivers aur groundwater contaminated). ⭐ UPSC Prelims में Niti Aayog की 'Composite Water Management Index' report se questions aate hain।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir solution kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Multiple solutions hain: (1) RAINWATER HARVESTING - barish ke paani ko collect karna rooftops ya ponds mein, (2) WATERSHED MANAGEMENT - proper planning se water resources ko manage karna, (3) DRIP IRRIGATION (agriculture mein पानी बचाने के लिए - Israel ka successful model), (4) RIVER INTERLINKING projects (though controversial), (5) WASTEWATER TREATMENT aur RECYCLING."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Ye sab schemes BPSC mein aayengi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_water_conservation_bihar",
+        "button_text": "Bihar Special ➔"
+      }
+    },
+    {
+      "card_id": "card_37_water_conservation_bihar",
+      "card_slug": "card_37_water_conservation_bihar",
+      "type": "chat",
+      "concept_id": "bihar_water_conservation",
+      "level": 3,
+      "progress": {
+        "current": 37,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Very Important: बिहार में पानी की विरोधाभासी स्थिति है - उत्तरी बिहार में बाढ़ (Kosi, Gandak से) और दक्षिणी बिहार में सूखा! इसलिए 'Har Ghar Nal Jal Yojana' (Jal Jeevan Mission) चलाई जा रही है। Traditional water conservation methods जैसे 'Ahar-Pyne' system (दक्षिणी बिहार में प्राचीन जल संचयन प्रणाली) को फिर से revive किया जा रहा है।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ahar-Pyne kya hai sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "AHAR = छोटा तालाब/जलाशय जो बारिश का पानी इकट्ठा करता है। PYNE = एक नहर जो इस पानी को खेतों तक ले जाती है। Ye system लगभग 400 साल पुराना है, Gaya, Nawada, Aurangabad areas में था। ⭐ BPSC TRE में Traditional water harvesting systems जरूर पूछे जाते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bahut interesting hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_water_quiz_1",
+        "button_text": "Quiz Time! 📝"
+      }
+    },
+    {
+      "card_id": "card_38_water_quiz_1",
+      "card_slug": "card_38_water_quiz_1",
+      "type": "quiz",
+      "concept_id": "water_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 38,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "हिमालयी नदियों और प्रायद्वीपीय नदियों में मुख्य अंतर क्या है?",
+        "options": [
+          { "id": "A", "text": "हिमालयी नदियां मौसमी हैं, प्रायद्वीपीय नदियां बारहमासी" },
+          { "id": "B", "text": "हिमालयी नदियां बारहमासी हैं, प्रायद्वीपीय नदियां मौसमी" },
+          { "id": "C", "text": "दोनों बारहमासी हैं लेकिन origin अलग है" },
+          { "id": "D", "text": "प्रायद्वीपीय नदियों में पानी ज्यादा होता है" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "हिमालयी नदियां (Ganga, Brahmaputra, Indus) PERENNIAL (बारहमासी) हैं क्योंकि इन्हें glacier melt + rainfall दोनों sources से पानी मिलता है। प्रायद्वीपीय नदियां (Godavari, Krishna, Kaveri, Narmada) SEASONAL (मौसमी) हैं क्योंकि ये mainly monsoon पर निर्भर करती हैं। हालांकि कुछ peninsular rivers जैसे Kaveri को springs से भी पानी मिलता है। ⭐ SSC और Railway में यह direct question बहुत बार आया है!"
+      },
+      "navigation": {
+        "next": "card_39_water_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_39_water_quiz_2",
+      "card_slug": "card_39_water_quiz_2",
+      "type": "quiz",
+      "concept_id": "water_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 39,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: 'आहर-पइन' (Ahar-Pyne) जल संचयन प्रणाली बिहार के किस क्षेत्र में प्रचलित थी?",
+        "options": [
+          { "id": "A", "text": "उत्तरी बिहार (मिथिलांचल)" },
+          { "id": "B", "text": "दक्षिणी बिहार (गया, नवादा, औरंगाबाद)" },
+          { "id": "C", "text": "पश्चिमी बिहार (भोजपुर, बक्सर)" },
+          { "id": "D", "text": "पूर्वी बिहार (पूर्णिया, कटिहार)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'आहर-पइन' (Ahar-Pyne) पारंपरिक जल संचयन प्रणाली दक्षिणी बिहार (गया, नवादा, औरंगाबाद जिलों) में प्रचलित थी। 'आहर' छोटा तालाब होता था जो वर्षा जल एकत्र करता था, और 'पइन' नहर होती थी जो इस पानी को खेतों तक पहुंचाती थी। यह system लगभग 400 साल पुराना है और दक्षिणी बिहार की कम वर्षा वाली भूमि में सिंचाई का प्रमुख साधन था। ⭐ BPSC TRE में बिहार की traditional water systems बहुत important हैं!"
+      },
+      "navigation": {
+        "next": "card_40_water_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_40_water_quiz_3",
+      "card_slug": "card_40_water_quiz_3",
+      "type": "quiz",
+      "concept_id": "water_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 40,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत में ताजे पानी के उपयोग का सबसे बड़ा स्रोत कौन सा है?",
+        "options": [
+          { "id": "A", "text": "नदियां (Surface Water)" },
+          { "id": "B", "text": "भूजल (Groundwater)" },
+          { "id": "C", "text": "झीलें और तालाब" },
+          { "id": "D", "text": "वर्षा जल संचयन" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "भारत में कुल freshwater उपयोग का लगभग 60% भूजल (Groundwater) से आता है। यह मुख्यतः कृषि (tube-wells, borewells) और घरेलू उपयोग के लिए निकाला जाता है। समस्या यह है कि groundwater extraction की दर recharge की दर से बहुत ज्यादा है, जिससे Punjab, Haryana, Rajasthan, Gujarat जैसे राज्यों में water table तेजी से गिर रहा है। ⭐ UPSC Prelims में groundwater depletion और इसके कारण बहुत बार पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_41_milestone_3",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_41_milestone_3",
+      "card_slug": "card_41_milestone_3",
+      "type": "milestone",
+      "concept_id": "module_3_complete",
+      "level": 3,
+      "progress": {
+        "current": 41,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 WATER RESOURCES COMPLETE!",
+        "badge_emoji": "💧",
+        "completed_topic": "Surface Water, Groundwater & Conservation",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/6 Clear",
+        "motivational_quote": "Excellent! Ab tum India ke paani ki full picture samajh gaye - rivers, groundwater, conservation sab! Aage chalte hain forests ki duniya mein! 🌲"
+      },
+      "navigation": {
+        "next": "card_42_forest_intro",
+        "button_text": "Start Forest Resources ➔"
+      }
+    },
+    {
+      "card_id": "card_42_forest_intro",
+      "card_slug": "card_42_forest_intro",
+      "type": "chat",
+      "concept_id": "forest_introduction",
+      "level": 3,
+      "progress": {
+        "current": 42,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, agar tumse poochhe ki forests ki kya importance hai, kya bologe?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir oxygen milti hai, animals rehte hain, wood milta hai..."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Lekin ye sirf shuruaat hai। Forests ko 'Earth's Lungs' kaha jaata hai kyunki ye CO2 absorb karte hain aur O2 release karte hain। Besides, ye rainfall pattern ko regulate karte hain, soil erosion rokते हैं, biodiversity maintain karte hain, tribal communities ka livelihood hain, aur climate change se ladne mein crucial role hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir India mein kitna forest area hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_forest_coverage",
+        "button_text": "Forest Cover Stats ➔"
+      }
+    },
+    {
+      "card_id": "card_43_forest_coverage",
+      "card_slug": "card_43_forest_coverage",
+      "type": "chat",
+      "concept_id": "india_forest_coverage",
+      "level": 3,
+      "progress": {
+        "current": 43,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "India State of Forest Report (ISFR) 2021 के according, India का कुल forest cover लगभग 21.71% है (लगभग 7.13 lakh sq km)। ⭐ UPSC aur BPSC mein ISFR se data-based questions aate hain। States mein सबसे ज्यादा forest cover AREA wise: Madhya Pradesh (1st), Arunachal Pradesh (2nd), Chhattisgarh (3rd). PERCENTAGE wise: Mizoram (85%+), Arunachal Pradesh, Meghalaya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir 21% kam lag raha hai! Kitna hona chahiye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut achha observation! National Forest Policy 1988 के अनुसार, ideally 33% land area forest cover होना chahiye (plains में 33%, hills में ज्यादा)। Currently हम target से काफी पीछे हैं। ⭐ BPSC TRE: बिहार में forest cover सिर्फ लगभग 7.27% है (राष्ट्रीय औसत से बहुत कम), mainly Kaimur, Rohtas, West Champaran जिलों में।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir forests kitne types ke hote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_forest_types",
+        "button_text": "Forest Classification ➔"
+      }
+    },
+    {
+      "card_id": "card_44_forest_types",
+      "card_slug": "card_44_forest_types",
+      "type": "chat",
+      "concept_id": "forest_types_india",
+      "level": 3,
+      "progress": {
+        "current": 44,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "India mein forests ko mainly RAINFALL aur ALTITUDE ke basis par classify karte hain। Major types hain: (1) TROPICAL EVERGREEN (200+ cm rainfall, Western Ghats, Andaman), (2) TROPICAL DECIDUOUS (100-200 cm, largest area cover - monsoon forests), (3) TROPICAL THORN & SCRUB (less than 70 cm, Rajasthan, Gujarat), (4) MONTANE / MOUNTAIN forests (Himalayas - altitude ke according different trees), (5) MANGROVE forests (coastal saline water - Sundarbans)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Deciduous ka matlab kya hai sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Deciduous = पत्ते गिराने वाले! Dry season में ये पेड़ पत्ते गिरा देते हैं पानी बचाने के लिए। Sal, Teak, Shisham ये सब deciduous trees हैं। Evergreen = साल भर हरे रहते हैं (Rosewood, Ebony)। ⭐ SSC में direct पूछा जाता है: 'Teak और Sal किस प्रकार के forest में मिलते हैं?' Answer: Tropical Deciduous!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Noted sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_forest_importance",
+        "button_text": "Importance in Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_45_forest_importance",
+      "card_slug": "card_45_forest_importance",
+      "type": "chat",
+      "concept_id": "forest_ecological_importance",
+      "level": 3,
+      "progress": {
+        "current": 45,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab forests ki detailed importance samajhte hain - (1) ECOLOGICAL: Biodiversity hotspots (बहुत सारी species यहीं रहती हैं), Carbon sinks (CO2 absorb करते हैं), Water cycle regulate करते हैं। (2) ECONOMIC: Timber, fuelwood, medicinal plants, bamboo, lac, honey, NTFP (Non-Timber Forest Products)। (3) SOCIAL: Tribal livelihoods, cultural significance."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir deforestation ki problem bhi hogi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut badi! Deforestation (वनों की कटाई) ke causes: (a) Agriculture expansion (ज्यादा zameen chahiye crops ke lिए), (b) Urbanization (शहर बढ़ रहे हैं), (c) Mining, (d) Infrastructure (roads, dams), (e) Illegal logging। Effects: Climate change, soil erosion, floods, loss of biodiversity, tribal displacement!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Conservation kaise karte hain sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_forest_conservation",
+        "button_text": "Conservation Methods ➔"
+      }
+    },
+    {
+      "card_id": "card_46_forest_conservation",
+      "card_slug": "card_46_forest_conservation",
+      "type": "chat",
+      "concept_id": "forest_conservation_methods",
+      "level": 3,
+      "progress": {
+        "current": 46,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Forest conservation के multiple methods hain: (1) AFFORESTATION (नए पेड़ लगाना - like Green India Mission), (2) SOCIAL FORESTRY (communities ko involve karna - Van Mahotsav, Chipko Movement legacy), (3) PROTECTED AREAS - National Parks, Wildlife Sanctuaries, Biosphere Reserves (legal protection), (4) JFM - Joint Forest Management (government + locals together manage)."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ Chipko Movement kya tha sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "1970s mein Uttarakhand (tab Uttar Pradesh) में शुरू हुआ। Local communities (खासकर महिलाओं ने) पेड़ों को गले लगाकर (hug करके) cutting रोकी। Leader: Sunderlal Bahuguna। ⭐ UPSC aur BPSC में environmental movements जरूर पूछे जाते हैं। Chipko = 'stick/hug' (पेड़ से चिपकना)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Bahut inspiring hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_forest_quiz_1",
+        "button_text": "Quiz Time! 📝"
+      }
+    },
+    {
+      "card_id": "card_47_forest_quiz_1",
+      "card_slug": "card_47_forest_quiz_1",
+      "type": "quiz",
+      "concept_id": "forest_quiz_1",
+      "level": 3,
+      "progress": {
+        "current": 47,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "National Forest Policy 1988 के अनुसार, भारत में कितने प्रतिशत भूमि पर वन होने चाहिए?",
+        "options": [
+          { "id": "A", "text": "25%" },
+          { "id": "B", "text": "33%" },
+          { "id": "C", "text": "40%" },
+          { "id": "D", "text": "50%" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "National Forest Policy 1988 के अनुसार, कम से कम 33% भूमि क्षेत्र में वन आच्छादन होना चाहिए - plains में 33% और hilly/mountainous areas में इससे अधिक (क्योंकि वहां soil erosion और landslides का खतरा ज्यादा)। Currently India में लगभग 21.71% ही forest cover है। ⭐ BPSC और SSC में यह figure-based question बहुत बार पूछा गया है - 33% याद रखें!"
+      },
+      "navigation": {
+        "next": "card_48_forest_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_48_forest_quiz_2",
+      "card_slug": "card_48_forest_quiz_2",
+      "type": "quiz",
+      "concept_id": "forest_quiz_2",
+      "level": 3,
+      "progress": {
+        "current": 48,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत में सर्वाधिक क्षेत्रफल में पाए जाने वाले वन कौन से हैं?",
+        "options": [
+          { "id": "A", "text": "Tropical Evergreen Forests" },
+          { "id": "B", "text": "Tropical Deciduous Forests" },
+          { "id": "C", "text": "Mangrove Forests" },
+          { "id": "D", "text": "Montane Forests" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "भारत में सबसे बड़े area में TROPICAL DECIDUOUS FORESTS (उष्णकटिबंधीय पर्णपाती वन) पाए जाते हैं। ये monsoon forests भी कहलाते हैं और 100-200 cm rainfall वाले areas में होते हैं। इनमें Sal, Teak, Shisham, Sandalwood जैसे valuable trees मिलते हैं। Dry season में ये अपने पत्ते गिरा देते हैं। ⭐ Railway और SSC में यह MCQ बार-बार repeat होता है!"
+      },
+      "navigation": {
+        "next": "card_49_forest_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_49_forest_quiz_3",
+      "card_slug": "card_49_forest_quiz_3",
+      "type": "quiz",
+      "concept_id": "forest_quiz_3",
+      "level": 3,
+      "progress": {
+        "current": 49,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ चिपको आंदोलन (Chipko Movement) का मुख्य उद्देश्य क्या था?",
+        "options": [
+          { "id": "A", "text": "नए पेड़ लगाना (Afforestation)" },
+          { "id": "B", "text": "वनों की अवैध कटाई रोकना" },
+          { "id": "C", "text": "Wildlife संरक्षण" },
+          { "id": "D", "text": "जल संरक्षण" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "चिपको आंदोलन (1970s, Uttarakhand) का मुख्य उद्देश्य वनों की व्यावसायिक/अवैध कटाई को रोकना था। Local communities (विशेषकर महिलाओं) ने पेड़ों को गले लगाकर (chipko = चिपकना/stick) काटने से बचाया। Leader: Sunderlal Bahuguna। यह भारत का सबसे successful grassroots environmental movement था। ⭐ UPSC Prelims और BPSC में environmental movements (Chipko, Appiko, Silent Valley, Narmada Bachao) जरूर पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_50_milestone_4",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_50_milestone_4",
+      "card_slug": "card_50_milestone_4",
+      "type": "milestone",
+      "concept_id": "module_4_complete",
+      "level": 3,
+      "progress": {
+        "current": 50,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 FOREST RESOURCES CONQUERED!",
+        "badge_emoji": "🌲",
+        "completed_topic": "Forest Types, Conservation & Movements",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/6 Clear",
+        "motivational_quote": "Wonderful! Forests ka पूरा chapter clear! Ab chalte hain India ke mineral aur energy resources explore karne - यह BPSC और SSC का favorite section hai! 💎⚡"
+      },
+      "navigation": {
+        "next": "card_51_mineral_intro",
+        "button_text": "Start Mineral Resources ➔"
+      }
+    },
+    {
+      "card_id": "card_51_mineral_intro",
+      "card_slug": "card_51_mineral_intro",
+      "type": "chat",
+      "concept_id": "mineral_introduction",
+      "level": 4,
+      "progress": {
+        "current": 51,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, tumhara mobile phone, cycle, ghar ki grills, railway tracks - sab kisse bane hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir metal se... iron, steel, aluminium!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Aur ye metals aate kahan se hain?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Zameen ke neeche se sir... MINERALS!"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_mineral_definition",
+        "button_text": "Exactly! ➔"
+      }
+    },
+    {
+      "card_id": "card_52_mineral_definition",
+      "card_slug": "card_52_mineral_definition",
+      "type": "chat",
+      "concept_id": "mineral_definition_types",
+      "level": 4,
+      "progress": {
+        "current": 52,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Perfect! MINERAL ek naturally occurring inorganic substance hai jo earth's crust में मिलता है। Ye definite chemical composition aur physical properties वाला होता है। Minerals ko हम mainly 3 categories में बांटते हैं: (1) METALLIC (Ferrous + Non-Ferrous), (2) NON-METALLIC, (3) ENERGY MINERALS (Fossil Fuels)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Ferrous ka matlab kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "FERROUS minerals = जिनमें IRON (Fe) content हो। Examples: Iron ore, Manganese, Chromite। NON-FERROUS = Iron नहीं है। Examples: Copper, Bauxite (Aluminium ore), Lead, Zinc, Gold, Silver। ⭐ BPSC और SSC में classification बहुत पूछी जाती है - Ferrous vs Non-Ferrous!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_iron_ore",
+        "button_text": "Iron Ore Detail ➔"
+      }
+    },
+    {
+      "card_id": "card_53_iron_ore",
+      "card_slug": "card_53_iron_ore",
+      "type": "chat",
+      "concept_id": "iron_ore_india",
+      "level": 4,
+      "progress": {
+        "current": 53,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "India minerals में bahut समृद्ध है। Sabse important है IRON ORE - kyunki steel industry isi par dependent hai। India में iron ore mainly HEMATITE (सर्वोत्तम quality, 70% iron content) aur MAGNETITE varieties में मिलता है। Major producing states: Odisha (सबसे ज्यादा), Chhattisgarh, Karnataka, Jharkhand, Goa."
+        },
+        {
+          "speaker": "raju",
+          "text": "⭐ BPSC TRE: Bihar में iron ore hai kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Limited quantity में है - mainly Rohtas aur Gaya districts में। But large-scale production नहीं होता। Neighboring Jharkhand (खासकर Singhbhum region) India का major iron ore belt है - यह बिहार के बहुत पास है। ⭐ BPSC में Jharkhand-Bihar mineral linkage जरूर पूछा जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Noted!"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_bauxite_manganese",
+        "button_text": "Other Minerals ➔"
+      }
+    },
+    {
+      "card_id": "card_54_bauxite_manganese",
+      "card_slug": "card_54_bauxite_manganese",
+      "type": "chat",
+      "concept_id": "bauxite_manganese",
+      "level": 4,
+      "progress": {
+        "current": 54,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "BAUXITE (Aluminium का ore): India 5th largest producer है globally। Major states: Odisha (1st - Koraput, Kalahandi), Gujarat, Jharkhand, Maharashtra। MANGANESE (Steel manufacturing में alloy के रूप में): Odisha, Madhya Pradesh, Maharashtra, Karnataka। ⭐ SSC Favorite: 'India is self-sufficient in which mineral?' Answer options में Manganese आता है - True!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir copper aur gold bhi milta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "COPPER: Rajasthan (Khetri belt - सबसे बड़ा), Jharkhand (Singhbhum), Madhya Pradesh। GOLD: Karnataka (Kolar Gold Fields - अब almost exhausted), Jharkhand, Rajasthan (Banswara)। India में gold reserves bahut कम हैं, हम mostly import करते हैं।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Non-metallic minerals?"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_nonmetallic",
+        "button_text": "Non-Metallic ➔"
+      }
+    },
+    {
+      "card_id": "card_55_nonmetallic",
+      "card_slug": "card_55_nonmetallic",
+      "type": "chat",
+      "concept_id": "nonmetallic_minerals",
+      "level": 4,
+      "progress": {
+        "current": 55,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Non-Metallic minerals bhi bahut important hain! MICA (electrical insulation): Jharkhand, Andhra Pradesh, Rajasthan - India दुनिया का largest mica producer था! LIMESTONE (Cement industry): Madhya Pradesh, Rajasthan, Andhra Pradesh। ⭐ BPSC TRE: Bihar में LIMESTONE के अच्छे reserves हैं - Kaimur, Rohtas, Munger जिलों में। यहां cement plants भी हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Oh! Bihar में limestone important hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur DOLOMITE (refractory material, iron smelting) भी Rohtas में मिलता है। Ab सबसे critical category - ENERGY MINERALS!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Coal aur petroleum sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_coal_detail",
+        "button_text": "Coal Deep Dive ➔"
+      }
+    },
+    {
+      "card_id": "card_56_coal_detail",
+      "card_slug": "card_56_coal_detail",
+      "type": "chat",
+      "concept_id": "coal_detailed",
+      "level": 4,
+      "progress": {
+        "current": 56,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Absolutely! COAL India की energy needs का सबसे बड़ा source है (50%+ electricity coal से)। Coal mainly GONDWANA formations में मिलता है (200+ million years old)। Types (carbon content के अनुसार ascending order): PEAT (60% carbon, सबसे कम quality) < LIGNITE (70%) < BITUMINOUS (80%) < ANTHRACITE (90%+, सर्वोत्तम quality, सबसे कम smoke)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "India में konsa type zyada hai sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "BITUMINOUS सबसे ज्यादा (80%+ reserves)। Major coal states: Jharkhand (Dhanbad, Bokaro, Giridih - झारिया coalfields famous), Odisha, Chhattisgarh, West Bengal, Madhya Pradesh। ⭐ BPSC TRE: बिहार में अब coal नहीं मिलता (पहले Aurangabad में था)। 2000 में Jharkhand अलग राज्य बना तो सारे coalfields Jharkhand में चले गए!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Separation se Bihar को loss hua mineral-wise!"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_petroleum",
+        "button_text": "Petroleum ➔"
+      }
+    },
+    {
+      "card_id": "card_57_petroleum",
+      "card_slug": "card_57_petroleum",
+      "type": "chat",
+      "concept_id": "petroleum_natural_gas",
+      "level": 4,
+      "progress": {
+        "current": 57,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PETROLEUM (Crude Oil): India mainly IMPORT करता है (70%+ import dependency)। Domestic production: Gujarat (सबसे बड़ा - Mumbai High offshore), Assam (Digboi - oldest oilfield), Rajasthan (Barmer), Tamil Nadu (Cauvery basin)। NATURAL GAS: Gujarat (Jamnagar), Andhra Pradesh (Krishna-Godavari basin), Tripura, Rajasthan (associated with petroleum)।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir Mumbai High kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Mumbai High ek offshore oilfield hai (Arabian Sea में Mumbai coast के पास)। Ye India ka largest oil producing field है - discovered 1974 में। ⭐ SSC और Railway में 'India's largest offshore oilfield' - Mumbai High जरूर पूछा जाता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Got it sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_58_mineral_quiz_1",
+        "button_text": "Quiz Time! 📝"
+      }
+    },
+    {
+      "card_id": "card_58_mineral_quiz_1",
+      "card_slug": "card_58_mineral_quiz_1",
+      "type": "quiz",
+      "concept_id": "mineral_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 58,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "निम्नलिखित में से कौन सा NON-FERROUS mineral है?",
+        "options": [
+          { "id": "A", "text": "Iron Ore" },
+          { "id": "B", "text": "Manganese" },
+          { "id": "C", "text": "Bauxite" },
+          { "id": "D", "text": "Chromite" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "BAUXITE (Aluminium का ore) एक NON-FERROUS mineral है क्योंकि इसमें iron (Fe) content नहीं होता। FERROUS minerals वे हैं जिनमें iron होता है - Iron Ore (स्पष्ट रूप से), Manganese (steel manufacturing में iron के साथ alloy बनाता है), Chromite (stainless steel में iron के साथ)। ⭐ BPSC और SSC में Ferrous vs Non-Ferrous classification बहुत पूछा जाता है - यह fundamental concept है!"
+      },
+      "navigation": {
+        "next": "card_59_mineral_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_59_mineral_quiz_2",
+      "card_slug": "card_59_mineral_quiz_2",
+      "type": "quiz",
+      "concept_id": "mineral_quiz_2",
+      "level": 4,
+      "progress": {
+        "current": 59,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE: बिहार में निम्नलिखित में से कौन सा खनिज पाया जाता है?",
+        "options": [
+          { "id": "A", "text": "Coal (कोयला)" },
+          { "id": "B", "text": "Limestone (चूना पत्थर)" },
+          { "id": "C", "text": "Bauxite (बॉक्साइट)" },
+          { "id": "D", "text": "Petroleum (पेट्रोलियम)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "बिहार में LIMESTONE (चूना पत्थर) के अच्छे भंडार हैं - मुख्यतः Kaimur, Rohtas, Munger जिलों में। इसका उपयोग cement industry में होता है। कोयला पहले था (Aurangabad) लेकिन 2000 में Jharkhand अलग राज्य बनने के बाद सारे coalfields Jharkhand में चले गए। Bauxite और Petroleum बिहार में नहीं मिलते। ⭐ BPSC TRE में बिहार के minerals (Limestone, Dolomite, limited Iron ore) जरूर पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_60_mineral_quiz_3",
+        "button_text": "Next Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_60_mineral_quiz_3",
+      "card_slug": "card_60_mineral_quiz_3",
+      "type": "quiz",
+      "concept_id": "mineral_quiz_3",
+      "level": 4,
+      "progress": {
+        "current": 60,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Coal के types को carbon content के अनुसार सही बढ़ते क्रम (ascending order) में व्यवस्थित करें:",
+        "options": [
+          { "id": "A", "text": "Peat → Lignite → Bituminous → Anthracite" },
+          { "id": "B", "text": "Lignite → Peat → Anthracite → Bituminous" },
+          { "id": "C", "text": "Anthracite → Bituminous → Lignite → Peat" },
+          { "id": "D", "text": "Bituminous → Lignite → Peat → Anthracite" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Coal के types को carbon content के अनुसार ASCENDING order (कम से ज्यादा): PEAT (60% carbon, lowest quality, सबसे ज्यादा smoke) → LIGNITE/Brown Coal (70%) → BITUMINOUS (80%, सबसे ज्यादा मात्रा में India में) → ANTHRACITE (90%+, highest quality, कम smoke, सबसे कम मात्रा)। ⭐ Railway और SSC में coal types का sequence बार-बार पूछा जाता है - Peat से Anthracite तक quality बढ़ती है!"
+      },
+      "navigation": {
+        "next": "card_61_milestone_5",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_61_milestone_5",
+      "card_slug": "card_61_milestone_5",
+      "type": "milestone",
+      "concept_id": "module_5_complete",
+      "level": 4,
+      "progress": {
+        "current": 61,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 MINERAL RESOURCES MASTERED!",
+        "badge_emoji": "💎",
+        "completed_topic": "Metallic, Non-Metallic & Energy Minerals",
+        "xp_earned": 70,
+        "milestone_progress": "Module 5/6 Clear",
+        "motivational_quote": "Outstanding! Ab tum India ke सभी major minerals aur unका distribution जानते हो! Last module में renewable energy aur conservation देखते हैं! ⚡🌱"
+      },
+      "navigation": {
+        "next": "card_62_renewable_intro",
+        "button_text": "Final Module: Energy ➔"
+      }
+    },
+    {
+      "card_id": "card_62_renewable_intro",
+      "card_slug": "card_62_renewable_intro",
+      "type": "chat",
+      "concept_id": "renewable_energy_intro",
+      "level": 4,
+      "progress": {
+        "current": 62,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, abhi tak humne dekha coal, petroleum - ye sab NON-RENEWABLE hain na? Khatam ho jayenge ek din!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan sir, aur pollution bhi karte hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Isliye ab RENEWABLE ENERGY par focus badh raha hai। India ka target hai 2030 tak 500 GW non-fossil fuel capacity (mainly solar + wind)। ⭐ UPSC aur BPSC में India's renewable energy targets बहुत पूछे जाते हैं - Paris Agreement commitments के साथ link है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir renewable energy ke types kya hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_renewable_types",
+        "button_text": "Types Explore ➔"
+      }
+    },
+    {
+      "card_id": "card_63_renewable_types",
+      "card_slug": "card_63_renewable_types",
+      "type": "chat",
+      "concept_id": "renewable_energy_types",
+      "level": 4,
+      "progress": {
+        "current": 63,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "India में main renewable sources: (1) SOLAR (सबसे बड़ी potential - Rajasthan, Gujarat best), (2) WIND (Tamil Nadu, Gujarat, Maharashtra - coastal areas), (3) HYDRO (rivers - Himalayas, Western Ghats), (4) BIOMASS (crop residue, animal waste), (5) TIDAL & GEOTHERMAL (limited, experimental stage)। ⭐ SSC Favorite: 'India's largest solar park कहां है?' Answer: Bhadla Solar Park, Rajasthan!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir hydro power pollution-free hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, during generation pollution नहीं। But dam बनाने से environmental issues hain - forests डूब जाते हैं, tribal displacement, downstream river flow affect। Examples: Sardar Sarovar (Narmada), Tehri Dam (Ganga)। Trade-off hai - clean energy vs environmental/social cost!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Tricky situation hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_64_conservation",
+        "button_text": "Conservation ➔"
+      }
+    },
+    {
+      "card_id": "card_64_conservation",
+      "card_slug": "card_64_conservation",
+      "type": "chat",
+      "concept_id": "resource_conservation",
+      "level": 4,
+      "progress": {
+        "current": 64,
+        "total": 72
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Resource conservation bahut critical hai! Methods: (1) REDUCE consumption (unnecessary use kam karo), (2) REUSE (plastic bags, bottles - multiple times use), (3) RECYCLE (waste ko process karke naya product - like paper recycling), (4) RECOVER energy (waste-to-energy plants), (5) REFUSE (unnecessary plastic refuse karo - say NO!)। Ye '5 R's of Conservation' hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir sustainable development ka concept bhi yahi hai na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! SUSTAINABLE DEVELOPMENT = Present ki needs meet karo WITHOUT compromising future generations' ability to meet their needs। ⭐ UPSC ka favorite definition - Brundtland Commission (1987) 'Our Common Future' report से। BPSC में bhi यह concept जरूर आता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya sir! Resources use karo but wisely!"
+        }
+      ],
+      "navigation": {
+        "next": "card_65_energy_quiz_1",
+        "button_text": "Final Quiz Round! 📝"
+      }
+    },
+    {
+      "card_id": "card_65_energy_quiz_1",
+      "card_slug": "card_65_energy_quiz_1",
+      "type": "quiz",
+      "concept_id": "energy_quiz_1",
+      "level": 4,
+      "progress": {
+        "current": 65,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "भारत का सबसे बड़ा सौर ऊर्जा पार्क (Solar Park) कहां स्थित है?",
+        "options": [
+          { "id": "A", "text": "गुजरात (Charanka Solar Park)" },
+          { "id": "B", "text": "राजस्थान (Bhadla Solar Park)" },
+          { "id": "C", "text": "कर्नाटक (Pavagada Solar Park)" },
+          { "id": "D", "text": "आंध्र प्रदेश (Kurnool Solar Park)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "भारत का सबसे बड़ा solar park BHADLA SOLAR PARK है जो राजस्थान के Jodhpur जिले में स्थित है। Installed capacity लगभग 2,245 MW है। Rajasthan में सबसे ज्यादा solar energy potential है क्योंकि यहां सालभर तेज धूप रहती है और land availability भी अच्छी है। ⭐ SSC CGL और Railway में यह question बार-बार repeat हुआ है - Bhadla, Rajasthan याद रखें!"
+      },
+      "navigation": {
+        "next": "card_66_energy_quiz_2",
+        "button_text": "Next Question (2/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_66_energy_quiz_2",
+      "card_slug": "card_66_energy_quiz_2",
+      "type": "quiz",
+      "concept_id": "energy_quiz_2",
+      "level": 4,
+      "progress": {
+        "current": 66,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "'Sustainable Development' की अवधारणा किस रिपोर्ट में प्रस्तुत की गई थी?",
+        "options": [
+          { "id": "A", "text": "Kyoto Protocol (1997)" },
+          { "id": "B", "text": "Brundtland Commission - 'Our Common Future' (1987)" },
+          { "id": "C", "text": "Paris Agreement (2015)" },
+          { "id": "D", "text": "Rio Earth Summit (1992)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "SUSTAINABLE DEVELOPMENT की concept सबसे पहले formally Brundtland Commission की रिपोर्ट 'Our Common Future' (1987) में प्रस्तुत की गई। Definition: 'Development that meets the needs of the present without compromising the ability of future generations to meet their own needs.' Chair: Gro Harlem Brundtland (Norway की PM)। ⭐ UPSC Prelims और BPSC में यह definition और report का नाम बहुत बार पूछा गया है!"
+      },
+      "navigation": {
+        "next": "card_67_energy_quiz_3",
+        "button_text": "Last Question (3/3) ➔"
+      }
+    },
+    {
+      "card_id": "card_67_energy_quiz_3",
+      "card_slug": "card_67_energy_quiz_3",
+      "type": "quiz",
+      "concept_id": "energy_quiz_3",
+      "level": 4,
+      "progress": {
+        "current": 67,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "Resource Conservation के '5 R's' में शामिल नहीं है:",
+        "options": [
+          { "id": "A", "text": "Reduce" },
+          { "id": "B", "text": "Reuse" },
+          { "id": "C", "text": "Recreate" },
+          { "id": "D", "text": "Recycle" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Resource Conservation के '5 R's' हैं: (1) REDUCE (कम उपयोग), (2) REUSE (पुनः उपयोग), (3) RECYCLE (पुनर्चक्रण), (4) RECOVER (ऊर्जा पुनर्प्राप्ति - waste-to-energy), (5) REFUSE (अस्वीकार - जैसे single-use plastic को ना कहना)। 'Recreate' इसमें शामिल नहीं है। ⭐ BPSC और SSC में environmental conservation methods जरूर पूछे जाते हैं!"
+      },
+      "navigation": {
+        "next": "card_68_milestone_6",
+        "button_text": "Check Final Result ➔"
+      }
+    },
+    {
+      "card_id": "card_68_milestone_6",
+      "card_slug": "card_68_milestone_6",
+      "type": "milestone",
+      "concept_id": "module_6_complete",
+      "level": 4,
+      "progress": {
+        "current": 68,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🎉 ALL MODULES COMPLETED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Renewable Energy & Conservation",
+        "xp_earned": 70,
+        "milestone_progress": "Module 6/6 Clear ✅",
+        "motivational_quote": "Phenomenal! Tumne पूरा 'Resources in Indian Geography' chapter conquer कर लिया! Ab final revision aur Officer-level quiz ready hai! 🏆"
+      },
+      "navigation": {
+        "next": "card_69_officer_revision",
+        "button_text": "Officer Revision ⚡"
+      }
+    },
+    {
+      "card_id": "card_69_officer_revision",
+      "card_slug": "card_69_officer_revision",
+      "type": "summary",
+      "concept_id": "chapter_revision",
+      "level": 5,
+      "progress": {
+        "current": 69,
+        "total": 72
+      },
+      "summary_payload": {
+        "title": "⚡ OFFICER-LEVEL LIGHTNING REVISION",
+        "revision_points": [
+          {
+            "topic": "Resource Classification (BPSC Favorite)",
+            "point": "Origin: Biotic (coal, petroleum) vs Abiotic (minerals, water) | Exhaustibility: Renewable (solar, wind) vs Non-Renewable (fossil fuels) | Ownership: Individual, Community, National (railways, minerals 6km depth), International (oceanic 200nm+) | Development: Potential, Developed, Stock (hydrogen in water - no tech), Reserve (dam water - saved for future) ⭐"
+          },
+          {
+            "topic": "Soil Types (Complete Distribution)",
+            "point": "1. Alluvial (40% area, Ganga plains, Bihar's north - Khadar/Bhangar) 2. Black/Regur (Maharashtra, basalt weathering, cotton belt, self-ploughing) 3. Red-Yellow (iron oxide, low fertility, Bihar's south) 4. Laterite (heavy rainfall leaching, tea/coffee, brick-making) 5. Arid (low rainfall, high salinity, irrigation transforms) 6. Mountain (Himalayas, altitude-based fertility) ⭐"
+          },
+          {
+            "topic": "Water Resources (Critical Facts)",
+            "point": "Himalayan Rivers: Perennial (glacier+rain), large basins, meandering (Ganga, Brahmaputra, Indus) | Peninsular: Seasonal (monsoon-dependent), smaller, straight flow (Godavari, Krishna, Narmada) | Groundwater: 60% of India's freshwater use, DEPLETING fast (Punjab, Haryana critical) | EEZ: 0-12nm Territorial, 12-200nm EEZ, 200nm+ International | Bihar: Ahar-Pyne (Gaya, Nawada) ⭐"
+          },
+          {
+            "topic": "Forests (Policy & Distribution)",
+            "point": "Current Cover: 21.71% (Target: 33% as per National Forest Policy 1988) | Area-wise: MP, Arunachal, Chhattisgarh | %-wise: Mizoram (85%+), Arunachal | Types: Tropical Evergreen (200+cm), Tropical Deciduous (LARGEST, 100-200cm, Sal/Teak), Thorn (70-cm), Montane, Mangrove | Chipko Movement: 1970s, Uttarakhand, Sunderlal Bahuguna, anti-deforestation ⭐"
+          },
+          {
+            "topic": "Minerals & Energy (State-wise)",
+            "point": "Iron Ore: Odisha (1st), Chhattisgarh, Karnataka, Jharkhand | Bauxite: Odisha, Gujarat | Manganese: Odisha, MP | Coal: Jharkhand (Dhanbad, Bokaro), Odisha, Chhattisgarh (Bihar lost all after 2000 separation) | Petroleum: Gujarat (Mumbai High offshore - largest), Assam (Digboi - oldest) | Limestone: Bihar (Kaimur, Rohtas - cement industry) | Coal types: Peat→Lignite→Bituminous→Anthracite (carbon ↑) ⭐"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_70_final_quiz",
+        "button_text": "Final Officer Quiz 🎯"
+      }
+    },
+    {
+      "card_id": "card_70_final_quiz",
+      "card_slug": "card_70_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_assessment",
+      "level": 5,
+      "progress": {
+        "current": 70,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC OFFICER LEVEL (Multi-Statement):\n\nनिम्नलिखित कथनों पर विचार कीजिए:\n\n1. बिहार में जलोढ़ मिट्टी मुख्यतः उत्तरी भाग में पाई जाती है।\n2. आहर-पइन परंपरागत जल संचयन प्रणाली दक्षिणी बिहार में प्रचलित थी।\n3. बिहार के अलग होने के बाद झारखंड को सभी कोयला क्षेत्र मिल गए।\n4. बिहार में चूना पत्थर (Limestone) के भंडार नहीं हैं।\n\nउपरोक्त में से कितने कथन सही हैं?",
+        "options": [
+          { "id": "A", "text": "केवल एक" },
+          { "id": "B", "text": "केवल दो" },
+          { "id": "C", "text": "तीन" },
+          { "id": "D", "text": "सभी चार" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "कथन 1 सही: बिहार के उत्तरी भाग में गंगा और उसकी सहायक नदियों द्वारा लाई गई जलोढ़ मिट्टी (Khadar) पाई जाती है - यह अत्यधिक उपजाऊ है।\n\nकथन 2 सही: आहर-पइन (Ahar-Pyne) system दक्षिणी बिहार (गया, नवादा, औरंगाबाद) में लगभग 400 साल पुरानी परंपरागत जल संचयन प्रणाली थी।\n\nकथन 3 सही: 2000 में बिहार से झारखंड अलग हुआ तो सभी major coalfields (Dhanbad, Bokaro, Giridih आदि) झारखंड में चले गए। बिहार में पहले Aurangabad में coal था।\n\nकथन 4 गलत: बिहार में Limestone (चूना पत्थर) के अच्छे भंडार हैं - Kaimur, Rohtas, Munger जिलों में। इससे cement उद्योग चलता है।\n\n⭐ Answer: तीन कथन सही (C)। BPSC में Bihar-specific resources का यह multi-statement format बहुत आता है!"
+      },
+      "navigation": {
+        "next": "card_71_assertion_reason",
+        "button_text": "Assertion-Reason Challenge ➔"
+      }
+    },
+    {
+      "card_id": "card_71_assertion_reason",
+      "card_slug": "card_71_assertion_reason",
+      "type": "final_quiz",
+      "concept_id": "assertion_reason_quiz",
+      "level": 5,
+      "progress": {
+        "current": 71,
+        "total": 72
+      },
+      "quiz_payload": {
+        "question": "⭐ BPSC ASSERTION-REASON TYPE:\n\nअभिकथन (A): भारत में जलस्तर (Water Table) तेजी से गिर रहा है।\n\nकारण (R): भूजल निष्कर्षण (Groundwater Extraction) की दर पुनर्भरण (Recharge) की दर से बहुत अधिक है।\n\nसही विकल्प चुनिए:",
+        "options": [
+          { "id": "A", "text": "A और R दोनों सही हैं, और R, A की सही व्याख्या है।" },
+          { "id": "B", "text": "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।" },
+          { "id": "C", "text": "A सही है, लेकिन R गलत है।" },
+          { "id": "D", "text": "A गलत है, लेकिन R सही है।" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Assertion (A) सही है: भारत के कई राज्यों (Punjab, Haryana, Rajasthan, Gujarat, Tamil Nadu के कुछ हिस्से) में water table तेजी से गिर रहा है। CGWB (Central Ground Water Board) की reports इसे confirm करती हैं।\n\nReason (R) भी सही है: Groundwater extraction की दर (mainly agriculture में tube-wells/borewells द्वारा) recharge की दर से बहुत ज्यादा है। Rainfall से जितनी groundwater recharge हो रही है, उससे कई गुना ज्यादा हम निकाल रहे हैं।\n\nऔर R, A की सही व्याख्या भी है: Water table इसीलिए गिर रहा है क्योंकि हम ज्यादा extract कर रहे हैं और कम recharge हो रहा है।\n\n⭐ Answer: (A) - दोनों सही, और R सही explanation है। BPSC और UPSC Prelims में Assertion-Reason format बहुत common है - दोनों statements की सत्यता और उनके बीच logical connection दोनों check करें!"
+      },
+      "navigation": {
+        "next": "card_72_completion",
+        "button_text": "Chapter Complete! 🏆"
+      }
+    },
+    {
+      "card_id": "card_72_completion",
+      "card_slug": "card_72_completion",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 5,
+      "progress": {
+        "current": 72,
+        "total": 72
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERY ACHIEVED!",
+        "badge_emoji": "🎖️",
+        "completed_topic": "Resources in Indian Geography - COMPLETE",
+        "xp_earned": 100,
+        "milestone_progress": "100% Complete ✅",
+        "motivational_quote": "OUTSTANDING RAJU! 🎉\n\nTumne पूरा 'Resources in Indian Geography' chapter master कर लिया:\n✅ Classification (Origin, Exhaustibility, Ownership, Development)\n✅ Soil Types (6 types + Bihar distribution)\n✅ Water Resources (Rivers, Groundwater, Conservation)\n✅ Forest Resources (Types, Coverage, Chipko Movement)\n✅ Minerals & Energy (Ferrous/Non-Ferrous, Coal types, State-wise distribution)\n✅ Renewable Energy & Sustainable Development\n\nAb tum BPSC, BPSC TRE, SSC, Railway, UPSC के किसी भी question को tackle कर सकते हो! 💪\n\nKeep Learning, Keep Growing! 🚀"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Go to Dashboard 🏠"
+      }
+    }
+  ]
+}
+```
