@@ -80,18 +80,38 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       debugPrint("Error loading home_data.json: $e");
     }
 
-    try {
-      final String subjectStr = await rootBundle.loadString('assets/data/subject_mapping.json');
-      _subjectMapping = Map<String, dynamic>.from(jsonDecode(subjectStr));
-    } catch (e) {
-      debugPrint("Error loading subject_mapping.json: $e");
+    final prefs = await SharedPreferences.getInstance();
+
+    // 💾 Revision persistent storage check
+    String? cachedMapping = prefs.getString('cached_subject_mapping_json');
+    if (cachedMapping != null && cachedMapping.isNotEmpty) {
+      try {
+        _subjectMapping = Map<String, dynamic>.from(jsonDecode(cachedMapping));
+      } catch (_) {}
+    }
+    if (_subjectMapping.isEmpty) {
+      try {
+        final String subjectStr = await rootBundle.loadString('assets/data/subject_mapping.json');
+        _subjectMapping = Map<String, dynamic>.from(jsonDecode(subjectStr));
+      } catch (e) {
+        debugPrint("Error loading subject_mapping.json: $e");
+      }
     }
 
-    try {
-      final String sectionalStr = await rootBundle.loadString('assets/data/sectional_data.json');
-      _sectionalData = Map<String, dynamic>.from(jsonDecode(sectionalStr));
-    } catch (e) {
-      debugPrint("Error loading sectional_data.json: $e");
+    // 💾 Sectional persistent storage check (Permanent Disk Lock)
+    String? persistentSectional = prefs.getString('persistent_sectional_data_json');
+    if (persistentSectional != null && persistentSectional.isNotEmpty) {
+      try {
+        _sectionalData = Map<String, dynamic>.from(jsonDecode(persistentSectional));
+      } catch (_) {}
+    }
+    if (_sectionalData.isEmpty) {
+      try {
+        final String sectionalStr = await rootBundle.loadString('assets/data/sectional_data.json');
+        _sectionalData = Map<String, dynamic>.from(jsonDecode(sectionalStr));
+      } catch (e) {
+        debugPrint("Error loading sectional_data.json: $e");
+      }
     }
 
     if (mounted) {
@@ -100,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       });
     }
 
-    // 2️⃣ Live Cloud Sync (Overrides local asset seamlessly)
+    // 2️⃣ Live Cloud Sync (Background Fresh Update)
     _fetchSectionalDataLive();
     _fetchSubjectMappingLive();
   }
@@ -114,10 +134,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     List<String> mirrorUrls = clean.startsWith("http")
         ? [clean]
         : [
+            "https://raw.githubusercontent.com/zxcty54/quiz/main/$encodedPath?t=$ts",
             "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
             "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
             "https://cdn.statically.io/gh/zxcty54/quiz/main/$encodedPath",
-            "https://raw.githubusercontent.com/zxcty54/quiz/main/$encodedPath",
           ];
 
     // Race all CDN mirrors for blazing speed
@@ -148,23 +168,27 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return null;
   }
 
-  // 🎯 LIVE SECTIONAL SYNC (Guaranteed Fresh Data)
+  // 🎯 LIVE SECTIONAL SYNC + AUTO PERSISTENT SAVE
   Future<void> _fetchSectionalDataLive() async {
     final data = await _fetchRobustJson("sectional_data.json");
     if (data != null && data is Map && mounted) {
       setState(() {
         _sectionalData = Map<String, dynamic>.from(data);
       });
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('persistent_sectional_data_json', jsonEncode(data));
     }
   }
 
-  // 🎯 LIVE REVISION SYNC
+  // 🎯 LIVE REVISION SYNC + AUTO PERSISTENT SAVE
   Future<void> _fetchSubjectMappingLive() async {
     final data = await _fetchRobustJson("subject_mapping.json");
     if (data != null && data is Map && mounted) {
       setState(() {
         _subjectMapping = Map<String, dynamic>.from(data);
       });
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('cached_subject_mapping_json', jsonEncode(data));
     }
   }
 
@@ -233,7 +257,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             onLaunchPractice: _launchRevisionPractice,
           ),
 
-          // 🎯 Tab 2: Sectional Tab (Key added so it auto re-renders whenever new exams are added)
+          // 🎯 Tab 2: Sectional Tab (Persistent Sync Key)
           SectionalTab(
             key: ValueKey('sec_${_sectionalData.keys.join('_')}'),
             sectionalData: _sectionalData,
