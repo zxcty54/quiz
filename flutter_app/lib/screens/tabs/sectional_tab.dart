@@ -4,12 +4,14 @@ class SectionalTab extends StatefulWidget {
   final Map<String, dynamic> sectionalData;
   final bool isDarkMode;
   final Function(BuildContext, String, String) onLaunchCbtMock;
+  final Future<void> Function()? onRefresh; // 👈 Pull to refresh ke liye optional callback
 
   const SectionalTab({
     super.key,
     required this.sectionalData,
     required this.isDarkMode,
     required this.onLaunchCbtMock,
+    this.onRefresh,
   });
 
   @override
@@ -76,51 +78,64 @@ class _SectionalTabState extends State<SectionalTab> {
   Widget build(BuildContext context) {
     final List<String> examKeys = widget.sectionalData.keys.toList();
 
-    return SingleChildScrollView(
-      physics: const AlwaysScrollableScrollPhysics(),
+    Widget content = ListView(
+      physics: const AlwaysScrollableScrollPhysics(parent: BouncingScrollPhysics()),
       padding: const EdgeInsets.all(16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text('🎯 Target Exam Sectional Mocks', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-          const Text('अपनी परीक्षा चुनें और रियल TCS CBT पैटर्न पर प्रैक्टिस शुरू करें', style: TextStyle(color: Colors.grey, fontSize: 12)),
-          const SizedBox(height: 14),
+      children: [
+        const Text('🎯 Target Exam Sectional Mocks',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        const Text('अपनी परीक्षा चुनें और रियल TCS CBT पैटर्न पर प्रैक्टिस शुरू करें',
+            style: TextStyle(color: Colors.grey, fontSize: 12)),
+        const SizedBox(height: 14),
 
-          // 🚀 100% DYNAMIC GRID (Jitne Keys JSON mein utne Cards Auto Banenge)
-          if (examKeys.isEmpty)
-            const Card(
-              child: Padding(
-                padding: EdgeInsets.all(16),
-                child: Center(child: Text("Loading sectional exams...", style: TextStyle(color: Colors.grey, fontSize: 12))),
-              ),
-            )
-          else
-            GridView.builder(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 8,
-                mainAxisSpacing: 8,
-                childAspectRatio: 1.4,
-              ),
-              itemCount: examKeys.length,
-              itemBuilder: (context, index) {
-                final key = examKeys[index];
-                final meta = _getCardMeta(key);
-                final color = _examColors[key.toLowerCase()] ?? _fallbackColors[index % _fallbackColors.length];
-
-                return _examSelectorCard(meta['title']!, meta['badge']!, color, key);
-              },
+        // 🚀 100% DYNAMIC GRID (Jitne Keys JSON mein utne Cards Auto Banenge)
+        if (examKeys.isEmpty)
+          const Card(
+            child: Padding(
+              padding: EdgeInsets.all(16),
+              child: Center(
+                  child: Text("Loading sectional exams...",
+                      style: TextStyle(color: Colors.grey, fontSize: 12))),
             ),
+          )
+        else
+          GridView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 8,
+              mainAxisSpacing: 8,
+              childAspectRatio: 1.4,
+            ),
+            itemCount: examKeys.length,
+            itemBuilder: (context, index) {
+              final key = examKeys[index];
+              final meta = _getCardMeta(key);
+              final color = _examColors[key.toLowerCase()] ??
+                  _fallbackColors[index % _fallbackColors.length];
 
-          const SizedBox(height: 20),
+              return _examSelectorCard(meta['title']!, meta['badge']!, color, key);
+            },
+          ),
 
-          // 📋 DYNAMIC SETS PANEL (Aapka Original Logic Retained)
-          _buildDynamicSectionalSetsPanel(context),
-        ],
-      ),
+        const SizedBox(height: 20),
+
+        // 📋 DYNAMIC SETS PANEL
+        _buildDynamicSectionalSetsPanel(context),
+      ],
     );
+
+    // Agar onRefresh mila hai toh RefreshIndicator wrap hoga
+    if (widget.onRefresh != null) {
+      return RefreshIndicator(
+        color: const Color(0xFF2563EB),
+        onRefresh: widget.onRefresh!,
+        child: content,
+      );
+    }
+
+    return content;
   }
 
   Widget _buildDynamicSectionalSetsPanel(BuildContext context) {
@@ -130,7 +145,9 @@ class _SectionalTabState extends State<SectionalTab> {
       return const Card(
         child: Padding(
           padding: EdgeInsets.all(20),
-          child: Center(child: Text("⚠️ Sets loading... Please check connection.", style: TextStyle(fontSize: 12, color: Colors.grey))),
+          child: Center(
+              child: Text("⚠️ Sets loading... Please check connection.",
+                  style: TextStyle(fontSize: 12, color: Colors.grey))),
         ),
       );
     }
@@ -146,17 +163,23 @@ class _SectionalTabState extends State<SectionalTab> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title, style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
+              Text(title,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
               const SizedBox(height: 10),
               Wrap(
-                spacing: 8, runSpacing: 8,
+                spacing: 8,
+                runSpacing: 8,
                 children: List.generate(count, (i) {
                   final setNum = i + 1;
                   return ActionChip(
                     backgroundColor: const Color(0xFF9D174D).withOpacity(0.08),
                     side: const BorderSide(color: Color(0xFF9D174D)),
-                    label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}', style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
-                    onPressed: () => widget.onLaunchCbtMock(context, '$title Set $setNum', '$prefix$setNum.json'),
+                    label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}',
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
+                    onPressed: () => widget.onLaunchCbtMock(
+                        context, '$title Set $setNum', '$prefix$setNum.json'),
                   );
                 }),
               )
@@ -180,17 +203,22 @@ class _SectionalTabState extends State<SectionalTab> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(itemTitle, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                  Text(itemTitle,
+                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
                   const SizedBox(height: 10),
                   Wrap(
-                    spacing: 8, runSpacing: 8,
+                    spacing: 8,
+                    runSpacing: 8,
                     children: List.generate(totalSets, (i) {
                       final setNum = i + 1;
                       return ActionChip(
                         backgroundColor: const Color(0xFF2563EB).withOpacity(0.08),
                         side: const BorderSide(color: Color(0xFF2563EB)),
-                        label: Text('Set 0$setNum', style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
-                        onPressed: () => widget.onLaunchCbtMock(context, "$itemTitle Set $setNum", "$folder/set$setNum.json"),
+                        label: Text('Set 0$setNum',
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
+                        onPressed: () => widget.onLaunchCbtMock(
+                            context, "$itemTitle Set $setNum", "$folder/set$setNum.json"),
                       );
                     }),
                   ),
@@ -210,19 +238,29 @@ class _SectionalTabState extends State<SectionalTab> {
     return GestureDetector(
       onTap: () => setState(() => _selectedExamPanel = panelKey),
       child: Card(
-        color: isSelected ? color.withOpacity(0.12) : (widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white),
+        color: isSelected
+            ? color.withOpacity(0.12)
+            : (widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white),
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
-            side: BorderSide(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 2 : 1)),
+            side: BorderSide(
+                color: isSelected ? color : Colors.grey.shade300,
+                width: isSelected ? 2 : 1)),
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(badge, style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: color)),
+              Text(badge,
+                  style: TextStyle(
+                      fontSize: 9, fontWeight: FontWeight.bold, color: color)),
               const SizedBox(height: 2),
-              Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+              Text(title,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 14)),
             ],
           ),
         ),
