@@ -299,7 +299,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     } catch (_) {}
   }
 
-  // 🎯 UNIVERSAL CBT MOCK LAUNCHER WITH AUTO PATH RESOLVER
+  // 🎯 UNIVERSAL CBT MOCK LAUNCHER (ALL CASES RESOLVED)
   void _launchCbtMock(BuildContext context, String title, String path) async {
     showDialog(
       context: context,
@@ -307,29 +307,43 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       builder: (ctx) => const Center(child: CircularProgressIndicator()),
     );
 
-    // Auto Path Resolver: Tests all file name combinations (e.g., set_01.json, set1.json, set_1.json)
-    List<String> pathVariants = [path];
-    if (path.contains('set_')) {
-      final reg = RegExp(r'set_0?(\d+)\.json');
-      final match = reg.firstMatch(path);
+    // Build exhaustive list of candidate paths
+    Set<String> candidatePaths = {path};
+
+    // 1. Slash to Underscore conversions
+    if (path.contains('bssc_cgl/aptitude')) candidatePaths.add(path.replaceAll('bssc_cgl/aptitude', 'bssc_cgl_aptitude'));
+    if (path.contains('bssc_cgl/reasoning')) candidatePaths.add(path.replaceAll('bssc_cgl/reasoning', 'bssc_cgl_reasoning'));
+    if (path.contains('bssc_inter/gk')) candidatePaths.add(path.replaceAll('bssc_inter/gk', 'bssc_inter_aptitude'));
+    if (path.contains('bssc_inter/aptitude')) candidatePaths.add(path.replaceAll('bssc_inter/aptitude', 'bssc_inter_aptitude'));
+    if (path.contains('bssc_inter/reasoning')) candidatePaths.add(path.replaceAll('bssc_inter/reasoning', 'bssc_inter_reasoning'));
+    if (path.contains('ssc/general')) candidatePaths.add(path.replaceAll('ssc/general', 'aptitude'));
+
+    // 2. Number variants: set1.json vs set_1.json vs set_01.json
+    List<String> expandedPaths = [];
+    for (String p in candidatePaths) {
+      expandedPaths.add(p);
+      final reg = RegExp(r'set_?0?(\d+)\.json');
+      final match = reg.firstMatch(p);
       if (match != null) {
         final numStr = match.group(1)!;
         final intNum = int.tryParse(numStr) ?? 1;
         final padded = intNum.toString().padLeft(2, '0');
-        final base = path.substring(0, match.start);
-        pathVariants = [
-          '${base}set_$padded.json',
-          '${base}set_$intNum.json',
-          '${base}set$intNum.json',
-          '${base}set$padded.json',
-        ];
+        final base = p.substring(0, match.start);
+        expandedPaths.add('${base}set$intNum.json');
+        expandedPaths.add('${base}set_$padded.json');
+        expandedPaths.add('${base}set_$intNum.json');
+        expandedPaths.add('${base}set$padded.json');
       }
     }
 
     dynamic data;
-    for (String tryPath in pathVariants) {
+    String finalSubFolder = path;
+    for (String tryPath in expandedPaths.toSet()) {
       data = await _fetchRobustJson(tryPath);
-      if (data != null) break;
+      if (data != null) {
+        finalSubFolder = tryPath;
+        break;
+      }
     }
 
     if (context.mounted) Navigator.pop(context);
@@ -358,7 +372,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                 builder: (ctx) => SectionalCbtScreen(
                   testTitle: title,
                   questions: qList,
-                  subFolder: path,
+                  subFolder: finalSubFolder,
                 ),
               ),
             );
@@ -373,7 +387,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('⚠️ "$title" load nahi ho paya. File check karein: $path'),
+          content: Text('⚠️ "$title" load nahi ho paya. Path check karein: $path'),
           backgroundColor: Colors.red.shade800,
         ),
       );
