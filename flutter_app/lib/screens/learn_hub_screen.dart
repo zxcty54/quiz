@@ -1,4 +1,8 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 import 'learn_chat_screen.dart';
 
 class LearnHubScreen extends StatefulWidget {
@@ -9,270 +13,146 @@ class LearnHubScreen extends StatefulWidget {
 }
 
 class _LearnHubScreenState extends State<LearnHubScreen> {
-  final List<Map<String, dynamic>> _subjects = [
-    // 🧬 1. BIOLOGY (11 Chapters - Tissues Removed)
-    {
-      'title': 'Biology',
-      'icon': '🧬',
-      'color': const Color(0xFF059669),
-      'chapters': [
-        {
-          'id': 'bio_cell',
-          'title': 'Cell (Koshika)',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/cell.json',
-        },
-        {
-          'id': 'bio_digestive',
-          'title': 'Digestive System',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/digestive.json',
-        },
-        {
-          'id': 'bio_circulatory',
-          'title': 'Circulatory System',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/circulatory.json',
-        },
-        {
-          'id': 'bio_respiratory',
-          'title': 'Respiratory System',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/respiratory.json',
-        },
-        {
-          'id': 'bio_nervous',
-          'title': 'Nervous System',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/nervous.json',
-        },
-        {
-          'id': 'bio_excreatory',
-          'title': 'Excretory System',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/excreatory.json',
-        },
-        {
-          'id': 'bio_disease',
-          'title': 'Human Diseases & Health',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/disease.json',
-        },
-        {
-          'id': 'bio_classification',
-          'title': 'Classification of Organisms',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/classification.json',
-        },
-        {
-          'id': 'bio_inheritance',
-          'title': 'Genetics & Inheritance',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/inheritance.json',
-        },
-        {
-          'id': 'bio_ecosystem',
-          'title': 'Ecosystem & Environment',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/ecosystem.json',
-        },
-        {
-          'id': 'bio_biotech',
-          'title': 'Biotechnology',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/biotech.json',
-        },
-      ]
-    },
-
-    // ⚡ 2. PHYSICS (7 Chapters)
-    {
-      'title': 'Physics',
-      'icon': '⚡',
-      'color': const Color(0xFF2563EB),
-      'chapters': [
-        {
-          'id': 'phy_motion',
-          'title': 'Motion & Kinematics',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/motion.json',
-        },
-        {
-          'id': 'phy_force',
-          'title': 'Force & Laws of Motion',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/force.json',
-        },
-        {
-          'id': 'phy_gravity',
-          'title': 'Gravitation',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/gravity.json',
-        },
-        {
-          'id': 'phy_work',
-          'title': 'Work, Energy & Power',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/work.json',
-        },
-        {
-          'id': 'phy_electricity',
-          'title': 'Electricity & Current',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/electricity.json',
-        },
-        {
-          'id': 'phy_magnetism',
-          'title': 'Magnetism',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/magnetism.json',
-        },
-        {
-          'id': 'phy_lights',
-          'title': 'Light & Optics',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/lights.json',
-        },
-      ]
-    },
-
-    // 🧪 3. CHEMISTRY (11 Chapters)
-    {
-      'title': 'Chemistry',
-      'icon': '🧪',
-      'color': const Color(0xFF7C3AED),
-      'chapters': [
-        {
-          'id': 'chem_matter',
-          'title': 'Matter & Its States',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/matter.json',
-        },
-        {
-          'id': 'chem_atomic',
-          'title': 'Atomic Structure',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/atomicstructure.json',
-        },
-        {
-          'id': 'chem_acidbase',
-          'title': 'Acids, Bases & Salts',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/acidbasesalt.json',
-        },
-        {
-          'id': 'chem_metals',
-          'title': 'Metals & Metallurgy',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/metals.json',
-        },
-        {
-          'id': 'chem_nonmetals',
-          'title': 'Non-Metals & Compounds',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/nonmetal.json',
-        },
-        {
-          'id': 'chem_carbon',
-          'title': 'Carbon & Its Compounds',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/carbon.json',
-        },
-        {
-          'id': 'chem_polymer',
-          'title': 'Polymers',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/polymer.json',
-        },
-        {
-          'id': 'chem_biomolecules',
-          'title': 'Biomolecules',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/biomolecules.json',
-        },
-        {
-          'id': 'chem_electro',
-          'title': 'Electrochemistry',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/electrochemistry.json',
-        },
-        {
-          'id': 'chem_surface',
-          'title': 'Surface Chemistry',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/surfacechem.json',
-        },
-        {
-          'id': 'chem_life',
-          'title': 'Chemistry in Everyday Life',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/chemminlife.json',
-        },
-      ]
-    },
-
-    // 📜 4. POLITY
-    {
-      'title': 'Polity',
-      'icon': '📜',
-      'color': const Color(0xFFD97706),
-      'chapters': [
-        {
-          'id': 'pol_preamble',
-          'title': 'Preamble & Constitution',
-          'subtitle': 'Learn with Aman Sir & Raju',
-          'isAvailable': true,
-          'jsonUrl': 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/preamble.json',
-        },
-      ]
-    },
-  ];
-
+  List<Map<String, dynamic>> _subjects = [];
   int _selectedSubjectIndex = 0;
+  bool _isLoading = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadInitialAndPersistentData();
+  }
+
+  // 1️⃣ Pehle Disk/Asset se load karo (0ms UI), fir GitHub live sync
+  Future<void> _loadInitialAndPersistentData() async {
+    final prefs = await SharedPreferences.getInstance();
+    final String? savedJson = prefs.getString('persistent_learn_hub_data_json');
+
+    if (savedJson != null && savedJson.isNotEmpty) {
+      try {
+        final decoded = jsonDecode(savedJson);
+        if (decoded is List && mounted) {
+          setState(() {
+            _subjects = List<Map<String, dynamic>>.from(decoded);
+          });
+        }
+      } catch (_) {}
+    }
+
+    // Agar cache khali ho toh local asset padho
+    if (_subjects.isEmpty) {
+      try {
+        final String assetStr = await rootBundle.loadString('assets/data/learn_data.json');
+        final decodedAsset = jsonDecode(assetStr);
+        if (decodedAsset is List && mounted) {
+          setState(() {
+            _subjects = List<Map<String, dynamic>>.from(decodedAsset);
+          });
+        }
+      } catch (_) {}
+    }
+
+    _fetchLiveGitHubLearnData();
+  }
+
+  // 🚀 DIRECT REALTIME GITHUB SYNC
+  Future<void> _fetchLiveGitHubLearnData() async {
+    if (!mounted) return;
+    setState(() => _isLoading = true);
+
+    final int ts = DateTime.now().millisecondsSinceEpoch;
+    final List<String> urls = [
+      "https://raw.githubusercontent.com/zxcty54/quiz/main/learn_data.json?t=$ts",
+      "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/learn_data.json?t=$ts",
+      "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn_data.json?t=$ts",
+    ];
+
+    for (String url in urls) {
+      try {
+        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 3));
+        if (res.statusCode == 200) {
+          final dynamic parsed = jsonDecode(utf8.decode(res.bodyBytes));
+          List<Map<String, dynamic>> loadedList = [];
+          if (parsed is List) {
+            loadedList = List<Map<String, dynamic>>.from(parsed);
+          } else if (parsed is Map && parsed['subjects'] is List) {
+            loadedList = List<Map<String, dynamic>>.from(parsed['subjects']);
+          }
+
+          if (loadedList.isNotEmpty && mounted) {
+            setState(() {
+              _subjects = loadedList;
+              if (_selectedSubjectIndex >= _subjects.length) {
+                _selectedSubjectIndex = 0;
+              }
+              _isLoading = false;
+            });
+
+            // 💾 Phone ke permanent disk storage mein save
+            final prefs = await SharedPreferences.getInstance();
+            await prefs.setString('persistent_learn_hub_data_json', jsonEncode(loadedList));
+            return;
+          }
+        }
+      } catch (_) {
+        continue;
+      }
+    }
+    if (mounted) setState(() => _isLoading = false);
+  }
+
+  Color _parseColor(dynamic colorValue) {
+    if (colorValue is int) return Color(colorValue);
+    if (colorValue is String) {
+      try {
+        String hex = colorValue.replaceAll('#', '').replaceAll('0x', '');
+        if (hex.length == 6) hex = 'FF$hex';
+        return Color(int.parse(hex, radix: 16));
+      } catch (_) {}
+    }
+    return const Color(0xFF059669);
+  }
 
   @override
   Widget build(BuildContext context) {
+    if (_subjects.isEmpty && _isLoading) {
+      return const Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      );
+    }
+
+    if (_subjects.isEmpty) {
+      return const Scaffold(
+        body: Center(child: Text("No subjects available")),
+      );
+    }
+
     final activeSubject = _subjects[_selectedSubjectIndex];
-    final List chapters = activeSubject['chapters'];
+    final List chapters = activeSubject['chapters'] ?? [];
+    final Color subjectColor = _parseColor(activeSubject['color']);
     final bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('MockTester Learn 🎓', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
         elevation: 0,
+        actions: [
+          if (_isLoading)
+            const Padding(
+              padding: EdgeInsets.only(right: 16),
+              child: Center(
+                child: SizedBox(
+                  width: 16,
+                  height: 16,
+                  child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF059669)),
+                ),
+              ),
+            ),
+        ],
       ),
       body: Column(
         children: [
-          // 📌 COMPACT POSITIONING STRIP (MINIMALIST & PROFESSIONAL)
+          // 📌 POSITIONING STRIP
           Container(
             width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
@@ -330,7 +210,7 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
             ),
           ),
 
-          // Horizontal Subject Selector
+          // 🚀 HORIZONTAL SUBJECT SELECTOR
           Container(
             height: 60,
             color: Theme.of(context).cardColor,
@@ -341,6 +221,7 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
               itemBuilder: (context, index) {
                 final sub = _subjects[index];
                 final bool isSelected = index == _selectedSubjectIndex;
+                final Color color = _parseColor(sub['color']);
 
                 return GestureDetector(
                   onTap: () => setState(() => _selectedSubjectIndex = index),
@@ -348,22 +229,22 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
                     margin: const EdgeInsets.only(right: 8),
                     padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                     decoration: BoxDecoration(
-                      color: isSelected ? sub['color'] : sub['color'].withOpacity(0.08),
+                      color: isSelected ? color : color.withOpacity(0.08),
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(
-                        color: isSelected ? sub['color'] : Colors.transparent,
+                        color: isSelected ? color : Colors.transparent,
                       ),
                     ),
                     child: Row(
                       children: [
-                        Text(sub['icon'], style: const TextStyle(fontSize: 15)),
+                        Text(sub['icon'] ?? '📚', style: const TextStyle(fontSize: 15)),
                         const SizedBox(width: 6),
                         Text(
-                          sub['title'],
+                          sub['title'] ?? '',
                           style: TextStyle(
                             fontSize: 13,
                             fontWeight: FontWeight.bold,
-                            color: isSelected ? Colors.white : sub['color'],
+                            color: isSelected ? Colors.white : color,
                           ),
                         ),
                       ],
@@ -375,69 +256,81 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
           ),
           const Divider(height: 1),
 
-          // Chapter List Builder
+          // 📋 CHAPTER LIST WITH REFRESH INDICATOR
           Expanded(
-            child: ListView.builder(
-              padding: const EdgeInsets.all(16),
-              itemCount: chapters.length,
-              itemBuilder: (context, index) {
-                final chap = chapters[index];
-                final bool isAvailable = chap['isAvailable'] ?? false;
+            child: RefreshIndicator(
+              color: const Color(0xFF059669),
+              onRefresh: _fetchLiveGitHubLearnData,
+              child: chapters.isEmpty
+                  ? const Center(
+                      child: Text('No chapters available yet.', style: TextStyle(color: Colors.grey)),
+                    )
+                  : ListView.builder(
+                      physics: const AlwaysScrollableScrollPhysics(),
+                      padding: const EdgeInsets.all(16),
+                      itemCount: chapters.length,
+                      itemBuilder: (context, index) {
+                        final chap = chapters[index];
+                        final bool isAvailable = chap['isAvailable'] ?? false;
 
-                return Card(
-                  elevation: 1,
-                  margin: const EdgeInsets.only(bottom: 12),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  child: ListTile(
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-                    leading: CircleAvatar(
-                      backgroundColor: activeSubject['color'].withOpacity(0.12),
-                      child: Text(
-                        '${index + 1}',
-                        style: TextStyle(fontWeight: FontWeight.bold, color: activeSubject['color']),
-                      ),
-                    ),
-                    title: Text(
-                      chap['title'],
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                    ),
-                    subtitle: Row(
-                      children: [
-                        const Text('👨‍🏫 ', style: TextStyle(fontSize: 11)),
-                        Text(
-                          chap['subtitle'],
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: isAvailable ? const Color(0xFF059669) : Colors.grey,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                    trailing: isAvailable
-                        ? ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFF075E54),
-                              foregroundColor: Colors.white,
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                        return Card(
+                          elevation: 1,
+                          margin: const EdgeInsets.only(bottom: 12),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                          child: ListTile(
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                            leading: CircleAvatar(
+                              backgroundColor: subjectColor.withOpacity(0.12),
+                              child: Text(
+                                '${index + 1}',
+                                style: TextStyle(fontWeight: FontWeight.bold, color: subjectColor),
+                              ),
                             ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => LearnChatScreen(
-                                    jsonUrl: chap['jsonUrl'],
-                                    chapterTitle: chap['title'],
+                            title: Text(
+                              chap['title'] ?? '',
+                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                            ),
+                            subtitle: Row(
+                              children: [
+                                const Text('👨‍🏫 ', style: TextStyle(fontSize: 11)),
+                                Expanded(
+                                  child: Text(
+                                    chap['subtitle'] ?? 'Learn with Aman Sir & Raju',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: isAvailable ? const Color(0xFF059669) : Colors.grey,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
-                              );
-                            },
-                            child: const Text('Start ➔', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                          )
-                        : const Icon(Icons.lock_clock_rounded, color: Colors.grey, size: 20),
-                  ),
-                );
-              },
+                              ],
+                            ),
+                            trailing: isAvailable
+                                ? ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: const Color(0xFF075E54),
+                                      foregroundColor: Colors.white,
+                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                                    ),
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => LearnChatScreen(
+                                            jsonUrl: chap['jsonUrl'] ?? '',
+                                            chapterTitle: chap['title'] ?? '',
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                    child: const Text('Start ➔', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                                  )
+                                : const Icon(Icons.lock_clock_rounded, color: Colors.grey, size: 20),
+                          ),
+                        );
+                      },
+                    ),
             ),
           ),
         ],
