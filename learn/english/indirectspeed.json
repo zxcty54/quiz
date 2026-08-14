@@ -1,0 +1,1770 @@
+{
+  "topic_id": "english_grammar_indirect_speech",
+  "topic_title": "Direct & Indirect Speech (Narration) with SBI PO Level Error Detection",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "SBI PO", "BPSC TRE"],
+  "total_cards": 98,
+  "characters": {
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 98 },
+      "intro_payload": {
+        "title": "Narration: Direct & Indirect Speech",
+        "icon": "🗣️➡️💬",
+        "subtitle": "Master Sentence Transformation for BPSC, SSC, Railway, Bank PO & BPSC TRE Exams",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "SBI PO", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Convert Assertive, Interrogative, Imperative, Exclamatory & Optative sentences from Direct to Indirect Speech",
+          "Master Tense Backshift Rules & the Universal Truth exception",
+          "Learn complete Pronoun, Time-word & Place-word conversion tables",
+          "Handle Modal Verb changes (can-could, will-would, must-had to)",
+          "Master tricky reporting verbs: suggest, propose, insist, let's, exclaim, wish",
+          "Crack SBI PO / Bank PO level Error Detection questions on Narration"
+        ]
+      },
+      "navigation": { "next": "card_02_direct_indirect_intro", "button_text": "Start Learning ➔" }
+    },
+    {
+      "card_id": "card_02_direct_indirect_intro",
+      "card_slug": "card_02_direct_indirect_intro",
+      "type": "chat",
+      "concept_id": "basics_direct_indirect",
+      "level": 1,
+      "progress": { "current": 2, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho tumne dost se kaha - 'Main kal school nahi aaunga.' Ab tum teacher ko wahi baat bata rahe ho. Tum kya bologe?" },
+        { "speaker": "raju", "text": "Sir main bolunga... 'Usne kaha ki wo kal school nahi aayega.' Par sir, 'kal' to 'aayega' mein badal gaya!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakड़a! Jab hum kisi ke EXACT shabd, quotation marks ke andar bolte hain, use kehte hain 'Direct Speech'. Aur jab hum apne shabdon mein, bina quotation ke, wahi baat report karte hain - use kehte hain 'Indirect Speech' ya 'Reported Speech'." },
+        { "speaker": "raju", "text": "Toh sir jaise main mummy ka message papa ko apne words mein sunata hoon, wo Indirect Speech hua?" }
+      ],
+      "navigation": { "next": "card_03_reporting_verb_reported_speech", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_reporting_verb_reported_speech",
+      "card_slug": "card_03_reporting_verb_reported_speech",
+      "type": "chat",
+      "concept_id": "basics_direct_indirect",
+      "level": 1,
+      "progress": { "current": 3, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Exactly! Ab dhyan se suno - Indirect speech ke do parts hote hain. Pehla part 'Reporting Verb' - jaise 'said', 'told' - jo batata hai ki kisne bola. Doosra part 'Reported Speech' - jisme actual baat hoti hai." },
+        { "speaker": "raju", "text": "Sir 'said' aur 'told' dono same nahi hain kya?" },
+        { "speaker": "aman", "text": "Bahut achha doubt! Agar 'said' ke baad koi person mention nahi hai to wahi rehta hai, lekin agar person mention hai jaise 'said to Raju', to wo 'told Raju' ban jaata hai." },
+        { "speaker": "raju", "text": "Achha! Toh 'said to' hamesha 'told' mein badalta hai?" }
+      ],
+      "navigation": { "next": "card_04_inverted_commas_rule", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_inverted_commas_rule",
+      "card_slug": "card_04_inverted_commas_rule",
+      "type": "chat",
+      "concept_id": "basics_direct_indirect",
+      "level": 1,
+      "progress": { "current": 4, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan, aur ek golden rule yaad rakho - Direct Speech mein hum quotation marks (' ') use karte hain, lekin Indirect Speech mein NO quotation marks. Comma hat jaata hai aur 'that' add hota hai (statements mein)." },
+        { "speaker": "raju", "text": "Sir 'that' hamesha lagana zaroori hai kya?" },
+        { "speaker": "aman", "text": "Zaroori nahi, optional hota hai - 'He said that he was tired' ya 'He said he was tired' dono correct hain. Par exam paper mein 'that' wala option hi safe answer hota hai." },
+        { "speaker": "raju", "text": "Okay sir, samajh gaya - quotation hatao, comma hatao, 'that' lagao!" }
+      ],
+      "navigation": { "next": "card_05_quiz1_basics", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_quiz1_basics",
+      "card_slug": "card_05_quiz1_basics",
+      "type": "quiz",
+      "concept_id": "basics_direct_indirect",
+      "level": 1,
+      "progress": { "current": 5, "total": 98 },
+      "quiz_payload": {
+        "question": "Which is the correct definition of Reported (Indirect) Speech?",
+        "options": [
+          { "id": "A", "text": "The exact words spoken, enclosed in quotation marks" },
+          { "id": "B", "text": "Speech reported in someone else's own words, without quotation marks" },
+          { "id": "C", "text": "A question without any answer" },
+          { "id": "D", "text": "None of these" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Reported/Indirect speech conveys the meaning of what was said, in our own words, without repeating the exact words or using quotation marks."
+      },
+      "navigation": { "next": "card_06_quiz2_basics", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_06_quiz2_basics",
+      "card_slug": "card_06_quiz2_basics",
+      "type": "quiz",
+      "concept_id": "basics_direct_indirect",
+      "level": 1,
+      "progress": { "current": 6, "total": 98 },
+      "quiz_payload": {
+        "question": "Identify the Reporting Verb in: 'Raju told his teacher that he had finished the homework.'",
+        "options": [
+          { "id": "A", "text": "told" },
+          { "id": "B", "text": "that" },
+          { "id": "C", "text": "finished" },
+          { "id": "D", "text": "homework" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'told' is the Reporting Verb, telling us WHO spoke. 'that he had finished the homework' is the Reported Speech, the actual content."
+      },
+      "navigation": { "next": "card_07_quiz3_basics", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz3_basics",
+      "card_slug": "card_07_quiz3_basics",
+      "type": "quiz",
+      "concept_id": "basics_direct_indirect",
+      "level": 1,
+      "progress": { "current": 7, "total": 98 },
+      "quiz_payload": {
+        "question": "Convert: Raju said, 'I am happy.' → Raju said that he ____ happy.",
+        "options": [
+          { "id": "A", "text": "is" },
+          { "id": "B", "text": "was" },
+          { "id": "C", "text": "were" },
+          { "id": "D", "text": "has been" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Since the reporting verb 'said' is in past tense, the present tense 'am' shifts one step back to 'was'. Don't worry, we'll master this Tense Backshift rule in the next module!"
+      },
+      "navigation": { "next": "card_08_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_milestone1",
+      "card_slug": "card_08_milestone1",
+      "type": "milestone",
+      "concept_id": "basics_direct_indirect",
+      "level": 1,
+      "progress": { "current": 8, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🗣️",
+        "completed_topic": "Basics of Direct & Indirect Speech",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/13 Clear",
+        "motivational_quote": "Foundation strong ho gayi Raju! Ab asli grammar engine start karte hain!"
+      },
+      "navigation": { "next": "card_09_pronoun_rule_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_09_pronoun_rule_intro",
+      "card_slug": "card_09_pronoun_rule_intro",
+      "type": "guess",
+      "concept_id": "pronoun_rule",
+      "level": 1,
+      "progress": { "current": 9, "total": 98 },
+      "guess_payload": {
+        "question": "Raju said, 'I am tired.' Sita is now reporting this sentence to someone else. Will the word 'I' remain 'I' in Indirect Speech?",
+        "options": [
+          { "id": "A", "text": "Yes, 'I' remains same" },
+          { "id": "B", "text": "No, it changes to 'he' (subject of reporting verb)" },
+          { "id": "C", "text": "No, it changes to 'you'" },
+          { "id": "D", "text": "It depends on the listener's mood" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "1st person pronouns change according to the SUBJECT of the reporting verb. Since 'Raju' (he) is the one speaking, 'I' becomes 'he'. This is the Person Rule of Pronoun Change - let's learn it fully!"
+      },
+      "navigation": { "next": "card_10_person_rule_123", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_10_person_rule_123",
+      "card_slug": "card_10_person_rule_123",
+      "type": "chat",
+      "concept_id": "pronoun_rule",
+      "level": 1,
+      "progress": { "current": 10, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi guess tha! Yaad rakho ye pura rule: 1st person pronoun (I, we, my, our) badal ke REPORTING VERB ke SUBJECT jaisa ho jaata hai. 2nd person pronoun (you, your) badal ke REPORTING VERB ke OBJECT jaisa ho jaata hai. 3rd person pronoun (he, she, they) mein koi change NAHI hota." },
+        { "speaker": "raju", "text": "Sir ye thoda confuse kar raha hai... ek clear example dijiye na!" },
+        { "speaker": "aman", "text": "Dekho: Raju said, 'I am tired.' Yahan subject hai Raju, so 'I' badal ke 'he' ban jaayega → Raju said that he was tired." },
+        { "speaker": "raju", "text": "Achha! Toh 1st person hamesha subject Raju jaisa hi ban jaayega, chahe wo 'main' ho ya 'hum'?" }
+      ],
+      "navigation": { "next": "card_11_pronoun_examples", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_pronoun_examples",
+      "card_slug": "card_11_pronoun_examples",
+      "type": "chat",
+      "concept_id": "pronoun_rule",
+      "level": 1,
+      "progress": { "current": 11, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab 2nd person dekho: Raju said to Sita, 'You are clever.' Yahan reporting verb ka object hai Sita, so 'you' badlega Sita ke roop mein → Raju told Sita that she was clever." },
+        { "speaker": "raju", "text": "Ohh! Toh 'you' hamesha wahi person banega jisko baat boli gayi thi, matlab object wala?" },
+        { "speaker": "aman", "text": "Exactly! Ye favorite trap hai exams ka - log 'you' ko galti se 'I' bana dete hain. ⭐ BPSC TRE Favorite: is rule pe direct fill-in-blank aata hai!" },
+        { "speaker": "raju", "text": "Sir samajh gaya - 1st person = subject, 2nd person = object, 3rd person = no change!" }
+      ],
+      "navigation": { "next": "card_12_quiz1_pronoun", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_quiz1_pronoun",
+      "card_slug": "card_12_quiz1_pronoun",
+      "type": "quiz",
+      "concept_id": "pronoun_rule",
+      "level": 1,
+      "progress": { "current": 12, "total": 98 },
+      "quiz_payload": {
+        "question": "Raju said to me, 'I will help you.' → Indirect: Raju told me that ____ would help ____.",
+        "options": [
+          { "id": "A", "text": "he / me" },
+          { "id": "B", "text": "he / I" },
+          { "id": "C", "text": "I / him" },
+          { "id": "D", "text": "they / me" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'I' (1st person, subject = Raju) → 'he'. 'you' (2nd person, object = speaker/me) → 'me'. Final: Raju told me that he would help me."
+      },
+      "navigation": { "next": "card_13_quiz2_pronoun", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_13_quiz2_pronoun",
+      "card_slug": "card_13_quiz2_pronoun",
+      "type": "quiz",
+      "concept_id": "pronoun_rule",
+      "level": 1,
+      "progress": { "current": 13, "total": 98 },
+      "quiz_payload": {
+        "question": "He said, 'I have lost my pen.' → He said that ____ had lost ____ pen.",
+        "options": [
+          { "id": "A", "text": "he / his" },
+          { "id": "B", "text": "I / my" },
+          { "id": "C", "text": "they / their" },
+          { "id": "D", "text": "he / my" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Both 'I' and 'my' are 1st person pronouns, so both change to match the subject 'he' - giving 'he' and 'his'."
+      },
+      "navigation": { "next": "card_14_quiz3_pronoun", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_14_quiz3_pronoun",
+      "card_slug": "card_14_quiz3_pronoun",
+      "type": "quiz",
+      "concept_id": "pronoun_rule",
+      "level": 1,
+      "progress": { "current": 14, "total": 98 },
+      "quiz_payload": {
+        "question": "Statement 1: 2nd person pronoun changes according to the OBJECT of the reporting verb. Statement 2: 3rd person pronoun never changes in indirect speech. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both Statement 1 and 2" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Both rules are correct as per the standard Pronoun Change Rule of Narration."
+      },
+      "navigation": { "next": "card_15_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_milestone2",
+      "card_slug": "card_15_milestone2",
+      "type": "milestone",
+      "concept_id": "pronoun_rule",
+      "level": 1,
+      "progress": { "current": 15, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "👤",
+        "completed_topic": "Pronoun Change Rules",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/13 Clear",
+        "motivational_quote": "Pronoun master ban gaye Raju! Ab Tense ka sabse bada rule seekhte hain!"
+      },
+      "navigation": { "next": "card_16_tense_backshift_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_16_tense_backshift_intro",
+      "card_slug": "card_16_tense_backshift_intro",
+      "type": "chat",
+      "concept_id": "tense_backshift",
+      "level": 2,
+      "progress": { "current": 16, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, jab tum kal ki baat aaj bata rahe ho, kya wahi tense use hoga jo bolne wale ne kal use kiya tha?" },
+        { "speaker": "raju", "text": "Sir wo to time hi badal gaya na, toh tense bhi badal jaayega shayad?" },
+        { "speaker": "aman", "text": "Bilkul sahi socha! Jab reporting verb PAST TENSE mein hoti hai (said, told), to reported speech ka tense bhi ek stair peeche chala jaata hai. Isko kehte hain 'Backshift of Tense'." },
+        { "speaker": "raju", "text": "Sir 'ek stair peeche' matlab kya? Table dikhaiye na!" }
+      ],
+      "navigation": { "next": "card_17_tense_table_present", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_17_tense_table_present",
+      "card_slug": "card_17_tense_table_present",
+      "type": "chat",
+      "concept_id": "tense_backshift",
+      "level": 2,
+      "progress": { "current": 17, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Table yaad karo: Present Simple → Past Simple (is/am/are → was/were). Present Continuous → Past Continuous (is doing → was doing). Present Perfect → Past Perfect (has done → had done)." },
+        { "speaker": "raju", "text": "Sir itne saare changes! Confuse ho jaunga exam mein!" },
+        { "speaker": "aman", "text": "Ek trick yaad rakho - bas ek stair peeche jao: Present family → Past family, Past family → Past Perfect family. Future 'will/shall' → 'would/should'." },
+        { "speaker": "raju", "text": "Achha, matlab har tense apni immediate peechhe wali tense mein chala jaata hai!" }
+      ],
+      "navigation": { "next": "card_18_tense_table_past_future", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_18_tense_table_past_future",
+      "card_slug": "card_18_tense_table_past_future",
+      "type": "chat",
+      "concept_id": "tense_backshift",
+      "level": 2,
+      "progress": { "current": 18, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Continue karte hain: Past Simple → Past Perfect (went → had gone). Past Continuous → Past Perfect Continuous (was going → had been going). Aur Past Perfect → NO CHANGE, kyunki wo already sabse peeche wali tense hai." },
+        { "speaker": "raju", "text": "Sir Past Perfect mein to already 'had' laga hai, wo aage kaise jaayega?" },
+        { "speaker": "aman", "text": "Exactly sahi pakड़a - Past Perfect ek dead-end hai, usme koi further backshift nahi hota. Ye exam ka bahut common trap hai!" },
+        { "speaker": "raju", "text": "Yaad rakh lunga sir - Past Perfect ka 'full stop' hi hai!" }
+      ],
+      "navigation": { "next": "card_19_tense_exceptions_universal_truth", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_tense_exceptions_universal_truth",
+      "card_slug": "card_19_tense_exceptions_universal_truth",
+      "type": "chat",
+      "concept_id": "tense_backshift",
+      "level": 2,
+      "progress": { "current": 19, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab sabse important EXCEPTION suno - agar reported speech mein ek UNIVERSAL TRUTH ya HABITUAL FACT ho, jaise 'Sun rises in the East', to tense CHANGE NAHI hota, chahe reporting verb past mein ho!" },
+        { "speaker": "raju", "text": "Matlab sir agar teacher ne kaha 'Sun rises in the east' to indirect mein bhi 'rises' hi rahega, 'rose' nahi banega?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Example: The teacher said that the sun rises in the east. Yahi rule historical facts pe bhi lagta hai - jaise 'Mahatma Gandhi was born in 1869' - already fixed past fact hai, waise hi rahega." },
+        { "speaker": "raju", "text": "Sir ye to exam mein sabse zyada confuse karega, sab log 'that' ke saath tense badal dete honge!" }
+      ],
+      "navigation": { "next": "card_20_quiz1_tense", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_quiz1_tense",
+      "card_slug": "card_20_quiz1_tense",
+      "type": "quiz",
+      "concept_id": "tense_backshift",
+      "level": 2,
+      "progress": { "current": 20, "total": 98 },
+      "quiz_payload": {
+        "question": "He said, 'I am writing a letter.' → Indirect:",
+        "options": [
+          { "id": "A", "text": "He said that he is writing a letter" },
+          { "id": "B", "text": "He said that he was writing a letter" },
+          { "id": "C", "text": "He said that he had written a letter" },
+          { "id": "D", "text": "He said that he had been writing a letter" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Present Continuous ('am writing') shifts one step back to Past Continuous ('was writing')."
+      },
+      "navigation": { "next": "card_21_quiz2_tense", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_21_quiz2_tense",
+      "card_slug": "card_21_quiz2_tense",
+      "type": "quiz",
+      "concept_id": "tense_backshift",
+      "level": 2,
+      "progress": { "current": 21, "total": 98 },
+      "quiz_payload": {
+        "question": "The teacher said, 'The Earth revolves around the Sun.' → Indirect:",
+        "options": [
+          { "id": "A", "text": "The teacher said that the Earth revolved around the Sun" },
+          { "id": "B", "text": "The teacher said that the Earth revolves around the Sun" },
+          { "id": "C", "text": "The teacher said that the Earth had revolved around the Sun" },
+          { "id": "D", "text": "The teacher said that the Earth will revolve around the Sun" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Universal truths never undergo tense backshift, regardless of the reporting verb's tense."
+      },
+      "navigation": { "next": "card_22_quiz3_tense", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_22_quiz3_tense",
+      "card_slug": "card_22_quiz3_tense",
+      "type": "quiz",
+      "concept_id": "tense_backshift",
+      "level": 2,
+      "progress": { "current": 22, "total": 98 },
+      "quiz_payload": {
+        "question": "Statement 1: Past Perfect tense does not change further in indirect speech. Statement 2: Universal truths always take tense change according to the reporting verb. Which is correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 2 is FALSE - universal truths never change tense. This exact trap is a BPSC favorite multi-statement question."
+      },
+      "navigation": { "next": "card_23_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_milestone3",
+      "card_slug": "card_23_milestone3",
+      "type": "milestone",
+      "concept_id": "tense_backshift",
+      "level": 2,
+      "progress": { "current": 23, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⏰",
+        "completed_topic": "Tense Backshift Rules & Exceptions",
+        "xp_earned": 55,
+        "milestone_progress": "Module 3/13 Clear",
+        "motivational_quote": "Tense ka boss ban gaye Raju! Ab Time aur Place words ki baari!"
+      },
+      "navigation": { "next": "card_24_time_place_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_24_time_place_intro",
+      "card_slug": "card_24_time_place_intro",
+      "type": "guess",
+      "concept_id": "time_place_change",
+      "level": 2,
+      "progress": { "current": 24, "total": 98 },
+      "guess_payload": {
+        "question": "Rani said, 'I will call you tomorrow.' If this is reported the NEXT day, will the word 'tomorrow' remain 'tomorrow' in indirect speech?",
+        "options": [
+          { "id": "A", "text": "Yes, it stays same" },
+          { "id": "B", "text": "No, it becomes 'the next day'" },
+          { "id": "C", "text": "No, it becomes 'yesterday'" },
+          { "id": "D", "text": "No, it becomes 'today'" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "When the reporting verb is in the past tense, time/place words referring to the speaker's 'present' shift to distance-words. 'tomorrow' → 'the next day'."
+      },
+      "navigation": { "next": "card_25_time_word_table", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_25_time_word_table",
+      "card_slug": "card_25_time_word_table",
+      "type": "chat",
+      "concept_id": "time_place_change",
+      "level": 2,
+      "progress": { "current": 25, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi guess tha! Ab poora table yaad karo: now→then, today→that day, tomorrow→the next day/the following day, yesterday→the previous day/the day before, ago→before, last night→the previous night, next week→the following week." },
+        { "speaker": "raju", "text": "Sir itna sab yaad rakhna padega? Koi shortcut?" },
+        { "speaker": "aman", "text": "Shortcut hai - jitna bhi 'is/present' se related word hai, use 'that/distance' wale word se badal do. Practice se automatic ho jaata hai!" },
+        { "speaker": "raju", "text": "Okay sir, ab place words bhi bata dijiye!" }
+      ],
+      "navigation": { "next": "card_26_place_word_table", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_26_place_word_table",
+      "card_slug": "card_26_place_word_table",
+      "type": "chat",
+      "concept_id": "time_place_change",
+      "level": 2,
+      "progress": { "current": 26, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Place words bhi badalte hain: here→there, this→that, these→those, come→go. Example: He said, 'I will come here tomorrow.' → He said that he would go there the next day." },
+        { "speaker": "raju", "text": "Sir 'come' 'go' mein kyun badalta hai? Wo to person hi hai!" },
+        { "speaker": "aman", "text": "Kyunki jab hum kisi third person ko event report karte hain, hum us jagah se door hote hain (perspective badal jaata hai), isliye direction bhi badal jaata hai. Ye pure grammar logic hai." },
+        { "speaker": "raju", "text": "Achha! Toh 'this→that', 'here→there' - sab distance ke rule pe chal raha hai!" }
+      ],
+      "navigation": { "next": "card_27_quiz1_timeplace", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_27_quiz1_timeplace",
+      "card_slug": "card_27_quiz1_timeplace",
+      "type": "quiz",
+      "concept_id": "time_place_change",
+      "level": 2,
+      "progress": { "current": 27, "total": 98 },
+      "quiz_payload": {
+        "question": "He said, 'I saw her yesterday.' → Indirect:",
+        "options": [
+          { "id": "A", "text": "He said that he had seen her yesterday" },
+          { "id": "B", "text": "He said that he had seen her the previous day" },
+          { "id": "C", "text": "He said that he saw her the day before" },
+          { "id": "D", "text": "He said that he has seen her the previous day" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Past Simple 'saw' → Past Perfect 'had seen', and 'yesterday' → 'the previous day'."
+      },
+      "navigation": { "next": "card_28_quiz2_timeplace", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_28_quiz2_timeplace",
+      "card_slug": "card_28_quiz2_timeplace",
+      "type": "quiz",
+      "concept_id": "time_place_change",
+      "level": 2,
+      "progress": { "current": 28, "total": 98 },
+      "quiz_payload": {
+        "question": "She said, 'I will meet you here tomorrow.' → Indirect:",
+        "options": [
+          { "id": "A", "text": "She said that she would meet me there the next day" },
+          { "id": "B", "text": "She said that she would meet me here tomorrow" },
+          { "id": "C", "text": "She said that she will meet me there the following day" },
+          { "id": "D", "text": "She said that she would meet me here the following day" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "will→would, you→me, here→there, tomorrow→the next day - all four rules applied together."
+      },
+      "navigation": { "next": "card_29_quiz3_timeplace", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_29_quiz3_timeplace",
+      "card_slug": "card_29_quiz3_timeplace",
+      "type": "quiz",
+      "concept_id": "time_place_change",
+      "level": 2,
+      "progress": { "current": 29, "total": 98 },
+      "quiz_payload": {
+        "question": "Which time-word change is INCORRECT?",
+        "options": [
+          { "id": "A", "text": "tonight → that night" },
+          { "id": "B", "text": "next year → the following year" },
+          { "id": "C", "text": "this → that" },
+          { "id": "D", "text": "ago → later" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "'ago' changes to 'before', NOT 'later'. This is a common SSC/Railway trap in fill-in-the-blank questions."
+      },
+      "navigation": { "next": "card_30_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_30_milestone4",
+      "card_slug": "card_30_milestone4",
+      "type": "milestone",
+      "concept_id": "time_place_change",
+      "level": 2,
+      "progress": { "current": 30, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📍",
+        "completed_topic": "Time & Place Word Changes",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/13 Clear",
+        "motivational_quote": "Time-Place table pakka ho gaya! Ab Modals ka mahayudh shuru karte hain!"
+      },
+      "navigation": { "next": "card_31_modal_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_31_modal_intro",
+      "card_slug": "card_31_modal_intro",
+      "type": "chat",
+      "concept_id": "modal_change",
+      "level": 2,
+      "progress": { "current": 31, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, modals jaise 'can', 'may', 'will', 'must' - ye bhi kaafi change hote hain indirect speech mein. Chalo dekhte hain." },
+        { "speaker": "raju", "text": "Sir modal matlab? Wo 'can', 'will' jaise words na?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye helping verbs hain jo possibility, permission, ability dikhate hain." },
+        { "speaker": "raju", "text": "Achha sir, inka bhi tense jaisa hi table hoga kya?" }
+      ],
+      "navigation": { "next": "card_32_modal_table1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_32_modal_table1",
+      "card_slug": "card_32_modal_table1",
+      "type": "chat",
+      "concept_id": "modal_change",
+      "level": 2,
+      "progress": { "current": 32, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Yaad karo: can→could, may→might, will→would, shall→should, must→had to (obligation ke case mein). Ye sabse zyada poochha jaane wala table hai!" },
+        { "speaker": "raju", "text": "Sir 'could', 'would', 'should', 'might' already past wale hain, unka kya hoga?" },
+        { "speaker": "aman", "text": "Bahut achha sawal! Agar sentence mein pehle se hi 'could/would/should/might/ought to' use ho, to NO FURTHER CHANGE hota - wo already sabse peeche wale form hain." },
+        { "speaker": "raju", "text": "Sir yaani ye modals bhi Past Perfect jaisa 'dead-end' hain?" }
+      ],
+      "navigation": { "next": "card_33_modal_exceptions", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_33_modal_exceptions",
+      "card_slug": "card_33_modal_exceptions",
+      "type": "chat",
+      "concept_id": "modal_change",
+      "level": 2,
+      "progress": { "current": 33, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi comparison! Ab 'must' ka special rule suno: agar 'must' abhi bhi valid obligation dikhata hai, to 'must' hi rehta hai. Agar past necessity hai jo khatam ho gayi, to 'had to' banta hai. Ye BPSC ka favorite confusion point hai!" },
+        { "speaker": "raju", "text": "Sir matlab hamesha 'had to' nahi banega?" },
+        { "speaker": "aman", "text": "Bilkul sahi pakड़a! Example: He said, 'I must go now' → He said that he had to go then (simple past action report) - exam mein zyadatar 'had to' hi expected answer hota hai, jab tak sentence 'still true' na bataye." },
+        { "speaker": "raju", "text": "Achha, toh default answer 'had to' rakhna safe hai!" }
+      ],
+      "navigation": { "next": "card_34_quiz1_modal", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_34_quiz1_modal",
+      "card_slug": "card_34_quiz1_modal",
+      "type": "quiz",
+      "concept_id": "modal_change",
+      "level": 2,
+      "progress": { "current": 34, "total": 98 },
+      "quiz_payload": {
+        "question": "He said, 'I can swim.' → Indirect:",
+        "options": [
+          { "id": "A", "text": "He said that he can swim" },
+          { "id": "B", "text": "He said that he could swim" },
+          { "id": "C", "text": "He said that he is able to swim" },
+          { "id": "D", "text": "He said that he can be able to swim" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'can' shifts to 'could' when the reporting verb is in the past tense."
+      },
+      "navigation": { "next": "card_35_quiz2_modal", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_35_quiz2_modal",
+      "card_slug": "card_35_quiz2_modal",
+      "type": "quiz",
+      "concept_id": "modal_change",
+      "level": 2,
+      "progress": { "current": 35, "total": 98 },
+      "quiz_payload": {
+        "question": "She said, 'I would help you if I could.' → Indirect:",
+        "options": [
+          { "id": "A", "text": "She said that she would help me if she could" },
+          { "id": "B", "text": "She said that she would have helped me if she had could" },
+          { "id": "C", "text": "She said that she will help me if she can" },
+          { "id": "D", "text": "She said that she would help him if he can" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'would' and 'could' are already past-form modals, so they remain UNCHANGED. Only pronoun changes (I→she, you→me)."
+      },
+      "navigation": { "next": "card_36_quiz3_modal", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_36_quiz3_modal",
+      "card_slug": "card_36_quiz3_modal",
+      "type": "quiz",
+      "concept_id": "modal_change",
+      "level": 2,
+      "progress": { "current": 36, "total": 98 },
+      "quiz_payload": {
+        "question": "Which sentence correctly shows 'must' changing for a past compulsion that's now over?",
+        "options": [
+          { "id": "A", "text": "He said that he must complete the work" },
+          { "id": "B", "text": "He said that he had to complete the work" },
+          { "id": "C", "text": "He said that he must have completed the work" },
+          { "id": "D", "text": "He said that he should complete the work" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "For simple past reporting of an obligation, 'must' → 'had to' is the standard exam answer."
+      },
+      "navigation": { "next": "card_37_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_37_milestone5",
+      "card_slug": "card_37_milestone5",
+      "type": "milestone",
+      "concept_id": "modal_change",
+      "level": 2,
+      "progress": { "current": 37, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔧",
+        "completed_topic": "Modal Verb Changes",
+        "xp_earned": 55,
+        "milestone_progress": "Module 5/13 Clear",
+        "motivational_quote": "Modals bhi fatafat solve kar rahe ho! Ab sab kuch mila ke Assertive sentence banate hain!"
+      },
+      "navigation": { "next": "card_38_assertive_rule", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_38_assertive_rule",
+      "card_slug": "card_38_assertive_rule",
+      "type": "chat",
+      "concept_id": "assertive_narration",
+      "level": 3,
+      "progress": { "current": 38, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab tak jo bhi rules seekhe - tense, pronoun, time/place, modal - sab ek saath istemal hote hain ASSERTIVE sentences (simple statements) mein. Conjunction 'that' use hota hai." },
+        { "speaker": "raju", "text": "Sir Assertive matlab simple statement wale sentences?" },
+        { "speaker": "aman", "text": "Haan bilkul - jaise 'I am happy', 'He plays cricket' - ye assertive/statement sentences hain." },
+        { "speaker": "raju", "text": "Sir ab poora example dikhaiye jisme sab rules mix hon!" }
+      ],
+      "navigation": { "next": "card_39_assertive_examples", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_39_assertive_examples",
+      "card_slug": "card_39_assertive_examples",
+      "type": "chat",
+      "concept_id": "assertive_narration",
+      "level": 3,
+      "progress": { "current": 39, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Poora example dekho: Rina said, 'I am going to Patna tomorrow.' Step by step: I→she (subject Rina), am going→was going (tense), tomorrow→the next day (time). Final: Rina said that she was going to Patna the next day." },
+        { "speaker": "raju", "text": "Ohh sir ab sab pieces jud rahe hain! Puzzle jaisa hai ye to!" },
+        { "speaker": "aman", "text": "Bilkul sahi bola - Narration hai hi ek puzzle jisme har piece (pronoun+tense+time/place+modal) apni jagah fit hota hai!" },
+        { "speaker": "raju", "text": "Sir agar sentence negative ho jaise 'I do not like tea' to kya extra rule hai?" }
+      ],
+      "navigation": { "next": "card_40_assertive_that_omission", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_40_assertive_that_omission",
+      "card_slug": "card_40_assertive_that_omission",
+      "type": "chat",
+      "concept_id": "assertive_narration",
+      "level": 3,
+      "progress": { "current": 40, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Nahi, negative assertive mein bhi wahi rule chalta hai - bas 'do not/does not' → 'did not' ban jaata hai tense ke hisaab se. She said, 'I do not like tea.' → She said that she did not like tea." },
+        { "speaker": "raju", "text": "Achha sir, matlab negative sentence special nahi hai, wahi tense rule follow karega?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur ek chhoti baat - 'that' likhna optional hai, lekin exam options mein 'that' wala option hamesha safe rehta hai." },
+        { "speaker": "raju", "text": "Okay sir, ab main assertive sentence bina galti confidently bana sakta hoon!" }
+      ],
+      "navigation": { "next": "card_41_quiz1_assertive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_41_quiz1_assertive",
+      "card_slug": "card_41_quiz1_assertive",
+      "type": "quiz",
+      "concept_id": "assertive_narration",
+      "level": 3,
+      "progress": { "current": 41, "total": 98 },
+      "quiz_payload": {
+        "question": "Convert: He said, 'I have finished my homework.'",
+        "options": [
+          { "id": "A", "text": "He said that he has finished his homework" },
+          { "id": "B", "text": "He said that he had finished his homework" },
+          { "id": "C", "text": "He said that he finished his homework" },
+          { "id": "D", "text": "He said that he had finished my homework" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Present Perfect ('have finished') → Past Perfect ('had finished'); 'my'→'his' as it's a 1st person possessive pronoun."
+      },
+      "navigation": { "next": "card_42_quiz2_assertive", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_42_quiz2_assertive",
+      "card_slug": "card_42_quiz2_assertive",
+      "type": "quiz",
+      "concept_id": "assertive_narration",
+      "level": 3,
+      "progress": { "current": 42, "total": 98 },
+      "quiz_payload": {
+        "question": "Convert: She said, 'I do not trust him.'",
+        "options": [
+          { "id": "A", "text": "She said that she does not trust him" },
+          { "id": "B", "text": "She said that she did not trust him" },
+          { "id": "C", "text": "She said that she had not trusted him" },
+          { "id": "D", "text": "She said that she is not trusting him" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'do not' (present simple negative) → 'did not' (past simple negative)."
+      },
+      "navigation": { "next": "card_43_quiz3_assertive", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_43_quiz3_assertive",
+      "card_slug": "card_43_quiz3_assertive",
+      "type": "quiz",
+      "concept_id": "assertive_narration",
+      "level": 3,
+      "progress": { "current": 43, "total": 98 },
+      "quiz_payload": {
+        "question": "Statement 1: In assertive sentences, using 'that' is compulsory. Statement 2: Negative assertive sentences follow the same tense backshift rule as positive ones. Choose the correct option:",
+        "options": [
+          { "id": "A", "text": "Only Statement 1 is true" },
+          { "id": "B", "text": "Only Statement 2 is true" },
+          { "id": "C", "text": "Both statements are true" },
+          { "id": "D", "text": "Both statements are false" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'that' is optional (Statement 1 is false), but negative sentences DO follow the same backshift rule (Statement 2 is true)."
+      },
+      "navigation": { "next": "card_44_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_44_milestone6",
+      "card_slug": "card_44_milestone6",
+      "type": "milestone",
+      "concept_id": "assertive_narration",
+      "level": 3,
+      "progress": { "current": 44, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📝",
+        "completed_topic": "Assertive Sentence Narration",
+        "xp_earned": 55,
+        "milestone_progress": "Module 6/13 Clear",
+        "motivational_quote": "Statements ka expert ban gaye! Ab Questions ka sabse bada trap dekhte hain!"
+      },
+      "navigation": { "next": "card_45_interrogative_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_45_interrogative_intro",
+      "card_slug": "card_45_interrogative_intro",
+      "type": "guess",
+      "concept_id": "interrogative_narration",
+      "level": 3,
+      "progress": { "current": 45, "total": 98 },
+      "guess_payload": {
+        "question": "Sonu asked Rani, 'Are you coming?' How will this question be correctly reported in indirect speech?",
+        "options": [
+          { "id": "A", "text": "Sonu asked Rani that she was coming" },
+          { "id": "B", "text": "Sonu asked Rani if she was coming" },
+          { "id": "C", "text": "Sonu asked Rani are you coming" },
+          { "id": "D", "text": "Sonu told Rani if she was coming" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Yes/No questions use 'if' or 'whether' instead of 'that', and the reporting verb 'said' becomes 'asked'. Let's master the full question rules!"
+      },
+      "navigation": { "next": "card_46_yesno_if_whether", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_46_yesno_if_whether",
+      "card_slug": "card_46_yesno_if_whether",
+      "type": "chat",
+      "concept_id": "interrogative_narration",
+      "level": 3,
+      "progress": { "current": 46, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi guess tha! Yes/No questions (jinka answer sirf Yes ya No hota hai) mein 'if' ya 'whether' use hota hai, 'that' KABHI NAHI. Reporting verb bhi 'said'→'asked' ban jaata hai." },
+        { "speaker": "raju", "text": "Sir 'if' aur 'whether' dono chalega? Koi fark nahi?" },
+        { "speaker": "aman", "text": "Exam level pe dono correct maane jaate hain, 'whether' thoda zyada formal hai. Bas yaad rakho - question mark HAT jaata hai aur word order STATEMENT jaisa ho jaata hai!" },
+        { "speaker": "raju", "text": "Sir 'word order statement jaisa' matlab kya? Thoda samjhaiye!" }
+      ],
+      "navigation": { "next": "card_47_wh_question_rule", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_47_wh_question_rule",
+      "card_slug": "card_47_wh_question_rule",
+      "type": "chat",
+      "concept_id": "interrogative_narration",
+      "level": 3,
+      "progress": { "current": 47, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Wh-questions (What, Where, When, Who, Why, How) mein 'that/if/whether' kuch nahi lagta - seedha Wh-word se sentence shuru hota hai. Example: He said, 'Where do you live?' → He asked where I lived." },
+        { "speaker": "raju", "text": "Sir 'do you live' se 'I lived' kaise hua? Auxiliary 'do' kahan gaya?" },
+        { "speaker": "aman", "text": "Bahut zaroori catch! Indirect question mein hum QUESTION word order nahi, STATEMENT word order use karte hain - matlab 'do/does/did' helping verb hat jaata hai aur normal subject-verb order aata hai. Ye SBI PO ka sabse common trap hai!" },
+        { "speaker": "raju", "text": "Hain?? Matlab 'where I lived' likhna hai, 'where did I live' nahi? Ye to bilkul ulta lag raha hai!" }
+      ],
+      "navigation": { "next": "card_48_question_mark_removal", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_48_question_mark_removal",
+      "card_slug": "card_48_question_mark_removal",
+      "type": "chat",
+      "concept_id": "interrogative_narration",
+      "level": 3,
+      "progress": { "current": 48, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi laga, par yehi grammar rule hai - Raju, do golden rules yaad rakho: 1) Question mark (?) hat jaata hai, full stop lagta hai. 2) 'said/said to' → 'asked' ban jaata hai." },
+        { "speaker": "raju", "text": "Sir agar already 'asked' ho reporting verb mein to?" },
+        { "speaker": "aman", "text": "Tab kuch change nahi karna, wahi rehta hai. Bas remember - questions mein KABHI 'that' use mat karna!" },
+        { "speaker": "raju", "text": "Sir ye to exam mein sabse zyada marks katega agar bhool gaya!" }
+      ],
+      "navigation": { "next": "card_49_quiz1_interrogative", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_49_quiz1_interrogative",
+      "card_slug": "card_49_quiz1_interrogative",
+      "type": "quiz",
+      "concept_id": "interrogative_narration",
+      "level": 3,
+      "progress": { "current": 49, "total": 98 },
+      "quiz_payload": {
+        "question": "Convert: She said to him, 'Do you like coffee?'",
+        "options": [
+          { "id": "A", "text": "She asked him that he liked coffee" },
+          { "id": "B", "text": "She asked him if he liked coffee" },
+          { "id": "C", "text": "She told him if he liked coffee" },
+          { "id": "D", "text": "She asked him do he like coffee" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Yes/No question: reporting verb becomes 'asked' and connector is 'if'; 'do you like' → 'he liked' (statement order + tense backshift)."
+      },
+      "navigation": { "next": "card_50_quiz2_interrogative", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_50_quiz2_interrogative",
+      "card_slug": "card_50_quiz2_interrogative",
+      "type": "quiz",
+      "concept_id": "interrogative_narration",
+      "level": 3,
+      "progress": { "current": 50, "total": 98 },
+      "quiz_payload": {
+        "question": "Convert: He said, 'Where are you going?'",
+        "options": [
+          { "id": "A", "text": "He asked where I was going" },
+          { "id": "B", "text": "He asked where was I going" },
+          { "id": "C", "text": "He asked that where I was going" },
+          { "id": "D", "text": "He asked where did I go" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Wh-question: no 'that', statement word order 'I was going', not inverted question order."
+      },
+      "navigation": { "next": "card_51_quiz3_interrogative", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_51_quiz3_interrogative",
+      "card_slug": "card_51_quiz3_interrogative",
+      "type": "quiz",
+      "concept_id": "interrogative_narration",
+      "level": 3,
+      "progress": { "current": 51, "total": 98 },
+      "quiz_payload": {
+        "question": "SBI PO style - Spot the error: 'He asked me that where I was going.' (A) He asked me / (B) that where I / (C) was going / (D) No error",
+        "options": [
+          { "id": "A", "text": "He asked me" },
+          { "id": "B", "text": "that where I" },
+          { "id": "C", "text": "was going" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'that' is wrongly used with a Wh-word. Correct sentence: 'He asked me where I was going.'"
+      },
+      "navigation": { "next": "card_52_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_52_milestone7",
+      "card_slug": "card_52_milestone7",
+      "type": "milestone",
+      "concept_id": "interrogative_narration",
+      "level": 3,
+      "progress": { "current": 52, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "❓",
+        "completed_topic": "Interrogative Sentence Narration",
+        "xp_earned": 60,
+        "milestone_progress": "Module 7/13 Clear",
+        "motivational_quote": "Sabse bada trap crack kar liya Raju! Ab Orders aur Requests seekhte hain!"
+      },
+      "navigation": { "next": "card_53_imperative_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_53_imperative_intro",
+      "card_slug": "card_53_imperative_intro",
+      "type": "guess",
+      "concept_id": "imperative_narration",
+      "level": 3,
+      "progress": { "current": 53, "total": 98 },
+      "guess_payload": {
+        "question": "The Apartment guard said to the visitors, 'Show your ID card.' What kind of reporting verb should replace 'said' here?",
+        "options": [
+          { "id": "A", "text": "asked" },
+          { "id": "B", "text": "ordered/told...to" },
+          { "id": "C", "text": "exclaimed" },
+          { "id": "D", "text": "wished" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Commands/Orders use 'ordered' or 'told...to' as reporting verb, and the main verb becomes 'to + base form'. Let's learn all Imperative rules now!"
+      },
+      "navigation": { "next": "card_54_imperative_order_command", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_54_imperative_order_command",
+      "card_slug": "card_54_imperative_order_command",
+      "type": "chat",
+      "concept_id": "imperative_narration",
+      "level": 3,
+      "progress": { "current": 54, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi guess tha! Rule yaad karo: Command/Order ke liye reporting verb 'ordered/commanded' banta hai, aur main verb 'to + base form' (infinitive) mein badal jaata hai. Example: The officer said, 'Stand up!' → The officer ordered them to stand up." },
+        { "speaker": "raju", "text": "Sir 'said' se 'ordered' kaise pata chale? Context se?" },
+        { "speaker": "aman", "text": "Haan, tone se pata chalta hai - agar sakht order hai to 'ordered/commanded', agar mote se bola hai to 'told'." },
+        { "speaker": "raju", "text": "Sir agar 'please' bhi ho sentence mein to kya alag rule hai?" }
+      ],
+      "navigation": { "next": "card_55_imperative_request_advice", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_55_imperative_request_advice",
+      "card_slug": "card_55_imperative_request_advice",
+      "type": "chat",
+      "concept_id": "imperative_narration",
+      "level": 3,
+      "progress": { "current": 55, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Agar REQUEST hai (please wala), reporting verb 'requested' banta hai aur 'please' word HAT jaata hai. Agar ADVICE hai, 'advised' banta hai. Example: He said, 'Please help me.' → He requested me to help him." },
+        { "speaker": "raju", "text": "Sir 'please' hamesha hataana padega?" },
+        { "speaker": "aman", "text": "Haan, 'please' word directly hat jaata hai, uski jagah 'requested' verb khud politeness dikha deta hai. Advice ka example: Teacher said, 'You should study daily.' → The teacher advised him to study daily." },
+        { "speaker": "raju", "text": "Achha sir, samajh gaya - order='ordered/to', request='requested/to(no please)', advice='advised/to'." }
+      ],
+      "navigation": { "next": "card_56_imperative_negative", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_56_imperative_negative",
+      "card_slug": "card_56_imperative_negative",
+      "type": "chat",
+      "concept_id": "imperative_narration",
+      "level": 3,
+      "progress": { "current": 56, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab last part - agar imperative NEGATIVE ho (Don't...), to 'to' se pehle 'not' laga do: 'not to'. Example: He said, 'Don't shout.' → He told them not to shout." },
+        { "speaker": "raju", "text": "Sir 'forbade' bhi kahin sunta hoon, wo bhi use hota hai kya?" },
+        { "speaker": "aman", "text": "Haan, strong prohibition ke liye 'forbade' bhi chalta hai (He forbade them to shout), but exam mein zyadatar 'told...not to' hi safe answer hota hai." },
+        { "speaker": "raju", "text": "Okay sir, ab imperative sentence ka poora chart yaad ho gaya!" }
+      ],
+      "navigation": { "next": "card_57_quiz1_imperative", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_57_quiz1_imperative",
+      "card_slug": "card_57_quiz1_imperative",
+      "type": "quiz",
+      "concept_id": "imperative_narration",
+      "level": 3,
+      "progress": { "current": 57, "total": 98 },
+      "quiz_payload": {
+        "question": "Convert: The teacher said to the students, 'Keep quiet.'",
+        "options": [
+          { "id": "A", "text": "The teacher told the students to keep quiet" },
+          { "id": "B", "text": "The teacher ordered the students that keep quiet" },
+          { "id": "C", "text": "The teacher said the students to keep quiet" },
+          { "id": "D", "text": "The teacher asked the students keep quiet" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Command → reporting verb 'told/ordered' + object + 'to + base verb'."
+      },
+      "navigation": { "next": "card_58_quiz2_imperative", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_58_quiz2_imperative",
+      "card_slug": "card_58_quiz2_imperative",
+      "type": "quiz",
+      "concept_id": "imperative_narration",
+      "level": 3,
+      "progress": { "current": 58, "total": 98 },
+      "quiz_payload": {
+        "question": "Convert: She said to me, 'Please lend me your pen.'",
+        "options": [
+          { "id": "A", "text": "She requested me to lend her my pen" },
+          { "id": "B", "text": "She requested me to lend him her pen" },
+          { "id": "C", "text": "She told me please lend her pen" },
+          { "id": "D", "text": "She asked me if I lend her pen" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'please' is dropped, reporting verb becomes 'requested', and pronouns change correctly: me(2nd person, object)→me, your(1st person of speaker? actually 'your' belongs to listener=2nd person referring to me)→my."
+      },
+      "navigation": { "next": "card_59_quiz3_imperative", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_59_quiz3_imperative",
+      "card_slug": "card_59_quiz3_imperative",
+      "type": "quiz",
+      "concept_id": "imperative_narration",
+      "level": 3,
+      "progress": { "current": 59, "total": 98 },
+      "quiz_payload": {
+        "question": "Convert: The mother said to her son, 'Don't go out in the rain.'",
+        "options": [
+          { "id": "A", "text": "The mother told her son don't go out in the rain" },
+          { "id": "B", "text": "The mother told her son not to go out in the rain" },
+          { "id": "C", "text": "The mother ordered her son to not going out in the rain" },
+          { "id": "D", "text": "The mother requested her son no to go out in the rain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Negative imperative: 'not' is placed before 'to' - 'told...not to go'."
+      },
+      "navigation": { "next": "card_60_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_60_milestone8",
+      "card_slug": "card_60_milestone8",
+      "type": "milestone",
+      "concept_id": "imperative_narration",
+      "level": 3,
+      "progress": { "current": 60, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📢",
+        "completed_topic": "Imperative Sentence Narration",
+        "xp_earned": 55,
+        "milestone_progress": "Module 8/13 Clear",
+        "motivational_quote": "Orders, Requests, Advice - sab sambhal liya! Ab feelings wale sentences dekhein!"
+      },
+      "navigation": { "next": "card_61_exclamatory_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_61_exclamatory_intro",
+      "card_slug": "card_61_exclamatory_intro",
+      "type": "chat",
+      "concept_id": "exclamatory_optative_narration",
+      "level": 4,
+      "progress": { "current": 61, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, jab tum khushi se chillate ho 'Wah! Kitna sundar hai!' aur baad mein kisi ko batate ho, kya wahi 'Wah!' bolte ho?" },
+        { "speaker": "raju", "text": "Nahi sir, main bolunga 'maine kaha ki bahut sundar hai' - 'Wah' to nahi bolunga!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Exclamatory sentences (Hurrah!, Alas!, What a.../How...) mein reporting verb 'exclaimed with joy/sorrow/wonder' banta hai aur interjection (Hurrah, Alas, Oh) hat jaata hai." },
+        { "speaker": "raju", "text": "Sir ek example dijiye poora convert karke!" }
+      ],
+      "navigation": { "next": "card_62_exclamatory_examples", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_62_exclamatory_examples",
+      "card_slug": "card_62_exclamatory_examples",
+      "type": "chat",
+      "concept_id": "exclamatory_optative_narration",
+      "level": 4,
+      "progress": { "current": 62, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Example: He said, 'Hurrah! We have won the match.' → He exclaimed with joy that they had won the match. Aur 'What a beautiful flower it is!' → He exclaimed that it was a very beautiful flower ('What/How' ki jagah 'very' aata hai)." },
+        { "speaker": "raju", "text": "Sir 'What a' aur 'How' wale sentence mein 'very' kyun aata hai?" },
+        { "speaker": "aman", "text": "Kyunki exclamation ki intensity 'very' se express hoti hai jab hum use normal statement mein badalte hain." },
+        { "speaker": "raju", "text": "Achha sir, ab 'wishes' wale sentence bhi bata dijiye - jaise 'May you live long!'" }
+      ],
+      "navigation": { "next": "card_63_optative_wishes", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_63_optative_wishes",
+      "card_slug": "card_63_optative_wishes",
+      "type": "chat",
+      "concept_id": "exclamatory_optative_narration",
+      "level": 4,
+      "progress": { "current": 63, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Optative sentences (wishes, prayers) jaise 'May you live long!' ka reporting verb 'wished/prayed' banta hai. Example: He said, 'May God bless you!' → He prayed that God might bless her." },
+        { "speaker": "raju", "text": "Sir 'may' yahan 'might' ban gaya, ye bhi ek modal change hai na?" },
+        { "speaker": "aman", "text": "Bilkul sahi observation! Optative mein 'may' hamesha 'might' banta hai wish/prayer ke context mein." },
+        { "speaker": "raju", "text": "Sir ab Exclamatory aur Optative dono clear hain - reporting verb + tone hi sab kuch decide karta hai!" }
+      ],
+      "navigation": { "next": "card_64_quiz1_exclamatory", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_64_quiz1_exclamatory",
+      "card_slug": "card_64_quiz1_exclamatory",
+      "type": "quiz",
+      "concept_id": "exclamatory_optative_narration",
+      "level": 4,
+      "progress": { "current": 64, "total": 98 },
+      "quiz_payload": {
+        "question": "Convert: She said, 'Alas! I have lost my purse.'",
+        "options": [
+          { "id": "A", "text": "She exclaimed with sorrow that she had lost her purse" },
+          { "id": "B", "text": "She exclaimed that alas she lost her purse" },
+          { "id": "C", "text": "She said with sorrow that she has lost her purse" },
+          { "id": "D", "text": "She exclaimed sadly I have lost my purse" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Alas' shows sorrow, so reporting verb becomes 'exclaimed with sorrow'; interjection removed, tense backshifted."
+      },
+      "navigation": { "next": "card_65_quiz2_exclamatory", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_65_quiz2_exclamatory",
+      "card_slug": "card_65_quiz2_exclamatory",
+      "type": "quiz",
+      "concept_id": "exclamatory_optative_narration",
+      "level": 4,
+      "progress": { "current": 65, "total": 98 },
+      "quiz_payload": {
+        "question": "Convert: The old man said, 'May you be happy forever!'",
+        "options": [
+          { "id": "A", "text": "The old man wished that I be happy forever" },
+          { "id": "B", "text": "The old man prayed that she might be happy forever" },
+          { "id": "C", "text": "The old man said that she may be happy forever" },
+          { "id": "D", "text": "The old man wished her happy forever" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Optative sentence: reporting verb 'prayed/wished that', and 'may' → 'might'."
+      },
+      "navigation": { "next": "card_66_quiz3_exclamatory", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_66_quiz3_exclamatory",
+      "card_slug": "card_66_quiz3_exclamatory",
+      "type": "quiz",
+      "concept_id": "exclamatory_optative_narration",
+      "level": 4,
+      "progress": { "current": 66, "total": 98 },
+      "quiz_payload": {
+        "question": "Convert: He said, 'What a lovely morning it is!'",
+        "options": [
+          { "id": "A", "text": "He exclaimed that it was a lovely morning" },
+          { "id": "B", "text": "He exclaimed that it was a very lovely morning" },
+          { "id": "C", "text": "He said what a lovely morning it was" },
+          { "id": "D", "text": "He exclaimed how lovely the morning is" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'What a/How' is replaced by 'very' to preserve the intensity of the exclamation in indirect form."
+      },
+      "navigation": { "next": "card_67_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_67_milestone9",
+      "card_slug": "card_67_milestone9",
+      "type": "milestone",
+      "concept_id": "exclamatory_optative_narration",
+      "level": 4,
+      "progress": { "current": 67, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "😲",
+        "completed_topic": "Exclamatory & Optative Narration",
+        "xp_earned": 55,
+        "milestone_progress": "Module 9/13 Clear",
+        "motivational_quote": "Emotions wale sentence bhi crack kar liye! Ab kuch special reporting verbs seekhte hain!"
+      },
+      "navigation": { "next": "card_68_lets_rule", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_68_lets_rule",
+      "card_slug": "card_68_lets_rule",
+      "type": "guess",
+      "concept_id": "special_reporting_verbs",
+      "level": 4,
+      "progress": { "current": 68, "total": 98 },
+      "guess_payload": {
+        "question": "Raju's friends said, 'Let's watch a movie.' Which reporting verb fits best for indirect speech here?",
+        "options": [
+          { "id": "A", "text": "ordered" },
+          { "id": "B", "text": "suggested" },
+          { "id": "C", "text": "requested" },
+          { "id": "D", "text": "exclaimed" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Let's' sentences (suggestions) use 'suggested/proposed' as the reporting verb, followed by 'that + subject + should'."
+      },
+      "navigation": { "next": "card_69_must_had_to_insist", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_69_must_had_to_insist",
+      "card_slug": "card_69_must_had_to_insist",
+      "type": "chat",
+      "concept_id": "special_reporting_verbs",
+      "level": 4,
+      "progress": { "current": 69, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! 'Let's' sentences ka pattern hai: reporting verb 'suggested/proposed' + 'that + subject + should'. Example: He said, 'Let's go to the market.' → He suggested that they should go to the market." },
+        { "speaker": "raju", "text": "Sir aur 'insist' wala kya hota hai? Wo bhi suna hai kahin." },
+        { "speaker": "aman", "text": "'Insisted' use hota hai jab koi zid karke bole. Example: She said, 'You must apologize.' → She insisted that he must apologize / should apologize." },
+        { "speaker": "raju", "text": "Sir insist ke baad bhi 'should' ya 'must' dono chal sakte hain?" }
+      ],
+      "navigation": { "next": "card_70_suggest_propose_examples", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_70_suggest_propose_examples",
+      "card_slug": "card_70_suggest_propose_examples",
+      "type": "chat",
+      "concept_id": "special_reporting_verbs",
+      "level": 4,
+      "progress": { "current": 70, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan, dono chalte hain context ke hisaab se. Aur ek fixed formula yaad rakho - 'Suggest/Propose' verbs ke baad hamesha 'that + subject + should + base verb' pattern aata hai, chahe original sentence mein 'should' na bhi ho." },
+        { "speaker": "raju", "text": "Sir jaise 'Why don't we start early?' - isme to 'should' nahi hai, phir bhi?" },
+        { "speaker": "aman", "text": "Bilkul sahi example diya! He said, 'Why don't we start early?' → He suggested that they should start early. Ye ek fixed formula hai jo bahut baar directly poochha jaata hai. ⭐ BPSC TRE Favorite!" },
+        { "speaker": "raju", "text": "Sir ye to yaad rakhna easy hoga, fixed pattern hai!" }
+      ],
+      "navigation": { "next": "card_71_quiz1_special", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_71_quiz1_special",
+      "card_slug": "card_71_quiz1_special",
+      "type": "quiz",
+      "concept_id": "special_reporting_verbs",
+      "level": 4,
+      "progress": { "current": 71, "total": 98 },
+      "quiz_payload": {
+        "question": "Convert: He said, 'Let's play football.'",
+        "options": [
+          { "id": "A", "text": "He suggested that they should play football" },
+          { "id": "B", "text": "He said let's play football" },
+          { "id": "C", "text": "He proposed to play football" },
+          { "id": "D", "text": "He told them to let's play football" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Let's' → 'suggested that + subject + should + base verb'."
+      },
+      "navigation": { "next": "card_72_quiz2_special", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_72_quiz2_special",
+      "card_slug": "card_72_quiz2_special",
+      "type": "quiz",
+      "concept_id": "special_reporting_verbs",
+      "level": 4,
+      "progress": { "current": 72, "total": 98 },
+      "quiz_payload": {
+        "question": "Convert: The doctor said, 'You must take rest.'",
+        "options": [
+          { "id": "A", "text": "The doctor insisted that he must take rest" },
+          { "id": "B", "text": "The doctor suggested him to must take rest" },
+          { "id": "C", "text": "The doctor said he should took rest" },
+          { "id": "D", "text": "The doctor told he must took rest" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Strong obligation with 'must' from a doctor is best reported as 'insisted that...must take rest'."
+      },
+      "navigation": { "next": "card_73_quiz3_special", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_73_quiz3_special",
+      "card_slug": "card_73_quiz3_special",
+      "type": "quiz",
+      "concept_id": "special_reporting_verbs",
+      "level": 4,
+      "progress": { "current": 73, "total": 98 },
+      "quiz_payload": {
+        "question": "Statement 1: 'Suggest/Propose' always take the 'should' pattern in indirect speech. Statement 2: 'Let's' sentences take the reporting verb 'ordered'. Which is correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 2 is wrong - 'Let's' sentences use 'suggested/proposed', not 'ordered'."
+      },
+      "navigation": { "next": "card_74_milestone10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_74_milestone10",
+      "card_slug": "card_74_milestone10",
+      "type": "milestone",
+      "concept_id": "special_reporting_verbs",
+      "level": 4,
+      "progress": { "current": 74, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💡",
+        "completed_topic": "Special Reporting Verbs (Suggest/Must/Let's/Insist)",
+        "xp_earned": 55,
+        "milestone_progress": "Module 10/13 Clear",
+        "motivational_quote": "Tricky reporting verbs bhi crack kar liye! Ab 'Say vs Tell' ka final confusion clear karte hain!"
+      },
+      "navigation": { "next": "card_75_say_vs_tell", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_75_say_vs_tell",
+      "card_slug": "card_75_say_vs_tell",
+      "type": "chat",
+      "concept_id": "say_vs_tell",
+      "level": 4,
+      "progress": { "current": 75, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ek confusion clear karte hain - 'say' aur 'tell' mein fark kya hai?" },
+        { "speaker": "raju", "text": "Sir dono ka matlab to 'bolna' hi hota hai na?" },
+        { "speaker": "aman", "text": "Matlab same hai but grammar use alag! 'Say' ke baad DIRECTLY person nahi aata (agar aana ho to 'to' lagta hai) - 'He said to me'. Lekin 'tell' ke baad SEEDHA person aata hai bina 'to' ke - 'He told me'." },
+        { "speaker": "raju", "text": "Sir toh 'He told to me' galat hai?" }
+      ],
+      "navigation": { "next": "card_76_reporting_verb_selection", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_76_reporting_verb_selection",
+      "card_slug": "card_76_reporting_verb_selection",
+      "type": "chat",
+      "concept_id": "say_vs_tell",
+      "level": 4,
+      "progress": { "current": 76, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi, 'told to me' hamesha GALAT hai - ye SBI PO ka classic error-spotting trap hai! Ab poora summary table yaad karo: Statement→said/told(that). Question→asked(if/whether/wh-word). Command→ordered/told(to). Request→requested(to). Suggestion→suggested(that+should). Exclamation→exclaimed(with joy/sorrow). Wish→wished/prayed(that+might)." },
+        { "speaker": "raju", "text": "Sir itna sara table! Kaise yaad rahega exam mein?" },
+        { "speaker": "aman", "text": "Practice se automatic ho jaata hai - bas sentence ka TYPE pehchano, phir reporting verb khud-ba-khud dimaag mein aa jaayega!" },
+        { "speaker": "raju", "text": "Sir ek quick trick dijiye pehchanne ki!" }
+      ],
+      "navigation": { "next": "card_77_reporting_verb_examples", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_77_reporting_verb_examples",
+      "card_slug": "card_77_reporting_verb_examples",
+      "type": "chat",
+      "concept_id": "say_vs_tell",
+      "level": 4,
+      "progress": { "current": 77, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo test karte hain - agar sentence mein '?' hai to turant dimaag mein 'asked' aana chahiye. Agar '!' ke saath Hurrah/Alas hai to 'exclaimed'. Agar order/command tone hai to 'ordered/told...to'. Yehi hai officer-level speed trick!" },
+        { "speaker": "raju", "text": "Sir ab mujhe lag raha hai main paper mein fatafat pehchan lunga type!" },
+        { "speaker": "aman", "text": "Bilkul! Punctuation mark aur pehla word dekhte hi type pehchano, phir formula lagao - yehi hai 3-second officer trick!" },
+        { "speaker": "raju", "text": "Sir ab error detection wala part shuru karte hain, uski taiyari karni hai!" }
+      ],
+      "navigation": { "next": "card_78_quiz1_saytell", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_78_quiz1_saytell",
+      "card_slug": "card_78_quiz1_saytell",
+      "type": "quiz",
+      "concept_id": "say_vs_tell",
+      "level": 4,
+      "progress": { "current": 78, "total": 98 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence: 'He ___ me that he was busy.'",
+        "options": [
+          { "id": "A", "text": "said" },
+          { "id": "B", "text": "told" },
+          { "id": "C", "text": "said to" },
+          { "id": "D", "text": "asked" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'tell' takes the object directly without 'to': 'told me'."
+      },
+      "navigation": { "next": "card_79_quiz2_saytell", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_79_quiz2_saytell",
+      "card_slug": "card_79_quiz2_saytell",
+      "type": "quiz",
+      "concept_id": "say_vs_tell",
+      "level": 4,
+      "progress": { "current": 79, "total": 98 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence: 'She ___ to her friend that she would come.'",
+        "options": [
+          { "id": "A", "text": "told" },
+          { "id": "B", "text": "said" },
+          { "id": "C", "text": "tell" },
+          { "id": "D", "text": "says" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'say' requires 'to' before the person object: 'said to her friend'."
+      },
+      "navigation": { "next": "card_80_quiz3_saytell", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_80_quiz3_saytell",
+      "card_slug": "card_80_quiz3_saytell",
+      "type": "quiz",
+      "concept_id": "say_vs_tell",
+      "level": 4,
+      "progress": { "current": 80, "total": 98 },
+      "quiz_payload": {
+        "question": "SBI PO style - Spot the error: 'He said to me that he will come tomorrow.' (A) He said to me / (B) that he will come / (C) tomorrow / (D) No error",
+        "options": [
+          { "id": "A", "text": "He said to me" },
+          { "id": "B", "text": "that he will come" },
+          { "id": "C", "text": "tomorrow" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Since 'said' is past tense, 'will' must backshift to 'would'. Correct: 'that he would come'."
+      },
+      "navigation": { "next": "card_81_milestone11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_81_milestone11",
+      "card_slug": "card_81_milestone11",
+      "type": "milestone",
+      "concept_id": "say_vs_tell",
+      "level": 4,
+      "progress": { "current": 81, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🗨️",
+        "completed_topic": "Say vs Tell & Reporting Verb Selection",
+        "xp_earned": 55,
+        "milestone_progress": "Module 11/13 Clear",
+        "motivational_quote": "Ab tumhare paas poora grammar engine ready hai! Chalo ab SBI PO level Error Detection master karte hain!"
+      },
+      "navigation": { "next": "card_82_error_detection_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_82_error_detection_intro",
+      "card_slug": "card_82_error_detection_intro",
+      "type": "chat",
+      "concept_id": "error_detection_traps",
+      "level": 5,
+      "progress": { "current": 82, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Raju, SBI PO aur Bank exams mein Direct-Indirect speech pe alag hi tarah ka sawal aata hai - 'Error Detection'. Poora sentence diya jaata hai, tumhe GALTI wala part dhundhna hota hai." },
+        { "speaker": "raju", "text": "Sir ye to bahut tricky lagta hai, poora sentence padhna padega!" },
+        { "speaker": "aman", "text": "Chinta mat karo, agar tumhe 5-6 COMMON TRAP PATTERNS pata hon, to tum 10 second mein error pakड़ loge!" },
+        { "speaker": "raju", "text": "Sir jaldi bataiye wo trap patterns!" }
+      ],
+      "navigation": { "next": "card_83_trap_tense_pronoun", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_83_trap_tense_pronoun",
+      "card_slug": "card_83_trap_tense_pronoun",
+      "type": "chat",
+      "concept_id": "error_detection_traps",
+      "level": 5,
+      "progress": { "current": 83, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "TRAP 1 - Tense Backshift bhool jaana: Log 'said that he is...' likh dete hain jab 'was' hona chahiye. TRAP 2 - Pronoun mismatch: 'He said that I was happy' jaisa galat sentence - yahan 'I' ki jagah 'he' hona chahiye." },
+        { "speaker": "raju", "text": "Sir ye dono to humne pehle hi padha hai, bas exam mein spot karna hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Error detection mein wahi rules apply hote hain, bas ab tumhe MISTAKE dhundni hai, banani nahi!" },
+        { "speaker": "raju", "text": "Sir agle traps bhi bataiye!" }
+      ],
+      "navigation": { "next": "card_84_trap_conjunction", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_84_trap_conjunction",
+      "card_slug": "card_84_trap_conjunction",
+      "type": "chat",
+      "concept_id": "error_detection_traps",
+      "level": 5,
+      "progress": { "current": 84, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "TRAP 3 - Question mein 'that' ka galat use: 'He asked that where I lived' - GALAT! Question mein 'that' kabhi nahi aata. TRAP 4 - Yes/No question mein 'that' likh dena instead of 'if/whether'." },
+        { "speaker": "raju", "text": "Sir ye to humara Interrogative wala trap hai! Ab pakड़ mein aa raha hai!" },
+        { "speaker": "aman", "text": "Exactly - SBI PO isi confusion pe sabse zyada sawal banata hai!" },
+        { "speaker": "raju", "text": "Sir aur kya traps hain?" }
+      ],
+      "navigation": { "next": "card_85_trap_modal_punctuation", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_85_trap_modal_punctuation",
+      "card_slug": "card_85_trap_modal_punctuation",
+      "type": "chat",
+      "concept_id": "error_detection_traps",
+      "level": 5,
+      "progress": { "current": 85, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "TRAP 5 - Modal na badalna: 'He said that he will come' galat hai jab reporting verb past mein ho, 'would' hona chahiye. TRAP 6 - Question mark ya quotation reh jaana indirect sentence mein - jaise 'He asked if I was fine?' - '?' galat hai, indirect question mein full stop hona chahiye." },
+        { "speaker": "raju", "text": "Sir '?' ka mistake to bilkul chhota lagta hai, easily miss ho sakta hai!" },
+        { "speaker": "aman", "text": "Yahi to trap hai - chhoti chhoti cheezein hi paper mein sabse zyada marks kaटती hain!" },
+        { "speaker": "raju", "text": "Sir last trap bhi bata dijiye, phir main practice karna chahta hoon!" }
+      ],
+      "navigation": { "next": "card_86_trap_reporting_verb_choice", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_86_trap_reporting_verb_choice",
+      "card_slug": "card_86_trap_reporting_verb_choice",
+      "type": "chat",
+      "concept_id": "error_detection_traps",
+      "level": 5,
+      "progress": { "current": 86, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Last TRAP - Galat reporting verb choose karna: jaise command sentence mein 'said' use karna jab 'ordered/told...to' hona chahiye, ya request mein 'please' na hataana. Aur 'told to' likhna (ye hamesha galat hota hai)." },
+        { "speaker": "raju", "text": "Sir sab 6 traps yaad ho gaye - tense, pronoun, that-with-question, modal, punctuation, wrong-reporting-verb!" },
+        { "speaker": "aman", "text": "Perfect summary! Ab hum asli SBI PO level error-spotting sentences pe practice karte hain - ready ho jao!" },
+        { "speaker": "raju", "text": "Sir ready hoon! Chaliye challenge dijiye!" }
+      ],
+      "navigation": { "next": "card_87_errorquiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_87_errorquiz1",
+      "card_slug": "card_87_errorquiz1",
+      "type": "quiz",
+      "concept_id": "error_detection_practice",
+      "level": 5,
+      "progress": { "current": 87, "total": 98 },
+      "quiz_payload": {
+        "question": "Error Detection (Q1/6): 'The teacher said that the Earth revolve around the Sun.' Find the error segment.",
+        "options": [
+          { "id": "A", "text": "The teacher said" },
+          { "id": "B", "text": "that the Earth revolve" },
+          { "id": "C", "text": "around the Sun" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Subject-verb agreement error - it should be 'the Earth revolves' (universal truth, present tense, singular subject)."
+      },
+      "navigation": { "next": "card_88_errorquiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_88_errorquiz2",
+      "card_slug": "card_88_errorquiz2",
+      "type": "quiz",
+      "concept_id": "error_detection_practice",
+      "level": 5,
+      "progress": { "current": 88, "total": 98 },
+      "quiz_payload": {
+        "question": "Error Detection (Q2/6): 'He asked me that why I was crying.' Find the error segment.",
+        "options": [
+          { "id": "A", "text": "He asked me" },
+          { "id": "B", "text": "that why I" },
+          { "id": "C", "text": "was crying" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'that' should never be used with a Wh-word. Correct: 'He asked me why I was crying.'"
+      },
+      "navigation": { "next": "card_89_errorquiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_89_errorquiz3",
+      "card_slug": "card_89_errorquiz3",
+      "type": "quiz",
+      "concept_id": "error_detection_practice",
+      "level": 5,
+      "progress": { "current": 89, "total": 98 },
+      "quiz_payload": {
+        "question": "Error Detection (Q3/6): 'She told to me that she was leaving.' Find the error segment.",
+        "options": [
+          { "id": "A", "text": "She told to me" },
+          { "id": "B", "text": "that she was" },
+          { "id": "C", "text": "leaving" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'tell' never takes 'to' before its object. Correct: 'She told me that she was leaving.'"
+      },
+      "navigation": { "next": "card_90_errorquiz4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_90_errorquiz4",
+      "card_slug": "card_90_errorquiz4",
+      "type": "quiz",
+      "concept_id": "error_detection_practice",
+      "level": 5,
+      "progress": { "current": 90, "total": 98 },
+      "quiz_payload": {
+        "question": "Error Detection (Q4/6): 'He requested me to please help him.' Find the error segment.",
+        "options": [
+          { "id": "A", "text": "He requested me" },
+          { "id": "B", "text": "to please help" },
+          { "id": "C", "text": "him" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'please' must be dropped since 'requested' already conveys politeness. Correct: 'He requested me to help him.'"
+      },
+      "navigation": { "next": "card_91_errorquiz5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_91_errorquiz5",
+      "card_slug": "card_91_errorquiz5",
+      "type": "quiz",
+      "concept_id": "error_detection_practice",
+      "level": 5,
+      "progress": { "current": 91, "total": 98 },
+      "quiz_payload": {
+        "question": "Error Detection (Q5/6): 'She said that she will meet him the next day.' Find the error segment.",
+        "options": [
+          { "id": "A", "text": "She said" },
+          { "id": "B", "text": "that she will meet him" },
+          { "id": "C", "text": "the next day" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'will' must backshift to 'would' since the reporting verb 'said' is in the past tense."
+      },
+      "navigation": { "next": "card_92_errorquiz6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_92_errorquiz6",
+      "card_slug": "card_92_errorquiz6",
+      "type": "quiz",
+      "concept_id": "error_detection_practice",
+      "level": 5,
+      "progress": { "current": 92, "total": 98 },
+      "quiz_payload": {
+        "question": "Error Detection (Q6/6) - BPSC Style Multi-Statement: Read: 'He exclaimed that it was very beautiful scenery and asked that where were we going.' Statement 1: Use of 'very' before 'beautiful' is correct for exclamatory-to-assertive conversion. Statement 2: 'asked that where' is grammatically correct. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 2 is wrong on two counts - 'that' should not accompany a Wh-word, and the word order should be statement-order 'where we were going', not the inverted 'where were we going'."
+      },
+      "navigation": { "next": "card_93_milestone12", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_93_milestone12",
+      "card_slug": "card_93_milestone12",
+      "type": "milestone",
+      "concept_id": "error_detection_practice",
+      "level": 5,
+      "progress": { "current": 93, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🕵️",
+        "completed_topic": "SBI PO Error Detection Mastery",
+        "xp_earned": 80,
+        "milestone_progress": "Module 12/13 Clear",
+        "motivational_quote": "Raju, tum ab Officer-level error-spotter ban chuke ho! Sirf final revision aur master quiz baaki hai!"
+      },
+      "navigation": { "next": "card_94_summary", "button_text": "Final Revision ➔" }
+    },
+    {
+      "card_id": "card_94_summary",
+      "card_slug": "card_94_summary",
+      "type": "summary",
+      "concept_id": "chapter_revision",
+      "level": 5,
+      "progress": { "current": 94, "total": 98 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Narration",
+        "revision_points": [
+          {
+            "topic": "Pronoun Rule",
+            "point": "1st person pronoun changes as per SUBJECT of reporting verb; 2nd person changes as per OBJECT of reporting verb; 3rd person NEVER changes."
+          },
+          {
+            "topic": "Tense Backshift",
+            "point": "Present→Past, Past→Past Perfect; Past Perfect has NO further backshift; Universal truths/habitual facts take NO tense change."
+          },
+          {
+            "topic": "Time & Place Words",
+            "point": "now→then, today→that day, tomorrow→the next day, here→there, this→that, come→go."
+          },
+          {
+            "topic": "Modal Verbs",
+            "point": "can→could, may→might, will→would, shall→should, must→had to (if obligation over); could/would/should/might/ought to remain UNCHANGED."
+          },
+          {
+            "topic": "Sentence-Type Reporting Verbs",
+            "point": "Statement→said/told(that); Question→asked(if/whether/wh-word, no 'that', no '?'); Command→ordered/told(to); Request→requested(to, drop 'please'); Suggestion/Let's→suggested(that+should); Exclamation→exclaimed(with joy/sorrow, 'very' replaces What/How); Wish→wished/prayed(that+might)."
+          }
+        ]
+      },
+      "navigation": { "next": "card_95_final_quiz1", "button_text": "Take Final Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_95_final_quiz1",
+      "card_slug": "card_95_final_quiz1",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 5,
+      "progress": { "current": 95, "total": 98 },
+      "quiz_payload": {
+        "question": "Assertion (A): The sentence 'He said, \"The train leaves at 9 pm daily.\"' becomes 'He said that the train leaves at 9 pm daily' in indirect speech, without any tense change.\nReason (R): Habitual/scheduled actions and universal truths do not undergo tense backshift in indirect speech.\nChoose the correct option:",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is NOT the correct explanation of A" },
+          { "id": "C", "text": "A is true but R is false" },
+          { "id": "D", "text": "A is false but R is true" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "A daily scheduled train timing is treated like a habitual fact, so no tense backshift occurs - R correctly explains A."
+      },
+      "navigation": { "next": "card_96_final_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_96_final_quiz2",
+      "card_slug": "card_96_final_quiz2",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 5,
+      "progress": { "current": 96, "total": 98 },
+      "quiz_payload": {
+        "question": "Consider the following statements regarding conversion of Interrogative sentences into Indirect Speech:\n1. Yes/No questions use 'if' or 'whether' as connectors.\n2. Wh-questions retain the question word but drop the auxiliary-subject inversion.\n3. The question mark is retained in indirect speech.\n4. The reporting verb 'said' changes to 'asked'.\nWhich of the statements given above are correct?",
+        "options": [
+          { "id": "A", "text": "1, 2 and 4 only" },
+          { "id": "B", "text": "1, 2 and 3 only" },
+          { "id": "C", "text": "2, 3 and 4 only" },
+          { "id": "D", "text": "All four" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 3 is wrong - the question mark is removed and replaced with a full stop in indirect speech."
+      },
+      "navigation": { "next": "card_97_final_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_97_final_quiz3",
+      "card_slug": "card_97_final_quiz3",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 5,
+      "progress": { "current": 97, "total": 98 },
+      "quiz_payload": {
+        "question": "SBI PO Level - Spot the error: 'The manager insisted that all employees must submitted their reports by evening.' (A) The manager insisted / (B) that all employees must submitted / (C) their reports by evening / (D) No error",
+        "options": [
+          { "id": "A", "text": "The manager insisted" },
+          { "id": "B", "text": "that all employees must submitted" },
+          { "id": "C", "text": "their reports by evening" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "After the modal 'must', the base form of the verb is used, not the past participle. Correct: 'must submit'."
+      },
+      "navigation": { "next": "card_98_trophy", "button_text": "Claim Your Trophy ➔" }
+    },
+    {
+      "card_id": "card_98_trophy",
+      "card_slug": "card_98_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 5,
+      "progress": { "current": 98, "total": 98 },
+      "milestone_payload": {
+        "title": "CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Direct & Indirect Speech (Narration) - Complete with SBI PO Error Detection",
+        "xp_earned": 700,
+        "milestone_progress": "13/13 Modules Complete - Chapter 100%",
+        "motivational_quote": "Raju, ab tum Narration ke poore Officer-level master ho! Pronoun, Tense, Time-Place, Modals, sabhi Sentence Types aur SBI PO Error Detection - sab kuch pakka hai. Ab exam mein ye chapter tumhara sabse strong scoring area banega!"
+      },
+      "navigation": { "next": null, "button_text": "Chapter Complete 🎉" }
+    }
+  ]
+}
