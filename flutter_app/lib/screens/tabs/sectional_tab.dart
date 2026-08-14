@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SectionalTab extends StatefulWidget {
   final Map<String, dynamic> sectionalData;
@@ -19,27 +20,54 @@ class SectionalTab extends StatefulWidget {
 }
 
 class _SectionalTabState extends State<SectionalTab> {
-  late Map<String, dynamic> _liveData;
+  Map<String, dynamic> _liveData = {};
   String? _selectedExamPanel;
   bool _isLoading = false;
 
   @override
   void initState() {
     super.initState();
-    _liveData = Map<String, dynamic>.from(widget.sectionalData);
-    _selectFirstKey();
-    _fetchLiveGitHubData();
+    _loadFromDiskAndFetch();
   }
 
   @override
   void didUpdateWidget(covariant SectionalTab oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (widget.sectionalData.isNotEmpty) {
+    // Sirf tab update karein agar liveData abhi tak empty ho
+    if (widget.sectionalData.isNotEmpty && _liveData.isEmpty) {
       setState(() {
         _liveData = Map<String, dynamic>.from(widget.sectionalData);
         _selectFirstKey();
       });
     }
+  }
+
+  // 1️⃣ Pehle Disk Storage se padho (0ms instant load), fir background live fetch
+  Future<void> _loadFromDiskAndFetch() async {
+    final prefs = await SharedPreferences.getInstance();
+    final String? savedJson = prefs.getString('persistent_sectional_data_json');
+
+    if (savedJson != null && savedJson.isNotEmpty) {
+      try {
+        final decoded = jsonDecode(savedJson);
+        if (decoded is Map && mounted) {
+          setState(() {
+            _liveData = Map<String, dynamic>.from(decoded);
+            _selectFirstKey();
+          });
+        }
+      } catch (_) {}
+    }
+
+    if (_liveData.isEmpty && widget.sectionalData.isNotEmpty) {
+      setState(() {
+        _liveData = Map<String, dynamic>.from(widget.sectionalData);
+        _selectFirstKey();
+      });
+    }
+
+    // Background live cloud sync
+    _fetchLiveGitHubData();
   }
 
   void _selectFirstKey() {
@@ -50,9 +78,11 @@ class _SectionalTabState extends State<SectionalTab> {
     }
   }
 
-  // 🚀 DIRECT CLOUD SYNC (Bypass Cache With Timestamp)
+  // 🚀 DIRECT GITHUB FETCHER + PERMANENT DISK SAVE
   Future<void> _fetchLiveGitHubData() async {
+    if (!mounted) return;
     setState(() => _isLoading = true);
+
     final int ts = DateTime.now().millisecondsSinceEpoch;
     final List<String> urls = [
       "https://raw.githubusercontent.com/zxcty54/quiz/main/sectional_data.json?t=$ts",
@@ -71,6 +101,10 @@ class _SectionalTabState extends State<SectionalTab> {
               _selectFirstKey();
               _isLoading = false;
             });
+
+            // 💾 Phone ke permanent disk storage mein save
+            final prefs = await SharedPreferences.getInstance();
+            await prefs.setString('persistent_sectional_data_json', jsonEncode(parsed));
             return;
           }
         }
@@ -182,7 +216,7 @@ class _SectionalTabState extends State<SectionalTab> {
                 style: TextStyle(color: Colors.grey, fontSize: 12)),
             const SizedBox(height: 14),
 
-            // 🚀 FULLY DYNAMIC GRID (Jitne GitHub pe honge sabka card auto banega)
+            // 🚀 FULLY DYNAMIC GRID
             GridView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
