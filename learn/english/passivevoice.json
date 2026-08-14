@@ -1,0 +1,1392 @@
+
+{
+  "topic_id": "eng_gram_passive_voice_sbi_po",
+  "topic_title": "Passive Voice in English Grammar + SBI PO Level Error Detection",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE", "SBI PO/Bank PO"],
+  "total_cards": 79,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 79 },
+      "intro_payload": {
+        "title": "Passive Voice Mastery",
+        "subtitle": "All Tenses + Modals + Special Cases + SBI PO Error Detection",
+        "icon": "🔄",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE", "SBI PO/Bank PO"],
+        "learning_outcomes": [
+          "Understand Object-to-Subject shift (BSEB's 'Karma Vachya' terminology)",
+          "Master exact Passive Voice formula across all convertible tenses",
+          "Know which tenses CANNOT be converted to Passive Voice (hidden exception)",
+          "Convert Imperative, Interrogative & two-object sentences correctly",
+          "Handle Infinitives, Gerunds & Impersonal Passive ('It is said that...')",
+          "Crack SBI PO / Bank PO level Error Detection on be-verb, V3 form & preposition traps"
+        ]
+      },
+      "navigation": { "next": "card_02_kitchen_example", "button_text": "Start Learning ➔" }
+    },
+    {
+      "card_id": "card_02_kitchen_example",
+      "card_slug": "card_02_kitchen_example",
+      "type": "chat",
+      "concept_id": "foundation_passive_intro",
+      "level": 1,
+      "progress": { "current": 2, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho tumhari mummy kitchen mein khana bana rahi hai. Tum do tarike se bol sakte ho: 'Mummy cooked the food' YA 'The food was cooked by mummy'. Dono ka matlab same hai, bas focus badal gaya. Batao dono sentence mein kya farak dikha?" },
+        { "speaker": "raju", "text": "Sir pehले mein 'Mummy' sabसे pehle aa rahi hai, lekin doosre mein 'food' pehले aa gaya! Aisa kyun?" }
+      ],
+      "navigation": { "next": "card_03_focus_shift", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_focus_shift",
+      "card_slug": "card_03_focus_shift",
+      "type": "chat",
+      "concept_id": "foundation_passive_intro",
+      "level": 1,
+      "progress": { "current": 3, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut badhiya observation! Yahi toh Passive Voice ki poori kahani hai. Universal rule yaad rakho: Jab Object (jispe action hua) ko sentence ka Subject bana diya jaaye, aur asli Doer ko peeche 'by' ke saath ya bilkul hata diya jaaye, use Passive Voice kehte hain. 'The food was cooked by mummy' mein 'food' (jo pehले Object tha) ab naya Subject ban gaya hai." },
+        { "speaker": "raju", "text": "Achha! Toh Object ko age laकर Subject banाना hi Passive Voice hai? Matlab jo pehле peeche tha wo aage aa gaya!" }
+      ],
+      "navigation": { "next": "card_04_karma_vachya", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_karma_vachya",
+      "card_slug": "card_04_karma_vachya",
+      "type": "chat",
+      "concept_id": "foundation_passive_intro",
+      "level": 1,
+      "progress": { "current": 4, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Bihar SCERT/BSEB ki grammar books mein Passive Voice ko 'Karma Vachya' (कर्म वाच्य) kaha jaata hai - kyunki isme 'Karma' (Object/Receiver) hi sentence ka star ban jaata hai, hero nahi. Yaad hai humne pichले chapter mein 'Karta Vachya' (Active Voice) seekha tha? BPSC TRE mein dono terms ko cross-question karte hain." },
+        { "speaker": "raju", "text": "Yaad hai sir! Karta Vachya matlab Doer wala Subject, aur Karma Vachya matlab Object wala Subject - simple hai ye toh!" }
+      ],
+      "navigation": { "next": "card_05_by_agent_drop", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_by_agent_drop",
+      "card_slug": "card_05_by_agent_drop",
+      "type": "chat",
+      "concept_id": "foundation_passive_intro",
+      "level": 1,
+      "progress": { "current": 5, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Ruko, ek important cheez batata hoon. Har Passive sentence mein 'by + Doer' likhna ZAROORI nahi hai! Jab Doer koi general/unknown/obvious insaan ho, toh use hata dete hain. Jaise: 'Rice is grown in Bihar' - yahaan 'by farmers' likhने ki zaroorat nahi kyunki ye obvious hai." },
+        { "speaker": "raju", "text": "Ohh! Toh agar pata hi hai ki kisने kiya (jaise farmers ne rice ugाया), toh 'by' likhने ka koi matlab nahi - samझ gaya sir!" }
+      ],
+      "navigation": { "next": "card_06_guess_m1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_06_guess_m1",
+      "card_slug": "card_06_guess_m1",
+      "type": "guess",
+      "concept_id": "foundation_passive_intro",
+      "level": 1,
+      "progress": { "current": 6, "total": 79 },
+      "guess_payload": {
+        "question": "Guess karo - 'The Ramayana was written by Valmiki.' Is sentence mein Passive Subject (jo pehле Object tha) kya hai?",
+        "options": [
+          { "id": "A", "text": "Valmiki" },
+          { "id": "B", "text": "Written" },
+          { "id": "C", "text": "The Ramayana" },
+          { "id": "D", "text": "By" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'The Ramayana' asli Object tha (jo likha gaya), aur Passive Voice mein wo hi naya Subject ban gaya hai. 'Valmiki' asli Doer hai jo 'by' ke saath peeche chala gaya."
+      },
+      "navigation": { "next": "card_07_quiz1_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz1_m1",
+      "card_slug": "card_07_quiz1_m1",
+      "type": "quiz",
+      "concept_id": "foundation_passive_intro",
+      "level": 1,
+      "progress": { "current": 7, "total": 79 },
+      "quiz_payload": {
+        "question": "Passive Voice ki sabसे basic pehchan kya hai?",
+        "options": [
+          { "id": "A", "text": "Subject khud action karta hai" },
+          { "id": "B", "text": "Object ko Subject bana diya jaata hai, aur Doer peeche chala jaata hai" },
+          { "id": "C", "text": "Sentence hamesha question banta hai" },
+          { "id": "D", "text": "Verb hamesha V1 mein hoti hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Passive Voice mein asli Object naya Subject ban jaata hai, aur asli Doer 'by' ke saath peeche chala jaata hai ya hata diya jaata hai."
+      },
+      "navigation": { "next": "card_08_quiz2_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_quiz2_m1",
+      "card_slug": "card_08_quiz2_m1",
+      "type": "quiz",
+      "concept_id": "foundation_passive_intro",
+      "level": 1,
+      "progress": { "current": 8, "total": 79 },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE Trap: BSEB textbooks mein Passive Voice ko kis naam se pukara jaata hai?",
+        "options": [
+          { "id": "A", "text": "Karta Vachya" },
+          { "id": "B", "text": "Karma Vachya" },
+          { "id": "C", "text": "Bhava Vachya" },
+          { "id": "D", "text": "Sankhya Vachya" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "BSEB textbooks mein Passive Voice ko 'Karma Vachya' kehते hain kyunki 'Karma' (Object) sentence ka Subject ban jaata hai."
+      },
+      "navigation": { "next": "card_09_quiz3_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_09_quiz3_m1",
+      "card_slug": "card_09_quiz3_m1",
+      "type": "quiz",
+      "concept_id": "foundation_passive_intro",
+      "level": 1,
+      "progress": { "current": 9, "total": 79 },
+      "quiz_payload": {
+        "question": "'This bridge was built in 1990.' - Is sentence mein 'by' + Doer kyun nahi likha gaya?",
+        "options": [
+          { "id": "A", "text": "Kyunki sentence galat hai" },
+          { "id": "B", "text": "Kyunki Doer/builder ka naam unknown ya important nahi hai" },
+          { "id": "C", "text": "Kyunki Passive Voice mein 'by' kabhi nahi lagता" },
+          { "id": "D", "text": "Kyunki ye Active Voice hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Jab Doer unknown ho ya important na ho, tab 'by + Doer' hata dete hain. Yahaan builder ka naam batana zaroori nahi samझा gaya."
+      },
+      "navigation": { "next": "card_10_milestone_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_10_milestone_m1",
+      "card_slug": "card_10_milestone_m1",
+      "type": "milestone",
+      "concept_id": "foundation_passive_intro",
+      "level": 1,
+      "progress": { "current": 10, "total": 79 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Passive Voice - Foundation",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/9 Clear",
+        "motivational_quote": "Foundation pakki! Ab chalo dekhते hain exact Passive formula kaise banता hai!"
+      },
+      "navigation": { "next": "card_11_formula_structure", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_11_formula_structure",
+      "card_slug": "card_11_formula_structure",
+      "type": "chat",
+      "concept_id": "passive_formula",
+      "level": 2,
+      "progress": { "current": 11, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab poora formula samझते hain. Active: Subject + Verb + Object. Passive: Object (naya Subject) + be verb + V3 (Past Participle) + by + Doer (naya object, agar zaroorat ho). Sabसे important part yaad rakho - main verb hamesha V3 (third form) mein jaayegi, aur 'be' verb (is/am/are/was/were/been/being) tense ke hisaab se badalता hai." },
+        { "speaker": "raju", "text": "Sir, matlab jo verb pehле V1 ya V2 mein thi, wo Passive mein hamesha V3 ban jaayegi? Aur ek naya 'be' verb bhi add hoga?" }
+      ],
+      "navigation": { "next": "card_12_be_verb_tense", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_be_verb_tense",
+      "card_slug": "card_12_be_verb_tense",
+      "type": "chat",
+      "concept_id": "passive_formula",
+      "level": 2,
+      "progress": { "current": 12, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab yahin sabसे bada twist hai - konsa 'be' verb use karna hai, ye Active sentence ke ORIGINAL tense se decide hota hai, na ki Passive ke naye Subject se. Jaise 'Raju eats mango' (Simple Present) → be verb 'is/am/are' family se aayega: 'Mango is eaten by Raju.' Active tense hi Passive ke be-verb ki family decide karta hai." },
+        { "speaker": "raju", "text": "Achha! Toh pehле dekhна paडेga original sentence kaunse tense mein hai, phir usी tense ka 'be' verb use karна hai - ye toh bada useful trick hai!" }
+      ],
+      "navigation": { "next": "card_13_pronoun_case_change", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_pronoun_case_change",
+      "card_slug": "card_13_pronoun_case_change",
+      "type": "chat",
+      "concept_id": "passive_formula",
+      "level": 2,
+      "progress": { "current": 13, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Tumne notice kiya? Jab Doer 'by' ke baad jaata hai, agar wo pronoun hai toh uska CASE badal jaata hai! Jaise: 'I' → 'me', 'he' → 'him', 'she' → 'her', 'we' → 'us', 'they' → 'them', 'who' → 'whom'. 'I wrote a letter' → 'A letter was written by me' (I nahi, me aayega)." },
+        { "speaker": "raju", "text": "Hain?? Ye toh naya trap hai sir! Maine toh socha tha 'by I' likhते, but 'by me' sahi hai - ye toh exam mein zaroor pakड़ेंगे!" }
+      ],
+      "navigation": { "next": "card_14_guess_m2", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_14_guess_m2",
+      "card_slug": "card_14_guess_m2",
+      "type": "guess",
+      "concept_id": "passive_formula",
+      "level": 2,
+      "progress": { "current": 14, "total": 79 },
+      "guess_payload": {
+        "question": "Guess karo - 'She helps him.' ka sahi Passive form kya hoga?",
+        "options": [
+          { "id": "A", "text": "He is helped by she." },
+          { "id": "B", "text": "He is helped by her." },
+          { "id": "C", "text": "Him is helped by her." },
+          { "id": "D", "text": "He was helped by her." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'him' (Object) naya Subject 'He' banता hai, aur 'she' (Subject) Doer position mein jaने par 'her' ban jaata hai (pronoun case change): 'He is helped by her.'"
+      },
+      "navigation": { "next": "card_15_quiz1_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz1_m2",
+      "card_slug": "card_15_quiz1_m2",
+      "type": "quiz",
+      "concept_id": "passive_formula",
+      "level": 2,
+      "progress": { "current": 15, "total": 79 },
+      "quiz_payload": {
+        "question": "Passive Voice mein main verb hamesha kis form mein hoti hai?",
+        "options": [
+          { "id": "A", "text": "V1 (base form)" },
+          { "id": "B", "text": "V2 (past form)" },
+          { "id": "C", "text": "V3 (past participle)" },
+          { "id": "D", "text": "V-ing form" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Passive Voice ka formula hai: be verb + V3 (Past Participle). Verb hamesha V3 form mein hi rehती hai."
+      },
+      "navigation": { "next": "card_16_quiz2_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_quiz2_m2",
+      "card_slug": "card_16_quiz2_m2",
+      "type": "quiz",
+      "concept_id": "passive_formula",
+      "level": 2,
+      "progress": { "current": 16, "total": 79 },
+      "quiz_payload": {
+        "question": "'They wrote the book.' - Passive mein convert karो, sahi option chunо:",
+        "options": [
+          { "id": "A", "text": "The book was written by they." },
+          { "id": "B", "text": "The book was written by them." },
+          { "id": "C", "text": "The book is written by them." },
+          { "id": "D", "text": "The book written by them." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Original sentence Simple Past mein hai, isliye 'was' aayega. Aur 'they' pronoun case change hoकर 'them' ban jaata hai: 'The book was written by them.'"
+      },
+      "navigation": { "next": "card_17_quiz3_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_17_quiz3_m2",
+      "card_slug": "card_17_quiz3_m2",
+      "type": "quiz",
+      "concept_id": "passive_formula",
+      "level": 2,
+      "progress": { "current": 17, "total": 79 },
+      "quiz_payload": {
+        "question": "Passive Voice mein 'be' verb (is/am/are/was/were) ka tense kis cheez se decide hota hai?",
+        "options": [
+          { "id": "A", "text": "Naye Subject (jo pehले Object tha) se" },
+          { "id": "B", "text": "Active sentence ke ORIGINAL tense se" },
+          { "id": "C", "text": "Sentence ki length se" },
+          { "id": "D", "text": "'by' ke baad wale word se" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'be' verb ka tense hamesha Active sentence ke original tense ke hisaab se decide hota hai - Simple Present ke liye is/am/are, Simple Past ke liye was/were, aadi."
+      },
+      "navigation": { "next": "card_18_milestone_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_18_milestone_m2",
+      "card_slug": "card_18_milestone_m2",
+      "type": "milestone",
+      "concept_id": "passive_formula",
+      "level": 2,
+      "progress": { "current": 18, "total": 79 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔑",
+        "completed_topic": "Passive Voice - Formula & Structure",
+        "xp_earned": 55,
+        "milestone_progress": "Module 2/9 Clear",
+        "motivational_quote": "Formula pakka ho gaya! Ab dekhते hain Present tenses mein Passive kaise banता hai!"
+      },
+      "navigation": { "next": "card_19_simple_present_passive", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_19_simple_present_passive",
+      "card_slug": "card_19_simple_present_passive",
+      "type": "chat",
+      "concept_id": "passive_present_tenses",
+      "level": 3,
+      "progress": { "current": 19, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab tense-by-tense Passive dekhते hain. Simple Present: Active - 'Raju writes a letter.' → Passive - 'A letter is written by Raju.' Formula: Object + is/am/are + V3 + by + Subject. 'is' singular ke liye, 'are' plural ke liye - naya Subject ki Number dekhкर decide karo." },
+        { "speaker": "raju", "text": "Achha, matlab ab check karна hoga naya Subject (jo Object tha) singular hai ya plural, phir is/are decide karna hai?" }
+      ],
+      "navigation": { "next": "card_20_present_continuous_passive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_present_continuous_passive",
+      "card_slug": "card_20_present_continuous_passive",
+      "type": "chat",
+      "concept_id": "passive_present_tenses",
+      "level": 3,
+      "progress": { "current": 20, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab Present Continuous: Active - 'Raju is writing a letter.' → Passive - 'A letter is being written by Raju.' Formula: Object + is/am/are + BEING + V3. Dekho, ek extra word 'being' aa gaya - ye continuous action dikhाने ke liye zaroori hai." },
+        { "speaker": "raju", "text": "Ohh 'being' bhi aata hai! Ye toh naya word hai, matlab continuous wale sentences mein hamesha 'being' lagाना paडेga?" }
+      ],
+      "navigation": { "next": "card_21_present_perfect_passive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_present_perfect_passive",
+      "card_slug": "card_21_present_perfect_passive",
+      "type": "chat",
+      "concept_id": "passive_present_tenses",
+      "level": 3,
+      "progress": { "current": 21, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan, continuous tenses mein hamesha 'being' aata hai. Ab Present Perfect: Active - 'Raju has written a letter.' → Passive - 'A letter has been written by Raju.' Formula: Object + has/have + BEEN + V3. Dhyan do 'been' aaya hai (being nahi) - ye perfect tenses ki pehchan hai." },
+        { "speaker": "raju", "text": "Sir 'being' aur 'been' mein confuse ho jaata hoon - 'being' continuous ke liye, 'been' perfect ke liye, sahi samझा?" }
+      ],
+      "navigation": { "next": "card_22_present_perfect_continuous_exception", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_22_present_perfect_continuous_exception",
+      "card_slug": "card_22_present_perfect_continuous_exception",
+      "type": "chat",
+      "concept_id": "passive_present_tenses",
+      "level": 3,
+      "progress": { "current": 22, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab yahin sabसे bada exception suno jo exam mein pucha jaata hai. Present Perfect Continuous - jaise 'Raju has been writing a letter for two hours' - iska koई STANDARD Passive form NAHI banता! Kyunki formula banega 'has been being written' jo bahut awkward aur grammatically avoid kiya jaata hai. Isliye is tense ko generally NOT converted maana jaata hai." },
+        { "speaker": "raju", "text": "Hain?? Seriously sir? Matlab kuch tenses aise bhi hain jo Passive mein convert hi nahi hote? Ye toh bada bada trap ban sakता hai exam mein!" }
+      ],
+      "navigation": { "next": "card_23_guess_m3", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_23_guess_m3",
+      "card_slug": "card_23_guess_m3",
+      "type": "guess",
+      "concept_id": "passive_present_tenses",
+      "level": 3,
+      "progress": { "current": 23, "total": 79 },
+      "guess_payload": {
+        "question": "Guess karo - 'The teacher is checking the copies.' ka sahi Passive form kya hoga?",
+        "options": [
+          { "id": "A", "text": "The copies are checked by the teacher." },
+          { "id": "B", "text": "The copies are being checked by the teacher." },
+          { "id": "C", "text": "The copies has been checked by the teacher." },
+          { "id": "D", "text": "The copies is checking by the teacher." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Original sentence Present Continuous mein hai, isliye Passive formula hai 'are + being + V3': 'The copies are being checked by the teacher.'"
+      },
+      "navigation": { "next": "card_24_quiz1_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_24_quiz1_m3",
+      "card_slug": "card_24_quiz1_m3",
+      "type": "quiz",
+      "concept_id": "passive_present_tenses",
+      "level": 3,
+      "progress": { "current": 24, "total": 79 },
+      "quiz_payload": {
+        "question": "'Mummy cooks food daily.' - Sahi Simple Present Passive chunо:",
+        "options": [
+          { "id": "A", "text": "Food cooks by mummy daily." },
+          { "id": "B", "text": "Food is cooked by mummy daily." },
+          { "id": "C", "text": "Food was cooked by mummy daily." },
+          { "id": "D", "text": "Food is cooking by mummy daily." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Simple Present Passive formula hai 'is/am/are + V3': 'Food is cooked by mummy daily.'"
+      },
+      "navigation": { "next": "card_25_quiz2_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_25_quiz2_m3",
+      "card_slug": "card_25_quiz2_m3",
+      "type": "quiz",
+      "concept_id": "passive_present_tenses",
+      "level": 3,
+      "progress": { "current": 25, "total": 79 },
+      "quiz_payload": {
+        "question": "'She has completed the project.' - Sahi Present Perfect Passive chunо:",
+        "options": [
+          { "id": "A", "text": "The project has been completed by her." },
+          { "id": "B", "text": "The project has being completed by her." },
+          { "id": "C", "text": "The project is completed by her." },
+          { "id": "D", "text": "The project had been completed by her." }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Present Perfect Passive formula hai 'has/have + been + V3': 'The project has been completed by her.'"
+      },
+      "navigation": { "next": "card_26_quiz3_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_26_quiz3_m3",
+      "card_slug": "card_26_quiz3_m3",
+      "type": "quiz",
+      "concept_id": "passive_present_tenses",
+      "level": 3,
+      "progress": { "current": 26, "total": 79 },
+      "quiz_payload": {
+        "question": "Present Perfect Continuous ('has/have been + V-ing') tense ko Passive Voice mein kyun generally convert NAHI kiya jaata?",
+        "options": [
+          { "id": "A", "text": "Kyunki ismein Object hi nahi hota" },
+          { "id": "B", "text": "Kyunki formula bahut awkward ban jaata hai (has been being + V3)" },
+          { "id": "C", "text": "Kyunki ye tense exist hi nahi karta" },
+          { "id": "D", "text": "Kyunki ismein 'by' nahi lagता" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Present Perfect Continuous ko Passive banाने par 'has been being + V3' jaisa awkward structure बनता hai, jo standard English mein avoid kiya jaata hai - isliye ye tense generally Passive mein convert nahi hota."
+      },
+      "navigation": { "next": "card_27_milestone_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_27_milestone_m3",
+      "card_slug": "card_27_milestone_m3",
+      "type": "milestone",
+      "concept_id": "passive_present_tenses",
+      "level": 3,
+      "progress": { "current": 27, "total": 79 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "☀️",
+        "completed_topic": "Passive Voice - Present Tenses",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/9 Clear",
+        "motivational_quote": "Present tense Passive clear! Ab chalte hain Past Tenses ki taraf!"
+      },
+      "navigation": { "next": "card_28_simple_past_passive", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_28_simple_past_passive",
+      "card_slug": "card_28_simple_past_passive",
+      "type": "chat",
+      "concept_id": "passive_past_tenses",
+      "level": 4,
+      "progress": { "current": 28, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Past family. Simple Past: Active - 'Raju wrote a letter.' → Passive - 'A letter was written by Raju.' Formula: Object + was/were + V3. 'was' singular ke liye, 'were' plural ke liye - bilkul present wale pattern jaisa, bas 'is/are' ki jagah 'was/were'." },
+        { "speaker": "raju", "text": "Achha, toh bas 'is/am/are' ko 'was/were' se replace karна hai, baaki formula same rehता hai?" }
+      ],
+      "navigation": { "next": "card_29_past_continuous_passive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_29_past_continuous_passive",
+      "card_slug": "card_29_past_continuous_passive",
+      "type": "chat",
+      "concept_id": "passive_past_tenses",
+      "level": 4,
+      "progress": { "current": 29, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Past Continuous: Active - 'Raju was writing a letter.' → Passive - 'A letter was being written by Raju.' Formula: Object + was/were + BEING + V3. Yahaan bhi 'being' aata hai kyunki continuous action hai - bas 'is/are being' ki jagah 'was/were being'." },
+        { "speaker": "raju", "text": "Samझ gaya sir! Pattern toh same hai bas tense ke hisaab se 'is/am/are/was/were' badalते rehते hain." }
+      ],
+      "navigation": { "next": "card_30_past_perfect_passive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_30_past_perfect_passive",
+      "card_slug": "card_30_past_perfect_passive",
+      "type": "chat",
+      "concept_id": "passive_past_tenses",
+      "level": 4,
+      "progress": { "current": 30, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Sahi pakड़ा! Past Perfect: Active - 'Raju had written a letter before dinner.' → Passive - 'A letter had been written by Raju before dinner.' Formula: Object + HAD + BEEN + V3. Sabसे accha part - 'had' hamesha same rehта hai chahe Subject singular ho ya plural, isliye ye tense yaad karна sabसे easy hai." },
+        { "speaker": "raju", "text": "Wah, ye toh easy hai - 'had been' fix hai, koi confusion hi nahi singular-plural ka!" }
+      ],
+      "navigation": { "next": "card_31_past_perfect_continuous_exception", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_31_past_perfect_continuous_exception",
+      "card_slug": "card_31_past_perfect_continuous_exception",
+      "type": "chat",
+      "concept_id": "passive_past_tenses",
+      "level": 4,
+      "progress": { "current": 31, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Yahin sabसे bada twist phir se suno - Past Perfect Continuous ('had been + V-ing') ko bhi standard Passive mein convert NAHI kiya jaata, exactly waise hi jaise Present Perfect Continuous ke saath hua tha. Formula banेगा 'had been being + V3' jo awkward hai, isliye exam mein ye considered NON-CONVERTIBLE hai." },
+        { "speaker": "raju", "text": "Achha toh dono 'Perfect Continuous' wale tenses (Present aur Past) Passive mein convert nahi hote - ye pattern yaad rakh lunga sir!" }
+      ],
+      "navigation": { "next": "card_32_guess_m4", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_32_guess_m4",
+      "card_slug": "card_32_guess_m4",
+      "type": "guess",
+      "concept_id": "passive_past_tenses",
+      "level": 4,
+      "progress": { "current": 32, "total": 79 },
+      "guess_payload": {
+        "question": "Guess karo - 'The workers had completed the bridge before the flood.' ka sahi Passive form kya hoga?",
+        "options": [
+          { "id": "A", "text": "The bridge was completed by the workers before the flood." },
+          { "id": "B", "text": "The bridge had been completed by the workers before the flood." },
+          { "id": "C", "text": "The bridge has been completed by the workers before the flood." },
+          { "id": "D", "text": "The bridge had being completed by the workers before the flood." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Past Perfect Passive formula hai 'had + been + V3': 'The bridge had been completed by the workers before the flood.'"
+      },
+      "navigation": { "next": "card_33_quiz1_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_33_quiz1_m4",
+      "card_slug": "card_33_quiz1_m4",
+      "type": "quiz",
+      "concept_id": "passive_past_tenses",
+      "level": 4,
+      "progress": { "current": 33, "total": 79 },
+      "quiz_payload": {
+        "question": "'The police caught the thief.' - Sahi Simple Past Passive chunо:",
+        "options": [
+          { "id": "A", "text": "The thief was caught by the police." },
+          { "id": "B", "text": "The thief is caught by the police." },
+          { "id": "C", "text": "The thief were caught by the police." },
+          { "id": "D", "text": "The thief has caught by the police." }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Thief' singular hai aur original tense Simple Past hai, isliye 'was + V3': 'The thief was caught by the police.'"
+      },
+      "navigation": { "next": "card_34_quiz2_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_34_quiz2_m4",
+      "card_slug": "card_34_quiz2_m4",
+      "type": "quiz",
+      "concept_id": "passive_past_tenses",
+      "level": 4,
+      "progress": { "current": 34, "total": 79 },
+      "quiz_payload": {
+        "question": "'They were building a house.' - Sahi Past Continuous Passive chunо:",
+        "options": [
+          { "id": "A", "text": "A house was built by them." },
+          { "id": "B", "text": "A house was being built by them." },
+          { "id": "C", "text": "A house is being built by them." },
+          { "id": "D", "text": "A house were being built by them." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'House' singular hai, original tense Past Continuous hai: 'was + being + V3': 'A house was being built by them.'"
+      },
+      "navigation": { "next": "card_35_quiz3_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_35_quiz3_m4",
+      "card_slug": "card_35_quiz3_m4",
+      "type": "quiz",
+      "concept_id": "passive_past_tenses",
+      "level": 4,
+      "progress": { "current": 35, "total": 79 },
+      "quiz_payload": {
+        "question": "Past Perfect Passive ka fixed auxiliary combination kya hai jo Subject ke Number se kabhi nahi badalता?",
+        "options": [
+          { "id": "A", "text": "was/were" },
+          { "id": "B", "text": "had been" },
+          { "id": "C", "text": "has been" },
+          { "id": "D", "text": "is being" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Past Perfect Passive mein 'had been' hamesha same rehता hai, chahe Subject singular ho ya plural."
+      },
+      "navigation": { "next": "card_36_milestone_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_36_milestone_m4",
+      "card_slug": "card_36_milestone_m4",
+      "type": "milestone",
+      "concept_id": "passive_past_tenses",
+      "level": 4,
+      "progress": { "current": 36, "total": 79 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌙",
+        "completed_topic": "Passive Voice - Past Tenses",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/9 Clear",
+        "motivational_quote": "Past tense bhi clear! Ab chalo Future Tenses aur unke exceptions dekhते hain!"
+      },
+      "navigation": { "next": "card_37_simple_future_passive", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_37_simple_future_passive",
+      "card_slug": "card_37_simple_future_passive",
+      "type": "chat",
+      "concept_id": "passive_future_tenses",
+      "level": 5,
+      "progress": { "current": 37, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Future family. Simple Future: Active - 'Raju will write a letter.' → Passive - 'A letter will be written by Raju.' Formula: Object + WILL BE + V3. Yahaan bhi koई singular-plural ka jhanjhat nahi - 'will be' hamesha fix rehта hai." },
+        { "speaker": "raju", "text": "Achha, ye toh easy laग raha hai sir - 'will be' bas fixed hai sabके saath!" }
+      ],
+      "navigation": { "next": "card_38_future_perfect_passive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_38_future_perfect_passive",
+      "card_slug": "card_38_future_perfect_passive",
+      "type": "chat",
+      "concept_id": "passive_future_tenses",
+      "level": 5,
+      "progress": { "current": 38, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul! Ab Future Perfect: Active - 'Raju will have written the letter by evening.' → Passive - 'The letter will have been written by Raju by evening.' Formula: Object + WILL HAVE BEEN + V3. Ye bhi fixed combination hai, chahe Subject koई bhi ho." },
+        { "speaker": "raju", "text": "Sir ye 'will have been' thoड़ा lamba lag raha hai but samझ aa gaya - bas fix combination yaad rakhна hai!" }
+      ],
+      "navigation": { "next": "card_39_future_continuous_perfect_continuous_exception", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_39_future_continuous_perfect_continuous_exception",
+      "card_slug": "card_39_future_continuous_perfect_continuous_exception",
+      "type": "chat",
+      "concept_id": "passive_future_tenses",
+      "level": 5,
+      "progress": { "current": 39, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "BPSC ka favorite trap suno - Future Continuous ('will be + V-ing') aur Future Perfect Continuous ('will have been + V-ing') - dono ka bhi NO standard Passive form hota hai! Wajah wahi hai - 'will be being + V3' aur 'will have been being + V3' jaise structures itne awkward hain ki English mein avoid kiye jaate hain. Toh ab total CHAAR tenses ho gaye jo Passive mein convert nahi hote - Present Perfect Continuous, Past Perfect Continuous, Future Continuous, aur Future Perfect Continuous." },
+        { "speaker": "raju", "text": "Ye to exam me pakka confuse karega sir! Toh matlab jitne bhi 'Continuous + Perfect' combination hai ya 'Continuous' jo Future mein hai, wo Passive nahi ban sakते?" }
+      ],
+      "navigation": { "next": "card_40_guess_m5", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_40_guess_m5",
+      "card_slug": "card_40_guess_m5",
+      "type": "guess",
+      "concept_id": "passive_future_tenses",
+      "level": 5,
+      "progress": { "current": 40, "total": 79 },
+      "guess_payload": {
+        "question": "Guess karo - in mein se kaunse do tenses Passive Voice mein CONVERT NAHI hote (choose the pattern)?",
+        "options": [
+          { "id": "A", "text": "Simple Present aur Simple Past" },
+          { "id": "B", "text": "Present Perfect Continuous aur Future Continuous" },
+          { "id": "C", "text": "Present Continuous aur Past Continuous" },
+          { "id": "D", "text": "Simple Future aur Future Perfect" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Present Perfect Continuous aur Future Continuous (Perfect Continuous tenses + Future Continuous) ko Passive mein convert nahi karте, kyunki unka structure grammatically awkward ban jaata hai."
+      },
+      "navigation": { "next": "card_41_quiz1_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_41_quiz1_m5",
+      "card_slug": "card_41_quiz1_m5",
+      "type": "quiz",
+      "concept_id": "passive_future_tenses",
+      "level": 5,
+      "progress": { "current": 41, "total": 79 },
+      "quiz_payload": {
+        "question": "'The committee will announce the results.' - Sahi Simple Future Passive chunо:",
+        "options": [
+          { "id": "A", "text": "The results will announce by the committee." },
+          { "id": "B", "text": "The results will be announced by the committee." },
+          { "id": "C", "text": "The results will been announced by the committee." },
+          { "id": "D", "text": "The results are announced by the committee." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Simple Future Passive formula hai 'will be + V3': 'The results will be announced by the committee.'"
+      },
+      "navigation": { "next": "card_42_quiz2_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_42_quiz2_m5",
+      "card_slug": "card_42_quiz2_m5",
+      "type": "quiz",
+      "concept_id": "passive_future_tenses",
+      "level": 5,
+      "progress": { "current": 42, "total": 79 },
+      "quiz_payload": {
+        "question": "'She will have finished the work by 6 PM.' - Sahi Future Perfect Passive chunо:",
+        "options": [
+          { "id": "A", "text": "The work will have been finished by her by 6 PM." },
+          { "id": "B", "text": "The work will be finished by her by 6 PM." },
+          { "id": "C", "text": "The work has been finished by her by 6 PM." },
+          { "id": "D", "text": "The work will has been finished by her by 6 PM." }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Future Perfect Passive formula hai 'will have been + V3': 'The work will have been finished by her by 6 PM.'"
+      },
+      "navigation": { "next": "card_43_quiz3_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_43_quiz3_m5",
+      "card_slug": "card_43_quiz3_m5",
+      "type": "quiz",
+      "concept_id": "passive_future_tenses",
+      "level": 5,
+      "progress": { "current": 43, "total": 79 },
+      "quiz_payload": {
+        "question": "Total kितने tenses hain jo generally Passive Voice mein convert NAHI kiye jaate?",
+        "options": [
+          { "id": "A", "text": "2" },
+          { "id": "B", "text": "3" },
+          { "id": "C", "text": "4" },
+          { "id": "D", "text": "6" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "4 tenses generally Passive mein convert nahi hote: Present Perfect Continuous, Past Perfect Continuous, Future Continuous, aur Future Perfect Continuous - inme awkward 'being' + 'been'/'be' combinations ban jaate hain."
+      },
+      "navigation": { "next": "card_44_milestone_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_44_milestone_m5",
+      "card_slug": "card_44_milestone_m5",
+      "type": "milestone",
+      "concept_id": "passive_future_tenses",
+      "level": 5,
+      "progress": { "current": 44, "total": 79 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🚀",
+        "completed_topic": "Passive Voice - Future Tenses & Exceptions",
+        "xp_earned": 65,
+        "milestone_progress": "Module 5/9 Clear",
+        "motivational_quote": "Saare convertible tenses aur exceptions clear! Ab Modals ka Passive dekhते hain!"
+      },
+      "navigation": { "next": "card_45_modal_passive", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_45_modal_passive",
+      "card_slug": "card_45_modal_passive",
+      "type": "chat",
+      "concept_id": "passive_modals",
+      "level": 6,
+      "progress": { "current": 45, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Modals ka Passive dekhते hain. Universal rule: Modal + BE + V3. Jaise: 'Raju can solve this puzzle.' → 'This puzzle can be solved by Raju.' 'Students must submit assignments.' → 'Assignments must be submitted by students.' Bas Modal ke turant baad 'be' laगाना hai, phir V3." },
+        { "speaker": "raju", "text": "Achha! Toh Modal ke saath bhi 'be' fixed hi rehта hai, singular-plural ka koई farak nahi paडता?" }
+      ],
+      "navigation": { "next": "card_46_modal_perfect_passive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_46_modal_perfect_passive",
+      "card_slug": "card_46_modal_perfect_passive",
+      "type": "chat",
+      "concept_id": "passive_modals",
+      "level": 6,
+      "progress": { "current": 46, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi, Modal + be kabhi nahi badalता! Ab Modal Perfect Passive dekhो: Modal + HAVE BEEN + V3. Jaise: 'He should have completed the work.' → 'The work should have been completed by him.' Ye past ke regret/possibility ko Passive mein dikhाने ka tarika hai." },
+        { "speaker": "raju", "text": "Sir ye 'have been' wala part toh humne pichले modules mein bhi dekha tha - matlab pattern repeat ho raha hai!" }
+      ],
+      "navigation": { "next": "card_47_guess_m6", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_47_guess_m6",
+      "card_slug": "card_47_guess_m6",
+      "type": "guess",
+      "concept_id": "passive_modals",
+      "level": 6,
+      "progress": { "current": 47, "total": 79 },
+      "guess_payload": {
+        "question": "Guess karo - 'You must follow the rules.' ka sahi Passive form kya hoga?",
+        "options": [
+          { "id": "A", "text": "The rules must be followed by you." },
+          { "id": "B", "text": "The rules must followed by you." },
+          { "id": "C", "text": "The rules must been followed by you." },
+          { "id": "D", "text": "The rules must be follow by you." }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Modal Passive formula hai 'Modal + be + V3': 'The rules must be followed by you.'"
+      },
+      "navigation": { "next": "card_48_quiz1_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_48_quiz1_m6",
+      "card_slug": "card_48_quiz1_m6",
+      "type": "quiz",
+      "concept_id": "passive_modals",
+      "level": 6,
+      "progress": { "current": 48, "total": 79 },
+      "quiz_payload": {
+        "question": "'She should have submitted the form.' - Sahi Passive chunо:",
+        "options": [
+          { "id": "A", "text": "The form should be submitted by her." },
+          { "id": "B", "text": "The form should have been submitted by her." },
+          { "id": "C", "text": "The form should has been submitted by her." },
+          { "id": "D", "text": "The form should submitted by her." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Modal Perfect Passive formula hai 'Modal + have been + V3': 'The form should have been submitted by her.'"
+      },
+      "navigation": { "next": "card_49_quiz2_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_49_quiz2_m6",
+      "card_slug": "card_49_quiz2_m6",
+      "type": "quiz",
+      "concept_id": "passive_modals",
+      "level": 6,
+      "progress": { "current": 49, "total": 79 },
+      "quiz_payload": {
+        "question": "Modal Passive ka universal formula kya hai?",
+        "options": [
+          { "id": "A", "text": "Modal + V3" },
+          { "id": "B", "text": "Modal + be + V3" },
+          { "id": "C", "text": "Modal + being + V3" },
+          { "id": "D", "text": "Modal + V1" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Modal Passive ka universal formula hai 'Modal + be + V3', jaise 'can be done', 'must be followed', 'will be sent'."
+      },
+      "navigation": { "next": "card_50_quiz3_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_50_quiz3_m6",
+      "card_slug": "card_50_quiz3_m6",
+      "type": "quiz",
+      "concept_id": "passive_modals",
+      "level": 6,
+      "progress": { "current": 50, "total": 79 },
+      "quiz_payload": {
+        "question": "'He must have informed the police.' - Sahi Passive chunо:",
+        "options": [
+          { "id": "A", "text": "The police must have been informed by him." },
+          { "id": "B", "text": "The police must be informed by him." },
+          { "id": "C", "text": "The police must has informed by him." },
+          { "id": "D", "text": "The police must have informed by him." }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Modal Perfect Passive: 'must + have been + V3': 'The police must have been informed by him.'"
+      },
+      "navigation": { "next": "card_51_milestone_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_51_milestone_m6",
+      "card_slug": "card_51_milestone_m6",
+      "type": "milestone",
+      "concept_id": "passive_modals",
+      "level": 6,
+      "progress": { "current": 51, "total": 79 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💪",
+        "completed_topic": "Passive Voice - Modals",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/9 Clear",
+        "motivational_quote": "Modals ka Passive bhi clear! Ab kuch special sentence types dekhते hain!"
+      },
+      "navigation": { "next": "card_52_imperative_passive", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_52_imperative_passive",
+      "card_slug": "card_52_imperative_passive",
+      "type": "chat",
+      "concept_id": "special_passive_cases",
+      "level": 7,
+      "progress": { "current": 52, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Imperative sentences ka Passive dekhते hain - ye alag pattern follow karta hai. Order/Request: 'Close the door.' → 'Let the door be closed.' Formula: Let + Object + BE + V3. Request wale sentence mein 'Please' hoता hai toh 'You are requested to' use karте hain: 'Please help me' → 'You are requested to help me.'" },
+        { "speaker": "raju", "text": "Achha! Toh normal order ke liye 'Let...be' formula, aur 'Please' wale request ke liye 'You are requested to' - dono alag hain?" }
+      ],
+      "navigation": { "next": "card_53_interrogative_passive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_53_interrogative_passive",
+      "card_slug": "card_53_interrogative_passive",
+      "type": "chat",
+      "concept_id": "special_passive_cases",
+      "level": 7,
+      "progress": { "current": 53, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab Interrogative (question) sentences ka Passive dekho. Yes/No question: 'Did Raju write the letter?' → 'Was the letter written by Raju?' - yahaan bhi 'Do/Does/Did' hata kar be-verb use karте hain. Wh-question: 'Who wrote this letter?' → 'By whom was this letter written?' - 'Who' Doer position mein tha toh 'by whom' ban jaata hai." },
+        { "speaker": "raju", "text": "Sir 'Who' se 'by whom' - ye toh naya twist hai! Matlab jab 'Who' Doer ho, toh Passive mein 'by whom' use karte hain?" }
+      ],
+      "navigation": { "next": "card_54_two_object_passive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_54_two_object_passive",
+      "card_slug": "card_54_two_object_passive",
+      "type": "chat",
+      "concept_id": "special_passive_cases",
+      "level": 7,
+      "progress": { "current": 54, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Ruko, ek aur important case dekhते hain - jab sentence mein DO Objects hon. Jaise: 'The teacher taught us grammar.' Yahaan 'us' (Indirect Object) aur 'grammar' (Direct Object) dono hain. Isko DO tarike se Passive bana sakते hain: 'We were taught grammar by the teacher.' YA 'Grammar was taught to us by the teacher.' Lekin exam mein PEHLA wala (Indirect Object ko Subject banाना) zyaादा preferred aur natural माना jaata hai." },
+        { "speaker": "raju", "text": "Ohh! Toh do Objects wale sentence mein do Passive ban sakते hain, but 'Indirect Object ko Subject banाना' zyaादा sahi maana jaata hai - ye toh naya point hai mere liye!" }
+      ],
+      "navigation": { "next": "card_55_causative_passive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_55_causative_passive",
+      "card_slug": "card_55_causative_passive",
+      "type": "chat",
+      "concept_id": "special_passive_cases",
+      "level": 7,
+      "progress": { "current": 55, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aakhri special case - Causative verbs (make/let/help) aur Perception verbs (see/hear/watch) ke saath ek chhota sa twist hai. Active mein: 'I saw him go.' / 'They made him work.' Jab inhe Passive banाते hain, toh bare infinitive (V1 bina 'to' ke) ke pehле 'to' add ho jaata hai: 'He was seen TO go.' / 'He was made TO work.' Ye chhota sa exception hai jo dhyan se yaad rakhна paडता hai." },
+        { "speaker": "raju", "text": "Achha, matlab Active mein 'to' nahi tha, lekin Passive banते hi 'to' add ho gaya? Ye toh sach mein exam mein trap ban sakता hai sir!" }
+      ],
+      "navigation": { "next": "card_56_guess_m7", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_56_guess_m7",
+      "card_slug": "card_56_guess_m7",
+      "type": "guess",
+      "concept_id": "special_passive_cases",
+      "level": 7,
+      "progress": { "current": 56, "total": 79 },
+      "guess_payload": {
+        "question": "Guess karo - 'Open the window.' ka sahi Passive form kya hoga?",
+        "options": [
+          { "id": "A", "text": "The window is opened." },
+          { "id": "B", "text": "Let the window be opened." },
+          { "id": "C", "text": "The window opens." },
+          { "id": "D", "text": "Let the window open." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Imperative (order) sentence ka Passive formula hai 'Let + Object + be + V3': 'Let the window be opened.'"
+      },
+      "navigation": { "next": "card_57_quiz1_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_57_quiz1_m7",
+      "card_slug": "card_57_quiz1_m7",
+      "type": "quiz",
+      "concept_id": "special_passive_cases",
+      "level": 7,
+      "progress": { "current": 57, "total": 79 },
+      "quiz_payload": {
+        "question": "'Who broke the window?' - Sahi Passive form chunо:",
+        "options": [
+          { "id": "A", "text": "By who was the window broken?" },
+          { "id": "B", "text": "By whom was the window broken?" },
+          { "id": "C", "text": "The window was broken by who?" },
+          { "id": "D", "text": "Whom broke the window?" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Who' jab Doer position mein hota hai aur Passive mein jaata hai, toh 'by whom' banता hai: 'By whom was the window broken?'"
+      },
+      "navigation": { "next": "card_58_quiz2_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_58_quiz2_m7",
+      "card_slug": "card_58_quiz2_m7",
+      "type": "quiz",
+      "concept_id": "special_passive_cases",
+      "level": 7,
+      "progress": { "current": 58, "total": 79 },
+      "quiz_payload": {
+        "question": "'The teacher gave us homework.' - Sabसे natural/preferred Passive form kaunसा hai?",
+        "options": [
+          { "id": "A", "text": "Homework was given to us by the teacher." },
+          { "id": "B", "text": "We were given homework by the teacher." },
+          { "id": "C", "text": "Us was given homework by the teacher." },
+          { "id": "D", "text": "Homework given us by the teacher." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Do-Object sentences mein Indirect Object ('us' → 'We') ko Subject banаना zyaादा natural/preferred maana jaata hai: 'We were given homework by the teacher.'"
+      },
+      "navigation": { "next": "card_59_quiz3_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_59_quiz3_m7",
+      "card_slug": "card_59_quiz3_m7",
+      "type": "quiz",
+      "concept_id": "special_passive_cases",
+      "level": 7,
+      "progress": { "current": 59, "total": 79 },
+      "quiz_payload": {
+        "question": "'They made him sign the papers.' - Sahi Passive form chunо (causative verb exception):",
+        "options": [
+          { "id": "A", "text": "He was made sign the papers." },
+          { "id": "B", "text": "He was made to sign the papers." },
+          { "id": "C", "text": "He was made signing the papers." },
+          { "id": "D", "text": "He was made to signed the papers." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Causative verb 'make' ke saath Passive banते waqt bare infinitive se pehle 'to' add ho jaata hai: 'He was made to sign the papers.'"
+      },
+      "navigation": { "next": "card_60_milestone_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_60_milestone_m7",
+      "card_slug": "card_60_milestone_m7",
+      "type": "milestone",
+      "concept_id": "special_passive_cases",
+      "level": 7,
+      "progress": { "current": 60, "total": 79 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Special Passive Cases (Imperative, Interrogative, Two Objects, Causative)",
+        "xp_earned": 70,
+        "milestone_progress": "Module 7/9 Clear",
+        "motivational_quote": "Special cases master kar liye! Ab kuch aur hidden rules dekhते hain!"
+      },
+      "navigation": { "next": "card_61_infinitive_passive", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_61_infinitive_passive",
+      "card_slug": "card_61_infinitive_passive",
+      "type": "chat",
+      "concept_id": "advanced_passive_rules",
+      "level": 8,
+      "progress": { "current": 61, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhते hain Infinitives (to + V1) ka Passive. Jaise: 'I want someone to help me.' → 'I want to be helped.' Formula: to + BE + V3. Ye tab use hota hai jab sentence mein 'to + verb' construction ho aur usko Passive banана ho." },
+        { "speaker": "raju", "text": "Achha, matlab 'to' ke baad bhi 'be' aa jaata hai jab Passive banана ho - 'to be helped', 'to be done' aise?" }
+      ],
+      "navigation": { "next": "card_62_impersonal_passive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_62_impersonal_passive",
+      "card_slug": "card_62_impersonal_passive",
+      "type": "chat",
+      "concept_id": "advanced_passive_rules",
+      "level": 8,
+      "progress": { "current": 62, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Ab ek bahut important pattern - Impersonal Passive. Jab hum kisi general belief/rumor/report ko batाते hain bina exact Doer bataye, toh formula hota hai: 'It is said/believed/thought/reported + that + clause'. Jaise: 'People say that he is honest.' → 'It is said that he is honest.' Ye news reports aur formal writing mein bahut common hai." },
+        { "speaker": "raju", "text": "Ohh! Ye toh newspaper mein bahut dekhता hoon - 'It is believed that...', 'It is reported that...' - ab samझ aaya ye kya hai!" }
+      ],
+      "navigation": { "next": "card_63_intransitive_exception_recap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_63_intransitive_exception_recap",
+      "card_slug": "card_63_intransitive_exception_recap",
+      "type": "chat",
+      "concept_id": "advanced_passive_rules",
+      "level": 8,
+      "progress": { "current": 63, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek golden rule yaad dilाता hoon jo bahut students bhool jaate hain. Sirf TRANSITIVE verbs (jinke saath Object hota hai) hi Passive Voice mein convert ho sakte hain. Intransitive verbs jaise 'sleep', 'arrive', 'die', 'laugh' - inko kabhi Passive nahi bana sakते kyunki inka koई Object hi nahi hota jo naya Subject bane. 'Raju sleeps' ko Passive banана hi galat hoga." },
+        { "speaker": "raju", "text": "Yaad hai sir! Active Voice wale chapter mein bhi ye seekha tha - jab Object hi nahi hai, toh Passive kaise banेगा? Object hi toh naya Subject bantа hai!" }
+      ],
+      "navigation": { "next": "card_64_guess_m8", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_64_guess_m8",
+      "card_slug": "card_64_guess_m8",
+      "type": "guess",
+      "concept_id": "advanced_passive_rules",
+      "level": 8,
+      "progress": { "current": 64, "total": 79 },
+      "guess_payload": {
+        "question": "Guess karo - 'People believe that honesty is the best policy.' ka sahi Impersonal Passive form kya hoga?",
+        "options": [
+          { "id": "A", "text": "It is believed that honesty is the best policy." },
+          { "id": "B", "text": "Honesty is believed the best policy." },
+          { "id": "C", "text": "It believed that honesty is the best policy." },
+          { "id": "D", "text": "That honesty is the best policy is believed." }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Impersonal Passive formula hai 'It is + believed/said/thought + that + clause': 'It is believed that honesty is the best policy.'"
+      },
+      "navigation": { "next": "card_65_quiz1_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_65_quiz1_m8",
+      "card_slug": "card_65_quiz1_m8",
+      "type": "quiz",
+      "concept_id": "advanced_passive_rules",
+      "level": 8,
+      "progress": { "current": 65, "total": 79 },
+      "quiz_payload": {
+        "question": "'I want someone to solve this problem.' - Sahi Passive (infinitive) form chunо:",
+        "options": [
+          { "id": "A", "text": "I want this problem be solved." },
+          { "id": "B", "text": "I want this problem to be solved." },
+          { "id": "C", "text": "I want this problem solved by someone." },
+          { "id": "D", "text": "I want to solving this problem." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Infinitive Passive formula hai 'to + be + V3': 'I want this problem to be solved.'"
+      },
+      "navigation": { "next": "card_66_quiz2_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_66_quiz2_m8",
+      "card_slug": "card_66_quiz2_m8",
+      "type": "quiz",
+      "concept_id": "advanced_passive_rules",
+      "level": 8,
+      "progress": { "current": 66, "total": 79 },
+      "quiz_payload": {
+        "question": "Neeche diye mein se kaunसा sentence Passive Voice mein CONVERT NAHI ho sakта?",
+        "options": [
+          { "id": "A", "text": "He plays cricket." },
+          { "id": "B", "text": "The baby laughed loudly." },
+          { "id": "C", "text": "She wrote a poem." },
+          { "id": "D", "text": "They built a house." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Laughed' Intransitive verb hai (koई Object nahi), isliye 'The baby laughed loudly' Passive mein convert nahi ho sakта. Baaki teeno mein Object hai (cricket, poem, house), isliye wo Transitive hain."
+      },
+      "navigation": { "next": "card_67_quiz3_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_67_quiz3_m8",
+      "card_slug": "card_67_quiz3_m8",
+      "type": "quiz",
+      "concept_id": "advanced_passive_rules",
+      "level": 8,
+      "progress": { "current": 67, "total": 79 },
+      "quiz_payload": {
+        "question": "'People say that the earth is round.' - Sahi Impersonal Passive form chunо:",
+        "options": [
+          { "id": "A", "text": "It is said that the earth is round." },
+          { "id": "B", "text": "The earth said to be round." },
+          { "id": "C", "text": "It says that the earth is round." },
+          { "id": "D", "text": "The earth is said round." }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Impersonal Passive formula: 'It is + said + that + clause': 'It is said that the earth is round.'"
+      },
+      "navigation": { "next": "card_68_milestone_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_68_milestone_m8",
+      "card_slug": "card_68_milestone_m8",
+      "type": "milestone",
+      "concept_id": "advanced_passive_rules",
+      "level": 8,
+      "progress": { "current": 68, "total": 79 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🧠",
+        "completed_topic": "Advanced Passive Rules (Infinitive, Impersonal, Intransitive)",
+        "xp_earned": 70,
+        "milestone_progress": "Module 8/9 Clear",
+        "motivational_quote": "Sabसे advanced rules bhi clear! Ab final module - SBI PO level Error Detection!"
+      },
+      "navigation": { "next": "card_69_error_detection_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_69_error_detection_intro",
+      "card_slug": "card_69_error_detection_intro",
+      "type": "chat",
+      "concept_id": "error_detection_passive",
+      "level": 9,
+      "progress": { "current": 69, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab hum enter kar rahe hain SBI PO/Bank PO level mein! Passive Voice se related teen bade traps hain - be-verb ka galat tense, V3 ki jagah V2/V1 ka use, aur missing/wrong preposition. Chalo ek-ek karke dekhते hain." },
+        { "speaker": "raju", "text": "Sir, Passive Voice mein toh itne parts hain - be verb, being, been, V3 - sabme se galti dhundना toh mushkil lagता hai!" }
+      ],
+      "navigation": { "next": "card_70_trap_wrong_v3", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_70_trap_wrong_v3",
+      "card_slug": "card_70_trap_wrong_v3",
+      "type": "chat",
+      "concept_id": "error_detection_passive",
+      "level": 9,
+      "progress": { "current": 70, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Ghabराओ mat, systematic approach seekhते hain. Trap 1 - Wrong Verb Form: Passive mein hamesha V3 chahiye, V2 nahi. 'The letter was wrote by him' - GALAT! Sahi hai 'The letter was written by him.' Ye SSC/Railway ka bahut common trap hai jahaan log V2 aur V3 confuse kar dete hain jab dono alag hote hain (write-wrote-written)." },
+        { "speaker": "raju", "text": "Achha, matlab 'wrote' V2 hai aur 'written' V3 - Passive mein hamesha V3 wala 'written' hi aaएगा?" }
+      ],
+      "navigation": { "next": "card_71_trap_be_verb_mismatch", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_71_trap_be_verb_mismatch",
+      "card_slug": "card_71_trap_be_verb_mismatch",
+      "type": "chat",
+      "concept_id": "error_detection_passive",
+      "level": 9,
+      "progress": { "current": 71, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 2 - Subject-Verb (be-verb) Mismatch: Naya Subject (jo pehле Object tha) ki Number (singular/plural) check karके be-verb match karна hai. 'The books was placed on the table' - GALAT! 'Books' plural hai, isliye 'were' aayega: 'The books were placed on the table.'" },
+        { "speaker": "raju", "text": "Ohh, matlab ab naya Subject dekhкर is/are/was/were decide karna hai, na ki purане Subject se - ye toh main bhool sakта tha!" }
+      ],
+      "navigation": { "next": "card_72_trap_preposition_being_been", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_72_trap_preposition_being_been",
+      "card_slug": "card_72_trap_preposition_being_been",
+      "type": "chat",
+      "concept_id": "error_detection_passive",
+      "level": 9,
+      "progress": { "current": 72, "total": 79 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 3 - 'Being' vs 'Been' confusion: Continuous tenses mein 'being' aata hai, Perfect tenses mein 'been' aata hai. 'The work has being done' - GALAT! Sahi hai 'The work has been done.' (Present Perfect). Aur 'The work is been done' bhi GALAT hai, sahi hai 'The work is being done.' (Present Continuous). Dono ko mix karна exam ka common trap hai." },
+        { "speaker": "raju", "text": "Sir ye 'being' aur 'been' toh dekhने mein bilkul alag nahi lagते, ye toh sach mein bahut confuse karने wala trap hai!" }
+      ],
+      "navigation": { "next": "card_73_guess_m9", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_73_guess_m9",
+      "card_slug": "card_73_guess_m9",
+      "type": "guess",
+      "concept_id": "error_detection_passive",
+      "level": 9,
+      "progress": { "current": 73, "total": 79 },
+      "guess_payload": {
+        "question": "Guess karo - in mein se kaunसा sentence SAHI hai (no error)?",
+        "options": [
+          { "id": "A", "text": "The cake was ate by the children." },
+          { "id": "B", "text": "The cake was eaten by the children." },
+          { "id": "C", "text": "The cake were eaten by the children." },
+          { "id": "D", "text": "The cake is eaten by the children yesterday." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'The cake was eaten by the children.' sahi hai - V3 form 'eaten' use hua hai, aur 'cake' singular hone se 'was' sahi hai."
+      },
+      "navigation": { "next": "card_74_quiz1_m9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_74_quiz1_m9",
+      "card_slug": "card_74_quiz1_m9",
+      "type": "quiz",
+      "concept_id": "error_detection_passive",
+      "level": 9,
+      "progress": { "current": 74, "total": 79 },
+      "quiz_payload": {
+        "question": "SBI PO Error Detection: 'The new policy (A)/ has being implemented (B)/ across all branches (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "A" },
+          { "id": "B", "text": "B" },
+          { "id": "C", "text": "C" },
+          { "id": "D", "text": "D (No Error)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Part (B) mein galti hai - Present Perfect Passive mein 'been' aana chahiye, 'being' nahi: 'has been implemented'."
+      },
+      "navigation": { "next": "card_75_quiz2_m9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_75_quiz2_m9",
+      "card_slug": "card_75_quiz2_m9",
+      "type": "quiz",
+      "concept_id": "error_detection_passive",
+      "level": 9,
+      "progress": { "current": 75, "total": 79 },
+      "quiz_payload": {
+        "question": "SBI PO Error Detection: 'The documents (A)/ was submitted (B)/ before the deadline (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "A" },
+          { "id": "B", "text": "B" },
+          { "id": "C", "text": "C" },
+          { "id": "D", "text": "D (No Error)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Part (B) mein galti hai - 'documents' plural hai, isliye 'were submitted' aayega, 'was submitted' nahi."
+      },
+      "navigation": { "next": "card_76_quiz3_m9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_76_quiz3_m9",
+      "card_slug": "card_76_quiz3_m9",
+      "type": "quiz",
+      "concept_id": "error_detection_passive",
+      "level": 9,
+      "progress": { "current": 76, "total": 79 },
+      "quiz_payload": {
+        "question": "SBI PO Error Detection: 'The letter (A)/ was wrote (B)/ by the manager himself (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "A" },
+          { "id": "B", "text": "B" },
+          { "id": "C", "text": "C" },
+          { "id": "D", "text": "D (No Error)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Part (B) mein galti hai - Passive Voice mein V3 chahiye, V2 nahi. 'Wrote' V2 hai, sahi hai 'written': 'was written'."
+      },
+      "navigation": { "next": "card_77_milestone_m9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_77_milestone_m9",
+      "card_slug": "card_77_milestone_m9",
+      "type": "milestone",
+      "concept_id": "error_detection_passive",
+      "level": 9,
+      "progress": { "current": 77, "total": 79 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏅",
+        "completed_topic": "SBI PO Error Detection - Passive Voice",
+        "xp_earned": 85,
+        "milestone_progress": "Module 9/9 Clear",
+        "motivational_quote": "Wah Raju! Ab tum Passive Voice ke SBI PO level errors bhi pakड़ sakte ho! Bas final revision baaki hai!"
+      },
+      "navigation": { "next": "card_78_summary", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_78_summary",
+      "card_slug": "card_78_summary",
+      "type": "summary",
+      "concept_id": "chapter_summary",
+      "level": 10,
+      "progress": { "current": 78, "total": 79 },
+      "summary_payload": {
+        "title": "⚡ Officer-Level Lightning Revision",
+        "revision_points": [
+          {
+            "topic": "Passive Core & BSEB Terminology",
+            "point": "Statement I: Passive Voice mein Object naya Subject banта hai aur asli Doer 'by' ke saath peeche jaata hai ya hata diya jaata hai. Statement II: Bihar SCERT/BSEB isse 'Karma Vachya' kehta hai. Dono statements sahi hain - BPSC TRE mein terminology poochi jaati hai."
+          },
+          {
+            "topic": "Formula & Pronoun Case",
+            "point": "Statement I: Passive formula hai 'be verb (tense ke hisaab se) + V3', jahaan be-verb naye Subject ki Number se match karta hai. Statement II: 'By' ke baad pronoun ka case badal jaata hai (I→me, he→him, they→them). Dono statements sahi hain."
+          },
+          {
+            "topic": "Non-Convertible Tenses",
+            "point": "Statement I: Present Perfect Continuous aur Past Perfect Continuous Passive mein convert nahi hote kyunki 'has/had been being' awkward hai. Statement II: Future Continuous aur Future Perfect Continuous bhi isी wajah se convert nahi hote. Dono statements sahi hain - total 4 non-convertible tenses hain."
+          },
+          {
+            "topic": "Special Transformations",
+            "point": "Statement I: Imperative sentences ka Passive 'Let + Object + be + V3' formula follow karta hai. Statement II: 'Who' Doer position mein ho toh Passive mein 'by whom' ban jaata hai. Dono statements sahi hain - ye BPSC/SSC ka common trap hai."
+          },
+          {
+            "topic": "SBI PO Level Error Traps",
+            "point": "Statement I: Passive mein hamesha V3 chahiye (V2 galat hai, jaise 'was wrote' galat, 'was written' sahi). Statement II: Continuous tenses mein 'being' aur Perfect tenses mein 'been' aata hai, inhe mix karna galti hai. Dono statements sahi hain."
+          }
+        ]
+      },
+      "navigation": { "next": "card_79_final_quiz", "button_text": "Take Final Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_79_final_quiz",
+      "card_slug": "card_79_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "chapter_final_quiz",
+      "level": 10,
+      "progress": { "current": 79, "total": 79 },
+      "quiz_payload": {
+        "question": "Consider the following statements regarding Passive Voice:\nStatement I: The sentence 'The reports has been being prepared by the team since Monday' is the correct Passive form of 'The team has been preparing the reports since Monday.'\nStatement II: 'The baby cried loudly' cannot be converted into Passive Voice because 'cried' is an intransitive verb.\nStatement III: In the sentence 'By whom was this letter written?', the interrogative pronoun 'who' has correctly changed to 'whom' in the Passive form.\nWhich of the above statement(s) is/are CORRECT?",
+        "options": [
+          { "id": "A", "text": "Only I and III" },
+          { "id": "B", "text": "Only II and III" },
+          { "id": "C", "text": "Only I and II" },
+          { "id": "D", "text": "Only I" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement I is WRONG - Present Perfect Continuous ('has been preparing') is one of the four tenses that CANNOT be converted into a standard Passive form, because it would require the awkward and grammatically avoided structure 'has been being prepared'. This tense is treated as non-convertible. Statement II is CORRECT - 'cry' is an intransitive verb with no object, so 'The baby cried loudly' cannot be converted into Passive Voice at all. Statement III is CORRECT - when 'who' (as Doer) is converted to Passive Voice, it correctly changes to 'whom' after 'by': 'By whom was this letter written?' is grammatically correct. Hence, only Statements II and III are correct - Answer (B)."
+      },
+      "navigation": { "next": "card_80_trophy", "button_text": "See Final Result ➔" }
+    },
+    {
+      "card_id": "card_80_trophy",
+      "card_slug": "card_80_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 10,
+      "progress": { "current": 79, "total": 79 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Passive Voice - All Tenses + Special Cases + SBI PO Error Detection",
+        "xp_earned": 160,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Shabaash Raju! Ab tumne Passive Voice ko har tense, har exception, aur SBI PO level error mein master kar liya hai. Officer banने ka safar jaari rahe!"
+      },
+      "navigation": { "next": "card_01_intro", "button_text": "Revise Chapter Again 🔄" }
+    }
+  ]
+}
+```
