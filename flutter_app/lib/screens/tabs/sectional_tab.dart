@@ -4,14 +4,14 @@ class SectionalTab extends StatefulWidget {
   final Map<String, dynamic> sectionalData;
   final bool isDarkMode;
   final Function(BuildContext, String, String) onLaunchCbtMock;
-  final Future<void> Function()? onRefresh; // 👈 Pull to refresh ke liye optional callback
+  final VoidCallback? onManualRefresh;
 
   const SectionalTab({
     super.key,
     required this.sectionalData,
     required this.isDarkMode,
     required this.onLaunchCbtMock,
-    this.onRefresh,
+    this.onManualRefresh,
   });
 
   @override
@@ -21,7 +21,6 @@ class SectionalTab extends StatefulWidget {
 class _SectionalTabState extends State<SectionalTab> {
   String _selectedExamPanel = 'bpsc';
 
-  // Preset Colors for Exam Cards
   final Map<String, Color> _examColors = {
     'bpsc': const Color(0xFF9D174D),
     'ssc': const Color(0xFF166534),
@@ -31,10 +30,10 @@ class _SectionalTabState extends State<SectionalTab> {
   };
 
   final List<Color> _fallbackColors = [
-    const Color(0xFFDC2626), // Red
-    const Color(0xFF0D9488), // Teal
-    const Color(0xFF2563EB), // Blue
-    const Color(0xFF4F46E5), // Indigo
+    const Color(0xFFDC2626),
+    const Color(0xFF0D9488),
+    const Color(0xFF2563EB),
+    const Color(0xFF4F46E5),
   ];
 
   @override
@@ -53,7 +52,6 @@ class _SectionalTabState extends State<SectionalTab> {
     }
   }
 
-  // Auto Title & Badge Generator from JSON Keys
   Map<String, String> _getCardMeta(String key) {
     switch (key.toLowerCase()) {
       case 'bpsc':
@@ -78,24 +76,42 @@ class _SectionalTabState extends State<SectionalTab> {
   Widget build(BuildContext context) {
     final List<String> examKeys = widget.sectionalData.keys.toList();
 
-    Widget content = ListView(
-      physics: const AlwaysScrollableScrollPhysics(parent: BouncingScrollPhysics()),
+    return ListView(
       padding: const EdgeInsets.all(16),
+      physics: const BouncingScrollPhysics(),
       children: [
-        const Text('🎯 Target Exam Sectional Mocks',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-        const Text('अपनी परीक्षा चुनें और रियल TCS CBT पैटर्न पर प्रैक्टिस शुरू करें',
-            style: TextStyle(color: Colors.grey, fontSize: 12)),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text('🎯 Target Exam Sectional Mocks',
+                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+                  Text('अपनी परीक्षा चुनें और रियल CBT टेस्ट दें',
+                      style: TextStyle(color: Colors.grey, fontSize: 11)),
+                ],
+              ),
+            ),
+            if (widget.onManualRefresh != null)
+              IconButton(
+                icon: const Icon(Icons.sync, color: Color(0xFF2563EB)),
+                tooltip: 'Sync Latest Sets',
+                onPressed: widget.onManualRefresh,
+              ),
+          ],
+        ),
         const SizedBox(height: 14),
 
-        // 🚀 100% DYNAMIC GRID (Jitne Keys JSON mein utne Cards Auto Banenge)
+        // 🚀 DYNAMIC GRID (Jitne folders GitHub par honge sabke cards auto banenge)
         if (examKeys.isEmpty)
           const Card(
             child: Padding(
               padding: EdgeInsets.all(16),
               child: Center(
-                  child: Text("Loading sectional exams...",
-                      style: TextStyle(color: Colors.grey, fontSize: 12))),
+                child: Text("Loading sectional exams...", style: TextStyle(color: Colors.grey, fontSize: 12)),
+              ),
             ),
           )
         else
@@ -125,17 +141,6 @@ class _SectionalTabState extends State<SectionalTab> {
         _buildDynamicSectionalSetsPanel(context),
       ],
     );
-
-    // Agar onRefresh mila hai toh RefreshIndicator wrap hoga
-    if (widget.onRefresh != null) {
-      return RefreshIndicator(
-        color: const Color(0xFF2563EB),
-        onRefresh: widget.onRefresh!,
-        child: content,
-      );
-    }
-
-    return content;
   }
 
   Widget _buildDynamicSectionalSetsPanel(BuildContext context) {
@@ -146,8 +151,9 @@ class _SectionalTabState extends State<SectionalTab> {
         child: Padding(
           padding: EdgeInsets.all(20),
           child: Center(
-              child: Text("⚠️ Sets loading... Please check connection.",
-                  style: TextStyle(fontSize: 12, color: Colors.grey))),
+            child: Text("⚠️ Sets loading... Please check connection.",
+                style: TextStyle(fontSize: 12, color: Colors.grey)),
+          ),
         ),
       );
     }
@@ -163,9 +169,7 @@ class _SectionalTabState extends State<SectionalTab> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
+              Text(title, style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
               const SizedBox(height: 10),
               Wrap(
                 spacing: 8,
@@ -176,8 +180,7 @@ class _SectionalTabState extends State<SectionalTab> {
                     backgroundColor: const Color(0xFF9D174D).withOpacity(0.08),
                     side: const BorderSide(color: Color(0xFF9D174D)),
                     label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}',
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
+                        style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
                     onPressed: () => widget.onLaunchCbtMock(
                         context, '$title Set $setNum', '$prefix$setNum.json'),
                   );
@@ -203,8 +206,7 @@ class _SectionalTabState extends State<SectionalTab> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(itemTitle,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                  Text(itemTitle, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
                   const SizedBox(height: 10),
                   Wrap(
                     spacing: 8,
@@ -215,8 +217,7 @@ class _SectionalTabState extends State<SectionalTab> {
                         backgroundColor: const Color(0xFF2563EB).withOpacity(0.08),
                         side: const BorderSide(color: Color(0xFF2563EB)),
                         label: Text('Set 0$setNum',
-                            style: const TextStyle(
-                                fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
+                            style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
                         onPressed: () => widget.onLaunchCbtMock(
                             context, "$itemTitle Set $setNum", "$folder/set$setNum.json"),
                       );
@@ -238,29 +239,22 @@ class _SectionalTabState extends State<SectionalTab> {
     return GestureDetector(
       onTap: () => setState(() => _selectedExamPanel = panelKey),
       child: Card(
-        color: isSelected
-            ? color.withOpacity(0.12)
-            : (widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white),
+        color: isSelected ? color.withOpacity(0.12) : (widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white),
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
-            side: BorderSide(
-                color: isSelected ? color : Colors.grey.shade300,
-                width: isSelected ? 2 : 1)),
+            side: BorderSide(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 2 : 1)),
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(badge,
-                  style: TextStyle(
-                      fontSize: 9, fontWeight: FontWeight.bold, color: color)),
+              Text(badge, style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: color)),
               const SizedBox(height: 2),
               Text(title,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 14)),
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
             ],
           ),
         ),
