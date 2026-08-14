@@ -80,20 +80,37 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       debugPrint("Error loading home_data.json: $e");
     }
 
-    // 2️⃣ Revision Mapping (Local Asset Fallback)
-    try {
-      final String subjectStr = await rootBundle.loadString('assets/data/subject_mapping.json');
-      _subjectMapping = jsonDecode(subjectStr);
-    } catch (e) {
-      debugPrint("Error loading subject_mapping.json: $e");
+    // 2️⃣ Revision Mapping (Local Cache/Asset Fallback)
+    final prefs = await SharedPreferences.getInstance();
+    String? cachedMapping = prefs.getString('cached_subject_mapping_json');
+    if (cachedMapping != null) {
+      try {
+        _subjectMapping = jsonDecode(cachedMapping);
+      } catch (_) {}
+    }
+    if (_subjectMapping.isEmpty) {
+      try {
+        final String subjectStr = await rootBundle.loadString('assets/data/subject_mapping.json');
+        _subjectMapping = jsonDecode(subjectStr);
+      } catch (e) {
+        debugPrint("Error loading subject_mapping.json: $e");
+      }
     }
 
-    // 3️⃣ Sectional Data (Local Asset Fallback)
-    try {
-      final String sectionalStr = await rootBundle.loadString('assets/data/sectional_data.json');
-      _sectionalData = jsonDecode(sectionalStr);
-    } catch (e) {
-      debugPrint("Error loading sectional_data.json: $e");
+    // 3️⃣ Sectional Data (Local Cache/Asset Fallback)
+    String? cachedSectional = prefs.getString('cached_sectional_data_json');
+    if (cachedSectional != null) {
+      try {
+        _sectionalData = jsonDecode(cachedSectional);
+      } catch (_) {}
+    }
+    if (_sectionalData.isEmpty) {
+      try {
+        final String sectionalStr = await rootBundle.loadString('assets/data/sectional_data.json');
+        _sectionalData = jsonDecode(sectionalStr);
+      } catch (e) {
+        debugPrint("Error loading sectional_data.json: $e");
+      }
     }
 
     if (mounted) {
@@ -102,25 +119,27 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       });
     }
 
-    // 4️⃣ Background Live Fetch (Zero APK Rebuild Forever)
+    // 4️⃣ Background Unblocked Realtime CDN Fetch
     _fetchSectionalDataLive();
     _fetchSubjectMappingLive();
   }
 
-  // 🌐 ANTI-BLOCK MULTI-CDN LOADER (Jio/Airtel par block nahi hoga)
+  // 🌐 100% UNBLOCKED ANTI-CENSORSHIP CDN FETCHER (NO RAW GITHUB)
   Future<dynamic> _fetchRobustJson(String relativePath) async {
     String clean = relativePath.startsWith("/") ? relativePath.substring(1) : relativePath;
     final int ts = DateTime.now().millisecondsSinceEpoch;
 
-    List<String> mirrorUrls = clean.startsWith("http")
+    // Direct Unblocked High-Speed Global CDNs (Never Blocked in India)
+    List<String> unblockedUrls = clean.startsWith("http")
         ? [clean]
         : [
-            "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$clean?t=$ts",
-            "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$clean?t=$ts",
-            "https://raw.githubusercontent.com/zxcty54/quiz/main/$clean?t=$ts",
+            "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$clean?v=$ts",
+            "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$clean?v=$ts",
+            "https://raw.githack.com/zxcty54/quiz/main/$clean",
+            "https://cdn.statically.io/gh/zxcty54/quiz/main/$clean",
           ];
 
-    for (String url in mirrorUrls) {
+    for (String url in unblockedUrls) {
       try {
         final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 4));
         if (res.statusCode == 200) {
@@ -134,23 +153,27 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return null;
   }
 
-  // 🎯 LIVE SECTIONAL MOCKS SYNC
+  // 🎯 LIVE SECTIONAL MOCKS SYNC & SAVE
   Future<void> _fetchSectionalDataLive() async {
     final data = await _fetchRobustJson("sectional_data.json");
     if (data != null && data is Map<String, dynamic> && mounted) {
       setState(() {
         _sectionalData = data;
       });
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('cached_sectional_data_json', jsonEncode(data));
     }
   }
 
-  // 🎯 LIVE REVISION SUBJECT MAPPING SYNC
+  // 🎯 LIVE REVISION SUBJECT MAPPING SYNC & SAVE
   Future<void> _fetchSubjectMappingLive() async {
     final data = await _fetchRobustJson("subject_mapping.json");
     if (data != null && data is Map<String, dynamic> && mounted) {
       setState(() {
         _subjectMapping = data;
       });
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('cached_subject_mapping_json', jsonEncode(data));
     }
   }
 
