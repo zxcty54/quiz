@@ -1,0 +1,1158 @@
+
+{
+  "topic_id": "eng_gram_imperative_exclamatory_sbi_po",
+  "topic_title": "Imperative & Exclamatory Sentences + SBI PO Level Error Detection",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE", "SBI PO/Bank PO"],
+  "total_cards": 66,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 66 },
+      "intro_payload": {
+        "title": "Imperative & Exclamatory Sentences",
+        "subtitle": "Commands, Wishes, Exclamations + SBI PO Level Error Detection",
+        "icon": "❗",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE", "SBI PO/Bank PO"],
+        "learning_outcomes": [
+          "Master all kinds of sentences (with BSEB's special 5-kind classification)",
+          "Perfectly identify & construct Imperative sentences (Command, Request, Advice, Instruction)",
+          "Use 'Let' constructions and Negative Imperative correctly",
+          "Build Exclamatory sentences using the 'What' and 'How' formulas",
+          "Convert Assertive ↔ Exclamatory sentences (exam favorite trap)",
+          "Understand Optative Sentences (BPSC TRE special topic)",
+          "Crack SBI PO / Bank PO level Error Detection traps on punctuation, articles & word order"
+        ]
+      },
+      "navigation": { "next": "card_02_daily_example", "button_text": "Start Learning ➔" }
+    },
+    {
+      "card_id": "card_02_daily_example",
+      "card_slug": "card_02_daily_example",
+      "type": "chat",
+      "concept_id": "foundation_recap",
+      "level": 1,
+      "progress": { "current": 2, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho subah-subah tumhari mummy kehti hai - 'Beta, jaldi uठो, school jana hai!' Aur tum jawab dete ho - 'Mummy, aaj toh Sunday hai!' Dono sentence ek jaise lagte hain kya?" },
+        { "speaker": "raju", "text": "Nahi sir, mummy wala toh order jaisa tha, aur mera wala bas ek fact bata raha tha ki aaj chutti hai." }
+      ],
+      "navigation": { "next": "card_03_assertive_interrogative", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_assertive_interrogative",
+      "card_slug": "card_03_assertive_interrogative",
+      "type": "chat",
+      "concept_id": "foundation_recap",
+      "level": 1,
+      "progress": { "current": 3, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakड़ा! English grammar mein sentences unke 'purpose' (matlab) ke hisaab se alag-alag category mein baटते hain. Tumhara wala - 'Aaj Sunday hai' - sirf ek fact bata raha hai, isliye ise Assertive ya Declarative Sentence kehte hain. Agar koi poochta - 'Kya aaj Sunday hai?' - toh woh sawaal ban jaata, use Interrogative Sentence kehte hain." },
+        { "speaker": "raju", "text": "Achha! Toh mummy wala 'jaldi uठो' wala sentence na toh statement hai, na sawaal... phir woh kya hua sir?" }
+      ],
+      "navigation": { "next": "card_04_guess_type", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_guess_type",
+      "card_slug": "card_04_guess_type",
+      "type": "guess",
+      "concept_id": "foundation_recap",
+      "level": 1,
+      "progress": { "current": 4, "total": 66 },
+      "guess_payload": {
+        "question": "Raju, guess karo - Mummy ka 'Beta, jaldi uठो, school jana hai' jaisa order/instruction wala sentence English mein kis naam se jaana jaata hai?",
+        "options": [
+          { "id": "A", "text": "Assertive Sentence" },
+          { "id": "B", "text": "Interrogative Sentence" },
+          { "id": "C", "text": "Imperative Sentence" },
+          { "id": "D", "text": "Exclamatory Sentence" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Sahi jawab hai Imperative Sentence! Jab kisi sentence se order, request, advice ya instruction diya jaata hai — use Imperative Sentence kehte hain. Ab isko detail mein samjhte hain agle module mein."
+      },
+      "navigation": { "next": "card_05_quiz1_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_05_quiz1_m1",
+      "card_slug": "card_05_quiz1_m1",
+      "type": "quiz",
+      "concept_id": "foundation_recap",
+      "level": 1,
+      "progress": { "current": 5, "total": 66 },
+      "quiz_payload": {
+        "question": "'Patna, Bihar ki rajdhani hai.' — Ye sentence kis type ka hai?",
+        "options": [
+          { "id": "A", "text": "Interrogative" },
+          { "id": "B", "text": "Assertive/Declarative" },
+          { "id": "C", "text": "Imperative" },
+          { "id": "D", "text": "Exclamatory" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ye ek fact/statement bata raha hai, isliye Assertive (Declarative) Sentence hai. Assertive sentences ya toh Affirmative (haan wale) hote hain ya Negative (na wale)."
+      },
+      "navigation": { "next": "card_06_quiz2_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_06_quiz2_m1",
+      "card_slug": "card_06_quiz2_m1",
+      "type": "quiz",
+      "concept_id": "foundation_recap",
+      "level": 1,
+      "progress": { "current": 6, "total": 66 },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE Trap: Bihar SCERT (BSEB) ki English grammar books ke anusaar, sentences ko kितने prakaar (kinds) mein baanta gaya hai, jisme Optative Sentence ko alag se ek category maana jaata hai?",
+        "options": [
+          { "id": "A", "text": "3" },
+          { "id": "B", "text": "4" },
+          { "id": "C", "text": "5" },
+          { "id": "D", "text": "6" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "BSEB/Bihar Board textbooks traditionally sentences ko 5 kinds mein baantte hain: Assertive, Interrogative, Imperative, Exclamatory, aur Optative (wish/prayer wale) ko ALAG category maante hain। Jabki kai NCERT/CBSE-based general grammar books Optative ko Exclamatory ke andar hi rakhkar sirf 4 kinds bata dete hain. BPSC TRE mein ye exact number wala question aa sakta hai — dhyan rakhna!"
+      },
+      "navigation": { "next": "card_07_quiz3_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz3_m1",
+      "card_slug": "card_07_quiz3_m1",
+      "type": "quiz",
+      "concept_id": "foundation_recap",
+      "level": 1,
+      "progress": { "current": 7, "total": 66 },
+      "quiz_payload": {
+        "question": "'Kya Ganga Bihar se hokar behti hai?' — Ye sentence kis type ka hai?",
+        "options": [
+          { "id": "A", "text": "Assertive" },
+          { "id": "B", "text": "Interrogative" },
+          { "id": "C", "text": "Imperative" },
+          { "id": "D", "text": "Exclamatory" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ye sawaal poochh raha hai, isliye Interrogative Sentence hai — hamesha question mark (?) se khatam hota hai."
+      },
+      "navigation": { "next": "card_08_milestone_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_milestone_m1",
+      "card_slug": "card_08_milestone_m1",
+      "type": "milestone",
+      "concept_id": "foundation_recap",
+      "level": 1,
+      "progress": { "current": 8, "total": 66 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Sentence Types - Foundation",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "Foundation pakki! Ab chalte hain Imperative Sentences ki duniya mein!"
+      },
+      "navigation": { "next": "card_09_imperative_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_09_imperative_intro",
+      "card_slug": "card_09_imperative_intro",
+      "type": "chat",
+      "concept_id": "imperative_basics",
+      "level": 2,
+      "progress": { "current": 9, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo ab samjhte hain Imperative Sentence poori tarah. Jab kisi sentence se Order (hukum), Request (vinati), Advice (salaah) ya Instruction (nirdesh) diya jaaye — use Imperative Sentence kehte hain. Jaise: 'Shut the door.' (Order), 'Please help me.' (Request), 'Drink milk daily.' (Advice)." },
+        { "speaker": "raju", "text": "Sir, in sabme subject kahin dikh hi nahi raha! 'Shut the door' mein 'kaun' shut karega, ye toh bataya hi nahi!" }
+      ],
+      "navigation": { "next": "card_10_imperative_you_hidden", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_10_imperative_you_hidden",
+      "card_slug": "card_10_imperative_you_hidden",
+      "type": "chat",
+      "concept_id": "imperative_basics",
+      "level": 2,
+      "progress": { "current": 10, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut badhiya observation Raju! Imperative sentences mein subject 'You' hamesha HIDDEN (understood) hota hai — kyunki jisse hum baat kar rahe hain, use hi order de rahe hote hain, isliye 'You' likhna zaroori nahi. Lekin agar zyada emphasis dena ho, toh 'You' explicitly bhi likh sakte hain — jaise: 'You get out of here!'" },
+        { "speaker": "raju", "text": "Achhaaa! Matlab normally 'You' gayab rehta hai, but zyada gussa dikhana ho toh 'You' wapas aa jaata hai! Interesting hai sir." }
+      ],
+      "navigation": { "next": "card_11_imperative_types", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_imperative_types",
+      "card_slug": "card_11_imperative_types",
+      "type": "chat",
+      "concept_id": "imperative_basics",
+      "level": 2,
+      "progress": { "current": 11, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Imperative ke types dekho — ye exam mein direct poochhe jaate hain: 1) Order/Command - 'Stand up.' 2) Request - 'Please sit down.' 3) Advice - 'Exercise daily.' 4) Instruction - 'Mix sugar in water.' 5) Suggestion - 'Try this method.' Sabme verb ka base form (V1) hi use hota hai, chahe subject 'you' singular ho ya plural." },
+        { "speaker": "raju", "text": "Sir, matlab 'You stands up' kabhi nahi likhenge? Hamesha 'Stand up' hi rahega chahe ek insaan ho ya sau log?" }
+      ],
+      "navigation": { "next": "card_12_guess_imperative", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_guess_imperative",
+      "card_slug": "card_12_guess_imperative",
+      "type": "guess",
+      "concept_id": "imperative_basics",
+      "level": 2,
+      "progress": { "current": 12, "total": 66 },
+      "guess_payload": {
+        "question": "Guess karo — in mein se kaunsa sentence Imperative hai?",
+        "options": [
+          { "id": "A", "text": "He plays football." },
+          { "id": "B", "text": "Does he play football?" },
+          { "id": "C", "text": "Play football with him." },
+          { "id": "D", "text": "What a great player he is!" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Play football with him.' ek Instruction/Request de raha hai bina subject bataye — isliye ye Imperative Sentence hai. Baaki options Assertive, Interrogative aur Exclamatory hain."
+      },
+      "navigation": { "next": "card_13_quiz1_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_13_quiz1_m2",
+      "card_slug": "card_13_quiz1_m2",
+      "type": "quiz",
+      "concept_id": "imperative_basics",
+      "level": 2,
+      "progress": { "current": 13, "total": 66 },
+      "quiz_payload": {
+        "question": "'Please switch off the fan.' — Is imperative sentence mein hidden subject kya hai?",
+        "options": [
+          { "id": "A", "text": "I" },
+          { "id": "B", "text": "You" },
+          { "id": "C", "text": "We" },
+          { "id": "D", "text": "They" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Har Imperative sentence mein subject 'You' hi understood hota hai, chahe wo likha ho ya na ho."
+      },
+      "navigation": { "next": "card_14_quiz2_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_14_quiz2_m2",
+      "card_slug": "card_14_quiz2_m2",
+      "type": "quiz",
+      "concept_id": "imperative_basics",
+      "level": 2,
+      "progress": { "current": 14, "total": 66 },
+      "quiz_payload": {
+        "question": "Neeche diye options mein se kaunsa sentence 'Advice' dikhata hai (Imperative type)?",
+        "options": [
+          { "id": "A", "text": "Shut up!" },
+          { "id": "B", "text": "Eat vegetables for good health." },
+          { "id": "C", "text": "Please open the window." },
+          { "id": "D", "text": "Pass the exam!" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Eat vegetables for good health' salaah (advice) de raha hai, isliye ye Advice type ka Imperative Sentence hai. 'Shut up!' order hai, 'Please open the window' request hai."
+      },
+      "navigation": { "next": "card_15_quiz3_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz3_m2",
+      "card_slug": "card_15_quiz3_m2",
+      "type": "quiz",
+      "concept_id": "imperative_basics",
+      "level": 2,
+      "progress": { "current": 15, "total": 66 },
+      "quiz_payload": {
+        "question": "Assertion (A): Imperative sentences mein subject kabhi nahi likha ja sakta.\nReason (R): Subject 'You' hamesha samझा jaata hai.\nSahi vikalp chunо:",
+        "options": [
+          { "id": "A", "text": "A aur R dono sahi hain, aur R, A ki sahi vyakhya hai" },
+          { "id": "B", "text": "A galat hai, R sahi hai" },
+          { "id": "C", "text": "A sahi hai, R galat hai" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "A galat hai kyunki emphasis dene ke liye subject 'You' explicitly bhi likha ja sakta hai — jaise 'You get out!'. R sahi hai kyunki normally 'You' hi hidden subject hota hai."
+      },
+      "navigation": { "next": "card_16_milestone_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_milestone_m2",
+      "card_slug": "card_16_milestone_m2",
+      "type": "milestone",
+      "concept_id": "imperative_basics",
+      "level": 2,
+      "progress": { "current": 16, "total": 66 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📢",
+        "completed_topic": "Imperative Sentences - Basics",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "Command ab tumhare control mein hai! Chalo ab advanced imperative dekhte hain."
+      },
+      "navigation": { "next": "card_17_let_construction", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_17_let_construction",
+      "card_slug": "card_17_let_construction",
+      "type": "chat",
+      "concept_id": "imperative_advanced",
+      "level": 3,
+      "progress": { "current": 17, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek twist samjho. Jab hume PEHLE person plural (hum/we) ya THIRD person (woh - he/she/they) ko koi suggestion/command dena ho, tab 'Let' ka use hota hai. Jaise: 'Let us go to the market.' (Let's go) ya 'Let him wait outside.' Ye bhi Imperative Sentence hi maane jaate hain, kyunki inme bhi suggestion/order chhupa hota hai." },
+        { "speaker": "raju", "text": "Sir, 'Let us go' aur 'Let's go' same hi hai kya? Aur 'Let him wait' mein toh 'him' third person hai, phir bhi ye imperative kaise?" }
+      ],
+      "navigation": { "next": "card_18_negative_imperative", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_18_negative_imperative",
+      "card_slug": "card_18_negative_imperative",
+      "type": "chat",
+      "concept_id": "imperative_advanced",
+      "level": 3,
+      "progress": { "current": 18, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan Raju, 'Let's' 'Let us' ka short form hi hai. Aur teesre person ko bhi jab command diya jaata hai 'Let' ke through, tab bhi wo Imperative category mein aata hai — kyunki underlying meaning command/suggestion hi hai. Ab suno Negative Imperative ka rule — jab mana karna ho, formula hai: 'Do not / Don't + Verb(V1)'. Jaise: 'Do not touch the wire.' Exam ka bada trap: kabhi 'Not touch the wire' mat likhna — bina Do/Don't ke Negative Imperative galat hota hai!" },
+        { "speaker": "raju", "text": "Ohh, matlab sirf 'Not' laga dena kaafi nahi, 'Do' ya 'Don't' zaroor chahiye! Ye toh sach mein trap hai sir, main toh bhool hi jaata." }
+      ],
+      "navigation": { "next": "card_19_polite_request", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_polite_request",
+      "card_slug": "card_19_polite_request",
+      "type": "chat",
+      "concept_id": "imperative_advanced",
+      "level": 3,
+      "progress": { "current": 19, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab politeness dekho — jab request polite banani ho, 'Please', 'Kindly' start mein lagate hain, jaise: 'Please close the door.' ya end mein 'will you?' / 'would you mind' jodते hain: 'Close the door, will you?' Yahaan interesting baat — 'will you?' ke saath comma aur question mark aata hai kyunki ye tag question jaisa lagta hai, lekin poora sentence phir bhi Imperative hi rehta hai." },
+        { "speaker": "raju", "text": "Sir, matlab agar end mein 'will you?' lagाया toh question mark aayega, lekin sentence phir bhi order/request hi maana jaayega? Confuse ho raha hoon!" }
+      ],
+      "navigation": { "next": "card_20_punctuation_imperative", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_punctuation_imperative",
+      "card_slug": "card_20_punctuation_imperative",
+      "type": "chat",
+      "concept_id": "imperative_advanced",
+      "level": 3,
+      "progress": { "current": 20, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Ruko, ye clear kar deta hoon. Universal rule yaad rakho: Normal command/request ke end mein FULL STOP (.) aata hai. Lekin jab command bahut strong, urgent ya gusse mein diya jaaye, tab EXCLAMATION MARK (!) use hota hai. Jaise: 'Close the door.' (normal) vs 'Get out!' (strong/angry). 'will you?' wala tag format ek exception case hai jahaan '?' aata hai. Same structure alag punctuation le sakta hai — depend karta hai tone/emphasis par." },
+        { "speaker": "raju", "text": "Achha! Toh ek hi jaisa 'Stop' sentence, situation ke hisaab se 'Stop.' bhi ho sakta hai aur 'Stop!' bhi — dono sahi hain bas meaning ka farak hai!" }
+      ],
+      "navigation": { "next": "card_21_quiz1_m3", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_quiz1_m3",
+      "card_slug": "card_21_quiz1_m3",
+      "type": "quiz",
+      "concept_id": "imperative_advanced",
+      "level": 3,
+      "progress": { "current": 21, "total": 66 },
+      "quiz_payload": {
+        "question": "'____ us finish the homework first.' Blank mein kya aayega taaki sentence ek suggestion (Imperative) bane?",
+        "options": [
+          { "id": "A", "text": "Let" },
+          { "id": "B", "text": "Lets" },
+          { "id": "C", "text": "Letting" },
+          { "id": "D", "text": "Left" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Let us finish the homework first.' — 'Let' first person plural ke liye suggestion/imperative banata hai. 'Lets' (bina apostrophe) galat spelling hai yahaan."
+      },
+      "navigation": { "next": "card_22_quiz2_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_22_quiz2_m3",
+      "card_slug": "card_22_quiz2_m3",
+      "type": "quiz",
+      "concept_id": "imperative_advanced",
+      "level": 3,
+      "progress": { "current": 22, "total": 66 },
+      "quiz_payload": {
+        "question": "Neeche diye gaye sentences mein se kaunsa sahi Negative Imperative hai?",
+        "options": [
+          { "id": "A", "text": "Not go there alone." },
+          { "id": "B", "text": "Do not go there alone." },
+          { "id": "C", "text": "No go there alone." },
+          { "id": "D", "text": "Not to go there alone." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Negative Imperative ka sahi formula hai 'Do not / Don't + V1'. Isliye 'Do not go there alone.' hi sahi hai. Baaki sab galat structure hain — ye SSC/Railway ka common error-spotting trap hai."
+      },
+      "navigation": { "next": "card_23_quiz3_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_quiz3_m3",
+      "card_slug": "card_23_quiz3_m3",
+      "type": "quiz",
+      "concept_id": "imperative_advanced",
+      "level": 3,
+      "progress": { "current": 23, "total": 66 },
+      "quiz_payload": {
+        "question": "'Close the door' sentence ke end mein full stop (.) ya exclamation (!) ka use decide karne ka sahi universal rule kya hai?",
+        "options": [
+          { "id": "A", "text": "Hamesha full stop hi aayega" },
+          { "id": "B", "text": "Hamesha exclamation hi aayega" },
+          { "id": "C", "text": "Normal/polite command mein full stop, strong/urgent/angry command mein exclamation" },
+          { "id": "D", "text": "Ye dono kabhi use nahi hote, sirf question mark aata hai" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Universal rule: Tone ke hisaab se decide hota hai — sadharan (normal) request/command mein full stop, aur strong emotion/urgency wale command mein exclamation mark use hota hai."
+      },
+      "navigation": { "next": "card_24_milestone_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_24_milestone_m3",
+      "card_slug": "card_24_milestone_m3",
+      "type": "milestone",
+      "concept_id": "imperative_advanced",
+      "level": 3,
+      "progress": { "current": 24, "total": 66 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Imperative Sentences - Advanced (Let, Negative, Punctuation)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "Ab tum Imperative ke master ho gaye! Chalo ab feelings wale Exclamatory sentences seekhte hain!"
+      },
+      "navigation": { "next": "card_25_exclamatory_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_25_exclamatory_intro",
+      "card_slug": "card_25_exclamatory_intro",
+      "type": "chat",
+      "concept_id": "exclamatory_basics",
+      "level": 4,
+      "progress": { "current": 25, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho tumne achanak jungle mein ek sher dekh liya — tumhare muँh se kya nikalega? 'Sher hai!!' — is tarah ke sudden strong feelings (khushi, dukh, aashcharya, dar) ko express karne wale sentences ko Exclamatory Sentence kehte hain. Universal rule: ye HAMESHA Exclamation Mark (!) se hi khatam hote hain — chahe khushi ho, dukh ho ya aashcharya." },
+        { "speaker": "raju", "text": "Ohh! Matlab jab bhi bahut strong feeling aaye achanak se, tab exclamatory sentence banta hai? Jaise agar main kahoon 'Wah, kya match tha!' ye bhi exclamatory hoga?" }
+      ],
+      "navigation": { "next": "card_26_interjections", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_26_interjections",
+      "card_slug": "card_26_interjections",
+      "type": "chat",
+      "concept_id": "exclamatory_basics",
+      "level": 4,
+      "progress": { "current": 26, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Aur in strong feelings ko express karne ke liye chhote-chhote words use hote hain jinhe Interjection kehte hain — sentence ke shuru mein aate hain aur unke baad comma(,) ya exclamation(!) lagta hai. Emotion ke hisaab se yaad rakho: Khushi - Hurrah!, Wow!, Bravo! | Dukh/afsos - Alas!, Ah! | Aashcharya - Oh!, Eh! | Ghrina/disgust - Fie!, Ugh! | Chup rehne ko - Hush!" },
+        { "speaker": "raju", "text": "Sir itne saare interjections! Exam mein ye alag-alag emotion ke saath match karna paडेga kya?" }
+      ],
+      "navigation": { "next": "card_27_what_how_structure", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_27_what_how_structure",
+      "card_slug": "card_27_what_how_structure",
+      "type": "chat",
+      "concept_id": "exclamatory_basics",
+      "level": 4,
+      "progress": { "current": 27, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan Raju, BPSC/SSC mein interjection-emotion matching bhi poocha jaata hai. Ab dekho — poora exclamatory sentence banane ke do main formula hote hain: 1) 'What' se shuru — jab NOUN par emphasis ho: 'What a beautiful flower!' 2) 'How' se shuru — jab ADJECTIVE/ADVERB par emphasis ho: 'How beautiful this flower is!' Dono ka structure thoड़ा alag hota hai, jo hum agle module mein detail se seekhenge." },
+        { "speaker": "raju", "text": "Achha, matlab 'What' noun ke liye aur 'How' adjective ke liye — but dono ke end mein exclamation mark hi aayega na sir?" }
+      ],
+      "navigation": { "next": "card_28_guess_exclamatory", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_28_guess_exclamatory",
+      "card_slug": "card_28_guess_exclamatory",
+      "type": "guess",
+      "concept_id": "exclamatory_basics",
+      "level": 4,
+      "progress": { "current": 28, "total": 66 },
+      "guess_payload": {
+        "question": "Guess karo — in mein se kaunsa sahi Exclamatory Sentence hai?",
+        "options": [
+          { "id": "A", "text": "The mountain is very high." },
+          { "id": "B", "text": "Is the mountain high?" },
+          { "id": "C", "text": "How high the mountain is!" },
+          { "id": "D", "text": "Climb the mountain." }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'How high the mountain is!' strong feeling of wonder/admiration express kar raha hai aur exclamation mark se khatam ho raha hai — isliye ye Exclamatory Sentence hai."
+      },
+      "navigation": { "next": "card_29_quiz1_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_29_quiz1_m4",
+      "card_slug": "card_29_quiz1_m4",
+      "type": "quiz",
+      "concept_id": "exclamatory_basics",
+      "level": 4,
+      "progress": { "current": 29, "total": 66 },
+      "quiz_payload": {
+        "question": "Interjection 'Alas!' kis emotion ko darshata hai?",
+        "options": [
+          { "id": "A", "text": "Khushi (Joy)" },
+          { "id": "B", "text": "Dukh/Afsos (Sorrow)" },
+          { "id": "C", "text": "Aashcharya (Surprise)" },
+          { "id": "D", "text": "Ghrina (Disgust)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Alas!' sorrow/afsos ke liye use hota hai — jaise 'Alas! He is no more.' Ye SSC/Railway mein direct poocha jaata hai."
+      },
+      "navigation": { "next": "card_30_quiz2_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_30_quiz2_m4",
+      "card_slug": "card_30_quiz2_m4",
+      "type": "quiz",
+      "concept_id": "exclamatory_basics",
+      "level": 4,
+      "progress": { "current": 30, "total": 66 },
+      "quiz_payload": {
+        "question": "'Hurrah! We won the match.' — is sentence mein 'Hurrah' kya darshata hai?",
+        "options": [
+          { "id": "A", "text": "Dukh" },
+          { "id": "B", "text": "Khushi" },
+          { "id": "C", "text": "Dar" },
+          { "id": "D", "text": "Gussa" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Hurrah!' khushi/joy ka interjection hai, jo jeet ki khushi express kar raha hai."
+      },
+      "navigation": { "next": "card_31_quiz3_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_31_quiz3_m4",
+      "card_slug": "card_31_quiz3_m4",
+      "type": "quiz",
+      "concept_id": "exclamatory_basics",
+      "level": 4,
+      "progress": { "current": 31, "total": 66 },
+      "quiz_payload": {
+        "question": "Exclamatory sentence ka universal punctuation rule kya hai?",
+        "options": [
+          { "id": "A", "text": "Hamesha full stop (.)" },
+          { "id": "B", "text": "Hamesha question mark (?)" },
+          { "id": "C", "text": "Hamesha exclamation mark (!)" },
+          { "id": "D", "text": "Koi punctuation nahi lagta" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Chahe emotion khushi ho, dukh ho ya aashcharya — Exclamatory sentence hamesha (!) se hi khatam hota hai, ye universal rule hai."
+      },
+      "navigation": { "next": "card_32_milestone_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_32_milestone_m4",
+      "card_slug": "card_32_milestone_m4",
+      "type": "milestone",
+      "concept_id": "exclamatory_basics",
+      "level": 4,
+      "progress": { "current": 32, "total": 66 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎉",
+        "completed_topic": "Exclamatory Sentences - Basics",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "Feelings express karna aa gaya! Ab dekhte hain Assertive ko Exclamatory mein badalna."
+      },
+      "navigation": { "next": "card_33_assertive_to_exclamatory", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_33_assertive_to_exclamatory",
+      "card_slug": "card_33_assertive_to_exclamatory",
+      "type": "chat",
+      "concept_id": "transformation",
+      "level": 5,
+      "progress": { "current": 33, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab BPSC/SSC ka favorite topic — Assertive Sentence ko Exclamatory mein convert karna. Universal rule pehle samझo: jis Assertive sentence mein koi 'degree word' ho jaise 'very', 'so', 'extremely' — usse hum exclamatory bana sakte hain, kyunki wahaan already strong feeling chhupi hoti hai." },
+        { "speaker": "raju", "text": "Matlab agar sentence mein 'very' ya 'so' ho, toh samझo usse exclamatory banaya ja sakta hai? Jaise 'She is very beautiful' ko exclamatory bana sakte hain?" }
+      ],
+      "navigation": { "next": "card_34_formula_what", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_34_formula_what",
+      "card_slug": "card_34_formula_what",
+      "type": "chat",
+      "concept_id": "transformation",
+      "level": 5,
+      "progress": { "current": 34, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab 'What' wala formula yaad karo dhyan se: Assertive: 'It is a beautiful flower.' Exclamatory: 'What a beautiful flower it is!' Formula: What + a/an (agar noun singular countable hai) + Adjective + Noun + Subject + Verb + ! Yaad rakho: article 'a/an' sirf tab aayega jab noun singular countable ho — jaise 'flowers' (plural) ho toh 'a/an' nahi lagega: 'What beautiful flowers they are!'" },
+        { "speaker": "raju", "text": "Achha, toh plural noun mein article nahi lagana... ye toh bhoolने wala point hai sir, exam mein zaroor trap karenge!" }
+      ],
+      "navigation": { "next": "card_35_formula_how", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_35_formula_how",
+      "card_slug": "card_35_formula_how",
+      "type": "chat",
+      "concept_id": "transformation",
+      "level": 5,
+      "progress": { "current": 35, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi soch rahe ho, ye exact trap SSC/BPSC mein aata hai. Ab 'How' wala formula dekho: Assertive: 'She sings very sweetly.' Exclamatory: 'How sweetly she sings!' Formula: How + Adjective/Adverb + Subject + Verb + ! Dhyan do — 'How' ke saath KABHI bhi article (a/an) nahi lagता, chahe noun ho bhi. Ye sabse common exam trap hai: log galti se 'How a beautiful flower!' likh dete hain, jo bilkul galat hai." },
+        { "speaker": "raju", "text": "Ohh! Toh 'What' ke saath article aa sakta hai (singular noun ho toh), lekin 'How' ke saath kabhi nahi — ye main hamesha yaad rakhunga sir!" }
+      ],
+      "navigation": { "next": "card_36_guess_transformation", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_36_guess_transformation",
+      "card_slug": "card_36_guess_transformation",
+      "type": "guess",
+      "concept_id": "transformation",
+      "level": 5,
+      "progress": { "current": 36, "total": 66 },
+      "guess_payload": {
+        "question": "Assertive Sentence: 'The Taj Mahal is a very magnificent building.' Isse sahi Exclamatory sentence mein convert karo — guess karo sahi option:",
+        "options": [
+          { "id": "A", "text": "How a magnificent building the Taj Mahal is!" },
+          { "id": "B", "text": "What a magnificent building the Taj Mahal is!" },
+          { "id": "C", "text": "What magnificent building the Taj Mahal is!" },
+          { "id": "D", "text": "How magnificent building the Taj Mahal is!" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Building' singular countable noun hai, isliye 'What' ke saath article 'a' aayega: 'What a magnificent building the Taj Mahal is!' Option A galat kyunki 'How' ke saath article nahi aata. Option C mein article missing hai. Option D bhi galat structure hai."
+      },
+      "navigation": { "next": "card_37_quiz1_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_37_quiz1_m5",
+      "card_slug": "card_37_quiz1_m5",
+      "type": "quiz",
+      "concept_id": "transformation",
+      "level": 5,
+      "progress": { "current": 37, "total": 66 },
+      "quiz_payload": {
+        "question": "Assertive: 'He is a very honest man.' Sahi Exclamatory sentence chunо:",
+        "options": [
+          { "id": "A", "text": "How an honest man he is!" },
+          { "id": "B", "text": "What an honest man he is!" },
+          { "id": "C", "text": "What honest a man he is!" },
+          { "id": "D", "text": "How honest man he is!" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Man' singular countable noun hai aur 'honest' vowel sound se shuru hota hai, isliye article 'an' lagega: 'What an honest man he is!'"
+      },
+      "navigation": { "next": "card_38_quiz2_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_38_quiz2_m5",
+      "card_slug": "card_38_quiz2_m5",
+      "type": "quiz",
+      "concept_id": "transformation",
+      "level": 5,
+      "progress": { "current": 38, "total": 66 },
+      "quiz_payload": {
+        "question": "Assertive: 'The children play very noisily.' Sahi Exclamatory sentence chunо:",
+        "options": [
+          { "id": "A", "text": "What noisily the children play!" },
+          { "id": "B", "text": "How noisily the children play!" },
+          { "id": "C", "text": "How a noisy the children play!" },
+          { "id": "D", "text": "What noisy the children play!" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Noisily' ek adverb hai (verb 'play' ko modify kar raha hai), isliye 'How' formula lagega bina kisi article ke: 'How noisily the children play!'"
+      },
+      "navigation": { "next": "card_39_quiz3_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_39_quiz3_m5",
+      "card_slug": "card_39_quiz3_m5",
+      "type": "quiz",
+      "concept_id": "transformation",
+      "level": 5,
+      "progress": { "current": 39, "total": 66 },
+      "quiz_payload": {
+        "question": "Exclamatory sentence: 'What lovely flowers these are!' — Iska sahi Assertive (statement) form kya hoga?",
+        "options": [
+          { "id": "A", "text": "These are very lovely flowers." },
+          { "id": "B", "text": "Are these very lovely flowers?" },
+          { "id": "C", "text": "These flowers are lovely, aren't they?" },
+          { "id": "D", "text": "Lovely flowers, these are!" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Reverse transformation mein exclamation/degree word ko normal statement mein badalte hain: 'These are very lovely flowers.' — ye Assertive Sentence hai."
+      },
+      "navigation": { "next": "card_40_milestone_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_40_milestone_m5",
+      "card_slug": "card_40_milestone_m5",
+      "type": "milestone",
+      "concept_id": "transformation",
+      "level": 5,
+      "progress": { "current": 40, "total": 66 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔄",
+        "completed_topic": "Assertive-Exclamatory Transformation",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "Transformation master ban gaye tum! Ab ek special BSEB-special topic - Optative Sentences!"
+      },
+      "navigation": { "next": "card_41_optative_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_41_optative_intro",
+      "card_slug": "card_41_optative_intro",
+      "type": "chat",
+      "concept_id": "optative_sentences",
+      "level": 6,
+      "progress": { "current": 41, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek aisa sentence type dekhte hain jo wish (ichchha), prayer (prathna) ya curse (shraap) express karta hai. Jaise: 'May you live long!' ya 'May God bless you!' Aise sentences ko Optative Sentence kehte hain, aur ye zyaादatar 'May' se shuru hote hain." },
+        { "speaker": "raju", "text": "Sir, ye toh Exclamatory jaisa hi lag raha hai — ismein bhi '!' hi lag raha hai end mein!" }
+      ],
+      "navigation": { "next": "card_42_optative_examples", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_42_optative_examples",
+      "card_slug": "card_42_optative_examples",
+      "type": "chat",
+      "concept_id": "optative_sentences",
+      "level": 6,
+      "progress": { "current": 42, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Yahi sabse bada exam point hai! General/NCERT-based grammar Optative ko Exclamatory Sentence ka hi ek part maan leta hai (kyunki punctuation same '!' hota hai). LEKIN Bihar SCERT/BSEB ki textbooks isse ALAG, apna 5th separate category maanती hain! Isliye BPSC TRE mein agar poocha jaaye 'sentences ke kितने prakaar hote hain', toh Bihar Board ke hisaab se jawab '5' hoga." },
+        { "speaker": "raju", "text": "Ohh! Ye toh confuse karne wala point hai sir — matlab agar SSC ka exam ho toh shayad 4 bolna sahi hoga, but BPSC TRE mein 5 bolna padega Bihar Board follow karke?" }
+      ],
+      "navigation": { "next": "card_43_guess_optative", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_43_guess_optative",
+      "card_slug": "card_43_guess_optative",
+      "type": "guess",
+      "concept_id": "optative_sentences",
+      "level": 6,
+      "progress": { "current": 43, "total": 66 },
+      "guess_payload": {
+        "question": "Guess karo — in mein se kaunsa sentence Optative (wish/prayer) hai?",
+        "options": [
+          { "id": "A", "text": "May you succeed in life!" },
+          { "id": "B", "text": "You will succeed in life." },
+          { "id": "C", "text": "Will you succeed in life?" },
+          { "id": "D", "text": "What a success it is!" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'May you succeed in life!' ek wish/prayer express kar raha hai, jo 'May' se shuru ho raha hai — isliye ye Optative Sentence hai."
+      },
+      "navigation": { "next": "card_44_quiz1_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_44_quiz1_m6",
+      "card_slug": "card_44_quiz1_m6",
+      "type": "quiz",
+      "concept_id": "optative_sentences",
+      "level": 6,
+      "progress": { "current": 44, "total": 66 },
+      "quiz_payload": {
+        "question": "'May his soul rest in peace!' — Ye sentence kis prakaar ka hai?",
+        "options": [
+          { "id": "A", "text": "Imperative" },
+          { "id": "B", "text": "Exclamatory" },
+          { "id": "C", "text": "Optative" },
+          { "id": "D", "text": "Interrogative" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Ye ek prarthna/wish (dead vyakti ke liye) express kar raha hai, isliye ye Optative Sentence hai, jo 'May' se start hota hai."
+      },
+      "navigation": { "next": "card_45_quiz2_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_45_quiz2_m6",
+      "card_slug": "card_45_quiz2_m6",
+      "type": "quiz",
+      "concept_id": "optative_sentences",
+      "level": 6,
+      "progress": { "current": 45, "total": 66 },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE Trap: Bihar SCERT ke anusaar Optative Sentence ko kis category se ALAG maana gaya hai?",
+        "options": [
+          { "id": "A", "text": "Assertive" },
+          { "id": "B", "text": "Interrogative" },
+          { "id": "C", "text": "Exclamatory" },
+          { "id": "D", "text": "Imperative" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Bihar Board/BSEB textbooks Optative ko Exclamatory se ALAG, apni khud ki 5th category maanते hain, jabki NCERT/general grammar isse Exclamatory ke andar hi treat karte hain."
+      },
+      "navigation": { "next": "card_46_quiz3_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_46_quiz3_m6",
+      "card_slug": "card_46_quiz3_m6",
+      "type": "quiz",
+      "concept_id": "optative_sentences",
+      "level": 6,
+      "progress": { "current": 46, "total": 66 },
+      "quiz_payload": {
+        "question": "Neeche diye options mein se kaunsa sentence Optative NAHI hai?",
+        "options": [
+          { "id": "A", "text": "May you live a long life!" },
+          { "id": "B", "text": "God bless you!" },
+          { "id": "C", "text": "What a wonderful gift!" },
+          { "id": "D", "text": "Wish you a happy birthday!" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'What a wonderful gift!' ek Exclamatory sentence hai jo admiration/khushi express kar raha hai, wish/prayer nahi — isliye ye Optative nahi hai. Baaki teeno wish/prayer express kar rahe hain."
+      },
+      "navigation": { "next": "card_47_milestone_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_47_milestone_m6",
+      "card_slug": "card_47_milestone_m6",
+      "type": "milestone",
+      "concept_id": "optative_sentences",
+      "level": 6,
+      "progress": { "current": 47, "total": 66 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🙏",
+        "completed_topic": "Optative Sentences (BSEB Special)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/8 Clear",
+        "motivational_quote": "Bihar Board ka special twist clear! Ab chalo SBI PO level Error Detection seekhte hain!"
+      },
+      "navigation": { "next": "card_48_error_detection_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_48_error_detection_intro",
+      "card_slug": "card_48_error_detection_intro",
+      "type": "chat",
+      "concept_id": "error_detection_rules",
+      "level": 7,
+      "progress": { "current": 48, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab hum enter kar rahe hain SBI PO/Bank PO level mein! Wahaan ek pura sentence 4 chhote parts mein baंटा hota hai — (A), (B), (C), (D) — aur ek 5vaan option hota hai (E) 'No Error'. Tumhe bataना hota hai ki kis part mein grammatical galti hai. Aaj hum Imperative aur Exclamatory sentences se related common traps dekhenge." },
+        { "speaker": "raju", "text": "Sir ye toh alag hi level hai! Poora sentence todна padता hai kya?" }
+      ],
+      "navigation": { "next": "card_49_common_traps_punctuation", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_49_common_traps_punctuation",
+      "card_slug": "card_49_common_traps_punctuation",
+      "type": "chat",
+      "concept_id": "error_detection_rules",
+      "level": 7,
+      "progress": { "current": 49, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan bilkul, part-by-part dekhna padta hai. Trap 1 - Punctuation: Agar koi plain Imperative sentence hai jaise 'Please close the door' aur uske end mein '?' laga diya jaaye — 'Please close the door?' — ye GALAT hai, kyunki simple request/order mein '?' nahi aata, sirf tab aata hai jab end mein 'will you?' jaisa tag joड़a jaaye." },
+        { "speaker": "raju", "text": "Achha! Matlab bina tag question ke '?' lagana hi mistake hai imperative mein — noted sir!" }
+      ],
+      "navigation": { "next": "card_50_subject_verb_imperative_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_50_subject_verb_imperative_trap",
+      "card_slug": "card_50_subject_verb_imperative_trap",
+      "type": "chat",
+      "concept_id": "error_detection_rules",
+      "level": 7,
+      "progress": { "current": 50, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 2 - Verb Form: Imperative sentence mein VERB hamesha base form (V1) mein hoga, chahe subject 'you' hidden singular ho ya plural. Jaise 'Everybody stands up' — GALAT hai! Sahi hoga 'Everybody, stand up' ya simply 'Stand up.' — kyunki command dete waqt verb ke saath 's/es' kabhi nahi lagता." },
+        { "speaker": "raju", "text": "Ohh sir, ye toh bilkul ulti galti hai jaha hum third person singular mein 's' lagana bhool nahi sakte — but yahaan lagana hi nahi hai!" }
+      ],
+      "navigation": { "next": "card_51_exclamatory_word_order_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_51_exclamatory_word_order_trap",
+      "card_slug": "card_51_exclamatory_word_order_trap",
+      "type": "chat",
+      "concept_id": "error_detection_rules",
+      "level": 7,
+      "progress": { "current": 51, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 3 - Word Order & Article: Exclamatory sentence mein galat word order ek common error hai. Jaise 'What beautiful a flower it is!' — GALAT! Sahi hoga 'What a beautiful flower it is!' (Article 'a' Adjective se PEHLE, aur noun se PEHLE). Aur yaad hai na — 'How' ke saath kabhi article nahi aata, agar kisi part mein 'How a beautiful...' dikhe, toh wahi galti wala part hoga!" },
+        { "speaker": "raju", "text": "Yaad hai sir! Ye toh humne transformation wale module mein bhi seekha tha — 'How' ke saath article kabhi nahi!" }
+      ],
+      "navigation": { "next": "card_52_quiz1_m7", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_52_quiz1_m7",
+      "card_slug": "card_52_quiz1_m7",
+      "type": "quiz",
+      "concept_id": "error_detection_rules",
+      "level": 7,
+      "progress": { "current": 52, "total": 66 },
+      "quiz_payload": {
+        "question": "SBI PO Error Detection: 'Please switch off the light (A)/ before you leave the room (B)/ otherwise electricity will be wasted? (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "A" },
+          { "id": "B", "text": "B" },
+          { "id": "C", "text": "C" },
+          { "id": "D", "text": "D (No Error)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Part (C) mein galti hai — 'otherwise electricity will be wasted' ek statement/warning hai, isliye '?' nahi balki full stop (.) aana chahiye."
+      },
+      "navigation": { "next": "card_53_quiz2_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_53_quiz2_m7",
+      "card_slug": "card_53_quiz2_m7",
+      "type": "quiz",
+      "concept_id": "error_detection_rules",
+      "level": 7,
+      "progress": { "current": 53, "total": 66 },
+      "quiz_payload": {
+        "question": "SBI PO Error Detection: 'Everybody stands (A)/ in a queue (B)/ and waits for their turn (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "A" },
+          { "id": "B", "text": "B" },
+          { "id": "C", "text": "C" },
+          { "id": "D", "text": "D (No Error)" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Part (A) mein galti hai — Imperative sentence mein verb hamesha base form (V1) mein hoga: 'Everybody stand in a queue and wait for their turn.' Sabse pehla error part (A) hai."
+      },
+      "navigation": { "next": "card_54_quiz3_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_54_quiz3_m7",
+      "card_slug": "card_54_quiz3_m7",
+      "type": "quiz",
+      "concept_id": "error_detection_rules",
+      "level": 7,
+      "progress": { "current": 54, "total": 66 },
+      "quiz_payload": {
+        "question": "SBI PO Error Detection: 'What (A)/ a beautiful (B)/ garden it is (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "A" },
+          { "id": "B", "text": "B" },
+          { "id": "C", "text": "C" },
+          { "id": "D", "text": "D (No Error)" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Is sentence mein koi galti nahi hai! 'What a beautiful garden it is!' sahi structure hai — article 'a' adjective se pehle, phir noun, phir subject-verb. Isliye jawab (D) No Error hai."
+      },
+      "navigation": { "next": "card_55_milestone_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_55_milestone_m7",
+      "card_slug": "card_55_milestone_m7",
+      "type": "milestone",
+      "concept_id": "error_detection_rules",
+      "level": 7,
+      "progress": { "current": 55, "total": 66 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🕵️",
+        "completed_topic": "SBI PO Error Detection Rules",
+        "xp_earned": 70,
+        "milestone_progress": "Module 7/8 Clear",
+        "motivational_quote": "Detective ban gaye tum! Ab final practice round - real SBI PO pattern questions!"
+      },
+      "navigation": { "next": "card_56_sbi_po_pattern_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_56_sbi_po_pattern_intro",
+      "card_slug": "card_56_sbi_po_pattern_intro",
+      "type": "chat",
+      "concept_id": "sbi_po_practice",
+      "level": 8,
+      "progress": { "current": 56, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo ab ek real SBI PO pattern practice karte hain. Method yaad rakho: Pehle poore sentence ko padhо, phir dekho kaunsa part meaning ya grammar se match nahi kar raha. Imperative/Exclamatory wale sentences mein hum teen cheezein specifically check karenge: Punctuation, Verb form, aur Article placement." },
+        { "speaker": "raju", "text": "Sir, ek trick batao na, jaldi se galti dhundने ka!" }
+      ],
+      "navigation": { "next": "card_57_practice_segment1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_57_practice_segment1",
+      "card_slug": "card_57_practice_segment1",
+      "type": "chat",
+      "concept_id": "sbi_po_practice",
+      "level": 8,
+      "progress": { "current": 57, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Trick ye hai — sabse pehle sentence ka END dekho, phir START. Jaise: 'Kindly submit the report (A)/ before the deadline ends (B)/ or you will face problem! (C)/ No error (D)' — yahaan '!' laga hai lekin ye ek plain warning/statement hai, itna strong emotion nahi ki exclamation lage. Toh galti part (C) mein hai — full stop hona chahiye tha." },
+        { "speaker": "raju", "text": "Achha, matlab agar '!' bina kisi strong emotion ke laga diya jaaye, wo bhi ek trap hai! Pehle mujhe laga sirf missing '!' hi galti hoti hai, lekin extra '!' bhi galti ho sakti hai!" }
+      ],
+      "navigation": { "next": "card_58_practice_segment2", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_58_practice_segment2",
+      "card_slug": "card_58_practice_segment2",
+      "type": "chat",
+      "concept_id": "sbi_po_practice",
+      "level": 8,
+      "progress": { "current": 58, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi samझा! Ek aur example: 'How (A)/ a wonderful performance (B)/ she gave last night (C)/ No error (D)' — dhyan do, 'How' ke saath 'a' article — ye hi toh humne seekha tha kabhi nahi aata! Toh galti part (B) mein hai, sahi hoga sirf 'wonderful performance'." },
+        { "speaker": "raju", "text": "Yes sir! Ye wala toh main ab pakka pakड़ लूँगा — 'How' dekha, article dhundना shuru!" }
+      ],
+      "navigation": { "next": "card_59_practice_segment3", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_59_practice_segment3",
+      "card_slug": "card_59_practice_segment3",
+      "type": "chat",
+      "concept_id": "sbi_po_practice",
+      "level": 8,
+      "progress": { "current": 59, "total": 66 },
+      "messages": [
+        { "speaker": "aman", "text": "Last trick: 'Let (A)/ we go (B)/ to the market now (C)/ No error (D)' — Yahaan galti part (B) mein hai! 'Let' ke baad hamesha OBJECT pronoun aata hai (us/him/her/them), SUBJECT pronoun nahi (we/he/she/they). Sahi hoga 'Let us go'." },
+        { "speaker": "raju", "text": "Ohh! 'Let' ke baad 'us' aayega, 'we' nahi — kyunki 'we' subject hai aur 'us' object! Ab samझ aaya sir, thank you!" }
+      ],
+      "navigation": { "next": "card_60_quiz1_m8", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_60_quiz1_m8",
+      "card_slug": "card_60_quiz1_m8",
+      "type": "quiz",
+      "concept_id": "sbi_po_practice",
+      "level": 8,
+      "progress": { "current": 60, "total": 66 },
+      "quiz_payload": {
+        "question": "SBI PO Error Detection: 'Let (A)/ him finish (B)/ his work first (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "A" },
+          { "id": "B", "text": "B" },
+          { "id": "C", "text": "C" },
+          { "id": "D", "text": "D (No Error)" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Koi galti nahi hai! 'Let him finish his work first.' mein 'him' object pronoun sahi use hua hai third person ke liye. Jawab (D) No Error hai."
+      },
+      "navigation": { "next": "card_61_quiz2_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_61_quiz2_m8",
+      "card_slug": "card_61_quiz2_m8",
+      "type": "quiz",
+      "concept_id": "sbi_po_practice",
+      "level": 8,
+      "progress": { "current": 61, "total": 66 },
+      "quiz_payload": {
+        "question": "SBI PO Error Detection: 'Do not (A)/ forget to bring (B)/ your books tomorrow? (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "A" },
+          { "id": "B", "text": "B" },
+          { "id": "C", "text": "C" },
+          { "id": "D", "text": "D (No Error)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Part (C) mein galti hai — ye ek plain Negative Imperative (instruction) hai, isliye end mein full stop (.) aana chahiye, question mark (?) nahi. Sahi hoga: 'your books tomorrow.'"
+      },
+      "navigation": { "next": "card_62_quiz3_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_62_quiz3_m8",
+      "card_slug": "card_62_quiz3_m8",
+      "type": "quiz",
+      "concept_id": "sbi_po_practice",
+      "level": 8,
+      "progress": { "current": 62, "total": 66 },
+      "quiz_payload": {
+        "question": "SBI PO Error Detection: 'What an (A)/ intelligent boy (B)/ he are! (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "A" },
+          { "id": "B", "text": "B" },
+          { "id": "C", "text": "C" },
+          { "id": "D", "text": "D (No Error)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Part (C) mein galti hai — Subject 'he' singular hai, isliye verb 'is' aayega, 'are' nahi. Sahi hoga 'he is!' Ye subject-verb agreement wala classic exam trap hai jo exclamatory sentence ke andar chhupa hota hai."
+      },
+      "navigation": { "next": "card_63_milestone_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_63_milestone_m8",
+      "card_slug": "card_63_milestone_m8",
+      "type": "milestone",
+      "concept_id": "sbi_po_practice",
+      "level": 8,
+      "progress": { "current": 63, "total": 66 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏅",
+        "completed_topic": "SBI PO Error Detection - Practice",
+        "xp_earned": 80,
+        "milestone_progress": "Module 8/8 Clear",
+        "motivational_quote": "Wah Raju! Ab tum SBI PO level error bhi pakड़ sakte ho! Bas ek final revision baaki hai!"
+      },
+      "navigation": { "next": "card_64_summary", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_64_summary",
+      "card_slug": "card_64_summary",
+      "type": "summary",
+      "concept_id": "chapter_summary",
+      "level": 9,
+      "progress": { "current": 64, "total": 66 },
+      "summary_payload": {
+        "title": "⚡ Officer-Level Lightning Revision",
+        "revision_points": [
+          {
+            "topic": "Sentence Kinds — NCERT vs BSEB Trap",
+            "point": "Statement I: NCERT/general grammar typically counts 4 kinds of sentences (Assertive, Interrogative, Imperative, Exclamatory). Statement II: Bihar SCERT/BSEB counts 5, treating Optative separately. Both statements are correct — BPSC TRE follows BSEB's 5-kind classification."
+          },
+          {
+            "topic": "Imperative Sentence Core Rule",
+            "point": "Statement I: Subject 'You' is always hidden in Imperative sentences. Statement II: Subject 'You' can be explicitly stated for emphasis (e.g., 'You get out!'). Both are correct; explicit subject is the exception, not the rule."
+          },
+          {
+            "topic": "Negative Imperative & Let Construction",
+            "point": "Statement I: Negative Imperative always needs 'Do not/Don't' before V1. Statement II: 'Let' takes an OBJECT pronoun (us/him/her/them), never a subject pronoun (we/he/they). Both statements are correct and are frequent error-detection traps."
+          },
+          {
+            "topic": "Exclamatory Formulas",
+            "point": "Statement I: 'What' takes an article (a/an) before the adjective only for singular countable nouns. Statement II: 'How' never takes an article, regardless of the noun. Both statements are correct — this is SSC/BPSC's favorite transformation trap."
+          },
+          {
+            "topic": "Optative & Punctuation Rule",
+            "point": "Statement I: Optative sentences express a wish/prayer/curse, usually starting with 'May'. Statement II: Imperative, Exclamatory, and Optative sentences can end in either full stop or exclamation mark depending on the strength of emotion/tone. Both statements are correct."
+          }
+        ]
+      },
+      "navigation": { "next": "card_65_final_quiz", "button_text": "Take Final Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_65_final_quiz",
+      "card_slug": "card_65_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "chapter_final_quiz",
+      "level": 9,
+      "progress": { "current": 65, "total": 66 },
+      "quiz_payload": {
+        "question": "Consider the following statements about English sentence types:\nStatement I: The sentence 'Everybody stands up and don't make any noise!' contains a correctly formed Imperative verb structure.\nStatement II: 'What a lovely a garden it is!' is a grammatically correct Exclamatory sentence.\nStatement III: According to Bihar SCERT (BSEB), Optative sentences form a category separate from Exclamatory sentences, while NCERT-based general grammar often merges them.\nWhich of the above statement(s) is/are CORRECT?",
+        "options": [
+          { "id": "A", "text": "Only I and III" },
+          { "id": "B", "text": "Only II and III" },
+          { "id": "C", "text": "Only I and II" },
+          { "id": "D", "text": "Only III" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Statement I is WRONG — Imperative sentences always use the base verb form (V1); 'stands' is incorrect, it should be 'stand'. Statement II is WRONG — it has a double article error; the correct form is 'What a lovely garden it is!' (only ONE article 'a', right after 'What', before the adjective). Statement III is CORRECT — this is the exact BPSC TRE trap discussed: BSEB treats Optative as a separate 5th category, while NCERT/general grammar often clubs it under Exclamatory. Hence, only Statement III is correct — Answer (D)."
+      },
+      "navigation": { "next": "card_66_trophy", "button_text": "See Final Result ➔" }
+    },
+    {
+      "card_id": "card_66_trophy",
+      "card_slug": "card_66_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 9,
+      "progress": { "current": 66, "total": 66 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Imperative & Exclamatory Sentences + SBI PO Error Detection",
+        "xp_earned": 150,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Shabaash Raju! Ab tum command bhi de sakte ho, feelings bhi express kar sakte ho, aur SBI PO ke error bhi pakड़ sakte ho. Officer banने ka safar jaari rahe!"
+      },
+      "navigation": { "next": "card_01_intro", "button_text": "Revise Chapter Again 🔄" }
+    }
+  ]
+}
+```
