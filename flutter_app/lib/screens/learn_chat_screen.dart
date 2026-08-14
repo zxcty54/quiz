@@ -39,6 +39,24 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     super.dispose();
   }
 
+  // 🧹 UNIVERSAL SAFE JSON CLEANER (BOM + Invisible Characters Stripper)
+  String _sanitizeJsonString(String raw) {
+    String clean = raw.trim();
+
+    // 1. Remove UTF-8 BOM Marker (\uFEFF)
+    if (clean.startsWith('\uFEFF')) {
+      clean = clean.substring(1).trim();
+    }
+
+    // 2. Remove other hidden invisible markers & zero-width spaces
+    clean = clean.replaceAll(RegExp(r'[\u200B-\u200D\uFEFF]'), '');
+
+    // 3. Trim again
+    clean = clean.trim();
+
+    return clean;
+  }
+
   Future<void> _fetchChapterJson() async {
     String targetUrl = widget.jsonUrl ?? '';
     
@@ -56,10 +74,25 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
         : '$targetUrl?v=${DateTime.now().millisecondsSinceEpoch}';
 
     try {
-      final response = await http.get(Uri.parse(cacheBusterUrl)).timeout(const Duration(seconds: 15));
+      final response = await http.get(
+        Uri.parse(cacheBusterUrl),
+        headers: {'Accept': 'application/json, text/plain, */*'},
+      ).timeout(const Duration(seconds: 15));
 
       if (response.statusCode == 200) {
-        Map<String, dynamic> parsedJson = json.decode(utf8.decode(response.bodyBytes));
+        // 1. UTF-8 decode
+        String rawBody = utf8.decode(response.bodyBytes);
+
+        // 2. Sanitize & Strip BOM
+        String cleanJson = _sanitizeJsonString(rawBody);
+
+        // 3. Safety check for HTML error pages
+        if (cleanJson.startsWith('<') || cleanJson.startsWith('<!DOCTYPE')) {
+          throw Exception("Received HTML webpage instead of JSON. URL check karein.");
+        }
+
+        // 4. Safe Parse
+        Map<String, dynamic> parsedJson = json.decode(cleanJson);
         LearnChapterData data = LearnChapterData.fromJson(parsedJson);
 
         final prefs = await SharedPreferences.getInstance();
@@ -73,7 +106,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
             visibleMessageCount = 1;
             isLoading = false;
           });
-          // Pehli baar load hone par bhi Home Screen Progress Sync karo
           _saveProgress(savedIdx);
         }
       } else {
@@ -87,14 +119,14 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     } catch (e) {
       if (mounted) {
         setState(() {
-          errorMessage = "Data Fetch Error: $e\n\nURL: $cacheBusterUrl";
+          errorMessage = "Data Parse/Fetch Error: $e\n\nURL: $cacheBusterUrl";
           isLoading = false;
         });
       }
     }
   }
 
-  // ⚡ REALTIME PROGRESS SAVER FOR HOME SCREEN PREVIEW (ERROR-FREE NULL SAFE)
+  // ⚡ REALTIME PROGRESS SAVER FOR HOME SCREEN PREVIEW
   Future<void> _saveProgress(int index) async {
     if (chapterData == null || chapterData!.cardsList.isEmpty) return;
     final prefs = await SharedPreferences.getInstance();
@@ -109,11 +141,10 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     if (index + 1 < chapterData!.cardsList.length) {
       final nextCard = chapterData!.cardsList[index + 1];
       
-      // ✅ SAFE READ: Read text from messages or cardSlug instead of undefined title getter
       if (nextCard.messages != null && nextCard.messages!.isNotEmpty) {
         final firstMsg = nextCard.messages!.first.text;
         nextTopic = firstMsg.length > 30 ? "Next: ${firstMsg.substring(0, 30)}..." : "Next: $firstMsg";
-      } else if (nextCard.cardSlug != null && nextCard.cardSlug!.isNotEmpty) {
+      } else if (nextCard.cardSlug.isNotEmpty) {
         nextTopic = "Next: ${nextCard.cardSlug}";
       }
     } else {
