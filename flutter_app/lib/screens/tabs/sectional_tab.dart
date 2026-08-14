@@ -4,14 +4,12 @@ class SectionalTab extends StatefulWidget {
   final Map<String, dynamic> sectionalData;
   final bool isDarkMode;
   final Function(BuildContext, String, String) onLaunchCbtMock;
-  final VoidCallback? onManualRefresh;
 
   const SectionalTab({
     super.key,
     required this.sectionalData,
     required this.isDarkMode,
     required this.onLaunchCbtMock,
-    this.onManualRefresh,
   });
 
   @override
@@ -21,125 +19,46 @@ class SectionalTab extends StatefulWidget {
 class _SectionalTabState extends State<SectionalTab> {
   String _selectedExamPanel = 'bpsc';
 
-  final Map<String, Color> _examColors = {
-    'bpsc': const Color(0xFF9D174D),
-    'ssc': const Color(0xFF166534),
-    'bssc_cgl': const Color(0xFF6B21A8),
-    'bssc_inter': const Color(0xFF075985),
-    'bihar_si': const Color(0xFFD97706),
-  };
-
-  final List<Color> _fallbackColors = [
-    const Color(0xFFDC2626),
-    const Color(0xFF0D9488),
-    const Color(0xFF2563EB),
-    const Color(0xFF4F46E5),
-  ];
-
   @override
   void initState() {
     super.initState();
-    if (widget.sectionalData.isNotEmpty) {
+    if (widget.sectionalData.isNotEmpty && !widget.sectionalData.containsKey(_selectedExamPanel)) {
       _selectedExamPanel = widget.sectionalData.keys.first;
-    }
-  }
-
-  @override
-  void didUpdateWidget(covariant SectionalTab oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    if (!widget.sectionalData.containsKey(_selectedExamPanel) && widget.sectionalData.isNotEmpty) {
-      _selectedExamPanel = widget.sectionalData.keys.first;
-    }
-  }
-
-  Map<String, String> _getCardMeta(String key) {
-    switch (key.toLowerCase()) {
-      case 'bpsc':
-        return {'title': 'BPSC PCS', 'badge': 'STATE PCS'};
-      case 'ssc':
-        return {'title': 'SSC / NTPC', 'badge': 'TCS PATTERN'};
-      case 'bssc_cgl':
-        return {'title': 'BSSC CGL', 'badge': 'GRADUATE'};
-      case 'bssc_inter':
-        return {'title': 'BSSC 10+2', 'badge': 'INTER LEVEL'};
-      case 'bihar_si':
-        return {'title': 'BIHAR SI', 'badge': 'POLICE / DAROGA'};
-      default:
-        return {
-          'title': key.replaceAll('_', ' ').toUpperCase(),
-          'badge': 'TARGET EXAM',
-        };
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    final List<String> examKeys = widget.sectionalData.keys.toList();
-
-    return ListView(
+    return SingleChildScrollView(
+      physics: const AlwaysScrollableScrollPhysics(),
       padding: const EdgeInsets.all(16),
-      physics: const BouncingScrollPhysics(),
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text('🎯 Target Exam Sectional Mocks',
-                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
-                  Text('अपनी परीक्षा चुनें और रियल CBT टेस्ट दें',
-                      style: TextStyle(color: Colors.grey, fontSize: 11)),
-                ],
-              ),
-            ),
-            if (widget.onManualRefresh != null)
-              IconButton(
-                icon: const Icon(Icons.sync, color: Color(0xFF2563EB)),
-                tooltip: 'Sync Latest Sets',
-                onPressed: widget.onManualRefresh,
-              ),
-          ],
-        ),
-        const SizedBox(height: 14),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text('🎯 Target Exam Sectional Mocks', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          const Text('अपनी परीक्षा चुनें और रियल TCS CBT पैटर्न पर प्रैक्टिस शुरू करें', style: TextStyle(color: Colors.grey, fontSize: 12)),
+          const SizedBox(height: 14),
 
-        // 🚀 DYNAMIC GRID (Jitne folders GitHub par honge sabke cards auto banenge)
-        if (examKeys.isEmpty)
-          const Card(
-            child: Padding(
-              padding: EdgeInsets.all(16),
-              child: Center(
-                child: Text("Loading sectional exams...", style: TextStyle(color: Colors.grey, fontSize: 12)),
-              ),
-            ),
-          )
-        else
-          GridView.builder(
+          GridView.count(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              crossAxisSpacing: 8,
-              mainAxisSpacing: 8,
-              childAspectRatio: 1.4,
-            ),
-            itemCount: examKeys.length,
-            itemBuilder: (context, index) {
-              final key = examKeys[index];
-              final meta = _getCardMeta(key);
-              final color = _examColors[key.toLowerCase()] ??
-                  _fallbackColors[index % _fallbackColors.length];
-
-              return _examSelectorCard(meta['title']!, meta['badge']!, color, key);
-            },
+            crossAxisCount: 2,
+            crossAxisSpacing: 8,
+            mainAxisSpacing: 8,
+            childAspectRatio: 1.4,
+            children: [
+              _examSelectorCard('BPSC PCS', 'STATE PCS', const Color(0xFF9D174D), 'bpsc'),
+              _examSelectorCard('SSC / NTPC', 'TCS PATTERN', const Color(0xFF166534), 'ssc'),
+              _examSelectorCard('BSSC CGL', 'GRADUATE', const Color(0xFF6B21A8), 'bssc_cgl'),
+              _examSelectorCard('BSSC 10+2', 'INTER LEVEL', const Color(0xFF075985), 'bssc_inter'),
+              _examSelectorCard('BIHAR SI', 'POLICE / DAROGA', const Color(0xFFD97706), 'bihar_si'),
+            ],
           ),
+          const SizedBox(height: 20),
 
-        const SizedBox(height: 20),
-
-        // 📋 DYNAMIC SETS PANEL
-        _buildDynamicSectionalSetsPanel(context),
-      ],
+          _buildDynamicSectionalSetsPanel(context),
+        ],
+      ),
     );
   }
 
@@ -150,10 +69,7 @@ class _SectionalTabState extends State<SectionalTab> {
       return const Card(
         child: Padding(
           padding: EdgeInsets.all(20),
-          child: Center(
-            child: Text("⚠️ Sets loading... Please check connection.",
-                style: TextStyle(fontSize: 12, color: Colors.grey)),
-          ),
+          child: Center(child: Text("⚠️ Sets loading... Please check connection.", style: TextStyle(fontSize: 12, color: Colors.grey))),
         ),
       );
     }
@@ -179,10 +95,8 @@ class _SectionalTabState extends State<SectionalTab> {
                   return ActionChip(
                     backgroundColor: const Color(0xFF9D174D).withOpacity(0.08),
                     side: const BorderSide(color: Color(0xFF9D174D)),
-                    label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}',
-                        style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
-                    onPressed: () => widget.onLaunchCbtMock(
-                        context, '$title Set $setNum', '$prefix$setNum.json'),
+                    label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}', style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF9D174D))),
+                    onPressed: () => widget.onLaunchCbtMock(context, '$title Set $setNum', '$prefix$setNum.json'),
                   );
                 }),
               )
@@ -194,7 +108,7 @@ class _SectionalTabState extends State<SectionalTab> {
 
     if (panelData is List) {
       return Column(
-        children: panelData.map((item) {
+        children: panelData.map<Widget>((item) {
           String itemTitle = item['title'] ?? 'Sectional Mock';
           int totalSets = item['sets'] ?? 5;
           String folder = item['folder'] ?? 'bssc/science';
@@ -216,10 +130,8 @@ class _SectionalTabState extends State<SectionalTab> {
                       return ActionChip(
                         backgroundColor: const Color(0xFF2563EB).withOpacity(0.08),
                         side: const BorderSide(color: Color(0xFF2563EB)),
-                        label: Text('Set 0$setNum',
-                            style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
-                        onPressed: () => widget.onLaunchCbtMock(
-                            context, "$itemTitle Set $setNum", "$folder/set$setNum.json"),
+                        label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}', style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
+                        onPressed: () => widget.onLaunchCbtMock(context, "$itemTitle Set $setNum", "$folder/set_$setNum.json"),
                       );
                     }),
                   ),
@@ -251,10 +163,7 @@ class _SectionalTabState extends State<SectionalTab> {
             children: [
               Text(badge, style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: color)),
               const SizedBox(height: 2),
-              Text(title,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+              Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
             ],
           ),
         ),
