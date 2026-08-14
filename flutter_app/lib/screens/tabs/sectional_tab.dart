@@ -33,7 +33,6 @@ class _SectionalTabState extends State<SectionalTab> {
   @override
   void didUpdateWidget(covariant SectionalTab oldWidget) {
     super.didUpdateWidget(oldWidget);
-    // Sirf tab update karein agar liveData abhi tak empty ho
     if (widget.sectionalData.isNotEmpty && _liveData.isEmpty) {
       setState(() {
         _liveData = Map<String, dynamic>.from(widget.sectionalData);
@@ -66,7 +65,6 @@ class _SectionalTabState extends State<SectionalTab> {
       });
     }
 
-    // Background live cloud sync
     _fetchLiveGitHubData();
   }
 
@@ -181,6 +179,30 @@ class _SectionalTabState extends State<SectionalTab> {
     }
   }
 
+  void _showUpcomingNotice(String setTitle, String notice) {
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Row(
+          children: [
+            const Icon(Icons.lock_clock_rounded, color: Colors.amber, size: 20),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Text(
+                '🔒 $setTitle jald hi live hoga!\n($notice)',
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
+        ),
+        backgroundColor: const Color(0xFF1E293B),
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        duration: const Duration(seconds: 2),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     if (_liveData.isEmpty && _isLoading) {
@@ -195,7 +217,7 @@ class _SectionalTabState extends State<SectionalTab> {
       onRefresh: _fetchLiveGitHubData,
       child: SingleChildScrollView(
         physics: const AlwaysScrollableScrollPhysics(),
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(14),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -203,7 +225,7 @@ class _SectionalTabState extends State<SectionalTab> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text('🎯 Target Exam Sectional Mocks',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
                 if (_isLoading)
                   const SizedBox(
                     width: 16,
@@ -212,68 +234,96 @@ class _SectionalTabState extends State<SectionalTab> {
                   ),
               ],
             ),
+            const SizedBox(height: 2),
             const Text('अपनी परीक्षा चुनें और रियल TCS CBT पैटर्न पर प्रैक्टिस शुरू करें',
                 style: TextStyle(color: Colors.grey, fontSize: 12)),
-            const SizedBox(height: 14),
+            const SizedBox(height: 12),
 
-            // 🚀 FULLY DYNAMIC GRID
-            GridView.builder(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: examKeys.length,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 8,
-                mainAxisSpacing: 8,
-                childAspectRatio: 1.4,
-              ),
-              itemBuilder: (context, index) {
+            // 🚀 CLEAN NON-SCROLL WRAP (Clear, Visible & Professional)
+            Wrap(
+              spacing: 8.0,
+              runSpacing: 8.0,
+              children: List.generate(examKeys.length, (index) {
                 final examKey = examKeys[index];
                 final panelData = _liveData[examKey];
-
                 final String title = _formatExamTitle(examKey, panelData);
                 final String badge = _formatExamBadge(examKey, panelData);
                 final Color examColor = _resolveColor(examKey, index);
                 final bool isSelected = _selectedExamPanel == examKey;
 
-                return GestureDetector(
+                return InkWell(
+                  borderRadius: BorderRadius.circular(10),
                   onTap: () => setState(() => _selectedExamPanel = examKey),
-                  child: Card(
-                    color: isSelected
-                        ? examColor.withOpacity(0.12)
-                        : (widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white),
-                    shape: RoundedRectangleBorder(
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 180),
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    decoration: BoxDecoration(
+                      color: isSelected
+                          ? examColor
+                          : (widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white),
                       borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(
-                        color: isSelected ? examColor : Colors.grey.shade300,
-                        width: isSelected ? 2 : 1,
+                      border: Border.all(
+                        color: isSelected
+                            ? examColor
+                            : (widget.isDarkMode ? Colors.grey.shade800 : Colors.grey.shade300),
+                        width: isSelected ? 1.5 : 1,
                       ),
+                      boxShadow: isSelected
+                          ? [
+                              BoxShadow(
+                                color: examColor.withOpacity(0.32),
+                                blurRadius: 6,
+                                offset: const Offset(0, 2),
+                              )
+                            ]
+                          : [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.03),
+                                blurRadius: 3,
+                                offset: const Offset(0, 1),
+                              )
+                            ],
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(badge,
-                              style: TextStyle(
-                                  fontSize: 9,
-                                  fontWeight: FontWeight.bold,
-                                  color: examColor)),
-                          const SizedBox(height: 2),
-                          Text(title,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 13.5)),
-                        ],
-                      ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                          decoration: BoxDecoration(
+                            color: isSelected
+                                ? Colors.white.withOpacity(0.22)
+                                : examColor.withOpacity(0.12),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: Text(
+                            badge,
+                            style: TextStyle(
+                              fontSize: 9,
+                              fontWeight: FontWeight.bold,
+                              color: isSelected ? Colors.white : examColor,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          title,
+                          style: TextStyle(
+                            fontSize: 13.5, // 👁️ Perfect clarity, na chhota na katega
+                            fontWeight: FontWeight.bold,
+                            color: isSelected
+                                ? Colors.white
+                                : (widget.isDarkMode ? Colors.white : const Color(0xFF1E293B)),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 );
-              },
+              }),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 16),
+            const Divider(height: 1, thickness: 0.8),
+            const SizedBox(height: 14),
 
             // 📋 SETS PANEL
             if (_selectedExamPanel != null)
@@ -291,34 +341,51 @@ class _SectionalTabState extends State<SectionalTab> {
     // 1️⃣ Map Format (BPSC PCS)
     if (panelData is Map && panelData.containsKey('total_sets')) {
       int count = panelData['total_sets'] ?? 10;
+      int upcomingCount = panelData['upcoming_sets'] ?? 0;
+      String upcomingText = panelData['upcoming_text'] ?? "Coming Soon";
       String prefix = panelData['path_prefix'] ?? '$examKey/set';
       String title = panelData['title'] ?? '🏛️ Exam Special Zone';
       Color themeColor = _resolveColor(examKey, 0);
 
       return Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         child: Padding(
           padding: const EdgeInsets.all(14),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(title,
-                  style: TextStyle(fontWeight: FontWeight.bold, color: themeColor)),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: themeColor)),
               const SizedBox(height: 10),
               Wrap(
                 spacing: 8,
                 runSpacing: 8,
-                children: List.generate(count, (i) {
-                  final setNum = i + 1;
-                  return ActionChip(
-                    backgroundColor: themeColor.withOpacity(0.08),
-                    side: BorderSide(color: themeColor),
-                    label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, color: themeColor)),
-                    onPressed: () => widget.onLaunchCbtMock(
-                        context, '$title Set $setNum', '$prefix$setNum.json'),
-                  );
-                }),
+                children: [
+                  ...List.generate(count, (i) {
+                    final setNum = i + 1;
+                    return ActionChip(
+                      backgroundColor: themeColor.withOpacity(0.08),
+                      side: BorderSide(color: themeColor),
+                      label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: themeColor)),
+                      onPressed: () => widget.onLaunchCbtMock(
+                          context, '$title Set $setNum', '$prefix$setNum.json'),
+                    );
+                  }),
+                  ...List.generate(upcomingCount, (i) {
+                    final setNum = count + i + 1;
+                    return ActionChip(
+                      avatar: const Icon(Icons.lock_rounded, size: 14, color: Colors.grey),
+                      backgroundColor: Colors.grey.withOpacity(0.12),
+                      side: BorderSide(color: Colors.grey.shade400),
+                      label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}',
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w600, color: Colors.grey)),
+                      onPressed: () => _showUpcomingNotice('Set $setNum', upcomingText),
+                    );
+                  }),
+                ],
               )
             ],
           ),
@@ -326,7 +393,7 @@ class _SectionalTabState extends State<SectionalTab> {
       );
     }
 
-    // 2️⃣ List / Items Format (Bihar Amin, BSSC, SSC, etc.)
+    // 2️⃣ List / Items Format (Bihar Amin, BSSC, SSC, Bihar SI, etc.)
     List items = [];
     if (panelData is List) {
       items = panelData;
@@ -339,37 +406,77 @@ class _SectionalTabState extends State<SectionalTab> {
         children: items.map<Widget>((item) {
           String itemTitle = item['title'] ?? 'Sectional Mock';
           int totalSets = item['sets'] ?? 1;
+          int upcomingSets = item['upcoming_sets'] ?? 0;
+          String upcomingText = item['upcoming_text'] ?? "Live Tomorrow";
           String folder = item['folder'] ?? examKey;
 
           return Card(
             margin: const EdgeInsets.only(bottom: 12),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             child: Padding(
               padding: const EdgeInsets.all(14),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(itemTitle,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 14)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(itemTitle,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 13.5)),
+                      ),
+                      if (upcomingSets > 0)
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                          decoration: BoxDecoration(
+                            color: Colors.amber.withOpacity(0.15),
+                            borderRadius: BorderRadius.circular(6),
+                            border: Border.all(color: Colors.amber.shade700, width: 0.8),
+                          ),
+                          child: Text(
+                            '🔥 +$upcomingSets Upcoming',
+                            style: TextStyle(
+                                fontSize: 9.5,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.amber.shade800),
+                          ),
+                        ),
+                    ],
+                  ),
                   const SizedBox(height: 10),
                   Wrap(
                     spacing: 8,
                     runSpacing: 8,
-                    children: List.generate(totalSets, (i) {
-                      final setNum = i + 1;
-                      return ActionChip(
-                        backgroundColor: const Color(0xFF2563EB).withOpacity(0.08),
-                        side: const BorderSide(color: Color(0xFF2563EB)),
-                        label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}',
-                            style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFF2563EB))),
-                        onPressed: () => widget.onLaunchCbtMock(
-                            context,
-                            "$itemTitle Set $setNum",
-                            "$folder/set$setNum.json"),
-                      );
-                    }),
+                    children: [
+                      ...List.generate(totalSets, (i) {
+                        final setNum = i + 1;
+                        return ActionChip(
+                          backgroundColor: const Color(0xFF2563EB).withOpacity(0.08),
+                          side: const BorderSide(color: Color(0xFF2563EB)),
+                          label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}',
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xFF2563EB))),
+                          onPressed: () => widget.onLaunchCbtMock(
+                              context,
+                              "$itemTitle Set $setNum",
+                              "$folder/set$setNum.json"),
+                        );
+                      }),
+                      ...List.generate(upcomingSets, (i) {
+                        final setNum = totalSets + i + 1;
+                        return ActionChip(
+                          avatar: const Icon(Icons.lock_rounded, size: 14, color: Colors.grey),
+                          backgroundColor: Colors.grey.withOpacity(0.12),
+                          side: BorderSide(color: Colors.grey.shade400),
+                          label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}',
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.w600, color: Colors.grey)),
+                          onPressed: () => _showUpcomingNotice('Set $setNum', upcomingText),
+                        );
+                      }),
+                    ],
                   ),
                 ],
               ),
