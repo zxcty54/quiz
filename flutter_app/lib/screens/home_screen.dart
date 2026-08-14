@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   Future<void> _loadAllConfigs() async {
     await _loadRealtimeProgress();
 
-    // 1️⃣ Home Data, Bulletin & Jobs (100% UNTOUCHED)
+    // 1️⃣ Local Offline Assets Load
     try {
       final String configStr = await rootBundle.loadString('assets/data/app_config.json');
       _appConfig = jsonDecode(configStr);
@@ -80,34 +80,32 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       debugPrint("Error loading home_data.json: $e");
     }
 
-    // 2️⃣ Revision Mapping (Local Cache/Asset Fallback)
     final prefs = await SharedPreferences.getInstance();
     String? cachedMapping = prefs.getString('cached_subject_mapping_json');
     if (cachedMapping != null) {
       try {
-        _subjectMapping = jsonDecode(cachedMapping);
+        _subjectMapping = Map<String, dynamic>.from(jsonDecode(cachedMapping));
       } catch (_) {}
     }
     if (_subjectMapping.isEmpty) {
       try {
         final String subjectStr = await rootBundle.loadString('assets/data/subject_mapping.json');
-        _subjectMapping = jsonDecode(subjectStr);
+        _subjectMapping = Map<String, dynamic>.from(jsonDecode(subjectStr));
       } catch (e) {
         debugPrint("Error loading subject_mapping.json: $e");
       }
     }
 
-    // 3️⃣ Sectional Data (Local Cache/Asset Fallback)
     String? cachedSectional = prefs.getString('cached_sectional_data_json');
     if (cachedSectional != null) {
       try {
-        _sectionalData = jsonDecode(cachedSectional);
+        _sectionalData = Map<String, dynamic>.from(jsonDecode(cachedSectional));
       } catch (_) {}
     }
     if (_sectionalData.isEmpty) {
       try {
         final String sectionalStr = await rootBundle.loadString('assets/data/sectional_data.json');
-        _sectionalData = jsonDecode(sectionalStr);
+        _sectionalData = Map<String, dynamic>.from(jsonDecode(sectionalStr));
       } catch (e) {
         debugPrint("Error loading sectional_data.json: $e");
       }
@@ -119,69 +117,61 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       });
     }
 
-    // 4️⃣ Background Realtime Live Sync via Official GitHub API
+    // 2️⃣ Background Realtime Live Sync
     _fetchSectionalDataLive();
     _fetchSubjectMappingLive();
   }
 
-  // 🌐 ZERO-CACHE REALTIME API FETCHER (Never Blocked, Never Cached Stale)
+  // 🌐 ANTI-BLOCK MULTI-CDN FETCHER WITH PURGE & CACHE BYPASS
   Future<dynamic> _fetchRobustJson(String relativePath) async {
     String clean = relativePath.startsWith("/") ? relativePath.substring(1) : relativePath;
-
-    // 1️⃣ GitHub Official API (Direct raw bypass - 100% Realtime & Unblocked)
-    String apiUrl = "https://api.github.com/repos/zxcty54/quiz/contents/$clean";
-    try {
-      final res = await http.get(
-        Uri.parse(apiUrl),
-        headers: {
-          'Accept': 'application/vnd.github.v3.raw',
-          'User-Agent': 'MockTesterApp-Flutter',
-        },
-      ).timeout(const Duration(seconds: 4));
-
-      if (res.statusCode == 200) {
-        String decoded = utf8.decode(res.bodyBytes);
-        return jsonDecode(decoded);
-      }
-    } catch (_) {}
-
-    // 2️⃣ Fastly Purge Fallback
     final int ts = DateTime.now().millisecondsSinceEpoch;
-    String cdnUrl = "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$clean?nocache=$ts";
-    try {
-      final res = await http.get(Uri.parse(cdnUrl)).timeout(const Duration(seconds: 4));
-      if (res.statusCode == 200) {
-        String decoded = utf8.decode(res.bodyBytes);
-        return jsonDecode(decoded);
-      }
-    } catch (_) {}
+    String encodedPath = Uri.encodeFull(clean);
 
+    List<String> mirrorUrls = clean.startsWith("http")
+        ? [clean]
+        : [
+            "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
+            "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
+            "https://cdn.statically.io/gh/zxcty54/quiz/main/$encodedPath",
+            "https://raw.githack.com/zxcty54/quiz/main/$encodedPath",
+          ];
+
+    for (String url in mirrorUrls) {
+      try {
+        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 4));
+        if (res.statusCode == 200) {
+          String decoded = utf8.decode(res.bodyBytes);
+          return jsonDecode(decoded);
+        }
+      } catch (_) {
+        continue;
+      }
+    }
     return null;
   }
 
-  // 🎯 LIVE SECTIONAL MOCKS SYNC & SAVE
+  // 🎯 LIVE SECTIONAL SYNC
   Future<void> _fetchSectionalDataLive() async {
     final data = await _fetchRobustJson("sectional_data.json");
-    if (data != null && data is Map<String, dynamic> && mounted) {
+    if (data != null && data is Map && mounted) {
       setState(() {
-        _sectionalData = data;
+        _sectionalData = Map<String, dynamic>.from(data);
       });
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString('cached_sectional_data_json', jsonEncode(data));
-      debugPrint("✅ Sectional Data Live Updated Successfully!");
     }
   }
 
-  // 🎯 LIVE REVISION SUBJECT MAPPING SYNC & SAVE
+  // 🎯 LIVE REVISION SYNC
   Future<void> _fetchSubjectMappingLive() async {
     final data = await _fetchRobustJson("subject_mapping.json");
-    if (data != null && data is Map<String, dynamic> && mounted) {
+    if (data != null && data is Map && mounted) {
       setState(() {
-        _subjectMapping = data;
+        _subjectMapping = Map<String, dynamic>.from(data);
       });
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString('cached_subject_mapping_json', jsonEncode(data));
-      debugPrint("✅ Subject Mapping Live Updated Successfully!");
     }
   }
 
@@ -229,7 +219,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       body: IndexedStack(
         index: _currentBottomIndex,
         children: [
-          // 🏡 Tab 0: Home Tab (News, Bulletin, Jobs - 100% UNTOUCHED)
+          // 🏡 Tab 0: Home Tab
           HomeTab(
             appConfig: _appConfig,
             homeData: _homeData,
@@ -243,13 +233,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             onNavigateToLearn: () => setState(() => _currentBottomIndex = 3),
           ),
 
-          // 📚 Tab 1: Revision Tab (Live Synced)
+          // 📚 Tab 1: Revision Tab
           RevisionTab(
             subjectMapping: _subjectMapping,
             onLaunchPractice: _launchRevisionPractice,
           ),
 
-          // 🎯 Tab 2: Sectional Tab (Live Synced)
+          // 🎯 Tab 2: Sectional Tab
           SectionalTab(
             sectionalData: _sectionalData,
             isDarkMode: _isDarkMode,
@@ -274,7 +264,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           setState(() => _currentBottomIndex = idx);
           if (idx == 0) _loadRealtimeProgress();
           if (idx == 1) _fetchSubjectMappingLive();
-          if (idx == 2) _fetchSectionalDataLive(); // 👈 Tap hote hi instant GitHub API call
+          if (idx == 2) _fetchSectionalDataLive();
         },
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home_outlined), label: 'Home'),
@@ -309,56 +299,133 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     } catch (_) {}
   }
 
-  void _launchRevisionPractice(BuildContext context, String title, String path) async {
+  // 🎯 UNIVERSAL CBT MOCK LAUNCHER WITH AUTO PATH RESOLVER
+  void _launchCbtMock(BuildContext context, String title, String path) async {
     showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder: (ctx) => const Center(child: CircularProgressIndicator()));
+      context: context,
+      barrierDismissible: false,
+      builder: (ctx) => const Center(child: CircularProgressIndicator()),
+    );
 
-    final data = await _fetchRobustJson(path);
+    // Auto Path Resolver: Tests all file name combinations (e.g., set_01.json, set1.json, set_1.json)
+    List<String> pathVariants = [path];
+    if (path.contains('set_')) {
+      final reg = RegExp(r'set_0?(\d+)\.json');
+      final match = reg.firstMatch(path);
+      if (match != null) {
+        final numStr = match.group(1)!;
+        final intNum = int.tryParse(numStr) ?? 1;
+        final padded = intNum.toString().padLeft(2, '0');
+        final base = path.substring(0, match.start);
+        pathVariants = [
+          '${base}set_$padded.json',
+          '${base}set_$intNum.json',
+          '${base}set$intNum.json',
+          '${base}set$padded.json',
+        ];
+      }
+    }
+
+    dynamic data;
+    for (String tryPath in pathVariants) {
+      data = await _fetchRobustJson(tryPath);
+      if (data != null) break;
+    }
+
     if (context.mounted) Navigator.pop(context);
 
-    if (data != null && data is List) {
-      List<Question> qList = data.map((i) => Question.fromJson(i)).toList();
-      if (context.mounted && qList.isNotEmpty) {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (ctx) => RevisionPracticeScreen(testTitle: title, questions: qList)));
+    if (data != null) {
+      List<dynamic>? rawList;
+      if (data is List) {
+        rawList = data;
+      } else if (data is Map) {
+        rawList = data['questions'] ?? data['data'] ?? data['items'];
       }
-    } else {
-      if (context.mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Test questions load nahi ho paye. Internet check karein.')),
-        );
+
+      if (rawList != null && rawList.isNotEmpty) {
+        try {
+          List<Question> qList = [];
+          for (var item in rawList) {
+            if (item is Map) {
+              qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
+            }
+          }
+
+          if (context.mounted && qList.isNotEmpty) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => SectionalCbtScreen(
+                  testTitle: title,
+                  questions: qList,
+                  subFolder: path,
+                ),
+              ),
+            );
+            return;
+          }
+        } catch (e) {
+          debugPrint("Question parse error: $e");
+        }
       }
+    }
+
+    if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('⚠️ "$title" load nahi ho paya. File check karein: $path'),
+          backgroundColor: Colors.red.shade800,
+        ),
+      );
     }
   }
 
-  void _launchCbtMock(BuildContext context, String title, String path) async {
+  void _launchRevisionPractice(BuildContext context, String title, String path) async {
     showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder: (ctx) => const Center(child: CircularProgressIndicator()));
+      context: context,
+      barrierDismissible: false,
+      builder: (ctx) => const Center(child: CircularProgressIndicator()),
+    );
 
     final data = await _fetchRobustJson(path);
     if (context.mounted) Navigator.pop(context);
 
-    if (data != null && data is List) {
-      List<Question> qList = data.map((i) => Question.fromJson(i)).toList();
-      if (context.mounted && qList.isNotEmpty) {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (ctx) => SectionalCbtScreen(
-                    testTitle: title, questions: qList, subFolder: path)));
+    if (data != null) {
+      List<dynamic>? rawList;
+      if (data is List) {
+        rawList = data;
+      } else if (data is Map) {
+        rawList = data['questions'] ?? data['data'] ?? data['items'];
       }
-    } else {
-      if (context.mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('CBT Mock questions load nahi ho paye. Internet check karein.')),
-        );
+
+      if (rawList != null && rawList.isNotEmpty) {
+        try {
+          List<Question> qList = [];
+          for (var item in rawList) {
+            if (item is Map) {
+              qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
+            }
+          }
+
+          if (context.mounted && qList.isNotEmpty) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => RevisionPracticeScreen(testTitle: title, questions: qList),
+              ),
+            );
+            return;
+          }
+        } catch (e) {
+          debugPrint("Revision parse error: $e");
+        }
       }
+    }
+
+    if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Test questions load nahi ho paye. Internet check karein.')),
+      );
     }
   }
 }
