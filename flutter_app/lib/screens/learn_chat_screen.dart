@@ -39,90 +39,127 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     super.dispose();
   }
 
-  // 🧹 UNIVERSAL SAFE JSON CLEANER (BOM + Invisible Characters Stripper)
+  // 🧹 BULLETPROOF JSON CLEANER & BOUNDARY EXTRACTOR
   String _sanitizeJsonString(String raw) {
     String clean = raw.trim();
 
-    // 1. Remove UTF-8 BOM Marker (\uFEFF)
+    // 1. Remove UTF-8 BOM Marker
     if (clean.startsWith('\uFEFF')) {
       clean = clean.substring(1).trim();
     }
 
-    // 2. Remove other hidden invisible markers & zero-width spaces
-    clean = clean.replaceAll(RegExp(r'[\u200B-\u200D\uFEFF]'), '');
+    // 2. Remove Markdown backticks (```json ya ```)
+    clean = clean.replaceAll('```json', '').replaceAll('```', '').trim();
 
-    // 3. Trim again
-    clean = clean.trim();
+    // 3. Extract exact JSON boundaries between first {/[ and last }/]
+    int firstBrace = clean.indexOf('{');
+    int firstBracket = clean.indexOf('[');
+    int startIndex = -1;
 
-    return clean;
-  }
-
-  Future<void> _fetchChapterJson() async {
-    String targetUrl = widget.jsonUrl ?? '';
-    
-    if (targetUrl.isEmpty) {
-      targetUrl = 'https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/cell.json';
-    } else if (targetUrl.contains('raw.githubusercontent.com')) {
-      targetUrl = targetUrl
-          .replaceAll('https://raw.githubusercontent.com/', 'https://cdn.jsdelivr.net/gh/')
-          .replaceAll('/refs/heads/main/', '@main/')
-          .replaceAll('/main/', '@main/');
+    if (firstBrace != -1 && firstBracket != -1) {
+      startIndex = firstBrace < firstBracket ? firstBrace : firstBracket;
+    } else if (firstBrace != -1) {
+      startIndex = firstBrace;
+    } else if (firstBracket != -1) {
+      startIndex = firstBracket;
     }
 
-    final String cacheBusterUrl = targetUrl.contains('?')
-        ? '$targetUrl&v=${DateTime.now().millisecondsSinceEpoch}'
-        : '$targetUrl?v=${DateTime.now().millisecondsSinceEpoch}';
+    int lastBrace = clean.lastIndexOf('}');
+    int lastBracket = clean.lastIndexOf(']');
+    int endIndex = -1;
 
-    try {
-      final response = await http.get(
-        Uri.parse(cacheBusterUrl),
-        headers: {'Accept': 'application/json, text/plain, */*'},
-      ).timeout(const Duration(seconds: 15));
+    if (lastBrace != -1 && lastBracket != -1) {
+      endIndex = lastBrace > lastBracket ? lastBrace : lastBracket;
+    } else if (lastBrace != -1) {
+      endIndex = lastBrace;
+    } else if (lastBracket != -1) {
+      endIndex = lastBracket;
+    }
 
-      if (response.statusCode == 200) {
-        // 1. UTF-8 decode
-        String rawBody = utf8.decode(response.bodyBytes);
+    if (startIndex != -1 && endIndex != -1 && endIndex > startIndex) {
+      clean = clean.substring(startIndex, endIndex + 1);
+    }
 
-        // 2. Sanitize & Strip BOM
-        String cleanJson = _sanitizeJsonString(rawBody);
+    // 4. Remove zero-width & invisible spaces
+    clean = clean.replaceAll(RegExp(r'[\u200B-\u200D\uFEFF]'), '');
 
-        // 3. Safety check for HTML error pages
-        if (cleanJson.startsWith('<') || cleanJson.startsWith('<!DOCTYPE')) {
-          throw Exception("Received HTML webpage instead of JSON. URL check karein.");
+    return clean.trim();
+  }
+
+  // 🌐 MULTI-CDN UNBLOCKED FETCHER (Jio/Airtel par kabhi block nahi hoga)
+  Future<void> _fetchChapterJson() async {
+    String rawPath = widget.jsonUrl ?? '';
+    
+    if (rawPath.isEmpty) {
+      rawPath = 'learn/biology/cell.json';
+    }
+
+    // Extract relative path cleanly
+    String cleanPath = rawPath
+        .replaceAll('https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/', '')
+        .replaceAll('https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/', '')
+        .replaceAll('https://raw.githubusercontent.com/zxcty54/quiz/main/', '')
+        .replaceAll('https://raw.githubusercontent.com/zxcty54/quiz/refs/heads/main/', '');
+    
+    if (cleanPath.startsWith('/')) cleanPath = cleanPath.substring(1);
+    if (cleanPath.contains('?')) cleanPath = cleanPath.split('?').first;
+
+    final int ts = DateTime.now().millisecondsSinceEpoch;
+    String encodedPath = Uri.encodeFull(cleanPath);
+
+    // 🚀 Fast unblocked mirrors in India
+    List<String> mirrorUrls = [
+      "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
+      "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
+      "https://cdn.statically.io/gh/zxcty54/quiz/main/$encodedPath",
+      "https://raw.githack.com/zxcty54/quiz/main/$encodedPath",
+    ];
+
+    for (String url in mirrorUrls) {
+      try {
+        final response = await http.get(
+          Uri.parse(url),
+          headers: {'Accept': 'application/json, text/plain, */*'},
+        ).timeout(const Duration(seconds: 4));
+
+        if (response.statusCode == 200) {
+          String rawBody = utf8.decode(response.bodyBytes);
+          String cleanJson = _sanitizeJsonString(rawBody);
+
+          if (cleanJson.startsWith('<') || cleanJson.startsWith('<!DOCTYPE')) {
+            continue; // Skip HTML error pages
+          }
+
+          Map<String, dynamic> parsedJson = json.decode(cleanJson);
+          LearnChapterData data = LearnChapterData.fromJson(parsedJson);
+
+          final prefs = await SharedPreferences.getInstance();
+          int savedIdx = prefs.getInt('progress_idx_${data.id}') ?? 0;
+          if (savedIdx >= data.cardsList.length) savedIdx = 0;
+
+          if (mounted) {
+            setState(() {
+              chapterData = data;
+              currentCardIndex = savedIdx;
+              visibleMessageCount = 1;
+              isLoading = false;
+              errorMessage = null;
+            });
+            _saveProgress(savedIdx);
+            return;
+          }
         }
-
-        // 4. Safe Parse
-        Map<String, dynamic> parsedJson = json.decode(cleanJson);
-        LearnChapterData data = LearnChapterData.fromJson(parsedJson);
-
-        final prefs = await SharedPreferences.getInstance();
-        int savedIdx = prefs.getInt('progress_idx_${data.id}') ?? 0;
-        if (savedIdx >= data.cardsList.length) savedIdx = 0;
-
-        if (mounted) {
-          setState(() {
-            chapterData = data;
-            currentCardIndex = savedIdx;
-            visibleMessageCount = 1;
-            isLoading = false;
-          });
-          _saveProgress(savedIdx);
-        }
-      } else {
-        if (mounted) {
-          setState(() {
-            errorMessage = "Error ${response.statusCode}: Data load nahi ho saka.";
-            isLoading = false;
-          });
-        }
+      } catch (e) {
+        debugPrint("Mirror $url failed: $e");
+        continue;
       }
-    } catch (e) {
-      if (mounted) {
-        setState(() {
-          errorMessage = "Data Parse/Fetch Error: $e\n\nURL: $cacheBusterUrl";
-          isLoading = false;
-        });
-      }
+    }
+
+    if (mounted) {
+      setState(() {
+        errorMessage = "Data load nahi ho saka. Internet ya JSON syntax check karein.";
+        isLoading = false;
+      });
     }
   }
 
