@@ -362,5 +362,68 @@
       "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/ncw_ncm.json"
     }
   ]
+},
+  {
+  "title": "Indian Economy",
+  "icon": "📈",
+  "color": "0xFF10B981",
+  "chapters": [
+    {
+      "id": "eco_sectors_gdp",
+      "title": "National Income & Sectors of GDP",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/economy/sectors_gdp.json"
+    },
+    {
+      "id": "eco_agriculture_landreforms",
+      "title": "Agriculture & Land Reforms",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/economy/agriculture_landreforms.json"
+    },
+    {
+      "id": "eco_planning",
+      "title": "Economic Planning & Five Year Plans",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/economy/planning.json"
+    },
+    {
+      "id": "eco_nitiayog",
+      "title": "NITI Aayog & Strategic Reforms",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/economy/nitiayog.json"
+    },
+    {
+      "id": "eco_inflation_tax",
+      "title": "Inflation & Taxation System",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/economy/inflation_tax.json"
+    },
+    {
+      "id": "eco_banking",
+      "title": "Banking & Monetary Policy (RBI)",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/economy/banking.json"
+    },
+    {
+      "id": "eco_publicfinance",
+      "title": "Public Finance & Union Budget",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/economy/publicfinance.json"
+    },
+    {
+      "id": "eco_infrastructure",
+      "title": "Infrastructure & Industrial Growth",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/economy/infrastructure.json"
+    }
+  ]
 }
 ]
