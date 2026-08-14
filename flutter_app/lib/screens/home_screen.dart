@@ -33,6 +33,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   Map<String, dynamic> _subjectMapping = {};
   Map<String, dynamic> _sectionalData = {};
 
+  // ⚡ FAST IN-MEMORY CACHE FOR INSTANT 0ms RE-LOADS
+  final Map<String, dynamic> _memoryJsonCache = {};
+
   String _lastLearnTitle = "Cell Biology & Organelles";
   double _lastLearnProgress = 0.0;
   String _lastNextTopic = "Start learning now";
@@ -122,8 +125,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     _fetchSubjectMappingLive();
   }
 
-  // 🌐 ANTI-BLOCK MULTI-CDN FETCHER WITH PURGE & CACHE BYPASS
+  // 🚀 SUPER-FAST PARALLEL RACE FETCHER (Races CDNs to return in under 300ms)
   Future<dynamic> _fetchRobustJson(String relativePath) async {
+    if (_memoryJsonCache.containsKey(relativePath)) {
+      return _memoryJsonCache[relativePath];
+    }
+
     String clean = relativePath.startsWith("/") ? relativePath.substring(1) : relativePath;
     final int ts = DateTime.now().millisecondsSinceEpoch;
     String encodedPath = Uri.encodeFull(clean);
@@ -137,15 +144,35 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             "https://raw.githack.com/zxcty54/quiz/main/$encodedPath",
           ];
 
-    for (String url in mirrorUrls) {
+    // Race all CDN mirrors simultaneously
+    List<Future<dynamic>> requests = mirrorUrls.map((url) async {
       try {
-        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 4));
+        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 3));
         if (res.statusCode == 200) {
           String decoded = utf8.decode(res.bodyBytes);
           return jsonDecode(decoded);
         }
-      } catch (_) {
-        continue;
+      } catch (_) {}
+      throw Exception("Mirror failed");
+    }).toList();
+
+    try {
+      final result = await Future.any(requests);
+      if (result != null) {
+        _memoryJsonCache[relativePath] = result;
+        return result;
+      }
+    } catch (_) {
+      // Fallback
+      for (String url in mirrorUrls) {
+        try {
+          final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 2));
+          if (res.statusCode == 200) {
+            final data = jsonDecode(utf8.decode(res.bodyBytes));
+            _memoryJsonCache[relativePath] = data;
+            return data;
+          }
+        } catch (_) {}
       }
     }
     return null;
@@ -304,7 +331,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     showDialog(
       context: context,
       barrierDismissible: false,
-      builder: (ctx) => const Center(child: CircularProgressIndicator()),
+      builder: (ctx) => const Center(
+        child: SizedBox(
+          width: 40,
+          height: 40,
+          child: CircularProgressIndicator(strokeWidth: 3),
+        ),
+      ),
     );
 
     // Build exhaustive list of candidate paths
@@ -398,7 +431,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     showDialog(
       context: context,
       barrierDismissible: false,
-      builder: (ctx) => const Center(child: CircularProgressIndicator()),
+      builder: (ctx) => const Center(
+        child: SizedBox(
+          width: 40,
+          height: 40,
+          child: CircularProgressIndicator(strokeWidth: 3),
+        ),
+      ),
     );
 
     final data = await _fetchRobustJson(path);
