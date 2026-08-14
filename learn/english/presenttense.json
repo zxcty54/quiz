@@ -1,0 +1,1537 @@
+
+{
+  "topic_id": "present_tense_error_detection_sbi_po",
+  "topic_title": "Present Tense Mastery + SBI PO Level Error Detection",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE", "SBI PO"],
+  "total_cards": 82,
+  "characters": {
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 82 },
+      "intro_payload": {
+        "title": "Present Tense — Zero to Officer Level",
+        "subtitle": "SBI PO / BPSC / SSC / Railway Error Detection Special",
+        "icon": "☀️",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "SBI PO", "BPSC TRE", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Simple Present, Present Continuous, Present Perfect, Present Perfect Continuous — full mastery",
+          "Third person singular -s/-es rules & spelling traps",
+          "Stative (non-continuous) verbs — the exception every exam loves",
+          "Since/For, Just/Already/Yet, subject-verb agreement special cases",
+          "Universal truths, scheduled future, historical present usage",
+          "SBI PO / BPSC style sentence error-detection practice with real traps"
+        ]
+      },
+      "navigation": { "next": "card_02_daily_life_present", "button_text": "Start Learning ➔" }
+    },
+
+    {
+      "card_id": "card_02_daily_life_present",
+      "card_slug": "card_02_daily_life_present",
+      "type": "chat",
+      "concept_id": "present_tense_foundation",
+      "level": 1,
+      "progress": { "current": 2, "total": 82 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, meri mummy roz subah 6 baje uthti hain aur chai banati hain." },
+        { "speaker": "aman", "text": "Achha bataya Raju! Notice karo — 'uthti hain', 'banati hain' — ye kaam roz hota hai, ye koi ek din ki baat nahi hai, ye habit hai." },
+        { "speaker": "raju", "text": "Haan sir, ye to har din ka niyam hai, hamesha hota hai." },
+        { "speaker": "aman", "text": "Bilkul sahi! Jab koi kaam REGULARLY ya HAMESHA hota hai, English mein uske liye ek special tense use hota hai. Chalo dekhte hain wo kya hai." }
+      ],
+      "navigation": { "next": "card_03_tense_meaning", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_03_tense_meaning",
+      "card_slug": "card_03_tense_meaning",
+      "type": "chat",
+      "concept_id": "present_tense_foundation",
+      "level": 1,
+      "progress": { "current": 3, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, Hindi grammar mein tumne 'Vartaman Kaal' padha hoga — jo abhi ho raha hai ya jo hamesha sach hai, uske liye." },
+        { "speaker": "raju", "text": "Haan sir! 'Main khel raha hoon' ya 'Suraj purab se nikalta hai' jaisa?" },
+        { "speaker": "aman", "text": "Ekdum sahi examples! English mein isko 'Present Tense' kehte hain. Jab bhi verb 'ta hoon, ti hai, te hain' jaisa Hindi word ho, samjho Present Tense hai." },
+        { "speaker": "raju", "text": "Achhaaaa! Toh 'main so raha hoon' bhi present hi hoga?" }
+      ],
+      "navigation": { "next": "card_04_four_types", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_04_four_types",
+      "card_slug": "card_04_four_types",
+      "type": "chat",
+      "concept_id": "present_tense_foundation",
+      "level": 1,
+      "progress": { "current": 4, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul Raju! Present Tense ke bhi 4 types hote hain — Simple Present, Present Continuous, Present Perfect, aur Present Perfect Continuous. Jaise Past Tense ke bhi 4 the." },
+        { "speaker": "raju", "text": "Hain?? Char alag types? Sir ye to exam me pakka confuse karega, kaise yaad rakhun sabko!" },
+        { "speaker": "aman", "text": "Tension mat lo, har ek ka apna clear signal word hota hai — jaise 'every day', 'now', 'since/for', 'already'. Pattern samajh gaye to kabhi galti nahi hogi." },
+        { "speaker": "raju", "text": "Chaliye sir, shuru karte hain sabse pehla wala!" }
+      ],
+      "navigation": { "next": "card_05_guess", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_05_guess",
+      "card_slug": "card_05_guess",
+      "type": "guess",
+      "concept_id": "present_tense_foundation",
+      "level": 1,
+      "progress": { "current": 5, "total": 82 },
+      "guess_payload": {
+        "question": "Raju, guess karo — inme se kaunsa sentence PRESENT TENSE dikhata hai?",
+        "options": [
+          { "id": "A", "text": "I played cricket yesterday." },
+          { "id": "B", "text": "I will play cricket tomorrow." },
+          { "id": "C", "text": "I play cricket every day." },
+          { "id": "D", "text": "I had played cricket." }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Sahi jawab C hai! 'Play' base form hai aur 'every day' ek habitual/regular time marker hai — ye Simple Present dikhata hai."
+      },
+      "navigation": { "next": "card_06_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_06_quiz1",
+      "card_slug": "card_06_quiz1",
+      "type": "quiz",
+      "concept_id": "present_tense_foundation",
+      "level": 1,
+      "progress": { "current": 6, "total": 82 },
+      "quiz_payload": {
+        "question": "Present Tense ke kitne main types hote hain?",
+        "options": [
+          { "id": "A", "text": "Do (2)" },
+          { "id": "B", "text": "Teen (3)" },
+          { "id": "C", "text": "Chaar (4)" },
+          { "id": "D", "text": "Paanch (5)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Chaar types: Simple Present, Present Continuous, Present Perfect, Present Perfect Continuous — Past Tense ki tarah hi structure hai."
+      },
+      "navigation": { "next": "card_07_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_07_quiz2",
+      "card_slug": "card_07_quiz2",
+      "type": "quiz",
+      "concept_id": "present_tense_foundation",
+      "level": 1,
+      "progress": { "current": 7, "total": 82 },
+      "quiz_payload": {
+        "question": "'Suraj poorab se nikalta hai' — ye sentence kis category mein aata hai?",
+        "options": [
+          { "id": "A", "text": "Past habit" },
+          { "id": "B", "text": "Universal truth (Present Tense)" },
+          { "id": "C", "text": "Future prediction" },
+          { "id": "D", "text": "Past continuous action" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Universal truths (jo hamesha sach hain, jaise Sun rises in the east) Simple Present Tense mein likhe jaate hain, chahe baat kisi bhi time period ki ho rahi ho."
+      },
+      "navigation": { "next": "card_08_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_08_quiz3",
+      "card_slug": "card_08_quiz3",
+      "type": "quiz",
+      "concept_id": "present_tense_foundation",
+      "level": 1,
+      "progress": { "current": 8, "total": 82 },
+      "quiz_payload": {
+        "question": "'Vartaman Kaal' English grammar ke kis concept se match karta hai?",
+        "options": [
+          { "id": "A", "text": "Past Tense" },
+          { "id": "B", "text": "Present Tense" },
+          { "id": "C", "text": "Future Tense" },
+          { "id": "D", "text": "Conditional Tense" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Vartaman Kaal' ka English mein equivalent 'Present Tense' hai — jo abhi ho raha ho ya hamesha sach ho, uske liye use hota hai."
+      },
+      "navigation": { "next": "card_09_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_09_milestone1",
+      "card_slug": "card_09_milestone1",
+      "type": "milestone",
+      "concept_id": "present_tense_foundation",
+      "level": 1,
+      "progress": { "current": 9, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "☀️",
+        "completed_topic": "Foundation of Present Tense",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/9 Clear",
+        "motivational_quote": "Foundation set hai! Ab Simple Present ki deep dive karte hain — SSC/Railway ka favourite topic."
+      },
+      "navigation": { "next": "card_10_simple_present_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_10_simple_present_intro",
+      "card_slug": "card_10_simple_present_intro",
+      "type": "chat",
+      "concept_id": "simple_present",
+      "level": 2,
+      "progress": { "current": 10, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Simple Present Tense use hota hai regular habits, daily routines aur universal truths ke liye. Structure: Subject + V1 (base form)." },
+        { "speaker": "raju", "text": "Matlab jaise 'I play cricket' — bina koi extra word ke?" },
+        { "speaker": "aman", "text": "Bilkul! Par ek zaroori twist hai — jab subject THIRD PERSON SINGULAR ho (He, She, It, ya koi naam jaise Ram, Cat), tab verb mein '-s' ya '-es' lagta hai." },
+        { "speaker": "raju", "text": "Hain?? Ye extra 's' kyun lagana padta hai sir?" }
+      ],
+      "navigation": { "next": "card_11_third_person_s", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_11_third_person_s",
+      "card_slug": "card_11_third_person_s",
+      "type": "chat",
+      "concept_id": "simple_present",
+      "level": 2,
+      "progress": { "current": 11, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ye English grammar ka rule hai Raju — 'He plays', 'She goes', 'It rains'. Lekin 'I play', 'You play', 'We play', 'They play' mein '-s' NAHI lagta." },
+        { "speaker": "raju", "text": "Toh sirf He/She/It (ya single naam) ke saath hi 's' lagana hai?" },
+        { "speaker": "aman", "text": "Exactly! Isko yaad rakhne ka tarika hai — jab subject EK vyakti/cheez ho (singular, third person), tab verb ke saath 's/es' aayega." },
+        { "speaker": "raju", "text": "Ye toh SSC ka pakka common trap hoga — 'He play' jaisa galat sentence dikha ke!" }
+      ],
+      "navigation": { "next": "card_12_spelling_rules_s", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_12_spelling_rules_s",
+      "card_slug": "card_12_spelling_rules_s",
+      "type": "chat",
+      "concept_id": "simple_present",
+      "level": 2,
+      "progress": { "current": 12, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Sahi pakda! Ab spelling rules dekho: 1) Normal verb mein bas '-s' — play→plays. 2) Verb jo s,x,z,ch,sh se khatam ho, uspe '-es' — go→goes, wash→washes, catch→catches." },
+        { "speaker": "raju", "text": "Aur kuch aur bhi rule hai kya?" },
+        { "speaker": "aman", "text": "Haan! 3) Consonant+y se khatam hone wali verb mein 'y' ko 'i' banake '-es' — study→studies, cry→cries, fly→flies. Lekin vowel+y ho to seedha 's' — play→plays, buy→buys." },
+        { "speaker": "raju", "text": "Achha! Toh 'play' mein 'a' vowel hai isliye 'plays', but 'study' mein 't' consonant hai isliye 'studies'!" }
+      ],
+      "navigation": { "next": "card_13_irregular_have_do", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_13_irregular_have_do",
+      "card_slug": "card_13_irregular_have_do",
+      "type": "chat",
+      "concept_id": "simple_present",
+      "level": 2,
+      "progress": { "current": 13, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ruko, do special irregular verbs bhi yaad rakho: 'Have' third person singular mein 'Has' banti hai — 'He has a car', 'do' banti hai 'does' — 'She does her homework'." },
+        { "speaker": "raju", "text": "Sir 'He haves' bolna galat hoga toh?" },
+        { "speaker": "aman", "text": "Bilkul galat! 'Haves' jaisa word exist hi nahi karta English mein. Yahi BPSC/SSC ka classic trap hai — 'has' hi sahi hai." },
+        { "speaker": "raju", "text": "Note kar liya — have→has, do→does, third person singular ke saath!" }
+      ],
+      "navigation": { "next": "card_14_negative_interrogative", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_14_negative_interrogative",
+      "card_slug": "card_14_negative_interrogative",
+      "type": "chat",
+      "concept_id": "simple_present",
+      "level": 2,
+      "progress": { "current": 14, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Negative/Question banane ke liye 'do/does' aata hai, aur uske baad verb WAPAS V1 (base form) mein chali jaati hai — 's/es' hat jaata hai. 'He does not play' — 'play' hi rahega, 'plays' nahi." },
+        { "speaker": "raju", "text": "Hain?? Toh 'He does not plays' galat hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi trap pakda! Yahi 'Double Agreement Error' kehlata hai — 'does' khud third person singular dikha raha hai, dobara verb pe 's' mat lagao." },
+        { "speaker": "raju", "text": "Ohh matlab jaise Past Tense mein 'did+V2' galat tha, waise hi yahan 'does+V(s)' galat hai!" }
+      ],
+      "navigation": { "next": "card_15_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_15_quiz1",
+      "card_slug": "card_15_quiz1",
+      "type": "quiz",
+      "concept_id": "simple_present",
+      "level": 2,
+      "progress": { "current": 15, "total": 82 },
+      "quiz_payload": {
+        "question": "Kaunsa sentence vyakaran ki drishti se sahi hai?",
+        "options": [
+          { "id": "A", "text": "She does not plays the piano." },
+          { "id": "B", "text": "She does not play the piano." },
+          { "id": "C", "text": "She do not play the piano." },
+          { "id": "D", "text": "She not plays the piano." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Does' ke baad verb hamesha V1 (base form) mein aati hai. 'Does not play' sahi hai, 'does not plays' Double Agreement Error hai."
+      },
+      "navigation": { "next": "card_16_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_16_quiz2",
+      "card_slug": "card_16_quiz2",
+      "type": "quiz",
+      "concept_id": "simple_present",
+      "level": 2,
+      "progress": { "current": 16, "total": 82 },
+      "quiz_payload": {
+        "question": "'Study' verb ka third person singular (He/She/It) form kya hoga?",
+        "options": [
+          { "id": "A", "text": "Studys" },
+          { "id": "B", "text": "Studies" },
+          { "id": "C", "text": "Studyes" },
+          { "id": "D", "text": "Study" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Consonant + y wale verbs mein y ko i banake -es lagate hain: study → studies. 'Studys' aur 'Studyes' dono galat spelling traps hain."
+      },
+      "navigation": { "next": "card_17_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_17_quiz3",
+      "card_slug": "card_17_quiz3",
+      "type": "quiz",
+      "concept_id": "simple_present",
+      "level": 2,
+      "progress": { "current": 17, "total": 82 },
+      "quiz_payload": {
+        "question": "Error Detection: 'He (A)/ have a beautiful house (B)/ near the river (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'He' third person singular hai, isliye 'have' ki jagah 'has' aayega. Sahi: 'He has a beautiful house'."
+      },
+      "navigation": { "next": "card_18_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_18_milestone2",
+      "card_slug": "card_18_milestone2",
+      "type": "milestone",
+      "concept_id": "simple_present",
+      "level": 2,
+      "progress": { "current": 18, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "✅",
+        "completed_topic": "Simple Present Tense",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/9 Clear",
+        "motivational_quote": "Simple Present pakka ho gaya! Ab dekhte hain 'abhi ho raha' kaam kaise likhte hain — Present Continuous!"
+      },
+      "navigation": { "next": "card_19_present_continuous_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_19_present_continuous_intro",
+      "card_slug": "card_19_present_continuous_intro",
+      "type": "chat",
+      "concept_id": "present_continuous",
+      "level": 3,
+      "progress": { "current": 19, "total": 82 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, abhi is waqt main aapse baat kar RAHA HOON — ye kaunsa tense hoga?" },
+        { "speaker": "aman", "text": "Bahut badhiya example Raju! 'Kar raha hoon' — matlab kaam ABHI, ISI WAQT ho raha hai. Isko Present Continuous Tense kehte hain." },
+        { "speaker": "raju", "text": "Toh ye Simple Present se alag hai kyunki isme kaam 'chal raha' hai, roz ka habit nahi hai?" },
+        { "speaker": "aman", "text": "Exactly! Simple Present = habit/routine, Present Continuous = is exact moment mein chal raha kaam." }
+      ],
+      "navigation": { "next": "card_20_pc_form", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_20_pc_form",
+      "card_slug": "card_20_pc_form",
+      "type": "chat",
+      "concept_id": "present_continuous",
+      "level": 3,
+      "progress": { "current": 20, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Structure: Subject + is/am/are + V-ing. 'I' ke saath 'am', 'He/She/It' ke saath 'is', 'You/We/They' ke saath 'are'." },
+        { "speaker": "raju", "text": "Matlab 'I am eating' sahi hai, 'I is eating' galat?" },
+        { "speaker": "aman", "text": "Sahi pakda! Ye subject-verb agreement ka basic hai — is/am/are ka galat use SSC-Railway ka bahut common trap hai." },
+        { "speaker": "raju", "text": "Toh mujhe hamesha subject dekh ke is/am/are choose karna hai." }
+      ],
+      "navigation": { "next": "card_21_pc_uses", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_21_pc_uses",
+      "card_slug": "card_21_pc_uses",
+      "type": "chat",
+      "concept_id": "present_continuous",
+      "level": 3,
+      "progress": { "current": 21, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Present Continuous ke 3 uses yaad rakho: 1) Is waqt ho raha kaam — 'She is cooking now.' 2) Temporary situation jo abhi chal rahi ho — 'He is staying with us these days.'" },
+        { "speaker": "raju", "text": "Aur teesra use, sir?" },
+        { "speaker": "aman", "text": "3) Near/Fixed Future plans — 'I am meeting him tomorrow.' Ye ek special exception hai jo aage detail mein dekhenge." },
+        { "speaker": "raju", "text": "Hain?? Present Continuous se Future bhi bata sakte hain?? Ye toh confusing hai!" }
+      ],
+      "navigation": { "next": "card_22_stative_verbs", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_22_stative_verbs",
+      "card_slug": "card_22_stative_verbs",
+      "type": "chat",
+      "concept_id": "present_continuous",
+      "level": 3,
+      "progress": { "current": 22, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ruko, ab exam ka sabse bada trap suno — STATIVE VERBS. Kuch verbs 'state/feeling/possession' dikhati hain, unke saath '-ing' KABHI nahi lagta — jaise: know, believe, love, hate, want, need, have (possession), understand, seem." },
+        { "speaker": "raju", "text": "Matlab 'I am knowing him' galat hoga?" },
+        { "speaker": "aman", "text": "⭐ BILKUL SAHI! 'I am knowing him' ek classic wrong sentence hai jo exam mein baar baar aata hai. Sahi hoga: 'I know him.' Stative verbs Simple Present mein hi rehti hain." },
+        { "speaker": "raju", "text": "Toh mujhe ye stative verbs ki list yaad rakhni padegi — know, want, need, love, hate, believe!" }
+      ],
+      "navigation": { "next": "card_23_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_23_quiz1",
+      "card_slug": "card_23_quiz1",
+      "type": "quiz",
+      "concept_id": "present_continuous",
+      "level": 3,
+      "progress": { "current": 23, "total": 82 },
+      "quiz_payload": {
+        "question": "Kaunsa sentence sahi hai?",
+        "options": [
+          { "id": "A", "text": "I am understanding this concept now." },
+          { "id": "B", "text": "I understand this concept now." },
+          { "id": "C", "text": "I am understand this concept now." },
+          { "id": "D", "text": "I understanding this concept now." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Understand' ek stative verb hai (mental state), isliye '-ing' form use nahi hoti. Sahi: 'I understand this concept now'."
+      },
+      "navigation": { "next": "card_24_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_24_quiz2",
+      "card_slug": "card_24_quiz2",
+      "type": "quiz",
+      "concept_id": "present_continuous",
+      "level": 3,
+      "progress": { "current": 24, "total": 82 },
+      "quiz_payload": {
+        "question": "Error Detection: 'They (A)/ is playing football (B)/ in the ground right now (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'They' plural subject hai, isliye 'are' aayega, 'is' nahi. Sahi: 'They are playing football'."
+      },
+      "navigation": { "next": "card_25_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_25_quiz3",
+      "card_slug": "card_25_quiz3",
+      "type": "quiz",
+      "concept_id": "present_continuous",
+      "level": 3,
+      "progress": { "current": 25, "total": 82 },
+      "quiz_payload": {
+        "question": "Error Detection: 'I (A)/ am wanting a cup of tea (B)/ right now (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Want' ek stative verb hai (desire dikhata hai), isliye continuous form nahi lagti. Sahi: 'I want a cup of tea'."
+      },
+      "navigation": { "next": "card_26_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_26_milestone3",
+      "card_slug": "card_26_milestone3",
+      "type": "milestone",
+      "concept_id": "present_continuous",
+      "level": 3,
+      "progress": { "current": 26, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔄",
+        "completed_topic": "Present Continuous Tense",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/9 Clear",
+        "motivational_quote": "Stative verb ka trap crack kar diya! Ab Present Perfect ki taraf chalte hain."
+      },
+      "navigation": { "next": "card_27_present_perfect_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_27_present_perfect_intro",
+      "card_slug": "card_27_present_perfect_intro",
+      "type": "chat",
+      "concept_id": "present_perfect",
+      "level": 4,
+      "progress": { "current": 27, "total": 82 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, 'Maine apna homework kar liya hai' — ye kaunsa tense hoga? 'kiya' bhi hai aur 'hai' bhi hai, confuse ho gaya!" },
+        { "speaker": "aman", "text": "Bahut acha observation Raju! Yahan kaam past mein hua hai LEKIN uska EFFECT ya RESULT abhi PRESENT mein dikh raha hai — homework abhi complete hai." },
+        { "speaker": "raju", "text": "Matlab past aur present dono connect ho rahe hain isme?" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Isi ko Present Perfect Tense kehte hain — jab past ka kaam present se JUDA hua ho." }
+      ],
+      "navigation": { "next": "card_28_pp_form", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_28_pp_form",
+      "card_slug": "card_28_pp_form",
+      "type": "chat",
+      "concept_id": "present_perfect",
+      "level": 4,
+      "progress": { "current": 28, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Structure: Subject + have/has + V3 (past participle). 'I/You/We/They' ke saath 'have', 'He/She/It' ke saath 'has'. 'I have done my homework.'" },
+        { "speaker": "raju", "text": "Toh V3 wahi hai jo Past Perfect mein bhi use hoti thi — had+V3?" },
+        { "speaker": "aman", "text": "Bilkul sahi yaad rakha! V3 same rehti hai, bas helping verb badalta hai — Past Perfect mein 'had', Present Perfect mein 'have/has'." },
+        { "speaker": "raju", "text": "Achha! Toh 'go' ka V3 'gone' hoga, 'She has gone' sahi, 'She has went' galat!" }
+      ],
+      "navigation": { "next": "card_29_since_for", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_29_since_for",
+      "card_slug": "card_29_since_for",
+      "type": "chat",
+      "concept_id": "present_perfect",
+      "level": 4,
+      "progress": { "current": 29, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Present Perfect ke saath 'Since' aur 'For' bahut aate hain. Universal Rule: 'Since' = FIXED POINT (since 2015, since Monday, since morning). 'For' = DURATION (for 3 years, for two hours)." },
+        { "speaker": "raju", "text": "Sir 'I have lived here since 5 years' sahi hoga kya?" },
+        { "speaker": "aman", "text": "⭐ Nahi! Yahi BPSC/SSC ka classic trap hai — '5 years' duration hai, isliye 'for' aayega — 'I have lived here for 5 years'. 'Since' hota tabhi jab fixed point ho, jaise 'since 2018'." },
+        { "speaker": "raju", "text": "Since = point (2018 se), For = duration (5 saal se) — yaad rakh liya sir!" }
+      ],
+      "navigation": { "next": "card_30_just_already_yet", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_30_just_already_yet",
+      "card_slug": "card_30_just_already_yet",
+      "type": "chat",
+      "concept_id": "present_perfect",
+      "level": 4,
+      "progress": { "current": 30, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab teen important signal words dekho: 'Just' (abhi abhi kiya) — 'I have just finished.' 'Already' (expect se pehle ho gaya) — 'He has already left.' 'Yet' (abhi tak nahi, sirf negative/questions mein) — 'Have you finished yet?'" },
+        { "speaker": "raju", "text": "Matlab 'yet' sirf negative ya question mein aata hai, positive mein nahi?" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'I have finished yet' GALAT hai. Positive statement mein 'already' aata hai, negative mein 'yet' — 'I haven't finished yet.'" },
+        { "speaker": "raju", "text": "Ye toh bahut fine difference hai, exam mein dhyan se dekhna padega!" }
+      ],
+      "navigation": { "next": "card_31_pp_vs_simple_past_trap", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_31_pp_vs_simple_past_trap",
+      "card_slug": "card_31_pp_vs_simple_past_trap",
+      "type": "chat",
+      "concept_id": "present_perfect",
+      "level": 4,
+      "progress": { "current": 31, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Sabse bada trap suno Raju — Present Perfect ke saath DEFINITE past time markers (yesterday, last year, ago, in 2015) KABHI use nahi hote." },
+        { "speaker": "raju", "text": "Matlab 'I have gone there yesterday' galat hoga?" },
+        { "speaker": "aman", "text": "⭐ Ekdum sahi! 'Yesterday' ek specific/definite past time hai — isliye sirf Simple Past chalega: 'I went there yesterday'. Present Perfect mein time specify nahi hota, sirf result matter karta hai." },
+        { "speaker": "raju", "text": "Toh Present Perfect ke saath specific date/time nahi bata sakte, sirf 'already/just/since/for/ever/never' jaise words chalenge!" }
+      ],
+      "navigation": { "next": "card_32_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_32_quiz1",
+      "card_slug": "card_32_quiz1",
+      "type": "quiz",
+      "concept_id": "present_perfect",
+      "level": 4,
+      "progress": { "current": 32, "total": 82 },
+      "quiz_payload": {
+        "question": "Sahi sentence chuno:",
+        "options": [
+          { "id": "A", "text": "She has completed the project two days ago." },
+          { "id": "B", "text": "She completed the project two days ago." },
+          { "id": "C", "text": "She has completed the project since two days." },
+          { "id": "D", "text": "She had completed the project two days ago now." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Two days ago' ek definite past time marker hai, isliye Present Perfect nahi chalega, sirf Simple Past chalega — 'completed'."
+      },
+      "navigation": { "next": "card_33_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_33_quiz2",
+      "card_slug": "card_33_quiz2",
+      "type": "quiz",
+      "concept_id": "present_perfect",
+      "level": 4,
+      "progress": { "current": 33, "total": 82 },
+      "quiz_payload": {
+        "question": "Error Detection: 'He (A)/ has been living in Patna (B)/ since three years (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Three years' ek duration hai, isliye 'for' aayega, 'since' nahi. Sahi: 'for three years'."
+      },
+      "navigation": { "next": "card_34_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_34_quiz3",
+      "card_slug": "card_34_quiz3",
+      "type": "quiz",
+      "concept_id": "present_perfect",
+      "level": 4,
+      "progress": { "current": 34, "total": 82 },
+      "quiz_payload": {
+        "question": "'Yet' ka sahi use kaunsa hai?",
+        "options": [
+          { "id": "A", "text": "I have finished my work yet." },
+          { "id": "B", "text": "I have not finished my work yet." },
+          { "id": "C", "text": "I am finishing my work yet." },
+          { "id": "D", "text": "I finish my work yet." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Yet' sirf negative statements aur questions mein use hota hai, positive statement mein nahi. Sahi: 'I have not finished my work yet'."
+      },
+      "navigation": { "next": "card_35_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_35_milestone4",
+      "card_slug": "card_35_milestone4",
+      "type": "milestone",
+      "concept_id": "present_perfect",
+      "level": 4,
+      "progress": { "current": 35, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔗",
+        "completed_topic": "Present Perfect Tense",
+        "xp_earned": 70,
+        "milestone_progress": "Module 4/9 Clear",
+        "motivational_quote": "Past-Present connection ka raja seekh liya! Ab uski cousin — Present Perfect Continuous dekhte hain."
+      },
+      "navigation": { "next": "card_36_ppc_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_36_ppc_intro",
+      "card_slug": "card_36_ppc_intro",
+      "type": "chat",
+      "concept_id": "present_perfect_continuous",
+      "level": 5,
+      "progress": { "current": 36, "total": 82 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir agar main 2 ghante se yahan padh RAHA HOON, abhi bhi padh raha hoon, isko kya bolenge?" },
+        { "speaker": "aman", "text": "Badhiya sawal! Yahan 'padhna' ek DURATION tak chal raha hai aur ABHI BHI JAARI hai. Ye Present Perfect Continuous hai." },
+        { "speaker": "raju", "text": "Matlab isme 'kitni der se' bhi bataya jaata hai aur kaam abhi bhi chal raha hai?" },
+        { "speaker": "aman", "text": "Bilkul! Ye tense use hota hai jab kaam PAST mein shuru hua, ab tak CONTINUE ho raha hai, aur abhi bhi khatam nahi hua." }
+      ],
+      "navigation": { "next": "card_37_ppc_form", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_37_ppc_form",
+      "card_slug": "card_37_ppc_form",
+      "type": "chat",
+      "concept_id": "present_perfect_continuous",
+      "level": 5,
+      "progress": { "current": 37, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Structure: Subject + have/has been + V-ing. 'I have been studying for 2 hours.' 'She has been waiting since morning.'" },
+        { "speaker": "raju", "text": "Toh 'been' hamesha aayega, bas have/has subject ke hisaab se badlega?" },
+        { "speaker": "aman", "text": "Sahi! 'I/You/We/They' ke saath 'have been', 'He/She/It' ke saath 'has been'. Aur uske baad verb hamesha '-ing' form mein hogi." },
+        { "speaker": "raju", "text": "Note kar liya — have/has been + V-ing, since/for wale rule wahi rahenge yahan bhi!" }
+      ],
+      "navigation": { "next": "card_38_pp_vs_ppc_diff", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_38_pp_vs_ppc_diff",
+      "card_slug": "card_38_pp_vs_ppc_diff",
+      "type": "chat",
+      "concept_id": "present_perfect_continuous",
+      "level": 5,
+      "progress": { "current": 38, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ek zaroori difference samjho — Present Perfect (have/has+V3) COMPLETION dikhata hai, Present Perfect Continuous (have/has been+V-ing) CONTINUATION dikhata hai." },
+        { "speaker": "raju", "text": "Matlab dono mein farak sirf 'khatam hua ya abhi chal raha' ka hai?" },
+        { "speaker": "aman", "text": "Bilkul! 'I have written 5 pages' (5 pages ka kaam complete ho chuka, ho sakta hai ab likhna band kar diya). 'I have been writing for 2 hours' (2 ghante se likh raha hoon, abhi bhi likh raha hoon)." },
+        { "speaker": "raju", "text": "Achhaaaa! Toh completion=V3, continuation=been+ing — clear ho gaya!" }
+      ],
+      "navigation": { "next": "card_39_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_39_quiz1",
+      "card_slug": "card_39_quiz1",
+      "type": "quiz",
+      "concept_id": "present_perfect_continuous",
+      "level": 5,
+      "progress": { "current": 39, "total": 82 },
+      "quiz_payload": {
+        "question": "Sahi sentence chuno:",
+        "options": [
+          { "id": "A", "text": "She have been working here for five years." },
+          { "id": "B", "text": "She has been working here for five years." },
+          { "id": "C", "text": "She has being working here for five years." },
+          { "id": "D", "text": "She is been working here for five years." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'She' third person singular hai isliye 'has been'. Structure hai 'has/have been + V-ing', 'has being' galat structure hai."
+      },
+      "navigation": { "next": "card_40_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_40_quiz2",
+      "card_slug": "card_40_quiz2",
+      "type": "quiz",
+      "concept_id": "present_perfect_continuous",
+      "level": 5,
+      "progress": { "current": 40, "total": 82 },
+      "quiz_payload": {
+        "question": "Error Detection: 'The workers (A)/ have been digging the road (B)/ since two hours (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Two hours' ek duration hai, isliye 'for' aayega, 'since' nahi. Sahi: 'for two hours'."
+      },
+      "navigation": { "next": "card_41_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_41_quiz3",
+      "card_slug": "card_41_quiz3",
+      "type": "quiz",
+      "concept_id": "present_perfect_continuous",
+      "level": 5,
+      "progress": { "current": 41, "total": 82 },
+      "quiz_payload": {
+        "question": "Present Perfect Continuous kab use hota hai?",
+        "options": [
+          { "id": "A", "text": "Jab kaam past mein complete ho chuka ho" },
+          { "id": "B", "text": "Jab kaam past mein shuru hua ho aur abhi bhi jaari ho" },
+          { "id": "C", "text": "Jab kaam future mein hoga" },
+          { "id": "D", "text": "Jab koi universal truth ho" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Present Perfect Continuous ek aisa kaam dikhata hai jo past mein shuru hua aur abhi tak jaari hai — 'has/have been + V-ing + since/for'."
+      },
+      "navigation": { "next": "card_42_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_42_milestone5",
+      "card_slug": "card_42_milestone5",
+      "type": "milestone",
+      "concept_id": "present_perfect_continuous",
+      "level": 5,
+      "progress": { "current": 42, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⏳",
+        "completed_topic": "Present Perfect Continuous Tense",
+        "xp_earned": 70,
+        "milestone_progress": "Module 5/9 Clear",
+        "motivational_quote": "Chaaron Present Tenses clear ho gaye Raju! Ab dekhte hain kuch special uses jo exam mein pakka aate hain."
+      },
+      "navigation": { "next": "card_43_universal_truth", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_43_universal_truth",
+      "card_slug": "card_43_universal_truth",
+      "type": "chat",
+      "concept_id": "special_uses",
+      "level": 6,
+      "progress": { "current": 43, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab kuch SPECIAL uses of Simple Present dekhte hain jo BPSC/SSC bahut poochta hai. Pehla: UNIVERSAL TRUTHS/Scientific Facts — 'Water boils at 100°C', 'The Earth revolves around the Sun'." },
+        { "speaker": "raju", "text": "Sir isme kaam abhi nahi ho raha, phir bhi Present Tense kyun?" },
+        { "speaker": "aman", "text": "Kyunki ye baatein HAMESHA sach hain — kal bhi sach thi, aaj bhi sach hai, kal bhi sach rahegi. Isiliye chahe baat past mein bhi ho rahi ho, universal truth hamesha Simple Present mein hi likha jaata hai." },
+        { "speaker": "raju", "text": "⭐ Achha! Toh 'Galileo said that the Earth revolves around the Sun' — 'revolves' hi rahega, 'revolved' nahi?" }
+      ],
+      "navigation": { "next": "card_44_historical_present", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_44_historical_present",
+      "card_slug": "card_44_historical_present",
+      "type": "chat",
+      "concept_id": "special_uses",
+      "level": 6,
+      "progress": { "current": 44, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ekdum sahi Raju! Universal truth reported speech mein bhi change nahi hoti. Ab dusra use dekho: HISTORICAL PRESENT — jab past ki historical events ko interesting/dramatic banane ke liye Present Tense mein likha jaaye." },
+        { "speaker": "raju", "text": "Matlab jaise story sunane mein bolte hain 'Akbar comes to the throne in 1556'?" },
+        { "speaker": "aman", "text": "Bilkul sahi example! Ye zyada tar newspapers headlines, story-telling, aur commentary mein use hota hai — 'Sachin scores a century!' jaise headlines mein." },
+        { "speaker": "raju", "text": "Achhaaaa, matlab news headlines mein bhi Present Tense use hota hai chahe event ho chuka ho!" }
+      ],
+      "navigation": { "next": "card_45_scheduled_future", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_45_scheduled_future",
+      "card_slug": "card_45_scheduled_future",
+      "type": "chat",
+      "concept_id": "special_uses",
+      "level": 6,
+      "progress": { "current": 45, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Teesra use: SCHEDULED/TIMETABLE FUTURE EVENTS. Jab koi kaam FIXED schedule ke hisaab se future mein hoga, tab Simple Present use hota hai — 'The train leaves at 6 PM tomorrow', 'The exam starts next Monday'." },
+        { "speaker": "raju", "text": "Hain?? Future ki baat, phir bhi Present Tense?? Ye toh confusing hai sir!" },
+        { "speaker": "aman", "text": "Samjho aise — jab kuch FIXED/OFFICIAL timetable ke hisaab se ho (train, flight, school schedule), tab Simple Present. Personal plans ke liye Present Continuous chalta hai — 'I am meeting him tomorrow.'" },
+        { "speaker": "raju", "text": "Toh timetable/schedule = Simple Present, personal plan = Present Continuous — dono future ke liye but alag context mein!" }
+      ],
+      "navigation": { "next": "card_46_time_conditional_clause", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_46_time_conditional_clause",
+      "card_slug": "card_46_time_conditional_clause",
+      "type": "chat",
+      "concept_id": "special_uses",
+      "level": 6,
+      "progress": { "current": 46, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Ab sabse bada exam trap suno — Time/Conditional Clauses mein FUTURE TENSE use NAHI hota, chahe overall meaning future ka ho. 'If it rains, we will stay home' — 'if' clause mein Present, main clause mein Future." },
+        { "speaker": "raju", "text": "Sir 'If it will rain, we will stay home' galat hoga toh?" },
+        { "speaker": "aman", "text": "⭐ BILKUL SAHI PAKDA! Ye SBI PO ka super favourite trap hai. 'If', 'when', 'until', 'as soon as', 'before', 'after' wale clause mein future ki baat bhi Simple Present mein hi likhi jaati hai." },
+        { "speaker": "raju", "text": "Toh main clause mein 'will', but 'if/when' wale clause mein sirf Present — dono milake future meaning banta hai!" }
+      ],
+      "navigation": { "next": "card_47_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_47_quiz1",
+      "card_slug": "card_47_quiz1",
+      "type": "quiz",
+      "concept_id": "special_uses",
+      "level": 6,
+      "progress": { "current": 47, "total": 82 },
+      "quiz_payload": {
+        "question": "Sahi sentence chuno:",
+        "options": [
+          { "id": "A", "text": "When he will arrive, we will start the meeting." },
+          { "id": "B", "text": "When he arrives, we will start the meeting." },
+          { "id": "C", "text": "When he arrived, we will start the meeting." },
+          { "id": "D", "text": "When he will arrives, we will start the meeting." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Time clause ('when') mein future ke liye Simple Present use hota hai, 'will' nahi. Main clause mein 'will start' sahi hai."
+      },
+      "navigation": { "next": "card_48_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_48_quiz2",
+      "card_slug": "card_48_quiz2",
+      "type": "quiz",
+      "concept_id": "special_uses",
+      "level": 6,
+      "progress": { "current": 48, "total": 82 },
+      "quiz_payload": {
+        "question": "Error Detection: 'The teacher told us that (A)/ the sun rose in the east (B)/ and set in the west (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Universal truths tense mein backshift nahi hote, chahe reporting verb Past mein ho. Sahi: 'the sun rises in the east and sets in the west'."
+      },
+      "navigation": { "next": "card_49_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_49_quiz3",
+      "card_slug": "card_49_quiz3",
+      "type": "quiz",
+      "concept_id": "special_uses",
+      "level": 6,
+      "progress": { "current": 49, "total": 82 },
+      "quiz_payload": {
+        "question": "'The train ___ at 7 AM tomorrow' (fixed railway schedule) — sahi verb form?",
+        "options": [
+          { "id": "A", "text": "will leave" },
+          { "id": "B", "text": "leaves" },
+          { "id": "C", "text": "is leaving" },
+          { "id": "D", "text": "left" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Fixed timetable/schedule wale future events ke liye Simple Present use hota hai — 'The train leaves at 7 AM tomorrow'."
+      },
+      "navigation": { "next": "card_50_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_50_milestone6",
+      "card_slug": "card_50_milestone6",
+      "type": "milestone",
+      "concept_id": "special_uses",
+      "level": 6,
+      "progress": { "current": 50, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Special Uses of Present Tense",
+        "xp_earned": 75,
+        "milestone_progress": "Module 6/9 Clear",
+        "motivational_quote": "Officer level trap crack kar diya! Ab Subject-Verb Agreement ke deep traps dekhte hain."
+      },
+      "navigation": { "next": "card_51_sva_basic", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_51_sva_basic",
+      "card_slug": "card_51_sva_basic",
+      "type": "chat",
+      "concept_id": "subject_verb_agreement",
+      "level": 7,
+      "progress": { "current": 51, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab hum seekhenge Subject-Verb Agreement ke SPECIAL cases jo SBI PO/BPSC mein baar baar aate hain. Universal Rule: Singular Subject → Singular Verb (is/was/has/verb+s), Plural Subject → Plural Verb (are/were/have/verb)." },
+        { "speaker": "raju", "text": "Ye to easy hai sir, subject dekho aur verb match karo!" },
+        { "speaker": "aman", "text": "Haan lekin kuch SPECIAL subjects hain jinme confusion hoti hai. Pehla: 'Each', 'Every', 'Either', 'Neither' — ye sab hamesha SINGULAR treat hote hain, chahe baad mein plural noun ho." },
+        { "speaker": "raju", "text": "Matlab 'Each of the boys' singular treat hoga, plural nahi?" }
+      ],
+      "navigation": { "next": "card_52_collective_nouns", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_52_collective_nouns",
+      "card_slug": "card_52_collective_nouns",
+      "type": "chat",
+      "concept_id": "subject_verb_agreement",
+      "level": 7,
+      "progress": { "current": 52, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi Raju! 'Each of the boys is intelligent' — 'boys' plural hai but 'each' singular banata hai, isliye 'is' aayega. Ab dusra case: COLLECTIVE NOUNS (team, family, jury, class, committee, army)." },
+        { "speaker": "raju", "text": "Sir 'team' toh bahut logon ka group hai, isliye 'are' aayega na?" },
+        { "speaker": "aman", "text": "⭐ Yahan bada trap hai — Collective nouns NORMALLY singular treat hote hain jab group EK UNIT ki tarah act kar raha ho — 'The team is playing well.' Sirf jab members ALAG-ALAG act kar rahe hon tab plural — 'The team are quarrelling among themselves.'" },
+        { "speaker": "raju", "text": "Achhaaaa! Toh ek saath kaam kare toh singular, alag alag kare toh plural — ye toh bahut fine difference hai!" }
+      ],
+      "navigation": { "next": "card_53_subject_closer_to_verb", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_53_subject_closer_to_verb",
+      "card_slug": "card_53_subject_closer_to_verb",
+      "type": "chat",
+      "concept_id": "subject_verb_agreement",
+      "level": 7,
+      "progress": { "current": 53, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab teesra important trap: EITHER...OR / NEITHER...NOR. Rule: Verb hamesha us subject se match karega jo VERB KE SABSE PAAS (closer) ho, na ki pehle wale se." },
+        { "speaker": "raju", "text": "Matlab 'Either Ram or his friends' — verb 'friends' se match karega kyunki wo paas hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'Either Ram or his friends ARE responsible' — kyunki 'friends' (plural) verb ke closer hai. Agar order badal dete — 'Either his friends or Ram IS responsible' — kyunki ab 'Ram' (singular) closer hai." },
+        { "speaker": "raju", "text": "⭐ Ye toh super tricky hai! Hamesha last subject dekhna hai, verb usi se match karna hai!" }
+      ],
+      "navigation": { "next": "card_54_indefinite_pronouns", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_54_indefinite_pronouns",
+      "card_slug": "card_54_indefinite_pronouns",
+      "type": "chat",
+      "concept_id": "subject_verb_agreement",
+      "level": 7,
+      "progress": { "current": 54, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Aur ek zaroori list — Indefinite pronouns jo HAMESHA singular hote hain: everyone, everybody, everything, someone, somebody, anyone, anybody, no one, nobody, each. Inke saath hamesha singular verb aayega." },
+        { "speaker": "raju", "text": "Toh 'Everyone are happy' galat hoga, 'Everyone is happy' sahi?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye BPSC ka bahut common trap hai — 'everyone/everybody' bahut logon ki baat karta hai isliye students plural bol dete hain, but grammar mein ye SINGULAR hi treat hota hai." },
+        { "speaker": "raju", "text": "Note kar liya sir — every/some/any/no + one/body/thing = singular hamesha!" }
+      ],
+      "navigation": { "next": "card_55_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_55_quiz1",
+      "card_slug": "card_55_quiz1",
+      "type": "quiz",
+      "concept_id": "subject_verb_agreement",
+      "level": 7,
+      "progress": { "current": 55, "total": 82 },
+      "quiz_payload": {
+        "question": "Sahi sentence chuno:",
+        "options": [
+          { "id": "A", "text": "Neither of the answers are correct." },
+          { "id": "B", "text": "Neither of the answers is correct." },
+          { "id": "C", "text": "Neither of the answers were correct." },
+          { "id": "D", "text": "Neither of the answers have been correct." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Neither of' hamesha singular verb leta hai, chahe baad mein plural noun ho. Sahi: 'Neither of the answers is correct'."
+      },
+      "navigation": { "next": "card_56_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_56_quiz2",
+      "card_slug": "card_56_quiz2",
+      "type": "quiz",
+      "concept_id": "subject_verb_agreement",
+      "level": 7,
+      "progress": { "current": 56, "total": 82 },
+      "quiz_payload": {
+        "question": "Error Detection: 'Either the manager or the employees (A)/ is responsible (B)/ for this mistake (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Either...or' mein verb closer subject se match karta hai. Yahan 'employees' (plural) closer hai, isliye 'are' aayega, 'is' galat hai."
+      },
+      "navigation": { "next": "card_57_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_57_quiz3",
+      "card_slug": "card_57_quiz3",
+      "type": "quiz",
+      "concept_id": "subject_verb_agreement",
+      "level": 7,
+      "progress": { "current": 57, "total": 82 },
+      "quiz_payload": {
+        "question": "Error Detection: 'Everybody in the class (A)/ have submitted (B)/ their assignments on time (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Everybody' hamesha singular treat hota hai, isliye 'has submitted' aayega, 'have submitted' galat hai."
+      },
+      "navigation": { "next": "card_58_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_58_milestone7",
+      "card_slug": "card_58_milestone7",
+      "type": "milestone",
+      "concept_id": "subject_verb_agreement",
+      "level": 7,
+      "progress": { "current": 58, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Subject-Verb Agreement Special Cases",
+        "xp_earned": 80,
+        "milestone_progress": "Module 7/9 Clear",
+        "motivational_quote": "Ye SBI PO ka toughest module tha aur tumne crack kar liya! Ab kuch aur agreement traps dekhte hain."
+      },
+      "navigation": { "next": "card_59_distance_money_time", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_59_distance_money_time",
+      "card_slug": "card_59_distance_money_time",
+      "type": "chat",
+      "concept_id": "sva_advanced",
+      "level": 8,
+      "progress": { "current": 59, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek aur important rule — Distance, Money, Time, Weight jab EK SINGLE UNIT/AMOUNT ki tarah treat ho, tab SINGULAR verb aata hai, chahe number plural dikhe." },
+        { "speaker": "raju", "text": "Matlab 'Two hundred rupees' plural lagta hai, phir bhi singular verb?" },
+        { "speaker": "aman", "text": "Bilkul! 'Two hundred rupees is a good amount' — kyunki yahan 'do sau rupaye' ek TOTAL AMOUNT ki tarah treat ho raha hai, individual notes ki tarah nahi. Same rule: 'Ten kilometers is a long distance.'" },
+        { "speaker": "raju", "text": "⭐ Achha! Toh jab total quantity/amount ek group ki tarah socha jaaye, tab singular verb!" }
+      ],
+      "navigation": { "next": "card_60_gerund_subject", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_60_gerund_subject",
+      "card_slug": "card_60_gerund_subject",
+      "type": "chat",
+      "concept_id": "sva_advanced",
+      "level": 8,
+      "progress": { "current": 60, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur trap: Jab GERUND (V-ing form jo noun ki tarah kaam kare) subject ho, verb hamesha SINGULAR aata hai. 'Playing video games is his favourite hobby.'" },
+        { "speaker": "raju", "text": "Sir 'games' plural hai, phir bhi 'is' aaya, kyun?" },
+        { "speaker": "aman", "text": "Kyunki asli subject 'games' nahi, 'Playing' (gerund) hai! Poora gerund phrase 'Playing video games' ek SINGLE ACTIVITY treat hota hai — isliye singular verb." },
+        { "speaker": "raju", "text": "Achhaaaa! Matlab gerund subject ho toh dekho poora phrase ek IDEA hai, uske andar ke words count nahi karte!" }
+      ],
+      "navigation": { "next": "card_61_each_every_before_and", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_61_each_every_before_and",
+      "card_slug": "card_61_each_every_before_and",
+      "type": "chat",
+      "concept_id": "sva_advanced",
+      "level": 8,
+      "progress": { "current": 61, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Last special case: Jab 'Each' ya 'Every' do subjects ko JOIN karne wale 'and' se PEHLE aaye, tab bhi verb SINGULAR hoga — 'Each boy and each girl HAS received a prize.'" },
+        { "speaker": "raju", "text": "Hain? 'Boy AND girl' toh do log ho gaye, plural nahi hoga?" },
+        { "speaker": "aman", "text": "⭐ Yahi trap hai Raju! Normally 'A and B' plural verb leta hai (Ram and Shyam ARE friends). Lekin agar 'Each'/'Every' pehle laga ho, to power singular kar deta hai — 'Each' ka effect dono subjects pe pड़ता hai." },
+        { "speaker": "raju", "text": "Toh 'Each/Every + noun and noun' = singular, but normal 'noun and noun' = plural. Note kar liya!" }
+      ],
+      "navigation": { "next": "card_62_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_62_quiz1",
+      "card_slug": "card_62_quiz1",
+      "type": "quiz",
+      "concept_id": "sva_advanced",
+      "level": 8,
+      "progress": { "current": 62, "total": 82 },
+      "quiz_payload": {
+        "question": "Sahi sentence chuno:",
+        "options": [
+          { "id": "A", "text": "Five kilometers are a long distance to walk." },
+          { "id": "B", "text": "Five kilometers is a long distance to walk." },
+          { "id": "C", "text": "Five kilometers were a long distance to walk." },
+          { "id": "D", "text": "Five kilometers have been a long distance to walk." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Distance ek total amount/single unit ki tarah treat hoti hai, isliye singular verb 'is' aayega, plural 'are' nahi."
+      },
+      "navigation": { "next": "card_63_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_63_quiz2",
+      "card_slug": "card_63_quiz2",
+      "type": "quiz",
+      "concept_id": "sva_advanced",
+      "level": 8,
+      "progress": { "current": 63, "total": 82 },
+      "quiz_payload": {
+        "question": "Error Detection: 'Reading good books (A)/ increase our (B)/ knowledge and vocabulary (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Reading good books' ek gerund phrase hai, singular subject treat hota hai. Sahi: 'increases our knowledge'."
+      },
+      "navigation": { "next": "card_64_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_64_quiz3",
+      "card_slug": "card_64_quiz3",
+      "type": "quiz",
+      "concept_id": "sva_advanced",
+      "level": 8,
+      "progress": { "current": 64, "total": 82 },
+      "quiz_payload": {
+        "question": "Error Detection: 'Each boy and each girl (A)/ in the class have received (B)/ a certificate of merit (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Each...and each...' pattern hamesha singular verb leta hai. Sahi: 'has received', 'have received' galat hai."
+      },
+      "navigation": { "next": "card_65_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_65_milestone8",
+      "card_slug": "card_65_milestone8",
+      "type": "milestone",
+      "concept_id": "sva_advanced",
+      "level": 8,
+      "progress": { "current": 65, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌀",
+        "completed_topic": "Advanced Subject-Verb Agreement Traps",
+        "xp_earned": 80,
+        "milestone_progress": "Module 8/9 Clear",
+        "motivational_quote": "Officer-level agreement mind ban gaya hai tumhara! Ab final module — SBI PO Error Detection Master Practice!"
+      },
+      "navigation": { "next": "card_66_error_detection_strategy", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_66_error_detection_strategy",
+      "card_slug": "card_66_error_detection_strategy",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 66, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab hum karenge exact SBI PO style practice — sentence 4 parts mein todke error dhundhna. Strategy: 1) Pehle subject-verb agreement check karo (singular/plural match?). 2) Time markers verb se match kar rahe hain kya?" },
+        { "speaker": "raju", "text": "Aur kya check karna hai sir?" },
+        { "speaker": "aman", "text": "3) Stative verbs pe '-ing' toh nahi laga diya? 4) Since/For sahi jagah use hue hain kya? 5) 'Does/Has' ke baad double 's/es' toh nahi lag gaya verb pe?" },
+        { "speaker": "raju", "text": "Ye toh ek poori checklist ban gayi sir! Chaliye practice karte hain!" }
+      ],
+      "navigation": { "next": "card_67_trap_stative", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_67_trap_stative",
+      "card_slug": "card_67_trap_stative",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 67, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 1: Stative verbs with -ing. Exam mein 'is/am/are + know/want/need/love/hate/believe/seem/own' jaisa combination dikha ke trap bichhaya jaata hai." },
+        { "speaker": "raju", "text": "Sir 'I am owning a car' bhi galat hoga toh?" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'Own' possession dikhata hai, stative verb hai. Sahi: 'I own a car'. Yaad rakho list: know, believe, love, hate, want, need, have(possession), understand, seem, own, belong, prefer." },
+        { "speaker": "raju", "text": "Sir main roz ye list revise karunga, exam tak sab clear ho jaayega!" }
+      ],
+      "navigation": { "next": "card_68_trap_double_agreement", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_68_trap_double_agreement",
+      "card_slug": "card_68_trap_double_agreement",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 68, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 2: Double Agreement Error — jab ek hi sentence mein do jagah third-person-s dikha diya jaaye. 'He does not plays' (galat), 'She doesn't goes' (galat)." },
+        { "speaker": "raju", "text": "Toh sahi kya hoga in dono ka sir?" },
+        { "speaker": "aman", "text": "'He does not play', 'She doesn't go'. Rule: 'Does/Doesn't' khud hi third-person-singular dikha deta hai, isliye verb apni ORIGINAL V1 form mein rahegi." },
+        { "speaker": "raju", "text": "Achhaaaa! 'Does' ke baad kabhi bhi 's/es' wali verb nahi aayegi!" }
+      ],
+      "navigation": { "next": "card_69_trap_definite_time", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_69_trap_definite_time",
+      "card_slug": "card_69_trap_definite_time",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 69, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 3: Present Perfect with Definite Time. 'I have met him last week' GALAT hai — 'last week' definite past hai, isliye sirf Simple Past chalega: 'I met him last week'." },
+        { "speaker": "raju", "text": "Toh Present Perfect ke saath 'yesterday, last week, ago, in 2020' kabhi nahi aa sakte?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Present Perfect ke saath 'already, just, yet, since, for, ever, never, recently, so far, up till now' jaise words hi aate hain — definite markers se kabhi mix mat karna." },
+        { "speaker": "raju", "text": "Ye toh SBI PO ka sabse repeat hone wala trap lagta hai sir!" }
+      ],
+      "navigation": { "next": "card_70_trap_conditional_future", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_70_trap_conditional_future",
+      "card_slug": "card_70_trap_conditional_future",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 70, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 4: Future in Time/Conditional Clause. 'If he will come, I will meet him' GALAT hai. Sahi: 'If he comes, I will meet him' — 'if/when/until/before/after' clause mein Present, main clause mein Future/will." },
+        { "speaker": "raju", "text": "Sir ye same rule 'as soon as' aur 'till' ke saath bhi lagega kya?" },
+        { "speaker": "aman", "text": "Haan bilkul! Sabhi TIME clauses (when, while, before, after, till, until, as soon as) aur CONDITIONAL clauses (if, unless) mein future ki baat ho toh bhi Simple Present hi use hoga." },
+        { "speaker": "raju", "text": "⭐ Note kar liya sir — clause mein 'will' dekha toh turant samajh jaunga ye error hai!" }
+      ],
+      "navigation": { "next": "card_71_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_71_quiz1",
+      "card_slug": "card_71_quiz1",
+      "type": "quiz",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 71, "total": 82 },
+      "quiz_payload": {
+        "question": "Error Detection: 'The manager (A)/ has submitted the report (B)/ yesterday evening (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Yesterday evening' ek definite past time marker hai, isliye Present Perfect (has submitted) nahi chalega. Sahi: 'submitted the report'."
+      },
+      "navigation": { "next": "card_72_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_72_quiz2",
+      "card_slug": "card_72_quiz2",
+      "type": "quiz",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 72, "total": 82 },
+      "quiz_payload": {
+        "question": "Error Detection: 'If it will rain tomorrow (A)/ we will not be able to (B)/ go for the picnic (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'If' clause mein future ke liye Simple Present aata hai, 'will' nahi. Sahi: 'If it rains tomorrow'."
+      },
+      "navigation": { "next": "card_73_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_73_quiz3",
+      "card_slug": "card_73_quiz3",
+      "type": "quiz",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 73, "total": 82 },
+      "quiz_payload": {
+        "question": "Error Detection: 'She (A)/ don't like (B)/ spicy food at all (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'She' third person singular hai, isliye 'doesn't' aayega, 'don't' nahi. Sahi: 'doesn't like'."
+      },
+      "navigation": { "next": "card_74_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_74_milestone9",
+      "card_slug": "card_74_milestone9",
+      "type": "milestone",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 74, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🕵️",
+        "completed_topic": "SBI PO Level Error Detection Practice",
+        "xp_earned": 90,
+        "milestone_progress": "Module 9/9 Clear",
+        "motivational_quote": "Tumne poora Present Tense chapter Officer-level pe master kar liya! Ab final revision aur master quiz ka time hai!"
+      },
+      "navigation": { "next": "card_75_summary", "button_text": "Go to Final Revision ➔" }
+    },
+
+    {
+      "card_id": "card_75_summary",
+      "card_slug": "card_75_summary",
+      "type": "summary",
+      "concept_id": "final_revision",
+      "level": 9,
+      "progress": { "current": 75, "total": 82 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision — Present Tense",
+        "revision_points": [
+          {
+            "topic": "Statement Check: Simple Present",
+            "point": "Statement I: Third person singular (He/She/It) verb ke saath -s/-es lagta hai. Statement II: 'Does/Doesn't' ke baad verb V1 (base) form mein aati hai, dobara -s nahi lagta. Dono statements sahi hain — Double Agreement Error exam ka top trap hai."
+          },
+          {
+            "topic": "Statement Check: Present Continuous",
+            "point": "Statement I: 'is/am/are+V-ing' abhi ho raha kaam dikhata hai. Statement II: Stative verbs (know, want, love, believe, have-possession) ke saath '-ing' kabhi nahi lagta. Dono sahi — 'I am knowing' jaisa sentence hamesha galat hai."
+          },
+          {
+            "topic": "Statement Check: Present Perfect",
+            "point": "Statement I: 'have/has+V3' past kaam ka present se connection dikhata hai. Statement II: Present Perfect ke saath definite time markers (yesterday, ago, last year) kabhi use nahi hote. Statement I sahi, Statement II bhi sahi — ye BPSC/SSC ka top repeated trap hai."
+          },
+          {
+            "topic": "Statement Check: Time/Conditional Clause",
+            "point": "Statement I: 'If/when/until/before/after' clause mein future ki baat bhi Simple Present mein likhi jaati hai. Statement II: Main clause mein 'will' use hota hai. Dono statements sahi hain — clause mein 'will' dekhna hamesha error hai."
+          },
+          {
+            "topic": "Statement Check: Subject-Verb Agreement",
+            "point": "Statement I: 'Each/Every/Either/Neither/Everyone/Everybody' hamesha singular verb lete hain. Statement II: 'Either...or/Neither...nor' mein verb closer subject se match karta hai. Dono statements sahi hain — inko mix karna common error hai."
+          }
+        ]
+      },
+      "navigation": { "next": "card_76_final_quiz1", "button_text": "Start Master Officer Quiz ➔" }
+    },
+
+    {
+      "card_id": "card_76_final_quiz1",
+      "card_slug": "card_76_final_quiz1",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 10,
+      "progress": { "current": 76, "total": 82 },
+      "quiz_payload": {
+        "question": "Assertion-Reason: Assertion (A): 'Each boy and each girl has received a certificate' is grammatically correct. Reason (R): When 'each' or 'every' precedes two subjects joined by 'and', the verb is always singular.",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is NOT the correct explanation of A" },
+          { "id": "C", "text": "A is true but R is false" },
+          { "id": "D", "text": "A is false but R is true" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Each' before two subjects joined by 'and' makes the subject singular in meaning, hence 'has received' (singular verb) is correct. R correctly explains why A is true."
+      },
+      "navigation": { "next": "card_77_final_quiz2", "button_text": "Next Question ➔" }
+    },
+
+    {
+      "card_id": "card_77_final_quiz2",
+      "card_slug": "card_77_final_quiz2",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 10,
+      "progress": { "current": 77, "total": 82 },
+      "quiz_payload": {
+        "question": "Multi-Statement: Read the sentence and find which parts contain an error: 'If she will complete the project on time (A) / she is knowing that (B) / she will get a good appraisal this year (C) / No error (D)'. Choose the part(s) with error.",
+        "options": [
+          { "id": "A", "text": "Only Part A" },
+          { "id": "B", "text": "Part A and Part B" },
+          { "id": "C", "text": "Only Part B" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Part A error: 'If' clause requires Simple Present, not 'will' — should be 'If she completes'. Part B error: 'Know' is a stative verb, cannot take continuous form — should be 'she knows that'. Part C is correct as it's the main clause with future 'will get'."
+      },
+      "navigation": { "next": "card_78_final_quiz3", "button_text": "Next Question ➔" }
+    },
+
+    {
+      "card_id": "card_78_final_quiz3",
+      "card_slug": "card_78_final_quiz3",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 10,
+      "progress": { "current": 78, "total": 82 },
+      "quiz_payload": {
+        "question": "BPSC Style: Consider the following statements about Present Tense usage: (1) 'She has been living here since five years' is grammatically correct. (2) 'Neither of the answers are correct' is grammatically correct. (3) 'Ten kilometers is a long distance' correctly uses singular verb for a total quantity. Which of the statements is/are CORRECT?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 3" },
+          { "id": "C", "text": "Only 2 and 3" },
+          { "id": "D", "text": "1, 2 and 3" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 is WRONG — 'five years' is a duration, so 'for' should be used, not 'since'. Statement 2 is WRONG — 'Neither of' takes singular verb 'is', not 'are'. Statement 3 is CORRECT — distance as a total quantity takes singular verb. So only Statement 3 is correct."
+      },
+      "navigation": { "next": "card_79_final_quiz4", "button_text": "Next Question ➔" }
+    },
+
+    {
+      "card_id": "card_79_final_quiz4",
+      "card_slug": "card_79_final_quiz4",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 10,
+      "progress": { "current": 79, "total": 82 },
+      "quiz_payload": {
+        "question": "Error Detection (SBI PO Level): Find the part with error: 'Playing chess and reading novels (A) / are his favourite hobbies (B) / which he does every evening after office (C) / No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "This sentence is correct as written. Here TWO separate gerund phrases ('Playing chess' AND 'reading novels') are joined by 'and', making a compound plural subject, hence 'are' (plural) is correct. Note: this is different from a SINGLE gerund phrase like 'Playing chess is his hobby' which would take singular verb."
+      },
+      "navigation": { "next": "card_80_trophy", "button_text": "See Final Result ➔" }
+    },
+
+    {
+      "card_id": "card_80_trophy",
+      "card_slug": "card_80_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 10,
+      "progress": { "current": 80, "total": 82 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Present Tense — Full Chapter + SBI PO Error Detection",
+        "xp_earned": 150,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Officer-level Present Tense mastery unlocked, Raju! Simple Present se lekar Subject-Verb Agreement traps tak, sab tumhare control mein hai. Ab exam mein koi bhi Present Tense question tumhe hara nahi sakta — All the best!"
+      },
+      "navigation": { "next": "card_81_bonus_intro", "button_text": "Continue to Bonus Round ➔" }
+    },
+
+    {
+      "card_id": "card_81_bonus_intro",
+      "card_slug": "card_81_bonus_intro",
+      "type": "chat",
+      "concept_id": "bonus_reported_speech_present",
+      "level": 10,
+      "progress": { "current": 81, "total": 82 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir ek aakhri doubt hai — jab hum kisi ki baat REPORT karte hain, Present Tense kya-kya change hota hai?" },
+        { "speaker": "aman", "text": "Achha poocha! Agar reporting verb Present mein ho (says, tells), tab tense CHANGE NAHI hota — 'He says, \"I am happy\"' → 'He says that he is happy.'" },
+        { "speaker": "raju", "text": "Aur agar reporting verb Past mein ho, tab kya hoga?" },
+        { "speaker": "aman", "text": "Tab Backshift hota hai: Simple Present→Simple Past, Present Continuous→Past Continuous, Present Perfect→Past Perfect. Bas universal truths kabhi change nahi hote, wo hamesha Present hi rehte hain — ye tumne pehle hi seekh liya tha!" }
+      ],
+      "navigation": { "next": "card_82_bonus_quiz", "button_text": "Final Bonus Question ➔" }
+    },
+
+    {
+      "card_id": "card_82_bonus_quiz",
+      "card_slug": "card_82_bonus_quiz",
+      "type": "quiz",
+      "concept_id": "bonus_reported_speech_present",
+      "level": 10,
+      "progress": { "current": 82, "total": 82 },
+      "quiz_payload": {
+        "question": "'The scientist said, \"Water boils at 100 degree Celsius.\"' Iska sahi Reported Speech kya hoga?",
+        "options": [
+          { "id": "A", "text": "The scientist said that water boiled at 100 degree Celsius." },
+          { "id": "B", "text": "The scientist said that water boils at 100 degree Celsius." },
+          { "id": "C", "text": "The scientist said that water had boiled at 100 degree Celsius." },
+          { "id": "D", "text": "The scientist told that water boils at 100 degree Celsius." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ye ek universal/scientific truth hai, isliye reporting verb Past mein hone ke baawajood tense BACKSHIFT nahi hoga. 'Water boils' hi rahega — universal truths hamesha Simple Present mein hi likhe jaate hain, chahe reporting kisi bhi tense mein ho."
+      },
+      "navigation": { "next": "card_01_intro", "button_text": "Restart Chapter 🔁" }
+    }
+  ]
+}
+```
