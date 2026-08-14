@@ -33,9 +33,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   Map<String, dynamic> _subjectMapping = {};
   Map<String, dynamic> _sectionalData = {};
 
-  // ⚡ FAST IN-MEMORY CACHE FOR INSTANT 0ms RE-LOADS
-  final Map<String, dynamic> _memoryJsonCache = {};
-
   String _lastLearnTitle = "Cell Biology & Organelles";
   double _lastLearnProgress = 0.0;
   String _lastNextTopic = "Start learning now";
@@ -68,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   Future<void> _loadAllConfigs() async {
     await _loadRealtimeProgress();
 
-    // 1️⃣ Local Offline Assets Load
+    // 1️⃣ Offline Assets Load (Instant UI Render)
     try {
       final String configStr = await rootBundle.loadString('assets/data/app_config.json');
       _appConfig = jsonDecode(configStr);
@@ -83,35 +80,18 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       debugPrint("Error loading home_data.json: $e");
     }
 
-    final prefs = await SharedPreferences.getInstance();
-    String? cachedMapping = prefs.getString('cached_subject_mapping_json');
-    if (cachedMapping != null) {
-      try {
-        _subjectMapping = Map<String, dynamic>.from(jsonDecode(cachedMapping));
-      } catch (_) {}
-    }
-    if (_subjectMapping.isEmpty) {
-      try {
-        final String subjectStr = await rootBundle.loadString('assets/data/subject_mapping.json');
-        _subjectMapping = Map<String, dynamic>.from(jsonDecode(subjectStr));
-      } catch (e) {
-        debugPrint("Error loading subject_mapping.json: $e");
-      }
+    try {
+      final String subjectStr = await rootBundle.loadString('assets/data/subject_mapping.json');
+      _subjectMapping = Map<String, dynamic>.from(jsonDecode(subjectStr));
+    } catch (e) {
+      debugPrint("Error loading subject_mapping.json: $e");
     }
 
-    String? cachedSectional = prefs.getString('cached_sectional_data_json');
-    if (cachedSectional != null) {
-      try {
-        _sectionalData = Map<String, dynamic>.from(jsonDecode(cachedSectional));
-      } catch (_) {}
-    }
-    if (_sectionalData.isEmpty) {
-      try {
-        final String sectionalStr = await rootBundle.loadString('assets/data/sectional_data.json');
-        _sectionalData = Map<String, dynamic>.from(jsonDecode(sectionalStr));
-      } catch (e) {
-        debugPrint("Error loading sectional_data.json: $e");
-      }
+    try {
+      final String sectionalStr = await rootBundle.loadString('assets/data/sectional_data.json');
+      _sectionalData = Map<String, dynamic>.from(jsonDecode(sectionalStr));
+    } catch (e) {
+      debugPrint("Error loading sectional_data.json: $e");
     }
 
     if (mounted) {
@@ -120,17 +100,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       });
     }
 
-    // 2️⃣ Background Realtime Live Sync
+    // 2️⃣ Live Cloud Sync (Overrides local asset seamlessly)
     _fetchSectionalDataLive();
     _fetchSubjectMappingLive();
   }
 
-  // 🚀 SUPER-FAST PARALLEL RACE FETCHER (Races CDNs to return in under 300ms)
+  // 🌐 DIRECT REALTIME FAST FETCHER (Races CDNs with cache-busting timestamp)
   Future<dynamic> _fetchRobustJson(String relativePath) async {
-    if (_memoryJsonCache.containsKey(relativePath)) {
-      return _memoryJsonCache[relativePath];
-    }
-
     String clean = relativePath.startsWith("/") ? relativePath.substring(1) : relativePath;
     final int ts = DateTime.now().millisecondsSinceEpoch;
     String encodedPath = Uri.encodeFull(clean);
@@ -141,10 +117,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
             "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
             "https://cdn.statically.io/gh/zxcty54/quiz/main/$encodedPath",
-            "https://raw.githack.com/zxcty54/quiz/main/$encodedPath",
+            "https://raw.githubusercontent.com/zxcty54/quiz/main/$encodedPath",
           ];
 
-    // Race all CDN mirrors simultaneously
+    // Race all CDN mirrors for blazing speed
     List<Future<dynamic>> requests = mirrorUrls.map((url) async {
       try {
         final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 3));
@@ -158,19 +134,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
     try {
       final result = await Future.any(requests);
-      if (result != null) {
-        _memoryJsonCache[relativePath] = result;
-        return result;
-      }
+      if (result != null) return result;
     } catch (_) {
-      // Fallback
       for (String url in mirrorUrls) {
         try {
           final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 2));
           if (res.statusCode == 200) {
-            final data = jsonDecode(utf8.decode(res.bodyBytes));
-            _memoryJsonCache[relativePath] = data;
-            return data;
+            return jsonDecode(utf8.decode(res.bodyBytes));
           }
         } catch (_) {}
       }
@@ -178,15 +148,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return null;
   }
 
-  // 🎯 LIVE SECTIONAL SYNC
+  // 🎯 LIVE SECTIONAL SYNC (Guaranteed Fresh Data)
   Future<void> _fetchSectionalDataLive() async {
     final data = await _fetchRobustJson("sectional_data.json");
     if (data != null && data is Map && mounted) {
       setState(() {
         _sectionalData = Map<String, dynamic>.from(data);
       });
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setString('cached_sectional_data_json', jsonEncode(data));
     }
   }
 
@@ -197,8 +165,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       setState(() {
         _subjectMapping = Map<String, dynamic>.from(data);
       });
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setString('cached_subject_mapping_json', jsonEncode(data));
     }
   }
 
@@ -262,12 +228,14 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
           // 📚 Tab 1: Revision Tab
           RevisionTab(
+            key: ValueKey('rev_${_subjectMapping.keys.length}'),
             subjectMapping: _subjectMapping,
             onLaunchPractice: _launchRevisionPractice,
           ),
 
-          // 🎯 Tab 2: Sectional Tab
+          // 🎯 Tab 2: Sectional Tab (Key added so it auto re-renders whenever new exams are added)
           SectionalTab(
+            key: ValueKey('sec_${_sectionalData.keys.join('_')}'),
             sectionalData: _sectionalData,
             isDarkMode: _isDarkMode,
             onLaunchCbtMock: _launchCbtMock,
@@ -326,7 +294,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     } catch (_) {}
   }
 
-  // 🎯 UNIVERSAL CBT MOCK LAUNCHER (ALL CASES RESOLVED)
+  // 🎯 UNIVERSAL CBT MOCK LAUNCHER
   void _launchCbtMock(BuildContext context, String title, String path) async {
     showDialog(
       context: context,
@@ -343,15 +311,15 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     // Build exhaustive list of candidate paths
     Set<String> candidatePaths = {path};
 
-    // 1. Slash to Underscore conversions
     if (path.contains('bssc_cgl/aptitude')) candidatePaths.add(path.replaceAll('bssc_cgl/aptitude', 'bssc_cgl_aptitude'));
     if (path.contains('bssc_cgl/reasoning')) candidatePaths.add(path.replaceAll('bssc_cgl/reasoning', 'bssc_cgl_reasoning'));
     if (path.contains('bssc_inter/gk')) candidatePaths.add(path.replaceAll('bssc_inter/gk', 'bssc_inter_aptitude'));
     if (path.contains('bssc_inter/aptitude')) candidatePaths.add(path.replaceAll('bssc_inter/aptitude', 'bssc_inter_aptitude'));
     if (path.contains('bssc_inter/reasoning')) candidatePaths.add(path.replaceAll('bssc_inter/reasoning', 'bssc_inter_reasoning'));
     if (path.contains('ssc/general')) candidatePaths.add(path.replaceAll('ssc/general', 'aptitude'));
+    if (path.contains('bihar_amin')) candidatePaths.add(path.replaceAll('bihar_amin', 'bihar-amin'));
+    if (path.contains('bihar-amin')) candidatePaths.add(path.replaceAll('bihar-amin', 'bihar_amin'));
 
-    // 2. Number variants: set1.json vs set_1.json vs set_01.json
     List<String> expandedPaths = [];
     for (String p in candidatePaths) {
       expandedPaths.add(p);
