@@ -1,0 +1,1496 @@
+{
+  "topic_id": "assertive_interrogative_sentences_error_detection_sbi_po",
+  "topic_title": "Assertive & Interrogative Sentences + SBI PO Level Error Detection",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE", "SBI PO"],
+  "total_cards": 80,
+  "characters": {
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 80 },
+      "intro_payload": {
+        "title": "Assertive & Interrogative Sentences",
+        "subtitle": "SBI PO / BPSC / SSC / Railway Error Detection Special",
+        "icon": "❓",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "SBI PO", "BPSC TRE", "UPSC Prelims"],
+        "learning_outcomes": [
+          "5 Kinds of Sentences — Assertive, Interrogative, Imperative, Exclamatory, Optative",
+          "Assertive Sentences — Affirmative/Negative types & word order rules",
+          "Yes/No Interrogative — Auxiliary inversion & Do/Does/Did rules",
+          "Wh-Interrogative — Who/Whom/Whose word order & preposition placement",
+          "Question Tags (Tag Questions) — the biggest exam trap zone",
+          "Negative Interrogative & Rhetorical Questions",
+          "Assertive ↔ Interrogative Interconversion rules",
+          "Interrogative sentences in Reported Speech (if/whether rule)",
+          "SBI PO / BPSC style sentence error-detection practice with real traps"
+        ]
+      },
+      "navigation": { "next": "card_02_daily_life_sentences", "button_text": "Start Learning ➔" }
+    },
+
+    {
+      "card_id": "card_02_daily_life_sentences",
+      "card_slug": "card_02_daily_life_sentences",
+      "type": "chat",
+      "concept_id": "kinds_of_sentences",
+      "level": 1,
+      "progress": { "current": 2, "total": 80 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, aaj subah mummy ne mujhse do alag tarah ki baatein kahin — 'Tumne khana khaya' aur 'Kya tumne khana khaya?' Dono mein kya farak hai?" },
+        { "speaker": "aman", "text": "Bahut badhiya observation Raju! Pehla sentence ek BAAT bata raha hai (statement), doosra sentence ek SAWAL POOCH raha hai (question). Yehi English grammar ka sabse basic division hai." },
+        { "speaker": "raju", "text": "Matlab statement aur question — do alag category hoti hain sentences ki?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur inke alawa bhi kuch aur categories hain. Chalo poori list dekhte hain jo English grammar mein sentences ko baantne ke liye use hoti hai." }
+      ],
+      "navigation": { "next": "card_03_five_kinds", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_03_five_kinds",
+      "card_slug": "card_03_five_kinds",
+      "type": "chat",
+      "concept_id": "kinds_of_sentences",
+      "level": 1,
+      "progress": { "current": 3, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "English mein MEANING ke aadhar pe 5 kisam ke sentences hote hain: 1) Assertive (statement) 2) Interrogative (question) 3) Imperative (command/request) 4) Exclamatory (strong feeling) 5) Optative (wish/prayer)." },
+        { "speaker": "raju", "text": "Hain?? Paanch types?? Sir ye to exam me pakka confuse karega!" },
+        { "speaker": "aman", "text": "Tension mat lo Raju, aaj hum sirf pehle DO — Assertive aur Interrogative — ko DEEPLY seekhenge, kyunki BPSC/SBI PO inhi do pe sabse zyada error-detection questions banata hai." },
+        { "speaker": "raju", "text": "Theek hai sir, chaliye Assertive se shuru karte hain!" }
+      ],
+      "navigation": { "next": "card_04_assertive_definition", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_04_assertive_definition",
+      "card_slug": "card_04_assertive_definition",
+      "type": "chat",
+      "concept_id": "kinds_of_sentences",
+      "level": 1,
+      "progress": { "current": 4, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "ASSERTIVE SENTENCE ek simple STATEMENT/FACT/OPINION batata hai. Iske aakhir mein FULL STOP (.) lagta hai. Jaise: 'Patna is the capital of Bihar.'" },
+        { "speaker": "raju", "text": "Aur INTERROGATIVE mein kya hota hai sir?" },
+        { "speaker": "aman", "text": "INTERROGATIVE SENTENCE ek QUESTION poochta hai, kisi jawab ki demand karta hai. Iske aakhir mein QUESTION MARK (?) lagta hai. Jaise: 'Is Patna the capital of Bihar?'" },
+        { "speaker": "raju", "text": "Achhaaaa! Toh sirf punctuation aur word-order se hi pata chal jaata hai kaunsa kaunsa hai!" }
+      ],
+      "navigation": { "next": "card_05_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_05_quiz1",
+      "card_slug": "card_05_quiz1",
+      "type": "quiz",
+      "concept_id": "kinds_of_sentences",
+      "level": 1,
+      "progress": { "current": 5, "total": 80 },
+      "quiz_payload": {
+        "question": "'Ganga is the longest river in India.' — Ye kaunsa sentence hai?",
+        "options": [
+          { "id": "A", "text": "Interrogative" },
+          { "id": "B", "text": "Assertive" },
+          { "id": "C", "text": "Imperative" },
+          { "id": "D", "text": "Exclamatory" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ye ek FACT/STATEMENT bata raha hai aur full stop se khatam ho raha hai — isliye ye Assertive Sentence hai."
+      },
+      "navigation": { "next": "card_06_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_06_quiz2",
+      "card_slug": "card_06_quiz2",
+      "type": "quiz",
+      "concept_id": "kinds_of_sentences",
+      "level": 1,
+      "progress": { "current": 6, "total": 80 },
+      "quiz_payload": {
+        "question": "Interrogative sentence ki sabse pehchan wali PUNCTUATION mark kya hai?",
+        "options": [
+          { "id": "A", "text": "Full stop (.)" },
+          { "id": "B", "text": "Question mark (?)" },
+          { "id": "C", "text": "Exclamation mark (!)" },
+          { "id": "D", "text": "Comma (,)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Interrogative sentence hamesha Question Mark (?) se khatam hota hai, kyunki ye kisi jawab ki demand karta hai."
+      },
+      "navigation": { "next": "card_07_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_07_quiz3",
+      "card_slug": "card_07_quiz3",
+      "type": "quiz",
+      "concept_id": "kinds_of_sentences",
+      "level": 1,
+      "progress": { "current": 7, "total": 80 },
+      "quiz_payload": {
+        "question": "English grammar mein meaning ke aadhar pe kitne kisam ke sentences hote hain?",
+        "options": [
+          { "id": "A", "text": "Teen (3)" },
+          { "id": "B", "text": "Chaar (4)" },
+          { "id": "C", "text": "Paanch (5)" },
+          { "id": "D", "text": "Chhe (6)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "5 kisam ke sentences: Assertive, Interrogative, Imperative, Exclamatory, aur Optative."
+      },
+      "navigation": { "next": "card_08_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_08_milestone1",
+      "card_slug": "card_08_milestone1",
+      "type": "milestone",
+      "concept_id": "kinds_of_sentences",
+      "level": 1,
+      "progress": { "current": 8, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "❓",
+        "completed_topic": "Foundation — Kinds of Sentences",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/9 Clear",
+        "motivational_quote": "Foundation set ho gayi! Ab Assertive Sentences ko deeply explore karte hain."
+      },
+      "navigation": { "next": "card_09_assertive_types", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_09_assertive_types",
+      "card_slug": "card_09_assertive_types",
+      "type": "chat",
+      "concept_id": "assertive_sentences",
+      "level": 2,
+      "progress": { "current": 9, "total": 80 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, 'Ram khelta hai' aur 'Ram nahi khelta' — dono statement hain, toh dono Assertive hain?" },
+        { "speaker": "aman", "text": "Bilkul sahi Raju! Assertive Sentence ke 2 types hote hain: AFFIRMATIVE (positive statement, jaise 'Ram plays cricket') aur NEGATIVE (negative statement, jaise 'Ram does not play cricket')." },
+        { "speaker": "raju", "text": "Toh 'not' hi inko alag banata hai?" },
+        { "speaker": "aman", "text": "Exactly! Affirmative mein 'not' NAHI hota, Negative mein 'not' HOTA hai. Dono equally Assertive hain — bas polarity (positive/negative) alag hai." }
+      ],
+      "navigation": { "next": "card_10_assertive_word_order", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_10_assertive_word_order",
+      "card_slug": "card_10_assertive_word_order",
+      "type": "chat",
+      "concept_id": "assertive_sentences",
+      "level": 2,
+      "progress": { "current": 10, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Universal Rule yaad karo: Assertive Sentence ka NORMAL word order hamesha hota hai — SUBJECT + VERB + OBJECT. 'He (Subject) plays (Verb) cricket (Object).'" },
+        { "speaker": "raju", "text": "Matlab Subject hamesha sabse pehle aayega?" },
+        { "speaker": "aman", "text": "Bilkul! Ye SVO order Assertive Sentence ki PEHCHAN hai. Agar SUBJECT se PEHLE Auxiliary Verb (is/was/does/has) aa jaaye, to wo sentence Assertive nahi rahega, wo Interrogative ban jaayega!" },
+        { "speaker": "raju", "text": "⭐ Achha! Toh word-order hi decide karta hai statement hai ya question — sirf meaning nahi!" }
+      ],
+      "navigation": { "next": "card_11_negative_not_placement", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_11_negative_not_placement",
+      "card_slug": "card_11_negative_not_placement",
+      "type": "chat",
+      "concept_id": "assertive_sentences",
+      "level": 2,
+      "progress": { "current": 11, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Ab ek zaroori trap suno — Negative Assertive banane ke liye 'NOT' ka sahi POSITION yaad rakho. Rule: 'Not' hamesha AUXILIARY VERB ke TURANT BAAD aata hai, main verb se pehle." },
+        { "speaker": "raju", "text": "Matlab 'He not plays cricket' galat hoga?" },
+        { "speaker": "aman", "text": "⭐ Bilkul sahi pakda! Ye common exam trap hai. Sahi hoga: 'He does NOT play cricket' — pehle 'does' (auxiliary) aaya, phir 'not', phir V1 (base form) 'play'." },
+        { "speaker": "raju", "text": "Toh yahan bhi wahi rule hai jo maine Tense wale chapters mein seekha tha — auxiliary ke baad V1!" }
+      ],
+      "navigation": { "next": "card_12_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_12_quiz1",
+      "card_slug": "card_12_quiz1",
+      "type": "quiz",
+      "concept_id": "assertive_sentences",
+      "level": 2,
+      "progress": { "current": 12, "total": 80 },
+      "quiz_payload": {
+        "question": "Sahi Negative Assertive sentence chuno:",
+        "options": [
+          { "id": "A", "text": "She not likes tea." },
+          { "id": "B", "text": "She likes not tea." },
+          { "id": "C", "text": "She does not like tea." },
+          { "id": "D", "text": "She not does like tea." }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Not' hamesha auxiliary verb ('does') ke turant baad aata hai, aur uske baad main verb V1 form mein ('like') aati hai."
+      },
+      "navigation": { "next": "card_13_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_13_quiz2",
+      "card_slug": "card_13_quiz2",
+      "type": "quiz",
+      "concept_id": "assertive_sentences",
+      "level": 2,
+      "progress": { "current": 13, "total": 80 },
+      "quiz_payload": {
+        "question": "Assertive Sentence ka NORMAL word order kya hota hai?",
+        "options": [
+          { "id": "A", "text": "Verb + Subject + Object" },
+          { "id": "B", "text": "Subject + Verb + Object" },
+          { "id": "C", "text": "Object + Verb + Subject" },
+          { "id": "D", "text": "Verb + Object + Subject" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Assertive Sentence hamesha SVO (Subject-Verb-Object) order follow karta hai — ye iski basic pehchan hai."
+      },
+      "navigation": { "next": "card_14_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_14_quiz3",
+      "card_slug": "card_14_quiz3",
+      "type": "quiz",
+      "concept_id": "assertive_sentences",
+      "level": 2,
+      "progress": { "current": 14, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'He (A)/ do not knows (B)/ the correct answer (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'He' third person singular hai, isliye 'does' aayega (do nahi), aur 'does not' ke baad V1 'know' aayega (knows nahi). Sahi: 'does not know'."
+      },
+      "navigation": { "next": "card_15_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_15_milestone2",
+      "card_slug": "card_15_milestone2",
+      "type": "milestone",
+      "concept_id": "assertive_sentences",
+      "level": 2,
+      "progress": { "current": 15, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "✅",
+        "completed_topic": "Assertive Sentences — Structure & Negative Rule",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/9 Clear",
+        "motivational_quote": "'Not' ki sahi jagah seekh li! Ab dekhte hain Interrogative Sentences ka word-order twist."
+      },
+      "navigation": { "next": "card_16_interrogative_yesno_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_16_interrogative_yesno_intro",
+      "card_slug": "card_16_interrogative_yesno_intro",
+      "type": "chat",
+      "concept_id": "yes_no_interrogative",
+      "level": 3,
+      "progress": { "current": 16, "total": 80 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, jab hum 'Kya tum khelte ho?' poochte hain to jawab 'Haan' ya 'Nahi' hota hai. Iska English version kaise banega?" },
+        { "speaker": "aman", "text": "Achha sawal! Jis question ka jawab sirf YES ya NO mein ho, use YES/NO INTERROGATIVE kehte hain. English mein 'Do you play?' — jawab 'Yes, I do' ya 'No, I don't'." },
+        { "speaker": "raju", "text": "Toh isme 'Do' sabse pehle aa gaya, subject 'you' baad mein — ye toh Assertive se ulta hai!" },
+        { "speaker": "aman", "text": "⭐ Bilkul sahi pakda! Yahi hai INVERSION RULE — Yes/No question banane ke liye AUXILIARY VERB ko SUBJECT se PEHLE le aate hain." }
+      ],
+      "navigation": { "next": "card_17_auxiliary_inversion", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_17_auxiliary_inversion",
+      "card_slug": "card_17_auxiliary_inversion",
+      "type": "chat",
+      "concept_id": "yes_no_interrogative",
+      "level": 3,
+      "progress": { "current": 17, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Universal Rule: AUXILIARY VERB + SUBJECT + MAIN VERB + OBJECT? Agar sentence mein PEHLE SE koi auxiliary ho (is/am/are/was/were/has/have/had/will/can/should), use bas SUBJECT se pehle le aao." },
+        { "speaker": "raju", "text": "Matlab 'He is playing' se 'Is he playing?' ban jaayega, bas order badla?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur agar sentence mein KOI auxiliary NAHI hai (jaise Simple Present/Past mein), tab HUM KHUD 'Do/Does/Did' LAGATE hain SUBJECT se pehle." },
+        { "speaker": "raju", "text": "Toh 'He plays cricket' se 'Does he play cricket?' banega — 'plays' se 's' hat gaya kyunki 'does' aa gaya!" }
+      ],
+      "navigation": { "next": "card_18_do_does_did_rule", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_18_do_does_did_rule",
+      "card_slug": "card_18_do_does_did_rule",
+      "type": "chat",
+      "concept_id": "yes_no_interrogative",
+      "level": 3,
+      "progress": { "current": 18, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi Raju! ⭐ Yahi BPSC/SBI PO ka sabse repeat hone wala trap hai — jab 'Do/Does/Did' laga do, to MAIN VERB hamesha V1 (base form) mein WAPAS chali jaati hai." },
+        { "speaker": "raju", "text": "Toh 'Does he plays cricket?' galat hoga?" },
+        { "speaker": "aman", "text": "⭐ Bilkul galat! Ye 'Double Marking Error' hai — 'does' khud third-person-singular dikha raha hai, dobara verb pe 's' lagana galat hai. Sahi: 'Does he PLAY cricket?'" },
+        { "speaker": "raju", "text": "Achha, wahi rule jo maine Present Tense mein seekha tha, ab yahan Interrogative mein bhi kaam aa raha hai!" }
+      ],
+      "navigation": { "next": "card_19_guess", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_19_guess",
+      "card_slug": "card_19_guess",
+      "type": "guess",
+      "concept_id": "yes_no_interrogative",
+      "level": 3,
+      "progress": { "current": 19, "total": 80 },
+      "guess_payload": {
+        "question": "Raju, guess karo — 'They went to the market' ka sahi Interrogative form kaunsa hai?",
+        "options": [
+          { "id": "A", "text": "Did they went to the market?" },
+          { "id": "B", "text": "Did they go to the market?" },
+          { "id": "C", "text": "Do they went to the market?" },
+          { "id": "D", "text": "Went they to the market?" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Went' Simple Past hai, isliye 'Did' subject se pehle aayega aur verb WAPAS V1 (go) ban jaayegi — 'Did they go...?' sahi hai."
+      },
+      "navigation": { "next": "card_20_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_20_quiz1",
+      "card_slug": "card_20_quiz1",
+      "type": "quiz",
+      "concept_id": "yes_no_interrogative",
+      "level": 3,
+      "progress": { "current": 20, "total": 80 },
+      "quiz_payload": {
+        "question": "'She is cooking dinner.' Ka sahi Interrogative form kya hoga?",
+        "options": [
+          { "id": "A", "text": "Does she is cooking dinner?" },
+          { "id": "B", "text": "Is she cooking dinner?" },
+          { "id": "C", "text": "She is cooking dinner?" },
+          { "id": "D", "text": "Cooking is she dinner?" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sentence mein pehle se 'is' (auxiliary) maujood hai, isliye sirf 'is' ko subject 'she' se pehle le aana hai — 'Is she cooking dinner?'"
+      },
+      "navigation": { "next": "card_21_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_21_quiz2",
+      "card_slug": "card_21_quiz2",
+      "type": "quiz",
+      "concept_id": "yes_no_interrogative",
+      "level": 3,
+      "progress": { "current": 21, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'Does the manager (A)/ approves the (B)/ new marketing plan? (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Does' ke baad verb V1 (base form) mein aati hai. Sahi: 'approve', 'approves' Double Marking Error hai."
+      },
+      "navigation": { "next": "card_22_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_22_quiz3",
+      "card_slug": "card_22_quiz3",
+      "type": "quiz",
+      "concept_id": "yes_no_interrogative",
+      "level": 3,
+      "progress": { "current": 22, "total": 80 },
+      "quiz_payload": {
+        "question": "Yes/No Interrogative Sentence ka universal word-order rule kya hai?",
+        "options": [
+          { "id": "A", "text": "Subject + Auxiliary + Verb + Object?" },
+          { "id": "B", "text": "Auxiliary + Subject + Verb + Object?" },
+          { "id": "C", "text": "Verb + Object + Subject + Auxiliary?" },
+          { "id": "D", "text": "Object + Subject + Verb + Auxiliary?" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Yes/No Interrogative mein Auxiliary Verb Subject se PEHLE aata hai — ye inversion iski pehchan hai."
+      },
+      "navigation": { "next": "card_23_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_23_milestone3",
+      "card_slug": "card_23_milestone3",
+      "type": "milestone",
+      "concept_id": "yes_no_interrogative",
+      "level": 3,
+      "progress": { "current": 23, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔄",
+        "completed_topic": "Yes/No Interrogative Sentences",
+        "xp_earned": 65,
+        "milestone_progress": "Module 3/9 Clear",
+        "motivational_quote": "Inversion rule pakka ho gaya! Ab dekhte hain Wh-questions ka interesting word order."
+      },
+      "navigation": { "next": "card_24_wh_words_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_24_wh_words_intro",
+      "card_slug": "card_24_wh_words_intro",
+      "type": "chat",
+      "concept_id": "wh_interrogative",
+      "level": 4,
+      "progress": { "current": 24, "total": 80 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, 'Kya tum aaye?' aur 'Tum kab aaye?' — dono question hain but dusre ka jawab Yes/No mein nahi ho sakta!" },
+        { "speaker": "aman", "text": "Bilkul sahi observation! Jab question ka jawab EK SPECIFIC INFORMATION (time, place, person, reason) mein ho, na ki sirf Yes/No mein, use WH-INTERROGATIVE kehte hain." },
+        { "speaker": "raju", "text": "Wh matlab kya sir?" },
+        { "speaker": "aman", "text": "Wh-words yaad karo: What, When, Where, Who, Whom, Whose, Which, Why — aur ek exception 'How' (jo W se shuru nahi hota but isi family mein aata hai)." }
+      ],
+      "navigation": { "next": "card_25_wh_word_order", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_25_wh_word_order",
+      "card_slug": "card_25_wh_word_order",
+      "type": "chat",
+      "concept_id": "wh_interrogative",
+      "level": 4,
+      "progress": { "current": 25, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Universal Rule: WH-WORD + AUXILIARY + SUBJECT + MAIN VERB + Object? Bas Wh-word sabse PEHLE aa jaata hai, baaki wahi Yes/No wala inversion rule chalega." },
+        { "speaker": "raju", "text": "Matlab 'Where does he live?' mein 'Where' pehle, phir 'does', phir 'he', phir 'live'?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur wahi Double Marking trap yahan bhi lagega — 'Where does he LIVES?' galat hoga, 'does' ke baad V1 'live' hi aayega." },
+        { "speaker": "raju", "text": "Achha! Toh Wh-question sirf ek EXTRA word (Wh-word) ke saath Yes/No question jaisa hi structure follow karta hai!" }
+      ],
+      "navigation": { "next": "card_26_who_as_subject", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_26_who_as_subject",
+      "card_slug": "card_26_who_as_subject",
+      "type": "chat",
+      "concept_id": "wh_interrogative",
+      "level": 4,
+      "progress": { "current": 26, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Ab ek bada SPECIAL EXCEPTION suno — jab 'WHO' khud SUBJECT ho (kaam karne wala khud pata nahi), tab AUXILIARY VERB (do/does/did) ki ZAROORAT NAHI hoti!" },
+        { "speaker": "raju", "text": "Hain?? Matlab 'Who does knocked the door?' jaisa kuch nahi likhenge?" },
+        { "speaker": "aman", "text": "⭐ Bilkul sahi trap! Sahi hoga: 'Who KNOCKED the door?' — koi 'did' nahi, koi inversion nahi, kyunki 'Who' khud subject hai, verb seedha uske baad V2/V1 form mein aati hai." },
+        { "speaker": "raju", "text": "Ohh! Toh normal Wh-question mein 'Who' subject nahi hota, isliye 'does' lagta hai, but jab 'Who' khud subject ban jaaye tab 'does' nahi lagta!" }
+      ],
+      "navigation": { "next": "card_27_who_vs_whom", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_27_who_vs_whom",
+      "card_slug": "card_27_who_vs_whom",
+      "type": "chat",
+      "concept_id": "wh_interrogative",
+      "level": 4,
+      "progress": { "current": 27, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Ek aur classic BPSC trap — WHO vs WHOM. 'Who' SUBJECT ke liye use hota hai (kaam karne wala), 'Whom' OBJECT ke liye (jispe kaam ho raha hai)." },
+        { "speaker": "raju", "text": "Sir 'Who did you meet?' ya 'Whom did you meet?' — kaunsa sahi hai?" },
+        { "speaker": "aman", "text": "Formally/BPSC ke hisaab se 'WHOM did you meet?' sahi hai, kyunki 'you' subject hai (meet karne wala), aur jisse mile wo OBJECT hai — 'meet' ka object 'whom' hoga." },
+        { "speaker": "raju", "text": "⭐ Note kar liya — agar Wh-word ke baad turant subject+verb ho (jaise 'did you'), to Wh-word OBJECT hoga, isliye 'Whom' sahi maana jaata hai formal exams mein!" }
+      ],
+      "navigation": { "next": "card_28_preposition_placement", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_28_preposition_placement",
+      "card_slug": "card_28_preposition_placement",
+      "type": "chat",
+      "concept_id": "wh_interrogative",
+      "level": 4,
+      "progress": { "current": 28, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur zaroori point — jab question mein PREPOSITION (to, with, about, for) ho, use FORMAL style mein Wh-word ke SAATH aage le ja sakte hain: 'To WHOM are you talking?' (formal) VS 'WHO are you talking TO?' (informal, common speech)." },
+        { "speaker": "raju", "text": "Toh dono sahi hain, bas ek formal hai ek casual?" },
+        { "speaker": "aman", "text": "Bilkul! Lekin BPSC/formal writing mein 'Preposition + Whom' wala style (To whom, With whom, For whom) hi CORRECT/PREFERRED maana jaata hai." },
+        { "speaker": "raju", "text": "Achha, toh exam mein formal style hi choose karunga — 'To whom' wala pattern!" }
+      ],
+      "navigation": { "next": "card_29_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_29_quiz1",
+      "card_slug": "card_29_quiz1",
+      "type": "quiz",
+      "concept_id": "wh_interrogative",
+      "level": 4,
+      "progress": { "current": 29, "total": 80 },
+      "quiz_payload": {
+        "question": "Sahi sentence chuno (kaam karne wala khud pata nahi):",
+        "options": [
+          { "id": "A", "text": "Who did break the window?" },
+          { "id": "B", "text": "Who broke the window?" },
+          { "id": "C", "text": "Who does broke the window?" },
+          { "id": "D", "text": "Who did broke the window?" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Jab 'Who' khud SUBJECT ho, koi auxiliary (do/does/did) ki zaroorat nahi hoti — verb seedha V2 form mein aati hai: 'Who broke the window?'"
+      },
+      "navigation": { "next": "card_30_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_30_quiz2",
+      "card_slug": "card_30_quiz2",
+      "type": "quiz",
+      "concept_id": "wh_interrogative",
+      "level": 4,
+      "progress": { "current": 30, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'Where (A)/ does she went (B)/ every Sunday morning? (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Does' ke baad verb V1 (base form) aati hai. Sahi: 'does she go', 'went' galat hai (Double Past Error bhi)."
+      },
+      "navigation": { "next": "card_31_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_31_quiz3",
+      "card_slug": "card_31_quiz3",
+      "type": "quiz",
+      "concept_id": "wh_interrogative",
+      "level": 4,
+      "progress": { "current": 31, "total": 80 },
+      "quiz_payload": {
+        "question": "Formal/BPSC style mein sahi sentence kaunsa hai?",
+        "options": [
+          { "id": "A", "text": "Who are you going with?" },
+          { "id": "B", "text": "With whom are you going?" },
+          { "id": "C", "text": "Whom are you going with?" },
+          { "id": "D", "text": "With who are you going?" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Formal grammar mein Preposition ('with') ko Wh-word ('whom') ke saath aage laaya jaata hai — 'With whom are you going?' sabse sahi/preferred structure hai."
+      },
+      "navigation": { "next": "card_32_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_32_milestone4",
+      "card_slug": "card_32_milestone4",
+      "type": "milestone",
+      "concept_id": "wh_interrogative",
+      "level": 4,
+      "progress": { "current": 32, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔍",
+        "completed_topic": "Wh-Interrogative Sentences",
+        "xp_earned": 70,
+        "milestone_progress": "Module 4/9 Clear",
+        "motivational_quote": "Who vs Whom ka trap crack kar diya! Ab sabse bada exam trap zone — Question Tags dekhते hain."
+      },
+      "navigation": { "next": "card_33_tag_questions_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_33_tag_questions_intro",
+      "card_slug": "card_33_tag_questions_intro",
+      "type": "chat",
+      "concept_id": "question_tags",
+      "level": 5,
+      "progress": { "current": 33, "total": 80 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, mummy bolti hain 'Tum school jaoge, na?' — ye 'na' jaisa kuch English mein bhi hota hai kya?" },
+        { "speaker": "aman", "text": "⭐ Bilkul Raju! Isko 'QUESTION TAG' (Tag Question) kehte hain — ek statement ke aakhir mein choti si confirmation-seeking question lagai jaati hai. 'You will go to school, WON'T YOU?'" },
+        { "speaker": "raju", "text": "Sir ye 'won't you' kaise aaya, iska koi rule hai?" },
+        { "speaker": "aman", "text": "Haan bilkul, aur ye BPSC/SBI PO ka SABSE ZYADA repeat hone wala topic hai! Chalo iska poora universal rule seekhte hain." }
+      ],
+      "navigation": { "next": "card_34_tag_universal_rule", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_34_tag_universal_rule",
+      "card_slug": "card_34_tag_universal_rule",
+      "type": "chat",
+      "concept_id": "question_tags",
+      "level": 5,
+      "progress": { "current": 34, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Universal Rule #1: POSITIVE Statement → NEGATIVE Tag. NEGATIVE Statement → POSITIVE Tag. 'He IS coming, ISN'T he?' (positive→negative). 'She IS NOT coming, IS she?' (negative→positive)." },
+        { "speaker": "raju", "text": "Matlab statement positive ho to tag negative, statement negative ho to tag positive — POLARITY hamesha OPPOSITE?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur Rule #2: TAG mein WAHI AUXILIARY VERB use hoga jo MAIN sentence mein hai. 'She HAS finished, HASN'T she?' — 'has' hi wapas aayega tag mein." },
+        { "speaker": "raju", "text": "Achha! Toh main sentence ka auxiliary copy karna hai, bas polarity ulti karni hai!" }
+      ],
+      "navigation": { "next": "card_35_tag_subject_pronoun", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_35_tag_subject_pronoun",
+      "card_slug": "card_35_tag_subject_pronoun",
+      "type": "chat",
+      "concept_id": "question_tags",
+      "level": 5,
+      "progress": { "current": 35, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Rule #3: TAG mein SUBJECT hamesha PRONOUN form mein hoga, naam nahi. 'Ram is playing, ISN'T HE?' — 'Ram' ki jagah 'he' aaya, 'Ram' nahi." },
+        { "speaker": "raju", "text": "Toh naam (Ram, Sita) kabhi tag mein repeat nahi hoga, sirf pronoun (he/she/they) aayega?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur agar sentence mein NO auxiliary ho (Simple Present/Past), tab tag mein Do/Does/Did use hoga — 'He PLAYS cricket, DOESN'T he?'" },
+        { "speaker": "raju", "text": "⭐ Ye toh bilkul wahi Do/Does/Did wala rule hai jo humne Interrogative mein seekha tha!" }
+      ],
+      "navigation": { "next": "card_36_tag_special_i_am", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_36_tag_special_i_am",
+      "card_slug": "card_36_tag_special_i_am",
+      "type": "chat",
+      "concept_id": "question_tags",
+      "level": 5,
+      "progress": { "current": 36, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Ab BPSC ka SABSE FAMOUS SPECIAL CASE suno — 'I AM' ke saath tag banta hai 'AREN'T I?', 'AMN'T I' NAHI!" },
+        { "speaker": "raju", "text": "Hain?? 'I am' ka tag 'am not I' hona chahiye tha na, 'aren't I' kyun?" },
+        { "speaker": "aman", "text": "⭐ Yahi exam ka classic trap hai! 'I am late, AREN'T I?' — ye grammar ka EK ACCEPTED EXCEPTION hai. 'Amn't I' bolna galat maana jaata hai standard English mein." },
+        { "speaker": "raju", "text": "Note kar liya sir — 'I am' + tag = 'aren't I', ye ratna hi padega, koi logic nahi lagega isme!" }
+      ],
+      "navigation": { "next": "card_37_tag_lets_imperative", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_37_tag_lets_imperative",
+      "card_slug": "card_37_tag_lets_imperative",
+      "type": "chat",
+      "concept_id": "question_tags",
+      "level": 5,
+      "progress": { "current": 37, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Do aur special cases yaad karo: 1) 'LET'S' (suggestion) ke saath tag hamesha 'SHALL WE?' hota hai — 'Let's go for a walk, SHALL WE?' 2) IMPERATIVE (command) ke saath tag hamesha 'WILL YOU?' hota hai — 'Close the door, WILL YOU?'" },
+        { "speaker": "raju", "text": "Sir ye dono toh koi normal statement nahi hain, phir bhi fix tag hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye FIXED patterns hain jo hamesha same rehte hain, chahe subject/verb kuch bhi ho. Ye BPSC mein directly poocha jaata hai." },
+        { "speaker": "raju", "text": "⭐ Note kar liya — Let's→shall we, Command→will you. Fix patterns, koi calculation nahi!" }
+      ],
+      "navigation": { "next": "card_38_tag_negative_words", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_38_tag_negative_words",
+      "card_slug": "card_38_tag_negative_words",
+      "type": "chat",
+      "concept_id": "question_tags",
+      "level": 5,
+      "progress": { "current": 38, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Ab sabse chhupa hua trap — kuch words dikhne mein POSITIVE lagte hain but MEANING mein NEGATIVE hote hain: Never, No, Nobody, Nothing, Hardly, Scarcely, Barely, Rarely, Seldom, Few, Little." },
+        { "speaker": "raju", "text": "Matlab in words ke saath bhi POSITIVE tag aayega, kyunki ye khud negative hain?" },
+        { "speaker": "aman", "text": "⭐ Bilkul sahi pakda! 'He NEVER comes late, DOES he?' — sentence mein 'not' word nahi dikh raha, but 'never' khud negative hai, isliye tag POSITIVE ('does he') hoga." },
+        { "speaker": "raju", "text": "Ye toh super tricky hai! Sirf 'not' dhundhne se kaam nahi chalega, in hidden-negative words ko bhi yaad rakhna padega!" }
+      ],
+      "navigation": { "next": "card_39_tag_indefinite_this_that", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_39_tag_indefinite_this_that",
+      "card_slug": "card_39_tag_indefinite_this_that",
+      "type": "chat",
+      "concept_id": "question_tags",
+      "level": 5,
+      "progress": { "current": 39, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Do aur zaroori special subjects: 1) Everyone/Everybody/Someone/Anybody (subject) → tag mein pronoun 'THEY' aata hai. 'Everyone is ready, AREN'T THEY?'" },
+        { "speaker": "raju", "text": "Hain?? 'Everyone' toh singular tha na SVA wale chapter mein, phir 'they' kyun?" },
+        { "speaker": "aman", "text": "⭐ Bahut acha yaad rakha! Verb ke liye 'everyone' SINGULAR hai (isliye 'is'), but TAG mein PRONOUN ke liye 'they' use hota hai (kyunki gender clear nahi hai - he/she dono ho sakte hain). Ye ek EXCEPTION hai jo sirf tags mein lagta hai." },
+        { "speaker": "raju", "text": "Aur This/That, These/Those ka bhi koi rule hai kya?" }
+      ],
+      "navigation": { "next": "card_40_tag_this_that_pronoun", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_40_tag_this_that_pronoun",
+      "card_slug": "card_40_tag_this_that_pronoun",
+      "type": "chat",
+      "concept_id": "question_tags",
+      "level": 5,
+      "progress": { "current": 40, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul! 2) 'This/That' (subject) → tag mein 'IT' aata hai. 'This is your book, ISN'T IT?' Aur 'These/Those' → tag mein 'THEY' aata hai. 'These are your shoes, AREN'T THEY?'" },
+        { "speaker": "raju", "text": "Achha, aur 'Nothing/Something/Anything' ka kya hoga?" },
+        { "speaker": "aman", "text": "'Nothing/Something/Anything' (subject) → tag mein 'IT' aata hai. 'Nothing is wrong, IS IT?' — kyunki 'thing' words non-living hote hain, unke liye 'it' use hota hai." },
+        { "speaker": "raju", "text": "⭐ Toh poori list yaad ho gayi — everyone/everybody→they, this/that→it, these/those→they, nothing/something→it!" }
+      ],
+      "navigation": { "next": "card_41_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_41_quiz1",
+      "card_slug": "card_41_quiz1",
+      "type": "quiz",
+      "concept_id": "question_tags",
+      "level": 5,
+      "progress": { "current": 41, "total": 80 },
+      "quiz_payload": {
+        "question": "Sahi Question Tag chuno: 'I am your friend, ___?'",
+        "options": [
+          { "id": "A", "text": "am not I" },
+          { "id": "B", "text": "aren't I" },
+          { "id": "C", "text": "amn't I" },
+          { "id": "D", "text": "is not I" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'I am' ke saath tag hamesha 'aren't I' hota hai — ye ek standard English exception hai jo BPSC mein bahut poocha jaata hai."
+      },
+      "navigation": { "next": "card_42_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_42_quiz2",
+      "card_slug": "card_42_quiz2",
+      "type": "quiz",
+      "concept_id": "question_tags",
+      "level": 5,
+      "progress": { "current": 42, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'He hardly ever comes on time, (A)/ doesn't (B)/ he? (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Hardly' ek hidden negative word hai, isliye tag POSITIVE hona chahiye. Sahi: 'does he?', 'doesn't he' galat hai."
+      },
+      "navigation": { "next": "card_43_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_43_quiz3",
+      "card_slug": "card_43_quiz3",
+      "type": "quiz",
+      "concept_id": "question_tags",
+      "level": 5,
+      "progress": { "current": 43, "total": 80 },
+      "quiz_payload": {
+        "question": "'Let's start the meeting, ___?' Sahi tag chuno:",
+        "options": [
+          { "id": "A", "text": "don't we" },
+          { "id": "B", "text": "won't we" },
+          { "id": "C", "text": "shall we" },
+          { "id": "D", "text": "can we" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Let's' (suggestion) ke saath tag hamesha FIXED 'shall we?' hota hai — ye ek special fixed pattern hai."
+      },
+      "navigation": { "next": "card_44_quiz4", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_44_quiz4",
+      "card_slug": "card_44_quiz4",
+      "type": "quiz",
+      "concept_id": "question_tags",
+      "level": 5,
+      "progress": { "current": 44, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'Everyone has submitted (A)/ their assignment, (B)/ hasn't he? (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Everyone' subject ke liye tag mein pronoun 'THEY' use hota hai (gender-neutral). Sahi: 'haven't they?', 'hasn't he' galat hai."
+      },
+      "navigation": { "next": "card_45_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_45_milestone5",
+      "card_slug": "card_45_milestone5",
+      "type": "milestone",
+      "concept_id": "question_tags",
+      "level": 5,
+      "progress": { "current": 45, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏷️",
+        "completed_topic": "Question Tags — The Biggest Trap Zone",
+        "xp_earned": 90,
+        "milestone_progress": "Module 5/9 Clear",
+        "motivational_quote": "SBI PO ka sabse tagda module tha aur tumne crack kar liya! Ab Negative Interrogative aur Rhetorical Questions dekhte hain."
+      },
+      "navigation": { "next": "card_46_negative_interrogative_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_46_negative_interrogative_intro",
+      "card_slug": "card_46_negative_interrogative_intro",
+      "type": "chat",
+      "concept_id": "negative_rhetorical",
+      "level": 6,
+      "progress": { "current": 46, "total": 80 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, 'Kya tum nahi aaoge?' jaisa question English mein kaise likhenge? Isme toh 'nahi' bhi hai aur question bhi hai!" },
+        { "speaker": "aman", "text": "Achha sawal! Isko NEGATIVE INTERROGATIVE kehte hain — jab question mein 'NOT' bhi ho. Structure: Auxiliary+NOT+Subject+Verb? ya Contraction+Subject+Verb?" },
+        { "speaker": "raju", "text": "Matlab do tarike se likh sakte hain?" },
+        { "speaker": "aman", "text": "Bilkul! 'WILL you NOT come?' (formal, full form) YA 'WON'T you come?' (common, contracted form). Dono ka meaning same hai — surprise ya expectation dikhana." }
+      ],
+      "navigation": { "next": "card_47_negative_interrogative_usage", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_47_negative_interrogative_usage",
+      "card_slug": "card_47_negative_interrogative_usage",
+      "type": "chat",
+      "concept_id": "negative_rhetorical",
+      "level": 6,
+      "progress": { "current": 47, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Ek important point — Negative Interrogative aksar SURPRISE ya EXPECTATION OF AGREEMENT dikhata hai. 'ISN'T she beautiful?' ka matlab hai 'She IS beautiful, right?' — speaker already positive expect kar raha hai." },
+        { "speaker": "raju", "text": "Toh ye sirf information poochne ke liye nahi, apni baat confirm karwane ke liye use hota hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye Question Tags se milta julta concept hai — dono mein confirmation/agreement ki feeling hoti hai." },
+        { "speaker": "raju", "text": "Achha, matlab dhang se sochne pe question tags aur negative interrogative dono cousins jaise hain!" }
+      ],
+      "navigation": { "next": "card_48_rhetorical_questions", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_48_rhetorical_questions",
+      "card_slug": "card_48_rhetorical_questions",
+      "type": "chat",
+      "concept_id": "negative_rhetorical",
+      "level": 6,
+      "progress": { "current": 48, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek naya concept — RHETORICAL QUESTION. Ye ek aisa question hai jo POOCHA jaata hai FORM mein, lekin uska koi JAWAB expect nahi kiya jaata — ye asal mein ek STRONG STATEMENT hota hai." },
+        { "speaker": "raju", "text": "Matlab jaise koi kisi se 'Kya main pagal hoon?' bole, to wo sach mein jawab nahi chahta?" },
+        { "speaker": "aman", "text": "Bilkul sahi example! 'Who does not love his motherland?' — iska matlab hai 'EVERYONE loves his motherland' (strong assertive statement), sawal ka structure hai but meaning statement jaisa hai." },
+        { "speaker": "raju", "text": "⭐ Achha! Toh Rhetorical Question dikhta Interrogative hai but MEANING mein Assertive hota hai — ye toh interesting concept hai!" }
+      ],
+      "navigation": { "next": "card_49_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_49_quiz1",
+      "card_slug": "card_49_quiz1",
+      "type": "quiz",
+      "concept_id": "negative_rhetorical",
+      "level": 6,
+      "progress": { "current": 49, "total": 80 },
+      "quiz_payload": {
+        "question": "Sahi Negative Interrogative sentence chuno:",
+        "options": [
+          { "id": "A", "text": "Don't you like this movie?" },
+          { "id": "B", "text": "You don't like this movie?" },
+          { "id": "C", "text": "Do you not likes this movie?" },
+          { "id": "D", "text": "Not do you like this movie?" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Negative Interrogative ka sahi structure hai: Contracted-Auxiliary+Subject+Verb — 'Don't you like...?' Ya full form: 'Do you not like...?'"
+      },
+      "navigation": { "next": "card_50_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_50_quiz2",
+      "card_slug": "card_50_quiz2",
+      "type": "quiz",
+      "concept_id": "negative_rhetorical",
+      "level": 6,
+      "progress": { "current": 50, "total": 80 },
+      "quiz_payload": {
+        "question": "'Who does not know the Taj Mahal?' — Iska Rhetorical meaning kya hai?",
+        "options": [
+          { "id": "A", "text": "Koi bhi Taj Mahal nahi jaanta" },
+          { "id": "B", "text": "Sabko Taj Mahal pata hai" },
+          { "id": "C", "text": "Ye ek genuine information wala sawal hai" },
+          { "id": "D", "text": "Sirf kuch log Taj Mahal jaante hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Rhetorical Question ka meaning uske ULTA hota hai apparent question se — 'Who does not know...?' ka matlab hai 'EVERYONE knows...' (strong assertive statement)."
+      },
+      "navigation": { "next": "card_51_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_51_quiz3",
+      "card_slug": "card_51_quiz3",
+      "type": "quiz",
+      "concept_id": "negative_rhetorical",
+      "level": 6,
+      "progress": { "current": 51, "total": 80 },
+      "quiz_payload": {
+        "question": "Negative Interrogative Sentences aksar kya dikhate hain?",
+        "options": [
+          { "id": "A", "text": "Pure information seeking" },
+          { "id": "B", "text": "Surprise ya positive expectation of agreement" },
+          { "id": "C", "text": "Command dena" },
+          { "id": "D", "text": "Wish/Prayer" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Negative Interrogative sentences aksar SURPRISE ya speaker ki EXPECTATION dikhate hain ki jawab positive hoga — jaise Question Tags mein hota hai."
+      },
+      "navigation": { "next": "card_52_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_52_milestone6",
+      "card_slug": "card_52_milestone6",
+      "type": "milestone",
+      "concept_id": "negative_rhetorical",
+      "level": 6,
+      "progress": { "current": 52, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💭",
+        "completed_topic": "Negative Interrogative & Rhetorical Questions",
+        "xp_earned": 70,
+        "milestone_progress": "Module 6/9 Clear",
+        "motivational_quote": "Rhetorical question ka twist samajh gaye! Ab Assertive-Interrogative interconversion dekhte hain."
+      },
+      "navigation": { "next": "card_53_interconversion_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_53_interconversion_intro",
+      "card_slug": "card_53_interconversion_intro",
+      "type": "chat",
+      "concept_id": "interconversion",
+      "level": 7,
+      "progress": { "current": 53, "total": 80 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, agar exam mein bola jaaye 'Change into Interrogative' — kaise karenge quickly?" },
+        { "speaker": "aman", "text": "Achha sawal Raju! Chalo ek 3-STEP METHOD banate hain jo har tense pe kaam karega. STEP 1: Sentence mein auxiliary verb (is/was/has/will) dhundo." },
+        { "speaker": "raju", "text": "Aur agar auxiliary na mile toh?" },
+        { "speaker": "aman", "text": "STEP 2: Agar auxiliary NA mile (Simple Present/Past), to tense ke hisaab se Do/Does/Did add karo. STEP 3: Us auxiliary/do-does-did ko SUBJECT se PEHLE le aao, aur main verb ko V1 karo agar zaroorat ho." }
+      ],
+      "navigation": { "next": "card_54_interconversion_example_present", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_54_interconversion_example_present",
+      "card_slug": "card_54_interconversion_example_present",
+      "type": "chat",
+      "concept_id": "interconversion",
+      "level": 7,
+      "progress": { "current": 54, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Example: 'He GOES to school.' (Simple Present, no auxiliary). Step 2: Add 'Does' (third-person). Step 3: 'DOES he GO to school?' — verb 'goes' se 's' hataya kyunki 'does' aa gaya." },
+        { "speaker": "raju", "text": "Aur Perfect Tense wale sentence mein kaise karenge, jaise 'She HAS finished her work'?" },
+        { "speaker": "aman", "text": "Yahan 'has' pehle se hi auxiliary hai (Step 1 mein mil gaya), toh seedha Step 3 — 'HAS she finished her work?' — bas 'has' subject se pehle le aaya, baaki kuch nahi badla." },
+        { "speaker": "raju", "text": "Achha, matlab agar auxiliary already hai, to seedha usko move karo, agar nahi hai to do/does/did lagao!" }
+      ],
+      "navigation": { "next": "card_55_negative_to_interrogative", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_55_negative_to_interrogative",
+      "card_slug": "card_55_negative_to_interrogative",
+      "type": "chat",
+      "concept_id": "interconversion",
+      "level": 7,
+      "progress": { "current": 55, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Ek zaroori exam pattern — jab NEGATIVE ASSERTIVE ko INTERROGATIVE mein badalna ho, to ye ULTA (opposite) hoti hai. 'Nobody can solve this.' → 'CAN ANYBODY solve this?'" },
+        { "speaker": "raju", "text": "Hain?? 'Nobody' se 'Anybody' kaise ban gaya?" },
+        { "speaker": "aman", "text": "⭐ Yahi BPSC ka classic 'Transformation' trap hai! Jab NEGATIVE word (nobody, no one, never) INTERROGATIVE mein jaata hai jo RHETORICAL meaning ke saath convert ho raha ho, to NEGATIVE word POSITIVE indefinite word ('anybody, anyone, ever') mein badal jaata hai, aur MEANING same rehta hai." },
+        { "speaker": "raju", "text": "Achha! Toh 'Nobody can' = 'Can anybody' — dono ka matlab hai 'KOI NAHI KAR SAKTA' — bas form badla, meaning same!" }
+      ],
+      "navigation": { "next": "card_56_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_56_quiz1",
+      "card_slug": "card_56_quiz1",
+      "type": "quiz",
+      "concept_id": "interconversion",
+      "level": 7,
+      "progress": { "current": 56, "total": 80 },
+      "quiz_payload": {
+        "question": "'They played football yesterday.' Ka sahi Interrogative form kya hoga?",
+        "options": [
+          { "id": "A", "text": "Did they played football yesterday?" },
+          { "id": "B", "text": "Did they play football yesterday?" },
+          { "id": "C", "text": "Do they play football yesterday?" },
+          { "id": "D", "text": "Played they football yesterday?" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Simple Past mein koi auxiliary nahi hai, isliye 'Did' add karke subject se pehle laayenge, aur verb V1 (play) ban jaayegi — 'played' nahi."
+      },
+      "navigation": { "next": "card_57_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_57_quiz2",
+      "card_slug": "card_57_quiz2",
+      "type": "quiz",
+      "concept_id": "interconversion",
+      "level": 7,
+      "progress": { "current": 57, "total": 80 },
+      "quiz_payload": {
+        "question": "'No one can defeat him.' Ko Rhetorical Interrogative mein badlo:",
+        "options": [
+          { "id": "A", "text": "Can no one defeat him?" },
+          { "id": "B", "text": "Who can defeat him?" },
+          { "id": "C", "text": "Does no one defeat him?" },
+          { "id": "D", "text": "Can everyone defeat him?" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'No one can' ka rhetorical interrogative form 'Who CAN defeat him?' hota hai — iska matlab hai 'Koi bhi nahi kar sakta', meaning same rehta hai, form badalta hai."
+      },
+      "navigation": { "next": "card_58_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_58_quiz3",
+      "card_slug": "card_58_quiz3",
+      "type": "quiz",
+      "concept_id": "interconversion",
+      "level": 7,
+      "progress": { "current": 58, "total": 80 },
+      "quiz_payload": {
+        "question": "Interconversion ka Step 1 kya hota hai?",
+        "options": [
+          { "id": "A", "text": "Verb ko V3 mein badalna" },
+          { "id": "B", "text": "Sentence mein pehle se maujood auxiliary verb dhundna" },
+          { "id": "C", "text": "Subject ko hata dena" },
+          { "id": "D", "text": "Object ko sabse aage le jaana" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sabse pehla step hai sentence mein PEHLE SE maujood auxiliary verb (is/was/has/will) dhundna — agar mil jaaye to use move karo, agar na mile to do/does/did add karo."
+      },
+      "navigation": { "next": "card_59_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_59_milestone7",
+      "card_slug": "card_59_milestone7",
+      "type": "milestone",
+      "concept_id": "interconversion",
+      "level": 7,
+      "progress": { "current": 59, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔀",
+        "completed_topic": "Assertive-Interrogative Interconversion",
+        "xp_earned": 75,
+        "milestone_progress": "Module 7/9 Clear",
+        "motivational_quote": "3-Step Method master kar liya! Ab dekhte hain Interrogative sentences Reported Speech mein kaise badalte hain."
+      },
+      "navigation": { "next": "card_60_reported_speech_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_60_reported_speech_intro",
+      "card_slug": "card_60_reported_speech_intro",
+      "type": "chat",
+      "concept_id": "interrogative_reported_speech",
+      "level": 8,
+      "progress": { "current": 60, "total": 80 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, agar koi bole 'He asked, \"Are you coming?\"' — isko REPORT karte waqt kya likhenge?" },
+        { "speaker": "aman", "text": "Bahut zaroori sawal! Interrogative sentences ko report karne ke 3 SPECIAL RULES hain jo Assertive se BILKUL ALAG hain. Pehla: REPORTING VERB badal jaata hai." },
+        { "speaker": "raju", "text": "Matlab 'said' ki jagah kuch aur aayega?" },
+        { "speaker": "aman", "text": "Bilkul! 'Said/Said to' ki jagah 'ASKED', 'INQUIRED', 'WANTED TO KNOW', 'DEMANDED' jaise words aate hain — kyunki original sentence ek QUESTION tha, statement nahi." }
+      ],
+      "navigation": { "next": "card_61_if_whether_rule", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_61_if_whether_rule",
+      "card_slug": "card_61_if_whether_rule",
+      "type": "chat",
+      "concept_id": "interrogative_reported_speech",
+      "level": 8,
+      "progress": { "current": 61, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Doosra rule (SABSE IMPORTANT): Yes/No question ko report karte waqt 'THAT' ki jagah 'IF' ya 'WHETHER' use hota hai. 'He asked, \"Are you coming?\"' → 'He asked IF/WHETHER I was coming.'" },
+        { "speaker": "raju", "text": "Toh Yes/No questions mein 'that' kabhi use nahi hoga?" },
+        { "speaker": "aman", "text": "⭐ Bilkul sahi! 'That' sirf Assertive Sentences ke reporting mein use hota hai. Yes/No questions mein SIRF 'if/whether' aata hai — ye BPSC ka bahut common trap hai." },
+        { "speaker": "raju", "text": "Achha, aur Wh-questions mein kya use hota hai, 'if' bhi lagega?" }
+      ],
+      "navigation": { "next": "card_62_wh_word_stays_reported", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_62_wh_word_stays_reported",
+      "card_slug": "card_62_wh_word_stays_reported",
+      "type": "chat",
+      "concept_id": "interrogative_reported_speech",
+      "level": 8,
+      "progress": { "current": 62, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Nahi Raju! Wh-questions mein WH-WORD KHUD HI connector ki tarah kaam karta hai — 'if/whether/that' kisi ki zaroorat nahi. 'He asked, \"Where do you live?\"' → 'He asked where I lived.'" },
+        { "speaker": "raju", "text": "Toh 'Where' apni jagah pe rehta hai, bas koi extra word nahi lagta?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Wh-word khud connector ban jaata hai — 'if/whether' sirf Yes/No questions ke liye reserved hai." },
+        { "speaker": "raju", "text": "Note kar liya — Yes/No question → if/whether, Wh-question → khud Wh-word hi connector!" }
+      ],
+      "navigation": { "next": "card_63_word_order_restored", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_63_word_order_restored",
+      "card_slug": "card_63_word_order_restored",
+      "type": "chat",
+      "concept_id": "interrogative_reported_speech",
+      "level": 8,
+      "progress": { "current": 63, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Teesra aur SABSE ZYADA GALTI HONE WALA rule — Reported clause mein WORD ORDER wapas ASSERTIVE (Subject+Verb) ban jaata hai, INVERSION hata diya jaata hai!" },
+        { "speaker": "raju", "text": "Matlab 'He asked where DO I live' galat hoga?" },
+        { "speaker": "aman", "text": "⭐ Bilkul sahi pakda ye classic trap! Sahi hoga: 'He asked where I LIVED' — 'do' bhi hata diya (kyunki reported clause mein auxiliary do/does/did NAHI aata jab tak koi negative na ho), aur order Subject+Verb ho gaya, question mark bhi NAHI lagta." },
+        { "speaker": "raju", "text": "⭐ Ye toh teen-teen changes ek saath hain! Order normal karo, question mark hatao, aur Do/Does/Did (agar tha) bhi hata do — Tense backshift bhi hoga jaise pehle seekha tha!" }
+      ],
+      "navigation": { "next": "card_64_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_64_quiz1",
+      "card_slug": "card_64_quiz1",
+      "type": "quiz",
+      "concept_id": "interrogative_reported_speech",
+      "level": 8,
+      "progress": { "current": 64, "total": 80 },
+      "quiz_payload": {
+        "question": "'She said, \"Do you like tea?\"' Ka sahi Reported Speech kya hoga?",
+        "options": [
+          { "id": "A", "text": "She said that I liked tea." },
+          { "id": "B", "text": "She asked if I liked tea." },
+          { "id": "C", "text": "She asked do I like tea." },
+          { "id": "D", "text": "She asked if do I like tea." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Yes/No question hai, isliye 'if/whether' aayega ('that' nahi), reporting verb 'asked' banega, aur word order normal (Subject+Verb) ho jaayega — 'if I liked tea'."
+      },
+      "navigation": { "next": "card_65_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_65_quiz2",
+      "card_slug": "card_65_quiz2",
+      "type": "quiz",
+      "concept_id": "interrogative_reported_speech",
+      "level": 8,
+      "progress": { "current": 65, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'He asked me (A)/ that where did I (B)/ live in Patna (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Wh-question mein 'that' use nahi hota, Wh-word khud connector hai. Aur word order normal hona chahiye. Sahi: 'where I lived', 'that where did I' galat hai."
+      },
+      "navigation": { "next": "card_66_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_66_quiz3",
+      "card_slug": "card_66_quiz3",
+      "type": "quiz",
+      "concept_id": "interrogative_reported_speech",
+      "level": 8,
+      "progress": { "current": 66, "total": 80 },
+      "quiz_payload": {
+        "question": "Interrogative Reported Speech mein reported clause ke aakhir mein kaunsa punctuation mark aata hai?",
+        "options": [
+          { "id": "A", "text": "Question Mark (?)" },
+          { "id": "B", "text": "Full Stop (.)" },
+          { "id": "C", "text": "Exclamation Mark (!)" },
+          { "id": "D", "text": "Colon (:)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Reported Speech mein poora sentence ab ek STATEMENT ban jaata hai (kisi ko report kiya ja raha hai), isliye FULL STOP lagta hai, question mark nahi."
+      },
+      "navigation": { "next": "card_67_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_67_milestone8",
+      "card_slug": "card_67_milestone8",
+      "type": "milestone",
+      "concept_id": "interrogative_reported_speech",
+      "level": 8,
+      "progress": { "current": 67, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💬",
+        "completed_topic": "Interrogative Sentences in Reported Speech",
+        "xp_earned": 80,
+        "milestone_progress": "Module 8/9 Clear",
+        "motivational_quote": "If/Whether ka trap crack kar diya! Ab final module — SBI PO Error Detection Master Practice!"
+      },
+      "navigation": { "next": "card_68_error_strategy", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_68_error_strategy",
+      "card_slug": "card_68_error_strategy",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 68, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab hum karenge exact SBI PO style practice — sentence 4 parts mein todke error dhundhna. Strategy: 1) Question mein Auxiliary Subject se pehle hai ya nahi check karo. 2) Do/Does/Did ke baad V1 hai ya nahi." },
+        { "speaker": "raju", "text": "Aur kya check karna hai sir?" },
+        { "speaker": "aman", "text": "3) Question Tag mein polarity opposite hai ya nahi, subject pronoun hai ya nahi. 4) Reported Speech mein 'if/whether' sahi jagah hai ya 'that' galti se laga diya. 5) Who/Whom sahi context mein hai ya nahi." },
+        { "speaker": "raju", "text": "Ye toh ek poori master checklist ban gayi sir! Chaliye practice karte hain!" }
+      ],
+      "navigation": { "next": "card_69_trap_inversion_missing", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_69_trap_inversion_missing",
+      "card_slug": "card_69_trap_inversion_missing",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 69, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 1: Missing Inversion. Kabhi kabhi exam mein question dikhta hai but Subject-Verb order Assertive jaisa reh jaata hai — 'You are coming to the party?' — ye sunne mein chalta hai but FORMAL grammar mein galat treat hota hai." },
+        { "speaker": "raju", "text": "Toh sahi kya hoga sir?" },
+        { "speaker": "aman", "text": "Formal/exam ke hisaab se sahi hoga: 'ARE you coming to the party?' — auxiliary Subject se pehle aana chahiye. Bina inversion wala sirf casual speech mein chalta hai, exams mein NAHI." },
+        { "speaker": "raju", "text": "Achha! Toh exam mein hamesha proper inversion wala option choose karunga!" }
+      ],
+      "navigation": { "next": "card_70_trap_tag_double_negative", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_70_trap_tag_double_negative",
+      "card_slug": "card_70_trap_tag_double_negative",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 70, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 2: Question Tag Polarity Error. Exam mein SAME polarity wala tag daal dete hain — 'He is not coming, isn't he?' GALAT hai, kyunki statement negative hai, tag bhi negative ban gaya." },
+        { "speaker": "raju", "text": "Sahi hoga 'is he?' — negative statement, positive tag?" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'He is NOT coming, IS he?' — polarity hamesha OPPOSITE honi chahiye. Same polarity dikhte hi turant samajh jao ye error hai." },
+        { "speaker": "raju", "text": "Note kar liya — pehle statement ka polarity check karo (positive/negative), phir tag opposite hona chahiye!" }
+      ],
+      "navigation": { "next": "card_71_trap_reported_that_if", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_71_trap_reported_that_if",
+      "card_slug": "card_71_trap_reported_that_if",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 71, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 3: 'That' galti se Yes/No question ke reporting mein laga dena. 'He asked THAT I was coming' — GALAT hai jab original question 'Are you coming?' tha." },
+        { "speaker": "raju", "text": "Sahi hoga 'He asked IF I was coming'?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Yaad rakho: THAT sirf assertive reporting mein, IF/WHETHER sirf Yes/No question reporting mein, aur Wh-question mein khud Wh-word." },
+        { "speaker": "raju", "text": "Achha, teeno alag category hain, mix nahi karna!" }
+      ],
+      "navigation": { "next": "card_72_trap_who_whom_context", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_72_trap_who_whom_context",
+      "card_slug": "card_72_trap_who_whom_context",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 72, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 4: Who ki jagah galat context mein use hona. 'Whom is knocking at the door?' GALAT hai — yahan 'Whom' khud kaam kar raha hai (knocking), isliye SUBJECT hai, 'WHO' aana chahiye." },
+        { "speaker": "raju", "text": "Toh 'Whom' sirf tab jab wo kisi action ka OBJECT ho, 'Who' jab SUBJECT ho?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Trick: agar Wh-word ke turant baad VERB aaye (jaise 'is knocking'), wo SUBJECT hai → 'Who'. Agar Wh-word ke baad SUBJECT+VERB aaye (jaise 'did you meet'), wo OBJECT hai → 'Whom'." },
+        { "speaker": "raju", "text": "⭐ Ye trick toh bahut kaam ki hai — sentence structure dekh ke turant pata chal jaayega!" }
+      ],
+      "navigation": { "next": "card_73_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_73_quiz1",
+      "card_slug": "card_73_quiz1",
+      "type": "quiz",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 73, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'The teacher asked (A)/ that whether the students (B)/ had completed their homework (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'That' aur 'whether' dono ek saath use nahi ho sakte — ye Double Connector Error hai. Sahi: sirf 'whether the students'."
+      },
+      "navigation": { "next": "card_74_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_74_quiz2",
+      "card_slug": "card_74_quiz2",
+      "type": "quiz",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 74, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'Whom do you think (A)/ will win (B)/ the election this year? (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Yahan 'who/whom' hi vyakti (SUBJECT) hai jo election jeetega ('will win'), isliye SUBJECT case 'WHO' aana chahiye, 'Whom' (object case) galat hai. Sahi: 'Who do you think will win...?'"
+      },
+      "navigation": { "next": "card_75_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_75_quiz3",
+      "card_slug": "card_75_quiz3",
+      "type": "quiz",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 75, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'You have finished your work, (A)/ have (B)/ you? (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement POSITIVE hai ('have finished'), isliye tag NEGATIVE hona chahiye. Sahi: 'haven't you?', 'have you' (same polarity) galat hai."
+      },
+      "navigation": { "next": "card_76_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_76_milestone9",
+      "card_slug": "card_76_milestone9",
+      "type": "milestone",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 76, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🕵️",
+        "completed_topic": "SBI PO Level Error Detection Master Practice",
+        "xp_earned": 90,
+        "milestone_progress": "Module 9/9 Clear",
+        "motivational_quote": "Tumne poora Assertive & Interrogative chapter Officer-level pe master kar liya! Ab final revision aur master quiz ka time hai!"
+      },
+      "navigation": { "next": "card_77_summary", "button_text": "Go to Final Revision ➔" }
+    },
+
+    {
+      "card_id": "card_77_summary",
+      "card_slug": "card_77_summary",
+      "type": "summary",
+      "concept_id": "final_revision",
+      "level": 9,
+      "progress": { "current": 77, "total": 80 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision — Assertive & Interrogative",
+        "revision_points": [
+          {
+            "topic": "Statement Check: Word Order Rules",
+            "point": "Statement I: Assertive Sentence SVO order follow karta hai (Subject+Verb+Object). Statement II: Interrogative Sentence mein Auxiliary Verb Subject se PEHLE aata hai (Inversion). Dono statements sahi hain — word order hi dono ko differentiate karta hai."
+          },
+          {
+            "topic": "Statement Check: Who as Subject",
+            "point": "Statement I: Jab 'Who' khud subject ho, Do/Does/Did ki zaroorat nahi hoti. Statement II: 'Whom' hamesha OBJECT case ke liye use hota hai (Preposition+Whom formal style mein). Dono statements sahi hain."
+          },
+          {
+            "topic": "Statement Check: Question Tags",
+            "point": "Statement I: Positive statement→Negative tag, Negative statement→Positive tag (opposite polarity hamesha). Statement II: Hidden negative words (never, hardly, scarcely, no one) ke saath bhi POSITIVE tag aata hai. Dono statements sahi hain — ye BPSC ka sabse repeated trap hai."
+          },
+          {
+            "topic": "Statement Check: Special Tag Cases",
+            "point": "Statement I: 'I am' ke saath tag hamesha 'aren't I' hota hai. Statement II: 'Let's' ke saath tag 'shall we', Imperative ke saath tag 'will you' fixed hote hain. Dono statements sahi hain — ye exceptions ratna zaroori hai."
+          },
+          {
+            "topic": "Statement Check: Reported Speech for Questions",
+            "point": "Statement I: Yes/No question report karte waqt 'that' ki jagah 'if/whether' use hota hai. Statement II: Reported clause mein word order wapas normal (Subject+Verb) ho jaata hai, inversion hat jaata hai, question mark bhi hat jaata hai. Dono statements sahi hain."
+          }
+        ]
+      },
+      "navigation": { "next": "card_78_final_quiz1", "button_text": "Start Master Officer Quiz ➔" }
+    },
+
+    {
+      "card_id": "card_78_final_quiz1",
+      "card_slug": "card_78_final_quiz1",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 9,
+      "progress": { "current": 78, "total": 80 },
+      "quiz_payload": {
+        "question": "Assertion-Reason: Assertion (A): The sentence 'He never tells a lie, does he?' is grammatically correct. Reason (R): 'Never' is a hidden negative word, so even though there is no visible 'not', the statement is treated as negative, requiring a positive question tag.",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is NOT the correct explanation of A" },
+          { "id": "C", "text": "A is true but R is false" },
+          { "id": "D", "text": "A is false but R is true" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Never' makes the statement negative in meaning, so the tag must be positive ('does he?'). Both Assertion and Reason are true, and R correctly explains why A is grammatically correct."
+      },
+      "navigation": { "next": "card_79_final_quiz2", "button_text": "Next Question ➔" }
+    },
+
+    {
+      "card_id": "card_79_final_quiz2",
+      "card_slug": "card_79_final_quiz2",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 9,
+      "progress": { "current": 79, "total": 80 },
+      "quiz_payload": {
+        "question": "Multi-Statement: Read the sentence and find which parts contain an error: 'The interviewer asked me (A) / that whether I had (B) / any prior work experience or not (C) / No error (D)'. Choose the part(s) with error.",
+        "options": [
+          { "id": "A", "text": "Only Part A" },
+          { "id": "B", "text": "Only Part B" },
+          { "id": "C", "text": "Part B and Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Part B has the error: 'that' and 'whether' cannot be used together (Double Connector Error) — only 'whether' should be used since it's a Yes/No question being reported. Part C ('or not') is actually a correct and common addition with 'whether'."
+      },
+      "navigation": { "next": "card_80_trophy", "button_text": "See Final Result ➔" }
+    },
+
+    {
+      "card_id": "card_80_trophy",
+      "card_slug": "card_80_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 9,
+      "progress": { "current": 80, "total": 80 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Assertive & Interrogative Sentences — Full Chapter + SBI PO Error Detection",
+        "xp_earned": 150,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Officer-level Assertive & Interrogative mastery unlocked, Raju! Question Tags se lekar Who-Whom tak, sab traps tumhare control mein hain. Ab exam mein koi bhi sentence-type question tumhe hara nahi sakta — All the best!"
+      },
+      "navigation": { "next": "card_01_intro", "button_text": "Restart Chapter 🔁" }
+    }
+  ]
+}
