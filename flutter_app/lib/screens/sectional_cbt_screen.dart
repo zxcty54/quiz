@@ -10,7 +10,7 @@ import '../services/telegram_tracker.dart';
 import '../services/user_stats_service.dart';
 
 // ============================================================================
-// 📱 SECTIONAL MOCKS LIST VIEW (INCLUDES ALL 5 CARDS: BPSC, SSC, BSSC, BIHAR SI)
+// 📱 SECTIONAL MOCKS LIST VIEW (100% DYNAMIC & ZERO-REBUILD)
 // ============================================================================
 class SectionalCbtTab extends StatefulWidget {
   final bool isDarkMode;
@@ -23,20 +23,33 @@ class SectionalCbtTab extends StatefulWidget {
 class SectionalCbtTabState extends State<SectionalCbtTab> {
   Map<String, dynamic> _sectionalData = {};
   bool _isLoading = true;
-
-  // Selected Target Key: 'ALL', 'bpsc', 'ssc', 'bssc_cgl', 'bssc_inter', 'bihar_si'
   String _selectedTarget = 'ALL';
+
+  final Map<String, Map<String, dynamic>> _examMeta = {
+    'bpsc': {'tag': 'STATE PCS', 'title': 'BPSC PCS', 'color': const Color(0xFF881337)},
+    'ssc': {'tag': 'TCS PATTERN', 'title': 'SSC / NTPC', 'color': const Color(0xFF065F46)},
+    'bssc_cgl': {'tag': 'GRADUATE', 'title': 'BSSC CGL', 'color': const Color(0xFF581C87)},
+    'bssc_inter': {'tag': 'INTER LEVEL', 'title': 'BSSC 10+2', 'color': const Color(0xFF1E3A8A)},
+    'bihar_si': {'tag': 'POLICE / DAROGA', 'title': 'BIHAR SI', 'color': const Color(0xFFD97706)},
+  };
+
+  final List<Color> _fallbackColors = [
+    const Color(0xFFDC2626),
+    const Color(0xFF0D9488),
+    const Color(0xFF2563EB),
+    const Color(0xFF4F46E5),
+  ];
 
   @override
   void initState() {
     super.initState();
-    fetchSectionalMocks();
+    fetchSectionalMocks(forceRefresh: true);
   }
 
   // 📰 FETCH LIVE JSON FROM GITHUB WITH CACHE BUSTER
   Future<void> fetchSectionalMocks({bool forceRefresh = false}) async {
     final prefs = await SharedPreferences.getInstance();
-    const String cacheKey = 'cached_sectional_data_json';
+    const String cacheKey = 'cached_sectional_data_json_v5';
 
     if (!forceRefresh) {
       String? cachedJson = prefs.getString(cacheKey);
@@ -92,6 +105,8 @@ class SectionalCbtTabState extends State<SectionalCbtTab> {
       );
     }
 
+    final List<String> availableKeys = _sectionalData.keys.toList();
+
     return Scaffold(
       backgroundColor: bg,
       body: RefreshIndicator(
@@ -119,7 +134,7 @@ class SectionalCbtTabState extends State<SectionalCbtTab> {
             ),
             const SizedBox(height: 14),
 
-            // 🎯 TOP DYNAMIC HORIZONTAL SCROLL CARDS (5 EXAMS INCLUDING BIHAR SI)
+            // 🎯 TOP DYNAMIC HORIZONTAL SCROLL CARDS
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
@@ -127,16 +142,18 @@ class SectionalCbtTabState extends State<SectionalCbtTab> {
                 children: [
                   _targetExamChip('ALL', 'ALL EXAMS', 'Show All Mocks', const Color(0xFF2563EB)),
                   const SizedBox(width: 8),
-                  _targetExamChip('bpsc', 'STATE PCS', 'BPSC PCS', const Color(0xFF881337)),
-                  const SizedBox(width: 8),
-                  _targetExamChip('ssc', 'TCS PATTERN', 'SSC / NTPC', const Color(0xFF065F46)),
-                  const SizedBox(width: 8),
-                  _targetExamChip('bssc_cgl', 'GRADUATE', 'BSSC CGL', const Color(0xFF581C87)),
-                  const SizedBox(width: 8),
-                  _targetExamChip('bssc_inter', 'INTER LEVEL', 'BSSC 10+2', const Color(0xFF1E3A8A)),
-                  const SizedBox(width: 8),
-                  // 👮 5TH BLOCK: BIHAR SI
-                  _targetExamChip('bihar_si', 'POLICE / DAROGA', 'BIHAR SI', const Color(0xFFD97706)),
+                  ...List.generate(availableKeys.length, (idx) {
+                    final key = availableKeys[idx];
+                    final meta = _examMeta[key] ?? {
+                      'tag': 'TARGET EXAM',
+                      'title': key.replaceAll('_', ' ').toUpperCase(),
+                      'color': _fallbackColors[idx % _fallbackColors.length]
+                    };
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: _targetExamChip(key, meta['tag'], meta['title'], meta['color']),
+                    );
+                  }),
                 ],
               ),
             ),
@@ -192,71 +209,44 @@ class SectionalCbtTabState extends State<SectionalCbtTab> {
   Widget _buildSetsSection(Color cardBg) {
     List<Widget> sections = [];
 
-    // 1. BIHAR SI SECTION
-    if ((_selectedTarget == 'ALL' || _selectedTarget == 'bihar_si') &&
-        _sectionalData.containsKey('bihar_si')) {
-      final List biharSiList = (_sectionalData['bihar_si'] as List?) ?? [];
-      for (var item in biharSiList) {
-        final String title = item['title'] ?? '🎯 Bihar SI Practice Sets';
-        final int setsCount = item['sets'] ?? 5;
-        final String folder = item['folder'] ?? 'bihar_si';
+    _sectionalData.forEach((key, value) {
+      if (_selectedTarget != 'ALL' && _selectedTarget != key) return;
 
-        sections.add(_buildSetGroupCard(title, setsCount, folder, const Color(0xFFD97706)));
-      }
-    }
+      Color themeColor = _examMeta[key]?['color'] ?? const Color(0xFF2563EB);
 
-    // 2. BPSC SECTION
-    if ((_selectedTarget == 'ALL' || _selectedTarget == 'bpsc') &&
-        _sectionalData.containsKey('bpsc')) {
-      final Map<String, dynamic> bpscData = _sectionalData['bpsc'] ?? {};
-      final String title = bpscData['title'] ?? '🏛️ BPSC PCS Special Zone';
-      final int totalSets = bpscData['total_sets'] ?? 28;
-      final String prefix = bpscData['path_prefix'] ?? 'bpsc';
+      // Single Object Map (Jaise BPSC)
+      if (value is Map<String, dynamic>) {
+        final String title = value['title'] ?? 'Special Zone';
+        final int totalSets = value['total_sets'] ?? 10;
+        final String pathPrefix = value['path_prefix'] ?? '$key/set';
 
-      sections.add(_buildSetGroupCard(title, totalSets, prefix, const Color(0xFF881337)));
-    }
-
-    // 3. BSSC CGL SECTION
-    if ((_selectedTarget == 'ALL' || _selectedTarget == 'bssc_cgl') &&
-        _sectionalData.containsKey('bssc_cgl')) {
-      final List list = (_sectionalData['bssc_cgl'] as List?) ?? [];
-      for (var item in list) {
         sections.add(_buildSetGroupCard(
-          item['title'] ?? 'BSSC CGL Sets',
-          item['sets'] ?? 5,
-          item['folder'] ?? 'bssc_cgl',
-          const Color(0xFF581C87),
+          groupTitle: title,
+          setsCount: totalSets,
+          subFolder: pathPrefix,
+          themeColor: themeColor,
+          isPrefixPath: true,
         ));
       }
-    }
+      // List Array (Jaise bihar_si, ssc, bssc_cgl, bssc_inter)
+      else if (value is List) {
+        for (var item in value) {
+          if (item is Map<String, dynamic>) {
+            final String title = item['title'] ?? 'Practice Sets';
+            final int setsCount = item['sets'] ?? 5;
+            final String folder = item['folder'] ?? key;
 
-    // 4. BSSC INTER SECTION
-    if ((_selectedTarget == 'ALL' || _selectedTarget == 'bssc_inter') &&
-        _sectionalData.containsKey('bssc_inter')) {
-      final List list = (_sectionalData['bssc_inter'] as List?) ?? [];
-      for (var item in list) {
-        sections.add(_buildSetGroupCard(
-          item['title'] ?? 'BSSC Inter Sets',
-          item['sets'] ?? 5,
-          item['folder'] ?? 'bssc_inter',
-          const Color(0xFF1E3A8A),
-        ));
+            sections.add(_buildSetGroupCard(
+              groupTitle: title,
+              setsCount: setsCount,
+              subFolder: folder,
+              themeColor: themeColor,
+              isPrefixPath: false,
+            ));
+          }
+        }
       }
-    }
-
-    // 5. SSC SECTION
-    if ((_selectedTarget == 'ALL' || _selectedTarget == 'ssc') &&
-        _sectionalData.containsKey('ssc')) {
-      final List list = (_sectionalData['ssc'] as List?) ?? [];
-      for (var item in list) {
-        sections.add(_buildSetGroupCard(
-          item['title'] ?? 'SSC Sets',
-          item['sets'] ?? 5,
-          item['folder'] ?? 'ssc',
-          const Color(0xFF065F46),
-        ));
-      }
-    }
+    });
 
     if (sections.isEmpty) {
       return const Center(
@@ -270,7 +260,13 @@ class SectionalCbtTabState extends State<SectionalCbtTab> {
     return Column(children: sections);
   }
 
-  Widget _buildSetGroupCard(String groupTitle, int setsCount, String subFolder, Color themeColor) {
+  Widget _buildSetGroupCard({
+    required String groupTitle,
+    required int setsCount,
+    required String subFolder,
+    required Color themeColor,
+    required bool isPrefixPath,
+  }) {
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.only(bottom: 16),
@@ -293,9 +289,8 @@ class SectionalCbtTabState extends State<SectionalCbtTab> {
               String setLabel = "Set ${setNum.toString().padLeft(2, '0')}";
 
               return InkWell(
-                onTap: () async {
-                  // Fetch Questions from GitHub dynamically for the selected set
-                  _loadAndLaunchTest(context, groupTitle, subFolder, setNum);
+                onTap: () {
+                  _loadAndLaunchTest(context, groupTitle, subFolder, setNum, isPrefixPath);
                 },
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
@@ -317,44 +312,76 @@ class SectionalCbtTabState extends State<SectionalCbtTab> {
     );
   }
 
-  void _loadAndLaunchTest(BuildContext context, String title, String subFolder, int setNum) async {
+  // 🚀 ADAPTIVE GITHUB QUESTION FETCHER (Supports all naming formats: set1, set01, set_01)
+  void _loadAndLaunchTest(BuildContext context, String title, String subFolder, int setNum, bool isPrefixPath) async {
     showDialog(
       context: context,
       barrierDismissible: false,
       builder: (ctx) => const Center(child: CircularProgressIndicator()),
     );
 
-    String formattedSet = setNum.toString().padLeft(2, '0');
-    String url = "https://raw.githubusercontent.com/zxcty54/quiz/main/$subFolder/set_$formattedSet.json";
+    String paddedSet = setNum.toString().padLeft(2, '0');
+    List<String> candidateUrls = [];
 
-    try {
-      final res = await http.get(Uri.parse(url));
-      Navigator.pop(context); // Close loading
+    if (isPrefixPath) {
+      candidateUrls = [
+        "https://raw.githubusercontent.com/zxcty54/quiz/main/$subFolder$setNum.json",
+        "https://raw.githubusercontent.com/zxcty54/quiz/main/$subFolder$paddedSet.json",
+        "https://raw.githubusercontent.com/zxcty54/quiz/main/$subFolder/$setNum.json",
+      ];
+    } else {
+      candidateUrls = [
+        "https://raw.githubusercontent.com/zxcty54/quiz/main/$subFolder/set$setNum.json",
+        "https://raw.githubusercontent.com/zxcty54/quiz/main/$subFolder/set$paddedSet.json",
+        "https://raw.githubusercontent.com/zxcty54/quiz/main/$subFolder/set_$paddedSet.json",
+        "https://raw.githubusercontent.com/zxcty54/quiz/main/$subFolder/set_$setNum.json",
+      ];
+    }
 
-      if (res.statusCode == 200) {
-        List parsed = jsonDecode(utf8.decode(res.bodyBytes));
+    http.Response? finalResponse;
+
+    for (String url in candidateUrls) {
+      try {
+        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 4));
+        if (res.statusCode == 200) {
+          finalResponse = res;
+          break;
+        }
+      } catch (_) {}
+    }
+
+    if (mounted) Navigator.pop(context); // Close loading dialog
+
+    if (finalResponse != null && finalResponse.statusCode == 200) {
+      try {
+        List parsed = jsonDecode(utf8.decode(finalResponse.bodyBytes));
         List<Question> qList = parsed.map((q) => Question.fromJson(q)).toList();
 
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (ctx) => SectionalCbtScreen(
-              testTitle: "$title - Set $formattedSet",
-              questions: qList,
-              subFolder: subFolder,
+        if (mounted) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (ctx) => SectionalCbtScreen(
+                testTitle: "$title - Set $paddedSet",
+                questions: qList,
+                subFolder: subFolder,
+              ),
             ),
-          ),
-        );
-      } else {
+          );
+        }
+      } catch (e) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Invalid JSON formatting in Set $paddedSet: $e')),
+          );
+        }
+      }
+    } else {
+      if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Failed to load questions for this set!')),
+          SnackBar(content: Text('Could not find file on GitHub for Set $paddedSet in $subFolder')),
         );
       }
-    } catch (e) {
-      Navigator.pop(context);
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error: $e')),
-      );
     }
   }
 }
@@ -396,7 +423,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   @override
   void initState() {
     super.initState();
-    // Default to Hindi for Bihar-specific exams
     _isHindi = widget.subFolder.contains('bssc') ||
         widget.subFolder.contains('bpsc') ||
         widget.subFolder.contains('bihar_si');
@@ -493,7 +519,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
     for (int i = 0; i < widget.questions.length; i++) {
       final q = widget.questions[i];
-      final userAns = _userAnswers[i]; // null if skipped / unattempted
+      final userAns = _userAnswers[i];
 
       if (userAns != null) {
         bool isCorrect = (userAns == q.answerIndex);
@@ -508,7 +534,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
           );
         } else {
           wrongCount++;
-          // ❌ WRONG QUESTION GOES TO VAULT
           await UserStatsService.recordQuestionAttempt(
             isCorrect: false,
             chapterName: widget.testTitle,
