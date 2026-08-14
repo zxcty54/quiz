@@ -224,17 +224,143 @@
     ]
   },
   {
-    "title": "Polity",
-    "icon": "📜",
-    "color": "0xFFD97706",
-    "chapters": [
-      {
-        "id": "pol_preamble",
-        "title": "Preamble & Constitution",
-        "subtitle": "Learn with Aman Sir & Raju",
-        "isAvailable": true,
-        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/preamble.json"
-      }
-    ]
-  }
+  "title": "Polity",
+  "icon": "📜",
+  "color": "0xFFD97706",
+  "chapters": [
+    {
+      "id": "pol_preamble",
+      "title": "Preamble & Constitution",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/preamble.json"
+    },
+    {
+      "id": "pol_fundametalright",
+      "title": "Fundamental Rights",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/fundametalright.json"
+    },
+    {
+      "id": "pol_dpsp",
+      "title": "Directive Principles of State Policy (DPSP)",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/dpsp.json"
+    },
+    {
+      "id": "pol_fundamentalduties",
+      "title": "Fundamental Duties",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/fundamentalduties.json"
+    },
+    {
+      "id": "pol_president_vp_pm",
+      "title": "President, VP & Prime Minister",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/president_vp_pm.json"
+    },
+    {
+      "id": "pol_parliament",
+      "title": "Union Parliament",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/parliament.json"
+    },
+    {
+      "id": "pol_supremecourt",
+      "title": "Supreme Court of India",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/supremecourt.json"
+    },
+    {
+      "id": "pol_cm_governor_com",
+      "title": "Governor, CM & Council of Ministers",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/cm_governor_com.json"
+    },
+    {
+      "id": "pol_highcourt",
+      "title": "High Courts",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/highcourt.json"
+    },
+    {
+      "id": "pol_subordinatecourt",
+      "title": "Subordinate Courts",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/subordinatecourt.json"
+    },
+    {
+      "id": "pol_panchayatiraj",
+      "title": "Panchayati Raj System",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/panchayatiraj.json"
+    },
+    {
+      "id": "pol_muncipalty",
+      "title": "Municipalities & Urban Local Bodies",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/muncipalty.json"
+    },
+    {
+      "id": "pol_federal",
+      "title": "Federal Structure & Centre-State Relations",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/federal.json"
+    },
+    {
+      "id": "pol_state_ut",
+      "title": "States & Union Territories",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/state_ut.json"
+    },
+    {
+      "id": "pol_cag",
+      "title": "Comptroller & Auditor General (CAG)",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/cag.json"
+    },
+    {
+      "id": "pol_electioncommision",
+      "title": "Election Commission of India",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/electioncommision.json"
+    },
+    {
+      "id": "pol_stateelection",
+      "title": "State Election Commission",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/stateelection.json"
+    },
+    {
+      "id": "pol_nhrc",
+      "title": "National Human Rights Commission (NHRC)",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/nhrc.json"
+    },
+    {
+      "id": "pol_ncw_ncm",
+      "title": "NCW & NCM (Commissions)",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/ncw_ncm.json"
+    }
+  ]
+}
 ]
