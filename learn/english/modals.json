@@ -1,0 +1,1618 @@
+
+{
+  "topic_id": "english_grammar_modals",
+  "topic_title": "Modal Verbs (Can, Could, May, Might, Must, Should, Will, Shall, Would, Need, Dare) with SBI PO Level Error Detection",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "SBI PO", "BPSC TRE"],
+  "total_cards": 90,
+  "characters": {
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 90 },
+      "intro_payload": {
+        "title": "Modal Verbs Mastery",
+        "icon": "🔑🗝️",
+        "subtitle": "Can, Could, May, Might, Must, Should, Will, Shall, Would, Need, Dare - Full Mastery for BPSC, SSC, Railway, Bank PO & BPSC TRE",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "SBI PO", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Understand core grammatical characteristics of Modal Verbs",
+          "Master Can/Could for ability, permission & possibility",
+          "Master May/Might for permission & possibility",
+          "Distinguish Must vs Have to (obligation) and deduction usage",
+          "Master Should/Ought to for advice and expectation",
+          "Master Will/Shall/Would for future, willingness & requests",
+          "Learn Need & Dare as semi-modals",
+          "Master Perfect Modals (should have, must have, could have, might have, needn't have)",
+          "Distinguish Used to vs Would for past habits",
+          "Crack SBI PO / Bank PO level Error Detection questions on Modals"
+        ]
+      },
+      "navigation": { "next": "card_02_modal_daily_life", "button_text": "Start Learning ➔" }
+    },
+    {
+      "card_id": "card_02_modal_daily_life",
+      "card_slug": "card_02_modal_daily_life",
+      "type": "chat",
+      "concept_id": "modal_basics",
+      "level": 1,
+      "progress": { "current": 2, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho tumhari mummy bolti hai - 'Tu cycle chala sakta hai' aur 'Tujhe cycle chalani chahiye'. Dono sentence mein ek chhota sa word hai jo poori baat ka matlab badal deta hai. Dekha?" },
+        { "speaker": "raju", "text": "Haan sir, 'sakta hai' aur 'chahiye' - dono alag feeling de rahe hain. Pehla ability jaisa hai, doosra advice jaisa!" },
+        { "speaker": "aman", "text": "Bilkul sahi! English mein bhi aise chhote helping words hote hain jo main verb se pehle aakar uska MOOD - ability, permission, possibility, obligation, advice - decide karte hain. Inhe kehte hain 'MODAL VERBS'." },
+        { "speaker": "raju", "text": "Sir 'Modal' matlab? Ye naam kaise pada?" }
+      ],
+      "navigation": { "next": "card_03_modal_definition", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_modal_definition",
+      "card_slug": "card_03_modal_definition",
+      "type": "chat",
+      "concept_id": "modal_basics",
+      "level": 1,
+      "progress": { "current": 3, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "'Modal' word 'Mood' se aaya hai - kyunki ye verbs speaker ka MOOD ya ATTITUDE dikhate hain: ability (can), permission (may), possibility (might), obligation (must), advice (should) waghera. Main modal verbs hain: can, could, may, might, must, should, will, shall, would." },
+        { "speaker": "raju", "text": "Sir ye to helping verb jaisa lag raha hai - 'is, am, are, has, have' jaisa?" },
+        { "speaker": "aman", "text": "Achha catch! Modals bhi ek type ke helping verb (auxiliary verb) hain, par inki apni khaas properties hoti hain jo 'is/has' mein nahi hoti. Chalo wo teen golden rules seekhte hain." },
+        { "speaker": "raju", "text": "Sir jaldi bataiye, ye to exam mein bahut kaam aayega lagta hai!" }
+      ],
+      "navigation": { "next": "card_04_modal_properties", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_modal_properties",
+      "card_slug": "card_04_modal_properties",
+      "type": "chat",
+      "concept_id": "modal_basics",
+      "level": 1,
+      "progress": { "current": 4, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "RULE 1: Modal ke baad hamesha BASE FORM (V1) of verb aata hai, kabhi bhi -s/-ing/-ed nahi lagta. Jaise 'He can goes' GALAT hai, 'He can go' sahi hai. RULE 2: Modal khud kabhi -s nahi leta, chahe subject 'He/She/It' ho - 'He cans swim' hamesha GALAT!" },
+        { "speaker": "raju", "text": "Achha! Toh 'He can swims' aur 'He cans swim' dono galat honge?" },
+        { "speaker": "aman", "text": "Bilkul sahi pakड़a! RULE 3: Do modals ek saath kabhi nahi aa sakte - 'He will can go' jaisa 'DOUBLE MODAL' hamesha GALAT hota hai. Ye SBI PO ka bahut common trap hai!" },
+        { "speaker": "raju", "text": "Sir ye 'double modal' wala point to bilkul naya laga, isko main definitely bhool jaata exam mein!" }
+      ],
+      "navigation": { "next": "card_05_modal_no_to", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_modal_no_to",
+      "card_slug": "card_05_modal_no_to",
+      "type": "chat",
+      "concept_id": "modal_basics",
+      "level": 1,
+      "progress": { "current": 5, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur zaroori rule - modal ke baad 'to' nahi lagta (except 'ought to', 'used to', 'have to' - ye semi-modals hain, inka rule alag hai). 'He must to go' GALAT hai, 'He must go' sahi hai." },
+        { "speaker": "raju", "text": "Sir 'ought to' mein to 'to' hai hi! Toh wo exception kyun hai?" },
+        { "speaker": "aman", "text": "Bahut achha doubt! 'Ought to', 'have to', 'used to' - inhe 'Semi-Modals' ya 'Marginal Modals' kehte hain kyunki inka structure normal modals se thoda different hai, par kaam modal jaisa hi karte hain. Hum inhe aage detail mein padhenge." },
+        { "speaker": "raju", "text": "Okay sir, ab main quiz ke liye ready hoon - ye 4 rules yaad ho gaye: base verb, no -s, no double modal, no 'to' (except special cases)!" }
+      ],
+      "navigation": { "next": "card_06_quiz1_basics", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_06_quiz1_basics",
+      "card_slug": "card_06_quiz1_basics",
+      "type": "quiz",
+      "concept_id": "modal_basics",
+      "level": 1,
+      "progress": { "current": 6, "total": 90 },
+      "quiz_payload": {
+        "question": "Which sentence follows correct Modal Verb grammar?",
+        "options": [
+          { "id": "A", "text": "She can plays the guitar." },
+          { "id": "B", "text": "She can play the guitar." },
+          { "id": "C", "text": "She cans play the guitar." },
+          { "id": "D", "text": "She can to play the guitar." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Modals are always followed by the base form (V1) of the verb, with no -s on the modal and no 'to' after it."
+      },
+      "navigation": { "next": "card_07_quiz2_basics", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz2_basics",
+      "card_slug": "card_07_quiz2_basics",
+      "type": "quiz",
+      "concept_id": "modal_basics",
+      "level": 1,
+      "progress": { "current": 7, "total": 90 },
+      "quiz_payload": {
+        "question": "Identify the error: 'He will can complete the project by tomorrow.'",
+        "options": [
+          { "id": "A", "text": "He will" },
+          { "id": "B", "text": "can complete" },
+          { "id": "C", "text": "the project" },
+          { "id": "D", "text": "by tomorrow" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'will can' is a double modal, which is never allowed in standard English. Correct: 'He will be able to complete...'"
+      },
+      "navigation": { "next": "card_08_quiz3_basics", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_quiz3_basics",
+      "card_slug": "card_08_quiz3_basics",
+      "type": "quiz",
+      "concept_id": "modal_basics",
+      "level": 1,
+      "progress": { "current": 8, "total": 90 },
+      "quiz_payload": {
+        "question": "Statement 1: Modal verbs never take -s even with He/She/It subjects. Statement 2: Modals are always followed by 'to + base verb' like normal verbs. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 2 is false - modals are followed directly by the base verb, without 'to' (except semi-modals like ought to, have to, used to)."
+      },
+      "navigation": { "next": "card_09_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_09_milestone1",
+      "card_slug": "card_09_milestone1",
+      "type": "milestone",
+      "concept_id": "modal_basics",
+      "level": 1,
+      "progress": { "current": 9, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔑",
+        "completed_topic": "Basics & Properties of Modal Verbs",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/11 Clear",
+        "motivational_quote": "Foundation pakki ho gayi Raju! Ab har modal ko individually explore karte hain, shuruaat 'Can/Could' se!"
+      },
+      "navigation": { "next": "card_10_can_ability", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_10_can_ability",
+      "card_slug": "card_10_can_ability",
+      "type": "chat",
+      "concept_id": "can_could",
+      "level": 1,
+      "progress": { "current": 10, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, jab tum bolte ho 'Main cycle chala sakta hoon' - ye tumhari ABILITY (kshamata) dikha raha hai. English mein iske liye 'CAN' use hota hai - 'I can ride a bicycle.'" },
+        { "speaker": "raju", "text": "Sir 'can' sirf ability ke liye hi use hota hai?" },
+        { "speaker": "aman", "text": "Nahi Raju, 'can' ke teen main uses hain - Ability (I can swim), Informal Permission (Can I go out?), aur Possibility (It can rain today - kabhi kabhi weak possibility ke liye)." },
+        { "speaker": "raju", "text": "Achha! Toh ek hi word 'can' teen alag matlab de sakta hai? Ye to confuse karega!" }
+      ],
+      "navigation": { "next": "card_11_can_permission", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_can_permission",
+      "card_slug": "card_11_can_permission",
+      "type": "chat",
+      "concept_id": "can_could",
+      "level": 1,
+      "progress": { "current": 11, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Confuse mat ho, context se pata chal jaata hai. Ek important baat - jab tum apartment guard se pooчhте ho 'Can I go inside?', ye INFORMAL permission hai. Formal situation mein (jaise exam ya teacher se) 'May I go inside?' zyada sahi maana jaata hai." },
+        { "speaker": "raju", "text": "Ohh! Toh 'can' aur 'may' dono permission ke liye chalte hain, bas formal-informal ka fark hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! ⭐ BPSC TRE Favorite: writing/formal exam mein 'May I' hi correct answer maana jaata hai, 'Can I' informal spoken English mein chalta hai." },
+        { "speaker": "raju", "text": "Sir ab 'could' ka role kya hai? Wo bhi 'can' jaisa hi lagta hai!" }
+      ],
+      "navigation": { "next": "card_12_could_past_polite", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_could_past_polite",
+      "card_slug": "card_12_could_past_polite",
+      "type": "chat",
+      "concept_id": "can_could",
+      "level": 1,
+      "progress": { "current": 12, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "'Could' 'can' ka past form hai, do jagah use hota hai: (1) Past ability - 'I could swim when I was young.' (2) POLITE REQUEST - 'Could you help me?' - ye 'Can you help me?' se zyada polite lagta hai, par PAST ka matlab nahi hai." },
+        { "speaker": "raju", "text": "Hain?? Sir 'could' past hai, par polite request mein present time ki baat ho rahi hai! Ye to bilkul confuse kar diya!" },
+        { "speaker": "aman", "text": "Yahi exam ka sabse bada trap hai! Yaad rakho - 'could' jab REQUEST ya POLITENESS ke liye use ho, to uska time PRESENT/FUTURE hi hota hai, past nahi. Grammar mein isko 'tentative/polite form' kehte hain." },
+        { "speaker": "raju", "text": "Achha sir, matlab 'could' ka matlab hamesha 'past' nahi hota, context dekhna padega!" }
+      ],
+      "navigation": { "next": "card_13_could_was_able_to_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_could_was_able_to_trap",
+      "card_slug": "card_13_could_was_able_to_trap",
+      "type": "guess",
+      "concept_id": "can_could",
+      "level": 1,
+      "progress": { "current": 13, "total": 90 },
+      "guess_payload": {
+        "question": "Raju's cricket team faced a tough match yesterday. Which sentence correctly says 'He managed to score a century in yesterday's SPECIFIC match'?",
+        "options": [
+          { "id": "A", "text": "He could score a century yesterday." },
+          { "id": "B", "text": "He was able to score a century yesterday." },
+          { "id": "C", "text": "He can score a century yesterday." },
+          { "id": "D", "text": "He may score a century yesterday." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ Very important exam trap: 'could' is used for GENERAL past ability (I could swim as a child), but for a SINGLE SPECIFIC past achievement/success, 'was/were able to' is the correct form, NOT 'could'."
+      },
+      "navigation": { "next": "card_14_quiz1_cancould", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_14_quiz1_cancould",
+      "card_slug": "card_14_quiz1_cancould",
+      "type": "quiz",
+      "concept_id": "can_could",
+      "level": 1,
+      "progress": { "current": 14, "total": 90 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence for a general past ability (not a single specific event):",
+        "options": [
+          { "id": "A", "text": "My grandfather was able to speak four languages." },
+          { "id": "B", "text": "My grandfather could speak four languages." },
+          { "id": "C", "text": "My grandfather can speak four languages when young." },
+          { "id": "D", "text": "My grandfather will can speak four languages." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "For a GENERAL past ability (repeated/habitual over time, not one specific instance), 'could' is the standard and correct form."
+      },
+      "navigation": { "next": "card_15_quiz2_cancould", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz2_cancould",
+      "card_slug": "card_15_quiz2_cancould",
+      "type": "quiz",
+      "concept_id": "can_could",
+      "level": 1,
+      "progress": { "current": 15, "total": 90 },
+      "quiz_payload": {
+        "question": "Which sentence uses 'could' correctly for a POLITE REQUEST (not past ability)?",
+        "options": [
+          { "id": "A", "text": "Could you please pass the salt?" },
+          { "id": "B", "text": "I could ride a bicycle at age 5." },
+          { "id": "C", "text": "He could not attend school due to illness." },
+          { "id": "D", "text": "They could win the match last year." }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Could you please...?' is a polite request form referring to present/future time, not a past-tense meaning."
+      },
+      "navigation": { "next": "card_16_quiz3_cancould", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_quiz3_cancould",
+      "card_slug": "card_16_quiz3_cancould",
+      "type": "quiz",
+      "concept_id": "can_could",
+      "level": 1,
+      "progress": { "current": 16, "total": 90 },
+      "quiz_payload": {
+        "question": "Statement 1: 'Can' is used for informal permission; 'May' is preferred for formal permission. Statement 2: 'Could' always indicates a past time action. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 2 is false - 'could' can indicate polite requests in present/future time too, not always the past."
+      },
+      "navigation": { "next": "card_17_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_17_milestone2",
+      "card_slug": "card_17_milestone2",
+      "type": "milestone",
+      "concept_id": "can_could",
+      "level": 1,
+      "progress": { "current": 17, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💪",
+        "completed_topic": "Can & Could - Ability, Permission, Possibility",
+        "xp_earned": 55,
+        "milestone_progress": "Module 2/11 Clear",
+        "motivational_quote": "Can-Could ka trap pakड़ liya! Ab May aur Might ka formal duniya explore karte hain!"
+      },
+      "navigation": { "next": "card_18_may_permission", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_18_may_permission",
+      "card_slug": "card_18_may_permission",
+      "type": "chat",
+      "concept_id": "may_might",
+      "level": 2,
+      "progress": { "current": 18, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, tumne notice kiya - jab school mein tum principal se poochhte ho 'May I come in, sir?' - ye 'can' se zyada polite aur FORMAL sunta hai na?" },
+        { "speaker": "raju", "text": "Haan sir, 'may' bolne mein zyada respect wala lagta hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'May' formal permission ke liye use hota hai. Iska doosra bada use hai POSSIBILITY dikhana - 'It may rain today' matlab 50-50 chance hai baarish ka." },
+        { "speaker": "raju", "text": "Sir 'might' bhi to yahi kaam karta hai na? Fark kya hai 'may' aur 'might' mein?" }
+      ],
+      "navigation": { "next": "card_19_may_might_possibility", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_may_might_possibility",
+      "card_slug": "card_19_may_might_possibility",
+      "type": "chat",
+      "concept_id": "may_might",
+      "level": 2,
+      "progress": { "current": 19, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut achha sawal! Possibility ke context mein 'may' STRONGER possibility dikhata hai (thoda zyada confident), aur 'might' WEAKER possibility dikhata hai (kam confident, more doubtful). 'It may rain' (achhi khaasi chance) vs 'It might rain' (bahut kam chance, sirf ek guess)." },
+        { "speaker": "raju", "text": "Ohh! Toh dono same nahi hain, 'might' zyada uncertain hai. Ye to bahut fine difference hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi observation! Aur ek important use hai - 'might' hamesha 'may' ka past-tense-jaisa version bhi hota hai jab reported speech mein use karte hain, ya jab hum hypothetical/less likely scenario baat kar rahe hote hain." },
+        { "speaker": "raju", "text": "Sir may/might ka permission wala use bhi past mein badalta hai kya?" }
+      ],
+      "navigation": { "next": "card_20_may_might_wish", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_may_might_wish",
+      "card_slug": "card_20_may_might_wish",
+      "type": "chat",
+      "concept_id": "may_might",
+      "level": 2,
+      "progress": { "current": 20, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Permission ke liye 'might' bahut kam use hota hai, wo mostly possibility ya reported speech ke liye reserved hai. Ek aur special use suno - 'May' WISH/PRAYER ke liye bhi use hota hai! Jaise 'May you live long!' ya 'May God bless you!'" },
+        { "speaker": "raju", "text": "Sir ye to blessing wala sentence hai! Isme 'may' subject se pehle aata hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi pakड़a! Ye ek SPECIAL structure hai - 'May + Subject + base verb' - normal question order jaisa dikhta hai, par ye statement/wish hoti hai, question nahi. Exam mein isko galat translate karne ki galti hoti hai!" },
+        { "speaker": "raju", "text": "Achha sir, ab main confuse nahi hounga - permission=may(formal)/can(informal), possibility=may(strong)/might(weak), wish=may+subject+verb!" }
+      ],
+      "navigation": { "next": "card_21_quiz1_maymight", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_quiz1_maymight",
+      "card_slug": "card_21_quiz1_maymight",
+      "type": "quiz",
+      "concept_id": "may_might",
+      "level": 2,
+      "progress": { "current": 21, "total": 90 },
+      "quiz_payload": {
+        "question": "Choose the sentence showing a WEAKER, more doubtful possibility:",
+        "options": [
+          { "id": "A", "text": "She may join the meeting today." },
+          { "id": "B", "text": "She might join the meeting today." },
+          { "id": "C", "text": "She must join the meeting today." },
+          { "id": "D", "text": "She can join the meeting today." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Might' expresses a weaker, more uncertain possibility than 'may'."
+      },
+      "navigation": { "next": "card_22_quiz2_maymight", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_22_quiz2_maymight",
+      "card_slug": "card_22_quiz2_maymight",
+      "type": "quiz",
+      "concept_id": "may_might",
+      "level": 2,
+      "progress": { "current": 22, "total": 90 },
+      "quiz_payload": {
+        "question": "Which sentence correctly expresses a WISH/PRAYER using 'may'?",
+        "options": [
+          { "id": "A", "text": "May you succeed in life!" },
+          { "id": "B", "text": "You may succeed in life!" },
+          { "id": "C", "text": "May you to succeed in life!" },
+          { "id": "D", "text": "You might succeed in life!" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Wishes/prayers follow the structure 'May + subject + base verb', with 'may' placed BEFORE the subject."
+      },
+      "navigation": { "next": "card_23_quiz3_maymight", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_quiz3_maymight",
+      "card_slug": "card_23_quiz3_maymight",
+      "type": "quiz",
+      "concept_id": "may_might",
+      "level": 2,
+      "progress": { "current": 23, "total": 90 },
+      "quiz_payload": {
+        "question": "Statement 1: 'May' is preferred over 'can' for formal permission requests. Statement 2: 'Might' always shows a STRONGER possibility than 'may'. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 2 is false - 'might' shows a WEAKER possibility than 'may', not stronger."
+      },
+      "navigation": { "next": "card_24_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_24_milestone3",
+      "card_slug": "card_24_milestone3",
+      "type": "milestone",
+      "concept_id": "may_might",
+      "level": 2,
+      "progress": { "current": 24, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🙏",
+        "completed_topic": "May & Might - Permission, Possibility, Wish",
+        "xp_earned": 55,
+        "milestone_progress": "Module 3/11 Clear",
+        "motivational_quote": "May-Might ka formal world clear ho gaya! Ab sabse important obligation wale modals - Must aur Have to - explore karte hain!"
+      },
+      "navigation": { "next": "card_25_must_internal_obligation", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_25_must_internal_obligation",
+      "card_slug": "card_25_must_internal_obligation",
+      "type": "chat",
+      "concept_id": "must_have_to",
+      "level": 2,
+      "progress": { "current": 25, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, jab tum khud decide karte ho 'Mujhe kal exam ke liye padhna hi hai' - ye tumhara OWN feeling hai, koi bahar se force nahi kar raha. Iske liye 'MUST' use hota hai - 'I must study for the exam.'" },
+        { "speaker": "raju", "text": "Sir matlab 'must' tab use hota hai jab main khud kuch zaroori samajhta hoon?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Isko kehte hain INTERNAL OBLIGATION - speaker ka apna decision/feeling. Ab suno agar mummy bole 'You must finish your homework before dinner' - ye bhi 'must' hai, par yahan speaker (mummy) apni authority use kar rahi hai." },
+        { "speaker": "raju", "text": "Achha! Toh 'must' do jagah use ho sakta hai - khud ka decision aur doosre ka strong order?" }
+      ],
+      "navigation": { "next": "card_26_have_to_external", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_26_have_to_external",
+      "card_slug": "card_26_have_to_external",
+      "type": "chat",
+      "concept_id": "must_have_to",
+      "level": 2,
+      "progress": { "current": 26, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab 'HAVE TO' suno - ye EXTERNAL OBLIGATION dikhata hai, matlab koi RULE ya CIRCUMSTANCE force kar raha hai, speaker ki apni feeling nahi. Jaise 'I have to wear a uniform at school' - ye school ka rule hai, tumhari personal feeling nahi." },
+        { "speaker": "raju", "text": "Ohh! Toh 'must' = 'mera khud ka feeling', 'have to' = 'bahar se rule/circumstance'?" },
+        { "speaker": "aman", "text": "Exactly! ⭐ BPSC TRE Favorite trap: 'I must submit the form by Friday' (personal urgency) vs 'I have to submit the form by Friday' (company/office rule) - dono sahi hain, but MEANING mein subtle difference hai." },
+        { "speaker": "raju", "text": "Sir 'have to' ka past form kya hota hai? 'must' ka to past nahi hota shayad?" }
+      ],
+      "navigation": { "next": "card_27_had_to_past", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_27_had_to_past",
+      "card_slug": "card_27_had_to_past",
+      "type": "chat",
+      "concept_id": "must_have_to",
+      "level": 2,
+      "progress": { "current": 27, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut zaroori catch! 'Must' ka koi PAST TENSE FORM nahi hota - ye ek DEFECTIVE MODAL hai. Isliye past obligation ke liye hamesha 'HAD TO' use karte hain: 'Yesterday, I had to finish my project.'" },
+        { "speaker": "raju", "text": "Sir 'I musted finish' jaisa kuch nahi hota kabhi?" },
+        { "speaker": "aman", "text": "Bilkul nahi, 'musted' word hi exist nahi karta English mein! Ye SSC/Railway ka classic factual trap hai - Modal verbs jaise must, can, may, shall - inka koi -ed/-ing form nahi hota, ye 'DEFECTIVE VERBS' kehlate hain." },
+        { "speaker": "raju", "text": "Achha sir, ab 'must not' aur 'need not' ka fark bhi bata dijiye, ye dono negative mein kaafi confuse karte hain!" }
+      ],
+      "navigation": { "next": "card_28_mustnot_neednot_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_28_mustnot_neednot_trap",
+      "card_slug": "card_28_mustnot_neednot_trap",
+      "type": "chat",
+      "concept_id": "must_have_to",
+      "level": 2,
+      "progress": { "current": 28, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ruko, ye sabse bada trap hai! 'MUST NOT' matlab PROHIBITION - 'You must not smoke here' matlab smoking STRICTLY MANA hai. Lekin 'NEED NOT' matlab NO NECESSITY - 'You need not come tomorrow' matlab aana zaroori nahi, par aa sakte ho agar chaho." },
+        { "speaker": "raju", "text": "Hain?? Sir dono negative hain, par matlab bilkul opposite hai! 'must not' = 'mat karo', 'need not' = 'karna zaroori nahi, chaho to karo'?" },
+        { "speaker": "aman", "text": "Bilkul sahi samjhe! Yehi confusion BPSC aur SBI PO dono mein baar baar test kiya jaata hai. Example clear karo: 'Students must not cheat in exams' (prohibition) vs 'Students need not bring their own calculator, we will provide one' (not necessary)." },
+        { "speaker": "raju", "text": "Sir ye to permanently yaad rakh lunga - 'must not' = danger/forbidden, 'need not' = optional/relax!" }
+      ],
+      "navigation": { "next": "card_29_must_deduction", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_29_must_deduction",
+      "card_slug": "card_29_must_deduction",
+      "type": "chat",
+      "concept_id": "must_have_to",
+      "level": 2,
+      "progress": { "current": 29, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab 'must' ka ek aur important use suno - LOGICAL DEDUCTION/CERTAINTY. Jaise raat ko 2 baje ghanti bajti hai, tum sochte ho 'Ye postman nahi ho sakta, ye zaroor koi emergency hoga' - English mein: 'It must be an emergency.'" },
+        { "speaker": "raju", "text": "Sir ye to obligation nahi hai, ye to 'guess kar ke sure hona' jaisa hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi observation! Isko kehte hain LOGICAL CERTAINTY - available evidence ke basis pe sabse strong possible conclusion. Jaise 'The lights are off, they must be asleep' - NEET/Science students ke liye bhi useful hai reasoning explain karte waqt!" },
+        { "speaker": "raju", "text": "Sir toh 'must' ke teen matlab ho gaye - personal obligation, prohibition (must not), aur logical certainty?" }
+      ],
+      "navigation": { "next": "card_30_quiz1_musthaveto", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_30_quiz1_musthaveto",
+      "card_slug": "card_30_quiz1_musthaveto",
+      "type": "quiz",
+      "concept_id": "must_have_to",
+      "level": 2,
+      "progress": { "current": 30, "total": 90 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence showing PAST obligation:",
+        "options": [
+          { "id": "A", "text": "Yesterday, I musted attend a meeting." },
+          { "id": "B", "text": "Yesterday, I had to attend a meeting." },
+          { "id": "C", "text": "Yesterday, I must attend a meeting." },
+          { "id": "D", "text": "Yesterday, I have to attend a meeting." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Must' has no past tense form; 'had to' is used to express past obligation."
+      },
+      "navigation": { "next": "card_31_quiz2_musthaveto", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_31_quiz2_musthaveto",
+      "card_slug": "card_31_quiz2_musthaveto",
+      "type": "quiz",
+      "concept_id": "must_have_to",
+      "level": 2,
+      "progress": { "current": 31, "total": 90 },
+      "quiz_payload": {
+        "question": "Which sentence correctly shows 'NO NECESSITY' (not prohibition)?",
+        "options": [
+          { "id": "A", "text": "You must not park here." },
+          { "id": "B", "text": "You need not pay the fee today." },
+          { "id": "C", "text": "You must not pay the fee today." },
+          { "id": "D", "text": "You cannot pay the fee today." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Need not' shows that an action is not necessary, while 'must not' shows strict prohibition - a completely different meaning."
+      },
+      "navigation": { "next": "card_32_quiz3_musthaveto", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_32_quiz3_musthaveto",
+      "card_slug": "card_32_quiz3_musthaveto",
+      "type": "quiz",
+      "concept_id": "must_have_to",
+      "level": 2,
+      "progress": { "current": 32, "total": 90 },
+      "quiz_payload": {
+        "question": "Statement 1: 'Must' can express logical certainty based on evidence. Statement 2: 'Must not' and 'need not' convey the same meaning of 'not necessary'. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 2 is false - 'must not' means prohibition (forbidden), while 'need not' means lack of necessity. They are opposite in meaning, not the same."
+      },
+      "navigation": { "next": "card_33_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_33_milestone4",
+      "card_slug": "card_33_milestone4",
+      "type": "milestone",
+      "concept_id": "must_have_to",
+      "level": 2,
+      "progress": { "current": 33, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Must, Have to, Had to - Obligation & Deduction",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/11 Clear",
+        "motivational_quote": "Must vs Have to ka sabse bada confusion clear ho gaya! Ab Should aur Ought to seekhte hain!"
+      },
+      "navigation": { "next": "card_34_should_advice", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_34_should_advice",
+      "card_slug": "card_34_should_advice",
+      "type": "chat",
+      "concept_id": "should_ought_to",
+      "level": 2,
+      "progress": { "current": 34, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, jab tumhari mummy bolti hai 'Tumhe roz exercise karni chahiye' - ye ek ADVICE hai, koi strict order nahi. English mein iske liye 'SHOULD' use hota hai: 'You should exercise daily.'" },
+        { "speaker": "raju", "text": "Sir toh 'should' 'must' se weaker hai? Matlab follow na kare to bhi chalega?" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'Should' ADVICE/SUGGESTION dikhata hai, jabki 'must' STRONG OBLIGATION dikhata hai. Agar 'should' follow na karo, koi punishment nahi hoga, bas achha nahi hoga." },
+        { "speaker": "raju", "text": "Achha sir, 'ought to' bhi to same matlab deta hai na? Fark kya hai?" }
+      ],
+      "navigation": { "next": "card_35_ought_to_usage", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_35_ought_to_usage",
+      "card_slug": "card_35_ought_to_usage",
+      "type": "chat",
+      "concept_id": "should_ought_to",
+      "level": 2,
+      "progress": { "current": 35, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "'Ought to' ka meaning bilkul 'should' jaisa hi hai - advice/moral duty. Fark sirf structure mein hai - 'ought to' ke baad 'to' lagta hai (ye semi-modal hai), jabki 'should' ke baad direct base verb aata hai: 'You ought to respect elders' = 'You should respect elders.'" },
+        { "speaker": "raju", "text": "Sir toh 'ought' ke baad 'to' lagana bhoolna nahi chahiye, warna galti ho jaayegi!" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'You ought respect elders' GALAT hai, 'You ought TO respect elders' sahi hai. Ye ek chhota par exam-relevant point hai." },
+        { "speaker": "raju", "text": "Sir 'should' ka koi aur use bhi hai advice ke alawa?" }
+      ],
+      "navigation": { "next": "card_36_should_expectation", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_36_should_expectation",
+      "card_slug": "card_36_should_expectation",
+      "type": "chat",
+      "concept_id": "should_ought_to",
+      "level": 2,
+      "progress": { "current": 36, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan! 'Should' EXPECTATION bhi dikhata hai - jab tum expect karte ho ki kuch honа chahiye based on normal circumstances. Jaise 'The train should arrive by 5 pm' matlab normally aana chahiye is time tak, though guarantee nahi hai." },
+        { "speaker": "raju", "text": "Sir ye to 'must' wale logical certainty jaisa lagta hai, par thoda weak version!" },
+        { "speaker": "aman", "text": "Bilkul sahi comparison! 'Must' STRONG certainty deta hai based on solid evidence, 'should' MILD expectation deta hai based on normal/usual pattern. Dono mein confidence level ka fark hai." },
+        { "speaker": "raju", "text": "Achha sir ab main quiz ke liye ready hoon - should=advice/mild expectation, ought to=same as should with 'to'!" }
+      ],
+      "navigation": { "next": "card_37_quiz1_should", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_37_quiz1_should",
+      "card_slug": "card_37_quiz1_should",
+      "type": "quiz",
+      "concept_id": "should_ought_to",
+      "level": 2,
+      "progress": { "current": 37, "total": 90 },
+      "quiz_payload": {
+        "question": "Choose the sentence with correct 'ought to' structure:",
+        "options": [
+          { "id": "A", "text": "You ought respect your teachers." },
+          { "id": "B", "text": "You ought to respect your teachers." },
+          { "id": "C", "text": "You ought to respecting your teachers." },
+          { "id": "D", "text": "You ought respected your teachers." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Ought' must always be followed by 'to + base verb', unlike other modals."
+      },
+      "navigation": { "next": "card_38_quiz2_should", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_38_quiz2_should",
+      "card_slug": "card_38_quiz2_should",
+      "type": "quiz",
+      "concept_id": "should_ought_to",
+      "level": 2,
+      "progress": { "current": 38, "total": 90 },
+      "quiz_payload": {
+        "question": "Choose the correct usage of 'should' for expectation:",
+        "options": [
+          { "id": "A", "text": "The results should be out by Friday." },
+          { "id": "B", "text": "The results must be out by Friday only, no other option." },
+          { "id": "C", "text": "The results should being out by Friday." },
+          { "id": "D", "text": "The results should to be out by Friday." }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Should' expresses a mild expectation based on the normal/usual pattern, followed directly by the base verb."
+      },
+      "navigation": { "next": "card_39_quiz3_should", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_39_quiz3_should",
+      "card_slug": "card_39_quiz3_should",
+      "type": "quiz",
+      "concept_id": "should_ought_to",
+      "level": 2,
+      "progress": { "current": 39, "total": 90 },
+      "quiz_payload": {
+        "question": "Statement 1: 'Should' and 'Must' both convey the exact same strength of obligation. Statement 2: 'Ought to' has the same meaning as 'should' but requires 'to' before the base verb. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 is false - 'must' is much stronger obligation than 'should' (advice)."
+      },
+      "navigation": { "next": "card_40_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_40_milestone5",
+      "card_slug": "card_40_milestone5",
+      "type": "milestone",
+      "concept_id": "should_ought_to",
+      "level": 2,
+      "progress": { "current": 40, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💭",
+        "completed_topic": "Should & Ought to - Advice & Expectation",
+        "xp_earned": 55,
+        "milestone_progress": "Module 5/11 Clear",
+        "motivational_quote": "Advice wale modals crack kar liye! Ab Will, Shall aur Would ka future world explore karte hain!"
+      },
+      "navigation": { "next": "card_41_will_future_willingness", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_41_will_future_willingness",
+      "card_slug": "card_41_will_future_willingness",
+      "type": "chat",
+      "concept_id": "will_shall_would",
+      "level": 3,
+      "progress": { "current": 41, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, jab tum bolte ho 'Main kal helper karunga' - ye ek FUTURE action hai. English mein 'WILL' use hota hai future ke liye: 'I will help you tomorrow.' Iska ek aur use hai WILLINGNESS dikhana - 'I will carry your bag' matlab tum khud offer kar rahe ho." },
+        { "speaker": "raju", "text": "Sir 'will' future aur willingness dono ke liye same word? Kaise pata chalega kaunsa hai?" },
+        { "speaker": "aman", "text": "Context se pata chalta hai - agar sirf future plan bata rahe ho to 'future', agar khud se madad ka offer kar rahe ho spontaneously, to wo 'willingness' hai. Dono cases mein structure same rehta hai." },
+        { "speaker": "raju", "text": "Sir 'shall' bhi to future ke liye use hota hai na, fark kya hai 'will' aur 'shall' mein?" }
+      ],
+      "navigation": { "next": "card_42_shall_usage", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_42_shall_usage",
+      "card_slug": "card_42_shall_usage",
+      "type": "chat",
+      "concept_id": "will_shall_would",
+      "level": 3,
+      "progress": { "current": 42, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Traditional grammar rule: 'Shall' sirf 'I' aur 'We' ke saath use hota hai simple future ke liye (formal/British English), jabki 'Will' baaki sabhi subjects (You/He/She/They) ke saath use hota hai. Modern English mein 'will' sab jagah chal jaata hai." },
+        { "speaker": "raju", "text": "Sir toh 'Shall he come tomorrow?' galat hoga?" },
+        { "speaker": "aman", "text": "Sirf simple future statement mein 'shall' 'he/she' ke saath thoda unusual hai, lekin SUGGESTIONS/OFFERS ke liye 'shall I/we' bahut common hai: 'Shall we go for a walk?', 'Shall I open the window?' - ye BPSC/SSC mein direct poocha jaata hai." },
+        { "speaker": "raju", "text": "Achha sir, matlab 'Shall I/we' ka special use hai suggestion/offer ke liye, warna 'will' hi zyada use hota hai!" }
+      ],
+      "navigation": { "next": "card_43_would_uses", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_43_would_uses",
+      "card_slug": "card_43_would_uses",
+      "type": "chat",
+      "concept_id": "will_shall_would",
+      "level": 3,
+      "progress": { "current": 43, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab 'WOULD' ke teen main uses yaad karo: (1) POLITE REQUEST - 'Would you please close the door?' (2) PAST HABIT - 'When I was young, I would play in the fields.' (3) CONDITIONAL/HYPOTHETICAL - 'If I had money, I would buy a car.'" },
+        { "speaker": "raju", "text": "Sir 'would' ke liye ye teenon uses ek saath yaad rakhne mein confuse ho jaunga!" },
+        { "speaker": "aman", "text": "Chinta mat karo - context se automatic pata chal jaata hai. 'Would you' shuru mein ho to request hai, 'if' ho to conditional hai, aur past time-reference ho to past habit hai." },
+        { "speaker": "raju", "text": "Sir 'would' aur 'used to' dono past habit ke liye use hote hain? Ye to double confusion hai!" }
+      ],
+      "navigation": { "next": "card_44_quiz1_willshallwould", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_44_quiz1_willshallwould",
+      "card_slug": "card_44_quiz1_willshallwould",
+      "type": "quiz",
+      "concept_id": "will_shall_would",
+      "level": 3,
+      "progress": { "current": 44, "total": 90 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence for a SUGGESTION/OFFER:",
+        "options": [
+          { "id": "A", "text": "Will I open the window?" },
+          { "id": "B", "text": "Shall I open the window?" },
+          { "id": "C", "text": "Should I opens the window?" },
+          { "id": "D", "text": "Must I opening the window?" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Shall I/we' is the standard structure for polite suggestions and offers."
+      },
+      "navigation": { "next": "card_45_quiz2_willshallwould", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_45_quiz2_willshallwould",
+      "card_slug": "card_45_quiz2_willshallwould",
+      "type": "quiz",
+      "concept_id": "will_shall_would",
+      "level": 3,
+      "progress": { "current": 45, "total": 90 },
+      "quiz_payload": {
+        "question": "Choose the sentence correctly using 'would' for a POLITE REQUEST:",
+        "options": [
+          { "id": "A", "text": "Would you mind closing the door?" },
+          { "id": "B", "text": "Will you mind closing the door forcefully?" },
+          { "id": "C", "text": "Would you minded closing the door?" },
+          { "id": "D", "text": "Would you to close the door?" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Would you mind + V-ing' is the standard polite request structure."
+      },
+      "navigation": { "next": "card_46_quiz3_willshallwould", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_46_quiz3_willshallwould",
+      "card_slug": "card_46_quiz3_willshallwould",
+      "type": "quiz",
+      "concept_id": "will_shall_would",
+      "level": 3,
+      "progress": { "current": 46, "total": 90 },
+      "quiz_payload": {
+        "question": "Statement 1: Traditionally, 'shall' is used with 'I' and 'we' for simple future in formal English. Statement 2: 'Would' can never be used to describe past habits. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 2 is false - 'would' is commonly used to describe repeated past habits/actions."
+      },
+      "navigation": { "next": "card_47_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_47_milestone6",
+      "card_slug": "card_47_milestone6",
+      "type": "milestone",
+      "concept_id": "will_shall_would",
+      "level": 3,
+      "progress": { "current": 47, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔮",
+        "completed_topic": "Will, Shall & Would - Future, Willingness, Requests",
+        "xp_earned": 55,
+        "milestone_progress": "Module 6/11 Clear",
+        "motivational_quote": "Future wale modals bhi clear ho gaye! Ab do chhote lekin tricky semi-modals - Need aur Dare - dekhte hain!"
+      },
+      "navigation": { "next": "card_48_need_semi_modal", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_48_need_semi_modal",
+      "card_slug": "card_48_need_semi_modal",
+      "type": "chat",
+      "concept_id": "need_dare",
+      "level": 3,
+      "progress": { "current": 48, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, 'need' ek interesting word hai - ye MODAL bhi ban sakta hai aur MAIN VERB bhi. Jab modal ki tarah use hota hai, sirf NEGATIVE aur QUESTION mein aata hai, aur baad mein base verb (no -s, no 'to'): 'You need not worry.'" },
+        { "speaker": "raju", "text": "Sir matlab 'need' modal sirf negative/question mein hi chalta hai, positive mein nahi?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Positive statement ke liye 'need' MAIN VERB ki tarah use hota hai, jisme normal rules lagte hain - 'He needs to study' (yahan -s bhi hai aur 'to' bhi hai, kyunki ye MAIN VERB hai, modal nahi)." },
+        { "speaker": "raju", "text": "Ohh! Toh 'He need study' galat hoga, 'He needs to study' sahi hoga positive mein?" }
+      ],
+      "navigation": { "next": "card_49_dare_semi_modal", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_49_dare_semi_modal",
+      "card_slug": "card_49_dare_semi_modal",
+      "type": "chat",
+      "concept_id": "need_dare",
+      "level": 3,
+      "progress": { "current": 49, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Waise hi 'DARE' bhi dono roop mein use hota hai. MODAL ki tarah (negative/question mein): 'He dare not speak to the boss.' MAIN VERB ki tarah (positive mein): 'He dares to speak the truth.'" },
+        { "speaker": "raju", "text": "Sir ye 'need' aur 'dare' dono to same rule follow kar rahe hain! Yaad rakhna easy ho gaya!" },
+        { "speaker": "aman", "text": "Bilkul sahi observation - inhe 'SEMI-MODALS' isiliye kaha jaata hai kyunki ye MODAL aur MAIN VERB dono ki tarah behave kar sakte hain, context ke hisaab se!" },
+        { "speaker": "raju", "text": "Sir ab quiz mein ye dono try karna chahta hoon!" }
+      ],
+      "navigation": { "next": "card_50_quiz1_needdare", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_50_quiz1_needdare",
+      "card_slug": "card_50_quiz1_needdare",
+      "type": "quiz",
+      "concept_id": "need_dare",
+      "level": 3,
+      "progress": { "current": 50, "total": 90 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence (Positive statement using 'need' as main verb):",
+        "options": [
+          { "id": "A", "text": "She need to complete the assignment." },
+          { "id": "B", "text": "She needs to complete the assignment." },
+          { "id": "C", "text": "She need completes the assignment." },
+          { "id": "D", "text": "She needs complete the assignment." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "In a positive statement, 'need' behaves as a main verb, taking -s with third person singular and requiring 'to' before the base verb."
+      },
+      "navigation": { "next": "card_51_quiz2_needdare", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_51_quiz2_needdare",
+      "card_slug": "card_51_quiz2_needdare",
+      "type": "quiz",
+      "concept_id": "need_dare",
+      "level": 3,
+      "progress": { "current": 51, "total": 90 },
+      "quiz_payload": {
+        "question": "Choose the correct sentence (Negative statement using 'need' as modal):",
+        "options": [
+          { "id": "A", "text": "You need not to worry about it." },
+          { "id": "B", "text": "You need not worry about it." },
+          { "id": "C", "text": "You needs not worry about it." },
+          { "id": "D", "text": "You do not need worrying about it." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "As a modal in negative form, 'need' takes no -s, no 'to', and is followed directly by the base verb: 'need not worry'."
+      },
+      "navigation": { "next": "card_52_quiz3_needdare", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_52_quiz3_needdare",
+      "card_slug": "card_52_quiz3_needdare",
+      "type": "quiz",
+      "concept_id": "need_dare",
+      "level": 3,
+      "progress": { "current": 52, "total": 90 },
+      "quiz_payload": {
+        "question": "Statement 1: 'Dare' as a modal is used mainly in negative and interrogative sentences. Statement 2: 'Dare' as a main verb requires 'to + base verb' in positive statements. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Both statements correctly describe the dual (semi-modal) behavior of 'dare'."
+      },
+      "navigation": { "next": "card_53_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_53_milestone7",
+      "card_slug": "card_53_milestone7",
+      "type": "milestone",
+      "concept_id": "need_dare",
+      "level": 3,
+      "progress": { "current": 53, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Need & Dare - Semi-Modals",
+        "xp_earned": 55,
+        "milestone_progress": "Module 7/11 Clear",
+        "motivational_quote": "Semi-modals bhi clear ho gaye! Ab sabse important aur exam-heavy topic - PERFECT MODALS - seekhte hain!"
+      },
+      "navigation": { "next": "card_54_should_have_regret", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_54_should_have_regret",
+      "card_slug": "card_54_should_have_regret",
+      "type": "chat",
+      "concept_id": "perfect_modals",
+      "level": 3,
+      "progress": { "current": 54, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho tumne exam mein revision nahi kiya aur marks kam aaye. Ab tum pachhta rahe ho - is feeling ko English mein kaise bolenge? 'I should have revised before the exam.'" },
+        { "speaker": "raju", "text": "Sir ye to 'should' hi hai na, bas 'have' extra lag gaya?" },
+        { "speaker": "aman", "text": "Bilkul sahi observe kiya! Ye structure hai 'MODAL + HAVE + V3 (past participle)' - isse hum PAST ke baare mein baat karte hain jo already ho chuka. 'Should have + V3' matlab - kaam karna chahiye tha, par nahi kiya (REGRET/MISSED OPPORTUNITY)." },
+        { "speaker": "raju", "text": "Achha! Toh ye 'should' ka past version hai jo pachhtawa dikhata hai. Kya baaki modals ka bhi aisa perfect form hota hai?" }
+      ],
+      "navigation": { "next": "card_55_must_have_deduction", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_55_must_have_deduction",
+      "card_slug": "card_55_must_have_deduction",
+      "type": "chat",
+      "concept_id": "perfect_modals",
+      "level": 3,
+      "progress": { "current": 55, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan, bilkul! 'MUST HAVE + V3' PAST LOGICAL DEDUCTION dikhata hai. Jaise tum ghar aaye aur dekha floor geela hai - 'It must have rained last night' (strong confidence based on evidence, past ki baat)." },
+        { "speaker": "raju", "text": "Sir ye to bilkul 'must' wale current deduction jaisa hai, bas past mein shift ho gaya!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakड़a! Yehi logic hai - present modals ka 'have+V3' add karne se PAST version ban jaata hai, meaning wahi rehta hai, sirf time shift hota hai." },
+        { "speaker": "raju", "text": "Sir 'could have' aur 'might have' ka bhi yehi rule follow hota hai kya?" }
+      ],
+      "navigation": { "next": "card_56_could_have_unused", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_56_could_have_unused",
+      "card_slug": "card_56_could_have_unused",
+      "type": "chat",
+      "concept_id": "perfect_modals",
+      "level": 3,
+      "progress": { "current": 56, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul! 'COULD HAVE + V3' matlab - tumhare paas PAST ABILITY/OPPORTUNITY thi kuch karne ki, par tumne nahi kiya. Jaise 'I could have won the race, but I fell down.' - opportunity thi, use nahi ho paayi." },
+        { "speaker": "raju", "text": "Sir ye 'should have' se alag kaise hai? Dono mein to 'kuch nahi kiya' wala matlab hai!" },
+        { "speaker": "aman", "text": "Bahut zaroori difference! 'Should have' mein GALTI/REGRET ka bhaav hai (karna chahiye tha, moral duty), jabki 'could have' mein sirf OPPORTUNITY/CAPABILITY ka bhaav hai (kar sakte the, koi obligation nahi thi)." },
+        { "speaker": "raju", "text": "Achha sir! 'should have' = duty thi par nahi ki, 'could have' = capability thi par use nahi ki!" }
+      ],
+      "navigation": { "next": "card_57_might_would_have", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_57_might_would_have",
+      "card_slug": "card_57_might_would_have",
+      "type": "chat",
+      "concept_id": "perfect_modals",
+      "level": 3,
+      "progress": { "current": 57, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab 'MIGHT HAVE + V3' seekho - ye WEAK PAST POSSIBILITY dikhata hai: 'She might have missed the bus' (shayad miss kiya ho, sure nahi). Aur 'WOULD HAVE + V3' HYPOTHETICAL PAST RESULT dikhata hai - agar condition alag hoti, to ye result aata: 'If I had studied, I would have passed.'" },
+        { "speaker": "raju", "text": "Sir ye 'would have' to conditional sentence jaisa lag raha hai, jo humne pehle padha tha!" },
+        { "speaker": "aman", "text": "Bilkul sahi connect kiya! Ye Third Conditional ka main part hai - 'If + Past Perfect, would have + V3' - hum isko aage detail mein bhi dekhenge conditionals wale module mein." },
+        { "speaker": "raju", "text": "Sir ab 'needn't have' bhi sunta hoon kahin, wo bhi is family ka hai kya?" }
+      ],
+      "navigation": { "next": "card_58_neednt_have_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_58_neednt_have_trap",
+      "card_slug": "card_58_neednt_have_trap",
+      "type": "chat",
+      "concept_id": "perfect_modals",
+      "level": 3,
+      "progress": { "current": 58, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan Raju, aur ye SBI PO ka favorite trap hai! 'NEEDN'T HAVE + V3' matlab - tumne kuch kiya, par baad mein pata chala ki karne ki ZAROORAT hi nahi thi. Jaise 'I needn't have brought an umbrella' (laaya, par baarish hui hi nahi)." },
+        { "speaker": "raju", "text": "Sir ye 'didn't need to' se alag kaise hai? Dono mein 'zaroorat nahi thi' wala matlab hai!" },
+        { "speaker": "aman", "text": "Yahi sabse bada trap hai! 'DIDN'T NEED TO' matlab - pehle se hi pata tha zaroorat nahi hai, isliye kiya hi nahi. 'NEEDN'T HAVE' matlab - kiya (galti se), baad mein pata chala zaroorat nahi thi." },
+        { "speaker": "raju", "text": "Ohh sir! 'didn't need to' = pehle se pata tha, isliye kiya nahi. 'needn't have' = kar diya, baad mein pata chala bekaar tha. Ye to bahut fine difference hai!" }
+      ],
+      "navigation": { "next": "card_59_quiz1_perfectmodals", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_59_quiz1_perfectmodals",
+      "card_slug": "card_59_quiz1_perfectmodals",
+      "type": "quiz",
+      "concept_id": "perfect_modals",
+      "level": 3,
+      "progress": { "current": 59, "total": 90 },
+      "quiz_payload": {
+        "question": "Raju had the ability to win the race but tripped and fell. Which sentence correctly expresses this?",
+        "options": [
+          { "id": "A", "text": "Raju should have won the race." },
+          { "id": "B", "text": "Raju could have won the race." },
+          { "id": "C", "text": "Raju must have won the race." },
+          { "id": "D", "text": "Raju needn't have won the race." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Could have + V3' expresses a past ability/opportunity that existed but wasn't realized - perfect for describing an unused chance to win."
+      },
+      "navigation": { "next": "card_60_quiz2_perfectmodals", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_60_quiz2_perfectmodals",
+      "card_slug": "card_60_quiz2_perfectmodals",
+      "type": "quiz",
+      "concept_id": "perfect_modals",
+      "level": 3,
+      "progress": { "current": 60, "total": 90 },
+      "quiz_payload": {
+        "question": "Raju bought extra vegetables thinking guests were coming, but they cancelled. Which sentence best expresses this unnecessary action?",
+        "options": [
+          { "id": "A", "text": "Raju didn't need to buy extra vegetables." },
+          { "id": "B", "text": "Raju needn't have bought extra vegetables." },
+          { "id": "C", "text": "Raju must not buy extra vegetables." },
+          { "id": "D", "text": "Raju should not buy extra vegetables." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Needn't have + V3' is used when an action WAS performed, but later turned out to be unnecessary - exactly Raju's situation."
+      },
+      "navigation": { "next": "card_61_quiz3_perfectmodals", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_61_quiz3_perfectmodals",
+      "card_slug": "card_61_quiz3_perfectmodals",
+      "type": "quiz",
+      "concept_id": "perfect_modals",
+      "level": 3,
+      "progress": { "current": 61, "total": 90 },
+      "quiz_payload": {
+        "question": "Statement 1: 'Should have + V3' expresses regret over a missed moral duty. Statement 2: 'Needn't have + V3' means the person knew in advance that the action was unnecessary and so avoided it. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 2 describes 'didn't need to', NOT 'needn't have'. 'Needn't have' means the action WAS performed but was unnecessary."
+      },
+      "navigation": { "next": "card_62_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_62_milestone8",
+      "card_slug": "card_62_milestone8",
+      "type": "milestone",
+      "concept_id": "perfect_modals",
+      "level": 3,
+      "progress": { "current": 62, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⏳",
+        "completed_topic": "Perfect Modals - Should/Must/Could/Might/Would/Needn't Have",
+        "xp_earned": 70,
+        "milestone_progress": "Module 8/11 Clear",
+        "motivational_quote": "Ye sabse tricky module tha, aur tumne crack kar liya! Ab 'Used to' vs 'Would' ka past habit wala confusion clear karte hain!"
+      },
+      "navigation": { "next": "card_63_used_to_habit", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_63_used_to_habit",
+      "card_slug": "card_63_used_to_habit",
+      "type": "chat",
+      "concept_id": "used_to_would",
+      "level": 4,
+      "progress": { "current": 63, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, tumhare gaon mein pehle bijli nahi thi na? Us waqt ki baat kaise karoge? 'We used to study with lanterns.' - 'USED TO' PAST HABIT ya PAST STATE dikhata hai jo AB nahi hai." },
+        { "speaker": "raju", "text": "Sir 'used to' matlab jo pehle hota tha, ab bilkul band ho gaya?" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'Used to' ka use dono ke liye hota hai - ACTIONS ('I used to play cricket') aur STATES ('I used to live in Patna', 'There used to be a temple here'). Structure: 'used to + base verb'." },
+        { "speaker": "raju", "text": "Sir 'would' bhi to yahi kaam karta hai, phir alag word kyun hai?" }
+      ],
+      "navigation": { "next": "card_64_would_habit_action_only", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_64_would_habit_action_only",
+      "card_slug": "card_64_would_habit_action_only",
+      "type": "chat",
+      "concept_id": "used_to_would",
+      "level": 4,
+      "progress": { "current": 64, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut important trap Raju! 'Would' bhi past habit dikha sakta hai, PAR SIRF ACTIONS ke liye, STATES ke liye nahi! 'I would play cricket every evening' - sahi hai. Par 'I would live in Patna' - GALAT hai, kyunki 'live' ek STATE verb hai." },
+        { "speaker": "raju", "text": "Hain?? Sir ye to bilkul fine difference hai - 'play' action hai isliye 'would' chalega, 'live' state hai isliye 'would' nahi chalega?" },
+        { "speaker": "aman", "text": "Bilkul sahi! ⭐ BPSC TRE / SBI PO Favorite trap: STATE VERBS (be, have, like, know, live, believe, own) ke saath sirf 'USED TO' chalega, 'WOULD' kabhi nahi. Sahi hoga: 'I used to live in Patna.'" },
+        { "speaker": "raju", "text": "Sir ye rule to pakka yaad rakhna padega - state verb dekha to 'used to', action verb ho to dono chal sakte hain!" }
+      ],
+      "navigation": { "next": "card_65_get_used_to_confusion", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_65_get_used_to_confusion",
+      "card_slug": "card_65_get_used_to_confusion",
+      "type": "chat",
+      "concept_id": "used_to_would",
+      "level": 4,
+      "progress": { "current": 65, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek aur confusion clear karte hain - 'BE USED TO' aur 'GET USED TO' bilkul alag hain 'USED TO' se! 'Be used to + V-ing' matlab HABITUATED/ACCUSTOMED hona: 'I am used to waking up early' (mujhe iski aadat hai, present mein)." },
+        { "speaker": "raju", "text": "Sir ye to bilkul alag matlab hai! 'used to wake up early' (past habit) aur 'am used to waking up early' (present adjustment) - dono alag hain?" },
+        { "speaker": "aman", "text": "Bilkul sahi pakड़a! 'GET USED TO + V-ing' matlab habituated HONE ki PROCESS: 'I am getting used to the new job' (dhire dhire aadat pad rahi hai). Teeno bilkul different structures hain, gadbad mat karna!" },
+        { "speaker": "raju", "text": "Sir summary bana dijiye - 'used to+V1'=past habit, 'be used to+Ving'=present habituated, 'get used to+Ving'=habituated ho raha hai!" }
+      ],
+      "navigation": { "next": "card_66_quiz1_usedto", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_66_quiz1_usedto",
+      "card_slug": "card_66_quiz1_usedto",
+      "type": "quiz",
+      "concept_id": "used_to_would",
+      "level": 4,
+      "progress": { "current": 66, "total": 90 },
+      "quiz_payload": {
+        "question": "Which sentence is CORRECT (describing a past STATE)?",
+        "options": [
+          { "id": "A", "text": "There would be a big banyan tree in our village." },
+          { "id": "B", "text": "There used to be a big banyan tree in our village." },
+          { "id": "C", "text": "There use to be a big banyan tree in our village." },
+          { "id": "D", "text": "There will be a big banyan tree in our village." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Would' cannot describe a past STATE (like existence/being). Only 'used to' works for past states, while 'would' is limited to repeated past ACTIONS."
+      },
+      "navigation": { "next": "card_67_quiz2_usedto", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_67_quiz2_usedto",
+      "card_slug": "card_67_quiz2_usedto",
+      "type": "quiz",
+      "concept_id": "used_to_would",
+      "level": 4,
+      "progress": { "current": 67, "total": 90 },
+      "quiz_payload": {
+        "question": "Choose the sentence expressing that someone has become ACCUSTOMED to something (present state):",
+        "options": [
+          { "id": "A", "text": "I used to eat spicy food." },
+          { "id": "B", "text": "I would eat spicy food." },
+          { "id": "C", "text": "I am used to eating spicy food." },
+          { "id": "D", "text": "I use to eating spicy food." }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Be used to + V-ing' expresses being habituated/accustomed to something in the present, unlike 'used to + V1' which describes a past habit that has stopped."
+      },
+      "navigation": { "next": "card_68_quiz3_usedto", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_68_quiz3_usedto",
+      "card_slug": "card_68_quiz3_usedto",
+      "type": "quiz",
+      "concept_id": "used_to_would",
+      "level": 4,
+      "progress": { "current": 68, "total": 90 },
+      "quiz_payload": {
+        "question": "Statement 1: 'Would' can be used for both past habitual actions and past states. Statement 2: 'Used to' can be used for both past habitual actions and past states. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 is false - 'would' only works for repeated past actions, NOT for states. 'Used to' correctly covers both."
+      },
+      "navigation": { "next": "card_69_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_69_milestone9",
+      "card_slug": "card_69_milestone9",
+      "type": "milestone",
+      "concept_id": "used_to_would",
+      "level": 4,
+      "progress": { "current": 69, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🕰️",
+        "completed_topic": "Used to vs Would - Past Habits",
+        "xp_earned": 60,
+        "milestone_progress": "Module 9/11 Clear",
+        "motivational_quote": "Past habits ka trap bhi solve kar liya! Ab Modals ko Conditional sentences ke saath jodte hain!"
+      },
+      "navigation": { "next": "card_70_modals_conditionals_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_70_modals_conditionals_intro",
+      "card_slug": "card_70_modals_conditionals_intro",
+      "type": "chat",
+      "concept_id": "modals_conditionals",
+      "level": 4,
+      "progress": { "current": 70, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, tumne 'If' wale sentences padhe honge kabhi - 'If it rains, I will stay home.' Yahan future ke liye 'will' modal use ho raha hai. Ye pattern conditional sentences mein bahut common hai." },
+        { "speaker": "raju", "text": "Sir har 'If' sentence mein modal aata hai kya?" },
+        { "speaker": "aman", "text": "Zyadatar aata hai. First Conditional (real future possibility) mein 'will/can/may' aata hai: 'If you study hard, you will pass.' Second Conditional (unreal/hypothetical present) mein 'would/could/might' aata hai: 'If I had wings, I would fly.'" },
+        { "speaker": "raju", "text": "Sir 'If I had wings' - ye to galat hai na? Insaan ke wings kaise ho sakte hain? Ye grammar kyun allow karta hai?" }
+      ],
+      "navigation": { "next": "card_71_third_conditional_would_have", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_71_third_conditional_would_have",
+      "card_slug": "card_71_third_conditional_would_have",
+      "type": "chat",
+      "concept_id": "modals_conditionals",
+      "level": 4,
+      "progress": { "current": 71, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut achha doubt! Ye ek UNREAL/IMAGINARY situation hai, isliye grammar mein hum 'Past tense form' use karte hain jo REALITY se DOOR hone ka signal deta hai, chahe baat present ki ho rahi ho. Isko 'Subjunctive Mood' kehte hain." },
+        { "speaker": "raju", "text": "Achha! Toh 'past tense' yahan time nahi, 'unreal/imaginary' hone ka signal hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur Third Conditional (unreal PAST situation, jo already ho chuka aur badla nahi ja sakta) mein 'WOULD HAVE + V3' use hota hai: 'If I had studied harder, I would have passed the exam.' - ye humne Perfect Modals mein bhi padha tha!" },
+        { "speaker": "raju", "text": "Sir toh conditionals aur modals ek doosre se juड़e hue hain, alag topic nahi hain!" }
+      ],
+      "navigation": { "next": "card_72_quiz1_conditionals", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_72_quiz1_conditionals",
+      "card_slug": "card_72_quiz1_conditionals",
+      "type": "quiz",
+      "concept_id": "modals_conditionals",
+      "level": 4,
+      "progress": { "current": 72, "total": 90 },
+      "quiz_payload": {
+        "question": "Choose the correct modal for this REAL future possibility: 'If it rains tomorrow, we ____ cancel the picnic.'",
+        "options": [
+          { "id": "A", "text": "would" },
+          { "id": "B", "text": "will" },
+          { "id": "C", "text": "would have" },
+          { "id": "D", "text": "might have" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "First Conditional (real future possibility) uses 'will/can/may' in the main clause with a present tense 'if' clause."
+      },
+      "navigation": { "next": "card_73_quiz2_conditionals", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_73_quiz2_conditionals",
+      "card_slug": "card_73_quiz2_conditionals",
+      "type": "quiz",
+      "concept_id": "modals_conditionals",
+      "level": 4,
+      "progress": { "current": 73, "total": 90 },
+      "quiz_payload": {
+        "question": "Choose the correct modal: 'If I were the Prime Minister, I ____ improve education for all.'",
+        "options": [
+          { "id": "A", "text": "will" },
+          { "id": "B", "text": "would" },
+          { "id": "C", "text": "would have" },
+          { "id": "D", "text": "must" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "This is a Second Conditional (unreal present/hypothetical), which uses 'would/could/might' in the main clause with past tense in the 'if' clause."
+      },
+      "navigation": { "next": "card_74_quiz3_conditionals", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_74_quiz3_conditionals",
+      "card_slug": "card_74_quiz3_conditionals",
+      "type": "quiz",
+      "concept_id": "modals_conditionals",
+      "level": 4,
+      "progress": { "current": 74, "total": 90 },
+      "quiz_payload": {
+        "question": "Statement 1: Third Conditional describes an unreal past situation that cannot be changed now. Statement 2: 'Would have + V3' is the correct modal structure for the main clause of Third Conditional. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Both statements are correct descriptions of the Third Conditional structure and meaning."
+      },
+      "navigation": { "next": "card_75_milestone10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_75_milestone10",
+      "card_slug": "card_75_milestone10",
+      "type": "milestone",
+      "concept_id": "modals_conditionals",
+      "level": 4,
+      "progress": { "current": 75, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌉",
+        "completed_topic": "Modals in Conditional Sentences",
+        "xp_earned": 60,
+        "milestone_progress": "Module 10/11 Clear",
+        "motivational_quote": "Conditionals bhi modals ke saath connect kar liye! Ab final module - SBI PO Level Error Detection - shuru karte hain!"
+      },
+      "navigation": { "next": "card_76_errordetection_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_76_errordetection_intro",
+      "card_slug": "card_76_errordetection_intro",
+      "type": "chat",
+      "concept_id": "error_detection_traps",
+      "level": 5,
+      "progress": { "current": 76, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ab tak jitne bhi modal rules seekhe, wo sab MILAKE SBI PO aur Bank exams mein 'Error Detection/Spotting' questions banate hain. Chalo un common traps ko systematically revise karte hain jisse tum turant galti pakад़ sako." },
+        { "speaker": "raju", "text": "Sir itne saare rules the, kaunsa sabse zyada poocha jaata hai?" },
+        { "speaker": "aman", "text": "TRAP 1 sabse common hai - DOUBLE MODAL ya Modal ke baad -ing/-ed lagana: 'He should came' ya 'She will can go' - dono hamesha galat!" },
+        { "speaker": "raju", "text": "Sir ye to humne basics mein hi padha tha, ye to yaad hai!" }
+      ],
+      "navigation": { "next": "card_77_trap_musthaveto_needhave", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_77_trap_musthaveto_needhave",
+      "card_slug": "card_77_trap_musthaveto_needhave",
+      "type": "chat",
+      "concept_id": "error_detection_traps",
+      "level": 5,
+      "progress": { "current": 77, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "TRAP 2 - 'Must' ka past use karna: 'He musted attend...' - hamesha galat, 'had to' use karo. TRAP 3 - 'needn't have' aur 'didn't need to' ko galat context mein use karna - meaning bilkul opposite hoti hai, humne detail mein dekha tha." },
+        { "speaker": "raju", "text": "Sir ye to sabse fine trap laga tha, isko dobara revise karna padega mujhe!" },
+        { "speaker": "aman", "text": "TRAP 4 - 'could' ko single specific past achievement ke liye use karna, jabki 'was/were able to' sahi hai. TRAP 5 - 'must not' aur 'need not' ko confuse karna (prohibition vs no necessity)." },
+        { "speaker": "raju", "text": "Sir aur koi trap bacha hai?" }
+      ],
+      "navigation": { "next": "card_78_trap_would_state_verb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_78_trap_would_state_verb",
+      "card_slug": "card_78_trap_would_state_verb",
+      "type": "chat",
+      "concept_id": "error_detection_traps",
+      "level": 5,
+      "progress": { "current": 78, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "TRAP 6 - 'Would' ko STATE VERB (be, have, know, live, like) ke saath past habit dikhane mein use karna - hamesha galat, 'used to' hi sahi hoga. TRAP 7 - 'ought' ke baad 'to' bhoolna, ya 'need/dare' ko galat form (main verb vs modal) mein use karna." },
+        { "speaker": "raju", "text": "Sir ab main confident feel kar raha hoon, sab traps clear ho gaye hain!" },
+        { "speaker": "aman", "text": "Ek last trick suno - SBI PO mein error usually 4 underlined parts mein diya jaata hai, agar sentence bilkul sahi lage to 'No error' bhi ek valid option hota hai. Har baar galti dhundhne ki zid mat karo!" },
+        { "speaker": "raju", "text": "Sir chaliye ab practice questions try karte hain!" }
+      ],
+      "navigation": { "next": "card_79_errorquiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_79_errorquiz1",
+      "card_slug": "card_79_errorquiz1",
+      "type": "quiz",
+      "concept_id": "error_detection_practice",
+      "level": 5,
+      "progress": { "current": 79, "total": 90 },
+      "quiz_payload": {
+        "question": "Error Detection (Q1/6): 'She must have completed the project by tomorrow evening.' Find the error segment.",
+        "options": [
+          { "id": "A", "text": "She must have" },
+          { "id": "B", "text": "completed the project" },
+          { "id": "C", "text": "by tomorrow evening" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Must have + V3' refers to PAST deduction, but 'tomorrow evening' is a future time reference - a logical contradiction. Correct: 'by yesterday evening' or use 'will have completed by tomorrow evening'."
+      },
+      "navigation": { "next": "card_80_errorquiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_80_errorquiz2",
+      "card_slug": "card_80_errorquiz2",
+      "type": "quiz",
+      "concept_id": "error_detection_practice",
+      "level": 5,
+      "progress": { "current": 80, "total": 90 },
+      "quiz_payload": {
+        "question": "Error Detection (Q2/6): 'Students must not carry mobile phones, but they need not bring calculators as we provide them.' Find the error segment.",
+        "options": [
+          { "id": "A", "text": "Students must not carry" },
+          { "id": "B", "text": "mobile phones, but they need not bring" },
+          { "id": "C", "text": "calculators as we provide them" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "This sentence is CORRECT - 'must not' shows prohibition (mobiles forbidden), and 'need not' shows lack of necessity (calculators optional). Both used in their correct sense."
+      },
+      "navigation": { "next": "card_81_errorquiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_81_errorquiz3",
+      "card_slug": "card_81_errorquiz3",
+      "type": "quiz",
+      "concept_id": "error_detection_practice",
+      "level": 5,
+      "progress": { "current": 81, "total": 90 },
+      "quiz_payload": {
+        "question": "Error Detection (Q3/6): 'When I was a child, I would live in a small village near the river.' Find the error segment.",
+        "options": [
+          { "id": "A", "text": "When I was a child" },
+          { "id": "B", "text": "I would live in a small village" },
+          { "id": "C", "text": "near the river" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Live' is a STATE verb, so 'would' cannot be used for past habitual state. Correct: 'I used to live in a small village'."
+      },
+      "navigation": { "next": "card_82_errorquiz4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_82_errorquiz4",
+      "card_slug": "card_82_errorquiz4",
+      "type": "quiz",
+      "concept_id": "error_detection_practice",
+      "level": 5,
+      "progress": { "current": 82, "total": 90 },
+      "quiz_payload": {
+        "question": "Error Detection (Q4/6): 'He was so talented that he could win the state-level championship last year.' Find the error segment.",
+        "options": [
+          { "id": "A", "text": "He was so talented" },
+          { "id": "B", "text": "that he could win" },
+          { "id": "C", "text": "the state-level championship last year" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "For a single, specific past achievement/success, 'was able to' is correct, not 'could'. Correct: 'that he was able to win'."
+      },
+      "navigation": { "next": "card_83_errorquiz5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_83_errorquiz5",
+      "card_slug": "card_83_errorquiz5",
+      "type": "quiz",
+      "concept_id": "error_detection_practice",
+      "level": 5,
+      "progress": { "current": 83, "total": 90 },
+      "quiz_payload": {
+        "question": "Error Detection (Q5/6): 'I bought extra rice for the guests, but they cancelled the visit, so I needn't have buy so much.' Find the error segment.",
+        "options": [
+          { "id": "A", "text": "I bought extra rice" },
+          { "id": "B", "text": "for the guests, but they cancelled" },
+          { "id": "C", "text": "so I needn't have buy so much" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "After 'needn't have', the past participle (V3) must be used, not the base verb. Correct: 'I needn't have bought so much.'"
+      },
+      "navigation": { "next": "card_84_errorquiz6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_84_errorquiz6",
+      "card_slug": "card_84_errorquiz6",
+      "type": "quiz",
+      "concept_id": "error_detection_practice",
+      "level": 5,
+      "progress": { "current": 84, "total": 90 },
+      "quiz_payload": {
+        "question": "Error Detection (Q6/6) - BPSC Style Multi-Statement: Read: 'The manager said that the employees ought to submitting the reports on time, and they must to follow the deadline strictly.' Statement 1: 'ought to submitting' is grammatically correct. Statement 2: 'must to follow' is grammatically correct. Which is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Both are wrong! 'Ought to' must be followed by the base verb, not -ing form: correct is 'ought to submit'. Also, 'must' never takes 'to' before the base verb: correct is 'must follow'."
+      },
+      "navigation": { "next": "card_85_milestone11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_85_milestone11",
+      "card_slug": "card_85_milestone11",
+      "type": "milestone",
+      "concept_id": "error_detection_practice",
+      "level": 5,
+      "progress": { "current": 85, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🕵️",
+        "completed_topic": "SBI PO Level Error Detection on Modals",
+        "xp_earned": 80,
+        "milestone_progress": "Module 11/11 Clear",
+        "motivational_quote": "Raju, tumne Modals ka poora Officer-level mastery haasil kar liya! Ab sirf final revision aur master quiz baaki hai!"
+      },
+      "navigation": { "next": "card_86_summary", "button_text": "Final Revision ➔" }
+    },
+    {
+      "card_id": "card_86_summary",
+      "card_slug": "card_86_summary",
+      "type": "summary",
+      "concept_id": "chapter_revision",
+      "level": 5,
+      "progress": { "current": 86, "total": 90 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Modal Verbs",
+        "revision_points": [
+          {
+            "topic": "Basic Modal Rules",
+            "point": "Modals always take base verb (no -s/-ing/-ed), modals never take -s themselves, no double modals, no 'to' after modal (except ought to, have to, used to)."
+          },
+          {
+            "topic": "Must vs Have to vs Needn't",
+            "point": "Must = internal obligation/strong deduction; Have to = external rule; Had to = past obligation (must has no past form); Must not = prohibition; Need not = no necessity (opposite meanings!)."
+          },
+          {
+            "topic": "Perfect Modals",
+            "point": "Should have+V3 = regret/missed duty; Could have+V3 = unused ability/opportunity; Must have+V3 = past certainty; Needn't have+V3 = did unnecessary action; Didn't need to = knew beforehand it wasn't necessary."
+          },
+          {
+            "topic": "Could vs Was able to",
+            "point": "'Could' = general past ability (repeated); 'Was/were able to' = single specific past achievement/success - NEVER interchange in exams."
+          },
+          {
+            "topic": "Used to vs Would",
+            "point": "'Used to' works for both past ACTIONS and STATES; 'Would' works ONLY for repeated past ACTIONS, never for state verbs (be, have, know, live, like)."
+          }
+        ]
+      },
+      "navigation": { "next": "card_87_final_quiz1", "button_text": "Take Final Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_87_final_quiz1",
+      "card_slug": "card_87_final_quiz1",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 5,
+      "progress": { "current": 87, "total": 90 },
+      "quiz_payload": {
+        "question": "Assertion (A): 'I needn't have called the doctor since my fever had already gone.' is grammatically correct.\nReason (R): 'Needn't have + V3' is used when an action was performed but later found to be unnecessary.\nChoose the correct option:",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is NOT the correct explanation of A" },
+          { "id": "C", "text": "A is true but R is false" },
+          { "id": "D", "text": "A is false but R is true" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "The sentence correctly uses 'needn't have called' since the doctor WAS called, but it turned out to be unnecessary because the fever had already gone - R perfectly explains A."
+      },
+      "navigation": { "next": "card_88_final_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_88_final_quiz2",
+      "card_slug": "card_88_final_quiz2",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 5,
+      "progress": { "current": 88, "total": 90 },
+      "quiz_payload": {
+        "question": "Consider the following statements regarding Modal Verbs:\n1. 'Must' has a valid past tense form 'musted'.\n2. 'Could' is always correct for describing a single specific past achievement.\n3. 'Would' cannot be used with state verbs like 'know' or 'live' for past habits.\n4. 'Ought to' requires 'to' before the base verb, unlike most other modals.\nWhich of the statements given above are correct?",
+        "options": [
+          { "id": "A", "text": "1 and 2 only" },
+          { "id": "B", "text": "3 and 4 only" },
+          { "id": "C", "text": "1, 3 and 4 only" },
+          { "id": "D", "text": "2, 3 and 4 only" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 is false ('must' has no past form; 'had to' is used instead). Statement 2 is false ('was/were able to' is correct for single specific achievements, not 'could'). Statements 3 and 4 are correct."
+      },
+      "navigation": { "next": "card_89_final_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_89_final_quiz3",
+      "card_slug": "card_89_final_quiz3",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 5,
+      "progress": { "current": 89, "total": 90 },
+      "quiz_payload": {
+        "question": "SBI PO Level - Spot the error: 'The committee members should has submitted their reports by now, as the deadline was yesterday.' (A) The committee members should has submitted / (B) their reports by now / (C) as the deadline was yesterday / (D) No error",
+        "options": [
+          { "id": "A", "text": "The committee members should has submitted" },
+          { "id": "B", "text": "their reports by now" },
+          { "id": "C", "text": "as the deadline was yesterday" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "After the modal 'should', 'have' must be used (not 'has'), regardless of subject number, since modals never change form with the subject. Correct: 'should have submitted'."
+      },
+      "navigation": { "next": "card_90_trophy", "button_text": "Claim Your Trophy ➔" }
+    },
+    {
+      "card_id": "card_90_trophy",
+      "card_slug": "card_90_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 5,
+      "progress": { "current": 90, "total": 90 },
+      "milestone_payload": {
+        "title": "CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Modal Verbs - Complete with SBI PO Error Detection",
+        "xp_earned": 750,
+        "milestone_progress": "11/11 Modules Complete - Chapter 100%",
+        "motivational_quote": "Raju, ab tum Modal Verbs ke poore Officer-level master ho! Can-Could, May-Might, Must-Have to, Should-Ought to, Will-Shall-Would, Need-Dare, Perfect Modals, Used to-Would, Conditionals aur SBI PO Error Detection - sab kuch pakka hai. Ye chapter ab tumhara sabse confident scoring area banega!"
+      },
+      "navigation": { "next": null, "button_text": "Chapter Complete 🎉" }
+    }
+  ]
+}
