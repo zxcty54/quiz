@@ -131,7 +131,7 @@ class _SectionalTabState extends State<SectionalTab> {
                         backgroundColor: const Color(0xFF2563EB).withOpacity(0.08),
                         side: const BorderSide(color: Color(0xFF2563EB)),
                         label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}', style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
-                        onPressed: () => widget.onLaunchCbtMock(context, "$itemTitle Set $setNum", "$folder/set_$setNum.json"),
+                        onPressed: () => widget.onLaunchCbtMock(context, "$itemTitle Set $setNum", "$folder/set$setNum.json"),
                       );
                     }),
                   ),
