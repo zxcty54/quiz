@@ -57,12 +57,15 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
       _loadRealtimeProgress();
+      _fetchSectionalDataLive();
+      _fetchSubjectMappingLive();
     }
   }
 
   Future<void> _loadAllConfigs() async {
     await _loadRealtimeProgress();
 
+    // 1️⃣ Home Data, Bulletin & Jobs (100% UNTOUCHED)
     try {
       final String configStr = await rootBundle.loadString('assets/data/app_config.json');
       _appConfig = jsonDecode(configStr);
@@ -77,6 +80,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       debugPrint("Error loading home_data.json: $e");
     }
 
+    // 2️⃣ Revision Mapping (Local Asset Fallback)
     try {
       final String subjectStr = await rootBundle.loadString('assets/data/subject_mapping.json');
       _subjectMapping = jsonDecode(subjectStr);
@@ -84,6 +88,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       debugPrint("Error loading subject_mapping.json: $e");
     }
 
+    // 3️⃣ Sectional Data (Local Asset Fallback)
     try {
       final String sectionalStr = await rootBundle.loadString('assets/data/sectional_data.json');
       _sectionalData = jsonDecode(sectionalStr);
@@ -94,6 +99,57 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     if (mounted) {
       setState(() {
         _isLoadingConfig = false;
+      });
+    }
+
+    // 4️⃣ Background Live Fetch (Zero APK Rebuild Forever)
+    _fetchSectionalDataLive();
+    _fetchSubjectMappingLive();
+  }
+
+  // 🌐 ANTI-BLOCK MULTI-CDN LOADER (Jio/Airtel par block nahi hoga)
+  Future<dynamic> _fetchRobustJson(String relativePath) async {
+    String clean = relativePath.startsWith("/") ? relativePath.substring(1) : relativePath;
+    final int ts = DateTime.now().millisecondsSinceEpoch;
+
+    List<String> mirrorUrls = clean.startsWith("http")
+        ? [clean]
+        : [
+            "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$clean?t=$ts",
+            "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$clean?t=$ts",
+            "https://raw.githubusercontent.com/zxcty54/quiz/main/$clean?t=$ts",
+          ];
+
+    for (String url in mirrorUrls) {
+      try {
+        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 4));
+        if (res.statusCode == 200) {
+          String decoded = utf8.decode(res.bodyBytes);
+          return jsonDecode(decoded);
+        }
+      } catch (_) {
+        continue;
+      }
+    }
+    return null;
+  }
+
+  // 🎯 LIVE SECTIONAL MOCKS SYNC
+  Future<void> _fetchSectionalDataLive() async {
+    final data = await _fetchRobustJson("sectional_data.json");
+    if (data != null && data is Map<String, dynamic> && mounted) {
+      setState(() {
+        _sectionalData = data;
+      });
+    }
+  }
+
+  // 🎯 LIVE REVISION SUBJECT MAPPING SYNC
+  Future<void> _fetchSubjectMappingLive() async {
+    final data = await _fetchRobustJson("subject_mapping.json");
+    if (data != null && data is Map<String, dynamic> && mounted) {
+      setState(() {
+        _subjectMapping = data;
       });
     }
   }
@@ -123,14 +179,18 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('MockTester', style: TextStyle(fontWeight: FontWeight.bold, color: _isDarkMode ? Colors.white : const Color(0xFF0F172A))),
+        title: Text('MockTester',
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: _isDarkMode ? Colors.white : const Color(0xFF0F172A))),
         backgroundColor: cardColor,
         elevation: 0,
         actions: [
           IconButton(
             icon: const Icon(Icons.school_rounded, color: Color(0xFF075E54)),
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const LearnHubScreen())).then((_) => _loadRealtimeProgress());
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const LearnHubScreen()))
+                  .then((_) => _loadRealtimeProgress());
             },
           ),
         ],
@@ -138,7 +198,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       body: IndexedStack(
         index: _currentBottomIndex,
         children: [
-          // 🏡 Tab 0: Home Tab
+          // 🏡 Tab 0: Home Tab (News, Bulletin, Jobs - 100% UNTOUCHED)
           HomeTab(
             appConfig: _appConfig,
             homeData: _homeData,
@@ -152,13 +212,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             onNavigateToLearn: () => setState(() => _currentBottomIndex = 3),
           ),
 
-          // 📚 Tab 1: Revision Tab
+          // 📚 Tab 1: Revision Tab (Live Synced)
           RevisionTab(
             subjectMapping: _subjectMapping,
             onLaunchPractice: _launchRevisionPractice,
           ),
 
-          // 🎯 Tab 2: Sectional Tab
+          // 🎯 Tab 2: Sectional Tab (Live Synced)
           SectionalTab(
             sectionalData: _sectionalData,
             isDarkMode: _isDarkMode,
@@ -182,6 +242,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         onDestinationSelected: (idx) {
           setState(() => _currentBottomIndex = idx);
           if (idx == 0) _loadRealtimeProgress();
+          if (idx == 1) _fetchSubjectMappingLive(); // 👈 Revision Tab tap hote hi chapters auto sync
+          if (idx == 2) _fetchSectionalDataLive();  // 👈 Sectional Tab tap hote hi sets auto sync
         },
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home_outlined), label: 'Home'),
@@ -201,7 +263,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       itemBuilder: (context, index) => Shimmer.fromColors(
         baseColor: Colors.grey[300]!,
         highlightColor: Colors.grey[100]!,
-        child: Container(height: 100, margin: const EdgeInsets.only(bottom: 16), decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12))),
+        child: Container(
+            height: 100,
+            margin: const EdgeInsets.only(bottom: 16),
+            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12))),
       ),
     );
   }
@@ -214,38 +279,55 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   }
 
   void _launchRevisionPractice(BuildContext context, String title, String path) async {
-    showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
-    String finalUrl = path.startsWith("http") ? path : Uri.encodeFull("https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$path");
-    try {
-      final res = await http.get(Uri.parse(finalUrl));
-      if (context.mounted) Navigator.pop(context);
-      if (res.statusCode == 200) {
-        List body = jsonDecode(res.body);
-        List<Question> qList = body.map((i) => Question.fromJson(i)).toList();
-        if (context.mounted && qList.isNotEmpty) {
-          Navigator.push(context, MaterialPageRoute(builder: (ctx) => RevisionPracticeScreen(testTitle: title, questions: qList)));
-        }
+    showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (ctx) => const Center(child: CircularProgressIndicator()));
+
+    final data = await _fetchRobustJson(path);
+    if (context.mounted) Navigator.pop(context);
+
+    if (data != null && data is List) {
+      List<Question> qList = data.map((i) => Question.fromJson(i)).toList();
+      if (context.mounted && qList.isNotEmpty) {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (ctx) => RevisionPracticeScreen(testTitle: title, questions: qList)));
       }
-    } catch (_) {
-      if (context.mounted) Navigator.pop(context);
+    } else {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Test questions load nahi ho paye. Internet check karein.')),
+        );
+      }
     }
   }
 
   void _launchCbtMock(BuildContext context, String title, String path) async {
-    showDialog(context: context, barrierDismissible: false, builder: (ctx) => const Center(child: CircularProgressIndicator()));
-    String finalUrl = path.startsWith("http") ? path : Uri.encodeFull("https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$path");
-    try {
-      final res = await http.get(Uri.parse(finalUrl));
-      if (context.mounted) Navigator.pop(context);
-      if (res.statusCode == 200) {
-        List body = jsonDecode(res.body);
-        List<Question> qList = body.map((i) => Question.fromJson(i)).toList();
-        if (context.mounted && qList.isNotEmpty) {
-          Navigator.push(context, MaterialPageRoute(builder: (ctx) => SectionalCbtScreen(testTitle: title, questions: qList, subFolder: path)));
-        }
+    showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (ctx) => const Center(child: CircularProgressIndicator()));
+
+    final data = await _fetchRobustJson(path);
+    if (context.mounted) Navigator.pop(context);
+
+    if (data != null && data is List) {
+      List<Question> qList = data.map((i) => Question.fromJson(i)).toList();
+      if (context.mounted && qList.isNotEmpty) {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (ctx) => SectionalCbtScreen(
+                    testTitle: title, questions: qList, subFolder: path)));
       }
-    } catch (_) {
-      if (context.mounted) Navigator.pop(context);
+    } else {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('CBT Mock questions load nahi ho paye. Internet check karein.')),
+        );
+      }
     }
   }
 }
