@@ -1,0 +1,1500 @@
+```json
+{
+  "topic_id": "past_tense_error_detection_sbi_po",
+  "topic_title": "Past Tense Mastery + SBI PO Level Error Detection",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE", "SBI PO"],
+  "total_cards": 80,
+  "characters": {
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 80 },
+      "intro_payload": {
+        "title": "Past Tense — Zero to Officer Level",
+        "subtitle": "SBI PO / BPSC / SSC / Railway Error Detection Special",
+        "icon": "🕰️",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "SBI PO", "BPSC TRE", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Simple Past, Past Continuous, Past Perfect, Past Perfect Continuous — full mastery",
+          "Regular vs Irregular verbs & spelling traps",
+          "Used to / Would for past habits — the confusing pair",
+          "Sequence of Tense: before/after, by the time, no sooner...than, hardly...when",
+          "Since/For, Wish, If-Clauses, Reported Speech backshift rules",
+          "SBI PO / BPSC style sentence error-detection practice with real traps"
+        ]
+      },
+      "navigation": { "next": "card_02_daily_life_past", "button_text": "Start Learning ➔" }
+    },
+
+    {
+      "card_id": "card_02_daily_life_past",
+      "card_slug": "card_02_daily_life_past",
+      "type": "chat",
+      "concept_id": "past_tense_foundation",
+      "level": 1,
+      "progress": { "current": 2, "total": 80 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, kal shaam ko maine gali mein cricket khela, humari team jeet gayi!" },
+        { "speaker": "aman", "text": "Wah Raju! Tumne 'khela' aur 'jeet gayi' bola — dono words batate hain ki kaam pehle ho chuka hai, ab nahi ho raha." },
+        { "speaker": "raju", "text": "Haan sir, wo kal ki baat hai, aaj to match nahi hai." },
+        { "speaker": "aman", "text": "Bilkul sahi pakde ho. English mein bhi jab hum 'khatam ho chuka action' batate hain, to ek special tense use hota hai. Chalo dekhte hain wo kya hai." }
+      ],
+      "navigation": { "next": "card_03_tense_meaning", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_03_tense_meaning",
+      "card_slug": "card_03_tense_meaning",
+      "type": "chat",
+      "concept_id": "past_tense_foundation",
+      "level": 1,
+      "progress": { "current": 3, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, 'Tense' ka matlab hota hai kisi kaam ka 'samay' — kaam kab hua, ho raha hai, ya hoga. Hindi grammar mein tumne 'Kaal' padha hoga — Bhoot Kaal, Vartaman Kaal, Bhavishya Kaal." },
+        { "speaker": "raju", "text": "Haan sir! Bhoot Kaal wala hi hoga na jo beet chuka? 'Maine khaya' jaisa?" },
+        { "speaker": "aman", "text": "Ekdum sahi! English mein isko kehte hain 'Past Tense'. Jab bhi verb ke saath 'tha, thi, the, chuka, gaya' jaise Hindi words aaye, samjho Past Tense hai." },
+        { "speaker": "raju", "text": "Achhaaaa! Matlab 'main khel raha tha' bhi past hi hai?" }
+      ],
+      "navigation": { "next": "card_04_three_tenses", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_04_three_tenses",
+      "card_slug": "card_04_three_tenses",
+      "type": "chat",
+      "concept_id": "past_tense_foundation",
+      "level": 1,
+      "progress": { "current": 4, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul Raju! English mein 3 main tenses hain: Present (I play), Past (I played), Future (I will play). Dekho verb kaise badalta hai — play se played." },
+        { "speaker": "raju", "text": "Toh 'play' hi 'played' ban gaya, matlab verb ka form change hota hai time ke hisaab se?" },
+        { "speaker": "aman", "text": "Exactly! Yahi poori grammar ka base hai. Past Tense mein verb apni 'second form' ya 'V2' leti hai — jaise go se went, eat se ate." },
+        { "speaker": "raju", "text": "Sir isme to bahut saari verbs yaad karni padengi lagta hai!" }
+      ],
+      "navigation": { "next": "card_05_guess_past_sentence", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_05_guess_past_sentence",
+      "card_slug": "card_05_guess_past_sentence",
+      "type": "guess",
+      "concept_id": "past_tense_foundation",
+      "level": 1,
+      "progress": { "current": 5, "total": 80 },
+      "guess_payload": {
+        "question": "Raju, guess karo — in mein se konsa sentence PAST TENSE dikhata hai?",
+        "options": [
+          { "id": "A", "text": "I play cricket every day." },
+          { "id": "B", "text": "I will play cricket tomorrow." },
+          { "id": "C", "text": "I played cricket yesterday." },
+          { "id": "D", "text": "I am playing cricket now." }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Sahi jawab C hai! 'Played' V2 form hai aur 'yesterday' ek past time marker hai — dono milkar confirm karte hain ki action complete ho chuka hai."
+      },
+      "navigation": { "next": "card_06_four_types_past", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_06_four_types_past",
+      "card_slug": "card_06_four_types_past",
+      "type": "chat",
+      "concept_id": "past_tense_foundation",
+      "level": 1,
+      "progress": { "current": 6, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dhyan se suno Raju — Past Tense akela nahi hai, iske 4 bhai-behen hain: Simple Past, Past Continuous, Past Perfect, aur Past Perfect Continuous." },
+        { "speaker": "raju", "text": "Hain?? Char alag alag tarah ke past hote hain?? Ye to exam me pakka confuse karega!" },
+        { "speaker": "aman", "text": "Tension mat lo, har ek ka apna clear signal hota hai jaise 'yesterday', 'while', 'before', 'since'. Ek baar pattern samajh gaye to kabhi galti nahi hogi." },
+        { "speaker": "raju", "text": "Chaliye sir, sabse pehla wala shuru karte hain!" }
+      ],
+      "navigation": { "next": "card_07_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_07_quiz1",
+      "card_slug": "card_07_quiz1",
+      "type": "quiz",
+      "concept_id": "past_tense_foundation",
+      "level": 1,
+      "progress": { "current": 7, "total": 80 },
+      "quiz_payload": {
+        "question": "'Tense' shabd ka Hindi grammar mein sabse sahi comparison kya hai?",
+        "options": [
+          { "id": "A", "text": "Vachan (Number)" },
+          { "id": "B", "text": "Kaal (Time of action)" },
+          { "id": "C", "text": "Ling (Gender)" },
+          { "id": "D", "text": "Karak (Case)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Tense ka Hindi mein sabse close concept 'Kaal' hai jo batata hai action kab hua — Bhoot(Past), Vartaman(Present), Bhavishya(Future)."
+      },
+      "navigation": { "next": "card_08_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_08_quiz2",
+      "card_slug": "card_08_quiz2",
+      "type": "quiz",
+      "concept_id": "past_tense_foundation",
+      "level": 1,
+      "progress": { "current": 8, "total": 80 },
+      "quiz_payload": {
+        "question": "Past Tense dikhane ke liye verb kaunsa form leti hai?",
+        "options": [
+          { "id": "A", "text": "V1 (Base form)" },
+          { "id": "B", "text": "V2 (Second form)" },
+          { "id": "C", "text": "V3 (Third form) always" },
+          { "id": "D", "text": "Ing form always" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Simple Past mein verb V2 (second form) leti hai — go se went, eat se ate. V3 sirf Perfect tenses mein 'had/have/has' ke saath aata hai."
+      },
+      "navigation": { "next": "card_09_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_09_quiz3",
+      "card_slug": "card_09_quiz3",
+      "type": "quiz",
+      "concept_id": "past_tense_foundation",
+      "level": 1,
+      "progress": { "current": 9, "total": 80 },
+      "quiz_payload": {
+        "question": "English Past Tense ke kitne main forms/types padhe jaate hain?",
+        "options": [
+          { "id": "A", "text": "Do (2)" },
+          { "id": "B", "text": "Teen (3)" },
+          { "id": "C", "text": "Chaar (4)" },
+          { "id": "D", "text": "Paanch (5)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Chaar types: Simple Past, Past Continuous, Past Perfect, Past Perfect Continuous. Har ek ka apna unique use aur signal word hota hai."
+      },
+      "navigation": { "next": "card_10_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_10_milestone1",
+      "card_slug": "card_10_milestone1",
+      "type": "milestone",
+      "concept_id": "past_tense_foundation",
+      "level": 1,
+      "progress": { "current": 10, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🕰️",
+        "completed_topic": "Foundation of Past Tense",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/9 Clear",
+        "motivational_quote": "Foundation strong hai to poori building mazboot banegi — chalo ab Simple Past deep dive karte hain!"
+      },
+      "navigation": { "next": "card_11_simple_past_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_11_simple_past_intro",
+      "card_slug": "card_11_simple_past_intro",
+      "type": "chat",
+      "concept_id": "simple_past",
+      "level": 2,
+      "progress": { "current": 11, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Simple Past Tense use hota hai jab koi kaam past mein shuru hua aur wahin khatam bhi ho gaya — koi connection present se nahi hota. Structure: Subject + V2." },
+        { "speaker": "raju", "text": "Matlab jaise 'I ate rice' — khaya aur khatam, ab present se koi lena dena nahi?" },
+        { "speaker": "aman", "text": "Perfect example Raju! Isme definite past time bhi aksar hota hai — yesterday, last year, in 2015, ago, last week." },
+        { "speaker": "raju", "text": "Toh jab bhi 'yesterday' ya 'ago' dikhe, samajh jaunga Simple Past hai!" }
+      ],
+      "navigation": { "next": "card_12_regular_verbs_ed", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_12_regular_verbs_ed",
+      "card_slug": "card_12_regular_verbs_ed",
+      "type": "chat",
+      "concept_id": "simple_past",
+      "level": 2,
+      "progress": { "current": 12, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab verbs do type ki hoti hain — Regular aur Irregular. Regular verbs mein bas end mein '-ed' laga do: play-played, want-wanted, walk-walked." },
+        { "speaker": "raju", "text": "Ye to easy hai sir, bas '-ed' chipka do!" },
+        { "speaker": "aman", "text": "Haan par yahi overconfidence exam mein maar khilata hai! Kuch verbs 'Irregular' hoti hain, unka koi fixed rule nahi hota." },
+        { "speaker": "raju", "text": "Sir ye to exam me pakka confuse karega! Kaise pata chalega konsi regular hai konsi irregular?" }
+      ],
+      "navigation": { "next": "card_13_irregular_verbs", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_13_irregular_verbs",
+      "card_slug": "card_13_irregular_verbs",
+      "type": "chat",
+      "concept_id": "simple_past",
+      "level": 2,
+      "progress": { "current": 13, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Irregular verbs yaad karni padti hain — ye SSC/Railway/BPSC ka favourite trap hai. Jaise: go-went, eat-ate, see-saw, write-wrote, take-took, come-came, do-did, give-gave, buy-bought, catch-caught." },
+        { "speaker": "raju", "text": "Sir ye 'buyed' ya 'goed' bolna galat hoga na?" },
+        { "speaker": "aman", "text": "Bilkul sahi trap pakda tumne! 'Goed', 'buyed', 'writed' — ye SSC/Railway papers mein common wrong options ke roop mein daale jaate hain. Sahi hai: went, bought, wrote." },
+        { "speaker": "raju", "text": "Achhaaaa, matlab mujhe in irregular verbs ki list ratatana hi padegi." }
+      ],
+      "navigation": { "next": "card_14_spelling_rules", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_14_spelling_rules",
+      "card_slug": "card_14_spelling_rules",
+      "type": "chat",
+      "concept_id": "simple_past",
+      "level": 2,
+      "progress": { "current": 14, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Regular verbs mein bhi 3 spelling traps hain: 1) Single vowel+consonant pe consonant double hota hai — stop se stopped, plan se planned. 2) Consonant+y ko i banao — study se studied, cry se cried. 3) Silent 'e' pe bas 'd' lagao — like se liked, hope se hoped." },
+        { "speaker": "raju", "text": "Sir 'study' mein 'studyed' likhna galat hoga na? 'Studied' sahi hai?" },
+        { "speaker": "aman", "text": "Ekdum sahi! 'Studyed' ek classic error-detection trap hai jo BPSC aur SSC dono mein aata hai." },
+        { "speaker": "raju", "text": "Note kar liya sir — y before consonant ko i mein badlo!" }
+      ],
+      "navigation": { "next": "card_15_negative_interrogative", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_15_negative_interrogative",
+      "card_slug": "card_15_negative_interrogative",
+      "type": "chat",
+      "concept_id": "simple_past",
+      "level": 2,
+      "progress": { "current": 15, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Negative aur Question banane ke liye 'did' aata hai, aur uske baad verb wapas V1 (base form) mein chali jaati hai — V2 nahi! 'He did not go' — 'go' hi rahega, 'went' nahi." },
+        { "speaker": "raju", "text": "Hain?? Toh 'He did not went' galat hai?" },
+        { "speaker": "aman", "text": "Yahin sabse bada twist hai Raju — isko 'Double Past Error' kehte hain, SBI PO aur BPSC ka super favourite trap. 'Did' khud hi past dikha raha hai, dobara verb ko past mein mat karo." },
+        { "speaker": "raju", "text": "Ohh! Matlab ek sentence mein sirf ek jagah past ka signal hona chahiye!" }
+      ],
+      "navigation": { "next": "card_16_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_16_quiz1",
+      "card_slug": "card_16_quiz1",
+      "type": "quiz",
+      "concept_id": "simple_past",
+      "level": 2,
+      "progress": { "current": 16, "total": 80 },
+      "quiz_payload": {
+        "question": "Kaunsa sentence vyakaran ki drishti se sahi hai?",
+        "options": [
+          { "id": "A", "text": "She did not went to school yesterday." },
+          { "id": "B", "text": "She did not go to school yesterday." },
+          { "id": "C", "text": "She not went to school yesterday." },
+          { "id": "D", "text": "She goed not to school yesterday." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Did' ke baad verb hamesha V1 (base form) mein aati hai. 'Did not go' sahi hai, 'did not went' Double Past Error hai."
+      },
+      "navigation": { "next": "card_17_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_17_quiz2",
+      "card_slug": "card_17_quiz2",
+      "type": "quiz",
+      "concept_id": "simple_past",
+      "level": 2,
+      "progress": { "current": 17, "total": 80 },
+      "quiz_payload": {
+        "question": "'Study' verb ka Simple Past (V2) form kya hoga?",
+        "options": [
+          { "id": "A", "text": "Studyed" },
+          { "id": "B", "text": "Studied" },
+          { "id": "C", "text": "Studing" },
+          { "id": "D", "text": "Studies" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Consonant + y wale verbs mein y ko i banake -ed lagate hain: study → studied. 'Studyed' ek common spelling error trap hai."
+      },
+      "navigation": { "next": "card_18_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_18_quiz3",
+      "card_slug": "card_18_quiz3",
+      "type": "quiz",
+      "concept_id": "simple_past",
+      "level": 2,
+      "progress": { "current": 18, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'He (A)/ buyed a new bicycle (B)/ from the market yesterday (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Buy' ek irregular verb hai, iska Past form 'bought' hota hai, 'buyed' galat hai. Sahi: 'bought a new bicycle'."
+      },
+      "navigation": { "next": "card_19_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_19_milestone2",
+      "card_slug": "card_19_milestone2",
+      "type": "milestone",
+      "concept_id": "simple_past",
+      "level": 2,
+      "progress": { "current": 19, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "✅",
+        "completed_topic": "Simple Past Tense",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/9 Clear",
+        "motivational_quote": "Simple Past pakka ho gaya! Ab thoda tricky — Past Continuous ki taraf chalte hain."
+      },
+      "navigation": { "next": "card_20_past_continuous_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_20_past_continuous_intro",
+      "card_slug": "card_20_past_continuous_intro",
+      "type": "chat",
+      "concept_id": "past_continuous",
+      "level": 3,
+      "progress": { "current": 20, "total": 80 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, kal 5 baje jab aap ghar aaye the, main study kar RAHA THA — ye kaunsa tense hua?" },
+        { "speaker": "aman", "text": "Bahut badhiya example Raju! 'Kar raha tha' — action past mein CHAL raha tha, khatam nahi hua tha us waqt. Isko Past Continuous Tense kehte hain." },
+        { "speaker": "raju", "text": "Toh ye Simple Past se alag hai kyunki isme kaam 'chal raha' tha, complete nahi tha?" },
+        { "speaker": "aman", "text": "Exactly! Ye sabse bada difference hai — Simple Past mein kaam khatam, Past Continuous mein kaam 'in-progress' tha ek particular time pe." }
+      ],
+      "navigation": { "next": "card_21_past_continuous_form", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_21_past_continuous_form",
+      "card_slug": "card_21_past_continuous_form",
+      "type": "chat",
+      "concept_id": "past_continuous",
+      "level": 3,
+      "progress": { "current": 21, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Structure hai: Subject + was/were + V-ing. 'I/He/She/It' ke saath 'was', 'You/We/They' ke saath 'were' aata hai." },
+        { "speaker": "raju", "text": "Matlab 'I was studying' sahi hai, 'I were studying' galat?" },
+        { "speaker": "aman", "text": "Sahi pakda! Ye subject-verb agreement ka basic hai — was/were ka galat use SSC-Railway ka bahut common trap hai." },
+        { "speaker": "raju", "text": "Toh mujhe hamesha subject dekh ke was/were choose karna hai." }
+      ],
+      "navigation": { "next": "card_22_past_continuous_usage", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_22_past_continuous_usage",
+      "card_slug": "card_22_past_continuous_usage",
+      "type": "chat",
+      "concept_id": "past_continuous",
+      "level": 3,
+      "progress": { "current": 22, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "3 main uses yaad rakho: 1) Particular past time pe kaam chal raha ho — 'At 8 PM, I was sleeping.' 2) Do kaam parallel chal rahe hon 'while' ke saath — 'While I was reading, he was writing.'" },
+        { "speaker": "raju", "text": "Aur teesra use, sir?" },
+        { "speaker": "aman", "text": "3) Interrupted Action — ek lamba kaam chal raha tha (Past Continuous), tabhi achanak ek chhota kaam ho gaya (Simple Past) — 'I was watching TV when the light went off.'" },
+        { "speaker": "raju", "text": "Matlab lamba kaam Continuous, achanak wala kaam Simple Past — 'when' ke saath!" }
+      ],
+      "navigation": { "next": "card_23_past_continuous_trap", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_23_past_continuous_trap",
+      "card_slug": "card_23_past_continuous_trap",
+      "type": "guess",
+      "concept_id": "past_continuous",
+      "level": 3,
+      "progress": { "current": 23, "total": 80 },
+      "guess_payload": {
+        "question": "Raju, guess karo sahi sentence kaunsa hai? (Interrupted Action rule yaad rakho)",
+        "options": [
+          { "id": "A", "text": "When I was reaching home, mother was cooking food." },
+          { "id": "B", "text": "When I reached home, mother was cooking food." },
+          { "id": "C", "text": "When I reached home, mother cooked food." },
+          { "id": "D", "text": "When I was reached home, mother was cooking food." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Chota/sudden kaam (reached) Simple Past mein, aur lamba/chal raha kaam (was cooking) Past Continuous mein. 'When' short action ke saath aata hai, 'while' long action ke saath."
+      },
+      "navigation": { "next": "card_24_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_24_quiz1",
+      "card_slug": "card_24_quiz1",
+      "type": "quiz",
+      "concept_id": "past_continuous",
+      "level": 3,
+      "progress": { "current": 24, "total": 80 },
+      "quiz_payload": {
+        "question": "Fill the blank: 'While the children ___ in the park, it started raining.'",
+        "options": [
+          { "id": "A", "text": "played" },
+          { "id": "B", "text": "were playing" },
+          { "id": "C", "text": "play" },
+          { "id": "D", "text": "had played" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'While' ke saath lamba/chal raha kaam Past Continuous mein aata hai — 'were playing'. Sudden action 'started raining' Simple Past mein hai."
+      },
+      "navigation": { "next": "card_25_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_25_quiz2",
+      "card_slug": "card_25_quiz2",
+      "type": "quiz",
+      "concept_id": "past_continuous",
+      "level": 3,
+      "progress": { "current": 25, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'They (A)/ was watching a movie (B)/ when the power went off (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'They' plural subject hai, isliye 'were' aayega, 'was' nahi. Sahi: 'They were watching a movie'."
+      },
+      "navigation": { "next": "card_26_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_26_quiz3",
+      "card_slug": "card_26_quiz3",
+      "type": "quiz",
+      "concept_id": "past_continuous",
+      "level": 3,
+      "progress": { "current": 26, "total": 80 },
+      "quiz_payload": {
+        "question": "Kaunsa sentence 'do parallel actions' correctly dikhata hai?",
+        "options": [
+          { "id": "A", "text": "While I cooked, my sister was cleaning the house." },
+          { "id": "B", "text": "While I was cooking, my sister was cleaning the house." },
+          { "id": "C", "text": "While I was cooking, my sister cleans the house." },
+          { "id": "D", "text": "While I cook, my sister was cleaning the house." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Jab do actions parallel/simultaneously chal rahe hon, dono Past Continuous mein hote hain — 'was cooking' aur 'was cleaning'."
+      },
+      "navigation": { "next": "card_27_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_27_milestone3",
+      "card_slug": "card_27_milestone3",
+      "type": "milestone",
+      "concept_id": "past_continuous",
+      "level": 3,
+      "progress": { "current": 27, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔄",
+        "completed_topic": "Past Continuous Tense",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/9 Clear",
+        "motivational_quote": "Bahut badhiya Raju! Ab dekhte hain jab do past actions mein 'pehle kaun hua' decide karna ho — Past Perfect!"
+      },
+      "navigation": { "next": "card_28_past_perfect_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_28_past_perfect_intro",
+      "card_slug": "card_28_past_perfect_intro",
+      "type": "chat",
+      "concept_id": "past_perfect",
+      "level": 4,
+      "progress": { "current": 28, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho — 'Train chali gayi thi, jab main station pahuncha.' Yahan do kaam hain, dono past mein, par ek pehle hua." },
+        { "speaker": "raju", "text": "Haan sir, train pehle gayi, phir main pahuncha." },
+        { "speaker": "aman", "text": "Bilkul! Jab do actions past mein hon aur unme se ek DUSRE se PEHLE hua ho, to pehle wale action ke liye Past Perfect Tense use hota hai — 'had + V3'." },
+        { "speaker": "raju", "text": "Matlab 'chuka tha' wala feeling — Hindi mein bhi 'gayi thi' bol rahe the!" }
+      ],
+      "navigation": { "next": "card_29_past_perfect_form", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_29_past_perfect_form",
+      "card_slug": "card_29_past_perfect_form",
+      "type": "chat",
+      "concept_id": "past_perfect",
+      "level": 4,
+      "progress": { "current": 29, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Structure: Subject + had + V3 (third form/past participle). 'Had' sabhi subjects ke saath same rehta hai — I had, You had, He had, They had." },
+        { "speaker": "raju", "text": "Toh 'The train had left the station' sahi hoga?" },
+        { "speaker": "aman", "text": "Perfect! 'Left' yahan V3 hai (leave-left-left). Dhyan rakhna, V3 alag hoti hai kabhi kabhi V2 se — jaise go: went(V2), gone(V3)." },
+        { "speaker": "raju", "text": "Ohh isiliye 'had went' galat hai, 'had gone' sahi hoga!" }
+      ],
+      "navigation": { "next": "card_30_past_perfect_before_after", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_30_past_perfect_before_after",
+      "card_slug": "card_30_past_perfect_before_after",
+      "type": "chat",
+      "concept_id": "past_perfect",
+      "level": 4,
+      "progress": { "current": 30, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Universal Rule yaad rakho: DO past actions ho to PEHLE wala action = Past Perfect (had+V3), BAAD wala action = Simple Past (V2). 'He had left before I arrived.'" },
+        { "speaker": "raju", "text": "Matlab 'left' pehle hua isliye Past Perfect, 'arrived' baad mein isliye Simple Past?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye sequence kabhi ulta mat karna. 'Before' aur 'after' clauses mein bhi yahi logic chalega." },
+        { "speaker": "raju", "text": "Toh agar sirf ek hi past action ho, tab Past Perfect nahi lagega?" }
+      ],
+      "navigation": { "next": "card_31_past_perfect_trap", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_31_past_perfect_trap",
+      "card_slug": "card_31_past_perfect_trap",
+      "type": "chat",
+      "concept_id": "past_perfect",
+      "level": 4,
+      "progress": { "current": 31, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Sahi pakda! Past Perfect sirf tabhi aayega jab DO past events compare ho rahe hon. BPSC ka favourite trap: dono actions ko 'had' laga dena — 'He had left before I had arrived' — YE GALAT hai!" },
+        { "speaker": "raju", "text": "Hain?? Dono mein 'had' nahi laga sakte?" },
+        { "speaker": "aman", "text": "Nahi Raju! Sirf pehle wale action mein 'had+V3', doosre/baad wale mein sirf Simple Past. Yahi 'Double Past Perfect Error' kehlata hai." },
+        { "speaker": "raju", "text": "⭐ Ye toh pakka note karna padega, exam mein confuse ho jaate hain!" }
+      ],
+      "navigation": { "next": "card_32_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_32_quiz1",
+      "card_slug": "card_32_quiz1",
+      "type": "quiz",
+      "concept_id": "past_perfect",
+      "level": 4,
+      "progress": { "current": 32, "total": 80 },
+      "quiz_payload": {
+        "question": "Sahi sentence chuno:",
+        "options": [
+          { "id": "A", "text": "The patient had died before the doctor had come." },
+          { "id": "B", "text": "The patient had died before the doctor came." },
+          { "id": "C", "text": "The patient died before the doctor had come." },
+          { "id": "D", "text": "The patient has died before the doctor came." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Pehla event (died) = Past Perfect 'had died'; baad wala event (came) = Simple Past. Dono mein 'had' lagana Double Past Perfect Error hai."
+      },
+      "navigation": { "next": "card_33_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_33_quiz2",
+      "card_slug": "card_33_quiz2",
+      "type": "quiz",
+      "concept_id": "past_perfect",
+      "level": 4,
+      "progress": { "current": 33, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'By the time we reached (A)/ the theatre, the movie (B)/ had already start (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Had' ke baad V3 (past participle) aata hai, 'start' ka V3 'started' hai. Sahi: 'had already started'."
+      },
+      "navigation": { "next": "card_34_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_34_quiz3",
+      "card_slug": "card_34_quiz3",
+      "type": "quiz",
+      "concept_id": "past_perfect",
+      "level": 4,
+      "progress": { "current": 34, "total": 80 },
+      "quiz_payload": {
+        "question": "'Go' verb ka V3 (Past Participle) form kya hai?",
+        "options": [
+          { "id": "A", "text": "went" },
+          { "id": "B", "text": "goed" },
+          { "id": "C", "text": "gone" },
+          { "id": "D", "text": "going" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Go-Went-Gone. 'Had' ke saath hamesha V3 (gone) aayega, V2 (went) nahi — 'He had gone' sahi, 'He had went' galat."
+      },
+      "navigation": { "next": "card_35_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_35_milestone4",
+      "card_slug": "card_35_milestone4",
+      "type": "milestone",
+      "concept_id": "past_perfect",
+      "level": 4,
+      "progress": { "current": 35, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⏮️",
+        "completed_topic": "Past Perfect Tense",
+        "xp_earned": 70,
+        "milestone_progress": "Module 4/9 Clear",
+        "motivational_quote": "Sequence ka raja seekh liya! Ab uski cousin — Past Perfect Continuous dekhte hain."
+      },
+      "navigation": { "next": "card_36_ppc_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_36_ppc_intro",
+      "card_slug": "card_36_ppc_intro",
+      "type": "chat",
+      "concept_id": "past_perfect_continuous",
+      "level": 5,
+      "progress": { "current": 36, "total": 80 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir agar main 3 ghante se padh raha tha jab bijli gayi, isko kya bolenge?" },
+        { "speaker": "aman", "text": "Badhiya sawal! Yahan 'padhna' ek DURATION tak continuously chal raha tha, jab tak dusra past kaam (bijli gayi) nahi hua. Ye Past Perfect Continuous hai." },
+        { "speaker": "raju", "text": "Matlab isme 'kitni der se' wala time bhi bataya jaata hai?" },
+        { "speaker": "aman", "text": "Bilkul! Ye tense use hota hai jab kisi past action ki DURATION dikhani ho jo dusre past action se pehle tak chalti rahi." }
+      ],
+      "navigation": { "next": "card_37_ppc_form", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_37_ppc_form",
+      "card_slug": "card_37_ppc_form",
+      "type": "chat",
+      "concept_id": "past_perfect_continuous",
+      "level": 5,
+      "progress": { "current": 37, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Structure: Subject + had been + V-ing. 'I had been studying for 3 hours when the light went off.'" },
+        { "speaker": "raju", "text": "Toh 'had been' hamesha same rehta hai, bas verb-ing badalti hai?" },
+        { "speaker": "aman", "text": "Sahi! Sabhi subjects ke saath 'had been' hi aata hai — 'was been' ya 'were been' jaisa kuch nahi hota, ye common galti hai." },
+        { "speaker": "raju", "text": "Note kar liya — 'had been' fix, sirf verb-ing change!" }
+      ],
+      "navigation": { "next": "card_38_ppc_since_for", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_38_ppc_since_for",
+      "card_slug": "card_38_ppc_since_for",
+      "type": "chat",
+      "concept_id": "past_perfect_continuous",
+      "level": 5,
+      "progress": { "current": 38, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Ruko Raju, ek zaroori rule: 'Since' point of time ke saath aata hai (since 2018, since morning), 'For' duration ke saath aata hai (for 3 hours, for two years)." },
+        { "speaker": "raju", "text": "Sir 'He had been waiting since two hours' sahi hoga kya?" },
+        { "speaker": "aman", "text": "Nahi! Yahi BPSC/SSC ka classic trap hai — 'two hours' duration hai, isliye 'for' aayega — 'had been waiting for two hours'. 'Since' hoga tabhi jab koi fixed point ho, jaise 'since 6 PM'." },
+        { "speaker": "raju", "text": "Since = point (6 baje se), For = duration (2 ghante se) — yaad rakh liya!" }
+      ],
+      "navigation": { "next": "card_39_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_39_quiz1",
+      "card_slug": "card_39_quiz1",
+      "type": "quiz",
+      "concept_id": "past_perfect_continuous",
+      "level": 5,
+      "progress": { "current": 39, "total": 80 },
+      "quiz_payload": {
+        "question": "Sahi sentence chuno:",
+        "options": [
+          { "id": "A", "text": "She had been working here since five years." },
+          { "id": "B", "text": "She had been working here for five years." },
+          { "id": "C", "text": "She has been working here since five years." },
+          { "id": "D", "text": "She was working here since five years." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Five years' ek duration hai, isliye 'for' aayega, 'since' nahi. 'Had been working for five years' sahi structure hai."
+      },
+      "navigation": { "next": "card_40_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_40_quiz2",
+      "card_slug": "card_40_quiz2",
+      "type": "quiz",
+      "concept_id": "past_perfect_continuous",
+      "level": 5,
+      "progress": { "current": 40, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'The workers (A)/ were been digging the road (B)/ since morning (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Past Perfect Continuous ka structure 'had been + V-ing' hai, 'were been' galat structure hai. Sahi: 'had been digging'."
+      },
+      "navigation": { "next": "card_41_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_41_quiz3",
+      "card_slug": "card_41_quiz3",
+      "type": "quiz",
+      "concept_id": "past_perfect_continuous",
+      "level": 5,
+      "progress": { "current": 41, "total": 80 },
+      "quiz_payload": {
+        "question": "Past Perfect Continuous kab use hota hai?",
+        "options": [
+          { "id": "A", "text": "Jab kaam ek particular moment pe chal raha ho" },
+          { "id": "B", "text": "Jab kaam duration tak chalta raha ho, dusre past action se pehle tak" },
+          { "id": "C", "text": "Jab kaam future mein hoga" },
+          { "id": "D", "text": "Jab kaam abhi khatam hua ho" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Past Perfect Continuous ek duration wale kaam ko dikhata hai jo dusre past action se pehle tak chal raha tha — 'had been + V-ing + since/for'."
+      },
+      "navigation": { "next": "card_42_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_42_milestone5",
+      "card_slug": "card_42_milestone5",
+      "type": "milestone",
+      "concept_id": "past_perfect_continuous",
+      "level": 5,
+      "progress": { "current": 42, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⏳",
+        "completed_topic": "Past Perfect Continuous Tense",
+        "xp_earned": 70,
+        "milestone_progress": "Module 5/9 Clear",
+        "motivational_quote": "Chaaron Past Tenses clear ho gaye Raju! Ab dekhte hain purani aadatein kaise batate hain English mein."
+      },
+      "navigation": { "next": "card_43_used_to_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_43_used_to_intro",
+      "card_slug": "card_43_used_to_intro",
+      "type": "chat",
+      "concept_id": "used_to_would",
+      "level": 6,
+      "progress": { "current": 43, "total": 80 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, Dadi kehti hain 'Pehle hum piyaau se paani laate the, ab nal hai'. Ye kaunsa tense hoga?" },
+        { "speaker": "aman", "text": "Bahut sundar example! Ye ek PURANI AADAT hai jo past mein thi par ab nahi hai. English mein bolte hain 'used to + V1' — 'We used to fetch water from the well.'" },
+        { "speaker": "raju", "text": "Toh 'used to' matlab 'pehle hota tha, ab nahi hota'?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur dhyan rakhna, 'used to' ke baad hamesha V1 (base form) aata hai, V2 nahi — 'used to go' sahi, 'used to went' galat." }
+      ],
+      "navigation": { "next": "card_44_would_habit", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_44_would_habit",
+      "card_slug": "card_44_would_habit",
+      "type": "chat",
+      "concept_id": "used_to_would",
+      "level": 6,
+      "progress": { "current": 44, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur word bhi past habit ke liye use hota hai — 'Would'. 'Every summer, we would visit our village.' Yahan repeated action dikhaya." },
+        { "speaker": "raju", "text": "Toh 'used to' aur 'would' same hi hain sir?" },
+        { "speaker": "aman", "text": "Yahin BPSC/SSC ka bada trap hai! 'Would' sirf repeated ACTIONS ke liye chalta hai, lekin STATES/FEELINGS (have, know, love, believe, own) ke liye sirf 'used to' hi use hoga, 'would' nahi." },
+        { "speaker": "raju", "text": "Matlab 'I would have a bicycle' galat hoga? 'I used to have a bicycle' sahi?" }
+      ],
+      "navigation": { "next": "card_45_be_used_to_trap", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_45_be_used_to_trap",
+      "card_slug": "card_45_be_used_to_trap",
+      "type": "chat",
+      "concept_id": "used_to_would",
+      "level": 6,
+      "progress": { "current": 45, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi Raju! Aur ek aur famous confusion — 'used to' (past habit) VS 'be used to' (habituated/accustomed hona)." },
+        { "speaker": "raju", "text": "Sir ye to naam bhi milta julta hai, ye kaise alag pehchane?" },
+        { "speaker": "aman", "text": "'I used to live in Patna' = pehle rehta tha. Lekin 'I am used to living in Patna' = ab mujhe aadat ho gayi hai. Dhyan do — 'be used to' ke baad V-ing aata hai, V1 nahi!" },
+        { "speaker": "raju", "text": "Ohh! 'am used to' ke baad 'ing', but sirf 'used to' ke baad plain verb — ⭐ ye toh super trap hai exam ka!" }
+      ],
+      "navigation": { "next": "card_46_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_46_quiz1",
+      "card_slug": "card_46_quiz1",
+      "type": "quiz",
+      "concept_id": "used_to_would",
+      "level": 6,
+      "progress": { "current": 46, "total": 80 },
+      "quiz_payload": {
+        "question": "Kaunsa sentence sahi hai?",
+        "options": [
+          { "id": "A", "text": "When I was young, I would have long hair." },
+          { "id": "B", "text": "When I was young, I used to have long hair." },
+          { "id": "C", "text": "When I was young, I would having long hair." },
+          { "id": "D", "text": "When I was young, I used to having long hair." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Have' ek state verb hai (possession), state verbs ke saath 'would' nahi chalta — sirf 'used to' chalega. Aur 'used to' ke baad V1 (have) aayega."
+      },
+      "navigation": { "next": "card_47_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_47_quiz2",
+      "card_slug": "card_47_quiz2",
+      "type": "quiz",
+      "concept_id": "used_to_would",
+      "level": 6,
+      "progress": { "current": 47, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'After shifting to Delhi (A)/ he is used to travel (B)/ by metro every day (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Be used to' (accustomed hona) ke baad V-ing aata hai, V1 nahi. Sahi: 'he is used to travelling'."
+      },
+      "navigation": { "next": "card_48_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_48_quiz3",
+      "card_slug": "card_48_quiz3",
+      "type": "quiz",
+      "concept_id": "used_to_would",
+      "level": 6,
+      "progress": { "current": 48, "total": 80 },
+      "quiz_payload": {
+        "question": "'Would' repeated past habit ke liye kis type ki verbs ke saath NAHI use hota?",
+        "options": [
+          { "id": "A", "text": "Action verbs (go, play, visit)" },
+          { "id": "B", "text": "State/stative verbs (have, know, love)" },
+          { "id": "C", "text": "Regular verbs" },
+          { "id": "D", "text": "Irregular verbs" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "State verbs (have, know, believe, love, own) ke saath 'would' use nahi hota, sirf 'used to' chalta hai — 'I used to know him' sahi, 'I would know him' galat."
+      },
+      "navigation": { "next": "card_49_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_49_milestone6",
+      "card_slug": "card_49_milestone6",
+      "type": "milestone",
+      "concept_id": "used_to_would",
+      "level": 6,
+      "progress": { "current": 49, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔁",
+        "completed_topic": "Used to / Would (Past Habits)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/9 Clear",
+        "motivational_quote": "Officer level trap crack kar diya! Ab sequence of tense ke sabse bade traps dekhte hain."
+      },
+      "navigation": { "next": "card_50_before_after", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_50_before_after",
+      "card_slug": "card_50_before_after",
+      "type": "chat",
+      "concept_id": "sequence_of_tense",
+      "level": 7,
+      "progress": { "current": 50, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab hum seekhenge special time-clause words jo Past Perfect ko 'trigger' karte hain. Pehla: 'Before' aur 'After'." },
+        { "speaker": "raju", "text": "Sir ye 'before/after' to hum pehle bhi use kar chuke the na?" },
+        { "speaker": "aman", "text": "Haan par ab pattern fix karte hain: 'Before' clause ke baad Simple Past, aur dusra clause Past Perfect ho sakta hai (jo pehle hua). 'After he had finished dinner, he went to sleep.'" },
+        { "speaker": "raju", "text": "Matlab 'After' ke saath Past Perfect (pehle wala kaam), aur baad wale part mein Simple Past?" }
+      ],
+      "navigation": { "next": "card_51_by_the_time", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_51_by_the_time",
+      "card_slug": "card_51_by_the_time",
+      "type": "chat",
+      "concept_id": "sequence_of_tense",
+      "level": 7,
+      "progress": { "current": 51, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Sahi Raju! Ab dusra pattern: 'By the time'. Rule: 'By the time' + Simple Past, Main Clause + Past Perfect. 'By the time the police arrived, the thief had escaped.'" },
+        { "speaker": "raju", "text": "Toh thief pehle bhaga (had escaped), police baad mein aayi (arrived)?" },
+        { "speaker": "aman", "text": "Ekdum sahi logic! 'By the time' clause hamesha 'later' event dikhata hai (Simple Past), aur main clause 'earlier completed' event (Past Perfect)." },
+        { "speaker": "raju", "text": "Achhaaaa, matlab 'by the time' khud Simple Past leta hai, dusra part Past Perfect!" }
+      ],
+      "navigation": { "next": "card_52_no_sooner_than", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_52_no_sooner_than",
+      "card_slug": "card_52_no_sooner_than",
+      "type": "chat",
+      "concept_id": "sequence_of_tense",
+      "level": 7,
+      "progress": { "current": 52, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC/SBI PO ka sabse favourite structure: 'No sooner + had + Subject + V3 + than + Simple Past'. 'No sooner had he reached the station than the train left.'" },
+        { "speaker": "raju", "text": "Sir isme 'had' subject se pehle kyun hai? Ulta lag raha hai!" },
+        { "speaker": "aman", "text": "Bahut acha observation! Jab sentence 'No sooner' se shuru hota hai, to Inversion hota hai — had aur subject ki jagah badal jaati hai. Ye special exam trick hai." },
+        { "speaker": "raju", "text": "Aur 'than' ke baad 'the train left' — ye Simple Past hi rahega, 'had left' nahi?" }
+      ],
+      "navigation": { "next": "card_53_hardly_scarcely", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_53_hardly_scarcely",
+      "card_slug": "card_53_hardly_scarcely",
+      "type": "chat",
+      "concept_id": "sequence_of_tense",
+      "level": 7,
+      "progress": { "current": 53, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Aur 'No sooner...than' jaisi hi do aur cousin structures hain: 'Hardly had...when' aur 'Scarcely had...when/before'. 'Hardly had I sat down when the phone rang.'" },
+        { "speaker": "raju", "text": "Matlab teeno structures same pattern follow karte hain — bas connecting word alag hai?" },
+        { "speaker": "aman", "text": "Exactly Raju! 'No sooner' ke saath 'than' aata hai, par 'Hardly/Scarcely' ke saath 'when' ya 'before' aata hai — 'than' NAHI. Ye mixing exam ka sabse bada trap hai!" },
+        { "speaker": "raju", "text": "⭐ Note: No sooner-than, Hardly/Scarcely-when/before. Kabhi mix nahi karna!" }
+      ],
+      "navigation": { "next": "card_54_as_soon_as", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_54_as_soon_as",
+      "card_slug": "card_54_as_soon_as",
+      "type": "chat",
+      "concept_id": "sequence_of_tense",
+      "level": 7,
+      "progress": { "current": 54, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Last pattern: 'As soon as'. Ismein dono clauses SIMPLE PAST hote hain, Past Perfect ki zaroorat nahi. 'As soon as he saw me, he smiled.'" },
+        { "speaker": "raju", "text": "Hain? Isme to Past Perfect nahi lagega? Ye to alag ho gaya!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda — yahi exam ka twist hai. 'As soon as' khud hi 'turant baad' ka meaning deta hai, isliye dono actions Simple Past mein rehte hain, Past Perfect ki need nahi." },
+        { "speaker": "raju", "text": "Toh 'As soon as he had seen me, he smiled' galat hoga!" }
+      ],
+      "navigation": { "next": "card_55_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_55_quiz1",
+      "card_slug": "card_55_quiz1",
+      "type": "quiz",
+      "concept_id": "sequence_of_tense",
+      "level": 7,
+      "progress": { "current": 55, "total": 80 },
+      "quiz_payload": {
+        "question": "Sahi sentence chuno:",
+        "options": [
+          { "id": "A", "text": "No sooner he had reached office than it started raining." },
+          { "id": "B", "text": "No sooner had he reached office than it started raining." },
+          { "id": "C", "text": "No sooner had he reached office when it started raining." },
+          { "id": "D", "text": "No sooner he reached office than it had started raining." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'No sooner' ke baad Inversion hota hai (had+subject), aur connector 'than' aata hai, 'when' nahi. Dusra clause Simple Past mein hota hai."
+      },
+      "navigation": { "next": "card_56_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_56_quiz2",
+      "card_slug": "card_56_quiz2",
+      "type": "quiz",
+      "concept_id": "sequence_of_tense",
+      "level": 7,
+      "progress": { "current": 56, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'By the time the ambulance arrives (A)/ the patient had already (B)/ died due to excess bleeding (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'By the time' clause mein Simple Past aana chahiye jab main clause Past Perfect ho — 'arrives' galat, 'arrived' sahi hoga."
+      },
+      "navigation": { "next": "card_57_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_57_quiz3",
+      "card_slug": "card_57_quiz3",
+      "type": "quiz",
+      "concept_id": "sequence_of_tense",
+      "level": 7,
+      "progress": { "current": 57, "total": 80 },
+      "quiz_payload": {
+        "question": "'Hardly' aur 'Scarcely' ke saath kaunsa connector use hota hai?",
+        "options": [
+          { "id": "A", "text": "Than" },
+          { "id": "B", "text": "When/Before" },
+          { "id": "C", "text": "So that" },
+          { "id": "D", "text": "As" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Hardly/Scarcely had...when/before' hota hai. 'Than' sirf 'No sooner' ke saath use hota hai — mixing karna common error hai."
+      },
+      "navigation": { "next": "card_58_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_58_milestone7",
+      "card_slug": "card_58_milestone7",
+      "type": "milestone",
+      "concept_id": "sequence_of_tense",
+      "level": 7,
+      "progress": { "current": 58, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Sequence of Tense & Time Clause Traps",
+        "xp_earned": 80,
+        "milestone_progress": "Module 7/9 Clear",
+        "motivational_quote": "Ye SBI PO ka sabse tough module tha aur tumne crack kar liya! Ab Since/For, Wish, If-clause dekhte hain."
+      },
+      "navigation": { "next": "card_59_since_for_rule", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_59_since_for_rule",
+      "card_slug": "card_59_since_for_rule",
+      "type": "chat",
+      "concept_id": "since_for_wish_if",
+      "level": 8,
+      "progress": { "current": 59, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek baar phir pakka karte hain Since/For ka rule kyunki ye Present Perfect aur Past Perfect Continuous dono mein bahut aata hai. Since = FIXED POINT (since 2015, since Monday), For = DURATION (for 3 years, for a week)." },
+        { "speaker": "raju", "text": "Sir agar 'since childhood' bole to point hai na?" },
+        { "speaker": "aman", "text": "Bilkul sahi! 'Childhood' ek starting point hai. 'I have known him since childhood' sahi hai. Agar 'for' use karte — 'for childhood' — galat ban jaata." },
+        { "speaker": "raju", "text": "Toh 'since' = kab se shuru hua, 'for' = kitni der se — clear ho gaya!" }
+      ],
+      "navigation": { "next": "card_60_wish_past", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_60_wish_past",
+      "card_slug": "card_60_wish_past",
+      "type": "chat",
+      "concept_id": "since_for_wish_if",
+      "level": 8,
+      "progress": { "current": 60, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab 'Wish' seekhते hain — jab hum kisi cheez ki chahat/afsos dikhate hain. Present ki cheez ke liye 'wish + Simple Past': 'I wish I had a car' (abhi nahi hai)." },
+        { "speaker": "raju", "text": "Aur agar past ki koi galti pe afsos ho, jaise 'kaash maine mehnat ki hoti'?" },
+        { "speaker": "aman", "text": "Tab 'wish + Past Perfect' aayega — 'I wish I had studied harder' (past mein nahi kiya, ab pachhtava hai)." },
+        { "speaker": "raju", "text": "⭐ Toh present regret = wish+Past Simple, past regret = wish+Past Perfect — same jaisa If-clause wala pattern lag raha hai!" }
+      ],
+      "navigation": { "next": "card_61_if_clause_type2_3", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_61_if_clause_type2_3",
+      "card_slug": "card_61_if_clause_type2_3",
+      "type": "chat",
+      "concept_id": "since_for_wish_if",
+      "level": 8,
+      "progress": { "current": 61, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi observation Raju! If-clause Type 2 (unreal present): If + Past Simple, would + V1 — 'If I had money, I would buy a car.'" },
+        { "speaker": "raju", "text": "Aur Type 3 wala past ki hypothetical baat ke liye hoga?" },
+        { "speaker": "aman", "text": "Haan! Type 3 (unreal past/regret): If + Past Perfect, would have + V3 — 'If I had studied, I would have passed.' Trap: 'would have' ki jagah 'would' likhna galat hai." },
+        { "speaker": "raju", "text": "Toh 'If clause' mein 'would' NAHI aata, sirf main clause mein aata hai — 'if' wale part mein sirf Past/Past Perfect!" }
+      ],
+      "navigation": { "next": "card_62_reported_speech_backshift", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_62_reported_speech_backshift",
+      "card_slug": "card_62_reported_speech_backshift",
+      "type": "chat",
+      "concept_id": "since_for_wish_if",
+      "level": 8,
+      "progress": { "current": 62, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Last concept — Reported Speech ka 'Backshift Rule'. Jab reporting verb Past mein ho (said, told), to andar ka tense EK STEP PEECHE chala jaata hai." },
+        { "speaker": "raju", "text": "Matlab kaise sir?" },
+        { "speaker": "aman", "text": "Present Simple → Past Simple, Present Continuous → Past Continuous, Simple Past → Past Perfect. 'He said, \"I go to school\"' → 'He said that he went to school.'" },
+        { "speaker": "raju", "text": "Aur agar direct speech mein already Past hai, jaise 'I went'?" }
+      ],
+      "navigation": { "next": "card_63_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_63_quiz1",
+      "card_slug": "card_63_quiz1",
+      "type": "quiz",
+      "concept_id": "since_for_wish_if",
+      "level": 8,
+      "progress": { "current": 63, "total": 80 },
+      "quiz_payload": {
+        "question": "'He said, \"I went to Delhi.\"' Iska sahi Reported Speech kya hoga?",
+        "options": [
+          { "id": "A", "text": "He said that he went to Delhi." },
+          { "id": "B", "text": "He said that he had gone to Delhi." },
+          { "id": "C", "text": "He said that he goes to Delhi." },
+          { "id": "D", "text": "He said that he has gone to Delhi." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Backshift rule mein Simple Past (went) → Past Perfect (had gone) ban jaata hai jab reporting verb Past mein ho."
+      },
+      "navigation": { "next": "card_64_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_64_quiz2",
+      "card_slug": "card_64_quiz2",
+      "type": "quiz",
+      "concept_id": "since_for_wish_if",
+      "level": 8,
+      "progress": { "current": 64, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'If he had worked hard (A)/ he would pass (B)/ the examination last year (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "If-clause Type 3 mein main clause 'would have + V3' hota hai, sirf 'would pass' galat hai. Sahi: 'he would have passed'."
+      },
+      "navigation": { "next": "card_65_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_65_quiz3",
+      "card_slug": "card_65_quiz3",
+      "type": "quiz",
+      "concept_id": "since_for_wish_if",
+      "level": 8,
+      "progress": { "current": 65, "total": 80 },
+      "quiz_payload": {
+        "question": "'I wish I ___ him yesterday' (afsos, past mein mile nahi) — sahi form?",
+        "options": [
+          { "id": "A", "text": "meet" },
+          { "id": "B", "text": "met" },
+          { "id": "C", "text": "had met" },
+          { "id": "D", "text": "have met" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Past ke afsos ke liye 'wish + Past Perfect' aata hai — 'I wish I had met him yesterday.'"
+      },
+      "navigation": { "next": "card_66_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_66_milestone8",
+      "card_slug": "card_66_milestone8",
+      "type": "milestone",
+      "concept_id": "since_for_wish_if",
+      "level": 8,
+      "progress": { "current": 66, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌀",
+        "completed_topic": "Since/For, Wish, If-Clause & Reported Speech",
+        "xp_earned": 80,
+        "milestone_progress": "Module 8/9 Clear",
+        "motivational_quote": "Officer level grammar mind ban gaya hai tumhara! Ab final module — SBI PO level Error Detection Practice!"
+      },
+      "navigation": { "next": "card_67_error_detection_strategy", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_67_error_detection_strategy",
+      "card_slug": "card_67_error_detection_strategy",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 67, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab hum wahi karenge jo SBI PO exam mein poocha jaata hai — sentence 4 parts mein todke error dhundhna. Strategy: 1) Pehle verb forms check karo (V1/V2/V3 sahi jagah?)." },
+        { "speaker": "raju", "text": "Aur kya check karna hai sir?" },
+        { "speaker": "aman", "text": "2) Time markers verb se match kar rahe hain kya (yesterday ke saath Simple Past hona chahiye, present perfect nahi)? 3) Subject-Verb agreement (was/were)? 4) Double past to nahi ho raha?" },
+        { "speaker": "raju", "text": "Ye to ek checklist ban gayi sir! Chaliye practice karte hain!" }
+      ],
+      "navigation": { "next": "card_68_trap_irregular", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_68_trap_irregular",
+      "card_slug": "card_68_trap_irregular",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 68, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 1: Irregular Verb Wrong Forms. Exam mein invented wrong forms dete hain — 'catched' (sahi: caught), 'teached' (sahi: taught), 'writed' (sahi: wrote), 'seed' (sahi: saw)." },
+        { "speaker": "raju", "text": "Sir ye sab to bilkul asli English words jaise lagte hain, dhoka ho jaata hai!" },
+        { "speaker": "aman", "text": "Isiliye common irregular verbs V1-V2-V3 zaroor yaad karo: go-went-gone, do-did-done, see-saw-seen, write-wrote-written, take-took-taken, break-broke-broken." },
+        { "speaker": "raju", "text": "Sir main roz 5 verbs yaad karunga, exam tak sab clear ho jaayenge!" }
+      ],
+      "navigation": { "next": "card_69_trap_double_past", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_69_trap_double_past",
+      "card_slug": "card_69_trap_double_past",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 69, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 2: Double Past Error — jab ek hi sentence mein do jagah past dikha diya jaaye. 'He did not went' (galat), 'He had went' (galat), 'I would have came' (galat)." },
+        { "speaker": "raju", "text": "Toh sahi kya hoga in teeno ka sir?" },
+        { "speaker": "aman", "text": "'He did not go', 'He had gone', 'I would have come'. Rule: 'did/had/would have' khud hi past/perfect dikha dete hain, isliye verb apni ORIGINAL form (V1 ya V3, situation ke hisaab se) mein rahegi." },
+        { "speaker": "raju", "text": "Achhaaaa! 'Had' ke baad V3, 'did' ke baad V1, 'would have' ke baad V3 — teeno alag rule hain!" }
+      ],
+      "navigation": { "next": "card_70_trap_agreement", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_70_trap_agreement",
+      "card_slug": "card_70_trap_agreement",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 70, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 3: Subject-Verb agreement with was/were. 'Neither of the boys were present' — YE GALAT hai, kyunki 'Neither/Either/Each' singular maane jaate hain, 'was' aayega." },
+        { "speaker": "raju", "text": "Hain?? 'Neither of the boys' to plural jaisa lagta hai sir!" },
+        { "speaker": "aman", "text": "Yahi BPSC ka classic trap hai! 'Neither of', 'Either of', 'Each of' — sab SINGULAR treat hote hain. Sahi: 'Neither of the boys was present.'" },
+        { "speaker": "raju", "text": "⭐ Note kar liya sir — 'of' ke pehle wala word dekho, boys nahi!" }
+      ],
+      "navigation": { "next": "card_71_trap_time_markers", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_71_trap_time_markers",
+      "card_slug": "card_71_trap_time_markers",
+      "type": "chat",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 71, "total": 80 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 4: Time Marker Mismatch. 'I have gone there yesterday' GALAT hai — 'yesterday' ek DEFINITE past time hai, isliye Present Perfect (have gone) nahi chalega, sirf Simple Past (went) chalega." },
+        { "speaker": "raju", "text": "Toh Present Perfect ke saath 'yesterday, last year, ago, in 2015' jaise words kabhi nahi aa sakte?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Present Perfect ke saath 'already, just, yet, since, for, ever, never' aate hain — inko 'yesterday' jaise definite markers se kabhi mix mat karna." },
+        { "speaker": "raju", "text": "Ye toh SBI PO ka sabse repeat hone wala trap lagta hai sir!" }
+      ],
+      "navigation": { "next": "card_72_quiz1", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_72_quiz1",
+      "card_slug": "card_72_quiz1",
+      "type": "quiz",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 72, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'The manager (A)/ has submitted the report (B)/ two days ago (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Two days ago' ek definite past time marker hai, isliye Present Perfect (has submitted) nahi chalega. Sahi: 'submitted the report' (Simple Past)."
+      },
+      "navigation": { "next": "card_73_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_73_quiz2",
+      "card_slug": "card_73_quiz2",
+      "type": "quiz",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 73, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'Neither of the two candidates (A)/ were able to answer (B)/ the tricky question correctly (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Neither of' hamesha singular verb leta hai. Sahi: 'was able to answer', 'were' galat hai."
+      },
+      "navigation": { "next": "card_74_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_74_quiz3",
+      "card_slug": "card_74_quiz3",
+      "type": "quiz",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 74, "total": 80 },
+      "quiz_payload": {
+        "question": "Error Detection: 'As soon as the bell rang (A)/ all the students had rushed (B)/ out of the classroom (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "Part A" },
+          { "id": "B", "text": "Part B" },
+          { "id": "C", "text": "Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'As soon as' ke dono clauses Simple Past mein hote hain, Past Perfect ki zaroorat nahi. Sahi: 'all the students rushed'."
+      },
+      "navigation": { "next": "card_75_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_75_milestone9",
+      "card_slug": "card_75_milestone9",
+      "type": "milestone",
+      "concept_id": "error_detection_master",
+      "level": 9,
+      "progress": { "current": 75, "total": 80 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🕵️",
+        "completed_topic": "SBI PO Level Error Detection Practice",
+        "xp_earned": 90,
+        "milestone_progress": "Module 9/9 Clear",
+        "motivational_quote": "Tumne poora Past Tense chapter Officer-level pe master kar liya! Ab final revision aur master quiz ka time hai!"
+      },
+      "navigation": { "next": "card_76_summary", "button_text": "Go to Final Revision ➔" }
+    },
+
+    {
+      "card_id": "card_76_summary",
+      "card_slug": "card_76_summary",
+      "type": "summary",
+      "concept_id": "final_revision",
+      "level": 9,
+      "progress": { "current": 76, "total": 80 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision — Past Tense",
+        "revision_points": [
+          {
+            "topic": "Statement Check: Simple Past",
+            "point": "Statement I: Simple Past = Subject+V2, definite past time (yesterday, ago, last year). Statement II: 'Did' ke baad hamesha V1 aata hai. Dono statements sahi hain — Double Past Error (did+V2) exam ka top trap hai."
+          },
+          {
+            "topic": "Statement Check: Past Continuous",
+            "point": "Statement I: 'was/were+V-ing' interrupted action ke lambe part ko dikhata hai. Statement II: 'When' short/sudden action ke saath, 'while' lambe action ke saath aata hai. Dono sahi — mixing galat maani jaati hai."
+          },
+          {
+            "topic": "Statement Check: Past Perfect",
+            "point": "Statement I: Do past actions mein pehle wala 'had+V3' leta hai. Statement II: Dono actions mein 'had' lagana (Double Past Perfect) galat hai. Statement I sahi, Statement II ek COMMON ERROR hai jo bachna chahiye."
+          },
+          {
+            "topic": "Statement Check: Sequence of Tense",
+            "point": "Statement I: 'No sooner+had+Subject+V3+than+Simple Past' — Inversion hota hai. Statement II: 'Hardly/Scarcely' ke saath 'than' nahi, 'when/before' aata hai. Dono statements sahi hain, mixing exam ka trap hai."
+          },
+          {
+            "topic": "Statement Check: Used to vs Would",
+            "point": "Statement I: State verbs (have, know, love) ke saath sirf 'used to' chalta hai, 'would' nahi. Statement II: 'Be used to' ke baad V-ing aata hai, 'used to' ke baad V1 aata hai. Dono statements sahi hain."
+          }
+        ]
+      },
+      "navigation": { "next": "card_77_final_quiz1", "button_text": "Start Master Officer Quiz ➔" }
+    },
+
+    {
+      "card_id": "card_77_final_quiz1",
+      "card_slug": "card_77_final_quiz1",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 10,
+      "progress": { "current": 77, "total": 80 },
+      "quiz_payload": {
+        "question": "Assertion-Reason: Assertion (A): 'By the time the fire brigade arrived, the house had already burnt down' is grammatically correct. Reason (R): In 'by the time' constructions, the clause with 'by the time' takes Simple Past while the main clause takes Past Perfect for the earlier action.",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is NOT the correct explanation of A" },
+          { "id": "C", "text": "A is true but R is false" },
+          { "id": "D", "text": "A is false but R is true" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "'Arrived' (later event) is Simple Past, 'had burnt down' (earlier event) is Past Perfect — exactly matching the sequence-of-tense rule for 'by the time'. Both Assertion and Reason are true and R correctly explains A."
+      },
+      "navigation": { "next": "card_78_final_quiz2", "button_text": "Next Question ➔" }
+    },
+
+    {
+      "card_id": "card_78_final_quiz2",
+      "card_slug": "card_78_final_quiz2",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 10,
+      "progress": { "current": 78, "total": 80 },
+      "quiz_payload": {
+        "question": "Multi-Statement: Read the sentence and find which parts contain an error: 'No sooner he had reached the venue (A) / than the chief guest arrived (B) / and the ceremony had started immediately (C) / No error (D)'. Choose the part(s) with error.",
+        "options": [
+          { "id": "A", "text": "Only Part A" },
+          { "id": "B", "text": "Part A and Part C" },
+          { "id": "C", "text": "Only Part C" },
+          { "id": "D", "text": "No error" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Part A error: 'No sooner' requires inversion — 'had he reached' not 'he had reached'. Part C error: after 'than' clause, the last action should be Simple Past ('started'), not Past Perfect ('had started') since it's a third sequential event, not earlier than the 'arrived' event."
+      },
+      "navigation": { "next": "card_79_final_quiz3", "button_text": "Next Question ➔" }
+    },
+
+    {
+      "card_id": "card_79_final_quiz3",
+      "card_slug": "card_79_final_quiz3",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 10,
+      "progress": { "current": 79, "total": 80 },
+      "quiz_payload": {
+        "question": "BPSC Style: Consider the following statements about Past Tense usage: (1) 'Since' is used with a duration like 'since five years'. (2) 'Neither of the students were informed' is grammatically correct. (3) 'I wish I had met him yesterday' correctly expresses a past regret. Which of the statements is/are CORRECT?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 3" },
+          { "id": "C", "text": "Only 2 and 3" },
+          { "id": "D", "text": "1, 2 and 3" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 is WRONG — 'since' needs a fixed point (since 2018), not duration ('for five years' would be correct). Statement 2 is WRONG — 'Neither of' takes singular verb 'was', not 'were'. Statement 3 is CORRECT — 'wish + had + V3' correctly shows past regret. So only Statement 3 is correct."
+      },
+      "navigation": { "next": "card_80_trophy", "button_text": "See Final Result ➔" }
+    },
+
+    {
+      "card_id": "card_80_trophy",
+      "card_slug": "card_80_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 10,
+      "progress": { "current": 80, "total": 80 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Past Tense — Full Chapter + SBI PO Error Detection",
+        "xp_earned": 150,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Officer-level Past Tense mastery unlocked, Raju! Simple Past se lekar No Sooner-Than tak, sab traps tumhare control mein hain. Ab exam mein koi bhi Past Tense question tumhe hara nahi sakta — All the best!"
+      },
+      "navigation": { "next": "card_01_intro", "button_text": "Restart Chapter 🔁" }
+    }
+  ]
+}
+```
