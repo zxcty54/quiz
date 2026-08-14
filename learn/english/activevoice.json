@@ -1,0 +1,1243 @@
+
+{
+  "topic_id": "eng_gram_active_voice_sbi_po",
+  "topic_title": "Active Voice in English Grammar + SBI PO Level Error Detection",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE", "SBI PO/Bank PO"],
+  "total_cards": 71,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 71 },
+      "intro_payload": {
+        "title": "Active Voice Mastery",
+        "subtitle": "All 12 Tenses + Modals + SBI PO Level Error Detection",
+        "icon": "🎯",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE", "SBI PO/Bank PO"],
+        "learning_outcomes": [
+          "Understand Doer (Karta) vs Receiver (Karma) - the foundation of Voice",
+          "Master exact Active Voice structure (BSEB's 'Karta Vachya' terminology)",
+          "Build Active Voice sentences correctly across all 12 tenses",
+          "Use Modals and Modal Perfects correctly in Active Voice",
+          "Identify Transitive vs Intransitive verbs (the hidden exception rule)",
+          "Crack SBI PO / Bank PO level Error Detection on subject-verb agreement, tense mixing & Do/Does/Did traps"
+        ]
+      },
+      "navigation": { "next": "card_02_daily_example", "button_text": "Start Learning ➔" }
+    },
+    {
+      "card_id": "card_02_daily_example",
+      "card_slug": "card_02_daily_example",
+      "type": "chat",
+      "concept_id": "foundation_doer_object",
+      "level": 1,
+      "progress": { "current": 2, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho tum ground mein ho aur ek sentence bolते ho - 'Raju threw the ball.' Is sentence mein do cheezein hain - ek jo action kar raha hai, aur ek jispe action ho raha hai. Bataओ kaun kya hai?" },
+        { "speaker": "raju", "text": "Sir, Raju ne ball fenki, toh Raju action kar raha hai aur ball pe action ho raha hai... but ye grammar mein kaam kaise aayega?" }
+      ],
+      "navigation": { "next": "card_03_doer_receiver", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_doer_receiver",
+      "card_slug": "card_03_doer_receiver",
+      "type": "chat",
+      "concept_id": "foundation_doer_object",
+      "level": 1,
+      "progress": { "current": 3, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Yahi toh poori Voice grammar ki foundation hai! Jo action KARTA hai, use hum 'Doer' kehte hain (Bihar Board isse 'Karta' kehta hai), aur jispe action ka asar hota hai, use 'Object/Receiver' kehte hain (Bihar Board isse 'Karma' kehta hai). 'Raju' Doer hai, 'the ball' Object hai." },
+        { "speaker": "raju", "text": "Achha! Toh har sentence mein ek karne wala aur ek jispe kiya jaaye - dono hona zaroori hai kya?" }
+      ],
+      "navigation": { "next": "card_04_guess_doer", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_guess_doer",
+      "card_slug": "card_04_guess_doer",
+      "type": "guess",
+      "concept_id": "foundation_doer_object",
+      "level": 1,
+      "progress": { "current": 4, "total": 71 },
+      "guess_payload": {
+        "question": "Guess karo - 'The chef cooked delicious food.' Is sentence mein Doer (Karta) kaun hai?",
+        "options": [
+          { "id": "A", "text": "Food" },
+          { "id": "B", "text": "Delicious" },
+          { "id": "C", "text": "The chef" },
+          { "id": "D", "text": "Cooked" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'The chef' action karne wala hai (usne cook kiya), isliye 'The chef' Doer/Karta hai. 'Food' Object/Karma hai kyunki uspe action hua."
+      },
+      "navigation": { "next": "card_05_quiz1_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_05_quiz1_m1",
+      "card_slug": "card_05_quiz1_m1",
+      "type": "quiz",
+      "concept_id": "foundation_doer_object",
+      "level": 1,
+      "progress": { "current": 5, "total": 71 },
+      "quiz_payload": {
+        "question": "'Mummy makes tasty roti every morning.' - Is sentence mein Object/Karma kya hai?",
+        "options": [
+          { "id": "A", "text": "Mummy" },
+          { "id": "B", "text": "Makes" },
+          { "id": "C", "text": "Roti" },
+          { "id": "D", "text": "Morning" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Roti' woh cheez hai jispe action (making) ho raha hai, isliye 'roti' hi Object/Karma hai. 'Mummy' Doer/Karta hai."
+      },
+      "navigation": { "next": "card_06_quiz2_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_06_quiz2_m1",
+      "card_slug": "card_06_quiz2_m1",
+      "type": "quiz",
+      "concept_id": "foundation_doer_object",
+      "level": 1,
+      "progress": { "current": 6, "total": 71 },
+      "quiz_payload": {
+        "question": "'The postman delivers letters daily.' - Is sentence mein Doer (Karta) kaun hai?",
+        "options": [
+          { "id": "A", "text": "Letters" },
+          { "id": "B", "text": "The postman" },
+          { "id": "C", "text": "Delivers" },
+          { "id": "D", "text": "Daily" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'The postman' action kar raha hai (delivering), isliye woh Doer/Karta hai."
+      },
+      "navigation": { "next": "card_07_quiz3_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz3_m1",
+      "card_slug": "card_07_quiz3_m1",
+      "type": "quiz",
+      "concept_id": "foundation_doer_object",
+      "level": 1,
+      "progress": { "current": 7, "total": 71 },
+      "quiz_payload": {
+        "question": "'Raju sleeps early at night.' - Is sentence mein Object/Karma dhundने ki koshish karo. Kya milta hai?",
+        "options": [
+          { "id": "A", "text": "Raju" },
+          { "id": "B", "text": "Sleeps" },
+          { "id": "C", "text": "Night" },
+          { "id": "D", "text": "Koi Object nahi hai" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Is sentence mein koi Object nahi hai kyunki 'sleep' ek aisa verb hai jispe action kisi doosri cheez par nahi jaata - ye sirf Doer tak seemित hai. Ye important observation aage kaam aayegi jab hum Transitive/Intransitive verb seekhenge!"
+      },
+      "navigation": { "next": "card_08_milestone_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_milestone_m1",
+      "card_slug": "card_08_milestone_m1",
+      "type": "milestone",
+      "concept_id": "foundation_doer_object",
+      "level": 1,
+      "progress": { "current": 8, "total": 71 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎯",
+        "completed_topic": "Doer vs Object - Foundation",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "Foundation solid hai! Ab chalte hain asli Active Voice ki definition ki taraf!"
+      },
+      "navigation": { "next": "card_09_active_definition", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_09_active_definition",
+      "card_slug": "card_09_active_definition",
+      "type": "chat",
+      "concept_id": "active_voice_definition",
+      "level": 2,
+      "progress": { "current": 9, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab main tumhe official definition batata hoon. Universal rule yaad rakho: Jab kisi sentence mein SUBJECT khud action karta hai (Doer hi Subject hota hai), toh us sentence ko Active Voice kehte hain. Structure hamesha yahi hoga: Subject + Verb + Object. Jaise: 'Raju plays cricket.' - yahaan Raju (Subject) khud khel raha hai." },
+        { "speaker": "raju", "text": "Achha! Toh matlab jab bhi Subject khud kuch kar raha ho, ye Active Voice hai? Toh Passive Voice mein kya hota hai phir?" }
+      ],
+      "navigation": { "next": "card_10_karta_vachya", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_10_karta_vachya",
+      "card_slug": "card_10_karta_vachya",
+      "type": "chat",
+      "concept_id": "active_voice_definition",
+      "level": 2,
+      "progress": { "current": 10, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Bihar SCERT/BSEB ki Hindi-medium English grammar books mein Active Voice ko 'Karta Vachya' (कर्तृ वाच्य) kaha jaata hai - kyunki isme 'Karta' (Doer/Subject) hi sabse important/prominent hota hai. Passive Voice ko 'Karma Vachya' (कर्म वाच्य) kaha jaata hai kyunki wahaan 'Karma' (Object) prominent ho jaata hai. BPSC TRE mein ye terminology direct poочhi jaati hai!" },
+        { "speaker": "raju", "text": "Ohh, matlab agar exam mein 'Karta Vachya' likha ho toh samझ jaana ki Active Voice hi poocha ja raha hai? Ye toh naya word hai mere liye sir!" }
+      ],
+      "navigation": { "next": "card_11_contrast_passive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_contrast_passive",
+      "card_slug": "card_11_contrast_passive",
+      "type": "chat",
+      "concept_id": "active_voice_definition",
+      "level": 2,
+      "progress": { "current": 11, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab ek chhoti si comparison dekhкर Active Voice ko aur pakka pehchan lo. Active: 'Raju threw the ball.' (Subject 'Raju' khud action kar raha hai) vs Passive: 'The ball was thrown by Raju.' (yahaan Object 'ball' Subject ban gaya hai, aur asli Doer 'by Raju' ke saath peeche chala gaya). Trick: Active mein hamesha Doer hi Subject position mein hota hai - ye pehchan ka sabse pakka tarika hai." },
+        { "speaker": "raju", "text": "Samझ gaya sir! Agar sentence ka Subject khud kaam kar raha hai (na ki uspe kaam ho raha hai), toh wo Active Voice hai! Ye trick toh bahut kaam ki hai." }
+      ],
+      "navigation": { "next": "card_12_guess_identify", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_guess_identify",
+      "card_slug": "card_12_guess_identify",
+      "type": "guess",
+      "concept_id": "active_voice_definition",
+      "level": 2,
+      "progress": { "current": 12, "total": 71 },
+      "guess_payload": {
+        "question": "Guess karo - in mein se kaunsa sentence Active Voice hai?",
+        "options": [
+          { "id": "A", "text": "The letter was written by Sita." },
+          { "id": "B", "text": "Sita wrote the letter." },
+          { "id": "C", "text": "The book was read by him." },
+          { "id": "D", "text": "The song was sung by her." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Sita wrote the letter.' mein Subject 'Sita' khud action (writing) kar rahi hai, isliye ye Active Voice hai. Baaki teeno options mein Object subject position mein hai aur 'by' ke saath asli doer diya gaya hai - ye sab Passive Voice ke examples hain."
+      },
+      "navigation": { "next": "card_13_quiz1_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_13_quiz1_m2",
+      "card_slug": "card_13_quiz1_m2",
+      "type": "quiz",
+      "concept_id": "active_voice_definition",
+      "level": 2,
+      "progress": { "current": 13, "total": 71 },
+      "quiz_payload": {
+        "question": "Active Voice ki sabse basic structure kya hoti hai?",
+        "options": [
+          { "id": "A", "text": "Object + Verb + Subject" },
+          { "id": "B", "text": "Subject + Verb + Object" },
+          { "id": "C", "text": "Verb + Subject + Object" },
+          { "id": "D", "text": "Object + Subject + Verb" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Active Voice ka universal structure hai Subject + Verb + Object, jahaan Subject hi Doer (Karta) hota hai."
+      },
+      "navigation": { "next": "card_14_quiz2_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_14_quiz2_m2",
+      "card_slug": "card_14_quiz2_m2",
+      "type": "quiz",
+      "concept_id": "active_voice_definition",
+      "level": 2,
+      "progress": { "current": 14, "total": 71 },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE Trap: Bihar SCERT/BSEB textbooks mein Active Voice ko kis Hindi term se pukara jaata hai?",
+        "options": [
+          { "id": "A", "text": "Karma Vachya" },
+          { "id": "B", "text": "Bhava Vachya" },
+          { "id": "C", "text": "Karta Vachya" },
+          { "id": "D", "text": "Sankhya Vachya" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Active Voice ko BSEB textbooks mein 'Karta Vachya' kaha jaata hai kyunki Karta (Doer/Subject) hi sentence mein prominent hota hai. 'Karma Vachya' Passive Voice ke liye use hota hai."
+      },
+      "navigation": { "next": "card_15_quiz3_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz3_m2",
+      "card_slug": "card_15_quiz3_m2",
+      "type": "quiz",
+      "concept_id": "active_voice_definition",
+      "level": 2,
+      "progress": { "current": 15, "total": 71 },
+      "quiz_payload": {
+        "question": "'The trophy was won by our team.' - Is sentence ko Active Voice mein pehchanने ka sabse pakka tarika kya hai check karna?",
+        "options": [
+          { "id": "A", "text": "Kya sentence lamba hai?" },
+          { "id": "B", "text": "Kya Subject khud action kar raha hai ya uspe action ho raha hai?" },
+          { "id": "C", "text": "Kya sentence mein comma hai?" },
+          { "id": "D", "text": "Kya sentence question hai?" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sabse pakka tarika hai ye dekhna ki Subject khud kaam kar raha hai (Active) ya uspe kaam ho raha hai (Passive). Yahaan 'trophy' pe action ho raha hai (won by team), isliye ye Passive hai, Active nahi."
+      },
+      "navigation": { "next": "card_16_milestone_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_milestone_m2",
+      "card_slug": "card_16_milestone_m2",
+      "type": "milestone",
+      "concept_id": "active_voice_definition",
+      "level": 2,
+      "progress": { "current": 16, "total": 71 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔑",
+        "completed_topic": "Active Voice - Definition & Structure",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "Definition pakki hai! Ab chalo dekhte hain Active Voice sabhi 12 tenses mein kaise dikhta hai!"
+      },
+      "navigation": { "next": "card_17_simple_present", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_17_simple_present",
+      "card_slug": "card_17_simple_present",
+      "type": "chat",
+      "concept_id": "active_present_tenses",
+      "level": 3,
+      "progress": { "current": 17, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab hum Active Voice ko baari-baari sabhi 12 tenses mein dekhenge - ye SSC/BPSC ka favorite testing ground hai. Pehla - Simple Present: Structure hai Subject + V1(s/es agar third person singular ho) + Object. Jaise: 'Raju plays cricket.' Agar Subject 'I/We/You/They' ho toh 's/es' nahi lagता: 'They play cricket.'" },
+        { "speaker": "raju", "text": "Sir, ye 's/es' wala rule toh yaad hai mujhe school se - 'he/she/it' ke saath 's' lagता hai na verb mein?" }
+      ],
+      "navigation": { "next": "card_18_present_continuous", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_18_present_continuous",
+      "card_slug": "card_18_present_continuous",
+      "type": "chat",
+      "concept_id": "active_present_tenses",
+      "level": 3,
+      "progress": { "current": 18, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab dusra - Present Continuous (jab kaam abhi chal raha ho): Structure hai Subject + is/am/are + V-ing + Object. Jaise: 'Raju is playing cricket.' (single subject), 'They are playing cricket.' (plural subject). 'Is/am/are' Subject ke number-person ke hisaab se badalता hai." },
+        { "speaker": "raju", "text": "Achha, matlab 'is/am/are' Subject dekhкर decide karna hai - I ke saath 'am', he/she/it ke saath 'is', we/you/they ke saath 'are'?" }
+      ],
+      "navigation": { "next": "card_19_present_perfect", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_present_perfect",
+      "card_slug": "card_19_present_perfect",
+      "type": "chat",
+      "concept_id": "active_present_tenses",
+      "level": 3,
+      "progress": { "current": 19, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Sahi pakड़a! Ab teesra - Present Perfect (jab kaam ho chuka hai, uska asar abhi tak hai): Structure hai Subject + has/have + V3 + Object. Jaise: 'Raju has played cricket.' (singular), 'They have played cricket.' (plural). 'Has' sirf he/she/it ke saath, baaki sab jagah 'have'." },
+        { "speaker": "raju", "text": "Sir ye toh 'has/have' ka wahi rule hai jo 'is/am/are' mein tha - singular alag, plural alag." }
+      ],
+      "navigation": { "next": "card_20_present_perfect_continuous", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_present_perfect_continuous",
+      "card_slug": "card_20_present_perfect_continuous",
+      "type": "chat",
+      "concept_id": "active_present_tenses",
+      "level": 3,
+      "progress": { "current": 20, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul! Ab chautha - Present Perfect Continuous (kaam bahut samay se chal raha hai aur abhi bhi chal raha hai): Structure hai Subject + has/have + been + V-ing + Object. Jaise: 'Raju has been playing cricket since morning.' Isme 'since' (fixed point - since morning, since 2020) aur 'for' (duration - for two hours) ka use bhi exam mein poocha jaata hai." },
+        { "speaker": "raju", "text": "Sir 'since' aur 'for' mein confuse ho jaata hoon main - 'since' matlab kab se shuru hua, 'for' matlab kितने der se, sahi samझा?" }
+      ],
+      "navigation": { "next": "card_21_guess_present", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_guess_present",
+      "card_slug": "card_21_guess_present",
+      "type": "guess",
+      "concept_id": "active_present_tenses",
+      "level": 3,
+      "progress": { "current": 21, "total": 71 },
+      "guess_payload": {
+        "question": "Guess karo - 'She has been studying for three hours.' Ye kaunsa tense hai?",
+        "options": [
+          { "id": "A", "text": "Present Perfect" },
+          { "id": "B", "text": "Present Continuous" },
+          { "id": "C", "text": "Present Perfect Continuous" },
+          { "id": "D", "text": "Simple Present" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'has been studying' + duration ('for three hours') - ye Present Perfect Continuous ka structure hai (has/have + been + V-ing)."
+      },
+      "navigation": { "next": "card_22_quiz1_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_22_quiz1_m3",
+      "card_slug": "card_22_quiz1_m3",
+      "type": "quiz",
+      "concept_id": "active_present_tenses",
+      "level": 3,
+      "progress": { "current": 22, "total": 71 },
+      "quiz_payload": {
+        "question": "'He ____ football every Sunday.' Sahi Simple Present Active verb form chunо:",
+        "options": [
+          { "id": "A", "text": "play" },
+          { "id": "B", "text": "plays" },
+          { "id": "C", "text": "playing" },
+          { "id": "D", "text": "played" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'He' third person singular hai, isliye Simple Present mein verb ke saath 's' lagता hai: 'He plays football.'"
+      },
+      "navigation": { "next": "card_23_quiz2_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_quiz2_m3",
+      "card_slug": "card_23_quiz2_m3",
+      "type": "quiz",
+      "concept_id": "active_present_tenses",
+      "level": 3,
+      "progress": { "current": 23, "total": 71 },
+      "quiz_payload": {
+        "question": "'The children ____ in the garden right now.' Sahi form chunо (Present Continuous Active):",
+        "options": [
+          { "id": "A", "text": "is playing" },
+          { "id": "B", "text": "are playing" },
+          { "id": "C", "text": "play" },
+          { "id": "D", "text": "has played" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'The children' plural subject hai, isliye 'are' aayega: 'The children are playing in the garden right now.'"
+      },
+      "navigation": { "next": "card_24_quiz3_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_24_quiz3_m3",
+      "card_slug": "card_24_quiz3_m3",
+      "type": "quiz",
+      "concept_id": "active_present_tenses",
+      "level": 3,
+      "progress": { "current": 24, "total": 71 },
+      "quiz_payload": {
+        "question": "'I ____ finished my homework.' Sahi Present Perfect Active form chunо:",
+        "options": [
+          { "id": "A", "text": "has" },
+          { "id": "B", "text": "have" },
+          { "id": "C", "text": "am" },
+          { "id": "D", "text": "had" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'I' ke saath 'has' nahi, 'have' aayega: 'I have finished my homework.' Ye common SSC/Railway trap hai."
+      },
+      "navigation": { "next": "card_25_milestone_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_25_milestone_m3",
+      "card_slug": "card_25_milestone_m3",
+      "type": "milestone",
+      "concept_id": "active_present_tenses",
+      "level": 3,
+      "progress": { "current": 25, "total": 71 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "☀️",
+        "completed_topic": "Active Voice - Present Tenses (4 forms)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "Present tenses master ho gaye! Ab chalte hain Past Tenses ki taraf!"
+      },
+      "navigation": { "next": "card_26_simple_past", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_26_simple_past",
+      "card_slug": "card_26_simple_past",
+      "type": "chat",
+      "concept_id": "active_past_tenses",
+      "level": 4,
+      "progress": { "current": 26, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Past family dekhते hain. Simple Past: Structure Subject + V2 + Object. Jaise: 'Raju played cricket yesterday.' Yahaan sabse badी baat - V2 (past form) SABHI subjects ke saath SAME rehta hai, chahe I ho, he ho, ya they ho. 's/es' ka koi jhanjhat nahi!" },
+        { "speaker": "raju", "text": "Achha! Toh Past tense mein 'he played', 'I played', 'they played' - sabme same 'played' hi rahega, koi extra 's' nahi lagाना?" }
+      ],
+      "navigation": { "next": "card_27_past_continuous", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_27_past_continuous",
+      "card_slug": "card_27_past_continuous",
+      "type": "chat",
+      "concept_id": "active_past_tenses",
+      "level": 4,
+      "progress": { "current": 27, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab Past Continuous (jab kaam past mein chal raha tha): Structure Subject + was/were + V-ing + Object. Jaise: 'Raju was playing cricket at 5 PM.' Singular subject ke saath 'was', plural ke saath 'were': 'They were playing cricket.'" },
+        { "speaker": "raju", "text": "Sir, matlab 'was/were' ka rule bilkul 'is/am/are' jaisa hai bas past version mein?" }
+      ],
+      "navigation": { "next": "card_28_past_perfect", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_28_past_perfect",
+      "card_slug": "card_28_past_perfect",
+      "type": "chat",
+      "concept_id": "active_past_tenses",
+      "level": 4,
+      "progress": { "current": 28, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Sahi socha! Ab Past Perfect (do past actions mein se jo PEHLE hua): Structure Subject + had + V3 + Object. Jaise: 'Raju had finished his homework before dinner.' Yaad rakho - 'had' hamesha same rehta hai, chahe subject koi bhi ho. Ye tense dikhata hai ki ek action doosre action se pehle complete ho chuka tha." },
+        { "speaker": "raju", "text": "Achha, toh jab do purani baatein ho aur ek doosre se pehle hui ho, tab 'had' use karna hai - ye toh bilkul naya concept hai mere liye!" }
+      ],
+      "navigation": { "next": "card_29_past_perfect_continuous", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_29_past_perfect_continuous",
+      "card_slug": "card_29_past_perfect_continuous",
+      "type": "chat",
+      "concept_id": "active_past_tenses",
+      "level": 4,
+      "progress": { "current": 29, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab last past tense - Past Perfect Continuous (kaam past mein kuch samay tak chalता raha, doosre past action se pehle): Structure Subject + had + been + V-ing + Object. Jaise: 'Raju had been playing cricket for two hours before it started raining.' Ye batata hai ki action lambe samay tak chalता raha tha." },
+        { "speaker": "raju", "text": "Sir ye toh mushkil lag raha hai - 'had been playing' itna lamba structure yaad kaise rakhun?" }
+      ],
+      "navigation": { "next": "card_30_guess_past", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_30_guess_past",
+      "card_slug": "card_30_guess_past",
+      "type": "guess",
+      "concept_id": "active_past_tenses",
+      "level": 4,
+      "progress": { "current": 30, "total": 71 },
+      "guess_payload": {
+        "question": "Guess karo - 'The train had left before we reached the station.' Ye kaunsa tense hai?",
+        "options": [
+          { "id": "A", "text": "Simple Past" },
+          { "id": "B", "text": "Past Continuous" },
+          { "id": "C", "text": "Past Perfect" },
+          { "id": "D", "text": "Past Perfect Continuous" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'had left' - ye Past Perfect hai, jo dikhata hai ki train ka jaana (leave) hamare pahुँchne (reached) se PEHLE ho chuka tha."
+      },
+      "navigation": { "next": "card_31_quiz1_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_31_quiz1_m4",
+      "card_slug": "card_31_quiz1_m4",
+      "type": "quiz",
+      "concept_id": "active_past_tenses",
+      "level": 4,
+      "progress": { "current": 31, "total": 71 },
+      "quiz_payload": {
+        "question": "'She ____ a letter yesterday.' Sahi Simple Past Active form chunо:",
+        "options": [
+          { "id": "A", "text": "write" },
+          { "id": "B", "text": "writes" },
+          { "id": "C", "text": "wrote" },
+          { "id": "D", "text": "written" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Simple Past mein V2 form use hoti hai, jo sabhi subjects ke saath same rehti hai: 'She wrote a letter yesterday.'"
+      },
+      "navigation": { "next": "card_32_quiz2_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_32_quiz2_m4",
+      "card_slug": "card_32_quiz2_m4",
+      "type": "quiz",
+      "concept_id": "active_past_tenses",
+      "level": 4,
+      "progress": { "current": 32, "total": 71 },
+      "quiz_payload": {
+        "question": "'They ____ watching a movie when I called them.' Sahi Past Continuous form chunо:",
+        "options": [
+          { "id": "A", "text": "was" },
+          { "id": "B", "text": "were" },
+          { "id": "C", "text": "is" },
+          { "id": "D", "text": "had" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'They' plural subject hai, isliye 'were' aayega: 'They were watching a movie when I called them.'"
+      },
+      "navigation": { "next": "card_33_quiz3_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_33_quiz3_m4",
+      "card_slug": "card_33_quiz3_m4",
+      "type": "quiz",
+      "concept_id": "active_past_tenses",
+      "level": 4,
+      "progress": { "current": 33, "total": 71 },
+      "quiz_payload": {
+        "question": "'He ____ been working in that factory for ten years before it closed.' Sahi form chunо:",
+        "options": [
+          { "id": "A", "text": "has" },
+          { "id": "B", "text": "have" },
+          { "id": "C", "text": "had" },
+          { "id": "D", "text": "is" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Past Perfect Continuous ka structure hai 'had + been + V-ing', jo hamesha subject ke chahe koi bhi ho, 'had' hi lete hain: 'He had been working... before it closed.'"
+      },
+      "navigation": { "next": "card_34_milestone_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_34_milestone_m4",
+      "card_slug": "card_34_milestone_m4",
+      "type": "milestone",
+      "concept_id": "active_past_tenses",
+      "level": 4,
+      "progress": { "current": 34, "total": 71 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌙",
+        "completed_topic": "Active Voice - Past Tenses (4 forms)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "Past tenses bhi clear ho gaye! Ab chalo Future Tenses seekhते hain!"
+      },
+      "navigation": { "next": "card_35_simple_future", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_35_simple_future",
+      "card_slug": "card_35_simple_future",
+      "type": "chat",
+      "concept_id": "active_future_tenses",
+      "level": 5,
+      "progress": { "current": 35, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Future family. Simple Future: Structure Subject + will/shall + V1 + Object. Jaise: 'Raju will play cricket tomorrow.' Note karo - 'shall' traditionally 'I/We' ke saath use hota tha (formal English), lekin aajkal 'will' sabhi subjects ke saath commonly use hota hai. Exam mein dono sahi maane jaate hain." },
+        { "speaker": "raju", "text": "Achha, matlab 'will' hi safe option hai sabke saath use karne ke liye?" }
+      ],
+      "navigation": { "next": "card_36_future_continuous", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_36_future_continuous",
+      "card_slug": "card_36_future_continuous",
+      "type": "chat",
+      "concept_id": "active_future_tenses",
+      "level": 5,
+      "progress": { "current": 36, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan, generally 'will' safe hai. Ab Future Continuous (kaam future mein chal raha hoga): Structure Subject + will be + V-ing + Object. Jaise: 'Raju will be playing cricket at 5 PM tomorrow.' Ye dikhata hai ki specific future time pe action jaari rahega." },
+        { "speaker": "raju", "text": "Sir isme toh 'will be' hi fixed hai, subject ke hisaab se nahi badalता?" }
+      ],
+      "navigation": { "next": "card_37_future_perfect", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_37_future_perfect",
+      "card_slug": "card_37_future_perfect",
+      "type": "chat",
+      "concept_id": "active_future_tenses",
+      "level": 5,
+      "progress": { "current": 37, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi, 'will be' fixed rehता hai. Ab Future Perfect (kaam future mein ek certain point tak complete ho chuka hoga): Structure Subject + will have + V3 + Object. Jaise: 'Raju will have finished his project by 6 PM.' Ye batata hai ki future mein ek specific time tak kaam poora ho jaayega." },
+        { "speaker": "raju", "text": "Achha, matlab 'by' ke saath ye tense zyaादa use hota hai jaise 'by 6 PM', 'by next year'?" }
+      ],
+      "navigation": { "next": "card_38_future_perfect_continuous", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_38_future_perfect_continuous",
+      "card_slug": "card_38_future_perfect_continuous",
+      "type": "chat",
+      "concept_id": "active_future_tenses",
+      "level": 5,
+      "progress": { "current": 38, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi socha! Ab last wala - Future Perfect Continuous: Structure Subject + will have been + V-ing + Object. Jaise: 'Raju will have been playing cricket for three hours by evening.' Ye batata hai ki future mein ek point tak action continuously chalता raha hoga. Isse hum 12 tenses ka Active Voice tour complete kar chuke hain!" },
+        { "speaker": "raju", "text": "Wah sir! Sach mein 12 tenses ho gaye complete! Ab main pattern samझ gaya - bas auxiliary verbs badalते hain, main verb ka form (V1/V-ing/V3) fix rehता hai har category mein." }
+      ],
+      "navigation": { "next": "card_39_guess_future", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_39_guess_future",
+      "card_slug": "card_39_guess_future",
+      "type": "guess",
+      "concept_id": "active_future_tenses",
+      "level": 5,
+      "progress": { "current": 39, "total": 71 },
+      "guess_payload": {
+        "question": "Guess karo - 'By next month, she will have completed her project.' Ye kaunsa tense hai?",
+        "options": [
+          { "id": "A", "text": "Simple Future" },
+          { "id": "B", "text": "Future Continuous" },
+          { "id": "C", "text": "Future Perfect" },
+          { "id": "D", "text": "Future Perfect Continuous" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'will have completed' + 'By next month' - ye Future Perfect ka structure hai, jo future mein ek certain point tak kaam complete hone ko dikhata hai."
+      },
+      "navigation": { "next": "card_40_quiz1_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_40_quiz1_m5",
+      "card_slug": "card_40_quiz1_m5",
+      "type": "quiz",
+      "concept_id": "active_future_tenses",
+      "level": 5,
+      "progress": { "current": 40, "total": 71 },
+      "quiz_payload": {
+        "question": "'We ____ visit our grandparents next week.' Sahi Simple Future form chunо:",
+        "options": [
+          { "id": "A", "text": "visits" },
+          { "id": "B", "text": "will" },
+          { "id": "C", "text": "visited" },
+          { "id": "D", "text": "are visiting" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Simple Future ka structure hai 'will/shall + V1': 'We will visit our grandparents next week.'"
+      },
+      "navigation": { "next": "card_41_quiz2_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_41_quiz2_m5",
+      "card_slug": "card_41_quiz2_m5",
+      "type": "quiz",
+      "concept_id": "active_future_tenses",
+      "level": 5,
+      "progress": { "current": 41, "total": 71 },
+      "quiz_payload": {
+        "question": "'This time tomorrow, I ____ flying to Delhi.' Sahi Future Continuous form chunо:",
+        "options": [
+          { "id": "A", "text": "will be" },
+          { "id": "B", "text": "will have" },
+          { "id": "C", "text": "am" },
+          { "id": "D", "text": "was" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Future Continuous ka structure hai 'will be + V-ing': 'This time tomorrow, I will be flying to Delhi.'"
+      },
+      "navigation": { "next": "card_42_quiz3_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_42_quiz3_m5",
+      "card_slug": "card_42_quiz3_m5",
+      "type": "quiz",
+      "concept_id": "active_future_tenses",
+      "level": 5,
+      "progress": { "current": 42, "total": 71 },
+      "quiz_payload": {
+        "question": "'By evening, they ____ been travelling for six hours.' Sahi form chunо (Future Perfect Continuous):",
+        "options": [
+          { "id": "A", "text": "will have" },
+          { "id": "B", "text": "will" },
+          { "id": "C", "text": "have" },
+          { "id": "D", "text": "had" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Future Perfect Continuous ka structure hai 'will have been + V-ing': 'By evening, they will have been travelling for six hours.'"
+      },
+      "navigation": { "next": "card_43_milestone_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_43_milestone_m5",
+      "card_slug": "card_43_milestone_m5",
+      "type": "milestone",
+      "concept_id": "active_future_tenses",
+      "level": 5,
+      "progress": { "current": 43, "total": 71 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🚀",
+        "completed_topic": "Active Voice - Future Tenses (4 forms)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "Sabhi 12 tenses clear! Ab chalte hain Modals aur Imperatives ki taraf!"
+      },
+      "navigation": { "next": "card_44_modals_active", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_44_modals_active",
+      "card_slug": "card_44_modals_active",
+      "type": "chat",
+      "concept_id": "active_modals_imperative",
+      "level": 6,
+      "progress": { "current": 44, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhते hain Modals ka use Active Voice mein. Modals hain: can, could, may, might, must, should, will, would, shall, ought to. Universal rule: Modal ke baad HAMESHA verb ka base form (V1) aata hai. Jaise: 'Raju can solve this puzzle.' ya 'Students must submit their assignments.'" },
+        { "speaker": "raju", "text": "Achha, matlab modal ke baad kabhi V2, V3 ya V-ing nahi lagाना, hamesha V1 hi lagाना hai chahe subject koi bhi ho?" }
+      ],
+      "navigation": { "next": "card_45_modal_perfect", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_45_modal_perfect",
+      "card_slug": "card_45_modal_perfect",
+      "type": "chat",
+      "concept_id": "active_modals_imperative",
+      "level": 6,
+      "progress": { "current": 45, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi, hamesha V1! Ab ek advanced form dekho - Modal Perfect: Modal + have + V3. Ye tab use hota hai jab past ke baare mein regret, possibility ya obligation batani ho. Jaise: 'Raju should have completed the work.' (regret - usne nahi kiya), 'He must have gone home.' (strong possibility about past)." },
+        { "speaker": "raju", "text": "Sir ye 'should have' wala structure toh bilkul alag lag raha hai - matlab past ki galtiyon ke liye use hota hai?" }
+      ],
+      "navigation": { "next": "card_46_imperative_active", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_46_imperative_active",
+      "card_slug": "card_46_imperative_active",
+      "type": "chat",
+      "concept_id": "active_modals_imperative",
+      "level": 6,
+      "progress": { "current": 46, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab ek interesting exception dekho - Imperative sentences (order/request) DEFAULT roop se Active Voice hi hote hain. Jaise: 'Close the door.' - yahaan hidden subject 'You' hi khud action kar raha hai maana jaata hai. Inhe Passive mein badalne ke liye special 'Let' construction chahiye hota hai: 'Let the door be closed.' - jo bahut kam use hota hai." },
+        { "speaker": "raju", "text": "Ohh! Toh normal commands jo hum roz bolते hain jaise 'Sit down', 'Open the book' - wo sab already Active Voice hote hain, hume kuch alag se sochने ki zaroorat nahi?" }
+      ],
+      "navigation": { "next": "card_47_guess_modal", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_47_guess_modal",
+      "card_slug": "card_47_guess_modal",
+      "type": "guess",
+      "concept_id": "active_modals_imperative",
+      "level": 6,
+      "progress": { "current": 47, "total": 71 },
+      "guess_payload": {
+        "question": "Guess karo - 'He ____ finished the report by now.' (regret ya assumption about past) Sahi Modal Perfect form chunо:",
+        "options": [
+          { "id": "A", "text": "should finished" },
+          { "id": "B", "text": "should have finished" },
+          { "id": "C", "text": "should has finished" },
+          { "id": "D", "text": "should finishes" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Modal Perfect ka structure hai Modal + have + V3: 'He should have finished the report by now.'"
+      },
+      "navigation": { "next": "card_48_quiz1_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_48_quiz1_m6",
+      "card_slug": "card_48_quiz1_m6",
+      "type": "quiz",
+      "concept_id": "active_modals_imperative",
+      "level": 6,
+      "progress": { "current": 48, "total": 71 },
+      "quiz_payload": {
+        "question": "'She ____ speak three languages fluently.' Sahi modal + verb form chunо:",
+        "options": [
+          { "id": "A", "text": "can speaks" },
+          { "id": "B", "text": "can speak" },
+          { "id": "C", "text": "can spoke" },
+          { "id": "D", "text": "can speaking" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Modal 'can' ke baad hamesha V1 (base form) aata hai, chahe subject singular ho ya plural: 'She can speak three languages.'"
+      },
+      "navigation": { "next": "card_49_quiz2_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_49_quiz2_m6",
+      "card_slug": "card_49_quiz2_m6",
+      "type": "quiz",
+      "concept_id": "active_modals_imperative",
+      "level": 6,
+      "progress": { "current": 49, "total": 71 },
+      "quiz_payload": {
+        "question": "'Open the window.' - Is Imperative sentence ka hidden Subject kya hai aur ye kaunsi Voice hai?",
+        "options": [
+          { "id": "A", "text": "Hidden Subject 'I', Passive Voice" },
+          { "id": "B", "text": "Hidden Subject 'You', Active Voice" },
+          { "id": "C", "text": "Hidden Subject 'We', Passive Voice" },
+          { "id": "D", "text": "Koi Subject nahi hota" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Imperative sentences mein hidden Subject 'You' hota hai, aur ye default roop se Active Voice hote hain kyunki 'You' khud action karega."
+      },
+      "navigation": { "next": "card_50_quiz3_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_50_quiz3_m6",
+      "card_slug": "card_50_quiz3_m6",
+      "type": "quiz",
+      "concept_id": "active_modals_imperative",
+      "level": 6,
+      "progress": { "current": 50, "total": 71 },
+      "quiz_payload": {
+        "question": "'They ____ have reached home by now, but there's no news.' (strong assumption). Sahi form chunо:",
+        "options": [
+          { "id": "A", "text": "must" },
+          { "id": "B", "text": "musts" },
+          { "id": "C", "text": "must to" },
+          { "id": "D", "text": "must be" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Modal 'must' ke baad seedha 'have + V3' aata hai bina kisi extra word ke: 'They must have reached home by now.'"
+      },
+      "navigation": { "next": "card_51_milestone_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_51_milestone_m6",
+      "card_slug": "card_51_milestone_m6",
+      "type": "milestone",
+      "concept_id": "active_modals_imperative",
+      "level": 6,
+      "progress": { "current": 51, "total": 71 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💪",
+        "completed_topic": "Modals & Imperatives in Active Voice",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/8 Clear",
+        "motivational_quote": "Modals bhi ho gaye clear! Ab ek chhipa hua rule seekhते hain - Transitive vs Intransitive verbs!"
+      },
+      "navigation": { "next": "card_52_transitive_verb", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_52_transitive_verb",
+      "card_slug": "card_52_transitive_verb",
+      "type": "chat",
+      "concept_id": "transitive_intransitive",
+      "level": 7,
+      "progress": { "current": 52, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Yaad hai Raju, Module 1 mein humne dekha tha ki 'Raju sleeps early' mein koi Object nahi tha? Ab isko formally samझते hain. Jis verb ko apna meaning poora karne ke liye ek Object chahiye, use TRANSITIVE verb kehte hain. Jaise 'eat', 'throw', 'read', 'write' - inhe object chahiye hi hoga: 'He eats food.', 'She reads a book.'" },
+        { "speaker": "raju", "text": "Achha, toh 'eat' akela bol dena kaafi nahi, hamesha kuch bataना paडेga jo khaya gaya - jaise 'food', 'roti' waghaira?" }
+      ],
+      "navigation": { "next": "card_53_intransitive_verb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_53_intransitive_verb",
+      "card_slug": "card_53_intransitive_verb",
+      "type": "chat",
+      "concept_id": "transitive_intransitive",
+      "level": 7,
+      "progress": { "current": 53, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Sahi pakड़ा! Ab dusri category - INTRANSITIVE verb, jise apna meaning poora karne ke liye Object ki zaroorat nahi hoti. Jaise 'sleep', 'run', 'cry', 'laugh', 'arrive', 'die' - ye verbs khud mein complete hain: 'Raju sleeps.', 'She laughed.' Yahin sabse bada twist hai - CHUNKI in verbs mein Object hota hi nahi, isliye ye Passive Voice mein CONVERT hi NAHI ho sakते, sirf Active Voice mein hi rehते hain." },
+        { "speaker": "raju", "text": "Hain?? Matlab 'Raju sleeps' ko kabhi bhi Passive nahi bana sakते? Ye toh interesting rule hai sir - ye toh exam mein confuse karega!" }
+      ],
+      "navigation": { "next": "card_54_both_types_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_54_both_types_trap",
+      "card_slug": "card_54_both_types_trap",
+      "type": "chat",
+      "concept_id": "transitive_intransitive",
+      "level": 7,
+      "progress": { "current": 54, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "BPSC ka favorite trap suno - kuch verbs context ke hisaab se DONO ho sakते hain! Jaise 'read': 'He reads.' (Intransitive - no object, general habit) vs 'He reads a book.' (Transitive - object 'a book' hai). Dono hi Active Voice sentences sahi hain, lekin sirf DOOSRA wala hi Passive mein convert ho sakता hai kyunki usmein Object hai." },
+        { "speaker": "raju", "text": "Ohhh! Toh same verb kabhi Object ke saath aaye toh Transitive, aur bina Object ke aaye toh Intransitive - matlab sentence dekhкर decide karna paडेga, verb dekhкर nahi?" }
+      ],
+      "navigation": { "next": "card_55_guess_transitive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_55_guess_transitive",
+      "card_slug": "card_55_guess_transitive",
+      "type": "guess",
+      "concept_id": "transitive_intransitive",
+      "level": 7,
+      "progress": { "current": 55, "total": 71 },
+      "guess_payload": {
+        "question": "Guess karo - in mein se kaunsa sentence Passive Voice mein CONVERT NAHI ho sakता (kyunki verb Intransitive hai)?",
+        "options": [
+          { "id": "A", "text": "She wrote a letter." },
+          { "id": "B", "text": "The baby cried." },
+          { "id": "C", "text": "He cooked dinner." },
+          { "id": "D", "text": "They built a house." }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'The baby cried.' mein 'cry' Intransitive verb hai - iska koi Object nahi hai, isliye ye Passive Voice mein convert nahi ho sakta. Baaki teeno sentences mein Object hai (letter, dinner, house), isliye wo Transitive hain aur Passive ban sakते hain."
+      },
+      "navigation": { "next": "card_56_quiz1_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_56_quiz1_m7",
+      "card_slug": "card_56_quiz1_m7",
+      "type": "quiz",
+      "concept_id": "transitive_intransitive",
+      "level": 7,
+      "progress": { "current": 56, "total": 71 },
+      "quiz_payload": {
+        "question": "Transitive verb ki sabse badी pehchan kya hai?",
+        "options": [
+          { "id": "A", "text": "Usme hamesha 'ing' lagta hai" },
+          { "id": "B", "text": "Use apna meaning poora karne ke liye Object chahiye" },
+          { "id": "C", "text": "Wo hamesha Past tense mein hota hai" },
+          { "id": "D", "text": "Usme hamesha Modal lagता hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Transitive verb ko meaning complete karne ke liye Object ki zaroorat hoती hai, jaise 'eat', 'throw', 'write' - inke bina sentence adhoora lagता hai."
+      },
+      "navigation": { "next": "card_57_quiz2_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_57_quiz2_m7",
+      "card_slug": "card_57_quiz2_m7",
+      "type": "quiz",
+      "concept_id": "transitive_intransitive",
+      "level": 7,
+      "progress": { "current": 57, "total": 71 },
+      "quiz_payload": {
+        "question": "'Birds fly in the sky.' - Is sentence mein 'fly' kis type ka verb hai?",
+        "options": [
+          { "id": "A", "text": "Transitive, kyunki 'sky' Object hai" },
+          { "id": "B", "text": "Intransitive, kyunki koi Object nahi hai" },
+          { "id": "C", "text": "Modal verb hai" },
+          { "id": "D", "text": "Ye verb hi nahi hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'in the sky' ek Prepositional phrase hai, Object nahi. 'Fly' yahaan Intransitive verb hai - isliye ye sentence Passive mein convert nahi ho sakta."
+      },
+      "navigation": { "next": "card_58_quiz3_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_58_quiz3_m7",
+      "card_slug": "card_58_quiz3_m7",
+      "type": "quiz",
+      "concept_id": "transitive_intransitive",
+      "level": 7,
+      "progress": { "current": 58, "total": 71 },
+      "quiz_payload": {
+        "question": "'He sings.' vs 'He sings a song.' - In dono sentences ke baare mein sahi statement chunо:",
+        "options": [
+          { "id": "A", "text": "Dono sentences Passive ban sakते hain" },
+          { "id": "B", "text": "Sirf pehla sentence Passive ban sakता hai" },
+          { "id": "C", "text": "Sirf doosra sentence Passive ban sakता hai, kyunki usme Object 'a song' hai" },
+          { "id": "D", "text": "Koi bhi Passive nahi ban sakta" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "'Sings' bina object ke Intransitive hai (Passive nahi ban sakta), lekin 'sings a song' mein Object 'a song' hai isliye ye Transitive hai aur Passive ban sakta hai: 'A song is sung by him.'"
+      },
+      "navigation": { "next": "card_59_milestone_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_59_milestone_m7",
+      "card_slug": "card_59_milestone_m7",
+      "type": "milestone",
+      "concept_id": "transitive_intransitive",
+      "level": 7,
+      "progress": { "current": 59, "total": 71 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔍",
+        "completed_topic": "Transitive vs Intransitive Verbs",
+        "xp_earned": 65,
+        "milestone_progress": "Module 7/8 Clear",
+        "motivational_quote": "Hidden rule crack kar liya! Ab final module - SBI PO level Error Detection!"
+      },
+      "navigation": { "next": "card_60_error_detection_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_60_error_detection_intro",
+      "card_slug": "card_60_error_detection_intro",
+      "type": "chat",
+      "concept_id": "error_detection_active_voice",
+      "level": 8,
+      "progress": { "current": 60, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab hum enter kar rahe hain SBI PO/Bank PO level mein! Wahaan poora sentence 4 parts (A), (B), (C), (D) mein baंटा hota hai aur 5vaan option (E) 'No Error' hota hai. Active Voice se related teen bade traps hain jo hum ab detail se dekhते hain - Subject-Verb Agreement, Tense Mixing, aur Do/Does/Did ka galat use." },
+        { "speaker": "raju", "text": "Sir SBI PO level sunte hi darr lag raha hai! Ye toh bahut tough hoga na?" }
+      ],
+      "navigation": { "next": "card_61_trap_subject_verb", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_61_trap_subject_verb",
+      "card_slug": "card_61_trap_subject_verb",
+      "type": "chat",
+      "concept_id": "error_detection_active_voice",
+      "level": 8,
+      "progress": { "current": 61, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Ghabराओ mat, hum step by step seekhते hain. Trap 1 - Subject-Verb Agreement: Active Voice mein Subject aur Verb hamesha match karना chahiye. 'He go to school daily' GALAT hai (he ke saath 'goes' chahiye), 'The teams plays well' bhi GALAT hai ('teams' plural hai, 'play' aayega). Yahi galti sabse zyaादa test ki jaati hai." },
+        { "speaker": "raju", "text": "Achha, matlab hamesha check karna hai ki Subject singular hai ya plural, phir verb usी hisaab se match karana hai!" }
+      ],
+      "navigation": { "next": "card_62_trap_tense_mixing", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_62_trap_tense_mixing",
+      "card_slug": "card_62_trap_tense_mixing",
+      "type": "chat",
+      "concept_id": "error_detection_active_voice",
+      "level": 8,
+      "progress": { "current": 62, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Trap 2 - Tense Mixing: Sentence ke andar galti se do alag tenses mix kar diye jaate hain jab unhe match hona chahiye. Jaise: 'He has finished the work yesterday.' - GALAT! 'has finished' (Present Perfect) 'yesterday' (Simple Past ka time word) ke saath nahi aa sakta. 'Yesterday' hamesha Simple Past ke saath aayega: 'He finished the work yesterday.'" },
+        { "speaker": "raju", "text": "Ohh! Matlab 'yesterday', 'last year' jaise words dekhते hi samझ jaana chahiye ki Simple Past hi aayega, 'has/have' nahi?" }
+      ],
+      "navigation": { "next": "card_63_trap_do_does_did", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_63_trap_do_does_did",
+      "card_slug": "card_63_trap_do_does_did",
+      "type": "chat",
+      "concept_id": "error_detection_active_voice",
+      "level": 8,
+      "progress": { "current": 63, "total": 71 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Trap 3 - sabसे common SSC/Railway trap: Negative/Interrogative Active Voice mein Do/Does/Did aane par MAIN VERB hamesha V1 (base form) mein rehta hai, kyunki tense ka kaam Do/Does/Did khud kar leta hai. 'He doesn't goes to school' - GALAT (double tense marking - 'does' aur 'goes' dono mein 's'!). Sahi hai: 'He doesn't go to school.'" },
+        { "speaker": "raju", "text": "Sir ye toh sach mein trap hai! Maine toh sochा tha 'doesn't' ke baad bhi 's' lagाना zaroori hai, lekin ye toh galat nikला!" }
+      ],
+      "navigation": { "next": "card_64_guess_error", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_64_guess_error",
+      "card_slug": "card_64_guess_error",
+      "type": "guess",
+      "concept_id": "error_detection_active_voice",
+      "level": 8,
+      "progress": { "current": 64, "total": 71 },
+      "guess_payload": {
+        "question": "Guess karo - in mein se kaunsa sentence SAHI hai (koi Active Voice error nahi)?",
+        "options": [
+          { "id": "A", "text": "Does she likes ice cream?" },
+          { "id": "B", "text": "Does she like ice cream?" },
+          { "id": "C", "text": "Do she like ice cream?" },
+          { "id": "D", "text": "Does she liking ice cream?" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Does she like ice cream?' sahi hai - 'Does' third person singular ke liye sahi hai, aur uske baad main verb V1 (like) mein hi rehta hai, koi extra 's' nahi lagता."
+      },
+      "navigation": { "next": "card_65_quiz1_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_65_quiz1_m8",
+      "card_slug": "card_65_quiz1_m8",
+      "type": "quiz",
+      "concept_id": "error_detection_active_voice",
+      "level": 8,
+      "progress": { "current": 65, "total": 71 },
+      "quiz_payload": {
+        "question": "SBI PO Error Detection: 'The manager along with his staff (A)/ are reviewing (B)/ the sales report of last quarter (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "A" },
+          { "id": "B", "text": "B" },
+          { "id": "C", "text": "C" },
+          { "id": "D", "text": "D (No Error)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Part (B) mein galti hai - 'along with' jaise phrases Subject ki Number (singular/plural) nahi badalते. Asli Subject 'The manager' singular hai, isliye verb 'is reviewing' aayega, 'are reviewing' nahi. Ye SBI PO ka classic Subject-Verb Agreement trap hai."
+      },
+      "navigation": { "next": "card_66_quiz2_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_66_quiz2_m8",
+      "card_slug": "card_66_quiz2_m8",
+      "type": "quiz",
+      "concept_id": "error_detection_active_voice",
+      "level": 8,
+      "progress": { "current": 66, "total": 71 },
+      "quiz_payload": {
+        "question": "SBI PO Error Detection: 'She has completed (A)/ her graduation (B)/ in the year 2018 (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "A" },
+          { "id": "B", "text": "B" },
+          { "id": "C", "text": "C" },
+          { "id": "D", "text": "D (No Error)" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Part (A) mein galti hai - 'in the year 2018' ek definite past time hai, isliye Present Perfect ('has completed') nahi, Simple Past ('completed') aayega: 'She completed her graduation in the year 2018.'"
+      },
+      "navigation": { "next": "card_67_quiz3_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_67_quiz3_m8",
+      "card_slug": "card_67_quiz3_m8",
+      "type": "quiz",
+      "concept_id": "error_detection_active_voice",
+      "level": 8,
+      "progress": { "current": 67, "total": 71 },
+      "quiz_payload": {
+        "question": "SBI PO Error Detection: 'He don't (A)/ attend the meetings (B)/ regularly nowadays (C)/ No error (D)'",
+        "options": [
+          { "id": "A", "text": "A" },
+          { "id": "B", "text": "B" },
+          { "id": "C", "text": "C" },
+          { "id": "D", "text": "D (No Error)" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Part (A) mein galti hai - 'He' third person singular hai, isliye 'don't' nahi, 'doesn't' aayega: 'He doesn't attend the meetings regularly nowadays.'"
+      },
+      "navigation": { "next": "card_68_milestone_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_68_milestone_m8",
+      "card_slug": "card_68_milestone_m8",
+      "type": "milestone",
+      "concept_id": "error_detection_active_voice",
+      "level": 8,
+      "progress": { "current": 68, "total": 71 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🕵️",
+        "completed_topic": "SBI PO Error Detection - Active Voice",
+        "xp_earned": 80,
+        "milestone_progress": "Module 8/8 Clear",
+        "motivational_quote": "Wah Raju! Ab tum SBI PO level errors bhi pakड़ sakte ho! Bas final revision baaki hai!"
+      },
+      "navigation": { "next": "card_69_summary", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_69_summary",
+      "card_slug": "card_69_summary",
+      "type": "summary",
+      "concept_id": "chapter_summary",
+      "level": 9,
+      "progress": { "current": 69, "total": 71 },
+      "summary_payload": {
+        "title": "⚡ Officer-Level Lightning Revision",
+        "revision_points": [
+          {
+            "topic": "Active Voice Core & BSEB Terminology",
+            "point": "Statement I: Active Voice mein Subject hi Doer (Karta) hota hai aur structure Subject+Verb+Object hai. Statement II: Bihar SCERT/BSEB isse 'Karta Vachya' kehta hai. Dono statements sahi hain - BPSC TRE mein ye terminology direct poochi jaati hai."
+          },
+          {
+            "topic": "Tense-wise Auxiliary Rules",
+            "point": "Statement I: Present family mein is/am/are, has/have use hote hain jo Subject ke Number-Person se badalते hain. Statement II: Past family mein was/were badalते hain lekin 'had' hamesha same rehta hai. Dono statements sahi hain."
+          },
+          {
+            "topic": "Modals & Their Fixed Rule",
+            "point": "Statement I: Modal ke baad hamesha V1 (base form) aata hai, chahe Subject koi bhi ho. Statement II: Modal Perfect (should have, must have) past ke baare mein regret ya possibility dikhata hai using Modal+have+V3. Dono statements sahi hain."
+          },
+          {
+            "topic": "Transitive vs Intransitive Exception",
+            "point": "Statement I: Sirf Transitive verbs (jinhe Object chahiye) hi Passive Voice mein convert ho sakते hain. Statement II: Kuch verbs jaise 'read', 'sing' context ke hisaab se dono ho sakte hain. Dono statements sahi hain - ye BPSC ka favorite conceptual trap hai."
+          },
+          {
+            "topic": "SBI PO Level Error Traps",
+            "point": "Statement I: 'along with', 'together with' jaise phrases Subject ki Number nahi badalते, asli Subject hi verb decide karta hai. Statement II: Do/Does/Did ke baad main verb hamesha V1 mein rehta hai (double tense marking galat hai, jaise 'doesn't goes'). Dono statements sahi hain."
+          }
+        ]
+      },
+      "navigation": { "next": "card_70_final_quiz", "button_text": "Take Final Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_70_final_quiz",
+      "card_slug": "card_70_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "chapter_final_quiz",
+      "level": 9,
+      "progress": { "current": 70, "total": 71 },
+      "quiz_payload": {
+        "question": "Consider the following statements regarding Active Voice:\nStatement I: The sentence 'The manager along with his team have submitted the report' has no grammatical error.\nStatement II: 'Raju had been sleeping for two hours' cannot be converted into Passive Voice because 'sleep' is an intransitive verb.\nStatement III: In the sentence 'She doesn't goes to college', the verb form after 'doesn't' is correctly used.\nWhich of the above statement(s) is/are CORRECT?",
+        "options": [
+          { "id": "A", "text": "Only I and III" },
+          { "id": "B", "text": "Only II" },
+          { "id": "C", "text": "Only I and II" },
+          { "id": "D", "text": "Only II and III" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement I is WRONG - 'along with his team' does not change the Subject's number; the real subject is 'The manager' (singular), so it should be 'has submitted', not 'have submitted'. Statement II is CORRECT - 'sleep' is an intransitive verb with no object, so it cannot be converted into Passive Voice, regardless of the tense used. Statement III is WRONG - after 'doesn't' (which already carries the tense marking), the main verb must be in V1 form; it should be 'doesn't go', not 'doesn't goes' (this is a classic double-tense-marking error). Hence, only Statement II is correct - Answer (B)."
+      },
+      "navigation": { "next": "card_71_trophy", "button_text": "See Final Result ➔" }
+    },
+    {
+      "card_id": "card_71_trophy",
+      "card_slug": "card_71_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 9,
+      "progress": { "current": 71, "total": 71 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Active Voice - All 12 Tenses + Modals + SBI PO Error Detection",
+        "xp_earned": 150,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Shabaash Raju! Ab tumne Active Voice ko har tense, har modal, aur SBI PO level error mein master kar liya hai. Officer banने ka safar jaari rahe!"
+      },
+      "navigation": { "next": "card_01_intro", "button_text": "Revise Chapter Again 🔄" }
+    }
+  ]
+}
+```
