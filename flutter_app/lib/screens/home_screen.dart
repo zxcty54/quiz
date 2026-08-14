@@ -39,6 +39,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   bool _hasLearningHistory = false;
   bool _isLoadingConfig = true;
 
+  // Unique refresh key to force re-render
+  int _sectionalDataVersion = 0;
+
   @override
   void initState() {
     super.initState();
@@ -85,13 +88,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     String? cachedMapping = prefs.getString('cached_subject_mapping_json');
     if (cachedMapping != null) {
       try {
-        _subjectMapping = jsonDecode(cachedMapping);
+        _subjectMapping = Map<String, dynamic>.from(jsonDecode(cachedMapping));
       } catch (_) {}
     }
     if (_subjectMapping.isEmpty) {
       try {
         final String subjectStr = await rootBundle.loadString('assets/data/subject_mapping.json');
-        _subjectMapping = jsonDecode(subjectStr);
+        _subjectMapping = Map<String, dynamic>.from(jsonDecode(subjectStr));
       } catch (e) {
         debugPrint("Error loading subject_mapping.json: $e");
       }
@@ -101,13 +104,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     String? cachedSectional = prefs.getString('cached_sectional_data_json');
     if (cachedSectional != null) {
       try {
-        _sectionalData = jsonDecode(cachedSectional);
+        _sectionalData = Map<String, dynamic>.from(jsonDecode(cachedSectional));
       } catch (_) {}
     }
     if (_sectionalData.isEmpty) {
       try {
         final String sectionalStr = await rootBundle.loadString('assets/data/sectional_data.json');
-        _sectionalData = jsonDecode(sectionalStr);
+        _sectionalData = Map<String, dynamic>.from(jsonDecode(sectionalStr));
       } catch (e) {
         debugPrint("Error loading sectional_data.json: $e");
       }
@@ -119,29 +122,33 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       });
     }
 
-    // 4️⃣ Background Unblocked Realtime CDN Fetch
+    // 4️⃣ Live Sync on Startup
     _fetchSectionalDataLive();
     _fetchSubjectMappingLive();
   }
 
-  // 🌐 100% UNBLOCKED ANTI-CENSORSHIP CDN FETCHER (NO RAW GITHUB)
+  // 🌐 DIRECT UNBLOCKED REALTIME FETCHER (Purges jsDelivr Cache Instantly)
   Future<dynamic> _fetchRobustJson(String relativePath) async {
     String clean = relativePath.startsWith("/") ? relativePath.substring(1) : relativePath;
     final int ts = DateTime.now().millisecondsSinceEpoch;
 
-    // Direct Unblocked High-Speed Global CDNs (Never Blocked in India)
-    List<String> unblockedUrls = clean.startsWith("http")
-        ? [clean]
-        : [
-            "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$clean?v=$ts",
-            "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$clean?v=$ts",
-            "https://raw.githack.com/zxcty54/quiz/main/$clean",
-            "https://cdn.statically.io/gh/zxcty54/quiz/main/$clean",
-          ];
+    // Direct Purge & Fresh CDN Links (Always unblocked, 100% Realtime)
+    List<String> urls = [
+      "https://purge.jsdelivr.net/gh/zxcty54/quiz@main/$clean", // Instant Cache Clear
+      "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$clean?t=$ts",
+      "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$clean?nocache=$ts",
+      "https://raw.githack.com/zxcty54/quiz/main/$clean",
+    ];
 
-    for (String url in unblockedUrls) {
+    // Pehle purge hit karo
+    try {
+      http.get(Uri.parse(urls[0])).timeout(const Duration(seconds: 2));
+    } catch (_) {}
+
+    // Fir fresh data load karo
+    for (int i = 1; i < urls.length; i++) {
       try {
-        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 4));
+        final res = await http.get(Uri.parse(urls[i])).timeout(const Duration(seconds: 4));
         if (res.statusCode == 200) {
           String decoded = utf8.decode(res.bodyBytes);
           return jsonDecode(decoded);
@@ -153,24 +160,26 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return null;
   }
 
-  // 🎯 LIVE SECTIONAL MOCKS SYNC & SAVE
+  // 🎯 LIVE SECTIONAL MOCKS SYNC & INSTANT SCREEN UPDATE
   Future<void> _fetchSectionalDataLive() async {
     final data = await _fetchRobustJson("sectional_data.json");
-    if (data != null && data is Map<String, dynamic> && mounted) {
+    if (data != null && data is Map && mounted) {
       setState(() {
-        _sectionalData = data;
+        _sectionalData = Map<String, dynamic>.from(data);
+        _sectionalDataVersion++; // 👈 Forces SectionalTab to redraw immediately
       });
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString('cached_sectional_data_json', jsonEncode(data));
+      debugPrint("✅ Sectional Data Updated Live: Set count refreshed!");
     }
   }
 
-  // 🎯 LIVE REVISION SUBJECT MAPPING SYNC & SAVE
+  // 🎯 LIVE REVISION SUBJECT MAPPING SYNC
   Future<void> _fetchSubjectMappingLive() async {
     final data = await _fetchRobustJson("subject_mapping.json");
-    if (data != null && data is Map<String, dynamic> && mounted) {
+    if (data != null && data is Map && mounted) {
       setState(() {
-        _subjectMapping = data;
+        _subjectMapping = Map<String, dynamic>.from(data);
       });
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString('cached_subject_mapping_json', jsonEncode(data));
@@ -235,14 +244,15 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             onNavigateToLearn: () => setState(() => _currentBottomIndex = 3),
           ),
 
-          // 📚 Tab 1: Revision Tab (Live Synced)
+          // 📚 Tab 1: Revision Tab
           RevisionTab(
             subjectMapping: _subjectMapping,
             onLaunchPractice: _launchRevisionPractice,
           ),
 
-          // 🎯 Tab 2: Sectional Tab (Live Synced)
+          // 🎯 Tab 2: Sectional Tab (Key added to force fresh UI build)
           SectionalTab(
+            key: ValueKey('sectional_tab_v$_sectionalDataVersion'),
             sectionalData: _sectionalData,
             isDarkMode: _isDarkMode,
             onLaunchCbtMock: _launchCbtMock,
@@ -265,8 +275,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         onDestinationSelected: (idx) {
           setState(() => _currentBottomIndex = idx);
           if (idx == 0) _loadRealtimeProgress();
-          if (idx == 1) _fetchSubjectMappingLive(); // 👈 Revision Tab tap hote hi chapters auto sync
-          if (idx == 2) _fetchSectionalDataLive();  // 👈 Sectional Tab tap hote hi sets auto sync
+          if (idx == 1) _fetchSubjectMappingLive();
+          if (idx == 2) _fetchSectionalDataLive(); // 👈 Sectional tab aate hi trigger hoga
         },
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home_outlined), label: 'Home'),
