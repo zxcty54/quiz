@@ -1,55 +1,62 @@
 {
   "bpsc": {
     "title": "🏛️ BPSC PCS Special Zone",
-    "total_sets": 5,
+    "total_sets": 28,
     "path_prefix": "bpsc/science/Modern History/set"
   },
   "ssc": [
     {
-      "title": "📊 SSC / NTPC Quantitative Aptitude",
-      "sets": 5,
-      "folder": "aptitude"
-    },
-    {
-      "title": "🧠 SSC / NTPC General Reasoning",
+      "title": "⚡ General Reasoning Sets",
       "sets": 5,
       "folder": "reasoning"
     },
     {
-      "title": "📖 SSC / NTPC English Language",
+      "title": "📐 Quantitative Aptitude Sets",
+      "sets": 5,
+      "folder": "aptitude"
+    },
+    {
+      "title": "📖 English Language Sets",
       "sets": 5,
       "folder": "english"
     }
   ],
   "bssc_cgl": [
     {
-      "title": "📊 BSSC CGL Aptitude Special",
-      "sets": 6,
-      "folder": "bssc_cgl_aptitude"
-    },
-    {
-      "title": "🧠 BSSC CGL Reasoning Special",
+      "title": "🧠 BSSC CGL Reasoning Sets",
       "sets": 5,
       "folder": "bssc_cgl_reasoning"
+    },
+    {
+      "title": "📐 BSSC CGL Mathematics / Aptitude Sets",
+      "sets": 7,
+      "folder": "bssc_cgl_aptitude"
     }
   ],
   "bssc_inter": [
     {
-      "title": "📊 BSSC 10+2 Aptitude Practice",
-      "sets": 5,
-      "folder": "bssc_inter_aptitude"
-    },
-    {
-      "title": "🧠 BSSC 10+2 Reasoning Practice",
+      "title": "🧠 Mental Ability & Reasoning Sets",
       "sets": 5,
       "folder": "bssc_inter_reasoning"
+    },
+    {
+      "title": "📐 General Mathematics Sets",
+      "sets": 5,
+      "folder": "bssc_inter_aptitude"
     }
   ],
   "bihar_si": [
     {
-      "title": "👮 Bihar SI Daroga Practice Sets",
+      "title": "🎯 Bihar SI Practice Sets",
       "sets": 5,
       "folder": "bihar_si"
+    }
+  ],
+  "bihar_amin": [
+    {
+      "title": "📐 Bihar Amin Practice Sets",
+      "sets": 1,
+      "folder": "ssc_aptitude"
     }
   ]
 }
