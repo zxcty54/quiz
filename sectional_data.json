@@ -6,28 +6,43 @@
   },
   "ssc": [
     {
-      "title": "🎯 SSC / NTPC Special Zone",
+      "title": "📊 SSC / NTPC Quantitative Aptitude",
       "sets": 5,
-      "folder": "ssc/general"
+      "folder": "aptitude"
+    },
+    {
+      "title": "🧠 SSC / NTPC General Reasoning",
+      "sets": 5,
+      "folder": "reasoning"
+    },
+    {
+      "title": "📖 SSC / NTPC English Language",
+      "sets": 5,
+      "folder": "english"
     }
   ],
   "bssc_cgl": [
     {
-      "title": "📊 BSSC CGL Aptitude",
+      "title": "📊 BSSC CGL Aptitude Special",
       "sets": 6,
-      "folder": "bssc_cgl/aptitude"
+      "folder": "bssc_cgl_aptitude"
     },
     {
-      "title": "🧬 General Science Special",
+      "title": "🧠 BSSC CGL Reasoning Special",
       "sets": 5,
-      "folder": "bssc_cgl/science"
+      "folder": "bssc_cgl_reasoning"
     }
   ],
   "bssc_inter": [
     {
-      "title": "📝 BSSC Inter Level Special",
+      "title": "📊 BSSC 10+2 Aptitude Practice",
       "sets": 5,
-      "folder": "bssc_inter/gk"
+      "folder": "bssc_inter_aptitude"
+    },
+    {
+      "title": "🧠 BSSC 10+2 Reasoning Practice",
+      "sets": 5,
+      "folder": "bssc_inter_reasoning"
     }
   ],
   "bihar_si": [
