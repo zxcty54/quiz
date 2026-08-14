@@ -149,7 +149,7 @@
     "qh": "<b>अभाषिक सादृश्यता:</b> ऊपर की ओर इशारा करने वाले एक समकोण त्रिभुज को $135^{\\circ}$ दक्षिणावर्त घुमाया जाता है और क्षैतिज रूप से उल्टा किया जाता है। इसी ज्यामितीय रूपांतरण नियम का पालन करते हुए, नीचे-बाएं से ऊपर-दाएं तक जाने वाली एक विकर्ण रेखा वाला वर्ग किस रूप में परिवर्तित होगा?",
     "o": ["A square with a diagonal from top-left to bottom-right", "A square with identical diagonal lines", "A diamond shape", "A rectangle layout"],
     "a": 0,
-    "e": "Step 1: Rotating a square box 135 degrees turns it into a diamond orientation. Step 2: The diagonal line also rotates 135 degrees clockwise. A line from bottom-left to top-right (at $45^{\\circ}$) rotated by $135^\circ$ clockwise becomes perfectly horizontal or transforms into a top-left to bottom-right layout depending on orientation bounds. Option 1 perfectly satisfies the visual logic constraints."
+    "e": "Step 1: Rotating a square box 135 degrees turns it into a diamond orientation. Step 2: The diagonal line also rotates 135 degrees clockwise. A line from bottom-left to top-right (at $45^{\\circ}$) rotated by $135^\\circ$ clockwise becomes perfectly horizontal or transforms into a top-left to bottom-right layout depending on orientation bounds. Option 1 perfectly satisfies the visual logic constraints."
   },
   {
     "p_id": "bssc_cgl_adv_reason_090",
