@@ -1,8 +1,8 @@
 {
-  "topic_id": "matter_in_chemistry_complete",
-  "topic_title": "Matter in Chemistry",
-  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
-  "total_cards": 72,
+  "topic_id": "chem_matter_foundations",
+  "topic_title": "Matter in Chemistry - Nature, States, Classification & Laws",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 100,
   "characters": {
     "aman": {
       "name": "Aman Sir",
@@ -20,2165 +20,1768 @@
       "card_id": "card_01_intro",
       "card_slug": "card_01_intro",
       "type": "intro",
-      "concept_id": "matter_introduction",
+      "concept_id": "chapter_intro",
       "level": 1,
-      "progress": {
-        "current": 1,
-        "total": 72
-      },
+      "progress": { "current": 1, "total": 100 },
       "intro_payload": {
-        "title": "🧪 Matter in Chemistry",
+        "title": "Matter in Chemistry",
+        "subtitle": "Particle Nature, States, Classification, Laws & Mole Concept",
         "icon": "⚛️",
-        "tagline": "From Your Lunch Box to BPSC Answer Sheets",
-        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
         "learning_outcomes": [
-          "Definition & Characteristics of Matter",
-          "States of Matter: Solid, Liquid, Gas & Plasma",
-          "Particle Nature & Kinetic Theory",
-          "Changes in States: Melting, Boiling, Sublimation",
-          "Physical & Chemical Classification",
-          "BPSC/SSC/NEET PYQ Traps on Matter Concepts"
-        ],
-        "estimated_time": "50 min",
-        "total_xp": 550
+          "Understand the particle nature of matter and diffusion",
+          "Master properties of Solid, Liquid, Gas and their interconversion",
+          "Learn latent heat, evaporation, sublimation, Plasma and Bose-Einstein Condensate",
+          "Classify matter into Elements, Compounds and Mixtures",
+          "Differentiate Solutions, Suspensions and Colloids with Tyndall effect",
+          "Distinguish Physical vs Chemical changes with real evidence",
+          "Master all separation techniques used in daily life and industry",
+          "Learn Laws of Chemical Combination, Dalton's Atomic Theory, Mole Concept and Gas Laws"
+        ]
       },
-      "navigation": {
-        "next": "card_02_daily_observation",
-        "button_text": "शुरू करें ➔"
-      }
+      "navigation": { "next": "card_02_perfume_example", "button_text": "Start Learning ➔" }
     },
     {
-      "card_id": "card_02_daily_observation",
-      "card_slug": "card_02_daily_observation",
+      "card_id": "card_02_perfume_example",
+      "card_slug": "card_02_perfume_example",
       "type": "chat",
-      "concept_id": "matter_daily_life",
+      "concept_id": "particle_nature",
       "level": 1,
-      "progress": {
-        "current": 2,
-        "total": 72
-      },
+      "progress": { "current": 2, "total": 100 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, अभी सुबह नाश्ता किया था ना? Kya khaya tha?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Ji Sir... paratha aur chai! Par ye chemistry se kaise related hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul related hai! Paratha (solid), chai (liquid), aur chai ki steam (gas) - teeno alag-alag forms में hain par sab MATTER hain। Chemistry में sabse pehla question: Matter kya hota hai?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matter matlab... cheezein? Jo hum dekh aur chhu sakte hain?"
-        }
+        { "speaker": "aman", "text": "Raju, socho tum kamre mein baithe ho aur tumhari mummy doosre kamре mein perfume laगाती hai. Kuch hi second mein tumhe bhi khुशbू aa jaाती hai, bina perfume ki bottle ko tumhare paas laये! Aisa kyun hota hai?" },
+        { "speaker": "raju", "text": "Sir shayad hawa mein khुशबू फैल जाती hai... lekin ye 'फैलना' hota kaise hai, ye toh maine kabhi socha hi nahi!" }
       ],
-      "navigation": {
-        "next": "card_03_matter_definition",
-        "button_text": "Definition Dekho ➔"
-      }
+      "navigation": { "next": "card_03_matter_definition", "button_text": "Next Card ➔" }
     },
     {
       "card_id": "card_03_matter_definition",
       "card_slug": "card_03_matter_definition",
       "type": "chat",
-      "concept_id": "matter_scientific_definition",
+      "concept_id": "particle_nature",
       "level": 1,
-      "progress": {
-        "current": 3,
-        "total": 72
-      },
+      "progress": { "current": 3, "total": 100 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bilkul sahi direction! MATTER ki scientific definition: Anything that has MASS and occupies SPACE (volume) is called MATTER. Matlab jo cheez jagah gherate aur jiska weight ho, wo matter hai।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaaa... to chair, pani, hawa sab matter hain kyunki inhe jagah chahiye aur weight bhi hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect understanding! Par ek twist yaad rakho - LIGHT aur SOUND matter NAHI hain. Kyunki light ka mass nahi hota (photons massless hote hain). Ye BPSC का favorite trap hai: 'Light is a form of matter' - galat statement!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Hain?? Light matter nahi hai? To light kya hai phir?"
-        }
+        { "speaker": "aman", "text": "Yahi samझने ke liye pehле ek basic cheez clear karते hain. Har wo cheez jo SPACE ghere aur jiska MASS ho, use MATTER (द्रव्य) kehते hain - jaise hawa, pani, tumhari kitaab, yahaan tak ki perfume ki khुशबू bhi. Ab yaad rakho universal rule: har matter chhote-chhote 'particles' se banा hota hai, jo itне chhoте hain ki hum unhe apni aankhon se nahi dekh sakte." },
+        { "speaker": "raju", "text": "Achha! Toh perfume bhi chhoте-chhoте particles mein toota hua hai jo hawa mein udते hue mere tak pahुँच gaये?" }
       ],
-      "navigation": {
-        "next": "card_04_matter_vs_energy",
-        "button_text": "Matter vs Energy ➔"
-      }
+      "navigation": { "next": "card_04_diffusion_spaces", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_04_matter_vs_energy",
-      "card_slug": "card_04_matter_vs_energy",
+      "card_id": "card_04_diffusion_spaces",
+      "card_slug": "card_04_diffusion_spaces",
       "type": "chat",
-      "concept_id": "matter_energy_difference",
+      "concept_id": "particle_nature",
       "level": 1,
-      "progress": {
-        "current": 4,
-        "total": 72
-      },
+      "progress": { "current": 4, "total": 100 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Light ENERGY hai, matter nahi! Yaad rakho: MATTER = mass + volume. ENERGY = capacity to do work (bina mass ke). Light, sound, heat sab energy forms hain। BPSC/SSC में confusing options dete hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab air matter hai par light energy hai... samajh aaya! To matter ki teen forms hoti hain - solid, liquid, gas?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bahut acchi observation! Haan, teen basic STATES OF MATTER hain। Par actually chauthaa state bhi hai - PLASMA। Ab hum detail mein dekhenge ki har state kya hoti hai aur kaise alag hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Plasma?? Ye to pehli baar suna! Blood plasma se alag hai kya?"
-        }
+        { "speaker": "aman", "text": "Bilkul sahi! Ye jo ek padaarth ke particles doosre padaarth ke particles ke beech mein khud-ba-khud mix ho jaते hain, use DIFFUSION kehte hain. Ye tabhi possible hai jab particles ke beech mein khaali JAGAH (SPACE) ho. Ghar mein dekho - chini ko chai mein daालो, wo dikhाई denा band ho jaाती hai kyunki chini ke particles pani ke particles ke beech ki khaali jagah mein ghुस jaте hain." },
+        { "speaker": "raju", "text": "Ohh! Matlab particles ke beech mein khaali jagah hoti hai isliye doosre particles wahaan ghुस sakते hain - ye toh mujhe pata hi nahi tha!" }
       ],
-      "navigation": {
-        "next": "card_05_states_overview",
-        "button_text": "States Dekho ➔"
-      }
+      "navigation": { "next": "card_05_motion_attraction", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_05_states_overview",
-      "card_slug": "card_05_states_overview",
+      "card_id": "card_05_motion_attraction",
+      "card_slug": "card_05_motion_attraction",
       "type": "chat",
-      "concept_id": "states_of_matter_intro",
+      "concept_id": "particle_nature",
       "level": 1,
-      "progress": {
-        "current": 5,
-        "total": 72
-      },
+      "progress": { "current": 5, "total": 100 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bilkul alag! Science में PLASMA ek highly energized state hai jahan particles charged ho jate hain - jaise stars mein ya tube lights mein। Par pehle basic 3 states samajhte hain clearly!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Okay Sir... solid, liquid, gas ka difference kya hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Three properties se compare karte hain: (1) SHAPE - fixed ya changing? (2) VOLUME - fixed ya changing? (3) PARTICLES ki ARRANGEMENT - close packed ya far apart? Is base par pehle SOLID dekhte hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Solid matlab fixed shape aur fixed volume, jaise ice ya stone?"
-        }
+        { "speaker": "aman", "text": "Ruko, ek aur important cheez suno - ye particles kabhi RUKte nahi, ye HAMESHA khud-ba-khud continuously move karte rehte hain (isे kinetic energy kehते hain), aur isी wajah se diffusion hota hai. Doosri taraf, particles ek-doosre ko apni taraf KHEEnchte bhi hain (force of attraction) - isी attraction ki wajah se lakड़i ka tukड़ा tुटता nahi, particles jude rehते hain." },
+        { "speaker": "raju", "text": "Sir ye toh confuse karta hai - particles move bhi karते hain aur ek-doosre ko pakड़te bhi hain? Dono ek saath kaise ho sakта hai?" }
       ],
-      "navigation": {
-        "next": "card_06_solid_properties",
-        "button_text": "Solid Detail ➔"
-      }
+      "navigation": { "next": "card_06_guess_m1", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_06_solid_properties",
-      "card_slug": "card_06_solid_properties",
-      "type": "chat",
-      "concept_id": "solid_state_characteristics",
+      "card_id": "card_06_guess_m1",
+      "card_slug": "card_06_guess_m1",
+      "type": "guess",
+      "concept_id": "particle_nature",
       "level": 1,
-      "progress": {
-        "current": 6,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Exactly! SOLIDS ke properties: (1) DEFINITE SHAPE - bartan change karo, shape nahi badlega। (2) DEFINITE VOLUME - compress nahi kar sakte easily. (3) Particles TIGHTLY PACKED hote hain with strong intermolecular forces. Example: ice, wood, iron!"
-        },
-        {
-          "speaker": "raju",
-          "text": "To solid mein particles move nahi karte?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Dhyan se suno - ye BPSC trap hai! Solid mein particles VIBRATE karte hain apni fixed positions par। Bilkul move nahi karte - ye GALAT hai। They vibrate but don't leave their positions. Jaise bheed mein khade log thoda hil sakte hain par apni jagah chhodkar nahi jaa sakte!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaa... vibration hota hai par position change nahi! Matlab thoda movement hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_07_liquid_properties",
-        "button_text": "Liquid Dekho ➔"
-      }
-    },
-    {
-      "card_id": "card_07_liquid_properties",
-      "card_slug": "card_07_liquid_properties",
-      "type": "chat",
-      "concept_id": "liquid_state_characteristics",
-      "level": 1,
-      "progress": {
-        "current": 7,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Exactly! Ab LIQUIDS dekhte hain: (1) NO DEFINITE SHAPE - jis bartan mein dalo, usi ka shape le lega (water bottle se glass mein daalo)। (2) DEFINITE VOLUME - 500ml water always 500ml rahega। (3) Particles loosely packed - can slide over each other!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab liquid flow kar sakta hai kyunki particles slide karte hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Isliye liquids को FLUIDS bhi kehte hain। Intermolecular forces solid se kam hote hain par gas se zyada। Example: water, milk, oil. Yaad rakho - volume fixed hai par shape container ke according change hota hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh aaya! Ab gas kaise hota hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_08_gas_properties",
-        "button_text": "Gas Detail ➔"
-      }
-    },
-    {
-      "card_id": "card_08_gas_properties",
-      "card_slug": "card_08_gas_properties",
-      "type": "chat",
-      "concept_id": "gas_state_characteristics",
-      "level": 1,
-      "progress": {
-        "current": 8,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "GASES sabse free state hai: (1) NO DEFINITE SHAPE - pura container fill kar deta hai। (2) NO DEFINITE VOLUME - compress kar sakte ho (LPG cylinder mein bahut gas compressed hai)। (3) Particles VERY FAR APART - negligible intermolecular forces, freely move!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Isliye CNG gas ko compress karke cylinder mein bharte hain! Par Sir, smell kaise aati hai jaldi-jaldi?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Brilliant observation! Gas particles RAPID RANDOM MOTION mein hote hain - bahut tez speed se move karte hain। Isliye perfume spray karo to puri room mein jaldi fail jata hai। Isko DIFFUSION kehte hain - gas particles rapidly spread hote hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Diffusion matlab particles ka failna... accha hai! To plasma kya hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_09_plasma_state",
-        "button_text": "Plasma Dekho ➔"
-      }
-    },
-    {
-      "card_id": "card_09_plasma_state",
-      "card_slug": "card_09_plasma_state",
-      "type": "chat",
-      "concept_id": "plasma_fourth_state",
-      "level": 1,
-      "progress": {
-        "current": 9,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "PLASMA - Fourth State of Matter! Jab gas ko extremely high temperature par heat karo, electrons atoms se alag ho jate hain - ionized gas banta hai। PLASMA consists of free electrons + ions. Example: Sun, stars, lightning, neon signs, fluorescent tubes!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab tube light mein plasma hota hai?? Wow!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Plasma electrically conductive hota hai kyunki free charged particles hote hain। 99% of universe plasma state mein hai - stars sab plasma hain। Earth par rare hai but artificial plasma बनाया जाता है। SSC/Railway mein 4th state पूछते हैं - answer Plasma!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Ye to interesting hai! To summary: Solid-fixed shape+volume, Liquid-fixed volume only, Gas-nothing fixed, Plasma-ionized gas!"
-        }
-      ],
-      "navigation": {
-        "next": "card_10_states_quiz_1",
-        "button_text": "Quiz 1/3 ➔"
-      }
-    },
-    {
-      "card_id": "card_10_states_quiz_1",
-      "card_slug": "card_10_states_quiz_1",
-      "type": "quiz",
-      "concept_id": "states_test_1",
-      "level": 1,
-      "progress": {
-        "current": 10,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Which of the following has BOTH definite shape and definite volume? (SSC CGL 2019, BPSC 2020)",
+      "progress": { "current": 6, "total": 100 },
+      "guess_payload": {
+        "question": "Guess karo - diffusion (particles ka khud-ba-khud mix hona) sabसे TEZ kis avastha (state) mein hota hai?",
         "options": [
-          {"id": "A", "text": "Water (पानी)"},
-          {"id": "B", "text": "Air (हवा)"},
-          {"id": "C", "text": "Ice (बर्फ)"},
-          {"id": "D", "text": "Steam (भाप)"}
+          { "id": "A", "text": "Solid mein" },
+          { "id": "B", "text": "Liquid mein" },
+          { "id": "C", "text": "Gas mein" },
+          { "id": "D", "text": "Teenon mein barabar" }
         ],
         "correct_option_id": "C",
-        "explanation": "ICE एक SOLID है जिसमें DEFINITE SHAPE और DEFINITE VOLUME दोनों होते हैं। Water (liquid) में definite volume है पर shape नहीं। Air और Steam (gases) में ना shape ना volume fixed है। ⭐ BPSC/SSC में states के properties पर direct questions आते हैं! याद रखो: Solid = दोनों fixed, Liquid = सिर्फ volume fixed, Gas = कुछ भी fixed नहीं।"
+        "explanation": "Gas mein particles ke beech sabसे zyaादा khaali jagah hoती hai aur force of attraction sabसे kam, isliye diffusion Gas mein sabसे tez, Liquid mein medium, aur Solid mein sabसे dheeма hota hai."
       },
-      "navigation": {
-        "next": "card_11_states_quiz_2",
-        "button_text": "Quiz 2/3 ➔"
-      }
+      "navigation": { "next": "card_07_quiz1_m1", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_11_states_quiz_2",
-      "card_slug": "card_11_states_quiz_2",
+      "card_id": "card_07_quiz1_m1",
+      "card_slug": "card_07_quiz1_m1",
       "type": "quiz",
-      "concept_id": "states_test_2",
+      "concept_id": "particle_nature",
       "level": 1,
-      "progress": {
-        "current": 11,
-        "total": 72
-      },
+      "progress": { "current": 7, "total": 100 },
       "quiz_payload": {
-        "question": "The fourth state of matter is: (Railway NTPC 2016, BSSC 2018)",
+        "question": "Matter ki particle nature ke baare mein sahi statement chunо:",
         "options": [
-          {"id": "A", "text": "Crystal (क्रिस्टल)"},
-          {"id": "B", "text": "Colloid (कोलाइड)"},
-          {"id": "C", "text": "Plasma (प्लाज़्मा)"},
-          {"id": "D", "text": "Bose-Einstein Condensate"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "PLASMA चौथी state of matter है। यह ionized gas होती है जहाँ electrons atoms से अलग हो जाते हैं। Examples: Sun, stars, lightning, fluorescent tubes। Crystal और Colloid states नहीं हैं - ये matter के classifications हैं। Bose-Einstein Condensate पाँचवी state है (बहुत advanced)। ⭐ Railway/BSSC में direct terminology पूछी जाती है!"
-      },
-      "navigation": {
-        "next": "card_12_states_quiz_3",
-        "button_text": "Quiz 3/3 ➔"
-      }
-    },
-    {
-      "card_id": "card_12_states_quiz_3",
-      "card_slug": "card_12_states_quiz_3",
-      "type": "quiz",
-      "concept_id": "states_test_3",
-      "level": 1,
-      "progress": {
-        "current": 12,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Which of the following is NOT matter? (BPSC TRE 2019, SSC CHSL 2020)",
-        "options": [
-          {"id": "A", "text": "Air (हवा)"},
-          {"id": "B", "text": "Water vapor (जलवाष्प)"},
-          {"id": "C", "text": "Light (प्रकाश)"},
-          {"id": "D", "text": "Smoke (धुआँ)"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "LIGHT matter नहीं है क्योंकि इसमें MASS नहीं होता (photons massless हैं)। Light ENERGY का एक form है। Air (gas), Water vapor (gas), Smoke (solid particles in gas) सभी matter हैं क्योंकि इनमें mass और volume दोनों हैं। ⭐ BPSC TRE का favorite trap! याद रखो: Matter = mass + volume. Light, Sound, Heat = Energy forms (not matter)।"
-      },
-      "navigation": {
-        "next": "card_13_milestone_states",
-        "button_text": "Module Complete ➔"
-      }
-    },
-    {
-      "card_id": "card_13_milestone_states",
-      "card_slug": "card_13_milestone_states",
-      "type": "milestone",
-      "concept_id": "states_complete",
-      "level": 1,
-      "progress": {
-        "current": 13,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "🎉 MODULE 1 CLEARED!",
-        "badge_emoji": "⚛️",
-        "completed_topic": "States of Matter",
-        "xp_earned": 75,
-        "milestone_progress": "Module 1/6 Complete",
-        "motivational_quote": "Solid, Liquid, Gas, Plasma - सभी states समझ आ गईं! अब particle nature की गहराई में जाएंगे! 🔬"
-      },
-      "navigation": {
-        "next": "card_14_particle_intro",
-        "button_text": "Particle Nature ➔"
-      }
-    },
-    {
-      "card_id": "card_14_particle_intro",
-      "card_slug": "card_14_particle_intro",
-      "type": "chat",
-      "concept_id": "particle_nature_intro",
-      "level": 2,
-      "progress": {
-        "current": 14,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, tumne sugar ko chai mein dalke ghola hai kabhi? Sugar dikh-ta band ho jata hai par jayega kahan?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir wo dissolve ho jata hai... chote-chote pieces ban jate honge chai mein!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul sahi thinking! Matter chhote-chhote PARTICLES se bana hota hai। Ye particles itne tiny hote hain ki naked eye se nahi dikh sakte। Isko PARTICULATE NATURE OF MATTER kehte hain - fundamental concept hai chemistry ka!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab sab kuch particles se bana hai? Ye particles kitne chhote hote hain?"
-        }
-      ],
-      "navigation": {
-        "next": "card_15_particle_size",
-        "button_text": "Particle Size ➔"
-      }
-    },
-    {
-      "card_id": "card_15_particle_size",
-      "card_slug": "card_15_particle_size",
-      "type": "chat",
-      "concept_id": "particle_characteristics",
-      "level": 2,
-      "progress": {
-        "current": 15,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Extremely tiny! PARTICLES (atoms/molecules) ko microscope se bhi directly nahi dekh sakte - electron microscope chahiye। Ek sugar crystal में millions of particles hote hain। Five important properties hain particles ki: (1) Very small size, (2) Constant motion, (3) Spaces between them!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Constant motion?? Matlab particles chal rahe hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Sab particles ALWAYS moving hote hain - kabhi rukta nahi। Solid mein vibrate, liquid mein slide, gas mein rapid random motion। Isko KINETIC ENERGY kehte hain - particles ki movement energy। Temperature badhao to particles ki speed badh jati hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaa... garam karne se particles tez chalte hain! Spaces bhi hote hain beech mein?"
-        }
-      ],
-      "navigation": {
-        "next": "card_16_intermolecular_spaces",
-        "button_text": "Spaces Dekho ➔"
-      }
-    },
-    {
-      "card_id": "card_16_intermolecular_spaces",
-      "card_slug": "card_16_intermolecular_spaces",
-      "type": "chat",
-      "concept_id": "intermolecular_spaces_concept",
-      "level": 2,
-      "progress": {
-        "current": 16,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Haan! Particles ke beech mein INTERMOLECULAR SPACES hoti hain। Solid mein - minimum space (tightly packed), Liquid mein - moderate space, Gas mein - maximum space (bahut door-door)। Isi wajah se gas compress ho sakti hai - particles pass aate hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "To jab LPG cylinder bharate hain to gas ke particles ko pass la rahe hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect understanding! Aur ek cheez: Particles ke beech INTERMOLECULAR FORCES bhi hote hain - attraction force। Solid mein strongest (isliye shape fixed), Liquid mein moderate, Gas mein negligible (almost zero)। Force jitna kam, particles utna free!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab solid strong force → tight packing, gas weak force → free movement!"
-        }
-      ],
-      "navigation": {
-        "next": "card_17_kinetic_theory",
-        "button_text": "Kinetic Theory ➔"
-      }
-    },
-    {
-      "card_id": "card_17_kinetic_theory",
-      "card_slug": "card_17_kinetic_theory",
-      "type": "chat",
-      "concept_id": "kinetic_molecular_theory",
-      "level": 2,
-      "progress": {
-        "current": 17,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bilkul sahi! Ab ek important theory: KINETIC MOLECULAR THEORY। Ye explain karta hai matter का behavior particles ki motion से। Main points: (1) All matter made of particles, (2) Particles always in motion, (3) Higher temperature = faster motion, (4) Forces exist between particles!"
-        },
-        {
-          "speaker": "raju",
-          "text": "To ye theory explain karti hai ki states kyun different behave karte hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Solid → particles vibrate slowly in fixed positions (low kinetic energy). Liquid → particles move faster, can slide (moderate energy). Gas → particles move rapidly in all directions (high energy)। BPSC/NEET में kinetic theory से conceptual questions आते hैं!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh aaya... heat dene se kinetic energy badhti hai to state change hota hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_18_diffusion_concept",
-        "button_text": "Diffusion Detail ➔"
-      }
-    },
-    {
-      "card_id": "card_18_diffusion_concept",
-      "card_slug": "card_18_diffusion_concept",
-      "type": "chat",
-      "concept_id": "diffusion_detailed",
-      "level": 2,
-      "progress": {
-        "current": 18,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Pehle ek phenomenon samajhte hain: DIFFUSION। Definition: Movement of particles from HIGHER CONCENTRATION to LOWER CONCENTRATION area until uniformly distributed। Example: perfume spray karo, puri room mein smell fail jati hai - ye diffusion hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab particles khud-ba-khud fail hote hain bina kisi ke push kiye?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Particles ki random motion ki wajah se। Diffusion FASTEST in gases (particles move rapidly), SLOWER in liquids (particles slide), SLOWEST in solids (particles just vibrate)। Example: Agarbatti ka smoke (gas) jaldi failta hai vs ink drop in water (liquid) slow failta hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaa... gas mein tez, liquid mein slow! Temperature ka effect hota hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_19_temperature_effect",
-        "button_text": "Temperature Effect ➔"
-      }
-    },
-    {
-      "card_id": "card_19_temperature_effect",
-      "card_slug": "card_19_temperature_effect",
-      "type": "chat",
-      "concept_id": "temperature_particle_motion",
-      "level": 2,
-      "progress": {
-        "current": 19,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Brilliant question! Temperature badhane se diffusion FAST hota hai kyunki particles ki kinetic energy badh jati hai - they move faster। Example: गर्म पानी में sugar jaldi ghulta hai vs ठंडे पानी में slowly। BPSC/SSC में पूछते हैं: 'Rate of diffusion increases with...?' Answer: Temperature!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab high temperature → high speed → fast diffusion!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Ek aur concept: BROWNIAN MOTION। Jab smoke particles ko microscope से देखते हैं, they move in random zig-zag paths। Ye air molecules की continuous bombardment से hota hai। Scientist Robert Brown ने 1827 में discover kiya tha - NEET में year पूछते हैं!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Robert Brown, 1827 - yaad rakhna padega! Zig-zag motion particles ki collision से hota hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_20_particle_quiz_1",
-        "button_text": "Quiz 1/3 ➔"
-      }
-    },
-    {
-      "card_id": "card_20_particle_quiz_1",
-      "card_slug": "card_20_particle_quiz_1",
-      "type": "quiz",
-      "concept_id": "particle_test_1",
-      "level": 2,
-      "progress": {
-        "current": 20,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Diffusion is FASTEST in which state of matter? (SSC CGL 2018, Railway NTPC 2019)",
-        "options": [
-          {"id": "A", "text": "Solids (ठोस)"},
-          {"id": "B", "text": "Liquids (द्रव)"},
-          {"id": "C", "text": "Gases (गैस)"},
-          {"id": "D", "text": "Equal in all states"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "Diffusion GASES में सबसे तेज़ होता है क्योंकि gas particles rapidly और randomly move करते हैं with maximum intermolecular spaces। Liquids में slower (particles slide), Solids में slowest (particles only vibrate)। Example: अगरबत्ती की smell (gas) तुरंत फैलती है vs ink in water (liquid) slowly फैलता है। ⭐ SSC/Railway में direct पूछा जाता है!"
-      },
-      "navigation": {
-        "next": "card_21_particle_quiz_2",
-        "button_text": "Quiz 2/3 ➔"
-      }
-    },
-    {
-      "card_id": "card_21_particle_quiz_2",
-      "card_slug": "card_21_particle_quiz_2",
-      "type": "quiz",
-      "concept_id": "particle_test_2",
-      "level": 2,
-      "progress": {
-        "current": 21,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Brownian motion was discovered by which scientist? (NEET 2017, BPSC 2019)",
-        "options": [
-          {"id": "A", "text": "Robert Boyle"},
-          {"id": "B", "text": "Robert Brown"},
-          {"id": "C", "text": "Robert Hooke"},
-          {"id": "D", "text": "John Dalton"}
+          { "id": "A", "text": "Particles ruके hue rehते hain, kabhi move nahi karте" },
+          { "id": "B", "text": "Particles bahut chhoте hote hain aur unke beech khaali jagah hoती hai" },
+          { "id": "C", "text": "Particles ek-doosre ko kabhi attract nahi karте" },
+          { "id": "D", "text": "Particles sirf Gas mein hi paye jaते hain" }
         ],
         "correct_option_id": "B",
-        "explanation": "ROBERT BROWN ने 1827 में BROWNIAN MOTION discover किया। यह pollen grains का water में random zig-zag movement है जो water molecules की continuous bombardment से होता है। Robert Boyle = Boyle's Law, Robert Hooke = Cell discovery, John Dalton = Atomic Theory। ⭐ NEET/BPSC में scientist-discovery matching पूछी जाती है!"
+        "explanation": "Matter ke particles bahut chhoте hote hain, inके beech khaali jagah hoती hai, ye continuously move karte hain, aur ek-doosre ko attract bhi karte hain."
       },
-      "navigation": {
-        "next": "card_22_particle_quiz_3",
-        "button_text": "Quiz 3/3 ➔"
-      }
+      "navigation": { "next": "card_08_quiz2_m1", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_22_particle_quiz_3",
-      "card_slug": "card_22_particle_quiz_3",
+      "card_id": "card_08_quiz2_m1",
+      "card_slug": "card_08_quiz2_m1",
       "type": "quiz",
-      "concept_id": "particle_test_3",
-      "level": 2,
-      "progress": {
-        "current": 22,
-        "total": 72
-      },
+      "concept_id": "particle_nature",
+      "level": 1,
+      "progress": { "current": 8, "total": 100 },
       "quiz_payload": {
-        "question": "Rate of diffusion increases with: (BPSC TRE 2020, SSC CHSL 2019)",
+        "question": "⭐ Exam Fact: Particles ki continuous random motion ka pramaan (evidence) sabसे pehле kis scientist ने pollen grains ke dwara paани mein dekhkar diya tha?",
         "options": [
-          {"id": "A", "text": "Decrease in temperature"},
-          {"id": "B", "text": "Increase in temperature"},
-          {"id": "C", "text": "Increase in pressure"},
-          {"id": "D", "text": "No effect of temperature"}
+          { "id": "A", "text": "John Dalton" },
+          { "id": "B", "text": "Robert Brown" },
+          { "id": "C", "text": "Antoine Lavoisier" },
+          { "id": "D", "text": "Amedeo Avogadro" }
         ],
         "correct_option_id": "B",
-        "explanation": "Diffusion की rate INCREASE IN TEMPERATURE से बढ़ती है क्योंकि particles की kinetic energy बढ़ जाती है - they move faster। गर्म पानी में sugar ठंडे पानी से जल्दी dissolve होता है। Temperature decrease करने से diffusion slow होता है। ⭐ BPSC TRE/SSC का favorite conceptual question!"
+        "explanation": "Robert Brown ने 1827 mein pani mein tairते pollen grains ki zig-zag random motion dekhी, jise 'Brownian Motion' kaha jaata hai - ye particles ki continuous motion ka pramaan hai. Ye SSC/Railway ka common fact question hai."
       },
-      "navigation": {
-        "next": "card_23_milestone_particle",
-        "button_text": "Module Complete ➔"
-      }
+      "navigation": { "next": "card_09_quiz3_m1", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_23_milestone_particle",
-      "card_slug": "card_23_milestone_particle",
-      "type": "milestone",
-      "concept_id": "particle_complete",
-      "level": 2,
-      "progress": {
-        "current": 23,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "🔬 MODULE 2 MASTERED!",
-        "badge_emoji": "🧬",
-        "completed_topic": "Particle Nature & Kinetic Theory",
-        "xp_earned": 80,
-        "milestone_progress": "Module 2/6 Complete",
-        "motivational_quote": "Particles की duniya समझ आ गई! अब states में changes देखेंगे - melting, boiling, sublimation! 🌡️"
-      },
-      "navigation": {
-        "next": "card_24_state_changes_intro",
-        "button_text": "State Changes ➔"
-      }
-    },
-    {
-      "card_id": "card_24_state_changes_intro",
-      "card_slug": "card_24_state_changes_intro",
-      "type": "chat",
-      "concept_id": "state_changes_introduction",
-      "level": 3,
-      "progress": {
-        "current": 24,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, summer mein ice-candy खाते हो? Thodi der haath mein pakdo to kya hota hai?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Pighal jati hai Sir! Solid se liquid ban jati hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Ye STATE CHANGE hai - matter ek state se dusri state mein convert ho raha hai। Heat dene/hatane se ye changes hote hain। Total 6 main changes hain: Melting, Freezing, Evaporation, Condensation, Sublimation, Deposition। Sab detail mein samajhte hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Itne saare changes! Heat dene se kya hota hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_25_melting_process",
-        "button_text": "Melting Dekho ➔"
-      }
-    },
-    {
-      "card_id": "card_25_melting_process",
-      "card_slug": "card_25_melting_process",
-      "type": "chat",
-      "concept_id": "melting_fusion_concept",
-      "level": 3,
-      "progress": {
-        "current": 25,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "MELTING (or FUSION): Solid → Liquid conversion by heating। Example: Ice → Water at 0°C। Isko MELTING POINT kehte hain - specific temperature jahan solid liquid banta hai। Har substance ka different melting point hota hai: Ice = 0°C, Iron = 1538°C, Gold = 1064°C!"
-        },
-        {
-          "speaker": "raju",
-          "text": "To melting point pe particles kya karte hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Excellent question! Heat देने से particles ki kinetic energy badhti hai → they vibrate more vigorously → intermolecular forces कमजोर हो जाते हैं → particles fixed positions छोड़कर slide करने लगते hain → LIQUID ban jata hai। Melting के दौरान temperature constant रहता है - BPSC trap!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Hain?? Temperature constant rahta hai melting mein?? Par heat to de rahe hain!"
-        }
-      ],
-      "navigation": {
-        "next": "card_26_latent_heat_fusion",
-        "button_text": "Latent Heat ➔"
-      }
-    },
-    {
-      "card_id": "card_26_latent_heat_fusion",
-      "card_slug": "card_26_latent_heat_fusion",
-      "type": "chat",
-      "concept_id": "latent_heat_fusion_concept",
-      "level": 3,
-      "progress": {
-        "current": 26,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Yahin sabse bada concept hai! Melting point par heat energy particles की intermolecular forces तोड़ने में use होती है, temperature badhane mein NAHI। Isko LATENT HEAT OF FUSION kehte hain - 'hidden heat'। Ice के लिए = 334 J/g। Jab tak pura solid liquid nahi ban jata, temperature constant rahega!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaa... energy force तोड़ने में जाती है! Matlab 0°C ice और 0°C water same temperature par hain par energy different?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Brilliant understanding! 0°C water में zyada energy hai kyunki latent heat absorb kar chuka hai। Isliye 0°C water से jalan zyada hoti hai vs 0°C ice। NEET/BPSC में ye confusion questions banate hain - 'Same temperature par different heat content'!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wow! To ulta process bhi hoga - liquid se solid?"
-        }
-      ],
-      "navigation": {
-        "next": "card_27_freezing_process",
-        "button_text": "Freezing Dekho ➔"
-      }
-    },
-    {
-      "card_id": "card_27_freezing_process",
-      "card_slug": "card_27_freezing_process",
-      "type": "chat",
-      "concept_id": "freezing_solidification",
-      "level": 3,
-      "progress": {
-        "current": 27,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Exactly! FREEZING (or SOLIDIFICATION): Liquid → Solid by cooling। Example: Water → Ice at 0°C। Same temperature (0°C) par melting bhi hota hai aur freezing bhi - bas direction ulti hai। Heat remove karte hain to particles slow down → intermolecular forces strong → fixed positions → SOLID!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab melting point = freezing point, sirf process opposite?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Freezing mein bhi LATENT HEAT OF FUSION release hoti hai (absorb nahi, release)। Isliye पानी freeze होते समय surroundings गर्म महसूस होते हैं। Freezer में ice बनाते समय freezer को extra काम करना पड़ता है heat निकालने के लिए!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh aaya! Ab evaporation kya hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_28_evaporation_process",
-        "button_text": "Evaporation ➔"
-      }
-    },
-    {
-      "card_id": "card_28_evaporation_process",
-      "card_slug": "card_28_evaporation_process",
-      "type": "chat",
-      "concept_id": "evaporation_concept",
-      "level": 3,
-      "progress": {
-        "current": 28,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "EVAPORATION: Liquid → Gas conversion at ANY temperature (surface se)। Example: Wet कपड़े सूख जाते hैं बिना उबाले! Difference समझो: BOILING = specific temperature (100°C for water) पर THROUGHOUT the liquid। EVAPORATION = any temperature पर ONLY from surface!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaa... to evaporation boiling से अलग है! Par dono mein liquid gas ban raha hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan par process different! Evaporation में high-energy particles surface से escape करते hैं → remaining liquid ka temperature DECREASE hota hai (cooling effect)। Isliye गर्मी में पसीना आने से ठंडक लगती है - sweat evaporate होती है aur body cool hota hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wow! Evaporation cooling देता है! Factors kaunse hain jo evaporation बढ़ाते हैं?"
-        }
-      ],
-      "navigation": {
-        "next": "card_29_evaporation_factors",
-        "button_text": "Factors Dekho ➔"
-      }
-    },
-    {
-      "card_id": "card_29_evaporation_factors",
-      "card_slug": "card_29_evaporation_factors",
-      "type": "chat",
-      "concept_id": "evaporation_affecting_factors",
-      "level": 3,
-      "progress": {
-        "current": 29,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "5 Factors jo evaporation INCREASE करते hैं: (1) TEMPERATURE बढ़ाओ - particles की energy बढ़ती है। (2) SURFACE AREA बढ़ाओ - कपड़े फैलाकर सुखाते हैं। (3) WIND SPEED बढ़ाओ - vapor particles हट जाते हैं। (4) HUMIDITY घटाओ - dry air absorbs more vapor। (5) PRESSURE घटाओ - higher altitude!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Isliye गर्म दिन, हवा, कम humidity में कपड़े जल्दी सूखते हैं!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect application! BPSC/SSC में पूछते हैं: 'Which does NOT increase evaporation?' - Answer होगा 'Increase in humidity' या 'Decrease in temperature'। Yaad rakho sab 5 factors clearly - exam में matching type questions आते हैं!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Noted! Ab boiling detail mein batao Sir!"
-        }
-      ],
-      "navigation": {
-        "next": "card_30_boiling_process",
-        "button_text": "Boiling Detail ➔"
-      }
-    },
-    {
-      "card_id": "card_30_boiling_process",
-      "card_slug": "card_30_boiling_process",
-      "type": "chat",
-      "concept_id": "boiling_vaporization",
-      "level": 3,
-      "progress": {
-        "current": 30,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "BOILING (or VAPORIZATION): Liquid → Gas at specific temperature called BOILING POINT। Water ka BP = 100°C at 1 atm pressure। Boiling में bubbles throughout liquid बनते hैं। Temperature constant rahta hai boiling के दौरान - yahan bhi LATENT HEAT OF VAPORIZATION काम करती है!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab फिर से latent heat! Water के लिए kitna hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "LATENT HEAT OF VAPORIZATION for water = 2260 J/g (fusion से bahut zyada!)। Isliye 100°C steam से jalan zyada hoti hai vs 100°C water - steam releases huge latent heat when condensing on skin। BPSC trap: 'Steam burns are more severe than boiling water' - TRUE!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Ye to dangerous hai! Pressure se BP change hota hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_31_pressure_effect_bp",
-        "button_text": "Pressure Effect ➔"
-      }
-    },
-    {
-      "card_id": "card_31_pressure_effect_bp",
-      "card_slug": "card_31_pressure_effect_bp",
-      "type": "chat",
-      "concept_id": "pressure_boiling_point",
-      "level": 3,
-      "progress": {
-        "current": 31,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Brilliant question! PRESSURE बढ़ाओ → BP INCREASES। Pressure घटाओ → BP DECREASES। Example: पहाड़ों पर (low pressure) पानी 100°C से कम temperature पर उबलता है। Pressure cooker में (high pressure) 100°C से ज्यादा temperature पर उबलता है - खाना जल्दी बनता है!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaa! Pressure cooker high pressure बनाता है isliye temperature ज्यादा hota hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Normal boiling point = BP at 1 atmospheric pressure (sea level)। ⭐ BPSC TRE Favorite: 'पहाड़ों पर खाना देर से पकता है क्योंकि...' Answer: Low pressure → Low BP → Low temperature! SSC/Railway में pressure-BP relationship पूछते हैं!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh aaya! Condensation kya hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_32_condensation_process",
-        "button_text": "Condensation ➔"
-      }
-    },
-    {
-      "card_id": "card_32_condensation_process",
-      "card_slug": "card_32_condensation_process",
-      "type": "chat",
-      "concept_id": "condensation_concept",
-      "level": 3,
-      "progress": {
-        "current": 32,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "CONDENSATION: Gas → Liquid by cooling। Example: Steam → Water drops on bathroom mirror। Evaporation/Boiling का opposite process! Condensation में latent heat of vaporization RELEASE hoti hai - isliye clouds से बारिश होते समय atmosphere गर्म होता है!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab सभी processes के pairs hain - melting↔freezing, evaporation/boiling↔condensation!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect observation! Ab ek special process: SUBLIMATION - direct Solid → Gas without liquid stage। Example: Camphor (कपूर), Dry Ice (ठोस CO₂), Naphthalene balls (नैफ्थलीन)। Room temperature पर सीधे gas ban जाते hैं!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Haan Sir! Naphthalene balls धीरे-धीरे गायब हो जाती hैं कपड़ों में से!"
-        }
-      ],
-      "navigation": {
-        "next": "card_33_sublimation_process",
-        "button_text": "Sublimation Detail ➔"
-      }
-    },
-    {
-      "card_id": "card_33_sublimation_process",
-      "card_slug": "card_33_sublimation_process",
-      "type": "chat",
-      "concept_id": "sublimation_deposition",
-      "level": 3,
-      "progress": {
-        "current": 33,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Exactly! SUBLIMATION: Solid → Gas directly। Examples याद रखो exam के लिए: (1) Camphor (कपूर) - पूजा में, (2) Dry Ice (solid CO₂) - fog effects, (3) Naphthalene - moth balls, (4) Iodine - purple vapor बनाता है, (5) Ammonium Chloride (NH₄Cl) - lab experiment!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Itne examples! Ulta process bhi hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Gas → Solid directly = DEPOSITION। Example: Frost formation (पाला) - water vapor सीधे ice crystals बन जाता है on cold surfaces। Winter mornings में कांच पर ice जमना - ye deposition है। BPSC में sublimation examples की list पूछते हैं!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wow! To total 6 changes hain sab states के beech!"
-        }
-      ],
-      "navigation": {
-        "next": "card_34_state_changes_quiz_1",
-        "button_text": "Quiz 1/3 ➔"
-      }
-    },
-    {
-      "card_id": "card_34_state_changes_quiz_1",
-      "card_slug": "card_34_state_changes_quiz_1",
+      "card_id": "card_09_quiz3_m1",
+      "card_slug": "card_09_quiz3_m1",
       "type": "quiz",
-      "concept_id": "state_changes_test_1",
-      "level": 3,
-      "progress": {
-        "current": 34,
-        "total": 72
-      },
+      "concept_id": "particle_nature",
+      "level": 1,
+      "progress": { "current": 9, "total": 100 },
       "quiz_payload": {
-        "question": "What is the latent heat of fusion of ice? (NEET 2018, BPSC 2020)",
+        "question": "Force of attraction (particles ke beech khींchne wali taakat) sabसे ZYAADA kis avastha mein hoती hai?",
         "options": [
-          {"id": "A", "text": "80 cal/g or 334 J/g"},
-          {"id": "B", "text": "540 cal/g or 2260 J/g"},
-          {"id": "C", "text": "100 cal/g"},
-          {"id": "D", "text": "1 cal/g"}
-        ],
-        "correct_option_id": "A",
-        "explanation": "Ice का LATENT HEAT OF FUSION = 80 cal/g या 334 J/g है। यह energy ice को 0°C पर water में बदलने के लिए चाहिए (temperature बदले बिना)। Option B = Latent heat of vaporization (water→steam)। ⭐ NEET/BPSC में numerical values पूछी जाती हैं! याद रखो: Fusion = 334 J/g, Vaporization = 2260 J/g।"
-      },
-      "navigation": {
-        "next": "card_35_state_changes_quiz_2",
-        "button_text": "Quiz 2/3 ➔"
-      }
-    },
-    {
-      "card_id": "card_35_state_changes_quiz_2",
-      "card_slug": "card_35_state_changes_quiz_2",
-      "type": "quiz",
-      "concept_id": "state_changes_test_2",
-      "level": 3,
-      "progress": {
-        "current": 35,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Which substance undergoes SUBLIMATION at room temperature? (SSC CGL 2019, Railway NTPC 2020)",
-        "options": [
-          {"id": "A", "text": "Common salt (नमक)"},
-          {"id": "B", "text": "Sugar (चीनी)"},
-          {"id": "C", "text": "Camphor (कपूर)"},
-          {"id": "D", "text": "Wax (मोम)"}
+          { "id": "A", "text": "Gas" },
+          { "id": "B", "text": "Liquid" },
+          { "id": "C", "text": "Solid" },
+          { "id": "D", "text": "Plasma" }
         ],
         "correct_option_id": "C",
-        "explanation": "CAMPHOR (कपूर) room temperature पर सीधे solid से gas बन जाता है - यह SUBLIMATION है। Other examples: Naphthalene, Dry Ice, Iodine, Ammonium Chloride। Common salt, sugar, wax sublimation नहीं करते - ये melt होते हैं। ⭐ SSC/Railway में sublimation examples repeatedly पूछे जाते हैं!"
+        "explanation": "Solid mein particles ke beech force of attraction sabसे zyaादा hoती hai, isliye Solid ka shape aur volume fixed rehта hai."
       },
-      "navigation": {
-        "next": "card_36_state_changes_quiz_3",
-        "button_text": "Quiz 3/3 ➔"
-      }
+      "navigation": { "next": "card_10_milestone_m1", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_36_state_changes_quiz_3",
-      "card_slug": "card_36_state_changes_quiz_3",
-      "type": "quiz",
-      "concept_id": "state_changes_test_3",
-      "level": 3,
-      "progress": {
-        "current": 36,
-        "total": 72
+      "card_id": "card_10_milestone_m1",
+      "card_slug": "card_10_milestone_m1",
+      "type": "milestone",
+      "concept_id": "particle_nature",
+      "level": 1,
+      "progress": { "current": 10, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔬",
+        "completed_topic": "Particle Nature of Matter",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/12 Clear",
+        "motivational_quote": "Particles ka raaz khुल गया! Ab dekhते hain teenon states of matter ke properties!"
       },
-      "quiz_payload": {
-        "question": "On hills, water boils at temperature LOWER than 100°C because: (BPSC TRE 2019, UPSC Prelims 2018)",
+      "navigation": { "next": "card_11_solid_properties", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_11_solid_properties",
+      "card_slug": "card_11_solid_properties",
+      "type": "chat",
+      "concept_id": "states_of_matter",
+      "level": 2,
+      "progress": { "current": 11, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhते hain teenon states ki properties. Solid (jaise ice cube ya kitaab) mein particles bahut paास-paास aur mazbूती se juडे hote hain, isliye Solid ka DEFINITE SHAPE aur DEFINITE VOLUME hota hai. Ye RIGID hote hain, matlab dabाने par bhi shape nahi badalta (INCOMPRESSIBLE), kyunki particles ke beech koई khaali jagah hi nahi bacती." },
+        { "speaker": "raju", "text": "Achha, isीliye lakड़ी ki table dabане se bhi shape nahi badalती - particles itне paास hote hain ki daबने ki jagah hi nahi bacती!" }
+      ],
+      "navigation": { "next": "card_12_liquid_properties", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_liquid_properties",
+      "card_slug": "card_12_liquid_properties",
+      "type": "chat",
+      "concept_id": "states_of_matter",
+      "level": 2,
+      "progress": { "current": 12, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Liquid (jaise pani) dekho - iska VOLUME fixed hota hai, lekin SHAPE fixed NAHI hota, wo bartan (container) ka shape le leता hai. Isकी wajah particles ke beech force of attraction Solid se KAM hoна hai, isliye particles ek-doosre par se sarak (slide) sakте hain - isे FLUIDITY kehते hain. Compressibility bhi bahut kam hoती hai lekin bilkul zero nahi." },
+        { "speaker": "raju", "text": "Achha! Toh isीliye pani jis gilaas mein daालो, usी ka shape le leта hai - kyunki particles ek-doosre par phisal sakते hain!" }
+      ],
+      "navigation": { "next": "card_13_gas_properties", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_gas_properties",
+      "card_slug": "card_13_gas_properties",
+      "type": "chat",
+      "concept_id": "states_of_matter",
+      "level": 2,
+      "progress": { "current": 13, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Gas (jaise LPG cylinder ki gas) - isमें na SHAPE fixed hota hai na VOLUME, ye jis bartan mein daालो usे poora bhar deता hai. Particles ke beech force of attraction LAGBHAG NA KE BARAABAR hoती hai aur bahut zyaादa khaali jagah hoती hai, isीliye Gas HIGHLY COMPRESSIBLE hoती hai - tumने dekha hoगा LPG cylinder mein itni saारी gas ek chhoटे se cylinder mein dabाई jaाती hai!" },
+        { "speaker": "raju", "text": "Wah! Ab samझ aaya - LPG cylinder mein gas ko itна daबाया jaata hai kyunki particles ke beech bahut khaali jagah hoती hai, jise compress kiya ja sakta hai!" }
+      ],
+      "navigation": { "next": "card_14_guess_m2", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_14_guess_m2",
+      "card_slug": "card_14_guess_m2",
+      "type": "guess",
+      "concept_id": "states_of_matter",
+      "level": 2,
+      "progress": { "current": 14, "total": 100 },
+      "guess_payload": {
+        "question": "Guess karo - Compressibility (dabाने ki क्षमता) ka sahi order kya hoga?",
         "options": [
-          {"id": "A", "text": "Atmospheric pressure is low"},
-          {"id": "B", "text": "Atmospheric pressure is high"},
-          {"id": "C", "text": "Temperature is low"},
-          {"id": "D", "text": "Oxygen is less"}
+          { "id": "A", "text": "Solid > Liquid > Gas" },
+          { "id": "B", "text": "Gas > Liquid > Solid" },
+          { "id": "C", "text": "Liquid > Gas > Solid" },
+          { "id": "D", "text": "Teenon barabar" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Gas mein sabसे zyaादा khaali jagah hoती hai isliye sabसे zyaादa compressible, Liquid mein thoड़ी kam, aur Solid mein lagbhag ना ke baराबर compressibility hoती hai."
+      },
+      "navigation": { "next": "card_15_quiz1_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz1_m2",
+      "card_slug": "card_15_quiz1_m2",
+      "type": "quiz",
+      "concept_id": "states_of_matter",
+      "level": 2,
+      "progress": { "current": 15, "total": 100 },
+      "quiz_payload": {
+        "question": "Gas apने bartan (container) ko poora kyun bhar deती hai?",
+        "options": [
+          { "id": "A", "text": "Kyunki gas ke particles bahut heavy hote hain" },
+          { "id": "B", "text": "Kyunki particles ke beech na ke baराबर attraction hota hai aur wo tezi se har direction mein move karte hain" },
+          { "id": "C", "text": "Kyunki gas particles ek-doosre se juडे hote hain" },
+          { "id": "D", "text": "Kyunki gas ka rang nahi hota" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Gas ke particles ke beech force of attraction lagbhag na ke baराबर hoती hai, isliye wo tezi se free move karके poore container mein फैल jaते hain."
+      },
+      "navigation": { "next": "card_16_quiz2_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_quiz2_m2",
+      "card_slug": "card_16_quiz2_m2",
+      "type": "quiz",
+      "concept_id": "states_of_matter",
+      "level": 2,
+      "progress": { "current": 16, "total": 100 },
+      "quiz_payload": {
+        "question": "Neeche di gaई properties mein se kaunसी LIQUID ki सही pehchan hai?",
+        "options": [
+          { "id": "A", "text": "Definite shape, definite volume" },
+          { "id": "B", "text": "No definite shape, no definite volume" },
+          { "id": "C", "text": "No definite shape, definite volume" },
+          { "id": "D", "text": "Definite shape, no definite volume" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Liquid ka volume fixed hota hai lekin shape fixed nahi hota - wo container ka shape le leता hai."
+      },
+      "navigation": { "next": "card_17_quiz3_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_17_quiz3_m2",
+      "card_slug": "card_17_quiz3_m2",
+      "type": "quiz",
+      "concept_id": "states_of_matter",
+      "level": 2,
+      "progress": { "current": 17, "total": 100 },
+      "quiz_payload": {
+        "question": "⭐ BPSC Trap: Solid ke rigid (kaठोर) honे ka mool (basic) kaaraण kya hai?",
+        "options": [
+          { "id": "A", "text": "Particles ke beech bahut khaali jagah honा" },
+          { "id": "B", "text": "Particles ka bahut tezi se move karна" },
+          { "id": "C", "text": "Particles ke beech bahut strong force of attraction aur negligible khaali jagah" },
+          { "id": "D", "text": "Solid ka rang gaadा honа" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Solid mein particles ke beech force of attraction sabसे zyaादa aur khaali jagah lagbhag na ke baраबर hoती hai, isीliye Solid rigid hoते hain aur shape/volume fixed rehта hai."
+      },
+      "navigation": { "next": "card_18_milestone_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_18_milestone_m2",
+      "card_slug": "card_18_milestone_m2",
+      "type": "milestone",
+      "concept_id": "states_of_matter",
+      "level": 2,
+      "progress": { "current": 18, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🧊",
+        "completed_topic": "Properties of Solid, Liquid & Gas",
+        "xp_earned": 55,
+        "milestone_progress": "Module 2/12 Clear",
+        "motivational_quote": "Teenon states clear ho gaये! Ab dekhте hain ek state doosri mein kaise badalती hai!"
+      },
+      "navigation": { "next": "card_19_melting_point", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_19_melting_point",
+      "card_slug": "card_19_melting_point",
+      "type": "chat",
+      "concept_id": "interconversion_latent_heat",
+      "level": 3,
+      "progress": { "current": 19, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhते hain temperature badalne se state kaise change hoती hai. Jab tum ice ko garam karте ho, ek fixed temperature par wo pani mein badalна shuru ho jaाता hai - isे MELTING POINT kehते hain (barf ke liye 0°C, 1 atmosphere pressure par). Yaad rakho - jab Solid Liquid mein badalता hai, prakriya ko FUSION kehते hain." },
+        { "speaker": "raju", "text": "Achha, matlab 0°C wo fixed temperature hai jahaan barf pighalna shuru hoती hai - ise hi melting point kehते hain?" }
+      ],
+      "navigation": { "next": "card_20_boiling_pressure_effect", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_boiling_pressure_effect",
+      "card_slug": "card_20_boiling_pressure_effect",
+      "type": "chat",
+      "concept_id": "interconversion_latent_heat",
+      "level": 3,
+      "progress": { "current": 20, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC ka favorite trap suno - jaisे melting point pressure ke saath badalta hai, waisे hi BOILING POINT (jis temperature par Liquid Gas mein badalता hai) bhi PRESSURE ke saath badalता hai. Universal rule: Pressure BADHNE par boiling point BADHTA hai. Isीliye Pressure Cooker mein pressure zyaादa honे se paани 100°C se zyaादa temperature par khaulта hai, aur khaana jaldi pak jaाता hai!" },
+        { "speaker": "raju", "text": "Ohh! Isीliye toh pahaाडों (mountains) par khaana der se pakता hai na sir? Kyunki wahaan air pressure kam hoता hai isliye paани 100°C se pehле hi khaulने lagta hoगा?" }
+      ],
+      "navigation": { "next": "card_21_latent_heat", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_latent_heat",
+      "card_slug": "card_21_latent_heat",
+      "type": "chat",
+      "concept_id": "interconversion_latent_heat",
+      "level": 3,
+      "progress": { "current": 21, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi soचा tumने! Ab ek interesting cheez suno - jab barf pighाल raha ho ya paani khaul raha ho, us waqt THERMOMETER ka temperature reading NAHI badalता, chahे tum garmi deте raho! Ye extra heat ENERGY particles ke beech ki force of attraction को TODने mein use hoती hai, temperature baढाने mein nahi. Isे LATENT HEAT kehते hain - Latent Heat of Fusion (barf ke liye) aur Latent Heat of Vaporization (paani ke liye)." },
+        { "speaker": "raju", "text": "Hain?? Seriously sir? Matlab garmi dete rehने par bhi thermometer ka reading nahi baढेगा jab tak poori barf pighal na jaye? Ye toh bada interesting fact hai!" }
+      ],
+      "navigation": { "next": "card_22_guess_m3", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_22_guess_m3",
+      "card_slug": "card_22_guess_m3",
+      "type": "guess",
+      "concept_id": "interconversion_latent_heat",
+      "level": 3,
+      "progress": { "current": 22, "total": 100 },
+      "guess_payload": {
+        "question": "Guess karo - jab paani 100°C par khaul raha ho aur usмें lagaataार garmi di jaाई ja rahi ho, temperature ka kya hoगा?",
+        "options": [
+          { "id": "A", "text": "Temperature 100°C se upar badhता rahegा" },
+          { "id": "B", "text": "Temperature 100°C par hi ruка rahегा jab tak poora paani vaष्प (steam) na ban jaye" },
+          { "id": "C", "text": "Temperature turant 0°C ho jaाeगा" },
+          { "id": "D", "text": "Temperature ghatta jaayega" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Boiling ke dauराn temperature CONSTANT rehта hai (100°C par) kyunki di gaई heat energy Latent Heat of Vaporization ke roop mein particles ko alag karने mein use hoती hai, temperature baढाने mein nahi."
+      },
+      "navigation": { "next": "card_23_quiz1_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_quiz1_m3",
+      "card_slug": "card_23_quiz1_m3",
+      "type": "quiz",
+      "concept_id": "interconversion_latent_heat",
+      "level": 3,
+      "progress": { "current": 23, "total": 100 },
+      "quiz_payload": {
+        "question": "1 atmosphere pressure par barf (ice) ka melting point kya hota hai?",
+        "options": [
+          { "id": "A", "text": "100°C" },
+          { "id": "B", "text": "0°C" },
+          { "id": "C", "text": "-273°C" },
+          { "id": "D", "text": "50°C" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "1 atmosphere pressure par barf ka melting point 0°C hota hai, jo iska freezing point bhi hai."
+      },
+      "navigation": { "next": "card_24_quiz2_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_24_quiz2_m3",
+      "card_slug": "card_24_quiz2_m3",
+      "type": "quiz",
+      "concept_id": "interconversion_latent_heat",
+      "level": 3,
+      "progress": { "current": 24, "total": 100 },
+      "quiz_payload": {
+        "question": "⭐ BPSC Trap: Pahाडों (high altitude) par paани 100°C se PEHLE hi khaulne lagता hai. Iska sahi kaaraण kya hai?",
+        "options": [
+          { "id": "A", "text": "Wahaan temperature bahut zyaादa hota hai" },
+          { "id": "B", "text": "Wahaan atmospheric pressure kam hoता hai, isliye boiling point ghат jaata hai" },
+          { "id": "C", "text": "Wahaan paani mein namak zyaादa hota hai" },
+          { "id": "D", "text": "Wahaan paani ka rang alag hota hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "High altitude par atmospheric pressure kam hoता hai, aur pressure kam honे se boiling point bhi ghат jaata hai, isliye paani 100°C se pehле hi khaulne lagta hai."
+      },
+      "navigation": { "next": "card_25_quiz3_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_25_quiz3_m3",
+      "card_slug": "card_25_quiz3_m3",
+      "type": "quiz",
+      "concept_id": "interconversion_latent_heat",
+      "level": 3,
+      "progress": { "current": 25, "total": 100 },
+      "quiz_payload": {
+        "question": "Boiling ke dauरान di gaई heat energy kahaan use hoती hai?",
+        "options": [
+          { "id": "A", "text": "Temperature baढाने mein" },
+          { "id": "B", "text": "Particles ke beech force of attraction todने mein (Latent Heat)" },
+          { "id": "C", "text": "Rang badalне mein" },
+          { "id": "D", "text": "Mass badalне mein" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "State change ke dauरान heat energy particles ke beech ki force of attraction ko todने mein use hoती hai (Latent Heat), isliye temperature constant rehта hai."
+      },
+      "navigation": { "next": "card_26_milestone_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_26_milestone_m3",
+      "card_slug": "card_26_milestone_m3",
+      "type": "milestone",
+      "concept_id": "interconversion_latent_heat",
+      "level": 3,
+      "progress": { "current": 26, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔥",
+        "completed_topic": "Interconversion of States & Latent Heat",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/12 Clear",
+        "motivational_quote": "Melting-Boiling ka concept pakka! Ab Evaporation ka interesting topic dekhते hain!"
+      },
+      "navigation": { "next": "card_27_evaporation_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_27_evaporation_intro",
+      "card_slug": "card_27_evaporation_intro",
+      "type": "chat",
+      "concept_id": "evaporation",
+      "level": 4,
+      "progress": { "current": 27, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, tumne dekha hoga - geele kapडे dhूप mein sूख jaते hain, bina paani ko 100°C tak garam kiye! Ye kaise hota hai? Yahi hai EVAPORATION - jab Liquid, boiling point se KAM temperature par bhi apने SURFACE se dheere-dheere Gas (vapour) mein badalता hai." },
+        { "speaker": "raju", "text": "Achha! Toh boiling aur evaporation dono mein Liquid Gas mein badalता hai, lekin evaporation boiling point se pehле hi ho jaata hai?" }
+      ],
+      "navigation": { "next": "card_28_evaporation_factors", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_28_evaporation_factors",
+      "card_slug": "card_28_evaporation_factors",
+      "type": "chat",
+      "concept_id": "evaporation",
+      "level": 4,
+      "progress": { "current": 28, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Evaporation SURFACE se hoता hai, boiling POORE liquid mein hoता hai - ye bada farak hai. Ab CHAAR factors yaad karo jo evaporation ki speed badhाते hain: 1) SURFACE AREA badhने par (kapडे phaइलाке sूखाना), 2) TEMPERATURE badhने par (dhूप mein jaldi sूखते hain), 3) HUMIDITY kam honे par (barsात mein kapडे der se sूखते hain kyunki hawa mein pehле se hi paani zyaादa hota hai), 4) WIND SPEED badhने par (pankha lagाने se jaldi sूखते hain)." },
+        { "speaker": "raju", "text": "Achha! Toh barsात mein humidity zyaादa honे se kapडे der se sूखते hain - matlab humidity aur evaporation ka ULTA (inverse) relation hai?" }
+      ],
+      "navigation": { "next": "card_29_cooling_effect", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_29_cooling_effect",
+      "card_slug": "card_29_cooling_effect",
+      "type": "chat",
+      "concept_id": "evaporation",
+      "level": 4,
+      "progress": { "current": 29, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi, ulta relation hai! Ab ek aur cheez samझो - Evaporation mein hamesha COOLING (thandा honा) hota hai! Wajah - jab paани ke particles surface se ud kar vapour bante hain, wo apna kinetic energy aaस-paास ke particles se leते hain, isliye bacа हुआ liquid THANDA ho jaata hai. Isीliye gaाँव mein matka (earthen pot) ka pani thanda rehта hai - matka ki chhidra se paani chhoते-chhoте matra mein evaporate hota rehта hai aur bache हुए paani ko thanda kar deता hai!" },
+        { "speaker": "raju", "text": "Wah sir! Ye toh maine hamesha dekha hai lekin kabhi socha nahi tha ki matka ka paani isीliye thanda rehta hai - evaporation ki wajah se!" }
+      ],
+      "navigation": { "next": "card_30_guess_m4", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_30_guess_m4",
+      "card_slug": "card_30_guess_m4",
+      "type": "guess",
+      "concept_id": "evaporation",
+      "level": 4,
+      "progress": { "current": 30, "total": 100 },
+      "guess_payload": {
+        "question": "Guess karo - kaunसा kapडा SABसे JALDI sूखेगा?",
+        "options": [
+          { "id": "A", "text": "Chhaya mein, bina hawa ke, mudा हुआ" },
+          { "id": "B", "text": "Dhूप mein, tez hawa ke saath, phaइलाया हुआ" },
+          { "id": "C", "text": "Barsात wale din, chhaya mein" },
+          { "id": "D", "text": "AC room mein, bina hawa ke" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Dhूप (high temperature), tez hawa (wind speed), aur phailाya हुआ (large surface area) - teenon factors evaporation ko sabसे zyaादa badhाते hain, isliye ye combination sabसे jaldi sूखेगा।"
+      },
+      "navigation": { "next": "card_31_quiz1_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_31_quiz1_m4",
+      "card_slug": "card_31_quiz1_m4",
+      "type": "quiz",
+      "concept_id": "evaporation",
+      "level": 4,
+      "progress": { "current": 31, "total": 100 },
+      "quiz_payload": {
+        "question": "Evaporation aur Boiling mein sabसे बड़ा farak kya hai?",
+        "options": [
+          { "id": "A", "text": "Evaporation sirf surface se hota hai, Boiling poore liquid mein hota hai" },
+          { "id": "B", "text": "Evaporation sirf raात mein hota hai" },
+          { "id": "C", "text": "Boiling mein temperature nahi लगता" },
+          { "id": "D", "text": "Dono mein koई farak nahi hai" }
         ],
         "correct_option_id": "A",
-        "explanation": "पहाड़ों पर ATMOSPHERIC PRESSURE कम होता है, इसलिए boiling point 100°C से कम होता है। Boiling point pressure के साथ decrease होता है। Isliye खाना देर से पकता है (low temperature)। Pressure cooker में opposite होता है - high pressure → high BP → fast cooking। ⭐ BPSC TRE/UPSC का classic conceptual question!"
+        "explanation": "Evaporation ek surface phenomenon hai jo kisी bhi temperature (boiling point se kam) par hota hai, jabki Boiling poore liquid mein ek fixed temperature (boiling point) par hota hai."
       },
-      "navigation": {
-        "next": "card_37_milestone_state_changes",
-        "button_text": "Module Complete ➔"
-      }
+      "navigation": { "next": "card_32_quiz2_m4", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_37_milestone_state_changes",
-      "card_slug": "card_37_milestone_state_changes",
-      "type": "milestone",
-      "concept_id": "state_changes_complete",
-      "level": 3,
-      "progress": {
-        "current": 37,
-        "total": 72
+      "card_id": "card_32_quiz2_m4",
+      "card_slug": "card_32_quiz2_m4",
+      "type": "quiz",
+      "concept_id": "evaporation",
+      "level": 4,
+      "progress": { "current": 32, "total": 100 },
+      "quiz_payload": {
+        "question": "Humidity (hawa mein pehле se maujूद nami) badhने par evaporation ki speed ka kya hoता hai?",
+        "options": [
+          { "id": "A", "text": "Speed badhती hai" },
+          { "id": "B", "text": "Speed ghatती hai" },
+          { "id": "C", "text": "Koई asar nahi paडता" },
+          { "id": "D", "text": "Evaporation ruक jaata hai poori tarah" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Humidity badhने par evaporation ki speed GHATTI hai, kyunki hawa pehле se hi paani vapour se lagbhag bhari hoती hai aur naya vapour lene ki capacity kam hoती hai."
       },
+      "navigation": { "next": "card_33_quiz3_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_33_quiz3_m4",
+      "card_slug": "card_33_quiz3_m4",
+      "type": "quiz",
+      "concept_id": "evaporation",
+      "level": 4,
+      "progress": { "current": 33, "total": 100 },
+      "quiz_payload": {
+        "question": "Matka (earthen pot) ka paani thanda kyun rehта hai?",
+        "options": [
+          { "id": "A", "text": "Matka ka rang safed hota hai" },
+          { "id": "B", "text": "Matka ke chhidron se paani evaporate hota hai, jisसे baकी paani thanda ho jaata hai" },
+          { "id": "C", "text": "Matka mein bahut zyaादa paani hota hai" },
+          { "id": "D", "text": "Matka ka melting point kam hota hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Matka ki chhidra se paani continuously evaporate hota hai. Evaporation ke liye energy bache हुए paani se li jaाती hai, isliye bacа हुआ paani thanda ho jaата hai."
+      },
+      "navigation": { "next": "card_34_milestone_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_34_milestone_m4",
+      "card_slug": "card_34_milestone_m4",
+      "type": "milestone",
+      "concept_id": "evaporation",
+      "level": 4,
+      "progress": { "current": 34, "total": 100 },
       "milestone_payload": {
-        "title": "🌡️ MODULE 3 CONQUERED!",
+        "title": "MODULE COMPLETED!",
         "badge_emoji": "💧",
-        "completed_topic": "Changes in States of Matter",
-        "xp_earned": 90,
-        "milestone_progress": "Module 3/6 Complete",
-        "motivational_quote": "Melting, Boiling, Sublimation सब समझ आ गया! अब Physical vs Chemical classification देखेंगे! ⚗️"
+        "completed_topic": "Evaporation & Cooling Effect",
+        "xp_earned": 55,
+        "milestone_progress": "Module 4/12 Clear",
+        "motivational_quote": "Matka wala secret samझ aa gaया! Ab dekhते hain Sublimation, Plasma aur 5th state of matter!"
       },
-      "navigation": {
-        "next": "card_38_classification_intro",
-        "button_text": "Classification ➔"
-      }
+      "navigation": { "next": "card_35_sublimation", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_38_classification_intro",
-      "card_slug": "card_38_classification_intro",
+      "card_id": "card_35_sublimation",
+      "card_slug": "card_35_sublimation",
       "type": "chat",
-      "concept_id": "matter_classification_intro",
-      "level": 4,
-      "progress": {
-        "current": 38,
-        "total": 72
-      },
+      "concept_id": "sublimation_plasma_bec",
+      "level": 5,
+      "progress": { "current": 35, "total": 100 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, अब तक हमने states देखीं। Ab matter को chemical composition के base पर classify करते हैं। Two main categories: (1) PURE SUBSTANCES, (2) MIXTURES। Pehle pure substances samajhte hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Pure substances matlab bilkul saaf cheez?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Science mein pure ka different meaning hai! PURE SUBSTANCE = जिसमें केवल ONE type of particle हो, सभी identical properties के साथ। Fixed composition, fixed melting/boiling points। Do types: (1) ELEMENTS - एक ही type के atoms, (2) COMPOUNDS - अलग atoms chemically bonded!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Element aur compound mein kya difference hai?"
-        }
+        { "speaker": "aman", "text": "Ab ek interesting cheez dekhते hain. Tumने dekha hoगा - almirah mein rakhी हुई NAPHTHALENE ki गोलियाँ (balls) dheere-dheere CHHOTI hoती rehती hain aur kuch mahine baad puरी tarah gaayaब ho jaाती hain, bina koई paani banaये! Aisa kyun hota hai?" },
+        { "speaker": "raju", "text": "Sir maine socha wo pighalकर gaayaब ho jaाती hai... lekin uske aaс-paास toh kabhi paani jaisा kuch dikhाई nahi diya!" }
       ],
-      "navigation": {
-        "next": "card_39_elements_concept",
-        "button_text": "Elements ➔"
-      }
+      "navigation": { "next": "card_36_deposition_plasma", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_39_elements_concept",
-      "card_slug": "card_39_elements_concept",
+      "card_id": "card_36_deposition_plasma",
+      "card_slug": "card_36_deposition_plasma",
       "type": "chat",
-      "concept_id": "elements_definition",
-      "level": 4,
-      "progress": {
-        "current": 39,
-        "total": 72
-      },
+      "concept_id": "sublimation_plasma_bec",
+      "level": 5,
+      "progress": { "current": 36, "total": 100 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "ELEMENT: Simplest pure substance जिसे chemical methods से aur simple parts में तोड़ा नहीं जा सकता। Made of ONLY ONE type of atom। Examples: Gold (Au), Oxygen (O₂), Hydrogen (H₂), Iron (Fe), Carbon (C)। Total 118 elements known - Periodic Table में listed!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab pure सोना एक element hai? Isko तोड़ सकते hain kya?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Physical methods (hammer मारो) से टुकड़े कर सकते हो पर chemical nature नहीं बदलेगा - sona hi rahega! Chemical methods से bhi तोड़ नहीं सकते - simplest form है। Elements को 3 categories में बांटते हैं: METALS, NON-METALS, METALLOIDS!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Ye to पिछले chapter में पढ़ा था! Ab compound batao!"
-        }
+        { "speaker": "aman", "text": "Sahi observation! Naphthalene, kapूर (camphor), aur ammonium chloride jaisे padaarth SEEDHे SOLID se GAS mein badal jaते hain, bina LIQUID state se guजरे - isे SUBLIMATION kehते hain. Iska ULTA (reverse) - jab Gas seedhे Solid banта hai (bina Liquid banे) - use DEPOSITION kehते hain. Ab ek naya state dekhो - PLASMA (4th state) - ye ek ionized gas hai jismein charged particles (ions aur free electrons) hote hain, jaise Sooraj, taare, aur fluorescent tube ki chamak." },
+        { "speaker": "raju", "text": "Achhaaaa! Toh naphthalene liquid bane bina hi hawa mein miल jaाती hai! Aur Plasma toh bilkul naya concept hai mere liye - matlab Gas se bhi aage ek state hai?" }
       ],
-      "navigation": {
-        "next": "card_40_compounds_concept",
-        "button_text": "Compounds ➔"
-      }
+      "navigation": { "next": "card_37_bec_special", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_40_compounds_concept",
-      "card_slug": "card_40_compounds_concept",
+      "card_id": "card_37_bec_special",
+      "card_slug": "card_37_bec_special",
       "type": "chat",
-      "concept_id": "compounds_definition",
-      "level": 4,
-      "progress": {
-        "current": 40,
-        "total": 72
-      },
+      "concept_id": "sublimation_plasma_bec",
+      "level": 5,
+      "progress": { "current": 37, "total": 100 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "COMPOUND: दो या अधिक DIFFERENT elements chemically bonded in FIXED RATIO। Properties completely different from constituent elements। Examples: Water (H₂O) = Hydrogen + Oxygen, Salt (NaCl) = Sodium + Chlorine, Sugar (C₁₂H₂₂O₁₁), CO₂, NH₃!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab पानी hydrogen और oxygen से बना है पर properties bilkul different हैं?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Hydrogen highly flammable gas, Oxygen supports burning, पर H₂O बुझाता है fire को - completely new properties! Compounds को chemical methods (जैसे electrolysis) से elements में तोड़ा जा सकता है। Fixed ratio important है: H₂O always 2:1 ratio (H:O)!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh aaya! Ab mixture kya hota hai?"
-        }
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Ab ek proud Indian connection suno! Matter ka 5th state hai Bose-Einstein Condensate (BEC). Ise theoretically predict kiya tha Bharatiya scientist SATYENDRA NATH BOSE ने Albert Einstein ke saath milkar 1924-25 mein. Ise experimentally banая gaya 1995 mein, jab kुछ gases ko ABSOLUTE ZERO (-273°C) ke bahut kaरीब thanda kiya gaya - us extreme thandी mein particles ki apni pehchaan mit jaाती hai aur wo ek 'super-atom' jaise behave karте hain." },
+        { "speaker": "raju", "text": "Wah sir! Ye toh gर्व wali baat hai - ek Indian scientist ka naam India ke bahar bhi itне bade discovery se juडा hua hai! Ye toh exam mein zaroor pucha jaाega!" }
       ],
-      "navigation": {
-        "next": "card_41_mixtures_concept",
-        "button_text": "Mixtures ➔"
-      }
+      "navigation": { "next": "card_38_guess_m5", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_41_mixtures_concept",
-      "card_slug": "card_41_mixtures_concept",
-      "type": "chat",
-      "concept_id": "mixtures_definition",
-      "level": 4,
-      "progress": {
-        "current": 41,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "MIXTURE: दो या अधिक substances physically मिले हुए (not chemically bonded), किसी भी ratio में। Components अपनी individual properties retain करते हैं। Easy to separate by physical methods। Example: Air, नमक+चीनी, soil, milk, blood!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab mixture मein chemical reaction नहीं होता, सिर्फ mix होता है?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Key differences याद रखो - COMPOUND: fixed ratio, chemical bonding, new properties, separate by chemical methods। MIXTURE: any ratio, physical mixing, retain properties, separate by physical methods (filtration, distillation etc)। BPSC trap question: 'Air is a mixture or compound?' - MIXTURE!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Air mixture hai compound nahi! Mixtures ke types bhi hote hain?"
-        }
-      ],
-      "navigation": {
-        "next": "card_42_mixture_types",
-        "button_text": "Mixture Types ➔"
-      }
-    },
-    {
-      "card_id": "card_42_mixture_types",
-      "card_slug": "card_42_mixture_types",
-      "type": "chat",
-      "concept_id": "homogeneous_heterogeneous",
-      "level": 4,
-      "progress": {
-        "current": 42,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Haan! Do types: (1) HOMOGENEOUS MIXTURE - uniform composition throughout, components नहीं दिखते। Examples: Sugar solution, salt solution, air, brass (alloy)। (2) HETEROGENEOUS MIXTURE - non-uniform, components दिख सकते हैं। Examples: Sand+water, oil+water, salad, soil!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab homogeneous में सब एक जैसा दिखता है, heterogeneous में अलग-अलग?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Homogeneous को SOLUTION भी कहते हैं। Heterogeneous को further classify करते हैं: SUSPENSION (particles बड़े, settle down करते हैं) और COLLOID (particles medium size, don't settle)। Milk colloid है, muddy water suspension!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Suspension aur colloid mein difference particle size se hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_43_solution_colloid_suspension",
-        "button_text": "Detail Comparison ➔"
-      }
-    },
-    {
-      "card_id": "card_43_solution_colloid_suspension",
-      "card_slug": "card_43_solution_colloid_suspension",
-      "type": "chat",
-      "concept_id": "solution_colloid_suspension_compare",
-      "level": 4,
-      "progress": {
-        "current": 43,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bilkul! SOLUTION: Particle size < 1 nm, homogeneous, transparent, don't settle, pass through filter paper। COLLOID: 1-100 nm, heterogeneous but appear uniform, translucent, don't settle, don't pass filter। SUSPENSION: > 100 nm, heterogeneous, opaque, settle down, don't pass filter!"
-        },
-        {
-          "speaker": "raju",
-          "text": "To solution clear hai, colloid थोड़ा cloudy, suspension bilkul opaque?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect understanding! Test भी hai: TYNDALL EFFECT - जब light beam pass करो colloid से, light scatter होती है (visible path)। Solution में नहीं होता, suspension में बहुत होता। Example: Torch की light fog (colloid) में दिखती है, साफ हवा (solution-like) में नहीं!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Tyndall effect colloid की identification के लिए! Ye naam kahan se aaya?"
-        }
-      ],
-      "navigation": {
-        "next": "card_44_tyndall_effect",
-        "button_text": "Tyndall Effect ➔"
-      }
-    },
-    {
-      "card_id": "card_44_tyndall_effect",
-      "card_slug": "card_44_tyndall_effect",
-      "type": "chat",
-      "concept_id": "tyndall_effect_detail",
-      "level": 4,
-      "progress": {
-        "current": 44,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Scientist JOHN TYNDALL ने discover किया 1869 में। TYNDALL EFFECT: Scattering of light by colloidal particles। Examples: (1) Car headlights in fog, (2) Sunlight through trees in forest (dust particles), (3) Cinema projector beam। Colloid examples: Milk, fog, smoke, jelly, butter!"
-        },
-        {
-          "speaker": "raju",
-          "text": "John Tyndall, 1869 - noted! Colloid types bhi hote hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Classification by phases: SOL (solid in liquid - paint), EMULSION (liquid in liquid - milk), FOAM (gas in liquid - shaving cream), AEROSOL (liquid/solid in gas - fog/smoke)। ⭐ BPSC/NEET में colloid types aur examples पूछते हैं!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Itne types! Ab separation methods bhi hote honge mixtures ke liye?"
-        }
-      ],
-      "navigation": {
-        "next": "card_45_classification_quiz_1",
-        "button_text": "Quiz 1/3 ➔"
-      }
-    },
-    {
-      "card_id": "card_45_classification_quiz_1",
-      "card_slug": "card_45_classification_quiz_1",
-      "type": "quiz",
-      "concept_id": "classification_test_1",
-      "level": 4,
-      "progress": {
-        "current": 45,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Air is a: (SSC CGL 2017, BPSC 2018)",
+      "card_id": "card_38_guess_m5",
+      "card_slug": "card_38_guess_m5",
+      "type": "guess",
+      "concept_id": "sublimation_plasma_bec",
+      "level": 5,
+      "progress": { "current": 38, "total": 100 },
+      "guess_payload": {
+        "question": "Guess karo - in mein se kaunसा padaarth SUBLIMATION dikhाता hai?",
         "options": [
-          {"id": "A", "text": "Compound (यौगिक)"},
-          {"id": "B", "text": "Element (तत्व)"},
-          {"id": "C", "text": "Homogeneous mixture (समांगी मिश्रण)"},
-          {"id": "D", "text": "Heterogeneous mixture"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "AIR एक HOMOGENEOUS MIXTURE है जिसमें Nitrogen (78%), Oxygen (21%), Argon, CO₂ etc. physically मिले हुए हैं (not chemically bonded)। Composition uniform है throughout। यह compound नहीं है क्योंकि fixed ratio नहीं है और chemical bonding नहीं है। ⭐ SSC/BPSC का repeatedly asked trap question!"
-      },
-      "navigation": {
-        "next": "card_46_classification_quiz_2",
-        "button_text": "Quiz 2/3 ➔"
-      }
-    },
-    {
-      "card_id": "card_46_classification_quiz_2",
-      "card_slug": "card_46_classification_quiz_2",
-      "type": "quiz",
-      "concept_id": "classification_test_2",
-      "level": 4,
-      "progress": {
-        "current": 46,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Tyndall effect is observed in: (NEET 2019, Railway NTPC 2020)",
-        "options": [
-          {"id": "A", "text": "True solutions (वास्तविक विलयन)"},
-          {"id": "B", "text": "Colloids (कोलाइड)"},
-          {"id": "C", "text": "Compounds (यौगिक)"},
-          {"id": "D", "text": "Elements (तत्व)"}
+          { "id": "A", "text": "Namak (Salt)" },
+          { "id": "B", "text": "Camphor (Kapूर)" },
+          { "id": "C", "text": "Lohа (Iron)" },
+          { "id": "D", "text": "Sona (Gold)" }
         ],
         "correct_option_id": "B",
-        "explanation": "TYNDALL EFFECT COLLOIDS में observe होता है क्योंकि colloidal particles (1-100 nm) light को scatter करते हैं। True solutions (particle < 1 nm) में नहीं होता। Examples: Fog में car headlights, cinema projector beam। John Tyndall ने 1869 में discover किया। ⭐ NEET/Railway में Tyndall effect repeatedly पूछा जाता है!"
+        "explanation": "Camphor (Kapूर) seedhे Solid se Gas mein badal jaता hai bina Liquid state se guजре, isीliye ye Sublimation ka classic example hai."
       },
-      "navigation": {
-        "next": "card_47_classification_quiz_3",
-        "button_text": "Quiz 3/3 ➔"
-      }
+      "navigation": { "next": "card_39_quiz1_m5", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_47_classification_quiz_3",
-      "card_slug": "card_47_classification_quiz_3",
+      "card_id": "card_39_quiz1_m5",
+      "card_slug": "card_39_quiz1_m5",
       "type": "quiz",
-      "concept_id": "classification_test_3",
-      "level": 4,
-      "progress": {
-        "current": 47,
-        "total": 72
-      },
+      "concept_id": "sublimation_plasma_bec",
+      "level": 5,
+      "progress": { "current": 39, "total": 100 },
       "quiz_payload": {
-        "question": "Which is a compound? (BPSC TRE 2020, SSC CHSL 2018)",
+        "question": "Fluorescent tube aur Sooraj mein maujूद matter ki avastha kya kaहलाती hai?",
         "options": [
-          {"id": "A", "text": "Air (हवा)"},
-          {"id": "B", "text": "Sea water (समुद्री जल)"},
-          {"id": "C", "text": "Common salt (साधारण नमक)"},
-          {"id": "D", "text": "Soil (मिट्टी)"}
+          { "id": "A", "text": "Solid" },
+          { "id": "B", "text": "Liquid" },
+          { "id": "C", "text": "Plasma" },
+          { "id": "D", "text": "Bose-Einstein Condensate" }
         ],
         "correct_option_id": "C",
-        "explanation": "COMMON SALT (NaCl) एक COMPOUND है - Sodium और Chlorine chemically bonded in fixed ratio 1:1। Air, sea water, soil सब MIXTURES हैं (कई substances physically मिले हुए)। Compound की properties constituent elements से completely different होती हैं। ⭐ BPSC TRE/SSC में mixture vs compound का differentiation पूछा जाता है!"
+        "explanation": "Sooraj, taare aur fluorescent tube mein Plasma state paई jaाती hai - ye ionized gas hai jismein free electrons aur ions hote hain."
       },
-      "navigation": {
-        "next": "card_48_milestone_classification",
-        "button_text": "Module Complete ➔"
-      }
+      "navigation": { "next": "card_40_quiz2_m5", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_48_milestone_classification",
-      "card_slug": "card_48_milestone_classification",
-      "type": "milestone",
-      "concept_id": "classification_complete",
-      "level": 4,
-      "progress": {
-        "current": 48,
-        "total": 72
+      "card_id": "card_40_quiz2_m5",
+      "card_slug": "card_40_quiz2_m5",
+      "type": "quiz",
+      "concept_id": "sublimation_plasma_bec",
+      "level": 5,
+      "progress": { "current": 40, "total": 100 },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE Trap: Bose-Einstein Condensate ka naam kis Bharatiya scientist se juडा hai, jinhoने Albert Einstein ke saath is state ko theoretically predict kiya tha?",
+        "options": [
+          { "id": "A", "text": "C.V. Raman" },
+          { "id": "B", "text": "Satyendra Nath Bose" },
+          { "id": "C", "text": "Homi J. Bhabha" },
+          { "id": "D", "text": "S. Chandrasekhar" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Satyendra Nath Bose ने Albert Einstein ke saath milkar 1924-25 mein Bose-Einstein Condensate ko theoretically predict kiya tha. Ye BPSC/BPSC TRE ka baar-baar poочha jaने wala fact hai."
       },
+      "navigation": { "next": "card_41_quiz3_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_41_quiz3_m5",
+      "card_slug": "card_41_quiz3_m5",
+      "type": "quiz",
+      "concept_id": "sublimation_plasma_bec",
+      "level": 5,
+      "progress": { "current": 41, "total": 100 },
+      "quiz_payload": {
+        "question": "Deposition (Gas se seedhे Solid banना) kis process ka ULTA (reverse) hai?",
+        "options": [
+          { "id": "A", "text": "Melting" },
+          { "id": "B", "text": "Sublimation" },
+          { "id": "C", "text": "Evaporation" },
+          { "id": "D", "text": "Boiling" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Deposition, Sublimation ka reverse process hai - Sublimation mein Solid seedhे Gas banта hai, Deposition mein Gas seedhे Solid banта hai."
+      },
+      "navigation": { "next": "card_42_milestone_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_42_milestone_m5",
+      "card_slug": "card_42_milestone_m5",
+      "type": "milestone",
+      "concept_id": "sublimation_plasma_bec",
+      "level": 5,
+      "progress": { "current": 42, "total": 100 },
       "milestone_payload": {
-        "title": "⚗️ MODULE 4 CLASSIFIED!",
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "✨",
+        "completed_topic": "Sublimation, Plasma & Bose-Einstein Condensate",
+        "xp_earned": 65,
+        "milestone_progress": "Module 5/12 Clear",
+        "motivational_quote": "5 states of matter clear ho gaये! Ab dekhते hain matter ko kaise classify karте hain!"
+      },
+      "navigation": { "next": "card_43_pure_substance", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_43_pure_substance",
+      "card_slug": "card_43_pure_substance",
+      "type": "chat",
+      "concept_id": "classification_pure_substance",
+      "level": 6,
+      "progress": { "current": 43, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhते hain matter ko kaise divide karते hain. Agar koई padaarth SIRF EK HI TARAH KE PARTICLE se bana ho, aur uski composition (rachна) HAR JAGAH FIXED ho, use PURE SUBSTANCE kehते hain. Jaise pure sona (gold), distilled paani. Inमें har jagah properties SAME hoती hain." },
+        { "speaker": "raju", "text": "Achha! Toh jaisе gaाँव ke talab ka paani mitti mile hoने ki wajah se pure nahi hoga, kyunki usmein alag-alag cheezें mili hoती hain?" }
+      ],
+      "navigation": { "next": "card_44_elements", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_44_elements",
+      "card_slug": "card_44_elements",
+      "type": "chat",
+      "concept_id": "classification_pure_substance",
+      "level": 6,
+      "progress": { "current": 44, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi socha! Pure substances do prakaार ke hote hain - ELEMENTS aur COMPOUNDS. ELEMENT wo simplest padaarth hai jise CHEMICAL TARIके SE aur toडा nahi ja sakta (jaise Gold, Oxygen, Iron). Elements teen prakaार ke hote hain: METALS (chamकीले, lachीले/malleable, taार banнे layak/ductile, achhे conductor - jaise iron, copper), NON-METALS (dhाल-dhाल, brittle, kharaाब conductor - jaise sulphur, oxygen), aur METALLOIDS (dono ke guण - jaise silicon, boron)." },
+        { "speaker": "raju", "text": "Achha, matlab metal aur non-metal ke beech ek 'mix' type bhi hota hai jise metalloid kehते hain - ye toh naya word hai mere liye!" }
+      ],
+      "navigation": { "next": "card_45_compounds", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_45_compounds",
+      "card_slug": "card_45_compounds",
+      "type": "chat",
+      "concept_id": "classification_pure_substance",
+      "level": 6,
+      "progress": { "current": 45, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab COMPOUND dekho - jab do ya zyaादa elements ek FIXED RATIO (anupात) mein CHEMICALLY combine hote hain, tab compound banта hai. Jaise Hydrogen (jal जाता hai) aur Oxygen (jalाने mein madat karता hai) milकर Water (H2O) banते hain, jo aag bujhाता hai - bilkul NAYE properties, jo dono elements se bilkul alag hain! Yahi hai LAW OF CONSTANT PROPORTION ka basic idea - fixed ratio (H2O mein hamesha 2:1 hydrogen:oxygen atoms)." },
+        { "speaker": "raju", "text": "Wah! Ye toh magic jaisa hai - do aisे gases jo alag-alag khatarnак hain, milkar paani ban jaते hain jo aag bujhाता hai! Compound ke properties toh bilkul alag ho gaये!" }
+      ],
+      "navigation": { "next": "card_46_guess_m6", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_46_guess_m6",
+      "card_slug": "card_46_guess_m6",
+      "type": "guess",
+      "concept_id": "classification_pure_substance",
+      "level": 6,
+      "progress": { "current": 46, "total": 100 },
+      "guess_payload": {
+        "question": "Guess karo - Silicon, jo metal aur non-metal dono ke guण dikhाता hai, use kya kaहते hain?",
+        "options": [
+          { "id": "A", "text": "Metal" },
+          { "id": "B", "text": "Non-metal" },
+          { "id": "C", "text": "Metalloid" },
+          { "id": "D", "text": "Compound" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Silicon ek Metalloid hai - isमें metal aur non-metal dono ke guण paye jaते hain, isीliye ye computer chips mein semi-conductor ke roop mein use hota hai."
+      },
+      "navigation": { "next": "card_47_quiz1_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_47_quiz1_m6",
+      "card_slug": "card_47_quiz1_m6",
+      "type": "quiz",
+      "concept_id": "classification_pure_substance",
+      "level": 6,
+      "progress": { "current": 47, "total": 100 },
+      "quiz_payload": {
+        "question": "Compound aur Mixture mein sabसे बड़ा farak kya hai?",
+        "options": [
+          { "id": "A", "text": "Compound mein elements CHEMICALLY fixed ratio mein juडे hote hain, Mixture mein koई bhi ratio ho sakта hai" },
+          { "id": "B", "text": "Compound hamesha liquid hota hai" },
+          { "id": "C", "text": "Mixture hamesha rangीn hota hai" },
+          { "id": "D", "text": "Dono mein koई farak nahi" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Compound mein elements ek FIXED RATIO mein chemically combine hote hain aur naye properties bante hain, jabki Mixture mein padaarth kisी bhi ratio mein sirf physically mile hote hain."
+      },
+      "navigation": { "next": "card_48_quiz2_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_48_quiz2_m6",
+      "card_slug": "card_48_quiz2_m6",
+      "type": "quiz",
+      "concept_id": "classification_pure_substance",
+      "level": 6,
+      "progress": { "current": 48, "total": 100 },
+      "quiz_payload": {
+        "question": "Element ko CHEMICAL tariके se aur kyun nahi toड़ा ja sakта?",
+        "options": [
+          { "id": "A", "text": "Kyunki wo bahut heavy hota hai" },
+          { "id": "B", "text": "Kyunki wo pehле se hi simplest form of matter hai, ek hi tarah ke atom se bana hota hai" },
+          { "id": "C", "text": "Kyunki wo hamesha gas hota hai" },
+          { "id": "D", "text": "Kyunki wo hamesha rangीn hota hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Element pehле se hi simplest form of matter hai - ek hi tarah ke atoms se bana, isीliye isे chemical tariके se aur simple substances mein nahi toड़ा ja sakta."
+      },
+      "navigation": { "next": "card_49_quiz3_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_49_quiz3_m6",
+      "card_slug": "card_49_quiz3_m6",
+      "type": "quiz",
+      "concept_id": "classification_pure_substance",
+      "level": 6,
+      "progress": { "current": 49, "total": 100 },
+      "quiz_payload": {
+        "question": "Graphite (pencil ki leड़) kis category ka apवाद (exception) hai?",
+        "options": [
+          { "id": "A", "text": "Metal hoते huए bhi brittle hai" },
+          { "id": "B", "text": "Non-metal hoते huए bhi vidyut (electricity) ka achha conductor hai" },
+          { "id": "C", "text": "Metalloid hoते huए bhi chamकीला hai" },
+          { "id": "D", "text": "Compound hoते huए bhi element jaisा behave karta hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Graphite ek Non-metal hai, lekin apवाद (exception) ke roop mein ye vidyut ka achha conductor hai - jabki zyaादaтар non-metals kharaाब conductor hote hain. Ye BPSC ka common exception-based trap hai."
+      },
+      "navigation": { "next": "card_50_milestone_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_50_milestone_m6",
+      "card_slug": "card_50_milestone_m6",
+      "type": "milestone",
+      "concept_id": "classification_pure_substance",
+      "level": 6,
+      "progress": { "current": 50, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
         "badge_emoji": "🧪",
-        "completed_topic": "Classification of Matter",
-        "xp_earned": 85,
-        "milestone_progress": "Module 4/6 Complete",
-        "motivational_quote": "Elements, Compounds, Mixtures सब clear! अब separation techniques देखेंगे! 🔬"
+        "completed_topic": "Pure Substances - Elements & Compounds",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/12 Clear",
+        "motivational_quote": "Elements-Compounds clear ho gaये! Ab Mixtures aur Solutions ki duniya mein chalते hain!"
       },
-      "navigation": {
-        "next": "card_49_separation_intro",
-        "button_text": "Separation Methods ➔"
-      }
+      "navigation": { "next": "card_51_mixture_types", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_49_separation_intro",
-      "card_slug": "card_49_separation_intro",
+      "card_id": "card_51_mixture_types",
+      "card_slug": "card_51_mixture_types",
       "type": "chat",
-      "concept_id": "separation_techniques_intro",
-      "level": 5,
-      "progress": {
-        "current": 49,
-        "total": 72
-      },
+      "concept_id": "mixtures_solutions",
+      "level": 7,
+      "progress": { "current": 51, "total": 100 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, अगर चावल में पत्थर मिल जाएं तो Mummy kaise alag karti hain?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Hand से उठाकर! Kyunki पत्थर दिख जाते hain!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Ye HAND PICKING method है - simplest separation। Par agar दाल में छोटे पत्थर हों या नमक-चीनी mix हो गई हो, tab? Mixtures को separate करने के different scientific methods hain based on components की properties। Let's explore them!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Kitne methods hain Sir?"
-        }
+        { "speaker": "aman", "text": "Ab MIXTURE dekhते hain - jab do ya zyaादa padaarth kisी bhi RATIO mein sirf PHYSICALLY mile hote hain (koई naya padaarth nahi banта), use Mixture kehते hain. Mixture do prakaार ke hote hain - HOMOGENEOUS (jismein composition har jagah SAME dikhाई de, jaise namak ka ghol) aur HETEROGENEOUS (jismein alag-alag hisसे saaф dikhाई den, jaise mitti mila paani ya baलू-namak mix)." },
+        { "speaker": "raju", "text": "Achha! Toh sugar ko paani mein ghोल doon aur wo puरी tarah dikhाई na de, toh wo homogeneous hoगा, aur agar baलू dikhाई de rahа ho toh heterogeneous?" }
       ],
-      "navigation": {
-        "next": "card_50_separation_methods_list",
-        "button_text": "Methods List ➔"
-      }
+      "navigation": { "next": "card_52_true_solution", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_50_separation_methods_list",
-      "card_slug": "card_50_separation_methods_list",
+      "card_id": "card_52_true_solution",
+      "card_slug": "card_52_true_solution",
       "type": "chat",
-      "concept_id": "separation_methods_overview",
-      "level": 5,
-      "progress": {
-        "current": 50,
-        "total": 72
-      },
+      "concept_id": "mixtures_solutions",
+      "level": 7,
+      "progress": { "current": 52, "total": 100 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Main methods: (1) FILTRATION - solid से liquid separate, (2) EVAPORATION - liquid से dissolved solid, (3) DISTILLATION - liquid mixture, (4) CENTRIFUGATION - dense particles settle, (5) CHROMATOGRAPHY - colored components। Har method specific situation के लिए!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Filtration to tea बनाते समय use करते hain na?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! FILTRATION: Insoluble solid को liquid से separate करना using filter paper/cloth। Tea leaves छन जाते हैं। Principle: Solid particles filter पर रुक जाते (RESIDUE), liquid pass कर जाता (FILTRATE)। Lab में funnel aur filter paper use करते hैं!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Residue aur filtrate - noted! Evaporation kya hai?"
-        }
+        { "speaker": "aman", "text": "Bilkul sahi! Ye jo homogeneous mixture hota hai, use TRUE SOLUTION bhi kaहते hain. Ismein jo padaarth ghुल raha hai use SOLUTE kehते hain (jaise namak) aur jismein ghुल raha hai use SOLVENT kehते hain (jaise paani). True Solution ki teen KHAAS pehchan hain: 1) particle size bahut chhoटा hota hai (1 nanometer se bhi kam), 2) transparent hota hai aur PRAKASH (light) ko scatter NAHI karta, 3) khadे rehने par settle NAHI hota aur filter paper se separate NAHI hota." },
+        { "speaker": "raju", "text": "Achha, matlab namak ka ghol itна chhoटा particle hota hai ki wo light ko todता hi nahi, isीliye glass jaisa saaф dikhाई deता hai?" }
       ],
-      "navigation": {
-        "next": "card_51_evaporation_separation",
-        "button_text": "Evaporation Method ➔"
-      }
+      "navigation": { "next": "card_53_concentration_terms", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_51_evaporation_separation",
-      "card_slug": "card_51_evaporation_separation",
+      "card_id": "card_53_concentration_terms",
+      "card_slug": "card_53_concentration_terms",
       "type": "chat",
-      "concept_id": "evaporation_separation_method",
-      "level": 5,
-      "progress": {
-        "current": 51,
-        "total": 72
-      },
+      "concept_id": "mixtures_solutions",
+      "level": 7,
+      "progress": { "current": 53, "total": 100 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "EVAPORATION: Dissolved solid को liquid solvent से separate करना by heating। Example: नमक का पानी heat करो → water evaporate → salt crystals बच जाते। Principle: Liquid evaporates (low BP), solid remains (high BP/non-volatile)। Sea water से salt production - evaporation!"
-        },
-        {
-          "speaker": "raju",
-          "text": "To समुद्र के किनारे salt pans में evaporation hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Sun की heat से natural evaporation। Par agar दोनों liquids हों (जैसे water+alcohol mixture) tab evaporation काम नहीं करेगा - DISTILLATION use करना पड़ेगा। Principle different hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Distillation kya hai Sir?"
-        }
+        { "speaker": "aman", "text": "Sahi samझa! Ab dekhते hain solution mein solute kितना ghुला hai, ye batане ke liye 'CONCENTRATION' use karте hain - jaise Mass by Mass % (100g solution mein कितна gram solute) ya Mass by Volume %. Agar ek FIXED temperature par solvent ab aur zyaादa solute NAHI ghुला sakta, use SATURATED SOLUTION kehते hain. Agar aur ghुल sakta hai, use UNSATURATED kehते hain. SOLUBILITY matlab hai - fixed temperature par ek fixed matra (usually 100g) solvent mein maximum kितна solute ghुल sakta hai." },
+        { "speaker": "raju", "text": "Achha! Toh jab chini ghोलते-ghोलते paani mein aur nahi ghुलती aur neeche baithने lagti hai, toh wo saturated solution ban gaया - ye toh mujhe roज chai banaते waqt dikhाई deता hai!" }
       ],
-      "navigation": {
-        "next": "card_52_distillation_method",
-        "button_text": "Distillation ➔"
-      }
+      "navigation": { "next": "card_54_guess_m7", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_52_distillation_method",
-      "card_slug": "card_52_distillation_method",
-      "type": "chat",
-      "concept_id": "distillation_process",
-      "level": 5,
-      "progress": {
-        "current": 52,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "DISTILLATION: Miscible liquids (जो mix हो गए हों) को separate करना based on DIFFERENT BOILING POINTS। Process: Heat करो → lower BP liquid पहले boil → vapors को cool करो (condenser में) → pure liquid collect। Example: Water (BP=100°C) + Alcohol (BP=78°C) को separate करना!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab alcohol पहले boil होगा aur condense होकर alag बर्तन में collect?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Apparatus: Distillation flask (boil), thermometer (temperature check), condenser (cooling), receiver (collect)। Application: Petroleum refining (fractional distillation), alcohol production, purification। BPSC/Railway में apparatus diagram पूछते हैं!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Fractional distillation alag hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_53_centrifugation_chromatography",
-        "button_text": "Other Methods ➔"
-      }
-    },
-    {
-      "card_id": "card_53_centrifugation_chromatography",
-      "card_slug": "card_53_centrifugation_chromatography",
-      "type": "chat",
-      "concept_id": "centrifugation_chromatography_methods",
-      "level": 5,
-      "progress": {
-        "current": 53,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Haan, multiple liquids के लिए! Ab CENTRIFUGATION: Fine insoluble particles को liquid से separate using centrifuge machine (rapid rotation)। Dense particles settle → SEDIMENT, liquid above → SUPERNATANT। Example: Blood separation, milk cream separation, urine test!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Blood test में centrifuge machine use hoti hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Last: CHROMATOGRAPHY - colored components ko separate। Principle: Different components, different speeds पर move करते हैं on paper (based on solubility)। Example: Black ink को water में - अलग colors दिखते hैं। Forensics, drug testing में use होता है!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wow! Black ink में multiple colors hote hain jo chromatography से दिखते?"
-        }
-      ],
-      "navigation": {
-        "next": "card_54_separation_quiz_1",
-        "button_text": "Quiz 1/3 ➔"
-      }
-    },
-    {
-      "card_id": "card_54_separation_quiz_1",
-      "card_slug": "card_54_separation_quiz_1",
-      "type": "quiz",
-      "concept_id": "separation_test_1",
-      "level": 5,
-      "progress": {
-        "current": 54,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Which method is used to separate common salt from sea water? (SSC CGL 2020, BPSC 2019)",
+      "card_id": "card_54_guess_m7",
+      "card_slug": "card_54_guess_m7",
+      "type": "guess",
+      "concept_id": "mixtures_solutions",
+      "level": 7,
+      "progress": { "current": 54, "total": 100 },
+      "guess_payload": {
+        "question": "Guess karo - dawaाई ki shishi par likha 'Homogeneous Mixture' aur syrup dekhکर usmein koई particle nahi dikhाई deता. Ye kaunसा mixture hai?",
         "options": [
-          {"id": "A", "text": "Filtration (निस्पंदन)"},
-          {"id": "B", "text": "Evaporation (वाष्पीकरण)"},
-          {"id": "C", "text": "Centrifugation (अपकेंद्रण)"},
-          {"id": "D", "text": "Chromatography (वर्णलेखन)"}
+          { "id": "A", "text": "Heterogeneous Mixture" },
+          { "id": "B", "text": "Homogeneous Mixture (True Solution)" },
+          { "id": "C", "text": "Suspension" },
+          { "id": "D", "text": "Element" }
         ],
         "correct_option_id": "B",
-        "explanation": "Sea water से common salt को EVAPORATION method से अलग करते हैं। Sun की heat से water evaporate होता है और salt crystals बच जाते हैं। Salt pans में commercial production होता है। Filtration insoluble solids के लिए है (salt dissolved है)। ⭐ SSC/BPSC में separation methods के applications पूछे जाते हैं!"
+        "explanation": "Jab koई particle dikhाई na de aur composition har jagah same ho, wo Homogeneous Mixture (True Solution) hai."
       },
-      "navigation": {
-        "next": "card_55_separation_quiz_2",
-        "button_text": "Quiz 2/3 ➔"
-      }
+      "navigation": { "next": "card_55_quiz1_m7", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_55_separation_quiz_2",
-      "card_slug": "card_55_separation_quiz_2",
+      "card_id": "card_55_quiz1_m7",
+      "card_slug": "card_55_quiz1_m7",
       "type": "quiz",
-      "concept_id": "separation_test_2",
-      "level": 5,
-      "progress": {
-        "current": 55,
-        "total": 72
-      },
+      "concept_id": "mixtures_solutions",
+      "level": 7,
+      "progress": { "current": 55, "total": 100 },
       "quiz_payload": {
-        "question": "Distillation is based on the difference in: (Railway NTPC 2019, BSSC 2020)",
+        "question": "True Solution ke particle ka size lagbhag कितना hota hai?",
         "options": [
-          {"id": "A", "text": "Solubility (विलेयता)"},
-          {"id": "B", "text": "Density (घनत्व)"},
-          {"id": "C", "text": "Boiling points (क्वथनांक)"},
-          {"id": "D", "text": "Color (रंग)"}
+          { "id": "A", "text": "1 nanometer se kam" },
+          { "id": "B", "text": "1000 nanometer se zyaादa" },
+          { "id": "C", "text": "1 centimeter se zyaादa" },
+          { "id": "D", "text": "Isका koई fixed size nahi hota" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "True Solution ke particle ka size 1 nanometer (10⁻⁹ m) se bhi kam hota hai, isीliye ye light ko scatter nahi karta aur filter se separate nahi hota."
+      },
+      "navigation": { "next": "card_56_quiz2_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_56_quiz2_m7",
+      "card_slug": "card_56_quiz2_m7",
+      "type": "quiz",
+      "concept_id": "mixtures_solutions",
+      "level": 7,
+      "progress": { "current": 56, "total": 100 },
+      "quiz_payload": {
+        "question": "Saturated Solution ki सही pehchan kya hai?",
+        "options": [
+          { "id": "A", "text": "Jismein aur solute bilkul nahi daाल sakte" },
+          { "id": "B", "text": "Ek FIXED temperature par jismein aur solute ghुल NAHI sakta" },
+          { "id": "C", "text": "Jismein solvent bilkul nahi hota" },
+          { "id": "D", "text": "Jo hamesha thanda hota hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Saturated Solution wo hai jismein ek FIXED temperature par solvent ab aur solute ghुला NAHI sakta. Temperature badalne par ye phir se unsaturated ho sakта hai - ye BPSC ka common trap hai."
+      },
+      "navigation": { "next": "card_57_quiz3_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_57_quiz3_m7",
+      "card_slug": "card_57_quiz3_m7",
+      "type": "quiz",
+      "concept_id": "mixtures_solutions",
+      "level": 7,
+      "progress": { "current": 57, "total": 100 },
+      "quiz_payload": {
+        "question": "Namak-baलू ke mixture ko kis category mein rakहते hain?",
+        "options": [
+          { "id": "A", "text": "Homogeneous Mixture" },
+          { "id": "B", "text": "Heterogeneous Mixture" },
+          { "id": "C", "text": "Compound" },
+          { "id": "D", "text": "Element" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Namak-baलू mixture mein dono alag-alag hisसे saaф dikhाई dete hain aur composition uniform nahi hota, isliye ye Heterogeneous Mixture hai."
+      },
+      "navigation": { "next": "card_58_milestone_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_58_milestone_m7",
+      "card_slug": "card_58_milestone_m7",
+      "type": "milestone",
+      "concept_id": "mixtures_solutions",
+      "level": 7,
+      "progress": { "current": 58, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🥤",
+        "completed_topic": "Mixtures & True Solutions",
+        "xp_earned": 60,
+        "milestone_progress": "Module 7/12 Clear",
+        "motivational_quote": "Solutions clear ho gaये! Ab Suspension aur Colloid ka interesting Tyndall effect dekhते hain!"
+      },
+      "navigation": { "next": "card_59_suspension", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_59_suspension",
+      "card_slug": "card_59_suspension",
+      "type": "chat",
+      "concept_id": "suspension_colloid",
+      "level": 8,
+      "progress": { "current": 59, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho baरसात ke baad talab ka paani muddी (muddy) hota hai. Kuch der khadा rakhने par mitti neeche baith jaाती hai. Aisा kyun hota hai, jabки namak ka ghol kabhi nahi baithता?" },
+        { "speaker": "raju", "text": "Sir shayad mitti ke particle namak ke particle se bade hote hain isliye neeche baith jaते hain?" }
+      ],
+      "navigation": { "next": "card_60_suspension_properties", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_60_suspension_properties",
+      "card_slug": "card_60_suspension_properties",
+      "type": "chat",
+      "concept_id": "suspension_colloid",
+      "level": 8,
+      "progress": { "current": 60, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi soचा! Isे SUSPENSION kehते hain - ek HETEROGENEOUS mixture jismein particle size bahut BADA hota hai (100 nanometer se zyaादa, akhнों se bhi dikhाई de sakta hai). Isकी teen pehchaan hain: 1) particles khadे rehने par NEECHE BAITH jaते hain, 2) light padने par ise SCATTER karके raasta dikhाई deता hai, 3) FILTER PAPER se aasaani se ALAG kiya ja sakta hai." },
+        { "speaker": "raju", "text": "Achha! Toh Suspension ke particle namak-paani se bahut bade hote hain, isीliye wo baith bhi jaते hain aur filter bhi ho sakте hain?" }
+      ],
+      "navigation": { "next": "card_61_colloid_intro", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_61_colloid_intro",
+      "card_slug": "card_61_colloid_intro",
+      "type": "chat",
+      "concept_id": "suspension_colloid",
+      "level": 8,
+      "progress": { "current": 61, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Yahin sabсे bada twist suno! Ek TEESRA type bhi hai jo Solution aur Suspension ke BEECH mein aata hai - COLLOID (jaise doodh/milk, fog). Iska particle size Solution se BADA lekin Suspension se CHHOTA hota hai (1 se 1000 nanometer ke beech). Isमें particles khadे rehне par NEECHE NAHI baithते aur filter paper se bhi separate NAHI hote - dekhने mein homogeneous lagते hain, lekin ACTUALLY ye heterogeneous hote hain!" },
+        { "speaker": "raju", "text": "Hain?? Doodh toh dekhne mein bilkul saaф-suthаरा lagता hai jaise namak ka ghol, lekin actually usmein bhi alag particles hote hain? Ye toh confuse karta hai!" }
+      ],
+      "navigation": { "next": "card_62_tyndall_effect", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_62_tyndall_effect",
+      "card_slug": "card_62_tyndall_effect",
+      "type": "chat",
+      "concept_id": "suspension_colloid",
+      "level": 8,
+      "progress": { "current": 62, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ye pehचानне ka ek shaandaार tarika hai - jaisे car ke headlights fog (kohara) mein raasta banाते hue dikhाई dete hain, waisे hi Colloid mein light डालने par uska raasta CLEARLY dikhाई deता hai - isे TYNDALL EFFECT kehते hain. Solution mein ye effect nahi dikhता kyunki particle bahut chhoटे hote hain. Colloid mein particles apni jagah 'BROWNIAN MOVEMENT' (zig-zag) mein bhi ghुमте rehते hain." },
+        { "speaker": "raju", "text": "Achhaaaa! Toh fog mein gaाडी ki roshनी ka raasta dikhाई denа Colloid ka hi udaaharaण hai! Ab samझ aaya headlights fog mein kyun spashट dikhाई deती hain!" }
+      ],
+      "navigation": { "next": "card_63_guess_m8", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_63_guess_m8",
+      "card_slug": "card_63_guess_m8",
+      "type": "guess",
+      "concept_id": "suspension_colloid",
+      "level": 8,
+      "progress": { "current": 63, "total": 100 },
+      "guess_payload": {
+        "question": "Guess karo - Doodh (Milk) mein liquid ke andar liquid ka dispersion hota hai. Ise kaunse type ka colloid kehते hain?",
+        "options": [
+          { "id": "A", "text": "Sol" },
+          { "id": "B", "text": "Gel" },
+          { "id": "C", "text": "Emulsion" },
+          { "id": "D", "text": "Aerosol" }
         ],
         "correct_option_id": "C",
-        "explanation": "DISTILLATION different BOILING POINTS पर based है। Mixture को heat करते हैं - lower boiling point वाला liquid पहले boil होकर vapor बनता है, फिर condense होकर collect होता है। Example: Water (BP=100°C) और Alcohol (BP=78°C) का separation। ⭐ Railway/BSSC में principle-based questions आते हैं!"
+        "explanation": "Jab ek liquid doosre liquid mein dispersed rehta hai (jaise cream/fat particles paani mein), use EMULSION kehते hain - Doodh iska classic example hai."
       },
-      "navigation": {
-        "next": "card_56_separation_quiz_3",
-        "button_text": "Quiz 3/3 ➔"
-      }
+      "navigation": { "next": "card_64_quiz1_m8", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_56_separation_quiz_3",
-      "card_slug": "card_56_separation_quiz_3",
+      "card_id": "card_64_quiz1_m8",
+      "card_slug": "card_64_quiz1_m8",
       "type": "quiz",
-      "concept_id": "separation_test_3",
-      "level": 5,
-      "progress": {
-        "current": 56,
-        "total": 72
-      },
+      "concept_id": "suspension_colloid",
+      "level": 8,
+      "progress": { "current": 64, "total": 100 },
       "quiz_payload": {
-        "question": "Centrifugation is used to separate: (NEET 2020, BPSC TRE 2021)",
+        "question": "Colloid ke particle ka size range kya hota hai?",
         "options": [
-          {"id": "A", "text": "Miscible liquids (मिश्रणीय द्रव)"},
-          {"id": "B", "text": "Fine suspended particles from liquid"},
-          {"id": "C", "text": "Dissolved solids from liquid"},
-          {"id": "D", "text": "Colored components"}
+          { "id": "A", "text": "1 nanometer se kam" },
+          { "id": "B", "text": "1 se 1000 nanometer ke beech" },
+          { "id": "C", "text": "1000 nanometer se zyaादa" },
+          { "id": "D", "text": "Iska koई size nahi hota" }
         ],
         "correct_option_id": "B",
-        "explanation": "CENTRIFUGATION fine SUSPENDED PARTICLES को liquid से separate करने के लिए use होती है। Rapid rotation से dense particles settle हो जाते हैं (sediment) और liquid ऊपर रहता है (supernatant)। Examples: Blood components separation, milk cream, urine test। Miscible liquids के लिए distillation, dissolved solids के लिए evaporation use होता है। ⭐ NEET/BPSC TRE में application-based!"
+        "explanation": "Colloid ke particle ka size 1 se 1000 nanometer ke beech hota hai - Solution se bada aur Suspension se chhoटा."
       },
-      "navigation": {
-        "next": "card_57_milestone_separation",
-        "button_text": "Module Complete ➔"
-      }
+      "navigation": { "next": "card_65_quiz2_m8", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_57_milestone_separation",
-      "card_slug": "card_57_milestone_separation",
-      "type": "milestone",
-      "concept_id": "separation_complete",
-      "level": 5,
-      "progress": {
-        "current": 57,
-        "total": 72
+      "card_id": "card_65_quiz2_m8",
+      "card_slug": "card_65_quiz2_m8",
+      "type": "quiz",
+      "concept_id": "suspension_colloid",
+      "level": 8,
+      "progress": { "current": 65, "total": 100 },
+      "quiz_payload": {
+        "question": "Particles ki continuous zig-zag motion, jo colloid ko settle honे se rokती hai, use kya kaहते hain?",
+        "options": [
+          { "id": "A", "text": "Tyndall Effect" },
+          { "id": "B", "text": "Brownian Movement" },
+          { "id": "C", "text": "Diffusion" },
+          { "id": "D", "text": "Evaporation" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Brownian Movement (zig-zag random motion) colloid ke particles ko dispersion medium ke molecules se lagatार takराне ki wajah se hoती hai, jo unhe settle honе se rokती hai."
       },
+      "navigation": { "next": "card_66_quiz3_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_66_quiz3_m8",
+      "card_slug": "card_66_quiz3_m8",
+      "type": "quiz",
+      "concept_id": "suspension_colloid",
+      "level": 8,
+      "progress": { "current": 66, "total": 100 },
+      "quiz_payload": {
+        "question": "Suspension ko Solution se ALAG karने wali sabसे pakकी pehchaan kya hai?",
+        "options": [
+          { "id": "A", "text": "Suspension khadа rehне par settle ho jaाता hai aur filter se separate ho sakта hai" },
+          { "id": "B", "text": "Suspension ka rang hamesha safed hota hai" },
+          { "id": "C", "text": "Solution hamesha thanda hota hai" },
+          { "id": "D", "text": "Suspension hamesha gas hota hai" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Suspension ke bade particles khadे rehне par NEECHE baith jaते hain aur filter paper se aasानी se separate ho jaते hain - jo True Solution mein kabhi nahi hota."
+      },
+      "navigation": { "next": "card_67_milestone_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_67_milestone_m8",
+      "card_slug": "card_67_milestone_m8",
+      "type": "milestone",
+      "concept_id": "suspension_colloid",
+      "level": 8,
+      "progress": { "current": 67, "total": 100 },
       "milestone_payload": {
-        "title": "🔬 MODULE 5 SEPARATED!",
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌫️",
+        "completed_topic": "Suspension & Colloid",
+        "xp_earned": 65,
+        "milestone_progress": "Module 8/12 Clear",
+        "motivational_quote": "Tyndall Effect ka raaz khुल gaya! Ab Physical aur Chemical Change ka farak seekhते hain!"
+      },
+      "navigation": { "next": "card_68_physical_change", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_68_physical_change",
+      "card_slug": "card_68_physical_change",
+      "type": "chat",
+      "concept_id": "physical_chemical_change",
+      "level": 9,
+      "progress": { "current": 68, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhते hain matter mein hoने wale badalाव (changes) kis type ke hote hain. Jab kisी padaarth ka SIRF SHAPE, SIZE, YA STATE badalता hai, lekin uska CHEMICAL COMPOSITION (rachна) bilkul WAISी hi rehती hai, koई NAYA padaarth NAHI banта - use PHYSICAL CHANGE kehते hain. Jaise: barf pighalна, kaागaz phaडना, chini paани mein ghुलна - ye sab AASAानी se ULTA (reverse) bhi kiya ja sakta hai." },
+        { "speaker": "raju", "text": "Achha! Toh barf agar wapas pighal kar paani banी, aur wo paani wapas jamा kar barf ban sakti hai, isliye ye reversible physical change hai?" }
+      ],
+      "navigation": { "next": "card_69_chemical_change", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_69_chemical_change",
+      "card_slug": "card_69_chemical_change",
+      "type": "chat",
+      "concept_id": "physical_chemical_change",
+      "level": 9,
+      "progress": { "current": 69, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab dusra type dekho - CHEMICAL CHANGE, jismein ek ya zyaादa BILKUL NAYE padaarth ban jaते hain jinके properties MOOL (original) padaarth se ALAG hote hain. Jaise: kaागaz jalна (rakh aur gas banта hai), lohे mein jang (rust) lagna, doodh ka khaट्टा honा. Ye zyaादaतар PERMANENT hote hain aur WAAPAS (reverse) karна aasan nahi hota." },
+        { "speaker": "raju", "text": "Achha, matlab jala huआ kaागaz wapas kaागaz nahi ban sakта, isीliye ye chemical change hai jo permanent hota hai?" }
+      ],
+      "navigation": { "next": "card_70_evidence_chemical", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_70_evidence_chemical",
+      "card_slug": "card_70_evidence_chemical",
+      "type": "chat",
+      "concept_id": "physical_chemical_change",
+      "level": 9,
+      "progress": { "current": 70, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Sahi pakड़ा! Ab dekhते hain kaise pata chalе ki chemical change ho raha hai - PAANCH clues yaad rakho: 1) GAS nikалना (bubbles), 2) RANG (colour) badalна, 3) TEMPERATURE badalна (garam ya thanda honा), 4) NAYA THHOS (precipitate) banна, 5) SMELL (gandh) badalна. Jaise-jaise koई bhi ek clue dikhे, samझ jaana ki chemical change ho raha hai!" },
+        { "speaker": "raju", "text": "Achha! Toh agar khaana pakाते waqt ande ka rang aur texture badal jaata hai, wo bhi chemical change hai - ab in 5 clues se pehचानना aasan ho gaya!" }
+      ],
+      "navigation": { "next": "card_71_guess_m9", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_71_guess_m9",
+      "card_slug": "card_71_guess_m9",
+      "type": "guess",
+      "concept_id": "physical_chemical_change",
+      "level": 9,
+      "progress": { "current": 71, "total": 100 },
+      "guess_payload": {
+        "question": "Guess karo - Lohे (iron) mein JANG (rust) lagна kaunसा change hai?",
+        "options": [
+          { "id": "A", "text": "Physical Change" },
+          { "id": "B", "text": "Chemical Change" },
+          { "id": "C", "text": "Dono nahi" },
+          { "id": "D", "text": "Sublimation" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Jang lagна ek Chemical Change hai - Iron, Oxygen aur nami (moisture) ke saath reaction karके Iron Oxide (jang) banта hai, jo bilkul NAYA padaarth hai jiske properties Iron se ALAG hain."
+      },
+      "navigation": { "next": "card_72_quiz1_m9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_72_quiz1_m9",
+      "card_slug": "card_72_quiz1_m9",
+      "type": "quiz",
+      "concept_id": "physical_chemical_change",
+      "level": 9,
+      "progress": { "current": 72, "total": 100 },
+      "quiz_payload": {
+        "question": "Physical Change ki sबसे pakकी pehchaan kya hai?",
+        "options": [
+          { "id": "A", "text": "Naya padaarth banта hai" },
+          { "id": "B", "text": "Koई naya padaarth nahi banта, sirf shape/size/state badalता hai" },
+          { "id": "C", "text": "Hamesha gas nikalती hai" },
+          { "id": "D", "text": "Hamesha rang badalta hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Physical Change mein koई NAYA padaarth NAHI banта, sirf padaarth ka shape, size, ya state badalता hai aur composition wahi rehта hai."
+      },
+      "navigation": { "next": "card_73_quiz2_m9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_73_quiz2_m9",
+      "card_slug": "card_73_quiz2_m9",
+      "type": "quiz",
+      "concept_id": "physical_chemical_change",
+      "level": 9,
+      "progress": { "current": 73, "total": 100 },
+      "quiz_payload": {
+        "question": "In mein se kaunसा CHEMICAL CHANGE ka evidence NAHI hai?",
+        "options": [
+          { "id": "A", "text": "Gas nikalna" },
+          { "id": "B", "text": "Rang badalна" },
+          { "id": "C", "text": "Padaarth ka sirf shape badalна (jaise kaागaz phaडna)" },
+          { "id": "D", "text": "Precipitate (thhos) banna" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Sirf shape badalna Physical Change ka evidence hai, Chemical Change ka nahi. Chemical change ke evidence hain - gas nikalna, rang badalna, temperature badalna, aur precipitate banna."
+      },
+      "navigation": { "next": "card_74_quiz3_m9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_74_quiz3_m9",
+      "card_slug": "card_74_quiz3_m9",
+      "type": "quiz",
+      "concept_id": "physical_chemical_change",
+      "level": 9,
+      "progress": { "current": 74, "total": 100 },
+      "quiz_payload": {
+        "question": "⭐ BPSC Trap: Kya har Chemical Change PERMANENT (irreversible) hoना ZAROORI hai?",
+        "options": [
+          { "id": "A", "text": "Haan, hamesha permanent hota hai" },
+          { "id": "B", "text": "Nahi, zyaादaтар permanent hote hain lekin reversibility hi ek chemical change ko define nahi karti - main criterion naya padaarth banna hai" },
+          { "id": "C", "text": "Chemical change kabhi permanent nahi hota" },
+          { "id": "D", "text": "Sirf Physical change permanent hota hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Zyaादaтар Chemical Changes permanent/irreversible hote hain, lekin asli defining criterion ye hai ki NAYA padaarth naye properties ke saath banта hai - reversibility ek sath cheene wala factor nahi hai. Ye BPSC ka conceptual trap hai."
+      },
+      "navigation": { "next": "card_75_milestone_m9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_75_milestone_m9",
+      "card_slug": "card_75_milestone_m9",
+      "type": "milestone",
+      "concept_id": "physical_chemical_change",
+      "level": 9,
+      "progress": { "current": 75, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚗️",
+        "completed_topic": "Physical vs Chemical Change",
+        "xp_earned": 60,
+        "milestone_progress": "Module 9/12 Clear",
+        "motivational_quote": "Change ka farak clear ho gaya! Ab dekhते hain mixtures ko kaise separate karте hain!"
+      },
+      "navigation": { "next": "card_76_filtration_evaporation", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_76_filtration_evaporation",
+      "card_slug": "card_76_filtration_evaporation",
+      "type": "chat",
+      "concept_id": "separation_techniques",
+      "level": 10,
+      "progress": { "current": 76, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhते hain mixtures ko unке ghatकों (components) mein kaise ALAG karте hain. Agar mixture mein ek THHOS (insoluble solid) aur ek LIQUID ho, jaise baलू aur paani, toh FILTRATION use karте hain (chhalni/filter paper se chhaanना). Agar solid PAANI mein GHULA hua ho, jaise namak-paani, toh EVAPORATION use karte hain - paani ko udा kar solid ko bacaते hain. Aur CRYSTALLIZATION mein controlled tarike se pure crystals banaये jaते hain (jaise phitkारी/alum purify karна) jo heat-sensitive substances ke liye behtar hai." },
+        { "speaker": "raju", "text": "Achha, toh agar cheez ghुली hui hai toh evaporation, aur agar ghुली nahi hai toh sirf filter karна hoगा - ye toh logical lagता hai!" }
+      ],
+      "navigation": { "next": "card_77_distillation", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_77_distillation",
+      "card_slug": "card_77_distillation",
+      "type": "chat",
+      "concept_id": "separation_techniques",
+      "level": 10,
+      "progress": { "current": 77, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab agar do LIQUIDS mile hue hon jo ek-doosre mein GHUL jaте hain (miscible), jaise alcohol-paani, toh DISTILLATION use karte hain - alag-alag boiling point ki wajah se ek liquid pehle vapour bankар udती hai aur alag ho jaाती hai. Agar teen ya zyaादa liquids ho (jaise crude oil), toh FRACTIONAL DISTILLATION use karte hain jismein FRACTIONATING COLUMN lagाया jaata hai. Aur agar do LIQUIDS aapस mein GHULते NAHI hain (immiscible, jaise tel-paani), toh SEPARATING FUNNEL use karte hain - density farak ki wajah se dono alag layer mein baaट jaте hain." },
+        { "speaker": "raju", "text": "Achha! Toh agar liquids mixए ho jaते hain toh distillation, aur agar mix nahi hote (jaise tel-paani) toh separating funnel - iska matlab pehле dekhна paडेga ki liquids mix hote hain ya nahi?" }
+      ],
+      "navigation": { "next": "card_78_chromatography_centrifugation", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_78_chromatography_centrifugation",
+      "card_slug": "card_78_chromatography_centrifugation",
+      "type": "chat",
+      "concept_id": "separation_techniques",
+      "level": 10,
+      "progress": { "current": 78, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Do aur important techniques suno - CHROMATOGRAPHY (jaise ink ke alag-alag rangों ko paani ke saath filter paper par alag karна) - ye alag-alag padaarthon ki alag GHULने ki dar (solubility) par based hai. CENTRIFUGATION mein mixture ko TEZI se GHUMAया jaata hai jisसे BHARI (heavy) particles neeche baith jaते hain aur halके particles upar reh jaते hain - jaise doodh se cream ALAG karна, ya blood test labs mein." },
+        { "speaker": "raju", "text": "Achha, chromatography se toh maine school mein ink ke rang alag kiye the! Aur centrifugation blood test mein use hota hai - ye toh naya connect ho gaya!" }
+      ],
+      "navigation": { "next": "card_79_magnetic_winnowing", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_79_magnetic_winnowing",
+      "card_slug": "card_79_magnetic_winnowing",
+      "type": "chat",
+      "concept_id": "separation_techniques",
+      "level": 10,
+      "progress": { "current": 79, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab do aakhri traditional methods dekhо, jo Bihar ke gaाँवों mein aaм hain. MAGNETIC SEPARATION - jab mixture mein loहे jaisा magnetic padaarth ho, chumbак (magnet) se seedhे khींch liya jaता hai. WINNOWING (osana) - Bihar ke kisaан dhan (paddy) ya gehूँ ko bhूसे (chaff/husk) se alag karने ke liye hawa ka istemal karte hain - halка bhूsa hawa mein udке door chala jaाता hai, bhaаरी daाने seedhे neeche gir jaते hain." },
+        { "speaker": "raju", "text": "Achha sir! Ye toh maine apने gaाँव mein dekha hai - dादी winnowing tokri se anaाज osाती hain! Ab pata chala isका scientific naam winnowing hai!" }
+      ],
+      "navigation": { "next": "card_80_guess_m10", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_80_guess_m10",
+      "card_slug": "card_80_guess_m10",
+      "type": "guess",
+      "concept_id": "separation_techniques",
+      "level": 10,
+      "progress": { "current": 80, "total": 100 },
+      "guess_payload": {
+        "question": "Guess karo - Crude oil (petroleum) se Petrol, Diesel, aur Kerosene ko alag karने ke liye kaunसी technique use hoती hai?",
+        "options": [
+          { "id": "A", "text": "Simple Filtration" },
+          { "id": "B", "text": "Fractional Distillation" },
+          { "id": "C", "text": "Winnowing" },
+          { "id": "D", "text": "Magnetic Separation" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Crude oil mein kaई miscible liquids hote hain jinके boiling points alag-alag hote hain, isliye unhe alag karने ke liye Fractional Distillation (fractionating column ke saath) use hoती hai - ye petroleum refinery ka core process hai."
+      },
+      "navigation": { "next": "card_81_quiz1_m10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_81_quiz1_m10",
+      "card_slug": "card_81_quiz1_m10",
+      "type": "quiz",
+      "concept_id": "separation_techniques",
+      "level": 10,
+      "progress": { "current": 81, "total": 100 },
+      "quiz_payload": {
+        "question": "Doodh se cream (malाई) ALAG karने ke liye kaunसी technique use hoती hai?",
+        "options": [
+          { "id": "A", "text": "Filtration" },
+          { "id": "B", "text": "Centrifugation" },
+          { "id": "C", "text": "Sublimation" },
+          { "id": "D", "text": "Chromatography" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Centrifugation mein high speed rotation se density ke aधार par components alag ho jaते hain, isीliye doodh se cream (jo halkी hoती hai) alag karने mein use hoता hai."
+      },
+      "navigation": { "next": "card_82_quiz2_m10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_82_quiz2_m10",
+      "card_slug": "card_82_quiz2_m10",
+      "type": "quiz",
+      "concept_id": "separation_techniques",
+      "level": 10,
+      "progress": { "current": 82, "total": 100 },
+      "quiz_payload": {
+        "question": "Tel aur Paani (immiscible liquids) ko alag karने ke liye kaunसী technique sahi hai?",
+        "options": [
+          { "id": "A", "text": "Distillation" },
+          { "id": "B", "text": "Separating Funnel" },
+          { "id": "C", "text": "Chromatography" },
+          { "id": "D", "text": "Crystallization" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Immiscible liquids (jo aapस mein nahi ghुलте, jaise tel-paani) ko Separating Funnel se density ke aधार par alag layers mein baाटkar separate kiya jaता hai."
+      },
+      "navigation": { "next": "card_83_quiz3_m10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_83_quiz3_m10",
+      "card_slug": "card_83_quiz3_m10",
+      "type": "quiz",
+      "concept_id": "separation_techniques",
+      "level": 10,
+      "progress": { "current": 83, "total": 100 },
+      "quiz_payload": {
+        "question": "Winnowing (osana) kis principle par kaам karता hai?",
+        "options": [
+          { "id": "A", "text": "Boiling point ke farak par" },
+          { "id": "B", "text": "Bhaаरी aur halके particles ko hawa ki madad se alag karne par" },
+          { "id": "C", "text": "Magnetic property par" },
+          { "id": "D", "text": "Solubility ke farak par" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Winnowing mein hawa ka istemal karके halके bhूsे (chaff) ko bhaаरী daанों se alag kiya jaाता hai - ye density/weight ke farak par based hai."
+      },
+      "navigation": { "next": "card_84_milestone_m10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_84_milestone_m10",
+      "card_slug": "card_84_milestone_m10",
+      "type": "milestone",
+      "concept_id": "separation_techniques",
+      "level": 10,
+      "progress": { "current": 84, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
         "badge_emoji": "🧫",
         "completed_topic": "Separation Techniques",
-        "xp_earned": 80,
-        "milestone_progress": "Module 5/6 Complete",
-        "motivational_quote": "Filtration से Chromatography तक सब methods master! अब final Officer revision aur Boss Quiz! 🏆"
+        "xp_earned": 65,
+        "milestone_progress": "Module 10/12 Clear",
+        "motivational_quote": "Sabhi separation methods clear! Ab Chemistry ke sबसे fundamental Laws seekhते hain!"
       },
-      "navigation": {
-        "next": "card_58_physical_chemical_changes",
-        "button_text": "Physical vs Chemical ➔"
-      }
+      "navigation": { "next": "card_85_conservation_mass", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_58_physical_chemical_changes",
-      "card_slug": "card_58_physical_chemical_changes",
+      "card_id": "card_85_conservation_mass",
+      "card_slug": "card_85_conservation_mass",
       "type": "chat",
-      "concept_id": "physical_chemical_changes_intro",
-      "level": 6,
-      "progress": {
-        "current": 58,
-        "total": 72
-      },
+      "concept_id": "laws_chemical_combination",
+      "level": 11,
+      "progress": { "current": 85, "total": 100 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Last important concept: PHYSICAL vs CHEMICAL CHANGES। जब matter में कोई change होता है, to do possibilities: (1) सिर्फ form/state बदले - PHYSICAL, (2) chemical nature ही बदल जाए - CHEMICAL। Difference समझना crucial है!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Form बदलना matlab?"
-        },
-        {
-          "speaker": "aman",
-          "text": "PHYSICAL CHANGE: State, shape, size बदल सकते हैं पर SUBSTANCE वही रहता है, chemical composition नहीं बदलता। Example: Ice melting → water (H₂O ही है), paper tearing, sugar dissolving। Reversible हो सकते hैं generally। No new substance formed!"
-        },
-        {
-          "speaker": "raju",
-          "text": "To chemical change mein new substance banta hai?"
-        }
+        { "speaker": "aman", "text": "Ab dekhते hain Chemistry ka SबSE FUNDAMENTAL law. French scientist ANTOINE LAVOISIER ने 1789 mein diya - LAW OF CONSERVATION OF MASS: 'Ek chemical reaction mein MASS ko na toh banaаya ja sakта hai, na hi toड़ा ja sakта hai.' Matlab reaction shuru honे se pehле REACTANTS ka total mass aur reaction ke baad PRODUCTS ka total mass HAMESHA SAME rehта hai." },
+        { "speaker": "raju", "text": "Achha! Toh jab kaागaz jalता hai aur usка weight kam lagता hai, toh mass kahaan gaya? Ye toh law ke ULTA lag raha hai!" }
       ],
-      "navigation": {
-        "next": "card_59_chemical_changes",
-        "button_text": "Chemical Changes ➔"
-      }
+      "navigation": { "next": "card_86_constant_proportion", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_59_chemical_changes",
-      "card_slug": "card_59_chemical_changes",
+      "card_id": "card_86_constant_proportion",
+      "card_slug": "card_86_constant_proportion",
       "type": "chat",
-      "concept_id": "chemical_changes_detail",
-      "level": 6,
-      "progress": {
-        "current": 59,
-        "total": 72
-      },
+      "concept_id": "laws_chemical_combination",
+      "level": 11,
+      "progress": { "current": 86, "total": 100 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Exactly! CHEMICAL CHANGE: Chemical composition बदल जाता है, NEW SUBSTANCE बनता है with different properties। Usually irreversible। Examples: Burning (wood→ash+CO₂), rusting (Fe→Fe₂O₃), cooking egg, digestion, photosynthesis। Chemical bonds तोड़ते/बनते हैं!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Burning के बाद ash को वापस wood नहीं बना सकते - irreversible!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Identification tricks: CHEMICAL CHANGE indicators - (1) Color change, (2) Gas formation (bubbles), (3) Temperature change (heat release/absorb), (4) Precipitate formation, (5) Irreversible। BPSC में tricky examples देकर पूछते हैं!"
-        },
-        {
-          "speaker": "raju",
-          "text": "To dissolving sugar physical hai par burning chemical?"
-        }
+        { "speaker": "aman", "text": "Achha sawaal! Kaагaz jalne par jo GAS (CO2, water vapour) hawa mein niकल jaाती hai, uska mass bhi jodो toh total mass SAME hi milegा - kyunki wo gas bhi 'apने saath mass leке gaई hai', gaayaब nahi हुई! Ab dusra important law suno - Frenchman JOSEPH PROUST ने diya LAW OF CONSTANT (DEFINITE) PROPORTIONS: 'Ek shudh (pure) compound mein uske elements HAMESHA EK FIXED RATIO (mass ke hisaab se) mein hi combine hote hain', chahe compound kaहीं se bhi banाया gaya ho. Jaise paani (H2O) mein Hydrogen:Oxygen ka ratio HAMESHA 1:8 (mass ke hisaab se) rehта hai." },
+        { "speaker": "raju", "text": "Achhaaaa! Toh jala hua kaागaz visible toh nahi hai, lekin gas ban ke ud gaya - isीliye scale par kam lagता hai, lekin mass toh conserve hi hua! Aur paani chahe Ganga ka ho ya nal ka, uska Hydrogen-Oxygen ratio hamesha same rahega?" }
       ],
-      "navigation": {
-        "next": "card_60_tricky_examples",
-        "button_text": "Tricky Cases ➔"
-      }
+      "navigation": { "next": "card_87_dalton_theory", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_60_tricky_examples",
-      "card_slug": "card_60_tricky_examples",
+      "card_id": "card_87_dalton_theory",
+      "card_slug": "card_87_dalton_theory",
       "type": "chat",
-      "concept_id": "physical_chemical_tricky",
-      "level": 6,
-      "progress": {
-        "current": 60,
-        "total": 72
-      },
+      "concept_id": "laws_chemical_combination",
+      "level": 11,
+      "progress": { "current": 87, "total": 100 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Tricky cases याद रखो: (1) Dissolving sugar/salt - PHYSICAL (reverse by evaporation, sugar वही है)। (2) Burning paper - CHEMICAL (ash बना, irreversible)। (3) Boiling water - PHYSICAL (H₂O→H₂O vapor)। (4) Electrolysis of water - CHEMICAL (H₂O→H₂+O₂, नई gases)!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaa... boiling physical पर electrolysis chemical! Same water पर process अलग!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Excellent observation! ⭐ BPSC TRE Favorite trap: 'Boiling of water is a physical change but electrolysis is chemical' - दोनों statements TRUE! Yaad rakho: Physical = state/form change only। Chemical = new substance बनना। Last module complete - ab Officer revision!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Ready for revision Sir!"
-        }
+        { "speaker": "aman", "text": "Bilkul sahi! ⭐ Ab in sabhi laws ko explain karने ke liye JOHN DALTON ने 1808 mein ATOMIC THEORY di, jiske MUKHYA postulates hain: 1) Matter chhoटे-chhoटे ATOMS se bana hota hai jo aur nahi toडे ja sakte, 2) Ek hi element ke saarे atoms IDENTICAL hote hain (mass, size mein same), 3) Alag-alag elements ke atoms alag hote hain, 4) Atoms SIMPLE WHOLE NUMBER RATIO mein combine hote hain compound banaне ke liye, 5) Atoms na toh banाये ja sakte hain, na TODे ja sakte hain. LIMITATION: Ab hum jaante hain ki atom aur bhi chhoटे electron-proton-neutron se bana hota hai, isliye 'atom indivisible hai' wala postulate 100% sahi nahi hai." },
+        { "speaker": "raju", "text": "Ye to exam me pakka confuse karega sir! Toh Dalton ne kaha atom sबसे chhoटा hai jo tुट nahi sakta, lekin baаद mein pata chala usके andar bhi kुछ hota hai - matlab uski theory PARTIALLY galat nikली?" }
       ],
-      "navigation": {
-        "next": "card_61_physical_chemical_quiz_1",
-        "button_text": "Quiz 1/3 ➔"
-      }
+      "navigation": { "next": "card_88_guess_m11", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_61_physical_chemical_quiz_1",
-      "card_slug": "card_61_physical_chemical_quiz_1",
-      "type": "quiz",
-      "concept_id": "changes_test_1",
-      "level": 6,
-      "progress": {
-        "current": 61,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Which of the following is a CHEMICAL change? (SSC CGL 2021, BPSC 2020)",
+      "card_id": "card_88_guess_m11",
+      "card_slug": "card_88_guess_m11",
+      "type": "guess",
+      "concept_id": "laws_chemical_combination",
+      "level": 11,
+      "progress": { "current": 88, "total": 100 },
+      "guess_payload": {
+        "question": "Guess karo - agar 18 gram paani (H2O) banаने mein 2 gram Hydrogen use hua, toh Oxygen कितना use हुआ hoगा? (Law of Conservation of Mass use karके socho)",
         "options": [
-          {"id": "A", "text": "Melting of ice (बर्फ का पिघलना)"},
-          {"id": "B", "text": "Dissolving sugar in water"},
-          {"id": "C", "text": "Burning of wood (लकड़ी का जलना)"},
-          {"id": "D", "text": "Boiling of water"}
+          { "id": "A", "text": "8 gram" },
+          { "id": "B", "text": "16 gram" },
+          { "id": "C", "text": "20 gram" },
+          { "id": "D", "text": "2 gram" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Total mass conserve hoна chahiye: 18g (paani) = Hydrogen + Oxygen. Agar Hydrogen 2g hai, toh Oxygen = 18 - 2 = 16 gram hoगा. Ye Law of Conservation of Mass ka direct application hai."
+      },
+      "navigation": { "next": "card_89_quiz1_m11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_89_quiz1_m11",
+      "card_slug": "card_89_quiz1_m11",
+      "type": "quiz",
+      "concept_id": "laws_chemical_combination",
+      "level": 11,
+      "progress": { "current": 89, "total": 100 },
+      "quiz_payload": {
+        "question": "Law of Conservation of Mass kis scientist ne diya tha?",
+        "options": [
+          { "id": "A", "text": "John Dalton" },
+          { "id": "B", "text": "Antoine Lavoisier" },
+          { "id": "C", "text": "Joseph Proust" },
+          { "id": "D", "text": "Amedeo Avogadro" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Antoine Lavoisier (French scientist) ने 1789 mein Law of Conservation of Mass diya tha - mass na banाया ja sakта hai na toड़ा ja sakта hai."
+      },
+      "navigation": { "next": "card_90_quiz2_m11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_90_quiz2_m11",
+      "card_slug": "card_90_quiz2_m11",
+      "type": "quiz",
+      "concept_id": "laws_chemical_combination",
+      "level": 11,
+      "progress": { "current": 90, "total": 100 },
+      "quiz_payload": {
+        "question": "⭐ BPSC Trap: Dalton ke Atomic Theory ke postulates mein se kaunसा AAJ ki modern science ke हिसाब se PURI TARAH sahi NAHI hai?",
+        "options": [
+          { "id": "A", "text": "Matter atoms se bana hai" },
+          { "id": "B", "text": "Atom indivisible hai (aur nahi toडा ja sakta)" },
+          { "id": "C", "text": "Alag elements ke atoms alag hote hain" },
+          { "id": "D", "text": "Atoms simple ratio mein combine hote hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Dalton ne kaha tha atom indivisible hai, lekin baаद mein electron (J.J. Thomson), proton, aur neutron ki khoज ने sabit kiya ki atom aur bhi chhoटे particles mein toडा ja sakta hai. Ye Dalton's theory ki main limitation hai."
+      },
+      "navigation": { "next": "card_91_quiz3_m11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_91_quiz3_m11",
+      "card_slug": "card_91_quiz3_m11",
+      "type": "quiz",
+      "concept_id": "laws_chemical_combination",
+      "level": 11,
+      "progress": { "current": 91, "total": 100 },
+      "quiz_payload": {
+        "question": "Law of Constant Proportions ke anुसार, agar Bihar mein banी paani ka sample aur USA mein banी paani ka sample lें, unmein Hydrogen:Oxygen ka mass ratio kaisा hoगा?",
+        "options": [
+          { "id": "A", "text": "Alag-alag hoगा" },
+          { "id": "B", "text": "Hamesha SAME hoगा (1:8)" },
+          { "id": "C", "text": "Sirf temperature par depend karегा" },
+          { "id": "D", "text": "Kabhi predict nahi kiya ja sakта" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Law of Constant Proportions ke anुसार, kisी bhi shudh compound mein elements ka mass ratio HAMESHA FIXED rehта hai, chahe wo compound duniya mein kahीं bhi ya kisी bhi tarike se banाya gaya ho।"
+      },
+      "navigation": { "next": "card_92_milestone_m11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_92_milestone_m11",
+      "card_slug": "card_92_milestone_m11",
+      "type": "milestone",
+      "concept_id": "laws_chemical_combination",
+      "level": 11,
+      "progress": { "current": 92, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Laws of Chemical Combination & Dalton's Theory",
+        "xp_earned": 70,
+        "milestone_progress": "Module 11/12 Clear",
+        "motivational_quote": "Fundamental laws master ho gaये! Ab last module - Mole Concept aur Gas Laws!"
+      },
+      "navigation": { "next": "card_93_atomic_mass", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_93_atomic_mass",
+      "card_slug": "card_93_atomic_mass",
+      "type": "chat",
+      "concept_id": "mole_concept_gas_laws",
+      "level": 12,
+      "progress": { "current": 93, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhते hain atom ka mass kaise measure karte hain - kyunki atom itна chhoटा hai ki usе kilogram mein weigh nahi kar sakte! Isliye ek REFERENCE fix kiya gaya - CARBON-12 atom ke mass ke 1/12th hisसे ko '1 ATOMIC MASS UNIT (amu ya u)' maана gaya. Ab har element ka RELATIVE ATOMIC MASS isी reference ke aधार par batाया jaता hai (jaise Hydrogen = 1u, Oxygen = 16u). Molecular mass sirf sabhi atomic masses ka JOD hota hai." },
+        { "speaker": "raju", "text": "Achha! Toh Carbon-12 ko ek 'scale' ki tarह use kiya gaya baाकी elements ka mass naapने ke liye - ab samझ mein aaya 'u' kya hota hai!" }
+      ],
+      "navigation": { "next": "card_94_mole_concept", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_94_mole_concept",
+      "card_slug": "card_94_mole_concept",
+      "type": "chat",
+      "concept_id": "mole_concept_gas_laws",
+      "level": 12,
+      "progress": { "current": 94, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab MOLE samझते hain. Jaisе '1 dozen' matlab 12 cheezें hoती hain, waisे hi Chemistry mein '1 MOLE' matlab ek FIXED, HUGE number of particles hoते hain, jise AVOGADRO NUMBER kehते hain = 6.022 × 10²³. Ye number Italian scientist AMEDEO AVOGADRO ke naam par rakha gaya hai. MOLAR MASS matlab hai 1 mole padaarth ka mass gram mein - jaise 1 mole Carbon (C) ka molar mass 12 gram hota hai." },
+        { "speaker": "raju", "text": "Wah! 6.022 × 10²³ - itна bada number! Aisा kyun rakha gaya, ye toh gिनना bhi possible nahi hai!" }
+      ],
+      "navigation": { "next": "card_95_gas_laws", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_95_gas_laws",
+      "card_slug": "card_95_gas_laws",
+      "type": "chat",
+      "concept_id": "mole_concept_gas_laws",
+      "level": 12,
+      "progress": { "current": 95, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Sahi socha, itна bada number isीliye rakha gaya ताки atoms ki गिनती EASY numbers (jaise 12 gram) ke bराबर ho jaye. Ab GAS LAWS dekho: BOYLE'S LAW - fixed temperature par, Gas ka PRESSURE aur VOLUME ULTे (inversely) proportional hote hain (P badhे toh V ghaटे). CHARLES'S LAW - fixed pressure par, Gas ka VOLUME TEMPERATURE ke SEEDHे (directly) proportional hota hai. Dono ko milaकर IDEAL GAS EQUATION banती hai: PV = nRT, jahaan R ek constant hai." },
+        { "speaker": "raju", "text": "Achha! Toh Boyle's mein pressure aur volume ULTे (inverse) relation mein hain, aur Charles's mein volume aur temperature SEEDHे (direct) relation mein - ye toh yaad rakhने layak formula hai!" }
+      ],
+      "navigation": { "next": "card_96_guess_m12", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_96_guess_m12",
+      "card_slug": "card_96_guess_m12",
+      "type": "guess",
+      "concept_id": "mole_concept_gas_laws",
+      "level": 12,
+      "progress": { "current": 96, "total": 100 },
+      "guess_payload": {
+        "question": "Guess karo - Boyle's Law ke anुसार, agar ek gas ka Volume AADHA (half) kar diya jaye (temperature fixed rakhkar), toh Pressure ka kya hoगा?",
+        "options": [
+          { "id": "A", "text": "Pressure aadha ho jaayega" },
+          { "id": "B", "text": "Pressure DUGUNA (double) ho jaayega" },
+          { "id": "C", "text": "Pressure same rahegा" },
+          { "id": "D", "text": "Pressure zero ho jaayega" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Boyle's Law ke anुसार P aur V INVERSELY proportional hote hain (PV = constant). Agar V AADHA hota hai, toh P DUGUNA ho jaाeगा ताки product PV same rahe."
+      },
+      "navigation": { "next": "card_97_quiz1_m12", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_97_quiz1_m12",
+      "card_slug": "card_97_quiz1_m12",
+      "type": "quiz",
+      "concept_id": "mole_concept_gas_laws",
+      "level": 12,
+      "progress": { "current": 97, "total": 100 },
+      "quiz_payload": {
+        "question": "1 mole kisी bhi padaarth mein कितने particles hote hain (Avogadro Number)?",
+        "options": [
+          { "id": "A", "text": "6.022 × 10²²" },
+          { "id": "B", "text": "6.022 × 10²³" },
+          { "id": "C", "text": "3.011 × 10²³" },
+          { "id": "D", "text": "1.602 × 10¹⁹" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "1 mole mein 6.022 × 10²³ particles hote hain, jise Avogadro Number kehते hain - ye Amedeo Avogadro ke naam par rakha gaya hai. Ye SSC/NEET ka common speed-fact hai."
+      },
+      "navigation": { "next": "card_98_quiz2_m12", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_98_quiz2_m12",
+      "card_slug": "card_98_quiz2_m12",
+      "type": "quiz",
+      "concept_id": "mole_concept_gas_laws",
+      "level": 12,
+      "progress": { "current": 98, "total": 100 },
+      "quiz_payload": {
+        "question": "1 Atomic Mass Unit (u) kis element ke atom ke 1/12th mass ke barabar hota hai?",
+        "options": [
+          { "id": "A", "text": "Hydrogen-1" },
+          { "id": "B", "text": "Oxygen-16" },
+          { "id": "C", "text": "Carbon-12" },
+          { "id": "D", "text": "Nitrogen-14" }
         ],
         "correct_option_id": "C",
-        "explanation": "BURNING OF WOOD एक CHEMICAL CHANGE है क्योंकि new substances बनते हैं (ash, CO₂, H₂O vapor) और process irreversible है। Melting ice, dissolving sugar, boiling water सब PHYSICAL changes हैं - substance same रहता है, सिर्फ state/form बदलता है। Chemical change = new substance + usually irreversible। ⭐ SSC/BPSC का classic differentiation question!"
+        "explanation": "1 amu (u) Carbon-12 atom ke mass ke 1/12th hisसे ke barabar hota hai - ye reference IUPAC ने standardize kiya hai."
       },
-      "navigation": {
-        "next": "card_62_physical_chemical_quiz_2",
-        "button_text": "Quiz 2/3 ➔"
-      }
+      "navigation": { "next": "card_99_quiz3_m12", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_62_physical_chemical_quiz_2",
-      "card_slug": "card_62_physical_chemical_quiz_2",
+      "card_id": "card_99_quiz3_m12",
+      "card_slug": "card_99_quiz3_m12",
       "type": "quiz",
-      "concept_id": "changes_test_2",
-      "level": 6,
-      "progress": {
-        "current": 62,
-        "total": 72
-      },
+      "concept_id": "mole_concept_gas_laws",
+      "level": 12,
+      "progress": { "current": 99, "total": 100 },
       "quiz_payload": {
-        "question": "Electrolysis of water is: (Railway NTPC 2018, BPSC TRE 2019)",
+        "question": "Charles's Law ke anुसार fixed pressure par, Gas ke Volume aur Temperature mein kaisa relation hota hai?",
         "options": [
-          {"id": "A", "text": "Physical change (भौतिक परिवर्तन)"},
-          {"id": "B", "text": "Chemical change (रासायनिक परिवर्तन)"},
-          {"id": "C", "text": "Both physical and chemical"},
-          {"id": "D", "text": "Neither physical nor chemical"}
+          { "id": "A", "text": "Inversely proportional" },
+          { "id": "B", "text": "Directly proportional" },
+          { "id": "C", "text": "Koई relation nahi" },
+          { "id": "D", "text": "Volume ghatता hai temperature badhने par" }
         ],
         "correct_option_id": "B",
-        "explanation": "Electrolysis of water एक CHEMICAL CHANGE है क्योंकि H₂O break होकर नई substances बनती हैं - H₂ (hydrogen gas) और O₂ (oxygen gas)। Chemical composition बदल गया। Simple boiling PHYSICAL है (H₂O→H₂O vapor), पर electrolysis CHEMICAL। ⭐ Railway/BPSC TRE में यह trap question repeatedly आता है!"
+        "explanation": "Charles's Law ke anुसार fixed pressure par Volume aur Temperature DIRECTLY proportional hote hain - temperature badhne par gas ka volume bhi badhता hai."
       },
-      "navigation": {
-        "next": "card_63_physical_chemical_quiz_3",
-        "button_text": "Quiz 3/3 ➔"
-      }
+      "navigation": { "next": "card_100_milestone_m12", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_63_physical_chemical_quiz_3",
-      "card_slug": "card_63_physical_chemical_quiz_3",
-      "type": "quiz",
-      "concept_id": "changes_test_3",
-      "level": 6,
-      "progress": {
-        "current": 63,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Dissolving sugar in water is a: (BSSC 2019, SSC CHSL 2020)",
-        "options": [
-          {"id": "A", "text": "Chemical change"},
-          {"id": "B", "text": "Physical change"},
-          {"id": "C", "text": "Exothermic reaction"},
-          {"id": "D", "text": "Endothermic reaction"}
-        ],
-        "correct_option_id": "B",
-        "explanation": "Dissolving sugar in water एक PHYSICAL CHANGE है क्योंकि sugar का chemical composition नहीं बदलता (C₁₂H₂₂O₁₁ ही रहता है)। Water evaporate करके sugar वापस प्राप्त कर सकते हैं - reversible process। No new substance बनता है। यह chemical reaction नहीं है। ⭐ BSSC/SSC में dissolving vs reacting का difference पूछा जाता है!"
-      },
-      "navigation": {
-        "next": "card_64_milestone_changes",
-        "button_text": "Module Complete ➔"
-      }
-    },
-    {
-      "card_id": "card_64_milestone_changes",
-      "card_slug": "card_64_milestone_changes",
+      "card_id": "card_100_milestone_m12",
+      "card_slug": "card_100_milestone_m12",
       "type": "milestone",
-      "concept_id": "changes_complete",
-      "level": 6,
-      "progress": {
-        "current": 64,
-        "total": 72
-      },
+      "concept_id": "mole_concept_gas_laws",
+      "level": 12,
+      "progress": { "current": 100, "total": 100 },
       "milestone_payload": {
-        "title": "⚡ MODULE 6 MASTERED!",
-        "badge_emoji": "🔄",
-        "completed_topic": "Physical vs Chemical Changes",
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🧮",
+        "completed_topic": "Mole Concept, Atomic Mass & Gas Laws",
         "xp_earned": 70,
-        "milestone_progress": "Module 6/6 Complete - All Modules Done!",
-        "motivational_quote": "Physical और Chemical changes की पहचान master! अब Officer Revision और Final Boss Quiz! 🎯"
+        "milestone_progress": "Module 12/12 Clear",
+        "motivational_quote": "Shabaash! Poora chapter cover ho gaya! Ab final revision aur officer-level quiz ki taraf chalte hain!"
       },
-      "navigation": {
-        "next": "card_65_officer_revision",
-        "button_text": "Officer Revision ➔"
-      }
+      "navigation": { "next": "card_101_summary", "button_text": "Go to Final Revision ➔" }
     },
     {
-      "card_id": "card_65_officer_revision",
-      "card_slug": "card_65_officer_revision",
+      "card_id": "card_101_summary",
+      "card_slug": "card_101_summary",
       "type": "summary",
-      "concept_id": "matter_complete_revision",
-      "level": 6,
-      "progress": {
-        "current": 65,
-        "total": 72
-      },
+      "concept_id": "chapter_summary",
+      "level": 13,
+      "progress": { "current": 100, "total": 100 },
       "summary_payload": {
-        "title": "⚡ MATTER - Officer Lightning Revision",
+        "title": "⚡ Officer-Level Lightning Revision",
         "revision_points": [
           {
-            "topic": "Matter Definition & States Multi-Statement",
-            "point": "Matter = mass + volume. Light/Sound NOT matter (energy forms). States: Solid (definite shape+volume), Liquid (volume only), Gas (nothing fixed), Plasma (ionized, 4th state). ⭐ BPSC: 'All lustrous objects are metals' - FALSE (Iodine lustrous but non-metal)!"
+            "topic": "Particle Nature & States of Matter",
+            "point": "Statement I: Matter ke particles chhoटे hote hain, unके beech khaali jagah hoती hai, aur wo continuously move karte hain. Statement II: Force of attraction Solid mein sबसे zyaादा, Gas mein sबसे kam hoती hai, isीliye compressibility ka order Gas > Liquid > Solid hai. Dono statements sahi hain।"
           },
           {
-            "topic": "Particle Nature & Kinetic Theory",
-            "point": "Particles: always moving, spaces between them, intermolecular forces. Diffusion fastest in gases. Brownian Motion - Robert Brown (1827). Temperature ↑ → Kinetic Energy ↑ → Diffusion rate ↑. ⭐ SSC/Railway: Pop sound test = Hydrogen gas!"
+            "topic": "Latent Heat & 5 States of Matter",
+            "point": "Statement I: State change ke dauरान temperature constant rehта hai kyunki heat energy particles ko alag karने mein use hoती hai (Latent Heat). Statement II: Bose-Einstein Condensate (5th state) ko Satyendra Nath Bose aur Albert Einstein ने 1924-25 mein theoretically predict kiya tha. Dono statements sahi hain - ye BPSC TRE ka favorite fact hai।"
           },
           {
-            "topic": "State Changes & Latent Heat Assertion-Reason",
-            "point": "Melting/Freezing at 0°C (Latent heat fusion=334 J/g). Boiling at 100°C at 1 atm (Latent heat vaporization=2260 J/g). Pressure ↑ → BP ↑ (pressure cooker), Pressure ↓ → BP ↓ (hills). Sublimation: Camphor, Naphthalene, Dry Ice, Iodine. ⭐ NEET: Steam burns > boiling water!"
+            "topic": "Solution, Suspension & Colloid",
+            "point": "Statement I: True Solution ka particle size 1nm se kam hota hai aur Tyndall effect nahi dikhाता. Statement II: Colloid ka particle size 1-1000nm ke beech hota hai, Tyndall effect dikhाता hai, aur settle nahi hota. Dono statements sahi hain।"
           },
           {
-            "topic": "Classification Traps",
-            "point": "Element (one atom type), Compound (chemical bond, fixed ratio, new properties), Mixture (physical mix, any ratio). Air = Homogeneous Mixture (NOT compound). Tyndall Effect in Colloids (John Tyndall, 1869). Solution < Colloid < Suspension (particle size). ⭐ BPSC TRE: NaCl = Compound, Sea water = Mixture!"
+            "topic": "Physical/Chemical Change & Laws",
+            "point": "Statement I: Chemical Change mein naya padaarth banта hai jiske properties alag hote hain, jabki Physical Change mein sirf state/shape badalता hai. Statement II: Law of Conservation of Mass (Lavoisier) ke anुसार reaction mein mass na banाया ja sakта hai na toड़ा ja sakта hai. Dono statements sahi hain।"
           },
           {
-            "topic": "Separation & Changes",
-            "point": "Evaporation (solid from liquid-salt from sea water), Distillation (different BP-alcohol/water), Centrifugation (blood separation), Chromatography (colored components). Physical Change (state/form, reversible, same substance). Chemical (new substance, irreversible, indicators: color/gas/heat/precipitate). ⭐ Boiling=Physical, Electrolysis=Chemical!"
+            "topic": "Mole Concept & Gas Laws",
+            "point": "Statement I: 1 mole mein Avogadro Number (6.022×10²³) particles hote hain, jo Amedeo Avogadro ke naam par hai. Statement II: Boyle's Law mein P-V inversely proportional, Charles's Law mein V-T directly proportional hote hain. Dono statements sahi hain।"
           }
         ]
       },
-      "navigation": {
-        "next": "card_66_final_boss_quiz",
-        "button_text": "Take Final Boss Quiz 🏆 ➔"
-      }
+      "navigation": { "next": "card_102_final_quiz", "button_text": "Take Final Officer Quiz ➔" }
     },
     {
-      "card_id": "card_66_final_boss_quiz",
-      "card_slug": "card_66_final_boss_quiz",
+      "card_id": "card_102_final_quiz",
+      "card_slug": "card_102_final_quiz",
       "type": "final_quiz",
-      "concept_id": "matter_final_assessment",
-      "level": 6,
-      "progress": {
-        "current": 66,
-        "total": 72
-      },
+      "concept_id": "chapter_final_quiz",
+      "level": 13,
+      "progress": { "current": 100, "total": 100 },
       "quiz_payload": {
-        "question": "Consider the following statements about Matter (BPSC Pattern Multi-Statement):\n\n1. Light is a form of matter because it has energy.\n2. On hills, water boils below 100°C due to low atmospheric pressure.\n3. Tyndall effect is observed in true solutions.\n4. Air is a homogeneous mixture of gases.\n5. Dissolving salt in water is a chemical change.\n\nWhich of the above statements are CORRECT?",
+        "question": "Consider the following statements regarding Matter in Chemistry:\nStatement I: Camphor undergoes sublimation, converting directly from solid to gas without passing through the liquid state.\nStatement II: A colloid like milk settles down on standing and can be separated by ordinary filter paper, just like a suspension.\nStatement III: According to the Law of Constant Proportions given by Joseph Proust, a compound always has the same elements in the same ratio by mass, regardless of its source.\nWhich of the above statement(s) is/are CORRECT?",
         "options": [
-          {"id": "A", "text": "1, 2 and 4 only"},
-          {"id": "B", "text": "2 and 4 only"},
-          {"id": "C", "text": "2, 3 and 5 only"},
-          {"id": "D", "text": "1, 4 and 5 only"}
-        ],
-        "correct_option_id": "B",
-        "explanation": "Statement Analysis:\n\n(1) INCORRECT - Light matter नहीं है क्योंकि इसमें MASS नहीं होता। Light ENERGY का form है (photons massless)। Matter = mass + volume.\n\n(2) CORRECT - पहाड़ों पर atmospheric pressure कम होता है → Boiling point decrease होता है → पानी 100°C से कम temperature पर boil करता है। Pressure ↓ → BP ↓ (principle).\n\n(3) INCORRECT - Tyndall effect COLLOIDS में होता है, true solutions में नहीं। Colloidal particles (1-100 nm) light को scatter करते हैं। John Tyndall (1869) ने discover किया।\n\n(4) CORRECT - AIR एक HOMOGENEOUS MIXTURE है (N₂ 78%, O₂ 21%, etc. physically मिले हुए)। यह compound नहीं है क्योंकि chemical bonding नहीं है और fixed ratio नहीं है।\n\n(5) INCORRECT - Dissolving salt PHYSICAL CHANGE है क्योंकि NaCl का chemical composition नहीं बदलता। Evaporation से salt वापस मिल सकता है (reversible)। New substance नहीं बनता।\n\n✅ Correct Statements: 2 and 4 only.\n\n⭐ BPSC 2023 pattern! हर statement को independently verify करो - mixed traps होते हैं।"
-      },
-      "navigation": {
-        "next": "card_67_assertion_reason_quiz",
-        "button_text": "Assertion-Reason Challenge ➔"
-      }
-    },
-    {
-      "card_id": "card_67_assertion_reason_quiz",
-      "card_slug": "card_67_assertion_reason_quiz",
-      "type": "quiz",
-      "concept_id": "assertion_reason_test",
-      "level": 6,
-      "progress": {
-        "current": 67,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "ASSERTION-REASON (NEET/UPSC Pattern):\n\nAssertion (A): Steam at 100°C causes more severe burns than boiling water at 100°C.\n\nReason (R): Steam possesses additional latent heat of vaporization.\n\nWhich is correct?",
-        "options": [
-          {"id": "A", "text": "Both A and R are true, R is correct explanation of A"},
-          {"id": "B", "text": "Both A and R are true, R is NOT correct explanation"},
-          {"id": "C", "text": "A is true, R is false"},
-          {"id": "D", "text": "A is false, R is true"}
+          { "id": "A", "text": "Only I and III" },
+          { "id": "B", "text": "Only II and III" },
+          { "id": "C", "text": "Only I and II" },
+          { "id": "D", "text": "All three are correct" }
         ],
         "correct_option_id": "A",
-        "explanation": "BOTH Assertion and Reason TRUE, और Reason Assertion की CORRECT EXPLANATION है।\n\nAssertion TRUE: Steam at 100°C boiling water at 100°C से ज्यादा severe burns देता है।\n\nReason TRUE और CORRECT EXPLANATION: Steam में additional LATENT HEAT OF VAPORIZATION (2260 J/g) होती है। जब steam skin पर condense होता है, ये पूरी latent heat release करता है + 100°C का temperature। Boiling water सिर्फ 100°C heat देता है।\n\nTotal heat from steam = Latent heat (2260 J/g) + Sensible heat (cooling from 100°C)\nTotal heat from water = सिर्फ Sensible heat\n\n∴ Steam burns > Water burns at same temperature!\n\n⭐ NEET/UPSC में latent heat concepts पर assertion-reason frequently पूछा जाता है!"
+        "explanation": "Statement I is CORRECT - Camphor is a classic example of sublimation, going directly from solid to gas state. Statement II is WRONG - a colloid (like milk) does NOT settle down on standing and CANNOT be separated by ordinary filter paper; these are properties of a Suspension, not a Colloid. This is the key distinguishing feature between the two. Statement III is CORRECT - the Law of Constant Proportions (Proust) states that a pure compound always contains the same elements combined in the same fixed ratio by mass, irrespective of the source or method of preparation. Hence, only Statements I and III are correct - Answer (A)."
       },
-      "navigation": {
-        "next": "card_68_advanced_concept_quiz",
-        "button_text": "Advanced Concept ➔"
-      }
+      "navigation": { "next": "card_103_trophy", "button_text": "See Final Result ➔" }
     },
     {
-      "card_id": "card_68_advanced_concept_quiz",
-      "card_slug": "card_68_advanced_concept_quiz",
-      "type": "quiz",
-      "concept_id": "advanced_test",
-      "level": 6,
-      "progress": {
-        "current": 68,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "A mixture of sand and ammonium chloride can be separated by: (UPSC Prelims 2019)",
-        "options": [
-          {"id": "A", "text": "Filtration"},
-          {"id": "B", "text": "Sublimation"},
-          {"id": "C", "text": "Distillation"},
-          {"id": "D", "text": "Evaporation"}
-        ],
-        "correct_option_id": "B",
-        "explanation": "SUBLIMATION method use होगा क्योंकि Ammonium Chloride (NH₄Cl) एक sublimable substance है - सीधे solid से gas बन जाता है heating पर।\n\nProcess:\n1. Mixture को heat करो\n2. NH₄Cl sublime होकर vapors बनेगा\n3. Cool surface पर NH₄Cl फिर से solid बनकर collect होगा\n4. Sand residue के रूप में बचेगा\n\nSublimation examples याद रखो: Camphor, Naphthalene, Iodine, Ammonium Chloride, Dry Ice।\n\nFiltration काम नहीं करेगा क्योंकि दोनों solid हैं। Distillation liquids के लिए है। Evaporation solid-liquid separation के लिए है।\n\n⭐ UPSC Prelims में practical separation applications पूछे जाते हैं!"
-      },
-      "navigation": {
-        "next": "card_69_numerical_concept",
-        "button_text": "Numerical Concept ➔"
-      }
-    },
-    {
-      "card_id": "card_69_numerical_concept",
-      "card_slug": "card_69_numerical_concept",
-      "type": "chat",
-      "concept_id": "latent_heat_numerical",
-      "level": 6,
-      "progress": {
-        "current": 69,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, ek last important concept: Latent heat calculations। NEET में numerical problems आते हैं। Formula: Q = m × L, जहाँ Q=heat energy, m=mass, L=latent heat। Ice को water बनाने के लिए कितनी heat चाहिए?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Formula use करके calculate कर सकते hैं?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Example: 10g ice at 0°C को 10g water at 0°C बनाने के लिए: Q = m × L_fusion = 10g × 334 J/g = 3340 J। Temperature same रहता है पर energy absorb होती है intermolecular forces तोड़ने में। Concept clear?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Clear Sir! Temperature constant पर भी heat energy लगती है state change में!"
-        }
-      ],
-      "navigation": {
-        "next": "card_70_journey_feedback",
-        "button_text": "Journey Complete ➔"
-      }
-    },
-    {
-      "card_id": "card_70_journey_feedback",
-      "card_slug": "card_70_journey_feedback",
-      "type": "chat",
-      "concept_id": "matter_journey_complete",
-      "level": 6,
-      "progress": {
-        "current": 70,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, kya journey rahi! Kitchen observations से लेकर BPSC/NEET level multi-statements तक - tumne MATTER को completely master कर liya!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir अब states, particles, changes, classification, separation सब crystal clear हैं! Exam में कहीं से भी matter पर question आए, confidence से answer कर सकता हूं!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! याद रखो core pillars: (1) States & Properties, (2) Particle Theory & Kinetic Energy, (3) State Changes & Latent Heat, (4) Classification (Element/Compound/Mixture), (5) Separation Methods, (6) Physical vs Chemical Changes। ये sab competitive exams में repeatedly aate hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Thank you Sir! Matter अब मेरा strong chapter ban gaya! 🔥"
-        }
-      ],
-      "navigation": {
-        "next": "card_71_bonus_tips",
-        "button_text": "Bonus Exam Tips ➔"
-      }
-    },
-    {
-      "card_id": "card_71_bonus_tips",
-      "card_slug": "card_71_bonus_tips",
-      "type": "chat",
-      "concept_id": "exam_strategy_tips",
-      "level": 6,
-      "progress": {
-        "current": 71,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Last bonus tips for exams: (1) BPSC loves multi-statement questions - har statement ko independently check karo। (2) SSC/Railway में direct facts पूछते - Scientists names, Years, Examples याद रखो। (3) NEET में latent heat numericals aur assertion-reason focus करो!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Noted Sir! Har exam का pattern alag hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC TRE Special: Bihar SCERT examples ध्यान से पढ़ो - local context questions आते हैं। Common traps: Light=matter (NO), Air=compound (NO-mixture), Boiling=chemical (NO-physical), All metals hard (NO-Na/K soft)। Aise exceptions yaad रखो!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Exception questions exam में confuse करते hैं - ab ready हूं! Trophy time!"
-        }
-      ],
-      "navigation": {
-        "next": "card_72_trophy",
-        "button_text": "Claim Trophy 🏆 ➔"
-      }
-    },
-    {
-      "card_id": "card_72_trophy",
-      "card_slug": "card_72_trophy",
+      "card_id": "card_103_trophy",
+      "card_slug": "card_103_trophy",
       "type": "milestone",
-      "concept_id": "chapter_mastery_complete",
-      "level": 6,
-      "progress": {
-        "current": 72,
-        "total": 72
-      },
+      "concept_id": "chapter_complete",
+      "level": 13,
+      "progress": { "current": 100, "total": 100 },
       "milestone_payload": {
-        "title": "🏆 CHAPTER CONQUERED!",
-        "badge_emoji": "⚛️",
-        "completed_topic": "MATTER IN CHEMISTRY - Complete Mastery",
-        "xp_earned": 550,
-        "milestone_progress": "100% Complete - All 6 Modules Mastered!",
-        "motivational_quote": "From Zero to Officer Level! तुमने States of Matter, Particle Nature, Kinetic Theory, State Changes, Latent Heat, Classification, Separation Methods, Physical vs Chemical Changes - सबकुछ conquer किया! BPSC/SSC/Railway/NEET/UPSC - कहीं भी Matter के questions अब तुम्हारे हाथ की मिट्टी! \n\n🔬 Daily life observations → Scientific concepts → Exam traps → Officer-level mastery!\n\nKeep this confidence - Chemistry की हर chapter ऐसे ही जीतेंगे! 🚀🔥\n\nAll the Best for your exams! 📚✨"
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Matter in Chemistry - Complete Mastery",
+        "xp_earned": 180,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Shabaash Raju! Particles se lekar Mole Concept tak, Bose-Einstein Condensate se lekar Dalton's Atomic Theory tak - tumने Matter ka poora chapter master kar liya hai. Officer banне ka safar jaari rahe!"
       },
-      "navigation": {
-        "next": null,
-        "button_text": "Back to Dashboard 🏠"
-      }
+      "navigation": { "next": "card_01_intro", "button_text": "Revise Chapter Again 🔄" }
     }
   ]
 }
