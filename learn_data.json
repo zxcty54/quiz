@@ -425,5 +425,103 @@
       "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/economy/infrastructure.json"
     }
   ]
+},
+  {
+  "title": "Geography",
+  "icon": "🌍",
+  "color": "0xFF0284C7",
+  "chapters": [
+    {
+      "id": "geo_astronomy",
+      "title": "Astronomy & Universe",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/geography/astronomy.json"
+    },
+    {
+      "id": "geo_solarsystem",
+      "title": "The Solar System & Earth",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/geography/solarsystem.json"
+    },
+    {
+      "id": "geo_phygeography",
+      "title": "Physical Geography & Landforms",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/geography/phygeography.json"
+    },
+    {
+      "id": "geo_atompressure",
+      "title": "Atmospheric Pressure & Wind Systems",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/geography/atompressure.json"
+    },
+    {
+      "id": "geo_humidity",
+      "title": "Humidity, Rainfall & Clouds",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/geography/humidity.json"
+    },
+    {
+      "id": "geo_climate",
+      "title": "Climate & Weather Systems",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/geography/climate.json"
+    },
+    {
+      "id": "geo_river",
+      "title": "Major Rivers of India & World",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/geography/river.json"
+    },
+    {
+      "id": "geo_drainage",
+      "title": "Drainage Systems & River Basins",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/geography/drainage.json"
+    },
+    {
+      "id": "geo_dams",
+      "title": "Dams & Multi-Purpose River Projects",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/geography/dams.json"
+    },
+    {
+      "id": "geo_soil",
+      "title": "Soils & Soil Conservation",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/geography/soil.json"
+    },
+    {
+      "id": "geo_forest",
+      "title": "Natural Vegetation & Forests",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/geography/forest.json"
+    },
+    {
+      "id": "geo_resources",
+      "title": "Mineral & Natural Resources",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/geography/resources.json"
+    },
+    {
+      "id": "geo_industry",
+      "title": "Industries & Economic Geography",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/geography/industry.json"
+    }
+  ]
 }
 ]
