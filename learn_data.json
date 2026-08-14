@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Biology",
+    "icon": "🧬",
+    "color": 37225,
+    "chapters": [
+      {
+        "id": "bio_cell",
+        "title": "Cell (Koshika)",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/cell.json"
+      },
+      {
+        "id": "bio_digestive",
+        "title": "Digestive System",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/digestive.json"
+      }
+    ]
+  },
+  {
+    "title": "Physics",
+    "icon": "⚡",
+    "color": 2450411,
+    "chapters": [
+      {
+        "id": "phy_motion",
+        "title": "Motion & Kinematics",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/motion.json"
+      }
+    ]
+  }
+]
