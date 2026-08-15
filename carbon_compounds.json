@@ -3,509 +3,781 @@
     "p_id": "bpsc_chem_m17_01",
     "qe": "In 1828, Friedrich Wöhler successfully synthesized the organic compound Urea in a laboratory, disproving Jöns Jacob Berzelius's 'Vital Force Theory'. What inorganic precursor did Wöhler heat to achieve this landmark organic synthesis?",
     "qh": "1828 में, फ्रेडरिक वोहलर (Friedrich Wöhler) ने प्रयोगशाला में कार्बनिक यौगिक यूरिया (Urea) का सफलतापूर्वक संश्लेषण करके जोन्स जैकब बर्जिलियस के 'वाइटल फोर्स थ्योरी' (Vital Force Theory) को खारिज कर दिया। इस ऐतिहासिक कार्बनिक संश्लेषण को प्राप्त करने के लिए वोहलर ने किस अकार्बनिक अग्रदूत (inorganic precursor) को गर्म किया था?",
-    "o": [
+    "oe": [
       "Ammonium Nitrate ($\\text{NH}_4\\text{NO}_3$)",
       "Ammonium Cyanate ($\\text{NH}_4\\text{CNO}$)",
       "Sodium Acetate ($\\text{CH}_3\\text{COONa}$)",
       "Calcium Carbide ($\\text{CaC}_2$)"
     ],
+    "oh": [
+      "अमोनियम नाइट्रेट ($\\text{NH}_4\\text{NO}_3$)",
+      "अमोनियम सायनेट ($\\text{NH}_4\\text{CNO}$)",
+      "सोडियम एसीटेट ($\\text{CH}_3\\text{COONa}$)",
+      "कैल्शियम कार्बाइड ($\\text{CaC}_2$)"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists ammonium nitrate, which decomposes into nitrous oxide and water. Option 1 is correct because **Friedrich Wöhler (1828)** accidentally synthesized **Urea [$\\\\text{CO(NH}_2)_2$]**, an organic compound found in animal urine, by heating an inorganic salt solution of **Ammonium Cyanate ($\\\\text{NH}_4\\\\text{CNO}$)**: $\\\\text{NH}_4\\\\text{CNO} \\\\xrightarrow{\\\\Delta} \\\\text{H}_2\\\\text{N-CO-NH}_2$. This structural rearrangement disproved the **Vital Force Theory** [Berzelius's early hypothesis asserting that organic compounds possess a supernatural 'life force' and can only be produced by living biological organisms]. Option 2 lists sodalime decarboxylation precursor for methane. Option 3 is used to prepare acetylene."
+    "ee": "1. Option 0 is incorrect: Heating ammonium nitrate causes thermal decomposition to produce nitrous oxide and water, rather than urea.\n2. Option 1 is correct: In 1828, German chemist Friedrich Wöhler heated the inorganic compound ammonium cyanate ($\\text{NH}_4\\text{CNO}$) and observed its isomeric rearrangement into urea ($\\text{NH}_2\\text{CONH}_2$). This historic experiment produced an organic substance from a purely mineral, non-living origin without requiring a mysterious 'vital force', thereby disproving Berzelius's Vital Force Theory.\n3. Option 2 is incorrect: Sodium acetate yields methane when heated with sodalime during laboratory decarboxylation.\n4. Option 3 is incorrect: Calcium carbide reacts with water to produce acetylene gas, which is not an inorganic precursor for Wöhler's urea synthesis.",
+    "eh": "1. विकल्प 0 गलत है: अमोनियम नाइट्रेट को गर्म करने पर नाइट्रस ऑक्साइड और जल प्राप्त होता है, यूरिया नहीं।\n2. विकल्प 1 सही है: 1828 में जर्मन वैज्ञानिक फ्रेडरिक वोहलर ने अकार्बनिक यौगिक अमोनियम सायनेट ($\\text{NH}_4\\text{CNO}$) के जलीय घोल को गर्म करके यूरिया ($\\text{NH}_2\\text{CONH}_2$) का संश्लेषण किया। इस पुनर्विन्यास अभिक्रिया ने बिना किसी 'दैवीय जीवन शक्ति' के प्रयोगशाला में कार्बनिक यौगिक बनाकर बर्जिलियस के जैव शक्ति सिद्धांत (Vital Force Theory) का खंडन किया।\n3. विकल्प 2 गलत है: सोडियम एसीटेट को सोडालाइम के साथ गर्म करने पर मीथेन गैस बनती है।\n4. विकल्प 3 गलत है: कैल्शियम कार्बाइड जल के साथ अभिक्रिया करके एसिटिलीन गैस बनाता है, इसका उपयोग यूरिया संश्लेषण में नहीं होता।"
   },
   {
     "p_id": "bpsc_chem_m17_02",
     "qe": "Evaluating the structural classification of organic ring systems differentiates homocyclic alicyclic compounds from heterocyclic aromatic compounds. Which choice correctly pairs an Alicyclic Homocyclic compound with a Heterocyclic Aromatic compound?",
     "qh": "कार्बनिक वलय प्रणालियों (organic ring systems) के संरचनात्मक वर्गीकरण का मूल्यांकन होमोसाइक्लिक एलिसाइक्लिक यौगिकों को हेट्रोसाइक्लिक एरोमैटिक यौगिकों से अलग करता है। कौन सा विकल्प एलिसाइक्लिक होमोसाइक्लिक यौगिक को हेट्रोसाइक्लिक एरोमैटिक यौगिक के साथ सही ढंग से जोड़ता है?",
-    "o": [
+    "oe": [
       "Alicyclic Homocyclic: Benzene; Heterocyclic Aromatic: Cyclohexane",
       "Alicyclic Homocyclic: Cyclopropane; Heterocyclic Aromatic: Pyrrole (or Furan / Thiophene)",
       "Alicyclic Homocyclic: Pyridine; Heterocyclic Aromatic: Aniline",
       "Alicyclic Homocyclic: Tropolone; Heterocyclic Aromatic: Tetrahydrofuran"
     ],
+    "oh": [
+      "एलिसाइक्लिक होमोसाइक्लिक: बेंजीन; हेट्रोसाइक्लिक एरोमैटिक: साइक्लोहेक्सेन",
+      "एलिसाइक्लिक होमोसाइक्लिक: साइक्लोप्रोपेन; हेट्रोसाइक्लिक एरोमैटिक: पाइरोल (या फुरान / थायोफीन)",
+      "एलिसाइक्लिक होमोसाइक्लिक: पाइरीडीन; हेट्रोसाइक्लिक एरोमैटिक: एनिलीन",
+      "एलिसाइक्लिक होमोसाइक्लिक: ट्रोपोलोन; हेट्रोसाइक्लिक एरोमैटिक: टेट्राहाइड्रोफुरान"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies aromatic benzene as alicyclic. Option 1 is correct because: (1) **Cyclopropane ($\\\\text{C}_3\\\\text{H}_6$)** is an **Alicyclic Homocyclic Compound** [a non-aromatic saturated cyclic ring composed solely of carbon atoms]; (2) **Pyrrole ($\\\\text{C}_4\\\\text{H}_5\\\\text{N}$)**, **Furan ($\\\\text{C}_4\\\\text{H}_4\\\\text{O}$)**, and **Thiophene ($\\\\text{C}_4\\\\text{H}_4\\\\text{S}$)** are **Heterocyclic Aromatic Compounds** [conjugated aromatic ring systems containing at least one non-carbon heteroatom (such as $\\\\text{N, O, S}$) as part of the ring lattice]. Option 2 misclassifies pyridine and aniline. Option 3 pairs a non-benzenoid aromatic (Tropolone) with a non-aromatic saturated heterocycle (Tetrahydrofuran)."
+    "ee": "1. Option 0 is incorrect: Benzene is a homocyclic aromatic compound, while cyclohexane is an alicyclic homocyclic compound.\n2. Option 1 is correct: Cyclopropane ($\\text{C}_3\\text{H}_6$) consists exclusively of a closed carbon ring resembling aliphatic hydrocarbons, classifying it as an alicyclic homocyclic compound. Pyrrole ($\\text{C}_4\\text{H}_5\\text{N}$), furan ($\\text{C}_4\\text{H}_4\\text{O}$), and thiophene ($\\text{C}_4\\text{H}_4\\text{S}$) contain a heteroatom (N, O, or S) within a conjugated planar ring that satisfies Hückel's $(4n+2)\\pi$ rule, classifying them as heterocyclic aromatic compounds.\n3. Option 2 is incorrect: Pyridine contains nitrogen in its ring and is heterocyclic aromatic, whereas aniline is homocyclic benzenoid aromatic.\n4. Option 3 is incorrect: Tropolone is a non-benzenoid homocyclic aromatic compound, and tetrahydrofuran is a non-aromatic saturated heterocycle.",
+    "eh": "1. विकल्प 0 गलत है: बेंजीन एक एरोमैटिक होमोसाइक्लिक यौगिक है, जबकि साइक्लोहेक्सेन एलिसाइक्लिक है।\n2. विकल्प 1 सही है: साइक्लोप्रोपेन ($\\text{C}_3\\text{H}_6$) केवल कार्बन परमाणुओं की बंद वलय से बना एक संतृप्त एलिसाइक्लिक होमोसाइक्लिक यौगिक है। पाइरोल ($\\text{C}_4\\text{H}_5\\text{N}$), फुरान ($\\text{C}_4\\text{H}_4\\text{O}$) और थायोफीन ($\\text{C}_4\\text{H}_4\\text{S}$) की वलय में कार्बन के अलावा विषम परमाणु (N, O, S) उपस्थित होते हैं और ये हकेल के नियम का पालन करते हुए हेट्रोसाइक्लिक एरोमैटिक यौगिक बनाते हैं।\n3. विकल्प 2 गलत है: पाइरीडीन हेट्रोसाइक्लिक एरोमैटिक है, जबकि एनिलीन होमोसाइक्लिक एरोमैटिक है।\n4. विकल्प 3 गलत है: ट्रोपोलोन गैर-बेन्ज़ेनॉइड एरोमैटिक है और टेट्राहाइड्रोफुरान संतृप्त गैर-एरोमैटिक यौगिक है।"
   },
   {
     "p_id": "bpsc_chem_m17_03",
     "qe": "Non-benzenoid aromatic compounds display aromatic stability and Huckel conjugation despite lacking a classic six-membered benzene ring. Which organic compound serves as a textbook example of a Non-Benzenoid Aromatic compound?",
     "qh": "गैर-बेन्ज़ेनॉइड एरोमैटिक यौगिक (Non-benzenoid aromatic compounds) क्लासिक छह-सदस्यीय बेंजीन वलय की कमी के बावजूद एरोमैटिक स्थिरता और हकेल संयुग्मन (Huckel conjugation) प्रदर्शित करते हैं। कौन सा कार्बनिक यौगिक गैर-बेन्ज़ेनॉइड एरोमैटिक यौगिक के रूप में कार्य करता है?",
-    "o": [
+    "oe": [
       "Naphthalene",
       "Tropolone",
       "Aniline",
       "Cyclohexene"
     ],
+    "oh": [
+      "नेफ्थलीन",
+      "ट्रोपोलोन",
+      "एनिलीन",
+      "साइक्लोहेक्सीन"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists Naphthalene, which is a fused bicyclic benzenoid compound. Option 1 is correct because **Tropolone ($\\\\text{C}_7\\\\text{H}_6\\\\text{O}_2$)** is a non-benzenoid, seven-membered conjugated ring containing a carbonyl group and a hydroxyl group that displays exceptional resonance energy and aromatic stability without incorporating a standard six-carbon benzene nucleus. This identifies it as a **Non-Benzenoid Aromatic Compound** [an aromatic ring system that satisfies Huckel's rule ($4n+2 \\\\pi$ electrons) but lacks a fused or isolated benzene ring]. Option 2 (Aniline) contains a benzene ring (benzenoid), and Option 3 (Cyclohexene) is a non-aromatic alicyclic alkene."
+    "ee": "1. Option 0 is incorrect: Naphthalene consists of two fused six-membered benzene rings, making it a classic benzenoid aromatic hydrocarbon.\n2. Option 1 is correct: Tropolone ($\\text{C}_7\\text{H}_6\\text{O}_2$) possesses a seven-membered planar unsaturated ring containing a conjugated pi-electron system and a carbonyl group. It obeys Hückel's $(4n+2)\\pi$ rule with $6\\pi$ electrons, exhibiting significant resonance stabilization without possessing a benzene ring, thus serving as a classic non-benzenoid aromatic compound.\n3. Option 2 is incorrect: Aniline contains an amino group bonded to a benzene nucleus, which places it in the benzenoid aromatic category.\n4. Option 3 is incorrect: Cyclohexene is a partially unsaturated six-membered cyclic alkene that lacks delocalized aromatic conjugation.",
+    "eh": "1. विकल्प 0 गलत है: नेफ्थलीन में दो संगलित बेंजीन वलय होते हैं, अतः यह एक बेन्ज़ेनॉइड एरोमैटिक यौगिक है।\n2. विकल्प 1 सही है: ट्रोपोलोन ($\\text{C}_7\\text{H}_6\\text{O}_2$) एक सात-सदस्यीय असंतृप्त वलय युक्त यौगिक है जिसमें $6\\pi$ विस्थानीकृत इलेक्ट्रॉन होते हैं। यह हकेल के नियम का पालन करते हुए उच्च एरोमैटिक स्थायित्व प्रदर्शित करता है, परंतु इसमें बेंजीन वलय नहीं होती, इसलिए यह एक गैर-बेन्ज़ेनॉइड (Non-benzenoid) एरोमैटिक यौगिक है।\n3. विकल्प 2 गलत है: एनिलीन में बेंजीन वलय उपस्थित होने के कारण यह बेन्ज़ेनॉइड एरोमैटिक श्रेणी में आता है।\n4. विकल्प 3 गलत है: साइक्लोहेक्सीन एक साधारण चक्रीय एल्कीन है जो गैर-एरोमैटिक होता है।"
   },
   {
     "p_id": "bpsc_chem_m17_04",
     "qe": "Successive members within a Homologous Series share identical functional groups and systematic chemical behaviors. What exact molecular mass difference and structural repeating unit separate any two adjacent members in a homologous series?",
     "qh": "समजातीय श्रेणी (Homologous Series) के अंतर्गत क्रमिक सदस्य समान कार्यात्मक समूहों और व्यवस्थित रासायनिक व्यवहारों को साझा करते हैं। समजातीय श्रेणी में किन्हीं दो आसन्न सदस्यों को कौन सा सटीक आणविक द्रव्यमान अंतर और संरचनात्मक दोहराव वाली इकाई अलग करती है?",
-    "o": [
-      "Mass Difference: $12\\\\text{ u}$; Structural Unit: $-\\\\text{CH}_3-$ (methyl group)",
-      "Mass Difference: $14\\\\text{ u}$; Structural Unit: $-\\\\text{CH}_2-$ (methylene group)",
-      "Mass Difference: $16\\\\text{ u}$; Structural Unit: $-\\\\text{CH}_4-$ (methane unit)",
-      "Mass Difference: $28\\\\text{ u}$; Structural Unit: $-\\\\text{C}_2\\\\text{H}_4-$ (ethylene group)"
+    "oe": [
+      "Mass Difference: $12\\text{ u}$; Structural Unit: $-\\text{CH}_3-$ (methyl group)",
+      "Mass Difference: $14\\text{ u}$; Structural Unit: $-\\text{CH}_2-$ (methylene group)",
+      "Mass Difference: $16\\text{ u}$; Structural Unit: $-\\text{CH}_4-$ (methane unit)",
+      "Mass Difference: $28\\text{ u}$; Structural Unit: $-\\text{C}_2\\text{H}_4-$ (ethylene group)"
+    ],
+    "oh": [
+      "द्रव्यमान अंतर: $12\\text{ u}$; संरचनात्मक इकाई: $-\\text{CH}_3-$ (मिथाइल समूह)",
+      "द्रव्यमान अंतर: $14\\text{ u}$; संरचनात्मक इकाई: $-\\text{CH}_2-$ (मेथिलीन समूह)",
+      "द्रव्यमान अंतर: $16\\text{ u}$; संरचनात्मक इकाई: $-\\text{CH}_4-$ (मीथेन इकाई)",
+      "द्रव्यमान अंतर: $28\\text{ u}$; संरचनात्मक इकाई: $-\\text{C}_2\\text{H}_4-$ (एथिलीन समूह)"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 gives an incorrect carbon mass without accounting for hydrogen. Option 1 is correct because every **Homologous Series** [a family of organic compounds sharing the same functional group and general formula] features consecutive members that differ structurally by a single **Methylene Group ($-\\\\text{CH}_2-$)**. Calculating the formula mass for one carbon ($12\\\\text{ u}$) and two hydrogens ($2 \\\\times 1 = 2\\\\text{ u}$) yields an exact **Molecular Mass Difference of $14\\\\text{ u}$** (atomic mass units) between successive homologues (e.g., Methane $\\\\text{CH}_4$ $16\\\\text{ u}$ vs. Ethane $\\\\text{C}_2\\\\text{H}_6$ $30\\\\text{ u}$). Option 2 and Option 3 propose non-existent $16\\\\text{ u}$ or $28\\\\text{ u}$ differences."
+    "ee": "1. Option 0 is incorrect: The atomic mass of carbon alone is $12\\text{ u}$, but a methyl group ($-\\text{CH}_3$) has a mass of $15\\text{ u}$ and is not the differentiating unit between successive straight-chain homologues.\n2. Option 1 is correct: A homologous series is a family of organic compounds sharing the same functional group and general formula. Each successive member differs from the preceding member by a methylene group ($-\\text{CH}_2-$). The corresponding molecular mass difference is $14\\text{ u}$ ($12\\text{ u}$ from one carbon atom $+ 2\\text{ u}$ from two hydrogen atoms), as seen in alkanes (e.g., $\\text{CH}_4 = 16\\text{ u}$ and $\\text{C}_2\\text{H}_6 = 30\\text{ u}$).\n3. Option 2 is incorrect: $16\\text{ u}$ is the molecular mass of methane, not the recurring difference between homologous members.\n4. Option 3 is incorrect: $28\\text{ u}$ represents an ethylene unit ($-\\text{C}_2\\text{H}_4-$), which corresponds to a jump of two homologous steps.",
+    "eh": "1. विकल्प 0 गलत है: $12\\text{ u}$ केवल कार्बन का परमाणु द्रव्यमान है और $-\\text{CH}_3-$ समजातीय अंतर नहीं बनाता।\n2. विकल्प 1 सही है: समजातीय श्रेणी (Homologous Series) कार्बनिक यौगिकों का ऐसा समूह है जिसमें समान क्रियात्मक समूह और सामान्य सूत्र होता है। इसके किन्हीं दो लगातार सदस्यों के बीच केवल एक मेथिलीन समूह ($-\\text{CH}_2-$) का संरचनात्मक अंतर होता है। इस समूह का आणविक द्रव्यमान $14\\text{ u}$ ($12 + 2 = 14\\text{ u}$) होता है (जैसे मीथेन $16\\text{ u}$ तथा एथेन $30\\text{ u}$)।\n3. विकल्प 2 गलत है: $16\\text{ u}$ मीथेन का आणविक भार है, श्रेणी के दो सदस्यों का अंतर नहीं।\n4. विकल्प 3 गलत है: $28\\text{ u}$ दो क्रमिक चरणों (अर्थात दो $-\\text{CH}_2-$ इकाइयों) का अंतर दर्शाता है।"
   },
   {
     "p_id": "bpsc_chem_m17_05",
     "qe": "Structural isomerism occurs when organic molecules share an identical molecular formula but possess different atomic connectivity. What type of structural isomerism is illustrated by $n$-pentane, $iso$-pentane (2-methylbutane), and $neo$-pentane (2,2-dimethylpropane)?",
     "qh": "संरचनात्मक समावयवता (Structural isomerism) तब होती है जब कार्बनिक अणु एक समान आणविक सूत्र साझा करते हैं लेकिन विभिन्न परमाणु कनेक्टिविटी रखते हैं। $n$-पेंटेन, $iso$-पेंटेन (2-मिथाइलब्यूटेन), और $neo$-पेंटेन (2,2-डाइमिथाइलप्रोपेन) द्वारा किस प्रकार की संरचनात्मक समावयवता का चित्रण किया गया है?",
-    "o": [
+    "oe": [
       "Position Isomerism",
       "Chain Isomerism (Skeleton Isomerism)",
       "Functional Group Isomerism",
       "Metamerism"
     ],
+    "oh": [
+      "स्थान समावयवता (Position Isomerism)",
+      "श्रृंखला समावयवता (Chain Isomerism)",
+      "क्रियात्मक समूह समावयवता (Functional Group Isomerism)",
+      "मध्यावयवता (Metamerism)"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 refers to position isomers where a functional group or substituent moves along an identical carbon framework. Option 1 is correct because $n$-pentane (unbranched 5-carbon chain), $iso$-pentane (branched 4-carbon chain with 1 methyl branch), and $neo$-pentane (quaternary 3-carbon chain with 2 methyl branches) all share the identical molecular formula **$\\\\text{C}_5\\\\text{H}_{12}$**, but differ in the arrangement of their carbon framework. This defines **Chain Isomerism** [structural isomers possessing the same molecular formula but differing in the main carbon skeleton length or branching]. Option 2 requires different functional groups, and Option 3 requires unequal alkyl chain distribution around a polyvalent heteroatom."
+    "ee": "1. Option 0 is incorrect: Position isomerism occurs when functional groups or multiple bonds occupy different positions along the exact same carbon backbone.\n2. Option 1 is correct: All three pentane isomers share the identical molecular formula $\\text{C}_5\\text{H}_{12}$, but they differ in the arrangement and branching of their carbon skeletons: $n$-pentane has a continuous 5-carbon chain, isopentane has a 4-carbon chain with one branch, and neopentane has a 3-carbon chain with two branches. This structural variation is termed Chain (or Skeletal) Isomerism.\n3. Option 2 is incorrect: Functional isomerism requires molecules to contain different functional groups while sharing a molecular formula (such as ethanol and dimethyl ether).\n4. Option 3 is incorrect: Metamerism is restricted to compounds with unequal distribution of alkyl groups around a polyvalent functional group like ethers or amines.",
+    "eh": "1. विकल्प 0 गलत है: स्थान समावयवता में मुख्य कार्बन श्रृंखला समान रहती है, केवल क्रियात्मक समूह या द्विबंध का स्थान बदलता है।\n2. विकल्प 1 सही है: $n$-पेंटेन, आइसोपेंटेन और नियोपेंटेन तीनों का रासायनिक सूत्र समान ($\\text{C}_5\\text{H}_{12}$) है, परंतु इनकी मुख्य कार्बन श्रृंखला (कंकाल) की लंबाई और शाखाएं भिन्न हैं (क्रमशः 5, 4 और 3 कार्बन की मुख्य श्रृंखला)। कार्बन ढांचे में इस अंतर के कारण यह **श्रृंखला समावयवता (Chain Isomerism)** का उदाहरण है।\n3. विकल्प 2 गलत है: क्रियात्मक समावयवता में समान सूत्र वाले यौगिकों में अलग-अलग क्रियात्मक समूह उपस्थित होते हैं।\n4. विकल्प 3 गलत है: मध्यावयवता ईथर या थायोईथर जैसे बहुसंयोजी समूहों के दोनों ओर जुड़ी एल्किल श्रृंखलाओं की भिन्नता से होती है।"
   },
   {
     "p_id": "bpsc_chem_m17_06",
     "qe": "Alkanes are historically referred to as 'paraffins' due to their characteristic chemical inertness toward most reagents at ambient temperatures. What physical structural feature accounts for this unreactive nature?",
     "qh": "परिवेशी तापमान पर अधिकांश अभिकर्मकों के प्रति अपनी विशिष्ट रासायनिक अक्रियता के कारण एल्केन को ऐतिहासिक रूप से 'पैराफिन' (paraffins) कहा जाता है। कौन सी भौतिक संरचनात्मक विशेषता इस अप्रतिक्रियाशील प्रकृति का कारण है?",
-    "o": [
+    "oe": [
       "Presence of highly polar carbon-carbon double bonds.",
-      "Presence of strong, non-polar single $\\\\sigma$-bonds (carbon-carbon and carbon-hydrogen) with high bond dissociation energies and absence of unshared electron pairs.",
-      "Delocalization of $6\\\\pi$ electrons across a cyclic planar ring.",
+      "Presence of strong, non-polar single $\\sigma$-bonds (carbon-carbon and carbon-hydrogen) with high bond dissociation energies and absence of unshared electron pairs.",
+      "Delocalization of $6\\pi$ electrons across a cyclic planar ring.",
       "Spontaneous ionization into carbonium ions in neutral solvents."
     ],
+    "oh": [
+      "अत्यधिक ध्रुवीय कार्बन-कार्बन दोहरे बंधों की उपस्थिति।",
+      "उच्च बंध वियोजन ऊर्जा और गैर-साझा इलेक्ट्रॉन युग्मों की अनुपस्थिति के साथ मजबूत, गैर-ध्रुवीय एकल $\\sigma$-बंध (कार्बन-कार्बन और कार्बन-हाइड्रोजन) की उपस्थिति।",
+      "एक चक्रीय समतलीय वलय में $6\\pi$ इलेक्ट्रॉनों का विस्थानीकरण।",
+      "तटस्थ विलायकों में कार्बोनियम आयनों में स्वतःस्फूर्त आयनीकरण।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly attributes double bonds to alkanes. Option 1 is correct because **Alkanes** (general formula $\\\\text{C}_n\\\\text{H}_{2n+2}$) derive the name **Paraffins** from Latin (*parum affinis* = little affinity). This chemical inertness stems from the fact that all carbon atoms are $sp^3$ hybridized, forming exceptionally strong, non-polar **Single Sigma ($\\\\sigma$) Bonds** ($\\\\text{C-C}$ and $\\\\text{C-H}$) that possess high bond dissociation energy, low polarizability, and lack electrophilic or nucleophilic attack sites under normal conditions. Option 2 describes aromaticity, and Option 3 describes ionic dissociation."
+    "ee": "1. Option 0 is incorrect: Alkanes contain only single saturated bonds and lack polar double bonds.\n2. Option 1 is correct: The term 'paraffin' is derived from the Latin *parum affinis* (meaning 'little affinity'). Alkanes are chemically unreactive toward strong acids, bases, and oxidizing agents under normal conditions because their carbon atoms are $sp^3$-hybridized, forming purely saturated $\\text{C}-\\text{C}$ and $\\text{C}-\\text{H}$ sigma ($\\sigma$) bonds. Because carbon and hydrogen have very similar electronegativities ($2.5$ and $2.1$), these bonds are non-polar, have high bond dissociation energies, and possess no lone pairs or electron-deficient centers for chemical attack.\n3. Option 2 describes the resonance stability of aromatic rings like benzene, not aliphatic alkanes.\n4. Option 3 is incorrect: Alkanes are covalent hydrocarbons and do not spontaneously ionize in neutral solvents.",
+    "eh": "1. विकल्प 0 गलत है: एल्केन में दोहरे बंध नहीं होते; वे पूरी तरह से संतृप्त हाइड्रोकार्बन होते हैं।\n2. विकल्प 1 सही है: 'पैराफिन' शब्द लैटिन भाषा के *parum affinis* (कम क्रियाशीलता) से बना है। एल्केन सामान्य तापमान पर अम्ल, क्षार और ऑक्सीकारकों के प्रति अक्रिय होते हैं क्योंकि इनमें केवल मजबूत, गैर-ध्रुवीय **एकल सिग्मा ($\\sigma$) बंध** ($\text{C}-\text{C}$ और $\text{C}-\text{H}$) पाए जाते हैं। कार्बन और हाइड्रोजन की विद्युत-ऋणात्मकता लगभग समान होने के कारण ये बंध अध्रुवीय होते हैं और इनकी बंध वियोजन ऊर्जा बहुत अधिक होती है।\n3. विकल्प 2 गलत है: $6\\pi$ इलेक्ट्रॉनों का विस्थानीकरण बेंजीन जैसे एरोमैटिक यौगिकों का लक्षण है।\n4. विकल्प 3 गलत है: एल्केन सहसंयोजक होते हैं और आयनों में नहीं टूटते।"
   },
   {
     "p_id": "bpsc_chem_m17_07",
-    "qe": "In the laboratory, Methane gas (marsh gas, $\\\\text{CH}_4$) is prepared via a specific organic decarboxylation reaction. What reagents and thermal conditions are required for this synthesis?",
-    "qh": "प्रयोगशाला में, मीथेन गैस (मार्श गैस, $\\\\text{CH}_4$) एक विशिष्ट कार्बनिक डीकार्बोक्सिलेशन प्रतिक्रिया (decarboxylation reaction) के माध्यम से तैयार की जाती है। इस संश्लेषण के लिए कौन से अभिकर्मक और तापीय स्थितियाँ आवश्यक हैं?",
-    "o": [
-      "Heating ethyl alcohol with concentrated $\\\\text{H}_2\\\\text{SO}_4$ at $170^\\\\circ\\\\text{C}$.",
-      "Heating a dry mixture of Sodium Acetate ($\\\\text{CH}_3\\\\text{COONa}$) and Sodalime ($\\\\text{NaOH} + \\\\text{CaO}$).",
+    "qe": "In the laboratory, Methane gas (marsh gas, $\\text{CH}_4$) is prepared via a specific organic decarboxylation reaction. What reagents and thermal conditions are required for this synthesis?",
+    "qh": "प्रयोगशाला में, मीथेन गैस (मार्श गैस, $\\text{CH}_4$) एक विशिष्ट कार्बनिक डीकार्बोक्सिलेशन प्रतिक्रिया (decarboxylation reaction) के माध्यम से तैयार की जाती है। इस संश्लेषण के लिए कौन से अभिकर्मक और तापीय स्थितियाँ आवश्यक हैं?",
+    "oe": [
+      "Heating ethyl alcohol with concentrated $\\text{H}_2\\text{SO}_4$ at $170^\\circ\\text{C}$.",
+      "Heating a dry mixture of Sodium Acetate ($\\text{CH}_3\\text{COONa}$) and Sodalime ($\\text{NaOH} + \\text{CaO}$).",
       "Reacting calcium carbide directly with cold water.",
-      "Passing acetylene gas through a red-hot iron tube at $600^\\\\circ\\\\text{C}$."
+      "Passing acetylene gas through a red-hot iron tube at $600^\\circ\\text{C}$."
+    ],
+    "oh": [
+      "एथिल अल्कोहल को सांद्र $\\text{H}_2\\text{SO}_4$ के साथ $170^\\circ\\text{C}$ पर गर्म करना।",
+      "सोडियम एसीटेट ($\\text{CH}_3\\text{COONa}$) और सोडालाइम ($\\text{NaOH} + \\text{CaO}$) के सूखे मिश्रण को गर्म करना।",
+      "कैल्शियम कार्बाइड की सीधे ठंडे पानी से प्रतिक्रिया कराना।",
+      "एसिटिलीन गैस को $600^\\circ\\text{C}$ पर लाल-गर्म लोहे की नली से गुजारना।"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 yields ethylene gas via dehydration of ethanol. Option 1 is correct because laboratory synthesis of **Methane ($\\\\text{CH}_4$)** involves heating anhydrous **Sodium Acetate ($\\\\text{CH}_3\\\\text{COONa}$)** with **Sodalime** [a solid mixture of $\\\\text{NaOH}$ and $\\\\text{CaO}$ acting as a decarboxylating agent]: $\\\\text{CH}_3\\\\text{COONa} + \\\\text{NaOH} \\\\xrightarrow{\\\\text{CaO}, \\\\Delta} \\\\text{CH}_4\\\\uparrow + \\\\text{Na}_2\\\\text{CO}_3$. Alternatively, hydrolysis of aluminium carbide ($\\\\text{Al}_4\\\\text{C}_3 + 12\\\\text{H}_2\\\\text{O} \\\\rightarrow 3\\\\text{CH}_4 + 4\\\\text{Al(OH)}_3$) also yields pure methane. Option 2 yields acetylene, and Option 3 synthesizes benzene."
+    "ee": "1. Option 0 is incorrect: Heating ethanol with concentrated $\\text{H}_2\\text{SO}_4$ at $170^\\circ\\text{C}$ yields ethylene (ethene) through dehydration.\n2. Option 1 is correct: In the laboratory, methane ($\\text{CH}_4$) is prepared by the decarboxylation of anhydrous sodium acetate ($\\text{CH}_3\\text{COONa}$) with sodalime (a solid mixture of $\\text{NaOH}$ and $\\text{CaO}$ in a $3:1$ ratio). Heating the mixture causes the removal of the carboxyl group as sodium carbonate: $\\text{CH}_3\\text{COONa} + \\text{NaOH} \\xrightarrow{\\text{CaO}, \\Delta} \\text{CH}_4\\uparrow + \\text{Na}_2\\text{CO}_3$. $\\text{CaO}$ helps keep the mixture dry and prevents the glass vessel from fusing.\n3. Option 2 is incorrect: Hydrolysis of calcium carbide produces acetylene, not methane (methane is produced by hydrolyzing aluminium carbide, $\\text{Al}_4\\text{C}_3$).\n4. Option 3 is incorrect: Cyclic trimerization of acetylene in a red-hot iron tube at $600^\\circ\\text{C}$ produces benzene.",
+    "eh": "1. विकल्प 0 गलत है: एथेनॉल को सांद्र $\\text{H}_2\\text{SO}_4$ के साथ $170^\\circ\\text{C}$ पर गर्म करने से एथिलीन गैस बनती है।\n2. विकल्प 1 सही है: प्रयोगशाला में मीथेन ($\\text{CH}_4$) गैस बनाने के लिए निर्जल **सोडियम एसीटेट ($\\text{CH}_3\\text{COONa}$)** को **सोडालाइम ($\\text{NaOH} + \\text{CaO}$)** के साथ गर्म किया जाता है। इस डीकार्बोक्सिलेशन अभिक्रिया में सोडियम कार्बोनेट अलग हो जाता है और मीथेन गैस मुक्त होती है: $\\text{CH}_3\\text{COONa} + \\text{NaOH} \\xrightarrow{\\text{CaO}, \\Delta} \\text{CH}_4\\uparrow + \\text{Na}_2\\text{CO}_3$।\n3. विकल्प 2 गलत है: कैल्शियम कार्बाइड पर जल की क्रिया से एसिटिलीन बनती है (एल्युमिनियम कार्बाइड से मीथेन बनती है)।\n4. विकल्प 3 गलत है: लाल-तप्त लोहे की नली से एसिटिलीन गुजारने पर बेंजीन प्राप्त होती है।"
   },
-  
   {
     "p_id": "bpsc_chem_m17_09",
     "qe": "Ethylene (Ethene, $\\text{C}_2\\text{H}_4$) is the simplest olefin. What chemical reagent and temperature conditions produce ethylene gas via industrial dehydration of ethyl alcohol, and what is a major specialized application of ethylene?",
     "qh": "एथिलीन (एथीन, $\\text{C}_2\\text{H}_4$) सबसे सरल ओलेफिन है। कौन सा रासायनिक अभिकर्मक और तापमान की स्थिति एथिल अल्कोहल के औद्योगिक निर्जलीकरण के माध्यम से एथिलीन गैस का उत्पादन करती है, और एथिलीन का एक प्रमुख विशेष अनुप्रयोग क्या है?",
-    "o": [
-      "Reagents: Cold dilute $\\\\text{HNO}_3$; Application: Motor tyre manufacturing.",
-      "Reagents: Concentrated $\\\\text{H}_2\\\\text{SO}_4$ heated to $170^\\\\circ\\\\text{C}$; Application: Artificial ripening of green fruits and production of mustard gas.",
+    "oe": [
+      "Reagents: Cold dilute $\\text{HNO}_3$; Application: Motor tyre manufacturing.",
+      "Reagents: Concentrated $\\text{H}_2\\text{SO}_4$ heated to $170^\\circ\\text{C}$; Application: Artificial ripening of green fruits and production of mustard gas.",
       "Reagents: Sodalime at room temperature; Application: Antiseptic eye wash.",
-      "Reagents: Liquid ammonia at $-33^\\\\circ\\\\text{C}$; Application: Steel cutting flame."
+      "Reagents: Liquid ammonia at $-33^\\circ\\text{C}$; Application: Steel cutting flame."
+    ],
+    "oh": [
+      "अभिकर्मक: ठंडा तनु $\\text{HNO}_3$; अनुप्रयोग: मोटर टायर विनिर्माण।",
+      "अभिकर्मक: सांद्र $\\text{H}_2\\text{SO}_4$ को $170^\\circ\\text{C}$ पर गर्म करना; अनुप्रयोग: हरे फलों का कृत्रिम रूप से पकना और मस्टर्ड गैस का उत्पादन।",
+      "अभिकर्मक: कमरे के तापमान पर सोडालाइम; अनुप्रयोग: एंटीसेप्टिक आई वॉश।",
+      "अभिकर्मक: $-33^\\circ\\text{C}$ पर तरल अमोनिया; अनुप्रयोग: स्टील काटने की लौ।"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies the dehydrating acid and application. Option 1 is correct because **Ethylene ($\\\\text{C}_2\\\\text{H}_4$)** is synthesized via **Intramolecular Dehydration** [a chemical elimination reaction where a water molecule is removed from a single organic alcohol molecule] by heating ethyl alcohol ($\\\\text{C}_2\\\\text{H}_5\\\\text{OH}$) with **Concentrated Sulphuric Acid ($\\\\text{H}_2\\\\text{SO}_4$) at $170^\\\\circ\\\\text{C}$**: $\\\\text{CH}_3\\\\text{CH}_2\\\\text{OH} \\\\xrightarrow{\\\\text{conc. } \\\\text{H}_2\\\\text{SO}_4, 170^\\\\circ\\\\text{C}} \\\\text{CH}_2=\\\\text{CH}_2 + \\\\text{H}_2\\\\text{O}$. Industrially, ethylene is widely deployed for the **Artificial Ripening of Green Fruits** and as a chemical precursor for synthesizing **Mustard Gas** (chemical agent) and plastics. Option 2 and Option 3 list invalid reagents or unrelated applications."
+    "ee": "1. Option 0 is incorrect: Dilute nitric acid acts as an oxidizing agent, not an intramolecular dehydrating agent.\n2. Option 1 is correct: Ethylene ($\\text{CH}_2=\\text{CH}_2$) is synthesized by the intramolecular acidic dehydration of ethyl alcohol ($\\text{C}_2\\text{H}_5\\text{OH}$) with excess **concentrated sulfuric acid ($\\text{H}_2\\text{SO}_4$) at $170^\\circ\\text{C}$ (443 K)**: $\\text{C}_2\\text{H}_5\\text{OH} \\xrightarrow{\\text{conc. } \\text{H}_2\\text{SO}_4, 170^\\circ\\text{C}} \\text{C}_2\\text{H}_4\\uparrow + \\text{H}_2\\text{O}$. Major commercial applications of ethylene include the **artificial ripening of green fruits** (functioning as an agricultural plant hormone analog), synthesis of polyethylene plastic, and the production of dichloroethyl sulfide (**mustard gas**, a chemical weapon).\n3. Option 2 is incorrect: Sodalime causes decarboxylation of carboxylic salts, not alcohol dehydration.\n4. Option 3 is incorrect: Liquid ammonia does not generate high-temperature cutting flames (oxy-acetylene flames are used for cutting)."
+    ,
+    "eh": "1. विकल्प 0 गलत है: तनु नाइट्रिक अम्ल एक ऑक्सीकारक है, यह अल्कोहल का निर्जलीकरण नहीं करता।\n2. विकल्प 1 सही है: एथिल अल्कोहल को आधिक्य **सांद्र सल्फ्यूरिक अम्ल ($\\text{H}_2\\text{SO}_4$) के साथ $170^\\circ\\text{C}$ (443 K)** पर गर्म करने से जल का अणु निष्कासित होकर एथिलीन (एथीन) गैस बनती है: $\\text{C}_2\\text{H}_5\\text{OH} \\rightarrow \\text{C}_2\\text{H}_4 + \\text{H}_2\\text{O}$। एथिलीन का उपयोग मुख्य रूप से **कच्चे फलों को कृत्रिम रूप से पकाने**, पॉलिथीन प्लास्टिक बनाने और युद्ध में प्रयुक्त रासायनिक हथियार **मस्टर्ड गैस** के निर्माण में किया जाता है।\n3. विकल्प 2 गलत है: सोडालाइम का उपयोग डीकार्बोक्सिलेशन में होता है।\n4. विकल्प 3 गलत है: वेल्डिंग और कटिंग के लिए एसिटिलीन का उपयोग किया जाता है, तरल अमोनिया का नहीं।"
   },
   {
     "p_id": "bpsc_chem_m17_10",
     "qe": "Acetylene (Ethyne, $\\text{C}_2\\text{H}_2$) is an alkyne featuring a carbon-carbon triple bond. Which chemical reaction demonstrates the weakly acidic nature of terminal hydrogen atoms in acetylene?",
     "qh": "एसिटिलीन (एथाइन, $\\text{C}_2\\text{H}_2$) एक एल्काइन है जिसमें कार्बन-कार्बन ट्रिपल बॉन्ड होता है। कौन सी रासायनिक प्रतिक्रिया एसिटिलीन में टर्मिनल हाइड्रोजन परमाणुओं की कमजोर अम्लीय प्रकृति को प्रदर्शित करती है?",
-    "o": [
+    "oe": [
       "Combustion with excess oxygen gas to produce black carbon black.",
-      "Reaction with ammoniacal Silver Nitrate ($\\\\text{AgNO}_3$) solution to form a white precipitate of Silver Acetylide ($\\\\text{Ag}_2\\\\text{C}_2$).",
+      "Reaction with ammoniacal Silver Nitrate ($\\text{AgNO}_3$) solution to form a white precipitate of Silver Acetylide ($\\text{Ag}_2\\text{C}_2$).",
       "Hydration with cold water to form methane gas.",
       "Dissolution in liquid petroleum gas under high pressure."
     ],
+    "oh": [
+      "काले कार्बन ब्लैक का उत्पादन करने के लिए अतिरिक्त ऑक्सीजन गैस के साथ दहन।",
+      "सिल्वर एसिटिलाइड ($\\text{Ag}_2\\text{C}_2$) का एक सफेद अवक्षेप बनाने के लिए अमोनियाकल सिल्वर नाइट्रेट ($\\text{AgNO}_3$) के घोल के साथ प्रतिक्रिया।",
+      "मीथेन गैस बनाने के लिए ठंडे पानी के साथ जलयोजन।",
+      "उच्च दबाव में तरलीकृत पेट्रोलियम गैस में विघटन।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes complete or incomplete combustion. Option 1 is correct because the terminal hydrogen atoms in **Acetylene ($\\\\text{HC}\\\\equiv\\\\text{CH}$)** are attached to $sp$-hybridized carbons ($50\\%$ $s$-character, high electronegativity), imparting weak **Bronsted Acidity**. When acetylene gas is bubbled through **Ammoniacal Silver Nitrate Solution (Tollens' Reagent)**, the acidic protons are displaced by silver cations, forming an insoluble white precipitate of **Silver Acetylide ($\\\\text{AgC}\\\\equiv\\\\text{CAg}$)**: $\\\\text{HC}\\\\equiv\\\\text{CH} + 2\\\\text{AgNO}_3 + 2\\\\text{NH}_4\\\\text{OH} \\\\rightarrow \\\\text{Ag}_2\\\\text{C}_2\\\\downarrow + 2\\\\text{NH}_4\\\\text{NO}_3 + 2\\\\text{H}_2\\\\text{O}$. This reaction confirms its acidic nature. Option 2 and Option 3 describe non-acidic physical/chemical processes."
+    "ee": "1. Option 0 is incorrect: Combustion produces carbon dioxide or soot, which does not differentiate terminal acetylenic protons from other hydrocarbons.\n2. Option 1 is correct: In acetylene ($\\text{H}-\\text{C}\\equiv\\text{C}-\\text{H}$), the carbon atoms are $sp$-hybridized with $50\\%$ $s$-character, making them strongly electronegative and polarizing the $\\text{C}-\\text{H}$ bond. This allows terminal hydrogens to be released as weak protons. When acetylene is bubbled through **ammoniacal silver nitrate solution (Tollens' reagent)**, the terminal protons are displaced by silver cations to yield an insoluble **white precipitate of silver acetylide ($\\text{AgC}\\equiv\\text{CAg}$)**: $\\text{HC}\\equiv\\text{CH} + 2[\\text{Ag}(\\text{NH}_3)_2]\\text{OH} \\rightarrow \\text{Ag}_2\\text{C}_2\\downarrow + 4\\text{NH}_3 + 2\\text{H}_2\\text{O}$.\n3. Option 2 is incorrect: Hydration of acetylene in the presence of $\\text{HgSO}_4/\\text{H}_2\\text{SO}_4$ forms acetaldehyde, not methane.\n4. Option 3 is incorrect: Dissolution in solvents is a physical process that does not demonstrate proton acidity.",
+    "eh": "1. विकल्प 0 गलत है: दहन एक सामान्य ऑक्सीकरण क्रिया है जो अम्लीय प्रकृति को प्रमाणित नहीं करती।\n2. विकल्प 1 सही है: एसिटिलीन ($\\text{HC}\\equiv\\text{CH}$) में कार्बन $sp$ संकरित होता है जिसमें $50\\%$ 's' लक्षण होने के कारण इसकी विद्युत-ऋणात्मकता उच्च होती है। इससे जुड़े हाइड्रोजन परमाणु दुर्बल अम्लीय गुण दर्शाते हैं। जब एसिटिलीन गैस को **अमोनियाकल सिल्वर नाइट्रेट घोल (टॉलेन अभिकर्मक)** में प्रवाहित किया जाता है, तो अम्लीय हाइड्रोजन विस्थापित होकर **सिल्वर एसिटिलाइड ($\\text{Ag}_2\\text{C}_2$) का सफेद अवक्षेप** बनाता है: $\\text{C}_2\\text{H}_2 + 2\\text{AgNO}_3 + 2\\text{NH}_4\\text{OH} \\rightarrow \\text{Ag}_2\\text{C}_2\\downarrow + 2\\text{NH}_4\\text{NO}_3 + 2\\text{H}_2\\text{O}$।\n3. विकल्प 2 गलत है: एसिटिलीन के जलयोजन से एसीटैल्डिहाइड प्राप्त होता है।\n4. विकल्प 3 गलत है: विलायक में घुलना एक भौतिक प्रक्रिया है।"
   },
   {
     "p_id": "bpsc_chem_m17_11",
     "qe": "Oxy-acetylene flames are deployed in industrial metal cutting and welding due to their extremely high combustion temperatures. What maximum flame temperature is attained during oxy-acetylene combustion?",
     "qh": "ओक्सी-एसिटिलीन की लपटें (Oxy-acetylene flames) उनके अत्यधिक उच्च दहन तापमान के कारण औद्योगिक धातु काटने और वेल्डिंग में तैनात की जाती हैं। ऑक्सी-एसिटिलीन दहन के दौरान कितना अधिकतम लौ तापमान (flame temperature) प्राप्त किया जाता है?",
-    "o": [
-      "$\\\\sim 500^\\\\circ\\\\text{C}$",
-      "$\\\\sim 1200^\\\\circ\\\\text{C}$",
-      "$\\\\sim 3200^\\\\circ\\\\text{C}$",
-      "$\\\\sim 6000^\\\\circ\\\\text{C}$"
+    "oe": [
+      "$\\sim 500^\\circ\\text{C}$",
+      "$\\sim 1200^\\circ\\text{C}$",
+      "$\\sim 3200^\\circ\\text{C}$",
+      "$\\sim 6000^\\circ\\text{C}$"
+    ],
+    "oh": [
+      "$\\sim 500^\\circ\\text{C}$",
+      "$\\sim 1200^\\circ\\text{C}$",
+      "$\\sim 3200^\\circ\\text{C}$",
+      "$\\sim 6000^\\circ\\text{C}$"
     ],
     "a": 2,
-    "e": "<b>Explanation:</b> Option 0 and Option 1 are far too low to melt steel alloys. Option 2 is correct because burning acetylene ($\\\\text{C}_2\\\\text{H}_2$) gas in a controlled stream of pure oxygen gas (**Oxy-Acetylene Torch**) undergoes rapid exothermic oxidation, generating an intense flame temperature of **approximately $3200^\\circ\\text{C}$** ($3500\\\\text{ K}$). This high thermal energy easily melts structural steels, iron alloys, and high-temperature metals for industrial welding and thermal cutting operations. Option 3 exceeds standard chemical combustion limits, approaching solar surface temperatures."
+    "ee": "1. Option 0 and Option 1 are incorrect: These lower temperature ranges ($500^\\circ\\text{C}-1200^\\circ\\text{C}$) are typical of wood, coal, or standard Bunsen gas flames, which cannot melt heavy structural metals.\n2. Option 2 is correct: When acetylene ($\\text{C}_2\\text{H}_2$) is burned in a concentrated stream of pure oxygen inside an oxy-acetylene torch, the enthalpy of combustion is concentrated into a small flame zone. This produces an intense flame temperature of **approximately $3200^\\circ\\text{C}$ to $3300^\\circ\\text{C}$** ($3500\\text{ K}$), which is sufficient to melt structural steel, cast iron, and high-melting industrial alloys for cutting and welding.\n3. Option 3 is incorrect: $6000^\\circ\\text{C}$ corresponds to the temperature of the Sun's photosphere or specialized plasma arcs, exceeding regular chemical gas combustion flames.",
+    "eh": "1. विकल्प 0 और विकल्प 1 गलत हैं: $500^\\circ\\text{C}$ से $1200^\\circ\\text{C}$ का तापमान सामान्य गैसों या लकड़ी के दहन से मिलता है, जो धातुओं को पिघलाने में असमर्थ होता है।\n2. विकल्प 2 सही है: जब एसिटिलीन ($\\text{C}_2\\text{H}_2$) को शुद्ध ऑक्सीजन की धारा के साथ विशेष टॉर्च में जलाया जाता है, तो इसकी अत्यधिक ऊष्माक्षेपी प्रकृति के कारण **लगभग $3200^\\circ\\text{C}$ से $3300^\\circ\\text{C}$** तक का उच्चतम तापमान प्राप्त होता है। इस उच्च तापमान का उपयोग लोहे और स्टील के मोटे गर्डरों को काटने तथा औद्योगिक गैस वेल्डिंग में किया जाता है।\n3. विकल्प 3 गलत है: $6000^\\circ\\text{C}$ सूर्य की सतह का तापमान है, जो रासायनिक ज्वाला से संभव नहीं है।"
   },
   {
     "p_id": "bpsc_chem_m17_12",
-    "qe": "Benzene ($\\\\text{C}_6\\\\text{H}_6$) was first isolated historically by Michael Faraday in 1825. What was Faraday's original natural source for isolating benzene, and who later obtained benzene from coaltar via fractional distillation?",
-    "qh": "बेंजीन ($\\\\text{C}_6\\\\text{H}_6$) को पहली बार ऐतिहासिक रूप से 1825 में माइकल फैराडे द्वारा अलग किया गया था। बेंजीन को अलग करने के लिए फैराडे का मूल प्राकृतिक स्रोत क्या था, और किसने बाद में प्रभाजी आसवन (fractional distillation) के माध्यम से कोलतार से बेंजीन प्राप्त किया?",
-    "o": [
+    "qe": "Benzene ($\\text{C}_6\\text{H}_6$) was first isolated historically by Michael Faraday in 1825. What was Faraday's original natural source for isolating benzene, and who later obtained benzene from coaltar via fractional distillation?",
+    "qh": "बेंजीन ($\\text{C}_6\\text{H}_6$) को पहली बार ऐतिहासिक रूप से 1825 में माइकल फैराडे द्वारा अलग किया गया था। बेंजीन को अलग करने के लिए फैराडे का मूल प्राकृतिक स्रोत क्या था, और किसने बाद में प्रभाजी आसवन (fractional distillation) के माध्यम से कोलतार से बेंजीन प्राप्त किया?",
+    "oe": [
       "Faraday's source: Natural gas; Coal tar distillation: Marcellin Berthelot",
       "Faraday's source: Cylinders of compressed illuminating gas / Whale oil residues; Coal tar distillation: August Wilhelm von Hofmann",
       "Faraday's source: Petroleum asphalt; Coal tar distillation: Friedrich Wöhler",
       "Faraday's source: Volcanic springs; Coal tar distillation: Hermann Kolbe"
     ],
+    "oh": [
+      "फैराडे का स्रोत: प्राकृतिक गैस; कोलतार आसवन: मार्सेलिन बर्थेलॉट",
+      "फैराडे का स्रोत: संपीड़ित प्रकाश गैस के सिलेंडर / व्हेल तेल अवशेष; कोलतार आसवन: ऑगस्ट विल्हेम वॉन हॉफमैन",
+      "फैराडे का स्रोत: पेट्रोलियम डामर; कोलतार आसवन: फ्रेडरिक वोहलर",
+      "फैराडे का स्रोत: ज्वालामुखीय झरने; कोलतार आसवन: हरमन कोल्बे"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misattributes coaltar distillation to Berthelot (Berthelot synthesized benzene from acetylene). Option 1 is correct because **Michael Faraday (1825)** first isolated benzene from condensate collected in **Cylinders of Compressed Illuminating Gas** (derived from **Whale Oil** pyrolysis) and named it 'bicarburet of hydrogen'. Later, German chemist **August Wilhelm von Hofmann** successfully extracted pure benzene on an industrial scale by the **Fractional Distillation of Coal Tar**. Option 2 and Option 3 pair incorrect historical scientists with coal tar processing."
+    "ee": "1. Option 0 is incorrect: Natural gas consists primarily of methane, and Berthelot synthesized benzene from acetylene rather than distilling it from coal tar.\n2. Option 1 is correct: In 1825, British scientist **Michael Faraday** first isolated benzene from the oily condensate that deposited in **cylinders of compressed illuminating gas produced from whale oil pyrolysis** (calling it 'bicarburet of hydrogen'). In 1845, German chemist **August Wilhelm von Hofmann** (and his student Charles Mansfield) isolated pure benzene on a commercial scale through the **fractional distillation of coal tar** (light oil fraction).\n3. Option 2 is incorrect: Wöhler is renowned for urea synthesis, not coal tar distillation.\n4. Option 3 is incorrect: Kolbe is famous for the synthesis of acetic acid and the Kolbe electrolysis/reaction.",
+    "eh": "1. विकल्प 0 गलत है: प्राकृतिक गैस मुख्य रूप से मीथेन है और बर्थेलॉट ने एसिटिलीन से बेंजीन बनाया था।\n2. विकल्प 1 सही है: 1825 में **माइकल फैराडे** ने पहली बार **व्हेल तेल के भंजक आसवन से बनी संपीड़ित प्रकाश देने वाली गैस के सिलेंडरों** में जमा तैलीय तरल से बेंजीन को अलग किया था (और इसे 'बाइकार्बोरेट ऑफ हाइड्रोजन' कहा था)। बाद में 1845 में **ऑगस्ट विल्हेम वॉन हॉफमैन** ने **कोलतार के प्रभाजी आसवन** से औद्योगिक स्तर पर शुद्ध बेंजीन प्राप्त करने की तकनीक विकसित की।\n3. विकल्प 2 गलत है: वोहलर का मुख्य योगदान यूरिया संश्लेषण में था।\n4. विकल्प 3 गलत है: कोल्बे ने एसिटिक एसिड का संश्लेषण किया था।"
   },
   {
     "p_id": "bpsc_chem_m17_13",
-    "qe": "Marcellin Berthelot achieved a milestone synthetic route to benzene ($\\\\text{C}_6\\\\text{H}_6$) using a simple unsaturated gaseous hydrocarbon precursor. What chemical reaction and conditions define Berthelot's synthesis of benzene?",
-    "qh": "मार्सेलिन बर्थेलॉट ने एक सरल असंतृप्त गैसीय हाइड्रोकार्बन अग्रदूत का उपयोग करके बेंजीन ($\\\\text{C}_6\\\\text{H}_6$) के लिए एक मील का पत्थर सिंथेटिक मार्ग हासिल किया। कौन सी रासायनिक प्रतिक्रिया और स्थितियां बर्थेलॉट के बेंजीन के संश्लेषण को परिभाषित करती हैं?",
-    "o": [
+    "qe": "Marcellin Berthelot achieved a milestone synthetic route to benzene ($\\text{C}_6\\text{H}_6$) using a simple unsaturated gaseous hydrocarbon precursor. What chemical reaction and conditions define Berthelot's synthesis of benzene?",
+    "qh": "मार्सेलिन बर्थेलॉट ने एक सरल असंतृप्त गैसीय हाइड्रोकार्बन अग्रदूत का उपयोग करके बेंजीन ($\\text{C}_6\\text{H}_6$) के लिए एक मील का पत्थर सिंथेटिक मार्ग हासिल किया। कौन सी रासायनिक प्रतिक्रिया और स्थितियां बर्थेलॉट के बेंजीन के संश्लेषण को परिभाषित करती हैं?",
+    "oe": [
       "Decarboxylation of sodium benzoate using sodalime.",
-      "Trimerization of Acetylene ($\\\\text{C}_2\\\\text{H}_2$) gas by passing it through a red-hot iron tube at elevated temperatures.",
+      "Trimerization of Acetylene ($\\text{C}_2\\text{H}_2$) gas by passing it through a red-hot iron tube at elevated temperatures.",
       "Hydrogenation of cyclohexane over a platinum catalyst.",
       "Polymerization of ethylene gas under ultra-high pressure."
     ],
+    "oh": [
+      "सोडालाइम का उपयोग करके सोडियम बेंजोएट का डीकार्बोक्सिलेशन।",
+      "उच्च तापमान पर लाल-गर्म लोहे की नली से गुजारकर एसिटिलीन ($\\text{C}_2\\text{H}_2$) गैस का त्रितयीकरण (Trimerization)।",
+      "प्लैटिनम उत्प्रेरक पर साइक्लोहेक्सेन का हाइड्रोजनीकरण।",
+      "अत्यधिक उच्च दबाव में एथिलीन गैस का बहुलकीकरण।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes a standard laboratory preparation of benzene from benzoic acid. Option 1 is correct because French chemist **Marcellin Berthelot** synthesized benzene ($\\\\text{C}_6\\\\text{H}_6$) by passing gaseous **Acetylene ($\\\\text{C}_2\\\\text{H}_2$) through a Red-Hot Iron / Copper Tube at $600^\\\\circ\\\\text{C}$**, inducing **Cyclic Trimerization** [a polymerization reaction where three identical monomeric alkyne units combine to close a 6-membered conjugated ring]: $3\\\\text{C}_2\\\\text{H}_2 \\\\xrightarrow{\\\\text{Red-hot Fe tube, } 873\\\\text{ K}} \\\\text{C}_6\\\\text{H}_6$. Option 2 describes catalytic dehydrogenation, and Option 3 yields polyethylene."
+    "ee": "1. Option 0 describes the laboratory preparation of benzene from sodium benzoate and sodalime via decarboxylation.\n2. Option 1 is correct: In 1866, French chemist **Marcellin Berthelot** demonstrated the synthesis of aromatic benzene from an aliphatic precursor by passing **Acetylene ($\\text{C}_2\\text{H}_2$) gas through a red-hot iron or copper tube at approximately $600^\\circ\\text{C}$ ($873\\text{ K}$)**. Under these thermal conditions, three acetylene molecules undergo **cyclic trimerization**: $$3\\text{C}_2\\text{H}_2 \\xrightarrow{\\text{Red-hot Fe tube, } 873\\text{ K}} \\text{C}_6\\text{H}_6$$\n3. Option 2 describes dehydrogenation/hydrogenation reactions involving cyclohexane.\n4. Option 3 yields polyethylene plastic, not aromatic benzene.",
+    "eh": "1. विकल्प 0 गलत है: सोडियम बेंजोएट और सोडालाइम की अभिक्रिया प्रयोगशाला में बेंजीन बनाने की विधि है।\n2. विकल्प 1 सही है: 1866 में फ्रांसीसी वैज्ञानिक **मार्सेलिन बर्थेलॉट** ने **एसिटिलीन (एथाइन, $\\text{C}_2\\text{H}_2$) गैस को $600^\\circ\\text{C}$ (873 K) पर रक्त-तप्त लोहे (या तांबे) की नली से गुजारकर** चक्रीय त्रितयीकरण (Cyclic Trimerization) द्वारा बेंजीन का संश्लेषण किया था: $$3\\text{C}_2\\text{H}_2 \\xrightarrow{\\text{Red-hot Fe tube}} \\text{C}_6\\text{H}_6$$\n3. विकल्प 2 गलत है: साइक्लोहेक्सेन के विहाइड्रोजनीकरण से बेंजीन बनती है, परंतु यह बर्थेलॉट संश्लेषण नहीं है।\n4. विकल्प 3 गलत है: एथिलीन के बहुलकीकरण से पॉलिथीन प्राप्त होती है।"
   },
   {
     "p_id": "bpsc_chem_m17_14",
     "qe": "Liquefied Petroleum Gas (LPG) used in domestic cooking and industrial heating consists of a pressurized liquid mixture of specific light alkanes and alkenes. What are the major hydrocarbon constituents of LPG?",
     "qh": "घरेलू खाना पकाने और औद्योगिक हीटिंग में उपयोग किए जाने वाले तरलीकृत पेट्रोलियम गैस (LPG) में विशिष्ट हल्के एल्केन और एल्कीन का एक दबावयुक्त तरल मिश्रण होता है। LPG के प्रमुख हाइड्रोकार्बन घटक क्या हैं?",
-    "o": [
+    "oe": [
       "Methane ($80\\%$) and Ethylene ($20\\%$)",
       "Propane, $n$-Butane, Iso-butane, and Butene",
       "Pure Kerosene and Diesel fractions",
       "Benzene, Toluene, and Xylene"
     ],
+    "oh": [
+      "मीथेन ($80\\%$) और एथिलीन ($20\\%$)",
+      "प्रोपेन, $n$-ब्यूटेन, आइसो-ब्यूटेन और ब्यूटीन",
+      "शुद्ध मिट्टी का तेल और डीजल अंश",
+      "बेंजीन, टोल्यूनि और जाइलीन"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes Compressed Natural Gas (CNG), which is dominated by methane. Option 1 is correct because **Liquefied Petroleum Gas (LPG)** is derived from crude oil refining and natural gas processing, consisting predominantly of **Liquefiable C3 and C4 Hydrocarbons**: **Propane ($\\\\text{C}_3\\\\text{H}_8$), $n$-Butane ($\\\\text{C}_4\\\\text{H}_{10}$), Iso-butane**, and traces of **Butene ($\\\\text{C}_4\\\\text{H}_8$)**. Commercial LPG is pressurized into liquid form for compact storage; mercaptans (e.g., ethyl mercaptan) are added to impart a strong odor for leak detection. Option 2 lists liquid heavy fuels, and Option 3 lists aromatic solvents."
+    "ee": "1. Option 0 describes Compressed Natural Gas (CNG) and piped natural gas, which consist predominantly of methane ($85-95\\%$).\n2. Option 1 is correct: **Liquefied Petroleum Gas (LPG)** is composed of easily liquefiable light hydrocarbon gases, primarily **$n$-Butane ($\\text{C}_4\\text{H}_{10}$)** and **Isobutane**, along with significant proportions of **Propane ($\\text{C}_3\\text{H}_8$)** and small amounts of **Butene**. Under moderate pressure ($5-8\\text{ atmospheres}$), these gases condense into liquid form for compact storage in domestic cylinders. Ethyl mercaptan ($\\text{C}_2\\text{H}_5\\text{SH}$) is added as an odorant for leak detection.\n3. Option 2 describes medium-to-heavy liquid petroleum fuel fractions.\n4. Option 3 lists volatile liquid aromatic hydrocarbons used as industrial solvents.",
+    "eh": "1. विकल्प 0 गलत है: मीथेन सीएनजी (CNG) और प्राकृतिक गैस का मुख्य घटक होता है।\n2. विकल्प 1 सही है: **रसोई गैस या तरलीकृत पेट्रोलियम गैस (LPG)** मुख्य रूप से **ब्यूटेन ($n$-ब्यूटेन और आइसो-ब्यूटेन)** तथा **प्रोपेन ($\\text{C}_3\\text{H}_8$)** और कुछ मात्रा में **ब्यूटीन** का मिश्रण होती है। सिलेंडर में मध्यम दाब पर यह गैस द्रव रूप में रहती है। गैस रिसाव की पहचान के लिए इसमें तीखी गंध वाला 'एथिल मर्केप्टन' ($\\text{C}_2\\text{H}_5\\text{SH}$) मिलाया जाता है।\n3. विकल्प 2 गलत है: केरोसीन और डीजल भारी पेट्रोलियम अंश हैं।\n4. विकल्प 3 गलत है: बेंजीन और टोल्यूनि कार्बनिक विलायक हैं।"
   },
   {
     "p_id": "bpsc_chem_m17_15",
-    "qe": "Calcium Carbide ($\\\\text{CaC}_2$) reacts rapidly with ambient moisture or liquid water in an exothermic reaction. What gaseous alkine hydrocarbon is liberated during the hydrolysis of calcium carbide?",
-    "qh": "कैल्शियम कार्बाइड ($\\\\text{CaC}_2$) एक ऊष्माक्षेपी प्रतिक्रिया (exothermic reaction) में परिवेशी नमी या तरल पानी के साथ तेजी से प्रतिक्रिया करता है। कैल्शियम कार्बाइड के जलअपघटन (hydrolysis) के दौरान कौन सा गैसीय एल्काइन हाइड्रोकार्बन मुक्त होता है?",
-    "o": [
-      "Methane ($\\\\text{CH}_4$)",
-      "Acetylene (Ethyne, $\\\\text{C}_2\\\\text{H}_2$)",
-      "Ethylene ($\\\\text{C}_2\\\\text{H}_4$)",
-      "Propane ($\\\\text{C}_3\\\\text{H}_8$)"
+    "qe": "Calcium Carbide ($\\text{CaC}_2$) reacts rapidly with ambient moisture or liquid water in an exothermic reaction. What gaseous alkine hydrocarbon is liberated during the hydrolysis of calcium carbide?",
+    "qh": "कैल्शियम कार्बाइड ($\\text{CaC}_2$) एक ऊष्माक्षेपी प्रतिक्रिया (exothermic reaction) में परिवेशी नमी या तरल पानी के साथ तेजी से प्रतिक्रिया करता है। कैल्शियम कार्बाइड के जलअपघटन (hydrolysis) के दौरान कौन सा गैसीय एल्काइन हाइड्रोकार्बन मुक्त होता है?",
+    "oe": [
+      "Methane ($\\text{CH}_4$)",
+      "Acetylene (Ethyne, $\\text{C}_2\\text{H}_2$)",
+      "Ethylene ($\\text{C}_2\\text{H}_4$)",
+      "Propane ($\\text{C}_3\\text{H}_8$)"
+    ],
+    "oh": [
+      "मीथेन ($\\text{CH}_4$)",
+      "एसिटिलीन (एथाइन, $\\text{C}_2\\text{H}_2$)",
+      "एथिलीन ($\\text{C}_2\\text{H}_4$)",
+      "प्रोपेन ($\\text{C}_3\\text{H}_8$)"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is liberated by hydrolyzing aluminium carbide ($\\\\text{Al}_4\\\\text{C}_3$). Option 1 is correct because treating **Calcium Carbide ($\\\\text{CaC}_2$)** with liquid **Water ($\\\\text{H}_2\\\\text{O}$)** causes rapid hydrolysis, yielding calcium hydroxide and liberating flammable **Acetylene Gas ($\\\\text{C}_2\\\\text{H}_2$)**: $\\\\text{CaC}_2 + 2\\\\text{H}_2\\\\text{O} \\\\rightarrow \\\\text{Ca(OH)}_2 + \\\\text{C}_2\\\\text{H}_2\\\\uparrow$. This simple reaction was discovered by Thomas Willson (1892) and formed the historical basis for miner's carbide lamps and portable oxy-acetylene generators. Option 2 and Option 3 describe non-carbide hydrolysis products."
+    "ee": "1. Option 0 is liberated during the hydrolysis of aluminium carbide ($\\text{Al}_4\\text{C}_3 + 12\\text{H}_2\\text{O} \\rightarrow 4\\text{Al(OH)}_3 + 3\\text{CH}_4$).\n2. Option 1 is correct: When solid **Calcium Carbide ($\\text{CaC}_2$)** undergoes hydrolysis with cold liquid water, an exothermic reaction occurs to yield calcium hydroxide and liberate flammable **Acetylene (Ethyne, $\\text{C}_2\\text{H}_2$) gas**: $$\\text{CaC}_2\\text{(s)} + 2\\text{H}_2\\text{O(l)} \\rightarrow \\text{Ca(OH)}_2\\text{(aq)} + \\text{C}_2\\text{H}_2\\text{(g)}\\uparrow$$\n   This reaction is commonly used in portable carbide lamps and for in-situ generation of gas in oxy-acetylene welding torches.\n3. Option 2 describes an alkene formed by dehydrating ethanol, not by hydrolyzing calcium carbide.\n4. Option 3 is an alkane derived from petroleum gas.",
+    "eh": "1. विकल्प 0 गलत है: एल्युमिनियम कार्बाइड ($\\text{Al}_4\\text{C}_3$) के जल-अपघटन से मीथेन गैस बनती है।\n2. विकल्प 1 सही है: जब **कैल्शियम कार्बाइड ($\\text{CaC}_2$)** पर जल की अभिक्रिया कराई जाती है, तो बुझा हुआ चूना बनता है और अत्यधिक ज्वलनशील **एसिटिलीन (एथाइन, $\\text{C}_2\\text{H}_2$) गैस** मुक्त होती है: $$\\text{CaC}_2 + 2\\text{H}_2\\text{O} \\rightarrow \\text{Ca(OH)}_2 + \\text{C}_2\\text{H}_2\\uparrow$$\n   इस अभिक्रिया का उपयोग पुराने समय में खदानों में कार्बाइड लैंप जलाने और वेल्डिंग के लिए एसिटिलीन बनाने में किया जाता था।\n3. विकल्प 2 गलत है: एथिलीन अल्कोहल के निर्जलीकरण से बनती है।\n4. विकल्प 3 गलत है: प्रोपेन एक संतृप्त हाइड्रोकार्बन है जो प्राकृतिक गैस में पाया जाता है।"
   },
   {
     "p_id": "bpsc_chem_m17_16",
     "qe": "Petroleum refining separates crude oil into distinct boiling-point fractions via fractional distillation. Which choice correctly pairs a petroleum distillation fraction with its primary commercial utility?",
     "qh": "पेट्रोलियम संशोधन (Petroleum refining) प्रभाजी आसवन (fractional distillation) के माध्यम से कच्चे तेल को विशिष्ट क्वथनांक अंशों में अलग करता है। कौन सा विकल्प प्राथमिक वाणिज्यिक उपयोगिता के साथ पेट्रोलियम आसवन अंश को सही ढंग से जोड़ता है?",
-    "o": [
+    "oe": [
       "Asphalt / Tar: Aviation jet fuel for commercial aircraft",
       "Paraffin Wax: Ointments, candles, and waxed papers; Petrol (Gasoline): Motor fuel and solvent for dry cleaning",
       "Kerosene: Road surfacing and paint manufacturing",
       "Lubricating Oil: Fuel for domestic gas stoves"
     ],
+    "oh": [
+      "डामर / टार: वाणिज्यिक विमानों के लिए विमानन जेट ईंधन",
+      "पैराफिन मोम: मलहम, मोमबत्तियाँ, और मोमयुक्त कागज; पेट्रोल (गैसोलीन): मोटर ईंधन और ड्राई क्लीनिंग के लिए विलायक",
+      "मिट्टी का तेल (केरोसीन): सड़क की सतह और पेंट निर्माण",
+      "चिकनाई वाला तेल (ल्यूब्रिकेंट): घरेलू गैस स्टोव के लिए ईंधन"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies heavy asphalt as jet fuel (jet fuel is a refined kerosene fraction). Option 1 is correct because: (1) **Paraffin Wax** (heavy solid alkane residue) is utilized in manufacturing pharmaceutical ointments, candles, and waterproof waxed paper; (2) **Petrol (Gasoline)** ($40^\\circ\\text{C}-170^\\circ\\text{C}$ fraction) serves as light internal combustion engine fuel and an organic solvent for dry cleaning clothes. Option 2 swaps kerosene with asphalt (asphalt is used for road surfacing). Option 3 misuses lubricating oil as stove fuel."
+    "ee": "1. Option 0 is incorrect: Asphalt (bitumen) is the non-volatile residue used for road paving and roofing, while aviation fuel is a highly refined kerosene fraction.\n2. Option 1 is correct because fractional distillation separates crude petroleum by boiling ranges:\n   - **Petrol / Gasoline ($40^\\circ\\text{C}-170^\\circ\\text{C}$)**: Used as motor fuel for light internal combustion engines and as a non-polar solvent for dry cleaning textiles.\n   - **Paraffin Wax (solid residue above $400^\\circ\\text{C}$)**: Used in medical ointments, cosmetics (Vaseline base), candle making, and waterproofing waxed papers.\n3. Option 2 is incorrect: Kerosene ($170^\\circ\\text{C}-250^\\circ\\text{C}$) is used as household lamp fuel and jet fuel, not for road surfacing.\n4. Option 3 is incorrect: Lubricating oil reduces mechanical friction in machinery, not as stove fuel.",
+    "eh": "1. विकल्प 0 गलत है: डामर (बिटुमेन) का उपयोग सड़क निर्माण में होता है, विमानन ईंधन में केरोसीन अंश का उपयोग होता है।\n2. विकल्प 1 सही है क्योंकि प्रभाजी आसवन के दौरान प्राप्त घटकों के सही उपयोग निम्न हैं:\n   - **पेट्रोल (गैसोलीन):** हल्के वाहनों के आंतरिक दहन इंजन के ईंधन तथा ड्राई क्लीनिंग में विलायक के रूप में।\n   - **पैराफिन मोम:** औषधीय मलहम, वैसलीन, मोमबत्तियाँ और वाटरप्रूफ वैक्स पेपर बनाने में।\n3. विकल्प 2 गलत है: मिट्टी का तेल (केरोसीन) घरेलू लालटेन और जेट इंजनों का ईंधन है, सड़क बनाने के लिए डामर प्रयुक्त होता है।\n4. विकल्प 3 गलत है: ल्यूब्रिकेटिंग ऑयल का उपयोग मशीनों में घर्षण कम करने के लिए किया जाता है।"
   },
   {
     "p_id": "bpsc_chem_m17_17",
     "qe": "Certain organic halogenated derivatives derived from hydrocarbons possess specialized industrial applications. What derivative of ethylene is deployed for dry cleaning clothes, and what alkene derivative forms the synthetic rubber Neoprene?",
     "qh": "हाइड्रोकार्बन से व्युत्पन्न कुछ कार्बनिक हैलोजेनेटेड डेरिवेटिव विशेष औद्योगिक अनुप्रयोगों को धारण करते हैं। कपड़े ड्राई क्लीनिंग के लिए एथिलीन का कौन सा व्युत्पन्न तैनात किया जाता है, और कौन सा एल्कीन व्युत्पन्न सिंथेटिक रबर नियोप्रिन (Neoprene) बनाता है?",
-    "o": [
+    "oe": [
       "Dry cleaning derivative: Chloroform; Neoprene precursor: Benzene",
       "Dry cleaning derivative: Trichloroethylene; Neoprene precursor: Chloroprene (derived from Acetylene)",
       "Dry cleaning derivative: Carbon tetrachloride; Neoprene precursor: Methane",
       "Dry cleaning derivative: Vinyl chloride; Neoprene precursor: Ethane"
     ],
+    "oh": [
+      "ड्राई क्लीनिंग व्युत्पन्न: क्लोरोफॉर्म; नियोप्रिन अग्रदूत: बेंजीन",
+      "ड्राई क्लीनिंग व्युत्पन्न: ट्राइक्लोरोएथिलीन; नियोप्रिन अग्रदूत: क्लोरोप्रीन (एसिटिलीन से व्युत्पन्न)",
+      "ड्राई क्लीनिंग व्युत्पन्न: कार्बन टेट्राक्लोराइड; नियोप्रिन अग्रदूत: मीथेन",
+      "ड्राई क्लीनिंग व्युत्पन्न: विनाइल क्लोराइड; नियोप्रिन अग्रदूत: एथेन"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies chloroform and benzene. Option 1 is correct because **Trichloroethylene ($\\\\text{CHCl}=\\\\text{CCl}_2$)**, a chlorinated solvent derivative of ethylene, is widely used for industrial metal degreasing and **Dry Cleaning Textiles**. Additionally, reacting **Acetylene** yields vinylacetylenes that react with $\\\\text{HCl}$ to form **Chloroprene (2-chloro-1,3-butadiene)**, which polymerizes to produce **Neoprene** [a synthetic oil-resistant elastomer rubber]. Option 2 and Option 3 list non-polymerizing or basic solvent precursors."
+    "ee": "1. Option 0 is incorrect: Chloroform is an anesthetic/solvent from methane, and benzene forms styrene-butadiene rubber (SBR), not neoprene.\n2. Option 1 is correct because:\n   - **Trichloroethylene (TCE, $\\text{CHCl}=\\text{CCl}_2$)** and tetrachloroethylene (PCE) are non-flammable chlorinated derivatives of ethylene widely deployed as commercial dry-cleaning solvents for delicate fabrics.\n   - **Chloroprene (2-chloro-1,3-butadiene)** is synthesized industrially from acetylene via dimerization to vinylacetylene followed by $\\text{HCl}$ addition; its polymerization yields **Neoprene**, an oil- and weather-resistant synthetic rubber.\n3. Option 2 is incorrect: Methane does not polymerize to neoprene.\n4. Option 3 is incorrect: Vinyl chloride polymerizes to PVC plastic, not neoprene rubber.",
+    "eh": "1. विकल्प 0 गलत है: क्लोरोफॉर्म एनेस्थीसिया के लिए जाना जाता है और बेंजीन से नियोप्रीन नहीं बनता।\n2. विकल्प 1 सही है क्योंकि:\n   - एथिलीन का क्लोरीन व्युत्पन्न **ट्राइक्लोरोएथिलीन ($\\text{CHCl}=\\text{CCl}_2$)** कपड़ों की व्यावसायिक ड्राई क्लीनिंग और धातुओं की ग्रीस हटाने के लिए एक प्रमुख विलायक है।\n   - एसिटिलीन से बनने वाला **क्लोरोप्रीन (2-क्लोरो-1,3-ब्यूटाडाईन)** बहुलकीकृत होकर **नियोप्रिन (Neoprene)** नामक तेल-प्रतिरोधी सिंथेटिक रबर बनाता है।\n3. विकल्प 2 गलत है: मीथेन से नियोप्रीन रबर का निर्माण नहीं होता।\n4. विकल्प 3 गलत है: विनाइल क्लोराइड से पीवीसी (PVC) प्लास्टिक बनता है।"
   },
   {
     "p_id": "bpsc_chem_m17_18",
     "qe": "Methane gas undergoes incomplete oxidation or pyrolytic decomposition under restricted air conditions to form a fine carbon residue. What is the commercial name of this carbon form, and what are its major industrial applications?",
     "qh": "प्रतिबंधित वायु स्थितियों के तहत मीथेन गैस अधूरा ऑक्सीकरण या पाइरोलाइटिक अपघटन से गुजरती है जिससे एक महीन कार्बन अवशेष बनता है। इस कार्बन रूप का वाणिज्यिक नाम क्या है, और इसके प्रमुख औद्योगिक अनुप्रयोग क्या हैं?",
-    "o": [
+    "oe": [
       "Commercial name: Activated Charcoal; Applications: Water filtration beds",
       "Commercial name: Carbon Black; Applications: Printing inks, motor vehicle tyres, and black industrial pigments",
       "Commercial name: Coal Tar; Applications: Antiseptic soaps",
       "Commercial name: Graphite powder; Applications: Nuclear moderators"
     ],
+    "oh": [
+      "वाणिज्यिक नाम: सक्रिय लकड़ी का कोयला (Activated Charcoal); अनुप्रयोग: जल निस्पंदन बेड",
+      "वाणिज्यिक नाम: कार्बन ब्लैक (Carbon Black); अनुप्रयोग: प्रिंटिंग स्याही, मोटर वाहन टायर, और काले औद्योगिक वर्णक",
+      "वाणिज्यिक नाम: कोलतार (Coal Tar); अनुप्रयोग: एंटीसेप्टिक साबुन",
+      "वाणिज्यिक नाम: ग्रेफाइट पाउडर; अनुप्रयोग: परमाणु मंदक"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes porous wood charcoal. Option 1 is correct because controlled thermal cracking or incomplete combustion of **Methane ($\\\\text{CH}_4$)** yields **Carbon Black** [a finely divided, amorphous high-surface-area elemental carbon powder]: $\\\\text{CH}_4 \\\\xrightarrow{\\\\Delta, \\\\text{limited } \\\\text{O}_2} \\\\text{C (Carbon Black)} + 2\\\\text{H}_2$. Carbon black is an indispensable industrial reinforcing filler used in manufacturing **Automobile Rubber Tyres**, black printing inks, paints, plastics, and industrial black pigments. Option 2 and Option 3 describe coal derivatives or nuclear moderators."
+    "ee": "1. Option 0 is incorrect: Activated charcoal is produced by the carbonization and steam activation of wood or coconut shells, not the gas-phase incomplete combustion of methane.\n2. Option 1 is correct because when methane ($\\text{CH}_4$) is subjected to thermal cracking ($1000^\\circ\\text{C}$) or incomplete combustion in a limited supply of oxygen, it decomposes into elemental carbon and hydrogen gas: $$\\text{CH}_4\\text{(g)} \\xrightarrow{\\Delta, \\text{ limited } \\text{O}_2} \\text{C(s) (Carbon Black)} + 2\\text{H}_2\\text{(g)}$$\n   This finely divided colloidal form of amorphous carbon is known commercially as **Carbon Black**. It is utilized as a reinforcing filler in **automobile rubber tyres** to enhance durability and tensile strength, and as a pigment in black printing inks, paints, toners, and polishes.\n3. Option 2 describes coal tar from bituminous coal pyrolysis.\n4. Option 3 describes crystalline graphite.",
+    "eh": "1. विकल्प 0 गलत है: सक्रिय चारकोल लकड़ी या नारियल के छिलकों से बनाया जाता है, गैस के अपघटन से नहीं।\n2. विकल्प 1 सही है क्योंकि जब मीथेन ($\\text{CH}_4$) को वायु की सीमित मात्रा में जलाया जाता है या उच्च ताप पर अपघटित किया जाता है, तो अत्यंत बारीक चूर्ण के रूप में अक्रिस्टलीय कार्बन प्राप्त होता है, जिसे **'कार्बन ब्लैक' (Carbon Black)** कहते हैं: $$\\text{CH}_4 \\xrightarrow{\\text{सीमित } \\text{O}_2} \\text{C (कार्बन ब्लैक)} + 2\\text{H}_2$$\n   इसका सबसे बड़ा उपयोग **ऑटोमोबाइल वाहनों के रबर टायरों में मजबूती प्रदान करने वाले फिलर के रूप में**, प्रिंटिंग प्रेस की काली स्याही, जूते की पॉलिश और पेंट उद्योग में किया जाता है।\n3. विकल्प 2 गलत है: कोलतार कोयले के भंजक आसवन से प्राप्त होता है।\n4. विकल्प 3 गलत है: ग्रेफाइट एक प्राकृतिक क्रिस्टलीय रूप है।"
   },
   {
     "p_id": "bpsc_chem_m17_19",
     "qe": "Motor fuel blends marketed as 'Benzol' generate methane during engine combustion and serve as alternative internal combustion fuels. What is the chemical composition of Benzol?",
     "qh": "मोटर ईंधन के रूप में विपणन किए जाने वाले मिश्रण जिन्हें 'बेंज़ोल' (Benzol) कहा जाता है, इंजन दहन के दौरान मीथेन उत्पन्न करते हैं और वैकल्पिक आंतरिक दहन ईंधन के रूप में कार्य करते हैं। बेंज़ोल की रासायनिक संरचना क्या है?",
-    "o": [
-      "Pure liquid methane compressed at $-160^\\\\circ\\\\text{C}$",
+    "oe": [
+      "Pure liquid methane compressed at $-160^\\circ\\text{C}$",
       "A motor fuel mixture consisting predominantly of Benzene blended with Toluene, Xylene, and petrol hydrocarbons",
       "Solid paraffin wax dissolved in ethyl alcohol",
       "Equal parts of sodalime and ammonium cyanate"
     ],
+    "oh": [
+      "$-160^\\circ\\text{C}$ पर संपीड़ित शुद्ध तरल मीथेन",
+      "एक मोटर ईंधन मिश्रण जिसमें मुख्य रूप से टोल्यूनि, जाइलीन और पेट्रोल हाइड्रोकार्बन के साथ मिश्रित बेंजीन शामिल है",
+      "एथिल अल्कोहल में घुला हुआ ठोस पैराफिन मोम",
+      "सोडालाइम और अमोनियम सायनेट के बराबर भाग"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes Liquefied Natural Gas (LNG). Option 1 is correct because **Benzol** (or commercial benzole) is a refined liquid aromatic hydrocarbon mixture obtained as a byproduct of coal carbonization or petroleum cracking. It consists primarily of **Benzene ($\\\\sim 70-80\\%$)** blended with **Toluene, Xylene**, and light petroleum distillates. Benzol is blended directly into gasoline to act as an anti-knock high-octane **Motor Fuel** and solvent. Option 2 describes solid wax solutions, and Option 3 lists inorganic synthesis salts."
+    "ee": "1. Option 0 describes Liquefied Natural Gas (LNG).\n2. Option 1 is correct because **Benzol** (or commercial benzole) is a liquid motor fuel blend obtained as a light-oil byproduct of the high-temperature carbonization of coal. It consists primarily of **Benzene ($\\approx 70-80\\%$)** blended with homologous aromatic hydrocarbons—**Toluene ($\\approx 15-20\\%$)** and **Xylene ($\\approx 5\\%$)**—and light petroleum fractions. Due to its high octane rating, benzol was historically used as an anti-knock motor fuel and blending component in aviation and automobile gasoline.\n3. Option 2 describes an insoluble wax-alcohol mixture.\n4. Option 3 lists solid laboratory inorganic reagents.",
+    "eh": "1. विकल्प 0 गलत है: $-160^\\circ\\text{C}$ पर संपीड़ित मीथेन को एलएनजी (LNG) कहा जाता है।\n2. विकल्प 1 सही है: **बेंज़ोल (Benzol)** कोयले के आसवन से प्राप्त एक तरल हाइड्रोकार्बन ईंधन मिश्रण है, जिसमें मुख्य रूप से **बेंजीन (लगभग 70-80%)**, **टोल्यूनि (15-20%)**, **जाइलीन (5%)** और कुछ मात्रा में पेट्रोल शामिल होते हैं। उच्च ऑक्टेन संख्या के कारण इसका उपयोग ऑटोमोबाइल इंजनों में एंटी-नॉकिंग मोटर ईंधन के रूप में किया जाता है।\n3. विकल्प 2 गलत है: मोम और अल्कोहल का मिश्रण मोटर ईंधन नहीं है।\n4. विकल्प 3 गलत है: यह अकार्बनिक प्रयोगशाला रसायनों का मिश्रण है।"
   },
   {
     "p_id": "bpsc_chem_m17_20",
-    "qe": "Evaluating the structural geometry and bond angles of methane ($\\\\text{CH}_4$) reveals symmetrical $sp^3$ hybridization. What is the precise geometric shape and bond angle between $\\\\text{H-C-H}$ bonds in a methane molecule?",
-    "qh": "मीथेन ($\\\\text{CH}_4$) की संरचनात्मक ज्यामिति और बॉन्ड कोणों का मूल्यांकन सममित $sp^3$ संकरण को प्रकट करता है। मीथेन अणु में $\\\\text{H-C-H}$ बांड के बीच सटीक ज्यामितीय आकार और बांड कोण क्या है?",
-    "o": [
+    "qe": "Evaluating the structural geometry and bond angles of methane ($\\text{CH}_4$) reveals symmetrical $sp^3$ hybridization. What is the precise geometric shape and bond angle between $\\text{H-C-H}$ bonds in a methane molecule?",
+    "qh": "मीथेन ($\\text{CH}_4$) की संरचनात्मक ज्यामिति और बॉन्ड कोणों का मूल्यांकन सममित $sp^3$ संकरण को प्रकट करता है। मीथेन अणु में $\\text{H-C-H}$ बांड के बीच सटीक ज्यामितीय आकार और बांड कोण क्या है?",
+    "oe": [
       "Shape: Square planar; Bond Angle: $90^\\circ$",
       "Shape: Tetrahedral; Bond Angle: $109^\\circ 28'$ ($109.5^\\circ$)",
       "Shape: Trigonal planar; Bond Angle: $120^\\circ$",
       "Shape: Linear; Bond Angle: $180^\\circ$"
     ],
+    "oh": [
+      "आकार: वर्ग समतलीय (Square planar); बांड कोण: $90^\\circ$",
+      "आकार: चतुष्फलकीय (Tetrahedral); बांड कोण: $109^\\circ 28'$ ($109.5^\\circ$)",
+      "आकार: त्रिकोणीय समतलीय (Trigonal planar); बांड कोण: $120^\\circ$",
+      "आकार: रैखिक (Linear); बांड कोण: $180^\\circ$"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies $sp^3$ geometry as square planar (which belongs to $dsp^2$ complexes). Option 1 is correct because the central carbon atom in **Methane ($\\\\text{CH}_4$)** undergoes **$sp^3$ Hybridization**, combining its one $2s$ and three $2p$ atomic orbitals to form four equivalent $sp^3$ hybrid orbitals directed toward the corners of a regular tetrahedron. This establishes a **Tetrahedral Geometry** with four equivalent $\\\\text{C-H}$ $\\\\sigma$-bonds oriented at the classic bond angle of **$109^\\circ 28'$** ($109.5^\\circ$). Option 2 describes $sp^2$ trigonal planar geometry, and Option 3 describes $sp$ linear geometry."
+    "ee": "1. Option 0 describes $dsp^2$-hybridized square planar geometries (like $[\\text{PtCl}_4]^{2-}$ and $\\text{XeF}_4$).\n2. Option 1 is correct because in **Methane ($\\text{CH}_4$)**, the central carbon atom undergoes **$sp^3$ Hybridization**, combining one $2s$ and three $2p$ atomic orbitals to produce four equivalent hybrid orbitals directed toward the vertices of a regular polyhedron. Because there are four single $\\text{C}-\\text{H}$ $\\sigma$-bonding pairs and zero unshared lone pairs, mutual electrostatic repulsion is minimized in a three-dimensional **Tetrahedral Geometry** with all four $\\text{H}-\\text{C}-\\text{H}$ bond angles equal to **$109^\\circ 28'$ (or $109.5^\\circ$)**.\n3. Option 2 describes $sp^2$-hybridized trigonal planar molecules like $\\text{BF}_3$ or $\\text{C}_2\\text{H}_4$.\n4. Option 3 describes $sp$-hybridized linear molecules like $\\text{BeCl}_2$ or $\\text{C}_2\\text{H}_2$.",
+    "eh": "1. विकल्प 0 गलत है: वर्ग समतलीय ज्यामिति $dsp^2$ संकरण (जैसे $[\\text{PtCl}_4]^{2-}$) में $90^\\circ$ कोण पर होती है।\n2. विकल्प 1 सही है: **मीथेन ($\\text{CH}_4$)** में केंद्रीय कार्बन परमाणु $sp^3$ संकरित होता है, जिसमें 4 सिग्मा बंध और शून्य एकाकी इलेक्ट्रॉन युग्म होते हैं। VSEPR सिद्धांत के अनुसार चारों $\\text{C}-\\text{H}$ बंध अंतरिक्ष में एक-दूसरे से अधिकतम दूरी पर रहते हुए एक नियमित **चतुष्फलकीय (Tetrahedral)** ज्यामिति बनाते हैं, जिसमें प्रत्येक $\\text{H}-\\text{C}-\\text{H}$ बंध कोण **$109^\\circ 28'$ ($109.5^\\circ$)** का होता है।\n3. विकल्प 2 गलत है: त्रिकोणीय समतलीय आकार $sp^2$ संकरण (जैसे $\\text{BF}_3$) में होता है।\n4. विकल्प 3 गलत है: $180^\\circ$ का रैखिक कोण $sp$ संकरण में होता है।"
   },
-  
   {
     "p_id": "bpsc_chem_m18_01",
-    "qe": "Methanol ($\\\\text{CH}_3\\\\text{OH}$) is historically known as wood spirit. What is the physiological mechanism by which the human body converts ingested methanol into a compound that causes irreversible blindness and cellular destruction?",
-    "qh": "मेथनॉल ($\\\\text{CH}_3\\\\text{OH}$) को ऐतिहासिक रूप से वुड स्पिरिट के नाम से जाना जाता है। मानव शरीर किस शारीरिक तंत्र द्वारा अंतर्ग्रहीत मेथनॉल को एक ऐसे यौगिक में परिवर्तित करता है जो अपरिवर्तनीय अंधापन और कोशिकीय विनाश का कारण बनता है?",
-    "o": [
+    "qe": "Methanol ($\\text{CH}_3\\text{OH}$) is historically known as wood spirit. What is the physiological mechanism by which the human body converts ingested methanol into a compound that causes irreversible blindness and cellular destruction?",
+    "qh": "मेथनॉल ($\\text{CH}_3\\text{OH}$) को ऐतिहासिक रूप से वुड स्पिरिट के नाम से जाना जाता है। मानव शरीर किस शारीरिक तंत्र द्वारा अंतर्ग्रहीत मेथनॉल को एक ऐसे यौगिक में परिवर्तित करता है जो अपरिवर्तनीय अंधापन और कोशिकीय विनाश का कारण बनता है?",
+    "oe": [
       "Methanol hydrolyzes directly into sulfuric acid, which corrodes the digestive tract wall.",
       "In the liver, methanol is oxidized to methanal (formaldehyde), which reacts rapidly with cellular components to cause protoplasm coagulation.",
       "Methanol binds irreversibly to hemoglobin, completely blocking oxygen transport to the brain.",
       "Methanol precipitates as calcium oxalate crystals inside the optic nerve fibers."
     ],
+    "oh": [
+      "मेथनॉल सीधे सल्फ्यूरिक अम्ल में हाइड्रोलाइज हो जाता है, जो पाचन तंत्र की दीवार को संक्षारित करता है।",
+      "यकृत (लिवर) में, मेथनॉल मेथैनल (फॉर्मेल्डिहाइड) में ऑक्सीकृत होता है, जो प्रोटोप्लाज्म स्कंदन का कारण बनने के लिए सेलुलर घटकों के साथ तेजी से प्रतिक्रिया करता है।",
+      "मेथनॉल हीमोग्लोबिन से अपरिवर्तनीय रूप से बंध जाता है, जिससे मस्तिष्क में ऑक्सीजन का परिवहन पूरी तरह से अवरुद्ध हो जाता है।",
+      "मेथनॉल ऑप्टिक तंत्रिका तंतुओं के अंदर कैल्शियम ऑक्सालेट क्रिस्टल के रूप में अवक्षेपित होता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies methanol toxicity as direct acid corrosion. Option 1 is correct because when **Methyl Alcohol / Methanol ($\\\\text{CH}_3\\\\text{OH}$)** is ingested, the hepatic enzyme alcohol dehydrogenase oxidizes it in the liver to **Methanal (Formaldehyde, $\\\\text{HCHO}$)**. Methanal is exceptionally reactive and rapidly cross-links with cellular proteins and nucleic acids, causing **Protoplasm Coagulation** [the irreversible precipitation and denaturing of intracellular protein gel complexes]. This cellular destruction damages the optic nerve, causing permanent blindness, and high doses lead to systemic organ failure and death. Option 2 describes carbon monoxide poisoning. Option 3 confuses methanol metabolism with oxalic acid pathology."
+    "ee": "1. Option 0 is incorrect: Methanol is a neutral organic alcohol and does not hydrolyze into inorganic sulfuric acid.\n2. Option 1 is correct: When **Methanol (Methyl Alcohol, $\\text{CH}_3\\text{OH}$)** is ingested, it is metabolized in the liver by the enzyme alcohol dehydrogenase into **Methanal (Formaldehyde, $\\text{HCHO}$)** and subsequently into formic acid. Formaldehyde is a potent protein cross-linker that reacts rapidly with intracellular proteins, causing **Protoplasm Coagulation** (denaturation of cell proteins), which destroys retinal ganglion cells, leading to permanent optic nerve damage and blindness, followed by metabolic acidosis and death.\n3. Option 2 describes carbon monoxide poisoning, which forms carboxyhemoglobin.\n4. Option 3 confuses methanol toxicity with ethylene glycol toxicity, which precipitates calcium oxalate in renal tubules.",
+    "eh": "1. विकल्प 0 गलत है: मेथनॉल सल्फ्यूरिक एसिड में नहीं बदलता।\n2. विकल्प 1 सही है: जब **मेथनॉल (वुड स्पिरिट, $\\text{CH}_3\\text{OH}$)** शरीर में प्रवेश करता है, तो यकृत में 'अल्कोहल डिहाइड्रोजनेज' एंजाइम द्वारा इसका ऑक्सीकरण **मेथैनल (फॉर्मेल्डिहाइड, $\\text{HCHO}$)** में हो जाता है। फॉर्मेल्डिहाइड अत्यधिक विषैला होता है और यह कोशिकाओं के **जीवद्रव्य (Protoplasm) को जमा (Coagulate) देता है**। यह ऑप्टिक तंत्रिका की कोशिकाओं को नष्ट कर देता है जिससे व्यक्ति स्थायी रूप से अंधा हो जाता है और अधिक मात्रा में सेवन से मृत्यु हो जाती है।\n3. विकल्प 2 गलत है: हीमोग्लोबिन से बंधकर ऑक्सीजन अवरुद्ध करना कार्बन मोनोऑक्साइड (CO) का लक्षण है।\n4. विकल्प 3 गलत है: कैल्शियम ऑक्सालेट के क्रिस्टल एथिलीन ग्लाइकोल से बनते हैं।"
   },
   {
     "p_id": "bpsc_chem_m18_02",
     "qe": "Law enforcement agencies use chemical breathalyzer tests to detect blood alcohol levels in suspected drunk drivers. What specific chemical reagent is present in the testing bag, and what distinct color change confirms the presence of ethanol?",
     "qh": "कानून प्रवर्तन एजेंसियां संदिग्ध शराबी ड्राइवरों में रक्त अल्कोहल के स्तर का पता लगाने के लिए रासायनिक ब्रीथलाइज़र परीक्षणों का उपयोग करती हैं। परीक्षण बैग में कौन सा विशिष्ट रासायनिक अभिकर्मक मौजूद होता है, और कौन सा विशिष्ट रंग परिवर्तन इथेनॉल की उपस्थिति की पुष्टि करता है?",
-    "o": [
+    "oe": [
       "Potassium permanganate solution; turns from purple to colorless.",
-      "Acidified Sodium Dichromate ($\\\\text{Na}_2\\\\text{Cr}_2\\\\text{O}_7$) solution; converts from Orange to Green upon oxidation of ethanol.",
+      "Acidified Sodium Dichromate ($\\text{Na}_2\\text{Cr}_2\\text{O}_7$) solution; converts from Orange to Green upon oxidation of ethanol.",
       "Copper sulfate solution; turns from blue to deep red precipitate.",
       "Ferric chloride solution; turns from yellow to deep violet complex."
     ],
+    "oh": [
+      "पोटेशियम परमैंगनेट घोल; बैंगनी से रंगहीन हो जाता है।",
+      "अम्लीकृत सोडियम डाइक्रोमेट ($\\text{Na}_2\\text{Cr}_2\\text{O}_7$) घोल; इथेनॉल के ऑक्सीकरण पर नारंगी से हरे रंग में परिवर्तित होता है।",
+      "कॉपर सल्फेट घोल; नीले से गहरे लाल अवक्षेप में बदल जाता है।",
+      "फेरिक क्लोराइड घोल; पीले से गहरे बैंगनी रंग के संकुल में बदल जाता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes a general permanganate reduction test not used in standard breathalyzers. Option 1 is correct because classic roadside chemical breathalyzer bags contain an **Acidified Sodium Dichromate ($\\\\text{Na}_2\\\\text{Cr}_2\\\\text{O}_7$)** or potassium dichromate solution. Exhalations containing **Ethanol ($\\\\text{C}_2\\\\text{H}_5\\\\text{OH}$)** reduce the orange hexavalent chromium ions ($\\\\text{Cr}^{6+}$) to green trivalent chromium ions ($\\\\text{Cr}^{3+}$), while ethanol is oxidized to acetic acid. The quantitative visual shift from **Orange to Green** directly indicates alcohol concentration. Option 2 describes Fehling's test for reducing sugars, and Option 3 describes the neutral $\\\\text{FeCl}_3$ test for phenols."
+    "ee": "1. Option 0 is a general Baeyer/permanganate redox test not used in classic breathalyzer tubes.\n2. Option 1 is correct: Traditional chemical breathalyzers contain an **Acidified Sodium (or Potassium) Dichromate solution ($\\text{Cr}_2\\text{O}_7^{2-}/\\text{H}^+$)** impregnated on silica crystals. When breath containing volatile **Ethanol ($\\text{C}_2\\text{H}_5\\text{OH}$)** is blown into the device, ethanol is oxidized to acetic acid ($\\text{CH}_3\\text{COOH}$), reducing hexavalent chromium ($\\text{Cr}^{6+}$, orange) to trivalent chromium ($\\text{Cr}^{3+}$, green): $$2\\text{Cr}_2\\text{O}_7^{2-}\\text{ (Orange)} + 3\\text{C}_2\\text{H}_5\\text{OH} + 16\\text{H}^+ \\rightarrow 4\\text{Cr}^{3+}\\text{ (Green)} + 3\\text{CH}_3\\text{COOH} + 11\\text{H}_2\\text{O}$$\n   The visible color change from **Orange to Green** confirms the presence of alcohol.\n3. Option 2 describes Fehling's/Benedict's test for reducing sugars.\n4. Option 3 describes the neutral $\\text{FeCl}_3$ test for phenolic groups.",
+    "eh": "1. विकल्प 0 गलत है: पोटेशियम परमैंगनेट का उपयोग सामान्य प्रयोगशाला परीक्षणों में होता है, ब्रीथलाइज़र में नहीं।\n2. विकल्प 1 सही है: शराब पीकर गाड़ी चलाने वालों की जाँच के लिए पारंपरिक ब्रीथलाइज़र (Breathalyzer) में **अम्लीकृत सोडियम/पोटेशियम डाइक्रोमेट ($\\text{K}_2\\text{Cr}_2\\text{O}_7 / \\text{H}_2\\text{SO}_4$)** का उपयोग किया जाता है। जब सांस में उपस्थित इथेनॉल (शराब) इससे गुजरता है, तो डाइक्रोमेट आयन ($\\text{Cr}^{6+}$, **नारंगी रंग**) अपचयित होकर क्रोमियम आयन ($\\text{Cr}^{3+}$, **हरा रंग**) में बदल जाते हैं, और इथेनॉल एसिटिक अम्ल में ऑक्सीकृत हो जाता है। यह नारंगी से हरे रंग में परिवर्तन शराब की पुष्टि करता है।\n3. विकल्प 2 गलत है: यह फेलिंग परीक्षण है जो शर्करा के लिए होता है।\n4. विकल्प 3 गलत है: यह फिनोल की पहचान का परीक्षण है।"
   },
   {
     "p_id": "bpsc_chem_m18_03",
     "qe": "Automotive cooling systems operating in sub-zero polar or winter climates require specialized chemical additives to prevent engine block cracking. Which dihydric alcohol serves as an antifreeze agent in car radiators?",
     "qh": "शून्य से नीचे ध्रुवीय या सर्दियों के मौसम में चलने वाले ऑटोमोटिव कूलिंग सिस्टम को इंजन ब्लॉक को फटने से रोकने के लिए विशेष रासायनिक एडिटिव्स की आवश्यकता होती है। कार के रेडिएटर में कौन सा डाइहाइड्रिक अल्कोहल एंटीफ्रीज एजेंट के रूप में कार्य करता है?",
-    "o": [
+    "oe": [
       "Methanol",
-      "Ethylene Glycol ($\\\\text{CH}_2\\\\text{OH-CH}_2\\\\text{OH}$)",
+      "Ethylene Glycol ($\\text{CH}_2\\text{OH-CH}_2\\text{OH}$)",
       "Glycerol",
       "Phenol"
     ],
+    "oh": [
+      "मेथनॉल",
+      "एथिलीन ग्लाइकॉल ($\\text{CH}_2\\text{OH-CH}_2\\text{OH}$)",
+      "ग्लिसरॉल",
+      "फिनोल"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is a volatile monohydric alcohol used as solvent or fuel. Option 1 is correct because **Ethylene Glycol ($\\\\text{CH}_2\\\\text{OH-CH}_2\\\\text{OH}$)** is a **Dihydric Alcohol** [an organic compound containing exactly two hydroxyl ($-\\\\text{OH}$) functional groups on adjacent carbon atoms]. When mixed with water in automotive radiators, it disrupts hydrogen-bonding networks, sharply **depressing the freezing point of water** (down to $-37^\\\\circ\\\\text{C}$) and raising its boiling point. This prevents liquid coolant from freezing and expanding inside engine blocks during extreme cold. Option 2 is a trihydric alcohol, and Option 3 is an aromatic phenol."
+    "ee": "1. Option 0 is a volatile monohydric alcohol that can evaporate too quickly to serve as a long-term engine coolant.\n2. Option 1 is correct: **Ethylene Glycol (Ethane-1,2-diol, $\\text{HO}-\\text{CH}_2-\\text{CH}_2-\\text{OH}$)** is a viscous **Dihydric Alcohol** containing two hydroxyl groups. When mixed with water in an automobile radiator (typically a $50:50$ volume mixture), its strong intermolecular hydrogen-bonding interactions disrupt the regular ice crystal lattice, causing a major **Depression in Freezing Point** (lowering the freezing point down to $-37^\\circ\\text{C}$) while simultaneously elevating the boiling point (preventing summertime overheating), thus serving as an essential engine **Antifreeze**.\n3. Option 2 is a trihydric alcohol used in pharmaceuticals and explosives.\n4. Option 3 is an aromatic hydroxy compound used as an antiseptic.",
+    "eh": "1. विकल्प 0 गलत है: मेथनॉल अत्यधिक वाष्पशील मोनोहाइड्रिक अल्कोहल है।\n2. विकल्प 1 सही है: **एथिलीन ग्लाइकॉल ($\\text{CH}_2\\text{OH}-\\text{CH}_2\\text{OH}$)** एक डाइहाइड्रिक अल्कोहल (दो $-\\text{OH}$ समूह वाला) है। अत्यधिक ठंडे या बर्फीले इलाकों में कारों के रेडिएटर के पानी में इसे मिलाने पर यह जल के **हिमांक में अवनमन (Depression in freezing point)** कर देता है, जिससे पानी $-37^\\circ\\text{C}$ तक भी नहीं जमता और इंजन ब्लॉक फटने से बच जाता है। इसलिए इसे वाहनों में **'एंटीफ्रीज' (प्रशीतक/प्रतिहिम)** के रूप में प्रयोग किया जाता है।\n3. विकल्प 2 गलत है: ग्लिसरॉल ट्राईहाइड्रिक अल्कोहल है।\n4. विकल्प 3 गलत है: फिनोल एक एरोमैटिक यौगिक है।"
   },
   {
     "p_id": "bpsc_chem_m18_04",
     "qe": "Nitroglycerine is a potent high explosive used in dynamite manufacturing. What polyhydric alcohol precursor is reacted with concentrated nitric acid in the presence of concentrated sulfuric acid to synthesize nitroglycerine?",
     "qh": "नाइट्रोग्लिसरीन डायनामाइट निर्माण में इस्तेमाल होने वाला एक शक्तिशाली उच्च विस्फोटक है। नाइट्रोग्लिसरीन के संश्लेषण के लिए सांद्र सल्फ्यूरिक अम्ल की उपस्थिति में किस पॉलीहाइड्रिक अल्कोहल अग्रदूत को सांद्र नाइट्रिक अम्ल के साथ प्रतिक्रिया कराई जाती है?",
-    "o": [
+    "oe": [
       "Ethanol",
-      "Glycerol (Glycerine, $\\\\text{CH}_2\\\\text{OHCHOHCH}_2\\\\text{OH}$)",
+      "Glycerol (Glycerine, $\\text{CH}_2\\text{OHCHOHCH}_2\\text{OH}$)",
       "Ethylene glycol",
       "Resorcinol"
     ],
+    "oh": [
+      "इथेनॉल",
+      "ग्लिसरॉल (ग्लिसरीन, $\\text{CH}_2\\text{OHCHOHCH}_2\\text{OH}$)",
+      "एथिलीन ग्लाइकॉल",
+      "रिसोर्सिनोल"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 forms ethyl nitrate, not the tri-ester explosive. Option 1 is correct because **Glycerol / Glycerine ($\\\\text{CH}_2\\\\text{OHCHOHCH}_2\\\\text{OH}$)** is a **Trihydric Alcohol** possessing three hydroxyl groups. Treating glycerol with nitrating acid—a mixture of concentrated **Nitric Acid ($\\\\text{HNO}_3$)** and concentrated **Sulfuric Acid ($\\\\text{H}_2\\\\text{SO}_4$)** catalyst—causes complete esterification, forming **Glyceryl Trinitrate (Nitroglycerine)**: $\\\\text{C}_3\\\\text{H}_5(\\\\text{OH})_3 + 3\\\\text{HNO}_3 \\\\xrightarrow{\\\\text{H}_2\\\\text{SO}_4} \\\\text{C}_3\\\\text{H}_5(\\\\text{ONO}_2)_3 + 3\\\\text{H}_2\\\\text{O}$. Absorbing liquid nitroglycerine into porous inert earth forms **Dynamite**. Option 2 forms glycol dinitrate, and Option 3 is a dihydric phenol."
+    "ee": "1. Option 0 is a monohydric alcohol that forms volatile ethyl nitrate upon nitration.\n2. Option 1 is correct: **Glycerol (Propane-1,2,3-triol, $\\text{CH}_2\\text{OH}-\\text{CHOH}-\\text{CH}_2\\text{OH}$)** is a **Trihydric Alcohol** containing three aliphatic hydroxyl groups. When treated with nitrating mixture (concentrated $\\text{HNO}_3$ and concentrated $\\text{H}_2\\text{SO}_4$) below $20^\\circ\\text{C}$, all three hydroxyl groups undergo complete esterification to yield **Glyceryl Trinitrate (commonly known as Nitroglycerine)**: $$\\text{C}_3\\text{H}_5(\\text{OH})_3 + 3\\text{HNO}_3 \\xrightarrow{\\text{conc. } \\text{H}_2\\text{SO}_4} \\text{C}_3\\text{H}_5(\\text{ONO}_2)_3 + 3\\text{H}_2\\text{O}$$\n   Nitroglycerine is an oily liquid explosive that was stabilized by Alfred Nobel in 1867 by absorbing it into kieselguhr (diatomaceous earth) to invent **Dynamite**.\n3. Option 2 forms ethylene glycol dinitrate (EGDN).\n4. Option 3 is a dihydric phenol.",
+    "eh": "1. विकल्प 0 गलत है: इथेनॉल एक मोनोहाइड्रिक अल्कोहल है।\n2. विकल्प 1 सही है: **ग्लिसरॉल या ग्लिसरीन ($\\text{C}_3\\text{H}_5(\\text{OH})_3$)** एक ट्राईहाइड्रिक अल्कोहल है जिसमें 3 हाइड्रॉक्सिल समूह होते हैं। जब ग्लिसरॉल की क्रिया सांद्र नाइट्रिक अम्ल ($\\text{HNO}_3$) और सांद्र सल्फ्यूरिक अम्ल ($\\text{H}_2\\text{SO}_4$) के मिश्रण से कराई जाती है, तो **नाइट्रोग्लिसरीन (ग्लीसराइल ट्राइनाइट्रेट)** नामक अत्यंत शक्तिशाली विस्फोटक बनता है: $$\\text{C}_3\\text{H}_5(\\text{OH})_3 + 3\\text{HNO}_3 \\rightarrow \\text{C}_3\\text{H}_5(\\text{ONO}_2)_3 + 3\\text{H}_2\\text{O}$$\n   1867 में अल्फ्रेड नोबेल ने नाइट्रोग्लिसरीन को अक्रिय मिट्टी में सोखकर **'डायनामाइट'** का आविष्कार किया था।\n3. विकल्प 2 गलत है: एथिलीन ग्लाइकॉल से ग्लाइकॉल डाइनाइट्रेट बनता है।\n4. विकल्प 3 गलत है: रिसोर्सिनोल एक एरोमैटिक डाइहाइड्रिक फिनोल है।"
   },
   {
     "p_id": "bpsc_chem_m18_05",
     "qe": "Alcoholic beverages are broadly categorized into distilled and un-distilled products based on manufacturing techniques. Which choice correctly pairs a beverage with its production class and source material?",
     "qh": "अल्कोहल युक्त पेय पदार्थों को निर्माण तकनीकों के आधार पर मोटे तौर पर आसुत (distilled) और गैर-आसुत (un-distilled) उत्पादों में वर्गीकृत किया गया है। कौन सा विकल्प किसी पेय को उसकी उत्पादन श्रेणी और स्रोत सामग्री के साथ सही ढंग से जोड़ता है?",
-    "o": [
+    "oe": [
       "Rum: Un-distilled beverage derived from fermented apples.",
       "Brandy: Distilled beverage ($40-50\\%$ ethanol) derived from fermented grape juice.",
       "Beer: Distilled beverage ($80\\%$ ethanol) derived from sugarcane molasses.",
       "Wine: Distilled beverage ($55\\%$ ethanol) derived from barley malt."
     ],
+    "oh": [
+      "रम: किण्वित सेब से प्राप्त गैर-आसुत पेय।",
+      "ब्रांडी: किण्वित अंगूर के रस से प्राप्त आसुत पेय ($40-50\\%$ इथेनॉल)।",
+      "बीयर: गन्ने के शीरे से प्राप्त आसुत पेय ($80\\%$ इथेनॉल)।",
+      "वाइन: जौ के माल्ट से प्राप्त आसुत पेय ($55\\%$ इथेनॉल)।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies Rum (which is a *distilled* product from sugarcane). Option 1 is correct because **Brandy** is a high-proof **Distilled Alcoholic Beverage** containing **$40-50\\%$ ethanol by volume**, produced by distilling fermented grape juice or fruit mashes. Conversely, **Beer** ($3-8\\%$) and **Wine** ($9-12\\%$) are **Un-distilled Beverages** produced directly via yeast fermentation without thermal distillation concentration. Option 2 incorrectly states beer is distilled, and Option 3 incorrectly labels wine as distilled."
+    "ee": "1. Option 0 is incorrect: Rum is a distilled spirit ($40-55\\%$ alcohol) manufactured from fermented sugarcane molasses or sugarcane juice, not un-distilled apple juice (cider is made from apples).\n2. Option 1 is correct: Alcoholic beverages are classified into:\n   - **Un-distilled Beverages**: Fermented directly by yeast without distillation, retaining lower alcohol content, such as **Beer** ($3-8\\%$ alcohol, from fermented barley malt) and **Wine** ($8-15\\%$ alcohol, from fermented grape juice).\n   - **Distilled Beverages (Spirits)**: Produced by distilling fermented mashes to concentrate alcohol content ($40-55\\%$), such as **Brandy** (distilled from fermented grape juice/wine), **Whisky** (distilled from fermented cereals/malt), and **Rum** (distilled from molasses).\n3. Option 2 is incorrect: Beer is an un-distilled beverage derived from fermented barley malt ($3-8\\%$ alcohol).\n4. Option 3 is incorrect: Wine is an un-distilled beverage produced by the direct fermentation of grapes.",
+    "eh": "1. विकल्प 0 गलत है: रम गन्ने के शीरे (Molasses) से बनाया जाने वाला आसुत (Distilled) पेय है, सेब से नहीं।\n2. विकल्प 1 सही है: मादक पेयों का सही वर्गीकरण इस प्रकार है:\n   - **गैर-आसुत पेय (Un-distilled):** जो केवल यीस्ट किण्वन से बनते हैं और जिनमें अल्कोहल की मात्रा कम होती है, जैसे **बीयर** (3-8% अल्कोहल, जौ के माल्ट से) और **वाइन** (8-15% अल्कोहल, अंगूर से)।\n   - **आसुत पेय (Distilled):** जिन्हें किण्वन के बाद आसवन द्वारा सांद्रित किया जाता है और जिनमें अल्कोहल 40-55% होता है, जैसे **ब्रांडी** (किण्वित अंगूर के रस/वाइन के आसवन से), **व्हिस्की** (अनाज/माल्ट से) और **रम** (गन्ने के शीरे से)।\n3. विकल्प 2 गलत है: बीयर गैर-आसुत पेय है।\n4. विकल्प 3 गलत है: वाइन गैर-आसुत पेय है।"
   },
   {
     "p_id": "bpsc_chem_m18_06",
     "qe": "Ethanol intended for industrial or solvent use is routinely converted into 'denatured alcohol'. What chemical additives are introduced into ethyl alcohol to render it toxic and unpalatable for human consumption?",
     "qh": "औद्योगिक या विलायक के उपयोग के लिए इरादा इथेनॉल नियमित रूप से 'विकृत अल्कोहल' (denatured alcohol) में परिवर्तित किया जाता है। एथिल अल्कोहल में कौन से रासायनिक एडिटिव्स मिलाए जाते हैं ताकि इसे विषाक्त और मानव उपभोग के लिए अयोग्य बनाया जा सके?",
-    "o": [
+    "oe": [
       "Glucose and zymase enzymes.",
       "Pyridine, Acetone, and Methyl Alcohol (Methanol).",
       "Sodium dichromate and sulfuric acid.",
       "Glycerol and ethyl acetate."
     ],
+    "oh": [
+      "ग्लूकोज और जाइमेज एंजाइम।",
+      "पाइरीडीन, एसीटोन और मिथाइल अल्कोहल (मेथनॉल)।",
+      "सोडियम डाइक्रोमेट और सल्फ्यूरिक अम्ल।",
+      "ग्लिसरॉल और एथिल एसीटेट।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 contains fermentation components that produce drinkable alcohol. Option 1 is correct because **Denatured Alcohol** is ethanol mixed with poisonous, foul-smelling, or nauseating additives to prevent illegal diversion for beverage consumption and bypass beverage excise taxes. Key denaturants include toxic **Methyl Alcohol (Methanol)**, foul-smelling **Pyridine**, **Acetone**, and mineral naphtha. Option 2 lists breathalyzer oxidizing reagents, and Option 3 lists non-toxic cosmetic/soap ingredients."
+    "ee": "1. Option 0 lists reagents used in yeast fermentation to produce potable ethanol.\n2. Option 1 is correct: To prevent the illegal diversion of duty-free industrial ethanol for commercial beverage consumption, ethyl alcohol is converted into **Denatured Alcohol (Methylated Spirit)**. Highly toxic **Methanol (Methyl Alcohol, $\\approx 5-10\\%$)** is added to make it poisonous, foul-smelling **Pyridine** is added to impart a nauseating odor, and **Acetone / mineral naphtha** and blue dyes (like copper sulfate) are added to give it a distinguishing color and bitter taste, making it completely unfit for drinking.\n3. Option 2 lists corrosive oxidizing agents used in cleaning mixtures.\n4. Option 3 lists non-toxic plasticizers and fragrance esters.",
+    "eh": "1. विकल्प 0 गलत है: ग्लूकोज और जाइमेज से पीने योग्य शराब बनाई जाती है।\n2. विकल्प 1 सही है: औद्योगिक कार्यों के लिए कर-मुक्त एथिल अल्कोहल का उपयोग शराब पीने के लिए न किया जा सके, इसके लिए इसका 'विकृतीकरण' (Denaturation) किया जाता है। एथिल अल्कोहल को जहरीला और पीने के लिए अनुपयुक्त बनाने हेतु इसमें लगभग 5-10% विषैला **मिथाइल अल्कोहल (मेथनॉल)**, दुर्गंधयुक्त **पाइरीडीन**, **एसीटोन** तथा पहचान के लिए नीला रंजक मिलाया जाता है, जिसे **'विकृत अल्कोहल' (मेथिलेटेड स्पिरिट)** कहते हैं।\n3. विकल्प 2 गलत है: यह क्रोमिक अम्ल का मिश्रण है।\n4. विकल्प 3 गलत है: ग्लिसरॉल और एथिल एसीटेट गैर-विषैले यौगिक हैं।"
   },
   {
     "p_id": "bpsc_chem_m18_07",
     "qe": "Commercial rectified spirit undergoes physical purification to increase its alcohol concentration. What are the precise percentage compositions of ethanol and water in Rectified Spirit?",
     "qh": "वाणिज्यिक परिशोधित स्पिरिट (Rectified Spirit) अपनी अल्कोहल सांद्रता बढ़ाने के लिए भौतिक शोधन से गुजरती है। परिशोधित स्पिरिट में इथेनॉल और पानी का सटीक प्रतिशत संयोजन क्या है?",
-    "o": [
-      "$100\\%$ Ethanol and $0\\%$ Water.",
-      "Approximately $95.6\\%$ Ethanol and $4.4\\%$ Water.",
-      "$50\\%$ Ethanol and $50\\%$ Water.",
-      "$70\\%$ Ethanol and $30\\%$ Water."
+    "oe": [
+      "100% Ethanol and 0% Water.",
+      "Approximately 95.6% Ethanol and 4.4% Water.",
+      "50% Ethanol and 50% Water.",
+      "70% Ethanol and 30% Water."
+    ],
+    "oh": [
+      "100% इथेनॉल और 0% पानी।",
+      "लगभग 95.6% इथेनॉल और 4.4% पानी।",
+      "50% इथेनॉल और 50% पानी।",
+      "70% इथेनॉल और 30% पानी।"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes Absolute Alcohol ($100\\%$ pure ethanol). Option 1 is correct because **Rectified Spirit** is a high-concentration ethanol mixture obtained by fractional distillation (rectification) of fermented mash. It reaches an **Azeotropic Composition** [a constant-boiling liquid mixture where vapor and liquid phases share identical component ratios, preventing further separation by simple distillation] containing approximately **$95.6\\%$ Ethanol ($\\\\text{C}_2\\\\text{H}_5\\\\text{OH}$) and $4.4\\%$ Water ($\\\\text{H}_2\\\\text{O}$)** by weight. Option 2 describes proof spirit, and Option 3 is a standard surgical disinfectant ratio."
+    "ee": "1. Option 0 defines Absolute Alcohol ($100\\%$ pure ethanol), which cannot be obtained by simple fractional distillation and requires azeotropic distillation with benzene or dehydration over calcium oxide.\n2. Option 1 is correct: When fermented wash is subjected to fractional distillation in industrial rectification columns, it forms a minimum-boiling **Azeotropic Mixture** at $78.15^\\circ\\text{C}$ containing **$95.57\\%$ (approximately $95.6\\%$) Ethanol and $4.43\\%$ (approximately $4.4\\%$) Water by weight** (or $95.6\\%$ by volume). This constant-boiling mixture is commercially designated as **Rectified Spirit** (परिशोधित स्पिरिट) and cannot be concentrated further by simple fractional distillation.\n3. Option 2 describes diluted alcohol.\n4. Option 3 corresponds to the concentration of surgical rubbing alcohol.",
+    "eh": "1. विकल्प 0 गलत है: 100% शुद्ध अल्कोहल को 'परिशुद्ध अल्कोहल' (Absolute Alcohol) कहते हैं।\n2. विकल्प 1 सही है: किण्वित घोल का प्रभाजी आसवन करने पर एक निश्चित क्वथनांक वाला स्थिरक्वाथी मिश्रण (Azeotrope) बनता है, जिसमें **लगभग 95.6% एथिल अल्कोहल और 4.4% जल** उपस्थित होता है। इस सांद्रित मिश्रण को व्यावसायिक रूप से **'परिशोधित स्पिरिट' (Rectified Spirit)** कहा जाता है। चूंकि इस अनुपात पर वाष्प और द्रव का संघटन समान रहता है, अतः साधारण आसवन द्वारा इससे अधिक सांद्रता प्राप्त नहीं की जा सकती।\n3. विकल्प 2 गलत है: 50% मिश्रण को प्रूफ स्पिरिट की श्रेणी में माना जाता है।\n4. विकल्प 3 गलत है: 70% अल्कोहल का उपयोग जीवाणुनाशक (Sanitizer) के रूप में होता है।"
   },
   {
     "p_id": "bpsc_chem_m18_08",
-    "qe": "Phenol ($\\\\text{C}_6\\\\text{H}_5\\\\text{OH}$) is the simplest hydroxy derivative of benzene, historically isolated by Runge in 1834. What common commercial name designates phenol, and what qualitative chemical test confirms its presence?",
-    "qh": "फिनोल ($\\\\text{C}_6\\\\text{H}_5\\\\text{OH}$) बेंजीन का सबसे सरल हाइड्रॉक्सी व्युत्पन्न है, जिसे ऐतिहासिक रूप से 1834 में रूंगे द्वारा अलग किया गया था। कौन सा सामान्य व्यावसायिक नाम फिनोल को निर्दिष्ट करता है, और कौन सा गुणात्मक रासायनिक परीक्षण इसकी उपस्थिति की पुष्टि करता है?",
-    "o": [
+    "qe": "Phenol ($\\text{C}_6\\text{H}_5\\text{OH}$) is the simplest hydroxy derivative of benzene, historically isolated by Runge in 1834. What common commercial name designates phenol, and what qualitative chemical test confirms its presence?",
+    "qh": "फिनोल ($\\text{C}_6\\text{H}_5\\text{OH}$) बेंजीन का सबसे सरल हाइड्रॉक्सी व्युत्पन्न है, जिसे ऐतिहासिक रूप से 1834 में रूंगे द्वारा अलग किया गया था। कौन सा सामान्य व्यावसायिक नाम फिनोल को निर्दिष्ट करता है, और कौन सा गुणात्मक रासायनिक परीक्षण इसकी उपस्थिति की पुष्टि करता है?",
+    "oe": [
       "Commercial Name: Mineral acid; Test: Tollen's reagent test.",
       "Commercial Name: Carbolic Acid; Test: Neutral Ferric Chloride ($\\text{FeCl}_3$) Test (yielding a violet coloration).",
       "Commercial Name: Picric acid; Test: Esterification fruity odor test.",
       "Commercial Name: Oil of Mirbane; Test: Fehling's reduction test."
     ],
+    "oh": [
+      "व्यावसायिक नाम: खनिज अम्ल; परीक्षण: टॉलेन अभिकर्मक परीक्षण।",
+      "व्यावसायिक नाम: कार्बोलिक एसिड (Carbolic Acid); परीक्षण: उदासीन फेरिक क्लोराइड ($\\text{FeCl}_3$) परीक्षण (बैंगनी रंग उत्पन्न करता है)।",
+      "व्यावसायिक नाम: पिक्रिक एसिड; परीक्षण: एस्टरीकरण फल जैसी गंध परीक्षण।",
+      "व्यावसायिक नाम: मिर्बेन का तेल; परीक्षण: फेलिंग अपचयन परीक्षण।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies phenol and assigns an aldehyde test. Option 1 is correct because **Phenol ($\\\\text{C}_6\\\\text{H}_5\\\\text{OH}$)** is commercially known as **Carbolic Acid**. In analytical laboratory testing, adding a neutral **Ferric Chloride ($\\\\text{FeCl}_3$)** solution to aqueous phenol produces a intense, characteristic **Violet / Purple Complexation Coloration** due to the formation of iron-phenoxide coordination complexes: $6\\\\text{C}_6\\\\text{H}_5\\\\text{OH} + \\\\text{FeCl}_3 \\\\rightarrow [\\\\text{Fe(OC}_6\\\\text{H}_5)_6]^{3-} + 3\\\\text{H}^+ + 3\\\\text{HCl}$. Option 2 lists trinitrophenol, and Option 3 describes nitrobenzene."
+    "ee": "1. Option 0 is incorrect: Mineral acids are inorganic acids like $\\text{HCl}$, and Tollens' test identifies reducing aldehydes.\n2. Option 1 is correct: **Phenol ($\\text{C}_6\\text{H}_5\\text{OH}$)**, discovered in coal tar by Runge in 1834, is commercially called **Carbolic Acid**. It is a weak acid and disinfectant. In qualitative analytical chemistry, adding a few drops of freshly prepared **neutral Ferric Chloride ($\\text{FeCl}_3$) solution** to an aqueous phenol solution results in an intense **Violet/Purple coloration** due to the formation of a soluble coordination complex: $$6\\text{C}_6\\text{H}_5\\text{OH} + \\text{FeCl}_3 \\rightarrow [\\text{Fe}(\\text{OC}_6\\text{H}_5)_6]^{3-}\\text{ (Violet Complex)} + 3\\text{H}^+ + 3\\text{HCl}$$\n3. Option 2 describes 2,4,6-trinitrophenol (picric acid).\n4. Option 3 describes nitrobenzene (Oil of Mirbane).",
+    "eh": "1. विकल्प 0 गलत है: खनिज अम्ल अकार्बनिक होते हैं और टॉलेन परीक्षण एल्डिहाइड के लिए होता है।\n2. विकल्प 1 सही है: **फिनोल ($\\text{C}_6\\text{H}_5\\text{OH}$)** को सामान्य बोलचाल और व्यापार में **'कार्बोलिक एसिड' (Carbolic Acid)** कहा जाता है। प्रयोगशाला में फिनोल की उपस्थिति की पुष्टि करने के लिए **उदासीन फेरिक क्लोराइड ($\\text{FeCl}_3$) परीक्षण** किया जाता है। फिनोल में $\\text{FeCl}_3$ मिलाने पर एक संकुल यौगिक $[\\text{Fe}(\\text{OC}_6\\text{H}_5)_6]^{3-}$ बनने के कारण विलयन का रंग गहरा **बैंगनी (Violet)** हो जाता है।\n3. विकल्प 2 गलत है: पिक्रिक एसिड ट्राईनाइट्रोफिनोल का नाम है।\n4. विकल्प 3 गलत है: मिर्बेन का तेल नाइट्रोबेंजीन को कहते हैं।"
   },
   {
     "p_id": "bpsc_chem_m18_09",
     "qe": "Biological specimen preservation relies on a specific aqueous aldehyde solution that prevents tissue decay. What chemical compound forms 'Formalin', and what is its exact concentration in water?",
     "qh": "जैविक नमूना संरक्षण एक विशिष्ट जलीय एल्डिहाइड घोल पर निर्भर करता है जो ऊतक के क्षय को रोकता है। कौन सा रासायनिक यौगिक 'फॉर्मेलिन' (Formalin) बनाता है, और पानी में इसकी सटीक सांद्रता क्या है?",
-    "o": [
-      "$100\\%$ pure liquid acetaldehyde.",
-      "$40\\%$ aqueous solution of Formaldehyde (Formal, $\\\\text{HCHO}$) in water.",
-      "$10\\%$ solution of formic acid in ethyl alcohol.",
-      "$70\\%$ solution of acetone in benzene."
+    "oe": [
+      "100% pure liquid acetaldehyde.",
+      "40% aqueous solution of Formaldehyde (Formal, $\\text{HCHO}$) in water.",
+      "10% solution of formic acid in ethyl alcohol.",
+      "70% solution of acetone in benzene."
+    ],
+    "oh": [
+      "100% शुद्ध तरल एसीटैल्डिहाइड।",
+      "पानी में फॉर्मेल्डिहाइड (फॉर्मल, $\\text{HCHO}$) का 40% जलीय घोल।",
+      "एथिल अल्कोहल में फॉर्मिक एसिड का 10% घोल।",
+      "बेंजीन में एसीटोन का 70% घोल।"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists acetaldehyde. Option 1 is correct because **Formalin** is a standardized **$40\\%$ Aqueous Solution of Formaldehyde ($\\\\text{HCHO}$)** in water (typically containing $10-15\\%$ methanol as a stabilizer to prevent polymerization). Formaldehyde cross-links functional amino groups in cellular proteins, rendering tissues immune to autolysis and bacterial decomposition. Consequently, formalin is universally deployed as a **Tissue Fixative and Embalming Agent** for biological specimens in laboratories and medical morgues. Option 2 and Option 3 describe non-formal preservative preparations."
+    "ee": "1. Option 0 describes pure acetaldehyde ($\\text{CH}_3\\text{CHO}$), which is a volatile liquid not used as a museum preservative.\n2. Option 1 is correct: **Formalin** is commercially defined as a **$40\\%$ aqueous solution of Formaldehyde (Methanal, $\\text{HCHO}$)** in water (typically containing $37-40\\%$ formaldehyde by weight and $10-15\\%$ methanol added as an inhibitor to prevent polymerization into paraformaldehyde). Formaldehyde cross-links primary amino groups of intracellular proteins and enzymes, completely halting autolysis and bacterial putrefaction, making formalin the universal preservative for preserving anatomical and biological specimens in laboratories.\n3. Option 2 describes formic acid solutions.\n4. Option 3 describes solvent mixtures without tissue fixation properties.",
+    "eh": "1. विकल्प 0 गलत है: एसीटैल्डिहाइड का उपयोग जैविक परिरक्षक के रूप में नहीं होता।\n2. विकल्प 1 सही है: **फॉर्मेलिन (Formalin)** गैस रूपी **फॉर्मेल्डिहाइड (मेथैनल, $\\text{HCHO}$) का पानी में 40% जलीय घोल** होता है (जिसमें बहुलकीकरण रोकने के लिए थोड़ा मेथनॉल मिलाया जाता है)। फॉर्मेल्डिहाइड कोशिकाओं के प्रोटीनों को जमाकर स्थिर कर देता है, जिससे जीवाणु अपघटन रुक जाता है। इसी कारण जीव विज्ञान प्रयोगशालाओं में मृत जीवों और जैविक नमूनों को सड़ने से बचाने के लिए फॉर्मेलिन में सुरक्षित रखा जाता है।\n3. विकल्प 2 गलत है: फॉर्मिक एसिड चींटी के डंक में होता है।\n4. विकल्प 3 गलत है: एसीटोन और बेंजीन का परिरक्षण में उपयोग नहीं होता।"
   },
   {
     "p_id": "bpsc_chem_m18_10",
     "qe": "Cosmetic chemistry has shifted toward 'acetone-free' nail polish removers due to acetone damaging natural nails. What functional organic esters serve as the primary active solvent ingredients in modern acetone-free nail polish removers?",
     "qh": "प्राकृतिक नाखूनों को नुकसान पहुँचाने वाले एसीटोन के कारण कॉस्मेटिक रसायन विज्ञान 'एसीटोन-मुक्त' नेल पॉलिश रिमूवर की ओर स्थानांतरित हो गया है। आधुनिक एसीटोन-मुक्त नेल पॉलिश रिमूवर में प्राथमिक सक्रिय विलायक सामग्री के रूप में कौन से कार्यात्मक कार्बनिक एस्टर कार्य करते हैं?",
-    "o": [
+    "oe": [
       "Methyl formate and Formic acid",
-      "Ethyl Acetate ($\\\\text{CH}_3\\\\text{COOC}_2\\\\text{H}_5$) or Butyl Acetate",
+      "Ethyl Acetate ($\\text{CH}_3\\text{COOC}_2\\text{H}_5$) or Butyl Acetate",
       "Glycerol trinitrate and Ether",
       "Chloral hydrate and Chloroform"
     ],
+    "oh": [
+      "मिथाइल फॉर्मेट और फॉर्मिक एसिड",
+      "एथिल एसीटेट ($\\text{CH}_3\\text{COOC}_2\\text{H}_5$) या ब्यूटाइल एसीटेट",
+      "ग्लिसरॉल ट्राइनाइट्रेट और ईथर",
+      "क्लोरैल हाइड्रेट और क्लोरोफॉर्म"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists irritating acid formulations. Option 1 is correct because traditional **Acetone ($\\\\text{CH}_3\\\\text{COCH}_3$)** strippers strip natural lipids, weakening nail extensions and causing cuticle separation. Modern acetone-free formulations replace ketones with pleasant-smelling organic **Esters**, primarily **Ethyl Acetate ($\\\\text{CH}_3\\\\text{COOC}_2\\\\text{H}_5$)** or **Butyl Acetate**. These ester solvents dissolve nitrocellulose film coatings effectively while causing significantly less lipid dehydration and keratin damage to skin and nails. Option 2 lists explosive nitroglycerine, and Option 3 lists heavy halogenated sedatives."
+    "ee": "1. Option 0 contains formic acid derivatives that cause skin irritation.\n2. Option 1 is correct: Traditional nail polish removers rely on **Acetone (Propanone, $\\text{CH}_3\\text{COCH}_3$)**, which strips natural oils and moisture from nails and cuticles, causing brittleness and peeling. Modern 'acetone-free' formulations replace harsh ketones with sweet-smelling organic **Esters**, primarily **Ethyl Acetate ($\\text{CH}_3\\text{COOC}_2\\text{H}_5$)** or **Butyl Acetate**. These esters effectively dissolve the nitrocellulose and polymer film-formers in nail lacquer while being much gentler and less drying to natural keratin tissue.\n3. Option 2 lists the explosive nitroglycerine.\n4. Option 3 lists sedative and toxic halogenated compounds.",
+    "eh": "1. विकल्प 0 गलत है: फॉर्मिक एसिड त्वचा के लिए हानिकारक और जलन पैदा करने वाला होता है।\n2. विकल्प 1 सही है: पारंपरिक नेल पॉलिश रिमूवर में **एसीटोन** होता है, जो नाखूनों की प्राकृतिक नमी और तेल को सोखकर उन्हें रूखा व कमजोर बना देता है। आधुनिक 'एसीटोन-फ्री' नेल पॉलिश रिमूवर में कार्बनिक एस्टर जैसे **एथिल एसीटेट ($\\text{CH}_3\\text{COOC}_2\\text{H}_5$)** या **ब्यूटाइल एसीटेट** का मुख्य विलायक के रूप में उपयोग किया जाता है। ये नेल पॉलिश की नाइट्रोसेल्यूलोज परत को आसानी से घोल देते हैं और नाखूनों को नुकसान नहीं पहुँचाते।\n3. विकल्प 2 गलत है: ग्लिसरॉल ट्राइनाइट्रेट एक विस्फोटक है।\n4. विकल्प 3 गलत है: क्लोरोफॉर्म एक निश्चेतक है।"
   },
   {
     "p_id": "bpsc_chem_m18_11",
     "qe": "Vinegar is a staple food preservative and condiment produced by the acetobacter oxidation of ethanol. What is the commercial chemical identity and percentage concentration of acid present in vinegar?",
     "qh": "सिरका (Vinegar) एक प्रमुख खाद्य परिरक्षक और मसाला है जो इथेनॉल के एसेटोबैक्टर ऑक्सीकरण द्वारा निर्मित होता है। सिरका में मौजूद अम्ल की व्यावसायिक रासायनिक पहचान और प्रतिशत सांद्रता क्या है?",
-    "o": [
-      "$4-6\\%$ aqueous solution of Acetic Acid ($\\\\text{CH}_3\\\\text{COOH}$)",
-      "$40\\%$ solution of Formic acid ($\\\\text{HCOOH}$)",
+    "oe": [
+      "$4-6\\%$ aqueous solution of Acetic Acid ($\\text{CH}_3\\text{COOH}$)",
+      "$40\\%$ solution of Formic acid ($\\text{HCOOH}$)",
       "$98\\%$ concentrated Oxalic acid",
       "$15\\%$ solution of Lactic acid"
     ],
+    "oh": [
+      "एसिटिक अम्ल ($\\text{CH}_3\\text{COOH}$) का $4-6\\%$ जलीय घोल",
+      "फॉर्मिक अम्ल ($\\text{HCOOH}$) का $40\\%$ घोल",
+      "$98\\%$ सांद्र ऑक्सालिक अम्ल",
+      "लैक्टिक अम्ल का $15\\%$ घोल"
+    ],
     "a": 0,
-    "e": "<b>Explanation:</b> Option 0 is correct because **Vinegar** is defined as a diluted **$4-6\\%$ Aqueous Solution of Acetic Acid ($\\\\text{CH}_3\\\\text{COOH}$)** produced by the aerobic bacterial oxidation of fermented alcoholic liquids (like cider or wine) by *Acetobacter aceti*. The low pH ($\\\\sim 2.4-3.4$) inhibits food-spoilage micro-organisms, making vinegar an effective food preservative for pickling. Option 1 lists toxic ant acid (formic acid). Option 2 describes concentrated oxalic acid used for rust stain removal. Option 3 lists milk acid."
+    "ee": "1. Option 0 is correct because **Vinegar (सिरका)** is commercially defined as a **$4\\%\\text{ to }6\\%$ (or up to $8\\%$) aqueous solution of Acetic Acid (Ethanoic Acid, $\\text{CH}_3\\text{COOH}$)**. It is produced by the two-step fermentation of sugary solutions: first, anaerobic yeast fermentation of sugars to ethanol, followed by aerobic microbial oxidation of ethanol to ethanoic acid by *Acetobacter aceti* bacteria. Its low pH ($2.4 - 3.4$) prevents bacterial spoilage in pickles and food products.\n2. Option 1 is incorrect: Formic acid ($\\text{HCOOH}$) is toxic and corrosive, occurring in red ant venom.\n3. Option 2 describes oxalic acid, which is toxic and used for removing rust stains.\n4. Option 3 describes lactic acid, which occurs in sour milk/curd.",
+    "eh": "1. विकल्प 0 सही है क्योंकि **सिरका (Vinegar)** रासायनिक रूप से **एसिटिक अम्ल (एथेनॉइक अम्ल, $\\text{CH}_3\\text{COOH}$) का 4% से 6% (या 8% तक) तनु जलीय घोल** होता है। इसका निर्माण गन्ने के रस, सेब या शर्करा के किण्वन से बने एथिल अल्कोहल पर *एसीटोबैक्टर एसिटी* (Acetobacter aceti) जीवाणु द्वारा वायुमंडलीय ऑक्सीकरण से किया जाता है। इसका उपयोग खाद्य परिरक्षक (अचार आदि में) और स्वाद बढ़ाने के लिए किया जाता है।\n2. विकल्प 1 गलत है: फॉर्मिक एसिड चींटियों और मधुमक्खी के डंक में पाया जाता है।\n3. विकल्प 2 गलत है: ऑक्सालिक एसिड टमाटर और पालक में पाया जाता है तथा जंग के दाग छुड़ाने में प्रयुक्त होता है।\n4. विकल्प 3 गलत है: लैक्टिक एसिड दही में होता है।"
   },
   {
     "p_id": "bpsc_chem_m18_12",
     "qe": "Human blood tracking by trained police sniffer dogs relies on canine olfactory sensitivity to specific organic chemical vapors. What family of compounds present in foot sweat do tracking dogs recognize?",
     "qh": "प्रशिक्षित पुलिस खोजी कुत्तों (sniffer dogs) द्वारा मानव रक्त या पैरों का सुराग लगाना विशिष्ट कार्बनिक रासायनिक वाष्पों के प्रति कैनाइन घ्राण संवेदनशीलता (canine olfactory sensitivity) पर निर्भर करता है। पैरों के पसीने में मौजूद यौगिकों के किस वर्ग को खोजी कुत्ते पहचानते हैं?",
-    "o": [
+    "oe": [
       "Inorganic cyanides",
       "Carboxylic Acids (such as butyric and valeric acids present in sweat)",
       "Polyhydric ethers",
       "Aromatic ketones"
     ],
+    "oh": [
+      "अकार्बनिक साइनाइड",
+      "कार्बोक्जिलिक अम्ल (जैसे पसीने में मौजूद ब्यूटायरिक और वैलेरिक अम्ल)",
+      "पॉलीहाइड्रिक ईथर",
+      "एरोमैटिक कीटोन"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists toxic cyanides. Option 1 is correct because human eccrine and apocrine foot sweat contains trace volatile **Carboxylic Acids** [organic acids containing the carboxyl group, $-\\\\text{COOH}$], such as butyric acid, valeric acid, and hexanoic acid produced by skin bacterial flora breakdown. Trained police tracking dogs possess olfactory receptors capable of detecting these distinctive carboxylic acid vapor profiles at parts-per-trillion concentrations, allowing them to track specific individuals across terrain. Option 2 and Option 3 list non-sweat volatile classes."
+    "ee": "1. Option 0 is incorrect because cyanides are lethal inorganic poisons, not standard components of perspiration.\n2. Option 1 is correct because human skin secretion contains sebum and sweat that are broken down by cutaneous bacteria into volatile, low-molecular-weight **Carboxylic Acids (fatty acids)**, primarily **Butyric Acid (Butanoic acid, $\\text{C}_3\\text{H}_7\\text{COOH}$)**, Isovaleric Acid, and Caproic Acid. Each individual human possesses a distinct ratio of these volatile fatty acids in their footprint and skin odor. Trained tracking dogs possess highly sensitive olfactory receptor genes capable of detecting these carboxylic acid vapors at parts-per-trillion concentrations across terrain.\n3. Option 2 describes ethers, which are non-polar synthetic solvents.\n4. Option 3 describes aromatic ketones not characteristic of human sweat.",
+    "eh": "1. विकल्प 0 गलत है: साइनाइड एक विषैला रसायन है, पसीने का घटक नहीं।\n2. विकल्प 1 सही है: मानव पैरों और त्वचा के पसीने में उपस्थित वसा का जब त्वचा के बैक्टीरिया द्वारा अपघटन होता है, तो सूक्ष्म मात्रा में वाष्पशील **कार्बोक्जिलिक अम्ल (जैसे ब्यूटायरिक अम्ल $\\text{C}_3\\text{H}_7\\text{COOH}$, आइसोवैलेरिक अम्ल आदि)** बनते हैं। प्रत्येक व्यक्ति के पसीने में इन कार्बनिक अम्लों का अनुपात विशिष्ट होता है। पुलिस के खोजी कुत्ते (Sniffer dogs) अपनी अत्यधिक तीव्र घ्राण क्षमता (सूंघने की शक्ति) से इन्हीं कार्बोक्जिलिक अम्लों की गंध को पहचानकर अपराधियों का पीछा करते हैं।\n3. विकल्प 2 गलत है: पॉलीहाइड्रिक ईथर पसीने में नहीं पाए जाते।\n4. विकल्प 3 गलत है: यह पसीने की विशिष्ट पहचान नहीं है।"
   },
   {
     "p_id": "bpsc_chem_m18_13",
     "qe": "Strenuous physical exercise causes localized muscle fatigue and aching sensations in human tissues. What monohydroxy carboxylic acid accumulates in human skeletal muscles during intense exercise?",
     "qh": "कठोर शारीरिक व्यायाम मानव ऊतकों में स्थानीयकृत मांसपेशी थकान और दर्द संवेदना का कारण बनता है। तीव्र व्यायाम के दौरान मानव कंकाल की मांसपेशियों में कौन सा मोनोहाइड्रॉक्सी कार्बोक्जिलिक अम्ल जमा होता है?",
-    "o": [
+    "oe": [
       "Citric acid",
-      "Lactic Acid [$\\text{CH}_3\\\\text{CH(OH)COOH}$]",
+      "Lactic Acid [$\\text{CH}_3\\text{CH(OH)COOH}$]",
       "Salicylic acid",
       "Oxalic acid"
     ],
+    "oh": [
+      "साइट्रिक एसिड",
+      "लैक्टिक अम्ल [$\\text{CH}_3\\text{CH(OH)COOH}$]",
+      "सैलिसिलिक एसिड",
+      "ऑक्सालिक एसिड"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is a tricarboxylic acid found in citrus fruits. Option 1 is correct because during intense physical exertion, oxygen supply to skeletal muscle cells becomes insufficient for aerobic respiration. Muscle tissues shift to **Anaerobic Glycolysis**, converting pyruvate into **Lactic Acid [$\\\\text{CH}_3\\\\text{CH(OH)COOH}$]**. Accumulation of lactic acid lowers intracellular pH, causing transient acidosis, muscle stiffness, and physical fatigue. Lactic acid is also the souring acid present in fermented milk products (sour milk/yogurt). Option 2 is an analgesic precursor, and Option 3 forms kidney stones."
+    "ee": "1. Option 0 is a tricarboxylic acid produced in mitochondrial Krebs cycle during normal aerobic respiration.\n2. Option 1 is correct: During intense or strenuous physical exercise, skeletal muscle tissue consumes oxygen faster than the circulatory system can deliver it. Under these temporary anaerobic conditions, muscle cells undergo **Anaerobic Glycolysis**, where pyruvate is reduced by the enzyme lactate dehydrogenase to **Lactic Acid (2-hydroxypropanoic acid, $\\text{CH}_3\\text{CH(OH)COOH}$)**. The accumulation of lactic acid dissociates into lactate and hydrogen ions, dropping intracellular muscle pH, which causes muscle fatigue, cramping, and soreness.\n3. Option 2 is an aromatic hydroxy acid used in skin treatments and aspirin synthesis.\n4. Option 3 is a dicarboxylic acid that forms insoluble kidney stones.",
+    "eh": "1. विकल्प 0 गलत है: साइट्रिक अम्ल खट्टे फलों में पाया जाता है और वायवीय श्वसन का भाग है।\n2. विकल्प 1 सही है: अत्यधिक कठोर व्यायाम या दौड़ने के दौरान जब मांसपेशियों को पर्याप्त ऑक्सीजन नहीं मिल पाती, तो पेशी कोशिकाएं ऊर्जा प्राप्त करने के लिए अनॉक्सीय श्वसन (Anaerobic respiration) करने लगती हैं। इस प्रक्रिया में पायरुवेट का रूपांतरण **लैक्टिक अम्ल [$\\text{CH}_3\\text{CH(OH)COOH}$]** में हो जाता है। मांसपेशियों में लैक्टिक एसिड के जमाव और pH कम होने के कारण ही मांसपेशियों में **थकान, अकड़न और दर्द (Cramps)** महसूस होता है।\n3. विकल्प 2 गलत है: सैलिसिलिक एसिड से एस्पिरिन बनाई जाती है।\n4. विकल्प 3 गलत है: ऑक्सालिक एसिड गुर्दे की पथरी बनाता है।"
   },
   {
     "p_id": "bpsc_chem_m18_14",
     "qe": "Pathological urinary stone formation (urolithiasis) causes severe flank pain in humans. What insoluble calcium salt of a dicarboxylic acid constitutes the primary chemical component of most human kidney stones?",
     "qh": "रोगविषयक मूत्र पथरी निर्माण (urolithiasis) मनुष्यों में गंभीर दर्द का कारण बनता है। डाइकार्बोक्जिलिक अम्ल का कौन सा अघुलनशील कैल्शियम लवण अधिकांश मानव गुर्दे की पथरी (kidney stones) का प्राथमिक रासायनिक घटक बनाता है?",
-    "o": [
+    "oe": [
       "Calcium Lactate",
-      "Calcium Oxalate [$\\text{CaC}_2\\\\text{O}_4$]",
+      "Calcium Oxalate [$\\text{CaC}_2\\text{O}_4$]",
       "Calcium Formate",
       "Calcium Acetate"
     ],
+    "oh": [
+      "कैल्शियम लैक्टेट",
+      "कैल्शियम ऑक्सालेट [$\\text{CaC}_2\\text{O}_4$]",
+      "कैल्शियम फॉर्मेट",
+      "कैल्शियम एसीटेट"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists soluble lactate salts. Option 1 is correct because **Calcium Oxalate [$\\\\text{CaC}_2\\\\text{O}_4$]** is an insoluble crystalline salt formed by combining calcium ions with oxalic acid ($\\\\text{H}_2\\\\text{C}_2\\\\text{O}_4$, a dicarboxylic acid found in oxalis plants and spinach). In human renal physiology, supersaturation of urinary calcium and oxalate precipitates sharp crystalline aggregates, forming approximately **$80\\%$ of all human Kidney Stones**. Option 2 and Option 3 list highly soluble organic calcium salts that do not form renal calculi."
+    "ee": "1. Option 0 is a soluble calcium salt used as a dietary calcium supplement.\n2. Option 1 is correct: In human medicine, approximately $75\\%\\text{ to }80\\%$ of all renal calculi (kidney stones) are composed primarily of **Calcium Oxalate ($\\text{CaC}_2\\text{O}_4$)** (often as monohydrate or dihydrate crystals). It is an insoluble crystalline salt formed when excess calcium ions ($\\text{Ca}^{2+}$) in the urinary filtrate bind with oxalate ions ($\\text{C}_2\\text{O}_4^{2-}$), a dicarboxylic acid derivative derived from metabolic pathways and oxalate-rich foods (spinach, nuts, tea, tomatoes).\n3. Option 2 and Option 3 are soluble monocarboxylic calcium salts that do not precipitate as urinary calculi.",
+    "eh": "1. विकल्प 0 गलत है: कैल्शियम लैक्टेट जल में घुलनशील होता है और दवा के रूप में प्रयुक्त होता है।\n2. विकल्प 1 सही है: मानव में गुर्दे की पथरी (Kidney Stones) का सबसे मुख्य रासायनिक घटक **कैल्शियम ऑक्सालेट [$\\text{CaC}_2\\text{O}_4$]** होता है (लगभग 75-80% पथरी इसी की बनी होती है)। जब मूत्र में कैल्शियम आयनों और ऑक्सालिक एसिड के लवणों (ऑक्सालेट) की सांद्रता बढ़ जाती है, तो यह अघुलनशील क्रिस्टलीय रूप में अवक्षेपित होकर पथरी का रूप ले लेता है। टमाटर, पालक आदि में ऑक्सालिक अम्ल पाया जाता है।\n3. विकल्प 2 और विकल्प 3 गलत हैं: कैल्शियम फॉर्मेट और एसीटेट अत्यधिक घुलनशील लवण हैं जो पथरी नहीं बनाते।"
   },
   {
     "p_id": "bpsc_chem_m18_15",
-    "qe": "Chloroform ($\\\\text{CHCl}_3$) was historically introduced as a surgical inhalation anesthetic by James Young Simpson. Why must chloroform be stored in completely filled, dark-colored glass bottles?",
-    "qh": "क्लोरोफॉर्म ($\\\\text{CHCl}_3$) को ऐतिहासिक रूप से जेम्स यंग सिम्पसन द्वारा एक सर्जिकल साँस लेना एनेस्थेटिक के रूप में पेश किया गया था। क्लोरोफॉर्म को पूरी तरह से भरी हुई, गहरे रंग की कांच की बोतलों में ही क्यों संग्रहित किया जाना चाहिए?",
-    "o": [
+    "qe": "Chloroform ($\\text{CHCl}_3$) was historically introduced as a surgical inhalation anesthetic by James Young Simpson. Why must chloroform be stored in completely filled, dark-colored glass bottles?",
+    "qh": "क्लोरोफॉर्म ($\\text{CHCl}_3$) को ऐतिहासिक रूप से जेम्स यंग सिम्पसन द्वारा एक सर्जिकल साँस लेना एनेस्थेटिक के रूप में पेश किया गया था। क्लोरोफॉर्म को पूरी तरह से भरी हुई, गहरे रंग की कांच की बोतलों में ही क्यों संग्रहित किया जाना चाहिए?",
+    "oe": [
       "To prevent it from absorbing nitrogen and turning into dynamite.",
-      "To prevent slow atmospheric oxidation driven by light into Phosgene (Carbonyl Chloride, $\\\\text{COCl}_2$), an extremely poisonous gas.",
+      "To prevent slow atmospheric oxidation driven by light into Phosgene (Carbonyl Chloride, $\\text{COCl}_2$), an extremely poisonous gas.",
       "To stop it from evaporating into ozone-destroying freon-12.",
       "To prevent it from crystallizing into iodoform."
     ],
+    "oh": [
+      "इसे नाइट्रोजन को अवशोषित करने और डायनामाइट में बदलने से रोकने के लिए।",
+      "प्रकाश द्वारा संचालित धीमी वायुमंडलीय ऑक्सीकरण को फॉस्जीन (कार्बोनिल क्लोराइड, $\\text{COCl}_2$), जो एक अत्यंत विषैली गैस है, में बदलने से रोकने के लिए।",
+      "इसे ओजोन-नष्ट करने वाले फ्रिऑन-12 में वाष्पीकृत होने से रोकने के लिए।",
+      "इसे आयोडोफॉर्म में क्रिस्टलीकृत होने से रोकने के लिए।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 presents impossible dynamite transmutation. Option 1 is correct because **Chloroform ($\\\\text{CHCl}_3$)**, when exposed to air and light, undergoes slow autoxidation to generate **Phosgene (Carbonyl Chloride, $\\\\text{COCl}_2$)**, a deadly toxic gas: $2\\\\text{CHCl}_3 + \\\\text{O}_2 \\\\xrightarrow{h\\\\nu} 2\\\\text{COCl}_2 + 2\\\\text{HCl}$. To prevent light-catalyzed phosgene formation, chloroform is stored in **dark amber-colored bottles filled completely to the brim** to exclude air (oxygen), often adding $1\\%$ ethanol as a phosgene scavenger. Option 2 confuses chloroform with CFCs, and Option 3 confuses haloform reagents."
+    "ee": "1. Option 0 is incorrect because chloroform does not absorb nitrogen to form dynamite.\n2. Option 1 is correct: In the presence of sunlight and atmospheric oxygen (air), **Chloroform (Trichloromethane, $\\text{CHCl}_3$)** undergoes slow photochemical auto-oxidation to form **Phosgene (Carbonyl Chloride, $\\text{COCl}_2$)**, an extremely poisonous and lethal asphyxiating gas: $$2\\text{CHCl}_3 + \\text{O}_2 \\xrightarrow{h\\nu \\text{ (light)}} 2\\text{COCl}_2\\text{ (Phosgene)} + 2\\text{HCl}$$\n   To prevent this hazardous oxidation, chloroform is stored in **dark amber-colored glass bottles filled up to the brim** to exclude air (oxygen). Additionally, $\\approx 1\\%$ ethanol is added to act as a negative catalyst and convert any trace phosgene formed into non-toxic diethyl carbonate.\n3. Option 2 is incorrect because chloroform does not convert into Freon-12 on standing.\n4. Option 3 is incorrect because halogen exchange to iodoform does not occur spontaneously in storage.",
+    "eh": "1. विकल्प 0 गलत है: क्लोरोफॉर्म डायनामाइट में नहीं बदलता।\n2. विकल्प 1 सही है: **क्लोरोफॉर्म ($\\text{CHCl}_3$)** को जब खुली हवा और सूर्य के प्रकाश में रखा जाता है, तो इसका धीमा स्वतः-ऑक्सीकरण हो जाता है और **फॉस्जीन (कार्बोनिल क्लोराइड, $\\text{COCl}_2$)** नामक एक अत्यंत विषैली और घातक गैस बन जाती है: $$2\\text{CHCl}_3 + \\text{O}_2 \\xrightarrow{\\text{प्रकाश}} 2\\text{COCl}_2\\text{ (फॉस्जीन)} + 2\\text{HCl}$$\n   इस खतरनाक गैस के निर्माण को रोकने के लिए क्लोरोफॉर्म को **गहरे रंग (Amber) की बोतलों में मुँह तक पूरा भरकर** रखा जाता है ताकि उसमें हवा न रहे, तथा इसमें 1% एथिल अल्कोहल मिलाया जाता है।\n3. विकल्प 2 गलत है: यह फ्रिऑन-12 में नहीं बदलता।\n4. विकल्प 3 गलत है: यह आयोडोफॉर्म में नहीं बदलता।"
   },
   {
     "p_id": "bpsc_chem_m18_16",
-    "qe": "Iodoform ($\\\\text{CHI}_3$) is a yellow crystalline solid synthesized via the haloform reaction. What is the active mechanism responsible for the historical antiseptic properties of iodoform?",
-    "qh": "आयोडोफॉर्म ($\\\\text{CHI}_3$) हेलोफॉर्म प्रतिक्रिया के माध्यम से संश्लेषित एक पीला क्रिस्टलीय ठोस है। आयोडोफॉर्म के ऐतिहासिक एंटीसेप्टिक गुणों के लिए जिम्मेदार सक्रिय तंत्र क्या है?",
-    "o": [
+    "qe": "Iodoform ($\\text{CHI}_3$) is a yellow crystalline solid synthesized via the haloform reaction. What is the active mechanism responsible for the historical antiseptic properties of iodoform?",
+    "qh": "आयोडोफॉर्म ($\\text{CHI}_3$) हेलोफॉर्म प्रतिक्रिया के माध्यम से संश्लेषित एक पीला क्रिस्टलीय ठोस है। आयोडोफॉर्म के ऐतिहासिक एंटीसेप्टिक गुणों के लिए जिम्मेदार सक्रिय तंत्र क्या है?",
+    "oe": [
       "Direct release of toxic chlorine gas upon contact with skin.",
-      "Slow, continuous liberation of Free Elemental Iodine ($\\\\text{I}_2$), which acts as the true bactericidal agent.",
+      "Slow, continuous liberation of Free Elemental Iodine ($\\text{I}_2$), which acts as the true bactericidal agent.",
       "Dehydration of bacterial membranes by pure alcohol generation.",
       "Precipitation of insoluble calcium salts in wounds."
     ],
+    "oh": [
+      "त्वचा के संपर्क में आने पर जहरीली क्लोरीन गैस का सीधा निकलना।",
+      "मुक्त मौलिक आयोडीन ($\\text{I}_2$) की धीमी, निरंतर मुक्ति, जो वास्तविक जीवाणुनाशक एजेंट के रूप में कार्य करती है।",
+      "शुद्ध अल्कोहल उत्पादन द्वारा जीवाणु झिल्लियों का निर्जलीकरण।",
+      "घावों में अघुलनशील कैल्शियम लवणों का अवक्षेपण।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies iodine as chlorine. Option 1 is correct because **Iodoform ($\\\\text{CHI}_3$)** was widely used in early surgery as an antiseptic wound dressing. Its bactericidal action is **not due to the iodoform molecule itself**, but rather due to its slow decomposition upon contact with warm tissues and wound fluids, which causes the **continuous liberation of Free Elemental Iodine ($\\\\text{I}_2$)**. Free iodine oxidizes bacterial proteins and essential enzymes, destroying pathogens. Option 2 and Option 3 describe non-iodoform antiseptic mechanisms."
+    "ee": "1. Option 0 is incorrect because iodoform contains iodine atoms, not chlorine.\n2. Option 1 is correct: **Iodoform (Triiodomethane, $\\text{CHI}_3$)** is a yellow crystalline solid with a characteristic medicinal odor, historically used as an antiseptic dressing for surgical wounds and ulcers. Its antiseptic and antimicrobial efficacy is not due to the intact $\\text{CHI}_3$ molecule itself, but rather due to the **slow, sustained liberation of free elemental Iodine ($\\text{I}_2$)** when it comes into contact with organic wound tissues and moisture. Free iodine oxidizes vital microbial proteins and enzymes, destroying bacteria.\n3. Option 2 and Option 3 describe non-iodoform antiseptic mechanisms.",
+    "eh": "1. विकल्प 0 गलत है: आयोडोफॉर्म में क्लोरीन नहीं होती।\n2. विकल्प 1 सही है: **आयोडोफॉर्म ($\\text{CHI}_3$)** एक पीला क्रिस्टलीय ठोस पदार्थ है जिसका उपयोग पहले घावों पर एंटीसेप्टिक (रोगाणुरोधक) मरहम के रूप में किया जाता था। आयोडोफॉर्म का एंटीसेप्टिक गुण स्वयं $\\text{CHI}_3$ अणु के कारण नहीं, बल्कि घाव और नमी के संपर्क में आने पर इससे **धीरे-धीरे मुक्त होने वाले 'आयोडीन' ($\\text{I}_2$) के कारण** होता है। मुक्त आयोडीन बैक्टीरिया के प्रोटीनों को नष्ट करके कीटाणुओं को मारता है।\n3. विकल्प 2 गलत है: यह अल्कोहल का निर्जलीकरण प्रभाव नहीं है।\n4. विकल्प 3 गलत है: यह कैल्शियम अवक्षेपण से संबंधित नहीं है।"
   },
   {
     "p_id": "bpsc_chem_m18_17",
     "qe": "On December 3, 1984, a catastrophic industrial gas leak occurred at the Union Carbide pesticide plant in Bhopal (Bhopal Gas Tragedy), killing thousands. What highly toxic intermediate gas was leaked during this disaster?",
     "qh": "3 दिसंबर 1984 को भोपाल में यूनियन कार्बाइड की कीटनाशक फैक्ट्री में एक विनाशकारी औद्योगिक गैस रिसाव (भोपाल गैस त्रासदी) हुआ, जिसमें हजारों लोग मारे गए। इस आपदा के दौरान कौन सी अत्यधिक विषैली मध्यवर्ती गैस लीक हुई थी?",
-    "o": [
+    "oe": [
       "Carbon Tetrachloride (Pyrene)",
-      "Methyl Isocyanate ($\\\\text{CH}_3\\\\text{NC}$ or $\\\\text{CH}_3\\\\text{N=C=O}$)",
+      "Methyl Isocyanate ($\\text{CH}_3\\text{NC}$ or $\\text{CH}_3\\text{N=C=O}$)",
       "Alpha-chloroacetophenone",
       "Chloropicrin"
     ],
+    "oh": [
+      "कार्बन टेट्राक्लोराइड (पायरीन)",
+      "मिथाइल आइसोसाइनेट ($\\text{CH}_3\\text{N=C=O}$ / MIC)",
+      "अल्फा-क्लोरोएसीटोफेनोन",
+      "क्लोरोपिक्रिन"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes a fire extinguishing liquid. Option 1 is correct because the tragic **Bhopal Gas Tragedy (1984)** was caused by the accidental entry of water into storage tanks containing **Methyl Isocyanate (MIC, $\\\\text{CH}_3\\\\text{N=C=O}$)** at the Union Carbide India Limited pesticide plant. The exothermic runaway reaction ruptured tanks and released tonnes of toxic MIC vapor into the atmosphere. MIC reacts aggressively with mucous membranes and pulmonary tissues, causing acute pulmonary edema and immediate death to thousands. Option 2 and Option 3 are tear gas components."
+    "ee": "1. Option 0 describes a non-flammable solvent/fire-extinguisher chemical.\n2. Option 1 is correct: The tragic **Bhopal Gas Tragedy (December 2–3, 1984)** at the Union Carbide India Limited (UCIL) pesticide plant (manufacturing carbaryl/Sevin) occurred due to the runaway exothermic reaction triggered when water entered Tank 610 containing **Methyl Isocyanate (MIC, $\\text{CH}_3-\\text{N}=\\text{C}=\\text{O}$)**. Over 40 tonnes of toxic MIC gas were released into the atmosphere, causing immediate pulmonary edema, severe chemical asphyxiation, and the death of thousands of citizens.\n3. Option 2 and Option 3 are standard riot-control tear gas agents.",
+    "eh": "1. विकल्प 0 गलत है: कार्बन टेट्राक्लोराइड अग्निशन शमन में प्रयुक्त होता है।\n2. विकल्प 1 सही है: 2-3 दिसंबर 1984 की रात को भोपाल स्थित यूनियन कार्बाइड इंडिया लिमिटेड (UCIL) के कीटनाशक कारखाने से अत्यधिक विषैली गैस **मिथाइल आइसोसाइनेट (Methyl Isocyanate - MIC, $\\text{CH}_3\\text{NCO}$)** का भारी रिसाव हुआ था। इस भीषण औद्योगिक आपदा को **'भोपाल गैस त्रासदी'** कहा जाता है, जिसमें फेफड़ों में पानी भरने और दम घुटने से हजारों लोगों की मृत्यु हो गई थी।\n3. विकल्प 2 गलत है: अल्फा-क्लोरोएसीटोफेनोन आंसू गैस का घटक है।\n4. विकल्प 3 गलत है: क्लोरोपिक्रिन भी आंसू गैस है।"
   },
   {
     "p_id": "bpsc_chem_m18_18",
     "qe": "Electrical fires involving high-voltage transformers and energized wiring cannot be extinguished with water. What non-flammable halogenated compound is used as an electrical fire extinguisher under the trade name 'Pyrene'?",
     "qh": "उच्च वोल्टेज ट्रांसफार्मर और सक्रिय तारों से जुड़ी बिजली की आग को पानी से नहीं बुझाया जा सकता है। व्यापारिक नाम 'पायरीन' (Pyrene) के तहत कौन सा गैर-ज्वलनशील हैलोजेनेटेड यौगिक बिजली की आग बुझाने के यंत्र के रूप में उपयोग किया जाता है?",
-    "o": [
+    "oe": [
       "Benzene Hexachloride (Lindane)",
-      "Carbon Tetrachloride ($\\\\text{CCl}_4$)",
+      "Carbon Tetrachloride ($\\text{CCl}_4$)",
       "Nitrobenzene (Oil of Mirbane)",
       "Trinitrotoluene (TNT)"
     ],
+    "oh": [
+      "बेंजीन हेक्साक्लोराइड (लिंडेन)",
+      "कार्बन टेट्राक्लोराइड ($\\text{CCl}_4$)",
+      "नाइट्रोबेंजीन (मिर्बेन का तेल)",
+      "ट्राइनाइट्रोटोल्यूनि (TNT)"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is an insecticide (Gammaxene). Option 1 is correct because **Carbon Tetrachloride ($\\\\text{CCl}_4$)** is a heavy, non-flammable volatile liquid marketed under the trade name **Pyrene** for fire extinguishers. When sprayed onto electrical fires, its dense, non-conducting vapors smother flames by blanketing the burning site and displacing oxygen without conducting electricity or damaging sensitive high-voltage wiring. Option 2 is a soap fragrance/explosive precursor, and Option 3 is a military high explosive."
+    "ee": "1. Option 0 is an agricultural pesticide (gammaxene/lindane).\n2. Option 1 is correct: **Carbon Tetrachloride (Tetrachloromethane, $\\text{CCl}_4$)** is a heavy, completely non-flammable liquid marketed under the trade commercial name **Pyrene** in fire extinguishers. Because it is a non-conductor of electricity and its heavy, dense vapors displace oxygen and blanket the fire without causing short circuits, it was widely used to extinguish hazardous **electrical fires** (though modern usage is restricted due to toxic phosgene formation at extreme heat).\n3. Option 2 is a precursor for aniline dyes.\n4. Option 3 is a military explosive.",
+    "eh": "1. विकल्प 0 गलत है: BHC (लिंडेन) एक कीटनाशक है।\n2. विकल्प 1 सही है: **कार्बन टेट्राक्लोराइड ($\\text{CCl}_4$)** एक अज्वलनशील, भारी तरल है जिसे व्यापारिक रूप से **'पायरीन' (Pyrene)** के नाम से जाना जाता है। चूंकि $\\text{CCl}_4$ विद्युत का कुचालक होता है और इसकी भारी वाष्प आग को चारों तरफ से घेरकर ऑक्सीजन की आपूर्ति काट देती है, इसलिए इसका उपयोग बिजली के तारों और ट्रांसफार्मरों में लगी **बिजली की आग (Electrical fires)** को बुझाने के लिए अग्निशामक के रूप में किया जाता है।\n3. विकल्प 2 गलत है: नाइट्रोबेंजीन का उपयोग सुगंध और रंजक में होता है।\n4. विकल्प 3 गलत है: TNT एक उच्च विस्फोटक है।"
   },
   {
     "p_id": "bpsc_chem_m18_19",
-    "qe": "Nitrobenzene ($\\\\text{C}_6\\\\text{H}_5\\\\text{NO}_2$) is an aromatic nitro derivative first extracted by Mitscherlich in 1834. What distinct commercial name is given to nitrobenzene due to its characteristic almond-like odor?",
-    "qh": "नाइट्रोबेंजीन ($\\\\text{C}_6\\\\text{H}_5\\\\text{NO}_2$) एक एरोमैटिक नाइट्रो व्युत्पन्न है जिसे पहली बार 1834 में मिट्सचरलिच द्वारा अलग किया गया था। इसकी विशिष्ट बादाम जैसी गंध के कारण नाइट्रोबेंजीन को कौन सा विशिष्ट व्यावसायिक नाम दिया गया है?",
-    "o": [
+    "qe": "Nitrobenzene ($\\text{C}_6\\text{H}_5\\text{NO}_2$) is an aromatic nitro derivative first extracted by Mitscherlich in 1834. What distinct commercial name is given to nitrobenzene due to its characteristic almond-like odor?",
+    "qh": "नाइट्रोबेंजीन ($\\text{C}_6\\text{H}_5\\text{NO}_2$) एक एरोमैटिक नाइट्रो व्युत्पन्न है जिसे पहली बार 1834 में मिट्सचरलिच द्वारा अलग किया गया था। इसकी विशिष्ट बादाम जैसी गंध के कारण नाइट्रोबेंजीन को कौन सा विशिष्ट व्यावसायिक नाम दिया गया है?",
+    "oe": [
       "Oil of Vitriol",
       "Oil of Mirbane",
       "Wood Spirit",
       "Carbolic Acid"
     ],
+    "oh": [
+      "ऑयल ऑफ विट्रिऑल",
+      "ऑयल ऑफ मिर्बेन (Oil of Mirbane)",
+      "वुड स्पिरिट",
+      "कार्बोलिक एसिड"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes concentrated sulfuric acid. Option 1 is correct because **Nitrobenzene ($\\\\text{C}_6\\\\text{H}_5\\\\text{NO}_2$)** is commercially known as **Oil of Mirbane**. It is a pale yellow oily liquid possessing a potent, characteristic bitter-almond odor. Due to its cheap production and distinct aroma, it was historically used to perfume cheap soaps, floor polishes, and cosmetics, as well as serving as a precursor for manufacturing Aniline and explosives like Trinitrobenzene (TNB). Option 2 describes methanol, and Option 3 describes phenol."
+    "ee": "1. Option 0 is the historical name for concentrated sulfuric acid ($\\text{H}_2\\text{SO}_4$).\n2. Option 1 is correct: **Nitrobenzene ($\\text{C}_6\\text{H}_5\\text{NO}_2$)**, prepared by nitrating benzene with a mixture of concentrated $\\text{HNO}_3$ and $\\text{H}_2\\text{SO}_4$, is a pale yellow oily liquid with a distinctive, sweet, bitter-almond-like scent. Due to this fragrance, it is commercially known as **Oil of Mirbane (मिर्बेन का तेल)** and was historically used in perfuming soaps, polishes, and as a raw material for synthesizing aniline and dye intermediates.\n3. Option 2 is the historical name for methanol ($\\text{CH}_3\\text{OH}$).\n4. Option 3 is the historical commercial name for phenol ($\\text{C}_6\\text{H}_5\\text{OH}$).",
+    "eh": "1. विकल्प 0 गलत है: ऑयल ऑफ विट्रिऑल सांद्र सल्फ्यूरिक एसिड ($\\text{H}_2\\text{SO}_4$) को कहा जाता है।\n2. विकल्प 1 सही है: **नाइट्रोबेंजीन ($\\text{C}_6\\text{H}_5\\text{NO}_2$)** एक हल्के पीले रंग का तैलीय तरल होता है, जिसमें कड़वे बादाम (Bitter Almond) जैसी विशिष्ट गंध होती है। इस मनमोहक गंध के कारण इसे व्यावसायिक रूप से **'मिर्बेन का तेल' (Oil of Mirbane)** कहा जाता है। इसका उपयोग साबुन, पॉलिश में सुगंध के लिए तथा एनिलीन और रंजकों के निर्माण में किया जाता है।\n3. विकल्प 2 गलत है: वुड स्पिरिट मेथनॉल ($\\text{CH}_3\\text{OH}$) को कहते हैं।\n4. विकल्प 3 गलत है: कार्बोलिक एसिड फिनोल का व्यावसायिक नाम है।"
   },
   {
     "p_id": "bpsc_chem_m18_20",
     "qe": "Law enforcement agencies deploy specialized chemical irritants commonly called 'tear gas' to disperse violent or uncontrolled mobs. Which choice correctly identifies recognized chemical compounds used as tear gas?",
     "qh": "कानून प्रवर्तन एजेंसियां हिंसक या अनियंत्रित भीड़ को तितर-बितर करने के लिए आमतौर पर 'आँसू गैस' (tear gas) कहे जाने वाले विशेष रासायनिक परेशान करने वाले एजेंटों को तैनात करती हैं। कौन सा विकल्प आँसू गैस के रूप में उपयोग किए जाने वाले मान्यता प्राप्त रासायनिक यौगिकों की सही पहचान करता है?",
-    "o": [
+    "oe": [
       "Methyl isocyanate, Phosgene, and Lewisite",
       "Alpha-chloroacetophenone, Acrolein, and Chloropicrin (Nitrochloroform)",
       "Acetone, Formalin, and Benzene",
       "Glycerol, Ethanol, and Acetic acid"
     ],
+    "oh": [
+      "मिथाइल आइसोसाइनेट, फॉस्जीन, और लुईसाइट",
+      "अल्फा-क्लोरोएसीटोफेनोन, एक्रोलीन और क्लोरोपिक्रिन (नाइट्रोक्लोरोफॉर्म)",
+      "एसीटोन, फॉर्मेलिन और बेंजीन",
+      "ग्लिसरॉल, इथेनॉल और एसिटिक अम्ल"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists lethal industrial poisons or chemical warfare agents (Lewisite). Option 1 is correct because **Tear Gas (Lachrymators)** consists of sensory irritant chemicals that stimulate corneal nerves to induce immediate tearing, pain, and blepharospasm. Standard tear gas compounds include **Alpha-chloroacetophenone ($\\\\text{C}_8\\\\text{H}_7\\\\text{ClO}$)**, **Acrolein ($\\\\text{CH}_2=\\\\text{CH-CHO}$)**, and **Chloropicrin ($\\\\text{CCl}_3\\\\text{NO}_2$, nitrochloroform)**, synthesized by reacting chloroform with concentrated nitric acid. Option 2 and Option 3 list common solvents, tissue fixatives, or benign organic acids."
+    "ee": "1. Option 0 lists lethal toxic warfare gases (Phosgene, Lewisite) and lethal industrial poisons (MIC).\n2. Option 1 is correct: **Tear Gas (Lachrymators)** refers to non-lethal chemical irritants that stimulate the corneal nerves of the eyes, causing intense burning pain, involuntary eye closure, and copious tearing. Principal tear gas compounds include:\n   - **Alpha-chloroacetophenone ($\\\\text{C}_6\\text{H}_5\\text{COCH}_2\\text{Cl}$ or $\\text{CN}$ gas)**: The classic riot control agent;\n   - **Chloropicrin (Nitrochloroform, $\\text{CCl}_3\\text{NO}_2$)**: Prepared by reacting chloroform with concentrated $\\text{HNO}_3$;\n   - **Acrolein (2-propenal, $\\text{CH}_2=\\text{CH}-\\text{CHO}$)** and **CS gas (o-chlorobenzylidenemalononitrile)**.\n3. Option 2 and Option 3 list common solvents, preservatives, and organic acids.",
+    "eh": "1. विकल्प 0 गलत है: फॉस्जीन और लुईसाइट घातक रासायनिक हथियार हैं, भीड़ नियंत्रण की आंसू गैस नहीं।\n2. विकल्प 1 सही है: **आंसू गैस (Tear Gas / अश्रु गैस)** में वे उत्तेजक रसायन शामिल होते हैं जो आंखों और त्वचा में तीव्र जलन और अनियंत्रित आंसू उत्पन्न करते हैं। इसके प्रमुख मान्यता प्राप्त रासायनिक यौगिक हैं:\n   - **अल्फा-क्लोरोएसीटोफेनोन ($\\text{C}_8\\text{H}_7\\text{ClO}$ / CN Gas)**: सबसे प्रमुख आंसू गैस;\n   - **क्लोरोपिक्रिन या नाइट्रोक्लोरोफॉर्म ($\\text{CCl}_3\\text{NO}_2$)**: जो क्लोरोफॉर्म पर नाइट्रिक अम्ल की क्रिया से बनता है;\n   - **एक्रोलीन ($\\text{CH}_2=\\text{CH-CHO}$)** और **CS गैस**।\n3. विकल्प 2 और विकल्प 3 गलत हैं: ये सामान्य कार्बनिक विलायक और अम्ल हैं।"
   }
 ]
