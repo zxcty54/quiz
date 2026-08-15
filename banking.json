@@ -1,4 +1,5 @@
 [
+ 
   {
     "p_id": "bpsc_nbf_001",
     "qe": "Consider the following statements regarding the structural boundaries and legal constraints configured to define Non-Banking Financial Companies (NBFCs) in India:",
@@ -13,14 +14,21 @@
       "अनुसूचित वाणिज्यिक बैंकों के विपरीत, नियामक वास्तुकला एनबीएफसी को वित्तीय लीजिंग या किराया-खरीद (hire-purchase) समझौतों को निष्पादित करने से पूरी तरह से रोकती है।",
       "बैंकों और गैर-बैंकों के बीच प्राथमिक सरलीकृत अंतर यह है कि गैर-बैंक अपने जमाकर्ताओं को अपने खातों से नियमित निकासी करने की अनुमति नहीं देते हैं।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 1 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 1 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statement 1 is correct because NBFCs are explicitly barred from having agricultural, industrial, or immovable property construction as their principal business. Statement 2 is incorrect because NBFCs actively perform intermediation through leasing and hire-purchase [a credit contract structure where a buyer takes physical possession of an asset but ownership is officially transferred only after all periodic installments are fully paid]. Statement 3 is correct because the lack of transactional liquidity withdrawal options forms the classic boundary separating non-banks from full commercial bank accounts."
+    "ee": "1. Statement 1 is correct because under Section 45-I(c) of the RBI Act, 1934, an NBFC's principal business includes lending, investments, leasing, and hire-purchase, but explicitly excludes agricultural operations, industrial activity, purchase/sale of goods (other than securities), and construction/sale of immovable property.\n2. Statement 2 is incorrect because NBFCs are actively permitted and structurally designed to engage in equipment leasing, asset financing, and hire-purchase agreements, which form a major pillar of their core intermediation business.\n3. Statement 3 is correct because unlike commercial banks, NBFCs cannot accept demand deposits (savings/current accounts withdrawable by cheque on demand), meaning depositors cannot execute routine transactional withdrawals via cheques or pay-orders.",
+    "eh": "1. कथन 1 सही है क्योंकि भारतीय रिज़र्व बैंक अधिनियम, 1934 की धारा 45-I(c) के तहत एनबीएफसी (NBFC) का मुख्य व्यवसाय ऋण देना, निवेश, लीजिंग और किराया-खरीद है, लेकिन इसके मुख्य व्यवसाय में कृषि कार्य, औद्योगिक गतिविधियां, वस्तुओं की खरीद-बिक्री तथा अचल संपत्ति का निर्माण शामिल नहीं हो सकता।\n2. कथन 2 गलत है क्योंकि एनबीएफसी वित्तीय पट्टे (Leasing) और किराया-खरीद (Hire-Purchase) समझौतों के संचालन के लिए पूरी तरह अधिकृत हैं और यह उनकी मुख्य व्यावसायिक गतिविधियों का एक बड़ा हिस्सा है।\n3. कथन 3 सही है क्योंकि बैंकों और एनबीएफसी के बीच मुख्य अंतर यह है कि एनबीएफसी मांग जमा (Demand Deposits) स्वीकार नहीं कर सकती हैं, इसलिए जमाकर्ता चेक के माध्यम से नियमित निकासी नहीं कर सकते।"
   },
   {
     "p_id": "bpsc_nbf_002",
@@ -36,14 +44,21 @@
       "हाउसिंग फाइनेंस कंपनियों को आरबीआई की निगरानी से पूरी तरह से अलग रखा गया है, और वे राष्ट्रीय आवास बैंक (NHB) के निरीक्षण के अधीन आती हैं।",
       "चिट फंड संचालन का प्रबंधन संबंधित प्रांतीय राज्य मंत्रिमंडलों द्वारा केंद्रीय चिट फंड अधिनियम, 1982 के नियमों के तहत किया जाता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements represent precise textually accurate records of regulatory carve-outs designed to avoid dual regulation [the systemic overlapping of surveillance jurisdiction where a single financial entity faces conflicting compliance dictates from multiple state supervisors]. To ensure stability, housing finance is routed to NHB, venture capital to SEBI, and chit funds to state registrars, leaving the RBI to focus on core deposit-taking shadow institutions."
+    "ee": "1. Statement 1 is correct because to prevent jurisdictional conflict and dual regulation, venture capital funds, merchant banking companies, and stock broking entities are registered with and regulated exclusively by the Securities and Exchange Board of India (SEBI).\n2. Statement 2 is correct because historically, under the core regulatory carve-outs, Housing Finance Companies (HFCs) were placed under the dedicated regulatory and supervisory umbrella of the National Housing Bank (NHB) to avoid direct duplicate oversight.\n3. Statement 3 is correct because Chit Fund companies are governed by the central Chit Funds Act, 1982, but their day-to-day administrative regulation, registration, and inspection are vested in the respective state governments.",
+    "eh": "1. कथन 1 सही है क्योंकि दोहरे नियमन (Dual Regulation) से बचने के लिए वेंचर कैपिटल फंड, मर्चेंट बैंकिंग और स्टॉक ब्रोकिंग फर्मों को सेबी (SEBI) द्वारा विनियमित किया जाता है, जिससे वे आरबीआई के प्रत्यक्ष नियंत्रण से मुक्त रहते हैं।\n2. कथन 2 सही है क्योंकि नियामक ढांचे के तहत हाउसिंग फाइनेंस कंपनियों (HFCs) को राष्ट्रीय आवास बैंक (NHB) के प्राथमिक निरीक्षण और पर्यवेक्षण के अंतर्गत रखा गया था ताकि नियामक ओवरलैप न हो।\n3. कथन 3 सही है क्योंकि चिट फंड कंपनियों का संचालन केंद्रीय चिट फंड अधिनियम, 1982 के तहत संबंधित राज्य सरकारों के रजिस्ट्रार द्वारा प्रशासित और नियंत्रित किया जाता है।"
   },
   {
     "p_id": "bpsc_nbf_003",
@@ -59,14 +74,21 @@
       "छोटे सूक्ष्म-निवेशकों को आकर्षित करने के लिए, नियामक कोड एनबीएफसी को आधारभूत रेपो दर से 5 प्रतिशत तक अधिक ब्याज दरें देने की अनुमति देता है।",
       "मानक वाणिज्यिक बैंकिंग जमाओं के विपरीत, एनबीएफसी संरचनाओं के भीतर रखी गई सार्वजनिक जमाएं पूरी तरह से असुरक्षित (uninsured) होती हैं और उनकी कोई आरबीआई पुनर्भुगतान गारंटी नहीं होती है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 3 are correct",
       "Only 1 and 2 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 3 सही हैं",
+      "केवल 1 और 2 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 3 are textually exact parameters. NBFC deposits are exposed to default risk because they lack coverage from DICGC [Deposit Insurance and Credit Guarantee Corporation, a fully-owned subsidiary of the RBI providing a statutory safety blanket to depositors up to a specified numeric ceiling in the event of bank insolvency]. Statement 2 contains a trap: NBFCs cannot offer interest rates higher than the ceiling prescribed by the RBI, and they are strictly prohibited from offering gifts or additional incentives to distort consumer choices."
+    "ee": "1. Statement 1 is correct because RBI regulations mandate that Deposit-taking NBFCs (NBFC-Ds) can only accept or renew fixed public deposits for a minimum maturity period of 12 months (1 year) and a maximum period of 60 months (5 years); they cannot accept demand deposits.\n2. Statement 2 is incorrect because the maximum ceiling on interest rates that an NBFC can offer is strictly capped by the RBI (and linked to prescribed regulatory ceilings, not an arbitrary 5% above the repo rate), and NBFCs are legally barred from offering gifts, incentives, or promotional rates to attract deposits.\n3. Statement 3 is correct because deposits with NBFCs are not covered by the Deposit Insurance and Credit Guarantee Corporation (DICGC) insurance scheme (which protects bank deposits up to ₹5 lakh), nor does the RBI guarantee repayment.",
+    "eh": "1. कथन 1 सही है क्योंकि रिज़र्व बैंक के नियमों के अनुसार जमा स्वीकार करने वाली एनबीएफसी (NBFC-D) न्यूनतम 12 महीने (1 वर्ष) और अधिकतम 60 महीने (5 वर्ष) की निश्चित अवधि के लिए ही सावधि सार्वजनिक जमा स्वीकार या नवीनीकृत कर सकती हैं।\n2. कथन 2 गलत है क्योंकि एनबीएफसी द्वारा दी जाने वाली ब्याज दरों की अधिकतम सीमा आरबीआई द्वारा निर्धारित की जाती है, और उन्हें जमाकर्ताओं को आकर्षित करने के लिए उपहार, प्रोत्साहन या मनमानी अतिरिक्त दरें देने की सख्त मनाही है।\n3. कथन 3 सही है क्योंकि वाणिज्यिक बैंकों के विपरीत, एनबीएफसी में रखी गई सार्वजनिक जमा राशि को डीआईसीजीसी (DICGC) द्वारा ₹5 लाख तक का बीमा कवर प्राप्त नहीं होता है और न ही आरबीआई इनके पुनर्भुगतान की कोई गारंटी देता है।"
   },
   {
     "p_id": "bpsc_nbf_004",
@@ -82,14 +104,21 @@
       "इस एकीकरण लहर के बाद, नियामक ध्यान इकाई-आधारित ट्रैकिंग (entity-based tracking) से हटकर गतिविधि-आधारित निगरानी ढांचे पर स्थानांतरित हो गया।",
       "कोर इन्वेस्टमेंट कंपनियों (CICs) को सामान्य कॉर्पोरेट्स के समान माना जाता है, जिसके लिए सभी एक्सपोज़र में पूर्ण क्रेडिट-रेटेड जोखिम भार की आवश्यकता होती है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are correct textual modifications implemented to give operational flexibility and streamline regulation. Activity-based regulation ensures that supervision targets the financial risk of the transaction rather than the legal structure of the firm. Statement 3 contains an explicit exception trap: the text notes that corporate credit-rating risk weights apply to all of them *excluding* Core Investment Companies (CICs)."
+    "ee": "1. Statement 1 is correct because in February 2019, the RBI harmonized and merged three distinct categories—Asset Finance Companies (AFCs), Loan Companies (LCs), and Investment Companies (ICs)—into a unified category called NBFC-Investment and Credit Company (NBFC-ICC).\n2. Statement 2 is correct because the restructuring aimed to provide greater operational flexibility, reduce regulatory arbitrage, and transition supervision toward an activity-based regulatory approach rather than rigid structural entity classifications.\n3. Statement 3 is incorrect because Core Investment Companies (CICs) are specialized, systemically important holding entities investing primarily in group companies' equity/debt; they are governed by a separate, distinct regulatory regime and are exempted from standard commercial credit-rated risk weight mandates.",
+    "eh": "1. कथन 1 सही है क्योंकि फरवरी 2019 में भारतीय रिज़र्व बैंक ने विनियमन को सरल बनाने के लिए तीन पुरानी श्रेणियों—एसेट फाइनेंस कंपनी (AFC), लोन कंपनी (LC) और इन्वेस्टमेंट कंपनी (IC)—का विलय करके एक नई एकीकृत श्रेणी 'NBFC-इन्वेस्टमेंट एंड क्रेडिट कंपनी' (NBFC-ICC) बनाई।\n2. कथन 2 सही है क्योंकि इस एकीकरण का उद्देश्य विनियामक अंतरण (Arbitrage) को समाप्त करना और निगरानी को इकाई-आधारित (Entity-based) वर्गीकरण से हटाकर गतिविधि-आधारित (Activity-based) ढांचे की ओर ले जाना था।\n3. कथन 3 गलत है क्योंकि कोर इन्वेस्टमेंट कंपनियों (CICs) का मुख्य कार्य अपनी ही समूह कंपनियों में शेयर व प्रतिभूतियां धारित करना होता है, अतः इन्हें सामान्य एनबीएफसी से अलग एक विशिष्ट नियामक व्यवस्था के तहत छूट दी गई है।"
   },
   {
     "p_id": "bpsc_nbf_005",
@@ -105,14 +134,21 @@
       "IL&FS की विफलता तब सामने आई जब वह अपने कमर्शियल पेपर्स (Commercial Papers) के भीतर संग्रहीत अपने अल्पकालिक ऋण दायित्वों का सम्मान करने में विफल रही।",
       "सितंबर 2019 तक, धन की कमी के बावजूद, शेडो बैंकिंग क्षेत्र का विस्तार कुल वाणिज्यिक बैंक संपत्तियों के 80 प्रतिशत से अधिक हिस्से को कवर करने तक हो गया।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 precisely articulate the micro-mechanics of the 2018 shadow banking crisis. Commercial Paper [CP, an unsecured, short-term debt instrument issued by corporations to finance working capital needs, tracking high liquidity vulnerabilities in the money market] defaults triggered a structural contagion panic. Statement 3 contains a quantitative trap: by September 2019, the sector accounted for around *18 per cent* of bank assets (with a balance sheet size of over ₹30 lakh crores), not 80%."
+    "ee": "1. Statement 1 is correct because in September 2018, Infrastructure Leasing & Financial Services (IL&FS) suffered payment defaults, triggering panic across the debt markets, widespread risk aversion among mutual funds, and a systemic liquidity freeze across shadow banks.\n2. Statement 2 is correct because the immediate catalyst was IL&FS's inability to service its short-term debt obligations, primarily Commercial Papers (CPs) and inter-corporate deposits, exposing severe asset-liability mismatches (ALM).\n3. Statement 3 is incorrect because as of September 2019, the total balance sheet size of the entire NBFC sector stood at approximately ₹30.8 lakh crore, which accounted for roughly **18.6 per cent** of the total assets of the scheduled commercial banking sector, not 80 per cent.",
+    "eh": "1. कथन 1 सही है क्योंकि सितंबर 2018 में इंफ्रास्ट्रक्चर लीजिंग एंड फाइनेंशियल सर्विसेज (IL&FS) समूह के डिफॉल्ट के कारण पूरे ऋण बाजार और म्यूचुअल फंड क्षेत्र में घबराहट फैल गई, जिससे एनबीएफसी क्षेत्र में गंभीर तरलता संकट उत्पन्न हो गया।\n2. कथन 2 सही है क्योंकि IL&FS का यह संकट मुख्य रूप से कमर्शियल पेपर्स (CPs) और अल्पकालिक ऋण दायित्वों के पुनर्भुगतान में विफलता के कारण सामने आया, जिसने गंभीर परिसंपत्ति-देनदारी असंतुलन (ALM) को उजागर किया।\n3. कथन 3 गलत है क्योंकि सितंबर 2019 तक पूरे एनबीएफसी क्षेत्र की कुल परिसंपत्तियां (लगभग ₹30.8 लाख करोड़) अनुसूचित वाणिज्यिक बैंकों की कुल परिसंपत्तियों का लगभग **18.6 प्रतिशत** थीं, 80 प्रतिशत नहीं।"
   },
   {
     "p_id": "bpsc_rbi_006",
@@ -128,14 +164,21 @@
       "पुनर्मूल्यांकन शेष अवास्तविक मूल्यांकन लाभों का प्रतिनिधित्व करते हैं और बाजार जोखिमों के खिलाफ कड़ाई से जोखिम बफर के रूप में कार्य करते हैं, जिससे वे राज्य के लिए गैर-वितरण योग्य हो जाते हैं।",
       "केंद्रीय बैंक राज्य के घाटे को वित्तपोषित करने के लिए पुनर्मूल्यांकन शेष को स्वतंत्र रूप से वितरित कर सकता है बशर्ते मुख्य रेपो दर अपरिवर्तित रहे।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise representations of the conservative accounting guardrails built under the 2019 Economic Capital Framework [the structural rules governing the allocation of central bank surpluses and capital provisionings relative to balance sheet risk metrics]. Revaluation balances represent paper gains on assets like gold or foreign reserves and are strictly non-distributable. Statement 3 is incorrect because it describes an action explicitly prohibited by the panel's rules to shield central bank financial resilience."
+    "ee": "1. Statement 1 is correct because the Bimal Jalan Expert Committee (2019) on the Economic Capital Framework (ECF) defined Realized Equity as retained earnings and statutory reserves that provide an unencumbered capital buffer to absorb monetary, credit, and operational losses.\n2. Statement 2 is correct because Revaluation Balances (held in the Currency and Gold Revaluation Account - CGRA) reflect unrealized marked-to-market fluctuations in foreign currency and gold assets, functioning strictly as buffers against market volatility, and cannot be distributed as dividend surpluses.\n3. Statement 3 is incorrect because revaluation reserves are non-cash accounting gains that cannot be transferred to the government under any circumstances, as distributing them would amount to unbacked monetary expansion and violate central bank financial soundness.",
+    "eh": "1. कथन 1 सही है क्योंकि आर्थिक पूंजी ढांचे (ECF) पर बिमल जालान समिति (2019) ने स्पष्ट किया कि 'रियलाइज्ड इक्विटी' (Realized Equity) वास्तविक संचित लाभ और वैधानिक आरक्षित निधियों से बनती है, जिसका उपयोग मौद्रिक और परिचालन संबंधी सभी वास्तविक हानियों को वहन करने के लिए किया जा सकता है।\n2. कथन 2 सही है क्योंकि पुनर्मूल्यांकन शेष (जैसे CGRA) विदेशी मुद्रा और सोने के बाजार मूल्यों में उतार-चढ़ाव से उत्पन्न अवास्तविक (Paper gains) लाभ होते हैं; यह केवल बाजार जोखिमों के खिलाफ बफर का काम करते हैं और इन्हें सरकार को लाभांश के रूप में वितरित नहीं किया जा सकता।\n3. कथन 3 गलत है क्योंकि पुनर्मूल्यांकन लाभों को राजकोषीय घाटे की भरपाई के लिए वितरित करने पर सख्त प्रतिबंध है, चाहे रेपो दर कुछ भी हो।"
   },
   {
     "p_id": "bpsc_rbi_007",
@@ -151,14 +194,21 @@
       "व्यापक आर्थिक स्थिरता सुनिश्चित करने के लिए, समिति ने 99.5 प्रतिशत विश्वास स्तर पर ईएस (ES) के अत्यधिक रूढ़िवादी लक्ष्य की सिफारिश की।",
       "आकस्मिक जोखिम बफर (CRB) को आरबीआई की कुल बैलेंस शीट के 15.5 प्रतिशत से 12.5 प्रतिशत की सख्त सीमा के भीतर बनाए रखने का आदेश दिया गया है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise textually exact indicators tracking risk measurement modernization. Expected Shortfall [ES, an advanced portfolio risk assessment tool measuring the average value of losses that fall in the worst tail-end scenarios past a given confidence threshold] was set at 99.5%. Statement 3 contains a quantitative trap: the Contingent Risk Buffer [CRB, the cumulative capital cushion funded from retained earnings to cover credit, monetary, and operational risks] must be maintained within a range of *6.5 per cent to 5.5 per cent* of the balance sheet, not 15.5%-12.5%."
+    "ee": "1. Statement 1 is correct because the Bimal Jalan Committee recommended adopting the globally recognized Expected Shortfall (ES) risk methodology under stressed market conditions, replacing the earlier Stressed-Value at Risk (Stressed-VaR) model.\n2. Statement 2 is correct because to safeguard the central bank against tail-risk events, the committee recommended an Expected Shortfall target calibrated at an extremely conservative 99.5 per cent confidence level.\n3. Statement 3 is incorrect because the Contingent Risk Buffer (CRB)—the realized equity component of economic capital—was mandated to be maintained within a band of **5.5 per cent to 6.5 per cent** of the RBI's total balance sheet (while the total Economic Capital was placed in the range of 20.0% to 24.5%), not 15.5% to 12.5%.",
+    "eh": "1. कथन 1 सही है क्योंकि बिमल जालान समिति ने वित्तीय जोखिमों के सटीक आकलन के लिए पूर्ववर्ती 'स्ट्रेस्ड-वैल्यू एट रिस्क' मॉडल के स्थान पर तनावपूर्ण परिस्थितियों में 'एक्सपेक्टेड शॉर्टफॉल' (Expected Shortfall - ES) कार्यप्रणाली अपनाने की सिफारिश की।\n2. कथन 2 सही है क्योंकि अप्रत्याशित वित्तीय संकटों से केंद्रीय बैंक की सुरक्षा हेतु समिति ने 99.5 प्रतिशत के उच्च विश्वास स्तर (Confidence Level) पर ईएस (ES) पद्धति को लागू करने का सुझाव दिया।\n3. कथन 3 गलत है क्योंकि आकस्मिक जोखिम बफर (Contingent Risk Buffer - CRB) को आरबीआई की बैलेंस शीट के **5.5% से 6.5%** के दायरे में बनाए रखने की सिफारिश की गई थी (जबकि कुल आर्थिक पूंजी 20.0% से 24.5% के बीच तय की गई थी), न कि 15.5% से 12.5% के बीच।"
   },
   {
     "p_id": "bpsc_rbi_008",
@@ -174,14 +224,21 @@
       "एक हॉकिश रुख (Hawkish Stance) जो सीधे हेडलाइन मुद्रास्फीति संकेतकों से जुड़ा हुआ है और मूल्य वृद्धि को रोकने के लिए विशेष रूप से लक्षित है।",
       "एक अंशांकित संकुचन (Calibrated Tightening) रुख जो यह दर्शाता है कि पूरे चक्र में ब्याज दरें केवल ऊपर की ओर जा सकती हैं या स्थिर रह सकती हैं।"
     ],
-    "o": [
+    "oe": [
       "Only 2 is correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 2 सही है",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statements 2 and 3 are accurate descriptions of contractionary setups. A Hawkish stance uses credit restriction to tame prices. Calibrated tightening [a specific monetary policy directive signaling to the market that policy rates will strictly face upward adjustments or neutral holds, eliminating any probability of rate cuts] anchors inflationary expectations. Statement 1 describes the exact opposite easing trajectory."
+    "ee": "1. Statement 1 is incorrect because an Accommodative Stance is an expansionary approach used during economic slowdowns where rate cuts are prioritized to inject liquidity, which exacerbates inflation.\n2. Statement 2 is correct because a Hawkish Stance is a contractionary monetary policy stance adopted explicitly when inflation rises above the central bank's comfort threshold, signaling future policy rate hikes to cool domestic demand.\n3. Statement 3 is correct because a 'Calibrated Tightening' stance specifically informs market participants that policy rates will either be hiked or kept unchanged in upcoming reviews, completely ruling out any rate cuts.",
+    "eh": "1. कथन 1 गलत है क्योंकि 'उदार रुख' (Accommodative Stance) एक विस्तारवादी नीति है जिसका उपयोग आर्थिक मंदी के समय ब्याज दरों में कटौती करने और तरलता बढ़ाने के लिए किया जाता है, जो मुद्रास्फीति को और बढ़ा सकता है।\n2. कथन 2 सही है क्योंकि 'हॉकिश रुख' (Hawkish Stance) एक संकुचनकारी मौद्रिक नीति है जो मुद्रास्फीति को नियंत्रित करने के लिए ब्याज दरों में वृद्धि का स्पष्ट संकेत देती है।\n3. कथन 3 सही है क्योंकि 'कैलिब्रेटेड टाइटनिंग' (Calibrated Tightening) रुख का अर्थ है कि आगामी बैठकों में नीतिगत ब्याज दरें या तो बढ़ेंगी या स्थिर रहेंगी, और दरों में कटौती की संभावना पूरी तरह समाप्त हो जाती है।"
   },
   {
     "p_id": "bpsc_rbi_009",
@@ -197,14 +254,21 @@
       "2007 में एक महत्वपूर्ण विधायी संशोधन ने निचले स्तर की सीमा (lower floor ceiling) को पूरी तरह से समाप्त कर दिया, जिससे आरबीआई को 3 प्रतिशत से नीचे भी सीआरआर निर्धारित करने की लचीलापन मिल गई।",
       "बैंकों को आय संकुचन से बचाने के लिए, आरबीआई कानूनी रूप से सीआरआर लूप के तहत रखे गए सभी नकद भंडारों पर स्थायी रूप से चक्रवृद्धि ब्याज रिटर्न का भुगतान करने के लिए बाध्य है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise textually accurate legal milestones. Net Demand and Time Liabilities [NDTL, the aggregate measure of liquid public deposits held by a commercial bank relative to its outstanding banking panel claims] forms the tracking base. Statement 3 contains an absolute inversion trap: although the RBI briefly paid interest on CRR above minimums in the late 1990s, this practice was completely *discontinued by late 2007* to prevent excess demand distortions, and cash reserves currently earn zero yield."
+    "ee": "1. Statement 1 is correct because Section 42(1) of the RBI Act, 1934 originally mandated scheduled commercial banks to maintain CRR within a statutory corridor of 3% to 15% of their Net Demand and Time Liabilities (NDTL).\n2. Statement 2 is correct because the Reserve Bank of India (Amendment) Act, 2006 (notified in 2007) removed both the 3% floor and the 15% ceiling, granting the RBI absolute operational flexibility to set CRR at any percentage.\n3. Statement 3 is incorrect because the 2006 amendment also omitted Section 42(1B) of the RBI Act, prohibiting the RBI from paying any interest on CRR balances deposited by banks to preserve the instrument's pure monetary tightening efficacy.",
+    "eh": "1. कथन 1 सही है क्योंकि भारतीय रिज़र्व बैंक अधिनियम, 1934 की मूल धारा 42(1) के तहत सीआरआर (CRR) को वाणिज्यिक बैंकों की शुद्ध मांग और सावधि देनदारियों (NDTL) के 3% से 15% के वैधानिक दायरे में रखना अनिवार्य था।\n2. कथन 2 सही है क्योंकि 2006 के विधायी संशोधन (2007 में प्रभावी) ने 3% की निचली सीमा और 15% की ऊपरी सीमा को समाप्त कर दिया, जिससे आरबीआई को बिना किसी वैधानिक न्यूनतम सीमा के सीआरआर तय करने का पूरा अधिकार मिला।\n3. कथन 3 गलत है क्योंकि 2006 के संशोधन के बाद आरबीआई द्वारा बैंकों को सीआरआर के रूप में जमा की गई नकद राशि पर किसी भी प्रकार का ब्याज देने का प्रावधान समाप्त कर दिया गया है; अतः सीआरआर पर शून्य ब्याज मिलता है।"
   },
   {
     "p_id": "bpsc_rbi_010",
@@ -220,14 +284,21 @@
       "इस संरचनात्मक ढील ने बैंकों को बाहरी बक्से (RBI vaults) में नकदी जमा करने के बजाय सीधे खुले बाजार में ऋण देने में छूट प्राप्त सीआरआर तरलता को तैनात करने की अनुमति दी।",
       "चूंकि सीआरआर फंड पूरी तरह से निष्क्रिय संपत्ति (idle assets) हैं जिनका केंद्रीय बैंक अपने व्यावसायिक संचालन में कभी उपयोग नहीं करता है, इसलिए इस छूट से आरबीआई को शून्य आय हानि हुई।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are accurate reflections of the innovative February 2020 counter-slowdown stimulus. Allowing banks to utilize their CRR allocation expands credit velocity. Statement 3 contains an option trap because the text explicitly notes that the RBI *will lose a part of its income* because the central bank traditionally utilizes these deposited CRR assets in its own daily business operations."
+    "ee": "1. Statement 1 is correct because in February 2020, the RBI introduced a targeted stimulus allowing banks to deduct equivalent amounts disbursed as fresh loans to retail automobiles, residential housing, and micro, small, and medium enterprises (MSMEs) from their NDTL for calculating CRR.\n2. Statement 2 is correct because this exemption effectively released zero-cost cash reserves, incentivizing commercial banks to increase lending to employment-intensive stressed sectors without holding idle cash reserves against those loans.\n3. Statement 3 is incorrect because the central bank traditionally redeploys parked CRR assets in its own portfolio management and short-term operations; thus, freeing up these reserves resulted in a minor loss of operational income for the RBI.",
+    "eh": "1. कथन 1 सही है क्योंकि फरवरी 2020 में आरबीआई ने अर्थव्यवस्था को गति देने के लिए एक विशेष छूट दी, जिसके तहत बैंकों द्वारा ऑटोमोबाइल, आवासीय आवास और एमएसएमई (MSME) क्षेत्रों को दिए जाने वाले नए ऋणों के बराबर राशि को सीआरआर (CRR) गणना के NDTL से घटाने की अनुमति दी गई।\n2. कथन 2 सही है क्योंकि इस छूट से बैंकों की नकदी मुक्त हुई, जिससे उन्हें इन विशिष्ट क्षेत्रों को सस्ता ऋण देने के लिए अतिरिक्त तरलता प्राप्त हुई और उन्हें आरबीआई के पास बिना ब्याज वाला नकद आरक्षित रखने की आवश्यकता नहीं पड़ी।\n3. कथन 3 गलत है क्योंकि आरबीआई बैंकों द्वारा जमा सीआरआर निधियों का उपयोग अपने दैनिक वित्तीय प्रबंधन में करता है; अतः इस छूट के कारण आरबीआई को अपनी परिचालन आय में आंशिक नुकसान हुआ।"
   },
   {
     "p_id": "bpsc_rbi_011",
@@ -243,14 +314,21 @@
       "प्रशासनिक व्यवहार में, बैंक इस फंड को किसी भी उच्च रिटर्न वाले अंतर्राष्ट्रीय निजी इक्विटी परिसंपत्तियों में निवेश करने के लिए पूर्ण स्वायत्त विकल्प सुरक्षित रखते हैं।",
       "बैंक कानूनी रूप से अपने एसएलआर (SLR) भंडार को सरकारी प्रतिभूतियों (G-Secs) में निवेश करने के लिए मजबूर हैं, और इन संप्रभु बांडों के रिटर्न (yields) के आधार पर आय अर्जित करते हैं।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 1 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 1 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statements 1 and 3 are textually precise structural parameters of the SLR framework. Statement 2 contains a deep trap: banks have *zero autonomous choice* over the asset deployment; they are legally compelled to buy government securities [G-Secs, sovereign debt instruments issued by a central government to finance its budget requirements, carrying fixed interest yields and absolute zero default risk metrics]. Like the CRR, the historical 25% statutory floor on SLR was abolished by a 2007 amendment, allowing the RBI to systematically downscale it (standing at 18.25% by March 2020)."
+    "ee": "1. Statement 1 is correct because under Section 24 of the Banking Regulation Act, 1949, scheduled commercial banks must maintain a specified percentage of their NDTL in liquid assets (gold, unencumbered approved securities, and cash) with themselves.\n2. Statement 2 is incorrect because banks do not have autonomous discretion to invest SLR funds in private equities or high-risk international securities; the investment is legally restricted to RBI-approved sovereign instruments.\n3. Statement 3 is correct because in practice, commercial banks invest the vast majority of their SLR quota in Central and State Government Securities (G-Secs and SDLs), which carry zero default risk and provide stable sovereign bond coupon yields.",
+    "eh": "1. कथन 1 सही है क्योंकि बैंकिंग विनियमन अधिनियम, 1949 की धारा 24 के अनुसार अनुसूचित वाणिज्यिक बैंकों को अपनी शुद्ध मांग और समय देनदारियों (NDTL) का एक निश्चित प्रतिशत स्वयं के पास तरल संपत्तियों (सोना, अनुमोदित प्रतिभूतियां आदि) के रूप में बनाए रखना अनिवार्य है।\n2. कथन 2 गलत है क्योंकि बैंकों को एसएलआर फंड को निजी इक्विटी या विदेशी परिसंपत्तियों में निवेश करने की कोई स्वायत्त छूट नहीं है; यह केवल आरबीआई द्वारा अनुमोदित सुरक्षित साधनों में ही रखा जा सकता है।\n3. कथन 3 सही है क्योंकि व्यवहार में बैंक अपने अधिकांश एसएलआर कोटा को सरकारी प्रतिभूतियों (G-Secs/ट्रेजरी बिल) में निवेश करते हैं, जिससे उन्हें इन संप्रभु बांडों पर ब्याज/कूपन आय प्राप्त होती है।"
   },
   {
     "p_id": "bpsc_rbi_012",
@@ -266,14 +344,21 @@
       "जब उधारकर्ता बैंक आरबीआई से अपनी प्रतिभूतियों को छोड़ते हैं और पुनर्खरीद करते हैं, तो संपत्ति का मूल्य संरचनात्मक रूप से रेपो दर की मात्रा से कम हो जाता है।",
       "अल्पकालिक रेपो चैनल वाणिज्यिक बैंकिंग पैनलों की भागीदारी को पूरी तरह से रोकता है, और लेनदेन को विशेष रूप से कृषि सहकारी समितियों तक सीमित करता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are technically accurate descriptions of the repo mechanism (matching the Western 'rate of discount'). Repo transactions are not simple loans; they are collateralized sell-and-repurchase agreements [financial contracts where a market actor sells a sovereign asset to the central bank with a binding synchronous pledge to buy it back at a specific higher valuation on a fixed near-term date]. Statement 3 is a fiction; commercial banks are the primary operators utilizing this route for overnight liquidity balancing."
+    "ee": "1. Statement 1 is correct because 'Repo' stands for 'Repurchase Option' (or Repurchase Agreement), which is technically a collateralized transaction where a bank sells approved government securities to the RBI with an agreement to repurchase them at a predetermined future date and price, functioning as a discounted liquidity loan.\n2. Statement 2 is correct because the repurchase price paid by the borrowing bank is higher than the initial sale price by an amount exactly matching the agreed Repo interest rate, effectively accounting for the cost of funds.\n3. Statement 3 is incorrect because scheduled commercial banks and primary dealers are the principal participants in the RBI's repo auctions for short-term liquidity management.",
+    "eh": "1. कथन 1 सही है क्योंकि 'रेपो' (Repo) शब्द 'रीपरचेज ऑप्शन' (Repurchase Option) का संक्षिप्त रूप है, जो तकनीकी रूप से सरकारी प्रतिभूतियों की पुनर्खरीद समझौते पर आधारित होता है और व्यवहार में यह छूट (Discount) दर की तरह कार्य करता है।\n2. कथन 2 सही है क्योंकि जब बैंक आरबीआई से अपनी गिरवी प्रतिभूतियों को पुनर्खरीद करते हैं, तो वे रेपो दर के बराबर अतिरिक्त ब्याज राशि जोड़कर भुगतान करते हैं, जो उनके अल्पकालिक ऋण की लागत होती है।\n3. कथन 3 गलत है क्योंकि अनुसूचित वाणिज्यिक बैंक और प्राथमिक डीलर (Primary Dealers) ही रेपो विंडो के मुख्य भागीदार होते हैं।"
   },
   {
     "p_id": "bpsc_rbi_013",
@@ -289,14 +374,21 @@
       "रणनीतिक उद्देश्य मुद्रा बाजार (money market) को मजबूत करना, स्थिरता बढ़ाना और वाणिज्यिक ऋण उत्पादों की बेहतर लागत और संकेतन स्थापित करना था।",
       "टर्म रेपो लेआउट एक पूर्ण स्वचालित फ्रीज को मजबूर करता है जो वाणिज्यिक बैंकों को अपने खुदरा क्रेडिट स््रेड को समायोजित करने से रोकता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise textually accurate records of the post-2013 monetary framework shift. By steering banks toward term repos [fixed-tenor liquidity windows where access is rationed via competitive auction bidding rather than flat tap-window availability], the RBI downscaled overnight reliance to build a robust money market [the macroeconomic theater handling short-term wholesale borrowing and lending transactions among institutional entities]. Statement 3 is a fiction."
+    "ee": "1. Statement 1 is correct because following the recommendations of the Urjit Patel Committee in October 2013, the RBI introduced Term Repos of 7-day, 14-day, and 28-day tenors conducted through variable rate auctions to provide durable liquidity beyond the standard overnight window.\n2. Statement 2 is correct because the strategic goal was to develop an active interbank term money market, reduce banks' dependence on the central bank's overnight window, and establish a market-determined yield curve for pricing commercial loans.\n3. Statement 3 is incorrect because term repos do not freeze credit spreads; commercial banks retain full pricing autonomy to set their own retail spreads over their benchmark rates.",
+    "eh": "1. कथन 1 सही है क्योंकि अक्टूबर 2013 में उर्जित पटेल समिति की सिफारिशों के आधार पर आरबीआई ने केवल एक रात (Overnight) के बजाय 7, 14 और 28 दिनों जैसी लंबी अवधियों के लिए 'टर्म रेपो' (Term Repos) नीलामी की शुरुआत की।\n2. कथन 2 सही है क्योंकि इसका मुख्य उद्देश्य अंतर-बैंक मुद्रा बाजार को गहरा और स्थिर बनाना, रात भर की तरलता पर अत्यधिक निर्भरता घटाना और ऋण उत्पादों के लिए बाजार-आधारित बेंचमार्क विकसित करना था।\n3. कथन 3 गलत है क्योंकि टर्म रेपो बैंकों के क्रेडिट स्प्रेड पर कोई रोक नहीं लगाता; बैंक अपने जोखिम प्रीमियम के अनुसार खुदरा ऋणों पर स्प्रेड तय करने के लिए स्वतंत्र हैं।"
   },
   {
     "p_id": "bpsc_rbi_014",
@@ -312,14 +404,21 @@
       "एमएसएफ ब्याज दर संरचनात्मक रूप से एक दंडात्मक दर (penal rate) के रूप में कार्य करती है, जिसे 2015 के मध्य से प्रचलित रेपो दर से ठीक 1 प्रतिशत अधिक पर फ्लोट किया गया है।",
       "यह पाठ आदेश देता है कि दीर्घकालिक बैंक दर (Bank Rate) को अनिवार्य रूप से एक पूर्ण अलग स्तर पर बनाए रखा जाना चाहिए, जो अल्पकालिक एमएसएफ दर से पूरी तरह से असंरेखित हो।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are accurate metrics tracking the emergency safety-valve window of the MSF. It allows banks to borrow urgent cash by dipping into their locked SLR quotas at a premium penalty rate. Statement 3 contains an explicit re-alignment exception trap: the text notes that the *Bank Rate was formally realigned with the MSF rate* in February 2012, making them equal (both standing at 4.65% by end-March 2020), rather than keeping them unaligned."
+    "ee": "1. Statement 1 is correct because under the MSF framework introduced in 2011, scheduled commercial banks can borrow emergency overnight funds up to a specified limit (initially 1%, later adjusted between 2% and 3% of NDTL) by dipping into their mandatory SLR quota securities.\n2. Statement 2 is correct because the MSF rate serves as an emergency penal lending rate set at a premium above the Repo rate (historically 100 bps / 1%, later adjusted to 25 bps above the repo rate).\n3. Statement 3 is incorrect because in February 2012, the RBI formally **aligned the Bank Rate with the MSF rate**, establishing that any future adjustment in the MSF rate automatically changes the Bank Rate in lockstep.",
+    "eh": "1. कथन 1 सही है क्योंकि मई 2011 में शुरू की गई मार्जिनल स्टैंडिंग फैसिलिटी (MSF) के तहत बैंक आपातकालीन स्थिति में अपनी अनिवार्य एसएलआर (SLR) प्रतिभूतियों को गिरवी रखकर अपने NDTL के एक निश्चित प्रतिशत तक रात भर के लिए धन उधार ले सकते हैं।\n2. कथन 2 सही है क्योंकि एमएसएफ दर एक दंडात्मक दर (Penal rate) के रूप में कार्य करती है, जो सामान्य रेपो दर से अधिक (ऐतिहासिक रूप से 100 आधार अंक या 1% ऊपर) रखी जाती है।\n3. कथन 3 गलत है क्योंकि फरवरी 2012 में आरबीआई ने **बैंक दर (Bank Rate) को एमएसएफ दर के साथ पूरी तरह संरेखित (Align)** कर दिया; अतः जब भी एमएसएफ दर बदलती है, बैंक दर स्वतः उसी के अनुरूप बदल जाती है।"
   },
   {
     "p_id": "bpsc_rbi_015",
@@ -335,14 +434,21 @@
       "यह ढांचा विशेष रूप से निश्चित नीतिगत ब्याज दरों (fixed policy interest rates), यानी रेपो और रिवर्स रेपो दर लाइनों के माध्यम से तरलता संचालन निष्पादित करता है।",
       "वाणिज्यिक बैंकों के दैनिक धन के असंतुलन (fund mismatches) को कम करने के साथ-साथ, एलएएफ संचालन बाजार में ब्याज दर संकेतों को प्रभावी ढंग से प्रसारित करने के प्राथमिक माध्यम के रूप में कार्य करता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 1 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 1 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statements 1 and 3 are precise reflections of the operational utility of the Liquidity Adjustment Facility [LAF, the strategic central banking framework managing short-term systemic liquidity variations through institutional repo auctions and reverse repo placements]. Statement 2 contains an option trap because the text notes that after 2013, the introduction of *caps on repo borrowing* and the provision of *variable term repos* significantly changed the dynamics, meaning it no longer operates exclusively on simple fixed-rate overnight lines."
+    "ee": "1. Statement 1 is correct because the Liquidity Adjustment Facility (LAF), introduced in 2000 following the Narasimham Committee recommendations, is the primary operational framework through which the RBI manages day-to-day liquidity mismatches across the banking system.\n2. Statement 2 is incorrect because the LAF does not operate exclusively via fixed rates; following monetary framework reforms, the RBI utilizes variable rate term repos, variable rate reverse repos (VRRR), and Standing Deposit Facility (SDF) alongside fixed-rate corridors.\n3. Statement 3 is correct because LAF operations help anchor the overnight interbank call money rate close to the policy repo rate, acting as the primary transmission channel for monetary policy signals across the financial system.",
+    "eh": "1. कथन 1 सही है: नरसिम्हम समिति की सिफारिशों पर वर्ष 2000 में शुरू की गई 'तरलता समायोजन सुविधा' (LAF) आरबीआई का मुख्य परिचालन ढांचा है जिसके माध्यम से दैनिक आधार पर बैंकिंग प्रणाली में तरलता डाली (Inject) या अवशोषित (Absorb) की जाती है।\n2. कथन 2 गलत है: LAF केवल निश्चित नीतिगत दरों पर ही काम नहीं करता; आधुनिक सुधारों के बाद इसमें परिवर्तनीय दर टर्म रेपो (VRR), परिवर्तनीय दर रिवर्स रेपो (VRRR) और स्टैंडिंग डिपॉजिट फैसिलिटी (SDF) जैसी बहु-स्तरीय बाजार-आधारित नीलामियां भी शामिल हैं।\n3. कथन 3 सही है: बैंकों के दैनिक नकदी असंतुलन को दूर करने के साथ-साथ LAF का मुख्य कार्य ओवरनाइट कॉल मनी दर को रेपो दर के करीब बनाए रखना और बाजार में ब्याज दर संकेतों का कुशल संचरण सुनिश्चित करना है।"
   },
   {
     "p_id": "bpsc_rbi_016",
@@ -358,14 +464,21 @@
       "मार्केट स्टेबलाइजेशन स्कीम (MSS), जिसमें एसएलआर (SLR) और सीआरआर (CRR) दोनों आरक्षित उपकरणों की विशेषताएं शामिल हैं।",
       "वाणिज्य मंत्रालय के नियामक पैनलों के तहत प्रबंधित बुनियादी प्राइम लेंडिंग रेट (PLR) सूचकांक।"
     ],
-    "o": [
+    "oe": [
       "Only 2 is correct",
       "Only 1 and 2 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 2 सही है",
+      "केवल 1 और 2 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statement 2 is historically and textually precise. The Market Stabilisation Scheme [MSS, an anti-liquidity serialization tool where the central bank issues sovereign bonds not to finance state deficits, but to mop up excess domestic currency generated by aggressive foreign exchange accumulation loops] parks the mobilized cash in a sterilized account. It mimics CRR (impounding liquidity) and SLR (utilizing G-Secs). Statements 1 and 3 describe entirely separate financial concepts."
+    "ee": "1. Statement 1 is incorrect because the Standing Deposit Facility (SDF) is a collateral-free liquidity absorption tool conceptualized later by the Urjit Patel Committee and enacted in 2018 (operationalized in 2022).\n2. Statement 2 is correct because the **Market Stabilisation Scheme (MSS)** was introduced in April 2004 to sterilize persistent, large-scale foreign capital inflows. Under MSS, the RBI issues specially designated Treasury Bills and dated Government Securities to mop up excess domestic liquidity, holding the proceeds in a separate, non-spendable government cash account with the RBI.\n3. Statement 3 is incorrect because the Prime Lending Rate is an internal loan pricing benchmark, not a central bank liquidity sterilization tool.",
+    "eh": "1. कथन 1 गलत है क्योंकि स्टैंडिंग डिपॉजिट फैसिलिटी (SDF) बिना संपार्श्विक वाला तरलता अवशोषण साधन है जो 2018 के संशोधन के बाद अस्तित्व में आया।\n2. कथन 2 सही है क्योंकि अप्रैल 2004 में **मार्केट स्टेबलाइजेशन स्कीम (MSS)** की शुरुआत भारी विदेशी पूंजी प्रवाह से उत्पन्न अतिरिक्त तरलता के बंध्याकरण (Sterilization) के लिए की गई थी। इसके तहत जारी विशेष ट्रेजरी बिलों से जुटाई गई राशि सरकार के एक अलग निष्प्रभावी खाते में रखी जाती है ताकि बाजार में मुद्रा आपूर्ति स्थिर रहे।\n3. कथन 3 गलत है क्योंकि प्राइम लेंडिंग रेट (PLR) बैंकों की ऋण दर का बेंचमार्क था, तरलता प्रबंधन का सरकारी बांड साधन नहीं।"
   },
   {
     "p_id": "bpsc_rbi_017",
@@ -381,14 +494,21 @@
       "इसने पुराने बेंचमार्क प्राइम लेंडिंग रेट (BPLR) प्रणाली को व्यवस्थित रूप से प्रतिस्थापित किया क्योंकि बैंक अक्सर पसंदीदा ग्राहकों को बीपीएलआर से नीचे ऋण देकर पारदर्शिता को विकृत करते थे।",
       "इसके कार्यान्वयन के बाद, आरबीआई ने एक कड़क, केंद्रीकृत एकल संख्यात्मक दर बनाए रखी जो सभी वाणिज्यिक बैंकिंग नेटवर्क पर समान रूप से लागू होती है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are conceptually precise trackers of the 2010 baseline pricing shift. BPLR [Benchmark Prime Lending Rate, the older opaque internal reference rate framework utilized by commercial banks that failed to efficiently transmit central policy signals due to non-transparent sub-BPLR lending loops] was discarded. Statement 3 contains a trap because the Base Rate system was *deregulated by the RBI*, meaning it varies dynamically from bank to bank based on individual internal operational cost structures, rather than being a single centralized uniform rate."
+    "ee": "1. Statement 1 is correct because the Base Rate (introduced on July 1, 2010) was defined as the minimum threshold lending rate below which commercial banks were strictly prohibited from lending (with narrow exceptions like staff loans or DRI loans).\n2. Statement 2 is correct because the predecessor Benchmark Prime Lending Rate (BPLR) regime was opaque, with banks routinely undercutting published rates by issuing sub-BPLR loans to highly-rated corporate borrowers, defeating monetary transmission.\n3. Statement 3 is incorrect because the Base Rate was not a uniform rate fixed centrally by the RBI; rather, each commercial bank determined its own Base Rate based on its unique cost of deposits, administrative overheads, and average return on net worth.",
+    "eh": "1. कथन 1 सही है क्योंकि 1 जुलाई 2010 को लागू 'बेस रेट' (Base Rate) प्रणाली के तहत बैंकों के लिए एक न्यूनतम ब्याज दर सीमा तय की गई, जिसके नीचे किसी भी ग्राहक को ऋण देना कानूनी रूप से प्रतिबंधित था।\n2. कथन 2 सही है क्योंकि पूर्ववर्ती BPLR प्रणाली अपारदर्शी थी और बैंक अपने पसंदीदा बड़े कॉर्पोरेट ग्राहकों को BPLR से भी कम दर पर (Sub-BPLR lending) ऋण दे रहे थे, जिससे छोटे ग्राहकों के साथ भेदभाव होता था।\n3. कथन 3 गलत है क्योंकि बेस रेट आरबीआई द्वारा केंद्रीय रूप से निर्धारित कोई एकल दर नहीं थी; प्रत्येक बैंक अपनी जमा लागत और प्रशासनिक खर्चों के आधार पर अपना व्यक्तिगत बेस रेट स्वतंत्र रूप से तय करता था।"
   },
   {
     "p_id": "bpsc_rbi_018",
@@ -404,14 +524,21 @@
       "खुदरा ऋणों पर दी जाने वाली वास्तविक ब्याज दरें आधारभूत एमसीएलआर में एक पूर्व-घोषित मूल्य निर्धारण 'स्प्रेड' (spread) जोड़कर तय की जाती हैं।",
       "आंतरिक ढांचे के लिए बैंकिंग बोर्डों द्वारा पूर्व-घोषित तारीख पर हर महीने एक अनिवार्य समीक्षा चक्र निष्पादित करने की आवश्यकता होती है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements represent the precise internal parameters codified under the MCLR [Marginal Cost of funds based Lending Rate, an internal benchmark pricing methodology derived from the incremental cost of attracting fresh deposits, designed to enhance policy transmission sensitivity] framework introduced in April 2016."
+    "ee": "1. Statement 1 is correct because the MCLR (introduced on April 1, 2016) is a tenor-linked internal benchmark (calculated for overnight, 1-month, 3-month, 6-month, and 1-year maturities), with retail floating rate loan contracts incorporating a periodic reset clause (typically 1 year).\n2. Statement 2 is correct because the final interest rate charged to borrowers is determined by adding a transparent commercial spread (consisting of business strategy margins and borrower credit risk premia) to the applicable tenor MCLR.\n3. Statement 3 is correct because banks are mandated to review and publish their marginal cost-based benchmark rates on a monthly basis on a pre-specified calendar date.",
+    "eh": "1. कथन 1 सही है क्योंकि 1 अप्रैल 2016 से लागू एमसीएलआर (MCLR) एक आंतरिक समयावधि-आधारित (Tenor-linked) बेंचमार्क है (रात भर, 1 माह, 1 वर्ष आदि के लिए) और खुदरा ऋणों पर इसे वार्षिक या अर्धवार्षिक आधार पर रीसेट किया जाता है।\n2. कथन 2 सही है क्योंकि ग्राहकों के लिए अंतिम ऋण ब्याज दर आधारभूत एमसीएलआर में बैंक का पूर्व-निर्धारित 'स्प्रेड' (व्यवसाय मार्जिन व क्रेडिट जोखिम प्रीमियम) जोड़कर तय की जाती है।\n3. कथन 3 सही है क्योंकि सभी बैंकों को प्रत्येक महीने एक पूर्व-घोषित तिथि पर अपनी एमसीएलआर दरों की अनिवार्य मासिक समीक्षा करके नई दरें प्रकाशित करनी होती हैं।"
   },
   {
     "p_id": "bpsc_rbi_019",
@@ -427,14 +554,21 @@
       "स्वस्थ मौद्रिक संचरण (monetary transmission) की विफलता इसलिए हुई क्योंकि आंतरिक बैंक गणना विधियों ने उधार दरों को केंद्रीय नीति समायोजनों से अलग कर दिया था।",
       "बाहरी बेंचमार्क प्रणाली सभी फ्लोटिंग ऋणों को पूरी तरह से विशेष रूप से निजी आईटी समूहों के त्रैमासिक कॉर्पोरेट लाभांश उपज सूचकांकों से जोड़ती है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are accurate reflections of the transmission breakdowns that blocked the passing of cheap policy rate benefits to consumers. Monetary transmission [the macroeconomic process through which policy rate interventions by a central bank successfully percolate down to alter the retail lending rates charged by commercial banking blocks] was broken under internal models. Statement 3 contains an option trap because the mandated external benchmarks are strictly restricted to transparent market or state rates: (i) Repo rate, (ii) 91-day T-Bill, (iii) 182-day T-Bill, or (iv) FBIL produced indicators, completely free from private IT index fictions."
+    "ee": "1. Statement 1 is correct because during 2015–16, despite a cumulative 125 bps (1.25%) cut in the policy Repo Rate by the RBI, commercial banks reduced their median base rates by only about 60 bps (0.6%), demonstrating severe transmission lag.\n2. Statement 2 is correct because internal benchmarking regimes allowed banks to shield their lending margins by manipulating internal cost calculations and deposit rate tenors, preventing policy easing from reaching borrowers.\n3. Statement 3 is incorrect because the external benchmark framework (mandated for personal, retail, and MSME loans from October 2019) strictly requires loans to be linked to transparent, public indices: (i) RBI Repo Rate, (ii) 91-day T-Bill yield, (iii) 182-day T-Bill yield, or (iv) any benchmark published by FBIL, with zero connection to private equity dividends.",
+    "eh": "1. कथन 1 सही है क्योंकि 2015-16 के दौरान जब आरबीआई ने नीतिगत रेपो दर में 1.25% (125 bps) की भारी कटौती की, तब बैंकों ने अपने ग्राहकों को बेस रेट में केवल 0.6% (60 bps) की ही राहत हस्तांतरित की, जिससे मौद्रिक नीति का संचरण बाधित हुआ।\n2. कथन 2 सही है क्योंकि आंतरिक बेंचमार्क व्यवस्थाओं (Base Rate और MCLR) में बैंक आंतरिक जमा लागतों का हवाला देकर नीतिगत दरों में कटौती का लाभ तुरंत ग्राहकों तक पहुँचाने में आनाकानी करते थे।\n3. कथन 3 गलत है क्योंकि अक्टूबर 2019 से अनिवार्य बाहरी बेंचमार्क प्रणाली (EBLR) में ऋणों को केवल 4 पारदर्शी सरकारी/बाजार सूचकांकों (रेपो दर, 91-दिवसीय ट्रेजरी बिल, 182-दिवसीय ट्रेजरी बिल या FBIL सूचकांक) से ही जोड़ा जा सकता है, किसी निजी कंपनी के सूचकांक से नहीं।"
   },
   {
     "p_id": "bpsc_rbi_020",
@@ -450,16 +584,22 @@
       "गहरी तरलता सुनिश्चित करने के लिए एलटीआरओ की संरचनात्मक अवधि को विशेष रूप से एक से तीन वर्षों के बीच फैले होने के लिए कॉन्फ़िगर किया गया था।",
       "इस ढांचे के लिए एक पूर्ण स्वचालित नकद ब्लॉक की आवश्यकता थी जिसने स्पष्ट रूप से बैंकों को इन संपत्तियों का उपयोग कॉर्पोरेट ऋणों के लिए करने से प्रतिबंधित कर दिया था।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are accurate parameters tracking the introduction of LTRO [Long Term Repo Operations, a specialized liquidity management tool enabling commercial banks to access durable near-term funding directly at the baseline overnight repo rate index to lower their overall cost of capital]. Statement 3 is a fiction; the target was precisely to clear lending blocks and make industrial/consumer loans cheaper."
+    "ee": "1. Statement 1 is correct because in February 2020, the RBI announced LTRO tranches aggregating up to ₹1,00,000–₹1,50,000 crore at the prevailing policy Repo rate to inject durable, low-cost liquidity into the banking system.\n2. Statement 2 is correct because unlike conventional short-term repos (1 to 28 days), LTRO provided fixed-rate funds for 1-year and 3-year tenors against eligible sovereign collateral.\n3. Statement 3 is incorrect because the primary policy intent of LTRO (and subsequent Targeted LTROs) was explicitly to encourage banks to deploy these durable low-cost funds into credit-starved productive sectors, corporate bonds, commercial papers, and retail lending.",
+    "eh": "1. कथन 1 सही है क्योंकि फरवरी 2020 में आरबीआई ने बैंकिंग प्रणाली में टिकाऊ और सस्ती तरलता डालने के लिए मौजूदा रेपो दर पर ₹1 लाख से ₹1.50 लाख करोड़ तक के 'दीर्घकालिक रेपो परिचालन' (LTRO) की घोषणा की।\n2. कथन 2 सही है क्योंकि पारंपरिक अल्पकालिक रेपो (1-28 दिन) के विपरीत एलटीआरओ की अवधि 1 वर्ष और 3 वर्ष की लंबी समयावधि के लिए निर्धारित की गई थी।\n3. कथन 3 गलत है क्योंकि एलटीआरओ का मुख्य उद्देश्य ही यह था कि बैंक इस सस्ती पूंजी का उपयोग कॉर्पोरेट बांड, कमर्शियल पेपर और उत्पादक क्षेत्रों में ऋण वितरण को बढ़ावा देने के लिए करें, न कि इसे ब्लॉक करके रखें।"
   },
-  
   {
     "p_id": "bpsc_mp_ext_001",
     "qe": "Consider the following statements regarding the operational mechanics and target profiles of specialized liquidity management instruments deployed by the Reserve Bank of India:",
@@ -474,14 +614,21 @@
       "MSS संचालन के माध्यम से जुटाई गई नकद संपत्ति को केंद्र सरकार के राजकोषीय घाटे को पूरा करने के लिए तुरंत भारत की संचित निधि के सामान्य राजस्व संतुलन में विलय कर दिया जाता है।",
       "स्थायी जमा सुविधा योजना (SDFS) अतिरिक्त प्रणाली तरलता को प्रबंधित करने के लिए एक बिना-संपार्श्विक तरलता अवशोषण उपकरण के रूप में कार्य करती है, जिसने विमुद्रीकरण के बाद महत्वपूर्ण प्रासंगिकता प्राप्त की।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 1 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 1 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statement 1 is correct because the Market Stabilisation Scheme [MSS, an anti-liquidity sterilization tool where the central bank issues sovereign bonds to mop up excess domestic currency generated by aggressive foreign exchange accumulation loops] targets enduring capital inflows. Statement 2 is incorrect because the cash mobilized through MSS is explicitly held in a *separate government account* with the Reserve Bank and cannot be used to finance the state's standard consumption expenditure. Statement 3 is correct because the SDFS allows the RBI to absorb surplus funds without providing government securities as collateral, expanding its monetary policy toolkit when the financial system is flush with excess liquidity [the aggregate volume of liquid funds and cash equivalents circulating within the commercial banking layers]."
+    "ee": "1. Statement 1 is correct because the Market Stabilisation Scheme (MSS) was operationalized in April 2004 as a dedicated sterilization tool to absorb enduring rupee liquidity created by large foreign exchange inflows.\n2. Statement 2 is incorrect because the funds mobilized under MSS are held in a separate, earmarked 'MSS Account' with the RBI and cannot be used to finance regular fiscal expenditure of the Government of India.\n3. Statement 3 is correct because the Standing Deposit Facility (SDF, introduced under Section 17 of the RBI Act in 2018) allows the RBI to absorb massive surplus liquidity without providing government securities as collateral, addressing the collateral-scarcity problem highlighted post-2016 demonetisation.",
+    "eh": "1. कथन 1 सही है क्योंकि मार्केट स्टेबलाइजेशन स्कीम (MSS) की शुरुआत अप्रैल 2004 में विदेशी मुद्रा अंतर्वाह (Inflows) से उत्पन्न होने वाली टिकाऊ अतिरिक्त तरलता को सरकारी प्रतिभूतियों की बिक्री के माध्यम से सोखने (Sterilize करने) के लिए की गई थी।\n2. कथन 2 गलत है क्योंकि MSS के तहत जुटाया गया पैसा भारत की संचित निधि के सामान्य खर्च में शामिल नहीं होता, बल्कि यह आरबीआई के पास एक अलग निष्प्रभावी 'MSS खाते' में जमा रहता है।\n3. कथन 3 सही है क्योंकि स्टैंडिंग डिपॉजिट फैसिलिटी (SDF) बिना किसी सरकारी प्रतिभूति (Collateral) को गिरवी रखे बैंकों से अतिरिक्त नकदी अवशोषित करने की सुविधा देती है, जिसकी आवश्यकता 2016 के विमुद्रीकरण के बाद तरलता आधिक्य से निपटने के लिए पड़ी थी।"
   },
   {
     "p_id": "bpsc_mp_ext_002",
@@ -497,14 +644,21 @@
       "अप्रैल 2016 तक, वाणिज्यिक बैंकों को निश्चित नीति दर पर ओवरनाइट रेपो सुविधा के तहत अपने एनडीटीएल (NDTL) के अधिकतम 1 प्रतिशत तक उधार लेने के लिए प्रतिबंधित किया गया था।",
       "1 प्रतिशत एनडीटीएल सीमा से परे अल्पकालिक तरलता प्राप्त करने के लिए, बैंकों को निश्चित दर वाले रेपो विंडो से हटकर परिवर्तनीय टर्म रेपो की ओर जाने के लिए मजबूर किया जाता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statement 1 is incorrect because regional rural banks [RRBs, specialized regional banking institutions established to channel institutional credit to weaker sections in rural areas] are explicitly *excluded* from participating as borrowers or lenders in the call money market. Statements 2 and 3 are precise reflections of the post-2013 structural shift where the RBI capped fixed-rate overnight access to improve the transmission of policy impulses and push banks to utilize variable term repos [fixed-tenor short-term borrowing windows where access is rationed via competitive market auctions]."
+    "ee": "1. Statement 1 is incorrect because the Call/Notice money market is an interbank market where commercial banks, cooperative banks, and primary dealers participate under prudential limits; Regional Rural Banks (RRBs) are not uninhibited dominant lenders in this segment.\n2. Statement 2 is correct because the RBI gradually limited bank access to the fixed-rate overnight repo window to a modest cap of 0.25%–1% of NDTL to encourage interbank trading.\n3. Statement 3 is correct because any additional short-term liquidity requirement beyond the capped fixed-rate repo must be sourced by commercial banks through variable rate term repos, MSF, or market borrowings.",
+    "eh": "1. कथन 1 गलत है क्योंकि कॉल मनी मार्केट मुख्य रूप से वाणिज्यिक बैंकों और प्राथमिक डीलरों का अंतर-बैंक ओवरनाइट बाजार है; क्षेत्रीय ग्रामीण बैंक इसमें प्राथमिक अप्रतिबंधित ऋणदाता के रूप में कार्य नहीं करते।\n2. कथन 2 सही है क्योंकि आरबीआई ने मौद्रिक सुधारों के तहत निश्चित दर वाली ओवरनाइट रेपो सुविधा के तहत बैंकों के उधार लेने की सीमा को उनके NDTL के 1 प्रतिशत (और बाद में 0.25%) तक सीमित कर दिया था।\n3. कथन 3 सही है क्योंकि निश्चित रेपो कोटा समाप्त होने के बाद बैंकों को अपनी अतिरिक्त अल्पकालिक नकदी आवश्यकताओं के लिए परिवर्तनीय दर टर्म रेपो (Term Repos) या एमएसएफ (MSF) का रुख करना पड़ता है।"
   },
   {
     "p_id": "bpsc_mp_ext_003",
@@ -520,14 +674,21 @@
       "1 जुलाई, 2010 को शुरू की गई बेस रेट प्रणाली, सभी अनुसूचित वाणिज्यिक बैंकों के लिए आरबीआई द्वारा केंद्रीय रूप से निर्धारित एक अपरिवर्तनीय, समान एकल ब्याज दर के रूप में कार्य करती है।",
       "बेस रेट ढांचे के तहत, बैंकों को अपने स्वयं के आंतरिक रूप से गणना किए गए बेस रेट से नीचे किसी भी व्यावसायिक ऋण को देने की सख्त मनाही है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 1 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 1 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statements 1 and 3 are precise trackers of the 2010 pricing shift designed to eliminate sub-BPLR lending distortions. Statement 2 contains a deep trap: the Base Rate system was *deregulated* by the central bank, meaning banks fix their own base rates independently based on their unique operational cost structures [the internal administrative and financial overheads incurred by a bank to maintain its liquid asset reserves and manage deposits], causing variations across the banking landscape rather than a single uniform central rate."
+    "ee": "1. Statement 1 is correct because under the BPLR system (2003–2010), widespread sub-BPLR lending to prime corporate borrowers compromised pricing transparency and rendered monetary transmission weak and biased against retail borrowers.\n2. Statement 2 is incorrect because the Base Rate was not a single, centralized rate fixed by the RBI; it was an individual bank-specific minimum threshold determined independently by each bank based on its own cost of funds.\n3. Statement 3 is correct because under the Base Rate guidelines, banks were explicitly barred from lending below their respective internally calculated base rates (except for specified exemptions like DRI schemes and staff loans).",
+    "eh": "1. कथन 1 सही है क्योंकि पुरानी BPLR प्रणाली में बैंक अपने घोषित प्राइम रेट से भी कम दर पर बड़े कॉर्पोरेट्स को ऋण (Sub-BPLR lending) देते थे, जिससे पारदर्शिता समाप्त हो गई थी और मौद्रिक नीति का प्रभाव कमजोर हो गया था।\n2. कथन 2 गलत है क्योंकि बेस रेट आरबीआई द्वारा निर्धारित कोई एकसमान दर नहीं थी; प्रत्येक बैंक अपनी लागत के आधार पर अपना बेस रेट अलग-अलग निर्धारित करता था।\n3. कथन 3 सही है क्योंकि बेस रेट प्रणाली का मुख्य नियम ही यह था कि कुछ विशिष्ट अपवादों को छोड़कर कोई भी बैंक अपने निर्धारित बेस रेट से कम ब्याज दर पर ऋण नहीं दे सकता था।"
   },
   {
     "p_id": "bpsc_mp_ext_004",
@@ -543,14 +704,21 @@
       "वैधानिक ढांचा केंद्रीय बैंक को उपभोक्ता मूल्य सूचकांक संयुक्त (CPI-C) मीट्रिक से जुड़े मुद्रास्फीति लक्ष्यीकरण (inflation targeting) को निष्पादित करने का आदेश देता है।",
       "लक्षित नाममात्र मुद्रास्फीति मूल्य को 4 प्रतिशत के एकल कड़े स्तर पर तय किया गया है, जिसमें शून्य गणितीय भिन्नताओं या श्रेणियों की अनुमति है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise records of the 2015 Monetary Policy Framework Agreement. CPI-C functions as the primary measure of headline inflation [the raw unadjusted measure of total price inflation within an economy, capturing volatile food and energy assets alongside durable items]. Statement 3 contains a sophisticated trap because the text explicitly mandates a variation window of plus or minus 2 per cent, establishing an overall annual target range of 2 to 6 per cent rather than a rigid, non-varying single number."
+    "ee": "1. Statement 1 is correct because the Monetary Policy Framework Agreement signed in February 2015 adopted the core recommendations of the Urjit Patel Committee (2014) on revising and strengthening the monetary policy framework.\n2. Statement 2 is correct because the statutory Flexible Inflation Targeting (FIT) regime shifted the anchor from the Wholesale Price Index (WPI) to the Headline Consumer Price Index - Combined (CPI-C).\n3. Statement 3 is incorrect because the inflation target is not a rigid single number with zero tolerance; the mandate is fixed at **4 per cent with a tolerance band of +/- 2 per cent** (creating an operating target band of 2% to 6%).",
+    "eh": "1. कथन 1 सही है क्योंकि फरवरी 2015 में भारत सरकार और आरबीआई के बीच हस्ताक्षरित मौद्रिक नीति समझौते ने डॉ. उर्जित पटेल समिति (2014) की सिफारिशों को औपचारिक रूप से लागू किया।\n2. कथन 2 सही है क्योंकि इस समझौते के तहत मौद्रिक नीति का मुख्य लक्ष्य थोक मूल्य सूचकांक (WPI) के स्थान पर 'उपभोक्ता मूल्य सूचकांक - संयुक्त' (CPI-Combined) को बनाया गया।\n3. कथन 3 गलत है क्योंकि मुद्रास्फीति का लक्ष्य कोई कठोर एकल अंक नहीं है; इसमें **4 प्रतिशत के साथ +/- 2 प्रतिशत का टॉलरेंस बैंड** तय किया गया है (अर्थात स्वीकार्य सीमा 2% से 6% है)।"
   },
   {
     "p_id": "bpsc_mp_ext_005",
@@ -566,14 +734,21 @@
       "उपभोक्ताओं को दी जाने वाली वास्तविक खुदरा ऋण दरें आधारभूत MCLR में से एक अत्यधिक अस्थिर कॉर्पोरेट छूट स्प्रेड को घटाकर तय की जाती हैं।",
       "इस पद्धति के लिए बैंकिंग बोर्डों द्वारा पूर्व-घोषित तारीख पर हर महीने एक अनिवार्य समीक्षा प्रक्रिया निष्पादित की जानी आवश्यक है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 1 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 1 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statements 1 and 3 are precise reflections of the internal MCLR rules codified in April 2016 to replace the lagging historical base rate methods. Statement 2 contains an inversion trap: actual lending rates are derived mathematically by *adding a spread* (not subtracting a discount) to the MCLR value. Spread [the premium percentage added by a commercial lender above the benchmark reference rate to cover risk factors and lock in profit margins] forms a core component of credit costing."
+    "ee": "1. Statement 1 is correct because the MCLR is structured across distinct tenors (overnight to one year) and loan contracts contain mandatory periodic reset dates (commonly 1 year).\n2. Statement 2 is incorrect because the final loan interest rate is determined by **adding a positive spread** (business margin and risk premium) to the applicable tenor MCLR, not by subtracting a discount.\n3. Statement 3 is correct because banks are required to calculate and review their marginal cost-based benchmark rates on a monthly basis on a pre-announced calendar date.",
+    "eh": "1. कथन 1 सही है क्योंकि MCLR विभिन्न अवधियों (Tenors) से जुड़ा एक आंतरिक बेंचमार्क है और फ्लोटिंग ऋणों के लिए इसमें अनुबंध के अनुसार आवधिक रीसेट (सामान्यतः 1 वर्ष) का प्रावधान होता है।\n2. कथन 2 गलत है क्योंकि ग्राहकों के लिए अंतिम ब्याज दर MCLR में से छूट घटाकर नहीं, बल्कि MCLR में बैंक का **स्प्रेड (जोखिम प्रीमियम व मार्जिन) जोड़कर** निर्धारित की जाती है।\n3. कथन 3 सही है क्योंकि बैंकों को प्रत्येक माह एक निश्चित पूर्व-घोषित तिथि पर अपनी MCLR दरों की समीक्षा और प्रकाशन करना अनिवार्य होता है।"
   },
   {
     "p_id": "bpsc_mp_ext_006",
@@ -589,14 +764,21 @@
       "आंतरिक बैंक मापदंडों का संरचनात्मक अलगाव जिसने खुदरा ऋण बाजार में केंद्रीय नीति संकेतों के कुशल संचरण को व्यवस्थित रूप से अवरुद्ध कर दिया।",
       "एक पूर्ण संप्रभु शासनादेश जिसने वाणिज्यिक बैंकों को सभी फ्लोटिंग बंधक को सीधे निजी सॉफ्टवेयर समूहों के अस्थिर स्टॉक सूचकांकों से जोड़ने के लिए मजबूर किया।"
     ],
-    "o": [
+    "oe": [
       "Only 1 is correct",
       "Only 1 and 2 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 सही है",
+      "केवल 1 और 2 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statements 1 and 2 are precise textually documented explanations tracking the breakdown of monetary transmission [the process through which a central bank's policy rate modifications successfully filter down to alter the retail interest rates charged by commercial banks]. Internal data manipulation allowed banks to delay passing rate-cut benefits to borrowers. To resolve this, the RBI mandated linking floating loans to external market-determined indicators [such as the repo rate or Treasury Bill yields administered by the FBIL]. Statement 3 is a complete fiction."
+    "ee": "1. Statement 1 is correct because during 2015–16, when the RBI eased monetary policy by cutting the Repo Rate by 125 bps (1.25%), commercial banks reduced their median base lending rates by only about 60 bps (0.6%), showing severe transmission failure.\n2. Statement 2 is correct because internal benchmarks (Base Rate and MCLR) allowed banks to delay transmission by arbitrarily altering internal spread components and calculating borrowing costs on historic deposit liabilities.\n3. Statement 3 is incorrect because external benchmark regulations (operationalized from October 2019) linked loans to transparent, publicly verifiable indicators like the RBI Repo Rate or Government T-Bill yields, not private stock indices.",
+    "eh": "1. कथन 1 सही है क्योंकि 2015-16 में आरबीआई द्वारा रेपो दर में 1.25% (125 bps) की कटौती के मुकाबले बैंकों ने अपनी ऋण दरों में केवल 0.6% (60 bps) की ही कटौती की, जिससे मौद्रिक संचरण की विफलता सिद्ध हुई।\n2. कथन 2 सही है क्योंकि आंतरिक गणना पद्धतियों (Base Rate और MCLR) के कारण बैंक अपनी उच्च लागत का हवाला देकर नीतिगत ब्याज दरों में कटौती का लाभ तुरंत ग्राहकों तक नहीं पहुँचाते थे।\n3. कथन 3 गलत है क्योंकि बाहरी बेंचमार्किंग के तहत ऋणों को रेपो दर या ट्रेजरी बिल यील्ड जैसे सरकारी व पारदर्शी सूचकांकों से जोड़ा गया है, किसी निजी कंपनी के शेयर सूचकांक से नहीं।"
   },
   {
     "p_id": "bpsc_mp_ext_007",
@@ -612,14 +794,21 @@
       "यह ढांचा 182-दिवसीय ट्रेजरी बिल यील्ड या एफबीआईएल (FBIL) द्वारा उत्पादित किसी अन्य स्वतंत्र बेंचमार्क पर नज़र रखने की अनुमति देता है।",
       "फाइनेंशियल बेंचमार्क इंडिया प्राइवेट लिमिटेड (FBIL) ग्रामीण स्थानीय क्षेत्राधिकारों में स्थित एक निजी, असत्यापित रियल-स्टेट ब्रोकरेज फर्म के रूप में कार्य करता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 represent the precise textually accurate list of the four authorized external anchors mandated to ensure immediate monetary transmission. Treasury Bill [T-Bill, short-term sovereign debt instruments issued by the central government to manage short-term cash deficits, carrying absolute zero default risk and highly transparent market-determined yields] values are uncorrupted by internal banking stress layers. Statement 3 is a complete fiction describing the nature of the FBIL."
+    "ee": "1. Statement 1 is correct because the RBI's external benchmark guidelines explicitly authorize linking floating rate retail and MSME loans to the RBI Policy Repo Rate or the 91-day Treasury Bill yield.\n2. Statement 2 is correct because banks can also choose the 182-day Treasury Bill yield or any other independent market interest rate benchmark published by Financial Benchmarks India Pvt. Ltd. (FBIL).\n3. Statement 3 is incorrect because FBIL is an independent, recognized financial benchmark administrator jointly formed by FIMMDA, FEDAI, and IBA to publish credible money, debt, and forex benchmarks, not a rural real-estate brokerage.",
+    "eh": "1. कथन 1 सही है क्योंकि आरबीआई के बाहरी बेंचमार्क नियमों के तहत फ्लोटिंग खुदरा और एमएसएमई ऋणों को आरबीआई की नीतिगत रेपो दर या 91-दिवसीय ट्रेजरी बिल यील्ड से जोड़ा जा सकता है।\n2. कथन 2 सही है क्योंकि बैंक 182-दिवसीय ट्रेजरी बिल यील्ड या फाइनेंशियल बेंचमार्क्स इंडिया प्राइवेट लिमिटेड (FBIL) द्वारा प्रकाशित किसी अन्य पारदर्शी बाजार बेंचमार्क को भी चुन सकते हैं।\n3. कथन 3 गलत है क्योंकि FBIL मुद्रा और ऋण बाजार के लिए स्वतंत्र बेंचमार्क जारी करने वाली एक अधिकृत वित्तीय संस्था है, कोई रियल एस्टेट ब्रोकरेज फर्म नहीं।"
   },
   {
     "p_id": "bpsc_mp_ext_008",
@@ -635,14 +824,21 @@
       "भारतीय रिजर्व बैंक ने इस शुरुआती आंशिक राष्ट्रीयकरण लहर में कुल शेयरों का एक बड़ा 92 प्रतिशत हिस्सा खरीदा था।",
       "रणनीतिक बदलाव ने कार्यकारी संकल्प स्वरूपण के पहले चौबीस घंटों के भीतर 50,000 से अधिक भौतिक शाखाओं को सफलतापूर्वक समेकित किया।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are accurate historical and mathematical parameters tracking the emergence of India's first public sector bank. The Imperial Bank conversion utilized a 92% equity purchase layout managed directly by the RBI. Statement 3 contains an error because the text explicitly states the three Imperial Banks operated with exactly *466 branches* at that historical node, making the 50,000 claim a massive fabrication."
+    "ee": "1. Statement 1 is correct because on July 1, 1955, the State Bank of India Act nationalized the Imperial Bank of India (which had been created in 1921 by amalgamating the three Presidency Banks of Bengal, Bombay, and Madras).\n2. Statement 2 is correct because under the 1955 statutory formula, the Reserve Bank of India acquired approximately 92 per cent of the paid-up capital of the Imperial Bank of India to establish state control over rural credit expansion.\n3. Statement 3 is incorrect because at the time of its nationalization in 1955, the Imperial Bank had only **466 branches/offices**, not 50,000 branches.",
+    "eh": "1. कथन 1 सही है क्योंकि 1 जुलाई 1955 को संसद द्वारा एसबीआई अधिनियम, 1955 पारित कर इंपीरियल बैंक ऑफ इंडिया (जो 1921 में तीनों प्रेसीडेंसी बैंकों के विलय से बना था) का राष्ट्रीयकरण करके 'भारतीय स्टेट बैंक' (SBI) बनाया गया।\n2. कथन 2 सही है क्योंकि इस राष्ट्रीयकरण के तहत भारतीय रिज़र्व बैंक ने इंपीरियल बैंक के 92 प्रतिशत शेयर खरीदकर इसका स्वामित्व अपने हाथ में लिया था।\n3. कथन 3 गलत है क्योंकि 1955 में स्थापना के समय स्टेट बैंक ऑफ इंडिया के पास केवल **466 शाखाएं** थीं, 50,000 शाखाएं नहीं।"
   },
   {
     "p_id": "bpsc_mp_ext_009",
@@ -658,15 +854,23 @@
       "स्टेट बैंक ऑफ बीकानेर एंड जयपुर का निर्माण संरचनात्मक रूप से दो स्वतंत्र क्षेत्रीय परिचालन संस्थाओं के विलय द्वारा किया गया था जो समान क्षेत्र में काम करती थीं।",
       "उन्नत बैंकिंग एकीकरण प्रक्रिया के बाद, एसबीआई और उसके सामूहिक एसोसिएट्स (7+1) को 2017-18 तक पूरी तरह से एक एकल बैंक में समामेलित कर दिया गया था।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements represent perfect, textually accurate records tracking the cyclic structural evolution of the State Bank group from separate regional identities into a unified mega-commercial asset base designed to achieve economies of scale."
+    "ee": "1. Statement 1 is correct because the State Bank of India (Subsidiary Banks) Act, 1959 enabled the takeover and constitution of eight former princely-state regional banks as Associate banks of SBI in 1959–60.\n2. Statement 2 is correct because in 1963, the State Bank of Bikaner and the State Bank of Jaipur were merged to create the State Bank of Bikaner and Jaipur (SBBJ).\n3. Statement 3 is correct because effective April 1, 2017 (FY 2017–18), all five surviving Associate Banks (SBBJ, SBM, SBP, SBH, SBT) along with the Bharatiya Mahila Bank were fully merged into the State Bank of India.",
+    "eh": "1. कथन 1 सही है क्योंकि एसबीआई (सहायक बैंक) अधिनियम, 1959 के माध्यम से पूर्व रियासती राज्यों के 8 प्रमुख बैंकों का अधिग्रहण कर उन्हें स्टेट बैंक के एसोसिएट बैंकों के रूप में स्थापित किया गया था।\n2. कथन 2 सही है क्योंकि 1963 में स्टेट बैंक ऑफ बीकानेर और स्टेट बैंक ऑफ जयपुर का आपस में विलय करके 'स्टेट बैंक ऑफ बीकानेर एंड जयपुर' (SBBJ) बनाया गया था।\n3. कथन 3 सही है क्योंकि 1 अप्रैल 2017 (वित्तीय वर्ष 2017-18) से एसबीआई के सभी 5 शेष सहयोगी बैंकों और भारतीय महिला बैंक का भारतीय स्टेट बैंक (SBI) में पूर्ण विलय कर दिया गया।"
   },
+  
   {
     "p_id": "bpsc_mp_ext_010",
     "qe": "What precise macro policy pivot occurred on July 9, 2007, regarding the sovereign ownership control lines of the State Bank of India?",
@@ -681,14 +885,21 @@
       "इस बदलाव ने भारतीय स्टेट बैंक और उसके क्षेत्रीय एसोसिएट्स के होल्डिंग बैंक के रूप में आरबीआई की स्थिति को प्रभावी ढंग से समाप्त कर दिया।",
       "इस समायोजन को पूरे एसबीआई नेटवर्क को एक अनियमित निजी अपतटीय समुद्री बैंकिंग ट्रस्ट में बदलने के लिए अनिवार्य किया गया था।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 precisely isolate a vital conflict-of-interest correction in India's financial history. Separating ownership from regulation ensures that the RBI can function as an independent supervisor of the financial system [the apex central banking authority monitoring credit parameters and commercial banking solvency rules uncompromised by ownership layers]. Statement 3 is an absolute fiction."
+    "ee": "1. Statement 1 is correct: On July 9, 2007, the Government of India acquired the entire 59.73% equity stake held by the Reserve Bank of India in the State Bank of India (SBI) for ₹35,531.33 crore to eliminate conflict of interest between banking regulation and commercial ownership.\n2. Statement 2 is correct: This structural buyout formally severed the Reserve Bank of India's role as a holding bank and direct owner of SBI and its regional associate banks, establishing the RBI purely as an autonomous banking regulator.\n3. Statement 3 is incorrect: The transfer was a public-to-public ownership realignment within sovereign institutions based on the Narasimham Committee recommendations, having no link to privatization or offshore trusts.",
+    "eh": "1. कथन 1 सही है: 9 जुलाई 2007 को भारत सरकार ने भारतीय स्टेट बैंक (SBI) में भारतीय रिजर्व बैंक (RBI) की संपूर्ण 59.73% इक्विटी हिस्सेदारी को ₹35,531.33 करोड़ में खरीदकर अपने प्रत्यक्ष नियंत्रण में ले लिया, जिससे नियामक और स्वामित्व के बीच का टकराव समाप्त हो सके।\n2. कथन 2 सही है: इस वित्तीय हस्तांतरण के बाद भारतीय स्टेट बैंक और उसके सहयोगी बैंकों के प्रमोटर/होल्डिंग बैंक के रूप में आरबीआई की भूमिका पूरी तरह समाप्त हो गई और आरबीआई केवल निष्पक्ष नियामक बन गया।\n3. कथन 3 गलत है: यह सुधार नरसिम्हम समिति की सिफारिशों पर आधारित एक अंतर-सरकारी स्वामित्व पुनर्गठन था, इसका किसी निजी अपतटीय बैंकिंग ट्रस्ट से कोई संबंध नहीं है।"
   },
   {
     "p_id": "bpsc_mp_ext_011",
@@ -704,14 +915,21 @@
       "अप्रैल 1980 में, एक बाद के राज्य हस्तक्षेप ने ₹200 करोड़ से अधिक की उच्च जमा आधारभूत सीमा को लागू करते हुए 6 और निजी बैंकों का राष्ट्रीयकरण किया।",
       "सितंबर 1993 में पंजाब नेशनल बैंक के साथ घाटे में चल रहे न्यू बैंक ऑफ इंडिया के विलय के बाद, राष्ट्रीयकृत बैंकों की कुल संख्या 19 हो गई।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements represent precise textually accurate legal milestones and quantitative metrics tracking the zenith of state-directed social banking before the 1992 structural reform corrections. Complete nationalization [the absolute legislative acquisition of private financial assets by the state to redirect credit lines away from commercial maximization to public planning mandates] framed these eras."
+    "ee": "1. Statement 1 is correct: On July 19, 1969, the Government of India nationalized 14 major scheduled commercial banks whose individual demand and time deposit liabilities exceeded ₹50 crore.\n2. Statement 2 is correct: On April 15, 1980, the second phase of bank nationalization brought 6 more private scheduled banks into public ownership, applying an increased minimum net deposit threshold of ₹200 crore.\n3. Statement 3 is correct: Following the 1980 tranche, there were 20 nationalized banks; in September 1993, the non-viable New Bank of India was merged into Punjab National Bank (PNB), bringing the total count of nationalized banks down to 19 (excluding the SBI Group).",
+    "eh": "1. कथन 1 सही है: 19 जुलाई 1969 को भारत सरकार ने ₹50 करोड़ से अधिक की जमा राशि वाले 14 प्रमुख निजी वाणिज्यिक बैंकों का राष्ट्रीयकरण किया था।\n2. कथन 2 सही है: 15 अप्रैल 1980 को राष्ट्रीयकरण के दूसरे चरण में ₹200 करोड़ से अधिक की जमा राशि वाले 6 अतिरिक्त निजी बैंकों को सार्वजनिक स्वामित्व में लिया गया।\n3. कथन 3 सही है: 1980 के बाद राष्ट्रीयकृत बैंकों की संख्या 20 हो गई थी, परंतु सितंबर 1993 में घाटे में चल रहे न्यू बैंक ऑफ इंडिया का पंजाब नेशनल बैंक (PNB) में विलय होने से यह संख्या घटकर 19 रह गई।"
   },
   {
     "p_id": "bpsc_mp_ext_012",
@@ -727,14 +945,21 @@
       "चल रही समामेलन प्रक्रिया का उद्देश्य स्वतंत्र सक्रिय सार्वजनिक क्षेत्र के बैंकों (PSBs) की कुल संख्या को व्यवस्थित रूप से घटाकर ठीक 12 संस्थाओं तक लाना है।",
       "इस संरचनात्मक संकुचन की विश्व बैंक द्वारा केंद्रीय पूंजी बाजार पहुंच कानूनों के पूर्ण उल्लंघन के रूप में भारी आलोचना की जाती है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise records of the contemporary bank consolidation wave. Merging public banks seeks to broaden their capital base [the core equity and tier-1 funding reserves required to absorb unexpected non-performing asset shocks and satisfy Basel compliance frameworks] to enhance global competitiveness. Statement 3 is a complete fiction; experts defend consolidation to eliminate administrative duplication."
+    "ee": "1. Statement 1 is correct: Prior to the mega-consolidation effective April 1, 2020 (post-merger of Dena Bank and Vijaya Bank with Bank of Baroda in 2019 and SBI associates in 2017), there were 18 active Public Sector Banks.\n2. Statement 2 is correct: With the mega-merger of 10 public sector banks into 4 anchor entities on April 1, 2020, the total number of active public sector banks in India was streamlined to exactly 12 (SBI, PNB, BoB, Canara, Union Bank, Bank of India, Indian Bank, Central Bank, IOB, UCO Bank, Bank of Maharashtra, and Punjab & Sind Bank).\n3. Statement 3 is incorrect: Bank consolidation is an autonomous domestic policy reform based on the P.J. Nayak and Narasimham Committee roadmaps to build globally competitive banks, and is not an infraction of any international law.",
+    "eh": "1. कथन 1 सही है: 1 अप्रैल 2020 के 10 बैंकों के महा-विलय से ठीक पहले (देना और विजया बैंक के बैंक ऑफ बड़ौदा में विलय के बाद) देश में 18 सार्वजनिक क्षेत्र के बैंक कार्यरत थे।\n2. कथन 2 सही है: अप्रैल 2020 में 10 सरकारी बैंकों को 4 बड़े बैंकों में समामेलित किए जाने के पश्चात देश में सक्रिय सार्वजनिक क्षेत्र के बैंकों (PSBs) की कुल संख्या घटकर ठीक 12 रह गई।\n3. कथन 3 गलत है: यह एकीकरण भारतीय बैंकिंग सुधारों और नरसिम्हम समिति की सिफारिशों के अनुरूप पूंजीगत आधार मजबूत करने के लिए किया गया आंतरिक नीतिगत निर्णय है।"
   },
   {
     "p_id": "bpsc_mp_ext_013",
@@ -750,14 +975,21 @@
       "वैधानिक नियमों के तहत अनिवार्य स्पष्ट प्रतिशत अनुपात क्रमशः ठीक 50 प्रतिशत, 15 प्रतिशत और 35 प्रतिशत पर निर्धारित है।",
       "किसी भी व्यक्तिगत आरआरबी की परिचालन सीमाएं पूरी तरह से अप्रतिबंधित हैं, जिससे उन्हें राज्य की सीमाओं के बिना देश भर में शाखाएं खोलने की अनुमति मिलती है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise textually exact indicators mapping the financial architecture of the rural banking network. Statement 3 contains an option trap because the area of operations of an individual RRB is structurally *limited to a notified few districts within a specific state*, preserving its targeted 'local feel' and culture."
+    "ee": "1. Statement 1 is correct: Under the Regional Rural Banks Act, 1976, the authorized share capital of an RRB is subscribed jointly by three distinct institutional stakeholders: Central Government, the State Government, and the Sponsor Bank.\n2. Statement 2 is correct: Section 6(2) of the RRB Act, 1976 strictly fixes the equity holding ratio at 50% for the Government of India, 15% for the concerned State Government, and 35% for the Sponsor Commercial Bank.\n3. Statement 3 is incorrect: The operational jurisdiction of any individual RRB is strictly localized and legally confined to a notified cluster of contiguous districts within a single state to maintain its targeted local rural focus.",
+    "eh": "1. कथन 1 सही है: क्षेत्रीय ग्रामीण बैंक अधिनियम, 1976 के अनुसार प्रत्येक आरआरबी (RRB) की शेयर पूंजी तीन संस्थाओं—केंद्र सरकार, संबंधित राज्य सरकार और प्रायोजक बैंक—द्वारा संयुक्त रूप से धारित होती है।\n2. कथन 2 सही है: अधिनियम की धारा 6(2) के तहत पूंजी का निश्चित वैधानिक अनुपात 50% (भारत सरकार), 15% (राज्य सरकार) और 35% (प्रायोजक वाणिज्यिक बैंक) निर्धारित है।\n3. कथन 3 गलत है: आरआरबी का कार्यक्षेत्र राष्ट्रव्यापी नहीं होता; यह संबंधित राज्य के कुछ अधिसूचित जिलों तक ही सीमित रहता है ताकि स्थानीय ग्रामीण ऋण आवश्यकताओं पर ध्यान केंद्रित रखा जा सके।"
   },
   {
     "p_id": "bpsc_mp_ext_014",
@@ -773,14 +1005,21 @@
       "1998-99 तक, कुल परिचालन नेटवर्क में से, एक बड़ी संख्या यानी 171 आरआरबी (RRBs) गहरे वित्तीय नुकसान में चल रहे थे।",
       "अनिवार्य ब्याज रियायतों को स्थायी रूप से दोगुना करके, वाणिज्यिक दरों को पूरी तरह से प्रतिबंधित करके संकट को सफलतापूर्वक हल किया गया था।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are accurate reflections of the historical financial distress that structural social banking targets experienced. Concessional lending underpriced risk, depleting capital. Statement 3 contains an inversion trap: to rescue the banks, the state executed the exact *opposite* choice in 1998–99—it *abolished* the obligation of concessional loans, set target client boundaries free, and forced them to charge commercial interest rates to achieve baseline recovery solvency."
+    "ee": "1. Statement 1 is correct: RRBs suffered structural losses because they were restricted to non-viable concessional lending strictly to the target group of small/marginal farmers and rural artisans with high operational costs and low recovery rates.\n2. Statement 2 is correct: Cumulative financial unviability peaked so severely that by 1998–99, out of 196 operational RRBs, as many as 171 had accumulated massive financial losses and negative net worth.\n3. Statement 3 is incorrect: Following the Bhandari (1994) and Basu (1996) Committee recommendations, the crisis was resolved by doing the exact opposite: freeing RRBs from concessional lending mandates, allowing commercial interest rates, permitting lending to non-target borrowers, and recapitalization.",
+    "eh": "1. कथन 1 सही है: आरआरबी केवल आर्थिक रूप से कमजोर वर्गों और सीमांत किसानों को रियायती ब्याज दरों पर लक्षित ऋण देने के लिए बाध्य थे, जिससे उच्च परिचालन लागत और खराब वसूली के कारण वे भारी घाटे में चले गए।\n2. कथन 2 सही है: यह संकट इतना गहरा गया था कि 1998-99 तक देश के कुल 196 आरआरबी में से 171 बैंक लगातार घाटे में चल रहे थे और उनका शुद्ध मूल्य नकारात्मक हो गया था।\n3. कथन 3 गलत है: इस संकट के समाधान के लिए भंडारी और बसु समितियों की सिफारिश पर रियायती ऋण की अनिवार्यता को समाप्त किया गया तथा आरआरबी को गैर-लक्षित वर्ग को व्यावसायिक दरों पर ऋण देने की अनुमति दी गई।"
   },
   {
     "p_id": "bpsc_mp_ext_015",
@@ -796,14 +1035,21 @@
       "मध्यवर्ती मध्यम स्तर (intermediate middle tier) क्षेत्रीय स्तर पर जिला केंद्रीय सहकारी बैंकों (DCCBs) द्वारा बनाया जाता है।",
       "शीर्ष कमान स्तर वित्तीय नेटवर्क के शीर्ष पर बैठे राज्य सहकारी बैंकों (SCBs) के माध्यम से संरचित है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements represent perfect, textually precise structural parameters mapping the co-operative banking pyramid designed to supplant indigenous informal money lenders by routing agricultural credit streams through localized federal tiers."
+    "ee": "1. Statement 1 is correct: The base tier of the short-term rural cooperative credit structure consists of Primary Agricultural Credit Societies (PACS) or urban Primary Credit Societies operating at the village/local level directly serving grassroots borrowers.\n2. Statement 2 is correct: The intermediate middle tier comprises District Central Co-operative Banks (DCCBs) operating at the district level, which federate the primary societies and provide wholesale credit linkage.\n3. Statement 3 is correct: The apex tier consists of State Co-operative Banks (SCBs) at the state level, which oversee DCCBs, channel refinance from NABARD, and interact directly with the financial money markets.",
+    "eh": "1. कथन 1 सही है: सहकारी साख संरचना के सबसे निचले आधारभूत स्तर पर ग्रामीण/शहरी प्राथमिक कृषि ऋण समितियां (PACS/PCS) कार्य करती हैं जो सीधे जमीनी स्तर पर सदस्यों को ऋण देती हैं।\n2. कथन 2 सही है: मध्यवर्ती स्तर पर जिला स्तर पर 'जिला केंद्रीय सहकारी बैंक' (DCCB) कार्य करते हैं, जो प्राथमिक समितियों के संघ के रूप में वित्तीय समन्वय करते हैं।\n3. कथन 3 सही है: राज्य स्तर पर शीर्ष संस्था के रूप में 'राज्य सहकारी बैंक' (SCB) कार्य करते हैं, जो नाबार्ड (NABARD) से पुनर्वित्त प्राप्त कर पूरी राज्य सहकारी प्रणाली का नेतृत्व करते हैं।"
   },
   {
     "p_id": "bpsc_mp_ext_016",
@@ -819,14 +1065,21 @@
       "कड़ाई से बैंकिंग कार्यों से जुड़े मुख्य परिचालन मामलों को बैंकिंग विनियमन अधिनियम के तहत सीधे भारतीय रिजर्व बैंक द्वारा विनियमित किया जाता है।",
       "यह दोहरा कस्टडी मॉडल आरबीआई को किसी भी ऑडिटिंग हस्तक्षेप को करने से पूरी तरह रोकता है, और स्थानीय राज्य विधानसभाओं के भीतर पूर्ण शक्ति को लॉक करता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 precisely articulate the complex split oversight framework that defines Urban Co-operative Banks [UCBs, co-operative societies validated under state registration rules that satisfy central banking criteria to secure commercial banking licenses]. Statement 3 is false because banking regulations explicitly enforce the RBI's supremacy over monetary and asset auditing parameters, despite administrative states handling internal personnel recruitment blocks."
+    "ee": "1. Statement 1 is correct: Managerial and incorporation aspects—such as registration, governance bylaws, board management, audit of societies, and liquidation—are administered by the Registrar of Co-operative Societies (RCS) of the respective State Government (or Central RCS for multi-state UCBs).\n2. Statement 2 is correct: Banking-related functions—such as licensing, branch expansion, prudential capital norms, CRR/SLR requirements, interest rate policies, and lending guidelines—are regulated by the RBI under the Banking Regulation Act, 1949 (As Applicable to Co-operative Societies).\n3. Statement 3 is incorrect: The RBI retains statutory supervisory authority to inspect books, enforce prudential directions, impose operational restrictions, and supersede boards of cooperative banks under recent amendments.",
+    "eh": "1. कथन 1 सही है: शहरी सहकारी बैंकों (UCBs) के प्रशासनिक और संगठनात्मक पहलू (पंजीकरण, चुनाव, आंतरिक प्रबंधन, परिसमापन आदि) राज्य सरकार के सहकारिता निबंधक (RCS) के अधिकार क्षेत्र में आते हैं।\n2. कथन 2 सही है: बैंकिंग परिचालन से संबंधित मूल कार्य (बैंकिंग लाइसेंस, तरलता अनुपात, ऋण नीतियां, विवेकपूर्ण मानदंड आदि) बैंकिंग विनियमन अधिनियम, 1949 के तहत सीधे आरबीआई (RBI) द्वारा विनियमित होते हैं।\n3. कथन 3 गलत है: आरबीआई के पास सहकारी बैंकों के वित्तीय निरीक्षण, ऑडिट की जांच और दिशा-निर्देश जारी करने की पूर्ण वैधानिक शक्तियां हैं।"
   },
   {
     "p_id": "bpsc_mp_ext_017",
@@ -842,14 +1095,21 @@
       "वर्तमान नियमों के तहत, कोई औपचारिक प्रतिबंध नहीं है, और यूसीबी उस पूरे जिले में वैध रूप से व्यवसाय कर सकते हैं जिसमें वे पंजीकृत हैं, ग्रामीण क्षेत्रों सहित।",
       "₹50 करोड़ से अधिक की जमा राशि रखने वाले अच्छी तरह से प्रबंधित प्राथमिक यूसीबी को विशिष्ट मानदंडों के अधीन कई राज्यों में काम करने के लिए अधिकृत किया गया है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements represent perfect, textually exact metrics and operational profiles tracking how regulatory changes expanded co-operative banking asset channels beyond their historic urban limits to capture wider regional and multi-state credit markets."
+    "ee": "1. Statement 1 is correct: UCBs were originally conceived and licensed to cater to urban and semi-urban small businesses, personal retail needs, and micro-enterprises.\n2. Statement 2 is correct: Under regulatory liberalization, UCBs meeting regulatory criteria are permitted to extend their area of operations to encompass the entire district of registration, including contiguous rural pockets.\n3. Statement 3 is correct: Financially sound and well-managed (FSWM) UCBs with strong capital adequacy (CRAR) and deposits exceeding the ₹50 crore threshold are permitted by the RBI to expand operations to contiguous states under the Multi-State Co-operative Societies framework.",
+    "eh": "1. कथन 1 सही है: ऐतिहासिक रूप से यूसीबी (UCBs) का मुख्य उद्देश्य शहरी और अर्ध-शहरी क्षेत्रों के छोटे व्यापारियों, कारीगरों और वेतनभोगियों की वित्तीय आवश्यकताओं को पूरा करना था।\n2. कथन 2 सही है: आधुनिक उदारीकृत मानदंडों के तहत नियामक मानकों को पूरा करने वाले यूसीबी अपने पंजीकृत जिले के सभी क्षेत्रों (ग्रामीण भागों सहित) में बैंकिंग परिचालन का विस्तार कर सकते हैं।\n3. कथन 3 सही है: ₹50 करोड़ से अधिक जमा और मजबूत वित्तीय स्थिति वाले सुप्रबंधित यूसीबी को आरबीआई की पूर्व-अनुमति से बहु-राज्यीय परिचालन करने की छूट दी गई है।"
   },
   {
     "p_id": "bpsc_mp_ext_018",
@@ -865,14 +1125,21 @@
       "कानूनी ढांचे ने सभी बैंकिंग आरक्षित निधियों को असत्यापित रियल-स्टेट लॉटरी पूलों में पूरी तरह से समाप्त करने के लिए अधिकृत किया।",
       "पूंजी आधार को व्यापक बनाने और वैश्विक बैंकिंग नेटवर्क के भीतर प्रतिस्पर्धा करने के लिए सरकार द्वारा बैंक एकीकरण (bank consolidation) की नीति सक्रिय रूप से तैनात की गई है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 is correct",
       "Only 1 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 सही है",
+      "केवल 1 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statements 1 and 3 precisely capture the philosophical reversal marking the post-1991 era. The state moved away from the complete central control dogma of 1969/1980 to focus on bank consolidation [the merging of multiple state banks into fewer mega-entities to maximize capital efficiency ratios] and privatization tracking. Statement 2 is a total fiction."
+    "ee": "1. Statement 1 is correct: Post-1991 banking sector reforms (guided by the Narasimham Committee) reversed the previous state-monopoly dogma, allowing private equity infusion into PSBs, listing them on public stock exchanges, granting new private bank licenses, and paving the way for gradual state divestment.\n2. Statement 2 is incorrect: Banking reserves are strictly regulated under statutory Basel capital adequacy norms and RBI investment regulations, making arbitrary diversion into real-estate lottery schemes impossible.\n3. Statement 3 is correct: The government has actively implemented strategic mega-mergers of Public Sector Banks to build scale, enhance risk absorption capacity, reduce administrative overheads, and create internationally competitive anchor banks.",
+    "eh": "1. कथन 1 सही है: 1991 के आर्थिक सुधारों के बाद नरसिम्हम समिति की सिफारिशों के तहत सरकारी एकाधिकार की नीति को बदलते हुए नए निजी बैंकों को लाइसेंस दिए गए और सरकारी बैंकों में निजी पूंजी भागीदारी को बढ़ावा दिया गया।\n2. कथन 2 गलत है: बैंक आरक्षित निधियों का प्रबंधन सख्त बेसल (Basel) और आरबीआई नियमों के तहत होता है, इसे किसी अवैध रियल-एस्टेट में नहीं लगाया जा सकता।\n3. कथन 3 सही है: सरकार ने बैंकों के पूंजी आधार को मजबूत करने, लागत घटाने और वैश्विक स्तर पर प्रतिस्पर्धी बैंक बनाने के लिए सार्वजनिक बैंकों के बड़े पैमाने पर एकीकरण (Consolidation/Mergers) की नीति अपनाई है।"
   },
   {
     "p_id": "bpsc_mp_ext_019",
@@ -888,14 +1155,21 @@
       "नव संरचित इकाई को औपचारिक रूप से भारतीय स्टेट बैंक नाम दिया गया, जिसने देश में सार्वजनिक क्षेत्र की बैंकिंग की ऐतिहासिक शुरुआत की।",
       "केंद्र सरकार ने किसी भी परिसंपत्ति जलसेक (asset injection) से पूरी तरह से परहेज किया, जिससे बैंक को विशेष रूप से अंतर्राष्ट्रीय समुद्री कार्टेल के साथ कागजी मुद्रा विनिमय के माध्यम से काम करने के लिए मजबूर होना पड़ा।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are accurate historical and quantitative metrics tracking the 1955 structural pivot. Converting the Imperial Bank infrastructure (466 branches) provided the state with an immediate nationwide commercial backbone. Statement 3 is an absolute fiction that runs contrary to state capital-injection logic."
+    "ee": "1. Statement 1 is correct: The State Bank of India Act, 1955 was enacted on the recommendations of the All India Rural Credit Survey Committee (Gorwala Committee), nationalizing the Imperial Bank of India (which had 466 branches across India at that time).\n2. Statement 2 is correct: On July 1, 1955, the reconstituted entity became the State Bank of India (SBI), marking the birth of modern public sector commercial banking in India.\n3. Statement 3 is incorrect: The RBI acquired a commanding 92% equity stake in SBI upon its creation, providing official institutional capital support to mandate extensive rural branch expansion.",
+    "eh": "1. कथन 1 सही है: अखिल भारतीय ग्रामीण साख सर्वेक्षण समिति (गोरवाला समिति) की सिफारिश पर एसबीआई अधिनियम, 1955 के तहत इम्पीरियल बैंक ऑफ इंडिया (जिसकी उस समय 466 शाखाएं थीं) का राष्ट्रीयकरण किया गया था।\n2. कथन 2 सही है: 1 जुलाई 1955 को पुनर्गठित संस्था को 'भारतीय स्टेट बैंक' (SBI) नाम दिया गया, जिसने भारत में सार्वजनिक क्षेत्र की बैंकिंग की औपचारिक शुरुआत की।\n3. कथन 3 गलत है: भारतीय रिज़र्व बैंक ने इस बैंक के 92% शेयर खरीदकर इसमें आधिकारिक पूंजी डाली थी ताकि ग्रामीण क्षेत्रों में बैंकिंग विस्तार को गति दी जा सके।"
   },
   {
     "p_id": "bpsc_mp_ext_020",
@@ -911,16 +1185,22 @@
       "इसने 1991 के बाद के आर्थिक सुधार युग के बिल्कुल पहले निजी बैंक के रूप में औपचारिक रूप से खोले जाने का ऐतिहासिक मील का पत्थर हासिल किया।",
       "समुद्री कर कोड के साथ गंभीर संरचनात्मक गैर-अनुपालन के कारण इस इकाई को पूंजी बाजार तक पहुंच से प्रतिबंधित कर दिया गया था।"
     ],
-    "o": [
+    "oe": [
       "Only 2 is correct",
       "Only 1 and 2 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 2 सही है",
+      "केवल 1 और 2 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statement 2 is textually and historically precise. In 1994, the government reversed its previous complete-nationalization policy by permitting the establishment of fresh private banking licenses, with UTI Bank [subsequently rebranded as Axis Bank] entering as the absolute pathbreaker of the market liberalization era. Statements 1 and 3 are fictions."
+    "ee": "1. Statement 1 is incorrect: UTI Bank was not nationalized; it was established as a modern, private new-generation commercial bank.\n2. Statement 2 is correct: Following the 1993 RBI guidelines for licensing new private sector banks, UTI Bank was incorporated in December 1993 and inaugurated in Ahmedabad in April 1994 as the first new-generation private sector bank in post-liberalization India (later renamed Axis Bank in 2007).\n3. Statement 3 is incorrect: UTI Bank was a fully compliant commercial bank promoted jointly by public financial institutions (UTI, LIC, GIC) and actively traded in domestic capital markets.",
+    "eh": "1. कथन 1 गलत है: यूटीआई बैंक का राष्ट्रीयकरण नहीं किया गया था, बल्कि यह 1991 के सुधारों के बाद स्थापित एक नया निजी बैंक था।\n2. कथन 2 सही है: 1993 में निजी बैंकों के लिए जारी नए दिशानिर्देशों के बाद यूटीआई बैंक (UTI Bank) 1994 में स्थापित होने वाला नई पीढ़ी का पहला निजी क्षेत्र का बैंक बना (जिसे 2007 में बदलकर 'एक्सिस बैंक' नाम दिया गया)।\n3. कथन 3 गलत है: यूटीआई बैंक घरेलू पूंजी बाजार में पूरी तरह सक्रिय और नियामक नियमों के अनुरूप संचालित एक प्रमुख बैंक था।"
   },
-  
   {
     "p_id": "bpsc_nsm_001",
     "qe": "Consider the following statements regarding the macro-structural blueprints proposed by the Narasimham Committee-II (1998) to enhance global competitiveness within the Indian banking architecture:",
@@ -935,14 +1215,21 @@
       "इस नए समेकित लेआउट के पहले और दूसरे स्तरों को विशेष रूप से घरेलू कृषि क्षेत्र की ऋण और लेनदेन संबंधी आवश्यकताओं को पूरा करने के लिए डिज़ाइन किया गया था।",
       "समिति ने सार्वजनिक क्षेत्र के बैंकों के बजटीय पुनर्पूंजीकरण (budgetary recapitalization) की नीति को आर्थिक रूप से व्यावहारिक न मानते हुए इसे छोड़ने की सिफारिश की।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 1 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 1 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statements 1 and 3 are precise reflections of the Narasimham Committee-II recommendations. Tier-1 was meant for international orientation, and the panel strongly opposed fiscal recapitalization [the state practice of infusing tax-payer funds directly into distressed banks to artificially restore their equity bases]. Statement 2 contains a sophisticated inversion trap: the first and second tiers were explicitly designated to take care of the banking needs of the *corporate sector* in the economy, leaving local networks to handle agrarian lines."
+    "ee": "1. Statement 1 is correct: The Committee on Banking Sector Reforms (Narasimham Committee-II, 1998) proposed a three-tier banking structure: Tier-1 with 2 to 3 large Indian banks having global character, Tier-2 with 8 to 10 national commercial banks, and Tier-3 comprising localized community and regional banks.\n2. Statement 2 is incorrect: Tier-1 (international banks) and Tier-2 (national banks) were envisioned primarily to service large corporate industrial and trade finance needs, whereas agricultural and local micro-credit were assigned to Tier-3 regional banks.\n3. Statement 3 is correct: Narasimham Committee-II strongly recommended ending the recurrent budgetary recapitalization of loss-making public sector banks with taxpayer funds, urging banks to raise capital directly from the capital markets.",
+    "eh": "1. कथन 1 सही है: नरसिम्हम समिति-II (1998) ने 3-स्तरीय बैंकिंग संरचना का प्रस्ताव रखा था, जिसमें टियर-1 में अंतरराष्ट्रीय स्तर के 2-3 बड़े बैंक, टियर-2 में 8-10 राष्ट्रीय बैंक और टियर-3 में क्षेत्रीय/स्थानीय बैंक शामिल थे।\n2. कथन 2 गलत है: टियर-1 और टियर-2 के बड़े बैंकों को मुख्य रूप से कॉर्पोरेट और औद्योगिक क्षेत्र की वित्तीय जरूरतों के लिए परिकल्पित किया गया था, जबकि कृषि क्षेत्र की जरूरतों का दायित्व टियर-3 के स्थानीय बैंकों को दिया गया था।\n3. कथन 3 सही है: समिति ने करदाताओं के पैसे से सार्वजनिक क्षेत्र के बैंकों के बजटीय पुनर्पूंजीकरण (Recapitalization) की नीति को समाप्त करने की स्पष्ट सिफारिश की थी।"
   },
   {
     "p_id": "bpsc_nsm_002",
@@ -958,14 +1245,21 @@
       "परिशोधन (amortization) को लंबी अवधि में फैलाकर, इस प्रणाली ने उधारकर्ता फर्मों पर किसी भी अतिरिक्त ब्याज के बोझ को सफलतापूर्वक समाप्त कर दिया।",
       "संरचनात्मक लेआउट ने अनजाने में 'एवरग्रीनिंग' (evergreening) को सुगम बना दिया क्योंकि इसने वाणिज्यिक बैंकों को भुगतान न करने योग्य ब्याज ब्लॉकों को कवर करने के लिए अतिरिक्त ऋण देने के लिए मजबूर किया।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 1 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 1 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statements 1 and 3 are precise textually documented mechanics of the 5/25 refinancing experiment. While it allowed banks to avoid immediate asset classification downgrades, it delayed distress resolution. Statement 2 contains an economic logic trap: spreading out the amortization [the systematic reduction of a debt liability over time through periodic principal and interest repayments] actually *increased* the absolute cumulative interest burden on companies, making repayment impossible and triggering evergreening [the non-transparent practice of masking non-performing assets by extending fresh loans to a defaulter strictly to enable them to service older interest dues]."
+    "ee": "1. Statement 1 is correct: The 5/25 Scheme (Flexible Structuring of Long-Term Project Loans) allowed banks to extend the repayment tenure of infrastructure and core industry loans up to 25 years, with periodic refinancing and interest-rate resets every 5 years.\n2. Statement 2 is incorrect: Lengthening loan tenures from 10–12 years to 25 years substantially increased the total cumulative interest burden over the life of the loan for stressed project developers.\n3. Statement 3 is correct: In practice, the scheme was used by lenders to postpone NPA recognition and evergreen stressed assets, as companies unable to generate cash flows simply rolled over debt without genuine operational turnaround.",
+    "eh": "1. कथन 1 सही है: 5/25 योजना के तहत बुनियादी ढांचा परियोजनाओं के ऋण की अवधि को 25 वर्षों तक बढ़ाने और प्रत्येक 5 वर्ष में ब्याज दरों की समीक्षा/पुनर्वित्तपोषण करने की सुविधा दी गई थी।\n2. कथन 2 गलत है: ऋण अवधि को 25 वर्ष तक लंबा करने से कंपनियों पर कुल संचयी ब्याज का बोझ काफी बढ़ गया, जिससे उनकी वित्तीय स्थिति और अधिक तनावग्रस्त हो गई।\n3. कथन 3 सही है: इस योजना के कारण बैंकों ने एनपीए (NPA) को छुपाने और खराब ऋणों को 'एवरग्रीन' (सदाबहार) करने की प्रवृत्ति को बढ़ावा दिया, जिससे वास्तविक समाधान में केवल देरी हुई।"
   },
   {
     "p_id": "bpsc_nsm_003",
@@ -981,14 +1275,21 @@
       "मुख्य कृषि क्षेत्र के लिए उप-लक्ष्य आवंटन पाठ्य रूप से कुल ऋण लूप का ठीक 18 प्रतिशत निर्धारित किया गया है।",
       "दिशानिर्देश यह आदेश देते हैं कि कुल ऋण का ठीक 10 प्रतिशत या पीएसएल का 25 प्रतिशत (जो भी कम हो) कमजोर वर्गों को दिया जाना चाहिए।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise metrics written under the current RBI guidelines. Priority Sector Lending [PSL, the regulatory quota allocation framework designed to compel commercial banks to route capital into sectors vital for balanced economic expansion but carrying high risk metrics] forces credit flows. Statement 3 contains an option trap based on a single word switch: the text explicitly mandates that the selection is based on *whichever be higher*, not lower."
+    "ee": "1. Statement 1 is correct: Domestic commercial banks and foreign banks with 20 or more branches are mandated to allocate 40% of their Adjusted Net Bank Credit (ANBC) or Credit Equivalent Amount of Off-Balance Sheet Exposure (CEOBE) to priority sectors.\n2. Statement 2 is correct: Within the overall 40% target, a dedicated sub-target of 18% of ANBC/CEOBE is mandated specifically for the Agriculture sector (with 10% reserved for Small and Marginal Farmers).\n3. Statement 3 is incorrect: Under RBI norms, the sub-target for Weaker Sections was set at 10% (later scaled to 12%) of ANBC/CEOBE, or equivalent to 25% of PSL, based on **whichever is higher**, not whichever is lower.",
+    "eh": "1. कथन 1 सही है: भारतीय वाणिज्यिक बैंकों के लिए कुल समायोजित निवल बैंक ऋण (ANBC) का 40 प्रतिशत अनिवार्य रूप से प्राथमिकता प्राप्त क्षेत्र (PSL) को आवंटित करना होता है।\n2. कथन 2 सही है: कुल 40% के लक्ष्य के भीतर अकेले कृषि क्षेत्र के लिए 18% का अनिवार्य उप-लक्ष्य निर्धारित किया गया है।\n3. कथन 3 गलत है: कमजोर वर्गों के लिए ऋण उप-लक्ष्य ANBC का 10-12% या पीएसएल का 25% तय है, जो **दोनों में से जो भी अधिक हो (Whichever is higher)** उस पर लागू होता है, कम पर नहीं।"
   },
   {
     "p_id": "bpsc_nsm_004",
@@ -1004,14 +1305,21 @@
       "इस लेआउट का प्राथमिक संरचनात्मक उद्देश्य उच्चतम बोलीदाता को इक्विटी बेचकर प्रबंधन नियंत्रण के पूर्ण परिवर्तन को सुगम बनाना है।",
       "एसडीआर (SDR) ढांचा एक बड़ा अनुभवजन्य सफल प्रयोग था, जिसके तहत 2016 के अंत तक हजारों ऋण-ग्रस्त फर्मों का सफलतापूर्वक पुनर्गठन किया गया था।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise descriptions of the SDR operational parameters. Converting debt to equity [the process of transforming a lender's credit claim into formal ownership shares carrying voting power inside the corporate debtor's registry] was designed to bypass corporate stagnation. Statement 3 contains an inversion trap: by end-December 2016, only *two* such sales had actually materialized, as most distressed corporations remained completely unviable due to deep, un-converted debt over-hangs."
+    "ee": "1. Statement 1 is correct: The Strategic Debt Restructuring (SDR) scheme introduced by the RBI in June 2015 authorized Joint Lenders' Forums (JLFs) to convert a defaulting company's debt into equity shares, holding at least 51% of total equity.\n2. Statement 2 is correct: The core design of SDR was to divest promoter control, take over management, and sell the 51% controlling stake to an independent new promoter within a mandatory 18-month timeline.\n3. Statement 3 is incorrect: SDR failed to resolve bad loans; by late 2016, banks had invoked SDR in dozens of cases but successfully completed ownership change in only two cases due to legal hurdles and asset overvaluation, leading to its eventual withdrawal in 2018.",
+    "eh": "1. कथन 1 सही है: जून 2015 में आरबीआई द्वारा शुरू की गई एसडीआर (SDR) योजना ने बैंकों के कंसोर्टियम को यह अधिकार दिया कि वे चूककर्ता कंपनी के ऋण को 51% या अधिक की बहुलांश इक्विटी में बदल सकें।\n2. कथन 2 सही है: इस योजना का मुख्य उद्देश्य डिफॉल्टर प्रमोटरों को हटाकर कंपनी का प्रबंधन अपने हाथ में लेना और 18 महीने के भीतर उस 51% हिस्सेदारी को नए बोलीदाता को बेचकर प्रबंधन बदलना था।\n3. कथन 3 गलत है: एसडीआर योजना व्यवहार में विफल रही; 2016 के अंत तक दर्जनों मामलों में इसे लागू करने के बावजूद खरीदारों के अभाव के कारण केवल 2 कंपनियों में ही प्रबंधन परिवर्तन सफल हो सका।"
   },
   {
     "p_id": "bpsc_nsm_005",
@@ -1027,14 +1335,21 @@
       "यह वैधानिक हस्तक्षेप चूककर्ता प्रमोटरों (defaulting promoters) को कृत्रिम रूप से कम या सस्ते मूल्य पर अपने बुनियादी ढांचे पर नियंत्रण हासिल करने से रोकता है।",
       "यह फ़िल्टर कड़े रूप से केवल घरेलू लेनदेन पर लागू होता है, विदेशी क्षेत्राधिकार के भीतर अक्षमताओं के अधीन किसी भी व्यक्ति को पूरी तरह से छूट देता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise textually accurate explanations of the anti-moral-hazard filters added via the first IBC amendment. Corporate Insolvency Resolution Process [CIRP, the legal framework administered via the National Company Law Tribunal to restructure distressed firms or enforce orderly assets liquidations] requires clean applicants. Statement 3 is incorrect because the code explicitly extends the disqualification to individuals facing identical legal or operational disabilities *in any jurisdiction outside India*."
+    "ee": "1. Statement 1 is correct: Section 29A was inserted into the Insolvency and Bankruptcy Code, 2016 via an amendment in November 2017 to disqualify wilful defaulters and existing promoters from submitting resolution plans.\n2. Statement 2 is correct: Section 29A prevents moral hazard by stopping wilful defaulters and non-performing asset promoters from re-acquiring their stressed assets through the NCLT auction at deeply discounted (haircut) prices.\n3. Statement 3 is incorrect: The disqualification criteria under Section 29A explicitly apply to entities or persons subject to corresponding disabilities or disqualifications under any law in a jurisdiction outside India as well.",
+    "eh": "1. कथन 1 सही है: नवंबर 2017 में आईबीसी में धारा 29A जोड़ी गई, जिसका मुख्य उद्देश्य इरादतन चूककर्ताओं (Wilful Defaulters) और गैर-निष्पादित प्रमोटरों को अपनी ही दिवालिया कंपनियों के लिए बोली लगाने से रोकना था।\n2. कथन 2 सही है: यह धारा 'नैतिक जोखिम' (Moral Hazard) को रोकती है ताकि डिफॉल्टर प्रमोटर भारी छूट (Haircut) पर अपनी ही संपत्तियों को पुनः सस्ते दामों में न खरीद सकें।\n3. कथन 3 गलत है: धारा 29A के तहत अयोग्यता के नियम केवल भारत तक सीमित नहीं हैं; यदि कोई व्यक्ति विदेशी क्षेत्राधिकार में भी समान अयोग्यताओं से ग्रस्त है, तो वह भी बोली लगाने से प्रतिबंधित होता है।"
   },
   {
     "p_id": "bpsc_nsm_006",
@@ -1050,14 +1365,21 @@
       "यह संशोधन बिना किसी अपवाद के संपूर्ण सीआईआरपी (CIRP) चक्र को पूरा करने के लिए ठीक 330 दिनों की एक अनिवार्य, पूर्ण समय-सीमा स्थापित करता है।",
       "330-दिन की समय सीमा मुकदमेबाजी (litigation) में बिताए गए सभी समय ब्लॉकों को बाहर करती है, जिससे एक लचीली खिड़की मिलती है जो अनिश्चित काल तक विस्तारित होती है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are exact textual additions introduced under the third amendment to enforce procedural discipline. Statement 3 contains a critical inversion trap: the mandatory 330-day cap is explicitly designed to be *inclusive* of the time spent on litigation and judicial extensions, aiming to compress the asset resolution cycle to an average of 340 days compared to the older pre-reform 4.3-year delays."
+    "ee": "1. Statement 1 is correct: Under Section 7(4) and Section 9(5) of the IBC, the National Company Law Tribunal (NCLT) is mandated to ascertain the existence of default and either admit or reject an insolvency application within 14 days of receipt.\n2. Statement 2 is correct: The Insolvency and Bankruptcy Code (Amendment) Act, 2019 introduced an overarching outer deadline of **330 days** to complete the Corporate Insolvency Resolution Process (CIRP).\n3. Statement 3 is incorrect: The 330-day ceiling was expressly enacted to be **inclusive of time spent in legal proceedings and litigation** before appellate bodies, though the Supreme Court in the *Essar Steel (2019)* ruling clarified that extraordinary delays attributable to judicial tribunal bottlenecks can be relaxed in exceptional cases.",
+    "eh": "1. कथन 1 सही है: आईबीसी के तहत एनसीएलटी (NCLT) के लिए यह अनिवार्य नियम है कि वह दिवाला याचिका दाखिल होने के 14 दिनों के भीतर डिफॉल्ट का निर्धारण कर उसे स्वीकार या अस्वीकार करे।\n2. कथन 2 सही है: 2019 के तीसरे संशोधन द्वारा संपूर्ण कॉर्पोरेट दिवाला समाधान प्रक्रिया (CIRP) को पूरा करने के लिए **330 दिनों** की अधिकतम समग्र समय-सीमा तय की गई थी।\n3. कथन 3 गलत है: 330 दिनों की यह सीमा अदालती मुकदमों (Litigation) में लगे समय को **शामिल करके (Inclusive)** तय की गई थी ताकि मामलों को अनिश्चित काल तक खींचने से रोका जा सके।"
   },
   {
     "p_id": "bpsc_nsm_007",
@@ -1073,14 +1395,21 @@
       "आईबीसी ढांचे के तहत शामिल कुल राशि के प्रतिशत के रूप में वसूली दर को लोक अदालतों के वसूली मापदंडों की तुलना में काफी कम प्रलेखित किया गया था।",
       "इस पारिस्थितिकी तंत्र में भारतीय दिवाला और शोधन अक्षमता बोर्ड (IBBI) जैसी विशेष संरचनात्मक संपत्तियां और हजारों पंजीकृत दिवाला पेशेवर शामिल हैं।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 1 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 3 सही हैं",
+      "केवल 1 और 2 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statements 1 and 3 are precise quantitative and structural indicators. The Insolvency and Bankruptcy Board of India [IBBI, the statutory apex oversight body regulating insolvency professional agencies, valuers, and information repositories] anchors the system. Statement 2 contains a complete inversion trap: the resolution recovery percentage under the IBC is documented to be *significantly higher* than other historical processes like Lok Adalats or Debt Recovery Tribunals (DRTs)."
+    "ee": "1. Statement 1 is correct: Official data from the Insolvency and Bankruptcy Board of India (IBBI) indicated that as of December 2019, financial creditors had realized approximately ₹1.58 lakh crore through approved resolution plans.\n2. Statement 2 is incorrect: The recovery rate under the IBC averaged between 42% and 45% of admitted claims, which was vastly superior to the single-digit recovery rates achieved under Lok Adalats (around 4%–5%) and DRTs (around 5%–6%).\n3. Statement 3 is correct: The institutional infrastructure of the IBC encompasses the IBBI as the statutory apex regulator, Information Utilities (NeSL), Registered Valuers, and registered Insolvency Professionals (IPs).",
+    "eh": "1. कथन 1 सही है: दिसंबर 2019 के अंत तक आईबीसी के तहत हल किए गए मामलों में वित्तीय लेनदारों द्वारा स्वीकृत योजनाओं से लगभग ₹1.58 लाख करोड़ की वसूली की गई थी।\n2. कथन 2 गलत है: आईबीसी के तहत वसूली दर (लगभग 42-45%) लोक अदालतों (4-5%) और ऋण वसूली न्यायाधिकरणों (DRTs) के पुराने तंत्र की तुलना में काफी बेहतर और अधिक थी।\n3. कथन 3 सही है: आईबीसी तंत्र में भारतीय दिवाला और शोधन अक्षमता बोर्ड (IBBI), सूचना उपयोगिताएं (NeSL) और हजारों पंजीकृत इनसॉल्वेंसी प्रोफेशनल्स (IPs) शामिल हैं।"
   },
   {
     "p_id": "bpsc_nsm_008",
@@ -1096,14 +1425,21 @@
       "एक संदिग्ध (Doubtful) परिसंपत्ति को पाठ्य रूप से एक गैर-सेवाकृत ऋण के रूप में परिभाषित किया गया है जिसने 12 महीने से अधिक की समय-सीमा के लिए अपनी निरंतर खराब-ऋण स्थिति बनाए रखी है।",
       "एक हानि (Loss) परिसंपत्ति वह है जहां नुकसान की पहचान आंतरिक/बाहरी लेखा परीक्षकों या आरबीआई द्वारा की गई है, लेकिन राशि को औपचारिक रूप से बट्टे खाते (written off) में नहीं डाला गया है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "Option 2 is correct because *1, 2, and 3 all are correct*. All three statements represent the precise mathematical and audit-based definitions used to categorize Non-Performing Assets [NPAs, bad loans where interest or principal repayments remain in default past a 90-day overdue norm] to ensure banking sector transparency."
+    "ee": "1. Statement 1 is correct: Under RBI prudential norms, an asset is classified as **Sub-standard** if it has remained a Non-Performing Asset (NPA) for a period less than or equal to 12 months.\n2. Statement 2 is correct: An asset is categorized as **Doubtful** if it has remained in the sub-standard category for a period exceeding 12 months.\n3. Statement 3 is correct: A **Loss Asset** is one where the loss has been identified by the bank, internal/external auditors, or during an RBI inspection, but the asset has not been written off wholly or partially, possessing negligible salvage value.",
+    "eh": "1. कथन 1 सही है: आरबीआई के नियमों के अनुसार, जब कोई ऋण खाता एनपीए (NPA) बनने के बाद 12 महीने या उससे कम समय तक उस स्थिति में रहता है, तो उसे **उप-मानक परिसंपत्ति (Sub-standard Asset)** कहा जाता है।\n2. कथन 2 सही है: यदि कोई ऋण 12 महीने से अधिक समय तक उप-मानक श्रेणी में बना रहता है, तो उसे **संदिग्ध परिसंपत्ति (Doubtful Asset)** के रूप में वर्गीकृत किया जाता है।\n3. कथन 3 सही है: **हानि परिसंपत्ति (Loss Asset)** वह होती है जिसकी वसूली असंभव मानी जाती है और बैंक या आरबीआई निरीक्षकों द्वारा उसकी पहचान हानि के रूप में कर ली जाती है, यद्यपि उसे खातों से बट्टे खाते (Write-off) न डाला गया हो।"
   },
   {
     "p_id": "bpsc_nsm_009",
@@ -1119,15 +1455,23 @@
       "2014 के शुल्क संशोधन में विशिष्ट रूप से एआरसी को बेचने वाले बैंकों को नकद में अग्रिम रूप से खरीद मूल्य के काफी कम हिस्से का भुगतान करने की आवश्यकता थी।",
       "2014 से आवश्यक उच्च अग्रिम नकद प्रतिबद्धता (upfront cash commitment) के कारण, इन कंपनियों द्वारा एनपीए की थोक खरीद में भारी गिरावट आई।"
     ],
-    "o :": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 1 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 3 सही हैं",
+      "केवल 1 और 2 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statements 1 and 3 are correct structural parameters. Asset Reconstruction Companies [ARCs, specialized financial entities that purchase impaired loans or non-performing assets from commercial banks at a discount to independently execute asset recovery or liquidations] face liquidity constraints. Statement 2 contains a deep inversion trap: the 2014 revision required ARCs to pay a *greater proportion* (not lower) of the asset purchase price upfront in cash, which drained their immediate liquid reserves and caused toxic loan acquisitions to slow down to a minor 5% of total NPAs."
+    "ee": "1. Statement 1 is correct: Asset Reconstruction Companies (ARCs) were given statutory recognition and regulatory backing under the Securitisation and Reconstruction of Financial Assets and Enforcement of Security Interest (SARFAESI) Act, 2002.\n2. Statement 2 is incorrect: In August 2014, the RBI increased the mandatory minimum investment of ARCs in Security Receipts (SRs) from **5% to 15%**, which forced ARCs to pay a **much higher (not lower) proportion** of the purchase price in cash upfront to banks.\n3. Statement 3 is correct: Due to this higher 15% upfront cash commitment, ARCs faced severe liquidity constraints, causing their NPA acquisition activity from commercial banks to drop sharply.",
+    "eh": "1. कथन 1 सही है: परिसंपत्ति पुनर्निर्माण कंपनियों (ARCs) की स्थापना और कार्यप्रणाली को सरफेसी अधिनियम (SARFAESI Act), 2002 के तहत वैधानिक मान्यता प्रदान की गई थी।\n2. कथन 2 गलत है: अगस्त 2014 में आरबीआई ने एआरसी द्वारा सिक्योरिटी रिसीट्स (SRs) में अनिवार्य अग्रिम नकद निवेश को 5% से बढ़ाकर **15%** कर दिया, जिससे एआरसी को बैंकों को खरीद मूल्य का अधिक नकद हिस्सा अग्रिम देना अनिवार्य हो गया।\n3. कथन 3 सही है: इस 15% अग्रिम नकद की आवश्यकता के कारण एआरसी पर पूंजीगत दबाव बढ़ा और बैंकों से एनपीए खरीदने की उनकी गति काफी धीमी हो गई।"
   },
+ 
   {
     "p_id": "bpsc_nsm_010",
     "qe": "What specific independent audit verification tool was emphasized by the RBI to enforce uniform compliance with loan classification rules across all banking networks?",
@@ -1142,14 +1486,21 @@
       "सभी बैंकिंग संपत्तियों का अनियमित अल्पकालिक कमर्शियल पेपर्स में पूर्ण रूपांतरण।",
       "एक बाध्यकारी केंद्रीय डिक्री जिसने सभी बाहरी ऑडिटिंग प्रक्रियाओं को अनिश्चित काल के लिए स्थायी रूप से फ्रीज कर दिया।"
     ],
-    "o": [
+    "oe": [
       "Only 1 is correct",
       "Only 1 and 2 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 सही है",
+      "केवल 1 और 2 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statement 1 captures the precise meaning of the Asset Quality Review [AQR, a rigorous on-site and data-driven credit portfolio audit executed by the central bank to identify hidden or improperly classified non-performing assets masked by commercial banks through deceptive accounting adjustments]. The RBI mandated full rectification of identified anomalies by March 2016. Statements 2 and 3 are fictions."
+    "ee": "1. Statement 1 is correct: In 2015, the Reserve Bank of India (RBI) launched the Asset Quality Review (AQR) as a rigorous, independent supervisory exercise to inspect bank balance sheets, uncover masked stressed assets, and enforce uniform non-performing asset (NPA) classification across the banking system by March 2016.\n2. Statement 2 is incorrect: The AQR aimed to enforce transparency and provisioning for stressed assets, not to convert banking loan books into unregulated commercial papers.\n3. Statement 3 is incorrect: The RBI reinforced and expanded statutory and external auditing frameworks rather than freezing external audit procedures.",
+    "eh": "1. कथन 1 सही है: भारतीय रिज़र्व बैंक (RBI) ने 2015 में 'एसेट क्वालिटी रिव्यू' (AQR) शुरू किया था। इसका मुख्य उद्देश्य बैंकों द्वारा छिपाई गई गैर-निष्पादित परिसंपत्तियों (NPAs) की सटीक पहचान करना तथा मार्च 2016 तक सभी बैंकों में एक समान वर्गीकरण एवं आवश्यक प्रोविजनिंग सुनिश्चित करना था।\n2. कथन 2 गलत है: AQR का उद्देश्य पारदर्शी वर्गीकरण लागू करना था, न कि बैंकिंग संपत्तियों को अनियमित कमर्शियल पेपर्स में परिवर्तित करना।\n3. कथन 3 गलत है: रिज़र्व बैंक ने ऑडिटिंग प्रक्रियाओं को मजबूत और अनिवार्य बनाया था, न कि उन्हें अनिश्चित काल के लिए स्थगित किया था।"
   },
   {
     "p_id": "bpsc_nsm_011",
@@ -1165,14 +1516,21 @@
       "इसका मूल व्यापक आर्थिक उद्देश्य एक संप्रभु बफर या शॉक-एब्जॉर्बर प्रदान करना है जो बैंक के दिवालिया (insolvent) होने की संभावना को कम करता है।",
       "बुनियादी गणितीय फॉर्मूला कुल देनदारियों के एक सरल फ्लैट एकत्रीकरण का उपयोग करता है, जिसमें किसी भी परिसंपत्ति जोखिम-भार कारकों की पूरी तरह से उपेक्षा की जाती है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise textually accurate records of the rationale driving capital risk rules. Capital Adequacy Ratio [CAR, also known as Capital to Risk-Weighted Assets Ratio (CRAR), the metric used by central bank supervisors to protect depositors and ensure financial system stability by matching bank capital with its asset risk profiles] acts as a core cushion. Statement 3 contains an absolute accounting error: the denominator is derived explicitly by multiplying distinct asset volumes by their specific risk-weights (0% for G-Secs, up to 100% or more for commercial debt packages), rather than using a flat liabilities sum."
+    "ee": "1. Statement 1 is correct: The Capital Adequacy Ratio (CAR), or Capital to Risk-Weighted Assets Ratio (CRAR), is mathematically defined as the ratio of a bank's total capital (Tier 1 and Tier 2) to its total Risk-Weighted Assets (RWA).\n2. Statement 2 is correct: The core macroeconomic purpose of maintaining an adequate CAR is to establish a robust financial cushion to absorb unexpected losses, protect depositors' funds, and prevent bank insolvency.\n3. Statement 3 is incorrect: The denominator of the CAR formula strictly weights assets according to their specific credit risk profiles (e.g., 0% for government securities, 100% or more for unrated commercial loans), rather than using a flat sum of total liabilities.",
+    "eh": "1. कथन 1 सही है: पूंजी पर्याप्तता अनुपात (CAR या CRAR) बैंक की कुल उपलब्ध पूंजी (टियर 1 और टियर 2) को उसकी कुल जोखिम-भारित परिसंपत्तियों (Risk-Weighted Assets) के प्रतिशत के रूप में मापता है।\n2. कथन 2 सही है: इसका प्राथमिक उद्देश्य बैंकों को अप्रत्याशित वित्तीय झटकों से बचाना, जमाकर्ताओं के धन की रक्षा करना तथा बैंकों को दिवालिया होने से रोकने हेतु एक मजबूत पूंजीगत बफर प्रदान करना है।\n3. कथन 3 गलत है: CAR के सूत्र में देनदारियों का साधारण योग नहीं होता, बल्कि परिसंपत्तियों को उनके विशिष्ट जोखिम भार (जैसे सरकारी प्रतिभूतियों पर 0% और असुरक्षित ऋणों पर 100% या अधिक) के आधार पर भारित किया जाता है।"
   },
   {
     "p_id": "bpsc_nsm_012",
@@ -1188,14 +1546,21 @@
       "नरसिम्हन पैनल के सुझावों के बाद, सीएआर (CAR) की बुनियादी आवश्यकता को बढ़ाकर 31 मार्च, 2000 से 9 प्रतिशत कर दिया गया था।",
       "उन्नत बासेल-II मानदंडों के तहत निर्दिष्ट अनिवार्य पूंजी पर्याप्तता आवश्यकता पाठ्य रूप से 50 प्रतिशत के पूर्ण लक्ष्य पर निर्धारित है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise historical and quantitative parameters tracking India's adoption of the standard Basel guidelines as part of financial sector reforms. Statement 3 contains a massive quantitative digit trap: the Basel-II norm for the Capital Adequacy Ratio is textually specified at *12 per cent*, not 50%."
+    "ee": "1. Statement 1 is correct: In 1992, following the recommendations of the first Narasimham Committee (1991), the RBI introduced the international Basel-I CRAR framework for scheduled commercial banks in India with an initial baseline target of 8%.\n2. Statement 2 is correct: Based on the recommendations of the second Narasimham Committee (1998), the RBI enhanced the mandatory minimum CRAR for commercial banks to 9% effective from March 31, 2000.\n3. Statement 3 is incorrect: Under Basel-II norms, the minimum total capital adequacy ratio for commercial banks in India was maintained at 9% (and targeted at 12% in specific risk regimes), not 50%.",
+    "eh": "1. कथन 1 सही है: नरसिम्हम समिति (1991) की सिफारिशों के आधार पर भारतीय रिज़र्व बैंक ने 1992 में भारत के वाणिज्यिक बैंकों के लिए 8% के लक्ष्य के साथ बासेल-I आधारित CRAR प्रणाली की शुरुआत की थी।\n2. कथन 2 सही है: नरसिम्हम समिति-II (1998) के सुझावों के बाद, आरबीआई ने 31 मार्च 2000 से न्यूनतम पूंजी पर्याप्तता अनुपात को बढ़ाकर 9 प्रतिशत कर दिया था।\n3. कथन 3 गलत है: बासेल-II और आरबीआई के दिशा-निर्देशों के तहत न्यूनतम CRAR मानक 9% (और विशिष्ट परिदृश्यों में 12% तक) निर्धारित था, 50 प्रतिशत नहीं।"
   },
   {
     "p_id": "bpsc_nsm_013",
@@ -1211,14 +1576,21 @@
       "2013-14 के वित्तीय अंतराल में 8 नामित सार्वजनिक क्षेत्र के बैंकों (PSBs) में ₹12,517 करोड़ का विस्तारित पूंजी निवेश देखा गया।",
       "2014-15 की किश्त ने परिसंपत्ति गुणवत्ता और परिचालन दक्षता जैसे नए मानदंडों को लागू करते हुए बैंकिंग संरचनाओं को ₹6,990 करोड़ के साथ पुनर्पूंजीकृत किया।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements represent precise, textually documented chronological data points tracking the state's incremental recapitalization [the direct fiscal injection of taxpayer equity capital into state-owned banks to repair damaged balance sheets and meet global safety benchmarks] timeline before the launch of the massive Indradhanush framework."
+    "ee": "1. Statement 1 is correct: In FY 2012–13, the Government of India infused ₹12,000 crore directly into seven public sector banks to help them maintain capital adequacy above regulatory thresholds.\n2. Statement 2 is correct: In FY 2013–14, the central government expanded recapitalization to ₹12,517 crore across designated public sector banks.\n3. Statement 3 is correct: In FY 2014–15, ₹6,990 crore was allocated to select public sector banks based on performance-linked parameters, prioritizing banks with higher Return on Assets (RoA) and Return on Equity (RoE).",
+    "eh": "1. कथन 1 सही है: वित्तीय वर्ष 2012-13 के दौरान केंद्र सरकार ने सार्वजनिक क्षेत्र के सात चुनिंदा बैंकों में सीधे ₹12,000 करोड़ की इक्विटी पूंजी का निवेश किया था।\n2. कथन 2 सही है: वित्तीय वर्ष 2013-14 में बजटीय आवंटन के माध्यम से सरकारी बैंकों में ₹12,517 करोड़ की अतिरिक्त पुनर्पूंजीकरण राशि डाली गई थी।\n3. कथन 3 सही है: वित्तीय वर्ष 2014-15 में ₹6,990 करोड़ की किश्त दक्षता-आधारित नए मानदंडों (जैसे परिसंपत्ति पर प्रतिफल और दक्षता) के आधार पर बेहतर प्रदर्शन करने वाले बैंकों को आवंटित की गई थी।"
   },
   {
     "p_id": "bpsc_nsm_014",
@@ -1234,14 +1606,21 @@
       "फरवरी 2018 में ₹2.11 लाख करोड़ की भारी राशि की घोषणा के साथ पुनर्पूंजीकरण प्रक्रिया को एक बड़ा बढ़ावा मिला।",
       "2018 के कार्यक्रम में ₹1.35 लाख करोड़ का एक बड़ा हिस्सा विशेष रूप से विशिष्ट पुनर्पूंजीकरण बांड (Recapitalisation Bonds) के माध्यम से जुटाने के लिए संरचित किया गया था।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "Option 2 is correct because *1, 2, and 3 all are correct*. All three statements represent precise textually accurate records of the state's macro-financial interventions. Recapitalisation Bonds [specialized sovereign debt instruments issued by the central treasury to state banks, where the banks subscribe to the bonds and the government immediately reinvests those funds back into the banks as core tier-1 equity capital] allow the treasury to repair credit systems without draining immediate tax revenues."
+    "ee": "1. Statement 1 is correct: Mission Indradhanush, launched in August 2015, planned a four-year budgetary capital infusion of ₹70,000 crore into public sector banks over FY 2015–16 to FY 2018–19.\n2. Statement 2 is correct: In October 2017/early 2018, the government announced an unprecedented ₹2.11 lakh crore recapitalization plan to resolve severe bad loan stresses in PSBs.\n3. Statement 3 is correct: Out of the ₹2.11 lakh crore package, ₹1.35 lakh crore was structured to be raised via sovereign Recapitalisation Bonds, with the remainder coming from budgetary support and market fundraising.",
+    "eh": "1. कथन 1 सही है: अगस्त 2015 में शुरू किए गए 'मिशन इंद्रधनुष' के तहत वित्तीय वर्ष 2015-16 से 2018-19 तक चार वर्षों में सार्वजनिक क्षेत्र के बैंकों में ₹70,000 करोड़ की पूंजी डालने का खाका तैयार किया गया था।\n2. कथन 2 सही है: बढ़ते एनपीए संकट से निपटने के लिए सरकार ने 2017-18 में ₹2.11 लाख करोड़ के ऐतिहासिक पुनर्पूंजीकरण पैकेज की घोषणा की।\n3. कथन 3 सही है: इस ₹2.11 लाख करोड़ के पैकेज में ₹1.35 लाख करोड़ की विशाल राशि विशेष 'पुनर्पूंजीकरण बांड' (Recapitalisation Bonds) जारी करके जुटाई गई थी।"
   },
   {
     "p_id": "bpsc_nsm_015",
@@ -1257,14 +1636,21 @@
       "कृषि ऋणों के लिए, डिफ़ॉल्ट पहचान खिड़की पूरी तरह से समय से असंबंधित है, जो एक कठोर 24-घंटे की त्वरित रिपोर्टिंग कमांड पर काम करती है।",
       "कृषि ऋण के लिए डिफ़ॉल्ट ट्रैकिंग स्पष्ट रूप से फसल चक्रों (crop seasons) से जुड़ी हुई है, जो दो फसल मौसमों से लेकर एक वर्ष तक के लचीले मानदंड पर काम करती है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 1 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 1 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statements 1 and 3 are precise reflections of the asset classification rules updated by the RBI in 2004 to match international best practices. Statement 2 contains a complete fiction trap: agricultural credit tracking adapts to seasonal reality, modifying the standard 90-day window into a harvest-aligned horizon ranging between *two crop seasons to one year* before a loan is tagged as impaired."
+    "ee": "1. Statement 1 is correct: Under the RBI's prudential norms (effective March 31, 2004), a commercial loan account is classified as a Non-Performing Asset (NPA) if interest or principal installment remains overdue for more than 90 days.\n2. Statement 2 is incorrect: Agricultural loan defaults are not subject to a 24-hour flash reporting rule; rather, they are linked to agricultural harvest cycles.\n3. Statement 3 is correct: For agricultural advances, an account is classified as an NPA if the installment of principal or interest remains overdue for two crop seasons for short-duration crops, or for one crop season for long-duration crops.",
+    "eh": "1. कथन 1 सही है: 31 मार्च 2004 से लागू आरबीआई के नियमों के अनुसार, वाणिज्यिक ऋणों में यदि मूलधन या ब्याज की किश्त 90 दिनों से अधिक समय तक बकाया (Overdue) रहती है, तो वह खाता एनपीए (NPA) बन जाता है।\n2. कथन 2 गलत है: कृषि ऋणों में डिफ़ॉल्ट का निर्धारण 24 घंटे की किसी त्वरित रिपोर्टिंग पर नहीं, बल्कि फसल चक्र और कटाई पर आधारित होता है।\n3. कथन 3 सही है: कृषि ऋणों के लिए एनपीए मानदंड फसल मौसम से जुड़े हैं: अल्पकालिक फसलों के लिए ऋण 2 फसल मौसमों (Crop Seasons) तक और दीर्घकालिक फसलों के लिए 1 फसल मौसम तक बकाया रहने पर एनपीए घोषित किया जाता है।"
   },
   {
     "p_id": "bpsc_nsm_016",
@@ -1280,14 +1666,21 @@
       "बीएफआरएस (BFRS) को पाठ्य रूप से आरबीआई को दरकिनार करते हुए वाणिज्य मंत्रालय के सीधे नियंत्रण में पूरी तरह से काम करने का आदेश दिया गया था।",
       "इस ढांचे का उद्देश्य विभिन्न वित्तीय संस्थाओं में अलग-अलग, अलग-अलग नियामक ट्रैकिंग के कारण होने वाले पर्यवेक्षी अंतरालों (supervisory gaps) को समाप्त करना था।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 3 are correct",
       "Only 1 and 2 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 3 सही हैं",
+      "केवल 1 और 2 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 3 are precise reflections of the reorganisation parameters proposed by the second Narasimham panel to unify systemic surveillance. Non-Banking Financial Companies [NBFCs, heterogeneous shadow-banking entities registered as corporations that perform credit, leasing, and loan intermediation without maintaining full commercial banking licenses] generate systemic risk. Unifying oversight prevents data silos. Statement 2 contains an inversion trap; the BFRS was explicitly designed to operate *under RBI supervision*, not under the Ministry of Commerce."
+    "ee": "1. Statement 1 is correct: The Narasimham Committee-II (1998) recommended establishing an integrated Board for Financial Regulation and Supervision (BFRS) to consolidate regulatory and supervisory oversight across banks, financial institutions, and NBFCs under one umbrella.\n2. Statement 2 is incorrect: The committee proposed that the BFRS function as an autonomous body operating under the aegis and supervision of the Reserve Bank of India, not under the Ministry of Commerce.\n3. Statement 3 is correct: The objective of proposing an integrated supervisory board was to eliminate regulatory arbitrage and close supervision gaps arising from fragmented oversight of interconnected financial entities.",
+    "eh": "1. कथन 1 सही है: नरसिम्हम समिति-II (1998) ने बैंकों, वित्तीय संस्थानों और गैर-बैंकिंग वित्तीय कंपनियों (NBFCs) की एकीकृत निगरानी के लिए 'वित्तीय नियमन और पर्यवेक्षण बोर्ड' (BFRS) के गठन का सुझाव दिया था।\n2. कथन 2 गलत है: BFRS को वाणिज्य मंत्रालय के अधीन नहीं, बल्कि भारतीय रिज़र्व बैंक (RBI) के तत्वावधान में एक स्वायत्त नियामक निकाय के रूप में परिकल्पित किया गया था।\n3. कथन 3 सही है: इस एकीकृत व्यवस्था का मुख्य उद्देश्य अलग-अलग वित्तीय क्षेत्रों के बीच मौजूद नियामक अंतरालों (Regulatory gaps) और निगरानी संबंधी कमियों को पूरी तरह समाप्त करना था।"
   },
   {
     "p_id": "bpsc_nsm_017",
@@ -1303,14 +1696,21 @@
       "मार्च 2015 के अपने अद्यतन दिशानिर्देशों में, आरबीआई ने अनिवार्य प्राथमिकता वाले क्षेत्रों में 'मध्यम उद्यमों, स्वच्छता और नवीकरणीय ऊर्जा' को जोड़ा।",
       "केंद्र सरकार ने तीन साल के भीतर निर्देशित क्रेडिट कार्यक्रमों के सभी रूपों को पूरी तरह से समाप्त करने की 1991 के सीएफएस (CFS) के परामर्श को तुरंत मंजूरी दे दी।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise textually accurate records of the expanding scope of PSL parameters. Inclusions target marginalized socio-economic and green energy lines. Statement 3 contains an operational history trap: the text explicitly records that *no follow up has been done from the government* regarding the CFS suggestion to phase out or cut the broad domestic target to 10%, keeping the 40% rule active for domestic banks."
+    "ee": "1. Statement 1 is correct: In 2007, the RBI categorized specified notified minority communities (Muslims, Christians, Sikhs, Buddhists, and Zoroastrians/Parsis; later Jains in 2014) under the 'Weaker Sections' sub-category of Priority Sector Lending.\n2. Statement 2 is correct: In March/April 2015, the RBI comprehensively revised the PSL guidelines to include Social Infrastructure (drinking water and sanitation facilities), Renewable Energy, and Medium Enterprises into the eligible priority sectors.\n3. Statement 3 is incorrect: The Narasimham Committee on Financial System (CFS, 1991) recommended reducing directed lending targets from 40% to 10%, but the Government and RBI rejected this recommendation to maintain mandatory credit flow to priority socio-economic sectors.",
+    "eh": "1. कथन 1 सही है: वर्ष 2007 में आरबीआई ने 5 अधिसूचित अल्पसंख्यक समुदायों (मुस्लिम, ईसाई, सिख, बौद्ध और पारसी) को प्राथमिकता प्राप्त क्षेत्र ऋण (PSL) के 'कमजोर वर्ग' उप-श्रेणी में शामिल किया था।\n2. कथन 2 सही है: मार्च-अप्रैल 2015 के संशोधित दिशा-निर्देशों में आरबीआई ने सामाजिक बुनियादी ढांचे (स्वच्छता व पेयजल), नवीकरणीय ऊर्जा और मध्यम उद्यमों को पीएसएल के तहत नए पात्र क्षेत्रों के रूप में जोड़ा।\n3. कथन 3 गलत है: 1991 में नरसिम्हम समिति ने प्राथमिकता प्राप्त क्षेत्र के 40% के लक्ष्य को घटाकर 10% करने की सिफारिश की थी, जिसे सरकार ने सामाजिक उद्देश्यों को ध्यान में रखते हुए अस्वीकार कर दिया था।"
   },
   {
     "p_id": "bpsc_nsm_018",
@@ -1326,14 +1726,21 @@
       "कॉर्पोरेट ऋण के गैर-टिकाऊ हिस्से को व्यवस्थित रूप से कंपनी इक्विटी और वरीयता शेयरों (preference shares) में बदल दिया जाता है।",
       "यह योजना पूरी तरह से गारंटी देती है कि खराब ऋण की पूरी मात्रा को तुरंत एक पूर्ण नुकसान परिसंपत्ति (loss asset) के रूप में बट्टे खाते में डाला जाना चाहिए।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are accurate conceptual applications of the S4A resolution technique. By converting the unsustainable debt debt block into equity [ownership stakes representing fractional claims on corporate assets], the scheme lowers the immediate debt-servicing load on the corporate debtor while protecting the lender's residual upside recovery options. Statement 3 describes a total loan write-off, which runs opposite to the structural asset restructuring goals of S4A."
+    "ee": "1. Statement 1 is correct: The Scheme for Sustainable Structuring of Stressed Assets (S4A), introduced in June 2016, required an independent techno-economic viability study to bifurcate stressed corporate debt into sustainable debt (at least 50% that can be serviced from current cash flows) and unsustainable debt.\n2. Statement 2 is correct: Under S4A, the unsustainable portion of the debt was converted into equity or redeemable cumulative optionally convertible preference shares (CRPS) to give lenders an upside upon future recovery.\n3. Statement 3 is incorrect: The scheme was designed to restructure and recover debts while keeping the borrowing entity as an operational going concern, rather than executing a total immediate write-off as a loss asset.",
+    "eh": "1. कथन 1 सही है: जून 2016 में शुरू की गई S4A योजना के तहत स्वतंत्र विशेषज्ञों द्वारा तनावग्रस्त ऋण को दो भागों में विभाजित किया जाता था—टिकाऊ ऋण (Sustainable debt, कम से कम 50%) और गैर-टिकाऊ ऋण (Unsustainable debt)।\n2. कथन 2 सही है: गैर-टिकाऊ ऋण वाले हिस्से को इक्विटी, तरजीही शेयरों (Preference shares) या डिबेंचर में बदल दिया जाता था ताकि कंपनी पर तत्काल ब्याज का बोझ कम हो सके।\n3. कथन 3 गलत है: यह योजना कंपनी को चालू रखकर ऋण पुनर्गठन और वसूली के लिए बनाई गई थी, न कि पूरे ऋण को बट्टे खाते (Loss asset write-off) में डालने के लिए।"
   },
   {
     "p_id": "bpsc_nsm_019",
@@ -1349,14 +1756,21 @@
       "अद्यतन बासेल III प्रावधानों ने एक विशेष तीसरी पूंजी वर्गीकरण परत पेश की, जिसे औपचारिक रूप से पाठ्य रूप से टियर 3 कैपिटल (Tier 3 Capital) के रूप में नामित किया गया है।",
       "दोनों नियामक ढांचे पूंजी पर्याप्तता गणना के भीतर शेयरधारकों की इक्विटी या घोषित भंडार (disclosed reserves) के उपयोग को पूरी तरह से खारिज करते हैं।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise textually accurate records tracking capital tier evolution. Tier 1 [the most reliable core ölçüsü of financial resilience composed of equity and visible disclosed reserves that absorb losses while trading continues] anchors solvency. Tier 2 handles secondary liquidation buffers. Basel III added Tier 3 capital to cushion against specialized market and currency risk matrices. Statement 3 is an absolute accounting inversion trap because these equity components form the most critical, reliable foundation of capital adequacy counts."
+    "ee": "1. Statement 1 is correct: Basel II established regulatory capital based on two primary pillars: Tier 1 capital (core capital such as common equity and disclosed reserves that absorbs losses on a going-concern basis) and Tier 2 capital (supplementary capital that absorbs losses on a gone-concern basis).\n2. Statement 2 is correct: Basel II originally allowed Tier 3 capital for market risks, whereas Basel III refined capital classifications, phasing out Tier 3 while introducing dedicated macro-prudential layers (Capital Conservation Buffer and Countercyclical Capital Buffer).\n3. Statement 3 is incorrect: Both Basel II and Basel III place stockholders' equity (Common Equity Tier 1 - CET1) and disclosed reserves at the very core of highest-quality regulatory capital.",
+    "eh": "1. कथन 1 सही है: बासेल-II मानदंडों में पूंजी को मुख्य रूप से दो स्तरों में मापा गया: टियर 1 (कोर पूंजी जो चालू व्यवसाय में नुकसान सोखती है) और टियर 2 (पूरक पूंजी जो समापन के समय सुरक्षा प्रदान करती है)।\n2. कथन 2 सही है: बासेल सुधारों में बाजार जोखिमों के लिए टियर 3 पूंजी का उल्लेख आया था, जिसे बासेल-III में समाप्त कर अधिक सख्त पूंजी संरक्षण बफर (CCB) और काउंटर-साइक्लिकल बफर जोड़े गए।\n3. कथन 3 गलत है: शेयरधारकों की इक्विटी (Common Equity Tier 1) और घोषित भंडार ही दोनों बासेल व्यवस्थाओं में पूंजी पर्याप्तता की रीढ़ और सर्वोच्च गुणवत्ता वाली पूंजी माने जाते हैं।"
   },
   {
     "p_id": "bpsc_nsm_020",
@@ -1372,16 +1786,22 @@
       "सर्वेक्षण ने पहले मार्च 2018 में दर्ज किए गए 13.9 प्रतिशत सीआरएआर (CRAR) आधारभूत स्तर से एक स्पष्ट गिरावट दर्ज की।",
       "कुल अनुपात के भीतर समग्र समेकन और हालिया सापेक्ष सुधार बड़े पैमाने पर निजी क्षेत्र के बैंकों (PVBs) के प्रदर्शन लाभ से संचालित था।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements represent perfect, textually exact data parameters and sector-wise tracking findings documented under the Economic Survey 2019–20 segments. While Private Sector Banks [PVBs, non-state-owned commercial banking corporations listed on capital markets driven by private equity allocations] shored up their capital profiles, Public Sector Banks (PSBs) exhibited persistent balance sheet drag, necessitating continuous capital infusion and restructuring interventions."
+    "ee": "1. Statement 1 is correct: Economic Survey 2019–20 documented that the aggregate CRAR of all Scheduled Commercial Banks stood at 15.1% in September 2019, reflecting the consolidation of bank balance sheets, with earlier periods registering around 12.8% to 13.9% during asset cleanup phases.\n2. Statement 2 is correct: The survey highlighted that banking sector CRAR had witnessed an earlier dip during peak NPA provisioning before improving after recapitalization.\n3. Statement 3 is correct: The improvement in overall banking capital metrics was largely driven by robust capitalization and lower stressed assets in Private Sector Banks relative to Public Sector Banks.",
+    "eh": "1. कथन 1 सही है: आर्थिक सर्वेक्षण 2019-20 ने अनुसूचित वाणिज्यिक बैंकों के सीआरएआर (CRAR) में सुधार और समेकन की प्रवृत्तियों को प्रलेखित किया था।\n2. कथन 2 सही है: सर्वेक्षण में दर्ज किया गया कि एनपीए की व्यापक पहचान और प्रोविजनिंग के दौर में बैंकों के पूंजी अनुपात में पूर्व में गिरावट दर्ज की गई थी।\n3. कथन 3 सही है: बैंकिंग क्षेत्र के समग्र पूंजी अनुपात में सुधार का एक बड़ा हिस्सा निजी क्षेत्र के बैंकों (PVBs) की सुदृढ़ पूंजी और बेहतर परिसंपत्ति गुणवत्ता द्वारा संचालित था।"
   },
-  
   {
     "p_id": "bpsc_inclusion_001",
     "qe": "Consider the following statements regarding the regulatory boundaries and operational architecture governing Payments Banks in India:",
@@ -1396,14 +1816,21 @@
       "इन विशिष्ट बैंकिंग संस्थाओं द्वारा संचित फ्लोट फंड (float funds) को वैध रूप से केवल एक वर्ष से कम की परिपक्वता वाले सरकारी प्रतिभूतियों (G-Secs) में रखा जा सकता है।",
       "प्रवर्तकों (Promoters) को शुरुआती पांच वर्षों के लिए न्यूनतम 40 प्रतिशत का योगदान बनाए रखना आवश्यक है, जिसे बारहवें वर्ष के अंत तक व्यवस्थित रूप से घटाकर 26 प्रतिशत पर लाना होगा।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statement 1 contains a sophisticated trap: Payments Banks are strictly prohibited from accepting time deposits [fixed deposits or recurring deposits that lock capital over a specified duration]; they are legally permitted to accept demand deposits [liquid balances held in current and savings accounts] only. Statement 2 is correct because the float funds [the net non-disbursed liquid cash balances held by a bank before settlement loops are finalized] must be insulated from credit risk by parking them exclusively in short-dated G-Secs under a year's maturity. Statement 3 is correct because it matches the exact regulatory step-down schedule configured by the central bank to dilute promoter concentration over a 12-year window from the date of business commencement."
+    "ee": "1. Statement 1 is incorrect: Payments Banks are strictly prohibited from accepting time deposits (Fixed Deposits or Recurring Deposits); under RBI guidelines, they are permitted to accept only demand deposits (savings and current account balances, up to ₹2 lakh per individual customer).\n2. Statement 2 is correct: Payments Banks must invest a minimum of 75% of their demand deposit balances in Statutory Liquidity Ratio (SLR) eligible Government Securities/Treasury Bills with a maturity of up to one year to ensure absolute liquidity and zero credit risk.\n3. Statement 3 is correct: The promoter must hold at least 40% of the paid-up voting equity capital for the first five years from commencement of business, which is required to be brought down to 26% within 12 years.",
+    "eh": "1. कथन 1 गलत है: भुगतान बैंक (Payments Banks) सावधि जमा (FD/RD) स्वीकार नहीं कर सकते; उन्हें केवल मांग जमा (बचत और चालू खाता, प्रति ग्राहक ₹2 लाख तक) स्वीकार करने की अनुमति है।\n2. कथन 2 सही है: भुगतान बैंकों को अपनी मांग जमा राशि का न्यूनतम 75 प्रतिशत 1 वर्ष तक की परिपक्वता वाली सरकारी प्रतिभूतियों/ट्रेजरी बिलों (SLR पात्र) में निवेश करना अनिवार्य है।\n3. कथन 3 सही है: प्रवर्तक (Promoter) को संचालन शुरू होने के पहले 5 वर्षों तक बैंक की चुकता पूंजी में कम से कम 40% हिस्सेदारी रखनी होती है, जिसे 12 वर्षों के भीतर घटाकर 26% पर लाना आवश्यक है।"
   },
   {
     "p_id": "bpsc_inclusion_002",
@@ -1419,14 +1846,21 @@
       "प्रशासनिक ढांचा प्रीपेड भुगतान उपकरणों को जारी करने, इंटरनेट बैंकिंग पोर्टलों और अन्य बैंकों के लिए एक बिजनेस कॉरेस्पोंडेंट (व्यावसायिक प्रतिनिधि) के रूप में कार्य करने की अनुमति देता है।",
       "इस बैंकिंग मॉडल को किसी भी प्रकार के ऋण देने के संचालन (credit lending operations) या क्रेडिट कार्ड जारी करने से सख्ती से प्रतिबंधित किया गया है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statement 1 is incorrect because Payments Banks are textually and explicitly prohibited from setting up subsidiaries to undertake NBFC business. Statement 2 is correct because prepaid payment instruments [smart cards, digital wallets, or magnetic vouchers that store monetary value electronically to execute transaction loops] form a core service asset along with internet banking. Statement 3 is correct because to prevent asset-liability mismatches and credit defaults in niche lines, the regulator enforces an absolute ban on lending operations and credit extensions, making them zero-credit-risk entities."
+    "ee": "1. Statement 1 is incorrect: Payments Banks are expressly prohibited under RBI operating guidelines from setting up non-banking financial subsidiaries to undertake non-banking lending or NBFC business.\n2. Statement 2 is correct: Payments Banks are authorized to provide cross-border and domestic remittances, issue ATM/Debit cards and prepaid payment instruments (PPIs), offer mobile/internet banking, and distribute mutual funds, insurance, and third-party bank products as business correspondents.\n3. Statement 3 is correct: Payments Banks cannot undertake any credit lending activities, cannot advance personal/commercial loans, and cannot issue credit cards.",
+    "eh": "1. कथन 1 गलत है: भुगतान बैंकों को किसी भी प्रकार की एनबीएफसी (NBFC) सहायक कंपनी स्थापित करने या गैर-बैंकिंग ऋण देने की गतिविधियों में शामिल होने की अनुमति नहीं है।\n2. कथन 2 सही है: भुगतान बैंक प्रीपेड भुगतान साधन (वॉलेट), एटीएम/डेबिट कार्ड, इंटरनेट बैंकिंग सेवाएं दे सकते हैं तथा अन्य बैंकों के लिए बिजनेस कॉरेस्पोंडेंट के रूप में कार्य कर सकते हैं।\n3. कथन 3 सही है: भुगतान बैंक किसी भी प्रकार का ऋण (Lending) नहीं दे सकते और न ही वे क्रेडिट कार्ड जारी कर सकते हैं।"
   },
   {
     "p_id": "bpsc_inclusion_003",
@@ -1444,14 +1878,21 @@
       "इतिहास में किसी भी समय इस योजना के तहत खाता खोलने वाले प्रत्येक व्यक्ति पर ₹30,000 का बिना शर्त, स्थायी जीवन बीमा कवर लागू होता है।",
       "वित्तीय साक्षरता अभियान ने एक विशिष्ट एकल-सप्ताह की समय-सीमा के भीतर सबसे अधिक बैंक खाते खोलने के लिए गिनीज वर्ल्ड रिकॉर्ड्स में प्रवेश किया।"
     ],
-    "o": [
+    "oe": [
       "Only 1, 2 and 4 are correct",
       "Only 2, 3 and 4 are correct",
       "1, 2, 3 and 4 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1, 2 और 4 सही हैं",
+      "केवल 2, 3 और 4 सही हैं",
+      "1, 2, 3 और 4 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1, 2, and 4 are textually precise indicators tracking the world's largest financial inclusion [the delivery of baseline banking services like transaction accounts, micro-credit, and remittance pipelines at affordable costs to unserved sections of society] strategy. Statement 3 contains an explicit conditional exception trap: the ₹30,000 life insurance cover was *not* permanent or unconditioned; it was restricted strictly to those first-time account openers who registered between August 15, 2014, and January 26, 2015, provided they satisfied other narrow eligibility parameters."
+    "ee": "1. Statement 1 is correct: Launched in August 2014, PMJDY aimed to provide universal, unbanked household coverage with at least one Basic Savings Bank Deposit Account (BSBDA) per household.\n2. Statement 2 is correct: RuPay debit cards issued with PMJDY accounts included free accidental insurance coverage of ₹1 lakh (enhanced to ₹2 lakh for new accounts opened after August 2018).\n3. Statement 3 is incorrect: The ₹30,000 life insurance cover was a special, time-bound incentive limited exclusively to beneficiaries who opened accounts between August 15, 2014, and January 26, 2015, not a permanent blanket benefit.\n4. Statement 4 is correct: PMJDY was recognized by Guinness World Records for the achievement of opening 18,096,130 bank accounts in a single week (August 23 to August 29, 2014).",
+    "eh": "1. कथन 1 सही है: 28 अगस्त 2014 को शुरू की गई प्रधानमंत्री जन-धन योजना का मुख्य उद्देश्य देश के प्रत्येक परिवार को कम से कम एक बुनियादी बैंक खाता (BSBDA) प्रदान कर वित्तीय समावेशन सुनिश्चित करना था।\n2. कथन 2 सही है: जन-धन खाताधारकों को जारी किए जाने वाले रुपे डेबिट कार्ड के साथ ₹1 लाख का दुर्घटना बीमा कवर (2018 के बाद ₹2 लाख) प्रदान किया जाता है।\n3. कथन 3 गलत है: ₹30,000 का जीवन बीमा कवर केवल 15 अगस्त 2014 से 26 जनवरी 2015 के बीच खोले गए खातों के लिए एक विशेष सीमित प्रोत्साहन था, यह सभी के लिए स्थायी नहीं है।\n4. कथन 4 सही है: योजना के पहले सप्ताह (23-29 अगस्त 2014) में 1.8 करोड़ से अधिक खाते खोलने के लिए इसे गिनीज बुक ऑफ वर्ल्ड रिकॉर्ड्स में दर्ज किया गया था।"
   },
   {
     "p_id": "bpsc_inclusion_004",
@@ -1467,14 +1908,21 @@
       "घरेलू बाजार के भीतर भौतिक सोने की समग्र कुल मांग को व्यवस्थित रूप से कम करना।",
       "निवेश के उद्देश्यों के लिए सालाना आयात किए जाने वाले सोने के एक बड़े हिस्से को अत्यधिक उत्पादक वित्तीय बचतों (financial savings) में स्थानांतरित करना।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statement 1 is an absolute fiction. Statements 2 and 3 capture the exact twin pillars of India's gold management strategy. Because gold imports act as a massive structural drain on the current account deficit [the macroeconomic measurement tracking the net negative balance when a country's total imports of goods, services, and transfers exceed its exports], converting idle physical gold into financial savings stabilizes the currency exchange framework by undercutting import dependencies."
+    "ee": "1. Statement 1 is incorrect: The schemes were not designed to inflate domestic retail jewelry prices or ban consumer purchases.\n2. Statement 2 is correct: Sovereign Gold Bonds (SGB) and the Gold Monetisation Scheme (GMS) were launched in November 2015 to curb India's reliance on physical gold imports and reduce physical gold demand.\n3. Statement 3 is correct: The strategic macro-financial objective was to channel domestic investment demand away from idle physical gold imports into productive sovereign financial savings, thereby reducing the Current Account Deficit (CAD) and mobilizing idle domestic gold stocks.",
+    "eh": "1. कथन 1 गलत है: इन योजनाओं का उद्देश्य आभूषणों की कीमतें कृत्रिम रूप से बढ़ाना या खरीदारी पर रोक लगाना नहीं था।\n2. कथन 2 सही है: नवंबर 2015 में सॉवरेन गोल्ड बॉन्ड (SGB) और गोल्ड मोनेटाइजेशन स्कीम (GMS) की शुरुआत का मुख्य उद्देश्य भौतिक सोने (Physical Gold) की घरेलू मांग को कम करना था।\n3. कथन 3 सही है: इसका व्यापक आर्थिक लक्ष्य सोने के आयात पर निर्भरता घटाकर देश के चालू खाता घाटे (CAD) को नियंत्रित करना तथा निष्क्रिय पड़े सोने को उत्पादक वित्तीय बचतों में बदलना था।"
   },
   {
     "p_id": "bpsc_inclusion_005",
@@ -1490,14 +1938,21 @@
       "मात्रात्मक सदस्यता सीमाएं प्रति व्यक्ति प्रति वित्तीय वर्ष में न्यूनतम दो ग्राम और अधिकतम 500 ग्राम सोने की सीमा लागू करती हैं।",
       "बांड की संरचनात्मक अवधि 8 वर्ष की अवधि में फैली हुई है, जो अंतिम परिपक्वता से पहले किसी भी प्रकार के समय-पूर्व निकास विकल्पों को पूरी तरह से अवरुद्ध करती है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are accurate reflections of the technical rules mapping the bonds, which provide capital gains tax exemptions to incentivize investors. Statement 3 contains an option trap regarding the exit horizons: while the absolute tenor is 8 years, the text explicitly specifies that investors are granted an *early exit option starting from the 5th year onwards*, rendering the 'completely blocking early exit' clause false."
+    "ee": "1. Statement 1 is correct: Sovereign Gold Bonds (SGBs) are issued by the RBI on behalf of the Government of India, denominated in grams of gold and payable in Indian Rupees, restricted to resident Indian entities (individuals, HUFs, trusts, universities, and charitable institutions).\n2. Statement 2 is correct in context of initial base rules (minimum limit of 1–2 grams and individual ceilings that were later revised up to 4 kg for individuals and 20 kg for trusts per fiscal year).\n3. Statement 3 is incorrect: Although the total tenor of SGBs is 8 years, early encashment/redemption is explicitly permitted after the 5th year on interest payment dates, and the bonds are tradeable on stock exchanges.",
+    "eh": "1. कथन 1 सही है: सॉवरेन गोल्ड बॉन्ड (SGB) भारत सरकार की ओर से रिज़र्व बैंक द्वारा जारी किए जाते हैं, जिनका मूल्य सोने के ग्राम में तय होता है तथा ये केवल निवासी भारतीय नागरिकों/संस्थाओं के लिए उपलब्ध होते हैं।\n2. कथन 2 सही है: प्रारंभिक नियमों में न्यूनतम निवेश सीमा (1-2 ग्राम) तथा व्यक्तियों एवं HUF के लिए वार्षिक अधिकतम सीमा निर्धारित की गई थी (जिसे बाद में संशोधित कर व्यक्तियों के लिए 4 किग्रा किया गया)।\n3. कथन 3 गलत है: एसजीबी की कुल अवधि 8 वर्ष होती है, परंतु इसमें 5वें वर्ष के बाद ब्याज भुगतान की तिथियों पर समय-पूर्व निकासी (Early Exit) की पूरी छूट होती है और इन्हें एक्सचेंजों पर बेचा भी जा सकता है।"
   },
   {
     "p_id": "bpsc_inclusion_006",
@@ -1513,14 +1968,21 @@
       "परिचालन लेआउट खातों को तीन समय क्षितिजों में विभाजित करता है: अल्पकालिक (1-3 वर्ष), मध्यम अवधि (5-7 वर्ष), और दीर्घकालिक (12-15 वर्ष)।",
       "मोचन नियम यह आदेश देते हैं कि अल्पकालिक खातों का निपटान नकद या सोने में किया जाता है, जबकि मध्यम और दीर्घकालिक जमा को कड़ाई से केवल नकद में भुनाया जाता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements are precise textually documented operational rules of the GMS. The gold is collected via BIS [Bureau of Indian Standards, the national statutory body certifying product weights and chemical purity markers] hallmarking collection centers (CPTCs). The interest gap between state borrowing costs and the yield paid under medium/long terms is credited to the specialized Gold Reserve Fund [the insulated government ledger buffer designed to absorb valuation shifts and fund the macro-financial obligations of the monetization net]."
+    "ee": "1. Statement 1 is correct: Under the Gold Monetisation Scheme (GMS), the minimum quantity of raw gold (bars, coins, or jewelry excluding stones) that can be deposited at an approved Collection and Purity Testing Centre (CPTC) is 30 grams (with no upper limit).\n2. Statement 2 is correct: GMS offers three distinct deposit structures: Short Term Bank Deposit (STBD: 1–3 years), Medium Term Government Deposit (MTGD: 5–7 years), and Long Term Government Deposit (LTGD: 12–15 years).\n3. Statement 3 is correct: For STBD, redemption can be in gold or equivalent cash at the depositor's option, whereas for MTGD and LTGD, redemption is settled in cash (or in gold with administrative charges if chosen initially).",
+    "eh": "1. कथन 1 सही है: स्वर्ण मुद्रीकरण योजना (GMS) के तहत किसी भी बैंक या शुद्धता परीक्षण केंद्र (CPTC) पर न्यूनतम 30 ग्राम कच्चा सोना (सिक्के, छड़ या आभूषण) जमा कराया जा सकता है (अधिकतम की कोई सीमा नहीं है)।\n2. कथन 2 सही है: इस योजना में जमा को 3 अवधियों में बांटा गया है: अल्पकालिक बैंक जमा (1-3 वर्ष), मध्यम अवधि सरकारी जमा (5-7 वर्ष) और दीर्घकालिक सरकारी जमा (12-15 वर्ष)।\n3. कथन 3 सही है: अल्पकालिक जमा में मूलधन और ब्याज का भुगतान नकद या सोने के रूप में प्राप्त किया जा सकता है, जबकि मध्यम और दीर्घकालिक जमा का मोचन मुख्य रूप से नकद में ही किया जाता है।"
   },
   {
     "p_id": "bpsc_inclusion_007",
@@ -1536,14 +1998,21 @@
       "इस छिपे हुए प्रवाह को दंडित करने के लिए, राज्य ने अज्ञात व्यक्तियों से प्राप्त सभी दानों के लिए धर्मार्थ ट्रस्टों पर सीधे 30 प्रतिशत का गंभीर कर लगाया।",
       "2019-20 के अनुकूलन नियमों ने धर्मार्थ संस्थाओं को किसी भी स्वर्ण संपत्ति को जमा करने से पूरी तरह से रोक दिया, जिससे लॉन्ड्रिंग जोखिम पूरी तरह से समाप्त हो गए।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 precisely outline the structural vulnerabilities and tax-code corrections (the 30% unidentified donation penalty tax) implemented to curb financial crimes. Statement 3 contains an inversion trap: the 2019–20 RBI liberalization actually did the exact *opposite* of a ban—it newly *allowed* charitable institutions, central/state wings, and government entities to deposit gold, aiming to mobilize idle temple/trust hoards into the systemic banking pipeline despite the risk of unaccounted gold finding an alternative anonymous gateway."
+    "ee": "1. Statement 1 is correct: Unscrupulous entities often utilized anonymous donations and charitable trust structures to channel undeclared funds or facilitate laundering loops.\n2. Statement 2 is correct: Under Section 115BBC of the Income Tax Act, anonymous donations received by wholly charitable trusts in excess of prescribed limits are taxed at a flat punitive rate of 30% to discourage tax evasion.\n3. Statement 3 is incorrect: The 2019 RBI modifications did not ban charitable trusts; rather, they explicitly **permitted** charitable institutions, religious trusts, and central/state government entities to deposit idle temple/trust gold into the Gold Monetisation Scheme.",
+    "eh": "1. कथन 1 सही है: कर चोरी और मनी लॉन्ड्रिंग रोकने के लिए ट्रस्टों द्वारा अज्ञात स्रोतों से नकद दान लेकर काले धन को सफेद करने की प्रवृत्ति पर निगरानी रखी जाती है।\n2. कथन 2 सही है: आयकर अधिनियम की धारा 115BBC के तहत धर्मार्थ ट्रस्टों को अज्ञात व्यक्तियों (Anonymous Donors) से प्राप्त दान पर 30 प्रतिशत की दर से दंडात्मक कर लगाया जाता है।\n3. कथन 3 गलत है: 2019 में नियमों को उदार बनाकर धार्मिक और धर्मार्थ ट्रस्टों को अपने पास पड़े निष्क्रिय सोने को GMS के तहत बैंकों में जमा करने की **अनुमति दी गई थी**, न कि उन पर प्रतिबंध लगाया गया था।"
   },
   {
     "p_id": "bpsc_inclusion_008",
@@ -1559,14 +2028,21 @@
       "असंगठित सूक्ष्म-इकाई क्षेत्र (micro-unit sector) एक बड़े रोजगार इंजन के रूप में कार्य करता है, जो लगभग 12 करोड़ लोगों को अवशोषित और बनाए रखता है।",
       "5.75 करोड़ स्व-नियोजित सूक्ष्म-उद्यमियों का विशाल आधार अनौपचारिक शोषण से पूरी तरह सुरक्षित था, और वे बड़े बहु-करोड़ी संस्थागत बैंक ऋणों का आनंद ले रहे थे।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are accurate statistical parameters tracking the employment structure dualism in India. Statement 3 contains a complete distortion trap: these small entrepreneurs were heavily unbanked and dependent on exploitative local money lenders, operating with an average per-unit debt footprint of merely *₹17,000*. This massive institutional credit vacuum led to the launch of the Pradhan Mantri Mudra Yojana (PMMY) to fund the unfunded."
+    "ee": "1. Statement 1 is correct: Economic and NSSO surveys highlighted that large corporate industries employ only about 1.25 crore people in the formal organized manufacturing sector.\n2. Statement 2 is correct: The informal micro, small, and own-account enterprise sector functions as the country's largest non-farm livelihood provider, sustaining over 11 to 12 crore workers.\n3. Statement 3 is incorrect: Over 5.75 crore micro-units in India were historically excluded from the formal banking channel, with over 90% relying on informal money lenders at exorbitant interest rates, which motivated the creation of MUDRA (Micro Units Development and Refinance Agency) in April 2015 to 'fund the unfunded'.",
+    "eh": "1. कथन 1 सही है: भारत में बड़े पैमाने के संगठित और पूंजी-प्रधान उद्योग मात्र 1.25 करोड़ लोगों को ही औपचारिक रोजगार प्रदान कर पाते हैं।\n2. कथन 2 सही है: असंगठित सूक्ष्म उद्यम और छोटे व्यवसाय देश के गैर-कृषि क्षेत्र में लगभग 11 से 12 करोड़ कार्यबल को रोजगार प्रदान करने वाले सबसे बड़े इंजन हैं।\n3. कथन 3 गलत है: देश के लगभग 5.77 करोड़ छोटे उद्यमी संस्थागत ऋण से वंचित थे और साहुकारों के शोषण पर निर्भर थे; इसी ऋण शून्यता को भरने और 'फंड द अनफंडेड' के लिए अप्रैल 2015 में मुद्रा (MUDRA) योजना शुरू की गई।"
   },
   {
     "p_id": "bpsc_inclusion_009",
@@ -1582,14 +2058,21 @@
       "किशोर बकेट मध्यम-स्तरीय क्रेडिट आवंटन को शामिल करता है जो संरचनात्मक रूप से ₹50,000 और ₹5 लाख के बीच होता है।",
       "तरुण बकेट उन्नत विस्तार वित्तपोषण को लक्षित करता है, जो संरचनात्मक रूप से ₹5 लाख से लेकर ₹10 लाख की अधिकतम सीमा तक फैला हुआ है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements represent perfect, textually exact definitions of the three funding tiers configured under MUDRA [Micro Units Development and Refinance Agency, an apex refinancing institution designed to route credit assets via commercial banks, RRBs, and MFIs to small non-corporate commercial actors] to match distinct stages of enterprise growth."
+    "ee": "1. Statement 1 is correct: Under Pradhan Mantri MUDRA Yojana (PMMY), the **Shishu** category provides collateral-free loans up to **₹50,000** for micro-entrepreneurs and startups.\n2. Statement 2 is correct: The **Kishor** category covers credit requirements exceeding **₹50,000 and up to ₹5,00,000** for established small business units.\n3. Statement 3 is correct: The **Tarun** category provides financing exceeding **₹5,00,000 and up to ₹10,00,000** for mature micro-enterprises seeking business expansion.",
+    "eh": "1. कथन 1 सही है: प्रधानमंत्री मुद्रा योजना (PMMY) के तहत **'शिशु' (Shishu)** श्रेणी में नए और छोटे उद्यमियों को **₹50,000 तक** का ऋण प्रदान किया जाता है।\n2. कथन 2 सही है: **'किशोर' (Kishor)** श्रेणी के तहत मध्यम स्तर के विकासशील व्यवसायों के लिए **₹50,000 से ₹5 लाख तक** का ऋण दिया जाता है।\n3. कथन 3 सही है: **'तरुण' (Tarun)** श्रेणी के अंतर्गत स्थापित व्यवसायों के विस्तार के लिए **₹5 लाख से ₹10 लाख तक** का ऋण प्रदान किया जाता है।"
   },
   {
     "p_id": "bpsc_inclusion_010",
@@ -1601,17 +2084,24 @@
       "Between April-December 2019, the net NPAs under Mudra loans experienced an uncomfortable expansion, rising to 2.88 per cent."
     ],
     "sh": [
-      "यह योजना बिना किसी अपवाद के सभी उधारकर्ता इकाइयों में प्रति वर्ष ठीक 40 प्रतिशत की एक कठोर, सार्वभौमिक रूप से निश्चित फ्लैट ब्याज दर लागू करती है।",
+      "यह योजना बिना किसी अपवाद के सभी उधारकर्ता इकाइयों में प्रति वर्ष ठीक 4 प्रतिशत की एक कठोर, सार्वभौमिक रूप से निश्चित फ्लैट ब्याज दर लागू करती है।",
       "जबकि यह योजना विविध खुदरा व्यापारियों को कवर करती है, यह स्पष्ट रूप से मुख्य कृषि फसल क्षेत्र (core agricultural crop sector) को बाहर करती है और उसका पुनर्वित्तपोषण नहीं करती है।",
       "अप्रैल-दिसंबर 2019 के बीच, मुद्रा ऋणों के तहत शुद्ध एनपीए (NPAs) में एक चिंताजनक विस्तार देखा गया, जो बढ़कर 2.88 प्रतिशत हो गया।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statement 1 contains an inversion trap: there is *no fixed interest rate* under the Mudra architecture; commercial lenders price the credit dynamically between Base Rate plus 1% up to 7% based entirely on the unique risk parameters of the enterprise. Statement 2 is correct because the framework explicitly isolates core agriculture from its refinance lines. Statement 3 is correct because it matches the exact data tracking the worsening of credit asset quality [the ratio of non-performing assets to total outstanding advances, reflecting structural default risks in macro portfolios] up to late 2019."
+    "ee": "1. Statement 1 is incorrect: MUDRA loans do not carry a flat 4% interest rate; interest rates are deregulated and determined by lending banks/MFIs based on borrower risk, cost of funds, and RBI benchmark guidelines.\n2. Statement 2 is correct: PMMY covers non-farm income-generating activities across manufacturing, trading, and services (allied agricultural activities like dairy/poultry are included, but core crop cultivation/crop loans are excluded).\n3. Statement 3 is correct: Due to rapid loan expansion without collateral, bad loans under MUDRA grew steadily, with gross NPAs rising to around 2.88%–3.5% in commercial bank portfolios by late 2019.",
+    "eh": "1. कथन 1 गलत है: मुद्रा योजना में कोई निश्चित 4% की ब्याज दर नहीं है; ऋण देने वाले बैंक और वित्तीय संस्थान आवेदक के जोखिम प्रोफाइल और अपनी लागत के अनुसार ब्याज दरें तय करते हैं।\n2. कथन 2 सही है: मुद्रा योजना गैर-कृषि आय सृजन गतिविधियों (विनिर्माण, व्यापार और सेवा क्षेत्र) के लिए है; इसमें मुख्य कृषि फसल ऋण (Crop cultivation) शामिल नहीं हैं।\n3. कथन 3 सही है: बिना गारंटी के दिए जाने वाले इन छोटे ऋणों में समय के साथ डिफ़ॉल्ट बढ़े और 2019 के अंत तक मुद्रा ऋणों में एनपीए (NPA) बढ़कर 2.88% के स्तर तक पहुँच गया था।"
   }
 ]
