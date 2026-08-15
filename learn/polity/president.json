@@ -1,0 +1,1764 @@
+
+{
+  "topic_id": "indian_polity_president",
+  "topic_title": "President of India (भारत का राष्ट्रपति)",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 96,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 0,
+      "progress": { "current": 1, "total": 96 },
+      "intro_payload": {
+        "title": "राष्ट्रपति (President of India) - देश का प्रथम नागरिक",
+        "icon": "🇮🇳",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Article 52-53 - संघीय कार्यपालिका और राष्ट्रपति की स्थिति",
+          "Article 54-55 - निर्वाचक मंडल, मत मूल्य की गणना (Value of Vote Formula)",
+          "Article 56-60 - कार्यकाल, योग्यता, शपथ व पद की शर्तें",
+          "Article 61-62-65 - महाभियोग (Impeachment), रिक्ति व उपराष्ट्रपति की भूमिका",
+          "Article 72 - क्षमादान शक्ति व Governor (Art 161) से तुलना",
+          "Article 111 - विधायी वीटो शक्तियाँ (Absolute, Suspensive, Pocket Veto)",
+          "Article 123 - अध्यादेश जारी करने की शक्ति",
+          "Article 352, 356, 360 - आपातकालीन शक्तियाँ",
+          "⭐ BPSC TRE Special: डॉ. राजेंद्र प्रसाद - बिहार से प्रथम राष्ट्रपति"
+        ]
+      },
+      "navigation": { "next": "card_02_daily_life_head_of_family", "button_text": "Chalo Shuru Karein ➔" }
+    },
+    {
+      "card_id": "card_02_daily_life_head_of_family",
+      "card_slug": "card_02_daily_life_head_of_family",
+      "type": "chat",
+      "concept_id": "nominal_head_intro",
+      "level": 1,
+      "progress": { "current": 2, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, humne pichle chapters mein state level dekha - Governor aur CM. Ab sochte hain, poore desh ke top par kaun baithta hai? Jaise ek joint family mein sabse bade dada ji hote hain jinke naam par ghar chalta hai, lekin roz ka faisla ghar ke mukhiya (jaise Papa) lete hain." },
+        { "speaker": "raju", "text": "Achha, to desh ka 'dada ji' jaisa role kaun nibhata hai sir?" },
+        { "speaker": "aman", "text": "Wahi - Rashtrapati (President)! Wo poore Bharat ka pratham nagrik (first citizen) hota hai aur Sangh (Union) ka constitutional head hota hai. Lekin jaise humne Governor ke case mein dekha tha, yahan bhi wahi pattern chalega." },
+        { "speaker": "raju", "text": "Matlab Rashtrapati bhi 'nominal head' hai aur asli kaam PM karta hai? Sir ye to bilkul state wale pattern jaisa lag raha hai!" }
+      ],
+      "navigation": { "next": "card_03_article52_53", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_article52_53",
+      "card_slug": "card_03_article52_53",
+      "type": "chat",
+      "concept_id": "article52_53",
+      "level": 1,
+      "progress": { "current": 3, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Constitution mein Article 52 kehta hai - 'Bharat ka ek Rashtrapati hoga'. Aur Article 53(1) kehta hai - Sangh ki karyapalika shakti (executive power) Rashtrapati mein nihit hogi." },
+        { "speaker": "raju", "text": "Ruko sir, ye to bilkul Article 154 jaisa hai jo humne Governor ke case mein padha tha!" },
+        { "speaker": "aman", "text": "Bahut sahi observation! Aur bilkul waise hi jaise Governor apni power khud ya adhinasth adhikariyon ke through, seedhe ya salah se prayog karta hai - Article 53(1) mein bhi wahi likha hai Rashtrapati ke liye." },
+        { "speaker": "raju", "text": "Achha, to Union level par bhi wahi structure hai jo state level par tha - power kagaz par Rashtrapati ke paas, real mein Council of Ministers chalati hai!" }
+      ],
+      "navigation": { "next": "card_04_council_of_ministers_link", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_council_of_ministers_link",
+      "card_slug": "card_04_council_of_ministers_link",
+      "type": "chat",
+      "concept_id": "article74_link",
+      "level": 1,
+      "progress": { "current": 4, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Humne pichle chapter mein Article 74 padha tha - Rashtrapati ko sahayata aur salah dene ke liye PM-headed Council of Ministers hoti hai, jiski salah Rashtrapati ko maanni hi padti hai (42nd Amendment ke baad)." },
+        { "speaker": "raju", "text": "Haan wo yaad hai! To Rashtrapati asli mein sirf 'formal signature' karne wala hai?" },
+        { "speaker": "aman", "text": "Zyadatar cases mein haan, lekin kuch khaas situations mein Rashtrapati ke paas bhi apni discretionary power hoti hai - jaise Hung Lok Sabha mein PM chunna. Wo hum aage detail mein padhenge." },
+        { "speaker": "raju", "text": "Achha, to Rashtrapati bhi Governor jaisa hi hai bas bade level par - kabhi-kabhi apni marzi chala sakta hai!" }
+      ],
+      "navigation": { "next": "card_05_guess_real_vs_nominal", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_guess_real_vs_nominal",
+      "card_slug": "card_05_guess_real_vs_nominal",
+      "type": "guess",
+      "concept_id": "real_vs_nominal_guess",
+      "level": 1,
+      "progress": { "current": 5, "total": 96 },
+      "guess_payload": {
+        "question": "Article 53(1) ke anusar Sangh ki karyapalika shakti kisme nihit (vested) hoti hai, chahe asli use PM-led Council of Ministers karti ho?",
+        "options": [
+          { "id": "A", "text": "Prime Minister" },
+          { "id": "B", "text": "Rashtrapati (President)" },
+          { "id": "C", "text": "Lok Sabha Speaker" },
+          { "id": "D", "text": "Chief Justice of India" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 53(1) ke anusar, Sangh ki poori karyapalika shakti Rashtrapati mein nihit hoti hai, chahe wo isse khud ya adhinasth adhikariyon ke through, PM ki salah se prayog karta hai - bilkul Governor (Article 154) jaisa pattern."
+      },
+      "navigation": { "next": "card_06_quiz1_article52", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_06_quiz1_article52",
+      "card_slug": "card_06_quiz1_article52",
+      "type": "quiz",
+      "concept_id": "article52_quiz",
+      "level": 1,
+      "progress": { "current": 6, "total": 96 },
+      "quiz_payload": {
+        "question": "Kaunsa Article kehta hai ki 'Bharat ka ek Rashtrapati hoga'?",
+        "options": [
+          { "id": "A", "text": "Article 52" },
+          { "id": "B", "text": "Article 53" },
+          { "id": "C", "text": "Article 54" },
+          { "id": "D", "text": "Article 74" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Article 52 - 'There shall be a President of India' - Bharat ke Rashtrapati pad ka mool srot yahi Article hai."
+      },
+      "navigation": { "next": "card_07_quiz2_multistatement_53", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz2_multistatement_53",
+      "card_slug": "card_07_quiz2_multistatement_53",
+      "type": "quiz",
+      "concept_id": "article53_multistatement",
+      "level": 1,
+      "progress": { "current": 7, "total": 96 },
+      "quiz_payload": {
+        "question": "Kathan 1: Article 53(1) ke anusar Sangh ki karyapalika shakti Rashtrapati mein nihit hoti hai. Kathan 2: Article 74 ke anusar Rashtrapati ko Council of Ministers ki salah maanni baadhyakari (binding) hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - ye do alag-alag Articles hain jo mil kar Rashtrapati ki 'nominal head' status ko define karte hain."
+      },
+      "navigation": { "next": "card_08_quiz3_nominal_head", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_quiz3_nominal_head",
+      "card_slug": "card_08_quiz3_nominal_head",
+      "type": "quiz",
+      "concept_id": "nominal_head_quiz",
+      "level": 1,
+      "progress": { "current": 8, "total": 96 },
+      "quiz_payload": {
+        "question": "Rashtrapati ko 'nominal executive head' kyun kaha jaata hai?",
+        "options": [
+          { "id": "A", "text": "Kyunki uske paas koi power hi nahi hoti" },
+          { "id": "B", "text": "Kyunki asli faisle PM-led Council of Ministers karti hai, Rashtrapati formal head hota hai" },
+          { "id": "C", "text": "Kyunki wo janta dwara seedhe chuna jaata hai" },
+          { "id": "D", "text": "Kyunki wo Parliament ka sadasya hota hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Rashtrapati 'nominal/constitutional head' hai kyunki wo mostly PM-led Council of Ministers ki salah par kaam karta hai, jaise Governor state mein CM ki salah par karta hai."
+      },
+      "navigation": { "next": "card_09_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_09_milestone1",
+      "card_slug": "card_09_milestone1",
+      "type": "milestone",
+      "concept_id": "module1_complete",
+      "level": 1,
+      "progress": { "current": 9, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🇮🇳",
+        "completed_topic": "Union Executive Basics (Article 52-53)",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/11 Clear",
+        "motivational_quote": "Zabardast shuruaat! Ab dekhte hain Rashtrapati banta kaise hai - electoral college wala interesting concept!"
+      },
+      "navigation": { "next": "card_10_indirect_election_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_10_indirect_election_intro",
+      "card_slug": "card_10_indirect_election_intro",
+      "type": "chat",
+      "concept_id": "indirect_election_intro",
+      "level": 2,
+      "progress": { "current": 10, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ek zaroori sawal - kya Rashtrapati ko janta seedhe vote karke chunti hai, jaise PM ke liye MP chune jaate hain?" },
+        { "speaker": "raju", "text": "Haan sir, mujhe to yahi lagta hai - itna bada pad hai, seedhe janta hi chunegi na!" },
+        { "speaker": "aman", "text": "Yahi sabse bada trap hai! Rashtrapati 'apratyaksh roop se' (indirectly) chuna jaata hai - Article 55 mein likha hai ye 'proportional representation by means of single transferable vote' system se hota hai, ek khaas 'electoral college' dwara." },
+        { "speaker": "raju", "text": "Electoral college? Ye kya hota hai sir, ye to bilkul naya term hai!" }
+      ],
+      "navigation": { "next": "card_11_electoral_college_composition", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_electoral_college_composition",
+      "card_slug": "card_11_electoral_college_composition",
+      "type": "chat",
+      "concept_id": "electoral_college_composition",
+      "level": 2,
+      "progress": { "current": 11, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Article 54 mein iski composition di gayi hai - electoral college mein do groups hote hain: (1) Parliament ke dono sadano (Lok Sabha + Rajya Sabha) ke NIRVACHIT (elected) sadasya, aur (2) sabhi rajyon ki Vidhan Sabha ke elected sadasya." },
+        { "speaker": "raju", "text": "Achha, aur Vidhan Parishad wale MLC log vote karte hain kya?" },
+        { "speaker": "aman", "text": "Bahut achha sawal! Nahi, Vidhan Parishad (Legislative Council) ke sadasya vote NAHI kar sakte - sirf Vidhan Sabha (Legislative Assembly) ke elected members hi vote karte hain." },
+        { "speaker": "raju", "text": "Achha, matlab Bihar mein bhi jo Vidhan Parishad hai, unke members Rashtrapati chunav mein vote nahi denge?" }
+      ],
+      "navigation": { "next": "card_12_exclusion_nominated_ncr", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_exclusion_nominated_ncr",
+      "card_slug": "card_12_exclusion_nominated_ncr",
+      "type": "chat",
+      "concept_id": "exclusion_nominated_ncr",
+      "level": 2,
+      "progress": { "current": 12, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Bihar Vidhan Parishad ke sadasya vote nahi karte. Aur ek aur trap - 'nominated' (mनोनीत) members, chahe Lok Sabha, Rajya Sabha, ya Vidhan Sabha mein hon, wo bhi vote nahi kar sakte. Sirf 'elected' members hi voter hote hain." },
+        { "speaker": "raju", "text": "Achha, matlab jo member janta ne vote karke nahi chuna, wo Rashtrapati chunav mein vote nahi de sakta?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ek zaroori update bhi yaad rakho - 70th Constitutional Amendment (1992) ke through Delhi (NCT) aur Puducherry ki Vidhan Sabha ke elected members ko bhi is electoral college mein shamil kiya gaya, kyunki ye Union Territories hain lekin inki apni assembly hai." },
+        { "speaker": "raju", "text": "Achha! Ye 70th Amendment wala fact to bilkul specific hai - Delhi-Puducherry alag se add hue!" }
+      ],
+      "navigation": { "next": "card_13_value_of_vote_mla", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_value_of_vote_mla",
+      "card_slug": "card_13_value_of_vote_mla",
+      "type": "chat",
+      "concept_id": "value_of_vote_mla",
+      "level": 2,
+      "progress": { "current": 13, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab sabse interesting cheez - har member ke vote ki 'value' (mat mulya) same nahi hoti! Ek MLA ke vote ki value uske rajya ki population par depend karti hai. Formula hai - (Rajya ki kul population / kul elected MLAs) ÷ 1000." },
+        { "speaker": "raju", "text": "Hain?? Ye to ganit (maths) lag raha hai! Har state ki value alag-alag hogi?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Isiliye UP jaise bade rajya ke MLA ki vote value zyada hoti hai, aur Sikkim jaise chote rajya ke MLA ki value kam. Aur ek zaroori trap - jo 'population' use hoti hai, wo 1971 ki census ki hai, current population nahi!" },
+        { "speaker": "raju", "text": "1971 ki population? Itni purani? Ye to bilkul strange hai, isko kyun freeze kiya gaya sir?" }
+      ],
+      "navigation": { "next": "card_14_84th_amendment_freeze", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_14_84th_amendment_freeze",
+      "card_slug": "card_14_84th_amendment_freeze",
+      "type": "chat",
+      "concept_id": "84th_amendment_freeze",
+      "level": 2,
+      "progress": { "current": 14, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut achha sawal! Ye isliye kiya gaya taaki jo states population control (family planning) mein achha kaam kar rahe hain, unko punish na kiya jaaye kam representation dekar. 84th Constitutional Amendment (2001) ne 1971 ki population ko hi use karna continue rakha, jab tak 2026 ke baad ki pehli census na aa jaaye." },
+        { "speaker": "raju", "text": "Achha! Matlab jo states zyada bachhe paida karenge unki value zyada nahi ho jayegi, ye ek fairness ka mudda hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi samjha! Ab dekho MP ke vote ki value kaise nikalti hai - formula hai: (Sabhi rajyon ke MLAs ki total vote value ka jod) ÷ (Parliament ke total elected sadasya - Lok Sabha + Rajya Sabha)." },
+        { "speaker": "raju", "text": "Achha, matlab pehle sab MLAs ki value jod do, phir use total MPs se divide kar do - ye to interesting formula hai!" }
+      ],
+      "navigation": { "next": "card_15_value_of_vote_mp", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_15_value_of_vote_mp",
+      "card_slug": "card_15_value_of_vote_mp",
+      "type": "chat",
+      "concept_id": "value_of_vote_mp",
+      "level": 2,
+      "progress": { "current": 15, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Aur election ka tarika hai 'Proportional Representation by means of Single Transferable Vote' aur voting 'secret ballot' se hoti hai. Candidate ko total valid votes ka ek quota (koto) paar karna hota hai jeetne ke liye." },
+        { "speaker": "raju", "text": "Quota kaise nikalta hai sir?" },
+        { "speaker": "aman", "text": "Quota ka formula hai: (Total valid votes ÷ 2) + 1. Agar pehli preference mein kisi ko quota nahi milta, to sabse kam vote wale candidate ke second preference votes doosron mein baant diye jaate hain, jab tak koi quota paar na kar le." },
+        { "speaker": "raju", "text": "Ohh, ye to bilkul ek 'elimination round' jaisa system hai - single transferable vote ka matlab ab samajh aaya!" }
+      ],
+      "navigation": { "next": "card_16_guess_who_votes", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_16_guess_who_votes",
+      "card_slug": "card_16_guess_who_votes",
+      "type": "guess",
+      "concept_id": "who_votes_guess",
+      "level": 2,
+      "progress": { "current": 16, "total": 96 },
+      "guess_payload": {
+        "question": "Kaun-kaun Rashtrapati chunav mein vote NAHI de sakta?",
+        "options": [
+          { "id": "A", "text": "Sirf Lok Sabha ke elected members" },
+          { "id": "B", "text": "Nominated members of Parliament/Assembly aur Vidhan Parishad (Legislative Council) ke sadasya" },
+          { "id": "C", "text": "Sirf Rajya Sabha ke members" },
+          { "id": "D", "text": "Delhi aur Puducherry ki Assembly ke members" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Nominated members (chahe Parliament ke ya State Assembly ke) aur Vidhan Parishad ke sadasya Rashtrapati chunav mein vote nahi de sakte - sirf State Assembly aur Parliament ke ELECTED members hi vote karte hain (Delhi/Puducherry 70th Amendment ke baad shamil hain)."
+      },
+      "navigation": { "next": "card_17_quiz1_electoral_college", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_17_quiz1_electoral_college",
+      "card_slug": "card_17_quiz1_electoral_college",
+      "type": "quiz",
+      "concept_id": "electoral_college_quiz",
+      "level": 2,
+      "progress": { "current": 17, "total": 96 },
+      "quiz_payload": {
+        "question": "Article 55 ke anusar Rashtrapati kis prakriya se chuna jaata hai?",
+        "options": [
+          { "id": "A", "text": "Direct election by public" },
+          { "id": "B", "text": "Proportional Representation by means of Single Transferable Vote" },
+          { "id": "C", "text": "First Past The Post system" },
+          { "id": "D", "text": "Nomination by Parliament" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 55 ke anusar, Rashtrapati ka chunav 'Proportional Representation by means of Single Transferable Vote' system se aur secret ballot se hota hai."
+      },
+      "navigation": { "next": "card_18_quiz2_value_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_18_quiz2_value_multistatement",
+      "card_slug": "card_18_quiz2_value_multistatement",
+      "type": "quiz",
+      "concept_id": "value_multistatement",
+      "level": 2,
+      "progress": { "current": 18, "total": 96 },
+      "quiz_payload": {
+        "question": "Kathan 1: MLA ki vote ki value uske rajya ki population aur kul MLA sankhya par depend karti hai. Kathan 2: Value nikalne ke liye 1971 ki census ki population use hoti hai, current population nahi. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - MLA vote value ka formula population aur MLA sankhya par based hai, aur 84th Amendment ke baad 1971 census ki population hi use hoti hai (2026 ke baad ki pehli census tak)."
+      },
+      "navigation": { "next": "card_19_quiz3_ncr_amendment", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_19_quiz3_ncr_amendment",
+      "card_slug": "card_19_quiz3_ncr_amendment",
+      "type": "quiz",
+      "concept_id": "ncr_amendment_quiz",
+      "level": 2,
+      "progress": { "current": 19, "total": 96 },
+      "quiz_payload": {
+        "question": "Kaunsa Constitutional Amendment Delhi (NCT) aur Puducherry ki Vidhan Sabha ke elected members ko Rashtrapati chunav ke electoral college mein shamil karta hai?",
+        "options": [
+          { "id": "A", "text": "42nd Amendment" },
+          { "id": "B", "text": "70th Amendment" },
+          { "id": "C", "text": "91st Amendment" },
+          { "id": "D", "text": "44th Amendment" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "70th Constitutional Amendment Act, 1992 ne Article 54 ki explanation mein badlav karke Delhi aur Puducherry ki Vidhan Sabha ke elected members ko bhi electoral college mein shamil kiya."
+      },
+      "navigation": { "next": "card_20_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_20_milestone2",
+      "card_slug": "card_20_milestone2",
+      "type": "milestone",
+      "concept_id": "module2_complete",
+      "level": 2,
+      "progress": { "current": 20, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🗳️",
+        "completed_topic": "Election of President (Article 54-55)",
+        "xp_earned": 55,
+        "milestone_progress": "Module 2/11 Clear",
+        "motivational_quote": "Zabardast! Value of vote formula bahut complex tha, tumne bilkul clear kar liya! Ab qualification aur oath dekhte hain!"
+      },
+      "navigation": { "next": "card_21_article58_qualification", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_21_article58_qualification",
+      "card_slug": "card_21_article58_qualification",
+      "type": "chat",
+      "concept_id": "article58_qualification",
+      "level": 3,
+      "progress": { "current": 21, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Article 58 dekhte hain - Rashtrapati banne ke liye qualification. Vyakti Bharat ka nagrik ho, kam se kam 35 saal ki umar ho, aur Lok Sabha ka sadasya banne ki qualification rakhta ho." },
+        { "speaker": "raju", "text": "35 saal! Ye to Governor jaisa hi hai na, jo bhi 35 tha!" },
+        { "speaker": "aman", "text": "Bilkul sahi yaad kiya! Rashtrapati aur Governor dono ke liye minimum umar 35 saal hai, jabki CM/MP/MLA ke liye 25 saal. Ek zaroori shart aur hai - vyakti Kendra ya Rajya sarkar, ya kisi local authority ke under koi 'labh ka pad' (office of profit) na rakhta ho." },
+        { "speaker": "raju", "text": "Achha, matlab Rashtrapati ban’ne ke liye pehle koi bhi sarkari job chhodni padegi?" }
+      ],
+      "navigation": { "next": "card_22_article59_conditions", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_22_article59_conditions",
+      "card_slug": "card_22_article59_conditions",
+      "type": "chat",
+      "concept_id": "article59_conditions",
+      "level": 3,
+      "progress": { "current": 22, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ye Article 59 mein 'conditions of service' ke roop mein di gayi hai. Rashtrapati Parliament ya kisi State Legislature ka sadasya nahi ho sakta - agar hai, to pad sambhalte hi seat khali ho jaati hai. Aur wo koi 'office of profit' nahi rakh sakta." },
+        { "speaker": "raju", "text": "Ye to bilkul Governor jaisa rule hai! Aur salary ka kya, wo fix hoti hai kya?" },
+        { "speaker": "aman", "text": "Haan, Rashtrapati ki salary Parliament tay karti hai, aur ek zaroori baat - uski salary aur allowances uske karyakal ke dauran kam nahi ki jaa sakti. Use bina kiraye ke Rashtrapati Bhavan (official residence) bhi milta hai." },
+        { "speaker": "raju", "text": "Achha, salary kam nahi ho sakti - matlab financial security di gayi hai taaki wo bina dabaav ke kaam kare!" }
+      ],
+      "navigation": { "next": "card_23_article60_oath", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_23_article60_oath",
+      "card_slug": "card_23_article60_oath",
+      "type": "chat",
+      "concept_id": "article60_oath",
+      "level": 3,
+      "progress": { "current": 23, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Article 60 dekho - Rashtrapati ko pad ki shapath kaun dilata hai, pata hai?" },
+        { "speaker": "raju", "text": "Hmm, Speaker of Lok Sabha shayad?" },
+        { "speaker": "aman", "text": "Nahi Raju! Rashtrapati ko Chief Justice of India (CJI) shapath dilate hain. Aur agar CJI available na ho, to Supreme Court ke sabse senior judge shapath dilate hain." },
+        { "speaker": "raju", "text": "Achha! Ye to Governor jaisa hi pattern hai - wahan bhi to High Court ke CJ shapath dilate the! Yahan Supreme Court ke CJI - level upgrade ho gaya!" }
+      ],
+      "navigation": { "next": "card_24_article56_term", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_24_article56_term",
+      "card_slug": "card_24_article56_term",
+      "type": "chat",
+      "concept_id": "article56_term",
+      "level": 3,
+      "progress": { "current": 24, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pattern pakda! Ab Article 56 dekhte hain - term kitna hota hai. Rashtrapati ka karyakal 5 saal hota hai, jo pad sambhalne ki tareekh se shuru hota hai." },
+        { "speaker": "raju", "text": "Sir agar Rashtrapati beech mein resign karna chahe to kise deta hai resignation?" },
+        { "speaker": "aman", "text": "Bahut zaroori point! Rashtrapati apna resignation Vice-President (Upa-Rashtrapati) ko likhit mein deta hai - Speaker ko ya PM ko nahi! Aur wo dobara election ke liye khada bhi ho sakta hai, koi restriction nahi hai baar-baar chunav ladne par." },
+        { "speaker": "raju", "text": "Achha! Rashtrapati apna resignation Vice-President ko deta hai - ye to naya aur specific fact hai, note kar leta hoon!" }
+      ],
+      "navigation": { "next": "card_25_guess_resignation_to_whom", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_25_guess_resignation_to_whom",
+      "card_slug": "card_25_guess_resignation_to_whom",
+      "type": "guess",
+      "concept_id": "resignation_to_whom_guess",
+      "level": 3,
+      "progress": { "current": 25, "total": 96 },
+      "guess_payload": {
+        "question": "Agar Rashtrapati apna pad chhodna chahe, to wo apna resignation letter kise sambodhit (address) karta hai?",
+        "options": [
+          { "id": "A", "text": "Chief Justice of India" },
+          { "id": "B", "text": "Vice-President (Upa-Rashtrapati)" },
+          { "id": "C", "text": "Speaker of Lok Sabha" },
+          { "id": "D", "text": "Prime Minister" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 56(1)(a) ke anusar Rashtrapati apna resignation likhit mein Vice-President ko deta hai - CJI ya PM ko nahi."
+      },
+      "navigation": { "next": "card_26_quiz1_qualification", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_26_quiz1_qualification",
+      "card_slug": "card_26_quiz1_qualification",
+      "type": "quiz",
+      "concept_id": "qualification_quiz",
+      "level": 3,
+      "progress": { "current": 26, "total": 96 },
+      "quiz_payload": {
+        "question": "Rashtrapati banne ke liye minimum umar kitni honi chahiye?",
+        "options": [
+          { "id": "A", "text": "25 saal" },
+          { "id": "B", "text": "30 saal" },
+          { "id": "C", "text": "35 saal" },
+          { "id": "D", "text": "40 saal" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 58 ke anusar, Rashtrapati banne ke liye minimum umar 35 saal honi chahiye - same jo Governor ke liye bhi thi."
+      },
+      "navigation": { "next": "card_27_quiz2_oath_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_27_quiz2_oath_multistatement",
+      "card_slug": "card_27_quiz2_oath_multistatement",
+      "type": "quiz",
+      "concept_id": "oath_multistatement",
+      "level": 3,
+      "progress": { "current": 27, "total": 96 },
+      "quiz_payload": {
+        "question": "Kathan 1: Rashtrapati ko Chief Justice of India shapath dilate hain. Kathan 2: Rashtrapati ki salary uske karyakal ke dauran kabhi kam nahi ki jaa sakti. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 60 CJI se shapath dilwata hai (ya senior-most judge agar CJI available na ho), aur Article 59 salary ki suraksha deta hai - dono kathan sahi hain."
+      },
+      "navigation": { "next": "card_28_quiz3_term", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_28_quiz3_term",
+      "card_slug": "card_28_quiz3_term",
+      "type": "quiz",
+      "concept_id": "term_quiz",
+      "level": 3,
+      "progress": { "current": 28, "total": 96 },
+      "quiz_payload": {
+        "question": "Article 56 ke anusar Rashtrapati ka normal karyakal kitna hota hai?",
+        "options": [
+          { "id": "A", "text": "4 saal" },
+          { "id": "B", "text": "5 saal" },
+          { "id": "C", "text": "6 saal" },
+          { "id": "D", "text": "Koi fix term nahi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 56(1) - Rashtrapati ka karyakal 5 saal hota hai, jo pad sambhalne ki tareekh se ginte hain."
+      },
+      "navigation": { "next": "card_29_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_29_milestone3",
+      "card_slug": "card_29_milestone3",
+      "type": "milestone",
+      "concept_id": "module3_complete",
+      "level": 3,
+      "progress": { "current": 29, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📜",
+        "completed_topic": "Qualification, Oath & Term (Article 58-60, 56)",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/11 Clear",
+        "motivational_quote": "Bahut badhiya! CJI wala trap ab pakka yaad hai. Ab dekhte hain Rashtrapati ko kaise hataya jaata hai - impeachment ka process!"
+      },
+      "navigation": { "next": "card_30_article61_impeachment_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_30_article61_impeachment_intro",
+      "card_slug": "card_30_article61_impeachment_intro",
+      "type": "chat",
+      "concept_id": "article61_impeachment_intro",
+      "level": 4,
+      "progress": { "current": 30, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, humne Governor ke case mein dekha tha ki use bina koi karan bataye hataya jaa sakta hai. Kya Rashtrapati ke saath bhi aisa hi hai?" },
+        { "speaker": "raju", "text": "Achha sir, mujhe laga tha Rashtrapati sabse powerful hai, use to koi hata hi nahi sakta hoga!" },
+        { "speaker": "aman", "text": "Yahin bada difference hai! Rashtrapati ko hataya jaa sakta hai, lekin sirf 'Mahabhiyog' (Impeachment) ke through, jo Article 61 mein diya gaya hai - aur ye sirf ek hi karan se ho sakta hai: 'Constitution ka ullanghan' (violation of the Constitution)." },
+        { "speaker": "raju", "text": "Achha, matlab Governor ki tarah 'bina karan' nahi, balki ek proper legal process hai - ye to bahut alag hai!" }
+      ],
+      "navigation": { "next": "card_31_impeachment_procedure_detail", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_31_impeachment_procedure_detail",
+      "card_slug": "card_31_impeachment_procedure_detail",
+      "type": "chat",
+      "concept_id": "impeachment_procedure_detail",
+      "level": 4,
+      "progress": { "current": 31, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab process dekho - impeachment Parliament ke DONO sadano (Lok Sabha ya Rajya Sabha) mein se kisi mein bhi shuru ho sakta hai. Pehle, kul sadasyon ke kam se kam 1/4 (chauthai) sadasya likhit notice denge, jisme 14 din pehle suchna deni hogi." },
+        { "speaker": "raju", "text": "Achha, phir kya hota hai us notice ke baad?" },
+        { "speaker": "aman", "text": "Fir wo prastav (charge) us sadan mein 2/3 bahumat se paas hona chahiye. Uske baad doosra sadan usi charge ki jaanch karega - Rashtrapati ko khud ya apne representative (jaise lawyer) ke through defend karne ka poora adhikar hai." },
+        { "speaker": "raju", "text": "Achha, aur agar doosra sadan bhi charge sahi paaye to?" }
+      ],
+      "navigation": { "next": "card_32_impeachment_final_step", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_32_impeachment_final_step",
+      "card_slug": "card_32_impeachment_final_step",
+      "type": "chat",
+      "concept_id": "impeachment_final_step",
+      "level": 4,
+      "progress": { "current": 32, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Agar doosra sadan bhi charge ki jaanch karke use 2/3 bahumat se sahi maan le, to Rashtrapati us din se apna pad kho deta hai jis din prastav doosre sadan mein paas hua. Ye Bharat ka ek sabse sakht 'quasi-judicial' process hai." },
+        { "speaker": "raju", "text": "2/3 majority dono sadano mein! Ye to bahut mushkil process hai, isiliye shayad aaj tak kabhi use hi nahi hua hoga!" },
+        { "speaker": "aman", "text": "Bilkul sahi socha! Aaj tak Bharat mein kisi bhi Rashtrapati ke khilaf impeachment ka process shuru nahi hua hai - ye ek zaroori fact hai jo exam mein poocha jaata hai." },
+        { "speaker": "raju", "text": "Achha, ye fact yaad rakhna zaroori hai - 'kabhi use nahi hua', kyunki 2/3 majority milna bahut mushkil hai!" }
+      ],
+      "navigation": { "next": "card_33_article62_65_vacancy", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_33_article62_65_vacancy",
+      "card_slug": "card_33_article62_65_vacancy",
+      "type": "chat",
+      "concept_id": "article62_65_vacancy",
+      "level": 4,
+      "progress": { "current": 33, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho agar Rashtrapati ka pad khaali (vacant) ho jaaye - mrityu, resignation, ya removal se - to Article 62 kehta hai, naya chunav 6 mahine ke andar hona chahiye." },
+        { "speaker": "raju", "text": "Aur jab tak naya Rashtrapati na chuna jaaye, tab tak kaun kaam sambhalta hai?" },
+        { "speaker": "aman", "text": "Bahut zaroori sawal! Article 65 ke anusar, Vice-President (Upa-Rashtrapati) 'acting President' ke roop mein kaam sambhalta hai. Aur agar VP bhi available na ho, to Chief Justice of India ye role nibhate hain." },
+        { "speaker": "raju", "text": "Achha, VP first choice, CJI backup - ye order yaad rakhna padega!" }
+      ],
+      "navigation": { "next": "card_34_guess_impeachment_charge_house", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_34_guess_impeachment_charge_house",
+      "card_slug": "card_34_guess_impeachment_charge_house",
+      "type": "guess",
+      "concept_id": "impeachment_charge_house_guess",
+      "level": 4,
+      "progress": { "current": 34, "total": 96 },
+      "guess_payload": {
+        "question": "Rashtrapati ke khilaf impeachment ke charges kis sadan mein shuru kiye jaa sakte hain?",
+        "options": [
+          { "id": "A", "text": "Sirf Lok Sabha mein" },
+          { "id": "B", "text": "Sirf Rajya Sabha mein" },
+          { "id": "C", "text": "Parliament ke dono sadano mein se kisi mein bhi" },
+          { "id": "D", "text": "State Vidhan Sabha mein" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Rashtrapati ke khilaf impeachment charge Parliament ke dono sadano - Lok Sabha ya Rajya Sabha - mein se kisi mein bhi shuru kiya jaa sakta hai, jo State President/Governor removal process se alag hai."
+      },
+      "navigation": { "next": "card_35_quiz1_impeachment", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_35_quiz1_impeachment",
+      "card_slug": "card_35_quiz1_impeachment",
+      "type": "quiz",
+      "concept_id": "impeachment_quiz",
+      "level": 4,
+      "progress": { "current": 35, "total": 96 },
+      "quiz_payload": {
+        "question": "Article 61 ke anusar Rashtrapati ko sirf kis aadhar par hataya jaa sakta hai?",
+        "options": [
+          { "id": "A", "text": "Bina koi karan bataye" },
+          { "id": "B", "text": "Constitution ka ullanghan (violation)" },
+          { "id": "C", "text": "PM ki salah par" },
+          { "id": "D", "text": "Lok Sabha mein no-confidence se" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 61 - Rashtrapati ko sirf 'Constitution ke ullanghan' (violation of the Constitution) ke aadhar par mahabhiyog (impeachment) se hataya jaa sakta hai."
+      },
+      "navigation": { "next": "card_36_quiz2_impeachment_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_36_quiz2_impeachment_multistatement",
+      "card_slug": "card_36_quiz2_impeachment_multistatement",
+      "type": "quiz",
+      "concept_id": "impeachment_multistatement",
+      "level": 4,
+      "progress": { "current": 36, "total": 96 },
+      "quiz_payload": {
+        "question": "Kathan 1: Impeachment notice par kul sadasyon ke kam se kam 1/4 sadasyon ke hastakshar chahiye, 14 din pehle suchna ke saath. Kathan 2: Charge dono sadano mein 2/3 bahumat se paas hona chahiye. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - impeachment mein 1/4 sadasyon ka notice (14 din pehle) aur dono sadano mein 2/3 bahumat, dono zaroori steps hain."
+      },
+      "navigation": { "next": "card_37_quiz3_acting_president", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_37_quiz3_acting_president",
+      "card_slug": "card_37_quiz3_acting_president",
+      "type": "quiz",
+      "concept_id": "acting_president_quiz",
+      "level": 4,
+      "progress": { "current": 37, "total": 96 },
+      "quiz_payload": {
+        "question": "Rashtrapati ke pad khaali hone par sabse pehle kaun 'acting President' banta hai?",
+        "options": [
+          { "id": "A", "text": "Chief Justice of India" },
+          { "id": "B", "text": "Vice-President" },
+          { "id": "C", "text": "Speaker of Lok Sabha" },
+          { "id": "D", "text": "Prime Minister" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 65 ke anusar, Rashtrapati ka pad khaali hone par sabse pehle Vice-President acting President banta hai. Agar wo bhi available na ho, to CJI ye role nibhate hain."
+      },
+      "navigation": { "next": "card_38_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_38_milestone4",
+      "card_slug": "card_38_milestone4",
+      "type": "milestone",
+      "concept_id": "module4_complete",
+      "level": 4,
+      "progress": { "current": 38, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Impeachment & Vacancy (Article 61, 62, 65)",
+        "xp_earned": 55,
+        "milestone_progress": "Module 4/10 Clear",
+        "motivational_quote": "Zabardast! Ab tumhe pura impeachment process pakka yaad hai. Ab dekhte hain Rashtrapati ki asli powers - executive powers se shuru karte hain!"
+      },
+      "navigation": { "next": "card_39_article53_appointment_powers", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_39_article53_appointment_powers",
+      "card_slug": "card_39_article53_appointment_powers",
+      "type": "chat",
+      "concept_id": "article53_appointment_powers",
+      "level": 5,
+      "progress": { "current": 39, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhte hain Rashtrapati ki executive powers. Sabse pehli hai niyukti (appointment) ki power. Rashtrapati PM ko niyukt karta hai, aur PM ki salah par baaki Union Ministers ko - ye humne pichle chapter mein padha tha." },
+        { "speaker": "raju", "text": "Aur koi important log jinhe Rashtrapati niyukt karta hai?" },
+        { "speaker": "aman", "text": "Bahut saari! Rashtrapati - CJI aur Supreme Court/High Court ke judges, sabhi rajyon ke Governors, Attorney General, CAG (Comptroller and Auditor General), UPSC ke Chairman/members, Chief Election Commissioner aur Election Commissioners, aur Finance Commission ke Chairman/members ko niyukt karta hai." },
+        { "speaker": "raju", "text": "Itni saari niyuktiyan! Sir ye to yaad rakhna mushkil hai, itne saare log!" }
+      ],
+      "navigation": { "next": "card_40_diplomatic_appointments", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_40_diplomatic_appointments",
+      "card_slug": "card_40_diplomatic_appointments",
+      "type": "chat",
+      "concept_id": "diplomatic_appointments",
+      "level": 5,
+      "progress": { "current": 40, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Chinta mat karo, sabhi ka common pattern samajh lo - ye sabhi niyuktiyan constitutional/high-level bodies ke liye hain, aur ye sab PM-led Council of Ministers ki salah par hi hoti hain, kyunki Rashtrapati akele koi bhi bada faisla nahi leta." },
+        { "speaker": "raju", "text": "Achha, matlab niyukti ka naam Rashtrapati ka hai, lekin decision Council of Ministers ka?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ek aur important power - Rashtrapati doosre desho ke saath Ambassadors bhejta hai aur unke Ambassadors ko receive karta hai. Wo India ki taraf se international treaties aur agreements bhi sign karta hai." },
+        { "speaker": "raju", "text": "Achha, matlab foreign countries se related sab kuch Rashtrapati ke naam se hota hai!" }
+      ],
+      "navigation": { "next": "card_41_article53_2_supreme_commander", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_41_article53_2_supreme_commander",
+      "card_slug": "card_41_article53_2_supreme_commander",
+      "type": "chat",
+      "concept_id": "article53_2_supreme_commander",
+      "level": 5,
+      "progress": { "current": 41, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek bahut khaas power dekho - Article 53(2) kehta hai Rashtrapati Bhartiya Sena, Nausena aur Vayusena (Army, Navy, Air Force) ka 'Supreme Commander' hota hai." },
+        { "speaker": "raju", "text": "Wow! Rashtrapati poori army ka boss hai? Lekin wo to civilian hai, use to fauj chalani nahi aati hogi!" },
+        { "speaker": "aman", "text": "Bahut sahi doubt! Ye bhi ek constitutional/nominal power hai - asli military decisions Cabinet Committee on Security (CCS) leti hai, jiske chairman PM hote hain. Rashtrapati ka role sirf 'ceremonial supreme commander' ka hai, jaise UK mein Queen/King ka hota tha." },
+        { "speaker": "raju", "text": "Ohh! Ye to bilkul waisa hi hai jaisa baaki powers mein bhi tha - naam Rashtrapati ka, asli kaam Council of Ministers ka!" }
+      ],
+      "navigation": { "next": "card_42_guess_who_appoints_cji", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_42_guess_who_appoints_cji",
+      "card_slug": "card_42_guess_who_appoints_cji",
+      "type": "guess",
+      "concept_id": "who_appoints_cji_guess",
+      "level": 5,
+      "progress": { "current": 42, "total": 96 },
+      "guess_payload": {
+        "question": "Chief Justice of India (CJI) aur Supreme Court ke judges ko kaun niyukt karta hai?",
+        "options": [
+          { "id": "A", "text": "Prime Minister" },
+          { "id": "B", "text": "Rashtrapati (President)" },
+          { "id": "C", "text": "Lok Sabha Speaker" },
+          { "id": "D", "text": "Attorney General" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Rashtrapati CJI aur Supreme Court/High Court ke judges ko niyukt karta hai (collegium system ki salah lekar), yahi pattern Governors, AG, CAG, UPSC aur Election Commissioners ke liye bhi follow hota hai."
+      },
+      "navigation": { "next": "card_43_quiz1_appointments", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_43_quiz1_appointments",
+      "card_slug": "card_43_quiz1_appointments",
+      "type": "quiz",
+      "concept_id": "appointments_quiz",
+      "level": 5,
+      "progress": { "current": 43, "total": 96 },
+      "quiz_payload": {
+        "question": "Niche diye gaye mein se kaunsa pad Rashtrapati dwara niyukt NAHI kiya jaata?",
+        "options": [
+          { "id": "A", "text": "Attorney General of India" },
+          { "id": "B", "text": "Comptroller and Auditor General (CAG)" },
+          { "id": "C", "text": "Municipal Corporation Mayor" },
+          { "id": "D", "text": "Chief Election Commissioner" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Mayor ek local body ka chunav hota hai, jisme Rashtrapati ki koi bhoomika nahi hai. Baaki teeno (AG, CAG, CEC) Rashtrapati dwara niyukt kiye jaate hain."
+      },
+      "navigation": { "next": "card_44_quiz2_supreme_commander_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_44_quiz2_supreme_commander_multistatement",
+      "card_slug": "card_44_quiz2_supreme_commander_multistatement",
+      "type": "quiz",
+      "concept_id": "supreme_commander_multistatement",
+      "level": 5,
+      "progress": { "current": 44, "total": 96 },
+      "quiz_payload": {
+        "question": "Kathan 1: Article 53(2) ke anusar Rashtrapati Bhartiya sashastra senaon (Armed Forces) ka Supreme Commander hai. Kathan 2: Asli military decisions Cabinet Committee on Security leti hai, jiske chairman PM hote hain. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - Rashtrapati constitutional Supreme Commander hai (Article 53(2)), lekin asli faisle CCS leti hai jo PM lead karte hain."
+      },
+      "navigation": { "next": "card_45_quiz3_diplomatic", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_45_quiz3_diplomatic",
+      "card_slug": "card_45_quiz3_diplomatic",
+      "type": "quiz",
+      "concept_id": "diplomatic_quiz",
+      "level": 5,
+      "progress": { "current": 45, "total": 96 },
+      "quiz_payload": {
+        "question": "Rashtrapati ki diplomatic power mein kya shamil hai?",
+        "options": [
+          { "id": "A", "text": "Ambassadors bhejna/receive karna aur treaties sign karna" },
+          { "id": "B", "text": "Sirf ghar ke andar kanoon banana" },
+          { "id": "C", "text": "State ke Governor ko instruction dena" },
+          { "id": "D", "text": "Sirf Lok Sabha ka session bulana" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Rashtrapati ki diplomatic power mein doosre desho mein Ambassadors bhejna, unke Ambassadors ko receive karna, aur India ki taraf se international treaties/agreements sign karna shamil hai."
+      },
+      "navigation": { "next": "card_46_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_46_milestone5",
+      "card_slug": "card_46_milestone5",
+      "type": "milestone",
+      "concept_id": "module5_complete",
+      "level": 5,
+      "progress": { "current": 46, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Executive & Diplomatic Powers",
+        "xp_earned": 55,
+        "milestone_progress": "Module 5/11 Clear",
+        "motivational_quote": "Bahut badhiya! Supreme Commander wala concept clear ho gaya. Ab Rashtrapati ki legislative powers aur veto ka bada topic dekhte hain!"
+      },
+      "navigation": { "next": "card_47_summon_prorogue_dissolve", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_47_summon_prorogue_dissolve",
+      "card_slug": "card_47_summon_prorogue_dissolve",
+      "type": "chat",
+      "concept_id": "summon_prorogue_dissolve",
+      "level": 6,
+      "progress": { "current": 47, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Rashtrapati ki legislative powers dekhte hain, jo Article 85 mein di gayi hai - Rashtrapati Parliament ka satra bulata (summon) hai, use sthagit (prorogue) karta hai, aur Lok Sabha ko bhang (dissolve) bhi kar sakta hai." },
+        { "speaker": "raju", "text": "Sir ye to bilkul Governor jaisa hi hai state ke liye jo tha!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur wahi 6 mahine ka rule bhi lagu hota hai - do sessions ke beech ka gap 6 mahine se zyada nahi hona chahiye. Aur Article 87 ke tahat, naye saal ki pehli baithak mein aur naye Lok Sabha ke pehle satra mein Rashtrapati ek address deta hai." },
+        { "speaker": "raju", "text": "Achha, wo bhi Council of Ministers taiyaar karti hogi, Rashtrapati sirf padhta hai - jaise Governor ke case mein tha!" }
+      ],
+      "navigation": { "next": "card_48_article111_bill_assent", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_48_article111_bill_assent",
+      "card_slug": "card_48_article111_bill_assent",
+      "type": "chat",
+      "concept_id": "article111_bill_assent",
+      "level": 6,
+      "progress": { "current": 48, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab Article 111 dekho - jab Parliament se koi bill pass hokar Rashtrapati ke paas aata hai, uske paas Governor jaisa hi 4 options hote hain: sahmati de, sahmati rok le, ya (money bill na ho to) punarvichar ke liye wapas bheje." },
+        { "speaker": "raju", "text": "Aur chautha option? Wo to Governor ke paas 'Rashtrapati ke liye reserve' karna tha, Rashtrapati ke paas kya hoga?" },
+        { "speaker": "aman", "text": "Bahut sahi doubt! Rashtrapati ke paas chautha option nahi hota kyunki upar koi aur nahi hai - uske paas sirf teen hi options hain: Assent, Withhold, ya Return (sirf non-money bills). Ye Governor se ek bada difference hai." },
+        { "speaker": "raju", "text": "Achha! Governor ke paas 4 the, Rashtrapati ke paas sirf 3 - kyunki reserve karne ka koi matlab hi nahi hai, wo khud hi top hai!" }
+      ],
+      "navigation": { "next": "card_49_three_types_veto", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_49_three_types_veto",
+      "card_slug": "card_49_three_types_veto",
+      "type": "chat",
+      "concept_id": "three_types_veto",
+      "level": 6,
+      "progress": { "current": 49, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ye 3 options ko formal naam dete hain - Veto Power ke 3 types. Pehla - 'Absolute Veto': Rashtrapati bill ko poori tarah reject kar de, bill khatam ho jaata hai. Doosra - 'Suspensive Veto': bill ko wapas bhej de reconsideration ke liye." },
+        { "speaker": "raju", "text": "Aur teesra kya hai sir? Isme kuch alag naam hoga!" },
+        { "speaker": "aman", "text": "Teesra hai 'Pocket Veto' - iska matlab hai Rashtrapati bill par na sahmati de, na reject kare, na wapas bheje - bas bill ko 'apni jeb mein' (pocket) rakh le, indefinitely, bina koi time limit ke!" },
+        { "speaker": "raju", "text": "Hain?? Matlab wo bill ko humesha ke liye hold kar sakta hai bina kuch bataye? Ye to bahut unique power hai!" }
+      ],
+      "navigation": { "next": "card_50_pocket_veto_example_zail_singh", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_50_pocket_veto_example_zail_singh",
+      "card_slug": "card_50_pocket_veto_example_zail_singh",
+      "type": "chat",
+      "concept_id": "pocket_veto_example",
+      "level": 6,
+      "progress": { "current": 50, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Aur ek zaroori trap - Constitution mein Rashtrapati ke liye koi time limit nahi di gayi assent dene ke liye, jabki US President ko 10 din ke andar decide karna hota hai. Isi wajah se Bharat mein Pocket Veto sambhav hai." },
+        { "speaker": "raju", "text": "Kya isko kabhi use kiya gaya hai practically?" },
+        { "speaker": "aman", "text": "Haan, 1986 mein Rashtrapati Giani Zail Singh ne 'Indian Post Office (Amendment) Bill' ko pocket veto kiya tha - ye bill kabhi return nahi hua aur na hi sahmati mili, wo Zail Singh ke karyakal ke poore samay tak pending raha." },
+        { "speaker": "raju", "text": "⭐ Ye to bahut specific fact hai - Zail Singh aur post office bill! Ye to exam mein direct poocha jaa sakta hai!" }
+      ],
+      "navigation": { "next": "card_51_money_bill_special_rule", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_51_money_bill_special_rule",
+      "card_slug": "card_51_money_bill_special_rule",
+      "type": "chat",
+      "concept_id": "money_bill_special_rule",
+      "level": 6,
+      "progress": { "current": 51, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek zaroori exception yaad rakho - jaise humne Governor ke case mein padha tha, Money Bill ko Rashtrapati punarvichar ke liye wapas nahi bhej sakta. Usके paas sirf do options hain - Assent de ya sahmati rok le." },
+        { "speaker": "raju", "text": "Achha, ye to bilkul same rule tha jo Governor ke paas bhi tha Money Bill ke liye!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur ek zaroori baat yaad rakho - Money Bill Lok Sabha mein sirf Rashtrapati ki 'poorv sifarish' (prior recommendation) se hi introduce ho sakta hai, Article 117 ke tahat." },
+        { "speaker": "raju", "text": "Achha! Matlab Money Bill shuru hone se pehle bhi Rashtrapati ki permission chahiye, aur ant mein bhi usi ki sahmati chahiye - dono taraf se involved hai!" }
+      ],
+      "navigation": { "next": "card_52_guess_pocket_veto_scenario", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_52_guess_pocket_veto_scenario",
+      "card_slug": "card_52_guess_pocket_veto_scenario",
+      "type": "guess",
+      "concept_id": "pocket_veto_scenario_guess",
+      "level": 6,
+      "progress": { "current": 52, "total": 96 },
+      "guess_payload": {
+        "question": "Bharat ke Rashtrapati aur US ke President ke veto power mein kya bada difference hai?",
+        "options": [
+          { "id": "A", "text": "Dono ko koi time limit nahi hai" },
+          { "id": "B", "text": "US President ko 10 din ki time limit hai, lekin Bharat ke Rashtrapati ko koi time limit nahi hai bill par assent/reject ke liye" },
+          { "id": "C", "text": "Bharat ke Rashtrapati ke paas veto power hi nahi hai" },
+          { "id": "D", "text": "Dono ko 6 mahine ki time limit hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "US Constitution President ko bill par 10 din ke andar decide karne ko kehta hai, warna wo automatically kanoon ban jaata hai. Bharat ke Constitution mein aisi koi time limit nahi hai, isliye yahan 'Pocket Veto' sambhav hai jo US mein bhi ek limited form mein hai lekin Bharat mein zyada wide hai."
+      },
+      "navigation": { "next": "card_53_quiz1_legislative_powers", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_53_quiz1_legislative_powers",
+      "card_slug": "card_53_quiz1_legislative_powers",
+      "type": "quiz",
+      "concept_id": "legislative_powers_quiz",
+      "level": 6,
+      "progress": { "current": 53, "total": 96 },
+      "quiz_payload": {
+        "question": "Kaunsa Article Rashtrapati ko bill par assent dene, rokne ya wapas bhejne ki shakti deta hai?",
+        "options": [
+          { "id": "A", "text": "Article 85" },
+          { "id": "B", "text": "Article 111" },
+          { "id": "C", "text": "Article 123" },
+          { "id": "D", "text": "Article 87" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 111 - jab Parliament se bill pass hokar Rashtrapati ke paas aata hai, use assent de sakta hai, rok sakta hai, ya (non-money bill hone par) punarvichar ke liye wapas bhej sakta hai."
+      },
+      "navigation": { "next": "card_54_quiz2_pocket_veto_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_54_quiz2_pocket_veto_multistatement",
+      "card_slug": "card_54_quiz2_pocket_veto_multistatement",
+      "type": "quiz",
+      "concept_id": "pocket_veto_multistatement",
+      "level": 6,
+      "progress": { "current": 54, "total": 96 },
+      "quiz_payload": {
+        "question": "Kathan 1: Pocket Veto ka use Rashtrapati Giani Zail Singh ne 1986 mein Indian Post Office (Amendment) Bill par kiya tha. Kathan 2: Rashtrapati Money Bill ko bhi punarvichar ke liye wapas bhej sakta hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Kathan 1 sahi hai - ye practical example hai. Kathan 2 galat hai - Money Bill ko Rashtrapati punarvichar ke liye wapas nahi bhej sakta, sirf assent de sakta hai ya sahmati rok sakta hai."
+      },
+      "navigation": { "next": "card_55_quiz3_money_bill_recommendation", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_55_quiz3_money_bill_recommendation",
+      "card_slug": "card_55_quiz3_money_bill_recommendation",
+      "type": "quiz",
+      "concept_id": "money_bill_recommendation_quiz",
+      "level": 6,
+      "progress": { "current": 55, "total": 96 },
+      "quiz_payload": {
+        "question": "Money Bill Lok Sabha mein introduce karne ke liye kya zaroori hai?",
+        "options": [
+          { "id": "A", "text": "Rajya Sabha ki sahmati" },
+          { "id": "B", "text": "Rashtrapati ki poorv sifarish (prior recommendation)" },
+          { "id": "C", "text": "Supreme Court ki anumati" },
+          { "id": "D", "text": "State Governors ki sahmati" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 117 ke anusar, Money Bill Lok Sabha mein Rashtrapati ki poorv sifarish (prior recommendation) ke bina introduce nahi ho sakta."
+      },
+      "navigation": { "next": "card_56_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_56_milestone6",
+      "card_slug": "card_56_milestone6",
+      "type": "milestone",
+      "concept_id": "module6_complete",
+      "level": 6,
+      "progress": { "current": 56, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📝",
+        "completed_topic": "Legislative Powers & Veto (Article 85, 111)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/11 Clear",
+        "motivational_quote": "Outstanding! Pocket veto ka real example bhi tumhe pata hai ab. Ab dekhte hain Rashtrapati bina Parliament ke kaise kanoon bana sakta hai - Ordinance Power!"
+      },
+      "navigation": { "next": "card_57_article123_ordinance_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_57_article123_ordinance_intro",
+      "card_slug": "card_57_article123_ordinance_intro",
+      "type": "chat",
+      "concept_id": "article123_ordinance_intro",
+      "level": 7,
+      "progress": { "current": 57, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Article 123 dekhte hain - jaise Governor ke paas Ordinance banane ki power thi (Article 213), waise hi Rashtrapati ke paas bhi hai. Jab Parliament ka satra chal na raha ho aur turant kanoon banane ki zaroorat ho, Rashtrapati Ordinance jaari kar sakta hai." },
+        { "speaker": "raju", "text": "Sir ye to bilkul same concept hai! Ye bhi CM ki salah se hoga jaise state mein tha?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ordinance PM-led Council of Ministers ki salah par jaari hota hai, apni marzi se nahi. Aur ismein kanoon jaisi hi taakat hoti hai." },
+        { "speaker": "raju", "text": "Achha, aur ye 6 hafte wala rule bhi yahan lagu hoga?" }
+      ],
+      "navigation": { "next": "card_58_ordinance_six_weeks_rule", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_58_ordinance_six_weeks_rule",
+      "card_slug": "card_58_ordinance_six_weeks_rule",
+      "type": "chat",
+      "concept_id": "ordinance_six_weeks_rule",
+      "level": 7,
+      "progress": { "current": 58, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi socha! Jab Parliament wapas satra mein baithti hai, to Ordinance ko 6 hafte ke andar Parliament ke saamne rakhna zaroori hai. Agar Parliament use approve nahi karti ya 6 hafte poore ho jaate hain, to Ordinance khatam ho jaata hai." },
+        { "speaker": "raju", "text": "Achha, aur agar dono sadan alag-alag din reassemble ho, to 6 hafte kaha se ginenge?" },
+        { "speaker": "aman", "text": "Bahut achha doubt! Agar dono sadan alag-alag tareekh ko reassemble hote hain, to 6 hafte us tareekh se ginte hain jo baad mein hai (later date), matlab jis sadan ki baithak baad mein shuru hui." },
+        { "speaker": "raju", "text": "Achha, matlab jo sadan der se aaya, uski date se hi count shuru hoga - ye interesting detail hai!" }
+      ],
+      "navigation": { "next": "card_59_ordinance_limitations", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_59_ordinance_limitations",
+      "card_slug": "card_59_ordinance_limitations",
+      "type": "chat",
+      "concept_id": "ordinance_limitations",
+      "level": 7,
+      "progress": { "current": 59, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek limitation yaad rakho - Rashtrapati sirf un vishayon par Ordinance jaari kar sakta hai jin par Parliament khud kanoon bana sakti hai. Wo Constitution mein khud amendment karne ke liye Ordinance ka use nahi kar sakta." },
+        { "speaker": "raju", "text": "Achha, matlab Ordinance koi shortcut nahi hai Constitution badalne ka?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur ek zaroori fact - 38th Amendment (1975) ne kaha tha ki Rashtrapati ki 'satisfaction' Ordinance jaari karne ke liye final hai aur court mein challenge nahi ho sakti, lekin 44th Amendment (1978) ne ise hata diya - ab is satisfaction ki judicial review ho sakti hai malafide (bad intention) ke case mein." },
+        { "speaker": "raju", "text": "Achha! Ye to CM/Governor ke removal wale case jaisa hi hai - koi karan batana zaroori nahi, lekin manmaani (mala fide) nahi honi chahiye!" }
+      ],
+      "navigation": { "next": "card_60_quiz1_ordinance", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_60_quiz1_ordinance",
+      "card_slug": "card_60_quiz1_ordinance",
+      "type": "quiz",
+      "concept_id": "ordinance_quiz",
+      "level": 7,
+      "progress": { "current": 60, "total": 96 },
+      "quiz_payload": {
+        "question": "Kaunsa Article Rashtrapati ko Ordinance jaari karne ki shakti deta hai?",
+        "options": [
+          { "id": "A", "text": "Article 111" },
+          { "id": "B", "text": "Article 123" },
+          { "id": "C", "text": "Article 61" },
+          { "id": "D", "text": "Article 72" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 123 - Rashtrapati ko Parliament ka satra na chalne ki sthiti mein Ordinance jaari karne ki shakti deta hai."
+      },
+      "navigation": { "next": "card_61_quiz2_six_weeks_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_61_quiz2_six_weeks_multistatement",
+      "card_slug": "card_61_quiz2_six_weeks_multistatement",
+      "type": "quiz",
+      "concept_id": "six_weeks_multistatement",
+      "level": 7,
+      "progress": { "current": 61, "total": 96 },
+      "quiz_payload": {
+        "question": "Kathan 1: Ordinance ko Parliament ke wapas satra shuru hone par 6 hafte ke andar saamne rakhna zaroori hai. Kathan 2: 44th Amendment (1978) ke baad Ordinance jaari karne ke liye Rashtrapati ki satisfaction ki judicial review ho sakti hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - 6 hafte ka rule aur 44th Amendment ke baad judicial review dono important facts hain jo BPSC mein poochhe jaate hain."
+      },
+      "navigation": { "next": "card_62_quiz3_ordinance_limitation", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_62_quiz3_ordinance_limitation",
+      "card_slug": "card_62_quiz3_ordinance_limitation",
+      "type": "quiz",
+      "concept_id": "ordinance_limitation_quiz",
+      "level": 7,
+      "progress": { "current": 62, "total": 96 },
+      "quiz_payload": {
+        "question": "Rashtrapati kis vishay par Ordinance jaari NAHI kar sakta?",
+        "options": [
+          { "id": "A", "text": "Jin vishayon par Parliament khud kanoon bana sakti hai" },
+          { "id": "B", "text": "Constitution mein amendment karne ke liye" },
+          { "id": "C", "text": "Economic matters par" },
+          { "id": "D", "text": "Sirf education vishayon par" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Rashtrapati Constitution mein amendment karne ke liye Ordinance ka use nahi kar sakta - Ordinance sirf un vishayon par jaari ho sakta hai jin par Parliament normal kanoon bana sakti hai."
+      },
+      "navigation": { "next": "card_63_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_63_milestone7",
+      "card_slug": "card_63_milestone7",
+      "type": "milestone",
+      "concept_id": "module7_complete",
+      "level": 7,
+      "progress": { "current": 63, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📃",
+        "completed_topic": "Ordinance Making Power (Article 123)",
+        "xp_earned": 55,
+        "milestone_progress": "Module 7/11 Clear",
+        "motivational_quote": "Perfect! Ordinance ka poora concept clear hai. Ab dekhte hain Rashtrapati ki financial powers - budget aur bade paise wale faisle!"
+      },
+      "navigation": { "next": "card_64_article112_budget", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_64_article112_budget",
+      "card_slug": "card_64_article112_budget",
+      "type": "chat",
+      "concept_id": "article112_budget",
+      "level": 8,
+      "progress": { "current": 64, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Rashtrapati ki financial powers dekhte hain. Article 112 kehta hai - har saal, Rashtrapati Parliament ke dono sadano ke saamne 'Annual Financial Statement' rakhwata hai, jise hum 'Budget' kehte hain." },
+        { "speaker": "raju", "text": "Achha, matlab Budget bhi Rashtrapati ke naam se pesh hota hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Chahe Finance Minister isse Lok Sabha mein present karte hain, ye formally Rashtrapati ki taraf se hi rakha jaata hai. Aur humne pichle module mein padha tha - Money Bill sirf Rashtrapati ki poorv sifarish se hi introduce ho sakta hai." },
+        { "speaker": "raju", "text": "Achha, aur agar sarkar ko achanak paisa chahiye ho, jab Parliament session na chal raha ho, to kya hota hai?" }
+      ],
+      "navigation": { "next": "card_65_contingency_fund_finance_commission", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_65_contingency_fund_finance_commission",
+      "card_slug": "card_65_contingency_fund_finance_commission",
+      "type": "chat",
+      "concept_id": "contingency_fund_finance_commission",
+      "level": 8,
+      "progress": { "current": 65, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut achha sawal! Isi ke liye Article 267 mein 'Contingency Fund of India' banaya gaya hai, jiski advance rakam Rashtrapati apni marzi se kisi emergency expense ke liye use kar sakte hain, baad mein Parliament se approval liya jaata hai." },
+        { "speaker": "raju", "text": "Achha, ye to ek emergency 'petty cash box' jaisa laga!" },
+        { "speaker": "aman", "text": "Bilkul sahi analogy! Ek aur zaroori power - Article 280 ke tahat, Rashtrapati har 5 saal mein ek 'Finance Commission' banate hain, jo Kendra aur rajyon ke beech tax revenue ka batwaara (distribution) suggest karta hai." },
+        { "speaker": "raju", "text": "Achha, Finance Commission bhi Rashtrapati hi banata hai! Ye to bahut wide power hai finance ke maamle mein!" }
+      ],
+      "navigation": { "next": "card_66_guess_who_recommends_money_bill", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_66_guess_who_recommends_money_bill",
+      "card_slug": "card_66_guess_who_recommends_money_bill",
+      "type": "guess",
+      "concept_id": "who_recommends_money_bill_guess",
+      "level": 8,
+      "progress": { "current": 66, "total": 96 },
+      "guess_payload": {
+        "question": "Kitne saalon mein ek baar Rashtrapati Finance Commission ka gathan (constitute) karte hain?",
+        "options": [
+          { "id": "A", "text": "Har saal" },
+          { "id": "B", "text": "Har 5 saal mein" },
+          { "id": "C", "text": "Har 10 saal mein" },
+          { "id": "D", "text": "Sirf ek baar" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 280 ke anusar, Rashtrapati har 5 saal mein (ya zaroorat padne par pehle bhi) Finance Commission ka gathan karte hain."
+      },
+      "navigation": { "next": "card_67_quiz1_budget", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_67_quiz1_budget",
+      "card_slug": "card_67_quiz1_budget",
+      "type": "quiz",
+      "concept_id": "budget_quiz",
+      "level": 8,
+      "progress": { "current": 67, "total": 96 },
+      "quiz_payload": {
+        "question": "Article 112 ke anusar 'Annual Financial Statement' kise kehte hain?",
+        "options": [
+          { "id": "A", "text": "Economic Survey" },
+          { "id": "B", "text": "Budget" },
+          { "id": "C", "text": "Finance Commission Report" },
+          { "id": "D", "text": "Five Year Plan" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 112 mein 'Annual Financial Statement' ka hi common naam 'Budget' hai, jo Rashtrapati ki taraf se har saal Parliament mein rakha jaata hai."
+      },
+      "navigation": { "next": "card_68_quiz2_contingency_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_68_quiz2_contingency_multistatement",
+      "card_slug": "card_68_quiz2_contingency_multistatement",
+      "type": "quiz",
+      "concept_id": "contingency_multistatement",
+      "level": 8,
+      "progress": { "current": 68, "total": 96 },
+      "quiz_payload": {
+        "question": "Kathan 1: Article 267 ke tahat 'Contingency Fund of India' banaya gaya hai jise Rashtrapati emergency expenses ke liye use kar sakta hai. Kathan 2: Money Bill Rashtrapati ki poorv sifarish ke bina Lok Sabha mein introduce nahi ho sakta. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - Article 267 aur Article 117 dono hi Rashtrapati ki financial powers ke important parts hain."
+      },
+      "navigation": { "next": "card_69_quiz3_finance_commission", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_69_quiz3_finance_commission",
+      "card_slug": "card_69_quiz3_finance_commission",
+      "type": "quiz",
+      "concept_id": "finance_commission_quiz",
+      "level": 8,
+      "progress": { "current": 69, "total": 96 },
+      "quiz_payload": {
+        "question": "Article 280 ke tahat Finance Commission ka kya kaam hai?",
+        "options": [
+          { "id": "A", "text": "Kendra aur rajyon ke beech tax revenue ke batwaare ki sifarish karna" },
+          { "id": "B", "text": "Judges ki niyukti karna" },
+          { "id": "C", "text": "Election karana" },
+          { "id": "D", "text": "Ordinance banana" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Article 280 ke tahat Finance Commission Kendra aur rajyon ke beech tax revenue ke distribution (batwaare) ki sifarish karta hai."
+      },
+      "navigation": { "next": "card_70_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_70_milestone8",
+      "card_slug": "card_70_milestone8",
+      "type": "milestone",
+      "concept_id": "module8_complete",
+      "level": 8,
+      "progress": { "current": 70, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💰",
+        "completed_topic": "Financial Powers (Article 112, 267, 280)",
+        "xp_earned": 55,
+        "milestone_progress": "Module 8/11 Clear",
+        "motivational_quote": "Zabardast! Budget aur Finance Commission dono clear ho gaye. Ab Rashtrapati ki sabse interesting power - kisi ko maafi dena - dekhte hain!"
+      },
+      "navigation": { "next": "card_71_article72_pardon_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_71_article72_pardon_intro",
+      "card_slug": "card_71_article72_pardon_intro",
+      "type": "chat",
+      "concept_id": "article72_pardon_intro",
+      "level": 9,
+      "progress": { "current": 71, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab humne Governor ke case mein Article 161 padha tha jo pardoning power deta hai. Rashtrapati ke liye ye power Article 72 mein hai, aur ye Governor se zyada wide (vistrit) hai." },
+        { "speaker": "raju", "text": "Achha, Rashtrapati zyada power rakhta hai kis maamle mein?" },
+        { "speaker": "aman", "text": "Rashtrapati 4 tarah ke cases mein saza maaf kar sakta hai: (1) Court Martial (military court) dwara di gayi saza, (2) Union law ke against apraadh (offence) ki saza, (3) Death sentence, aur (4) jab saza Union subject par ho." },
+        { "speaker": "raju", "text": "Wait, Governor to death sentence aur court martial dono maaf nahi kar sakta tha, lekin Rashtrapati dono kar sakta hai?" }
+      ],
+      "navigation": { "next": "card_72_governor_president_pardon_comparison", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_72_governor_president_pardon_comparison",
+      "card_slug": "card_72_governor_president_pardon_comparison",
+      "type": "chat",
+      "concept_id": "governor_president_pardon_comparison",
+      "level": 9,
+      "progress": { "current": 72, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi yaad kiya! Rashtrapati (Article 72) court martial ki saza aur death sentence dono maaf kar sakta hai - ye do exclusive powers hain jo sirf Rashtrapati ke paas hain, Governor (Article 161) ke paas nahi." },
+        { "speaker": "raju", "text": "Ye to bahut zaroori difference hai, isko main bilkul yaad rakhunga!" },
+        { "speaker": "aman", "text": "Aur ek zaroori baat - jaise humne Governor ke case mein padha, isme bhi 5 tarah ke actions aate hain - Pardon (poori maafi), Commutation (saza ka nature badalna), Remission (avadhi kam karna), Respite (kam saza), aur Reprieve (temporary rok)." },
+        { "speaker": "raju", "text": "Achha, ye 5 types to same hi hain jo humne Governor ke chapter mein padhe the!" }
+      ],
+      "navigation": { "next": "card_73_landmark_pardon_cases", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_73_landmark_pardon_cases",
+      "card_slug": "card_73_landmark_pardon_cases",
+      "type": "chat",
+      "concept_id": "landmark_pardon_cases",
+      "level": 9,
+      "progress": { "current": 73, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek zaroori case yaad rakho - Kehar Singh vs Union of India (1989), jisme Supreme Court ne kaha tha ki Rashtrapati ki pardoning power ek constitutional power hai jo court ke judicial decision se alag hai - ye 'executive act' hai." },
+        { "speaker": "raju", "text": "Matlab pardon dena court ka nahi, Rashtrapati ka apna kaam hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur ek aur zaroori case - Epuru Sudhakar case (2006) mein SC ne kaha ki agar pardoning power ka istemal manmaana (arbitrary), mala fide, ya kisi galat vichar se ho, to iski limited judicial review ho sakti hai." },
+        { "speaker": "raju", "text": "Achha, matlab ye bhi wahi 'karan batana zaroori nahi lekin manmaani nahi honi chahiye' wala principle hai jo humne Governor removal case mein padha tha!" }
+      ],
+      "navigation": { "next": "card_74_guess_court_martial_governor", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_74_guess_court_martial_governor",
+      "card_slug": "card_74_guess_court_martial_governor",
+      "type": "guess",
+      "concept_id": "court_martial_governor_guess",
+      "level": 9,
+      "progress": { "current": 74, "total": 96 },
+      "guess_payload": {
+        "question": "Ek soldier ko court martial (military court) ne saza di hai. Kya rajya ka Governor use maaf kar sakta hai?",
+        "options": [
+          { "id": "A", "text": "Haan, Governor apni Article 161 power se kar sakta hai" },
+          { "id": "B", "text": "Nahi, sirf Rashtrapati hi court martial ki saza maaf kar sakte hain" },
+          { "id": "C", "text": "Sirf CM ki salah se Governor kar sakta hai" },
+          { "id": "D", "text": "Supreme Court hi decide karega" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Court martial (military court) dwara di gayi saza sirf Rashtrapati (Article 72) maaf kar sakte hain - ye Governor (Article 161) ke pardoning power se bahar hai."
+      },
+      "navigation": { "next": "card_75_quiz1_article72", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_75_quiz1_article72",
+      "card_slug": "card_75_quiz1_article72",
+      "type": "quiz",
+      "concept_id": "article72_quiz",
+      "level": 9,
+      "progress": { "current": 75, "total": 96 },
+      "quiz_payload": {
+        "question": "Rashtrapati ki pardoning power (Article 72), Governor ki pardoning power (Article 161) se kis maamle mein zyada wide hai?",
+        "options": [
+          { "id": "A", "text": "Sirf Remission ke maamle mein" },
+          { "id": "B", "text": "Death sentence aur Court Martial ki saza maaf karne mein" },
+          { "id": "C", "text": "Dono ki power ek jaisi hai" },
+          { "id": "D", "text": "Sirf civil cases mein" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Rashtrapati Death Sentence aur Court Martial dono ki saza maaf kar sakta hai, jabki Governor ye dono nahi kar sakta - ye Article 72 ka Article 161 se exclusive difference hai."
+      },
+      "navigation": { "next": "card_76_quiz2_kehar_singh_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_76_quiz2_kehar_singh_multistatement",
+      "card_slug": "card_76_quiz2_kehar_singh_multistatement",
+      "type": "quiz",
+      "concept_id": "kehar_singh_multistatement",
+      "level": 9,
+      "progress": { "current": 76, "total": 96 },
+      "quiz_payload": {
+        "question": "Kathan 1: Kehar Singh case mein SC ne kaha tha ki pardoning power ek executive act hai, judicial decision nahi. Kathan 2: Epuru Sudhakar case mein SC ne kaha ki agar pardon ka istemal mala fide ho, to limited judicial review sambhav hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - Kehar Singh case (1989) aur Epuru Sudhakar case (2006), dono hi pardoning power ki nature spasht karte hain."
+      },
+      "navigation": { "next": "card_77_quiz3_five_types", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_77_quiz3_five_types",
+      "card_slug": "card_77_quiz3_five_types",
+      "type": "quiz",
+      "concept_id": "five_types_quiz",
+      "level": 9,
+      "progress": { "current": 77, "total": 96 },
+      "quiz_payload": {
+        "question": "Saza ke type ko badal dena (jaise death sentence ko life imprisonment mein badalna), kya kehlata hai?",
+        "options": [
+          { "id": "A", "text": "Remission" },
+          { "id": "B", "text": "Commutation" },
+          { "id": "C", "text": "Respite" },
+          { "id": "D", "text": "Reprieve" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Commutation mein saza ka nature (type) hi badal diya jaata hai, jaise death sentence ko life imprisonment mein badalna - ye Remission (sirf duration kam karna) se alag hai."
+      },
+      "navigation": { "next": "card_78_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_78_milestone9",
+      "card_slug": "card_78_milestone9",
+      "type": "milestone",
+      "concept_id": "module9_complete",
+      "level": 9,
+      "progress": { "current": 78, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Pardoning Power (Article 72) & Landmark Cases",
+        "xp_earned": 60,
+        "milestone_progress": "Module 9/11 Clear",
+        "motivational_quote": "Zabardast! Death sentence aur court martial ka trap ab bilkul clear hai. Ab Rashtrapati ki sabse powerful shakti - Emergency Powers dekhte hain!"
+      },
+      "navigation": { "next": "card_79_article352_national_emergency", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_79_article352_national_emergency",
+      "card_slug": "card_79_article352_national_emergency",
+      "type": "chat",
+      "concept_id": "article352_national_emergency",
+      "level": 10,
+      "progress": { "current": 79, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ab Constitution ki sabse powerful aur khaas power dekhte hain - Emergency Provisions. Article 352 ke tahat Rashtrapati 'National Emergency' ghoshit (declare) kar sakta hai, agar desh ki suraksha ko khatra ho." },
+        { "speaker": "raju", "text": "Konsi situations mein National Emergency lagti hai sir?" },
+        { "speaker": "aman", "text": "Teen situations mein - Yudh (War), Bahri aakraman (External Aggression), ya 'Sashastra Vidroh' (Armed Rebellion). Ye ghoshna sirf likhit Cabinet ki salah par hi ki jaa sakti hai, aur 1 mahine ke andar Parliament se 2/3 bahumat se approve honi chahiye." },
+        { "speaker": "raju", "text": "'Armed Rebellion'? Ye word thoda ajeeb lag raha hai, pehle kuch alag tha kya?" }
+      ],
+      "navigation": { "next": "card_80_44th_amendment_internal_disturbance", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_80_44th_amendment_internal_disturbance",
+      "card_slug": "card_80_44th_amendment_internal_disturbance",
+      "type": "chat",
+      "concept_id": "44th_amendment_internal_disturbance",
+      "level": 10,
+      "progress": { "current": 80, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut sahi observation! Pehle ye word 'Internal Disturbance' (aantarik gadbadi) tha, jo 1975 ki Emergency mein misuse hua tha kyunki ye bahut vague (dhundhla) tha. Isliye 44th Amendment (1978) ne ise badal kar 'Armed Rebellion' kar diya, jo zyada spasht hai." },
+        { "speaker": "raju", "text": "Achha! Ye 1975 wali Emergency ki wajah se ye word change hua! Ye to important historical fact hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur ek zaroori baat - National Emergency poore desh ke liye ya sirf ek particular part ke liye bhi ghoshit ki jaa sakti hai. Isse ab tak Bharat mein 3 baar lagaya gaya hai - 1962 (China war), 1971 (Pakistan war), aur 1975 (internal disturbance)." },
+        { "speaker": "raju", "text": "Achha, 3 baar! Ye numbers bhi yaad rakhne padenge exam ke liye!" }
+      ],
+      "navigation": { "next": "card_81_article356_presidents_rule", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_81_article356_presidents_rule",
+      "card_slug": "card_81_article356_presidents_rule",
+      "type": "chat",
+      "concept_id": "article356_presidents_rule",
+      "level": 10,
+      "progress": { "current": 81, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Article 356 dekho - 'President's Rule' (Rashtrapati Shasan), jise humne Governor ke discretionary power wale chapter mein bhi mention kiya tha. Jab kisi rajya mein constitutional machinery fail ho jaaye, Governor ki report par Rashtrapati ye lagate hain." },
+        { "speaker": "raju", "text": "Achha, matlab Governor hi ye trigger karta hai apni report se?" },
+        { "speaker": "aman", "text": "Zyadatar cases mein haan. Isse Parliament se 2 mahine ke andar approval milni chahiye, aur ye maximum 3 saal tak (har 6 mahine mein extension ke saath) chal sakti hai. S.R. Bommai case (1994) ne ismein bahut sudhaar kiya - iski judicial review ab sambhav hai." },
+        { "speaker": "raju", "text": "Achha, S.R. Bommai case to humne Governor ke chapter mein bhi padha tha - floor test wala! Yahan bhi wahi case relevant hai!" }
+      ],
+      "navigation": { "next": "card_82_article360_financial_emergency", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_82_article360_financial_emergency",
+      "card_slug": "card_82_article360_financial_emergency",
+      "type": "chat",
+      "concept_id": "article360_financial_emergency",
+      "level": 10,
+      "progress": { "current": 82, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Teesri type hai Article 360 - 'Financial Emergency'. Agar Bharat ya kisi bhi part ki 'financial stability ya credit' ko khatra ho, to Rashtrapati ise ghoshit kar sakte hain." },
+        { "speaker": "raju", "text": "Ye kabhi lagi hai India mein?" },
+        { "speaker": "aman", "text": "Ye ek bahut zaroori exam fact hai - Financial Emergency (Article 360) aaj tak Bharat mein KABHI bhi lagu NAHI ki gayi hai, chahe 1991 mein Balance of Payments crisis jaisi situation aayi thi." },
+        { "speaker": "raju", "text": "Achha! Ye to yaad rakhna hi padega - 'kabhi use hi nahi hui' - National Emergency 3 baar lagi, President's Rule bahut baar lagi, lekin Financial Emergency kabhi nahi!" }
+      ],
+      "navigation": { "next": "card_83_guess_which_emergency_never_used", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_83_guess_which_emergency_never_used",
+      "card_slug": "card_83_guess_which_emergency_never_used",
+      "type": "guess",
+      "concept_id": "which_emergency_never_used_guess",
+      "level": 10,
+      "progress": { "current": 83, "total": 96 },
+      "guess_payload": {
+        "question": "Bharat mein kaunsi type ki emergency AAJ TAK kabhi bhi lagu nahi ki gayi hai?",
+        "options": [
+          { "id": "A", "text": "National Emergency (Article 352)" },
+          { "id": "B", "text": "President's Rule (Article 356)" },
+          { "id": "C", "text": "Financial Emergency (Article 360)" },
+          { "id": "D", "text": "Sabhi kai baar lagi hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Financial Emergency (Article 360) Bharat mein aaj tak kabhi bhi ghoshit nahi ki gayi hai, jabki National Emergency 3 baar (1962, 1971, 1975) aur President's Rule kayi baar lagayi ja chuki hai."
+      },
+      "navigation": { "next": "card_84_quiz1_national_emergency", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_84_quiz1_national_emergency",
+      "card_slug": "card_84_quiz1_national_emergency",
+      "type": "quiz",
+      "concept_id": "national_emergency_quiz",
+      "level": 10,
+      "progress": { "current": 84, "total": 96 },
+      "quiz_payload": {
+        "question": "44th Amendment (1978) ne National Emergency ke kis ground ko badal kar 'Armed Rebellion' kiya?",
+        "options": [
+          { "id": "A", "text": "War" },
+          { "id": "B", "text": "External Aggression" },
+          { "id": "C", "text": "Internal Disturbance" },
+          { "id": "D", "text": "Financial Instability" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "44th Amendment ne 'Internal Disturbance' ko badal kar 'Armed Rebellion' kar diya, taaki 1975 jaisi Emergency ka misuse dobara na ho sake - ye word zyada precise hai."
+      },
+      "navigation": { "next": "card_85_quiz2_presidents_rule_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_85_quiz2_presidents_rule_multistatement",
+      "card_slug": "card_85_quiz2_presidents_rule_multistatement",
+      "type": "quiz",
+      "concept_id": "presidents_rule_multistatement",
+      "level": 10,
+      "progress": { "current": 85, "total": 96 },
+      "quiz_payload": {
+        "question": "Kathan 1: Article 356 ke tahat President's Rule maximum 3 saal tak chal sakti hai. Kathan 2: S.R. Bommai case (1994) ne President's Rule ki judicial review ko sambhav banaya. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - President's Rule maximum 3 saal tak (6-6 mahine ke extensions se) chal sakti hai, aur S.R. Bommai case ne isse judicial review ke daayre mein laya."
+      },
+      "navigation": { "next": "card_86_quiz3_financial_emergency", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_86_quiz3_financial_emergency",
+      "card_slug": "card_86_quiz3_financial_emergency",
+      "type": "quiz",
+      "concept_id": "financial_emergency_quiz",
+      "level": 10,
+      "progress": { "current": 86, "total": 96 },
+      "quiz_payload": {
+        "question": "Article 360 kis type ki emergency se related hai?",
+        "options": [
+          { "id": "A", "text": "National Emergency" },
+          { "id": "B", "text": "President's Rule" },
+          { "id": "C", "text": "Financial Emergency" },
+          { "id": "D", "text": "Local Emergency" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 360 - Financial Emergency, jo Bharat ya uske kisi part ki financial stability/credit ko khatra hone par lagayi jaa sakti hai, lekin abhi tak kabhi lagu nahi ki gayi."
+      },
+      "navigation": { "next": "card_87_milestone10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_87_milestone10",
+      "card_slug": "card_87_milestone10",
+      "type": "milestone",
+      "concept_id": "module10_complete",
+      "level": 10,
+      "progress": { "current": 87, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🚨",
+        "completed_topic": "Emergency Powers (Article 352, 356, 360)",
+        "xp_earned": 65,
+        "milestone_progress": "Module 10/11 Clear",
+        "motivational_quote": "Bahut hi high-level module tumne clear kiya! Ab last module - discretionary powers aur bihar ka Rashtrapati connection dekhte hain!"
+      },
+      "navigation": { "next": "card_88_discretionary_powers_president", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_88_discretionary_powers_president",
+      "card_slug": "card_88_discretionary_powers_president",
+      "type": "chat",
+      "concept_id": "discretionary_powers_president",
+      "level": 11,
+      "progress": { "current": 88, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo ab dekhte hain Rashtrapati kab apni khud ki discretion (vivek) use kar sakta hai, jaise humne Governor ke case mein Article 163 padha tha." },
+        { "speaker": "raju", "text": "Konsi situations hain jaha Rashtrapati apni marzi chala sakta hai?" },
+        { "speaker": "aman", "text": "Pehli - Hung Lok Sabha mein PM chunna, jaise humne Governor ke Hung Assembly case mein padha. Doosri - agar Council of Ministers Lok Sabha mein bahumat kho de aur resign na kare, to Rashtrapati use dismiss kar sakta hai. Teesri - ek bar bill ko reconsideration ke liye wapas bhejna (suspensive veto ka use)." },
+        { "speaker": "raju", "text": "Achha, ye teeno to bilkul same pattern hain jo Governor ke discretionary powers mein tha!" }
+      ],
+      "navigation": { "next": "card_89_veto_comparison_us_president", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_89_veto_comparison_us_president",
+      "card_slug": "card_89_veto_comparison_us_president",
+      "type": "chat",
+      "concept_id": "veto_comparison_us_president",
+      "level": 11,
+      "progress": { "current": 89, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek zaroori comparative fact - Bharat ke Rashtrapati ke paas 'Item Veto' nahi hota, jo US President ke paas hota hai. Item veto ka matlab hai bill ke kisi ek particular hisse ko reject karna, poore bill ko nahi." },
+        { "speaker": "raju", "text": "Achha, to Bharat ke Rashtrapati ko poora bill hi accept ya reject karna padta hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ya poori tarah assent, ya poori tarah rok, ya poora bill wapas bhejna - kisi ek line ko hata kar baaki accept nahi kar sakte. Ye ek zaroori Bharat-US comparison hai jo Prelims mein aa sakta hai." },
+        { "speaker": "raju", "text": "Achha, note kar liya - 'No Item Veto in India' - ye alag fact hai jo US se compare karke poochha jaayega!" }
+      ],
+      "navigation": { "next": "card_90_bihar_rajendra_prasad", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_90_bihar_rajendra_prasad",
+      "card_slug": "card_90_bihar_rajendra_prasad",
+      "type": "chat",
+      "concept_id": "bihar_rajendra_prasad",
+      "level": 11,
+      "progress": { "current": 90, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite - Ab Bihar se juda ek gaurav ka fact! Bharat ke pehle Rashtrapati Dr. Rajendra Prasad the, jinka janm Bihar ke Siwan zile ke Ziradei gaon mein hua tha." },
+        { "speaker": "raju", "text": "Wow! Bihar se pehle Rashtrapati! Ye to hume zaroor pata hona chahiye!" },
+        { "speaker": "aman", "text": "Bilkul! Dr. Rajendra Prasad Constituent Assembly ke bhi President the, aur 1950 se lekar 1962 tak, do baar (do term) Rashtrapati rahe - wo Bharat ke ekmatr (only) Rashtrapati hain jo do baar chune gaye. 1957 mein wo unopposed (bina virodh ke) bhi chune gaye the." },
+        { "speaker": "raju", "text": "⭐ Do term, unopposed election, Constituent Assembly President - itne saare records ek hi vyakti ke naam! Ye to definitely exam mein poochha jaayega!" }
+      ],
+      "navigation": { "next": "card_91_guess_item_veto", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_91_guess_item_veto",
+      "card_slug": "card_91_guess_item_veto",
+      "type": "guess",
+      "concept_id": "item_veto_guess",
+      "level": 11,
+      "progress": { "current": 91, "total": 96 },
+      "guess_payload": {
+        "question": "Bharat ke Rashtrapati kis prakar ka veto USE NAHI kar sakte, jo US President ke paas hota hai?",
+        "options": [
+          { "id": "A", "text": "Absolute Veto" },
+          { "id": "B", "text": "Pocket Veto" },
+          { "id": "C", "text": "Item Veto" },
+          { "id": "D", "text": "Suspensive Veto" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Bharat ke Rashtrapati ke paas 'Item Veto' nahi hai - wo bill ke kisi ek hisse ko reject nahi kar sakte, poora bill hi accept ya reject karna hota hai. Absolute, Pocket aur Suspensive - teeno veto Bharat mein hain."
+      },
+      "navigation": { "next": "card_92_quiz1_discretionary", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_92_quiz1_discretionary",
+      "card_slug": "card_92_quiz1_discretionary",
+      "type": "quiz",
+      "concept_id": "discretionary_quiz",
+      "level": 11,
+      "progress": { "current": 92, "total": 96 },
+      "quiz_payload": {
+        "question": "Konsi situation Rashtrapati ki discretionary power ka udaharan nahi hai?",
+        "options": [
+          { "id": "A", "text": "Hung Lok Sabha mein PM chunna" },
+          { "id": "B", "text": "Council of Ministers ko dismiss karna jo bahumat kho chuki ho" },
+          { "id": "C", "text": "PM ki salah par baaki Ministers ki niyukti karna" },
+          { "id": "D", "text": "Bill ko ek baar reconsideration ke liye wapas bhejna" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Baaki Ministers ki niyukti PM ki salah par hoti hai - ye discretionary power nahi hai. Hung Lok Sabha mein PM chunna, majority-lacking Council ko dismiss karna, aur bill wapas bhejna - ye teeno discretionary powers hain."
+      },
+      "navigation": { "next": "card_93_quiz2_rajendra_prasad_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_93_quiz2_rajendra_prasad_multistatement",
+      "card_slug": "card_93_quiz2_rajendra_prasad_multistatement",
+      "type": "quiz",
+      "concept_id": "rajendra_prasad_multistatement",
+      "level": 11,
+      "progress": { "current": 93, "total": 96 },
+      "quiz_payload": {
+        "question": "Kathan 1: Dr. Rajendra Prasad Bharat ke ekmatr Rashtrapati hain jo do baar chune gaye. Kathan 2: Dr. Rajendra Prasad ka janm Bihar ke Siwan zile ke Ziradei gaon mein hua tha. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - Dr. Rajendra Prasad Bihar ke Ziradei (Siwan) mein paida hue the aur 1950-1962 tak do baar Rashtrapati rahe, ye record aaj tak kisi aur ne nahi tod paya."
+      },
+      "navigation": { "next": "card_94_quiz3_unopposed_election", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_94_quiz3_unopposed_election",
+      "card_slug": "card_94_quiz3_unopposed_election",
+      "type": "quiz",
+      "concept_id": "unopposed_election_quiz",
+      "level": 11,
+      "progress": { "current": 94, "total": 96 },
+      "quiz_payload": {
+        "question": "Dr. Rajendra Prasad kis saal unopposed (bina virodh ke) Rashtrapati chune gaye the?",
+        "options": [
+          { "id": "A", "text": "1950" },
+          { "id": "B", "text": "1957" },
+          { "id": "C", "text": "1962" },
+          { "id": "D", "text": "1952" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Dr. Rajendra Prasad 1957 mein apne dusre karyakal ke liye unopposed chune gaye the - ye Bharat ke Rashtrapati chunav ka ek zaroori historical fact hai."
+      },
+      "navigation": { "next": "card_95_milestone11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_95_milestone11",
+      "card_slug": "card_95_milestone11",
+      "type": "milestone",
+      "concept_id": "module11_complete",
+      "level": 11,
+      "progress": { "current": 95, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌾",
+        "completed_topic": "Discretionary Powers, Veto Comparison & Bihar Special",
+        "xp_earned": 65,
+        "milestone_progress": "Module 11/11 Clear",
+        "motivational_quote": "Fantastic! Poora President chapter khatam ho gaya! Ab officer-level revision aur final challenge ke liye taiyar ho jao!"
+      },
+      "navigation": { "next": "card_96_summary_revision", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_96_summary_revision",
+      "card_slug": "card_96_summary_revision",
+      "type": "summary",
+      "concept_id": "chapter_summary",
+      "level": 12,
+      "progress": { "current": 96, "total": 96 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - President of India",
+        "revision_points": [
+          {
+            "topic": "Election & Value of Vote",
+            "point": "Article 54-55: Electoral College mein Parliament aur State Assembly ke ELECTED members (Delhi/Puducherry bhi, 70th Amendment); MLA/MP vote value 1971 census (84th Amendment) par based; Vidhan Parishad aur nominated members vote nahi karte."
+          },
+          {
+            "topic": "Term, Impeachment, Vacancy",
+            "point": "Article 56 - 5 saal term, resignation VP ko; Article 61 - sirf Constitution violation par impeachment (dono sadano mein 2/3 majority, kabhi use nahi hua); Article 65 - VP acting President banta hai."
+          },
+          {
+            "topic": "Veto Powers - Article 111",
+            "point": "3 types - Absolute, Suspensive, Pocket Veto; koi time limit nahi (US se ulta - 10 din); 1986 mein Zail Singh ne Postal Bill par Pocket Veto use kiya; Money Bill wapas nahi bhej sakte."
+          },
+          {
+            "topic": "Pardoning Power (Article 72) vs Governor (Article 161)",
+            "point": "Rashtrapati Death Sentence aur Court Martial dono maaf kar sakta hai (Governor nahi kar sakta); Kehar Singh case - executive act; Epuru Sudhakar case - mala fide par judicial review."
+          },
+          {
+            "topic": "Emergency Powers & Bihar Special",
+            "point": "Article 352 (National, 3 baar lagi - 1962/71/75), Article 356 (President's Rule, S.R. Bommai case), Article 360 (Financial, kabhi nahi lagi); Dr. Rajendra Prasad - Bihar (Ziradei, Siwan) se, ekmatr do baar wale Rashtrapati."
+          }
+        ]
+      },
+      "navigation": { "next": "card_97_final_quiz", "button_text": "Attempt Final Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_97_final_quiz",
+      "card_slug": "card_97_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 12,
+      "progress": { "current": 97, "total": 97 },
+      "quiz_payload": {
+        "question": "Assertion (A): Rashtrapati ki pardoning power (Article 72), Governor ki pardoning power (Article 161) se vyapak (wider) hai.\nReason (R): Article 72 ke tahat Rashtrapati Court Martial dwara di gayi saza aur Death Sentence, dono maaf kar sakta hai, jabki Article 161 ke tahat Governor in dono maamlon mein pardon nahi de sakta, chahe saza rajya kanoon ke tahat hi kyun na di gayi ho.\nNiche diye gaye code se sahi uttar chunein:",
+        "options": [
+          { "id": "A", "text": "A aur R dono sahi hain, aur R, A ki sahi vyakhya karta hai" },
+          { "id": "B", "text": "A aur R dono sahi hain, lekin R, A ki sahi vyakhya nahi karta" },
+          { "id": "C", "text": "A sahi hai, R galat hai" },
+          { "id": "D", "text": "A galat hai, R sahi hai" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "A sahi hai - Rashtrapati ki pardoning power Governor se vyapak hai. R bhi sahi hai aur A ki sahi vyakhya karta hai - kyunki exact yahi do exclusive powers (Court Martial aur Death Sentence) hain jo Article 72 ko Article 161 se alag aur wider banate hain. Ye BPSC/UPSC ka classic Assertion-Reason pattern hai jo Rashtrapati aur Governor ki pardoning powers ke comparison par based hota hai."
+      },
+      "navigation": { "next": "card_98_trophy", "button_text": "Finish Final Quiz ➔" }
+    },
+    {
+      "card_id": "card_98_trophy",
+      "card_slug": "card_98_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 12,
+      "progress": { "current": 98, "total": 98 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER TROPHY UNLOCKED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "President of India - Indian Constitution & Polity (Complete)",
+        "xp_earned": 180,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Zabardast Raju! Ab tum Rashtrapati ke Article 52 se 123 tak, election ka complex formula, veto powers ke traps, emergency provisions, aur Bihar ke gaurav Dr. Rajendra Prasad tak - sab officer level par jaante ho. BPSC ka ye poora chapter ab tumhari mutthi mein hai!"
+      },
+      "navigation": { "next": "topic_complete", "button_text": "Finish Chapter 🎉" }
+    }
+  ]
+}
