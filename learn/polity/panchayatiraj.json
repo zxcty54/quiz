@@ -1,2162 +1,1479 @@
+
 {
-  "topic_id": "panchayati_raj_polity",
-  "topic_title": "Panchayati Raj System in India",
-  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
-  "total_cards": 72,
+  "topic_id": "indian_polity_panchayati_raj",
+  "topic_title": "पंचायती राज (Panchayati Raj) - Indian Polity",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 83,
   "characters": {
-    "aman": {
-      "name": "Aman Sir",
-      "role": "teacher",
-      "avatar": "👨‍🏫"
-    },
-    "raju": {
-      "name": "Raju",
-      "role": "student",
-      "avatar": "👦"
-    }
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
   },
   "cards": [
     {
       "card_id": "card_01_intro",
       "card_slug": "card_01_intro",
       "type": "intro",
-      "concept_id": "intro_panchayati_raj",
+      "concept_id": "chapter_intro",
       "level": 1,
-      "progress": {
-        "current": 1,
-        "total": 72
-      },
+      "progress": { "current": 1, "total": 83 },
       "intro_payload": {
-        "title": "Panchayati Raj System in India",
-        "icon": "🏘️",
-        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "chapter_title": "पंचायती राज (Panchayati Raj)",
+        "chapter_icon": "🏘️",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
         "learning_outcomes": [
-          "Understanding Panchayati Raj - Grassroots Democracy",
-          "73rd Constitutional Amendment (1992) - Game Changer",
-          "Three-Tier Structure: Gram, Block, District",
-          "Powers, Functions & 11th Schedule",
-          "Bihar Panchayati Raj Act 2006 - BPSC TRE Special",
-          "BPSC/SSC Favorite Traps & PYQ Patterns"
-        ],
-        "estimated_time": "30 minutes",
-        "total_xp": 600
+          "Balwant Rai Mehta, Ashok Mehta, GVK Rao, L.M. Singhvi Committees ka poora vivaran",
+          "73rd Constitutional Amendment Act, 1992 aur Part IX (Article 243-243O)",
+          "Three-tier structure: Gram Panchayat, Panchayat Samiti, Zila Parishad",
+          "Gram Sabha, Reservation (Article 243D), State Election Commission, State Finance Commission",
+          "Eleventh Schedule ke 29 subjects",
+          "PESA Act, 1996 (Scheduled Areas)",
+          "⭐ BPSC TRE Special: Bihar Panchayati Raj Act 2006, 50% Women Reservation, Gram Kachahri"
+        ]
       },
-      "navigation": {
-        "next": "card_02_village_daily_life",
-        "button_text": "Start Learning 🚀"
-      }
+      "navigation": { "next": "card_02_daily_life", "button_text": "Chapter Shuru Karein ➔" }
     },
     {
-      "card_id": "card_02_village_daily_life",
-      "card_slug": "card_02_village_daily_life",
+      "card_id": "card_02_daily_life",
+      "card_slug": "card_02_daily_life",
       "type": "chat",
-      "concept_id": "village_daily_life",
+      "concept_id": "need_for_local_govt",
       "level": 1,
-      "progress": {
-        "current": 2,
-        "total": 72
-      },
+      "progress": { "current": 2, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, tumhare gaon me agar kisi ko nalka todna ho, sadak banana ho, ya school me teacher ki zaroorat ho — to kisse baat karte hain log?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, hamare gaon me to Mukhiya ji se baat karte hain! Wo sab kaam karwate hain."
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul sahi! Mukhiya ji ka official designation hai 'Gram Panchayat Pradhan'. Ye local government ka sabse chhota par sabse important level hai. India ki 65% population gaon me rehti hai — unke liye ye Panchayati Raj system hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "To Panchayati Raj matlab gaon ki sarkar?"
-        }
+        { "speaker": "aman", "text": "Raju, socho tumhare gaon mein school ke saamne wali sadak kharab ho gayi hai, aur ek naya hand-pump bhi lagwana hai. Kya iske liye tumhare gaon walon ko Delhi jaakar Prime Minister se milna padega?" },
+        { "speaker": "raju", "text": "Nahi Sir, itni chhoti baat ke liye Delhi kaun jayega! Ye to gaon ke mukhiya ya sarpanch hi karwa denge." },
+        { "speaker": "aman", "text": "Bilkul sahi! Isi soch se ek system bana hai jisme gaon, block aur zile ke chhote-chhote kaam - sadak, paani, safai, school - ye sab local logo ke chune hue pratinidhi khud sambhalte hain. Ise 'Panchayati Raj' kehte hain." },
+        { "speaker": "raju", "text": "Panchayati Raj! Ye naam to suna hai, gaon mein 'Panchayat' bhi hoti hai. Par ye 'Raj' kyun bola jaata hai isse?" }
       ],
-      "navigation": {
-        "next": "card_03_panchayat_meaning",
-        "button_text": "Haan! Dekhte hain exactly kya hai 🏘️"
-      }
+      "navigation": { "next": "card_03_meaning_lsg", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_03_panchayat_meaning",
-      "card_slug": "card_03_panchayat_meaning",
+      "card_id": "card_03_meaning_lsg",
+      "card_slug": "card_03_meaning_lsg",
       "type": "chat",
-      "concept_id": "panchayat_meaning",
+      "concept_id": "meaning_and_local_self_govt",
       "level": 1,
-      "progress": {
-        "current": 3,
-        "total": 72
-      },
+      "progress": { "current": 3, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Panchayat matlab 'Panch' (5 wise elders) ki Sabha. Ancient India me gaon ke 5 respected log milkar panchayat banaते the jo disputes solve karte the. Aaj bhi ye spirit wahi hai — LOCAL SELF-GOVERNMENT!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir par ab to election hote hain na? 5 log thodi hote hain!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Modern Panchayati Raj ek democratic institution hai. Gaon ke log elect karte hain apne representatives ko — jaise Mukhiya, Ward Members. Ye log milkar local development decisions lete hain — jaise school, hospital, sadak, paani ka intezaam."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaaa... to ye bhi ek tarah ki mini parliament hai gaon ki!"
-        }
+        { "speaker": "aman", "text": "Achha sawaal! 'Raj' isliye bola jaata hai kyunki ye ek poora shasan-tantra (governance system) hai jisme gaon ke log khud apna 'raaj' chalate hain - isse [[Local Self-Government|Wo shasan vyavastha jisme sthaniya log apne local matters khud sambhalte hain, chune hue pratinidhiyon ke through]] bhi kehte hain." },
+        { "speaker": "raju", "text": "Local Self-Government? Matlab 'apna shasan apne haath mein'?" },
+        { "speaker": "aman", "text": "Ekdum sahi! Ye idea naya nahi hai - Mahatma Gandhi ka sapna tha 'Gram Swaraj' (village self-rule), jisme har gaon aatm-nirbhar ho aur apne faisle khud le. Panchayati Raj isi vision ko constitutional roop dene ki koshish hai." },
+        { "speaker": "raju", "text": "Achha! Toh ye Gandhiji ke sapne se juda hai. Par Sir, ye Constitution mein shuru se hi tha ya baad mein aaya?" }
       ],
-      "navigation": {
-        "next": "card_04_historical_background",
-        "button_text": "Perfect! Ab history dekhte hain 📜"
-      }
+      "navigation": { "next": "card_04_pre_73rd_history", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_04_historical_background",
-      "card_slug": "card_04_historical_background",
+      "card_id": "card_04_pre_73rd_history",
+      "card_slug": "card_04_pre_73rd_history",
       "type": "chat",
-      "concept_id": "historical_background",
+      "concept_id": "article40_dpsp_origin",
       "level": 1,
-      "progress": {
-        "current": 4,
-        "total": 72
-      },
+      "progress": { "current": 4, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Panchayati Raj ka modern journey: Article 40 (DPSP) kehta hai 'State shall organise village panchayats'. Par ye non-justiciable tha — matlab binding nahi tha. 1950-1990 tak states apne hisaab se Panchayat banate the, koi uniformity nahi thi."
-        },
-        {
-          "speaker": "raju",
-          "text": "To sabse pehle kisne Panchayati Raj shuru kiya?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Rajasthan! 2nd October 1959 — Pandit Jawaharlal Nehru ne Nagaur district (Rajasthan) me pehli Panchayat inaugurate ki. Ye Balwant Rai Mehta Committee (1957) ki recommendations pe based thi. Unho ne three-tier structure suggest kiya tha."
-        },
-        {
-          "speaker": "raju",
-          "text": "Teen tier matlab Sir?"
-        }
+        { "speaker": "aman", "text": "Bahut badhiya doubt! Shuru mein 1950 ke Constitution mein Panchayati Raj sirf Article 40 (DPSP) mein tha - jo kehta tha 'State village panchayats ko organize karega'. Lekin ye ek directive tha, mandatory nahi." },
+        { "speaker": "raju", "text": "Matlab ye humne pichhle chapter mein DPSP mein padha tha na - jismein court mein force nahi kar sakte? Toh Panchayat sirf State ki marzi par depend karta tha?" },
+        { "speaker": "aman", "text": "Bilkul sahi yaad rakha! Isi wajah se alag-alag states mein Panchayat ka kaam-kaaj alag-alag tha, kisi mein achha tha kisi mein bilkul nahi. Isko theek karne ke liye kai committees banayi gayin, jinhone dheere-dheere ek strong plan diya." },
+        { "speaker": "raju", "text": "Committees? Kitni committees banayi gayin Sir? Ye to naye naam yaad karne padenge!" }
       ],
-      "navigation": {
-        "next": "card_05_balwant_rai_mehta",
-        "button_text": "Ye sabse important hai! 🎯"
-      }
+      "navigation": { "next": "card_05_guess_first_committee", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_05_balwant_rai_mehta",
-      "card_slug": "card_05_balwant_rai_mehta",
-      "type": "chat",
-      "concept_id": "balwant_rai_mehta",
+      "card_id": "card_05_guess_first_committee",
+      "card_slug": "card_05_guess_first_committee",
+      "type": "guess",
+      "concept_id": "guess_balwant_rai",
       "level": 1,
-      "progress": {
-        "current": 5,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Balwant Rai Mehta Committee (1957): Ye committee Community Development Programme study karne ke liye banayi gayi thi. Recommendation — Three-Tier Structure: (1) Gram Panchayat (Village level), (2) Panchayat Samiti (Block level), (3) Zila Parishad (District level)."
-        },
-        {
-          "speaker": "raju",
-          "text": "To abhi bhi yahi structure hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! 73rd Amendment (1992) ne yahi structure constitutional bana diya. Par beech me bahut committees aayi: Ashok Mehta Committee (1977) — Two-tier suggest kiya, G.V.K. Rao Committee (1985) — District collector ko zyada power, L.M. Singhvi Committee (1986) — Constitutional status maangi!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Itni committees! Par Constitutional status kab mila?"
-        }
-      ],
-      "navigation": {
-        "next": "card_06_73rd_amendment_intro",
-        "button_text": "1992 me! Game changer 🔥"
-      }
-    },
-    {
-      "card_id": "card_06_73rd_amendment_intro",
-      "card_slug": "card_06_73rd_amendment_intro",
-      "type": "chat",
-      "concept_id": "73rd_amendment_intro",
-      "level": 1,
-      "progress": {
-        "current": 6,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "73rd Constitutional Amendment Act, 1992 — India me Panchayati Raj ka Magna Carta! Prime Minister P.V. Narasimha Rao government ne pass kiya. 24 April 1993 se force me aaya. Isse Panchayats ko Constitutional Status mila — Article 243 se 243-O add hue!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab ab compulsory ho gaya states ke liye Panchayat banana?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Lekin ek important exception hai — ye Amendment Part IX me aaya (Article 243), jo sirf 'States' pe apply hota hai. Union Territories pe nahi! Aur Article 243-M kehta hai — ye Scheduled Areas (5th Schedule) aur Tribal Areas (6th Schedule) me apply nahi hoga!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Hain?? To tribal areas me Panchayat nahi hai? Ye to exam me confuse karega!"
-        }
-      ],
-      "navigation": {
-        "next": "card_07_quiz_history_1",
-        "button_text": "Pehle quiz me test karo! 🎯"
-      }
-    },
-    {
-      "card_id": "card_07_quiz_history_1",
-      "card_slug": "card_07_quiz_history_1",
-      "type": "quiz",
-      "concept_id": "quiz_history_1",
-      "level": 1,
-      "progress": {
-        "current": 7,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ BPSC 2023 Pattern: Which committee recommended the Three-Tier Panchayati Raj structure? (Q1/3)",
+      "progress": { "current": 5, "total": 83 },
+      "guess_payload": {
+        "question": "Raju sochta hai - 'Sir, agar Panchayati Raj ka pehla practical suggestion 1950s mein aaya hoga, to shayad Community Development Programme se related koi committee hogi?' Kya Raju ka guess sahi disha mein hai?",
         "options": [
-          { "id": "A", "text": "Ashok Mehta Committee" },
-          { "id": "B", "text": "Balwant Rai Mehta Committee" },
-          { "id": "C", "text": "G.V.K. Rao Committee" },
-          { "id": "D", "text": "L.M. Singhvi Committee" }
+          { "id": "A", "text": "Nahi, Panchayati Raj ka Community Development Programme se koi lena-dena nahi hai" },
+          { "id": "B", "text": "Haan, bilkul sahi disha! Balwant Rai Mehta Committee (1957) ne hi Community Development Programme ki 'review' karte hue Panchayati Raj ka suggestion diya tha" },
+          { "id": "C", "text": "Committee sirf army ke reforms ke liye thi" },
+          { "id": "D", "text": "Panchayati Raj British zamane se hi implemented tha" }
         ],
         "correct_option_id": "B",
-        "explanation": "Balwant Rai Mehta Committee (1957) recommended the Three-Tier Panchayati Raj structure: Gram Panchayat (Village), Panchayat Samiti (Block), and Zila Parishad (District). This was implemented first in Rajasthan on 2nd October 1959 by Pandit Nehru. Ashok Mehta Committee (1977) recommended Two-Tier (no block level). L.M. Singhvi Committee (1986) demanded constitutional status for Panchayats, which was finally granted by 73rd Amendment (1992)."
+        "explanation": "Raju ka guess sahi tha! 1957 mein Balwant Rai Mehta Committee ne 'Community Development Programme' aur 'National Extension Service' ki performance evaluate ki, aur pehli baar ek formal Panchayati Raj system ka suggestion diya."
       },
-      "navigation": {
-        "next": "card_08_quiz_history_2",
-        "button_text": "Next Question ➔"
-      }
+      "navigation": { "next": "card_06_quiz1", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_08_quiz_history_2",
-      "card_slug": "card_08_quiz_history_2",
+      "card_id": "card_06_quiz1",
+      "card_slug": "card_06_quiz1",
       "type": "quiz",
-      "concept_id": "quiz_history_2",
+      "concept_id": "module1_quiz",
       "level": 1,
-      "progress": {
-        "current": 8,
-        "total": 72
-      },
+      "progress": { "current": 6, "total": 83 },
       "quiz_payload": {
-        "question": "⭐ SSC CGL Favorite: The 73rd Constitutional Amendment Act came into force on: (Q2/3)",
+        "question": "Panchayati Raj ka original mandate Bhartiya Samvidhan mein 1992 se pehle kis Article mein tha?",
         "options": [
-          { "id": "A", "text": "26 January 1993" },
-          { "id": "B", "text": "24 April 1993" },
-          { "id": "C", "text": "2 October 1993" },
-          { "id": "D", "text": "15 August 1992" }
+          { "id": "A", "text": "Article 32" },
+          { "id": "B", "text": "Article 40 (DPSP)" },
+          { "id": "C", "text": "Article 356" },
+          { "id": "D", "text": "Article 370" }
         ],
         "correct_option_id": "B",
-        "explanation": "The 73rd Constitutional Amendment Act came into force on 24 April 1993 (not on Republic Day or Independence Day). It added Part IX (Article 243 to 243-O) to the Constitution, giving constitutional status to Panchayati Raj Institutions. This date is significant for BPSC/SSC exams. The amendment was passed in 1992 under P.V. Narasimha Rao's government but enforced from April 1993."
+        "explanation": "Article 40 (Directive Principles of State Policy) mein kaha gaya tha ki State village panchayats ko organize karega, lekin ye non-justiciable directive tha, mandatory nahi."
       },
-      "navigation": {
-        "next": "card_09_quiz_history_3",
-        "button_text": "Last question! 💪"
-      }
+      "navigation": { "next": "card_07_quiz2", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_09_quiz_history_3",
-      "card_slug": "card_09_quiz_history_3",
+      "card_id": "card_07_quiz2",
+      "card_slug": "card_07_quiz2",
       "type": "quiz",
-      "concept_id": "quiz_history_3",
+      "concept_id": "module1_quiz",
       "level": 1,
-      "progress": {
-        "current": 9,
-        "total": 72
-      },
+      "progress": { "current": 7, "total": 83 },
       "quiz_payload": {
-        "question": "⭐ RRB NTPC Pattern: The first Panchayati Raj system was inaugurated in which state? (Q3/3)",
+        "question": "Panchayati Raj system ka philosophical inspiration kis vision se aata hai?",
         "options": [
-          { "id": "A", "text": "Gujarat" },
-          { "id": "B", "text": "Rajasthan" },
-          { "id": "C", "text": "Bihar" },
-          { "id": "D", "text": "Maharashtra" }
+          { "id": "A", "text": "Nehru ka 'Socialist Pattern of Society'" },
+          { "id": "B", "text": "Gandhiji ka 'Gram Swaraj' (village self-rule)" },
+          { "id": "C", "text": "Ambedkar ka 'Annihilation of Caste'" },
+          { "id": "D", "text": "Patel ka 'National Integration'" }
         ],
         "correct_option_id": "B",
-        "explanation": "Rajasthan was the first state to implement Panchayati Raj on 2nd October 1959 in Nagaur district. It was inaugurated by Prime Minister Jawaharlal Nehru. This was based on the Balwant Rai Mehta Committee's recommendations (1957). The second state was Andhra Pradesh (same year). This fact is repeatedly asked in SSC, Railway, and BPSC exams with date/state variations."
+        "explanation": "Panchayati Raj Mahatma Gandhi ke 'Gram Swaraj' vision se prerit hai, jisme har gaon aatm-nirbhar hokar apna shasan khud chalaye."
       },
-      "navigation": {
-        "next": "card_10_milestone_history",
-        "button_text": "Check Answer ➔"
-      }
+      "navigation": { "next": "card_08_quiz3", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_10_milestone_history",
-      "card_slug": "card_10_milestone_history",
+      "card_id": "card_08_quiz3",
+      "card_slug": "card_08_quiz3",
+      "type": "quiz",
+      "concept_id": "module1_quiz",
+      "level": 1,
+      "progress": { "current": 8, "total": 83 },
+      "quiz_payload": {
+        "question": "1992 se pehle Panchayati Raj ke baare mein kaunsa kathan sahi hai?",
+        "options": [
+          { "id": "A", "text": "Ye mandatory tha aur sabhi states mein uniform tarike se lagu tha" },
+          { "id": "B", "text": "Ye sirf ek DPSP (non-binding) tha, isliye states mein iski sthiti alag-alag thi" },
+          { "id": "C", "text": "Ye sirf Bihar mein tha" },
+          { "id": "D", "text": "Ye Fundamental Right tha" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Chunki Article 40 sirf ek DPSP tha (non-justiciable), Panchayati Raj ki sthiti har state mein alag thi - kuch states mein achha implement hua, kuch mein bilkul nahi."
+      },
+      "navigation": { "next": "card_09_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_09_milestone1",
+      "card_slug": "card_09_milestone1",
       "type": "milestone",
-      "concept_id": "milestone_history",
+      "concept_id": "module1_complete",
       "level": 1,
-      "progress": {
-        "current": 10,
-        "total": 72
-      },
+      "progress": { "current": 9, "total": 83 },
       "milestone_payload": {
-        "title": "🎉 MODULE 1 COMPLETED!",
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏘️",
+        "completed_topic": "Panchayati Raj - Introduction",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/10 Clear",
+        "motivational_quote": "Foundation set ho gaya Raju! Ab dekhte hain wo saari committees jinhone Panchayati Raj ko aakar diya."
+      },
+      "navigation": { "next": "card_10_balwant_rai_detail", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_10_balwant_rai_detail",
+      "card_slug": "card_10_balwant_rai_detail",
+      "type": "chat",
+      "concept_id": "balwant_rai_mehta_committee",
+      "level": 2,
+      "progress": { "current": 10, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo Balwant Rai Mehta Committee (1957) ko detail mein samjhte hain. Isne suggest kiya ek [[Three-tier System|Teen star wali sanrachna - gaon, block aur zile ke level pe]] - Gram Panchayat (village level), Panchayat Samiti (block level), aur Zila Parishad (district level)." },
+        { "speaker": "raju", "text": "Teen level? Ye to abhi bhi wahi structure hai jo aajkal hai na Sir?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Yehi 3-tier structure aaj bhi core mein use hoti hai. Committee ne ek aur important cheez suggest ki - '[[Indirect Election|Seedhe janta dwara nahi, balki chune hue logon dwara aage vote karke chunav]]' Panchayat Samiti aur Zila Parishad ke liye, sirf Gram Panchayat direct election se banegi." },
+        { "speaker": "raju", "text": "Achha, matlab sirf Gram Panchayat mein hi seedhe vote dalte the log, baaki upar wale indirect thay? Ye pehla state kaunsa tha jisne ye lagu kiya Sir?" }
+      ],
+      "navigation": { "next": "card_11_rajasthan_first", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_rajasthan_first",
+      "card_slug": "card_11_rajasthan_first",
+      "type": "chat",
+      "concept_id": "rajasthan_first_implementation",
+      "level": 2,
+      "progress": { "current": 11, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Exam Favorite: Rajasthan ne sabse pehle Balwant Rai Mehta ki sifarish lagu ki - 2 October 1959 ko Nagaur zile mein, khud Pandit Jawaharlal Nehru ne inauguration kiya. Uske baad Andhra Pradesh ne bhi 1959 mein hi apnaya." },
+        { "speaker": "raju", "text": "2 October! Wo to Gandhi Jayanti hai na Sir? Isliye hi shayad ye date choose ki hogi Gram Swaraj ke connection ki wajah se!" },
+        { "speaker": "aman", "text": "Bahut sharp observation Raju! Bilkul yehi logic tha - Gandhi Jayanti ke din launch karke Gram Swaraj ke sapne ko honour diya gaya. Ye date bahut common PYQ hai, yaad rakhna." },
+        { "speaker": "raju", "text": "Rajasthan-Nagaur-1959 note kar liya! Ab agli committee kaunsi thi Sir jo isके baad aayi?" }
+      ],
+      "navigation": { "next": "card_12_ashok_mehta_committee", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_ashok_mehta_committee",
+      "card_slug": "card_12_ashok_mehta_committee",
+      "type": "chat",
+      "concept_id": "ashok_mehta_committee",
+      "level": 2,
+      "progress": { "current": 12, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "Kuch saalo mein Panchayati Raj kamzor pad gaya kai states mein, isliye Janata Party government ne 1977 mein Ashok Mehta Committee banayi. Isne bada twist diya - '[[Two-tier System|Do star wali sanrachna - block aur zile ke level pe hi]]' suggest kiya, matlab 3-tier ki jagah sirf 2 tier: Mandal Panchayat (kai gaon milkar) aur Zila Parishad." },
+        { "speaker": "raju", "text": "Two-tier?? Wait, ye to Balwant Rai wale se ulta hai! Gram Panchayat hi hata diya kya?" },
+        { "speaker": "aman", "text": "Haan, Ashok Mehta Committee ne 'Mandal Panchayat' (15-20,000 population ka group) ko lowest unit banaya, aur beech mein Panchayat Samiti wala tier hata diya. Ek aur important suggestion - regular social audit ke liye 'District Level Planning' ko strong banana." },
+        { "speaker": "raju", "text": "Achha, ye to complicated ho gaya - kabhi 3-tier, kabhi 2-tier! Kya aage aur bhi committees ne alag baat boli Sir?" }
+      ],
+      "navigation": { "next": "card_13_gvk_rao_singhvi", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_gvk_rao_singhvi",
+      "card_slug": "card_13_gvk_rao_singhvi",
+      "type": "chat",
+      "concept_id": "gvk_rao_and_singhvi_committee",
+      "level": 2,
+      "progress": { "current": 13, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan, do aur important committees dekho - GVK Rao Committee (1985) ne kaha Panchayati Raj ko 'grass-root democracy' ka core banana chahiye, aur District Collector ki jagah ek elected body ko development ka charge dena chahiye. Fir L.M. Singhvi Committee (1986) ne pehli baar ye suggestion diya ki Panchayati Raj ko [[Constitutional Status|Samvidhan mein hi mandatory darja dena, DPSP se upar]] diya jaaye." },
+        { "speaker": "raju", "text": "Constitutional Status! Matlab ab ye sirf ek acchi salah nahi rahegi, balki mandatory ban jayegi? Ye to bada change hoga!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! L.M. Singhvi Committee ki isi sifarish ne aage chalkar 73rd Constitutional Amendment Act, 1992 ka rasta khola - jisne Panchayati Raj ko permanently constitutional darja diya." },
+        { "speaker": "raju", "text": "Waah, toh saari committees milkar 1992 wale bade Amendment tak pahunchi! Ab poori list yaad karni hai - test lelo Sir!" }
+      ],
+      "navigation": { "next": "card_14_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_14_quiz1",
+      "card_slug": "card_14_quiz1",
+      "type": "quiz",
+      "concept_id": "module2_quiz",
+      "level": 2,
+      "progress": { "current": 14, "total": 83 },
+      "quiz_payload": {
+        "question": "Balwant Rai Mehta Committee (1957) ki sifarish sabse pehle kis state mein, kab lagu ki gayi?",
+        "options": [
+          { "id": "A", "text": "Bihar, 1960" },
+          { "id": "B", "text": "Rajasthan (Nagaur), 2 October 1959" },
+          { "id": "C", "text": "Andhra Pradesh, 1957" },
+          { "id": "D", "text": "Uttar Pradesh, 1959" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Rajasthan ne Nagaur zile mein 2 October 1959 ko sabse pehle Panchayati Raj lagu kiya, jiska udghatan Pandit Jawaharlal Nehru ne kiya tha. Andhra Pradesh ne bhi 1959 mein hi apnaya."
+      },
+      "navigation": { "next": "card_15_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz2",
+      "card_slug": "card_15_quiz2",
+      "type": "quiz",
+      "concept_id": "module2_quiz",
+      "level": 2,
+      "progress": { "current": 15, "total": 83 },
+      "quiz_payload": {
+        "question": "Ashok Mehta Committee (1977) ne kaunsi structure suggest ki thi?",
+        "options": [
+          { "id": "A", "text": "Three-tier system (Balwant Rai jaisa)" },
+          { "id": "B", "text": "Two-tier system - Mandal Panchayat aur Zila Parishad" },
+          { "id": "C", "text": "Single-tier system - sirf Gram Sabha" },
+          { "id": "D", "text": "Four-tier system" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ashok Mehta Committee ne Two-tier system suggest ki - Mandal Panchayat (village group level) aur Zila Parishad (district level), jo Balwant Rai wale 3-tier system se alag tha."
+      },
+      "navigation": { "next": "card_16_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_quiz3",
+      "card_slug": "card_16_quiz3",
+      "type": "quiz",
+      "concept_id": "module2_quiz",
+      "level": 2,
+      "progress": { "current": 16, "total": 83 },
+      "quiz_payload": {
+        "question": "Panchayati Raj ko 'Constitutional Status' dene ki sifarish sabse pehle kis committee ne di?",
+        "options": [
+          { "id": "A", "text": "Balwant Rai Mehta Committee" },
+          { "id": "B", "text": "GVK Rao Committee" },
+          { "id": "C", "text": "L.M. Singhvi Committee (1986)" },
+          { "id": "D", "text": "Ashok Mehta Committee" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "L.M. Singhvi Committee (1986) ne pehli baar Panchayati Raj ko constitutional status dene ki sifarish di, jisne aage chalkar 73rd Amendment, 1992 ka rasta khola."
+      },
+      "navigation": { "next": "card_17_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_17_milestone2",
+      "card_slug": "card_17_milestone2",
+      "type": "milestone",
+      "concept_id": "module2_complete",
+      "level": 2,
+      "progress": { "current": 17, "total": 83 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
         "badge_emoji": "📜",
-        "completed_topic": "Historical Evolution of Panchayati Raj",
-        "xp_earned": 100,
-        "milestone_progress": "Module 1/6 Clear ✅",
-        "motivational_quote": "Great start! You now know the journey from Ancient Panchayats to the 73rd Amendment. Next: The actual provisions of 73rd Amendment — what changed forever! 🔥"
+        "completed_topic": "Historical Committees (Balwant Rai to Singhvi)",
+        "xp_earned": 55,
+        "milestone_progress": "Module 2/10 Clear",
+        "motivational_quote": "Committees ki poori history yaad ho gayi! Ab chalte hain sabse bade Amendment ki taraf jo 1992 mein aaya."
       },
-      "navigation": {
-        "next": "card_11_73rd_provisions_intro",
-        "button_text": "Start Module 2: 73rd Amendment Provisions 🚀"
-      }
+      "navigation": { "next": "card_18_73rd_amendment_intro", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_11_73rd_provisions_intro",
-      "card_slug": "card_11_73rd_provisions_intro",
+      "card_id": "card_18_73rd_amendment_intro",
+      "card_slug": "card_18_73rd_amendment_intro",
       "type": "chat",
-      "concept_id": "73rd_provisions_intro",
-      "level": 2,
-      "progress": {
-        "current": 11,
-        "total": 72
-      },
+      "concept_id": "73rd_amendment_basics",
+      "level": 3,
+      "progress": { "current": 18, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab dekhte hain 73rd Amendment ne EXACTLY kya mandatory kiya hai: (1) Three-Tier Structure (except states with <20 lakh population — sirf two-tier). (2) Direct elections har 5 saal me. (3) Reservation for SC/ST/Women. (4) State Election Commission. (5) State Finance Commission."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir population kam ho to two-tier? Matlab?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Agar kisi state ki population 20 lakh se kam hai (jaise Sikkim, Goa initially), to wo Panchayat Samiti (Block level) skip kar sakte hain. Sirf Gram Panchayat aur Zila Parishad rakh sakte hain. Ye flexibility hai chote states ke liye."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaaa... aur election har 5 saal me compulsory?"
-        }
+        { "speaker": "aman", "text": "Ab suno wo bada moment - 73rd Constitutional Amendment Act, 1992 (jo 24 April 1993 se lagu hua). Isne Panchayati Raj ko Samvidhan mein ek naya Part IX add karke constitutional darja diya, saath hi Article 243 se 243O tak naye Articles jode." },
+        { "speaker": "raju", "text": "24 April 1993? Ye date important hai kya Sir, ya sirf yaad rakhne ke liye hai?" },
+        { "speaker": "aman", "text": "Bahut important hai! ⭐ BPSC TRE Favorite: Isi wajah se 24 April ko har saal 'National Panchayati Raj Day' celebrate kiya jaata hai. Aur ek aur naya Schedule bhi add hua - Eleventh Schedule, jisme Panchayat ke 29 subjects diye gaye hain." },
+        { "speaker": "raju", "text": "National Panchayati Raj Day! Note kar liya. Aur ye Part IX mein bhi kuch naya word add hua tha Preamble jaisa?" }
       ],
-      "navigation": {
-        "next": "card_12_election_provisions",
-        "button_text": "Haan! Election rules dekho 🗳️"
-      }
+      "navigation": { "next": "card_19_article243_definitions", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_12_election_provisions",
-      "card_slug": "card_12_election_provisions",
+      "card_id": "card_19_article243_definitions",
+      "card_slug": "card_19_article243_definitions",
       "type": "chat",
-      "concept_id": "election_provisions",
-      "level": 2,
-      "progress": {
-        "current": 12,
-        "total": 72
-      },
+      "concept_id": "article243_definitions",
+      "level": 3,
+      "progress": { "current": 19, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Direct Elections (Article 243-K): Gram Panchayat ke sabhi members aur Chairperson directly elected honge voters dwara. Intermediate (Block) aur District level pe — members directly elected, par Chairperson INDIRECTLY elected (elected members apne beech se chunte hain)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab Mukhiya direct election se aata hai, par Zila Parishad ka head indirect?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Gram Panchayat Mukhiya (Pradhan/Sarpanch) — Direct election by voters. Panchayat Samiti Pramukh — Indirect (elected members choose). Zila Parishad Adhyaksh — Indirect (elected members choose). Tenure sabki 5 years. Re-election possible hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir agar Panchayat 5 saal se pehle dissolve ho jaye?"
-        }
+        { "speaker": "aman", "text": "Article 243 mein important definitions di gayi hain - '[[Gram Sabha|Gaon ke sabhi voters ki ek meeting - poore gaon ke matdata iske member hote hain]]' matlab village level pe registered sabhi voters ka group. Aur '[[Panchayat|Gram, intermediate ya district level pe self-government ki institution]]' matlab local self-government ki institution." },
+        { "speaker": "raju", "text": "Gram Sabha matlab poore gaon ke voters? Wo to bahut bada group ho gaya, koi 'chune hue' log nahi?" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Yehi Gram Sabha aur Gram Panchayat mein sabse bada difference hai jo exam mein bahut confuse karata hai - Gram Sabha mein SAB voters hote hain (koi election nahi hoti), jabki Gram Panchayat mein sirf CHUNE HUE members hote hain." },
+        { "speaker": "raju", "text": "Achha! Ye to bahut bada trap point hai - Gram Sabha = sab voters, Gram Panchayat = chune hue log. Ab batao ye Part IX kis kis area mein lagu hota hai Sir?" }
       ],
-      "navigation": {
-        "next": "card_13_dissolution_rules",
-        "button_text": "Important provision! Dekho 📋"
-      }
+      "navigation": { "next": "card_20_applicability", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_13_dissolution_rules",
-      "card_slug": "card_13_dissolution_rules",
+      "card_id": "card_20_applicability",
+      "card_slug": "card_20_applicability",
       "type": "chat",
-      "concept_id": "dissolution_rules",
-      "level": 2,
-      "progress": {
-        "current": 13,
-        "total": 72
-      },
+      "concept_id": "applicability_article243q",
+      "level": 3,
+      "progress": { "current": 20, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Article 243-E: Agar Panchayat dissolve ho jaye (State Government decision se), to 6 MONTHS ke andar election hona chahiye. Fresh election se jo body banti hai, wo sirf remaining period ke liye rahegi (original 5 years ka jo bacha hai)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab agar 3 saal baad dissolve hua, to naya election hoga aur wo sirf 2 saal chalega?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Ye confusion BPSC me bahut puuchte hain. Fresh term nahi milta — sirf remaining term. Lekin agar remaining term 6 months se kam hai, to fresh election ki zaroorat nahi! Ye provision Article 174 (State Assembly dissolution) jaisa hi hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya Sir! Ab reservation ke baare me bataiye!"
-        }
+        { "speaker": "aman", "text": "Part IX poore India mein lagu hota hai, LEKIN ek exception hai - Article 243M ke tehat ye Nagaland, Meghalaya, Mizoram, aur Scheduled Areas/Tribal Areas mein automatically lagu nahi hota (Parliament chahe to extend kar sakti hai)." },
+        { "speaker": "raju", "text": "Ye teeno states kyun exempt hain Sir?" },
+        { "speaker": "aman", "text": "Kyunki inn North-Eastern states mein pehle se hi apni traditional tribal self-governance systems chal rahi hain (jaise Nagaland mein Village Councils), aur Constitution unka respect karta hai. Scheduled Areas ke liye ek alag special law bhi hai jo hum aage padhenge - PESA Act." },
+        { "speaker": "raju", "text": "Achha, PESA Act! Wo baad mein padhenge. Abhi batao Panchayat ka term kitne saal ka hota hai Sir?" }
       ],
-      "navigation": {
-        "next": "card_14_reservation_provisions",
-        "button_text": "Ye sabse important hai! 🎯"
-      }
+      "navigation": { "next": "card_21_guess_term", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_14_reservation_provisions",
-      "card_slug": "card_14_reservation_provisions",
-      "type": "chat",
-      "concept_id": "reservation_provisions",
-      "level": 2,
-      "progress": {
-        "current": 14,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Article 243-D: Reservation mandatory hai! (1) SC/ST ke liye — unki population ke proportion me seats reserve (jaise agar gaon me 15% SC hain, to seats ka 15% reserve). (2) Women ke liye — NOT LESS THAN 1/3 (33%) total seats. Isme SC/ST women bhi include hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab women ko minimum 33% guarantee hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Aur ye 33% SC/ST reservation ke UPAR hai. Example: Agar 10 seats hain, 2 SC reserved hain, to total me 3-4 seats women ke liye hongi (jinme 1 SC woman bhi ho sakti hai). Chairpersons (Mukhiya/Pramukh/Adhyaksh) me bhi 1/3 reservation women ke liye!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wah! To ab bahut saari women leaders hain Panchayat me!"
-        }
-      ],
-      "navigation": {
-        "next": "card_15_state_bodies",
-        "button_text": "Haan! Ab State Commission dekho 🏛️"
-      }
-    },
-    {
-      "card_id": "card_15_state_bodies",
-      "card_slug": "card_15_state_bodies",
-      "type": "chat",
-      "concept_id": "state_bodies",
-      "level": 2,
-      "progress": {
-        "current": 15,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "73rd Amendment ne do important bodies mandatory ki: (1) State Election Commission (Article 243-K) — Panchayat elections conduct karayega. (2) State Finance Commission (Article 243-I) — Har 5 saal me review karega ki Panchayats ko kitna paisa milna chahiye."
-        },
-        {
-          "speaker": "raju",
-          "text": "To Election Commission alag hai Panchayat ke liye?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Election Commission of India (Article 324) sirf Parliament aur State Assembly elections conduct karati hai. Panchayat aur Municipal elections ke liye har state ki apni State Election Commission hoti hai. Commissioner ko State Governor appoint karta hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur State Finance Commission kya karta hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_16_finance_commission",
-        "button_text": "Paisa distribute karta hai! 💰"
-      }
-    },
-    {
-      "card_id": "card_16_finance_commission",
-      "card_slug": "card_16_finance_commission",
-      "type": "chat",
-      "concept_id": "finance_commission",
-      "level": 2,
-      "progress": {
-        "current": 16,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "State Finance Commission (Article 243-I): Har 5 saal me Governor isko constitute karta hai. Ye recommend karta hai — (1) State ke taxes me se Panchayats ko kitna share milega. (2) State grants kitni hongi. (3) Panchayats ki financial position kaise improve ho."
-        },
-        {
-          "speaker": "raju",
-          "text": "To ye Finance Commission (Article 280 wali) jaisa hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Finance Commission (Centre-State ke beech paisa distribute), State Finance Commission (State-Panchayat ke beech paisa distribute). Dono ki recommendations mandatory nahi hain lekin usually accept hoti hain. Ye decentralization ka important part hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya Sir! Panchayats ko kaam kya karna hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_17_quiz_provisions_1",
-        "button_text": "Pehle quiz! Uske baad functions 🎯"
-      }
-    },
-    {
-      "card_id": "card_17_quiz_provisions_1",
-      "card_slug": "card_17_quiz_provisions_1",
-      "type": "quiz",
-      "concept_id": "quiz_provisions_1",
-      "level": 2,
-      "progress": {
-        "current": 17,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ BPSC Favorite: Reservation for women in Panchayats is: (Q1/3)",
+      "card_id": "card_21_guess_term",
+      "card_slug": "card_21_guess_term",
+      "type": "guess",
+      "concept_id": "guess_panchayat_term",
+      "level": 3,
+      "progress": { "current": 21, "total": 83 },
+      "guess_payload": {
+        "question": "Raju sochta hai - 'Sir MLA-MP ka term 5 saal hota hai, toh Panchayat ka bhi 5 saal hi hoga na?' Kya Raju sahi hai?",
         "options": [
-          { "id": "A", "text": "Not less than 50%" },
-          { "id": "B", "text": "Not less than 33%" },
-          { "id": "C", "text": "Not more than 33%" },
-          { "id": "D", "text": "Exactly 33%" }
+          { "id": "A", "text": "Haan, bilkul 5 saal, aur ye kabhi bhang bhi nahi ho sakti" },
+          { "id": "B", "text": "Haan, Article 243E ke tehat 5 saal ka term hota hai, lekin ise pehle bhi bhang (dissolve) kiya ja sakta hai" },
+          { "id": "C", "text": "Nahi, Panchayat ka term 3 saal hota hai" },
+          { "id": "D", "text": "Panchayat ka koi fixed term nahi hota" }
         ],
         "correct_option_id": "B",
-        "explanation": "Article 243-D states that NOT LESS THAN one-third (33%) of the total seats shall be reserved for women (including SC/ST women). This is a MINIMUM guarantee — states can provide more (like Bihar provides 50% now). The phrase 'not less than' is important because BPSC often sets traps using 'exactly 33%' or 'not more than 33%'. Also, this 33% applies to both seats AND Chairperson positions."
+        "explanation": "Raju ka guess partially sahi hai! Article 243E ke tehat Panchayat ka term 5 saal hota hai, MLA-MP ki tarah. Lekin isse pehle bhi (5 saal se pehle) bhang kiya ja sakta hai. Ek important rule - agar bhang ho jaaye, to 6 mahine ke andar naya chunav karana zaroori hai."
       },
-      "navigation": {
-        "next": "card_18_quiz_provisions_2",
-        "button_text": "Next Question ➔"
-      }
+      "navigation": { "next": "card_22_quiz1", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_18_quiz_provisions_2",
-      "card_slug": "card_18_quiz_provisions_2",
+      "card_id": "card_22_quiz1",
+      "card_slug": "card_22_quiz1",
       "type": "quiz",
-      "concept_id": "quiz_provisions_2",
-      "level": 2,
-      "progress": {
-        "current": 18,
-        "total": 72
-      },
+      "concept_id": "module3_quiz",
+      "level": 3,
+      "progress": { "current": 22, "total": 83 },
       "quiz_payload": {
-        "question": "⭐ SSC CGL Pattern: State Finance Commission is constituted under which Article? (Q2/3)",
+        "question": "73rd Constitutional Amendment Act kab lagu hua tha, aur isi tareekh ko har saal kya celebrate kiya jaata hai?",
         "options": [
-          { "id": "A", "text": "Article 243-H" },
-          { "id": "B", "text": "Article 243-I" },
-          { "id": "C", "text": "Article 243-K" },
-          { "id": "D", "text": "Article 280" }
+          { "id": "A", "text": "26 January 1950 - Republic Day" },
+          { "id": "B", "text": "24 April 1993 - National Panchayati Raj Day" },
+          { "id": "C", "text": "2 October 1959 - Gram Swaraj Day" },
+          { "id": "D", "text": "15 August 1947 - Independence Day" }
         ],
         "correct_option_id": "B",
-        "explanation": "State Finance Commission is constituted under Article 243-I of the Constitution. It is set up every 5 years by the Governor to review the financial position of Panchayats and recommend distribution of funds between State and Panchayats. Article 243-K deals with State Election Commission (for conducting Panchayat elections). Article 280 is for the Finance Commission (Centre-State distribution). Don't confuse these articles!"
+        "explanation": "73rd Amendment Act, 1992, 24 April 1993 se lagu hua, aur isi din ki yaad mein har saal 24 April ko National Panchayati Raj Day manaya jaata hai."
       },
-      "navigation": {
-        "next": "card_19_quiz_provisions_3",
-        "button_text": "Last one! 💪"
-      }
+      "navigation": { "next": "card_23_quiz2", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_19_quiz_provisions_3",
-      "card_slug": "card_19_quiz_provisions_3",
+      "card_id": "card_23_quiz2",
+      "card_slug": "card_23_quiz2",
       "type": "quiz",
-      "concept_id": "quiz_provisions_3",
-      "level": 2,
-      "progress": {
-        "current": 19,
-        "total": 72
-      },
+      "concept_id": "module3_quiz",
+      "level": 3,
+      "progress": { "current": 23, "total": 83 },
       "quiz_payload": {
-        "question": "⭐ UPSC Prelims Pattern: If a Panchayat is dissolved after 3 years, the freshly elected body will continue for: (Q3/3)",
+        "question": "Article 243 ki definition ke anusaar 'Gram Sabha' kya hai?",
         "options": [
-          { "id": "A", "text": "Full 5 years (fresh term)" },
-          { "id": "B", "text": "Remaining 2 years only" },
-          { "id": "C", "text": "3 years" },
-          { "id": "D", "text": "1 year only" }
+          { "id": "A", "text": "Gram Panchayat ke chune hue members ka group" },
+          { "id": "B", "text": "Village level pe registered sabhi voters (electors) ka group" },
+          { "id": "C", "text": "Sirf Sarpanch aur Up-Sarpanch" },
+          { "id": "D", "text": "District Collector ki committee" }
         ],
         "correct_option_id": "B",
-        "explanation": "Article 243-E clearly states that if a Panchayat is dissolved before its term, the newly elected body continues only for the REMAINING PERIOD of the original 5-year term, not a fresh full term. So if dissolved after 3 years, fresh elections will produce a body that works only for remaining 2 years. However, if the remaining period is less than 6 months, no fresh election is required. This is a classic BPSC/UPSC trap question!"
+        "explanation": "Gram Sabha mein village level pe electoral rolls mein registered SABHI voters shamil hote hain - koi election nahi hoti, ye ek direct democracy body hai."
       },
-      "navigation": {
-        "next": "card_20_milestone_provisions",
-        "button_text": "Check Answer ➔"
-      }
+      "navigation": { "next": "card_24_quiz3", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_20_milestone_provisions",
-      "card_slug": "card_20_milestone_provisions",
+      "card_id": "card_24_quiz3",
+      "card_slug": "card_24_quiz3",
+      "type": "quiz",
+      "concept_id": "module3_quiz",
+      "level": 3,
+      "progress": { "current": 24, "total": 83 },
+      "quiz_payload": {
+        "question": "73rd Amendment Act (Part IX) ke baare mein kaunsa kathan sahi hai?\n1. Ye poore India mein automatically lagu hota hai, koi exception nahi.\n2. Article 243M ke tehat Nagaland, Meghalaya, Mizoram mein automatically lagu nahi hota.",
+        "options": [
+          { "id": "A", "text": "Kewal 1 sahi hai" },
+          { "id": "B", "text": "Kewal 2 sahi hai" },
+          { "id": "C", "text": "1 aur 2 dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 galat hai - Part IX poore India mein automatically lagu nahi hota. Article 243M ke tehat Nagaland, Meghalaya, Mizoram aur kuch Scheduled/Tribal Areas ko exempt rakha gaya hai, jahan traditional tribal self-governance pehle se chal rahi thi."
+      },
+      "navigation": { "next": "card_25_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_25_milestone3",
+      "card_slug": "card_25_milestone3",
       "type": "milestone",
-      "concept_id": "milestone_provisions",
-      "level": 2,
-      "progress": {
-        "current": 20,
-        "total": 72
-      },
+      "concept_id": "module3_complete",
+      "level": 3,
+      "progress": { "current": 25, "total": 83 },
       "milestone_payload": {
-        "title": "🎉 MODULE 2 COMPLETED!",
-        "badge_emoji": "⚖️",
-        "completed_topic": "73rd Amendment - Key Provisions",
-        "xp_earned": 120,
-        "milestone_progress": "Module 2/6 Clear ✅",
-        "motivational_quote": "You've mastered constitutional provisions! Elections, Reservations, State Commissions — all clear! Next: The actual POWERS and FUNCTIONS of Panchayats! 💪"
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📖",
+        "completed_topic": "73rd Constitutional Amendment - Basics",
+        "xp_earned": 55,
+        "milestone_progress": "Module 3/10 Clear",
+        "motivational_quote": "Constitution ka core samajh aa gaya! Ab dekhte hain teen tiers mein sabse neeche wala - Gram Panchayat."
       },
-      "navigation": {
-        "next": "card_21_three_tier_intro",
-        "button_text": "Start Module 3: Three-Tier Structure 🏘️"
-      }
+      "navigation": { "next": "card_26_gram_panchayat_structure", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_21_three_tier_intro",
-      "card_slug": "card_21_three_tier_intro",
-      "type": "chat",
-      "concept_id": "three_tier_intro",
-      "level": 3,
-      "progress": {
-        "current": 21,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab dekhte hain teen levels detail me: (1) GRAM PANCHAYAT (Village) — 5,000-10,000 population. Mukhiya/Sarpanch leader. Ward Members (Panch). Gram Sabha (all voters) is the foundation! (2) PANCHAYAT SAMITI (Block/Taluka) — Intermediate level. (3) ZILA PARISHAD (District)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Gram Sabha kya hai? Ye alag hai Gram Panchayat se?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bahut important difference! GRAM SABHA (Article 243-A) — ye ek MEETING hai jisme gaon ke saare registered voters participate karte hain. Matlab puri gaon ki general body meeting! Ye approval deti hai Panchayat ke decisions ko. Gram Panchayat toh elected body hai jo kaam karti hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaaa... to Gram Sabha matlab gaon ki Parliament, Gram Panchayat matlab gaon ki Government?"
-        }
-      ],
-      "navigation": {
-        "next": "card_22_gram_sabha_powers",
-        "button_text": "Perfect analogy! Dekho powers 🔥"
-      }
-    },
-    {
-      "card_id": "card_22_gram_sabha_powers",
-      "card_slug": "card_22_gram_sabha_powers",
-      "type": "chat",
-      "concept_id": "gram_sabha_powers",
-      "level": 3,
-      "progress": {
-        "current": 22,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Gram Sabha powers: (1) Panchayat ka budget approve karna. (2) Development schemes approve karna — kaun si sadak bane, kaun sa nalka. (3) Beneficiary lists approve karna (kisko pension mile, kisko ration card). (4) Social audit — Panchayat ne paisa kahan kharch kiya, accountability check!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab Gram Sabha powerful hai, wo approve nahi kare to kaam nahi hoga?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Theoretically haan! Par practically attendance kam hoti hai Gram Sabha meetings me. Lekin PESA Act (1996 — tribal areas ke liye) me Gram Sabha bahut powerful hai — wo land acquisition, mining permit sab approve karti hai. ⭐ BPSC TRE Favorite: Gram Sabha vs Gram Panchayat difference!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya! Ab Gram Panchayat ke structure ke baare me bataiye!"
-        }
-      ],
-      "navigation": {
-        "next": "card_23_gram_panchayat_structure",
-        "button_text": "Dekhte hain structure! 🏘️"
-      }
-    },
-    {
-      "card_id": "card_23_gram_panchayat_structure",
-      "card_slug": "card_23_gram_panchayat_structure",
+      "card_id": "card_26_gram_panchayat_structure",
+      "card_slug": "card_26_gram_panchayat_structure",
       "type": "chat",
       "concept_id": "gram_panchayat_structure",
-      "level": 3,
-      "progress": {
-        "current": 23,
-        "total": 72
-      },
+      "level": 4,
+      "progress": { "current": 26, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Gram Panchayat Structure: (1) Mukhiya/Pradhan/Sarpanch — Directly elected, term 5 years. (2) Up-Mukhiya/Up-Pradhan — Deputy (in some states). (3) Ward Members (Panch) — Har ward se 1 elected member. Total members state rules pe depend karta hai (usually 7-21)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ward kya hota hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Ward ek chhota area hai jisme gaon divide hota hai — jaise mohalla. Har ward se ek representative elect hota hai. Example: Agar 10 wards hain, to 10 Ward Members + 1 Mukhiya = total 11 log Gram Panchayat me. Ye log milkar meetings karte hain aur decisions lete hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Gram Panchayat ka kaam kya hai exactly?"
-        }
+        { "speaker": "aman", "text": "Ab teeno tiers ko ek-ek karke dekhte hain, sabse neeche se shuru karte hain - Gram Panchayat. Ye village ya group of villages ke liye banti hai. Iska head hota hai '[[Sarpanch|Gram Panchayat ka mukhiya, jise Pradhan bhi kehte hain kuch states mein]]' ya 'Mukhiya' (Bihar mein)." },
+        { "speaker": "raju", "text": "Sarpanch aur Mukhiya alag-alag naam? Confusing hoga to Sir!" },
+        { "speaker": "aman", "text": "Ruko, ye sirf naming convention ka farak hai - core kaam same hai. ⭐ BPSC TRE Favorite: Bihar mein Gram Panchayat ke head ko 'Mukhiya' kehte hain (na ki Sarpanch), aur uske deputy ko 'Up-Mukhiya' kehte hain. Ye Bihar-specific terminology exam mein zaroor puchhi jaati hai." },
+        { "speaker": "raju", "text": "Achha! Mukhiya aur Up-Mukhiya - Bihar wala terminology yaad rakh loonga. Election kaise hota hai Sarpanch/Mukhiya ka Sir?" }
       ],
-      "navigation": {
-        "next": "card_24_gram_panchayat_functions",
-        "button_text": "Ye 11th Schedule me hai! 📋"
-      }
+      "navigation": { "next": "card_27_gram_panchayat_election", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_24_gram_panchayat_functions",
-      "card_slug": "card_24_gram_panchayat_functions",
+      "card_id": "card_27_gram_panchayat_election",
+      "card_slug": "card_27_gram_panchayat_election",
       "type": "chat",
-      "concept_id": "gram_panchayat_functions",
-      "level": 3,
-      "progress": {
-        "current": 24,
-        "total": 72
-      },
+      "concept_id": "gram_panchayat_election_process",
+      "level": 4,
+      "progress": { "current": 27, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "11th Schedule (Article 243-G): 29 subjects diye gaye hain Panchayats ko. Important ones: (1) Agriculture including extension. (2) Minor irrigation, water management. (3) Animal husbandry, dairy, poultry. (4) Fisheries. (5) Social forestry. (6) Minor forest produce."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ye to sab agriculture related lag raha hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Rural development ka main focus agriculture hai. Aur subjects: (7) Small scale industries. (8) Khadi, village industries. (9) Rural housing. (10) Drinking water. (11) Fuel, fodder. (12) Roads, bridges, ferries. (13) Rural electrification. (14) Non-conventional energy."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir itne saare subjects! Ye yaad kaise karein?"
-        }
+        { "speaker": "aman", "text": "Gram Panchayat mein do tarah ke elections hote hain - members ('Panch' ya 'Ward Member') seedhe janta dwara chune jaate hain apne-apne 'ward' se. Sarpanch/Mukhiya ka election kabhi seedha janta dwara, kabhi Panchayat members dwara hota hai - ye har state apni marzi se decide karta hai." },
+        { "speaker": "raju", "text": "Achha, matlab har state ka apna rule hai Sarpanch chunne ke liye?" },
+        { "speaker": "aman", "text": "Bilkul sahi! ⭐ BPSC TRE Favorite: Bihar mein Mukhiya seedhe janta (Gram Sabha ke voters) dwara direct election se chuna jaata hai - ye Bihar Panchayati Raj Act, 2006 mein specify kiya gaya hai." },
+        { "speaker": "raju", "text": "Ok, Bihar mein direct election Mukhiya ke liye. Ab batao Gram Sabha ka Gram Panchayat se kya connection hai practically?" }
       ],
-      "navigation": {
-        "next": "card_25_eleven_schedule_continue",
-        "button_text": "Categories me yaad karo! 🎯"
-      }
+      "navigation": { "next": "card_28_gram_sabha_role", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_25_eleven_schedule_continue",
-      "card_slug": "card_25_eleven_schedule_continue",
+      "card_id": "card_28_gram_sabha_role",
+      "card_slug": "card_28_gram_sabha_role",
       "type": "chat",
-      "concept_id": "eleven_schedule_continue",
-      "level": 3,
-      "progress": {
-        "current": 25,
-        "total": 72
-      },
+      "concept_id": "gram_sabha_role_article243a",
+      "level": 4,
+      "progress": { "current": 28, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Remaining subjects: (15) Poverty alleviation. (16) Education (primary, secondary). (17) Technical training, vocational. (18) Adult, non-formal education. (19) Libraries. (20) Cultural activities. (21) Markets, fairs. (22) Health, sanitation. (23) Family welfare."
-        },
-        {
-          "speaker": "raju",
-          "text": "Education bhi Panchayat dekh sakti hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Primary schools ka maintenance, teachers ki attendance check — ye Gram Panchayat monitor kar sakti hai. Last subjects: (24) Women, child development. (25) Social welfare (SC/ST/OBC/disabled). (26) Public Distribution System (PDS/Ration). (27) Community assets maintenance. (28) Welfare of weaker sections. (29) Maintenance of community assets."
-        },
-        {
-          "speaker": "raju",
-          "text": "⭐ Sir inka total 29 hai, yaad rakhna zaroori hai kya?"
-        }
+        { "speaker": "aman", "text": "Article 243A kehta hai Gram Sabha aise powers exercise karegi jo State Legislature apne law se decide kare. Matlab Gram Sabha ka exact kaam har state alag define karta hai, lekin usually iska kaam hai Gram Panchayat ke budget, schemes, aur socho audit ko approve/discuss karna - ye ek 'checking mechanism' hai." },
+        { "speaker": "raju", "text": "Toh Gram Sabha Gram Panchayat ko control karti hai? Matlab janta hi apne Sarpanch ka kaam check karti hai meeting mein?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Gram Sabha saal mein kam se kam 2 baar (kai states mein zyada) meeting karti hai jaha Gram Panchayat apna annual budget aur kaam-kaaj janta ke saamne present karti hai - ye direct democracy ka best example hai." },
+        { "speaker": "raju", "text": "Waah, ye to bahut democratic system hai! Ab test lelo Gram Panchayat aur Gram Sabha ka poora concept!" }
       ],
-      "navigation": {
-        "next": "card_26_block_district_level",
-        "button_text": "Number important hai! Ab upper tiers 🏛️"
-      }
+      "navigation": { "next": "card_29_quiz1", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_26_block_district_level",
-      "card_slug": "card_26_block_district_level",
-      "type": "chat",
-      "concept_id": "block_district_level",
-      "level": 3,
-      "progress": {
-        "current": 26,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "PANCHAYAT SAMITI (Block Level): Ye intermediate tier hai. Members: Elected representatives from that block area. Chairperson: Pramukh (indirectly elected by members). MPs/MLAs of that area ex-officio members hote hain (voting rights NAHI hote unke)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab MLA member to hai par vote nahi kar sakta?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Wo advice de sakta hai, meetings attend kar sakta hai, par voting nahi. Functions: Block level development schemes implement karna, Gram Panchayats ko supervise karna, grants distribute karna. Block Development Officer (BDO) — government official jo executive work karta hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur Zila Parishad?"
-        }
-      ],
-      "navigation": {
-        "next": "card_27_zila_parishad",
-        "button_text": "Sabse upar! District level 🏛️"
-      }
-    },
-    {
-      "card_id": "card_27_zila_parishad",
-      "card_slug": "card_27_zila_parishad",
-      "type": "chat",
-      "concept_id": "zila_parishad",
-      "level": 3,
-      "progress": {
-        "current": 27,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "ZILA PARISHAD (District Level): Sabse top tier of Panchayati Raj. Members: Elected representatives from district. Chairperson: Adhyaksh/President (indirectly elected). MPs, MLAs, District Magistrate (DM) — ex-officio members (no voting). Chief Executive Officer (CEO) — government appointed officer."
-        },
-        {
-          "speaker": "raju",
-          "text": "To DM bhi member hai par vote nahi kar sakta?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Functions: District level planning, coordination between Block Panchayats and State Government, fund distribution, development schemes monitoring. Zila Parishad ek advisory aur supervisory body hai — direct execution Gram aur Block level pe hota hai. ⭐ BPSC loves to ask — CEO of Zila Parishad appointment?"
-        },
-        {
-          "speaker": "raju",
-          "text": "State Government appoint karta hai CEO ko!"
-        }
-      ],
-      "navigation": {
-        "next": "card_28_quiz_structure_1",
-        "button_text": "Perfect! Quiz time 🎯"
-      }
-    },
-    {
-      "card_id": "card_28_quiz_structure_1",
-      "card_slug": "card_28_quiz_structure_1",
+      "card_id": "card_29_quiz1",
+      "card_slug": "card_29_quiz1",
       "type": "quiz",
-      "concept_id": "quiz_structure_1",
-      "level": 3,
-      "progress": {
-        "current": 28,
-        "total": 72
-      },
+      "concept_id": "module4_quiz",
+      "level": 4,
+      "progress": { "current": 29, "total": 83 },
       "quiz_payload": {
-        "question": "⭐ BPSC TRE Favorite: Gram Sabha is defined under which Article? (Q1/3)",
+        "question": "⭐ BPSC TRE Focus: Bihar mein Gram Panchayat ke head ko kya kaha jaata hai, aur uska election kaise hota hai?",
         "options": [
-          { "id": "A", "text": "Article 243" },
-          { "id": "B", "text": "Article 243-A" },
-          { "id": "C", "text": "Article 243-G" },
-          { "id": "D", "text": "Article 40" }
+          { "id": "A", "text": "Sarpanch; Panchayat members dwara indirect election" },
+          { "id": "B", "text": "Mukhiya; Gram Sabha ke voters dwara direct election" },
+          { "id": "C", "text": "Pradhan; District Collector dwara nominate" },
+          { "id": "D", "text": "Adhyaksh; State Government dwara appoint" }
         ],
         "correct_option_id": "B",
-        "explanation": "Gram Sabha is defined under Article 243-A as a body consisting of persons registered in the electoral rolls of a village within the area of a Panchayat. It is the foundation of Panchayati Raj system. Article 243 defines 'Panchayat'. Article 243-G deals with powers and functions (11th Schedule). Article 40 (DPSP) is the original non-justiciable provision about organizing village panchayats. This is repeatedly asked in BPSC TRE and SSC exams!"
+        "explanation": "Bihar mein Gram Panchayat ke head ko 'Mukhiya' kehte hain, aur ye seedhe janta (voters) dwara direct election se chuna jaata hai, jaisa Bihar Panchayati Raj Act, 2006 mein specify kiya gaya hai."
       },
-      "navigation": {
-        "next": "card_29_quiz_structure_2",
-        "button_text": "Next Question ➔"
-      }
+      "navigation": { "next": "card_30_quiz2", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_29_quiz_structure_2",
-      "card_slug": "card_29_quiz_structure_2",
+      "card_id": "card_30_quiz2",
+      "card_slug": "card_30_quiz2",
       "type": "quiz",
-      "concept_id": "quiz_structure_2",
-      "level": 3,
-      "progress": {
-        "current": 29,
-        "total": 72
-      },
+      "concept_id": "module4_quiz",
+      "level": 4,
+      "progress": { "current": 30, "total": 83 },
       "quiz_payload": {
-        "question": "⭐ SSC CGL Pattern: How many subjects are listed in the 11th Schedule of the Constitution? (Q2/3)",
+        "question": "Article 243A ke anusaar Gram Sabha ki powers kaun decide karta hai?",
         "options": [
-          { "id": "A", "text": "27 subjects" },
-          { "id": "B", "text": "28 subjects" },
-          { "id": "C", "text": "29 subjects" },
-          { "id": "D", "text": "30 subjects" }
-        ],
-        "correct_option_id": "C",
-        "explanation": "The 11th Schedule (added by 73rd Amendment) contains 29 subjects that can be devolved to Panchayats. These cover rural development areas like agriculture, irrigation, education, health, roads, drinking water, etc. Don't confuse with 12th Schedule (18 subjects for Municipalities added by 74th Amendment). The exact number 29 is frequently asked in SSC CGL, Railway RRB, and BPSC exams!"
-      },
-      "navigation": {
-        "next": "card_30_quiz_structure_3",
-        "button_text": "Last one! 💪"
-      }
-    },
-    {
-      "card_id": "card_30_quiz_structure_3",
-      "card_slug": "card_30_quiz_structure_3",
-      "type": "quiz",
-      "concept_id": "quiz_structure_3",
-      "level": 3,
-      "progress": {
-        "current": 30,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ UPSC Pattern: The Chairperson of Panchayat Samiti (Block level) is elected: (Q3/3)",
-        "options": [
-          { "id": "A", "text": "Directly by voters of that block" },
-          { "id": "B", "text": "Indirectly by elected members of Panchayat Samiti" },
-          { "id": "C", "text": "Appointed by District Magistrate" },
-          { "id": "D", "text": "Nominated by State Government" }
+          { "id": "A", "text": "Parliament, ek central law se" },
+          { "id": "B", "text": "State Legislature, apne banaye hue law se" },
+          { "id": "C", "text": "District Collector" },
+          { "id": "D", "text": "Sirf Sarpanch/Mukhiya khud decide karta hai" }
         ],
         "correct_option_id": "B",
-        "explanation": "The Chairperson (Pramukh) of Panchayat Samiti is INDIRECTLY elected by the elected members of the Panchayat Samiti. Only at Gram Panchayat level, the Chairperson (Mukhiya/Sarpanch) is directly elected by voters. At intermediate and district levels, Chairpersons are indirectly elected. This is a classic UPSC/BPSC distinction question — direct vs indirect election at different tiers!"
+        "explanation": "Article 243A kehta hai Gram Sabha wahi powers exercise karegi jo State Legislature apne law dwara specify kare - isliye Gram Sabha ka exact role har state mein thoda alag ho sakta hai."
       },
-      "navigation": {
-        "next": "card_31_milestone_structure",
-        "button_text": "Check Answer ➔"
-      }
+      "navigation": { "next": "card_31_quiz3", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_31_milestone_structure",
-      "card_slug": "card_31_milestone_structure",
+      "card_id": "card_31_quiz3",
+      "card_slug": "card_31_quiz3",
+      "type": "quiz",
+      "concept_id": "module4_quiz",
+      "level": 4,
+      "progress": { "current": 31, "total": 83 },
+      "quiz_payload": {
+        "question": "Gram Sabha aur Gram Panchayat mein kya bunyaadi (fundamental) antar hai?",
+        "options": [
+          { "id": "A", "text": "Dono same hain, sirf naam alag hai" },
+          { "id": "B", "text": "Gram Sabha mein sabhi registered voters shamil hote hain, jabki Gram Panchayat mein sirf chune hue members hote hain" },
+          { "id": "C", "text": "Gram Sabha district level pe hoti hai, Gram Panchayat village level pe" },
+          { "id": "D", "text": "Gram Sabha ka koi legal existence nahi hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Gram Sabha mein village ke SABHI registered voters shamil hote hain (koi election nahi), jabki Gram Panchayat mein sirf un logon mein se CHUNE HUE members (Panch/Ward Members) hote hain."
+      },
+      "navigation": { "next": "card_32_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_32_milestone4",
+      "card_slug": "card_32_milestone4",
       "type": "milestone",
-      "concept_id": "milestone_structure",
-      "level": 3,
-      "progress": {
-        "current": 31,
-        "total": 72
-      },
+      "concept_id": "module4_complete",
+      "level": 4,
+      "progress": { "current": 32, "total": 83 },
       "milestone_payload": {
-        "title": "🎉 MODULE 3 COMPLETED!",
-        "badge_emoji": "🏘️",
-        "completed_topic": "Three-Tier Structure & Functions",
-        "xp_earned": 130,
-        "milestone_progress": "Module 3/6 Clear ✅",
-        "motivational_quote": "Excellent! Gram Sabha, Gram Panchayat, Panchayat Samiti, Zila Parishad — all crystal clear! Next: Special focus on BIHAR Panchayati Raj Act 2006 for BPSC TRE! 🔥"
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏡",
+        "completed_topic": "Gram Panchayat & Gram Sabha",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/10 Clear",
+        "motivational_quote": "Sabse neeche wala tier crack ho gaya! Ab chalte hain Block aur District level ki taraf."
       },
-      "navigation": {
-        "next": "card_32_bihar_intro",
-        "button_text": "Start Module 4: Bihar Panchayati Raj (BPSC TRE) 📍"
-      }
+      "navigation": { "next": "card_33_panchayat_samiti", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_32_bihar_intro",
-      "card_slug": "card_32_bihar_intro",
+      "card_id": "card_33_panchayat_samiti",
+      "card_slug": "card_33_panchayat_samiti",
       "type": "chat",
-      "concept_id": "bihar_intro",
-      "level": 4,
-      "progress": {
-        "current": 32,
-        "total": 72
-      },
+      "concept_id": "panchayat_samiti_structure",
+      "level": 5,
+      "progress": { "current": 33, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC TRE candidates dhyaan se suno! Bihar Panchayati Raj Act 2006 special provisions: (1) Women reservation — 50% (national 33% se zyada!). (2) EBC (Extremely Backward Classes) ko bhi reservation. (3) Panchayat elections me political parties participate kar sakti hain (party symbols allowed)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Kya?? Bihar me 50% women reservation hai? Ye to bahut progressive hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Bihar ne 2006 me hi implement kar diya tha. Nationally abhi bhi 33% hai (though 108th Amendment Bill for 50% pending hai Parliament me). Bihar ke saath Odisha, Madhya Pradesh, Chhattisgarh, Himachal Pradesh, Uttarakhand bhi 50% provide karte hain. Ye BPSC TRE ka favorite question hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir EBC reservation kitna hai Bihar me?"
-        }
+        { "speaker": "aman", "text": "Doosra tier hai '[[Panchayat Samiti|Block ya Taluka level pe banayi jaane wali intermediate Panchayat]]' - ise block ya taluka level pe banaya jaata hai. Iska head kehlaata hai 'Pramukh' ya 'Adhyaksh' (state ke hisaab se naam alag hota hai)." },
+        { "speaker": "raju", "text": "Ye Panchayat Samiti mein members kaise aate hain, seedhe vote se ya Gram Panchayat se select hokar?" },
+        { "speaker": "aman", "text": "Achha doubt hai! Panchayat Samiti mein members ka ek hissa seedhe janta dwara chuna jaata hai apne block ke wards se, aur ismein saare us block ke Gram Panchayat ke Sarpanch/Mukhiya bhi ex-officio member hote hain." },
+        { "speaker": "raju", "text": "Ex-officio matlab? Ye naya word hai Sir!" }
       ],
-      "navigation": {
-        "next": "card_33_bihar_reservation",
-        "button_text": "Dekhte hain detail! 📊"
-      }
+      "navigation": { "next": "card_34_exofficio_explained", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_33_bihar_reservation",
-      "card_slug": "card_33_bihar_reservation",
+      "card_id": "card_34_exofficio_explained",
+      "card_slug": "card_34_exofficio_explained",
       "type": "chat",
-      "concept_id": "bihar_reservation",
-      "level": 4,
-      "progress": {
-        "current": 33,
-        "total": 72
-      },
+      "concept_id": "exofficio_members_explained",
+      "level": 5,
+      "progress": { "current": 34, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bihar Panchayati Raj Reservation Pattern: (1) SC — Population proportion (around 16%). (2) ST — Population proportion (around 1%). (3) EBC — Separate provision (around 18%). (4) Women — 50% of TOTAL seats (including SC/ST/EBC women). Total milake karib sab seats me reservation!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir itna reservation to general category ke liye kam seats bachenge!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan, ye criticism bhi hai. Par objective hai — historically marginalized groups ko political representation de kar empower karna. Mukhiya posts me bhi 50% women reserve hain Bihar me. Ye social transformation ka powerful tool hai grassroots level pe!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Party symbols ki kya baat thi Sir?"
-        }
+        { "speaker": "aman", "text": "'[[Ex-officio Member|Wo member jo apne pad (post) ki wajah se automatically kisi committee mein shamil ho jaata hai, bina alag se election ke]]' matlab jaise koi vyakti pehle se Gram Panchayat ka Sarpanch hai, to wo automatically Panchayat Samiti ka bhi member ban jaata hai - use alag se election nahi ladna padta." },
+        { "speaker": "raju", "text": "Achha! Matlab Sarpanch already local level pe head hai, isliye upar wale level mein bhi seedha shamil ho jaata hai. Ye to logical lagta hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi soch rahe ho! Isse local aur block level ke beech connection bana rehta hai. Aur Panchayat Samiti ka kaam hota hai apne poore block ke development schemes, jaise water supply, health centres, ko coordinate karna." },
+        { "speaker": "raju", "text": "Ok samajh gaya, ab Zila Parishad batao - wo sabse upar wala tier hai na?" }
       ],
-      "navigation": {
-        "next": "card_34_bihar_party_system",
-        "button_text": "Unique feature hai Bihar me! 🎭"
-      }
+      "navigation": { "next": "card_35_zila_parishad", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_34_bihar_party_system",
-      "card_slug": "card_34_bihar_party_system",
+      "card_id": "card_35_zila_parishad",
+      "card_slug": "card_35_zila_parishad",
       "type": "chat",
-      "concept_id": "bihar_party_system",
-      "level": 4,
-      "progress": {
-        "current": 34,
-        "total": 72
-      },
+      "concept_id": "zila_parishad_structure",
+      "level": 5,
+      "progress": { "current": 35, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bihar Panchayat Elections me Party Symbols ALLOWED hain! Candidates apni political party ke symbol (cycle, haath, kamal, arrow etc.) pe contest kar sakte hain. Nationally zyada tar states me Panchayat elections non-party basis pe hote hain (independent candidates)."
-        },
-        {
-          "speaker": "raju",
-          "text": "To Bihar me party politics Panchayat tak aa gayi hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Advantages: Voters ko clarity, party ka support milta hai candidate ko. Disadvantages: Local issues ki jagah party politics dominate kar jati hai, factionalism badhta hai. Other states like Kerala, West Bengal me bhi party symbols allowed hain. Ye BPSC TRE me pucha jata hai — kaun states allow karte hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya Sir! Bihar ka structure bhi three-tier hai?"
-        }
+        { "speaker": "aman", "text": "Bilkul sahi! Teesra aur sabse upar wala tier hai '[[Zila Parishad|District level ki sabse badi Panchayati Raj institution]]' - ye poore zile (district) ke level pe kaam karti hai. Iska head kehlaata hai 'Zila Parishad Adhyaksh' (Chairperson)." },
+        { "speaker": "raju", "text": "Toh Zila Parishad sabse powerful hogi teeno mein se, District level pe hai isliye?" },
+        { "speaker": "aman", "text": "Correct socho! Zila Parishad District Collector ke saath coordinate karke poore district ka planning aur budget dekhti hai. Isme block level ke Panchayat Samiti Pramukh bhi ex-officio member hote hain - wahi connection wala pattern jo humne pichhle card mein dekha." },
+        { "speaker": "raju", "text": "Achha, matlab yehi pattern har level pe chalta hai - niche wala head upar wale mein ex-officio ban jaata hai. Ye teeno tier clear ho gaye! Test lelo ab Sir." }
       ],
-      "navigation": {
-        "next": "card_35_bihar_structure",
-        "button_text": "Haan, lekin names different! 📋"
-      }
+      "navigation": { "next": "card_36_quiz1", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_35_bihar_structure",
-      "card_slug": "card_35_bihar_structure",
-      "type": "chat",
-      "concept_id": "bihar_structure",
-      "level": 4,
-      "progress": {
-        "current": 35,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bihar Panchayati Raj Structure: (1) GRAM PANCHAYAT — Mukhiya (Head), Up-Mukhiya (Deputy), Ward Members (Panch). Average population 5,000-7,000. Total around 8,000+ Gram Panchayats in Bihar. (2) PANCHAYAT SAMITI — Block level, Pramukh (Head), Up-Pramukh. Total 534 Blocks."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ye numbers important hain kya exam ke liye?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ Bahut important for BPSC TRE! 'Bihar me kitne Gram Panchayats hain?' — exact figure change hoti rehti hai (currently around 8,500), par range yaad rakho (8,000-9,000). (3) ZILA PARISHAD — District level, Adhyaksh (Head), Up-Adhyaksh. Bihar me 38 districts, so 38 Zila Parishads."
-        },
-        {
-          "speaker": "raju",
-          "text": "38 districts yaad rakhna hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_36_bihar_special_provisions",
-        "button_text": "Haan! Aur bhi special features 🔍"
-      }
-    },
-    {
-      "card_id": "card_36_bihar_special_provisions",
-      "card_slug": "card_36_bihar_special_provisions",
-      "type": "chat",
-      "concept_id": "bihar_special_provisions",
-      "level": 4,
-      "progress": {
-        "current": 36,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bihar specific provisions: (1) Minimum education qualification — Class 8th pass for Mukhiya/Pramukh/Adhyaksh (some states me ye nahi hai). (2) Functional toilet mandatory for candidates (Swachh Bharat Mission alignment). (3) No dues to government departments (electricity, water bills clear hone chahiye)."
-        },
-        {
-          "speaker": "raju",
-          "text": "To Bihar me candidate banne ke liye qualifications zyada strict hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Ye ensure karta hai ki elected representatives educated aur responsible hon. (4) No-confidence motion: Mukhiya ke against 2/3 majority se no-confidence pass ho sakta hai. (5) Gram Kachahri — Village-level judicial body for minor disputes (civil cases under ₹5,000, minor criminal cases)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Gram Kachahri bhi Panchayati Raj ka part hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_37_gram_kachahri",
-        "button_text": "Haan! Important institution 🏛️"
-      }
-    },
-    {
-      "card_id": "card_37_gram_kachahri",
-      "card_slug": "card_37_gram_kachahri",
-      "type": "chat",
-      "concept_id": "gram_kachahri",
-      "level": 4,
-      "progress": {
-        "current": 37,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC TRE Special: Gram Kachahri (Village Court) — Bihar Panchayati Raj Act 2006 under established. Composition: Sarpanch (Mukhiya) + 4 Panch (ward members). Jurisdiction: Civil suits up to ₹50,000 value, minor criminal cases, land disputes, family disputes."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab local court hai jo Panchayat level pe justice deti hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Ye alternative dispute resolution hai — costly court system se bachne ke liye. Decisions binding hote hain par appeal ho sakti hai higher judicial forums me. Objective: Quick, accessible, affordable justice. Similar system: Nyaya Panchayats (other states me), Lok Adalats (national level)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Bihar me Panchayat elections kaun conduct karati hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_38_bihar_state_election_commission",
-        "button_text": "State Election Commission! ⚖️"
-      }
-    },
-    {
-      "card_id": "card_38_bihar_state_election_commission",
-      "card_slug": "card_38_bihar_state_election_commission",
-      "type": "chat",
-      "concept_id": "bihar_state_election_commission",
-      "level": 4,
-      "progress": {
-        "current": 38,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bihar State Election Commission (Article 243-K provision): Governor appoint karta hai State Election Commissioner ko. Tenure: 5 years (extendable). Removal: Same process as High Court Judge (Parliament impeachment). Independence ensure karne ke liye ye safeguards hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "To State Election Commission independent body hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Theoretically haan! Par practical challenges hain — funding State Government se milti hai, staff State Government provide karti hai. Supreme Court ne bola hai (cases me) ki puri autonomy honi chahiye. Bihar me Panchayat elections 5 saal me regularly hote hain (unlike some states jahan delay hoti hai)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaaa... to Bihar Panchayati Raj me kaafi progressive features hain!"
-        }
-      ],
-      "navigation": {
-        "next": "card_39_quiz_bihar_1",
-        "button_text": "Bilkul! Quiz me test karo 🎯"
-      }
-    },
-    {
-      "card_id": "card_39_quiz_bihar_1",
-      "card_slug": "card_39_quiz_bihar_1",
+      "card_id": "card_36_quiz1",
+      "card_slug": "card_36_quiz1",
       "type": "quiz",
-      "concept_id": "quiz_bihar_1",
-      "level": 4,
-      "progress": {
-        "current": 39,
-        "total": 72
-      },
+      "concept_id": "module5_quiz",
+      "level": 5,
+      "progress": { "current": 36, "total": 83 },
       "quiz_payload": {
-        "question": "⭐ BPSC TRE 2024 Pattern: Women reservation in Bihar Panchayats is: (Q1/3)",
+        "question": "Panchayati Raj ka teen-tier structure kaunsa hai (neeche se upar)?",
         "options": [
-          { "id": "A", "text": "33%" },
-          { "id": "B", "text": "40%" },
-          { "id": "C", "text": "50%" },
-          { "id": "D", "text": "60%" }
-        ],
-        "correct_option_id": "C",
-        "explanation": "⭐ BPSC TRE Favorite! Bihar provides 50% reservation for women in Panchayati Raj institutions under Bihar Panchayati Raj Act, 2006. This is HIGHER than the constitutional minimum of 33% (Article 243-D). Bihar was among the first states to implement 50% reservation. Other states with 50% include Odisha, Madhya Pradesh, Chhattisgarh, Himachal Pradesh, Uttarakhand. This is one of the MOST repeatedly asked questions in BPSC TRE!"
-      },
-      "navigation": {
-        "next": "card_40_quiz_bihar_2",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_40_quiz_bihar_2",
-      "card_slug": "card_40_quiz_bihar_2",
-      "type": "quiz",
-      "concept_id": "quiz_bihar_2",
-      "level": 4,
-      "progress": {
-        "current": 40,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ BPSC TRE Pattern: Gram Kachahri in Bihar has jurisdiction over civil suits up to: (Q2/3)",
-        "options": [
-          { "id": "A", "text": "₹10,000" },
-          { "id": "B", "text": "₹25,000" },
-          { "id": "C", "text": "₹50,000" },
-          { "id": "D", "text": "₹1,00,000" }
-        ],
-        "correct_option_id": "C",
-        "explanation": "⭐ BPSC TRE Important! Gram Kachahri (Village Court) in Bihar has jurisdiction over civil disputes up to ₹50,000 value. It consists of Sarpanch (Mukhiya) and 4 Panch members. It handles minor criminal cases, land disputes, family matters at village level for quick and accessible justice. This was established under Bihar Panchayati Raj Act, 2006. Don't confuse with earlier limit of ₹5,000 which was later increased to ₹50,000."
-      },
-      "navigation": {
-        "next": "card_41_quiz_bihar_3",
-        "button_text": "Last one! 💪"
-      }
-    },
-    {
-      "card_id": "card_41_quiz_bihar_3",
-      "card_slug": "card_41_quiz_bihar_3",
-      "type": "quiz",
-      "concept_id": "quiz_bihar_3",
-      "level": 4,
-      "progress": {
-        "current": 41,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ BPSC TRE Favorite: How many districts (and thus Zila Parishads) are there in Bihar currently? (Q3/3)",
-        "options": [
-          { "id": "A", "text": "36 districts" },
-          { "id": "B", "text": "38 districts" },
-          { "id": "C", "text": "40 districts" },
-          { "id": "D", "text": "42 districts" }
+          { "id": "A", "text": "Zila Parishad → Panchayat Samiti → Gram Panchayat" },
+          { "id": "B", "text": "Gram Panchayat → Panchayat Samiti → Zila Parishad" },
+          { "id": "C", "text": "Panchayat Samiti → Gram Panchayat → Zila Parishad" },
+          { "id": "D", "text": "Gram Sabha → Zila Parishad → Panchayat Samiti" }
         ],
         "correct_option_id": "B",
-        "explanation": "⭐ BPSC TRE Critical Fact! Bihar currently has 38 districts (as of 2024), and therefore 38 Zila Parishads. This number has changed over time (was 37, then 38 after Araria was added). For BPSC TRE, always remember current administrative divisions: 9 Divisions, 38 Districts, 534 Blocks, around 8,500 Gram Panchayats. These numbers are FREQUENTLY tested in BPSC prelims and mains!"
+        "explanation": "Sahi teen-tier structure (neeche se upar) hai: Gram Panchayat (village level) → Panchayat Samiti (block/taluka level) → Zila Parishad (district level)."
       },
-      "navigation": {
-        "next": "card_42_milestone_bihar",
-        "button_text": "Check Answer ➔"
-      }
+      "navigation": { "next": "card_37_quiz2", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_42_milestone_bihar",
-      "card_slug": "card_42_milestone_bihar",
+      "card_id": "card_37_quiz2",
+      "card_slug": "card_37_quiz2",
+      "type": "quiz",
+      "concept_id": "module5_quiz",
+      "level": 5,
+      "progress": { "current": 37, "total": 83 },
+      "quiz_payload": {
+        "question": "'Ex-officio member' ka kya matlab hota hai Panchayati Raj ke context mein?",
+        "options": [
+          { "id": "A", "text": "Wo member jo direct election se aata hai" },
+          { "id": "B", "text": "Wo member jo apne pehle se hold kiye gaye pad ki wajah se automatically upar wale tier mein shamil ho jaata hai" },
+          { "id": "C", "text": "Wo member jo State Government dwara nominate hota hai" },
+          { "id": "D", "text": "Wo member jise voting rights nahi hote" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ex-officio member wo hota hai jo apne current post (jaise Gram Panchayat Sarpanch) ki wajah se automatically upar wale tier (Panchayat Samiti) mein bhi member ban jaata hai, bina alag election ke."
+      },
+      "navigation": { "next": "card_38_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_38_quiz3",
+      "card_slug": "card_38_quiz3",
+      "type": "quiz",
+      "concept_id": "module5_quiz",
+      "level": 5,
+      "progress": { "current": 38, "total": 83 },
+      "quiz_payload": {
+        "question": "Zila Parishad kis level pe kaam karti hai, aur iska head kya kehlaata hai?",
+        "options": [
+          { "id": "A", "text": "Village level; Sarpanch" },
+          { "id": "B", "text": "Block level; Pramukh" },
+          { "id": "C", "text": "District level; Zila Parishad Adhyaksh (Chairperson)" },
+          { "id": "D", "text": "State level; Chief Minister" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Zila Parishad district (zila) level pe kaam karti hai, aur iske head ko Zila Parishad Adhyaksh ya Chairperson kaha jaata hai."
+      },
+      "navigation": { "next": "card_39_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_39_milestone5",
+      "card_slug": "card_39_milestone5",
       "type": "milestone",
-      "concept_id": "milestone_bihar",
-      "level": 4,
-      "progress": {
-        "current": 42,
-        "total": 72
-      },
+      "concept_id": "module5_complete",
+      "level": 5,
+      "progress": { "current": 39, "total": 83 },
       "milestone_payload": {
-        "title": "🎉 MODULE 4 COMPLETED!",
-        "badge_emoji": "📍",
-        "completed_topic": "Bihar Panchayati Raj Act 2006 (BPSC TRE Special)",
-        "xp_earned": 150,
-        "milestone_progress": "Module 4/6 Clear ✅",
-        "motivational_quote": "BPSC TRE candidates — you're now fully equipped! 50% women reservation, Gram Kachahri, 38 districts — all mastered! Next: Issues & Challenges in Panchayati Raj! 🚀"
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Panchayat Samiti & Zila Parishad",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/10 Clear",
+        "motivational_quote": "Poora teen-tier structure clear ho gaya! Ab dekhte hain sabse important social justice wala provision - Reservation."
       },
-      "navigation": {
-        "next": "card_43_challenges_intro",
-        "button_text": "Start Module 5: Issues & Challenges 🔍"
-      }
+      "navigation": { "next": "card_40_reservation_intro", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_43_challenges_intro",
-      "card_slug": "card_43_challenges_intro",
+      "card_id": "card_40_reservation_intro",
+      "card_slug": "card_40_reservation_intro",
       "type": "chat",
-      "concept_id": "challenges_intro",
-      "level": 5,
-      "progress": {
-        "current": 43,
-        "total": 72
-      },
+      "concept_id": "article243d_reservation_scst",
+      "level": 6,
+      "progress": { "current": 40, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Panchayati Raj implementation me kaafi challenges hain practically: (1) Fund Shortage — States Panchayats ko kam paisa dete hain. State Finance Commission ki recommendations implement nahi hoti. (2) Lack of Devolution — 11th Schedule me 29 subjects hain, par actually transfer bahut kam hota hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab Panchayats ko kaam karne ke liye paisa aur power dono kam milte hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Constitution ne framework diya hai, par implementation State Governments ke haath me hai. Kai states 'reluctant' hain power share karne me. (3) Inadequate Capacity — Elected representatives ko proper training nahi milti. Technical knowledge ki kami. Officials Panchayat members ko seriously nahi lete."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir aur kya problems hain?"
-        }
+        { "speaker": "aman", "text": "Article 243D ek bahut important provision hai - isme kaha gaya hai ki har Panchayat mein SC/ST ke liye seats reserve hongi, unki population ke proportion mein us Panchayat area mein." },
+        { "speaker": "raju", "text": "Proportion mein matlab? Jaise agar kisi gaon mein 30% SC log hain, to 30% seats reserve hongi?" },
+        { "speaker": "aman", "text": "Ekdum sahi! Aur ek zaroori twist - inn reserved seats mein se bhi kuch seats specifically SC/ST WOMEN ke liye reserve honi zaroori hain, unki population ke proportion mein. Ye 'double reservation' jaisa concept hai." },
+        { "speaker": "raju", "text": "Double reservation? Matlab pehle SC/ST total ke liye reserve, phir usme se women ke liye bhi reserve - ye to complex lag raha hai. Aur women ke liye general reservation kya hai?" }
       ],
-      "navigation": {
-        "next": "card_44_challenges_continue",
-        "button_text": "Bahut saari hain! Dekhte hain 😟"
-      }
+      "navigation": { "next": "card_41_women_reservation_33", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_44_challenges_continue",
-      "card_slug": "card_44_challenges_continue",
+      "card_id": "card_41_women_reservation_33",
+      "card_slug": "card_41_women_reservation_33",
       "type": "chat",
-      "concept_id": "challenges_continue",
-      "level": 5,
-      "progress": {
-        "current": 44,
-        "total": 72
-      },
+      "concept_id": "women_reservation_one_third",
+      "level": 6,
+      "progress": { "current": 41, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "(4) Domination by Elite — Rich, upper caste, educated people dominate. SC/ST/Women representatives ko 'rubber stamp' bana diya jata hai — real power unke male relatives ke paas. (5) Corruption — Transparency ki kami. Funds ka misuse. MGNREGA wages, ration distribution me corruption."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ye to bahut serious problems hain!"
-        },
-        {
-          "speaker": "aman",
-          "text": "(6) Weak Gram Sabha — Participation bahut kam. Meetings nahi hoti ya sirf formality. (7) Interference — State Government officials (BDO, DM) Panchayat ke kaam me unnecessary interfere karte hain. (8) Lack of Accountability — Social Audit weak hai. Citizens ko pata nahi kya ho raha hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "To solutions kya hain Sir?"
-        }
+        { "speaker": "aman", "text": "Article 243D(3) kehta hai - total seats ka kam se kam 1/3rd (33%) women ke liye reserve hona mandatory hai, ye SC/ST reservation ke ANDAR aur BAHAR dono jagah lagu hoga. Yahi rule Chairperson/Sarpanch ke post ke liye bhi hai." },
+        { "speaker": "raju", "text": "Matlab 33% seats sirf women ke liye - chahe wo SC/ST ho ya general? Ye to bahut progressive rule hai!" },
+        { "speaker": "aman", "text": "Bilkul, aur ⭐ BPSC TRE Favorite: Bihar ne is 33% ki national minimum requirement ko BADHA kar 50% kar diya! Bihar Panchayati Raj Act, 2006 ke tehat Bihar mein saari Panchayat seats mein 50% women reservation hai - Bihar isme pioneer state raha hai." },
+        { "speaker": "raju", "text": "50%!! Ye to national minimum se bhi zyada hai! Aur kaunse states ne aisa kiya hai Sir?" }
       ],
-      "navigation": {
-        "next": "card_45_solutions_reforms",
-        "button_text": "Dekhte hain suggestions! 💡"
-      }
+      "navigation": { "next": "card_42_other_states_50pct", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_45_solutions_reforms",
-      "card_slug": "card_45_solutions_reforms",
+      "card_id": "card_42_other_states_50pct",
+      "card_slug": "card_42_other_states_50pct",
       "type": "chat",
-      "concept_id": "solutions_reforms",
-      "level": 5,
-      "progress": {
-        "current": 45,
-        "total": 72
-      },
+      "concept_id": "states_with_50pct_reservation",
+      "level": 6,
+      "progress": { "current": 42, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Suggested Reforms & Solutions: (1) Increase Fund Devolution — States should honestly implement State Finance Commission recommendations. Central Finance Commission ne bhi grants badhaye hain (15th FC: ₹4,36,000 crore for 2021-26). (2) Complete Devolution of Functions, Functionaries, Funds (3 Fs)."
-        },
-        {
-          "speaker": "raju",
-          "text": "3 Fs matlab Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Functions (29 subjects practically transfer karo), Functionaries (staff Panchayats ko de do — abhi departments ke control me hain), Funds (adequate budget). (3) Capacity Building — Regular training, exposure visits, technology integration (e-governance). (4) Strengthen Gram Sabha — Compulsory meetings, quorum rules, decision-making power."
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur bhi solutions?"
-        }
+        { "speaker": "aman", "text": "Bihar ke alawa Madhya Pradesh, Himachal Pradesh, Uttarakhand, Chhattisgarh, aur kuch aur states ne bhi 50% women reservation apnaya hai. Lekin Bihar isme sabse pehla state tha - ⭐ BPSC TRE mein ye specifically puchha jaata hai ki Bihar 2006 mein hi 50% laaya tha." },
+        { "speaker": "raju", "text": "Achha! Ek aur doubt - OBC ke liye bhi reservation hai kya Panchayat mein? Article 243D mein SC/ST hi bola aapne!" },
+        { "speaker": "aman", "text": "Bahut acha catch Raju! Article 243D mein OBC ka koi mandatory Constitutional provision NAHI hai - ye ek option hai jo State Legislature apni marzi se de sakti hai apne law se. Kai states ne OBC reservation di hai, lekin ye Constitutional mandate nahi hai." },
+        { "speaker": "raju", "text": "Achha! Toh SC/ST aur Women mandatory hain Constitution se, par OBC state ki marzi hai. Ye exam ka bada trap ban sakta hai! Ab batao seats ka rotation bhi hota hai kya?" }
       ],
-      "navigation": {
-        "next": "card_46_solutions_continue",
-        "button_text": "Haan, modern approaches! 🚀"
-      }
+      "navigation": { "next": "card_43_rotation_chairperson", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_46_solutions_continue",
-      "card_slug": "card_46_solutions_continue",
+      "card_id": "card_43_rotation_chairperson",
+      "card_slug": "card_43_rotation_chairperson",
       "type": "chat",
-      "concept_id": "solutions_continue",
-      "level": 5,
-      "progress": {
-        "current": 46,
-        "total": 72
-      },
+      "concept_id": "rotation_of_reserved_seats",
+      "level": 6,
+      "progress": { "current": 43, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "(5) Technology & Transparency — e-Panchayat Mission Mode Project (digital records, online services, accounting software). Mobile apps for citizen grievances. (6) Social Audit — Mandatory aur effective. Jan Sunwai (public hearings). (7) Reduce Government Interference — Let Panchayats function autonomously within their domain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir e-Panchayat kya hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "e-Panchayat: Government of India initiative (Ministry of Panchayati Raj). Objectives: (a) PRI-SOFT — accounting software. (b) ServicePlus — G2C services portal. (c) PlanPlus — planning software. (d) PRIASoft — asset management. Digitization se transparency aur efficiency badhti hai. ⭐ UPSC/BPSC loves e-governance questions!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya Sir! Technology se bahut improvement ho sakta hai!"
-        }
+        { "speaker": "aman", "text": "Haan, Article 243D(4) mein kaha gaya hai ki Chairperson ke reserved posts har election ke baad 'rotate' hote hain - matlab agar is baar ek ward SC ke liye reserve tha, to agli baar wahi seat kisi doosre ward ke liye reserve ho sakti hai. Isse har area ko baari-baari fayda milta hai." },
+        { "speaker": "raju", "text": "Rotation se to sabko chance milta hai! Ye to fair system hai. Ab batao reservation ka duration kitna hai Sir - kya ye hamesha ke liye hai?" },
+        { "speaker": "aman", "text": "Bahut important point! Article 334 ke anusaar SC/ST reservation ki time-limit tha, jo kai baar amendments se badhaya gaya. Lekin isse alag, Panchayati Raj mein reservation ek continuing mandatory constitutional provision hai jab tak Parliament use badle nahi." },
+        { "speaker": "raju", "text": "Ok samajh gaya. Ye reservation wala poora module clear ho gaya - test lelo Sir!" }
       ],
-      "navigation": {
-        "next": "card_47_success_stories",
-        "button_text": "Haan! Success stories bhi dekho 🌟"
-      }
+      "navigation": { "next": "card_44_quiz1", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_47_success_stories",
-      "card_slug": "card_47_success_stories",
-      "type": "chat",
-      "concept_id": "success_stories",
-      "level": 5,
-      "progress": {
-        "current": 47,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Success Stories (UPSC Interview / Mains me use karo): (1) Kerala — Best devolution, strong People's Plan Campaign. Local bodies ko 35-40% state budget milta hai! (2) Rajasthan — Strong Gram Sabha culture, jan sunwai effective. (3) Karnataka — Gram Panchayat Development Plans (GPDP) well-implemented."
-        },
-        {
-          "speaker": "raju",
-          "text": "Kerala itna aage kaise hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "High literacy, political awareness, people's participation. 1996 se People's Plan Campaign — decentralized planning. (4) Hiware Bazar (Maharashtra) — Popatrao Pawar ne watershed management se gaon transform kiya. Per capita income dramatically increased. (5) Ralegan Siddhi (Maharashtra) — Anna Hazare ka village, water conservation, de-addiction."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ye villages to famous hain!"
-        }
-      ],
-      "navigation": {
-        "next": "card_48_quiz_challenges_1",
-        "button_text": "Haan! Ab quiz me test karo 🎯"
-      }
-    },
-    {
-      "card_id": "card_48_quiz_challenges_1",
-      "card_slug": "card_48_quiz_challenges_1",
+      "card_id": "card_44_quiz1",
+      "card_slug": "card_44_quiz1",
       "type": "quiz",
-      "concept_id": "quiz_challenges_1",
-      "level": 5,
-      "progress": {
-        "current": 48,
-        "total": 72
-      },
+      "concept_id": "module6_quiz",
+      "level": 6,
+      "progress": { "current": 44, "total": 83 },
       "quiz_payload": {
-        "question": "⭐ UPSC Mains Pattern: The concept of '3 Fs' in Panchayati Raj refers to: (Q1/3)",
+        "question": "Article 243D ke anusaar, Panchayat seats mein women ke liye kam se kam kitna reservation Constitutional mandate hai?",
         "options": [
-          { "id": "A", "text": "Functions, Funds, Freedom" },
-          { "id": "B", "text": "Functions, Functionaries, Funds" },
-          { "id": "C", "text": "Finance, Functions, Federalism" },
-          { "id": "D", "text": "Funds, Facilities, Functionaries" }
+          { "id": "A", "text": "50%" },
+          { "id": "B", "text": "1/3rd (33%)" },
+          { "id": "C", "text": "25%" },
+          { "id": "D", "text": "Koi mandatory reservation nahi hai" }
         ],
         "correct_option_id": "B",
-        "explanation": "The '3 Fs' of effective decentralization are: (1) Functions — transfer of all 29 subjects from 11th Schedule, (2) Functionaries — transfer of staff/personnel to work under Panchayats, (3) Funds — adequate financial resources to execute functions. This concept is critical for understanding why Panchayati Raj remains weak in practice despite constitutional provisions. Many states have transferred functions but not functionaries or adequate funds, making Panchayats powerless. This is a UPSC Mains favorite!"
+        "explanation": "Article 243D(3) ke anusaar total seats ka kam se kam 1/3rd (33%) women ke liye reserve hona Constitutional mandate hai. Kuch states (jaise Bihar) ne ise badhakar 50% kar diya hai."
       },
-      "navigation": {
-        "next": "card_49_quiz_challenges_2",
-        "button_text": "Next Question ➔"
-      }
+      "navigation": { "next": "card_45_quiz2", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_49_quiz_challenges_2",
-      "card_slug": "card_49_quiz_challenges_2",
+      "card_id": "card_45_quiz2",
+      "card_slug": "card_45_quiz2",
       "type": "quiz",
-      "concept_id": "quiz_challenges_2",
-      "level": 5,
-      "progress": {
-        "current": 49,
-        "total": 72
-      },
+      "concept_id": "module6_quiz",
+      "level": 6,
+      "progress": { "current": 45, "total": 83 },
       "quiz_payload": {
-        "question": "⭐ BPSC Pattern: e-Panchayat is a Mission Mode Project under: (Q2/3)",
+        "question": "⭐ BPSC TRE Focus: Bihar mein Panchayat seats mein women reservation kitna hai, aur ye kis Act ke tehat lagu hua?",
         "options": [
-          { "id": "A", "text": "Ministry of Rural Development" },
-          { "id": "B", "text": "Ministry of Electronics & IT" },
-          { "id": "C", "text": "Ministry of Panchayati Raj" },
-          { "id": "D", "text": "NITI Aayog" }
+          { "id": "A", "text": "33%; Bihar Panchayati Raj Act, 2006" },
+          { "id": "B", "text": "50%; Bihar Panchayati Raj Act, 2006" },
+          { "id": "C", "text": "25%; 73rd Amendment Act" },
+          { "id": "D", "text": "40%; Bihar Reorganisation Act" }
         ],
-        "correct_option_id": "C",
-        "explanation": "e-Panchayat is a Mission Mode Project (MMP) under the Ministry of Panchayati Raj, Government of India. It aims to bring transparency, accountability, and efficiency in Panchayat functioning through ICT. Key components include: PRI-SOFT (accounting), ServicePlus (G2C services), PlanPlus (planning), PRIASoft (asset management). It was launched in 2011. Don't confuse with e-Governance initiatives of MeitY (Ministry of Electronics & IT)."
+        "correct_option_id": "B",
+        "explanation": "Bihar Panchayati Raj Act, 2006 ke tehat Bihar mein Panchayat seats mein 50% women reservation lagu kiya gaya - jo national minimum (33%) se zyada hai. Bihar isme pioneer state tha."
       },
-      "navigation": {
-        "next": "card_50_quiz_challenges_3",
-        "button_text": "Last one! 💪"
-      }
+      "navigation": { "next": "card_46_quiz3", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_50_quiz_challenges_3",
-      "card_slug": "card_50_quiz_challenges_3",
+      "card_id": "card_46_quiz3",
+      "card_slug": "card_46_quiz3",
       "type": "quiz",
-      "concept_id": "quiz_challenges_3",
-      "level": 5,
-      "progress": {
-        "current": 50,
-        "total": 72
-      },
+      "concept_id": "module6_quiz",
+      "level": 6,
+      "progress": { "current": 46, "total": 83 },
       "quiz_payload": {
-        "question": "⭐ SSC CGL Pattern: Which state is known for best devolution of powers to Panchayats? (Q3/3)",
+        "question": "OBC (Other Backward Classes) ke liye Panchayat mein reservation ke baare mein kaunsa kathan sahi hai?",
         "options": [
-          { "id": "A", "text": "Bihar" },
-          { "id": "B", "text": "Uttar Pradesh" },
-          { "id": "C", "text": "Kerala" },
-          { "id": "D", "text": "Rajasthan" }
+          { "id": "A", "text": "Article 243D mein OBC reservation Constitutionally mandatory hai, jaise SC/ST ke liye hai" },
+          { "id": "B", "text": "Article 243D mein OBC ka koi mandatory Constitutional provision nahi hai - ye State Legislature ki marzi par depend karta hai" },
+          { "id": "C", "text": "OBC reservation sirf Bihar mein possible hai" },
+          { "id": "D", "text": "OBC reservation ke liye alag se Constitutional Amendment ki zaroorat padi" }
         ],
-        "correct_option_id": "C",
-        "explanation": "Kerala is widely recognized for the best devolution of powers and funds to Panchayats in India. Through the 'People's Plan Campaign' (started 1996), Kerala devolves 35-40% of its state budget to local bodies. High literacy, political awareness, and strong civil society participation make Kerala's Panchayati Raj system the most successful. Rajasthan is also good (strong Gram Sabha), but Kerala leads in actual fund devolution and participatory planning. This is frequently asked in SSC, UPSC, and state PSC exams!"
+        "correct_option_id": "B",
+        "explanation": "Article 243D mein sirf SC/ST aur Women ke liye reservation Constitutionally mandatory hai. OBC reservation ek option hai jo State Legislature apni marzi se apne law dwara de sakti hai - ye Constitutional mandate nahi hai."
       },
-      "navigation": {
-        "next": "card_51_milestone_challenges",
-        "button_text": "Check Answer ➔"
-      }
+      "navigation": { "next": "card_47_milestone6", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_51_milestone_challenges",
-      "card_slug": "card_51_milestone_challenges",
+      "card_id": "card_47_milestone6",
+      "card_slug": "card_47_milestone6",
       "type": "milestone",
-      "concept_id": "milestone_challenges",
-      "level": 5,
-      "progress": {
-        "current": 51,
-        "total": 72
-      },
+      "concept_id": "module6_complete",
+      "level": 6,
+      "progress": { "current": 47, "total": 83 },
       "milestone_payload": {
-        "title": "🎉 MODULE 5 COMPLETED!",
-        "badge_emoji": "🔍",
-        "completed_topic": "Challenges, Solutions & Success Stories",
-        "xp_earned": 140,
-        "milestone_progress": "Module 5/6 Clear ✅",
-        "motivational_quote": "You now understand both theory and reality of Panchayati Raj! Last module: Recent Developments, Schemes & Constitutional Amendments! 🚀"
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "👩‍⚖️",
+        "completed_topic": "Reservation in Panchayats (Article 243D)",
+        "xp_earned": 65,
+        "milestone_progress": "Module 6/10 Clear",
+        "motivational_quote": "Social justice ka poora concept clear ho gaya! Ab dekhte hain kaun elections karwata hai aur paisa kaun deta hai."
       },
-      "navigation": {
-        "next": "card_52_recent_developments_intro",
-        "button_text": "Start Module 6: Recent Developments 📰"
-      }
+      "navigation": { "next": "card_48_sec_intro", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_52_recent_developments_intro",
-      "card_slug": "card_52_recent_developments_intro",
+      "card_id": "card_48_sec_intro",
+      "card_slug": "card_48_sec_intro",
       "type": "chat",
-      "concept_id": "recent_developments_intro",
-      "level": 6,
-      "progress": {
-        "current": 52,
-        "total": 72
-      },
+      "concept_id": "state_election_commission_243k",
+      "level": 7,
+      "progress": { "current": 48, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Recent Developments in Panchayati Raj: (1) Swachh Bharat Mission (2014) — Panchayats ko ODF (Open Defecation Free) status achieve karni thi. (2) MGNREGA (2005) — Mahatma Gandhi National Rural Employment Guarantee Act. Gram Panchayat principal implementing agency hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "MGNREGA to bahut important scheme hai na?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! World's largest employment guarantee scheme. Har rural household ko 100 days ki guaranteed wage employment. Gram Panchayat schemes identify karti hai, muster rolls maintain karti hai. Social Audit Gram Sabha karti hai — kitna kaam hua, kitna paisa kharch. Ye empowerment ka tool hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur kya schemes hain Panchayat ke through?"
-        }
+        { "speaker": "aman", "text": "Raju, humne humne Lok Sabha/Vidhan Sabha ke elections ke liye Election Commission of India padha hoga na? Panchayat elections ke liye bhi ek alag body hoti hai - Article 243K ke tehat, har state mein '[[State Election Commission|Har state mein Panchayat aur Municipality ke elections conduct karne wali independent body]]' hoti hai." },
+        { "speaker": "raju", "text": "State Election Commission? Ye ECI se alag hai kya Sir?" },
+        { "speaker": "aman", "text": "Bilkul alag hai! ECI Lok Sabha, Rajya Sabha, Vidhan Sabha ke elections dekhta hai, jabki State Election Commission (SEC) sirf Panchayat aur Municipality ke local elections conduct karta hai. Iska head hota hai 'State Election Commissioner', jise Governor appoint karta hai." },
+        { "speaker": "raju", "text": "Achha, matlab ye ek totally alag body hai! Kya isko bhi ECI jaisi independence milti hai?" }
       ],
-      "navigation": {
-        "next": "card_53_schemes_panchayat",
-        "button_text": "Bahut saari! Dekhte hain 📋"
-      }
+      "navigation": { "next": "card_49_sec_independence", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_53_schemes_panchayat",
-      "card_slug": "card_53_schemes_panchayat",
+      "card_id": "card_49_sec_independence",
+      "card_slug": "card_49_sec_independence",
       "type": "chat",
-      "concept_id": "schemes_panchayat",
-      "level": 6,
-      "progress": {
-        "current": 53,
-        "total": 72
-      },
+      "concept_id": "sec_removal_process",
+      "level": 7,
+      "progress": { "current": 49, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Major Schemes through Panchayats: (3) PMAY-G (Pradhan Mantri Awas Yojana - Gramin) — Housing for All. Gram Sabha beneficiaries select karti hai. (4) PMGSY (Pradhan Mantri Gram Sadak Yojana) — Rural road connectivity. Gram Panchayat roads ka maintenance."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir sabhi schemes me Panchayat involved hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "(5) JJM (Jal Jeevan Mission, 2019) — Har ghar nal se jal. Gram Panchayat implementation. (6) National Social Assistance Programme — Old Age Pension, Widow Pension, Disability Pension distribution Panchayat through. (7) Mid-Day Meal Scheme — School meals monitoring. (8) National Health Mission — ASHA workers Panchayat coordinate."
-        },
-        {
-          "speaker": "raju",
-          "text": "To Panchayat central hub hai rural development ka!"
-        }
+        { "speaker": "aman", "text": "Haan bilkul, State Election Commissioner ki removal process bhi High Court judge jaisi hi hai - use sirf 'like manner and on like grounds' hataya ja sakta hai, matlab Governor akele nahi hata sakta, ek proper impeachment jaisi process honi chahiye." },
+        { "speaker": "raju", "text": "Achha, matlab isse bhi ek tarah ki job-security milti hai, taaki koi Government use dabaa na sake!" },
+        { "speaker": "aman", "text": "Ekdum sahi samjhe! Isi independence ki wajah se Panchayat elections fair tarike se ho paate hain, State Government ka koi pressure nahi hota. Ab suno paisa ka management kaun karta hai - State Finance Commission." },
+        { "speaker": "raju", "text": "State Finance Commission? Ye kya hota hai Sir, aur ye Union Finance Commission se alag hai kya?" }
       ],
-      "navigation": {
-        "next": "card_54_gpdp",
-        "button_text": "Bilkul! GPDP concept dekho 🗺️"
-      }
+      "navigation": { "next": "card_50_sfc_intro", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_54_gpdp",
-      "card_slug": "card_54_gpdp",
+      "card_id": "card_50_sfc_intro",
+      "card_slug": "card_50_sfc_intro",
       "type": "chat",
-      "concept_id": "gpdp",
-      "level": 6,
-      "progress": {
-        "current": 54,
-        "total": 72
-      },
+      "concept_id": "state_finance_commission_243i",
+      "level": 7,
+      "progress": { "current": 50, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "GPDP (Gram Panchayat Development Plan): Article 243-G kehta hai Panchayats 'economic development aur social justice ke liye plans prepare karein'. GPDP ek comprehensive plan hai jo Gram Sabha approve karti hai — next year kya kaam honge, kitna budget, priorities kya hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab har Gram Panchayat apna khud ka plan banati hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Bottom-up planning hai ye — villagers batate hain unhe kya chahiye (sadak, nalka, school building). GPDP me sab schemes integrate hoti hain. Ministry of Panchayati Raj har saal GPDP preparation ke liye timeline deti hai (usually October-December). ⭐ UPSC Interview me GPDP implementation puuch sakte hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir National Panchayati Raj Day kab hai?"
-        }
+        { "speaker": "aman", "text": "Haan, Article 243I ke tehat har State Governor ko har 5 saal mein ek '[[State Finance Commission|Har state mein har 5 saal pe Governor dwara banayi jaane wali committee jo State aur Panchayat ke beech paisa baantne ki sifarish deti hai]]' banana zaroori hai. Ye Commission decide karti hai ki State ka tax revenue Panchayats aur Municipalities ke beech kaise baanta jaaye." },
+        { "speaker": "raju", "text": "Achha! Toh ye state level pe wahi kaam karta hai jo national level pe Finance Commission karta hai Union aur States ke beech?" },
+        { "speaker": "aman", "text": "Bilkul sahi comparison! Union Finance Commission Article 280 ke tehat Union-State ke beech paisa baantta hai, aur State Finance Commission Article 243I ke tehat State-Panchayat ke beech baantta hai. Same logic, alag level." },
+        { "speaker": "raju", "text": "Ye to accha connection bana! Ab in dono - SEC aur SFC - ka test lelo Sir." }
       ],
-      "navigation": {
-        "next": "card_55_panchayat_diwas",
-        "button_text": "Important date! 📅"
-      }
+      "navigation": { "next": "card_51_quiz1", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_55_panchayat_diwas",
-      "card_slug": "card_55_panchayat_diwas",
-      "type": "chat",
-      "concept_id": "panchayat_diwas",
-      "level": 6,
-      "progress": {
-        "current": 55,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "National Panchayati Raj Day — 24 APRIL (since 2010). Kyunki 24 April 1993 ko 73rd Amendment force me aaya tha. Is din Ministry of Panchayati Raj awards deti hai best performing Panchayats ko — Deen Dayal Upadhyay Panchayat Sashaktikaran Puraskar, Nanaji Deshmukh Rashtriya Gaurav Gram Sabha Puraskar."
-        },
-        {
-          "speaker": "raju",
-          "text": "To ye din celebrate karke Panchayati Raj ko promote karte hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Awareness badhana, best practices share karna. ⭐ SSC/Railway me puuchte hain — National Panchayati Raj Day kab hai? 24 April (NOT 2 October jo Balwant Rai Mehta implementation date hai). Ye confusion trap hai — implementation 1959 me, constitutional status 1993 me!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya Sir! Koi recent amendments hue hain?"
-        }
-      ],
-      "navigation": {
-        "next": "card_56_recent_amendments",
-        "button_text": "Pending hain! Dekhte hain 📜"
-      }
-    },
-    {
-      "card_id": "card_56_recent_amendments",
-      "card_slug": "card_56_recent_amendments",
-      "type": "chat",
-      "concept_id": "recent_amendments",
-      "level": 6,
-      "progress": {
-        "current": 56,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Pending/Proposed Amendments: (1) Women Reservation Bill (for Lok Sabha/Assemblies — 50%) — 128th Constitutional Amendment Act, 2023 passed! Par Panchayat level me already states 50% de chuke hain. (2) OBC Reservation in Panchayats — Supreme Court cases (K. Krishna Murthy 2010) ne kaha 'triple test' zaroori hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Triple test kya hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Supreme Court ne 2010 me kaha — OBC reservation Panchayats me tabhi valid jab: (1) State Backward Classes Commission constitute ho. (2) Commission empirical data collect kare OBC population ka. (3) Reservation overall 50% ceiling se zyada na ho. Ye ensure karta hai arbitrary reservation na ho."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaaa... to data-driven hona chahiye!"
-        }
-      ],
-      "navigation": {
-        "next": "card_57_comparison_urban",
-        "button_text": "Haan! Ab Urban comparison 🏙️"
-      }
-    },
-    {
-      "card_id": "card_57_comparison_urban",
-      "card_slug": "card_57_comparison_urban",
-      "type": "chat",
-      "concept_id": "comparison_urban",
-      "level": 6,
-      "progress": {
-        "current": 57,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Panchayati Raj (Rural) vs Municipalities (Urban): 73rd Amendment — Panchayati Raj (Part IX). 74th Amendment (1992) — Municipalities (Part IX-A, Article 243-P to 243-ZG). Three types: Nagar Panchayat (transitional), Municipal Council (smaller cities), Municipal Corporation (large cities)."
-        },
-        {
-          "speaker": "raju",
-          "text": "To urban areas ke liye alag system hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! 12th Schedule — 18 subjects for Municipalities (jaise urban planning, water supply, public health, fire services). Similar provisions — 5 year term, reservations (SC/ST/Women), State Election Commission, State Finance Commission. Par structure different hai — Mayor directly/indirectly elected (state law pe depend)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya Sir! Rural me Panchayati Raj, Urban me Municipalities!"
-        }
-      ],
-      "navigation": {
-        "next": "card_58_pesa_act",
-        "button_text": "Perfect! PESA Act dekho — special provision 🌲"
-      }
-    },
-    {
-      "card_id": "card_58_pesa_act",
-      "card_slug": "card_58_pesa_act",
-      "type": "chat",
-      "concept_id": "pesa_act",
-      "level": 6,
-      "progress": {
-        "current": 58,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "PESA (Panchayats Extension to Scheduled Areas) Act, 1996: Article 243-M kehta hai 73rd Amendment Scheduled Areas (5th Schedule — tribal areas) me apply nahi hoga. Par tribals ko bhi self-governance chahiye! Isliye Parliament ne PESA Act banaya — special provisions with stronger Gram Sabha!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab tribal areas me Gram Sabha zyada powerful hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bahut zyada! PESA provisions: (1) Gram Sabha natural resources ka custodian (minor forest produce, minor minerals). (2) Land acquisition, mining — Gram Sabha ki consent zaroori. (3) Excise licenses — Gram Sabha approve. (4) Minor water bodies — Gram Sabha manage. (5) Dispute resolution — traditional methods allowed."
-        },
-        {
-          "speaker": "raju",
-          "text": "Wah! To tribals ki autonomy protect hoti hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_59_sixth_schedule",
-        "button_text": "Haan! 6th Schedule aur bhi special 🏔️"
-      }
-    },
-    {
-      "card_id": "card_59_sixth_schedule",
-      "card_slug": "card_59_sixth_schedule",
-      "type": "chat",
-      "concept_id": "sixth_schedule",
-      "level": 6,
-      "progress": {
-        "current": 59,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "6th Schedule Areas (Article 244 — North-East tribal areas): Assam, Meghalaya, Tripura, Mizoram me Autonomous District Councils hain. Ye Panchayati Raj se bilkul alag system hai — zyada autonomy! Legislative, executive, judicial powers (customary laws, district funds, land laws)."
-        },
-        {
-          "speaker": "raju",
-          "text": "To 6th Schedule me Panchayati Raj nahi hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Correct! Article 243-M(4)(b) clearly excludes 6th Schedule areas. Reason — tribal communities ki unique culture, traditions, governance systems preserve karna. Comparison yaad rakho: 5th Schedule areas — PESA lagu (modified Panchayati Raj). 6th Schedule areas — Autonomous Councils (completely different). ⭐ BPSC/UPSC loves this distinction!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Perfect Sir! Ab main poora Panchayati Raj samajh gaya!"
-        }
-      ],
-      "navigation": {
-        "next": "card_60_quiz_recent_1",
-        "button_text": "Final module quiz! 🎯"
-      }
-    },
-    {
-      "card_id": "card_60_quiz_recent_1",
-      "card_slug": "card_60_quiz_recent_1",
+      "card_id": "card_51_quiz1",
+      "card_slug": "card_51_quiz1",
       "type": "quiz",
-      "concept_id": "quiz_recent_1",
-      "level": 6,
-      "progress": {
-        "current": 60,
-        "total": 72
-      },
+      "concept_id": "module7_quiz",
+      "level": 7,
+      "progress": { "current": 51, "total": 83 },
       "quiz_payload": {
-        "question": "⭐ UPSC Prelims 2023 Pattern: National Panchayati Raj Day is observed on: (Q1/3)",
+        "question": "Panchayat aur Municipality ke elections conduct karne ki zimmedari kis body ki hoti hai?",
         "options": [
-          { "id": "A", "text": "2 October" },
-          { "id": "B", "text": "24 April" },
-          { "id": "C", "text": "26 January" },
-          { "id": "D", "text": "15 August" }
+          { "id": "A", "text": "Election Commission of India (ECI)" },
+          { "id": "B", "text": "State Election Commission (Article 243K)" },
+          { "id": "C", "text": "State Finance Commission" },
+          { "id": "D", "text": "District Collector" }
         ],
         "correct_option_id": "B",
-        "explanation": "National Panchayati Raj Day is observed on 24 April every year since 2010. This date commemorates the day when the 73rd Constitutional Amendment Act came into force (24 April 1993), giving constitutional status to Panchayati Raj Institutions. Don't confuse with 2 October 1959, which was when the first Panchayati Raj was inaugurated in Rajasthan. On this day, Ministry of Panchayati Raj awards best performing Panchayats. This is a UPSC/SSC favorite factual question!"
+        "explanation": "Article 243K ke tehat State Election Commission (SEC) Panchayat aur Municipality ke elections conduct karti hai - ye ECI se ek alag independent body hai."
       },
-      "navigation": {
-        "next": "card_61_quiz_recent_2",
-        "button_text": "Next Question ➔"
-      }
+      "navigation": { "next": "card_52_quiz2", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_61_quiz_recent_2",
-      "card_slug": "card_61_quiz_recent_2",
+      "card_id": "card_52_quiz2",
+      "card_slug": "card_52_quiz2",
       "type": "quiz",
-      "concept_id": "quiz_recent_2",
-      "level": 6,
-      "progress": {
-        "current": 61,
-        "total": 72
-      },
+      "concept_id": "module7_quiz",
+      "level": 7,
+      "progress": { "current": 52, "total": 83 },
       "quiz_payload": {
-        "question": "⭐ BPSC Pattern: PESA Act (1996) applies to: (Q2/3)",
+        "question": "Article 243I ke anusaar State Finance Commission har kitne saal mein banayi jaani chahiye?",
         "options": [
-          { "id": "A", "text": "All Panchayati Raj institutions" },
-          { "id": "B", "text": "Scheduled Areas (5th Schedule)" },
-          { "id": "C", "text": "Tribal areas of North-East (6th Schedule)" },
-          { "id": "D", "text": "Urban local bodies in tribal areas" }
+          { "id": "A", "text": "2 saal" },
+          { "id": "B", "text": "5 saal" },
+          { "id": "C", "text": "10 saal" },
+          { "id": "D", "text": "Sirf ek baar, permanent hoti hai" }
         ],
         "correct_option_id": "B",
-        "explanation": "PESA (Panchayats Extension to Scheduled Areas) Act, 1996 applies to Scheduled Areas mentioned in the 5th Schedule (tribal areas in central India like Jharkhand, Chhattisgarh, Odisha, etc.). It extends Panchayati Raj to these areas WITH special provisions giving more powers to Gram Sabha. It does NOT apply to 6th Schedule areas (North-East tribal areas like Meghalaya, Mizoram) which have Autonomous District Councils. This 5th vs 6th Schedule distinction is a BPSC/UPSC repeat question!"
+        "explanation": "Article 243I ke anusaar Governor ko har 5 saal mein ek State Finance Commission banani zaroori hai jo State aur Panchayats/Municipalities ke beech resources ke baantne ki sifarish de."
       },
-      "navigation": {
-        "next": "card_62_quiz_recent_3",
-        "button_text": "Last one! 💪"
-      }
+      "navigation": { "next": "card_53_quiz3", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_62_quiz_recent_3",
-      "card_slug": "card_62_quiz_recent_3",
+      "card_id": "card_53_quiz3",
+      "card_slug": "card_53_quiz3",
       "type": "quiz",
-      "concept_id": "quiz_recent_3",
-      "level": 6,
-      "progress": {
-        "current": 62,
-        "total": 72
-      },
+      "concept_id": "module7_quiz",
+      "level": 7,
+      "progress": { "current": 53, "total": 83 },
       "quiz_payload": {
-        "question": "⭐ SSC CGL Pattern: The 12th Schedule of the Constitution deals with: (Q3/3)",
+        "question": "State Election Commissioner ko kaise hataya (remove) ja sakta hai?",
         "options": [
-          { "id": "A", "text": "Functions of Panchayats (29 subjects)" },
-          { "id": "B", "text": "Functions of Municipalities (18 subjects)" },
-          { "id": "C", "text": "Scheduled Areas" },
-          { "id": "D", "text": "Anti-defection provisions" }
+          { "id": "A", "text": "Governor apni marzi se kabhi bhi hata sakta hai" },
+          { "id": "B", "text": "Sirf 'like manner and on like grounds' jaisa High Court judge ko hataya jaata hai - simple Governor ki marzi se nahi" },
+          { "id": "C", "text": "Chief Minister ki sifarish par hatana asaan hai" },
+          { "id": "D", "text": "Isse kabhi hataya nahi ja sakta" }
         ],
         "correct_option_id": "B",
-        "explanation": "The 12th Schedule (added by 74th Amendment, 1992) contains 18 subjects related to functions of Municipalities (urban local bodies). Don't confuse with 11th Schedule which contains 29 subjects for Panchayats (73rd Amendment). Remember: 11th for rural (29 subjects), 12th for urban (18 subjects). 10th Schedule deals with Anti-defection Law. 5th and 6th Schedules deal with Scheduled Areas and Tribal Areas. This schedule-based question is SSC CGL and Railway RRB favorite!"
+        "explanation": "State Election Commissioner ko High Court judge jaisi hi process se hataya ja sakta hai ('like manner and on like grounds'), taaki uski independence banaye rakhi ja sake aur State Government use apni marzi se hata na sake."
       },
-      "navigation": {
-        "next": "card_63_milestone_recent",
-        "button_text": "Check Answer ➔"
-      }
+      "navigation": { "next": "card_54_milestone7", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_63_milestone_recent",
-      "card_slug": "card_63_milestone_recent",
+      "card_id": "card_54_milestone7",
+      "card_slug": "card_54_milestone7",
       "type": "milestone",
-      "concept_id": "milestone_recent",
-      "level": 6,
-      "progress": {
-        "current": 63,
-        "total": 72
-      },
+      "concept_id": "module7_complete",
+      "level": 7,
+      "progress": { "current": 54, "total": 83 },
       "milestone_payload": {
-        "title": "🎉 MODULE 6 COMPLETED!",
-        "badge_emoji": "📰",
-        "completed_topic": "Recent Developments, Schemes & Special Provisions",
-        "xp_earned": 160,
-        "milestone_progress": "Module 6/6 Clear ✅",
-        "motivational_quote": "Congratulations! MGNREGA, GPDP, PESA, 6th Schedule — everything covered! Time for final revision and ultimate quiz! You're almost an officer! 🏆"
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💰",
+        "completed_topic": "State Election Commission & State Finance Commission",
+        "xp_earned": 65,
+        "milestone_progress": "Module 7/10 Clear",
+        "motivational_quote": "Elections aur Finance ka mechanism clear ho gaya! Ab dekhte hain Panchayat kya-kya kaam kar sakti hai - Eleventh Schedule."
       },
-      "navigation": {
-        "next": "card_64_final_summary",
-        "button_text": "Officer-Level Revision! 📚"
-      }
+      "navigation": { "next": "card_55_eleventh_schedule_intro", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_64_final_summary",
-      "card_slug": "card_64_final_summary",
+      "card_id": "card_55_eleventh_schedule_intro",
+      "card_slug": "card_55_eleventh_schedule_intro",
+      "type": "chat",
+      "concept_id": "eleventh_schedule_intro",
+      "level": 8,
+      "progress": { "current": 55, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ab dekho Panchayat ko kya-kya kaam karne ki power di gayi hai. Article 243G ke tehat, State Legislature Panchayat ko power de sakti hai '[[Eleventh Schedule|73rd Amendment se add ki gayi schedule jisme Panchayat ke 29 subjects list ki gayi hain]]' mein diye gaye 29 subjects par." },
+        { "speaker": "raju", "text": "29 subjects? Itne saare! Kya kuch examples bata sakte hain Sir?" },
+        { "speaker": "aman", "text": "Bilkul, isme Agriculture, Land improvement, Minor irrigation, Animal husbandry, Fisheries, Khadi/village/cottage industries, Rural housing, Drinking water, Roads, Rural electrification, Poverty alleviation, Education, Health, Women and Child development, aur bahut kuch shamil hai." },
+        { "speaker": "raju", "text": "Waah, ye to poori village economy cover kar leta hai! Par Sir, ye 'de sakti hai' ka matlab hai mandatory nahi hai?" }
+      ],
+      "navigation": { "next": "card_56_243g_discretionary", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_56_243g_discretionary",
+      "card_slug": "card_56_243g_discretionary",
+      "type": "chat",
+      "concept_id": "article243g_discretionary_nature",
+      "level": 8,
+      "progress": { "current": 56, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut sharp catch Raju! Article 243G kehta hai State Legislature 'may endow' (de SAKTI hai) Panchayats ko power ki 'preparation of plans for economic development and social justice' - matlab ye mandatory nahi, DISCRETIONARY hai." },
+        { "speaker": "raju", "text": "Hain?? Toh iska matlab hai kuch states ne Panchayat ko poori 29 subjects ki power di hogi, kuch ne bahut kam di hogi?" },
+        { "speaker": "aman", "text": "Bilkul sahi observation! Yehi Panchayati Raj system ki sabse badi criticism hai - Eleventh Schedule sirf ek 'menu list' hai, State ko force nahi kiya gaya hai sab kuch dene ke liye. Isliye alag-alag states mein Panchayat ki actual power alag-alag hai." },
+        { "speaker": "raju", "text": "Achha, ye to bada exam trap hai - 'Eleventh Schedule mandatory hai' bolna galat hoga! Bihar mein kaisi sthiti hai Sir?" }
+      ],
+      "navigation": { "next": "card_57_bihar_11th_schedule", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_57_bihar_11th_schedule",
+      "card_slug": "card_57_bihar_11th_schedule",
+      "type": "chat",
+      "concept_id": "bihar_11th_schedule_status",
+      "level": 8,
+      "progress": { "current": 57, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Focus: Bihar mein Bihar Panchayati Raj Act, 2006 ke tehat Panchayats ko Eleventh Schedule ke 29 subjects mein se kaafi saari power di gayi hai, khaaskar education, health, aur rural development ke schemes ke liye - lekin functional transfer (actual staff aur budget transfer) abhi bhi ek challenge maana jaata hai desh bhar mein." },
+        { "speaker": "raju", "text": "Functional transfer matlab? Power kaagaz par hai par practically nahi milti?" },
+        { "speaker": "aman", "text": "Ekdum sahi pakda! Isko '[[3F Framework|Funds, Functions, aur Functionaries - teeno ka poora transfer hona chahiye taaki Panchayat effectively kaam kar sake]]' bhi kehte hain - Funds (paisa), Functions (kaam ki power), aur Functionaries (staff/employees). Agar sirf Functions (kaagaz pe power) mile lekin Funds aur Functionaries na mile, to Panchayat effectively kaam nahi kar paati." },
+        { "speaker": "raju", "text": "3F Framework! Ye acronym yaad rakhna asaan hai - Funds, Functions, Functionaries. Ab batao Gram Sabha ke special powers kya hain 11th schedule se related?" }
+      ],
+      "navigation": { "next": "card_58_gram_sabha_special_powers", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_58_gram_sabha_special_powers",
+      "card_slug": "card_58_gram_sabha_special_powers",
+      "type": "chat",
+      "concept_id": "gram_sabha_special_functions",
+      "level": 8,
+      "progress": { "current": 58, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "Gram Sabha ke kuch typical kaam hote hain jo bahut states mein common hain - beneficiary selection (kaunse gareeb parivaar ko government scheme ka fayda milega, jaise Indira Awas Yojana), social audit (Panchayat ke kharche ka hisaab check karna), aur development plans ko approve karna." },
+        { "speaker": "raju", "text": "Beneficiary selection! Matlab Gram Sabha hi decide karti hai kise scheme ka fayda milega? Ye to bahut power hai janta ke haath mein!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Yehi to Panchayati Raj ka core spirit hai - top-down (upar se neeche) faisle ki jagah bottom-up (neeche se upar) participatory democracy. Ab poore Eleventh Schedule aur Gram Sabha ke concept ka test lelo!" },
+        { "speaker": "raju", "text": "Ready hoon Sir!" }
+      ],
+      "navigation": { "next": "card_59_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_59_quiz1",
+      "card_slug": "card_59_quiz1",
+      "type": "quiz",
+      "concept_id": "module8_quiz",
+      "level": 8,
+      "progress": { "current": 59, "total": 83 },
+      "quiz_payload": {
+        "question": "Eleventh Schedule mein Panchayat ke liye kitne subjects list kiye gaye hain?",
+        "options": [
+          { "id": "A", "text": "18" },
+          { "id": "B", "text": "29" },
+          { "id": "C", "text": "12" },
+          { "id": "D", "text": "40" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "73rd Amendment Act ne Eleventh Schedule add ki hai jisme Panchayat ke liye total 29 subjects list kiye gaye hain, jinme Agriculture, Health, Education, Rural housing, Drinking water aadi shamil hain."
+      },
+      "navigation": { "next": "card_60_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_60_quiz2",
+      "card_slug": "card_60_quiz2",
+      "type": "quiz",
+      "concept_id": "module8_quiz",
+      "level": 8,
+      "progress": { "current": 60, "total": 83 },
+      "quiz_payload": {
+        "question": "Article 243G ke anusaar, Eleventh Schedule ke subjects Panchayat ko dena kaisa hai?",
+        "options": [
+          { "id": "A", "text": "Mandatory - sabhi states ko poori 29 subjects deni hi hongi" },
+          { "id": "B", "text": "Discretionary - State Legislature apni marzi se decide karti hai kitni power deni hai" },
+          { "id": "C", "text": "Sirf Parliament decide kar sakti hai" },
+          { "id": "D", "text": "Sirf Governor decide karta hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 243G kehta hai State Legislature Panchayats ko power 'de sakti hai' (may endow) - ye discretionary hai, mandatory nahi. Isi wajah se alag-alag states mein Panchayat ki actual power alag-alag hoti hai."
+      },
+      "navigation": { "next": "card_61_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_61_quiz3",
+      "card_slug": "card_61_quiz3",
+      "type": "quiz",
+      "concept_id": "module8_quiz",
+      "level": 8,
+      "progress": { "current": 61, "total": 83 },
+      "quiz_payload": {
+        "question": "'3F Framework' (Funds, Functions, Functionaries) Panchayati Raj ke context mein kya represent karta hai?",
+        "options": [
+          { "id": "A", "text": "Teen tarah ke chunavi symbol" },
+          { "id": "B", "text": "Teen cheezein jo Panchayat ko effectively kaam karne ke liye chahiye - paisa, power/kaam, aur staff" },
+          { "id": "C", "text": "Teen prakar ke reservation" },
+          { "id": "D", "text": "Teen committees jo 1992 se pehle bani thi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "3F Framework - Funds (paisa), Functions (kaam karne ki power), aur Functionaries (staff/employees) - teeno ka poora transfer zaroori hai taaki Panchayat effectively apna kaam kar sake. Sirf kaagaz pe power dena kaafi nahi hai."
+      },
+      "navigation": { "next": "card_62_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_62_milestone8",
+      "card_slug": "card_62_milestone8",
+      "type": "milestone",
+      "concept_id": "module8_complete",
+      "level": 8,
+      "progress": { "current": 62, "total": 83 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📋",
+        "completed_topic": "Eleventh Schedule & Gram Sabha Functions",
+        "xp_earned": 65,
+        "milestone_progress": "Module 8/10 Clear",
+        "motivational_quote": "Panchayat ke poore powers samajh aa gaye! Ab dekhte hain Tribal areas ke liye special kanoon - PESA Act."
+      },
+      "navigation": { "next": "card_63_pesa_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_63_pesa_intro",
+      "card_slug": "card_63_pesa_intro",
+      "type": "chat",
+      "concept_id": "pesa_act_intro",
+      "level": 9,
+      "progress": { "current": 63, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, humne padha tha Article 243M ke tehat Part IX kuch Scheduled Areas mein automatically lagu nahi hota. Toh in tribal areas mein Panchayat ka system kaise chalta hai? Iske liye 1996 mein ek special kanoon banaya gaya - '[[PESA Act, 1996|Panchayats (Extension to Scheduled Areas) Act - Tribal/Scheduled Areas mein Panchayati Raj extend karne wala kanoon]]'." },
+        { "speaker": "raju", "text": "PESA! Ye poora naam kya hai Sir?" },
+        { "speaker": "aman", "text": "'Panchayats (Extension to Scheduled Areas) Act, 1996' - isne 73rd Amendment ke Panchayati Raj system ko Fifth Schedule ke Scheduled Areas mein bhi extend kiya, lekin kuch SPECIAL modifications ke saath, taaki tribal logon ki custom aur traditions respect ki jaayein." },
+        { "speaker": "raju", "text": "Special modifications? Jaise kya Sir? Normal Panchayat se kaise alag hai ye?" }
+      ],
+      "navigation": { "next": "card_64_pesa_gram_sabha_power", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_64_pesa_gram_sabha_power",
+      "card_slug": "card_64_pesa_gram_sabha_power",
+      "type": "chat",
+      "concept_id": "pesa_gram_sabha_powers",
+      "level": 9,
+      "progress": { "current": 64, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "PESA Act mein Gram Sabha ko normal areas se BAHUT ZYADA power di gayi hai - jaise minor forest produce ka ownership, minor water bodies ka management, moneylenders ko regulate karna, aur sabse important - land acquisition se pehle Gram Sabha ki consultation MANDATORY hai." },
+        { "speaker": "raju", "text": "Land acquisition se pehle consultation mandatory? Matlab agar Government ko tribal area mein zameen chahiye (jaise mining ke liye), to pehle Gram Sabha se poochna hi padega?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Yehi PESA Act ka sabse powerful provision hai, jo tribal logon ke land rights ko protect karta hai. Isse Panchayati Raj ka Gram Sabha wala concept tribal areas mein aur bhi strong ban jaata hai." },
+        { "speaker": "raju", "text": "Waah, ye to bahut important social justice tool hai! Test lelo ab PESA ka bhi Sir." }
+      ],
+      "navigation": { "next": "card_65_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_65_quiz1",
+      "card_slug": "card_65_quiz1",
+      "type": "quiz",
+      "concept_id": "module9_quiz",
+      "level": 9,
+      "progress": { "current": 65, "total": 83 },
+      "quiz_payload": {
+        "question": "PESA Act ka poora naam kya hai, aur ye kis saal banaya gaya?",
+        "options": [
+          { "id": "A", "text": "Panchayats (Extension to Scheduled Areas) Act, 1996" },
+          { "id": "B", "text": "Panchayat Empowerment and Social Amendment Act, 1992" },
+          { "id": "C", "text": "Provincial Extension of Self-Autonomy Act, 1986" },
+          { "id": "D", "text": "Panchayat Election and Special Areas Act, 2002" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "PESA ka poora naam hai 'Panchayats (Extension to Scheduled Areas) Act, 1996' - isne 73rd Amendment ke Panchayati Raj system ko Fifth Schedule ke Scheduled Areas mein tribal customs ka respect karte hue extend kiya."
+      },
+      "navigation": { "next": "card_66_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_66_quiz2",
+      "card_slug": "card_66_quiz2",
+      "type": "quiz",
+      "concept_id": "module9_quiz",
+      "level": 9,
+      "progress": { "current": 66, "total": 83 },
+      "quiz_payload": {
+        "question": "PESA Act ke tehat, land acquisition se pehle kiski consultation mandatory hai?",
+        "options": [
+          { "id": "A", "text": "District Collector" },
+          { "id": "B", "text": "Gram Sabha" },
+          { "id": "C", "text": "State Finance Commission" },
+          { "id": "D", "text": "State Election Commission" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "PESA Act ke tehat Scheduled Areas mein land acquisition se pehle Gram Sabha ki consultation mandatory hai - ye tribal logon ke land rights ko protect karne ka ek powerful tool hai."
+      },
+      "navigation": { "next": "card_67_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_67_quiz3",
+      "card_slug": "card_67_quiz3",
+      "type": "quiz",
+      "concept_id": "module9_quiz",
+      "level": 9,
+      "progress": { "current": 67, "total": 83 },
+      "quiz_payload": {
+        "question": "PESA Act kis Schedule ke areas ke liye banaya gaya hai?",
+        "options": [
+          { "id": "A", "text": "Sixth Schedule" },
+          { "id": "B", "text": "Fifth Schedule (Scheduled Areas)" },
+          { "id": "C", "text": "Ninth Schedule" },
+          { "id": "D", "text": "Tenth Schedule" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "PESA Act, 1996 Fifth Schedule ke Scheduled Areas ke liye banaya gaya, jaha tribal population zyada hai aur unke customs ko special protection deni zaroori hai."
+      },
+      "navigation": { "next": "card_68_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_68_milestone9",
+      "card_slug": "card_68_milestone9",
+      "type": "milestone",
+      "concept_id": "module9_complete",
+      "level": 9,
+      "progress": { "current": 68, "total": 83 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌳",
+        "completed_topic": "PESA Act, 1996 - Scheduled Areas",
+        "xp_earned": 65,
+        "milestone_progress": "Module 9/10 Clear",
+        "motivational_quote": "Tribal areas ka special system samajh aa gaya! Ab chalte hain last aur sabse important module - Bihar ka complete Panchayati Raj system."
+      },
+      "navigation": { "next": "card_69_bihar_act_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_69_bihar_act_intro",
+      "card_slug": "card_69_bihar_act_intro",
+      "type": "chat",
+      "concept_id": "bihar_panchayati_raj_act_2006",
+      "level": 10,
+      "progress": { "current": 69, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ab poore Bihar ka Panchayati Raj system consolidate karte hain, jo BPSC TRE ke liye sabse important hai. Bihar mein current law hai 'Bihar Panchayati Raj Act, 2006', jisne purane 1993 wale Act ki jagah li." },
+        { "speaker": "raju", "text": "2006 wala act kyun banana pada, jabki 1993 mein bhi to Panchayat law aa gaya tha?" },
+        { "speaker": "aman", "text": "Achha sawaal! 1993 wala Act 73rd Amendment ke turant baad banaya gaya tha, lekin usme kai limitations thi. 2006 mein Nitish Kumar sarkar ne naya, zyada comprehensive Act banaya jisme 50% women reservation jaisi progressive baatein add ki gayin." },
+        { "speaker": "raju", "text": "Achha, toh 2006 wala Act zyada strong hai! Bihar mein kya Gram Kachahri bhi ek Panchayati Raj institution hai Sir? Humne pichhle chapter mein iska naam suna tha!" }
+      ],
+      "navigation": { "next": "card_70_gram_kachahri_recap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_70_gram_kachahri_recap",
+      "card_slug": "card_70_gram_kachahri_recap",
+      "type": "chat",
+      "concept_id": "gram_kachahri_panchayati_raj_link",
+      "level": 10,
+      "progress": { "current": 70, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut achhi yaad rakhi! Haan, 'Gram Kachahri' Bihar ke Panchayati Raj system ka hi ek hissa hai - ye judicial function ke liye banayi gayi hai, jiska head '[[Sarpanch (Gram Kachahri)|Gram Kachahri ka elected head, jo chhote civil aur criminal matters sunta hai]]' kehlaata hai (Gram Panchayat ke Mukhiya se ALAG post), aur members ko 'Panch' kehte hain." },
+        { "speaker": "raju", "text": "Wait, Gram Kachahri ka Sarpanch aur Gram Panchayat ka Mukhiya - dono alag-alag log hote hain? Ye to bahut confusing hai!" },
+        { "speaker": "aman", "text": "Bilkul yehi sabse bada BPSC TRE trap hai! Bihar mein DONO alag-alag directly elected posts hain: Mukhiya (Gram Panchayat ka executive head, development kaam dekhta hai) aur Sarpanch (Gram Kachahri ka head, chhote-mote civil/criminal disputes sunta hai, jaise humne pichhle chapter mein padha tha)." },
+        { "speaker": "raju", "text": "Ohh! Toh dono ka kaam bhi alag hai - Mukhiya development, Sarpanch nyaya (justice)! Ab clear hai. Aur Bihar mein kitne total Panchayats hain approximately?" }
+      ],
+      "navigation": { "next": "card_71_bihar_numbers", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_71_bihar_numbers",
+      "card_slug": "card_71_bihar_numbers",
+      "type": "chat",
+      "concept_id": "bihar_panchayat_statistics",
+      "level": 10,
+      "progress": { "current": 71, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "Bihar mein approximately 8,000+ Gram Panchayats, 534 Panchayat Samitis (blocks), aur 38 Zila Parishad (ek har district ke liye, kyunki Bihar mein 38 districts hain) hain. Ye numbers exact exam year ke hisaab se thoda change ho sakte hain, lekin structure yahi rehta hai." },
+        { "speaker": "raju", "text": "38 Zila Parishad - matlab Bihar ke 38 districts ke barabar! Ye to yaad rakhna asaan hai." },
+        { "speaker": "aman", "text": "Bilkul sahi logic! Ek zila mein ek hi Zila Parishad hoti hai. Ab ek aur important Bihar-specific baat - Bihar mein Panchayat elections State Election Commission, Bihar (SEC Bihar) conduct karta hai, jo Patna mein based hai." },
+        { "speaker": "raju", "text": "Achha, Patna based SEC. Ab poora Bihar module clear ho gaya - reservation, structure, Gram Kachahri, sab kuch! Test lelo Sir final round!" }
+      ],
+      "navigation": { "next": "card_72_guess_bihar_functionaries", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_72_guess_bihar_functionaries",
+      "card_slug": "card_72_guess_bihar_functionaries",
+      "type": "guess",
+      "concept_id": "guess_bihar_secretary",
+      "level": 10,
+      "progress": { "current": 72, "total": 83 },
+      "guess_payload": {
+        "question": "Raju sochta hai - 'Sir, Mukhiya to elected hote hain, par gaon mein records aur paperwork kaun sambhalta hai, jaise koi government employee?' Uska guess hai koi elected member hi ye kaam karta hoga. Sahi hai?",
+        "options": [
+          { "id": "A", "text": "Haan, koi elected Panch hi ye kaam karta hai" },
+          { "id": "B", "text": "Nahi, Bihar mein har Gram Panchayat mein ek non-elected 'Panchayat Sachiv' (Secretary) hota hai jo government dwara appoint kiya jaata hai aur administrative/record-keeping kaam sambhalta hai" },
+          { "id": "C", "text": "Ye kaam District Collector khud karta hai" },
+          { "id": "D", "text": "Panchayat mein koi record-keeping nahi hoti" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Raju galat hai! Bihar (aur zyadatar states) mein har Gram Panchayat ke saath ek 'Panchayat Sachiv' (Secretary) hota hai jo State Government dwara appoint kiya gaya non-elected official hota hai. Wo Mukhiya ke saath milkar records, resolutions, aur administrative kaam sambhalta hai - ye elected representative aur government machinery ka connection hai."
+      },
+      "navigation": { "next": "card_73_quiz1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_73_quiz1",
+      "card_slug": "card_73_quiz1",
+      "type": "quiz",
+      "concept_id": "module10_quiz",
+      "level": 10,
+      "progress": { "current": 73, "total": 83 },
+      "quiz_payload": {
+        "question": "Bihar mein current Panchayati Raj kanoon kaunsa hai, jisne 1993 wale purane Act ki jagah li?",
+        "options": [
+          { "id": "A", "text": "Bihar Panchayat Samiti Act, 1985" },
+          { "id": "B", "text": "Bihar Panchayati Raj Act, 2006" },
+          { "id": "C", "text": "Bihar Local Self Government Act, 1999" },
+          { "id": "D", "text": "Bihar Gram Swaraj Act, 2010" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bihar Panchayati Raj Act, 2006 Bihar ka current governing law hai jisne purane 1993 wale Act ki jagah li, aur isme 50% women reservation jaisi progressive baatein shamil ki gayin."
+      },
+      "navigation": { "next": "card_74_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_74_quiz2",
+      "card_slug": "card_74_quiz2",
+      "type": "quiz",
+      "concept_id": "module10_quiz",
+      "level": 10,
+      "progress": { "current": 74, "total": 83 },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE Focus: Bihar mein Gram Panchayat ke Mukhiya aur Gram Kachahri ke Sarpanch ke baare mein kaunsa kathan sahi hai?",
+        "options": [
+          { "id": "A", "text": "Dono ek hi vyakti hote hain, alag naam sirf formality hai" },
+          { "id": "B", "text": "Dono alag-alag directly elected posts hain - Mukhiya development kaam dekhta hai, Sarpanch chhote civil/criminal disputes (judicial matters) sunta hai" },
+          { "id": "C", "text": "Sarpanch State Government dwara appoint hota hai" },
+          { "id": "D", "text": "Mukhiya sirf mahila ho sakti hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bihar mein Mukhiya (Gram Panchayat ka executive head - development kaam) aur Sarpanch (Gram Kachahri ka head - judicial/dispute resolution kaam) DONO alag-alag directly elected posts hain jinke kaam bhi alag hain."
+      },
+      "navigation": { "next": "card_75_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_75_quiz3",
+      "card_slug": "card_75_quiz3",
+      "type": "quiz",
+      "concept_id": "module10_quiz",
+      "level": 10,
+      "progress": { "current": 75, "total": 83 },
+      "quiz_payload": {
+        "question": "Bihar mein Panchayat Sachiv (Secretary) ke baare mein kaunsa kathan sahi hai?",
+        "options": [
+          { "id": "A", "text": "Ye ek elected post hai jise janta chunti hai" },
+          { "id": "B", "text": "Ye State Government dwara appoint kiya gaya non-elected official hai jo administrative/record-keeping kaam dekhta hai" },
+          { "id": "C", "text": "Ye Mukhiya ka doosra naam hai" },
+          { "id": "D", "text": "Ye sirf Zila Parishad level pe hota hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Panchayat Sachiv ek non-elected, government-appointed official hai jo Gram Panchayat ke administrative kaam, records, aur resolutions manage karne mein Mukhiya ki madad karta hai."
+      },
+      "navigation": { "next": "card_76_milestone10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_76_milestone10",
+      "card_slug": "card_76_milestone10",
+      "type": "milestone",
+      "concept_id": "module10_complete",
+      "level": 10,
+      "progress": { "current": 76, "total": 83 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🐘",
+        "completed_topic": "Bihar-Specific Panchayati Raj System",
+        "xp_earned": 70,
+        "milestone_progress": "Module 10/10 Clear",
+        "motivational_quote": "Poora chapter cover ho gaya Raju! Ab Officer-level final revision aur Master Quiz ka time hai."
+      },
+      "navigation": { "next": "card_77_summary", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_77_summary",
+      "card_slug": "card_77_summary",
       "type": "summary",
-      "concept_id": "final_summary",
-      "level": 6,
-      "progress": {
-        "current": 64,
-        "total": 72
-      },
+      "concept_id": "chapter_summary",
+      "level": 11,
+      "progress": { "current": 77, "total": 83 },
       "summary_payload": {
-        "title": "⚡ Officer-Level Quick Revision: Panchayati Raj",
+        "title": "⚡ Officer Revision - Panchayati Raj",
         "revision_points": [
           {
-            "topic": "Constitutional Provisions",
-            "point": "73rd Amendment (1992) — Part IX (Art 243 to 243-O). Force: 24 April 1993. Three-tier (except pop <20L). Direct elections every 5 years. Dissolution: Fresh election within 6 months, body serves remaining period only. State Election Commission (Art 243-K), State Finance Commission (Art 243-I) mandatory."
+            "topic": "Historical Committees",
+            "point": "Balwant Rai Mehta (1957) - 3-tier system, Rajasthan-Nagaur pehla state (2 Oct 1959). Ashok Mehta (1977) - 2-tier system. GVK Rao (1985) - grass-root democracy. L.M. Singhvi (1986) - Constitutional status ki pehli sifarish."
           },
           {
-            "topic": "Reservation Formula",
-            "point": "SC/ST: Population proportion. Women: NOT less than 1/3 (minimum 33%). ⭐ Bihar: 50% women + EBC reservation (BPSC TRE favorite). Chairpersons: 1/3 reserved for women. Triple Test for OBC (SC 2010): Backward Commission + Empirical data + <50% ceiling."
+            "topic": "73rd Amendment, 1992",
+            "point": "24 April 1993 se lagu (National Panchayati Raj Day). Part IX, Article 243-243O. Eleventh Schedule (29 subjects) add hui. Article 243M ke tehat Nagaland, Meghalaya, Mizoram exempt hain."
           },
           {
-            "topic": "Structure & Functions",
-            "point": "Gram Panchayat: Mukhiya (direct election), Ward Members. Panchayat Samiti: Pramukh (indirect). Zila Parishad: Adhyaksh (indirect). Gram Sabha (Art 243-A): All voters, foundation of system, approves budget/plans. 11th Schedule: 29 subjects. Bihar: 38 districts, 534 blocks, ~8,500 GPs. Gram Kachahri: Civil cases up to ₹50,000."
+            "topic": "Three-Tier Structure & Reservation",
+            "point": "Gram Panchayat → Panchayat Samiti → Zila Parishad. Article 243D: SC/ST proportional reservation + minimum 1/3rd (33%) women reservation (Bihar mein 50%). OBC reservation Constitutionally mandatory NAHI hai, State ki marzi hai."
           },
           {
-            "topic": "Special Provisions",
-            "point": "PESA (1996): 5th Schedule areas, strong Gram Sabha (natural resources control, land acquisition consent). 6th Schedule: North-East tribals, Autonomous Councils (NOT Panchayati Raj). Art 243-M: Excludes Scheduled & Tribal areas. Bihar: Party symbols allowed, 8th class minimum qualification, functional toilet mandatory."
+            "topic": "SEC, SFC aur PESA",
+            "point": "Article 243K: State Election Commission Panchayat elections conduct karta hai. Article 243I: State Finance Commission har 5 saal mein banti hai. PESA Act, 1996: Fifth Schedule Scheduled Areas mein Gram Sabha ko land acquisition consultation jaisi extra powers."
           },
           {
-            "topic": "Recent Developments",
-            "point": "National Panchayati Raj Day: 24 April. GPDP: Gram Panchayat Development Plan. e-Panchayat: MoPR initiative (PRI-SOFT, ServicePlus). Major schemes: MGNREGA (100 days guarantee), JJM (Har Ghar Jal), PMAY-G, PMGSY, SBM. 3 Fs: Functions, Functionaries, Funds. Best: Kerala (35-40% devolution). 12th Schedule: 18 subjects for Municipalities (74th Amendment)."
+            "topic": "⭐ Bihar Specifics",
+            "point": "Bihar Panchayati Raj Act, 2006 - 50% women reservation. Mukhiya (Gram Panchayat head, executive/development) aur Sarpanch (Gram Kachahri head, judicial) DONO alag directly-elected posts. 38 Zila Parishad (38 districts ke barabar). Panchayat Sachiv - non-elected govt official."
           }
         ]
       },
-      "navigation": {
-        "next": "card_65_final_quiz_multistatement",
-        "button_text": "Final Officer Quiz! 🎖️"
-      }
+      "navigation": { "next": "card_78_final_quiz", "button_text": "Take Final Officer Challenge ➔" }
     },
     {
-      "card_id": "card_65_final_quiz_multistatement",
-      "card_slug": "card_65_final_quiz_multistatement",
+      "card_id": "card_78_final_quiz",
+      "card_slug": "card_78_final_quiz",
       "type": "final_quiz",
-      "concept_id": "final_quiz_multistatement",
-      "level": 6,
-      "progress": {
-        "current": 65,
-        "total": 72
-      },
+      "concept_id": "final_master_quiz",
+      "level": 11,
+      "progress": { "current": 78, "total": 83 },
       "quiz_payload": {
-        "question": "⭐ BPSC 2024 Officer Pattern (Multi-Statement): Consider the following statements about Panchayati Raj in India:\n\n1. The 73rd Constitutional Amendment added Part IX to the Constitution.\n2. Gram Sabha is defined under Article 243-A.\n3. Reservation for women in Panchayats is exactly 33% as per Constitution.\n4. PESA Act (1996) applies to both 5th and 6th Schedule areas.\n5. Bihar provides 50% reservation for women in Panchayats.\n\nHow many statements are CORRECT?",
+        "question": "Nimnlikhit kathanon par vichar karein:\n1. Balwant Rai Mehta Committee ne 2-tier system suggest kiya tha, jo Rajasthan mein sabse pehle lagu hua.\n2. Article 243D ke tehat OBC reservation Panchayat mein Constitutionally mandatory hai, SC/ST ki tarah.\n3. Article 243M ke tehat Part IX automatically Nagaland, Meghalaya aur Mizoram mein lagu nahi hota.\n4. Bihar mein Mukhiya aur Sarpanch (Gram Kachahri) dono alag-alag directly elected posts hain jinke kaam bhi alag hain.\nUpar diye gaye kathanon mein se kaunse SAHI hain?",
         "options": [
-          { "id": "A", "text": "Only two statements" },
-          { "id": "B", "text": "Only three statements" },
-          { "id": "C", "text": "Only four statements" },
-          { "id": "D", "text": "All five statements" }
+          { "id": "A", "text": "1, 2, 3 aur 4 sabhi sahi" },
+          { "id": "B", "text": "3 aur 4 sahi, 1 aur 2 galat" },
+          { "id": "C", "text": "Sirf 1 aur 3 sahi" },
+          { "id": "D", "text": "1, 3 aur 4 sahi, 2 galat" }
         ],
         "correct_option_id": "B",
-        "explanation": "Statement Analysis:\n\n1. CORRECT — 73rd Amendment (1992) added Part IX (Article 243 to 243-O) dealing with Panchayati Raj.\n\n2. CORRECT — Article 243-A defines Gram Sabha as a body of all registered voters in a village.\n\n3. INCORRECT — Article 243-D says 'NOT LESS THAN one-third' (minimum 33%), not 'exactly 33%'. States can provide more (like Bihar's 50%). Classic BPSC trap!\n\n4. INCORRECT — PESA Act applies ONLY to 5th Schedule areas (Scheduled Areas). It does NOT apply to 6th Schedule areas (North-East tribal areas with Autonomous Councils). Major confusion trap!\n\n5. CORRECT — Bihar Panchayati Raj Act 2006 provides 50% reservation for women, higher than constitutional minimum.\n\nAnswer: 3 statements correct (1, 2, 5).\n\n⭐ This question combines multiple BPSC favorite traps: exact vs minimum reservation, PESA applicability, Bihar-specific facts!"
+        "explanation": "Statement 1 galat hai - Balwant Rai Mehta Committee ne 3-TIER system suggest kiya tha (Ashok Mehta ne 2-tier suggest kiya tha). Statement 2 galat hai - Article 243D mein sirf SC/ST aur Women reservation Constitutionally mandatory hai, OBC nahi. Statement 3 aur 4 dono sahi hain - Article 243M exemptions correct hain, aur Bihar mein Mukhiya-Sarpanch alag posts hain."
       },
-      "navigation": {
-        "next": "card_66_assertion_reason_quiz",
-        "button_text": "One More Officer Quiz! 🔥"
-      }
+      "navigation": { "next": "card_79_trophy", "button_text": "Claim Your Trophy ➔" }
     },
     {
-      "card_id": "card_66_assertion_reason_quiz",
-      "card_slug": "card_66_assertion_reason_quiz",
-      "type": "final_quiz",
-      "concept_id": "assertion_reason_quiz",
-      "level": 6,
-      "progress": {
-        "current": 66,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ UPSC Prelims Pattern (Assertion-Reason):\n\nAssertion (A): Gram Sabha is more powerful under PESA Act than under regular 73rd Amendment provisions.\n\nReason (R): PESA Act gives Gram Sabha control over natural resources and land acquisition in tribal areas.\n\nSelect the correct answer:",
-        "options": [
-          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
-          { "id": "B", "text": "Both A and R are true, but R is NOT the correct explanation of A" },
-          { "id": "C", "text": "A is true, but R is false" },
-          { "id": "D", "text": "A is false, but R is true" }
-        ],
-        "correct_option_id": "A",
-        "explanation": "Both Assertion and Reason are TRUE, and Reason correctly explains Assertion.\n\nAssertion Analysis: Under regular 73rd Amendment, Gram Sabha has limited powers (budget approval, beneficiary selection). But under PESA Act (1996) in 5th Schedule areas, Gram Sabha becomes extremely powerful — it's the custodian of natural resources!\n\nReason Analysis: PESA specifically grants Gram Sabha:\n• Control over minor forest produce\n• Consent power for land acquisition\n• Approval for mining/industrial projects\n• Management of minor water bodies\n• Power over excise licenses\n\nThe Reason DIRECTLY explains WHY Gram Sabha is more powerful under PESA — because it gets these additional resource control powers not available under regular 73rd Amendment.\n\nThis is a classic UPSC Prelims assertion-reason format testing deep understanding of PESA vs regular Panchayati Raj!"
-      },
-      "navigation": {
-        "next": "card_67_matching_quiz",
-        "button_text": "Last Challenge! Match the Following 🎯"
-      }
-    },
-    {
-      "card_id": "card_67_matching_quiz",
-      "card_slug": "card_67_matching_quiz",
-      "type": "quiz",
-      "concept_id": "matching_quiz",
-      "level": 6,
-      "progress": {
-        "current": 67,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ SSC CGL Pattern (Matching): Match the following Committees with their recommendations:\n\nCommittee:\n1. Balwant Rai Mehta (1957)\n2. Ashok Mehta (1977)\n3. L.M. Singhvi (1986)\n\nRecommendation:\nP. Constitutional status to Panchayats\nQ. Three-tier structure\nR. Two-tier structure\n\nCorrect match is:",
-        "options": [
-          { "id": "A", "text": "1-Q, 2-R, 3-P" },
-          { "id": "B", "text": "1-P, 2-Q, 3-R" },
-          { "id": "C", "text": "1-R, 2-P, 3-Q" },
-          { "id": "D", "text": "1-Q, 2-P, 3-R" }
-        ],
-        "correct_option_id": "A",
-        "explanation": "Correct matching:\n\n1. Balwant Rai Mehta Committee (1957) → Q (Three-tier structure)\n   - Recommended Gram Panchayat, Panchayat Samiti, Zila Parishad\n   - First implemented in Rajasthan (1959)\n   - Foundation of modern Panchayati Raj\n\n2. Ashok Mehta Committee (1977) → R (Two-tier structure)\n   - Recommended eliminating Block level (Panchayat Samiti)\n   - Only Zila Parishad and Mandal Panchayat\n   - District should be first point of decentralization\n\n3. L.M. Singhvi Committee (1986) → P (Constitutional status)\n   - First committee to demand constitutional recognition\n   - Recommended Panchayati Raj to be in Constitution\n   - Led to 73rd Amendment (1992)\n\nSSC CGL loves such committee-recommendation matching questions. Remember chronology: Balwant Rai Mehta (1957) started it all, Ashok Mehta (1977) tried to modify, Singhvi (1986) pushed for constitutional status!"
-      },
-      "navigation": {
-        "next": "card_68_numerical_quiz",
-        "button_text": "Next Challenge! 🔢"
-      }
-    },
-    {
-      "card_id": "card_68_numerical_quiz",
-      "card_slug": "card_68_numerical_quiz",
-      "type": "quiz",
-      "concept_id": "numerical_quiz",
-      "level": 6,
-      "progress": {
-        "current": 68,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ Railway RRB NTPC Pattern: Arrange the following in chronological order:\n\n1. 73rd Constitutional Amendment came into force\n2. First Panchayati Raj inaugurated in Rajasthan\n3. Balwant Rai Mehta Committee Report\n4. PESA Act passed\n\nCorrect chronological order is:",
-        "options": [
-          { "id": "A", "text": "3-2-1-4" },
-          { "id": "B", "text": "2-3-1-4" },
-          { "id": "C", "text": "3-2-4-1" },
-          { "id": "D", "text": "2-3-4-1" }
-        ],
-        "correct_option_id": "A",
-        "explanation": "Correct chronological order: 3-2-1-4\n\nTimeline:\n\n3. Balwant Rai Mehta Committee Report — 1957\n   - Studied Community Development Programme\n   - Recommended three-tier structure\n\n2. First Panchayati Raj inaugurated in Rajasthan — 2 October 1959\n   - Nagaur district by PM Nehru\n   - Based on Mehta Committee recommendations\n\n1. 73rd Constitutional Amendment came into force — 24 April 1993\n   - Passed in 1992, enforced in 1993\n   - Gave constitutional status\n\n4. PESA Act passed — 1996\n   - Extended Panchayati Raj to 5th Schedule areas\n   - With special provisions for tribals\n\nRailway RRB loves chronology questions! Remember: 1957 (Report) → 1959 (Implementation) → 1993 (Constitutional) → 1996 (Tribal extension).\n\nMnemonic: 'Report first, Then Try, Constitution next, Pesa Last' — R-T-C-P!"
-      },
-      "navigation": {
-        "next": "card_69_negative_quiz",
-        "button_text": "Tricky Question Ahead! ⚠️"
-      }
-    },
-    {
-      "card_id": "card_69_negative_quiz",
-      "card_slug": "card_69_negative_quiz",
-      "type": "quiz",
-      "concept_id": "negative_quiz",
-      "level": 6,
-      "progress": {
-        "current": 69,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ BPSC Trap Question: Which of the following is NOT a constitutional body?\n\n1. State Election Commission\n2. State Finance Commission\n3. Gram Sabha\n4. District Planning Committee",
-        "options": [
-          { "id": "A", "text": "Only 1" },
-          { "id": "B", "text": "Only 3" },
-          { "id": "C", "text": "Only 4" },
-          { "id": "D", "text": "None — all are constitutional" }
-        ],
-        "correct_option_id": "D",
-        "explanation": "⭐ Classic BPSC Trap! ALL FOUR are constitutional bodies:\n\n1. State Election Commission (Article 243-K)\n   - Conducts Panchayat elections\n   - Constitutional mandate\n\n2. State Finance Commission (Article 243-I)\n   - Reviews financial position of Panchayats\n   - Constituted every 5 years\n\n3. Gram Sabha (Article 243-A)\n   - Defined in Constitution itself\n   - Foundation of Panchayati Raj\n   - Constitutional recognition\n\n4. District Planning Committee (Article 243-ZD)\n   - Added by 74th Amendment\n   - Consolidates plans of Panchayats & Municipalities\n   - Constitutional body for district planning\n\nMany students wrongly think Gram Sabha is just a 'meeting' and not a constitutional body — but Article 243-A specifically defines it, making it constitutional!\n\nBPSC loves such 'negative' questions where all options are correct/incorrect to test thorough understanding. Always read 'NOT' questions VERY carefully!"
-      },
-      "navigation": {
-        "next": "card_70_case_study_quiz",
-        "button_text": "Final Case Study! 📖"
-      }
-    },
-    {
-      "card_id": "card_70_case_study_quiz",
-      "card_slug": "card_70_case_study_quiz",
-      "type": "quiz",
-      "concept_id": "case_study_quiz",
-      "level": 6,
-      "progress": {
-        "current": 70,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ UPSC Mains/Interview Pattern (Case Study):\n\nA Gram Panchayat in Bihar was dissolved by State Government after 3 years and 8 months due to non-performance. Fresh elections were held after 4 months.\n\nBased on constitutional provisions, the newly elected Gram Panchayat will continue for:\n\n(Assume original term was 5 years)",
-        "options": [
-          { "id": "A", "text": "Full 5 years (fresh term)" },
-          { "id": "B", "text": "1 year 4 months (remaining period)" },
-          { "id": "C", "text": "2 years (extended period)" },
-          { "id": "D", "text": "3 years 8 months (same as dissolved one)" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Correct Answer: B — 1 year 4 months (remaining period)\n\nArticle 243-E Application:\n\nOriginal term: 5 years\nDissolved after: 3 years 8 months\nRemaining period: 5 years - 3 years 8 months = 1 year 4 months\n\nConstitutional Rule: When a Panchayat is dissolved before its term, the newly elected body continues ONLY for the REMAINING PERIOD of the original 5-year term, NOT a fresh full term.\n\nElection Timeline: Elections must be held within 6 months of dissolution (here held after 4 months — constitutionally valid ✓).\n\nException: If remaining period is less than 6 months, no fresh election is required.\n\nThis is a BPSC/UPSC favorite application-based question combining:\n• Article 243-E (dissolution rules)\n• Time calculation\n• Exception awareness\n\nMany candidates wrongly choose 'full 5 years' thinking fresh elections = fresh term. Remember: Fresh elections ≠ Fresh term! The term is tied to the ORIGINAL 5-year cycle, not the election date.\n\n⭐ Pro Tip for BPSC TRE: Similar questions appear in Mains — always calculate remaining period carefully!"
-      },
-      "navigation": {
-        "next": "card_71_final_milestone",
-        "button_text": "Complete Chapter! 🏆"
-      }
-    },
-    {
-      "card_id": "card_71_final_milestone",
-      "card_slug": "card_71_final_milestone",
+      "card_id": "card_79_trophy",
+      "card_slug": "card_79_trophy",
       "type": "milestone",
-      "concept_id": "final_milestone",
-      "level": 6,
-      "progress": {
-        "current": 71,
-        "total": 72
-      },
+      "concept_id": "chapter_complete",
+      "level": 11,
+      "progress": { "current": 79, "total": 83 },
       "milestone_payload": {
-        "title": "🏆 CHAPTER MASTERED! 🎉",
-        "badge_emoji": "🏘️",
-        "completed_topic": "Panchayati Raj System — Complete Mastery",
-        "xp_earned": 600,
-        "milestone_progress": "6/6 Modules + All Quizzes Clear ✅",
-        "motivational_quote": "INCREDIBLE ACHIEVEMENT! 🌟\n\nYou've conquered the entire Panchayati Raj system from grassroots to constitutional provisions!\n\n✅ 73rd Amendment — Complete understanding\n✅ Three-tier structure — Crystal clear\n✅ Bihar Panchayati Raj Act — BPSC TRE ready\n✅ PESA vs 6th Schedule — No confusion\n✅ All committees, dates, articles — Mastered\n✅ Multi-statement, Assertion-Reason, Case studies — Solved!\n\nYou can now tackle:\n• BPSC Prelims & Mains questions\n• SSC CGL descriptive & MCQs\n• Railway RRB NTPC traps\n• UPSC Interview case studies\n• BPSC TRE Bihar-specific questions\n\n🔥 Pro Tips for Exam Day:\n1. Don't confuse: 73rd (Panchayat) vs 74th (Municipality)\n2. Remember: 11th Schedule (29) vs 12th Schedule (18)\n3. PESA = 5th Schedule ONLY (not 6th)\n4. Bihar = 50% women, 38 districts, party symbols\n5. Dates: 2 Oct 1959 (first), 24 April 1993 (constitutional)\n\nKeep revising PYQs and stay updated on recent GPDP guidelines!\n\nNext Chapter Recommendations:\n• Parliament & Legislative Procedures\n• Union-State Relations\n• Local Government (Urban)\n\nAll the best! You're ready to serve India! 🇮🇳💪"
+        "title": "🏆 CHAPTER MASTER TROPHY!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Panchayati Raj - Complete Chapter",
+        "xp_earned": 200,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Shabaash Raju! Ab tum Balwant Rai Mehta se lekar Bihar ke Mukhiya-Sarpanch system tak, PESA Act aur Eleventh Schedule tak sab kuch officer level pe jaante ho. Ye chapter tumhara BPSC/BPSC TRE exam mein strongest weapon hai!"
       },
-      "navigation": {
-        "next": "card_72_feedback",
-        "button_text": "One Last Thing... 💬"
-      }
+      "navigation": { "next": "card_80_closing1", "button_text": "Finish Chapter ✅" }
     },
     {
-      "card_id": "card_72_feedback",
-      "card_slug": "card_72_feedback",
+      "card_id": "card_80_closing1",
+      "card_slug": "card_80_closing1",
       "type": "chat",
-      "concept_id": "feedback",
-      "level": 6,
-      "progress": {
-        "current": 72,
-        "total": 72
-      },
+      "concept_id": "closing_note_1",
+      "level": 11,
+      "progress": { "current": 80, "total": 83 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, tumne poora chapter complete kar liya! From village Mukhiya to constitutional amendments — sab kuch samajh gaya! Kaisa laga?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, bahut maza aaya! Pehle lagta tha Panchayati Raj boring hai, par ab samajh aaya ye kitna important hai democracy ke liye. Bihar ke special provisions bhi clear ho gaye!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Panchayati Raj democracy ki foundation hai — 65% Indians gaon me rehte hain! Ab tum BPSC, SSC, Railway kisi bhi exam me Panchayati Raj questions confidently solve kar sakte ho. Keep practicing PYQs aur stay updated!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Thank you Sir! Ab main Polity ka next chapter padhne jaa raha hoon! 🚀"
-        }
+        { "speaker": "aman", "text": "Raju, tumne bahut mehnat se pura Panchayati Raj chapter complete kiya - committees se lekar Bihar-specific details tak! Ye topic BPSC, BSSC, SSC, Railway sab exams mein har baar aata hai." },
+        { "speaker": "raju", "text": "Thank you Sir! Ab mujhe pura confidence hai ki 73rd Amendment ke koi bhi multi-statement ya Assertion-Reason question aaye, main crack kar loonga!" },
+        { "speaker": "aman", "text": "Bilkul! Yaad rakhna - jab bhi confusion ho, teen tiers (Gram Panchayat-Panchayat Samiti-Zila Parishad) aur Bihar ke Mukhiya-Sarpanch wale difference ko sabse pehle clear karo. Baaki sab detail wahi se build hota hai." },
+        { "speaker": "raju", "text": "Perfect summary Sir! Ye Bihar wala Mukhiya-Sarpanch trick to bahut kaam aayega exam mein." }
       ],
-      "navigation": {
-        "next": null,
-        "button_text": "Back to Home 🏠"
-      }
+      "navigation": { "next": "card_81_closing2", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_81_closing2",
+      "card_slug": "card_81_closing2",
+      "type": "chat",
+      "concept_id": "closing_note_2",
+      "level": 11,
+      "progress": { "current": 81, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aakhri baar revise kar lo dimaag mein - Gram Sabha = sab voters, Gram Panchayat = chune hue log. Article 243D = SC/ST + Women (33%) mandatory, OBC discretionary. Aur Eleventh Schedule ki 29 subjects bhi discretionary hain, mandatory nahi." },
+        { "speaker": "raju", "text": "Ye teeno traps yaad ho gaye Sir - Gram Sabha vs Panchayat, mandatory vs discretionary reservation, aur Eleventh Schedule discretionary hona." },
+        { "speaker": "aman", "text": "Perfect! Aur Nagar Palika (Urban Local Government) ka bhi ek alag chapter hoga jo 74th Amendment se related hai - wo bhi bahut similar concepts follow karta hai, isliye ye foundation tumhare bahut kaam aayegi." },
+        { "speaker": "raju", "text": "Achha, 74th Amendment bhi hai! Main ready hoon uske liye bhi Sir, chaliye agla chapter shuru karte hain!" }
+      ],
+      "navigation": { "next": "card_82_final_note", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_82_final_note",
+      "card_slug": "card_82_final_note",
+      "type": "chat",
+      "concept_id": "closing_note_3",
+      "level": 11,
+      "progress": { "current": 82, "total": 83 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek last cheez batata hoon jo bahut students bhool jaate hain - Panchayati Raj sirf 'Rural' local government hai. Isse alag ek 'Urban' local government bhi hai (Municipality/Nagar Palika) jo 74th Amendment se aata hai - dono ko mix mat karna exam mein!" },
+        { "speaker": "raju", "text": "Achha! Panchayati Raj = Rural, Nagar Palika = Urban. Ye bhi ek bada trap hoga jo main avoid kar loonga ab." },
+        { "speaker": "aman", "text": "Bilkul sahi! Tumne pura chapter bahut acche se samjha hai Raju. Ab practice karte raho, aur jab bhi doubt ho, is chapter ko wapas revise kar lena." },
+        { "speaker": "raju", "text": "Thank you Sir! Panchayati Raj ka poora chapter ab mere dimaag mein bilkul crystal clear hai!" }
+      ],
+      "navigation": { "next": "card_83_end", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_83_end",
+      "card_slug": "card_83_end",
+      "type": "milestone",
+      "concept_id": "final_end_card",
+      "level": 11,
+      "progress": { "current": 83, "total": 83 },
+      "milestone_payload": {
+        "title": "🎓 PANCHAYATI RAJ - MASTERED!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Full Chapter Journey Complete",
+        "xp_earned": 50,
+        "milestone_progress": "100% Chapter Journey Done",
+        "motivational_quote": "Gram Sabha se lekar Zila Parishad tak, Balwant Rai Mehta se lekar Bihar Panchayati Raj Act 2006 tak - tumne poora safar tay kar liya! Agla chapter tumhara intezaar kar raha hai, Officer Raju!"
+      },
+      "navigation": { "next": null, "button_text": "Chapter Complete ✅" }
     }
   ]
 }
