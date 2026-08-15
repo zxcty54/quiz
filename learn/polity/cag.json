@@ -1,9 +1,9 @@
 
 {
-  "topic_id": "cag_polity_full",
-  "topic_title": "Comptroller and Auditor General of India (CAG)",
-  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
-  "total_cards": 45,
+  "topic_id": "indian_polity_cag",
+  "topic_title": "Comptroller and Auditor General (CAG) of India — Constitutional Provisions, Powers & Functions",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 85,
   "characters": {
     "aman": {
       "name": "Aman Sir",
@@ -21,1513 +21,2196 @@
       "card_id": "card_01_intro",
       "card_slug": "card_01_intro",
       "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 85 },
+      "intro_payload": {
+        "chapter_title": "Comptroller and Auditor General (CAG) of India",
+        "chapter_icon": "📒",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Article 148-151: Complete constitutional scheme of CAG",
+          "CAG as 'Guardian of Public Purse' — Dr. B.R. Ambedkar's statement",
+          "Appointment, oath, term and qualification of CAG",
+          "Removal process — same as Supreme Court judge (Article 148(1))",
+          "Salary, service conditions and post-retirement bar",
+          "Audit jurisdiction: Union, States, Government Companies",
+          "CAG Reports: 3 types submitted to President/Governor",
+          "Public Accounts Committee (PAC) & Estimates Committee link",
+          "CAG and Consolidated Fund vs Contingency Fund vs Public Account",
+          "Bihar-specific CAG audit provisions and BPSC TRE favorites",
+          "Landmark CAG reports: 2G Spectrum, Coal Scam, Commonwealth Games"
+        ]
+      },
+      "navigation": {
+        "next": "card_02_daily_life_hook",
+        "button_text": "Start Learning ➔"
+      }
+    },
+    {
+      "card_id": "card_02_daily_life_hook",
+      "card_slug": "card_02_daily_life_hook",
+      "type": "chat",
       "concept_id": "cag_intro",
       "level": 1,
-      "progress": {
-        "current": 1,
-        "total": 45
-      },
-      "intro_payload": {
-        "title": "Comptroller and Auditor General of India (CAG)",
-        "icon": "🔍",
-        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
-        "learning_outcomes": [
-          "Constitutional Position & Importance of CAG",
-          "Appointment, Tenure & Removal Process",
-          "Powers, Duties & Functions of CAG",
-          "Audit Reports & Parliamentary Accountability",
-          "Independence & Limitations of CAG",
-          "State CAG vs Union CAG Relationship"
-        ],
-        "estimated_time": "15 mins",
-        "total_xp": 250
-      },
-      "navigation": {
-        "next": "card_02_daily_life",
-        "button_text": "शुरू करें ➔"
-      }
-    },
-    {
-      "card_id": "card_02_daily_life",
-      "card_slug": "card_02_daily_life",
-      "type": "chat",
-      "concept_id": "cag_daily_intro",
-      "level": 1,
-      "progress": {
-        "current": 2,
-        "total": 45
-      },
+      "progress": { "current": 2, "total": 85 },
       "messages": [
         {
-          "speaker": "raju",
-          "text": "Sir, papa kehte hain ki government ka paisa kahin bhi galat jagah lag jaaye toh CAG pakad leta hai. Ye CAG kaun hota hai?"
-        },
-        {
           "speaker": "aman",
-          "text": "Bilkul sahi suna tumne Raju! Socho tumhare ghar mein agar tumhara bada bhai tumhe 500 rupaye de shopping ke liye, toh wapas aane par wo puchega na ki kahan kharcha hua?"
+          "text": "Raju, socho — tumhare ghar mein agar paisa aata hai aur jaata hai, to koi na koi zaroor track karta hoga na? Mummy ya Papa — mahine ke ant mein hisaab lagaate honge ki kitna aaya, kitna gaya, kahan gaya?"
         },
         {
           "speaker": "raju",
-          "text": "Haan Sir, wo poora hisaab maangta hai ki sabzi kitne ki aayi, doodh kitne ka!"
+          "text": "Haan sir, mummy hamesha note karti hain! Agar koi galat kharch ho jaaye to unhe turant pata chal jaata hai."
         },
         {
           "speaker": "aman",
-          "text": "Exactly! CAG bhi aise hi hai — Government jo bhi paisa kharch karti hai — roads, schools, hospitals par — CAG uska poora audit karta hai. Wo check karta hai ki paisa sahi jagah laga ya nahi, koi scam toh nahi hua. CAG ko 'Government ka Auditor' kehte hain!"
+          "text": "Bilkul sahi! Ab socho — poore desh ka paisa: tax se aata hai, schemes mein jaata hai, roads banane mein jaata hai — kya koi aisa bhi hoga jo poore desh ke paison ka hisaab check kare? Ki jo paise Parliament ne pass kiye, wo sahi jagah aur sahi tarike se kharch hue ya nahi?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Zaroor hoga sir! Itne paison ka hisaab to rakhnna hi padega, warna sab udaa lenge!"
         }
       ],
       "navigation": {
-        "next": "card_03_constitutional_status",
-        "button_text": "Aur details ➔"
+        "next": "card_03_cag_reveal",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_03_constitutional_status",
-      "card_slug": "card_03_constitutional_status",
+      "card_id": "card_03_cag_reveal",
+      "card_slug": "card_03_cag_reveal",
       "type": "chat",
-      "concept_id": "cag_constitutional_position",
+      "concept_id": "cag_intro",
       "level": 1,
-      "progress": {
-        "current": 3,
-        "total": 45
-      },
+      "progress": { "current": 3, "total": 85 },
       "messages": [
         {
-          "speaker": "raju",
-          "text": "Sir, ye CAG koi government officer hai ya alag kuch hai?"
-        },
-        {
           "speaker": "aman",
-          "text": "Bahut important question! CAG ek Constitutional Authority hai, matlab India ke Constitution mein directly mention hai. Article 148 mein CAG ka provision hai. Ye koi ordinary government employee nahi hai!"
+          "text": "Bilkul sahi! Aur poore desh ke public money ka ye 'hisaab check karne wala' ek bahut powerful constitutional officer hai — jiska naam hai 'Comptroller and Auditor General of India', yaani CAG. Hindi mein inhe 'Niyantrak Evam Mahalekha Pareekshak' kehte hain."
         },
         {
           "speaker": "raju",
-          "text": "Matlab ye President, PM jaisa important hai?"
+          "text": "Niyantrak Evam Mahalekha Pareekshak — ye to bahut bada naam hai sir! Iska matlab kya hota hai?"
         },
         {
           "speaker": "aman",
-          "text": "Haan! CAG ko Constitution mein 'Guardian of Public Purse' kaha gaya hai — matlab jo public ka paisa hai, uska rakshak! CAG government se independent hota hai taaki wo bina dar ke audit kar sake. UPSC mein ye 'Constitutional Authority vs Statutory Body' wala confusion bahut aata hai!"
+          "text": "'Niyantrak' ka matlab hai Comptroller — yaani paison par control. 'Mahalekha Pareekshak' ka matlab hai Auditor General — yaani hisaab ki janch karne wala. Aur Dr. B.R. Ambedkar ne CAG ko 'The most important officer in the Constitution of India' kaha tha — sabse zaroori constitutional officer!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ambedkar ji ne sabse zaroori kaha?? Matlab ye President aur PM se bhi zyada zaroori hai? Ye to mujhe samajh nahi aaya sir."
         }
       ],
       "navigation": {
-        "next": "card_04_quiz_constitutional",
-        "button_text": "Quiz lagao ➔"
+        "next": "card_04_ambedkar_quote_explain",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_04_quiz_constitutional",
-      "card_slug": "card_04_quiz_constitutional",
+      "card_id": "card_04_ambedkar_quote_explain",
+      "card_slug": "card_04_ambedkar_quote_explain",
+      "type": "chat",
+      "concept_id": "cag_intro",
+      "level": 1,
+      "progress": { "current": 4, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ruko, Ambedkar ji ka matlab ye nahi tha ki CAG power mein sabse upar hai. Unka matlab tha ki CAG ki bhoomika (role) bahut important hai — kyunki wo ensure karta hai ki Parliament ne jo budget approve kiya, paise WAHI par kharch ho jaahan Parliament ne kaha. Agar CAG na hota, to executive (sarkar) kuch bhi apni marzi se kharch kar sakti thi bina kisi jawabdehi ke."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha sir! Matlab CAG ek tarah ka 'desh ka accountant cum auditor' hai jo check karta hai ki sarkari paisa sahi jagah gaya ya nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Isliye CAG ko 'Guardian of Public Purse' — yaani 'sarkari khazane ka rakshak' — bhi kaha jaata hai. Aur ye role bahut powerful hai. Ab dekhte hain iska constitutional provision kahan hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan sir, kaunse Article mein likha hai CAG ke baare mein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_article148_intro",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_05_article148_intro",
+      "card_slug": "card_05_article148_intro",
+      "type": "chat",
+      "concept_id": "cag_intro",
+      "level": 1,
+      "progress": { "current": 5, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "CAG se related poora provision Constitution ke Part V mein, Article 148 se lekar Article 151 tak diya gaya hai. Article 148 CAG ki niyukti, removal aur service conditions ke baare mein baat karta hai. Article 149 CAG ki duties aur powers ke baare mein kehta hai. Article 150 Union aur States ke accounts ka form CAG ki salaah par President tay karta hai. Aur Article 151 CAG ke audit reports ke baare mein hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "148 se 151 — ye sab yaad rakhne honge. Par sir, ek sawaal — CAG India ka ek hi hota hai ya har state ka alag?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut important question! India mein sirf EK hi CAG hota hai — jo Union ka bhi hai aur sab States ka bhi. Ye ek single constitutional authority hai jiske under state-level audit bhi aata hai. Ye US system se bilkul alag hai jahan alag-alag state auditors hote hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ek hi CAG poore desh ka! Ye interesting hai sir. Ab batao iski niyukti kaise hoti hai."
+        }
+      ],
+      "navigation": {
+        "next": "card_06_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz1",
+      "card_slug": "card_06_quiz1",
       "type": "quiz",
-      "concept_id": "cag_constitutional_position",
+      "concept_id": "cag_intro",
       "level": 1,
-      "progress": {
-        "current": 4,
-        "total": 45
-      },
+      "progress": { "current": 6, "total": 85 },
       "quiz_payload": {
-        "question": "CAG (Comptroller and Auditor General) की स्थिति क्या है?",
+        "question": "CAG se sambandhit constitutional provision kis Article mein diya gaya hai?",
         "options": [
-          {
-            "id": "A",
-            "text": "Statutory Body (संसद के अधिनियम से बनी)"
-          },
-          {
-            "id": "B",
-            "text": "Constitutional Authority (संविधान में उल्लिखित)"
-          },
-          {
-            "id": "C",
-            "text": "Executive Body (सरकार का विभाग)"
-          },
-          {
-            "id": "D",
-            "text": "Advisory Body (केवल सलाहकार)"
-          }
+          { "id": "A", "text": "Article 124-127" },
+          { "id": "B", "text": "Article 148-151" },
+          { "id": "C", "text": "Article 280-282" },
+          { "id": "D", "text": "Article 315-323" }
         ],
         "correct_option_id": "B",
-        "explanation": "CAG एक Constitutional Authority है जिसका उल्लेख भारतीय संविधान के Article 148 में है। यह किसी Act द्वारा बनाई गई Statutory Body नहीं है। CAG को 'Guardian of Public Purse' कहा जाता है और यह सरकार से स्वतंत्र होकर कार्य करता है। UPSC और BPSC में यह बहुत पूछा जाता है।"
+        "explanation": "CAG se sambandhit Articles 148 se 151 hain — Constitution ke Part V mein. Article 315-323 UPSC se, 280-282 Finance Commission se sambandhit hain."
       },
       "navigation": {
-        "next": "card_05_appointment_process",
-        "button_text": "Next ➔"
+        "next": "card_07_quiz2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_05_appointment_process",
-      "card_slug": "card_05_appointment_process",
+      "card_id": "card_07_quiz2",
+      "card_slug": "card_07_quiz2",
+      "type": "quiz",
+      "concept_id": "cag_intro",
+      "level": 1,
+      "progress": { "current": 7, "total": 85 },
+      "quiz_payload": {
+        "question": "Dr. B.R. Ambedkar ne CAG ko kya kaha tha?",
+        "options": [
+          { "id": "A", "text": "Guardian of Fundamental Rights" },
+          { "id": "B", "text": "The most important officer in the Constitution of India" },
+          { "id": "C", "text": "Watchdog of Democracy" },
+          { "id": "D", "text": "The head of all constitutional bodies" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Dr. B.R. Ambedkar ne Constituent Assembly mein CAG ko 'The most important officer in the Constitution of India' kaha tha, isliye CAG ko 'Guardian of Public Purse' bhi kaha jaata hai."
+      },
+      "navigation": {
+        "next": "card_08_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz3",
+      "card_slug": "card_08_quiz3",
+      "type": "quiz",
+      "concept_id": "cag_intro",
+      "level": 1,
+      "progress": { "current": 8, "total": 85 },
+      "quiz_payload": {
+        "question": "Nimnlikhit mein se kaunsa kathan CAG ke baare mein SAHI hai?",
+        "options": [
+          { "id": "A", "text": "Har State mein ek alag CAG hota hai" },
+          { "id": "B", "text": "India mein sirf ek CAG hota hai jo Union aur sab States dono ka audit karta hai" },
+          { "id": "C", "text": "CAG sirf Union sarkar ka audit karta hai, State ka nahi" },
+          { "id": "D", "text": "CAG ka provision Constitution mein nahi, ek Act mein hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "India mein sirf EK CAG hota hai jo Union aur sab States dono ka audit karta hai — ye ek unitary feature hai. CAG ka provision Article 148 mein diya gaya hai."
+      },
+      "navigation": {
+        "next": "card_09_milestone1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_09_milestone1",
+      "card_slug": "card_09_milestone1",
+      "type": "milestone",
+      "concept_id": "cag_intro",
+      "level": 1,
+      "progress": { "current": 9, "total": 85 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📒",
+        "completed_topic": "Introduction to CAG & Constitutional Basis",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/10 Clear",
+        "motivational_quote": "Guardian of Public Purse ka concept crystal clear ho gaya! Ab dekhte hain CAG ki niyukti kaise hoti hai."
+      },
+      "navigation": {
+        "next": "card_10_appointment_president",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_10_appointment_president",
+      "card_slug": "card_10_appointment_president",
       "type": "chat",
       "concept_id": "cag_appointment",
       "level": 2,
-      "progress": {
-        "current": 5,
-        "total": 45
-      },
+      "progress": { "current": 10, "total": 85 },
       "messages": [
         {
-          "speaker": "raju",
-          "text": "Sir, CAG ko kaun appoint karta hai? Prime Minister ya President?"
-        },
-        {
           "speaker": "aman",
-          "text": "President appoint karta hai CAG ko. Lekin dhyan do — President apne mann se nahi karta! President ko Prime Minister ki advice leni padti hai, aur practically Cabinet ki recommendation par hi appointment hoti hai."
+          "text": "Ab dekhte hain CAG ki niyukti kaun karta hai. Article 148(1) ke anusar CAG ko 'President' niyukt karta hai — apne haath se seal laga ke 'warrant under his hand and seal' ke dwara. Lekin formally, ye appointment cabinet ki salaah par hoti hai — President apni marzi se nahi karte."
         },
         {
           "speaker": "raju",
-          "text": "Matlab technically President appoint karta hai, but actually PM decide karta hai?"
+          "text": "To President appoint karte hain, aur CAG ko kisi khaas qualification chahiye hoti hai kya sir?"
         },
         {
           "speaker": "aman",
-          "text": "Bilkul! Ye India ke bohot saare appointments ka pattern hai. Constitution mein likha hai 'President shall appoint' but Article 74 kehta hai President ko Council of Ministers ki advice leni padti hai. SSC mein seedha puchte hain 'CAG is appointed by' — answer hoga President!"
+          "text": "Yahin ek bahut badi baat hai Raju — Constitution ne CAG ke liye koi specific qualification define hi NAHI ki hai! Na age limit, na educational qualification, na experience. Sirf itna hai ki wo Indian citizen ho aur poore eligible ho. Ye BPSC ka favourite trap question hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Itne important post ke liye koi qualification fix nahi?? Koi bhi ban sakta hai? Ye to bahut confusing hai sir!"
         }
       ],
       "navigation": {
-        "next": "card_06_eligibility_criteria",
-        "button_text": "Eligibility? ➔"
+        "next": "card_11_oath_article148",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_06_eligibility_criteria",
-      "card_slug": "card_06_eligibility_criteria",
+      "card_id": "card_11_oath_article148",
+      "card_slug": "card_11_oath_article148",
       "type": "chat",
-      "concept_id": "cag_eligibility",
+      "concept_id": "cag_appointment",
       "level": 2,
-      "progress": {
-        "current": 6,
-        "total": 45
-      },
+      "progress": { "current": 11, "total": 85 },
       "messages": [
         {
-          "speaker": "raju",
-          "text": "CAG banne ke liye kya chahiye Sir? Supreme Court judge jaisi qualifications?"
-        },
-        {
           "speaker": "aman",
-          "text": "Nahi Raju! Yahin trap hai. Constitution mein CAG ki koi specific qualification nahi di gayi hai — na educational, na age, na experience! Koi bhi Indian citizen ban sakta hai."
+          "text": "Ruko Raju, practically to government ek senior IAS ya experienced finance official ko hi choose karti hai, par Constitution ne koi formal requirement nahi rakhi — ye ek deliberate choice thi, flexibility ke liye. Ab suno shapath (oath) ke baare mein — CAG ko shapath President dilaate hain ya CJI? Guess karo."
         },
         {
           "speaker": "raju",
-          "text": "Hain?? Matlab koi bhi?"
+          "text": "President dilaate honge sir, wahi appoint karte hain to wahi shapath bhi dilaayenge?"
         },
         {
           "speaker": "aman",
-          "text": "Technically haan, but practically CAG wahi banta hai jisko accounts aur auditing ka bahut experience ho — usually Indian Audit and Accounts Service (IA&AS) ke senior officers. But Constitution mein koi compulsion nahi hai. BPSC multi-statement mein ye deliberately confuse karte hain!"
+          "text": "Sahi guess Raju! Article 148(3) ke anusar CAG ko shapath President dilaate hain ya President dwara niyukt koi doosra vyakti. Aur shapath mein CAG ye kehte hain ki wo Constitution ke prati sachchi nishtha rakhenge aur apna kaam imandaari se karenge."
+        },
+        {
+          "speaker": "raju",
+          "text": "Theek hai sir, ab ye bhi batao — CAG kitne saal ke liye hota hai? Koi term hoti hai?"
         }
       ],
       "navigation": {
-        "next": "card_07_tenure_salary",
-        "button_text": "Tenure kitna? ➔"
+        "next": "card_12_term_age",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_07_tenure_salary",
-      "card_slug": "card_07_tenure_salary",
+      "card_id": "card_12_term_age",
+      "card_slug": "card_12_term_age",
       "type": "chat",
-      "concept_id": "cag_tenure",
+      "concept_id": "cag_appointment",
       "level": 2,
-      "progress": {
-        "current": 7,
-        "total": 45
-      },
+      "progress": { "current": 12, "total": 85 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ab tenure dekho: CAG ki tenure 6 saal ya 65 saal ki age, jo bhi pehle ho. Matlab agar koi 62 saal mein appoint hua toh sirf 3 saal rahega!"
+          "text": "Bahut important! CAG Act 1971 ke anusar — CAG ki term 6 saal ki hoti hai, YA 65 saal ki umra tak, jo bhi pehle ho. Yahi dual condition hai. Agar koi 60 saal mein CAG bana, to wo sirf 5 saal kaam karega (65 par retire ho jaayega, 6 puri nahi hongi)."
         },
         {
           "speaker": "raju",
-          "text": "Sir ye 6 saal / 65 age wala pattern kahin aur bhi hai kya?"
+          "text": "Achha! 6 saal ya 65 saal, jo pehle aaye. Ye to CEC jaisa hi hai na sir — CEC bhi 6 saal ya 65 saal tha!"
         },
         {
           "speaker": "aman",
-          "text": "Haan! Election Commissioner ka bhi same hai — 6 years / 65 age. But Supreme Court Judge ka alag hai — 65 age tak (tenure fix nahi). Chief Vigilance Commissioner — 4 years / 65 age. Ye comparison UPSC ka favorite hai!"
+          "text": "Bahut sharp observation Raju! Haan, CEC aur CAG dono ke liye — 6 saal ya 65 saal wali dual condition hai. Ek aur zaroori baat — CAG ek hi term hota hai, wo dobara niyukt NAHI ho sakta. Re-appointment ki koi gunjaaish nahi."
         },
         {
           "speaker": "raju",
-          "text": "Aur salary kitni hoti hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "CAG ki salary Supreme Court Judge ke barabar hoti hai. Ye Parliament decide karti hai, aur tenure ke beech mein salary reduce nahi ho sakti — ye independence ensure karta hai. Railway mein direct puchte hain 'CAG salary = SC Judge' — TRUE!"
+          "text": "Ek hi baar? Dobara nahi? Kyon sir, aisa kyun rakha gaya?"
         }
       ],
       "navigation": {
-        "next": "card_08_quiz_tenure",
-        "button_text": "Quiz ➔"
+        "next": "card_13_no_reappointment_reason",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_08_quiz_tenure",
-      "card_slug": "card_08_quiz_tenure",
+      "card_id": "card_13_no_reappointment_reason",
+      "card_slug": "card_13_no_reappointment_reason",
+      "type": "chat",
+      "concept_id": "cag_appointment",
+      "level": 2,
+      "progress": { "current": 13, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut achha sawaal! Agar CAG dobara appoint hone ki umeed rakhega, to wo sarkar ke khilaf sach bolne se darr sakta hai — 'agar maine galat pakda to sarkar mujhe dobara nahi legi.' Isliye Constitution ne guarantee di: ek baar kaam karo, dil se karo, kyunki doosra mauka milne wala nahi hai — isse unki independence protect hoti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Matlab re-appointment ban hai taaki CAG independent rahe aur sarkar se dara nahi. Bahut samajhdar socha humara Constitution ne!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Aur ek aur post-retirement bar hai — CAG retire hone ke baad Union ya kisi State government ke under koi pad (office of profit) nahi le sakta. Taaki log ye na sochein ki 'audit mein naram raho, retirement ke baad acchi post milegi.'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Triple protection — fixed term, no re-appointment, no post-retirement job. Ye to full independence ka package hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz1",
+      "card_slug": "card_14_quiz1",
       "type": "quiz",
-      "concept_id": "cag_tenure",
+      "concept_id": "cag_appointment",
       "level": 2,
-      "progress": {
-        "current": 8,
-        "total": 45
-      },
+      "progress": { "current": 14, "total": 85 },
       "quiz_payload": {
-        "question": "CAG का कार्यकाल कितना होता है?",
+        "question": "CAG ka karyakaal (term) kya hai?",
         "options": [
-          {
-            "id": "A",
-            "text": "5 वर्ष या 62 वर्ष की आयु, जो भी पहले हो"
-          },
-          {
-            "id": "B",
-            "text": "6 वर्ष या 65 वर्ष की आयु, जो भी पहले हो"
-          },
-          {
-            "id": "C",
-            "text": "65 वर्ष की आयु तक (कोई निश्चित कार्यकाल नहीं)"
-          },
-          {
-            "id": "D",
-            "text": "4 वर्ष या 65 वर्ष की आयु, जो भी पहले हो"
-          }
+          { "id": "A", "text": "5 saal ya 60 saal ki umra, jo pehle ho" },
+          { "id": "B", "text": "6 saal ya 65 saal ki umra, jo pehle ho" },
+          { "id": "C", "text": "6 saal, fixed (umra nahi dekhi jaati)" },
+          { "id": "D", "text": "Aajeevan, jab tak Supreme Court remove na kare" }
         ],
         "correct_option_id": "B",
-        "explanation": "CAG का कार्यकाल 6 वर्ष या 65 वर्ष की आयु, जो भी पहले हो, होता है। यह Election Commissioner के कार्यकाल के समान है। Supreme Court Judge केवल 65 वर्ष की आयु तक रहता है (कोई fixed tenure नहीं)। CVC का tenure 4 वर्ष/65 आयु है। SSC और Railway में यह बहुत पूछा जाता है।"
+        "explanation": "CAG Act 1971 ke anusar CAG ka karyakaal 6 saal YA 65 saal ki umra tak hota hai, jo bhi pehle ho. Ye same dual condition CEC ke liye bhi hai."
       },
       "navigation": {
-        "next": "card_09_removal_process",
-        "button_text": "Removal कैसे? ➔"
+        "next": "card_15_quiz2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_09_removal_process",
-      "card_slug": "card_09_removal_process",
+      "card_id": "card_15_quiz2",
+      "card_slug": "card_15_quiz2",
+      "type": "quiz",
+      "concept_id": "cag_appointment",
+      "level": 2,
+      "progress": { "current": 15, "total": 85 },
+      "quiz_payload": {
+        "question": "Constitution ne CAG ke liye kaunsi qualification specify ki hai?",
+        "options": [
+          { "id": "A", "text": "Law mein degree zaroor honi chahiye" },
+          { "id": "B", "text": "10 saal ka finance experience zaroor ho" },
+          { "id": "C", "text": "Koi specific qualification define nahi ki gayi hai Constitution mein" },
+          { "id": "D", "text": "Supreme Court judge jaisi yogyata chahiye" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Ye BPSC ka favourite trap hai! Constitution ne CAG ke liye koi bhi specific qualification — na educational, na age, na experience — define nahi ki hai."
+      },
+      "navigation": {
+        "next": "card_16_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz3",
+      "card_slug": "card_16_quiz3",
+      "type": "quiz",
+      "concept_id": "cag_appointment",
+      "level": 2,
+      "progress": { "current": 16, "total": 85 },
+      "quiz_payload": {
+        "question": "Nimnlikhit kathanon par vichar karein:\n1) CAG ka re-appointment ho sakta hai doosri baar ke liye.\n2) CAG retire hone ke baad Union ya State government ke under koi pad nahi le sakta.\nSahi kathan chuniye:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Kathan 1 GALAT hai — CAG ka re-appointment nahi hota, ek hi term hoti hai. Kathan 2 SAHI hai — CAG post-retirement Union ya State government ka koi office of profit nahi le sakta."
+      },
+      "navigation": {
+        "next": "card_17_milestone2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_17_milestone2",
+      "card_slug": "card_17_milestone2",
+      "type": "milestone",
+      "concept_id": "cag_appointment",
+      "level": 2,
+      "progress": { "current": 17, "total": 85 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📋",
+        "completed_topic": "Appointment, Term & Post-Retirement Conditions",
+        "xp_earned": 55,
+        "milestone_progress": "Module 2/10 Clear",
+        "motivational_quote": "Triple independence safeguard yaad ho gaya! Ab dekhte hain CAG ko hataya kaise jaata hai."
+      },
+      "navigation": {
+        "next": "card_18_removal_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_18_removal_intro",
+      "card_slug": "card_18_removal_intro",
       "type": "chat",
       "concept_id": "cag_removal",
       "level": 2,
-      "progress": {
-        "current": 9,
-        "total": 45
-      },
+      "progress": { "current": 18, "total": 85 },
       "messages": [
         {
-          "speaker": "raju",
-          "text": "Sir, agar CAG apna kaam theek se na kare toh kya President hata sakta hai use?"
-        },
-        {
           "speaker": "aman",
-          "text": "Nahi Raju! CAG ko hatana bahut mushkil hai — Supreme Court Judge jaisi hi process hai. President hata sakta hai, BUT Parliament ke dono Houses mein impeachment jaisa resolution pass hona chahiye!"
+          "text": "Raju, ab ek bahut important aur frequently asked topic — CAG ko hataya kaise jaata hai? Guess karo — kya President apni marzi se CAG ko kal hat sakte hain agar CAG sarkar ke kisi audit report mein kuch uncomfortable sach likhe?"
         },
         {
           "speaker": "raju",
-          "text": "Matlab Lok Sabha aur Rajya Sabha dono mein voting?"
+          "text": "Sir, agar President ne appoint kiya hai to President hi hataa sakenge na? Warna kya fayda appoint karne ka?"
         },
         {
           "speaker": "aman",
-          "text": "Exactly! Dono Houses mein special majority chahiye — proved misbehaviour ya incapacity ke grounds par. Grounds sirf do hain: (1) Proved Misbehaviour, (2) Incapacity. Ye process ensure karta hai ki government easily CAG ko hata na sake — independence bachti hai! UPSC mein 'removal procedure' par assertion-reason question bahut aata hai!"
+          "text": "Yahin sabse bada trap hai! Nahi Raju — President NAHI hata sakte CAG ko apni marzi se. Article 148(1) kehta hai ki CAG ko usi tarah hataya jaayega jaise ek Supreme Court ke judge ko hataya jaata hai — Parliament dwara, proved misbehaviour ya incapacity ke aadhar par."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha!! Matlab SC judge jaisi hi process hai — bahut mushkil! Ye to independence ka bahut bada safeguard hai sir."
         }
       ],
       "navigation": {
-        "next": "card_10_milestone_appointment",
-        "button_text": "Module Complete ➔"
+        "next": "card_19_removal_process_detail",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_10_milestone_appointment",
-      "card_slug": "card_10_milestone_appointment",
-      "type": "milestone",
-      "concept_id": "cag_appointment_complete",
+      "card_id": "card_19_removal_process_detail",
+      "card_slug": "card_19_removal_process_detail",
+      "type": "chat",
+      "concept_id": "cag_removal",
       "level": 2,
-      "progress": {
-        "current": 10,
-        "total": 45
-      },
-      "milestone_payload": {
-        "title": "🎯 MODULE 1 COMPLETED!",
-        "badge_emoji": "🏛️",
-        "completed_topic": "CAG: Constitutional Status, Appointment & Tenure",
-        "xp_earned": 50,
-        "milestone_progress": "Module 1/4 Clear",
-        "motivational_quote": "Great start! अब CAG की actual powers और functions समझने का time! 💪"
-      },
+      "progress": { "current": 19, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab detail mein samjho removal process — Dono sadan (Lok Sabha aur Rajya Sabha) mein special majority chahiye: 1) Total membership ka majority, aur 2) Present aur voting karne walon ka 2/3rd majority. Dono shart ek saath poori ho tab hataya ja sakta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ye 'total membership ka majority' matlab kya? Mujhe confuse kar raha hai — 543 Lok Sabha mein se total ka matlab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi doubt! Total membership ka majority matlab — Lok Sabha mein 543 mein se kam se kam 272 vote chahiye, chahe uss din sirf 300 log present hon. Aur saath hi uss din jo 300 present hain unka bhi 2/3rd, yaani 200, vote chahiye. DONO ek saath milne chahiye — iss wajah se ye bahut mushkil majority hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow, itni double condition! Matlab sarkar ki majority bhi ho aur opposition bhi saath ho tab hi hat sakta hai CAG. Ye to hona lagbhag impossible hai practically!"
+        }
+      ],
       "navigation": {
-        "next": "card_11_powers_intro",
-        "button_text": "Start Module 2 ➔"
+        "next": "card_20_grounds_removal",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_11_powers_intro",
-      "card_slug": "card_11_powers_intro",
+      "card_id": "card_20_grounds_removal",
+      "card_slug": "card_20_grounds_removal",
       "type": "chat",
-      "concept_id": "cag_powers_intro",
+      "concept_id": "cag_removal",
       "level": 2,
-      "progress": {
-        "current": 11,
-        "total": 45
-      },
+      "progress": { "current": 20, "total": 85 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ab CAG ke actual powers dekhte hain. CAG ka kaam 3 main categories mein aata hai: (1) Auditing — accounts check karna, (2) Reporting — Parliament ko report dena, (3) Advising — President/Governor ko financial matters par salah dena."
+          "text": "Bilkul sahi samjha! Aur sirf majority se kaam nahi chalega — hatane ka ek valid ground bhi chahiye: 'proved misbehaviour' ya 'incapacity'. Matlab arbitrary ya political reason se nahi hataya ja sakta — koi concrete proven charge zaroori hai."
         },
         {
           "speaker": "raju",
-          "text": "Sir, Auditing matlab kya exactly? Sirf hisaab dekhna?"
+          "text": "Achha, grounds bhi fixed hain! Koi bhi bahana chalke nahi hai. Par sir — agar CAG ka pad beech mein khaali ho jaaye, to desh ka audit kaun karta hai?"
         },
         {
           "speaker": "aman",
-          "text": "Nahi Raju! Auditing ke 3 types hote hain: (1) Financial Audit — paisa sahi account mein gaya ya nahi, (2) Compliance Audit — rules follow hue ya nahi, (3) Performance Audit — jo scheme chalayi uska result mila ya nahi. Sabse powerful Performance Audit hai — ismein CAG batata hai ki paisa lagaya par output kya mila!"
+          "text": "Bahut achha follow-up! Aisa situation mein 'Deputy CAG' ya acting arrangement hoti hai jab tak naya CAG niyukt na ho. Lekin ye Constitution mein specifically nahi likha — ye administrative arrangement hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Theek hai sir. Ab salary ke baare mein batao — CAG kitna kamaata hai?"
         }
       ],
       "navigation": {
-        "next": "card_12_audit_scope",
-        "button_text": "Scope dekhen ➔"
+        "next": "card_21_salary_conditions",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_12_audit_scope",
-      "card_slug": "card_12_audit_scope",
+      "card_id": "card_21_salary_conditions",
+      "card_slug": "card_21_salary_conditions",
       "type": "chat",
-      "concept_id": "cag_audit_scope",
-      "level": 3,
-      "progress": {
-        "current": 12,
-        "total": 45
-      },
+      "concept_id": "cag_removal",
+      "level": 2,
+      "progress": { "current": 21, "total": 85 },
       "messages": [
         {
-          "speaker": "raju",
-          "text": "CAG sirf Central Government ka audit karta hai ya States ka bhi?"
-        },
-        {
           "speaker": "aman",
-          "text": "Dono ka! CAG audits karta hai: (1) Central Government ki receipts aur expenditure, (2) All State Governments aur Union Territories, (3) Government Companies (jahan Govt ka 51%+ share ho), (4) Constitutional Bodies jaise Election Commission, UPSC, etc., (5) Grants-in-aid jo Central Govt states ko deti hai."
+          "text": "CAG ki salary aur service conditions Article 148(6) ke anusar Parliament dwara banaye kanoon se niyamit hoti hain. CAG Act 1971 ke anusar CAG ki salary Supreme Court ke Chief Justice ke barabar hoti hai — ye status ka symbol hai, independent judiciary ke saath."
         },
         {
           "speaker": "raju",
-          "text": "Matlab CAG ka jurisdiction bahut wide hai!"
+          "text": "Chief Justice jaisi salary! To CAG ka darja bahut ooncha hai sir. Aur koi aur protection?"
         },
         {
           "speaker": "aman",
-          "text": "Haan! Jahan bhi public money lagti hai — Central, State, Government Companies — CAG audit kar sakta hai. BUT ek exception yaad rakho: CAG Local Bodies (Municipalities, Panchayats) ka audit directly nahi karta — wo State Governments ke through hota hai. BPSC mein ye trap bahut aata hai!"
+          "text": "Haan — Article 148(4) kehta hai ki CAG ki service conditions, niyukti ke baad, unke nuksaan mein nahi badli ja sakti. Matlab sarkar gusse mein aakar salary ghata de ya facilities cheen le — ye nahi ho sakta. Ye financial independence ka safeguard hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! Fixed salary, no reduction — taaki CAG dara ke kaam na kare. Ab quiz karein sir!"
         }
       ],
       "navigation": {
-        "next": "card_13_quiz_audit_scope",
-        "button_text": "Quiz ➔"
+        "next": "card_22_quiz1",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_13_quiz_audit_scope",
-      "card_slug": "card_13_quiz_audit_scope",
+      "card_id": "card_22_quiz1",
+      "card_slug": "card_22_quiz1",
       "type": "quiz",
-      "concept_id": "cag_audit_scope",
-      "level": 3,
-      "progress": {
-        "current": 13,
-        "total": 45
-      },
+      "concept_id": "cag_removal",
+      "level": 2,
+      "progress": { "current": 22, "total": 85 },
       "quiz_payload": {
-        "question": "CAG निम्नलिखित में से किसका audit करता है?\n1. केंद्र सरकार के accounts\n2. राज्य सरकारों के accounts\n3. सरकारी कंपनियां (जहां सरकार का 51% से अधिक हिस्सा हो)\n4. नगर निगम और पंचायतें (directly)",
+        "question": "CAG ko hatane ki prakriya kis ke saman hai?",
         "options": [
-          {
-            "id": "A",
-            "text": "केवल 1, 2 और 3"
-          },
-          {
-            "id": "B",
-            "text": "केवल 1 और 2"
-          },
-          {
-            "id": "C",
-            "text": "सभी 1, 2, 3 और 4"
-          },
-          {
-            "id": "D",
-            "text": "केवल 1, 3 और 4"
-          }
-        ],
-        "correct_option_id": "A",
-        "explanation": "CAG केंद्र सरकार, राज्य सरकारों और सरकारी कंपनियों (जहां सरकार का 51% से अधिक हिस्सा हो) का audit करता है। लेकिन Local Bodies (नगर निगम, पंचायतें) का audit CAG directly नहीं करता — यह राज्य सरकारों के through होता है। यह BPSC और UPSC का बहुत बड़ा trap है। Statement 4 गलत है।"
-      },
-      "navigation": {
-        "next": "card_14_dag_explained",
-        "button_text": "DAG कौन? ➔"
-      }
-    },
-    {
-      "card_id": "card_14_dag_explained",
-      "card_slug": "card_14_dag_explained",
-      "type": "chat",
-      "concept_id": "cag_dag_relationship",
-      "level": 3,
-      "progress": {
-        "current": 14,
-        "total": 45
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, agar CAG Delhi mein baitha hai toh Bihar ka audit kaun karega?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bahut smart question! Har state mein DAG hota hai — Deputy Accountant General ya Director General of Audit. DAG us state mein CAG ka representative hai aur actual audit work DAG hi karta hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab DAG state government appoint karta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi! Yahin sabse bada trap hai. DAG ko CAG appoint karta hai, state government nahi! DAG CAG ke under kaam karta hai aur audit report bhi CAG ko hi submit hoti hai. Ye ensure karta hai ki state government DAG ko influence na kar sake. UPSC mein ye confusion deliberately create karte hain!"
-        }
-      ],
-      "navigation": {
-        "next": "card_15_reports_parliament",
-        "button_text": "Reports kaisi hain? ➔"
-      }
-    },
-    {
-      "card_id": "card_15_reports_parliament",
-      "card_slug": "card_15_reports_parliament",
-      "type": "chat",
-      "concept_id": "cag_reports_parliament",
-      "level": 3,
-      "progress": {
-        "current": 15,
-        "total": 45
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "CAG ka sabse important power hai — Audit Reports! CAG audit karne ke baad report tayyar karta hai. Central Government ke liye ye reports President ko submit hoti hain, jo unhe Parliament ke saamne rakhta hai. States ke liye Governor ko, jo State Legislature ke saamne rakhte hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Report mein kya hota hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Report mein CAG batata hai: (1) Kahan paisa galat laga, (2) Kaunse rules violate hue, (3) Kaunsi schemes fail hui, (4) Kitna financial loss hua. Famous 2G Spectrum scam, Coal scam, Commonwealth Games scam — sabko CAG reports ne hi expose kiya tha!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab CAG ki report se scam pakde jaate hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Lekin dhyan do — CAG sirf report deta hai, punishment nahi. Report ke baad Parliament ki PAC (Public Accounts Committee) action leti hai. CAG ka kaam sirf expose karna hai, prosecution nahi. Ye limitation SSC mein puchha jata hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_16_quiz_reports",
-        "button_text": "Quiz ➔"
-      }
-    },
-    {
-      "card_id": "card_16_quiz_reports",
-      "card_slug": "card_16_quiz_reports",
-      "type": "quiz",
-      "concept_id": "cag_reports_parliament",
-      "level": 3,
-      "progress": {
-        "current": 16,
-        "total": 45
-      },
-      "quiz_payload": {
-        "question": "CAG की audit reports किसको submit की जाती हैं?",
-        "options": [
-          {
-            "id": "A",
-            "text": "सीधे Parliament और State Legislature को"
-          },
-          {
-            "id": "B",
-            "text": "President (Central के लिए) और Governor (States के लिए), जो इन्हें Legislature के सामने रखते हैं"
-          },
-          {
-            "id": "C",
-            "text": "Prime Minister और Chief Ministers को"
-          },
-          {
-            "id": "D",
-            "text": "Supreme Court को"
-          }
+          { "id": "A", "text": "Prime Minister ki advice par President hata sakte hain" },
+          { "id": "B", "text": "Supreme Court ke judge ki tarah Parliament mein special majority se" },
+          { "id": "C", "text": "Rajya Sabha mein kewal simple majority se" },
+          { "id": "D", "text": "Cabinet collective resolution se" }
         ],
         "correct_option_id": "B",
-        "explanation": "CAG की audit reports President को (Central Government के लिए) और Governor को (State Governments के लिए) submit की जाती हैं। इसके बाद President/Governor इन reports को Parliament/State Legislature के सामने रखते हैं। CAG सीधे Legislature को या PM/CM को report नहीं करता। यह constitutional procedure है जो Article 151 में दिया गया है। Railway और SSC में यह सीधा पूछा जाता है।"
+        "explanation": "Article 148(1) ke anusar CAG ko Supreme Court judge ki tarah hi hataya ja sakta hai — dono sadano mein special majority (total membership majority + 2/3rd present-voting majority) aur proved misbehaviour ya incapacity ka ground zaroori hai."
       },
       "navigation": {
-        "next": "card_17_pac_relationship",
-        "button_text": "PAC क्या है? ➔"
+        "next": "card_23_quiz2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_17_pac_relationship",
-      "card_slug": "card_17_pac_relationship",
-      "type": "chat",
-      "concept_id": "cag_pac_link",
-      "level": 3,
-      "progress": {
-        "current": 17,
-        "total": 45
+      "card_id": "card_23_quiz2",
+      "card_slug": "card_23_quiz2",
+      "type": "quiz",
+      "concept_id": "cag_removal",
+      "level": 2,
+      "progress": { "current": 23, "total": 85 },
+      "quiz_payload": {
+        "question": "CAG Act 1971 ke anusar CAG ki salary kiske barabar hoti hai?",
+        "options": [
+          { "id": "A", "text": "Supreme Court ke judge" },
+          { "id": "B", "text": "Supreme Court ke Chief Justice" },
+          { "id": "C", "text": "Cabinet Secretary" },
+          { "id": "D", "text": "Prime Minister" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CAG Act 1971 ke anusar CAG ki salary Supreme Court ke Chief Justice ke barabar hoti hai — yeh CEC jaisi Supreme Court ke regular judge wali salary se zyada hai, isliye dhyan se yaad rakhein."
       },
+      "navigation": {
+        "next": "card_24_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_24_quiz3",
+      "card_slug": "card_24_quiz3",
+      "type": "quiz",
+      "concept_id": "cag_removal",
+      "level": 2,
+      "progress": { "current": 24, "total": 85 },
+      "quiz_payload": {
+        "question": "Article 148(4) ke anusar CAG ki service conditions ke baare mein kya provision hai?",
+        "options": [
+          { "id": "A", "text": "Parliament kabhi bhi CAG ki salary badha ya gha sakti hai" },
+          { "id": "B", "text": "CAG ki service conditions, niyukti ke baad, unke nuksaan mein nahi badli ja sakti" },
+          { "id": "C", "text": "President khud se CAG ki salary tay karte hain" },
+          { "id": "D", "text": "CAG ki salary Finance Commission tay karta hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 148(4) provides ki CAG ki service conditions, ek baar niyukt hone ke baad, unke nuksaan (disadvantage) mein nahi badli ja sakti — ye financial independence ka ek zaroori safeguard hai."
+      },
+      "navigation": {
+        "next": "card_25_milestone3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_25_milestone3",
+      "card_slug": "card_25_milestone3",
+      "type": "milestone",
+      "concept_id": "cag_removal",
+      "level": 2,
+      "progress": { "current": 25, "total": 85 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Removal Process & Salary of CAG",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/10 Clear",
+        "motivational_quote": "Removal ka SC judge wala trap bhi solve ho gaya! Ab CAG ki asli powers dekhte hain."
+      },
+      "navigation": {
+        "next": "card_26_duties_overview",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_26_duties_overview",
+      "card_slug": "card_26_duties_overview",
+      "type": "chat",
+      "concept_id": "cag_duties_powers",
+      "level": 3,
+      "progress": { "current": 26, "total": 85 },
       "messages": [
         {
-          "speaker": "raju",
-          "text": "Sir, aapne PAC ka naam liya. Ye kya hota hai?"
-        },
-        {
           "speaker": "aman",
-          "text": "PAC matlab Public Accounts Committee — ye Parliament ki ek committee hai jo CAG reports ko examine karti hai. PAC mein 22 members hote hain (15 Lok Sabha se, 7 Rajya Sabha se). Interesting baat — PAC ka Chairman hamesha opposition party se hota hai!"
+          "text": "Ab samjhte hain CAG asliyat mein kya-kya karta hai — Article 149 kehta hai ki CAG apni duties Parliament dwara bane kanoon ke anusar perform karega. Aur uske anusar CAG (Duties, Powers and Conditions of Service) Act 1971 mein yeh duties detail mein di gayi hain."
         },
         {
           "speaker": "raju",
-          "text": "Opposition se? Kyun Sir?"
+          "text": "Sir, CAG sirf 'audit' hi karta hai na? Ya aur bhi kuch karta hai?"
         },
         {
           "speaker": "aman",
-          "text": "Kyunki PAC government ka audit check karti hai. Agar ruling party ka chairman ho toh wo apni hi party ko bachane ki koshish karega. Opposition chairman ensure karta hai ki strict scrutiny ho. Ye democratic check and balance hai! UPSC mein PAC-CAG relationship bahut puchhi jaati hai!"
+          "text": "Bahut achha sawaal! CAG ke mainly 3 broad functions hain: 1) Audit — accounts janch karna, 2) Compile accounts — Union aur States ke accounts banana/maintain karna (halaanki ye role ab reduce ho gayi hai), aur 3) Report — audit reports Parliament/State Legislature ko submit karna."
         },
         {
           "speaker": "raju",
-          "text": "Toh CAG aur PAC dono milkar kaam karte hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! CAG reports deta hai, PAC us par action recommend karti hai. PAC witnesses ko bula sakti hai, ministers ko question kar sakti hai. But PAC bhi sirf recommend karti hai — final action toh Parliament ya government ko hi lena padta hai!"
+          "text": "Teen kaam — audit, accounts, reports. Theek hai sir. Par audit mein bhi kaafi types hote honge na? Kya CAG sirf figures dekh leta hai ya aur bhi gehrai se jaata hai?"
         }
       ],
       "navigation": {
-        "next": "card_18_milestone_powers",
-        "button_text": "Module Complete ➔"
+        "next": "card_27_types_of_audit",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_18_milestone_powers",
-      "card_slug": "card_18_milestone_powers",
-      "type": "milestone",
-      "concept_id": "cag_powers_complete",
+      "card_id": "card_27_types_of_audit",
+      "card_slug": "card_27_types_of_audit",
+      "type": "chat",
+      "concept_id": "cag_duties_powers",
       "level": 3,
-      "progress": {
-        "current": 18,
-        "total": 45
+      "progress": { "current": 27, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut important question! CAG kai tarah ka audit karta hai — pehla hai 'Regularity Audit' ya 'Compliance Audit' — matlab paisa jo kharch hua, kya usme kanoon aur rules ka palan hua? Doosra hai 'Propriety Audit' — matlab paisa kharch hua woh jaroorat se zyada to nahi tha? Sahi value mili?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Pehla check karta hai 'rule follow hua ya nahi', doosra check karta hai 'paisa sahi tarike se kharch hua ya nahi'. Aur koi third type bhi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Teesra hai 'Performance Audit' ya 'Efficiency Audit' — kya scheme se expected result mila? Matlab agar 100 crore road banane mein lage, to kya road actually bani? Ye most comprehensive audit hai. Aur chautha hai 'Fiscal Audit' ya 'Financial Audit' — financial statements ki accuracy jaanch."
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Ye to bahut detail mein jaata hai CAG. Par sir, CAG kon-konse paise audit karta hai? Matlab kaunse fund aate hain iske dayre mein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_consolidated_fund",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_28_consolidated_fund",
+      "card_slug": "card_28_consolidated_fund",
+      "type": "chat",
+      "concept_id": "cag_duties_powers",
+      "level": 3,
+      "progress": { "current": 28, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut zaroori sawaal! Sab se pehle samjho teen types of government funds: 1) Consolidated Fund of India (Article 266) — sab tax revenue, loans yahan aate hain. Isse kuch bhi nikalne ke liye Parliament ki permission chahiye. 2) Public Account (Article 266) — provident fund, deposits jaise trust money. 3) Contingency Fund (Article 267) — emergency spending ke liye, sirf Rs 500 crore approx."
+        },
+        {
+          "speaker": "raju",
+          "text": "Teen fund! Consolidated, Public Account, Contingency. CAG sabka audit karta hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Consolidated Fund ka poora audit CAG karta hai — ye main audit jurisdiction hai. Public Account ka bhi audit hota hai. Lekin Contingency Fund ka separately audit hota hai aur phir Parliament se uski supplementary demands pass hoti hain. Teen teenon funds CAG ke dayre mein aate hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Theek hai sir — teenon funds ka audit CAG hi karta hai. Aur government companies ka bhi?"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_govt_companies_audit",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_29_govt_companies_audit",
+      "card_slug": "card_29_govt_companies_audit",
+      "type": "chat",
+      "concept_id": "cag_duties_powers",
+      "level": 3,
+      "progress": { "current": 29, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Government companies — jaise ONGC, BHEL, SAIL — inka audit directly CAG nahi karta. CAG 'Statutory Auditors' ko niyukt karta hai jo Companies Act ke tahat audit karte hain, aur CAG unke audit ki janch karta hai — supplement audit karta hai. Lekin kuch cases mein CAG direct audit bhi karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha sir — government companies mein CAG directly audit nahi, indirect supervisor hai. Aur States ka audit? Bihar ka bhi CAG karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite: Haan Raju! CAG Bihar samet sabhi States ka audit karta hai. States ko CAG ko apने accounts aur vouchers dene padte hain. States ke liye CAG 'Accountant General (AG)' office ke through kaam karta hai — Bihar mein bhi 'Office of the Principal Accountant General, Bihar, Patna' hai jahan state accounts ka audit hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Patna mein bhi CAG ka office hai? Ye to BPSC mein zaroor aata hoga sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz1",
+      "card_slug": "card_30_quiz1",
+      "type": "quiz",
+      "concept_id": "cag_duties_powers",
+      "level": 3,
+      "progress": { "current": 30, "total": 85 },
+      "quiz_payload": {
+        "question": "CAG dwara kiya jaane wala 'Propriety Audit' kya check karta hai?",
+        "options": [
+          { "id": "A", "text": "Sirf kanoon ka palan hua ya nahi" },
+          { "id": "B", "text": "Kya kharch wisely aur properly kiya gaya — zaroorat se zyada to nahi, sahi value mili?" },
+          { "id": "C", "text": "Kya scheme ka expected result mila" },
+          { "id": "D", "text": "Financial statements accurate hain ya nahi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Propriety Audit checks karta hai ki expenditure wise, prudent aur proper tha ya nahi — matlab paisa zaroorat se zyada to nahi kharch hua aur sahi value-for-money mila. Compliance Audit rule palan check karta hai, Performance Audit results check karta hai."
       },
+      "navigation": {
+        "next": "card_31_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quiz2",
+      "card_slug": "card_31_quiz2",
+      "type": "quiz",
+      "concept_id": "cag_duties_powers",
+      "level": 3,
+      "progress": { "current": 31, "total": 85 },
+      "quiz_payload": {
+        "question": "Article 266 ke anusar Consolidated Fund of India se paise nikalne ke liye kya zaroori hai?",
+        "options": [
+          { "id": "A", "text": "Sirf CAG ki permission" },
+          { "id": "B", "text": "Parliament ki appropriation — yaani Parliament se approval" },
+          { "id": "C", "text": "Prime Minister ka written order" },
+          { "id": "D", "text": "Supreme Court ki clearance" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Consolidated Fund of India (Article 266) se ek bhi rupaya nikalne ke liye Parliament ki 'Appropriation' zaroori hai — Parliament se approval chahiye. Isliye ye CAG audit ka primary subject hai."
+      },
+      "navigation": {
+        "next": "card_32_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz3",
+      "card_slug": "card_32_quiz3",
+      "type": "quiz",
+      "concept_id": "cag_duties_powers",
+      "level": 3,
+      "progress": { "current": 32, "total": 85 },
+      "quiz_payload": {
+        "question": "Government companies (jaise ONGC, BHEL) ka CAG kaise audit karta hai?",
+        "options": [
+          { "id": "A", "text": "Inhe CAG ki audit jurisdiction se bilkul bahar rakha gaya hai" },
+          { "id": "B", "text": "CAG statutory auditors niyukt karta hai aur unke audit ki supplement audit karta hai" },
+          { "id": "C", "text": "CAG directly in sabka full audit khud karta hai" },
+          { "id": "D", "text": "In companies ka audit RBI karta hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Government companies ka CAG direct audit nahi karta — CAG statutory auditors niyukt karta hai (Companies Act ke tahat) aur phir unke audit ki supplementary janch karta hai, ek supervisory role mein."
+      },
+      "navigation": {
+        "next": "card_33_milestone4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_33_milestone4",
+      "card_slug": "card_33_milestone4",
+      "type": "milestone",
+      "concept_id": "cag_duties_powers",
+      "level": 3,
+      "progress": { "current": 33, "total": 85 },
       "milestone_payload": {
-        "title": "🔥 MODULE 2 MASTERED!",
+        "title": "MODULE COMPLETED!",
         "badge_emoji": "🔍",
-        "completed_topic": "CAG: Powers, Audit Scope & Reports",
+        "completed_topic": "Types of Audit & Audit Jurisdiction of CAG",
         "xp_earned": 60,
-        "milestone_progress": "Module 2/4 Clear",
-        "motivational_quote": "Awesome! Audit types, PAC link, DAG role — सब clear! अब CAG की independence और limitations समझते हैं! 🚀"
+        "milestone_progress": "Module 4/10 Clear",
+        "motivational_quote": "Audit types aur jurisdiction crystal clear ho gaya! Ab CAG reports aur Parliament ke saath rishta samjhte hain."
       },
       "navigation": {
-        "next": "card_19_independence_intro",
-        "button_text": "Start Module 3 ➔"
+        "next": "card_34_reports_article151",
+        "button_text": "Start Next Module ➔"
       }
     },
     {
-      "card_id": "card_19_independence_intro",
-      "card_slug": "card_19_independence_intro",
+      "card_id": "card_34_reports_article151",
+      "card_slug": "card_34_reports_article151",
       "type": "chat",
-      "concept_id": "cag_independence",
+      "concept_id": "cag_reports",
       "level": 3,
-      "progress": {
-        "current": 19,
-        "total": 45
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, CAG ko itna power hai toh government tang nahi karti kya use?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bahut accha point! Constitution ne CAG ko independent banane ke liye kai safeguards diye hain: (1) Difficult removal — impeachment jaisa process, (2) Fixed tenure — 6 years, beech mein nahi hata sakte, (3) Salary protected — tenure mein reduce nahi ho sakti, (4) Retirement ke baad bar — CAG retire hone ke baad kisi bhi government job par nahi ja sakta!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Retirement ke baad bar kyun Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Taaki CAG retire hone ke baad government job ke lalach mein government ko favour na kare! Agar CAG soche ki mujhe baad mein koi post chahiye toh wo audit mein compromise kar sakta hai. Ye bar ensure karta hai ki CAG fearlessly kaam kare. Ye provision Article 148(4) mein hai — BPSC ka favorite!"
-        }
-      ],
-      "navigation": {
-        "next": "card_20_independence_safeguards",
-        "button_text": "Aur safeguards? ➔"
-      }
-    },
-    {
-      "card_id": "card_20_independence_safeguards",
-      "card_slug": "card_20_independence_safeguards",
-      "type": "chat",
-      "concept_id": "cag_independence_provisions",
-      "level": 3,
-      "progress": {
-        "current": 20,
-        "total": 45
-      },
+      "progress": { "current": 34, "total": 85 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Aur bhi safeguards hain: (5) CAG ka budget Parliament directly pass karti hai — executive control nahi hai, (6) CAG apne officers (DAG, etc.) khud appoint karta hai — government interference nahi, (7) CAG ke administrative powers mein government dakhal nahi de sakti, (8) CAG ki reports President/Governor ke through Parliament/Legislature ko jaati hain — government filter nahi kar sakti!"
+          "text": "Ab sabse important topic — CAG ki reports. Article 151 ke anusar CAG apni audit reports 'President' ko submit karta hai. Ab President in reports ko Parliament ke dono sadan ke samne rakhwaate hain."
         },
         {
           "speaker": "raju",
-          "text": "Matlab CAG almost independent hai?"
+          "text": "Sirf President ko? Governor ko nahi? Aur State ka audit hoga to phir kise deta hai?"
         },
         {
           "speaker": "aman",
-          "text": "Haan, but 'almost' yaad rakho! Kuch limitations bhi hain jo hum aage padhenge. But Constitution ne CAG ko maximum possible independence di hai taaki wo government ke pressure mein na aaye. Ye safeguards Supreme Court judges se bhi match karte hain!"
+          "text": "Bahut achha sawaal — yahan ek beautiful parallel structure hai! Union government ka audit report: CAG → President → Parliament. State government ka audit report: CAG → Governor → State Legislature. Ye parallel clearly yaad rakhna — BPSC mein aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Union mein President ko, State mein Governor ko. Matlab Bihar ka CAG report Bihar Governor ko jaata hai aur phir Bihar Vidhan Sabha mein rakhwaaya jaata hai?"
         }
       ],
       "navigation": {
-        "next": "card_21_quiz_independence",
-        "button_text": "Quiz ➔"
+        "next": "card_35_three_types_of_reports",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_21_quiz_independence",
-      "card_slug": "card_21_quiz_independence",
+      "card_id": "card_35_three_types_of_reports",
+      "card_slug": "card_35_three_types_of_reports",
+      "type": "chat",
+      "concept_id": "cag_reports",
+      "level": 3,
+      "progress": { "current": 35, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite: Bilkul sahi Raju! Ab ek bahut important fact — CAG teen alag-alag reports submit karta hai President ko: 1) Report on Appropriation Accounts — paisa Parliamentary permission ke anusar kharch hua ya nahi? 2) Report on Finance Accounts — government ka poora financial position. 3) Report on Public Undertakings — government companies ka audit."
+        },
+        {
+          "speaker": "raju",
+          "text": "Teen alag reports — Appropriation, Finance, Public Undertakings. Sir ye teeno Lok Sabha mein rakhwaye jaate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, teeno reports President Parliament ke dono sadano ke saamne rakhwaate hain. Aur phir in reports par 'Public Accounts Committee (PAC)' kaam karti hai — jo in reports ki gehraai se janch karti hai aur sarkar se sawaal karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "PAC! Ye kya hoti hai sir? CAG aur PAC ka kya rishta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_pac_link",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_36_pac_link",
+      "card_slug": "card_36_pac_link",
+      "type": "chat",
+      "concept_id": "cag_reports",
+      "level": 3,
+      "progress": { "current": 36, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Public Accounts Committee (PAC) Parliament ki ek standing committee hai — isme 22 members hote hain: 15 Lok Sabha se, 7 Rajya Sabha se. Aur iski chairmanship hamesha OPPOSITION party ka neta karta hai — ye ek convention hai taaki independent janch ho sake."
+        },
+        {
+          "speaker": "raju",
+          "text": "Opposition ki chairmanship — matlab ruling party ka candidate nahi! Ye to interesting baat hai. PAC kya actually karta hai sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "PAC CAG ki Appropriation Report janch karta hai — government ne Parliament ki permission ke anusar paisa kharch kiya ya nahi. Jo loopholes ya irregularities CAG pakad ke report kare, PAC unpe sarkar se explanation maangti hai. Isliye CAG ko 'PAC ka eyaa (eyes)' bhi kaha jaata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! CAG aankh hai, PAC zuban hai — dono milke accountability ensure karte hain. Bahut achha concept hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_estimates_committee",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_37_estimates_committee",
+      "card_slug": "card_37_estimates_committee",
+      "type": "chat",
+      "concept_id": "cag_reports",
+      "level": 3,
+      "progress": { "current": 37, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek aur committee hai — 'Estimates Committee' — jo 30 Lok Sabha members se banti hai aur budget estimates ki janch karta hai ki paisa sahi jagah allocate ho raha hai ya nahi. Lekin Estimates Committee CAG ki reports se kaam nahi karti — wo pre-expenditure janch karti hai, jabki PAC post-expenditure."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Estimates Committee pehle, PAC baad mein — pre aur post expenditure. CAG ka kaam post-expenditure audit hai to CAG PAC ke saath linked hai, Estimates ke saath nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! CAG + PAC = post-expenditure accountability. Estimates Committee = pre-expenditure planning review. Ye important distinction hai exams mein. Aur ek more important body — 'Committee on Public Undertakings' jo government companies ke audit report janch karti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Teen committees yaad rakhne honge — PAC, Estimates, aur Public Undertakings. Theek hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_38_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz1",
+      "card_slug": "card_38_quiz1",
       "type": "quiz",
-      "concept_id": "cag_independence",
+      "concept_id": "cag_reports",
       "level": 3,
-      "progress": {
-        "current": 21,
-        "total": 45
-      },
+      "progress": { "current": 38, "total": 85 },
       "quiz_payload": {
-        "question": "CAG की independence सुनिश्चित करने के लिए निम्नलिखित में से कौन सा प्रावधान है?",
+        "question": "CAG apni report Union government ke audit ki kise submit karta hai?",
         "options": [
-          {
-            "id": "A",
-            "text": "CAG सेवानिवृत्ति के बाद किसी भी सरकारी पद पर नियुक्त हो सकता है"
-          },
-          {
-            "id": "B",
-            "text": "CAG सेवानिवृत्ति के बाद किसी भी सरकारी पद पर नियुक्त नहीं हो सकता"
-          },
-          {
-            "id": "C",
-            "text": "CAG को कार्यकाल के बीच में सरकार हटा सकती है"
-          },
-          {
-            "id": "D",
-            "text": "CAG की salary सरकार घटा सकती है"
-          }
+          { "id": "A", "text": "Directly Parliament ko" },
+          { "id": "B", "text": "Prime Minister ko" },
+          { "id": "C", "text": "President ko, jo phir Parliament ko submit karwaate hain" },
+          { "id": "D", "text": "Supreme Court ko" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 151 ke anusar CAG Union government ki audit report President ko submit karta hai, jo phir Parliament ke dono sadano ke saamne rakhwaate hain. State ke liye — CAG → Governor → State Legislature."
+      },
+      "navigation": {
+        "next": "card_39_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz2",
+      "card_slug": "card_39_quiz2",
+      "type": "quiz",
+      "concept_id": "cag_reports",
+      "level": 3,
+      "progress": { "current": 39, "total": 85 },
+      "quiz_payload": {
+        "question": "Public Accounts Committee (PAC) ki chairmanship kaun karta hai aur isme kitne members hote hain?",
+        "options": [
+          { "id": "A", "text": "Finance Minister, 15 members" },
+          { "id": "B", "text": "Opposition party ka neta, 22 members (15 LS + 7 RS)" },
+          { "id": "C", "text": "Speaker of Lok Sabha, 30 members" },
+          { "id": "D", "text": "CAG khud, 12 members" }
         ],
         "correct_option_id": "B",
-        "explanation": "CAG की independence के लिए यह provision है कि CAG सेवानिवृत्ति के बाद किसी भी सरकारी पद (Central या State) पर नियुक्त नहीं हो सकता। यह Article 148(4) में दिया गया है। यह सुनिश्चित करता है कि CAG भविष्य में सरकारी नियुक्ति के लालच में सरकार को favour न करे। Option A गलत है। CAG को tenure के बीच आसानी से नहीं हटाया जा सकता (Option C गलत)। Salary कम नहीं की जा सकती (Option D गलत)।"
+        "explanation": "PAC mein 22 members hote hain — 15 Lok Sabha se aur 7 Rajya Sabha se. By convention, iska Chairman always Opposition party ka neta hota hai, ruling party ka nahi."
       },
       "navigation": {
-        "next": "card_22_limitations_intro",
-        "button_text": "Limitations? ➔"
+        "next": "card_40_quiz3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_22_limitations_intro",
-      "card_slug": "card_22_limitations_intro",
-      "type": "chat",
-      "concept_id": "cag_limitations",
-      "level": 4,
-      "progress": {
-        "current": 22,
-        "total": 45
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, CAG itna powerful hai toh kya wo kuch bhi kar sakta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi Raju! CAG ki kuch serious limitations hain. Sabse badi limitation: CAG sirf audit karta hai, punishment nahi de sakta! Agar CAG ko koi scam mile toh wo sirf report karega, arrest ya prosecution nahi kar sakta."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab CAG police ya court nahi hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! CAG ek auditor hai, investigator nahi. CAG report ke baad CBI, ED, ya courts action leti hain. CAG khud contempt power nahi rakhta — agar koi officer CAG ko documents nahi de toh CAG jail nahi bhej sakta! UPSC mein 'CAG has no executive or judicial powers' — ye statement TRUE hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_23_limitations_list",
-        "button_text": "Aur kya? ➔"
-      }
-    },
-    {
-      "card_id": "card_23_limitations_list",
-      "card_slug": "card_23_limitations_list",
-      "type": "chat",
-      "concept_id": "cag_major_limitations",
-      "level": 4,
-      "progress": {
-        "current": 23,
-        "total": 45
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Aur limitations: (1) No executive power — CAG kisi officer ko suspend/punish nahi kar sakta, (2) No judicial power — CAG cases decide nahi kar sakta, (3) Recommendations not binding — government maan bhi sakti hai, na bhi, (4) No access to Cabinet papers/defense secrets — classified info CAG ko nahi milti fully, (5) Dependent on government cooperation — agar ministry data nahi de toh CAG majboor hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab CAG ki report ko ignore bhi kiya ja sakta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Legally haan, but politically mushkil hai. Agar CAG scam expose kare aur government ignore kare toh media, opposition, aur public utha khade hote hain. CAG ki strength uski moral authority hai, legal enforcement power nahi. Ye 'soft power' concept BPSC assertion-reason mein aata hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_24_quiz_limitations",
-        "button_text": "Quiz ➔"
-      }
-    },
-    {
-      "card_id": "card_24_quiz_limitations",
-      "card_slug": "card_24_quiz_limitations",
+      "card_id": "card_40_quiz3",
+      "card_slug": "card_40_quiz3",
       "type": "quiz",
-      "concept_id": "cag_limitations",
-      "level": 4,
-      "progress": {
-        "current": 24,
-        "total": 45
-      },
+      "concept_id": "cag_reports",
+      "level": 3,
+      "progress": { "current": 40, "total": 85 },
       "quiz_payload": {
-        "question": "CAG की निम्नलिखित में से कौन सी limitation सही है?\n1. CAG के पास executive powers नहीं हैं\n2. CAG किसी अधिकारी को सीधे दंडित नहीं कर सकता\n3. CAG की सिफारिशें बाध्यकारी होती हैं\n4. CAG के पास contempt powers नहीं हैं",
+        "question": "CAG teen tarah ki reports submit karta hai. Nimnlikhit mein se kaunsi CAG ki report NAHI hai?",
         "options": [
-          {
-            "id": "A",
-            "text": "केवल 1, 2 और 4"
-          },
-          {
-            "id": "B",
-            "text": "केवल 1 और 2"
-          },
-          {
-            "id": "C",
-            "text": "केवल 2, 3 और 4"
-          },
-          {
-            "id": "D",
-            "text": "सभी 1, 2, 3 और 4"
-          }
+          { "id": "A", "text": "Report on Appropriation Accounts" },
+          { "id": "B", "text": "Report on Finance Accounts" },
+          { "id": "C", "text": "Report on Public Undertakings" },
+          { "id": "D", "text": "Report on Estimates and Projections" }
         ],
-        "correct_option_id": "A",
-        "explanation": "Statement 1, 2 और 4 सही हैं। CAG के पास executive powers नहीं हैं — वह किसी officer को suspend या punish नहीं कर सकता। CAG के पास contempt powers भी नहीं हैं। Statement 3 गलत है — CAG की सिफारिशें बाध्यकारी (binding) नहीं होतीं, केवल advisory होती हैं। सरकार इन्हें legally ignore कर सकती है। यह UPSC और BPSC का क्लासिक multi-statement trap है।"
+        "correct_option_id": "D",
+        "explanation": "CAG teen reports deta hai: Appropriation Accounts, Finance Accounts, aur Public Undertakings. 'Report on Estimates and Projections' CAG nahi deta — wo Estimates Committee ka kaam hai."
       },
       "navigation": {
-        "next": "card_25_cag_vs_others",
-        "button_text": "Comparison ➔"
+        "next": "card_41_milestone5",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_25_cag_vs_others",
-      "card_slug": "card_25_cag_vs_others",
-      "type": "chat",
-      "concept_id": "cag_comparison",
-      "level": 4,
-      "progress": {
-        "current": 25,
-        "total": 45
+      "card_id": "card_41_milestone5",
+      "card_slug": "card_41_milestone5",
+      "type": "milestone",
+      "concept_id": "cag_reports",
+      "level": 3,
+      "progress": { "current": 41, "total": 85 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📊",
+        "completed_topic": "CAG Reports & Parliamentary Committees",
+        "xp_earned": 65,
+        "milestone_progress": "Module 5/10 Clear",
+        "motivational_quote": "PAC aur CAG ka rishta crystal clear! Ab Article 150 aur accounts form ki detail dekhte hain."
       },
+      "navigation": {
+        "next": "card_42_article150_accounts",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_42_article150_accounts",
+      "card_slug": "card_42_article150_accounts",
+      "type": "chat",
+      "concept_id": "cag_accounts_form",
+      "level": 4,
+      "progress": { "current": 42, "total": 85 },
       "messages": [
         {
-          "speaker": "raju",
-          "text": "Sir, CAG aur other constitutional bodies mein kya difference hai?"
-        },
-        {
           "speaker": "aman",
-          "text": "Good question! Chalo compare karte hain:\n\nCAG vs Election Commission:\n- CAG: 6 years/65 age, Retired CJI level salary\n- EC: 6 years/65 age, Supreme Court Judge salary\n- Dono ka removal process same — impeachment jaisa\n\nCAG vs CVC (Chief Vigilance Commissioner):\n- CAG: 6 years/65 age\n- CVC: 4 years/65 age\n- CAG financial audit, CVC corruption cases"
+          "text": "Ab ek important aur frequently confused article — Article 150. Ye kehta hai ki Union aur States ke accounts us form mein rakhe jaayenge jo President, CAG ki salaah par, prescribe kare. Matlab accounts ka format CAG decide karta hai — President formally approve karte hain."
         },
         {
           "speaker": "raju",
-          "text": "Aur Supreme Court Judge se?"
+          "text": "Achha sir! Matlab accounts kaise likhe jaayenge — uska format bhi CAG decide karta hai? To wo audit bhi karta hai aur format bhi decide karta hai? Ye to conflict of interest nahi hai?"
         },
         {
           "speaker": "aman",
-          "text": "SC Judge: 65 age tak (fixed tenure nahi), removal impeachment se. CAG: fixed 6 years tenure, removal SC Judge jaisa. Salary both same level. But SC Judge judicial power hai, CAG sirf audit power. Railway mein comparison table bahut aata hai!"
+          "text": "Bahut sharp observation Raju! Actually ye oversight ke liye hai — CAG jab audit-friendly format tay karta hai, to manipulation ki gunjaaish kam hoti hai. Aur ye article State governments ke liye bhi apply hota hai — States ko bhi CAG ke prescribe format mein accounts rakhne padte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab States ko bhi CAG ka format follow karna compulsory hai? Ye to ek aur financial control ka mechanism hai!"
         }
       ],
       "navigation": {
-        "next": "card_26_milestone_independence",
-        "button_text": "Module Clear ➔"
+        "next": "card_43_cag_accounts_function",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_26_milestone_independence",
-      "card_slug": "card_26_milestone_independence",
-      "type": "milestone",
-      "concept_id": "cag_independence_complete",
+      "card_id": "card_43_cag_accounts_function",
+      "card_slug": "card_43_cag_accounts_function",
+      "type": "chat",
+      "concept_id": "cag_accounts_form",
       "level": 4,
-      "progress": {
-        "current": 26,
-        "total": 45
+      "progress": { "current": 43, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ab ek important historical evolution — shuruaat mein CAG Union aur States ke accounts banana bhi karta tha (compilation of accounts). Lekin ek baar 1976 mein ek important change hua. Kya guess karte ho kya change hua hoga?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Shaayad accounts banana kisi aur ko de diya hoga? Kyunki jo audit karta hai aur jo accounts banata hai — ek hi ho, to wo khud hi check karega khud ko!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi soch Raju! 1976 mein Union government ka accounts banana CAG se hatakar 'Controller General of Accounts (CGA)' ko de diya gaya — jo Finance Ministry ke under kaam karta hai. Ab CAG sirf audit karta hai, accounts compile nahi karta (Union level par)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! CAG aur CGA — do alag log! CGA accounts banata hai, CAG audit karta hai. Ye mix ho sakta tha exam mein, ab clear ho gaya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_cga_vs_cag",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_44_cga_vs_cag",
+      "card_slug": "card_44_cga_vs_cag",
+      "type": "chat",
+      "concept_id": "cag_accounts_form",
+      "level": 4,
+      "progress": { "current": 44, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul important difference yaad rakho — Controller General of Accounts (CGA) — Finance Ministry ke under, Union accounts compile karta hai. CAG — constitutionally independent, audit karta hai. States mein accounts aur audit dono ka kaam 'Accountant General (AG)' karta hai — jo CAG ke under hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "To States mein abhi bhi CAG hi accounts sambhalta hai? 1976 wala change sirf Union ke liye tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! State level par Accountant General (AG) — jo CAG ke under hai — accounts compile bhi karta hai aur audit bhi. Bihar mein Principal Accountant General ka office Patna mein hai jahan Bihar sarkar ke accounts compile aur audit hote hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha — Union mein CGA (accounts) + CAG (audit), States mein sirf AG under CAG (dono kaam). BPSC mein ye zaroor aayega sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_45_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz1",
+      "card_slug": "card_45_quiz1",
+      "type": "quiz",
+      "concept_id": "cag_accounts_form",
+      "level": 4,
+      "progress": { "current": 45, "total": 85 },
+      "quiz_payload": {
+        "question": "Article 150 ke anusar Union aur States ke accounts ka format kaun prescribe karta hai?",
+        "options": [
+          { "id": "A", "text": "Finance Minister" },
+          { "id": "B", "text": "CAG ki salaah par President" },
+          { "id": "C", "text": "Parliament directly" },
+          { "id": "D", "text": "Supreme Court" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 150 ke anusar Union aur States ke accounts us form mein rakhe jaate hain jo President, CAG ki salaah par, prescribe karte hain — matlab format CAG decide karta hai, President formally approve karte hain."
       },
+      "navigation": {
+        "next": "card_46_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_46_quiz2",
+      "card_slug": "card_46_quiz2",
+      "type": "quiz",
+      "concept_id": "cag_accounts_form",
+      "level": 4,
+      "progress": { "current": 46, "total": 85 },
+      "quiz_payload": {
+        "question": "1976 mein Union government ke accounts compilation ka kaam CAG se hatakar kise diya gaya?",
+        "options": [
+          { "id": "A", "text": "Reserve Bank of India" },
+          { "id": "B", "text": "Finance Secretary" },
+          { "id": "C", "text": "Controller General of Accounts (CGA)" },
+          { "id": "D", "text": "NITI Aayog" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "1976 mein Union government ke accounts compile karne ka kaam CAG se hatakar Controller General of Accounts (CGA) — Finance Ministry ke under — ko diya gaya. Ab CAG sirf audit karta hai, accounts compile nahi karta (Union level par)."
+      },
+      "navigation": {
+        "next": "card_47_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_47_quiz3",
+      "card_slug": "card_47_quiz3",
+      "type": "quiz",
+      "concept_id": "cag_accounts_form",
+      "level": 4,
+      "progress": { "current": 47, "total": 85 },
+      "quiz_payload": {
+        "question": "State level par accounts compilation aur audit dono kiska zimma hai?",
+        "options": [
+          { "id": "A", "text": "State Finance Secretary" },
+          { "id": "B", "text": "Controller General of Accounts" },
+          { "id": "C", "text": "Accountant General (AG) — CAG ke under" },
+          { "id": "D", "text": "State's own Auditor General" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "State level par Accountant General (AG) — jo CAG ke under hota hai — accounts compile bhi karta hai aur audit bhi. Bihar mein Principal Accountant General ka office Patna mein hai."
+      },
+      "navigation": {
+        "next": "card_48_milestone6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_48_milestone6",
+      "card_slug": "card_48_milestone6",
+      "type": "milestone",
+      "concept_id": "cag_accounts_form",
+      "level": 4,
+      "progress": { "current": 48, "total": 85 },
       "milestone_payload": {
-        "title": "💪 MODULE 3 CONQUERED!",
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏦",
+        "completed_topic": "Accounts Form, CGA vs CAG & State Audit",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/10 Clear",
+        "motivational_quote": "CGA aur CAG ka fark clear ho gaya! Ab CAG ki independence ke baare mein gehraai se samjhenge."
+      },
+      "navigation": {
+        "next": "card_49_independence_features",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_49_independence_features",
+      "card_slug": "card_49_independence_features",
+      "type": "chat",
+      "concept_id": "cag_independence",
+      "level": 4,
+      "progress": { "current": 49, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek comprehensive revision karte hain — CAG ki independence ke SAARE safeguards ek jagah. Pehla: niyukti President karte hain, lekin hatana bahut mushkil (SC judge jaisi process). Doosra: ek hi term, no re-appointment. Teesra: post-retirement koi sarkari pad nahi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye teen to yaad hain sir. Aur kaunse safeguards hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Chautha: salary aur service conditions niyukti ke baad nuksaan mein nahi badli ja sakti. Paanchwa: CAG ka staff aur service conditions Parliament dwara kanoon se tay hote hain — sarkar apni marzi se nahi badal sakti. Chhatta: CAG ke khilaf Supreme Court mein directly koi case nahi jata — CAG ki independence Supreme Court ke saman hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "6 safeguards! Ye to bahut protected officer hai sir. Par ek sawaal — kya CAG executive ka hissa hai ya judicial? Kahan fit hota hai ye system mein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_50_cag_classification",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_50_cag_classification",
+      "card_slug": "card_50_cag_classification",
+      "type": "chat",
+      "concept_id": "cag_independence",
+      "level": 4,
+      "progress": { "current": 50, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut important constitutional question! CAG na executive hai, na judicial — wo ek independent constitutional authority hai. Constitution ke Part V mein hai (union executive ke paas), lekin practically wo executive se independent hai. Wo Legislature (Parliament) ki taraf se executive ko audit karta hai — Legislative accountability ka tool hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Executive nahi, judicial nahi — ek alag independent authority jo Legislature ki taraf se executive ko check karta hai. Ye interesting classification hai sir."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Ye India ka 'Supreme Audit Institution (SAI)' hai — aur INTOSAI (International Organization of Supreme Audit Institutions) mein India SAI ka bhi member hai. CAG hi India ka SAI head hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "INTOSAI! Ye international organization hai? Matlab India ka CAG globally bhi connected hai? Ye interesting fact hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_51_cag_vs_comptroller",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_51_cag_vs_comptroller",
+      "card_slug": "card_51_cag_vs_comptroller",
+      "type": "chat",
+      "concept_id": "cag_independence",
+      "level": 4,
+      "progress": { "current": 51, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek bahut frequently asked UPSC/BPSC question — CAG ke naam mein 'Comptroller' aur 'Auditor General' dono hain. Lekin kya India ka CAG actually 'Comptroller' ki bhi duty nibhata hai? Matlab kya wo paisa nikalne par pehle permission deta hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan sir, Comptroller matlab control karna — to wo pehle permission deta hoga phir paisa nikalta hoga!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahin sabse bada misconception hai Raju! India mein CAG SIRF Auditor General ka kaam karta hai — matlab paisa kharch hone ke BAAD audit karta hai. UK mein Comptroller and Auditor General paisa nikalne se PEHLE permission deta hai. India mein CAG ke paas ye 'pre-audit' ya 'comptroller' wala power NAHI hai — naam mein hai, kaam mein nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Naam mein Comptroller hai par kaam nahi karta! Ye to bahut bada trap hai sir, main to galat hi samajhta tha abhi tak!"
+        }
+      ],
+      "navigation": {
+        "next": "card_52_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_52_quiz1",
+      "card_slug": "card_52_quiz1",
+      "type": "quiz",
+      "concept_id": "cag_independence",
+      "level": 4,
+      "progress": { "current": 52, "total": 85 },
+      "quiz_payload": {
+        "question": "India mein CAG ke baare mein kaunsa kathan SAHI hai?",
+        "options": [
+          { "id": "A", "text": "CAG paisa nikalne se pehle permission deta hai (pre-audit)" },
+          { "id": "B", "text": "CAG sirf post-expenditure audit karta hai — paisa nikalne ki pehle koi permission nahi deta" },
+          { "id": "C", "text": "CAG UK aur India mein same tarike se kaam karta hai" },
+          { "id": "D", "text": "CAG ka naam mein 'Comptroller' galti se hai, wo auditor bhi nahi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "India mein CAG sirf post-expenditure audit karta hai — naam mein 'Comptroller' hai lekin UK wali pre-audit permission wali power NAHI hai. UK mein Comptroller and Auditor General pehle permission deta hai, India mein nahi."
+      },
+      "navigation": {
+        "next": "card_53_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_53_quiz2",
+      "card_slug": "card_53_quiz2",
+      "type": "quiz",
+      "concept_id": "cag_independence",
+      "level": 4,
+      "progress": { "current": 53, "total": 85 },
+      "quiz_payload": {
+        "question": "CAG ko 'Guardian of Public Purse' kyun kaha jaata hai?",
+        "options": [
+          { "id": "A", "text": "Kyunki wo public money apne paas rakhta hai" },
+          { "id": "B", "text": "Kyunki wo ensure karta hai ki Parliament ki permission se kharch hua paisa sahi jagah aur sahi tarike se lagaya gaya" },
+          { "id": "C", "text": "Kyunki wo RBI ka supervisor hai" },
+          { "id": "D", "text": "Kyunki wo budget banata hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CAG 'Guardian of Public Purse' hai kyunki wo audit karke ensure karta hai ki Parliament dwara approved money sahi jagah, sahi tarike aur sahi purpose ke liye kharch hua — financial accountability ki guarantee."
+      },
+      "navigation": {
+        "next": "card_54_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_54_quiz3",
+      "card_slug": "card_54_quiz3",
+      "type": "quiz",
+      "concept_id": "cag_independence",
+      "level": 4,
+      "progress": { "current": 54, "total": 85 },
+      "quiz_payload": {
+        "question": "Assertion (A): India mein CAG executive se fully independent ek constitutional authority hai.\nReason (R): CAG ka karyakaal fixed hai, re-appointment nahi hota, post-retirement sarkari pad nahi, aur salary nuksaan mein nahi badli ja sakti.\nSahi vikalp chuniye:",
+        "options": [
+          { "id": "A", "text": "A sahi hai lekin R galat hai" },
+          { "id": "B", "text": "A galat hai lekin R sahi hai" },
+          { "id": "C", "text": "Dono sahi hain aur R, A ki sahi vyakhya hai" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono sahi hain aur R, A ki sahi vyakhya hai. CAG ki independence — fixed term, no re-appointment, no post-retirement office, salary protection, SC-judge-like removal — in saari guarantees se ensure hoti hai."
+      },
+      "navigation": {
+        "next": "card_55_milestone7",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_55_milestone7",
+      "card_slug": "card_55_milestone7",
+      "type": "milestone",
+      "concept_id": "cag_independence",
+      "level": 4,
+      "progress": { "current": 55, "total": 85 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
         "badge_emoji": "🛡️",
-        "completed_topic": "CAG: Independence & Limitations",
-        "xp_earned": 50,
-        "milestone_progress": "Module 3/4 Clear",
-        "motivational_quote": "Superb! Safeguards, limitations, comparisons — सब clear! अब CAG के special duties और recent issues देखते हैं! 🎯"
+        "completed_topic": "CAG Independence Safeguards & Comptroller Misconception",
+        "xp_earned": 65,
+        "milestone_progress": "Module 7/10 Clear",
+        "motivational_quote": "Comptroller wala sabse bada trap bhi crack ho gaya! Ab landmark CAG reports aur scams dekhte hain."
       },
       "navigation": {
-        "next": "card_27_special_duties",
-        "button_text": "Start Module 4 ➔"
+        "next": "card_56_landmark_reports",
+        "button_text": "Start Next Module ➔"
       }
     },
     {
-      "card_id": "card_27_special_duties",
-      "card_slug": "card_27_special_duties",
+      "card_id": "card_56_landmark_reports",
+      "card_slug": "card_56_landmark_reports",
       "type": "chat",
-      "concept_id": "cag_special_functions",
-      "level": 4,
-      "progress": {
-        "current": 27,
-        "total": 45
-      },
+      "concept_id": "cag_landmark_cases",
+      "level": 5,
+      "progress": { "current": 56, "total": 85 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ab CAG ke kuch special duties dekhte hain jo exams mein bahut aate hain. CAG ko President ya Governor ki request par kisi bhi matter par special audit bhi karna padta hai — ye Article 151 mein hai."
+          "text": "Ab kuch aise CAG reports ke baare mein jaante hain jo itne powerful the ki unhone poori desh ki rajneeti badal di! Pehla — '2G Spectrum Scam' (2008) — CAG ne report di ki telecom licenses galat tarike se diye gaye jisse sarkar ko estimated Rs 1.76 lakh crore ka nuksan hua."
         },
         {
           "speaker": "raju",
-          "text": "Matlab President bol sake ki iss particular scheme ka audit karo?"
+          "text": "1.76 lakh crore?? Ye to bahut bada number hai sir! CAG ne expose kiya ye?"
         },
         {
           "speaker": "aman",
-          "text": "Haan! Ya Governor state level par. Iske alawa CAG ko receipts aur expenditure ke accounts ka format design karna hota hai — matlab government accounting kaise hogi ye CAG decide karta hai. Ye technical but important function hai!"
+          "text": "Bilkul! Aur doosra — 'Coal Block Allocation Scam' ya 'Coalgate' (2012) — CAG ne estimate kiya ki coal blocks galat tarike se bante se sarkar ko Rs 1.86 lakh crore ka presumptive loss hua. Ye bhi CAG report ki wajah se saamne aaya aur Supreme Court ne coal blocks cancel kiye."
         },
         {
           "speaker": "raju",
-          "text": "Aur kya special kaam hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "CAG Consolidated Fund aur Contingency Fund se withdrawals ka audit karta hai — ensure karta hai ki Parliament/Legislature ki approval ke bina paisa nahi nikla. CAG Public Accounts Committee (PAC) ka 'friend, philosopher and guide' bhi kehlaata hai kyunki CAG reports PAC ka base hoti hain!"
+          "text": "Matlab CAG ne court mein nahi, par report ke through in scams ko expose kiya! Powerful tool hai ye sir."
         }
       ],
       "navigation": {
-        "next": "card_28_government_companies",
-        "button_text": "Govt Companies? ➔"
+        "next": "card_57_cwg_report",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_28_government_companies",
-      "card_slug": "card_28_government_companies",
+      "card_id": "card_57_cwg_report",
+      "card_slug": "card_57_cwg_report",
       "type": "chat",
-      "concept_id": "cag_govt_companies_audit",
-      "level": 4,
-      "progress": {
-        "current": 28,
-        "total": 45
-      },
+      "concept_id": "cag_landmark_cases",
+      "level": 5,
+      "progress": { "current": 57, "total": 85 },
       "messages": [
         {
-          "speaker": "raju",
-          "text": "Sir, aapne bola CAG government companies ka audit karta hai. Kaunsi companies?"
-        },
-        {
           "speaker": "aman",
-          "text": "Government companies matlab jahan Central ya State Government ka 51% ya usse zyada paid-up share capital ho — jaise ONGC, Coal India, State Electricity Boards, etc. CAG inke accounts audit karta hai."
+          "text": "Teesra — 'Commonwealth Games 2010' — CAG ne audit mein paya ki expenses mein massive irregularities thin, cost overruns the aur contracts galat tarike se diye gaye. Aur chautha — Bihar mein hi ek famous case — 'Bihar Fodder Scam' jo bahut saalon se chal raha tha, usmein bhi CAG ne state accounts mein irregularities pakdi thi."
         },
         {
           "speaker": "raju",
-          "text": "Private companies ka nahi?"
+          "text": "Bihar Fodder Scam mein CAG ka role tha?? Matlab Bihar ke local cases mein bhi CAG involved hota hai?"
         },
         {
           "speaker": "aman",
-          "text": "Bilkul nahi! Sirf wo companies jahan government majority shareholder hai. Agar government ka 49% share hai toh CAG audit nahi karega — wo private auditors karenge. Ye '51% rule' SSC mein seedha puchha jata hai!"
+          "text": "⭐ BPSC TRE Favorite: Bilkul haan Raju! Bihar Fodder Scam — jisme cattle fodder purchase ke naam par crores ka ghotalа hua — isme Accountant General, Bihar ne pehle irregularities flag ki aur CAG audit reports ne ise expose kiya. Ye BPSC mein bahut important example hai."
         },
         {
           "speaker": "raju",
-          "text": "Aur PSUs ka Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "PSU (Public Sector Undertakings) agar government companies hain toh CAG audit karega. But agar PSU ek statutory corporation hai (jaise RBI, LIC) toh unka separate Act hota hai jo audit define karta hai — CAG ka role limited ho sakta hai. Ye nuance UPSC level ka hai!"
+          "text": "Achha, Bihar ka apna bhi CAG-related famous case hai! Ye to definitely BPSC mein aata hoga sir."
         }
       ],
       "navigation": {
-        "next": "card_29_quiz_govt_companies",
-        "button_text": "Quiz ➔"
+        "next": "card_58_cag_and_pacs",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_29_quiz_govt_companies",
-      "card_slug": "card_29_quiz_govt_companies",
+      "card_id": "card_58_cag_and_pacs",
+      "card_slug": "card_58_cag_and_pacs",
+      "type": "chat",
+      "concept_id": "cag_landmark_cases",
+      "level": 5,
+      "progress": { "current": 58, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, in saare cases mein ek common baat — CAG ki report aayi, phir PAC ne in reports ko Parliament mein uthaya, phir judiciary aur media ne action liya. Ye ek complete accountability cycle hai — CAG → Report → PAC → Parliament → Public Awareness → Action."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Ek chain hai — CAG pakadta hai, PAC pursue karta hai, Parliament discuss karti hai, aur phir action hota hai. Ye cycle bahut effective lagti hai sir."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Lekin CAG ki ek limitation bhi hai — wo sirf audit aur report karta hai. CAG khud kisi ko jail nahi bhej sakta, FIR nahi kar sakta, money wapas nahi le sakta. Enforcement ka kaam police, CBI, aur courts ka hai. CAG sirf expose karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha — CAG expose karta hai, enforce nahi kar sakta. Limitation bhi yaad rakhni chahiye exam ke liye."
+        }
+      ],
+      "navigation": {
+        "next": "card_59_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_59_quiz1",
+      "card_slug": "card_59_quiz1",
       "type": "quiz",
-      "concept_id": "cag_govt_companies_audit",
-      "level": 4,
-      "progress": {
-        "current": 29,
-        "total": 45
-      },
+      "concept_id": "cag_landmark_cases",
+      "level": 5,
+      "progress": { "current": 59, "total": 85 },
       "quiz_payload": {
-        "question": "CAG किन सरकारी कंपनियों का audit करता है?",
+        "question": "2G Spectrum Scam mein CAG ne kitne ka estimated loss pakda tha?",
         "options": [
-          {
-            "id": "A",
-            "text": "सभी कंपनियां जिनमें सरकार का कोई भी हिस्सा हो"
-          },
-          {
-            "id": "B",
-            "text": "कंपनियां जिनमें सरकार का 51% या उससे अधिक paid-up share capital हो"
-          },
-          {
-            "id": "C",
-            "text": "केवल वे कंपनियां जो सरकार द्वारा पूरी तरह स्वामित्व में हों (100%)"
-          },
-          {
-            "id": "D",
-            "text": "CAG किसी भी कंपनी का audit नहीं करता"
-          }
+          { "id": "A", "text": "Rs 86,000 crore" },
+          { "id": "B", "text": "Rs 1.76 lakh crore" },
+          { "id": "C", "text": "Rs 1.86 lakh crore" },
+          { "id": "D", "text": "Rs 3.60 lakh crore" }
         ],
         "correct_option_id": "B",
-        "explanation": "CAG उन सरकारी कंपनियों का audit करता है जिनमें Central या State Government का 51% या उससे अधिक paid-up share capital हो। यह majority ownership की शर्त है। यदि सरकार का हिस्सा 51% से कम है (जैसे 49%) तो CAG audit नहीं करेगा — private auditors करेंगे। 100% ownership जरूरी नहीं है। यह SSC और Railway में frequently पूछा जाता है।"
+        "explanation": "2G Spectrum Scam (2008) mein CAG ne estimated Rs 1.76 lakh crore ka presumptive loss figure diya tha. Coalgate mein Rs 1.86 lakh crore ka estimate tha."
       },
       "navigation": {
-        "next": "card_30_recent_issues",
-        "button_text": "Recent Issues ➔"
+        "next": "card_60_quiz2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_30_recent_issues",
-      "card_slug": "card_30_recent_issues",
-      "type": "chat",
-      "concept_id": "cag_recent_controversies",
-      "level": 4,
-      "progress": {
-        "current": 30,
-        "total": 45
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, CAG ko lekar koi recent issues hain kya?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan Raju! Kuch important recent debates hain: (1) CAG vs Government — kabhi-kabhi government CAG reports ko 'flawed methodology' bolke challenge karti hai, (2) Access to classified information — defense deals mein CAG ko poori info nahi milti, (3) Delay in tabling reports — kabhi reports Parliament mein late table hoti hain, (4) PSU audit autonomy — kuch PSUs CAG audit resist karte hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Koi famous case hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Rafale deal audit, 2G spectrum scam (2010 — CAG ne Rs 1.76 lakh crore loss estimate kiya tha), Coal block allocation scam, Commonwealth Games audit — ye sab famous CAG reports hain. CAG reports se bahut saare scams public domain mein aaye! UPSC current affairs mein ye context aata hai."
-        }
-      ],
-      "navigation": {
-        "next": "card_31_cag_reforms",
-        "button_text": "Reforms? ➔"
-      }
-    },
-    {
-      "card_id": "card_31_cag_reforms",
-      "card_slug": "card_31_cag_reforms",
-      "type": "chat",
-      "concept_id": "cag_suggested_reforms",
-      "level": 4,
-      "progress": {
-        "current": 31,
-        "total": 45
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "CAG ko aur effective banane ke liye experts ne kuch reforms suggest kiye hain: (1) Performance audit par zyada focus — sirf financial audit nahi, (2) Technology integration — AI aur data analytics use karke faster audit, (3) Access to all information — defense/cabinet papers bhi (limited), (4) Timely report submission — deadline fix ho, (5) CAG recommendations par action tracking — government ne kya kiya uska follow-up."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ye reforms hue hain kya?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Kuch progress hai — CAG ab digital audits kar raha hai, performance audit badhaya hai. But still bahut scope hai improvement ka. Ye reforms UPSC Mains aur interviews mein discussion topic bante hain. Prelims mein mostly factual hi aata hai."
-        }
-      ],
-      "navigation": {
-        "next": "card_32_international_comparison",
-        "button_text": "Other countries? ➔"
-      }
-    },
-    {
-      "card_id": "card_32_international_comparison",
-      "card_slug": "card_32_international_comparison",
-      "type": "chat",
-      "concept_id": "cag_international_context",
-      "level": 4,
-      "progress": {
-        "current": 32,
-        "total": 45
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, baaki countries mein bhi CAG jaisa hota hai kya?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Har democratic country mein Supreme Audit Institution (SAI) hota hai. UK mein 'National Audit Office (NAO)' hai, USA mein 'Government Accountability Office (GAO)', Australia mein 'Australian National Audit Office (ANAO)'. India ka CAG inhi ki tarah hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "India ka CAG model kahan se aaya?"
-        },
-        {
-          "speaker": "aman",
-          "text": "British model se! British India mein 'Auditor General' tha, 1950 Constitution ne usko 'Comptroller and Auditor General' bana diya. 'Comptroller' word CAG ko Consolidated Fund ka controller bhi banata hai — ye unique feature hai. UK ka NAO thoda alag hai — wahan Comptroller aur Auditor General alag-alag hain!"
-        }
-      ],
-      "navigation": {
-        "next": "card_33_quiz_special_duties",
-        "button_text": "Quiz ➔"
-      }
-    },
-    {
-      "card_id": "card_33_quiz_special_duties",
-      "card_slug": "card_33_quiz_special_duties",
+      "card_id": "card_60_quiz2",
+      "card_slug": "card_60_quiz2",
       "type": "quiz",
-      "concept_id": "cag_special_functions",
-      "level": 4,
-      "progress": {
-        "current": 33,
-        "total": 45
-      },
+      "concept_id": "cag_landmark_cases",
+      "level": 5,
+      "progress": { "current": 60, "total": 85 },
       "quiz_payload": {
-        "question": "CAG के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n1. CAG, President/Governor के निर्देश पर किसी विशेष मामले का audit कर सकता है।\n2. CAG को Public Accounts Committee (PAC) का 'friend, philosopher and guide' कहा जाता है।\n3. CAG सभी प्रकार की कंपनियों (सरकारी और निजी दोनों) का audit करता है।\n4. CAG सरकारी लेखा प्रणाली का format तय करता है।",
+        "question": "⭐ BPSC TRE Favorite: Bihar Fodder Scam mein audit irregularities kine pakdi thi?",
         "options": [
-          {
-            "id": "A",
-            "text": "केवल 1, 2 और 4"
-          },
-          {
-            "id": "B",
-            "text": "केवल 1 और 2"
-          },
-          {
-            "id": "C",
-            "text": "केवल 2, 3 और 4"
-          },
-          {
-            "id": "D",
-            "text": "सभी 1, 2, 3 और 4"
-          }
+          { "id": "A", "text": "CAG ki central team ne directly pakdi" },
+          { "id": "B", "text": "Accountant General, Bihar ne pehle pakdi — jo CAG ke under kaam karta hai" },
+          { "id": "C", "text": "Bihar High Court ne pehle pakda" },
+          { "id": "D", "text": "Central Bureau of Investigation ne pehle detect kiya" }
         ],
-        "correct_option_id": "A",
-        "explanation": "कथन 1, 2 और 4 सही हैं। CAG को President/Governor की request पर विशेष audit करना पड़ता है (Article 151)। CAG को PAC का 'friend, philosopher and guide' कहा जाता है क्योंकि CAG reports PAC के कार्य का आधार होती हैं। CAG सरकारी accounting का format भी तय करता है। कथन 3 गलत है — CAG केवल सरकारी कंपनियों (जहां सरकार का 51%+ share हो) का audit करता है, निजी कंपनियों का नहीं। यह BPSC का क्लासिक trap है।"
+        "correct_option_id": "B",
+        "explanation": "Bihar Fodder Scam mein Accountant General, Bihar — jo CAG ke under kaam karta hai — ne pehle audit irregularities flag ki thi. Ye Bihar-specific accountability ka ek important example hai."
       },
       "navigation": {
-        "next": "card_34_milestone_special",
-        "button_text": "Module Complete ➔"
+        "next": "card_61_quiz3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_34_milestone_special",
-      "card_slug": "card_34_milestone_special",
+      "card_id": "card_61_quiz3",
+      "card_slug": "card_61_quiz3",
+      "type": "quiz",
+      "concept_id": "cag_landmark_cases",
+      "level": 5,
+      "progress": { "current": 61, "total": 85 },
+      "quiz_payload": {
+        "question": "CAG ki ek important limitation kya hai?",
+        "options": [
+          { "id": "A", "text": "CAG sirf Union ka audit kar sakta hai, States ka nahi" },
+          { "id": "B", "text": "CAG sirf expose karta hai — khud FIR, enforcement ya recovery nahi kar sakta" },
+          { "id": "C", "text": "CAG Supreme Court mein case file nahi kar sakta" },
+          { "id": "D", "text": "CAG ki reports secret hoti hain, public nahi hoti" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CAG audit karke report deta hai aur expose karta hai, lekin khud kisi ko jail nahi bhej sakta, FIR nahi kar sakta ya money recover nahi kar sakta — enforcement ka kaam courts, CBI, police ka hai."
+      },
+      "navigation": {
+        "next": "card_62_milestone8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_62_milestone8",
+      "card_slug": "card_62_milestone8",
       "type": "milestone",
-      "concept_id": "cag_special_duties_complete",
-      "level": 4,
-      "progress": {
-        "current": 34,
-        "total": 45
-      },
+      "concept_id": "cag_landmark_cases",
+      "level": 5,
+      "progress": { "current": 62, "total": 85 },
       "milestone_payload": {
-        "title": "🏆 MODULE 4 MASTERED!",
-        "badge_emoji": "⚡",
-        "completed_topic": "CAG: Special Duties, Recent Issues & Reforms",
-        "xp_earned": 60,
-        "milestone_progress": "Module 4/4 Clear",
-        "motivational_quote": "Outstanding! Special functions, government companies, recent debates — सब पता चल गया! अब Officer-level revision और final quiz! 💯"
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📰",
+        "completed_topic": "Landmark CAG Reports & Accountability Cycle",
+        "xp_earned": 65,
+        "milestone_progress": "Module 8/10 Clear",
+        "motivational_quote": "Bihar Fodder Scam se lekar 2G tak — ab sabhi landmark cases yaad hain! Ab Article 150 aur States ke baare mein deeper dive karte hain."
       },
       "navigation": {
-        "next": "card_35_summary_revision",
-        "button_text": "Officer Revision ➔"
+        "next": "card_63_state_legislature_audit",
+        "button_text": "Start Next Module ➔"
       }
     },
     {
-      "card_id": "card_35_summary_revision",
-      "card_slug": "card_35_summary_revision",
+      "card_id": "card_63_state_legislature_audit",
+      "card_slug": "card_63_state_legislature_audit",
+      "type": "chat",
+      "concept_id": "cag_state_specific",
+      "level": 5,
+      "progress": { "current": 63, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab States ke audit ko aur detail mein samjhte hain — jo Bihar aur BPSC ke liye especially important hai. State audit mein CAG ke kaam ki chain: Bihar Sarkar expenses karti hai → Accountant General, Bihar audit karta hai → CAG final report banata hai → Report Bihar Governor ko deta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, to Bihar Governor ko milti hai report, phir wo kahan bhejte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite: Governor us report ko Bihar Vidhan Sabha ke saamne rakhwaate hain — article 151(2) ke anusar. Aur State Legislature mein bhi 'Public Accounts Committee' hoti hai — jo state PAC in reports ki janch karti hai. Bihar Vidhan Sabha ki apni PAC hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Bihar Vidhan Sabha ki apni PAC! Matlab State level par bhi same structure follow hota hai? Jaise Central PAC hoti hai waise?"
+        }
+      ],
+      "navigation": {
+        "next": "card_64_state_pac",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_64_state_pac",
+      "card_slug": "card_64_state_pac",
+      "type": "chat",
+      "concept_id": "cag_state_specific",
+      "level": 5,
+      "progress": { "current": 64, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! State Legislature mein bhi Public Accounts Committee hoti hai — jo CAG ki state audit report ki janch karti hai. Bihar mein 'Loka Lekha Samiti' (Public Accounts Committee of Bihar) hai — jo Bihar Vidhan Sabha ka ek standing committee hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "'Loka Lekha Samiti' — ye kya hoti hai sir? Bihar ka PAC?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, 'Loka Lekha Samiti' ek Hindi term hai jise Bihar Vidhan Sabha mein use kiya jaata hai — ye Public Accounts Committee ka equivalent hai Bihar mein. Ye CAG ki Bihar audit report ki janch karta hai aur Bihar sarkar ko accountability ensure karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Loka Lekha Samiti yaad ho gaya sir! Ye BPSC mein direct question aa sakta hai. Ab koi aur Bihar-specific connection hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_65_ag_patna",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_65_ag_patna",
+      "card_slug": "card_65_ag_patna",
+      "type": "chat",
+      "concept_id": "cag_state_specific",
+      "level": 5,
+      "progress": { "current": 65, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite: Haan! 'Principal Accountant General (Audit), Bihar' aur 'Principal Accountant General (General and Social Sector), Bihar' — ye offices Patna mein hain aur CAG ke under kaam karte hain. Bihar ke sab sarkari kharcho ka final audit yahan se hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Patna mein Principal Accountant General! To wo Bihar ka local CAG jaisa hai practically?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan practically wo Bihar ka audit officer hai — CAG ki taraf se Bihar accounts audit karta hai. Aur Bihar ka ek aur important aspect — Bihar mein Vidhan Parishad (Legislative Council) bhi hai, to state PAC Vidhan Sabha se hi banti hai, Vidhan Parishad se nahi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha — Loka Lekha Samiti Vidhan Sabha se, Vidhan Parishad se nahi. Ye bhi ek trap ho sakta hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_66_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_66_quiz1",
+      "card_slug": "card_66_quiz1",
+      "type": "quiz",
+      "concept_id": "cag_state_specific",
+      "level": 5,
+      "progress": { "current": 66, "total": 85 },
+      "quiz_payload": {
+        "question": "CAG ki State audit report Article 151(2) ke anusar kise submit ki jaati hai?",
+        "options": [
+          { "id": "A", "text": "Sidha State Legislature ko" },
+          { "id": "B", "text": "Governor ko, jo phir State Legislature ke saamne rakhwaate hain" },
+          { "id": "C", "text": "President ko" },
+          { "id": "D", "text": "Chief Minister ko" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 151(2) ke anusar State audit report CAG → Governor → State Legislature ko jaati hai. Union ke liye ye CAG → President → Parliament hai — ye parallel structure yaad rakhna zaroori hai."
+      },
+      "navigation": {
+        "next": "card_67_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_67_quiz2",
+      "card_slug": "card_67_quiz2",
+      "type": "quiz",
+      "concept_id": "cag_state_specific",
+      "level": 5,
+      "progress": { "current": 67, "total": 85 },
+      "quiz_payload": {
+        "question": "⭐ BPSC TRE Favorite: Bihar Vidhan Sabha ki Public Accounts Committee (PAC) ko Bihar mein kya kaha jaata hai?",
+        "options": [
+          { "id": "A", "text": "Lekha Pariksha Samiti" },
+          { "id": "B", "text": "Loka Lekha Samiti" },
+          { "id": "C", "text": "Vittiya Samiksha Samiti" },
+          { "id": "D", "text": "Prashasan Niyantran Samiti" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bihar Vidhan Sabha mein Public Accounts Committee ko 'Loka Lekha Samiti' kaha jaata hai — ye CAG ki Bihar audit reports ki janch karti hai."
+      },
+      "navigation": {
+        "next": "card_68_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_68_quiz3",
+      "card_slug": "card_68_quiz3",
+      "type": "quiz",
+      "concept_id": "cag_state_specific",
+      "level": 5,
+      "progress": { "current": 68, "total": 85 },
+      "quiz_payload": {
+        "question": "Bihar mein CAG ke under kaunsa office kaam karta hai jo Bihar accounts audit karta hai?",
+        "options": [
+          { "id": "A", "text": "Office of the Controller General of Accounts, Bihar" },
+          { "id": "B", "text": "Principal Accountant General, Bihar (Patna mein)" },
+          { "id": "C", "text": "Finance Secretary, Bihar Sarkar" },
+          { "id": "D", "text": "Reserve Bank of India, Patna" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bihar mein 'Principal Accountant General (Audit), Bihar' aur 'Principal Accountant General (General and Social Sector), Bihar' — ye offices Patna mein hain aur CAG ke under Bihar ke sarkari kharcho ka audit karte hain."
+      },
+      "navigation": {
+        "next": "card_69_milestone9",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_69_milestone9",
+      "card_slug": "card_69_milestone9",
+      "type": "milestone",
+      "concept_id": "cag_state_specific",
+      "level": 5,
+      "progress": { "current": 69, "total": 85 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "State Audit & Bihar-Specific CAG Facts",
+        "xp_earned": 70,
+        "milestone_progress": "Module 9/10 Clear",
+        "motivational_quote": "Loka Lekha Samiti aur Bihar AG office — BPSC level facts crack ho gaye! Ab last module mein comparison tables aur PYQ trivia."
+      },
+      "navigation": {
+        "next": "card_70_cag_vs_others",
+        "button_text": "Start Final Module ➔"
+      }
+    },
+    {
+      "card_id": "card_70_cag_vs_others",
+      "card_slug": "card_70_cag_vs_others",
+      "type": "chat",
+      "concept_id": "cag_comparison_trivia",
+      "level": 6,
+      "progress": { "current": 70, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek quick comparison karte hain jo exam mein bahut kaam aata hai — CAG vs CEC (Chief Election Commissioner): Dono President niyukt karte hain, dono SC judge jaisi removal process, dono ka term 6 saal ya 65 saal. LEKIN fark kya hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir salary mein fark tha na — CAG CJI ke barabar, CEC regular SC judge ke barabar?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Aur ek aur fark — CEC ka koi other EC ko hatane ka role hai (CEC ki sifarish par EC hata), lekin CAG ke paas aisa koi power nahi, wo ek single-member body hai. Aur CAG post-retirement koi government job nahi le sakta, CEC ke liye bhi yahi hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha — zyaadatar cheezein same, sirf salary aur structural role mein fark. Theek hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_71_cag_upsc_comparison",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_71_cag_upsc_comparison",
+      "card_slug": "card_71_cag_upsc_comparison",
+      "type": "chat",
+      "concept_id": "cag_comparison_trivia",
+      "level": 6,
+      "progress": { "current": 71, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab CAG vs UPSC Chairman comparison — UPSC Chairman bhi President niyukt karte hain. UPSC Chairman ka term bhi 6 saal ya 65 saal. Lekin removal process mein fark — UPSC Chairman ko President remove kar sakte hain SC judge jaisi process ke bina bhi specific grounds par (Article 317). CAG ke liye SC judge wali process ZAROOR chahiye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha sir! UPSC Chairman remove karna thoda aasan, CAG remove karna zyada mushkil. Ye important distinction hai."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur ek important Article yaad karo — Article 149 mein likha hai ki CAG Parliament dwara banaye kanoon ke anusar apni duties perform karega — ye flexibility deta hai Parliament ko CAG ke kaam ko expand ya modify karne ki without Constitution amend kiye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, Article 149 flexible hai — Parliament kanoon se CAG ke duties adjust kar sakti hai. Interesting! Aur koi important trivia facts hain sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_72_trivia_facts",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_72_trivia_facts",
+      "card_slug": "card_72_trivia_facts",
+      "type": "chat",
+      "concept_id": "cag_comparison_trivia",
+      "level": 6,
+      "progress": { "current": 72, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch important PYQ trivia facts: 1) India ke pehle CAG — V. Narahari Rao (1948-1954). 2) CAG office — 9, Deen Dayal Upadhyaya Marg, New Delhi. 3) CAG India ka SAI (Supreme Audit Institution) head hai. 4) INTOSAI — International Organization of Supreme Audit Institutions — ka India member hai, aur ye CAG represent karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Pehle CAG ka naam — V. Narahari Rao! Sir ye naam SSC aur Railway mein pakka aata hoga."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Aur ek aur — Vinod Rai ek bahut prominent CAG rahe hain (2008-2013) jinhone 2G aur Coal scam reports di thi aur ye bahut controversial bhi hue kyunki sarkar unki methodology se agree nahi karti thi. Lekin unki reports ne Supreme Court taka action liya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Vinod Rai — 2G aur Coal wale CAG! Ye name bhi yaad rakhna chahiye sir."
+        }
+      ],
+      "navigation": {
+        "next": "card_73_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_73_quiz1",
+      "card_slug": "card_73_quiz1",
+      "type": "quiz",
+      "concept_id": "cag_comparison_trivia",
+      "level": 6,
+      "progress": { "current": 73, "total": 85 },
+      "quiz_payload": {
+        "question": "India ke pehle CAG (Comptroller and Auditor General) kaun the?",
+        "options": [
+          { "id": "A", "text": "Vinod Rai" },
+          { "id": "B", "text": "V. Narahari Rao" },
+          { "id": "C", "text": "T.N. Seshan" },
+          { "id": "D", "text": "Sukumar Sen" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "India ke pehle CAG V. Narahari Rao the (1948-1954). T.N. Seshan pehle CEC the, Sukumar Sen bhi ECI se related hain. Vinod Rai 2008-2013 mein CAG rahe jo 2G aur Coal reports ke liye famous hue."
+      },
+      "navigation": {
+        "next": "card_74_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_74_quiz2",
+      "card_slug": "card_74_quiz2",
+      "type": "quiz",
+      "concept_id": "cag_comparison_trivia",
+      "level": 6,
+      "progress": { "current": 74, "total": 85 },
+      "quiz_payload": {
+        "question": "CAG aur UPSC Chairman ki removal process mein kya fark hai?",
+        "options": [
+          { "id": "A", "text": "Dono bilkul same process se hataye jaate hain" },
+          { "id": "B", "text": "CAG SC judge jaisi process ZAROOR chahiye; UPSC Chairman ko President specific grounds par bina SC-judge-process ke bhi hata sakte hain" },
+          { "id": "C", "text": "UPSC Chairman zyada protected hai" },
+          { "id": "D", "text": "Dono ko Parliament se nahi hataya ja sakta" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CAG ki removal sirf SC judge wali process se — Parliament mein special majority se — ho sakti hai. UPSC Chairman ko President Article 317 ke tahat specific grounds par (bina Parliament ke special majority ke) bhi hata sakte hain — ye CAG se kam protected hai."
+      },
+      "navigation": {
+        "next": "card_75_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_75_quiz3",
+      "card_slug": "card_75_quiz3",
+      "type": "quiz",
+      "concept_id": "cag_comparison_trivia",
+      "level": 6,
+      "progress": { "current": 75, "total": 85 },
+      "quiz_payload": {
+        "question": "Nimnlikhit mein se kaunsa kathan CAG ke baare mein GALAT hai?",
+        "options": [
+          { "id": "A", "text": "CAG post-retirement koi government job nahi le sakta" },
+          { "id": "B", "text": "CAG naam mein 'Comptroller' hai lekin India mein pre-audit permission power NAHI deta" },
+          { "id": "C", "text": "CAG India mein INTOSAI ka representative hai" },
+          { "id": "D", "text": "CAG re-election ke liye eligible hai doosri term ke liye" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "CAG ka re-appointment NAHI hota — ye GALAT statement hai. Baki teeno sahi hain: post-retirement ban hai, Comptroller power nahi (sirf naam mein), aur India INTOSAI ka member hai jise CAG represent karta hai."
+      },
+      "navigation": {
+        "next": "card_76_milestone10",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_76_milestone10",
+      "card_slug": "card_76_milestone10",
+      "type": "milestone",
+      "concept_id": "cag_comparison_trivia",
+      "level": 6,
+      "progress": { "current": 76, "total": 85 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌟",
+        "completed_topic": "Comparisons, Trivia & PYQ Facts",
+        "xp_earned": 70,
+        "milestone_progress": "Module 10/10 Clear — ALL MODULES DONE!",
+        "motivational_quote": "Saare 10 modules clear! V. Narahari Rao se lekar Vinod Rai tak — ab sab yaad hai! Chalo final revision aur Master Quiz karte hain."
+      },
+      "navigation": {
+        "next": "card_77_full_article_revision",
+        "button_text": "Go to Final Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_77_full_article_revision",
+      "card_slug": "card_77_full_article_revision",
+      "type": "chat",
+      "concept_id": "cag_final_revision",
+      "level": 7,
+      "progress": { "current": 77, "total": 85 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Chalo Raju, ek last lightning revision karte hain sab Articles ki: Article 148 — CAG ki niyukti, removal (SC judge jaisi), salary (SC CJI ke barabar), service conditions. Article 149 — CAG ki duties Parliament ke kanoon ke anusar. Article 150 — accounts format CAG ki salaah par President decide karta hai. Article 151 — Reports: Union ke liye President ko, State ke liye Governor ko."
+        },
+        {
+          "speaker": "raju",
+          "text": "148-149-150-151 — sab yaad ho gaya sir! Aur CAG Act 1971 mein term 6 saal ya 65 saal, no re-appointment, no post-retirement job."
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Aur teeno reports — Appropriation Accounts, Finance Accounts, Public Undertakings. PAC — 22 members (15 LS + 7 RS), Opposition chairperson. CGA Union accounts compile karta hai, CAG audit karta hai. States mein AG dono kaam karta hai. Bihar mein Principal Accountant General Patna mein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Comptroller wala trap — naam mein Comptroller, kaam mein nahi — sirf post-expenditure auditor. Ye pakka yaad rakhana hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_78_guess_card",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_78_guess_card",
+      "card_slug": "card_78_guess_card",
+      "type": "guess",
+      "concept_id": "cag_final_revision",
+      "level": 7,
+      "progress": { "current": 78, "total": 85 },
+      "guess_payload": {
+        "question": "Guess karo — CAG ke baare mein ye kaunsi sanstha ka description hai: 'International Organization of Supreme Audit Institutions' jiska India member hai aur jise CAG represent karta hai?",
+        "options": [
+          { "id": "A", "text": "UNCTAD" },
+          { "id": "B", "text": "INTOSAI" },
+          { "id": "C", "text": "IMF" },
+          { "id": "D", "text": "IBRD" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "INTOSAI — International Organization of Supreme Audit Institutions — ek international body hai jismein duniya ke sabhi SAI (Supreme Audit Institutions) member hain. India ka CAG India ka SAI hai aur INTOSAI mein India represent karta hai."
+      },
+      "navigation": {
+        "next": "card_79_guess_card2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_79_guess_card2",
+      "card_slug": "card_79_guess_card2",
+      "type": "guess",
+      "concept_id": "cag_final_revision",
+      "level": 7,
+      "progress": { "current": 79, "total": 85 },
+      "guess_payload": {
+        "question": "Guess karo — CAG ki salary kiske barabar hai? (Ye common exam trap hai — carefully choose karo!)",
+        "options": [
+          { "id": "A", "text": "Supreme Court ke regular judge ke barabar" },
+          { "id": "B", "text": "Prime Minister ke barabar" },
+          { "id": "C", "text": "Supreme Court ke Chief Justice ke barabar" },
+          { "id": "D", "text": "Cabinet Secretary ke barabar" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "CAG ki salary Supreme Court ke CHIEF JUSTICE ke barabar hoti hai — note karo: regular SC judge nahi! CEC ki salary regular SC judge ke barabar thi (2023 tak) — ab Cabinet Secretary ke barabar ho gayi. CAG ki salary abhi bhi CJI ke barabar hai."
+      },
+      "navigation": {
+        "next": "card_80_guess_card3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_80_guess_card3",
+      "card_slug": "card_80_guess_card3",
+      "type": "guess",
+      "concept_id": "cag_final_revision",
+      "level": 7,
+      "progress": { "current": 80, "total": 85 },
+      "guess_payload": {
+        "question": "Guess karo — CAG ki audit report State government ke liye: CAG → ??? → State Legislature. Khaali jagah bharo.",
+        "options": [
+          { "id": "A", "text": "Chief Minister" },
+          { "id": "B", "text": "President" },
+          { "id": "C", "text": "Governor" },
+          { "id": "D", "text": "State PAC" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "State audit report chain: CAG → Governor → State Legislature. Union ke liye: CAG → President → Parliament. Dono parallel structures hain — Governor state mein President ka equivalent hai is context mein."
+      },
+      "navigation": {
+        "next": "card_81_summary",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_81_summary",
+      "card_slug": "card_81_summary",
       "type": "summary",
       "concept_id": "cag_full_revision",
-      "level": 4,
-      "progress": {
-        "current": 35,
-        "total": 45
-      },
+      "level": 7,
+      "progress": { "current": 81, "total": 85 },
       "summary_payload": {
-        "title": "⚡ CAG Officer-Level Quick Revision",
+        "title": "⚡ Officer Revision — CAG ka Poora Nichod",
         "revision_points": [
           {
-            "topic": "🔹 Constitutional Status",
-            "point": "CAG = Constitutional Authority (Article 148) | 'Guardian of Public Purse' | Appointment: President (on PM's advice) | No specific qualification required | Tenure: 6 years / 65 age (whichever earlier) | Salary: Equal to SC Judge"
+            "topic": "Constitutional Basis & Appointment",
+            "point": "Article 148-151. President niyukt karte hain, koi specific qualification nahi. Term: 6 saal ya 65 saal (jo pehle ho). Re-appointment NAHI, post-retirement government job NAHI. Salary: SC Chief Justice ke barabar. Removal: SC judge jaisi process (Parliament mein special majority + proved misbehaviour/incapacity)."
           },
           {
-            "topic": "🔹 Removal & Independence",
-            "point": "Removal: Like SC Judge (proved misbehaviour/incapacity, both Houses resolution) | Safeguards: (1) Difficult removal, (2) Fixed tenure, (3) Salary protected, (4) Post-retirement bar on government jobs, (5) Independent budget, (6) Appoints own staff (DAG)"
+            "topic": "Comptroller Trap & Audit Types",
+            "point": "India mein CAG sirf Auditor General ka kaam karta hai — naam mein Comptroller hai, lekin pre-audit permission power NAHI. Types of audit: Compliance/Regularity, Propriety, Performance, Financial. 1976 se Union accounts compile CGA karta hai, CAG sirf audit karta hai. States mein AG (under CAG) dono kaam karta hai."
           },
           {
-            "topic": "🔹 Audit Scope",
-            "point": "Audits: (1) Central Govt, (2) State Govts, (3) UTs, (4) Constitutional Bodies, (5) Govt Companies (51%+ share), (6) Grants-in-aid | Does NOT audit: Local Bodies directly, Private companies, PSUs with separate Acts (limited role)"
+            "topic": "Reports & Parliamentary Committees",
+            "point": "CAG teen reports: Appropriation Accounts, Finance Accounts, Public Undertakings. Union mein: CAG→President→Parliament. States mein: CAG→Governor→State Legislature. PAC: 22 members (15 LS + 7 RS), Opposition chairperson — 'eyes of PAC' hai CAG. Estimates Committee = pre-expenditure (CAG se nahi judi)."
           },
           {
-            "topic": "🔹 Types of Audit",
-            "point": "3 Types: (1) Financial Audit — accounts correctness, (2) Compliance Audit — rules followed?, (3) Performance Audit — outcomes achieved? | Most powerful: Performance Audit (exposes inefficiency)"
+            "topic": "Bihar-Specific BPSC Favorites",
+            "point": "Bihar mein Principal Accountant General (Patna) — CAG ke under Bihar accounts audit karta hai. Bihar Vidhan Sabha ki PAC = Loka Lekha Samiti. Bihar Fodder Scam mein Accountant General Bihar ne pehle irregularities pakdi. State audit report: CAG → Bihar Governor → Bihar Vidhan Sabha."
           },
           {
-            "topic": "🔹 Reports & PAC",
-            "point": "Reports submitted to: President (Central) / Governor (States) → Laid before Parliament/Legislature | PAC (Public Accounts Committee): 22 members (15 LS + 7 RS), Chairman from Opposition, examines CAG reports | CAG = 'friend, philosopher, guide' of PAC"
-          },
-          {
-            "topic": "🔹 DAG Role",
-            "point": "DAG (Deputy/Director Accountant General) in each state | Appointed by CAG (NOT state govt) | Does actual audit work | Reports to CAG | Ensures state govt cannot influence audit"
-          },
-          {
-            "topic": "🔹 Major Limitations",
-            "point": "CAG has NO: (1) Executive powers — cannot punish, (2) Judicial powers — cannot decide cases, (3) Contempt powers — cannot jail for non-compliance, (4) Binding recommendations — govt can ignore | Only moral authority, not legal enforcement"
-          },
-          {
-            "topic": "🔹 Special Functions",
-            "point": "Can audit on President/Governor request | Designs govt accounting format | Audits Consolidated Fund & Contingency Fund withdrawals | Famous reports: 2G (₹1.76L cr loss), Coal scam, CWG, Rafale"
+            "topic": "Trivia & Comparisons",
+            "point": "Pehle CAG: V. Narahari Rao (1948-54). Ambedkar: 'Most important officer'. Guardian of Public Purse. INTOSAI mein India ka representative = CAG. Vinod Rai (2008-13): 2G, Coalgate reports. CAG vs CEC: Salary alag (CAG=CJI, CEC=SC judge). CAG vs UPSC Chairman: CAG zyada protected (SC judge jaisi ZAROOR chahiye)."
           }
         ]
       },
       "navigation": {
-        "next": "card_36_final_quiz_q1",
-        "button_text": "Final Officer Quiz ➔"
+        "next": "card_82_final_quiz",
+        "button_text": "Take Final Officer Quiz ➔"
       }
     },
     {
-      "card_id": "card_36_final_quiz_q1",
-      "card_slug": "card_36_final_quiz_q1",
+      "card_id": "card_82_final_quiz",
+      "card_slug": "card_82_final_quiz",
       "type": "final_quiz",
-      "concept_id": "cag_final_q1",
-      "level": 4,
-      "progress": {
-        "current": 36,
-        "total": 45
-      },
+      "concept_id": "cag_final_challenge",
+      "level": 7,
+      "progress": { "current": 82, "total": 85 },
       "quiz_payload": {
-        "question": "CAG के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n1. CAG को संविधान के Article 148 में उल्लिखित किया गया है।\n2. CAG का कार्यकाल 6 वर्ष या 65 वर्ष की आयु, जो भी पहले हो, होता है।\n3. CAG सेवानिवृत्ति के बाद किसी भी सरकारी पद पर नियुक्त हो सकता है।\n4. CAG की salary Supreme Court के Judge के बराबर होती है।\n\nउपर्युक्त में से कौन से कथन सही हैं?",
+        "question": "Nimnlikhit kathanon par vichar karein aur sahi kathanon ki pehchaan karein:\n1) CAG ka naam mein 'Comptroller' hai isliye wo India mein paisa nikalne se PEHLE permission deta hai.\n2) CAG ki salary Supreme Court ke Chief Justice ke barabar hoti hai.\n3) CAG ki audit report Union government ki President ko submit hoti hai, jo Parliament ke saamne rakhwaate hain.\n4) CAG ka re-appointment Constitution ke under ek baar aur ho sakta hai agar performance achhha ho.\n5) State level par Accountant General, jo CAG ke under hai, accounts compile aur audit dono karta hai.\nSahi kathanon ka sahi set chuniye:",
         "options": [
-          {
-            "id": "A",
-            "text": "केवल 1, 2 और 3"
-          },
-          {
-            "id": "B",
-            "text": "केवल 1, 2 और 4"
-          },
-          {
-            "id": "C",
-            "text": "केवल 2, 3 और 4"
-          },
-          {
-            "id": "D",
-            "text": "सभी 1, 2, 3 और 4"
-          }
+          { "id": "A", "text": "Sirf 2 aur 3 sahi hain" },
+          { "id": "B", "text": "2, 3 aur 5 sahi hain" },
+          { "id": "C", "text": "1, 2 aur 3 sahi hain" },
+          { "id": "D", "text": "Sirf 3 aur 5 sahi hain" }
         ],
         "correct_option_id": "B",
-        "explanation": "कथन 1, 2 और 4 सही हैं। CAG संविधान के Article 148 में वर्णित है। CAG का tenure 6 वर्ष/65 आयु है (Election Commissioner के समान)। CAG की salary SC Judge के बराबर है। कथन 3 गलत है — CAG सेवानिवृत्ति के बाद किसी भी सरकारी पद (Central/State) पर नियुक्त नहीं हो सकता (Article 148(4))। यह उसकी independence सुनिश्चित करता है। यह UPSC Prelims का क्लासिक multi-statement question है।"
+        "explanation": "Kathan 1 GALAT — India mein CAG pre-audit permission nahi deta, sirf post-expenditure audit karta hai (naam mein Comptroller, kaam mein nahi). Kathan 2 SAHI — CAG salary = SC CJI ke barabar. Kathan 3 SAHI — Union audit report: CAG→President→Parliament. Kathan 4 GALAT — CAG ka re-appointment kabhi nahi hota, ek hi term. Kathan 5 SAHI — State level mein AG (CAG ke under) dono kaam karta hai. Isliye sahi set: 2, 3 aur 5."
       },
       "navigation": {
-        "next": "card_37_final_quiz_q2",
-        "button_text": "Q2/3 ➔"
+        "next": "card_83_final_quiz2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_37_final_quiz_q2",
-      "card_slug": "card_37_final_quiz_q2",
+      "card_id": "card_83_final_quiz2",
+      "card_slug": "card_83_final_quiz2",
       "type": "final_quiz",
-      "concept_id": "cag_final_q2",
-      "level": 4,
-      "progress": {
-        "current": 37,
-        "total": 45
-      },
+      "concept_id": "cag_final_challenge",
+      "level": 7,
+      "progress": { "current": 83, "total": 85 },
       "quiz_payload": {
-        "question": "CAG की शक्तियों और सीमाओं के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+        "question": "Assertion (A): Dr. B.R. Ambedkar ne CAG ko 'The most important officer in the Constitution of India' kaha tha kyunki CAG ensure karta hai ki Parliament ki permission se kharch hua paisa sahi tarike se lagaya gaya.\nReason (R): CAG apni audit reports seedha Supreme Court ko submit karta hai, jo phir executive ko accountability sunishchit karta hai.\nSahi vikalp chuniye:",
         "options": [
-          {
-            "id": "A",
-            "text": "CAG किसी भी सरकारी अधिकारी को निलंबित कर सकता है यदि वह वित्तीय अनियमितता में शामिल हो।"
-          },
-          {
-            "id": "B",
-            "text": "CAG की सिफारिशें सरकार पर बाध्यकारी होती हैं और उन्हें लागू करना अनिवार्य है।"
-          },
-          {
-            "id": "C",
-            "text": "CAG के पास कोई executive या judicial powers नहीं हैं; वह केवल audit और report करता है।"
-          },
-          {
-            "id": "D",
-            "text": "CAG contempt of court की तरह किसी को भी दंडित कर सकता है यदि वह documents देने से मना करे।"
-          }
-        ],
-        "correct_option_id": "C",
-        "explanation": "Option C सही है। CAG के पास कोई executive powers (officers को suspend/punish करना) या judicial powers (cases decide करना) नहीं हैं। CAG केवल audit करता है और report देता है। Option A गलत है — CAG किसी को suspend नहीं कर सकता। Option B गलत है — CAG की recommendations binding नहीं हैं, केवल advisory हैं। Option D गलत है — CAG के पास contempt powers नहीं हैं। यह BPSC और SSC CGL का favorite conceptual question है।"
-      },
-      "navigation": {
-        "next": "card_38_final_quiz_q3",
-        "button_text": "Q3/3 ➔"
-      }
-    },
-    {
-      "card_id": "card_38_final_quiz_q3",
-      "card_slug": "card_38_final_quiz_q3",
-      "type": "final_quiz",
-      "concept_id": "cag_final_q3",
-      "level": 4,
-      "progress": {
-        "current": 38,
-        "total": 45
-      },
-      "quiz_payload": {
-        "question": "Assertion (A): CAG, सरकारी कंपनियों का audit करता है जहां सरकार का 51% या उससे अधिक हिस्सा हो।\n\nReason (R): CAG को यह सुनिश्चित करना होता है कि सार्वजनिक धन का सही उपयोग हो, इसलिए वह उन सभी संस्थाओं का audit करता है जहां सरकार majority shareholder है।\n\nसही विकल्प चुनें:",
-        "options": [
-          {
-            "id": "A",
-            "text": "A और R दोनों सही हैं, और R, A की सही व्याख्या है।"
-          },
-          {
-            "id": "B",
-            "text": "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।"
-          },
-          {
-            "id": "C",
-            "text": "A सही है लेकिन R गलत है।"
-          },
-          {
-            "id": "D",
-            "text": "A गलत है लेकिन R सही है।"
-          }
+          { "id": "A", "text": "A sahi hai, R galat hai" },
+          { "id": "B", "text": "A galat hai, R sahi hai" },
+          { "id": "C", "text": "Dono sahi hain aur R, A ki sahi vyakhya hai" },
+          { "id": "D", "text": "Dono galat hain" }
         ],
         "correct_option_id": "A",
-        "explanation": "A और R दोनों सही हैं, और R, A की सही व्याख्या करता है। CAG उन सरकारी कंपनियों का audit करता है जहां सरकार (Central/State) का 51% या उससे अधिक paid-up share capital हो। यह इसलिए है क्योंकि CAG का मूल कार्य public money के सही उपयोग को सुनिश्चित करना है। जहां सरकार majority shareholder है, वहां public funds invested हैं, इसलिए CAG audit करता है। यह UPSC Prelims का क्लासिक Assertion-Reason format है।"
+        "explanation": "Assertion (A) SAHI hai — Ambedkar ne yahi kaha tha. Reason (R) GALAT hai — CAG apni reports Supreme Court ko nahi, President ko (Union ke liye) aur Governor ko (States ke liye) deta hai, jo phir Parliament/State Legislature ke saamne rakhwaate hain."
       },
       "navigation": {
-        "next": "card_39_mnemonic_tricks",
-        "button_text": "Mnemonic Tricks ➔"
+        "next": "card_84_final_quiz3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_39_mnemonic_tricks",
-      "card_slug": "card_39_mnemonic_tricks",
-      "type": "chat",
-      "concept_id": "cag_mnemonics",
-      "level": 4,
-      "progress": {
-        "current": 39,
-        "total": 45
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, itna sab yaad rakhna mushkil hai! Koi shortcut?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan Raju! Kuch power mnemonics:\n\n🔹 CAG Tenure: '6-65 EC' — 6 years, 65 age, same as Election Commissioner\n🔹 CAG Salary: 'SC = CAG' — Supreme Court Judge ke barabar\n🔹 CAG Independence: 'PROBS' — Post-retirement bar, Removal difficult, Own budget, Bar on govt jobs, Salary protected\n🔹 CAG Limitations: 'No EPJ' — No Executive, No Punishment, No Judicial powers"
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur audit types Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Audit types: 'FCP' — Financial, Compliance, Performance\n\nCAG Reports: 'PG-PL' — President/Governor ko submit, Parliament/Legislature mein laid\n\nGovt Companies: '51% Rule' — majority share chahiye CAG audit ke liye\n\nPAC: '22-15-7-O' — 22 total, 15 LS, 7 RS, Opposition chairman\n\nYe mnemonics exam hall mein bohot kaam aayenge!"
-        }
-      ],
-      "navigation": {
-        "next": "card_40_pyq_pattern_analysis",
-        "button_text": "PYQ Pattern ➔"
-      }
-    },
-    {
-      "card_id": "card_40_pyq_pattern_analysis",
-      "card_slug": "card_40_pyq_pattern_analysis",
-      "type": "chat",
-      "concept_id": "cag_pyq_patterns",
-      "level": 4,
-      "progress": {
-        "current": 40,
-        "total": 45
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab dekhte hain CAG se exams mein kya-kya puchha jaata hai:\n\n📌 UPSC Prelims Pattern:\n- Multi-statement questions (1,2,3,4 format)\n- Assertion-Reason questions\n- CAG vs other constitutional bodies comparison\n- Powers vs Limitations\n\n📌 SSC CGL / Railway Pattern:\n- Direct factual (tenure, salary, appointment)\n- 'Who audits government companies?' type\n- TRUE/FALSE statements"
-        },
-        {
-          "speaker": "raju",
-          "text": "BPSC mein kya aata hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "📌 BPSC Pattern:\n- Multi-statement traps (sabse zyada!)\n- DAG appointment confusion (CAG appoints ya state?)\n- Post-retirement bar (allowed ya not?)\n- '51% rule' for govt companies\n- CAG recommendations binding hain ya nahi\n\nYe 5 topics BPSC ka favorite! Har saal kuch na kuch yahan se aata hai. Tumne in sab ko cover kar liya ab! 💪"
-        }
-      ],
-      "navigation": {
-        "next": "card_41_common_mistakes",
-        "button_text": "Common Mistakes ➔"
-      }
-    },
-    {
-      "card_id": "card_41_common_mistakes",
-      "card_slug": "card_41_common_mistakes",
-      "type": "chat",
-      "concept_id": "cag_common_errors",
-      "level": 4,
-      "progress": {
-        "current": 41,
-        "total": 45
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Chalo ab common mistakes dekh lete hain jo students karte hain:\n\n❌ Mistake 1: 'CAG is a Statutory Body' — WRONG! Constitutional Authority hai\n❌ Mistake 2: 'CAG can punish officers' — WRONG! No executive powers\n❌ Mistake 3: 'CAG tenure = SC Judge (65 age)' — WRONG! CAG = 6 years/65 age\n❌ Mistake 4: 'CAG can audit private companies' — WRONG! Only govt companies (51%+)"
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "❌ Mistake 5: 'DAG is appointed by State Govt' — WRONG! CAG appoints DAG\n❌ Mistake 6: 'CAG reports directly to Parliament' — WRONG! President/Governor ke through\n❌ Mistake 7: 'CAG recommendations are binding' — WRONG! Only advisory\n❌ Mistake 8: 'CAG can work in govt after retirement' — WRONG! Post-retirement bar\n\nYe 8 mistakes avoid karo, 90% questions automatic sahi ho jayenge!"
-        }
-      ],
-      "navigation": {
-        "next": "card_42_last_tips",
-        "button_text": "Last Tips ➔"
-      }
-    },
-    {
-      "card_id": "card_42_last_tips",
-      "card_slug": "card_42_last_tips",
-      "type": "chat",
-      "concept_id": "cag_exam_tips",
-      "level": 4,
-      "progress": {
-        "current": 42,
-        "total": 45
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Last tips exam ke liye:\n\n✅ Tip 1: Article 148 yaad rakho — CAG ka constitutional provision\n✅ Tip 2: 6-65 tenure, SC Judge salary — comparison questions ke liye\n✅ Tip 3: '51% rule' — govt companies audit\n✅ Tip 4: Post-retirement bar — independence safeguard\n✅ Tip 5: No EPJ — No Executive, Punishment, Judicial powers"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, agar statement mein confusion ho toh?"
-        },
-        {
-          "speaker": "aman",
-          "text": "✅ Tip 6: 'Binding' word dekho — CAG recommendations binding NAHI hain\n✅ Tip 7: 'Appoint' word — DAG ko CAG appoint karta hai, state govt nahi\n✅ Tip 8: 'All companies' dekho — sirf govt companies (51%+)\n✅ Tip 9: Famous scams yaad rakho — 2G, Coal, CWG\n✅ Tip 10: PAC chairman opposition se — ye unique point hai!\n\nBas! Ab tum CAG ke expert ban gaye ho! All the best! 🎯"
-        }
-      ],
-      "navigation": {
-        "next": "card_43_bonus_quiz",
-        "button_text": "Bonus Challenge ➔"
-      }
-    },
-    {
-      "card_id": "card_43_bonus_quiz",
-      "card_slug": "card_43_bonus_quiz",
-      "type": "quiz",
-      "concept_id": "cag_bonus_challenge",
-      "level": 4,
-      "progress": {
-        "current": 43,
-        "total": 45
-      },
+      "card_id": "card_84_final_quiz3",
+      "card_slug": "card_84_final_quiz3",
+      "type": "final_quiz",
+      "concept_id": "cag_final_challenge",
+      "level": 7,
+      "progress": { "current": 84, "total": 85 },
       "quiz_payload": {
-        "question": "निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?\n\n1. CAG का कार्यकाल — 6 वर्ष / 65 वर्ष की आयु\n2. Election Commissioner का कार्यकाल — 6 वर्ष / 65 वर्ष की आयु\n3. Supreme Court Judge — 65 वर्ष की आयु तक\n4. Chief Vigilance Commissioner — 6 वर्ष / 65 वर्ष की आयु",
+        "question": "⭐ BPSC TRE Master Question: Nimnlikhit mein se kaunsa kathan Bihar aur CAG ke sambandh mein SAHI hai?\n1) Bihar mein Principal Accountant General ka office Patna mein hai jo CAG ke under kaam karta hai.\n2) Bihar Vidhan Sabha ki Public Accounts Committee ko 'Loka Lekha Samiti' kaha jaata hai.\n3) Bihar ka state audit report CAG sidha Bihar Vidhan Sabha ko deta hai.\n4) Bihar Fodder Scam mein Accountant General Bihar ne pehle audit irregularities flag ki thi.",
         "options": [
-          {
-            "id": "A",
-            "text": "केवल 4"
-          },
-          {
-            "id": "B",
-            "text": "केवल 1 और 2"
-          },
-          {
-            "id": "C",
-            "text": "केवल 3 और 4"
-          },
-          {
-            "id": "D",
-            "text": "कोई भी गलत नहीं है"
-          }
+          { "id": "A", "text": "Sirf 1 aur 3 sahi hain" },
+          { "id": "B", "text": "1, 2 aur 4 sahi hain" },
+          { "id": "C", "text": "Sirf 2 aur 4 sahi hain" },
+          { "id": "D", "text": "Sabhi char sahi hain" }
         ],
-        "correct_option_id": "A",
-        "explanation": "युग्म 4 गलत है। Chief Vigilance Commissioner (CVC) का कार्यकाल 4 वर्ष या 65 वर्ष की आयु, जो भी पहले हो, होता है — 6 वर्ष नहीं। युग्म 1, 2 और 3 सही हैं। CAG और Election Commissioner दोनों का tenure 6 वर्ष/65 आयु है। Supreme Court Judge केवल 65 वर्ष की आयु तक रहता है (कोई fixed tenure नहीं)। यह UPSC का क्लासिक comparison trap है जो matching format में आता है।"
+        "correct_option_id": "B",
+        "explanation": "Kathan 1 SAHI — Principal AG Patna mein hai, CAG ke under. Kathan 2 SAHI — Loka Lekha Samiti = Bihar PAC. Kathan 3 GALAT — Bihar state audit report: CAG → Bihar Governor → Bihar Vidhan Sabha (sidha Vidhan Sabha ko nahi). Kathan 4 SAHI — Bihar Fodder Scam mein AG Bihar ne pehle irregularities pakdi. Isliye 1, 2 aur 4 sahi hain."
       },
       "navigation": {
-        "next": "card_44_final_milestone",
-        "button_text": "Finish Chapter ➔"
+        "next": "card_85_trophy",
+        "button_text": "See Final Result ➔"
       }
     },
     {
-      "card_id": "card_44_final_milestone",
-      "card_slug": "card_44_final_milestone",
+      "card_id": "card_85_trophy",
+      "card_slug": "card_85_trophy",
       "type": "milestone",
-      "concept_id": "cag_chapter_complete",
-      "level": 4,
-      "progress": {
-        "current": 44,
-        "total": 45
-      },
+      "concept_id": "chapter_complete",
+      "level": 7,
+      "progress": { "current": 85, "total": 85 },
       "milestone_payload": {
-        "title": "🏆 CHAPTER COMPLETED!",
-        "badge_emoji": "🔍",
-        "completed_topic": "Comptroller and Auditor General (CAG) — Full Chapter",
-        "xp_earned": 100,
-        "milestone_progress": "Chapter 100% Clear ✅",
-        "motivational_quote": "🎉 Congratulations! आपने CAG का complete chapter master कर लिया — Constitutional status, appointment, tenure, powers, limitations, audit types, DAG role, PAC link, safeguards, और सभी PYQ traps! अब आप BPSC, UPSC, SSC, Railway में CAG से related किसी भी multi-statement, assertion-reason, या comparison question को आसानी से solve कर सकते हैं! Keep learning, keep growing! 🚀📚"
+        "title": "🏆 CHAPTER MASTER TROPHY!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Comptroller and Auditor General (CAG) of India — Full Chapter Complete",
+        "xp_earned": 200,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Officer level ka pura CAG chapter tumne conquer kar liya! Comptroller ka trap, Bihar AG, Loka Lekha Samiti, V. Narahari Rao, Vinod Rai — sab yaad ho gaya! Ab BPSC/SSC/UPSC ke kisi bhi sawaal mein CAG tumhe confuse nahi kar sakta. Agla chapter ready hai jab tum ho!"
       },
       "navigation": {
-        "next": "card_45_thank_you",
-        "button_text": "Final Message ➔"
-      }
-    },
-    {
-      "card_id": "card_45_thank_you",
-      "card_slug": "card_45_thank_you",
-      "type": "chat",
-      "concept_id": "cag_conclusion",
-      "level": 4,
-      "progress": {
-        "current": 45,
-        "total": 45
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, aaj tumne ek bahut important constitutional institution ke baare mein seekha. CAG sirf ek auditor nahi hai — ye democracy ki backbone hai jo public money ki raksha karta hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sach mein Sir! Pehle lagta tha CAG sirf kuch hisaab-kitaab dekhta hai, ab pata chala kitna important role hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! CAG ki wajah se scams pakde jaate hain, galat expenditure ruke, aur government accountable banti hai. Tum jab officer banoge, tab CAG reports tumhare kaam ko bhi guide karengi. Ab jaake aur chapters padho — All the best for your exams! 💪🎯"
-        },
-        {
-          "speaker": "raju",
-          "text": "Thank you Sir! CAG ab crystal clear hai! 🙏"
-        }
-      ],
-      "navigation": {
-        "next": null,
-        "button_text": "Back to Home 🏠"
+        "next": "card_01_intro",
+        "button_text": "Restart Chapter 🔁"
       }
     }
   ]
 }
-
