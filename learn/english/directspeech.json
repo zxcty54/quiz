@@ -1,17 +1,9 @@
+
 {
-  "topic_id": "eng_gram_direct_indirect_speech_sbi_po",
-  "topic_title": "Direct & Indirect Speech (Narration) + SBI PO Level Error Detection",
-  "target_exams": [
-    "BPSC",
-    "BSSC",
-    "RRB NTPC",
-    "SSC CGL",
-    "NEET",
-    "UPSC Prelims",
-    "BPSC TRE",
-    "SBI PO/Bank PO"
-  ],
-  "total_cards": 88,
+  "topic_id": "direct_speech_english_grammar_sbi_po",
+  "topic_title": "Direct Speech - English Grammar (SBI PO Error Detection)",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "SBI PO", "UPSC Prelims"],
+  "total_cards": 62,
   "characters": {
     "aman": {
       "name": "Aman Sir",
@@ -29,2672 +21,2103 @@
       "card_id": "card_01_intro",
       "card_slug": "card_01_intro",
       "type": "intro",
-      "concept_id": "chapter_intro",
+      "concept_id": "direct_speech_intro",
       "level": 1,
       "progress": {
         "current": 1,
-        "total": 88
+        "total": 62
       },
       "intro_payload": {
-        "title": "Direct & Indirect Speech Mastery",
-        "subtitle": "Narration Rules for Statements, Questions, Commands + SBI PO Error Detection",
-        "icon": "💬",
-        "target_exams": [
-          "BPSC",
-          "BSSC",
-          "RRB NTPC",
-          "SSC CGL",
-          "UPSC Prelims",
-          "BPSC TRE",
-          "SBI PO/Bank PO"
-        ],
+        "title": "Direct Speech",
+        "subtitle": "Master SBI PO Level Error Detection",
+        "icon_emoji": "💬",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "SBI PO", "UPSC Prelims"],
         "learning_outcomes": [
-          "Understand Direct vs Indirect Speech (BSEB's 'Pratyaksh/Apratyaksh Kathan')",
-          "Master Reporting Verb changes (say→tell, said to→told)",
-          "Apply correct Pronoun-change rules without confusion",
-          "Master the Tense Backshift rule and its exceptions (universal truths)",
-          "Convert Time & Place words correctly (now→then, here→there)",
-          "Handle Modals, Questions, Commands, Exclamations & Wishes in Narration",
-          "Crack SBI PO / Bank PO level Error Detection on narration mistakes"
-        ]
+          "Understand what Direct Speech is with real-life examples",
+          "Master all punctuation rules (inverted commas, commas, capitals)",
+          "Learn structure: Reporting Verb + Reported Speech",
+          "Handle all sentence types: Statement, Question, Command, Exclamation",
+          "Crack SBI PO level error detection patterns",
+          "Identify 15+ common exam traps in Direct Speech"
+        ],
+        "estimated_time": "18 minutes",
+        "total_xp": "300 XP"
       },
       "navigation": {
-        "next": "card_02_phone_example",
-        "button_text": "Start Learning ➔"
+        "next": "card_02_whatsapp_convo",
+        "button_text": "Start Learning 🚀"
       }
     },
     {
-      "card_id": "card_02_phone_example",
-      "card_slug": "card_02_phone_example",
+      "card_id": "card_02_whatsapp_convo",
+      "card_slug": "card_02_whatsapp_convo",
       "type": "chat",
-      "concept_id": "foundation_narration",
+      "concept_id": "direct_speech_daily_life",
       "level": 1,
       "progress": {
         "current": 2,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Raju, socho tumhare dost ने phone pe bola - 'I am coming tomorrow.' Ab tum apni mummy ko batане ke do tarike ho sakte hain. Pehla: exact wahi words dohराना. Doosra: apne khud ke words mein batана ki usne kya bola. Dono try karके batao."
+          "text": "Raju, tumne aaj apni mummy ko kya bola jab tum school ja rahe the?"
         },
         {
           "speaker": "raju",
-          "text": "Sir pehle tarike mein main bolunga - 'Usne bola, I am coming tomorrow.' Doosre mein shayad 'Usне bola ki wo agले din aa raha hai' - kuch aisa?"
+          "text": "Maine kaha, 'Mummy, mujhe 50 rupaye chahiye.'"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Yahi hai Direct Speech! Jab tum kisi ke exact words, bilkul waise hi bolte ho jaise unhone bole the, toh woh Direct Speech kehlata hai. Tumne inverted commas (' ') ke andar apne exact words diye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab WhatsApp pe jab hum kisi ka message quote karte hain, woh bhi Direct Speech hai?"
         }
       ],
       "navigation": {
-        "next": "card_03_definition",
-        "button_text": "Next Card ➔"
+        "next": "card_03_definition_core",
+        "button_text": "Haan! Aage samjhte hain ➔"
       }
     },
     {
-      "card_id": "card_03_definition",
-      "card_slug": "card_03_definition",
+      "card_id": "card_03_definition_core",
+      "card_slug": "card_03_definition_core",
       "type": "chat",
-      "concept_id": "foundation_narration",
+      "concept_id": "direct_speech_definition",
       "level": 1,
       "progress": {
         "current": 3,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Bilkul sahi soच rahe ho! Pehla tarika jahaan kisी ke exact words ko quotation marks (\" \") mein rakha jaata hai, use DIRECT SPEECH kehte hain. Doosra tarika jahaan hum apne khud ke words mein, bina quotation marks ke, meaning bataते hain - use INDIRECT SPEECH (Reported Speech) kehte hain. Poora topic 'Narration' kehलाता hai."
+          "text": "Bilkul sahi! [[Direct Speech | When we repeat the exact words spoken by someone, using quotation marks]] kehte hain. Example: Rahul said, 'I am going to Delhi.' Yahan 'I am going to Delhi' Rahul ke exact words hain."
         },
         {
           "speaker": "raju",
-          "text": "Achha! Toh quotation marks hon toh Direct, aur na hon toh Indirect - itна simple hai identify karna?"
+          "text": "Sir, toh agar main kahun 'Rahul said that he is going to Delhi' toh?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Excellent question! Woh Indirect Speech hai, uska alag chapter hoga. Yahan notice karo - Direct Speech mein inverted commas (' ') ya double quotation marks (\" \") zaroor hote hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Toh quotation marks Direct Speech ki pehchaan hain!"
         }
       ],
       "navigation": {
-        "next": "card_04_bseb_terminology",
-        "button_text": "Next Card ➔"
+        "next": "card_04_real_life_examples",
+        "button_text": "Aur examples dekhte hain ➔"
       }
     },
     {
-      "card_id": "card_04_bseb_terminology",
-      "card_slug": "card_04_bseb_terminology",
+      "card_id": "card_04_real_life_examples",
+      "card_slug": "card_04_real_life_examples",
       "type": "chat",
-      "concept_id": "foundation_narration",
+      "concept_id": "direct_speech_examples",
       "level": 1,
       "progress": {
         "current": 4,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "⭐ BPSC TRE Favorite: Bihar SCERT/BSEB ki grammar books mein Direct Speech ko 'Pratyaksh Kathan' (प्रत्यक्ष कथन) aur Indirect Speech ko 'Apratyaksh Kathan' (अप्रत्यक्ष कथन) kaha jaata hai. Ye terms BPSC TRE mein directly poочhe jaate hain, isliye dono naam yaad rakhна zaroori hai."
+          "text": "Dekho kuch aur examples: \n1. Teacher said, 'Submit your homework tomorrow.'\n2. She shouted, 'Help me!'\n3. He asked, 'Where is my pen?'\nSab mein exact words inverted commas ke andar hain."
         },
         {
           "speaker": "raju",
-          "text": "Ohh, 'Pratyaksh' matlab jo saamне dikह raha ho (exact words), aur 'Apratyaksh' matlab ghumaकर baता hua - ye toh Hindi meaning se hi yaad ho gaya sir!"
+          "text": "Sir, newspaper mein bhi toh likhte hain - PM said, 'We will develop India.' Woh bhi Direct Speech?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Absolutely! News reports mein bahut use hota hai. Kyunki journalist exact words dikhana chahta hai jo PM ne bole. Isi liye inverted commas lagaye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Par punctuation ke aur rules kya hain?"
         }
       ],
       "navigation": {
-        "next": "card_05_structure_change",
-        "button_text": "Next Card ➔"
+        "next": "card_05_guess_identify",
+        "button_text": "Pehle ek game! ➔"
       }
     },
     {
-      "card_id": "card_05_structure_change",
-      "card_slug": "card_05_structure_change",
-      "type": "chat",
-      "concept_id": "foundation_narration",
+      "card_id": "card_05_guess_identify",
+      "card_slug": "card_05_guess_identify",
+      "type": "guess",
+      "concept_id": "direct_speech_identification",
       "level": 1,
       "progress": {
         "current": 5,
-        "total": 88
+        "total": 62
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab dekhते hain jab Direct ko Indirect mein badalте hain, toh structure mein kya-kya badalता hai. Universal rule yaad rakho: 1) Quotation marks aur comma hат jaate hain. 2) 'that' word connective ke roop mein add hota hai (statements mein). 3) Reporting verb (says/said) khud bhi badal sakta hai. 4) Pronoun, Tense, aur Time/Place words bhi badalte hain. Ye paanच cheezein poore chapter ka core hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Itne saare changes?? Ye toh exam me pakka confuse karega sir! Ek-ek karके samझна paडेगा."
-        }
-      ],
+      "guess_payload": {
+        "question": "Raju, neeche 4 sentences hain. Batao kaunsa Direct Speech NAHI hai?",
+        "options": [
+          {
+            "id": "A",
+            "text": "He said, 'I love my country.'"
+          },
+          {
+            "id": "B",
+            "text": "She asked me where I was going."
+          },
+          {
+            "id": "C",
+            "text": "The teacher said, 'Be quiet!'"
+          },
+          {
+            "id": "D",
+            "text": "Ram said, 'I will come tomorrow.'"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Option B mein inverted commas nahi hain, aur 'She asked me where I was going' Indirect Speech hai. Baaki sabhi sentences mein exact words inverted commas ke andar hain, isliye woh Direct Speech hain. ⭐ BPSC/SSC Trap: Inverted commas ki absence check karo!"
+      },
       "navigation": {
-        "next": "card_06_quiz1_m1",
-        "button_text": "Next Card ➔"
+        "next": "card_06_quiz_q1",
+        "button_text": "Next ➔"
       }
     },
     {
-      "card_id": "card_06_quiz1_m1",
-      "card_slug": "card_06_quiz1_m1",
+      "card_id": "card_06_quiz_q1",
+      "card_slug": "card_06_quiz_q1",
       "type": "quiz",
-      "concept_id": "foundation_narration",
+      "concept_id": "direct_speech_basic_quiz",
       "level": 1,
       "progress": {
         "current": 6,
-        "total": 88
+        "total": 62
       },
       "quiz_payload": {
-        "question": "'He said, \"I am hungry.\"' - Ye sentence kaunsi Speech hai?",
+        "question": "Quiz 1/3: Choose the sentence in Direct Speech:",
         "options": [
           {
             "id": "A",
-            "text": "Indirect Speech"
+            "text": "He told me that he was ill."
           },
           {
             "id": "B",
-            "text": "Direct Speech"
+            "text": "She said, 'I am very happy today.'"
           },
           {
             "id": "C",
-            "text": "Passive Speech"
+            "text": "They informed us that the train was late."
           },
           {
             "id": "D",
-            "text": "Reported Speech"
+            "text": "Mother advised me to study hard."
           }
         ],
         "correct_option_id": "B",
-        "explanation": "Quotation marks (\" \") hone ki wajah se ye Direct Speech (Pratyaksh Kathan) hai - exact words diye gaye hain."
+        "explanation": "केवल Option B में inverted commas (' ') हैं और exact words 'I am very happy today' दिए गए हैं। बाकी सभी Indirect Speech हैं क्योंकि वहाँ 'that', 'to' का use है और inverted commas नहीं हैं। Direct Speech की पहली पहचान = Inverted Commas!"
       },
       "navigation": {
-        "next": "card_07_quiz2_m1",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_07_quiz_q2",
+        "button_text": "Next Question ➔"
       }
     },
     {
-      "card_id": "card_07_quiz2_m1",
-      "card_slug": "card_07_quiz2_m1",
+      "card_id": "card_07_quiz_q2",
+      "card_slug": "card_07_quiz_q2",
       "type": "quiz",
-      "concept_id": "foundation_narration",
+      "concept_id": "direct_speech_basic_quiz",
       "level": 1,
       "progress": {
         "current": 7,
-        "total": 88
+        "total": 62
       },
       "quiz_payload": {
-        "question": "⭐ BPSC TRE Trap: Bihar SCERT ke anusaar 'Apratyaksh Kathan' kis Speech ko kaha jaata hai?",
+        "question": "Quiz 2/3: Which sentence is CORRECTLY written in Direct Speech?",
         "options": [
           {
             "id": "A",
-            "text": "Direct Speech"
+            "text": "Ramesh said, I am going home."
           },
           {
             "id": "B",
-            "text": "Indirect Speech"
+            "text": "Ramesh said 'I am going home.'"
           },
           {
             "id": "C",
-            "text": "Active Voice"
+            "text": "Ramesh said, 'I am going home.'"
           },
           {
             "id": "D",
-            "text": "Passive Voice"
+            "text": "Ramesh said: I am going home."
           }
         ],
-        "correct_option_id": "B",
-        "explanation": "'Apratyaksh Kathan' (अप्रत्यक्ष कथन) Indirect Speech ke liye use hota hai, jabki 'Pratyaksh Kathan' Direct Speech ke liye."
+        "correct_option_id": "C",
+        "explanation": "Option C सही है। Direct Speech का सही structure: Reporting verb (said) के बाद comma (,) आता है, फिर inverted comma शुरू होती है। Option A में inverted commas ही नहीं हैं। Option B में comma missing है। Option D में colon (:) गलत है, comma चाहिए। ⭐ SBI PO Trap: Comma + Inverted Comma का combination देखो!"
       },
       "navigation": {
-        "next": "card_08_quiz3_m1",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_08_quiz_q3",
+        "button_text": "Last Question ➔"
       }
     },
     {
-      "card_id": "card_08_quiz3_m1",
-      "card_slug": "card_08_quiz3_m1",
+      "card_id": "card_08_quiz_q3",
+      "card_slug": "card_08_quiz_q3",
       "type": "quiz",
-      "concept_id": "foundation_narration",
+      "concept_id": "direct_speech_basic_quiz",
       "level": 1,
       "progress": {
         "current": 8,
-        "total": 88
+        "total": 62
       },
       "quiz_payload": {
-        "question": "Direct Speech ko Indirect mein convert karте waqt sabसे pehле kya hataya jaata hai?",
+        "question": "Quiz 3/3: Identify the error in: She said, 'i am ready.'",
         "options": [
           {
             "id": "A",
-            "text": "Subject"
+            "text": "Inverted commas are wrongly placed"
           },
           {
             "id": "B",
-            "text": "Quotation marks aur comma"
+            "text": "'i' should be capital 'I'"
           },
           {
             "id": "C",
-            "text": "Verb"
+            "text": "Comma after 'said' is wrong"
           },
           {
             "id": "D",
-            "text": "Object"
+            "text": "No error"
           }
         ],
         "correct_option_id": "B",
-        "explanation": "Sabसे pehla step hai quotation marks (\" \") aur comma hatana, phir connective 'that' jodना (statements mein)."
+        "explanation": "Error है - 'i' को 'I' होना चाहिए। Direct Speech के अंदर पहला letter capital होता है (यहाँ 'I' personal pronoun है, वो हमेशा capital)। Inverted commas सही हैं, comma भी सही है। ⭐ SSC CGL/SBI PO Favorite Trap: Capitalization errors inside inverted commas!"
       },
       "navigation": {
-        "next": "card_09_milestone_m1",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_09_milestone_1",
+        "button_text": "Check Result ➔"
       }
     },
     {
-      "card_id": "card_09_milestone_m1",
-      "card_slug": "card_09_milestone_m1",
+      "card_id": "card_09_milestone_1",
+      "card_slug": "card_09_milestone_1",
       "type": "milestone",
-      "concept_id": "foundation_narration",
+      "concept_id": "direct_speech_module_1",
       "level": 1,
       "progress": {
         "current": 9,
-        "total": 88
+        "total": 62
       },
       "milestone_payload": {
-        "title": "MODULE COMPLETED!",
-        "badge_emoji": "🎯",
-        "completed_topic": "Narration - Foundation",
+        "title": "MODULE 1 COMPLETED! 🎉",
+        "badge_emoji": "💬",
+        "completed_topic": "What is Direct Speech?",
         "xp_earned": 50,
-        "milestone_progress": "Module 1/11 Clear",
-        "motivational_quote": "Foundation solid hai! Ab chalo Reporting Verb ke changes seekhते hain!"
+        "milestone_progress": "Module 1/5 Clear",
+        "motivational_quote": "Shabash! Tumne Direct Speech ki pehchaan seekh li. Ab punctuation rules master karenge! 🔥"
       },
       "navigation": {
-        "next": "card_10_reporting_verb_same",
-        "button_text": "Start Next Module ➔"
+        "next": "card_10_punctuation_intro",
+        "button_text": "Start Punctuation Rules ➔"
       }
     },
     {
-      "card_id": "card_10_reporting_verb_same",
-      "card_slug": "card_10_reporting_verb_same",
+      "card_id": "card_10_punctuation_intro",
+      "card_slug": "card_10_punctuation_intro",
       "type": "chat",
-      "concept_id": "reporting_verb_change",
+      "concept_id": "punctuation_rules_intro",
       "level": 2,
       "progress": {
         "current": 10,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ab dekhते hain 'Reporting Verb' (say/said) ka kya hota hai. Universal rule: Agar Direct Speech mein sirf 'says' ya 'said' hai, bina kisी object (person) ke, toh Indirect mein bhi wahi 'says'/'said' rehta hai. Jaise: 'He said, \"I am tired.\"' → 'He said that he was tired.' Yahaan 'said' hi rehта hai."
+          "text": "Raju, ab Direct Speech ki sabse important cheez - Punctuation! SBI PO aur SSC mein 60% errors yahi se aate hain."
         },
         {
           "speaker": "raju",
-          "text": "Achha, toh agar 'said' ke baad kisी ka naam ya 'to him/her' na ho, toh 'said' waisa hi reh jaayega?"
+          "text": "Sir, punctuation matlab commas, full stops, inverted commas - yeh sab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Direct Speech mein 5 punctuation rules hain jo exam mein pakka aate hain: \n1. Inverted Commas (Quotation Marks)\n2. Comma placement\n3. Capital letter\n4. Full stop/Question mark/Exclamation\n5. Reporting verb ke baad punctuation"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir ek-ek karke samjhaiye, confusing lag raha hai!"
         }
       ],
       "navigation": {
-        "next": "card_11_said_to_told",
-        "button_text": "Next Card ➔"
+        "next": "card_11_inverted_commas",
+        "button_text": "Rule 1: Inverted Commas ➔"
       }
     },
     {
-      "card_id": "card_11_said_to_told",
-      "card_slug": "card_11_said_to_told",
+      "card_id": "card_11_inverted_commas",
+      "card_slug": "card_11_inverted_commas",
       "type": "chat",
-      "concept_id": "reporting_verb_change",
+      "concept_id": "inverted_commas_rule",
       "level": 2,
       "progress": {
         "current": 11,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Yahin sabसे bada twist hai! Jab Direct Speech mein 'said to + person' ho (matlab kisके saath baат ki gaई hai bataya gaya ho), toh Indirect mein 'said to' hamesha 'TOLD' ban jaata hai. Jaise: 'He said to me, \"I am tired.\"' → 'He told me that he was tired.' 'Said to' kabhi Indirect mein nahi rehта - ye ban hi jaata hai 'told'."
+          "text": "[[Inverted Commas | Quotation marks used to enclose exact spoken words]] do types ke hote hain:\n• Single: 'I am happy.'\n• Double: \"I am happy.\"\nDono sahi hain, par ek hi sentence mein dono mix mat karo!"
         },
         {
           "speaker": "raju",
-          "text": "Hain?? Ye toh bada important rule hai! Toh 'said to him' galat hoga Indirect mein, hamesha 'told him' hi likhна hoga?"
+          "text": "Toh 'I am happy.\" - yeh galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul galat! Opening aur closing dono same hone chahiye. Ya dono single (' '), ya dono double (\" \"). ⭐ SBI PO Trap: Mixed quotation marks!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Noted Sir! Aur kaunse words inverted commas ke andar aate hain?"
         }
       ],
       "navigation": {
-        "next": "card_12_says_to_tells",
-        "button_text": "Next Card ➔"
+        "next": "card_12_inverted_commas_scope",
+        "button_text": "Yeh bahut important hai ➔"
       }
     },
     {
-      "card_id": "card_12_says_to_tells",
-      "card_slug": "card_12_says_to_tells",
+      "card_id": "card_12_inverted_commas_scope",
+      "card_slug": "card_12_inverted_commas_scope",
       "type": "chat",
-      "concept_id": "reporting_verb_change",
+      "concept_id": "inverted_commas_scope",
       "level": 2,
       "progress": {
         "current": 12,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Bilkul sahi! Yahi pattern baaki tenses mein bhi follow hota hai: 'says to' → 'tells', 'will say to' → 'will tell'. Jaise: 'She says to him, \"I am busy.\"' → 'She tells him that she is busy.' Yaad rakho - jahaan bhi 'to + person' ho, wahaan 'say/said' family 'tell/told' family mein badal jaati hai."
+          "text": "Sirf exact spoken words inverted commas ke andar! Example:\n✅ He said, 'I am tired.'\n❌ He said, 'I am tired.'\nYahan 'He said' reporting part hai (bahar), 'I am tired' exact words (andar)."
         },
         {
           "speaker": "raju",
-          "text": "Toh pattern yaad rakhна hai - jab tak 'to person' hai, tab tak 'tell' family use hogi, warna 'say' family hi rahegi!"
+          "text": "Matlab reporting verb (said, asked, shouted) hamesha bahar rahega?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Reporting verb kabhi inverted commas ke andar nahi aata. Yeh SSC/Railway ka favorite trap hai:\n❌ 'He said, I am going.'\n✅ He said, 'I am going.'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Toh comma kahan lagegi?"
         }
       ],
       "navigation": {
-        "next": "card_13_guess_m2",
-        "button_text": "Next Card ➔"
+        "next": "card_13_comma_placement",
+        "button_text": "Rule 2: Comma Placement ➔"
       }
     },
     {
-      "card_id": "card_13_guess_m2",
-      "card_slug": "card_13_guess_m2",
-      "type": "guess",
-      "concept_id": "reporting_verb_change",
+      "card_id": "card_13_comma_placement",
+      "card_slug": "card_13_comma_placement",
+      "type": "chat",
+      "concept_id": "comma_placement_rule",
       "level": 2,
       "progress": {
         "current": 13,
-        "total": 88
+        "total": 62
       },
-      "guess_payload": {
-        "question": "Guess karo - 'She said to us, \"I will help you.\"' ka sahi reporting verb kya hoga Indirect Speech mein?",
-        "options": [
-          {
-            "id": "A",
-            "text": "said"
-          },
-          {
-            "id": "B",
-            "text": "told"
-          },
-          {
-            "id": "C",
-            "text": "says"
-          },
-          {
-            "id": "D",
-            "text": "tells"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "'said to us' mein object 'us' hai, isliye 'said to' hamesha 'told' ban jaata hai: 'She told us that she would help them/us.'"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Comma placement ke 2 cases hain:\n\n**Case 1: Reporting clause pehle ho**\nHe said, 'I am happy.'\n(comma reporting verb के बाद, inverted comma से पहले)\n\n**Case 2: Reporting clause baad mein ho**\n'I am happy,' he said.\n(comma inverted comma के अंदर, closing से पहले)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Case 2 mein comma inverted comma ke andar?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Dekho carefully: 'I am happy,' he said. ← comma यहाँ closing inverted comma से पहले आई। Agar Case 1 type ho toh: He said, 'I am happy.' ← comma reporting verb के बाद।"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ye to confusing hai Sir! Kaise yaad rakhu?"
+        }
+      ],
       "navigation": {
-        "next": "card_14_quiz1_m2",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_14_comma_trick",
+        "button_text": "Easy trick batata hoon ➔"
       }
     },
     {
-      "card_id": "card_14_quiz1_m2",
-      "card_slug": "card_14_quiz1_m2",
-      "type": "quiz",
-      "concept_id": "reporting_verb_change",
+      "card_id": "card_14_comma_trick",
+      "card_slug": "card_14_comma_trick",
+      "type": "chat",
+      "concept_id": "comma_placement_trick",
       "level": 2,
       "progress": {
         "current": 14,
-        "total": 88
+        "total": 62
       },
-      "quiz_payload": {
-        "question": "'He said, \"I am fine.\"' - Isमें 'said' badleगा ya nahi?",
-        "options": [
-          {
-            "id": "A",
-            "text": "Badleगा, 'told' ban jaayega"
-          },
-          {
-            "id": "B",
-            "text": "Nahi badleगा, kyunki koई object/person nahi hai"
-          },
-          {
-            "id": "C",
-            "text": "'says' ban jaayega"
-          },
-          {
-            "id": "D",
-            "text": "'tells' ban jaayega"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Object na hone ki wajah se 'said' waisa hi rehेगा: 'He said that he was fine.'"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Trick: Comma hamesha reporting verb aur exact words ke beech mein aati hai!\n\n• He said, 'I am happy.' (said aur I ke beech)\n• 'I am happy,' he said. (happy aur he ke beech)\n\nBas yeh dhyan rakho - comma spoken words aur reporting part ko separate karti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohhhh! Matlab comma separator ka kaam karti hai dono parts ko alag karne ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect understanding! ⭐ BPSC/SSC Trap: Students comma hi bhool jate hain:\n❌ He said 'I am happy.'\n✅ He said, 'I am happy.'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Ab capital letter ka rule?"
+        }
+      ],
       "navigation": {
-        "next": "card_15_quiz2_m2",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_15_capital_letter",
+        "button_text": "Rule 3: Capital Letter ➔"
       }
     },
     {
-      "card_id": "card_15_quiz2_m2",
-      "card_slug": "card_15_quiz2_m2",
-      "type": "quiz",
-      "concept_id": "reporting_verb_change",
+      "card_id": "card_15_capital_letter",
+      "card_slug": "card_15_capital_letter",
+      "type": "chat",
+      "concept_id": "capital_letter_rule",
       "level": 2,
       "progress": {
         "current": 15,
-        "total": 88
+        "total": 62
       },
-      "quiz_payload": {
-        "question": "'The teacher says to the students, \"Work hard.\"' - Sahi Indirect reporting verb chunо:",
-        "options": [
-          {
-            "id": "A",
-            "text": "says"
-          },
-          {
-            "id": "B",
-            "text": "said"
-          },
-          {
-            "id": "C",
-            "text": "tells"
-          },
-          {
-            "id": "D",
-            "text": "told"
-          }
-        ],
-        "correct_option_id": "C",
-        "explanation": "'says to' + object 'students' hai, isliye 'tells' banेगा (present tense hai isliye 'says to'→'tells', 'said to'→'told' nahi)."
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Direct Speech के अंदर पहला letter हमेशा capital होता है:\n✅ She said, 'I am fine.'\n❌ She said, 'i am fine.'\n\nChाहे inverted comma के अंदर कोई भी sentence हो - Statement, Question, Command - पहला letter capital!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh 'He said, 'my name is Ram.' galat hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul galat! 'my' को 'My' hona chahिए: He said, 'My name is Ram.' ⭐ SBI PO/SSC CGL Error Detection mein yeh pakka aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur agar 'I' ho toh? 'I' toh already capital hai!"
+        }
+      ],
       "navigation": {
-        "next": "card_16_quiz3_m2",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_16_capital_special_cases",
+        "button_text": "Good question! ➔"
       }
     },
     {
-      "card_id": "card_16_quiz3_m2",
-      "card_slug": "card_16_quiz3_m2",
-      "type": "quiz",
-      "concept_id": "reporting_verb_change",
+      "card_id": "card_16_capital_special_cases",
+      "card_slug": "card_16_capital_special_cases",
+      "type": "chat",
+      "concept_id": "capital_letter_special",
       "level": 2,
       "progress": {
         "current": 16,
-        "total": 88
+        "total": 62
       },
-      "quiz_payload": {
-        "question": "'Said to' Indirect Speech mein hamesha kis word mein badal jaata hai?",
-        "options": [
-          {
-            "id": "A",
-            "text": "tells"
-          },
-          {
-            "id": "B",
-            "text": "told"
-          },
-          {
-            "id": "C",
-            "text": "says"
-          },
-          {
-            "id": "D",
-            "text": "asked"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "'Said to' (Past tense + object) hamesha 'told' mein badalta hai."
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "'I' pronoun हमेशा capital ही रहता है - sentence के शुरू में हो या बीच में:\n✅ He said, 'I am going.'\n✅ He said, 'When I come, I will tell you.'\n\nPar dhyan do - 'i' लिखना grammatically गलत है हर जगह, Direct Speech में तो bilkul नहीं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Okay! Toh proper nouns (Ram, Delhi, India) ka kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Woh toh हमेशा capital:\n✅ She said, 'Ram is my friend.'\n✅ He said, 'I live in Delhi.'\n\nBasic capitalization rules Direct Speech के अंदर भी follow होते हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya Sir! Ab end mein kaunsa punctuation aata hai?"
+        }
+      ],
       "navigation": {
-        "next": "card_17_milestone_m2",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_17_ending_punctuation",
+        "button_text": "Rule 4: Ending Punctuation ➔"
       }
     },
     {
-      "card_id": "card_17_milestone_m2",
-      "card_slug": "card_17_milestone_m2",
-      "type": "milestone",
-      "concept_id": "reporting_verb_change",
+      "card_id": "card_17_ending_punctuation",
+      "card_slug": "card_17_ending_punctuation",
+      "type": "chat",
+      "concept_id": "ending_punctuation_rule",
       "level": 2,
       "progress": {
         "current": 17,
-        "total": 88
+        "total": 62
       },
-      "milestone_payload": {
-        "title": "MODULE COMPLETED!",
-        "badge_emoji": "🗣️",
-        "completed_topic": "Reporting Verb Changes",
-        "xp_earned": 55,
-        "milestone_progress": "Module 2/11 Clear",
-        "motivational_quote": "Said-Told ka twist clear ho gaya! Ab Pronoun change seekhते hain!"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Direct Speech के अंदर ending punctuation sentence type पर depend करता है:\n\n1. **Statement** → Full stop (.)\n   He said, 'I am fine.'\n\n2. **Question** → Question mark (?)\n   She asked, 'Where are you going?'\n\n3. **Command/Request** → Full stop (.) या Exclamation (!)\n   Teacher said, 'Sit down.'\n\n4. **Exclamation** → Exclamation mark (!)\n   He shouted, 'Help!'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ending punctuation inverted comma ke andar aayegi ya bahar?"
+        }
+      ],
       "navigation": {
-        "next": "card_18_pronoun_rule",
-        "button_text": "Start Next Module ➔"
+        "next": "card_18_ending_inside_outside",
+        "button_text": "Bahut critical question! ➔"
       }
     },
     {
-      "card_id": "card_18_pronoun_rule",
-      "card_slug": "card_18_pronoun_rule",
+      "card_id": "card_18_ending_inside_outside",
+      "card_slug": "card_18_ending_inside_outside",
       "type": "chat",
-      "concept_id": "pronoun_change",
-      "level": 3,
+      "concept_id": "ending_punctuation_placement",
+      "level": 2,
       "progress": {
         "current": 18,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ab pronoun change ka universal rule samझो, jo sabसे zyaादा confuse karта hai. Rule hai: 1st person pronoun (I, we, my, our) Indirect mein Subject of reporting verb ke hisaab se badalता hai. 2nd person pronoun (you, your) Object of reporting verb ke hisaab se badalता hai. 3rd person pronoun (he, she, it, they) KABHI NAHI badalता."
+          "text": "**Golden Rule**: Ending punctuation (full stop/question mark/exclamation) हमेशा inverted comma के अंदर आता है, बाहर नहीं!\n\n✅ He said, 'I am going.'\n❌ He said, 'I am going'.\n\n✅ She asked, 'Where are you?'\n❌ She asked, 'Where are you'?"
         },
         {
           "speaker": "raju",
-          "text": "Sir ye toh bahut confusing hai - 1st person Subject se, 2nd person Object se, aur 3rd person kuch bhi nahi? Ek example dikhaकर samझाइये!"
+          "text": "Matlab full stop/question mark लगाने के बाद closing inverted comma!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Yeh SBI PO mein sabse common error hai:\n❌ He said, 'I am happy'.\n✅ He said, 'I am happy.'\n\nFull stop/question mark pहले, फिर closing inverted comma!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Noted! Punctuation complete hogaya?"
         }
       ],
       "navigation": {
-        "next": "card_19_pronoun_example",
-        "button_text": "Next Card ➔"
+        "next": "card_19_quiz_punctuation_q1",
+        "button_text": "Ek quiz se check karte hain ➔"
       }
     },
     {
-      "card_id": "card_19_pronoun_example",
-      "card_slug": "card_19_pronoun_example",
-      "type": "chat",
-      "concept_id": "pronoun_change",
-      "level": 3,
+      "card_id": "card_19_quiz_punctuation_q1",
+      "card_slug": "card_19_quiz_punctuation_q1",
+      "type": "quiz",
+      "concept_id": "punctuation_quiz",
+      "level": 2,
       "progress": {
         "current": 19,
-        "total": 88
+        "total": 62
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Dekho: 'Raju said to Sita, \"I will help you.\"' Yahaan 'I' (1st person) → Subject 'Raju' ke hisaab se 'he' banेगा. 'you' (2nd person) → Object 'Sita' ke hisaab se 'her' banेगा. Poora sentence: 'Raju told Sita that he would help her.' Dekho kaise 'I' aur 'you' dono apni jagah replace ho gaye based on Subject/Object!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaaa! Ab samझ aaya - 'I' hamesha Subject (jo bol raha hai) ban jaata hai, aur 'you' hamesha Object (jisse bola gaya) ban jaata hai! Ye toh logical hai!"
-        }
-      ],
+      "quiz_payload": {
+        "question": "Quiz 1/3: Identify the CORRECTLY punctuated sentence:",
+        "options": [
+          {
+            "id": "A",
+            "text": "He said, 'i am going to school.'"
+          },
+          {
+            "id": "B",
+            "text": "He said 'I am going to school.'"
+          },
+          {
+            "id": "C",
+            "text": "He said, 'I am going to school.'"
+          },
+          {
+            "id": "D",
+            "text": "He said, 'I am going to school'."
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Option C सही है। Errors:\n• Option A: 'i' capital 'I' होना चाहिए\n• Option B: comma missing after 'said'\n• Option D: full stop inverted comma के बाहर है (अंदर होना चाहिए)\n\n⭐ SBI PO Pattern: सभी options में अलग-अलग punctuation errors होती हैं!"
+      },
       "navigation": {
-        "next": "card_20_third_person_no_change",
-        "button_text": "Next Card ➔"
+        "next": "card_20_quiz_punctuation_q2",
+        "button_text": "Next Question ➔"
       }
     },
     {
-      "card_id": "card_20_third_person_no_change",
-      "card_slug": "card_20_third_person_no_change",
-      "type": "chat",
-      "concept_id": "pronoun_change",
-      "level": 3,
+      "card_id": "card_20_quiz_punctuation_q2",
+      "card_slug": "card_20_quiz_punctuation_q2",
+      "type": "quiz",
+      "concept_id": "punctuation_quiz",
+      "level": 2,
       "progress": {
         "current": 20,
-        "total": 88
+        "total": 62
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bilkul sahi samझा! Ab 3rd person ka rule dekho - 'he', 'she', 'it', 'they' Indirect Speech mein KABHI change nahi hote, bas jaroorat paडने par unka TENSE/case change ho sakta hai (jaise 'his' waisa hi rehेगा). Jaise: 'Raju said, \"She is my friend.\"' → 'Raju said that she was his friend.' Dekho 'she' waisa ka waisa hi rah gaya!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha! Toh 'she', 'he', 'they' - inko touch hi nahi karna, bas 'my' ko 'his/her' jaisa badalна hoga agar wo 1st person ka possessive ho?"
-        }
-      ],
+      "quiz_payload": {
+        "question": "Quiz 2/3: Find the error: She asked, \"Where are you going\"?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Double quotation marks are wrong"
+          },
+          {
+            "id": "B",
+            "text": "Question mark should be inside quotation marks"
+          },
+          {
+            "id": "C",
+            "text": "Comma after 'asked' is wrong"
+          },
+          {
+            "id": "D",
+            "text": "No error"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Error: Question mark (?) inverted comma के बाहर है, अंदर होना चाहिए।\n\n❌ She asked, \"Where are you going\"?\n✅ She asked, \"Where are you going?\"\n\nDouble quotation marks (\" \") सही हैं (single ' ' भी सही होते)। Comma भी सही है। ⭐ BPSC/RRB NTPC Trap: Question mark की position!"
+      },
       "navigation": {
-        "next": "card_21_quiz1_m3",
-        "button_text": "Next Card ➔"
+        "next": "card_21_quiz_punctuation_q3",
+        "button_text": "Last Question ➔"
       }
     },
     {
-      "card_id": "card_21_quiz1_m3",
-      "card_slug": "card_21_quiz1_m3",
+      "card_id": "card_21_quiz_punctuation_q3",
+      "card_slug": "card_21_quiz_punctuation_q3",
       "type": "quiz",
-      "concept_id": "pronoun_change",
-      "level": 3,
+      "concept_id": "punctuation_quiz",
+      "level": 2,
       "progress": {
         "current": 21,
-        "total": 88
+        "total": 62
       },
       "quiz_payload": {
-        "question": "'He said to me, \"I will meet you tomorrow.\"' - 'I' kis pronoun mein badleगा?",
+        "question": "Quiz 3/3: Which sentence has correct comma placement?",
         "options": [
           {
             "id": "A",
-            "text": "you (subject ke hisaab se)"
+            "text": "'I am tired' he said."
           },
           {
             "id": "B",
-            "text": "he (subject ke hisaab se)"
+            "text": "'I am tired,' he said."
           },
           {
             "id": "C",
-            "text": "me (object ke hisaab se)"
+            "text": "'I am tired', he said."
           },
           {
             "id": "D",
-            "text": "waisa hi rahega"
+            "text": "'I am tired,', he said."
           }
         ],
         "correct_option_id": "B",
-        "explanation": "1st person 'I' hamesha Subject of reporting verb ('He') ke hisaab se badalता hai, isliye 'I' → 'he' banेगा."
+        "explanation": "Option B सही है: 'I am tired,' he said.\n\nजब reporting clause बाद में हो, तो comma inverted comma के अंदर, closing से पहले आती है।\n\nErrors:\n• Option A: comma missing\n• Option C: comma inverted comma के बाहर (अंदर होनी चाहिए)\n• Option D: comma दो बार (एक ही चाहिए)\n\n⭐ SSC CGL Favorite Trap!"
       },
       "navigation": {
-        "next": "card_22_quiz2_m3",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_22_milestone_2",
+        "button_text": "Check Result ➔"
       }
     },
     {
-      "card_id": "card_22_quiz2_m3",
-      "card_slug": "card_22_quiz2_m3",
-      "type": "quiz",
-      "concept_id": "pronoun_change",
-      "level": 3,
+      "card_id": "card_22_milestone_2",
+      "card_slug": "card_22_milestone_2",
+      "type": "milestone",
+      "concept_id": "punctuation_module_complete",
+      "level": 2,
       "progress": {
         "current": 22,
-        "total": 88
+        "total": 62
       },
-      "quiz_payload": {
-        "question": "Usी sentence mein 'you' kaise badleगा - 'He said to me, \"I will meet you tomorrow.\"'?",
-        "options": [
-          {
-            "id": "A",
-            "text": "you → he"
-          },
-          {
-            "id": "B",
-            "text": "you → me (object 'me' ke hisaab se)"
-          },
-          {
-            "id": "C",
-            "text": "you → they"
-          },
-          {
-            "id": "D",
-            "text": "waisa hi rahega"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "2nd person 'you' hamesha Object of reporting verb ('me') ke hisaab se badalта hai, isliye 'you' → 'me' banेगा: 'He told me that he would meet me the next day.'"
+      "milestone_payload": {
+        "title": "MODULE 2 COMPLETED! 🎊",
+        "badge_emoji": "✍️",
+        "completed_topic": "Punctuation Rules Mastered",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/5 Clear",
+        "motivational_quote": "Punctuation ki galtiyan ab tum pakad loge! Ab structure samjhenge 🚀"
       },
       "navigation": {
-        "next": "card_23_quiz3_m3",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_23_structure_intro",
+        "button_text": "Start Structure Module ➔"
       }
     },
     {
-      "card_id": "card_23_quiz3_m3",
-      "card_slug": "card_23_quiz3_m3",
-      "type": "quiz",
-      "concept_id": "pronoun_change",
+      "card_id": "card_23_structure_intro",
+      "card_slug": "card_23_structure_intro",
+      "type": "chat",
+      "concept_id": "direct_speech_structure",
       "level": 3,
       "progress": {
         "current": 23,
-        "total": 88
+        "total": 62
       },
-      "quiz_payload": {
-        "question": "3rd person pronouns (he, she, they, it) ke baare mein sahi statement chunо:",
-        "options": [
-          {
-            "id": "A",
-            "text": "Ye hamesha Subject ke hisaab se badalते hain"
-          },
-          {
-            "id": "B",
-            "text": "Ye hamesha Object ke hisaab se badalते hain"
-          },
-          {
-            "id": "C",
-            "text": "Ye kabhi change nahi hote"
-          },
-          {
-            "id": "D",
-            "text": "Ye hamesha 'you' ban jaate hain"
-          }
-        ],
-        "correct_option_id": "C",
-        "explanation": "3rd person pronouns (he, she, it, they) Indirect Speech mein kabhi change nahi hote, waise hi rehते hain."
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab Direct Speech ka structure detail mein samjhte hain. Har Direct Speech sentence ke 2 parts hote hain:\n\n1. **Reporting Clause** (Reporting Verb + Subject)\n2. **Reported Speech** (Exact words inside inverted commas)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir example se samjhaiye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho: **He said, 'I am happy.'**\n\n• Reporting Clause = He said (subject + reporting verb)\n• Reported Speech = 'I am happy.' (exact words)\n\nDono parts ko comma separate karti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh reporting clause kabhi inverted commas ke andar nahi aata?"
+        }
+      ],
       "navigation": {
-        "next": "card_24_milestone_m3",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_24_reporting_clause",
+        "button_text": "Bilkul sahi! ➔"
       }
     },
     {
-      "card_id": "card_24_milestone_m3",
-      "card_slug": "card_24_milestone_m3",
-      "type": "milestone",
-      "concept_id": "pronoun_change",
+      "card_id": "card_24_reporting_clause",
+      "card_slug": "card_24_reporting_clause",
+      "type": "chat",
+      "concept_id": "reporting_clause_detail",
       "level": 3,
       "progress": {
         "current": 24,
-        "total": 88
+        "total": 62
       },
-      "milestone_payload": {
-        "title": "MODULE COMPLETED!",
-        "badge_emoji": "👤",
-        "completed_topic": "Pronoun Change Rules",
-        "xp_earned": 55,
-        "milestone_progress": "Module 3/11 Clear",
-        "motivational_quote": "Pronoun rule crack ho gaya! Ab sabसे bada topic - Tense Backshift seekhते hain!"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "[[Reporting Clause | The part of sentence that introduces the speaker and verb]] inverted commas के बाहर होता है। Isme होता है:\n\n• Subject (He, She, Ram, Teacher)\n• Reporting Verb (said, asked, replied, shouted, exclaimed)\n\nExample:\n• **Ram said**, 'I am fine.'\n• **The teacher shouted**, 'Be quiet!'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, reporting verb sirf 'said' hi hota hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! Bahut saare hain:\n• Statement ke liye: said, told, replied\n• Question ke liye: asked, inquired, questioned\n• Command ke liye: ordered, commanded, advised\n• Exclamation ke liye: exclaimed, shouted, cried"
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur reported speech kya hota hai?"
+        }
+      ],
       "navigation": {
-        "next": "card_25_backshift_rule",
-        "button_text": "Start Next Module ➔"
+        "next": "card_25_reported_speech",
+        "button_text": "Usko dekhte hain ➔"
       }
     },
     {
-      "card_id": "card_25_backshift_rule",
-      "card_slug": "card_25_backshift_rule",
+      "card_id": "card_25_reported_speech",
+      "card_slug": "card_25_reported_speech",
       "type": "chat",
-      "concept_id": "tense_backshift",
-      "level": 4,
+      "concept_id": "reported_speech_detail",
+      "level": 3,
       "progress": {
         "current": 25,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ab sabसे important rule sunो dhyan se. Universal rule: Agar Reporting Verb PAST TENSE mein hai (said, told), toh reported speech ke andar wala tense EK STEP PEECHE (backshift) chala jaata hai. Jaise: Simple Present → Simple Past. 'He said, \"I play cricket.\"' → 'He said that he played cricket.'"
+          "text": "[[Reported Speech | The exact words spoken by someone, enclosed in quotation marks]] woh part hai jo inverted commas के अंदर होता है:\n\nHe said, **'I am going to Delhi.'**\n\nYahan 'I am going to Delhi.' = Reported Speech (exact words jo He ne bole)"
         },
         {
           "speaker": "raju",
-          "text": "Achha! Toh 'said' dekhते hi samझ jaana hai ki andar wala tense bhi 'past' family mein chala jaayega?"
+          "text": "Toh inverted commas ke andar jo bhi hai woh reported speech?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Reported speech mein कोई भी sentence हो सकता है:\n• Statement: 'I am fine.'\n• Question: 'Where are you?'\n• Command: 'Sit down.'\n• Exclamation: 'Wow! What a scene!'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, reporting clause sentence के बीच में भी आ सकता hai?"
         }
       ],
       "navigation": {
-        "next": "card_26_present_family_backshift",
-        "button_text": "Next Card ➔"
+        "next": "card_26_position_variations",
+        "button_text": "Bahut important point! ➔"
       }
     },
     {
-      "card_id": "card_26_present_family_backshift",
-      "card_slug": "card_26_present_family_backshift",
+      "card_id": "card_26_position_variations",
+      "card_slug": "card_26_position_variations",
       "type": "chat",
-      "concept_id": "tense_backshift",
-      "level": 4,
+      "concept_id": "position_variations",
+      "level": 3,
       "progress": {
         "current": 26,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Bilkul sahi! Dekho poori chain: Simple Present → Simple Past ('play'→'played'). Present Continuous → Past Continuous ('is playing'→'was playing'). Present Perfect → Past Perfect ('has played'→'had played'). Present Perfect Continuous → Past Perfect Continuous ('has been playing'→'had been playing')."
+          "text": "Haan! Reporting clause 3 positions mein आ सकता है:\n\n**1. Beginning:**\nHe said, 'I am happy.'\n\n**2. End:**\n'I am happy,' he said.\n\n**3. Middle (rare):**\n'I am,' he said, 'very happy.'\n\nSabse common = Position 1 (beginning)"
         },
         {
           "speaker": "raju",
-          "text": "Toh 'Present' family ke sabhi 4 tenses 'Past' family ke corresponding 4 tenses mein badal jaते hain - pattern samझ aa raha hai!"
+          "text": "Wow! Toh punctuation har position mein alag hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yes! Beginning mein: comma reporting verb के बाद\nEnd mein: comma inverted comma के अंदर\nMiddle mein: dono jagah comma!\n\n⭐ SBI PO/UPSC Prelims Trap: Middle position punctuation!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Ab practice karni hai!"
         }
       ],
       "navigation": {
-        "next": "card_27_past_family_backshift",
-        "button_text": "Next Card ➔"
+        "next": "card_27_quiz_structure_q1",
+        "button_text": "Quiz time! ➔"
       }
     },
     {
-      "card_id": "card_27_past_family_backshift",
-      "card_slug": "card_27_past_family_backshift",
-      "type": "chat",
-      "concept_id": "tense_backshift",
-      "level": 4,
+      "card_id": "card_27_quiz_structure_q1",
+      "card_slug": "card_27_quiz_structure_q1",
+      "type": "quiz",
+      "concept_id": "structure_quiz",
+      "level": 3,
       "progress": {
         "current": 27,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab Past family dekho: Simple Past → Past Perfect ('played'→'had played'). Past Continuous → Past Perfect Continuous ('was playing'→'had been playing'). Yahaan Simple Past bhi PEECHE jaata hai kyunki wo bhi ek step aur peeche ja sakta hai - Past Perfect mein."
-        },
-        {
-          "speaker": "raju",
-          "text": "Hain?? Simple Past bhi badalता hai? Maine socha tha Past toh already Past hai, ye aage kaise badleगा!"
-        }
-      ],
-      "navigation": {
-        "next": "card_28_past_perfect_no_change",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_28_past_perfect_no_change",
-      "card_slug": "card_28_past_perfect_no_change",
-      "type": "chat",
-      "concept_id": "tense_backshift",
-      "level": 4,
-      "progress": {
-        "current": 28,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Yahin sabसे bada twist hai jo yaad rakhна hai - PAST PERFECT hi sabसे 'peeche' wala tense hai English mein, isliye Past Perfect aur Past Perfect Continuous mein KOІ FURTHER CHANGE nahi hota - ye waise hi rehते hain! 'He said, \"I had finished my work.\"' → 'He said that he had finished his work.' (koई change nahi, sirf pronoun badla)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ohh! Toh Past Perfect matlab 'sabसे peeche wala station' hai, wahaan se aur peeche jaने ki jagah hi nahi bacती - ye toh yaad rakhने layak baat hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_29_quiz1_m4",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_29_quiz1_m4",
-      "card_slug": "card_29_quiz1_m4",
-      "type": "quiz",
-      "concept_id": "tense_backshift",
-      "level": 4,
-      "progress": {
-        "current": 29,
-        "total": 88
+        "total": 62
       },
       "quiz_payload": {
-        "question": "'She said, \"I am reading a book.\"' - Sahi Indirect Speech chunо:",
+        "question": "Quiz 1/3: Identify the Reporting Clause in: She said, 'I will come tomorrow.'",
         "options": [
           {
             "id": "A",
-            "text": "She said that she is reading a book."
+            "text": "She said"
           },
           {
             "id": "B",
-            "text": "She said that she was reading a book."
+            "text": "I will come tomorrow"
           },
           {
             "id": "C",
-            "text": "She said that she reads a book."
+            "text": "She said, 'I will come tomorrow.'"
           },
           {
             "id": "D",
-            "text": "She said that she had read a book."
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Present Continuous ('am reading') Past Continuous ('was reading') mein backshift hota hai kyunki reporting verb 'said' Past mein hai."
-      },
-      "navigation": {
-        "next": "card_30_quiz2_m4",
-        "button_text": "Check Answer & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_30_quiz2_m4",
-      "card_slug": "card_30_quiz2_m4",
-      "type": "quiz",
-      "concept_id": "tense_backshift",
-      "level": 4,
-      "progress": {
-        "current": 30,
-        "total": 88
-      },
-      "quiz_payload": {
-        "question": "'He said, \"I had already left the office.\"' - Sahi Indirect Speech chunо:",
-        "options": [
-          {
-            "id": "A",
-            "text": "He said that he had already left the office."
-          },
-          {
-            "id": "B",
-            "text": "He said that he has already left the office."
-          },
-          {
-            "id": "C",
-            "text": "He said that he already left the office."
-          },
-          {
-            "id": "D",
-            "text": "He said that he was already leaving the office."
+            "text": "'I will come tomorrow.'"
           }
         ],
         "correct_option_id": "A",
-        "explanation": "Past Perfect ('had left') already sabसे peeche wala tense hai, isliye Indirect mein bhi 'had left' hi rehेगा, koई aur change nahi."
+        "explanation": "Reporting Clause = 'She said' (Subject + Reporting Verb), जो inverted commas के बाहर है।\n\nReported Speech = 'I will come tomorrow.' (exact words inside inverted commas)\n\n⭐ BPSC/SSC Pattern: Reporting clause vs Reported speech identification questions आते हैं!"
       },
       "navigation": {
-        "next": "card_31_quiz3_m4",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_28_quiz_structure_q2",
+        "button_text": "Next Question ➔"
       }
     },
     {
-      "card_id": "card_31_quiz3_m4",
-      "card_slug": "card_31_quiz3_m4",
+      "card_id": "card_28_quiz_structure_q2",
+      "card_slug": "card_28_quiz_structure_q2",
       "type": "quiz",
-      "concept_id": "tense_backshift",
+      "concept_id": "structure_quiz",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 62
+      },
+      "quiz_payload": {
+        "question": "Quiz 2/3: Which sentence has reporting clause at the END?",
+        "options": [
+          {
+            "id": "A",
+            "text": "He said, 'I am tired.'"
+          },
+          {
+            "id": "B",
+            "text": "'I am tired,' he said."
+          },
+          {
+            "id": "C",
+            "text": "He said that he was tired."
+          },
+          {
+            "id": "D",
+            "text": "'I am,' he said, 'tired.'"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Option B में reporting clause 'he said' अंत में है।\n\nOption A: Beginning में\nOption C: Indirect Speech (Direct नहीं)\nOption D: Middle position\n\n⭐ Railway RRB NTPC/SSC CHSL में position-based questions आते हैं!"
+      },
+      "navigation": {
+        "next": "card_29_quiz_structure_q3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_29_quiz_structure_q3",
+      "card_slug": "card_29_quiz_structure_q3",
+      "type": "quiz",
+      "concept_id": "structure_quiz",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 62
+      },
+      "quiz_payload": {
+        "question": "Quiz 3/3: Find the error: 'I am going to school' said Ram.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Inverted commas are wrong"
+          },
+          {
+            "id": "B",
+            "text": "Comma is missing after 'school'"
+          },
+          {
+            "id": "C",
+            "text": "Full stop should be inside inverted commas"
+          },
+          {
+            "id": "D",
+            "text": "Both B and C"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "दो errors हैं:\n\n1. Comma missing: 'I am going to school,' said Ram.\n(जब reporting clause end में हो, comma inverted comma के अंदर चाहिए)\n\n2. Full stop missing inside inverted commas\n\n✅ Correct: 'I am going to school,' said Ram.\n\n⭐ SBI PO Level Trap: Multiple errors in one sentence!"
+      },
+      "navigation": {
+        "next": "card_30_milestone_3",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_30_milestone_3",
+      "card_slug": "card_30_milestone_3",
+      "type": "milestone",
+      "concept_id": "structure_module_complete",
+      "level": 3,
+      "progress": {
+        "current": 30,
+        "total": 62
+      },
+      "milestone_payload": {
+        "title": "MODULE 3 COMPLETED! 🏆",
+        "badge_emoji": "🏗️",
+        "completed_topic": "Structure & Components Clear",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/5 Clear",
+        "motivational_quote": "Structure master ban gaye! Ab different sentence types dekhenge 🔥"
+      },
+      "navigation": {
+        "next": "card_31_sentence_types_intro",
+        "button_text": "Start Sentence Types ➔"
+      }
+    },
+    {
+      "card_id": "card_31_sentence_types_intro",
+      "card_slug": "card_31_sentence_types_intro",
+      "type": "chat",
+      "concept_id": "sentence_types_intro",
       "level": 4,
       "progress": {
         "current": 31,
-        "total": 88
+        "total": 62
       },
-      "quiz_payload": {
-        "question": "'Raju said, \"I finished my homework.\"' - Sahi Indirect Speech chunо:",
-        "options": [
-          {
-            "id": "A",
-            "text": "Raju said that he finished his homework."
-          },
-          {
-            "id": "B",
-            "text": "Raju said that he had finished his homework."
-          },
-          {
-            "id": "C",
-            "text": "Raju said that he has finished his homework."
-          },
-          {
-            "id": "D",
-            "text": "Raju said that he finishes his homework."
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Simple Past ('finished') backshift hoкर Past Perfect ('had finished') ban jaata hai."
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, Direct Speech mein 4 types ke sentences ho sakte hain:\n\n1. **Declarative** (Statement)\n2. **Interrogative** (Question)\n3. **Imperative** (Command/Request)\n4. **Exclamatory** (Exclamation)\n\nHar type ka अपना punctuation aur structure hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, yeh confusing lag raha hai! Ek-ek karke samjhaiye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Pehle Statement (Declarative) देखते हain - sabse common type!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Okay Sir, ready!"
+        }
+      ],
       "navigation": {
-        "next": "card_32_milestone_m4",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_32_declarative_statement",
+        "button_text": "Type 1: Statement ➔"
       }
     },
     {
-      "card_id": "card_32_milestone_m4",
-      "card_slug": "card_32_milestone_m4",
-      "type": "milestone",
-      "concept_id": "tense_backshift",
+      "card_id": "card_32_declarative_statement",
+      "card_slug": "card_32_declarative_statement",
+      "type": "chat",
+      "concept_id": "declarative_statement",
       "level": 4,
       "progress": {
         "current": 32,
-        "total": 88
+        "total": 62
       },
-      "milestone_payload": {
-        "title": "MODULE COMPLETED!",
-        "badge_emoji": "⏰",
-        "completed_topic": "Tense Backshift Rules",
-        "xp_earned": 65,
-        "milestone_progress": "Module 4/11 Clear",
-        "motivational_quote": "Tense backshift master kar liya! Ab dekhते hain kab ye rule LAGU NAHI hota!"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Declarative Sentence (Statement)**: Simple information देता है, कुछ बताता है।\n\nReporting Verb: said, told, replied, stated, mentioned\nEnding: Full stop (.)\n\nExample:\nHe said, 'I am a student.'\nShe told me, 'I live in Delhi.'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh statement में हमेशा full stop (.) ही aayega end mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Statement = Full stop mandatory.\n\n✅ Ram said, 'I am happy.'\n❌ Ram said, 'I am happy!'\n(यह exclamation है, statement नहीं)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Ab question type?"
+        }
+      ],
       "navigation": {
-        "next": "card_33_present_future_no_backshift",
-        "button_text": "Start Next Module ➔"
+        "next": "card_33_interrogative_question",
+        "button_text": "Type 2: Question ➔"
       }
     },
     {
-      "card_id": "card_33_present_future_no_backshift",
-      "card_slug": "card_33_present_future_no_backshift",
+      "card_id": "card_33_interrogative_question",
+      "card_slug": "card_33_interrogative_question",
       "type": "chat",
-      "concept_id": "backshift_exceptions",
-      "level": 5,
+      "concept_id": "interrogative_question",
+      "level": 4,
       "progress": {
         "current": 33,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ruko, ek important exception samझते hain. Backshift ka rule TABHI lagता hai jab Reporting Verb PAST tense mein ho. Agar Reporting Verb PRESENT ya FUTURE tense mein hai (says, will say), toh reported speech ka tense BILKUL NAHI badalता! Jaise: 'He says, \"I am happy.\"' → 'He says that he is happy.' (koई backshift nahi!)"
+          "text": "**Interrogative Sentence (Question)**: Sawal पूछता है।\n\nReporting Verb: asked, inquired, questioned, demanded\nEnding: Question mark (?)\n\nExample:\nShe asked, 'Where are you going?'\nHe inquired, 'What is your name?'"
         },
         {
           "speaker": "raju",
-          "text": "Achha! Toh sabसे pehले reporting verb ka tense check karna hai - agar 'said' hai tabhi backshift hoगा, agar 'says' ya 'will say' hai toh kuch nahi badleगा andar ka tense?"
+          "text": "Sir, question mark inverted comma के अंदर आएगा?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Hamari Golden Rule याद है?\n\n✅ She asked, 'Where are you?'\n❌ She asked, 'Where are you'?\n\nQuestion mark हमेशा closing inverted comma से पहले! ⭐ SBI PO/SSC का favorite trap!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Noted! Command type kya hota hai?"
         }
       ],
       "navigation": {
-        "next": "card_34_universal_truth",
-        "button_text": "Next Card ➔"
+        "next": "card_34_imperative_command",
+        "button_text": "Type 3: Command ➔"
       }
     },
     {
-      "card_id": "card_34_universal_truth",
-      "card_slug": "card_34_universal_truth",
+      "card_id": "card_34_imperative_command",
+      "card_slug": "card_34_imperative_command",
       "type": "chat",
-      "concept_id": "backshift_exceptions",
-      "level": 5,
+      "concept_id": "imperative_command",
+      "level": 4,
       "progress": {
         "current": 34,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "BPSC ka favorite trap suno - ek aur exception hai jahaan Reporting Verb Past hone par bhi backshift NAHI hota. Jab reported speech UNIVERSAL TRUTH (hamesha sach baат) ya HABITUAL ACTION (roज ki aadat) bataए, tab Simple Present WAISA hi rehта hai. Jaise: 'The teacher said, \"The sun rises in the east.\"' → 'The teacher said that the sun rises in the east.' (change nahi hoga, kyunki ye hamesha sach hai!)"
+          "text": "**Imperative Sentence (Command/Request)**: Order या request देता है।\n\nReporting Verb:\n• Command: ordered, commanded\n• Request: requested, asked, begged\n• Advice: advised, suggested\n\nEnding: Full stop (.) या Exclamation mark (!)"
         },
         {
           "speaker": "raju",
-          "text": "Hain?? Seriously sir? Matlab 'said' hoते huए bhi kuch cases mein tense nahi badleगा? Ye toh sach mein bureaucrat wala trap hai!"
+          "text": "Sir, examples dijiye!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Examples:\n• Teacher ordered, 'Sit down.'\n• He requested, 'Please help me.'\n• Mother advised, 'Study hard.'\n• Commander shouted, 'Fire!'\n\nDhyan do - subject (you) hidden होता है imperative mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaa! Last type exclamation?"
         }
       ],
       "navigation": {
-        "next": "card_35_habitual_historical",
-        "button_text": "Next Card ➔"
+        "next": "card_35_exclamatory",
+        "button_text": "Type 4: Exclamation ➔"
       }
     },
     {
-      "card_id": "card_35_habitual_historical",
-      "card_slug": "card_35_habitual_historical",
+      "card_id": "card_35_exclamatory",
+      "card_slug": "card_35_exclamatory",
       "type": "chat",
-      "concept_id": "backshift_exceptions",
-      "level": 5,
+      "concept_id": "exclamatory_sentence",
+      "level": 4,
       "progress": {
         "current": 35,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Bilkul! Ek aur example - Habitual action: 'She said, \"I go for a walk every morning.\"' → 'She said that she goes for a walk every morning.' Aur Historical facts bhi kabhi nahi badalте: 'The teacher said, \"India got independence in 1947.\"' → 'The teacher said that India got independence in 1947.' (already Simple Past hai, historical fact hone se aur peeche nahi jaata)."
+          "text": "**Exclamatory Sentence (Exclamation)**: Strong emotion express करता है - joy, surprise, anger, pain!\n\nReporting Verb: exclaimed, cried, shouted, screamed\nEnding: Exclamation mark (!)\n\nExample:\nHe exclaimed, 'What a beautiful scene!'\nShe cried, 'Alas! I am ruined!'"
         },
         {
           "speaker": "raju",
-          "text": "Toh teen exceptions yaad rakhна hai - Universal Truth, Habitual Action, aur Historical Facts - inमें tense change nahi karна, chahe reporting verb Past hi kyun na ho!"
+          "text": "Sir, exclamation mark bhi inverted comma के अंदर?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan bilkul!\n\n✅ He shouted, 'Help!'\n❌ He shouted, 'Help'!\n\nSaari ending punctuation (., ?, !) inverted comma के अंदर! ⭐ UPSC/BPSC का repeated trap!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Clear! Ab practice karte hain!"
         }
       ],
       "navigation": {
-        "next": "card_36_quiz1_m5",
-        "button_text": "Next Card ➔"
+        "next": "card_36_quiz_types_q1",
+        "button_text": "Quiz शुरू करो ➔"
       }
     },
     {
-      "card_id": "card_36_quiz1_m5",
-      "card_slug": "card_36_quiz1_m5",
+      "card_id": "card_36_quiz_types_q1",
+      "card_slug": "card_36_quiz_types_q1",
       "type": "quiz",
-      "concept_id": "backshift_exceptions",
-      "level": 5,
+      "concept_id": "sentence_types_quiz",
+      "level": 4,
       "progress": {
         "current": 36,
-        "total": 88
+        "total": 62
       },
       "quiz_payload": {
-        "question": "'The scientist said, \"Water boils at 100 degree Celsius.\"' - Sahi Indirect Speech chunо:",
+        "question": "Quiz 1/3: Which sentence is CORRECTLY written as Direct Speech (Statement)?",
         "options": [
           {
             "id": "A",
-            "text": "The scientist said that water boiled at 100 degree Celsius."
+            "text": "He said, 'I am going to market'."
           },
           {
             "id": "B",
-            "text": "The scientist said that water boils at 100 degree Celsius."
+            "text": "He said, 'I am going to market.'"
           },
           {
             "id": "C",
-            "text": "The scientist said that water had boiled at 100 degree Celsius."
+            "text": "He said 'I am going to market.'"
           },
           {
             "id": "D",
-            "text": "The scientist said that water will boil at 100 degree Celsius."
+            "text": "He said, 'i am going to market.'"
           }
         ],
         "correct_option_id": "B",
-        "explanation": "Ye ek Universal Truth (scientific fact) hai, isliye Simple Present ('boils') waisa hi rehта hai, backshift nahi hoगा."
+        "explanation": "Option B सही है।\n\nErrors:\n• Option A: Full stop inverted comma के बाहर (अंदर होनी चाहिए)\n• Option C: Comma missing after 'said'\n• Option D: 'i' को 'I' capital होना चाहिए\n\n⭐ SBI PO Pattern: Statement में full stop position + comma + capitalization तीनों check करो!"
       },
       "navigation": {
-        "next": "card_37_quiz2_m5",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_37_quiz_types_q2",
+        "button_text": "Next Question ➔"
       }
     },
     {
-      "card_id": "card_37_quiz2_m5",
-      "card_slug": "card_37_quiz2_m5",
+      "card_id": "card_37_quiz_types_q2",
+      "card_slug": "card_37_quiz_types_q2",
       "type": "quiz",
-      "concept_id": "backshift_exceptions",
-      "level": 5,
+      "concept_id": "sentence_types_quiz",
+      "level": 4,
       "progress": {
         "current": 37,
-        "total": 88
+        "total": 62
       },
       "quiz_payload": {
-        "question": "'He will say, \"I am ready.\"' - Sahi Indirect Speech chunо (reporting verb Future hai):",
+        "question": "Quiz 2/3: Identify the sentence type: He exclaimed, 'What a wonderful day!'",
         "options": [
           {
             "id": "A",
-            "text": "He will say that he was ready."
+            "text": "Declarative (Statement)"
           },
           {
             "id": "B",
-            "text": "He will say that he is ready."
+            "text": "Interrogative (Question)"
           },
           {
             "id": "C",
-            "text": "He will say that he had been ready."
+            "text": "Imperative (Command)"
           },
           {
             "id": "D",
-            "text": "He will say that he will be ready."
+            "text": "Exclamatory (Exclamation)"
           }
         ],
-        "correct_option_id": "B",
-        "explanation": "Reporting verb Future ('will say') hone ki wajah se koई backshift nahi hoगा, andar ka tense waisa hi rehta hai: 'that he is ready.'"
+        "correct_option_id": "D",
+        "explanation": "यह Exclamatory sentence है क्योंकि:\n1. Reporting verb 'exclaimed' है\n2. Exclamation mark (!) है\n3. Strong emotion (wonder) express हो रहा है\n4. 'What a...' exclamatory phrase है\n\n⭐ BPSC/Railway Pattern: Sentence type identify करना + reporting verb match करना!"
       },
       "navigation": {
-        "next": "card_38_quiz3_m5",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_38_quiz_types_q3",
+        "button_text": "Last Question ➔"
       }
     },
     {
-      "card_id": "card_38_quiz3_m5",
-      "card_slug": "card_38_quiz3_m5",
+      "card_id": "card_38_quiz_types_q3",
+      "card_slug": "card_38_quiz_types_q3",
       "type": "quiz",
-      "concept_id": "backshift_exceptions",
-      "level": 5,
+      "concept_id": "sentence_types_quiz",
+      "level": 4,
       "progress": {
         "current": 38,
-        "total": 88
+        "total": 62
       },
       "quiz_payload": {
-        "question": "Backshift rule kab APPLY NAHI hota (in mein se sabसे accha combined jawab chunо)?",
+        "question": "Quiz 3/3: Find the error: She asked, 'Where are you going.'",
         "options": [
           {
             "id": "A",
-            "text": "Sirf jab reporting verb Present ho"
+            "text": "Reporting verb 'asked' is wrong"
           },
           {
             "id": "B",
-            "text": "Jab reporting verb Present/Future ho, YA statement Universal Truth/Habitual/Historical fact ho"
+            "text": "Full stop should be question mark"
           },
           {
             "id": "C",
-            "text": "Kabhi bhi exception nahi hota, hamesha backshift hota hai"
+            "text": "Comma after 'asked' is wrong"
           },
           {
             "id": "D",
-            "text": "Sirf jab statement lamba ho"
+            "text": "No error"
           }
         ],
         "correct_option_id": "B",
-        "explanation": "Backshift apply nahi hota jab reporting verb Present/Future ho, ya reported speech Universal Truth, Habitual Action, ya Historical Fact ho - ye teeno hi combined exceptions hain."
+        "explanation": "Error: 'Where are you going' एक question है, इसलिए full stop (.) की जगह question mark (?) होना चाहिए।\n\n✅ Correct: She asked, 'Where are you going?'\n\n'asked' सही reporting verb है questions के लिए। Comma भी सही है।\n\n⭐ SSC CGL/SBI PO Trap: Question sentence में full stop लगा देना (wrong punctuation for sentence type)!"
       },
       "navigation": {
-        "next": "card_39_milestone_m5",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_39_milestone_4",
+        "button_text": "Check Result ➔"
       }
     },
     {
-      "card_id": "card_39_milestone_m5",
-      "card_slug": "card_39_milestone_m5",
+      "card_id": "card_39_milestone_4",
+      "card_slug": "card_39_milestone_4",
       "type": "milestone",
-      "concept_id": "backshift_exceptions",
-      "level": 5,
+      "concept_id": "sentence_types_complete",
+      "level": 4,
       "progress": {
         "current": 39,
-        "total": 88
+        "total": 62
       },
       "milestone_payload": {
-        "title": "MODULE COMPLETED!",
-        "badge_emoji": "🌍",
-        "completed_topic": "Backshift Exceptions (Universal Truth/Habitual/Historical)",
-        "xp_earned": 65,
-        "milestone_progress": "Module 5/11 Clear",
-        "motivational_quote": "Exception rules bhi clear! Ab Time aur Place words ka change dekhते hain!"
+        "title": "MODULE 4 COMPLETED! 🎖️",
+        "badge_emoji": "📝",
+        "completed_topic": "All Sentence Types Mastered",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/5 Clear",
+        "motivational_quote": "Statement, Question, Command, Exclamation - sab clear! Ab SBI PO level traps dekhenge 🎯"
       },
       "navigation": {
-        "next": "card_40_time_words",
-        "button_text": "Start Next Module ➔"
+        "next": "card_40_error_detection_intro",
+        "button_text": "Start Error Detection ➔"
       }
     },
     {
-      "card_id": "card_40_time_words",
-      "card_slug": "card_40_time_words",
+      "card_id": "card_40_error_detection_intro",
+      "card_slug": "card_40_error_detection_intro",
       "type": "chat",
-      "concept_id": "time_place_change",
-      "level": 6,
+      "concept_id": "error_detection_intro",
+      "level": 5,
       "progress": {
         "current": 40,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ab dekhते hain Time words ka change - jab reporting verb Past mein ho, toh time expressions bhi badalते hain. Yaad rakho ye table: now→then, today→that day, tonight→that night, yesterday→the previous day (ya the day before), tomorrow→the next day (ya the following day)."
+          "text": "Raju, ab asli game shuru hota hai! SBI PO, SSC CGL, BPSC mein Direct Speech se 10+ common errors aate hain. Sabko ek-ek karke seekhenge!"
         },
         {
           "speaker": "raju",
-          "text": "Sir itне saare words! 'Yesterday' aur 'tomorrow' toh mujhe roज use karने padते hain - inko yaad rakhна padeगा kaise?"
+          "text": "Sir, yeh सब याद कaise रखूं? Bahut ज़्यादा lag raha hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Tension mat lo! Main 10 most repeated errors bataunga with exam patterns. Tumhe sirf patterns samajhne hain, ratta nahi marna!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Okay Sir, शुरू kijiye!"
         }
       ],
       "navigation": {
-        "next": "card_41_more_time_words",
-        "button_text": "Next Card ➔"
+        "next": "card_41_error_1_inverted_commas",
+        "button_text": "Error Pattern 1 ➔"
       }
     },
     {
-      "card_id": "card_41_more_time_words",
-      "card_slug": "card_41_more_time_words",
+      "card_id": "card_41_error_1_inverted_commas",
+      "card_slug": "card_41_error_1_inverted_commas",
       "type": "chat",
-      "concept_id": "time_place_change",
-      "level": 6,
+      "concept_id": "error_inverted_commas",
+      "level": 5,
       "progress": {
         "current": 41,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Aur suno: 'last night'→'the previous night', 'next week'→'the following week' (ya the week after), 'ago'→'before' (jaise 'two days ago'→'two days before'). Aur Place words bhi badalте hain: 'here'→'there', 'this'→'that', 'these'→'those'. Jaise: 'He said, \"I will meet you here tomorrow.\"' → 'He said that he would meet me there the next day.'"
+          "text": "**Error 1: Missing or Wrong Inverted Commas**\n\n❌ He said, I am going.\n✅ He said, 'I am going.'\n\n❌ He said, 'I am going.\" (mixed)\n✅ He said, 'I am going.' (both single)\n\n⭐ SBI PO/BPSC mein 20% questions yeh error check karte hain!"
         },
         {
           "speaker": "raju",
-          "text": "Achha! Toh 'here' bhi 'there' ban jaata hai, aur 'this/these' bhi 'that/those' - matlab 'najदीक' wale words 'dooर' wale words mein badal jaते hain?"
+          "text": "Matlab opening aur closing match honi chahiye, aur exact words pe hi lagani hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Aur dhyan do - inverted commas sirf reported speech (exact words) pe, reporting clause (He said) pe nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Clear! Next error?"
         }
       ],
       "navigation": {
-        "next": "card_42_context_exception",
-        "button_text": "Next Card ➔"
+        "next": "card_42_error_2_comma",
+        "button_text": "Error Pattern 2 ➔"
       }
     },
     {
-      "card_id": "card_42_context_exception",
-      "card_slug": "card_42_context_exception",
+      "card_id": "card_42_error_2_comma",
+      "card_slug": "card_42_error_2_comma",
       "type": "chat",
-      "concept_id": "time_place_change",
-      "level": 6,
+      "concept_id": "error_comma_missing",
+      "level": 5,
       "progress": {
         "current": 42,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ruko, ek chhota sa clarification. Ye time/place changes exam mein STANDARD maане jaते hain aur BPSC/SSC hamesha ye expect karте hain, chahe practically context same din ho ya na ho. Isliye exam mein hamesha safe rule follow karो - 'now'→'then', 'here'→'there' waghaira, jab tak sentence mein specific exception na di gaई ho."
+          "text": "**Error 2: Missing Comma after Reporting Verb**\n\n❌ He said 'I am happy.'\n✅ He said, 'I am happy.'\n\n❌ She asked 'Where are you?'\n✅ She asked, 'Where are you?'\n\nComma reporting verb (said, asked) के तुरंत बाद mandatory है! ⭐ Railway/SSC का #1 trap!"
         },
         {
           "speaker": "raju",
-          "text": "Samझ gaya sir, exam mein toh formula hi follow karna hai, practical life ki baat baaद mein sochenge!"
+          "text": "Agar reporting clause baad mein ho toh?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Tab comma inverted comma के अंदर:\n\n❌ 'I am happy' he said.\n✅ 'I am happy,' he said.\n\nComma हमेशा दोनों parts (reporting + reported) को separate करती है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Got it! Next?"
         }
       ],
       "navigation": {
-        "next": "card_43_quiz1_m6",
-        "button_text": "Next Card ➔"
+        "next": "card_43_error_3_capital",
+        "button_text": "Error Pattern 3 ➔"
       }
     },
     {
-      "card_id": "card_43_quiz1_m6",
-      "card_slug": "card_43_quiz1_m6",
-      "type": "quiz",
-      "concept_id": "time_place_change",
-      "level": 6,
+      "card_id": "card_43_error_3_capital",
+      "card_slug": "card_43_error_3_capital",
+      "type": "chat",
+      "concept_id": "error_capitalization",
+      "level": 5,
       "progress": {
         "current": 43,
-        "total": 88
+        "total": 62
       },
-      "quiz_payload": {
-        "question": "'He said, \"I will call you tomorrow.\"' - 'tomorrow' kis word mein badleगा?",
-        "options": [
-          {
-            "id": "A",
-            "text": "the next day"
-          },
-          {
-            "id": "B",
-            "text": "the previous day"
-          },
-          {
-            "id": "C",
-            "text": "that day"
-          },
-          {
-            "id": "D",
-            "text": "yesterday"
-          }
-        ],
-        "correct_option_id": "A",
-        "explanation": "'Tomorrow' Indirect Speech mein 'the next day' (ya 'the following day') ban jaata hai."
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Error 3: Wrong Capitalization inside Inverted Commas**\n\n❌ She said, 'i am fine.'\n✅ She said, 'I am fine.'\n\n❌ He said, 'my name is ram.'\n✅ He said, 'My name is Ram.'\n\nInverted commas के अंदर पहला letter capital + proper nouns capital! ⭐ SSC CGL/SBI PO में हर paper में आता है!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh 'I' pronoun toh हमेशा capital?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, 'I' कहीं भी हो - शुरू, बीच, अंत - हमेशा capital:\n\n✅ He said, 'I and my brother are going.'\n✅ She said, 'When I come, I will tell you.'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect! Aage chalein!"
+        }
+      ],
       "navigation": {
-        "next": "card_44_quiz2_m6",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_44_error_4_ending_punctuation",
+        "button_text": "Error Pattern 4 ➔"
       }
     },
     {
-      "card_id": "card_44_quiz2_m6",
-      "card_slug": "card_44_quiz2_m6",
-      "type": "quiz",
-      "concept_id": "time_place_change",
-      "level": 6,
+      "card_id": "card_44_error_4_ending_punctuation",
+      "card_slug": "card_44_error_4_ending_punctuation",
+      "type": "chat",
+      "concept_id": "error_ending_punctuation",
+      "level": 5,
       "progress": {
         "current": 44,
-        "total": 88
+        "total": 62
       },
-      "quiz_payload": {
-        "question": "'She said, \"I bought this book here yesterday.\"' - 'here' kis word mein badleगा?",
-        "options": [
-          {
-            "id": "A",
-            "text": "there"
-          },
-          {
-            "id": "B",
-            "text": "that"
-          },
-          {
-            "id": "C",
-            "text": "now"
-          },
-          {
-            "id": "D",
-            "text": "then"
-          }
-        ],
-        "correct_option_id": "A",
-        "explanation": "'Here' (place word) Indirect Speech mein 'there' ban jaata hai."
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Error 4: Ending Punctuation Outside Inverted Commas**\n\n❌ He said, 'I am happy'.\n✅ He said, 'I am happy.'\n\n❌ She asked, 'Where are you'?\n✅ She asked, 'Where are you?'\n\nFull stop/Question mark/Exclamation mark हमेशा inverted comma के अंदर, बाहर नहीं! ⭐ BPSC/UPSC का ultra-favorite trap!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab closing inverted comma से पहले punctuation?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Dekho sequence:\n\nStatement: 'I am fine.' (full stop पहले, फिर closing ')\nQuestion: 'Where are you?' (? पहले, फिर closing ')\nExclamation: 'Wow!' (! पहले, फिर closing ')"
+        },
+        {
+          "speaker": "raju",
+          "text": "Crystal clear! Next error?"
+        }
+      ],
       "navigation": {
-        "next": "card_45_quiz3_m6",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_45_error_5_reporting_verb",
+        "button_text": "Error Pattern 5 ➔"
       }
     },
     {
-      "card_id": "card_45_quiz3_m6",
-      "card_slug": "card_45_quiz3_m6",
-      "type": "quiz",
-      "concept_id": "time_place_change",
-      "level": 6,
+      "card_id": "card_45_error_5_reporting_verb",
+      "card_slug": "card_45_error_5_reporting_verb",
+      "type": "chat",
+      "concept_id": "error_reporting_verb",
+      "level": 5,
       "progress": {
         "current": 45,
-        "total": 88
+        "total": 62
       },
-      "quiz_payload": {
-        "question": "'He said, \"I met her two days ago.\"' - 'ago' kis word mein badleगा Indirect Speech mein?",
-        "options": [
-          {
-            "id": "A",
-            "text": "after"
-          },
-          {
-            "id": "B",
-            "text": "before"
-          },
-          {
-            "id": "C",
-            "text": "later"
-          },
-          {
-            "id": "D",
-            "text": "since"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "'Ago' Indirect Speech mein 'before' ban jaata hai: 'He said that he had met her two days before.'"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Error 5: Wrong Reporting Verb for Sentence Type**\n\n❌ He asked, 'I am fine.'\n(Question verb + Statement sentence)\n✅ He said, 'I am fine.'\n\n❌ She said, 'Where are you?'\n(Statement verb + Question sentence)\n✅ She asked, 'Where are you?'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab reporting verb aur sentence type match hone chahiye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul!\n• Statement → said, told, replied\n• Question → asked, inquired\n• Command → ordered, commanded, requested\n• Exclamation → exclaimed, cried, shouted\n\n⭐ SSC/Railway में verb-sentence mismatch 15% errors!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Noted! Aur errors?"
+        }
+      ],
       "navigation": {
-        "next": "card_46_milestone_m6",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_46_error_6_told_to",
+        "button_text": "Error Pattern 6 ➔"
       }
     },
     {
-      "card_id": "card_46_milestone_m6",
-      "card_slug": "card_46_milestone_m6",
-      "type": "milestone",
-      "concept_id": "time_place_change",
-      "level": 6,
+      "card_id": "card_46_error_6_told_to",
+      "card_slug": "card_46_error_6_told_to",
+      "type": "chat",
+      "concept_id": "error_told_to",
+      "level": 5,
       "progress": {
         "current": 46,
-        "total": 88
+        "total": 62
       },
-      "milestone_payload": {
-        "title": "MODULE COMPLETED!",
-        "badge_emoji": "🕰️",
-        "completed_topic": "Time & Place Word Changes",
-        "xp_earned": 60,
-        "milestone_progress": "Module 6/11 Clear",
-        "motivational_quote": "Time-Place table yaad ho gaई! Ab Modals ka narration seekhते hain!"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Error 6: Confusing 'said to' and 'told'**\n\nDirect Speech mein dono correct:\n✅ He said to me, 'I am fine.'\n✅ He told me, 'I am fine.'\n\nPar यह wrong:\n❌ He told to me, 'I am fine.'\n\n'told' के साथ 'to' नहीं आता! ⭐ SBI PO/SSC CGL का classic trap!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Toh 'said to' या 'told' - dono sahi, par 'told to' galat?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly!\n\n✅ He said to Ram, 'I am going.'\n✅ He told Ram, 'I am going.'\n❌ He told to Ram, 'I am going.'\n\n'told' already transitive verb hai, 'to' ki zaroorat nahi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Great! Next error?"
+        }
+      ],
       "navigation": {
-        "next": "card_47_modal_will_can",
-        "button_text": "Start Next Module ➔"
+        "next": "card_47_error_7_double_punctuation",
+        "button_text": "Error Pattern 7 ➔"
       }
     },
     {
-      "card_id": "card_47_modal_will_can",
-      "card_slug": "card_47_modal_will_can",
+      "card_id": "card_47_error_7_double_punctuation",
+      "card_slug": "card_47_error_7_double_punctuation",
       "type": "chat",
-      "concept_id": "modal_narration",
-      "level": 7,
+      "concept_id": "error_double_punctuation",
+      "level": 5,
       "progress": {
         "current": 47,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ab Modals ka backshift dekhते hain (jab reporting verb Past ho). 'will' → 'would', 'can' → 'could', 'may' → 'might'. Jaise: 'He said, \"I will help you.\"' → 'He said that he would help me.' 'She said, \"I can swim.\"' → 'She said that she could swim.'"
+          "text": "**Error 7: Double Punctuation**\n\n❌ He said, 'I am happy.'. (full stop दो बार)\n✅ He said, 'I am happy.'\n\n❌ She asked, 'Where are you?'? (question mark दो बार)\n✅ She asked, 'Where are you?'\n\nEnding punctuation एक ही बार - inverted comma के अंदर! ⭐ Railway/BPSC trap!"
         },
         {
           "speaker": "raju",
-          "text": "Achha, toh ye teen modals bhi ek step peeche chale jaते hain, past tense mein - same jaisa verb ka hota hai?"
+          "text": "Matlab inverted comma के अंदर full stop/question mark dene के बाद बाहर फिर से नहीं देनी?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Sentence पूरी हो गई inverted comma के अंदर ही। बाहर कोई punctuation नहीं चाहिए।\n\n✅ Correct ending: 'I am happy.'\n❌ Wrong: 'I am happy.'."
+        },
+        {
+          "speaker": "raju",
+          "text": "Clear! Aur patterns?"
         }
       ],
       "navigation": {
-        "next": "card_48_modals_no_change",
-        "button_text": "Next Card ➔"
+        "next": "card_48_error_8_question_statement",
+        "button_text": "Error Pattern 8 ➔"
       }
     },
     {
-      "card_id": "card_48_modals_no_change",
-      "card_slug": "card_48_modals_no_change",
+      "card_id": "card_48_error_8_question_statement",
+      "card_slug": "card_48_error_8_question_statement",
       "type": "chat",
-      "concept_id": "modal_narration",
-      "level": 7,
+      "concept_id": "error_question_statement_confusion",
+      "level": 5,
       "progress": {
         "current": 48,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Yahin sabसे bada trap hai jo SSC/BPSC baar-baar poochते hain - kuch Modals PEHLE se hi 'past-type' honे ki wajah se KABHI CHANGE NAHI hote: could, would, should, might, ought to, used to, aur need not - ये saat modals hamesha WAISे hi rehते hain, chahe reporting verb Past ho ya Present."
+          "text": "**Error 8: Question Structure with Statement Punctuation**\n\n❌ He asked, 'Where are you going.'\n(Question structure + full stop)\n✅ He asked, 'Where are you going?'\n\n❌ She said, 'Are you fine.'\n(Question + wrong verb + full stop)\n✅ She asked, 'Are you fine?'"
         },
         {
           "speaker": "raju",
-          "text": "Achhaaaa! Toh 'could', 'would', 'should' pehले se hi 'past version' hain, isliye inhe aage peeche nahi le jaना - ye toh yaad rakhने layak trick hai!"
+          "text": "Matlab agar sentence में 'Where/What/When/Why/How' hai ya structure question type hai, toh question mark mandatory?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Perfect! Aur reporting verb भी 'asked/inquired' hona chahiye, 'said' नहीं!\n\n⭐ SBI PO Level Trap: Question words देखकर तुरंत:\n1. Reporting verb check करो (asked?)\n2. Ending punctuation (?) check करो!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Noted! Next?"
         }
       ],
       "navigation": {
-        "next": "card_49_must_exception",
-        "button_text": "Next Card ➔"
+        "next": "card_49_error_9_exclamation",
+        "button_text": "Error Pattern 9 ➔"
       }
     },
     {
-      "card_id": "card_49_must_exception",
-      "card_slug": "card_49_must_exception",
+      "card_id": "card_49_error_9_exclamation",
+      "card_slug": "card_49_error_9_exclamation",
       "type": "chat",
-      "concept_id": "modal_narration",
-      "level": 7,
+      "concept_id": "error_exclamation",
+      "level": 5,
       "progress": {
         "current": 49,
-        "total": 88
+        "total": 62
       },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ab 'must' ka interesting case suno - ye do situations mein alag behave karта hai. Jab 'must' OBLIGATION (majboori) dikha raha ho, toh Indirect mein 'had to' ban jaata hai: 'He said, \"I must go.\"' → 'He said that he had to go.' Lekin jab 'must' STRONG LOGICAL DEDUCTION/possibility dikha raha ho, toh 'must' WAISA hi rehта hai: 'He said, \"She must be rich.\"' → 'He said that she must be rich.'"
+          "text": "**Error 9: Exclamatory Sentence with Wrong Punctuation/Verb**\n\n❌ He exclaimed, 'What a scene.'\n(Exclamatory verb + full stop)\n✅ He exclaimed, 'What a scene!'\n\n❌ He said, 'Alas! I am ruined!'\n(Strong emotion + wrong verb)\n✅ He exclaimed, 'Alas! I am ruined!'"
         },
         {
           "speaker": "raju",
-          "text": "Hain?? Ye toh bahut tricky hai sir! Toh 'must' ka meaning dekhкर decide karna paडेगा ki 'had to' banेगा ya waisa hi rahेगा?"
+          "text": "Toh 'What/How/Alas/Hurrah' jaise words हों तoh exclamation mark aur 'exclaimed/cried' verb?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Exclamatory indicators:\n• Words: What, How, Alas, Hurrah, Oh, Ah\n• Reporting verbs: exclaimed, cried, shouted\n• Ending: Exclamation mark (!)\n\n⭐ UPSC/BPSC में exclamatory sentences की errors आती हैं!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Great! Last error pattern?"
         }
       ],
       "navigation": {
-        "next": "card_50_guess_m7",
-        "button_text": "Next Card ➔"
+        "next": "card_50_error_10_complex",
+        "button_text": "Error Pattern 10 ➔"
       }
     },
     {
-      "card_id": "card_50_guess_m7",
-      "card_slug": "card_50_guess_m7",
-      "type": "guess",
-      "concept_id": "modal_narration",
-      "level": 7,
+      "card_id": "card_50_error_10_complex",
+      "card_slug": "card_50_error_10_complex",
+      "type": "chat",
+      "concept_id": "error_complex_sentences",
+      "level": 5,
       "progress": {
         "current": 50,
-        "total": 88
+        "total": 62
       },
-      "guess_payload": {
-        "question": "Guess karo - 'He said, \"I would help you if I could.\"' ka sahi Indirect Speech kya hoga?",
-        "options": [
-          {
-            "id": "A",
-            "text": "He said that he would help me if he could."
-          },
-          {
-            "id": "B",
-            "text": "He said that he will help me if he can."
-          },
-          {
-            "id": "C",
-            "text": "He said that he had helped me if he had could."
-          },
-          {
-            "id": "D",
-            "text": "He said that he would have helped me if he would."
-          }
-        ],
-        "correct_option_id": "A",
-        "explanation": "'Would' aur 'could' pehले se hi non-changeable modals hain, isliye waise hi rehते hain: 'He said that he would help me if he could.'"
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "**Error 10: Multiple Errors in One Sentence (SBI PO Level)**\n\n❌ He said 'i am going to Delhi'?\n\nErrors:\n1. Comma missing after 'said'\n2. 'i' should be 'I'\n3. Question mark wrong (statement hai)\n4. Full stop inverted comma के अंदर चाहिए\n\n✅ He said, 'I am going to Delhi.'"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Ek sentence mein 4 errors! Exam mein kaise identify karun sab?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Systematic approach:\n1. Inverted commas check (opening/closing match?)\n2. Comma check (reporting verb के बाद?)\n3. Capital letter check (पहला letter?)\n4. Reporting verb check (sentence type match?)\n5. Ending punctuation check (अंदर? सही type?)\n\nYeh 5 steps हर sentence पे apply करो!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect checklist! Ab practice karna hai!"
+        }
+      ],
       "navigation": {
-        "next": "card_51_quiz1_m7",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_51_quiz_error_q1",
+        "button_text": "SBI PO Level Quiz! ➔"
       }
     },
     {
-      "card_id": "card_51_quiz1_m7",
-      "card_slug": "card_51_quiz1_m7",
+      "card_id": "card_51_quiz_error_q1",
+      "card_slug": "card_51_quiz_error_q1",
       "type": "quiz",
-      "concept_id": "modal_narration",
-      "level": 7,
+      "concept_id": "error_detection_quiz",
+      "level": 5,
       "progress": {
         "current": 51,
-        "total": 88
+        "total": 62
       },
       "quiz_payload": {
-        "question": "'She said, \"I must complete this project.\"' (Obligation) - Sahi Indirect Speech chunо:",
+        "question": "Quiz 1/3 (SBI PO Level): How many errors are in this sentence?\n\nShe said 'Where are you going.'",
         "options": [
           {
             "id": "A",
-            "text": "She said that she must complete that project."
+            "text": "No error"
           },
           {
             "id": "B",
-            "text": "She said that she had to complete that project."
+            "text": "One error"
           },
           {
             "id": "C",
-            "text": "She said that she should complete that project."
+            "text": "Two errors"
           },
           {
             "id": "D",
-            "text": "She said that she would complete that project."
+            "text": "Three errors"
           }
         ],
-        "correct_option_id": "B",
-        "explanation": "'Must' (obligation/majboori) Indirect Speech mein 'had to' ban jaata hai."
+        "correct_option_id": "D",
+        "explanation": "Three errors:\n\n1. **Comma missing** after 'said'\n2. **Wrong reporting verb**: 'said' should be 'asked' (question hai)\n3. **Wrong ending punctuation**: full stop (.) की जगह question mark (?) होना चाहिए\n\n✅ Correct: She asked, 'Where are you going?'\n\n⭐ SBI PO Pattern: Multiple errors को identify करना + count करना!"
       },
       "navigation": {
-        "next": "card_52_quiz2_m7",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_52_quiz_error_q2",
+        "button_text": "Next Challenge ➔"
       }
     },
     {
-      "card_id": "card_52_quiz2_m7",
-      "card_slug": "card_52_quiz2_m7",
+      "card_id": "card_52_quiz_error_q2",
+      "card_slug": "card_52_quiz_error_q2",
       "type": "quiz",
-      "concept_id": "modal_narration",
-      "level": 7,
+      "concept_id": "error_detection_quiz",
+      "level": 5,
       "progress": {
         "current": 52,
-        "total": 88
+        "total": 62
       },
       "quiz_payload": {
-        "question": "In mein se kaunसा Modal Indirect Speech mein KABHI change NAHI hota?",
+        "question": "Quiz 2/3 (SBI PO Level): Identify the error:\n\nHe told to me, 'i will come tomorrow.'",
         "options": [
           {
             "id": "A",
-            "text": "will"
+            "text": "'told to' should be 'told' or 'said to'"
           },
           {
             "id": "B",
-            "text": "can"
+            "text": "'i' should be 'I'"
           },
           {
             "id": "C",
-            "text": "should"
+            "text": "Both A and B"
           },
           {
             "id": "D",
-            "text": "may"
+            "text": "No error"
           }
         ],
         "correct_option_id": "C",
-        "explanation": "'Should' un saat modals mein se ek hai (could, would, should, might, ought to, used to, need not) jo kabhi change nahi hote."
+        "explanation": "Two errors:\n\n1. **'told to'** गलत है → 'told me' या 'said to me' होना चाहिए\n   ('told' के साथ 'to' नहीं आता!)\n\n2. **'i'** को capital 'I' होना चाहिए\n\n✅ Correct options:\n• He told me, 'I will come tomorrow.'\n• He said to me, 'I will come tomorrow.'\n\n⭐ SSC CGL/SBI PO Classic Trap: 'told to' combination!"
       },
       "navigation": {
-        "next": "card_53_quiz3_m7",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_53_quiz_error_q3",
+        "button_text": "Final Challenge ➔"
       }
     },
     {
-      "card_id": "card_53_quiz3_m7",
-      "card_slug": "card_53_quiz3_m7",
+      "card_id": "card_53_quiz_error_q3",
+      "card_slug": "card_53_quiz_error_q3",
       "type": "quiz",
-      "concept_id": "modal_narration",
-      "level": 7,
+      "concept_id": "error_detection_quiz",
+      "level": 5,
       "progress": {
         "current": 53,
-        "total": 88
+        "total": 62
       },
       "quiz_payload": {
-        "question": "'He said, \"She may be at home.\"' (possibility) - Sahi Indirect Speech chunо:",
+        "question": "Quiz 3/3 (SBI PO Level): Find ALL errors:\n\nThe teacher said, 'what a beautiful answer'!",
         "options": [
           {
             "id": "A",
-            "text": "He said that she might be at home."
+            "text": "Only capitalization error"
           },
           {
             "id": "B",
-            "text": "He said that she may be at home."
+            "text": "Only punctuation error"
           },
           {
             "id": "C",
-            "text": "He said that she can be at home."
+            "text": "Capitalization + Punctuation + Reporting verb errors"
           },
           {
             "id": "D",
-            "text": "He said that she must be at home."
+            "text": "No error"
           }
         ],
-        "correct_option_id": "A",
-        "explanation": "'May' Past reporting verb ke saath backshift hoкर 'might' ban jaata hai."
+        "correct_option_id": "C",
+        "explanation": "Three errors:\n\n1. **'what'** को 'What' capital होना चाहिए (sentence start)\n\n2. **Exclamation mark (!) position**: inverted comma के बाहर है, अंदर होना चाहिए\n\n3. **Reporting verb 'said'** गलत है → 'exclaimed' होना चाहिए (exclamatory sentence)\n\n✅ Correct: The teacher exclaimed, 'What a beautiful answer!'\n\n⭐ SBI PO Ultimate Trap: एक sentence में तीनों major errors!"
       },
       "navigation": {
-        "next": "card_54_milestone_m7",
-        "button_text": "Check Answer & Continue ➔"
+        "next": "card_54_milestone_5",
+        "button_text": "Check Final Result ➔"
       }
     },
     {
-      "card_id": "card_54_milestone_m7",
-      "card_slug": "card_54_milestone_m7",
+      "card_id": "card_54_milestone_5",
+      "card_slug": "card_54_milestone_5",
       "type": "milestone",
-      "concept_id": "modal_narration",
-      "level": 7,
+      "concept_id": "error_detection_complete",
+      "level": 5,
       "progress": {
         "current": 54,
-        "total": 88
+        "total": 62
       },
       "milestone_payload": {
-        "title": "MODULE COMPLETED!",
-        "badge_emoji": "💪",
-        "completed_topic": "Modal Verbs in Narration",
-        "xp_earned": 65,
-        "milestone_progress": "Module 7/11 Clear",
-        "motivational_quote": "Modals ka twist samझ aa gaya! Ab Questions (Interrogative) ka narration seekhते hain!"
+        "title": "MODULE 5 COMPLETED! 🏅",
+        "badge_emoji": "🎯",
+        "completed_topic": "SBI PO Error Detection Mastered",
+        "xp_earned": 80,
+        "milestone_progress": "Module 5/5 Clear",
+        "motivational_quote": "Sab error patterns clear! Ab Officer-level revision karte hain 💪"
       },
       "navigation": {
-        "next": "card_55_yes_no_questions",
-        "button_text": "Start Next Module ➔"
+        "next": "card_55_summary",
+        "button_text": "Officer Revision ➔"
       }
     },
     {
-      "card_id": "card_55_yes_no_questions",
-      "card_slug": "card_55_yes_no_questions",
-      "type": "chat",
-      "concept_id": "interrogative_narration",
-      "level": 8,
+      "card_id": "card_55_summary",
+      "card_slug": "card_55_summary",
+      "type": "summary",
+      "concept_id": "direct_speech_summary",
+      "level": 5,
       "progress": {
         "current": 55,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab Questions (Interrogative) sentences ka narration dekhते hain - ye alag rule follow karта hai. Yes/No questions ke liye (jinka jawab sirf Yes ya No mein aata hai): Reporting verb 'said/said to' ki jagah 'ASKED' aata hai, aur connective 'that' ki jagah 'IF' ya 'WHETHER' aata hai. Jaise: 'He said to me, \"Do you like tea?\"' → 'He asked me if I liked tea.'"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha! Toh 'said' ki jagah 'asked' aur 'that' ki jagah 'if/whether' - dono changes ek saath yaad rakhने hain!"
-        }
-      ],
-      "navigation": {
-        "next": "card_56_word_order_question",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_56_word_order_question",
-      "card_slug": "card_56_word_order_question",
-      "type": "chat",
-      "concept_id": "interrogative_narration",
-      "level": 8,
-      "progress": {
-        "current": 56,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Tumne notice kiya? Direct question mein word order 'Do you like' tha (Verb pehले), lekin Indirect mein 'if I liked' ho gaya (Subject pehле, jaise ek normal statement)! Universal rule: Question ke andar word order STATEMENT jaisa (Subject+Verb) ho jaata hai, aur question mark (?) hат kar full stop (.) aa jaata hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ohh! Toh Indirect mein andar ka part ab question nahi rehta, ek normal sentence jaisa ban jaata hai - isliye word order bhi normal ho jaata hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_57_wh_questions",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_57_wh_questions",
-      "card_slug": "card_57_wh_questions",
-      "type": "chat",
-      "concept_id": "interrogative_narration",
-      "level": 8,
-      "progress": {
-        "current": 57,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab Wh-questions (what, where, when, who, why, how) dekhते hain. Yahaan 'if/whether' ki ZAROORAT NAHI, kyunki Wh-word KHUD connective ban jaata hai! Jaise: 'He said to her, \"Where do you live?\"' → 'He asked her where she lived.' Dekho 'where' hi 'that' ki jagah kaam kar raha hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha! Toh Wh-word hone par 'if/whether' bilkul nahi lagाना, wo khud hi connective ban jaata hai - ye toh yaad rakhne layak alag rule hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_58_do_does_did_removed",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_58_do_does_did_removed",
-      "card_slug": "card_58_do_does_did_removed",
-      "type": "chat",
-      "concept_id": "interrogative_narration",
-      "level": 8,
-      "progress": {
-        "current": 58,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ek aakhri important point - jab Direct question mein 'Do/Does/Did' ho, toh Indirect mein ye HAT जाते hain aur main verb apne normal tense mein aa jaati hai (backshift ke saath). Jaise: 'She said, \"What do you want?\"' → 'She asked what I wanted.' ('do' gayab ho gaya, 'want' 'wanted' ban gaya)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha! Toh 'do/does/did' bilkul use hi nahi karна Indirect mein - bas verb ko sahi tense mein badalна hai, ye toh SSC ka common trap ban sakта hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_59_quiz1_m8",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_59_quiz1_m8",
-      "card_slug": "card_59_quiz1_m8",
-      "type": "quiz",
-      "concept_id": "interrogative_narration",
-      "level": 8,
-      "progress": {
-        "current": 59,
-        "total": 88
-      },
-      "quiz_payload": {
-        "question": "'He said to me, \"Are you coming to the party?\"' - Sahi Indirect Speech chunо:",
-        "options": [
-          {
-            "id": "A",
-            "text": "He asked me that I was coming to the party."
-          },
-          {
-            "id": "B",
-            "text": "He asked me if I was coming to the party."
-          },
-          {
-            "id": "C",
-            "text": "He asked me was I coming to the party."
-          },
-          {
-            "id": "D",
-            "text": "He told me if I was coming to the party."
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Yes/No question ke liye reporting verb 'asked' aur connective 'if/whether' use hota hai, word order normal statement jaisa: 'He asked me if I was coming to the party.'"
-      },
-      "navigation": {
-        "next": "card_60_quiz2_m8",
-        "button_text": "Check Answer & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_60_quiz2_m8",
-      "card_slug": "card_60_quiz2_m8",
-      "type": "quiz",
-      "concept_id": "interrogative_narration",
-      "level": 8,
-      "progress": {
-        "current": 60,
-        "total": 88
-      },
-      "quiz_payload": {
-        "question": "'She said to him, \"Where do you work?\"' - Sahi Indirect Speech chunо:",
-        "options": [
-          {
-            "id": "A",
-            "text": "She asked him if where he worked."
-          },
-          {
-            "id": "B",
-            "text": "She asked him where did he work."
-          },
-          {
-            "id": "C",
-            "text": "She asked him where he worked."
-          },
-          {
-            "id": "D",
-            "text": "She told him where he worked."
-          }
-        ],
-        "correct_option_id": "C",
-        "explanation": "Wh-question mein 'where' khud connective banta hai (if/whether nahi lagta), 'do' hat jaata hai aur verb 'worked' backshift ho jaata hai: 'She asked him where he worked.'"
-      },
-      "navigation": {
-        "next": "card_61_quiz3_m8",
-        "button_text": "Check Answer & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_61_quiz3_m8",
-      "card_slug": "card_61_quiz3_m8",
-      "type": "quiz",
-      "concept_id": "interrogative_narration",
-      "level": 8,
-      "progress": {
-        "current": 61,
-        "total": 88
-      },
-      "quiz_payload": {
-        "question": "Yes/No questions aur Wh-questions ke narration mein sabसे बड़ा farak kya hai?",
-        "options": [
-          {
-            "id": "A",
-            "text": "Reporting verb dono mein alag hota hai"
-          },
-          {
-            "id": "B",
-            "text": "Yes/No mein 'if/whether' lagता hai, Wh-questions mein Wh-word khud connective banता hai"
-          },
-          {
-            "id": "C",
-            "text": "Wh-questions kabhi Indirect nahi bante"
-          },
-          {
-            "id": "D",
-            "text": "Yes/No questions mein tense change nahi hota"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Yes/No questions mein connective 'if/whether' use hota hai, jabki Wh-questions mein Wh-word (what, where, when, etc.) khud hi connective ka kaam karता hai."
-      },
-      "navigation": {
-        "next": "card_62_milestone_m8",
-        "button_text": "Check Answer & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_62_milestone_m8",
-      "card_slug": "card_62_milestone_m8",
-      "type": "milestone",
-      "concept_id": "interrogative_narration",
-      "level": 8,
-      "progress": {
-        "current": 62,
-        "total": 88
-      },
-      "milestone_payload": {
-        "title": "MODULE COMPLETED!",
-        "badge_emoji": "❓",
-        "completed_topic": "Interrogative Sentences Narration",
-        "xp_earned": 65,
-        "milestone_progress": "Module 8/11 Clear",
-        "motivational_quote": "Questions ka narration clear! Ab Commands aur Requests seekhते hain!"
-      },
-      "navigation": {
-        "next": "card_63_command_narration",
-        "button_text": "Start Next Module ➔"
-      }
-    },
-    {
-      "card_id": "card_63_command_narration",
-      "card_slug": "card_63_command_narration",
-      "type": "chat",
-      "concept_id": "imperative_narration",
-      "level": 9,
-      "progress": {
-        "current": 63,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab Imperative (order/command) sentences ka narration dekhते hain. Universal rule: Reporting verb 'ORDERED' ya 'COMMANDED' ban jaata hai, aur main verb 'TO + V1' (infinitive) form mein aa jaata hai - koई 'that' clause nahi banता. Jaise: 'The officer said to the soldiers, \"March forward.\"' → 'The officer ordered the soldiers to march forward.'"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha! Toh order wale sentence mein 'that' bilkul use hi nahi karна, seeधे 'to + verb' laगाना hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_64_request_narration",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_64_request_narration",
-      "card_slug": "card_64_request_narration",
-      "type": "chat",
-      "concept_id": "imperative_narration",
-      "level": 9,
-      "progress": {
-        "current": 64,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bilkul sahi! Ab Request (jab sentence mein 'Please' ho) dekho - reporting verb 'REQUESTED' ban jaata hai, aur 'Please' word hат jaata hai: 'He said to me, \"Please help me.\"' → 'He requested me to help him.' Dekho 'Please' gayab ho gaya, aur verb 'to help' ban gaya."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha, matlab 'Please' delete ho jaata hai, aur uski jagah 'requested' word hi ye politeness show kar deta hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_65_negative_imperative_narration",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_65_negative_imperative_narration",
-      "card_slug": "card_65_negative_imperative_narration",
-      "type": "chat",
-      "concept_id": "imperative_narration",
-      "level": 9,
-      "progress": {
-        "current": 65,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab Negative Imperative (mana karна) ka rule suno - jab Direct speech mein 'Do not' ho, toh Indirect mein 'NOT TO + V1' formula lagता hai. Jaise: 'The teacher said to the students, \"Do not make noise.\"' → 'The teacher ordered the students not to make noise.' Bas 'to' se pehле 'not' laगाना hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha, matlab mana karна ho toh bas 'not' ko 'to' se pehле jodना hai - 'not to make', 'not to go' aise?"
-        }
-      ],
-      "navigation": {
-        "next": "card_66_advice_narration",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_66_advice_narration",
-      "card_slug": "card_66_advice_narration",
-      "type": "chat",
-      "concept_id": "imperative_narration",
-      "level": 9,
-      "progress": {
-        "current": 66,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ek aakhri type - Advice (salaah) ka narration. Jab Direct speech mein salaah di jaाई ho (aksar 'should' ke saath), toh reporting verb 'ADVISED' ban jaata hai. Jaise: 'The doctor said to me, \"You should exercise daily.\"' → 'The doctor advised me to exercise daily.' Yahaan bhi 'to + V1' formula follow hota hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ab pattern samझ aa raha hai - Order='ordered', Request='requested', Advice='advised' - sabmein reporting verb hi meaning batा deta hai, aur 'to+verb' formula common hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_67_quiz1_m9",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_67_quiz1_m9",
-      "card_slug": "card_67_quiz1_m9",
-      "type": "quiz",
-      "concept_id": "imperative_narration",
-      "level": 9,
-      "progress": {
-        "current": 67,
-        "total": 88
-      },
-      "quiz_payload": {
-        "question": "'The general said to the soldiers, \"Attack the enemy.\"' - Sahi Indirect Speech chunо:",
-        "options": [
-          {
-            "id": "A",
-            "text": "The general said that the soldiers should attack the enemy."
-          },
-          {
-            "id": "B",
-            "text": "The general ordered the soldiers to attack the enemy."
-          },
-          {
-            "id": "C",
-            "text": "The general requested the soldiers to attack the enemy."
-          },
-          {
-            "id": "D",
-            "text": "The general asked the soldiers if they attack the enemy."
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Command/Order ke liye reporting verb 'ordered' aur 'to + V1' formula use hota hai: 'The general ordered the soldiers to attack the enemy.'"
-      },
-      "navigation": {
-        "next": "card_68_quiz2_m9",
-        "button_text": "Check Answer & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_68_quiz2_m9",
-      "card_slug": "card_68_quiz2_m9",
-      "type": "quiz",
-      "concept_id": "imperative_narration",
-      "level": 9,
-      "progress": {
-        "current": 68,
-        "total": 88
-      },
-      "quiz_payload": {
-        "question": "'She said to the children, \"Please do not shout.\"' - Sahi Indirect Speech chunо:",
-        "options": [
-          {
-            "id": "A",
-            "text": "She ordered the children not to shout."
-          },
-          {
-            "id": "B",
-            "text": "She requested the children not to shout."
-          },
-          {
-            "id": "C",
-            "text": "She said the children do not shout."
-          },
-          {
-            "id": "D",
-            "text": "She advised the children shout not."
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "'Please' hone se 'requested' aayega, aur negative imperative ka formula 'not to + V1' hai: 'She requested the children not to shout.'"
-      },
-      "navigation": {
-        "next": "card_69_quiz3_m9",
-        "button_text": "Check Answer & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_69_quiz3_m9",
-      "card_slug": "card_69_quiz3_m9",
-      "type": "quiz",
-      "concept_id": "imperative_narration",
-      "level": 9,
-      "progress": {
-        "current": 69,
-        "total": 88
-      },
-      "quiz_payload": {
-        "question": "Imperative sentences ke Indirect Speech mein connective 'that' aur 'if/whether' ka kya role hota hai?",
-        "options": [
-          {
-            "id": "A",
-            "text": "'that' use hota hai"
-          },
-          {
-            "id": "B",
-            "text": "'if/whether' use hota hai"
-          },
-          {
-            "id": "C",
-            "text": "Dono mein se koई nahi, 'to + V1' formula use hota hai"
-          },
-          {
-            "id": "D",
-            "text": "Dono use hote hain saath mein"
-          }
-        ],
-        "correct_option_id": "C",
-        "explanation": "Imperative sentences mein na toh 'that' na 'if/whether' use hota hai - seeधे 'to + V1' (infinitive) formula follow hota hai."
-      },
-      "navigation": {
-        "next": "card_70_milestone_m9",
-        "button_text": "Check Answer & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_70_milestone_m9",
-      "card_slug": "card_70_milestone_m9",
-      "type": "milestone",
-      "concept_id": "imperative_narration",
-      "level": 9,
-      "progress": {
-        "current": 70,
-        "total": 88
-      },
-      "milestone_payload": {
-        "title": "MODULE COMPLETED!",
-        "badge_emoji": "📢",
-        "completed_topic": "Imperative Sentences Narration",
-        "xp_earned": 65,
-        "milestone_progress": "Module 9/11 Clear",
-        "motivational_quote": "Commands, Requests, Advice - sab clear! Ab Exclamatory aur Optative dekhते hain!"
-      },
-      "navigation": {
-        "next": "card_71_exclamatory_narration",
-        "button_text": "Start Next Module ➔"
-      }
-    },
-    {
-      "card_id": "card_71_exclamatory_narration",
-      "card_slug": "card_71_exclamatory_narration",
-      "type": "chat",
-      "concept_id": "exclamatory_optative_narration",
-      "level": 10,
-      "progress": {
-        "current": 71,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab Exclamatory sentences (khushi/dukh/aashcharya wale) ka narration dekhते hain. Universal rule: Reporting verb 'EXCLAIMED WITH JOY/SORROW/WONDER' (emotion ke hisaab se) ban jaata hai, connective 'that' aata hai, aur Interjection (Hurrah!, Alas!, Wow!) HAT जाता hai. 'What/How' wale structure ko normal statement mein badal dete hain, aur emphasis dikhाने ke liye 'very' ya 'great' add karте hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha! Toh 'Hurrah!' jaise words gayab ho jaते hain, aur 'exclaimed with joy that' jaisa kuch aa jaata hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_72_exclamatory_example",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_72_exclamatory_example",
-      "card_slug": "card_72_exclamatory_example",
-      "type": "chat",
-      "concept_id": "exclamatory_optative_narration",
-      "level": 10,
-      "progress": {
-        "current": 72,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Example dekho: 'He said, \"Hurrah! I have won the race.\"' → 'He exclaimed with joy that he had won the race.' Aur 'What a beautiful flower it is!' → 'She exclaimed that it was a very beautiful flower.' Dekho 'What' hат gaya, aur 'very' add ho gaya emphasis dikhाने ke liye."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha, toh 'What'/'How' wale structure ko simple statement mein convert karke 'very' laगाना hai - ab clear ho gaya!"
-        }
-      ],
-      "navigation": {
-        "next": "card_73_optative_narration",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_73_optative_narration",
-      "card_slug": "card_73_optative_narration",
-      "type": "chat",
-      "concept_id": "exclamatory_optative_narration",
-      "level": 10,
-      "progress": {
-        "current": 73,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC TRE Favorite: Ab Optative (wish/prayer, jo 'May' se shuru hote hain) ka narration - yaad hai humne pichले chapter mein Bihar Board ki special category dekhी thi? Inka formula hai: Reporting verb 'WISHED/PRAYED THAT' + Subject + MIGHT + V1. Jaise: 'He said, \"May you live long!\"' → 'He wished that I might live long.'"
-        },
-        {
-          "speaker": "raju",
-          "text": "Yaad hai sir! Optative wo special category hai jo BSEB alag maanती hai. Ab iska narration bhi 'wished that...might' formula follow karta hai - noted!"
-        }
-      ],
-      "navigation": {
-        "next": "card_74_quiz1_m10",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_74_quiz1_m10",
-      "card_slug": "card_74_quiz1_m10",
-      "type": "quiz",
-      "concept_id": "exclamatory_optative_narration",
-      "level": 10,
-      "progress": {
-        "current": 74,
-        "total": 88
-      },
-      "quiz_payload": {
-        "question": "'She said, \"Alas! I have lost my purse.\"' - Sahi Indirect Speech chunо:",
-        "options": [
-          {
-            "id": "A",
-            "text": "She said that she had lost her purse."
-          },
-          {
-            "id": "B",
-            "text": "She exclaimed with sorrow that she had lost her purse."
-          },
-          {
-            "id": "C",
-            "text": "She exclaimed with joy that she had lost her purse."
-          },
-          {
-            "id": "D",
-            "text": "She asked if she had lost her purse."
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "'Alas!' dukh (sorrow) ka interjection hai, isliye 'exclaimed with sorrow that' use hoga: 'She exclaimed with sorrow that she had lost her purse.'"
-      },
-      "navigation": {
-        "next": "card_75_quiz2_m10",
-        "button_text": "Check Answer & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_75_quiz2_m10",
-      "card_slug": "card_75_quiz2_m10",
-      "type": "quiz",
-      "concept_id": "exclamatory_optative_narration",
-      "level": 10,
-      "progress": {
-        "current": 75,
-        "total": 88
-      },
-      "quiz_payload": {
-        "question": "'The old man said, \"May you be happy always!\"' - Sahi Indirect Speech chunо:",
-        "options": [
-          {
-            "id": "A",
-            "text": "The old man wished that I might be happy always."
-          },
-          {
-            "id": "B",
-            "text": "The old man said that I would be happy always."
-          },
-          {
-            "id": "C",
-            "text": "The old man exclaimed that I was happy always."
-          },
-          {
-            "id": "D",
-            "text": "The old man asked if I was happy always."
-          }
-        ],
-        "correct_option_id": "A",
-        "explanation": "Optative (wish) sentence ka formula hai 'wished that + Subject + might + V1': 'The old man wished that I might be happy always.'"
-      },
-      "navigation": {
-        "next": "card_76_quiz3_m10",
-        "button_text": "Check Answer & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_76_quiz3_m10",
-      "card_slug": "card_76_quiz3_m10",
-      "type": "quiz",
-      "concept_id": "exclamatory_optative_narration",
-      "level": 10,
-      "progress": {
-        "current": 76,
-        "total": 88
-      },
-      "quiz_payload": {
-        "question": "'He said, \"What a lovely garden this is!\"' - Sahi Indirect Speech chunо:",
-        "options": [
-          {
-            "id": "A",
-            "text": "He exclaimed that it was a very lovely garden."
-          },
-          {
-            "id": "B",
-            "text": "He said what a lovely garden it was."
-          },
-          {
-            "id": "C",
-            "text": "He wished that it might be a lovely garden."
-          },
-          {
-            "id": "D",
-            "text": "He asked if it was a lovely garden."
-          }
-        ],
-        "correct_option_id": "A",
-        "explanation": "Exclamatory sentence ka narration formula hai - 'What' hataकर normal statement banана aur 'very' add karна: 'He exclaimed that it was a very lovely garden.'"
-      },
-      "navigation": {
-        "next": "card_77_milestone_m10",
-        "button_text": "Check Answer & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_77_milestone_m10",
-      "card_slug": "card_77_milestone_m10",
-      "type": "milestone",
-      "concept_id": "exclamatory_optative_narration",
-      "level": 10,
-      "progress": {
-        "current": 77,
-        "total": 88
-      },
-      "milestone_payload": {
-        "title": "MODULE COMPLETED!",
-        "badge_emoji": "🎉",
-        "completed_topic": "Exclamatory & Optative Narration",
-        "xp_earned": 65,
-        "milestone_progress": "Module 10/11 Clear",
-        "motivational_quote": "Sabhi sentence types ka narration clear! Ab final module - SBI PO Error Detection!"
-      },
-      "navigation": {
-        "next": "card_78_error_detection_intro",
-        "button_text": "Start Next Module ➔"
-      }
-    },
-    {
-      "card_id": "card_78_error_detection_intro",
-      "card_slug": "card_78_error_detection_intro",
-      "type": "chat",
-      "concept_id": "error_detection_narration",
-      "level": 11,
-      "progress": {
-        "current": 78,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab hum enter kar rahe hain SBI PO/Bank PO level mein! Narration se related teen bade traps hain jo test hote hain - Tense backshift missing, Pronoun mismatch, aur Reporting verb/connective ki galti. Chalo systematic tarike se seekhते hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Narration mein toh itने saare rules hain - tense, pronoun, time words, reporting verb - sabme se galti dhundना toh sach mein tough hoगा!"
-        }
-      ],
-      "navigation": {
-        "next": "card_79_trap_missing_backshift",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_79_trap_missing_backshift",
-      "card_slug": "card_79_trap_missing_backshift",
-      "type": "chat",
-      "concept_id": "error_detection_narration",
-      "level": 11,
-      "progress": {
-        "current": 79,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ghabраओ mat, ek-ek trap dekhते hain. Trap 1 - Missing Backshift: Jab reporting verb Past mein ho, lekin andar ka tense backshift nahi hua ho. 'He said that he is happy' - GALAT! (jab tak universal truth na ho). Sahi hai 'He said that he was happy.'"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha, matlab hamesha check karна hai ki reporting verb Past hai ya nahi, phir andar ka tense match kar raha hai ya nahi?"
-        }
-      ],
-      "navigation": {
-        "next": "card_80_trap_pronoun_mismatch",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_80_trap_pronoun_mismatch",
-      "card_slug": "card_80_trap_pronoun_mismatch",
-      "type": "chat",
-      "concept_id": "error_detection_narration",
-      "level": 11,
-      "progress": {
-        "current": 80,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Trap 2 - Pronoun Mismatch: 1st/2nd person pronoun sahi se Subject/Object ke hisaab se badla hai ya nahi. 'Raju told Sita that I would help her' - GALAT! ('I' yahaan galat hai, kyunki 'I' ko Subject 'Raju' ke hisaab se 'he' banna chahiye tha). Sahi hai 'Raju told Sita that he would help her.'"
-        },
-        {
-          "speaker": "raju",
-          "text": "Ohh! Ye toh sach mein trap hai - agar 'I' bhool se reh jaye Indirect mein, poora sentence hi galat ho jaता hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_81_trap_connective_verb",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_81_trap_connective_verb",
-      "card_slug": "card_81_trap_connective_verb",
-      "type": "chat",
-      "concept_id": "error_detection_narration",
-      "level": 11,
-      "progress": {
-        "current": 81,
-        "total": 88
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Trap 3 - Reporting Verb aur Connective Galti: 'said to' ki jagah 'told' na hona, ya Yes/No question mein 'if/whether' ki jagah 'that' lag jaana. 'He asked that I was coming' - GALAT! Sahi hai 'He asked if I was coming.' Question mein kabhi 'that' nahi lagता, sirf 'if/whether' ya Wh-word."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achha, matlab question wale sentence mein 'that' dikhे toh samझ jaana chahiye ki ye galat hai - 'if/whether' hi sahi hoga!"
-        }
-      ],
-      "navigation": {
-        "next": "card_82_quiz1_m11",
-        "button_text": "Next Card ➔"
-      }
-    },
-    {
-      "card_id": "card_82_quiz1_m11",
-      "card_slug": "card_82_quiz1_m11",
-      "type": "quiz",
-      "concept_id": "error_detection_narration",
-      "level": 11,
-      "progress": {
-        "current": 82,
-        "total": 88
-      },
-      "quiz_payload": {
-        "question": "SBI PO Error Detection: 'The manager told (A)/ his employees (B)/ that the meeting is postponed (C)/ No error (D)'",
-        "options": [
-          {
-            "id": "A",
-            "text": "A"
-          },
-          {
-            "id": "B",
-            "text": "B"
-          },
-          {
-            "id": "C",
-            "text": "C"
-          },
-          {
-            "id": "D",
-            "text": "D (No Error)"
-          }
-        ],
-        "correct_option_id": "C",
-        "explanation": "Part (C) mein galti hai - reporting verb 'told' Past hai, isliye backshift honा chahiye tha: 'that the meeting was postponed', not 'is postponed' (jab tak future scheduling ka special context na ho, standard rule backshift maangता hai)."
-      },
-      "navigation": {
-        "next": "card_83_quiz2_m11",
-        "button_text": "Check Answer & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_83_quiz2_m11",
-      "card_slug": "card_83_quiz2_m11",
-      "type": "quiz",
-      "concept_id": "error_detection_narration",
-      "level": 11,
-      "progress": {
-        "current": 83,
-        "total": 88
-      },
-      "quiz_payload": {
-        "question": "SBI PO Error Detection: 'She asked me (A)/ that if I had (B)/ completed the assignment (C)/ No error (D)'",
-        "options": [
-          {
-            "id": "A",
-            "text": "A"
-          },
-          {
-            "id": "B",
-            "text": "B"
-          },
-          {
-            "id": "C",
-            "text": "C"
-          },
-          {
-            "id": "D",
-            "text": "D (No Error)"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Part (B) mein galti hai - Yes/No question mein sirf 'if/whether' aata hai, 'that' aur 'if' dono ek saath nahi lag sakte. Sahi hoga 'if I had completed'."
-      },
-      "navigation": {
-        "next": "card_84_quiz3_m11",
-        "button_text": "Check Answer & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_84_quiz3_m11",
-      "card_slug": "card_84_quiz3_m11",
-      "type": "quiz",
-      "concept_id": "error_detection_narration",
-      "level": 11,
-      "progress": {
-        "current": 84,
-        "total": 88
-      },
-      "quiz_payload": {
-        "question": "SBI PO Error Detection: 'Rahul said to Priya (A)/ that you should submit (B)/ your report by Friday (C)/ No error (D)'",
-        "options": [
-          {
-            "id": "A",
-            "text": "A"
-          },
-          {
-            "id": "B",
-            "text": "B"
-          },
-          {
-            "id": "C",
-            "text": "C"
-          },
-          {
-            "id": "D",
-            "text": "D (No Error)"
-          }
-        ],
-        "correct_option_id": "A",
-        "explanation": "Part (A) mein galti hai - 'said to' + object (Priya) hone se 'told' aana chahiye, 'said to' nahi. Sahi hoga 'Rahul told Priya'."
-      },
-      "navigation": {
-        "next": "card_85_milestone_m11",
-        "button_text": "Check Answer & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_85_milestone_m11",
-      "card_slug": "card_85_milestone_m11",
-      "type": "milestone",
-      "concept_id": "error_detection_narration",
-      "level": 11,
-      "progress": {
-        "current": 85,
-        "total": 88
-      },
-      "milestone_payload": {
-        "title": "MODULE COMPLETED!",
-        "badge_emoji": "🕵️",
-        "completed_topic": "SBI PO Error Detection - Narration",
-        "xp_earned": 85,
-        "milestone_progress": "Module 11/11 Clear",
-        "motivational_quote": "Wah Raju! Ab tum Narration ke SBI PO level errors bhi pakड़ sakते ho! Bas final revision baaki hai!"
-      },
-      "navigation": {
-        "next": "card_86_summary",
-        "button_text": "Go to Final Revision ➔"
-      }
-    },
-    {
-      "card_id": "card_86_summary",
-      "card_slug": "card_86_summary",
-      "type": "summary",
-      "concept_id": "chapter_summary",
-      "level": 12,
-      "progress": {
-        "current": 86,
-        "total": 88
+        "total": 62
       },
       "summary_payload": {
-        "title": "⚡ Officer-Level Lightning Revision",
+        "title": "⚡ OFFICER QUICK REVISION - Direct Speech",
         "revision_points": [
           {
-            "topic": "Narration Core & BSEB Terminology",
-            "point": "Statement I: Direct Speech ko BSEB 'Pratyaksh Kathan' aur Indirect Speech ko 'Apratyaksh Kathan' kehta hai. Statement II: 'said to + object' hamesha 'told' mein badalता hai, jabki bina object ke 'said' waisa hi rehta hai. Dono statements sahi hain."
+            "topic": "Definition",
+            "point": "Direct Speech = Exact words of speaker in inverted commas ('...') or (\"...\"). Example: He said, 'I am happy.'"
           },
           {
-            "topic": "Pronoun & Tense Rules",
-            "point": "Statement I: 1st person pronoun Subject ke hisaab se, 2nd person Object ke hisaab se badalता hai, 3rd person kabhi nahi badalता. Statement II: Reporting verb Past hone par tense ek step peeche (backshift) jaata hai, lekin Past Perfect se aage backshift nahi hota. Dono statements sahi hain."
+            "topic": "Inverted Commas Rule",
+            "point": "Opening and closing must match (both single or both double). Only on exact words, NOT on reporting verb. ⭐ SBI PO Trap: Mixed commas ('...\")"
           },
           {
-            "topic": "Backshift Exceptions",
-            "point": "Statement I: Universal Truth aur Habitual Actions mein tense change nahi hota, chahe reporting verb Past ho. Statement II: Reporting verb Present/Future hone par bhi koई backshift nahi hota. Dono statements sahi hain - ye BPSC ka favorite conceptual trap hai."
+            "topic": "Comma Placement",
+            "point": "• Reporting clause FIRST → comma after verb: He said, 'I am fine.'\n• Reporting clause LAST → comma inside inverted comma: 'I am fine,' he said."
           },
           {
-            "topic": "Modals & Questions",
-            "point": "Statement I: could, would, should, might, ought to, used to, need not - ye saat modals kabhi change nahi hote. Statement II: Yes/No questions mein 'if/whether' aata hai, Wh-questions mein Wh-word khud connective banta hai, dono mein 'that' kabhi nahi aata. Dono statements sahi hain."
+            "topic": "Capitalization",
+            "point": "First letter inside inverted commas = CAPITAL. 'I' pronoun always capital. Proper nouns (Ram, Delhi) always capital. ⭐ SSC/Railway Trap: 'i am fine' (wrong)"
           },
           {
-            "topic": "SBI PO Level Error Traps",
-            "point": "Statement I: 'said to' + object honे par 'told' zaroori hai, 'said to' galat hai. Statement II: Question ke narration mein 'that' aur 'if' ek saath kabhi nahi lagते. Dono statements sahi hain - ye common Bank PO error-detection traps hain."
+            "topic": "Ending Punctuation Position",
+            "point": "Full stop/Question mark/Exclamation mark INSIDE inverted commas, not outside!\n✅ 'I am happy.'\n❌ 'I am happy'. ⭐ BPSC/UPSC #1 Trap!"
+          },
+          {
+            "topic": "Sentence Types",
+            "point": "• Statement → said, told + Full stop (.)\n• Question → asked, inquired + Question mark (?)\n• Command → ordered, requested + Full stop (.)\n• Exclamation → exclaimed, cried + Exclamation mark (!)"
+          },
+          {
+            "topic": "Reporting Verb-Sentence Match",
+            "point": "Verb must match sentence type:\n❌ He asked, 'I am fine.' (verb-sentence mismatch)\n✅ He said, 'I am fine.' ⭐ SSC/Railway 15% errors"
+          },
+          {
+            "topic": "'told to' vs 'said to' Trap",
+            "point": "✅ said to me / told me\n❌ told to me\n'told' already transitive, no 'to' needed! ⭐ SBI PO Classic Trap"
+          },
+          {
+            "topic": "Double Punctuation Error",
+            "point": "Never use ending punctuation twice:\n❌ He said, 'I am happy.'. (two full stops)\n✅ He said, 'I am happy.'"
+          },
+          {
+            "topic": "5-Step Error Detection Checklist",
+            "point": "1. Inverted commas (match?)\n2. Comma after verb (present?)\n3. Capital letter (first letter?)\n4. Reporting verb (type match?)\n5. Ending punctuation (inside? correct type?)\n⭐ Use this for every sentence!"
           }
         ]
       },
       "navigation": {
-        "next": "card_87_final_quiz",
-        "button_text": "Take Final Officer Quiz ➔"
+        "next": "card_56_final_quiz_q1",
+        "button_text": "Final Officer Quiz ➔"
       }
     },
     {
-      "card_id": "card_87_final_quiz",
-      "card_slug": "card_87_final_quiz",
+      "card_id": "card_56_final_quiz_q1",
+      "card_slug": "card_56_final_quiz_q1",
       "type": "final_quiz",
-      "concept_id": "chapter_final_quiz",
-      "level": 12,
+      "concept_id": "direct_speech_final_quiz",
+      "level": 5,
       "progress": {
-        "current": 87,
-        "total": 88
+        "current": 56,
+        "total": 62
       },
       "quiz_payload": {
-        "question": "Consider the following statements regarding Direct-Indirect Narration:\nStatement I: 'The teacher told the students that the Earth revolves around the Sun' correctly retains Simple Present because it is a universal truth.\nStatement II: The sentence 'He asked me that if I was ready' is grammatically correct because both 'that' and 'if' can be used together in a Yes/No question.\nStatement III: 'She said to him, \"I will help you.\"' correctly converts to 'She told him that she would help him.'\nWhich of the above statement(s) is/are CORRECT?",
+        "question": "FINAL QUIZ 1/4 (BPSC Multi-Statement Level):\n\nStatement I: In Direct Speech, the reporting verb must always come before the reported speech.\n\nStatement II: Inverted commas are used only for questions and exclamations.\n\nWhich is correct?",
         "options": [
           {
             "id": "A",
-            "text": "Only I and III"
+            "text": "Only Statement I"
           },
           {
             "id": "B",
-            "text": "Only II and III"
+            "text": "Only Statement II"
           },
           {
             "id": "C",
-            "text": "Only I and II"
+            "text": "Both statements"
           },
           {
             "id": "D",
-            "text": "Only III"
+            "text": "Neither statement"
           }
         ],
-        "correct_option_id": "A",
-        "explanation": "Statement I is CORRECT - universal truths (Earth revolving around the Sun) retain Simple Present tense even when the reporting verb is in the past. Statement II is WRONG - in Yes/No question narration, only ONE connective is used, either 'if' or 'whether', never combined with 'that'. The correct form is 'He asked me if I was ready.' Statement III is CORRECT - 'said to' with an object ('him') correctly changes to 'told', 'will' correctly backshifts to 'would', and 'you' correctly changes to 'him' based on the object of the reporting verb. Hence, only Statements I and III are correct - Answer (A)."
+        "correct_option_id": "D",
+        "explanation": "Both statements are FALSE:\n\n**Statement I False**: Reporting clause तीन positions में हो सकता है:\n• Beginning: He said, 'I am fine.'\n• End: 'I am fine,' he said.\n• Middle: 'I am,' he said, 'very fine.'\n\n**Statement II False**: Inverted commas सभी Direct Speech sentences में use होते हैं - statement, question, command, exclamation सभी में!\n\n⭐ BPSC Pattern: Multi-statement Assertion-Reason questions!"
       },
       "navigation": {
-        "next": "card_88_trophy",
-        "button_text": "See Final Result ➔"
+        "next": "card_57_final_quiz_q2",
+        "button_text": "Next Question ➔"
       }
     },
     {
-      "card_id": "card_88_trophy",
-      "card_slug": "card_88_trophy",
-      "type": "milestone",
-      "concept_id": "chapter_complete",
-      "level": 12,
+      "card_id": "card_57_final_quiz_q2",
+      "card_slug": "card_57_final_quiz_q2",
+      "type": "final_quiz",
+      "concept_id": "direct_speech_final_quiz",
+      "level": 5,
       "progress": {
-        "current": 88,
-        "total": 88
+        "current": 57,
+        "total": 62
       },
-      "milestone_payload": {
-        "title": "🏆 CHAPTER MASTERED!",
-        "badge_emoji": "🏆",
-        "completed_topic": "Direct & Indirect Speech - Complete Narration + SBI PO Error Detection",
-        "xp_earned": 170,
-        "milestone_progress": "Chapter 100% Complete",
-        "motivational_quote": "Shabaash Raju! Ab tumne Narration ke har rule, har exception, aur SBI PO level error ko master kar liya hai. Officer banने ka safar jaari rahe!"
+      "quiz_payload": {
+        "question": "FINAL QUIZ 2/4 (SBI PO Error Detection):\n\nFind the sentence with NO error:",
+        "options": [
+          {
+            "id": "A",
+            "text": "He told to me, 'I will come tomorrow.'"
+          },
+          {
+            "id": "B",
+            "text": "She asked, 'Where are you going'?"
+          },
+          {
+            "id": "C",
+            "text": "'I am very happy,' she exclaimed."
+          },
+          {
+            "id": "D",
+            "text": "The teacher said, 'What a brilliant answer!'"
+          }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Option D is CORRECT.\n\nErrors in others:\n\n**Option A**: 'told to' wrong → should be 'told me' or 'said to me'\n\n**Option B**: Question mark (?) inverted comma के बाहर है → अंदर होना चाहिए: 'Where are you going?'\n\n**Option C**: Verb mismatch → 'I am very happy' exclamatory नहीं है (statement है), 'exclaimed' की जगह 'said' होना चाहिए\n\n**Option D**: सही है (though 'exclaimed' better होता, पर 'said' grammatically गलत नहीं है)\n\n⭐ SBI PO Trick: सबसे कम गलत option को correct मानते हैं!"
       },
       "navigation": {
-        "next": "card_01_intro",
-        "button_text": "Revise Chapter Again 🔄"
+        "next": "card_58_final_quiz_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_58_final_quiz_q3",
+      "card_slug": "card_58_final_quiz_q3",
+      "type": "final_quiz",
+      "concept_id": "direct_speech_final_quiz",
+      "level": 5,
+      "progress": {
+        "current": 58,
+        "total": 62
+      },
+      "quiz_payload": {
+        "question": "FINAL QUIZ 3/4 (UPSC Prelims Level):\n\nWhich of the following is/are CORRECTLY punctuated?\n\n1. He said, 'I am going to Delhi.'\n2. 'Where are you,' she asked?\n3. The commander shouted, 'Fire!'\n4. 'i will come tomorrow,' he told me.\n\nSelect the correct answer:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only 1 and 3"
+          },
+          {
+            "id": "B",
+            "text": "Only 1, 2 and 3"
+          },
+          {
+            "id": "C",
+            "text": "Only 1 and 4"
+          },
+          {
+            "id": "D",
+            "text": "All are correct"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Only 1 and 3 are CORRECT.\n\n**1. Correct**: He said, 'I am going to Delhi.' ✅\n\n**2. Wrong**: Question mark inverted comma के बाहर\n✅ Should be: 'Where are you,' she asked. (no question mark बाहर)\nया: She asked, 'Where are you?'\n\n**3. Correct**: The commander shouted, 'Fire!' ✅\n\n**4. Wrong**: 'i' को 'I' capital होना चाहिए\n✅ Should be: 'I will come tomorrow,' he told me.\n\n⭐ UPSC Pattern: Multiple statements की correctness check!"
+      },
+      "navigation": {
+        "next": "card_59_final_quiz_q4",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_59_final_quiz_q4",
+      "card_slug": "card_59_final_quiz_q4",
+      "type": "final_quiz",
+      "concept_id": "direct_speech_final_quiz",
+      "level": 5,
+      "progress": {
+        "current": 59,
+        "total": 62
+      },
+      "quiz_payload": {
+        "question": "FINAL QUIZ 4/4 (SSC CGL Ultimate Challenge):\n\nCorrect the sentence with MINIMUM changes:\n\n'my teacher said what a brilliant student you are'!",
+        "options": [
+          {
+            "id": "A",
+            "text": "My teacher said, 'What a brilliant student you are!'"
+          },
+          {
+            "id": "B",
+            "text": "My teacher exclaimed, 'What a brilliant student you are!'"
+          },
+          {
+            "id": "C",
+            "text": "'My teacher said, What a brilliant student you are!'"
+          },
+          {
+            "id": "D",
+            "text": "My teacher said 'what a brilliant student you are!'"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "**Option A** is the answer with MINIMUM changes:\n\nOriginal errors:\n1. 'my' → 'My' (capital)\n2. Missing comma after 'said'\n3. 'what' → 'What' (capital inside inverted commas)\n4. Exclamation mark inverted comma के बाहर (अंदर चाहिए)\n\n**Why not B?** 'exclaimed' better होता (exclamatory sentence के लिए), लेकिन 'said' grammatically गलत नहीं। Question says MINIMUM changes, इसलिए verb change करने की जरूरत नहीं।\n\n**Why not C?** 'My teacher' inverted comma के अंदर (गलत)\n\n**Why not D?** Comma missing + 'what' small letter\n\n⭐ SSC CGL Trick: Minimum corrections वाला option चुनो!"
+      },
+      "navigation": {
+        "next": "card_60_bonus_tips",
+        "button_text": "Check Final Score ➔"
+      }
+    },
+    {
+      "card_id": "card_60_bonus_tips",
+      "card_slug": "card_60_bonus_tips",
+      "type": "chat",
+      "concept_id": "bonus_exam_tips",
+      "level": 5,
+      "progress": {
+        "current": 60,
+        "total": 62
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "🎯 **BONUS: Last-Minute Exam Tips**\n\n1. **SBI PO/SSC CGL**: 70% errors = punctuation position (comma, full stop, question mark की position)\n\n2. **BPSC/UPSC**: Multi-statement questions में carefully पढ़ो - एक word का difference होता है\n\n3. **Railway/BSSC**: 'told to' trap हर exam में आता है - immediately identify करो!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, exam mein time kam hota hai - sabse pहले kya check karun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "**Priority Order** (10-second scan):\n\n1️⃣ Inverted commas (present? match?)\n2️⃣ Comma after reporting verb\n3️⃣ Capital letter (first + 'I' + proper nouns)\n4️⃣ Ending punctuation position (अंदर?)\n5️⃣ Reporting verb-sentence type match\n\nIsi order mein scan karo - 90% errors pakad loge!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Perfect Sir! Ab confident feel ho raha hai! 🔥"
+        }
+      ],
+      "navigation": {
+        "next": "card_61_pro_traps",
+        "button_text": "Pro-Level Traps ➔"
+      }
+    },
+    {
+      "card_id": "card_61_pro_traps",
+      "card_slug": "card_61_pro_traps",
+      "type": "chat",
+      "concept_id": "advanced_traps",
+      "level": 5,
+      "progress": {
+        "current": 61,
+        "total": 62
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "🔥 **PRO-LEVEL TRAPS** (SBI PO/UPSC Only)\n\n**Trap 1**: 'He said to her' vs 'He told her'\nDono correct, par Indirect Speech mein 'told' preferred.\n\n**Trap 2**: Question tags in Direct Speech:\n'You are going, aren't you?' she asked. ✅\n(Full question + tag, question mark एक ही बार!)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Question tag wala kabhi socha nahi tha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "**Trap 3**: Interrupted Direct Speech:\n'I am,' he said with hesitation, 'very tired.'\n(Dono jagah comma, dono parts मिलकर एक sentence)\n\n**Trap 4**: Multiple sentences inside inverted commas:\nHe said, 'I am fine. How are you?' ✅\n(दोनों sentences inverted commas के अंदर)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Yeh advanced patterns हैं! Officer-level! 💪"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_final_milestone",
+        "button_text": "Complete Chapter ➔"
+      }
+    },
+    {
+      "card_id": "card_62_final_milestone",
+      "card_slug": "card_62_final_milestone",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 5,
+      "progress": {
+        "current": 62,
+        "total": 62
+      },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED! 🏆",
+        "badge_emoji": "👑",
+        "completed_topic": "Direct Speech - Complete (SBI PO Level)",
+        "xp_earned": 300,
+        "milestone_progress": "100% Complete",
+        "motivational_quote": "Badhai ho Raju! Tumne Direct Speech को zero se SBI PO/BPSC level tak master kar liya! \n\n✅ 10 Error Patterns Clear\n✅ 4 Sentence Types Clear\n✅ All Punctuation Rules Clear\n✅ PYQ Traps Clear\n\nAb Indirect Speech conquer karne ka time! Keep rocking! 🚀🔥"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Go to Dashboard 🏠"
       }
     }
   ]
