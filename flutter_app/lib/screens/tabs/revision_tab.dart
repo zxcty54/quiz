@@ -63,23 +63,40 @@ class _RevisionTabState extends State<RevisionTab> {
     _fetchLiveGitHubMapping();
   }
 
-  // 🚀 DIRECT GITHUB FETCHER + PERMANENT DISK SAVE
+  // 🚀 DIRECT MULTI-CDN UNBLOCKED FETCHER + PERMANENT DISK SAVE
   Future<void> _fetchLiveGitHubMapping() async {
     if (!mounted) return;
     setState(() => _isLoading = true);
 
     final int ts = DateTime.now().millisecondsSinceEpoch;
     final List<String> urls = [
-      "https://raw.githubusercontent.com/zxcty54/quiz/main/subject_mapping.json?t=$ts",
       "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/subject_mapping.json?t=$ts",
       "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/subject_mapping.json?t=$ts",
+      "https://cdn.statically.io/gh/zxcty54/quiz/main/subject_mapping.json",
+      "https://raw.githubusercontent.com/zxcty54/quiz/main/subject_mapping.json?t=$ts",
     ];
 
     for (String url in urls) {
       try {
-        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 3));
+        final res = await http.get(
+          Uri.parse(url),
+          headers: {'Accept': 'application/json, text/plain, */*'},
+        ).timeout(const Duration(seconds: 4));
+
         if (res.statusCode == 200) {
-          final dynamic parsed = jsonDecode(utf8.decode(res.bodyBytes));
+          String rawBody = utf8.decode(res.bodyBytes).trim();
+
+          // 🧹 Strip UTF-8 BOM & Markdown if any
+          if (rawBody.startsWith('\uFEFF')) {
+            rawBody = rawBody.substring(1).trim();
+          }
+          rawBody = rawBody.replaceAll('```json', '').replaceAll('```', '').trim();
+
+          if (rawBody.startsWith('<') || rawBody.startsWith('<!DOCTYPE')) {
+            continue; // Skip HTML responses
+          }
+
+          final dynamic parsed = jsonDecode(rawBody);
           if (parsed is Map && mounted) {
             setState(() {
               _liveSubjectMapping = Map<String, dynamic>.from(parsed);
