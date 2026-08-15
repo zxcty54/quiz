@@ -1,0 +1,1566 @@
+
+{
+  "topic_id": "indian_polity_council_of_ministers",
+  "topic_title": "Council of Ministers in Indian Constitution (मंत्रिपरिषद)",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 88,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 0,
+      "progress": { "current": 1, "total": 88 },
+      "intro_payload": {
+        "title": "मंत्रिपरिषद (Council of Ministers) - केंद्र की असली सत्ता",
+        "icon": "🏛️",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Article 74 - राष्ट्रपति को सहायता व सलाह देने वाली मंत्रिपरिषद",
+          "Article 75 - नियुक्ति, कार्यकाल, शपथ, योग्यता, वेतन और 6 महीने का नियम",
+          "91वां संशोधन - Article 75(1A) व 75(1B) मंत्रिपरिषद के आकार की सीमा",
+          "मंत्रिपरिषद की तीन श्रेणियाँ - Cabinet Minister, Minister of State, Deputy Minister",
+          "सामूहिक उत्तरदायित्व (Article 75(3)) और वैयक्तिक उत्तरदायित्व (Doctrine of Pleasure)",
+          "Cabinet vs Council of Ministers - आकार, बैठक व शक्ति का अंतर",
+          "Cabinet Committees, Article 78 - प्रधानमंत्री के राष्ट्रपति के प्रति कर्तव्य",
+          "⭐ BPSC TRE Special: राज्य मंत्रिपरिषद से तुलना व बिहार सन्दर्भ"
+        ]
+      },
+      "navigation": { "next": "card_02_daily_life_advisory_analogy", "button_text": "Chalo Shuru Karein ➔" }
+    },
+    {
+      "card_id": "card_02_daily_life_advisory_analogy",
+      "card_slug": "card_02_daily_life_advisory_analogy",
+      "type": "chat",
+      "concept_id": "advisory_body_intro",
+      "level": 1,
+      "progress": { "current": 2, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho ek School Principal bade decisions akele nahi lete - unke saath ek team hoti hai jaise Vice-Principal, Head of Departments, jo mil kar school chalate hain. Kendra sarkar mein bhi aisi hi ek team hoti hai." },
+        { "speaker": "raju", "text": "Sir wo to humne padha tha - PM aur uske Ministers, jaise state mein CM aur uski team hoti hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi yaad hai! Ye poori team - PM ke saath saare Ministers milkar - Constitution mein 'Council of Ministers' (मंत्रिपरिषद) kehlati hai. Aaj hum isi ko poori tarah detail mein padhenge - Union level par." },
+        { "speaker": "raju", "text": "Achha, to jaise state mein CM-led Council thi, waise hi Centre mein PM-led Council hoti hai? Sir ye to pichle chapters se kaafi similar lag raha hai!" }
+      ],
+      "navigation": { "next": "card_03_article74_intro", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_article74_intro",
+      "card_slug": "card_03_article74_intro",
+      "type": "chat",
+      "concept_id": "article_74_intro",
+      "level": 1,
+      "progress": { "current": 3, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi observation! Jaise Article 163 state mein Governor-CM ka rishta batata hai, waise hi Article 74 Kendra mein Rashtrapati aur PM-led Council ka rishta batata hai. Isme likha hai - 'Rashtrapati ko sahayata aur salah dene ke liye ek Council of Ministers hoga, jiska mukhiya Pradhan Mantri hoga'." },
+        { "speaker": "raju", "text": "To yahan bhi wahi pattern hai - Rashtrapati sirf naam ke liye head, asli kaam Council karti hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur ek zaroori baat - Article 74(1) mein 42nd Amendment (1976) ke baad ye jodi gayi ki Rashtrapati is salah ko 'manne ke liye baadhya' (bound) hai. Baad mein 44th Amendment (1978) ne ek proviso jodi - Rashtrapati ek baar salah ko punarvichar (reconsideration) ke liye wapas bhej sakta hai, lekin agar Council wahi salah dobara de, to use maanna hi padega." },
+        { "speaker": "raju", "text": "Ohh! Matlab Rashtrapati ek baar 'na' bol sakta hai, lekin dusri baar to maanna hi padega - ye to Governor ke bill wale rule jaisa lag raha hai!" }
+      ],
+      "navigation": { "next": "card_04_article74_2_immunity", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_article74_2_immunity",
+      "card_slug": "card_04_article74_2_immunity",
+      "type": "chat",
+      "concept_id": "article74_2_immunity",
+      "level": 1,
+      "progress": { "current": 4, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi connect kiya! Ab Article 74(2) dekho - ye kehta hai ki Council of Ministers ne Rashtrapati ko kya salah di thi, ye baat kisi bhi court mein poochhi (inquired into) nahi jaa sakti." },
+        { "speaker": "raju", "text": "Matlab agar Council ne koi galat salah bhi di ho, to court usse janch nahi sakti?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye ek 'immunity' hai jo salah ki gopniyata (confidentiality) banaye rakhne ke liye di gayi hai, taaki Council khulkar salah de sake bina dar ke ki unki har baat court mein challenge ho jayegi. Lekin dhyan do - final decision (jo action liya gaya) uski judicial review ho sakti hai, sirf 'advice tips' ki nahi." },
+        { "speaker": "raju", "text": "Achha, matlab salah kya thi ye secret hai, lekin uska result challenge kiya ja sakta hai - ye fine line hai samajhna zaroori hai!" }
+      ],
+      "navigation": { "next": "card_05_guess_who_heads_council", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_guess_who_heads_council",
+      "card_slug": "card_05_guess_who_heads_council",
+      "type": "guess",
+      "concept_id": "who_heads_council_guess",
+      "level": 1,
+      "progress": { "current": 5, "total": 88 },
+      "guess_payload": {
+        "question": "Article 74 ke anusar, Rashtrapati ko sahayata aur salah dene wali Council of Ministers ka mukhiya kaun hota hai?",
+        "options": [
+          { "id": "A", "text": "Speaker of Lok Sabha" },
+          { "id": "B", "text": "Chief Justice of India" },
+          { "id": "C", "text": "Pradhan Mantri (Prime Minister)" },
+          { "id": "D", "text": "Home Minister" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 74(1) ke anusar, Council of Ministers ka mukhiya Pradhan Mantri (PM) hota hai, jo Rashtrapati ko sahayata aur salah deta hai."
+      },
+      "navigation": { "next": "card_06_quiz1_article74", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_06_quiz1_article74",
+      "card_slug": "card_06_quiz1_article74",
+      "type": "quiz",
+      "concept_id": "article74_quiz",
+      "level": 1,
+      "progress": { "current": 6, "total": 88 },
+      "quiz_payload": {
+        "question": "42nd Constitutional Amendment (1976) ne Article 74 mein kya badlav kiya?",
+        "options": [
+          { "id": "A", "text": "Council of Ministers ka size limit kiya" },
+          { "id": "B", "text": "Rashtrapati ko Council ki salah maanna baadhyakari (binding) banaya" },
+          { "id": "C", "text": "PM ki niyukti ka tarika badla" },
+          { "id": "D", "text": "Council of Ministers ko khatam kar diya" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "42nd Amendment (1976) ne Article 74(1) mein spasht kiya ki Rashtrapati ko Council of Ministers ki salah maanni hi padegi - ye baadhyakari ban gaya."
+      },
+      "navigation": { "next": "card_07_quiz2_44th_amendment", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz2_44th_amendment",
+      "card_slug": "card_07_quiz2_44th_amendment",
+      "type": "quiz",
+      "concept_id": "44th_amendment_quiz",
+      "level": 1,
+      "progress": { "current": 7, "total": 88 },
+      "quiz_payload": {
+        "question": "Kathan 1: 44th Amendment (1978) ke anusar Rashtrapati ek baar Council ki salah punarvichar ke liye wapas bhej sakta hai. Kathan 2: Agar Council wahi salah dobara bheje, to Rashtrapati use maanne ke liye baadhya hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "44th Amendment ne Article 74(1) mein proviso jodi - Rashtrapati ek baar reconsideration maang sakta hai, lekin dobara wahi salah aane par usse maanna hi padega. Dono kathan sahi hain."
+      },
+      "navigation": { "next": "card_08_quiz3_immunity", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_quiz3_immunity",
+      "card_slug": "card_08_quiz3_immunity",
+      "type": "quiz",
+      "concept_id": "immunity_quiz",
+      "level": 1,
+      "progress": { "current": 8, "total": 88 },
+      "quiz_payload": {
+        "question": "Article 74(2) ke anusar kya baat kisi court mein poochhi (inquired into) nahi jaa sakti?",
+        "options": [
+          { "id": "A", "text": "Rashtrapati ka final decision" },
+          { "id": "B", "text": "Council of Ministers ne Rashtrapati ko kya salah di thi" },
+          { "id": "C", "text": "Parliament ka koi bhi kanoon" },
+          { "id": "D", "text": "PM ki niyukti" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 74(2) ke anusar, Council of Ministers ne Rashtrapati ko kya salah di, iski jaanch court mein nahi ki jaa sakti - ye salah ki confidentiality banaye rakhta hai."
+      },
+      "navigation": { "next": "card_09_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_09_milestone1",
+      "card_slug": "card_09_milestone1",
+      "type": "milestone",
+      "concept_id": "module1_complete",
+      "level": 1,
+      "progress": { "current": 9, "total": 88 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Article 74 - Constitutional Basis",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/10 Clear",
+        "motivational_quote": "Zabardast shuruaat! Article 74 ka poora concept clear ho gaya. Ab dekhte hain Council of Ministers banti kaise hai!"
+      },
+      "navigation": { "next": "card_10_article75_appointment", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_10_article75_appointment",
+      "card_slug": "card_10_article75_appointment",
+      "type": "chat",
+      "concept_id": "article75_appointment",
+      "level": 2,
+      "progress": { "current": 10, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Article 75 dekhte hain, jo Council of Ministers ka poora 'ghar' hai - niyukti, shapath, karyakal, sab kuch. Sabse pehla point - Article 75(1) kehta hai PM ki niyukti Rashtrapati karta hai, aur baaki Ministers ki niyukti Rashtrapati PM ki salah par karta hai." },
+        { "speaker": "raju", "text": "Sir ye to bilkul waisa hi hai jaisa Governor-CM ke case mein tha - CM Governor banata hai, baaki Ministers CM ki salah se!" },
+        { "speaker": "aman", "text": "Bilkul sahi pattern pakda! Aur PM ki niyukti mein bhi wahi convention follow hoti hai jo humne CM ke case mein padhi thi - Lok Sabha mein bahumat dal ke neta ko hi Rashtrapati PM banata hai. Ye likhit rule nahi, convention hai." },
+        { "speaker": "raju", "text": "Achha, to Hung Lok Sabha mein Rashtrapati ko bhi discretion use karna padta hoga, jaise Governor karta hai state mein?" }
+      ],
+      "navigation": { "next": "card_11_qualification_no_provision", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_qualification_no_provision",
+      "card_slug": "card_11_qualification_no_provision",
+      "type": "chat",
+      "concept_id": "qualification_no_provision",
+      "level": 2,
+      "progress": { "current": 11, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi socha! Haan, Hung Lok Sabha mein Rashtrapati ko bhi discretion use karna padta hai, exactly jaise Governor state mein karta hai. Ab dekho Minister banne ke liye kya qualification chahiye - iske liye Constitution mein alag se koi list nahi di gayi hai." },
+        { "speaker": "raju", "text": "Matlab yahan bhi wahi hai jo CM ke case mein tha - MP jaisi hi qualification chahiye?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Minister banne ke liye wahi qualification chahiye jo Parliament ka sadasya (MP) banne ke liye Article 84 mein di gayi hai - Bharat ka nagrik ho, Lok Sabha ke liye 25 saal aur Rajya Sabha ke liye 30 saal umar ho." },
+        { "speaker": "raju", "text": "Achha, Lok Sabha aur Rajya Sabha ke liye alag umar? Ye to yaad rakhna padega, do alag numbers hain!" }
+      ],
+      "navigation": { "next": "card_12_oath_article75_4", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_oath_article75_4",
+      "card_slug": "card_12_oath_article75_4",
+      "type": "chat",
+      "concept_id": "oath_article75_4",
+      "level": 2,
+      "progress": { "current": 12, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab Article 75(4) dekho - pad sambhalne se pehle har Minister ko Rashtrapati shapath dilata hai. Shapath ke do parts hote hain - pad aur gopniyata (secrecy) ki shapath, jinke format Third Schedule mein diye gaye hain." },
+        { "speaker": "raju", "text": "Ye wahi Third Schedule hai na jo CM ke case mein bhi tha? Format same hoga kya?" },
+        { "speaker": "aman", "text": "Bilkul sahi yaad hai! Format bilkul same pattern follow karta hai - Constitution ke prati sacchi shraddha, imandari se kaam, aur bina dar-bhay ke nyay. Sirf 'State' ki jagah 'Union' word aata hai." },
+        { "speaker": "raju", "text": "Achha, matlab bas ek word ka farak - Union vs State, baaki sab same!" }
+      ],
+      "navigation": { "next": "card_13_term_pleasure_doctrine_75_2", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_term_pleasure_doctrine_75_2",
+      "card_slug": "card_13_term_pleasure_doctrine_75_2",
+      "type": "chat",
+      "concept_id": "term_pleasure_doctrine",
+      "level": 2,
+      "progress": { "current": 13, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Article 75(2) dekhte hain - Ministers 'Rashtrapati ki khushi tak' (during the pleasure of the President) pad par rahenge. Isliye koi fix term Constitution mein nahi likha, jaise CM/Governor ke case mein bhi tha." },
+        { "speaker": "raju", "text": "Sir ye to bilkul same doctrine hai jo humne dono pichle chapters mein padha! To normal term bhi 5 saal hi hoga, Lok Sabha ke saath?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Practically Council of Ministers 5 saal chalti hai jab tak bahumat rahe (Lok Sabha ke term ke saath), lekin kagaz par 'Rashtrapati ki khushi tak' hai. Yaad rakho - practically Rashtrapati apni marzi se kabhi nahi hatata, sirf PM ki salah par hi hatata hai." },
+        { "speaker": "raju", "text": "Achha, matlab likha 'Rashtrapati ki khushi' hai, lekin asal mein PM ki khushi chalti hai - ye bahut bada trap hai exam ke liye!" }
+      ],
+      "navigation": { "next": "card_14_guess_minimum_age_rajya_sabha", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_14_guess_minimum_age_rajya_sabha",
+      "card_slug": "card_14_guess_minimum_age_rajya_sabha",
+      "type": "guess",
+      "concept_id": "minimum_age_guess",
+      "level": 2,
+      "progress": { "current": 14, "total": 88 },
+      "guess_payload": {
+        "question": "Ek vyakti jo Rajya Sabha ka sadasya banna chahta hai, uski minimum umar kitni honi chahiye?",
+        "options": [
+          { "id": "A", "text": "25 saal" },
+          { "id": "B", "text": "30 saal" },
+          { "id": "C", "text": "35 saal" },
+          { "id": "D", "text": "21 saal" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 84 ke anusar Rajya Sabha ke sadasya ke liye minimum umar 30 saal hai, jabki Lok Sabha ke liye 25 saal - ye difference Minister banne ki qualification mein bhi lagu hota hai."
+      },
+      "navigation": { "next": "card_15_quiz1_article75_appointment", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_15_quiz1_article75_appointment",
+      "card_slug": "card_15_quiz1_article75_appointment",
+      "type": "quiz",
+      "concept_id": "article75_appointment_quiz",
+      "level": 2,
+      "progress": { "current": 15, "total": 88 },
+      "quiz_payload": {
+        "question": "Article 75(1) ke anusar baaki Ministers ki niyukti Rashtrapati kis aadhar par karta hai?",
+        "options": [
+          { "id": "A", "text": "Apni marzi se" },
+          { "id": "B", "text": "PM ki salah par" },
+          { "id": "C", "text": "Speaker ki salah par" },
+          { "id": "D", "text": "Chief Justice ki salah par" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(1) ke anusar, Rashtrapati PM ko niyukt karta hai, aur baaki Ministers ki niyukti PM ki salah par karta hai."
+      },
+      "navigation": { "next": "card_16_quiz2_oath_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_quiz2_oath_multistatement",
+      "card_slug": "card_16_quiz2_oath_multistatement",
+      "type": "quiz",
+      "concept_id": "oath_multistatement",
+      "level": 2,
+      "progress": { "current": 16, "total": 88 },
+      "quiz_payload": {
+        "question": "Kathan 1: Ministers ko Rashtrapati pad aur gopniyata ki shapath dilate hain. Kathan 2: Ministers ka koi fix karyakal Constitution mein nahi diya gaya, wo Rashtrapati ki khushi tak pad par rahte hain. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 75(4) shapath ki baat karta hai (Rashtrapati dilata hai) aur Article 75(2) 'pleasure doctrine' batata hai - dono kathan sahi hain."
+      },
+      "navigation": { "next": "card_17_quiz3_qualification", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_17_quiz3_qualification",
+      "card_slug": "card_17_quiz3_qualification",
+      "type": "quiz",
+      "concept_id": "qualification_quiz",
+      "level": 2,
+      "progress": { "current": 17, "total": 88 },
+      "quiz_payload": {
+        "question": "Union Minister banne ke liye kaunsi qualification chahiye?",
+        "options": [
+          { "id": "A", "text": "Alag se special degree" },
+          { "id": "B", "text": "Wahi qualification jo Parliament ka sadasya (MP) banne ke liye Article 84 mein di gayi hai" },
+          { "id": "C", "text": "Kam se kam 40 saal ki umar" },
+          { "id": "D", "text": "IAS pass hona zaroori hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Minister banne ke liye Constitution mein alag qualification nahi di gayi - wahi qualification lagu hoti hai jo Article 84 mein MP banne ke liye di gayi hai."
+      },
+      "navigation": { "next": "card_18_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_18_milestone2",
+      "card_slug": "card_18_milestone2",
+      "type": "milestone",
+      "concept_id": "module2_complete",
+      "level": 2,
+      "progress": { "current": 18, "total": 88 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📜",
+        "completed_topic": "Article 75 - Appointment, Oath & Term",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/10 Clear",
+        "motivational_quote": "Bahut badhiya! Pleasure doctrine wala trap ab tumhe pakka yaad hai. Ab dekhte hain koi bina MP bane Minister kaise ban sakta hai!"
+      },
+      "navigation": { "next": "card_19_article75_5_six_months", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_19_article75_5_six_months",
+      "card_slug": "card_19_article75_5_six_months",
+      "type": "chat",
+      "concept_id": "article75_5_six_months",
+      "level": 3,
+      "progress": { "current": 19, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek interesting rule dekho - Article 75(5). Kya zaroori hai ki Minister banne se pehle koi vyakti Parliament ka sadasya ho? Jawab hai - nahi zaroori nahi!" },
+        { "speaker": "raju", "text": "Arre ye to bilkul wahi rule hai jo humne CM ke case mein padha tha - Article 164(4)!" },
+        { "speaker": "aman", "text": "Bilkul sahi yaad kiya! Yahan bhi wahi 6 mahine wala niyam hai - koi bhi vyakti jo Parliament ka sadasya nahi hai, use bhi Minister banaya ja sakta hai, lekin use 6 lagatar mahino ke andar Parliament ke kisi bhi sadan (Lok Sabha ya Rajya Sabha) ka sadasya banna zaroori hai." },
+        { "speaker": "raju", "text": "Achha, matlab agar 6 mahine mein nahi bana to pad chhodna padega, bilkul CM wale rule jaisa!" }
+      ],
+      "navigation": { "next": "card_20_manmohan_singh_example", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_manmohan_singh_example",
+      "card_slug": "card_20_manmohan_singh_example",
+      "type": "chat",
+      "concept_id": "practical_example_pm_rajya_sabha",
+      "level": 3,
+      "progress": { "current": 20, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek practical example samjho - koi bhi PM ya Minister Rajya Sabha ka sadasya hokar bhi ban sakta hai, sirf Lok Sabha ka hi zaroori nahi. Yaad rakho, CM ke case mein Rajya Sabha allow nahi tha, lekin PM/Union Minister ke case mein Rajya Sabha allow hai!" },
+        { "speaker": "raju", "text": "Hain?? Ruko sir, CM Rajya Sabha se nahi ban sakta tha kyunki Rajya Sabha Parliament ka hissa hai, state legislature ka nahi. To PM Rajya Sabha se kaise ban sakta hai?" },
+        { "speaker": "aman", "text": "Bahut achha doubt! PM/Union Minister ko Parliament (Lok Sabha YA Rajya Sabha) ka sadasya hona hai - dono Parliament ke hi ang hain. Lekin CM ko State Legislature (Assembly YA Council) ka sadasya hona hai - Rajya Sabha State Legislature ka hissa nahi hai, isliye wahan allow nahi tha." },
+        { "speaker": "raju", "text": "Ohh! Ab samajh gaya - matching level zaroori hai! PM ke liye Parliament ka koi bhi sadan chalega, CM ke liye State Legislature ka koi bhi sadan chalega, lekin cross nahi kar sakte!" }
+      ],
+      "navigation": { "next": "card_21_minister_lok_sabha_no_confidence", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_minister_lok_sabha_no_confidence",
+      "card_slug": "card_21_minister_lok_sabha_no_confidence",
+      "type": "chat",
+      "concept_id": "minister_from_either_house",
+      "level": 3,
+      "progress": { "current": 21, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda ye pattern! Ek aur zaroori baat - agar koi Minister Lok Sabha ka sadasya nahi hai (matlab Rajya Sabha se hai), to use Lok Sabha ki karyavahi (proceedings) mein bolne aur hissa lene ka adhikar hai, Article 88 ke tahat, lekin wo vote nahi de sakta." },
+        { "speaker": "raju", "text": "Matlab wo baat kar sakta hai lekin vote nahi de sakta? Ye to strange hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi socha! Article 88 dono sadano ke liye ye rule deta hai - koi bhi Minister ya Attorney General kisi bhi sadan mein bol sakta hai, kisi bhi committee mein hissa le sakta hai, jiska wo khud sadasya nahi hai, lekin sirf usi sadan mein vote de sakta hai jiska wo sadasya hai." },
+        { "speaker": "raju", "text": "Achha, ye to bahut logical hai - baat karne ka adhikar sabko, lekin vote sirf apne sadan mein!" }
+      ],
+      "navigation": { "next": "card_22_guess_rajya_sabha_pm_scenario", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_22_guess_rajya_sabha_pm_scenario",
+      "card_slug": "card_22_guess_rajya_sabha_pm_scenario",
+      "type": "guess",
+      "concept_id": "rajya_sabha_pm_scenario",
+      "level": 3,
+      "progress": { "current": 22, "total": 88 },
+      "guess_payload": {
+        "question": "Kya ek vyakti jo Rajya Sabha ka sadasya hai, wo Bharat ka Pradhan Mantri (PM) ban sakta hai?",
+        "options": [
+          { "id": "A", "text": "Nahi, PM sirf Lok Sabha se ban sakta hai" },
+          { "id": "B", "text": "Haan, PM Lok Sabha ya Rajya Sabha, dono mein se kisi ka bhi sadasya ho sakta hai" },
+          { "id": "C", "text": "Sirf agar wo pehle Lok Sabha mein rah chuka ho" },
+          { "id": "D", "text": "Ye Constitution mein likha hi nahi hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "PM sirf Parliament ka sadasya hona chahiye, Lok Sabha ya Rajya Sabha - dono chalega, kyunki dono hi Parliament ke ang hain. Manmohan Singh iske practical example hain, jo Rajya Sabha se PM the."
+      },
+      "navigation": { "next": "card_23_quiz1_six_months", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_23_quiz1_six_months",
+      "card_slug": "card_23_quiz1_six_months",
+      "type": "quiz",
+      "concept_id": "six_months_quiz",
+      "level": 3,
+      "progress": { "current": 23, "total": 88 },
+      "quiz_payload": {
+        "question": "Article 75(5) ke anusar, ek non-member Minister ko kitne samay ke andar Parliament ka sadasya banna zaroori hai?",
+        "options": [
+          { "id": "A", "text": "3 mahine" },
+          { "id": "B", "text": "6 mahine" },
+          { "id": "C", "text": "1 saal" },
+          { "id": "D", "text": "2 saal" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(5) - non-member Minister ko 6 lagatar mahino ke andar Parliament ke kisi bhi sadan ka sadasya banna zaroori hai, warna pad chala jaata hai."
+      },
+      "navigation": { "next": "card_24_quiz2_article88_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_24_quiz2_article88_multistatement",
+      "card_slug": "card_24_quiz2_article88_multistatement",
+      "type": "quiz",
+      "concept_id": "article88_multistatement",
+      "level": 3,
+      "progress": { "current": 24, "total": 88 },
+      "quiz_payload": {
+        "question": "Kathan 1: Article 88 ke anusar koi Minister kisi bhi sadan mein bol sakta hai chahe wo uska sadasya na ho. Kathan 2: Wo Minister us sadan mein vote bhi de sakta hai jiska wo sadasya nahi hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Kathan 1 sahi hai - Article 88 ke tahat Minister kisi bhi sadan mein bol sakta hai. Kathan 2 galat hai - wo sirf apne sadan mein hi vote de sakta hai, jiska wo asli sadasya hai."
+      },
+      "navigation": { "next": "card_25_quiz3_pm_rajya_sabha", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_25_quiz3_pm_rajya_sabha",
+      "card_slug": "card_25_quiz3_pm_rajya_sabha",
+      "type": "quiz",
+      "concept_id": "pm_rajya_sabha_quiz",
+      "level": 3,
+      "progress": { "current": 25, "total": 88 },
+      "quiz_payload": {
+        "question": "CM aur PM ki Legislature membership ke rule mein kya major difference hai?",
+        "options": [
+          { "id": "A", "text": "Dono sirf Lower House se ban sakte hain" },
+          { "id": "B", "text": "PM Parliament ke kisi bhi sadan (Lok Sabha/Rajya Sabha) se ban sakta hai, CM sirf State Legislature (Assembly/Council) se" },
+          { "id": "C", "text": "Dono kisi bhi sadan se ban sakte hain, koi restriction nahi" },
+          { "id": "D", "text": "CM Rajya Sabha se bhi ban sakta hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "PM/Union Minister Parliament ke kisi bhi sadan (Lok Sabha ya Rajya Sabha) ka sadasya ho sakta hai. CM/State Minister sirf apne rajya ki State Legislature (Assembly ya Council) ka sadasya ho sakta hai - Rajya Sabha se nahi."
+      },
+      "navigation": { "next": "card_26_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_26_milestone3",
+      "card_slug": "card_26_milestone3",
+      "type": "milestone",
+      "concept_id": "module3_complete",
+      "level": 3,
+      "progress": { "current": 26, "total": 88 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⏳",
+        "completed_topic": "Article 75(5) - Six Months Rule & Article 88",
+        "xp_earned": 55,
+        "milestone_progress": "Module 3/10 Clear",
+        "motivational_quote": "Zabardast! PM aur CM ke Legislature wale trap ko tumne solid pakad liya. Ab Council of Ministers ke size aur composition dekhte hain!"
+      },
+      "navigation": { "next": "card_27_91st_amendment_75_1A", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_27_91st_amendment_75_1A",
+      "card_slug": "card_27_91st_amendment_75_1A",
+      "type": "chat",
+      "concept_id": "article75_1A",
+      "level": 4,
+      "progress": { "current": 27, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo ab Council of Ministers ke size ka ek zaroori niyam dekhte hain - 91st Constitutional Amendment (2003) ne Article 75(1A) joda, jaise humne state ke liye Article 164(1A) padha tha." },
+        { "speaker": "raju", "text": "Sir ye to bilkul same lag raha hai jo hum Council of Ministers state wale chapter mein padh chuke hain!" },
+        { "speaker": "aman", "text": "Bilkul sahi socha! Article 75(1A) kehta hai - PM samet total Council of Ministers ki sankhya, Lok Sabha ki kul sadasya sankhya (543) ke 15% se zyada nahi ho sakti. Iska matlab maximum ~81 Ministers ho sakte hain (PM samet)." },
+        { "speaker": "raju", "text": "543 ka 15%... to ye approx 81 hua! Achha, aur state mein minimum 12 ka rule tha, yahan bhi hai kya?" }
+      ],
+      "navigation": { "next": "card_28_no_minimum_union", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_28_no_minimum_union",
+      "card_slug": "card_28_no_minimum_union",
+      "type": "chat",
+      "concept_id": "no_minimum_union",
+      "level": 4,
+      "progress": { "current": 28, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut achha sawal! Yahan ek zaroori trap hai - state ke Article 164(1A) mein minimum 12 Ministers ka rule tha, lekin Union ke Article 75(1A) mein sirf maximum limit (15%) di gayi hai, koi minimum number nahi diya gaya!" },
+        { "speaker": "raju", "text": "Hain?? Matlab Union mein koi minimum nahi hai lekin State mein hai? Ye to exam mein confuse kar dega!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda trap! Ye BPSC ka favorite comparison hai - dono jagah maximum 15% same hai, lekin State mein minimum 12 Ministers ka rule hai, Union mein koi minimum nahi diya gaya." },
+        { "speaker": "raju", "text": "Achha, ye difference note kar leta hoon - 'Minimum sirf State mein, Union mein nahi!'" }
+      ],
+      "navigation": { "next": "card_29_article75_1B_defection", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_29_article75_1B_defection",
+      "card_slug": "card_29_article75_1B_defection",
+      "type": "chat",
+      "concept_id": "article75_1B_defection",
+      "level": 4,
+      "progress": { "current": 29, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Article 75(1B) dekho, jo 91st Amendment ne hi joda - agar koi MP kisi Political Party se Anti-Defection Law (10th Schedule) ke tahat disqualify ho jaata hai, to wo Minister banne ke liye bhi ayogya (disqualified) ho jaata hai." },
+        { "speaker": "raju", "text": "Matlab agar koi party badalta hai aur Anti-Defection Law se disqualify ho, to wo Minister bhi nahi ban sakta?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye us purani practice ko rokta hai jaha log dal-badal karke turant Minister ban jaate the. Ye disqualification jab tak Vidhan Sabha/Lok Sabha ka agla chunav na ho ya wo dobara chuna na jaaye, tab tak rehta hai." },
+        { "speaker": "raju", "text": "Achha, matlab ye sirf state ke liye nahi tha, Union mein bhi wahi anti-defection wala rule lagu hai Ministers ke liye!" }
+      ],
+      "navigation": { "next": "card_30_guess_max_ministers", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_30_guess_max_ministers",
+      "card_slug": "card_30_guess_max_ministers",
+      "type": "guess",
+      "concept_id": "max_ministers_guess",
+      "level": 4,
+      "progress": { "current": 30, "total": 88 },
+      "guess_payload": {
+        "question": "Lok Sabha mein kul 543 seats hain. Article 75(1A) ke 15% rule ke hisaab se, PM samet maximum kitne Union Ministers ho sakte hain (approx)?",
+        "options": [
+          { "id": "A", "text": "12" },
+          { "id": "B", "text": "36" },
+          { "id": "C", "text": "81" },
+          { "id": "D", "text": "100" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "543 ka 15% = 81.45, isliye PM samet maximum approx 81 Union Ministers ho sakte hain - koi minimum number specify nahi kiya gaya."
+      },
+      "navigation": { "next": "card_31_quiz1_91st_amendment", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_31_quiz1_91st_amendment",
+      "card_slug": "card_31_quiz1_91st_amendment",
+      "type": "quiz",
+      "concept_id": "91st_amendment_quiz",
+      "level": 4,
+      "progress": { "current": 31, "total": 88 },
+      "quiz_payload": {
+        "question": "Article 75(1A) ke anusar Council of Ministers ka maximum size kya hai?",
+        "options": [
+          { "id": "A", "text": "Lok Sabha ki kul sadasya sankhya ka 10%" },
+          { "id": "B", "text": "Lok Sabha ki kul sadasya sankhya ka 15%" },
+          { "id": "C", "text": "Sirf 50 Ministers" },
+          { "id": "D", "text": "Koi limit nahi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(1A), 91st Amendment (2003) dwara joda gaya, ke anusar PM samet Council of Ministers ki sankhya Lok Sabha ki kul sadasya sankhya ke 15% se zyada nahi ho sakti."
+      },
+      "navigation": { "next": "card_32_quiz2_minimum_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_32_quiz2_minimum_multistatement",
+      "card_slug": "card_32_quiz2_minimum_multistatement",
+      "type": "quiz",
+      "concept_id": "minimum_multistatement",
+      "level": 4,
+      "progress": { "current": 32, "total": 88 },
+      "quiz_payload": {
+        "question": "Kathan 1: Union Council of Ministers ke liye koi minimum sankhya Constitution mein nirdharit nahi hai. Kathan 2: State Council of Ministers ke liye minimum 12 Mantri ka pravdhan hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - ye Union (Article 75(1A)) aur State (Article 164(1A)) ke beech ka bada difference hai jo BPSC mein bahut poocha jaata hai."
+      },
+      "navigation": { "next": "card_33_quiz3_article75_1B", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_33_quiz3_article75_1B",
+      "card_slug": "card_33_quiz3_article75_1B",
+      "type": "quiz",
+      "concept_id": "article75_1B_quiz",
+      "level": 4,
+      "progress": { "current": 33, "total": 88 },
+      "quiz_payload": {
+        "question": "Article 75(1B) ke anusar, kaunsa vyakti Union Minister banne ke liye ayogya (disqualified) ho jaata hai?",
+        "options": [
+          { "id": "A", "text": "Jo 35 saal se kam umar ka ho" },
+          { "id": "B", "text": "Jo Anti-Defection Law (10th Schedule) ke tahat disqualify ho chuka ho" },
+          { "id": "C", "text": "Jo Rajya Sabha ka sadasya ho" },
+          { "id": "D", "text": "Jo pehle IAS raha ho" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(1B), 91st Amendment dwara joda gaya, kehta hai ki jo vyakti Anti-Defection Law ke tahat Parliament ya State Legislature ki sadasyata se disqualify ho chuka hai, wo Minister banne ke liye bhi ayogya hoga."
+      },
+      "navigation": { "next": "card_34_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_34_milestone4",
+      "card_slug": "card_34_milestone4",
+      "type": "milestone",
+      "concept_id": "module4_complete",
+      "level": 4,
+      "progress": { "current": 34, "total": 88 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔢",
+        "completed_topic": "Size Limit & Anti-Defection Link (91st Amendment)",
+        "xp_earned": 55,
+        "milestone_progress": "Module 4/10 Clear",
+        "motivational_quote": "Bahut badhiya! Union aur State ke minimum-maximum wala trap tumne pakad liya. Ab Council of Ministers ki teen categories dekhte hain!"
+      },
+      "navigation": { "next": "card_35_categories_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_35_categories_intro",
+      "card_slug": "card_35_categories_intro",
+      "type": "chat",
+      "concept_id": "categories_intro",
+      "level": 5,
+      "progress": { "current": 35, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ab ek zaroori concept - kya sabhi Ministers ki power ek jaisi hoti hai? Jawab hai - Nahi! Council of Ministers ek 'generic' (samuchit) term hai jisme teen alag-alag ranks (categories) hoti hain." },
+        { "speaker": "raju", "text": "Teen category? Matlab Minister banne ke baad bhi kuch high-level aur kuch low-level hote hain?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Sabse upar hai Cabinet Minister - ye seniormost hote hain, important ministries (jaise Defence, Home, Finance) sambhalte hain aur Cabinet meetings mein regular hissa lete hain." },
+        { "speaker": "raju", "text": "Achha, to Cabinet Minister sabse powerful hue. Baaki do category kaunsi hain sir?" }
+      ],
+      "navigation": { "next": "card_36_minister_of_state_types", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_36_minister_of_state_types",
+      "card_slug": "card_36_minister_of_state_types",
+      "type": "chat",
+      "concept_id": "minister_of_state_types",
+      "level": 5,
+      "progress": { "current": 36, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Doosri category hai - Minister of State (राज्य मंत्री). Ismein bhi do sub-types hote hain - pehla 'Independent Charge' wale, jo apne dam par kisi mantralaya ka poora zimma sambhalte hain, bina kisi Cabinet Minister ke under kaam kiye." },
+        { "speaker": "raju", "text": "Achha, matlab Minister of State bhi kabhi-kabhi poore department ka boss ho sakta hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Doosra sub-type hai - Minister of State jo kisi Cabinet Minister ke under attached hote hain, aur unke department ke ek particular hisse ki jimmedari sambhalte hain, jaise 'MoS Finance' jo Finance Minister ke under kaam karta hai." },
+        { "speaker": "raju", "text": "Achha, to ek Minister of State independent bhi ho sakta hai aur kisi ke under attached bhi - ye dono type hai!" }
+      ],
+      "navigation": { "next": "card_37_deputy_minister", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_37_deputy_minister",
+      "card_slug": "card_37_deputy_minister",
+      "type": "chat",
+      "concept_id": "deputy_minister",
+      "level": 5,
+      "progress": { "current": 37, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Teesri aur sabse junior category hai - Deputy Minister. Ye kisi bhi mantralaya ka independent charge nahi rakhte, balki Cabinet Minister ya Minister of State ki madad karte hain." },
+        { "speaker": "raju", "text": "Sir ye teeno mein kya important cheez yaad rakhni hai exam ke liye?" },
+        { "speaker": "aman", "text": "Yaad rakho - Cabinet Minister > Minister of State (Independent Charge) > Minister of State (attached) > Deputy Minister. Aur ek zaroori baat - salary/allowances ke maamle mein sabhi Ministers barabar hote hain, chahe wo kisi bhi category ke ho." },
+        { "speaker": "raju", "text": "Achha! Ranking mein farak hai lekin salary sabki same? Ye to interesting fact hai, note karta hoon!" }
+      ],
+      "navigation": { "next": "card_38_parliamentary_secretary", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_38_parliamentary_secretary",
+      "card_slug": "card_38_parliamentary_secretary",
+      "type": "chat",
+      "concept_id": "parliamentary_secretary",
+      "level": 5,
+      "progress": { "current": 38, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur category jo bahut kam use hoti hai lekin exam mein poochhi jaa sakti hai - Parliamentary Secretary. Ye teeno wali category se bhi neeche aata hai aur Cabinet ka sadasya nahi hota - ye sirf Minister ki Parliament ke kaam mein madad karta hai." },
+        { "speaker": "raju", "text": "Achha, ye to bahut kam sunte hain, aajkal use hota hai kya?" },
+        { "speaker": "aman", "text": "Ye system aajkal India mein kam prevalent hai, lekin conceptually Constitution isse exclude nahi karta. BPSC/UPSC mein isse Cabinet Minister se compare karne wale question aa sakte hain." },
+        { "speaker": "raju", "text": "Achha, samajh gaya - ye theek waise hai jaise school mein Class Monitor bhi ho sakta hai, jo teacher ki madad karta hai but decision nahi leta!" }
+      ],
+      "navigation": { "next": "card_39_guess_which_rank_highest", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_39_guess_which_rank_highest",
+      "card_slug": "card_39_guess_which_rank_highest",
+      "type": "guess",
+      "concept_id": "which_rank_highest_guess",
+      "level": 5,
+      "progress": { "current": 39, "total": 88 },
+      "guess_payload": {
+        "question": "In char categories mein sabse senior/powerful kaunsi category hai?",
+        "options": [
+          { "id": "A", "text": "Deputy Minister" },
+          { "id": "B", "text": "Minister of State (Attached)" },
+          { "id": "C", "text": "Cabinet Minister" },
+          { "id": "D", "text": "Parliamentary Secretary" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Cabinet Minister sabse senior category hai - ye important ministries handle karte hain aur regular Cabinet meetings mein hissa lete hain."
+      },
+      "navigation": { "next": "card_40_quiz1_categories", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_40_quiz1_categories",
+      "card_slug": "card_40_quiz1_categories",
+      "type": "quiz",
+      "concept_id": "categories_quiz",
+      "level": 5,
+      "progress": { "current": 40, "total": 88 },
+      "quiz_payload": {
+        "question": "Council of Ministers mein kaunsi teen mukhya category hoti hain?",
+        "options": [
+          { "id": "A", "text": "PM, Speaker, CJI" },
+          { "id": "B", "text": "Cabinet Minister, Minister of State, Deputy Minister" },
+          { "id": "C", "text": "Governor, CM, President" },
+          { "id": "D", "text": "Chairman, Vice-Chairman, Secretary" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Council of Ministers mein teen mukhya category hoti hain - Cabinet Minister, Minister of State (Independent ya Attached), aur Deputy Minister."
+      },
+      "navigation": { "next": "card_41_quiz2_mos_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_41_quiz2_mos_multistatement",
+      "card_slug": "card_41_quiz2_mos_multistatement",
+      "type": "quiz",
+      "concept_id": "mos_multistatement",
+      "level": 5,
+      "progress": { "current": 41, "total": 88 },
+      "quiz_payload": {
+        "question": "Kathan 1: Minister of State (Independent Charge) apne mantralaya ka poora zimma khud sambhalta hai bina kisi Cabinet Minister ke under kaam kiye. Kathan 2: Salary/allowances ke maamle mein Cabinet Minister aur Deputy Minister mein antar hota hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Kathan 1 sahi hai. Kathan 2 galat hai - salary/allowances ke maamle mein sabhi categories ke Ministers barabar hote hain, chahe unki ranking mein antar ho."
+      },
+      "navigation": { "next": "card_42_quiz3_deputy_minister", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_42_quiz3_deputy_minister",
+      "card_slug": "card_42_quiz3_deputy_minister",
+      "type": "quiz",
+      "concept_id": "deputy_minister_quiz",
+      "level": 5,
+      "progress": { "current": 42, "total": 88 },
+      "quiz_payload": {
+        "question": "Deputy Minister ka kya kaam hota hai?",
+        "options": [
+          { "id": "A", "text": "Poore mantralaya ka independent zimma sambhalna" },
+          { "id": "B", "text": "Cabinet Minister ya Minister of State ki madad karna, koi independent zimma nahi" },
+          { "id": "C", "text": "Sirf Cabinet meetings chair karna" },
+          { "id": "D", "text": "PM ki jagah kaam karna" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Deputy Minister koi independent mantralaya ka zimma nahi rakhta, balki Cabinet Minister ya Minister of State ki madad karta hai - ye sabse junior category hai."
+      },
+      "navigation": { "next": "card_43_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_43_milestone5",
+      "card_slug": "card_43_milestone5",
+      "type": "milestone",
+      "concept_id": "module5_complete",
+      "level": 5,
+      "progress": { "current": 43, "total": 88 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎖️",
+        "completed_topic": "Categories of Ministers (Cabinet/MoS/Deputy)",
+        "xp_earned": 55,
+        "milestone_progress": "Module 5/10 Clear",
+        "motivational_quote": "Zabardast! Ranking ka poora structure ab clear hai. Ab dekhte hain Cabinet aur Council of Ministers mein kya farak hai - ye bahut common confusion hai!"
+      },
+      "navigation": { "next": "card_44_cabinet_vs_council_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_44_cabinet_vs_council_intro",
+      "card_slug": "card_44_cabinet_vs_council_intro",
+      "type": "chat",
+      "concept_id": "cabinet_vs_council_intro",
+      "level": 6,
+      "progress": { "current": 44, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab wo sabse bada confusion clear karte hain jo har student ko pareshaan karta hai - 'Cabinet' aur 'Council of Ministers' mein kya farak hai? Ye dono alag-alag lagte hain lekin related hain." },
+        { "speaker": "raju", "text": "Sir ye to mujhe bhi lagta hai same hi hai! Dono mein to PM aur Ministers hi hote hain na?" },
+        { "speaker": "aman", "text": "Yahi asli trap hai! Council of Ministers ek bada, 'umbrella' group hai jisme Cabinet Minister, Minister of State, aur Deputy Minister - sab shamil hote hain. Lekin Cabinet ek chhota, elite group hai jisme sirf Cabinet Ministers hote hain." },
+        { "speaker": "raju", "text": "Ohh! Matlab Cabinet, Council of Ministers ka ek chhota 'inner circle' hai! Jaise ek badi team ke andar ek small core team ho!" }
+      ],
+      "navigation": { "next": "card_45_size_comparison_cabinet", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_45_size_comparison_cabinet",
+      "card_slug": "card_45_size_comparison_cabinet",
+      "type": "chat",
+      "concept_id": "size_comparison_cabinet",
+      "level": 6,
+      "progress": { "current": 45, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi analogy! Ab numbers dekho - Council of Ministers mein 60-80 tak Ministers ho sakte hain (15% limit ke andar), lekin Cabinet mein sirf 15-20 (approx) senior-most Cabinet Ministers hi hote hain." },
+        { "speaker": "raju", "text": "Achha, to Cabinet chhota hai isliye asaani se meeting bula sakta hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Cabinet regularly milta hai (haftey mein ek baar) aur asli policy-decisions leta hai. Poori Council of Ministers ek saath kabhi-kabhi hi milti hai, kyunki itna bada group regularly milna practical nahi hai." },
+        { "speaker": "raju", "text": "Achha, matlab Cabinet hi asli 'decision-making engine' hai, Council of Ministers sirf ek badi umbrella body hai jo formally exist karti hai!" }
+      ],
+      "navigation": { "next": "card_46_cabinet_not_defined_originally", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_46_cabinet_not_defined_originally",
+      "card_slug": "card_46_cabinet_not_defined_originally",
+      "type": "chat",
+      "concept_id": "cabinet_not_defined_originally",
+      "level": 6,
+      "progress": { "current": 46, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek zaroori historical fact - 'Cabinet' word original Constitution (1950) mein tha hi nahi! Ye 44th Constitutional Amendment (1978) ke through Article 352 mein pehli baar add kiya gaya - National Emergency ki declaration ke context mein." },
+        { "speaker": "raju", "text": "Kya?? Itna important word pehle Constitution mein tha hi nahi?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Original Constitution sirf 'Council of Ministers' word use karta tha. 'Cabinet' sirf ek practice/convention ki tarah exist karta tha, jab tak 44th Amendment ne ise Article 352(3) mein formally define nahi kiya, wo bhi sirf Emergency declaration ke context mein." },
+        { "speaker": "raju", "text": "Achha! Ye to BPSC ka bahut khaas trap hoga - 'Cabinet' word ka pehli baar Constitution mein aana!" }
+      ],
+      "navigation": { "next": "card_47_guess_cabinet_bigger_smaller", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_47_guess_cabinet_bigger_smaller",
+      "card_slug": "card_47_guess_cabinet_bigger_smaller",
+      "type": "guess",
+      "concept_id": "cabinet_bigger_smaller_guess",
+      "level": 6,
+      "progress": { "current": 47, "total": 88 },
+      "guess_payload": {
+        "question": "Raju sochta hai ki 'Cabinet' aur 'Council of Ministers' ek hi cheez hai. Sahi jawab kya hai?",
+        "options": [
+          { "id": "A", "text": "Dono ek hi cheez hain, koi farak nahi" },
+          { "id": "B", "text": "Cabinet, Council of Ministers ka ek chhota, senior sub-group hai" },
+          { "id": "C", "text": "Council of Ministers, Cabinet ka sub-group hai" },
+          { "id": "D", "text": "Cabinet sirf Emergency mein banti hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Cabinet, Council of Ministers ka ek chhota aur zyada senior/powerful sub-group hai, jisme sirf Cabinet Ministers shamil hote hain. Council of Ministers ek badi umbrella body hai jisme sabhi categories shamil hain."
+      },
+      "navigation": { "next": "card_48_quiz1_cabinet_word_origin", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_48_quiz1_cabinet_word_origin",
+      "card_slug": "card_48_quiz1_cabinet_word_origin",
+      "type": "quiz",
+      "concept_id": "cabinet_word_origin_quiz",
+      "level": 6,
+      "progress": { "current": 48, "total": 88 },
+      "quiz_payload": {
+        "question": "'Cabinet' word pehli baar Constitution mein kis Amendment ke through jodi gayi?",
+        "options": [
+          { "id": "A", "text": "42nd Amendment (1976)" },
+          { "id": "B", "text": "44th Amendment (1978)" },
+          { "id": "C", "text": "91st Amendment (2003)" },
+          { "id": "D", "text": "7th Amendment (1956)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "44th Constitutional Amendment Act, 1978 ne pehli baar 'Cabinet' word ko Article 352(3) mein formally jodkar define kiya, wo bhi National Emergency declaration ke specific context mein."
+      },
+      "navigation": { "next": "card_49_quiz2_cabinet_size_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_49_quiz2_cabinet_size_multistatement",
+      "card_slug": "card_49_quiz2_cabinet_size_multistatement",
+      "type": "quiz",
+      "concept_id": "cabinet_size_multistatement",
+      "level": 6,
+      "progress": { "current": 49, "total": 88 },
+      "quiz_payload": {
+        "question": "Kathan 1: Cabinet, Council of Ministers se chhota hota hai. Kathan 2: Cabinet regularly milta hai (haftey mein ek baar) aur asli policy-decisions leta hai, jabki poori Council of Ministers ek saath aksar nahi milti. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - Cabinet chhota aur regular meeting wala group hai jo asli decisions leta hai, Council of Ministers ek badi umbrella body hai."
+      },
+      "navigation": { "next": "card_50_quiz3_original_constitution", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_50_quiz3_original_constitution",
+      "card_slug": "card_50_quiz3_original_constitution",
+      "type": "quiz",
+      "concept_id": "original_constitution_quiz",
+      "level": 6,
+      "progress": { "current": 50, "total": 88 },
+      "quiz_payload": {
+        "question": "Original Constitution (1950) mein kaunsa word tha, 'Cabinet' nahi?",
+        "options": [
+          { "id": "A", "text": "Council of Ministers" },
+          { "id": "B", "text": "Union Executive" },
+          { "id": "C", "text": "National Committee" },
+          { "id": "D", "text": "Ministerial Board" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Original Constitution mein sirf 'Council of Ministers' word tha (Article 74, 75). 'Cabinet' word 1978 ke 44th Amendment se pehle formally nahi tha."
+      },
+      "navigation": { "next": "card_51_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_51_milestone6",
+      "card_slug": "card_51_milestone6",
+      "type": "milestone",
+      "concept_id": "module6_complete",
+      "level": 6,
+      "progress": { "current": 51, "total": 88 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💎",
+        "completed_topic": "Cabinet vs Council of Ministers",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/10 Clear",
+        "motivational_quote": "Outstanding! Ye bahut hi high-level trap tha aur tumne ekdum clear kar liya. Ab collective responsibility ka important concept dekhte hain!"
+      },
+      "navigation": { "next": "card_52_article75_3_collective_responsibility", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_52_article75_3_collective_responsibility",
+      "card_slug": "card_52_article75_3_collective_responsibility",
+      "type": "chat",
+      "concept_id": "article75_3_collective_responsibility",
+      "level": 7,
+      "progress": { "current": 52, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Article 75(3) dekho - sabse important principle jo hum pichle chapter mein CM ke case mein (Article 164(2)) padh chuke hain - 'Collective Responsibility'. Council of Ministers, poori tarah Lok Sabha ke prati uttardayi (responsible) hoti hai." },
+        { "speaker": "raju", "text": "Sir ye to bilkul same hai jo state ke liye tha - poori Council ek saath jimmedar hoti hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ek zaroori difference yaad rakho - Council of Ministers sirf 'Lok Sabha' ke prati uttardayi hoti hai, Rajya Sabha ke prati nahi. Isliye No-Confidence Motion sirf Lok Sabha mein hi laaya ja sakta hai." },
+        { "speaker": "raju", "text": "Achha! Matlab agar Rajya Sabha unhappy ho Council se, to unhe hataya nahi ja sakta - sirf Lok Sabha ka matter hai ye?" }
+      ],
+      "navigation": { "next": "card_53_no_confidence_motion", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_53_no_confidence_motion",
+      "card_slug": "card_53_no_confidence_motion",
+      "type": "chat",
+      "concept_id": "no_confidence_motion",
+      "level": 7,
+      "progress": { "current": 53, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi socha! Agar Lok Sabha 'No-Confidence Motion' (Ashwas Prastav) paas kar de Council of Ministers ke khilaf, to poori Council of Ministers - sirf ek Minister nahi - resign karni padti hai, chahe wo Rajya Sabha ka sadasya kyun na ho." },
+        { "speaker": "raju", "text": "Wow, matlab ek Minister ki galti se poori team ki naukri jaa sakti hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye 'ek saath doobna, ek saath tairna' wala principle hai. Isse politically ye ensure hota hai ki Council of Ministers ek unified team ki tarah kaam kare, alag-alag awaaz na uthaye publicly." },
+        { "speaker": "raju", "text": "Achha, matlab har Minister ko apni party line ke saath rehna padta hai, warna poori Council ka nuksan ho sakta hai!" }
+      ],
+      "navigation": { "next": "card_54_cabinet_secrecy_confidentiality", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_54_cabinet_secrecy_confidentiality",
+      "card_slug": "card_54_cabinet_secrecy_confidentiality",
+      "type": "chat",
+      "concept_id": "cabinet_secrecy_confidentiality",
+      "level": 7,
+      "progress": { "current": 54, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Collective Responsibility ka ek practical result hai - Cabinet meetings mein jo bhi discuss hota hai, wo poori tarah gopniya (confidential) rehta hai. Chahe kisi Minister ne meeting mein kisi decision ka virodh kiya ho, ek baar decision ho jaaye to sabko publicly usko support karna padta hai." },
+        { "speaker": "raju", "text": "Matlab agar Minister ko kisi baat se disagreement ho, to bhi bahar bolna nahi padega?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye 'principle of collective responsibility' aur 'cabinet secrecy' ka combined effect hai. Agar koi Minister bahar jaakar Cabinet decision ke against bolna chahta hai, to uska ek hi rasta hai - resign karna, phir bolna." },
+        { "speaker": "raju", "text": "Ohh! To ye ek tarah ka discipline system hai - andar jitna bhi disagree karo, bahar ek awaaz mein bolna hai!" }
+      ],
+      "navigation": { "next": "card_55_guess_lok_sabha_only", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_55_guess_lok_sabha_only",
+      "card_slug": "card_55_guess_lok_sabha_only",
+      "type": "guess",
+      "concept_id": "lok_sabha_only_guess",
+      "level": 7,
+      "progress": { "current": 55, "total": 88 },
+      "guess_payload": {
+        "question": "Agar Rajya Sabha Council of Ministers ke against koi resolution paas kar de, to kya Council of Ministers ko resign karna padega?",
+        "options": [
+          { "id": "A", "text": "Haan, Rajya Sabha ki naraazgi se bhi Council girti hai" },
+          { "id": "B", "text": "Nahi, Council of Ministers sirf Lok Sabha ke prati uttardayi hoti hai, Rajya Sabha ke prati nahi" },
+          { "id": "C", "text": "Sirf agar dono sadan saath mein paas karein" },
+          { "id": "D", "text": "President decide karenge" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(3) ke anusar, Council of Ministers sirf Lok Sabha ke prati collectively uttardayi hoti hai. Rajya Sabha ke prati koi collective responsibility nahi hai, isliye wahan se koi binding no-confidence motion nahi aa sakta."
+      },
+      "navigation": { "next": "card_56_quiz1_article75_3", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_56_quiz1_article75_3",
+      "card_slug": "card_56_quiz1_article75_3",
+      "type": "quiz",
+      "concept_id": "article75_3_quiz",
+      "level": 7,
+      "progress": { "current": 56, "total": 88 },
+      "quiz_payload": {
+        "question": "Article 75(3) ke anusar Council of Ministers kis sadan ke prati collectively uttardayi hoti hai?",
+        "options": [
+          { "id": "A", "text": "Rajya Sabha" },
+          { "id": "B", "text": "Lok Sabha" },
+          { "id": "C", "text": "Dono sadan" },
+          { "id": "D", "text": "President" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(3) - Council of Ministers poori tarah Lok Sabha ke prati saamuhik roop se (collectively) uttardayi hoti hai, jaise state mein Article 164(2) Vidhan Sabha ke prati batata hai."
+      },
+      "navigation": { "next": "card_57_quiz2_no_confidence_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_57_quiz2_no_confidence_multistatement",
+      "card_slug": "card_57_quiz2_no_confidence_multistatement",
+      "type": "quiz",
+      "concept_id": "no_confidence_multistatement",
+      "level": 7,
+      "progress": { "current": 57, "total": 88 },
+      "quiz_payload": {
+        "question": "Kathan 1: Agar Lok Sabha No-Confidence Motion paas kar de, to poori Council of Ministers ko resign karna padta hai. Kathan 2: Rajya Sabha ka sadasya banne wala Minister is niyam se bacha rehta hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Kathan 1 sahi hai. Kathan 2 galat hai - Rajya Sabha se aane wale Minister bhi poori Council ke saath resign karte hain, kyunki responsibility poori Council ki hoti hai, sirf Lok Sabha members ki nahi."
+      },
+      "navigation": { "next": "card_58_quiz3_cabinet_secrecy", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_58_quiz3_cabinet_secrecy",
+      "card_slug": "card_58_quiz3_cabinet_secrecy",
+      "type": "quiz",
+      "concept_id": "cabinet_secrecy_quiz",
+      "level": 7,
+      "progress": { "current": 58, "total": 88 },
+      "quiz_payload": {
+        "question": "Agar koi Minister Cabinet ke kisi decision se publicly disagree karna chahta hai, to uska sahi tarika kya hai?",
+        "options": [
+          { "id": "A", "text": "Media mein khule aam usse disagree kare, bina resign kiye" },
+          { "id": "B", "text": "Pehle resign kare, phir apni asahmati (disagreement) public kare" },
+          { "id": "C", "text": "President ko complain kare" },
+          { "id": "D", "text": "Court mein case kare" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Collective Responsibility ke tahat, ek baar Cabinet decision ho jaaye to sabhi Ministers ko usse support karna padta hai. Agar koi disagree karna chahta hai, to use pehle resign karna hoga."
+      },
+      "navigation": { "next": "card_59_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_59_milestone7",
+      "card_slug": "card_59_milestone7",
+      "type": "milestone",
+      "concept_id": "module7_complete",
+      "level": 7,
+      "progress": { "current": 59, "total": 88 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🤝",
+        "completed_topic": "Collective Responsibility (Article 75(3))",
+        "xp_earned": 55,
+        "milestone_progress": "Module 7/10 Clear",
+        "motivational_quote": "Bahut badhiya! Rajya Sabha wala trap ab pakka clear hai. Ab individual responsibility aur Cabinet Committees dekhte hain!"
+      },
+      "navigation": { "next": "card_60_individual_responsibility", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_60_individual_responsibility",
+      "card_slug": "card_60_individual_responsibility",
+      "type": "chat",
+      "concept_id": "individual_responsibility",
+      "level": 8,
+      "progress": { "current": 60, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhte hain 'Individual Responsibility' ka concept, jo Article 75(2) mein hai - har Minister individually Rashtrapati ki khushi tak pad par rehta hai." },
+        { "speaker": "raju", "text": "To agar sirf ek Minister ki galti ho, to sirf usko hi hataya jaa sakta hai, poori Council nahi?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Isko 'Individual Responsibility' kehte hain - agar PM kisi ek Minister se khush nahi hai (chahe Lok Sabha ne koi no-confidence pass na ki ho), to PM Rashtrapati ko us Minister ko hataane ki salah de sakta hai." },
+        { "speaker": "raju", "text": "Achha, to yahan bhi PM ki hi asli power chalti hai - kagaz par Rashtrapati hata raha hai lekin real mein PM decide karta hai!" }
+      ],
+      "navigation": { "next": "card_61_pm_reshuffle_power", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_61_pm_reshuffle_power",
+      "card_slug": "card_61_pm_reshuffle_power",
+      "type": "chat",
+      "concept_id": "pm_reshuffle_power",
+      "level": 8,
+      "progress": { "current": 61, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pattern pakda! Ye jo humne PM ki power dekhi, isko PM ka 'Cabinet reshuffle' ka adhikar bhi kehte hain - PM kisi Minister ka department badal sakta hai, ya use pura hata sakta hai." },
+        { "speaker": "raju", "text": "Achha, matlab PM ke paas apni team manage karne ki poori azadi hai?" },
+        { "speaker": "aman", "text": "Bilkul, jaise humne CM ke case mein padha tha ki wo apni Council ke andar sabse powerful figure hota hai, waise hi Union level par PM Council of Ministers ka 'captain' hai - naye Ministers chunna, purano ko hataana, sab PM ki salah se hota hai." },
+        { "speaker": "raju", "text": "Achha, matlab CM aur PM ka role ekdum similar pattern follow karta hai - bas level alag hai, state vs Union!" }
+      ],
+      "navigation": { "next": "card_62_pm_death_council_dissolves", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_62_pm_death_council_dissolves",
+      "card_slug": "card_62_pm_death_council_dissolves",
+      "type": "chat",
+      "concept_id": "pm_death_council_dissolves",
+      "level": 8,
+      "progress": { "current": 62, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek zaroori exam trap yaad rakho - agar PM ka resignation ya mrityu (death) ho jaaye, to poori Council of Ministers apne aap bhang (dissolve) ho jaati hai, kyunki Council PM ke around hi bani hoti hai." },
+        { "speaker": "raju", "text": "Matlab baaki Ministers automatically apna pad kho dete hain, chahe unhone koi galti na ki ho?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye ek automatic constitutional consequence hai. Lekin isse ulta, agar koi ek Cabinet Minister resign kare ya mar jaaye, to sirf usi ka pad khaali hota hai, poori Council of Ministers bhang nahi hoti." },
+        { "speaker": "raju", "text": "Achha! Ye asymmetry samajh mein aa gayi - PM sabki 'jaan' hai, lekin ek Minister sirf apni khud ki 'jaan' hai team ke liye!" }
+      ],
+      "navigation": { "next": "card_63_guess_pm_resign_scenario", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_63_guess_pm_resign_scenario",
+      "card_slug": "card_63_guess_pm_resign_scenario",
+      "type": "guess",
+      "concept_id": "pm_resign_scenario_guess",
+      "level": 8,
+      "progress": { "current": 63, "total": 88 },
+      "guess_payload": {
+        "question": "Agar Bharat ke PM ka achanak dehant (death) ho jaaye, to baaki Council of Ministers ka kya hoga?",
+        "options": [
+          { "id": "A", "text": "Sabse senior Cabinet Minister apne aap naya PM ban jaayega" },
+          { "id": "B", "text": "Poori Council of Ministers apne aap bhang ho jaati hai" },
+          { "id": "C", "text": "Kuch nahi hoga, Council waise hi chalti rahegi" },
+          { "id": "D", "text": "Rashtrapati khud PM ban jaayenge" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "PM ke resign ya dehant hone par poori Council of Ministers apne aap bhang ho jaati hai, kyunki Council PM ke around organized hoti hai. Naye PM ke chunav tak process alag se follow hoti hai (jaise caretaker system)."
+      },
+      "navigation": { "next": "card_64_quiz1_individual_responsibility", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_64_quiz1_individual_responsibility",
+      "card_slug": "card_64_quiz1_individual_responsibility",
+      "type": "quiz",
+      "concept_id": "individual_responsibility_quiz",
+      "level": 8,
+      "progress": { "current": 64, "total": 88 },
+      "quiz_payload": {
+        "question": "Article 75(2) kis principle ko darshata hai?",
+        "options": [
+          { "id": "A", "text": "Collective Responsibility" },
+          { "id": "B", "text": "Individual Responsibility" },
+          { "id": "C", "text": "Doctrine of Basic Structure" },
+          { "id": "D", "text": "Anti-Defection Law" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(2) - har Minister individually Rashtrapati ki khushi tak pad par rehta hai, ye 'Individual Responsibility' darshata hai (Collective Responsibility Article 75(3) mein hai)."
+      },
+      "navigation": { "next": "card_65_quiz2_reshuffle_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_65_quiz2_reshuffle_multistatement",
+      "card_slug": "card_65_quiz2_reshuffle_multistatement",
+      "type": "quiz",
+      "concept_id": "reshuffle_multistatement",
+      "level": 8,
+      "progress": { "current": 65, "total": 88 },
+      "quiz_payload": {
+        "question": "Kathan 1: PM apni salah se kisi bhi Minister ko hatwa sakta hai ya uska department badal sakta hai. Kathan 2: Agar koi ek Cabinet Minister resign kare, to poori Council of Ministers bhang ho jaati hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Kathan 1 sahi hai. Kathan 2 galat hai - sirf PM ke resign/death par poori Council bhang hoti hai, ek saadharan Cabinet Minister ke resign karne se sirf uska pad khaali hota hai."
+      },
+      "navigation": { "next": "card_66_quiz3_pm_death_scenario", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_66_quiz3_pm_death_scenario",
+      "card_slug": "card_66_quiz3_pm_death_scenario",
+      "type": "quiz",
+      "concept_id": "pm_death_scenario_quiz",
+      "level": 8,
+      "progress": { "current": 66, "total": 88 },
+      "quiz_payload": {
+        "question": "Council of Ministers ke bhang hone ka automatic karan kya hota hai?",
+        "options": [
+          { "id": "A", "text": "Kisi bhi Minister ka resign hona" },
+          { "id": "B", "text": "PM ka resignation ya dehant (death)" },
+          { "id": "C", "text": "Rajya Sabha ka satra khatam hona" },
+          { "id": "D", "text": "Budget pass na hona" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "PM ka resignation ya dehant poori Council of Ministers ko automatically bhang kar deta hai, kyunki Council PM ke around structured hoti hai."
+      },
+      "navigation": { "next": "card_67_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_67_milestone8",
+      "card_slug": "card_67_milestone8",
+      "type": "milestone",
+      "concept_id": "module8_complete",
+      "level": 8,
+      "progress": { "current": 67, "total": 88 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "👤",
+        "completed_topic": "Individual Responsibility & PM's Powers",
+        "xp_earned": 55,
+        "milestone_progress": "Module 8/10 Clear",
+        "motivational_quote": "Zabardast! PM ki asli power ka poora pattern ab clear hai. Ab Cabinet Committees aur Article 78 dekhte hain!"
+      },
+      "navigation": { "next": "card_68_cabinet_committees_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_68_cabinet_committees_intro",
+      "card_slug": "card_68_cabinet_committees_intro",
+      "type": "chat",
+      "concept_id": "cabinet_committees_intro",
+      "level": 9,
+      "progress": { "current": 68, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho itni saari policies aur decisions - kya poori Cabinet har chhoti-badi baat ke liye ek saath baithe? Practically ye mushkil hai, isliye Cabinet ke andar chhoti-chhoti 'Cabinet Committees' banayi jaati hain." },
+        { "speaker": "raju", "text": "Achha, matlab Cabinet ke andar bhi ek aur chhota group hota hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye Cabinet Committees ek zaroori extra-constitutional device hain, matlab ye Constitution mein likhi nahi hai - ye Government of India (Transaction of Business) Rules, 1961 ke tahat banayi jaati hain. Sabse important hai Cabinet Committee on Political Affairs (CCPA), jise PM khud head karte hain." },
+        { "speaker": "raju", "text": "Extra-constitutional? Matlab Constitution mein likhi hi nahi hai lekin phir bhi kaam karti hai?" }
+      ],
+      "navigation": { "next": "card_69_types_cabinet_committees", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_69_types_cabinet_committees",
+      "card_slug": "card_69_types_cabinet_committees",
+      "type": "chat",
+      "concept_id": "types_cabinet_committees",
+      "level": 9,
+      "progress": { "current": 69, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Jaise humne pichle chapters mein 'convention' ki baat ki thi (bahumat dal ke neta ko CM/PM banana), waise hi Cabinet Committees bhi ek practice hai jo kaam ke liye zaroori hai, chahe Constitution mein na ho. Aur haan, kuch important committees ke naam hain - Cabinet Committee on Security (CCS), Cabinet Committee on Economic Affairs (CCEA)." },
+        { "speaker": "raju", "text": "Ye committees mein bhi PM hi head hote hain sabme?" },
+        { "speaker": "aman", "text": "Zyadatar important committees ka chairman PM hi hote hain, lekin kuch committees ka chairman koi senior Cabinet Minister bhi ho sakta hai. Aur ek zaroori baat - ismein non-Cabinet Ministers ya even outside experts ko bhi shamil kiya jaa sakta hai." },
+        { "speaker": "raju", "text": "Achha, matlab flexible system hai - jo bhi zaroorat ho, wahi member banaya jaa sakta hai committee mein!" }
+      ],
+      "navigation": { "next": "card_70_article78_pm_duties", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_70_article78_pm_duties",
+      "card_slug": "card_70_article78_pm_duties",
+      "type": "chat",
+      "concept_id": "article78_pm_duties",
+      "level": 9,
+      "progress": { "current": 70, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Article 78 dekhte hain - jaise humne CM ke case mein Article 167 padha tha (Governor ke prati kartavya), waise hi Article 78 PM ke Rashtrapati ke prati teen kartavya batata hai." },
+        { "speaker": "raju", "text": "Sir mujhe laga tha! Ye to bilkul same pattern hai jaise Article 167 tha!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Pehla - PM ko Council of Ministers ke saare decisions aur legislation proposals Rashtrapati tak pahunchane padte hain. Doosra - Rashtrapati jab bhi jaankari maange, PM use deni padegi. Teesra - agar Rashtrapati chahe, to jo faisla kisi akele Minister ne liya hai lekin poori Council ne discuss nahi kiya, use PM ko poori Council ke saamne rakhna padega." },
+        { "speaker": "raju", "text": "Wow, ye to bilkul word-by-word same hai jo CM ka Article 167 mein tha, bas Rashtrapati aur PM ke naam badal gaye!" }
+      ],
+      "navigation": { "next": "card_71_guess_cabinet_committee_source", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_71_guess_cabinet_committee_source",
+      "card_slug": "card_71_guess_cabinet_committee_source",
+      "type": "guess",
+      "concept_id": "cabinet_committee_source_guess",
+      "level": 9,
+      "progress": { "current": 71, "total": 88 },
+      "guess_payload": {
+        "question": "Cabinet Committees ka provision kahaan se aata hai?",
+        "options": [
+          { "id": "A", "text": "Direct Constitution ke Article 74 se" },
+          { "id": "B", "text": "Constitution mein likha nahi hai, ye 'Government of India (Transaction of Business) Rules, 1961' ke tahat banayi jaati hain" },
+          { "id": "C", "text": "Parliament ke ek special Act se" },
+          { "id": "D", "text": "Supreme Court ke order se" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Cabinet Committees ek extra-constitutional device hain - Constitution mein inka koi seedha zikra nahi hai, ye Government of India (Transaction of Business) Rules, 1961 ke tahat kaam ki suvidha ke liye banayi jaati hain."
+      },
+      "navigation": { "next": "card_72_quiz1_cabinet_committees", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_72_quiz1_cabinet_committees",
+      "card_slug": "card_72_quiz1_cabinet_committees",
+      "type": "quiz",
+      "concept_id": "cabinet_committees_quiz",
+      "level": 9,
+      "progress": { "current": 72, "total": 88 },
+      "quiz_payload": {
+        "question": "Cabinet Committees kis category ki devices manni jaati hain?",
+        "options": [
+          { "id": "A", "text": "Constitutional (Constitution mein likhi)" },
+          { "id": "B", "text": "Extra-constitutional (Constitution mein na likhi)" },
+          { "id": "C", "text": "Judicial" },
+          { "id": "D", "text": "Statutory (kisi Act se bani)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Cabinet Committees extra-constitutional devices hain - inka koi seedha zikra Constitution mein nahi hai, ye Transaction of Business Rules, 1961 ke tahat exist karti hain."
+      },
+      "navigation": { "next": "card_73_quiz2_article78_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_73_quiz2_article78_multistatement",
+      "card_slug": "card_73_quiz2_article78_multistatement",
+      "type": "quiz",
+      "concept_id": "article78_multistatement",
+      "level": 9,
+      "progress": { "current": 73, "total": 88 },
+      "quiz_payload": {
+        "question": "Kathan 1: Article 78 PM ko Rashtrapati tak Council of Ministers ke decisions pahunchane ka kartavya deta hai. Kathan 2: Article 78 ka structure Article 167 (CM ka kartavya Governor ke prati) se bilkul mel khata hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - Article 78 ka structure Article 167 se hu-baa-hu match karta hai, sirf Union aur State level ka farak hai."
+      },
+      "navigation": { "next": "card_74_quiz3_ccs_ccea", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_74_quiz3_ccs_ccea",
+      "card_slug": "card_74_quiz3_ccs_ccea",
+      "type": "quiz",
+      "concept_id": "ccs_ccea_quiz",
+      "level": 9,
+      "progress": { "current": 74, "total": 88 },
+      "quiz_payload": {
+        "question": "CCS ka poora naam kya hai jo important Cabinet Committees mein se ek hai?",
+        "options": [
+          { "id": "A", "text": "Cabinet Committee on Security" },
+          { "id": "B", "text": "Central Council of States" },
+          { "id": "C", "text": "Cabinet Committee on Sports" },
+          { "id": "D", "text": "Council of Central States" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "CCS ka poora naam Cabinet Committee on Security hai - ye rajya ki suraksha se related sabse mahatvapurna faisle leti hai, jiske chairman PM khud hote hain."
+      },
+      "navigation": { "next": "card_75_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_75_milestone9",
+      "card_slug": "card_75_milestone9",
+      "type": "milestone",
+      "concept_id": "module9_complete",
+      "level": 9,
+      "progress": { "current": 75, "total": 88 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🗂️",
+        "completed_topic": "Cabinet Committees & Article 78",
+        "xp_earned": 60,
+        "milestone_progress": "Module 9/10 Clear",
+        "motivational_quote": "Kamaal ka kaam! Article 78 aur 167 ka connection tumhe pakka yaad hai. Ab last module - kuch misc facts aur Bihar context dekhte hain!"
+      },
+      "navigation": { "next": "card_76_attorney_general_not_minister", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_76_attorney_general_not_minister",
+      "card_slug": "card_76_attorney_general_not_minister",
+      "type": "chat",
+      "concept_id": "attorney_general_not_minister",
+      "level": 10,
+      "progress": { "current": 76, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek zaroori trap suno - Attorney General of India (Article 76), jo Kendra sarkar ka mukhya kanooni salahkar hai, wo Council of Ministers ka sadasya NAHI hota, chahe wo Cabinet meetings mein invite kiya jaa sake." },
+        { "speaker": "raju", "text": "Achha? Mujhe laga tha AG bhi Minister jaisa hi hota hai, kyunki wo bhi Rashtrapati appoint karte hain!" },
+        { "speaker": "aman", "text": "Bahut common confusion hai ye! AG Council of Ministers ka formal member nahi hai, use Article 88 ke tahat sadan mein bolne ka adhikar zaroor hai (jaise humne Ministers ke case mein padha), lekin wo vote nahi de sakta aur Cabinet ka sadasya nahi hai." },
+        { "speaker": "raju", "text": "Achha, note kar leta hoon - AG legal advisor hai, Minister nahi, ye alag cheez hai!" }
+      ],
+      "navigation": { "next": "card_77_state_comparison_recap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_77_state_comparison_recap",
+      "card_slug": "card_77_state_comparison_recap",
+      "type": "chat",
+      "concept_id": "state_comparison_recap",
+      "level": 10,
+      "progress": { "current": 77, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo ab Union aur State Council of Ministers ka poora comparison ek saath revise karte hain, kyunki BPSC isme bahut confuse karti hai." },
+        { "speaker": "raju", "text": "Haan sir, please, mujhe dono mix ho jaate hain kabhi-kabhi!" },
+        { "speaker": "aman", "text": "Yaad rakho - Union mein Article 74/75, State mein Article 163/164. Size limit dono mein 15% (543 vs Vidhan Sabha ki sankhya), lekin minimum sirf State mein (12) hai, Union mein nahi. Legislature membership - PM Parliament ke kisi bhi sadan se, CM sirf State Legislature se." },
+        { "speaker": "raju", "text": "Achha, aur pardoning power bhi alag thi na - Governor death sentence maaf nahi kar sakta, lekin ye Council of Ministers se related nahi tha, wo Governor ka apna power tha!" }
+      ],
+      "navigation": { "next": "card_78_bihar_context_scert", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_78_bihar_context_scert",
+      "card_slug": "card_78_bihar_context_scert",
+      "type": "chat",
+      "concept_id": "bihar_context_scert",
+      "level": 10,
+      "progress": { "current": 78, "total": 88 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite - Bilkul sahi yaad kiya! Ab ek Bihar-specific fact jo BSEB/SCERT textbooks mein hai - Bihar Vidhan Sabha mein 243 seats hain, isliye Bihar Council of Ministers ka maximum size approx 36 (243 ka 15%) hota hai, jaise humne pichle chapter mein calculate kiya tha." },
+        { "speaker": "raju", "text": "Haan sir wo yaad hai! Lekin Union ke liye 543 ka 15% approx 81 tha na?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur ek zaroori Bihar-specific fact - jab Bihar mein Council of Ministers ka gathan hota hai, to CM ki niyukti Bihar ke Governor karte hain, aur baaki Ministers CM ki salah par - bilkul Union ke PM-Rashtrapati wale pattern jaisa hi Bihar mein bhi hota hai." },
+        { "speaker": "raju", "text": "Achha, matlab Bihar mein bhi wahi structure follow hota hai jo humne Union ke liye padha - bas naam badal jaate hain!" }
+      ],
+      "navigation": { "next": "card_79_guess_ag_not_member", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_79_guess_ag_not_member",
+      "card_slug": "card_79_guess_ag_not_member",
+      "type": "guess",
+      "concept_id": "ag_not_member_guess",
+      "level": 10,
+      "progress": { "current": 79, "total": 88 },
+      "guess_payload": {
+        "question": "Kya Attorney General of India, Union Council of Ministers ka sadasya hota hai?",
+        "options": [
+          { "id": "A", "text": "Haan, wo bhi ek Minister hi hai" },
+          { "id": "B", "text": "Nahi, wo Council of Ministers ka sadasya nahi hai, sirf legal advisor hai" },
+          { "id": "C", "text": "Haan, lekin sirf Emergency ke waqt" },
+          { "id": "D", "text": "Sirf Rajya Sabha mein sadasya hota hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Attorney General (Article 76) Council of Ministers ka sadasya nahi hai - wo Kendra sarkar ka mukhya kanooni salahkar hai, chahe use Parliament mein bolne ka adhikar (Article 88 ke tahat) diya gaya ho."
+      },
+      "navigation": { "next": "card_80_quiz1_attorney_general", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_80_quiz1_attorney_general",
+      "card_slug": "card_80_quiz1_attorney_general",
+      "type": "quiz",
+      "concept_id": "attorney_general_quiz",
+      "level": 10,
+      "progress": { "current": 80, "total": 88 },
+      "quiz_payload": {
+        "question": "Attorney General of India ki niyukti kis Article ke tahat hoti hai?",
+        "options": [
+          { "id": "A", "text": "Article 74" },
+          { "id": "B", "text": "Article 75" },
+          { "id": "C", "text": "Article 76" },
+          { "id": "D", "text": "Article 78" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 76 - Attorney General of India ki niyukti Rashtrapati karta hai, jo Kendra sarkar ka mukhya kanooni salahkar hota hai, lekin Council of Ministers ka sadasya nahi hota."
+      },
+      "navigation": { "next": "card_81_quiz2_comparison_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_81_quiz2_comparison_multistatement",
+      "card_slug": "card_81_quiz2_comparison_multistatement",
+      "type": "quiz",
+      "concept_id": "comparison_multistatement",
+      "level": 10,
+      "progress": { "current": 81, "total": 88 },
+      "quiz_payload": {
+        "question": "Kathan 1: Union aur State Council of Ministers, dono mein maximum size 15% ke hisaab se tay hoti hai (Lok Sabha/Vidhan Sabha ki sankhya ka). Kathan 2: State Council of Ministers ke liye minimum 12 ka rule hai, jabki Union ke liye koi minimum number nahi hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - ye Article 75(1A) aur 164(1A) ke beech ka classic BPSC comparison hai jo baar-baar poocha jaata hai."
+      },
+      "navigation": { "next": "card_82_quiz3_bihar_seats", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_82_quiz3_bihar_seats",
+      "card_slug": "card_82_quiz3_bihar_seats",
+      "type": "quiz",
+      "concept_id": "bihar_seats_quiz",
+      "level": 10,
+      "progress": { "current": 82, "total": 88 },
+      "quiz_payload": {
+        "question": "Bihar Vidhan Sabha mein 243 seats ke aadhar par, Bihar Council of Ministers ka maximum size (approx) kya hoga?",
+        "options": [
+          { "id": "A", "text": "12" },
+          { "id": "B", "text": "36" },
+          { "id": "C", "text": "81" },
+          { "id": "D", "text": "50" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "243 ka 15% = 36.45, isliye Bihar mein CM samet maximum approx 36 mantri ho sakte hain - ye same formula jo Union ke liye Lok Sabha (543 seats) par lagu hota hai."
+      },
+      "navigation": { "next": "card_83_milestone10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_83_milestone10",
+      "card_slug": "card_83_milestone10",
+      "type": "milestone",
+      "concept_id": "module10_complete",
+      "level": 10,
+      "progress": { "current": 83, "total": 88 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌾",
+        "completed_topic": "Misc Facts, AG vs Minister & Bihar Comparison",
+        "xp_earned": 60,
+        "milestone_progress": "Module 10/10 Clear",
+        "motivational_quote": "Fantastic! Poora Council of Ministers chapter khatam ho gaya! Ab officer-level revision aur final challenge ke liye taiyar ho jao!"
+      },
+      "navigation": { "next": "card_84_summary_revision", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_84_summary_revision",
+      "card_slug": "card_84_summary_revision",
+      "type": "summary",
+      "concept_id": "chapter_summary",
+      "level": 11,
+      "progress": { "current": 84, "total": 88 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Council of Ministers",
+        "revision_points": [
+          {
+            "topic": "Article 74 & 75 - Basic Structure",
+            "point": "Article 74 - Rashtrapati ko salah dene wali Council of Ministers, jiska mukhiya PM hai; salah court mein challenge nahi ho sakti (Article 74(2)); Article 75 - niyukti, shapath, 25/30 saal umar, koi fix term nahi (pleasure doctrine)."
+          },
+          {
+            "topic": "91st Amendment - Size Limit",
+            "point": "Article 75(1A) - Council ka maximum size Lok Sabha ki 15% (approx 81); koi minimum specify nahi (State mein 12 minimum hai - ye bada difference hai); Article 75(1B) - Anti-Defection disqualified vyakti Minister nahi ban sakta."
+          },
+          {
+            "topic": "Legislature Membership Trap",
+            "point": "PM/Union Minister Parliament ke kisi bhi sadan (Lok Sabha ya Rajya Sabha) ka sadasya ho sakta hai; CM sirf State Legislature (Assembly/Council) ka - Rajya Sabha se CM nahi ban sakta; non-member ko 6 mahine mein sadasya banna zaroori (Article 75(5))."
+          },
+          {
+            "topic": "Cabinet vs Council of Ministers",
+            "point": "Cabinet, Council of Ministers ka chhota senior sub-group hai (15-20 members), jo regular milta hai aur asli decisions leta hai; 'Cabinet' word original Constitution mein nahi tha, 44th Amendment (1978) ne Article 352(3) mein joda."
+          },
+          {
+            "topic": "Collective vs Individual Responsibility",
+            "point": "Article 75(3) - poori Council sirf Lok Sabha ke prati collectively uttardayi (Rajya Sabha ke prati nahi); Article 75(2) - har Minister individually Rashtrapati ki khushi tak; PM ke resign/death se poori Council bhang hoti hai, ek Minister ke resign se nahi."
+          }
+        ]
+      },
+      "navigation": { "next": "card_85_final_quiz", "button_text": "Attempt Final Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_85_final_quiz",
+      "card_slug": "card_85_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 11,
+      "progress": { "current": 85, "total": 88 },
+      "quiz_payload": {
+        "question": "Assertion (A): Union Council of Ministers ka size, State Council of Ministers ke size se sirf percentage formula ki wajah se alag nahi, balki minimum limit ke pravdhan mein bhi alag hai.\nReason (R): Article 75(1A) mein Union Council of Ministers ke liye sirf maximum 15% ki seema hai, koi minimum sankhya nahi di gayi, jabki Article 164(1A) mein State Council of Ministers ke liye maximum 15% ke saath-saath minimum 12 Ministers ka bhi pravdhan hai.\nNiche diye gaye code se sahi uttar chunein:",
+        "options": [
+          { "id": "A", "text": "A aur R dono sahi hain, aur R, A ki sahi vyakhya karta hai" },
+          { "id": "B", "text": "A aur R dono sahi hain, lekin R, A ki sahi vyakhya nahi karta" },
+          { "id": "C", "text": "A sahi hai, R galat hai" },
+          { "id": "D", "text": "A galat hai, R sahi hai" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "A sahi hai - dono ke size-determination mein maximum ke alawa minimum ka pravdhan bhi ek key difference hai. R bhi sahi hai aur A ki sahi vyakhya karta hai - kyunki exact yahi minimum-maximum ka structural difference (Article 75(1A) vs Article 164(1A)) hai jo Union aur State Council of Ministers ke size ko structurally alag banata hai. Ye BPSC ka classic high-level Assertion-Reason pattern hai."
+      },
+      "navigation": { "next": "card_86_trophy", "button_text": "Finish Final Quiz ➔" }
+    },
+    {
+      "card_id": "card_86_trophy",
+      "card_slug": "card_86_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 11,
+      "progress": { "current": 86, "total": 86 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER TROPHY UNLOCKED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Council of Ministers - Indian Constitution & Polity (Complete)",
+        "xp_earned": 150,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Zabardast Raju! Ab tum Council of Ministers ke Article 74 se 78 tak, 91st Amendment ka size limit trap, Cabinet vs Council ka difference, aur PM ki asli powers - sab officer level par jaante ho. BPSC ka ye chapter ab tumhari mutthi mein hai!"
+      },
+      "navigation": { "next": "topic_complete", "button_text": "Finish Chapter 🎉" }
+    }
+  ]
+}
