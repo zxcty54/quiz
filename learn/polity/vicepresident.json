@@ -1,0 +1,1738 @@
+{
+  "topic_id": "indian_polity_vice_president",
+  "topic_title": "Vice President of India — Election, Powers & Constitutional Provisions",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 84,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 84 },
+      "intro_payload": {
+        "chapter_title": "Vice President of India",
+        "chapter_icon": "🏛️",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Articles 63-71: Complete constitutional scheme of VP's office",
+          "Qualifications and eligibility conditions (Article 66(3))",
+          "Electoral College trap: VP vs President election difference",
+          "Election method - Proportional Representation & Single Transferable Vote",
+          "Term, oath, resignation and removal process (effective majority)",
+          "VP as ex-officio Chairman of Rajya Sabha - powers & limitations",
+          "VP acting as President (Article 65) - historical instances",
+          "Salary, privileges & Warrant of Precedence",
+          "Complete list of Vice Presidents with PYQ trivia facts"
+        ]
+      },
+      "navigation": {
+        "next": "card_02_sarpanch_hook",
+        "button_text": "Start Learning ➔"
+      }
+    },
+    {
+      "card_id": "card_02_sarpanch_hook",
+      "card_slug": "card_02_sarpanch_hook",
+      "type": "chat",
+      "concept_id": "vp_intro",
+      "level": 1,
+      "progress": { "current": 2, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, tumhare gaanv ki panchayat mein Sarpanch to hote hi hain na? Ek sawaal - agar Sarpanch kisi kaam se bahar chale jaayein ya bimaar pad jaayein, gaanv ka kaam kaun sambhalta hai?" },
+        { "speaker": "raju", "text": "Up-Sarpanch sir! Wahi to Sarpanch ke baad sabse bada aadmi hota hai panchayat mein." },
+        { "speaker": "aman", "text": "Bilkul sahi pakda tumne! Ab poore desh ke level pe socho - agar aisa hi ek pad ho, jo President ke baad desh ka doosra sabse bada constitutional pad ho, to?" },
+        { "speaker": "raju", "text": "Aisa bhi koi pad hota hai kya sir? Mujhe to bas President aur Prime Minister hi pata hai!" }
+      ],
+      "navigation": {
+        "next": "card_03_vp_reveal",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_03_vp_reveal",
+      "card_slug": "card_03_vp_reveal",
+      "type": "chat",
+      "concept_id": "vp_intro",
+      "level": 1,
+      "progress": { "current": 3, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan hota hai Raju, aur uska naam hai 'Vice President of India' - hindi mein Up-Rashtrapati. Yehi desh ka doosra sabse bada constitutional pad hai, President ke turant baad." },
+        { "speaker": "raju", "text": "Achhaaaa... to VP bhi President jitna hi powerful hota hai?" },
+        { "speaker": "aman", "text": "Nahi Raju, actual powers mein VP, President se bahut kam powerful hai. Lekin 'Warrant of Precedence' yaani protocol ranking mein VP number 2 pe aata hai - President ke baad, aur Prime Minister se bhi pehle!" },
+        { "speaker": "raju", "text": "Hain?? PM se bhi pehle?? Ye to exam mein pakka trap banega sir!" }
+      ],
+      "navigation": {
+        "next": "card_04_constitutional_articles",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_04_constitutional_articles",
+      "card_slug": "card_04_constitutional_articles",
+      "type": "chat",
+      "concept_id": "vp_intro",
+      "level": 1,
+      "progress": { "current": 4, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dhyan se suno - VP se juda pura vidhan Constitution ke Part V (Union Executive) mein, Article 63 se 71 tak diya gaya hai. Isi Part mein President, VP, PM aur Council of Ministers sabka zikr hai." },
+        { "speaker": "raju", "text": "Itne saare Articles?? Sir, ye sab yaad kaise rakhun, mix ho jaayenge!" },
+        { "speaker": "aman", "text": "Ghabrao mat, hum ek-ek karke, step-by-step samjhenge. Sabse pehla hai Article 63 - jo bas itna kehta hai: 'Bharat ka ek Vice-President hoga.' Baaki articles uske election, term, powers detail mein batate hain." },
+        { "speaker": "raju", "text": "Theek hai sir, par ye batao - VP roz karta kya hai? Uska kaam kya hai?" }
+      ],
+      "navigation": {
+        "next": "card_05_dual_role",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_05_dual_role",
+      "card_slug": "card_05_dual_role",
+      "type": "chat",
+      "concept_id": "vp_intro",
+      "level": 1,
+      "progress": { "current": 5, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut badhiya sawaal! VP ke do main kaam hain. Pehla - Article 64 ke तहत wo Rajya Sabha ka 'ex-officio Chairman' hota hai, yaani Rajya Sabha ki meetings chalata hai. Doosra - Article 65 ke तहत, agar President ka pad khaali ho jaaye ya President kaam na kar paayein, to VP unki jagah kaam sambhalta hai." },
+        { "speaker": "raju", "text": "Matlab VP ek tarah se 'standby President' bhi hai aur Rajya Sabha ka 'class monitor' bhi! Do kaam ek saath?" },
+        { "speaker": "aman", "text": "Bilkul sahi samjha! Ye dono roles bahut alag hain aur exam mein dono ke baare mein alag-alag traps aate hain. Ab hum ek-ek karke inhe puri tarah kholenge - pehle dekhte hain, VP banne ke liye qualification kya chahiye." },
+        { "speaker": "raju", "text": "Chalo sir, dekhte hain kaun VP ban sakta hai!" }
+      ],
+      "navigation": {
+        "next": "card_06_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz1",
+      "card_slug": "card_06_quiz1",
+      "type": "quiz",
+      "concept_id": "vp_intro",
+      "level": 1,
+      "progress": { "current": 6, "total": 84 },
+      "quiz_payload": {
+        "question": "Vice President of India ke pad ka ullekh Constitution ke kis Article mein hai?",
+        "options": [
+          { "id": "A", "text": "Article 61" },
+          { "id": "B", "text": "Article 63" },
+          { "id": "C", "text": "Article 64" },
+          { "id": "D", "text": "Article 66" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 63 simply states - 'There shall be a Vice-President of India.' Article 64 VP ko RS ka Chairman banata hai, Article 66 election se sambandhit hai."
+      },
+      "navigation": {
+        "next": "card_07_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz2",
+      "card_slug": "card_07_quiz2",
+      "type": "quiz",
+      "concept_id": "vp_intro",
+      "level": 1,
+      "progress": { "current": 7, "total": 84 },
+      "quiz_payload": {
+        "question": "Warrant of Precedence (Protocol ranking) mein Vice President ka sthaan kahan hai?",
+        "options": [
+          { "id": "A", "text": "President ke baad, Prime Minister se pehle" },
+          { "id": "B", "text": "Prime Minister ke baad" },
+          { "id": "C", "text": "Governors ke baad" },
+          { "id": "D", "text": "Speaker Lok Sabha ke baad" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "VP protocol mein number 2 par aata hai - President ke turant baad, aur Prime Minister se bhi pehle. Ye SSC/Railway ka classic direct fact-based question hai."
+      },
+      "navigation": {
+        "next": "card_08_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz3",
+      "card_slug": "card_08_quiz3",
+      "type": "quiz",
+      "concept_id": "vp_intro",
+      "level": 1,
+      "progress": { "current": 8, "total": 84 },
+      "quiz_payload": {
+        "question": "Nimnlikhit kathanon par vichar karein:\n1) Vice President, Rajya Sabha ka ex-officio Chairman hota hai.\n2) Vice President, Rajya Sabha ka sadasya (member) bhi hota hai.\nUpayukt kathan chuniye:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono kathan sahi hain" },
+          { "id": "D", "text": "Dono kathan galat hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Ye BPSC ka favourite trap hai! VP Rajya Sabha ka Chairman zaroor hota hai, lekin wo Rajya Sabha ka sadasya (member) NAHI hota. Ye detail aage Module 7 mein aur gehraai se samjhenge."
+      },
+      "navigation": {
+        "next": "card_09_milestone1",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_09_milestone1",
+      "card_slug": "card_09_milestone1",
+      "type": "milestone",
+      "concept_id": "vp_intro",
+      "level": 1,
+      "progress": { "current": 9, "total": 84 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Introduction to Vice President's Office",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/10 Clear",
+        "motivational_quote": "Har officer ki journey ek chhote se step se shuru hoti hai - tumne wo step le liya hai!"
+      },
+      "navigation": {
+        "next": "card_10_age_citizenship",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_10_age_citizenship",
+      "card_slug": "card_10_age_citizenship",
+      "type": "chat",
+      "concept_id": "vp_qualification",
+      "level": 2,
+      "progress": { "current": 10, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab batao Raju, agar tumhare school mein 'Head Boy' chunna ho, to kya koi bhi Class 1 ka bachcha khada ho sakta hai?" },
+        { "speaker": "raju", "text": "Nahi sir, wo to bahut chhota hai! Kam se kam bade class ka koi senior hi ban sakta hai." },
+        { "speaker": "aman", "text": "Bilkul waisa hi VP ke liye bhi minimum age tय hai. Article 66(3) ke तहत, VP banne ke liye वह व्यक्ति Bharat ka nagrik hona chahiye aur uski umra kam se kam 35 saal honi chahiye." },
+        { "speaker": "raju", "text": "35 saal? Ye to President wali age jaisi hi lag rahi hai... President ke liye bhi 35 hi tha na sir?" }
+      ],
+      "navigation": {
+        "next": "card_11_rs_qualification",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_11_rs_qualification",
+      "card_slug": "card_11_rs_qualification",
+      "type": "chat",
+      "concept_id": "vp_qualification",
+      "level": 2,
+      "progress": { "current": 11, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi Raju! President aur VP dono ke liye minimum age 35 saal hai - ye common fact bhool mat jaana. Ab teesri condition suno - VP ko 'Rajya Sabha ka member banne yogya' hona chahiye." },
+        { "speaker": "raju", "text": "Matlab Lok Sabha wali qualification kaam nahi karegi? Sirf Rajya Sabha wali?" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Ye ek subtle par important point hai - VP ke liye Rajya Sabha membership ki eligibility chahiye, na ki Lok Sabha ki. Yaad rakho, President ke liye Lok Sabha ki qualification chahiye hoti hai, VP ke liye Rajya Sabha ki - ulta trap yahin bantа hai!" },
+        { "speaker": "raju", "text": "Achhaaaa!! President = Lok Sabha wali qualification, VP = Rajya Sabha wali qualification. Ye to seedha ulta trap hai exam mein!" }
+      ],
+      "navigation": {
+        "next": "card_12_office_of_profit",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_12_office_of_profit",
+      "card_slug": "card_12_office_of_profit",
+      "type": "chat",
+      "concept_id": "vp_qualification",
+      "level": 2,
+      "progress": { "current": 12, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek aur zaroori shart - VP kisi 'office of profit' (labh ka pad) par nahi hona chahiye. Matlab wo koi aisi sarkari naukri nahi kar raha ho jisse usse salary milti ho." },
+        { "speaker": "raju", "text": "To sir, agar koi already Governor hai ya Minister hai, to kya wo VP nahi ban sakta?" },
+        { "speaker": "aman", "text": "Bahut achha doubt! Yahan ek exception hai - President, Governor, ya kisi State/Union ke Minister ka pad 'office of profit' nahi maana jaata is context mein. Isliye ye log VP banne ke eligible hote hain." },
+        { "speaker": "raju", "text": "Achha, matlab exception mein President-Governor-Minister sab bach jaate hain! Ye to yaad rakhna padega." }
+      ],
+      "navigation": {
+        "next": "card_13_mp_seat_vacate",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_13_mp_seat_vacate",
+      "card_slug": "card_13_mp_seat_vacate",
+      "type": "chat",
+      "concept_id": "vp_qualification",
+      "level": 2,
+      "progress": { "current": 13, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek last twist suno - agar koi sitting MP (Lok Sabha ya Rajya Sabha ka current member) VP chuna jaata hai, to Article 66(4) ke तहत uski MP wali seat automatically khaali maani jaati hai jis din wo VP ka pad grahan karta hai." },
+        { "speaker": "raju", "text": "Matlab wo dono pad ek saath nahi rakh sakta - MP bhi aur VP bhi? Seat chhodni hi padegi?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Kyunki VP khud Parliament ka member nahi hota - wo sirf Rajya Sabha ka Chairman hota hai, member nahi. Isliye dono pad saath mein nahi chal sakte." },
+        { "speaker": "raju", "text": "Ab samajh aaya sir - ye baat pichle module wale trap se bhi connect ho rahi hai!" }
+      ],
+      "navigation": {
+        "next": "card_14_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_14_quiz1",
+      "card_slug": "card_14_quiz1",
+      "type": "quiz",
+      "concept_id": "vp_qualification",
+      "level": 2,
+      "progress": { "current": 14, "total": 84 },
+      "quiz_payload": {
+        "question": "VP banne ke liye minimum umra aur kis sadan ki membership yogyata chahiye?",
+        "options": [
+          { "id": "A", "text": "30 saal, Lok Sabha ki yogyata" },
+          { "id": "B", "text": "35 saal, Lok Sabha ki yogyata" },
+          { "id": "C", "text": "35 saal, Rajya Sabha ki yogyata" },
+          { "id": "D", "text": "30 saal, Rajya Sabha ki yogyata" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 66(3) ke तहत VP ke liye minimum umra 35 saal hai, aur usse Rajya Sabha ka member banne yogya hona chahiye (na ki Lok Sabha ka)."
+      },
+      "navigation": {
+        "next": "card_15_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz2",
+      "card_slug": "card_15_quiz2",
+      "type": "quiz",
+      "concept_id": "vp_qualification",
+      "level": 2,
+      "progress": { "current": 15, "total": 84 },
+      "quiz_payload": {
+        "question": "Nimnlikhit mein se kisko VP chunav ke liye 'office of profit' rakhne ke bawjood ayogya nahi maana jaata?",
+        "options": [
+          { "id": "A", "text": "Ek sarकारी school teacher" },
+          { "id": "B", "text": "Kisi State ka Governor" },
+          { "id": "C", "text": "PSU ka salaried employee" },
+          { "id": "D", "text": "Ek civil servant" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "President, Governor, aur Union/State Minister ka pad is context mein 'office of profit' nahi mana jaata - ye VP chunav ke liye special exemption hai."
+      },
+      "navigation": {
+        "next": "card_16_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz3",
+      "card_slug": "card_16_quiz3",
+      "type": "quiz",
+      "concept_id": "vp_qualification",
+      "level": 2,
+      "progress": { "current": 16, "total": 84 },
+      "quiz_payload": {
+        "question": "Agar Lok Sabha ka koi sitting MP VP chuna jata hai, to uski MP seat ka kya hota hai?",
+        "options": [
+          { "id": "A", "text": "Wo dono pad saath rakh sakta hai" },
+          { "id": "B", "text": "Uski Lok Sabha seat VP pad grahan karte hi khaali ho jaati hai" },
+          { "id": "C", "text": "Uski seat par phir se chunav Speaker karayenge sirf 1 saal baad" },
+          { "id": "D", "text": "Wo apni MP seat kisi ko de sakta hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 66(4) ke anusar, VP pad grahan karte hi uski Parliament ki seat automatically vacant maani jaati hai, kyunki VP khud Parliament ka sadasya nahi hota."
+      },
+      "navigation": {
+        "next": "card_17_milestone2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_17_milestone2",
+      "card_slug": "card_17_milestone2",
+      "type": "milestone",
+      "concept_id": "vp_qualification",
+      "level": 2,
+      "progress": { "current": 17, "total": 84 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "✅",
+        "completed_topic": "Qualifications for Vice President",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/10 Clear",
+        "motivational_quote": "Chhota-chhota qualification bhi bada trap ban sakta hai - ab tum in traps ko pehchan sakte ho!"
+      },
+      "navigation": {
+        "next": "card_18_electoral_college_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_18_electoral_college_intro",
+      "card_slug": "card_18_electoral_college_intro",
+      "type": "chat",
+      "concept_id": "vp_electoral_college",
+      "level": 3,
+      "progress": { "current": 18, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab sabse important aur sabse zyada trap wala topic - VP kaise chuna jaata hai? Ye vote kaun dete hain? Isse 'Electoral College' kehte hain." },
+        { "speaker": "raju", "text": "Sir, ye to President wala hi hoga na? Sansad aur state assembly ke log vote denge?" },
+        { "speaker": "aman", "text": "Yahin sabse bada twist hai Raju! VP ke Electoral College mein KEWAL Sansad ke dono sadan - Lok Sabha aur Rajya Sabha - ke sadasya vote karte hain. Article 66(1) ye batata hai." },
+        { "speaker": "raju", "text": "Matlab State Assembly ke MLA log VP ke chunav mein vote nahi denge?? Ye to President se bilkul alag ho gaya!" }
+      ],
+      "navigation": {
+        "next": "card_19_mla_excluded",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_19_mla_excluded",
+      "card_slug": "card_19_mla_excluded",
+      "type": "chat",
+      "concept_id": "vp_electoral_college",
+      "level": 3,
+      "progress": { "current": 19, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda! President ke chunav mein State Assembly ke elected MLAs (Delhi aur Puducherry samet) vote dete hain, lekin VP ke chunav mein KOI bhi state legislature member - na MLA, na MLC - vote nahi deta." },
+        { "speaker": "raju", "text": "Sir ye to seedha ulta ho gaya! President = Parliament + State Assembly, VP = sirf Parliament. Ye to exam mein pakka confuse karega!" },
+        { "speaker": "aman", "text": "Bilkul, isliye BPSC aur UPSC dono is comparison par baar-baar sawaal banate hain. Ek line mein yaad rakho - 'VP ke chunav mein sirf Sansad, state ka koi role nahi.'" },
+        { "speaker": "raju", "text": "Theek hai sir, likh liya! Par ab batao - Sansad ke saare members vote karte hain kya, ya kuch chhut jaate hain?" }
+      ],
+      "navigation": {
+        "next": "card_20_nominated_included",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_20_nominated_included",
+      "card_slug": "card_20_nominated_included",
+      "type": "chat",
+      "concept_id": "vp_electoral_college",
+      "level": 3,
+      "progress": { "current": 20, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut badhiya sawaal, aur yahan doosra bada twist hai! President ke chunav mein Parliament ke 'nominated members' vote NAHI de sakte. Lekin VP ke chunav mein wahi nominated members bhi vote de sakte hain!" },
+        { "speaker": "raju", "text": "Hain?? President mein exclude, VP mein include? Ye to bilkul ulta rule hai sir!" },
+        { "speaker": "aman", "text": "Bilkul sahi Raju - Rajya Sabha mein 12 members President dwara naामित (nominated) kiye jaate hain - sahitya, vigyan, kala, samaj sewa jaise kshetra se. Ye 12 log President ke chunav mein vote nahi de sakte, par VP ke chunav mein zaroor de sakte hain." },
+        { "speaker": "raju", "text": "Ye to yaad rakhna zaroori hai - 'VP election mein Sansad ke elected + nominated dono, lekin sirf Sansad, state kuch nahi.'" }
+      ],
+      "navigation": {
+        "next": "card_21_bihar_mlc_trap",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_21_bihar_mlc_trap",
+      "card_slug": "card_21_bihar_mlc_trap",
+      "type": "chat",
+      "concept_id": "vp_electoral_college",
+      "level": 3,
+      "progress": { "current": 21, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Raju, tumhe pata hai Bihar mein Vidhan Sabha ke saath-saath Vidhan Parishad (Legislative Council) bhi hai - matlab Bihar bicameral state hai. Bihar ke MLC log kya kabhi President ya VP ke chunav mein vote de sakte hain?" },
+        { "speaker": "raju", "text": "Sir MLA log to President mein vote dete hain na, to MLC bhi denge shaayad?" },
+        { "speaker": "aman", "text": "Nahi Raju! Ye classic BPSC trap hai - Legislative Council (MLC) ke members chahe kisi bhi state ke hon (Bihar, UP, Maharashtra), unhe na President ke chunav mein vote ka adhikar hai, na VP ke chunav mein. Sirf elected MLA (Vidhan Sabha members) ko President chunav mein role milta hai, VP chunav mein to unhe bhi nahi!" },
+        { "speaker": "raju", "text": "Achhaaaa!! To Bihar Vidhan Parishad ke members ka in dono hi chunav mein koi role nahi. Ye to bahut zaroori fact hai Bihar exams ke liye!" }
+      ],
+      "navigation": {
+        "next": "card_22_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_22_quiz1",
+      "card_slug": "card_22_quiz1",
+      "type": "quiz",
+      "concept_id": "vp_electoral_college",
+      "level": 3,
+      "progress": { "current": 22, "total": 84 },
+      "quiz_payload": {
+        "question": "Vice President ke Electoral College mein kaun shaamil hota hai?",
+        "options": [
+          { "id": "A", "text": "Sirf Lok Sabha ke elected sadasya" },
+          { "id": "B", "text": "Sansad ke dono sadan ke elected aur nominated sadasya" },
+          { "id": "C", "text": "Sansad ke sadasya + State Vidhan Sabha ke sadasya" },
+          { "id": "D", "text": "Sansad ke sadasya + State Vidhan Parishad ke sadasya" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 66(1) ke anusar VP ke electoral college mein Lok Sabha aur Rajya Sabha ke elected AUR nominated dono tarah ke sadasya vote dete hain, State legislature ka koi role nahi hota."
+      },
+      "navigation": {
+        "next": "card_23_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_23_quiz2",
+      "card_slug": "card_23_quiz2",
+      "type": "quiz",
+      "concept_id": "vp_electoral_college",
+      "level": 3,
+      "progress": { "current": 23, "total": 84 },
+      "quiz_payload": {
+        "question": "Nimnlikhit mein se kaun President aur VP ke election mein sabse bada antar hai?",
+        "options": [
+          { "id": "A", "text": "President mein State Assembly shaamil hai, VP mein nahi; VP mein nominated members vote karte hain, President mein nahi" },
+          { "id": "B", "text": "Dono election bilkul same tarike se hote hain" },
+          { "id": "C", "text": "VP ke election mein State Assembly bhi shaamil hoti hai" },
+          { "id": "D", "text": "President ke election mein nominated members vote karte hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Ye sabse important comparison hai: President ka electoral college = Parliament (elected) + State/UT Assembly (elected), nominated members exclude. VP ka electoral college = Parliament (elected + nominated), State legislature ka koi role nahi."
+      },
+      "navigation": {
+        "next": "card_24_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_24_quiz3",
+      "card_slug": "card_24_quiz3",
+      "type": "quiz",
+      "concept_id": "vp_electoral_college",
+      "level": 3,
+      "progress": { "current": 24, "total": 84 },
+      "quiz_payload": {
+        "question": "VP ke chunav mein Bihar Vidhan Parishad (MLC) ke sadasyon ki bhoomika kya hoti hai?",
+        "options": [
+          { "id": "A", "text": "Wo vote de sakte hain kyunki Bihar bicameral state hai" },
+          { "id": "B", "text": "Unka VP chunav mein koi role nahi hota - MLC kabhi bhi president/VP dono chunav mein vote nahi dete" },
+          { "id": "C", "text": "Sirf President ke chunav mein vote de sakte hain" },
+          { "id": "D", "text": "Sirf Rajya Sabha nominate karte samay vote dete hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Favorite: Legislative Council (MLC) ke sadasya kisi bhi state ke हों, unhe na President ke chunav mein aur na hi VP ke chunav mein vote ka adhikar hota hai."
+      },
+      "navigation": {
+        "next": "card_25_milestone3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_25_milestone3",
+      "card_slug": "card_25_milestone3",
+      "type": "milestone",
+      "concept_id": "vp_electoral_college",
+      "level": 3,
+      "progress": { "current": 25, "total": 84 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🗳️",
+        "completed_topic": "Electoral College of Vice President",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/10 Clear",
+        "motivational_quote": "Ye sabse bada trap tha aur tumne crack kar liya! Ab officer level ki taraf badh rahe ho."
+      },
+      "navigation": {
+        "next": "card_26_stv_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_26_stv_intro",
+      "card_slug": "card_26_stv_intro",
+      "type": "chat",
+      "concept_id": "vp_election_method",
+      "level": 3,
+      "progress": { "current": 26, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhte hain vote kaise dala jaata hai. Socho, tumhe class mein 3 monitor candidates pasand hain - Ramesh, Suresh, Mahesh. Agar tumhe sirf ek hi naam likhna ho, par tumhari pehli pasand haar jaaye, to tumhara vote बेकar chala jaayega na?" },
+        { "speaker": "raju", "text": "Haan sir, aisa hota hai kai baar." },
+        { "speaker": "aman", "text": "Isi problem ko solve karne ke liye VP ke chunav mein 'Proportional Representation by means of Single Transferable Vote (STV)' system use hota hai. Isme voter apni pasand ke candidates ko 1, 2, 3 preference order mein likhta hai." },
+        { "speaker": "raju", "text": "Achhaaaa! Matlab agar meri pehli pasand haar jaaye, to mera vote doosri pasand ko transfer ho jaata hai?" }
+      ],
+      "navigation": {
+        "next": "card_27_secret_ballot",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_27_secret_ballot",
+      "card_slug": "card_27_secret_ballot",
+      "type": "chat",
+      "concept_id": "vp_election_method",
+      "level": 3,
+      "progress": { "current": 27, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi samjha! Yehi 'Single Transferable Vote' ka core idea hai - koi bhi vote waste nahi jaata. Aur Article 66(1) ye bhi kehta hai ki voting 'secret ballot' se hoti hai." },
+        { "speaker": "raju", "text": "Secret ballot matlab? Sabko pata nahi chalega kisne kisko vote diya?" },
+        { "speaker": "aman", "text": "Bilkul sahi - koi bhi MP publicly nahi bataata ki usne kisko vote diya. Isse party whip ka pressure kam hota hai aur MP apni marzi se vote de sakta hai (halaanki practically party discipline follow hoti hai)." },
+        { "speaker": "raju", "text": "Interesting! To sir, ye same system President ke chunav mein bhi use hota hai kya?" }
+      ],
+      "navigation": {
+        "next": "card_28_nomination_deposit",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_28_nomination_deposit",
+      "card_slug": "card_28_nomination_deposit",
+      "type": "chat",
+      "concept_id": "vp_election_method",
+      "level": 3,
+      "progress": { "current": 28, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan Raju, ye method (PR by STV, secret ballot) President aur VP dono ke chunav mein same hai - sirf electoral college alag hai jo humne pichhle module mein padha. Ab ek practical baat suno - koi bhi candidate VP ke liye khada hone ke liye kam se kam 20 proposers (prastaावak) aur 20 seconders (samarthak) chahiye, jo Sansad ke sadasya hon." },
+        { "speaker": "raju", "text": "Aur security deposit jaisa kuch hota hai kya sir, jaise normal election mein?" },
+        { "speaker": "aman", "text": "Bilkul, candidate ko Rs 15,000 security deposit dena padta hai. Agar wo total valid votes ka 1/6th (ek-shashthaansh) hissa bhi na le paaye, to ye deposit zabt (forfeit) ho jaata hai." },
+        { "speaker": "raju", "text": "Achha! Aur agar kisi ka chunav mein dispute ho jaaye, jaise dhandhli ka ilzaam, to kaun faisla karega?" }
+      ],
+      "navigation": {
+        "next": "card_29_disputes_sc",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_29_disputes_sc",
+      "card_slug": "card_29_disputes_sc",
+      "type": "chat",
+      "concept_id": "vp_election_method",
+      "level": 3,
+      "progress": { "current": 29, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut important sawaal! Article 71(1) ke anusar, VP ke chunav se juda koi bhi vivad (dispute) ka faisla kewal Supreme Court karta hai - iska 'exclusive original jurisdiction' hai." },
+        { "speaker": "raju", "text": "High Court ya koi aur court nahi jaa sakte kya sir?" },
+        { "speaker": "aman", "text": "Bilkul nahi, sirf Supreme Court. Aur Article 71(4) ek aur zaroori baat kehta hai - agar electoral college mein kuch seats khaali (vacant) hon, tab bhi election ko challenge nahi kiya jaa sakta sirf isi wajah se." },
+        { "speaker": "raju", "text": "Achha matlab poora electoral college complete hone ka wait nahi karte, jitne available hain unhi se chunav ho jaata hai!" }
+      ],
+      "navigation": {
+        "next": "card_30_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz1",
+      "card_slug": "card_30_quiz1",
+      "type": "quiz",
+      "concept_id": "vp_election_method",
+      "level": 3,
+      "progress": { "current": 30, "total": 84 },
+      "quiz_payload": {
+        "question": "VP ka chunav kis paddhati (method) se hota hai?",
+        "options": [
+          { "id": "A", "text": "First Past the Post system" },
+          { "id": "B", "text": "Proportional Representation by means of Single Transferable Vote, secret ballot dwara" },
+          { "id": "C", "text": "Simple majority, open voting dwara" },
+          { "id": "D", "text": "Direct janta dwara vote" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 66(1) ke anusar VP ka chunav Proportional Representation by means of Single Transferable Vote system se, secret ballot ke through hota hai - same method President ke liye bhi use hota hai."
+      },
+      "navigation": {
+        "next": "card_31_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quiz2",
+      "card_slug": "card_31_quiz2",
+      "type": "quiz",
+      "concept_id": "vp_election_method",
+      "level": 3,
+      "progress": { "current": 31, "total": 84 },
+      "quiz_payload": {
+        "question": "VP chunav ke liye candidate ki security deposit kitni hoti hai, aur kab zabt hoti hai?",
+        "options": [
+          { "id": "A", "text": "Rs 15,000; agar 1/6th valid votes na milein" },
+          { "id": "B", "text": "Rs 25,000; agar 1/3rd votes na milein" },
+          { "id": "C", "text": "Rs 10,000; hamesha zabt hoti hai" },
+          { "id": "D", "text": "Koi deposit nahi lagti" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Candidate ko Rs 15,000 deposit karni padti hai; agar wo total valid votes ka 1/6th hissa bhi na le paaye to deposit zabt ho jaati hai."
+      },
+      "navigation": {
+        "next": "card_32_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz3",
+      "card_slug": "card_32_quiz3",
+      "type": "quiz",
+      "concept_id": "vp_election_method",
+      "level": 3,
+      "progress": { "current": 32, "total": 84 },
+      "quiz_payload": {
+        "question": "VP ke chunav se sambandhit vivad (dispute) ka nirnay kaun karta hai?",
+        "options": [
+          { "id": "A", "text": "Election Commission" },
+          { "id": "B", "text": "High Court" },
+          { "id": "C", "text": "Supreme Court (exclusive original jurisdiction)" },
+          { "id": "D", "text": "Rajya Sabha khud" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 71(1) ke anusar sirf Supreme Court ko VP/President chunav vivadon par exclusive original jurisdiction hai aur uska faisla antim hota hai."
+      },
+      "navigation": {
+        "next": "card_33_milestone4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_33_milestone4",
+      "card_slug": "card_33_milestone4",
+      "type": "milestone",
+      "concept_id": "vp_election_method",
+      "level": 3,
+      "progress": { "current": 33, "total": 84 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📜",
+        "completed_topic": "Election Method of Vice President",
+        "xp_earned": 55,
+        "milestone_progress": "Module 4/10 Clear",
+        "motivational_quote": "Election method crack ho gaya! Ab dekhte hain VP kitne saal ke liye chunа jaata hai."
+      },
+      "navigation": {
+        "next": "card_34_term_5years",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_34_term_5years",
+      "card_slug": "card_34_term_5years",
+      "type": "chat",
+      "concept_id": "vp_term_oath_resignation",
+      "level": 4,
+      "progress": { "current": 34, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, VP ka term (kaal-avadhi) kitne saal ka hota hai, guess karo?" },
+        { "speaker": "raju", "text": "President wala 5 saal hi hoga sir, VP bhi Union executive mein hai to same hi hoga shaayad?" },
+        { "speaker": "aman", "text": "Bilkul sahi guess! VP ka term bhi 5 saal ka hota hai, apne office grahan karne ki tareekh se. Aur ek achhi baat - wo dobara election lad sakta hai, chahe kitni bhi baar - koi limit nahi hai." },
+        { "speaker": "raju", "text": "Koi limit nahi?? America mein to President sirf 2 baar hi ban sakta hai na sir? India mein VP unlimited baar ban sakta hai?" }
+      ],
+      "navigation": {
+        "next": "card_35_continue_till_successor",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_35_continue_till_successor",
+      "card_slug": "card_35_continue_till_successor",
+      "type": "chat",
+      "concept_id": "vp_term_oath_resignation",
+      "level": 4,
+      "progress": { "current": 35, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi Raju! India mein VP (aur President dono) ki re-election par koi limit nahi hai - ye US se bilkul alag hai, jahan President sirf 2 term hi le sakta hai. Dr. Radhakrishnan to lagatar 2 baar VP rahe the!" },
+        { "speaker": "raju", "text": "Achha ek doubt sir - agar VP ka 5 saal poora ho jaaye lekin naya VP abhi chuna hi na gaya ho, to kya office khaali reh jaata hai?" },
+        { "speaker": "aman", "text": "Bahut sharp sawaal! Nahi, Article 67 mein ek proviso hai - VP apne term khatam hone ke bawjood tab tak pad par bana rahता hai jab tak uska successor pad grahan na kar le. Isse power vacuum nahi banta." },
+        { "speaker": "raju", "text": "Achhaaaa! Matlab chair kabhi khaali nahi rehti - naya VP aane tak purana hi kaam sambhalta rehta hai." }
+      ],
+      "navigation": {
+        "next": "card_36_oath_article69",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_36_oath_article69",
+      "card_slug": "card_36_oath_article69",
+      "type": "chat",
+      "concept_id": "vp_term_oath_resignation",
+      "level": 4,
+      "progress": { "current": 36, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab suno oath (shapath) ki baat - Article 69 ke anusar VP ko shapath President dilaate hain (ya President dwara niyukt koi vyakti). Par ek chhota, subtle fark yaad rakhna - VP ki shapath sirf 'Constitution ke prati sacchi nishtha rakhne aur apna kartavya imandari se nibhaane' ki hoti hai." },
+        { "speaker": "raju", "text": "Isme special kya hai sir? President ki shapath bhi to yahi hogi?" },
+        { "speaker": "aman", "text": "Yahin BPSC ka trap hai! President ki shapath (Article 60) mein ek extra line hoti hai - 'Constitution aur kanoon ki raksha, sanrakshan aur bachaav karunga (preserve, protect and defend)'. VP ki shapath mein ye extra line NAHI hoti!" },
+        { "speaker": "raju", "text": "Hain?? Itna chhota sa fark! Ye to bahut hi tricky hai, mujhe alag se yaad karna padega." }
+      ],
+      "navigation": {
+        "next": "card_37_resignation",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_37_resignation",
+      "card_slug": "card_37_resignation",
+      "type": "chat",
+      "concept_id": "vp_term_oath_resignation",
+      "level": 4,
+      "progress": { "current": 37, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab last cheez is module ki - agar VP resign karna chahe, to wo apna resignation letter kisko de? Guess karo!" },
+        { "speaker": "raju", "text": "Speaker ko denge shaayad, jaise koi minister PM ko resign karta hai?" },
+        { "speaker": "aman", "text": "Nahi Raju, Article 67(a) ke anusar VP apna resignation likhit roop mein President ko sौंpta hai - Speaker ya kisi aur ko nahi. Yaad rakho - resignation likha jaata hai, PRESIDENT ko!" },
+        { "speaker": "raju", "text": "Achha! To President resign kare to kisko de? Wo bhi VP ko denge kya?" }
+      ],
+      "navigation": {
+        "next": "card_38_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_38_quiz1",
+      "card_slug": "card_38_quiz1",
+      "type": "quiz",
+      "concept_id": "vp_term_oath_resignation",
+      "level": 4,
+      "progress": { "current": 38, "total": 84 },
+      "quiz_payload": {
+        "question": "VP apna resignation letter kisko sौंpta hai?",
+        "options": [
+          { "id": "A", "text": "Speaker, Lok Sabha ko" },
+          { "id": "B", "text": "Chief Justice of India ko" },
+          { "id": "C", "text": "President of India ko" },
+          { "id": "D", "text": "Prime Minister ko" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 67(a) ke anusar VP apna resignation likhit roop mein President ko dete hain. (Yaad rahe: President apna resignation VP ko dete hain - Article 56(1)(a), ye reverse pattern hai!)"
+      },
+      "navigation": {
+        "next": "card_39_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_39_quiz2",
+      "card_slug": "card_39_quiz2",
+      "type": "quiz",
+      "concept_id": "vp_term_oath_resignation",
+      "level": 4,
+      "progress": { "current": 39, "total": 84 },
+      "quiz_payload": {
+        "question": "Nimnlikhit statements par vichar karein:\n1) President ki shapath mein Constitution ke 'preserve, protect aur defend' karne ka ullekh hota hai.\n2) VP ki shapath mein bhi yahi 'preserve, protect, defend' wali line hoti hai.\nSahi kathan chuniye:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Ye classic BPSC trap hai. President ki shapath (Article 60) mein 'preserve, protect and defend the Constitution' wali extra line hoti hai, jo VP ki shapath (Article 69) mein NAHI hoti - VP sirf 'true faith and allegiance' aur 'faithfully discharge duty' ki shapath leta hai."
+      },
+      "navigation": {
+        "next": "card_40_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_40_quiz3",
+      "card_slug": "card_40_quiz3",
+      "type": "quiz",
+      "concept_id": "vp_term_oath_resignation",
+      "level": 4,
+      "progress": { "current": 40, "total": 84 },
+      "quiz_payload": {
+        "question": "VP apne 5 saal ka term poora hone ke baad bhi office mein tab tak kyun banа rehta hai jab tak naya VP na aa jaaye?",
+        "options": [
+          { "id": "A", "text": "Kyunki Article 67 ke proviso mein ye vyavastha di gayi hai taaki power vacuum na bane" },
+          { "id": "B", "text": "Kyunki Supreme Court order deti hai" },
+          { "id": "C", "text": "Kyunki VP ka term dara sakta hai" },
+          { "id": "D", "text": "Aisi koi vyavastha nahi hai, VP turant hata diya jaata hai" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Article 67 ke proviso ke anusar VP apna term poora hone ke baad bhi, jab tak naya successor pad grahan na kar le, tab tak office mein bana rehta hai - taaki continuity bani rahe."
+      },
+      "navigation": {
+        "next": "card_41_milestone5",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_41_milestone5",
+      "card_slug": "card_41_milestone5",
+      "type": "milestone",
+      "concept_id": "vp_term_oath_resignation",
+      "level": 4,
+      "progress": { "current": 41, "total": 84 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🖋️",
+        "completed_topic": "Term, Oath & Resignation of VP",
+        "xp_earned": 55,
+        "milestone_progress": "Module 5/10 Clear",
+        "motivational_quote": "Shapath wala trap bhi crack ho gaya! Ab dekhte hain VP ko hataya kaise jaata hai."
+      },
+      "navigation": {
+        "next": "card_42_removal_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_42_removal_intro",
+      "card_slug": "card_42_removal_intro",
+      "type": "chat",
+      "concept_id": "vp_removal",
+      "level": 4,
+      "progress": { "current": 42, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, tumne 'President ka impeachment' ke baare mein suna hoga - do sadan mile ke President ko hata sakte hain kisi bhi Constitution ke violation par. Kya VP ko bhi 'impeach' kiya jaata hai?" },
+        { "speaker": "raju", "text": "Haan sir, VP bhi to President jaisa hi bada pad hai, to usko bhi impeach hi karenge na?" },
+        { "speaker": "aman", "text": "Nahi Raju! Yahin sabse bada trap hai - VP ko 'impeach' NAHI kiya jaata. Uski removal process bahut simple hai aur Article 67(b) mein diya gaya hai. Impeachment sirf President ke liye use hota hai." },
+        { "speaker": "raju", "text": "Achhaaaa! To VP ko kaise hataya jaata hai phir?" }
+      ],
+      "navigation": {
+        "next": "card_43_only_rs_initiate",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_43_only_rs_initiate",
+      "card_slug": "card_43_only_rs_initiate",
+      "type": "chat",
+      "concept_id": "vp_removal",
+      "level": 4,
+      "progress": { "current": 43, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "VP ke removal ka resolution KEWAL Rajya Sabha mein hi laaya ja sakta hai - Lok Sabha mein nahi! Kyunki VP RS ka ex-officio Chairman hota hai, isliye removal RS se hi shuru hoti hai." },
+        { "speaker": "raju", "text": "Matlab Lok Sabha ise start nahi kar sakti? Sirf approve kar sakti hai baad mein?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Resolution RS mein 14 din ka advance notice dekar laaya jaata hai. Iske baad ye Lok Sabha ke paas jaata hai approval ke liye." },
+        { "speaker": "raju", "text": "President ke impeachment mein to kisi bhi sadan se shuru ho sakta hai na sir, ye VP wala to bilkul opposite hai!" }
+      ],
+      "navigation": {
+        "next": "card_44_effective_majority",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_44_effective_majority",
+      "card_slug": "card_44_effective_majority",
+      "type": "chat",
+      "concept_id": "vp_removal",
+      "level": 4,
+      "progress": { "current": 44, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi Raju! Ab majority ki baat karte hain - Rajya Sabha mein ye resolution 'effective majority' se paas hona chahiye, aur phir Lok Sabha mein 'simple majority' se agree hona chahiye." },
+        { "speaker": "raju", "text": "Sir, 'effective majority' kya hoti hai? Simple majority se alag kaise?" },
+        { "speaker": "aman", "text": "Achha sawaal! Simple majority matlab us din present aur voting karne walon ka majority. Effective majority matlab total sadasyon ka majority, lekin usme se khaali (vacant) seats ghatakar. Ye simple majority se thoda zyada strict hoti hai." },
+        { "speaker": "raju", "text": "Achha, to RS mein strict wali majority, aur LS mein normal wali - ye combination yaad rakhna padega." }
+      ],
+      "navigation": {
+        "next": "card_45_compare_president_removal",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_45_compare_president_removal",
+      "card_slug": "card_45_compare_president_removal",
+      "type": "chat",
+      "concept_id": "vp_removal",
+      "level": 4,
+      "progress": { "current": 45, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dono ko side-by-side yaad karo. President: impeachment, kisi bhi sadan se shuru, dono sadan mein 2/3rd majority chahiye (total membership ka), 14 din notice, specific charge (Constitution violation) zaroori. VP: sirf RS se shuru, RS mein effective majority + LS mein simple majority, 14 din notice, koi specific charge/ground batana zaroori nahi." },
+        { "speaker": "raju", "text": "Wait sir, VP ko hataane ke liye koi wajah batani hi nahi padti?? Aise hi hata sakte hain?" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda - Constitution ne VP removal ke liye koi specific ground define nahi kiya, jaise President ke liye 'violation of Constitution' likha hai. Ye VP removal ko President ke muqable kaafi zyada simple bana deta hai." },
+        { "speaker": "raju", "text": "Ye to bahut bada difference hai sir! President ko hataana kitna mushkil, VP ko utna aasan!" }
+      ],
+      "navigation": {
+        "next": "card_46_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_46_quiz1",
+      "card_slug": "card_46_quiz1",
+      "type": "quiz",
+      "concept_id": "vp_removal",
+      "level": 4,
+      "progress": { "current": 46, "total": 84 },
+      "quiz_payload": {
+        "question": "VP ko hataane ka resolution kis sadan mein shuru kiya ja sakta hai?",
+        "options": [
+          { "id": "A", "text": "Sirf Lok Sabha mein" },
+          { "id": "B", "text": "Sirf Rajya Sabha mein" },
+          { "id": "C", "text": "Kisi bhi sadan mein" },
+          { "id": "D", "text": "Ek Joint Sitting mein" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 67(b) ke anusar VP ke removal ka resolution KEWAL Rajya Sabha mein hi laaya ja sakta hai, kyunki VP RS ka ex-officio Chairman hota hai."
+      },
+      "navigation": {
+        "next": "card_47_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_47_quiz2",
+      "card_slug": "card_47_quiz2",
+      "type": "quiz",
+      "concept_id": "vp_removal",
+      "level": 4,
+      "progress": { "current": 47, "total": 84 },
+      "quiz_payload": {
+        "question": "VP ko hataane ke liye required majority kya hai?",
+        "options": [
+          { "id": "A", "text": "RS mein effective majority, LS mein simple majority" },
+          { "id": "B", "text": "Dono sadan mein 2/3rd majority" },
+          { "id": "C", "text": "Sirf RS mein simple majority" },
+          { "id": "D", "text": "Sirf LS mein 2/3rd majority" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Resolution ko Rajya Sabha mein effective majority se paas hokar Lok Sabha mein simple majority se agree hona chahiye - ye President ke 2/3rd wale impeachment se kaafi alag aur aasaan hai."
+      },
+      "navigation": {
+        "next": "card_48_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_48_quiz3",
+      "card_slug": "card_48_quiz3",
+      "type": "quiz",
+      "concept_id": "vp_removal",
+      "level": 4,
+      "progress": { "current": 48, "total": 84 },
+      "quiz_payload": {
+        "question": "Assertion (A): VP ko hataane ke liye Constitution mein koi specific ground (charge) define nahi kiya gaya hai.\nReason (R): VP ka removal 'impeachment' procedure se hota hai jaisa President ka hota hai.\nSahi vikalp chuniye:",
+        "options": [
+          { "id": "A", "text": "A aur R dono sahi hain, aur R, A ki sahi vyakhya hai" },
+          { "id": "B", "text": "A sahi hai, lekin R galat hai" },
+          { "id": "C", "text": "A galat hai, lekin R sahi hai" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Assertion sahi hai - koi ground define nahi hai. Lekin Reason galat hai kyunki VP ka removal 'impeachment' se NAHI hota, ye sirf effective+simple majority wale resolution se hota hai, jo President ke impeachment se bilkul alag process hai."
+      },
+      "navigation": {
+        "next": "card_49_milestone6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_49_milestone6",
+      "card_slug": "card_49_milestone6",
+      "type": "milestone",
+      "concept_id": "vp_removal",
+      "level": 4,
+      "progress": { "current": 49, "total": 84 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Removal Process of Vice President",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/10 Clear",
+        "motivational_quote": "Removal process ka trap bhi tumne solve kar liya - ab aage RS Chairman wala role dekhte hain!"
+      },
+      "navigation": {
+        "next": "card_50_exofficio_chairman",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_50_exofficio_chairman",
+      "card_slug": "card_50_exofficio_chairman",
+      "type": "chat",
+      "concept_id": "vp_rs_chairman",
+      "level": 5,
+      "progress": { "current": 50, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab detail mein samjhte hain VP ka RS wala role. Article 64 ke anusar VP automatically Rajya Sabha ka Chairman ban jaata hai - use koi alag se chunav nahi ladna padta ye position paane ke liye." },
+        { "speaker": "raju", "text": "Matlab VP ban gaye to Chairman apne aap ban jaate hain? Bina kisi extra vote ke?" },
+        { "speaker": "aman", "text": "Bilkul sahi - isiliye ise 'ex-officio' Chairman kehte hain, matlab 'pad ke karan (by virtue of office)' mila hua position. Compare karo Lok Sabha ke Speaker se, jise LS ke members khud apne mein se chunte hain." },
+        { "speaker": "raju", "text": "Achha! To Speaker LS ka member hote hue bhi chuna jaata hai, lekin VP Rajya Sabha ka Chairman hote hue bhi member nahi hota - ye wahi trap hai jo humne shuru mein dekha tha!" }
+      ],
+      "navigation": {
+        "next": "card_51_not_member_rs",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_51_not_member_rs",
+      "card_slug": "card_51_not_member_rs",
+      "type": "chat",
+      "concept_id": "vp_rs_chairman",
+      "level": 5,
+      "progress": { "current": 51, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi yaad rakha! Ab ek aur important baat - kyunki VP RS ka member nahi hota, isliye wo normal proceedings mein vote nahi de sakta. Lekin ek exception hai." },
+        { "speaker": "raju", "text": "Exception? Kaunsa sir?" },
+        { "speaker": "aman", "text": "Agar kisi bill ya matter par voting mein barabar (tie) vote aa jaaye, tab VP apna 'casting vote' de sakta hai taaki tie tood sake. Ye Article 100(1) mein diya gaya hai." },
+        { "speaker": "raju", "text": "Achha, matlab normally chup, par tie hone par decider ban jaate hain! Interesting rule hai ye to." }
+      ],
+      "navigation": {
+        "next": "card_52_casting_vote",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_52_casting_vote",
+      "card_slug": "card_52_casting_vote",
+      "type": "chat",
+      "concept_id": "vp_rs_chairman",
+      "level": 5,
+      "progress": { "current": 52, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek aur bada twist suno - agar Rajya Sabha ke members khud VP ko Chairman ke pad se hatana chahein, to kya wo aisa kar sakte hain?" },
+        { "speaker": "raju", "text": "Haan kyun nahi, jaise Speaker ko Lok Sabha hata sakti hai, waise RS bhi apne Chairman ko hata degi!" },
+        { "speaker": "aman", "text": "Nahi Raju! Yahi sabse bada trap hai - RS apne aap VP ko Chairman ke pad se NAHI hata sakti. VP ko Chairman ke pad se hataane ka ek hi tarika hai - use PURI TARAH VP ke pad se hi hataya jaaye (Article 67(b) wali process se)." },
+        { "speaker": "raju", "text": "Hain?? Matlab Chairman-ship alag se nahi ja sakti, VP ka pura pad hi jaana padega? Ye to Speaker se bilkul ulta hai!" }
+      ],
+      "navigation": {
+        "next": "card_53_deputy_chairman",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_53_deputy_chairman",
+      "card_slug": "card_53_deputy_chairman",
+      "type": "chat",
+      "concept_id": "vp_rs_chairman",
+      "level": 5,
+      "progress": { "current": 53, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi samjha! Ab ek related pad - Rajya Sabha khud apne mein se ek 'Deputy Chairman' bhi chunती hai (Article 89(1)). Ye asli Rajya Sabha ka member hota hai, VP ki tarah bahar se aaya hua nahi." },
+        { "speaker": "raju", "text": "To Deputy Chairman kab kaam aata hai sir?" },
+        { "speaker": "aman", "text": "Jab VP ka pad khaali ho, ya VP Rajya Sabha ki meeting attend na kar paayein, ya VP 'acting President' ban jaayein - tab Deputy Chairman RS ki meetings chalata hai. Aur is Deputy Chairman ko RS khud, effective majority se, 14 din notice dekar hata bhi sakti hai (Article 90)." },
+        { "speaker": "raju", "text": "Achha! To Deputy Chairman ko hataana RS ke apne haath mein hai, lekin VP ko Chairman-ship se hataana RS ke haath mein bilkul nahi - kya zabardast trap hai ye!" }
+      ],
+      "navigation": {
+        "next": "card_54_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_54_quiz1",
+      "card_slug": "card_54_quiz1",
+      "type": "quiz",
+      "concept_id": "vp_rs_chairman",
+      "level": 5,
+      "progress": { "current": 54, "total": 84 },
+      "quiz_payload": {
+        "question": "Rajya Sabha mein tie (barabar vote) hone ki sthiti mein kaun casting vote deta hai?",
+        "options": [
+          { "id": "A", "text": "Prime Minister" },
+          { "id": "B", "text": "Deputy Chairman hamesha" },
+          { "id": "C", "text": "VP (Chairman) apna casting vote de sakta hai" },
+          { "id": "D", "text": "President" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 100(1) ke anusar VP, jo RS ka ex-officio Chairman hai, normal voting mein vote nahi deta lekin tie hone par casting vote de sakta hai."
+      },
+      "navigation": {
+        "next": "card_55_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_55_quiz2",
+      "card_slug": "card_55_quiz2",
+      "type": "quiz",
+      "concept_id": "vp_rs_chairman",
+      "level": 5,
+      "progress": { "current": 55, "total": 84 },
+      "quiz_payload": {
+        "question": "Kya Rajya Sabha VP ko sirf 'Chairman' ke pad se hata sakti hai, jabki wo VP hi bana rahe?",
+        "options": [
+          { "id": "A", "text": "Haan, simple resolution se" },
+          { "id": "B", "text": "Nahi, VP ko Chairman-ship se hataane ka ek hi tarika hai - use pura VP pad se hi hataya jaaye" },
+          { "id": "C", "text": "Haan, agar 2/3rd majority ho" },
+          { "id": "D", "text": "Nahi, kewal Supreme Court hi hata sakti hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "VP Chairman ke pad se sirf tabhi hat sakta hai jab use poori tarah VP ke pad se hi hataya jaaye (Article 67(b) prakriya se). Rajya Sabha akele use Chairman se nahi hata sakti."
+      },
+      "navigation": {
+        "next": "card_56_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_56_quiz3",
+      "card_slug": "card_56_quiz3",
+      "type": "quiz",
+      "concept_id": "vp_rs_chairman",
+      "level": 5,
+      "progress": { "current": 56, "total": 84 },
+      "quiz_payload": {
+        "question": "Deputy Chairman of Rajya Sabha ke baare mein kaunsa kathan sahi hai?",
+        "options": [
+          { "id": "A", "text": "Wo Rajya Sabha ke sadasyon dwara khud apne mein se chuna jaata hai (Article 89)" },
+          { "id": "B", "text": "Wo President dwara nominate kiya jaata hai" },
+          { "id": "C", "text": "Wo Lok Sabha ke sadasyon mein se chuna jaata hai" },
+          { "id": "D", "text": "Use kabhi hataya nahi ja sakta" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Article 89(1) ke anusar Rajya Sabha apne sadasyon mein se hi Deputy Chairman chunती hai. Use effective majority ke resolution se, 14 din notice dekar (Article 90) hataya bhi ja sakta hai."
+      },
+      "navigation": {
+        "next": "card_57_milestone7",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_57_milestone7",
+      "card_slug": "card_57_milestone7",
+      "type": "milestone",
+      "concept_id": "vp_rs_chairman",
+      "level": 5,
+      "progress": { "current": 57, "total": 84 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎙️",
+        "completed_topic": "VP as Chairman of Rajya Sabha",
+        "xp_earned": 60,
+        "milestone_progress": "Module 7/10 Clear",
+        "motivational_quote": "RS wala role poora clear ho gaya! Ab dekhte hain VP kab 'Acting President' banता hai."
+      },
+      "navigation": {
+        "next": "card_58_article65_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_58_article65_intro",
+      "card_slug": "card_58_article65_intro",
+      "type": "chat",
+      "concept_id": "vp_acting_president",
+      "level": 5,
+      "progress": { "current": 58, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab wapas us Up-Sarpanch wale example par aate hain jo humne shuruaat mein dekha tha. Article 65 kehta hai - agar President ka pad khaali ho jaaye (death, resignation, removal ya kisi aur karan se), to naya President chunے jaane tak VP hi President ka kaam sambhalta hai." },
+        { "speaker": "raju", "text": "Matlab VP khud 'President' ban jaata hai puri tarah se?" },
+        { "speaker": "aman", "text": "Haan, wo President ke sabhi powers, immunities, aur salary/allowances leta hai jab tak naya President na aa jaaye (jo 6 mahine ke andar aana zaroori hai as per Article 62)." },
+        { "speaker": "raju", "text": "Achha, to kya iska matlab ye hai ki tab VP Rajya Sabha ka Chairman ka kaam bhi karta rahega saath mein?" }
+      ],
+      "navigation": {
+        "next": "card_59_vacancy_vs_unable",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_59_vacancy_vs_unable",
+      "card_slug": "card_59_vacancy_vs_unable",
+      "type": "chat",
+      "concept_id": "vp_acting_president",
+      "level": 5,
+      "progress": { "current": 59, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut achha doubt! Nahi Raju - jab VP 'acting President' banta hai, tab wo Rajya Sabha Chairman ke duties NAHI nibhata. Wo kaam tab Deputy Chairman sambhalta hai." },
+        { "speaker": "raju", "text": "Achhaaaa! Matlab ek waqt mein wo dono jagah kaam nahi kar sakta - ek chhodna hi padega temporarily." },
+        { "speaker": "aman", "text": "Bilkul sahi! Ab ek aur subtle point - Article 65(1) 'vacancy' ki baat karta hai (jaise death/resignation/removal), jabki Article 65(2) ek alag situation batata hai - jab President 'absent, ill, ya kisi aur karan' se apna kaam temporarily NAHI kar paa rahe (lekin pad khaali nahi hua)." },
+        { "speaker": "raju", "text": "Sir dono mein kya fark hai practically?" }
+      ],
+      "navigation": {
+        "next": "card_60_president_discharge_act",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_60_president_discharge_act",
+      "card_slug": "card_60_president_discharge_act",
+      "type": "chat",
+      "concept_id": "vp_acting_president",
+      "level": 5,
+      "progress": { "current": 60, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Article 65(1) mein pad khaali hota hai, isliye VP naye President ke aane tak 'act' karta hai. Article 65(2) mein President ka pad khaali nahi hota, sirf temporarily kaam nahi kar paa rahe - to VP sirf tab tak un ke functions 'discharge' karta hai jab tak President wapas kaam sambhal na le." },
+        { "speaker": "raju", "text": "Achha, to ek permanent jaisa hai aur ek temporary! Par sir, agar VP ka pad bhi khaali ho aur President ka bhi - tab kya hoga?" },
+        { "speaker": "aman", "text": "Zabardast sawaal! Aisi sthiti mein Article 70 kaam aata hai - Parliament ne 'President (Discharge of Functions) Act, 1969' banaya hai, jiske anusar aisi condition mein Chief Justice of India (ya sabse senior Supreme Court judge) President ke functions discharge karte hain." },
+        { "speaker": "raju", "text": "Wow, itna deep-level backup plan bhi hai! Kya kabhi aisa hua bhi hai India mein?" }
+      ],
+      "navigation": {
+        "next": "card_61_historical_instances",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_61_historical_instances",
+      "card_slug": "card_61_historical_instances",
+      "type": "chat",
+      "concept_id": "vp_acting_president",
+      "level": 5,
+      "progress": { "current": 61, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan Raju, ye asal jeevan mein bhi ho chuka hai! 1969 mein President Dr. Zakir Husain ki office mein hi death ho gayi thi - tab VP V. V. Giri 'acting President' bane. Phir jab Giri khud President ka chunav ladne ke liye resign kar gaye, tab CJI Mohammad Hidayatullah ne President ke functions discharge kiye - kyunki VP ka pad bhi khaali tha!" },
+        { "speaker": "raju", "text": "Wow, matlab dono baar backup use hua! Aur koi example hai sir?" },
+        { "speaker": "aman", "text": "Haan, 1977 mein President Fakhruddin Ali Ahmed ki bhi office mein hi death ho gayi - tab VP B. D. Jatti 'acting President' bane. Ye dono real-life examples PYQ mein baar-baar puche jaate hain, isliye achhe se yaad rakho." },
+        { "speaker": "raju", "text": "Zakir Husain -> Giri, aur Fakhruddin Ali Ahmed -> Jatti. Ye to yaad ho gaya sir!" }
+      ],
+      "navigation": {
+        "next": "card_62_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_62_quiz1",
+      "card_slug": "card_62_quiz1",
+      "type": "quiz",
+      "concept_id": "vp_acting_president",
+      "level": 5,
+      "progress": { "current": 62, "total": 84 },
+      "quiz_payload": {
+        "question": "Jab VP 'Acting President' banta hai, tab Rajya Sabha ke Chairman ka kaam kaun sambhalta hai?",
+        "options": [
+          { "id": "A", "text": "Prime Minister" },
+          { "id": "B", "text": "Deputy Chairman of Rajya Sabha" },
+          { "id": "C", "text": "Speaker, Lok Sabha" },
+          { "id": "D", "text": "Chief Justice of India" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Jab VP Article 65 ke तहत President ka kaam sambhalta hai, tab Rajya Sabha ki Chairmanship Deputy Chairman ko transfer ho jaati hai."
+      },
+      "navigation": {
+        "next": "card_63_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_63_quiz2",
+      "card_slug": "card_63_quiz2",
+      "type": "quiz",
+      "concept_id": "vp_acting_president",
+      "level": 5,
+      "progress": { "current": 63, "total": 84 },
+      "quiz_payload": {
+        "question": "Agar President aur VP dono ke pad ek saath khaali ho jaayein, to President ke functions kaun discharge karta hai?",
+        "options": [
+          { "id": "A", "text": "Prime Minister" },
+          { "id": "B", "text": "Speaker, Lok Sabha" },
+          { "id": "C", "text": "Chief Justice of India (President Discharge of Functions Act, 1969 ke tahat)" },
+          { "id": "D", "text": "Koi nahi, naya election hone tak governance ruk jaati hai" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 70 ke तहत bane 'President (Discharge of Functions) Act, 1969' ke anusar aisi sthiti mein Chief Justice of India (ya senior most Supreme Court judge) President ke functions discharge karte hain."
+      },
+      "navigation": {
+        "next": "card_64_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_64_quiz3",
+      "card_slug": "card_64_quiz3",
+      "type": "quiz",
+      "concept_id": "vp_acting_president",
+      "level": 5,
+      "progress": { "current": 64, "total": 84 },
+      "quiz_payload": {
+        "question": "Nimnlikhit joda (pairs) mein se kaunsa sahi sumelit hai (President death -> Acting President bana VP)?",
+        "options": [
+          { "id": "A", "text": "Zakir Husain (1969) -> V V Giri" },
+          { "id": "B", "text": "Fakhruddin Ali Ahmed (1977) -> S Radhakrishnan" },
+          { "id": "C", "text": "Zakir Husain (1969) -> B D Jatti" },
+          { "id": "D", "text": "Rajendra Prasad -> V V Giri" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "1969 mein President Zakir Husain ki office mein death ke baad VP V V Giri 'acting President' bane. Fakhruddin Ali Ahmed (1977) ki death par VP B D Jatti acting President bane."
+      },
+      "navigation": {
+        "next": "card_65_milestone8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_65_milestone8",
+      "card_slug": "card_65_milestone8",
+      "type": "milestone",
+      "concept_id": "vp_acting_president",
+      "level": 5,
+      "progress": { "current": 65, "total": 84 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎖️",
+        "completed_topic": "VP Acting as President",
+        "xp_earned": 65,
+        "milestone_progress": "Module 8/10 Clear",
+        "motivational_quote": "History wala module bhi clear! Ab dekhte hain VP ki salary aur privileges kya hain."
+      },
+      "navigation": {
+        "next": "card_66_salary_source",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_66_salary_source",
+      "card_slug": "card_66_salary_source",
+      "type": "chat",
+      "concept_id": "vp_salary_precedence",
+      "level": 6,
+      "progress": { "current": 66, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, guess karo - VP ki salary kis roop mein aati hai? Kya use ek alag 'VP salary' milti hai, jaise President ko milti hai?" },
+        { "speaker": "raju", "text": "Haan sir, VP itna bada pad hai to usko alag se fix salary jarur milti hogi!" },
+        { "speaker": "aman", "text": "Yahin twist hai Raju! Constitution mein VP ke liye koi alag salary fix nahi ki gayi hai. Use salary milti hai uske 'Rajya Sabha Chairman' wale role ke through - Salaries and Allowances of Officers of Parliament Act, 1953 ke tahat." },
+        { "speaker": "raju", "text": "Achhaaaa! Matlab VP ki salary uski dusri job (RS Chairman) se aati hai, khud VP hone se nahi?" }
+      ],
+      "navigation": {
+        "next": "card_67_salary_amount",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_67_salary_amount",
+      "card_slug": "card_67_salary_amount",
+      "type": "chat",
+      "concept_id": "vp_salary_precedence",
+      "level": 6,
+      "progress": { "current": 67, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi Raju! 2018 ke revision ke baad, VP (as Chairman, RS) ko current mein Rs 4,00,000 (4 lakh) prati mah milte hain." },
+        { "speaker": "raju", "text": "Aur President ki salary kitni hai sir, taaki compare kar saku?" },
+        { "speaker": "aman", "text": "President ko Rs 5,00,000 (5 lakh) prati mah milte hain, aur Governors ko Rs 3,50,000 (3.5 lakh). Ye teeno figures 2018 mein revise hui thi aur exam ke liye yaad rakhna zaroori hai." },
+        { "speaker": "raju", "text": "5 lakh President, 4 lakh VP, 3.5 lakh Governor - ye order to yaad rakhna aasan hai!" }
+      ],
+      "navigation": {
+        "next": "card_68_acting_president_salary",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_68_acting_president_salary",
+      "card_slug": "card_68_acting_president_salary",
+      "type": "chat",
+      "concept_id": "vp_salary_precedence",
+      "level": 6,
+      "progress": { "current": 68, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek connect-the-dots sawaal - jab VP 'acting President' ban jaata hai (jo humne pichhle module mein padha), to uski salary kya hogi - RS Chairman wali ya President wali?" },
+        { "speaker": "raju", "text": "Sir logically to President wali honi chahiye, kyunki wo President ka kaam kar raha hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi guess! Jab VP acting President hota hai, use President ki salary, allowances aur privileges milte hain, RS Chairman wali salary nahi." },
+        { "speaker": "raju", "text": "Achha! To temporary duty ke saath temporary salary bhi badal jaati hai - makes sense sir!" }
+      ],
+      "navigation": {
+        "next": "card_69_warrant_precedence",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_69_warrant_precedence",
+      "card_slug": "card_69_warrant_precedence",
+      "type": "chat",
+      "concept_id": "vp_salary_precedence",
+      "level": 6,
+      "progress": { "current": 69, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Warrant of Precedence ko thoda detail mein revise karte hain, jo humne shuruaat mein chhua tha. Order hai: 1) President, 2) Vice-President, 3) Prime Minister, 4) Governors (apne state ke andar) / Former Presidents." },
+        { "speaker": "raju", "text": "Achha, to Governor bhi apne state ke bahar VP se neeche hi rahenge?" },
+        { "speaker": "aman", "text": "Bilkul sahi - Governor sirf apne state ke andar hi high protocol rakhta hai, VP to poore desh mein hamesha number 2 par hi rehta hai, President ke baad." },
+        { "speaker": "raju", "text": "Samajh gaya sir! Ab lagta hai maine VP ka poora syllabus cover kar liya - bas ek baar list of VPs bhi dekh lena chahta hoon!" }
+      ],
+      "navigation": {
+        "next": "card_70_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_70_quiz1",
+      "card_slug": "card_70_quiz1",
+      "type": "quiz",
+      "concept_id": "vp_salary_precedence",
+      "level": 6,
+      "progress": { "current": 70, "total": 84 },
+      "quiz_payload": {
+        "question": "VP ko salary kis roop mein milti hai?",
+        "options": [
+          { "id": "A", "text": "Ek alag, Constitution mein fix 'VP salary' ke roop mein" },
+          { "id": "B", "text": "Rajya Sabha Chairman ke roop mein, Salaries and Allowances of Officers of Parliament Act, 1953 ke tahat" },
+          { "id": "C", "text": "Prime Minister ke barabar salary" },
+          { "id": "D", "text": "Koi salary nahi milti" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Constitution VP ke liye alag se salary fix nahi karta - VP apne 'RS Chairman' role se, 1953 ke Act ke tahat salary paata hai (current: Rs 4 lakh/maah)."
+      },
+      "navigation": {
+        "next": "card_71_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_71_quiz2",
+      "card_slug": "card_71_quiz2",
+      "type": "quiz",
+      "concept_id": "vp_salary_precedence",
+      "level": 6,
+      "progress": { "current": 71, "total": 84 },
+      "quiz_payload": {
+        "question": "Jab VP 'Acting President' bante hain, tab unki salary kya hogi?",
+        "options": [
+          { "id": "A", "text": "RS Chairman wali salary (4 lakh) hi rahegi" },
+          { "id": "B", "text": "President ki salary aur privileges milenge" },
+          { "id": "C", "text": "Koi salary nahi milegi" },
+          { "id": "D", "text": "Dono salary ek saath milengi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Jab VP President ke functions discharge karte hain, unhe President ki salary, allowances aur privileges milte hain, apni RS Chairman wali salary nahi."
+      },
+      "navigation": {
+        "next": "card_72_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_72_quiz3",
+      "card_slug": "card_72_quiz3",
+      "type": "quiz",
+      "concept_id": "vp_salary_precedence",
+      "level": 6,
+      "progress": { "current": 72, "total": 84 },
+      "quiz_payload": {
+        "question": "Warrant of Precedence mein sahi kram (order) chuniye:",
+        "options": [
+          { "id": "A", "text": "President > Prime Minister > Vice-President > Governor" },
+          { "id": "B", "text": "President > Vice-President > Prime Minister > Governor (apne state mein)" },
+          { "id": "C", "text": "Vice-President > President > Prime Minister" },
+          { "id": "D", "text": "President > Governor > Vice-President > Prime Minister" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sahi kram hai: President (1), Vice-President (2), Prime Minister (3), Governors apne state ke andar / Former Presidents (4)."
+      },
+      "navigation": {
+        "next": "card_73_milestone9",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_73_milestone9",
+      "card_slug": "card_73_milestone9",
+      "type": "milestone",
+      "concept_id": "vp_salary_precedence",
+      "level": 6,
+      "progress": { "current": 73, "total": 84 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💰",
+        "completed_topic": "Salary, Privileges & Precedence of VP",
+        "xp_earned": 55,
+        "milestone_progress": "Module 9/10 Clear",
+        "motivational_quote": "Ek aur module clear! Ab last module mein sabhi VPs ki list aur PYQ trivia dekhते hain."
+      },
+      "navigation": {
+        "next": "card_74_first_vp",
+        "button_text": "Start Final Module ➔"
+      }
+    },
+    {
+      "card_id": "card_74_first_vp",
+      "card_slug": "card_74_first_vp",
+      "type": "chat",
+      "concept_id": "vp_list_trivia",
+      "level": 6,
+      "progress": { "current": 74, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo Raju, ab India ke pehle VP se milte hain - Dr. Sarvepalli Radhakrishnan, jo 1952 se 1962 tak (do lagatar terms) VP rahe. Wo ek mahaan shikshak aur darshanik (philosopher) bhi the." },
+        { "speaker": "raju", "text": "Sir, VP ke baad wo kya bane? Kuch aur bhi to bane the na?" },
+        { "speaker": "aman", "text": "Bahut badhiya connect! Radhakrishnan VP ke baad India ke doosre President bhi bane (1962-1967). Aur unka janamdin, 5 September, 'Teachers' Day' ke roop mein manaya jaata hai!" },
+        { "speaker": "raju", "text": "Wow, Teachers Day unke naam par hai! Ye to sabko pata hai, par VP wala fact naya laga mujhe." }
+      ],
+      "navigation": {
+        "next": "card_75_vps_became_president",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_75_vps_became_president",
+      "card_slug": "card_75_vps_became_president",
+      "type": "chat",
+      "concept_id": "vp_list_trivia",
+      "level": 6,
+      "progress": { "current": 75, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Radhakrishnan akele nahi hain jo VP se President bane. Ab tak 3 VP aage jaakar President bhi bane hain - Dr. S. Radhakrishnan, Dr. Zakir Husain, aur V. V. Giri." },
+        { "speaker": "raju", "text": "Teeno alag-alag saalon mein VP the na sir?" },
+        { "speaker": "aman", "text": "Bilkul - Zakir Husain VP the 1962-67, phir President bane 1967-69 (aur office mein hi guzar gaye). V V Giri VP the 1967-69, phir 1969 mein 'acting President' bhi bane, aur baad mein khud chunav jeetkar poora President bane 1969-74." },
+        { "speaker": "raju", "text": "Achha, matlab V V Giri ka double connection hai - pehle acting President, phir asli President bhi! Ye to yaad rakhna important hai." }
+      ],
+      "navigation": {
+        "next": "card_76_died_in_office",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_76_died_in_office",
+      "card_slug": "card_76_died_in_office",
+      "type": "chat",
+      "concept_id": "vp_list_trivia",
+      "level": 6,
+      "progress": { "current": 76, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek important aur thoda emotional fact - kya kabhi koi VP apne kaaryakaal (term) ke दौरान hi guzar gaya ho?" },
+        { "speaker": "raju", "text": "President wale to sunne mein aaye the sir (Zakir Husain, Fakhruddin Ali Ahmed), VP ka bhi hua kya kabhi?" },
+        { "speaker": "aman", "text": "Haan Raju, Krishan Kant, jo 10th VP the (1997-2002), unki office mein hi August 2002 mein death ho gayi thi. Wo abhi tak ke iतिhaas mein aisa इकलौta VP hain jinki mrityu pad par rehte hue hui." },
+        { "speaker": "raju", "text": "Achha! Krishan Kant - इकलौta VP jo office mein guzre. Ye exact fact to bahut specific PYQ jaisa lag raha hai sir." }
+      ],
+      "navigation": {
+        "next": "card_77_longest_serving",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_77_longest_serving",
+      "card_slug": "card_77_longest_serving",
+      "type": "chat",
+      "concept_id": "vp_list_trivia",
+      "level": 6,
+      "progress": { "current": 77, "total": 84 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab last important trivia - sabse lambe samay tak VP kaun rahe? Guess karo!" },
+        { "speaker": "raju", "text": "Radhakrishnan honge shaayad, wo 2 baar VP rahe the!" },
+        { "speaker": "aman", "text": "Bahut close guess, lekin sahi jawab hai Mohammad Hamid Ansari - wo 2007 se 2017 tak, lagatar 2 terms, poore 10 saal VP rahe - ye sabse lamba record hai. Radhakrishnan bhi 10 saal (1952-62) rahe the, dono barabar hain 10-10 saal ke saath!" },
+        { "speaker": "raju", "text": "Achha, dono barabar record par hain! Aur ek aur cheez sir - aaj tak koi mahila (woman) VP bani hai kya?" }
+      ],
+      "navigation": {
+        "next": "card_78_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_78_quiz1",
+      "card_slug": "card_78_quiz1",
+      "type": "quiz",
+      "concept_id": "vp_list_trivia",
+      "level": 6,
+      "progress": { "current": 78, "total": 84 },
+      "quiz_payload": {
+        "question": "Bharat ke pehle Vice-President kaun the, aur wo baad mein kaunsa aur bada pad grahan kiya?",
+        "options": [
+          { "id": "A", "text": "Dr. S. Radhakrishnan - baad mein President bane" },
+          { "id": "B", "text": "Dr. Zakir Husain - baad mein Prime Minister bane" },
+          { "id": "C", "text": "V V Giri - baad mein Chief Justice bane" },
+          { "id": "D", "text": "B D Jatti - baad mein Speaker bane" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Dr. Sarvepalli Radhakrishnan bharat ke pehle VP (1952-62) the aur baad mein 1962-67 tak bharat ke doosre President bhi bane."
+      },
+      "navigation": {
+        "next": "card_79_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_79_quiz2",
+      "card_slug": "card_79_quiz2",
+      "type": "quiz",
+      "concept_id": "vp_list_trivia",
+      "level": 6,
+      "progress": { "current": 79, "total": 84 },
+      "quiz_payload": {
+        "question": "Kaunse VP ki mrityu unke kaaryakaal (term) ke दौरान hi ho gayi thi?",
+        "options": [
+          { "id": "A", "text": "R. Venkataraman" },
+          { "id": "B", "text": "Krishan Kant (2002)" },
+          { "id": "C", "text": "Shankar Dayal Sharma" },
+          { "id": "D", "text": "K R Narayanan" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Krishan Kant, 10va VP (1997-2002), abhi tak इकलौte VP hain jinki mrityu unke pad par rehte hue August 2002 mein hui."
+      },
+      "navigation": {
+        "next": "card_80_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_80_quiz3",
+      "card_slug": "card_80_quiz3",
+      "type": "quiz",
+      "concept_id": "vp_list_trivia",
+      "level": 6,
+      "progress": { "current": 80, "total": 84 },
+      "quiz_payload": {
+        "question": "Sabse lambe samay tak Vice-President ke pad par rehne ka record kiske paas hai?",
+        "options": [
+          { "id": "A", "text": "V V Giri" },
+          { "id": "B", "text": "Mohammad Hamid Ansari aur Dr. S. Radhakrishnan (dono 10-10 saal)" },
+          { "id": "C", "text": "K R Narayanan" },
+          { "id": "D", "text": "Venkaiah Naidu" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Mohammad Hamid Ansari (2007-2017) aur Dr. S. Radhakrishnan (1952-1962), dono lagatar 2 terms, poore 10-10 saal VP rahe - ye sabse lamba record hai."
+      },
+      "navigation": {
+        "next": "card_81_milestone10",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_81_milestone10",
+      "card_slug": "card_81_milestone10",
+      "type": "milestone",
+      "concept_id": "vp_list_trivia",
+      "level": 6,
+      "progress": { "current": 81, "total": 84 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📚",
+        "completed_topic": "List of Vice Presidents & PYQ Trivia",
+        "xp_earned": 65,
+        "milestone_progress": "Module 10/10 Clear - ALL MODULES DONE!",
+        "motivational_quote": "Saare 10 modules clear! Ab tumhare paas officer level ka poora VP syllabus hai. Chalo final revision karte hain!"
+      },
+      "navigation": {
+        "next": "card_82_summary",
+        "button_text": "Go to Final Revision ➔"
+      }
+    },
+    {
+      "card_id": "card_82_summary",
+      "card_slug": "card_82_summary",
+      "type": "summary",
+      "concept_id": "vp_full_revision",
+      "level": 7,
+      "progress": { "current": 82, "total": 84 },
+      "summary_payload": {
+        "title": "⚡ Officer Revision - Vice President ka Poora Nichod",
+        "revision_points": [
+          {
+            "topic": "Articles & Qualification",
+            "point": "Article 63-71 (Part V). Qualification: Citizen, 35+ saal, RS membership yogya (na ki LS wali), koi office of profit nahi (President/Governor/Minister exempt)."
+          },
+          {
+            "topic": "Electoral College Trap",
+            "point": "VP chunav mein SIRF Parliament ke elected + nominated sadasya vote karte hain; State/UT Assembly (MLA/MLC) ka koi role nahi - President ke election se ye seedha ulta hai."
+          },
+          {
+            "topic": "Term, Oath, Resignation, Removal",
+            "point": "5 saal term, unlimited re-election. Shapath President dilaate hain (Article 69) - 'preserve, protect, defend' wali line NAHI hoti (jo President ki shapath mein hoti hai). Resignation President ko diya jaata hai. Removal sirf RS se shuru (Article 67(b)), RS mein effective majority + LS mein simple majority - ye 'impeachment' NAHI hai aur koi specific ground zaroori nahi."
+          },
+          {
+            "topic": "RS Chairman & Acting President",
+            "point": "VP ex-officio RS Chairman hai (Article 64) par RS ka sadasya NAHI - normal voting mein vote nahi deta, sirf tie hone par casting vote deta hai. RS akele use Chairman-ship se nahi hata sakti. Jab VP acting President banta hai (Article 65), Deputy Chairman RS ka kaam sambhalta hai aur VP ko President ki salary milti hai."
+          },
+          {
+            "topic": "Salary aur Trivia",
+            "point": "VP ki alag salary fix nahi hai - RS Chairman ke roop mein Rs 4 lakh/maah milte hain (President 5 lakh, Governor 3.5 lakh). Radhakrishnan pehle VP the aur baad mein President bhi bane; Krishan Kant इकलौte VP jo office mein guzre; Hamid Ansari & Radhakrishnan dono 10-10 saal ke record holder hain."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_83_final_quiz",
+        "button_text": "Take Final Officer Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_83_final_quiz",
+      "card_slug": "card_83_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "vp_final_challenge",
+      "level": 7,
+      "progress": { "current": 83, "total": 84 },
+      "quiz_payload": {
+        "question": "Nimnlikhit kathanon par vichar karein:\n1) Vice President ke chunav ke Electoral College mein Rajya Sabha ke nominated sadasya vote de sakte hain.\n2) State Vidhan Sabha ke elected sadasya VP ke chunav mein vote dete hain, jaise President ke chunav mein dete hain.\n3) VP ko hataane ka resolution sirf Rajya Sabha mein hi shuru kiya jaa sakta hai, aur ismein koi specific ground batana zaroori nahi hai.\n4) VP ki shapath mein Constitution ke 'preserve, protect and defend' karne ka wahi wada hota hai jo President leta hai.\nUpayukt kathan chuniye:",
+        "options": [
+          { "id": "A", "text": "Kewal 1 aur 3 sahi hain" },
+          { "id": "B", "text": "1, 2 aur 3 sahi hain" },
+          { "id": "C", "text": "Kewal 2 aur 4 sahi hain" },
+          { "id": "D", "text": "Sabhi char kathan sahi hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Kathan 1 sahi hai (nominated RS/LS members VP chunav mein vote de sakte hain). Kathan 2 GALAT hai - State Assembly ka VP chunav mein koi role nahi. Kathan 3 sahi hai - removal sirf RS se shuru, koi specific ground zaroori nahi (ye impeachment nahi hai). Kathan 4 GALAT hai - 'preserve, protect, defend' wali line sirf President ki shapath mein hoti hai, VP ki shapath mein nahi. Isliye sahi jawab hai kewal 1 aur 3."
+      },
+      "navigation": {
+        "next": "card_84_trophy",
+        "button_text": "See Final Result ➔"
+      }
+    },
+    {
+      "card_id": "card_84_trophy",
+      "card_slug": "card_84_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 7,
+      "progress": { "current": 84, "total": 84 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTER TROPHY!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Vice President of India - Full Chapter Complete",
+        "xp_earned": 150,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Officer level ka pura Vice President chapter tumne conquer kar liya hai, Raju jaisi mehnat rang laayegi! Ab BPSC/SSC/Railway ke prashno mein VP ka koi bhi trap tumhe pareshan nahi kar sakta. Agla chapter ready hai jab tum ho!"
+      },
+      "navigation": {
+        "next": "card_01_intro",
+        "button_text": "Restart Chapter 🔁"
+      }
+    }
+  ]
+}
