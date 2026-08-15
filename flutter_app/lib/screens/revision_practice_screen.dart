@@ -70,9 +70,13 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       'qh': currentQ.qh,
       'se': currentQ.se,
       'sh': currentQ.sh,
-      'options': currentQ.options,
+      'oe': currentQ.oe,
+      'oh': currentQ.oh,
+      'options': currentQ.getOptions(_isHindi),
       'answerIndex': currentQ.answerIndex,
-      'explanation': currentQ.explanation,
+      'explanation': currentQ.getExplanation(_isHindi),
+      'ee': currentQ.ee,
+      'eh': currentQ.eh,
     };
 
     bool saved = await UserStatsService.toggleBookmark(qJson);
@@ -116,9 +120,13 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             'qh': currentQ.qh,
             'se': currentQ.se,
             'sh': currentQ.sh,
-            'options': currentQ.options,
+            'oe': currentQ.oe,
+            'oh': currentQ.oh,
+            'options': currentQ.getOptions(_isHindi),
             'answerIndex': currentQ.answerIndex,
-            'explanation': currentQ.explanation,
+            'explanation': currentQ.getExplanation(_isHindi),
+            'ee': currentQ.ee,
+            'eh': currentQ.eh,
           },
         );
       }
@@ -148,9 +156,13 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               'qh': currentQ.qh,
               'se': currentQ.se,
               'sh': currentQ.sh,
-              'options': currentQ.options,
+              'oe': currentQ.oe,
+              'oh': currentQ.oh,
+              'options': currentQ.getOptions(_isHindi),
               'answerIndex': currentQ.answerIndex,
-              'explanation': currentQ.explanation,
+              'explanation': currentQ.getExplanation(_isHindi),
+              'ee': currentQ.ee,
+              'eh': currentQ.eh,
             },
     );
   }
@@ -160,6 +172,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     int asksLeft = _asksRemainingPerQuestion[_currentIndex] ?? 1; // 🛑 STRICT 1 ASK LIMIT
     TextEditingController doubtController = TextEditingController();
     bool isAsking = false;
+    final currentOptions = currentQ.getOptions(_isHindi);
 
     showModalBottomSheet(
       context: context,
@@ -268,8 +281,8 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
                                   String aiResp = await AiExplainerService.askCustomDoubt(
                                     question: currentQ.getText(_isHindi),
-                                    options: currentQ.options,
-                                    correctAnswer: currentQ.options[currentQ.answerIndex],
+                                    options: currentOptions,
+                                    correctAnswer: currentOptions[currentQ.answerIndex],
                                     userDoubt: userQuery,
                                   );
 
@@ -366,6 +379,8 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   Widget build(BuildContext context) {
     final currentQ = widget.questions[_currentIndex];
     final List<String>? statements = _isHindi ? currentQ.sh : currentQ.se;
+    final List<String> currentOptions = currentQ.getOptions(_isHindi);
+    final String currentExplanation = currentQ.getExplanation(_isHindi);
 
     return Scaffold(
       appBar: AppBar(
@@ -469,7 +484,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 10),
 
-            // 📋 2. DEDICATED SEPARATE STATEMENT CARDS
+            // 📋 2. DEDICATED SEPARATE STATEMENT CARDS (Numbered Badges)
             if (statements != null && statements.isNotEmpty) ...[
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -523,9 +538,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               const SizedBox(height: 10),
             ],
 
-            // 🔘 3. OPTIONS LIST
-            ...List.generate(currentQ.options.length, (index) {
-              final optionText = currentQ.options[index];
+            // 🔘 3. BILINGUAL OPTIONS LIST (Dynamic oe/oh)
+            ...List.generate(currentOptions.length, (index) {
+              final optionText = currentOptions[index];
               final isCorrect = index == currentQ.answerIndex;
               final isSelected = index == _selectedOptionIndex;
 
@@ -594,7 +609,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               );
             }),
 
-            // 💡 4. SOLUTION & AI DOUBT
+            // 💡 4. BILINGUAL SOLUTION & AI DOUBT (Dynamic ee/eh)
             if (_isAnswered) ...[
               const SizedBox(height: 14),
               Container(
@@ -637,7 +652,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                     ),
                     const SizedBox(height: 8),
                     MathFormattedText(
-                      text: currentQ.explanation,
+                      text: currentExplanation,
                       textStyle: const TextStyle(fontSize: 12.5, color: Color(0xFF14532D), height: 1.4),
                     ),
                   ],
