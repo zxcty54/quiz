@@ -375,6 +375,171 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
+  // ✨ PREMIUM VISUAL EXPLANATION BUILDER
+  Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ) {
+    List<String> rawParagraphs = rawExplanation
+        .split('\n')
+        .map((p) => p.trim())
+        .where((p) => p.isNotEmpty)
+        .toList();
+
+    return Container(
+      width: double.infinity,
+      margin: const EdgeInsets.only(top: 14),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: const Color(0xFFE2E8F0), width: 1.2),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF0F172A).withOpacity(0.04),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          )
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // 🏆 1. HEADER STRIP
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
+            decoration: const BoxDecoration(
+              color: Color(0xFFF8FAFC),
+              borderRadius: BorderRadius.vertical(top: Radius.circular(13)),
+              border: Border(bottom: BorderSide(color: Color(0xFFE2E8F0))),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFEF3C7),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: const Text('💡', style: TextStyle(fontSize: 14)),
+                    ),
+                    const SizedBox(width: 8),
+                    const Text(
+                      'Detailed Solution',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF0F172A),
+                        fontSize: 13.5,
+                        letterSpacing: 0.2,
+                      ),
+                    ),
+                  ],
+                ),
+                InkWell(
+                  onTap: () => _openAiDoubtDialog(currentQ),
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
+                      ),
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color(0xFF2563EB).withOpacity(0.25),
+                          blurRadius: 4,
+                          offset: const Offset(0, 2),
+                        )
+                      ],
+                    ),
+                    child: const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text('🤖 Ask AI', style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+
+          // 📖 2. SMART BREAKDOWN POINTS
+          Padding(
+            padding: const EdgeInsets.all(14.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: rawParagraphs.map((para) {
+                bool isCorrectPoint = para.toLowerCase().contains('is correct') || para.contains('सही है');
+                bool isIncorrectPoint = para.toLowerCase().contains('is incorrect') || 
+                                        para.toLowerCase().contains('is false') || 
+                                        para.contains('गलत है');
+
+                Color stripBg = const Color(0xFFF8FAFC);
+                Color stripBorder = const Color(0xFFE2E8F0);
+                Color badgeBg = const Color(0xFF64748B);
+                String badgeIcon = '📌';
+
+                if (isCorrectPoint) {
+                  stripBg = const Color(0xFFF0FDF4);
+                  stripBorder = const Color(0xFFBBF7D0);
+                  badgeBg = const Color(0xFF16A34A);
+                  badgeIcon = '✓';
+                } else if (isIncorrectPoint) {
+                  stripBg = const Color(0xFFFEF2F2);
+                  stripBorder = const Color(0xFFFECDD3);
+                  badgeBg = const Color(0xFFDC2626);
+                  badgeIcon = '✕';
+                }
+
+                return Container(
+                  width: double.infinity,
+                  margin: const EdgeInsets.only(bottom: 8.0),
+                  padding: const EdgeInsets.all(11.0),
+                  decoration: BoxDecoration(
+                    color: stripBg,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: stripBorder, width: 1),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: 20,
+                        height: 20,
+                        margin: const EdgeInsets.only(top: 1),
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: badgeBg,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Text(
+                          badgeIcon,
+                          style: const TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: MathFormattedText(
+                          text: para,
+                          textStyle: const TextStyle(
+                            fontSize: 13,
+                            color: Color(0xFF1E293B),
+                            height: 1.45,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final currentQ = widget.questions[_currentIndex];
@@ -609,55 +774,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               );
             }),
 
-            // 💡 4. BILINGUAL SOLUTION & AI DOUBT (Dynamic ee/eh)
+            // 💡 4. UPGRADED HIGH-CONTRAST DETAILED SOLUTION
             if (_isAnswered) ...[
-              const SizedBox(height: 14),
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(14),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF0FDF4),
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: const Color(0xFF86EFAC), width: 1.2),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Row(
-                          children: [
-                            Text('💡', style: TextStyle(fontSize: 16)),
-                            SizedBox(width: 6),
-                            Text('Detailed Solution', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF166534), fontSize: 13)),
-                          ],
-                        ),
-                        InkWell(
-                          onTap: () => _openAiDoubtDialog(currentQ),
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFF2563EB),
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: const Row(
-                              children: [
-                                Text('🤖 Ask AI', style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
-                              ],
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(height: 8),
-                    MathFormattedText(
-                      text: currentExplanation,
-                      textStyle: const TextStyle(fontSize: 12.5, color: Color(0xFF14532D), height: 1.4),
-                    ),
-                  ],
-                ),
-              ),
+              _buildEnhancedExplanation(currentExplanation, currentQ),
             ],
             const SizedBox(height: 70),
           ],
