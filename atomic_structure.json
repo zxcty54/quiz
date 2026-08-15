@@ -3,627 +3,964 @@
     "p_id": "bpsc_chem_m14_01",
     "qe": "In 1808, John Dalton published 'A New System of Chemical Philosophy', proposing his historic atomic theory. Which fundamental postulate of Dalton's theory directly explains the Law of Conservation of Mass during chemical reactions?",
     "qh": "1808 में, जॉन डाल्टन ने 'ए न्यू सिस्टम ऑफ़ केमिकल फिलॉसफी' प्रकाशित किया, जिसमें उन्होंने अपना ऐतिहासिक परमाणु सिद्धांत प्रस्तावित किया। डाल्टन के सिद्धांत की कौन सी मौलिक अवधारणा रासायनिक प्रतिक्रियाओं के दौरान द्रव्यमान के संरक्षण के नियम (Law of Conservation of Mass) की सीधे व्याख्या करती है?",
-    "o": [
+    "oe": [
       "All atoms of a given element possess identical masses and chemical properties.",
       "Chemical reactions involve only the reorganization of atoms; atoms are neither created nor destroyed during a reaction.",
       "Compounds are formed when atoms of different elements combine in variable ratios depending on temperature.",
       "Matter consists of divisible fundamental particles known as sub-atomic quanta."
     ],
+    "oh": [
+      "किसी दिए गए तत्व के सभी परमाणुओं का द्रव्यमान और रासायनिक गुण समान होते हैं।",
+      "रासायनिक प्रतिक्रियाओं में केवल परमाणुओं का पुनर्गठन शामिल होता है; किसी प्रतिक्रिया के दौरान परमाणु न तो बनाए जाते हैं और न ही नष्ट होते हैं।",
+      "यौगिक तब बनते हैं जब विभिन्न तत्वों के परमाणु तापमान के आधार पर परिवर्तनशील अनुपातों में संयोजित होते हैं।",
+      "पदार्थ उप-परमाणु क्वांटा के रूप में जाने जाने वाले विभाज्य मौलिक कणों से बना है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 explains the Law of Definite Proportions rather than mass conservation across reactions. Option 1 is correct because Dalton's postulate stating that <b>chemical reactions involve solely the rearrangement and reorganization of constituent atoms—and that atoms themselves are neither created nor destroyed in chemical processes</b>—directly accounts for the **Law of Conservation of Mass** [the chemical principle stating that the total mass of reactants must equal the total mass of products in an isolated system]. Since the net quantity and identity of atoms remain invariant before and after reaction, total mass is conserved. Option 2 incorrectly introduces 'variable ratios' (compounds form in fixed whole-number ratios). Option 3 violates Dalton's core postulate of atomic indivisibility."
+    "ee": "1. Option 0 describes the postulate explaining the Law of Definite Proportions and identical elemental identity, not the conservation of total mass across reactions.\n2. Option 1 is correct because Dalton's postulate stating that 'atoms are indivisible particles that can neither be created nor destroyed in a chemical reaction' and that 'chemical reactions involve only the rearrangement of atoms' directly accounts for Lavoisier's Law of Conservation of Mass. Since the total number and identity of each type of atom remain completely unchanged before and after a chemical transformation, the total mass of the products must always equal the total mass of the reactants.\n3. Option 2 is incorrect because Dalton stated that atoms combine in fixed, small whole-number ratios to form compounds, not variable ratios dependent on temperature.\n4. Option 3 is incorrect because Dalton's original postulate considered the atom to be indivisible and elementary, completely opposing the idea of sub-atomic divisibility.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि यह डाल्टन की उस अवधारणा को दर्शाता है जो निश्चित अनुपात के नियम की व्याख्या करती है, न कि द्रव्यमान संरक्षण की।\n2. विकल्प 1 सही है क्योंकि डाल्टन के परमाणु सिद्धांत का यह मुख्य अभिगृहीत कि 'परमाणु अविभाज्य कण होते हैं जिन्हें रासायनिक अभिक्रिया में न तो बनाया जा सकता है और न ही नष्ट किया जा सकता है, तथा रासायनिक अभिक्रियाओं में केवल परमाणुओं का पुनर्गठन होता है', सीधे तौर पर लेवोज़ियर के द्रव्यमान संरक्षण के नियम की व्याख्या करता है। चूँकि अभिक्रिया के पूर्व और पश्चात परमाणुओं की कुल संख्या और प्रकार अपरिवर्तित रहते हैं, अतः कुल द्रव्यमान सदैव संरक्षित रहता है।\n3. विकल्प 2 गलत है क्योंकि यौगिकों का निर्माण निश्चित पूर्णांक अनुपातों में होता है, तापमान पर निर्भर परिवर्तनशील अनुपातों में नहीं।\n4. विकल्प 3 गलत है क्योंकि डाल्टन के अनुसार परमाणु अविभाज्य था, विभाज्य उप-परमाणु कणों की संकल्पना बाद के आधुनिक सिद्धांतों में आई।"
   },
   {
     "p_id": "bpsc_chem_m14_02",
     "qe": "During cathode ray discharge tube experiments, J.J. Thomson evaluated the charge-to-mass ratio ($e/m$, or specific charge) of cathode ray particles. What physical property regarding the cathode ray $e/m$ ratio led to the conclusion that electrons are universal fundamental constituents of all matter?",
     "qh": "कैथोड किरण डिस्चार्ज ट्यूब प्रयोगों के दौरान, जे.जे. थॉमसन ने कैथोड किरण कणों के आवेश-से-द्रव्यमान अनुपात ($e/m$, या विशिष्ट आवेश) का मूल्यांकन किया। कैथोड किरण $e/m$ अनुपात से संबंधित किस भौतिक गुण से यह निष्कर्ष निकला कि इलेक्ट्रॉन सभी पदार्थों के सार्वभौमिक मौलिक घटक हैं?",
-    "o": [
+    "oe": [
       "The $e/m$ ratio varies directly with the atomic weight of the gas filled inside the discharge tube.",
-      "The $e/m$ ratio ($1.76 \\\\times 10^{11}\\\\text{ C/kg}$) remains strictly invariant and independent of the chemical nature of the gas and the electrode metal used.",
-      "The $e/m$ ratio becomes zero under high vacuum conditions ($10^{-6}\\\\text{ atm}$).",
+      "The $e/m$ ratio ($1.76 \\times 10^{11}\\text{ C/kg}$) remains strictly invariant and independent of the chemical nature of the gas and the electrode metal used.",
+      "The $e/m$ ratio becomes zero under high vacuum conditions ($10^{-6}\\text{ atm}$).",
       "The $e/m$ ratio matches the specific charge of positively charged alpha particles."
     ],
+    "oh": [
+      "$e/m$ अनुपात डिस्चार्ज ट्यूब के अंदर भरी गैस के परमाणु भार के साथ सीधे बदलता है।",
+      "$e/m$ अनुपात ($1.76 \\times 10^{11}\\text{ C/kg}$) उपयोग की गई गैस की रासायनिक प्रकृति और इलेक्ट्रोड धातु से पूरी तरह स्वतंत्र और अपरिवर्तनीय रहता है।",
+      "$e/m$ अनुपात उच्च निर्वात स्थितियों ($10^{-6}\\text{ atm}$) के तहत शून्य हो जाता है।",
+      "$e/m$ अनुपात धनावेशित अल्फा कणों के विशिष्ट आवेश से मेल खाता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes the behavior of canal/anode rays (which depend on gas identity), not cathode rays. Option 1 is correct because Thomson measured the **Specific Charge** [the ratio of the electric charge of a particle to its mass, $e/m = 1.76 \\\\times 10^{11}\\\\text{ C/kg}$] of cathode rays and observed that this value remained completely unchanged regardless of which gas was introduced into the tube or which metal was used for the cathode. This independence proved that **electrons are universal constituents** present inside atoms of all chemical elements. Option 2 incorrectly states that $e/m$ becomes zero in vacuum (high vacuum at $10^{-6}\\\\text{ atm}$ is actually required to generate the ray). Option 3 confuses electrons with heavy positively charged alpha particles."
+    "ee": "1. Option 0 describes the behavior of positive canal (anode) rays whose $e/m$ ratio depends directly on the residual gas, not cathode rays.\n2. Option 1 is correct because J.J. Thomson in 1897 demonstrated that the specific charge or charge-to-mass ratio ($e/m = 1.76 \\times 10^{11}\\text{ C/kg}$) of cathode ray particles is an absolute physical constant. It remains entirely invariant regardless of the metal used for the cathode (e.g., Al, Fe, Cu) or the nature of the gas enclosed in the discharge tube (e.g., hydrogen, air, helium). This universal independence proved that these negatively charged sub-atomic particles (electrons) are identical fundamental constituents of all atoms.\n3. Option 2 is incorrect because high vacuum conditions are a prerequisite to facilitate the emission and mean free path of cathode rays, not a condition that reduces $e/m$ to zero.\n4. Option 3 is incorrect because the $e/m$ of an electron is roughly $3700$ times larger than the $e/m$ of an alpha particle ($He^{2+}$)."
+    ,
+    "eh": "1. विकल्प 0 गलत है क्योंकि गैस की प्रकृति पर $e/m$ का निर्भर होना एनोड (कैनाल) किरणों का लक्षण है, कैथोड किरणों का नहीं।\n2. विकल्प 1 सही है क्योंकि जे.जे. थॉमसन (1897) ने यह सिद्ध किया कि कैथोड किरण कणों का विशिष्ट आवेश या आवेश-द्रव्यमान अनुपात ($e/m = 1.76 \\times 10^{11}\\text{ C/kg}$) एक सार्वभौमिक स्थिरांक है। यह मान ट्यूब में भरी गई गैस की प्रकृति और इलेक्ट्रोड के लिए उपयोग की गई धातु पर बिल्कुल निर्भर नहीं करता है। इस सार्वभौमिक अपरिवर्तनीयता ने यह प्रमाणित किया कि इलेक्ट्रॉन सभी तत्वों के परमाणुओं के मूलभूत घटक हैं।\n3. विकल्प 2 गलत है क्योंकि उच्च निर्वात कैथोड किरणों के उत्सर्जन के लिए आवश्यक परिस्थिति है, इससे $e/m$ शून्य नहीं होता।\n4. विकल्प 3 गलत है क्योंकि अल्फा कणों का द्रव्यमान अत्यधिक होने के कारण उनका $e/m$ इलेक्ट्रॉन की तुलना में बहुत कम होता है।"
   },
   {
     "p_id": "bpsc_chem_m14_03",
     "qe": "In 1886, E. Goldstein observed new positively charged canal rays in a gas discharge tube. How do canal rays differ fundamentally from Thomson's cathode rays with respect to their constituent particles?",
     "qh": "1886 में, ई. गोल्डस्टीन ने गैस डिस्चार्ज ट्यूब में नई धनावेशित कैनाल किरणों (canal rays) का अवलोकन किया। अपने घटक कणों के संबंध में कैनाल किरणें थॉमसन की कैथोड किरणों से मौलिक रूप से कैसे भिन्न हैं?",
-    "o": [
+    "oe": [
       "Canal rays consist of free positrons ejected directly from electrode metal nuclei.",
       "Canal rays consist of positively charged gaseous ions whose mass and $e/m$ ratio depend entirely on the residual gas present in the tube.",
       "Canal rays are electromagnetic gamma radiations carrying zero rest mass.",
       "Canal rays consist of fundamental protons whose mass remains identical regardless of tube gas."
     ],
+    "oh": [
+      "कैनाल किरणों में इलेक्ट्रोड धातु नाभिक से सीधे निकाले गए मुक्त पॉज़िट्रॉन होते हैं।",
+      "कैनाल किरणों में धनावेशित गैसीय आयन होते हैं जिनका द्रव्यमान और $e/m$ अनुपात पूरी तरह से ट्यूब में मौजूद अवशिष्ट गैस पर निर्भर करता है।",
+      "कैनाल किरणें विद्युत चुम्बकीय गामा विकिरण हैं जिनमें शून्य विराम द्रव्यमान होता है।",
+      "कैनाल किरणों में मौलिक प्रोटॉन होते हैं जिनका द्रव्यमान ट्यूब गैस की परवाह किए बिना समान रहता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies canal rays as nuclear positrons. Option 1 is correct because while cathode rays consist of elemental electrons ($e/m$ constant), **Canal Rays (Anode Rays)** consist of **Positively Charged Residual Gas Ions** produced when high-energy cathode electrons collide with and ionize residual gas atoms inside the tube. Consequently, the mass and $e/m$ ratio of canal ray particles vary depending on the atomic mass of the gas used. Only when hydrogen gas is used do canal rays yield the lightest positive ion—the **Proton** ($m_p \\\\approx 1.67 \\\\times 10^{-27}\\\\text{ kg}$, $1837$ times heavier than an electron). Option 2 describes gamma radiation, and Option 3 incorrectly assumes canal rays are always identical pure protons."
+    "ee": "1. Option 0 is incorrect because canal rays are not antimatter positrons emitted from nuclear decay.\n2. Option 1 is correct because while cathode rays consist of fundamental electrons emitted directly from the cathode, **Canal Rays (Anode Rays)** are streams of **positively charged gaseous ions** generated when high-speed electrons collide with and knock electrons out of the neutral residual gas atoms present inside the discharge tube. Consequently, the mass and $e/m$ ratio of canal ray particles vary according to the molar mass of the gas used. When hydrogen gas is used ($H^+$), the particles are the lightest and represent fundamental protons ($m_p \\approx 1.67 \\times 10^{-27}\\text{ kg}$).\n3. Option 2 is incorrect because canal rays are material particle streams with non-zero rest mass, not mass-less gamma-ray photons.\n4. Option 3 is incorrect because canal ray particles are protons only when hydrogen gas is filled; heavier gases yield much heavier polyatomic or multi-nucleon positive ions (e.g., $O_2^+$, $He^+$).",
+    "eh": "1. विकल्प 0 गलत है क्योंकि कैनाल किरणें पॉज़िट्रॉन नहीं होती हैं।\n2. विकल्प 1 सही है क्योंकि कैथोड किरणें जहाँ सार्वभौमिक इलेक्ट्रॉन हैं, वहीं **कैनाल किरणें (एनोड किरणें)** डिस्चार्ज ट्यूब में उपस्थित गैस के परमाणुओं पर इलेक्ट्रॉनों के टकराने से बने **धनावेशित गैसीय आयनों** का प्रवाह होती हैं। इस कारण कैनाल किरणों के कणों का द्रव्यमान और उनका $e/m$ अनुपात डिस्चार्ज ट्यूब में भरी गई गैस की प्रकृति पर निर्भर करता है। केवल हाइड्रोजन गैस होने पर ही सबसे हल्का धनावेशित कण अर्थात प्रोटॉन प्राप्त होता है।\n3. विकल्प 2 गलत है क्योंकि कैनाल किरणें द्रव्यमान युक्त कण धाराएं हैं, द्रव्यमान-रहित गामा किरणें नहीं।\n4. विकल्प 3 गलत है क्योंकि हर गैस में प्रोटॉन नहीं निकलते, बल्कि उस गैस के भारी आयन (जैसे $He^+$, $N_2^+$) प्रवाहित होते हैं।"
   },
   {
     "p_id": "bpsc_chem_m14_04",
-    "qe": "James Chadwick discovered the neutron in 1932 by bombarding a target element with high-energy alpha particles ($\\\\alpha$-particles). Which light metal foil did Chadwick bombard to induce this nuclear transmutation reaction?",
-    "qh": "जेम्स चैडविक ने 1932 में उच्च ऊर्जा वाले अल्फा कणों ($\\\\alpha$-कणों) से एक लक्ष्य तत्व पर बमबारी करके न्यूट्रॉन की खोज की। इस परमाणु रूपांतरण प्रतिक्रिया (nuclear transmutation reaction) को प्रेरित करने के लिए चैडविक ने किस हल्की धातु की पन्नी पर बमबारी की थी?",
-    "o": [
-      "Thin foil of Gold ($^{197}_{79}\\\\text{Au}$)",
-      "Thin sheet of Beryllium ($^{9}_{4}\\\\text{Be}$)",
-      "Thin sheet of Cesium ($^{133}_{55}\\\\text{Cs}$)",
-      "Thin sheet of Platinum ($^{195}_{78}\\\\text{Pt}$)"
+    "qe": "James Chadwick discovered the neutron in 1932 by bombarding a target element with high-energy alpha particles ($\\alpha$-particles). Which light metal foil did Chadwick bombard to induce this nuclear transmutation reaction?",
+    "qh": "जेम्स चैडविक ने 1932 में उच्च ऊर्जा वाले अल्फा कणों ($\\alpha$-कणों) से एक लक्ष्य तत्व पर बमबारी करके न्यूट्रॉन की खोज की। इस परमाणु रूपांतरण प्रतिक्रिया (nuclear transmutation reaction) को प्रेरित करने के लिए चैडविक ने किस हल्की धातु की पन्नी पर बमबारी की थी?",
+    "oe": [
+      "Thin foil of Gold ($^{197}_{79}\\text{Au}$)",
+      "Thin sheet of Beryllium ($^{9}_{4}\\text{Be}$)",
+      "Thin sheet of Cesium ($^{133}_{55}\\text{Cs}$)",
+      "Thin sheet of Platinum ($^{195}_{78}\\text{Pt}$)"
+    ],
+    "oh": [
+      "सोने की पतली पन्नी ($^{197}_{79}\\text{Au}$)",
+      "बेरिलियम की पतली शीट ($^{9}_{4}\\text{Be}$)",
+      "सीज़ियम की पतली शीट ($^{133}_{55}\\text{Cs}$)",
+      "प्लेटिनम की पतली शीट ($^{195}_{78}\\text{Pt}$)"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 refers to Rutherford's $\\\\alpha$-particle scattering experiment for nuclear discovery. Option 1 is correct because James Chadwick discovered the **Neutron** ($^{1}_{0}\\\\text{n}$) by bombarding a thin sheet of **Beryllium ($^{9}_{4}\\\\text{Be}$)** with energetic alpha particles ($^{4}_{2}\\\\text{He}$) emitted from a polonium source. The resulting nuclear reaction produced Carbon-12 and liberated uncharged, highly penetrating sub-atomic particles: $^{9}_{4}\\\\text{Be} + ^{4}_{2}\\\\text{He} \\\\rightarrow ^{12}_{6}\\\\text{C} + ^{1}_{0}\\\\text{n}$. Neutrons possess zero electric charge and a mass ($1.675 \\\\times 10^{-27}\\\\text{ kg}$) slightly greater than that of a proton. Option 2 and Option 3 list heavy alkali/noble metals that do not undergo this specific discovery pathway."
+    "ee": "1. Option 0 refers to Rutherford's famous 1911 alpha-particle scattering experiment that led to the discovery of the atomic nucleus, not the discovery of the neutron.\n2. Option 1 is correct because in 1932, British physicist James Chadwick discovered the **Neutron** by bombarding a thin target sheet of **Beryllium ($^{9}_{4}\\text{Be}$)** with energetic alpha particles ($^{4}_{2}\\text{He}$) emitted from a polonium source. The induced artificial nuclear transmutation reaction was: $^{9}_{4}\\text{Be} + ^{4}_{2}\\text{He} \\rightarrow ^{12}_{6}\\text{C} + ^{1}_{0}\\text{n}$. The ejected neutral particles ($^{1}_{0}\\text{n}$) carried zero charge and had a mass ($1.675 \\times 10^{-27}\\text{ kg}$) slightly greater than that of a proton.\n3. Option 2 is incorrect because cesium was not used in sub-atomic particle discovery reactions by Chadwick.\n4. Option 3 is incorrect because platinum was used as an inert electrode in early cathode ray experiments, not for neutron transmutation.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि सोने की पतली पन्नी का उपयोग रदरफोर्ड ने 1911 में परमाणु नाभिक की खोज के लिए किया था।\n2. विकल्प 1 सही है क्योंकि 1932 में जेम्स चैडविक ने पोलोनियम स्रोत से निकलने वाले तीव्रगामी अल्फा कणों ($^{4}_{2}\\text{He}$) की बौछार **बेरिलियम ($^{9}_{4}\\text{Be}$)** की पतली शीट पर की थी। इस नाभिकीय अभिक्रिया के परिणामस्वरूप कार्बन-12 का निर्माण हुआ और अत्यधिक भेदन क्षमता वाले विद्युत-उदासीन कण उत्सर्जित हुए, जिन्हें **न्यूट्रॉन ($^{1}_{0}\\text{n}$)** कहा गया: $^{9}_{4}\\text{Be} + ^{4}_{2}\\text{He} \\rightarrow ^{12}_{6}\\text{C} + ^{1}_{0}\\text{n}$।\n3. विकल्प 2 गलत है क्योंकि सीज़ियम का उपयोग फोटोइलेक्ट्रिक सेल में होता है।\n4. विकल्प 3 गलत है क्योंकि प्लेटिनम का उपयोग इस खोज में नहीं किया गया था।"
   },
   {
     "p_id": "bpsc_chem_m14_05",
     "qe": "Comparing atomic dimensions across the Modern Periodic Table reveals extreme scale differences. Which option correctly pairs the smallest known atom with the largest known atom by atomic radius?",
     "qh": "आधुनिक आवर्त सारणी में परमाणु आयामों की तुलना अत्यधिक पैमाने के अंतर को उजागर करती है। कौन सा विकल्प परमाणु त्रिज्या द्वारा ज्ञात सबसे छोटे परमाणु को सबसे बड़े ज्ञात परमाणु के साथ सही ढंग से मिलाता है?",
-    "o": [
-      "Smallest: Hydrogen ($r \\\\approx 0.53\\\\text{ \\\\AA}$); Largest: Uranium ($r \\\\approx 175 \\\\times 10^{-12}\\\\text{ m}$)",
-      "Smallest: Helium ($\\\\text{He}$, $r \\\\approx 0.31\\\\text{ \\\\AA}$ or $3.1 \\\\times 10^{-11}\\\\text{ m}$); Largest: Cesium ($\\\\text{Cs}$, $r \\\\approx 225 \\\\times 10^{-12}\\\\text{ m}$)",
-      "Smallest: Lithium ($r \\\\approx 1.52\\\\text{ \\\\AA}$); Largest: Francium ($r \\\\approx 500 \\\\times 10^{-12}\\\\text{ m}$)",
-      "Smallest: Fluorine ($r \\\\approx 0.71\\\\text{ \\\\AA}$); Largest: Barium ($r \\\\approx 215 \\\\times 10^{-12}\\\\text{ m}$)"
+    "oe": [
+      "Smallest: Hydrogen ($r \\approx 0.53\\text{ \\AA}$); Largest: Uranium ($r \\approx 175 \\times 10^{-12}\\text{ m}$)",
+      "Smallest: Helium ($\\text{He}$, $r \\approx 0.31\\text{ \\AA}$ or $3.1 \\times 10^{-11}\\text{ m}$); Largest: Cesium ($\\text{Cs}$, $r \\approx 225 \\times 10^{-12}\\text{ m}$)",
+      "Smallest: Lithium ($r \\approx 1.52\\text{ \\AA}$); Largest: Francium ($r \\approx 500 \\times 10^{-12}\\text{ m}$)",
+      "Smallest: Fluorine ($r \\approx 0.71\\text{ \\AA}$); Largest: Barium ($r \\approx 215 \\times 10^{-12}\\text{ m}$)"
+    ],
+    "oh": [
+      "सबसे छोटा: हाइड्रोजन ($r \\approx 0.53\\text{ \\AA}$); सबसे बड़ा: यूरेनियम ($r \\approx 175 \\times 10^{-12}\\text{ m}$)",
+      "सबसे छोटा: हीलियम ($\\text{He}$, $r \\approx 0.31\\text{ \\AA}$ या $3.1 \\times 10^{-11}\\text{ m}$); सबसे बड़ा: सीज़ियम ($\\text{Cs}$, $r \\approx 225 \\times 10^{-12}\\text{ m}$)",
+      "सबसे छोटा: लिथियम ($r \\approx 1.52\\text{ \\AA}$); सबसे बड़ा: फ्रांसियम ($r \\approx 500 \\times 10^{-12}\\text{ m}$)",
+      "सबसे छोटा: फ्लोरीन ($r \\approx 0.71\\text{ \\AA}$); सबसे बड़ा: बेरियम ($r \\approx 215 \\times 10^{-12}\\text{ m}$)"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies hydrogen as the smallest atom (helium is smaller due to higher effective nuclear charge in the $1s$ shell). Option 1 is correct because **Helium ($\\\\text{He}$)** is the **Smallest Atom** with an atomic radius of approximately $r \\\\approx 0.31\\\\text{ \\\\AA}$ ($3.1 \\\\times 10^{-11}\\\\text{ m}$) due to its $1s^2$ closed-shell configuration experiencing strong effective nuclear attraction ($Z=2$). Conversely, non-radioactive **Cesium ($\\\\text{Cs}$)** is the **Largest Atom** with a radius of $225 \\\\times 10^{-12}\\\\text{ m}$ ($2.25\\\\text{ \\\\AA}$) owing to its bulky 6th-period $6s^1$ valence shell. Option 2 and Option 3 list non-extreme atomic pairs."
+    "ee": "1. Option 0 is incorrect because Hydrogen is larger than Helium due to having a lower nuclear charge ($Z=1$ vs $Z=2$) in the same $1s$ orbital.\n2. Option 1 is correct because atomic radius decreases across a period (due to increasing effective nuclear charge $Z_{\\text{eff}}$ pulling electrons inward) and increases down a group (due to addition of new shells). Therefore, **Helium ($\\text{He}$)** in period 1 has the **smallest atomic radius** ($r \\approx 0.31\\text{ \\AA}$ or $31\\text{ pm}$) because two protons pull its two $1s$ electrons tightly. Non-radioactive **Cesium ($\\text{Cs}$)** in group 1, period 6 has the **largest atomic radius** ($r \\approx 2.25\\text{ \\AA}$ or $225\\text{ pm}$) among stable elements.\n3. Option 2 is incorrect because Lithium is significantly larger than Helium and Hydrogen, and Francium is highly radioactive with unstable empirical measurement.\n4. Option 3 is incorrect because Fluorine has a larger radius than Helium, and Barium is smaller than Cesium.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि समान $1s$ कोश होने के बावजूद हाइड्रोजन का नाभिकीय आवेश कम होने के कारण वह हीलियम से बड़ा होता है।\n2. विकल्प 1 सही है क्योंकि आवर्त में बाएं से दाएं जाने पर प्रभावी नाभिकीय आवेश बढ़ने से परमाणु त्रिज्या घटती है और वर्ग में नीचे जाने पर नए कोश जुड़ने से त्रिज्या बढ़ती है। अतः आवर्त सारणी में **हीलियम ($\\text{He}$)** सबसे **छोटा परमाणु** ($r \\approx 0.31\\text{ \\AA}$ या $31\\text{ pm}$) है, क्योंकि इसका $Z=2$ नाभिक $1s$ इलेक्ट्रॉनों को प्रबलता से खींचता है। वहीं स्थिर तत्वों में **सीज़ियम ($\\text{Cs}$)** सबसे **बड़ा परमाणु** ($r \\approx 2.25\\text{ \\AA}$ या $225\\text{ pm}$) है।\n3. विकल्प 2 गलत है क्योंकि लिथियम दूसरे आवर्त का तत्व है और हीलियम से बड़ा है।\n4. विकल्प 3 गलत है क्योंकि फ्लोरीन का आकार हीलियम से बड़ा है।"
   },
   {
     "p_id": "bpsc_chem_m14_06",
     "qe": "Evaluating sub-atomic particles requires distinguishing fundamental particles from short-lived non-fundamental particles and antiparticles. Which particle is the antiparticle of the electron, and who discovered it in 1932?",
     "qh": "उप-परमाणु कणों का मूल्यांकन करने के लिए अल्पकालिक गैर-मौलिक कणों और प्रति-कणों (antiparticles) से मौलिक कणों को अलग करने की आवश्यकता होती है। कौन सा कण इलेक्ट्रॉन का प्रति-कण (antiparticle) है, और 1932 में इसकी खोज किसने की थी?",
-    "o": [
-      "Particle: Neutrino ($\\\\nu$); Discovered by Wolfgang Pauli.",
-      "Particle: Positron ($\\\\text{e}^+$); Discovered by Carl D. Anderson.",
-      "Particle: Antiproton ($\\\\bar{\\\\text{p}}$); Discovered by Hideki Yukawa.",
-      "Particle: Pi-meson ($\\\\pi^+$); Discovered by James Chadwick."
+    "oe": [
+      "Particle: Neutrino ($\\nu$); Discovered by Wolfgang Pauli.",
+      "Particle: Positron ($\\text{e}^+$); Discovered by Carl D. Anderson.",
+      "Particle: Antiproton ($\\bar{\\text{p}}$); Discovered by Hideki Yukawa.",
+      "Particle: Pi-meson ($\\pi^+$); Discovered by James Chadwick."
+    ],
+    "oh": [
+      "कण: न्यूट्रिनो ($\\nu$); वोल्फगैंग पाउली द्वारा खोजा गया।",
+      "कण: पॉज़िट्रॉन ($\\text{e}^+$); कार्ल डी. एंडरसन द्वारा खोजा गया।",
+      "कण: एंटीप्रोटॉन ($\\bar{\\text{p}}$); हिदेकी युकावा द्वारा खोजा गया।",
+      "कण: पाई-मिसॉन ($\\pi^+$); जेम्स चैडविक द्वारा खोजा गया।"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes the neutrino, which Pauli predicted to explain beta decay continuous energy spectra. Option 1 is correct because the **Positron ($\\\\text{e}^+$)** is the **Antiparticle** [a sub-atomic particle possessing identical rest mass and spin as a fundamental particle but with an equal and opposite electric charge] of the electron. Discovered in cosmic radiation by **Carl D. Anderson in 1932**, the positron has a positive charge of $+1.602 \\\\times 10^{-19}\\\\text{ C}$ and a mass equal to that of an electron ($9.1 \\\\times 10^{-31}\\\\text{ kg}$). Option 2 misattributes the antiproton to Yukawa (Yukawa predicted pi-mesons), and Option 3 pairs pi-mesons with Chadwick."
+    "ee": "1. Option 0 is incorrect because Wolfgang Pauli theoretically predicted the neutrino in 1930 to explain missing energy in beta decay, but it is not the antiparticle of the electron.\n2. Option 1 is correct because the **Positron ($\\text{e}^+$ or $\\beta^+$)** is the authentic antiparticle of the electron. Discovered experimentally in cosmic radiation by **Carl D. Anderson in 1932** (for which he won the 1936 Nobel Prize in Physics), it possesses the exact same rest mass ($9.109 \\times 10^{-31}\\text{ kg}$) and spin ($1/2$) as an electron, but carries an equal and opposite positive elementary charge of $+1.602 \\times 10^{-19}\\text{ C}$.\n3. Option 2 is incorrect because the antiproton was discovered in 1955 by Emilio Segrè and Owen Chamberlain, while Yukawa predicted mesons.\n4. Option 3 is incorrect because Chadwick discovered the neutron in 1932, whereas pi-mesons were discovered by Cecil Powell in 1947.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि न्यूट्रिनो की परिकल्पना पाउली ने बीटा-क्षय में ऊर्जा संरक्षण के लिए की थी, यह इलेक्ट्रॉन का एंटीपार्टिकल नहीं है।\n2. विकल्प 1 सही है क्योंकि इलेक्ट्रॉन का प्रतिकण **पॉज़िट्रॉन ($\\text{e}^+$)** है। इसकी खोज 1932 में **कार्ल डी. एंडरसन** ने कॉस्मिक किरणों के अध्ययन के दौरान की थी। पॉज़िट्रॉन का द्रव्यमान ($9.1 \\times 10^{-31}\\text{ kg}$) और चक्रण ($1/2$) बिल्कुल इलेक्ट्रॉन के समान होता है, परंतु इसका विद्युत आवेश धनात्मक ($+1.602 \\times 10^{-19}\\text{ C}$) होता है।\n3. विकल्प 2 गलत है क्योंकि एंटीप्रोटॉन की खोज 1955 में सेग्रे और चेम्बरलेन ने की थी।\n4. विकल्प 3 गलत है क्योंकि चैडविक ने न्यूट्रॉन की खोज की थी।"
   },
   {
     "p_id": "bpsc_chem_m14_07",
     "qe": "In nuclear physics, binding forces hold nucleons (protons and neutrons) tightly together inside the atomic nucleus despite electrostatic repulsion between positive charges. Which sub-atomic exchange particle accounts for strong nuclear forces according to Hideki Yukawa's 1935 theory?",
     "qh": "परमाणु भौतिकी में, धनावेशों के बीच इलेक्ट्रोस्टैटिक प्रतिकर्षण के बावजूद बाइंडिंग बल परमाणु नाभिक के अंदर न्यूक्लियॉनों (प्रोटॉन और न्यूट्रॉन) को कसकर एक साथ रखते हैं। हिदेकी युकावा के 1935 के सिद्धांत के अनुसार कौन सा उप-परमाणु विनिमय कण (exchange particle) मजबूत परमाणु बलों की व्याख्या करता है?",
-    "o": [
+    "oe": [
       "Quarks carrying fractional $+2/3e$ charge",
-      "Pi-mesons ($\\\\pi^+, \\\\pi^-, \\\\pi^0$)",
-      "Vector Bosons ($W^{\\\\pm}, Z^0$)",
-      "High-energy Photons ($\\\\gamma$-rays)"
+      "Pi-mesons ($\\pi^+, \\pi^-, \\pi^0$)",
+      "Vector Bosons ($W^{\\pm}, Z^0$)",
+      "High-energy Photons ($\\gamma$-rays)"
+    ],
+    "oh": [
+      "भिन्नात्मक $+2/3e$ आवेश वहन करने वाले क्वार्क",
+      "पाई-मिसॉन ($\\pi^+, \\pi^-, \\pi^0$)",
+      "वेक्टर बोसॉन ($W^{\\pm}, Z^0$)",
+      "उच्च-ऊर्जा फोटॉन ($\\gamma$-किरणें)"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes structural building blocks of nucleons, not nuclear exchange bosons. Option 1 is correct because Hideki Yukawa (1935) proposed that the **Strong Nuclear Force** [the short-range fundamental interaction that binds protons and neutrons inside an atomic nucleus] arises from the continuous, extremely rapid emission and exchange of **Pi-Mesons ($\\\\pi$-mesons: $\\\\pi^+, \\\\pi^-, \\\\pi^0$)** between adjacent nucleons. Pi-mesons were experimentally detected in cosmic rays in 1947; their rest mass is approximately $264$ times the mass of an electron ($\\\\sim 264 m_e$). Option 2 describes weak nuclear force mediators, and Option 3 describes electromagnetic force carriers."
+    "ee": "1. Option 0 is incorrect because quarks are the constituent sub-components of hadrons in quantum chromodynamics, not the inter-nucleon exchange mesons postulated by Yukawa.\n2. Option 1 is correct because Japanese physicist Hideki Yukawa (1935) formulated the meson theory of nuclear forces. He proposed that the extremely strong, short-range nuclear attractive force ($10^{-15}\\text{ m}$) that binds protons and neutrons together against electrostatic Coulombic repulsion is mediated by the continuous, rapid exchange of **Pi-mesons (pions: $\\pi^+, \\pi^-, \\pi^0$)** between adjacent nucleons ($p \\rightleftharpoons n + \\pi^+$). Pions have a rest mass roughly $264$ to $273$ times that of an electron.\n3. Option 2 is incorrect because intermediate vector bosons ($W^+, W^-, Z^0$) mediate the weak sub-atomic interaction responsible for beta decay.\n4. Option 3 is incorrect because photons mediate electromagnetic interactions.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि क्वार्क न्यूक्लियॉन के आंतरिक घटक हैं, विनिमय कण नहीं।\n2. विकल्प 1 सही है क्योंकि जापानी भौतिकविद् हिदेकी युकावा (1935) ने प्रतिपादित किया कि नाभिक के अंदर प्रोटॉनों के बीच अत्यधिक स्थिरवैद्युत प्रतिकर्षण के बावजूद न्यूक्लियॉनों को बांधकर रखने वाला प्रबल नाभिकीय बल **पाई-मिसॉन ($\\pi^+, \\pi^-, \\pi^0$)** के निरंतर विनिमय (Exchange) के कारण उत्पन्न होता है। पाई-मिसॉन का द्रव्यमान इलेक्ट्रॉन के द्रव्यमान का लगभग 264-273 गुना होता है।\n3. विकल्प 2 गलत है क्योंकि वेक्टर बोसॉन ($W^{\\pm}, Z^0$) दुर्बल नाभिकीय बलों (Weak nuclear forces) के वाहक होते हैं।\n4. विकल्प 3 गलत है क्योंकि फोटॉन विद्युत-चुंबकीय बलों के वाहक होते हैं।"
   },
   {
     "p_id": "bpsc_chem_m14_08",
-    "qe": "Beta-decay ($\\\\beta$-decay) from unstable radioactive nuclei involves energy conservation anomalies that puzzled early physicists. What uncharged, virtually massless non-fundamental particles were predicted by Wolfgang Pauli in 1930 to account for conserved energy and angular momentum during beta emission?",
-    "qh": "अस्थिर रेडियोधर्मी नाभिकों से बीटा-क्षय ($\\\\beta$-decay) में ऊर्जा संरक्षण विसंगतियाँ शामिल थीं जिन्होंने शुरुआती भौतिकविदों को हैरान कर दिया था। बीटा उत्सर्जन के दौरान संरक्षित ऊर्जा और कोणीय संवेग की व्याख्या करने के लिए 1930 में वोल्फगैंग पाउली द्वारा किन अनावेशित, व्यावहारिक रूप से द्रव्यमान रहित गैर-मौलिक कणों की भविष्यवाणी की गई थी?",
-    "o": [
+    "qe": "Beta-decay ($\\beta$-decay) from unstable radioactive nuclei involves energy conservation anomalies that puzzled early physicists. What uncharged, virtually massless non-fundamental particles were predicted by Wolfgang Pauli in 1930 to account for conserved energy and angular momentum during beta emission?",
+    "qh": "अस्थिर रेडियोधर्मी नाभिकों से बीटा-क्षय ($\\beta$-decay) में ऊर्जा संरक्षण विसंगतियाँ शामिल थीं जिन्होंने शुरुआती भौतिकविदों को हैरान कर दिया था। बीटा उत्सर्जन के दौरान संरक्षित ऊर्जा और कोणीय संवेग की व्याख्या करने के लिए 1930 में वोल्फगैंग पाउली द्वारा किन अनावेशित, व्यावहारिक रूप से द्रव्यमान रहित गैर-मौलिक कणों की भविष्यवाणी की गई थी?",
+    "oe": [
       "Positrons and antiprotons",
-      "Neutrinos ($\\\\nu$) and Antineutrinos ($\\\\bar{\\\\nu}$)",
+      "Neutrinos ($\\nu$) and Antineutrinos ($\\bar{\\nu}$)",
       "Up-quarks and Down-quarks",
       "Alpha particles and deuterons"
     ],
+    "oh": [
+      "पॉज़िट्रॉन और एंटीप्रोटॉन",
+      "न्यूट्रिनो ($\\nu$) और एंटीन्यूट्रिनो ($\\bar{\\nu}$)",
+      "अप-क्वार्क और डाउन-क्वार्क",
+      "अल्फा कण और ड्यूटेरॉन"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists charged antiparticles. Option 1 is correct because during nuclear $\\\\beta$-decay, a continuous energy spectrum of emitted $\\\\beta$-particles was observed. To preserve the Conservation Laws of Energy and Spin Angular Momentum, Wolfgang Pauli (1930) hypothesized the simultaneous emission of a neutral, virtually massless particle: the **Neutrino ($\\\\nu$)** (emitted during positron decay) and its antiparticle, the **Antineutrino ($\\\\bar{\\\\nu}$)** (emitted during electron $\\\\beta^-$-decay). Both particles possess **zero electric charge and near-zero rest mass**, but carry intrinsic spin momentum and energy. They were experimentally confirmed in 1956. Option 2 describes sub-nucleonic quarks, and Option 3 lists heavy nuclear fragments."
+    "ee": "1. Option 0 is incorrect because positrons and antiprotons are charged antiparticles with significant rest mass, not neutral mass-less entities.\n2. Option 1 is correct because during nuclear $\\beta$-decay, emitted electrons exhibited a continuous kinetic energy spectrum, seemingly violating the conservation laws of energy, linear momentum, and spin angular momentum. In 1930, Wolfgang Pauli resolved this anomaly by postulating that a neutral, weakly interacting particle with spin $1/2$ and nearly zero rest mass is emitted simultaneously: the **Antineutrino ($\\bar{\\nu}$)** during $\\beta^-$ decay ($n \\rightarrow p + e^- + \\bar{\\nu}$) and the **Neutrino ($\\nu$)** during $\\beta^+$ decay ($p \\rightarrow n + e^+ + \\nu$). These particles were experimentally detected in 1956 by Cowan and Reines.\n3. Option 2 is incorrect because quarks are fractional-charge constituents forming nucleons.\n4. Option 3 is incorrect because alpha particles and deuterons are heavy composite nuclei.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि पॉज़िट्रॉन और एंटीप्रोटॉन आवेशित कण होते हैं।\n2. विकल्प 1 सही है क्योंकि रेडियोधर्मी बीटा-क्षय के दौरान उत्सर्जित बीटा कणों का ऊर्जा स्पेक्ट्रम सतत पाया गया, जिससे ऊर्जा और कोणीय संवेग संरक्षण के नियम का उल्लंघन प्रतीत होता था। इस विसंगति को हल करने के लिए 1930 में वोल्फगैंग पाउली ने भविष्यवाणी की कि बीटा कण के साथ एक अत्यंत सूक्ष्म, उदासीन और लगभग द्रव्यमान-रहित कण भी उत्सर्जित होता है, जिसे **न्यूट्रिनो ($\\nu$)** और **एंटीन्यूट्रिनो ($\\bar{\\nu}$)** कहा जाता है ($n \\rightarrow p + e^- + \\bar{\\nu}$)।\n3. विकल्प 2 गलत है क्योंकि अप और डाउन क्वार्क न्यूक्लियॉन के घटक हैं।\n4. विकल्प 3 गलत है क्योंकि अल्फा कण और ड्यूटेरॉन भारी नाभिकीय कण हैं।"
   },
   {
     "p_id": "bpsc_chem_m14_09",
     "qe": "Protons and neutrons were historically classified as fundamental elementary particles. However, modern particle physics demonstrates that nucleons are composite sub-atomic structures. How many quarks compose a single proton or neutron?",
     "qh": "प्रोटॉन और न्यूट्रॉन को ऐतिहासिक रूप से मौलिक प्राथमिक कणों के रूप में वर्गीकृत किया गया था। हालाँकि, आधुनिक कण भौतिकी यह दर्शाती है कि न्यूक्लियॉन मिश्रित उप-परमाणु संरचनाएँ हैं। एक प्रोटॉन या न्यूट्रॉन कितने क्वार्क (quarks) से मिलकर बना होता है?",
-    "o": [
+    "oe": [
       "1 quark and 2 leptons",
       "3 quarks each",
       "264 quarks bound by pi-mesons",
       "1837 quarks arranged in a shell"
     ],
+    "oh": [
+      "1 क्वार्क और 2 लेप्टान",
+      "प्रत्येक 3 क्वार्क",
+      "पाई-मिसॉन द्वारा बंधे 264 क्वार्क",
+      "एक खोल में व्यवस्थित 1837 क्वार्क"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly mixes leptons with quark structures. Option 1 is correct because nucleons are composite hadrons (baryons) constructed from elementary constituents called **Quarks** [fundamental elementary particles carrying fractional electric charges such as $+2/3 e$ or $-1/3 e$]. Specifically, **both protons and neutrons are composed of 3 quarks each**: a proton consists of two up-quarks and one down-quark ($uud$: $2/3 + 2/3 - 1/3 = +1e$), while a neutron consists of one up-quark and two down-quarks ($udd$: $2/3 - 1/3 - 1/3 = 0$). Option 2 confuses pi-meson mass ratios, and Option 3 uses the proton-to-electron mass ratio ($1837$)."
+    "ee": "1. Option 0 is incorrect because nucleons are baryons composed exclusively of valence quarks, containing no leptons (such as electrons or muons).\n2. Option 1 is correct because according to the Standard Model of particle physics (Gell-Mann and Zweig, 1964), protons and neutrons are composite hadrons (specifically baryons) constructed from **exactly 3 elementary Quarks**:\n   - A **Proton** consists of two Up quarks ($u$) and one Down quark ($d$), giving a valence formula of $uud$ with net charge $+2/3e + 2/3e - 1/3e = +1e$.\n   - A **Neutron** consists of one Up quark ($u$) and two Down quarks ($d$), giving a valence formula of $udd$ with net charge $+2/3e - 1/3e - 1/3e = 0$.\n3. Option 2 is incorrect because 264 represents the approximate electron-mass equivalent of a pi-meson, not a quark quantity.\n4. Option 3 is incorrect because 1837 is the ratio of proton mass to electron mass.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि न्यूक्लियॉन में लेप्टॉन नहीं होते हैं।\n2. विकल्प 1 सही है क्योंकि कण भौतिकी के स्टैंडर्ड मॉडल (मरे जेल-मान, 1964) के अनुसार प्रोटॉन और न्यूट्रॉन मूलभूत कण नहीं हैं, बल्कि ये **3-3 क्वार्क (Quarks)** से मिलकर बने हैं:\n   - **प्रोटॉन** दो अप-क्वार्क ($u$) और एक डाउन-क्वार्क ($d$) से मिलकर बनता है ($uud$), जिसका कुल आवेश $+2/3 + 2/3 - 1/3 = +1e$ होता है।\n   - **न्यूट्रॉन** एक अप-क्वार्क ($u$) और दो डाउन-क्वार्क ($d$) से मिलकर बनता है ($udd$), जिसका कुल आवेश $+2/3 - 1/3 - 1/3 = 0$ होता है।\n3. विकल्प 2 गलत है क्योंकि 264 पाई-मिसॉन का द्रव्यमान अनुपात है।\n4. विकल्प 3 गलत है क्योंकि 1837 प्रोटॉन और इलेक्ट्रॉन के द्रव्यमान का अनुपात है।"
   },
   {
     "p_id": "bpsc_chem_m14_10",
-    "qe": "Among all known elements in the Modern Periodic Table, ordinary Hydrogen (Protium, $^{1}_{1}\\\\text{H}$) occupies a unique structural exception regarding its nuclear sub-atomic composition. What is this structural exception?",
-    "qh": "आधुनिक आवर्त सारणी में सभी ज्ञात तत्वों के बीच, सामान्य हाइड्रोजन (प्रोशियम, $^{1}_{1}\\\\text{H}$) अपनी नाभिकीय उप-परमाणु संरचना से संबंधित एक अद्वितीय संरचनात्मक अपवाद रखता है। यह संरचनात्मक अपवाद क्या है?",
-    "o": [
+    "qe": "Among all known elements in the Modern Periodic Table, ordinary Hydrogen (Protium, $^{1}_{1}\\text{H}$) occupies a unique structural exception regarding its nuclear sub-atomic composition. What is this structural exception?",
+    "qh": "आधुनिक आवर्त सारणी में सभी ज्ञात तत्वों के बीच, सामान्य हाइड्रोजन (प्रोशियम, $^{1}_{1}\\text{H}$) अपनी नाभिकीय उप-परमाणु संरचना से संबंधित एक अद्वितीय संरचनात्मक अपवाद रखता है। यह संरचनात्मक अपवाद क्या है?",
+    "oe": [
       "It is the only atom whose nucleus lacks protons.",
       "It is the only stable naturally occurring atom whose nucleus contains zero neutrons ($N=0$).",
       "It is the only atom whose electrons carry a positive electric charge.",
       "It is the only atom that exists as a solid at room temperature."
     ],
+    "oh": [
+      "यह एकमात्र ऐसा परमाणु है जिसके नाभिक में प्रोटॉन की कमी है।",
+      "यह एकमात्र स्थिर प्राकृतिक रूप से पाया जाने वाला परमाणु है जिसके नाभिक में शून्य न्यूट्रॉन ($N=0$) होते हैं।",
+      "यह एकमात्र ऐसा परमाणु है जिसके इलेक्ट्रॉन धनात्मक विद्युत आवेश वहन करते हैं।",
+      "यह एकमात्र ऐसा परमाणु है जो कमरे के तापमान पर ठोस के रूप में मौजूद है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is impossible because an atom must contain at least one proton to establish atomic number $Z=1$. Option 1 is correct because ordinary hydrogen (**Protium**, $^{1}_{1}\\\\text{H}$) is the **only atom in the periodic table that lacks neutrons in its nucleus**. Its nucleus consists solely of a single proton ($Z=1, A=1 \\\\rightarrow N = A - Z = 0$). All other atomic isotopes across the entire periodic table (including hydrogen's isotopes Deuterium $^{2}_{1}\\\\text{H}$ and Tritium $^{3}_{1}\\\\text{H}$) contain one or more nuclear neutrons. Option 2 describes positrons, and Option 3 incorrectly states hydrogen is solid at room temperature."
+    "ee": "1. Option 0 is incorrect because every chemical element must have at least one proton to define its atomic number ($Z \\ge 1$).\n2. Option 1 is correct because ordinary hydrogen, known as **Protium ($^{1}_{1}\\text{H}$)**, is the **only atom in the entire periodic table whose nucleus contains no neutrons ($N = A - Z = 1 - 1 = 0$)**. Its nucleus consists solely of a single solitary proton surrounded by one orbital electron. All other elements and isotopes in the universe (including hydrogen's own heavier isotopes: Deuterium $^{2}_{1}\\text{H}$ with $1$ neutron and Tritium $^{3}_{1}\\text{H}$ with $2$ neutrons) have nuclei containing both protons and neutrons.\n3. Option 2 is incorrect because the electron in hydrogen carries a standard negative charge ($-1.602 \\times 10^{-19}\\text{ C}$).\n4. Option 3 is incorrect because elemental hydrogen is a diatomic gas ($H_2$) at standard room temperature and pressure.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि बिना प्रोटॉन के किसी परमाणु का अस्तित्व संभव नहीं है ($Z=1$)।\n2. विकल्प 1 सही है क्योंकि सामान्य हाइड्रोजन या **प्रोटियम ($^{1}_{1}\\text{H}$)** पूरी आवर्त सारणी का **एकमात्र ऐसा परमाणु है जिसके नाभिक में कोई न्यूट्रॉन नहीं होता ($N = A - Z = 1 - 1 = 0$)**। इसके नाभिक में केवल एक एकल प्रोटॉन होता है जिसके चारों ओर एक इलेक्ट्रॉन चक्कर लगाता है। हाइड्रोजन के अन्य समस्थानिकों (ड्यूटेरियम में 1 न्यूट्रॉन और ट्राइटियम में 2 न्यूट्रॉन) सहित अन्य सभी तत्वों के नाभिक में न्यूट्रॉन अनिवार्य रूप से पाए जाते हैं।\n3. विकल्प 2 गलत है क्योंकि हाइड्रोजन का इलेक्ट्रॉन ऋणावेशित ही होता है।\n4. विकल्प 3 गलत है क्योंकि हाइड्रोजन सामान्य ताप पर एक गैसीय तत्व है।"
   },
   {
     "p_id": "bpsc_chem_m14_11",
     "qe": "Millikan's famous Oil Drop Experiment (1909) allowed the precise direct measurement of fundamental electronic properties. Which specific physical quantity was determined via Millikan's experiment, and what is its magnitude?",
     "qh": "मिलिकन के प्रसिद्ध ऑयल ड्रॉप प्रयोग (Oil Drop Experiment, 1909) ने मौलिक इलेक्ट्रॉनिक गुणों के सटीक प्रत्यक्ष माप की अनुमति दी। मिलिकन के प्रयोग के माध्यम से किस विशिष्ट भौतिक मात्रा का निर्धारण किया गया था, और इसका परिमाण क्या है?",
-    "o": [
-      "Specific charge of electron; magnitude: $1.76 \\\\times 10^{11}\\\\text{ C/kg}$",
-      "Fundamental electric charge on an electron; magnitude: $1.602 \\\\times 10^{-19}\\\\text{ C}$",
-      "Rest mass of neutron; magnitude: $1.67 \\\\times 10^{-27}\\\\text{ kg}$",
-      "Half-life of carbon-14; magnitude: $5770\\\\text{ years}$"
+    "oe": [
+      "Specific charge of electron; magnitude: $1.76 \\times 10^{11}\\text{ C/kg}$",
+      "Fundamental electric charge on an electron; magnitude: $1.602 \\times 10^{-19}\\text{ C}$",
+      "Rest mass of neutron; magnitude: $1.67 \\times 10^{-27}\\text{ kg}$",
+      "Half-life of carbon-14; magnitude: $5770\\text{ years}$"
+    ],
+    "oh": [
+      "इलेक्ट्रॉन का विशिष्ट आवेश; परिमाण: $1.76 \\times 10^{11}\\text{ C/kg}$",
+      "एक इलेक्ट्रॉन पर मौलिक विद्युत आवेश; परिमाण: $1.602 \\times 10^{-19}\\text{ C}$",
+      "न्यूट्रॉन का विराम द्रव्यमान; परिमाण: $1.67 \\times 10^{-27}\\text{ kg}$",
+      "कार्बन-14 का आधा जीवन; परिमाण: $5770\\text{ वर्ष}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes J.J. Thomson's specific charge ($e/m$) determination via discharge tubes. Option 1 is correct because Robert Millikan's **Oil Drop Experiment** measured the terminal velocity of charged oil droplets suspended between electrostatic plates to calculate the **Fundamental Electric Charge of an Electron** ($e = 1.602 \\\\times 10^{-19}\\\\text{ C}$). Combining Millikan's charge value with Thomson's $e/m$ ratio allowed the exact mass of an electron to be calculated ($m_e = \\\\frac{e}{e/m} = 9.109 \\\\times 10^{-31}\\\\text{ kg}$). Option 2 lists neutron rest mass (Chadwick), and Option 3 lists radiocarbon half-life."
+    "ee": "1. Option 0 is incorrect because the specific charge ($e/m = 1.76 \\times 10^{11}\\text{ C/kg}$) was measured by J.J. Thomson in 1897 using a cathode ray discharge tube.\n2. Option 1 is correct because American physicist Robert A. Millikan conducted the landmark **Oil Drop Experiment in 1909** to measure the terminal velocity of charged microscopic oil droplets suspended in an electric field. He proved that electric charge is quantized ($q = ne$) and determined the **Fundamental Elementary Charge of an Electron** to be $e = -1.602 \\times 10^{-19}\\text{ C}$. Combining Millikan's $e$ with Thomson's $e/m$ enabled the exact calculation of the electron's mass ($m_e = 9.109 \\times 10^{-31}\\text{ kg}$).\n3. Option 2 is incorrect because the rest mass of the neutron was deduced by James Chadwick in 1932.\n4. Option 3 is incorrect because the half-life of Carbon-14 was established by Willard Libby in 1949.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि इलेक्ट्रॉन का विशिष्ट आवेश ($e/m$) जे.जे. थॉमसन द्वारा निकाला गया था।\n2. विकल्प 1 सही है क्योंकि 1909 में रॉबर्ट ए. मिलिकन ने अपने प्रसिद्ध **ऑयल ड्रॉप प्रयोग (Oil Drop Experiment)** के माध्यम से विद्युत क्षेत्र में तेल की सूक्ष्म बूंदों की गति का अध्ययन करके **इलेक्ट्रॉन पर उपस्थित मौलिक विद्युत आवेश ($e = 1.602 \\times 10^{-19}\\text{ C}$)** का सटीक निर्धारण किया। उन्होंने यह भी सिद्ध किया कि विद्युत आवेश सदैव परिमाणित ($q = ne$) होता है। इसके बाद इलेक्ट्रॉन का द्रव्यमान ($m = e / (e/m) = 9.1 \\times 10^{-31}\\text{ kg}$) ज्ञात किया गया।\n3. विकल्प 2 गलत है क्योंकि न्यूट्रॉन का द्रव्यमान चैडविक के प्रयोगों से संबंधित है।\n4. विकल्प 3 गलत है क्योंकि कार्बन डेटिंग का संबंध विलार्ड लिब्बी से है।"
   },
   {
     "p_id": "bpsc_chem_m14_12",
     "qe": "Bosons represent a primary class of quantum sub-atomic particles governing field interactions and statistical physics. What mathematical property defines Bosons, and what decay/emission relationship governs them?",
     "qh": "बोसॉन (Bosons) क्षेत्र की अंतःक्रियाओं (field interactions) और सांख्यिकीय भौतिकी को नियंत्रित करने वाले क्वांटम उप-परमाणु कणों की एक प्राथमिक श्रेणी का प्रतिनिधित्व करते हैं। कौन सा गणितीय गुण बोसॉन को परिभाषित करता है, और कौन सा क्षय/उत्सर्जन संबंध उन्हें नियंत्रित करता है?",
-    "o": [
-      "Particles with half-integer spins ($1/2, 3/2$); Boson $\\\\rightarrow$ Proton + Electron",
-      "Particles whose intrinsic spin/rotation quantum numbers are whole numbers ($0, 1, 2...$); governed by the transformation: $\\\\text{Boson} \\\\rightarrow \\\\text{Meson} + \\\\text{Photon}$.",
-      "Particles that carry fractional electric charge; Boson $\\\\rightarrow$ Positron + Antineutrino",
+    "oe": [
+      "Particles with half-integer spins ($1/2, 3/2$); Boson $\\rightarrow$ Proton + Electron",
+      "Particles whose intrinsic spin/rotation quantum numbers are whole numbers ($0, 1, 2...$); governed by the transformation: $\\text{Boson} \\rightarrow \\text{Meson} + \\text{Photon}$.",
+      "Particles that carry fractional electric charge; Boson $\\rightarrow$ Positron + Antineutrino",
       "Particles with zero rest mass that cannot exist in vacuum."
     ],
+    "oh": [
+      "अर्ध-पूर्णांक स्पिन वाले कण ($1/2, 3/2$); बोसॉन $\\rightarrow$ प्रोटॉन + इलेक्ट्रॉन",
+      "वे कण जिनके आंतरिक चक्रण/घूर्णन क्वांटम संख्याएं पूर्ण संख्याएं ($0, 1, 2...$) हैं; परिवर्तन द्वारा शासित: $\\text{बोसॉन} \\rightarrow \\text{मिसॉन} + \\text{फोटॉन}$।",
+      "कण जो भिन्नात्मक विद्युत आवेश वहन करते हैं; बोसॉन $\\rightarrow$ पॉज़िट्रॉन + एंटीन्यूट्रिनो",
+      "शून्य विराम द्रव्यमान वाले कण जो निर्वात में मौजूद नहीं हो सकते।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes Fermions (like electrons and protons with half-integer spins). Option 1 is correct because **Bosons** are quantum particles that obey Bose-Einstein statistics and possess **Integer Intrinsic Spins / Whole-Number Rotations** ($s = 0, 1, 2...$). They include force mediator particles (photons, gluons, $W/Z$ bosons, Higgs boson). Under fundamental particle transformations, intermediate heavy bosons can decay via paths such as **$\\\\text{Boson} \\\\rightarrow \\\\text{Meson} + \\\\text{Photon}$**. Option 2 describes quarks, and Option 3 incorrectly claims bosons cannot exist in vacuum."
+    "ee": "1. Option 0 describes Fermions (e.g., quarks, electrons, protons, neutrons), which obey Fermi-Dirac statistics and possess half-integer spins ($s = 1/2, 3/2$).\n2. Option 1 is correct because **Bosons** (named after Indian physicist Satyendra Nath Bose) are sub-atomic particles that obey Bose-Einstein statistics and possess **Integer Intrinsic Spin Quantum Numbers** ($s = 0, 1, 2, \\dots$). They serve primarily as force-carrier gauge particles (e.g., Photons with spin 1, Gluons, $W/Z$ bosons, Higgs boson with spin 0). Under high-energy quantum electrodynamic interactions, composite/intermediate bosons undergo decay transformations adhering to energy and spin conservation, such as $\\text{Boson} \\rightarrow \\text{Meson} + \\text{Photon}$.\n3. Option 2 is incorrect because fractional electric charges ($+2/3e, -1/3e$) characterize quarks, which are fermions.\n4. Option 3 is incorrect because gauge bosons like photons exist stably and propagate in a vacuum.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि अर्ध-पूर्णांक चक्रण ($1/2, 3/2$) वाले कणों को 'फर्मिऑन' (जैसे इलेक्ट्रॉन, प्रोटॉन) कहा जाता है।\n2. विकल्प 1 सही है क्योंकि **बोसॉन (Bosons)**—जिनका नामकरण सत्येंद्र नाथ बोस के नाम पर हुआ—वे क्वांटम कण हैं जो बोस-आइंस्टीन सांख्यिकी का पालन करते हैं और जिनका **आंतरिक चक्रण (Spin) सदैव पूर्णांक ($0, 1, 2\\dots$)** होता है। ये प्रकृति के मूलभूत बलों के संवाहक कण होते हैं (जैसे फोटॉन, ग्लुआन, हिग्स बोसॉन)। उच्च ऊर्जा भौतिकी में भारी मध्यवर्ती बोसॉन कण $\\text{बोसॉन} \\rightarrow \\text{मिसॉन} + \\text{फोटॉन}$ जैसी अभिक्रियाओं द्वारा क्षयित होते हैं।\n3. विकल्प 2 गलत है क्योंकि भिन्नात्मक आवेश क्वार्क का लक्षण है जो फर्मिऑन होते हैं।\n4. विकल्प 3 गलत है क्योंकि फोटॉन जैसे बोसॉन निर्वात में स्वतंत्र रूप से गति करते हैं।"
   },
   {
     "p_id": "bpsc_chem_m14_13",
     "qe": "Quantum state exchange dynamics divide particles into elementary constituents and antiparticles. Which choice correctly identifies sub-atomic species that are NOT antiparticles of any fundamental particle?",
     "qh": "क्वांटम अवस्था विनिमय गतिकी कणों को प्राथमिक घटकों और प्रति-कणों में विभाजित करती है। कौन सा विकल्प उन उप-परमाणु प्रजातियों की सही पहचान करता है जो किसी भी मौलिक कण के प्रति-कण (antiparticles) नहीं हैं?",
-    "o": [
+    "oe": [
       "Positrons and antiprotons",
       "Mesons, Bosons, and Quarks",
       "Antineutrinos and positrons",
       "Cathode ray electrons and beta particles"
     ],
+    "oh": [
+      "पॉज़िट्रॉन और एंटीप्रोटॉन",
+      "मिसॉन, बोसॉन और क्वार्क",
+      "एंटीन्यूट्रिनो और पॉज़िट्रॉन",
+      "कैथोड किरण इलेक्ट्रॉन और बीटा कण"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists explicit antiparticles of electrons and protons. Option 1 is correct because antiparticles are specific reversal species defined as mirror-image counterparts to fundamental particles (e.g., positron is the antiparticle of electron; antiproton is the antiparticle of proton; antineutrino is the antiparticle of neutrino). In contrast, **Mesons, Bosons, and Quarks are distinct classes of fundamental or composite quantum particles themselves, NOT the antiparticles of any fundamental particle**. Option 2 lists true antiparticles, and Option 3 lists electrons."
+    "ee": "1. Option 0 lists genuine antiparticles: the Positron (antiparticle of the electron) and Antiproton (antiparticle of the proton).\n2. Option 1 is correct because **Mesons, Bosons, and Quarks are distinct fundamental families or composite hadron categories** of particles, rather than being the antiparticle counterpart of any single fundamental entity. Quarks are elementary constituents of matter, Bosons are integer-spin force mediators, and Mesons are composite quark-antiquark hadrons.\n3. Option 2 lists Antineutrinos (antiparticles of neutrinos) and Positrons.\n4. Option 3 lists electrons and beta-minus particles, which are identical matter particles with known antiparticles (positrons).",
+    "eh": "1. विकल्प 0 गलत है क्योंकि पॉज़िट्रॉन (इलेक्ट्रॉन का) और एंटीप्रोटॉन (प्रोटॉन का) स्पष्ट रूप से प्रतिकण हैं।\n2. विकल्प 1 सही है क्योंकि **मिसॉन, बोसॉन और क्वार्क कणों के स्वतंत्र मौलिक वर्ग या मिश्रित समूह हैं, न कि किसी विशिष्ट मौलिक कण के प्रतिकण (Antiparticles)**। क्वार्क पदार्थ के मूलभूत घटक हैं, बोसॉन बल-वाहक कण हैं और मिसॉन क्वार्क-एंटीक्वार्क से बने हैड्रॉन हैं।\n3. विकल्प 2 गलत है क्योंकि एंटीन्यूट्रिनो और पॉज़िट्रॉन दोनों ही प्रतिकण हैं।\n4. विकल्प 3 गलत है क्योंकि कैथोड किरणें और बीटा कण इलेक्ट्रॉन ही हैं।"
   },
   {
     "p_id": "bpsc_chem_m14_14",
-    "qe": "Antiprotons are high-energy antimatter counterparts of protons discovered in particle accelerator experiments. In what year was the Antiproton ($\\\\bar{\\\\text{p}}$) discovered, and what are its physical charge and mass characteristics?",
-    "qh": "एंटीप्रोटॉन (Antiprotons) कण त्वरक प्रयोगों (particle accelerator experiments) में खोजे गए प्रोटॉन के उच्च-ऊर्जा एंटीमैटर समकक्ष हैं। एंटीप्रोटॉन ($\\\\bar{\\\\text{p}}$) की खोज किस वर्ष की गई थी, और इसके भौतिक आवेश तथा द्रव्यमान की विशेषताएं क्या हैं?",
-    "o": [
+    "qe": "Antiprotons are high-energy antimatter counterparts of protons discovered in particle accelerator experiments. In what year was the Antiproton ($\\bar{\\text{p}}$) discovered, and what are its physical charge and mass characteristics?",
+    "qh": "एंटीप्रोटॉन (Antiprotons) कण त्वरक प्रयोगों (particle accelerator experiments) में खोजे गए प्रोटॉन के उच्च-ऊर्जा एंटीमैटर समकक्ष हैं। एंटीप्रोटॉन ($\\bar{\\text{p}}$) की खोज किस वर्ष की गई थी, और इसके भौतिक आवेश तथा द्रव्यमान की विशेषताएं क्या हैं?",
+    "oe": [
       "Discovered in 1897; positive charge ($+1e$), mass equal to electron.",
-      "Discovered in 1955; negative charge ($-1.602 \\\\times 10^{-19}\\\\text{ C}$), mass strictly equal to that of a proton ($1.67 \\\\times 10^{-27}\\\\text{ kg}$).",
+      "Discovered in 1955; negative charge ($-1.602 \\times 10^{-19}\\text{ C}$), mass strictly equal to that of a proton ($1.67 \\times 10^{-27}\\text{ kg}$).",
       "Discovered in 1932; zero charge, mass double that of a neutron.",
       "Discovered in 1911; positive charge ($+2e$), mass equal to alpha particle."
     ],
+    "oh": [
+      "1897 में खोजा गया; धनात्मक आवेश ($+1e$), इलेक्ट्रॉन के बराबर द्रव्यमान।",
+      "1955 में खोजा गया; ऋणात्मक आवेश ($-1.602 \\times 10^{-19}\\text{ C}$), द्रव्यमान पूरी तरह से प्रोटॉन ($1.67 \\times 10^{-27}\\text{ kg}$) के बराबर।",
+      "1932 में खोजा गया; शून्य आवेश, न्यूट्रॉन से दोगुना द्रव्यमान।",
+      "1911 में खोजा गया; धनात्मक आवेश ($+2e$), अल्फा कण के बराबर द्रव्यमान।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists the discovery year and properties of J.J. Thomson's electron. Option 1 is correct because the **Antiproton ($\\\\bar{\\\\text{p}}$)** was experimentally discovered in **1955** by Emilio Segrè and Owen Chamberlain at the Bevatron accelerator. As the true antiparticle of the proton, the antiproton carries a **Negative Electric Charge ($-1.602 \\\\times 10^{-19}\\\\text{ C}$)** while possessing a **Rest Mass strictly identical to the proton** ($m_p \\\\approx 1.67 \\\\times 10^{-27}\\\\text{ kg}$). Option 2 lists the year of positron discovery, and Option 3 lists Rutherford's nuclear discovery era."
+    "ee": "1. Option 0 describes J.J. Thomson's discovery of the electron in 1897.\n2. Option 1 is correct because the **Antiproton ($\\bar{\\text{p}}$)** was experimentally discovered in **1955** by physicists Emilio Segrè and Owen Chamberlain at the Lawrence Berkeley National Laboratory using the Bevatron particle accelerator (earning the 1959 Nobel Prize in Physics). As the antimatter counterpart of the proton, the antiproton carries an exact **Negative Charge of $-1.602 \\times 10^{-19}\\text{ C}$ ($-1e$)** and possesses a **Rest Mass identical to that of a proton ($1.6726 \\times 10^{-27}\\text{ kg}$)**.\n3. Option 2 refers to the 1932 discoveries of the positron and neutron.\n4. Option 3 lists alpha particle properties ($+2e$) from Rutherford's 1911 nuclear model.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि 1897 में जे.जे. थॉमसन ने इलेक्ट्रॉन की खोज की थी।\n2. विकल्प 1 सही है क्योंकि **एंटीप्रोटॉन ($\\bar{\\text{p}}$)** की खोज **1955** में एमिलियो सेग्रे और ओवेन चेम्बरलेन ने बर्कले स्थित बेवाट्रॉन कण त्वरक (Bevatron) के माध्यम से की थी (जिसके लिए उन्हें 1959 का नोबेल पुरस्कार मिला)। प्रोटॉन का प्रतिकण होने के कारण इसका **ऋणात्मक आवेश $-1.602 \\times 10^{-19}\\text{ C}$** होता है और इसका **विराम द्रव्यमान बिल्कुल प्रोटॉन के द्रव्यमान ($1.6726 \\times 10^{-27}\\text{ kg}$)** के बराबर होता है।\n3. विकल्प 2 गलत है क्योंकि 1932 में न्यूट्रॉन और पॉज़िट्रॉन की खोज हुई थी।\n4. विकल्प 3 गलत है क्योंकि यह अल्फा कणों का लक्षण है।"
   },
   {
     "p_id": "bpsc_chem_m14_15",
     "qe": "In 1897, J.J. Thomson conducted discharge tube experiments that led to the discovery of cathode rays. What vacuum pressure threshold inside the discharge tube was necessary to observe cathode ray generation?",
     "qh": "1897 में, जे.जे. थॉमसन ने डिस्चार्ज ट्यूब प्रयोग किए जिसके कारण कैथोड किरणों की खोज हुई। कैथोड किरण पीढ़ी का निरीक्षण करने के लिए डिस्चार्ज ट्यूब के अंदर कौन सी वैक्यूम दबाव सीमा आवश्यक थी?",
-    "o": [
-      "$1\\\\text{ atm}$ (standard atmospheric pressure)",
-      "$10^{-6}\\\\text{ atm}$ (extremely low high-vacuum pressure)",
-      "$760\\\\text{ mm Hg}$ under boiling water",
-      "$100\\\\text{ atm}$ under liquid nitrogen"
+    "oe": [
+      "$1\\text{ atm}$ (standard atmospheric pressure)",
+      "$10^{-6}\\text{ atm}$ (extremely low high-vacuum pressure)",
+      "$760\\text{ mm Hg}$ under boiling water",
+      "$100\\text{ atm}$ under liquid nitrogen"
+    ],
+    "oh": [
+      "$1\\text{ atm}$ (मानक वायुमंडलीय दबाव)",
+      "$10^{-6}\\text{ atm}$ (अत्यधिक कम उच्च-निर्वात दबाव)",
+      "$760\\text{ mm Hg}$ उबलते पानी के नीचे",
+      "$100\\text{ atm}$ तरल नाइट्रोजन के तहत"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is standard atmospheric pressure, at which air acts as an electrical insulator and prevents discharge ray formation. Option 1 is correct because generating a continuous stream of **Cathode Rays** requires applying a high voltage potential ($10,000\\\\text{ V}$) across electrodes while evacuating the glass discharge tube down to an extremely low pressure of approximately **$10^{-6}\\\\text{ atm}$** (or $\\\\sim 0.001\\\\text{ mm Hg}$). At this ultra-low gas density, electrons emitted from the cathode travel long mean free paths without colliding excessively with gas molecules, forming visible cathode ray streams. Option 2 and Option 3 describe high pressure regimes."
+    "ee": "1. Option 0 is incorrect because at standard atmospheric pressure ($1\\text{ atm}$), gases act as poor conductors/dielectrics, preventing steady electrical discharge.\n2. Option 1 is correct because in Crookes/Thomson discharge tube experiments, observing cathode ray emission requires applying a high potential difference ($10,000\\text{ V}$ to $20,000\\text{ V}$) across electrodes while simultaneously evacuating the tube down to an **ultra-low vacuum pressure of approximately $10^{-6}\\text{ atm}$ to $10^{-4}\\text{ atm}$ ($0.01\\text{ to }0.001\\text{ mm of Hg}$)**. At this near-vacuum threshold, the mean free path of emitted electrons is sufficiently long to travel without colliding with gas molecules, producing a focused beam that causes the glass tube to fluoresce.\n3. Option 2 describes atmospheric pressure ($760\\text{ mm Hg}$), where spark discharges occur only at destructive voltages.\n4. Option 3 represents hyperbaric pressure conditions completely incompatible with cathode ray tubes.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि सामान्य वायुमंडलीय दबाव ($1\\text{ atm}$) पर गैसें विद्युत की कुचालक होती हैं।\n2. विकल्प 1 सही है क्योंकि कैथोड किरणों के उत्पादन के लिए डिस्चार्ज ट्यूब (क्रूक्स ट्यूब) में उच्च विभवांतर (10,000 वोल्ट) के साथ-साथ गैस का दबाव घटाकर **अत्यधिक कम निर्वात दाब लगभग $10^{-6}\\text{ atm}$ ($0.01$ से $0.001\\text{ mm Hg}$)** करना आवश्यक होता है। इतने कम दबाव पर गैस के अणु बहुत दूर-दूर हो जाते हैं, जिससे कैथोड से निकलने वाले इलेक्ट्रॉनों का मुक्त मार्ग बढ़ जाता है और वे बिना रुकावट तीव्र गति से एनोड की ओर बढ़कर फ्लोरोसेंट चमक उत्पन्न करते हैं।\n3. विकल्प 2 गलत है क्योंकि $760\\text{ mm Hg}$ सामान्य वायुमंडलीय दाब है।\n4. विकल्प 3 गलत है क्योंकि उच्च दाब पर कैथोड किरणें नहीं बनती हैं।"
   },
   {
     "p_id": "bpsc_chem_m14_16",
-    "qe": "Pi-mesons ($\\\\pi$-mesons) exist in three isotopic spin states ($\\\\pi^+, \\\\pi^-, \\\\pi^0$). How does the rest mass of charged pi-mesons ($\\\\pi^{\\\\pm}$) compare to the mass of neutral pi-mesons ($\\\\pi^0$) and electrons?",
-    "qh": "पाई-मिसॉन ($\\\\pi$-mesons) तीन समस्थानिक स्पिन अवस्थाओं ($\\\\pi^+, \\\\pi^-, \\\\pi^0$) में मौजूद होते हैं। आवेशित पाई-मिसॉन ($\\\\pi^{\\\\pm}$) का विराम द्रव्यमान उदासीन पाई-मिसॉन ($\\\\pi^0$) तथा इलेक्ट्रॉनों के द्रव्यमान की तुलना में कैसा होता है?",
-    "o": [
-      "Mass of $\\\\pi^{\\\\pm}$ is smaller than $\\\\pi^0$ and equal to $1/1837$ of an electron mass.",
-      "Mass of $\\\\pi^{\\\\pm}$ is slightly greater than the mass of neutral $\\\\pi^0$, and is approximately 264 times the electronic mass ($m_e$).",
-      "Mass of $\\\\pi^{\\\\pm}$ is equal to absolute zero.",
-      "Mass of $\\\\pi^{\\\\pm}$ matches the mass of a heavy uranium nucleus."
+    "qe": "Pi-mesons ($\\pi$-mesons) exist in three isotopic spin states ($\\pi^+, \\pi^-, \\pi^0$). How does the rest mass of charged pi-mesons ($\\pi^{\\pm}$) compare to the mass of neutral pi-mesons ($\\pi^0$) and electrons?",
+    "qh": "पाई-मिसॉन ($\\pi$-mesons) तीन समस्थानिक स्पिन अवस्थाओं ($\\pi^+, \\pi^-, \\pi^0$) में मौजूद होते हैं। आवेशित पाई-मिसॉन ($\\pi^{\\pm}$) का विराम द्रव्यमान उदासीन पाई-मिसॉन ($\\pi^0$) तथा इलेक्ट्रॉनों के द्रव्यमान की तुलना में कैसा होता है?",
+    "oe": [
+      "Mass of $\\pi^{\\pm}$ is smaller than $\\pi^0$ and equal to $1/1837$ of an electron mass.",
+      "Mass of $\\pi^{\\pm}$ is slightly greater than the mass of neutral $\\pi^0$, and is approximately 264 times the electronic mass ($m_e$).",
+      "Mass of $\\pi^{\\pm}$ is equal to absolute zero.",
+      "Mass of $\\pi^{\\pm}$ matches the mass of a heavy uranium nucleus."
+    ],
+    "oh": [
+      "$\\pi^{\\pm}$ का द्रव्यमान $\\pi^0$ से छोटा है और इलेक्ट्रॉन द्रव्यमान के $1/1837$ के बराबर है।",
+      "$\\pi^{\\pm}$ का द्रव्यमान उदासीन $\\pi^0$ के द्रव्यमान से थोड़ा अधिक है, और इलेक्ट्रॉनिक द्रव्यमान ($m_e$) का लगभग 264 गुना है।",
+      "$\\pi^{\\pm}$ का द्रव्यमान पूर्ण शून्य के बराबर है।",
+      "$\\pi^{\\pm}$ का द्रव्यमान भारी यूरेनियम नाभिक के द्रव्यमान से मेल खाता है।"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states $\\\\pi^{\\\\pm}$ is lighter than $\\\\pi^0$ and compares it to fractional electron masses. Option 1 is correct because experimentally measured rest masses of pi-mesons show that **charged pi-mesons ($\\\\pi^{\\\\pm}$, $\\\\sim 139.6\\\\text{ MeV/c}^2$) are slightly heavier than the neutral pi-meson ($\\\\pi^0$, $\\\\sim 135.0\\\\text{ MeV/c}^2$)**. On an electronic scale, the mass of $\\\\pi^{\\\\pm}$ is **approximately 264 times the mass of an electron** ($m_{\\\\pi^{\\\\pm}} \\\\approx 264 m_e$). Option 2 and Option 3 list zero mass or heavy uranium mass claims."
+    "ee": "1. Option 0 is incorrect because charged pions are heavier than neutral pions, and $1/1837$ is the electron-to-proton mass ratio.\n2. Option 1 is correct because experimental measurements in particle physics demonstrate that **charged pi-mesons ($\\pi^+$ and $\\pi^-$) have a rest mass of $139.57\\text{ MeV/}c^2$ ($\\\\approx 273\\ m_e$ or $264$ times the mass of an electron in classical approximations)**, which is **slightly greater than the rest mass of the neutral pi-meson ($\\pi^0$, which is $134.97\\text{ MeV/}c^2$ $\\approx 264\\ m_e$)** due to electromagnetic self-energy contributions.\n3. Option 2 is incorrect because pions are massive hadrons, unlike massless photons or gluons.\n4. Option 3 is incorrect because a uranium nucleus is thousands of times heavier than a pion.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि आवेशित पाई-मिसॉन उदासीन पाई-मिसॉन से भारी होते हैं।\n2. विकल्प 1 सही है क्योंकि प्रायोगिक रूप से **आवेशित पाई-मिसॉन ($\\pi^{\\pm}$) का द्रव्यमान ($139.6\\text{ MeV/}c^2$) उदासीन पाई-मिसॉन ($\\pi^0$, $135.0\\text{ MeV/}c^2$) से थोड़ा सा अधिक** होता है। इलेक्ट्रॉन के द्रव्यमान के संदर्भ में पाई-मिसॉनों का द्रव्यमान **इलेक्ट्रॉन के द्रव्यमान ($m_e$) का लगभग 264 से 273 गुना** होता है।\n3. विकल्प 2 गलत है क्योंकि पाई-मिसॉन द्रव्यमान युक्त हैड्रॉन कण हैं।\n4. विकल्प 3 गलत है क्योंकि यूरेनियम नाभिक का द्रव्यमान पाई-मिसॉन से हजारों गुना अधिक होता है।"
   },
   {
     "p_id": "bpsc_chem_m14_17",
     "qe": "Modern atomic physical imaging techniques allow scientists to observe individual atoms on material surfaces. What specialized microscopic technology enables direct imaging of individual surface atoms?",
     "qh": "आधुनिक परमाणु भौतिक इमेजिंग तकनीकें वैज्ञानिकों को सामग्री की सतहों पर व्यक्तिगत परमाणुओं का निरीक्षण करने की अनुमति देती हैं। कौन सी विशेष सूक्ष्म तकनीक (microscopic technology) व्यक्तिगत सतह परमाणुओं की सीधी इमेजिंग को सक्षम बनाती है?",
-    "o": [
+    "oe": [
       "Standard compound optical light microscope",
       "Scanning Tunneling Microscope (STM)",
       "Simple magnifying glass with UV filters",
       "X-ray fluorescent paper screen"
     ],
+    "oh": [
+      "मानक संयुक्त ऑप्टिकल प्रकाश माइक्रोस्कोप",
+      "स्कैनिंग टनलिंग माइक्रोस्कोप (STM)",
+      "यूवी फिल्टर के साथ सरल आवर्धक कांच",
+      "एक्स-रे फ्लोरोसेंट पेपर स्क्रीन"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is incorrect because optical light microscopes are limited by the diffraction limit of visible light ($\\\\lambda \\\\sim 400-700\\\\text{ nm}$), making them incapable of resolving sub-nanometer atomic radii ($\\\\sim 0.1\\\\text{ nm}$). Option 1 is correct because individual atoms can be visually mapped and manipulated using a **Scanning Tunneling Microscope (STM)** [an instrument that utilizes quantum tunneling current passing between an ultra-sharp conducting metallic tip and a conductive sample surface to generate atomic-resolution topographical images]. Option 2 and Option 3 lack the required sub-nanometer resolution."
+    "ee": "1. Option 0 is incorrect because optical microscopes are limited by the Abbe diffraction limit of visible light wavelengths ($400\\text{ to }700\\text{ nm}$), making it physically impossible to resolve atomic dimensions ($\\\\approx 0.1\\text{ nm}$).\n2. Option 1 is correct because the **Scanning Tunneling Microscope (STM)**, invented in 1981 by Gerd Binnig and Heinrich Rohrer at IBM Zurich (Nobel Prize in Physics, 1986), exploits the quantum mechanical phenomenon of **Electron Tunneling**. An atomically sharp conductive probe tip scans a sample surface at sub-nanometer distances; measuring the exponential tunneling current enables atomic-scale topographic imaging and individual atom manipulation.\n3. Option 2 is incorrect because optical lenses cannot resolve atomic lattices.\n4. Option 3 is incorrect because fluorescent screens register bulk photon/particle impacts without sub-nanometer spatial resolution.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि प्रकाश माइक्रोस्कोप दृश्य प्रकाश के विवर्तन सीमा ($400-700\\text{ nm}$) के कारण $0.1\\text{ nm}$ आकार के परमाणुओं को नहीं देख सकते।\n2. विकल्प 1 सही है क्योंकि **स्कैनिंग टनलिंग माइक्रोस्कोप (STM)**, जिसका आविष्कार 1981 में गर्ड बिनिग और हेनरिक रोहरर ने किया था, क्वांटम टनलिंग प्रभाव पर कार्य करता है। इसकी अति-सूक्ष्म धात्विक टिप जब नमूने की सतह पर घूमती है, तो परमाणुओं के बीच बहने वाली टनलिंग विद्युत धारा की सहायता से व्यक्तिगत परमाणुओं का त्रिविमीय (3D) चित्र प्राप्त किया जा सकता है।\n3. विकल्प 2 गलत है क्योंकि आवर्धक लेंस परमाणु स्तर पर विभेदन नहीं कर सकते।\n4. विकल्प 3 गलत है क्योंकि फ्लोरोसेंट स्क्रीन केवल विकिरण की उपस्थिति दर्शाती है, परमाणु की छवि नहीं बनाती।"
   },
   {
     "p_id": "bpsc_chem_m14_18",
     "qe": "Evaluating the historical evolution of atomic theory reveals that the concept of discrete, indivisible units of matter originated long before 19th-century European chemistry. Which ancient philosophical traditions first proposed the existence of indivisible atoms around 400 BC?",
     "qh": "परमाणु सिद्धांत के ऐतिहासिक विकास का मूल्यांकन यह दर्शाता है कि पदार्थ की पृथक, अविभाज्य इकाइयों की अवधारणा 19वीं सदी के यूरोपीय रसायन विज्ञान से बहुत पहले उत्पन्न हुई थी। किन प्राचीन दार्शनिक परंपराओं ने सबसे पहले 400 ईसा पूर्व के आसपास अविभाज्य परमाणुओं के अस्तित्व का प्रस्ताव रखा था?",
-    "o": [
+    "oe": [
       "18th-century British industrial guilds",
       "Indian (e.g., Maharishi Kanada) and Greek (e.g., Democritus and Leucippus) Philosophers around 400 BC",
       "19th-century American thermodynamic societies",
       "20th-century Soviet nuclear research labs"
     ],
+    "oh": [
+      "18वीं सदी के ब्रिटिश औद्योगिक संघ",
+      "400 ईसा पूर्व के आसपास भारतीय (उदा. महर्षि कणाद) और यूनानी (उदा. डेमोक्रिटस और ल्यूसिपस) दार्शनिक",
+      "19वीं सदी की अमेरिकी थर्मोडायनामिक सोसायटी",
+      "20वीं सदी की सोवियत परमाणु अनुसंधान प्रयोगशालाएं"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly dates atomic concepts to 18th-century British guilds. Option 1 is correct because the foundational concept that matter consists of minute, indivisible particles (termed *Paramanu* in India by **Maharishi Kanada** and *Atomos* in Greece by **Democritus and Leucippus**) was first articulated by **Indian and Greek Philosophers around 400 BC**. John Dalton later synthesized these philosophical concepts into a rigorous scientific atomic theory in 1808. Option 2 and Option 3 cite modern eras post-dating the ancient origin."
+    "ee": "1. Option 0 is incorrect because British industrial guilds dealt with manufacturing and metallurgy, not foundational ancient atomic philosophies.\n2. Option 1 is correct because around 500–400 BC, ancient **Indian and Greek philosophers** independently proposed that matter is composed of indivisible fundamental building blocks. In ancient India, **Maharishi Kanada** (founder of the Vaisheshika school) postulated that subdividing matter leads to ultimate indivisible particles called **Paramanu**. Contemporaneously in ancient Greece, philosophers **Democritus and Leucippus** termed these indivisible particles **Atomos** (meaning 'uncuttable' or 'indivisible'), providing the conceptual basis that John Dalton formalized scientifically in 1808.\n3. Option 2 is incorrect because thermodynamic societies formalized heat and entropy laws in the 1800s.\n4. Option 3 is incorrect because Soviet labs were 20th-century institutions.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि 18वीं सदी में आधुनिक रसायन विज्ञान का विकास हुआ, प्राचीन दर्शन का नहीं।\n2. विकल्प 1 सही है क्योंकि लगभग 500 से 400 ईसा पूर्व में प्राचीन **भारतीय एवं यूनानी दार्शनिकों** ने परमाणु की अवधारणा प्रस्तुत की थी। भारत में **महर्षि कणाद** (वैशेषिक दर्शन के प्रवर्तक) ने प्रतिपादित किया कि पदार्थ को विभाजित करते जाने पर अंततः एक ऐसा सूक्ष्म कण प्राप्त होता है जिसे पुनः विभाजित नहीं किया जा सकता, जिसे उन्होंने **'परमाणु'** नाम दिया। इसी समय यूनान में **डेमोक्रिटस और ल्यूसिपस** ने इन अविभाज्य कणों को **'एटम' (Atomos)** कहा।\n3. विकल्प 2 गलत है क्योंकि यह 19वीं सदी का आधुनिक काल है।\n4. विकल्प 3 गलत है क्योंकि सोवियत अनुसंधान 20वीं सदी में हुआ था।"
   },
   {
     "p_id": "bpsc_chem_m14_19",
     "qe": "Chemical reactivity across elements varies dramatically based on electronic structure. Which class of atomic elements displays complete chemical unreactivity under ambient laboratory conditions?",
     "qh": "तत्वों में रासायनिक प्रतिक्रियाशीलता इलेक्ट्रॉनिक संरचना के आधार पर नाटकीय रूप से भिन्न होती है। परमाणु तत्वों का कौन सा वर्ग परिवेशी प्रयोगशाला स्थितियों के तहत पूर्ण रासायनिक अक्रियता प्रदर्शित करता है?",
-    "o": [
+    "oe": [
       "Group-1 Alkali Metals (e.g., Sodium, Potassium)",
       "Noble Gases (Group-18 elements with complete valence octets/duplets)",
       "Group-17 Halogens (e.g., Fluorine, Chlorine)",
       "Lanthanide series transition metals"
     ],
+    "oh": [
+      "समूह-1 क्षार धातुएं (उदा. सोडियम, पोटेशियम)",
+      "उत्कृष्ट गैसें (पूर्ण संयोजी अष्टक/द्विक वाले समूह-18 तत्व)",
+      "समूह-17 हैलोजन (उदा. फ्लोरीन, क्लोरीन)",
+      "लैंथेनाइड श्रृंखला संक्रमण धातुएं"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists highly reactive alkali metals that react violently with moisture. Option 1 is correct because almost all isolated elemental atoms are chemically reactive and seek to combine into molecules to achieve lower potential energy. The major exception comprises the **Noble Gases (Group-18: He, Ne, Ar, Kr, Xe, Rn)**, whose isolated atoms possess completely filled outer valence electron shells ($ns^2 np^6$ octet, or $1s^2$ duplet for He). This stable closed-shell configuration renders noble gas atoms exceptionally stable and **chemically unreactive** under standard conditions. Option 2 lists hyper-reactive halogens, and Option 3 lists reactive f-block metals."
+    "ee": "1. Option 0 is incorrect because Group 1 Alkali Metals have a single valence electron ($ns^1$) and are among the most electropositive and chemically violent reactants known.\n2. Option 1 is correct because **Noble Gases (Group 18: Helium, Neon, Argon, Krypton, Xenon, Radon)** possess completely filled, closed valence electron shells ($1s^2$ duplet for Helium; $ns^2 np^6$ stable octet for all others). Because their valence orbitals are fully occupied, their electron affinity is near zero and their ionization enthalpy is exceptionally high, making isolated noble gas atoms chemically unreactive (inert) under standard conditions.\n3. Option 2 is incorrect because Group 17 Halogens have high electron affinity ($ns^2 np^5$) and are reactive oxidizing non-metals.\n4. Option 3 is incorrect because lanthanides are electropositive f-block metals that tarnish and react with water.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि समूह-1 की क्षार धातुएं अत्यधिक क्रियाशील होती हैं।\n2. विकल्प 1 सही है क्योंकि **उत्कृष्ट गैसें (समूह-18: हीलियम, नियॉन, आर्गन आदि)** रासायनिक रूप से लगभग पूर्णतः अक्रिय होती हैं। इसका कारण यह है कि इनके सबसे बाहरी कोश में इलेक्ट्रॉनों का विन्यास पूर्णतः संतृप्त होता है (हीलियम के लिए द्विक $1s^2$ तथा अन्य के लिए अष्टक $ns^2 np^6$)। पूर्ण कोश होने के कारण ये सामान्य परिस्थितियों में न तो इलेक्ट्रॉन त्यागते हैं और न ही ग्रहण करते हैं, जिससे ये रासायनिक रूप से अक्रिय रहते हैं।\n3. विकल्प 2 गलत है क्योंकि हैलोजन तत्व प्रबल इलेक्ट्रॉन ग्राही और अत्यधिक सक्रिय होते हैं।\n4. विकल्प 3 गलत है क्योंकि लैंथेनाइड धातुएं भी रासायनिक रूप से सक्रिय होती हैं।"
   },
   {
     "p_id": "bpsc_chem_m14_20",
     "qe": "Cathode rays exhibit specific physical behaviors when subjected to perpendicular external fields. How do cathode rays deflect when passed through an external electric field established between two oppositely charged plates?",
     "qh": "लंबवत बाहरी क्षेत्रों (perpendicular external fields) के अधीन होने पर कैथोड किरणें विशिष्ट भौतिक व्यवहार प्रदर्शित करती हैं। दो विपरीत आवेशित प्लेटों के बीच स्थापित बाहरी विद्युत क्षेत्र से गुजरने पर कैथोड किरणें कैसे विक्षेपित (deflect) होती हैं?",
-    "o": [
+    "oe": [
       "Deflect toward the negatively charged plate (cathode pole).",
       "Deflect toward the positively charged plate (anode pole), demonstrating that cathode rays carry negative electric charge.",
       "Pass completely straight without any deflection regardless of field strength.",
       "Reflect backwards into the source tube as gamma rays."
     ],
+    "oh": [
+      "ऋणावेशित प्लेट (कैथोड ध्रुव) की ओर विक्षेपित होती हैं।",
+      "धनावेशित प्लेट (एनोड ध्रुव) की ओर विक्षेपित होती हैं, यह प्रदर्शित करते हुए कि कैथोड किरणें ऋणात्मक विद्युत आवेश वहन करती हैं।",
+      "क्षेत्र की ताकत की परवाह किए बिना बिना किसी विक्षेपण के पूरी तरह से सीधे गुजरती हैं।",
+      "गामा किरणों के रूप में स्रोत ट्यूब में पीछे की ओर परावर्तित होती हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states deflection toward the negative plate (which would indicate positive charge). Option 1 is correct because when cathode rays pass through an electrostatic field set up between positive and negative plates, the beam **deflects toward the positively charged plate**. According to Coulomb's Law of electrostatic interaction, opposite charges attract; this observed deflection definitively proved that **cathode rays consist of stream of negatively charged sub-atomic particles (electrons)**. Option 2 describes uncharged neutron rays, and Option 3 proposes an impossible gamma-ray reflection."
+    "ee": "1. Option 0 is incorrect because only positively charged particles (like alpha particles or canal rays) deflect toward the negative plate.\n2. Option 1 is correct because when J.J. Thomson subjected a collimated beam of cathode rays to a transverse electrostatic field between parallel charged metal plates, the beam **deflected toward the positively charged anode plate** and away from the negative plate. By applying Coulomb's Law of Electrostatics (unlike charges attract, like charges repel), this deflection demonstrated that **cathode rays are composed of negatively charged sub-atomic particles (electrons)**.\n3. Option 2 is incorrect because uncharged neutral radiations (like neutrons, gamma rays, and X-rays) pass undeflected through electric fields.\n4. Option 3 is incorrect because electrostatic fields bend charged beams into parabolic trajectories, not backwards reflections into gamma rays.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि धनावेशित कण ही ऋणावेशित प्लेट की ओर झुकते हैं।\n2. विकल्प 1 सही है क्योंकि जब कैथोड किरणों को विद्युत क्षेत्र में से गुजारा जाता है, तो वे **धनावेशित प्लेट (Positive Plate) की ओर मुड़ जाती हैं** तथा ऋणावेशित प्लेट से दूर हटती हैं। स्थिरवैद्युतिकी के नियमानुसार विपरीत आवेश एक-दूसरे को आकर्षित करते हैं; अतः इस विक्षेपण ने यह असंदिग्ध रूप से प्रमाणित किया कि **कैथोड किरणें ऋणावेशित कणों (इलेक्ट्रॉनों) की धारा हैं**।\n3. विकल्प 2 गलत है क्योंकि केवल विद्युत-उदासीन कण (जैसे न्यूट्रॉन या फोटॉन) ही बिना मुड़े सीधे निकलते हैं।\n4. विकल्प 3 गलत है क्योंकि विद्युत क्षेत्र में किरणों का गामा किरणों के रूप में परावर्तन नहीं होता।"
   },
-  
   {
     "p_id": "bpsc_chem_m15_01",
     "qe": "Evaluating J.J. Thomson's 'plum pudding' atomic model reveals major physical limitations in explaining nuclear phenomenon. What was the critical experimental observation that Thomson's model completely failed to account for?",
     "qh": "जे.जे. थॉमसन के 'प्लम पुडिंग' परमाणु मॉडल का मूल्यांकन परमाणु परिघटनाओं की व्याख्या करने में प्रमुख भौतिक सीमाओं को उजागर करता है। वह कौन सा महत्वपूर्ण प्रायोगिक अवलोकन था जिसे थॉमसन का मॉडल पूरी तरह से समझाने में विफल रहा?",
-    "o": [
+    "oe": [
       "The complete electrical neutrality of bulk atomic matter under standard ambient conditions.",
-      "The large-angle back-scattering of energetic alpha particles ($\\\\alpha$-particles) observed during thin gold foil bombardment.",
+      "The large-angle back-scattering of energetic alpha particles ($\\alpha$-particles) observed during thin gold foil bombardment.",
       "The presence of negatively charged sub-atomic electrons embedded inside atomic spheres.",
       "The existence of fixed integer atomic numbers ($Z$) across periods."
     ],
+    "oh": [
+      "मानक परिवेशी स्थितियों में थोक परमाणु पदार्थ की पूर्ण विद्युत तटस्थता।",
+      "पतली सोने की पन्नी पर बमबारी के दौरान देखे गए ऊर्जावान अल्फा कणों ($\\alpha$-कणों) का बड़े कोण पर बैक-स्कैटरिंग (पीछे की ओर प्रकीर्णन)।",
+      "परमाणु क्षेत्रों के अंदर अंतर्निहित ऋणावेशित उप-परमाणु इलेक्ट्रॉनों की उपस्थिति।",
+      "आवर्तों में निश्चित पूर्णांक परमाणु संख्याओं ($Z$) का अस्तित्व।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is incorrect because Thomson's model explicitly explained electrical neutrality by postulating an equal magnitude of embedded negative charges and uniform positive spherical charge. Option 1 is correct because Thomson's model assumed positive charge was spread uniformly throughout a sphere of atomic radius ($\\\\sim 10^{-10}\\\\text{ m}$), which meant the electrostatic field was far too weak to deflect fast-moving, massive alpha particles by large angles. It completely failed to explain Rutherford, Geiger, and Marsden's $\\\\alpha$-particle scattering results where roughly 1 in 20,000 alpha particles suffered large-angle deflections ($>90^\\\\circ$) or **Back-Scattering** [the elastic deflection of energetic incident particles through angles greater than $90^\\\\circ$ caused by localized intense electrostatic repulsion from a highly dense central nucleus]. Option 2 was a core feature of Thomson's model. Option 3 relates to Henry Moseley's work."
+    "ee": "1. Option 0 was accounted for by Thomson's model, which balanced embedded negative electrons with a diffuse spherical positive background charge.\n2. Option 1 is correct because Thomson's model posited that the positive charge and mass were spread uniformly across a sphere of radius $\\approx 10^{-10}\\text{ m}$. In the 1911 Geiger-Marsden-Rutherford alpha-particle scattering experiment, bombarding a $100\\text{ nm}$ gold foil revealed that while most $\\alpha$-particles passed undeflected, roughly **$1$ in $8,000$ to $20,000$ particles suffered large-angle deflections ($>90^\\circ$) or rebounded backward ($180^\\circ$)**. Thomson's diffuse positive sphere could not generate the intense localized electrostatic repulsion needed to deflect energetic helium nuclei ($\\alpha$-particles), proving the existence of a dense, tiny, positively charged central nucleus.\n3. Option 2 was a structural component of Thomson's plum pudding model.\n4. Option 3 relates to Henry Moseley's X-ray spectroscopy experiments in 1913.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि थॉमसन का मॉडल समान मात्रा में धनावेश और ऋणावेश मानकर परमाणु की विद्युत उदासीनता की व्याख्या करता था।\n2. विकल्प 1 सही है क्योंकि थॉमसन के मॉडल में धनावेश पूरे परमाणु ($\approx 10^{-10}\\text{ m}$) में समान रूप से फैला हुआ माना गया था, जिसके कारण इसका विद्युत क्षेत्र अल्फा कणों को मोड़ने के लिए अत्यंत दुर्बल था। रदरफोर्ड के अल्फा-कण प्रकीर्णन प्रयोग (1911) में देखा गया कि लगभग 20,000 में से 1 अल्फा कण **90° से अधिक बड़े कोणों पर विक्षेपित होकर सीधे पीछे लौट आया (Back-scattering)**। थॉमसन का मॉडल इस बड़े कोण के विक्षेपण की व्याख्या करने में पूरी तरह विफल रहा, जिससे सिद्ध हुआ कि परमाणु का समस्त धनावेश और द्रव्यमान केंद्र में एक अत्यंत सूक्ष्म 'नाभिक' में केंद्रित है।\n3. विकल्प 2 गलत है क्योंकि इलेक्ट्रॉनों की उपस्थिति थॉमसन मॉडल का ही हिस्सा थी।\n4. विकल्प 3 गलत है क्योंकि परमाणु क्रमांक का सिद्धांत मोजले ने दिया था।"
   },
   {
     "p_id": "bpsc_chem_m15_02",
     "qe": "Rutherford's planetary atomic model encountered a fatal theoretical challenge grounded in classical electrodynamics. What fundamental physical principle created this instability objection?",
     "qh": "रदरफोर्ड के ग्रहीय परमाणु मॉडल को शास्त्रीय विद्युतगतिकी (classical electrodynamics) में निहित एक घातक सैद्धांतिक चुनौती का सामना करना पड़ा। किस मौलिक भौतिक सिद्धांत ने इस अस्थिरता संबंधी आपत्ति को जन्म दिया?",
-    "o": [
+    "oe": [
       "According to classical electrodynamics, an electron undergoing centripetal acceleration in a circular orbit must continuously radiate electromagnetic energy, causing it to spiral into the nucleus.",
       "Electrons experience repulsive gravitational force from nuclear protons, ejecting them instantly.",
       "Centripetal forces are completely absent in circular planetary motion.",
       "Electrons undergo nuclear fusion with protons, annihilating atomic mass."
     ],
+    "oh": [
+      "शास्त्रीय विद्युतगतिकी के अनुसार, एक वृत्ताकार कक्षा में अभिकेंद्री त्वरण से गुजरने वाले इलेक्ट्रॉन को लगातार विद्युत चुम्बकीय ऊर्जा का विकिरण करना चाहिए, जिससे यह सर्पिल गति करते हुए नाभिक में गिर जाएगा।",
+      "इलेक्ट्रॉन परमाणु प्रोटॉन से प्रतिकारक गुरुत्वाकर्षण बल का अनुभव करते हैं, जिससे वे तुरंत बाहर निकल जाते हैं।",
+      "वृत्ताकार ग्रहीय गति में अभिकेंद्री बल पूरी तरह से अनुपस्थित होते हैं।",
+      "इलेक्ट्रॉन प्रोटॉन के साथ परमाणु संलयन से गुजरते हैं, जिससे परमाणु द्रव्यमान नष्ट हो जाता है।"
+    ],
     "a": 0,
-    "e": "<b>Explanation:</b> Option 0 is correct because Classical Electrodynamics (Maxwell's theory) dictates that any accelerating charged particle must continuously emit electromagnetic radiation. An electron revolving in a circular orbit undergoes continuous **Centripetal Acceleration** [the inward acceleration required to keep a particle moving along a curved path, directed toward the center of rotation]. As a result, the revolving electron should continually lose kinetic energy, causing its orbital radius to shrink rapidly in a spiral path until it collapses into the nucleus in less than $10^{-8}$ seconds. Rutherford's model could not explain why atoms are stable. Option 1 misidentifies gravity as repulsive. Option 2 falsely claims centripetal force is absent. Option 3 mixes nuclear fusion into orbital electrodynamics."
+    "ee": "1. Option 0 is correct because according to Maxwell's Classical Electromagnetic Theory and Larmor formula ($P = \\frac{q^2 a^2}{6\\pi \\varepsilon_0 c^3}$), any charged particle undergoing acceleration must continuously radiate electromagnetic energy. In Rutherford's model, an electron revolving in a circular orbit experiences continuous **Centripetal Acceleration** ($a = v^2/r$). Consequently, the electron should continually lose kinetic and potential energy, causing its orbital radius to shrink in a spiral trajectory until it collapses into the nucleus within an estimated $10^{-8}\\text{ seconds}$. This predicted classical instability contradicted the real-world stability of matter.\n2. Option 1 is incorrect because gravity is an attractive force and is negligible at sub-atomic dimensions.\n3. Option 2 is incorrect because circular motion requires centripetal force.\n4. Option 3 is incorrect because atomic electrons do not undergo spontaneous nuclear fusion with protons.",
+    "eh": "1. विकल्प 0 सही है क्योंकि मैक्सवेल के शास्त्रीय विद्युत-चुंबकीय सिद्धांत (Classical Electrodynamics) के अनुसार, त्वरित गति करने वाला कोई भी आवेशित कण निरंतर विद्युत-चुंबकीय विकिरण के रूप में ऊर्जा उत्सर्जित करता है। रदरफोर्ड मॉडल में नाभिक के चारों ओर वृत्ताकार कक्षा में घूमता हुआ इलेक्ट्रॉन निरंतर **अभिकेंद्री त्वरण (Centripetal Acceleration)** का अनुभव करता है। अतः ऊर्जा के निरंतर ह्रास से इलेक्ट्रॉन का कक्षीय मार्ग छोटा होता जाएगा और वह लगभग $10^{-8}$ सेकंड में सर्पिलाकार गति करता हुआ नाभिक में गिरकर नष्ट हो जाएगा। रदरफोर्ड मॉडल परमाणु के इस स्थायित्व की व्याख्या नहीं कर सका।\n2. विकल्प 1 गलत है क्योंकि गुरुत्वाकर्षण बल सदैव आकर्षक होता है और उप-परमाणु स्तर पर नगण्य होता है।\n3. विकल्प 2 गलत है क्योंकि वृत्तीय गति के लिए अभिकेंद्री बल अनिवार्य है।\n4. विकल्प 3 गलत है क्योंकि कक्षीय इलेक्ट्रॉन नाभिक के साथ संलयन नहीं करते हैं।"
   },
   {
     "p_id": "bpsc_chem_m15_03",
     "qe": "Niels Bohr resolved the instability of Rutherford's atomic model by introducing Planck's quantum hypothesis into orbital mechanics. What is Bohr's fundamental postulate regarding the angular momentum ($mvr$) of a revolving electron?",
     "qh": "नील्स बोहर ने कक्षीय यांत्रिकी (orbital mechanics) में प्लांक की क्वांटम परिकल्पना को शामिल करके रदरफोर्ड के परमाणु मॉडल की अस्थिरता का समाधान किया। एक घूर्णन करते हुए इलेक्ट्रॉन के कोणीय संवेग ($mvr$) के संबंध में बोहर की मौलिक अवधारणा क्या है?",
-    "o": [
+    "oe": [
       "Angular momentum is continuously variable and proportional to orbital velocity alone.",
-      "Angular momentum is quantized and strictly restricted to integral multiples of $\\\\frac{h}{2\\\\pi}$ ($mvr = \\\\frac{nh}{2\\\\pi}$).",
+      "Angular momentum is quantized and strictly restricted to integral multiples of $\\frac{h}{2\\pi}$ ($mvr = \\frac{nh}{2\\pi}$).",
       "Angular momentum is zero in all non-radiating stationary orbits.",
       "Angular momentum depends exclusively on the atomic mass number ($A$)."
     ],
+    "oh": [
+      "कोणीय संवेग लगातार परिवर्तनशील होता है और केवल कक्षीय वेग के समानुपाती होता है।",
+      "कोणीय संवेग परिमाणित (quantized) होता है और $\\frac{h}{2\\pi}$ ($mvr = \\frac{nh}{2\\pi}$) के पूर्णांक गुणकों तक सख्ती से प्रतिबंधित होता है।",
+      "सभी गैर-विकिरण वाली स्थिर कक्षाओं में कोणीय संवेग शून्य होता है।",
+      "कोणीय संवेग विशेष रूप से परमाणु द्रव्यमान संख्या ($A$) पर निर्भर करता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes classical non-quantized mechanics. Option 1 is correct because Bohr postulated that an electron can revolve only in those non-radiating circular orbits where its **Angular Momentum** [the rotational analog of linear momentum, defined as the cross product of position vector and linear momentum, $L = mvr$] is an integral multiple of Planck's constant divided by $2\\\\pi$: $mvr = \\\\frac{nh}{2\\\\pi}$, where $n = 1, 2, 3...$ is the principal quantum number and $h$ is Planck's constant. This condition establishes **Quantum Stationarity**, preventing continuous energy loss. Option 2 is incorrect because angular momentum is non-zero for $n \\\\ge 1$. Option 3 falsely ties angular momentum to mass number $A$ rather than principal shell $n$."
+    "ee": "1. Option 0 describes classical continuous orbital mechanics, which led to the orbital collapse paradox in Rutherford's model.\n2. Option 1 is correct because in 1913, Niels Bohr resolved atomic instability by postulating that electrons can revolve only in specific non-radiating **stationary orbits** where their orbital **Angular Momentum ($L = mvr$) is Quantized**. Specifically, the angular momentum of the electron must be an integral multiple of Planck's reduced constant ($h/2\\pi$ or $\\hbar$): $$mvr = \\frac{nh}{2\\pi} = n\\hbar$$ where $n = 1, 2, 3, \\dots$ is the Principal Quantum Number, $m$ is electron mass, $v$ is orbital speed, and $r$ is orbital radius. As long as an electron remains in a stationary state, it does not radiate energy.\n3. Option 2 is incorrect because the minimum orbital angular momentum is non-zero ($n=1 \\rightarrow L = h/2\\pi$).\n4. Option 3 is incorrect because quantization depends on the principal energy level $n$, not the nuclear mass number $A$.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि कोणीय संवेग का सतत होना शास्त्रीय भौतिकी का नियम था, जिसे बोहर ने संशोधित किया।\n2. विकल्प 1 सही है क्योंकि नील्स बोहर (1913) ने प्रतिपादित किया कि इलेक्ट्रॉन नाभिक के चारों ओर केवल उन्हीं निश्चित और गैर-विकिरणी कक्षाओं (स्थिर कक्षाओं) में घूम सकते हैं, जिनमें उनका **कोणीय संवेग ($mvr$) $h/2\\pi$ का पूर्ण गुणज (Quantized)** होता है: $$mvr = \\frac{nh}{2\\pi}$$ जहाँ $n = 1, 2, 3\\dots$ (मुख्य क्वांटम संख्या) और $h$ प्लांक स्थिरांक है। इन अनुमत कक्षाओं में गति करते समय इलेक्ट्रॉन ऊर्जा का विकिरण नहीं करते हैं।\n3. विकल्प 2 गलत है क्योंकि प्रथम कक्षा में कोणीय संवेग $h/2\\pi$ होता है, शून्य नहीं।\n4. विकल्प 3 गलत है क्योंकि कोणीय संवेग मुख्य कोश संख्या $n$ पर निर्भर करता है, द्रव्यमान संख्या $A$ पर नहीं।"
   },
   {
     "p_id": "bpsc_chem_m15_04",
     "qe": "In Bohr's atomic model, an electron revolving in a stationary orbit does not radiate energy. How is the necessary inward centripetal force provided to keep the electron in its stable circular path?",
     "qh": "बोहर के परमाणु मॉडल में, एक स्थिर कक्षा में घूर्णन करने वाला इलेक्ट्रॉन ऊर्जा विकिर्ण नहीं करता है। इलेक्ट्रॉन को उसके स्थिर वृत्ताकार पथ में बनाए रखने के लिए आवश्यक आंतरिक अभिकेंद्री बल (centripetal force) कैसे प्रदान किया जाता है?",
-    "o": [
+    "oe": [
       "By gravitational attraction between orbital mass and nuclear nucleons.",
       "By the electrostatic Coulombic force of attraction between the positively charged nucleus and the negatively charged electron.",
       "By nuclear strong interaction forces operating across macroscopic atomic radii.",
       "By magnetic induction generated by nuclear spin resonance."
     ],
+    "oh": [
+      "कक्षीय द्रव्यमान और परमाणु न्यूक्लियॉन के बीच गुरुत्वाकर्षण आकर्षण द्वारा।",
+      "धनावेशित नाभिक और ऋणावेशित इलेक्ट्रॉन के बीच आकर्षण के इलेक्ट्रोस्टैटिक कूलॉम्बिक बल द्वारा।",
+      "मैक्रोस्कोपिक परमाणु त्रिज्याओं में संचालित परमाणु मजबूत परस्पर क्रिया बलों द्वारा।",
+      "परमाणु स्पिन अनुनाद द्वारा उत्पन्न चुंबकीय प्रेरण द्वारा।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is incorrect because gravitational forces between sub-atomic masses are negligibly weak ($\\\\sim 10^{-40}$ times weaker than electrostatic forces). Option 1 is correct because the required **Centripetal Force** [the net force driving a body along a circular path, $\\\\frac{mv^2}{r}$] is counterbalanced exactly by the **Coulombic Electrostatic Attraction** [the attractive force between two point charges of opposite sign separated by distance $r$, $F_e = \\\\frac{k e^2 Z}{r^2}$] operating between the positively charged nucleus ($+Ze$) and the negatively charged orbital electron ($-e$). Option 2 misapplies short-range strong nuclear forces (which act only within $\\\\sim 10^{-15}\\\\text{ m}$). Option 3 misidentifies magnetic resonance as the orbital force."
+    "ee": "1. Option 0 is incorrect because gravitational attraction between an electron and a nucleus is roughly $10^{-39}$ times weaker than electrostatic forces and is negligible.\n2. Option 1 is correct because for an electron of mass $m$ revolving at velocity $v$ in an orbit of radius $r$ around a nucleus with charge $+Ze$, the required **Centripetal Force ($F_c = \\frac{mv^2}{r}$)** is provided entirely by the **Electrostatic Coulombic Attraction ($F_e$)** between the positive nucleus and the negative electron: $$\\frac{mv^2}{r} = \\frac{kZe^2}{r^2} = \\frac{1}{4\\pi\\varepsilon_0} \\frac{Ze^2}{r^2}$$ This balance keeps the electron in its stable circular path.\n3. Option 2 is incorrect because the strong nuclear force acts only inside the nucleus ($< 10^{-15}\\text{ m}$) and does not extend to atomic orbits ($10^{-10}\\text{ m}$).\n4. Option 3 is incorrect because magnetic spin induction does not provide the primary central orbital force.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि उप-परमाणु स्तर पर गुरुत्वाकर्षण बल नगण्य होता है।\n2. विकल्प 1 सही है क्योंकि नाभिक (आवेश $+Ze$) के चारों ओर $r$ त्रिज्या की वृत्ताकार कक्षा में $v$ वेग से घूमते हुए इलेक्ट्रॉन (आवेश $-e$) के लिए आवश्यक **अभिकेंद्री बल ($F_c = \\frac{mv^2}{r}$)**, धनावेशित नाभिक और ऋणावेशित इलेक्ट्रॉन के बीच लगने वाले **स्थिरवैद्युत कूलॉम आकर्षण बल** द्वारा प्रदान किया जाता है: $$\\frac{mv^2}{r} = \\frac{1}{4\\pi\\varepsilon_0} \\frac{Ze^2}{r^2}$$ यही बल इलेक्ट्रॉन को वृत्ताकार कक्षा में बनाए रखता है।\n3. विकल्प 2 गलत है क्योंकि प्रबल नाभिकीय बल केवल नाभिक के भीतर ($10^{-15}\\text{ m}$) कार्य करता है, परमाणु कक्षा तक नहीं।\n4. विकल्प 3 गलत है क्योंकि मुख्य कक्षीय बल कूलॉम्बिक स्थिरवैद्युत बल ही होता है।"
   },
   {
     "p_id": "bpsc_chem_m15_05",
     "qe": "Bohr's model successfully derived energy levels for hydrogen, but failed under more complex atomic systems. Which atomic species can be accurately evaluated using Bohr's original mathematical equations?",
     "qh": "बोहर के मॉडल ने हाइड्रोजन के लिए ऊर्जा स्तरों को सफलतापूर्वक व्युत्पन्न किया, लेकिन अधिक जटिल परमाणु प्रणालियों में विफल रहा। बोहर के मूल गणितीय समीकरणों का उपयोग करके किस परमाणु प्रजाति का सटीक मूल्यांकन किया जा सकता है?",
-    "o": [
-      "Neutral Helium atom ($\\\\text{He}$, 2 electrons)",
-      "Singly ionized Helium ion ($\\\\text{He}^+$, 1 electron)",
-      "Neutral Carbon atom ($\\\\text{C}$, 6 electrons)",
-      "Lithium atom ($\\\\text{Li}$, 3 electrons)"
+    "oe": [
+      "Neutral Helium atom ($\\text{He}$, 2 electrons)",
+      "Singly ionized Helium ion ($\\text{He}^+$, 1 electron)",
+      "Neutral Carbon atom ($\\text{C}$, 6 electrons)",
+      "Lithium atom ($\\text{Li}$, 3 electrons)"
+    ],
+    "oh": [
+      "तटस्थ हीलियम परमाणु ($\\text{He}$, 2 इलेक्ट्रॉन)",
+      "एकल आयनित हीलियम आयन ($\\text{He}^+$, 1 इलेक्ट्रॉन)",
+      "तटस्थ कार्बन परमाणु ($\\text{C}$, 6 इलेक्ट्रॉन)",
+      "लिथियम परमाणु ($\\text{Li}$, 3 इलेक्ट्रॉन)"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is incorrect because Bohr's theory completely fails for multi-electron systems like neutral $\\\\text{He}$ ($2e^-$) due to inter-electronic repulsions. Option 1 is correct because Bohr's model is mathematically restricted to **Single-Electron Species (Hydrogen-like species)** [atomic ions possessing exactly one orbital electron surrounding a nucleus of atomic number $Z$]. Examples include $\\\\text{H}$ ($Z=1$), $\\\\text{He}^+$ ($Z=2$), $\\\\text{Li}^{2+}$ ($Z=3$), and $\\\\text{Be}^{3+}$ ($Z=4$). Option 2 and Option 3 list multi-electron species ($\\\\text{C}$ has $6e^-$, $\\\\text{Li}$ has $3e^-$) that Bohr's theory cannot model."
+    "ee": "1. Option 0 is incorrect because neutral Helium has 2 electrons; inter-electronic repulsions cause Bohr's simple two-body model to fail completely.\n2. Option 1 is correct because Bohr's mathematical equations for orbital radius ($r_n = \\frac{n^2 h^2}{4\\pi^2 m k Z e^2} = 0.529\\frac{n^2}{Z}\\text{ \\AA}$) and energy levels ($E_n = -13.6\\frac{Z^2}{n^2}\\text{ eV}$) are strictly applicable only to **Single-Electron (Hydrogen-like) Species**. A singly ionized Helium atom (**$\\text{He}^+$**) has atomic number $Z=2$ but possesses only **1 orbital electron**, satisfying the exact single-electron central-force requirements of the Bohr model (other examples include $\\text{Li}^{2+}$ and $\\text{Be}^{3+}$).\n3. Option 2 is incorrect because neutral Carbon is a multi-electron system ($6\\text{ electrons}$).\n4. Option 3 is incorrect because neutral Lithium contains 3 electrons; only doubly-ionized Lithium ($\\text{Li}^{2+}$) fits the Bohr model.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि उदासीन हीलियम में 2 इलेक्ट्रॉन होते हैं और इलेक्ट्रॉनों के आपसी प्रतिकर्षण के कारण बोहर मॉडल इस पर लागू नहीं होता।\n2. विकल्प 1 सही है क्योंकि बोहर का परमाणु मॉडल केवल **एक-इलेक्ट्रॉन वाली प्रजातियों (Hydrogen-like species)** पर ही सटीक रूप से लागू होता है। **एकल आयनित हीलियम आयन ($\\text{He}^+$)** में परमाणु क्रमांक $Z=2$ होता है, परंतु इसमें केवल **1 इलेक्ट्रॉन** शेष रहता है। अतः इसके ऊर्जा स्तरों ($E_n = -13.6\\frac{Z^2}{n^2}\\text{ eV}$) और त्रिज्या की गणना बोहर समीकरणों द्वारा हूबहू की जा सकती है (जैसे $\\text{H}$, $\\text{He}^+$, $\\text{Li}^{2+}$)।\n3. विकल्प 2 गलत है क्योंकि कार्बन में 6 इलेक्ट्रॉन होते हैं।\n4. विकल्प 3 गलत है क्योंकि लिथियम परमाणु में 3 इलेक्ट्रॉन होते हैं (केवल $\\text{Li}^{2+}$ पर यह लागू होता है)।"
   },
   {
     "p_id": "bpsc_chem_m15_06",
     "qe": "When atomic emission spectra are exposed to external environmental fields, single spectral lines split into closely spaced finer lines. What are the specific terms for line splitting caused by magnetic fields versus electric fields?",
     "qh": "जब परमाणु उत्सर्जन स्पेक्ट्रा बाहरी पर्यावरणीय क्षेत्रों के संपर्क में आते हैं, तो एकल स्पेक्ट्रल रेखाएं निकट दूरी वाली महीन रेखाओं में विभाजित हो जाती हैं। चुंबकीय क्षेत्र बनाम विद्युत क्षेत्र के कारण होने वाले रेखा विभाजन (line splitting) के लिए विशिष्ट शब्द क्या हैं?",
-    "o": [
+    "oe": [
       "Magnetic field: Stark Effect; Electric field: Zeeman Effect",
       "Magnetic field: Zeeman Effect; Electric field: Stark Effect",
       "Magnetic field: Tyndall Effect; Electric field: Doppler Effect",
       "Magnetic field: Photoelectric Effect; Electric field: Compton Effect"
     ],
+    "oh": [
+      "चुंबकीय क्षेत्र: स्टार्क प्रभाव; विद्युत क्षेत्र: जीमान प्रभाव",
+      "चुंबकीय क्षेत्र: जीमान प्रभाव; विद्युत क्षेत्र: स्टार्क प्रभाव",
+      "चुंबकीय क्षेत्र: टिंडल प्रभाव; विद्युत क्षेत्र: डॉपलर प्रभाव",
+      "चुंबकीय क्षेत्र: फोटोइलेक्ट्रिक प्रभाव; विद्युत क्षेत्र: कॉम्पटन प्रभाव"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 reverses the classical definitions of these two field-splitting effects. Option 1 is correct because: (1) **Zeeman Effect** refers to the splitting of a spectral line into several fine components in the presence of a static **External Magnetic Field**; (2) **Stark Effect** refers to the splitting of spectral lines in the presence of a strong **External Electric Field**. Both fine-structure phenomena could not be explained by Bohr's simple circular orbit theory. Option 2 lists light scattering (Tyndall) and wave-frequency shifts (Doppler). Option 3 lists electron ejection (Photoelectric) and photon scattering (Compton)."
+    "ee": "1. Option 0 reverses the correct definitions of the Zeeman and Stark effects.\n2. Option 1 is correct because:\n   - The **Zeeman Effect** is defined as the splitting of a spectral line into multiple closely spaced sub-components under the influence of an **external static magnetic field**, caused by the interaction of orbital/spin magnetic moments with the field ($m_l$ and $m_s$ level splitting).\n   - The **Stark Effect** is defined as the splitting of spectral lines into multiple components when the emitting atom is placed in an **external electric field**, caused by the shifting of degenerate orbital energy levels.\n   Both phenomena were major limitations of Bohr's atomic theory, which could not explain them.\n3. Option 2 describes colloidal light scattering (Tyndall) and wave frequency shifts (Doppler).\n4. Option 3 describes photon-electron interactions (Photoelectric effect and Compton scattering).",
+    "eh": "1. विकल्प 0 गलत है क्योंकि इसमें जीमान और स्टार्क प्रभाव के पदों को उलट दिया गया है।\n2. विकल्प 1 सही है क्योंकि:\n   - **जीमान प्रभाव (Zeeman Effect):** किसी **बाह्य चुंबकीय क्षेत्र** की उपस्थिति में स्पेक्ट्रमी रेखाओं का कई बारीक रेखाओं में विभाजित हो जाना जीमान प्रभाव कहलाता है।\n   - **स्टार्क प्रभाव (Stark Effect):** किसी **बाह्य विद्युत क्षेत्र** के प्रभाव में स्पेक्ट्रमी रेखाओं का विपाटन (Splitting) स्टार्क प्रभाव कहलाता है।\n   बोहर का परमाणु मॉडल इन दोनों प्रभावों की व्याख्या करने में असमर्थ रहा था।\n3. विकल्प 2 गलत है क्योंकि टिंडल प्रभाव प्रकाश प्रकीर्णन और डॉपलर प्रभाव आवृत्ति परिवर्तन से संबंधित है।\n4. विकल्प 3 गलत है क्योंकि प्रकाश-विद्युत प्रभाव इलेक्ट्रॉन उत्सर्जन से संबंधित है।"
   },
   {
     "p_id": "bpsc_chem_m15_07",
     "qe": "Henry Moseley conducted systematic X-ray spectroscopic experiments by bombarding various metallic targets with high-energy electrons. What fundamental periodic law did Moseley establish from his experimental data?",
     "qh": "हेनरी मोजले ने उच्च ऊर्जा वाले इलेक्ट्रॉनों से विभिन्न धातु लक्ष्यों पर बमबारी करके व्यवस्थित एक्स-रे स्पेक्ट्रोस्कोपिक प्रयोग किए। मोजले ने अपने प्रायोगिक आंकड़ों से कौन सा मौलिक आवर्ती नियम (periodic law) स्थापित किया?",
-    "o": [
+    "oe": [
       "Physical and chemical properties of elements are periodic functions of their atomic masses.",
-      "The frequency ($\\\\nu$) of characteristic X-rays emitted by an element is directly proportional to the square of its Atomic Number ($\\\\sqrt{\\\\nu} \\\\propto Z$), establishing atomic number as the fundamental characteristic of elements.",
+      "The frequency ($\\nu$) of characteristic X-rays emitted by an element is directly proportional to the square of its Atomic Number ($\\sqrt{\\nu} \\propto Z$), establishing atomic number as the fundamental characteristic of elements.",
       "Atomic radius decreases linearly with mass number.",
       "Nuclear stability is governed exclusively by neutron-to-proton ratios without relation to atomic number."
     ],
+    "oh": [
+      "तत्वों के भौतिक और रासायनिक गुण उनके परमाणु द्रव्यमान के आवर्ती फलन होते हैं।",
+      "किसी तत्व द्वारा उत्सर्जित विशिष्ट एक्स-रे की आवृत्ति ($\\nu$) उसकी परमाणु संख्या के वर्ग के समानुपाती होती है ($\\sqrt{\\nu} \\propto Z$), जो परमाणु संख्या को तत्वों की मौलिक विशेषता के रूप में स्थापित करती है।",
+      "परमाणु त्रिज्या द्रव्यमान संख्या के साथ रैखिक रूप से घटती है।",
+      "परमाणु स्थिरता विशेष रूप से परमाणु संख्या के संबंध के बिना न्यूट्रॉन-से-प्रोटॉन अनुपात द्वारा शासित होती है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 states Mendeleev's older periodic law based on atomic mass. Option 1 is correct because **Moseley's Law** established that the plot of $\\\\sqrt{\\\\nu}$ (where $\\\\nu$ is the frequency of characteristic $K_\\\\alpha$ X-rays) versus **Atomic Number ($Z$)** yielded a straight line ($\\\\sqrt{\\\\nu} = a(Z - b)$), whereas plotting $\\\\sqrt{\\\\nu}$ against atomic mass ($A$) produced erratic curves. This proved conclusively that **Atomic Number ($Z$, nuclear charge)**, not atomic mass ($A$), is the true fundamental property governing elemental behavior and periodic placement. Option 2 and Option 3 present incorrect structural claims."
+    "ee": "1. Option 0 states Mendeleev's Classical Periodic Law (1869), which was based on atomic mass.\n2. Option 1 is correct because in 1913, English physicist Henry Moseley measured the frequencies ($\\nu$) of characteristic $K_\\alpha$ X-rays emitted by various metallic anode targets under cathode ray bombardment. He discovered **Moseley's Law**: $$\\sqrt{\\nu} = a(Z - b)$$ where $Z$ is the nuclear charge / **Atomic Number**, and $a, b$ are constants. Plotting $\\sqrt{\\nu}$ against $Z$ yielded a perfect straight line, whereas plotting against atomic mass ($A$) produced irregular deviations. This established that **Atomic Number ($Z$), not atomic weight, is the fundamental property of an element**, providing the foundation for the Modern Periodic Law and correcting anomalies in Mendeleev's table (e.g., Ar-K, Co-Ni, Te-I pairs).\n3. Option 2 is incorrect because atomic radius variation is periodic, not a simple linear function of mass.\n4. Option 3 is incorrect because nuclear stability is tied to both proton number ($Z$) and neutron count ($N$).",
+    "eh": "1. विकल्प 0 गलत है क्योंकि यह मेंडलीफ का पुराना आवर्त नियम है जो परमाणु भार पर आधारित था।\n2. विकल्प 1 सही है क्योंकि 1913 में हेनरी मोजले ने विभिन्न धातुओं पर कैथोड किरणों की बौछार कर उत्सर्जित अभिलाक्षणिक एक्स-किरणों की आवृत्ति ($\\nu$) का अध्ययन किया और **मोजले का नियम** दिया: $$\\sqrt{\\nu} = a(Z - b)$$ उन्होंने पाया कि $\\sqrt{\\nu}$ और **परमाणु क्रमांक ($Z$)** के बीच का ग्राफ एक सीधी रेखा देता है। इससे यह अकाट्य रूप से सिद्ध हुआ कि **परमाणु क्रमांक ($Z$) ही तत्वों का मूल भौतिक व रासायनिक निर्धारक गुण है**, न कि परमाणु भार। इसी आधार पर 'आधुनिक आवर्त नियम' की नींव पड़ी।\n3. विकल्प 2 गलत है क्योंकि परमाणु त्रिज्या आवर्ती रूप से बदलती है।\n4. विकल्प 3 गलत है क्योंकि परमाणु स्थिरता में $Z$ का भी महत्व होता है।"
   },
   {
     "p_id": "bpsc_chem_m15_08",
-    "qe": "The Mass Number ($A$) and Atomic Number ($Z$) define the nuclear composition of an atom ($_{Z}^{A}\\\\text{X}$). How is the total number of neutrons ($N$) inside the nucleus mathematically derived?",
-    "qh": "द्रव्यमान संख्या ($A$) और परमाणु संख्या ($Z$) एक परमाणु ($_{Z}^{A}\\\\text{X}$) की परमाणु संरचना को परिभाषित करते हैं। नाभिक के अंदर न्यूट्रॉन की कुल संख्या ($N$) गणितीय रूप से कैसे व्युत्पन्न होती है?",
-    "o": [
-      "$\\\\text{Number of Neutrons } (N) = A + Z$",
-      "$\\\\text{Number of Neutrons } (N) = A - Z$",
-      "$\\\\text{Number of Neutrons } (N) = Z - A$",
-      "$\\\\text{Number of Neutrons } (N) = 2A - Z$"
+    "qe": "The Mass Number ($A$) and Atomic Number ($Z$) define the nuclear composition of an atom ($_{Z}^{A}\\text{X}$). How is the total number of neutrons ($N$) inside the nucleus mathematically derived?",
+    "qh": "द्रव्यमान संख्या ($A$) और परमाणु संख्या ($Z$) एक परमाणु ($_{Z}^{A}\\text{X}$) की परमाणु संरचना को परिभाषित करते हैं। नाभिक के अंदर न्यूट्रॉन की कुल संख्या ($N$) गणितीय रूप से कैसे व्युत्पन्न होती है?",
+    "oe": [
+      "$\\text{Number of Neutrons } (N) = A + Z$",
+      "$\\text{Number of Neutrons } (N) = A - Z$",
+      "$\\text{Number of Neutrons } (N) = Z - A$",
+      "$\\text{Number of Neutrons } (N) = 2A - Z$"
+    ],
+    "oh": [
+      "$\\text{न्यूट्रॉनों की संख्या } (N) = A + Z$",
+      "$\\text{न्यूट्रॉनों की संख्या } (N) = A - Z$",
+      "$\\text{न्यूट्रॉनों की संख्या } (N) = Z - A$",
+      "$\\text{न्यूट्रॉनों की संख्या } (N) = 2A - Z$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly adds atomic number and mass number. Option 1 is correct because **Mass Number ($A$)** is defined as the total sum of nuclear nucleons [protons ($Z$) + neutrons ($N$)], giving $A = Z + N$. Rearranging this fundamental relation yields the net neutron count: **$N = A - Z$**. For example, in Carbon-14 ($_{6}^{14}\\\\text{C}$), $A = 14$ and $Z = 6$, yielding $N = 14 - 6 = 8$ neutrons. Option 2 yields a negative number because $A \\\\ge Z$. Option 3 introduces an arbitrary doubling factor."
+    "ee": "1. Option 0 is incorrect because adding mass number and atomic number ($A+Z$) double-counts the protons ($2p + n$).\n2. Option 1 is correct because:\n   - The **Atomic Number ($Z$)** equals the number of protons in the nucleus (and equals the number of electrons in a neutral atom): $Z = p$.\n   - The **Mass Number ($A$)** is the total number of nucleons (protons + neutrons) in the nucleus: $A = p + n = Z + N$.\n   - Rearranging this formula yields the number of neutrons: $$\\mathbf{N = A - Z}$$\n   For example, for Uranium-238 ($_{92}^{238}\\text{U}$), $N = 238 - 92 = 146\\text{ neutrons}$.\n3. Option 2 is incorrect because $Z - A$ yields a negative number since $A \\ge Z$ for all elements.\n4. Option 3 is an unphysical arbitrary formula.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि $A+Z$ करने पर प्रोटॉनों की संख्या दो बार जुड़ जाती है।\n2. विकल्प 1 सही है क्योंकि:\n   - **परमाणु क्रमांक ($Z$)** = नाभिक में प्रोटॉनों की संख्या ($p$) होती है।\n   - **द्रव्यमान संख्या ($A$)** = नाभिक में कुल न्यूक्लियॉनों (प्रोटॉन + न्यूट्रॉन) की संख्या होती है ($A = Z + N$)।\n   - अतः न्यूट्रॉनों की संख्या ज्ञात करने का सही गणितीय सूत्र है: $$\\mathbf{N = A - Z}$$\n   उदाहरण के लिए, सोडियम ($_{11}^{23}\\text{Na}$) में न्यूट्रॉनों की संख्या $N = 23 - 11 = 12$ होगी।\n3. विकल्प 2 गलत है क्योंकि $Z - A$ से ऋणात्मक मान प्राप्त होगा।\n4. विकल्प 3 गलत है क्योंकि यह अमान्य सूत्र है।"
   },
   {
     "p_id": "bpsc_chem_m15_09",
     "qe": "Isotopes are nuclide variants of a single chemical element. What defining sub-atomic characteristics differentiate isotopes of the same element from one another?",
     "qh": "समस्थानिक (Isotopes) एक ही रासायनिक तत्व के न्यूक्लाइड संस्करण हैं। कौन सी परिभाषित उप-परमाणु विशेषताएं एक ही तत्व के समस्थानिकों को एक दूसरे से अलग करती हैं?",
-    "o": [
+    "oe": [
       "Isotopes have different numbers of protons but identical numbers of neutrons.",
       "Isotopes have identical numbers of protons and electrons (same atomic number $Z$), but different numbers of neutrons (different mass number $A$).",
       "Isotopes possess completely different chemical properties and occupy different periodic table positions.",
       "Isotopes have identical physical densities and identical mass numbers."
     ],
+    "oh": [
+      "समस्थानिकों में प्रोटॉन की संख्या भिन्न होती है लेकिन न्यूट्रॉन की संख्या समान होती है।",
+      "समस्थानिकों में प्रोटॉन और इलेक्ट्रॉनों की संख्या समान होती है (समान परमाणु क्रमांक $Z$), लेकिन न्यूट्रॉन की संख्या भिन्न होती है (भिन्न द्रव्यमान संख्या $A$)।",
+      "समस्थानिक पूरी तरह से अलग रासायनिक गुण रखते हैं और विभिन्न आवर्त सारणी पदों पर कब्जा करते हैं।",
+      "समस्थानिकों का भौतिक घनत्व और द्रव्यमान संख्या समान होती है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 swaps protons and neutrons (nuclides with same neutrons are *isotones*). Option 1 is correct because **Isotopes** [atoms of the same element having the same atomic number $Z$ but different mass numbers $A$] possess identical numbers of nuclear protons and orbital electrons, but differ in their **Neutron Count ($N = A - Z$)**. Because their electron configurations are identical, isotopes exhibit **identical chemical properties** and occupy the exact same position in the periodic table. However, due to differing masses, they exhibit **different physical properties** (density, mass, boiling point). Option 2 and Option 3 incorrectly claim different chemical properties or identical physical densities."
+    "ee": "1. Option 0 describes *isotones* (nuclides with identical neutron count $N$ but different proton count $Z$).\n2. Option 1 is correct because **Isotopes** (समस्थानिक) are atoms of the same chemical element that have the **same atomic number ($Z$, same number of protons and electrons)** but **different mass numbers ($A$, different number of neutrons $N$)**. For example, Carbon has isotopes $^{12}_{6}\\text{C}$ ($6n$), $^{13}_{6}\\text{C}$ ($7n$), and $^{14}_{6}\\text{C}$ ($8n$). Because chemical properties are governed by valence electron configurations, isotopes possess **identical chemical properties** and occupy the same position in the periodic table, but exhibit different physical properties (mass, density, radioactivity).\n3. Option 2 is incorrect because isotopes have identical electronic configurations and therefore exhibit the same chemical reactivity and periodic placement.\n4. Option 3 is incorrect because isotopes differ in nuclear mass and density.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि समान न्यूट्रॉन और भिन्न प्रोटॉन वाले तत्व समन्यूट्रॉनिक (Isotones) कहलाते हैं।\n2. विकल्प 1 सही है क्योंकि **समस्थानिक (Isotopes)** एक ही तत्व के वे परमाणु होते हैं जिनकी **परमाणु संख्या ($Z$) समान (अर्थात प्रोटॉनों व इलेक्ट्रॉनों की संख्या समान) होती है, परंतु द्रव्यमान संख्या ($A$) भिन्न होती है (अर्थात न्यूट्रॉनों की संख्या भिन्न होती है)**। उदाहरण के लिए, क्लोरीन के दो समस्थानिक हैं: $^{35}_{17}\\text{Cl}$ ($18n$) और $^{37}_{17}\\text{Cl}$ ($20n$)। समान इलेक्ट्रॉनिक विन्यास के कारण इनके **रासायनिक गुण समान** होते हैं, परंतु द्रव्यमान अलग होने से भौतिक गुण भिन्न होते हैं।\n3. विकल्प 2 गलत है क्योंकि समस्थानिकों के रासायनिक गुण समान होते हैं और आवर्त सारणी में इनका स्थान एक ही होता है।\n4. विकल्प 3 गलत है क्योंकि द्रव्यमान संख्या भिन्न होने से इनका घनत्व भी भिन्न होता है।"
   },
   {
     "p_id": "bpsc_chem_m15_10",
-    "qe": "Hydrogen exhibits three naturally occurring isotopic species ($_{1}^{1}\\\\text{H}, _{1}^{2}\\\\text{H}, _{1}^{3}\\\\text{H}$). Which choice correctly names these isotopes and identifies the radioactive variant?",
-    "qh": "हाइड्रोजन तीन स्वाभाविक रूप से होने वाली समस्थानिक प्रजातियों ($_{1}^{1}\\\\text{H}, _{1}^{2}\\\\text{H}, _{1}^{3}\\\\text{H}$) को प्रदर्शित करता है। कौन सा विकल्प इन समस्थानिकों का सही नाम बताता है और रेडियोधर्मी संस्करण की पहचान करता है?",
-    "o": [
-      "Protium ($_{1}^{1}\\\\text{H}$), Deuterium ($_{1}^{2}\\\\text{H}$), and Tritium ($_{1}^{3}\\\\text{H}$); Tritium is radioactive.",
-      "Protium ($_{1}^{1}\\\\text{H}$), Deuterium ($_{1}^{2}\\\\text{H}$), and Tritium ($_{1}^{3}\\\\text{H}$); Protium is radioactive.",
-      "Deuterium ($_{1}^{1}\\\\text{H}$), Tritium ($_{1}^{2}\\\\text{H}$), and Hydrium ($_{1}^{3}\\\\text{H}$); Deuterium is radioactive.",
-      "Hydron ($_{1}^{1}\\\\text{H}$), Deuteron ($_{1}^{2}\\\\text{H}$), and Triton ($_{1}^{3}\\\\text{H}$); all three are radioactive."
+    "qe": "Hydrogen exhibits three naturally occurring isotopic species ($_{1}^{1}\\text{H}, _{1}^{2}\\text{H}, _{1}^{3}\\text{H}$). Which choice correctly names these isotopes and identifies the radioactive variant?",
+    "qh": "हाइड्रोजन तीन स्वाभाविक रूप से होने वाली समस्थानिक प्रजातियों ($_{1}^{1}\\text{H}, _{1}^{2}\\text{H}, _{1}^{3}\\text{H}$) को प्रदर्शित करता है। कौन सा विकल्प इन समस्थानिकों का सही नाम बताता है और रेडियोधर्मी संस्करण की पहचान करता है?",
+    "oe": [
+      "Protium ($_{1}^{1}\\text{H}$), Deuterium ($_{1}^{2}\\text{H}$), and Tritium ($_{1}^{3}\\text{H}$); Tritium is radioactive.",
+      "Protium ($_{1}^{1}\\text{H}$), Deuterium ($_{1}^{2}\\text{H}$), and Tritium ($_{1}^{3}\\text{H}$); Protium is radioactive.",
+      "Deuterium ($_{1}^{1}\\text{H}$), Tritium ($_{1}^{2}\\text{H}$), and Hydrium ($_{1}^{3}\\text{H}$); Deuterium is radioactive.",
+      "Hydron ($_{1}^{1}\\text{H}$), Deuteron ($_{1}^{2}\\text{H}$), and Triton ($_{1}^{3}\\text{H}$); all three are radioactive."
+    ],
+    "oh": [
+      "प्रोटियम ($_{1}^{1}\\text{H}$), ड्यूटेरियम ($_{1}^{2}\\text{H}$), और ट्राइटियम ($_{1}^{3}\\text{H}$); ट्राइटियम रेडियोधर्मी है।",
+      "प्रोटियम ($_{1}^{1}\\text{H}$), ड्यूटेरियम ($_{1}^{2}\\text{H}$), और ट्राइटियम ($_{1}^{3}\\text{H}$); प्रोटियम रेडियोधर्मी है।",
+      "ड्यूटेरियम ($_{1}^{1}\\text{H}$), ट्राइटियम ($_{1}^{2}\\text{H}$), और हाइड्रियम ($_{1}^{3}\\text{H}$); ड्यूटेरियम रेडियोधर्मी है।",
+      "हाइड्रोन ($_{1}^{1}\\text{H}$), ड्यूटेरॉन ($_{1}^{2}\\text{H}$), और ट्राइटन ($_{1}^{3}\\text{H}$); तीनों रेडियोधर्मी हैं।"
     ],
     "a": 0,
-    "e": "<b>Explanation:</b> Option 1 misidentifies stable Protium as radioactive. Option 0 is correct because hydrogen is the only element whose isotopes have distinct names: (1) **Protium ($_{1}^{1}\\\\text{H}$)** ($0$ neutrons, stable, $>99.98\\%$ abundance); (2) **Deuterium ($_{1}^{2}\\\\text{H}$ or $\\\\text{D}$)** ($1$ neutron, stable, heavy hydrogen used in $\\\\text{D}_2\\\\text{O}$); (3) **Tritium ($_{1}^{3}\\\\text{H}$ or $\\\\text{T}$)** ($2$ neutrons, **Radioactive** $\\\\beta^-$-emitter with a half-life of $\\\\sim 12.33$ years). Option 2 scrambles isotopic names and mass numbers. Option 3 lists ionic particle terms (hydron, deuteron, triton) rather than neutral isotope names."
+    "ee": "1. Option 0 is correct because Hydrogen has three isotopes with unique names:\n   - **Protium ($_{1}^{1}\\text{H}$ or $\\text{H}$)**: $1\\text{ proton}, 0\\text{ neutrons}$; non-radioactive (abundant $\\approx 99.985\\%$).\n   - **Deuterium ($_{1}^{2}\\text{H}$ or $\\text{D}$)**: $1\\text{ proton}, 1\\text{ neutron}$; non-radioactive 'heavy hydrogen' used in heavy water ($\\text{D}_2\\text{O}$).\n   - **Tritium ($_{1}^{3}\\text{H}$ or $\\text{T}$)**: $1\\text{ proton}, 2\\text{ neutrons}$; an unstable, **radioactive isotope** that decays via low-energy $\\beta^-$ emission with a half-life of $12.32\\text{ years}$.\n2. Option 1 is incorrect because Protium is completely stable and non-radioactive.\n3. Option 2 is incorrect because the names and mass numbers are mismatched, and Deuterium is stable.\n4. Option 3 lists the bare ionic nuclei (hydron $H^+$, deuteron $D^+$, triton $T^+$), and neither protium nor deuterium is radioactive.",
+    "eh": "1. विकल्प 0 सही है क्योंकि हाइड्रोजन के तीन प्रमुख प्राकृतिक समस्थानिक होते हैं:\n   - **प्रोटियम ($_{1}^{1}\\text{H}$)**: इसमें 1 प्रोटॉन और 0 न्यूट्रॉन होते हैं (यह 99.98% पाया जाने वाला स्थायी समस्थानिक है)।\n   - **ड्यूटेरियम ($_{1}^{2}\\text{H}$ या $\\text{D}$)**: इसमें 1 प्रोटॉन और 1 न्यूट्रॉन होता है (इसे भारी हाइड्रोजन कहते हैं, जिससे भारी जल $\\text{D}_2\\text{O}$ बनता है; यह भी स्थायी है)।\n   - **ट्राइटियम ($_{1}^{3}\\text{H}$ या $\\text{T}$)**: इसमें 1 प्रोटॉन और 2 न्यूट्रॉन होते हैं। यह एक **रेडियोधर्मी समस्थानिक** है, जो कम ऊर्जा वाले बीटा कणों ($\\beta^-$) का उत्सर्जन करता है और इसकी अर्ध-आयु लगभग 12.3 वर्ष होती है।\n2. विकल्प 1 गलत है क्योंकि प्रोटियम रेडियोधर्मी नहीं है।\n3. विकल्प 2 गलत है क्योंकि नामों और द्रव्यमानों का क्रम गलत है।\n4. विकल्प 3 गलत है क्योंकि हाइड्रोन और ड्यूटेरॉन केवल धनावेशित नाभिक के नाम हैं और वे सभी रेडियोधर्मी नहीं हैं।"
   },
   {
     "p_id": "bpsc_chem_m15_11",
     "qe": "Evaluating isotopic diversity across the Modern Periodic Table reveals that one specific heavy element possesses the maximum number of stable/radioactive isotopes. Which element holds this periodic distinction?",
     "qh": "आधुनिक आवर्त सारणी में समस्थानिक विविधता का मूल्यांकन करने से पता चलता है कि एक विशिष्ट भारी तत्व में स्थिर/रेडियोधर्मी समस्थानिकों की अधिकतम संख्या होती है। कौन सा तत्व इस आवर्त गौरव को रखता है?",
-    "o": [
+    "oe": [
       "Uranium ($Z=92$)",
       "Polonium ($Z=84$)",
       "Hydrogen ($Z=1$)",
       "Carbon ($Z=6$)"
     ],
+    "oh": [
+      "यूरेनियम ($Z=92$)",
+      "पोलोनियम ($Z=84$)",
+      "हाइड्रोजन ($Z=1$)",
+      "कार्बन ($Z=6$)"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists uranium, which has major nuclear isotopes ($^{235}\\\\text{U}, ^{238}\\\\text{U}$) but not the overall maximum count. Option 1 is correct because **Polonium ($\\\\text{Po}$, $Z=84$)** holds the record for the **Maximum Number of Isotopes** (over 42 known synthetic and natural radioactive isotopes ranging from mass numbers 186 to 227). In terms of stable non-radioactive isotopes, Tin ($\\\\text{Sn}$, $Z=50$) holds the record with 10 stable isotopes. Option 2 has 3 isotopes, and Option 3 has 3 primary isotopes ($^{12}\\\\text{C}, ^{13}\\\\text{C}, ^{14}\\\\text{C}$)."
+    "ee": "1. Option 0 is incorrect because Uranium has around 26 recognized synthetic/natural radioisotopes ($A=215\\text{ to }242$), which is fewer than Polonium.\n2. Option 1 is correct because **Polonium ($\\text{Po}$, $Z=84$)**, discovered in 1898 by Marie and Pierre Curie, holds the record for possessing the **maximum number of isotopes (around 42 isotopes)** with mass numbers ranging from $A = 186$ to $A = 227$, all of which are radioactive. (Note: Among stable non-radioactive elements, Tin ($\\text{Sn}$, $Z=50$) holds the record with 10 stable isotopes).\n3. Option 2 is incorrect because Hydrogen possesses only 3 natural isotopes ($^1\\text{H}, ^2\\text{H}, ^3\\text{H}$) and four short-lived synthetic variants ($^4\\text{H}\\text{ to }^7\\text{H}$).\n4. Option 3 is incorrect because Carbon has only 15 total recognized isotopes ($^{8}\\text{C}\\text{ to }^{22}\\text{C}$).",
+    "eh": "1. विकल्प 0 गलत है क्योंकि यूरेनियम के लगभग 26 समस्थानिक ज्ञात हैं।\n2. विकल्प 1 सही है क्योंकि आवर्त सारणी में **पोलोनियम ($\\text{Po}$, $Z=84$)** के पास **सर्वाधिक समस्थानिक (लगभग 42 समस्थानिक)** होने का कीर्तिमान है (द्रव्यमान संख्या 186 से 227 तक), और इसके सभी समस्थानिक रेडियोधर्मी हैं। इसकी खोज 1898 में मैडम मैरी क्यूरी और पियरे क्यूरी ने की थी। (स्थिर अ-रेडियोधर्मी तत्वों में सर्वाधिक 10 स्थिर समस्थानिक टिन/$\\text{Sn}$ के पास हैं)।\n3. विकल्प 2 गलत है क्योंकि हाइड्रोजन के कुल 7 समस्थानिक (3 प्राकृतिक) ही ज्ञात हैं।\n4. विकल्प 3 गलत है क्योंकि कार्बन के कुल 15 समस्थानिक ज्ञात हैं।"
   },
- 
   {
     "p_id": "bpsc_chem_m15_13",
     "qe": "According to the Bohr-Bury scheme, strict limitations govern the electron population of the outermost (valence) shell. What is the maximum number of electrons allowed in the outermost orbit of any stable atom?",
     "qh": "बोहर-बरी योजना के अनुसार, सबसे बाहरी (वैलेन्स) खोल की इलेक्ट्रॉन संख्या को सख्त सीमाएँ नियंत्रित करती हैं। किसी भी स्थिर परमाणु की सबसे बाहरी कक्षा में कितने इलेक्ट्रॉनों की अधिकतम संख्या की अनुमति है?",
-    "o": [
+    "oe": [
       "2 electrons",
       "8 electrons",
       "18 electrons",
       "32 electrons"
     ],
+    "oh": [
+      "2 इलेक्ट्रॉन",
+      "8 इलेक्ट्रॉन",
+      "18 इलेक्ट्रॉन",
+      "32 इलेक्ट्रॉन"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 applies only to the K-shell duplet capacity ($n=1$). Option 1 is correct because Rule 2 of the **Bohr-Bury Scheme** dictates that **the outermost orbit of any atom cannot accommodate more than 8 electrons** (known as the **Octet Rule** for chemical stability), even if the shell mathematically has a higher capacity according to the $2n^2$ formula (e.g., M-shell capacity is 18, but as an outermost shell it caps at 8). Option 2 describes the maximum capacity of a penultimate shell. Option 3 describes the maximum capacity of an N-shell ($n=4$)."
+    "ee": "1. Option 0 describes the maximum capacity of the innermost K-shell ($n=1$, duplet rule for He and H), not the general valence shell rule.\n2. Option 1 is correct because under Rule 2 of the **Bohr-Bury Scheme** (1921), **the maximum number of electrons that can be accommodated in the outermost (valence) orbit of any atom is strictly 8**, irrespective of the theoretical $2n^2$ capacity of that shell. For example, while the M-shell ($n=3$) can hold up to $2(3)^2 = 18$ electrons, when it acts as the outermost valence shell (as in Argon, $2, 8, 8$), it cannot hold more than 8 electrons; subsequent electrons begin filling the N-shell ($4s$) before the M-shell can accept its remaining 10 electrons ($3d$).\n3. Option 2 describes the maximum capacity of the penultimate shell ($n-1$).\n4. Option 3 describes the maximum theoretical capacity of the $N$-shell ($n=4$, $2(4)^2 = 32$).",
+    "eh": "1. विकल्प 0 गलत है क्योंकि 2 इलेक्ट्रॉन केवल पहले कोश (K-कोश, $n=1$) की अधिकतम सीमा है।\n2. विकल्प 1 सही है क्योंकि **बोहर-बरी योजना (1921)** के नियम के अनुसार **किसी भी परमाणु के सबसे बाहरी (संयोजी) कोश में अधिकतम 8 इलेक्ट्रॉन ही रह सकते हैं** (अष्टक नियम / Octet Rule), भले ही $2n^2$ सूत्र के अनुसार उस कोश की कुल धारिता अधिक हो। उदाहरण के लिए, M-कोश ($n=3$) की कुल क्षमता 18 इलेक्ट्रॉन की है, परंतु यदि यह सबसे बाहरी कोश है (जैसे आर्गन में), तो इसमें 8 से अधिक इलेक्ट्रॉन नहीं आ सकते। 8 इलेक्ट्रॉन होने के बाद अगला इलेक्ट्रॉन अगले कोश ($4s$) में प्रवेश करता है।\n3. विकल्प 2 गलत है क्योंकि 18 इलेक्ट्रॉन उपांतिम (Penultimate) कोश की अधिकतम सीमा है।\n4. विकल्प 3 गलत है क्योंकि 32 इलेक्ट्रॉन चौथे कोश ($n=4$) की कुल क्षमता है।"
   },
   {
     "p_id": "bpsc_chem_m15_14",
     "qe": "The Bohr-Bury rules define electron population caps for inner shells. What is the maximum number of electrons permitted in the penultimate shell (second shell from outside) of an atom?",
     "qh": "बोहर-बरी नियम आंतरिक खोलों के लिए इलेक्ट्रॉन आबादी की सीमा तय करते हैं। किसी परमाणु के उपांतिम खोल (penultimate shell - बाहर से दूसरा खोल) में अधिकतम कितने इलेक्ट्रॉनों की अनुमति है?",
-    "o": [
+    "oe": [
       "8 electrons",
       "18 electrons",
       "32 electrons",
       "50 electrons"
     ],
+    "oh": [
+      "8 इलेक्ट्रॉन",
+      "18 इलेक्ट्रॉन",
+      "32 इलेक्ट्रॉन",
+      "50 इलेक्ट्रॉन"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is the cap for the outermost valence shell. Option 1 is correct because Rule 3 of the **Bohr-Bury Scheme** explicitly states that **the Penultimate Shell** [the atomic electron shell immediately beneath the outermost valence shell, represented by quantum shell $n-1$] **cannot contain more than 18 electrons**, provided the pre-penultimate shell ($n-2$) and outermost shell ($n$) satisfy step-wise filling constraints. Option 2 is the maximum capacity of the pre-penultimate shell ($n-2$) in heavy elements. Option 3 applies to $n=5$ theoretical capacity."
+    "ee": "1. Option 0 represents the maximum electron limit for the outermost (ultimate, $n$) valence shell.\n2. Option 1 is correct because under the **Bohr-Bury Scheme**:\n   - The outermost shell ($n$) cannot accommodate more than **8 electrons**.\n   - The **Penultimate Shell ($n-1$, the second shell from the outside)** cannot accommodate more than **18 electrons**.\n   - The **Anti-penultimate / Pre-penultimate Shell ($n-2$, the third shell from the outside)** cannot accommodate more than **32 electrons**.\n   These limits ensure structural stability and smooth transitions during the progressive filling of $d$-subshells (transition metals) and $f$-subshells (inner-transition metals).\n3. Option 2 is the maximum capacity of the pre-penultimate shell ($n-2$).\n4. Option 3 represents the theoretical capacity of shell $n=5$ ($2n^2 = 50$).",
+    "eh": "1. विकल्प 0 गलत है क्योंकि 8 इलेक्ट्रॉन सबसे बाहरी (Ultimate) कोश की अधिकतम सीमा है।\n2. विकल्प 1 सही है क्योंकि **बोहर-बरी नियमों** के अनुसार:\n   - सबसे बाहरी कोश (Outermost shell, $n$) में अधिकतम **8 इलेक्ट्रॉन** हो सकते हैं।\n   - **उपांतिम कोश (Penultimate shell, $n-1$, बाहर से दूसरा कोश)** में अधिकतम **18 इलेक्ट्रॉन** हो सकते हैं।\n   - पूर्व-उपांतिम कोश (Anti-penultimate shell, $n-2$, बाहर से तीसरा कोश) में अधिकतम **32 इलेक्ट्रॉन** हो सकते हैं।\n   यह नियम संक्रमण (d-block) और आंतरिक संक्रमण (f-block) तत्वों के इलेक्ट्रॉनिक विन्यास को नियंत्रित करता है।\n3. विकल्प 2 गलत है क्योंकि 32 इलेक्ट्रॉन बाहर से तीसरे ($n-2$) कोश की सीमा है।\n4. विकल्प 3 गलत है क्योंकि 50 इलेक्ट्रॉन $n=5$ की सैद्धांतिक धारिता है।"
   },
   {
     "p_id": "bpsc_chem_m15_15",
-    "qe": "Bohr's third postulate states that energy is emitted or absorbed by an atom only when an electron transitions between energy levels ($\\\\Delta E = E_2 - E_1 = \\\\frac{hc}{\\\\lambda}$). What occurs when an electron absorbs a photon of energy equal to $\\\\Delta E$?",
-    "qh": "बोहर का तीसरा नियम कहता है कि ऊर्जा केवल तभी उत्सर्जित या अवशोषित होती है जब कोई इलेक्ट्रॉन ऊर्जा स्तरों के बीच संक्रमण करता है ($\\\\Delta E = E_2 - E_1 = \\\\frac{hc}{\\\\lambda}$)। जब एक इलेक्ट्रॉन $\\\\Delta E$ के बराबर ऊर्जा वाले फोटॉन को अवशोषित करता है तो क्या होता है?",
-    "o": [
+    "qe": "Bohr's third postulate states that energy is emitted or absorbed by an atom only when an electron transitions between energy levels ($\\Delta E = E_2 - E_1 = \\frac{hc}{\\lambda}$). What occurs when an electron absorbs a photon of energy equal to $\\Delta E$?",
+    "qh": "बोहर का तीसरा नियम कहता है कि ऊर्जा केवल तभी उत्सर्जित या अवशोषित होती है जब कोई इलेक्ट्रॉन ऊर्जा स्तरों के बीच संक्रमण करता है ($\\Delta E = E_2 - E_1 = \\frac{hc}{\\lambda}$)। जब एक इलेक्ट्रॉन $\\Delta E$ के बराबर ऊर्जा वाले फोटॉन को अवशोषित करता है तो क्या होता है?",
+    "oe": [
       "The electron falls from a higher energy outer orbit to a lower energy inner orbit.",
       "The electron is excited from a lower energy inner orbit ($E_1$) to a higher energy outer orbit ($E_2$).",
       "The electron merges into the nucleus, transforming into a neutron.",
       "The electron's rest mass increases by a factor of 1837."
     ],
+    "oh": [
+      "इलेक्ट्रॉन उच्च ऊर्जा वाली बाहरी कक्षा से कम ऊर्जा वाली आंतरिक कक्षा में गिरता है।",
+      "इलेक्ट्रॉन कम ऊर्जा वाली आंतरिक कक्षा ($E_1$) से उच्च ऊर्जा वाली बाहरी कक्षा ($E_2$) में उत्तेजित होता है।",
+      "इलेक्ट्रॉन नाभिक में विलीन हो जाता है, जिससे न्यूट्रॉन में बदल जाता है।",
+      "इलेक्ट्रॉन का विराम द्रव्यमान 1837 के कारक से बढ़ जाता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes photon *emission* (de-excitation), where an electron drops to a lower energy shell and emits light. Option 1 is correct because absorbing a quantum of energy ($\\\\Delta E = h\\\\nu = \\\\frac{hc}{\\\\lambda}$) supplies the exact energy difference required to promote an electron from a **Lower Energy Ground Orbit ($E_1$) to a Higher Energy Excited Orbit ($E_2$)**. The absorbed wavelength $\\\\lambda$ corresponds to a dark absorption line in the spectrum. Option 2 describes electron capture, a radioactive nuclear process. Option 3 mixes relativistic mass increases into quantum orbital jumps."
+    "ee": "1. Option 0 describes photon *emission* (de-excitation), which occurs when an electron drops from a higher level ($E_2$) to a lower level ($E_1$), releasing energy $\\Delta E = h\\nu$.\n2. Option 1 is correct because Bohr's Third Postulate (Frequency Condition) states that an atom absorbs energy only in discrete quanta (photons). When an electron in an inner, lower-energy stationary orbit ($E_1$) absorbs a photon whose energy precisely matches the energy gap ($\\Delta E = E_2 - E_1 = h\\nu = \\frac{hc}{\\lambda}$), the electron absorbs this quantum and jumps (**is excited**) to a higher-energy outer stationary orbit ($E_2$), producing an absorption line in the atomic spectrum.\n3. Option 2 describes K-electron capture, a radioactive decay mechanism, not standard quantum absorption.\n4. Option 3 is incorrect because a photon absorption promotes orbital excitation without altering the electron's invariant rest mass.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि जब इलेक्ट्रॉन उच्च ऊर्जा स्तर ($E_2$) से निम्न स्तर ($E_1$) में आता है, तब ऊर्जा का **उत्सर्जन (Emission)** होता है।\n2. विकल्प 1 सही है क्योंकि बोहर के तृतीय अभिगृहीत के अनुसार, जब कोई इलेक्ट्रॉन अपनी मूल या निम्न ऊर्जा वाली आंतरिक कक्षा ($E_1$) में रहता है और वह दोनों कक्षाओं के ऊर्जा अंतर के ठीक बराबर ($\\Delta E = E_2 - E_1 = h\\nu = \\frac{hc}{\\lambda}$) फोटॉन को अवशोषित करता है, तो वह **उत्तेजित होकर उच्च ऊर्जा वाली बाहरी कक्षा ($E_2$) में छलांग लगाता है (संक्रमण करता है)**। यह प्रक्रिया अवशोषण स्पेक्ट्रम बनाती है।\n3. विकल्प 2 गलत है क्योंकि इलेक्ट्रॉन नाभिक में मिलकर न्यूट्रॉन नहीं बनाता (यह दुर्लभ इलेक्ट्रॉन-कैप्चर नाभिकीय प्रक्रिया है)।\n4. विकल्प 3 गलत है क्योंकि फोटॉन अवशोषण से इलेक्ट्रॉन का विराम द्रव्यमान नहीं बदलता।"
   },
   {
     "p_id": "bpsc_chem_m15_16",
     "qe": "An atom or ion carries an overall electric charge when its proton and electron counts are unequal. What terms designate a negatively charged ion versus a positively charged ion?",
     "qh": "एक परमाणु या आयन कुल विद्युत आवेश वहन करता है जब उसके प्रोटॉन और इलेक्ट्रॉन की संख्या असमान होती है। ऋणावेशित आयन बनाम धनावेशित आयन के लिए कौन से शब्द निर्दिष्ट हैं?",
-    "o": [
+    "oe": [
       "Negatively charged: Cation; Positively charged: Anion",
       "Negatively charged: Anion (electrons > protons); Positively charged: Cation (protons > electrons)",
       "Negatively charged: Isotope; Positively charged: Isobar",
       "Negatively charged: Positron; Positively charged: Electron"
     ],
+    "oh": [
+      "ऋणावेशित: धनायन (Cation); धनावेशित: ऋणायन (Anion)",
+      "ऋणावेशित: ऋणायन (Anion, इलेक्ट्रॉन > प्रोटॉन); धनावेशित: धनायन (Cation, प्रोटॉन > इलेक्ट्रॉन)",
+      "ऋणावेशित: समस्थानिक (Isotope); धनावेशित: समभारिक (Isobar)",
+      "ऋणावेशित: पॉज़िट्रॉन; धनावेशित: इलेक्ट्रॉन"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 reverses the ionic definitions. Option 1 is correct because: (1) An **Anion** is a negatively charged ion formed when a neutral atom gains one or more electrons, resulting in **more electrons than protons** ($e^- > p^+$); (2) A **Cation** is a positively charged ion formed when a neutral atom loses one or more electrons, resulting in **more protons than electrons** ($p^+ > e^-$). Option 2 lists mass/nuclear terms (isotopes/isobars). Option 3 lists sub-atomic particles with reversed charge assignments."
+    "ee": "1. Option 0 reverses the correct definitions of cations and anions.\n2. Option 1 is correct because:\n   - An **Anion (ऋणायन)** is a negatively charged ion formed when a neutral atom gains one or more electrons ($e^- > p^+$), such as chloride ($\\text{Cl}^-$, $17p, 18e^-$) or oxide ($\\text{O}^{2-}$, $8p, 10e^-$). It migrates toward the anode during electrolysis.\n   - A **Cation (धनायन)** is a positively charged ion formed when a neutral atom loses one or more electrons ($p^+ > e^-$), such as sodium ($\\text{Na}^+$, $11p, 10e^-$) or calcium ($\\text{Ca}^{2+}$, $20p, 18e^-$). It migrates toward the cathode during electrolysis.\n3. Option 2 lists nuclear mass terms (isotopes and isobars).\n4. Option 3 reverses the charges of sub-atomic particles (positrons are positive; electrons are negative).",
+    "eh": "1. विकल्प 0 गलत है क्योंकि धनायन और ऋणायन की परिभाषा को उलट दिया गया है।\n2. विकल्प 1 सही है क्योंकि:\n   - **ऋणायन (Anion):** जब कोई उदासीन परमाणु एक या अधिक इलेक्ट्रॉन ग्रहण करता है, तो उसमें इलेक्ट्रॉनों की संख्या प्रोटॉनों से अधिक हो जाती है ($e^- > p^+$) और वह ऋणावेशित हो जाता है (जैसे $\\text{Cl}^-$, $\\text{O}^{2-}$)।\n   - **धनायन (Cation):** जब कोई उदासीन परमाणु एक या अधिक इलेक्ट्रॉन त्यागता है, तो उसमें प्रोटॉनों की संख्या इलेक्ट्रॉनों से अधिक हो जाती है ($p^+ > e^-$) और वह धनावेशित हो जाता है (जैसे $\\text{Na}^+$, $\\text{Mg}^{2+}$)।\n3. विकल्प 2 गलत है क्योंकि समस्थानिक और समभारिक नाभिकीय संरचना से संबंधित हैं।\n4. विकल्प 3 गलत है क्योंकि पॉज़िट्रॉन धनावेशित और इलेक्ट्रॉन ऋणावेशित होता है।"
   },
   {
     "p_id": "bpsc_chem_m15_17",
     "qe": "The Bohr atomic model demonstrates a direct relationship between orbital radius ($r$) and orbital energy ($E$). How does the energy of a principal shell change as its distance (radius) from the nucleus increases?",
     "qh": "बोहर परमाणु मॉडल कक्षीय त्रिज्या ($r$) और कक्षीय ऊर्जा ($E$) के बीच सीधा संबंध दिखाता है। जैसे-जैसे नाभिक से मुख्य खोल की दूरी (त्रिज्या) बढ़ती है, उसकी ऊर्जा कैसे बदलती है?",
-    "o": [
+    "oe": [
       "Energy decreases and approaches negative infinity.",
       "Energy increases (becomes less negative) as orbital radius increases.",
       "Energy remains strictly constant across all orbital radii.",
       "Energy drops to zero at $n=2$ and becomes positive at $n=3$."
     ],
+    "oh": [
+      "ऊर्जा घटती है और नकारात्मक अनंत तक पहुंचती है।",
+      "जैसे-जैसे कक्षीय त्रिज्या बढ़ती है ऊर्जा बढ़ती है (कम नकारात्मक हो जाती है)।",
+      "ऊर्जा सभी कक्षीय त्रिज्याओं में कड़ाई से स्थिर रहती है।",
+      "ऊर्जा $n=2$ पर शून्य हो जाती है और $n=3$ पर सकारात्मक हो जाती है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states energy decreases with radius. Option 1 is correct because the energy of an electron in a Bohr orbit is negative ($E_n = -\\\\frac{13.6 Z^2}{n^2}\\\\text{ eV}$), bound by nuclear attraction. As the principal quantum number $n$ and orbital radius $r$ increase ($r_n \\\\propto n^2$), the energy value becomes **less negative (higher)**: $E_1 = -13.6\\\\text{ eV}$, $E_2 = -3.4\\\\text{ eV}$, $E_3 = -1.51\\\\text{ eV}$. Thus, **higher orbital radius corresponds to higher orbital energy**. At infinite distance ($r \\\\rightarrow \\\\infty$), energy reaches its maximum value of zero ($E = 0$), corresponding to an ionized free electron. Option 2 and Option 3 misrepresent energy formulas."
+    "ee": "1. Option 0 is incorrect because orbital energy becomes less negative (higher) rather than approaching negative infinity as radius increases.\n2. Option 1 is correct because in Bohr's model, the total orbital energy of an electron is negative due to attractive nuclear binding: $$E_n = -\\frac{13.6 Z^2}{n^2}\\text{ eV}$$ As the principal quantum number $n$ and orbital radius increase ($r_n \\propto n^2$), the magnitude of the negative energy decreases, which means **the total energy increases (becomes less negative)**: for hydrogen, $E_1 = -13.6\\text{ eV}$ (closest, lowest energy), $E_2 = -3.4\\text{ eV}$, $E_3 = -1.51\\text{ eV}$, up to $E_\\infty = 0\\text{ eV}$ at infinite distance (representing a completely un-bound, free electron).\n3. Option 2 is incorrect because quantized energy levels have distinct, discrete values.\n4. Option 3 is incorrect because bound state energies remain strictly negative for all finite $n$.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि नाभिक से दूर जाने पर ऊर्जा घटती नहीं बल्कि बढ़ती है।\n2. विकल्प 1 सही है क्योंकि नाभिक के आकर्षण बल से बंधे होने के कारण बोहर कक्षा में इलेक्ट्रॉन की कुल ऊर्जा ऋणात्मक होती है: $$E_n = -\\frac{13.6 Z^2}{n^2}\\text{ eV}$$ जैसे-जैसे नाभिक से दूरी (त्रिज्या $r$ या मुख्य क्वांटम संख्या $n$) बढ़ती है, ऊर्जा का ऋणात्मक मान कम होता जाता है, जिसका अर्थ है कि **ऊर्जा का वास्तविक मान बढ़ता है**: हाइड्रोजन के लिए $E_1 = -13.6\\text{ eV}$ (न्यूनतम ऊर्जा/धरातल स्तर), $E_2 = -3.4\\text{ eV}$, $E_3 = -1.51\\text{ eV}$ और अनंत दूरी ($n=\\infty$) पर ऊर्जा अधिकतम अर्थात $0\\text{ eV}$ हो जाती है।\n3. विकल्प 2 गलत है क्योंकि प्रत्येक कक्षा की ऊर्जा अलग-अलग होती है।\n4. विकल्प 3 गलत है क्योंकि बंधित अवस्था में ऊर्जा सदैव ऋणात्मक रहती है।"
   },
   {
     "p_id": "bpsc_chem_m15_18",
     "qe": "The sequential filling of atomic shells under the Bohr-Bury scheme follows a specific spatial direction. In what order are electron shells populated inside an atom?",
     "qh": "बोहर-बरी योजना के तहत परमाणु खोलों की अनुक्रमिक भरपाई एक विशिष्ट स्थानिक दिशा का पालन करती है। परमाणु के अंदर इलेक्ट्रॉन खोलों को किस क्रम में भरा जाता है?",
-    "o": [
+    "oe": [
       "In a random fashion based on atomic mass.",
-      "In a step-wise manner from inner shells to outer shells (K $\\\\rightarrow$ L $\\\\rightarrow$ M $\\\\rightarrow$ N).",
+      "In a step-wise manner from inner shells to outer shells (K $\\rightarrow$ L $\\rightarrow$ M $\\rightarrow$ N).",
       "From outer valence shells inward toward the nucleus.",
       "All shells fill simultaneously in equal proportions."
     ],
+    "oh": [
+      "परमाणु द्रव्यमान के आधार पर यादृच्छिक (random) तरीके से।",
+      "आंतरिक कोशों से बाहरी कोशों की ओर चरणबद्ध तरीके से (K $\\rightarrow$ L $\\rightarrow$ M $\\rightarrow$ N)।",
+      "बाहरी संयोजी कोशों से नाभिक की ओर अंदर की तरफ।",
+      "सभी कोश समान अनुपात में एक साथ भरते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 claims random filling. Option 1 is correct because Rule 5 of the **Bohr-Bury Scheme** specifies that **electrons are filled in shells in a step-wise, progressive manner from inner shells of lower energy to outer shells of higher energy** (starting from K-shell $n=1$, then L-shell $n=2$, M-shell $n=3$, N-shell $n=4$). A higher outer shell does not begin filling until the lower inner shells reach stable capacities. Option 2 reverses the direction of electronic filling. Option 3 violates energy quantization."
+    "ee": "1. Option 0 is incorrect because electronic filling is orderly and governed by electrostatic potential minima, not random mass associations.\n2. Option 1 is correct because Rule 5 of the **Bohr-Bury Scheme** explicitly states that **electrons are accommodated in atomic shells in a step-wise manner from the inside out**, starting with the lowest energy inner shell ($n=1$, K-shell), followed by the L-shell ($n=2$), M-shell ($n=3$), and N-shell ($n=4$). An outer shell does not begin to fill unless the preceding inner shells have attained their stable permissible capacities, ensuring the atom occupies its lowest, most stable ground energy state.\n3. Option 2 is incorrect because outer shells have higher energy and cannot fill prior to the lower-energy inner shells.\n4. Option 3 is incorrect because quantum energy states fill sequentially rather than simultaneously.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि इलेक्ट्रॉनिक विन्यास यादृच्छिक नहीं बल्कि निश्चित ऊर्जा नियमों पर आधारित होता है।\n2. विकल्प 1 सही है क्योंकि **बोहर-बरी योजना** के अनुसार परमाणु में इलेक्ट्रॉन **निम्नतम ऊर्जा वाले आंतरिक कोशों से प्रारंभ होकर क्रमिक रूप से बाहर के उच्च ऊर्जा वाले कोशों की ओर चरणबद्ध (Step-wise) तरीके से भरे जाते हैं** (K $\\rightarrow$ L $\\rightarrow$ M $\\rightarrow$ N)। जब तक अंदर का कोई कोश अपनी निर्धारित क्षमता तक नहीं भर जाता, तब तक उससे बाहर वाले कोश में नए इलेक्ट्रॉनों का भरना प्रारंभ नहीं होता।\n3. विकल्प 2 गलत है क्योंकि बाहरी कोश उच्च ऊर्जा वाले होते हैं, अतः वे पहले नहीं भर सकते।\n4. विकल्प 3 गलत है क्योंकि सभी कोश एक साथ नहीं भरते हैं।"
   },
   {
     "p_id": "bpsc_chem_m15_19",
     "qe": "In Thomson's plum pudding model, what geometric arrangement was proposed for the positive and negative charges inside an atom?",
     "qh": "थॉमसन के प्लम पुडिंग मॉडल में, एक परमाणु के अंदर धनात्मक और ऋणात्मक आवेशों के लिए किस ज्यामितीय व्यवस्था का प्रस्ताव दिया गया था?",
-    "o": [
+    "oe": [
       "A concentrated central positive core surrounded by distant orbiting electrons.",
       "A uniformly charged positive sphere in which negatively charged electrons are embedded like seeds in a watermelon or raisins in a pudding.",
       "Alternating concentric rings of pure positive and negative charges.",
       "A hollow spherical shell of positive charge containing a central vacuum."
     ],
+    "oh": [
+      "एक केंद्रित केंद्रीय धनात्मक कोर जो दूर की परिक्रमा करने वाले इलेक्ट्रॉनों से घिरा हुआ है।",
+      "एक समान रूप से आवेशित धनात्मक गोला जिसमें ऋणावेशित इलेक्ट्रॉन तरबूज में बीज या हलवे में किशमिश की तरह अंतर्निहित होते हैं।",
+      "शुद्ध धनात्मक और ऋणात्मक आवेशों के वैकल्पिक संकेंद्री वलय।",
+      "धनात्मक आवेश का एक खोखला गोलाकार खोल जिसमें एक केंद्रीय निर्वात होता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes Rutherford's nuclear model. Option 1 is correct because J.J. Thomson (1904) proposed the **Plum Pudding Model** (or watermelon model), postulating that an atom consists of a **solid, uniformly distributed sphere of positive electric charge** ($\\\\sim 10^{-10}\\\\text{ m}$ radius) in which discrete **negatively charged electrons are embedded** throughout, similar to raisins in a Christmas pudding or seeds in a watermelon, ensuring overall electrical neutrality. Option 2 and Option 3 describe non-existent ring or hollow shell arrangements."
+    "ee": "1. Option 0 describes the Rutherford and Bohr nuclear planetary models (developed in 1911–1913).\n2. Option 1 is correct because in 1904, Sir J.J. Thomson proposed the **Plum Pudding Model** (also known as the Watermelon or Raisin Pudding Model). He envisioned the atom as a **solid, uniform sphere of positive electricity** (radius $\\approx 10^{-10}\\text{ m}$) throughout which **negatively charged electrons are embedded** at discrete points, perfectly analogous to seeds embedded in the red pulp of a watermelon or plums/raisins distributed in a Christmas pudding, keeping the atom electrically neutral overall.\n3. Option 2 is incorrect because Thomson proposed a continuous uniform solid sphere, not concentric charge rings.\n4. Option 3 is incorrect because the model did not postulate a hollow shell or central vacuum.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि नाभिकीय केंद्रीय कोर की संकल्पना रदरफोर्ड ने दी थी।\n2. विकल्प 1 सही है क्योंकि जे.जे. थॉमसन (1904) ने परमाणु संरचना का पहला मॉडल प्रस्तुत किया जिसे **'प्लम पुडिंग मॉडल' (या तरबूज मॉडल)** कहा जाता है। इस मॉडल के अनुसार परमाणु लगभग $10^{-10}\\text{ m}$ त्रिज्या का एक **धनावेशित ठोस गोला** होता है, जिसमें **ऋणावेशित इलेक्ट्रॉन समान रूप से इस प्रकार धंसे रहते हैं जैसे तरबूज के लाल गूदे में काले बीज या पुडिंग (हलवे) में किशमिश धंसी होती है**। कुल धनावेश और कुल ऋणावेश बराबर होने से परमाणु उदासीन रहता है।\n3. विकल्प 2 गलत है क्योंकि इसमें संकेंद्री वलयों की कोई परिकल्पना नहीं थी।\n4. विकल्प 3 गलत है क्योंकि थॉमसन का गोला ठोस धनावेशित माना गया था, खोखला नहीं।"
   },
   {
     "p_id": "bpsc_chem_m15_20",
-    "qe": "Evaluating the nuclear dimension relative to the overall atomic volume based on Rutherford's $\\\\alpha$-particle scattering experiment reveals a striking scale disparity. How does the size of the atomic nucleus compare to the total size of the atom?",
-    "qh": "रदरफोर्ड के $\\\\alpha$-कण प्रकीर्णन प्रयोग पर आधारित कुल परमाणु आयतन के सापेक्ष परमाणु आकार का मूल्यांकन एक आश्चर्यजनक पैमाने की असमानता को उजागर करता है। परमाणु के कुल आकार की तुलना में परमाणु के नाभिक का आकार कैसा होता है?",
-    "o": [
+    "qe": "Evaluating the nuclear dimension relative to the overall atomic volume based on Rutherford's $\\alpha$-particle scattering experiment reveals a striking scale disparity. How does the size of the atomic nucleus compare to the total size of the atom?",
+    "qh": "रदरफोर्ड के $\\alpha$-कण प्रकीर्णन प्रयोग पर आधारित कुल परमाणु आयतन के सापेक्ष परमाणु आकार का मूल्यांकन एक आश्चर्यजनक पैमाने की असमानता को उजागर करता है। परमाणु के कुल आकार की तुलना में परमाणु के नाभिक का आकार कैसा होता है?",
+    "oe": [
       "The nucleus occupies approximately $90\\%$ of the total atomic volume.",
-      "The nuclear radius ($\\\\sim 10^{-15}\\\\text{ m}$) is about $10^5$ times smaller than the atomic radius ($\\\\sim 10^{-10}\\\\text{ m}$), meaning the nucleus occupies an extremely minute fraction of space and most of the atom is empty space.",
+      "The nuclear radius ($\\sim 10^{-15}\\text{ m}$) is about $10^5$ times smaller than the atomic radius ($\\sim 10^{-10}\\text{ m}$), meaning the nucleus occupies an extremely minute fraction of space and most of the atom is empty space.",
       "The nucleus and the atom have identical radii.",
       "The nucleus expands to fill the outermost orbit during electron revolution."
     ],
+    "oh": [
+      "नाभिक कुल परमाणु आयतन का लगभग $90\\%$ भाग घेरता है।",
+      "परमाणु नाभिक की त्रिज्या ($\\sim 10^{-15}\\text{ m}$) परमाणु की त्रिज्या ($\\sim 10^{-10}\\text{ m}$) से लगभग $10^5$ गुना छोटी है, जिसका अर्थ है कि नाभिक स्थान के एक अत्यंत सूक्ष्म अंश पर कब्जा करता है और अधिकांश परमाणु खाली स्थान होता है।",
+      "नाभिक और परमाणु की त्रिज्या समान होती है।",
+      "इलेक्ट्रॉन परिक्रमण के दौरान नाभिक सबसे बाहरी कक्षा को भरने के लिए फैलता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly claims the nucleus occupies most of the atomic volume. Option 1 is correct because Rutherford's scattering data proved that the **Atomic Radius** is approximately $10^{-10}\\\\text{ m}$ ($1\\\\text{ \\\\AA}$), whereas the **Nuclear Radius** is approximately $10^{-15}\\\\text{ m}$ ($1\\\\text{ Fermi}$). The ratio of atomic radius to nuclear radius is $\\\\frac{10^{-10}}{10^{-15}} = 10^5$. Volume scales with the cube of radius ($V \\\\propto r^3$), meaning the volume of the nucleus is only $\\\\sim 10^{-15}$ times the total volume of the atom. Consequently, **the nucleus is extremely tiny, and most of the atom is empty space**. Option 2 and Option 3 present incorrect structural scale assumptions."
+    "ee": "1. Option 0 is incorrect because the nucleus occupies less than $10^{-13}\\%$ of the total atomic volume.\n2. Option 1 is correct because Rutherford's 1911 experimental data proved that the **radius of an atom is about $10^{-10}\\text{ m}$ ($1\\text{ \\AA}$)**, whereas the **radius of the central nucleus is about $10^{-15}\\text{ m}$ ($1\\text{ Fermi}$)**. The linear ratio of atomic radius to nuclear radius is: $$\\frac{R_{\\text{atom}}}{R_{\\text{nucleus}}} = \\frac{10^{-10}}{10^{-15}} = 10^5 = 100,000$$\n   Since volume scales cubically ($V = \\frac{4}{3}\\pi R^3$), the fraction of volume occupied by the nucleus is: $$\\frac{V_{\\text{nucleus}}}{V_{\\text{atom}}} = \\left(\\frac{10^{-15}}{10^{-10}}\\right)^3 = 10^{-15}$$\n   This proves that the nucleus is unimaginably tiny and dense, and more than $99.9999999999999\\%$ of an atom's volume is completely empty space through which alpha particles pass undeflected.\n3. Option 2 is incorrect because the atom is 100,000 times larger in diameter than its nucleus.\n4. Option 3 is incorrect because the nuclear radius is fixed and does not expand into outer electron orbits.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि नाभिक परमाणु के आयतन का एक अरबवाँ भाग से भी कम घेरता है।\n2. विकल्प 1 सही है क्योंकि रदरफोर्ड के प्रयोगों से सिद्ध हुआ कि **परमाणु की त्रिज्या लगभग $10^{-10}\\text{ m}$ ($1\\text{ \\AA}$)** होती है, जबकि **नाभिक की त्रिज्या लगभग $10^{-15}\\text{ m}$ ($1\\text{ Fermi}$)** होती है। इस प्रकार परमाणु की त्रिज्या नाभिक की त्रिज्या से लगभग **$10^5$ गुना ($1,00,000$ गुना) बड़ी** होती है। आयतन त्रिज्या के घन ($R^3$) के समानुपाती होने के कारण नाभिक का आयतन परमाणु के कुल आयतन का मात्र $10^{-15}$ वां भाग होता है, जिससे यह निष्कर्ष निकला कि **परमाणु का अधिकांश भाग अंदर से खोखला (खाली स्थान) होता है**।\n3. विकल्प 2 गलत है क्योंकि परमाणु और नाभिक के आकारों में $10^5$ गुना का भारी अंतर होता है।\n4. विकल्प 3 गलत है क्योंकि नाभिक एक दृढ़ और अत्यंत सघन केंद्रीय संरचना है।"
   },
-  
   {
     "p_id": "bpsc_chem_m16_01",
     "qe": "Evaluating the ground-state electron configuration order dictated by the Aufbau Principle reveals specific energy transitions across subshells. What determines why the $4s$ orbital is populated prior to the $3d$ orbital during atomic electron filling?",
     "qh": "ऑफ़बाउ सिद्धांत (Aufbau Principle) द्वारा निर्देशित अवस्था इलेक्ट्रॉन विन्यास क्रम का मूल्यांकन उपकोशों में विशिष्ट ऊर्जा परिवर्तनों को उजागर करता है। परमाणु इलेक्ट्रॉन भरने के दौरान $3d$ कक्षक से पहले $4s$ कक्षक क्यों भरा जाता है?",
-    "o": [
+    "oe": [
       "The $4s$ orbital has a higher principal quantum number ($n=4$) and higher spatial capacity than $3d$.",
       "The $4s$ orbital possesses a lower $(n+l)$ energy sum ($4+0 = 4$) compared to the $3d$ orbital ($3+2 = 5$), placing it at a lower energy state in multi-electron atoms.",
       "The $3d$ orbital is restricted to a maximum of two electrons by Pauli's principle.",
       "The $4s$ orbital contains three degenerate magnetic orientations ($m_l = -1, 0, +1$)."
     ],
+    "oh": [
+      "$4s$ कक्षक में $3d$ की तुलना में एक उच्च मुख्य क्वांटम संख्या ($n=4$) और उच्च स्थानिक क्षमता होती है।",
+      "$4s$ कक्षक में $3d$ कक्षक ($3+2 = 5$) की तुलना में कम $(n+l)$ ऊर्जा योग ($4+0 = 4$) होता है, जो इसे बहु-इलेक्ट्रॉन परमाणुओं में कम ऊर्जा अवस्था में रखता है।",
+      "$3d$ कक्षक पाउली के सिद्धांत द्वारा अधिकतम दो इलेक्ट्रॉनों तक सीमित है।",
+      "$4s$ कक्षक में तीन समभ्रंश चुंबकीय अभिविन्यास ($m_l = -1, 0, +1$) होते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is incorrect because a higher principal quantum number alone does not dictate energy order in multi-electron atoms. Option 1 is correct because the **Aufbau Principle** [the quantum mechanical rule stating that electrons fill atomic orbitals of lowest energy first] relies on the **$(n+l)$ Rule** [Bohr-Bury energy rule stating that lower $(n+l)$ values correspond to lower orbital energy]. For $4s$, $n=4$ and $l=0$, yielding $(n+l) = 4$. For $3d$, $n=3$ and $l=2$, yielding $(n+l) = 5$. Because $4 < 5$, the $4s$ orbital sits at a lower energy level than $3d$ in ground-state neutral atoms and is filled first. Option 2 misapplies Pauli's principle ($d$-subshells hold up to 10 electrons). Option 3 confuses $4s$ (which has $l=0, m_l=0$) with $p$-subshells."
+    "ee": "1. Option 0 is incorrect because in multi-electron atoms, energy is not determined by the principal quantum number $n$ alone.\n2. Option 1 is correct because according to the **Aufbau Principle** (German for 'building up') and the **Bohr-Bury $(n+l)$ Rule**:\n   - An subshell with a lower $(n+l)$ value possesses lower energy and is filled first.\n   - For the **$4s$ orbital**: $n = 4, l = 0 \\rightarrow (n+l) = 4 + 0 = \\mathbf{4}$.\n   - For the **$3d$ orbital**: $n = 3, l = 2 \\rightarrow (n+l) = 3 + 2 = \\mathbf{5}$.\n   Since $(n+l)$ for $4s$ ($4$) is strictly less than $(n+l)$ for $3d$ ($5$), the $4s$ subshell has lower energy in ground-state neutral atoms and must be completely filled with two electrons before electrons begin populating the higher-energy $3d$ subshell (e.g., Potassium: $1s^2 2s^2 2p^6 3s^2 3p^6 4s^1$).\n3. Option 2 is incorrect because the $3d$ subshell contains 5 degenerate orbitals holding up to 10 electrons.\n4. Option 3 is incorrect because for an $s$-orbital ($l=0$), the only magnetic quantum number is $m_l = 0$ (single orientation)."
+    ,
+    "eh": "1. विकल्प 0 गलत है क्योंकि बहु-इलेक्ट्रॉन परमाणुओं में ऊर्जा केवल $n$ से निर्धारित नहीं होती।\n2. विकल्प 1 सही है क्योंकि **ऑफबाऊ नियम (Aufbau Principle)** और **$(n+l)$ नियम** के अनुसार, जिस कक्षक के लिए $(n+l)$ का मान कम होता है, उसकी ऊर्जा कम होती है और इलेक्ट्रॉन पहले उसी में प्रवेश करते हैं:\n   - **$4s$ कक्षक के लिए:** $n = 4, l = 0 \\rightarrow (n+l) = 4 + 0 = \\mathbf{4}$\n   - **$3d$ कक्षक के लिए:** $n = 3, l = 2 \\rightarrow (n+l) = 3 + 2 = \\mathbf{5}$\n   चूँकि $4s$ के लिए $(n+l)$ का मान $3d$ से कम है, अतः $4s$ कक्षक की ऊर्जा $3d$ से कम होती है और विन्यास लिखते समय $4s$ को $3d$ से पहले भरा जाता है (जैसे पोटेशियम: $[\\text{Ar}] 4s^1$)।\n3. विकल्प 2 गलत है क्योंकि $d$-उपकोश में 5 कक्षक होते हैं और इसमें अधिकतम 10 इलेक्ट्रॉन आ सकते हैं।\n4. विकल्प 3 गलत है क्योंकि $s$-कक्षक के लिए $m_l = 0$ (एक ही कक्षक) होता है।"
   },
   {
     "p_id": "bpsc_chem_m16_02",
     "qe": "Hund's Rule of Maximum Multiplicity governs electron occupancy within degenerate orbitals of a given subshell. What physical state is maximized when electrons singly occupy degenerate $p$, $d$, or $f$ subshells with parallel spins before pairing?",
     "qh": "हुंड का अधिकतम बहुफलता का नियम (Hund's Rule of Maximum Multiplicity) किसी दिए गए उपकोश के समभ्रंश कक्षकों (degenerate orbitals) के भीतर इलेक्ट्रॉन अधिभोग को नियंत्रित करता है। युग्मन से पहले इलेक्ट्रॉन समानांतर स्पिन के साथ $p$, $d$, या $f$ उपकोशों पर अकेले कब्जा करते हैं तो कौन सी भौतिक स्थिति अधिकतम हो जाती है?",
-    "o": [
+    "oe": [
       "Orbital angular momentum is maximized while total spin approaches zero.",
       "Total spin multiplicity ($2S + 1$) and exchange energy stabilization are maximized while inter-electronic electrostatic repulsion is minimized.",
       "Principal quantum number ($n$) increases sequentially for each paired electron.",
       "Azimuthal quantum number ($l$) drops to zero for all unpaired electrons."
     ],
+    "oh": [
+      "कक्षीय कोणीय संवेग अधिकतम होता है जबकि कुल स्पिन शून्य के करीब पहुंचता है।",
+      "कुल स्पिन बहुलता ($2S + 1$) और विनिमय ऊर्जा स्थिरीकरण अधिकतम होते हैं जबकि अंतर-इलेक्ट्रॉनिक इलेक्ट्रोस्टैटिक प्रतिकर्षण न्यूनतम होता है।",
+      "प्रत्येक युग्मित इलेक्ट्रॉन के लिए मुख्य क्वांटम संख्या ($n$) क्रमिक रूप से बढ़ती है।",
+      "सभी अयुग्मित इलेक्ट्रॉनों के लिए द्विगंशी क्वांटम संख्या ($l$) शून्य हो जाती है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly claims spin approaches zero (parallel spins add up, increasing total spin $S$). Option 1 is correct because **Hund's Rule of Maximum Multiplicity** dictates that pairing in degenerate orbitals [orbitals belonging to the same subshell that possess identical energy levels, such as the three $p$-orbitals or five $d$-orbitals] does not occur until each orbital is singly occupied with parallel spins. Singly occupying separate spatial orbitals keeps electrons as far apart as possible, minimizing **Inter-electronic Electrostatic Repulsion**. Simultaneously, maximizing parallel spins maximizes **Exchange Energy** [the stabilizing energy released when electrons with parallel spins exchange degenerate orbital positions] and yields maximum **Spin Multiplicity** ($2S + 1$). Option 2 and Option 3 present invalid quantum state changes."
+    "ee": "1. Option 0 is incorrect because parallel spins maximize total spin ($S = \\sum s_i$), rather than approaching zero.\n2. Option 1 is correct because **Hund's Rule of Maximum Multiplicity** states that electron pairing in degenerate orbitals (orbitals of equal energy, such as $p_x, p_y, p_z$) cannot occur until each available subshell orbital is singly occupied with electrons possessing **parallel spins ($s = +1/2$)**. Physically, this configuration:\n   - Minimizes **inter-electronic electrostatic repulsion** by keeping electrons in separate spatial lobes;\n   - Maximizes **Exchange Energy** (quantum mechanical stabilization resulting from parallel-spin electrons exchanging degenerate positions);\n   - Maximizes the **Total Spin Multiplicity** given by $(2S + 1)$, leading to the lowest energy, most stable ground electronic state (e.g., Nitrogen $2p^3$: three unpaired parallel electrons).\n3. Option 2 is incorrect because pairing within the same subshell does not alter the principal quantum number $n$.\n4. Option 3 is incorrect because the azimuthal quantum number $l$ is a fixed structural property of the subshell ($l=1$ for $p$, $l=2$ for $d$)."
+    ,
+    "eh": "1. विकल्प 0 गलत है क्योंकि समानांतर चक्रण से कुल चक्रण $S$ बढ़ता है, शून्य नहीं होता।\n2. विकल्प 1 सही है क्योंकि **हुंड के अधिकतम बहुलता के नियम (Hund's Rule)** के अनुसार, समान ऊर्जा वाले समभ्रंश कक्षकों (Degenerate orbitals, जैसे $p_x, p_y, p_z$) में इलेक्ट्रॉनों का युग्मन तब तक नहीं होता जब तक कि प्रत्येक कक्षक में समानांतर चक्रण ($+1/2$) वाला एक-एक इलेक्ट्रॉन न आ जाए। ऐसा होने पर:\n   - अलग-अलग कक्षकों में रहने के कारण इलेक्ट्रॉनों के बीच **पारस्परिक स्थिरवैद्युत प्रतिकर्षण न्यूनतम** होता है;\n   - समानांतर चक्रण वाले इलेक्ट्रॉनों के स्थान विनिमय से मुक्त होने वाली **विनिमय ऊर्जा (Exchange Energy)** अधिकतम होती है;\n   - कुल चक्रण बहुलता ($2S + 1$) अधिकतम होने से परमाणु को **अधिकतम स्थायित्व** प्राप्त होता है (जैसे नाइट्रोजन का $2p^3$ विन्यास)।\n3. विकल्प 2 गलत है क्योंकि एक ही उपकोश में $n$ का मान नहीं बदलता।\n4. विकल्प 3 गलत है क्योंकि $l$ का मान उपकोश के लिए नियत रहता है।"
   },
   {
     "p_id": "bpsc_chem_m16_03",
     "qe": "The Pauli Exclusion Principle (1926) imposes a strict fundamental restriction on the quantum states of electrons inside an atom. If two electrons occupy the exact same atomic orbital ($n, l, m_l$ identical), what constraint does Pauli's principle enforce regarding their spin quantum numbers ($s$)?",
     "qh": "पाउली का अपवर्जन सिद्धांत (1926) परमाणु के अंदर इलेक्ट्रॉनों की क्वांटम स्थितियों पर एक सख्त मौलिक प्रतिबंध लगाता है। यदि दो इलेक्ट्रॉन बिल्कुल समान परमाणु कक्षक ($n, l, m_l$ समान) पर कब्जा करते हैं, तो पाउली का सिद्धांत उनके स्पिन क्वांटम नंबर ($s$) के संबंध में क्या बाधा लागू करता है?",
-    "o": [
+    "oe": [
       "Both electrons must possess identical clockwise spins ($s = +1/2$).",
       "They must possess opposite, anti-parallel spins ($s = +1/2$ and $s = -1/2$), ensuring no two electrons in an atom have an identical set of all four quantum numbers.",
       "The sum of their spin quantum numbers must equal $+1$.",
       "Their azimuthal quantum numbers ($l$) automatically shift to $l=1$."
     ],
+    "oh": [
+      "दोनों इलेक्ट्रॉनों में समान दक्षिणावर्त चक्रण ($s = +1/2$) होना चाहिए।",
+      "उनमें विपरीत, प्रति-समानांतर चक्रण ($s = +1/2$ और $s = -1/2$) होना चाहिए, यह सुनिश्चित करते हुए कि परमाणु में किन्हीं दो इलेक्ट्रॉनों के चारों क्वांटम संख्याओं का सेट समान न हो।",
+      "उनके स्पिन क्वांटम नंबरों का योग $+1$ के बराबर होना चाहिए।",
+      "उनकी द्विगंशी क्वांटम संख्याएं ($l$) स्वचालित रूप से $l=1$ पर स्थानांतरित हो जाती हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 violates Pauli's principle by giving both electrons identical sets of four quantum numbers. Option 1 is correct because the **Pauli Exclusion Principle** states that **no two electrons in an atom can have the exact same set of all four quantum numbers** ($n, l, m_l, s$). If two electrons share the same orbital, they share identical principal ($n$), azimuthal ($l$), and magnetic ($m_l$) quantum numbers. Therefore, they MUST differ in their fourth quantum number—the **Spin Quantum Number ($s$)**—requiring one electron to have spin up ($+1/2$) and the other spin down ($-1/2$) with **Anti-parallel Spins**. Option 2 incorrectly sums spins to $+1$, and Option 3 falsely alters orbital identity."
+    "ee": "1. Option 0 violates Pauli's principle because two parallel electrons in the same orbital would share all four quantum numbers identically.\n2. Option 1 is correct because Austrian physicist Wolfgang Pauli formulated the **Pauli Exclusion Principle in 1925–1926**, which asserts that **no two electrons in an atom can have the same set of all four quantum numbers ($n, l, m_l, s$)**. If two electrons occupy the exact same spatial orbital, their principal ($n$), azimuthal ($l$), and magnetic ($m_l$) quantum numbers are identical. Therefore, to satisfy the exclusion principle, they must have different **Spin Quantum Numbers ($s$)**—one must be spin-up ($s = +1/2$) and the other spin-down ($s = -1/2$). Consequently, any single orbital can hold a maximum of only two electrons, and they must have **opposite (anti-parallel) spins** ($\\upharpoonleft\\downharpoonright$).\n3. Option 2 is incorrect because the vector sum of opposite spins $+1/2$ and $-1/2$ is zero ($S=0$).\n4. Option 3 is incorrect because spin pairing does not change the orbital's angular momentum quantum number $l$.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि दोनों इलेक्ट्रॉनों का चक्रण समान होने पर चारों क्वांटम संख्याएँ समान हो जाएँगी, जो वर्जित है।\n2. विकल्प 1 सही है क्योंकि **पाउली के अपवर्जन सिद्धांत (1925)** के अनुसार, **किसी परमाणु में किन्हीं दो इलेक्ट्रॉनों के लिए चारों क्वांटम संख्याओं ($n, l, m_l, s$) का मान कभी भी एक समान नहीं हो सकता**। यदि दो इलेक्ट्रॉन एक ही कक्षक में हैं, तो उनके लिए मुख्य ($n$), द्विगंशी ($l$) और चुंबकीय ($m_l$) क्वांटम संख्याएँ समान होंगी। अतः चौथी क्वांटम संख्या अर्थात **चक्रण क्वांटम संख्या ($s$) अनिवार्य रूप से भिन्न होनी चाहिए**—एक का मान $+1/2$ (अप-स्पिन) और दूसरे का $-1/2$ (डाउन-स्पिन) होगा। इसी कारण एक कक्षक में विपरीत चक्रण (Anti-parallel spins) वाले अधिकतम 2 इलेक्ट्रॉन ही रह सकते हैं।\n3. विकल्प 2 गलत है क्योंकि विपरीत चक्रणों का योग शून्य ($+1/2 - 1/2 = 0$) होता है।\n4. विकल्प 3 गलत है क्योंकि चक्रण से द्विगंशी क्वांटम संख्या $l$ प्रभावित नहीं होती।"
   },
   {
     "p_id": "bpsc_chem_m16_04",
     "qe": "Quantum numbers completely define the state, energy, spatial geometry, and orientation of atomic orbitals. Which quantum number determines the three-dimensional geometric shape of an orbital subshell, and what are its allowable values for a principal shell $n$?",
     "qh": "क्वांटम संख्याएं परमाणु कक्षकों की स्थिति, ऊर्जा, स्थानिक ज्यामिति और अभिविन्यास को पूरी तरह से परिभाषित करती हैं। कौन सी क्वांटम संख्या कक्षक उपकोश के त्रि-आयामी ज्यामितीय आकार को निर्धारित करती है, और मुख्य कोश $n$ के लिए इसके स्वीकार्य मान क्या हैं?",
-    "o": [
-      "Principal Quantum Number ($n$); values from $1$ to $\\\\infty$.",
+    "oe": [
+      "Principal Quantum Number ($n$); values from $1$ to $\\infty$.",
       "Azimuthal / Angular Momentum Quantum Number ($l$); values from $0$ to $(n-1)$, defining shapes such as spherical ($s$), dumb-bell ($p$), or double dumb-bell ($d$).",
       "Magnetic Quantum Number ($m_l$); values from $-l$ to $+l$.",
       "Spin Quantum Number ($s$); values strictly equal to $0$."
     ],
+    "oh": [
+      "मुख्य क्वांटम संख्या ($n$); मान $1$ से $\\infty$ तक।",
+      "द्विगंशी / कोणीय संवेग क्वांटम संख्या ($l$); मान $0$ से $(n-1)$ तक, जो गोलाकार ($s$), डंबल ($p$), या डबल डंबल ($d$) जैसे आकारों को परिभाषित करता है।",
+      "चुंबकीय क्वांटम संख्या ($m_l$); मान $-l$ से $+l$ तक।",
+      "स्पिन क्वांटम संख्या ($s$); मान पूरी तरह से $0$ के बराबर।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes the principal quantum number $n$, which determines shell size and energy level. Option 1 is correct because the **Azimuthal Quantum Number ($l$)** (or orbital angular momentum quantum number) defines the **Three-Dimensional Geometric Shape** of the orbital subshell. For a given principal shell $n$, $l$ takes integer values ranging from **$0$ to $(n-1)$**: $l=0$ corresponds to a spherical $s$-orbital; $l=1$ to a dumb-bell shaped $p$-subshell; $l=2$ to a double dumb-bell $d$-subshell; and $l=3$ to an $f$-subshell. Option 2 describes spatial orientation ($m_l$), and Option 3 misstates spin quantum numbers."
+    "ee": "1. Option 0 is incorrect because the Principal Quantum Number ($n$) determines the overall size and primary energy level of the shell.\n2. Option 1 is correct because the **Azimuthal Quantum Number ($l$)**, also called the Orbital Angular Momentum Quantum Number (Sommerfeld), determines the **three-dimensional geometric shape and subshell classification** of the orbital. For any principal energy shell $n$, $l$ can take integral values ranging from **$0$ to $(n-1)$**:\n   - $l = 0$: **$s$-subshell**, spherical shape.\n   - $l = 1$: **$p$-subshell**, dumb-bell shape.\n   - $l = 2$: **$d$-subshell**, double dumb-bell shape (cloverleaf).\n   - $l = 3$: **$f$-subshell**, complex diffused shape.\n3. Option 2 is incorrect because the Magnetic Quantum Number ($m_l$) determines the spatial orientation of orbitals in space, not their fundamental geometric shape.\n4. Option 3 is incorrect because the Spin Quantum Number ($s$) can only be $+1/2$ or $-1/2$, denoting intrinsic spin direction.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि मुख्य क्वांटम संख्या ($n$) कोश के आकार और उसकी मुख्य ऊर्जा को निर्धारित करती है।\n2. विकल्प 1 सही है क्योंकि **द्विगंशी या कोणीय संवेग क्वांटम संख्या ($l$)** कक्षक के **त्रिविमीय ज्यामितीय आकार (Shape)** और उपकोश को निर्धारित करती है। किसी मुख्य कोश $n$ के लिए $l$ के अनुमत मान **$0$ से लेकर $(n-1)$** तक होते हैं:\n   - $l = 0$: **$s$-उपकोश**, गोलाकार (Spherical)।\n   - $l = 1$: **$p$-उपकोश**, डंबलाकार (Dumb-bell)।\n   - $l = 2$: **$d$-उपकोश**, द्विडंबलाकार (Double dumb-bell)।\n   - $l = 3$: **$f$-उपकोश**, जटिल (Complex)।\n3. विकल्प 2 गलत है क्योंकि चुंबकीय क्वांटम संख्या ($m_l$) कक्षक के त्रिविम में अभिविन्यास (Orientation) को दर्शाती है।\n4. विकल्प 3 गलत है क्योंकि चक्रण क्वांटम संख्या $s$ का मान $+1/2$ या $-1/2$ होता है।"
   },
   {
     "p_id": "bpsc_chem_m16_06",
-    "qe": "Evaluating the electronic structure of Magnesium ($\\\\text{Mg}$, atomic number $Z=12$) differentiates valence electrons from core electrons. What are the respective counts of core electrons versus valence electrons in a neutral magnesium atom?",
-    "qh": "मैग्नीशियम ($\\\\text{Mg}$, परमाणु क्रमांक $Z=12$) की इलेक्ट्रॉनिक संरचना का मूल्यांकन संयोजी इलेक्ट्रॉनों (valence electrons) को क्रोड इलेक्ट्रॉनों (core electrons) से अलग करता है। एक उदासीन मैग्नीशियम परमाणु में क्रोड इलेक्ट्रॉनों बनाम संयोजी इलेक्ट्रॉनों की संबंधित संख्या क्या है?",
-    "o": [
+    "qe": "Evaluating the electronic structure of Magnesium ($\\text{Mg}$, atomic number $Z=12$) differentiates valence electrons from core electrons. What are the respective counts of core electrons versus valence electrons in a neutral magnesium atom?",
+    "qh": "मैग्नीशियम ($\\text{Mg}$, परमाणु क्रमांक $Z=12$) की इलेक्ट्रॉनिक संरचना का मूल्यांकन संयोजी इलेक्ट्रॉनों (valence electrons) को क्रोड इलेक्ट्रॉनों (core electrons) से अलग करता है। एक उदासीन मैग्नीशियम परमाणु में क्रोड इलेक्ट्रॉनों बनाम संयोजी इलेक्ट्रॉनों की संबंधित संख्या क्या है?",
+    "oe": [
       "Core electrons = 2; Valence electrons = 10",
       "Core electrons = 10 (inner shells $n=1, n=2$); Valence electrons = 2 (outermost shell $n=3$)",
       "Core electrons = 6; Valence electrons = 6",
       "Core electrons = 12; Valence electrons = 0"
     ],
+    "oh": [
+      "क्रोड इलेक्ट्रॉन = 2; संयोजी इलेक्ट्रॉन = 10",
+      "क्रोड इलेक्ट्रॉन = 10 (आंतरिक कोश $n=1, n=2$); संयोजी इलेक्ट्रॉन = 2 (सबसे बाहरी कोश $n=3$)",
+      "क्रोड इलेक्ट्रॉन = 6; संयोजी इलेक्ट्रॉन = 6",
+      "क्रोड इलेक्ट्रॉन = 12; संयोजी इलेक्ट्रॉन = 0"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 reverses the counts for core and valence electrons. Option 1 is correct because the ground-state electron configuration of **Magnesium ($\\\\text{Mg}$, $Z=12$)** is $1s^2 2s^2 2p^6 3s^2$ (or shell arrangement $2, 8, 2$). **Valence Electrons** are defined as electrons residing in the outermost principal shell ($n=3$ for Mg), which equals **2 valence electrons** ($3s^2$). **Core Electrons** are the inner, fully filled closed-shell electrons ($n=1$ and $n=2$), totaling $2 + 8 = \\\\mathbf{10 \\\\text{ core electrons}}$. Core electrons do not directly participate in chemical bonding. Option 2 and Option 3 miscalculate atomic shell population."
+    "ee": "1. Option 0 reverses the counts of core and valence electrons.\n2. Option 1 is correct because the atomic number of **Magnesium ($\\text{Mg}$)** is $Z = 12$, giving the ground-state electronic configuration: $$1s^2\\ 2s^2\\ 2p^6\\ 3s^2\\quad \\text{or shell notation } \\text{K}=2, \\text{L}=8, \\text{M}=2$$\n   - **Valence Electrons (संयोजी इलेक्ट्रॉन)**: Electrons in the outermost shell ($n=3$, M-shell). For Magnesium, this equals **2 valence electrons** ($3s^2$), which participate in chemical bonding by being lost to form $\\text{Mg}^{2+}$.\n   - **Core Electrons (क्रोड इलेक्ट्रॉन)**: Electrons occupying the inner, completely filled closed shells ($n=1$ and $n=2$, K and L shells). For Magnesium, this equals $2 + 2 + 6 = \\mathbf{10\\text{ core electrons}}$ ($[\\text{Ne}]$ noble-gas core).\n3. Option 2 and Option 3 represent incorrect electron distributions for Magnesium.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि इसमें क्रोड और संयोजी इलेक्ट्रॉनों की संख्या को उल्टा लिखा गया है।\n2. विकल्प 1 सही है क्योंकि **मैग्नीशियम ($\\text{Mg}$, $Z=12$)** का इलेक्ट्रॉनिक विन्यास $1s^2\\ 2s^2\\ 2p^6\\ 3s^2$ (कोश विन्यास: K=2, L=8, M=2) होता है:\n   - **संयोजी इलेक्ट्रॉन (Valence Electrons):** सबसे बाहरी कोश ($n=3$, M-कोश) में उपस्थित इलेक्ट्रॉन, जिनकी संख्या **2 ($3s^2$)** है। ये रासायनिक बंध बनाने में भाग लेते हैं।\n   - **क्रोड इलेक्ट्रॉन (Core Electrons):** आंतरिक पूर्णतः भरे हुए कोशों ($n=1$ तथा $n=2$) में उपस्थित इलेक्ट्रॉन, जिनकी कुल संख्या $2 + 8 = \\mathbf{10}$ (नियॉन क्रोड) होती है।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि यह मैग्नीशियम के वास्तविक इलेक्ट्रॉन वितरण से मेल नहीं खाते।"
   },
   {
     "p_id": "bpsc_chem_m16_07",
     "qe": "Consider an electron residing in a $3p$ atomic orbital. What is the correct set of principal ($n$), azimuthal ($l$), and possible magnetic ($m_l$) quantum numbers describing this orbital?",
     "qh": "$3p$ परमाणु कक्षक में रहने वाले इलेक्ट्रॉन पर विचार करें। इस कक्षक का वर्णन करने वाले मुख्य ($n$), द्विगंशी ($l$), और संभावित चुंबकीय ($m_l$) क्वांटम नंबरों का सही सेट क्या है?",
-    "o": [
+    "oe": [
       "$n = 3, l = 0, m_l = 0$",
-      "$n = 3, l = 1, m_l = -1, 0, \\\\text{ or } +1$",
+      "$n = 3, l = 1, m_l = -1, 0, \\text{ or } +1$",
+      "$n = 3, l = 2, m_l = -2, -1, 0, +1, +2$",
+      "$n = 2, l = 1, m_l = -1, 0, +1$"
+    ],
+    "oh": [
+      "$n = 3, l = 0, m_l = 0$",
+      "$n = 3, l = 1, m_l = -1, 0, \\text{ या } +1$",
       "$n = 3, l = 2, m_l = -2, -1, 0, +1, +2$",
       "$n = 2, l = 1, m_l = -1, 0, +1$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes a $3s$ orbital ($l=0$). Option 1 is correct because for a **$3p$ orbital**:\n1. The coefficient $3$ indicates the **Principal Quantum Number ($n = 3$)**.\n2. The letter $p$ corresponds to an **Azimuthal Quantum Number ($l = 1$)**.\n3. For $l = 1$, the allowable **Magnetic Quantum Numbers ($m_l$)** range from $-l$ to $+l$, yielding **$m_l = -1, 0, \\\\text{ or } +1$** (representing $3p_x, 3p_y, 3p_z$ orientations).\nOption 2 describes $3d$ orbitals ($l=2$). Option 3 describes a $2p$ orbital ($n=2$).\n"
+    "ee": "1. Option 0 describes a $3s$ orbital ($n=3, l=0, m_l=0$).\n2. Option 1 is correct because for a **$3p$ atomic orbital**:\n   - The leading integer $3$ specifies the **Principal Quantum Number ($n = 3$)**, representing the third energy level (M-shell).\n   - The letter $p$ corresponds uniquely to the **Azimuthal Quantum Number ($l = 1$)** ($s=0, p=1, d=2, f=3$).\n   - For any given $l$, the allowed **Magnetic Quantum Numbers ($m_l$)** range from $-l$ through $0$ to $+l$. For $l=1$, $m_l$ can take any of the three integer values: **$-1, 0, \\text{ or } +1$**, which correspond physically to the three spatial orientations: $3p_x, 3p_y, \\text{ and } 3p_z$.\n3. Option 2 describes a $3d$ orbital subshell ($n=3, l=2$).\n4. Option 3 describes a $2p$ orbital subshell ($n=2, l=1$).",
+    "eh": "1. विकल्प 0 गलत है क्योंकि यह $3s$ कक्षक का क्वांटम सेट है ($l=0$)।\n2. विकल्प 1 सही है क्योंकि **$3p$ कक्षक** के लिए:\n   - मुख्य संख्या '3' दर्शाती है कि **मुख्य क्वांटम संख्या $n = 3$** है।\n   - अक्षर 'p' दर्शाता है कि **द्विगंशी क्वांटम संख्या $l = 1$** है ($s$ के लिए $0$, $p$ के लिए $1$, $d$ के लिए $2$)।\n   - चुंबकीय क्वांटम संख्या $m_l$ का मान $-l$ से $+l$ तक होता है, अतः $l=1$ के लिए $m_l$ के तीन मान **$-1, 0, \\text{ तथा } +1$** होंगे, जो त्रिविम में तीन कक्षकों ($3p_x, 3p_y, 3p_z$) को प्रदर्शित करते हैं।\n3. विकल्प 2 गलत है क्योंकि यह $3d$ कक्षक ($l=2$) का सेट है।\n4. विकल्प 3 गलत है क्योंकि यह $2p$ कक्षक ($n=2$) का सेट है।"
   },
   {
     "p_id": "bpsc_chem_m16_08",
     "qe": "In quantum mechanics, subshell electron capacity is constrained by quantum number combinations and Pauli's exclusion principle. What is the maximum electron capacity of any subshell defined by azimuthal quantum number $l$?",
     "qh": "क्वांटम यांत्रिकी में, उपकोश इलेक्ट्रॉन क्षमता क्वांटम संख्या संयोजनों और पाउली के अपवर्जन सिद्धांत द्वारा बाध्य है। द्विगंशी क्वांटम संख्या $l$ द्वारा परिभाषित किसी भी उपकोश की अधिकतम इलेक्ट्रॉन क्षमता क्या है?",
-    "o": [
+    "oe": [
+      "$2l + 1$",
+      "$2(2l + 1) = 4l + 2$",
+      "$2n^2$",
+      "$n - l$"
+    ],
+    "oh": [
       "$2l + 1$",
       "$2(2l + 1) = 4l + 2$",
       "$2n^2$",
       "$n - l$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 gives the number of *orbitals* in a subshell, not electron capacity. Option 1 is correct because a subshell with azimuthal quantum number $l$ contains $(2l + 1)$ degenerate orbitals. According to the Pauli Exclusion Principle, each individual orbital can hold a maximum of 2 electrons (with opposite spins). Therefore, the **Maximum Electron Capacity of a Subshell** is $2 \\\\times (2l + 1) = \\\\mathbf{4l + 2}$:\n* $s$-subshell ($l=0$): $4(0) + 2 = 2$ electrons\n* $p$-subshell ($l=1$): $4(1) + 2 = 6$ electrons\n* $d$-subshell ($l=2$): $4(2) + 2 = 10$ electrons\n* $f$-subshell ($l=3$): $4(3) + 2 = 14$ electrons\nOption 2 gives principal shell capacity ($2n^2$). Option 3 is an arbitrary difference.\n"
+    "ee": "1. Option 0 gives the total number of *degenerate orbitals* in a subshell ($2l + 1$), not the total electron capacity.\n2. Option 1 is correct because for any subshell characterized by azimuthal quantum number $l$, the number of permitted magnetic orientations (orbitals) is $(2l + 1)$. According to the Pauli Exclusion Principle, each individual orbital can accommodate a maximum of 2 electrons (with opposite spins). Therefore, the **Maximum Electron Capacity of a Subshell** is: $$\\text{Capacity} = 2 \\times (2l + 1) = \\mathbf{4l + 2}$$\n   - For $s$-subshell ($l=0$): $4(0)+2 = \\mathbf{2\\text{ electrons}}$ ($1$ orbital)\n   - For $p$-subshell ($l=1$): $4(1)+2 = \\mathbf{6\\text{ electrons}}$ ($3$ orbitals)\n   - For $d$-subshell ($l=2$): $4(2)+2 = \\mathbf{10\\text{ electrons}}$ ($5$ orbitals)\n   - For $f$-subshell ($l=3$): $4(3)+2 = \\mathbf{14\\text{ electrons}}$ ($7$ orbitals)\n3. Option 2 gives the maximum electron capacity of an entire principal shell ($2n^2$).\n4. Option 3 is a difference formula related to radial node calculations.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि $(2l + 1)$ किसी उपकोश में कुल *कक्षकों की संख्या* बताता है, इलेक्ट्रॉनों की नहीं।\n2. विकल्प 1 सही है क्योंकि द्विगंशी क्वांटम संख्या $l$ वाले किसी उपकोश में कुल कक्षकों की संख्या $(2l + 1)$ होती है। पाउली के अपवर्जन सिद्धांत के अनुसार प्रत्येक कक्षक में विपरीत चक्रण वाले अधिकतम 2 इलेक्ट्रॉन रह सकते हैं। अतः किसी उपकोश में **इलेक्ट्रॉनों की अधिकतम क्षमता $2 \\times (2l + 1) = \\mathbf{4l + 2}$** होती है:\n   - $s$-उपकोश ($l=0$): $4(0) + 2 = \\mathbf{2\\text{ इलेक्ट्रॉन}}$\n   - $p$-उपकोश ($l=1$): $4(1) + 2 = \\mathbf{6\\text{ इलेक्ट्रॉन}}$\n   - $d$-उपकोश ($l=2$): $4(2) + 2 = \\mathbf{10\\text{ इलेक्ट्रॉन}}$\n   - $f$-उपकोश ($l=3$): $4(3) + 2 = \\mathbf{14\\text{ इलेक्ट्रॉन}}$\n3. विकल्प 2 गलत है क्योंकि $2n^2$ किसी मुख्य कोश ($n$) में कुल इलेक्ट्रॉनों की संख्या का सूत्र है।\n4. विकल्प 3 गलत है क्योंकि यह त्रिज्यीय नोड से संबंधित पद है।"
   },
   {
     "p_id": "bpsc_chem_m16_09",
     "qe": "The fundamental quantum parameters dictate that electron orbits are three-dimensional probability distributions rather than simple flat rings. Which set of all four quantum numbers ($n, l, m_l, s$) represents a physically IMPOSSIBLE electronic state in an atom?",
     "qh": "मौलिक क्वांटम पैरामीटर यह निर्देशित करते हैं कि इलेक्ट्रॉन कक्षाएं साधारण फ्लैट छल्ले के बजाय त्रि-आयामी प्रायिकता वितरण हैं। चार क्वांटम नंबरों ($n, l, m_l, s$) का कौन सा सेट परमाणु में भौतिक रूप से असंभव इलेक्ट्रॉनिक स्थिति का प्रतिनिधित्व करता है?",
-    "o": [
+    "oe": [
+      "$n = 1, l = 0, m_l = 0, s = +1/2$",
+      "$n = 2, l = 2, m_l = 0, s = -1/2$",
+      "$n = 3, l = 1, m_l = -1, s = +1/2$",
+      "$n = 4, l = 3, m_l = +2, s = -1/2$"
+    ],
+    "oh": [
       "$n = 1, l = 0, m_l = 0, s = +1/2$",
       "$n = 2, l = 2, m_l = 0, s = -1/2$",
       "$n = 3, l = 1, m_l = -1, s = +1/2$",
       "$n = 4, l = 3, m_l = +2, s = -1/2$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 represents a valid $1s$ electron. Option 1 is correct because the azimuthal quantum number $l$ is strictly constrained to integer values from **$0$ to $(n-1)$**. For principal shell $n = 2$, allowable values for $l$ are $l = 0$ ($2s$) and $l = 1$ ($2p$). A state with **$n = 2, l = 2$ is quantum mechanically impossible** because $l$ cannot equal $n$ (a '$2d$' subshell does not exist). Option 2 represents a valid $3p$ electron ($n=3, l=1$). Option 3 represents a valid $4f$ electron ($n=4, l=3, m_l=+2$)."
+    "ee": "1. Option 0 represents a valid ground-state $1s$ electron ($n=1, l=0, m_l=0, s=+1/2$).\n2. Option 1 is correct because for any given principal quantum number $n$, the azimuthal quantum number $l$ is mathematically restricted to the range **$0 \\le l \\le (n-1)$**. For $n = 2$, the only permitted values of $l$ are $l = 0$ ($2s$) and $l = 1$ ($2p$). **The state $n = 2, l = 2$ is strictly impossible** because $l$ cannot equal or exceed $n$; in physical terms, a '$2d$' subshell does not exist in quantum mechanics.\n3. Option 2 represents a valid $3p$ orbital electron ($n=3, l=1, m_l=-1, s=+1/2$).\n4. Option 3 represents a valid $4f$ orbital electron ($n=4, l=3, m_l=+2, s=-1/2$).",
+    "eh": "1. विकल्प 0 गलत है क्योंकि यह $1s$ इलेक्ट्रॉन की पूर्णतः मान्य स्थिति है।\n2. विकल्प 1 सही है क्योंकि किसी भी मुख्य क्वांटम संख्या $n$ के लिए द्विगंशी क्वांटम संख्या $l$ का मान **$0$ से लेकर अधिकतम $(n-1)$** तक ही हो सकता है ($l < n$ होना अनिवार्य है)। मुख्य कोश $n = 2$ के लिए $l$ के केवल दो मान संभव हैं: $l = 0$ ($2s$) और $l = 1$ ($2p$)। अतः **$n = 2, l = 2$ का संयोजन क्वांटम यांत्रिकी में सर्वथा असंभव है**, क्योंकि '$2d$' कक्षक का कोई अस्तित्व नहीं होता।\n3. विकल्प 2 गलत है क्योंकि यह $3p$ कक्षक का मान्य संयोजन है।\n4. विकल्प 3 गलत है क्योंकि यह $4f$ कक्षक का मान्य संयोजन है।"
   },
   {
     "p_id": "bpsc_chem_m16_10",
-    "qe": "Evaluating higher-order atomic subshells reveals that theoretical quantum mechanics allows subshells such as $5g, 6h, 6i$, and $7j$. Why are these higher subshells ($l \\\\ge 4$) unpopulated by electrons in ground-state neutral atoms of all known chemical elements?",
-    "qh": "उच्च-क्रम परमाणु उपकोशों का मूल्यांकन यह दर्शाता है कि सैद्धांतिक क्वांटम यांत्रिकी $5g, 6h, 6i$, और $7j$ जैसे उपकोशों की अनुमति देती है। सभी ज्ञात रासायनिक तत्वों के मूल-अवस्था (ground-state) उदासीन परमाणुओं में ये उच्च उपकोश ($l \\\\ge 4$) इलेक्ट्रॉनों द्वारा क्यों नहीं भरे जाते हैं?",
-    "o": [
+    "qe": "Evaluating higher-order atomic subshells reveals that theoretical quantum mechanics allows subshells such as $5g, 6h, 6i$, and $7j$. Why are these higher subshells ($l \\ge 4$) unpopulated by electrons in ground-state neutral atoms of all known chemical elements?",
+    "qh": "उच्च-क्रम परमाणु उपकोशों का मूल्यांकन यह दर्शाता है कि सैद्धांतिक क्वांटम यांत्रिकी $5g, 6h, 6i$, और $7j$ जैसे उपकोशों की अनुमति देती है। सभी ज्ञात रासायनिक तत्वों के मूल-अवस्था (ground-state) उदासीन परमाणुओं में ये उच्च उपकोश ($l \\ge 4$) इलेक्ट्रॉनों द्वारा क्यों नहीं भरे जाते हैं?",
+    "oe": [
       "Because Pauli's exclusion principle bans electrons from having azimuthal numbers greater than 3.",
       "Because ground-state atoms of all known elements ($Z = 1$ to $118$) fill orbitals in order of increasing energy via the Aufbau principle, and their atomic numbers are insufficiently large to require populating $5g$ or higher orbitals in ground state.",
       "Because higher orbitals radiate infinite energy and instantly collapse.",
       "Because $g$ and $h$ subshells can accommodate zero magnetic orientations."
     ],
+    "oh": [
+      "क्योंकि पाउली का अपवर्जन सिद्धांत इलेक्ट्रॉनों को 3 से अधिक द्विगंशी संख्या रखने से रोकता है।",
+      "क्योंकि सभी ज्ञात तत्वों ($Z = 1$ से $118$) के मूल-अवस्था परमाणु ऑफ़बाउ सिद्धांत के माध्यम से बढ़ती ऊर्जा के क्रम में कक्षकों को भरते हैं, और उनकी परमाणु संख्याएं मूल अवस्था में $5g$ या उच्चतर कक्षकों को भरने के लिए पर्याप्त रूप से बड़ी नहीं हैं।",
+      "क्योंकि उच्च कक्षक अनंत ऊर्जा विकीर्ण करते हैं और तुरंत ढह जाते हैं।",
+      "क्योंकि $g$ और $h$ उपकोश शून्य चुंबकीय अभिविन्यास को समायोजित कर सकते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 is false because quantum mechanics allows $l = 4 (g), 5 (h), 6 (i)$ for shells $n \\\\ge 5$. Option 1 is correct because according to the **Aufbau Principle**, orbitals fill sequentially in order of increasing energy sum $(n+l)$. For the $5g$ subshell, $n=5, l=4$, giving $(n+l) = 9$. Orbitals like $7s$ ($7+0=7$), $5f$ ($5+3=8$), $6d$ ($6+2=8$), and $7p$ ($7+1=8$) have lower energy sums and fill first. Even for the heaviest known element (Oganesson, $Z=118$), ground-state electron filling completes at $7p^6$. Thus, $5g$ or higher subshells remain **unpopulated under normal ground-state conditions** simply because current nuclear charge limits do not require them. Option 2 and Option 3 present invalid quantum or energy assertions."
+    "ee": "1. Option 0 is incorrect because quantum mechanics permits azimuthal values $l=4 (g), 5 (h), 6 (i)$ for principal quantum numbers $n \\ge 5$; Pauli's principle does not cap $l$ at 3.\n2. Option 1 is correct because according to the **Aufbau Principle and the $(n+l)$ Rule**, orbitals are filled strictly in order of increasing energy. For the $5g$ subshell, $n = 5$ and $l = 4$, yielding an energy index of $(n+l) = 5 + 4 = \\mathbf{9}$. Orbitals with lower $(n+l)$ sums—such as $7s$ ($7+0=7$), $5f$ ($5+3=8$), $6d$ ($6+2=8$), and $7p$ ($7+1=8$)—fill well before $5g$. In the heaviest known element synthesized to date (Oganesson, $Z = 118$), all 118 electrons in the ground state are fully accommodated by the time the $7p$ subshell is completed ($[\\text{Rn}] 5f^{14} 6d^{10} 7s^2 7p^6$). A hypothetical element would require an atomic number $Z \\ge 121$ (Period 8, superactinide series) to begin populating the $5g$ subshell in its ground state.\n3. Option 2 is incorrect because higher subshells are stable quantum mechanical mathematical solutions of the Schrödinger wave equation.\n4. Option 3 is incorrect because a $g$-subshell ($l=4$) possesses $2(4)+1 = 9$ spatial magnetic orientations ($m_l = -4\\dots+4$)."
+    ,
+    "eh": "1. विकल्प 0 गलत है क्योंकि $n \\ge 5$ के लिए $l = 4, 5, 6$ पूरी तरह अनुमत हैं, पाउली का नियम $l$ को 3 पर सीमित नहीं करता।\n2. विकल्प 1 सही है क्योंकि **ऑफबाऊ नियम और $(n+l)$ ऊर्जा नियम** के अनुसार इलेक्ट्रॉन कम ऊर्जा वाले कक्षकों से अधिक ऊर्जा वाले कक्षकों में भरते हैं। $5g$ उपकोश के लिए $n = 5, l = 4$ है, जिसका ऊर्जा मान $(n+l) = 5 + 4 = \\mathbf{9}$ है। इससे कम ऊर्जा मान वाले कक्षक जैसे $7s$ ($7+0=7$), $5f$ ($5+3=8$), $6d$ ($6+2=8$) और $7p$ ($7+1=8$) पहले भरते हैं। आवर्त सारणी के अंतिम ज्ञात तत्व (ओगनेसन, $Z=118$) का विन्यास $7p^6$ पर समाप्त हो जाता है। $5g$ उपकोश में इलेक्ट्रॉन भरने के लिए तत्व का परमाणु क्रमांक कम से कम $Z=121$ होना आवश्यक होगा।\n3. विकल्प 2 गलत है क्योंकि उच्च कक्षक श्रोडिंगर समीकरण के वैध हल हैं और अस्थिर होकर ढहते नहीं हैं।\n4. विकल्प 3 गलत है क्योंकि $g$-उपकोश ($l=4$) में 9 चुंबकीय कक्षक ($2l+1 = 9$) होते हैं।"
   }
 ]
