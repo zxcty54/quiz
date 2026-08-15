@@ -168,7 +168,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   }
 
   // 💬 BOTTOM SHEET DIALOG FOR AI DOUBT SOLVER (1 ASK & 100 CHARS)
-  void _openAiDoubtDialog(Question currentQ) {
+  void _openAiDoubtDialog(Question currentQ, bool isDark) {
     int asksLeft = _asksRemainingPerQuestion[_currentIndex] ?? 1; // 🛑 STRICT 1 ASK LIMIT
     TextEditingController doubtController = TextEditingController();
     bool isAsking = false;
@@ -177,6 +177,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
+      backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) {
         return StatefulBuilder(
@@ -198,17 +199,26 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Row(
+                        Row(
                           children: [
-                            Text('🤖', style: TextStyle(fontSize: 20)),
-                            SizedBox(width: 6),
-                            Text('Ask AI Custom Doubt', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                            const Text('🤖', style: TextStyle(fontSize: 20)),
+                            const SizedBox(width: 6),
+                            Text(
+                              'Ask AI Custom Doubt',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15,
+                                color: isDark ? Colors.white : const Color(0xFF0F172A),
+                              ),
+                            ),
                           ],
                         ),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                           decoration: BoxDecoration(
-                            color: asksLeft > 0 ? const Color(0xFFDCFCE7) : const Color(0xFFFEE2E2),
+                            color: asksLeft > 0 
+                                ? (isDark ? const Color(0xFF14532D) : const Color(0xFFDCFCE7))
+                                : (isDark ? const Color(0xFF7F1D1D) : const Color(0xFFFEE2E2)),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Text(
@@ -216,7 +226,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                             style: TextStyle(
                               fontSize: 10,
                               fontWeight: FontWeight.bold,
-                              color: asksLeft > 0 ? Colors.green.shade800 : Colors.red.shade800,
+                              color: asksLeft > 0 
+                                  ? (isDark ? const Color(0xFF86EFAC) : Colors.green.shade800)
+                                  : (isDark ? const Color(0xFFFCA5A5) : Colors.red.shade800),
                             ),
                           ),
                         )
@@ -229,21 +241,25 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                           margin: const EdgeInsets.only(bottom: 10),
                           padding: const EdgeInsets.all(12),
                           decoration: BoxDecoration(
-                            color: Colors.grey.shade100,
+                            color: isDark ? const Color(0xFF0F172A) : Colors.grey.shade100,
                             borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.grey.shade300),
+                            border: Border.all(color: isDark ? const Color(0xFF334155) : Colors.grey.shade300),
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 "❓ Your Doubt: ${chat['doubt']}",
-                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5, color: Color(0xFF2563EB)),
+                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5, color: Color(0xFF38BDF8)),
                               ),
-                              const Divider(height: 12),
+                              Divider(height: 12, color: isDark ? const Color(0xFF334155) : Colors.grey.shade300),
                               MathFormattedText(
                                 text: chat['response']!,
-                                textStyle: const TextStyle(fontSize: 12.5, height: 1.4, color: Colors.black87),
+                                textStyle: TextStyle(
+                                  fontSize: 12.5,
+                                  height: 1.4,
+                                  color: isDark ? Colors.grey.shade200 : Colors.black87,
+                                ),
                               ),
                             ],
                           ),
@@ -255,11 +271,17 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                         maxLength: 100, // 🛑 STRICT 100 CHARACTERS LIMIT
                         maxLines: 2,
                         minLines: 1,
-                        decoration: const InputDecoration(
+                        style: TextStyle(color: isDark ? Colors.white : Colors.black87, fontSize: 13),
+                        decoration: InputDecoration(
                           hintText: 'Type your exact doubt (Max 100 chars)...',
-                          hintStyle: TextStyle(fontSize: 12, color: Colors.grey),
-                          border: OutlineInputBorder(),
-                          contentPadding: EdgeInsets.all(10),
+                          hintStyle: TextStyle(fontSize: 12, color: isDark ? Colors.grey.shade400 : Colors.grey),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: isDark ? const Color(0xFF334155) : Colors.grey.shade400),
+                          ),
+                          focusedBorder: const OutlineInputBorder(
+                            borderSide: BorderSide(color: Color(0xFF2563EB), width: 1.5),
+                          ),
+                          contentPadding: const EdgeInsets.all(10),
                         ),
                       ),
                       const SizedBox(height: 10),
@@ -310,9 +332,13 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                       Container(
                         padding: const EdgeInsets.all(10),
                         alignment: Alignment.center,
-                        child: const Text(
+                        child: Text(
                           '🔒 Question-wise 1 doubt limit complete ho chuki hai.',
-                          style: TextStyle(fontSize: 11.5, color: Colors.grey, fontWeight: FontWeight.w600),
+                          style: TextStyle(
+                            fontSize: 11.5,
+                            color: isDark ? Colors.grey.shade400 : Colors.grey,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
                       )
                     ],
@@ -351,13 +377,21 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   }
 
   void _showCompletionDialog() {
+    final bool isDark = Theme.of(context).brightness == Brightness.dark;
     showDialog(
       context: context,
       barrierDismissible: false,
       builder: (ctx) => AlertDialog(
+        backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: const Text('🎉 Revision Complete!'),
-        content: Text('Aapne "${widget.testTitle}" ke saare ${widget.questions.length} questions revise kar liye hain.'),
+        title: Text(
+          '🎉 Revision Complete!',
+          style: TextStyle(color: isDark ? Colors.white : const Color(0xFF0F172A), fontWeight: FontWeight.bold),
+        ),
+        content: Text(
+          'Aapne "${widget.testTitle}" ke saare ${widget.questions.length} questions revise kar liye hain.',
+          style: TextStyle(color: isDark ? Colors.grey.shade300 : const Color(0xFF334155)),
+        ),
         actions: [
           ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -375,24 +409,29 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // ✨ PREMIUM VISUAL EXPLANATION BUILDER
-  Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ) {
+  // ✨ PREMIUM VISUAL EXPLANATION BUILDER (Theme-Aware)
+  Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
     List<String> rawParagraphs = rawExplanation
         .split('\n')
         .map((p) => p.trim())
         .where((p) => p.isNotEmpty)
         .toList();
 
+    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final Color cardBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+    final Color headerBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
+    final Color headerText = isDark ? Colors.white : const Color(0xFF0F172A);
+
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.only(top: 14),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: cardBg,
         borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: const Color(0xFFE2E8F0), width: 1.2),
+        border: Border.all(color: cardBorder, width: 1.2),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF0F172A).withOpacity(0.04),
+            color: Colors.black.withOpacity(isDark ? 0.3 : 0.04),
             blurRadius: 10,
             offset: const Offset(0, 4),
           )
@@ -404,10 +443,10 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
           // 🏆 1. HEADER STRIP
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
-            decoration: const BoxDecoration(
-              color: Color(0xFFF8FAFC),
-              borderRadius: BorderRadius.vertical(top: Radius.circular(13)),
-              border: Border(bottom: BorderSide(color: Color(0xFFE2E8F0))),
+            decoration: BoxDecoration(
+              color: headerBg,
+              borderRadius: const BorderRadius.vertical(top: Radius.circular(13)),
+              border: Border(bottom: BorderSide(color: cardBorder)),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -417,17 +456,17 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                     Container(
                       padding: const EdgeInsets.all(5),
                       decoration: BoxDecoration(
-                        color: const Color(0xFFFEF3C7),
+                        color: isDark ? const Color(0xFF78350F) : const Color(0xFFFEF3C7),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: const Text('💡', style: TextStyle(fontSize: 14)),
                     ),
                     const SizedBox(width: 8),
-                    const Text(
+                    Text(
                       'Detailed Solution',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Color(0xFF0F172A),
+                        color: headerText,
                         fontSize: 13.5,
                         letterSpacing: 0.2,
                       ),
@@ -435,7 +474,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                   ],
                 ),
                 InkWell(
-                  onTap: () => _openAiDoubtDialog(currentQ),
+                  onTap: () => _openAiDoubtDialog(currentQ, isDark),
                   borderRadius: BorderRadius.circular(8),
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -475,19 +514,19 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                                         para.toLowerCase().contains('is false') || 
                                         para.contains('गलत है');
 
-                Color stripBg = const Color(0xFFF8FAFC);
-                Color stripBorder = const Color(0xFFE2E8F0);
+                Color stripBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
+                Color stripBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
                 Color badgeBg = const Color(0xFF64748B);
                 String badgeIcon = '📌';
 
                 if (isCorrectPoint) {
-                  stripBg = const Color(0xFFF0FDF4);
-                  stripBorder = const Color(0xFFBBF7D0);
+                  stripBg = isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4);
+                  stripBorder = isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0);
                   badgeBg = const Color(0xFF16A34A);
                   badgeIcon = '✓';
                 } else if (isIncorrectPoint) {
-                  stripBg = const Color(0xFFFEF2F2);
-                  stripBorder = const Color(0xFFFECDD3);
+                  stripBg = isDark ? const Color(0xFF450A0A) : const Color(0xFFFEF2F2);
+                  stripBorder = isDark ? const Color(0xFF991B1B) : const Color(0xFFFECDD3);
                   badgeBg = const Color(0xFFDC2626);
                   badgeIcon = '✕';
                 }
@@ -522,9 +561,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                       Expanded(
                         child: MathFormattedText(
                           text: para,
-                          textStyle: const TextStyle(
+                          textStyle: TextStyle(
                             fontSize: 13,
-                            color: Color(0xFF1E293B),
+                            color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF1E293B),
                             height: 1.45,
                           ),
                         ),
@@ -542,20 +581,33 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final bool isDark = Theme.of(context).brightness == Brightness.dark;
+
+    final Color bgColor = isDark ? const Color(0xFF0B0F19) : const Color(0xFFF8FAFC);
+    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final Color textColor = isDark ? Colors.white : const Color(0xFF0F172A);
+    final Color subTextColor = isDark ? const Color(0xFF94A3B8) : Colors.grey.shade600;
+    final Color stmtBg = isDark ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC);
+    final Color stmtBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+    final Color dividerColor = isDark ? const Color(0xFF334155) : Colors.grey.shade300;
+
     final currentQ = widget.questions[_currentIndex];
     final List<String>? statements = _isHindi ? currentQ.sh : currentQ.se;
     final List<String> currentOptions = currentQ.getOptions(_isHindi);
     final String currentExplanation = currentQ.getExplanation(_isHindi);
 
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
-        title: Text(widget.testTitle, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+        title: Text(widget.testTitle, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: textColor)),
+        backgroundColor: cardBg,
         elevation: 0,
+        iconTheme: IconThemeData(color: textColor),
         actions: [
           IconButton(
             icon: Icon(
               _isBookmarked ? Icons.bookmark : Icons.bookmark_outline,
-              color: _isBookmarked ? const Color(0xFF2563EB) : Colors.grey,
+              color: _isBookmarked ? const Color(0xFF2563EB) : (isDark ? Colors.grey.shade400 : Colors.grey),
             ),
             onPressed: _toggleBookmarkQuestion,
             tooltip: "Bookmark Question",
@@ -578,7 +630,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             margin: const EdgeInsets.only(right: 12),
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: BoxDecoration(
-              color: _timeLeft <= 5 ? Colors.red.shade100 : const Color(0xFFEFF6FF),
+              color: _timeLeft <= 5 
+                  ? (isDark ? const Color(0xFF7F1D1D) : Colors.red.shade100)
+                  : (isDark ? const Color(0xFF1E293B) : const Color(0xFFEFF6FF)),
               borderRadius: BorderRadius.circular(20),
               border: Border.all(color: _timeLeft <= 5 ? Colors.red : const Color(0xFF2563EB)),
             ),
@@ -609,12 +663,22 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               children: [
                 Text(
                   'Question ${_currentIndex + 1} / ${widget.questions.length}',
-                  style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.grey, fontSize: 13),
+                  style: TextStyle(fontWeight: FontWeight.bold, color: subTextColor, fontSize: 13),
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                  decoration: BoxDecoration(color: const Color(0xFFE0E7FF), borderRadius: BorderRadius.circular(8)),
-                  child: const Text('⚡ REVISION MODE', style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold, color: Color(0xFF4F46E5))),
+                  decoration: BoxDecoration(
+                    color: isDark ? const Color(0xFF1E1B4B) : const Color(0xFFE0E7FF),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Text(
+                    '⚡ REVISION MODE',
+                    style: TextStyle(
+                      fontSize: 9.5,
+                      fontWeight: FontWeight.bold,
+                      color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4F46E5),
+                    ),
+                  ),
                 )
               ],
             ),
@@ -624,7 +688,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               child: LinearProgressIndicator(
                 value: (_currentIndex + 1) / widget.questions.length,
                 minHeight: 5,
-                backgroundColor: Colors.grey.shade200,
+                backgroundColor: isDark ? const Color(0xFF334155) : Colors.grey.shade200,
                 color: const Color(0xFF2563EB),
               ),
             ),
@@ -633,23 +697,24 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             // 🎯 1. MAIN QUESTION CARD
             Card(
               elevation: 1,
+              color: cardBg,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: MathFormattedText(
                   text: currentQ.getText(_isHindi),
-                  textStyle: const TextStyle(
+                  textStyle: TextStyle(
                     fontSize: 15.5,
                     fontWeight: FontWeight.w600,
                     height: 1.4,
-                    color: Colors.black87,
+                    color: textColor,
                   ),
                 ),
               ),
             ),
             const SizedBox(height: 10),
 
-            // 📋 2. DEDICATED SEPARATE STATEMENT CARDS (Enhanced Contrast & Readability)
+            // 📋 2. DEDICATED SEPARATE STATEMENT CARDS (Numbered Badges)
             if (statements != null && statements.isNotEmpty) ...[
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -662,9 +727,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                     margin: const EdgeInsets.only(bottom: 9.0),
                     padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 12.0),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFF8FAFC),
+                      color: stmtBg,
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: const Color(0xFFE2E8F0), width: 1.1),
+                      border: Border.all(color: stmtBorder, width: 1.1),
                     ),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -672,7 +737,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF1E293B),
+                            color: isDark ? const Color(0xFF334155) : const Color(0xFF1E293B),
                             borderRadius: BorderRadius.circular(6),
                           ),
                           child: Text(
@@ -688,10 +753,10 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                         Expanded(
                           child: MathFormattedText(
                             text: stmtText,
-                            textStyle: const TextStyle(
+                            textStyle: TextStyle(
                               fontSize: 14.0,
                               fontWeight: FontWeight.w500,
-                              color: Color(0xFF0F172A), // 👈 Dark Charcoal Grey
+                              color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF0F172A),
                               height: 1.5,
                             ),
                           ),
@@ -702,12 +767,12 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                 }).toList(),
               ),
 
-              // 🌟 VISUAL DIVIDER & SEPARATION (Between Statements and Options)
+              // 🌟 VISUAL DIVIDER & SEPARATION
               Container(
                 margin: const EdgeInsets.only(top: 14, bottom: 16),
                 child: Row(
                   children: [
-                    Expanded(child: Divider(color: Colors.grey.shade300, thickness: 1)),
+                    Expanded(child: Divider(color: dividerColor, thickness: 1)),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
                       child: Text(
@@ -715,12 +780,12 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                         style: TextStyle(
                           fontSize: 11,
                           fontWeight: FontWeight.w700,
-                          color: Colors.grey.shade500,
+                          color: subTextColor,
                           letterSpacing: 0.8,
                         ),
                       ),
                     ),
-                    Expanded(child: Divider(color: Colors.grey.shade300, thickness: 1)),
+                    Expanded(child: Divider(color: dividerColor, thickness: 1)),
                   ],
                 ),
               ),
@@ -728,24 +793,24 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               const SizedBox(height: 14),
             ],
 
-            // 🔘 3. BILINGUAL OPTIONS LIST (Dynamic oe/oh)
+            // 🔘 3. BILINGUAL OPTIONS LIST
             ...List.generate(currentOptions.length, (index) {
               final optionText = currentOptions[index];
               final isCorrect = index == currentQ.answerIndex;
               final isSelected = index == _selectedOptionIndex;
 
-              Color borderColor = Colors.grey.shade300;
-              Color bgColor = Colors.white;
+              Color optBorderColor = isDark ? const Color(0xFF334155) : Colors.grey.shade300;
+              Color optBgColor = cardBg;
               Widget icon = const SizedBox.shrink();
 
               if (_isAnswered) {
                 if (isCorrect) {
-                  borderColor = Colors.green;
-                  bgColor = Colors.green.shade50;
+                  optBorderColor = Colors.green;
+                  optBgColor = isDark ? const Color(0xFF052E16) : Colors.green.shade50;
                   icon = const Icon(Icons.check_circle_rounded, color: Colors.green, size: 20);
                 } else if (isSelected) {
-                  borderColor = Colors.red;
-                  bgColor = Colors.red.shade50;
+                  optBorderColor = Colors.red;
+                  optBgColor = isDark ? const Color(0xFF450A0A) : Colors.red.shade50;
                   icon = const Icon(Icons.cancel_rounded, color: Colors.red, size: 20);
                 }
               }
@@ -759,9 +824,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                     duration: const Duration(milliseconds: 200),
                     padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                     decoration: BoxDecoration(
-                      color: bgColor,
+                      color: optBgColor,
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: borderColor, width: _isAnswered && (isCorrect || isSelected) ? 2 : 1),
+                      border: Border.all(color: optBorderColor, width: _isAnswered && (isCorrect || isSelected) ? 2 : 1),
                     ),
                     child: Row(
                       children: [
@@ -773,14 +838,18 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                             shape: BoxShape.circle,
                             color: _isAnswered && isCorrect
                                 ? Colors.green
-                                : (_isAnswered && isSelected ? Colors.red : Colors.grey.shade100),
+                                : (_isAnswered && isSelected 
+                                    ? Colors.red 
+                                    : (isDark ? const Color(0xFF334155) : Colors.grey.shade100)),
                           ),
                           child: Text(
                             String.fromCharCode(65 + index),
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 12,
-                              color: _isAnswered && (isCorrect || isSelected) ? Colors.white : Colors.black87,
+                              color: _isAnswered && (isCorrect || isSelected) 
+                                  ? Colors.white 
+                                  : (isDark ? Colors.white : Colors.black87),
                             ),
                           ),
                         ),
@@ -788,10 +857,10 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                         Expanded(
                           child: MathFormattedText(
                             text: optionText,
-                            textStyle: const TextStyle(
+                            textStyle: TextStyle(
                               fontSize: 13.5,
                               fontWeight: FontWeight.w500,
-                              color: Color(0xFF0F172A),
+                              color: isDark ? Colors.white : const Color(0xFF0F172A),
                             ),
                           ),
                         ),
@@ -805,7 +874,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
             // 💡 4. UPGRADED HIGH-CONTRAST DETAILED SOLUTION
             if (_isAnswered) ...[
-              _buildEnhancedExplanation(currentExplanation, currentQ),
+              _buildEnhancedExplanation(currentExplanation, currentQ, isDark),
             ],
             const SizedBox(height: 70),
           ],
@@ -815,13 +884,17 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       bottomSheet: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         decoration: BoxDecoration(
-          color: Theme.of(context).cardColor,
-          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 5)],
+          color: cardBg,
+          boxShadow: [BoxShadow(color: Colors.black.withOpacity(isDark ? 0.3 : 0.05), blurRadius: 5)],
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             ElevatedButton.icon(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: isDark ? const Color(0xFF334155) : Colors.grey.shade200,
+                foregroundColor: isDark ? Colors.white : Colors.black87,
+              ),
               onPressed: _currentIndex > 0 ? _goToPreviousQuestion : null,
               icon: const Icon(Icons.arrow_back_ios_rounded, size: 14),
               label: const Text('Previous'),
