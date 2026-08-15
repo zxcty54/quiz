@@ -1,0 +1,1358 @@
+
+{
+  "topic_id": "indian_polity_chief_minister",
+  "topic_title": "Chief Minister in Indian Constitution (राज्य का मुख्यमंत्री)",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 75,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 0,
+      "progress": { "current": 1, "total": 75 },
+      "intro_payload": {
+        "title": "मुख्यमंत्री (Chief Minister) - राज्य की असली सत्ता",
+        "icon": "🏛️",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Article 163 व 164 के अंतर्गत CM की संवैधानिक स्थिति",
+          "CM की नियुक्ति प्रक्रिया, योग्यता, शपथ, कार्यकाल और वेतन",
+          "91वां संशोधन (Article 164(1A)) - मंत्रिपरिषद के आकार की सीमा",
+          "CM की शक्तियाँ - मंत्रिपरिषद, राज्यपाल (Article 167) और विधायिका के सन्दर्भ में",
+          "सामूहिक व वैयक्तिक उत्तरदायित्व, हटाना, केयरटेकर CM",
+          "Article 164(4) - 6 महीने का नियम, राज्यसभा वाला ट्रैप",
+          "⭐ BPSC TRE Special: बिहार के प्रथम, सबसे लंबे कार्यकाल वाले व प्रथम महिला मुख्यमंत्री"
+        ]
+      },
+      "navigation": { "next": "card_02_daily_life_head_analogy", "button_text": "Chalo Shuru Karein ➔" }
+    },
+    {
+      "card_id": "card_02_daily_life_head_analogy",
+      "card_slug": "card_02_daily_life_head_analogy",
+      "type": "chat",
+      "concept_id": "nominal_vs_real_head",
+      "level": 1,
+      "progress": { "current": 2, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, tumhare ghar mein Papa ghar ke bade decisions lete hain na? Waise hi har state mein ek 'family head' jaisa role hota hai jo asli kaam-kaaj chalata hai. Pata hai state ka wo real boss kaun hota hai?" },
+        { "speaker": "raju", "text": "Governor sir hi to hote hain na State ka head? Wahi sabse powerful honge!" },
+        { "speaker": "aman", "text": "Yehi sabse bada confusion hai jo exam mein trap banta hai! Governor sirf 'nominal' head hote hain - matlab naam ke liye head. Asli kaam-kaaj, policy, decisions - ye sab karta hai koi aur." },
+        { "speaker": "raju", "text": "Matlab Governor to sirf dikhawe ke liye hain? Fir asli power kiske paas hai sir?" }
+      ],
+      "navigation": { "next": "card_03_article163_council_ministers", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_article163_council_ministers",
+      "card_slug": "card_03_article163_council_ministers",
+      "type": "chat",
+      "concept_id": "article_163",
+      "level": 1,
+      "progress": { "current": 3, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda tumne! Constitution ke Article 163 mein likha hai - Governor ko apne kaam mein sahayata aur salah dene ke liye ek 'Council of Ministers' hoga, jiska mukhiya hoga Chief Minister." },
+        { "speaker": "raju", "text": "Achhaaaa... to Chief Minister Governor ko salah dete hain? Jaise ek advisor?" },
+        { "speaker": "aman", "text": "Advisor se bhi zyada important! Governor ko is Council ki advice ke hisaab se hi kaam karna padta hai - ismein Governor apni marzi nahi chala sakta, siwaye kuch special discretionary powers ke. Yahi Council of Ministers asli karyapalika (executive) power hoti hai state mein." },
+        { "speaker": "raju", "text": "To Chief Minister hi state ka asli boss hua? Governor sirf naam ke liye?" }
+      ],
+      "navigation": { "next": "card_04_article164_overview", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_article164_overview",
+      "card_slug": "card_04_article164_overview",
+      "type": "chat",
+      "concept_id": "article_164_overview",
+      "level": 1,
+      "progress": { "current": 4, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Exactly Raju! Ab Article 164 dekhte hain jo CM ka poora constitutional 'ghar' hai - isme CM ki appointment, oath, salary, sab kuch likha hai. Aaj hum ye poora Article step by step samjhenge." },
+        { "speaker": "raju", "text": "Sir itna sab ek hi Article mein? Ye to lamba chapter lagega!" },
+        { "speaker": "aman", "text": "Haan, lekin hum isse chhote-chhote steps mein todenge taaki exam mein ek bhi trap na chhute. Chalo pehle dekhte hain - CM banta kaise hai?" },
+        { "speaker": "raju", "text": "Haan sir batao, mujhe lagta hai log seedhe vote karke CM chunte hain!" }
+      ],
+      "navigation": { "next": "card_05_guess_who_advises_governor", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_guess_who_advises_governor",
+      "card_slug": "card_05_guess_who_advises_governor",
+      "type": "guess",
+      "concept_id": "election_vs_appointment",
+      "level": 1,
+      "progress": { "current": 5, "total": 75 },
+      "guess_payload": {
+        "question": "Raju sochta hai ki janta seedhe vote dekar apne rajya ka Chief Minister chunti hai. Kya ye sahi hai?",
+        "options": [
+          { "id": "A", "text": "Haan, CM directly janta dwara chuna jata hai" },
+          { "id": "B", "text": "Nahi, Governor use appoint karte hain jo bahumat dal ka neta ho" },
+          { "id": "C", "text": "CM ko President appoint karte hain" },
+          { "id": "D", "text": "CM Supreme Court dwara select hota hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Janta sirf MLA (vidhayak) chunti hai. Fir jis party/gathbandhan ke paas Vidhan Sabha mein bahumat (majority) hoti hai, uske neta ko Governor Article 164(1) ke tahat CM niyukt karta hai."
+      },
+      "navigation": { "next": "card_06_quiz1_article163", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_06_quiz1_article163",
+      "card_slug": "card_06_quiz1_article163",
+      "type": "quiz",
+      "concept_id": "article_163_quiz",
+      "level": 1,
+      "progress": { "current": 6, "total": 75 },
+      "quiz_payload": {
+        "question": "Kaunsa Article kehta hai ki Governor ki sahayata aur salah dene ke liye ek Council of Ministers hoga, jiska mukhiya CM hoga?",
+        "options": [
+          { "id": "A", "text": "Article 74" },
+          { "id": "B", "text": "Article 163" },
+          { "id": "C", "text": "Article 164" },
+          { "id": "D", "text": "Article 166" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 163 - Governor ki sahayata aur salah ke liye ek Council of Ministers hoga jiska mukhiya Chief Minister hoga (Article 74 isi ka Union-level version hai, jo PM se related hai)."
+      },
+      "navigation": { "next": "card_07_quiz2_nominal_real_head", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz2_nominal_real_head",
+      "card_slug": "card_07_quiz2_nominal_real_head",
+      "type": "quiz",
+      "concept_id": "nominal_real_head_quiz",
+      "level": 1,
+      "progress": { "current": 7, "total": 75 },
+      "quiz_payload": {
+        "question": "Niche diye gaye kathanon par vichar karein: 1) Governor rajya ka nominal (naam-maatra) karyapalika pramukh hai. 2) Chief Minister rajya ka real (asli) karyapalika pramukh hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono Kathan sahi hain" },
+          { "id": "D", "text": "Dono Kathan galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Governor 'nominal head' hai jise Council of Ministers ki salah maanni padti hai, aur CM-led Council of Ministers hi 'real executive head' hoti hai - ye BPSC ka bahut common multi-statement pattern hai."
+      },
+      "navigation": { "next": "card_08_quiz3_real_executive", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_quiz3_real_executive",
+      "card_slug": "card_08_quiz3_real_executive",
+      "type": "quiz",
+      "concept_id": "real_executive_quiz",
+      "level": 1,
+      "progress": { "current": 8, "total": 75 },
+      "quiz_payload": {
+        "question": "Rajya ki asli karyapalika shakti kiske paas hoti hai?",
+        "options": [
+          { "id": "A", "text": "Governor ke paas akele" },
+          { "id": "B", "text": "CM ki adhyakshta wali Council of Ministers ke paas" },
+          { "id": "C", "text": "State High Court ke paas" },
+          { "id": "D", "text": "Speaker ke paas" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 163 ke tahat CM-headed Council of Ministers hi asli karyapalika shakti rakhti hai; Governor sirf constitutional/nominal head hai jo iski salah se bandha hota hai."
+      },
+      "navigation": { "next": "card_09_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_09_milestone1",
+      "card_slug": "card_09_milestone1",
+      "type": "milestone",
+      "concept_id": "module1_complete",
+      "level": 1,
+      "progress": { "current": 9, "total": 75 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "CM ki Constitutional Basis (Article 163-164 Intro)",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/9 Clear",
+        "motivational_quote": "Zabardast! Ab tum jaan gaye ho state ka asli boss kaun hai - CM ki appointment ki detail ki taraf badhte hain!"
+      },
+      "navigation": { "next": "card_10_article164_appointment", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_10_article164_appointment",
+      "card_slug": "card_10_article164_appointment",
+      "type": "chat",
+      "concept_id": "article_164_1_appointment",
+      "level": 2,
+      "progress": { "current": 10, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhte hain CM kaise appoint hota hai. Article 164(1) mein simple sa likha hai - 'Chief Minister ko Governor appoint karega'. Bas itna hi likha hai, koi detailed procedure nahi di gayi!" },
+        { "speaker": "raju", "text": "Itna short? To Governor kisi ko bhi bula ke CM bana sakta hai?" },
+        { "speaker": "aman", "text": "Yahi to trap hai! Likha to sirf itna hai, lekin ek unwritten convention (parampara) follow hoti hai - jis party ya gathbandhan ko Vidhan Sabha mein bahumat mile, uske neta ko hi Governor CM banata hai." },
+        { "speaker": "raju", "text": "Convention matlab? Wo to Constitution mein likha hi nahi hoga na sir?" }
+      ],
+      "navigation": { "next": "card_11_convention_majority_leader", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_convention_majority_leader",
+      "card_slug": "card_11_convention_majority_leader",
+      "type": "chat",
+      "concept_id": "convention_of_appointment",
+      "level": 2,
+      "progress": { "current": 11, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi Raju! Convention ka matlab hai - practice jo samay ke saath follow hoti aayi hai, jaise UK ke parliamentary system se aayi hai. Likhi nahi hoti lekin follow ki jaati hai." },
+        { "speaker": "raju", "text": "Achha, to jab ek party ko clear majority mil jaaye to Governor ke paas koi choice hi nahi hoti?" },
+        { "speaker": "aman", "text": "Sahi socha! Jab clear majority ho, Governor ke paas koi discretion nahi bachta - use us neta ko hi bulana padta hai. Asli twist tab aata hai jab kisi party ko poori majority na mile..." },
+        { "speaker": "raju", "text": "Hain?? Matlab jab koi bhi party jeete hi na poori tarah?" }
+      ],
+      "navigation": { "next": "card_12_governor_discretion_hung_assembly", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_governor_discretion_hung_assembly",
+      "card_slug": "card_12_governor_discretion_hung_assembly",
+      "type": "chat",
+      "concept_id": "hung_assembly_discretion",
+      "level": 2,
+      "progress": { "current": 12, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul! Ise 'Hung Assembly' kehte hain - jab kisi single party ya pre-poll alliance ko bahumat na mile. Tab Governor ke paas discretionary power aa jaati hai ki wo dekhe kaun sabse stable sarkar de sakta hai." },
+        { "speaker": "raju", "text": "To Governor apni marzi se kisi ko bhi CM bana sakta hai us case mein?" },
+        { "speaker": "aman", "text": "Nahi bilkul apni marzi se nahi! Supreme Court ne guidelines di hain (jaise floor test se bahumat sabit karna) taki Governor apni discretionary power ka misuse na kare. Ye BPSC ka favorite trap hai - discretion hoti hai lekin unlimited nahi!" },
+        { "speaker": "raju", "text": "Achha, to Governor discretion use karta hai but final proof floor test se hota hai, samajh gaya!" }
+      ],
+      "navigation": { "next": "card_13_guess_hung_house", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_guess_hung_house",
+      "card_slug": "card_13_guess_hung_house",
+      "type": "guess",
+      "concept_id": "hung_assembly_practice",
+      "level": 2,
+      "progress": { "current": 13, "total": 75 },
+      "guess_payload": {
+        "question": "Agar Bihar mein Vidhan Sabha chunav ke baad koi bhi party ya gathbandhan ko poora bahumat na mile (Hung Assembly), to Governor sabse pehle kya karega?",
+        "options": [
+          { "id": "A", "text": "Seedha President's Rule laga dega" },
+          { "id": "B", "text": "Sabse bade single party/gathbandhan ke neta ko sarkar banane bulayega aur floor test karayega" },
+          { "id": "C", "text": "Chunav turant dobara karayega" },
+          { "id": "D", "text": "Apni pasand ke kisi bhi vidhayak ko CM bana dega" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Standard practice aur SC guidelines ke anusar, sabse bade single party/pre-poll alliance ko pehle mauka diya jaata hai, phir tay samay mein floor test se bahumat sabit karni hoti hai."
+      },
+      "navigation": { "next": "card_14_quiz1_appointment", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_14_quiz1_appointment",
+      "card_slug": "card_14_quiz1_appointment",
+      "type": "quiz",
+      "concept_id": "appointment_quiz",
+      "level": 2,
+      "progress": { "current": 14, "total": 75 },
+      "quiz_payload": {
+        "question": "Article 164(1) ke anusar Chief Minister ki niyukti kaun karta hai?",
+        "options": [
+          { "id": "A", "text": "President" },
+          { "id": "B", "text": "Governor" },
+          { "id": "C", "text": "Speaker" },
+          { "id": "D", "text": "Chief Justice of High Court" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 164(1) - Chief Minister ko Governor niyukt karega. Baaki Ministers CM ki salah par Governor niyukt karta hai."
+      },
+      "navigation": { "next": "card_15_quiz2_convention", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz2_convention",
+      "card_slug": "card_15_quiz2_convention",
+      "type": "quiz",
+      "concept_id": "convention_quiz",
+      "level": 2,
+      "progress": { "current": 15, "total": 75 },
+      "quiz_payload": {
+        "question": "Kathan 1: CM ki niyukti prakriya poori tarah likhit (written) hai Constitution mein. Kathan 2: Bahumat dal ke neta ko CM banana ek convention hai jo Constitution mein likhi nahi gayi. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Constitution mein sirf itna likha hai ki 'Governor CM appoint karega'. Bahumat dal ke neta ko hi CM banana ek unwritten convention hai, likhit niyam nahi."
+      },
+      "navigation": { "next": "card_16_quiz3_bommai_floor_test", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_quiz3_bommai_floor_test",
+      "card_slug": "card_16_quiz3_bommai_floor_test",
+      "type": "quiz",
+      "concept_id": "floor_test_quiz",
+      "level": 2,
+      "progress": { "current": 16, "total": 75 },
+      "quiz_payload": {
+        "question": "Hung Assembly ki sthiti mein bahumat sabit karne ke liye 'Floor Test' ka concept kis landmark case se strong hua?",
+        "options": [
+          { "id": "A", "text": "Kesavananda Bharati Case" },
+          { "id": "B", "text": "S.R. Bommai Case" },
+          { "id": "C", "text": "Minerva Mills Case" },
+          { "id": "D", "text": "Golaknath Case" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "S.R. Bommai vs Union of India (1994) case mein Supreme Court ne kaha ki bahumat sabit karne ka sahi tarika Assembly ka Floor Test hai, na ki Governor ki subjective satisfaction."
+      },
+      "navigation": { "next": "card_17_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_17_milestone2",
+      "card_slug": "card_17_milestone2",
+      "type": "milestone",
+      "concept_id": "module2_complete",
+      "level": 2,
+      "progress": { "current": 17, "total": 75 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🗳️",
+        "completed_topic": "CM ki Appointment Process",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/9 Clear",
+        "motivational_quote": "Ekdum sahi! Ab hung assembly ka trap bhi tumhe pakad mein aa gaya. Aage chalte hain CM ki qualification aur term dekhne!"
+      },
+      "navigation": { "next": "card_18_qualification_article173", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_18_qualification_article173",
+      "card_slug": "card_18_qualification_article173",
+      "type": "chat",
+      "concept_id": "qualification_article173",
+      "level": 3,
+      "progress": { "current": 18, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo ab dekhte hain CM banne ke liye qualification kya chahiye. Interesting baat ye hai ki Constitution mein CM ke liye alag se koi qualification list nahi di gayi - wahi qualification lagti hai jo MLA (vidhayak) banne ke liye chahiye, Article 173 mein di gayi hai." },
+        { "speaker": "raju", "text": "MLA jaisi hi? Wo kya hoti hai sir?" },
+        { "speaker": "aman", "text": "Teen cheezein - Bharat ka nagrik hona chahiye, kam se kam 25 saal ki umar honi chahiye, aur us rajya ki voter list mein naam hona chahiye." },
+        { "speaker": "raju", "text": "Sirf itni si? Mujhe laga CM banne ke liye koi bada degree vagera chahiye hoga!" }
+      ],
+      "navigation": { "next": "card_19_oath_article164_3", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_oath_article164_3",
+      "card_slug": "card_19_oath_article164_3",
+      "type": "chat",
+      "concept_id": "oath_article164_3",
+      "level": 3,
+      "progress": { "current": 19, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Nahi Raju, koi educational qualification nahi mangi gayi Constitution mein! Ab dekho appointment ke baad kya hota hai - Governor CM ko pad aur gopniyata (secrecy) ki shapath dilate hain, ye Article 164(3) mein likha hai." },
+        { "speaker": "raju", "text": "Shapath mein kya bolna padta hai sir?" },
+        { "speaker": "aman", "text": "Third Schedule mein iska format diya gaya hai - CM Constitution ke prati sacchi shraddha rakhne, apna kaam imandari se karne, aur bina dar-bhay ke sabke saath nyay karne ki shapath lete hain." },
+        { "speaker": "raju", "text": "Achha, matlab ye ek fix likha hua format follow hota hai, apni marzi se kuch nahi bol sakte!" }
+      ],
+      "navigation": { "next": "card_20_term_pleasure_doctrine", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_term_pleasure_doctrine",
+      "card_slug": "card_20_term_pleasure_doctrine",
+      "type": "chat",
+      "concept_id": "term_doctrine_of_pleasure",
+      "level": 3,
+      "progress": { "current": 20, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab CM ka term kitna hota hai jaanna hai? Ye ek interesting trap hai - Constitution mein CM ka fix term kahi nahi likha!" },
+        { "speaker": "raju", "text": "Kya?? To CM ko kabhi bhi hata diya ja sakta hai?" },
+        { "speaker": "aman", "text": "Technically CM 'Governor ki khushi (pleasure) tak' pad par rehte hain - ise 'Doctrine of Pleasure' kehte hain. Lekin practically, jab tak Assembly mein bahumat hai, Governor use hata nahi sakta. Isliye normal term 5 saal hi hota hai, jo Assembly ka bhi term hai." },
+        { "speaker": "raju", "text": "Ohh! Matlab kagaz par 'Governor ki marzi' likha hai, lekin practically bahumat hi asli taakat hai!" }
+      ],
+      "navigation": { "next": "card_21_salary_allowances", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_salary_allowances",
+      "card_slug": "card_21_salary_allowances",
+      "type": "chat",
+      "concept_id": "salary_allowances",
+      "level": 3,
+      "progress": { "current": 21, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Perfect samjha! Ab last point - salary. CM ki salary aur allowances Constitution mein fix nahi ki gayi, balki har rajya ki Vidhan Sabha khud kanoon banakar apne CM ki salary decide karti hai." },
+        { "speaker": "raju", "text": "To har rajya mein alag-alag salary hogi CM ki?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur BPSC ke liye yaad rakhna - Bihar Vidhan Sabha bhi apna alag 'Salary Act' banati hai apne mantriyon ke liye. Ye state-specific hota hai, koi ek desh-vyapi fix amount nahi hai." },
+        { "speaker": "raju", "text": "Samajh gaya sir, ye to state ki apni marzi ki baat hai!" }
+      ],
+      "navigation": { "next": "card_22_quiz1_qualification", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_22_quiz1_qualification",
+      "card_slug": "card_22_quiz1_qualification",
+      "type": "quiz",
+      "concept_id": "qualification_quiz",
+      "level": 3,
+      "progress": { "current": 22, "total": 75 },
+      "quiz_payload": {
+        "question": "CM banne ke liye qualification kis Article mein MLA ke roop mein di gayi hai?",
+        "options": [
+          { "id": "A", "text": "Article 163" },
+          { "id": "B", "text": "Article 164" },
+          { "id": "C", "text": "Article 173" },
+          { "id": "D", "text": "Article 174" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 173 mein Vidhan Sabha ka sadasya (MLA) banne ki qualification di gayi hai, aur CM ke liye bhi wahi qualification lagu hoti hai."
+      },
+      "navigation": { "next": "card_23_quiz2_qualification_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_quiz2_qualification_multistatement",
+      "card_slug": "card_23_quiz2_qualification_multistatement",
+      "type": "quiz",
+      "concept_id": "qualification_multistatement",
+      "level": 3,
+      "progress": { "current": 23, "total": 75 },
+      "quiz_payload": {
+        "question": "Kathan 1: CM ke liye koi vishesh shaikshanik yogyata (educational qualification) nirdharit nahi hai. Kathan 2: CM ki nyunatam umar seema 25 varsh honi chahiye. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono Kathan sahi hain" },
+          { "id": "D", "text": "Dono Kathan galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 173 ke anusar CM/MLA ke liye koi educational qualification zaroori nahi, lekin nyunatam umar 25 varsh anivarya hai."
+      },
+      "navigation": { "next": "card_24_quiz3_term", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_24_quiz3_term",
+      "card_slug": "card_24_quiz3_term",
+      "type": "quiz",
+      "concept_id": "term_quiz",
+      "level": 3,
+      "progress": { "current": 24, "total": 75 },
+      "quiz_payload": {
+        "question": "CM ka fix karyakal (term) Constitution mein kitne saal likha hai?",
+        "options": [
+          { "id": "A", "text": "5 saal" },
+          { "id": "B", "text": "6 saal" },
+          { "id": "C", "text": "Koi fix term nahi - CM Governor ki khushi tak pad par rehta hai" },
+          { "id": "D", "text": "Umar bhar" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Constitution mein CM ka koi fix term nahi diya gaya - CM 'Governor ki khushi tak' pad par rehta hai (Doctrine of Pleasure), practically 5 saal chalta hai jab tak bahumat rahe."
+      },
+      "navigation": { "next": "card_25_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_25_milestone3",
+      "card_slug": "card_25_milestone3",
+      "type": "milestone",
+      "concept_id": "module3_complete",
+      "level": 3,
+      "progress": { "current": 25, "total": 75 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📜",
+        "completed_topic": "Qualification, Shapath, Term aur Salary",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/9 Clear",
+        "motivational_quote": "Bahut badhiya! 'Doctrine of Pleasure' wala trap bhi ab tumhe clear hai. Ab Council of Ministers ke size ki taraf chalte hain!"
+      },
+      "navigation": { "next": "card_26_cm_head_council", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_26_cm_head_council",
+      "card_slug": "card_26_cm_head_council",
+      "type": "chat",
+      "concept_id": "cm_advice_appointment",
+      "level": 4,
+      "progress": { "current": 26, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab samjho CM aur baaki Ministers ka rishta. Governor baaki sabhi Ministers ko bhi appoint karta hai, lekin ek zaroori shart ke saath - CM ki salah (advice) par hi!" },
+        { "speaker": "raju", "text": "Matlab Governor khud se koi Minister nahi bana sakta?" },
+        { "speaker": "aman", "text": "Bilkul nahi! Article 164(1) mein hi likha hai - 'other Ministers shall be appointed by Governor on the advice of Chief Minister'. To CM hi decide karta hai team mein kaun-kaun hoga." },
+        { "speaker": "raju", "text": "Achha, to CM captain hai team ka, Governor sirf official mohar (seal) lagata hai!" }
+      ],
+      "navigation": { "next": "card_27_91st_amendment_164_1a", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_27_91st_amendment_164_1a",
+      "card_slug": "card_27_91st_amendment_164_1a",
+      "type": "chat",
+      "concept_id": "article_164_1A",
+      "level": 4,
+      "progress": { "current": 27, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi analogy! Ab ek important amendment yaad rakho - 2003 mein 91st Constitutional Amendment aaya, jisne Article 164(1A) joda." },
+        { "speaker": "raju", "text": "Isme kya naya add hua sir?" },
+        { "speaker": "aman", "text": "Isme size limit lagayi gayi - kisi bhi rajya ki Council of Ministers mein CM samet total Ministers, Vidhan Sabha ki total sadasya sankhya ke 15% se zyada nahi ho sakte. Aur minimum 12 Mantri to honge hi, chahe chhote se chhota rajya ho." },
+        { "speaker": "raju", "text": "Sir isse pehle to log jitne chahe utne mantri bana dete honge!" }
+      ],
+      "navigation": { "next": "card_28_anti_defection_link", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_28_anti_defection_link",
+      "card_slug": "card_28_anti_defection_link",
+      "type": "chat",
+      "concept_id": "anti_defection_link",
+      "level": 4,
+      "progress": { "current": 28, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul, isiliye ye amendment layi gayi - kuch rajyon mein 90-90 mantri tak bana diye jaate the, jisse khazane par bhaari bojh padta tha. Isko 'Aaya Ram Gaya Ram' politics rokne ke liye bhi laya gaya - 91st Amendment ne 10th Schedule (Anti-Defection Law) ko bhi sakht banaya." },
+        { "speaker": "raju", "text": "Anti-defection ka CM se kya lena dena?" },
+        { "speaker": "aman", "text": "Dekho, pehle neta dal badal karke minister pad paane ke lalach mein party badal dete the. 91st Amendment ne ye provision hataya ki dal-badal karne wale ko turant minister banaya ja sake - isse political stability aayi." },
+        { "speaker": "raju", "text": "Achha! Ab samajh aaya, ek hi amendment ne do problems solve kiye!" }
+      ],
+      "navigation": { "next": "card_29_guess_bihar_cabinet_size", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_29_guess_bihar_cabinet_size",
+      "card_slug": "card_29_guess_bihar_cabinet_size",
+      "type": "guess",
+      "concept_id": "bihar_cabinet_size_calculation",
+      "level": 4,
+      "progress": { "current": 29, "total": 75 },
+      "guess_payload": {
+        "question": "Bihar Vidhan Sabha mein total 243 seats hain. 15% ki limit ke hisaab se, Bihar mein CM samet maximum kitne Mantri ho sakte hain (approx)?",
+        "options": [
+          { "id": "A", "text": "12" },
+          { "id": "B", "text": "25" },
+          { "id": "C", "text": "36" },
+          { "id": "D", "text": "50" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "243 ka 15% = 36.45, isliye Bihar mein CM samet maximum 36 mantri (approx) ho sakte hain - Article 164(1A) ke tahat."
+      },
+      "navigation": { "next": "card_30_quiz1_91st_amendment", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_30_quiz1_91st_amendment",
+      "card_slug": "card_30_quiz1_91st_amendment",
+      "type": "quiz",
+      "concept_id": "91st_amendment_quiz",
+      "level": 4,
+      "progress": { "current": 30, "total": 75 },
+      "quiz_payload": {
+        "question": "91st Constitutional Amendment (2003) ne kaunsa naya Article joda jo Council of Ministers ke size ko limit karta hai?",
+        "options": [
+          { "id": "A", "text": "Article 164(1)" },
+          { "id": "B", "text": "Article 164(1A)" },
+          { "id": "C", "text": "Article 164(2)" },
+          { "id": "D", "text": "Article 164(4)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "91st Amendment Act, 2003 ne Article 164(1A) joda jismein Council of Ministers ke size ki 15% ki seema (limit) aur minimum 12 Ministers ka pravdhan hai."
+      },
+      "navigation": { "next": "card_31_quiz2_size_limit_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_31_quiz2_size_limit_multistatement",
+      "card_slug": "card_31_quiz2_size_limit_multistatement",
+      "type": "quiz",
+      "concept_id": "size_limit_multistatement",
+      "level": 4,
+      "progress": { "current": 31, "total": 75 },
+      "quiz_payload": {
+        "question": "Kathan 1: Council of Ministers ka size Vidhan Sabha ki kul sadasya sankhya ke 15% se adhik nahi ho sakta. Kathan 2: Kam se kam 12 mantri har rajya mein hona anivarya hai, chahe Vidhan Sabha kitni bhi chhoti ho. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 164(1A) ke tahat dono shartein hain - maximum 15% aur minimum 12 Ministers, dono hi 91st Amendment se lagu hui."
+      },
+      "navigation": { "next": "card_32_quiz3_governor_advice", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_32_quiz3_governor_advice",
+      "card_slug": "card_32_quiz3_governor_advice",
+      "type": "quiz",
+      "concept_id": "governor_advice_quiz",
+      "level": 4,
+      "progress": { "current": 32, "total": 75 },
+      "quiz_payload": {
+        "question": "Governor baaki Ministers ki niyukti kis aadhar par karta hai?",
+        "options": [
+          { "id": "A", "text": "Apni marzi se" },
+          { "id": "B", "text": "CM ki salah par" },
+          { "id": "C", "text": "Speaker ki salah par" },
+          { "id": "D", "text": "President ki salah par" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 164(1) - Governor baaki sabhi Ministers ko CM ki salah (advice) par hi niyukt karta hai, apni marzi se nahi."
+      },
+      "navigation": { "next": "card_33_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_33_milestone4",
+      "card_slug": "card_33_milestone4",
+      "type": "milestone",
+      "concept_id": "module4_complete",
+      "level": 4,
+      "progress": { "current": 33, "total": 75 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "👥",
+        "completed_topic": "Council of Ministers ka Composition & Size Limit",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/9 Clear",
+        "motivational_quote": "Shandaar! 91st Amendment ka trap tumne solve kar liya. Ab CM ki asli powers detail mein dekhte hain!"
+      },
+      "navigation": { "next": "card_34_powers_council_ministers", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_34_powers_council_ministers",
+      "card_slug": "card_34_powers_council_ministers",
+      "type": "chat",
+      "concept_id": "powers_within_council",
+      "level": 5,
+      "progress": { "current": 34, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab CM ki sabse important powers dekhte hain - sabse pehle apne Council of Ministers ke andar. CM hi decide karta hai kis Minister ko kaunsa department (portfolio) milega." },
+        { "speaker": "raju", "text": "Matlab CM chahe to kisi Minister ka department badal bhi sakta hai?" },
+        { "speaker": "aman", "text": "Bilkul! CM ye bhi kar sakta hai ki kisi Minister se resign karwa de, ya Governor se use bar-khaarij (dismiss) karwa de. Council of Ministers ki meetings bhi CM hi chair (adhyaksh) karta hai." },
+        { "speaker": "raju", "text": "To CM ke bina to Council of Ministers chal hi nahi sakti!" }
+      ],
+      "navigation": { "next": "card_35_powers_governor_article167", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_35_powers_governor_article167",
+      "card_slug": "card_35_powers_governor_article167",
+      "type": "chat",
+      "concept_id": "article_167_duties",
+      "level": 5,
+      "progress": { "current": 35, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab CM aur Governor ke beech ka sabse important Article dekho - Article 167. Isme CM ke teen zaroori kartavya (duties) likhe hain Governor ke prati." },
+        { "speaker": "raju", "text": "Kya kartavya hain sir?" },
+        { "speaker": "aman", "text": "Pehla - CM ko Council of Ministers ke saare decisions Governor tak pahunchane padte hain. Doosra - Governor jab bhi jaankari maange, CM use deni padegi. Teesra - agar Governor chahe, to jo faisla kisi akele Minister ne liya hai lekin poori Council ne discuss nahi kiya, use CM ko poori Council ke saamne rakhna padega." },
+        { "speaker": "raju", "text": "Ohh, matlab CM Governor aur Council ke beech ka 'link' hai - sabse important connection!" }
+      ],
+      "navigation": { "next": "card_36_powers_legislature", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_36_powers_legislature",
+      "card_slug": "card_36_powers_legislature",
+      "type": "chat",
+      "concept_id": "powers_legislature",
+      "level": 5,
+      "progress": { "current": 36, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul, isiliye CM ko 'sole channel of communication' bola jata hai Council aur Governor ke beech. Ab legislature ke saamne CM ki powers dekho - CM hi Governor ko salah deta hai ki Assembly ka session kab bulaya (summon) jaaye, kab sthagit (prorogue) kiya jaaye, ya kab Assembly bhang (dissolve) ki jaaye." },
+        { "speaker": "raju", "text": "Matlab Assembly bhang karne ka decision bhi CM hi leta hai?" },
+        { "speaker": "aman", "text": "CM salah deta hai, final signature Governor ka hota hai - lekin practically CM ki salah maanni padti hai jab tak bahumat hai. Ye BPSC mein bahut poocha jaata hai!" },
+        { "speaker": "raju", "text": "Achha, ab samajh gaya - salah CM ki, mohar Governor ki!" }
+      ],
+      "navigation": { "next": "card_37_other_powers_planning_niti", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_37_other_powers_planning_niti",
+      "card_slug": "card_37_other_powers_planning_niti",
+      "type": "chat",
+      "concept_id": "other_powers",
+      "level": 5,
+      "progress": { "current": 37, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Kuch aur powers bhi yaad rakho - CM State Planning Board ka chairman hota hai, NITI Aayog ki Governing Council ka member hota hai, aur Inter-State Council ka bhi member hota hai." },
+        { "speaker": "raju", "text": "Itni saari cheezon mein CM involved hai? Sir ye to yaad rakhna mushkil hai!" },
+        { "speaker": "aman", "text": "Simple trick - CM state ka 'chief coordinator' hai - state ke andar bhi, aur baaki states/Centre ke saath bhi coordination karna uska kaam hai. Bas ye ek line yaad rakho!" },
+        { "speaker": "raju", "text": "Ye trick to badiya hai, ab mujhe sab yaad rahega!" }
+      ],
+      "navigation": { "next": "card_38_guess_article167_duties", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_38_guess_article167_duties",
+      "card_slug": "card_38_guess_article167_duties",
+      "type": "guess",
+      "concept_id": "article167_scenario",
+      "level": 5,
+      "progress": { "current": 38, "total": 75 },
+      "guess_payload": {
+        "question": "Article 167 ke anusar, agar kisi ek Minister ne akele koi faisla liya hai jise poori Council of Ministers ne discuss nahi kiya, to Governor chahe to kya hoga?",
+        "options": [
+          { "id": "A", "text": "Governor us faisle ko seedha radd (cancel) kar sakta hai" },
+          { "id": "B", "text": "CM ko wo faisla poori Council ke saamne vichar ke liye rakhna padega" },
+          { "id": "C", "text": "Us Minister ko turant hataya jayega" },
+          { "id": "D", "text": "Kuch nahi hoga, faisla wahi rahega" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 167(c) ke anusar, Governor ke require karne par CM ko akele Minister ke faisle ko poori Council of Ministers ke saamne consideration ke liye rakhna padta hai."
+      },
+      "navigation": { "next": "card_39_quiz1_article167", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_39_quiz1_article167",
+      "card_slug": "card_39_quiz1_article167",
+      "type": "quiz",
+      "concept_id": "article167_quiz",
+      "level": 5,
+      "progress": { "current": 39, "total": 75 },
+      "quiz_payload": {
+        "question": "Kaunsa Article CM ko Governor ke saath 'sole channel of communication' banata hai?",
+        "options": [
+          { "id": "A", "text": "Article 163" },
+          { "id": "B", "text": "Article 164" },
+          { "id": "C", "text": "Article 166" },
+          { "id": "D", "text": "Article 167" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Article 167 CM ke Governor ke prati teen kartavya batata hai jo use Council aur Governor ke beech ka 'sole channel of communication' banate hain."
+      },
+      "navigation": { "next": "card_40_quiz2_powers_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_40_quiz2_powers_multistatement",
+      "card_slug": "card_40_quiz2_powers_multistatement",
+      "type": "quiz",
+      "concept_id": "powers_multistatement",
+      "level": 5,
+      "progress": { "current": 40, "total": 75 },
+      "quiz_payload": {
+        "question": "Kathan 1: CM apni salah se Governor ko Vidhan Sabha satra bulane ya bhang karne ki sifarish karta hai. Kathan 2: CM State Planning Board ka chairman hota hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "CM Assembly session summon/prorogue/dissolve karne ki sifarish karta hai aur wo State Planning Board ka chairman bhi hota hai - dono kathan sahi hain."
+      },
+      "navigation": { "next": "card_41_quiz3_niti_aayog", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_41_quiz3_niti_aayog",
+      "card_slug": "card_41_quiz3_niti_aayog",
+      "type": "quiz",
+      "concept_id": "niti_aayog_quiz",
+      "level": 5,
+      "progress": { "current": 41, "total": 75 },
+      "quiz_payload": {
+        "question": "CM NITI Aayog ki kis body ka sadasya (member) hota hai?",
+        "options": [
+          { "id": "A", "text": "Governing Council" },
+          { "id": "B", "text": "Finance Commission" },
+          { "id": "C", "text": "Election Commission" },
+          { "id": "D", "text": "Union Cabinet" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Sabhi rajyon ke Chief Ministers NITI Aayog ki Governing Council ke sadasya hote hain, jiske chairman Bharat ke Pradhan Mantri hote hain."
+      },
+      "navigation": { "next": "card_42_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_42_milestone5",
+      "card_slug": "card_42_milestone5",
+      "type": "milestone",
+      "concept_id": "module5_complete",
+      "level": 5,
+      "progress": { "current": 42, "total": 75 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "CM ki Powers & Functions",
+        "xp_earned": 50,
+        "milestone_progress": "Module 5/9 Clear",
+        "motivational_quote": "Bahut khoob! Article 167 ki teeno duties tum solid samajh chuke ho. Ab responsibility aur removal dekhte hain!"
+      },
+      "navigation": { "next": "card_43_collective_responsibility", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_43_collective_responsibility",
+      "card_slug": "card_43_collective_responsibility",
+      "type": "chat",
+      "concept_id": "collective_responsibility",
+      "level": 6,
+      "progress": { "current": 43, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek bahut important concept - 'Collective Responsibility', Article 164(2) mein likha hai. Iska matlab hai Council of Ministers, CM samet, poori tarah Vidhan Sabha ke prati uttardayi (responsible) hoti hai." },
+        { "speaker": "raju", "text": "Matlab kya sir, poori Council uttardayi? Ek Minister ne galti ki to sab jimmedar?" },
+        { "speaker": "aman", "text": "Bilkul sahi samjha! Jaise ek naav mein sab saath doobte hain, waise hi agar Assembly Council ke against ashwas prastav (no-confidence motion) paas kar de, to poori Council - sirf wo ek Minister nahi - resign karni padti hai." },
+        { "speaker": "raju", "text": "Wow, ye to bada risky hai! Ek ki galti sabko le doobegi!" }
+      ],
+      "navigation": { "next": "card_44_individual_responsibility", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_44_individual_responsibility",
+      "card_slug": "card_44_individual_responsibility",
+      "type": "chat",
+      "concept_id": "individual_responsibility",
+      "level": 6,
+      "progress": { "current": 44, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab isse alag ek concept hai - 'Individual Responsibility'. Har Minister individually Governor ki khushi (pleasure) tak pad par rehta hai." },
+        { "speaker": "raju", "text": "Ye to phir wahi 'pleasure doctrine' wali baat hai na jo humne CM ke liye padhi thi?" },
+        { "speaker": "aman", "text": "Bilkul sahi yaad rakha! Lekin practically, Governor kisi Minister ko akele nahi hata sakta jab tak CM khud sifarish na kare - kyunki convention ye hai ki Governor CM ki salah se hi chalta hai." },
+        { "speaker": "raju", "text": "Achha, to likha kuch hai, hota kuch aur practically hai - ye to exam mein bada trap lagta hai!" }
+      ],
+      "navigation": { "next": "card_45_removal_resignation", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_45_removal_resignation",
+      "card_slug": "card_45_removal_resignation",
+      "type": "chat",
+      "concept_id": "removal_resignation",
+      "level": 6,
+      "progress": { "current": 45, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul pakde ho trap! Ab dekho CM khud kab hatata hai ya hataya jaata hai. Agar CM Assembly mein apna bahumat kho de - jaise no-confidence motion haar jaaye - to use resign karna padta hai." },
+        { "speaker": "raju", "text": "Aur agar CM resign na kare to?" },
+        { "speaker": "aman", "text": "Fir Governor use apni khushi (pleasure) ka use karke pad se hata sakta hai - lekin sirf jab bahumat na ho, apni marzi se nahi. Governor bahumat wale CM ko yun hi nahi hata sakta." },
+        { "speaker": "raju", "text": "Samajh gaya, bahumat hi asli cheez hai jo CM ki kursi bachati hai!" }
+      ],
+      "navigation": { "next": "card_46_caretaker_cm", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_46_caretaker_cm",
+      "card_slug": "card_46_caretaker_cm",
+      "type": "chat",
+      "concept_id": "caretaker_cm",
+      "level": 6,
+      "progress": { "current": 46, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur interesting cheez - 'Caretaker CM'. Jab CM resign kar deta hai ya Assembly bhang ho jaati hai, to naye CM ke shapath tak, purana CM 'caretaker' ke roop mein kaam karta rehta hai." },
+        { "speaker": "raju", "text": "Matlab bina kaam kiye bas kursi par baitha rehta hai?" },
+        { "speaker": "aman", "text": "Nahi, wo normal kaam-kaaj chalata hai lekin naye badi policy decisions nahi le sakta - taki naye ministry ke liye rasta saaf rahe. Ye ek constitutional convention hai jo continuity of governance ke liye zaroori hai." },
+        { "speaker": "raju", "text": "Achha, matlab sarkar bina break ke chalti rehti hai, seat kabhi khaali nahi rehti!" }
+      ],
+      "navigation": { "next": "card_47_quiz1_collective_responsibility", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_47_quiz1_collective_responsibility",
+      "card_slug": "card_47_quiz1_collective_responsibility",
+      "type": "quiz",
+      "concept_id": "collective_responsibility_quiz",
+      "level": 6,
+      "progress": { "current": 47, "total": 75 },
+      "quiz_payload": {
+        "question": "Article 164(2) kis principle ko define karta hai?",
+        "options": [
+          { "id": "A", "text": "Individual Responsibility" },
+          { "id": "B", "text": "Collective Responsibility" },
+          { "id": "C", "text": "Doctrine of Pleasure" },
+          { "id": "D", "text": "Anti-Defection" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 164(2) - Council of Ministers, CM samet, poori tarah rajya ki Vidhan Sabha ke prati saamuhik roop se uttardayi (collectively responsible) hoti hai."
+      },
+      "navigation": { "next": "card_48_quiz2_responsibility_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_48_quiz2_responsibility_multistatement",
+      "card_slug": "card_48_quiz2_responsibility_multistatement",
+      "type": "quiz",
+      "concept_id": "responsibility_multistatement",
+      "level": 6,
+      "progress": { "current": 48, "total": 75 },
+      "quiz_payload": {
+        "question": "Kathan 1: Collective Responsibility ke tahat, agar Assembly Council ke khilaf ashwas prastav paas karti hai to poori Council ko resign karna padta hai. Kathan 2: Individual Responsibility ka matlab hai har Minister Governor ki khushi tak pad par rehta hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - ye do alag-alag lekin related concepts hain jo aksar BPSC mein ek saath confuse karaye jaate hain."
+      },
+      "navigation": { "next": "card_49_quiz3_caretaker_cm", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_49_quiz3_caretaker_cm",
+      "card_slug": "card_49_quiz3_caretaker_cm",
+      "type": "quiz",
+      "concept_id": "caretaker_cm_quiz",
+      "level": 6,
+      "progress": { "current": 49, "total": 75 },
+      "quiz_payload": {
+        "question": "Jab CM resign kar deta hai ya Assembly bhang hoti hai, tab naye CM ke shapath tak purana CM kis roop mein kaam karta hai?",
+        "options": [
+          { "id": "A", "text": "Permanent CM" },
+          { "id": "B", "text": "Caretaker CM" },
+          { "id": "C", "text": "Deputy CM" },
+          { "id": "D", "text": "Acting Governor" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Naye CM ke shapath lene tak purana CM 'Caretaker CM' ke roop mein routine kaam-kaaj chalata hai, taaki governance continuity bani rahe."
+      },
+      "navigation": { "next": "card_50_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_50_milestone6",
+      "card_slug": "card_50_milestone6",
+      "type": "milestone",
+      "concept_id": "module6_complete",
+      "level": 6,
+      "progress": { "current": 50, "total": 75 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🛡️",
+        "completed_topic": "Responsibility, Removal & Caretaker CM",
+        "xp_earned": 50,
+        "milestone_progress": "Module 6/9 Clear",
+        "motivational_quote": "Solid progress Raju! Aadha se zyada chapter khatam! Ab dekhte hain bina MLA bane CM banne wala rule!"
+      },
+      "navigation": { "next": "card_51_article164_4_six_months", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_51_article164_4_six_months",
+      "card_slug": "card_51_article164_4_six_months",
+      "type": "chat",
+      "concept_id": "article164_4_six_months",
+      "level": 7,
+      "progress": { "current": 51, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek bada interesting rule - kya zaroori hai ki jo CM banega wo pehle se MLA ho? Jawab hai - nahi zaroori nahi! Article 164(4) kehta hai koi bhi vyakti jo Legislature ka sadasya nahi hai, use bhi CM banaya ja sakta hai." },
+        { "speaker": "raju", "text": "Kya?? Bina MLA bane koi CM ban sakta hai? Ye to bada strange hai sir!" },
+        { "speaker": "aman", "text": "Haan, lekin ek shart hai - use 6 mahine ke andar-andar us rajya ki Vidhan Sabha ya Vidhan Parishad ka sadasya (member) ban jaana zaroori hai, warna use pad chhodna padega." },
+        { "speaker": "raju", "text": "Achha, matlab 6 mahine ki deadline milti hai, us mein election jeetna padega!" }
+      ],
+      "navigation": { "next": "card_52_cm_from_legislative_council", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_52_cm_from_legislative_council",
+      "card_slug": "card_52_cm_from_legislative_council",
+      "type": "chat",
+      "concept_id": "cm_from_council",
+      "level": 7,
+      "progress": { "current": 52, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Aur ek aur zaroori baat - CM Vidhan Sabha (Legislative Assembly) ka bhi member ho sakta hai ya Vidhan Parishad (Legislative Council) ka bhi - dono mein se koi ek." },
+        { "speaker": "raju", "text": "To Vidhan Parishad wale bhi CM ban sakte hain? Wo to directly elected nahi hote na?" },
+        { "speaker": "aman", "text": "Bilkul sahi observation! Vidhan Parishad members indirectly chune jaate hain, phir bhi Constitution mein koi rok nahi hai - wo bhi CM ban sakte hain. Bihar jaise states mein jahan Vidhan Parishad hai, wahan ye possible hai." },
+        { "speaker": "raju", "text": "Achha, Bihar mein to Vidhan Parishad hai na sir, humne padha tha!" }
+      ],
+      "navigation": { "next": "card_53_trap_rajya_sabha_not_allowed", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_53_trap_rajya_sabha_not_allowed",
+      "card_slug": "card_53_trap_rajya_sabha_not_allowed",
+      "type": "chat",
+      "concept_id": "rajya_sabha_trap",
+      "level": 7,
+      "progress": { "current": 53, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi yaad kiya! Ab ek trap sun lo jo BPSC bahut poochti hai - kya CM, Parliament ke Rajya Sabha ka member hoke ban sakta hai?" },
+        { "speaker": "raju", "text": "Haan kyun nahi, PM to Rajya Sabha se ban sakte hain na, wahi rule CM pe bhi lagega!" },
+        { "speaker": "aman", "text": "Yahi sabse bada trap hai Raju! CM sirf STATE Legislature (Assembly ya Council) ka hi member ho sakta hai, Parliament ke Rajya Sabha ka nahi - kyunki Rajya Sabha Parliament ka hissa hai, State Legislature ka nahi. PM alag cheez hai, CM alag." },
+        { "speaker": "raju", "text": "Ohh! Ye to bilkul confuse karne wala tha, ab clear ho gaya - CM ka connection sirf apne state ki legislature se hai!" }
+      ],
+      "navigation": { "next": "card_54_quiz1_six_months_rule", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_54_quiz1_six_months_rule",
+      "card_slug": "card_54_quiz1_six_months_rule",
+      "type": "quiz",
+      "concept_id": "six_months_rule_quiz",
+      "level": 7,
+      "progress": { "current": 54, "total": 75 },
+      "quiz_payload": {
+        "question": "Article 164(4) ke anusar, ek vyakti jo Legislature ka sadasya nahi hai, use kitne samay ke andar sadasya banna zaroori hai CM/Minister bane rehne ke liye?",
+        "options": [
+          { "id": "A", "text": "3 mahine" },
+          { "id": "B", "text": "6 mahine" },
+          { "id": "C", "text": "1 saal" },
+          { "id": "D", "text": "2 saal" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 164(4) - non-member CM/Minister ko 6 consecutive mahino ke andar State Legislature ka sadasya banna anivarya hai, warna pad chala jaata hai."
+      },
+      "navigation": { "next": "card_55_quiz2_legislature_membership_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_55_quiz2_legislature_membership_multistatement",
+      "card_slug": "card_55_quiz2_legislature_membership_multistatement",
+      "type": "quiz",
+      "concept_id": "legislature_membership_multistatement",
+      "level": 7,
+      "progress": { "current": 55, "total": 75 },
+      "quiz_payload": {
+        "question": "Kathan 1: CM Vidhan Sabha ya Vidhan Parishad, dono mein se kisi ek ka sadasya ho sakta hai. Kathan 2: CM Rajya Sabha ka sadasya hokar bhi CM ban sakta hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "CM sirf STATE Legislature (Assembly ya Council) ka hi sadasya ho sakta hai - Rajya Sabha Parliament ka hissa hai, State Legislature ka nahi, isliye Kathan 2 galat hai."
+      },
+      "navigation": { "next": "card_56_quiz3_six_month_failure", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_56_quiz3_six_month_failure",
+      "card_slug": "card_56_quiz3_six_month_failure",
+      "type": "quiz",
+      "concept_id": "six_month_failure_quiz",
+      "level": 7,
+      "progress": { "current": 56, "total": 75 },
+      "quiz_payload": {
+        "question": "Agar koi vyakti CM ban jaaye lekin 6 mahine ke andar kisi bhi Sadan (Vidhan Sabha/Parishad) ka sadasya na bane, to kya hoga?",
+        "options": [
+          { "id": "A", "text": "Wo CM banaa rahega hamesha" },
+          { "id": "B", "text": "Use pad chhodna padega" },
+          { "id": "C", "text": "President use hata dega" },
+          { "id": "D", "text": "Kuch nahi hoga" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 164(4) ke anusar, 6 mahine ke andar sadasya na banne par vyakti apne aap Minister/CM ka pad khokar de deta hai."
+      },
+      "navigation": { "next": "card_57_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_57_milestone7",
+      "card_slug": "card_57_milestone7",
+      "type": "milestone",
+      "concept_id": "module7_complete",
+      "level": 7,
+      "progress": { "current": 57, "total": 75 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⏳",
+        "completed_topic": "Article 164(4) aur Legislature Membership Rule",
+        "xp_earned": 50,
+        "milestone_progress": "Module 7/9 Clear",
+        "motivational_quote": "Bahut badhiya Raju! Rajya Sabha wala trap sabse zyada log galat karte hain, tumne pakad liya! Ab Bihar special facts dekhte hain!"
+      },
+      "navigation": { "next": "card_58_first_cm_bihar", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_58_first_cm_bihar",
+      "card_slug": "card_58_first_cm_bihar",
+      "type": "chat",
+      "concept_id": "first_cm_bihar",
+      "level": 8,
+      "progress": { "current": 58, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite - Ab Bihar ki kuch zaroori history dekhte hain jo bahut baar poochi jaati hai. Bihar ke pehle Chief Minister kaun the, pata hai?" },
+        { "speaker": "raju", "text": "Nahi sir, pata nahi. Koi bahut purana neta honge!" },
+        { "speaker": "aman", "text": "Sri Krishna Sinha - unhe 'Bihar Kesari' bhi kaha jata hai. Wo 1946 mein Bihar ke Premier bane the (jab tak Constitution nahi bana tha), aur 1950 mein Constitution lagu hone ke baad Bihar ke pehle Chief Minister bane. Unka karyakal 1961 mein unki mrityu tak chala." },
+        { "speaker": "raju", "text": "Bihar Kesari - ye naam to yaad rakhna hi padega exam ke liye!" }
+      ],
+      "navigation": { "next": "card_59_longest_serving_bihar_cm", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_59_longest_serving_bihar_cm",
+      "card_slug": "card_59_longest_serving_bihar_cm",
+      "type": "chat",
+      "concept_id": "longest_serving_bihar_cm",
+      "level": 8,
+      "progress": { "current": 59, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur zaroori fact - Bihar ke Chief Minister ke roop mein sabse zyada baar aur sabse lambe kul (cumulative) samay tak seva karne ka record kiske paas hai, pata hai?" },
+        { "speaker": "raju", "text": "Lalu Prasad Yadav honge shayad?" },
+        { "speaker": "aman", "text": "Nahi, Nitish Kumar - wo saal 2000 se ab tak kayi baar Bihar ke CM rahe hain, aur cumulative (kul milakar) sabse zyada saalon tak CM rehne ka record unke paas hai." },
+        { "speaker": "raju", "text": "Achha, matlab bar-bar CM bane, ek saath nahi, phir bhi total sabse zyada!" }
+      ],
+      "navigation": { "next": "card_60_bihar_bicameral_legislature", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_60_bihar_bicameral_legislature",
+      "card_slug": "card_60_bihar_bicameral_legislature",
+      "type": "chat",
+      "concept_id": "bihar_bicameral",
+      "level": 8,
+      "progress": { "current": 60, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek Bihar-special polity fact - Bihar un chuninda rajyon mein se ek hai jahan Vidhan Parishad (Legislative Council) hai, matlab Bihar ka Legislature 'Dwisadaniya' (Bicameral) hai." },
+        { "speaker": "raju", "text": "Dwisadaniya matlab do sadan? Kaunse-kaunse states mein hai ye sir?" },
+        { "speaker": "aman", "text": "Haan, do sadan - Vidhan Sabha aur Vidhan Parishad. Bharat mein sirf chhe rajyon mein ye system hai - Bihar, Uttar Pradesh, Maharashtra, Karnataka, Andhra Pradesh, aur Telangana. Bihar TRE exam mein ye fact bahut common hai!" },
+        { "speaker": "raju", "text": "Ohh! To Bihar mein CM Vidhan Parishad se bhi ban sakta hai jo humne pehle padha tha!" }
+      ],
+      "navigation": { "next": "card_61_first_woman_cm_bihar", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_61_first_woman_cm_bihar",
+      "card_slug": "card_61_first_woman_cm_bihar",
+      "type": "chat",
+      "concept_id": "first_woman_cm_bihar",
+      "level": 8,
+      "progress": { "current": 61, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi connection banaya! Ek aur important Bihar fact - Bihar ki pehli mahila (woman) Chief Minister kaun thi, pata hai?" },
+        { "speaker": "raju", "text": "Hmm... koi mahila neta honi chahiye... pata nahi sir!" },
+        { "speaker": "aman", "text": "Rabri Devi - wo 1997 mein Bihar ki pehli mahila CM bani thi, jab Lalu Prasad Yadav ko charge-sheet hone ke baad pad chhodna pada tha. Ye fact bhi BPSC mein bahut common hai." },
+        { "speaker": "raju", "text": "Achha! Ye to important trivia hai, note kar leta hoon!" }
+      ],
+      "navigation": { "next": "card_62_quiz1_first_cm_bihar", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_62_quiz1_first_cm_bihar",
+      "card_slug": "card_62_quiz1_first_cm_bihar",
+      "type": "quiz",
+      "concept_id": "first_cm_bihar_quiz",
+      "level": 8,
+      "progress": { "current": 62, "total": 75 },
+      "quiz_payload": {
+        "question": "Bihar ke pehle Chief Minister kaun the, jinhe 'Bihar Kesari' bhi kaha jata hai?",
+        "options": [
+          { "id": "A", "text": "Sri Krishna Sinha" },
+          { "id": "B", "text": "Karpoori Thakur" },
+          { "id": "C", "text": "Jagannath Mishra" },
+          { "id": "D", "text": "Bindeshwari Prasad Mandal" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Sri Krishna Sinha 'Bihar Kesari' ke naam se jaane jaate hain aur wo 1950 mein Constitution lagu hone ke baad Bihar ke pehle Chief Minister bane, 1961 tak seva ki."
+      },
+      "navigation": { "next": "card_63_quiz2_bihar_facts_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_63_quiz2_bihar_facts_multistatement",
+      "card_slug": "card_63_quiz2_bihar_facts_multistatement",
+      "type": "quiz",
+      "concept_id": "bihar_facts_multistatement",
+      "level": 8,
+      "progress": { "current": 63, "total": 75 },
+      "quiz_payload": {
+        "question": "Kathan 1: Bihar un chhe rajyon mein se ek hai jahan Vidhan Parishad hai. Kathan 2: Rabri Devi Bihar ki pehli mahila Chief Minister thi. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Bihar mein Vidhan Parishad hai (bicameral state) aur Rabri Devi 1997 mein Bihar ki pehli mahila CM bani thi - dono kathan sahi hain."
+      },
+      "navigation": { "next": "card_64_quiz3_bihar_assembly_seats", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_64_quiz3_bihar_assembly_seats",
+      "card_slug": "card_64_quiz3_bihar_assembly_seats",
+      "type": "quiz",
+      "concept_id": "bihar_assembly_seats_quiz",
+      "level": 8,
+      "progress": { "current": 64, "total": 75 },
+      "quiz_payload": {
+        "question": "Bihar Vidhan Sabha mein kul kitni seats hain, jiske aadhar par Council of Ministers ka size (15% wali limit) calculate hota hai?",
+        "options": [
+          { "id": "A", "text": "230" },
+          { "id": "B", "text": "243" },
+          { "id": "C", "text": "250" },
+          { "id": "D", "text": "200" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bihar Vidhan Sabha mein 243 seats hain, jiske 15% ke aadhar par maximum mantri sankhya (approx 36) tay hoti hai."
+      },
+      "navigation": { "next": "card_65_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_65_milestone8",
+      "card_slug": "card_65_milestone8",
+      "type": "milestone",
+      "concept_id": "module8_complete",
+      "level": 8,
+      "progress": { "current": 65, "total": 75 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌾",
+        "completed_topic": "Bihar Special Facts (BPSC TRE Favorite)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 8/9 Clear",
+        "motivational_quote": "Zabardast! Bihar special trivia bhi ab pakki hai. Ab last module - PM vs CM aur landmark case dekhte hain!"
+      },
+      "navigation": { "next": "card_66_pm_vs_cm_comparison", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_66_pm_vs_cm_comparison",
+      "card_slug": "card_66_pm_vs_cm_comparison",
+      "type": "chat",
+      "concept_id": "pm_vs_cm",
+      "level": 9,
+      "progress": { "current": 66, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo ab CM aur PM ko compare karte hain - dono ka appointment process kaafi similar hai. Jaise Governor bahumat dal ke neta ko CM banata hai, waise hi President bhi bahumat dal ke neta ko PM banata hai." },
+        { "speaker": "raju", "text": "To dono same hi hue phir sir?" },
+        { "speaker": "aman", "text": "Process similar hai, lekin ek bada difference hai - PM Parliament ke kisi bhi sadan (Lok Sabha ya Rajya Sabha) ka member ho sakta hai. Lekin CM sirf STATE Legislature ka hi member ho sakta hai, jo humne pehle padha." },
+        { "speaker": "raju", "text": "Haan wo trap wala point yaad hai mujhe!" }
+      ],
+      "navigation": { "next": "card_67_sr_bommai_case", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_67_sr_bommai_case",
+      "card_slug": "card_67_sr_bommai_case",
+      "type": "chat",
+      "concept_id": "sr_bommai_case",
+      "level": 9,
+      "progress": { "current": 67, "total": 75 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek famous case padho jo Governor ki discretionary power se related hai - S.R. Bommai vs Union of India (1994)." },
+        { "speaker": "raju", "text": "Isme kya hua tha sir?" },
+        { "speaker": "aman", "text": "Is case mein Supreme Court ne kaha ki bahumat sabit karne ka sahi tarika sirf Assembly ka 'Floor Test' hai, na ki Governor ki apni subjective satisfaction. Isse Governor ki manmaani discretionary power par lagaam lagi." },
+        { "speaker": "raju", "text": "Achha! To ye wahi case hai jisne hung assembly wale point ko strong kiya tha!" }
+      ],
+      "navigation": { "next": "card_68_guess_pm_cm_diff", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_68_guess_pm_cm_diff",
+      "card_slug": "card_68_guess_pm_cm_diff",
+      "type": "guess",
+      "concept_id": "pm_cm_diff_scenario",
+      "level": 9,
+      "progress": { "current": 68, "total": 75 },
+      "guess_payload": {
+        "question": "Ek statement dekho: 'CM Rajya Sabha ka member hokar bhi CM ban sakta hai, jaise PM ban sakta hai.' Kya ye sahi hai?",
+        "options": [
+          { "id": "A", "text": "Sahi hai, dono same rule follow karte hain" },
+          { "id": "B", "text": "Galat hai, CM sirf State Legislature ka member ho sakta hai, Rajya Sabha ka nahi" },
+          { "id": "C", "text": "Sahi hai lekin sirf Bihar mein" },
+          { "id": "D", "text": "Ye Constitution mein likha hi nahi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CM sirf apne rajya ki State Legislature (Vidhan Sabha ya Vidhan Parishad) ka hi member ho sakta hai. Rajya Sabha Parliament ka hissa hai, isliye CM wahan se nahi ban sakta - jabki PM Rajya Sabha se ban sakta hai."
+      },
+      "navigation": { "next": "card_69_quiz1_pm_cm_difference", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_69_quiz1_pm_cm_difference",
+      "card_slug": "card_69_quiz1_pm_cm_difference",
+      "type": "quiz",
+      "concept_id": "pm_cm_diff_quiz",
+      "level": 9,
+      "progress": { "current": 69, "total": 75 },
+      "quiz_payload": {
+        "question": "PM aur CM mein unki Legislature membership ko lekar kya major difference hai?",
+        "options": [
+          { "id": "A", "text": "Dono sirf Lower House ke member ho sakte hain" },
+          { "id": "B", "text": "PM Parliament ke kisi bhi sadan ka aur CM sirf State Legislature ka member ho sakta hai" },
+          { "id": "C", "text": "Dono kisi bhi sadan ke member ho sakte hain" },
+          { "id": "D", "text": "CM sirf Lok Sabha ka member ho sakta hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "PM Lok Sabha ya Rajya Sabha - dono mein se kisi ka bhi member ho sakta hai, lekin CM sirf apne rajya ki Vidhan Sabha ya Vidhan Parishad ka hi member ho sakta hai."
+      },
+      "navigation": { "next": "card_70_quiz2_bommai_case", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_70_quiz2_bommai_case",
+      "card_slug": "card_70_quiz2_bommai_case",
+      "type": "quiz",
+      "concept_id": "bommai_case_quiz",
+      "level": 9,
+      "progress": { "current": 70, "total": 75 },
+      "quiz_payload": {
+        "question": "S.R. Bommai case (1994) ka mukhya nirnay kya tha?",
+        "options": [
+          { "id": "A", "text": "CM ko hatane ka adhikar sirf President ko hai" },
+          { "id": "B", "text": "Bahumat sabit karne ka sahi tarika Floor Test hai, na ki Governor ki subjective satisfaction" },
+          { "id": "C", "text": "CM ki salary rajya sarkar tay karegi" },
+          { "id": "D", "text": "Governor CM ko kabhi nahi hata sakta" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "S.R. Bommai vs Union of India (1994) case ne spasht kiya ki bahumat sabit karne ka sahi tarika Assembly ka Floor Test hai, Governor ki manmaani nahi."
+      },
+      "navigation": { "next": "card_71_quiz3_pm_cm_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_71_quiz3_pm_cm_multistatement",
+      "card_slug": "card_71_quiz3_pm_cm_multistatement",
+      "type": "quiz",
+      "concept_id": "pm_cm_final_multistatement",
+      "level": 9,
+      "progress": { "current": 71, "total": 75 },
+      "quiz_payload": {
+        "question": "Kathan 1: CM aur PM dono ki niyukti prakriya mein 'bahumat dal ke neta' wali convention follow hoti hai. Kathan 2: CM Rajya Sabha ka bhi sadasya hokar CM ban sakta hai jaise PM. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Kathan 1 sahi hai - dono ki appointment mein convention same hai. Kathan 2 galat hai - CM Rajya Sabha se nahi ban sakta, sirf State Legislature se ban sakta hai."
+      },
+      "navigation": { "next": "card_72_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_72_milestone9",
+      "card_slug": "card_72_milestone9",
+      "type": "milestone",
+      "concept_id": "module9_complete",
+      "level": 9,
+      "progress": { "current": 72, "total": 75 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "PM vs CM Comparison & Landmark Judgments",
+        "xp_earned": 60,
+        "milestone_progress": "Module 9/9 Clear",
+        "motivational_quote": "Fantastic! Sara syllabus cover ho gaya! Ab officer-level revision aur final challenge ke liye taiyar ho jao!"
+      },
+      "navigation": { "next": "card_73_summary_revision", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_73_summary_revision",
+      "card_slug": "card_73_summary_revision",
+      "type": "summary",
+      "concept_id": "chapter_summary",
+      "level": 10,
+      "progress": { "current": 73, "total": 75 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Chief Minister",
+        "revision_points": [
+          {
+            "topic": "Article 163-164 (Constitutional Basis)",
+            "point": "Governor ki sahayata ke liye CM-headed Council of Ministers hota hai (Article 163); CM ki niyukti Governor karta hai (Article 164(1)) - bahumat dal ke neta ko convention se, likhit procedure nahi."
+          },
+          {
+            "topic": "Qualification, Oath & Term",
+            "point": "CM ke liye MLA jaisi qualification (Article 173) chahiye - 25 saal umar, nagrikta, voter; koi fix term nahi, Governor ki khushi tak pad, practically 5 saal chalta hai."
+          },
+          {
+            "topic": "91st Amendment - Article 164(1A)",
+            "point": "Council of Ministers ka size Assembly ki kul sadasya sankhya ke 15% se zyada nahi, minimum 12 mantri anivarya - Bihar mein 243 seats ka 15% ~36 mantri."
+          },
+          {
+            "topic": "Article 167 Duties & Powers",
+            "point": "CM Governor ko Council ke faisle batata hai, jaankari deta hai, aur akele Minister ke faisle ko Council ke saamne rakhta hai - 'sole channel of communication'; Legislature dissolve/summon ki sifarish karta hai."
+          },
+          {
+            "topic": "Article 164(4) & Bihar Facts",
+            "point": "Non-member bhi CM ban sakta hai lekin 6 mahine mein State Legislature (Assembly/Council) ka sadasya banna zaroori, Rajya Sabha se nahi chalega; Bihar ke pehle CM Sri Krishna Sinha, pehli mahila CM Rabri Devi."
+          }
+        ]
+      },
+      "navigation": { "next": "card_74_final_quiz", "button_text": "Attempt Final Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_74_final_quiz",
+      "card_slug": "card_74_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 10,
+      "progress": { "current": 74, "total": 75 },
+      "quiz_payload": {
+        "question": "Assertion (A): Chief Minister ko rajya ka 'asli karyapalika pramukh' (real executive head) mana jata hai.\nReason (R): Governor Constitution ke anusar CM-headed Council of Ministers ki salah se bandhe hote hain, siwaye kuch discretionary maamlon ke (jaise Hung Assembly), jaha unhe Article 163 ke tahat swatantra vivek prayog karna padta hai.\nNiche diye gaye code se sahi uttar chunein:",
+        "options": [
+          { "id": "A", "text": "A aur R dono sahi hain, aur R, A ki sahi vyakhya karta hai" },
+          { "id": "B", "text": "A aur R dono sahi hain, lekin R, A ki sahi vyakhya nahi karta" },
+          { "id": "C", "text": "A sahi hai, R galat hai" },
+          { "id": "D", "text": "A galat hai, R sahi hai" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "A sahi hai - CM-headed Council of Ministers hi rajya ki asli karyapalika hoti hai. R bhi sahi hai aur A ki sahi vyakhya karta hai - kyunki Article 163 ke tahat Governor normal case mein Council ki salah manne ko baadhya hai, sirf kuch discretionary cases (jaise hung assembly, President's rule ki sifarish) mein hi swatantra vivek use karta hai. Isi wajah se CM asli executive head banta hai."
+      },
+      "navigation": { "next": "card_75_trophy", "button_text": "Finish Final Quiz ➔" }
+    },
+    {
+      "card_id": "card_75_trophy",
+      "card_slug": "card_75_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 10,
+      "progress": { "current": 75, "total": 75 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER TROPHY UNLOCKED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Chief Minister - Indian Constitution & Polity (Complete)",
+        "xp_earned": 150,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Bahut badhiya Raju! Ab tum Chief Minister ke Article 163 se 167 tak, 91st Amendment, aur Bihar-special facts tak - sab officer level par jaante ho. BPSC ka ye chapter ab tumhari mutthi mein hai!"
+      },
+      "navigation": { "next": "topic_complete", "button_text": "Finish Chapter 🎉" }
+    }
+  ]
+}
