@@ -1,0 +1,1669 @@
+
+{
+  "topic_id": "indian_polity_governor",
+  "topic_title": "Governor in Indian Constitution (राज्यपाल)",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 90,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 0,
+      "progress": { "current": 1, "total": 90 },
+      "intro_payload": {
+        "title": "राज्यपाल (Governor) - राज्य का संवैधानिक प्रमुख",
+        "icon": "🎖️",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Article 153-154 - राज्यपाल की संवैधानिक स्थिति और कार्यपालिका शक्ति",
+          "Article 155-158 - नियुक्ति, योग्यता व पद की शर्तें",
+          "Article 159-161 - शपथ, कार्यकाल, हटाना और क्षमादान शक्ति",
+          "Article 163 - विवेकाधीन (Discretionary) शक्तियाँ और उनकी सीमाएँ",
+          "Article 174-201 - विधायी शक्तियाँ, बिल पर सहमति व राष्ट्रपति हेतु आरक्षण",
+          "Article 213 - अध्यादेश जारी करने की शक्ति",
+          "Article 371 शृंखला व पंचम अनुसूची के विशेष प्रावधान",
+          "B.P. Singhal, Nabam Rebia जैसे landmark cases व Sarkaria Commission",
+          "⭐ BPSC TRE Special: बिहार के प्रथम राज्यपाल व राजभवन पटना से जुड़े तथ्य"
+        ]
+      },
+      "navigation": { "next": "card_02_daily_life_guard_analogy", "button_text": "Chalo Shuru Karein ➔" }
+    },
+    {
+      "card_id": "card_02_daily_life_guard_analogy",
+      "card_slug": "card_02_daily_life_guard_analogy",
+      "type": "chat",
+      "concept_id": "state_executive_intro",
+      "level": 1,
+      "progress": { "current": 2, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, tumne last chapter mein CM padha - state ka asli boss. Aaj hum uske 'senior partner' ke baare mein padhenge jo Delhi se appoint hokar aata hai state mein. Socho, jaise ek company ka Head Office kisi branch mein apna representative bhejta hai." },
+        { "speaker": "raju", "text": "Matlab wo representative branch chalata hai ya sirf dekhrekh karta hai sir?" },
+        { "speaker": "aman", "text": "Bilkul yahi sawal important hai! Isi tarah, Bharat ke Rashtrapati apna ek representative har rajya mein bhejte hain jise 'Governor' (राज्यपाल) kehte hain. Wo state ka constitutional head hota hai." },
+        { "speaker": "raju", "text": "Achha, to Governor Rashtrapati ki taraf se aata hai! Lekin wo CM se alag kaise kaam karta hai?" }
+      ],
+      "navigation": { "next": "card_03_article153_154", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_article153_154",
+      "card_slug": "card_03_article153_154",
+      "type": "chat",
+      "concept_id": "article_153_154",
+      "level": 1,
+      "progress": { "current": 3, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo Constitution mein dekhte hain. Article 153 kehta hai - 'Har rajya ke liye ek Governor hoga'. Aur Article 154 kehta hai - rajya ki poori karyapalika shakti (executive power) Governor mein nihit hogi." },
+        { "speaker": "raju", "text": "Ruko sir, ye to abhi humne CM ke liye padha tha - ki executive power CM ki Council of Ministers ke paas hoti hai!" },
+        { "speaker": "aman", "text": "Bahut achha doubt hai! Yahi trap hai - Article 154 kehta hai power Governor mein 'nihit' (vested) hai, lekin wahi Article ye bhi kehta hai ki Governor is power ko khud ya apne adhinasth adhikariyon (subordinate officers) ke through, seedhe ya CM ki salah se, exercise karta hai." },
+        { "speaker": "raju", "text": "Ohh! Matlab power kagaz par Governor ke paas hai, lekin real mein CM aur uski Council use chalati hai - jaise humne pichle chapter mein padha!" }
+      ],
+      "navigation": { "next": "card_04_nominal_head_confirmed", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_nominal_head_confirmed",
+      "card_slug": "card_04_nominal_head_confirmed",
+      "type": "chat",
+      "concept_id": "governor_nominal_head",
+      "level": 1,
+      "progress": { "current": 4, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi connect kiya! Governor isliye 'nominal head' ya 'constitutional head' kehlata hai - naam ki mohar (formal seal) usi ki lagti hai, lekin asli faisle CM-led Council of Ministers karti hai, jaise humne Article 163 mein padha tha." },
+        { "speaker": "raju", "text": "To fir Governor ka kaam kya hai agar wo kuch decide hi nahi karta?" },
+        { "speaker": "aman", "text": "Yahin twist hai Raju - Governor ke paas kuch khaas situations mein apni khud ki 'discretionary' (viveकाधीन) power bhi hoti hai jaha wo CM ki salah ke bina bhi faisla le sakta hai. Wo hum aage detail mein padhenge." },
+        { "speaker": "raju", "text": "Discretionary power? Ye to naya word hai, matlab kuch cases mein Governor khud ka dimag chalata hai?" }
+      ],
+      "navigation": { "next": "card_05_guess_who_appoints_governor", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_guess_who_appoints_governor",
+      "card_slug": "card_05_guess_who_appoints_governor",
+      "type": "guess",
+      "concept_id": "who_appoints_governor",
+      "level": 1,
+      "progress": { "current": 5, "total": 90 },
+      "guess_payload": {
+        "question": "Raju sochta hai ki Governor bhi CM jaisa hi kisi tarah 'chuna' jata hoga. Lekin sach kya hai - Governor ko kaun niyukt karta hai?",
+        "options": [
+          { "id": "A", "text": "Rajya ki janta seedhe vote se" },
+          { "id": "B", "text": "Rashtrapati (President)" },
+          { "id": "C", "text": "Vidhan Sabha ke sadasya" },
+          { "id": "D", "text": "Chief Minister" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Governor CM ki tarah 'elect' nahi hota - use Rashtrapati (President) apne haath se mohar lagakar (warrant under hand and seal) niyukt karta hai, jaisa Article 155 mein likha hai."
+      },
+      "navigation": { "next": "card_06_quiz1_article154", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_06_quiz1_article154",
+      "card_slug": "card_06_quiz1_article154",
+      "type": "quiz",
+      "concept_id": "article154_quiz",
+      "level": 1,
+      "progress": { "current": 6, "total": 90 },
+      "quiz_payload": {
+        "question": "Kaunsa Article kehta hai ki rajya ki poori karyapalika shakti Governor mein nihit hogi?",
+        "options": [
+          { "id": "A", "text": "Article 153" },
+          { "id": "B", "text": "Article 154" },
+          { "id": "C", "text": "Article 163" },
+          { "id": "D", "text": "Article 174" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 154 - rajya ki karyapalika shakti Governor mein nihit hoti hai, jise wo khud ya adhinasth adhikariyon ke through, seedhe ya salah se prayog karta hai."
+      },
+      "navigation": { "next": "card_07_quiz2_multistatement_153_154", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz2_multistatement_153_154",
+      "card_slug": "card_07_quiz2_multistatement_153_154",
+      "type": "quiz",
+      "concept_id": "article153_154_multistatement",
+      "level": 1,
+      "progress": { "current": 7, "total": 90 },
+      "quiz_payload": {
+        "question": "Kathan 1: Article 153 ke anusar har rajya ke liye alag Governor hona anivarya hai, kisi bhi paristhiti mein ek Governor do rajyon ka nahi ho sakta. Kathan 2: Article 154 ke anusar Governor karyapalika shakti khud ya CM ki salah se prayog karta hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Kathan 1 galat hai - 7th Amendment (1956) ke baad Article 153 mein ek proviso jodi gayi jisse ek hi vyakti do ya do se zyada rajyon ka Governor ban sakta hai. Kathan 2 sahi hai."
+      },
+      "navigation": { "next": "card_08_quiz3_nominal_head", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_quiz3_nominal_head",
+      "card_slug": "card_08_quiz3_nominal_head",
+      "type": "quiz",
+      "concept_id": "nominal_head_quiz",
+      "level": 1,
+      "progress": { "current": 8, "total": 90 },
+      "quiz_payload": {
+        "question": "Governor ko rajya ka 'nominal head' kyun kaha jata hai?",
+        "options": [
+          { "id": "A", "text": "Kyunki uske paas koi power hi nahi hoti" },
+          { "id": "B", "text": "Kyunki asli faisle CM-led Council of Ministers karti hai, Governor formal head hota hai" },
+          { "id": "C", "text": "Kyunki wo Rajya Sabha ka sadasya hota hai" },
+          { "id": "D", "text": "Kyunki wo janta dwara chuna jaata hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Governor 'nominal/constitutional head' hai kyunki wo mostly Council of Ministers (CM ki adhyakshta mein) ki salah par kaam karta hai, sirf kuch discretionary cases mein khud faisla leta hai."
+      },
+      "navigation": { "next": "card_09_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_09_milestone1",
+      "card_slug": "card_09_milestone1",
+      "type": "milestone",
+      "concept_id": "module1_complete",
+      "level": 1,
+      "progress": { "current": 9, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎖️",
+        "completed_topic": "Governor ki Constitutional Basis (Article 153-154)",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/11 Clear",
+        "motivational_quote": "Zabardast shuruaat! Ab CM aur Governor ka basic difference clear ho gaya. Ab dekhte hain Governor banta kaise hai!"
+      },
+      "navigation": { "next": "card_10_article155_appointment", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_10_article155_appointment",
+      "card_slug": "card_10_article155_appointment",
+      "type": "chat",
+      "concept_id": "article155_appointment",
+      "level": 2,
+      "progress": { "current": 10, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhte hain Governor banta kaise hai. Article 155 mein likha hai - 'Rajyapal ki niyukti Rashtrapati apne haath se mohar lagakar warrant dwara karega'." },
+        { "speaker": "raju", "text": "Sir 'apne haath se mohar' ka kya matlab hai? Ye to strange sunayi de raha hai!" },
+        { "speaker": "aman", "text": "Ye ek formal legal language hai - matlab ye ek official document (warrant) hota hai jisme President ka seal aur signature hota hai, jaise koi bada certificate. Iska matlab ye niyukti bahut formal aur high-level procedure se hoti hai." },
+        { "speaker": "raju", "text": "Achha, matlab CM ki tarah election nahi, seedha President ka order! Lekin practically President khud to nahi sochte honge kisko banaye!" }
+      ],
+      "navigation": { "next": "card_11_practical_appointment_cabinet", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_practical_appointment_cabinet",
+      "card_slug": "card_11_practical_appointment_cabinet",
+      "type": "chat",
+      "concept_id": "practical_appointment_process",
+      "level": 2,
+      "progress": { "current": 11, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi socha! Practically, Governor ki niyukti Union Council of Ministers (yani Central Cabinet, PM ki adhyakshta mein) ki salah par hoti hai - President sirf formal roop se mohar lagate hain, jaise humne dekha ki Governor bhi CM ki salah se kaam karta hai." },
+        { "speaker": "raju", "text": "Achha, to yahan bhi wahi pattern hai - upar wala sirf mohar lagata hai, asli decision neeche wale lete hain!" },
+        { "speaker": "aman", "text": "Bilkul pakde ho pattern! Ab ek important point - Sarkaria Commission ne recommend kiya tha ki Governor niyukt karne se pehle us rajya ke CM se consultation (salah-mashwara) kiya jaana chahiye. Lekin ye sirf ek convention hai, koi legal baadhyata (binding rule) nahi hai." },
+        { "speaker": "raju", "text": "Matlab CM se pucha jaa sakta hai lekin zaroori nahi hai? Ye to Governor ke case mein bhi ek trap lag raha hai!" }
+      ],
+      "navigation": { "next": "card_12_article157_qualifications", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_article157_qualifications",
+      "card_slug": "card_12_article157_qualifications",
+      "type": "chat",
+      "concept_id": "article157_qualifications",
+      "level": 2,
+      "progress": { "current": 12, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Ab Article 157 dekhte hain - Governor banne ke liye qualification. Sirf do shartein hain - vyakti Bharat ka nagrik ho, aur uski umar kam se kam 35 saal ho." },
+        { "speaker": "raju", "text": "Sir 35 saal? CM ke liye to sirf 25 saal chahiye tha, ye alag kyun hai?" },
+        { "speaker": "aman", "text": "Bahut sahi observation! Yahi BPSC ka favorite trap hai - CM/MLA banne ke liye minimum umar 25 saal hai (Article 173), lekin Governor banne ke liye minimum umar 35 saal hai - Rajya Sabha sadasya aur Rashtrapati/Upa-Rashtrapati ki tarah zyada umar mangi gayi hai." },
+        { "speaker": "raju", "text": "Achha! To Governor ke liye zyada mature/experienced vyakti chahiye, isliye umar zyada rakhi gayi. Ye yaad rakhna padega!" }
+      ],
+      "navigation": { "next": "card_13_article158_conditions", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_article158_conditions",
+      "card_slug": "card_13_article158_conditions",
+      "type": "chat",
+      "concept_id": "article158_conditions",
+      "level": 2,
+      "progress": { "current": 13, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Article 158 mein Governor ke pad ki kuch shartein (conditions of office) dekhte hain. Pehli - Governor Parliament ya kisi bhi rajya ki Vidhan Sabha/Parishad ka sadasya nahi ho sakta. Agar wo pehle se sadasya hai, to niyukti ke din se hi uska seat khali maan liya jaata hai." },
+        { "speaker": "raju", "text": "Matlab pehle se MLA ya MP koi banna chahe Governor, to uska purana pad chhoot jaayega?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Doosri shart - Governor koi 'office of profit' (labh ka pad) nahi rakh sakta. Teesri - use bina kiraya diye ek official residence (Raj Bhavan) milti hai, aur usse salary/allowances Parliament tay karti hai." },
+        { "speaker": "raju", "text": "Achha, matlab Raj Bhavan free milta hai! Aur ek aur cheez - agar do rajyon ka Governor ek hi vyakti hai to salary kaise batwaari hoti hai?" }
+      ],
+      "navigation": { "next": "card_14_salary_two_states", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_14_salary_two_states",
+      "card_slug": "card_14_salary_two_states",
+      "type": "chat",
+      "concept_id": "salary_multiple_states",
+      "level": 2,
+      "progress": { "current": 14, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut achha sawal Raju! Agar ek hi vyakti do ya zyada rajyon ka Governor hai, to uski salary aur allowances President us anupaat (proportion) mein tay karte hain jo un rajyon ke beech baant di jaati hai." },
+        { "speaker": "raju", "text": "Achha, matlab President hi decide karte hain kaunsa rajya kitna paisa dega, sahi samjha?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur ek final point - Governor ki salary/allowances uske pad par rehte hue kabhi kam nahi ki ja sakti (jaise ye financial security dete hain), taaki wo bina dabaav ke kaam kar sake." },
+        { "speaker": "raju", "text": "To salary decrease nahi ho sakti - ye to CM ke case mein bhi nahi padha tha specifically, ye Governor ka special protection hai!" }
+      ],
+      "navigation": { "next": "card_15_guess_age_qualification", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_15_guess_age_qualification",
+      "card_slug": "card_15_guess_age_qualification",
+      "type": "guess",
+      "concept_id": "age_qualification_guess",
+      "level": 2,
+      "progress": { "current": 15, "total": 90 },
+      "guess_payload": {
+        "question": "Ek 28 saal ka vyakti, jo Bharat ka nagrik hai, kya Governor ban sakta hai?",
+        "options": [
+          { "id": "A", "text": "Haan, koi umar seema nahi hai" },
+          { "id": "B", "text": "Nahi, kyunki minimum umar 35 saal chahiye" },
+          { "id": "C", "text": "Haan, kyunki MLA/CM ki tarah 25 saal kaafi hai" },
+          { "id": "D", "text": "Sirf tab ban sakta hai jab wo pehle MP raha ho" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 157 ke anusar Governor banne ke liye minimum umar 35 saal honi chahiye - ye MLA/CM (25 saal) se alag aur zyada hai, jo BPSC mein common trap hai."
+      },
+      "navigation": { "next": "card_16_quiz1_appointment", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_16_quiz1_appointment",
+      "card_slug": "card_16_quiz1_appointment",
+      "type": "quiz",
+      "concept_id": "appointment_quiz",
+      "level": 2,
+      "progress": { "current": 16, "total": 90 },
+      "quiz_payload": {
+        "question": "Article 155 ke anusar Governor ki niyukti kaun karta hai?",
+        "options": [
+          { "id": "A", "text": "Chief Minister" },
+          { "id": "B", "text": "Rashtrapati (President)" },
+          { "id": "C", "text": "Chief Justice of India" },
+          { "id": "D", "text": "Vidhan Sabha" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 155 - Governor ki niyukti Rashtrapati apne haath se mohar lagakar warrant dwara karta hai."
+      },
+      "navigation": { "next": "card_17_quiz2_multistatement_qualification", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_17_quiz2_multistatement_qualification",
+      "card_slug": "card_17_quiz2_multistatement_qualification",
+      "type": "quiz",
+      "concept_id": "qualification_multistatement",
+      "level": 2,
+      "progress": { "current": 17, "total": 90 },
+      "quiz_payload": {
+        "question": "Kathan 1: Governor banne ke liye minimum umar 35 varsh honi chahiye. Kathan 2: Governor Parliament ya kisi rajya ki Vidhan Sabha ka sadasya nahi ho sakta, aur niyukti hote hi uska purana pad rikt maana jaata hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 157 minimum umar 35 saal tay karta hai, aur Article 158 kehta hai Governor Parliament/State Legislature ka sadasya nahi ho sakta - agar tha to seat khali maani jaati hai. Dono sahi hain."
+      },
+      "navigation": { "next": "card_18_quiz3_salary_office_of_profit", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_18_quiz3_salary_office_of_profit",
+      "card_slug": "card_18_quiz3_salary_office_of_profit",
+      "type": "quiz",
+      "concept_id": "office_profit_quiz",
+      "level": 2,
+      "progress": { "current": 18, "total": 90 },
+      "quiz_payload": {
+        "question": "Agar ek hi vyakti do rajyon ka Governor hai, to uski salary/allowances kaise tay hoti hai?",
+        "options": [
+          { "id": "A", "text": "Dono rajya alag-alag poori salary dete hain" },
+          { "id": "B", "text": "President ke tay kiye gaye anupaat mein rajyon ke beech baant di jaati hai" },
+          { "id": "C", "text": "Kendra sarkar poori salary deti hai" },
+          { "id": "D", "text": "Sirf badi state salary deti hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 158(3A) ke anusar, jab ek vyakti do ya zyada rajyon ka Governor ho, to uski salary/allowances President dwara tay anupaat mein us rajyon ke beech baant di jaati hai."
+      },
+      "navigation": { "next": "card_19_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_19_milestone2",
+      "card_slug": "card_19_milestone2",
+      "type": "milestone",
+      "concept_id": "module2_complete",
+      "level": 2,
+      "progress": { "current": 19, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📜",
+        "completed_topic": "Appointment, Qualification & Conditions of Office",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/11 Clear",
+        "motivational_quote": "Bahut badhiya! 35 saal wala trap bhi tumne clear pakad liya. Ab shapath, karyakal aur hatane ka process dekhte hain!"
+      },
+      "navigation": { "next": "card_20_article159_oath", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_20_article159_oath",
+      "card_slug": "card_20_article159_oath",
+      "type": "chat",
+      "concept_id": "article159_oath",
+      "level": 3,
+      "progress": { "current": 20, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhte hain Governor apna kaam shuru karne se pehle kya karta hai. Article 159 mein likha hai - Governor pad sambhalne se pehle shapath (oath) lega." },
+        { "speaker": "raju", "text": "Ye shapath kaun dilata hai sir? Governor ko to CM ne dilai thi apni shapath, yahan kaun karega?" },
+        { "speaker": "aman", "text": "Bahut zaroori trap hai ye! CM ko Governor shapath dilata hai, lekin Governor ko us rajya ke High Court ke Chief Justice shapath dilate hain. Aur agar CJ available na ho, to us High Court ke sabse senior (varisth) judge shapath dilate hain." },
+        { "speaker": "raju", "text": "Ohh! Matlab CM aur Governor ki shapath dilane wala alag-alag hai - CM ko Governor, aur Governor ko Chief Justice! Ye to confuse karne wala point hai!" }
+      ],
+      "navigation": { "next": "card_21_term_5_years", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_term_5_years",
+      "card_slug": "card_21_term_5_years",
+      "type": "chat",
+      "concept_id": "term_5_years",
+      "level": 3,
+      "progress": { "current": 21, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Ab Article 156 dekhte hain jo Governor ke karyakal (term) ke baare mein hai. Isme likha hai - Governor 'Rashtrapati ki khushi tak' (during the pleasure of the President) pad par rahega." },
+        { "speaker": "raju", "text": "Arre ye to bilkul waisa hi hai jaisa CM ke case mein tha - 'Governor ki khushi tak'! Yahan bhi wahi 'pleasure doctrine' hai kya?" },
+        { "speaker": "aman", "text": "Bilkul sahi connect kiya! Aur waise hi normal term 5 saal hota hai, jo Article 156(3) mein likha hai. Lekin dhyan do - agar 5 saal poore ho jaayein aur naya Governor abhi tak niyukt na ho ho, to purana Governor apne successor ke pad sambhalne tak kaam karta rehta hai." },
+        { "speaker": "raju", "text": "Achha, matlab kursi kabhi khaali nahi rehti - jaise CM ke case mein bhi 'caretaker' wala concept tha!" }
+      ],
+      "navigation": { "next": "card_22_removal_resignation", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_22_removal_resignation",
+      "card_slug": "card_22_removal_resignation",
+      "type": "chat",
+      "concept_id": "removal_resignation",
+      "level": 3,
+      "progress": { "current": 22, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho Governor kaise hatta hai. Wo khud Rashtrapati ko likhit mein resignation de sakta hai. Aur chunki wo 'Rashtrapati ki khushi tak' pad par hai, isliye Rashtrapati use kabhi bhi, bina koi karan bataye, hata sakte hain." },
+        { "speaker": "raju", "text": "Kya?? Bina karan bataye hata sakte hain? Ye to bahut unfair lag raha hai Governor ke liye!" },
+        { "speaker": "aman", "text": "Yahi sabse bada exam trap hai Raju - Constitution mein Governor ko hatane ki koi impeachment jaisi procedure nahi di gayi, na hi koi karan batana zaroori hai. Ye purani doctrine of pleasure hai jo British system se aayi." },
+        { "speaker": "raju", "text": "Sir lekin ye to bahut arbitrary (mनमाना) lagta hai - kya Supreme Court ne isme kuch nahi kaha?" }
+      ],
+      "navigation": { "next": "card_23_bp_singhal_preview", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_23_bp_singhal_preview",
+      "card_slug": "card_23_bp_singhal_preview",
+      "type": "chat",
+      "concept_id": "bp_singhal_preview",
+      "level": 3,
+      "progress": { "current": 23, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut achha sawal! Haan, Supreme Court ne 2010 mein B.P. Singhal case mein iska jawab diya tha - hum ye case aage detail mein padhenge, abhi bas itna yaad rakho ki SC ne kaha tha koi karan batana zaroori nahi, lekin faisla manmaana (arbitrary) ya bina wajah nahi hona chahiye." },
+        { "speaker": "raju", "text": "Matlab likha to kuch nahi hai, lekin ek 'invisible rule' hai ki manmaani nahi honi chahiye?" },
+        { "speaker": "aman", "text": "Bilkul sahi samjha! Isko hum detail mein Module 10 mein padhenge. Abhi ek aur point - Governor apne kaam ke liye kisi bhi court mein jawabdeh (answerable) nahi hai apne official actions ke liye - use ek tarah ki immunity milti hai." },
+        { "speaker": "raju", "text": "Achha, ye to interesting hai - matlab uske official kaam ke liye use court mein challenge nahi kiya ja sakta!" }
+      ],
+      "navigation": { "next": "card_24_guess_who_administers_oath", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_24_guess_who_administers_oath",
+      "card_slug": "card_24_guess_who_administers_oath",
+      "type": "guess",
+      "concept_id": "oath_administrator_guess",
+      "level": 3,
+      "progress": { "current": 24, "total": 90 },
+      "guess_payload": {
+        "question": "Raju sochta hai CM hi Governor ko shapath dilata hoga, jaise Governor CM ko dilata hai. Kya ye sahi hai?",
+        "options": [
+          { "id": "A", "text": "Haan, CM hi Governor ko shapath dilata hai" },
+          { "id": "B", "text": "Nahi, us rajya ke High Court ke Chief Justice (ya senior-most judge) shapath dilate hain" },
+          { "id": "C", "text": "Rashtrapati khud shapath dilate hain" },
+          { "id": "D", "text": "Speaker of Vidhan Sabha shapath dilate hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 159 ke anusar, Governor ko us rajya ke High Court ke Chief Justice shapath dilate hain; agar wo available na ho to sabse senior judge dilate hain - CM nahi!"
+      },
+      "navigation": { "next": "card_25_quiz1_oath", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_25_quiz1_oath",
+      "card_slug": "card_25_quiz1_oath",
+      "type": "quiz",
+      "concept_id": "oath_quiz",
+      "level": 3,
+      "progress": { "current": 25, "total": 90 },
+      "quiz_payload": {
+        "question": "Governor ko pad ki shapath kaun dilata hai?",
+        "options": [
+          { "id": "A", "text": "Chief Minister" },
+          { "id": "B", "text": "Rajya ke High Court ke Chief Justice" },
+          { "id": "C", "text": "Chief Justice of India" },
+          { "id": "D", "text": "Speaker of Lok Sabha" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 159 ke anusar, us rajya ke High Court ke Chief Justice, ya unki anupasthiti mein sabse senior judge, Governor ko shapath dilate hain."
+      },
+      "navigation": { "next": "card_26_quiz2_removal_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_26_quiz2_removal_multistatement",
+      "card_slug": "card_26_quiz2_removal_multistatement",
+      "type": "quiz",
+      "concept_id": "removal_multistatement",
+      "level": 3,
+      "progress": { "current": 26, "total": 90 },
+      "quiz_payload": {
+        "question": "Kathan 1: Governor Rashtrapati ki khushi tak pad par rehta hai, isliye use kabhi bhi hataya ja sakta hai. Kathan 2: Constitution mein Governor ko hatane ke liye ek fix impeachment procedure di gayi hai jaise Rashtrapati ke liye hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Kathan 1 sahi hai - doctrine of pleasure ke tahat Rashtrapati kabhi bhi Governor ko hata sakte hain. Kathan 2 galat hai - Governor ke liye koi impeachment procedure Constitution mein nahi di gayi, ye Rashtrapati (Article 61) se alag hai."
+      },
+      "navigation": { "next": "card_27_quiz3_term_5years", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_27_quiz3_term_5years",
+      "card_slug": "card_27_quiz3_term_5years",
+      "type": "quiz",
+      "concept_id": "term_5years_quiz",
+      "level": 3,
+      "progress": { "current": 27, "total": 90 },
+      "quiz_payload": {
+        "question": "Article 156(3) ke anusar Governor ka normal karyakal kitna hota hai?",
+        "options": [
+          { "id": "A", "text": "5 saal" },
+          { "id": "B", "text": "6 saal" },
+          { "id": "C", "text": "4 saal" },
+          { "id": "D", "text": "Koi fix term nahi" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Article 156(3) - Governor ka normal karyakal 5 saal hota hai, lekin wo 'Rashtrapati ki khushi tak' bhi pad par rehta hai, isliye 5 saal se pehle bhi hataya ja sakta hai ya safal (successor) ke aane tak continue kar sakta hai."
+      },
+      "navigation": { "next": "card_28_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_28_milestone3",
+      "card_slug": "card_28_milestone3",
+      "type": "milestone",
+      "concept_id": "module3_complete",
+      "level": 3,
+      "progress": { "current": 28, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🤝",
+        "completed_topic": "Shapath, Karyakal aur Hatane ki Prakriya",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/11 Clear",
+        "motivational_quote": "Zabardast! Chief Justice wala shapath trap bhi tumhe pakad mein aa gaya. Ab Governor ki asli karyapalika powers dekhte hain!"
+      },
+      "navigation": { "next": "card_29_executive_powers_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_29_executive_powers_intro",
+      "card_slug": "card_29_executive_powers_intro",
+      "type": "chat",
+      "concept_id": "executive_powers_intro",
+      "level": 4,
+      "progress": { "current": 29, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo ab Governor ki executive (karyapalika) powers dekhte hain. Sabse pehli aur important power - CM ki niyukti karna, aur uski salah par baaki Ministers ki niyukti karna, jo humne pichle chapter mein padha tha." },
+        { "speaker": "raju", "text": "Haan wo yaad hai sir - Article 164. Aur kya kya niyukt karta hai Governor?" },
+        { "speaker": "aman", "text": "Governor Article 165 ke tahat rajya ke Advocate General ko niyukt karta hai - ye rajya sarkar ke liye legal advisor hota hai, jaise Kendra mein Attorney General hote hain." },
+        { "speaker": "raju", "text": "Achha, Advocate General! Aur koi important niyukti hai kya jo Governor karta hai?" }
+      ],
+      "navigation": { "next": "card_30_other_appointments", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_30_other_appointments",
+      "card_slug": "card_30_other_appointments",
+      "type": "chat",
+      "concept_id": "other_appointments_governor",
+      "level": 4,
+      "progress": { "current": 30, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan, Governor State Public Service Commission (SPSC) ke Chairman aur members ko bhi niyukt karta hai. Aur wo rajya ki university mein Vice-Chancellor (kulpati) ki niyukti bhi karta hai kyunki Governor state universities ka pad-sthit 'Chancellor' hota hai." },
+        { "speaker": "raju", "text": "Wow, matlab Governor university ka bhi bada boss hai? Ye to naya pata chala!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Bihar mein bhi Governor hi rajya vishwavidyalayon ke Chancellor hote hain aur VC ki niyukti karte hain - ye BPSC TRE ke liye bahut important fact hai kyunki teacher recruitment se related hai." },
+        { "speaker": "raju", "text": "⭐ Ye to seedha hamare exam se related hai! University aur Governor ka connection yaad rakhunga!" }
+      ],
+      "navigation": { "next": "card_31_seeking_information_167", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_31_seeking_information_167",
+      "card_slug": "card_31_seeking_information_167",
+      "type": "chat",
+      "concept_id": "seeking_information_167",
+      "level": 4,
+      "progress": { "current": 31, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur important power - Article 167 ke tahat, jo humne pichle chapter mein CM ke duties ke roop mein padha tha, Governor CM se rajya ke prashasan aur kanoon banane ke prastavon ke baare mein jaankari maang sakta hai." },
+        { "speaker": "raju", "text": "Haan sir wo yaad hai, CM ka duty tha Governor ko information dena. Ye to same coin ke do side hain!" },
+        { "speaker": "aman", "text": "Bilkul sahi observation! CM ka duty aur Governor ka right - ek hi Article ke andar dono side likhe hain. Isse Governor apne aap ko update rakhta hai bina roz-marra ke kaam mein dakhal diye." },
+        { "speaker": "raju", "text": "Achha, matlab Governor 'watch' karta hai lekin roz ka kaam nahi karta, sahi samjha?" }
+      ],
+      "navigation": { "next": "card_32_quiz1_advocate_general", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_32_quiz1_advocate_general",
+      "card_slug": "card_32_quiz1_advocate_general",
+      "type": "quiz",
+      "concept_id": "advocate_general_quiz",
+      "level": 4,
+      "progress": { "current": 32, "total": 90 },
+      "quiz_payload": {
+        "question": "Article 165 ke tahat rajya ke Advocate General ki niyukti kaun karta hai?",
+        "options": [
+          { "id": "A", "text": "Chief Minister" },
+          { "id": "B", "text": "Governor" },
+          { "id": "C", "text": "Chief Justice of High Court" },
+          { "id": "D", "text": "Rashtrapati" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 165 - Governor rajya ke Advocate General ki niyukti karta hai, jo rajya sarkar ka mukhya kanooni salahkar (chief legal advisor) hota hai."
+      },
+      "navigation": { "next": "card_33_quiz2_chancellor", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_33_quiz2_chancellor",
+      "card_slug": "card_33_quiz2_chancellor",
+      "type": "quiz",
+      "concept_id": "chancellor_multistatement",
+      "level": 4,
+      "progress": { "current": 33, "total": 90 },
+      "quiz_payload": {
+        "question": "Kathan 1: Governor rajya ki State Public Service Commission ke Chairman aur members ki niyukti karta hai. Kathan 2: Governor rajya ki state universities ka pad-sthit Chancellor hota hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - Governor SPSC ke members niyukt karta hai aur state universities ka ex-officio Chancellor bhi hota hai."
+      },
+      "navigation": { "next": "card_34_quiz3_information_seeking", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_34_quiz3_information_seeking",
+      "card_slug": "card_34_quiz3_information_seeking",
+      "type": "quiz",
+      "concept_id": "information_seeking_quiz",
+      "level": 4,
+      "progress": { "current": 34, "total": 90 },
+      "quiz_payload": {
+        "question": "Kaunsa Article Governor ko CM se rajya ke prashasan ki jaankari maangne ka adhikar deta hai?",
+        "options": [
+          { "id": "A", "text": "Article 163" },
+          { "id": "B", "text": "Article 164" },
+          { "id": "C", "text": "Article 167" },
+          { "id": "D", "text": "Article 200" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 167 - CM ka kartavya hai Governor ko rajya ke prashasan aur kanoon prastavon ki jaankari dena, jab bhi Governor maange."
+      },
+      "navigation": { "next": "card_35_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_35_milestone4",
+      "card_slug": "card_35_milestone4",
+      "type": "milestone",
+      "concept_id": "module4_complete",
+      "level": 4,
+      "progress": { "current": 35, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Governor ki Executive Powers",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/11 Clear",
+        "motivational_quote": "Bahut badhiya! University-Chancellor wala point BPSC TRE ke liye gold hai. Ab Governor ki legislative powers dekhte hain!"
+      },
+      "navigation": { "next": "card_36_legislative_powers_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_36_legislative_powers_intro",
+      "card_slug": "card_36_legislative_powers_intro",
+      "type": "chat",
+      "concept_id": "legislative_powers_intro",
+      "level": 5,
+      "progress": { "current": 36, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhte hain Governor ka Vidhan Sabha (State Legislature) ke saath kya rishta hai. Article 168 kehta hai - Governor bhi rajya ki Legislature ka ek hissa (part) hota hai, chahe wo khud vote na de." },
+        { "speaker": "raju", "text": "Matlab Governor bhi ek tarah se Assembly ka member jaisa hai? Lekin wo to member nahi hai na, humne padha tha!" },
+        { "speaker": "aman", "text": "Bahut achha catch! Governor Legislature ka 'sadasya' (member) nahi hai, lekin Legislature ka 'ang' (part) zaroor hai - jaise Parliament mein Rashtrapati bhi ek ang hai lekin sadasya nahi. Isi wajah se bina Governor ki sahmati ke koi bhi bill kanoon nahi ban sakta." },
+        { "speaker": "raju", "text": "Ohh! Ye to Parliament wale system jaisa hi hai - Governor bina member hue bhi bahut powerful hai legislature mein!" }
+      ],
+      "navigation": { "next": "card_37_summon_prorogue_dissolve", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_37_summon_prorogue_dissolve",
+      "card_slug": "card_37_summon_prorogue_dissolve",
+      "type": "chat",
+      "concept_id": "summon_prorogue_dissolve",
+      "level": 5,
+      "progress": { "current": 37, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Article 174 ke tahat Governor Vidhan Sabha ka satra (session) bulata (summon) hai, use sthagit (prorogue) karta hai, aur Vidhan Sabha ko bhang (dissolve) bhi kar sakta hai. Ek zaroori niyam yaad rakho - do sessions ke beech ka gap 6 mahine se zyada nahi hona chahiye." },
+        { "speaker": "raju", "text": "6 mahine wala rule to kaafi important lag raha hai exam ke liye!" },
+        { "speaker": "aman", "text": "Bilkul sahi socha! Ye 6 mahine ka gap rule Parliament ke liye bhi same hai. Aur Article 176 ke anusar, har naye saal ki pehli baithak mein aur naye Vidhan Sabha ke pehle satra mein Governor ek address deta hai." },
+        { "speaker": "raju", "text": "Ye address mein Governor kya bolta hai sir?" }
+      ],
+      "navigation": { "next": "card_38_governors_address_176", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_38_governors_address_176",
+      "card_slug": "card_38_governors_address_176",
+      "type": "chat",
+      "concept_id": "governors_address_176",
+      "level": 5,
+      "progress": { "current": 38, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Governor apne address mein sarkar ki policies aur programmes batata hai - lekin dhyan do, ye speech Governor khud nahi likhta, ye state Council of Ministers taiyaar karti hai. Governor sirf padhta hai." },
+        { "speaker": "raju", "text": "Ohh matlab ye bhi wahi 'formal head sirf padhta hai' wala pattern hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi pattern pakda! Ab ek aur legislative power - Article 200 ke tahat, jab Vidhan Sabha se koi bill pass hokar Governor ke paas aata hai, Governor ke paas 4 options hote hain iska kya karna hai." },
+        { "speaker": "raju", "text": "4 options? Sir ye to bilkul CM wale chapter se alag detail hai, batao kya kya options hain!" }
+      ],
+      "navigation": { "next": "card_39_article200_four_options", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_39_article200_four_options",
+      "card_slug": "card_39_article200_four_options",
+      "type": "chat",
+      "concept_id": "article200_four_options",
+      "level": 5,
+      "progress": { "current": 39, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Article 200 ke 4 options ye hain: Pehla - bill ko sahmati (assent) de dena, jisse wo kanoon ban jaata hai. Doosra - sahmati rok lena (withhold), jisse bill khatam ho jaata hai. Teesra - agar money bill nahi hai, to bill ko punarvichar (reconsideration) ke liye Vidhan Sabha ko wapas bhej dena." },
+        { "speaker": "raju", "text": "Aur chautha option kya hai sir?" },
+        { "speaker": "aman", "text": "Chautha - bill ko Rashtrapati ke vichar ke liye 'aarakshit' (reserve) kar dena. Ye important hai! Agar Vidhan Sabha wapas bheje gaye bill ko dobara bina badlav ya badlav ke saath pass karke bhejti hai, to Governor ko sahmati deni hi padegi." },
+        { "speaker": "raju", "text": "Achha, matlab dusri baar to Governor 'na' nahi bol sakta! Lekin reserve karne ka option to phir bhi khula rehta hai na?" }
+      ],
+      "navigation": { "next": "card_40_guess_money_bill_return", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_40_guess_money_bill_return",
+      "card_slug": "card_40_guess_money_bill_return",
+      "type": "guess",
+      "concept_id": "money_bill_return_guess",
+      "level": 5,
+      "progress": { "current": 40, "total": 90 },
+      "guess_payload": {
+        "question": "Kya Governor ek Money Bill ko bhi punarvichar (reconsideration) ke liye Vidhan Sabha ko wapas bhej sakta hai?",
+        "options": [
+          { "id": "A", "text": "Haan, sabhi tarah ke bills ko wapas bheja ja sakta hai" },
+          { "id": "B", "text": "Nahi, Money Bill ko wapas nahi bheja ja sakta - sirf sahmati de sakta ya rok sakta hai" },
+          { "id": "C", "text": "Sirf Rajya Sabha jaisi Vidhan Parishad ki sahmati se wapas ja sakta hai" },
+          { "id": "D", "text": "Money Bill par Governor ka koi role nahi hota" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 200 ke proviso ke anusar, Money Bill ko Governor punarvichar ke liye wapas nahi bhej sakta - wo sirf usse sahmati de sakta hai ya sahmati rok sakta hai (ya Rashtrapati ke liye reserve kar sakta hai)."
+      },
+      "navigation": { "next": "card_41_article201_reserved_bills", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_41_article201_reserved_bills",
+      "card_slug": "card_41_article201_reserved_bills",
+      "type": "chat",
+      "concept_id": "article201_reserved_bills",
+      "level": 5,
+      "progress": { "current": 41, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Sahi jawab! Ab dekhte hain jab Governor koi bill Rashtrapati ke liye reserve karta hai, to uske baad kya hota hai - Article 201 mein likha hai." },
+        { "speaker": "raju", "text": "Rashtrapati us bill ka kya karte hain sir?" },
+        { "speaker": "aman", "text": "Rashtrapati ya to bill ko sahmati de sakte hain, ya rok sakte hain. Agar bill money bill nahi hai, to Rashtrapati Vidhan Sabha ko bill punarvichar ke liye wapas bhej sakte hain - lekin is baar bhi, agar Vidhan Sabha dobara pass karke bheje, Rashtrapati sahmati dene ke liye baadhya (bound) nahi hain!" },
+        { "speaker": "raju", "text": "Wait sir, ye to Governor ke case se ulta hai! Governor ko dusri baar sahmati deni padti hai, lekin Rashtrapati ko nahi?" }
+      ],
+      "navigation": { "next": "card_42_key_difference_governor_president_bill", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_42_key_difference_governor_president_bill",
+      "card_slug": "card_42_key_difference_governor_president_bill",
+      "type": "chat",
+      "concept_id": "governor_president_bill_difference",
+      "level": 5,
+      "progress": { "current": 42, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Ye BPSC ka ek high-level trap hai - jab Vidhan Sabha, Governor dwara wapas bheja gaya bill dobara pass karti hai, to Governor ko sahmati deni hi padti hai. Lekin agar Rashtrapati ne bill ko reserved kiya hai, to Rashtrapati par ye baadhyata (obligation) nahi hai." },
+        { "speaker": "raju", "text": "Matlab Rashtrapati ke paas hamesha akhri 'na' bolne ka power hai, lekin Governor ke paas nahi?" },
+        { "speaker": "aman", "text": "Exactly! Ye asymmetry (asamanta) exam mein bahut poochi jaati hai. Rashtrapati ka veto zyada strong hai reserved bills par, jabki Governor ka veto weaker hai apne khud ke returned bills par." },
+        { "speaker": "raju", "text": "Achha! Ye difference ab pakka yaad rahega - Governor 'majboor' hai dusri baar, Rashtrapati 'majboor' nahi hai!" }
+      ],
+      "navigation": { "next": "card_43_quiz1_article168", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_43_quiz1_article168",
+      "card_slug": "card_43_quiz1_article168",
+      "type": "quiz",
+      "concept_id": "article168_quiz",
+      "level": 5,
+      "progress": { "current": 43, "total": 90 },
+      "quiz_payload": {
+        "question": "Article 168 ke anusar Governor rajya ki Legislature ka kya hota hai?",
+        "options": [
+          { "id": "A", "text": "Sadasya (Member)" },
+          { "id": "B", "text": "Ang (Part), sadasya nahi" },
+          { "id": "C", "text": "Speaker" },
+          { "id": "D", "text": "Ismein kuch nahi hota" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 168 ke anusar Governor rajya ki Legislature ka ek 'ang' (part) hai, lekin sadasya (member) nahi - isliye koi bhi bill Governor ki sahmati ke bina kanoon nahi ban sakta."
+      },
+      "navigation": { "next": "card_44_quiz2_article200_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_44_quiz2_article200_multistatement",
+      "card_slug": "card_44_quiz2_article200_multistatement",
+      "type": "quiz",
+      "concept_id": "article200_multistatement",
+      "level": 5,
+      "progress": { "current": 44, "total": 90 },
+      "quiz_payload": {
+        "question": "Kathan 1: Governor kisi Money Bill ko punarvichar ke liye Vidhan Sabha ko wapas nahi bhej sakta. Kathan 2: Agar Vidhan Sabha, Governor dwara wapas bheje gaye ek non-money bill ko dobara pass karke bheje, to Governor sahmati dene ke liye baadhya hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - Article 200 ke proviso ke anusar Money Bill wapas nahi bheja ja sakta, aur dobara pass kiye gaye non-money bill par Governor ko sahmati deni hi padti hai."
+      },
+      "navigation": { "next": "card_45_quiz3_president_bill_veto", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_45_quiz3_president_bill_veto",
+      "card_slug": "card_45_quiz3_president_bill_veto",
+      "type": "quiz",
+      "concept_id": "president_bill_veto_quiz",
+      "level": 5,
+      "progress": { "current": 45, "total": 90 },
+      "quiz_payload": {
+        "question": "Article 201 ke anusar, agar ek bill Rashtrapati ke vichar ke liye aarakshit (reserved) kiya gaya hai aur Vidhan Sabha use dobara pass karke bhejti hai, to kya Rashtrapati sahmati dene ke liye baadhya hain?",
+        "options": [
+          { "id": "A", "text": "Haan, unhe zaroor sahmati deni padegi" },
+          { "id": "B", "text": "Nahi, Rashtrapati baadhya nahi hain, apni marzi se rok bhi sakte hain" },
+          { "id": "C", "text": "Sirf Lok Sabha ki sahmati se sambhav hai" },
+          { "id": "D", "text": "Ye niyam sirf money bill par lagu hota hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Governor ke case se ulta, Rashtrapati reserved bill ko dobara bheje jaane par bhi sahmati dene ke liye baadhya nahi hain - ye Rashtrapati ka strong veto power hai jo Governor ke paas nahi."
+      },
+      "navigation": { "next": "card_46_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_46_milestone5",
+      "card_slug": "card_46_milestone5",
+      "type": "milestone",
+      "concept_id": "module5_complete",
+      "level": 5,
+      "progress": { "current": 46, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📝",
+        "completed_topic": "Legislative Powers - Article 168-201",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/11 Clear",
+        "motivational_quote": "Outstanding! Governor aur Rashtrapati ke veto ka difference bahut hi high-level point tha, tumne pakad liya! Ab discretionary powers ki taraf chalte hain!"
+      },
+      "navigation": { "next": "card_47_discretionary_powers_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_47_discretionary_powers_intro",
+      "card_slug": "card_47_discretionary_powers_intro",
+      "type": "chat",
+      "concept_id": "discretionary_powers_intro",
+      "level": 6,
+      "progress": { "current": 47, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab wo topic jo humne pehle promise kiya tha - Article 163 ki discretionary (विवेकाधीन) powers. Normal rule ye hai ki Governor CM ki Council ki salah maanta hai, lekin kuch khaas situations mein wo apni khud ki marzi (discretion) use kar sakta hai." },
+        { "speaker": "raju", "text": "Konsi situations hain sir jaha Governor apni marzi chala sakta hai?" },
+        { "speaker": "aman", "text": "Pehli - Hung Assembly mein CM chunna, jo humne pichle chapter mein padha. Doosri - agar koi ministry Assembly mein bahumat kho de aur resign na kare, to Governor use dismiss kar sakta hai." },
+        { "speaker": "raju", "text": "Achha, aur koi situations hain jaha Governor khud faisla leta hai?" }
+      ],
+      "navigation": { "next": "card_48_more_discretionary_situations", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_48_more_discretionary_situations",
+      "card_slug": "card_48_more_discretionary_situations",
+      "type": "chat",
+      "concept_id": "more_discretionary_situations",
+      "level": 6,
+      "progress": { "current": 48, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan, teesri important situation - Article 356 ke tahat Rashtrapati ko rajya mein 'Rashtrapati Shasan' (President's Rule) lagane ki sifarish (recommendation) bhejna, agar Governor ko lage ki rajya mein constitutional machinery fail ho gayi hai." },
+        { "speaker": "raju", "text": "President's Rule? Ye to bahut bada step hai! Isme Governor apne aap decide kar sakta hai?" },
+        { "speaker": "aman", "text": "Bilkul, Article 356 ki report bhejna Governor ki discretionary power hai. Chauthi situation - koi bill Rashtrapati ke vichar ke liye reserve karna (jo humne abhi padha), ye bhi Governor apni marzi se kar sakta hai." },
+        { "speaker": "raju", "text": "Ye sab BPSC mein bahut poochha jaata hoga - Governor kab apni marzi chala sakta hai!" }
+      ],
+      "navigation": { "next": "card_49_sixth_schedule_discretion", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_49_sixth_schedule_discretion",
+      "card_slug": "card_49_sixth_schedule_discretion",
+      "type": "chat",
+      "concept_id": "sixth_schedule_discretion",
+      "level": 6,
+      "progress": { "current": 49, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi soch rahe ho! Ek aur important discretionary power - Assam, Meghalaya, Tripura aur Mizoram mein, Chhathi Anusuchi (Sixth Schedule) ke tahat, Governor tay karta hai ki State ki taraf se Autonomous District Council ko kitna paisa (royalty) diya jayega." },
+        { "speaker": "raju", "text": "Achha, ye to bilkul specific case hai, Bihar mein to nahi lagega?" },
+        { "speaker": "aman", "text": "Sahi socha! Sixth Schedule sirf North-East ke kuch states mein lagu hoti hai. Lekin Bihar ke liye Panchvi Anusuchi (Fifth Schedule) important thi jab tak Jharkhand alag nahi hua tha - ye hum Special Provisions module mein detail se padhenge." },
+        { "speaker": "raju", "text": "Achha, matlab alag-alag Schedule alag-alag rajyon mein alag powers deti hai Governor ko! Ye to interesting hai!" }
+      ],
+      "navigation": { "next": "card_50_guess_discretionary_scenario", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_50_guess_discretionary_scenario",
+      "card_slug": "card_50_guess_discretionary_scenario",
+      "type": "guess",
+      "concept_id": "discretionary_scenario_guess",
+      "level": 6,
+      "progress": { "current": 50, "total": 90 },
+      "guess_payload": {
+        "question": "Ek scenario dekho: Vidhan Sabha mein kisi party ko bahumat nahi mila (Hung Assembly). Isme Governor kya karega?",
+        "options": [
+          { "id": "A", "text": "Seedha President's Rule laga dega" },
+          { "id": "B", "text": "Apni discretionary power use karke sabse bade dal ko sarkar banane bulayega aur floor test karayega" },
+          { "id": "C", "text": "CM ki salah lekar decide karega" },
+          { "id": "D", "text": "Chunav Aayog ko bulayega naye chunav ke liye" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Hung Assembly ek discretionary situation hai jaha Governor apni marzi se sabse bade dal/gathbandhan ko sarkar banane bulata hai aur floor test se bahumat sabit karwata hai - CM ki salah yahan possible nahi kyunki abhi CM hai hi nahi."
+      },
+      "navigation": { "next": "card_51_quiz1_article163", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_51_quiz1_article163",
+      "card_slug": "card_51_quiz1_article163",
+      "type": "quiz",
+      "concept_id": "article163_discretionary_quiz",
+      "level": 6,
+      "progress": { "current": 51, "total": 90 },
+      "quiz_payload": {
+        "question": "Kaunsa Article Governor ko kuch situations mein apni discretionary power use karne ki chhoot deta hai?",
+        "options": [
+          { "id": "A", "text": "Article 154" },
+          { "id": "B", "text": "Article 163" },
+          { "id": "C", "text": "Article 167" },
+          { "id": "D", "text": "Article 200" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 163 mein likha hai ki Governor CM ki Council ki salah se kaam karega, siwaye un maamlon ke jaha Constitution use apni discretion (vivek) se kaam karne ko kehti hai."
+      },
+      "navigation": { "next": "card_52_quiz2_discretionary_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_52_quiz2_discretionary_multistatement",
+      "card_slug": "card_52_quiz2_discretionary_multistatement",
+      "type": "quiz",
+      "concept_id": "discretionary_multistatement",
+      "level": 6,
+      "progress": { "current": 52, "total": 90 },
+      "quiz_payload": {
+        "question": "Kathan 1: Hung Assembly mein CM chunna Governor ki discretionary power ka udaharan hai. Kathan 2: Rashtrapati Shasan ki sifarish bhejna bhi Governor ki discretionary power hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - Hung Assembly mein CM chunna aur Article 356 ki sifarish bhejna, dono hi Governor ki discretionary powers ke examples hain."
+      },
+      "navigation": { "next": "card_53_quiz3_sixth_schedule", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_53_quiz3_sixth_schedule",
+      "card_slug": "card_53_quiz3_sixth_schedule",
+      "type": "quiz",
+      "concept_id": "sixth_schedule_quiz",
+      "level": 6,
+      "progress": { "current": 53, "total": 90 },
+      "quiz_payload": {
+        "question": "Sixth Schedule ke tahat Governor kis rajya-samuh mein Autonomous District Council ko royalty tay karne ka discretionary kaam karta hai?",
+        "options": [
+          { "id": "A", "text": "Bihar, Jharkhand, Odisha" },
+          { "id": "B", "text": "Assam, Meghalaya, Tripura, Mizoram" },
+          { "id": "C", "text": "Punjab, Haryana" },
+          { "id": "D", "text": "UP, MP" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sixth Schedule Assam, Meghalaya, Tripura aur Mizoram ke tribal areas ke liye hai, jaha Governor Autonomous District Councils ko diye jaane wale royalty ki rakam discretionary tarike se tay karta hai."
+      },
+      "navigation": { "next": "card_54_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_54_milestone6",
+      "card_slug": "card_54_milestone6",
+      "type": "milestone",
+      "concept_id": "module6_complete",
+      "level": 6,
+      "progress": { "current": 54, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🧠",
+        "completed_topic": "Discretionary Powers - Article 163",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/11 Clear",
+        "motivational_quote": "Bahut badhiya! Discretionary powers ka poora list ab tumhare paas hai. Ab dekhte hain Governor kaise bina Assembly bulaye kanoon bana sakta hai!"
+      },
+      "navigation": { "next": "card_55_ordinance_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_55_ordinance_intro",
+      "card_slug": "card_55_ordinance_intro",
+      "type": "chat",
+      "concept_id": "ordinance_intro",
+      "level": 7,
+      "progress": { "current": 55, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho - agar koi emergency situation aa jaaye aur Vidhan Sabha ka session chal hi na raha ho, to kanoon kaise banega? Isi ke liye Article 213 mein Governor ko 'Ordinance' (अध्यादेश) jaari karne ki shakti di gayi hai." },
+        { "speaker": "raju", "text": "Ordinance matlab kya hota hai sir? Ye kanoon jaisa hi hai kya?" },
+        { "speaker": "aman", "text": "Bilkul sahi socha! Ordinance ek temporary kanoon hai jo Governor tab jaari karta hai jab Vidhan Sabha (ya dono sadan, agar Vidhan Parishad hai) ka satra chal na raha ho, aur turant kanoon banane ki zaroorat ho. Isme kanoon jaisi hi taakat hoti hai." },
+        { "speaker": "raju", "text": "Achha, to ye ek 'emergency kanoon' hai jab tak Assembly wapas nahi baithti?" }
+      ],
+      "navigation": { "next": "card_56_ordinance_conditions", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_56_ordinance_conditions",
+      "card_slug": "card_56_ordinance_conditions",
+      "type": "chat",
+      "concept_id": "ordinance_conditions",
+      "level": 7,
+      "progress": { "current": 56, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Lekin dhyan do - Governor Ordinance sirf CM ki Council ki salah par jaari karta hai, apni khud ki marzi se nahi (ye discretionary power nahi hai). Aur ek bahut zaroori niyam hai iski validity ke baare mein." },
+        { "speaker": "raju", "text": "Kya niyam hai sir? Ye Ordinance hamesha ke liye chalta rehta hai kya?" },
+        { "speaker": "aman", "text": "Nahi bilkul! Jab Vidhan Sabha wapas satra mein baithti hai, to Ordinance ko 6 hafte (weeks) ke andar Assembly ke saamne rakhna hi padta hai. Agar Assembly use pass nahi karti ya 6 hafte poore ho jaate hain, to Ordinance apne aap khatam ho jaata hai." },
+        { "speaker": "raju", "text": "6 hafte! Ye to yaad rakhna padega - koi mahine ka fixed number nahi, exactly 6 hafte!" }
+      ],
+      "navigation": { "next": "card_57_ordinance_limitations", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_57_ordinance_limitations",
+      "card_slug": "card_57_ordinance_limitations",
+      "type": "chat",
+      "concept_id": "ordinance_limitations",
+      "level": 7,
+      "progress": { "current": 57, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab kuch limitations bhi yaad rakho - Governor sirf un vishayon (subjects) par Ordinance jaari kar sakta hai jin par State Legislature khud kanoon bana sakti hai. Aur wo un maamlon mein Ordinance nahi jaari kar sakta jaha Governor ko bill Rashtrapati ke liye reserve karna zaroori hoga - unme use Rashtrapati se pehle instructions leni padti hain." },
+        { "speaker": "raju", "text": "Matlab jo bill category Rashtrapati ke liye reserve honi chahiye, waha bina Rashtrapati se poochhe Ordinance bhi nahi ban sakta?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ordinance ki power exactly wahi limitations follow karti hai jo normal bill-making ki hoti hain. Iska matlab Ordinance koi shortcut nahi hai jisse Governor apni marzi ka kanoon bana le." },
+        { "speaker": "raju", "text": "Achha, samajh gaya - Ordinance sirf 'emergency mein normal kanoon-banane ka shortcut' hai, koi extra power nahi deta!" }
+      ],
+      "navigation": { "next": "card_58_quiz1_article213", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_58_quiz1_article213",
+      "card_slug": "card_58_quiz1_article213",
+      "type": "quiz",
+      "concept_id": "article213_quiz",
+      "level": 7,
+      "progress": { "current": 58, "total": 90 },
+      "quiz_payload": {
+        "question": "Kaunsa Article Governor ko Ordinance jaari karne ki shakti deta hai?",
+        "options": [
+          { "id": "A", "text": "Article 200" },
+          { "id": "B", "text": "Article 201" },
+          { "id": "C", "text": "Article 213" },
+          { "id": "D", "text": "Article 163" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 213 - Governor ko Vidhan Sabha ka satra na chalne ki sthiti mein Ordinance jaari karne ki shakti deta hai, jo Article 123 (President ke liye) jaisi hi hai."
+      },
+      "navigation": { "next": "card_59_quiz2_six_weeks_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_59_quiz2_six_weeks_multistatement",
+      "card_slug": "card_59_quiz2_six_weeks_multistatement",
+      "type": "quiz",
+      "concept_id": "six_weeks_multistatement",
+      "level": 7,
+      "progress": { "current": 59, "total": 90 },
+      "quiz_payload": {
+        "question": "Kathan 1: Governor ka Ordinance jaari karna ek discretionary power hai jo wo bina CM ki salah ke kar sakta hai. Kathan 2: Vidhan Sabha ke wapas satra shuru hone par Ordinance ko 6 hafte ke andar saamne rakhna zaroori hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Kathan 1 galat hai - Ordinance CM ki Council of Ministers ki salah par hi jaari hota hai, ye discretionary power nahi hai. Kathan 2 sahi hai - 6 hafte ke andar Assembly ke saamne peश karna zaroori hai."
+      },
+      "navigation": { "next": "card_60_quiz3_ordinance_limitations", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_60_quiz3_ordinance_limitations",
+      "card_slug": "card_60_quiz3_ordinance_limitations",
+      "type": "quiz",
+      "concept_id": "ordinance_limitations_quiz",
+      "level": 7,
+      "progress": { "current": 60, "total": 90 },
+      "quiz_payload": {
+        "question": "Governor kis vishay par Ordinance jaari nahi kar sakta bina Rashtrapati se instructions liye?",
+        "options": [
+          { "id": "A", "text": "Kisi bhi vishay par jaari kar sakta hai" },
+          { "id": "B", "text": "Un vishayon par jaha bill ko Rashtrapati ke liye reserve karna zaroori hota" },
+          { "id": "C", "text": "Sirf financial vishayon par" },
+          { "id": "D", "text": "Sirf education vishayon par" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ordinance-making power normal bill-making power ki hi seemaon ko follow karti hai - jaha bill Rashtrapati ke liye reserve karna zaroori hota, waha bina Rashtrapati ke instructions ke Ordinance jaari nahi ho sakta."
+      },
+      "navigation": { "next": "card_61_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_61_milestone7",
+      "card_slug": "card_61_milestone7",
+      "type": "milestone",
+      "concept_id": "module7_complete",
+      "level": 7,
+      "progress": { "current": 61, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📃",
+        "completed_topic": "Ordinance Making Power (Article 213)",
+        "xp_earned": 55,
+        "milestone_progress": "Module 7/11 Clear",
+        "motivational_quote": "Perfect! 6 hafte ka rule ab pakka yaad hai. Ab Governor ki bahut interesting power - kisi ko maafi dena - dekhte hain!"
+      },
+      "navigation": { "next": "card_62_pardoning_power_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_62_pardoning_power_intro",
+      "card_slug": "card_62_pardoning_power_intro",
+      "type": "chat",
+      "concept_id": "pardoning_power_intro",
+      "level": 8,
+      "progress": { "current": 62, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho koi vyakti ko court ne saza (punishment) di hai. Kya koi use maaf kar sakta hai? Article 161 mein likha hai - Governor ke paas kisi bhi rajya kanoon ke tahat di gayi saza ko maaf karne ya kam karne ki shakti hai." },
+        { "speaker": "raju", "text": "Wow, Governor kisi ko jail se bhi bacha sakta hai? Ye to bahut badi power hai!" },
+        { "speaker": "aman", "text": "Haan, isme 5 tarah ke actions aate hain - Pardon (poori tarah maafi), Reprieve (saza ko temporary rokna), Respite (kam saza dena kisi khaas reason se, jaise pregnancy), Remission (saza ki avadhi kam karna, nature badle bina), aur Commutation (saza ke type ko badalna, jaise death ko life imprisonment mein badalna)." },
+        { "speaker": "raju", "text": "Itne saare types! Sir ye to yaad rakhna mushkil lag raha hai, konsa kab use hota hai?" }
+      ],
+      "navigation": { "next": "card_63_five_types_detail", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_63_five_types_detail",
+      "card_slug": "card_63_five_types_detail",
+      "type": "chat",
+      "concept_id": "five_types_detail",
+      "level": 8,
+      "progress": { "current": 63, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Chinta mat karo, sirf concept samajh lo, exam mein aksar definition hi poochhi jaati hai. Pardon matlab poori saza aur usse jude sabhi disqualifications hata dena. Commutation matlab saza ka nature hi badal dena - jaise sakht saza ko halki saza mein badalna." },
+        { "speaker": "raju", "text": "Achha, aur Remission alag kaise hai Commutation se?" },
+        { "speaker": "aman", "text": "Remission mein saza ka nature same rehta hai, sirf uski avadhi (duration) kam ho jaati hai - jaise 10 saal ki jail ko 5 saal kar dena, lekin wo saza jail hi rahegi, kisi aur cheez mein nahi badlegi." },
+        { "speaker": "raju", "text": "Ohh! Ab clear hai - Commutation mein type badalta hai, Remission mein sirf duration kam hoti hai!" }
+      ],
+      "navigation": { "next": "card_64_governor_vs_president_pardon", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_64_governor_vs_president_pardon",
+      "card_slug": "card_64_governor_vs_president_pardon",
+      "type": "chat",
+      "concept_id": "governor_vs_president_pardon",
+      "level": 8,
+      "progress": { "current": 64, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab sabse important trap suno - Governor ki pardoning power, Rashtrapati ki Article 72 wali power se DO cheezon mein kam hai." },
+        { "speaker": "raju", "text": "Kya kam hai sir?" },
+        { "speaker": "aman", "text": "Pehla - Governor kisi ko maut ki saza (death sentence) maaf nahi kar sakta, chahe wo saza rajya kanoon ke tahat hi kyun na di gayi ho. Sirf Rashtrapati hi death sentence maaf kar sakte hain. Doosra - Governor court martial (military court) dwara di gayi saza bhi maaf nahi kar sakta, ye bhi sirf Rashtrapati ka adhikar hai." },
+        { "speaker": "raju", "text": "Achha! Matlab Governor 'chhoti' maafi de sakta hai lekin death sentence aur military cases mein bas Rashtrapati hi final hai! Ye to bahut important trap hai!" }
+      ],
+      "navigation": { "next": "card_65_guess_death_sentence_scenario", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_65_guess_death_sentence_scenario",
+      "card_slug": "card_65_guess_death_sentence_scenario",
+      "type": "guess",
+      "concept_id": "death_sentence_guess",
+      "level": 8,
+      "progress": { "current": 65, "total": 90 },
+      "guess_payload": {
+        "question": "Ek vyakti ko rajya kanoon ke tahat maut ki saza di gayi hai. Kya rajya ka Governor use maaf kar sakta hai?",
+        "options": [
+          { "id": "A", "text": "Haan, kyunki ye rajya kanoon ke tahat di gayi saza hai" },
+          { "id": "B", "text": "Nahi, sirf Rashtrapati hi death sentence maaf kar sakte hain" },
+          { "id": "C", "text": "Sirf CM ki salah se Governor maaf kar sakta hai" },
+          { "id": "D", "text": "High Court hi decide karega" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Chahe saza rajya kanoon ke tahat hi di gayi ho, death sentence ko maaf karne ka adhikar sirf Rashtrapati (Article 72) ke paas hai - Governor (Article 161) death sentence maaf nahi kar sakta."
+      },
+      "navigation": { "next": "card_66_quiz1_five_types", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_66_quiz1_five_types",
+      "card_slug": "card_66_quiz1_five_types",
+      "type": "quiz",
+      "concept_id": "five_types_quiz",
+      "level": 8,
+      "progress": { "current": 66, "total": 90 },
+      "quiz_payload": {
+        "question": "Saza ki avadhi (duration) kam karna, bina uska nature badle, kya kehlata hai?",
+        "options": [
+          { "id": "A", "text": "Commutation" },
+          { "id": "B", "text": "Remission" },
+          { "id": "C", "text": "Reprieve" },
+          { "id": "D", "text": "Pardon" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Remission mein saza ka nature same rehta hai, sirf uski avadhi kam ho jaati hai - jaise 10 saal ki jail 5 saal ki ho jaana."
+      },
+      "navigation": { "next": "card_67_quiz2_pardon_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_67_quiz2_pardon_multistatement",
+      "card_slug": "card_67_quiz2_pardon_multistatement",
+      "type": "quiz",
+      "concept_id": "pardon_multistatement",
+      "level": 8,
+      "progress": { "current": 67, "total": 90 },
+      "quiz_payload": {
+        "question": "Kathan 1: Governor court martial (military court) dwara di gayi saza ko maaf nahi kar sakta. Kathan 2: Rashtrapati court martial ki saza maaf kar sakte hain. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - Governor military court (court martial) ki saza maaf nahi kar sakta, jabki Rashtrapati (Article 72) ye power rakhte hain."
+      },
+      "navigation": { "next": "card_68_quiz3_article161", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_68_quiz3_article161",
+      "card_slug": "card_68_quiz3_article161",
+      "type": "quiz",
+      "concept_id": "article161_quiz",
+      "level": 8,
+      "progress": { "current": 68, "total": 90 },
+      "quiz_payload": {
+        "question": "Kaunsa Article Governor ko rajya kanoon ke tahat saza maaf karne ki shakti deta hai?",
+        "options": [
+          { "id": "A", "text": "Article 72" },
+          { "id": "B", "text": "Article 161" },
+          { "id": "C", "text": "Article 163" },
+          { "id": "D", "text": "Article 213" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 161 - Governor ko rajya ke kanoon ke tahat di gayi saza maaf karne, kam karne ya sthagit karne ki shakti deta hai (death sentence aur court martial ke alawa)."
+      },
+      "navigation": { "next": "card_69_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_69_milestone8",
+      "card_slug": "card_69_milestone8",
+      "type": "milestone",
+      "concept_id": "module8_complete",
+      "level": 8,
+      "progress": { "current": 69, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Pardoning Power (Article 161)",
+        "xp_earned": 55,
+        "milestone_progress": "Module 8/11 Clear",
+        "motivational_quote": "Zabardast! Death sentence wala trap bahut hi common hai BPSC mein, aur tumne bilkul clear kar liya! Ab special provisions dekhte hain!"
+      },
+      "navigation": { "next": "card_70_two_states_governor", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_70_two_states_governor",
+      "card_slug": "card_70_two_states_governor",
+      "type": "chat",
+      "concept_id": "two_states_governor",
+      "level": 9,
+      "progress": { "current": 70, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab kuch special provisions dekhte hain. Humne shuru mein padha tha ki ek hi vyakti do rajyon ka Governor ban sakta hai. Ye 7th Constitutional Amendment (1956) ke through Article 153 mein proviso jodkar sambhav banaya gaya." },
+        { "speaker": "raju", "text": "Aisa kyun kiya gaya sir? Ek Governor do rajya kaise sambhalega?" },
+        { "speaker": "aman", "text": "Ye khaas taur par choti states ke liye kiya gaya, jaise ek chota sa state alag se poora setup na rakh sake. Example ke liye, aaj kal aksar dekha jaata hai ki ek hi Governor kisi choti state jaise Manipur ya Nagaland ka charge additional roop mein sambhalta hai." },
+        { "speaker": "raju", "text": "Achha, matlab practical convenience ke liye ye system banaya gaya hai!" }
+      ],
+      "navigation": { "next": "card_71_article371_special_responsibility", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_71_article371_special_responsibility",
+      "card_slug": "card_71_article371_special_responsibility",
+      "type": "chat",
+      "concept_id": "article371_special_responsibility",
+      "level": 9,
+      "progress": { "current": 71, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek important series dekho - Article 371 se lekar 371J tak, kuch rajyon ke Governors ko 'special responsibility' (khaas jimmedari) di gayi hai, jaise Maharashtra-Gujarat mein alag vidarbh/saurashtra jaise pichhde ilaakon ke liye alag boards banana." },
+        { "speaker": "raju", "text": "Ye special responsibility kis-kis rajya ke Governor ko hai?" },
+        { "speaker": "aman", "text": "Assam, Nagaland, Manipur, Sikkim, Andhra Pradesh/Telangana, aur Arunachal Pradesh jaise rajyon mein bhi Governor ko law and order, tribal welfare, ya vikas se related khaas jimmedariyan di gayi hain, jinme wo apna khud ka vivek (discretion) use kar sakta hai." },
+        { "speaker": "raju", "text": "Achha, to ye bhi ek tarah ki discretionary power hai jo sirf kuch specific rajyon mein hoti hai?" }
+      ],
+      "navigation": { "next": "card_72_sikkim_371f", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_72_sikkim_371f",
+      "card_slug": "card_72_sikkim_371f",
+      "type": "chat",
+      "concept_id": "sikkim_371f",
+      "level": 9,
+      "progress": { "current": 72, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Sikkim ka case sabse khaas hai - Article 371F mein likha hai ki Sikkim ka Governor wahan ki shanti (peace) aur social-economic vikas ke liye special jimmedari nibhata hai, aur ye kaam use apni khud ki vivek shakti se karna hota hai." },
+        { "speaker": "raju", "text": "Achha, Sikkim ka apna special Article hai, ye to bahut khaas fact hai!" },
+        { "speaker": "aman", "text": "Bilkul, aur ab ek Bihar-important cheez - Panchvi Anusuchi (Fifth Schedule). Jab tak Jharkhand alag rajya nahi bana tha (year 2000), Bihar ke Governor ki bhi Scheduled Areas (aadivasi ilaaqon) ke liye khaas jimmedari thi." },
+        { "speaker": "raju", "text": "⭐ Ye to Bihar ka apna history hai! Batao sir kya-kya power thi us waqt?" }
+      ],
+      "navigation": { "next": "card_73_fifth_schedule_bihar", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_73_fifth_schedule_bihar",
+      "card_slug": "card_73_fifth_schedule_bihar",
+      "type": "chat",
+      "concept_id": "fifth_schedule_bihar",
+      "level": 9,
+      "progress": { "current": 73, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite - Fifth Schedule ke tahat Governor ko power thi ki wo Scheduled Areas mein Parliament ya State Legislature ke kisi Act ko lagu na hone de, ya use modify karke lagu kare. Wo Scheduled Areas ki shanti aur achhe shasan ke liye khud ke Regulations bhi bana sakta tha." },
+        { "speaker": "raju", "text": "Matlab Governor us Scheduled Area ke liye apna alag kanoon jaisa kuch bana sakta tha?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur ye area Chhota Nagpur aur Santhal Pargana jaise ilaaqon mein tha jo aaj Jharkhand ka hissa hain. Isliye 2000 ke baad Fifth Schedule ki ye special power Bihar Governor se hatkar Jharkhand Governor ke paas chali gayi." },
+        { "speaker": "raju", "text": "Achha! Ye to BPSC ke liye bahut zaroori historical fact hai - Bihar aur Jharkhand ke Governor ki power kaise badli!" }
+      ],
+      "navigation": { "next": "card_74_guess_special_provision_scenario", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_74_guess_special_provision_scenario",
+      "card_slug": "card_74_guess_special_provision_scenario",
+      "type": "guess",
+      "concept_id": "special_provision_scenario",
+      "level": 9,
+      "progress": { "current": 74, "total": 90 },
+      "guess_payload": {
+        "question": "Kaunsa Article Sikkim ke Governor ko shanti aur social-economic vikas ke liye special jimmedari deta hai?",
+        "options": [
+          { "id": "A", "text": "Article 371" },
+          { "id": "B", "text": "Article 371F" },
+          { "id": "C", "text": "Article 370" },
+          { "id": "D", "text": "Article 356" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 371F Sikkim ke liye special pravdhan deta hai, jisme Governor ko shanti aur social-economic advancement ke liye khaas discretionary jimmedari hai."
+      },
+      "navigation": { "next": "card_75_quiz1_two_states", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_75_quiz1_two_states",
+      "card_slug": "card_75_quiz1_two_states",
+      "type": "quiz",
+      "concept_id": "two_states_quiz",
+      "level": 9,
+      "progress": { "current": 75, "total": 90 },
+      "quiz_payload": {
+        "question": "Kaunsa Constitutional Amendment ek hi vyakti ko do ya zyada rajyon ka Governor banane ki chhoot deta hai?",
+        "options": [
+          { "id": "A", "text": "42nd Amendment" },
+          { "id": "B", "text": "7th Amendment (1956)" },
+          { "id": "C", "text": "91st Amendment" },
+          { "id": "D", "text": "44th Amendment" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "7th Constitutional Amendment Act, 1956 ne Article 153 mein proviso jodkar ek hi vyakti ko do ya zyada rajyon ka Governor banane ki vyavastha ki."
+      },
+      "navigation": { "next": "card_76_quiz2_fifth_schedule_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_76_quiz2_fifth_schedule_multistatement",
+      "card_slug": "card_76_quiz2_fifth_schedule_multistatement",
+      "type": "quiz",
+      "concept_id": "fifth_schedule_multistatement",
+      "level": 9,
+      "progress": { "current": 76, "total": 90 },
+      "quiz_payload": {
+        "question": "Kathan 1: Panchvi Anusuchi (Fifth Schedule) Assam, Meghalaya jaise North-East states par lagu hoti hai. Kathan 2: Fifth Schedule ke tahat Governor Scheduled Areas mein kanoon lagu na hone dene ya modify karne ki power rakhta hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Kathan 1 galat hai - Fifth Schedule zyadatar madhya Bharat ke rajyon (jaise Jharkhand, Chhattisgarh, MP, Odisha) mein lagu hoti hai, jabki Sixth Schedule Assam/Meghalaya/Tripura/Mizoram mein lagu hoti hai. Kathan 2 sahi hai."
+      },
+      "navigation": { "next": "card_77_quiz3_371_series", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_77_quiz3_371_series",
+      "card_slug": "card_77_quiz3_371_series",
+      "type": "quiz",
+      "concept_id": "371_series_quiz",
+      "level": 9,
+      "progress": { "current": 77, "total": 90 },
+      "quiz_payload": {
+        "question": "Article 371 se 371J tak ki shrinkhala mein kya diya gaya hai?",
+        "options": [
+          { "id": "A", "text": "Sabhi rajyon ke Governor ki salary" },
+          { "id": "B", "text": "Kuch specific rajyon ke Governor ko special responsibility" },
+          { "id": "C", "text": "Governor ke pardoning powers" },
+          { "id": "D", "text": "Governor ki ordinance power" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 371 se 371J tak ki shrinkhala kuch specific rajyon (jaise Maharashtra, Gujarat, Nagaland, Sikkim, Andhra Pradesh) ke Governor ko special responsibility deti hai, jinhe wo apne vivek se nibhata hai."
+      },
+      "navigation": { "next": "card_78_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_78_milestone9",
+      "card_slug": "card_78_milestone9",
+      "type": "milestone",
+      "concept_id": "module9_complete",
+      "level": 9,
+      "progress": { "current": 78, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🗺️",
+        "completed_topic": "Special Provisions - 371 Series, Sikkim, Fifth/Sixth Schedule",
+        "xp_earned": 60,
+        "milestone_progress": "Module 9/11 Clear",
+        "motivational_quote": "Kamaal ka kaam! Bihar-Jharkhand ka Fifth Schedule wala historical link ab tumhe pata hai. Ab landmark court cases dekhte hain!"
+      },
+      "navigation": { "next": "card_79_sarkaria_commission", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_79_sarkaria_commission",
+      "card_slug": "card_79_sarkaria_commission",
+      "type": "chat",
+      "concept_id": "sarkaria_commission",
+      "level": 10,
+      "progress": { "current": 79, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekhte hain Governor ke office ko lekar konse Commissions ne kya recommend kiya. Sarkaria Commission (1988) ne kaha ki Governor koi eminent (prasiddh) vyakti ho, us rajya ka na ho jaha use niyukt kiya jaa raha hai, aur CM se consultation ke baad hi niyukt kiya jaaye." },
+        { "speaker": "raju", "text": "Ye to bahut sensible suggestion hai! Kya ye kanoon ban gaya sir?" },
+        { "speaker": "aman", "text": "Nahi Raju, ye sirf recommendations hain, koi legal binding rule nahi bana. Baad mein Punchhi Commission (2010) ne bhi kuch aisi hi baatein kahi - jaise Governor ko fix 5 saal ka term milna chahiye, aur use hatane se pehle rajya sarkar se consult karna chahiye." },
+        { "speaker": "raju", "text": "Achha, matlab in commissions ne suggestions to badhiya di, lekin Constitution mein amendment nahi hua unke liye?" }
+      ],
+      "navigation": { "next": "card_80_bp_singhal_case", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_80_bp_singhal_case",
+      "card_slug": "card_80_bp_singhal_case",
+      "type": "chat",
+      "concept_id": "bp_singhal_case_detail",
+      "level": 10,
+      "progress": { "current": 80, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab wo landmark case dekhte hain jiska humne pehle zikra kiya tha - B.P. Singhal vs Union of India (2010). Supreme Court ne isme kaha ki chahe Governor 'Rashtrapati ki khushi tak' pad par ho, use hatane ka faisla manmaana (arbitrary), tarkheen ya galat neeyat wala nahi hona chahiye." },
+        { "speaker": "raju", "text": "Matlab court ne bola ki karan batana zaroori nahi, lekin bina wajah nahi hata sakte?" },
+        { "speaker": "aman", "text": "Bilkul sahi samjha! SC ne kaha ki agar sarkar badalne ke saath Governor ko hataya jaata hai (jaise naye kendra sarkar apni pasand ka Governor chahti hai), to ye galat practice hai, chahe ye court mein prove karna mushkil ho." },
+        { "speaker": "raju", "text": "Achha, ye to bahut political-sensitive topic lag raha hai! BPSC mein iska naam yaad rakhna padega!" }
+      ],
+      "navigation": { "next": "card_81_nabam_rebia_case", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_81_nabam_rebia_case",
+      "card_slug": "card_81_nabam_rebia_case",
+      "type": "chat",
+      "concept_id": "nabam_rebia_case",
+      "level": 10,
+      "progress": { "current": 81, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur important case - Nabam Rebia vs Deputy Speaker (2016), Arunachal Pradesh se related. Supreme Court ne kaha ki Governor apni discretionary power ka istemal aksar (bahut zyada) nahi kar sakta - use bahut hi limited aur exceptional situations mein hi use karna chahiye." },
+        { "speaker": "raju", "text": "Matlab ye case bhi discretionary power ko limit karta hai?" },
+        { "speaker": "aman", "text": "Bilkul, aur ek aur zaroori case - Hargovind Pant vs Raghukul Tilak (1979) mein SC ne kaha tha ki Governor Union Government ka employee ya agent nahi hai - wo ek independent constitutional office hai, chahe use niyukt Rashtrapati karte hain." },
+        { "speaker": "raju", "text": "Ohh! Matlab Governor 'Centre ka naukar' nahi hai officially, wo apne aap mein ek constitutional pad hai - ye to bahut important point hai!" }
+      ],
+      "navigation": { "next": "card_82_guess_bp_singhal_ratio", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_82_guess_bp_singhal_ratio",
+      "card_slug": "card_82_guess_bp_singhal_ratio",
+      "type": "guess",
+      "concept_id": "bp_singhal_ratio_guess",
+      "level": 10,
+      "progress": { "current": 82, "total": 90 },
+      "guess_payload": {
+        "question": "B.P. Singhal case (2010) ke anusar, kya Rashtrapati ko Governor hatane ke liye koi karan dena zaroori hai?",
+        "options": [
+          { "id": "A", "text": "Haan, likhit mein karan batana anivarya hai" },
+          { "id": "B", "text": "Nahi, karan batana zaroori nahi, lekin faisla manmaana nahi hona chahiye" },
+          { "id": "C", "text": "Sirf Supreme Court ki anumati se hataya ja sakta hai" },
+          { "id": "D", "text": "Governor ko kabhi hataya hi nahi ja sakta" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "B.P. Singhal case mein SC ne kaha ki karan batana zaroori nahi hai, lekin removal ka faisla manmaana, tark-heen ya bad-neeyat wala nahi hona chahiye - court judicial review kar sakti hai agar mala fide (galat neeyat) prove ho."
+      },
+      "navigation": { "next": "card_83_quiz1_sarkaria", "button_text": "Check Answer ➔" }
+    },
+    {
+      "card_id": "card_83_quiz1_sarkaria",
+      "card_slug": "card_83_quiz1_sarkaria",
+      "type": "quiz",
+      "concept_id": "sarkaria_quiz",
+      "level": 10,
+      "progress": { "current": 83, "total": 90 },
+      "quiz_payload": {
+        "question": "Sarkaria Commission ne Governor ki niyukti ke liye kya recommend kiya tha?",
+        "options": [
+          { "id": "A", "text": "Governor uss rajya ka hi sthai nivasi (resident) ho" },
+          { "id": "B", "text": "Governor eminent vyakti ho, us rajya se bahar ka ho, aur CM se consultation ho" },
+          { "id": "C", "text": "Governor ko janta directly chune" },
+          { "id": "D", "text": "Governor Vidhan Sabha ka sadasya ho" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sarkaria Commission (1988) ne recommend kiya tha ki Governor eminent vyakti ho, jis rajya mein niyukt ho raha hai wahan ka na ho, aur CM se consultation ke baad hi niyukt kiya jaaye - ye sirf recommendation hai, legal binding nahi."
+      },
+      "navigation": { "next": "card_84_quiz2_case_multistatement", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_84_quiz2_case_multistatement",
+      "card_slug": "card_84_quiz2_case_multistatement",
+      "type": "quiz",
+      "concept_id": "case_multistatement",
+      "level": 10,
+      "progress": { "current": 84, "total": 90 },
+      "quiz_payload": {
+        "question": "Kathan 1: Nabam Rebia case ne kaha ki Governor apni discretionary power ka istemal bahut limited situations mein hi kare. Kathan 2: Hargovind Pant case ne kaha ki Governor Union Government ka agent ya employee hai. Sahi vikalp chunein:",
+        "options": [
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Kathan 1 sahi hai. Kathan 2 galat hai - Hargovind Pant case ne kaha tha ki Governor Union Government ka agent/employee NAHI hai, wo ek independent constitutional office hai."
+      },
+      "navigation": { "next": "card_85_quiz3_punchhi_commission", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_85_quiz3_punchhi_commission",
+      "card_slug": "card_85_quiz3_punchhi_commission",
+      "type": "quiz",
+      "concept_id": "punchhi_commission_quiz",
+      "level": 10,
+      "progress": { "current": 85, "total": 90 },
+      "quiz_payload": {
+        "question": "Punchhi Commission (2010) ne Governor ke term ke baare mein kya recommend kiya tha?",
+        "options": [
+          { "id": "A", "text": "Governor ka koi fix term nahi hona chahiye" },
+          { "id": "B", "text": "Governor ko fix 5 saal ka term milna chahiye" },
+          { "id": "C", "text": "Governor ka term 10 saal hona chahiye" },
+          { "id": "D", "text": "Governor ka term janta tay kare" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Punchhi Commission ne recommend kiya tha ki Governor ko fix 5 saal ka term milna chahiye, aur use hatane se pehle rajya sarkar se consult karna chahiye, taaki manmaani na ho."
+      },
+      "navigation": { "next": "card_86_milestone10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_86_milestone10",
+      "card_slug": "card_86_milestone10",
+      "type": "milestone",
+      "concept_id": "module10_complete",
+      "level": 10,
+      "progress": { "current": 86, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Landmark Cases & Commissions",
+        "xp_earned": 60,
+        "milestone_progress": "Module 10/11 Clear",
+        "motivational_quote": "Bahut hi high-level cases tumne clear kar liye! Ab last module - Bihar ke Governor se juri khaas history dekhte hain!"
+      },
+      "navigation": { "next": "card_87_bihar_first_governor", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_87_bihar_first_governor",
+      "card_slug": "card_87_bihar_first_governor",
+      "type": "chat",
+      "concept_id": "bihar_first_governor",
+      "level": 11,
+      "progress": { "current": 87, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite - Ab Bihar ke Governor se related zaroori facts dekhte hain jo baar-baar poochhe jaate hain. Bihar ke pehle Governor kaun the, pata hai?" },
+        { "speaker": "raju", "text": "Nahi sir, ye to CM wale chapter mein Sri Krishna Sinha the, Governor kaun the pata nahi!" },
+        { "speaker": "aman", "text": "Bihar ke pehle Governor Jairamdas Daulatram the, jinhone 1947 mein pad sambhala tha (aazadi ke turant baad, jab Bihar ek Province tha, baad mein 1950 mein rajya bana). Unka Raj Bhavan Patna mein hai, jo Bihar ki Governor ki official residence hai." },
+        { "speaker": "raju", "text": "Achha, Raj Bhavan Patna mein hai! Ye to hum roz dekhte hain wahan se guzarte hue!" }
+      ],
+      "navigation": { "next": "card_88_bihar_governor_role_recruitment", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_88_bihar_governor_role_recruitment",
+      "card_slug": "card_88_bihar_governor_role_recruitment",
+      "type": "chat",
+      "concept_id": "bihar_governor_recruitment_role",
+      "level": 11,
+      "progress": { "current": 88, "total": 90 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur khaas cheez jo BPSC TRE ke liye directly kaam ki hai - Bihar Public Service Commission (BPSC) ke Chairman aur members ki niyukti bhi Bihar ke Governor hi karte hain, jaise humne General SPSC rule mein padha tha." },
+        { "speaker": "raju", "text": "Wait, matlab jis exam ki hum taiyari kar rahe hain, uska BPSC Chairman bhi Governor hi appoint karte hain?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur teacher recruitment ke liye jo TRE exam hota hai, uske selected candidates ki final niyukti letters mein bhi state government ka mechanism hota hai jismein Governor state ka constitutional head hone ki wajah se ultimate authority hota hai." },
+        { "speaker": "raju", "text": "Wow, ye to hamare khud ke career se connect ho gaya! Ab Governor ki importance aur zyada samajh aa gayi!" }
+      ],
+      "navigation": { "next": "card_89_quiz_bihar_governor", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_89_quiz_bihar_governor",
+      "card_slug": "card_89_quiz_bihar_governor",
+      "type": "quiz",
+      "concept_id": "bihar_governor_quiz",
+      "level": 11,
+      "progress": { "current": 89, "total": 90 },
+      "quiz_payload": {
+        "question": "Bihar ke pehle Governor kaun the?",
+        "options": [
+          { "id": "A", "text": "Sri Krishna Sinha" },
+          { "id": "B", "text": "Jairamdas Daulatram" },
+          { "id": "C", "text": "Anugrah Narayan Sinha" },
+          { "id": "D", "text": "Rabri Devi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Jairamdas Daulatram Bihar ke pehle Governor the (1947 mein pad sambhala). Sri Krishna Sinha Bihar ke pehle Chief Minister the - ye BPSC ka common confusion trap hai."
+      },
+      "navigation": { "next": "card_90_milestone11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_90_milestone11",
+      "card_slug": "card_90_milestone11",
+      "type": "milestone",
+      "concept_id": "module11_complete",
+      "level": 11,
+      "progress": { "current": 90, "total": 90 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌾",
+        "completed_topic": "Bihar Special Facts about Governor",
+        "xp_earned": 60,
+        "milestone_progress": "Module 11/11 Clear",
+        "motivational_quote": "Fantastic! Poora Governor chapter khatam ho gaya! Ab officer-level revision aur final challenge ke liye taiyar ho jao!"
+      },
+      "navigation": { "next": "card_91_summary_revision", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_91_summary_revision",
+      "card_slug": "card_91_summary_revision",
+      "type": "summary",
+      "concept_id": "chapter_summary",
+      "level": 12,
+      "progress": { "current": 91, "total": 92 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Governor",
+        "revision_points": [
+          {
+            "topic": "Appointment & Qualification",
+            "point": "Article 155 - Rashtrapati niyukt karta hai; Article 157 - minimum umar 35 saal (CM/MLA se alag jo 25 saal hai); Article 159 - shapath High Court ke Chief Justice dilate hain, CM nahi."
+          },
+          {
+            "topic": "Term & Removal",
+            "point": "Article 156 - normal term 5 saal, lekin 'Rashtrapati ki khushi tak' pad par - koi impeachment procedure nahi; B.P. Singhal case (2010) - hataane ka faisla manmaana nahi hona chahiye, karan batana zaroori nahi."
+          },
+          {
+            "topic": "Legislative Powers - Article 200/201",
+            "point": "Governor Money Bill wapas nahi bhej sakta; dobara pass kiya gaya non-money bill par sahmati deni hi padti hai - lekin Rashtrapati reserved bill par ye baadhyata nahi rakhte."
+          },
+          {
+            "topic": "Discretionary Powers & Ordinance",
+            "point": "Article 163 - Hung Assembly, President's Rule ki sifarish, bill reserve karna discretionary hai; Article 213 - Ordinance CM ki salah se jaari hota hai (discretionary nahi), 6 hafte mein Assembly ke saamne rakhna zaroori."
+          },
+          {
+            "topic": "Pardoning Power & Bihar Facts",
+            "point": "Article 161 - Governor death sentence aur court martial ki saza maaf NAHI kar sakta (sirf Rashtrapati kar sakte hain); Bihar ke pehle Governor Jairamdas Daulatram the, Fifth Schedule power 2000 tak Bihar ke paas thi, ab Jharkhand ke paas."
+          }
+        ]
+      },
+      "navigation": { "next": "card_92_final_quiz", "button_text": "Attempt Final Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_92_final_quiz",
+      "card_slug": "card_92_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
+      "level": 12,
+      "progress": { "current": 92, "total": 92 },
+      "quiz_payload": {
+        "question": "Assertion (A): Governor ki pardoning power (Article 161), Rashtrapati ki pardoning power (Article 72) se sankuchit (narrower) hai.\nReason (R): Governor death sentence ya court martial dwara di gayi saza ko maaf nahi kar sakta, jabki Rashtrapati dono maamlon mein pardon de sakte hain.\nNiche diye gaye code se sahi uttar chunein:",
+        "options": [
+          { "id": "A", "text": "A aur R dono sahi hain, aur R, A ki sahi vyakhya karta hai" },
+          { "id": "B", "text": "A aur R dono sahi hain, lekin R, A ki sahi vyakhya nahi karta" },
+          { "id": "C", "text": "A sahi hai, R galat hai" },
+          { "id": "D", "text": "A galat hai, R sahi hai" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "A sahi hai - Governor ki Article 161 wali power Rashtrapati ki Article 72 wali power se narrower hai. R bhi sahi hai aur A ki sahi vyakhya karta hai - kyunki exact wahi do limitations (death sentence aur court martial) hain jo Governor ki power ko Rashtrapati se kam banati hain. Ye BPSC ka classic Assertion-Reason pattern hai jo Governor aur President ki powers ke comparison par based hota hai."
+      },
+      "navigation": { "next": "card_93_trophy", "button_text": "Finish Final Quiz ➔" }
+    },
+    {
+      "card_id": "card_93_trophy",
+      "card_slug": "card_93_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 12,
+      "progress": { "current": 93, "total": 93 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER TROPHY UNLOCKED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Governor - Indian Constitution & Polity (Complete)",
+        "xp_earned": 150,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Zabardast Raju! Ab tum Governor ke Article 153 se 213 tak, discretionary powers, pardoning power ka trap, aur Bihar-special history - sab officer level par jaante ho. BPSC ka ye chapter ab tumhari mutthi mein hai!"
+      },
+      "navigation": { "next": "topic_complete", "button_text": "Finish Chapter 🎉" }
+    }
+  ]
+}
