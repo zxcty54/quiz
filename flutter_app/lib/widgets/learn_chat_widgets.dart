@@ -1,10 +1,162 @@
 import 'dart:math';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import '../models/learn_models.dart';
 import '../utils/learn_effects.dart';
 import 'latex_text.dart';
 
-// POLYMORPHIC CARD RENDERER
+// ==========================================
+// 📖 1. INTERACTIVE WORD / GLOSSARY PARSER
+// ==========================================
+class InteractiveWordText extends StatelessWidget {
+  final String rawText;
+  final TextStyle baseStyle;
+  final bool isTeacher;
+
+  const InteractiveWordText({
+    super.key,
+    required this.rawText,
+    required this.baseStyle,
+    this.isTeacher = false,
+  });
+
+  void _showDefinitionModal(BuildContext context, String word, String meaning) {
+    LearnEffects.playTap();
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      builder: (ctx) => Container(
+        padding: const EdgeInsets.all(20),
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(22)),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12,
+              blurRadius: 15,
+              offset: Offset(0, -4),
+            )
+          ],
+        ),
+        child: SafeArea(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFEFF6FF),
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: const Color(0xFF93C5FD)),
+                    ),
+                    child: const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text('📖 ', style: TextStyle(fontSize: 12)),
+                        Text(
+                          'Key Term & Concept',
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF1D4ED8),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const Spacer(),
+                  IconButton(
+                    icon: const Icon(Icons.close_rounded, size: 20, color: Colors.grey),
+                    onPressed: () => Navigator.pop(ctx),
+                    padding: EdgeInsets.zero,
+                    constraints: const BoxConstraints(),
+                  )
+                ],
+              ),
+              const SizedBox(height: 12),
+              Text(
+                word,
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF0F172A),
+                  letterSpacing: 0.2,
+                ),
+              ),
+              const SizedBox(height: 6),
+              const Divider(height: 10, color: Color(0xFFE2E8F0)),
+              const SizedBox(height: 6),
+              Text(
+                meaning,
+                style: const TextStyle(
+                  fontSize: 14,
+                  color: Color(0xFF334155),
+                  height: 1.45,
+                ),
+              ),
+              const SizedBox(height: 12),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final RegExp regExp = RegExp(r'\[\[(.*?)\|(.*?)\]\]');
+    final List<InlineSpan> spans = [];
+    int lastIndex = 0;
+
+    for (final Match match in regExp.allMatches(rawText)) {
+      if (match.start > lastIndex) {
+        spans.add(TextSpan(
+          text: rawText.substring(lastIndex, match.start),
+          style: baseStyle,
+        ));
+      }
+
+      final String term = match.group(1)!.trim();
+      final String meaning = match.group(2)!.trim();
+
+      spans.add(
+        TextSpan(
+          text: term,
+          style: baseStyle.copyWith(
+            color: const Color(0xFF2563EB),
+            fontWeight: FontWeight.bold,
+            decoration: TextDecoration.underline,
+            decorationStyle: TextDecorationStyle.dotted,
+            decorationColor: const Color(0xFF2563EB),
+            decorationThickness: 2.0,
+          ),
+          recognizer: TapGestureRecognizer()
+            ..onTap = () => _showDefinitionModal(context, term, meaning),
+        ),
+      );
+
+      lastIndex = match.end;
+    }
+
+    if (lastIndex < rawText.length) {
+      spans.add(TextSpan(
+        text: rawText.substring(lastIndex),
+        style: baseStyle,
+      ));
+    }
+
+    return RichText(
+      text: TextSpan(children: spans),
+    );
+  }
+}
+
+// ==========================================
+// 🔀 2. POLYMORPHIC CARD RENDERER
+// ==========================================
 class LearnCardRenderer extends StatelessWidget {
   final LearnCardModel card;
   final Map<String, LearnCharacter> characters;
@@ -24,7 +176,7 @@ class LearnCardRenderer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     switch (card.type) {
-      case 'intro': // 👈 Handled Intro Cover Card
+      case 'intro':
         return IntroCardWidget(card: card);
       case 'chat':
         return ModernChatCard(
@@ -46,7 +198,9 @@ class LearnCardRenderer extends StatelessWidget {
   }
 }
 
-// 🌟 CHAPTER INTRO / COVER CARD WIDGET (PURE BANNER LOOK - NO CHAT / NO BUBBLES)
+// ==========================================
+// 🌟 3. INTRO / COVER CARD WIDGET
+// ==========================================
 class IntroCardWidget extends StatelessWidget {
   final LearnCardModel card;
 
@@ -57,18 +211,17 @@ class IntroCardWidget extends StatelessWidget {
     final payload = card.introPayload ?? {};
     final String title = payload['title'] ?? 'Welcome to Chapter';
     final String subtitle = payload['subtitle'] ?? 'Interactive Learning Module';
-    final List outcomes = payload['outcomes'] ?? [];
+    final List outcomes = payload['outcomes'] ?? payload['learning_outcomes'] ?? [];
     final List targetExams = payload['target_exams'] ?? [];
 
     return Container(
       width: double.infinity,
-      color: const Color(0xFF4F46E5), // Premium Indigo Theme
+      color: const Color(0xFF4F46E5),
       child: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 36),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // 1. Big Feature Icon Container
             Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
@@ -76,13 +229,11 @@ class IntroCardWidget extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
               child: Text(
-                payload['icon_emoji'] ?? '🧬',
+                payload['icon_emoji'] ?? payload['icon'] ?? '🧬',
                 style: const TextStyle(fontSize: 56),
               ),
             ),
             const SizedBox(height: 20),
-
-            // 2. Chapter Title
             Text(
               title,
               textAlign: TextAlign.center,
@@ -94,16 +245,12 @@ class IntroCardWidget extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
-
-            // 3. Subtitle / Tagline
             Text(
               subtitle,
               textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 13.5, color: Color(0xFFC7D2FE)),
             ),
             const SizedBox(height: 20),
-
-            // 4. Target Exam Badges Row
             if (targetExams.isNotEmpty)
               Wrap(
                 spacing: 6,
@@ -122,10 +269,7 @@ class IntroCardWidget extends StatelessWidget {
                   ),
                 )).toList(),
               ),
-
             const SizedBox(height: 28),
-
-            // 5. "Aaj Hum Kya Padhne Waale Hain" Checklist Box
             if (outcomes.isNotEmpty)
               Container(
                 width: double.infinity,
@@ -174,7 +318,9 @@ class IntroCardWidget extends StatelessWidget {
   }
 }
 
-// MODERN CHAT CARD
+// ==========================================
+// 💬 4. MODERN CHAT CARD (WITH GLOSSARY SUPPORT)
+// ==========================================
 class ModernChatCard extends StatelessWidget {
   final LearnCardModel card;
   final Map<String, LearnCharacter> characters;
@@ -268,10 +414,26 @@ class ModernChatCard extends StatelessWidget {
                           ],
                         ),
                         const SizedBox(height: 4),
-                        LatexText(
-                          msg.text,
-                          style: const TextStyle(fontSize: 14, color: Color(0xFF1E293B), height: 1.4),
-                        ),
+                        
+                        // 📖 INTERACTIVE GLOSSARY OR LATEX TEXT
+                        msg.text.contains('[[') && msg.text.contains(']]')
+                            ? InteractiveWordText(
+                                rawText: msg.text,
+                                baseStyle: const TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xFF1E293B),
+                                  height: 1.4,
+                                ),
+                                isTeacher: isTeacher,
+                              )
+                            : LatexText(
+                                msg.text,
+                                style: const TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xFF1E293B),
+                                  height: 1.4,
+                                ),
+                              ),
                       ],
                     ),
                   ),
@@ -357,7 +519,9 @@ class ModernChatCard extends StatelessWidget {
   }
 }
 
-// 💬 3-DOTS BOUNCING ANIMATION
+// ==========================================
+// 💬 5. BOUNCING TYPING DOTS ANIMATION
+// ==========================================
 class BouncingTypingDots extends StatefulWidget {
   const BouncingTypingDots({super.key});
 
@@ -408,7 +572,9 @@ class _BouncingTypingDotsState extends State<BouncingTypingDots> with SingleTick
   }
 }
 
-// QUIZ & GUESS CARD WITH SOFT HAPTICS
+// ==========================================
+// 🧠 6. QUIZ & GUESS CARD WITH SHAKE ANIMATION
+// ==========================================
 class QuizCard extends StatefulWidget {
   final LearnCardModel card;
   const QuizCard({super.key, required this.card});
@@ -560,7 +726,9 @@ class _QuizCardState extends State<QuizCard> with SingleTickerProviderStateMixin
   }
 }
 
-// SUMMARY CARD
+// ==========================================
+// 📜 7. SUMMARY CARD
+// ==========================================
 class SummaryCard extends StatelessWidget {
   final LearnCardModel card;
   const SummaryCard({super.key, required this.card});
@@ -613,7 +781,9 @@ class SummaryCard extends StatelessWidget {
   }
 }
 
-// 🏆 MILESTONE CELEBRATION CARD WIDGET
+// ==========================================
+// 🏆 8. MILESTONE CELEBRATION CARD WIDGET
+// ==========================================
 class MilestoneCardWidget extends StatelessWidget {
   final Map<String, dynamic> payload;
   final VoidCallback onContinue;
