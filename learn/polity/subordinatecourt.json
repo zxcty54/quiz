@@ -1,2221 +1,1211 @@
-
 {
-  "topic_id": "polity_subordinate_courts",
-  "topic_title": "Subordinate Courts in India",
-  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
-  "total_cards": 72,
+  "topic_id": "indian_polity_subordinate_courts",
+  "topic_title": "अधीनस्थ न्यायालय (Subordinate Courts) - Indian Polity",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 68,
   "characters": {
-    "aman": {
-      "name": "Aman Sir",
-      "role": "teacher",
-      "avatar": "👨‍🏫"
-    },
-    "raju": {
-      "name": "Raju",
-      "role": "student",
-      "avatar": "👦"
-    }
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
   },
   "cards": [
     {
       "card_id": "card_01_intro",
       "card_slug": "card_01_intro",
       "type": "intro",
-      "concept_id": "chapter_introduction",
+      "concept_id": "chapter_intro",
       "level": 1,
-      "progress": {
-        "current": 1,
-        "total": 72
-      },
+      "progress": { "current": 1, "total": 68 },
       "intro_payload": {
-        "title": "Subordinate Courts in India",
-        "icon": "⚖️",
-        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "chapter_title": "अधीनस्थ न्यायालय (Subordinate Courts)",
+        "chapter_icon": "⚖️",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
         "learning_outcomes": [
-          "Understand the structure and hierarchy of subordinate courts below High Courts",
-          "Master District Courts, Sessions Courts, and Magistrate Courts organization",
-          "Learn appointment, qualifications, and control mechanisms (Articles 233-237)",
-          "Decode BPSC/SSC multi-statement traps on judicial officers",
-          "Grasp the relationship between High Courts and subordinate judiciary"
-        ],
-        "estimated_time": "50 minutes",
-        "total_concepts": 9
+          "District Judiciary की पूरी संरचना (Civil + Criminal hierarchy)",
+          "Articles 233 से 237 तक के सारे प्रावधान",
+          "District Judge की नियुक्ति, योग्यता व नियंत्रण (High Court)",
+          "CrPC के अनुसार Sessions Court, CJM, JMFC की शक्तियाँ",
+          "Lok Adalat, NALSA, Gram Nyayalaya, Family Court, Fast Track Court",
+          "⭐ BPSC TRE Special: Bihar Judicial Service, Gram Kachahri, Patna High Court"
+        ]
       },
-      "navigation": {
-        "next": "card_02_court_hierarchy_intro",
-        "button_text": "शुरू करें ➔"
-      }
+      "navigation": { "next": "card_02_daily_dispute", "button_text": "Chapter Shuru Karein ➔" }
     },
     {
-      "card_id": "card_02_court_hierarchy_intro",
-      "card_slug": "card_02_court_hierarchy_intro",
+      "card_id": "card_02_daily_dispute",
+      "card_slug": "card_02_daily_dispute",
       "type": "chat",
-      "concept_id": "court_hierarchy_introduction",
+      "concept_id": "need_for_subordinate_courts",
       "level": 1,
-      "progress": {
-        "current": 2,
-        "total": 72
-      },
+      "progress": { "current": 2, "total": 68 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, tumne देखा होगा कि जब कोई छोटा मोटा case होता है - जैसे property dispute, छोटी चोरी, या कोई civil झगड़ा - तो लोग कहते हैं 'court में जाएंगे'। लेकिन वो Supreme Court या High Court में नहीं जाते। वो कहाँ जाते हैं?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, मुझे लगता है जिला की कोर्ट में जाते होंगे? जैसे District Court या ऐसा कुछ? लेकिन ये Supreme Court से कैसे अलग है?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul sahi direction! देखो, हमारे देश में courts की तीन levels हैं। सबसे ऊपर Supreme Court (एक ही है पूरे देश के लिए), फिर High Courts (हर राज्य या कुछ राज्यों के लिए), और सबसे नीचे Subordinate Courts - जिन्हें Lower Courts भी कहते हैं। ये वो courts हैं जहाँ आम आदमी के ज्यादातर cases शुरू होते हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaa! Matlab जो courts High Court के नीचे हैं, वो सब subordinate courts हैं? लेकिन इनमें कितने types होते हैं Sir?"
-        }
+        { "speaker": "aman", "text": "Raju, socho tumhare gaon mein do padosiyon ke beech zameen ki seema ko lekar jhagda ho jaaye. Wo log seedha Supreme Court ya Delhi ya Patna High Court nahi jaate na?" },
+        { "speaker": "raju", "text": "Nahi Sir, itni door kaun jayega ek chhoti zameen ke jhagde ke liye! Wo to paas ke court mein hi jayenge." },
+        { "speaker": "aman", "text": "Bilkul sahi! Isiliye har district mein local adalatein hoti hain jaha aam aadmi ka case sabse pehle jaata hai. Inhe hi 'Subordinate Courts' ya 'District Judiciary' kehte hain." },
+        { "speaker": "raju", "text": "Subordinate? Ye word to tab use hota hai jab koi chhota karamchari kisi bade officer ke niche kaam karta hai. Court bhi 'niche' hoti hai kya Sir?" }
       ],
-      "navigation": {
-        "next": "card_03_subordinate_courts_types",
-        "button_text": "Next ➔"
-      }
+      "navigation": { "next": "card_03_district_court_intro", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_03_subordinate_courts_types",
-      "card_slug": "card_03_subordinate_courts_types",
+      "card_id": "card_03_district_court_intro",
+      "card_slug": "card_03_district_court_intro",
       "type": "chat",
-      "concept_id": "subordinate_courts_classification",
+      "concept_id": "meaning_of_subordinate",
       "level": 1,
-      "progress": {
-        "current": 3,
-        "total": 72
-      },
+      "progress": { "current": 3, "total": 68 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Subordinate Courts मुख्यतः दो categories में बंटी हैं:\n\n1) CIVIL COURTS - ये civil matters देखती हैं (property, contracts, family disputes)\n   • District Judge (सबसे senior)\n   • Additional District Judge\n   • Civil Judge (Senior Division)\n   • Civil Judge (Junior Division)\n\n2) CRIMINAL COURTS - ये criminal cases देखती हैं (चोरी, हत्या, धोखाधड़ी)\n   • Sessions Judge (सबसे senior)\n   • Additional Sessions Judge\n   • Chief Judicial Magistrate\n   • Judicial Magistrates (First Class, Second Class)"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir itni सारी courts! Lekin District Judge और Sessions Judge - ये दोनों अलग अलग हैं?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC & SSC Favorite Trap! Technically वो अलग हैं - District Judge civil side का head है, Sessions Judge criminal side का। लेकिन आजकल एक ही officer दोनों काम करता है और उसे 'District and Sessions Judge' कहते हैं। Civil matters में वो District Judge की capacity में काम करता है, criminal में Sessions Judge की capacity में।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Ohh! Same व्यक्ति लेकिन दो different hats पहनता है! Civil में District Judge, Criminal में Sessions Judge!"
-        }
+        { "speaker": "aman", "text": "Ekdum sahi pakda! 'Subordinate' ka matlab hota hai 'adhinasth' yaani 'niche'. Ye courts apne State ke High Court ke administrative control ke 'niche' kaam karti hain - isliye inhe Subordinate Courts kehte hain." },
+        { "speaker": "raju", "text": "Toh matlab ye High Court control karta hai inhe? Aur ye courts kya sab kaam karti hain - chori, jhagda, sab kuch?" },
+        { "speaker": "aman", "text": "Haan control High Court ka hi hota hai. Aur cases do type ke hote hain - Civil (zameen, paisa, talaak) aur Criminal (chori, maar-peet, hatya). Dono ke liye alag-alag judge hierarchy hoti hai." },
+        { "speaker": "raju", "text": "Alag-alag hierarchy?? Matlab ek hi district mein bahut saare alag-alag naam ke judge honge? Ye to yaad rakhna mushkil hoga Sir!" }
       ],
-      "navigation": {
-        "next": "card_04_constitutional_provisions",
-        "button_text": "Next ➔"
-      }
+      "navigation": { "next": "card_04_high_court_vs_subordinate", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_04_constitutional_provisions",
-      "card_slug": "card_04_constitutional_provisions",
+      "card_id": "card_04_high_court_vs_subordinate",
+      "card_slug": "card_04_high_court_vs_subordinate",
       "type": "chat",
-      "concept_id": "constitutional_articles_subordinate",
+      "concept_id": "constitutional_placement",
       "level": 1,
-      "progress": {
-        "current": 4,
-        "total": 72
-      },
+      "progress": { "current": 4, "total": 68 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Constitution में Subordinate Courts के बारे में Articles 233 से 237 तक provisions दिए गए हैं। ये बहुत छोटा section है लेकिन exam के लिए बहुत important है क्योंकि यहीं से appointment, control, और posting के questions आते हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, Supreme Court (124-147) और High Court (214-231) के तो बहुत Articles थे, लेकिन subordinate courts के लिए केवल 5 Articles? Kya कम नहीं है?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Good observation! असल में subordinate courts का detailed organization और structure राज्य सरकारों द्वारा बनाए गए laws से तय होता है। Constitution केवल basic framework देता है - जैसे कौन appoint करेगा, कौन control करेगा, qualifications क्या होंगी। Detailed rules state laws में होते हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaa! Constitution framework देता है, states details भरती हैं!"
-        }
+        { "speaker": "aman", "text": "Ghabrao mat, hum step by step banayenge. Pehle ye samjho ye sab kahan se aata hai - Bhartiya Samvidhan ke Part VI mein 'The States' shirshak ke andar Chapter V High Courts ke liye hai, aur Chapter VI District Courts yaani Subordinate Courts ke liye hai." },
+        { "speaker": "raju", "text": "Achha, matlab dono ka chapter alag hai. District Courts wale Chapter VI mein konsa Article number aata hai Sir?" },
+        { "speaker": "aman", "text": "Chapter VI mein sirf 5 Articles hain - 233 se lekar 237 tak. Isme District Judge ki niyukti, unki qualification, control - sab kuch cover hota hai." },
+        { "speaker": "raju", "text": "Sirf 5 Articles? Chalo thoda relief hai, High Court wale to bohot lambe the! Batao Sir pehla Article kya kehta hai?" }
       ],
-      "navigation": {
-        "next": "card_05_quiz_civil_criminal_head",
-        "button_text": "Quiz Time ➔"
-      }
+      "navigation": { "next": "card_05_guess_appointment", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_05_quiz_civil_criminal_head",
-      "card_slug": "card_05_quiz_civil_criminal_head",
-      "type": "quiz",
-      "concept_id": "district_sessions_judge_quiz",
+      "card_id": "card_05_guess_appointment",
+      "card_slug": "card_05_guess_appointment",
+      "type": "guess",
+      "concept_id": "guess_district_judge_appointment",
       "level": 1,
-      "progress": {
-        "current": 5,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "District level पर civil courts का सबसे senior judicial officer कौन होता है?",
+      "progress": { "current": 5, "total": 68 },
+      "guess_payload": {
+        "question": "Raju bolta hai - 'Sir mujhe lagta hai District Judge ki niyukti bhi President karte honge, jaise Supreme Court aur High Court judges ki hoti hai.' Kya Raju sahi hai?",
         "options": [
-          {"id": "A", "text": "Sessions Judge"},
-          {"id": "B", "text": "District Judge"},
-          {"id": "C", "text": "Chief Judicial Magistrate"},
-          {"id": "D", "text": "Civil Judge Senior Division"}
+          { "id": "A", "text": "Haan, President hi District Judge appoint karte hain" },
+          { "id": "B", "text": "Nahi, Governor karte hain High Court ki consultation se" },
+          { "id": "C", "text": "Chief Minister karte hain" },
+          { "id": "D", "text": "State Public Service Commission akela karta hai" }
         ],
         "correct_option_id": "B",
-        "explanation": "District Judge, district level पर civil courts का सबसे senior judicial officer होता है। Sessions Judge criminal side का head होता है। आजकल एक ही officer दोनों capacities में काम करता है - 'District and Sessions Judge' के रूप में।"
+        "explanation": "Raju galat hai! Article 233 ke anusaar District Judge ki niyukti, posting aur promotion Governor karte hain, lekin akele nahi - us State ke High Court se consultation lekar. President ka isme koi role nahi hai. Ye ek common BPSC trap hai jaha 'President' likh kar confuse kiya jaata hai."
       },
-      "navigation": {
-        "next": "card_06_quiz_constitutional_articles",
-        "button_text": "Next Question ➔"
-      }
+      "navigation": { "next": "card_06_quiz1", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_06_quiz_constitutional_articles",
-      "card_slug": "card_06_quiz_constitutional_articles",
+      "card_id": "card_06_quiz1",
+      "card_slug": "card_06_quiz1",
       "type": "quiz",
-      "concept_id": "articles_subordinate_quiz",
+      "concept_id": "module1_quiz",
       "level": 1,
-      "progress": {
-        "current": 6,
-        "total": 72
-      },
+      "progress": { "current": 6, "total": 68 },
       "quiz_payload": {
-        "question": "Subordinate Courts के बारे में संविधान के कौन से Articles में provisions दिए गए हैं?",
+        "question": "Subordinate Courts (District Judiciary) ka vivaran Bhartiya Samvidhan ke kis Part/Chapter mein diya gaya hai?",
         "options": [
-          {"id": "A", "text": "Articles 124-131"},
-          {"id": "B", "text": "Articles 214-231"},
-          {"id": "C", "text": "Articles 233-237"},
-          {"id": "D", "text": "Articles 245-255"}
+          { "id": "A", "text": "Part V, Chapter IV" },
+          { "id": "B", "text": "Part VI, Chapter V" },
+          { "id": "C", "text": "Part VI, Chapter VI" },
+          { "id": "D", "text": "Part XIV, Chapter I" }
         ],
         "correct_option_id": "C",
-        "explanation": "⭐ Railway & SSC Favorite! Articles 233-237 में subordinate courts से related provisions हैं। याद रखो: Art 124-147 Supreme Court, Art 214-231 High Courts, Art 233-237 Subordinate Courts।"
+        "explanation": "Part VI 'The States' ke andar Chapter V High Courts ke liye hai (Art 214-231) aur Chapter VI 'Subordinate Courts' ke liye hai (Article 233-237). Ye 1/3 question har exam mein directly puchha jaata hai."
       },
-      "navigation": {
-        "next": "card_07_quiz_civil_criminal_distinction",
-        "button_text": "Next Question ➔"
-      }
+      "navigation": { "next": "card_07_quiz2", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_07_quiz_civil_criminal_distinction",
-      "card_slug": "card_07_quiz_civil_criminal_distinction",
+      "card_id": "card_07_quiz2",
+      "card_slug": "card_07_quiz2",
       "type": "quiz",
-      "concept_id": "civil_criminal_distinction_quiz",
+      "concept_id": "module1_quiz",
       "level": 1,
-      "progress": {
-        "current": 7,
-        "total": 72
-      },
+      "progress": { "current": 7, "total": 68 },
       "quiz_payload": {
-        "question": "निम्नलिखित में से कौन सा court criminal cases देखता है?",
+        "question": "Subordinate Courts ko aur kis naam se jana jaata hai?",
         "options": [
-          {"id": "A", "text": "Civil Judge"},
-          {"id": "B", "text": "Chief Judicial Magistrate"},
-          {"id": "C", "text": "Additional District Judge"},
-          {"id": "D", "text": "Civil Judge Senior Division"}
+          { "id": "A", "text": "Constitutional Courts" },
+          { "id": "B", "text": "District Judiciary" },
+          { "id": "C", "text": "Tribunal Courts" },
+          { "id": "D", "text": "Apex Judiciary" }
         ],
         "correct_option_id": "B",
-        "explanation": "Chief Judicial Magistrate criminal courts में होता है। Civil Judge, Additional District Judge, और Civil Judge Senior Division सभी civil courts के parts हैं जो civil disputes (property, contracts, family matters) देखते हैं।"
+        "explanation": "Subordinate Courts ko 'District Judiciary' ya 'District Courts' bhi kehte hain kyunki ye har district mein sthapit hoti hain aur us district ke sabse bade judicial authority hote hain."
       },
-      "navigation": {
-        "next": "card_08_milestone_intro",
-        "button_text": "Check & Continue ➔"
-      }
+      "navigation": { "next": "card_08_quiz3", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_08_milestone_intro",
-      "card_slug": "card_08_milestone_intro",
-      "type": "milestone",
-      "concept_id": "introduction_complete",
+      "card_id": "card_08_quiz3",
+      "card_slug": "card_08_quiz3",
+      "type": "quiz",
+      "concept_id": "module1_quiz",
       "level": 1,
-      "progress": {
-        "current": 8,
-        "total": 72
+      "progress": { "current": 8, "total": 68 },
+      "quiz_payload": {
+        "question": "Nimnlikhit mein se kaunsa kathan sahi hai?\n1. Subordinate Courts mein Civil aur Criminal cases ke liye alag hierarchy hoti hai.\n2. Subordinate Courts High Court ke administrative control mein kaam karti hain.",
+        "options": [
+          { "id": "A", "text": "Kewal 1 sahi hai" },
+          { "id": "B", "text": "Kewal 2 sahi hai" },
+          { "id": "C", "text": "1 aur 2 dono sahi hain" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain - Civil aur Criminal cases ke liye alag judge hierarchy hoti hai, aur ye poori District Judiciary High Court ke administrative control mein kaam karti hai (Article 235)."
       },
+      "navigation": { "next": "card_09_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_09_milestone1",
+      "card_slug": "card_09_milestone1",
+      "type": "milestone",
+      "concept_id": "module1_complete",
+      "level": 1,
+      "progress": { "current": 9, "total": 68 },
       "milestone_payload": {
-        "title": "🎯 MODULE 1 COMPLETE!",
+        "title": "MODULE COMPLETED!",
         "badge_emoji": "⚖️",
-        "completed_topic": "Subordinate Courts का परिचय और संरचना",
+        "completed_topic": "Subordinate Courts - Basic Introduction",
         "xp_earned": 50,
-        "milestone_progress": "Module 1/9 Clear",
-        "motivational_quote": "Civil vs Criminal, District vs Sessions Judge - अब basics crystal clear!"
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "Foundation strong ho gayi Raju! Ab chalo Constitution ke Articles ki gehrai mein!"
       },
-      "navigation": {
-        "next": "card_09_appointment_intro",
-        "button_text": "Next Module ➔"
-      }
+      "navigation": { "next": "card_10_art233", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_09_appointment_intro",
-      "card_slug": "card_09_appointment_intro",
+      "card_id": "card_10_art233",
+      "card_slug": "card_10_art233",
       "type": "chat",
-      "concept_id": "appointment_introduction",
+      "concept_id": "article_233",
       "level": 2,
-      "progress": {
-        "current": 9,
-        "total": 72
-      },
+      "progress": { "current": 10, "total": 68 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, अब सबसे important part - subordinate courts के judges की appointment कैसे होती है? Article 233 और 234 में यह दिया गया है। बताओ, तुम्हारे हिसाब से कौन appoint करेगा - Governor, High Court, या President?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, मुझे लगता है Governor appoint करेंगे क्योंकि ये state level की courts हैं? Ya फिर High Court क्योंकि ये उनके नीचे हैं?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC Gold! दोनों का role है! Article 233 कहता है - District Judges की appointment Governor करते हैं, लेकिन यह appointment High Court से consultation के बाद होती है। Actually, practical में High Court ही recommend करती है और Governor formally appoint करते हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab Governor formally appoint karte hain, लेकिन High Court decide करती hai! Aur बाकी judges ka kya - Civil Judge, Magistrates?"
-        }
+        { "speaker": "aman", "text": "Chalo ab Article 233 dekhte hain - iska naam hai 'Appointment of district judges'. Isme likha hai ki District Judges ki niyukti, posting aur promotion Governor karta hai, lekin us State ke High Court se consultation lekar." },
+        { "speaker": "raju", "text": "Governor akele nahi kar sakta? High Court se poochhna zaroori hai kya?" },
+        { "speaker": "aman", "text": "Bilkul zaroori hai! Kyunki High Court ko pata hota hai ki district mein kaunsa judge kaam ke laayak hai. Bina consultation ke Governor District Judge appoint nahi kar sakta." },
+        { "speaker": "raju", "text": "Achha matlab High Court ki salah lena mandatory hai. Par Sir ye 'District Judge' banne ke liye qualification kya honi chahiye?" }
       ],
-      "navigation": {
-        "next": "card_10_appointment_details",
-        "button_text": "Next ➔"
-      }
+      "navigation": { "next": "card_11_art233A", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_10_appointment_details",
-      "card_slug": "card_10_appointment_details",
+      "card_id": "card_11_art233A",
+      "card_slug": "card_11_art233A",
       "type": "chat",
-      "concept_id": "appointment_detailed_process",
+      "concept_id": "article_233_qualification",
       "level": 2,
-      "progress": {
-        "current": 10,
-        "total": 72
-      },
+      "progress": { "current": 11, "total": 68 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Article 234 कहता है - District Judges के अलावा बाकी सभी persons (Civil Judges, Magistrates, Additional District Judges, etc.) की appointment Governor करते हैं, लेकिन इसमें High Court से consultation नहीं, बल्कि High Court की recommendation पर होती है। Difference समझो - consultation = सलाह लेना, recommendation = सिफारिश के आधार पर।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, District Judges के लिए 'consultation', बाकी के लिए 'recommendation'? Iska matlab recommendation ज्यादा strong hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Recommendation का मतलब High Court ने जो नाम भेजा, Governor को वही appointment करनी होगी - practically High Court का decision final है। Consultation में theoretically Governor थोड़ा input दे सकते हैं, लेकिन practically वो भी High Court की advice मानते हैं। Real power High Court के पास है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya! High Court का ही control hai practically!"
-        }
+        { "speaker": "aman", "text": "Article 233(2) mein qualification di gayi hai - jo person pehle se Union ya State ki service mein nahi hai, wo tabhi District Judge ban sakta hai jab wo kam se kam 7 saal tak advocate ya pleader raha ho, aur High Court ne uski appointment ke liye recommend kiya ho." },
+        { "speaker": "raju", "text": "7 saal advocate rehna zaroori hai? Ye to bohot lamba time hai Sir!" },
+        { "speaker": "aman", "text": "Haan, aur ek trap yaad rakho - agar wo aadmi pehle se hi judicial service mein hai (jaise Civil Judge), to use ye 7 saal wali advocate condition follow nahi karni padti, wo promotion se District Judge ban sakta hai." },
+        { "speaker": "raju", "text": "Achha, matlab do raste hain District Judge banne ke - ek seedha advocate se, doosra promotion se. Ye Article 233A kya hai jo aapne board pe likha?" }
       ],
-      "navigation": {
-        "next": "card_11_qualifications",
-        "button_text": "Next ➔"
-      }
+      "navigation": { "next": "card_12_art234", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_11_qualifications",
-      "card_slug": "card_11_qualifications",
+      "card_id": "card_12_art234",
+      "card_slug": "card_12_art234",
       "type": "chat",
-      "concept_id": "district_judge_qualifications",
+      "concept_id": "article_234",
       "level": 2,
-      "progress": {
-        "current": 11,
-        "total": 72
-      },
+      "progress": { "current": 12, "total": 68 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Article 233 में District Judge की qualifications दी गई हैं:\n\n1) भारत का नागरिक हो\n2) कम से कम 7 वर्ष advocate रहा हो, या\n3) कम से कम 7 वर्ष judicial service में रहा हो, या\n4) उस state में judicial service में हो और High Court द्वारा qualified माना गया हो\n\nध्यान दो - High Court judge बनने के लिए 10 years चाहिए था, लेकिन District Judge के लिए 7 years।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, 'judicial service' matlab क्या? Koi judge पहले से होना चाहिए?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC Trap! Judicial service का मतलब subordinate judicial posts - जैसे Civil Judge, Magistrate, Additional District Judge। तो अगर कोई 7 साल Civil Judge रह चुका है, तो वो District Judge बन सकता है। या 7 साल advocate रहा हो। दोनों routes हैं - direct advocacy route या promotion route judicial service से।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaa! Advocacy से direct entry या judicial service में promotion!"
-        }
+        { "speaker": "aman", "text": "Article 233A sirf ek validation clause hai - isne un District Judges ki appointments ko legally valid kiya jo pehle kisi technical error ki wajah se galat ho sakti thi. Ab dekho Article 234 - ye District Judge se 'chhote' judicial officers ki bharti ke baare mein hai." },
+        { "speaker": "raju", "text": "Chhote officers matlab Munsif jaise log? Unko kaun appoint karta hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Article 234 kehta hai - Governor in officers ko appoint karta hai, lekin rules banane se pehle usse State Public Service Commission (jaise BPSC) AUR High Court dono se consultation karni padti hai." },
+        { "speaker": "raju", "text": "Wait Sir, yahan to DO logon se poochhna pad raha hai - PSC bhi aur High Court bhi! Article 233 mein to sirf High Court se poochha tha. Ye BPSC mein confuse karayega!" }
       ],
-      "navigation": {
-        "next": "card_12_recruitment_methods",
-        "button_text": "Next ➔"
-      }
+      "navigation": { "next": "card_13_art235_236_237", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_12_recruitment_methods",
-      "card_slug": "card_12_recruitment_methods",
+      "card_id": "card_13_art235_236_237",
+      "card_slug": "card_13_art235_236_237",
       "type": "chat",
-      "concept_id": "recruitment_examination_promotion",
+      "concept_id": "article_235_236_237",
       "level": 2,
-      "progress": {
-        "current": 12,
-        "total": 72
-      },
+      "progress": { "current": 13, "total": 68 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Subordinate judiciary में entry दो तरीकों से होती है:\n\n1) DIRECT RECRUITMENT: High Court या State Public Service Commission competitive exam conduct करती है। Civil Judge Junior Division या Judicial Magistrate के पद के लिए। LLB graduates apply करते हैं।\n\n2) PROMOTION: पहले से judicial service में काम कर रहे officers को promote किया जाता है। जैसे Civil Judge को Additional District Judge बनाना।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh new law graduates exam देकर सीधे judge बन सकते hain? Matlab कोई भी LLB करके judge बन सकता hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan, लेकिन बहुत tough exam होता है! Judicial Services Examination बहुत competitive है। Written exam, interview, और कभी-कभी viva भी। और ध्यान दो - ये entry-level post होती है (Civil Judge Junior या Judicial Magistrate)। District Judge बनने के लिए फिर service में कई साल लगते हैं या direct 7 years advocacy के बाद।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya! Entry level se शुरू करके या experience के बाद lateral entry!"
-        }
+        { "speaker": "aman", "text": "Bilkul sahi observation Raju! Yahi exam ka sabse bada trap hai - Article 233 mein sirf High Court, Article 234 mein PSC + High Court dono. Ab Article 235 sabse important hai - isme likha hai District Courts aur unke niche ki adalaton ka 'control' (posting, promotion, leave) poora High Court ke paas hoga." },
+        { "speaker": "raju", "text": "Toh Governor sirf appoint karta hai, par baad mein control High Court ka? Ye to alag-alag hi ho gaya!" },
+        { "speaker": "aman", "text": "Exactly! Yehi judiciary ki independence ka core hai - executive (Governor) sirf appointment karta hai, roz ka kaam-kaaj High Court dekhta hai. Aur Article 236 mein 'district judge' aur 'judicial service' ki definition di gayi hai, jabki Article 237 Governor ko power deta hai ki wo Magistrates par bhi ye sab provisions extend kar sakta hai." },
+        { "speaker": "raju", "text": "Ok Sir, ab ye 5 Articles ek saath yaad karne ki koshish karta hoon - 233 appointment, 234 bharti, 235 control, 236 definition, 237 magistrates par extend. Test lo Sir!" }
       ],
-      "navigation": {
-        "next": "card_13_quiz_appointment_authority",
-        "button_text": "Quiz Time ➔"
-      }
+      "navigation": { "next": "card_14_quiz1", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_13_quiz_appointment_authority",
-      "card_slug": "card_13_quiz_appointment_authority",
+      "card_id": "card_14_quiz1",
+      "card_slug": "card_14_quiz1",
       "type": "quiz",
-      "concept_id": "appointment_authority_quiz",
+      "concept_id": "module2_quiz",
       "level": 2,
-      "progress": {
-        "current": 13,
-        "total": 72
-      },
+      "progress": { "current": 14, "total": 68 },
       "quiz_payload": {
-        "question": "District Judges की appointment कौन करता है?",
+        "question": "District Judge ki niyukti, posting aur promotion kiske dwara ki jaati hai?",
         "options": [
-          {"id": "A", "text": "High Court"},
-          {"id": "B", "text": "Governor, High Court से consultation के बाद"},
-          {"id": "C", "text": "President"},
-          {"id": "D", "text": "State Public Service Commission"}
+          { "id": "A", "text": "President, Chief Justice of India ki consultation se" },
+          { "id": "B", "text": "Governor, us State ke High Court ki consultation se" },
+          { "id": "C", "text": "State Public Service Commission akela" },
+          { "id": "D", "text": "Chief Minister, Cabinet ki sahmati se" }
         ],
         "correct_option_id": "B",
-        "explanation": "Article 233 के अनुसार District Judges की appointment राज्य का Governor करता है, लेकिन यह appointment High Court से consultation के बाद होती है। Practically, High Court recommend करती है और Governor formally appoint करते हैं।"
+        "explanation": "Article 233(1) ke anusaar District Judges ki appointment, posting, promotion Governor karta hai us State ke High Court ki consultation se. President ka isme koi role nahi hai - ye common trap hai."
       },
-      "navigation": {
-        "next": "card_14_quiz_qualification_years",
-        "button_text": "Next Question ➔"
-      }
+      "navigation": { "next": "card_15_quiz2", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_14_quiz_qualification_years",
-      "card_slug": "card_14_quiz_qualification_years",
+      "card_id": "card_15_quiz2",
+      "card_slug": "card_15_quiz2",
       "type": "quiz",
-      "concept_id": "qualification_years_quiz",
+      "concept_id": "module2_quiz",
       "level": 2,
-      "progress": {
-        "current": 14,
-        "total": 72
-      },
+      "progress": { "current": 15, "total": 68 },
       "quiz_payload": {
-        "question": "District Judge बनने के लिए कितने वर्षों की advocacy या judicial service का अनुभव चाहिए?",
+        "question": "Article 234 ke anusaar District Judge se niche ke judicial officers (jaise Civil Judge) ki bharti mein Governor kis-kis se consultation karta hai?",
         "options": [
-          {"id": "A", "text": "5 वर्ष"},
-          {"id": "B", "text": "7 वर्ष"},
-          {"id": "C", "text": "10 वर्ष"},
-          {"id": "D", "text": "12 वर्ष"}
+          { "id": "A", "text": "Sirf High Court se" },
+          { "id": "B", "text": "Sirf State Public Service Commission se" },
+          { "id": "C", "text": "State Public Service Commission AUR High Court dono se" },
+          { "id": "D", "text": "Chief Minister aur Law Minister se" }
         ],
-        "correct_option_id": "B",
-        "explanation": "⭐ SSC & Railway Favorite! Article 233 के अनुसार District Judge बनने के लिए कम से कम 7 वर्ष की advocacy या judicial service का अनुभव होना चाहिए। याद रखो: High Court judge के लिए 10 years, District Judge के लिए 7 years।"
+        "correct_option_id": "C",
+        "explanation": "Article 234 mein Governor rules banata hai State Public Service Commission aur High Court dono se consultation karke - Article 233 se ye alag hai jaha sirf High Court ki consultation lagti hai."
       },
-      "navigation": {
-        "next": "card_15_quiz_article_233_234",
-        "button_text": "Next Question ➔"
-      }
+      "navigation": { "next": "card_16_quiz3", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_15_quiz_article_233_234",
-      "card_slug": "card_15_quiz_article_233_234",
+      "card_id": "card_16_quiz3",
+      "card_slug": "card_16_quiz3",
       "type": "quiz",
-      "concept_id": "article_233_234_quiz",
+      "concept_id": "module2_quiz",
       "level": 2,
-      "progress": {
-        "current": 15,
-        "total": 72
-      },
+      "progress": { "current": 16, "total": 68 },
       "quiz_payload": {
-        "question": "District Judges के अलावा अन्य subordinate judicial officers की appointment किस Article के तहत होती है?",
+        "question": "Assertion (A): Article 235 ke tehat District Courts aur unke subordinate courts par 'control' High Court ke paas hota hai.\nReason (R): Isse judiciary ko executive ke interference se azad rakha ja sakta hai.",
         "options": [
-          {"id": "A", "text": "Article 233"},
-          {"id": "B", "text": "Article 234"},
-          {"id": "C", "text": "Article 235"},
-          {"id": "D", "text": "Article 236"}
-        ],
-        "correct_option_id": "B",
-        "explanation": "Article 234 में District Judges के अलावा अन्य persons (Civil Judges, Magistrates, etc.) की appointment का provision है। यह appointment Governor करते हैं High Court की recommendation पर।"
-      },
-      "navigation": {
-        "next": "card_16_milestone_appointment",
-        "button_text": "Check & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_16_milestone_appointment",
-      "card_slug": "card_16_milestone_appointment",
-      "type": "milestone",
-      "concept_id": "appointment_complete",
-      "level": 2,
-      "progress": {
-        "current": 16,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "💪 MODULE 2 COMPLETE!",
-        "badge_emoji": "👨‍⚖️",
-        "completed_topic": "Appointment और Qualifications",
-        "xp_earned": 60,
-        "milestone_progress": "Module 2/9 Clear",
-        "motivational_quote": "Art 233-234, 7 years experience, Governor appoints - सब याद!"
-      },
-      "navigation": {
-        "next": "card_17_control_intro",
-        "button_text": "Next: Control Mechanism ➔"
-      }
-    },
-    {
-      "card_id": "card_17_control_intro",
-      "card_slug": "card_17_control_intro",
-      "type": "chat",
-      "concept_id": "control_introduction",
-      "level": 3,
-      "progress": {
-        "current": 17,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, अब एक बहुत important topic - subordinate courts का control कौन करता है? High Court, State Government, या कोई और? Article 235 यह बताता है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, appointment तो Governor करते हैं High Court से consultation के बाद। तो शायद control भी दोनों का होगा?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ UPSC & BPSC Gold! Nahi! Article 235 बहुत clearly कहता है - 'The control over subordinate courts, including posting, promotion, and leave, shall vest in the High Court.' Matlab subordinate courts का पूरा administrative control केवल High Court के पास है। State Government या Governor का कोई role नहीं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wow! Appointment में तो Governor involved थे, लेकिन control पूरी तरह High Court का? Ye separation क्यों hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_18_control_details",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_18_control_details",
-      "card_slug": "card_18_control_details",
-      "type": "chat",
-      "concept_id": "control_detailed_aspects",
-      "level": 3,
-      "progress": {
-        "current": 18,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "यह separation judicial independence के लिए है। Judiciary को executive (state government) के interference से बचाना है। Article 235 के तहत High Court का control include करता है:\n\n• Posting और Transfer\n• Promotion\n• Leave grant करना\n• Disciplinary actions\n• Conduct rules बनाना\n• Performance evaluation\n\nकिसी judge को एक district से दूसरे district में transfer करना है? High Court decide करेगी। Promotion देना है? High Court। Leave? High Court।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, discipline matlab? Agar कोई judge गलत काम करे तो?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC Pattern! High Court disciplinary action ले सकती है - warning से लेकर suspension तक। लेकिन ध्यान दो - removal का power High Court के पास नहीं है। Removal के लिए Governor की involvement जरूरी है (क्योंकि Governor ने appoint किया था)। लेकिन यह भी High Court की recommendation पर ही होगा।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaa! Day-to-day control High Court, लेकिन removal जैसे major actions में Governor भी!"
-        }
-      ],
-      "navigation": {
-        "next": "card_19_independence_rationale",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_19_independence_rationale",
-      "card_slug": "card_19_independence_rationale",
-      "type": "chat",
-      "concept_id": "judicial_independence_rationale",
-      "level": 3,
-      "progress": {
-        "current": 19,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Article 235 का philosophy समझो। अगर state government subordinate judges को control करे, तो क्या होगा? Government के खिलाफ case में judge pressure में आ सकता है - 'अगर government के खिलाफ फैसला दिया तो transfer कर देंगे'। इसलिए control judiciary के पास - यानी High Court के पास।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, lekin High Court के judges भी तो governor/government द्वारा appoint होते hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Brilliant observation! हाँ, लेकिन High Court judges की appointment में CJI का role है (Collegium system), और उनकी tenure protected है - arbitrarily remove नहीं कर सकते (impeachment जरूरी)। Plus, High Court judiciary का part है, executive का नहीं। तो यह separation of powers maintain होता है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya! Judiciary का control judiciary पर, executive का नहीं!"
-        }
-      ],
-      "navigation": {
-        "next": "card_20_quiz_article_235",
-        "button_text": "Quiz Time ➔"
-      }
-    },
-    {
-      "card_id": "card_20_quiz_article_235",
-      "card_slug": "card_20_quiz_article_235",
-      "type": "quiz",
-      "concept_id": "article_235_quiz",
-      "level": 3,
-      "progress": {
-        "current": 20,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Subordinate courts का control किसके पास है?",
-        "options": [
-          {"id": "A", "text": "State Government"},
-          {"id": "B", "text": "Governor"},
-          {"id": "C", "text": "High Court"},
-          {"id": "D", "text": "Supreme Court"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "⭐ Railway & SSC Favorite! Article 235 के अनुसार subordinate courts का control (posting, promotion, leave, disciplinary actions) केवल High Court के पास है। State Government या Governor का कोई role नहीं। यह judicial independence के लिए है।"
-      },
-      "navigation": {
-        "next": "card_21_quiz_control_aspects",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_21_quiz_control_aspects",
-      "card_slug": "card_21_quiz_control_aspects",
-      "type": "quiz",
-      "concept_id": "control_aspects_quiz",
-      "level": 3,
-      "progress": {
-        "current": 21,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "निम्नलिखित में से कौन सा High Court के control में नहीं आता?",
-        "options": [
-          {"id": "A", "text": "Subordinate judges की posting और transfer"},
-          {"id": "B", "text": "Subordinate judges का promotion"},
-          {"id": "C", "text": "Subordinate judges की initial appointment"},
-          {"id": "D", "text": "Subordinate judges का disciplinary control"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "Initial appointment Governor करते हैं (High Court से consultation/recommendation के बाद - Art 233, 234)। लेकिन appointment के बाद posting, transfer, promotion, disciplinary control सब High Court के हाथ में है (Art 235)।"
-      },
-      "navigation": {
-        "next": "card_22_quiz_removal_power",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_22_quiz_removal_power",
-      "card_slug": "card_22_quiz_removal_power",
-      "type": "quiz",
-      "concept_id": "removal_power_quiz",
-      "level": 3,
-      "progress": {
-        "current": 22,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Subordinate court के judge को remove करने की power किसके पास है?",
-        "options": [
-          {"id": "A", "text": "केवल High Court"},
-          {"id": "B", "text": "केवल Governor"},
-          {"id": "C", "text": "Governor, High Court की recommendation पर"},
-          {"id": "D", "text": "State Legislature"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "⭐ BPSC Pattern! Removal का power Governor के पास है क्योंकि उन्होंने appoint किया था, लेकिन यह removal High Court की recommendation के बिना नहीं हो सकता। Disciplinary control High Court का है, लेकिन final removal में Governor की formal involvement जरूरी है।"
-      },
-      "navigation": {
-        "next": "card_23_milestone_control",
-        "button_text": "Check & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_23_milestone_control",
-      "card_slug": "card_23_milestone_control",
-      "type": "milestone",
-      "concept_id": "control_complete",
-      "level": 3,
-      "progress": {
-        "current": 23,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "🎯 MODULE 3 COMPLETE!",
-        "badge_emoji": "⚖️",
-        "completed_topic": "Control Mechanism और Judicial Independence",
-        "xp_earned": 60,
-        "milestone_progress": "Module 3/9 Clear",
-        "motivational_quote": "Article 235, High Court control, Judicial Independence - अब crystal clear!"
-      },
-      "navigation": {
-        "next": "card_24_district_court_structure",
-        "button_text": "Next: Court Structure ➔"
-      }
-    },
-    {
-      "card_id": "card_24_district_court_structure",
-      "card_slug": "card_24_district_court_structure",
-      "type": "chat",
-      "concept_id": "district_court_detailed_structure",
-      "level": 4,
-      "progress": {
-        "current": 24,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab District Court की detailed structure समझते हैं। CIVIL SIDE में hierarchy:\n\n1) District Judge (सबसे senior)\n2) Additional District Judge (District Judge के बराबर powers, workload कम करने के लिए)\n3) Civil Judge (Senior Division) - CJM SD\n4) Civil Judge (Junior Division) - CJM JD\n\nDistrict Judge के पास सभी civil matters में unlimited jurisdiction है - किसी भी value का property case सुन सकते हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Additional District Judge का मतलब? Ye अलग post hai या सिर्फ help के लिए?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Good question! Additional District Judge एक separate post है जिसे District Judge जितनी ही powers मिली होती हैं। यह post तब create होती है जब workload ज्यादा हो। जैसे अगर किसी district में बहुत सारे cases हैं, तो एक District Judge के साथ 2-3 Additional District Judges भी हो सकते हैं। सभी same level के cases देख सकते हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaa! Same power लेकिन workload distribute करने के लिए!"
-        }
-      ],
-      "navigation": {
-        "next": "card_25_sessions_court_structure",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_25_sessions_court_structure",
-      "card_slug": "card_25_sessions_court_structure",
-      "type": "chat",
-      "concept_id": "sessions_court_detailed_structure",
-      "level": 4,
-      "progress": {
-        "current": 25,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "CRIMINAL SIDE में hierarchy:\n\n1) Sessions Judge (सबसे senior, सबसे serious crimes)\n2) Additional Sessions Judge\n3) Chief Judicial Magistrate (CJM)\n4) Judicial Magistrate First Class (JMFC)\n5) Judicial Magistrate Second Class (JMSC)\n\n⭐ BPSC Trap! Sessions Judge को death penalty देने की power है। Magistrates को नहीं। Maximum punishment Magistrate दे सकते हैं:\n• JMFC: 3 years imprisonment\n• JMSC: 1 year imprisonment"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Sessions Court में कौन से cases आते hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Sessions Courts में serious crimes आते हैं - murder, rape, dacoity, किडनैपिंग जैसे। जो crimes 7 years से ज्यादा punishment के हैं या death penalty के। छोटे crimes (theft, simple assault) Magistrate courts में जाते हैं। Sessions Judge trial करते हैं, Magistrates preliminary inquiry और छोटे cases।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab serious = Sessions, छोटे = Magistrate!"
-        }
-      ],
-      "navigation": {
-        "next": "card_26_jurisdiction_pecuniary",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_26_jurisdiction_pecuniary",
-      "card_slug": "card_26_jurisdiction_pecuniary",
-      "type": "chat",
-      "concept_id": "pecuniary_territorial_jurisdiction",
-      "level": 4,
-      "progress": {
-        "current": 26,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Subordinate courts की दो तरह की jurisdiction होती है:\n\n1) PECUNIARY JURISDICTION: Money value के आधार पर। जैसे - Civil Judge Junior Division केवल ₹20 lakh तक के property disputes देख सकता है, उससे ज्यादा value के cases Senior Division या District Judge के पास जाएंगे। (ये limits states अलग-अलग तय करती हैं)\n\n2) TERRITORIAL JURISDICTION: Geographic area के आधार पर। एक District Judge केवल अपने district के cases देख सकते हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir toh छोटे value के cases छोटी courts में, बड़े value के बड़ी courts में?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! यह judicial efficiency के लिए है। अगर ₹50,000 का छोटा case भी District Judge को देखना पड़े, तो उनके पास बड़े cases के लिए time नहीं बचेगा। इसलिए hierarchy के अनुसार distribution है। लेकिन याद रखो - ये pecuniary limits states अपने laws से fix करती हैं, Constitution में fixed नहीं हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya! Workload distribution के लिए value-based jurisdiction!"
-        }
-      ],
-      "navigation": {
-        "next": "card_27_quiz_sessions_power",
-        "button_text": "Quiz Time ➔"
-      }
-    },
-    {
-      "card_id": "card_27_quiz_sessions_power",
-      "card_slug": "card_27_quiz_sessions_power",
-      "type": "quiz",
-      "concept_id": "sessions_power_quiz",
-      "level": 4,
-      "progress": {
-        "current": 27,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Criminal courts में death penalty देने की power किसके पास है?",
-        "options": [
-          {"id": "A", "text": "Judicial Magistrate First Class"},
-          {"id": "B", "text": "Chief Judicial Magistrate"},
-          {"id": "C", "text": "Sessions Judge"},
-          {"id": "D", "text": "Additional Sessions Judge और Sessions Judge दोनों"}
-        ],
-        "correct_option_id": "D",
-        "explanation": "⭐ SSC & Railway Favorite! Sessions Judge और Additional Sessions Judge दोनों को death penalty देने की power है। Magistrates (JMFC, JMSC, CJM) को यह power नहीं है। JMFC maximum 3 years, JMSC maximum 1 year imprisonment दे सकते हैं।"
-      },
-      "navigation": {
-        "next": "card_28_quiz_magistrate_punishment",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_28_quiz_magistrate_punishment",
-      "card_slug": "card_28_quiz_magistrate_punishment",
-      "type": "quiz",
-      "concept_id": "magistrate_punishment_quiz",
-      "level": 4,
-      "progress": {
-        "current": 28,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Judicial Magistrate First Class (JMFC) maximum कितनी imprisonment दे सकता है?",
-        "options": [
-          {"id": "A", "text": "1 year"},
-          {"id": "B", "text": "2 years"},
-          {"id": "C", "text": "3 years"},
-          {"id": "D", "text": "5 years"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "Judicial Magistrate First Class maximum 3 years की imprisonment दे सकता है। JMFC से junior, Judicial Magistrate Second Class maximum 1 year दे सकता है। 7 years से ज्यादा या death penalty के cases Sessions Court में जाते हैं।"
-      },
-      "navigation": {
-        "next": "card_29_quiz_pecuniary_jurisdiction",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_29_quiz_pecuniary_jurisdiction",
-      "card_slug": "card_29_quiz_pecuniary_jurisdiction",
-      "type": "quiz",
-      "concept_id": "pecuniary_jurisdiction_quiz",
-      "level": 4,
-      "progress": {
-        "current": 29,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Pecuniary jurisdiction का मतलब क्या है?",
-        "options": [
-          {"id": "A", "text": "Geographic area के आधार पर jurisdiction"},
-          {"id": "B", "text": "Money value के आधार पर jurisdiction"},
-          {"id": "C", "text": "Crime की गंभीरता के आधार पर jurisdiction"},
-          {"id": "D", "text": "Parties की संख्या के आधार पर jurisdiction"}
-        ],
-        "correct_option_id": "B",
-        "explanation": "Pecuniary jurisdiction का मतलब है money value या property value के आधार पर jurisdiction। जैसे - छोटे value के civil cases Junior Division में, बड़े value के District Judge के पास। ये limits राज्य सरकारें तय करती हैं।"
-      },
-      "navigation": {
-        "next": "card_30_milestone_structure",
-        "button_text": "Check & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_30_milestone_structure",
-      "card_slug": "card_30_milestone_structure",
-      "type": "milestone",
-      "concept_id": "structure_complete",
-      "level": 4,
-      "progress": {
-        "current": 30,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "🎓 MODULE 4 COMPLETE!",
-        "badge_emoji": "⚖️",
-        "completed_topic": "Court Structure और Jurisdiction",
-        "xp_earned": 60,
-        "milestone_progress": "Module 4/9 Clear",
-        "motivational_quote": "Civil vs Criminal hierarchy, Pecuniary jurisdiction - सब अब fingertips पर!"
-      },
-      "navigation": {
-        "next": "card_31_appellate_powers",
-        "button_text": "Next: Appellate Powers ➔"
-      }
-    },
-    {
-      "card_id": "card_31_appellate_powers",
-      "card_slug": "card_31_appellate_powers",
-      "type": "chat",
-      "concept_id": "appellate_jurisdiction_subordinate",
-      "level": 5,
-      "progress": {
-        "current": 31,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, अगर किसी को Civil Judge Junior Division का decision पसंद नहीं आए, तो वो appeal कहाँ करेगा? Subordinate courts में भी appellate system है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, शायद High Court में directly appeal? Ya कोई middle level?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Middle level! Subordinate courts में hierarchy है:\n\nCIVIL APPEALS:\n• Civil Judge Junior Division से → Civil Judge Senior Division\n• Civil Judge Senior Division से → District Judge\n• District Judge से → High Court\n\nCRIMINAL APPEALS:\n• JMSC/JMFC से → Sessions Judge\n• Sessions Judge से → High Court\n\nतो पहले एक level ऊपर appeal, फिर अगला level।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaa! Step-by-step ऊपर जाते hain, directly High Court नहीं?"
-        }
-      ],
-      "navigation": {
-        "next": "card_32_revision_powers",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_32_revision_powers",
-      "card_slug": "card_32_revision_powers",
-      "type": "chat",
-      "concept_id": "revision_supervisory_powers",
-      "level": 5,
-      "progress": {
-        "current": 32,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Appeal के अलावा REVISION और REVIEW भी होते हैं:\n\n• APPEAL: Losing party का right है (कुछ conditions में)। Decision को पूरी तरह देखा जाता है - facts और law दोनों।\n\n• REVISION: Higher court अपनी supervisory powers से नीचे के court के order को check करती है। Mainly legal errors देखी जाती हैं।\n\n• REVIEW: Same court अपना ही decision review करती है (बहुत limited, केवल अगर कोई apparent error हो)।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir इन तीनों में क्या फर्क है practically?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ UPSC Pattern! Appeal = Full rehearing का chance, facts और law दोनों argue कर सकते हो। Revision = केवल legal points देखे जाते हैं, नए facts नहीं। Review = बहुत limited, same court से ही rehearing, केवल जब कोई obvious mistake हो। Appeal सबसे comprehensive है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya! Appeal most comprehensive, Revision legal check, Review rare!"
-        }
-      ],
-      "navigation": {
-        "next": "card_33_criminal_appeals_special",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_33_criminal_appeals_special",
-      "card_slug": "card_33_criminal_appeals_special",
-      "type": "chat",
-      "concept_id": "criminal_appeals_death_penalty",
-      "level": 5,
-      "progress": {
-        "current": 33,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC Gold! Criminal cases में special provisions:\n\n1) अगर Sessions Judge ने death penalty दी है, तो appeal automatically High Court को जाती है। Accused को appeal करने की जरूरत नहीं - court खुद भेज देगी confirmation के लिए।\n\n2) High Court death sentence को confirm, reduce, या acquit कर सकती है।\n\n3) अगर conviction 7 years से ज्यादा imprisonment की है, तो appeal का right automatically है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir death penalty automatic High Court जाती hai? Matlab Sessions Judge directly execute नहीं कर सकते?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul nahi! Death sentence बहुत serious matter है। Sessions Judge सुना सकते हैं, लेकिन execute करने से पहले High Court का confirmation जरूरी है। यह extra safeguard है ताकि कोई गलती न हो। High Court review करेगी और confirm करेगी तभी execute होगी।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Great! Extra check death penalty के लिए!"
-        }
-      ],
-      "navigation": {
-        "next": "card_34_quiz_appeal_hierarchy",
-        "button_text": "Quiz Time ➔"
-      }
-    },
-    {
-      "card_id": "card_34_quiz_appeal_hierarchy",
-      "card_slug": "card_34_quiz_appeal_hierarchy",
-      "type": "quiz",
-      "concept_id": "appeal_hierarchy_quiz",
-      "level": 5,
-      "progress": {
-        "current": 34,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Civil Judge Junior Division के decision के खिलाफ appeal कहाँ होगी?",
-        "options": [
-          {"id": "A", "text": "High Court"},
-          {"id": "B", "text": "District Judge"},
-          {"id": "C", "text": "Civil Judge Senior Division"},
-          {"id": "D", "text": "Supreme Court"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "Civil Judge Junior Division के decision के खिलाफ appeal Civil Judge Senior Division में होगी। Hierarchy के अनुसार एक level ऊपर appeal जाती है - Junior से Senior, Senior से District Judge, District Judge से High Court।"
-      },
-      "navigation": {
-        "next": "card_35_quiz_death_penalty_confirmation",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_35_quiz_death_penalty_confirmation",
-      "card_slug": "card_35_quiz_death_penalty_confirmation",
-      "type": "quiz",
-      "concept_id": "death_penalty_confirmation_quiz",
-      "level": 5,
-      "progress": {
-        "current": 35,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Sessions Judge द्वारा दी गई death penalty के बारे में कौन सा कथन सही है?",
-        "options": [
-          {"id": "A", "text": "Sessions Judge direct execute कर सकते हैं"},
-          {"id": "B", "text": "High Court का confirmation जरूरी है"},
-          {"id": "C", "text": "Supreme Court का confirmation जरूरी है"},
-          {"id": "D", "text": "President का confirmation जरूरी है"}
-        ],
-        "correct_option_id": "B",
-        "explanation": "⭐ Railway & SSC Favorite! Sessions Judge द्वारा दी गई death penalty को execute करने से पहले High Court का confirmation जरूरी है। यह automatic reference है - Sessions Judge खुद case High Court भेजते हैं। High Court confirm, reduce, या acquit कर सकती है।"
-      },
-      "navigation": {
-        "next": "card_36_quiz_appeal_revision_difference",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_36_quiz_appeal_revision_difference",
-      "card_slug": "card_36_quiz_appeal_revision_difference",
-      "type": "quiz",
-      "concept_id": "appeal_revision_difference_quiz",
-      "level": 5,
-      "progress": {
-        "current": 36,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Appeal और Revision में मुख्य अंतर क्या है?",
-        "options": [
-          {"id": "A", "text": "Appeal में facts और law दोनों, Revision में केवल legal points"},
-          {"id": "B", "text": "Appeal केवल criminal में, Revision केवल civil में"},
-          {"id": "C", "text": "Appeal High Court में, Revision Supreme Court में"},
-          {"id": "D", "text": "कोई अंतर नहीं"}
+          { "id": "A", "text": "A aur R dono sahi hain, aur R, A ki sahi vyakhya hai" },
+          { "id": "B", "text": "A aur R dono sahi hain, par R, A ki sahi vyakhya nahi hai" },
+          { "id": "C", "text": "A sahi hai, R galat hai" },
+          { "id": "D", "text": "A galat hai, R sahi hai" }
         ],
         "correct_option_id": "A",
-        "explanation": "Appeal में decision को पूरी तरह देखा जाता है - facts और law दोनों। Full rehearing का chance होता है। Revision में mainly legal errors देखी जाती हैं, नए facts नहीं। Revision supervisory power का use है।"
+        "explanation": "Article 235 ke tehat posting, promotion aur leave grant karne ka control High Court ke paas hota hai, taaki district judiciary state executive (Governor/collector) ke daba mein na aaye - ye judicial independence ka core principle hai."
       },
-      "navigation": {
-        "next": "card_37_milestone_appellate",
-        "button_text": "Check & Continue ➔"
-      }
+      "navigation": { "next": "card_17_milestone2", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_37_milestone_appellate",
-      "card_slug": "card_37_milestone_appellate",
+      "card_id": "card_17_milestone2",
+      "card_slug": "card_17_milestone2",
       "type": "milestone",
-      "concept_id": "appellate_complete",
-      "level": 5,
-      "progress": {
-        "current": 37,
-        "total": 72
-      },
+      "concept_id": "module2_complete",
+      "level": 2,
+      "progress": { "current": 17, "total": 68 },
       "milestone_payload": {
-        "title": "🏆 MODULE 5 COMPLETE!",
+        "title": "MODULE COMPLETED!",
         "badge_emoji": "📜",
-        "completed_topic": "Appellate और Revision Powers",
+        "completed_topic": "Articles 233-237 (Constitutional Provisions)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "5 Articles crack ho gaye! Ab dekhte hain Civil Court ki poori hierarchy."
+      },
+      "navigation": { "next": "card_18_civil_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_18_civil_intro",
+      "card_slug": "card_18_civil_intro",
+      "type": "chat",
+      "concept_id": "civil_criminal_distinction",
+      "level": 3,
+      "progress": { "current": 18, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab chalo District Judiciary ke andar 'Civil Side' dekhte hain. Civil cases wo hote hain jisme private disputes hote hain - zameen ka jhagda, paisa wapasi, talaak, contract tootna - inme koi jail nahi hoti, sirf compensation ya order milta hai." },
+        { "speaker": "raju", "text": "Achha matlab jail nahi hoti, sirf paisa ya order? Aur Criminal case mein?" },
+        { "speaker": "aman", "text": "Criminal case mein State ke against crime hota hai - chori, hatya, maar-peet - isme saza (jail/fine) hoti hai. Civil ke liye 'Code of Civil Procedure (CPC), 1908' aur Criminal ke liye 'Code of Criminal Procedure (CrPC), 1973' follow hoti hai." },
+        { "speaker": "raju", "text": "Ok samajh gaya. Toh Civil side ki hierarchy mein sabse upar kaun baithta hai district mein?" }
+      ],
+      "navigation": { "next": "card_19_district_judge_civil", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_district_judge_civil",
+      "card_slug": "card_19_district_judge_civil",
+      "type": "chat",
+      "concept_id": "district_judge_top",
+      "level": 3,
+      "progress": { "current": 19, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "District mein Civil side ka sabse top officer hota hai 'District Judge' (usse 'Principal District Judge' bhi kehte hain). Uske neeche 'Additional District Judge' hota hai jo District Judge ka kaam-load kam karta hai." },
+        { "speaker": "raju", "text": "Additional District Judge alag insaan hota hai ya same District Judge hi hai bas naam alag?" },
+        { "speaker": "aman", "text": "Alag person hota hai, same rank ka lekin District Judge ke under kaam karta hai. Interesting baat ye hai ki wahi District Judge, Criminal side pe 'Sessions Judge' bhi kehlata hai - ek hi insaan do topi pehnta hai!" },
+        { "speaker": "raju", "text": "Ek hi banda dono side ka boss?? Ye to bohot busy hoga Sir!" }
+      ],
+      "navigation": { "next": "card_20_civil_judge_senior", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_civil_judge_senior",
+      "card_slug": "card_20_civil_judge_senior",
+      "type": "chat",
+      "concept_id": "civil_judge_senior_division",
+      "level": 3,
+      "progress": { "current": 20, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "District Judge ke neeche aata hai 'Civil Judge (Senior Division)' - inhe purane time mein 'Sub-Judge' bhi kehte the. Ye zyada value ke property/money cases sunte hain." },
+        { "speaker": "raju", "text": "'Zyada value' matlab? Kaise decide hota hai kaun sa case kis judge ke paas jaayega?" },
+        { "speaker": "aman", "text": "Isse 'Pecuniary Jurisdiction' kehte hain - matlab case mein involved paisa (claim amount) ki limit ke hisaab se decide hota hai kaunsa judge sunega. Ye limit har state alag decide karta hai apne Civil Court Acts se." },
+        { "speaker": "raju", "text": "Achha matlab agar claim bada hai to bade judge ke paas, chota hai to chhote judge ke paas. Iske neeche kaun hai Sir?" }
+      ],
+      "navigation": { "next": "card_21_civil_judge_junior", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_civil_judge_junior",
+      "card_slug": "card_21_civil_judge_junior",
+      "type": "chat",
+      "concept_id": "civil_judge_junior_division",
+      "level": 3,
+      "progress": { "current": 21, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Sabse neeche hai 'Civil Judge (Junior Division)' - Bihar aur UP jaise states mein isse aaj bhi purane naam 'Munsif' se jaana jaata hai. Ye kam value ke cases sunte hain." },
+        { "speaker": "raju", "text": "Munsif?? Ye naam to gaon mein bahut sunte hain Sir, ab pata chala ye kya hota hai!" },
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Bihar mein entry-level judicial officer ki bharti isi 'Civil Judge (Junior Division)-cum-Judicial Magistrate' post ke liye hoti hai, aur ise hi bolchaal mein 'Munsif-Magistrate' kehte hain." },
+        { "speaker": "raju", "text": "Toh poori Civil chain ye hui - District Judge > Additional District Judge > Civil Judge Senior Division > Civil Judge Junior Division. Sahi hai Sir?" }
+      ],
+      "navigation": { "next": "card_22_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_22_quiz1",
+      "card_slug": "card_22_quiz1",
+      "type": "quiz",
+      "concept_id": "module3_quiz",
+      "level": 3,
+      "progress": { "current": 22, "total": 68 },
+      "quiz_payload": {
+        "question": "Ek hi judicial officer District Judge (Civil side) hone ke saath saath Criminal side pe kis naam se jaana jaata hai?",
+        "options": [
+          { "id": "A", "text": "Chief Judicial Magistrate" },
+          { "id": "B", "text": "Sessions Judge" },
+          { "id": "C", "text": "Munsif" },
+          { "id": "D", "text": "Nyayadhikari" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Wahi District Judge, criminal matters (Sessions trial) dekhte samay 'Sessions Judge' ya 'District & Sessions Judge' kehlata hai - dono posts ek hi vyakti ke paas combined hoti hain."
+      },
+      "navigation": { "next": "card_23_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_quiz2",
+      "card_slug": "card_23_quiz2",
+      "type": "quiz",
+      "concept_id": "module3_quiz",
+      "level": 3,
+      "progress": { "current": 23, "total": 68 },
+      "quiz_payload": {
+        "question": "Bihar aur UP mein Civil Judge (Junior Division) ko parampara (traditionally) kis naam se jaana jaata hai?",
+        "options": [
+          { "id": "A", "text": "Sub-Judge" },
+          { "id": "B", "text": "Munsif" },
+          { "id": "C", "text": "Nyayadhikari" },
+          { "id": "D", "text": "Sessions Judge" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "'Munsif' Civil Judge (Junior Division) ka purana/traditional naam hai jo Bihar-UP mein aaj bhi common use hota hai - BPSC TRE mein Civil Judge Junior Division ki bharti isi post ke liye hoti hai."
+      },
+      "navigation": { "next": "card_24_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_24_quiz3",
+      "card_slug": "card_24_quiz3",
+      "type": "quiz",
+      "concept_id": "module3_quiz",
+      "level": 3,
+      "progress": { "current": 24, "total": 68 },
+      "quiz_payload": {
+        "question": "Kisi case ko Civil Judge Senior Division ya Junior Division mein bhejne ka aadhar kya hota hai?",
+        "options": [
+          { "id": "A", "text": "Case ki umar (kitne saal purana hai)" },
+          { "id": "B", "text": "Pecuniary Jurisdiction (claim ki money value)" },
+          { "id": "C", "text": "Vaadi (plaintiff) ki age" },
+          { "id": "D", "text": "Judge ki seniority" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Pecuniary Jurisdiction yaani claim amount ki limit ke hisaab se decide hota hai case kis civil judge ke paas jaayega - ye limit har state ke Civil Courts Act mein alag-alag di hoti hai."
+      },
+      "navigation": { "next": "card_25_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_25_milestone3",
+      "card_slug": "card_25_milestone3",
+      "type": "milestone",
+      "concept_id": "module3_complete",
+      "level": 3,
+      "progress": { "current": 25, "total": 68 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Civil Court Hierarchy",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "Civil side crystal clear ho gaya! Ab Criminal Court ki duniya mein chalte hain."
+      },
+      "navigation": { "next": "card_26_crpc_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_26_crpc_intro",
+      "card_slug": "card_26_crpc_intro",
+      "type": "chat",
+      "concept_id": "crpc_section6_classification",
+      "level": 4,
+      "progress": { "current": 26, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Criminal Side dekhte hain. CrPC 1973 ke Section 6 mein criminal courts ki classification di gayi hai - Court of Session, Judicial Magistrate First Class, Judicial Magistrate Second Class, aur Executive Magistrates." },
+        { "speaker": "raju", "text": "Executive Magistrate bhi ek judge hi hota hai kya Sir?" },
+        { "speaker": "aman", "text": "Nahi Raju! Ye sabse bada confusion point hai - Executive Magistrate (jaise District Collector/SDM) judicial trial nahi karte, wo sirf law and order maintain karte hain, jaise Section 144 lagana ya curfew lagana." },
+        { "speaker": "raju", "text": "Achha! Toh 'judicial' kaam sirf Judicial Magistrate hi karte hain? Sessions Judge sabse upar hoga na criminal mein?" }
+      ],
+      "navigation": { "next": "card_27_sessions_court", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_27_sessions_court",
+      "card_slug": "card_27_sessions_court",
+      "type": "chat",
+      "concept_id": "sessions_court",
+      "level": 4,
+      "progress": { "current": 27, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! District mein Court of Session sabse top criminal court hai - iska head 'Sessions Judge' hota hai (jo District Judge hi hota hai). Ye murder, dacoity jaise gambhir (serious) cases sunta hai." },
+        { "speaker": "raju", "text": "Sir, agar kisi ko phaansi ki saza deni ho, to Sessions Judge akele de sakta hai kya?" },
+        { "speaker": "aman", "text": "Bahut achha sawaal! Sessions Judge death sentence 'award' to kar sakta hai, lekin wo tabhi lagu hoga jab High Court usko 'confirm' kare (Section 366 CrPC). Akele Sessions Judge final nahi kar sakta." },
+        { "speaker": "raju", "text": "Ohhh, matlab phaansi ka final stamp High Court hi lagata hai! Iske neeche kaun aata hai criminal side pe?" }
+      ],
+      "navigation": { "next": "card_28_cjm_jmfc", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_28_cjm_jmfc",
+      "card_slug": "card_28_cjm_jmfc",
+      "type": "chat",
+      "concept_id": "cjm_jmfc_powers",
+      "level": 4,
+      "progress": { "current": 28, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Sessions Judge ke neeche 'Chief Judicial Magistrate (CJM)' hota hai, jo 7 saal tak ki saza de sakta hai. Uske neeche 'Judicial Magistrate First Class (JMFC)' hota hai jo 3 saal tak ki jail aur Rs. 10,000 tak fine de sakta hai." },
+        { "speaker": "raju", "text": "Sir ye numbers to yaad rakhna tough hoga - 7 saal, 3 saal... koi trick hai?" },
+        { "speaker": "aman", "text": "Simple socho - jitna bada rank, utni badi saza power. CJM sabse bada magistrate hai (7 saal), fir JMFC (3 saal), fir sabse chhota Second Class Magistrate." },
+        { "speaker": "raju", "text": "Aur Second Class Magistrate kitni saza de sakta hai Sir?" }
+      ],
+      "navigation": { "next": "card_29_second_class_executive", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_29_second_class_executive",
+      "card_slug": "card_29_second_class_executive",
+      "type": "chat",
+      "concept_id": "second_class_executive_magistrate",
+      "level": 4,
+      "progress": { "current": 29, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Judicial Magistrate Second Class sirf 1 saal tak ki jail aur Rs. 5,000 tak fine de sakta hai - ye sabse chhote-mote cases dekhta hai." },
+        { "speaker": "raju", "text": "Toh poori Criminal chain ye hui - Sessions Judge > CJM > JMFC > Second Class Magistrate? Aur wo Executive Magistrate wapas kaha fit hota hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi chain! Executive Magistrate (District Magistrate/Collector aur SDM) is judicial chain ke bahar hai - wo Ministry of Home ke under aate hain, judicial trial nahi karte, sirf preventive action (Section 107-144 CrPC) lete hain." },
+        { "speaker": "raju", "text": "Ab clear ho gaya Sir! Judicial wale trial karte hain, Executive wale sirf order/curfew jaisa kaam karte hain. Test lo ab!" }
+      ],
+      "navigation": { "next": "card_30_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_30_quiz1",
+      "card_slug": "card_30_quiz1",
+      "type": "quiz",
+      "concept_id": "module4_quiz",
+      "level": 4,
+      "progress": { "current": 30, "total": 68 },
+      "quiz_payload": {
+        "question": "Sessions Judge dwara diya gaya death sentence tab tak effective nahi hota jab tak use kaun 'confirm' na kare?",
+        "options": [
+          { "id": "A", "text": "Supreme Court" },
+          { "id": "B", "text": "High Court" },
+          { "id": "C", "text": "Governor" },
+          { "id": "D", "text": "President" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Section 366 CrPC ke anusaar Sessions Court dwara diye gaye death sentence ko High Court se confirmation lena zaroori hai, tabhi wo lagu hota hai."
+      },
+      "navigation": { "next": "card_31_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_31_quiz2",
+      "card_slug": "card_31_quiz2",
+      "type": "quiz",
+      "concept_id": "module4_quiz",
+      "level": 4,
+      "progress": { "current": 31, "total": 68 },
+      "quiz_payload": {
+        "question": "Executive Magistrates (jaise District Collector, SDM) ke baare mein kaunsa kathan sahi hai?",
+        "options": [
+          { "id": "A", "text": "Wo criminal trial karte hain aur saza sunate hain" },
+          { "id": "B", "text": "Wo sirf preventive/law-order sambandhi kaam karte hain, judicial trial nahi karte" },
+          { "id": "C", "text": "Wo High Court ke seedhe under aate hain" },
+          { "id": "D", "text": "Wo Death sentence confirm kar sakte hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Executive Magistrates (Collector/SDM) judicial trial nahi karte - wo sirf law and order, curfew, Section 144 jaise preventive kaam karte hain. Ye judicial magistracy se alag hote hain."
+      },
+      "navigation": { "next": "card_32_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_32_quiz3",
+      "card_slug": "card_32_quiz3",
+      "type": "quiz",
+      "concept_id": "module4_quiz",
+      "level": 4,
+      "progress": { "current": 32, "total": 68 },
+      "quiz_payload": {
+        "question": "Criminal Court ki hierarchy ko upar se neeche sahi kram mein lagayein:\n1. Chief Judicial Magistrate\n2. Court of Session\n3. Judicial Magistrate First Class\n4. Judicial Magistrate Second Class",
+        "options": [
+          { "id": "A", "text": "2 → 1 → 3 → 4" },
+          { "id": "B", "text": "1 → 2 → 3 → 4" },
+          { "id": "C", "text": "2 → 3 → 1 → 4" },
+          { "id": "D", "text": "4 → 3 → 1 → 2" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Sahi kram hai: Court of Session (Sessions Judge) sabse upar, phir Chief Judicial Magistrate, phir Judicial Magistrate First Class, aur sabse neeche Judicial Magistrate Second Class."
+      },
+      "navigation": { "next": "card_33_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_33_milestone4",
+      "card_slug": "card_33_milestone4",
+      "type": "milestone",
+      "concept_id": "module4_complete",
+      "level": 4,
+      "progress": { "current": 33, "total": 68 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔨",
+        "completed_topic": "Criminal Court Hierarchy",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "Half exam-ready ho gaye ho Raju! Ab dekhte hain appointment aur control ka gehra analysis."
+      },
+      "navigation": { "next": "card_34_appointment_recap", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_34_appointment_recap",
+      "card_slug": "card_34_appointment_recap",
+      "type": "guess",
+      "concept_id": "guess_control_vs_appointment",
+      "level": 5,
+      "progress": { "current": 34, "total": 68 },
+      "guess_payload": {
+        "question": "Raju sochta hai - 'Sir, District Judge ki niyukti bhi Governor karta hai aur agar wo galat kaam kare to transfer/suspend bhi Governor hi karega na?' Kya Raju sahi hai?",
+        "options": [
+          { "id": "A", "text": "Haan, appointment aur control dono Governor ke paas hai" },
+          { "id": "B", "text": "Nahi, appointment Governor ka role hai lekin control (transfer/leave/promotion) High Court ka hai" },
+          { "id": "C", "text": "Control CJI ka hota hai" },
+          { "id": "D", "text": "Control Chief Minister ka hota hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Raju galat hai! Article 233 mein appointment ka role Governor ka hai (High Court ki consultation se), lekin Article 235 ke tehat posting, promotion, leave jaise 'control' ka poora adhikar High Court ke paas hi hota hai - ye bohot important distinction hai."
+      },
+      "navigation": { "next": "card_35_qualification_details", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_35_qualification_details",
+      "card_slug": "card_35_qualification_details",
+      "type": "chat",
+      "concept_id": "qualification_district_judge",
+      "level": 5,
+      "progress": { "current": 35, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab District Judge ki eligibility ko thoda aur detail se samjho - Article 233(2) mein 2 conditions hain: (1) wo pehle se Union/State service mein na ho, (2) kam se kam 7 saal advocate/pleader raha ho." },
+        { "speaker": "raju", "text": "Sir agar koi 5 saal se hi advocate hai, aur bohot talented bhi hai, tab bhi nahi ban sakta?" },
+        { "speaker": "aman", "text": "Nahi, ye ek strict minimum condition hai, isse door nahi kiya ja sakta. Ye exactly Supreme Court judge ki 'advocate' wali eligibility (Article 124) jaisa hi hai, jaha bhi 10 saal high court advocate hona zaroori hai." },
+        { "speaker": "raju", "text": "Achha, matlab har level pe advocate ke saal ki alag minimum sankhya hai - District Judge ke liye 7, Supreme Court ke liye 10. Yaad rakh loonga Sir!" }
+      ],
+      "navigation": { "next": "card_36_control_high_court", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_36_control_high_court",
+      "card_slug": "card_36_control_high_court",
+      "type": "chat",
+      "concept_id": "article_235_details",
+      "level": 5,
+      "progress": { "current": 36, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Article 235 ko aur gehraai se samjho - isme likha hai High Court ke paas 'control' hai posting, promotion aur leave grant karne ka, un logon par jo district judge se neeche ke judicial posts par hain." },
+        { "speaker": "raju", "text": "Toh ye control bilkul complete hai? Koi limit nahi?" },
+        { "speaker": "aman", "text": "Ek important limit hai - Article 235 mein hi likha hai ki High Court ki ye power kisi judge ke 'right to appeal' ko chhinne nahi degi, aur wo unke 'conditions of service' se bahar jaakar unse deal nahi kar sakta. Matlab control hai, par arbitrary nahi." },
+        { "speaker": "raju", "text": "Ok matlab High Court powerful hai par rule-book se bandha hai. Aur ye Article 234 mein aayi State PSC ki bhi koi practical example hai kya?" }
+      ],
+      "navigation": { "next": "card_37_state_psc_role", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_37_state_psc_role",
+      "card_slug": "card_37_state_psc_role",
+      "type": "chat",
+      "concept_id": "state_psc_bihar_example",
+      "level": 5,
+      "progress": { "current": 37, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul hai! ⭐ BPSC TRE Favorite: Bihar mein Civil Judge (Junior Division)-cum-Judicial Magistrate ki bharti 'Bihar Judicial Service Examination' ke through hoti hai, jo Bihar Public Service Commission (BPSC) conduct karta hai - exactly Article 234 ka live example." },
+        { "speaker": "raju", "text": "Waah, matlab jo humne Article 234 mein padha wahi Bihar mein practically ho raha hai! Isme High Court ka role kya rehta hai?" },
+        { "speaker": "aman", "text": "BPSC exam conduct karta hai (Prelims, Mains, Interview), lekin final selection process aur appointment mein Patna High Court ki consultation bhi zaroori hoti hai - dono milkar rules follow karte hain." },
+        { "speaker": "raju", "text": "Perfect Sir! Ye to bilkul syllabus jaisa hi practical example hai. Ab quiz karayein!" }
+      ],
+      "navigation": { "next": "card_38_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_38_quiz1",
+      "card_slug": "card_38_quiz1",
+      "type": "quiz",
+      "concept_id": "module5_quiz",
+      "level": 5,
+      "progress": { "current": 38, "total": 68 },
+      "quiz_payload": {
+        "question": "Ek vyakti jo pehle se Union/State service mein nahi hai, District Judge banne ke liye kam se kam kitne saal advocate/pleader raha hona chahiye?",
+        "options": [
+          { "id": "A", "text": "5 saal" },
+          { "id": "B", "text": "7 saal" },
+          { "id": "C", "text": "10 saal" },
+          { "id": "D", "text": "3 saal" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 233(2) ke anusaar minimum 7 saal advocate/pleader rehna zaroori hai, saath hi High Court dwara recommend kiya jaana bhi zaroori hai."
+      },
+      "navigation": { "next": "card_39_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_39_quiz2",
+      "card_slug": "card_39_quiz2",
+      "type": "quiz",
+      "concept_id": "module5_quiz",
+      "level": 5,
+      "progress": { "current": 39, "total": 68 },
+      "quiz_payload": {
+        "question": "Article 235 ke tehat District Courts aur unke subordinate courts par 'control' kiske paas vested hai?",
+        "options": [
+          { "id": "A", "text": "Governor" },
+          { "id": "B", "text": "State Public Service Commission" },
+          { "id": "C", "text": "High Court" },
+          { "id": "D", "text": "President" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 235 spashat kehta hai ki district judiciary ka poora control (posting, promotion, leave) High Court ke paas hota hai, na ki executive ke paas."
+      },
+      "navigation": { "next": "card_40_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_40_quiz3",
+      "card_slug": "card_40_quiz3",
+      "type": "quiz",
+      "concept_id": "module5_quiz",
+      "level": 5,
+      "progress": { "current": 40, "total": 68 },
+      "quiz_payload": {
+        "question": "Nimnlikhit kathanon mein se kaunsa sahi hai?\n1. Article 233 mein sirf High Court ki consultation lagti hai.\n2. Article 234 mein State PSC aur High Court dono ki consultation lagti hai.\n3. Bihar mein Civil Judge Jr. Division ki bharti BPSC karti hai.",
+        "options": [
+          { "id": "A", "text": "Kewal 1 sahi" },
+          { "id": "B", "text": "1 aur 2 sahi" },
+          { "id": "C", "text": "1, 2 aur 3 teeno sahi" },
+          { "id": "D", "text": "Kewal 3 sahi" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Teeno kathan sahi hain - Article 233 mein sirf HC, Article 234 mein PSC+HC dono, aur Bihar mein practically BPSC hi Bihar Judicial Service (Civil Judge Jr Div) ki exam conduct karta hai."
+      },
+      "navigation": { "next": "card_41_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_41_milestone5",
+      "card_slug": "card_41_milestone5",
+      "type": "milestone",
+      "concept_id": "module5_complete",
+      "level": 5,
+      "progress": { "current": 41, "total": 68 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Appointment & Control of Judiciary",
+        "xp_earned": 65,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "Officer-level clarity aa gayi Raju! Ab chalo Lok Adalat aur Free Legal Aid ki duniya mein."
+      },
+      "navigation": { "next": "card_42_art39a", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_42_art39a",
+      "card_slug": "card_42_art39a",
+      "type": "chat",
+      "concept_id": "article_39a_dpsp",
+      "level": 6,
+      "progress": { "current": 42, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho ek gareeb mazdoor ka case court mein hai lekin uske paas wakeel rakhne ke paise nahi hain. Kya hoga?" },
+        { "speaker": "raju", "text": "Hain?? Toh uska case haar jayega kya sirf paisa na hone ki wajah se? Ye to bahut galat hoga Sir!" },
+        { "speaker": "aman", "text": "Bilkul isi wajah se 42nd Amendment (1976) ne Article 39A joda - ek Directive Principle jo kehta hai State ko 'equal justice' aur 'free legal aid' dena chahiye taaki paisa na hona kisi ki insaaf tak pahunch na roke." },
+        { "speaker": "raju", "text": "Achha! Toh ye sirf ek acchi soch hai ya isko lagu karne ke liye koi kanoon bhi bana Sir?" }
+      ],
+      "navigation": { "next": "card_43_lsa_act_1987", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_43_lsa_act_1987",
+      "card_slug": "card_43_lsa_act_1987",
+      "type": "chat",
+      "concept_id": "legal_services_authorities_act",
+      "level": 6,
+      "progress": { "current": 43, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul bana! Isi Article 39A ko lagu karne ke liye Parliament ne 'Legal Services Authorities Act, 1987' banaya. Isse NALSA (National Legal Services Authority) bani, jo 1995 mein constitute hui." },
+        { "speaker": "raju", "text": "NALSA ka boss kaun hota hai Sir?" },
+        { "speaker": "aman", "text": "Chief Justice of India NALSA ke 'Patron-in-Chief' hote hain, aur Supreme Court ke sabse senior-most judge 'Executive Chairman' hote hain. State level pe SLSA (State Legal Services Authority) hoti hai, aur Bihar mein isko BiSLSA kehte hain." },
+        { "speaker": "raju", "text": "Achha ye NALSA karti kya hai practically? Free legal aid ke alawa aur kya?" }
+      ],
+      "navigation": { "next": "card_44_lok_adalat_features", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_44_lok_adalat_features",
+      "card_slug": "card_44_lok_adalat_features",
+      "type": "chat",
+      "concept_id": "lok_adalat_features",
+      "level": 6,
+      "progress": { "current": 44, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "NALSA aur SLSA sabse popular kaam karti hain - 'Lok Adalat' organize karna. Ye ek jagah hai jaha compromise (mutual samjhauta) se chhote-mote cases sasta aur jaldi nipta diya jaata hai." },
+        { "speaker": "raju", "text": "Lok Adalat ka faisla bhi to court ke faisle jaisa hi mana jaata hoga?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Lok Adalat ka 'Award' ek civil court ke decree jaisa manaa jaata hai aur ye FINAL hota hai - iske against koi appeal nahi ho sakti kisi bhi court mein!" },
+        { "speaker": "raju", "text": "Wait, appeal bilkul nahi ho sakti?? Ye to bada risky point hai Sir, exam mein jaroor puchhenge!" }
+      ],
+      "navigation": { "next": "card_45_permanent_lok_adalat", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_45_permanent_lok_adalat",
+      "card_slug": "card_45_permanent_lok_adalat",
+      "type": "chat",
+      "concept_id": "permanent_lok_adalat",
+      "level": 6,
+      "progress": { "current": 45, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul, isliye har baat dhyan se padho. Ek aur important cheez - 2002 mein amendment karke Section 22B jodi gayi, jisse 'Permanent Lok Adalat' bani, ye public utility services (bijli, paani, transport, post office) ke disputes ke liye hai." },
+        { "speaker": "raju", "text": "Permanent matlab hamesha ke liye baithi rehti hai? Normal Lok Adalat to kabhi-kabhi lagti hai na?" },
+        { "speaker": "aman", "text": "Exactly, normal Lok Adalat periodic camps ki tarah lagti hai, lekin Permanent Lok Adalat hamesha available rehti hai public utility disputes ke liye, aur isme conciliation fail hone par bhi ye khud decide kar sakti hai." },
+        { "speaker": "raju", "text": "Achha matlab Permanent Lok Adalat thodi zyada powerful hai. Ab quiz de dijiye Sir!" }
+      ],
+      "navigation": { "next": "card_46_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_46_quiz1",
+      "card_slug": "card_46_quiz1",
+      "type": "quiz",
+      "concept_id": "module6_quiz",
+      "level": 6,
+      "progress": { "current": 46, "total": 68 },
+      "quiz_payload": {
+        "question": "Article 39A (Free Legal Aid) Bhartiya Samvidhan mein kis Amendment dwara joda gaya?",
+        "options": [
+          { "id": "A", "text": "44th Amendment, 1978" },
+          { "id": "B", "text": "42nd Amendment, 1976" },
+          { "id": "C", "text": "24th Amendment, 1971" },
+          { "id": "D", "text": "86th Amendment, 2002" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 39A ('Equal justice and free legal aid') 42nd Constitutional Amendment Act, 1976 dwara Directive Principles of State Policy mein joda gaya tha."
+      },
+      "navigation": { "next": "card_47_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_47_quiz2",
+      "card_slug": "card_47_quiz2",
+      "type": "quiz",
+      "concept_id": "module6_quiz",
+      "level": 6,
+      "progress": { "current": 47, "total": 68 },
+      "quiz_payload": {
+        "question": "NALSA (National Legal Services Authority) kis Act ke tehat sthapit hui thi aur kab constitute hui?",
+        "options": [
+          { "id": "A", "text": "Legal Services Authorities Act, 1987; sthapna 1995" },
+          { "id": "B", "text": "Gram Nyayalaya Act, 2008; sthapna 2009" },
+          { "id": "C", "text": "Family Courts Act, 1984; sthapna 1985" },
+          { "id": "D", "text": "Advocates Act, 1961; sthapna 1962" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Legal Services Authorities Act, 1987 ke tehat NALSA 1995 mein constitute hui, Article 39A ko sarthak roop se lagu karne ke liye."
+      },
+      "navigation": { "next": "card_48_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_48_quiz3",
+      "card_slug": "card_48_quiz3",
+      "type": "quiz",
+      "concept_id": "module6_quiz",
+      "level": 6,
+      "progress": { "current": 48, "total": 68 },
+      "quiz_payload": {
+        "question": "Lok Adalat ke 'Award' ke baare mein kaunsa kathan sahi hai?",
+        "options": [
+          { "id": "A", "text": "Isse High Court mein appeal ki ja sakti hai" },
+          { "id": "B", "text": "Ye ek civil court ke decree jaisa maana jaata hai aur final hota hai" },
+          { "id": "C", "text": "Ye sirf salaah maani jaati hai, koi legal value nahi" },
+          { "id": "D", "text": "Isse Supreme Court mein review petition daal sakte hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Lok Adalat ka award civil court ke decree jaisa binding aur final hota hai - iske khilaaf koi appeal nahi hoti kisi bhi court mein, ye isko fast aur effective banata hai."
+      },
+      "navigation": { "next": "card_49_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_49_milestone6",
+      "card_slug": "card_49_milestone6",
+      "type": "milestone",
+      "concept_id": "module6_complete",
+      "level": 6,
+      "progress": { "current": 49, "total": 68 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🤝",
+        "completed_topic": "Lok Adalat & Legal Services Authorities",
+        "xp_earned": 65,
+        "milestone_progress": "Module 6/8 Clear",
+        "motivational_quote": "Insaaf sabke liye - ab Gram Nyayalaya aur Family Court ki duniya explore karte hain!"
+      },
+      "navigation": { "next": "card_50_gram_nyayalaya_act", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_50_gram_nyayalaya_act",
+      "card_slug": "card_50_gram_nyayalaya_act",
+      "type": "chat",
+      "concept_id": "gram_nyayalaya_act_2008",
+      "level": 7,
+      "progress": { "current": 50, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, sochte ho gaon ke logon ko petty case ke liye bhi district court tak jaana padta hai, jo bahut door hota hai. Isko solve karne ke liye Parliament ne 'Gram Nyayalayas Act, 2008' banaya, jo 2 October 2009 se lagu hua." },
+        { "speaker": "raju", "text": "Gram Nyayalaya matlab gaon ki adalat? Isme judge kaun hota hai, koi gaon wala hi?" },
+        { "speaker": "aman", "text": "Nahi, Gram Nyayalaya ka pramukh ek trained judicial officer hota hai jise 'Nyayadhikari' kehte hain - jiski rank Judicial Magistrate First Class ke barabar hoti hai. Ye Intermediate Panchayat level pe sthapit hoti hai." },
+        { "speaker": "raju", "text": "Achha matlab trained judge hi hai, bas gaon ke paas baitha hai. Ye 'mobile court' bhi hai kya jaisa maine suna tha?" }
+      ],
+      "navigation": { "next": "card_51_nyaya_panchayat_history", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_51_nyaya_panchayat_history",
+      "card_slug": "card_51_nyaya_panchayat_history",
+      "type": "chat",
+      "concept_id": "gram_nyayalaya_vs_gram_kachahri_intro",
+      "level": 7,
+      "progress": { "current": 51, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan, Gram Nyayalaya mobile bhi ho sakta hai, ye gaon-gaon jaakar sunwai karta hai. Petty civil aur criminal (compoundable) cases isme aate hain. Par sach ye hai ki iska implementation bohot kamzor raha hai." },
+        { "speaker": "raju", "text": "Kamzor matlab? Poore India mein kaam nahi kar rahi kya?" },
+        { "speaker": "aman", "text": "5000+ ki jagah desh bhar mein sirf 200-300 ke aas-paas hi actual mein operational hain, kyunki states ne isse notify hi nahi kiya. Ye ek important PYQ point hai - Gram Nyayalaya 'poorly implemented' scheme mani jaati hai." },
+        { "speaker": "raju", "text": "Achha! Sir, Bihar mein bhi Gram Nyayalaya hai ya Bihar ka kuch alag system hai?" }
+      ],
+      "navigation": { "next": "card_52_family_courts", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_52_family_courts",
+      "card_slug": "card_52_family_courts",
+      "type": "chat",
+      "concept_id": "family_courts_act_1984",
+      "level": 7,
+      "progress": { "current": 52, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Bihar wala point thodi der mein! Pehle ek aur special court dekh lo - 'Family Courts Act, 1984' - talaak, maintenance, custody jaise family disputes ke liye alag court banaya gaya." },
+        { "speaker": "raju", "text": "Ye alag kyun banaya, normal civil court hi kyun nahi sunta ye cases?" },
+        { "speaker": "aman", "text": "Kyunki family matters mein sensitivity aur privacy chahiye - isliye Family Court mein proceedings 'in-camera' (band kamre mein) hoti hain, aur pehle conciliation (samjhauta) pe zor diya jaata hai, seedhe fight pe nahi." },
+        { "speaker": "raju", "text": "Achha! Aur ye har city mein hai kya Sir?" }
+      ],
+      "navigation": { "next": "card_53_fast_track_courts", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_53_fast_track_courts",
+      "card_slug": "card_53_fast_track_courts",
+      "type": "chat",
+      "concept_id": "fast_track_courts",
+      "level": 7,
+      "progress": { "current": 53, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Family Court Act ke anusaar jis city ki population 10 lakh se zyada hai, wahan Family Court banana mandatory hai. Ab last important type - 'Fast Track Courts' - ye 2000 mein 11th Finance Commission ki sifarish par shuru hui, purane pending sessions cases jaldi nipatane ke liye." },
+        { "speaker": "raju", "text": "Aur ye 2019 mein POCSO cases ke liye jo news mein suna tha wo bhi ye hi hai kya?" },
+        { "speaker": "aman", "text": "Bahut badhiya observation! 2019 mein 'Fast Track Special Courts (FTSCs)' banai gayi khaas taur pe rape aur POCSO Act ke cases ke liye - jaldi trial aur jaldi justice dene ke liye." },
+        { "speaker": "raju", "text": "Ab sab clear hai Sir - Gram Nyayalaya gaon ke liye, Family Court parivarik cases ke liye, Fast Track pending/sensitive cases ke liye. Quiz karayein!" }
+      ],
+      "navigation": { "next": "card_54_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_54_quiz1",
+      "card_slug": "card_54_quiz1",
+      "type": "quiz",
+      "concept_id": "module7_quiz",
+      "level": 7,
+      "progress": { "current": 54, "total": 68 },
+      "quiz_payload": {
+        "question": "Gram Nyayalayas Act, 2008 ke tehat gram nyayalaya ka pramukh (head) kya kehlaata hai, aur uski rank kiske barabar hoti hai?",
+        "options": [
+          { "id": "A", "text": "Sarpanch, Panch ke barabar" },
+          { "id": "B", "text": "Nyayadhikari, Judicial Magistrate First Class ke barabar" },
+          { "id": "C", "text": "District Judge, Sessions Judge ke barabar" },
+          { "id": "D", "text": "Munsif, Civil Judge Senior ke barabar" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Gram Nyayalaya ka pramukh 'Nyayadhikari' kehlaata hai, jiski rank Judicial Magistrate First Class ke barabar hoti hai - ye ek trained judicial officer hota hai, gaon ka koi member nahi."
+      },
+      "navigation": { "next": "card_55_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_55_quiz2",
+      "card_slug": "card_55_quiz2",
+      "type": "quiz",
+      "concept_id": "module7_quiz",
+      "level": 7,
+      "progress": { "current": 55, "total": 68 },
+      "quiz_payload": {
+        "question": "Family Courts Act, 1984 ke anusaar kis population wale sheher mein Family Court banana mandatory hai?",
+        "options": [
+          { "id": "A", "text": "5 lakh se zyada" },
+          { "id": "B", "text": "10 lakh se zyada" },
+          { "id": "C", "text": "50 lakh se zyada" },
+          { "id": "D", "text": "1 lakh se zyada" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Family Courts Act, 1984 ke anusaar 10 lakh se zyada population wale sheher mein Family Court sthapit karna State Governments ke liye mandatory hai."
+      },
+      "navigation": { "next": "card_56_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_56_quiz3",
+      "card_slug": "card_56_quiz3",
+      "type": "quiz",
+      "concept_id": "module7_quiz",
+      "level": 7,
+      "progress": { "current": 56, "total": 68 },
+      "quiz_payload": {
+        "question": "'Fast Track Special Courts (FTSCs)' 2019 mein kis khaas type ke cases ke liye banayi gayi thi?",
+        "options": [
+          { "id": "A", "text": "Property disputes" },
+          { "id": "B", "text": "Rape aur POCSO Act ke cases" },
+          { "id": "C", "text": "Company law cases" },
+          { "id": "D", "text": "Tax evasion cases" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "2019 mein FTSCs khaas taur par Rape aur POCSO (Protection of Children from Sexual Offences) Act ke pending cases ki jaldi sunwai ke liye banayi gayi thi."
+      },
+      "navigation": { "next": "card_57_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_57_milestone7",
+      "card_slug": "card_57_milestone7",
+      "type": "milestone",
+      "concept_id": "module7_complete",
+      "level": 7,
+      "progress": { "current": 57, "total": 68 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏘️",
+        "completed_topic": "Gram Nyayalaya, Family Court & Fast Track Court",
+        "xp_earned": 65,
+        "milestone_progress": "Module 7/8 Clear",
+        "motivational_quote": "Ab last aur sabse special module - Bihar ki apni judiciary! BPSC TRE walon ke liye must-read."
+      },
+      "navigation": { "next": "card_58_bihar_judiciary_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_58_bihar_judiciary_intro",
+      "card_slug": "card_58_bihar_judiciary_intro",
+      "type": "chat",
+      "concept_id": "patna_high_court_history",
+      "level": 8,
+      "progress": { "current": 58, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ab chalo Bihar ka apna system dekhte hain. ⭐ BPSC TRE Favorite: Bihar ka High Court hai 'Patna High Court', jo 1916 mein sthapit hua tha - ye India ke sabse purane High Courts mein se ek hai." },
+        { "speaker": "raju", "text": "1916? Ye to Independence se bhi pehle ka hai Sir!" },
+        { "speaker": "aman", "text": "Bilkul, Government of India Act 1915 ke tehat bana tha. Bihar ke sabhi 38 districts ki District Judiciary is Patna High Court ke control mein aati hai." },
+        { "speaker": "raju", "text": "38 districts? Aur pehle Bihar ke saath Jharkhand bhi tha na, tab kya hota tha?" }
+      ],
+      "navigation": { "next": "card_59_bihar_judicial_service", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_59_bihar_judicial_service",
+      "card_slug": "card_59_bihar_judicial_service",
+      "type": "chat",
+      "concept_id": "bihar_judicial_service_exam",
+      "level": 8,
+      "progress": { "current": 59, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Sahi pakda! 2000 mein Bihar se Jharkhand alag hua, tab Patna High Court ki Ranchi Bench alag hokar 'Jharkhand High Court' ban gayi. Ab Patna High Court sirf Bihar ke 38 districts dekhta hai." },
+        { "speaker": "raju", "text": "Achha! Aur Sir, agar main District Judge ya Civil Judge banna chahoon Bihar mein, to kaunsi exam doon?" },
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: 'Bihar Judicial Services Competitive Examination' doni hogi, jo BPSC conduct karti hai - isse entry-level pe 'Civil Judge (Junior Division)-cum-Judicial Magistrate' bante hain, promotion se aage Additional District Judge aur District Judge bante hain." },
+        { "speaker": "raju", "text": "Toh direct District Judge ki exam nahi hoti Bihar mein? Sabko neeche se hi shuru karna padta hai?" }
+      ],
+      "navigation": { "next": "card_60_gram_kachahri", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_60_gram_kachahri",
+      "card_slug": "card_60_gram_kachahri",
+      "type": "chat",
+      "concept_id": "bihar_gram_kachahri",
+      "level": 8,
+      "progress": { "current": 60, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul, entry hamesha Civil Judge Jr. Division se hoti hai, promotion se hi District Judge bante hain (kuch senior advocates seedhe 7-saal wale rule se bhi ban sakte hain). Ab ek bahut confusing par important Bihar-specific point suno - 'Gram Kachahri'." },
+        { "speaker": "raju", "text": "Gram Kachahri? Ye to Gram Nyayalaya jaisa hi lag raha hai naam se! Same hi hai kya?" },
+        { "speaker": "aman", "text": "Yahi sabse bada BPSC TRE trap hai Raju! 'Gram Kachahri' Bihar Panchayati Raj Act, 2006 ke tehat banti hai aur isko chalate hain elected 'Sarpanch' aur 'Panch' - koi trained judicial officer nahi hota. Ye Gram Nyayalaya se bilkul alag hai." },
+        { "speaker": "raju", "text": "Ohhh! Toh Gram Nyayalaya mein trained Nyayadhikari (Central Act 2008), aur Gram Kachahri mein elected Sarpanch (Bihar Act 2006) - dono alag hai! Ye to exam mein bahut confuse karayega!" }
+      ],
+      "navigation": { "next": "card_61_bislsa", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_61_bislsa",
+      "card_slug": "card_61_bislsa",
+      "type": "chat",
+      "concept_id": "bihar_state_legal_services_authority",
+      "level": 8,
+      "progress": { "current": 61, "total": 68 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda Raju, isi trap ke liye clear karna zaroori tha! Ab last Bihar-specific point - 'Bihar State Legal Services Authority (BiSLSA)' jo Legal Services Authorities Act, 1987 ke tehat bani hai." },
+        { "speaker": "raju", "text": "Iska boss bhi Patna High Court ka koi judge hoga na, jaisa NALSA mein CJI hote hain?" },
+        { "speaker": "aman", "text": "Bilkul sahi soch! Patna High Court ke Chief Justice BiSLSA ke Patron-in-Chief hote hain, aur Patna High Court ke ek senior judge Executive Chairman hote hain. Ye Bihar mein Lok Adalat organize karti hai." },
+        { "speaker": "raju", "text": "Ab poora Bihar wala structure clear ho gaya Sir - Patna HC, Bihar Judicial Service, Gram Kachahri, aur BiSLSA. Ab test lelo!" }
+      ],
+      "navigation": { "next": "card_62_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_62_quiz1",
+      "card_slug": "card_62_quiz1",
+      "type": "quiz",
+      "concept_id": "module8_quiz",
+      "level": 8,
+      "progress": { "current": 62, "total": 68 },
+      "quiz_payload": {
+        "question": "Patna High Court kab sthapit hua tha?",
+        "options": [
+          { "id": "A", "text": "1862" },
+          { "id": "B", "text": "1916" },
+          { "id": "C", "text": "1950" },
+          { "id": "D", "text": "2000" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Patna High Court Government of India Act, 1915 ke tehat 1916 mein sthapit hua tha, ye India ke sabse purane High Courts mein se ek hai."
+      },
+      "navigation": { "next": "card_63_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_63_quiz2",
+      "card_slug": "card_63_quiz2",
+      "type": "quiz",
+      "concept_id": "module8_quiz",
+      "level": 8,
+      "progress": { "current": 63, "total": 68 },
+      "quiz_payload": {
+        "question": "'Gram Kachahri' aur 'Gram Nyayalaya' mein sahi antar kya hai?",
+        "options": [
+          { "id": "A", "text": "Dono ek hi cheez hain, sirf naam alag hai" },
+          { "id": "B", "text": "Gram Kachahri elected Sarpanch/Panch chalate hain (Bihar Panchayati Raj Act 2006); Gram Nyayalaya trained Nyayadhikari chalate hain (Central Act 2008)" },
+          { "id": "C", "text": "Gram Nyayalaya Sarpanch chalata hai, Gram Kachahri judge chalata hai" },
+          { "id": "D", "text": "Dono High Court ke direct control mein hote hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Gram Kachahri (Bihar Panchayati Raj Act, 2006) elected representatives (Sarpanch/Panch) dwara chalayi jaati hai, jabki Gram Nyayalaya (Central Act, 2008) ek trained judicial officer 'Nyayadhikari' dwara chalayi jaati hai - ye bohot important distinction hai BPSC TRE ke liye."
+      },
+      "navigation": { "next": "card_64_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_64_quiz3",
+      "card_slug": "card_64_quiz3",
+      "type": "quiz",
+      "concept_id": "module8_quiz",
+      "level": 8,
+      "progress": { "current": 64, "total": 68 },
+      "quiz_payload": {
+        "question": "Bihar mein Civil Judge (Junior Division)-cum-Judicial Magistrate ki bharti ke liye exam kaun conduct karta hai?",
+        "options": [
+          { "id": "A", "text": "UPSC" },
+          { "id": "B", "text": "Patna High Court akela" },
+          { "id": "C", "text": "Bihar Public Service Commission (BPSC)" },
+          { "id": "D", "text": "SSC" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "BPSC 'Bihar Judicial Services Competitive Examination' conduct karta hai entry-level Civil Judge (Junior Division)-cum-Judicial Magistrate ki bharti ke liye, jisme Patna High Court ki consultation bhi shamil hoti hai."
+      },
+      "navigation": { "next": "card_65_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_65_milestone8",
+      "card_slug": "card_65_milestone8",
+      "type": "milestone",
+      "concept_id": "module8_complete",
+      "level": 8,
+      "progress": { "current": 65, "total": 68 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🐘",
+        "completed_topic": "Bihar-Specific Judiciary System",
         "xp_earned": 70,
-        "milestone_progress": "Module 5/9 Clear",
-        "motivational_quote": "Appeal hierarchy, Death penalty confirmation - अब सब clear!"
+        "milestone_progress": "Module 8/8 Clear",
+        "motivational_quote": "Bihar wala part bhi crack ho gaya! Ab chalo poore chapter ka Officer-level revision karte hain."
       },
-      "navigation": {
-        "next": "card_38_lok_adalat_intro",
-        "button_text": "Next: Alternative Dispute Resolution ➔"
-      }
+      "navigation": { "next": "card_66_summary", "button_text": "Go to Final Revision ➔" }
     },
     {
-      "card_id": "card_38_lok_adalat_intro",
-      "card_slug": "card_38_lok_adalat_intro",
-      "type": "chat",
-      "concept_id": "lok_adalat_introduction",
-      "level": 6,
-      "progress": {
-        "current": 38,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, subordinate judiciary में एक special concept है - Lok Adalat (लोक अदालत)। ये regular courts नहीं हैं, बल्कि Alternative Dispute Resolution (ADR) mechanism है। Legal Services Authorities Act, 1987 के तहत organize होती हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir 'Lok Adalat' matlab people's court? Ye regular court से कैसे अलग hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Lok Adalat में मामलों का settlement negotiation और compromise से होता है, strict legal procedure से नहीं। जज की जगह retired judges, social workers, lawyers एक panel बनाते हैं। दोनों parties को समझा-बुझाकर mutual agreement पर लाते हैं। ⭐ UPSC Favorite: Lok Adalat का decision final होता है - इसके खिलाफ appeal नहीं हो सकती!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wow! Mutual settlement और no appeal? Ye तो courts से बहुत अलग hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_39_lok_adalat_benefits",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_39_lok_adalat_benefits",
-      "card_slug": "card_39_lok_adalat_benefits",
-      "type": "chat",
-      "concept_id": "lok_adalat_advantages",
-      "level": 6,
-      "progress": {
-        "current": 39,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Lok Adalat के फायदे:\n\n• FREE - कोई court fees नहीं\n• FAST - same day या कुछ दिनों में निपटारा\n• FLEXIBLE - strict rules नहीं, आपसी समझ से\n• FINAL - decision के खिलाफ appeal नहीं\n• FRIENDLY - दोनों parties की सहमति से\n\nपरिवार के झगड़े, छोटे money disputes, property partition - ऐसे cases Lok Adalat में जल्दी solve हो जाते हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir सभी cases Lok Adalat में जा सकते hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC Pattern! Nahi! कुछ matters Lok Adalat में नहीं जा सकते - जैसे serious criminal offences (murder, rape), cases जो public policy के against हों। Mainly civil disputes, compoundable criminal offences, और जहाँ compromise possible हो - वो cases जाते हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya! Compromise-able cases के लिए fast track!"
-        }
-      ],
-      "navigation": {
-        "next": "card_40_fast_track_courts",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_40_fast_track_courts",
-      "card_slug": "card_40_fast_track_courts",
-      "type": "chat",
-      "concept_id": "fast_track_courts_introduction",
-      "level": 6,
-      "progress": {
-        "current": 40,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "एक और modern development - Fast Track Courts। ये special courts हैं जो pending cases को जल्दी dispose करने के लिए बनाई गई हैं। Especially:\n\n• Rape cases (POCSO Act cases)\n• Cases involving senior citizens\n• Cases involving women\n• Motor accident claims\n• Long pending cases\n\nYe regular subordinate courts की तरह ही हैं, बस dedicated और time-bound होती हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ये constitutional provision hai ya बाद में बनाया?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Good question! Fast Track Courts constitutional provision नहीं हैं - ये Supreme Court की recommendation और government schemes के तहत create हुई हैं। 2000 में शुरू हुईं। Constitution subordinate courts का basic structure देता है, लेकिन specialized courts (Fast Track, Family Courts, etc.) बाद में laws द्वारा बनाए गए।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaa! Constitutional framework के अंदर specialized courts!"
-        }
-      ],
-      "navigation": {
-        "next": "card_41_quiz_lok_adalat_appeal",
-        "button_text": "Quiz Time ➔"
-      }
-    },
-    {
-      "card_id": "card_41_quiz_lok_adalat_appeal",
-      "card_slug": "card_41_quiz_lok_adalat_appeal",
-      "type": "quiz",
-      "concept_id": "lok_adalat_appeal_quiz",
-      "level": 6,
-      "progress": {
-        "current": 41,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Lok Adalat के decision के बारे में कौन सा कथन सही है?",
-        "options": [
-          {"id": "A", "text": "इसके खिलाफ appeal High Court में हो सकती है"},
-          {"id": "B", "text": "इसके खिलाफ appeal District Court में हो सकती है"},
-          {"id": "C", "text": "यह final होता है, कोई appeal नहीं"},
-          {"id": "D", "text": "केवल Supreme Court में appeal हो सकती है"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "⭐ UPSC & SSC Favorite! Lok Adalat का decision final और binding होता है। इसके खिलाफ किसी भी court में appeal नहीं हो सकती। यह civil court decree की तरह executable होता है। यही Lok Adalat की uniqueness है।"
-      },
-      "navigation": {
-        "next": "card_42_quiz_lok_adalat_fees",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_42_quiz_lok_adalat_fees",
-      "card_slug": "card_42_quiz_lok_adalat_fees",
-      "type": "quiz",
-      "concept_id": "lok_adalat_fees_quiz",
-      "level": 6,
-      "progress": {
-        "current": 42,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Lok Adalat में court fees कितनी होती है?",
-        "options": [
-          {"id": "A", "text": "Case value के 2% के बराबर"},
-          {"id": "B", "text": "₹500 fixed"},
-          {"id": "C", "text": "कोई court fees नहीं"},
-          {"id": "D", "text": "Regular court से आधी"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "Lok Adalat में कोई court fees नहीं लगती। यह free service है जो Legal Services Authorities द्वारा provide की जाती है। यह गरीब और मध्यम वर्ग के लोगों के लिए justice को accessible बनाता है।"
-      },
-      "navigation": {
-        "next": "card_43_quiz_fast_track_purpose",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_43_quiz_fast_track_purpose",
-      "card_slug": "card_43_quiz_fast_track_purpose",
-      "type": "quiz",
-      "concept_id": "fast_track_purpose_quiz",
-      "level": 6,
-      "progress": {
-        "current": 43,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Fast Track Courts मुख्यतः किन cases के लिए बनाई गई हैं?",
-        "options": [
-          {"id": "A", "text": "केवल criminal cases"},
-          {"id": "B", "text": "केवल civil cases"},
-          {"id": "C", "text": "Rape, senior citizens, women से related और long pending cases"},
-          {"id": "D", "text": "केवल government cases"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "Fast Track Courts specially rape cases (POCSO), senior citizens के cases, women से related matters, और long pending cases को जल्दी dispose करने के लिए बनाई गई हैं। ये time-bound disposal ensure करती हैं।"
-      },
-      "navigation": {
-        "next": "card_44_milestone_adr",
-        "button_text": "Check & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_44_milestone_adr",
-      "card_slug": "card_44_milestone_adr",
-      "type": "milestone",
-      "concept_id": "adr_complete",
-      "level": 6,
-      "progress": {
-        "current": 44,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "⚡ MODULE 6 COMPLETE!",
-        "badge_emoji": "⚖️",
-        "completed_topic": "Lok Adalat और Fast Track Courts",
-        "xp_earned": 60,
-        "milestone_progress": "Module 6/9 Clear",
-        "motivational_quote": "ADR mechanisms, free और fast justice - modern judiciary अब clear!"
-      },
-      "navigation": {
-        "next": "card_45_family_courts",
-        "button_text": "Next: Specialized Courts ➔"
-      }
-    },
-    {
-      "card_id": "card_45_family_courts",
-      "card_slug": "card_45_family_courts",
-      "type": "chat",
-      "concept_id": "family_courts_introduction",
-      "level": 7,
-      "progress": {
-        "current": 45,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab कुछ specialized subordinate courts देखते हैं। Family Courts Act, 1984 के तहत Family Courts बनाई गई हैं। ये exclusively family matters देखती हैं:\n\n• Divorce\n• Maintenance\n• Custody of children\n• Property disputes between family members\n• Domestic violence\n\nYe courts conciliatory approach रखती हैं - मतलब समझौता कराने की कोशिश करती हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ये हर district में होती hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi, हर district में नहीं। State governments decide करती हैं कहाँ Family Courts establish करनी हैं - usually बड़े शहरों में जहाँ ज्यादा population हो। लेकिन जहाँ Family Court नहीं है, वहाँ regular civil courts ही family matters देखती हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaa! Optional specialized courts जहाँ जरूरत हो!"
-        }
-      ],
-      "navigation": {
-        "next": "card_46_consumer_courts",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_46_consumer_courts",
-      "card_slug": "card_46_consumer_courts",
-      "type": "chat",
-      "concept_id": "consumer_courts_introduction",
-      "level": 7,
-      "progress": {
-        "current": 46,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ SSC & Railway Favorite! Consumer Courts - Consumer Protection Act, 2019 के तहत तीन levels:\n\n1) DISTRICT CONSUMER DISPUTES REDRESSAL COMMISSION (District level)\n   - Up to ₹1 crore के claims\n\n2) STATE CONSUMER DISPUTES REDRESSAL COMMISSION (State level)\n   - ₹1 crore से ₹10 crore तक\n\n3) NATIONAL CONSUMER DISPUTES REDRESSAL COMMISSION (National level)\n   - ₹10 crore से ज्यादा\n\nYe defective products, deficient services के against consumers को justice देती हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir तो अगर मुझे कोई phone खराब मिले तो consumer court जा सकता hoon?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! अगर company replace या refund नहीं कर रही, तो District Consumer Forum में complaint file कर सकते हो। Ye courts बहुत accessible हैं - कम fees, सीधी procedure, fast disposal। यही इनकी popularity की वजह है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Great! Consumer rights protect करने के लिए dedicated courts!"
-        }
-      ],
-      "navigation": {
-        "next": "card_47_labour_tribunals",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_47_labour_tribunals",
-      "card_slug": "card_47_labour_tribunals",
-      "type": "chat",
-      "concept_id": "labour_tribunals_introduction",
-      "level": 7,
-      "progress": {
-        "current": 47,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Labour Courts और Industrial Tribunals - ये employer-employee disputes देखते हैं:\n\n• Wrongful termination\n• Wages disputes\n• Working conditions\n• Union-management disputes\n\nIndustrial Disputes Act, 1947 के तहत। ये strictly courts नहीं हैं, tribunals हैं - लेकिन judicial functions perform करते हैं। Judges की जगह presiding officers होते हैं जो labour laws में experts होते हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir tribunals और courts में क्या farak hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Good question! Courts general jurisdiction रखती हैं - सभी तरह के cases। Tribunals specialized होती हैं - केवल specific matters (labour, tax, environment, etc.)। Tribunals में technical experts होते हैं। Procedure थोड़ा informal होता है। लेकिन legally, tribunal के decisions भी binding होते हैं और appeal High Court में हो सकती है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya! Specialized expertise के लिए tribunals!"
-        }
-      ],
-      "navigation": {
-        "next": "card_48_quiz_family_court_act",
-        "button_text": "Quiz Time ➔"
-      }
-    },
-    {
-      "card_id": "card_48_quiz_family_court_act",
-      "card_slug": "card_48_quiz_family_court_act",
-      "type": "quiz",
-      "concept_id": "family_court_act_quiz",
-      "level": 7,
-      "progress": {
-        "current": 48,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Family Courts किस Act के तहत स्थापित की गई हैं?",
-        "options": [
-          {"id": "A", "text": "Family Courts Act, 1976"},
-          {"id": "B", "text": "Family Courts Act, 1984"},
-          {"id": "C", "text": "Marriage Act, 1954"},
-          {"id": "D", "text": "Domestic Relations Act, 1990"}
-        ],
-        "correct_option_id": "B",
-        "explanation": "Family Courts Act, 1984 के तहत Family Courts establish की गई हैं। ये divorce, maintenance, custody, और अन्य family matters exclusively देखती हैं। Conciliatory approach रखती हैं।"
-      },
-      "navigation": {
-        "next": "card_49_quiz_consumer_court_limit",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_49_quiz_consumer_court_limit",
-      "card_slug": "card_49_quiz_consumer_court_limit",
-      "type": "quiz",
-      "concept_id": "consumer_court_limit_quiz",
-      "level": 7,
-      "progress": {
-        "current": 49,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "District Consumer Forum कितने value तक के claims सुन सकता है?",
-        "options": [
-          {"id": "A", "text": "Up to ₹50 lakh"},
-          {"id": "B", "text": "Up to ₹1 crore"},
-          {"id": "C", "text": "Up to ₹5 crore"},
-          {"id": "D", "text": "Up to ₹10 crore"}
-        ],
-        "correct_option_id": "B",
-        "explanation": "⭐ SSC Favorite! Consumer Protection Act, 2019 के अनुसार:\n• District Forum: Up to ₹1 crore\n• State Commission: ₹1 crore to ₹10 crore\n• National Commission: Above ₹10 crore\nये limits याद रखना important है।"
-      },
-      "navigation": {
-        "next": "card_50_quiz_tribunal_court_difference",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_50_quiz_tribunal_court_difference",
-      "card_slug": "card_50_quiz_tribunal_court_difference",
-      "type": "quiz",
-      "concept_id": "tribunal_court_difference_quiz",
-      "level": 7,
-      "progress": {
-        "current": 50,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Tribunals और Courts में मुख्य अंतर क्या है?",
-        "options": [
-          {"id": "A", "text": "Tribunals केवल civil matters, Courts केवल criminal"},
-          {"id": "B", "text": "Tribunals specialized होती हैं specific matters के लिए"},
-          {"id": "C", "text": "Tribunals के decisions binding नहीं होते"},
-          {"id": "D", "text": "Tribunals में appeal नहीं हो सकती"}
-        ],
-        "correct_option_id": "B",
-        "explanation": "Tribunals specialized होती हैं specific matters (labour, tax, environment, etc.) के लिए और इनमें technical experts होते हैं। Courts general jurisdiction रखती हैं। Tribunals के decisions भी binding होते हैं और इनके खिलाफ High Court में appeal हो सकती है।"
-      },
-      "navigation": {
-        "next": "card_51_milestone_specialized",
-        "button_text": "Check & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_51_milestone_specialized",
-      "card_slug": "card_51_milestone_specialized",
-      "type": "milestone",
-      "concept_id": "specialized_complete",
-      "level": 7,
-      "progress": {
-        "current": 51,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "🛡️ MODULE 7 COMPLETE!",
-        "badge_emoji": "⚖️",
-        "completed_topic": "Specialized Courts और Tribunals",
-        "xp_earned": 60,
-        "milestone_progress": "Module 7/9 Clear",
-        "motivational_quote": "Family, Consumer, Labour - सभी specialized forums अब mastered!"
-      },
-      "navigation": {
-        "next": "card_52_challenges_pendency",
-        "button_text": "Next: Challenges ➔"
-      }
-    },
-    {
-      "card_id": "card_52_challenges_pendency",
-      "card_slug": "card_52_challenges_pendency",
-      "type": "chat",
-      "concept_id": "challenges_case_pendency",
-      "level": 8,
-      "progress": {
-        "current": 52,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, subordinate judiciary की सबसे बड़ी problem - PENDENCY (लंबित मामले)। भारत में crores of cases pending हैं subordinate courts में। कुछ cases 10-20 साल से चल रहे हैं। 'Justice delayed is justice denied' - सुना है?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Haan Sir, सुना hai! लेकिन इतने cases क्यों pending hain? Judges कम hain kya?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Multiple reasons हैं:\n\n• Judge shortage - बहुत सारे posts vacant हैं\n• Case inflow ज्यादा है - हर दिन नए cases आते रहते हैं\n• Adjournments की culture - lawyers बार-बार dates मांगते हैं\n• Infrastructure की कमी - courts में basic facilities नहीं\n• Procedural delays - legal procedures lengthy हैं\n\nNational Judicial Data Grid के अनुसार, subordinate courts में 4 crore से ज्यादा cases pending हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir itne cases! Kuch solution bhi hoga na?"
-        }
-      ],
-      "navigation": {
-        "next": "card_53_reforms_solutions",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_53_reforms_solutions",
-      "card_slug": "card_53_reforms_solutions",
-      "type": "chat",
-      "concept_id": "judicial_reforms_solutions",
-      "level": 8,
-      "progress": {
-        "current": 53,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Reforms और solutions:\n\n• E-courts project - digitalization, virtual hearings\n• Fast Track Courts - pendency कम करने के लिए\n• Lok Adalats - compromise के through quick disposal\n• Night courts - कुछ शहरों में शाम को भी courts\n• All India Judicial Service - एक unified recruitment system\n• Increasing judge strength - posts fill करना\n• Time-bound disposal - कुछ matters में deadline\n• Mediation और arbitration को promote करना"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir e-courts matlab online hearings? Covid में तो ये बहुत हुआ!"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ Current Affairs! Haan! Covid ने e-courts को accelerate किया। अब video conferencing से hearings होती हैं, case status online check कर सकते हो, e-filing हो सकती है। eCourts Mission Mode Project के तहत subordinate courts को computerize किया जा रहा है। यह game-changer है - time और money दोनों बचता है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Great! Technology से judiciary modern बन रही hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_54_all_india_judicial_service",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_54_all_india_judicial_service",
-      "card_slug": "card_54_all_india_judicial_service",
-      "type": "chat",
-      "concept_id": "all_india_judicial_service_concept",
-      "level": 8,
-      "progress": {
-        "current": 54,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ UPSC Favorite Topic! All India Judicial Service (AIJS) - यह एक proposed reform है। अभी हर state अपनी judicial service का exam conduct करती है। AIJS का idea है कि एक national-level exam हो (जैसे UPSC Civil Services) subordinate judiciary के लिए।\n\nArticle 312 में provision है कि Rajya Sabha अगर 2/3 majority से resolution pass करे, तो All India Judicial Service बन सकती है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir iske kya फायदे होंगे?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Uniform standards, better talent pool, all-India transfers possible, state-level politics से बचाव। लेकिन states oppose करती हैं क्योंकि ये 'State subject' है। अभी तक implement नहीं हुआ है - still a proposal।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaa! Good idea लेकिन implementation pending!"
-        }
-      ],
-      "navigation": {
-        "next": "card_55_quiz_pendency_reason",
-        "button_text": "Quiz Time ➔"
-      }
-    },
-    {
-      "card_id": "card_55_quiz_pendency_reason",
-      "card_slug": "card_55_quiz_pendency_reason",
-      "type": "quiz",
-      "concept_id": "pendency_reason_quiz",
-      "level": 8,
-      "progress": {
-        "current": 55,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "निम्नलिखित में से कौन सा subordinate courts में pendency का कारण नहीं है?",
-        "options": [
-          {"id": "A", "text": "Judge posts की vacancy"},
-          {"id": "B", "text": "Frequent adjournments"},
-          {"id": "C", "text": "High Court का interference"},
-          {"id": "D", "text": "Infrastructure की कमी"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "Judge shortage, adjournments, infrastructure की कमी सब pendency के कारण हैं। High Court का control तो है (Art 235), लेकिन interference pendency का कारण नहीं है। Actually, High Court monitoring से cases जल्दी dispose होते हैं।"
-      },
-      "navigation": {
-        "next": "card_56_quiz_ecourts",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_56_quiz_ecourts",
-      "card_slug": "card_56_quiz_ecourts",
-      "type": "quiz",
-      "concept_id": "ecourts_quiz",
-      "level": 8,
-      "progress": {
-        "current": 56,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "eCourts Mission Mode Project का मुख्य उद्देश्य क्या है?",
-        "options": [
-          {"id": "A", "text": "Judges की संख्या बढ़ाना"},
-          {"id": "B", "text": "Courts का computerization और digitalization"},
-          {"id": "C", "text": "नई courts बनाना"},
-          {"id": "D", "text": "Lawyers की training"}
-        ],
-        "correct_option_id": "B",
-        "explanation": "eCourts Mission Mode Project का उद्देश्य subordinate courts का computerization और digitalization है। इसमें e-filing, virtual hearings, online case status, digital case management शामिल हैं। यह judiciary को modern और accessible बनाता है।"
-      },
-      "navigation": {
-        "next": "card_57_quiz_aijs_article",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_57_quiz_aijs_article",
-      "card_slug": "card_57_quiz_aijs_article",
-      "type": "quiz",
-      "concept_id": "aijs_article_quiz",
-      "level": 8,
-      "progress": {
-        "current": 57,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "All India Judicial Service (AIJS) के creation का provision किस Article में है?",
-        "options": [
-          {"id": "A", "text": "Article 233"},
-          {"id": "B", "text": "Article 235"},
-          {"id": "C", "text": "Article 312"},
-          {"id": "D", "text": "Article 324"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "⭐ UPSC Pattern! Article 312 में provision है कि Rajya Sabha अगर 2/3 majority से resolution pass करे, तो Parliament All India Judicial Service सहित कोई भी All India Service create कर सकती है। अभी तक AIJS implement नहीं हुआ है।"
-      },
-      "navigation": {
-        "next": "card_58_milestone_reforms",
-        "button_text": "Check & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_58_milestone_reforms",
-      "card_slug": "card_58_milestone_reforms",
-      "type": "milestone",
-      "concept_id": "reforms_complete",
-      "level": 8,
-      "progress": {
-        "current": 58,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "📚 MODULE 8 COMPLETE!",
-        "badge_emoji": "⚖️",
-        "completed_topic": "Challenges और Reforms",
-        "xp_earned": 60,
-        "milestone_progress": "Module 8/9 Clear",
-        "motivational_quote": "Pendency, eCourts, AIJS - judiciary के future अब clear!"
-      },
-      "navigation": {
-        "next": "card_59_final_summary",
-        "button_text": "Final Revision ➔"
-      }
-    },
-    {
-      "card_id": "card_59_final_summary",
-      "card_slug": "card_59_final_summary",
+      "card_id": "card_66_summary",
+      "card_slug": "card_66_summary",
       "type": "summary",
-      "concept_id": "chapter_final_revision",
+      "concept_id": "chapter_summary",
       "level": 9,
-      "progress": {
-        "current": 59,
-        "total": 72
-      },
+      "progress": { "current": 66, "total": 68 },
       "summary_payload": {
-        "title": "⚡ Officer Level Quick Revision",
+        "title": "⚡ Officer Revision - Subordinate Courts",
         "revision_points": [
           {
-            "topic": "Structure & Articles",
-            "point": "Art 233-237। Civil courts: District Judge, Additional DJ, Civil Judge SD/JD। Criminal: Sessions Judge, Additional SJ, CJM, JMFC, JMSC। Same officer = District & Sessions Judge।"
-          },
-          {
-            "topic": "Appointment",
-            "point": "Art 233: District Judges - Governor appoints, HC consults। Art 234: Others - Governor appoints, HC recommends। Qualification: 7 years advocacy/judicial service। Two routes: Direct recruitment या promotion।"
-          },
-          {
-            "topic": "Control",
-            "point": "Art 235: पूरा control High Court। Posting, transfer, promotion, leave, discipline सब HC। Removal: Governor on HC recommendation। Judicial independence के लिए।"
-          },
-          {
-            "topic": "Jurisdiction & Powers",
-            "point": "Pecuniary jurisdiction (value-based), Territorial jurisdiction (area-based)। Sessions Judge: death penalty (HC confirmation जरूरी)। JMFC: max 3 years। JMSC: max 1 year।"
-          },
-          {
-            "topic": "Appeals",
-            "point": "Hierarchy: Junior → Senior → District/Sessions → High Court। Death penalty auto High Court। Appeal (facts+law), Revision (legal only), Review (same court, limited)।"
-          },
-          {
-            "topic": "ADR & Specialized",
-            "point": "Lok Adalat: Free, fast, final (no appeal)। Fast Track Courts: Rape, senior citizens। Family Courts (1984 Act)। Consumer Forums: District (₹1cr), State (₹10cr), National (above)। Labour Tribunals।"
-          },
-          {
-            "topic": "Challenges",
-            "point": "4 crore+ pending cases। Reasons: Judge shortage, adjournments, infrastructure। Solutions: eCourts, Fast Track, Lok Adalat, digitalization।"
-          },
-          {
-            "topic": "Reforms",
-            "point": "AIJS (Art 312) - proposed but not implemented। Night courts। Virtual hearings। National Judicial Data Grid। Mediation/Arbitration promotion।"
-          }
-        ]
-      },
-      "navigation": {
-        "next": "card_60_final_quiz_1",
-        "button_text": "Final Master Quiz ➔"
-      }
-    },
-    {
-      "card_id": "card_60_final_quiz_1",
-      "card_slug": "card_60_final_quiz_1",
-      "type": "final_quiz",
-      "concept_id": "final_assessment_1",
-      "level": 9,
-      "progress": {
-        "current": 60,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ BPSC Multi-Statement:\n\nSubordinate Courts के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. District Judges की appointment Governor करते हैं High Court से consultation के बाद।\n2. Subordinate courts का control State Government के पास है।\n3. District Judge बनने के लिए कम से कम 7 वर्ष का अनुभव चाहिए।\n4. Sessions Judge death penalty दे सकते हैं लेकिन High Court का confirmation जरूरी है।\n\nउपरोक्त में से कौन से कथन सही हैं?",
-        "options": [
-          {"id": "A", "text": "केवल 1, 2 और 3"},
-          {"id": "B", "text": "केवल 1, 3 और 4"},
-          {"id": "C", "text": "केवल 2, 3 और 4"},
-          {"id": "D", "text": "1, 2, 3 और 4 सभी"}
-        ],
-        "correct_option_id": "B",
-        "explanation": "कथन 1 सही (Art 233)। कथन 2 गलत - control High Court के पास है (Art 235), State Govt के नहीं। कथन 3 सही (7 years)। कथन 4 सही (death penalty HC confirmation चाहिए)। इसलिए 1, 3 और 4 सही हैं।"
-      },
-      "navigation": {
-        "next": "card_61_final_quiz_2",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_61_final_quiz_2",
-      "card_slug": "card_61_final_quiz_2",
-      "type": "final_quiz",
-      "concept_id": "final_assessment_2",
-      "level": 9,
-      "progress": {
-        "current": 61,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ UPSC Assertion-Reason:\n\nAssertion (A): Article 235 के तहत subordinate courts का control केवल High Court के पास है।\n\nReason (R): यह provision judicial independence को executive interference से बचाने के लिए है।\n\nसही विकल्प चुनिए:",
-        "options": [
-          {"id": "A", "text": "A और R दोनों सही हैं, और R, A की सही व्याख्या है"},
-          {"id": "B", "text": "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है"},
-          {"id": "C", "text": "A सही है लेकिन R गलत है"},
-          {"id": "D", "text": "A गलत है लेकिन R सही है"}
-        ],
-        "correct_option_id": "A",
-        "explanation": "दोनों statements सही हैं और R, A की perfect व्याख्या करता है। Art 235 subordinate courts का पूरा control (posting, promotion, discipline) High Court को देता है ताकि state government/executive का interference न हो और judicial independence maintain हो। यह separation of powers का example है।"
-      },
-      "navigation": {
-        "next": "card_62_final_quiz_3",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_62_final_quiz_3",
-      "card_slug": "card_62_final_quiz_3",
-      "type": "final_quiz",
-      "concept_id": "final_assessment_3",
-      "level": 9,
-      "progress": {
-        "current": 62,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ BPSC Article Matching:\n\nनिम्नलिखित को सुमेलित कीजिए:\n\nArticle --- Provision\n\n1. Article 233 --- (i) Subordinate courts का control\n2. Article 234 --- (ii) District Judges की appointment\n3. Article 235 --- (iii) अन्य judicial officers की appointment\n4. Article 236 --- (iv) Interpretation\n\nसही सुमेलन है:",
-        "options": [
-          {"id": "A", "text": "1-(ii), 2-(iii), 3-(i), 4-(iv)"},
-          {"id": "B", "text": "1-(i), 2-(ii), 3-(iii), 4-(iv)"},
-          {"id": "C", "text": "1-(iii), 2-(iv), 3-(i), 4-(ii)"},
-          {"id": "D", "text": "1-(iv), 2-(i), 3-(ii), 4-(iii)"}
-        ],
-        "correct_option_id": "A",
-        "explanation": "⭐ Perfect Matching! Art 233: District Judges की appointment। Art 234: अन्य persons की appointment। Art 235: Control of subordinate courts। Art 236: Interpretation। यह matching BPSC/UPSC का favorite है।"
-      },
-      "navigation": {
-        "next": "card_63_final_quiz_4",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_63_final_quiz_4",
-      "card_slug": "card_63_final_quiz_4",
-      "type": "final_quiz",
-      "concept_id": "final_assessment_4",
-      "level": 9,
-      "progress": {
-        "current": 63,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ SSC Comparative:\n\nनिम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?\n\nCourt/Forum --- Pecuniary Limit",
-        "options": [
-          {"id": "A", "text": "District Consumer Forum --- Up to ₹1 crore"},
-          {"id": "B", "text": "State Consumer Commission --- ₹1 crore to ₹10 crore"},
-          {"id": "C", "text": "National Consumer Commission --- Above ₹5 crore"},
-          {"id": "D", "text": "JMFC --- Max 3 years imprisonment"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "Option C गलत है। National Consumer Commission ₹10 crore से ज्यादा के claims देखता है, ₹5 crore नहीं। Correct limits: District (₹1cr तक), State (₹1-10cr), National (₹10cr+)। JMFC की max punishment 3 years सही है।"
-      },
-      "navigation": {
-        "next": "card_64_final_quiz_5",
-        "button_text": "Last Question ➔"
-      }
-    },
-    {
-      "card_id": "card_64_final_quiz_5",
-      "card_slug": "card_64_final_quiz_5",
-      "type": "final_quiz",
-      "concept_id": "final_assessment_5",
-      "level": 9,
-      "progress": {
-        "current": 64,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ UPSC Conceptual:\n\nLok Adalat के बारे में कौन सा कथन सही नहीं है?",
-        "options": [
-          {"id": "A", "text": "इसमें कोई court fees नहीं लगती"},
-          {"id": "B", "text": "इसका decision final होता है"},
-          {"id": "C", "text": "इसके decision के खिलाफ High Court में appeal हो सकती है"},
-          {"id": "D", "text": "यह Legal Services Authorities Act, 1987 के तहत काम करती है"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "⭐ BPSC Trap! Option C गलत है। Lok Adalat का decision final और binding होता है - इसके खिलाफ किसी भी court में appeal नहीं हो सकती। यही Lok Adalat की uniqueness है। बाकी सभी statements सही हैं।"
-      },
-      "navigation": {
-        "next": "card_65_comparison_chart",
-        "button_text": "Comparison Chart ➔"
-      }
-    },
-    {
-      "card_id": "card_65_comparison_chart",
-      "card_slug": "card_65_comparison_chart",
-      "type": "summary",
-      "concept_id": "civil_criminal_comparison",
-      "level": 9,
-      "progress": {
-        "current": 65,
-        "total": 72
-      },
-      "summary_payload": {
-        "title": "📊 Civil vs Criminal Courts - Complete Comparison",
-        "revision_points": [
-          {
-            "topic": "Highest Officer",
-            "point": "Civil: District Judge। Criminal: Sessions Judge। (Usually same person as District & Sessions Judge)"
-          },
-          {
-            "topic": "Hierarchy",
-            "point": "Civil: DJ → Additional DJ → Civil Judge SD → Civil Judge JD। Criminal: SJ → Additional SJ → CJM → JMFC → JMSC।"
-          },
-          {
-            "topic": "Types of Cases",
-            "point": "Civil: Property disputes, contracts, family matters, money recovery। Criminal: Theft, murder, assault, fraud, serious crimes।"
-          },
-          {
-            "topic": "Maximum Punishment",
-            "point": "Civil: Monetary compensation, injunctions (no imprisonment)। Criminal: Sessions - death penalty (HC confirmation)। JMFC - 3 years। JMSC - 1 year।"
-          },
-          {
-            "topic": "Pecuniary Jurisdiction",
-            "point": "Civil: Value-based limits (varies by state)। Criminal: Severity of crime (punishment years)।"
-          },
-          {
-            "topic": "Appeal Route",
-            "point": "Civil: JD → SD → DJ → HC। Criminal: JMSC/JMFC → SJ → HC। Death penalty automatic HC।"
-          },
-          {
-            "topic": "Burden of Proof",
-            "point": "Civil: Balance of probabilities। Criminal: Beyond reasonable doubt (stricter)।"
-          },
-          {
-            "topic": "Party Names",
-            "point": "Civil: Plaintiff vs Defendant। Criminal: State/Prosecution vs Accused।"
-          }
-        ]
-      },
-      "navigation": {
-        "next": "card_66_article_summary",
-        "button_text": "Article-wise Summary ➔"
-      }
-    },
-    {
-      "card_id": "card_66_article_summary",
-      "card_slug": "card_66_article_summary",
-      "type": "summary",
-      "concept_id": "article_wise_summary",
-      "level": 9,
-      "progress": {
-        "current": 66,
-        "total": 72
-      },
-      "summary_payload": {
-        "title": "🔑 Article-wise Master Summary",
-        "revision_points": [
-          {
-            "topic": "Article 233",
-            "point": "District Judges की appointment। Governor appoints with HC consultation। Qualification: 7 years advocacy/judicial service। भारतीय नागरिक होना चाहिए।"
-          },
-          {
-            "topic": "Article 234",
-            "point": "District Judges के अलावा अन्य persons की appointment। Governor appoints on HC recommendation। Recommendation stronger than consultation।"
-          },
-          {
-            "topic": "Article 235",
-            "point": "⭐ Most Important! Subordinate courts का control केवल High Court। Posting, transfer, promotion, leave, discipline सब HC। Judicial independence के लिए।"
-          },
-          {
-            "topic": "Article 236",
-            "point": "Interpretation - 'District Judge' includes Additional, Assistant, Sessions Judge in definition।"
-          },
-          {
-            "topic": "Article 237",
-            "point": "Certain provisions का application। Technical provision।"
-          },
-          {
-            "topic": "Article 312",
-            "point": "All India Services creation। AIJS (All India Judicial Service) proposal यहीं से। Rajya Sabha 2/3 majority से resolution जरूरी।"
-          }
-        ]
-      },
-      "navigation": {
-        "next": "card_67_golden_tricks",
-        "button_text": "Golden Tricks ➔"
-      }
-    },
-    {
-      "card_id": "card_67_golden_tricks",
-      "card_slug": "card_67_golden_tricks",
-      "type": "summary",
-      "concept_id": "golden_exam_tricks",
-      "level": 9,
-      "progress": {
-        "current": 67,
-        "total": 72
-      },
-      "summary_payload": {
-        "title": "🔑 Golden Exam Tricks - Never Forget!",
-        "revision_points": [
-          {
-            "topic": "7 vs 10",
-            "point": "District Judge: 7 years। High Court Judge: 10 years। यह difference हर exam में पूछा जाता है।"
-          },
-          {
-            "topic": "Consultation vs Recommendation",
-            "point": "Art 233 (DJ): Consultation (थोड़ा weak)। Art 234 (Others): Recommendation (stronger)। लेकिन practically दोनों में HC ही decide करती है।"
-          },
-          {
-            "topic": "Control = Article 235",
-            "point": "पूरा control High Court। State Government ZERO role। Judicial independence के लिए। Removal में Governor लेकिन HC recommendation पर।"
-          },
-          {
-            "topic": "Death Penalty Rule",
-            "point": "Sessions Judge सुना सकते हैं। Execute करने से पहले High Court confirmation mandatory। Automatic reference।"
-          },
-          {
-            "topic": "JMFC vs JMSC",
-            "point": "JMFC (First Class): Max 3 years। JMSC (Second Class): Max 1 year। First > Second याद रखो।"
-          },
-          {
-            "topic": "Lok Adalat Special",
-            "point": "FREE (no fees)। FAST (quick disposal)। FINAL (no appeal)। 3 F's याद रखो।"
-          },
-          {
-            "topic": "Consumer Limits",
-            "point": "District: ₹1 crore तक। State: ₹1-10 crore। National: ₹10 crore+। Ascending order।"
-          },
-          {
-            "topic": "AIJS - Article 312",
-            "point": "Proposed but not implemented। Rajya Sabha 2/3 majority resolution जरूरी। अभी तक नहीं बना।"
-          }
-        ]
-      },
-      "navigation": {
-        "next": "card_68_pyq_patterns",
-        "button_text": "PYQ Patterns ➔"
-      }
-    },
-    {
-      "card_id": "card_68_pyq_patterns",
-      "card_slug": "card_68_pyq_patterns",
-      "type": "summary",
-      "concept_id": "pyq_favorite_patterns",
-      "level": 9,
-      "progress": {
-        "current": 68,
-        "total": 72
-      },
-      "summary_payload": {
-        "title": "⭐ PYQ Favorite Patterns",
-        "revision_points": [
-          {
-            "topic": "BPSC Pattern",
-            "point": "Multi-statement questions। Art 233 vs 234। Art 235 control। 7 years qualification। Appointment authority confusions।"
-          },
-          {
-            "topic": "SSC & Railway Pattern",
-            "point": "Direct factual। Death penalty confirmation। JMFC/JMSC punishment limits। Consumer court limits। Art 233-237 matching।"
-          },
-          {
-            "topic": "UPSC Pattern",
-            "point": "Assertion-Reason। Judicial independence rationale। AIJS (Art 312)। Lok Adalat uniqueness। Appeal vs Revision vs Review।"
-          },
-          {
-            "topic": "Common Traps",
-            "point": "Control: State Govt (WRONG) vs HC (RIGHT)। DJ appointment: HC (WRONG) vs Governor (RIGHT)। Lok Adalat appeal (WRONG - no appeal)।"
-          },
-          {
-            "topic": "Never Asked But Important",
-            "point": "Art 236 interpretation। Art 237 application। Family Courts Act year। Night courts। Mediation details।"
-          },
-          {
-            "topic": "Current Affairs Link",
-            "point": "eCourts project। Virtual hearings। National Judicial Data Grid। Pendency statistics। Judicial reforms।"
-          }
-        ]
-      },
-      "navigation": {
-        "next": "card_69_mnemonic_tricks",
-        "button_text": "Mnemonics ➔"
-      }
-    },
-    {
-      "card_id": "card_69_mnemonic_tricks",
-      "card_slug": "card_69_mnemonic_tricks",
-      "type": "summary",
-      "concept_id": "mnemonic_memory_tricks",
-      "level": 9,
-      "progress": {
-        "current": 69,
-        "total": 72
-      },
-      "summary_payload": {
-        "title": "🧠 Memory Mnemonics",
-        "revision_points": [
-          {
-            "topic": "Articles 233-237",
-            "point": "233 = DJ (District Judge)। 234 = O (Others)। 235 = C (Control)। 236 = I (Interpretation)। 237 = A (Application)। DOCILIA!"
+            "topic": "Constitutional Basis",
+            "point": "Part VI, Chapter VI, Articles 233-237. Article 233: District Judge appointment (Governor + HC consultation). Article 234: other judicial officers (Governor + State PSC + HC). Article 235: control vests in High Court. Article 236: definitions. Article 237: extension to Magistrates."
           },
           {
             "topic": "Civil Hierarchy",
-            "point": "'DJ Additional SD JD' (DJ-A-SD-JD) - District Judge, Additional, Senior Division, Junior Division। Top to bottom।"
+            "point": "District Judge/Additional District Judge → Civil Judge (Senior Division)/Sub-Judge → Civil Judge (Junior Division)/Munsif. Case allocation based on Pecuniary Jurisdiction."
           },
           {
-            "topic": "Criminal Hierarchy",
-            "point": "'SJ Additional CJM JM1 JM2' - Sessions, Additional, Chief JM, JM First, JM Second। Top to bottom।"
+            "topic": "Criminal Hierarchy (CrPC 1973, Sec 6)",
+            "point": "Court of Session (Sessions Judge, death sentence needs HC confirmation) → Chief Judicial Magistrate (7 yrs) → JMFC (3 yrs, ₹10,000 fine) → JM Second Class (1 yr, ₹5,000 fine). Executive Magistrates handle only law-order, not trial."
           },
           {
-            "topic": "Lok Adalat 3Fs",
-            "point": "FREE (no fees)। FAST (quick)। FINAL (no appeal)। Triple F याद रखो।"
+            "topic": "Alternate Justice Mechanisms",
+            "point": "Article 39A (42nd Amdt, 1976) → Legal Services Authorities Act, 1987 → NALSA (1995, CJI as Patron-in-Chief). Lok Adalat award = civil decree, no appeal. Permanent Lok Adalat (2002) for public utility services."
           },
           {
-            "topic": "Consumer Limits",
-            "point": "'1-10-∞' - District (1cr तक), State (1-10cr), National (10cr+)। Ascending।"
-          },
-          {
-            "topic": "Magistrate Punishment",
-            "point": "'First = 3, Second = 1' - JMFC 3 years, JMSC 1 year। First always more।"
+            "topic": "Special Courts & Bihar Focus",
+            "point": "Gram Nyayalaya Act, 2008 (Nyayadhikari, JMFC rank) — weak implementation. Family Courts Act, 1984 (mandatory in 10 lakh+ cities). Fast Track Courts (2000)/FTSCs (2019, POCSO). ⭐ Bihar: Patna High Court (1916), Bihar Judicial Service via BPSC, Gram Kachahri (elected, Panchayati Raj Act 2006) ≠ Gram Nyayalaya (judicial officer, Central Act 2008), BiSLSA."
           }
         ]
       },
-      "navigation": {
-        "next": "card_70_common_mistakes",
-        "button_text": "Common Mistakes ➔"
-      }
+      "navigation": { "next": "card_67_final_quiz", "button_text": "Take Final Officer Challenge ➔" }
     },
     {
-      "card_id": "card_70_common_mistakes",
-      "card_slug": "card_70_common_mistakes",
-      "type": "summary",
-      "concept_id": "common_exam_mistakes",
+      "card_id": "card_67_final_quiz",
+      "card_slug": "card_67_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "final_master_quiz",
       "level": 9,
-      "progress": {
-        "current": 70,
-        "total": 72
+      "progress": { "current": 67, "total": 68 },
+      "quiz_payload": {
+        "question": "Nimnlikhit kathanon par vichar karein:\n1. District Judge ki niyukti President dwara ki jaati hai, High Court ki consultation se.\n2. Article 234 mein bharti Governor karta hai, State PSC aur High Court dono se consultation lekar.\n3. Gram Nyayalaya ka pramukh 'Nyayadhikari' elected Sarpanch hota hai.\n4. Lok Adalat ke award ke khilaaf koi appeal nahi ho sakti.\nUpar diye gaye kathanon mein se kaunse SAHI hain?",
+        "options": [
+          { "id": "A", "text": "1, 2 aur 3" },
+          { "id": "B", "text": "2 aur 4" },
+          { "id": "C", "text": "1, 3 aur 4" },
+          { "id": "D", "text": "Sirf 4" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 galat hai - District Judge ki niyukti Governor karta hai, President nahi (Article 233). Statement 2 sahi hai (Article 234). Statement 3 galat hai - Nyayadhikari ek trained judicial officer hota hai, elected Sarpanch nahi (wo Gram Kachahri mein hota hai). Statement 4 sahi hai - Lok Adalat award final hota hai, koi appeal nahi. Isliye sahi jawab hai 2 aur 4."
       },
-      "summary_payload": {
-        "title": "❌ Common Exam Mistakes - Avoid These!",
-        "revision_points": [
-          {
-            "topic": "Mistake 1",
-            "point": "❌ 'Subordinate courts का control State Govt'। ✅ Art 235: केवल High Court का control। Executive interference नहीं।"
-          },
-          {
-            "topic": "Mistake 2",
-            "point": "❌ 'District Judge की appointment High Court'। ✅ Governor appoints (Art 233), HC consults। Formal power Governor का।"
-          },
-          {
-            "topic": "Mistake 3",
-            "point": "❌ 'Sessions Judge direct death penalty execute'। ✅ HC confirmation जरूरी। Automatic reference।"
-          },
-          {
-            "topic": "Mistake 4",
-            "point": "❌ 'Lok Adalat के decision के against HC में appeal'। ✅ No appeal anywhere। Final and binding।"
-          },
-          {
-            "topic": "Mistake 5",
-            "point": "❌ 'DJ qualification 10 years'। ✅ 7 years (HC judge के लिए 10)। Confuse मत करो।"
-          },
-          {
-            "topic": "Mistake 6",
-            "point": "❌ 'JMFC max 1 year punishment'। ✅ JMFC = 3 years, JMSC = 1 year। First Class ज्यादा।"
-          },
-          {
-            "topic": "Mistake 7",
-            "point": "❌ 'AIJS already implemented'। ✅ Only proposed (Art 312), not yet implemented। Still state-level exams।"
-          },
-          {
-            "topic": "Mistake 8",
-            "point": "❌ 'National Consumer Commission ₹5cr+'। ✅ ₹10 crore+ (District ₹1cr, State ₹1-10cr)।"
-          }
-        ]
-      },
-      "navigation": {
-        "next": "card_71_last_minute_tips",
-        "button_text": "Last Minute Tips ➔"
-      }
+      "navigation": { "next": "card_68_trophy", "button_text": "Claim Your Trophy ➔" }
     },
     {
-      "card_id": "card_71_last_minute_tips",
-      "card_slug": "card_71_last_minute_tips",
-      "type": "summary",
-      "concept_id": "last_minute_exam_tips",
-      "level": 9,
-      "progress": {
-        "current": 71,
-        "total": 72
-      },
-      "summary_payload": {
-        "title": "🎯 Last Minute Exam Tips",
-        "revision_points": [
-          {
-            "topic": "Article Numbers",
-            "point": "233-237 subordinate courts। 214-231 High Courts। 124-147 Supreme Court। Sequence याद रखो - SC → HC → Subordinate।"
-          },
-          {
-            "topic": "Numerical Facts",
-            "point": "7 years DJ qualification। 3 years JMFC। 1 year JMSC। ₹1cr, ₹10cr consumer limits। 1984 Family Courts। 1987 Legal Services।"
-          },
-          {
-            "topic": "Control vs Appointment",
-            "point": "Appointment: Governor (formal)। Control: High Court (real)। Isme confuse mat hona।"
-          },
-          {
-            "topic": "Multi-Statement Strategy",
-            "point": "BPSC में Art 235 (control) पर trap। State Govt option देंगे - reject करो। HC ही correct।"
-          },
-          {
-            "topic": "Assertion-Reason Strategy",
-            "point": "Judicial independence rationale हमेशा reason होगा। Art 235 control = prevent executive interference।"
-          },
-          {
-            "topic": "Current Affairs",
-            "point": "eCourts, Virtual hearings, NJDG, Pendency - ये buzzwords use करो। Modern judiciary reforms।"
-          }
-        ]
-      },
-      "navigation": {
-        "next": "card_72_final_milestone",
-        "button_text": "Chapter Complete 🏆"
-      }
-    },
-    {
-      "card_id": "card_72_final_milestone",
-      "card_slug": "card_72_final_milestone",
+      "card_id": "card_68_trophy",
+      "card_slug": "card_68_trophy",
       "type": "milestone",
-      "concept_id": "chapter_completion_final",
-      "level": 10,
-      "progress": {
-        "current": 72,
-        "total": 72
-      },
+      "concept_id": "chapter_complete",
+      "level": 9,
+      "progress": { "current": 68, "total": 68 },
       "milestone_payload": {
-        "title": "🎊 SUBORDINATE COURTS MASTERED! 🎊",
-        "badge_emoji": "⚖️",
-        "completed_topic": "Subordinate Courts in India - Complete Judicial Module",
+        "title": "🏆 CHAPTER MASTER TROPHY!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Subordinate Courts - Complete Chapter",
         "xp_earned": 150,
-        "milestone_progress": "9/9 Modules Complete ✅",
-        "motivational_quote": "From Article 233 to 237, from District Judge to JMSC, from Lok Adalat to eCourts - हर single provision अब आपके brain में permanently stored! 🔥\n\nBPSC/SSC/Railway में Subordinate Courts के questions = आपके लिए FREE MARKS! 💯\n\nJudiciary के इस grassroots level को अब आप जानते हैं अंदर-बाहर से! ⚖️\n\nArt 235 = HC Control, 7 years qualification, Death penalty HC confirmation - ये facts अब कभी नहीं भूलेंगे! 🚀\n\nKeep Learning, Keep Growing, Future Officer! 🇮🇳"
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Shabaash Raju! Ab tum District Judiciary, Articles 233-237, Lok Adalat aur Bihar ke special system tak sab kuch officer level pe jaante ho. Ab BPSC/BPSC TRE ke exam hall mein ye topic tumhara strongest weapon hai!"
       },
-      "navigation": {
-        "next": null,
-        "button_text": "Back to Dashboard 🏠"
-      }
+      "navigation": { "next": null, "button_text": "Finish Chapter ✅" }
     }
   ]
 }
-
