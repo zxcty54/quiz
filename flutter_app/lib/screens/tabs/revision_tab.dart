@@ -37,7 +37,7 @@ class _RevisionTabState extends State<RevisionTab> {
     }
   }
 
-  // 1️⃣ Disk Storage Check
+  // 1️⃣ Pehle Disk Storage se padho (0ms instant load), fir background live fetch
   Future<void> _loadFromDiskAndFetch() async {
     final prefs = await SharedPreferences.getInstance();
     final String? savedJson = prefs.getString('persistent_subject_mapping_json');
@@ -59,10 +59,11 @@ class _RevisionTabState extends State<RevisionTab> {
       });
     }
 
+    // Live cloud sync in background
     _fetchLiveGitHubMapping();
   }
 
-  // 🚀 DIRECT MULTI-CDN UNBLOCKED FETCHER
+  // 🚀 DIRECT MULTI-CDN UNBLOCKED FETCHER + PERMANENT DISK SAVE
   Future<void> _fetchLiveGitHubMapping() async {
     if (!mounted) return;
     setState(() => _isLoading = true);
@@ -72,7 +73,7 @@ class _RevisionTabState extends State<RevisionTab> {
       "https://raw.githack.com/zxcty54/quiz/main/subject_mapping.json",
       "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/subject_mapping.json?t=$ts",
       "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/subject_mapping.json?t=$ts",
-      "https://cdn.statically.io/gh/zxcty54/quiz/main/subject_mapping.json",
+      "https://raw.githubusercontent.com/zxcty54/quiz/main/subject_mapping.json?t=$ts",
     ];
 
     for (String url in urls) {
@@ -89,13 +90,14 @@ class _RevisionTabState extends State<RevisionTab> {
         if (res.statusCode == 200) {
           String rawBody = utf8.decode(res.bodyBytes).trim();
 
+          // 🧹 Strip UTF-8 BOM & Markdown if any
           if (rawBody.startsWith('\uFEFF')) {
             rawBody = rawBody.substring(1).trim();
           }
           rawBody = rawBody.replaceAll('```json', '').replaceAll('```', '').trim();
 
           if (rawBody.startsWith('<') || rawBody.startsWith('<!DOCTYPE')) {
-            continue;
+            continue; // Skip HTML responses
           }
 
           final dynamic parsed = jsonDecode(rawBody);
@@ -105,6 +107,7 @@ class _RevisionTabState extends State<RevisionTab> {
               _isLoading = false;
             });
 
+            // 💾 Phone ke permanent disk storage mein save
             final prefs = await SharedPreferences.getInstance();
             await prefs.setString('persistent_subject_mapping_json', jsonEncode(parsed));
             return;
