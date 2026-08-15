@@ -1,11 +1,12 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../main.dart'; // 👈 Global Theme Notifier access karne ke liye
 import '../services/user_stats_service.dart';
 import 'saved_questions_screen.dart';
 import 'wrong_questions_screen.dart';
 import 'saved_current_affairs_screen.dart';
-import '../widgets/donation_widget.dart'; // 👈 Direct External Smooth Widget Load Hoga
+import '../widgets/donation_widget.dart';
 
 class ProfileScreen extends StatefulWidget {
   final bool isHindi;
@@ -27,7 +28,6 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   final List<String> _weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-
   int _savedCaCount = 0;
 
   @override
@@ -62,6 +62,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final bool isDark = widget.isDarkMode || Theme.of(context).brightness == Brightness.dark;
+    final Color headerTextColor = isDark ? Colors.white : const Color(0xFF0F172A);
+    final Color subTextColor = isDark ? const Color(0xFF94A3B8) : Colors.grey.shade600;
+
     return FutureBuilder<Map<String, dynamic>>(
       future: UserStatsService.getStats(),
       builder: (context, snapshot) {
@@ -108,11 +112,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         children: [
                           Text(
                             'Welcome Back 👋',
-                            style: TextStyle(fontSize: 12, color: Colors.grey.shade600, fontWeight: FontWeight.w600),
+                            style: TextStyle(fontSize: 12, color: subTextColor, fontWeight: FontWeight.w600),
                           ),
-                          const Text(
+                          Text(
                             'Aspirant Aspirant',
-                            style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                            style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: headerTextColor),
                           ),
                           const SizedBox(height: 6),
                           Wrap(
@@ -121,15 +125,32 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             children: [
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                decoration: BoxDecoration(color: const Color(0xFFFEF3C7), borderRadius: BorderRadius.circular(12)),
-                                child: Text('🔥 $userStreak Day Streak', style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Color(0xFFD97706))),
+                                decoration: BoxDecoration(
+                                  color: isDark ? const Color(0xFF451A03) : const Color(0xFFFEF3C7),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Text(
+                                  '🔥 $userStreak Day Streak',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                    color: isDark ? const Color(0xFFFBBF24) : const Color(0xFFD97706),
+                                  ),
+                                ),
                               ),
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                decoration: BoxDecoration(color: const Color(0xFFE0E7FF), borderRadius: BorderRadius.circular(12)),
+                                decoration: BoxDecoration(
+                                  color: isDark ? const Color(0xFF1E1B4B) : const Color(0xFFE0E7FF),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
                                 child: Text(
                                   '🏅 Level ${_calculateLevel(solvedQs)}',
-                                  style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Color(0xFF4F46E5)),
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                    color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4F46E5),
+                                  ),
                                 ),
                               ),
                             ],
@@ -144,7 +165,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const SizedBox(height: 18),
 
             // 📊 2. LEARNING DASHBOARD (LIVE STATS)
-            const Text('📊 Learning Dashboard', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            Text('📊 Learning Dashboard', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             GridView.count(
               shrinkWrap: true,
@@ -154,16 +175,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
               children: [
-                _buildProfileStatTile('Questions Solved', '$solvedQs', '📝', const Color(0xFF2563EB)),
-                _buildProfileStatTile('Mocks Attempted', '$attemptedMocks', '🎯', const Color(0xFFD97706)),
-                _buildProfileStatTile('Overall Accuracy', '${stats['accuracy']}%', '⚡', const Color(0xFF16A34A)),
-                _buildProfileStatTile('Study Time', 'Daily Active', '⏱️', const Color(0xFF7C3AED)),
+                _buildProfileStatTile('Questions Solved', '$solvedQs', '📝', const Color(0xFF2563EB), isDark),
+                _buildProfileStatTile('Mocks Attempted', '$attemptedMocks', '🎯', const Color(0xFFD97706), isDark),
+                _buildProfileStatTile('Overall Accuracy', '${stats['accuracy']}%', '⚡', const Color(0xFF16A34A), isDark),
+                _buildProfileStatTile('Study Time', 'Daily Active', '⏱️', const Color(0xFF7C3AED), isDark),
               ],
             ),
             const SizedBox(height: 20),
 
             // 📈 3. RECENT PROGRESS (LIVE DYNAMIC BAR CHART)
-            const Text('📈 Recent Progress (Last 7 Days)', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            Text('📈 Recent Progress (Last 7 Days)', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             Card(
               elevation: 1,
@@ -180,7 +201,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     DateTime dayDate = DateTime.now().subtract(Duration(days: 6 - index));
                     String dayLabel = _weekDays[dayDate.weekday - 1];
 
-                    return _buildBar(dayLabel, heightFactor, weeklyCounts[index] > 0 ? const Color(0xFF2563EB) : Colors.grey.shade300);
+                    return _buildBar(
+                      dayLabel,
+                      heightFactor,
+                      weeklyCounts[index] > 0 ? const Color(0xFF2563EB) : (isDark ? const Color(0xFF334155) : Colors.grey.shade300),
+                      subTextColor,
+                    );
                   }),
                 ),
               ),
@@ -188,7 +214,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const SizedBox(height: 20),
 
             // 📂 4. QUICK ACCESS REVISION ZONE
-            const Text('📂 Quick Access', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            Text('📂 Quick Access', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             Card(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
@@ -196,9 +222,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   ListTile(
                     leading: const Text('⭐', style: TextStyle(fontSize: 20)),
-                    title: const Text('Saved / Bookmarked Questions', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
-                    subtitle: Text('$savedBookmarksCount Saved Items', style: const TextStyle(fontSize: 11, color: Colors.grey)),
-                    trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 14),
+                    title: Text('Saved / Bookmarked Questions', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: headerTextColor)),
+                    subtitle: Text('$savedBookmarksCount Saved Items', style: TextStyle(fontSize: 11, color: subTextColor)),
+                    trailing: Icon(Icons.arrow_forward_ios_rounded, size: 14, color: subTextColor),
                     onTap: () {
                       Navigator.push(
                         context,
@@ -206,12 +232,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       );
                     },
                   ),
-                  const Divider(height: 1),
+                  Divider(height: 1, color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
                   ListTile(
                     leading: const Text('❌', style: TextStyle(fontSize: 20)),
-                    title: const Text('Wrong Questions Vault', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
-                    subtitle: const Text('Revise Mistakes', style: TextStyle(fontSize: 11, color: Colors.grey)),
-                    trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 14),
+                    title: Text('Wrong Questions Vault', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: headerTextColor)),
+                    subtitle: Text('Revise Mistakes', style: TextStyle(fontSize: 11, color: subTextColor)),
+                    trailing: Icon(Icons.arrow_forward_ios_rounded, size: 14, color: subTextColor),
                     onTap: () {
                       Navigator.push(
                         context,
@@ -219,14 +245,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       );
                     },
                   ),
-                  const Divider(height: 1),
-
-                  // 📌 SAVED CURRENT AFFAIRS VAULT
+                  Divider(height: 1, color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
                   ListTile(
                     leading: const Text('📌', style: TextStyle(fontSize: 20)),
-                    title: const Text('Saved Current Affairs Vault', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
-                    subtitle: Text('$_savedCaCount Saved Bulletins', style: const TextStyle(fontSize: 11, color: Colors.grey)),
-                    trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 14),
+                    title: Text('Saved Current Affairs Vault', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: headerTextColor)),
+                    subtitle: Text('$_savedCaCount Saved Bulletins', style: TextStyle(fontSize: 11, color: subTextColor)),
+                    trailing: Icon(Icons.arrow_forward_ios_rounded, size: 14, color: subTextColor),
                     onTap: () async {
                       await Navigator.push(
                         context,
@@ -241,7 +265,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const SizedBox(height: 20),
 
             // 🏆 5. DYNAMIC ACHIEVEMENTS BADGES
-            const Text('🏆 Achievements', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            Text('🏆 Achievements', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             SizedBox(
               height: 90,
@@ -253,55 +277,66 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     title: '$userStreak Day Streak',
                     isUnlocked: userStreak >= 3,
                     activeColor: Colors.amber,
+                    isDark: isDark,
                   ),
                   _buildDynamicBadge(
                     emoji: '🏅',
                     title: '100 Qs Club',
                     isUnlocked: solvedQs >= 100,
                     activeColor: Colors.blue,
+                    isDark: isDark,
                   ),
                   _buildDynamicBadge(
                     emoji: '⚡',
                     title: 'First Mock',
                     isUnlocked: attemptedMocks >= 1,
                     activeColor: Colors.purple,
+                    isDark: isDark,
                   ),
                   _buildDynamicBadge(
                     emoji: '📚',
                     title: 'Master Scholar',
                     isUnlocked: solvedQs >= 500,
                     activeColor: Colors.green,
+                    isDark: isDark,
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 20),
 
-            // ⚙️ 6. APP SETTINGS & TOGGLES
-            const Text('⚙️ Preferences', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            // ⚙️ 6. APP SETTINGS & TOGGLES (DIRECT GLOBAL THEME TRIGGER)
+            Text('⚙️ Preferences', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 8),
             Card(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
               child: Column(
                 children: [
                   SwitchListTile(
-                    title: const Text('Bilingual Mode (Hindi / Eng)', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
+                    title: Text('Bilingual Mode (Hindi / Eng)', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: headerTextColor)),
                     value: widget.isHindi,
                     onChanged: widget.onHindiChanged,
                   ),
-                  const Divider(height: 1),
+                  Divider(height: 1, color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
                   SwitchListTile(
-                    title: const Text('Dark Mode (Night Theme)', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
+                    title: Text('Dark Mode (Night Theme)', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: headerTextColor)),
                     value: widget.isDarkMode,
-                    onChanged: widget.onDarkModeChanged,
+                    onChanged: (val) async {
+                      widget.onDarkModeChanged(val);
+                      final prefs = await SharedPreferences.getInstance();
+                      await prefs.setBool('is_dark_mode', val);
+
+                      // 🚀 GLOBAL BROADCAST (Main.dart ko notify karega taaki sabhi screens dark ho jayein)
+                      globalThemeNotifier.value = val ? ThemeMode.dark : ThemeMode.light;
+                    },
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 16),
 
-            // 🤝 COMMUNITY DONATION WIDGET (SOOTHING INDIGO FROM LIB/WIDGETS)
-            DonationWidget(isDarkMode: widget.isDarkMode),
+            // 🤝 COMMUNITY DONATION WIDGET
+            DonationWidget(isDarkMode: isDark),
           ],
         );
       },
@@ -318,13 +353,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   // WIDGET HELPERS
-  Widget _buildProfileStatTile(String label, String value, String emoji, Color color) {
+  Widget _buildProfileStatTile(String label, String value, String emoji, Color color, bool isDark) {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.08),
+        color: color.withOpacity(isDark ? 0.15 : 0.08),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(0.2)),
+        border: Border.all(color: color.withOpacity(isDark ? 0.35 : 0.2)),
       ),
       child: Row(
         children: [
@@ -336,7 +371,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(value, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: color)),
-                Text(label, style: const TextStyle(fontSize: 9.5, color: Colors.grey, fontWeight: FontWeight.w600), maxLines: 1, overflow: TextOverflow.ellipsis),
+                Text(
+                  label,
+                  style: TextStyle(
+                    fontSize: 9.5,
+                    color: isDark ? const Color(0xFF94A3B8) : Colors.grey.shade600,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ],
             ),
           ),
@@ -345,7 +389,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  Widget _buildBar(String day, double heightFactor, Color color) {
+  Widget _buildBar(String day, double heightFactor, Color color, Color textColor) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -358,7 +402,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
         ),
         const SizedBox(height: 6),
-        Text(day, style: const TextStyle(fontSize: 11, color: Colors.grey, fontWeight: FontWeight.bold)),
+        Text(day, style: TextStyle(fontSize: 11, color: textColor, fontWeight: FontWeight.bold)),
       ],
     );
   }
@@ -368,10 +412,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
     required String title,
     required bool isUnlocked,
     required Color activeColor,
+    required bool isDark,
   }) {
-    final Color bgColor = isUnlocked ? activeColor.withOpacity(0.12) : Colors.grey.shade100;
-    final Color borderColor = isUnlocked ? activeColor : Colors.grey.shade300;
-    final Color textColor = isUnlocked ? activeColor : Colors.grey.shade500;
+    final Color bgColor = isUnlocked
+        ? activeColor.withOpacity(isDark ? 0.2 : 0.12)
+        : (isDark ? const Color(0xFF1E293B) : Colors.grey.shade100);
+    final Color borderColor = isUnlocked
+        ? activeColor
+        : (isDark ? const Color(0xFF334155) : Colors.grey.shade300);
+    final Color textColor = isUnlocked
+        ? (isDark ? activeColor.withOpacity(0.9) : activeColor)
+        : (isDark ? const Color(0xFF64748B) : Colors.grey.shade500);
 
     return Container(
       width: 95,
