@@ -1,9 +1,9 @@
 
 {
-  "topic_id": "polity_supreme_court",
-  "topic_title": "Supreme Court of India",
-  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
-  "total_cards": 72,
+  "topic_id": "indian_polity_supreme_court",
+  "topic_title": "Supreme Court of India — Composition, Jurisdiction & Judicial Independence",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 92,
   "characters": {
     "aman": {
       "name": "Aman Sir",
@@ -21,2119 +21,2434 @@
       "card_id": "card_01_intro",
       "card_slug": "card_01_intro",
       "type": "intro",
-      "concept_id": "chapter_introduction",
+      "concept_id": "chapter_intro",
       "level": 1,
-      "progress": {
-        "current": 1,
-        "total": 72
-      },
+      "progress": { "current": 1, "total": 92 },
       "intro_payload": {
-        "title": "Supreme Court of India",
-        "icon": "⚖️",
-        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "chapter_title": "Supreme Court of India",
+        "chapter_icon": "⚖️",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
         "learning_outcomes": [
-          "Understand the Constitutional position and structure of Supreme Court",
-          "Master the appointment, qualifications and removal of judges",
-          "Learn Original, Appellate, Advisory and Writ Jurisdictions",
-          "Decode BPSC/SSC multi-statement traps on judicial review",
-          "Grasp landmark judgments and PIL (Public Interest Litigation)"
-        ],
-        "estimated_time": "55 minutes",
-        "total_concepts": 10
+          "Article 124-147: Complete constitutional scheme of Supreme Court",
+          "Composition, appointment & qualification of judges",
+          "Oath, salary, tenure and removal (impeachment) process",
+          "Independence of Judiciary - all constitutional safeguards",
+          "Original, Writ, Appellate & Advisory Jurisdiction in detail",
+          "Article 32 - the 5 writs and 'Heart and Soul' of Constitution",
+          "Collegium System evolution - First, Second, Third Judges Cases & NJAC",
+          "Judicial Review, Judicial Activism & PIL",
+          "Court of Record & Article 141 - law declared by SC",
+          "Patna High Court & Bihar-specific judiciary facts for BPSC TRE",
+          "Landmark cases: Kesavananda Bharati, Golaknath, Minerva Mills"
+        ]
       },
       "navigation": {
-        "next": "card_02_court_intro",
-        "button_text": "शुरू करें ➔"
+        "next": "card_02_village_panchayat_hook",
+        "button_text": "Start Learning ➔"
       }
     },
     {
-      "card_id": "card_02_court_intro",
-      "card_slug": "card_02_court_intro",
+      "card_id": "card_02_village_panchayat_hook",
+      "card_slug": "card_02_village_panchayat_hook",
       "type": "chat",
-      "concept_id": "supreme_court_introduction",
+      "concept_id": "sc_intro",
       "level": 1,
-      "progress": {
-        "current": 2,
-        "total": 72
-      },
+      "progress": { "current": 2, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Raju, tumne देखा होगा TV पर जब बड़े-बड़े cases की सुनवाई होती है - जैसे Ram Mandir case, Article 370 case - तो सब कहते हैं 'Supreme Court ने फैसला सुनाया'। क्या तुम्हें पता है Supreme Court का मतलब क्या है?"
+          "text": "Raju, tumhare gaanv mein agar do padosiyon mein zameen ko lekar jhagda ho jaaye aur Panchayat ka faisla dono ko manzoor na ho, to wo log aage kahan jaate hain?"
         },
         {
           "speaker": "raju",
-          "text": "Sir, Supreme matlab सबसे ऊपर! तो ये सबसे बड़ी अदालत है क्या? लेकिन High Court भी तो होती है... confuse हो गया!"
+          "text": "Sir wo log court jaate hain na — pehle chhoti court, phir bade court mein appeal karte hain agar wahan bhi santusht na hon."
         },
         {
           "speaker": "aman",
-          "text": "Bilkul sahi observation! Supreme Court भारत की सबसे ऊँची और अंतिम न्यायालय है। Article 124 से 147 में इसके बारे में लिखा है। देखो, हमारे देश में तीन level की courts हैं: निचली अदालतें (District Courts), फिर High Courts (हर राज्य में), और सबसे ऊपर Supreme Court जो पूरे देश के लिए एक ही है।"
+          "text": "Bilkul sahi! Aur agar sabse badi State ki court ka faisla bhi kisi ko manzoor na ho, to appeal ka aakhri, sabse upar wala pada kya hai? Wahi jahan se ab koi aur upar appeal nahi ho sakti?"
         },
         {
           "speaker": "raju",
-          "text": "Achhaa! Matlab Supreme Court का फैसला ही final होता है, उसके ऊपर कोई और court नहीं?"
+          "text": "Wo to Supreme Court hoga sir! Sabse upar, jiske baad koi aur court nahi hoti."
         }
       ],
       "navigation": {
-        "next": "card_03_apex_court",
-        "button_text": "Next ➔"
+        "next": "card_03_apex_court_concept",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_03_apex_court",
-      "card_slug": "card_03_apex_court",
+      "card_id": "card_03_apex_court_concept",
+      "card_slug": "card_03_apex_court_concept",
       "type": "chat",
-      "concept_id": "apex_court_concept",
+      "concept_id": "sc_intro",
       "level": 1,
-      "progress": {
-        "current": 3,
-        "total": 72
-      },
+      "progress": { "current": 3, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Exactly! Supreme Court को 'Apex Court' भी कहते हैं - apex matlab चोटी। इसके फैसले को देश की कोई भी court challenge नहीं कर सकती। Article 141 कहता है - Supreme Court के द्वारा घोषित कानून पूरे भारत में सभी courts को मानना पड़ता है।"
+          "text": "Bilkul sahi Raju! Supreme Court of India desh ki 'Apex Court' hai — matlab poore judicial system ke piramid ka sabse upar wala point. Iske faisle ke baad koi aur judicial forum nahi hota — ye final hota hai."
         },
         {
           "speaker": "raju",
-          "text": "Wow! Matlab बहुत powerful hai! Sir, ये कहाँ स्थित है और कितने judges होते हैं?"
+          "text": "Achha! To Supreme Court ka faisla ek dum final hota hai? Koi bhi usse ooncha nahi hai?"
         },
         {
           "speaker": "aman",
-          "text": "Supreme Court नई दिल्ली में स्थित है। Article 124(1) के अनुसार इसमें 1 Chief Justice of India (CJI) और अधिकतम 33 अन्य judges हो सकते हैं - यानी total 34 judges। लेकिन ये संख्या हमेशा से ऐसी नहीं थी।"
+          "text": "Bilkul! Aur ek zaroori baat — Supreme Court sirf appeal sunne wali court nahi hai, ye 'Constitution ka Guardian' bhi hai — matlab Constitution ki raksha karna, Fundamental Rights ki suraksha karna, aur poore desh mein kanoon ki ek samaan vyakhya (uniform interpretation) sunishchit karna bhi iska kaam hai."
         },
         {
           "speaker": "raju",
-          "text": "Matlab पहले कम judges थे? Kaise बढ़े Sir?"
+          "text": "Guardian of Constitution! Ye to bahut bada role hai sir. Ye sab kahan likha hai Constitution mein?"
         }
       ],
       "navigation": {
-        "next": "card_04_strength_evolution",
-        "button_text": "Next ➔"
+        "next": "card_04_article124_part5",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_04_strength_evolution",
-      "card_slug": "card_04_strength_evolution",
+      "card_id": "card_04_article124_part5",
+      "card_slug": "card_04_article124_part5",
       "type": "chat",
-      "concept_id": "judges_strength_history",
+      "concept_id": "sc_intro",
       "level": 1,
-      "progress": {
-        "current": 4,
-        "total": 72
-      },
+      "progress": { "current": 4, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "⭐ BPSC & SSC Favorite! 1950 में जब Supreme Court शुरू हुआ, तब केवल 1 CJI + 7 judges थे = total 8। फिर Parliament ने समय-समय पर इसे बढ़ाया। 2019 में Supreme Court (Number of Judges) Amendment Act के द्वारा यह 1 CJI + 33 = 34 कर दिया गया।"
+          "text": "Supreme Court se related poora vidhan Constitution ke Part V (Union) mein, Chapter IV mein, Article 124 se lekar Article 147 tak diya gaya hai. Isme judges ki niyukti, unki qualification, jurisdiction — sab kuch cover hota hai."
         },
         {
           "speaker": "raju",
-          "text": "Sir, Parliament क्यों बढ़ाती है संख्या? Constitution में fix क्यों नहीं?"
+          "text": "124 se 147 — itna lamba! Sir, Supreme Court kab banaya gaya tha? Independence ke turant baad?"
         },
         {
           "speaker": "aman",
-          "text": "Brilliant question! Cases की संख्या बढ़ती जा रही है। लाखों pending cases हैं। इसलिए Parliament को power दी गई है कि जरूरत के अनुसार judges की संख्या बढ़ा सके। लेकिन ध्यान दो - Parliament सिर्फ maximum limit तय करती है, actual appointment तो President करते हैं।"
+          "text": "Bahut achha sawaal! Supreme Court of India ka udghatan (inauguration) 28 January 1950 ko hua — Constitution lagu hone ke sirf 2 din baad (26 January 1950 se). Isse pehle 'Federal Court of India' (1937-1950) tha, jise Supreme Court ne replace kiya."
         },
         {
           "speaker": "raju",
-          "text": "Achhaa! Flexibility के लिए Parliament को power दी गई!"
+          "text": "Achha! Federal Court pehle tha, phir Supreme Court aaya. 28 January — ye date yaad rakhni hogi sir!"
         }
       ],
       "navigation": {
-        "next": "card_05_quiz_apex_court",
-        "button_text": "Quiz Time ➔"
+        "next": "card_05_seat_of_court",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_05_quiz_apex_court",
-      "card_slug": "card_05_quiz_apex_court",
-      "type": "quiz",
-      "concept_id": "apex_court_quiz",
+      "card_id": "card_05_seat_of_court",
+      "card_slug": "card_05_seat_of_court",
+      "type": "chat",
+      "concept_id": "sc_intro",
       "level": 1,
-      "progress": {
-        "current": 5,
-        "total": 72
-      },
+      "progress": { "current": 5, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ek aur important fact — Article 130 kehta hai ki Supreme Court ki 'seat' (sthaan) Delhi mein hogi. Lekin ek twist hai — Chief Justice, President ki manzoori se, Supreme Court ki koi bhi sitting Delhi ke alaawa kisi aur jagah bhi kar sakte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Supreme Court Delhi ke alawa kisi aur city mein bhi baith sakta hai? Kya ye kabhi hua hai practically?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Constitutionally possible hai, par practically abhi tak aisa nahi hua hai. Ye ek proposed 'Bench outside Delhi' wala reform proposal bhi hai jo discuss hota rehta hai — access to justice ke liye. Par abhi tak Supreme Court sirf Delhi mein hi baithta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, theoretically possible hai par practically nahi hua — ye trap ban sakta hai exam mein. Ab batao sir, Supreme Court mein judges kitne hote hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_06_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz1",
+      "card_slug": "card_06_quiz1",
+      "type": "quiz",
+      "concept_id": "sc_intro",
+      "level": 1,
+      "progress": { "current": 6, "total": 92 },
       "quiz_payload": {
-        "question": "वर्तमान में Supreme Court में अधिकतम कितने judges हो सकते हैं (Chief Justice सहित)?",
+        "question": "Supreme Court of India se sambandhit provisions kis Article range mein diye gaye hain?",
         "options": [
-          {"id": "A", "text": "31"},
-          {"id": "B", "text": "32"},
-          {"id": "C", "text": "33"},
-          {"id": "D", "text": "34"}
+          { "id": "A", "text": "Article 76-78" },
+          { "id": "B", "text": "Article 124-147" },
+          { "id": "C", "text": "Article 214-231" },
+          { "id": "D", "text": "Article 148-151" }
         ],
-        "correct_option_id": "D",
-        "explanation": "⭐ Railway & SSC Favorite! वर्तमान में Supreme Court में 1 Chief Justice of India + अधिकतम 33 अन्य judges = कुल 34 judges हो सकते हैं। यह संख्या 2019 के Supreme Court (Number of Judges) Amendment Act द्वारा निर्धारित की गई। 1950 में शुरुआत में केवल 8 judges थे।"
+        "correct_option_id": "B",
+        "explanation": "Supreme Court se related provisions Article 124 se 147 tak (Part V, Chapter IV) diye gaye hain. Article 214-231 High Courts se, 148-151 CAG se, aur 76-78 Attorney General/Council of Ministers se sambandhit hain."
       },
       "navigation": {
-        "next": "card_06_quiz_article_141",
-        "button_text": "Next Question ➔"
+        "next": "card_07_quiz2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_06_quiz_article_141",
-      "card_slug": "card_06_quiz_article_141",
+      "card_id": "card_07_quiz2",
+      "card_slug": "card_07_quiz2",
       "type": "quiz",
-      "concept_id": "article_141_quiz",
+      "concept_id": "sc_intro",
       "level": 1,
-      "progress": {
-        "current": 6,
-        "total": 72
-      },
+      "progress": { "current": 7, "total": 92 },
       "quiz_payload": {
-        "question": "कौन सा Article कहता है कि Supreme Court द्वारा घोषित कानून सभी courts को मानना होगा?",
+        "question": "Supreme Court of India ka udghatan kab hua tha, aur isse pehle kaunsi court thi?",
         "options": [
-          {"id": "A", "text": "Article 124"},
-          {"id": "B", "text": "Article 131"},
-          {"id": "C", "text": "Article 141"},
-          {"id": "D", "text": "Article 147"}
+          { "id": "A", "text": "26 January 1950, isse pehle Privy Council thi" },
+          { "id": "B", "text": "28 January 1950, isse pehle Federal Court of India thi" },
+          { "id": "C", "text": "15 August 1947, isse pehle koi court nahi thi" },
+          { "id": "D", "text": "26 November 1949, isse pehle High Court thi" }
         ],
-        "correct_option_id": "C",
-        "explanation": "Article 141 कहता है - 'The law declared by the Supreme Court shall be binding on all courts within the territory of India.' यानी Supreme Court का declared law पूरे भारत की सभी अदालतों के लिए बाध्यकारी होता है। यह Supreme Court को 'Court of Record' का दर्जा देता है।"
+        "correct_option_id": "B",
+        "explanation": "Supreme Court of India ka udghatan 28 January 1950 ko hua, Constitution lagu hone ke 2 din baad. Isse pehle 'Federal Court of India' (1937-1950) desh ki apex judicial body thi."
       },
       "navigation": {
-        "next": "card_07_quiz_location",
-        "button_text": "Next Question ➔"
+        "next": "card_08_quiz3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_07_quiz_location",
-      "card_slug": "card_07_quiz_location",
+      "card_id": "card_08_quiz3",
+      "card_slug": "card_08_quiz3",
       "type": "quiz",
-      "concept_id": "location_quiz",
+      "concept_id": "sc_intro",
       "level": 1,
-      "progress": {
-        "current": 7,
-        "total": 72
-      },
+      "progress": { "current": 8, "total": 92 },
       "quiz_payload": {
-        "question": "Supreme Court of India कहाँ स्थित है?",
+        "question": "Article 130 ke anusar Supreme Court ki 'seat' ke baare mein kaunsa kathan SAHI hai?",
         "options": [
-          {"id": "A", "text": "मुंबई"},
-          {"id": "B", "text": "कोलकाता"},
-          {"id": "C", "text": "नई दिल्ली"},
-          {"id": "D", "text": "चेन्नई"}
+          { "id": "A", "text": "Supreme Court hamesha sirf Delhi mein hi baith sakta hai, koi exception nahi" },
+          { "id": "B", "text": "Seat Delhi mein hai, lekin CJI, President ki manzoori se, kahin aur bhi sitting kar sakte hain" },
+          { "id": "C", "text": "Har State mein Supreme Court ki ek branch hai" },
+          { "id": "D", "text": "Seat Mumbai mein hai" }
         ],
-        "correct_option_id": "C",
-        "explanation": "Supreme Court of India नई दिल्ली में स्थित है। यह भारत की सर्वोच्च न्यायालय है और पूरे देश के लिए केवल एक ही Supreme Court है, जबकि हर राज्य या समूह के लिए अलग High Courts हैं।"
+        "correct_option_id": "B",
+        "explanation": "Article 130 ke anusar Supreme Court ki seat Delhi mein hai, lekin Chief Justice, President ki manzoori se, isse kisi aur jagah bhi sitting karne ka nirdesh de sakte hain — halaanki practically abhi tak aisa nahi hua hai."
       },
       "navigation": {
-        "next": "card_08_milestone_intro",
-        "button_text": "Check & Continue ➔"
+        "next": "card_09_milestone1",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_08_milestone_intro",
-      "card_slug": "card_08_milestone_intro",
+      "card_id": "card_09_milestone1",
+      "card_slug": "card_09_milestone1",
       "type": "milestone",
-      "concept_id": "introduction_complete",
+      "concept_id": "sc_intro",
       "level": 1,
-      "progress": {
-        "current": 8,
-        "total": 72
-      },
+      "progress": { "current": 9, "total": 92 },
       "milestone_payload": {
-        "title": "🎯 MODULE 1 COMPLETE!",
+        "title": "MODULE COMPLETED!",
         "badge_emoji": "⚖️",
-        "completed_topic": "Supreme Court का परिचय और संरचना",
+        "completed_topic": "Introduction to Supreme Court & Constitutional Basis",
         "xp_earned": 50,
-        "milestone_progress": "Module 1/10 Clear",
-        "motivational_quote": "Apex Court की basic समझ अब crystal clear! आगे और interesting parts आने वाले हैं!"
+        "milestone_progress": "Module 1/11 Clear",
+        "motivational_quote": "Apex Court ka concept crystal clear ho gaya! Ab dekhte hain SC mein judges kaise aate hain."
       },
       "navigation": {
-        "next": "card_09_appointment_intro",
-        "button_text": "Next Module ➔"
+        "next": "card_10_composition_evolution",
+        "button_text": "Start Next Module ➔"
       }
     },
     {
-      "card_id": "card_09_appointment_intro",
-      "card_slug": "card_09_appointment_intro",
+      "card_id": "card_10_composition_evolution",
+      "card_slug": "card_10_composition_evolution",
       "type": "chat",
-      "concept_id": "appointment_introduction",
+      "concept_id": "sc_composition",
       "level": 2,
-      "progress": {
-        "current": 9,
-        "total": 72
-      },
+      "progress": { "current": 10, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Raju, अब सबसे interesting part - Supreme Court के judges कैसे बनते हैं? क्या election होता है जैसे PM या President का?"
+          "text": "Raju, socho — jab Supreme Court 1950 mein shuru hua, tab kya usme aaj jitne hi judges the, ya kam the?"
         },
         {
           "speaker": "raju",
-          "text": "Nahi Sir, election तो नहीं होगा... शायद President appoint करते हैं?"
+          "text": "Sir shuruaat mein kam log honge, kyunki desh chhota shuru hua hoga, cases bhi kam hongi na?"
         },
         {
           "speaker": "aman",
-          "text": "Sharp guess! Article 124(2) कहता है - President Supreme Court के judges को appoint करते हैं। लेकिन यहाँ एक बड़ा twist है। President अपनी मर्जी से किसी को भी judge नहीं बना सकते। CJI और अन्य judges से consultation जरूरी है।"
+          "text": "Bilkul sahi soch! 1950 mein Supreme Court mein sirf 1 Chief Justice aur 7 other judges the — total 8 judges. Original Article 124(1) mein yehi likha tha. Lekin jaise-jaise cases badhti gayi, Parliament ne kanoon banakar ye number badhaaya."
         },
         {
           "speaker": "raju",
-          "text": "Consultation matlab? President को सलाह लेनी पड़ती है?"
+          "text": "Achha! To ye number fixed nahi hai, Parliament badal sakti hai? Aaj kitne judges hain sir?"
         }
       ],
       "navigation": {
-        "next": "card_10_collegium_system",
-        "button_text": "Next ➔"
+        "next": "card_11_current_strength_34",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_10_collegium_system",
-      "card_slug": "card_10_collegium_system",
+      "card_id": "card_11_current_strength_34",
+      "card_slug": "card_11_current_strength_34",
       "type": "chat",
-      "concept_id": "collegium_system_explained",
+      "concept_id": "sc_composition",
       "level": 2,
-      "progress": {
-        "current": 10,
-        "total": 72
-      },
+      "progress": { "current": 11, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "⭐ UPSC & BPSC Gold! यहाँ आता है 'Collegium System'। यह Constitution में लिखा नहीं है, लेकिन Supreme Court के तीन landmark judgments ने इसे establish किया: First Judges Case (1981), Second Judges Case (1993), Third Judges Case (1998)।"
+          "text": "Bilkul sahi pakda! Article 124(1) khud kehta hai ki judges ki sankhya Parliament kanoon banakar badal sakti hai. 2019 mein Supreme Court (Number of Judges) Amendment Act se ye sankhya badhakar 34 kar di gayi — 1 Chief Justice of India (CJI) + 33 other judges."
         },
         {
           "speaker": "raju",
-          "text": "Sir Collegium System kya hai? Aur judges खुद ही judges बनाते hain kya?"
+          "text": "34! Pehle 8 the, ab 34 ho gaye. Ye to bahut badh gaya sir. Sabse recent kab badha tha?"
         },
         {
           "speaker": "aman",
-          "text": "Dekho, Collegium में Chief Justice of India और 4 senior-most judges होते हैं। ये 5 judges मिलकर नए judges के नाम recommend करते हैं President को। President practically इन्हीं recommendations को मानते हैं - reject करना बहुत rare है। यानी judiciary खुद अपने judges चुनती है।"
+          "text": "2019 mein hi last badhotri hui — usse pehle 2009 mein 31 tak badhaya gaya tha, phir 2019 mein 34 kiya gaya. Ye timeline yaad rakho: 1950 mein 8, phir bade steps mein 31 (2009), phir 34 (2019)."
         },
         {
           "speaker": "raju",
-          "text": "Wow! Toh judges ही decide करते hain कौन judge बनेगा!"
+          "text": "8 se 31, phir 34 — ye numbers yaad rakhne honge. Ab batao sir, judges ki niyukti kaun karta hai?"
         }
       ],
       "navigation": {
-        "next": "card_11_qualifications",
-        "button_text": "Next ➔"
+        "next": "card_12_appointment_president",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_11_qualifications",
-      "card_slug": "card_11_qualifications",
+      "card_id": "card_12_appointment_president",
+      "card_slug": "card_12_appointment_president",
       "type": "chat",
-      "concept_id": "judge_qualifications",
+      "concept_id": "sc_composition",
       "level": 2,
-      "progress": {
-        "current": 11,
-        "total": 72
-      },
+      "progress": { "current": 12, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ab Supreme Court judge बनने की qualifications (Article 124(3)):\n\n1) भारत का नागरिक हो\n2) कम से कम 5 साल High Court judge रहा हो, या\n3) कम से कम 10 साल High Court में advocate रहा हो, या\n4) President की नजर में एक distinguished jurist हो"
+          "text": "Article 124(2) ke anusar SC ke judges ko 'President' niyukt karte hain. Lekin sirf naam se President appoint nahi karte — ek poori 'consultation process' follow hoti hai. CJI ki niyukti ke liye President 'such judges' se consult karte hain jinhe wo zaroori samjhein."
         },
         {
           "speaker": "raju",
-          "text": "Sir 'distinguished jurist' matlab? Koi भी law expert बन सकता hai?"
+          "text": "Consultation matlab? President kisi se salaah lete hain phir appoint karte hain?"
         },
         {
           "speaker": "aman",
-          "text": "⭐ BPSC Trap! Jurist matlab कानून का विद्वान। लेकिन यह बहुत subjective है और इस route से appointment बहुत rare है। Practically ज्यादातर judges या तो High Court judges से आते हैं या senior advocates से। Age limit Constitution में नहीं दी गई, लेकिन retirement age 65 years है।"
+          "text": "Bilkul sahi! Aur ye consultation process hi aage chalkar bahut bada issue bana — kyunki Constitution mein 'consultation' likha tha, lekin iska matlab kya hoga — 'sirf salaah lena' ya 'salaah maanna zaroori hai' — iske baare mein Supreme Court ke khud kai landmark judgements aaye. Isi se 'Collegium System' ka janam hua, jo hum Module 9 mein detail se padhenge."
         },
         {
           "speaker": "raju",
-          "text": "Achhaa! Matlab 3 routes हैं लेकिन first दो common हैं!"
+          "text": "Achha, ye 'Collegium System' wala part baad mein aayega — abhi bas itna samajh liya ki President appoint karte hain with consultation."
         }
       ],
       "navigation": {
-        "next": "card_12_oath_salary",
-        "button_text": "Next ➔"
+        "next": "card_13_ad_hoc_retired_judges",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_12_oath_salary",
-      "card_slug": "card_12_oath_salary",
+      "card_id": "card_13_ad_hoc_retired_judges",
+      "card_slug": "card_13_ad_hoc_retired_judges",
       "type": "chat",
-      "concept_id": "oath_salary_tenure",
+      "concept_id": "sc_composition",
       "level": 2,
-      "progress": {
-        "current": 12,
-        "total": 72
-      },
+      "progress": { "current": 13, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Supreme Court judges को शपथ President या उनके द्वारा नियुक्त व्यक्ति दिलाते हैं। Oath का format Third Schedule में दिया है। Salary और allowances Parliament तय करती है - currently CJI को ₹2.80 lakh per month और other judges को ₹2.50 lakh per month मिलते हैं।"
+          "text": "Ab do special provisions yaad karo jo bahut kam log jaante hain — Article 127 kehta hai ki agar SC mein kaam ke liye quorum poora karne ke liye judges kam pad jaayein, to CJI, President ki manzoori se, 'ad hoc judge' — matlab kisi High Court ke qualified judge ko — temporarily bula sakte hain."
         },
         {
           "speaker": "raju",
-          "text": "Sir retirement कब होती hai?"
+          "text": "Achha! High Court ka judge temporary Supreme Court mein aa sakta hai? Interesting hai ye!"
         },
         {
           "speaker": "aman",
-          "text": "Article 124(2): Supreme Court judge 65 साल की उम्र तक रहते हैं। ध्यान दो - High Court judge 62 साल में retire होते हैं, लेकिन Supreme Court में 65 साल। अगर कोई judge चाहे तो पहले भी resign कर सकता है।"
+          "text": "Bilkul! Aur Article 128 mein ek aur interesting provision hai — CJI, President ki manzoori se, kisi retired SC judge ya retired High Court judge (jo SC judge banne yogya ho) ko bhi request kar sakte hain SC mein temporarily sitting karne ke liye — inhe 'retired judges sitting as SC judges' kaha jaata hai."
         },
         {
           "speaker": "raju",
-          "text": "Samajh gaya! 65 years = Supreme Court, 62 years = High Court!"
+          "text": "Wow, matlab retire ho chuke judge bhi wapas aa sakte hain kaam karne? Ye to bahut flexible system hai sir!"
         }
       ],
       "navigation": {
-        "next": "card_13_quiz_collegium",
-        "button_text": "Quiz Time ➔"
+        "next": "card_14_quiz1",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_13_quiz_collegium",
-      "card_slug": "card_13_quiz_collegium",
+      "card_id": "card_14_quiz1",
+      "card_slug": "card_14_quiz1",
       "type": "quiz",
-      "concept_id": "collegium_quiz",
+      "concept_id": "sc_composition",
       "level": 2,
-      "progress": {
-        "current": 13,
-        "total": 72
-      },
+      "progress": { "current": 14, "total": 92 },
       "quiz_payload": {
-        "question": "Supreme Court की Collegium System में कितने judges होते हैं?",
+        "question": "1950 mein jab Supreme Court shuru hua, tab uski original sanctioned strength kya thi?",
         "options": [
-          {"id": "A", "text": "3 (CJI + 2 senior judges)"},
-          {"id": "B", "text": "5 (CJI + 4 senior judges)"},
-          {"id": "C", "text": "7 (CJI + 6 senior judges)"},
-          {"id": "D", "text": "9 (CJI + 8 senior judges)"}
+          { "id": "A", "text": "1 CJI + 7 other judges = 8 total" },
+          { "id": "B", "text": "1 CJI + 15 other judges = 16 total" },
+          { "id": "C", "text": "1 CJI + 30 other judges = 31 total" },
+          { "id": "D", "text": "1 CJI + 33 other judges = 34 total" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "1950 mein original Article 124(1) ke anusar Supreme Court mein 1 CJI + 7 other judges the, total 8. Ab 2019 ke amendment ke baad ye 34 (1 CJI + 33 others) hai."
+      },
+      "navigation": {
+        "next": "card_15_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz2",
+      "card_slug": "card_15_quiz2",
+      "type": "quiz",
+      "concept_id": "sc_composition",
+      "level": 2,
+      "progress": { "current": 15, "total": 92 },
+      "quiz_payload": {
+        "question": "Supreme Court judges ki sankhya kaun badal sakta hai?",
+        "options": [
+          { "id": "A", "text": "Sirf President apni marzi se" },
+          { "id": "B", "text": "Parliament kanoon banakar (Article 124(1))" },
+          { "id": "C", "text": "Chief Justice of India khud" },
+          { "id": "D", "text": "Kabhi badal hi nahi sakti, ye fixed hai" }
         ],
         "correct_option_id": "B",
-        "explanation": "⭐ UPSC Favorite! Collegium System में Chief Justice of India और 4 सबसे senior judges होते हैं - कुल 5 judges। यह system तीन Judges Cases (1981, 1993, 1998) के through establish हुआ। ये 5 judges मिलकर नए judges के appointment के लिए recommendations देते हैं President को।"
+        "explanation": "Article 124(1) ke anusar Parliament kanoon banakar SC judges ki sankhya badal sakti hai. 2019 mein aakhri baar isse badhakar 34 kiya gaya (1 CJI + 33 other judges)."
       },
       "navigation": {
-        "next": "card_14_quiz_retirement_age",
-        "button_text": "Next Question ➔"
+        "next": "card_16_quiz3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_14_quiz_retirement_age",
-      "card_slug": "card_14_quiz_retirement_age",
+      "card_id": "card_16_quiz3",
+      "card_slug": "card_16_quiz3",
       "type": "quiz",
-      "concept_id": "retirement_age_quiz",
+      "concept_id": "sc_composition",
       "level": 2,
-      "progress": {
-        "current": 14,
-        "total": 72
-      },
+      "progress": { "current": 16, "total": 92 },
       "quiz_payload": {
-        "question": "Supreme Court के judge किस उम्र में retire होते हैं?",
+        "question": "Article 128 ke anusar kisko SC mein temporarily sitting karne ke liye request kiya ja sakta hai?",
         "options": [
-          {"id": "A", "text": "60 वर्ष"},
-          {"id": "B", "text": "62 वर्ष"},
-          {"id": "C", "text": "65 वर्ष"},
-          {"id": "D", "text": "70 वर्ष"}
+          { "id": "A", "text": "Kisi bhi practicing advocate ko" },
+          { "id": "B", "text": "Retired SC judge ya retired HC judge (jo SC judge yogya ho) ko" },
+          { "id": "C", "text": "Attorney General ko" },
+          { "id": "D", "text": "Kisi bhi State Governor ko" }
         ],
-        "correct_option_id": "C",
-        "explanation": "Article 124(2) के अनुसार Supreme Court के judges 65 वर्ष की आयु में retire होते हैं। Confusion trap: High Court के judges 62 वर्ष में retire होते हैं। यह difference याद रखना BPSC/SSC के लिए जरूरी है।"
+        "correct_option_id": "B",
+        "explanation": "Article 128 ke anusar CJI, President ki manzoori se, kisi retired SC judge ya retired HC judge (jo SC judge banne yogya ho) ko SC mein temporarily sitting ke liye request kar sakte hain."
       },
       "navigation": {
-        "next": "card_15_quiz_qualifications",
-        "button_text": "Next Question ➔"
+        "next": "card_17_milestone2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_15_quiz_qualifications",
-      "card_slug": "card_15_quiz_qualifications",
-      "type": "quiz",
-      "concept_id": "qualifications_quiz",
-      "level": 2,
-      "progress": {
-        "current": 15,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Supreme Court judge बनने के लिए High Court में advocate के रूप में कितने वर्षों का अनुभव होना चाहिए?",
-        "options": [
-          {"id": "A", "text": "5 वर्ष"},
-          {"id": "B", "text": "7 वर्ष"},
-          {"id": "C", "text": "10 वर्ष"},
-          {"id": "D", "text": "15 वर्ष"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "Article 124(3) के अनुसार Supreme Court judge बनने के लिए व्यक्ति को कम से कम 10 वर्षों तक High Court में advocate होना चाहिए। अन्य routes: 5 वर्ष High Court judge, या President की नज़र में distinguished jurist।"
-      },
-      "navigation": {
-        "next": "card_16_milestone_appointment",
-        "button_text": "Check & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_16_milestone_appointment",
-      "card_slug": "card_16_milestone_appointment",
+      "card_id": "card_17_milestone2",
+      "card_slug": "card_17_milestone2",
       "type": "milestone",
-      "concept_id": "appointment_complete",
+      "concept_id": "sc_composition",
       "level": 2,
-      "progress": {
-        "current": 16,
-        "total": 72
-      },
+      "progress": { "current": 17, "total": 92 },
       "milestone_payload": {
-        "title": "💪 MODULE 2 COMPLETE!",
+        "title": "MODULE COMPLETED!",
         "badge_emoji": "👨‍⚖️",
-        "completed_topic": "Supreme Court Judges की नियुक्ति, योग्यता और कार्यकाल",
-        "xp_earned": 60,
-        "milestone_progress": "Module 2/10 Clear",
-        "motivational_quote": "Collegium System, 65 years retirement, 10 years advocacy - सब याद!"
+        "completed_topic": "Composition & Strength of Supreme Court",
+        "xp_earned": 55,
+        "milestone_progress": "Module 2/11 Clear",
+        "motivational_quote": "8 se 34 ka safar yaad ho gaya! Ab dekhte hain judge banne ke liye kya qualification chahiye."
       },
       "navigation": {
-        "next": "card_17_removal_intro",
-        "button_text": "Next: Removal Process ➔"
+        "next": "card_18_qualification_intro",
+        "button_text": "Start Next Module ➔"
       }
     },
     {
-      "card_id": "card_17_removal_intro",
-      "card_slug": "card_17_removal_intro",
+      "card_id": "card_18_qualification_intro",
+      "card_slug": "card_18_qualification_intro",
       "type": "chat",
-      "concept_id": "removal_introduction",
-      "level": 3,
-      "progress": {
-        "current": 17,
-        "total": 72
-      },
+      "concept_id": "sc_qualification",
+      "level": 2,
+      "progress": { "current": 18, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Raju, अब एक serious topic - Supreme Court judge को हटाया कैसे जा सकता है? क्या President जब चाहे हटा सकते हैं?"
+          "text": "Ab batao Raju — SC judge banne ke liye kya-kya chahiye? Article 124(3) mein 3 raaste (paths) diye gaye hain jinse koi vyakti SC judge ban sakta hai. Pehla — Indian citizen hona zaroori hai, ye sabke liye common hai."
         },
         {
           "speaker": "raju",
-          "text": "Nahi Sir! Judge itni important position hai, easily तो नहीं हटा सकते... शायद कोई special process hoga?"
+          "text": "Achha, aur baaki do raaste kya hain sir?"
         },
         {
           "speaker": "aman",
-          "text": "Bilkul sahi! Article 124(4) में Impeachment का process दिया गया है। यह बहुत strict process है ताकि judiciary की independence बनी रहे। Removal केवल दो grounds पर हो सकता है: (1) Proven Misbehaviour, या (2) Incapacity।"
+          "text": "Doosra raasta — koi vyakti kam se kam 5 saal tak High Court judge raha ho (ek ya adhik High Courts mein), ya teesra raasta — koi vyakti kam se kam 10 saal tak High Court mein advocate raha ho (ek ya adhik High Courts mein)."
         },
         {
           "speaker": "raju",
-          "text": "Sir Incapacity matlab? Aur Misbehaviour kya hoga?"
+          "text": "5 saal judge, ya 10 saal advocate. Aur ek teesra bhi bola tha aapne — wo kya hai sir?"
         }
       ],
       "navigation": {
-        "next": "card_18_grounds_removal",
-        "button_text": "Next ➔"
+        "next": "card_19_distinguished_jurist",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_18_grounds_removal",
-      "card_slug": "card_18_grounds_removal",
+      "card_id": "card_19_distinguished_jurist",
+      "card_slug": "card_19_distinguished_jurist",
       "type": "chat",
-      "concept_id": "removal_grounds",
-      "level": 3,
-      "progress": {
-        "current": 18,
-        "total": 72
-      },
+      "concept_id": "sc_qualification",
+      "level": 2,
+      "progress": { "current": 19, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Incapacity matlab शारीरिक या मानसिक अक्षमता - judge अपना काम ठीक से नहीं कर पा रहा। Misbehaviour में आता है - corruption, moral turpitude (नैतिक पतन), या अन्य गंभीर misconduct। ⭐ BPSC Trap: Political reasons पर judge को नहीं हटाया जा सकता!"
+          "text": "Bahut achha yaad rakha! Teesra raasta hai — 'Distinguished Jurist' — matlab koi bahut vidwan (learned) legal scholar, jise President ki nazar mein kanoon ka bahut gehra gyaan ho. Iske liye koi minimum years ki requirement nahi likhi hai."
         },
         {
           "speaker": "raju",
-          "text": "Achhaa! Toh केवल serious cases में ही removal possible hai। Process kya hai Sir?"
+          "text": "Distinguished jurist? Matlab koi law professor bhi ban sakta hai SC judge, bina judge ya advocate rahe bhi?"
         },
         {
           "speaker": "aman",
-          "text": "Process बहुत tough है:\n\nStep 1: Parliament के किसी भी House में motion लाया जाता है\nStep 2: उस House की total membership के कम से कम 100 members (Lok Sabha में) या 50 members (Rajya Sabha में) का signature चाहिए\nStep 3: उस House में Special Majority से pass होना चाहिए"
+          "text": "Theoretically haan, Constitution mein ye option hai. Lekin practically, aaj tak koi bhi 'Distinguished Jurist' ke roop mein directly SC judge nahi bana hai — ye ek unused provision hai. Ye BPSC ka interesting trap hai — 'kya kisi Distinguished Jurist ko SC judge banaya gaya hai?' Jawab — Constitutional provision hai, par practically use nahi hua."
         },
         {
           "speaker": "raju",
-          "text": "Special Majority matlab?"
+          "text": "Achhaaaa! Ye to bahut sneaky trap hai — theory mein possible, practically kabhi hua nahi. Yaad rakhunga sir!"
         }
       ],
       "navigation": {
-        "next": "card_19_impeachment_process",
-        "button_text": "Next ➔"
+        "next": "card_20_no_age_limit_appointment",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_19_impeachment_process",
-      "card_slug": "card_19_impeachment_process",
+      "card_id": "card_20_no_age_limit_appointment",
+      "card_slug": "card_20_no_age_limit_appointment",
       "type": "chat",
-      "concept_id": "impeachment_detailed_process",
-      "level": 3,
-      "progress": {
-        "current": 19,
-        "total": 72
-      },
+      "concept_id": "sc_qualification",
+      "level": 2,
+      "progress": { "current": 20, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Special Majority = (1) उस House की total membership का majority, और (2) उस House में present और vote करने वाले members का 2/3 majority। Dono conditions satisfy होनी चाहिए!"
+          "text": "Ek aur bahut important trap — SC judge banne ke liye Constitution mein koi MINIMUM AGE define NAHI ki gayi hai! Sirf High Court judge ke 5 saal ya advocate ke 10 saal ki 'experience' requirement hai, age directly nahi."
         },
         {
           "speaker": "raju",
-          "text": "Wow! Bahut strict hai! Fir kya hota hai Sir?"
+          "text": "Hain?? Koi minimum age nahi?? To phir retirement age hogi na kम se kam?"
         },
         {
           "speaker": "aman",
-          "text": "⭐ UPSC Pattern! Step 4: अगर एक House में pass हो गया, तो दूसरे House में जाता है। दूसरा House investigate करता है (committee बनाकर)। Step 5: दूसरे House में भी same Special Majority से pass होना चाहिए। Step 6: दोनों Houses से pass होने के बाद President removal order issue करते हैं।"
+          "text": "Bahut sahi doubt! Haan, retirement age hai — Article 124(2) ke proviso ke anusar SC judge 65 saal ki umra tak kaam karte hain, phir retire ho jaate hain. Ye High Court judges se alag hai jo 62 saal mein retire hote hain."
         },
         {
           "speaker": "raju",
-          "text": "Sir कभी किसी judge को हटाया गया hai India में?"
+          "text": "SC judge 65 par, HC judge 62 par! Ye fark yaad rakhna zaroori hai — HC se kam retirement age hai to SC judge zyada der tak kaam kar sakte hain."
         }
       ],
       "navigation": {
-        "next": "card_20_impeachment_history",
-        "button_text": "Next ➔"
+        "next": "card_21_quiz1",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_20_impeachment_history",
-      "card_slug": "card_20_impeachment_history",
-      "type": "chat",
-      "concept_id": "impeachment_historical_cases",
-      "level": 3,
-      "progress": {
-        "current": 20,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC & UPSC Favorite Fact! अभी तक कभी भी किसी Supreme Court judge को successfully impeach नहीं किया गया! कुछ attempts हुए हैं - जैसे Justice V. Ramaswami (1993) के खिलाफ motion आया था लेकिन Lok Sabha में fail हो गया क्योंकि required majority नहीं मिली।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab process इतना tough है कि कभी successful हुआ ही नहीं!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! यही intent था - judiciary की independence protect करना। Judges को political pressure से बचाना। इसीलिए removal process deliberately कठिन रखा गया है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya Sir! Judicial independence के लिए tough process!"
-        }
-      ],
-      "navigation": {
-        "next": "card_21_quiz_removal_grounds",
-        "button_text": "Quiz Time ➔"
-      }
-    },
-    {
-      "card_id": "card_21_quiz_removal_grounds",
-      "card_slug": "card_21_quiz_removal_grounds",
+      "card_id": "card_21_quiz1",
+      "card_slug": "card_21_quiz1",
       "type": "quiz",
-      "concept_id": "removal_grounds_quiz",
-      "level": 3,
-      "progress": {
-        "current": 21,
-        "total": 72
-      },
+      "concept_id": "sc_qualification",
+      "level": 2,
+      "progress": { "current": 21, "total": 92 },
       "quiz_payload": {
-        "question": "Supreme Court judge को किन grounds पर remove किया जा सकता है?",
+        "question": "Article 124(3) ke anusar SC judge banne ke liye nimnlikhit mein se kaunsa raasta VALID NAHI hai?",
         "options": [
-          {"id": "A", "text": "केवल Proven Misbehaviour"},
-          {"id": "B", "text": "केवल Incapacity"},
-          {"id": "C", "text": "Proven Misbehaviour या Incapacity"},
-          {"id": "D", "text": "राजनीतिक कारणों से"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "Article 124(4) के अनुसार Supreme Court judge को केवल दो grounds पर remove किया जा सकता है: (1) Proven Misbehaviour (साबित दुर्व्यवहार), या (2) Incapacity (अक्षमता - शारीरिक/मानसिक)। Political reasons पर removal नहीं हो सकता - यह judicial independence की रक्षा के लिए है।"
-      },
-      "navigation": {
-        "next": "card_22_quiz_special_majority",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_22_quiz_special_majority",
-      "card_slug": "card_22_quiz_special_majority",
-      "type": "quiz",
-      "concept_id": "special_majority_quiz",
-      "level": 3,
-      "progress": {
-        "current": 22,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Judge के impeachment के लिए Parliament में कौन सी majority चाहिए?",
-        "options": [
-          {"id": "A", "text": "Simple Majority"},
-          {"id": "B", "text": "Absolute Majority"},
-          {"id": "C", "text": "Special Majority (Total membership का majority + Present का 2/3)"},
-          {"id": "D", "text": "केवल Present और Voting का 2/3"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "⭐ BPSC Multi-choice Trap! Judge के impeachment के लिए Special Majority चाहिए जिसमें दो conditions हैं: (1) उस House की total membership का majority, AND (2) Present और vote करने वाले members का 2/3 majority। दोनों conditions together satisfy होनी चाहिए।"
-      },
-      "navigation": {
-        "next": "card_23_quiz_impeachment_history",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_23_quiz_impeachment_history",
-      "card_slug": "card_23_quiz_impeachment_history",
-      "type": "quiz",
-      "concept_id": "impeachment_history_quiz",
-      "level": 3,
-      "progress": {
-        "current": 23,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "अभी तक कितने Supreme Court judges को successfully impeach किया गया है?",
-        "options": [
-          {"id": "A", "text": "1"},
-          {"id": "B", "text": "2"},
-          {"id": "C", "text": "3"},
-          {"id": "D", "text": "कोई नहीं (0)"}
+          { "id": "A", "text": "Kam se kam 5 saal High Court judge rahe hon" },
+          { "id": "B", "text": "Kam se kam 10 saal High Court advocate rahe hon" },
+          { "id": "C", "text": "President ki nazar mein Distinguished Jurist hon" },
+          { "id": "D", "text": "Kam se kam 15 saal Lok Sabha ke Member of Parliament rahe hon" }
         ],
         "correct_option_id": "D",
-        "explanation": "⭐ SSC & Railway Favorite! अभी तक कभी भी किसी Supreme Court judge को successfully impeach नहीं किया गया। Justice V. Ramaswami (1993) के खिलाफ impeachment motion आया था लेकिन Lok Sabha में required majority न मिलने से fail हो गया। यह judicial independence की मजबूती का प्रमाण है।"
+        "explanation": "MP hone ka SC judge banne se koi sambandh nahi hai — ye kabhi bhi valid path nahi raha. Valid paths hain: 5 saal HC judge, 10 saal HC advocate, ya Distinguished Jurist."
       },
       "navigation": {
-        "next": "card_24_milestone_removal",
-        "button_text": "Check & Continue ➔"
+        "next": "card_22_quiz2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_24_milestone_removal",
-      "card_slug": "card_24_milestone_removal",
-      "type": "milestone",
-      "concept_id": "removal_complete",
-      "level": 3,
-      "progress": {
-        "current": 24,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "🎯 MODULE 3 COMPLETE!",
-        "badge_emoji": "⚖️",
-        "completed_topic": "Supreme Court Judge का Impeachment Process",
-        "xp_earned": 60,
-        "milestone_progress": "Module 3/10 Clear",
-        "motivational_quote": "Impeachment की पूरी process अब clear - और यह fact भी कि कभी successful नहीं हुआ!"
-      },
-      "navigation": {
-        "next": "card_25_jurisdiction_intro",
-        "button_text": "Next: Jurisdictions ➔"
-      }
-    },
-    {
-      "card_id": "card_25_jurisdiction_intro",
-      "card_slug": "card_25_jurisdiction_intro",
-      "type": "chat",
-      "concept_id": "jurisdiction_introduction",
-      "level": 4,
-      "progress": {
-        "current": 25,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, ab सबसे interesting और exam-important part - Supreme Court की Powers और Jurisdictions! Jurisdiction matlab अधिकार क्षेत्र - किस तरह के cases Supreme Court सुन सकती है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir toh सभी cases Supreme Court में आ सकते hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi! Supreme Court के पास 5 तरह के jurisdictions हैं:\n(1) Original Jurisdiction\n(2) Appellate Jurisdiction\n(3) Advisory Jurisdiction\n(4) Writ Jurisdiction\n(5) Review Jurisdiction\n\nहर एक का अलग मतलब है। आओ एक-एक करके समझते हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Original matlab पहली बार? Directly Supreme Court में case?"
-        }
-      ],
-      "navigation": {
-        "next": "card_26_original_jurisdiction",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_26_original_jurisdiction",
-      "card_slug": "card_26_original_jurisdiction",
-      "type": "chat",
-      "concept_id": "original_jurisdiction_explained",
-      "level": 4,
-      "progress": {
-        "current": 26,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Perfect understanding! Original Jurisdiction (Article 131) matlab वो cases जो directly Supreme Court में ही शुरू होते हैं - नीचे की courts से नहीं आते। ⭐ BPSC Favorite: यह केवल disputes between (1) केंद्र vs राज्य, (2) राज्य vs राज्य, (3) केंद्र और कुछ राज्य vs बाकी राज्य - ऐसे federal disputes में होता है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaa! Matlab government entities के बीच के झगड़े?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! जैसे अगर Karnataka और Tamil Nadu के बीच Cauvery River के पानी को लेकर विवाद है, तो यह directly Supreme Court में जाएगा। लेकिन ध्यान दो - यह केवल उन disputes में है जिनमें कोई legal right involved हो।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya! Inter-state या center-state disputes!"
-        }
-      ],
-      "navigation": {
-        "next": "card_27_appellate_jurisdiction",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_27_appellate_jurisdiction",
-      "card_slug": "card_27_appellate_jurisdiction",
-      "type": "chat",
-      "concept_id": "appellate_jurisdiction_explained",
-      "level": 4,
-      "progress": {
-        "current": 27,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Appellate Jurisdiction (Article 132-136) matlab अपील सुनना। जब कोई High Court का decision से संतुष्ट नहीं होता, तो वो Supreme Court में appeal कर सकता है। यह तीन प्रकार के matters में होता है:\n\n(A) Constitutional matters (Article 132)\n(B) Civil matters (Article 133)\n(C) Criminal matters (Article 134)"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir हर case में appeal हो सकती hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi! Conditions हैं। Constitutional matters में अगर High Court certify करे कि case में substantial question of law as to interpretation of Constitution है। Civil में property value ₹20,000 से ज्यादा हो (पुराना provision, ab Parliament ne change kiya)। Criminal में अगर death sentence confirm हुआ हो या High Court ने acquittal को conviction में बदला हो।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab हर type में specific conditions hain!"
-        }
-      ],
-      "navigation": {
-        "next": "card_28_slp_explained",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_28_slp_explained",
-      "card_slug": "card_28_slp_explained",
-      "type": "chat",
-      "concept_id": "special_leave_petition",
-      "level": 4,
-      "progress": {
-        "current": 28,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ UPSC Gold! Ab सुनो Supreme Court की एक special power - Article 136: Special Leave Petition (SLP)। यह बहुत unique power है। Supreme Court किसी भी court या tribunal के किसी भी judgment/order के खिलाफ appeal सुन सकती है - बिना किसी condition के!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab Supreme Court अपनी मर्जी से कोई भी case सुन सकती hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! SLP Supreme Court के discretion पर है। अगर Court को लगे कि किसी case में substantial question of law या justice है, तो वो special leave grant कर सकती है। यह एक safety valve है ताकि कोई भी genuine case छूट न जाए। ज्यादातर cases SLP के through ही Supreme Court में आते हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wow! Ye तो बहुत powerful provision hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_29_advisory_jurisdiction",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_29_advisory_jurisdiction",
-      "card_slug": "card_29_advisory_jurisdiction",
-      "type": "chat",
-      "concept_id": "advisory_jurisdiction_explained",
-      "level": 4,
-      "progress": {
-        "current": 29,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Advisory Jurisdiction (Article 143): President किसी public importance या constitutional interpretation के matter पर Supreme Court से advice मांग सकते हैं। Supreme Court अपनी राय देती है - लेकिन यह 'advice' होती है, binding नहीं!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab Supreme Court की advice को मानना जरूरी नहीं?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC Trap! Exactly! Advisory opinion binding नहीं होती - President या Parliament इसे accept या reject कर सकते हैं। लेकिन practically Supreme Court की राय को बहुत weight दिया जाता है। Example: Ayodhya dispute में 1993 में Presidential reference हुआ था।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaa! Legal advice देने की power लेकिन binding नहीं!"
-        }
-      ],
-      "navigation": {
-        "next": "card_30_quiz_original_jurisdiction",
-        "button_text": "Quiz Time ➔"
-      }
-    },
-    {
-      "card_id": "card_30_quiz_original_jurisdiction",
-      "card_slug": "card_30_quiz_original_jurisdiction",
+      "card_id": "card_22_quiz2",
+      "card_slug": "card_22_quiz2",
       "type": "quiz",
-      "concept_id": "original_jurisdiction_quiz",
-      "level": 4,
-      "progress": {
-        "current": 30,
-        "total": 72
-      },
+      "concept_id": "sc_qualification",
+      "level": 2,
+      "progress": { "current": 22, "total": 92 },
       "quiz_payload": {
-        "question": "Supreme Court का Original Jurisdiction किस Article में दिया गया है?",
+        "question": "SC judges kis umra mein retire hote hain, aur ye High Court judges se kaise alag hai?",
         "options": [
-          {"id": "A", "text": "Article 124"},
-          {"id": "B", "text": "Article 131"},
-          {"id": "C", "text": "Article 136"},
-          {"id": "D", "text": "Article 143"}
+          { "id": "A", "text": "SC judge 62 saal, HC judge 65 saal" },
+          { "id": "B", "text": "SC judge 65 saal, HC judge 62 saal" },
+          { "id": "C", "text": "Dono 65 saal mein retire hote hain" },
+          { "id": "D", "text": "Dono 60 saal mein retire hote hain" }
         ],
         "correct_option_id": "B",
-        "explanation": "Article 131 में Supreme Court का Original Jurisdiction दिया गया है। यह केंद्र और राज्यों के बीच या राज्यों के आपस में disputes में लागू होता है। ये वो cases हैं जो directly Supreme Court में शुरू होते हैं, नीचे की courts से नहीं आते।"
+        "explanation": "SC judges 65 saal ki umra mein retire hote hain (Article 124(2) proviso), jabki High Court judges 62 saal mein retire hote hain (Article 217) — ye zyada common exam trap hai."
       },
       "navigation": {
-        "next": "card_31_quiz_slp",
-        "button_text": "Next Question ➔"
+        "next": "card_23_quiz3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_31_quiz_slp",
-      "card_slug": "card_31_quiz_slp",
+      "card_id": "card_23_quiz3",
+      "card_slug": "card_23_quiz3",
       "type": "quiz",
-      "concept_id": "slp_quiz",
-      "level": 4,
-      "progress": {
-        "current": 31,
-        "total": 72
-      },
+      "concept_id": "sc_qualification",
+      "level": 2,
+      "progress": { "current": 23, "total": 92 },
       "quiz_payload": {
-        "question": "Special Leave Petition (SLP) किस Article के तहत दायर की जाती है?",
+        "question": "Nimnlikhit kathanon par vichar karein:\n1) SC judge banne ke liye Constitution mein koi minimum age define nahi ki gayi hai.\n2) Aaj tak koi bhi vyakti 'Distinguished Jurist' ke roop mein SC judge nahi bana hai, halaanki ye Constitutional provision hai.\nSahi kathan chuniye:",
         "options": [
-          {"id": "A", "text": "Article 132"},
-          {"id": "B", "text": "Article 134"},
-          {"id": "C", "text": "Article 136"},
-          {"id": "D", "text": "Article 143"}
+          { "id": "A", "text": "Kewal Kathan 1 sahi hai" },
+          { "id": "B", "text": "Kewal Kathan 2 sahi hai" },
+          { "id": "C", "text": "Dono kathan sahi hain" },
+          { "id": "D", "text": "Dono kathan galat hain" }
         ],
         "correct_option_id": "C",
-        "explanation": "⭐ SSC & UPSC Favorite! Article 136 Special Leave Petition (SLP) से संबंधित है। यह Supreme Court को discretionary power देता है कि वो किसी भी court या tribunal के किसी भी judgment के खिलाफ appeal सुन सके। यह बहुत व्यापक power है और ज्यादातर cases SLP के through ही Supreme Court में आते हैं।"
+        "explanation": "Dono kathan sahi hain — Constitution mein SC judge ke liye koi minimum age nahi hai, aur 'Distinguished Jurist' wala provision aaj tak practically use nahi hua hai."
       },
       "navigation": {
-        "next": "card_32_quiz_advisory",
-        "button_text": "Next Question ➔"
+        "next": "card_24_milestone3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_32_quiz_advisory",
-      "card_slug": "card_32_quiz_advisory",
-      "type": "quiz",
-      "concept_id": "advisory_quiz",
-      "level": 4,
-      "progress": {
-        "current": 32,
-        "total": 72
+      "card_id": "card_24_milestone3",
+      "card_slug": "card_24_milestone3",
+      "type": "milestone",
+      "concept_id": "sc_qualification",
+      "level": 2,
+      "progress": { "current": 24, "total": 92 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎓",
+        "completed_topic": "Qualification & Retirement Age of Judges",
+        "xp_earned": 55,
+        "milestone_progress": "Module 3/11 Clear",
+        "motivational_quote": "Distinguished Jurist wala trap crack ho gaya! Ab oath, salary aur removal dekhte hain."
       },
+      "navigation": {
+        "next": "card_25_oath_article124_6",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_25_oath_article124_6",
+      "card_slug": "card_25_oath_article124_6",
+      "type": "chat",
+      "concept_id": "sc_oath_salary_removal",
+      "level": 3,
+      "progress": { "current": 25, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab SC judge ki shapath (oath) ke baare mein — Article 124(6) ke anusar SC judge ko shapath kaun dilaata hai, guess karo?"
+        },
+        {
+          "speaker": "raju",
+          "text": "President honge sir, jaise VP aur CAG ko bhi President hi shapath dilaate hain."
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! President (ya President dwara niyukt koi vyakti) SC judges ko shapath dilaate hain. Shapath mein judge ye kehta hai ki wo Constitution ke prati sachchi nishtha rakhega, apne kartavya bina dar ya prem-bhaav (fear or favour) ke, bina anurag ya dwesh (affection or ill-will) ke nibhayega, aur Constitution ki raksha karega."
+        },
+        {
+          "speaker": "raju",
+          "text": "'Bina dar, bina prem-bhaav' — ye important line hai sir! Ye judicial independence ka core spirit lagta hai."
+        }
+      ],
+      "navigation": {
+        "next": "card_26_salary_cji_vs_judge",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_26_salary_cji_vs_judge",
+      "card_slug": "card_26_salary_cji_vs_judge",
+      "type": "chat",
+      "concept_id": "sc_oath_salary_removal",
+      "level": 3,
+      "progress": { "current": 26, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab salary ki baat karte hain — SC judges ki salary Second Schedule mein di gayi hai aur Parliament kanoon se ise revise kar sakti hai. Current mein CJI ki salary Rs 2,80,000 prati mah aur other SC judges ki salary Rs 2,50,000 prati mah hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "CJI 2.8 lakh, judges 2.5 lakh. Aur ye salary bhi kya kabhi ghata sakte hain sarkar?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut zaroori sawaal! Article 125(2) ke proviso mein kaha gaya hai ki judge ke 'privileges, allowances, aur pension rights' unke niyukti ke baad, unke nuksaan mein nahi badle ja sakte — SAAMANYA sthiti mein. Lekin ek exception hai — agar 'Financial Emergency' (Article 360) lagu ho, tab reduction ho sakta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Normal mein kabhi salary kam nahi hogi, par Financial Emergency mein ho sakti hai. Ye exception yaad rakhunga sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_27_removal_intro_impeachment",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_27_removal_intro_impeachment",
+      "card_slug": "card_27_removal_intro_impeachment",
+      "type": "chat",
+      "concept_id": "sc_oath_salary_removal",
+      "level": 3,
+      "progress": { "current": 27, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab sabse important topic — SC judge ko hataya kaise jaata hai? Article 124(4) ke anusar isse 'removal' kaha jaata hai, jise 'impeachment' bhi bola jaata hai. Ye process President karte hain, lekin sirf Parliament ke resolution ke baad."
+        },
+        {
+          "speaker": "raju",
+          "text": "Impeachment! Ye to President wala process hai na sir? SC judge ka bhi wahi hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut achha connect! Similar hai, par exact same nahi. SC judge ko hataane ke liye — 1) dono sadan mein resolution laaya jaata hai, 2) special majority chahiye — total membership ka majority + present-voting ka 2/3rd, 3) ground hona chahiye 'proved misbehaviour ya incapacity', aur 4) SAME session mein dono sadan mein resolution paas hona zaroori hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Same session mein dono sadan! Ye extra condition hai jo President ke impeachment mein nahi thi na?"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_judges_inquiry_act",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_28_judges_inquiry_act",
+      "card_slug": "card_28_judges_inquiry_act",
+      "type": "chat",
+      "concept_id": "sc_oath_salary_removal",
+      "level": 3,
+      "progress": { "current": 28, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi observation! Aur ek zaroori procedural detail — Judges (Inquiry) Act, 1968 ke anusar, jab removal ka motion Parliament mein lagaya jaata hai, to pehle ek 3-member committee banti hai (ek SC judge, ek HC Chief Justice, aur ek distinguished jurist) jo charges ki janch karti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab pehle ek committee investigate karti hai, tab jaake Parliament mein vote hota hai? Ye ek extra safeguard hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Agar committee 'guilty' finding de, tabhi Parliament vote karti hai. Isi wajah se aaj tak koi bhi SC judge is process se successfully hataya nahi ja saka hai — ye itni tough hai ki koi bhi motion 2/3rd majority tak nahi pahuncha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Koi bhi judge aaj tak hata nahi paaye?? Ye to bahut hi strong protection hai! India mein aisa koi case try to hua hoga na?"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_justice_ramaswami_case",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_29_justice_ramaswami_case",
+      "card_slug": "card_29_justice_ramaswami_case",
+      "type": "chat",
+      "concept_id": "sc_oath_salary_removal",
+      "level": 3,
+      "progress": { "current": 29, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan Raju, ek famous case hai — Justice V. Ramaswami (1993) — jinke khilaf motion Lok Sabha mein aaya tha corruption charges par. Committee ne unhe guilty bhi paya, lekin voting ke waqt Congress party ne abstain (vote nahi) kiya, isliye motion required 2/3rd majority tak nahi pahuncha aur wo bach gaye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Committee ne guilty kaha lekin phir bhi bach gaye kyunki majority nahi mili. Ye to bahut interesting real case hai sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul, ye PYQ mein aa chuka hai! Yaad rakho — abhi tak koi bhi SC ya HC judge Parliament dwara successfully removed nahi hua hai. Kuch judges ne process shuru hone se pehle hi resign kar diya, jaise Justice Soumitra Sen (Calcutta HC, 2011)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Resign karke bach gaye. Ye poora removal wala topic bahut detailed hai, ab quiz karte hain sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz1",
+      "card_slug": "card_30_quiz1",
+      "type": "quiz",
+      "concept_id": "sc_oath_salary_removal",
+      "level": 3,
+      "progress": { "current": 30, "total": 92 },
       "quiz_payload": {
-        "question": "Supreme Court की Advisory Opinion के बारे में कौन सा कथन सही है?",
+        "question": "SC judge ko hataane ke liye zaroori special majority kya hai?",
         "options": [
-          {"id": "A", "text": "यह binding होती है"},
-          {"id": "B", "text": "यह binding नहीं होती, लेकिन persuasive value रखती है"},
-          {"id": "C", "text": "Supreme Court को advisory opinion देना अनिवार्य है"},
-          {"id": "D", "text": "केवल Chief Justice ही advisory opinion दे सकते हैं"}
+          { "id": "A", "text": "Sirf simple majority" },
+          { "id": "B", "text": "Total membership ka majority + present-voting members ka 2/3rd, dono sadan mein SAME session mein" },
+          { "id": "C", "text": "Sirf Rajya Sabha mein 2/3rd majority" },
+          { "id": "D", "text": "President ki apni marzi, koi majority nahi chahiye" }
         ],
         "correct_option_id": "B",
-        "explanation": "⭐ BPSC Pattern! Article 143 के तहत दी गई Supreme Court की advisory opinion binding नहीं होती - यानी President या Parliament को मानना जरूरी नहीं। लेकिन practically इसे बहुत weight दिया जाता है (persuasive value)। साथ ही, Supreme Court को advice देना compulsory नहीं है - वो refuse भी कर सकती है।"
+        "explanation": "SC judge ko hataane ke liye dono sadan mein SAME session mein — total membership ka majority + present-voting members ka 2/3rd majority — dono conditions ek saath poori honi chahiye."
       },
       "navigation": {
-        "next": "card_33_milestone_jurisdictions",
-        "button_text": "Check & Continue ➔"
+        "next": "card_31_quiz2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_33_milestone_jurisdictions",
-      "card_slug": "card_33_milestone_jurisdictions",
-      "type": "milestone",
-      "concept_id": "jurisdictions_complete",
-      "level": 4,
-      "progress": {
-        "current": 33,
-        "total": 72
+      "card_id": "card_31_quiz2",
+      "card_slug": "card_31_quiz2",
+      "type": "quiz",
+      "concept_id": "sc_oath_salary_removal",
+      "level": 3,
+      "progress": { "current": 31, "total": 92 },
+      "quiz_payload": {
+        "question": "Judges (Inquiry) Act, 1968 ke anusar removal motion se pehle kaunsi committee banti hai?",
+        "options": [
+          { "id": "A", "text": "2 SC judges ki committee" },
+          { "id": "B", "text": "1 SC judge, 1 HC Chief Justice, aur 1 distinguished jurist ki 3-member committee" },
+          { "id": "C", "text": "Sirf Attorney General ki inquiry" },
+          { "id": "D", "text": "CBI ki janch committee" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Judges (Inquiry) Act, 1968 ke anusar removal motion pesh hone ke baad, ek 3-member committee (1 SC judge, 1 HC Chief Justice, 1 distinguished jurist) charges ki janch karti hai."
       },
+      "navigation": {
+        "next": "card_32_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz3",
+      "card_slug": "card_32_quiz3",
+      "type": "quiz",
+      "concept_id": "sc_oath_salary_removal",
+      "level": 3,
+      "progress": { "current": 32, "total": 92 },
+      "quiz_payload": {
+        "question": "Justice V. Ramaswami case (1993) ke baare mein kaunsa kathan SAHI hai?",
+        "options": [
+          { "id": "A", "text": "Unhe successfully hataya gaya Parliament dwara" },
+          { "id": "B", "text": "Committee ne guilty paya, lekin voting mein required majority na milne se wo bach gaye" },
+          { "id": "C", "text": "Unhone khud resign kar diya process shuru hone se pehle" },
+          { "id": "D", "text": "Supreme Court ne unhe khud remove kiya" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Justice V. Ramaswami case mein committee ne unhe guilty paya tha, lekin Lok Sabha voting mein Congress ke abstain karne se required 2/3rd majority nahi mil payi aur wo pad par bane rahe."
+      },
+      "navigation": {
+        "next": "card_33_milestone4",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_33_milestone4",
+      "card_slug": "card_33_milestone4",
+      "type": "milestone",
+      "concept_id": "sc_oath_salary_removal",
+      "level": 3,
+      "progress": { "current": 33, "total": 92 },
       "milestone_payload": {
-        "title": "🎓 MODULE 4 COMPLETE!",
-        "badge_emoji": "⚖️",
-        "completed_topic": "Supreme Court के Jurisdictions (Original, Appellate, Advisory)",
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🖋️",
+        "completed_topic": "Oath, Salary & Removal Process of Judges",
         "xp_earned": 60,
-        "milestone_progress": "Module 4/10 Clear",
-        "motivational_quote": "Article 131, 136, 143 - सभी jurisdictions अब fingertips पर!"
+        "milestone_progress": "Module 4/11 Clear",
+        "motivational_quote": "Ramaswami case wala real-life fact bhi yaad ho gaya! Ab judicial independence ke saare safeguards dekhte hain."
       },
       "navigation": {
-        "next": "card_34_writ_intro",
-        "button_text": "Next: Writ Jurisdiction ➔"
+        "next": "card_34_independence_overview",
+        "button_text": "Start Next Module ➔"
       }
     },
     {
-      "card_id": "card_34_writ_intro",
-      "card_slug": "card_34_writ_intro",
+      "card_id": "card_34_independence_overview",
+      "card_slug": "card_34_independence_overview",
       "type": "chat",
-      "concept_id": "writ_jurisdiction_introduction",
-      "level": 5,
-      "progress": {
-        "current": 34,
-        "total": 72
-      },
+      "concept_id": "sc_independence",
+      "level": 3,
+      "progress": { "current": 34, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Raju, ab एक बहुत powerful jurisdiction - Writ Jurisdiction (Article 32)! यह Fundamental Rights की रक्षा के लिए है। Dr. BR Ambedkar ने Article 32 को 'Heart and Soul of the Constitution' कहा था।"
+          "text": "Raju, ab ek comprehensive picture banate hain — kyun Supreme Court itna independent (swatantra) hai? Humne kai safeguards abhi tak dekhe hain — tough removal, protected salary. Ab kuch aur bhi dekhte hain."
         },
         {
           "speaker": "raju",
-          "text": "Sir Writ kya hoti hai? Aur ye itna important kyun hai?"
+          "text": "Haan sir, ye important lag raha hai — kyunki independent judiciary hi to fair faisla de sakti hai na?"
         },
         {
           "speaker": "aman",
-          "text": "Writ matlab एक formal written order जो court जारी करती है। Article 32 कहता है - अगर किसी के Fundamental Rights का उल्लंघन हो रहा है, तो वो directly Supreme Court जा सकता है। Supreme Court 5 तरह की writs issue कर सकती है: (1) Habeas Corpus, (2) Mandamus, (3) Prohibition, (4) Certiorari, (5) Quo Warranto।"
+          "text": "Bilkul sahi soch! Ek aur zaroori safeguard — SC judge ka conduct (kaam-kaaj) Parliament ya State Legislature mein discuss NAHI kiya ja sakta, EXCEPT jab removal ka motion process chal raha ho (Article 121 aur 211)."
         },
         {
           "speaker": "raju",
-          "text": "Ye तो Latin words lag rahe hain Sir! Confusing ho jayega याद रखना!"
+          "text": "Achha! Matlab MP log Parliament mein baithke judge ki criticize nahi kar sakte, sirf removal ke process mein hi baat ho sakti hai?"
         }
       ],
       "navigation": {
-        "next": "card_35_habeas_corpus",
-        "button_text": "Next ➔"
+        "next": "card_35_conduct_of_business",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_35_habeas_corpus",
-      "card_slug": "card_35_habeas_corpus",
+      "card_id": "card_35_conduct_of_business",
+      "card_slug": "card_35_conduct_of_business",
       "type": "chat",
-      "concept_id": "habeas_corpus_explained",
-      "level": 5,
-      "progress": {
-        "current": 35,
-        "total": 72
-      },
+      "concept_id": "sc_independence",
+      "level": 3,
+      "progress": { "current": 35, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Tension mat lo, मैं everyday examples से समझाता हूँ! \n\n⭐ (1) HABEAS CORPUS: Latin में 'have the body' matlab। यह writ illegal detention/arrest के खिलाफ है। अगर किसी को गलत तरीके से बंदी बनाया गया है, तो court orders कि 'उस व्यक्ति को court के सामने पेश करो'। Personal liberty की रक्षा के लिए सबसे important writ है।"
+          "text": "Bilkul sahi! Ye Article 121/211 ek bahut powerful protection hai. Ab ek aur safeguard — SC ke administrative staff (karmachari) ki niyukti CJI khud karte hain (ya CJI ke authorize kiye kisi aur judge/officer), Parliament ki koi seedhi dakhal-andaazi nahi hoti (Article 146)."
         },
         {
           "speaker": "raju",
-          "text": "Achhaa! Matlab अगर police किसी को बिना warrant के पकड़ ले, तो ye writ काम आएगी?"
+          "text": "Achha, apna staff bhi khud hi choose karte hain! Aur SC ki practice-procedure kaun tय karta hai?"
         },
         {
           "speaker": "aman",
-          "text": "Bilkul! Habeas Corpus की writ court को order देती है कि arrested person को court में लाया जाए और detention का कारण बताया जाए। अगर detention illegal है, तो court उसे release करने का आदेश देती है।"
+          "text": "SC apna rules khud bana sakta hai apni internal procedure ke liye (Article 145), President ki manzoori se. Aur ek bahut important baat — SC ke expenses (kharche) 'Consolidated Fund of India' par 'charged' hain — matlab Parliament ko har saal isपर vote karne ki zaroorat nahi hai, ye automatically diya jaata hai."
         },
         {
           "speaker": "raju",
-          "text": "Great! Personal freedom protect करने के लिए!"
+          "text": "Charged expenditure! Ye to President ki salary jaisa hi hai na sir — jo bhi 'charged' hota hai, uspar Parliament vote nahi karti?"
         }
       ],
       "navigation": {
-        "next": "card_36_mandamus",
-        "button_text": "Next ➔"
+        "next": "card_36_contempt_of_court",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_36_mandamus",
-      "card_slug": "card_36_mandamus",
+      "card_id": "card_36_contempt_of_court",
+      "card_slug": "card_36_contempt_of_court",
       "type": "chat",
-      "concept_id": "mandamus_explained",
-      "level": 5,
-      "progress": {
-        "current": 36,
-        "total": 72
-      },
+      "concept_id": "sc_independence",
+      "level": 3,
+      "progress": { "current": 36, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "⭐ (2) MANDAMUS: Latin में 'we command' matlab। यह writ public officials को उनका कर्तव्य करने के लिए आदेश देती है। अगर कोई government authority अपना काम नहीं कर रही जो उसका legal duty है, तो court Mandamus issue करती है।"
+          "text": "Bilkul sahi Raju! Ab ek aur bahut powerful concept — 'Contempt of Court' — Article 129 ke anusar SC ek 'Court of Record' hai aur uske paas apna 'Contempt' (avmaanana) punish karne ki power hai. Matlab agar koi SC ki avmaanana kare, to SC khud usse punish kar sakta hai."
         },
         {
           "speaker": "raju",
-          "text": "Sir example से समझाइए!"
+          "text": "Court of Record? Ye kya hota hai sir?"
         },
         {
           "speaker": "aman",
-          "text": "Suppose तुमने government job के लिए apply किया, सभी qualifications पूरी करीं, लेकिन authority appointment letter नहीं दे रही - तो court Mandamus issue कर सकती है कि 'appointment letter दो'। लेकिन ध्यान दो - Mandamus केवल legal duty के लिए है, discretionary power के लिए नहीं।"
+          "text": "'Court of Record' ka matlab hai — SC ke faisle aur proceedings permanent record ke roop mein rakhe jaate hain, aur inhe kisi bhi court mein evidence ke roop mein cite kiya jaa sakta hai — aur inpar kisi ordinary court mein sawaal nahi uthaya jaa sakta. Ye ek bahut important status hai."
         },
         {
           "speaker": "raju",
-          "text": "Samajh gaya! Public duty enforce करने के लिए!"
+          "text": "Achha! Court of Record — permanent record, questionable nahi. Ye sab mila ke SC ko bahut powerful banata hai independent rehne ke liye!"
         }
       ],
       "navigation": {
-        "next": "card_37_prohibition_certiorari",
-        "button_text": "Next ➔"
+        "next": "card_37_quiz1",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_37_prohibition_certiorari",
-      "card_slug": "card_37_prohibition_certiorari",
-      "type": "chat",
-      "concept_id": "prohibition_certiorari_explained",
-      "level": 5,
-      "progress": {
-        "current": 37,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ (3) PROHIBITION: यह writ lower courts को रोकती है कि वो अपने jurisdiction से बाहर का case न सुनें। 'Prohibit' = रोकना। अगर कोई court अपनी authority से बाहर जा रहा है, तो higher court Prohibition issue करती है।\n\n⭐ (4) CERTIORARI: यह writ lower court के order को quash (रद्द) करती है। अगर lower court ने गलत decision दिया है या jurisdiction से बाहर जाकर decision दिया है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Prohibition और Certiorari में क्या difference hai? Dono lower courts से related hain!"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC Trap! Prohibition BEFORE decision - यानी proceedings को रोकना। Certiorari AFTER decision - यानी दिए गए order को cancel करना। Prohibition = preventive, Certiorari = curative।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaa! Prohibition pehle, Certiorari baad mein!"
-        }
-      ],
-      "navigation": {
-        "next": "card_38_quo_warranto",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_38_quo_warranto",
-      "card_slug": "card_38_quo_warranto",
-      "type": "chat",
-      "concept_id": "quo_warranto_explained",
-      "level": 5,
-      "progress": {
-        "current": 38,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ (5) QUO WARRANTO: Latin में 'by what authority' matlab। यह writ public office के illegal occupation को challenge करती है। अगर कोई व्यक्ति किसी public office पर बैठा है लेकिन उसके पास proper qualification या authority नहीं है, तो court Quo Warranto issue करती है कि 'तुम्हारी authority क्या है?'"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir example?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Suppose कोई व्यक्ति fake degree लेकर professor बन गया government college में। कोई भी interested person court में Quo Warranto petition file कर सकता है। Court investigate करेगी और अगर appointment invalid है, तो उस व्यक्ति को हटा देगी।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wow! Public office की purity maintain करने के लिए!"
-        }
-      ],
-      "navigation": {
-        "next": "card_39_quiz_writ_habeas",
-        "button_text": "Quiz Time ➔"
-      }
-    },
-    {
-      "card_id": "card_39_quiz_writ_habeas",
-      "card_slug": "card_39_quiz_writ_habeas",
+      "card_id": "card_37_quiz1",
+      "card_slug": "card_37_quiz1",
       "type": "quiz",
-      "concept_id": "writ_habeas_quiz",
-      "level": 5,
-      "progress": {
-        "current": 39,
-        "total": 72
-      },
+      "concept_id": "sc_independence",
+      "level": 3,
+      "progress": { "current": 37, "total": 92 },
       "quiz_payload": {
-        "question": "किसी व्यक्ति की illegal detention के खिलाफ कौन सी writ जारी की जाती है?",
+        "question": "Article 121 ke anusar Parliament mein SC judge ke conduct par kab discussion ho sakta hai?",
         "options": [
-          {"id": "A", "text": "Mandamus"},
-          {"id": "B", "text": "Habeas Corpus"},
-          {"id": "C", "text": "Quo Warranto"},
-          {"id": "D", "text": "Certiorari"}
+          { "id": "A", "text": "Kabhi bhi ho sakti hai, koi restriction nahi" },
+          { "id": "B", "text": "Sirf removal (impeachment) motion ke process mein hi ho sakti hai" },
+          { "id": "C", "text": "Sirf CJI ki permission se ho sakti hai" },
+          { "id": "D", "text": "President ki manzoori se kabhi bhi ho sakti hai" }
         ],
         "correct_option_id": "B",
-        "explanation": "Habeas Corpus writ illegal detention/arrest के खिलाफ जारी की जाती है। यह writ court को order देती है कि detained person को court में पेश किया जाए। अगर detention illegal पाया जाता है, तो court उस व्यक्ति को release करने का आदेश देती है। यह personal liberty की रक्षा के लिए सबसे महत्वपूर्ण writ है।"
+        "explanation": "Article 121 ke anusar SC judge ke conduct par Parliament mein discussion sirf tab ho sakta hai jab uske removal ka motion process chal raha ho — ye judicial independence ka ek bada safeguard hai."
       },
       "navigation": {
-        "next": "card_40_quiz_writ_difference",
-        "button_text": "Next Question ➔"
+        "next": "card_38_quiz2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_40_quiz_writ_difference",
-      "card_slug": "card_40_quiz_writ_difference",
+      "card_id": "card_38_quiz2",
+      "card_slug": "card_38_quiz2",
       "type": "quiz",
-      "concept_id": "writ_difference_quiz",
-      "level": 5,
-      "progress": {
-        "current": 40,
-        "total": 72
-      },
+      "concept_id": "sc_independence",
+      "level": 3,
+      "progress": { "current": 38, "total": 92 },
       "quiz_payload": {
-        "question": "Prohibition और Certiorari writs में क्या मुख्य अंतर है?",
+        "question": "Supreme Court ke expenses (kharche) kis fund par 'charged' hote hain?",
         "options": [
-          {"id": "A", "text": "दोनों में कोई अंतर नहीं"},
-          {"id": "B", "text": "Prohibition lower court के decision से पहले, Certiorari decision के बाद"},
-          {"id": "C", "text": "Prohibition केवल criminal cases में, Certiorari केवल civil cases में"},
-          {"id": "D", "text": "Prohibition Supreme Court issue करती है, Certiorari High Court"}
+          { "id": "A", "text": "Contingency Fund of India" },
+          { "id": "B", "text": "Consolidated Fund of India" },
+          { "id": "C", "text": "Public Account of India" },
+          { "id": "D", "text": "State's Consolidated Fund" }
         ],
         "correct_option_id": "B",
-        "explanation": "⭐ BPSC Multi-Choice Trap! Prohibition writ lower court की proceedings को decision से BEFORE रोकती है (preventive)। Certiorari writ lower court के दिए गए order को AFTER में quash करती है (curative)। दोनों writs lower courts के jurisdiction से बाहर जाने को रोकने के लिए हैं, लेकिन timing अलग है।"
+        "explanation": "Supreme Court ke expenses Consolidated Fund of India par 'charged' hote hain — matlab Parliament ko har saal isपर separately vote karne ki zaroorat nahi, ye automatically diya jaata hai. Ye financial independence ka safeguard hai."
       },
       "navigation": {
-        "next": "card_41_quiz_quo_warranto",
-        "button_text": "Next Question ➔"
+        "next": "card_39_quiz3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_41_quiz_quo_warranto",
-      "card_slug": "card_41_quiz_quo_warranto",
+      "card_id": "card_39_quiz3",
+      "card_slug": "card_39_quiz3",
       "type": "quiz",
-      "concept_id": "quo_warranto_quiz",
-      "level": 5,
-      "progress": {
-        "current": 41,
-        "total": 72
-      },
+      "concept_id": "sc_independence",
+      "level": 3,
+      "progress": { "current": 39, "total": 92 },
       "quiz_payload": {
-        "question": "Quo Warranto writ किसके खिलाफ जारी की जाती है?",
+        "question": "Article 129 ke anusar Supreme Court kaisa institution hai?",
         "options": [
-          {"id": "A", "text": "Illegal detention"},
-          {"id": "B", "text": "Public office के illegal occupation"},
-          {"id": "C", "text": "Public duty न करने पर"},
-          {"id": "D", "text": "Lower court के गलत decision"}
+          { "id": "A", "text": "Ek 'Court of Record' jise apna contempt punish karne ki power hai" },
+          { "id": "B", "text": "Ek 'Advisory Body' jiske paas koi punishing power nahi" },
+          { "id": "C", "text": "Ek 'Legislative Body'" },
+          { "id": "D", "text": "Ek 'Executive Committee'" }
         ],
-        "correct_option_id": "B",
-        "explanation": "Quo Warranto (Latin: 'by what authority') writ किसी public office के illegal occupation को challenge करने के लिए जारी की जाती है। अगर कोई व्यक्ति बिना proper qualification या authority के किसी public office पर बैठा है, तो court इस writ के through उससे पूछती है कि 'तुम्हारी authority क्या है' और invalid appointment को हटाती है।"
+        "correct_option_id": "A",
+        "explanation": "Article 129 ke anusar SC ek 'Court of Record' hai — iske faisle permanent record hote hain, inhe kisi ordinary court mein challenge nahi kiya jaa sakta, aur SC ke paas apna contempt (avmaanana) punish karne ki power hai."
       },
       "navigation": {
-        "next": "card_42_milestone_writs",
-        "button_text": "Check & Continue ➔"
+        "next": "card_40_milestone5",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_42_milestone_writs",
-      "card_slug": "card_42_milestone_writs",
+      "card_id": "card_40_milestone5",
+      "card_slug": "card_40_milestone5",
       "type": "milestone",
-      "concept_id": "writs_complete",
-      "level": 5,
-      "progress": {
-        "current": 42,
-        "total": 72
-      },
+      "concept_id": "sc_independence",
+      "level": 3,
+      "progress": { "current": 40, "total": 92 },
       "milestone_payload": {
-        "title": "🏆 MODULE 5 COMPLETE!",
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🛡️",
+        "completed_topic": "Judicial Independence Safeguards",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/11 Clear",
+        "motivational_quote": "Court of Record ka concept bhi clear ho gaya! Ab SC ki asli powers — jurisdiction — dekhte hain."
+      },
+      "navigation": {
+        "next": "card_41_jurisdiction_overview",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_41_jurisdiction_overview",
+      "card_slug": "card_41_jurisdiction_overview",
+      "type": "chat",
+      "concept_id": "sc_original_jurisdiction",
+      "level": 4,
+      "progress": { "current": 41, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab dekhte hain Supreme Court asal mein kaam kya karta hai — iski power ko 4 categories mein baanta gaya hai: 1) Original Jurisdiction, 2) Writ Jurisdiction, 3) Appellate Jurisdiction, 4) Advisory Jurisdiction. Chalo pehle Original Jurisdiction se shuru karte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "'Original Jurisdiction' matlab kya hota hai sir? Ye alag kaise hai baaki teen se?"
+        },
+        {
+          "speaker": "aman",
+          "text": "'Original Jurisdiction' matlab wo cases jo SEEDHE SC mein hi file hote hain — kisi lower court se appeal hokar nahi aate, SC hi pehli aur aakhri court hoti hai unke liye. Article 131 iske baare mein hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, seedhe SC mein file hone wale cases! Kaunse cases aise hote hain sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_42_article131_disputes",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_42_article131_disputes",
+      "card_slug": "card_42_article131_disputes",
+      "type": "chat",
+      "concept_id": "sc_original_jurisdiction",
+      "level": 4,
+      "progress": { "current": 42, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Article 131 ke anusar Original Jurisdiction mein 3 tarah ke disputes aate hain: 1) Union vs ek ya adhik States ke beech dispute, 2) Union aur kisi State(s) ek taraf, aur ek ya adhik dusri States doosri taraf, 3) Do ya adhik States ke beech dispute."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Matlab ye sirf government-to-government disputes hain? Aam nagrik (citizen) apna case yahan file nahi kar sakta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi pakda! Original Jurisdiction sirf Centre-State ya State-State disputes ke liye hai, jismein koi 'legal right' ka sawaal ho. Private citizen isme party nahi ban sakta. Ye Centre-State ya State-State FEDERAL disputes solve karne ke liye hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, federal disputes ke liye hai ye. Par sir kya har tarah ka Centre-State dispute yahan aa sakta hai, ya koi exceptions bhi hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_43_exceptions_original_jurisdiction",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_43_exceptions_original_jurisdiction",
+      "card_slug": "card_43_exceptions_original_jurisdiction",
+      "type": "chat",
+      "concept_id": "sc_original_jurisdiction",
+      "level": 4,
+      "progress": { "current": 43, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut zaroori sawaal, aur yahin bada BPSC trap hai! Kuch matters Original Jurisdiction ke DAYRE se BAHAR hain: 1) Inter-State water disputes (Article 262 ke tahat, ye alag tribunal dekhte hain, SC nahi), 2) Kuch treaty/agreement se related matters jo pehle se exclude kiye gaye hon, 3) Finance Commission ke saath related matters."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Inter-State water dispute SC mein nahi jaata?? Ye to bahut common lagta tha mujhe SC ka hi kaam!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahin trap hai! Article 262 ke tahat Parliament ne 'Inter-State River Water Disputes Act' banaya hai jismein ek alag Tribunal water disputes suljhata hai — SC ka Original Jurisdiction yahan lagu NAHI hota. Ye BPSC mein multiple baar puchha ja chuka hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa!! Water dispute = alag Tribunal, SC nahi. Ye ekdum yaad rakhunga sir, warna exam mein confuse ho jaunga!"
+        }
+      ],
+      "navigation": {
+        "next": "card_44_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_44_quiz1",
+      "card_slug": "card_44_quiz1",
+      "type": "quiz",
+      "concept_id": "sc_original_jurisdiction",
+      "level": 4,
+      "progress": { "current": 44, "total": 92 },
+      "quiz_payload": {
+        "question": "Article 131 ke anusar Original Jurisdiction mein kaunse disputes aate hain?",
+        "options": [
+          { "id": "A", "text": "Kisi bhi private citizen aur government ke beech dispute" },
+          { "id": "B", "text": "Union vs States, ya States vs States ke beech dispute (legal right ka sawaal ho)" },
+          { "id": "C", "text": "Inter-State water disputes" },
+          { "id": "D", "text": "Do private companies ke beech dispute" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 131 ke anusar Original Jurisdiction mein sirf Union vs States ya States vs States ke federal disputes aate hain, jinmein koi legal right ka sawaal ho. Private citizens is jurisdiction mein party nahi ban sakte."
+      },
+      "navigation": {
+        "next": "card_45_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_45_quiz2",
+      "card_slug": "card_45_quiz2",
+      "type": "quiz",
+      "concept_id": "sc_original_jurisdiction",
+      "level": 4,
+      "progress": { "current": 45, "total": 92 },
+      "quiz_payload": {
+        "question": "Inter-State water disputes kis mechanism se solve hote hain?",
+        "options": [
+          { "id": "A", "text": "Supreme Court ki Original Jurisdiction se, Article 131 ke tahat" },
+          { "id": "B", "text": "Article 262 ke tahat banaye gaye alag Tribunal se" },
+          { "id": "C", "text": "President seedhe order dete hain" },
+          { "id": "D", "text": "State Governors aapas mein baithkar suljhaate hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 262 ke tahat Parliament ne 'Inter-State River Water Disputes Act' banaya hai jismein alag Tribunal in disputes ko suljhata hai — SC ki Original Jurisdiction yahan applicable NAHI hoti. Ye bahut common exam trap hai."
+      },
+      "navigation": {
+        "next": "card_46_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_46_quiz3",
+      "card_slug": "card_46_quiz3",
+      "type": "quiz",
+      "concept_id": "sc_original_jurisdiction",
+      "level": 4,
+      "progress": { "current": 46, "total": 92 },
+      "quiz_payload": {
+        "question": "Original Jurisdiction (Article 131) ke baare mein kaunsa kathan SAHI hai?",
+        "options": [
+          { "id": "A", "text": "Cases yahan lower court se appeal karke aate hain" },
+          { "id": "B", "text": "Cases seedhe SC mein file hote hain, koi appeal chain nahi hoti" },
+          { "id": "C", "text": "Private citizens yahan bhi party ban sakte hain" },
+          { "id": "D", "text": "Inter-State water disputes iske core cases hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Original Jurisdiction ke cases seedhe SC mein hi file hote hain, kisi lower court se appeal hokar nahi aate — SC hi pehli aur aakhri court hoti hai in disputes ke liye."
+      },
+      "navigation": {
+        "next": "card_47_milestone6",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_47_milestone6",
+      "card_slug": "card_47_milestone6",
+      "type": "milestone",
+      "concept_id": "sc_original_jurisdiction",
+      "level": 4,
+      "progress": { "current": 47, "total": 92 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
         "badge_emoji": "📜",
-        "completed_topic": "पाँचों Writs की पूरी समझ",
-        "xp_earned": 70,
-        "milestone_progress": "Module 5/10 Clear",
-        "motivational_quote": "Habeas Corpus, Mandamus, Prohibition, Certiorari, Quo Warranto - सभी अब जुबान पर!"
-      },
-      "navigation": {
-        "next": "card_43_judicial_review_intro",
-        "button_text": "Next: Judicial Review ➔"
-      }
-    },
-    {
-      "card_id": "card_43_judicial_review_intro",
-      "card_slug": "card_43_judicial_review_intro",
-      "type": "chat",
-      "concept_id": "judicial_review_introduction",
-      "level": 6,
-      "progress": {
-        "current": 43,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, ab Supreme Court की सबसे powerful और exam-favorite power - Judicial Review! यह power Constitution में directly लिखी नहीं है, लेकिन various Articles से निकलती है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Judicial Review matlab? Courts laws को review करती hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Judicial Review matlab Supreme Court की यह power कि वो Parliament या State Legislature द्वारा बनाए गए laws और Executive के actions की constitutionality check कर सकती है। अगर कोई law या action Constitution के खिलाफ है, तो Supreme Court उसे unconstitutional declare करके invalid कर सकती है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wow! Matlab Supreme Court Parliament के laws को भी रद्द कर सकती hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_44_judicial_review_scope",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_44_judicial_review_scope",
-      "card_slug": "card_44_judicial_review_scope",
-      "type": "chat",
-      "concept_id": "judicial_review_scope",
-      "level": 6,
-      "progress": {
-        "current": 44,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Haan! Judicial Review तीन चीजों पर लागू होता है:\n\n(1) Parliamentary laws की constitutionality\n(2) State Legislature के laws की constitutionality\n(3) Executive orders और actions की constitutionality\n\n⭐ UPSC Favorite: लेकिन Supreme Court Constitutional Amendments की भी judicial review कर सकती है - Kesavananda Bharati case (1973) ने 'Basic Structure Doctrine' establish किया।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Basic Structure Doctrine kya hai? Ye तो बहुत important lag raha hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC & UPSC Gold! Kesavananda Bharati case में Supreme Court ने कहा - Parliament Constitutional Amendment कर सकती है, लेकिन Constitution के 'Basic Structure' को नहीं बदल सकती। जैसे democracy, federalism, secularism, judicial review - ये basic features हैं जिन्हें amend नहीं किया जा सकता।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab कुछ चीजें Constitution में permanent हैं!"
-        }
-      ],
-      "navigation": {
-        "next": "card_45_pil_introduction",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_45_pil_introduction",
-      "card_slug": "card_45_pil_introduction",
-      "type": "chat",
-      "concept_id": "public_interest_litigation",
-      "level": 6,
-      "progress": {
-        "current": 45,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab एक revolutionary concept - PIL यानी Public Interest Litigation! यह 1980s में भारत में शुरू हुआ। Traditionally, केवल वही व्यक्ति court जा सकता था जिसके rights का violation हुआ हो। लेकिन PIL ने यह बदल दिया।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir PIL में क्या different hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "PIL में कोई भी व्यक्ति - या यहाँ तक कि एक letter भी - court को भेजकर किसी गरीब, असहाय या marginalized लोगों के rights की रक्षा के लिए case शुरू कर सकता है। Justice P.N. Bhagwati और Justice V.R. Krishna Iyer ने PIL को develop किया। यह judicial activism का बड़ा हथियार बन गया।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab मैं भी किसी और के लिए court में जा सकता hoon?"
-        }
-      ],
-      "navigation": {
-        "next": "card_46_pil_examples",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_46_pil_examples",
-      "card_slug": "card_46_pil_examples",
-      "type": "chat",
-      "concept_id": "pil_landmark_cases",
-      "level": 6,
-      "progress": {
-        "current": 46,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Haan! लेकिन genuine public interest होना चाहिए। कुछ famous PIL cases:\n\n• Bandhua Mukti Morcha case - bonded labour की freedom\n• Olga Tellis case - pavement dwellers के rights\n• Vishaka case - workplace में sexual harassment guidelines\n• MC Mehta cases - environment protection"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir तो PIL से common man को भी justice मिल सकती hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC Social Impact! Exactly! PIL ने judiciary को people-friendly बनाया। गरीब मजदूर, बंधुआ मजदूर, झुग्गी में रहने वाले - जो खुद court नहीं जा सकते, उनके लिए कोई और PIL file कर सकता है। लेकिन अब misuse भी हो रहा है, इसलिए courts सावधान हो गई हैं।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Great! Judiciary ने accessibility बढ़ाई!"
-        }
-      ],
-      "navigation": {
-        "next": "card_47_quiz_judicial_review",
-        "button_text": "Quiz Time ➔"
-      }
-    },
-    {
-      "card_id": "card_47_quiz_judicial_review",
-      "card_slug": "card_47_quiz_judicial_review",
-      "type": "quiz",
-      "concept_id": "judicial_review_quiz",
-      "level": 6,
-      "progress": {
-        "current": 47,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Judicial Review की power Supreme Court को किस case में सबसे महत्वपूर्ण रूप से मिली?",
-        "options": [
-          {"id": "A", "text": "Golaknath case"},
-          {"id": "B", "text": "Kesavananda Bharati case"},
-          {"id": "C", "text": "Minerva Mills case"},
-          {"id": "D", "text": "Maneka Gandhi case"}
-        ],
-        "correct_option_id": "B",
-        "explanation": "⭐ UPSC & BPSC Favorite! Kesavananda Bharati case (1973) में Supreme Court ने 'Basic Structure Doctrine' establish किया। इसने कहा कि Parliament Constitutional Amendment कर सकती है लेकिन Constitution के Basic Structure को नहीं बदल सकती। यह judicial review की सबसे powerful application है।"
-      },
-      "navigation": {
-        "next": "card_48_quiz_basic_structure",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_48_quiz_basic_structure",
-      "card_slug": "card_48_quiz_basic_structure",
-      "type": "quiz",
-      "concept_id": "basic_structure_quiz",
-      "level": 6,
-      "progress": {
-        "current": 48,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "निम्नलिखित में से कौन सा Constitution के Basic Structure का हिस्सा नहीं है?",
-        "options": [
-          {"id": "A", "text": "Federalism"},
-          {"id": "B", "text": "Secularism"},
-          {"id": "C", "text": "Judicial Review"},
-          {"id": "D", "text": "Right to Property"}
-        ],
-        "correct_option_id": "D",
-        "explanation": "Right to Property पहले Fundamental Right था (Article 19 और 31), लेकिन 44th Amendment (1978) ने इसे Fundamental Rights से हटा दिया। अब यह केवल Constitutional Right है (Article 300A)। Federalism, Secularism, और Judicial Review Basic Structure के महत्वपूर्ण elements हैं।"
-      },
-      "navigation": {
-        "next": "card_49_quiz_pil",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_49_quiz_pil",
-      "card_slug": "card_49_quiz_pil",
-      "type": "quiz",
-      "concept_id": "pil_quiz",
-      "level": 6,
-      "progress": {
-        "current": 49,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "PIL (Public Interest Litigation) के बारे में कौन सा कथन सही है?",
-        "options": [
-          {"id": "A", "text": "केवल प्रभावित व्यक्ति ही PIL file कर सकता है"},
-          {"id": "B", "text": "कोई भी व्यक्ति public interest में PIL file कर सकता है"},
-          {"id": "C", "text": "PIL केवल Supreme Court में file हो सकता है"},
-          {"id": "D", "text": "PIL Constitution में explicitly दिया गया है"}
-        ],
-        "correct_option_id": "B",
-        "explanation": "PIL (Public Interest Litigation) में कोई भी concerned citizen किसी और व्यक्ति या समूह के rights के लिए court में जा सकता है - खुद प्रभावित होना जरूरी नहीं। यह judicial innovation है जो Constitution में directly नहीं लिखा है लेकिन 1980s में Justice Bhagwati और Krishna Iyer ने develop किया। PIL High Courts और Supreme Court दोनों में file हो सकता है।"
-      },
-      "navigation": {
-        "next": "card_50_milestone_judicial_review",
-        "button_text": "Check & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_50_milestone_judicial_review",
-      "card_slug": "card_50_milestone_judicial_review",
-      "type": "milestone",
-      "concept_id": "judicial_review_complete",
-      "level": 6,
-      "progress": {
-        "current": 50,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "⚡ MODULE 6 COMPLETE!",
-        "badge_emoji": "⚖️",
-        "completed_topic": "Judicial Review और PIL",
-        "xp_earned": 70,
-        "milestone_progress": "Module 6/10 Clear",
-        "motivational_quote": "Basic Structure, Kesavananda Bharati, PIL - अब सब high-level concepts clear!"
-      },
-      "navigation": {
-        "next": "card_51_independence_intro",
-        "button_text": "Next: Judicial Independence ➔"
-      }
-    },
-    {
-      "card_id": "card_51_independence_intro",
-      "card_slug": "card_51_independence_intro",
-      "type": "chat",
-      "concept_id": "judicial_independence_introduction",
-      "level": 7,
-      "progress": {
-        "current": 51,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, Supreme Court इतनी powerful है, तो उसकी independence कैसे ensure की जाती है? Matlab Executive या Legislature उस पर pressure तो नहीं डाल सकते?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir good question! Judicial independence matlab judges freely decision ले सकें बिना किसी के दबाव में?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Constitution ने judicial independence के लिए कई safeguards दिए हैं:\n\n(1) Fixed tenure - 65 साल तक, arbitrarily हटाया नहीं जा सकता\n(2) Salary और allowances Consolidated Fund से आते हैं - Parliament vote नहीं करती, सिर्फ discuss करती है\n(3) Conduct of judges को Parliament में discuss नहीं किया जा सकता (except impeachment motion में)"
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaa! Toh financial और job security दोनों हैं!"
-        }
-      ],
-      "navigation": {
-        "next": "card_52_independence_provisions",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_52_independence_provisions",
-      "card_slug": "card_52_independence_provisions",
-      "type": "chat",
-      "concept_id": "independence_constitutional_provisions",
-      "level": 7,
-      "progress": {
-        "current": 52,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Aur bhi safeguards hain:\n\n(4) Retirement के बाद Supreme Court judges किसी भी court या authority में practice नहीं कर सकते (Article 124(7)) - ताकि retirement के बाद की opportunities के लालच में biased decision न दें\n\n(5) Supreme Court की contempt power (Article 129) - कोई भी court की dignity को hurt करे, तो court action ले सकती है\n\n(6) Separation of Powers - Executive, Legislature और Judiciary अलग हैं"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir contempt of court kya hoti hai? TV पर सुना hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC Favorite! Contempt matlab court का अपमान या उसके orders को न मानना। अगर कोई court के सामने misbehave करे, court के order को disobey करे, या ऐसा कुछ करे जिससे court की authority कम हो - तो court उसे punish कर सकती है। यह judiciary की dignity maintain करने के लिए है।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya! Court की authority protect करने के लिए!"
-        }
-      ],
-      "navigation": {
-        "next": "card_53_court_of_record",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_53_court_of_record",
-      "card_slug": "card_53_court_of_record",
-      "type": "chat",
-      "concept_id": "court_of_record_explained",
-      "level": 7,
-      "progress": {
-        "current": 53,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ SSC & Railway Favorite Concept! Supreme Court एक 'Court of Record' है (Article 129)। इसका मतलब:\n\n(1) इसके सभी decisions record किए जाते हैं और permanent value रखते हैं\n(2) इसके decisions सभी lower courts के लिए binding होते हैं (precedent)\n(3) इसे contempt of court के लिए punish करने की power है"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir precedent matlab? Aur binding kaise hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Precedent matlab पहले का उदाहरण। Doctrine of Precedent (या Stare Decisis) कहता है - जो decision Supreme Court ने एक बार दे दिया, वो सभी lower courts को मानना पड़ता है similar cases में। यही Article 141 में दिया गया है - 'Law declared by Supreme Court shall be binding on all courts'।"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wow! Matlab एक decision future cases को भी affect करता hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_54_quiz_independence",
-        "button_text": "Quiz Time ➔"
-      }
-    },
-    {
-      "card_id": "card_54_quiz_independence",
-      "card_slug": "card_54_quiz_independence",
-      "type": "quiz",
-      "concept_id": "independence_quiz",
-      "level": 7,
-      "progress": {
-        "current": 54,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Supreme Court judges की salary किस fund से आती है?",
-        "options": [
-          {"id": "A", "text": "Public Account of India"},
-          {"id": "B", "text": "Contingency Fund of India"},
-          {"id": "C", "text": "Consolidated Fund of India"},
-          {"id": "D", "text": "Special Judicial Fund"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "Supreme Court judges की salary और allowances Consolidated Fund of India से आते हैं। यह 'charged expenditure' है - यानी Parliament को इस पर vote नहीं करना पड़ता, केवल discussion हो सकता है। यह judicial independence की एक महत्वपूर्ण guarantee है ताकि financial pressure न हो।"
-      },
-      "navigation": {
-        "next": "card_55_quiz_court_of_record",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_55_quiz_court_of_record",
-      "card_slug": "card_55_quiz_court_of_record",
-      "type": "quiz",
-      "concept_id": "court_of_record_quiz",
-      "level": 7,
-      "progress": {
-        "current": 55,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Supreme Court को 'Court of Record' किस Article में कहा गया है?",
-        "options": [
-          {"id": "A", "text": "Article 124"},
-          {"id": "B", "text": "Article 129"},
-          {"id": "C", "text": "Article 141"},
-          {"id": "D", "text": "Article 145"}
-        ],
-        "correct_option_id": "B",
-        "explanation": "Article 129 में Supreme Court को 'Court of Record' कहा गया है। Court of Record का मतलब: (1) सभी decisions permanently record होते हैं, (2) इसके decisions precedent value रखते हैं और lower courts के लिए binding होते हैं, (3) contempt of court के लिए punish करने की power है।"
-      },
-      "navigation": {
-        "next": "card_56_quiz_practice_restriction",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_56_quiz_practice_restriction",
-      "card_slug": "card_56_quiz_practice_restriction",
-      "type": "quiz",
-      "concept_id": "practice_restriction_quiz",
-      "level": 7,
-      "progress": {
-        "current": 56,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Supreme Court से retire होने के बाद judges के बारे में कौन सा कथन सही है?",
-        "options": [
-          {"id": "A", "text": "वे किसी भी court में practice कर सकते हैं"},
-          {"id": "B", "text": "वे केवल Supreme Court में practice कर सकते हैं"},
-          {"id": "C", "text": "वे किसी भी court या authority के सामने practice नहीं कर सकते"},
-          {"id": "D", "text": "वे केवल High Courts में practice कर सकते हैं"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "⭐ BPSC Pattern! Article 124(7) के अनुसार Supreme Court से retire होने के बाद judges किसी भी court या authority के सामने practice नहीं कर सकते। यह provision judicial independence के लिए है - ताकि judges retirement के बाद की opportunities के लालच में biased decisions न दें।"
-      },
-      "navigation": {
-        "next": "card_57_milestone_independence",
-        "button_text": "Check & Continue ➔"
-      }
-    },
-    {
-      "card_id": "card_57_milestone_independence",
-      "card_slug": "card_57_milestone_independence",
-      "type": "milestone",
-      "concept_id": "independence_complete",
-      "level": 7,
-      "progress": {
-        "current": 57,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "🛡️ MODULE 7 COMPLETE!",
-        "badge_emoji": "⚖️",
-        "completed_topic": "Judicial Independence और Court of Record",
+        "completed_topic": "Original Jurisdiction of Supreme Court",
         "xp_earned": 60,
-        "milestone_progress": "Module 7/10 Clear",
-        "motivational_quote": "Independence के सभी safeguards अब clear - from salary to contempt power!"
+        "milestone_progress": "Module 6/11 Clear",
+        "motivational_quote": "Water dispute wala bada trap crack ho gaya! Ab dekhte hain Fundamental Rights ki raksha kaise hoti hai — Writ Jurisdiction."
       },
       "navigation": {
-        "next": "card_58_landmark_cases",
-        "button_text": "Next: Landmark Judgments ➔"
+        "next": "card_48_article32_heart_soul",
+        "button_text": "Start Next Module ➔"
       }
     },
     {
-      "card_id": "card_58_landmark_cases",
-      "card_slug": "card_58_landmark_cases",
+      "card_id": "card_48_article32_heart_soul",
+      "card_slug": "card_48_article32_heart_soul",
       "type": "chat",
-      "concept_id": "landmark_judgments_introduction",
-      "level": 8,
-      "progress": {
-        "current": 58,
-        "total": 72
-      },
+      "concept_id": "sc_writ_jurisdiction",
+      "level": 4,
+      "progress": { "current": 48, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Raju, ab कुछ landmark Supreme Court judgments देखते हैं जो भारत के constitutional history को बदल दिए:\n\n⭐ (1) KESAVANANDA BHARATI (1973): Basic Structure Doctrine - Parliament Constitution amend कर सकती है लेकिन basic structure नहीं बदल सकती।\n\n⭐ (2) MANEKA GANDHI (1978): Article 21 (Right to Life) का विस्तार - 'procedure established by law' को 'fair, just and reasonable' होना चाहिए।"
+          "text": "Raju, ab ek bahut important Article — Article 32. Ye kehta hai ki agar kisi ke Fundamental Rights ka ullangan (violation) ho, to wo seedhe Supreme Court jaa sakta hai. Dr. Ambedkar ne isse kya kaha tha, guess karo?"
         },
         {
           "speaker": "raju",
-          "text": "Sir ये दोनों तो बहुत famous hain! Aur kaunse important cases hain?"
+          "text": "Sir aapne pehle CAG ko 'most important officer' bataya tha — is Article ko bhi kuch bola hoga important?"
         },
         {
           "speaker": "aman",
-          "text": "⭐ (3) MINERVA MILLS (1980): Judicial Review और Parliament की amending power के बीच balance - कोई भी absolute नहीं है।\n\n⭐ (4) VISHAKA (1997): Workplace sexual harassment guidelines - जब तक law नहीं बनता, court खुद guidelines दे सकती है।"
+          "text": "Bahut sahi! Ambedkar ne Article 32 ko 'The Heart and Soul of the Constitution' kaha tha — matlab agar Constitution ek shareer hai, to ye Article uska dil aur aatma hai. Isliye ki bina isake, Fundamental Rights sirf kagaz par likhi baatein reh jaatin, unhe enforce karwane ka koi tarika nahi hota."
         },
         {
           "speaker": "raju",
-          "text": "Sir court guidelines bhi de sakti hai? Wo toh legislature ka kaam hai na?"
+          "text": "Heart and Soul!! Ye to bahut powerful line hai. To Article 32 khud bhi ek Fundamental Right hai?"
         }
       ],
       "navigation": {
-        "next": "card_59_judicial_activism",
-        "button_text": "Next ➔"
+        "next": "card_49_article32_fundamental_right_itself",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_59_judicial_activism",
-      "card_slug": "card_59_judicial_activism",
+      "card_id": "card_49_article32_fundamental_right_itself",
+      "card_slug": "card_49_article32_fundamental_right_itself",
       "type": "chat",
-      "concept_id": "judicial_activism_explained",
-      "level": 8,
-      "progress": {
-        "current": 59,
-        "total": 72
-      },
+      "concept_id": "sc_writ_jurisdiction",
+      "level": 4,
+      "progress": { "current": 49, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ye hai Judicial Activism! जब judiciary अपनी traditional role से आगे जाकर active हो जाती है - laws interpret करने के साथ-साथ policy matters में भी involve होती है। Vishaka guidelines इसका perfect example है। Court ने कहा - जब तक Parliament law नहीं बनाती, हमारी guidelines ही law हैं।"
+          "text": "Bilkul sahi Raju! Article 32 khud Fundamental Rights ke Part III mein aata hai — matlab 'apne Fundamental Rights ko enforce karwane ka adhikar' bhi khud ek Fundamental Right hai! Ye ek bahut unique double-layer protection hai."
         },
         {
           "speaker": "raju",
-          "text": "Sir ये अच्छी बात hai ya buri? Judiciary Legislature ka kaam kar rahi hai!"
+          "text": "Wow, right to enforce a right! Achha sir, ye SC mein kaise jaate hain — koi form bharte hain kya?"
         },
         {
           "speaker": "aman",
-          "text": "⭐ UPSC Debate Topic! दोनों पहलू हैं। Positive side: PIL, rights protection, quick justice। Negative side: separation of powers का violation, judicial overreach, unelected judges policy बना रहे हैं। लेकिन कई बार Legislature की inaction की वजह से judiciary को step in करना पड़ता है।"
+          "text": "SC 'Writs' — yaani likhit aadesh — jaari karta hai Fundamental Rights ki raksha ke liye. Total 5 tarah ke writs hain — Habeas Corpus, Mandamus, Prohibition, Certiorari, aur Quo-Warranto. Ye concept British legal system se liya gaya hai."
         },
         {
           "speaker": "raju",
-          "text": "Samajh gaya! Necessary evil जैसा hai कभी-कभी!"
+          "text": "Panch writs! Ye naam to bahut alag-alag hain sir, mix ho jaayenge. Ek-ek karke samjhaiye please!"
         }
       ],
       "navigation": {
-        "next": "card_60_more_landmark_cases",
-        "button_text": "Next ➔"
+        "next": "card_50_habeas_corpus",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_60_more_landmark_cases",
-      "card_slug": "card_60_more_landmark_cases",
+      "card_id": "card_50_habeas_corpus",
+      "card_slug": "card_50_habeas_corpus",
       "type": "chat",
-      "concept_id": "more_landmark_cases",
-      "level": 8,
-      "progress": {
-        "current": 60,
-        "total": 72
-      },
+      "concept_id": "sc_writ_jurisdiction",
+      "level": 4,
+      "progress": { "current": 50, "total": 92 },
       "messages": [
         {
           "speaker": "aman",
-          "text": "Kuch aur important judgments:\n\n⭐ (5) INDRA SAWHNEY (1992): Mandal Commission case - OBC reservation 27% upheld, लेकिन 50% ceiling और creamy layer concept introduce किया।\n\n⭐ (6) GOLAKNATH (1967): Parliament Fundamental Rights को amend नहीं कर सकती (later Kesavananda ने modify किया)।\n\n⭐ (7) TRIPLE TALAQ (2017): Instant triple talaq unconstitutional declared।"
+          "text": "Pehla writ — 'Habeas Corpus' — Latin mein iska matlab hai 'to have the body' (shareer ko prastut karo). Ye writ tab jaari hoti hai jab kisi ko galat tarike se detain (band) kiya gaya ho — court kehti hai ki uss vyakti ko court ke saamne pesh karo aur bataao kis aadhar par usse rokha hai."
         },
         {
           "speaker": "raju",
-          "text": "Sir ye सब cases exam में important hain?"
+          "text": "Achha! Matlab agar police kisi ko bina wajah pakad ke rakh le, to Habeas Corpus se usse chhudaya ja sakta hai?"
         },
         {
           "speaker": "aman",
-          "text": "Bahut important! UPSC और BPSC में landmark judgments से direct questions आते हैं। Case का नाम, year, और मुख्य decision याद रखो। Especially Kesavananda (Basic Structure), Maneka Gandhi (Article 21), Indra Sawhney (Reservation) - ये तो must-know हैं।"
+          "text": "Bilkul sahi! Ye illegal detention ke khilaf sabse powerful hathiyaar hai — 'body ko produce karo court mein'. Agar detention illegal nikle, court turant release karne ka order de sakti hai."
         },
         {
           "speaker": "raju",
-          "text": "Sir अब मुझे confidence aa raha hai Supreme Court पर!"
+          "text": "Habeas Corpus — illegal detention ke khilaf. Yaad ho gaya sir! Agla kaunsa hai?"
         }
       ],
       "navigation": {
-        "next": "card_61_quiz_kesavananda",
-        "button_text": "Quiz Time ➔"
+        "next": "card_51_mandamus",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_61_quiz_kesavananda",
-      "card_slug": "card_61_quiz_kesavananda",
+      "card_id": "card_51_mandamus",
+      "card_slug": "card_51_mandamus",
+      "type": "chat",
+      "concept_id": "sc_writ_jurisdiction",
+      "level": 4,
+      "progress": { "current": 51, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Doosra writ — 'Mandamus' — Latin mein matlab 'We command' (hum aadesh dete hain). Ye writ tab jaari hoti hai jab koi public official ya government body apna duty (kaam) nahi kar rahi ho jo unhe karna chahiye tha — court unhe order deti hai ki apna kartavya poora karo."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Matlab agar koi sarkari afsar apna kaam nahi kar raha to Mandamus se usse force kiya ja sakta hai kaam karne ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Lekin ek important exception yaad rakho — Mandamus President ya Governor ke khilaf jaari nahi ki jaa sakti, aur na hi kisi private individual ya company ke khilaf (jab tak wo public duty na perform kar rahi ho)."
+        },
+        {
+          "speaker": "raju",
+          "text": "President-Governor ke khilaf nahi! Ye exception yaad rakhunga. Ab teesra batao sir."
+        }
+      ],
+      "navigation": {
+        "next": "card_52_prohibition_certiorari",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_52_prohibition_certiorari",
+      "card_slug": "card_52_prohibition_certiorari",
+      "type": "chat",
+      "concept_id": "sc_writ_jurisdiction",
+      "level": 4,
+      "progress": { "current": 52, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Teesra — 'Prohibition' — matlab 'to forbid' (rokna). Ye ek higher court se lower court/tribunal ko jaari hoti hai jab wo apni jurisdiction se BAAHAR jaakar kaam kar rahi ho — court kehti hai 'ruk jaao, tumhare pass ye adhikar hi nahi hai'. Ye PREVENTIVE hai — kaam hone se pehle rokti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Preventive! Matlab kaam hone se pehle roka jaata hai. Aur chautha writ?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Chautha — 'Certiorari' — matlab 'to be certified' ya 'to be informed'. Ye bhi lower court/tribunal ke jurisdiction ke bahar jaane par jaari hoti hai, LEKIN ye CURATIVE hai — jab kaam ho CHUKA ho, tab uss faisle ko higher court apne yahan transfer karke cancel/quash kar deti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Prohibition = pehle rokna (preventive), Certiorari = ho chuke kaam ko cancel karna (curative). Ye dono bahut similar lag rahe the, ab fark samajh aaya sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_53_quo_warranto",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_53_quo_warranto",
+      "card_slug": "card_53_quo_warranto",
+      "type": "chat",
+      "concept_id": "sc_writ_jurisdiction",
+      "level": 4,
+      "progress": { "current": 53, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Paanchwa aur aakhri writ — 'Quo-Warranto' — Latin mein matlab 'by what authority/warrant' (kis adhikar se). Ye tab jaari hoti hai jab koi vyakti kisi PUBLIC OFFICE (sarkari pad) par baitha ho jispar baithne ka usse koi kanooni adhikar (legal right) na ho."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Matlab agar koi bina qualification ke kisi bade pad par baith jaaye, to Quo-Warranto se usse challenge kiya ja sakta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Aur ek important note — Quo-Warranto sirf PUBLIC office ke liye hai, PRIVATE ya company ke office ke liye nahi. Aur interesting baat — Quo-Warranto ek aisi writ hai jo koi bhi interested citizen file kar sakta hai, sirf 'affected party' hona zaroori nahi hai — baaki 4 writs mein aam taur par 'affected party' hi file karti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaaa! Quo-Warranto special hai — koi bhi file kar sakta hai! Ye interesting exception hai, likh liya maine sir."
+        }
+      ],
+      "navigation": {
+        "next": "card_54_hc_vs_sc_writ_power",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_54_hc_vs_sc_writ_power",
+      "card_slug": "card_54_hc_vs_sc_writ_power",
+      "type": "chat",
+      "concept_id": "sc_writ_jurisdiction",
+      "level": 4,
+      "progress": { "current": 54, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek bahut important comparison — High Courts bhi writs jaari kar sakte hain, Article 226 ke tahat. Par yahan ek bada fark hai — SC (Article 32) sirf FUNDAMENTAL RIGHTS ke violation ke liye writ jaari kar sakta hai. High Court (Article 226) Fundamental Rights KE SAATH-SAATH 'any other purpose' (matlab koi bhi legal right) ke liye bhi writ jaari kar sakta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Matlab High Court ki writ power SC se bhi zyada wide hai?? Ye to bahut bada trap hai sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Ye ek bahut famous PYQ trap hai — 'High Court ki writ jurisdiction, SC se WIDER hai' (matlab jyada cheezon ko cover karti hai), lekin High Court ki writ SIRF apne territorial jurisdiction (uss State/UT) tak seemित hai, jabki SC ki writ poore desh mein applicable hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! HC ki power wider hai matlab (fundamental rights + koi bhi legal right), par sirf apne state mein. SC ki power narrower hai (sirf fundamental rights), par poore desh mein. Ye balance samajh aaya sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_55_quiz1",
+      "card_slug": "card_55_quiz1",
       "type": "quiz",
-      "concept_id": "kesavananda_quiz",
-      "level": 8,
-      "progress": {
-        "current": 61,
-        "total": 72
-      },
+      "concept_id": "sc_writ_jurisdiction",
+      "level": 4,
+      "progress": { "current": 55, "total": 92 },
       "quiz_payload": {
-        "question": "Kesavananda Bharati case (1973) में कौन सा महत्वपूर्ण doctrine establish हुआ?",
+        "question": "Ambedkar ne Article 32 ko kya kaha tha?",
         "options": [
-          {"id": "A", "text": "Doctrine of Pleasure"},
-          {"id": "B", "text": "Basic Structure Doctrine"},
-          {"id": "C", "text": "Doctrine of Precedent"},
-          {"id": "D", "text": "Doctrine of Eclipse"}
+          { "id": "A", "text": "The most important officer in the Constitution" },
+          { "id": "B", "text": "The Heart and Soul of the Constitution" },
+          { "id": "C", "text": "The backbone of Democracy" },
+          { "id": "D", "text": "The Guardian of Public Purse" }
         ],
         "correct_option_id": "B",
-        "explanation": "⭐ UPSC & BPSC Gold! Kesavananda Bharati case (1973) में Supreme Court ने Basic Structure Doctrine establish किया। इसके अनुसार Parliament Constitutional Amendment कर सकती है, लेकिन Constitution के Basic Structure (जैसे democracy, federalism, secularism, judicial review) को नहीं बदल सकती। यह Indian constitutional law का सबसे महत्वपूर्ण judgment है।"
+        "explanation": "Dr. B.R. Ambedkar ne Article 32 ko 'The Heart and Soul of the Constitution' kaha tha, kyunki isi se Fundamental Rights ko actually enforce karwaya jaa sakta hai."
       },
       "navigation": {
-        "next": "card_62_quiz_maneka_gandhi",
-        "button_text": "Next Question ➔"
+        "next": "card_56_quiz2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_62_quiz_maneka_gandhi",
-      "card_slug": "card_62_quiz_maneka_gandhi",
+      "card_id": "card_56_quiz2",
+      "card_slug": "card_56_quiz2",
       "type": "quiz",
-      "concept_id": "maneka_gandhi_quiz",
-      "level": 8,
-      "progress": {
-        "current": 62,
-        "total": 72
-      },
+      "concept_id": "sc_writ_jurisdiction",
+      "level": 4,
+      "progress": { "current": 56, "total": 92 },
       "quiz_payload": {
-        "question": "Maneka Gandhi case (1978) ने किस Article की interpretation को expand किया?",
+        "question": "Nimnlikhit writs ko unke sahi definition se match karein — kaunsa writ 'illegal detention' ke khilaf jaari hota hai?",
         "options": [
-          {"id": "A", "text": "Article 14 (Equality)"},
-          {"id": "B", "text": "Article 19 (Six Freedoms)"},
-          {"id": "C", "text": "Article 21 (Right to Life)"},
-          {"id": "D", "text": "Article 32 (Constitutional Remedies)"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "Maneka Gandhi case (1978) ने Article 21 (Right to Life and Personal Liberty) की interpretation को dramatically expand किया। Court ने कहा कि 'procedure established by law' को केवल formal नहीं, बल्कि 'fair, just and reasonable' होना चाहिए। इससे Article 21 के तहत कई नए rights derive हुए - right to education, right to livelihood, right to clean environment आदि।"
-      },
-      "navigation": {
-        "next": "card_63_quiz_judicial_activism",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_63_quiz_judicial_activism",
-      "card_slug": "card_63_quiz_judicial_activism",
-      "type": "quiz",
-      "concept_id": "judicial_activism_quiz",
-      "level": 8,
-      "progress": {
-        "current": 63,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Vishaka case (1997) में Supreme Court ने क्या किया?",
-        "options": [
-          {"id": "A", "text": "Reservation की 50% ceiling तय की"},
-          {"id": "B", "text": "Workplace sexual harassment के लिए guidelines जारी किए"},
-          {"id": "C", "text": "Triple talaq को unconstitutional घोषित किया"},
-          {"id": "D", "text": "Right to Privacy को Fundamental Right माना"}
+          { "id": "A", "text": "Mandamus" },
+          { "id": "B", "text": "Habeas Corpus" },
+          { "id": "C", "text": "Quo-Warranto" },
+          { "id": "D", "text": "Certiorari" }
         ],
         "correct_option_id": "B",
-        "explanation": "⭐ BPSC Women Rights! Vishaka vs State of Rajasthan (1997) में Supreme Court ने workplace sexual harassment के खिलाफ comprehensive guidelines जारी किए। Court ने कहा कि जब तक Parliament इस विषय पर law नहीं बनाती, ये guidelines ही binding law हैं। यह judicial activism का classic example है। बाद में 2013 में Sexual Harassment of Women at Workplace Act बना।"
+        "explanation": "Habeas Corpus (matlab 'to have the body') illegal detention ke khilaf jaari hoti hai — court kisi galat tarike se rokhe gaye vyakti ko court ke samne prastut karne ka aadesh deti hai."
       },
       "navigation": {
-        "next": "card_64_milestone_landmark_cases",
-        "button_text": "Check & Continue ➔"
+        "next": "card_57_quiz3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_64_milestone_landmark_cases",
-      "card_slug": "card_64_milestone_landmark_cases",
+      "card_id": "card_57_quiz3",
+      "card_slug": "card_57_quiz3",
+      "type": "quiz",
+      "concept_id": "sc_writ_jurisdiction",
+      "level": 4,
+      "progress": { "current": 57, "total": 92 },
+      "quiz_payload": {
+        "question": "SC ki writ jurisdiction (Article 32) aur HC ki writ jurisdiction (Article 226) ke beech kya fark hai?",
+        "options": [
+          { "id": "A", "text": "SC sirf Fundamental Rights ke liye, HC Fundamental Rights + koi bhi legal right ke liye — lekin HC ki writ sirf apne territory tak seemित hai" },
+          { "id": "B", "text": "Dono bilkul same hain, koi fark nahi" },
+          { "id": "C", "text": "HC sirf Fundamental Rights ke liye, SC kisi bhi legal right ke liye" },
+          { "id": "D", "text": "SC writ jaari nahi kar sakta, sirf HC kar sakta hai" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "SC (Article 32) sirf Fundamental Rights violation ke liye writ jaari kar sakta hai, poore desh mein applicable. HC (Article 226) Fundamental Rights ke saath-saath 'any other purpose' (koi bhi legal right) ke liye bhi writ jaari kar sakta hai — isliye HC ki power WIDER hai — lekin sirf apne territorial jurisdiction tak seemित."
+      },
+      "navigation": {
+        "next": "card_58_milestone7",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_58_milestone7",
+      "card_slug": "card_58_milestone7",
       "type": "milestone",
-      "concept_id": "landmark_cases_complete",
-      "level": 8,
-      "progress": {
-        "current": 64,
-        "total": 72
-      },
+      "concept_id": "sc_writ_jurisdiction",
+      "level": 4,
+      "progress": { "current": 58, "total": 92 },
       "milestone_payload": {
-        "title": "📚 MODULE 8 COMPLETE!",
-        "badge_emoji": "⚖️",
-        "completed_topic": "Landmark Supreme Court Judgments",
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📝",
+        "completed_topic": "Article 32, Writ Jurisdiction & 5 Types of Writs",
         "xp_earned": 70,
-        "milestone_progress": "Module 8/10 Clear",
-        "motivational_quote": "Kesavananda, Maneka Gandhi, Vishaka - अब ये names exam में golden tickets हैं!"
+        "milestone_progress": "Module 7/11 Clear",
+        "motivational_quote": "5 writs aur HC vs SC wala bada trap — sab crack ho gaya! Ab appellate aur advisory jurisdiction dekhte hain."
       },
       "navigation": {
-        "next": "card_65_final_summary",
-        "button_text": "Final Revision ➔"
+        "next": "card_59_appellate_overview",
+        "button_text": "Start Next Module ➔"
       }
     },
     {
-      "card_id": "card_65_final_summary",
-      "card_slug": "card_65_final_summary",
-      "type": "summary",
-      "concept_id": "chapter_final_revision",
-      "level": 9,
-      "progress": {
-        "current": 65,
-        "total": 72
-      },
-      "summary_payload": {
-        "title": "⚡ Officer Level Quick Revision",
-        "revision_points": [
-          {
-            "topic": "Structure & Appointment",
-            "point": "Article 124-147। Currently 34 judges (1 CJI + 33)। Collegium system (CJI + 4 senior judges)। Qualifications: 35 years, citizen, 5 years HC judge/10 years advocate। Retirement: 65 years।"
-          },
-          {
-            "topic": "Removal Process",
-            "point": "Impeachment (Art 124(4)): Proven Misbehaviour या Incapacity। 100 LS/50 RS members signature। Special Majority दोनों Houses में। अभी तक कोई successful impeachment नहीं।"
-          },
-          {
-            "topic": "Jurisdictions",
-            "point": "Original (Art 131): Center-State disputes। Appellate (132-136): HC से appeal। SLP (Art 136): Discretionary। Advisory (Art 143): Non-binding। Writ (Art 32): FR protection।"
-          },
-          {
-            "topic": "Five Writs",
-            "point": "Habeas Corpus (illegal detention), Mandamus (public duty), Prohibition (before decision), Certiorari (after decision), Quo Warranto (public office challenge)।"
-          },
-          {
-            "topic": "Judicial Review & PIL",
-            "point": "Laws/actions की constitutionality check। Kesavananda (1973): Basic Structure। PIL: Any citizen for public interest। Justice Bhagwati era innovation।"
-          },
-          {
-            "topic": "Independence Safeguards",
-            "point": "Fixed tenure, Salary from Consolidated Fund (charged), Conduct discussion ban, Post-retirement practice ban (Art 124(7)), Contempt power (Art 129)।"
-          },
-          {
-            "topic": "Court of Record",
-            "point": "Art 129। Permanent records, Binding precedents (Art 141), Contempt power। Doctrine of Precedent (Stare Decisis)।"
-          },
-          {
-            "topic": "Landmark Cases",
-            "point": "Kesavananda (1973): Basic Structure। Maneka Gandhi (1978): Art 21 expansion। Vishaka (1997): Sexual harassment guidelines। Indra Sawhney (1992): OBC 27%, 50% ceiling, creamy layer।"
-          }
-        ]
-      },
+      "card_id": "card_59_appellate_overview",
+      "card_slug": "card_59_appellate_overview",
+      "type": "chat",
+      "concept_id": "sc_appellate_advisory",
+      "level": 5,
+      "progress": { "current": 59, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab dekhte hain Supreme Court ka SABSE zyada use hone wala jurisdiction — 'Appellate Jurisdiction'. Ye woh cases hain jinme koi lower court (High Court) ke faisle ke khilaf log SC mein 'appeal' (punarvichaar ki maang) karte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, ye to humne shuru mein hi discuss kiya tha na sir — jab humne panchayat ka example liya tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi याद rakha! Appellate Jurisdiction ko 4 categories mein baanta gaya hai: 1) Constitutional matters (Article 132), 2) Civil matters (Article 133), 3) Criminal matters (Article 134), aur 4) Special Leave Petition — SLP (Article 136)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Char categories! Special Leave Petition ka naam suna hai maine news mein — ye kya hai sir?"
+        }
+      ],
       "navigation": {
-        "next": "card_66_final_quiz_1",
-        "button_text": "Final Master Quiz ➔"
+        "next": "card_60_constitutional_civil_criminal_appeals",
+        "button_text": "Next Card ➔"
       }
     },
     {
-      "card_id": "card_66_final_quiz_1",
-      "card_slug": "card_66_final_quiz_1",
-      "type": "final_quiz",
-      "concept_id": "final_assessment_1",
-      "level": 9,
-      "progress": {
-        "current": 66,
-        "total": 72
-      },
+      "card_id": "card_60_constitutional_civil_criminal_appeals",
+      "card_slug": "card_60_constitutional_civil_criminal_appeals",
+      "type": "chat",
+      "concept_id": "sc_appellate_advisory",
+      "level": 5,
+      "progress": { "current": 60, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Pehle baaki teen samajh lein — Article 132 (Constitutional matters): agar HC certify kare ki case mein Constitution ki 'substantial interpretation' ka sawaal hai, to seedhe SC mein appeal ho sakti hai — chahe wo civil ho ya criminal ya koi bhi matter."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, matlab agar Constitution ki interpretation ka bada sawaal ho to appeal ho sakti hai. Aur Civil-Criminal ka fark kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Article 133 (Civil matters): HC certify kare ki case mein 'general importance ka substantial sawaal' hai, to civil case mein SC appeal ho sakti hai. Article 134 (Criminal matters): agar HC ne kisi ko acquittal se convert karke death sentence diya ho, ya HC ne khud kisi case ko SC ke liye 'fit' certify kiya ho, tab hi criminal appeal SC mein ho sakti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, Constitution = interpretation sawaal, Civil = general importance sawaal, Criminal = death sentence ya HC certify kare. Teenon mein 'HC certificate' zaroori lagta hai sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_61_article136_slp",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_61_article136_slp",
+      "card_slug": "card_61_article136_slp",
+      "type": "chat",
+      "concept_id": "sc_appellate_advisory",
+      "level": 5,
+      "progress": { "current": 61, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut sahi observation Raju! Article 132, 133, 134 — teenon mein HC ka certificate zaroori hai. Lekin ab Article 136 — 'Special Leave Petition (SLP)' — ye ek EXTRAORDINARY power hai jismein SC KHUD, apni marzi se, bina kisi certificate ke, kisi bhi court ya tribunal (Court Martial ko chhodkar) ke kisi bhi faisle ke khilaf appeal sunne ki permission (special leave) de sakta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! SLP mein HC ka certificate zaroori nahi hai? SC khud hi decide karta hai ki sunna hai ya nahi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Ye SC ki 'discretionary' power hai — SC chahe to case sune, chahe to na sune. Isliye SLP ko 'residuary power' bhi kaha jaata hai — jahan aur koi appeal ka raasta nahi hai, wahan SLP ek aakhri umeed ban sakti hai. Bas ek exception yaad rakho — Court Martial (military courts) ke faisle ke khilaf SLP NAHI file ki jaa sakti."
+        },
+        {
+          "speaker": "raju",
+          "text": "Court Martial exception! Ye important hai. SLP to bahut powerful lag raha hai sir — 'kisi bhi court ke khilaf'!"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_advisory_jurisdiction_143",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_62_advisory_jurisdiction_143",
+      "card_slug": "card_62_advisory_jurisdiction_143",
+      "type": "chat",
+      "concept_id": "sc_appellate_advisory",
+      "level": 5,
+      "progress": { "current": 62, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab aakhri jurisdiction — 'Advisory Jurisdiction' — Article 143 ke tahat. Ye kehta hai ki agar President ko lagta hai ki koi 'law' ya 'fact' ka sawaal itna important hai ki public interest mein SC ki opinion leni chahiye, to President SC se salaah maang sakte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To President SC se salaah maang sakte hain? Kya SC ko wo salaah deni HI padegi?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut zaroori trap yahan hai! Article 143(1) ke matters mein SC 'may' report kare — matlab SC chahe to opinion de sakta hai, ya mana bhi kar sakta hai (discretionary). Lekin ek doosri category hai Article 143(2) — jo pre-Constitution treaties se related hai — usme SC ko OPINION DENI HI PADEGI, mandatory hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Ek discretionary, ek mandatory! Ye do categories bhi yaad rakhni hongi. Aur ye advisory opinion binding hoti hai kya President ke liye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_advisory_non_binding",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_63_advisory_non_binding",
+      "card_slug": "card_63_advisory_non_binding",
+      "type": "chat",
+      "concept_id": "sc_appellate_advisory",
+      "level": 5,
+      "progress": { "current": 63, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut important sawaal, aur yahan sabse bada trap hai! Advisory opinion (Article 143 ke tahat) President par BINDING NAHI hoti — President chahe to accept karein, chahe to reject kar dein! Ye SC ke normal judicial faislon se bilkul alag hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? SC opinion de aur President use maane hi na?? Ye to bahut ajeeb lagta hai sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi observation, isiliye ye baar-baar poocha jaata hai! Yaad rakho — Article 143 mein SC 'advise' karta hai, order nahi deta. Ek real example — Ayodhya Ram Janmabhoomi case (1994, Ismail Faruqui case) mein President ne SC se advisory opinion mangi thi, lekin SC ne opinion dene se MANA kar diya tha kyunki wo purely religious sawaal tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "SC ne mana bhi kiya kabhi opinion dene se! Ye to bahut interesting fact hai sir — advisory power discretionary hone ka matlab hi ye hai."
+        }
+      ],
+      "navigation": {
+        "next": "card_64_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_64_quiz1",
+      "card_slug": "card_64_quiz1",
+      "type": "quiz",
+      "concept_id": "sc_appellate_advisory",
+      "level": 5,
+      "progress": { "current": 64, "total": 92 },
       "quiz_payload": {
-        "question": "⭐ BPSC Multi-Statement:\n\nSupreme Court के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. वर्तमान में Supreme Court में अधिकतम 34 judges हो सकते हैं।\n2. Supreme Court judges को केवल Proven Misbehaviour के ground पर ही remove किया जा सकता है।\n3. Supreme Court judges की salary Consolidated Fund of India से आती है।\n4. Retire होने के बाद Supreme Court judges किसी भी court में practice कर सकते हैं।\n\nउपरोक्त में से कौन से कथन सही हैं?",
+        "question": "Article 136 (Special Leave Petition) ke baare mein kaunsa kathan SAHI hai?",
         "options": [
-          {"id": "A", "text": "केवल 1 और 2"},
-          {"id": "B", "text": "केवल 1 और 3"},
-          {"id": "C", "text": "केवल 2, 3 और 4"},
-          {"id": "D", "text": "केवल 1, 2 और 3"}
+          { "id": "A", "text": "Isme High Court ka certificate zaroori hota hai" },
+          { "id": "B", "text": "SC apni discretionary power se, bina HC certificate ke, kisi bhi court/tribunal (Court Martial chhodkar) ke faisle par appeal sun sakta hai" },
+          { "id": "C", "text": "Ye sirf civil cases ke liye applicable hai" },
+          { "id": "D", "text": "Ye Court Martial ke faisle ke khilaf bhi lagu hoti hai" }
         ],
         "correct_option_id": "B",
-        "explanation": "कथन 1 सही (34 = 1 CJI + 33)। कथन 2 गलत - removal दो grounds पर: Misbehaviour या Incapacity। कथन 3 सही - salary Consolidated Fund से (charged)। कथन 4 गलत - Art 124(7) post-retirement practice ban करता है। इसलिए केवल 1 और 3 सही हैं।"
+        "explanation": "Article 136 ek extraordinary discretionary power hai — SC bina kisi HC certificate ke, kisi bhi court/tribunal ke faisle ke khilaf appeal sun sakta hai — EXCEPT Court Martial (military courts) ke faisle."
       },
       "navigation": {
-        "next": "card_67_final_quiz_2",
-        "button_text": "Next Question ➔"
+        "next": "card_65_quiz2",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_67_final_quiz_2",
-      "card_slug": "card_67_final_quiz_2",
-      "type": "final_quiz",
-      "concept_id": "final_assessment_2",
-      "level": 9,
-      "progress": {
-        "current": 67,
-        "total": 72
-      },
+      "card_id": "card_65_quiz2",
+      "card_slug": "card_65_quiz2",
+      "type": "quiz",
+      "concept_id": "sc_appellate_advisory",
+      "level": 5,
+      "progress": { "current": 65, "total": 92 },
       "quiz_payload": {
-        "question": "⭐ UPSC Assertion-Reason:\n\nAssertion (A): Supreme Court को 'Court of Record' कहा जाता है।\n\nReason (R): Supreme Court के decisions सभी lower courts के लिए binding precedents होते हैं।\n\nसही विकल्प चुनिए:",
+        "question": "Article 143 ke tahat SC ki Advisory Opinion ke baare mein kaunsa kathan SAHI hai?",
         "options": [
-          {"id": "A", "text": "A और R दोनों सही हैं, और R, A की सही व्याख्या है"},
-          {"id": "B", "text": "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है"},
-          {"id": "C", "text": "A सही है लेकिन R गलत है"},
-          {"id": "D", "text": "A गलत है लेकिन R सही है"}
+          { "id": "A", "text": "SC ki advisory opinion President ke liye HAMESHA binding hoti hai" },
+          { "id": "B", "text": "Article 143(1) ke matters mein SC opinion dena discretionary hai, aur ye opinion President par binding NAHI hoti" },
+          { "id": "C", "text": "President kabhi bhi SC se advice nahi maang sakte" },
+          { "id": "D", "text": "SC har case mein opinion dene se mana nahi kar sakta" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 143(1) ke matters mein SC ko opinion dena discretionary hai (SC mana bhi kar sakta hai, jaise Ismail Faruqui/Ayodhya case mein hua), aur di gayi opinion President par binding NAHI hoti — ye normal judicial judgement se bilkul alag hai."
+      },
+      "navigation": {
+        "next": "card_66_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_66_quiz3",
+      "card_slug": "card_66_quiz3",
+      "type": "quiz",
+      "concept_id": "sc_appellate_advisory",
+      "level": 5,
+      "progress": { "current": 66, "total": 92 },
+      "quiz_payload": {
+        "question": "Article 134 ke tahat criminal appeal SC mein tab hi ho sakti hai jab:",
+        "options": [
+          { "id": "A", "text": "Koi bhi criminal case ho, seedhe appeal ho sakti hai" },
+          { "id": "B", "text": "HC ne acquittal ko convert karke death sentence diya ho, ya HC ne case ko 'fit' certify kiya ho" },
+          { "id": "C", "text": "Sirf accused khud maange" },
+          { "id": "D", "text": "Police commissioner request kare" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 134 ke tahat criminal appeal tab hi possible hai jab HC ne acquittal ko convert karke death sentence diya ho, ya HC ne khud us case ko SC appeal ke liye 'fit' certify kiya ho."
+      },
+      "navigation": {
+        "next": "card_67_milestone8",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_67_milestone8",
+      "card_slug": "card_67_milestone8",
+      "type": "milestone",
+      "concept_id": "sc_appellate_advisory",
+      "level": 5,
+      "progress": { "current": 67, "total": 92 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📚",
+        "completed_topic": "Appellate & Advisory Jurisdiction",
+        "xp_earned": 70,
+        "milestone_progress": "Module 8/11 Clear",
+        "motivational_quote": "Ayodhya case wala fact bhi yaad ho gaya! Ab collegium system ki poori kahani samjhte hain."
+      },
+      "navigation": {
+        "next": "card_68_collegium_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_68_collegium_intro",
+      "card_slug": "card_68_collegium_intro",
+      "type": "chat",
+      "concept_id": "sc_collegium",
+      "level": 6,
+      "progress": { "current": 68, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, yaad hai Module 2 mein humne kaha tha ki judges ki niyukti mein 'consultation' hoti hai? Ab detail mein samjhte hain — is consultation ka matlab kya hai iske liye 3 famous Supreme Court cases hue, unhe 'Three Judges Cases' kaha jaata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Teen cases? Ye kya hua tha inme sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "First Judges Case (1981, S.P. Gupta case) mein SC ne kaha ki 'consultation' ka matlab sirf salaah lena hai, President (matlab executive/government) ki final decision maanni zaroori nahi. Isse government ko judges appointment mein zyada power mili."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, pehle case mein sarkar ki hi chalti thi? Phir kya badla?"
+        }
+      ],
+      "navigation": {
+        "next": "card_69_second_judges_case",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_69_second_judges_case",
+      "card_slug": "card_69_second_judges_case",
+      "type": "chat",
+      "concept_id": "sc_collegium",
+      "level": 6,
+      "progress": { "current": 69, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Second Judges Case (1993) mein SC ne apni hi 1981 wali baat palat di! Ab kaha gaya ki 'consultation' ka matlab hai 'concurrence' — matlab CJI ki salaah ko MAANNA zaroori hai. Isi case se 'Collegium System' ka janam hua."
+        },
+        {
+          "speaker": "raju",
+          "text": "Collegium — ye naam suna hai maine news mein bahut! Ye kya hota hai exactly sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "'Collegium' matlab CJI + kuch senior-most SC judges ka ek group, jo judges ki niyukti aur transfer ka faisla lete hain. 1993 mein ye CJI + 2 senior-most judges ka group tha. Third Judges Case (1998) mein isse aur expand karke CJI + 4 senior-most judges kar diya gaya — jo aaj bhi lagu hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Teen cases ka effect — 1981 government wins, 1993 judiciary wins (Collegium banta hai), 1998 Collegium expand hota hai. Interesting evolution hai ye sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_70_collegium_composition_current",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_70_collegium_composition_current",
+      "card_slug": "card_70_collegium_composition_current",
+      "type": "chat",
+      "concept_id": "sc_collegium",
+      "level": 6,
+      "progress": { "current": 70, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Aaj ki tarikh mein Supreme Court Collegium mein CJI + 4 senior-most SC judges hote hain — total 5 log. Ye group milkar decide karta hai ki kaun SC judge banega, kaun High Court Chief Justice banega, aur judges ka transfer kaise hoga."
+        },
+        {
+          "speaker": "raju",
+          "text": "5 log — CJI + 4 senior judges. Aur ye Collegium Constitution mein likha hai kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahin sabse bada trap hai Raju! Collegium System Constitution mein KAHIN bhi LIKHA HUA NAHI hai! Ye poori tarah SC ke apne judgements (1993, 1998 wale cases) se banaya gaya system hai — ise 'judge-made law' bhi kaha jaata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Itna important system Constitution mein likha hi nahi hai?? Ye to seriously bahut bada trap hai sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_71_njac_attempt",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_71_njac_attempt",
+      "card_slug": "card_71_njac_attempt",
+      "type": "chat",
+      "concept_id": "sc_collegium",
+      "level": 6,
+      "progress": { "current": 71, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ab ek recent aur bahut important development — Parliament ne 2014 mein 99th Constitutional Amendment Act pass kiya jisse 'National Judicial Appointments Commission (NJAC)' banaya gaya, jo Collegium system ko replace karne wala tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "NJAC kaise different tha Collegium se sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "NJAC mein CJI + 2 senior SC judges + Law Minister + 2 'eminent persons' (jo PM, CJI, Leader of Opposition select karte) hote — matlab executive ka bhi seedha role hota judges appointment mein. Lekin ye ek bahut bada twist le kar aaya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Kya hua sir? Lagu ho gaya kya NJAC?"
+        }
+      ],
+      "navigation": {
+        "next": "card_72_njac_struck_down",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_72_njac_struck_down",
+      "card_slug": "card_72_njac_struck_down",
+      "type": "chat",
+      "concept_id": "sc_collegium",
+      "level": 6,
+      "progress": { "current": 72, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Yahin sabse bada twist hai! Supreme Court ne khud, 'Fourth Judges Case (2015)' mein, 99th Amendment aur NJAC Act ko UNCONSTITUTIONAL declare kar diya! SC ne kaha ki isse 'judicial independence' ko khatra hai, jo Basic Structure ka hissa hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "SC ne Parliament ke banaye Amendment ko hi khaarij kar diya?? Ye to bahut bada power hai SC ke paas!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Isi wajah se aaj bhi purana Collegium System hi chal raha hai, NJAC kabhi implement nahi ho paya. Ye ek zabardast example hai ki kaise 'Judicial Independence' Basic Structure ka part hai jise Parliament bhi nahi badal sakti."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Judicial Independence = Basic Structure! Ye bahut important connection hai — Kesavananda Bharati wale Basic Structure se link ho gaya ye to!"
+        }
+      ],
+      "navigation": {
+        "next": "card_73_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_73_quiz1",
+      "card_slug": "card_73_quiz1",
+      "type": "quiz",
+      "concept_id": "sc_collegium",
+      "level": 6,
+      "progress": { "current": 73, "total": 92 },
+      "quiz_payload": {
+        "question": "Second Judges Case (1993) mein SC ne 'consultation' ka kya naya interpretation diya?",
+        "options": [
+          { "id": "A", "text": "Consultation ka matlab hai sirf salaah lena, maanna zaroori nahi" },
+          { "id": "B", "text": "Consultation ka matlab hai 'concurrence' — CJI ki salaah maanni zaroori hai" },
+          { "id": "C", "text": "Consultation ki koi zaroorat hi nahi hai" },
+          { "id": "D", "text": "Sirf Parliament decide karegi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Second Judges Case (1993) mein SC ne kaha ki 'consultation' ka matlab 'concurrence' hai — CJI ki salaah ko maanna zaroori hai. Isi case se Collegium System ka janam hua."
+      },
+      "navigation": {
+        "next": "card_74_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_74_quiz2",
+      "card_slug": "card_74_quiz2",
+      "type": "quiz",
+      "concept_id": "sc_collegium",
+      "level": 6,
+      "progress": { "current": 74, "total": 92 },
+      "quiz_payload": {
+        "question": "Collegium System ke baare mein kaunsa kathan SAHI hai?",
+        "options": [
+          { "id": "A", "text": "Ye Constitution mein Article 124 ke tahat explicitly likha gaya hai" },
+          { "id": "B", "text": "Ye poori tarah Supreme Court ke apne judgements se bana ek system hai, Constitution mein likha hua nahi hai" },
+          { "id": "C", "text": "Isme sirf CJI akele faisla leta hai" },
+          { "id": "D", "text": "Isme Law Minister bhi shaamil hote hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Collegium System Constitution mein kahin bhi likha nahi hai — ye poori tarah SC ke judgements (1993 aur 1998 ke cases) se banaya gaya 'judge-made' system hai, jismein CJI + 4 senior-most SC judges shaamil hote hain."
+      },
+      "navigation": {
+        "next": "card_75_quiz3",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_75_quiz3",
+      "card_slug": "card_75_quiz3",
+      "type": "quiz",
+      "concept_id": "sc_collegium",
+      "level": 6,
+      "progress": { "current": 75, "total": 92 },
+      "quiz_payload": {
+        "question": "NJAC (National Judicial Appointments Commission) ka kya hua?",
+        "options": [
+          { "id": "A", "text": "Ye successfully lagu ho gaya aur ab tak chal raha hai" },
+          { "id": "B", "text": "Supreme Court ne 'Fourth Judges Case (2015)' mein ise unconstitutional declare kar diya" },
+          { "id": "C", "text": "Ye kabhi Parliament mein pass hi nahi hua" },
+          { "id": "D", "text": "President ne ise reject kar diya" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "99th Constitutional Amendment (2014) se NJAC banaya gaya tha, lekin Supreme Court ne 'Fourth Judges Case (2015)' mein ise unconstitutional declare kar diya, kyunki ye Judicial Independence (Basic Structure) ko khatra pahunchata tha. Isliye purana Collegium System hi aaj tak chal raha hai."
+      },
+      "navigation": {
+        "next": "card_76_milestone9",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_76_milestone9",
+      "card_slug": "card_76_milestone9",
+      "type": "milestone",
+      "concept_id": "sc_collegium",
+      "level": 6,
+      "progress": { "current": 76, "total": 92 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Collegium System Evolution & NJAC",
+        "xp_earned": 75,
+        "milestone_progress": "Module 9/11 Clear",
+        "motivational_quote": "4 Judges Cases ki poori kahani yaad ho gaya! Ab Judicial Review, PIL aur landmark cases dekhte hain."
+      },
+      "navigation": {
+        "next": "card_77_judicial_review_intro",
+        "button_text": "Start Next Module ➔"
+      }
+    },
+    {
+      "card_id": "card_77_judicial_review_intro",
+      "card_slug": "card_77_judicial_review_intro",
+      "type": "chat",
+      "concept_id": "sc_judicial_review_pil",
+      "level": 7,
+      "progress": { "current": 77, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek bahut powerful concept — 'Judicial Review'. Ye SC (aur HC) ki power hai jismein wo kisi bhi kanoon (Parliament ya State Legislature ka banaya) ya executive action ko Constitution ke against paakar 'unconstitutional' declare kar sakte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab SC, Parliament ke banaye kanoon ko bhi cancel kar sakta hai?? Ye to bahut bada power hai sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Ye humne abhi NJAC case mein bhi dekha. 'Judicial Review' explicit roop mein kisi ek article mein 'likha hua' nahi hai, lekin ye kai Articles se implied hai — Article 13, 32, 226, aur 245 se derive hota hai. Kesavananda Bharati case (1973) mein SC ne Judicial Review ko Basic Structure ka part bhi declare kiya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, Judicial Review bhi Basic Structure hai! Kesavananda Bharati case ke baare mein aur bataiye sir, ye bahut famous naam hai."
+        }
+      ],
+      "navigation": {
+        "next": "card_78_kesavananda_bharati",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_78_kesavananda_bharati",
+      "card_slug": "card_78_kesavananda_bharati",
+      "type": "chat",
+      "concept_id": "sc_judicial_review_pil",
+      "level": 7,
+      "progress": { "current": 78, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kesavananda Bharati vs State of Kerala (1973) India ka sabse landmark case maana jaata hai! Ye 13-judge bench ne (sabse bada bench aaj tak) decide kiya ki Parliament Constitution mein amendment to kar sakti hai (Article 368 se), LEKIN uska 'Basic Structure' (buniyaadi dhaancha) nahi badal sakti."
+        },
+        {
+          "speaker": "raju",
+          "text": "13-judge bench!! Itna bada bench? Aur 'Basic Structure' mein kya-kya aata hai sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Basic Structure mein Supremacy of Constitution, Rule of Law, Judicial Review, Separation of Powers, Federalism, Secularism, Democracy — jaise core principles aate hain. Isse pehle Golaknath case (1967) mein SC ne kaha tha ki Parliament Fundamental Rights ko BILKUL bhi amend nahi kar sakti — Kesavananda ne isse thoda balance kiya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Golaknath — bilkul nahi, Kesavananda — Basic Structure chhodkar sab kuch amend kar sakte hain. Interesting evolution hai! Aur koi important case hai sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_79_minerva_mills_maneka",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_79_minerva_mills_maneka",
+      "card_slug": "card_79_minerva_mills_maneka",
+      "type": "chat",
+      "concept_id": "sc_judicial_review_pil",
+      "level": 7,
+      "progress": { "current": 79, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haan, do aur bahut important cases yaad karo — Minerva Mills case (1980) — isme SC ne kaha ki 'Judicial Review' khud Basic Structure ka part hai, aur Fundamental Rights aur Directive Principles ke beech 'harmony aur balance' bhi Basic Structure ka hissa hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Aur ek aur case bola tha aapne — Maneka Gandhi wala?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Maneka Gandhi vs Union of India (1978) — is case ne Article 21 (Right to Life and Personal Liberty) ki interpretation ko poori tarah badal diya. Ab 'procedure established by law' ko 'fair, just aur reasonable' hona zaroori maana gaya — isse Article 21 ka daayra bahut expand ho gaya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Maneka Gandhi case se Article 21 bahut wide ho gaya. Sir, ab PIL ke baare mein bhi bataiye — ye bhi bahut suna hai maine."
+        }
+      ],
+      "navigation": {
+        "next": "card_80_pil_concept",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_80_pil_concept",
+      "card_slug": "card_80_pil_concept",
+      "type": "chat",
+      "concept_id": "sc_judicial_review_pil",
+      "level": 7,
+      "progress": { "current": 80, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "'Public Interest Litigation (PIL)' ek bahut zaroori concept hai — normally court mein case wahi vyakti file kar sakta hai jiske apne rights affect hue hon ('locus standi' rule). PIL ne is rule ko relax kiya — ab koi bhi public-spirited citizen, kisi aur ke ya samaaj ke behalf par bhi case file kar sakta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Matlab agar mujhe pata chale ki kisi gaanv mein bacchon ko school nahi mil raha, to main khud unki taraf se case file kar sakta hoon?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi udaharan! PIL ka credit Justice P.N. Bhagwati aur Justice V.R. Krishna Iyer ko diya jaata hai — unhone 1980s mein 'Judicial Activism' ke through PIL ko promote kiya, taaki gareeb aur weaker sections ko bhi justice mil sake, chahe wo khud court na aa payein."
+        },
+        {
+          "speaker": "raju",
+          "text": "Judicial Activism! Ye bhi naya term hai sir — kya matlab hai iska?"
+        }
+      ],
+      "navigation": {
+        "next": "card_81_judicial_activism",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_81_judicial_activism",
+      "card_slug": "card_81_judicial_activism",
+      "type": "chat",
+      "concept_id": "sc_judicial_review_pil",
+      "level": 7,
+      "progress": { "current": 81, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "'Judicial Activism' matlab jab court proactive roop se, sirf case sunne tak limited na rehkar, samaaj ke faayde ke liye policy-jaise directions bhi de — jaise environment protection, human rights, corruption ke khilaf action. Isse SC ko kai baar 'activist' ya proactive maana jaata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! To SC sirf case sunta nahi, active roop se samaaj ke liye kaam bhi karta hai. Iski koi criticism bhi hoti hai kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, critics kehte hain ki excessive Judicial Activism 'Separation of Powers' ko todता hai — kyunki policy-making ka kaam Legislature/Executive ka hota hai, judiciary ka nahi. Isse 'Judicial Overreach' bhi kaha jaata hai jab court apni limit paar kar de."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, Judicial Activism achha bhi hai, par overreach bura hai. Ye balance samajh mein aaya sir. Ab Bihar-specific kuch batao please!"
+        }
+      ],
+      "navigation": {
+        "next": "card_82_bihar_patna_hc_connection",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_82_bihar_patna_hc_connection",
+      "card_slug": "card_82_bihar_patna_hc_connection",
+      "type": "chat",
+      "concept_id": "sc_bihar_specific",
+      "level": 7,
+      "progress": { "current": 82, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite: Bihar mein 'Patna High Court' hai, jo 1916 mein sthapित (established) hui thi — ye Bihar ki apni High Court hai jiske faisle ke khilaf appeal SC mein hoti hai. Article 214 ke tahat har state ki High Court hoti hai, aur Bihar ke liye ye Patna High Court hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "1916 mein bani thi Patna High Court? Ye to Independence se bhi pehle ki baat hai sir!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Patna High Court, Calcutta High Court se alag hokar bani thi jab Bihar aur Orissa ko ek naya province banaya gaya tha. Aur ek zaroori fact — Bihar ke saath Supreme Court judges mein bhi kai important naam hain jinka Bihar se sambandh raha hai — jaise Justice Ramaswami sir (jo Patna High Court se bhi jude the SC judge banne se pehle)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Patna HC 1916 se hai. Ye BPSC mein zaroor puchhа jaayega, ab yaad ho gaya sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_83_quiz1",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_83_quiz1",
+      "card_slug": "card_83_quiz1",
+      "type": "quiz",
+      "concept_id": "sc_judicial_review_pil",
+      "level": 7,
+      "progress": { "current": 83, "total": 92 },
+      "quiz_payload": {
+        "question": "Kesavananda Bharati case (1973) mein SC ne kya establish kiya?",
+        "options": [
+          { "id": "A", "text": "Parliament Fundamental Rights ko bilkul bhi amend nahi kar sakti" },
+          { "id": "B", "text": "Parliament Constitution amend kar sakti hai, lekin uska 'Basic Structure' nahi badal sakti" },
+          { "id": "C", "text": "Parliament kuch bhi amend kar sakti hai, koi limit nahi" },
+          { "id": "D", "text": "Sirf Article 21 ko amend kiya jaa sakta hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Kesavananda Bharati case (1973), 13-judge bench dwara, ne establish kiya ki Parliament Article 368 se Constitution amend kar sakti hai, lekin uska Basic Structure (buniyaadi dhaancha) nahi badal sakti — jismein Judicial Review, Rule of Law, Federalism jaise principles shaamil hain."
+      },
+      "navigation": {
+        "next": "card_84_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_84_quiz2",
+      "card_slug": "card_84_quiz2",
+      "type": "quiz",
+      "concept_id": "sc_judicial_review_pil",
+      "level": 7,
+      "progress": { "current": 84, "total": 92 },
+      "quiz_payload": {
+        "question": "PIL (Public Interest Litigation) ka concept kis rule ko relax karta hai?",
+        "options": [
+          { "id": "A", "text": "'Locus Standi' rule — matlab ab koi bhi public-spirited person kisi aur ki taraf se case file kar sakta hai" },
+          { "id": "B", "text": "'Res Judicata' rule" },
+          { "id": "C", "text": "'Double Jeopardy' rule" },
+          { "id": "D", "text": "'Burden of Proof' rule" }
         ],
         "correct_option_id": "A",
-        "explanation": "दोनों statements सही हैं और R, A की सही व्याख्या करता है। Art 129 SC को Court of Record बनाता है। Court of Record की एक key feature यह है कि इसके decisions precedent value रखते हैं और Art 141 के तहत सभी courts के लिए binding होते हैं (Doctrine of Precedent)। यह Court of Record होने का एक प्रमुख कारण है।"
+        "explanation": "PIL ne 'Locus Standi' rule ko relax kiya — normally sirf affected party hi case file kar sakti thi, PIL ke baad koi bhi public-spirited citizen samaaj ya kisi aur ke behalf par bhi case file kar sakta hai."
       },
       "navigation": {
-        "next": "card_68_final_quiz_3",
-        "button_text": "Next Question ➔"
+        "next": "card_85_quiz3",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_68_final_quiz_3",
-      "card_slug": "card_68_final_quiz_3",
-      "type": "final_quiz",
-      "concept_id": "final_assessment_3",
-      "level": 9,
-      "progress": {
-        "current": 68,
-        "total": 72
-      },
+      "card_id": "card_85_quiz3",
+      "card_slug": "card_85_quiz3",
+      "type": "quiz",
+      "concept_id": "sc_judicial_review_pil",
+      "level": 7,
+      "progress": { "current": 85, "total": 92 },
       "quiz_payload": {
-        "question": "⭐ BPSC Article Matching:\n\nनिम्नलिखित को सुमेलित कीजिए:\n\nArticle --- Provision\n\n1. Article 131 --- (i) Advisory Jurisdiction\n2. Article 136 --- (ii) Original Jurisdiction\n3. Article 141 --- (iii) Special Leave Petition\n4. Article 143 --- (iv) Binding nature of SC decisions\n\nसही सुमेलन है:",
+        "question": "⭐ BPSC TRE Favorite: Patna High Court kab sthapित hui thi?",
         "options": [
-          {"id": "A", "text": "1-(ii), 2-(iii), 3-(iv), 4-(i)"},
-          {"id": "B", "text": "1-(i), 2-(ii), 3-(iii), 4-(iv)"},
-          {"id": "C", "text": "1-(iii), 2-(iv), 3-(i), 4-(ii)"},
-          {"id": "D", "text": "1-(iv), 2-(i), 3-(ii), 4-(iii)"}
-        ],
-        "correct_option_id": "A",
-        "explanation": "⭐ Perfect Matching! Art 131: Original Jurisdiction (center-state disputes)। Art 136: Special Leave Petition (discretionary appeal)। Art 141: Law declared by SC binding on all courts। Art 143: Advisory jurisdiction (President reference)। यह matching BPSC/UPSC का favorite pattern है।"
-      },
-      "navigation": {
-        "next": "card_69_final_quiz_4",
-        "button_text": "Next Question ➔"
-      }
-    },
-    {
-      "card_id": "card_69_final_quiz_4",
-      "card_slug": "card_69_final_quiz_4",
-      "type": "final_quiz",
-      "concept_id": "final_assessment_4",
-      "level": 9,
-      "progress": {
-        "current": 69,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ UPSC Case-Based:\n\nनिम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?\n\nCase --- Principle/Outcome",
-        "options": [
-          {"id": "A", "text": "Kesavananda Bharati (1973) --- Basic Structure Doctrine"},
-          {"id": "B", "text": "Maneka Gandhi (1978) --- Article 21 expansion"},
-          {"id": "C", "text": "Vishaka (1997) --- Triple Talaq unconstitutional"},
-          {"id": "D", "text": "Indra Sawhney (1992) --- OBC reservation 27%"}
+          { "id": "A", "text": "1950" },
+          { "id": "B", "text": "1935" },
+          { "id": "C", "text": "1916" },
+          { "id": "D", "text": "1947" }
         ],
         "correct_option_id": "C",
-        "explanation": "Option C गलत है। Vishaka case (1997) workplace sexual harassment guidelines से संबंधित था, Triple Talaq से नहीं। Triple Talaq को 2017 के Shayara Bano case में unconstitutional declared किया गया। बाकी सभी युग्म सही हैं - यह typical UPSC matching trap है।"
+        "explanation": "Patna High Court 1916 mein sthapित hui thi, jab Bihar aur Orissa ko Calcutta se alag karke ek naya province banaya gaya tha — ye Independence se bhi pehle ki baat hai."
       },
       "navigation": {
-        "next": "card_70_final_quiz_5",
-        "button_text": "Last Question ➔"
+        "next": "card_86_milestone10",
+        "button_text": "Check Answer & Continue ➔"
       }
     },
     {
-      "card_id": "card_70_final_quiz_5",
-      "card_slug": "card_70_final_quiz_5",
-      "type": "final_quiz",
-      "concept_id": "final_assessment_5",
-      "level": 9,
-      "progress": {
-        "current": 70,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "⭐ BPSC Writ Identification:\n\nयदि कोई व्यक्ति गलत तरीके से सरकारी पद पर नियुक्त हो गया है (बिना proper qualification के), तो कौन सी writ उपयुक्त होगी?",
-        "options": [
-          {"id": "A", "text": "Habeas Corpus"},
-          {"id": "B", "text": "Mandamus"},
-          {"id": "C", "text": "Quo Warranto"},
-          {"id": "D", "text": "Certiorari"}
-        ],
-        "correct_option_id": "C",
-        "explanation": "Quo Warranto writ public office के illegal occupation को challenge करने के लिए जारी की जाती है। यह court को power देती है कि वो किसी व्यक्ति से पूछे 'by what authority' तुम इस पद पर हो। अगर proper qualification नहीं है, तो court उस व्यक्ति को पद से हटा देती है। यह BPSC का favorite scenario-based question है।"
+      "card_id": "card_86_milestone10",
+      "card_slug": "card_86_milestone10",
+      "type": "milestone",
+      "concept_id": "sc_judicial_review_pil",
+      "level": 7,
+      "progress": { "current": 86, "total": 92 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Judicial Review, PIL, Landmark Cases & Bihar Facts",
+        "xp_earned": 80,
+        "milestone_progress": "Module 10/11 Clear",
+        "motivational_quote": "Kesavananda Bharati se Patna High Court tak — sab yaad ho gaya! Ab article 141 aur final module dekhte hain."
       },
       "navigation": {
-        "next": "card_71_comparison_chart",
-        "button_text": "Comparison Chart ➔"
+        "next": "card_87_article141_law_declared",
+        "button_text": "Start Final Module ➔"
       }
     },
     {
-      "card_id": "card_71_comparison_chart",
-      "card_slug": "card_71_comparison_chart",
+      "card_id": "card_87_article141_law_declared",
+      "card_slug": "card_87_article141_law_declared",
+      "type": "chat",
+      "concept_id": "sc_final_concepts",
+      "level": 8,
+      "progress": { "current": 87, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek aakhri bahut zaroori Article — Article 141. Ye kehta hai ki SC dwara 'declared law' desh ke saare courts par BINDING hoga — matlab jo bhi SC decide kare, sab courts (High Courts, District Courts) ko wahi follow karna hoga."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Matlab SC ka faisla ek precedent (mstandard) ban jaata hai jo sab courts follow karti hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Isse 'Doctrine of Precedent' bhi kehte hain — 'stare decisis' ka principle. Lekin ek zaroori note — SC khud apne pichhle faisle se bandhа nahi hota, wo apni hi larger bench se pichle faisle ko overrule kar sakta hai (jaise humne dekha Golaknath ko Kesavananda ne partially overrule kiya)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Sab courts SC follow karte hain, par SC khud apna faisla badal sakta hai bade bench se. Ye samajh gaya sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_88_pil_cji_facts",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_88_pil_cji_facts",
+      "card_slug": "card_88_pil_cji_facts",
+      "type": "chat",
+      "concept_id": "sc_final_concepts",
+      "level": 8,
+      "progress": { "current": 88, "total": 92 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Kuch aakhri trivia facts yaad karte hain — India ke pehle Chief Justice of India the Justice H.J. Kania (1950-51). CJI ki niyukti mein ek convention follow hota hai — 'seniority principle' — matlab senior-most judge hi agla CJI banta hai (halaanki ye Constitution mein likha nahi hai, ek parampara hai)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Seniority se CJI banta hai? Ye bhi Collegium jaisa hi hai — Constitution mein likha nahi, par follow hota hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi observation! Halaanki 1973 aur 1977 mein iss convention ko todkar junior judges ko CJI banaya gaya tha (superseding senior judges) — jo bahut controversial hua tha. Uske baad se seniority principle strictly follow hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, 1973-77 mein exception hua tha! Interesting history hai ye. Ab last module ka revision karte hain sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_89_summary",
+        "button_text": "Next Card ➔"
+      }
+    },
+    {
+      "card_id": "card_89_summary",
+      "card_slug": "card_89_summary",
       "type": "summary",
-      "concept_id": "sc_hc_comparison",
-      "level": 9,
-      "progress": {
-        "current": 71,
-        "total": 72
-      },
+      "concept_id": "sc_full_revision",
+      "level": 8,
+      "progress": { "current": 89, "total": 92 },
       "summary_payload": {
-        "title": "📊 Supreme Court vs High Court - Quick Comparison",
+        "title": "⚡ Officer Revision — Supreme Court ka Poora Nichod",
         "revision_points": [
           {
-            "topic": "Appointment",
-            "point": "SC: President द्वारा, Collegium (CJI+4) की recommendation पर। HC: President द्वारा, CJI + Governor + HC CJ से consultation।"
+            "topic": "Constitutional Basis & Composition",
+            "point": "Article 124-147 (Part V, Chapter IV). Established 28 Jan 1950 (Federal Court replace kiya). Strength: 1950 mein 8 (1 CJI+7), abhi 34 (1 CJI+33, 2019 se). Qualification: 5 saal HC judge, YA 10 saal HC advocate, YA Distinguished Jurist — koi minimum age nahi. Retirement age: 65 saal."
           },
           {
-            "topic": "Retirement Age",
-            "point": "SC: 65 years। HC: 62 years। यह 3 years का difference exam में frequently पूछा जाता है।"
+            "topic": "Removal & Independence",
+            "point": "Removal = SC judge jaisi process — dono sadan mein SAME session mein special majority (total membership majority + 2/3rd present-voting), proved misbehaviour/incapacity ground. Judges (Inquiry) Act 1968 — 3-member committee pehle janch karti hai. Aaj tak koi judge successfully removed nahi hua (Justice Ramaswami 1993 bach gaye)."
           },
           {
-            "topic": "Qualification",
-            "point": "SC: 5 years HC judge या 10 years HC advocate। HC: 10 years judicial officer या 10 years advocate।"
+            "topic": "Jurisdiction Types",
+            "point": "Original (Art 131) — Centre-State/State-State disputes, water disputes EXCLUDE. Writ (Art 32) — 5 writs: Habeas Corpus, Mandamus, Prohibition, Certiorari, Quo-Warranto — sirf Fundamental Rights ke liye (HC ki Art 226 power wider hai par territorial). Appellate (Art 132-136) — SLP (Art 136) sabse powerful, Court Martial exclude. Advisory (Art 143) — non-binding on President."
           },
           {
-            "topic": "Writ Jurisdiction",
-            "point": "SC (Art 32): केवल Fundamental Rights के लिए। HC (Art 226): FR + any other purpose के लिए। HC की writ jurisdiction wider है।"
+            "topic": "Collegium System Evolution",
+            "point": "First Judges Case (1981) — consultation = salaah lena. Second Judges Case (1993) — consultation = concurrence, Collegium janma (CJI+2). Third Judges Case (1998) — Collegium CJI+4 hua. NJAC (99th Amendment 2014) — Fourth Judges Case (2015) mein unconstitutional declare hua, Collegium hi chalta hai. Collegium Constitution mein LIKHA HUA NAHI hai."
           },
           {
-            "topic": "Original Jurisdiction",
-            "point": "SC (Art 131): केवल federal disputes। HC: बहुत wider - wills, marriage, contempt, company matters आदि।"
-          },
-          {
-            "topic": "Territorial Jurisdiction",
-            "point": "SC: पूरे भारत के लिए। HC: अपने राज्य/राज्यों के लिए (कुछ HC multiple states cover करते हैं)।"
-          },
-          {
-            "topic": "Court of Record",
-            "point": "SC: Art 129। HC: Art 215। दोनों Court of Record हैं, contempt power रखते हैं।"
-          },
-          {
-            "topic": "Judicial Review",
-            "point": "SC: Unlimited (Constitutional amendments तक)। HC: Limited (अपने jurisdiction में)। SC final court of appeal है।"
+            "topic": "Judicial Review & Bihar Facts",
+            "point": "Kesavananda Bharati (1973, 13-judge bench) — Basic Structure Doctrine. Golaknath (1967), Minerva Mills (1980) — Judicial Review = Basic Structure. Maneka Gandhi (1978) — Article 21 expand. Article 141 — SC ka law sab courts par binding. Patna High Court sthापित 1916 mein, Bihar ki apni High Court."
           }
         ]
       },
       "navigation": {
-        "next": "card_72_final_milestone",
-        "button_text": "Chapter Complete 🏆"
+        "next": "card_90_final_quiz",
+        "button_text": "Take Final Officer Quiz ➔"
       }
     },
     {
-      "card_id": "card_72_final_milestone",
-      "card_slug": "card_72_final_milestone",
-      "type": "milestone",
-      "concept_id": "chapter_completion_final",
-      "level": 10,
-      "progress": {
-        "current": 72,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "🎊 SUPREME COURT MASTERED! 🎊",
-        "badge_emoji": "⚖️",
-        "completed_topic": "Supreme Court of India - Complete Constitutional & Judicial Module",
-        "xp_earned": 150,
-        "milestone_progress": "10/10 Modules Complete ✅",
-        "motivational_quote": "From Article 124 to Kesavananda Bharati, from Writs to PIL, from Collegium to Court of Record - हर single concept अब आपके दिमाग में permanently stored! 🔥\n\nBPSC/UPSC में Supreme Court के questions = आपके लिए FREE MARKS! 💯\n\nJudiciary की इस powerful branch को अब आप जानते हैं अंदर-बाहर से! ⚖️\n\nKeep Learning, Keep Growing, Future Officer/Doctor! 🚀\n\n'The Constitution is not a mere lawyers' document, it is a vehicle of Life' - Dr. BR Ambedkar 🇮🇳"
+      "card_id": "card_90_final_quiz",
+      "card_slug": "card_90_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "sc_final_challenge",
+      "level": 8,
+      "progress": { "current": 90, "total": 92 },
+      "quiz_payload": {
+        "question": "Nimnlikhit kathanon par vichar karein:\n1) Supreme Court judge ki minimum age Constitution mein 35 saal tय ki gayi hai.\n2) Inter-State water disputes Supreme Court ki Original Jurisdiction (Article 131) ke antargat aate hain.\n3) High Court ki writ jurisdiction (Article 226), Fundamental Rights ke saath-saath 'any other purpose' ke liye bhi hai, lekin ye sirf apne territorial jurisdiction tak seemित hai.\n4) Collegium System Constitution mein Article 124 ke tahat explicitly likha gaya hai.\nSahi kathanon ka set chuniye:",
+        "options": [
+          { "id": "A", "text": "Sirf 3 sahi hai" },
+          { "id": "B", "text": "1 aur 4 sahi hain" },
+          { "id": "C", "text": "2 aur 3 sahi hain" },
+          { "id": "D", "text": "Sabhi char sahi hain" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Kathan 1 GALAT — SC judge ki koi minimum age Constitution mein tय nahi ki gayi hai. Kathan 2 GALAT — Inter-State water disputes Article 262 ke tahat alag Tribunal dekhta hai, SC ki Original Jurisdiction nahi. Kathan 3 SAHI — HC ki writ power wider hai (FR + any legal right) par sirf apne territory tak. Kathan 4 GALAT — Collegium System Constitution mein likha nahi hai, ye SC ke apne judgements se bana hai. Isliye sirf kathan 3 sahi hai."
       },
       "navigation": {
-        "next": null,
-        "button_text": "Back to Dashboard 🏠"
+        "next": "card_91_final_quiz2",
+        "button_text": "Check Answer & Continue ➔"
+      }
+    },
+    {
+      "card_id": "card_91_final_quiz2",
+      "card_slug": "card_91_final_quiz2",
+      "type": "final_quiz",
+      "concept_id": "sc_final_challenge",
+      "level": 8,
+      "progress": { "current": 91, "total": 92 },
+      "quiz_payload": {
+        "question": "Assertion (A): Supreme Court ne 'Fourth Judges Case (2015)' mein NJAC (National Judicial Appointments Commission) ko unconstitutional declare kiya.\nReason (R): NJAC, Judicial Independence ko khatra pahunchata tha jo Basic Structure ka hissa hai, aur Kesavananda Bharati case (1973) mein Basic Structure Doctrine establish hui thi.\nSahi vikalp chuniye:",
+        "options": [
+          { "id": "A", "text": "A sahi hai, R galat hai" },
+          { "id": "B", "text": "A galat hai, R sahi hai" },
+          { "id": "C", "text": "Dono sahi hain aur R, A ki sahi vyakhya hai" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono kathan sahi hain aur R, A ki sahi vyakhya hai. NJAC ko Fourth Judges Case (2015) mein isliye unconstitutional declare kiya gaya kyunki isse Judicial Independence — jo Kesavananda Bharati (1973) case se establish hui Basic Structure Doctrine ka hissa hai — ko khatra tha."
+      },
+      "navigation": {
+        "next": "card_92_trophy",
+        "button_text": "See Final Result ➔"
+      }
+    },
+    {
+      "card_id": "card_92_trophy",
+      "card_slug": "card_92_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 8,
+      "progress": { "current": 92, "total": 92 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTER TROPHY!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Supreme Court of India — Full Chapter Complete",
+        "xp_earned": 220,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Officer level ka pura Supreme Court chapter tumne conquer kar liya! 5 writs, Collegium ki poori kahani, Kesavananda Bharati, aur Patna High Court — sab yaad ho gaya! Ab BPSC/SSC/UPSC ke kisi bhi sawaal mein Supreme Court tumhe confuse nahi kar sakta. Agla chapter ready hai jab tum ho!"
+      },
+      "navigation": {
+        "next": "card_01_intro",
+        "button_text": "Restart Chapter 🔁"
       }
     }
   ]
 }
-
