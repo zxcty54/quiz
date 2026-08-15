@@ -98,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       }
     }
 
-    // 💾 Sectional persistent storage check (Permanent Disk Lock)
+    // 💾 Sectional persistent storage check
     String? persistentSectional = prefs.getString('persistent_sectional_data_json');
     if (persistentSectional != null && persistentSectional.isNotEmpty) {
       try {
@@ -125,44 +125,67 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     _fetchSubjectMappingLive();
   }
 
-  // 🌐 DIRECT REALTIME FAST FETCHER (Races CDNs with cache-busting timestamp)
-  Future<dynamic> _fetchRobustJson(String relativePath) async {
-    String clean = relativePath.startsWith("/") ? relativePath.substring(1) : relativePath;
+  // 🌐 ZERO-API UNLIMITED LIVE FETCHER (Zero-Cache GitHack Proxy + Multi-CDN Shields)
+  Future<dynamic> _fetchRobustJson(String path) async {
+    String cleanPath = path.trim();
+
+    // 1. Strip all full URLs to pure relative path
+    cleanPath = cleanPath
+        .replaceAll('https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/', '')
+        .replaceAll('https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/', '')
+        .replaceAll('https://raw.githubusercontent.com/zxcty54/quiz/main/', '')
+        .replaceAll('https://raw.githubusercontent.com/zxcty54/quiz/refs/heads/main/', '')
+        .replaceAll('https://cdn.statically.io/gh/zxcty54/quiz/main/', '')
+        .replaceAll('https://raw.githack.com/zxcty54/quiz/main/', '');
+
+    if (cleanPath.startsWith('/')) cleanPath = cleanPath.substring(1);
+    if (cleanPath.contains('?')) cleanPath = cleanPath.split('?').first;
+
     final int ts = DateTime.now().millisecondsSinceEpoch;
-    String encodedPath = Uri.encodeFull(clean);
+    String encodedPath = Uri.encodeFull(cleanPath);
 
-    List<String> mirrorUrls = clean.startsWith("http")
-        ? [clean]
-        : [
-            "https://raw.githubusercontent.com/zxcty54/quiz/main/$encodedPath?t=$ts",
-            "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
-            "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
-            "https://cdn.statically.io/gh/zxcty54/quiz/main/$encodedPath",
-          ];
+    // 🚀 UNBLOCKED & ZERO-CACHE MIRRORS
+    List<String> mirrorUrls = [
+      // 1. GitHack Dev Proxy (Direct Live GitHub Pull, Never Caches)
+      "https://raw.githack.com/zxcty54/quiz/main/$encodedPath",
+      // 2. Fastly CDN with Cache-Buster Timestamp
+      "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
+      // 3. Statically Cloudflare Edge
+      "https://cdn.statically.io/gh/zxcty54/quiz/main/$encodedPath",
+      // 4. Core jsDelivr with Timestamp
+      "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
+    ];
 
-    // Race all CDN mirrors for blazing speed
-    List<Future<dynamic>> requests = mirrorUrls.map((url) async {
+    for (String url in mirrorUrls) {
       try {
-        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 3));
-        if (res.statusCode == 200) {
-          String decoded = utf8.decode(res.bodyBytes);
-          return jsonDecode(decoded);
-        }
-      } catch (_) {}
-      throw Exception("Mirror failed");
-    }).toList();
+        final res = await http.get(
+          Uri.parse(url),
+          headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+          },
+        ).timeout(const Duration(seconds: 4));
 
-    try {
-      final result = await Future.any(requests);
-      if (result != null) return result;
-    } catch (_) {
-      for (String url in mirrorUrls) {
-        try {
-          final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 2));
-          if (res.statusCode == 200) {
-            return jsonDecode(utf8.decode(res.bodyBytes));
+        if (res.statusCode == 200) {
+          String rawBody = utf8.decode(res.bodyBytes).trim();
+
+          // 🧹 Strip UTF-8 BOM Marker
+          if (rawBody.startsWith('\uFEFF')) {
+            rawBody = rawBody.substring(1).trim();
           }
-        } catch (_) {}
+          // 🧹 Strip Markdown Backticks
+          rawBody = rawBody.replaceAll('```json', '').replaceAll('```', '').trim();
+
+          if (!rawBody.startsWith('<') && !rawBody.startsWith('<!DOCTYPE')) {
+            final dynamic parsed = jsonDecode(rawBody);
+            if (parsed != null) {
+              return parsed;
+            }
+          }
+        }
+      } catch (_) {
+        continue;
       }
     }
     return null;
@@ -217,18 +240,23 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('MockTester',
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: _isDarkMode ? Colors.white : const Color(0xFF0F172A))),
+        title: Text(
+          'MockTester',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
+          ),
+        ),
         backgroundColor: cardColor,
         elevation: 0,
         actions: [
           IconButton(
             icon: const Icon(Icons.school_rounded, color: Color(0xFF075E54)),
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const LearnHubScreen()))
-                  .then((_) => _loadRealtimeProgress());
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const LearnHubScreen()),
+              ).then((_) => _loadRealtimeProgress());
             },
           ),
         ],
@@ -257,7 +285,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             onLaunchPractice: _launchRevisionPractice,
           ),
 
-          // 🎯 Tab 2: Sectional Tab (Persistent Sync Key)
+          // 🎯 Tab 2: Sectional Tab
           SectionalTab(
             key: ValueKey('sec_${_sectionalData.keys.join('_')}'),
             sectionalData: _sectionalData,
@@ -304,9 +332,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         baseColor: Colors.grey[300]!,
         highlightColor: Colors.grey[100]!,
         child: Container(
-            height: 100,
-            margin: const EdgeInsets.only(bottom: 16),
-            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12))),
+          height: 100,
+          margin: const EdgeInsets.only(bottom: 16),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
       ),
     );
   }
@@ -332,7 +364,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       ),
     );
 
-    // Build exhaustive list of candidate paths
     Set<String> candidatePaths = {path};
 
     if (path.contains('bssc_cgl/aptitude')) candidatePaths.add(path.replaceAll('bssc_cgl/aptitude', 'bssc_cgl_aptitude'));
@@ -419,6 +450,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
+  // 🎯 UNIVERSAL REVISION PRACTICE LAUNCHER
   void _launchRevisionPractice(BuildContext context, String title, String path) async {
     showDialog(
       context: context,
@@ -456,7 +488,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (ctx) => RevisionPracticeScreen(testTitle: title, questions: qList),
+                builder: (ctx) => RevisionPracticeScreen(
+                  testTitle: title,
+                  questions: qList,
+                ),
               ),
             );
             return;
