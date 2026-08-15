@@ -14,7 +14,6 @@ class RevisionPracticeScreen extends StatefulWidget {
     required this.testTitle,
     required this.questions,
   });
-
   @override
   State<RevisionPracticeScreen> createState() => _RevisionPracticeScreenState();
 }
