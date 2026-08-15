@@ -266,7 +266,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
                                   String userQuery = doubtController.text.trim();
 
-                                  // 🛑 REMOVED 'explanation:' PARAMETER TO PREVENT BUILD ERRORS
                                   String aiResp = await AiExplainerService.askCustomDoubt(
                                     question: currentQ.getText(_isHindi),
                                     options: currentQ.options,
@@ -451,34 +450,80 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 18),
 
+            // 🎯 1. MAIN QUESTION CARD
             Card(
               elevation: 1,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    MathFormattedText(
-                      text: currentQ.getText(_isHindi),
-                      textStyle: const TextStyle(fontSize: 15.5, fontWeight: FontWeight.w600, height: 1.4, color: Colors.black87),
-                    ),
-                    if (statements != null && statements.isNotEmpty) ...[
-                      const SizedBox(height: 10),
-                      ...statements.map((stmt) => Padding(
-                        padding: const EdgeInsets.only(bottom: 4),
-                        child: MathFormattedText(
-                          text: "• $stmt",
-                          textStyle: TextStyle(fontSize: 13.5, color: Colors.grey.shade800, height: 1.3),
-                        ),
-                      )),
-                    ],
-                  ],
+                child: MathFormattedText(
+                  text: currentQ.getText(_isHindi),
+                  textStyle: const TextStyle(
+                    fontSize: 15.5,
+                    fontWeight: FontWeight.w600,
+                    height: 1.4,
+                    color: Colors.black87,
+                  ),
                 ),
               ),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 10),
 
+            // 📋 2. DEDICATED SEPARATE STATEMENT CARDS
+            if (statements != null && statements.isNotEmpty) ...[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: statements.asMap().entries.map((entry) {
+                  int index = entry.key + 1;
+                  String stmtText = entry.value.trim().replaceFirst(RegExp(r'^([\(\[]?\d+[\)\]\.]?|•|-)\s*'), '');
+
+                  return Container(
+                    width: double.infinity,
+                    margin: const EdgeInsets.only(bottom: 8.0),
+                    padding: const EdgeInsets.all(12.0),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF8FAFC),
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: const Color(0xFFE2E8F0)),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF2563EB),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: Text(
+                            "($index)",
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 11,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: MathFormattedText(
+                            text: stmtText,
+                            textStyle: const TextStyle(
+                              fontSize: 13.5,
+                              color: Color(0xFF334155),
+                              height: 1.45,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                }).toList(),
+              ),
+              const SizedBox(height: 10),
+            ],
+
+            // 🔘 3. OPTIONS LIST
             ...List.generate(currentQ.options.length, (index) {
               final optionText = currentQ.options[index];
               final isCorrect = index == currentQ.answerIndex;
@@ -549,6 +594,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               );
             }),
 
+            // 💡 4. SOLUTION & AI DOUBT
             if (_isAnswered) ...[
               const SizedBox(height: 14),
               Container(
