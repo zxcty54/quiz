@@ -257,11 +257,25 @@
       "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/fundamentalduties.json"
     },
     {
-      "id": "pol_president_vp_pm",
-      "title": "President, VP & Prime Minister",
+      "id": "pol_president",
+      "title": "President",
       "subtitle": "Learn with Aman Sir & Raju",
       "isAvailable": true,
-      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/president_vp_pm.json"
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/president.json"
+    },
+     {
+      "id": "pol_vicepresident",
+      "title": "VicePresident",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/vicepresident.json"
+    },
+    {
+      "id": "pol_pm",
+      "title": "Prime Minister",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/primeminister.json"
     },
     {
       "id": "pol_parliament",
@@ -278,11 +292,25 @@
       "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/supremecourt.json"
     },
     {
-      "id": "pol_cm_governor_com",
-      "title": "Governor, CM & Council of Ministers",
+      "id": "pol_cm",
+      "title": " Chief Minister",
       "subtitle": "Learn with Aman Sir & Raju",
       "isAvailable": true,
-      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/cm_governor_com.json"
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/cm.json"
+    },
+    {
+      "id": "pol_governor",
+      "title": "Governor",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/governor.json"
+    },
+    {
+      "id": "pol_com",
+      "title": "Council of Ministers",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/com.json"
     },
     {
       "id": "pol_highcourt",
@@ -360,6 +388,20 @@
       "subtitle": "Learn with Aman Sir & Raju",
       "isAvailable": true,
       "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/ncw_ncm.json"
+    }, 
+    {
+      "id": "pol_lokpal",
+      "title": "Lokpal and CVC ",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/lokpal_cvc.json"
+    },
+    {
+      "id": "pol_cic",
+      "title": "Central and State Information Comm ",
+      "subtitle": "Learn with Aman Sir & Raju",
+      "isAvailable": true,
+      "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/cic_sic.json"
     }
   ]
 },
