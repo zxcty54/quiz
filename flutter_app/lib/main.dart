@@ -8,7 +8,6 @@ final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.lig
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Saved theme preferences read karein
   final prefs = await SharedPreferences.getInstance();
   final bool isDark = prefs.getBool('is_dark_mode') ?? false;
   globalThemeNotifier.value = isDark ? ThemeMode.dark : ThemeMode.light;
@@ -46,7 +45,7 @@ class MyApp extends StatelessWidget {
               foregroundColor: Color(0xFF0F172A),
               elevation: 0,
             ),
-            cardTheme: CardTheme(
+            cardTheme: CardThemeData(
               color: Colors.white,
               elevation: 1.5,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -70,12 +69,12 @@ class MyApp extends StatelessWidget {
               foregroundColor: Colors.white,
               elevation: 0,
             ),
-            cardTheme: CardTheme(
+            cardTheme: CardThemeData(
               color: const Color(0xFF1E293B),
               elevation: 2,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             ),
-            dialogTheme: const DialogTheme(
+            dialogTheme: const DialogThemeData(
               backgroundColor: Color(0xFF1E293B),
               titleTextStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
             ),
