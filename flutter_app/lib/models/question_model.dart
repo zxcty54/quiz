@@ -7,7 +7,9 @@ class Question {
   final List<String>? oh; // Options Hindi
   final List<String> options; // Options List (Legacy / Default Fallback)
   final int answerIndex; // Correct Answer Index (0-based)
-  final String explanation; // Explanation / Solution
+  final String explanation; // Explanation / Solution (Fallback)
+  final String? ee; // English Detailed Explanation
+  final String? eh; // Hindi Detailed Explanation
 
   Question({
     required this.qe,
@@ -19,9 +21,11 @@ class Question {
     required this.options,
     required this.answerIndex,
     required this.explanation,
+    this.ee,
+    this.eh,
   });
 
-  // 🎯 SMART TEXT GETTER (Fixes missing getText error & White screen fallback)
+  // 🎯 SMART TEXT GETTER (Handles Bilingual Question Text)
   String getText(bool isHindi) {
     if (isHindi) {
       if (qh != null && qh!.trim().isNotEmpty) return qh!;
@@ -45,14 +49,26 @@ class Question {
     return options.isNotEmpty ? options : ["Option text not available."];
   }
 
-  // 🛡️ COMPATIBILITY GETTERS (Isse revision_practice_screen aur CBT screen dono bina error ke chalenge)
+  // 💡 SMART EXPLANATION GETTER (Handles Bilingual Explanations ee & eh)
+  String getExplanation(bool isHindi) {
+    if (isHindi) {
+      if (eh != null && eh!.trim().isNotEmpty) return eh!;
+      if (ee != null && ee!.trim().isNotEmpty) return ee!;
+    } else {
+      if (ee != null && ee!.trim().isNotEmpty) return ee!;
+      if (eh != null && eh!.trim().isNotEmpty) return eh!;
+    }
+    return explanation.trim().isNotEmpty ? explanation : "Explanation not available.";
+  }
+
+  // 🛡️ COMPATIBILITY GETTERS (Purani aur nayi dono screens ke liye safe)
   String get question => qe.isNotEmpty ? qe : (qh ?? '');
   String get questionText => getText(false);
   int get answer => answerIndex;
   int get correctOptionIndex => answerIndex;
 
   factory Question.fromJson(Map<String, dynamic> json) {
-    // 1. Question Text Parsing
+    // 1. Question Text Parsing (qe / qh / q / question)
     String mainQe = json['qe'] ?? json['q'] ?? json['question'] ?? '';
     String? mainQh = json['qh'];
 
@@ -84,8 +100,10 @@ class Question {
       ansIdx = json['answer'] is int ? json['answer'] : int.tryParse(json['answer'].toString()) ?? 0;
     }
 
-    // 6. Explanation Parsing (e / explanation)
+    // 6. Explanation Parsing (ee / eh / e / explanation)
     String exp = json['e'] ?? json['explanation'] ?? '';
+    String? expE = json['ee'];
+    String? expH = json['eh'];
 
     return Question(
       qe: mainQe,
@@ -97,6 +115,8 @@ class Question {
       options: opts,
       answerIndex: ansIdx,
       explanation: exp,
+      ee: expE,
+      eh: expH,
     );
   }
 }
