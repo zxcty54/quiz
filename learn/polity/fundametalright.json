@@ -1,1621 +1,1840 @@
 
 {
-  "topic_id": "fundamental_rights_polity",
-  "topic_title": "Fundamental Rights",
-  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
-  "total_cards": 50,
+  "topic_id": "indian_polity_fundamental_rights",
+  "topic_title": "Fundamental Rights in Indian Polity",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 99,
   "characters": {
-    "aman": {
-      "name": "Aman Sir",
-      "role": "teacher",
-      "avatar": "👨‍🏫"
-    },
-    "raju": {
-      "name": "Raju",
-      "role": "student",
-      "avatar": "👦"
-    }
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
   },
   "cards": [
     {
       "card_id": "card_01_intro",
       "card_slug": "card_01_intro",
       "type": "intro",
-      "concept_id": "fundamental_rights_intro",
+      "concept_id": "chapter_intro",
       "level": 1,
-      "progress": {
-        "current": 1,
-        "total": 50
-      },
+      "progress": { "current": 1, "total": 99 },
       "intro_payload": {
-        "title": "Fundamental Rights",
+        "title": "Fundamental Rights - Part III of the Constitution",
         "icon": "⚖️",
-        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
         "learning_outcomes": [
-          "Understanding what Fundamental Rights are and why they matter",
-          "Six types of Fundamental Rights (Articles 12-35)",
-          "Right to Equality, Freedom, Exploitation, Religion, Culture",
-          "Constitutional Remedies and Writs",
-          "Restrictions, Exceptions and Emergency Provisions",
-          "PYQ Traps: Article numbers, exceptions, landmark cases"
-        ],
-        "estimated_time": "25 mins",
-        "total_xp": 300
+          "Article 12: Definition of 'State' and its expanding scope",
+          "Article 13: Judicial Review, Doctrine of Severability & Eclipse",
+          "Article 14: Equality before law vs Equal protection of laws",
+          "Article 15 & 16: Prohibition of discrimination, reservations, EWS quota",
+          "Article 17 & 18: Untouchability abolition, Abolition of titles",
+          "Article 19: Six Freedoms & reasonable restrictions",
+          "Article 20, 21, 21A: Protection in conviction, Right to Life, Right to Education",
+          "Article 22: Arrest, Detention & Preventive Detention safeguards",
+          "Article 23 & 24: Right against Exploitation, Child Labour ban",
+          "Article 25-28: Freedom of Religion",
+          "Article 29-30: Cultural & Educational Rights of Minorities",
+          "Article 32: Right to Constitutional Remedies & 5 Writs",
+          "Article 33-35 & General Features, Amendments (44th, 86th, 103rd)"
+        ]
       },
-      "navigation": {
-        "next": "card_02_daily_life",
-        "button_text": "शुरू करें ➔"
-      }
+      "navigation": { "next": "card_02_bat_snatch", "button_text": "Start Learning ➔" }
     },
+
     {
-      "card_id": "card_02_daily_life",
-      "card_slug": "card_02_daily_life",
+      "card_id": "card_02_bat_snatch",
+      "card_slug": "card_02_bat_snatch",
       "type": "chat",
-      "concept_id": "rights_daily_context",
+      "concept_id": "article_12_state",
       "level": 1,
-      "progress": {
-        "current": 2,
-        "total": 50
-      },
+      "progress": { "current": 2, "total": 99 },
       "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, kal society mein guard ne mujhe roka aur bola ki main yaha nahi khel sakta kyunki main garib family se hun. Ye galat hai na?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul galat hai Raju! Tumhe aisa lagta hai ki ye galat hai kyunki tumhare andar ek samajh hai ki sabko equal treatment milna chahiye. Isi basic samajh ko Constitution ne legally protect kiya hai through Fundamental Rights."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab sir, ye rights mujhe Constitution ne diye hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Fundamental Rights wo basic freedoms aur protections hain jo Constitution tumhe guarantee karta hai. Agar koi tumhe discriminate kare, tumhari freedom cheen le, ya tumse forced labour karaye - Constitution kahega 'Nahi! Ye galat hai.' Aaj hum samjhenge ki ye rights kya hain, kahan likhe hain, aur exam mein kaise puchhe jaate hain!"
-        }
+        { "speaker": "raju", "text": "Sir, kal mera cricket bat mere hi classmate ne cheen liya aur wapas nahi de raha. Kya main is par 'Fundamental Rights violation' ka case laga sakta hoon?" },
+        { "speaker": "aman", "text": "Achha sawaal! Dekho Raju, [[Fundamental Rights | Constitution ke Part III mein diye gaye basic rights jo courts mein enforce ho sakte hain]] sirf tumhare against 'State' ke violations ko cover karte hain - ek private classmate ke against nahi." },
+        { "speaker": "raju", "text": "Hain?? Toh mera bat wapas kaise milega phir?" },
+        { "speaker": "aman", "text": "Uske liye normal criminal/civil law hai - police complaint, theft ka case. Fundamental Rights ka use tab hota hai jab tumhari School Principal (government school) ya Police ya Municipal Corporation tumhare rights ko dabaaye. Ruko, ab samajhte hain 'State' ka exact matlab kya hai." }
       ],
-      "navigation": {
-        "next": "card_03_what_are_fr",
-        "button_text": "समझो ➔"
-      }
+      "navigation": { "next": "card_03_article12_definition", "button_text": "Next Card ➔" }
     },
+
     {
-      "card_id": "card_03_what_are_fr",
-      "card_slug": "card_03_what_are_fr",
+      "card_id": "card_03_article12_definition",
+      "card_slug": "card_03_article12_definition",
       "type": "chat",
-      "concept_id": "fundamental_rights_definition",
+      "concept_id": "article_12_state",
       "level": 1,
-      "progress": {
-        "current": 3,
-        "total": 50
-      },
+      "progress": { "current": 3, "total": 99 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Fundamental Rights wo basic human rights hain jo Constitution ke Part III (Articles 12 se 35) mein likhe hain. Ye rights government ko bhi rok sakti hain agar wo kuch galat kare! Originally 7 rights the, ab 6 hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "7 se 6 kaise ho gaye sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Right to Property originally Fundamental Right tha (Article 31), lekin 44th Amendment (1978) ne isko hata diya aur Legal Right (Article 300A) bana diya. Ye BPSC ka bahut bada trap hai - students confuse ho jaate hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab ab 6 Fundamental Rights hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Ab 6 hain: (1) Right to Equality, (2) Right to Freedom, (3) Right against Exploitation, (4) Right to Freedom of Religion, (5) Cultural and Educational Rights, (6) Right to Constitutional Remedies. Sabka apna Article number hai jo exam mein bahut puchha jata hai!"
-        }
+        { "speaker": "aman", "text": "Article 12 batata hai 'State' word ka matlab jo poore Part III mein use hota hai. Isme 4 cheezein aati hain: (1) Government aur Parliament of India, (2) Government aur Legislature of each State, (3) all Local Authorities (Municipality, Panchayat), (4) 'other authorities' within India or under Government of India ke control mein." },
+        { "speaker": "raju", "text": "'Other authorities' ka matlab kya? Ye toh bahut vague hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda - ye exam ka sabse favorite confusion point hai! Isi ambiguity ki wajah se courts ko decide karna pada ki kaunse bodies isme aayengi. Agle card mein wo interesting story dekhte hain." },
+        { "speaker": "raju", "text": "Toh matlab ek statutory board bhi 'State' ho sakta hai kabhi kabhi?" }
       ],
-      "navigation": {
-        "next": "card_04_quiz_count",
-        "button_text": "Quiz time ➔"
-      }
+      "navigation": { "next": "card_04_ajay_hasia_test", "button_text": "Next Card ➔" }
     },
+
     {
-      "card_id": "card_04_quiz_count",
-      "card_slug": "card_04_quiz_count",
+      "card_id": "card_04_ajay_hasia_test",
+      "card_slug": "card_04_ajay_hasia_test",
+      "type": "chat",
+      "concept_id": "article_12_state",
+      "level": 1,
+      "progress": { "current": 4, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Supreme Court ne Ajay Hasia case (1981) mein ek test diya - agar koi body Government ke 'deep and pervasive control' mein hai, uski poori funding Sarkar deti hai, aur wo public function nibhaati hai (jaise LIC, ONGC, Statutory Corporations), toh wo bhi 'State' maani jaayegi - use 'instrumentality or agency of the State' kehte hain." },
+        { "speaker": "raju", "text": "Toh koi bhi private school ya company jisko thoda sa government grant milta hai, wo bhi 'State' ban jaayegi kya?" },
+        { "speaker": "aman", "text": "Yahin hai BPSC ka trap suno - sirf thoda funding milna kaafi nahi hai! Court dekhega ki control kitna 'deep and pervasive' hai. Ek purely private, autonomous body jise sirf grant milta hai lekin control nahi, wo Article 12 ke 'State' mein NAHI aayegi." },
+        { "speaker": "raju", "text": "Achhaaaa, matlab funding + full control dono chahiye tabhi 'State' maanenge. Ye toh exam mein pakka confuse karega, ab clear ho gaya!" }
+      ],
+      "navigation": { "next": "card_05_quiz1_article12", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_05_quiz1_article12",
+      "card_slug": "card_05_quiz1_article12",
       "type": "quiz",
-      "concept_id": "fundamental_rights_count",
+      "concept_id": "article_12_state",
       "level": 1,
-      "progress": {
-        "current": 4,
-        "total": 50
-      },
+      "progress": { "current": 5, "total": 99 },
       "quiz_payload": {
-        "question": "वर्तमान में भारतीय संविधान में कितने Fundamental Rights हैं?",
+        "question": "Q1/3: Article 12 ke anusar 'State' ki definition mein kaunsi entities SHAAMIL hain?",
         "options": [
-          { "id": "A", "text": "7" },
-          { "id": "B", "text": "6" },
-          { "id": "C", "text": "5" },
-          { "id": "D", "text": "8" }
+          { "id": "A", "text": "Sirf Union Government aur Parliament" },
+          { "id": "B", "text": "Government aur Parliament of India, Government aur Legislature of States, Local Authorities, aur 'other authorities'" },
+          { "id": "C", "text": "Sirf Local Authorities jaise Municipality" },
+          { "id": "D", "text": "Sirf private companies jo tax bharti hain" }
         ],
         "correct_option_id": "B",
-        "explanation": "वर्तमान में 6 Fundamental Rights हैं। मूल रूप से 7 थे, लेकिन 44वें संशोधन अधिनियम (1978) द्वारा Right to Property (Article 31) को Fundamental Rights से हटाकर Legal Right (Article 300A) बना दिया गया। यह SSC और Railway में बार-बार पूछा जाता है!"
+        "explanation": "Article 12 'State' ki definition mein charon cheezein shaamil hain: Central Govt-Parliament, State Govt-Legislature, Local Authorities, aur 'other authorities' (statutory/government-controlled bodies)."
       },
-      "navigation": {
-        "next": "card_05_part3_articles",
-        "button_text": "आगे बढ़ो ➔"
-      }
+      "navigation": { "next": "card_06_quiz2_article12", "button_text": "Check Answer & Continue ➔" }
     },
+
     {
-      "card_id": "card_05_part3_articles",
-      "card_slug": "card_05_part3_articles",
-      "type": "chat",
-      "concept_id": "part3_coverage",
-      "level": 1,
-      "progress": {
-        "current": 5,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir aapne bola Part III mein Articles 12-35 tak hain. Matlab itne saare articles!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan Raju! Part III mein 24 articles hain (12 se 35 tak). Lekin dhyan do - har article directly ek right nahi hai. Kuch articles definitions dete hain, kuch exceptions batate hain, kuch remedies dete hain. Actual rights 6 hi categories mein organize hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh Article 12 kya hai sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Article 12 definition hai 'State' ka - ye batata hai ki 'State' matlab kya? Government of India, Parliament, State Governments, Local Bodies sab 'State' mein aate hain. Ye zaroori hai kyunki Fundamental Rights sirf 'State' ke against enforce hote hain, private persons ke against nahi! Ye concept UPSC Prelims mein bahut puchha jata hai."
-        }
-      ],
-      "navigation": {
-        "next": "card_06_module1_milestone",
-        "button_text": "Module complete ➔"
-      }
-    },
-    {
-      "card_id": "card_06_module1_milestone",
-      "card_slug": "card_06_module1_milestone",
-      "type": "milestone",
-      "concept_id": "intro_complete",
-      "level": 1,
-      "progress": {
-        "current": 6,
-        "total": 50
-      },
-      "milestone_payload": {
-        "title": "🎯 MODULE 1 COMPLETE!",
-        "badge_emoji": "📜",
-        "completed_topic": "Introduction to Fundamental Rights",
-        "xp_earned": 30,
-        "milestone_progress": "Module 1/7 Clear",
-        "motivational_quote": "Great start! अब हम पहला Right समझेंगे - Right to Equality! 💪"
-      },
-      "navigation": {
-        "next": "card_07_equality_intro",
-        "button_text": "Start Module 2 ➔"
-      }
-    },
-    {
-      "card_id": "card_07_equality_intro",
-      "card_slug": "card_07_equality_intro",
-      "type": "chat",
-      "concept_id": "equality_intro",
-      "level": 2,
-      "progress": {
-        "current": 7,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Module 2 shuru karte hain - Right to Equality (Articles 14-18). Ye sabse pehla aur sabse important right hai. Iska matlab hai ki State sabko equal treat karega - chahe rich ho ya poor, upper caste ho ya lower caste, Hindu ho ya Muslim!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir matlab kisi ke saath discrimination nahi hoga?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Article 14 kehta hai 'Equality before law' aur 'Equal protection of laws'. Article 15 kehta hai religion, race, caste, sex, place of birth ke basis par discrimination nahi hoga. Article 16 kehta hai government jobs mein equal opportunity. Article 17 ne Untouchability abolish kar di. Article 18 ne Titles (sir, rao bahadur etc.) abolish kar diye!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh 5 articles hain Equality ke liye?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Articles 14, 15, 16, 17, 18 - ye 5 articles milkar Right to Equality banate hain. Har ek ka specific focus hai. Ab ek-ek karke detail mein samjhte hain kyunki exam mein har article se questions aate hain!"
-        }
-      ],
-      "navigation": {
-        "next": "card_08_article14",
-        "button_text": "Article 14 ➔"
-      }
-    },
-    {
-      "card_id": "card_08_article14",
-      "card_slug": "card_08_article14",
-      "type": "chat",
-      "concept_id": "article_14_detail",
-      "level": 2,
-      "progress": {
-        "current": 8,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Article 14: 'Equality before law' aur 'Equal protection of laws'. Pehla part British concept hai (Rule of Law), doosra part American concept hai. Matlab (1) Koi bhi law se upar nahi, (2) Samaan paristhitiyon mein samaan vyavahar."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir lekin President ko toh immunity hai na? Toh wo law se upar nahi hai kya?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Brilliant question! Yahin twist hai. Article 14 'absolute equality' nahi deta, 'reasonable classification' allow karta hai. President ko Article 361 mein special immunity hai for his official acts - ye reasonable hai kyunki wo head of state hai. Lekin personal crimes mein immunity nahi!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab Article 14 mein exceptions hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Reasonable classification valid hai. Jaise women ke liye alag laws, children ke liye alag laws, SC/ST ke liye reservation - ye sab Article 14 violate nahi karte kyunki different categories ko different treatment dena justified hai. BPSC ka favorite trap: 'Article 14 means absolute equality' - WRONG!"
-        }
-      ],
-      "navigation": {
-        "next": "card_09_article15",
-        "button_text": "Article 15 ➔"
-      }
-    },
-    {
-      "card_id": "card_09_article15",
-      "card_slug": "card_09_article15",
-      "type": "chat",
-      "concept_id": "article_15_detail",
-      "level": 2,
-      "progress": {
-        "current": 9,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Article 15: Prohibition of discrimination on grounds of religion, race, caste, sex, or place of birth. Matlab State kisi ko bhi in bases par discriminate nahi kar sakta - shops, hotels, public places mein entry deny nahi kar sakta!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh agar koi hotel sirf Hindus ko allow kare toh galat hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Agar wo State-run hotel hai toh bilkul galat! Lekin agar private hotel hai toh Article 15 directly apply nahi hoga kyunki Fundamental Rights State ke against hain, private individuals ke against nahi. Lekin dusre laws (like public accommodation laws) se action ho sakta hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Article 15 mein bhi exceptions hain kya sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Article 15(3) kehta hai State women aur children ke liye special provisions bana sakta hai. Article 15(4) kehta hai SC/ST/OBC ke liye special provisions bana sakta hai. Article 15(5) (103rd Amendment) kehta hai educational institutions mein economically weaker sections (EWS) ke liye 10% reservation. Ye exceptions exam mein bahut aate hain!"
-        }
-      ],
-      "navigation": {
-        "next": "card_10_quiz_article15",
-        "button_text": "Quiz ➔"
-      }
-    },
-    {
-      "card_id": "card_10_quiz_article15",
-      "card_slug": "card_10_quiz_article15",
+      "card_id": "card_06_quiz2_article12",
+      "card_slug": "card_06_quiz2_article12",
       "type": "quiz",
-      "concept_id": "article_15_application",
-      "level": 2,
-      "progress": {
-        "current": 10,
-        "total": 50
-      },
+      "concept_id": "article_12_state",
+      "level": 1,
+      "progress": { "current": 6, "total": 99 },
       "quiz_payload": {
-        "question": "Article 15 के अनुसार, किन आधारों पर भेदभाव प्रतिबंधित है?",
+        "question": "Q2/3: Ajay Hasia case (1981) mein Supreme Court ne kaunsa test diya 'other authorities' pehchanne ke liye?",
         "options": [
-          { "id": "A", "text": "केवल धर्म और जाति" },
-          { "id": "B", "text": "धर्म, नस्ल, जाति, लिंग, जन्म स्थान" },
-          { "id": "C", "text": "केवल धर्म, नस्ल और जाति" },
-          { "id": "D", "text": "धर्म, जाति, भाषा, आय" }
+          { "id": "A", "text": "Sirf naam mein 'Corporation' hona chahiye" },
+          { "id": "B", "text": "Deep and pervasive government control + public function test" },
+          { "id": "C", "text": "Sirf company registration ka number dekhna" },
+          { "id": "D", "text": "Sirf employees ki sankhya dekhna" }
         ],
         "correct_option_id": "B",
-        "explanation": "Article 15 में 5 grounds पर भेदभाव प्रतिबंधित है: (1) Religion (धर्म), (2) Race (नस्ल), (3) Caste (जाति), (4) Sex (लिंग), (5) Place of birth (जन्म स्थान)। ध्यान दें - भाषा और आय इसमें शामिल नहीं हैं। यह Railway और SSC में सीधे पूछा जाता है!"
+        "explanation": "Ajay Hasia v. Khalid Mujib Sehravardi (1981) case mein Court ne 'instrumentality or agency of state' test diya - deep/pervasive control aur public function nibhaana zaroori criteria hain."
       },
-      "navigation": {
-        "next": "card_11_article16",
-        "button_text": "Article 16 ➔"
-      }
+      "navigation": { "next": "card_07_quiz3_article12", "button_text": "Check Answer & Continue ➔" }
     },
+
     {
-      "card_id": "card_11_article16",
-      "card_slug": "card_11_article16",
-      "type": "chat",
-      "concept_id": "article_16_detail",
-      "level": 2,
-      "progress": {
-        "current": 11,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Article 16: Equality of opportunity in public employment. Matlab government jobs mein sabko equal chance milega - religion, race, caste, sex, descent, place of birth, residence ke basis par discrimination nahi hoga!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh reservation Article 16 violate nahi karta sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul nahi! Article 16(4) kehta hai State can make provisions for reservation of backward classes. Article 16(4A) (77th Amendment) kehta hai SC/ST ke liye promotion mein reservation. Article 16(4B) (81st Amendment) kehta hai unfilled SC/ST vacancies ko next year carry forward kar sakte hain. Ye sab exceptions Article 16 mein hi diye gaye hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur bhi exceptions hain kya?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Article 16(5) kehta hai religious institutions ke liye special provisions - jaise mandir ka head Hindu hona chahiye. Yaad rakho: Article 16 sirf public employment ke liye hai, private jobs ke liye nahi! UPSC ka trap: 'Article 16 applies to all employment' - WRONG, sirf public employment!"
-        }
-      ],
-      "navigation": {
-        "next": "card_12_article17_18",
-        "button_text": "Articles 17 & 18 ➔"
-      }
-    },
-    {
-      "card_id": "card_12_article17_18",
-      "card_slug": "card_12_article17_18",
-      "type": "chat",
-      "concept_id": "articles_17_18_detail",
-      "level": 2,
-      "progress": {
-        "current": 12,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Article 17: Abolition of Untouchability. Ye bahut powerful article hai - isko enforce karne ke liye Protection of Civil Rights Act, 1955 banaya gaya. Koi bhi untouchability practice kare toh punishable offense hai, sirf State hi nahi private citizens bhi punish ho sakte hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab Article 17 private persons ke against bhi hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Ye bahut important exception hai. Generally Fundamental Rights sirf State ke against hain, but Article 17 aur Article 23 (against trafficking/forced labour) private persons ke against bhi enforceable hain. BPSC multi-statement mein ye zaroor aata hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur Article 18 sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Article 18: Abolition of Titles. State koi title nahi de sakta except military (Param Vir Chakra) aur educational (Padma awards - but ye titles nahi awards hain). Indians foreign titles accept nahi kar sakte without President's permission. British time ke 'Rai Bahadur', 'Khan Bahadur' sab abolish! Exception: Bharat Ratna, Padma Vibhushan allowed kyunki wo titles nahi, awards hain!"
-        }
-      ],
-      "navigation": {
-        "next": "card_13_quiz_equality",
-        "button_text": "Quiz ➔"
-      }
-    },
-    {
-      "card_id": "card_13_quiz_equality",
-      "card_slug": "card_13_quiz_equality",
+      "card_id": "card_07_quiz3_article12",
+      "card_slug": "card_07_quiz3_article12",
       "type": "quiz",
-      "concept_id": "equality_comprehensive",
-      "level": 2,
-      "progress": {
-        "current": 13,
-        "total": 50
-      },
+      "concept_id": "article_12_state",
+      "level": 1,
+      "progress": { "current": 7, "total": 99 },
       "quiz_payload": {
-        "question": "निम्नलिखित में से कौन सा कथन सही है?\n1. Article 14 absolute equality प्रदान करता है।\n2. Article 15(4) SC/ST/OBC के लिए विशेष प्रावधान की अनुमति देता है।\n3. Article 17 केवल State के विरुद्ध लागू होता है।\n4. Article 18 military और educational titles को अनुमति देता है।",
+        "question": "Q3/3: Consider the statements:\n1. Fundamental Rights are enforceable against private individuals in all circumstances.\n2. A purely private body receiving minor government grant without deep control is not 'State' under Article 12.\nWhich is/are correct?",
         "options": [
-          { "id": "A", "text": "केवल 2 और 4" },
-          { "id": "B", "text": "केवल 1 और 3" },
-          { "id": "C", "text": "केवल 2" },
-          { "id": "D", "text": "केवल 1, 2 और 4" }
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 2" },
+          { "id": "C", "text": "Both 1 and 2" },
+          { "id": "D", "text": "Neither" }
         ],
-        "correct_option_id": "C",
-        "explanation": "केवल कथन 2 सही है। (1) Article 14 absolute equality नहीं, बल्कि reasonable classification की अनुमति देता है - गलत। (2) Article 15(4) सही है - SC/ST/OBC के लिए विशेष प्रावधान। (3) Article 17 (Untouchability) private persons के विरुद्ध भी लागू होता है - गलत। (4) Article 18 titles abolish करता है; military decorations और awards (जो titles नहीं हैं) allowed हैं - कथन भ्रामक है। यह BPSC का क्लासिक multi-statement trap है!"
+        "correct_option_id": "B",
+        "explanation": "Statement 1 galat hai - FR general rule mein sirf 'State' ke against enforceable hain (Article 17, 23 jaise exceptions ko chhodkar). Statement 2 sahi hai - minor funding without deep control 'State' nahi banata."
       },
-      "navigation": {
-        "next": "card_14_equality_milestone",
-        "button_text": "Module complete ➔"
-      }
+      "navigation": { "next": "card_08_milestone1", "button_text": "Check Answer & Continue ➔" }
     },
+
     {
-      "card_id": "card_14_equality_milestone",
-      "card_slug": "card_14_equality_milestone",
+      "card_id": "card_08_milestone1",
+      "card_slug": "card_08_milestone1",
       "type": "milestone",
-      "concept_id": "equality_complete",
-      "level": 2,
-      "progress": {
-        "current": 14,
-        "total": 50
-      },
+      "concept_id": "article_12_state",
+      "level": 1,
+      "progress": { "current": 8, "total": 99 },
       "milestone_payload": {
-        "title": "⚖️ MODULE 2 MASTERED!",
-        "badge_emoji": "🏆",
-        "completed_topic": "Right to Equality (Articles 14-18)",
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Article 12 - Definition of State",
         "xp_earned": 50,
-        "milestone_progress": "Module 2/7 Clear",
-        "motivational_quote": "Excellent! अब सबसे बड़ा right आता है - Right to Freedom! 🚀"
+        "milestone_progress": "Module 1/13 Clear",
+        "motivational_quote": "Ek officer ki tarah sochna shuru ho gaya - 'State' ka daayra ab crystal clear hai!"
       },
-      "navigation": {
-        "next": "card_15_freedom_intro",
-        "button_text": "Start Module 3 ➔"
-      }
+      "navigation": { "next": "card_09_void_law_intro", "button_text": "Start Next Module ➔" }
     },
+
     {
-      "card_id": "card_15_freedom_intro",
-      "card_slug": "card_15_freedom_intro",
+      "card_id": "card_09_void_law_intro",
+      "card_slug": "card_09_void_law_intro",
       "type": "chat",
-      "concept_id": "freedom_intro",
+      "concept_id": "article_13_judicial_review",
       "level": 2,
-      "progress": {
-        "current": 15,
-        "total": 50
-      },
+      "progress": { "current": 9, "total": 99 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Module 3: Right to Freedom (Articles 19-22) - ye sabse detailed aur important right hai! Article 19 mein 6 freedoms hain - originally 7 the but property wala 44th Amendment ne hata diya. Article 20-22 protection dete hain arrest, detention aur conviction se related."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Article 19 mein kaun kaun se freedoms hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Article 19 mein 6 freedoms: (1) Speech and expression, (2) Assemble peacefully without arms, (3) Form associations/unions, (4) Move freely throughout India, (5) Reside and settle anywhere in India, (6) Practice any profession/occupation/trade/business. Originally property ka freedom bhi tha (19(1)(f)) but 44th Amendment ne delete kar diya!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab ab 19(1)(a) se 19(1)(g) tak but (f) missing hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Ab Article 19(1) mein clauses (a), (b), (c), (d), (e), (g) hain - (f) deleted! Ye BPSC/UPSC ka favorite numerical trap hai. Aur dhyan do - ye rights sirf citizens ko milte hain, foreigners ko nahi! Article 14-18 (Equality) sabko milta hai, lekin Article 19 (Freedom) sirf citizens ko!"
-        }
+        { "speaker": "raju", "text": "Sir, agar Parliament koi aisa kanoon bana de jo humare Fundamental Rights ko hi cheen le, toh kya wo kanoon chal jaayega?" },
+        { "speaker": "aman", "text": "Bilkul nahi! Yahi Article 13 ka poora kaam hai. Article 13(2) saaf kehta hai - State koi bhi aisa kanoon nahi bana sakta jo FR ko 'take away' ya 'abridge' kare. Agar banaya, toh wo kanoon utni extent tak 'void' (shunya, laagu nahi hoga) ho jaayega." },
+        { "speaker": "raju", "text": "Aur ye check kaun karega ki kanoon FR todta hai ya nahi?" },
+        { "speaker": "aman", "text": "Yahi se [[Judicial Review | Courts ki power ki wo kisi kanoon ya government action ko Constitution ke against hone par invalid ghoshit kar sakein]] ka janam hota hai - Article 13 hi judicial review ka constitutional basis hai." }
       ],
-      "navigation": {
-        "next": "card_16_article19_details",
-        "button_text": "Details ➔"
-      }
+      "navigation": { "next": "card_10_pre_constitution_laws", "button_text": "Next Card ➔" }
     },
+
     {
-      "card_id": "card_16_article19_details",
-      "card_slug": "card_16_article19_details",
+      "card_id": "card_10_pre_constitution_laws",
+      "card_slug": "card_10_pre_constitution_laws",
       "type": "chat",
-      "concept_id": "article19_freedoms",
+      "concept_id": "article_13_judicial_review",
       "level": 2,
-      "progress": {
-        "current": 16,
-        "total": 50
-      },
+      "progress": { "current": 10, "total": 99 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "19(1)(a): Freedom of speech and expression - sabse powerful! Isme press freedom, right to information, commercial speech sab include hai. BUT absolute nahi - Article 19(2) mein reasonable restrictions hain: sovereignty, security, friendly relations with foreign states, public order, decency, morality, contempt of court, defamation, incitement to offence."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab main kuch bhi bol sakta hun?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi! Agar tum anti-national speech do, ya kisi ki defamation karo, ya court ka contempt karo - toh punishable hai. Freedom of speech 'reasonable restrictions' ke sath hai, absolute nahi. Har freedom ke against reasonable restrictions hain jo Article 19(2) se 19(6) mein diye gaye hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Baaki freedoms ke bhi restrictions hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! 19(1)(b) assembly - peaceful and unarmed honi chahiye, public order ke against nahi. 19(1)(c) association - reasonable restrictions on sovereignty, public order, morality. 19(1)(d)(e) movement/residence - restrictions tribal areas, enemy aliens par. 19(1)(g) profession - restrictions on professional/technical qualifications, public interest. Har freedom qualified hai!"
-        }
+        { "speaker": "aman", "text": "Ab suno ek twist - Article 13(1) puraane, 1950 se PEHLE ke laws ke baare mein hai. Agar koi British-era ka kanoon FR se match nahi karta, toh wo 'void' nahi hota, balki us extent tak sirf 'inoperative' (kaam na karne wala) ho jaata hai." },
+        { "speaker": "raju", "text": "Void aur inoperative mein kya farak hai sir? Same hi lag raha hai!" },
+        { "speaker": "aman", "text": "Bahut important farak hai! Isi se 'Doctrine of Eclipse' banta hai - wo purana kanoon poori tarah khatam nahi hota, bas 'eclipse' (dhundhla, chhupa) ho jaata hai. Agar future mein Constitution amend karke wo relevant Fundamental Right hi hata di jaaye, toh wo purana kanoon phir se zinda ho jaata hai!" },
+        { "speaker": "raju", "text": "Seriously?? Matlab kanoon marta nahi, bas so jaata hai aur phir jaag sakta hai! Ye toh bahut interesting hai." }
       ],
-      "navigation": {
-        "next": "card_17_quiz_article19",
-        "button_text": "Quiz ➔"
-      }
+      "navigation": { "next": "card_11_severability_waiver", "button_text": "Next Card ➔" }
     },
+
     {
-      "card_id": "card_17_quiz_article19",
-      "card_slug": "card_17_quiz_article19",
+      "card_id": "card_11_severability_waiver",
+      "card_slug": "card_11_severability_waiver",
+      "type": "chat",
+      "concept_id": "article_13_judicial_review",
+      "level": 2,
+      "progress": { "current": 11, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur doctrine suno - 'Doctrine of Severability'. Agar ek Act ke sirf kuch sections FR ke against hain aur baaki alag (separable) ho sakte hain, toh sirf wahi galat parts void honge, poora Act nahi. Lekin agar sab parts aapas mein itne juda hain ki alag nahi kar sakte, toh poora Act hi void ho jaata hai." },
+        { "speaker": "raju", "text": "Aur sir, kya main khud apna Fundamental Right chhod sakta hoon, jaise koi 'maaf karo mujhe ye right nahi chahiye' bol de?" },
+        { "speaker": "aman", "text": "Bahut acha sawaal! Basheshar Nath case (1959) mein Supreme Court ne clear kiya - koi bhi vyakti apne Fundamental Rights ko waive (chhod) nahi kar sakta, kyunki ye sirf individual ke liye nahi balki poore samaaj/public interest ke liye diye gaye hain." },
+        { "speaker": "raju", "text": "Achha! Toh FR 'gift' nahi hai jo wapas kar do, ye ek permanent guarantee hai. Samajh gaya sir!" }
+      ],
+      "navigation": { "next": "card_12_quiz1_article13", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_12_quiz1_article13",
+      "card_slug": "card_12_quiz1_article13",
       "type": "quiz",
-      "concept_id": "article19_count",
+      "concept_id": "article_13_judicial_review",
       "level": 2,
-      "progress": {
-        "current": 17,
-        "total": 50
-      },
+      "progress": { "current": 12, "total": 99 },
       "quiz_payload": {
-        "question": "वर्तमान में Article 19(1) में कितनी freedoms हैं?",
+        "question": "Q1/3: Article 13(1) aur 13(2) mein kya farak hai?",
         "options": [
-          { "id": "A", "text": "7" },
-          { "id": "B", "text": "6" },
-          { "id": "C", "text": "5" },
-          { "id": "D", "text": "8" }
+          { "id": "A", "text": "13(1) future laws ke liye hai, 13(2) purane laws ke liye" },
+          { "id": "B", "text": "13(1) pre-constitution laws ko void karta hai, 13(2) State ko FR ke against naya kanoon banane se rokta hai" },
+          { "id": "C", "text": "Dono ek hi cheez kehte hain" },
+          { "id": "D", "text": "13(1) sirf State laws ke liye, 13(2) sirf Union laws ke liye hai" }
         ],
         "correct_option_id": "B",
-        "explanation": "वर्तमान में Article 19(1) में 6 freedoms हैं। मूल रूप से 7 थीं (a से g तक), लेकिन 44वें संशोधन (1978) ने clause (f) - right to acquire, hold and dispose of property - को हटा दिया। अब (a), (b), (c), (d), (e), (g) बचे हैं। यह SSC, Railway और BPSC में बार-बार पूछा जाता है - students 7 लिख देते हैं!"
+        "explanation": "Article 13(1) 1950 se pehle wale laws ko FR se inconsistent hone par void karta hai, jabki 13(2) State ko future mein FR abridge karne wala kanoon banane se rokta hai."
       },
-      "navigation": {
-        "next": "card_18_articles20_22",
-        "button_text": "Articles 20-22 ➔"
-      }
+      "navigation": { "next": "card_13_quiz2_article13", "button_text": "Check Answer & Continue ➔" }
     },
+
     {
-      "card_id": "card_18_articles20_22",
-      "card_slug": "card_18_articles20_22",
-      "type": "chat",
-      "concept_id": "protection_conviction_arrest",
-      "level": 3,
-      "progress": {
-        "current": 18,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Article 20: Protection in respect of conviction for offences - (1) Ex-post facto law nahi, (2) Double jeopardy nahi, (3) Self-incrimination ke against protection. Matlab koi purane act ke liye punish nahi kar sakta, ek hi crime ke liye do baar punish nahi, aur khud ke against gawahi dene ke liye force nahi kar sakte!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Ex-post facto matlab sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Matlab agar aaj ek kaam legal hai aur tum karte ho, kal government law banaye ki wo illegal hai - toh tumhe punish nahi kar sakte! Law retrospective nahi hoga. Lekin civil matters aur tax matters mein retrospective laws ban sakte hain, sirf criminal matters mein nahi!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Article 21 aur 22 kya kehte hain sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Article 21: Right to Life and Personal Liberty - sabse important! 'No person shall be deprived of life or liberty except according to procedure established by law.' Supreme Court ne isme bahut expansion kiya - right to privacy, right to education, right to clean environment sab Article 21 mein include!\n\nArticle 22: Protection against arrest and detention - (1) Arrested person ko grounds batane honge, (2) Lawyer ka right, (3) 24 hours mein magistrate ke samne. BUT preventive detention mein ye rights nahi milte!"
-        }
-      ],
-      "navigation": {
-        "next": "card_19_quiz_article21",
-        "button_text": "Quiz ➔"
-      }
-    },
-    {
-      "card_id": "card_19_quiz_article21",
-      "card_slug": "card_19_quiz_article21",
+      "card_id": "card_13_quiz2_article13",
+      "card_slug": "card_13_quiz2_article13",
       "type": "quiz",
-      "concept_id": "article21_expansion",
-      "level": 3,
-      "progress": {
-        "current": 19,
-        "total": 50
-      },
+      "concept_id": "article_13_judicial_review",
+      "level": 2,
+      "progress": { "current": 13, "total": 99 },
       "quiz_payload": {
-        "question": "निम्नलिखित में से कौन से rights को Supreme Court ने Article 21 का हिस्सा माना है?\n1. Right to Privacy\n2. Right to Education\n3. Right to Clean Environment\n4. Right to Property",
+        "question": "Q2/3: 'Doctrine of Eclipse' ke anusar agar related Fundamental Right hi Constitution se hata di jaaye, toh purane 'eclipsed' law ka kya hota hai?",
         "options": [
-          { "id": "A", "text": "केवल 1 और 2" },
-          { "id": "B", "text": "केवल 1, 2 और 3" },
-          { "id": "C", "text": "सभी 1, 2, 3 और 4" },
-          { "id": "D", "text": "केवल 1 और 3" }
+          { "id": "A", "text": "Wo permanently dead ho jaata hai, dobara laagu nahi hota" },
+          { "id": "B", "text": "Wo phir se operative (active) ho jaata hai" },
+          { "id": "C", "text": "Sirf Supreme Court hi use dobara laagu kar sakta hai" },
+          { "id": "D", "text": "Uska koi mahatva nahi rehta" }
         ],
         "correct_option_id": "B",
-        "explanation": "Supreme Court ने Right to Privacy (Puttaswamy case 2017), Right to Education (86th Amendment ने Article 21A बनाया 2002 में), और Right to Clean Environment को Article 21 (Right to Life) का हिस्सा माना है। लेकिन Right to Property अब Fundamental Right नहीं है - 44th Amendment ने इसे हटाकर Article 300A में Legal Right बना दिया। यह UPSC Prelims का क्लासिक trap है!"
+        "explanation": "Doctrine of Eclipse ke anusar pre-constitution law sirf 'dormant' (chhupa) ho jaata hai, void nahi hota. Agar corresponding FR hi hata diya jaaye toh wo automatically active ho jaata hai."
       },
-      "navigation": {
-        "next": "card_20_freedom_milestone",
-        "button_text": "Module complete ➔"
-      }
+      "navigation": { "next": "card_14_quiz3_article13", "button_text": "Check Answer & Continue ➔" }
     },
+
     {
-      "card_id": "card_20_freedom_milestone",
-      "card_slug": "card_20_freedom_milestone",
+      "card_id": "card_14_quiz3_article13",
+      "card_slug": "card_14_quiz3_article13",
+      "type": "quiz",
+      "concept_id": "article_13_judicial_review",
+      "level": 2,
+      "progress": { "current": 14, "total": 99 },
+      "quiz_payload": {
+        "question": "Q3/3: Consider the statements:\n1. Doctrine of Severability allows courts to strike down only the invalid part of a law if it is separable.\n2. As per Basheshar Nath case, an individual can voluntarily waive his Fundamental Rights.\nWhich is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 2" },
+          { "id": "C", "text": "Both 1 and 2" },
+          { "id": "D", "text": "Neither" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 1 sahi hai - Doctrine of Severability yahi kehta hai. Statement 2 galat hai - Basheshar Nath case (1959) mein Court ne kaha ki FR waive NAHI kiye ja sakte kyunki wo public policy ke liye hain."
+      },
+      "navigation": { "next": "card_15_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_15_milestone2",
+      "card_slug": "card_15_milestone2",
       "type": "milestone",
-      "concept_id": "freedom_complete",
-      "level": 3,
-      "progress": {
-        "current": 20,
-        "total": 50
-      },
+      "concept_id": "article_13_judicial_review",
+      "level": 2,
+      "progress": { "current": 15, "total": 99 },
       "milestone_payload": {
-        "title": "🗽 MODULE 3 CONQUERED!",
-        "badge_emoji": "✊",
-        "completed_topic": "Right to Freedom (Articles 19-22)",
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Article 13 - Judicial Review & Doctrines",
         "xp_earned": 50,
-        "milestone_progress": "Module 3/7 Clear",
-        "motivational_quote": "Superb! Ab Rights against Exploitation देखते हैं! 💪"
+        "milestone_progress": "Module 2/13 Clear",
+        "motivational_quote": "Eclipse, Severability, Waiver - teeno doctrines ab pakke ho gaye. Agla stop - Equality!"
       },
-      "navigation": {
-        "next": "card_21_exploitation_intro",
-        "button_text": "Start Module 4 ➔"
-      }
+      "navigation": { "next": "card_16_equality_kitchen", "button_text": "Start Next Module ➔" }
     },
+
     {
-      "card_id": "card_21_exploitation_intro",
-      "card_slug": "card_21_exploitation_intro",
+      "card_id": "card_16_equality_kitchen",
+      "card_slug": "card_16_equality_kitchen",
       "type": "chat",
-      "concept_id": "exploitation_intro",
+      "concept_id": "article_14_equality",
       "level": 3,
-      "progress": {
-        "current": 21,
-        "total": 50
-      },
+      "progress": { "current": 16, "total": 99 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Module 4: Right against Exploitation (Articles 23-24) - ye bahut chhota but powerful right hai! Sirf 2 articles - Article 23 prohibits trafficking and forced labour, Article 24 prohibits child labour in hazardous industries."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir matlab koi mujhse zabardasti kaam nahi karwa sakta?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Article 23 kehta hai human trafficking, begar (forced labour without payment), aur forced labour prohibited hai. Ye right State ke against bhi hai aur private persons ke against bhi - jaise Article 17 (Untouchability). Agar koi private person bhi tumse forced labour karwaye toh punishable hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Lekin agar State compulsory military service lagaye toh?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Good question! Article 23 mein exception hai - State can impose compulsory service for public purposes like military service, community service, national service. But wo bhi discrimination nahi kar sakta on grounds of religion, race, caste etc. Ye UPSC Prelims mein puchha jata hai!"
-        }
+        { "speaker": "raju", "text": "Sir, Mummy hamesha kehti hai 'sab bacchon ko barabar pyaar milta hai, koi bhi chota-bada nahi'. Kya Constitution mein bhi aisa hi kuch hai?" },
+        { "speaker": "aman", "text": "Bilkul similar concept hai! Article 14 kehta hai - 'The State shall not deny to any person equality before the law or equal protection of the laws within the territory of India'. Ye do alag-alag ideas hain jo saath mein aate hain." },
+        { "speaker": "raju", "text": "Do alag ideas? Matlab? Equality toh equality hi hoti hai na?" },
+        { "speaker": "aman", "text": "Nahi Raju, yahi twist samajhna zaroori hai. 'Equality before law' ek negative concept hai (British origin) - iska matlab hai koi bhi vyakti special privilege nahi rakhta, sab kanoon ke saamne barabar hain. 'Equal protection of laws' positive concept hai (American origin) - iska matlab similar logon ke saath similar treatment ho." }
       ],
-      "navigation": {
-        "next": "card_22_article24_child",
-        "button_text": "Child Labour ➔"
-      }
+      "navigation": { "next": "card_17_reasonable_classification", "button_text": "Next Card ➔" }
     },
+
     {
-      "card_id": "card_22_article24_child",
-      "card_slug": "card_22_article24_child",
+      "card_id": "card_17_reasonable_classification",
+      "card_slug": "card_17_reasonable_classification",
       "type": "chat",
-      "concept_id": "article24_detail",
+      "concept_id": "article_14_equality",
       "level": 3,
-      "progress": {
-        "current": 22,
-        "total": 50
-      },
+      "progress": { "current": 17, "total": 99 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Article 24: Prohibition of employment of children in factories - 'No child below 14 years shall be employed in any factory, mine or hazardous employment.' Dhyan do - sirf hazardous industries mein prohibition hai, non-hazardous mein nahi!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab 14 saal se kam bachche dukaan mein kaam kar sakte hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Article 24 sirf factories, mines, hazardous employment prohibit karta hai. Non-hazardous work like helping parents in shop - constitutional provision nahi hai. Lekin Child Labour (Prohibition and Regulation) Act, 1986 aur later amendments ne restrictions badha diye. Right to Education (Article 21A) ke baad focus education par hai, labour par nahi!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh Article 24 limited protection hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan, originally limited tha. But ab laws aur Article 21A (Right to Education 6-14 years) ne isko strengthen kiya hai. Exam mein dhyan do: Article 24 sirf 'factory, mine, hazardous' kehta hai - 'all employment' nahi! BPSC trap hai ye!"
-        }
+        { "speaker": "raju", "text": "Par sir, agar sab barabar hain toh phir students ko class 8th aur class 12th mein alag-alag exam kyun dete hain? Ye toh discrimination hua!" },
+        { "speaker": "aman", "text": "Bahut hi practical sawaal! Yahi hai 'Reasonable Classification' ka concept - Article 14 'absolute equality' nahi maangta, wo 'equals ko equal treat karo, unequals ko unequal' - ye maangta hai. Classification allowed hai agar 2 conditions poori ho." },
+        { "speaker": "raju", "text": "Konsi 2 conditions sir?" },
+        { "speaker": "aman", "text": "Pehla - 'Intelligible Differentia' matlab ek clear, samajh aane wala basis hona chahiye group banane ka (jaise age/class). Dusra - 'Rational Nexus' matlab wo classification ka Act ke goal se logical connection hona chahiye. Class ke basis par alag exam dena is test ko pass karta hai." }
       ],
-      "navigation": {
-        "next": "card_23_quiz_exploitation",
-        "button_text": "Quiz ➔"
-      }
+      "navigation": { "next": "card_18_article14_exceptions", "button_text": "Next Card ➔" }
     },
+
     {
-      "card_id": "card_23_quiz_exploitation",
-      "card_slug": "card_23_quiz_exploitation",
+      "card_id": "card_18_article14_exceptions",
+      "card_slug": "card_18_article14_exceptions",
+      "type": "chat",
+      "concept_id": "article_14_equality",
+      "level": 3,
+      "progress": { "current": 18, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab BPSC ka favorite trap suno - kya Article 14 sabke liye BILKUL absolute hai? Nahi! Kuch exceptions hain. President aur Governor Article 361 ke tehat apne official acts ke liye kisi bhi court mein answerable nahi hain apne term ke dauraan." },
+        { "speaker": "raju", "text": "Toh wo bhi kanoon se upar hain kya?" },
+        { "speaker": "aman", "text": "Sirf official duties ke liye immunity hai, personal crimes ke liye nahi. Isi tarah MPs/MLAs ko Parliament/Assembly ke andar bole gaye speech ke liye Article 105/194 mein special immunity hai, aur Foreign diplomats ko bhi International law ke tehat immunity milti hai." },
+        { "speaker": "raju", "text": "Achha! Matlab Article 14 general rule hai, par kuch specific constitutional exceptions bhi likhe gaye hain. Ye toh bahut precise cheez hai, yaad rakhunga!" }
+      ],
+      "navigation": { "next": "card_19_quiz1_article14", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_19_quiz1_article14",
+      "card_slug": "card_19_quiz1_article14",
       "type": "quiz",
-      "concept_id": "exploitation_comprehensive",
+      "concept_id": "article_14_equality",
       "level": 3,
-      "progress": {
-        "current": 23,
-        "total": 50
-      },
+      "progress": { "current": 19, "total": 99 },
       "quiz_payload": {
-        "question": "Article 24 के अनुसार, किस आयु से कम के बच्चों को factories और mines में नियोजित नहीं किया जा सकता?",
+        "question": "Q1/3: 'Equality before law' aur 'Equal protection of laws' ke origin ke baare mein sahi statement chuniye:",
         "options": [
-          { "id": "A", "text": "18 वर्ष" },
-          { "id": "B", "text": "16 वर्ष" },
-          { "id": "C", "text": "14 वर्ष" },
-          { "id": "D", "text": "12 वर्ष" }
-        ],
-        "correct_option_id": "C",
-        "explanation": "Article 24 कहता है कि 14 वर्ष से कम आयु के किसी भी बच्चे को factory, mine या किसी hazardous employment में नियोजित नहीं किया जा सकता। ध्यान दें - यह सभी प्रकार के employment पर रोक नहीं है, केवल hazardous पर। 18 वर्ष की आयु अन्य labour laws में आती है। यह SSC और Railway में direct पूछा जाता है!"
-      },
-      "navigation": {
-        "next": "card_24_exploitation_milestone",
-        "button_text": "Module complete ➔"
-      }
-    },
-    {
-      "card_id": "card_24_exploitation_milestone",
-      "card_slug": "card_24_exploitation_milestone",
-      "type": "milestone",
-      "concept_id": "exploitation_complete",
-      "level": 3,
-      "progress": {
-        "current": 24,
-        "total": 50
-      },
-      "milestone_payload": {
-        "title": "🛡️ MODULE 4 CLEARED!",
-        "badge_emoji": "👶",
-        "completed_topic": "Right against Exploitation (Articles 23-24)",
-        "xp_earned": 40,
-        "milestone_progress": "Module 4/7 Clear",
-        "motivational_quote": "Great! अब Religious और Cultural Rights देखते हैं! 🕉️"
-      },
-      "navigation": {
-        "next": "card_25_religion_intro",
-        "button_text": "Start Module 5 ➔"
-      }
-    },
-    {
-      "card_id": "card_25_religion_intro",
-      "card_slug": "card_25_religion_intro",
-      "type": "chat",
-      "concept_id": "religion_intro",
-      "level": 3,
-      "progress": {
-        "current": 25,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Module 5: Right to Freedom of Religion (Articles 25-28) - India secular hai, toh har religion ko practice karne ki freedom hai! Article 25-26 individuals aur groups ko freedom dete hain, Article 27-28 State ko religion se alag rakhte hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab main koi bhi religion follow kar sakta hun?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Article 25: Freedom of conscience and free profession, practice and propagation of religion - subject to public order, morality, health. Tum apni religion practice kar sakte ho, propagate kar sakte ho (spread kar sakte ho), but forceful conversion nahi kar sakte!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Article 26 kya hai sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Article 26: Freedom to manage religious affairs - religious groups apne institutions bana sakte hain, apni property manage kar sakte hain, apne religious matters decide kar sakte hain. BUT subject to public order, morality, health. Example: Agar koi religious practice harmful hai (like human sacrifice) toh State ban kar sakta hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_26_articles27_28",
-        "button_text": "Articles 27-28 ➔"
-      }
-    },
-    {
-      "card_id": "card_26_articles27_28",
-      "card_slug": "card_26_articles27_28",
-      "type": "chat",
-      "concept_id": "secular_provisions",
-      "level": 3,
-      "progress": {
-        "current": 26,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Article 27: Freedom from taxation for promotion of any religion - State kisi ko tax nahi laga sakta jo specifically kisi religion ko promote kare. Matlab tumhare tax se temple nahi ban sakta, masjid nahi ban sakti!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Lekin government toh Kumbh Mela, Haj subsidy deti thi na?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Good observation! Wo controversial tha. Haj subsidy 2018 mein discontinue kar di gayi. Kumbh mein government manages crowd, security - wo religious promotion nahi administrative function hai. Courts ne interpret kiya ki cultural events alag hain, purely religious promotion alag."
-        },
-        {
-          "speaker": "raju",
-          "text": "Article 28 kya hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Article 28: Freedom from attending religious instruction - (1) Fully State-funded schools mein religious instruction nahi de sakte, (2) State-aided schools mein de sakte hain but koi compel nahi kar sakta, (3) State-recognized but private institutions mein de sakte hain but koi force nahi kar sakta. Secular education ensure karta hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_27_quiz_religion",
-        "button_text": "Quiz ➔"
-      }
-    },
-    {
-      "card_id": "card_27_quiz_religion",
-      "card_slug": "card_27_quiz_religion",
-      "type": "quiz",
-      "concept_id": "religion_rights",
-      "level": 3,
-      "progress": {
-        "current": 27,
-        "total": 50
-      },
-      "quiz_payload": {
-        "question": "Article 25 में 'propagation of religion' का अर्थ क्या है?",
-        "options": [
-          { "id": "A", "text": "जबरन धर्म परिवर्तन करवाना" },
-          { "id": "B", "text": "अपनी धार्मिक मान्यताओं का प्रचार करना" },
-          { "id": "C", "text": "अन्य धर्मों की आलोचना करना" },
-          { "id": "D", "text": "धार्मिक शिक्षा को अनिवार्य बनाना" }
+          { "id": "A", "text": "Dono British Constitution se liye gaye hain" },
+          { "id": "B", "text": "'Equality before law' British origin (negative concept), 'Equal protection of laws' American origin (positive concept)" },
+          { "id": "C", "text": "Dono American Constitution se liye gaye hain" },
+          { "id": "D", "text": "Ye dono French Revolution se aaye hain" }
         ],
         "correct_option_id": "B",
-        "explanation": "'Propagation' का अर्थ है अपनी धार्मिक मान्यताओं को शांतिपूर्वक फैलाना/प्रचार करना। इसमें जबरन धर्म परिवर्तन (forceful conversion) शामिल नहीं है। आप अपने विचार share कर सकते हैं, लेकिन किसी को force नहीं कर सकते। कई states ने anti-conversion laws बनाए हैं। यह UPSC और BPSC में conceptual question के रूप में आता है!"
+        "explanation": "'Equality before law' British concept hai (negative - no special privilege), jabki 'Equal protection of laws' American concept hai (positive - similar treatment for similarly situated people)."
       },
-      "navigation": {
-        "next": "card_28_religion_milestone",
-        "button_text": "Module complete ➔"
-      }
+      "navigation": { "next": "card_20_quiz2_article14", "button_text": "Check Answer & Continue ➔" }
     },
+
     {
-      "card_id": "card_28_religion_milestone",
-      "card_slug": "card_28_religion_milestone",
-      "type": "milestone",
-      "concept_id": "religion_complete",
-      "level": 3,
-      "progress": {
-        "current": 28,
-        "total": 50
-      },
-      "milestone_payload": {
-        "title": "🕉️ MODULE 5 DONE!",
-        "badge_emoji": "☪️",
-        "completed_topic": "Right to Freedom of Religion (Articles 25-28)",
-        "xp_earned": 40,
-        "milestone_progress": "Module 5/7 Clear",
-        "motivational_quote": "Awesome! अब Cultural और Educational Rights! 📚"
-      },
-      "navigation": {
-        "next": "card_29_cultural_intro",
-        "button_text": "Start Module 6 ➔"
-      }
-    },
-    {
-      "card_id": "card_29_cultural_intro",
-      "card_slug": "card_29_cultural_intro",
-      "type": "chat",
-      "concept_id": "cultural_intro",
-      "level": 3,
-      "progress": {
-        "current": 29,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Module 6: Cultural and Educational Rights (Articles 29-30) - ye rights minorities ko protect karte hain. India diverse country hai - bahut saari languages, cultures, religions. Constitution ensure karta hai ki minorities apni culture, language, script preserve kar sakein!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Minorities matlab sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Minority matlab wo group jo sankhya mein kam ho - religious minorities (Muslims, Christians, Sikhs, etc.) ya linguistic minorities (Tamil, Bengali, Marathi speakers jo dusre states mein rahte hain). Article 29-30 inhe special protection dete hain apni distinctiveness maintain karne ke liye!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Article 29 kya kehta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Article 29: (1) Citizens ko apni distinct language, script, culture preserve karne ka right hai. (2) State-maintained ya State-aided educational institutions admission mein kisi ko sirf religion, race, caste, language, ya inme se kisi ke basis par deny nahi kar sakte. Matlab agar tum minority ho, State tumhe discriminate nahi kar sakta admission mein!"
-        }
-      ],
-      "navigation": {
-        "next": "card_30_article30",
-        "button_text": "Article 30 ➔"
-      }
-    },
-    {
-      "card_id": "card_30_article30",
-      "card_slug": "card_30_article30",
-      "type": "chat",
-      "concept_id": "article30_detail",
-      "level": 3,
-      "progress": {
-        "current": 30,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Article 30: Right of minorities to establish and administer educational institutions - (1) Religious aur linguistic minorities apne educational institutions establish aur administer kar sakte hain. (2) State minorities ke institutions ko aid dene mein discriminate nahi karega. Matlab minority institution khol sakte hain apni language/religion sikhane ke liye!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh minority institutions mein sirf minority students hi le sakte hain kya?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi! Minority institutions majority students bhi le sakte hain. BUT unhein preference de sakte hain minority students ko - ye allowed hai. Also, agar institution State se aid le raha hai toh kuch regulations follow karne honge. Agar aid nahi le rahe (unaided) toh bahut freedom hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Reservation Article 30 institutions mein lagta hai kya?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Nahi! Supreme Court ne kaha ki Article 30 (minority institutions) mein Article 15(5) ka reservation nahi lagega if institution unaided hai. Aided institutions mein thoda regulation hai. Ye bahut controversial point hai aur UPSC Mains mein discussion topic banta hai. Prelims mein 'Article 30 institutions exempt from certain regulations' - TRUE!"
-        }
-      ],
-      "navigation": {
-        "next": "card_31_quiz_cultural",
-        "button_text": "Quiz ➔"
-      }
-    },
-    {
-      "card_id": "card_31_quiz_cultural",
-      "card_slug": "card_31_quiz_cultural",
+      "card_id": "card_20_quiz2_article14",
+      "card_slug": "card_20_quiz2_article14",
       "type": "quiz",
-      "concept_id": "cultural_educational_rights",
+      "concept_id": "article_14_equality",
       "level": 3,
-      "progress": {
-        "current": 31,
-        "total": 50
-      },
+      "progress": { "current": 20, "total": 99 },
       "quiz_payload": {
-        "question": "Article 30 के अंतर्गत कौन educational institutions स्थापित कर सकता है?",
+        "question": "Q2/3: 'Reasonable Classification' test paas karne ke liye kaunsi 2 conditions zaroori hain?",
         "options": [
-          { "id": "A", "text": "केवल religious minorities" },
-          { "id": "B", "text": "केवल linguistic minorities" },
-          { "id": "C", "text": "Religious और linguistic दोनों minorities" },
-          { "id": "D", "text": "कोई भी नागरिक" }
+          { "id": "A", "text": "Population size aur Geographic area" },
+          { "id": "B", "text": "Intelligible Differentia aur Rational Nexus with the object" },
+          { "id": "C", "text": "Political party support aur Court approval" },
+          { "id": "D", "text": "Religious basis aur Caste basis" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Reasonable classification test ke 2 pillars hain: (1) Intelligible Differentia - clear basis of grouping, (2) Rational Nexus - us grouping ka Act ke objective se logical connection."
+      },
+      "navigation": { "next": "card_21_quiz3_article14", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_21_quiz3_article14",
+      "card_slug": "card_21_quiz3_article14",
+      "type": "quiz",
+      "concept_id": "article_14_equality",
+      "level": 3,
+      "progress": { "current": 21, "total": 99 },
+      "quiz_payload": {
+        "question": "Q3/3: Consider the statements:\n1. President and Governor enjoy complete immunity from all courts for their entire life.\n2. Article 361 gives immunity to President/Governor only for official acts during their term of office.\nWhich is correct?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 2" },
+          { "id": "C", "text": "Both" },
+          { "id": "D", "text": "Neither" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 galat hai - immunity 'lifetime' ke liye nahi, sirf term of office ke dauraan hai, aur sirf official acts ke liye hai, personal criminal acts ke liye nahi. Statement 2 sahi hai."
+      },
+      "navigation": { "next": "card_22_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_22_milestone3",
+      "card_slug": "card_22_milestone3",
+      "type": "milestone",
+      "concept_id": "article_14_equality",
+      "level": 3,
+      "progress": { "current": 22, "total": 99 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Article 14 - Right to Equality",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/13 Clear",
+        "motivational_quote": "Equality ka poora logic clear ho gaya - ab discrimination wale Articles dekhte hain!"
+      },
+      "navigation": { "next": "card_23_discrimination_grounds", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_23_discrimination_grounds",
+      "card_slug": "card_23_discrimination_grounds",
+      "type": "chat",
+      "concept_id": "article_15_16",
+      "level": 4,
+      "progress": { "current": 23, "total": 99 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, agar koi dukaandar mujhe sirf isliye samaan na de kyunki main kisi particular caste ka hoon, toh ye kaunsa Article todega?" },
+        { "speaker": "aman", "text": "Ye Article 15 ka perfect example hai! Article 15(1) kehta hai - State kisi bhi citizen ke saath sirf religion, race, caste, sex, ya place of birth ke aadhar par discrimination nahi karega." },
+        { "speaker": "raju", "text": "Sirf ye 5 grounds hi hain? Language ya disability shaamil nahi?" },
+        { "speaker": "aman", "text": "Bilkul sahi observation - sirf ye 5 grounds explicitly listed hain Article 15 mein, isse alag Article 14 mein general equality already cover ho jaati hai. Ye BPSC mein trap ke roop mein aata hai - list yaad rakhna zaroori hai!" }
+      ],
+      "navigation": { "next": "card_24_article15_special_provisions", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_24_article15_special_provisions",
+      "card_slug": "card_24_article15_special_provisions",
+      "type": "chat",
+      "concept_id": "article_15_16",
+      "level": 4,
+      "progress": { "current": 24, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Article 15 ke exceptions dekho - 15(3) State ko women aur children ke liye special provisions banane deta hai (jaise buses mein ladies seat, maternity benefit). 15(4) State ko socially/educationally backward classes aur SC/ST ke liye special provisions banane deta hai." },
+        { "speaker": "raju", "text": "Aur private colleges mein reservation ka kya scene hai?" },
+        { "speaker": "aman", "text": "⭐ Yahin ek important amendment aata hai - 93rd Constitutional Amendment Act 2005 ne Article 15(5) joda, jo State ko reservation dene ki power deta hai private educational institutions mein bhi (minority institutions ko chhodkar)." },
+        { "speaker": "raju", "text": "Aur wo EWS quota jo news mein sunte hain, wo bhi isi mein hai?" }
+      ],
+      "navigation": { "next": "card_25_ews_103rd_amendment", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_25_ews_103rd_amendment",
+      "card_slug": "card_25_ews_103rd_amendment",
+      "type": "chat",
+      "concept_id": "article_15_16",
+      "level": 4,
+      "progress": { "current": 25, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Sahi pakda! 103rd Constitutional Amendment Act 2019 ne Article 15(6) joda - ye Economically Weaker Sections (EWS) ke liye 10% reservation deta hai education aur employment mein, general category ke logon ke liye jo SC/ST/OBC quota mein nahi aate." },
+        { "speaker": "raju", "text": "Ye reservation ka concept toh employment mein bhi hoga na, jaise government jobs?" },
+        { "speaker": "aman", "text": "Bilkul! Wahi Article 16 handle karta hai. Article 16(1) 'equality of opportunity' deta hai public employment ke matters mein sabhi citizens ko. Chaliye ab dekhte hain Article 16 ke sare sub-clauses." },
+        { "speaker": "raju", "text": "Sir ye 15 aur 16 dono itne overlap kar rahe hain, ye toh exam mein pakka mix ho jaayega!" }
+      ],
+      "navigation": { "next": "card_26_article16_clauses", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_26_article16_clauses",
+      "card_slug": "card_26_article16_clauses",
+      "type": "chat",
+      "concept_id": "article_15_16",
+      "level": 4,
+      "progress": { "current": 26, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Ruko, dono ka farak simple hai - Article 15 GENERAL discrimination rokta hai (school, shop, hotel sab jagah), jabki Article 16 SPECIFICALLY public EMPLOYMENT ke matters ke liye hai. Article 16(4) State ko backward classes ke liye job reservation dene deta hai jinka adequate representation nahi hai." },
+        { "speaker": "raju", "text": "Aur promotion mein bhi reservation milta hai kya?" },
+        { "speaker": "aman", "text": "Haan - 77th Amendment ne Article 16(4A) joda jo SC/ST ke liye promotion mein reservation deta hai. Aur 81st Amendment ne 16(4B) joda - isse unfilled reserved vacancies ko agle saal 'carry forward' kiya ja sakta hai bina 50% overall ceiling ke touch kiye." },
+        { "speaker": "raju", "text": "Achha, matlab Article 16 mein bhi EWS wala 10% hai kya?" }
+      ],
+      "navigation": { "next": "card_27_quiz1_article1516", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_27_quiz1_article1516",
+      "card_slug": "card_27_quiz1_article1516",
+      "type": "quiz",
+      "concept_id": "article_15_16",
+      "level": 4,
+      "progress": { "current": 27, "total": 99 },
+      "quiz_payload": {
+        "question": "Q1/3: Article 15(1) ke tehat kaunse 5 grounds par discrimination prohibited hai?",
+        "options": [
+          { "id": "A", "text": "Religion, race, caste, sex, place of birth" },
+          { "id": "B", "text": "Religion, language, region, caste, disability" },
+          { "id": "C", "text": "Age, income, education, caste, religion" },
+          { "id": "D", "text": "Sex, income, region, language, religion" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Article 15(1) mein sirf 5 explicit grounds hain: religion, race, caste, sex, aur place of birth. Language ya disability isme explicitly nahi hai."
+      },
+      "navigation": { "next": "card_28_quiz2_article1516", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_28_quiz2_article1516",
+      "card_slug": "card_28_quiz2_article1516",
+      "type": "quiz",
+      "concept_id": "article_15_16",
+      "level": 4,
+      "progress": { "current": 28, "total": 99 },
+      "quiz_payload": {
+        "question": "Q2/3: Consider the statements:\n1. Article 15(5) was added by the 93rd Amendment Act, 2005 allowing reservation in private educational institutions.\n2. Article 15(6) was added by the 103rd Amendment Act, 2019 providing 10% EWS reservation.\nWhich is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 2" },
+          { "id": "C", "text": "Both 1 and 2" },
+          { "id": "D", "text": "Neither" }
         ],
         "correct_option_id": "C",
-        "explanation": "Article 30(1) कहता है 'All minorities, whether based on religion or language' - अर्थात religious और linguistic दोनों प्रकार की minorities को educational institutions स्थापित और संचालित करने का अधिकार है। जैसे Muslims (religious minority) या Bengalis in Maharashtra (linguistic minority)। यह SSC और Railway में direct पूछा जाता है!"
+        "explanation": "Dono statements bilkul sahi hain - ye dono important amendments hain jo Article 15 mein reservation ke scope ko badhate hain."
       },
-      "navigation": {
-        "next": "card_32_cultural_milestone",
-        "button_text": "Module complete ➔"
-      }
+      "navigation": { "next": "card_29_quiz3_article1516", "button_text": "Check Answer & Continue ➔" }
     },
+
     {
-      "card_id": "card_32_cultural_milestone",
-      "card_slug": "card_32_cultural_milestone",
-      "type": "milestone",
-      "concept_id": "cultural_complete",
-      "level": 3,
-      "progress": {
-        "current": 32,
-        "total": 50
-      },
-      "milestone_payload": {
-        "title": "📚 MODULE 6 FINISHED!",
-        "badge_emoji": "🎓",
-        "completed_topic": "Cultural and Educational Rights (Articles 29-30)",
-        "xp_earned": 40,
-        "milestone_progress": "Module 6/7 Clear",
-        "motivational_quote": "Excellent! अब सबसे powerful right - Constitutional Remedies! ⚖️"
-      },
-      "navigation": {
-        "next": "card_33_remedies_intro",
-        "button_text": "Start Module 7 ➔"
-      }
-    },
-    {
-      "card_id": "card_33_remedies_intro",
-      "card_slug": "card_33_remedies_intro",
-      "type": "chat",
-      "concept_id": "remedies_intro",
-      "level": 4,
-      "progress": {
-        "current": 33,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Module 7: Right to Constitutional Remedies (Article 32) - Dr. Ambedkar ne ise 'Heart and Soul of the Constitution' kaha tha! Kyunki baaki saari rights ka kya fayda agar unhein enforce karne ka mechanism na ho? Article 32 guarantee karta hai ki tum Supreme Court ja sakte ho agar tumhare Fundamental Rights violate hon!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab agar meri koi right violate ho toh main directly Supreme Court ja sakta hun?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Article 32 kehta hai Supreme Court ko power hai writs issue karne ki - Habeas Corpus, Mandamus, Prohibition, Certiorari, Quo Warranto. Ye 5 writs enforcement mechanism hain. Lower courts ka chakkar lagane ki zaroorat nahi - seedha Supreme Court!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Lekin sir Supreme Court toh bahut busy hoga?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan, isliye Article 226 bhi hai jo High Courts ko bhi writ jurisdiction deta hai. BUT Article 32 Fundamental Right hai (cannot be suspended except Emergency), jabki Article 226 ordinary Constitutional provision hai (can be limited). UPSC ka favorite comparison trap hai ye!"
-        }
-      ],
-      "navigation": {
-        "next": "card_34_writs_detail",
-        "button_text": "Writs समझो ➔"
-      }
-    },
-    {
-      "card_id": "card_34_writs_detail",
-      "card_slug": "card_34_writs_detail",
-      "type": "chat",
-      "concept_id": "five_writs",
-      "level": 4,
-      "progress": {
-        "current": 34,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "5 Writs detail mein: (1) Habeas Corpus - 'produce the body' - illegal detention ke against, court ko dikhana hoga ki person kaun hai aur kyun detained hai. (2) Mandamus - 'we command' - public official ko duty perform karne ke liye order. (3) Prohibition - lower court/tribunal ko kisi kaam se rokna kyunki jurisdiction ke bahar ja raha hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Baaki 2 writs sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "(4) Certiorari - lower court/tribunal ka order quash karna aur case upar lana - already passed order ke against. (5) Quo Warranto - 'by what authority' - kisi public office holder se puchhna ki tumhare paas ye office hold karne ka authority kya hai? Illegally appointed person ko hata sakta hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Prohibition aur Certiorari mein kya difference hai sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Brilliant question! Prohibition preventive hai - BEFORE decision, order dete hain 'mat karo'. Certiorari curative hai - AFTER decision, order quash karte hain 'galat hua, cancel'. BPSC mein ye distinction bahut puchha jata hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_35_quiz_writs",
-        "button_text": "Writs Quiz ➔"
-      }
-    },
-    {
-      "card_id": "card_35_quiz_writs",
-      "card_slug": "card_35_quiz_writs",
+      "card_id": "card_29_quiz3_article1516",
+      "card_slug": "card_29_quiz3_article1516",
       "type": "quiz",
-      "concept_id": "writs_application",
+      "concept_id": "article_15_16",
       "level": 4,
-      "progress": {
-        "current": 35,
-        "total": 50
-      },
+      "progress": { "current": 29, "total": 99 },
       "quiz_payload": {
-        "question": "यदि किसी व्यक्ति को गैरकानूनी रूप से हिरासत में रखा गया है, तो कौन सी writ जारी की जा सकती है?",
+        "question": "Q3/3: 81st Constitutional Amendment Act ne Article 16(4B) mein kya provision joda?",
         "options": [
-          { "id": "A", "text": "Mandamus" },
-          { "id": "B", "text": "Habeas Corpus" },
+          { "id": "A", "text": "Unfilled reserved vacancies ko agle saal carry forward karna, bina 50% ceiling ke andar count kiye" },
+          { "id": "B", "text": "SC/ST ko promotion mein reservation dena" },
+          { "id": "C", "text": "EWS ko 10% reservation dena" },
+          { "id": "D", "text": "Women ko special maternity leave dena" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "81st Amendment ne Article 16(4B) joda - isse unfilled backlog reserved vacancies ko separate treat kiya jaata hai aur wo current saal ke 50% overall reservation ceiling mein count nahi hote."
+      },
+      "navigation": { "next": "card_30_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_30_milestone4",
+      "card_slug": "card_30_milestone4",
+      "type": "milestone",
+      "concept_id": "article_15_16",
+      "level": 4,
+      "progress": { "current": 30, "total": 99 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🤝",
+        "completed_topic": "Article 15 & 16 - Discrimination & Employment Equality",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/13 Clear",
+        "motivational_quote": "Reservation ke sare amendments ab clear ho gaye - ab untouchability aur titles dekhte hain!"
+      },
+      "navigation": { "next": "card_31_untouchability_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_31_untouchability_intro",
+      "card_slug": "card_31_untouchability_intro",
+      "type": "chat",
+      "concept_id": "article_17_18",
+      "level": 5,
+      "progress": { "current": 31, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab suno ek bahut powerful Article - Article 17. Ye kehta hai: 'Untouchability' is abolished and its practice in any form is forbidden. Iska enforcement kisi bhi disability arising from Untouchability ek punishable offence hai." },
+        { "speaker": "raju", "text": "Sir, ye toh Article 15 jaisa hi hai na - discrimination hi toh hai?" },
+        { "speaker": "aman", "text": "Bahut acha doubt! Yahi hai IDEP ka important point - Article 15 State ke against protection deta hai, lekin Article 17 EK EXCEPTION hai jo private individuals ke against bhi enforceable hai! Isliye ye direct fundamental right hai jo kisi bhi vyakti ke khilaf case ban sakta hai." },
+        { "speaker": "raju", "text": "Achhaaaa! Toh Article 17 hi wo rare case hai jo 'State' tak limited nahi hai, private logon par bhi laagu hota hai!" }
+      ],
+      "navigation": { "next": "card_32_pcr_act", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_32_pcr_act",
+      "card_slug": "card_32_pcr_act",
+      "type": "chat",
+      "concept_id": "article_17_18",
+      "level": 5,
+      "progress": { "current": 32, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Isi wajah se Parliament ne Protection of Civil Rights Act 1955 banaya taaki Untouchability ki practice ko actual punishment mil sake. Baad mein isi topic ke liye Scheduled Castes & Scheduled Tribes (Prevention of Atrocities) Act 1989 bhi laaya gaya." },
+        { "speaker": "raju", "text": "Sir, ab titles wale Article ke baare mein batao - Bharat Ratna, Padma Shri sab constitutional hai kya?" },
+        { "speaker": "aman", "text": "Chalo Article 18 dekhte hain! Ye kehta hai State koi bhi title nahi dega, sivaay military ya academic distinction ke. Aur koi bhi Bharatiya nagrik kisi foreign state se koi title nahi le sakta." },
+        { "speaker": "raju", "text": "Toh Bharat Ratna diya jaana Article 18 ke against nahi hai?" }
+      ],
+      "navigation": { "next": "card_33_balaji_raghavan_case", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_33_balaji_raghavan_case",
+      "card_slug": "card_33_balaji_raghavan_case",
+      "type": "chat",
+      "concept_id": "article_17_18",
+      "level": 5,
+      "progress": { "current": 33, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Ye ek famous case hai - Balaji Raghavan v. Union of India (1996). Supreme Court ne clear kiya ki Bharat Ratna aur Padma Awards 'titles' nahi hain jo Article 18 violate karte hain, ye sirf excellence ke liye civilian recognition hain." },
+        { "speaker": "raju", "text": "Par ek condition rakhi hogi na sir, kuch trap hoga isme?" },
+        { "speaker": "aman", "text": "Bilkul sahi soch! Court ne ye bhi kaha ki awardee apne naam ke saath 'Bharat Ratna' ko PREFIX ya SUFFIX ki tarah nahi laga sakta (jaise 'Bharat Ratna XYZ' likhna galat hoga), agar wo aisa kare toh wo title jaisa treat hoga aur galat hoga." },
+        { "speaker": "raju", "text": "Wah, kitna precise rule hai! Ab main kabhi confuse nahi hounga is topic par." }
+      ],
+      "navigation": { "next": "card_34_quiz1_article1718", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_34_quiz1_article1718",
+      "card_slug": "card_34_quiz1_article1718",
+      "type": "quiz",
+      "concept_id": "article_17_18",
+      "level": 5,
+      "progress": { "current": 34, "total": 99 },
+      "quiz_payload": {
+        "question": "Q1/3: Article 17 ki sabse unique khaasiyat kya hai jo isse baaki FR se alag banaati hai?",
+        "options": [
+          { "id": "A", "text": "Ye sirf citizens ke liye available hai" },
+          { "id": "B", "text": "Ye private individuals ke against bhi directly enforceable hai, sirf 'State' tak limited nahi" },
+          { "id": "C", "text": "Ye emergency mein suspend ho sakta hai" },
+          { "id": "D", "text": "Ye sirf SC/ST ke liye hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 17 ek exception hai us general rule ka jo FR ko sirf 'State' ke against enforceable maanta hai - Untouchability practice private individuals ke against bhi punishable offence hai."
+      },
+      "navigation": { "next": "card_35_quiz2_article1718", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_35_quiz2_article1718",
+      "card_slug": "card_35_quiz2_article1718",
+      "type": "quiz",
+      "concept_id": "article_17_18",
+      "level": 5,
+      "progress": { "current": 35, "total": 99 },
+      "quiz_payload": {
+        "question": "Q2/3: Article 18 ke tehat kaunse titles ki EXCEPTION di gayi hai?",
+        "options": [
+          { "id": "A", "text": "Military aur Academic distinctions" },
+          { "id": "B", "text": "Business aur Political titles" },
+          { "id": "C", "text": "Religious titles" },
+          { "id": "D", "text": "Sports titles" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Article 18 general titles ko prohibit karta hai, lekin Military distinction (jaise Param Vir Chakra) aur Academic distinction (jaise Doctorate) ko exception mein rakha gaya hai."
+      },
+      "navigation": { "next": "card_36_quiz3_article1718", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_36_quiz3_article1718",
+      "card_slug": "card_36_quiz3_article1718",
+      "type": "quiz",
+      "concept_id": "article_17_18",
+      "level": 5,
+      "progress": { "current": 36, "total": 99 },
+      "quiz_payload": {
+        "question": "Q3/3: Consider the statements:\n1. Supreme Court in Balaji Raghavan case held that Bharat Ratna is not a 'title' under Article 18.\n2. An awardee can use 'Bharat Ratna' as a prefix/suffix to his name officially.\nWhich is correct?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 2" },
+          { "id": "C", "text": "Both" },
+          { "id": "D", "text": "Neither" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 1 sahi hai - Bharat Ratna 'title' nahi hai. Statement 2 galat hai - Court ne specifically kaha ki awardee ise prefix/suffix ki tarah naam ke saath NAHI laga sakta."
+      },
+      "navigation": { "next": "card_37_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_37_milestone5",
+      "card_slug": "card_37_milestone5",
+      "type": "milestone",
+      "concept_id": "article_17_18",
+      "level": 5,
+      "progress": { "current": 37, "total": 99 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🚫",
+        "completed_topic": "Article 17 & 18 - Untouchability & Titles",
+        "xp_earned": 50,
+        "milestone_progress": "Module 5/13 Clear",
+        "motivational_quote": "Bharat Ratna wala trap ab kabhi miss nahi hoga - ab chalte hain 6 Freedoms ki taraf!"
+      },
+      "navigation": { "next": "card_38_six_freedoms_intro", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_38_six_freedoms_intro",
+      "card_slug": "card_38_six_freedoms_intro",
+      "type": "chat",
+      "concept_id": "article_19_freedoms",
+      "level": 6,
+      "progress": { "current": 38, "total": 99 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, mujhe bolna, ghumna, dukaan kholna - ye sab konsa Article deta hai?" },
+        { "speaker": "aman", "text": "Ye sab Article 19 mein aata hai - iske andar 6 freedoms hain: (a) speech and expression, (b) assemble peacefully without arms, (c) form associations/unions, (d) move freely throughout India, (e) reside and settle in any part of India, (g) practise any profession or carry on any occupation/trade/business." },
+        { "speaker": "raju", "text": "Sir maine gina, ye toh sirf 6 hi hain, par mujhe laga ye 7 the pehle?" },
+        { "speaker": "aman", "text": "⭐ BPSC ka bada favorite trap suno - bilkul sahi pakda! Originally Article 19(1)(f) mein 'right to acquire, hold and dispose of property' bhi tha. Lekin 44th Constitutional Amendment Act 1978 ne ise HATA diya - ab ye Fundamental Right nahi, sirf Article 300A ke tehat ek 'legal right' hai." }
+      ],
+      "navigation": { "next": "card_39_reasonable_restrictions", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_39_reasonable_restrictions",
+      "card_slug": "card_39_reasonable_restrictions",
+      "type": "chat",
+      "concept_id": "article_19_freedoms",
+      "level": 6,
+      "progress": { "current": 39, "total": 99 },
+      "messages": [
+        { "speaker": "raju", "text": "Achha, par sir agar main road par bina rukavat cycle chala sakta hoon, toh koi bhi kaise mujhe rok sakta hai?" },
+        { "speaker": "aman", "text": "Yahin sabse bada twist hai - Article 19 ki koi bhi freedom ABSOLUTE nahi hai. Har freedom par 'reasonable restrictions' lagai ja sakti hain State ke through, specific grounds par jo Article 19 mein hi likhe gaye hain." },
+        { "speaker": "raju", "text": "Kaunse grounds sir? Kahin bhi restriction laga sakte hain kya?" },
+        { "speaker": "aman", "text": "Nahi, sirf specified grounds par - jaise Speech ke liye: sovereignty aur integrity of India, security of state, public order, decency/morality, contempt of court, defamation, aur incitement to an offence. Ye grounds fixed hain, arbitrarily kuch bhi nahi ban sakta restriction." }
+      ],
+      "navigation": { "next": "card_40_16th_amendment", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_40_16th_amendment",
+      "card_slug": "card_40_16th_amendment",
+      "type": "chat",
+      "concept_id": "article_19_freedoms",
+      "level": 6,
+      "progress": { "current": 40, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur important addition - 16th Constitutional Amendment Act 1963 ne 'sovereignty and integrity of India' ground ko Article 19(2) mein joda, taaki secessionist speech (India ko tod ne wali baatein) control ki ja sake." },
+        { "speaker": "raju", "text": "Aur agar main koi profession/business karna chahta hoon, uspar bhi restrictions lag sakte hain?" },
+        { "speaker": "aman", "text": "Haan Article 19(6) ke tehat - profession/trade ke liye restrictions professional/technical qualifications maangne ke liye lag sakte hain, aur State kisi bhi trade ko partial ya complete monopoly bhi bana sakti hai apne liye (jaise LIC insurance mein tha kuch samay tak)." },
+        { "speaker": "raju", "text": "Achha! Toh sabhi 6 freedoms ke apne alag-alag specific grounds hain restriction ke liye. Ye toh table banake yaad karna padega!" }
+      ],
+      "navigation": { "next": "card_41_citizens_only", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_41_citizens_only",
+      "card_slug": "card_41_citizens_only",
+      "type": "chat",
+      "concept_id": "article_19_freedoms",
+      "level": 6,
+      "progress": { "current": 41, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek final important cheez - Article 19 ke sabhi 6 freedoms SIRF Bharatiya CITIZENS ke liye hain, foreigners ke liye nahi. Ye BPSC ka classic favorite differentiator hai." },
+        { "speaker": "raju", "text": "Toh sir kaunse Articles sab logon (citizens + foreigners) ke liye hain aur kaunse sirf citizens ke liye?" },
+        { "speaker": "aman", "text": "Yaad rakho - sirf citizens ke liye: Article 15, 16, 19, 29, 30. Baaki almost sab (14, 20, 21, 21A, 22, 23, 24, 25, 26, 27, 28, 32) sabhi 'persons' ke liye hain - chahe wo foreigner hi kyun na ho, unka bhi Right to Life (21) protect hota hai." },
+        { "speaker": "raju", "text": "Wow, ye 'citizens vs persons' wala classification toh exam mein bahut poocha jaata hoga!" }
+      ],
+      "navigation": { "next": "card_42_quiz1_article19", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_42_quiz1_article19",
+      "card_slug": "card_42_quiz1_article19",
+      "type": "quiz",
+      "concept_id": "article_19_freedoms",
+      "level": 6,
+      "progress": { "current": 42, "total": 99 },
+      "quiz_payload": {
+        "question": "Q1/3: Originally Article 19(1) mein kitni freedoms thi, aur konsi 44th Amendment se hata di gayi?",
+        "options": [
+          { "id": "A", "text": "7 freedoms thi, Right to Property hatai gayi" },
+          { "id": "B", "text": "6 freedoms thi, Right to Education hatai gayi" },
+          { "id": "C", "text": "8 freedoms thi, Right to Assembly hatai gayi" },
+          { "id": "D", "text": "5 freedoms thi, kuch hataya nahi gaya" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Originally 7 freedoms thi Article 19(1) mein, jisme (f) Right to Property bhi thi. 44th Constitutional Amendment Act 1978 ne ise hata diya - ab sirf 6 freedoms bachi hain."
+      },
+      "navigation": { "next": "card_43_quiz2_article19", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_43_quiz2_article19",
+      "card_slug": "card_43_quiz2_article19",
+      "type": "quiz",
+      "concept_id": "article_19_freedoms",
+      "level": 6,
+      "progress": { "current": 43, "total": 99 },
+      "quiz_payload": {
+        "question": "Q2/3: 'Sovereignty and integrity of India' ground ko Speech ki freedom ke liye restriction ke roop mein kis amendment se joda gaya?",
+        "options": [
+          { "id": "A", "text": "42nd Amendment Act 1976" },
+          { "id": "B", "text": "16th Amendment Act 1963" },
+          { "id": "C", "text": "44th Amendment Act 1978" },
+          { "id": "D", "text": "1st Amendment Act 1951" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "16th Constitutional Amendment Act 1963 ne 'sovereignty and integrity of India' ko restriction ground ke roop mein joda, secessionist activities ko control karne ke liye."
+      },
+      "navigation": { "next": "card_44_quiz3_article19", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_44_quiz3_article19",
+      "card_slug": "card_44_quiz3_article19",
+      "type": "quiz",
+      "concept_id": "article_19_freedoms",
+      "level": 6,
+      "progress": { "current": 44, "total": 99 },
+      "quiz_payload": {
+        "question": "Q3/3: Consider the statements:\n1. Article 19 ki freedoms sabhi persons (citizens aur foreigners dono) ke liye available hain.\n2. Article 21 sabhi persons (citizens aur foreigners dono) ke liye available hai.\nWhich is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 2" },
+          { "id": "C", "text": "Both" },
+          { "id": "D", "text": "Neither" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 galat hai - Article 19 sirf citizens ke liye hai, foreigners ke liye nahi. Statement 2 sahi hai - Article 21 (Right to Life) sabhi persons ke liye hai chahe wo bhartiya ho ya videshi."
+      },
+      "navigation": { "next": "card_45_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_45_milestone6",
+      "card_slug": "card_45_milestone6",
+      "type": "milestone",
+      "concept_id": "article_19_freedoms",
+      "level": 6,
+      "progress": { "current": 45, "total": 99 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🕊️",
+        "completed_topic": "Article 19 - Six Freedoms",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/13 Clear",
+        "motivational_quote": "Citizens vs Persons wala difference ab dimaag mein permanently baith gaya - agla stop Right to Life!"
+      },
+      "navigation": { "next": "card_46_ex_post_facto", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_46_ex_post_facto",
+      "card_slug": "card_46_ex_post_facto",
+      "type": "chat",
+      "concept_id": "article_20_21_21a",
+      "level": 7,
+      "progress": { "current": 46, "total": 99 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, ek weird sawaal - agar aaj koi cheez legal hai, aur kal Parliament use illegal bana de, toh kya mujhe aaj ke kaam ke liye kal punish kar sakte hain?" },
+        { "speaker": "aman", "text": "Bahut hi sharp sawaal! Bilkul nahi - Article 20(1) yahi protect karta hai: koi bhi vyakti kisi aise Act ke liye convict nahi ho sakta jo commit karte waqt LAW NAHI THA, aur usse us waqt se zyada punishment bhi nahi mil sakti jo tab existing law mein thi. Isse 'ex post facto law' se protection kehte hain." },
+        { "speaker": "raju", "text": "Achha! Aur agar mujhe ek chori ke liye do baar court le jaayein - ek baar police case, phir dobara wahi case?" },
+        { "speaker": "aman", "text": "Wo bhi allowed nahi hai! Article 20(2) 'Double Jeopardy' se protection deta hai - ek hi offence ke liye kisi ko do baar prosecute aur punish nahi kiya ja sakta." }
+      ],
+      "navigation": { "next": "card_47_self_incrimination", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_47_self_incrimination",
+      "card_slug": "card_47_self_incrimination",
+      "type": "chat",
+      "concept_id": "article_20_21_21a",
+      "level": 7,
+      "progress": { "current": 47, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek teesri protection bhi hai Article 20(3) mein - 'Protection against self-incrimination'. Koi bhi accused vyakti khud ke against gawah banne ke liye majboor nahi kiya ja sakta - Police force karke uska confession nahi le sakti." },
+        { "speaker": "raju", "text": "Toh ye teeno protections - ex post facto, double jeopardy, self-incrimination - emergency mein bhi suspend nahi honge kya?" },
+        { "speaker": "aman", "text": "⭐ Bahut important point poocha - Article 20 aur Article 21 dono kabhi bhi suspend NAHI ho sakte, chahe National Emergency hi kyun na lag jaaye! 44th Amendment (post-Emergency 1975-77 reforms) ne ise ek permanent safeguard bana diya." },
+        { "speaker": "raju", "text": "Achha! Toh ye do Article sabse zyada protected hain - kabhi bhi chheda nahi ja sakta. Ab Article 21 ke baare mein detail se batao sir!" }
+      ],
+      "navigation": { "next": "card_48_article21_expansion", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_48_article21_expansion",
+      "card_slug": "card_48_article21_expansion",
+      "type": "chat",
+      "concept_id": "article_20_21_21a",
+      "level": 7,
+      "progress": { "current": 48, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Article 21 sirf ek line hai: 'No person shall be deprived of his life or personal liberty except according to procedure established by law'. Lekin ye ek line hi sabse zyada expand hui hai judicial interpretation se!" },
+        { "speaker": "raju", "text": "'Procedure established by law' aur 'due process of law' mein kya farak hai sir? Dono same lag rahe hain!" },
+        { "speaker": "aman", "text": "Bahut important difference hai! Originally Constitution mein American style 'Due Process' nahi rakha gaya - sirf British style 'Procedure established by law' rakha gaya, matlab agar koi kanoon bana diya jaaye (chahe wo unfair bhi ho), toh use follow karna kaafi hai. Par Maneka Gandhi case (1978) ne ye poori tarah badal diya!" },
+        { "speaker": "raju", "text": "Kaise badla sir? Ye toh bahut bada twist lag raha hai!" }
+      ],
+      "navigation": { "next": "card_49_maneka_gandhi_case", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_49_maneka_gandhi_case",
+      "card_slug": "card_49_maneka_gandhi_case",
+      "type": "chat",
+      "concept_id": "article_20_21_21a",
+      "level": 7,
+      "progress": { "current": 49, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Maneka Gandhi v. Union of India (1978) case mein Supreme Court ne kaha - 'procedure established by law' ko bhi ab 'just, fair and reasonable' hona chahiye, arbitrary nahi. Isse practically 'due process' jaisa hi effect aa gaya, Article 14, 19, 21 ko aapas mein jod diya gaya." },
+        { "speaker": "raju", "text": "Aur Article 21 se aur kya kya rights nikaal liye courts ne?" },
+        { "speaker": "aman", "text": "Bahut saari! Right to Privacy (Justice K.S. Puttaswamy case, 2017 - 9 judge bench), Right to a speedy trial, Right to live with human dignity, Right to clean environment, aur Right to education (jo baad mein separate Article 21A ban gaya)." },
+        { "speaker": "raju", "text": "Wow, ek single line se itni saari rights nikal aayi! Ab samajh gaya ye kyun sabse important Article maana jaata hai." }
+      ],
+      "navigation": { "next": "card_50_quiz1_article202121a", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_50_quiz1_article202121a",
+      "card_slug": "card_50_quiz1_article202121a",
+      "type": "quiz",
+      "concept_id": "article_20_21_21a",
+      "level": 7,
+      "progress": { "current": 50, "total": 99 },
+      "quiz_payload": {
+        "question": "Q1/3: Article 20 mein 3 protections hain, unme se ek nahi hai:",
+        "options": [
+          { "id": "A", "text": "Protection against ex post facto laws" },
+          { "id": "B", "text": "Protection against double jeopardy" },
+          { "id": "C", "text": "Protection against self-incrimination" },
+          { "id": "D", "text": "Right to a free lawyer" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Article 20 mein ex post facto laws, double jeopardy, aur self-incrimination - ye 3 protections hain. 'Right to free lawyer' Article 22 se related hai, Article 20 se nahi."
+      },
+      "navigation": { "next": "card_51_quiz2_article202121a", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_51_quiz2_article202121a",
+      "card_slug": "card_51_quiz2_article202121a",
+      "type": "quiz",
+      "concept_id": "article_20_21_21a",
+      "level": 7,
+      "progress": { "current": 51, "total": 99 },
+      "quiz_payload": {
+        "question": "Q2/3: Maneka Gandhi case (1978) ka Article 21 ke interpretation par kya effect hua?",
+        "options": [
+          { "id": "A", "text": "Court ne kaha kanoon jaisa bhi ho, sirf follow hona chahiye" },
+          { "id": "B", "text": "'Procedure established by law' ko 'just, fair and reasonable' hona chahiye - Article 14, 19, 21 ko aapas mein joda" },
+          { "id": "C", "text": "Article 21 ko completely khatam kar diya gaya" },
+          { "id": "D", "text": "Article 21 sirf citizens ke liye limit kar diya" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Maneka Gandhi case ek landmark judgment hai jisne 'procedure established by law' ko practically 'due process' jaisa bana diya - ab procedure fair, just aur reasonable hona chahiye."
+      },
+      "navigation": { "next": "card_52_quiz3_article202121a", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_52_quiz3_article202121a",
+      "card_slug": "card_52_quiz3_article202121a",
+      "type": "quiz",
+      "concept_id": "article_20_21_21a",
+      "level": 7,
+      "progress": { "current": 52, "total": 99 },
+      "quiz_payload": {
+        "question": "Q3/3: Consider the statements:\n1. Article 21A (Right to Education) was added by 86th Constitutional Amendment Act, 2002.\n2. Right to Life under Article 21 can be suspended during a National Emergency.\nWhich is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 2" },
+          { "id": "C", "text": "Both" },
+          { "id": "D", "text": "Neither" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 1 sahi hai - 86th Amendment Act 2002 ne Article 21A joda, 6-14 years ke bacchon ke liye free & compulsory education ka right. Statement 2 galat hai - Article 20 aur 21 kabhi suspend nahi ho sakte, even emergency mein bhi."
+      },
+      "navigation": { "next": "card_53_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_53_milestone7",
+      "card_slug": "card_53_milestone7",
+      "type": "milestone",
+      "concept_id": "article_20_21_21a",
+      "level": 7,
+      "progress": { "current": 53, "total": 99 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "❤️",
+        "completed_topic": "Article 20, 21, 21A - Life, Liberty & Education",
+        "xp_earned": 60,
+        "milestone_progress": "Module 7/13 Clear",
+        "motivational_quote": "Maneka Gandhi case ka logic samajh gaye - ab Article 22 ki taraf badhte hain!"
+      },
+      "navigation": { "next": "card_54_arrest_safeguards", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_54_arrest_safeguards",
+      "card_slug": "card_54_arrest_safeguards",
+      "type": "chat",
+      "concept_id": "article_22",
+      "level": 8,
+      "progress": { "current": 54, "total": 99 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, agar police kisi ko bina wajah bataye pakad le, toh kya wo aise hi jail mein daal sakti hai?" },
+        { "speaker": "aman", "text": "Bilkul nahi! Article 22(1) aur 22(2) arrest hue vyakti ko 3 important safeguards deta hain: (1) grounds of arrest batana zaroori, (2) apni pasand ke lawyer se consult karne ka right, aur (3) 24 hours ke andar nearest Magistrate ke saamne present karna zaroori (travel time chhodkar)." },
+        { "speaker": "raju", "text": "Ye toh sabke liye same hoga na sir?" },
+        { "speaker": "aman", "text": "⭐ Yahin BPSC ka bada trap hai - ye 3 safeguards 2 categories ke logon ko NAHI milte: (1) 'Enemy alien' (dushman desh ka nagrik), aur (2) 'Preventive Detention' ke tehat detain kiya gaya vyakti!" }
+      ],
+      "navigation": { "next": "card_55_preventive_detention", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_55_preventive_detention",
+      "card_slug": "card_55_preventive_detention",
+      "type": "chat",
+      "concept_id": "article_22",
+      "level": 8,
+      "progress": { "current": 55, "total": 99 },
+      "messages": [
+        { "speaker": "raju", "text": "Preventive Detention matlab kya sir? Jaise koi crime karne se pehle hi pakad lena?" },
+        { "speaker": "aman", "text": "Exactly! [[Preventive Detention | Kisi vyakti ko future mein koi crime karne se rokne ke liye bina trial ke detain kar lena, punishment ke liye nahi]] - ye 'punitive' nahi 'preventive' hai. Isliye normal criminal procedure ke safeguards yahan apply nahi hote." },
+        { "speaker": "aman", "text": "Par ismein bhi limits hain - Article 22(4) kehta hai koi bhi preventive detention law 3 mahine se zyada detain nahi kar sakta jab tak Advisory Board (High Court judges jaisi qualification wale) approve na kare." },
+        { "speaker": "raju", "text": "Toh detained vyakti ko kuch bhi nahi milta kya - koi right nahi?" }
+      ],
+      "navigation": { "next": "card_56_44th_amendment_detention", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_56_44th_amendment_detention",
+      "card_slug": "card_56_44th_amendment_detention",
+      "type": "chat",
+      "concept_id": "article_22",
+      "level": 8,
+      "progress": { "current": 56, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Kuch minimal rights toh hain - grounds of detention batana zaroori hai (national security ke case chhodkar), aur detained vyakti ko earliest opportunity par representation karne ka right hai. 44th Amendment Act 1978 ne max period 3 mahine se ghatakar prayaas kiya tha, par ye clause abhi tak notified nahi hua." },
+        { "speaker": "raju", "text": "Sir Bihar mein bhi koi aisa preventive detention type kanoon hai jo history mein famous hua ho?" },
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite - Bihar Board mein Bihar's Maintenance of Public Order Act aur historical context mein Emergency 1975 ke dauraan MISA (Maintenance of Internal Security Act) ka misuse discuss hota hai, jisne hi 44th Amendment ke reforms ko trigger kiya - ye connection zaroor yaad rakhna." },
+        { "speaker": "raju", "text": "Achha, matlab Emergency ke misuse ki wajah se hi ye saare safeguards baad mein aaye! History aur Polity connected hai." }
+      ],
+      "navigation": { "next": "card_57_quiz1_article22", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_57_quiz1_article22",
+      "card_slug": "card_57_quiz1_article22",
+      "type": "quiz",
+      "concept_id": "article_22",
+      "level": 8,
+      "progress": { "current": 57, "total": 99 },
+      "quiz_payload": {
+        "question": "Q1/3: Article 22 ke arrest safeguards (grounds batana, lawyer, 24hr magistrate) kin 2 categories ko NAHI milte?",
+        "options": [
+          { "id": "A", "text": "Women aur Children" },
+          { "id": "B", "text": "Enemy alien aur Preventive Detention ke tehat detained vyakti" },
+          { "id": "C", "text": "Government employees" },
+          { "id": "D", "text": "SC/ST category" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 22(3) explicitly kehta hai ki ye safeguards (1) enemy alien, aur (2) preventive detention law ke tehat detained kisi vyakti ko available nahi hain."
+      },
+      "navigation": { "next": "card_58_quiz2_article22", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_58_quiz2_article22",
+      "card_slug": "card_58_quiz2_article22",
+      "type": "quiz",
+      "concept_id": "article_22",
+      "level": 8,
+      "progress": { "current": 58, "total": 99 },
+      "quiz_payload": {
+        "question": "Q2/3: Article 22(4) ke anusar Advisory Board ki approval ke bina maximum kitne mahine tak preventive detention ho sakti hai?",
+        "options": [
+          { "id": "A", "text": "1 mahina" },
+          { "id": "B", "text": "3 mahine" },
+          { "id": "C", "text": "6 mahine" },
+          { "id": "D", "text": "1 saal" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 22(4) ke anusar Advisory Board (High Court judges jaisi qualification) ki approval ke bina koi bhi vyakti 3 mahine se zyada preventively detain nahi rakha ja sakta."
+      },
+      "navigation": { "next": "card_59_quiz3_article22", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_59_quiz3_article22",
+      "card_slug": "card_59_quiz3_article22",
+      "type": "quiz",
+      "concept_id": "article_22",
+      "level": 8,
+      "progress": { "current": 59, "total": 99 },
+      "quiz_payload": {
+        "question": "Q3/3: Consider the statements:\n1. Preventive detention is punitive in nature - it punishes a person for a crime already committed.\n2. Preventive detention laws were significantly criticized due to their misuse during the 1975 Emergency (MISA).\nWhich is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 2" },
+          { "id": "C", "text": "Both" },
+          { "id": "D", "text": "Neither" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 galat hai - preventive detention 'preventive' hai, punitive nahi; isका purpose future crime rokna hai, past crime punish karna nahi. Statement 2 sahi hai - Emergency ke MISA misuse ne hi 44th Amendment ke reforms ko trigger kiya."
+      },
+      "navigation": { "next": "card_60_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_60_milestone8",
+      "card_slug": "card_60_milestone8",
+      "type": "milestone",
+      "concept_id": "article_22",
+      "level": 8,
+      "progress": { "current": 60, "total": 99 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔒",
+        "completed_topic": "Article 22 - Arrest & Preventive Detention",
+        "xp_earned": 55,
+        "milestone_progress": "Module 8/13 Clear",
+        "motivational_quote": "Preventive detention ka poora logic clear ho gaya - ab exploitation wale Articles dekhte hain!"
+      },
+      "navigation": { "next": "card_61_trafficking_begar", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_61_trafficking_begar",
+      "card_slug": "card_61_trafficking_begar",
+      "type": "chat",
+      "concept_id": "article_23_24",
+      "level": 9,
+      "progress": { "current": 61, "total": 99 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, village mein purane time mein log 'begar' (bina paise ke jabardasti kaam) karte the sunta hoon dadaji se. Kya ye ab illegal hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi observation! Article 23 exactly yahi prohibit karta hai - 'traffic in human beings and begar and other similar forms of forced labour' ko constitution ne ban kiya hai." },
+        { "speaker": "raju", "text": "'Traffic in human beings' ka matlab kya hota hai sir?" },
+        { "speaker": "aman", "text": "Isme human trafficking (bechna-khareedna), bonded labour system, aur devadasi system jaise practices aate hain. Aur ye Article 17 jaisa hi ek EXCEPTION hai - ye bhi private individuals ke against directly enforceable hai, sirf State ke against nahi!" }
+      ],
+      "navigation": { "next": "card_62_child_labour", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_62_child_labour",
+      "card_slug": "card_62_child_labour",
+      "type": "chat",
+      "concept_id": "article_23_24",
+      "level": 9,
+      "progress": { "current": 62, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab dekho Article 24 - ye bahut specific hai: 14 saal se kam umar ke kisi bhi bacche ko factory, mine, ya kisi bhi hazardous employment (khatarnaak kaam) mein kaam par nahi rakha ja sakta." },
+        { "speaker": "raju", "text": "Toh koi bacha family ki dukaan mein help karta hai, wo bhi illegal hai kya?" },
+        { "speaker": "aman", "text": "Article 24 sirf FACTORY, MINE, ya HAZARDOUS employment specifically restrict karta hai - general non-hazardous family work ko Constitution mein directly cover nahi kiya gaya, lekin uske liye separate laws (jaise Child Labour Prohibition and Regulation Act) hain jo aur bhi strict hain." },
+        { "speaker": "raju", "text": "Achha, toh 14 saal ka number yaad rakhna hai - Article 21A mein bhi 14 saal hi tha na free education ke liye!" }
+      ],
+      "navigation": { "next": "card_63_age_14_connection", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_63_age_14_connection",
+      "card_slug": "card_63_age_14_connection",
+      "type": "chat",
+      "concept_id": "article_23_24",
+      "level": 9,
+      "progress": { "current": 63, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut sharp connection pakda tumne Raju! Ye BPSC ka favorite pattern-linking trick hai - Article 21A (Free education 6-14 years), Article 24 (Child labour ban below 14 years), aur Article 45 (DPSP - originally 14 years tak free education) - sab '14' number se linked hain." },
+        { "speaker": "raju", "text": "Wow, matlab agar main 14 yaad rakhun toh 3 Articles ek saath yaad ho jaayenge!" },
+        { "speaker": "aman", "text": "Bilkul sahi tareeka hai revision ka! Ab tumhe pura pattern samajh mein aa gaya - Right against Exploitation dono direction se protect karta hai: adults ko forced labour se, aur children ko hazardous work se." },
+        { "speaker": "raju", "text": "Ye toh mujhe pakka yaad rahega ab. Chalo quiz try karte hain!" }
+      ],
+      "navigation": { "next": "card_64_quiz1_article2324", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_64_quiz1_article2324",
+      "card_slug": "card_64_quiz1_article2324",
+      "type": "quiz",
+      "concept_id": "article_23_24",
+      "level": 9,
+      "progress": { "current": 64, "total": 99 },
+      "quiz_payload": {
+        "question": "Q1/3: Article 23 ki tarah, kaunsa doosra Article bhi private individuals ke against directly enforceable hai (State tak limited nahi)?",
+        "options": [
+          { "id": "A", "text": "Article 19" },
+          { "id": "B", "text": "Article 17" },
+          { "id": "C", "text": "Article 21" },
+          { "id": "D", "text": "Article 32" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 17 (untouchability) aur Article 23 (forced labour/trafficking) - dono FR ke rare exceptions hain jo private individuals ke against bhi directly enforceable hain."
+      },
+      "navigation": { "next": "card_65_quiz2_article2324", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_65_quiz2_article2324",
+      "card_slug": "card_65_quiz2_article2324",
+      "type": "quiz",
+      "concept_id": "article_23_24",
+      "level": 9,
+      "progress": { "current": 65, "total": 99 },
+      "quiz_payload": {
+        "question": "Q2/3: Article 24 ke tehat kis umar se kam bacchon ko factory/mine/hazardous work mein rakhna prohibited hai?",
+        "options": [
+          { "id": "A", "text": "12 saal" },
+          { "id": "B", "text": "14 saal" },
+          { "id": "C", "text": "16 saal" },
+          { "id": "D", "text": "18 saal" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 24 explicitly 14 saal se kam umar ke bacchon ko factory, mine ya kisi bhi hazardous employment mein kaam karne se rokta hai."
+      },
+      "navigation": { "next": "card_66_quiz3_article2324", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_66_quiz3_article2324",
+      "card_slug": "card_66_quiz3_article2324",
+      "type": "quiz",
+      "concept_id": "article_23_24",
+      "level": 9,
+      "progress": { "current": 66, "total": 99 },
+      "quiz_payload": {
+        "question": "Q3/3: Consider the statements:\n1. Article 23 prohibits traffic in human beings and forced labour (begar).\n2. Article 24 completely bans children below 14 years from doing ANY kind of work, including family businesses.\nWhich is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 2" },
+          { "id": "C", "text": "Both" },
+          { "id": "D", "text": "Neither" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 1 sahi hai. Statement 2 galat hai - Article 24 sirf factory, mine, aur hazardous employment ko specifically cover karta hai, general non-hazardous family work ko constitutional text mein directly nahi."
+      },
+      "navigation": { "next": "card_67_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_67_milestone9",
+      "card_slug": "card_67_milestone9",
+      "type": "milestone",
+      "concept_id": "article_23_24",
+      "level": 9,
+      "progress": { "current": 67, "total": 99 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⛓️",
+        "completed_topic": "Article 23 & 24 - Right against Exploitation",
+        "xp_earned": 55,
+        "milestone_progress": "Module 9/13 Clear",
+        "motivational_quote": "14 saal wala connection permanently yaad ho gaya - ab Religion ki freedom dekhte hain!"
+      },
+      "navigation": { "next": "card_68_conscience_religion", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_68_conscience_religion",
+      "card_slug": "card_68_conscience_religion",
+      "type": "chat",
+      "concept_id": "article_25_28",
+      "level": 10,
+      "progress": { "current": 68, "total": 99 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, humare mohalle mein Diwali, Eid, Christmas sab manaye jaate hain bina kisi rokthaam ke. Ye kaunsa Article allow karta hai?" },
+        { "speaker": "aman", "text": "Ye Article 25 hai! Ye sabhi 'persons' ko (sirf citizens nahi) freedom of conscience aur right to freely profess, practise and propagate religion deta hai." },
+        { "speaker": "raju", "text": "'Propagate' matlab kya - matlab main dusron ko convert bhi kar sakta hoon apne religion mein?" },
+        { "speaker": "aman", "text": "Propagate ka matlab hai apne religion ko spread/explain karna, dusron ko force ya fraud se convert karna nahi. Supreme Court ne clear kiya hai ki forceful conversion Article 25 ke under protected nahi hai." }
+      ],
+      "navigation": { "next": "card_69_restrictions_religion", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_69_restrictions_religion",
+      "card_slug": "card_69_restrictions_religion",
+      "type": "chat",
+      "concept_id": "article_25_28",
+      "level": 10,
+      "progress": { "current": 69, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Article 25 bhi absolute nahi hai - iske subject hai public order, morality, aur health, aur baaki FR provisions. State social welfare/reform ke liye law bhi bana sakti hai (jaise mandir mein sabhi castes ko entry allow karna)." },
+        { "speaker": "raju", "text": "Aur Article 26 kya hai sir? Ye alag kaise hai 25 se?" },
+        { "speaker": "aman", "text": "Achha catch! Article 25 INDIVIDUAL ke religious freedom ke baare mein hai, Article 26 RELIGIOUS DENOMINATIONS (groups/sects) ke rights ke baare mein hai - unhe apni religious affairs manage karne ka, property rakhne ka, aur institutions banane ka right hai." },
+        { "speaker": "raju", "text": "Toh 25 individual ke liye, 26 group ke liye - is difference ko main pakka yaad rakhunga!" }
+      ],
+      "navigation": { "next": "card_70_article27_28", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_70_article27_28",
+      "card_slug": "card_70_article27_28",
+      "type": "chat",
+      "concept_id": "article_25_28",
+      "level": 10,
+      "progress": { "current": 70, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab 2 chhote lekin important Articles - Article 27 kehta hai koi bhi vyakti kisi TAX dene ke liye majboor nahi hoga jiska paisa kisi particular religion ko promote karne ke liye use ho. Ye secularism ka financial pillar hai." },
+        { "speaker": "raju", "text": "Aur schools mein religious teaching ka kya rule hai?" },
+        { "speaker": "aman", "text": "Article 28 kehta hai - poori tarah se State-funded educational institutions mein koi bhi religious instruction NAHI di ja sakti. Lekin ek exception hai - agar institution state RECOGNIZE karti hai ya state AID leti hai (poori funding nahi), toh religious instruction di ja sakti hai, par sirf agar student/guardian consent de." },
+        { "speaker": "raju", "text": "Achha matlab 3 categories hain - fully state-funded (no religion), state-recognized/aided (with consent), aur fully private (koi restriction nahi)! Ye toh classic BPSC trap lagta hai." }
+      ],
+      "navigation": { "next": "card_71_dagi_case_essential_practice", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_71_dagi_case_essential_practice",
+      "card_slug": "card_71_dagi_case_essential_practice",
+      "type": "chat",
+      "concept_id": "article_25_28",
+      "level": 10,
+      "progress": { "current": 71, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur bahut important judicial doctrine - 'Essential Religious Practices' test. Courts decide karte hain ki koi practice religion ka 'essential' (bunyaadi) hissa hai ya nahi, tabhi wo Article 25/26 ke protection ke layak hai." },
+        { "speaker": "raju", "text": "Matlab har practice automatically protect nahi hoti?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Agar koi practice religion ka core part nahi hai, sirf social custom hai, toh State use regulate ya ban bhi kar sakti hai social reform ke naam par - jaise Sabarimala case mein iske around bahut debate hui thi." },
+        { "speaker": "raju", "text": "Ye toh bahut nuanced topic hai - religion mein bhi 'essential' aur 'non-essential' baantna padta hai courts ko!" }
+      ],
+      "navigation": { "next": "card_72_quiz1_article2528", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_72_quiz1_article2528",
+      "card_slug": "card_72_quiz1_article2528",
+      "type": "quiz",
+      "concept_id": "article_25_28",
+      "level": 10,
+      "progress": { "current": 72, "total": 99 },
+      "quiz_payload": {
+        "question": "Q1/3: Article 25 aur Article 26 mein main difference kya hai?",
+        "options": [
+          { "id": "A", "text": "Article 25 individual ki religious freedom deta hai, Article 26 religious denominations (groups) ke rights deta hai" },
+          { "id": "B", "text": "Dono ek hi cheez hain, koi farak nahi" },
+          { "id": "C", "text": "Article 25 sirf Hindus ke liye, Article 26 sirf Muslims ke liye hai" },
+          { "id": "D", "text": "Article 25 sirf citizens ke liye, Article 26 sirf foreigners ke liye" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Article 25 individual persons ki freedom of conscience aur religion practice/propagate karne ka right deta hai. Article 26 religious denominations/groups ko apne affairs manage karne, property rakhne ka right deta hai."
+      },
+      "navigation": { "next": "card_73_quiz2_article2528", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_73_quiz2_article2528",
+      "card_slug": "card_73_quiz2_article2528",
+      "type": "quiz",
+      "concept_id": "article_25_28",
+      "level": 10,
+      "progress": { "current": 73, "total": 99 },
+      "quiz_payload": {
+        "question": "Q2/3: Article 27 ke anusar kya prohibited hai?",
+        "options": [
+          { "id": "A", "text": "Kisi bhi tax se paisa kisi ek particular religion ko promote karne ke liye use karna" },
+          { "id": "B", "text": "Schools mein religious teaching dena" },
+          { "id": "C", "text": "Religious denominations ko property rakhna" },
+          { "id": "D", "text": "Religious conversion karna" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Article 27 kehta hai ki koi bhi vyakti aise tax dene ke liye majboor nahi kiya ja sakta jiska revenue kisi particular religion ke promotion ke liye use ho - ye financial secularism ensure karta hai."
+      },
+      "navigation": { "next": "card_74_quiz3_article2528", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_74_quiz3_article2528",
+      "card_slug": "card_74_quiz3_article2528",
+      "type": "quiz",
+      "concept_id": "article_25_28",
+      "level": 10,
+      "progress": { "current": 74, "total": 99 },
+      "quiz_payload": {
+        "question": "Q3/3: Consider the statements:\n1. Article 28 completely bans religious instruction in ALL educational institutions in India, without exception.\n2. In state-recognized or state-aided institutions, religious instruction can be given but only with consent of student/guardian.\nWhich is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 2" },
+          { "id": "C", "text": "Both" },
+          { "id": "D", "text": "Neither" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 galat hai - ban sirf WHOLLY STATE-FUNDED institutions mein hai. Statement 2 sahi hai - recognized/aided institutions mein consent ke saath religious instruction allowed hai, aur fully private institutions mein koi restriction nahi."
+      },
+      "navigation": { "next": "card_75_milestone10", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_75_milestone10",
+      "card_slug": "card_75_milestone10",
+      "type": "milestone",
+      "concept_id": "article_25_28",
+      "level": 10,
+      "progress": { "current": 75, "total": 99 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🕉️",
+        "completed_topic": "Article 25-28 - Freedom of Religion",
+        "xp_earned": 60,
+        "milestone_progress": "Module 10/13 Clear",
+        "motivational_quote": "Secularism ke sare pillars ab clear hain - ab Cultural aur Educational Rights dekhte hain!"
+      },
+      "navigation": { "next": "card_76_minority_language", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_76_minority_language",
+      "card_slug": "card_76_minority_language",
+      "type": "chat",
+      "concept_id": "article_29_30",
+      "level": 11,
+      "progress": { "current": 76, "total": 99 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, Bihar mein hum Hindi bolte hain, par kuch areas mein Maithili, Bhojpuri, Urdu bhi bolte hain. Kya inhe protect karne ka koi Article hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi connect kiya! Article 29(1) kisi bhi section of citizens (jinki apni distinct language, script, ya culture hai) ko use PRESERVE karne ka right deta hai." },
+        { "speaker": "raju", "text": "Ye sirf religious minorities ke liye hai kya, jaise Muslims-Christians?" },
+        { "speaker": "aman", "text": "⭐ Bahut bada trap yahan hai - NAHI! Article 29 sirf religious minorities tak limited nahi hai, ye kisi bhi group ke liye hai jinki alag language/script/culture ho - chahe wo majority mein bhi ho. Jaise koi bhi linguistic group apni bhaasha preserve kar sakta hai." }
+      ],
+      "navigation": { "next": "card_77_article29_2_discrimination", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_77_article29_2_discrimination",
+      "card_slug": "card_77_article29_2_discrimination",
+      "type": "chat",
+      "concept_id": "article_29_30",
+      "level": 11,
+      "progress": { "current": 77, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Article 29(2) alag hai - ye kehta hai koi bhi citizen kisi State-maintained ya State-aided educational institution mein admission se sirf religion, race, caste, language ke aadhar par deny nahi kiya ja sakta." },
+        { "speaker": "raju", "text": "Toh 29(1) group ke liye hai, 29(2) individual student ke liye hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ab Article 30 dekho - ye minorities (religious ya linguistic) ko apni pasand ke educational institutions establish aur administer karne ka right deta hai." },
+        { "speaker": "raju", "text": "Sir, ye toh discrimination lagta hai - majority ko ye special right kyun nahi mila?" }
+      ],
+      "navigation": { "next": "card_78_article30_protection", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_78_article30_protection",
+      "card_slug": "card_78_article30_protection",
+      "type": "chat",
+      "concept_id": "article_29_30",
+      "level": 11,
+      "progress": { "current": 78, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut acha philosophical sawaal! Ye ek 'protective discrimination' hai - Constitution-makers ko dar tha ki agar minorities ko special protection na di jaaye, toh unki apni educational aur cultural identity majority ke pressure mein khatam ho sakti hai. Isliye ye ek safeguard hai, privilege nahi." },
+        { "speaker": "raju", "text": "Aur agar State minority institutions ko funding de, toh use control bhi kar sakti hai kya?" },
+        { "speaker": "aman", "text": "State grant de sakti hai, aur reasonable regulations (quality/standard maintain karne ke liye) laga sakti hai, lekin ye regulations minority institution ki 'minority character' ko destroy nahi kar sakte - ye TMA Pai Foundation case (2002) mein clear hua tha." },
+        { "speaker": "raju", "text": "Achha, toh support de sakte hain lekin unka control chheen nahi sakte poori tarah. Ab clear ho gaya sir!" }
+      ],
+      "navigation": { "next": "card_79_quiz1_article2930", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_79_quiz1_article2930",
+      "card_slug": "card_79_quiz1_article2930",
+      "type": "quiz",
+      "concept_id": "article_29_30",
+      "level": 11,
+      "progress": { "current": 79, "total": 99 },
+      "quiz_payload": {
+        "question": "Q1/3: Article 29(1) ke tehat 'apni distinct language/script/culture preserve karne' ka right kise milta hai?",
+        "options": [
+          { "id": "A", "text": "Sirf religious minorities ko" },
+          { "id": "B", "text": "Kisi bhi section of citizens ko, chahe wo majority mein ho ya minority mein" },
+          { "id": "C", "text": "Sirf SC/ST ko" },
+          { "id": "D", "text": "Sirf foreigners ko" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 29(1) 'any section of citizens' ke liye hai - ye sirf religious/linguistic minorities tak limited nahi hai, koi bhi group jiski distinct language/script/culture ho, use preserve kar sakta hai."
+      },
+      "navigation": { "next": "card_80_quiz2_article2930", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_80_quiz2_article2930",
+      "card_slug": "card_80_quiz2_article2930",
+      "type": "quiz",
+      "concept_id": "article_29_30",
+      "level": 11,
+      "progress": { "current": 80, "total": 99 },
+      "quiz_payload": {
+        "question": "Q2/3: Article 30 kise right deta hai?",
+        "options": [
+          { "id": "A", "text": "Sabhi citizens ko schools banane ka right" },
+          { "id": "B", "text": "Religious aur linguistic minorities ko apni pasand ke educational institutions establish/administer karne ka right" },
+          { "id": "C", "text": "Sirf State ko schools chalane ka right" },
+          { "id": "D", "text": "Sirf SC/ST ko colleges banane ka right" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 30 specifically religious ya linguistic minorities ko unki pasand ke educational institutions establish aur administer karne ka right deta hai - ye ek protective/special right hai."
+      },
+      "navigation": { "next": "card_81_quiz3_article2930", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_81_quiz3_article2930",
+      "card_slug": "card_81_quiz3_article2930",
+      "type": "quiz",
+      "concept_id": "article_29_30",
+      "level": 11,
+      "progress": { "current": 81, "total": 99 },
+      "quiz_payload": {
+        "question": "Q3/3: Consider the statements:\n1. Article 29(2) prohibits denial of admission in state-maintained/aided institutions on grounds of religion, race, caste, or language.\n2. TMA Pai Foundation case (2002) held that State regulations on minority institutions cannot destroy their 'minority character'.\nWhich is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 2" },
+          { "id": "C", "text": "Both" },
+          { "id": "D", "text": "Neither" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono statements bilkul sahi hain - ye Article 29(2) aur Article 30 se related important judicial aur textual facts hain."
+      },
+      "navigation": { "next": "card_82_milestone11", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_82_milestone11",
+      "card_slug": "card_82_milestone11",
+      "type": "milestone",
+      "concept_id": "article_29_30",
+      "level": 11,
+      "progress": { "current": 82, "total": 99 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📚",
+        "completed_topic": "Article 29-30 - Cultural & Educational Rights",
+        "xp_earned": 55,
+        "milestone_progress": "Module 11/13 Clear",
+        "motivational_quote": "Minority rights ka poora logic ab clear hai - ab sabse powerful Article dekhte hain: Article 32!"
+      },
+      "navigation": { "next": "card_83_soul_of_constitution", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_83_soul_of_constitution",
+      "card_slug": "card_83_soul_of_constitution",
+      "type": "chat",
+      "concept_id": "article_32_writs",
+      "level": 12,
+      "progress": { "current": 83, "total": 99 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, agar mera koi Fundamental Right todha jaaye, toh main kya kar sakta hoon? Sirf shikayat kar sakta hoon ya kuch strong action bhi hai?" },
+        { "speaker": "aman", "text": "Bahut powerful sawaal! Yahi hai Article 32 - 'Right to Constitutional Remedies'. Dr. B.R. Ambedkar ne khud ise 'the heart and soul of the Constitution' bola tha, kyunki isi se tum directly Supreme Court jaakar apna FR enforce karwa sakte ho." },
+        { "speaker": "raju", "text": "Toh sirf High Court hi nahi, seedha Supreme Court bhi ja sakte hain?" },
+        { "speaker": "aman", "text": "Bilkul! Article 32 khud ek Fundamental Right hai (na ki sirf ek procedural tareeka), jisse Supreme Court FR enforce karne ke liye 5 tarah ke 'Writs' (adesh/directions) issue kar sakti hai. Chalo ek-ek karke dekhte hain." }
+      ],
+      "navigation": { "next": "card_84_five_writs", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_84_five_writs",
+      "card_slug": "card_84_five_writs",
+      "type": "chat",
+      "concept_id": "article_32_writs",
+      "level": 12,
+      "progress": { "current": 84, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "5 Writs yaad karo: (1) [[Habeas Corpus | Latin mein 'to have the body' - agar kisi ko illegally detain kiya gaya hai, court use turant produce karne ka order deti hai]] (2) Mandamus - kisi public official ko apna duty karne ka order, (3) Prohibition - lower court ko jurisdiction se bahar jaane se rokna." },
+        { "speaker": "raju", "text": "Baaki 2 kya hain sir?" },
+        { "speaker": "aman", "text": "(4) Certiorari - higher court lower court/tribunal ke kisi order ko quash (radd) kar sakti hai agar wo jurisdiction se bahar hai. (5) Quo Warranto - kisi vyakti se poochna 'kis authority se tum ye public office hold kar rahe ho' - agar wo illegally hold kar raha hai toh use hataya ja sakta hai." },
+        { "speaker": "raju", "text": "Ye toh bahut saare naam hain, kaise yaad rakhun kaunsa kis situation mein use hota hai?" }
+      ],
+      "navigation": { "next": "card_85_article32_vs_226", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_85_article32_vs_226",
+      "card_slug": "card_85_article32_vs_226",
+      "type": "chat",
+      "concept_id": "article_32_writs",
+      "level": 12,
+      "progress": { "current": 85, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Yahan ek BIG trap hai - Article 32 SIRF Supreme Court ko power deta hai FR enforce karne ke liye. Par High Courts ko Article 226 ke tehat bhi similar power hai - lekin High Court ki power WIDER hai kyunki wo FR ke saath-saath 'other legal rights' ke liye bhi writs issue kar sakti hai." },
+        { "speaker": "raju", "text": "Toh High Court ki power zyada hai Supreme Court se?" },
+        { "speaker": "aman", "text": "Scope mein wider hai (do types ke rights cover karti hai), par territorial jurisdiction mein High Court apne state tak limited hai, jabki Supreme Court poore India mein applicable hai. Aur ek aur important baat - Article 32 khud EMERGENCY ke alawa kabhi suspend nahi ho sakta." },
+        { "speaker": "raju", "text": "Achha! Toh Article 32 sirf Fundamental Rights ke liye hai aur sirf SC mein, Article 226 dono rights ke liye hai aur HC mein. Ab main confuse nahi hounga!" }
+      ],
+      "navigation": { "next": "card_86_quiz1_article32", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_86_quiz1_article32",
+      "card_slug": "card_86_quiz1_article32",
+      "type": "quiz",
+      "concept_id": "article_32_writs",
+      "level": 12,
+      "progress": { "current": 86, "total": 99 },
+      "quiz_payload": {
+        "question": "Q1/3: Dr. Ambedkar ne kis Article ko 'heart and soul of the Constitution' bola tha?",
+        "options": [
+          { "id": "A", "text": "Article 14" },
+          { "id": "B", "text": "Article 21" },
+          { "id": "C", "text": "Article 32" },
+          { "id": "D", "text": "Article 356" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dr. B.R. Ambedkar ne Article 32 (Right to Constitutional Remedies) ko 'heart and soul of the Constitution' kaha tha kyunki ye Fundamental Rights ko meaningfully enforce karne ka tareeka deta hai."
+      },
+      "navigation": { "next": "card_87_quiz2_article32", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_87_quiz2_article32",
+      "card_slug": "card_87_quiz2_article32",
+      "type": "quiz",
+      "concept_id": "article_32_writs",
+      "level": 12,
+      "progress": { "current": 87, "total": 99 },
+      "quiz_payload": {
+        "question": "Q2/3: Agar koi vyakti illegally kisi public office par bana hua hai, toh use hataane ke liye kaunsa writ use hota hai?",
+        "options": [
+          { "id": "A", "text": "Habeas Corpus" },
+          { "id": "B", "text": "Mandamus" },
           { "id": "C", "text": "Quo Warranto" },
           { "id": "D", "text": "Certiorari" }
         ],
-        "correct_option_id": "B",
-        "explanation": "Habeas Corpus writ का उपयोग गैरकानूनी हिरासत (illegal detention) के मामलों में होता है। इसका अर्थ है 'शरीर को प्रस्तुत करो' - court को detained person को सामने लाना होगा और detention का कारण बताना होगा। यह व्यक्तिगत स्वतंत्रता की रक्षा का सबसे महत्वपूर्ण उपाय है। SSC, Railway और BPSC में बार-बार पूछा जाता है!"
+        "correct_option_id": "C",
+        "explanation": "Quo Warranto writ ka use tab hota hai jab poochhna ho ki koi vyakti kis authority se ek public office hold kar raha hai - agar illegal hai toh use office se hataya ja sakta hai."
       },
-      "navigation": {
-        "next": "card_36_article32_226",
-        "button_text": "Article 32 vs 226 ➔"
-      }
+      "navigation": { "next": "card_88_quiz3_article32", "button_text": "Check Answer & Continue ➔" }
     },
+
     {
-      "card_id": "card_36_article32_226",
-      "card_slug": "card_36_article32_226",
-      "type": "chat",
-      "concept_id": "article32_vs_226",
-      "level": 4,
-      "progress": {
-        "current": 36,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab important comparison: Article 32 (SC) vs Article 226 (HC). Similarities: Dono writs issue kar sakte hain. Differences: (1) Article 32 - sirf Fundamental Rights ke liye, Article 226 - Fundamental + Legal rights dono ke liye. (2) Article 32 khud ek Fundamental Right hai, Article 226 nahi."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab High Court zyada powerful hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Scope mein haan! HC writs legal rights ke liye bhi issue kar sakta hai, SC sirf Fundamental Rights ke liye. BUT Article 32 cannot be suspended (except Emergency), jabki Article 226 can be limited by Parliament. Also, Article 32 ka enforcement SC khud guarantee karta hai - ye ek Fundamental Right hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh Emergency mein Article 32 suspend ho jata hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Article 359 kehta hai Emergency (Article 352 - National Emergency) mein President can suspend right to move court for enforcement of Fundamental Rights (except Article 20 and 21). Matlab Article 32 suspend ho sakta hai, but life and personal liberty (Article 21) ke liye hamesha ja sakte ho! 44th Amendment ne ye safeguard diya."
-        }
-      ],
-      "navigation": {
-        "next": "card_37_quiz_comparison",
-        "button_text": "Comparison Quiz ➔"
-      }
-    },
-    {
-      "card_id": "card_37_quiz_comparison",
-      "card_slug": "card_37_quiz_comparison",
+      "card_id": "card_88_quiz3_article32",
+      "card_slug": "card_88_quiz3_article32",
       "type": "quiz",
-      "concept_id": "article32_226_difference",
-      "level": 4,
-      "progress": {
-        "current": 37,
-        "total": 50
-      },
+      "concept_id": "article_32_writs",
+      "level": 12,
+      "progress": { "current": 88, "total": 99 },
       "quiz_payload": {
-        "question": "Article 32 और Article 226 में क्या मुख्य अंतर है?",
+        "question": "Q3/3: Consider the statements:\n1. Article 32 empowers only the Supreme Court to issue writs for enforcement of Fundamental Rights.\n2. Article 226 gives High Courts a wider power - writs for both Fundamental Rights AND other legal rights.\nWhich is/are correct?",
         "options": [
-          { "id": "A", "text": "Article 32 केवल Fundamental Rights के लिए, Article 226 Fundamental और Legal दोनों rights के लिए" },
-          { "id": "B", "text": "Article 32 में 5 writs हैं, Article 226 में 3 writs" },
-          { "id": "C", "text": "Article 32 High Courts को power देता है, Article 226 Supreme Court को" },
-          { "id": "D", "text": "दोनों में कोई अंतर नहीं है" }
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 2" },
+          { "id": "C", "text": "Both" },
+          { "id": "D", "text": "Neither" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono statements bilkul sahi hain - ye Article 32 aur 226 ke jurisdiction aur scope ka bahut important comparative fact hai jo BPSC/UPSC dono mein poocha jaata hai."
+      },
+      "navigation": { "next": "card_89_milestone12", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_89_milestone12",
+      "card_slug": "card_89_milestone12",
+      "type": "milestone",
+      "concept_id": "article_32_writs",
+      "level": 12,
+      "progress": { "current": 89, "total": 99 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🖋️",
+        "completed_topic": "Article 32 - Constitutional Remedies & Writs",
+        "xp_earned": 60,
+        "milestone_progress": "Module 12/13 Clear",
+        "motivational_quote": "5 Writs ab permanently yaad ho gaye - ab last module mein general features dekhte hain!"
+      },
+      "navigation": { "next": "card_90_article33_34", "button_text": "Start Next Module ➔" }
+    },
+
+    {
+      "card_id": "card_90_article33_34",
+      "card_slug": "card_90_article33_34",
+      "type": "chat",
+      "concept_id": "article_33_35_features",
+      "level": 13,
+      "progress": { "current": 90, "total": 99 },
+      "messages": [
+        { "speaker": "raju", "text": "Sir, kya army wale soldiers ko bhi wahi FR milte hain jo hum civilians ko milte hain?" },
+        { "speaker": "aman", "text": "Bahut acha sawaal! Article 33 kehta hai - Parliament kanoon banakar armed forces, police, aur similar forces ke members ke FR ko restrict ya abrogate (poori tarah hata) kar sakti hai, taaki discipline aur duty maintain ho sake." },
+        { "speaker": "raju", "text": "Aur martial law lagne par kya hota hai?" },
+        { "speaker": "aman", "text": "Article 34 kehta hai - jahan martial law (military rule) lagi ho, Parliament kanoon banakar wahan ke government officials ko indemnity (protection) de sakti hai unke actions ke liye jo unhone order maintain karne ke liye kiye." }
+      ],
+      "navigation": { "next": "card_91_article35_parliament_only", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_91_article35_parliament_only",
+      "card_slug": "card_91_article35_parliament_only",
+      "type": "chat",
+      "concept_id": "article_33_35_features",
+      "level": 13,
+      "progress": { "current": 91, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Article 35 ek chhota lekin trap-heavy Article hai - ye kehta hai kuch specific FR-related laws (jaise Article 16(3), 32(3), 33, 34) sirf PARLIAMENT bana sakti hai, STATE LEGISLATURES nahi - taaki uniformity poore desh mein rahe." },
+        { "speaker": "raju", "text": "Aur Punishment jo FR violate karne par tay ki gayi hai, wo bhi Parliament hi decide karegi?" },
+        { "speaker": "aman", "text": "Bilkul - Article 35(b) mein Article 17 (Untouchability) aur 23 (Forced Labour) ke liye punishment prescribe karne ka authority bhi sirf Parliament ko hai. Ye ek centralizing feature hai jo consistency ensure karta hai." },
+        { "speaker": "raju", "text": "Achha! Ab overall pura chapter revise karna hai - itne saare Articles yaad rakhna mushkil lag raha hai!" }
+      ],
+      "navigation": { "next": "card_92_seven_to_six_rights", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_92_seven_to_six_rights",
+      "card_slug": "card_92_seven_to_six_rights",
+      "type": "chat",
+      "concept_id": "article_33_35_features",
+      "level": 13,
+      "progress": { "current": 92, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo poore chapter ka General Feature revise karte hain - Originally 7 Fundamental Rights the: (1) Equality, (2) Freedom, (3) Against Exploitation, (4) Freedom of Religion, (5) Cultural & Educational, (6) Property, (7) Constitutional Remedies." },
+        { "speaker": "raju", "text": "Aur ab kitne hain final mein?" },
+        { "speaker": "aman", "text": "44th Amendment 1978 ne 'Right to Property' hata diya, ab wo Article 300A ke tehat sirf legal right hai (Part XII mein), Fundamental Right nahi. Isliye ab HUME sirf 6 Fundamental Rights milte hain." },
+        { "speaker": "raju", "text": "Aur emergency mein ye sab suspend ho jaate hain kya?" }
+      ],
+      "navigation": { "next": "card_93_emergency_suspension", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_93_emergency_suspension",
+      "card_slug": "card_93_emergency_suspension",
+      "type": "chat",
+      "concept_id": "article_33_35_features",
+      "level": 13,
+      "progress": { "current": 93, "total": 99 },
+      "messages": [
+        { "speaker": "aman", "text": "Yahi hai final aur sabse important trap - National Emergency (Article 352) lagne par Article 19 ki 6 freedoms AUTOMATICALLY suspend ho jaati hain (agar emergency 'war' ya 'external aggression' ke basis par ho). Baaki FR ko President SEPARATE order se suspend kar sakta hai." },
+        { "speaker": "raju", "text": "Par Article 20 aur 21 kabhi suspend nahi hote na, jo humne pehle padha tha?" },
+        { "speaker": "aman", "text": "Bilkul sahi yaad rakha! 44th Amendment 1978 ne guarantee di - Article 20 aur 21 KABHI BHI suspend nahi ho sakte, chahe kaisi bhi emergency ho. Ye Emergency 1975-77 ke misuse se seekha gaya sabse bada lesson tha." },
+        { "speaker": "raju", "text": "Wah, ab poora chapter connect ho gaya hai mere dimaag mein! Chalo final revision karte hain sir." }
+      ],
+      "navigation": { "next": "card_94_quiz1_general", "button_text": "Next Card ➔" }
+    },
+
+    {
+      "card_id": "card_94_quiz1_general",
+      "card_slug": "card_94_quiz1_general",
+      "type": "quiz",
+      "concept_id": "article_33_35_features",
+      "level": 13,
+      "progress": { "current": 94, "total": 99 },
+      "quiz_payload": {
+        "question": "Q1/3: Article 33 ke anusar Parliament kis category ke logon ke FR ko restrict/abrogate kar sakti hai?",
+        "options": [
+          { "id": "A", "text": "Sabhi government employees" },
+          { "id": "B", "text": "Armed forces, police aur similar forces ke members" },
+          { "id": "C", "text": "Sabhi students" },
+          { "id": "D", "text": "Sirf Judges" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 33 specifically armed forces, para-military forces, police, aur intelligence organizations ke members ke FR ko discipline maintain karne ke liye restrict/abrogate karne ki power Parliament ko deta hai."
+      },
+      "navigation": { "next": "card_95_quiz2_general", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_95_quiz2_general",
+      "card_slug": "card_95_quiz2_general",
+      "type": "quiz",
+      "concept_id": "article_33_35_features",
+      "level": 13,
+      "progress": { "current": 95, "total": 99 },
+      "quiz_payload": {
+        "question": "Q2/3: 44th Constitutional Amendment Act 1978 ne kaunsa bada structural change kiya Fundamental Rights mein?",
+        "options": [
+          { "id": "A", "text": "Right to Education ko add kiya" },
+          { "id": "B", "text": "Right to Property ko FR se hataya, aur guarantee di ki Article 20/21 kabhi suspend nahi honge" },
+          { "id": "C", "text": "EWS reservation add kiya" },
+          { "id": "D", "text": "Untouchability ko abolish kiya" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "44th Amendment 1978 ne Right to Property ko FR list se hataya (ab Article 300A - legal right) aur Emergency 1975-77 ke misuse ko dekhte hue guarantee di ki Article 20 aur 21 kabhi suspend nahi honge."
+      },
+      "navigation": { "next": "card_96_quiz3_general", "button_text": "Check Answer & Continue ➔" }
+    },
+
+    {
+      "card_id": "card_96_quiz3_general",
+      "card_slug": "card_96_quiz3_general",
+      "type": "quiz",
+      "concept_id": "article_33_35_features",
+      "level": 13,
+      "progress": { "current": 96, "total": 99 },
+      "quiz_payload": {
+        "question": "Q3/3: Consider the statements:\n1. During National Emergency on grounds of war/external aggression, Article 19's six freedoms are automatically suspended.\n2. Article 35 allows both Parliament and State Legislatures to make laws for punishment under Article 17 and 23.\nWhich is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "Only 2" },
+          { "id": "C", "text": "Both" },
+          { "id": "D", "text": "Neither" }
         ],
         "correct_option_id": "A",
-        "explanation": "Article 32 (Supreme Court) केवल Fundamental Rights के उल्लंघन के लिए writs issue करता है, जबकि Article 226 (High Court) Fundamental Rights और Legal/ordinary rights दोनों के लिए writs issue कर सकता है। इस प्रकार Article 226 का scope व्यापक है। दोनों में 5-5 writs हैं। यह UPSC Prelims और BPSC का बहुत महत्वपूर्ण comparison है!"
+        "explanation": "Statement 1 sahi hai. Statement 2 galat hai - Article 35 explicitly kehta hai ki ye power SIRF Parliament ke paas hai, State Legislatures ke paas nahi - taaki poore desh mein uniform laws bane."
       },
-      "navigation": {
-        "next": "card_38_remedies_milestone",
-        "button_text": "Module complete ➔"
-      }
+      "navigation": { "next": "card_97_summary", "button_text": "Check Answer & Continue ➔" }
     },
+
     {
-      "card_id": "card_38_remedies_milestone",
-      "card_slug": "card_38_remedies_milestone",
-      "type": "milestone",
-      "concept_id": "remedies_complete",
-      "level": 4,
-      "progress": {
-        "current": 38,
-        "total": 50
-      },
-      "milestone_payload": {
-        "title": "⚖️ MODULE 7 MASTERED!",
-        "badge_emoji": "🏛️",
-        "completed_topic": "Right to Constitutional Remedies (Article 32)",
-        "xp_earned": 50,
-        "milestone_progress": "Module 7/7 Clear",
-        "motivational_quote": "Outstanding! सभी 6 Fundamental Rights complete! अब Officer-level revision! 🔥"
-      },
-      "navigation": {
-        "next": "card_39_summary_revision",
-        "button_text": "Officer Revision ➔"
-      }
-    },
-    {
-      "card_id": "card_39_summary_revision",
-      "card_slug": "card_39_summary_revision",
+      "card_id": "card_97_summary",
+      "card_slug": "card_97_summary",
       "type": "summary",
-      "concept_id": "fundamental_rights_summary",
-      "level": 4,
-      "progress": {
-        "current": 39,
-        "total": 50
-      },
+      "concept_id": "chapter_revision",
+      "level": 13,
+      "progress": { "current": 97, "total": 99 },
       "summary_payload": {
-        "title": "⚡ Officer-Level Quick Revision",
+        "title": "⚡ Quick Officer Revision",
         "revision_points": [
-          {
-            "topic": "मूल संरचना",
-            "point": "Part III, Articles 12-35। मूल रूप से 7 rights (Property समेत), अब 6। Article 12 'State' को define करता है - Government, Parliament, Legislature, Local bodies सब शामिल।"
-          },
-          {
-            "topic": "Right to Equality (14-18)",
-            "point": "Art 14: Equality before law + Equal protection। Art 15: धर्म, नस्ल, जाति, लिंग, जन्म स्थान पर भेदभाव निषेध। Art 15(4): SC/ST/OBC reservation। Art 15(5): EWS 10%। Art 16: सार्वजनिक रोजगार में समानता। Art 17: अस्पृश्यता उन्मूलन (private persons पर भी लागू)। Art 18: Titles का उन्मूलन।"
-          },
-          {
-            "topic": "Right to Freedom (19-22)",
-            "point": "Art 19: 6 freedoms (a,b,c,d,e,g - 'f' deleted)। केवल citizens को। Reasonable restrictions हैं। Art 20: Ex-post facto law, double jeopardy, self-incrimination के विरुद्ध। Art 21: Life और liberty (सबसे विस्तृत - privacy, education, clean environment सब शामिल)। Art 22: गिरफ्तारी और detention के विरुद्ध।"
-          },
-          {
-            "topic": "Against Exploitation (23-24)",
-            "point": "Art 23: Trafficking, forced labour निषेध (private persons पर भी लागू)। Exception: compulsory public service allowed। Art 24: 14 वर्ष से कम बच्चों को factory, mine, hazardous employment में prohibition।"
-          },
-          {
-            "topic": "Religion (25-28) + Culture (29-30)",
-            "point": "Art 25-26: अंतःकरण, धर्म profession, practice, propagation (reasonable restrictions के साथ)। Art 27-28: धर्म के लिए कर नहीं, धार्मिक शिक्षा से स्वतंत्रता। Art 29-30: Minorities को भाषा, संस्कृति, educational institutions का अधिकार।"
-          },
-          {
-            "topic": "Constitutional Remedies (32)",
-            "point": "5 Writs: Habeas Corpus (illegal detention), Mandamus (duty perform करो), Prohibition (preventive - पहले रोको), Certiorari (curative - बाद में quash), Quo Warranto (authority check)। Art 32 vs 226: SC केवल FR के लिए, HC FR+Legal rights के लिए। Art 32 खुद एक FR है।"
-          },
-          {
-            "topic": "Emergency और Suspension",
-            "point": "Art 359: National Emergency में Art 32 suspend हो सकता है। Exception: Art 20-21 (life, liberty) कभी suspend नहीं (44th Amendment)। Art 358: Emergency में Art 19 automatic suspend। Art 33: Armed Forces के लिए Parliament modify कर सकती है।"
-          }
+          { "topic": "Article 12-13", "point": "Statements: (1) 'State' includes govt bodies with deep/pervasive control (Ajay Hasia test). (2) Doctrine of Eclipse revives pre-constitution laws if the conflicting FR is later removed. Both correct." },
+          { "topic": "Article 14-18", "point": "Statements: (1) Reasonable classification needs Intelligible Differentia + Rational Nexus. (2) Article 17 & 23 are enforceable against private individuals too, unlike most FRs. Both correct." },
+          { "topic": "Article 19-22", "point": "Statements: (1) Only 6 freedoms remain in Article 19 after 44th Amendment removed Property right. (2) Article 20 & 21 can NEVER be suspended even during Emergency. Both correct." },
+          { "topic": "Article 23-28", "point": "Statements: (1) Child labour ban under Article 24 applies below 14 years in factories/mines/hazardous work. (2) Article 28 bans religious instruction only in WHOLLY state-funded institutions. Both correct." },
+          { "topic": "Article 29-35", "point": "Statements: (1) Article 32 (SC only) and Article 226 (HC, wider scope) both empower writ jurisdiction. (2) Article 35 reserves certain FR-related laws exclusively for Parliament, not states. Both correct." }
         ]
       },
-      "navigation": {
-        "next": "card_40_final_quiz_1",
-        "button_text": "Final Officer Quiz ➔"
-      }
+      "navigation": { "next": "card_98_final_quiz", "button_text": "Take Final Officer Quiz ➔" }
     },
+
     {
-      "card_id": "card_40_final_quiz_1",
-      "card_slug": "card_40_final_quiz_1",
+      "card_id": "card_98_final_quiz",
+      "card_slug": "card_98_final_quiz",
       "type": "final_quiz",
-      "concept_id": "final_assessment_1",
-      "level": 4,
-      "progress": {
-        "current": 40,
-        "total": 50
-      },
+      "concept_id": "chapter_final_assessment",
+      "level": 13,
+      "progress": { "current": 98, "total": 99 },
       "quiz_payload": {
-        "question": "निम्नलिखित कथनों पर विचार कीजिए:\n1. Right to Property मूल रूप से Article 31 में Fundamental Right था, 44वें संशोधन ने इसे हटाकर Article 300A में Legal Right बना दिया।\n2. Article 19 में वर्तमान में 6 freedoms हैं क्योंकि clause (f) को हटा दिया गया।\n3. Article 17 (Untouchability) और Article 23 (Trafficking) केवल State के विरुद्ध लागू होते हैं।\n4. Article 32 'Heart and Soul of Constitution' कहलाता है।\n\nउपर्युक्त में से कौन से कथन सही हैं?",
+        "question": "Consider the following statements:\n1. Article 17 and Article 23 are the only Fundamental Rights directly enforceable against private individuals, not just the 'State'.\n2. As per the Maneka Gandhi case (1978), 'procedure established by law' under Article 21 must be just, fair, and reasonable.\n3. Article 19's six freedoms, including freedom of speech, are available to both citizens and foreigners equally.\n4. Article 32 and Article 226 have identical scope - both can be used only for enforcement of Fundamental Rights.\nWhich of the above statements are correct?",
         "options": [
-          { "id": "A", "text": "1, 2 और 4" },
-          { "id": "B", "text": "2, 3 और 4" },
-          { "id": "C", "text": "1, 2, 3 और 4" },
-          { "id": "D", "text": "1, 3 और 4" }
+          { "id": "A", "text": "Only 1 and 2 are correct" },
+          { "id": "B", "text": "Only 1, 2 and 3 are correct" },
+          { "id": "C", "text": "Only 2, 3 and 4 are correct" },
+          { "id": "D", "text": "1, 2, 3 and 4 all are correct" }
         ],
         "correct_option_id": "A",
-        "explanation": "कथन 1, 2 और 4 सही हैं। (1) सही - 44th Amendment (1978) ने Right to Property को FR से हटाकर Legal Right (Art 300A) बनाया। (2) सही - Art 19(1) में अब 6 freedoms हैं (clause f - property deleted)। (3) गलत - Art 17 और 23 private persons के विरुद्ध भी लागू होते हैं, यह इनकी विशेषता है। (4) सही - Dr. Ambedkar ने Article 32 को 'Heart and Soul' कहा। यह BPSC/UPSC का क्लासिक multi-statement question है!"
+        "explanation": "Statements 1 and 2 are textually and judicially accurate. Statement 3 is WRONG - Article 19 freedoms are available ONLY to citizens, not foreigners (unlike Article 21 which covers all persons). Statement 4 is WRONG - Article 226 has a WIDER scope than Article 32 because High Courts can issue writs for enforcement of Fundamental Rights AND other ordinary legal rights, while Article 32 is limited strictly to Fundamental Rights. This exact multi-statement trap format mirrors BPSC's favorite question style."
       },
-      "navigation": {
-        "next": "card_41_final_quiz_2",
-        "button_text": "Q2/3 ➔"
-      }
+      "navigation": { "next": "card_99_trophy", "button_text": "See Final Result ➔" }
     },
+
     {
-      "card_id": "card_41_final_quiz_2",
-      "card_slug": "card_41_final_quiz_2",
-      "type": "final_quiz",
-      "concept_id": "final_assessment_2",
-      "level": 4,
-      "progress": {
-        "current": 41,
-        "total": 50
-      },
-      "quiz_payload": {
-        "question": "Assertion (A): Article 14 'absolute equality' प्रदान करता है।\n\nReason (R): संविधान में 'reasonable classification' की अनुमति है जो समान परिस्थितियों में समान व्यवहार सुनिश्चित करती है।\n\nनिम्नलिखित में से सही विकल्प चुनिए:",
-        "options": [
-          { "id": "A", "text": "A और R दोनों सही हैं और R, A की सही व्याख्या है" },
-          { "id": "B", "text": "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है" },
-          { "id": "C", "text": "A सही है लेकिन R गलत है" },
-          { "id": "D", "text": "A गलत है लेकिन R सही है" }
-        ],
-        "correct_option_id": "D",
-        "explanation": "Assertion गलत है, Reason सही है। Article 14 'absolute equality' नहीं देता - यह 'equality before law' और 'equal protection of laws' देता है। Reasonable classification की अनुमति है (women, children, SC/ST के लिए विशेष प्रावधान)। Reason सही है - Constitution समान परिस्थितियों में समान व्यवहार की बात करता है, न कि पूर्ण समानता की। यह UPSC Prelims का क्लासिक Assertion-Reason trap है!"
-      },
-      "navigation": {
-        "next": "card_42_final_quiz_3",
-        "button_text": "Q3/3 ➔"
-      }
-    },
-    {
-      "card_id": "card_42_final_quiz_3",
-      "card_slug": "card_42_final_quiz_3",
-      "type": "final_quiz",
-      "concept_id": "final_assessment_3",
-      "level": 4,
-      "progress": {
-        "current": 42,
-        "total": 50
-      },
-      "quiz_payload": {
-        "question": "निम्नलिखित युग्मों पर विचार कीजिए:\n1. Habeas Corpus - illegal detention के विरुद्ध\n2. Mandamus - lower court के order को quash करना\n3. Prohibition - preventive writ (पहले रोकना)\n4. Quo Warranto - public office की authority check करना\n\nउपर्युक्त में से कौन से युग्म सही सुमेलित हैं?",
-        "options": [
-          { "id": "A", "text": "1, 2 और 3" },
-          { "id": "B", "text": "1, 3 और 4" },
-          { "id": "C", "text": "2, 3 और 4" },
-          { "id": "D", "text": "1, 2 और 4" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "युग्म 1, 3 और 4 सही हैं। (1) सही - Habeas Corpus illegal detention के लिए। (2) गलत - Lower court का order quash करना Certiorari की function है, Mandamus नहीं। Mandamus public official को duty perform करने का आदेश देता है। (3) सही - Prohibition preventive है। (4) सही - Quo Warranto authority check करता है। यह SSC, Railway और BPSC में matching format में बार-बार आता है!"
-      },
-      "navigation": {
-        "next": "card_43_pyq_pattern",
-        "button_text": "PYQ Patterns ➔"
-      }
-    },
-    {
-      "card_id": "card_43_pyq_pattern",
-      "card_slug": "card_43_pyq_pattern",
-      "type": "chat",
-      "concept_id": "exam_pattern_analysis",
-      "level": 4,
-      "progress": {
-        "current": 43,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab exam pattern dekhte hain. BPSC/UPSC Prelims: (1) Multi-statement questions (4-5 statements, 2-3 sahi), (2) Assertion-Reason format, (3) Article numbers confusion (15(4) vs 15(5), 19 clauses), (4) Exception traps (Article 14 absolute equality - WRONG)."
-        },
-        {
-          "speaker": "raju",
-          "text": "SSC aur Railway mein kya aata hai sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "SSC/Railway: (1) Direct factual - 'Kitne FR hain? 6', (2) Article numbers - 'Article 14 kya hai?', (3) Writs ka naam aur use, (4) Count-based - 'Article 19 mein kitni freedoms? 6', (5) Simple matching - 'Article 17 - Untouchability'."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sabse zyada confusing kya hota hai sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Top 5 confusions: (1) FRs count - 6 ya 7? Ans: 6. (2) Article 19 freedoms - 6 ya 7? Ans: 6. (3) Article 17/23 private persons par lagu? Ans: Haan. (4) Article 32 vs 226 - scope? Ans: 226 wider. (5) Property - FR hai? Ans: Nahi, Legal Right (300A). Ye 5 yaad rakho, 80% questions cover ho jayenge!"
-        }
-      ],
-      "navigation": {
-        "next": "card_44_memory_tricks",
-        "button_text": "Memory Tricks ➔"
-      }
-    },
-    {
-      "card_id": "card_44_memory_tricks",
-      "card_slug": "card_44_memory_tricks",
-      "type": "chat",
-      "concept_id": "mnemonic_techniques",
-      "level": 4,
-      "progress": {
-        "current": 44,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir itne saare articles yaad kaise rakhen?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Mnemonics use karo! 6 Fundamental Rights: 'EFERCR' - Equality, Freedom, Exploitation (against), Religion, Cultural, Remedies. Article ranges: Equality (14-18 = 5 arts), Freedom (19-22 = 4 arts), Exploitation (23-24 = 2 arts), Religion (25-28 = 4 arts), Cultural (29-30 = 2 arts), Remedies (32 = 1 art)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Writs yaad rakhne ka koi trick?"
-        },
-        {
-          "speaker": "aman",
-          "text": "5 Writs: 'HMPCQ' - Habeas corpus (body), Mandamus (command), Prohibition (prevent), Certiorari (cure/quash), Quo warranto (question authority). Ya simple: 'HIV se PCQ' - H(abeas), M(andamus), P(rohibition), C(ertiorari), Q(uo warranto)!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Article 15 ke exceptions sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Article 15 exceptions: (3) Women-Children, (4) SC/ST/OBC reservation, (5) EWS 10% (103rd Amendment). Yaad rakho: '3-Women/Child, 4-Backward, 5-EWS'. Article 19 freedoms: 'SAMFERT' (Speech, Assembly, Movement, Form associations, Employment (profession), Reside, Trade) - but F(reedom) deleted!"
-        }
-      ],
-      "navigation": {
-        "next": "card_45_constitutional_amendments",
-        "button_text": "Key Amendments ➔"
-      }
-    },
-    {
-      "card_id": "card_45_constitutional_amendments",
-      "card_slug": "card_45_constitutional_amendments",
-      "type": "chat",
-      "concept_id": "important_amendments",
-      "level": 4,
-      "progress": {
-        "current": 45,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Important Amendments jo Fundamental Rights ko affect karte hain: (1) 1st Amendment (1951) - Article 15(4) add kiya (SC/ST reservation). (2) 44th Amendment (1978) - Right to Property hataya (Art 31 deleted, 300A banaya), Article 19(1)(f) deleted. (3) 86th Amendment (2002) - Article 21A add kiya (Right to Education 6-14 years)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Recent amendments kaunse hain sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "(4) 93rd Amendment (2005) - Article 15(5) add kiya (educational institutions mein OBC reservation - aided/unaided private ko chhod kar). (5) 103rd Amendment (2019) - Article 15(5) aur 16(6) add kiye (EWS 10% reservation - economically weaker sections for general category). Ye recent changes exam mein bahut aate hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Article 21A kya hai sir exactly?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Article 21A: Right to Education - 'The State shall provide free and compulsory education to all children of the age of 6-14 years.' 86th Amendment ne add kiya. Iska implementation Right to Education Act, 2009 se hua. Ye Article 21 (Life and Liberty) ka part nahi hai - separate Article hai lekin Part III (Fundamental Rights) mein hi hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_46_landmark_cases",
-        "button_text": "Landmark Cases ➔"
-      }
-    },
-    {
-      "card_id": "card_46_landmark_cases",
-      "card_slug": "card_46_landmark_cases",
-      "type": "chat",
-      "concept_id": "important_judgments",
-      "level": 4,
-      "progress": {
-        "current": 46,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Landmark Cases jo exam mein aate hain: (1) Kesavananda Bharati (1973) - Basic Structure doctrine, FRs ko amend kiya ja sakta hai but basic structure nahi. (2) Maneka Gandhi (1978) - Article 21 expand kiya, 'procedure established by law' mein 'fair, just, reasonable' hona chahiye."
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur recent cases sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "(3) Puttaswamy vs Union of India (2017) - Right to Privacy ko Fundamental Right (part of Article 21) declare kiya. (4) Shreya Singhal (2015) - Section 66A IT Act unconstitutional (Article 19 violation). (5) Navtej Johar (2018) - Section 377 IPC partially struck down (Article 21 violation). Cases ka naam kam, concepts zyada yaad rakho exam ke liye!"
-        },
-        {
-          "speaker": "raju",
-          "text": "BPSC mein cases puchhe jaate hain kya?"
-        },
-        {
-          "speaker": "aman",
-          "text": "BPSC Prelims mein direct case names kam, concepts zyada! Jaise 'Right to Privacy is part of which Article? Article 21' - ye zaroor aayega. UPSC Mains aur interviews mein case names important hain. Prelims ke liye: Kesavananda (Basic Structure), Maneka Gandhi (Article 21 expansion), Puttaswamy (Privacy) - ye 3 must know!"
-        }
-      ],
-      "navigation": {
-        "next": "card_47_directive_principles_link",
-        "button_text": "DPSP Connection ➔"
-      }
-    },
-    {
-      "card_id": "card_47_directive_principles_link",
-      "card_slug": "card_47_directive_principles_link",
-      "type": "chat",
-      "concept_id": "fr_vs_dpsp",
-      "level": 4,
-      "progress": {
-        "current": 47,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "raju",
-          "text": "Sir, Fundamental Rights aur Directive Principles mein kya difference hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bahut important question! Fundamental Rights (Part III) - justiciable hain, court mein enforce ho sakte hain, negative in nature (State ko rokti hain). Directive Principles (Part IV) - non-justiciable, court mein enforce nahi, positive in nature (State ko guide karti hain kya karna chahiye)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Dono mein conflict ho toh kya hoga?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Originally Fundamental Rights superior the (Champakam Dorairajan case). But 25th, 42nd Amendments ne kaha ki DPSP implement karne ke liye FRs ko reasonably restrict kiya ja sakta hai (Article 31C - but limited scope). Practically courts balance approach use karte hain - dono ko harmonize karne ki koshish!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Example dijiye sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Right to Property (originally FR) vs Land Reforms (DPSP goal) - conflict tha. Solution? Property ko FR se hata kar Legal Right bana diya! Right to Education - pehle DPSP (Article 45) mein tha, ab FR (Article 21A) ban gaya! Ye show karta hai ki Constitution evolve karta hai balance banana ke liye."
-        }
-      ],
-      "navigation": {
-        "next": "card_48_emergency_suspension",
-        "button_text": "Emergency Impact ➔"
-      }
-    },
-    {
-      "card_id": "card_48_emergency_suspension",
-      "card_slug": "card_48_emergency_suspension",
-      "type": "chat",
-      "concept_id": "emergency_provisions_fr",
-      "level": 4,
-      "progress": {
-        "current": 48,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Emergency mein Fundamental Rights ka kya hota hai? (1) National Emergency (Article 352) - Article 358: Article 19 automatic suspend (war/external aggression). Article 359: President can suspend Article 32 (except 20-21). (2) President's Rule (Article 356) - FRs unaffected. (3) Financial Emergency (Article 360) - FRs unaffected."
-        },
-        {
-          "speaker": "raju",
-          "text": "Article 20-21 kabhi suspend nahi hote?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! 44th Amendment (1978) ne safeguard diya - Article 20 (conviction protection) aur Article 21 (life and liberty) kabhi suspend nahi ho sakte, chahe koi bhi emergency ho! 1975 Emergency mein ye suspend kiye the (38th Amendment), us galti ko correct karne ke liye 44th Amendment aaya."
-        },
-        {
-          "speaker": "raju",
-          "text": "Armed Forces ke liye kya provision hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Article 33: Parliament can modify Fundamental Rights as applied to Armed Forces, para-military forces, police, intelligence agencies. Ye ensure karta hai ki discipline aur duty ke liye kuch restrictions lagayi ja sakein. Jaise freedom of speech armed forces mein limited hai - national security ke liye!"
-        }
-      ],
-      "navigation": {
-        "next": "card_49_final_tips",
-        "button_text": "Final Tips ➔"
-      }
-    },
-    {
-      "card_id": "card_49_final_tips",
-      "card_slug": "card_49_final_tips",
-      "type": "chat",
-      "concept_id": "exam_strategy",
-      "level": 4,
-      "progress": {
-        "current": 49,
-        "total": 50
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Final Exam Strategy: (1) Article numbers zaroor yaad rakho - 14-18 Equality, 19-22 Freedom, 23-24 Exploitation, 25-28 Religion, 29-30 Cultural, 32 Remedies. (2) Counts yaad rakho - 6 FRs, 6 freedoms in Art 19, 5 writs. (3) Exceptions pakad lo - Art 17/23 private par bhi, Art 32 Emergency mein suspend except 20-21."
-        },
-        {
-          "speaker": "raju",
-          "text": "Multi-statement questions kaise solve karein sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "(1) Sabse pehle obviously wrong statements eliminate karo. (2) Doubtful statements ko last mein dekho. (3) Common traps: 'absolute equality', '7 FRs', 'property FR hai', 'Art 17 sirf State par', 'Art 19 sabko milta'. (4) Amendment numbers optional hain Prelims ke liye, but 44th, 86th, 103rd must know!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Last advice sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Fundamental Rights conceptual topic hai, ratta nahi! Samjho ki kyun clause 15(4) add kiya, kyun Property hataya, kyun 21A important hai. Logic se yaad hoga toh kabhi nahi bhulega. Daily life se connect karo - jab bhi discrimination dekho, Article 15 yaad aayega! All the best! 🎯"
-        }
-      ],
-      "navigation": {
-        "next": "card_50_completion",
-        "button_text": "Complete Chapter ➔"
-      }
-    },
-    {
-      "card_id": "card_50_completion",
-      "card_slug": "card_50_completion",
+      "card_id": "card_99_trophy",
+      "card_slug": "card_99_trophy",
       "type": "milestone",
       "concept_id": "chapter_completion",
-      "level": 4,
-      "progress": {
-        "current": 50,
-        "total": 50
-      },
+      "level": 13,
+      "progress": { "current": 99, "total": 99 },
       "milestone_payload": {
-        "title": "🏆 FUNDAMENTAL RIGHTS MASTERED!",
-        "badge_emoji": "⚖️",
-        "completed_topic": "Complete Fundamental Rights (Part III)",
-        "xp_earned": 100,
-        "milestone_progress": "Chapter 100% Complete! 🎉",
-        "motivational_quote": "Outstanding! आपने Fundamental Rights को पूरी तरह master कर लिया - सभी 6 rights, articles, exceptions, amendments, writs, cases सब कुछ! अब आप BPSC, UPSC, SSC, Railway किसी भी exam में Fundamental Rights के किसी भी multi-statement, assertion-reason, matching question को आसानी से solve कर सकते हैं! Remember: Rights are not just for exams, they are for life - use them, protect them! 💪🇮🇳"
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Fundamental Rights in Indian Polity",
+        "xp_earned": 150,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Article 12 se lekar Article 35 tak - Equality, Freedom, Exploitation, Religion, Culture, aur Remedies - sab kuch officer-level clarity ke saath master kar liya. Ab exam mein koi bhi FR ka trap tumhe pakad nahi sakta!"
       },
-      "navigation": {
-        "next": null,
-        "button_text": "Back to Home 🏠"
-      }
+      "navigation": { "next": "end_of_chapter", "button_text": "Finish Chapter ✔" }
     }
   ]
 }
-
