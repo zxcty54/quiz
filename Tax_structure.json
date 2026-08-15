@@ -13,14 +13,21 @@
       "एक अप्रत्यक्ष कर की विशेषता यह है कि करापात और कराघात वितरण श्रृंखला में पूरी तरह से अलग-अलग बिंदुओं पर होते हैं।",
       "अप्रत्यक्ष कर प्रणाली के तहत, जिस व्यावसायिक इकाई पर कानूनी रूप से करापात होता है, वही सटीक अंतिम अभिनेता भी होती है जो अंतिम मौद्रिक बोझ उठाती है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are accurate reflections of tax incidence and impact taxonomy. Incidence of tax [the specific event or initial point where the state legally imposes a tax liability] matches impact in direct taxes like income tax. Impact of tax [the ultimate point or after-effect where the real economic burden of a tax is physically felt and sustained] diverges from incidence in indirect taxes. Statement 3 contains an inversion trap: under an indirect system, while producers or traders face the initial incidence, they systematically shift the burden down the chain, making the general consumer the final actor who bears the real tax cost."
+    "ee": "1. Statement 1 is correct: In a direct tax (e.g., income tax), the initial legal liability (impact) and the ultimate monetary burden (incidence) fall on the exact same person, making the tax non-shiftable.\n2. Statement 2 is correct: In an indirect tax (e.g., GST), the statutory impact is on the seller/producer, but the final incidence is shifted down the supply chain to the consumer, separating the two points.\n3. Statement 3 is incorrect: Under indirect taxation, the commercial entity legally liable for paying the tax shifts the burden forward to the final consumer, who bears the ultimate economic cost.",
+    "eh": "1. कथन 1 सही है: प्रत्यक्ष कर (जैसे आयकर) में कर का प्रारंभिक कानूनी दायित्व (कराघात) और अंतिम मौद्रिक बोझ (करापात) एक ही व्यक्ति पर पड़ता है, जिससे इसे टाला नहीं जा सकता।\n2. कथन 2 सही है: अप्रत्यक्ष कर (जैसे GST) में कराघात विक्रेता/उत्पादक पर होता है, जबकि करापात उपभोक्ता पर पड़ता है; अतः दोनों बिंदु अलग-अलग होते हैं।\n3. कथन 3 गलत है: अप्रत्यक्ष कर प्रणाली में कानूनी रूप से उत्तरदायी व्यावसायिक इकाई कर के बोझ को आगे स्थानांतरित कर देती है, जिससे अंतिम मौद्रिक बोझ अंतिम उपभोक्ता वहन करता है।"
   },
   {
     "p_id": "bpsc_tax_002",
@@ -36,14 +43,21 @@
       "भारतीय आयकर प्रगतिशील स्लैबिंग का उपयोग करता है, जिसके बारे में आलोचकों का तर्क है कि यह अनजाने में अतिरिक्त कमाई को हतोत्साहित कर सकता है और उच्च कर चोरी के जोखिम पैदा कर सकता है।",
       "प्रतिगामी कराधान आय के प्रत्येक स्तर पर निश्चित, गैर-परिवर्तनीय प्रतिशत दरों को लागू करता है, जो अमीर या गरीब के दृष्टिकोण से पूरी तरह से तटस्थ रहता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are accurate textual profiles of progressive extraction. Progressive taxation [a tax mechanism where the tax rate expands as the taxable base amount scales up, designed to enforce vertical equity across distinct income slabs] taxes according to affordability. Statement 3 contains a sophisticated structural trap: it describes Proportional taxation [a flat tax mechanism applying an unvarying fixed percentage rate across all income volumes]. Regressive taxation is explicitly defined as having *decreasing* percentage rates of tax as the value or volume of the taxable asset increases, making it more taxing on low-income earners."
+    "ee": "1. Statement 1 is correct: Progressive taxation levies a higher percentage tax rate as the taxable income or asset base rises, enforcing vertical equity.\n2. Statement 2 is correct: India's personal income tax uses progressive slabs; critics note excessively steep marginal rates can disincentivize labor supply and induce tax avoidance/evasion.\n3. Statement 3 is incorrect: Regressive taxation imposes lower percentage rates as income rises (imposing a higher relative burden on the poor). A fixed, unvarying rate across all income levels describes proportional taxation.",
+    "eh": "1. कथन 1 सही है: प्रगतिशील कराधान में कर योग्य आय या आधार बढ़ने के साथ कर की प्रतिशत दर बढ़ती जाती है, जिससे लंबवत समानता (Vertical Equity) सुनिश्चित होती है।\n2. कथन 2 सही है: भारत का व्यक्तिगत आयकर प्रगतिशील स्लैब का उपयोग करता है; आलोचकों के अनुसार अत्यधिक उच्च दरें अधिक कमाई के प्रोत्साहन को घटाकर कर चोरी को बढ़ावा दे सकती हैं।\n3. कथन 3 गलत है: प्रतिगामी कराधान में आय बढ़ने पर कर की प्रतिशत दर घटती है (गरीबों पर भारी बोझ)। सभी आय स्तरों पर एक समान निश्चित दर 'आनुपातिक कराधान' (Proportional Tax) कहलाती है।"
   },
   {
     "p_id": "bpsc_tax_003",
@@ -59,14 +73,21 @@
       "आनुपातिक सपाट रूपांतरण सीमा के बिना, प्रतिगामी कर गणितीय रूप से एक पूर्ण शून्य अंक की ओर घटेंगे, जिससे कर प्रणाली पूरी तरह से व्यर्थ हो जाएगी।",
       "संप्रभु राज्य आनुपातिक लेआउट से बचते हैं, और उनका उपयोग विशेष रूप से अल्पकालिक छोटे पैमाने की औद्योगिक उत्पादन इकाइयों को दंडित करने के लिए करते हैं।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise textually accurate records of tax engineering logic. To prevent progressive taxes from destroying work incentives completely and to stop regressive models from liquidating state revenue down to zero, all systems must convert their variable rates into a flat Proportional Tax [a tax structure where the marginal tax rate equals the average tax rate permanently after a specific ceiling threshold] once a predetermined threshold is crossed. Statement 3 is a fiction."
+    "ee": "1. Statement 1 is correct: Mathematically, an uncapped progressive tax would eventually reach 100% of income, destroying work incentives; hence, it must flatten into a proportional rate at higher income levels (digressive tax).\n2. Statement 2 is correct: An uncapped regressive tax rate would asymptotically approach zero as income rises, severely eroding state revenues; it must transition to a flat proportional floor.\n3. Statement 3 is incorrect: States widely use proportional tax rates (such as corporate income taxes or specific flat duties) for simplicity and revenue stability, not to penalize small industries.",
+    "eh": "1. कथन 1 सही है: यदि प्रगतिशील कर की दर को एक सीमा के बाद स्थिर (आनुपातिक) न किया जाए, तो यह अंततः 100% तक पहुँचकर काम करने के प्रोत्साहन को पूरी तरह नष्ट कर देगी (अधोगामी कर)।\n2. कथन 2 सही है: बिना न्यूनतम आनुपातिक सीमा के, प्रतिगामी कर की दर आय बढ़ने पर शून्य की ओर घटती जाएगी, जिससे सरकारी राजस्व का आधार समाप्त हो जाएगा।\n3. कथन 3 गलत है: सरकारें सरलता और स्थिर राजस्व के लिए व्यापक रूप से आनुपातिक करों (जैसे कॉर्पोरेट टैक्स) का उपयोग करती हैं, न कि छोटे उद्योगों को दंडित करने के लिए।"
   },
   {
     "p_id": "bpsc_tax_004",
@@ -82,14 +103,21 @@
       "लंबवत समानता (Vertical equity) की आवश्यकता है कि बेहतर स्थिति या अमीर व्यक्तियों को कम आय वर्ग के सापेक्ष कर की उच्च पूर्ण मात्रा या दर का भुगतान करना होगा।",
       "एक कुशल कर प्रणाली खुले बाजार परिसंपत्ति आवंटन में हस्तक्षेप को अधिकतम करती है ताकि उसे कैप्चर किया जा सके जिसे अर्थशास्त्री एकल-लाभांश घाटा (single-dividend deficit) के रूप में परिभाषित करते हैं।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise records of the consensus principles defining a good tax system. Horizontal equity filters equal compliance for equal assets. Vertical equity enforces progressive contribution rules. Statement 3 contains a sophisticated inversion trap: an efficient tax system seeks to minimize, rather than maximize, interference in resources allocation, raising revenue with the least cost while leveraging targeted taxes (like pollution or tobacco taxes) to generate a Double Dividend [the simultaneous generation of fiscal revenue alongside the structural correction of negative economic externalities like environmental pollution or health damage loops]."
+    "ee": "1. Statement 1 is correct: Horizontal equity dictates that taxpayers with equal economic capacity or income should bear an equal tax burden.\n2. Statement 2 is correct: Vertical equity requires that individuals with greater ability to pay (the wealthy) contribute a higher proportion or amount of tax compared to those with lower incomes.\n3. Statement 3 is incorrect: An efficient tax system aims to *minimize* market distortions and deadweight loss. Pigouvian taxes (e.g., carbon taxes) are leveraged to correct negative externalities, yielding a 'double dividend' (revenue plus environmental gain).",
+    "eh": "1. कथन 1 सही है: क्षैतिज समानता (Horizontal Equity) का अर्थ है कि समान आर्थिक क्षमता या आय वाले व्यक्तियों पर समान कर का भार होना चाहिए।\n2. कथन 2 सही है: लंबवत समानता (Vertical Equity) के अनुसार अधिक भुगतान क्षमता वाले (अमीर) लोगों को कम आय वालों की तुलना में अधिक कर देना चाहिए।\n3. कथन 3 गलत है: एक कुशल कर प्रणाली बाजार विकृतियों और नुकसान को *न्यूनतम* करती है। पर्यावरण या अवगुण करों के माध्यम से 'दोहरा लाभांश' (राजस्व + प्रदूषण में कमी) प्राप्त किया जाता है, हस्तक्षेप अधिकतम नहीं किया जाता।"
   },
   {
     "p_id": "bpsc_tax_005",
@@ -105,14 +133,21 @@
       "वैट (VAT) प्रणाली उत्पादन या वितरण के प्रत्येक स्वतंत्र चरण में उत्पन्न विशिष्ट मूल्य वृद्धि (value addition) पर कड़ाई से कर निकालकर कैस्केडिंग प्रभाव को समाप्त करती है।",
       "चूंकि कैस्केडिंग प्रभाव खुदरा कीमतों को भारी रूप से बढ़ाता है, इसलिए बहु-बिंदु वैट ढांचे में संक्रमण एक आक्रामक अमीर-समर्थक मुद्रास्फीति झटके के रूप में कार्य करता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise textually accurate records of indirect tax taxonomy. Cascading Effect [the compounding price inflation triggered when indirect taxes are levied on top of previously paid taxes at earlier manufacturing stages, inflating the baseline transaction cost artificially] characterizes the non-VAT model. Statement 3 contains an inversion trap: eliminating the cascading effect actually compresses inflation, rendering VAT a highly *pro-poor* tax system without being anti-rich, as it improves the real purchasing capacity of low-income segments."
+    "ee": "1. Statement 1 is correct: In a non-VAT system without input tax credits, taxes are levied on the gross value at each sale point, leading to a compounding 'tax-on-tax' cascading effect.\n2. Statement 2 is correct: A VAT/GST system provides input tax credits (ITC), ensuring that tax is collected only on the net incremental value added at each stage of production and distribution.\n3. Statement 3 is incorrect: By eliminating cascading tax costs, VAT lowers production and distribution costs, reducing consumer prices and benefiting lower-income households (making it pro-poor and anti-inflationary).",
+    "eh": "1. कथन 1 सही है: गैर-वैट प्रणाली में इनपुट टैक्स क्रेडिट न होने के कारण प्रत्येक बिक्री पर सकल मूल्य पर कर लगता है, जिससे 'कर पर कर' (कैस्केडिंग प्रभाव) उत्पन्न होता है।\n2. कथन 2 सही है: वैट/GST प्रणाली इनपुट टैक्स क्रेडिट (ITC) की अनुमति देती है, जिससे प्रत्येक चरण पर केवल शुद्ध संवर्धित मूल्य (Value Addition) पर ही कर लगता है।\n3. कथन 3 गलत है: कैस्केडिंग प्रभाव समाप्त होने से वस्तुओं की अंतिम कीमतें घटती हैं, जिससे यह सुधार मुद्रास्फीति को नियंत्रित करता है और निम्न आय वर्ग (गरीबों) के लिए लाभकारी होता है।"
   },
   {
     "p_id": "bpsc_tax_006",
@@ -128,14 +163,21 @@
       "समान कर दरों की अनुपस्थिति का मतलब था कि भारत के पास कई आंतरिक अलग-थलग वाणिज्यिक बाजार थे, लेकिन समग्र रूप से एकल 'भारतीय बाजार' का अभाव था।",
       "केंद्रीय राज्य ने राज्य वैट ढांचे को कमजोर प्रांतों से सभी वित्तीय संसाधनों को आक्रामक रूप से केंद्रीय खजाने की तिजोरियों में स्थानांतरित करने के लिए डिज़ाइन किया था।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise textually recorded motivations for the state VAT transition. Opaque sales tax variations blocked free internal trade velocity. Statement 3 contains a total distortion trap: because global experience proved that value-added models enhance compliance and broaden the revenue net, the uniform state VAT was explicitly implemented to *strengthen* the fiscal independent positions of economically weaker states within the federal structure."
+    "ee": "1. Statement 1 is correct: Before state-level VAT, disparate state sales tax regimes and localized entry taxes created internal tariff barriers and fragmented India into disparate sub-markets.\n2. Statement 2 is correct: Varying sales tax rates caused predatory interstate tax competition ('race to the bottom'), preventing the creation of a seamless, integrated common national market.\n3. Statement 3 is incorrect: State VAT was enacted to broaden the tax base and boost state-level own-tax revenues, supported by central compensation for initial revenue shortfalls, not to drain state resources.",
+    "eh": "1. कथन 1 सही है: राज्य वैट लागू होने से पहले विभिन्न राज्यों के बिक्री कर और प्रवेश कर अलग-अलग थे, जिससे देश कई छोटे और अलग-थलग बाजारों में बंट गया था।\n2. कथन 2 सही है: एकसमान कर दरों के अभाव के कारण राज्यों के बीच हानिकारक कर-प्रतिस्पर्धा होती थी, जिससे एकीकृत 'साझा भारतीय बाजार' का निर्माण बाधित था।\n3. कथन 3 गलत है: राज्य वैट का उद्देश्य राज्यों के कर आधार और राजस्व को मजबूत करना था, न कि राज्यों से वित्तीय संसाधन छीनकर केंद्र में स्थानांतरित करना।"
   },
   {
     "p_id": "bpsc_tax_007",
@@ -151,14 +193,21 @@
       "वैट के तहत बड़े पैमाने पर कर चोरी से पूरी तरह बचने के लिए, नियामक लेआउट उत्पादन और बिक्री श्रृंखलाओं की क्रॉस-चेक करने के लिए अनिवार्य खरीद चालान (purchase invoices) पर निर्भर करता है।",
       "तीव्र राजनीतिक समन्वय के बाद, सभी भारतीय राज्यों ने समान वित्तीय वर्ष 1991-92 में समकालिक राज्य बिक्री-कर वैट संक्रमण को सफलतापूर्वक लागू किया।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise textually recorded chronological and operational metrics tracking tax modernization guidelines. Input Tax Credit verification [the process where a commercial actor offsets the tax paid on raw input purchases against their final output tax liability, requiring an unbroken chain of verified transactional invoices] makes systemic tax evasion nearly impossible. Statement 3 contains a major timeline trap: because states lacked political will, the unified transition was severely delayed, with all states finally entering the reform loop only by *2008–09*, backed by central revenue shortfall compensation guarantees."
+    "ee": "1. Statement 1 is correct: MODVAT (introduced in 1986 for excise) was comprehensively restructured and renamed Central Value Added Tax (CENVAT) in 2000 (with initial value-added reforms accelerating from the mid-1990s).\n2. Statement 2 is correct: VAT creates an inbuilt self-policing mechanism because buyers require formal tax invoices from sellers to claim Input Tax Credit (ITC), creating an auditable paper trail that deters evasion.\n3. Statement 3 is incorrect: State-level VAT was not implemented in 1991–92; it was officially phased in from April 1, 2005 (Haryana was first in 2003, with Uttar Pradesh joining in 2008).",
+    "eh": "1. कथन 1 सही है: केंद्रीय उत्पाद शुल्क में मूल्य-वर्धन पद्धति (MODVAT 1986) को सुधारते हुए आगे चलकर 'सेनवेट' (CENVAT) के रूप में रूपांतरित किया गया।\n2. कथन 2 सही है: वैट में इनपुट टैक्स क्रेडिट (ITC) प्राप्त करने के लिए खरीद चालान (Invoice) आवश्यक होता है, जिससे लेनदेन की स्वतः जांच होती है और कर चोरी रुकती है।\n3. कथन 3 गलत है: राज्य-स्तरीय वैट 1991-92 में नहीं, बल्कि मुख्य रूप से 1 अप्रैल 2005 से लागू होना शुरू हुआ (हरियाणा में 2003 तथा उत्तर प्रदेश में 2008 में लागू हुआ)।"
   },
   {
     "p_id": "bpsc_tax_008",
@@ -174,14 +223,21 @@
       "राज्य-स्तरीय समेकन परत ने ठीक नौ अलग-अलग प्रांतीय निष्कर्षणों को लक्षित किया, जिसमें प्रवेश कर, लक्जरी कर, चुंगी (octroi) और राज्य वैट शामिल थे।",
       "प्रारंभिक प्रस्ताव में ठीक 20 प्रतिशत पर गणितीय रूप से निर्धारित एक एकल फ्लैट अखिल भारतीय दर का सुझाव दिया गया था, जिसमें प्रवाह को केंद्र को 12% और राज्यों को 8% में विभाजित किया गया था।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements represent the precise, highly specific historical baseline design blueprints formulated under early expert tracking panels (such as the Kelkar guidelines) to organize a Single VAT framework before eventual legislative amendments altered the final multi-tier slab structures."
+    "ee": "1. Statement 1 is correct: The early Kelkar Task Force blueprint (2004) proposed subsuming major central levies (Central Excise/CENVAT, Service Tax, Stamp Duty, and CST) into a unified GST.\n2. Statement 2 is correct: State-level levies targeted for consolidation included State VAT/sales tax, entry tax/octroi, luxury tax, entertainment tax, lottery taxes, and state cesses/surcharges.\n3. Statement 3 is correct: The initial conceptual proposal recommended a comprehensive single national GST rate of 20% (12% Central GST and 8% State GST) before evolving into the dual GST multi-slab model.",
+    "eh": "1. कथन 1 सही है: केलकर टास्क फोर्स (2004) के प्रारंभिक ब्लूप्रिंट में केंद्रीय उत्पाद शुल्क (CENVAT), सेवा कर, स्टांप ड्यूटी और केंद्रीय बिक्री कर (CST) को समाहित करने का प्रस्ताव था।\n2. कथन 2 सही है: राज्य स्तर पर राज्य वैट, चुंगी (Octroi), प्रवेश कर, विलासिता कर और मनोरंजन कर जैसे करों को समाहित करने का लक्ष्य रखा गया था।\n3. कथन 3 सही है: प्रारंभिक मॉडल में 20% की एकल राष्ट्रीय दर (12% केंद्र और 8% राज्य) का सुझाव दिया गया था, जो बाद में 4-स्तरीय बहु-दर जीएसटी ढांचे में विकसित हुआ।"
   },
   {
     "p_id": "bpsc_tax_009",
@@ -197,14 +253,21 @@
       "सितंबर 2016 के अंत तक, जीएसटी परिषद (GSTC) के रूप में जाने जाने वाले विशेष संघीय निकाय का आधिकारिक तौर पर कार्यकारी कार्रवाई द्वारा गठन किया गया था।",
       "जीएसटी परिषद एक विशुद्ध रूप से प्रतीकात्मक सलाहकार समिति है जिसके पास कर दरों या छूटों के संबंध में सिफारिशें करने का कोई कानूनी अधिकार नहीं है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are historically and textually exact parameters tracking the legislative operationalization of the tax. The GST Council [the joint constitutional forum composing union and state fiscal representatives established under Article 279A to coordinate indirect tax parities] was set up in late September 2016. Statement 3 contains an absolute legal error: the Council is the supreme decision-making repository explicitly *entrusted with the sovereign power to recommend* baseline tax bands, floor rates, exemptions, and threshold configurations."
+    "ee": "1. Statement 1 is correct: The Constitution (101st Amendment) Act, 2016 was passed by Parliament in August 2016 and received presidential assent on September 8, 2016, paving the way for GST rollout on July 1, 2017.\n2. Statement 2 is correct: In September 2016, the Union Cabinet approved the notification establishing the constitutional GST Council under Article 279A.\n3. Statement 3 is incorrect: Under Article 279A, the GST Council is the apex constitutional decision-making body empowered to make binding recommendations on tax rates, exemption thresholds, model laws, and compensation cesses.",
+    "eh": "1. कथन 1 सही है: 101वां संविधान संशोधन अधिनियम अगस्त 2016 में संसद द्वारा पारित हुआ और राष्ट्रपति की स्वीकृति के बाद 1 जुलाई 2017 से देश में GST लागू हुआ।\n2. कथन 2 सही है: सितंबर 2016 में राष्ट्रपति के आदेश द्वारा अनुच्छेद 279A के तहत संवैधानिक निकाय के रूप में 'जीएसटी परिषद' (GST Council) की स्थापना की गई।\n3. कथन 3 गलत है: अनुच्छेद 279A के तहत जीएसटी परिषद सर्वोच्च निर्णयकारी संघीय संस्था है, जिसे कर दरों, स्लैब, छूट और नियमों पर प्राथमिक सिफारिशें करने का संवैधानिक अधिकार प्राप्त है।"
   },
   {
     "p_id": "bpsc_tax_010",
@@ -220,14 +283,21 @@
       "यह कोड मानव उपभोग के लिए मादक शराब के साथ-साथ पांच निर्दिष्ट पेट्रोलियम उत्पादों के एक स्पष्ट समूह को बाहर करता है।",
       "छूट प्राप्त पेट्रोलियम संपत्तियों की सूची में पेट्रोलियम क्रूड, मोटर स्पिरिट (पेट्रोल), हाई-स्पीड डीजल, प्राकृतिक गैस और एविएशन टर्बाइन फ्यूल (ATF) शामिल हैं।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statement 1 is completely false because alcoholic liquor for human consumption is constitutionally barred from standard GST absorption. Statements 2 and 3 are precise records of the structural exclusions written into the Act. These specific energy and beverage lines [commodities left outside the unified tax net to allow individual states and the centre to independently levy legacy sales taxes and excise duties during fiscal volatility cycles] remain under legacy dual-tax management lines."
+    "ee": "1. Statement 1 is incorrect: Article 366(12A) explicitly excludes 'alcoholic liquor for human consumption' from the constitutional definition of GST; it remains under State Excise and State VAT.\n2. Statement 2 is correct: Alcoholic liquor is permanently excluded from GST, while five specified petroleum hydrocarbons are temporarily kept outside the GST net under Article 279A(5).\n3. Statement 3 is correct: The five petroleum products deferred from GST (subject to future GST Council notification) are: (i) Petroleum Crude, (ii) High-Speed Diesel (HSD), (iii) Motor Spirit (Petrol), (iv) Natural Gas, and (v) Aviation Turbine Fuel (ATF).",
+    "eh": "1. कथन 1 गलत है: अनुच्छेद 366(12A) के तहत 'मानव उपभोग के लिए शराब' को जीएसटी की संवैधानिक परिभाषा से ही बाहर रखा गया है (इस पर राज्य उत्पाद शुल्क और राज्य वैट लागू है)।\n2. कथन 2 सही है: शराब जीएसटी से पूर्णतः बाहर है, और 5 निर्दिष्ट पेट्रोलियम उत्पादों को अनुच्छेद 279A(5) के तहत जीएसटी से अस्थायी रूप से बाहर रखा गया है।\n3. कथन 3 सही है: जीएसटी से बाहर रखे गए पांच पेट्रोलियम उत्पाद हैं: कच्चा तेल (Crude Oil), पेट्रोल, डीजल, प्राकृतिक गैस और विमानन ईंधन (ATF)।"
   },
   {
     "p_id": "bpsc_tax_011",
@@ -243,14 +313,21 @@
       "सरलीकृत समाधान योजना (Composition scheme) का लाभ उठाने के लिए कॉन्फ़िगर की गई सीमा ₹50 लाख निर्धारित है, जिसमें सेवा प्रदाताओं को इसके दायरे से स्पष्ट रूप से बाहर रखा गया है।",
       "प्रांतीय राज्यों को 14 प्रतिशत की विकास दर से जुड़े आधार वर्ष के रूप में 2015-16 का उपयोग करके एक निश्चित 5-वर्षीय खिड़की के लिए वैधानिक राजस्व मुआवजा प्राप्त होता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements represent perfect, textually exact legal parameters and operational limits configured during the enforcement of the July 1, 2017 indirect tax layout. The Composition Scheme [a simplified billing variant designed for small taxpayers to pay a flat percentage turnover tax without navigating extensive input-tax-credit verification registries] initially isolated service delivery channels completely."
+    "ee": "1. Statement 1 is correct: At the 2017 rollout, the annual turnover exemption limit was ₹20 lakh for standard states and ₹10 lakh for Special Category/NE states (later enhanced to ₹40 lakh for goods in standard states).\n2. Statement 2 is correct: The initial Composition Scheme threshold was ₹50 lakh (later raised to ₹1.5 crore for manufacturers/traders) and originally excluded standalone service providers (except restaurants).\n3. Statement 3 is correct: The GST (Compensation to States) Act, 2017 guaranteed full compensation for state revenue shortfalls for 5 years (2017–2022), calculating a projected 14% compound annual revenue growth over the 2015–16 base year.",
+    "eh": "1. कथन 1 सही है: 2017 के मूल प्रावधानों में जीएसटी छूट की सीमा सामान्य राज्यों के लिए ₹20 लाख और पूर्वोत्तर/विशेष श्रेणी राज्यों के लिए ₹10 लाख वार्षिक टर्नओवर तय की गई थी।\n2. कथन 2 सही है: प्रारंभिक कंपोजिशन योजना की पात्रता सीमा ₹50 लाख थी और इसमें रेस्तरां को छोड़कर अन्य सेवा प्रदाताओं को बाहर रखा गया था (बाद में सीमा ₹1.5 करोड़ की गई)।\n3. कथन 3 सही है: जीएसटी मुआवजा अधिनियम 2017 के तहत राज्यों को 5 वर्षों तक 2015-16 को आधार वर्ष मानकर 14% वार्षिक राजस्व वृद्धि दर के आधार पर नुकसान की भरपाई की गारंटी दी गई थी।"
   },
   {
     "p_id": "bpsc_tax_012",
@@ -266,14 +343,21 @@
       "परिचालन वर्गीकरण के भीतर पूरी तरह से छूट प्राप्त या शून्य-रेटेड वस्तुओं की एक अतिरिक्त अलग श्रेणी बनाए रखी जाती है।",
       "लक्जरी कारों, वातित पेय (aerated drinks), पान मसाला और तंबाकू जैसी वस्तुओं को विशेष रूप से लक्षित करते हुए 28% के शिखर स्तर के ऊपर एक विशेष मुआवजा उपकर (compensation cess) लगाया जाता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements represent precise textually accurate records of the pricing and levy layers. Compensation Cess [a specialized transition surcharge levied on specified demerit and luxury commodities to generate the explicit funding stream required to reimburse states for local tax collection contractions] is structurally appended to the highest standard tax slab."
+    "ee": "1. Statement 1 is correct: India's GST structure features a four-tier primary tax rate framework: 5%, 12%, 18%, and 28% (along with special rates for precious metals like gold at 3%).\n2. Statement 2 is correct: Essential foodgrains, fresh vegetables, unbranded milk, and exports/SEZ supplies are classified under a 0% (exempt/zero-rated) bracket.\n3. Statement 3 is correct: A GST Compensation Cess is levied on top of the 28% slab on sin and luxury goods (e.g., pan masala, tobacco, aerated drinks, luxury motor vehicles) to finance state revenue guarantees.",
+    "eh": "1. कथन 1 सही है: भारत की जीएसटी संरचना मुख्य रूप से 4 मानक कर स्लैबों में विभाजित है: 5%, 12%, 18% और 28% (सोने/रत्न पर 3% की विशेष दर सहित)।\n2. कथन 2 सही है: आवश्यक खाद्य पदार्थों, खुले अनाज, ताजी सब्जियों और निर्यातों के लिए 0% (शून्य-दर/कर-मुक्त) की अलग श्रेणी बनाई गई है।\n3. कथन 3 सही है: 28% की शीर्ष दर के ऊपर विलासिता और अहितकर वस्तुओं (लक्जरी कार, तंबाकू, पान मसाला, वातित पेय) पर जीएसटी क्षतिपूर्ति उपकर (Compensation Cess) लगाया जाता है।"
   },
   {
     "p_id": "bpsc_tax_013",
@@ -289,14 +373,21 @@
       "₹1.5 करोड़ के मार्कर से नीचे का टर्नओवर संसाधित करने वाले करदाता ब्लॉक के लिए, केंद्रीय खजाना शेष मामूली 10 प्रतिशत हिस्से को संभालता है।",
       "₹1.5 करोड़ की सीमा से अधिक वार्षिक टर्नओवर उत्पन्न करने वाले करदाताओं के लिए, ऑडिट प्रशासनिक विभाजन ठीक 50:50 के समान अनुपात में विभाजित है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements represent precise legal cross-checking ratios established under the dual component guidelines [CGST and SGST running concurrently across the value chain] to preserve administrative balance and prevent jurisdictional turf wars between federal and state inspectors during corporate balance-sheet reviews."
+    "ee": "1. Statement 1 is correct: Under cross-empowerment guidelines agreed by the GST Council, for taxpayers with an annual turnover up to ₹1.5 crore, 90% are assigned to State tax administrations for assessment and audit.\n2. Statement 2 is correct: For taxpayers below the ₹1.5 crore turnover threshold, the remaining 10% are administered by the Central CBIC tax administration.\n3. Statement 3 is correct: For taxpayers with turnover exceeding ₹1.5 crore, administrative and audit oversight is divided equally in a 50:50 ratio between Central and State tax authorities.",
+    "eh": "1. कथन 1 सही है: जीएसटी परिषद के समझौते के अनुसार, ₹1.5 करोड़ तक के वार्षिक टर्नओवर वाले करदाताओं में से 90% का प्रशासनिक व ऑडिट नियंत्रण संबंधित राज्य कर अधिकारियों को सौंपा गया है।\n2. कथन 2 सही है: ₹1.5 करोड़ से कम टर्नओवर वाले करदाताओं का शेष 10% भाग केंद्रीय कर प्रशासन (CBIC) द्वारा नियंत्रित किया जाता है।\n3. कथन 3 सही है: ₹1.5 करोड़ से अधिक वार्षिक टर्नओवर वाले बड़े करदाताओं का प्रशासनिक व ऑडिट विभाजन केंद्र और राज्यों के बीच ठीक 50:50 के समान अनुपात में किया गया है।"
   },
   {
     "p_id": "bpsc_tax_014",
@@ -312,14 +403,21 @@
       "जीएसटी नेटवर्क का हिस्सा होने के संदर्भ में परिभाषित औपचारिकता (Formality) गैर-कृषि कार्यबल के 53 प्रतिशत के औपचारिक क्षेत्र के पेरोल का सुझाव देती है।",
       "जब आधिकारिक सामाजिक सुरक्षा प्रावधानों के संदर्भ में मापा जाता है, तो गैर-कृषि औपचारिक पेरोल संकेतक 31 प्रतिशत के आधारभूत स्तर पर गिर जाता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statement 1 contains a key inversion trap: the survey explicitly notes that the distribution of the GST base among states is *closely linked* to their GSDP [Gross State Domestic Product, the total market value of all final commodities generated within a province's boundaries inside an accounting year], which successfully allayed the historical fears of manufacturing states that the destination-based tax would wreck their collections. Statements 2 and 3 are precise empirical data extractions tracking formalization payroll mismatches."
+    "ee": "1. Statement 1 is incorrect: Economic Survey data revealed that the state-wise distribution of the GST tax base correlates strongly and positively (correlation coefficient > 0.95) with Gross State Domestic Product (GSDP).\n2. Statement 2 is correct: When formal employment is defined by firms being registered under the GST tax net, formal non-agricultural private payroll reaches approximately 53%.\n3. Statement 3 is correct: When formality is defined strictly through statutory social security coverage (EPFO/ESIC), the formal non-agricultural workforce shrinks to roughly 31%.",
+    "eh": "1. कथन 1 गलत है: आर्थिक सर्वेक्षण के अनुसार राज्यों के बीच जीएसटी कर आधार का वितरण उनके सकल राज्य घरेलू उत्पाद (GSDP) से अत्यधिक निकटता और मजबूती से जुड़ा हुआ है (सकारात्मक सहसंबंध)।\n2. कथन 2 सही है: जीएसटी नेटवर्क में पंजीकृत उद्यमों के आधार पर औपचारिकता को मापने पर गैर-कृषि कार्यबल का लगभग 53% औपचारिक पेरोल के अंतर्गत आता है।\n3. कथन 3 सही है: सामाजिक सुरक्षा लाभों (EPFO/ESIC) के आधार पर मापने पर गैर-कृषि औपचारिक रोजगार घटकर केवल 31% रह जाता है।"
   },
   {
     "p_id": "bpsc_tax_015",
@@ -335,14 +433,21 @@
       "औपचारिक उद्यम निजी गैर-कृषि क्षेत्र में कुल फर्मों के केवल 13 प्रतिशत के मामूली संख्यात्मक हिस्से का प्रतिनिधित्व करते हैं।",
       "अपने 13% के मामूली संख्यात्मक आकार के बावजूद, ये औपचारिक फर्में व्यवस्थित रूप से कुल व्यावसायिक टर्नओवर का 93 प्रतिशत का भारी हिस्सा उत्पन्न करती हैं।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 1,
-    "e": "Statement 1 describes a diluted distribution that runs contrary to real-world business concentrations. Statement 2 is correct because the formal net captures only 13% of private non-farm corporate registries. Statement 3 is correct because this tiny formal segment generates 93% of the total aggregate economic turnover [the baseline financial value of gross commercial sales processed by firms inside an economic lifecycle], outlining the extreme asymmetry between the unorganized informal base and the highly consolidated formal corporate matrix."
+    "ee": "1. Statement 1 is incorrect: The overwhelming numeric majority (~87%) of private non-agricultural enterprises in India operate in the informal, unorganized sector.\n2. Statement 2 is correct: Formal enterprises (defined by social security/tax compliance) account for a small fraction—only about 13% of all non-agricultural private enterprises.\n3. Statement 3 is correct: Despite comprising only ~13% of enterprises by number, these formal firms generate approximately 93% of total aggregate economic turnover, highlighting sharp market concentration.",
+    "eh": "1. कथन 1 गलत है: भारत में निजी गैर-कृषि क्षेत्र की अधिकांश फर्में (~87%) अनौपचारिक/असंगठित क्षेत्र में काम करती हैं, औपचारिक क्षेत्र में नहीं।\n2. कथन 2 सही है: कर और सामाजिक सुरक्षा नेटवर्क में शामिल औपचारिक उद्यम कुल गैर-कृषि निजी फर्मों का मात्र 13% हिस्सा हैं।\n3. कथन 3 सही है: संख्या में मात्र 13% होने के बावजूद, ये औपचारिक फर्में देश के कुल व्यावसायिक टर्नओवर का 93% विशाल हिस्सा उत्पन्न करती हैं।"
   },
   {
     "p_id": "bpsc_tax_016",
@@ -358,14 +463,21 @@
       "कर दर विन्यास को प्रतिभूति लेनदेन कर (STT) आधारभूत रेखाओं को ले जाने वाले इक्विटी फ्यूचर्स के साथ संरेखित करने के लिए संरचनात्मक रूप से तैयार किया गया है।",
       "कमोडिटी डेरिवेटिव्स में लेनदेन को वैधानिक रूप से अत्यधिक सट्टा माना जाता है, जिससे व्यापारियों को अन्य आय स्रोतों के खिलाफ नुकसान को समायोजित करने से रोका जाता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are accurate representations of the CTT reintroduction rules. Imposing identical rates limits Regulatory Arbitrage [the exploitative practice where investors route capital through specific market assets or channels simply to evade higher tax or stricter oversight layers operational in parallel sectors]. Statement 3 contains a sophisticated legal inversion trap: the 2013-14 text explicitly declared commodity derivative transactions to be *non-speculative*, which textually *permits* traders to set off derivative losses against income earned from any other source."
+    "ee": "1. Statement 1 is correct: In the 2013–14 Budget, CTT was levied on the sale of non-agricultural commodity derivatives (gold, silver, crude oil, base metals) at 0.01% (paid by the seller).\n2. Statement 2 is correct: The 0.01% rate on commodity futures was equalized with the STT rate on equity futures to eliminate regulatory arbitrage between equity and commodity derivative segments.\n3. Statement 3 is incorrect: The Finance Act, 2013 amended the Income Tax Act to classify recognized commodity derivative transactions as **non-speculative**, allowing traders to set off business losses against other business profits.",
+    "eh": "1. कथन 1 सही है: बजट 2013-14 में गैर-कृषि कमोडिटी वायदा (सोना, चांदी, कच्चा तेल आदि) की बिक्री पर 0.01% की दर से कमोडिटी ट्रांजैक्शन टैक्स (CTT) लगाया गया।\n2. कथन 2 सही है: इस 0.01% की दर को इक्विटी फ्यूचर्स पर लगने वाले STT के बराबर रखा गया ताकि कमोडिटी और इक्विटी बाजारों के बीच कर विसंगतियों (Arbitrage) को खत्म किया जा सके।\n3. कथन 3 गलत है: वित्त अधिनियम 2013 ने कमोडिटी डेरिवेटिव्स को **गैर-सट्टा (Non-speculative)** व्यापार घोषित किया, जिससे व्यापारियों को अपने कारोबारी नुकसान को अन्य व्यावसायिक आय के साथ समायोजित करने की छूट मिली।"
   },
   {
     "p_id": "bpsc_tax_017",
@@ -381,14 +493,21 @@
       "एमसीएक्स (MCX) कुल लेनदेन ग्रिड में दुनिया का तीसरा सबसे बड़ा कमोडिटी एक्सचेंज होने की ऐतिहासिक स्थिति पर पहुंच गया।",
       "वैश्विक स्तर पर, एमसीएक्स ने सोना और चांदी के अनुबंधों में नंबर 1 और प्राकृतिक गैस ट्रैकिंग मैट्रिक्स में नंबर 2 होने की एक प्रमुख रैंकिंग हासिल की।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements are precise textually accurate records of the growth outcomes achieved by the Multi Commodity Exchange [MCX, India's dominant state-regulated electronic derivatives exchange handling commodity options and futures contracts] following early tactical tax deferrals by the central treasury."
+    "ee": "1. Statement 1 is correct: Withdrawing the CTT proposed in 2008 prevented capital flight to offshore markets during the Indian commodity derivative market's formative phase, fostering robust domestic liquidity.\n2. Statement 2 is correct: According to Futures Industry Association (FIA) data, MCX expanded to become the world's 3rd largest commodity futures exchange by number of contracts traded.\n3. Statement 3 is correct: Globally, MCX ranked No. 1 in silver and gold futures contracts traded and No. 2 in natural gas futures during peak liquidity years.",
+    "eh": "1. कथन 1 सही है: 2008 में CTT को स्थगित करने से नवजात भारतीय कमोडिटी बाजार को तरलता बनाए रखने और वैश्विक मानकों के अनुरूप विकसित होने में मदद मिली।\n2. कथन 2 सही है: FIA के वैश्विक आंकड़ों के अनुसार, MCX कुल सौदों की संख्या के आधार पर विश्व का तीसरा सबसे बड़ा कमोडिटी एक्सचेंज बन गया।\n3. कथन 3 सही है: वैश्विक स्तर पर MCX ने चांदी और सोने के वायदा अनुबंधों में दुनिया में पहला स्थान तथा प्राकृतिक गैस अनुबंधों में दूसरा स्थान हासिल किया।"
   },
   {
     "p_id": "bpsc_tax_018",
@@ -404,14 +523,21 @@
       "औपचारिक सेबी (SEBI) शासनादेशों के तहत निष्पादित सूचीबद्ध शेयरों के लेनदेन—जैसे कंपनी अधिग्रहण, बायबैक, या डीलिस्टिंग प्रस्ताव—पर तिगुनी उच्च एसटीटी दरें लगती हैं।",
       "प्रतिभूतियों के ऑफ-मार्केट लेनदेन (off-market transactions) जिनमें सीधे केंद्रीय डिपॉजिटरी में स्वामित्व रिकॉर्ड में बदलाव शामिल होता है, एसटीटी शुल्क को आकर्षित करने से पूरी तरह बचते हैं।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 3 are correct",
       "Only 1 and 2 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 3 सही हैं",
+      "केवल 1 और 2 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 3 are precise reflections of the regulatory limits of the STT framework. Non-equity or off-market shifts [equities transactions processed outside the standard trading matching engines of public stock exchanges, handled directly via depository ledger overrides] bypass this transaction tax. Statement 2 contains an inversion trap: listed share transactions executed under specialized regulatory mandates like takeovers or corporate buybacks do *not* attract any STT framework charges."
+    "ee": "1. Statement 1 is correct: STT (introduced in 2004) is levied strictly on equity shares, equity mutual funds, and equity derivatives traded on recognized stock exchanges; it is not levied on debt instruments, government securities (G-Secs), bonds, debentures, or currency/interest-rate derivatives.\n2. Statement 2 is incorrect: Transactions executed under SEBI takeover codes, buyback tenders, or delisting offers are not subjected to punitive triple STT rates.\n3. Statement 3 is correct: STT applies exclusively to transactions executed through recognized stock exchanges; off-market physical/depository transfers bypass STT (subject to standard stamp duty and capital gains).",
+    "eh": "1. कथन 1 सही है: STT (2004) केवल मान्यता प्राप्त स्टॉक एक्सचेंजों पर इक्विटी शेयरों व इक्विटी डेरिवेटिव्स पर लगता है; यह सरकारी प्रतिभूतियों, बॉन्ड, डिबेंचर, वरीयता शेयरों और मुद्रा डेरिवेटिव्स पर लागू नहीं होता।\n2. कथन 2 गलत है: सेबी के नियमों के तहत होने वाले बायबैक, टेकओवर या डीलिस्टिंग प्रस्तावों पर कोई तिगुनी एसटीटी दर नहीं लगती है।\n3. कथन 3 सही है: ऑफ-मार्केट लेनदेन जो सीधे डिपॉजिटरी स्तर पर होते हैं और स्टॉक एक्सचेंज के ट्रेडिंग प्लेटफॉर्म से बाहर होते हैं, उन पर STT नहीं लगता है।"
   },
   {
     "p_id": "bpsc_tax_019",
@@ -427,14 +553,21 @@
       "शेयरों और इक्विटी म्यूचुअल फंडों के लिए एसटीसीजी (STCG) की अवधि सीमा को घटाकर 12 महीने कर दिया गया है, जिस पर ठीक 15 प्रतिशत की निश्चित वैधानिक कर दर लागू होती है।",
       "इक्विटी और म्यूचुअल फंड पर दीर्घकालिक पूंजीगत लाभ (LTCG) पूर्ण, स्थायी कर छूट का आनंद लेते हैं, जो बिना किसी सीमा के स्थायी रूप से 0 प्रतिशत दर पर स्थिर रहता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 0,
-    "e": "Statements 1 and 2 are precise textually accurate legal metrics tracking Capital Gains Tax [a direct tax imposed on the net monetary profit realized when an individual or corporate entity liquidates a capital asset like property or equity blocks]. Statement 3 contains an explicit exception trap: while equities historically enjoyed total LTCG exemptions, the text explicitly records that the government recently introduced a *10 per cent LTCG tax* on capital gains exceeding ₹1 lakh, making the perpetual zero-tax claim completely false."
+    "ee": "1. Statement 1 is correct: For unlisted securities and general immovable property/assets, holding periods under 24–36 months are classified as STCG and taxed at the taxpayer's applicable income slab rates.\n2. Statement 2 is correct: Listed equities and equity mutual funds held for up to 12 months incur Short Term Capital Gains (STCG) taxed at a flat concessional rate of 15% under Section 111A.\n3. Statement 3 is incorrect: Section 10(38) exemption was withdrawn in the 2018 Budget; LTCG on listed equities exceeding ₹1 lakh in a financial year is taxed at 10% under Section 112A (without indexation).",
+    "eh": "1. कथन 1 सही है: सामान्य संपत्तियों के लिए निर्धारित अवधि (24-36 महीने) से पहले बिक्री पर अल्पकालिक पूंजीगत लाभ (STCG) लगता है, जिस पर सामान्य स्लैब दरों से कर लगता है।\n2. कथन 2 सही है: सूचीबद्ध शेयरों और इक्विटी म्यूचुअल फंड के लिए 12 महीने से कम होल्डिंग पर धारा 111A के तहत 15% की निश्चित दर से STCG लगता है।\n3. कथन 3 गलत है: बजट 2018 में धारा 10(38) की पूर्ण छूट समाप्त कर दी गई; अब ₹1 लाख से अधिक के दीर्घकालिक पूंजीगत लाभ (LTCG) पर धारा 112A के तहत 10% की दर से कर लगता है।"
   },
   {
     "p_id": "bpsc_tax_020",
@@ -450,13 +583,20 @@
       "इस खामी ने अत्यधिक लाभदायक लाभांश-भुगतान करने वाले निगमों को 'शून्य कर' (zero tax) कंपनियों के रूप में उभरने की अनुमति दी, जिन्होंने राज्य के खजाने को कुछ भी भुगतान नहीं किया।",
       "मैट (MAT) का प्रवर्तन इन कंपनियों को उनके अंतर्निहित 'बुक प्रॉफिट' लूप पर सीधे गणना करके गणितीय रूप से 18.5 प्रतिशत पर निर्धारित प्रत्यक्ष कर का भुगतान करने का आदेश देता है।"
     ],
-    "o": [
+    "oe": [
       "Only 1 and 2 are correct",
       "Only 2 and 3 are correct",
       "1, 2 and 3 all are correct",
       "More than one of the above / None of the above"
     ],
+    "oh": [
+      "केवल 1 और 2 सही हैं",
+      "केवल 2 और 3 सही हैं",
+      "1, 2 और 3 सभी सही हैं",
+      "उपर्युक्त में से एक से अधिक / उपर्युक्त में से कोई नहीं"
+    ],
     "a": 2,
-    "e": "All three statements represent precise textually precise legal and accounting records defining the operational mechanics of the Minimum Alternate Tax [MAT, a direct tax safety-net framework designed to force profitable corporations to pay a minimum baseline tax liability independent of expansive statutory incentive deductions]. Book Profit [the net financial profit calculated by a corporation in accordance with standard corporate accounting acts before tax deductions are factored in] serves as the direct tax base for the 18.5% calculation."
+    "ee": "1. Statement 1 is correct: Companies used generous tax incentives, accelerated depreciation, and deductions under the Income Tax Act to reduce taxable income to zero while declaring healthy 'book profits' under the Companies Act.\n2. Statement 2 is correct: This accounting divergence allowed profitable, dividend-paying corporations to become 'zero-tax companies', legally avoiding direct corporate taxes.\n3. Statement 3 is correct: Under Section 115JB, MAT was enacted ensuring that companies pay a minimum tax (statutorily anchored around 18.5% of adjusted book profits, later revised to 15% in 2019) if normal corporate tax liability is lower.",
+    "eh": "1. कथन 1 सही है: कंपनियां आयकर अधिनियम की छूटों व मूल्यह्रास का लाभ उठाकर अपनी कर योग्य आय शून्य कर लेती थीं, जबकि कंपनी अधिनियम के तहत खातों में भारी 'बुक प्रॉफिट' दर्शाती थीं।\n2. कथन 2 सही है: इस खामी के कारण भारी मुनाफा कमाने वाली और लाभांश देने वाली कंपनियां 'जीरो टैक्स कंपनियां' बन जाती थीं और सरकार को कोई कर नहीं देती थीं।\n3. कथन 3 सही है: धारा 115JB के तहत MAT लागू किया गया, जिसके तहत सामान्य कर कम होने पर कंपनियों के बुक प्रॉफिट पर न्यूनतम वैकल्पिक कर (18.5%, बाद में 15%) देना अनिवार्य किया गया।"
   }
 ]
