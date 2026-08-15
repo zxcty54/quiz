@@ -649,7 +649,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 10),
 
-            // 📋 2. DEDICATED SEPARATE STATEMENT CARDS (Numbered Badges)
+            // 📋 2. DEDICATED SEPARATE STATEMENT CARDS (Enhanced Contrast & Readability)
             if (statements != null && statements.isNotEmpty) ...[
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -659,20 +659,20 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
                   return Container(
                     width: double.infinity,
-                    margin: const EdgeInsets.only(bottom: 8.0),
-                    padding: const EdgeInsets.all(12.0),
+                    margin: const EdgeInsets.only(bottom: 9.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 12.0),
                     decoration: BoxDecoration(
                       color: const Color(0xFFF8FAFC),
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: const Color(0xFFE2E8F0)),
+                      border: Border.all(color: const Color(0xFFE2E8F0), width: 1.1),
                     ),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+                          padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF2563EB),
+                            color: const Color(0xFF1E293B),
                             borderRadius: BorderRadius.circular(6),
                           ),
                           child: Text(
@@ -684,14 +684,15 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                             ),
                           ),
                         ),
-                        const SizedBox(width: 10),
+                        const SizedBox(width: 12),
                         Expanded(
                           child: MathFormattedText(
                             text: stmtText,
                             textStyle: const TextStyle(
-                              fontSize: 13.5,
-                              color: Color(0xFF334155),
-                              height: 1.45,
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xFF0F172A), // 👈 Dark Charcoal Grey
+                              height: 1.5,
                             ),
                           ),
                         ),
@@ -700,7 +701,31 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                   );
                 }).toList(),
               ),
-              const SizedBox(height: 10),
+
+              // 🌟 VISUAL DIVIDER & SEPARATION (Between Statements and Options)
+              Container(
+                margin: const EdgeInsets.only(top: 14, bottom: 16),
+                child: Row(
+                  children: [
+                    Expanded(child: Divider(color: Colors.grey.shade300, thickness: 1)),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Text(
+                        _isHindi ? 'विकल्प चुनें' : 'SELECT OPTION',
+                        style: TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.grey.shade500,
+                          letterSpacing: 0.8,
+                        ),
+                      ),
+                    ),
+                    Expanded(child: Divider(color: Colors.grey.shade300, thickness: 1)),
+                  ],
+                ),
+              ),
+            ] else ...[
+              const SizedBox(height: 14),
             ],
 
             // 🔘 3. BILINGUAL OPTIONS LIST (Dynamic oe/oh)
@@ -763,7 +788,11 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                         Expanded(
                           child: MathFormattedText(
                             text: optionText,
-                            textStyle: const TextStyle(fontSize: 13.5, fontWeight: FontWeight.w500, color: Colors.black87),
+                            textStyle: const TextStyle(
+                              fontSize: 13.5,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xFF0F172A),
+                            ),
                           ),
                         ),
                         icon,
