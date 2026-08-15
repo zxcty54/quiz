@@ -25,6 +25,9 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
   bool isLoading = true;
   String? errorMessage;
 
+  // 📌 History Stack for Backward Navigation
+  final List<int> _cardHistory = [];
+
   final ScrollController _scrollController = ScrollController();
 
   @override
@@ -86,7 +89,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     return clean.trim();
   }
 
-  // 🌐 MULTI-CDN UNBLOCKED FETCHER (Jio/Airtel par kabhi block nahi hoga)
+  // 🌐 MULTI-CDN UNBLOCKED FETCHER
   Future<void> _fetchChapterJson() async {
     String rawPath = widget.jsonUrl ?? '';
     
@@ -107,12 +110,11 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     final int ts = DateTime.now().millisecondsSinceEpoch;
     String encodedPath = Uri.encodeFull(cleanPath);
 
-    // 🚀 Fast unblocked mirrors in India
     List<String> mirrorUrls = [
+      "https://raw.githack.com/zxcty54/quiz/main/$encodedPath",
       "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
       "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
       "https://cdn.statically.io/gh/zxcty54/quiz/main/$encodedPath",
-      "https://raw.githack.com/zxcty54/quiz/main/$encodedPath",
     ];
 
     for (String url in mirrorUrls) {
@@ -127,7 +129,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
           String cleanJson = _sanitizeJsonString(rawBody);
 
           if (cleanJson.startsWith('<') || cleanJson.startsWith('<!DOCTYPE')) {
-            continue; // Skip HTML error pages
+            continue;
           }
 
           Map<String, dynamic> parsedJson = json.decode(cleanJson);
@@ -142,6 +144,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
               chapterData = data;
               currentCardIndex = savedIdx;
               visibleMessageCount = 1;
+              _cardHistory.clear();
               isLoading = false;
               errorMessage = null;
             });
@@ -194,6 +197,38 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     await prefs.setBool('has_learning_history', true);
   }
 
+  // ⬅️ PREVIOUS CARD NAVIGATION
+  void _goToPreviousCard() {
+    if (_cardHistory.isEmpty || isTyping) return;
+    LearnEffects.playTap();
+
+    final prevIndex = _cardHistory.removeLast();
+    if (prevIndex >= 0 && prevIndex < chapterData!.cardsList.length) {
+      _saveProgress(prevIndex);
+      setState(() {
+        currentCardIndex = prevIndex;
+        // Pichle card par saare messages open milenge taaki baar baar tap na karna pade
+        final prevCard = chapterData!.cardsList[prevIndex];
+        visibleMessageCount = prevCard.messages?.length ?? 1;
+        isTyping = false;
+      });
+    }
+  }
+
+  // 🔄 RESTART / FIRST CARD NAVIGATION
+  void _goToFirstCard() {
+    if (currentCardIndex == 0 || isTyping) return;
+    LearnEffects.playTap();
+
+    _saveProgress(0);
+    setState(() {
+      _cardHistory.clear();
+      currentCardIndex = 0;
+      visibleMessageCount = 1;
+      isTyping = false;
+    });
+  }
+
   void _handleNextTap(LearnCardModel currentCard) {
     if (isTyping) return;
     
@@ -235,6 +270,9 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     }
 
     if (targetIndex != -1 && targetIndex < chapterData!.cardsList.length) {
+      // 📌 Push current card index into history stack before advancing
+      _cardHistory.add(currentCardIndex);
+
       _saveProgress(targetIndex);
       setState(() {
         currentCardIndex = targetIndex;
@@ -349,6 +387,9 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
       }
     }
 
+    final bool canGoPrevious = _cardHistory.isNotEmpty;
+    final bool canRestart = currentCardIndex > 0;
+
     return Scaffold(
       backgroundColor: const Color(0xFFF8FAFC),
       appBar: AppBar(
@@ -386,12 +427,110 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
           )
         ],
       ),
-      body: GestureDetector(
-        onTap: () => _handleNextTap(currentCard),
-        behavior: HitTestBehavior.opaque,
-        child: Column(
-          children: [
-            Expanded(
+      body: Column(
+        children: [
+          // 🕹️ TOP BACKWARD & RESTART CONTROL BAR
+          if (canGoPrevious || canRestart)
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+              decoration: const BoxDecoration(
+                color: Color(0xFFEEF2FF),
+                border: Border(bottom: BorderSide(color: Color(0xFFC7D2FE), width: 0.8)),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // ⬅️ Previous Card Button
+                  InkWell(
+                    onTap: canGoPrevious ? _goToPreviousCard : null,
+                    borderRadius: BorderRadius.circular(8),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                      decoration: BoxDecoration(
+                        color: canGoPrevious ? Colors.white : Colors.grey.shade200,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: canGoPrevious ? const Color(0xFF818CF8) : Colors.grey.shade300),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.arrow_back_rounded,
+                            size: 15,
+                            color: canGoPrevious ? const Color(0xFF4F46E5) : Colors.grey,
+                          ),
+                          const SizedBox(width: 4),
+                          Text(
+                            'Previous Card',
+                            style: TextStyle(
+                              fontSize: 11.5,
+                              fontWeight: FontWeight.bold,
+                              color: canGoPrevious ? const Color(0xFF4F46E5) : Colors.grey,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  // 🔄 Restart / First Card Button
+                  if (canRestart)
+                    InkWell(
+                      onTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (ctx) => AlertDialog(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                            title: const Text('Go to First Card?'),
+                            content: const Text('Kya aap wapas Chapter ke First Card (Intro) par jana chahte hain?'),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.pop(ctx),
+                                child: const Text('Cancel'),
+                              ),
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color(0xFF4F46E5),
+                                  foregroundColor: Colors.white,
+                                ),
+                                onPressed: () {
+                                  Navigator.pop(ctx);
+                                  _goToFirstCard();
+                                },
+                                child: const Text('Yes, Go to Start 🔄'),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                      borderRadius: BorderRadius.circular(8),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+                        child: const Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(Icons.restart_alt_rounded, size: 15, color: Color(0xFF4F46E5)),
+                            SizedBox(width: 4),
+                            Text(
+                              'First Card',
+                              style: TextStyle(
+                                fontSize: 11.5,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFF4F46E5),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+            ),
+
+          Expanded(
+            child: GestureDetector(
+              onTap: () => _handleNextTap(currentCard),
+              behavior: HitTestBehavior.opaque,
               child: AnimatedSwitcher(
                 duration: const Duration(milliseconds: 350),
                 switchInCurve: Curves.easeOutCubic,
@@ -420,52 +559,52 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
                 ),
               ),
             ),
+          ),
 
-            Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 10, offset: const Offset(0, -4))
-                ],
-              ),
-              child: SafeArea(
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: (currentCard.type == 'intro' || isAllMessagesRevealed) 
-                        ? const Color(0xFF4F46E5) 
-                        : const Color(0xFF2563EB),
-                    minimumSize: const Size.fromHeight(52),
-                    elevation: 2,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  ),
-                  onPressed: () => _handleNextTap(currentCard),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        child: Text(
-                          buttonLabel,
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.bold, color: Colors.white),
-                        ),
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 10, offset: const Offset(0, -4))
+              ],
+            ),
+            child: SafeArea(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: (currentCard.type == 'intro' || isAllMessagesRevealed) 
+                      ? const Color(0xFF4F46E5) 
+                      : const Color(0xFF2563EB),
+                  minimumSize: const Size.fromHeight(52),
+                  elevation: 2,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                ),
+                onPressed: () => _handleNextTap(currentCard),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Flexible(
+                      child: Text(
+                        buttonLabel,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.bold, color: Colors.white),
                       ),
-                      const SizedBox(width: 8),
-                      Icon(
-                        (currentCard.type == 'intro' || isAllMessagesRevealed) 
-                            ? Icons.arrow_forward_rounded 
-                            : Icons.touch_app_rounded,
-                        color: Colors.white,
-                        size: 18,
-                      )
-                    ],
-                  ),
+                    ),
+                    const SizedBox(width: 8),
+                    Icon(
+                      (currentCard.type == 'intro' || isAllMessagesRevealed) 
+                          ? Icons.arrow_forward_rounded 
+                          : Icons.touch_app_rounded,
+                      color: Colors.white,
+                      size: 18,
+                    )
+                  ],
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
