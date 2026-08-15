@@ -37,7 +37,7 @@ class _RevisionTabState extends State<RevisionTab> {
     }
   }
 
-  // 1️⃣ Pehle Disk Storage se padho (0ms instant load), fir background live fetch
+  // 1️⃣ Disk Storage Check
   Future<void> _loadFromDiskAndFetch() async {
     final prefs = await SharedPreferences.getInstance();
     final String? savedJson = prefs.getString('persistent_subject_mapping_json');
@@ -59,41 +59,43 @@ class _RevisionTabState extends State<RevisionTab> {
       });
     }
 
-    // Live cloud sync in background
     _fetchLiveGitHubMapping();
   }
 
-  // 🚀 DIRECT MULTI-CDN UNBLOCKED FETCHER + PERMANENT DISK SAVE
+  // 🚀 DIRECT MULTI-CDN UNBLOCKED FETCHER
   Future<void> _fetchLiveGitHubMapping() async {
     if (!mounted) return;
     setState(() => _isLoading = true);
 
     final int ts = DateTime.now().millisecondsSinceEpoch;
     final List<String> urls = [
+      "https://raw.githack.com/zxcty54/quiz/main/subject_mapping.json",
       "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/subject_mapping.json?t=$ts",
       "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/subject_mapping.json?t=$ts",
       "https://cdn.statically.io/gh/zxcty54/quiz/main/subject_mapping.json",
-      "https://raw.githubusercontent.com/zxcty54/quiz/main/subject_mapping.json?t=$ts",
     ];
 
     for (String url in urls) {
       try {
         final res = await http.get(
           Uri.parse(url),
-          headers: {'Accept': 'application/json, text/plain, */*'},
+          headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+          },
         ).timeout(const Duration(seconds: 4));
 
         if (res.statusCode == 200) {
           String rawBody = utf8.decode(res.bodyBytes).trim();
 
-          // 🧹 Strip UTF-8 BOM & Markdown if any
           if (rawBody.startsWith('\uFEFF')) {
             rawBody = rawBody.substring(1).trim();
           }
           rawBody = rawBody.replaceAll('```json', '').replaceAll('```', '').trim();
 
           if (rawBody.startsWith('<') || rawBody.startsWith('<!DOCTYPE')) {
-            continue; // Skip HTML responses
+            continue;
           }
 
           final dynamic parsed = jsonDecode(rawBody);
@@ -103,7 +105,6 @@ class _RevisionTabState extends State<RevisionTab> {
               _isLoading = false;
             });
 
-            // 💾 Phone ke permanent disk storage mein save
             final prefs = await SharedPreferences.getInstance();
             await prefs.setString('persistent_subject_mapping_json', jsonEncode(parsed));
             return;
@@ -118,6 +119,10 @@ class _RevisionTabState extends State<RevisionTab> {
 
   @override
   Widget build(BuildContext context) {
+    final bool isDark = Theme.of(context).brightness == Brightness.dark;
+    final Color textColor = isDark ? Colors.white : const Color(0xFF0F172A);
+    final Color subTextColor = isDark ? const Color(0xFF94A3B8) : Colors.grey.shade600;
+
     return RefreshIndicator(
       color: const Color(0xFF2563EB),
       onRefresh: _fetchLiveGitHubMapping,
@@ -129,8 +134,10 @@ class _RevisionTabState extends State<RevisionTab> {
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [Color(0xFF1E293B), Color(0xFF0F172A)],
+              gradient: LinearGradient(
+                colors: isDark
+                    ? [const Color(0xFF0F172A), const Color(0xFF1E293B)]
+                    : [const Color(0xFF1E293B), const Color(0xFF0F172A)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -138,7 +145,7 @@ class _RevisionTabState extends State<RevisionTab> {
               border: Border.all(color: const Color(0xFF38BDF8).withOpacity(0.3), width: 1.2),
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xFF0F172A).withOpacity(0.2),
+                  color: Colors.black.withOpacity(isDark ? 0.35 : 0.15),
                   blurRadius: 10,
                   offset: const Offset(0, 4),
                 )
@@ -198,9 +205,15 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
 
           const SizedBox(height: 18),
-          const Text('📚 Chapterwise Revision Hub', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          Text(
+            '📚 Chapterwise Revision Hub',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: textColor),
+          ),
           const SizedBox(height: 4),
-          const Text('Subject par click karein aur direct chapter button dabakar revision shuru karein', style: TextStyle(color: Colors.grey, fontSize: 12)),
+          Text(
+            'Subject par click karein aur direct chapter button dabakar revision shuru karein',
+            style: TextStyle(color: subTextColor, fontSize: 12),
+          ),
           const SizedBox(height: 14),
 
           _buildExpansionSubjectCategory(
@@ -209,6 +222,7 @@ class _RevisionTabState extends State<RevisionTab> {
             badgeText: '🔥 High Weightage (BSSC/SSC)',
             icon: '🔬',
             color: const Color(0xFF2563EB),
+            isDark: isDark,
             subSections: [
               {'title': '⚡ Physics (TCS PYQs Focus)', 'key': 'phy_mapping'},
               {'title': '🧬 Biology (Repeat Concept Sets)', 'key': 'bio_mapping'},
@@ -223,6 +237,7 @@ class _RevisionTabState extends State<RevisionTab> {
             badgeText: '🏛️ BPSC/BSSC Core Syllabus',
             icon: '📚',
             color: const Color(0xFF4F46E5),
+            isDark: isDark,
             subSections: [
               {'title': '📜 Indian Polity (Articles Special)', 'key': 'polity_mapping'},
               {'title': '🏛️ History (1857 & Freedom Movement)', 'key': 'history_mapping'},
@@ -238,6 +253,7 @@ class _RevisionTabState extends State<RevisionTab> {
             badgeText: '⚡ Latest Exam Bulletins',
             icon: '📰',
             color: const Color(0xFF7C3AED),
+            isDark: isDark,
             subSections: [
               {'title': '📰 Monthly Sets & Bihar Special', 'key': 'current_mapping'},
             ],
@@ -253,24 +269,45 @@ class _RevisionTabState extends State<RevisionTab> {
     required String badgeText,
     required String icon,
     required Color color,
+    required bool isDark,
     required List<Map<String, dynamic>> subSections,
   }) {
+    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final Color subTitleColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF334155);
+    final Color dividerColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+
     return Card(
+      color: cardBg,
       elevation: 1.5,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
-        side: BorderSide(color: color.withOpacity(0.3), width: 1.2),
+        side: BorderSide(
+          color: isDark ? color.withOpacity(0.4) : color.withOpacity(0.25),
+          width: 1.2,
+        ),
       ),
       child: Theme(
-        data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+        data: Theme.of(context).copyWith(
+          dividerColor: Colors.transparent,
+          unselectedWidgetColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+        ),
         child: ExpansionTile(
+          iconColor: color,
+          collapsedIconColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
           leading: Text(icon, style: const TextStyle(fontSize: 22)),
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: color)),
               const SizedBox(height: 2),
-              Text(badgeText, style: TextStyle(fontSize: 10.5, color: color.withOpacity(0.8), fontWeight: FontWeight.w600)),
+              Text(
+                badgeText,
+                style: TextStyle(
+                  fontSize: 10.5,
+                  color: isDark ? color.withOpacity(0.9) : color.withOpacity(0.8),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
             ],
           ),
           childrenPadding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
@@ -287,15 +324,21 @@ class _RevisionTabState extends State<RevisionTab> {
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Divider(),
+                Divider(color: dividerColor, height: 16),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 6.0),
-                  child: Text(subTitle, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Color(0xFF334155))),
+                  child: Text(
+                    subTitle,
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: subTitleColor),
+                  ),
                 ),
                 rawChapters.isEmpty
-                    ? const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 6.0),
-                        child: Text("Loading chapters...", style: TextStyle(fontSize: 11, color: Colors.grey)),
+                    ? Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 6.0),
+                        child: Text(
+                          "Loading chapters...",
+                          style: TextStyle(fontSize: 11, color: isDark ? Colors.grey.shade500 : Colors.grey),
+                        ),
                       )
                     : Wrap(
                         spacing: 8,
@@ -304,11 +347,17 @@ class _RevisionTabState extends State<RevisionTab> {
                           String path = entry.value.toString();
                           return ActionChip(
                             elevation: 1,
-                            backgroundColor: color.withOpacity(0.08),
-                            side: BorderSide(color: color.withOpacity(0.3)),
+                            backgroundColor: isDark ? color.withOpacity(0.2) : color.withOpacity(0.08),
+                            side: BorderSide(
+                              color: isDark ? color.withOpacity(0.5) : color.withOpacity(0.3),
+                            ),
                             label: Text(
                               "📖 ${entry.key}",
-                              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: color),
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600,
+                                color: isDark ? Colors.white : color,
+                              ),
                             ),
                             onPressed: () {
                               widget.onLaunchPractice(context, entry.key, path);
