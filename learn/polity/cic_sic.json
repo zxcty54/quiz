@@ -1,0 +1,1732 @@
+
+{
+  "topic_id": "indian_polity_cic_sic_rti",
+  "topic_title": "Central & State Information Commissions (CIC & SIC) - RTI Act 2005",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 96,
+  "characters": {
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 96 },
+      "intro_payload": {
+        "title": "CIC & SIC: Right to Information Act 2005",
+        "icon": "📋",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Right to Information (RTI) Act 2005 - Background & Significance",
+          "Central Information Commission (CIC) - Article basis, Composition",
+          "Chief Information Commissioner - Appointment, Tenure, Salary",
+          "Information Commissioners - Powers & Conditions of Service",
+          "State Information Commission (SIC) - Parallel structure",
+          "Public Authority, Public Information Officer (PIO) definitions",
+          "Exemptions under RTI - What information CAN'T be given",
+          "Appeal process - First Appeal, Second Appeal to CIC/SIC",
+          "Penalties & suo motu disclosure",
+          "RTI Amendment Act 2019 - Key changes (BPSC Favorite)"
+        ]
+      },
+      "navigation": { "next": "card_02_village_ration", "button_text": "Start Learning ➔" }
+    },
+    {
+      "card_id": "card_02_village_ration",
+      "card_slug": "card_02_village_ration",
+      "type": "chat",
+      "concept_id": "rti_background",
+      "level": 1,
+      "progress": { "current": 2, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ek simple sawaal suno - agar tumhare gaon mein ration card ka paisa aaya ho, aur [[Pradhan|Gram Panchayat ka mukhiya jo local administration chalata hai]] ne sab apne paas rakh liya ho, toh tumhara baap kaise pata karega ki kitna paisa aaya tha aur kahan gaya? Pehle koi jawab nahi deta tha, sarkar ke andar sab kuch band darwaza tha." },
+        { "speaker": "raju", "text": "Hain?? Matlab pehle paise ka hisaab maangna bhi nahi tha allowed?" },
+        { "speaker": "aman", "text": "Bilkul nahi! Isliye 2005 mein ek [[Revolutionary|Inklaabi - aise badlav jo poori system badal de]] kanoon aaya - Right to Information Act 2005. Isse har nagrik ko yeh adhikar mila ki wo kisi bhi sarkari vibhag se KISI BHI information ki maang kar sake - school ka hisaab, road ka tender, salary list, sab kuch!" },
+        { "speaker": "raju", "text": "Wow! Toh ab sarkar ka hisaab common aadmi bhi maang sakta hai? Ye toh bahut powerful cheez hai sir!" }
+      ],
+      "navigation": { "next": "card_03_transparency_concept", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_transparency_concept",
+      "card_slug": "card_03_transparency_concept",
+      "type": "chat",
+      "concept_id": "rti_background",
+      "level": 1,
+      "progress": { "current": 3, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "RTI Act ka poora naam hai 'The Right to Information Act, 2005'. Ye Act 12 October 2005 ko fully [[Operational|Kaam karna shuru karna, laagu hona]] hua. Iska main purpose hai sarkari kaam-kaaj mein [[Transparency|Khulasaa - sab kuch clearly dikhana, kuch bhi chhupaana nahi]] aur [[Accountability|Jawabdehi - apne kaam ka hisaab dena]] lana." },
+        { "speaker": "raju", "text": "Par sir koi bhi government se kuch bhi maang le toh office wale bata denge kya? Inhe koi rok nahi hai?" },
+        { "speaker": "aman", "text": "Seedha pocha toh seedha jawab - YES! Lekin ek system banaya gaya hai - har sarkari office mein ek PIO (Public Information Officer) hota hai jo RTI applications receive karta hai, aur usse 30 din ke andar information deni HOGI, warna penalty hogi. Aage aur detail mein samajhenge." },
+        { "speaker": "raju", "text": "30 din ka time limit! Agar nahi diya toh kya hoga sir?" }
+      ],
+      "navigation": { "next": "card_04_article_19_connection", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_article_19_connection",
+      "card_slug": "card_04_article_19_connection",
+      "type": "chat",
+      "concept_id": "rti_background",
+      "level": 1,
+      "progress": { "current": 4, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ruko, pehle ye samajhlo - RTI ka constitutional basis kya hai? Supreme Court ne kai cases mein kaha hai ki 'Right to Information' Article 19(1)(a) ke andar aata hai - [[Freedom of Speech and Expression|Apni baat kehne aur sochne ki azaadi]] ka hi ek hissa hai. Jab tak information nahi, meaningful expression kaise possible hai?" },
+        { "speaker": "raju", "text": "Matlab information pana khud ek Fundamental Right hai?" },
+        { "speaker": "aman", "text": "Practically haan - judiciary ne isa mana hai. Par RTI Act ek statutory right hai (Parliament ne law banakar diya), fundamental right ki tarah directly Constitution mein nahi likha. Ye difference BPSC mein trap ke roop mein bahut baar aata hai, dhyan rakhna!" },
+        { "speaker": "raju", "text": "Achha! Toh RTI Act ek kanoon hai jo information maangne ki power deta hai, Constitution mein directly nahi likha. Ye confusion clear ho gayi sir!" }
+      ],
+      "navigation": { "next": "card_05_guess_rti_year", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_guess_rti_year",
+      "card_slug": "card_05_guess_rti_year",
+      "type": "guess",
+      "concept_id": "rti_background",
+      "level": 1,
+      "progress": { "current": 5, "total": 96 },
+      "quiz_payload": {
+        "question": "Guess karo: RTI Act 2005 kis tarikh ko fully operational (laagu) hua tha?",
+        "options": [
+          { "id": "A", "text": "15 August 2005" },
+          { "id": "B", "text": "26 January 2005" },
+          { "id": "C", "text": "12 October 2005" },
+          { "id": "D", "text": "2 October 2005" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "RTI Act 2005 ka Parliament ne June 2005 mein pass kiya tha lekin ye 12 October 2005 se fully operational hua. Ye date BPSC aur SSC dono mein direct poochi jaati hai."
+      },
+      "navigation": { "next": "card_06_quiz1_rti_basics", "button_text": "Continue ➔" }
+    },
+    {
+      "card_id": "card_06_quiz1_rti_basics",
+      "card_slug": "card_06_quiz1_rti_basics",
+      "type": "quiz",
+      "concept_id": "rti_background",
+      "level": 1,
+      "progress": { "current": 6, "total": 96 },
+      "quiz_payload": {
+        "question": "Q1/3: RTI Act 2005 ka main purpose kya hai?",
+        "options": [
+          { "id": "A", "text": "Sirf media ko information dena" },
+          { "id": "B", "text": "Sarkari kaam-kaaj mein transparency aur accountability laana, har citizen ko information maangne ka adhikar dena" },
+          { "id": "C", "text": "Judges ki salary public karna" },
+          { "id": "D", "text": "Sirf foreign affairs ki information dena" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RTI Act 2005 ka primary purpose sarkari kaam-kaaj mein transparency aur accountability laana hai. Ye har Indian citizen ko kisi bhi public authority se information maangne ka statutory right deta hai."
+      },
+      "navigation": { "next": "card_07_quiz2_rti_basics", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz2_rti_basics",
+      "card_slug": "card_07_quiz2_rti_basics",
+      "type": "quiz",
+      "concept_id": "rti_background",
+      "level": 1,
+      "progress": { "current": 7, "total": 96 },
+      "quiz_payload": {
+        "question": "Q2/3: Consider the statements:\n1. Right to Information ek Fundamental Right hai jo directly Constitution mein Article 19 mein explicitly likha gaya hai.\n2. Supreme Court ne RTI ko Article 19(1)(a) ke Freedom of Speech ka hissa mana hai.\nKaunsa/kaunse sahi hain?",
+        "options": [
+          { "id": "A", "text": "Sirf 1" },
+          { "id": "B", "text": "Sirf 2" },
+          { "id": "C", "text": "Dono 1 aur 2" },
+          { "id": "D", "text": "Na 1 na 2" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 galat hai - RTI directly Article 19 mein explicitly nahi likha, ye ek statutory right hai (Act se mila). Statement 2 sahi hai - Supreme Court ne RTI ko Article 19(1)(a) ka implicit hissa mana hai. Ye BPSC ka classic trap statement hai."
+      },
+      "navigation": { "next": "card_08_quiz3_rti_basics", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_quiz3_rti_basics",
+      "card_slug": "card_08_quiz3_rti_basics",
+      "type": "quiz",
+      "concept_id": "rti_background",
+      "level": 1,
+      "progress": { "current": 8, "total": 96 },
+      "quiz_payload": {
+        "question": "Q3/3: RTI application milne ke baad PIO (Public Information Officer) ko kitne din mein information deni hoti hai?",
+        "options": [
+          { "id": "A", "text": "15 din" },
+          { "id": "B", "text": "45 din" },
+          { "id": "C", "text": "30 din" },
+          { "id": "D", "text": "60 din" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "RTI Act ke tehat PIO ko normally 30 din ke andar information deni hoti hai. Life and liberty se related cases mein ye 48 hours ho jaata hai. Third party information ke liye 40 din tak extend ho sakta hai."
+      },
+      "navigation": { "next": "card_09_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_09_milestone1",
+      "card_slug": "card_09_milestone1",
+      "type": "milestone",
+      "concept_id": "rti_background",
+      "level": 1,
+      "progress": { "current": 9, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📋",
+        "completed_topic": "RTI Act 2005 - Background & Basics",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/9 Clear",
+        "motivational_quote": "RTI ki bunyaad ab solid hai! Ab Central Information Commission ki taraf badhte hain!"
+      },
+      "navigation": { "next": "card_10_cic_what_is", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_10_cic_what_is",
+      "card_slug": "card_10_cic_what_is",
+      "type": "chat",
+      "concept_id": "cic_composition",
+      "level": 2,
+      "progress": { "current": 10, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab aata hai asli topic - Central Information Commission yaani CIC. Ye RTI Act 2005 ke tehat bana ek powerful quasi-judicial body hai. [[Quasi-judicial|Aadha court jaise - decisions dene ki power hai par ye actual court nahi hai]] - ye court nahi hai, par court jaisi powers rakhta hai RTI related complaints mein." },
+        { "speaker": "raju", "text": "Sir ye commission kahan hoti hai? Iska koi office hota hai?" },
+        { "speaker": "aman", "text": "Haan! CIC ka headquarter New Delhi mein hota hai. Iska [[Jurisdiction|Adhikar kshetra - kahan tak ka kaam karna hai]] central government, Parliament, aur Jo bhi institutions jo Central Government se fund paate hain ya control hote hain - un sab par hota hai. State government ke maamle mein State Information Commission (SIC) kaam karta hai." },
+        { "speaker": "raju", "text": "Toh Central ke liye CIC aur State ke liye SIC - parallel structure hai? Aur inhe koi Constitutional backing hai kya?" }
+      ],
+      "navigation": { "next": "card_11_cic_statutory_body", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_cic_statutory_body",
+      "card_slug": "card_11_cic_statutory_body",
+      "type": "chat",
+      "concept_id": "cic_composition",
+      "level": 2,
+      "progress": { "current": 11, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite - Ye SABSE IMPORTANT point hai! CIC ek [[Statutory Body|Kanoon dwara banaya gaya nikay - Parliament ke Act se]] hai, Constitutional Body NAHI. Matlab ye RTI Act 2005 se bana hai, Constitution se directly nahi. Ye BPSC, SSC sab mein trap poochte hain - 'CIC ek Constitutional Body hai' - ye GALAT statement hai!" },
+        { "speaker": "raju", "text": "Hain?? Toh CIC ka Constitution mein koi Article nahi hai? Par UPSC, CEC wagera ka toh Article hota hai!" },
+        { "speaker": "aman", "text": "Exactly! Election Commission = Constitutional (Article 324), CAG = Constitutional (Article 148). Lekin CIC aur SIC = Statutory (RTI Act 2005 se bane). Ye difference note kar lo kyunki ye matching aur statement-based questions mein repeatedly aata hai." },
+        { "speaker": "raju", "text": "Noted sir! CIC/SIC = Statutory, Article nahi. Ab iski composition kya hai?" }
+      ],
+      "navigation": { "next": "card_12_cic_composition_members", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_cic_composition_members",
+      "card_slug": "card_12_cic_composition_members",
+      "type": "chat",
+      "concept_id": "cic_composition",
+      "level": 2,
+      "progress": { "current": 12, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "CIC ki composition: Ek [[Chief Information Commissioner|CIC ka sabse bada adhikari jo poori commission ka head hota hai]] aur maximum 10 Information Commissioners hote hain. Inhe milaakar ye puri commission banती hai. Sabki niyukti (appointment) PRESIDENT OF INDIA karte hain - yaad rakho, CIC mein appointment President karta hai, Governor nahi!" },
+        { "speaker": "raju", "text": "President apne mann se appoint karte hain kya sir?" },
+        { "speaker": "aman", "text": "Nahi! Ek [[Committee|Samiti]] recommend karti hai jisme hote hain: (1) Prime Minister (jo committee ka Chair hota hai), (2) Lok Sabha mein Leader of Opposition (ya sabse badi opposition party ka leader), (3) ek Union Cabinet Minister jise PM nominate kare. In teeno ki recommendation par President appoint karta hai." },
+        { "speaker": "raju", "text": "Matlab PM ki committee recommend karti hai, President formally appoint karta hai. Aur opposition bhi shaamil hai is committee mein!" }
+      ],
+      "navigation": { "next": "card_13_cic_qualification", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_cic_qualification",
+      "card_slug": "card_13_cic_qualification",
+      "type": "chat",
+      "concept_id": "cic_composition",
+      "level": 2,
+      "progress": { "current": 13, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab qualification - CIC aur Information Commissioners ke liye kya yogyata chahiye? RTI Act ke anusaar wo aisa vyakti hona chahiye jisne public life mein wide experience ki ho - law, science & technology, social service, management, journalism, mass media ya administration kisi bhi field mein." },
+        { "speaker": "raju", "text": "Itni saari fields! Koi bhi ho sakta hai kya?" },
+        { "speaker": "aman", "text": "Haan, lekin ek important condition hai - wo Parliament ya State Legislature ka MP/MLA nahi hona chahiye, kisi government employee ki position par nahi hona chahiye, kisi political party se affiliated nahi hona chahiye, aur koi bhi business/profession continue nahi kar sakta appointment ke baad. Ye impartiality ensure karta hai." },
+        { "speaker": "raju", "text": "Toh current politician CIC nahi ban sakta! Business bhi chhodni padegi. Ye toh independence ke liye zaroori hai." }
+      ],
+      "navigation": { "next": "card_14_quiz1_cic_composition", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_14_quiz1_cic_composition",
+      "card_slug": "card_14_quiz1_cic_composition",
+      "type": "quiz",
+      "concept_id": "cic_composition",
+      "level": 2,
+      "progress": { "current": 14, "total": 96 },
+      "quiz_payload": {
+        "question": "Q1/3: Central Information Commission (CIC) kis prakar ki body hai?",
+        "options": [
+          { "id": "A", "text": "Constitutional Body - Article 324 se bani" },
+          { "id": "B", "text": "Statutory Body - RTI Act 2005 se bani" },
+          { "id": "C", "text": "Executive Body - Cabinet decision se bani" },
+          { "id": "D", "text": "Judicial Body - Supreme Court ne banai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CIC ek Statutory Body hai jo RTI Act 2005 ke tehat bani hai. Ye Constitutional Body nahi hai - iska koi specific Article Constitution mein nahi hai. Ye BPSC/SSC ka favorite trap question hai."
+      },
+      "navigation": { "next": "card_15_quiz2_cic_composition", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz2_cic_composition",
+      "card_slug": "card_15_quiz2_cic_composition",
+      "type": "quiz",
+      "concept_id": "cic_composition",
+      "level": 2,
+      "progress": { "current": 15, "total": 96 },
+      "quiz_payload": {
+        "question": "Q2/3: Chief Information Commissioner (Central) ki niyukti (appointment) kaun karta hai?",
+        "options": [
+          { "id": "A", "text": "Prime Minister" },
+          { "id": "B", "text": "Chief Justice of India" },
+          { "id": "C", "text": "President of India" },
+          { "id": "D", "text": "Lok Sabha Speaker" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Chief Information Commissioner aur Information Commissioners (Central) ki appointment President of India karte hain, PM, Leader of Opposition aur ek Cabinet Minister ki committee ki recommendation par."
+      },
+      "navigation": { "next": "card_16_quiz3_cic_composition", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_quiz3_cic_composition",
+      "card_slug": "card_16_quiz3_cic_composition",
+      "type": "quiz",
+      "concept_id": "cic_composition",
+      "level": 2,
+      "progress": { "current": 16, "total": 96 },
+      "quiz_payload": {
+        "question": "Q3/3: CIC appointment committee mein kaun shaamil hote hain?",
+        "options": [
+          { "id": "A", "text": "PM (Chair), Lok Sabha Speaker, Rajya Sabha Chairman" },
+          { "id": "B", "text": "PM (Chair), Leader of Opposition in Lok Sabha, ek Union Cabinet Minister (PM nominee)" },
+          { "id": "C", "text": "President, PM, Chief Justice of India" },
+          { "id": "D", "text": "Home Minister, Finance Minister, Law Minister" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CIC appointment committee mein: (1) PM - Chair, (2) Leader of Opposition in Lok Sabha ya sabse badi opposition party ka leader, (3) ek Union Cabinet Minister jise PM nominate kare. Ye teen milkar President ko recommend karte hain."
+      },
+      "navigation": { "next": "card_17_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_17_milestone2",
+      "card_slug": "card_17_milestone2",
+      "type": "milestone",
+      "concept_id": "cic_composition",
+      "level": 2,
+      "progress": { "current": 17, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "CIC - Composition & Appointment",
+        "xp_earned": 55,
+        "milestone_progress": "Module 2/9 Clear",
+        "motivational_quote": "Statutory vs Constitutional trap ab kabhiConfuse nahi karega! Ab tenure aur salary dekhte hain!"
+      },
+      "navigation": { "next": "card_18_cic_tenure_original", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_18_cic_tenure_original",
+      "card_slug": "card_18_cic_tenure_original",
+      "type": "chat",
+      "concept_id": "cic_tenure_salary",
+      "level": 3,
+      "progress": { "current": 18, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab aata hai tenure (kaaryakaal) wala topic - aur yahin hai 2019 ka biggest controversy! Original RTI Act 2005 mein Chief Information Commissioner ka tenure [[Fixed Term|Nirdharit samay seema]] 5 saal ya 65 saal ki age, jo bhi pehle ho, tha. Aur hata'ne ka tarika Supreme Court judge jaisa tha." },
+        { "speaker": "raju", "text": "2019 mein kya badla sir? Aap controversy bol rahe the!" },
+        { "speaker": "aman", "text": "⭐ RTI Amendment Act 2019 - sabse important change! Pehle CIC ka tenure aur salary fix thi aur Supreme Court Judge ke barabar thi. 2019 Amendment ne kehd diya ki ab tenure aur salary CENTRAL GOVERNMENT (yaani Cabinet) decide karegi. Critics ne kaha ye CIC ki independence khatre mein daalta hai." },
+        { "speaker": "raju", "text": "Hain?? Matlab ab jis sarkar se information maangni hai, wahi commission ke members ki salary aur tenure decide karegi? Ye toh conflict of interest hua na sir?" }
+      ],
+      "navigation": { "next": "card_19_amendment_2019_detail", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_amendment_2019_detail",
+      "card_slug": "card_19_amendment_2019_detail",
+      "type": "chat",
+      "concept_id": "cic_tenure_salary",
+      "level": 3,
+      "progress": { "current": 19, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi observation Raju! RTI Amendment Act 2019 ki main points: (1) Ab CIC aur Information Commissioners ka tenure Central Government tay karegi (pehle 5 years fix tha). (2) Salary bhi Central Govt tay karegi (pehle SC Judge ke barabar thi). (3) State ICs ke liye bhi State Governments decide karengi." },
+        { "speaker": "raju", "text": "Toh ab practically 5 saal ki guarantee nahi rahi? Sarkar jab chahe hata sakti hai?" },
+        { "speaker": "aman", "text": "Technically tenure tay ho sakta hai alag se, par Supreme Court judge jaisi independent hata'ne ki process ab nahi rahi. Critics ne kaha ye RTI ki spirit ko kamzor karta hai. Government ne kaha CIC ke liye alag structure zaroori hai. Ye debate UPSC/BPSC essay aur polity dono mein aata hai." },
+        { "speaker": "raju", "text": "Samajh aaya sir! Amendment 2019 se CIC ki independence pe sawaal uthta hai - ye exam mein critical analysis mein poochha jaata hoga." }
+      ],
+      "navigation": { "next": "card_20_cic_removal", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_cic_removal",
+      "card_slug": "card_20_cic_removal",
+      "type": "chat",
+      "concept_id": "cic_tenure_salary",
+      "level": 3,
+      "progress": { "current": 20, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab hatane ka process samajhte hain. Chief Information Commissioner ko President hata sakte hain, lekin sirf Supreme Court ke inquiry ke baad jisme [[Misbehaviour|Badtameezi ya galat kaam karna jo pad ki maryada ke khilaf ho]] ya [[Incapacity|Kisi bimari ya disability ke karan apna kaam theek se na kar paana]] sabit ho jaaye." },
+        { "speaker": "raju", "text": "Matlab President seedha nahi hata sakta? Court se poochna padega?" },
+        { "speaker": "aman", "text": "Haan! Aur President khud bhi IN situations mein hata sakta hai: (1) Agar vo divaliya (bankrupt/insolvent) ho jaaye, (2) Agar vo criminal offence mein convicted ho, (3) Agar vo apne office ke bahar koi paid employment karne lage, (4) Agar President ki nazar mein vo mental ya physical roop se incapacitated ho jaaye." },
+        { "speaker": "raju", "text": "Ye conditions toh UPSC, SPSC jaisi hi hain! Sab institutions mein similar safeguards hain." }
+      ],
+      "navigation": { "next": "card_21_cic_restriction_post_retirement", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_cic_restriction_post_retirement",
+      "card_slug": "card_21_cic_restriction_post_retirement",
+      "type": "chat",
+      "concept_id": "cic_tenure_salary",
+      "level": 3,
+      "progress": { "current": 21, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Ek aur BPSC favorite - post-retirement restriction! Chief Information Commissioner pad chhod ne ke baad KISI BHAI Central ya State Government ke under KISI BHI OFFICE KE LIYE [[Eligible|Yogya - kisi kaam ke liye qualify karna]] nahi hai - iska matlab further government appointment se barred hai, independence maintain karne ke liye." },
+        { "speaker": "raju", "text": "Toh retire hone ke baad government job nahi le sakta? Par koi private job le sakta hai?" },
+        { "speaker": "aman", "text": "RTI Act directly private employment ko restrict nahi karta. Par clearly government office ke liye ineligible hain. Ye UPSC Chairman se alag hai jahan private practice pe bhi restriction hoti hai. Dono compare karna mat bhoolna exam mein!" },
+        { "speaker": "raju", "text": "Important difference sir! CIC retired = government job ban, private allowed. UPSC Chair retired = both ban. Ye trap main pakad lunga!" }
+      ],
+      "navigation": { "next": "card_22_quiz1_tenure_salary", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_22_quiz1_tenure_salary",
+      "card_slug": "card_22_quiz1_tenure_salary",
+      "type": "quiz",
+      "concept_id": "cic_tenure_salary",
+      "level": 3,
+      "progress": { "current": 22, "total": 96 },
+      "quiz_payload": {
+        "question": "Q1/3: RTI Amendment Act 2019 ne CIC ke baare mein kya badla?",
+        "options": [
+          { "id": "A", "text": "CIC ki seats 10 se badhaakar 15 kar di" },
+          { "id": "B", "text": "CIC ka tenure aur salary ab Central Government decide karegi, pehle 5 years fix tha" },
+          { "id": "C", "text": "CIC ko Constitutional status de diya" },
+          { "id": "D", "text": "CIC ke appointment mein President ko hata diya" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RTI Amendment Act 2019 ne CIC aur Information Commissioners ke tenure aur salary ko Central Government ke discretion par chhod diya. Pehle tenure 5 years fix tha aur salary SC Judge ke barabar thi. Ye amendment critics ke anusaar CIC ki independence ko kamzor karta hai."
+      },
+      "navigation": { "next": "card_23_quiz2_tenure_salary", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_quiz2_tenure_salary",
+      "card_slug": "card_23_quiz2_tenure_salary",
+      "type": "quiz",
+      "concept_id": "cic_tenure_salary",
+      "level": 3,
+      "progress": { "current": 23, "total": 96 },
+      "quiz_payload": {
+        "question": "Q2/3: Consider the statements:\n1. Chief Information Commissioner ko President Supreme Court ke inquiry ke baad hata sakta hai.\n2. CIC retired hone ke baad Central ya State Government ke kisi bhi office ke liye eligible nahi hota.\nKaunsa/kaunse sahi hain?",
+        "options": [
+          { "id": "A", "text": "Sirf 1" },
+          { "id": "B", "text": "Sirf 2" },
+          { "id": "C", "text": "Dono 1 aur 2" },
+          { "id": "D", "text": "Na 1 na 2" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono statements sahi hain. CIC ko Supreme Court enquiry ke baad hi hata ya ja sakta hai misbehaviour/incapacity par. Aur retirement ke baad central ya state government ka koi bhi office nahi le sakta - ye independence safeguard hai."
+      },
+      "navigation": { "next": "card_24_quiz3_tenure_salary", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_24_quiz3_tenure_salary",
+      "card_slug": "card_24_quiz3_tenure_salary",
+      "type": "quiz",
+      "concept_id": "cic_tenure_salary",
+      "level": 3,
+      "progress": { "current": 24, "total": 96 },
+      "quiz_payload": {
+        "question": "Q3/3: President CIC ko seedha kis situation mein Supreme Court inquiry ke bina bhi hata sakta hai?",
+        "options": [
+          { "id": "A", "text": "Jab PM recommend kare" },
+          { "id": "B", "text": "Jab vo insolvent (divaliya) ho jaaye ya criminal offence mein convict ho" },
+          { "id": "C", "text": "Jab opposition demand kare" },
+          { "id": "D", "text": "Jab RTI cases pending ho jaayein" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "President CIC ko bina Supreme Court inquiry ke hata sakta hai agar: insolvent ho jaaye, criminal offence mein convict ho, paid employment le le, ya mentally/physically incapacitated ho. Misbehaviour aur incapacity ke specific cases mein SC inquiry mandatory hai."
+      },
+      "navigation": { "next": "card_25_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_25_milestone3",
+      "card_slug": "card_25_milestone3",
+      "type": "milestone",
+      "concept_id": "cic_tenure_salary",
+      "level": 3,
+      "progress": { "current": 25, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "CIC - Tenure, Salary & Removal (2019 Amendment included)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/9 Clear",
+        "motivational_quote": "2019 Amendment trap ab kabhiMiss nahi hoga! Ab CIC ki powers aur functions dekhte hain!"
+      },
+      "navigation": { "next": "card_26_cic_powers", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_26_cic_powers",
+      "card_slug": "card_26_cic_powers",
+      "type": "chat",
+      "concept_id": "cic_powers_functions",
+      "level": 4,
+      "progress": { "current": 26, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab CIC ki powers samajhte hain - ye bahut extensive hain! CIC complaints aur second appeals sun sakta hai. Iske paas Civil Court jaisi powers hain - matlab ye kisi bhi document ko mangwa sakta hai, kisi bhi jagah inspection kar sakta hai, affidavits par evidence le sakta hai, aur kisi bhi public record ko demand kar sakta hai." },
+        { "speaker": "raju", "text": "Affidavits? Ye kya hoti hai sir?" },
+        { "speaker": "aman", "text": "[[Affidavit|Ek written statement jo court ya authority ke saamne sworn/shakpath lekar diya jaata hai - jhooth bola toh saza hogi]] - ek kaanooni kasam wala statement. Matlab CIC ke saamne koi jhooth bole toh woh contempt mein aa sakta hai. CIC kisi bhi [[Classified Document|Gupt dastaavez]] ko bhi dekh sakta hai - sirf security agencies ko kuch exemptions hain." },
+        { "speaker": "raju", "text": "Wow, matlab classified documents bhi CIC mang sakta hai! Par kya vo sab public kar dega?" }
+      ],
+      "navigation": { "next": "card_27_cic_penalty_power", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_27_cic_penalty_power",
+      "card_slug": "card_27_cic_penalty_power",
+      "type": "chat",
+      "concept_id": "cic_powers_functions",
+      "level": 4,
+      "progress": { "current": 27, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Nahi! CIC document check karta hai par hamesha public nahi karta. Agar document genuinely sensitive hai (national security related), toh CIC khud decide karta hai ki information deny karna sahi tha ya nahi. Ab penalty - ye sabse powerful tool hai: Agar PIO ne bina reasonable cause ke information nahi di, toh Rs. 250 per day penalty, MAXIMUM Rs. 25,000 tak!" },
+        { "speaker": "raju", "text": "PIO matlab woh officer jo information dene ka zimmedar hota hai? Uspe directly penalty?" },
+        { "speaker": "aman", "text": "Haan! Rs. 250 per day se shuru, jab tak information na de ya refusal ka reason sahi na ho. Maximum Rs. 25,000. Yahi nahi, CIC [[Recommend|Sujhaav dena]] bhi kar sakta hai ki us PIO ke against disciplinary action liya jaaye aur adverse entry uske service record mein jaaye." },
+        { "speaker": "raju", "text": "250 roz! Ek mahine mein 7,500 aur maximum 25,000 - ye toh bada punishment hai. Ab PIO aasani se information dene se inkar nahi karega!" }
+      ],
+      "navigation": { "next": "card_28_suo_motu", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_28_suo_motu",
+      "card_slug": "card_28_suo_motu",
+      "type": "chat",
+      "concept_id": "cic_powers_functions",
+      "level": 4,
+      "progress": { "current": 28, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Ek aur super-important power - [[Suo Motu|Apni khud ki marzi se, bina kisi application ke - khud hi action lena]] disclosure. CIC khud - bina kisi ki application ke - kisi public authority ko certain information proactively public karne ka order de sakta hai. Ye power RTI ke spirit ko strong banata hai." },
+        { "speaker": "raju", "text": "Matlab koi application nahi aayi, phir bhi CIC apne aap action le sakta hai?" },
+        { "speaker": "aman", "text": "Bilkul! Agar CIC ko lagta hai kisi sensitive matter mein public interest mein information proactively share honi chahiye, toh wo suo motu order de sakta hai. CIC ki decisions final hoti hain, sirf High Court ya Supreme Court mein challenge ho sakti hain - koi other body nahi." },
+        { "speaker": "raju", "text": "Final authority hai CIC RTI matters mein! Sirf court hi review kar sakta hai - jaise ki aur bhi constitutional bodies ka judicial review hota hai." }
+      ],
+      "navigation": { "next": "card_29_quiz1_powers", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_29_quiz1_powers",
+      "card_slug": "card_29_quiz1_powers",
+      "type": "quiz",
+      "concept_id": "cic_powers_functions",
+      "level": 4,
+      "progress": { "current": 29, "total": 96 },
+      "quiz_payload": {
+        "question": "Q1/3: CIC PIO par maximum kitni penalty laga sakta hai information na dene par?",
+        "options": [
+          { "id": "A", "text": "Rs. 10,000" },
+          { "id": "B", "text": "Rs. 50,000" },
+          { "id": "C", "text": "Rs. 25,000" },
+          { "id": "D", "text": "Rs. 1,00,000" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "RTI Act ke tehat CIC PIO (Public Information Officer) par Rs. 250 per day ki penalty laga sakta hai, maximum Rs. 25,000 tak, agar information bina reasonable cause ke nahi di gayi. Ye penalty PIO ki apni salary se kategi."
+      },
+      "navigation": { "next": "card_30_quiz2_powers", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_30_quiz2_powers",
+      "card_slug": "card_30_quiz2_powers",
+      "type": "quiz",
+      "concept_id": "cic_powers_functions",
+      "level": 4,
+      "progress": { "current": 30, "total": 96 },
+      "quiz_payload": {
+        "question": "Q2/3: 'Suo Motu' disclosure ka kya matlab hai CIC ke context mein?",
+        "options": [
+          { "id": "A", "text": "Sirf applicant ki request par information dena" },
+          { "id": "B", "text": "CIC ka khud apni marzi se, bina application ke, public authority ko proactively information disclose karne ka order dena" },
+          { "id": "C", "text": "PM Office ki taraf se order" },
+          { "id": "D", "text": "Court ke order par information dena" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Suo Motu (Latin term - 'on its own motion') disclosure matlab CIC bina kisi application ke apni initiative par public authority ko certain information proactively share karne ka order de sakta hai. Ye RTI Act ki proactive transparency feature hai."
+      },
+      "navigation": { "next": "card_31_quiz3_powers", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_31_quiz3_powers",
+      "card_slug": "card_31_quiz3_powers",
+      "type": "quiz",
+      "concept_id": "cic_powers_functions",
+      "level": 4,
+      "progress": { "current": 31, "total": 96 },
+      "quiz_payload": {
+        "question": "Q3/3: CIC ki decisions ko kahan challenge kiya ja sakta hai?",
+        "options": [
+          { "id": "A", "text": "Cabinet Committee ke paas" },
+          { "id": "B", "text": "Sirf High Court ya Supreme Court mein" },
+          { "id": "C", "text": "Parliament mein" },
+          { "id": "D", "text": "President ke paas direct petition" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CIC RTI matters mein final appellate authority hai. Uski decisions sirf High Court ya Supreme Court mein judicial review ke tehat challenge ho sakti hain. Koi other administrative body usse override nahi kar sakti."
+      },
+      "navigation": { "next": "card_32_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_32_milestone4",
+      "card_slug": "card_32_milestone4",
+      "type": "milestone",
+      "concept_id": "cic_powers_functions",
+      "level": 4,
+      "progress": { "current": 32, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💪",
+        "completed_topic": "CIC - Powers, Functions & Penalties",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/9 Clear",
+        "motivational_quote": "Rs. 25,000 penalty aur suo motu power - ab main CIC expert hoon! Ab State Information Commission dekhte hain!"
+      },
+      "navigation": { "next": "card_33_sic_what_is", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_33_sic_what_is",
+      "card_slug": "card_33_sic_what_is",
+      "type": "chat",
+      "concept_id": "sic_structure",
+      "level": 5,
+      "progress": { "current": 33, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab State Information Commission (SIC) ki baat karte hain. Ye bilkul CIC ka [[Counterpart|Hamroop - dusre sthar par kaam karne wali equivalent body]] hai par State level par. Har state ka apna SIC hoga. SIC ki jurisdiction state government aur state funded/controlled public authorities par hogi." },
+        { "speaker": "raju", "text": "Toh Bihar mein bhi ek SIC hoga? Aur iski appointment kaun karta hai?" },
+        { "speaker": "aman", "text": "Bilkul! Har state mein State Chief Information Commissioner aur State Information Commissioners hote hain. Inhe GOVERNOR appoint karta hai - CIC mein President appoint karta tha, SIC mein Governor - ye parallel structure yaad rakhna!" },
+        { "speaker": "raju", "text": "Aur appointment committee kaun si hogi state mein?" }
+      ],
+      "navigation": { "next": "card_34_sic_appointment_committee", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_34_sic_appointment_committee",
+      "card_slug": "card_34_sic_appointment_committee",
+      "type": "chat",
+      "concept_id": "sic_structure",
+      "level": 5,
+      "progress": { "current": 34, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "SIC appointment committee mein hote hain: (1) Chief Minister (jo committee ka Chair hota hai, jaise PM central mein tha), (2) Vidhan Sabha mein Leader of Opposition (ya sabse badi opposition party ka leader), (3) ek State Cabinet Minister jise CM nominate kare. Ye teeno Governor ko recommend karte hain." },
+        { "speaker": "raju", "text": "Exactly parallel hai! PM → CM, President → Governor, Union Cabinet → State Cabinet. Har cheez state level pe copy hai!" },
+        { "speaker": "aman", "text": "Exactly sahi observation! Ab ek important point - State Information Commissioner ki maximum sankhya kya hogi? RTI Act kehta hai ek se zyada ho sakte hain par koi fixed maximum number nahi di gayi state ke liye. State ki zaroorat ke hisaab se decide hoti hai." },
+        { "speaker": "raju", "text": "Matlab central mein maximum 10 hai, par state mein koi fixed maximum nahi? Ye bhi BPSC mein aayega sir!" }
+      ],
+      "navigation": { "next": "card_35_sic_tenure_salary", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_35_sic_tenure_salary",
+      "card_slug": "card_35_sic_tenure_salary",
+      "type": "chat",
+      "concept_id": "sic_structure",
+      "level": 5,
+      "progress": { "current": 35, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ SIC Tenure & Salary - 2019 Amendment ke baad: Original mein State Chief IC ka tenure 5 years ya 65 age tha, aur salary High Court Judge ke barabar thi. Post-2019 amendment, ab State Government tay karegi tenure aur salary. Note karo: Central IC = SC Judge salary (pehle), State IC = HC Judge salary (pehle)." },
+        { "speaker": "raju", "text": "Achha! Central ke liye SC Judge aur State ke liye HC Judge - ye salary comparison bhi different tha?" },
+        { "speaker": "aman", "text": "Bilkul! Ye ek aur important differentiation point hai jo exam mein aata hai. Ab 2019 ke baad dono ke liye respective governments decide karengi. Aur State Chief IC ka removal - Governor karta hai Supreme Court inquiry ke baad, same process." },
+        { "speaker": "raju", "text": "Removal mein SC inquiry mandatory hai dono ke liye - Central aur State ke liye? Aur Governor SC se kyun, HC se kyun nahi?" }
+      ],
+      "navigation": { "next": "card_36_sic_removal_detail", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_36_sic_removal_detail",
+      "card_slug": "card_36_sic_removal_detail",
+      "type": "chat",
+      "concept_id": "sic_structure",
+      "level": 5,
+      "progress": { "current": 36, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut sharp question! RTI Act mein clearly likha hai ki State Chief Information Commissioner ko hataane ke liye bhi Supreme Court hi inquiry karega, High Court nahi. Ye ek interesting provision hai - state level official ke liye bhi nation ki highest court inquiry karegi. Ye impartiality ensure karta hai." },
+        { "speaker": "raju", "text": "Wow! Matlab State ka SIC bhi Supreme Court ke scrutiny mein aata hai, not just HC. Ye strong protection hai." },
+        { "speaker": "aman", "text": "Bilkul! Post-retirement ban bhi same hai SIC ke liye - retired State Chief IC ya State IC kisi bhi Central ya State Government office ke liye eligible nahi hoga. Aur SIC ki decisions ko High Court mein challenge kiya ja sakta hai - CIC ke liye High Court ya Supreme Court dono mein." },
+        { "speaker": "raju", "text": "CIC = HC ya SC mein challenge, SIC = HC mein challenge. Ye bhi difference hai! Bahut kuch note karna hai sir." }
+      ],
+      "navigation": { "next": "card_37_quiz1_sic", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_37_quiz1_sic",
+      "card_slug": "card_37_quiz1_sic",
+      "type": "quiz",
+      "concept_id": "sic_structure",
+      "level": 5,
+      "progress": { "current": 37, "total": 96 },
+      "quiz_payload": {
+        "question": "Q1/3: State Information Commission mein appointment kaun karta hai?",
+        "options": [
+          { "id": "A", "text": "President of India" },
+          { "id": "B", "text": "Governor of the State" },
+          { "id": "C", "text": "Chief Minister directly" },
+          { "id": "D", "text": "High Court Chief Justice" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "SIC (State Information Commission) mein State Chief IC aur State ICs ki appointment GOVERNOR karta hai, CM, Leader of Opposition aur ek State Cabinet Minister ki committee ki recommendation par. CIC mein President karta hai - ye parallel structure hai."
+      },
+      "navigation": { "next": "card_38_quiz2_sic", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_38_quiz2_sic",
+      "card_slug": "card_38_quiz2_sic",
+      "type": "quiz",
+      "concept_id": "sic_structure",
+      "level": 5,
+      "progress": { "current": 38, "total": 96 },
+      "quiz_payload": {
+        "question": "Q2/3: 2019 Amendment se pehle, State Chief Information Commissioner ki salary kiske barabar thi?",
+        "options": [
+          { "id": "A", "text": "Supreme Court Judge ke barabar" },
+          { "id": "B", "text": "High Court Judge ke barabar" },
+          { "id": "C", "text": "IAS Officer ke barabar" },
+          { "id": "D", "text": "Cabinet Secretary ke barabar" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "2019 se pehle: State Chief IC = High Court Judge ke barabar salary, Central Chief IC = Supreme Court Judge ke barabar salary. 2019 ke baad dono ke liye respective governments decide karengi. Ye comparison BPSC mein baar baar aata hai."
+      },
+      "navigation": { "next": "card_39_quiz3_sic", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_39_quiz3_sic",
+      "card_slug": "card_39_quiz3_sic",
+      "type": "quiz",
+      "concept_id": "sic_structure",
+      "level": 5,
+      "progress": { "current": 39, "total": 96 },
+      "quiz_payload": {
+        "question": "Q3/3: Consider the statements:\n1. SIC ki decisions ko sirf High Court mein challenge kiya ja sakta hai.\n2. State Chief IC ko hatane ke liye High Court inquiry mandatory hai.\nKaunsa/kaunse sahi hain?",
+        "options": [
+          { "id": "A", "text": "Sirf 1" },
+          { "id": "B", "text": "Sirf 2" },
+          { "id": "C", "text": "Dono" },
+          { "id": "D", "text": "Koi nahi" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 1 sahi hai - SIC ki decisions High Court mein challenge ho sakti hain (CIC ki HC ya SC dono mein). Statement 2 galat hai - State Chief IC ki removal ke liye bhi SUPREME COURT inquiry mandatory hai, High Court nahi. Ye BPSC ka trap statement hai."
+      },
+      "navigation": { "next": "card_40_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_40_milestone5",
+      "card_slug": "card_40_milestone5",
+      "type": "milestone",
+      "concept_id": "sic_structure",
+      "level": 5,
+      "progress": { "current": 40, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏗️",
+        "completed_topic": "State Information Commission (SIC) - Complete Structure",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/9 Clear",
+        "motivational_quote": "CIC vs SIC comparison ab dimaag mein pakka! Ab Public Authority aur PIO samajhte hain!"
+      },
+      "navigation": { "next": "card_41_public_authority", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_41_public_authority",
+      "card_slug": "card_41_public_authority",
+      "type": "chat",
+      "concept_id": "public_authority_pio",
+      "level": 6,
+      "progress": { "current": 41, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab samajhte hain RTI ka use kaise hota hai practically. Pehle jaanno - [[Public Authority|Sarkari ya sarkar se funded koi bhi nikay ya institution jisse RTI ke under information maangi ja sakti hai]] - kya hai. RTI Act ke anusaar Public Authority wo hai jo Constitution se, Parliament/State Legislature ke Act se, ya government ke notification se bani ho." },
+        { "speaker": "raju", "text": "Toh sab government offices public authority hain? Private school-college bhi?" },
+        { "speaker": "aman", "text": "Private institutions jinhe sarkar substantially fund karti hai ya control karti hai, wo bhi public authority mein aa sakte hain. Par purely private, without government funding - wo RTI ke bahar hain. BCCI controversy isi par thi - court ne kaha BCCI RTI ke under nahi aata kyunki directly government funded nahi hai." },
+        { "speaker": "raju", "text": "Achha! BCCI ka naam suna tha RTI controversy mein. Ab context mil gaya sir!" }
+      ],
+      "navigation": { "next": "card_42_pio_apio", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_42_pio_apio",
+      "card_slug": "card_42_pio_apio",
+      "type": "chat",
+      "concept_id": "public_authority_pio",
+      "level": 6,
+      "progress": { "current": 42, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Har Public Authority mein 2 types ke officers hote hain RTI ke liye: (1) [[CPIO/SPIO|Central/State Public Information Officer - wo designated officer jo RTI application receive karta hai aur 30 din mein information dene ka zimmedar hota hai]] - yahi 'PIO' hai jis par penalty lagti hai. (2) [[ACPIO|Assistant/First Appellate Officer - jab applicant PIO ke jawab se satisfy nahi ho, toh pehle yahan appeal jaati hai]] - ye pehli appeal authority hai." },
+        { "speaker": "raju", "text": "Toh ek RTI ki journey kya hoti hai sir? Application se lekar CIC tak?" },
+        { "speaker": "aman", "text": "Perfect! Ye appeal process suno dhyaan se - ye har exam mein aata hai. Step 1: RTI application PIO ko bhejo. Step 2: 30 din mein jawab nahi mila ya jawab se satisfied nahi - First Appeal APIO/First Appellate Officer ko (30 din ke andar appeal karo). Step 3: Phir bhi satisfied nahi - Second Appeal CIC/SIC ko." },
+        { "speaker": "raju", "text": "3 steps! PIO → First Appellate → CIC. Aur time limits kya hain in sab ke liye?" }
+      ],
+      "navigation": { "next": "card_43_appeal_timeline", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_43_appeal_timeline",
+      "card_slug": "card_43_appeal_timeline",
+      "type": "chat",
+      "concept_id": "public_authority_pio",
+      "level": 6,
+      "progress": { "current": 43, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Timeline table yaad karo - ye BPSC, Railway dono mein exact numbers poochte hain: PIO ko jawab dena = 30 din (normal). Life & Liberty se juda case = 48 hours! Third party information = 40 din. First Appeal: 30 din ke andar karo, First Appellate Officer 30 din mein decide karega." },
+        { "speaker": "raju", "text": "48 hours! Life aur liberty cases mein toh bahut fast bataana padta hai! Aur Second Appeal CIC ko kab karte hain?" },
+        { "speaker": "aman", "text": "Second Appeal First Appellate Officer ke decision ke 90 din ke andar CIC ya SIC ko karo. Aur agar ek baar RTI application de di aur koi jawab hi nahi aaya toh woh bhi deemed refusal maana jaayega aur seedha First Appeal mein ja sakte ho." },
+        { "speaker": "raju", "text": "Deemed refusal matlab answer nahi diya toh bhi mana hai ki nahi maana? Smart provision hai ye!" }
+      ],
+      "navigation": { "next": "card_44_quiz1_pio", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_44_quiz1_pio",
+      "card_slug": "card_44_quiz1_pio",
+      "type": "quiz",
+      "concept_id": "public_authority_pio",
+      "level": 6,
+      "progress": { "current": 44, "total": 96 },
+      "quiz_payload": {
+        "question": "Q1/3: Life and Liberty se related RTI application par PIO kitne time mein information dega?",
+        "options": [
+          { "id": "A", "text": "30 din" },
+          { "id": "B", "text": "15 din" },
+          { "id": "C", "text": "48 hours" },
+          { "id": "D", "text": "7 din" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "RTI Act ke tehat normally 30 din ka time hai, lekin agar information kisi vyakti ki jaan (life) ya azaadi (liberty) se related ho, toh PIO ko 48 hours (2 din) ke andar information deni hogi. Ye BPSC aur Railway dono mein direct poochha jaata hai."
+      },
+      "navigation": { "next": "card_45_quiz2_pio", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_45_quiz2_pio",
+      "card_slug": "card_45_quiz2_pio",
+      "type": "quiz",
+      "concept_id": "public_authority_pio",
+      "level": 6,
+      "progress": { "current": 45, "total": 96 },
+      "quiz_payload": {
+        "question": "Q2/3: RTI ki Second Appeal CIC/SIC ko kab tak karni hoti hai?",
+        "options": [
+          { "id": "A", "text": "First Appellate decision ke 30 din ke andar" },
+          { "id": "B", "text": "First Appellate decision ke 90 din ke andar" },
+          { "id": "C", "text": "Kisi bhi time" },
+          { "id": "D", "text": "6 mahine ke andar" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Second Appeal ko First Appellate Officer ke decision ke 90 din ke andar CIC (Central) ya SIC (State) ko file karna hota hai. Agar satisfactory reasons ho toh CIC is limit ke baad bhi appeal sun sakta hai."
+      },
+      "navigation": { "next": "card_46_quiz3_pio", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_46_quiz3_pio",
+      "card_slug": "card_46_quiz3_pio",
+      "type": "quiz",
+      "concept_id": "public_authority_pio",
+      "level": 6,
+      "progress": { "current": 46, "total": 96 },
+      "quiz_payload": {
+        "question": "Q3/3: RTI Appeal ka sahi sequence kya hai?",
+        "options": [
+          { "id": "A", "text": "PIO → CIC/SIC → High Court" },
+          { "id": "B", "text": "PIO → First Appellate Officer → CIC/SIC → High Court/SC" },
+          { "id": "C", "text": "First Appellate → PIO → CIC" },
+          { "id": "D", "text": "Directly CIC → High Court" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RTI appeal ka sahi 3-tier sequence: (1) PIO (30 din), (2) First Appellate Officer (30 din mein appeal, 30 din mein decision), (3) CIC/SIC (90 din mein Second Appeal), aur agar CIC ka decision galat lage toh High Court ya Supreme Court mein judicial review."
+      },
+      "navigation": { "next": "card_47_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_47_milestone6",
+      "card_slug": "card_47_milestone6",
+      "type": "milestone",
+      "concept_id": "public_authority_pio",
+      "level": 6,
+      "progress": { "current": 47, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📬",
+        "completed_topic": "Public Authority, PIO & Appeal Process",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/9 Clear",
+        "motivational_quote": "48 hours wala life-liberty exception ab kabhi miss nahi hoga! Ab exemptions samajhte hain!"
+      },
+      "navigation": { "next": "card_48_exemptions_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_48_exemptions_intro",
+      "card_slug": "card_48_exemptions_intro",
+      "type": "chat",
+      "concept_id": "exemptions_rti",
+      "level": 7,
+      "progress": { "current": 48, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab sabse tricky topic - RTI ke exemptions! RTI ke Act mein Section 8 mein clearly likha hai ki kaunsi information nahi di jaayegi. Suno - national security se juda, iska matlab hai information jo India ki sovereignty, security, strategic, scientific ya economic interests ko harm kare, woh deny ki ja sakti hai." },
+        { "speaker": "raju", "text": "Toh army ke secrets RTI mein nahi aayenge?" },
+        { "speaker": "aman", "text": "Haan! Aur kya kya exempt hai - (1) Foreign relations ko harm kare, (2) Crime ko [[Incite|Provoking - kisi ko galat kaam karne ke liye uksaana]] kare, (3) Parliament/Legislature ki [[Privilege|Vishesh adhikar]] tod'e, (4) Cabinet papers jab tak Cabinet decision final na ho - ye sab exempt hain. Par 20 saal baad ye bhi dene honge (historical interest mein)." },
+        { "speaker": "raju", "text": "20 saal baad sab kuch public! Matlab temporary exemption hai, permanent nahi!" }
+      ],
+      "navigation": { "next": "card_49_personal_info_exemption", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_49_personal_info_exemption",
+      "card_slug": "card_49_personal_info_exemption",
+      "type": "chat",
+      "concept_id": "exemptions_rti",
+      "level": 7,
+      "progress": { "current": 49, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Kuch aur exemptions: (5) Kisi bhi officer ki trust mein di gayi information (like lawyer-client), (6) [[Fiduciary Relationship|Vishwas-aadharit sambandh jisme ek party doosre par poori tarah bharosa kare]], (7) Ye information jinhe foreign government ne [[Confidential|Guptagamya - secret rakhi jaane wali]] basis par di ho, (8) Trade secrets ya third party ki commercial information." },
+        { "speaker": "raju", "text": "Aur personal information? Kisi ki salary ya private documents bhi maang sakte hain?" },
+        { "speaker": "aman", "text": "⭐ Ye bahut important hai - Section 8(1)(j): Personal information jiska public interest se koi connection na ho aur jiska disclosure unwarranted invasion of privacy karega, woh exempt hai. Par public figures ki salary aur assets public interest mein maangi ja sakti hai. Ye thin line hai exam mein!" },
+        { "speaker": "raju", "text": "Matlab common aadmi ki privacy protected hai, par public officer ki salary aur assets RTI mein maangi ja sakti hai? Ye distinction important hai!" }
+      ],
+      "navigation": { "next": "card_50_second_schedule", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_50_second_schedule",
+      "card_slug": "card_50_second_schedule",
+      "type": "chat",
+      "concept_id": "exemptions_rti",
+      "level": 7,
+      "progress": { "current": 50, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC Favorite - Second Schedule! RTI Act ki Second Schedule mein kuch intelligence aur security agencies ko FULLY exempt kiya gaya hai RTI se, sivaaye corruption aur human rights violation ke maamlon mein. Ye agencies hain: IB, RAW (R&AW), DRI, CBI (kuch hisson mein), Income Tax Special Investigation, etc." },
+        { "speaker": "raju", "text": "RAW RTI ke bahar hai? Par agar koi RTI maange unke baare mein?" },
+        { "speaker": "aman", "text": "Automatically deny. Par ek exception yaad rakho - agar koi ye agencies corruption kar rahi hain ya human rights violate kar rahi hain, toh CIC us specific information ko release karwane ka order de sakta hai. Second Schedule ki agencies human rights aur corruption cases mein RTI ke andar aati hain." },
+        { "speaker": "raju", "text": "Brilliant! Inhe poori protection nahi - corruption aur human rights cases mein phir bhi RTI apply hoti hai. Security agencies ke liye partial exemption hai." }
+      ],
+      "navigation": { "next": "card_51_quiz1_exemptions", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_51_quiz1_exemptions",
+      "card_slug": "card_51_quiz1_exemptions",
+      "type": "quiz",
+      "concept_id": "exemptions_rti",
+      "level": 7,
+      "progress": { "current": 51, "total": 96 },
+      "quiz_payload": {
+        "question": "Q1/3: RTI Act ki Second Schedule mein listed agencies (jaise IB, RAW) RTI se exempt hain, lekin kis case mein nahi?",
+        "options": [
+          { "id": "A", "text": "Kisi bhi case mein nahi - poori exemption hai" },
+          { "id": "B", "text": "Corruption aur Human Rights Violation ke cases mein" },
+          { "id": "C", "text": "Sirf court order par" },
+          { "id": "D", "text": "Sirf CBI ki permission par" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RTI Act ki Second Schedule agencies (IB, RAW, DRI etc.) normally RTI se exempt hain. Lekin corruption aur human rights violation ke specific cases mein ye exemption nahi milti - tab bhi CIC/SIC order kar sakta hai information release karne ka."
+      },
+      "navigation": { "next": "card_52_quiz2_exemptions", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_52_quiz2_exemptions",
+      "card_slug": "card_52_quiz2_exemptions",
+      "type": "quiz",
+      "concept_id": "exemptions_rti",
+      "level": 7,
+      "progress": { "current": 52, "total": 96 },
+      "quiz_payload": {
+        "question": "Q2/3: RTI Act ke tehat exempt information bhi release ki ja sakti hai agar?",
+        "options": [
+          { "id": "A", "text": "Public interest in disclosure outweighs harm of disclosure" },
+          { "id": "B", "text": "PM ki permission ho" },
+          { "id": "C", "text": "High Court order ho" },
+          { "id": "D", "text": "Opposition demand kare" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Section 8(2) RTI Act - Even exempt information ko disclose kiya ja sakta hai agar PIO/CIC ko lagta hai ki disclosure se public interest ko hone wala faida, information rokne se hone wale nuksan se zyada hai. Ye 'public interest override' provision hai."
+      },
+      "navigation": { "next": "card_53_quiz3_exemptions", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_53_quiz3_exemptions",
+      "card_slug": "card_53_quiz3_exemptions",
+      "type": "quiz",
+      "concept_id": "exemptions_rti",
+      "level": 7,
+      "progress": { "current": 53, "total": 96 },
+      "quiz_payload": {
+        "question": "Q3/3: Consider the statements:\n1. Cabinet papers jab tak Cabinet decision final na ho, RTI se exempt hain.\n2. Personal information jo public interest se related nahi hai, wo RTI ke tehat share karna zaroori hai.\nKaunsa/kaunse sahi hain?",
+        "options": [
+          { "id": "A", "text": "Sirf 1" },
+          { "id": "B", "text": "Sirf 2" },
+          { "id": "C", "text": "Dono" },
+          { "id": "D", "text": "Koi nahi" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 1 sahi hai - Cabinet papers RTI se exempt hain jab tak decision final na ho (post-decision accessible ho sakte hain). Statement 2 galat hai - Section 8(1)(j) ke tehat personal information jo public interest se related na ho, wo EXEMPT hai - share karna zaroori NAHI hai."
+      },
+      "navigation": { "next": "card_54_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_54_milestone7",
+      "card_slug": "card_54_milestone7",
+      "type": "milestone",
+      "concept_id": "exemptions_rti",
+      "level": 7,
+      "progress": { "current": 54, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🚫",
+        "completed_topic": "RTI Exemptions - Section 8 & Second Schedule",
+        "xp_earned": 65,
+        "milestone_progress": "Module 7/9 Clear",
+        "motivational_quote": "IB aur RAW wala Second Schedule trap ab pakka clear! Ab CIC vs Other Bodies comparison dekhte hain!"
+      },
+      "navigation": { "next": "card_55_cic_vs_others", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_55_cic_vs_others",
+      "card_slug": "card_55_cic_vs_others",
+      "type": "chat",
+      "concept_id": "comparison_analysis",
+      "level": 8,
+      "progress": { "current": 55, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab sab kuch compare karte hain ek hi jagah - CIC vs SIC detailed comparison! CIC = Central level, SIC = State level. Appointment: CIC mein President, SIC mein Governor. Committee: CIC mein PM Chair, SIC mein CM Chair. Tenure pehle: CIC = 5 yr/65 age, SIC = 5 yr/65 age dono same the." },
+        { "speaker": "raju", "text": "Salary difference tha na sir pehle?" },
+        { "speaker": "aman", "text": "Haan! Salary pehle: Chief CIC = SC Judge barabar, Chief SIC = HC Judge barabar. Ab 2019 ke baad dono ke liye respective governments tay karengi. Removal: Dono ke liye Supreme Court inquiry, phir President (CIC) ya Governor (SIC). Challenge: CIC decisions = HC ya SC, SIC decisions = sirf HC." },
+        { "speaker": "raju", "text": "Itna saara comparison! Sir ek table ya quick summary chahiye - ye exam mein fast answer ke liye zaroori hai." }
+      ],
+      "navigation": { "next": "card_56_cic_vs_upsc_comparison", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_56_cic_vs_upsc_comparison",
+      "card_slug": "card_56_cic_vs_upsc_comparison",
+      "type": "chat",
+      "concept_id": "comparison_analysis",
+      "level": 8,
+      "progress": { "current": 56, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Ab CIC vs UPSC comparison - ye BPSC ka bahut zyada favorite trap hai! UPSC = Constitutional Body (Article 315-323), CIC = Statutory Body (RTI Act 2005). UPSC Chairman = President appoint karta hai, CIC = bhi President appoint karta hai. Lekin removal process different hai." },
+        { "speaker": "raju", "text": "Dono mein President appoint karta hai - toh farak kya hai?" },
+        { "speaker": "aman", "text": "Post-retirement bar! UPSC Chairman ke liye - koi bhi further government employment NAHI (very strict). CIC ke liye - government office nahi, lekin ye less strict hai UPSC se compare mein. Aur UPSC = permanent constitutional organ, CIC = Parliament RTI Act khatam kare toh CIC bhi khatam." },
+        { "speaker": "raju", "text": "Constitutional vs Statutory ka real practical difference samajh aaya! Statutory body Parliament agar Act repeal kare toh automatically khatam. Constitutional body sirf Constitutional Amendment se change ho sakti hai." }
+      ],
+      "navigation": { "next": "card_57_proactive_disclosure", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_57_proactive_disclosure",
+      "card_slug": "card_57_proactive_disclosure",
+      "type": "chat",
+      "concept_id": "comparison_analysis",
+      "level": 8,
+      "progress": { "current": 57, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek aur important provision - Section 4 ka [[Proactive Disclosure|Apne aap, bina maange, information publicly share karna]] principle. Har public authority ko apne baare mein basic information already public domain mein rakhni hogi - jaise structure, powers, budget, schemes, etc. Isko proactive disclosure ya suo motu publication kehte hain." },
+        { "speaker": "raju", "text": "Matlab log RTI file kiye bina bhi basic info mil jaani chahiye?" },
+        { "speaker": "aman", "text": "Exactly! Government websites mein ye information already honi chahiye - mission, staff directory, decision-making process, documents, policies, budget. Agar ye already available hai toh RTI file karne ki zaroorat hi nahi. Ye RTI ka burden reduce karta hai aur transparency badhata hai." },
+        { "speaker": "raju", "text": "Brilliant design! Pehle voluntary transparency, phir RTI as backup. Dono milke system ko accountable banate hain." }
+      ],
+      "navigation": { "next": "card_58_quiz1_comparison", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_58_quiz1_comparison",
+      "card_slug": "card_58_quiz1_comparison",
+      "type": "quiz",
+      "concept_id": "comparison_analysis",
+      "level": 8,
+      "progress": { "current": 58, "total": 96 },
+      "quiz_payload": {
+        "question": "Q1/3: CIC aur UPSC mein main structural difference kya hai?",
+        "options": [
+          { "id": "A", "text": "UPSC mein President appoint karta hai, CIC mein PM" },
+          { "id": "B", "text": "UPSC Constitutional Body hai (Article 315), CIC Statutory Body hai (RTI Act 2005)" },
+          { "id": "C", "text": "UPSC ke decisions sirf HC mein challenge ho sakte hain" },
+          { "id": "D", "text": "Dono mein Government nomination wali committee nahi hoti" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sabse important difference: UPSC ek Constitutional Body hai (Article 315-323), jabki CIC ek Statutory Body hai (RTI Act 2005). Iska matlab: UPSC ko hataane ke liye Constitutional Amendment chahiye, CIC ko Parliament RTI Act repeal ya amend karke khatam kar sakti hai."
+      },
+      "navigation": { "next": "card_59_quiz2_comparison", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_59_quiz2_comparison",
+      "card_slug": "card_59_quiz2_comparison",
+      "type": "quiz",
+      "concept_id": "comparison_analysis",
+      "level": 8,
+      "progress": { "current": 59, "total": 96 },
+      "quiz_payload": {
+        "question": "Q2/3: Section 4 ke tehat 'Proactive Disclosure' ka kya matlab hai?",
+        "options": [
+          { "id": "A", "text": "CIC ka apni marzi se order" },
+          { "id": "B", "text": "Public authority ko bina RTI maange hi apni basic information public domain mein rakhni hogi" },
+          { "id": "C", "text": "Sirf court order par information dena" },
+          { "id": "D", "text": "PM Office ki taraf se announcement" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Section 4 ke tehat har public authority ko suo motu (proactively) apni structure, budget, policies, staff information public domain (website) mein rakhni hogi. Isse RTI filings ka burden kam hota hai aur transparency badh'ti hai."
+      },
+      "navigation": { "next": "card_60_quiz3_comparison", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_60_quiz3_comparison",
+      "card_slug": "card_60_quiz3_comparison",
+      "type": "quiz",
+      "concept_id": "comparison_analysis",
+      "level": 8,
+      "progress": { "current": 60, "total": 96 },
+      "quiz_payload": {
+        "question": "Q3/3: CIC ki decisions ko challenge kiya ja sakta hai:",
+        "options": [
+          { "id": "A", "text": "Sirf High Court mein" },
+          { "id": "B", "text": "High Court ya Supreme Court dono mein" },
+          { "id": "C", "text": "Sirf Supreme Court mein" },
+          { "id": "D", "text": "PM Office mein" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CIC ki decisions High Court ya Supreme Court dono mein challenge ki ja sakti hain judicial review ke tehat. SIC ki decisions sirf High Court mein challenge ho sakti hain. Ye CIC vs SIC mein ek important distinction hai."
+      },
+      "navigation": { "next": "card_61_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_61_milestone8",
+      "card_slug": "card_61_milestone8",
+      "type": "milestone",
+      "concept_id": "comparison_analysis",
+      "level": 8,
+      "progress": { "current": 61, "total": 96 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔄",
+        "completed_topic": "CIC vs SIC vs UPSC - Complete Comparison",
+        "xp_earned": 65,
+        "milestone_progress": "Module 8/9 Clear",
+        "motivational_quote": "Comparison tables ab dimaag mein set hain! Ek aur module - Bihar aur RTI - phir final test!"
+      },
+      "navigation": { "next": "card_62_bihar_rti_context", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_62_bihar_rti_context",
+      "card_slug": "card_62_bihar_rti_context",
+      "type": "chat",
+      "concept_id": "bihar_rti_special",
+      "level": 9,
+      "progress": { "current": 62, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Special - Bihar aur RTI! Bihar mein ek bahut [[Noteworthy|Dhyan dene layak]] movement tha - Mazdoor Kisan Shakti Sangathan (MKSS) aur social activist Aruna Roy ke netrutva mein RTI movement ne grass-root level par shuru hua tha Rajasthan mein, par iska asar Bihar mein bhi deeply felt hua." },
+        { "speaker": "raju", "text": "Bihar mein specifically kya hua sir RTI se?" },
+        { "speaker": "aman", "text": "Bihar mein RTI ka sabse zyada use MNREGA wages (mazdoori), PDS (ration) aur construction work mein corruption expose karne ke liye hua. Bihar ke kai gaon mein RTI activists ne local corruption uncover kiya. Bihar SCERT aur BPSC TRE paper mein ye grass-root examples frequently cite kiye jaate hain." },
+        { "speaker": "raju", "text": "Toh Bihar mein RTI ek social change ka tool ban gaya, sirf legal provision nahi!" }
+      ],
+      "navigation": { "next": "card_63_bihar_sic_specific", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_63_bihar_sic_specific",
+      "card_slug": "card_63_bihar_sic_specific",
+      "type": "chat",
+      "concept_id": "bihar_rti_special",
+      "level": 9,
+      "progress": { "current": 63, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bihar ka State Information Commission Patna mein hai. Bihar SIC ke appointments Gujarat ya UP se different nahi - same process: Governor appoint karta hai, CM committee recommend karta hai. Bihar mein RTI ka use land records, ration distribution, BPSC results transparency ke liye bhi hota raha hai." },
+        { "speaker": "raju", "text": "BPSC results mein bhi RTI?? That's interesting sir!" },
+        { "speaker": "aman", "text": "Haan! Candidates ne BPSC exam ke answer sheets RTI se maange hain in the past. Public authority hone ke naate BPSC RTI ke under aata hai. Bihar mein ek baar RTI se BPSC ke question paper leak case mein bhi investigation mein help mili thi. Ye Bihar-specific context BPSC TRE mein bahut kaam aata hai." },
+        { "speaker": "raju", "text": "Wow, BPSC khud RTI se covered hai! Circular cheez hai - BPSC exam mein BPSC RTI se covered hai ka question aayega!" }
+      ],
+      "navigation": { "next": "card_64_rti_activists", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_64_rti_activists",
+      "card_slug": "card_64_rti_activists",
+      "type": "chat",
+      "concept_id": "bihar_rti_special",
+      "level": 9,
+      "progress": { "current": 64, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ RTI movement ke key figures yaad rakho - Aruna Roy (MKSS, Rajasthan - grass-root movement), Shailesh Gandhi (former Central Information Commissioner), Anna Hazare (RTI jagrukta aur anti-corruption movement mein contributed). RTI ko 'people's law' bhi kaha jaata hai." },
+        { "speaker": "raju", "text": "Anna Hazare! Unka naam toh bahut suna hai sir. Unhe Lokpal se connect karta hoon main." },
+        { "speaker": "aman", "text": "Bilkul correct! Anna Hazare ne RTI ke baad Lokpal ki demand ke liye bhi movement kiya. RTI aur Lokpal dono corruption-se-ladne ke tools hain - RTI information nikalta hai, Lokpal action leta hai. Dono saath mein padhna zyada useful hai exam ke liye." },
+        { "speaker": "raju", "text": "RTI = Information weapon, Lokpal = Action weapon! Perfect combination samajh aa gayi sir." }
+      ],
+      "navigation": { "next": "card_65_quiz1_bihar", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_65_quiz1_bihar",
+      "card_slug": "card_65_quiz1_bihar",
+      "type": "quiz",
+      "concept_id": "bihar_rti_special",
+      "level": 9,
+      "progress": { "current": 65, "total": 96 },
+      "quiz_payload": {
+        "question": "Q1/3: RTI movement ki ground-level shuruat kisne aur kahan ki thi?",
+        "options": [
+          { "id": "A", "text": "Anna Hazare - Maharashtra" },
+          { "id": "B", "text": "Aruna Roy - MKSS, Rajasthan" },
+          { "id": "C", "text": "Manmohan Singh - Delhi" },
+          { "id": "D", "text": "Justice P.N. Bhagwati - Supreme Court" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Mazdoor Kisan Shakti Sangathan (MKSS) aur Aruna Roy ne Rajasthan mein grass-root RTI movement shuru ki - jan sunvaiyaan (public hearings) aur social audits se. Isi movement ne national RTI Act 2005 ki shuruaat ki."
+      },
+      "navigation": { "next": "card_66_quiz2_bihar", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_66_quiz2_bihar",
+      "card_slug": "card_66_quiz2_bihar",
+      "type": "quiz",
+      "concept_id": "bihar_rti_special",
+      "level": 9,
+      "progress": { "current": 66, "total": 96 },
+      "quiz_payload": {
+        "question": "Q2/3: Bihar mein RTI ka sabse zyada use kaunse areas mein hua?",
+        "options": [
+          { "id": "A", "text": "Defence procurement" },
+          { "id": "B", "text": "MNREGA wages, PDS ration aur construction work mein corruption expose karna" },
+          { "id": "C", "text": "Foreign policy documents maangna" },
+          { "id": "D", "text": "Judiciary ke case files maangna" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bihar mein RTI ka grass-root level par sabse zyada effective use MNREGA daily wages, PDS ration distribution, aur local construction projects ki quality expose karne mein hua. Ye BPSC TRE ke Bihar-specific context mein important hai."
+      },
+      "navigation": { "next": "card_67_quiz3_bihar", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_67_quiz3_bihar",
+      "card_slug": "card_67_quiz3_bihar",
+      "type": "quiz",
+      "concept_id": "bihar_rti_special",
+      "level": 9,
+      "progress": { "current": 67, "total": 96 },
+      "quiz_payload": {
+        "question": "Q3/3: Consider the statements:\n1. BPSC (Bihar Public Service Commission) RTI Act ke tehat ek Public Authority hai.\n2. Candidates BPSC exam answer sheets RTI se maang sakte hain.\nKaunsa/kaunse sahi hain?",
+        "options": [
+          { "id": "A", "text": "Sirf 1" },
+          { "id": "B", "text": "Sirf 2" },
+          { "id": "C", "text": "Dono 1 aur 2" },
+          { "id": "D", "text": "Na 1 na 2" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono sahi hain - BPSC Bihar government ke tehat ek Public Authority hai, isliye RTI Act apply hota hai. Candidates ne RTI se BPSC answer sheets maangi hain court cases bhi hue hain. Bihar SIC ne in cases sun'e hain. Ye BPSC TRE exam mein context-based question ke roop mein aata hai."
+      },
+      "navigation": { "next": "card_68_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_68_milestone9",
+      "card_slug": "card_68_milestone9",
+      "type": "milestone",
+      "concept_id": "bihar_rti_special",
+      "level": 9,
+      "progress": { "current": 68, "total": 96 },
+      "milestone_payload": {
+        "title": "ALL MODULES COMPLETED!",
+        "badge_emoji": "🌟",
+        "completed_topic": "Bihar & RTI - State-Specific Context",
+        "xp_earned": 70,
+        "milestone_progress": "Module 9/9 Clear",
+        "motivational_quote": "Sab 9 modules complete! Ab final summary aur master quiz ke saath chapter end karte hain!"
+      },
+      "navigation": { "next": "card_69_summary", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_69_summary",
+      "card_slug": "card_69_summary",
+      "type": "summary",
+      "concept_id": "chapter_revision",
+      "level": 10,
+      "progress": { "current": 69, "total": 96 },
+      "summary_payload": {
+        "title": "⚡ Officer Rapid Revision - CIC & SIC",
+        "revision_points": [
+          { "topic": "Nature of CIC/SIC", "point": "Statements: (1) CIC ek Statutory body hai RTI Act 2005 se. (2) CIC ek Constitutional body hai Article 324 se. Only Statement 1 correct - CIC Constitutional nahi, Statutory hai." },
+          { "topic": "Appointment & Committee", "point": "Statements: (1) CIC mein President appoint karta hai, SIC mein Governor. (2) Committee: CIC = PM Chair, SIC = CM Chair. Both correct - parallel federal structure." },
+          { "topic": "Tenure & 2019 Amendment", "point": "Statements: (1) 2019 se pehle Chief CIC salary = SC Judge. (2) 2019 Amendment ne tenure aur salary Central Govt ke discretion mein de di. Both correct - ye independence concern raise karta hai." },
+          { "topic": "Penalty & Timeline", "point": "Statements: (1) PIO penalty max Rs. 25,000 (Rs. 250/day). (2) Life & Liberty cases mein PIO ko 48 hours mein jawab dena hoga. Both correct - ye direct factual questions mein aate hain." },
+          { "topic": "Exemptions & Second Schedule", "point": "Statements: (1) IB aur RAW RTI se fully exempt hain, human rights aur corruption cases mein bhi. (2) Personal information jo public interest se judi na ho, RTI se exempt hai. Only Statement 2 correct - IB/RAW corruption/HR cases mein EXEMPT NAHI hain." }
+        ]
+      },
+      "navigation": { "next": "card_70_final_quiz", "button_text": "Take Final Master Quiz ➔" }
+    },
+    {
+      "card_id": "card_70_final_quiz",
+      "card_slug": "card_70_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "chapter_final_assessment",
+      "level": 10,
+      "progress": { "current": 70, "total": 96 },
+      "quiz_payload": {
+        "question": "BPSC-Style Multi-Statement Final Challenge:\n\nConsider the following statements about CIC and RTI:\n\n1. Central Information Commission (CIC) is a Constitutional Body established under Article 324 of the Constitution.\n2. Chief Information Commissioner is appointed by the President of India on the recommendation of a committee chaired by the Prime Minister.\n3. Under RTI Act 2005, agencies in the Second Schedule (like IB, RAW) are completely exempt from RTI with no exceptions whatsoever.\n4. RTI Amendment Act 2019 transferred the power to determine tenure and salary of CIC members from a fixed statutory provision to the Central Government's discretion.\n5. SIC ki decisions sirf Supreme Court mein challenge ho sakti hain, High Court mein nahi.\n\nKaunse statements SAHI hain?",
+        "options": [
+          { "id": "A", "text": "Sirf 1 aur 3" },
+          { "id": "B", "text": "Sirf 2 aur 4" },
+          { "id": "C", "text": "Sirf 2, 4 aur 5" },
+          { "id": "D", "text": "Sirf 1, 3 aur 5" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 GALAT - CIC Statutory body hai (RTI Act 2005), Constitutional nahi. Statement 2 SAHI - President appoint karta hai, PM Chair ki committee recommend karti hai. Statement 3 GALAT - Second Schedule agencies corruption aur human rights cases mein RTI se exempt NAHI hain. Statement 4 SAHI - RTI Amendment Act 2019 ne tenure aur salary Central Govt ke discretion mein de di. Statement 5 GALAT - SIC ki decisions HIGH COURT mein challenge hoti hain, Supreme Court mein nahi (CIC = HC ya SC dono mein). Isliye sirf 2 aur 4 sahi hain."
+      },
+      "navigation": { "next": "card_71_trophy", "button_text": "See Final Result ➔" }
+    },
+    {
+      "card_id": "card_71_trophy",
+      "card_slug": "card_71_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_completion",
+      "level": 10,
+      "progress": { "current": 71, "total": 96 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "CIC & SIC - Right to Information Act 2005",
+        "xp_earned": 200,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "RTI Act se lekar 2019 Amendment tak, CIC se SIC tak, PIO se Second Schedule tak - poora chapter conquer ho gaya! Ab BPSC, SSC, Railway koi bhi exam ho - CIC/SIC mein tumhara jawab nahi!"
+      },
+      "navigation": { "next": "card_72_bonus_rapid_fire", "button_text": "Try Bonus Speed Round ➔" }
+    },
+    {
+      "card_id": "card_72_bonus_rapid_fire",
+      "card_slug": "card_72_bonus_rapid_fire",
+      "type": "chat",
+      "concept_id": "bonus_speed_facts",
+      "level": 10,
+      "progress": { "current": 72, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Bonus round - Speed facts jo SSC/Railway mein seedhe pooche jaate hain! RTI Act 2005 pass kab hua: June 2005. Fully operational: 12 October 2005. Information dene ka time: 30 din (normal), 48 hours (life/liberty). First Appeal: 30 din mein, Second Appeal: 90 din mein. Penalty: Rs. 250/day, max Rs. 25,000." },
+        { "speaker": "raju", "text": "Aur CIC ke numbers sir?" },
+        { "speaker": "aman", "text": "Chief Information Commissioner = 1, Information Commissioners = max 10. Total CIC members = 11 (including Chief). SIC = State Chief IC + ek ya zyada State ICs (koi maximum nahi given in Act). RTI ki fees = Rs. 10 (application fee). BPL ke liye = FREE, koi fee nahi!" },
+        { "speaker": "raju", "text": "BPL walon ke liye free! Ye bhi important hai - garib aadmi bhi RTI file kar sakta hai bina fees ke." }
+      ],
+      "navigation": { "next": "card_73_bonus_rti_fee", "button_text": "Next Bonus Card ➔" }
+    },
+    {
+      "card_id": "card_73_bonus_rti_fee",
+      "card_slug": "card_73_bonus_rti_fee",
+      "type": "chat",
+      "concept_id": "bonus_speed_facts",
+      "level": 10,
+      "progress": { "current": 73, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "RTI fee structure yaad karo: Application fee = Rs. 10. Information fee = Rs. 2 per page (photocopying). Inspection fee = Rs. 5 per hour. Floppy/CD mein information = Rs. 50. BPL applicants = ZERO fees (Below Poverty Line = koi bhi payment nahi). Ye fees State governments thoda adjust kar sakti hain." },
+        { "speaker": "raju", "text": "Rs. 10 mein koi bhi government se pooch sakta hai! Ye toh democracy ka real tool hai sir." },
+        { "speaker": "aman", "text": "Exactly! Aur ek interesting fact - if information is provided outside the prescribed period (30 days exceeded), then the information must be provided FREE OF CHARGE. Matlab agar PIO late kiya, toh fees bhi nahi le sakta!" },
+        { "speaker": "raju", "text": "Brilliant! Late delivery = free delivery! Ye punishment aur lesson dono ek saath hai." }
+      ],
+      "navigation": { "next": "card_74_bonus_landmark_cases", "button_text": "Next Bonus Card ➔" }
+    },
+    {
+      "card_id": "card_74_bonus_landmark_cases",
+      "card_slug": "card_74_bonus_landmark_cases",
+      "type": "chat",
+      "concept_id": "bonus_landmark_cases",
+      "level": 10,
+      "progress": { "current": 74, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "Landmark RTI cases jo UPSC/BPSC mein aate hain: (1) Subhash Chandra Agrawal vs UOI - CJI office RTI ke under aata hai ya nahi, Supreme Court ne 2019 mein kaha haan, CJI office ek Public Authority hai aur RTI apply hoti hai - par limited. (2) BCCI vs Cricket Association - BCCI RTI mein nahi aata kyunki directly government funded nahi." },
+        { "speaker": "raju", "text": "CJI bhi RTI ke under aata hai? That's huge sir!" },
+        { "speaker": "aman", "text": "Haan, 2019 ka landmark judgment tha! 5-judge bench ne 3:2 majority se decide kiya. Lekin judicial independence bhi protect karna tha isliye limited disclosure ke saath. RTI aur judicial independence ka balance - ye UPSC essays mein bahut important topic hai." },
+        { "speaker": "raju", "text": "Judiciary bhi fully open nahi - partial transparency with checks. Democracy mein har cheez ka balance chahiye!" }
+      ],
+      "navigation": { "next": "card_75_bonus_quiz1", "button_text": "Next Bonus Card ➔" }
+    },
+    {
+      "card_id": "card_75_bonus_quiz1",
+      "card_slug": "card_75_bonus_quiz1",
+      "type": "quiz",
+      "concept_id": "bonus_rti_details",
+      "level": 10,
+      "progress": { "current": 75, "total": 96 },
+      "quiz_payload": {
+        "question": "RTI Act ke tehat application fee kitni hai? BPL applicants ke liye kya hai?",
+        "options": [
+          { "id": "A", "text": "Rs. 50 - BPL ke liye Rs. 10" },
+          { "id": "B", "text": "Rs. 10 - BPL ke liye FREE (koi fees nahi)" },
+          { "id": "C", "text": "Rs. 100 - BPL ke liye Rs. 50" },
+          { "id": "D", "text": "Rs. 25 - BPL ke liye Rs. 5" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RTI application fee Rs. 10 hai (central government ke liye, states thoda alag ho sakta hai). BPL (Below Poverty Line) applicants ke liye ZERO fees hain - koi bhi payment nahi. Agar information late di jaaye, toh bhi fees nahi li ja sakti."
+      },
+      "navigation": { "next": "card_76_bonus_quiz2", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_76_bonus_quiz2",
+      "card_slug": "card_76_bonus_quiz2",
+      "type": "quiz",
+      "concept_id": "bonus_rti_details",
+      "level": 10,
+      "progress": { "current": 76, "total": 96 },
+      "quiz_payload": {
+        "question": "BCCI RTI ke under kyun nahi aata?",
+        "options": [
+          { "id": "A", "text": "BCCI ek registered association hai jo directly government se funded nahi hai" },
+          { "id": "B", "text": "BCCI Parliament se approved hai" },
+          { "id": "C", "text": "Court ne kaha khel se related sab RTI free hain" },
+          { "id": "D", "text": "Home Ministry ne BCCI ko exemption di hai" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "BCCI ek private/autonomous body hai jo directly government se substantially funded nahi hai. RTI 'Public Authority' definition ke tehat sirf wo bodies aati hain jo government se banai gayi ho ya substantially funded/controlled ho. BCCI ye criteria directly meet nahi karta."
+      },
+      "navigation": { "next": "card_77_bonus_quiz3", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_77_bonus_quiz3",
+      "card_slug": "card_77_bonus_quiz3",
+      "type": "quiz",
+      "concept_id": "bonus_rti_details",
+      "level": 10,
+      "progress": { "current": 77, "total": 96 },
+      "quiz_payload": {
+        "question": "CJI (Chief Justice of India) ka office RTI ke under aata hai ya nahi? 2019 mein Supreme Court ka kya decision tha?",
+        "options": [
+          { "id": "A", "text": "Nahi aata - judiciary independent hai" },
+          { "id": "B", "text": "Haan aata hai - 5-judge bench ne 3:2 majority se 2019 mein kaha" },
+          { "id": "C", "text": "Sirf economic matters mein aata hai" },
+          { "id": "D", "text": "Parliament decide karti hai har case mein" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "2019 mein Supreme Court ki 5-judge bench ne 3:2 majority se kaha ki CJI office ek Public Authority hai aur RTI apply hoti hai, lekin judicial independence ke naam par limited disclosure. Ye landmark case Subhash Chandra Agrawal vs Union of India mein decide hua."
+      },
+      "navigation": { "next": "card_78_bonus_section_comparison", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_78_bonus_section_comparison",
+      "card_slug": "card_78_bonus_section_comparison",
+      "type": "chat",
+      "concept_id": "bonus_section_analysis",
+      "level": 10,
+      "progress": { "current": 78, "total": 96 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Important Sections of RTI Act yaad karo - exam ke direct questions: Section 4 = Proactive Disclosure (public authority khud info public kare). Section 6 = RTI Application kaise file karein. Section 7 = PIO ka information dene ka obligation aur time limits. Section 8 = Exemptions (kya information nahi di jaayegi)." },
+        { "speaker": "raju", "text": "Aur Section 19 aur 20 sir?" },
+        { "speaker": "aman", "text": "Section 19 = Appeal provisions (First Appeal aur Second Appeal CIC/SIC ko). Section 20 = Penalty provisions (Rs. 250/day, max Rs. 25,000, disciplinary action bhi). Section 23 = Courts ka jurisdiction exclude kiya (sirf HC/SC judicial review kar sakte hain lower courts nahi). Section 24 = Intelligence organizations ke liye exemptions (Second Schedule)." },
+        { "speaker": "raju", "text": "Section numbers ke saath sabkuch clear ho gaya sir! Ab exam mein 'Section 8 mein kya hai' type questions aasaani se answer karunga." }
+      ],
+      "navigation": { "next": "card_79_bonus_quiz4", "button_text": "Next Bonus Card ➔" }
+    },
+    {
+      "card_id": "card_79_bonus_quiz4",
+      "card_slug": "card_79_bonus_quiz4",
+      "type": "quiz",
+      "concept_id": "bonus_sections",
+      "level": 10,
+      "progress": { "current": 79, "total": 96 },
+      "quiz_payload": {
+        "question": "RTI Act ka Section 20 kisse related hai?",
+        "options": [
+          { "id": "A", "text": "Proactive Disclosure" },
+          { "id": "B", "text": "Exemptions" },
+          { "id": "C", "text": "Penalty provisions (PIO par Rs. 250/day, max Rs. 25,000)" },
+          { "id": "D", "text": "Appeal process" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Section 20 RTI Act ka Penalty provision hai - PIO par Rs. 250 per day ki penalty, maximum Rs. 25,000 tak, plus disciplinary action ki recommendation. Section 4 = Proactive Disclosure, Section 8 = Exemptions, Section 19 = Appeals."
+      },
+      "navigation": { "next": "card_80_bonus_quiz5", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_80_bonus_quiz5",
+      "card_slug": "card_80_bonus_quiz5",
+      "type": "quiz",
+      "concept_id": "bonus_sections",
+      "level": 10,
+      "progress": { "current": 80, "total": 96 },
+      "quiz_payload": {
+        "question": "Consider the statements:\n1. RTI Section 8 mein listed exempt information public interest mein bhi kabhi disclose nahi ki ja sakti.\n2. RTI Section 23 ke tehat RTI matters mein sirf High Court ya Supreme Court hi judicial review kar sakti hai, lower courts nahi.\nKaunsa/kaunse sahi hain?",
+        "options": [
+          { "id": "A", "text": "Sirf 1" },
+          { "id": "B", "text": "Sirf 2" },
+          { "id": "C", "text": "Dono" },
+          { "id": "D", "text": "Koi nahi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 galat hai - Section 8(2) ke tehat even exempt information ko public interest mein disclose kiya ja sakta hai agar disclosure ka benefit, denial ke harm se zyada ho. Statement 2 sahi hai - Section 23 lower courts ka jurisdiction exclude karta hai, sirf HC/SC judicial review kar sakti hain."
+      },
+      "navigation": { "next": "card_81_bonus_quiz6", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_81_bonus_quiz6",
+      "card_slug": "card_81_bonus_quiz6",
+      "type": "quiz",
+      "concept_id": "bonus_advanced",
+      "level": 10,
+      "progress": { "current": 81, "total": 96 },
+      "quiz_payload": {
+        "question": "SSC CGL Style - Match the following:\n1. RTI Act fully operational → (a) 12 October 2005\n2. PIO penalty max → (b) Rs. 25,000\n3. Life & liberty RTI response → (c) 48 hours\n4. Second Appeal deadline → (d) 90 din\nSahi match choose karo:",
+        "options": [
+          { "id": "A", "text": "1-b, 2-a, 3-d, 4-c" },
+          { "id": "B", "text": "1-a, 2-b, 3-c, 4-d" },
+          { "id": "C", "text": "1-c, 2-d, 3-a, 4-b" },
+          { "id": "D", "text": "1-d, 2-c, 3-b, 4-a" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sahi matching: (1) RTI fully operational = 12 October 2005 (a), (2) PIO max penalty = Rs. 25,000 (b), (3) Life & liberty response time = 48 hours (c), (4) Second appeal deadline = 90 din (d). Ye sab speed facts SSC/Railway mein direct aate hain."
+      },
+      "navigation": { "next": "card_82_bonus_quiz7", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_82_bonus_quiz7",
+      "card_slug": "card_82_bonus_quiz7",
+      "type": "quiz",
+      "concept_id": "bonus_advanced",
+      "level": 10,
+      "progress": { "current": 82, "total": 96 },
+      "quiz_payload": {
+        "question": "UPSC Prelims Style - Consider the statements:\n1. RTI Amendment Act 2019 has been criticized for undermining the independence of CIC.\n2. Before the 2019 Amendment, Chief Information Commissioner's salary was equivalent to that of a High Court Judge.\n3. The RTI Act 2005 extends to all states and Union Territories except Jammu & Kashmir.\nWhich of the above statements is/are correct?",
+        "options": [
+          { "id": "A", "text": "Only 1" },
+          { "id": "B", "text": "1 and 3 only" },
+          { "id": "C", "text": "1 and 2 only" },
+          { "id": "D", "text": "1, 2 and 3" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 1 SAHI - 2019 Amendment ko critics ne independence khatarnak mana. Statement 2 GALAT - Pehle Chief CIC ki salary SUPREME COURT judge ke barabar thi, HC judge ke barabar nahi (HC judge barabar = State Chief IC ki thi). Statement 3 GALAT - J&K Reorganisation Act 2019 ke baad RTI poore India mein laagu hai, ab koi exception nahi. Sirf Statement 1 sahi hai."
+      },
+      "navigation": { "next": "card_83_bonus_quiz8", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_83_bonus_quiz8",
+      "card_slug": "card_83_bonus_quiz8",
+      "type": "quiz",
+      "concept_id": "bonus_advanced",
+      "level": 10,
+      "progress": { "current": 83, "total": 96 },
+      "quiz_payload": {
+        "question": "BPSC Assertion-Reason:\n\nAssertion (A): Central Information Commissioner ki niyukti President karta hai lekin kisi bhi High Court Judge ki niyukti wali process follow karke.\n\nReason (R): CIC ek Statutory Body hai aur uski appointment process RTI Act 2005 mein defined hai, not in the Constitution.\n\nChunihaara batao:",
+        "options": [
+          { "id": "A", "text": "Dono A aur R sahi hain, R sahi explanation hai A ka" },
+          { "id": "B", "text": "A galat hai, R sahi hai" },
+          { "id": "C", "text": "Dono galat hain" },
+          { "id": "D", "text": "A sahi hai, R galat hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Assertion GALAT hai - CIC President appoint karta hai, lekin process HC Judge jaisi nahi hai. Process hai: PM Chair committee (PM, Leader of Opposition, Cabinet Minister) President ko recommend kare. Reason SAHI hai - CIC Statutory body hai aur process RTI Act mein defined hai. Isliye B sahi hai: A galat, R sahi."
+      },
+      "navigation": { "next": "card_84_bonus_quiz9", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_84_bonus_quiz9",
+      "card_slug": "card_84_bonus_quiz9",
+      "type": "quiz",
+      "concept_id": "bonus_advanced",
+      "level": 10,
+      "progress": { "current": 84, "total": 96 },
+      "quiz_payload": {
+        "question": "Railway RRB NTPC Style: CIC (Central Information Commission) ka maximum strength kya hai?",
+        "options": [
+          { "id": "A", "text": "1 Chief IC + max 5 ICs = 6 total" },
+          { "id": "B", "text": "1 Chief IC + max 10 ICs = 11 total" },
+          { "id": "C", "text": "1 Chief IC + unlimited ICs" },
+          { "id": "D", "text": "Sirf 1 Chief IC" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Central Information Commission mein 1 Chief Information Commissioner aur maximum 10 Information Commissioners hote hain, total maximum 11 members. State IC ke liye RTI Act mein maximum number fix nahi hai, state ki zaroorat ke hisaab se decide hoti hai."
+      },
+      "navigation": { "next": "card_85_bonus_quiz10", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_85_bonus_quiz10",
+      "card_slug": "card_85_bonus_quiz10",
+      "type": "quiz",
+      "concept_id": "bonus_advanced",
+      "level": 10,
+      "progress": { "current": 85, "total": 96 },
+      "quiz_payload": {
+        "question": "BPSC Multi-Statement Final:\n\nConsider statements about SIC:\n1. SIC ki appointments Governor karta hai CM ki committee ki recommendation par.\n2. State Chief IC ko hatane ke liye High Court inquiry zaroori hai.\n3. State Chief IC retire hone ke baad State Government ka koi bhi office nahi le sakta.\n4. SIC ki decisions High Court mein challenge ho sakti hain.\n\nKaunse sahi hain?",
+        "options": [
+          { "id": "A", "text": "1, 2 aur 4" },
+          { "id": "B", "text": "1, 3 aur 4" },
+          { "id": "C", "text": "2, 3 aur 4" },
+          { "id": "D", "text": "1, 2, 3 aur 4 sab" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 SAHI - Governor appoint karta hai, CM Chair committee se. Statement 2 GALAT - State Chief IC hatane ke liye SUPREME COURT inquiry zaroori hai, HC nahi (ye BPSC ka trap statement hai). Statement 3 SAHI - Central ya State government office nahi le sakta. Statement 4 SAHI - SIC decisions HC mein challenge ho sakti hain. Isliye 1, 3, 4 sahi hain."
+      },
+      "navigation": { "next": "card_86_final_trophy2", "button_text": "Finish Chapter! 🏆" }
+    },
+    {
+      "card_id": "card_86_final_trophy2",
+      "card_slug": "card_86_final_trophy2",
+      "type": "milestone",
+      "concept_id": "ultimate_completion",
+      "level": 10,
+      "progress": { "current": 86, "total": 96 },
+      "milestone_payload": {
+        "title": "🎓 CIC & SIC MASTER ACHIEVED! 🎓",
+        "badge_emoji": "🏆📋",
+        "completed_topic": "Complete CIC & SIC - RTI Act 2005 with 2019 Amendment",
+        "xp_earned": 500,
+        "milestone_progress": "100% Chapter Mastery!",
+        "motivational_quote": "RTI Act 2005 se 2019 Amendment tak, CIC appointment se SIC removal tak, Rs. 10 fee se Rs. 25,000 penalty tak - poora chapter conquer! Ab koi bhi BPSC, SSC, Railway ya UPSC exam mein CIC/SIC chapter se koi bhi question tumhe rok nahi sakta! 🚀"
+      },
+      "navigation": { "next": "card_87_extra_practice1", "button_text": "Try Extra Practice ➔" }
+    },
+    {
+      "card_id": "card_87_extra_practice1",
+      "card_slug": "card_87_extra_practice1",
+      "type": "quiz",
+      "concept_id": "extra_practice",
+      "level": 10,
+      "progress": { "current": 87, "total": 96 },
+      "quiz_payload": {
+        "question": "RTI file karne ke liye application kaise bhejte hain? (SSC/Railway direct fact)",
+        "options": [
+          { "id": "A", "text": "Sirf email se" },
+          { "id": "B", "text": "Sirf in-person jaake" },
+          { "id": "C", "text": "Written application (post, hand-delivery, email) ya online RTI portal se" },
+          { "id": "D", "text": "Sirf registered post se" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "RTI application written roop mein (Hindi, English ya regional language mein) post, in-person, email se ya online RTI portal (rtionline.gov.in for Central) se file ki ja sakti hai. Koi fixed format nahi hai - plain paper par bhi dete hain."
+      },
+      "navigation": { "next": "card_88_extra_practice2", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_88_extra_practice2",
+      "card_slug": "card_88_extra_practice2",
+      "type": "quiz",
+      "concept_id": "extra_practice",
+      "level": 10,
+      "progress": { "current": 88, "total": 96 },
+      "quiz_payload": {
+        "question": "Agar PIO ki maang se information 30 din ke baad milti hai, toh applicant ko kyun koi fee nahi deni hoti?",
+        "options": [
+          { "id": "A", "text": "RTI mein kabhi fees nahi hoti" },
+          { "id": "B", "text": "RTI Act kehta hai ki prescribed period ke baad information FREE deni hogi (penalty as compensation)" },
+          { "id": "C", "text": "BPL ke liye sirf free hoti hai" },
+          { "id": "D", "text": "CIC order par free hoti hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RTI Act mein provision hai ki agar PIO prescribed time limit (30 din, ya life/liberty mein 48 hours) ke andar information nahi deta, toh jo bhi information baad mein di jaaye wo FREE OF CHARGE hogi. Ye late PIO ke liye additional deterrent hai."
+      },
+      "navigation": { "next": "card_89_extra_practice3", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_89_extra_practice3",
+      "card_slug": "card_89_extra_practice3",
+      "type": "quiz",
+      "concept_id": "extra_practice",
+      "level": 10,
+      "progress": { "current": 89, "total": 96 },
+      "quiz_payload": {
+        "question": "RTI Act ke tehat kaunsi jankaari proactively publish karna mandatory hai Section 4 ke tehat?",
+        "options": [
+          { "id": "A", "text": "Sirf salary list" },
+          { "id": "B", "text": "Organization ki structure, powers, functions, budget, schemes, rules, records categories, officers names aur contacts" },
+          { "id": "C", "text": "Sirf cabinet meetings ki minutes" },
+          { "id": "D", "text": "Sirf ongoing court cases" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Section 4 ke tehat har public authority ko proactively publish karna hai: organization structure, powers, duties, budget, schemes, rules, records categories, PIO contact details, aur decision-making process. Ye 17 items ki list hai. Goal: common RTI questions bina filing ke answer ho jaayein."
+      },
+      "navigation": { "next": "card_90_extra_practice4", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_90_extra_practice4",
+      "card_slug": "card_90_extra_practice4",
+      "type": "quiz",
+      "concept_id": "extra_practice",
+      "level": 10,
+      "progress": { "current": 90, "total": 96 },
+      "quiz_payload": {
+        "question": "BPSC Style: Information Commissioner (Central) ke post-retirement restriction ke baare mein sahi statement kaunsi hai?",
+        "options": [
+          { "id": "A", "text": "Kisi bhi Central ya State Government office ke liye ineligible" },
+          { "id": "B", "text": "Sirf Central Government ke liye ineligible, State mein ja sakte hain" },
+          { "id": "C", "text": "Koi restriction nahi - retired hone ke baad kuch bhi kar sakte hain" },
+          { "id": "D", "text": "Private sector mein bhi restriction hai" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "RTI Act ke tehat Central Information Commissioner (Chief IC ya IC) retire hone ke baad KISI BHI Central ya State Government ke office ke liye ineligible hain. Ye independence ensure karta hai. Private sector mein RTI Act koi restriction nahi lagata (UPSC Chairman se yahan fark hai)."
+      },
+      "navigation": { "next": "card_91_extra_practice5", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_91_extra_practice5",
+      "card_slug": "card_91_extra_practice5",
+      "type": "quiz",
+      "concept_id": "extra_practice",
+      "level": 10,
+      "progress": { "current": 91, "total": 96 },
+      "quiz_payload": {
+        "question": "Assertion-Reason (UPSC Style):\n\nA: RTI Act 2005 mein kisi bhi political party ko Public Authority nahi mana gaya isliye political parties RTI ke bahar hain.\n\nR: Public Authority wo hoti hai jo Constitution, Parliament Act, ya Government notification se bani ho - political parties in categories mein nahi aatein.\n\nSahi option:",
+        "options": [
+          { "id": "A", "text": "A sahi hai, R galat hai" },
+          { "id": "B", "text": "A galat hai, R sahi hai" },
+          { "id": "C", "text": "A sahi hai, R bhi sahi hai aur R sahi explanation hai" },
+          { "id": "D", "text": "Dono galat hain" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dono sahi hain aur R, A ki sahi explanation hai. Political parties RTI ke under public authority nahi hain kyunki wo government ya Parliament se nahi bantin. CIC ne ek baar national parties ko RTI ke under laane ki koshish ki thi par ye officially accepted nahi hua. Ye controversial area hai."
+      },
+      "navigation": { "next": "card_92_extra_practice6", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_92_extra_practice6",
+      "card_slug": "card_92_extra_practice6",
+      "type": "quiz",
+      "concept_id": "extra_practice",
+      "level": 10,
+      "progress": { "current": 92, "total": 96 },
+      "quiz_payload": {
+        "question": "Third party information ke baare mein RTI mein kya provision hai?",
+        "options": [
+          { "id": "A", "text": "Third party information hamesha share ki jaati hai" },
+          { "id": "B", "text": "Third party ko sunne ka mauka milta hai, aur unki commercial/trade secrets normally protect hoti hain" },
+          { "id": "C", "text": "Third party information kabhi nahi di jaati" },
+          { "id": "D", "text": "Third party ka koi concept nahi hai RTI mein" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RTI Act Section 11 ke tehat agar requested information kisi third party (private individual ya company) se related hai, toh PIO pehle third party ko notice dega aur unhe objection karne ka mauka milega. Third party ki commercial/trade secrets protect hoti hain. Final decision PIO/CIC ka hoga."
+      },
+      "navigation": { "next": "card_93_extra_practice7", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_93_extra_practice7",
+      "card_slug": "card_93_extra_practice7",
+      "type": "quiz",
+      "concept_id": "extra_practice",
+      "level": 10,
+      "progress": { "current": 93, "total": 96 },
+      "quiz_payload": {
+        "question": "RTI Act 2005 konsi pehle wali law ki jagah li (replace kiya)?",
+        "options": [
+          { "id": "A", "text": "Official Secrets Act 1923" },
+          { "id": "B", "text": "Freedom of Information Act 2002" },
+          { "id": "C", "text": "Public Records Act 1993" },
+          { "id": "D", "text": "Government Records Act 1990" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RTI Act 2005 ne Freedom of Information Act 2002 ki jagah li jो implemented nahi hua tha properly. Official Secrets Act 1923 abhi bhi exist karta hai par RTI iske kuch provisions ko override karta hai jab public interest involved ho."
+      },
+      "navigation": { "next": "card_94_extra_practice8", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_94_extra_practice8",
+      "card_slug": "card_94_extra_practice8",
+      "type": "quiz",
+      "concept_id": "extra_practice",
+      "level": 10,
+      "progress": { "current": 94, "total": 96 },
+      "quiz_payload": {
+        "question": "Agar ek RTI applicant se poocha jaaye ki wo information kyun maang raha hai - kya ye zaroori hai batana?",
+        "options": [
+          { "id": "A", "text": "Haan, reason batana zaroori hai" },
+          { "id": "B", "text": "Nahi, RTI applicant ko koi reason nahi batana - it's his right" },
+          { "id": "C", "text": "Sirf sensitive cases mein reason batana hota hai" },
+          { "id": "D", "text": "Sirf BPL applicants ko reason nahi batana" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RTI Act ek bahut important provision - applicant ko koi reason batane ki zaroorat NAHI hai ki wo information kyun maang raha hai. Ye ek absolute right hai. Agar PIO reason maangta hai information dene ke liye, toh ye RTI spirit ke against hai."
+      },
+      "navigation": { "next": "card_95_extra_practice9", "button_text": "Check & Continue ➔" }
+    },
+    {
+      "card_id": "card_95_extra_practice9",
+      "card_slug": "card_95_extra_practice9",
+      "type": "quiz",
+      "concept_id": "extra_practice",
+      "level": 10,
+      "progress": { "current": 95, "total": 96 },
+      "quiz_payload": {
+        "question": "Final Master Challenge (BPSC Level):\n\nConsider all the statements:\n1. RTI Act 2005 fully operational hua 12 October 2005 ko.\n2. Chief CIC ki appointment committee mein Leader of Opposition in Rajya Sabha hota hai.\n3. RTI exempt information bhi public interest override mein disclose ho sakti hai.\n4. BPL applicants ke liye RTI fee nahi hoti.\n5. CIC decisions sirf High Court mein challenge ho sakti hain.\n\nKitne statements sahi hain?",
+        "options": [
+          { "id": "A", "text": "Sirf 2 (Statements 1 aur 3)" },
+          { "id": "B", "text": "Sirf 3 (Statements 1, 3 aur 4)" },
+          { "id": "C", "text": "Sirf 4 (Statements 1, 2, 3 aur 4)" },
+          { "id": "D", "text": "Sirf 1 (Statement 1 only)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 SAHI - 12 October 2005. Statement 2 GALAT - Committee mein LOK SABHA mein Leader of Opposition hota hai, Rajya Sabha nahi. Statement 3 SAHI - Section 8(2) public interest override. Statement 4 SAHI - BPL ke liye free. Statement 5 GALAT - CIC decisions HC ya SC dono mein challenge ho sakti hain. Isliye 3 statements (1, 3, 4) sahi hain."
+      },
+      "navigation": { "next": "card_96_absolute_final", "button_text": "Complete Everything! 🎉" }
+    },
+    {
+      "card_id": "card_96_absolute_final",
+      "card_slug": "card_96_absolute_final",
+      "type": "milestone",
+      "concept_id": "ultimate_final",
+      "level": 10,
+      "progress": { "current": 96, "total": 96 },
+      "milestone_payload": {
+        "title": "⭐ ABSOLUTE MASTER - CIC & SIC ⭐",
+        "badge_emoji": "🌟🏆🌟",
+        "completed_topic": "CIC & SIC - 100% Complete with All Practice Sets",
+        "xp_earned": 1000,
+        "milestone_progress": "Perfect Score Achieved!",
+        "motivational_quote": "Wah Raju! RTI ka ek-ek corner cover ho gaya - Section numbers, Aruna Roy movement, Bihar SIC, 2019 Amendment controversy, landmark cases, fee structure, timeline, penalties, exemptions, comparison tables - SAB KUCH! Ab BPSC ho ya Railway, SSC ho ya UPSC - CIC/SIC chapter mein tumhara score perfect hoga! Aman Sir ko garv hai! 🎓"
+      },
+      "navigation": { "next": "end_of_chapter", "button_text": "Finish Chapter ✔" }
+    }
+  ]
+}
