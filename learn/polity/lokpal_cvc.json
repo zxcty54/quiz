@@ -1,0 +1,2369 @@
+
+{
+  "topic_id": "lokpal_cvc_indian_polity",
+  "topic_title": "Lokpal and CVC - Anti-Corruption Machinery in Indian Polity",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 89,
+  "characters": {
+    "aman": {
+      "name": "Aman Sir",
+      "role": "teacher",
+      "avatar": "👨‍🏫"
+    },
+    "raju": {
+      "name": "Raju",
+      "role": "student",
+      "avatar": "👦"
+    }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "lokpal_cvc_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 89 },
+      "intro_payload": {
+        "title": "Lokpal & CVC",
+        "subtitle": "India's Anti-Corruption Watchdogs Explained",
+        "icon_emoji": "⚖️",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Understand the Ombudsman concept and its Indian origin story",
+          "Master the complete history of Lokpal Bills (1968 to 2013)",
+          "Learn Lokpal's composition, selection process, and jurisdiction in detail",
+          "Understand special safeguards for inquiry against the Prime Minister",
+          "Master CVC's origin from Santhanam Committee to statutory status",
+          "Compare Lokpal vs CVC powers and understand Bihar's Lokayukta history",
+          "Crack BPSC/UPSC multi-statement traps on dates, scientists, and committees"
+        ],
+        "estimated_time": "30 minutes",
+        "total_xp": "380 XP"
+      },
+      "navigation": {
+        "next": "card_02_complaint_box",
+        "button_text": "Start Learning 🚀"
+      }
+    },
+    {
+      "card_id": "card_02_complaint_box",
+      "card_slug": "card_02_complaint_box",
+      "type": "chat",
+      "concept_id": "corruption_daily_life",
+      "level": 1,
+      "progress": { "current": 2, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, socho tumhare mohalle mein Block Officer paisa maang raha hai ration card banane ke liye. Tum kis se complaint karoge?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, apne se upar wale officer ko batana padega na? Ya police station jaana hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi soch rahe ho! Par problem yeh hai ki agar upar wala officer bhi corrupt nikla toh? Isliye desh ko ek AISI independent body chahiye thi jo har corrupt officer ko - chahe woh chhota clerk ho ya bada Minister - pakad sake. Isi zaroorat se **Lokpal** aur **CVC** jaisi sansthaein bani."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achhaaa! Matlab yeh dono ek tarah ke 'super complaint box' hain jo corruption pakadte hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_03_ombudsman_concept",
+        "button_text": "Haan, par pehle iska origin dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_03_ombudsman_concept",
+      "card_slug": "card_03_ombudsman_concept",
+      "type": "chat",
+      "concept_id": "ombudsman_origin",
+      "level": 1,
+      "progress": { "current": 3, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Yeh concept India ka original nahi hai! Duniya mein sabse pehle Sweden ne 1809 mein ek institution banaya tha jise [[Ombudsman | Sweden ka ek shabd, matlab - 'Sarkar ke against janta ki shikayat sunne wala adhikari']] kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sweden se aaya yeh idea? India mein kaise laaya gaya phir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "1966 mein Bharat sarkar ne ek committee banayi - **Administrative Reforms Commission (ARC)**, jiske chairman the Morarji Desai. Isi commission ne pehli baar suggest kiya ki India mein bhi Sweden jaisa Ombudsman hona chahiye - do levels par: Centre ke liye aur States ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, Centre aur State ke liye alag naam bhi honge inke?"
+        }
+      ],
+      "navigation": {
+        "next": "card_04_lokpal_lokayukta_naming",
+        "button_text": "Naming ka credit dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_04_lokpal_lokayukta_naming",
+      "card_slug": "card_04_lokpal_lokayukta_naming",
+      "type": "chat",
+      "concept_id": "singhvi_naming_credit",
+      "level": 1,
+      "progress": { "current": 4, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite: Bilkul sahi socha! Centre ke liye naam rakha gaya **'Lokpal'** (Lok = Janta, Pal = Rakshak/Protector) aur States ke liye **'Lokayukta'**. Yeh dono Sanskrit-based naam sabse pehle **Dr. L.M. Singhvi** ne suggest/coin kiye the."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, yeh L.M. Singhvi ka naam toh bahut confusing lagta hai yaad rakhne mein!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Trick yaad rakho: 'ARC ne IDEA diya (1966), Singhvi ne NAAM diya'. Yeh do alag facts hain, exam mein inhe mix karke trap banaya jaata hai - jaise 'ARC ne Lokpal naam diya' likh kar galat option banate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Idea alag banda, naam alag banda! Ab yeh actual kaanoon kab bana?"
+        }
+      ],
+      "navigation": {
+        "next": "card_05_guess_ombudsman",
+        "button_text": "Pehle ek check karte hain ➔"
+      }
+    },
+    {
+      "card_id": "card_05_guess_ombudsman",
+      "card_slug": "card_05_guess_ombudsman",
+      "type": "guess",
+      "concept_id": "ombudsman_origin_guess",
+      "level": 1,
+      "progress": { "current": 5, "total": 89 },
+      "guess_payload": {
+        "question": "The concept of 'Ombudsman' originally comes from which country?",
+        "options": [
+          { "id": "A", "text": "United Kingdom" },
+          { "id": "B", "text": "United States" },
+          { "id": "C", "text": "Sweden" },
+          { "id": "D", "text": "France" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "The Ombudsman concept originated in Sweden in 1809. It refers to an official appointed to investigate complaints made by individuals against maladministration or corruption by government officials. India's Administrative Reforms Commission (1966) recommended a similar institution for India, leading to the concepts of Lokpal and Lokayukta."
+      },
+      "navigation": {
+        "next": "card_06_quiz_intro_q1",
+        "button_text": "Quiz Time! ➔"
+      }
+    },
+    {
+      "card_id": "card_06_quiz_intro_q1",
+      "card_slug": "card_06_quiz_intro_q1",
+      "type": "quiz",
+      "concept_id": "origin_quiz",
+      "level": 1,
+      "progress": { "current": 6, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 1/3: Which commission first recommended the creation of Lokpal and Lokayukta in India?",
+        "options": [
+          { "id": "A", "text": "Sarkaria Commission" },
+          { "id": "B", "text": "Administrative Reforms Commission (ARC), 1966" },
+          { "id": "C", "text": "Santhanam Committee" },
+          { "id": "D", "text": "Second ARC" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The Administrative Reforms Commission (ARC), 1966, chaired by Morarji Desai, first recommended creating two independent authorities - Lokpal at the Centre and Lokayukta at the State level - to look into complaints against public officials, based on the Ombudsman model of Sweden."
+      },
+      "navigation": {
+        "next": "card_07_quiz_intro_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_07_quiz_intro_q2",
+      "card_slug": "card_07_quiz_intro_q2",
+      "type": "quiz",
+      "concept_id": "origin_quiz",
+      "level": 1,
+      "progress": { "current": 7, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 2/3: The terms 'Lokpal' and 'Lokayukta' were coined by:",
+        "options": [
+          { "id": "A", "text": "Morarji Desai" },
+          { "id": "B", "text": "Anna Hazare" },
+          { "id": "C", "text": "Dr. L.M. Singhvi" },
+          { "id": "D", "text": "K. Santhanam" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Dr. L.M. Singhvi coined the terms 'Lokpal' and 'Lokayukta'. ⭐ BPSC Trap: Students often confuse this with the ARC (which gave the IDEA of an Ombudsman-like body in 1966), but Singhvi specifically gave the NAMES. Two different credits for two different contributions!"
+      },
+      "navigation": {
+        "next": "card_08_quiz_intro_q3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_intro_q3",
+      "card_slug": "card_08_quiz_intro_q3",
+      "type": "quiz",
+      "concept_id": "origin_quiz",
+      "level": 1,
+      "progress": { "current": 8, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 3/3: Who was the Chairman of the Administrative Reforms Commission (1966) that first recommended the Lokpal concept?",
+        "options": [
+          { "id": "A", "text": "Jawaharlal Nehru" },
+          { "id": "B", "text": "Morarji Desai" },
+          { "id": "C", "text": "K. Santhanam" },
+          { "id": "D", "text": "Lal Bahadur Shastri" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Morarji Desai chaired the Administrative Reforms Commission (ARC) formed in 1966, which recommended the establishment of Lokpal (Centre) and Lokayukta (States) based on the Ombudsman system of Sweden."
+      },
+      "navigation": {
+        "next": "card_09_milestone_1",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_09_milestone_1",
+      "card_slug": "card_09_milestone_1",
+      "type": "milestone",
+      "concept_id": "module_1_complete",
+      "level": 1,
+      "progress": { "current": 9, "total": 89 },
+      "milestone_payload": {
+        "title": "🎉 MODULE 1 COMPLETE!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Origin of Ombudsman Concept",
+        "xp_earned": 35,
+        "milestone_progress": "Module 1/10 Clear",
+        "motivational_quote": "Foundation strong ho gayi! Ab dekhte hain Lokpal Bill ka 45-saal lamba struggle - 1968 se 2013 tak! 📜"
+      },
+      "navigation": {
+        "next": "card_10_first_bill",
+        "button_text": "Start Module 2 ➔"
+      }
+    },
+    {
+      "card_id": "card_10_first_bill",
+      "card_slug": "card_10_first_bill",
+      "type": "chat",
+      "concept_id": "first_lokpal_bill_1968",
+      "level": 1,
+      "progress": { "current": 10, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab suno ek interesting kahani. ARC ne 1966 mein idea diya, par uske baad Parliament mein isko kaanoon banane mein bahut lamba time laga - poore 45 saal!"
+        },
+        {
+          "speaker": "raju",
+          "text": "45 saal?? Itna time kyun laga Sir? Kya Parliament ne bill hi nahi banaya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bill toh bana - pehli baar 1968 mein Lok Sabha mein introduce hua tha (Shanti Bhushan ne introduce kiya). Yeh Lok Sabha mein pass bhi ho gaya tha, par uske baad jab Lok Sabha dissolve hui, toh bill bhi khatam (lapse) ho gaya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Bill pass hone ke baad bhi khatam ho gaya?? Yeh toh bahut bada waste tha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_lapse_pattern",
+        "button_text": "Yehi pattern baar-baar hua! ➔"
+      }
+    },
+    {
+      "card_id": "card_11_lapse_pattern",
+      "card_slug": "card_11_lapse_pattern",
+      "type": "chat",
+      "concept_id": "repeated_lapse_pattern",
+      "level": 1,
+      "progress": { "current": 11, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite: Universal Rule samjho - jab Lok Sabha mein koi bill pending hota hai aur beech mein Lok Sabha dissolve ho jaati hai (naye elections ke liye), toh woh bill automatically **lapse** ho jaata hai. Isko dobara se naye sirre se introduce karna padta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Lokpal Bill ke saath aisa kitni baar hua?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Lokpal Bill 1968 se lekar 2011 tak - poore **8 baar** Parliament mein introduce hua (1968, 1971, 1977, 1985, 1989, 1996, 1998, 2001), par har baar kisi na kisi karan se pass nahi ho paya ya lapse ho gaya!"
+        },
+        {
+          "speaker": "raju",
+          "text": "8 baar?! Sir ye toh exam mein pakka confuse karega - itni saari years yaad rakhna!"
+        }
+      ],
+      "navigation": {
+        "next": "card_12_anna_movement",
+        "button_text": "Phir kya hua jo bill pass hua? ➔"
+      }
+    },
+    {
+      "card_id": "card_12_anna_movement",
+      "card_slug": "card_12_anna_movement",
+      "type": "chat",
+      "concept_id": "anna_hazare_movement",
+      "level": 1,
+      "progress": { "current": 12, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Tension mat lo, saari 8 dates yaad rakhne ki zaroorat nahi - sirf pattern yaad rakho. Ab asli twist: **2011** mein Anna Hazare ne ek bahut bada janandolan (mass movement) chalaya - 'India Against Corruption', jisme unhone Jan Lokpal Bill ki demand ki."
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir, yeh toh maine suna hai! Anna Hazare ka fast/andolan bahut famous tha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Is jan-dabaav (public pressure) ki wajah se aakhirkar Parliament ne **Lokpal and Lokayuktas Act, 2013** pass kiya! Yeh Act 1 January 2014 ko Rashtrapati ke sign se aur **16 January 2014** ko poori tarah se force mein aaya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh yeh 2013 mein bana aur 2014 mein lagu hua? Do alag dates hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_act_vs_enforcement",
+        "button_text": "Haan, dono dates important hain! ➔"
+      }
+    },
+    {
+      "card_id": "card_13_act_vs_enforcement",
+      "card_slug": "card_13_act_vs_enforcement",
+      "type": "chat",
+      "concept_id": "act_pass_vs_enforce_date",
+      "level": 1,
+      "progress": { "current": 13, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Multi-statement Trap: Yaad rakho teen dates:\n\n1️⃣ **2013** - Act Parliament se PASS hua\n2️⃣ **1 January 2014** - President ne sign kiya\n3️⃣ **16 January 2014** - Act poori tarah ENFORCE (lagu) hua"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, toh iska matlab Lokpal 2014 se hi kaam karna shuru kar diya tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Yahin sabse bada twist hai! Act enforce hone ke baad bhi, actual **first Lokpal Chairperson - Justice Pinaki Chandra Ghose - sirf 2019 mein appoint hue!** Matlab Act aur Chairperson ki appointment ke beech **5 saal ka gap** raha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Seriously?? 5 saal tak koi Chairperson hi nahi tha?? Yeh toh bilkul exam ka favorite trap lagta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_14_guess_dates",
+        "button_text": "Practice karo dates pe ➔"
+      }
+    },
+    {
+      "card_id": "card_14_guess_dates",
+      "card_slug": "card_14_guess_dates",
+      "type": "guess",
+      "concept_id": "dates_guess",
+      "level": 1,
+      "progress": { "current": 14, "total": 89 },
+      "guess_payload": {
+        "question": "The first Chairperson of Lokpal, Justice Pinaki Chandra Ghose, was appointed in which year - despite the Act being enforced in 2014?",
+        "options": [
+          { "id": "A", "text": "2014 itself" },
+          { "id": "B", "text": "2016" },
+          { "id": "C", "text": "2019" },
+          { "id": "D", "text": "2021" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Justice Pinaki Chandra Ghose was appointed as India's first Lokpal Chairperson in 2019, a full 5 years after the Lokpal and Lokayuktas Act came into force in 2014. This delay is a favorite exam trap - students often assume appointment happened immediately after the Act's enforcement."
+      },
+      "navigation": {
+        "next": "card_15_quiz_history_q1",
+        "button_text": "Quiz Time! ➔"
+      }
+    },
+    {
+      "card_id": "card_15_quiz_history_q1",
+      "card_slug": "card_15_quiz_history_q1",
+      "type": "quiz",
+      "concept_id": "lokpal_history_quiz",
+      "level": 1,
+      "progress": { "current": 15, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 1/3: The first Lokpal Bill was introduced in Parliament in which year?",
+        "options": [
+          { "id": "A", "text": "1966" },
+          { "id": "B", "text": "1968" },
+          { "id": "C", "text": "1977" },
+          { "id": "D", "text": "2011" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The first Lokpal Bill was introduced in Lok Sabha in 1968, based on the ARC's 1966 recommendation. It was passed in Lok Sabha but lapsed when the House was dissolved before it could be passed in Rajya Sabha. This pattern of lapsing repeated multiple times over the following decades."
+      },
+      "navigation": {
+        "next": "card_16_quiz_history_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_16_quiz_history_q2",
+      "card_slug": "card_16_quiz_history_q2",
+      "type": "quiz",
+      "concept_id": "lokpal_history_quiz",
+      "level": 1,
+      "progress": { "current": 16, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 2/3: The Lokpal and Lokayuktas Act was passed by Parliament in 2013 following the mass movement led by:",
+        "options": [
+          { "id": "A", "text": "Jayaprakash Narayan" },
+          { "id": "B", "text": "Anna Hazare" },
+          { "id": "C", "text": "Medha Patkar" },
+          { "id": "D", "text": "Baba Ramdev alone" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Anna Hazare led the 'India Against Corruption' movement in 2011, demanding a strong Jan Lokpal Bill. This significant public pressure led Parliament to finally pass the Lokpal and Lokayuktas Act in 2013, after 45 years of failed attempts starting from 1968."
+      },
+      "navigation": {
+        "next": "card_17_quiz_history_q3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_17_quiz_history_q3",
+      "card_slug": "card_17_quiz_history_q3",
+      "type": "quiz",
+      "concept_id": "lokpal_history_quiz",
+      "level": 1,
+      "progress": { "current": 17, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 3/3: The Lokpal and Lokayuktas Act, 2013 came into force (was enforced) on:",
+        "options": [
+          { "id": "A", "text": "26 January 2014" },
+          { "id": "B", "text": "16 January 2014" },
+          { "id": "C", "text": "15 August 2014" },
+          { "id": "D", "text": "1 January 2013" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The Act was passed by Parliament in 2013, received Presidential assent on 1 January 2014, and came into force on 16 January 2014. ⭐ BPSC loves testing this precise sequence of dates as a multi-statement trap!"
+      },
+      "navigation": {
+        "next": "card_18_milestone_2",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_18_milestone_2",
+      "card_slug": "card_18_milestone_2",
+      "type": "milestone",
+      "concept_id": "module_2_complete",
+      "level": 1,
+      "progress": { "current": 18, "total": 89 },
+      "milestone_payload": {
+        "title": "🎊 MODULE 2 CLEARED!",
+        "badge_emoji": "📜",
+        "completed_topic": "History of Lokpal Bill",
+        "xp_earned": 40,
+        "milestone_progress": "Module 2/10 Clear",
+        "motivational_quote": "45-saal ki history clear ho gayi! Ab dekhte hain Lokpal actually kaise bana hai - iska Composition! 👥"
+      },
+      "navigation": {
+        "next": "card_19_composition_intro",
+        "button_text": "Start Module 3 ➔"
+      }
+    },
+    {
+      "card_id": "card_19_composition_intro",
+      "card_slug": "card_19_composition_intro",
+      "type": "chat",
+      "concept_id": "lokpal_composition_intro",
+      "level": 2,
+      "progress": { "current": 19, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab dekhte hain Lokpal exactly bana kaisa hai - kitne log usme baithte hain aur kaun ban sakta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, yeh toh koi single officer hoga na, jaise ek judge?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi Raju! Yeh ek single person nahi, balki ek **multi-member body** hai! Isme ek **Chairperson** hota hai aur maximum **8 members** ho sakte hain. Toh total milaakar 9 log ho sakte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "9 log?! Sabhi ek jaise honge ya inme bhi koi division hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_20_judicial_nonjudicial",
+        "button_text": "Bilkul division hai! Dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_20_judicial_nonjudicial",
+      "card_slug": "card_20_judicial_nonjudicial",
+      "type": "chat",
+      "concept_id": "judicial_nonjudicial_members",
+      "level": 2,
+      "progress": { "current": 20, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite: In 8 members mein se, **50% (yaani 4) Judicial Members** honge aur baaki **50% Non-Judicial Members**. Judicial member banne ke liye woh ex-Supreme Court judge ya ex-High Court Chief Justice hona chahiye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur Non-Judicial member ke liye kya qualification chahiye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Non-Judicial member ke liye woh 'impeccable integrity' wala (bilkul saaf-suthri chhavi ka) vyakti hona chahiye, jisko anti-corruption, public administration, vigilance, finance, banking, law aur management mein kam se kam **25 saal ka experience** ho."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ek aur rule hai kya - jaise SC/ST ke liye reservation jaisa kuch?"
+        }
+      ],
+      "navigation": {
+        "next": "card_21_social_representation",
+        "button_text": "Haan! Bahut important rule hai! ➔"
+      }
+    },
+    {
+      "card_id": "card_21_social_representation",
+      "card_slug": "card_21_social_representation",
+      "type": "chat",
+      "concept_id": "social_representation_rule",
+      "level": 2,
+      "progress": { "current": 21, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi doubt! Total 8 members mein se **kam se kam 50%** members SC, ST, OBC, Minorities aur Women mein se hone chahiye. Yeh Act mein explicitly likha gaya hai - social diversity ensure karne ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh do alag '50%' rules hain - ek Judicial/Non-Judicial ke liye, ek Social category ke liye? Yeh toh mix ho jayega mere dimag mein!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Ruko, main clear kar deta hoon: Rule 1 - 4 Judicial + 4 Non-Judicial (function ke basis pe). Rule 2 - Kam se kam 4 members (SC/ST/OBC/Minority/Women) se hone chahiye (social background ke basis pe). Yeh dono ALAG criteria hain, ek dusre se overlap ho sakte hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ohh! Matlab ek judicial member khud bhi woman ya SC/ST se ho sakta hai - dono box tick ho jaayenge uske liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_22_chairperson_eligibility",
+        "button_text": "Ab Chairperson ki eligibility dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_22_chairperson_eligibility",
+      "card_slug": "card_22_chairperson_eligibility",
+      "type": "chat",
+      "concept_id": "chairperson_eligibility",
+      "level": 2,
+      "progress": { "current": 22, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Chairperson banne ke liye vyakti in teen categories mein se koi ek hona chahiye:\n\n1️⃣ Former Chief Justice of India\n2️⃣ Former Supreme Court Judge\n3️⃣ Ek eminent (bahut hi respected) person, jiske paas anti-corruption ke field mein knowledge ho"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Chairperson zaroor koi judge hi hoga?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Zaroori nahi! Teesri category dekho - 'eminent person' bhi ban sakta hai, judge hona compulsory nahi. Yeh flexibility di gayi hai. Aur inki appointment kaise hoti hai, iske liye ek khaas **Selection Committee** banti hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Selection Committee mein kaun-kaun hote hain Sir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_23_quiz_composition_q1",
+        "button_text": "Pehle quiz karo composition pe ➔"
+      }
+    },
+    {
+      "card_id": "card_23_quiz_composition_q1",
+      "card_slug": "card_23_quiz_composition_q1",
+      "type": "quiz",
+      "concept_id": "composition_quiz",
+      "level": 2,
+      "progress": { "current": 23, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 1/3: Lokpal consists of a Chairperson and a maximum of how many members?",
+        "options": [
+          { "id": "A", "text": "5 members" },
+          { "id": "B", "text": "6 members" },
+          { "id": "C", "text": "8 members" },
+          { "id": "D", "text": "10 members" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Lokpal consists of one Chairperson and a maximum of 8 members, making it a multi-member body of up to 9 people total. This is one of the most frequently tested factual points on Lokpal composition."
+      },
+      "navigation": {
+        "next": "card_24_quiz_composition_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_24_quiz_composition_q2",
+      "card_slug": "card_24_quiz_composition_q2",
+      "type": "quiz",
+      "concept_id": "composition_quiz",
+      "level": 2,
+      "progress": { "current": 24, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 2/3: Of the 8 members of Lokpal, what percentage must be Judicial Members?",
+        "options": [
+          { "id": "A", "text": "25%" },
+          { "id": "B", "text": "50%" },
+          { "id": "C", "text": "75%" },
+          { "id": "D", "text": "100%" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "50% of the 8 members (i.e., 4 members) must be Judicial Members, who should be former Supreme Court Judges or former High Court Chief Justices. The remaining 50% are Non-Judicial members with 25 years of experience in relevant fields like anti-corruption, vigilance, and public administration."
+      },
+      "navigation": {
+        "next": "card_25_quiz_composition_q3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_25_quiz_composition_q3",
+      "card_slug": "card_25_quiz_composition_q3",
+      "type": "quiz",
+      "concept_id": "composition_quiz",
+      "level": 2,
+      "progress": { "current": 25, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 3/3: As per the Lokpal Act, what minimum percentage of members must belong to SC/ST/OBC/Minorities/Women category?",
+        "options": [
+          { "id": "A", "text": "At least 25%" },
+          { "id": "B", "text": "At least 50%" },
+          { "id": "C", "text": "Exactly 100%" },
+          { "id": "D", "text": "No such provision exists" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "At least 50% of Lokpal members must belong to SC/ST/OBC/Minorities/Women categories - this is a separate social representation criterion, independent of the Judicial/Non-Judicial classification. ⭐ BPSC Trap: Students often confuse this with the Judicial-member 50% rule, thinking there's only ONE 50% rule!"
+      },
+      "navigation": {
+        "next": "card_26_milestone_3",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_26_milestone_3",
+      "card_slug": "card_26_milestone_3",
+      "type": "milestone",
+      "concept_id": "module_3_complete",
+      "level": 2,
+      "progress": { "current": 26, "total": 89 },
+      "milestone_payload": {
+        "title": "🏆 MODULE 3 CONQUERED!",
+        "badge_emoji": "👥",
+        "completed_topic": "Composition of Lokpal",
+        "xp_earned": 45,
+        "milestone_progress": "Module 3/10 Clear",
+        "motivational_quote": "Composition clear ho gayi! Ab dekhte hain yeh log select kaise hote hain - Selection Committee! 🗳️"
+      },
+      "navigation": {
+        "next": "card_27_selection_committee",
+        "button_text": "Start Module 4 ➔"
+      }
+    },
+    {
+      "card_id": "card_27_selection_committee",
+      "card_slug": "card_27_selection_committee",
+      "type": "chat",
+      "concept_id": "selection_committee_members",
+      "level": 2,
+      "progress": { "current": 27, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, yeh Chairperson aur members ki appointment koi akela vyakti nahi kar sakta - varna misuse ka khatra rahega. Isliye ek **5-member Selection Committee** hai jo milkar decide karti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "5 log? Kaun-kaun hain yeh?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite - yaad karo yeh 5:\n\n1️⃣ Prime Minister (Chairperson of this Committee)\n2️⃣ Speaker of Lok Sabha\n3️⃣ Leader of Opposition in Lok Sabha\n4️⃣ Chief Justice of India (ya unka nominated SC Judge)\n5️⃣ Ek eminent jurist (President dwara nominate kiya gaya)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ismein toh Executive, Legislature aur Judiciary teeno ke log hain! Yeh toh balance banaya gaya hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_search_committee",
+        "button_text": "Bilkul! Ek aur committee bhi hai! ➔"
+      }
+    },
+    {
+      "card_id": "card_28_search_committee",
+      "card_slug": "card_28_search_committee",
+      "type": "chat",
+      "concept_id": "search_committee_role",
+      "level": 2,
+      "progress": { "current": 28, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi observation! Aur ek aur cheez hai - **Search Committee**. Iska kaam hai Selection Committee ko suitable candidates ki list (panel) provide karna, jisme se woh final selection kar sake."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Search Committee shortlist banati hai, aur Selection Committee final choose karti hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Exactly! Aur is Search Committee mein bhi kam se kam **50% members SC/ST/OBC/Minorities/Women** se hone chahiye - same social diversity rule jo Lokpal ke members ke liye tha, wahi yahan bhi lagu hota hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Aur inka term kitne saal ka hota hai Sir - Chairperson aur members ka?"
+        }
+      ],
+      "navigation": {
+        "next": "card_29_term_removal",
+        "button_text": "Term aur removal dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_29_term_removal",
+      "card_slug": "card_29_term_removal",
+      "type": "chat",
+      "concept_id": "term_and_removal",
+      "level": 2,
+      "progress": { "current": 29, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Term hai **5 saal ya 70 saal ki umar tak**, jo bhi pehle aaye. Yeh double-condition wala rule hai - dono mein se jo bhi jaldi complete ho, wahi term ka ant hoga."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab agar koi 68 saal ki umar mein Chairperson bane, toh usse 5 saal poore nahi milenge?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi calculation! Sirf 2 saal hi milenge (70-68), kyunki 70 pehle aa jaayega. Aur agar Chairperson ya member par khud corruption ka aarop lage, toh unhe hatane (remove) ka process bhi hai - Supreme Court ke through inquiry ke baad President order kar sakte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Lokpal khud ko bhi accountable rakhta hai - watch the watchman jaisa concept! Practice karte hain ab!"
+        }
+      ],
+      "navigation": {
+        "next": "card_30_quiz_selection_q1",
+        "button_text": "Quiz Time! ➔"
+      }
+    },
+    {
+      "card_id": "card_30_quiz_selection_q1",
+      "card_slug": "card_30_quiz_selection_q1",
+      "type": "quiz",
+      "concept_id": "selection_committee_quiz",
+      "level": 2,
+      "progress": { "current": 30, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 1/3: Who chairs the 5-member Selection Committee for Lokpal appointment?",
+        "options": [
+          { "id": "A", "text": "Chief Justice of India" },
+          { "id": "B", "text": "Prime Minister" },
+          { "id": "C", "text": "Speaker of Lok Sabha" },
+          { "id": "D", "text": "President of India" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The Prime Minister chairs the 5-member Selection Committee, which also includes the Speaker of Lok Sabha, the Leader of Opposition in Lok Sabha, the Chief Justice of India (or a nominated SC judge), and an eminent jurist nominated by the President."
+      },
+      "navigation": {
+        "next": "card_31_quiz_selection_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_31_quiz_selection_q2",
+      "card_slug": "card_31_quiz_selection_q2",
+      "type": "quiz",
+      "concept_id": "selection_committee_quiz",
+      "level": 2,
+      "progress": { "current": 31, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 2/3: What is the primary function of the 'Search Committee' in the Lokpal appointment process?",
+        "options": [
+          { "id": "A", "text": "To directly appoint the Chairperson" },
+          { "id": "B", "text": "To prepare a panel of suitable candidates for the Selection Committee" },
+          { "id": "C", "text": "To conduct the removal proceedings" },
+          { "id": "D", "text": "To investigate corruption cases" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The Search Committee's role is to prepare a panel (shortlist) of suitable candidates and provide it to the Selection Committee, which then makes the final choice. The Search Committee must also have at least 50% members from SC/ST/OBC/Minorities/Women categories."
+      },
+      "navigation": {
+        "next": "card_32_quiz_selection_q3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_32_quiz_selection_q3",
+      "card_slug": "card_32_quiz_selection_q3",
+      "type": "quiz",
+      "concept_id": "selection_committee_quiz",
+      "level": 2,
+      "progress": { "current": 32, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 3/3: The term of Lokpal Chairperson/Members is 5 years or till what age, whichever is earlier?",
+        "options": [
+          { "id": "A", "text": "62 years" },
+          { "id": "B", "text": "65 years" },
+          { "id": "C", "text": "70 years" },
+          { "id": "D", "text": "75 years" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "The term of the Lokpal Chairperson and Members is 5 years OR until they reach 70 years of age, whichever condition is met first. This differs from CVC's term, which is 4 years or 65 years age - a common comparison point in exams."
+      },
+      "navigation": {
+        "next": "card_33_milestone_4",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_33_milestone_4",
+      "card_slug": "card_33_milestone_4",
+      "type": "milestone",
+      "concept_id": "module_4_complete",
+      "level": 2,
+      "progress": { "current": 33, "total": 89 },
+      "milestone_payload": {
+        "title": "🎖️ MODULE 4 MASTERED!",
+        "badge_emoji": "🗳️",
+        "completed_topic": "Selection & Search Committee",
+        "xp_earned": 45,
+        "milestone_progress": "Module 4/10 Clear",
+        "motivational_quote": "Appointment process crystal clear! Ab sabse interesting topic - Lokpal kis-kis par action le sakta hai? Jurisdiction dekho! 🎯"
+      },
+      "navigation": {
+        "next": "card_34_jurisdiction_intro",
+        "button_text": "Start Module 5 ➔"
+      }
+    },
+    {
+      "card_id": "card_34_jurisdiction_intro",
+      "card_slug": "card_34_jurisdiction_intro",
+      "type": "chat",
+      "concept_id": "jurisdiction_intro",
+      "level": 3,
+      "progress": { "current": 34, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab sabse zaroori sawal - Lokpal kis-kis ke against complaint sun sakta hai? Kya woh chhota clerk se lekar Prime Minister tak, sabko cover karta hai?"
+        },
+        {
+          "speaker": "raju",
+          "text": "PM tak?? Sir, kya PM bhi Lokpal ke daayre (jurisdiction) mein aate hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Yeh sabse revolutionary cheez thi is Act ki - **Prime Minister bhi Lokpal ke jurisdiction mein aate hain!** Isse pehle kisi bhi anti-corruption body ke paas itni power nahi thi. Par PM ke case mein kuch KHAAS safeguards (savdhaniyan) rakhi gayi hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Safeguards? Matlab PM ke case mein normal process follow nahi hota?"
+        }
+      ],
+      "navigation": {
+        "next": "card_35_pm_safeguard_1",
+        "button_text": "Bilkul, dekho kaise! ➔"
+      }
+    },
+    {
+      "card_id": "card_35_pm_safeguard_1",
+      "card_slug": "card_35_pm_safeguard_1",
+      "type": "chat",
+      "concept_id": "pm_exclusion_areas",
+      "level": 3,
+      "progress": { "current": 35, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite: Sabse pehle, kuch subjects hain jinke baare mein PM ke against complaint Lokpal LE HI NAHI SAKTA - inhe **exclusion areas** kehte hain:\n\n• International relations\n• National/External security\n• Public order\n• Atomic energy\n• Space"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab agar PM ne defence deal mein galat kaam kiya ho toh Lokpal kuch nahi kar sakta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi samjhe! Yeh isliye rakha gaya hai kyunki yeh sensitive national security matters hain, jinhe public inquiry mein laana desh ke liye khatarnak ho sakta hai. Yeh EXCEPTION hai, general rule nahi - baaki corruption cases (jaise bribery, asset accumulation) PM ke against ho sakte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, toh yeh sirf specific 5 sensitive areas hain, baaki sab normal cases cover hote hain PM ke liye bhi. Aur koi safeguard hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_36_pm_safeguard_2",
+        "button_text": "Haan, full bench wala rule! ➔"
+      }
+    },
+    {
+      "card_id": "card_36_pm_safeguard_2",
+      "card_slug": "card_36_pm_safeguard_2",
+      "type": "chat",
+      "concept_id": "pm_full_bench_requirement",
+      "level": 3,
+      "progress": { "current": 36, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Doosra safeguard: PM ke against koi bhi inquiry shuru karne ke liye normal Lokpal bench kaafi nahi hai. Isko **Full Bench** approve karna padega - yaani Chairperson + SABHI members ko milkar decide karna hoga."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sabko milkar? Matlab akela Chairperson nahi decide kar sakta?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul nahi! Aur sirf 'majority' se kaam nahi chalega - isko approve karne ke liye kam se kam **2/3rd (do-tihai) majority** chahiye Full Bench ki. Aur PM ke against hearing 'in-camera' (band kamre mein, gupt roop se) hoti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "In-camera? Yeh toh naya word hai mere liye Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_incamera_explained",
+        "button_text": "Yeh term samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_37_incamera_explained",
+      "card_slug": "card_37_incamera_explained",
+      "type": "chat",
+      "concept_id": "in_camera_hearing",
+      "level": 3,
+      "progress": { "current": 37, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "[[In-camera | Court ki karyavahi jo public/media ke saamne nahi, balki closed room mein private tarike se hoti hai]] hearing ka matlab hai ki yeh sunwaayi public ya media ke saamne nahi hoti - completely private hoti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Kyun aisa karte hain PM ke case mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Isliye kyunki agar Lokpal ko lage ki complaint mein dam nahi hai (inquiry ki zaroorat nahi), toh us complaint ki details PUBLISH ya RECORD bhi nahi ki jaa sakti! Yeh PM ki position ki gariman (dignity) ko protect karne ke liye rakha gaya hai - taaki galat/frivolous complaints se image kharab na ho."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Toh yeh balance hai - PM bhi accountable hai, par bina proper evidence ke unki image kharab nahi hogi. Smart design hai yeh! Ab baaki logo ke baare mein batao."
+        }
+      ],
+      "navigation": {
+        "next": "card_38_other_jurisdiction",
+        "button_text": "Baaki jurisdiction dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_38_other_jurisdiction",
+      "card_slug": "card_38_other_jurisdiction",
+      "type": "chat",
+      "concept_id": "other_covered_entities",
+      "level": 3,
+      "progress": { "current": 38, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "PM ke alawa, Lokpal ke jurisdiction mein yeh sab bhi aate hain:\n\n✓ Sabhi Union Ministers\n✓ Members of Parliament (MPs)\n✓ Group A, B, C, D ke Central government officials\n✓ Chairman/Members/Officers of any Board, Corporation, Society, Trust ya Autonomous Body jo Central Act se bana ho ya Government-funded ho"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, private NGOs ka kya - jo foreign countries se paisa lete hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ Bahut accha sawal! Haan, agar koi Society ya Trust **saal mein 10 lakh rupaye se zyada foreign contribution** leta hai (FCRA ke through), toh WOH bhi Lokpal ke jurisdiction mein aata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Matlab yeh sirf government tak simit nahi hai - private/NGO sector ko bhi cover karta hai agar woh foreign funding leta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_39_judiciary_exclusion",
+        "button_text": "Ek exception hai bhi! ➔"
+      }
+    },
+    {
+      "card_id": "card_39_judiciary_exclusion",
+      "card_slug": "card_39_judiciary_exclusion",
+      "type": "chat",
+      "concept_id": "judiciary_separate_mechanism",
+      "level": 3,
+      "progress": { "current": 39, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Trap: Ek important EXCLUSION yaad rakho - Lokpal ke jurisdiction mein **Judges (judiciary)** NAHI aate! Unke liye alag mechanism hai - 'Judicial Standards and Accountability' se related process."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh judges bilkul bhi accountability se bahar hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi, unke liye alag process hai - Judiciary khud apni internal mechanism se in-house inquiry karti hai, ya Parliament mein Impeachment jaisa process hota hai. Lokpal sirf Executive aur Legislature (MPs) ke members ke against kaam karta hai, Judiciary ke against nahi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Separation of Powers ka concept yahan bhi lagu ho raha hai! Ab time limit ka bhi kuch rule hoga inquiry ke liye?"
+        }
+      ],
+      "navigation": {
+        "next": "card_40_time_limits",
+        "button_text": "Haan, time limits dekho! ➔"
+      }
+    },
+    {
+      "card_id": "card_40_time_limits",
+      "card_slug": "card_40_time_limits",
+      "type": "chat",
+      "concept_id": "inquiry_time_limits",
+      "level": 3,
+      "progress": { "current": 40, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Time-bound justice ensure karne ke liye:\n\n• Preliminary Inquiry: **60 days** mein complete karni hai\n• Full Investigation: **6 months** mein complete karni hai (aur 6 mahine extend ho sakte hain, agar valid reason ho)"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh maximum ek complaint mein kitna time lag sakta hai poori inquiry mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "60 days preliminary + 6 mahine + 6 mahine extension = roughly ek saal ke aas-paas maximum time. Yeh isliye rakha gaya hai ki cases lambe samay tak latakte na rahein, jaise purane time mein hota tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Ab practice karte hain jurisdiction pe!"
+        }
+      ],
+      "navigation": {
+        "next": "card_41_quiz_jurisdiction_q1",
+        "button_text": "Quiz Time! ➔"
+      }
+    },
+    {
+      "card_id": "card_41_quiz_jurisdiction_q1",
+      "card_slug": "card_41_quiz_jurisdiction_q1",
+      "type": "quiz",
+      "concept_id": "jurisdiction_quiz",
+      "level": 3,
+      "progress": { "current": 41, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 1/3: Which of the following areas is EXCLUDED from Lokpal's jurisdiction even in matters concerning the Prime Minister?",
+        "options": [
+          { "id": "A", "text": "Bribery in government contracts" },
+          { "id": "B", "text": "International relations, security, atomic energy, and space" },
+          { "id": "C", "text": "Disproportionate assets" },
+          { "id": "D", "text": "Misuse of official position" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Allegations against the PM related to international relations, external/internal security, public order, atomic energy, and space are excluded from Lokpal's jurisdiction. These are considered highly sensitive national security matters. However, other corruption allegations (bribery, disproportionate assets) against the PM CAN be inquired into."
+      },
+      "navigation": {
+        "next": "card_42_quiz_jurisdiction_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_42_quiz_jurisdiction_q2",
+      "card_slug": "card_42_quiz_jurisdiction_q2",
+      "type": "quiz",
+      "concept_id": "jurisdiction_quiz",
+      "level": 3,
+      "progress": { "current": 42, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 2/3: To initiate an inquiry against the Prime Minister, what special requirement must be met?",
+        "options": [
+          { "id": "A", "text": "Simple majority of any 3 members" },
+          { "id": "B", "text": "Approval by Full Bench with at least 2/3rd majority, held in-camera" },
+          { "id": "C", "text": "Only the Chairperson's approval is needed" },
+          { "id": "D", "text": "Approval from the President of India" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "An inquiry against the PM requires approval by the FULL BENCH of Lokpal (Chairperson + all members) with at least a 2/3rd majority. The hearing must be held IN-CAMERA (privately), and if the complaint is found not to merit inquiry, its records cannot be published or disclosed - protecting the PM's dignity from frivolous complaints."
+      },
+      "navigation": {
+        "next": "card_43_quiz_jurisdiction_q3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_43_quiz_jurisdiction_q3",
+      "card_slug": "card_43_quiz_jurisdiction_q3",
+      "type": "quiz",
+      "concept_id": "jurisdiction_quiz",
+      "level": 3,
+      "progress": { "current": 43, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 3/3: A Trust/Society receiving foreign contribution above what annual amount comes under Lokpal's jurisdiction?",
+        "options": [
+          { "id": "A", "text": "Rs 1 lakh" },
+          { "id": "B", "text": "Rs 5 lakh" },
+          { "id": "C", "text": "Rs 10 lakh" },
+          { "id": "D", "text": "Rs 1 crore" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Any Society or Trust receiving foreign contribution above Rs 10 lakh per year (under FCRA - Foreign Contribution Regulation Act) comes under Lokpal's jurisdiction. This extends Lokpal's reach beyond pure government entities into NGOs with significant foreign funding, ensuring accountability in that sector too."
+      },
+      "navigation": {
+        "next": "card_44_milestone_5",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_44_milestone_5",
+      "card_slug": "card_44_milestone_5",
+      "type": "milestone",
+      "concept_id": "module_5_complete",
+      "level": 3,
+      "progress": { "current": 44, "total": 89 },
+      "milestone_payload": {
+        "title": "🎯 MODULE 5 CRUSHED!",
+        "badge_emoji": "🔍",
+        "completed_topic": "Jurisdiction of Lokpal",
+        "xp_earned": 55,
+        "milestone_progress": "Module 5/10 Clear",
+        "motivational_quote": "Jurisdiction bilkul clear ho gaya! Ab dekhte hain Lokpal ke paas actual POWERS kya hain - kaise woh action leta hai! 💪"
+      },
+      "navigation": {
+        "next": "card_45_powers_intro",
+        "button_text": "Start Module 6 ➔"
+      }
+    },
+    {
+      "card_id": "card_45_powers_intro",
+      "card_slug": "card_45_powers_intro",
+      "type": "chat",
+      "concept_id": "lokpal_powers_wings",
+      "level": 3,
+      "progress": { "current": 45, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, sirf complaint sunna kaafi nahi hai - action lene ke liye tools chahiye. Lokpal ke paas do khaas 'Wings' (departments) hain apna kaam karne ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Do wings? Yeh kya alag-alag kaam karte hain?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul!\n\n1️⃣ **Inquiry Wing** - yeh preliminary inquiry (shuruaati jaanch) karti hai. Isko civil court jaisi powers milti hain - summon karna, documents maangna, etc.\n\n2️⃣ **Prosecution Wing** - yeh Director of Prosecution ke under kaam karti hai, aur agar case saboot ke saath mile toh special court mein case file karti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh pehle Inquiry Wing dekhti hai case sach hai ya jhoota, phir Prosecution Wing court mein le jaati hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_46_cbi_superintendence",
+        "button_text": "Haan! Ab CBI wala power dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_46_cbi_superintendence",
+      "card_slug": "card_46_cbi_superintendence",
+      "type": "chat",
+      "concept_id": "cbi_superintendence_power",
+      "level": 3,
+      "progress": { "current": 46, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ Bahut important power: Lokpal ke paas **CBI par superintendence (supervision) aur direction dene ki power** hai - par yeh sirf un cases mein jo Lokpal ne khud CBI ko REFER kiye hon."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab Lokpal, CBI ka boss ban jaata hai case ke liye?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Kuch had tak haan! Aur ek aur khaas rule - agar Lokpal ne koi case CBI ko refer kiya hai, toh usme investigate karne wale CBI officer ko Lokpal ki permission ke bina TRANSFER nahi kiya jaa sakta! Yeh isliye rakha gaya hai ki koi political pressure daal kar officer ko hata na sake."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Yeh toh CBI ki independence protect karne ka smart tareeka hai! Aur bhi koi powers hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_47_attachment_property",
+        "button_text": "Haan, property attach karne ki power! ➔"
+      }
+    },
+    {
+      "card_id": "card_47_attachment_property",
+      "card_slug": "card_47_attachment_property",
+      "type": "chat",
+      "concept_id": "attachment_confiscation_power",
+      "level": 3,
+      "progress": { "current": 47, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Agar Lokpal ki prima facie (pehli nazar mein) opinion ban jaaye ki koi property corruption se banayi gayi hai, toh woh property **attach (seize/freeze)** karne ka order de sakta hai - taaki accused property becch na sake evidence mitane ke liye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Yeh toh bahut zaroori hai! Warna corrupt log paisa/property jaldi se transfer kar denge!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Aur Lokpal yeh bhi recommend kar sakta hai ki koi corrupt public servant transfer ya suspend ho jaaye - taaki woh apni position ka misuse karke evidence tamper na kar sake investigation ke dauraan."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, aur case ka trial kahan hota hai - normal court mein?"
+        }
+      ],
+      "navigation": {
+        "next": "card_48_special_courts",
+        "button_text": "Nahi, special courts hain! ➔"
+      }
+    },
+    {
+      "card_id": "card_48_special_courts",
+      "card_slug": "card_48_special_courts",
+      "type": "chat",
+      "concept_id": "special_courts_speedy_trial",
+      "level": 3,
+      "progress": { "current": 48, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sahi socha! Lokpal-referred cases ke liye **Special Courts** banaye jaate hain jo speedy trial (jaldi nyay) ensure karte hain. Normal courts mein cases saalon saal chalte hain, isliye corruption cases ke liye dedicated courts banaye gaye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Toh yeh poori system ek chain hai - Complaint → Inquiry Wing → Prosecution Wing → Special Court!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi samjhe! Poora ecosystem design kiya gaya hai speedy aur effective anti-corruption action ke liye. Ab practice karte hain powers ke upar!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Chalo Sir, quiz shuru karte hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_49_quiz_powers_q1",
+        "button_text": "Quiz Time! ➔"
+      }
+    },
+    {
+      "card_id": "card_49_quiz_powers_q1",
+      "card_slug": "card_49_quiz_powers_q1",
+      "type": "quiz",
+      "concept_id": "powers_quiz",
+      "level": 3,
+      "progress": { "current": 49, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 1/3: Which wing of Lokpal is responsible for filing cases in special courts after evidence is found?",
+        "options": [
+          { "id": "A", "text": "Inquiry Wing" },
+          { "id": "B", "text": "Prosecution Wing" },
+          { "id": "C", "text": "Vigilance Wing" },
+          { "id": "D", "text": "Legal Wing" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The Prosecution Wing, headed by the Director of Prosecution, files cases in Special Courts once evidence is found sufficient. This comes after the Inquiry Wing has conducted its preliminary investigation and established a prima facie case."
+      },
+      "navigation": {
+        "next": "card_50_quiz_powers_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_50_quiz_powers_q2",
+      "card_slug": "card_50_quiz_powers_q2",
+      "type": "quiz",
+      "concept_id": "powers_quiz",
+      "level": 3,
+      "progress": { "current": 50, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 2/3: If Lokpal refers a case to CBI, what special protection applies to the investigating officer?",
+        "options": [
+          { "id": "A", "text": "The officer gets automatic promotion" },
+          { "id": "B", "text": "The officer cannot be transferred without Lokpal's permission" },
+          { "id": "C", "text": "The officer becomes immune from all court proceedings" },
+          { "id": "D", "text": "No special protection exists" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "When Lokpal refers a case to CBI, the investigating officer handling that specific case CANNOT be transferred without Lokpal's permission. This safeguard protects the investigation from political interference or pressure that might otherwise be exerted by transferring an inconvenient officer."
+      },
+      "navigation": {
+        "next": "card_51_quiz_powers_q3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_51_quiz_powers_q3",
+      "card_slug": "card_51_quiz_powers_q3",
+      "type": "quiz",
+      "concept_id": "powers_quiz",
+      "level": 3,
+      "progress": { "current": 51, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 3/3: Lokpal's power to order 'attachment' of property is primarily used to:",
+        "options": [
+          { "id": "A", "text": "Permanently confiscate property immediately without any trial" },
+          { "id": "B", "text": "Freeze/seize property suspected to be proceeds of corruption, preventing its transfer" },
+          { "id": "C", "text": "Give the property to the complainant" },
+          { "id": "D", "text": "Sell the property at auction immediately" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The attachment power allows Lokpal to freeze/seize property that is prima facie suspected to be acquired through corrupt means, preventing the accused from transferring or disposing of it during the investigation. This is a preventive measure, not a final confiscation - that would come after trial in a special court."
+      },
+      "navigation": {
+        "next": "card_52_milestone_6",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_52_milestone_6",
+      "card_slug": "card_52_milestone_6",
+      "type": "milestone",
+      "concept_id": "module_6_complete",
+      "level": 3,
+      "progress": { "current": 52, "total": 89 },
+      "milestone_payload": {
+        "title": "💪 MODULE 6 CONQUERED!",
+        "badge_emoji": "⚔️",
+        "completed_topic": "Powers of Lokpal",
+        "xp_earned": 50,
+        "milestone_progress": "Module 6/10 Clear",
+        "motivational_quote": "Powers samajh gaye! Ab dekhte hain State level pe iska counterpart - Lokayukta, aur Bihar ki khaas kahani! 🏛️"
+      },
+      "navigation": {
+        "next": "card_53_lokayukta_intro",
+        "button_text": "Start Module 7 ➔"
+      }
+    },
+    {
+      "card_id": "card_53_lokayukta_intro",
+      "card_slug": "card_53_lokayukta_intro",
+      "type": "chat",
+      "concept_id": "lokayukta_state_level",
+      "level": 4,
+      "progress": { "current": 53, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab tak humne Central level ki baat ki - Lokpal. Par corruption toh State level pe bhi hota hai na - jaise state ke Minister ya officer ke against?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Haan Sir! Toh state level pe bhi koi aisi body hai kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Isko **Lokayukta** kehte hain - yeh naam yaad hai na, Singhvi ne diya tha. Lokpal Act 2013 mein yeh mandatory kiya gaya tha ki har state apna Lokayukta ek saal ke andar banaye - though yeh deadline baad mein extend hoti rahi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Bihar mein bhi Lokayukta hai kya? Yeh mera exam ke liye bahut relevant hoga!"
+        }
+      ],
+      "navigation": {
+        "next": "card_54_bihar_lokayukta",
+        "button_text": "Haan! Bihar ki kahani sunao ➔"
+      }
+    },
+    {
+      "card_id": "card_54_bihar_lokayukta",
+      "card_slug": "card_54_bihar_lokayukta",
+      "type": "chat",
+      "concept_id": "bihar_lokayukta_history",
+      "level": 4,
+      "progress": { "current": 54, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite: Bihar bahut early states mein se ek tha jisne apna Lokayukta banaya - **Bihar Lokayukta Act, 1973** ke through. Yeh Central Lokpal Act (2013) se bhi 40 saal pehle ban gaya tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, itna pehle?? Toh Bihar toh iska pioneer state raha hoga!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Bihar ne is field mein leadership dikhayi thi. Aur ek aur bahut important cheez - **Bihar Special Court Act, 2009** bhi hai, jo corruption se kamayi hui property ko confiscate (zabt) karne ki special provision deta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Special property confiscation? Yeh toh Lokpal ke attachment power jaisa lagta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_55_bihar_special_court",
+        "button_text": "Haan, similar concept! Detail dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_55_bihar_special_court",
+      "card_slug": "card_55_bihar_special_court",
+      "type": "chat",
+      "concept_id": "bihar_special_court_act_detail",
+      "level": 4,
+      "progress": { "current": 55, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite (Bihar SCERT specific): Bihar Special Court Act, 2009 ne ek innovative provision di - agar kisi corrupt public servant ki property 'disproportionate to income' (aamdani se zyada) mili, toh state usse confiscate kar sakta tha, bina lambi criminal trial ka intezaar kiye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Bina trial ke hi property le lete the? Yeh toh bahut fast process hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, yeh ek fast-track mechanism tha civil nature ka. Yeh act specifically Bihar mein high-profile corruption cases (jaise chara ghotala - fodder scam) ke baad ka context tha, jisne desh bhar mein dhyan khincha tha anti-corruption reforms ki taraf."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Toh Bihar ki apni history bhi kaafi rich hai is field mein! Aur states ka bhi kuch pehla record hai kya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_56_first_lokayukta_state",
+        "button_text": "Haan, first state dekho! ➔"
+      }
+    },
+    {
+      "card_id": "card_56_first_lokayukta_state",
+      "card_slug": "card_56_first_lokayukta_state",
+      "type": "chat",
+      "concept_id": "maharashtra_first_lokayukta",
+      "level": 4,
+      "progress": { "current": 56, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ SSC/Railway Speed-Fact: **Maharashtra** first Indian state tha jisne apna functional Lokayukta 1971-72 mein establish kiya - yeh sabse pehla operational Lokayukta tha desh mein!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Maharashtra pehla state hai overall, aur Bihar bhi bahut early states mein hai (1973)?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Yeh do alag facts hain - dono exam mein puchhe jaa sakte hain. State Lokayukta ki composition aur powers har state mein alag-alag ho sakti hain, kyunki yeh state-specific Acts se govern hoti hain (though Central Act ne kuch guidelines di hain 2013 ke baad)."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Toh Lokpal ek uniform Central law hai, par Lokayukta har state mein thoda alag ho sakta hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_57_quiz_lokayukta_q1",
+        "button_text": "Bilkul sahi! Quiz karo ➔"
+      }
+    },
+    {
+      "card_id": "card_57_quiz_lokayukta_q1",
+      "card_slug": "card_57_quiz_lokayukta_q1",
+      "type": "quiz",
+      "concept_id": "lokayukta_quiz",
+      "level": 4,
+      "progress": { "current": 57, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 1/3: Which state was the first to establish a FUNCTIONAL Lokayukta in India (1971-72)?",
+        "options": [
+          { "id": "A", "text": "Bihar" },
+          { "id": "B", "text": "Maharashtra" },
+          { "id": "C", "text": "Uttar Pradesh" },
+          { "id": "D", "text": "Odisha" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Maharashtra was the first state to establish a functional Lokayukta in 1971-72, becoming the pioneer state-level anti-corruption ombudsman in India, even before the Central Lokpal was legislated (2013)."
+      },
+      "navigation": {
+        "next": "card_58_quiz_lokayukta_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_58_quiz_lokayukta_q2",
+      "card_slug": "card_58_quiz_lokayukta_q2",
+      "type": "quiz",
+      "concept_id": "lokayukta_quiz",
+      "level": 4,
+      "progress": { "current": 58, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 2/3: The Bihar Lokayukta Act was enacted in which year?",
+        "options": [
+          { "id": "A", "text": "1968" },
+          { "id": "B", "text": "1973" },
+          { "id": "C", "text": "2009" },
+          { "id": "D", "text": "2013" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The Bihar Lokayukta Act was enacted in 1973, making Bihar one of the early pioneer states to establish this anti-corruption ombudsman institution - decades before the Central Lokpal and Lokayuktas Act of 2013. ⭐ This is a favorite BPSC TRE fact, testing Bihar-specific legislative history."
+      },
+      "navigation": {
+        "next": "card_59_quiz_lokayukta_q3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_59_quiz_lokayukta_q3",
+      "card_slug": "card_59_quiz_lokayukta_q3",
+      "type": "quiz",
+      "concept_id": "lokayukta_quiz",
+      "level": 4,
+      "progress": { "current": 59, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 3/3: The Bihar Special Court Act, 2009, primarily deals with:",
+        "options": [
+          { "id": "A", "text": "Establishing new police stations" },
+          { "id": "B", "text": "Confiscation of disproportionate assets/property of corrupt public servants" },
+          { "id": "C", "text": "Setting up new universities" },
+          { "id": "D", "text": "Land reform policies" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The Bihar Special Court Act, 2009, provided a fast-track mechanism for confiscating property found to be disproportionate to a public servant's known income sources, without needing to wait for a lengthy criminal trial - a significant anti-corruption reform specific to Bihar."
+      },
+      "navigation": {
+        "next": "card_60_milestone_7",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_60_milestone_7",
+      "card_slug": "card_60_milestone_7",
+      "type": "milestone",
+      "concept_id": "module_7_complete",
+      "level": 4,
+      "progress": { "current": 60, "total": 89 },
+      "milestone_payload": {
+        "title": "🏛️ MODULE 7 DONE!",
+        "badge_emoji": "🗺️",
+        "completed_topic": "Lokayukta & Bihar's Anti-Corruption History",
+        "xp_earned": 50,
+        "milestone_progress": "Module 7/10 Clear",
+        "motivational_quote": "State level clear ho gaya! Ab dekhte hain ek aur purani anti-corruption body - CVC ki poori kahani! 🕵️"
+      },
+      "navigation": {
+        "next": "card_61_cvc_intro",
+        "button_text": "Start Module 8 ➔"
+      }
+    },
+    {
+      "card_id": "card_61_cvc_intro",
+      "card_slug": "card_61_cvc_intro",
+      "type": "chat",
+      "concept_id": "cvc_introduction",
+      "level": 4,
+      "progress": { "current": 61, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab dekhte hain ek aur body - **CVC (Central Vigilance Commission)**. Yeh Lokpal se BAHUT purani hai - Lokpal 2013 mein bana, par CVC ka origin dekho!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Purani hai? Kab bani thi yeh?"
+        },
+        {
+          "speaker": "aman",
+          "text": "CVC set up hui **1964** mein - ek committee ki recommendation par jise **Santhanam Committee** kehte hain (Chairman: K. Santhanam). Iska full naam hai 'Committee on Prevention of Corruption'."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, yeh toh Lokpal se bahut pehle ka hai! CVC aur Lokpal mein farak kya hai phir?"
+        }
+      ],
+      "navigation": {
+        "next": "card_62_cvc_nonstatutory",
+        "button_text": "Pehle status samjho ➔"
+      }
+    },
+    {
+      "card_id": "card_62_cvc_nonstatutory",
+      "card_slug": "card_62_cvc_nonstatutory",
+      "type": "chat",
+      "concept_id": "cvc_non_statutory_beginning",
+      "level": 4,
+      "progress": { "current": 62, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite: Universal Rule samjho - jab CVC 1964 mein bani, tab yeh sirf ek **executive resolution** ke through bani thi - matlab isko koi Parliament ka kaanoon (statute) support nahi karta tha. Isse [[Non-Statutory Body | Aisi sansta jo kisi Parliament ke banaye kaanoon se nahi, balki executive order se bani ho]] kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab CVC ke paas koi legal power hi nahi thi shuru mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul weak thi shuru mein - koi legal teeth nahi thi, sirf advisory (salaah dene wali) body thi. Yeh problem tab tak chali jab tak ek famous case nahi aaya - **Vineet Narain case, 1997**, jise 'Hawala Case' bhi kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hawala case? Isme kya hua tha jisse CVC ko strong banaya gaya?"
+        }
+      ],
+      "navigation": {
+        "next": "card_63_vineet_narain_case",
+        "button_text": "Poori kahani sunao! ➔"
+      }
+    },
+    {
+      "card_id": "card_63_vineet_narain_case",
+      "card_slug": "card_63_vineet_narain_case",
+      "type": "chat",
+      "concept_id": "vineet_narain_supreme_court",
+      "level": 4,
+      "progress": { "current": 63, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Vineet Narain case mein Supreme Court ne dekha ki CBI aur CVC dono political interference ke shikaar the - jaanch mein rukawat aa rahi thi bade neta-officers ke against. Isliye Supreme Court ne **1997** mein khud directions diye ki CVC ko statutory status di jaaye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Supreme Court ne bola ki CVC ko taaqat do?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Isi order ke baad **CVC Act, 2003** pass hua, jisne CVC ko finally **statutory status** di - ab yeh Parliament ke kaanoon se bandhi body ban gayi, sirf executive resolution wali kamzor body nahi rahi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh timeline yeh hai - 1964 mein bani (weak), 1997 mein SC ne order diya, 2003 mein Act se strong hui? Yeh toh 3 alag dates ho gayi yaad rakhne ke liye!"
+        }
+      ],
+      "navigation": {
+        "next": "card_64_cvc_timeline_recap",
+        "button_text": "Haan, timeline clarify karta hoon ➔"
+      }
+    },
+    {
+      "card_id": "card_64_cvc_timeline_recap",
+      "card_slug": "card_64_cvc_timeline_recap",
+      "type": "chat",
+      "concept_id": "cvc_timeline_clear",
+      "level": 4,
+      "progress": { "current": 64, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Multi-statement Trap: Yaad rakho yeh 3 dates ek chain ki tarah:\n\n1️⃣ **1964** - CVC bani (Santhanam Committee recommendation, non-statutory)\n2️⃣ **1997** - Vineet Narain case, SC directions\n3️⃣ **2003** - CVC Act, statutory status mili"
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, matlab CVC ko statutory hone mein 39 saal lag gaye (1964 se 2003 tak)!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi calculation! Aur is trick ko yaad rakho: CVC ka pattern Lokpal jaisa hi hai - pehle bahut lambi struggle, phir koi bada trigger event (Lokpal ke liye Anna Hazare, CVC ke liye Vineet Narain case), phir final legal status."
+        },
+        {
+          "speaker": "raju",
+          "text": "Interesting pattern hai! Ab CVC ki composition dekhte hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_65_cvc_composition",
+        "button_text": "Haan, composition dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_65_cvc_composition",
+      "card_slug": "card_65_cvc_composition",
+      "type": "chat",
+      "concept_id": "cvc_composition_detail",
+      "level": 4,
+      "progress": { "current": 65, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "CVC ki composition Lokpal se chhoti hai - **Central Vigilance Commissioner (CVC ka head)** + maximum **2 Vigilance Commissioners**. Toh total maximum 3 log."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, 3 log? Yeh toh Lokpal ke 9 logo se bahut kam hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi observation - yeh CVC ke chhote scope ko dikhata hai. Inki appointment President karte hain, ek 3-member committee ki recommendation par: **Prime Minister (Chairperson)** + **Home Minister** + **Leader of Opposition in Lok Sabha**."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, isme toh Judiciary ka koi member nahi hai - Lokpal ki Selection Committee mein CJI bhi tha na?"
+        }
+      ],
+      "navigation": {
+        "next": "card_66_cvc_term",
+        "button_text": "Bilkul sahi pakda! Term dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_66_cvc_term",
+      "card_slug": "card_66_cvc_term",
+      "type": "chat",
+      "concept_id": "cvc_term_removal",
+      "level": 4,
+      "progress": { "current": 66, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Ekdum sahi pakda! CVC ki Selection Committee mein Judiciary shaamil nahi hai - sirf Executive aur Legislature ke log hain. Yeh Lokpal se ek important difference hai. Aur term - CVC ka **4 saal ya 65 saal umar**, jo bhi pehle aaye."
+        },
+        {
+          "speaker": "raju",
+          "text": "Lokpal ka toh 5 saal, 70 saal tha na? Yeh alag hai!"
+        },
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Trap: Bilkul sahi pakda difference! **Lokpal = 5 saal/70 saal**, **CVC = 4 saal/65 saal**. Yeh do alag numbers hain jo exam mein switch karke confuse kiya jaata hai!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Noted Sir! Ab CVC ki actual power kya hai - kya woh khud investigation karti hai?"
+        }
+      ],
+      "navigation": {
+        "next": "card_67_quiz_cvc_history_q1",
+        "button_text": "Pehle quiz karo history pe ➔"
+      }
+    },
+    {
+      "card_id": "card_67_quiz_cvc_history_q1",
+      "card_slug": "card_67_quiz_cvc_history_q1",
+      "type": "quiz",
+      "concept_id": "cvc_history_quiz",
+      "level": 4,
+      "progress": { "current": 67, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 1/3: CVC was set up in 1964 based on the recommendations of which committee?",
+        "options": [
+          { "id": "A", "text": "Administrative Reforms Commission" },
+          { "id": "B", "text": "Santhanam Committee" },
+          { "id": "C", "text": "Sarkaria Commission" },
+          { "id": "D", "text": "Punchhi Commission" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The Central Vigilance Commission (CVC) was set up in 1964 based on the recommendations of the Santhanam Committee (Committee on Prevention of Corruption), chaired by K. Santhanam. It began as a non-statutory body created through an executive resolution."
+      },
+      "navigation": {
+        "next": "card_68_quiz_cvc_history_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_68_quiz_cvc_history_q2",
+      "card_slug": "card_68_quiz_cvc_history_q2",
+      "type": "quiz",
+      "concept_id": "cvc_history_quiz",
+      "level": 4,
+      "progress": { "current": 68, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 2/3: CVC received statutory status through the CVC Act, 2003, following Supreme Court directions in which landmark case?",
+        "options": [
+          { "id": "A", "text": "Kesavananda Bharati case" },
+          { "id": "B", "text": "Vineet Narain case (Hawala case), 1997" },
+          { "id": "C", "text": "Maneka Gandhi case" },
+          { "id": "D", "text": "Golaknath case" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "In the Vineet Narain case (1997), also known as the Hawala case, the Supreme Court directed that CVC be given statutory status to ensure independence from political interference in corruption investigations. This led to the CVC Act, 2003, being enacted."
+      },
+      "navigation": {
+        "next": "card_69_quiz_cvc_history_q3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_69_quiz_cvc_history_q3",
+      "card_slug": "card_69_quiz_cvc_history_q3",
+      "type": "quiz",
+      "concept_id": "cvc_history_quiz",
+      "level": 4,
+      "progress": { "current": 69, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 3/3: CVC's composition consists of the Central Vigilance Commissioner and a maximum of how many Vigilance Commissioners?",
+        "options": [
+          { "id": "A", "text": "1" },
+          { "id": "B", "text": "2" },
+          { "id": "C", "text": "4" },
+          { "id": "D", "text": "8" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CVC consists of a Central Vigilance Commissioner (Chairperson) and a maximum of 2 Vigilance Commissioners, making a total of maximum 3 members - much smaller than Lokpal's 9-member (Chairperson + 8) structure."
+      },
+      "navigation": {
+        "next": "card_70_milestone_8",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_70_milestone_8",
+      "card_slug": "card_70_milestone_8",
+      "type": "milestone",
+      "concept_id": "module_8_complete",
+      "level": 4,
+      "progress": { "current": 70, "total": 89 },
+      "milestone_payload": {
+        "title": "🕵️ MODULE 8 CLEARED!",
+        "badge_emoji": "📊",
+        "completed_topic": "CVC - History & Composition",
+        "xp_earned": 50,
+        "milestone_progress": "Module 8/10 Clear",
+        "motivational_quote": "CVC ki history clear! Ab dekhte hain CVC ke actual powers aur Lokpal se comparison! ⚖️"
+      },
+      "navigation": {
+        "next": "card_71_cvc_powers",
+        "button_text": "Start Module 9 ➔"
+      }
+    },
+    {
+      "card_id": "card_71_cvc_powers",
+      "card_slug": "card_71_cvc_powers",
+      "type": "chat",
+      "concept_id": "cvc_actual_powers",
+      "level": 5,
+      "progress": { "current": 71, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab dekhte hain CVC actual mein kya kaam karti hai. Sabse important point yaad rakho - **CVC khud koi investigating agency NAHI hai!** Yeh khud raid nahi maarti, khud arrest nahi karti."
+        },
+        {
+          "speaker": "raju",
+          "text": "Hain?? Toh phir yeh karti kya hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "CVC ka kaam hai **CBI ke Anti-Corruption Wing par superintendence (nigraani)** rakhna - matlab CBI ki jaanch ko monitor/oversee karna, especially Prevention of Corruption Act, 1988 wale cases mein. Yeh mainly ek **advisory aur monitoring body** hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha, toh CVC 'boss' hai par khud kaam CBI karti hai? Yeh toh CBI supervise karne wali body hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_72_cvo_network",
+        "button_text": "Aur ek network bhi hai! ➔"
+      }
+    },
+    {
+      "card_id": "card_72_cvo_network",
+      "card_slug": "card_72_cvo_network",
+      "type": "chat",
+      "concept_id": "cvo_departments",
+      "level": 5,
+      "progress": { "current": 72, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Aur CVC ka ek pura network hai - har Ministry/Department mein ek **Chief Vigilance Officer (CVO)** hota hai, jo apne department ke corruption cases CVC ko report karta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh yeh jaise CVC ke aankh-kaan hote hain har department mein?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi analogy! Yeh network CVC ko poore government mein corruption ke baare mein information deta hai, aur CVC apni **Annual Report President ko submit karti hai**, jo Parliament mein present hoti hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Ab compare karna hai Sir - CVC aur Lokpal mein exact farak kya hai? Yeh mujhe confuse kar raha hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_73_cvc_lokpal_comparison",
+        "button_text": "Poora comparison dekho! ➔"
+      }
+    },
+    {
+      "card_id": "card_73_cvc_lokpal_comparison",
+      "card_slug": "card_73_cvc_lokpal_comparison",
+      "type": "chat",
+      "concept_id": "cvc_vs_lokpal_key_diff",
+      "level": 5,
+      "progress": { "current": 73, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC TRE Favorite: Sabse bada difference yaad rakho -\n\n**CVC**: Sirf RECOMMENDATORY body hai, khud prosecution/inquiry wing nahi hai, CBI par supervise karti hai\n\n**Lokpal**: Apni khud ki Inquiry Wing aur Prosecution Wing hai, khud action le sakta hai, CBI par bhi superintendence hai"
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Lokpal zyada powerful hai CVC se?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Lokpal ka scope zyada broad hai (PM tak cover karta hai) aur powers bhi zyada hain (khud prosecution kar sakta hai). CVC zyada 'watchdog/advisory' role mein hai, jabki Lokpal 'active investigator + prosecutor' dono hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Samajh gaya! Toh in dono ke saath-saath koi aur cheez bhi related hai - jaise whistleblower log jo corruption report karte hain?"
+        }
+      ],
+      "navigation": {
+        "next": "card_74_whistleblower_intro",
+        "button_text": "Haan, Whistleblower Act dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_74_whistleblower_intro",
+      "card_slug": "card_74_whistleblower_intro",
+      "type": "chat",
+      "concept_id": "whistleblower_protection_act",
+      "level": 5,
+      "progress": { "current": 74, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Bahut accha connection banaya! [[Whistleblower | Woh vyakti jo apne department/organization ke andar ho rahe corruption/galat kaam ki jaankari sarkar/media ko deta hai]] bahut zaroori hote hain corruption pakadne mein - par unhe khatra bhi rehta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Khatra? Matlab unhe koi nuksaan pahunchane ki koshish karta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul! Isi wajah se **Whistleblower Protection Act, 2011** banaya gaya, jo aise logo ko legal protection deta hai jo corruption/misuse of power ki complaint karte hain - unki identity confidential rakhi jaati hai aur unhe harassment se bachaya jaata hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Toh yeh poora ecosystem hai - Whistleblower complaint karta hai, CVC/Lokpal jaanch karti hai, Special Court punishment deta hai! Ab practice karte hain CVC powers pe."
+        }
+      ],
+      "navigation": {
+        "next": "card_75_quiz_cvc_powers_q1",
+        "button_text": "Quiz Time! ➔"
+      }
+    },
+    {
+      "card_id": "card_75_quiz_cvc_powers_q1",
+      "card_slug": "card_75_quiz_cvc_powers_q1",
+      "type": "quiz",
+      "concept_id": "cvc_powers_quiz",
+      "level": 5,
+      "progress": { "current": 75, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 1/3: CVC exercises superintendence over which agency's Anti-Corruption Wing?",
+        "options": [
+          { "id": "A", "text": "State Police" },
+          { "id": "B", "text": "CBI (Central Bureau of Investigation)" },
+          { "id": "C", "text": "Income Tax Department" },
+          { "id": "D", "text": "Enforcement Directorate" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CVC exercises superintendence over the functioning of the Delhi Special Police Establishment (CBI) insofar as it relates to investigation of offences under the Prevention of Corruption Act, 1988. CVC itself is NOT an investigating agency - it monitors/oversees CBI's anti-corruption investigations."
+      },
+      "navigation": {
+        "next": "card_76_quiz_cvc_powers_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_76_quiz_cvc_powers_q2",
+      "card_slug": "card_76_quiz_cvc_powers_q2",
+      "type": "quiz",
+      "concept_id": "cvc_powers_quiz",
+      "level": 5,
+      "progress": { "current": 76, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 2/3: Which of the following is a KEY DIFFERENCE between CVC and Lokpal?",
+        "options": [
+          { "id": "A", "text": "CVC has its own Prosecution Wing, but Lokpal doesn't" },
+          { "id": "B", "text": "Lokpal has its own Inquiry and Prosecution Wings; CVC is mainly a recommendatory/advisory body" },
+          { "id": "C", "text": "Both have identical powers" },
+          { "id": "D", "text": "Only CVC covers the Prime Minister" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The key difference is that Lokpal has its own dedicated Inquiry Wing and Prosecution Wing, allowing it to independently investigate and prosecute cases. CVC, on the other hand, is primarily a recommendatory/advisory body that oversees CBI's investigations but doesn't have its own independent investigating machinery."
+      },
+      "navigation": {
+        "next": "card_77_quiz_cvc_powers_q3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_77_quiz_cvc_powers_q3",
+      "card_slug": "card_77_quiz_cvc_powers_q3",
+      "type": "quiz",
+      "concept_id": "cvc_powers_quiz",
+      "level": 5,
+      "progress": { "current": 77, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 3/3: The Whistleblower Protection Act was enacted in which year to protect those exposing corruption?",
+        "options": [
+          { "id": "A", "text": "2003" },
+          { "id": "B", "text": "2011" },
+          { "id": "C", "text": "2013" },
+          { "id": "D", "text": "2014" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The Whistleblower Protection Act was enacted in 2011, providing legal protection to individuals who expose corruption or misuse of power within their organizations, ensuring their identity remains confidential and they are protected from harassment or victimization."
+      },
+      "navigation": {
+        "next": "card_78_milestone_9",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_78_milestone_9",
+      "card_slug": "card_78_milestone_9",
+      "type": "milestone",
+      "concept_id": "module_9_complete",
+      "level": 5,
+      "progress": { "current": 78, "total": 89 },
+      "milestone_payload": {
+        "title": "⚖️ MODULE 9 MASTERED!",
+        "badge_emoji": "🛡️",
+        "completed_topic": "CVC Powers & Whistleblower Protection",
+        "xp_earned": 55,
+        "milestone_progress": "Module 9/10 Clear",
+        "motivational_quote": "CVC bhi crystal clear ho gaya! Ab dekhte hain Prevention of Corruption Act ka bhi thoda context! 📖"
+      },
+      "navigation": {
+        "next": "card_79_pca_context",
+        "button_text": "Start Module 10 ➔"
+      }
+    },
+    {
+      "card_id": "card_79_pca_context",
+      "card_slug": "card_79_pca_context",
+      "type": "chat",
+      "concept_id": "prevention_corruption_act",
+      "level": 5,
+      "progress": { "current": 79, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ek last important cheez samajh lo - jab bhi Lokpal ya CVC kisi corruption case mein action lete hain, woh kis kaanoon ke tehat charge lagate hain? Yeh hai **Prevention of Corruption Act, 1988 (PCA)**."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh Lokpal aur CVC khud saza (punishment) nahi dete, balki is 1988 wale Act ke through case chalta hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi! Lokpal aur CVC 'institutions' hain jo jaanch/prosecution karti hain, par actual criminal offence PCA, 1988 mein define hai - jaise bribery, criminal misconduct, disproportionate assets. Special Courts isi Act ke under punishment dete hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "Achha! Toh poori tasveer ab clear hai - Complaint → Lokpal/CVC jaanch → PCA 1988 ke under charge → Special Court trial. Sab connect ho gaya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_80_public_interest_disclosure",
+        "button_text": "Ek aur related cheez dekho ➔"
+      }
+    },
+    {
+      "card_id": "card_80_public_interest_disclosure",
+      "card_slug": "card_80_public_interest_disclosure",
+      "type": "chat",
+      "concept_id": "pidpi_2004_resolution",
+      "level": 5,
+      "progress": { "current": 80, "total": 89 },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "⭐ BPSC Trap: Whistleblower Act (2011) se bhi pehle, **2004** mein ek 'Public Interest Disclosure and Protection of Informers Resolution (PIDPI)' bhi laaya gaya tha - isse pehle whistleblower ko sirf yehi limited protection thi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Toh yeh purana wala resolution tha, aur 2011 mein poora Act bana - jaise CVC ke saath hua tha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bilkul sahi pattern pakda! Yeh yaad rakho - India mein anti-corruption reforms ka pattern hamesha 'pehle weak/informal mechanism, phir strong Act' raha hai - chahe woh CVC ho (1964 resolution → 2003 Act), ya Whistleblower protection ho (2004 resolution → 2011 Act)!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wow! Yeh pattern samajhne se toh sab yaad rakhna aasan ho gaya! Ab final quiz karte hain Sir!"
+        }
+      ],
+      "navigation": {
+        "next": "card_81_quiz_final_module_q1",
+        "button_text": "Quiz Time! ➔"
+      }
+    },
+    {
+      "card_id": "card_81_quiz_final_module_q1",
+      "card_slug": "card_81_quiz_final_module_q1",
+      "type": "quiz",
+      "concept_id": "pca_pidpi_quiz",
+      "level": 5,
+      "progress": { "current": 81, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 1/3: Corruption charges investigated by Lokpal/CVC are prosecuted under which primary Act?",
+        "options": [
+          { "id": "A", "text": "Indian Penal Code, 1860 only" },
+          { "id": "B", "text": "Prevention of Corruption Act, 1988" },
+          { "id": "C", "text": "Right to Information Act, 2005" },
+          { "id": "D", "text": "Companies Act, 2013" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The Prevention of Corruption Act, 1988 (PCA) is the primary law that defines corruption-related offences like bribery, criminal misconduct, and disproportionate assets. Lokpal and CVC investigate and prosecute cases under this Act through Special Courts."
+      },
+      "navigation": {
+        "next": "card_82_quiz_final_module_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_82_quiz_final_module_q2",
+      "card_slug": "card_82_quiz_final_module_q2",
+      "type": "quiz",
+      "concept_id": "pca_pidpi_quiz",
+      "level": 5,
+      "progress": { "current": 82, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 2/3: Before the Whistleblower Protection Act (2011), whistleblowers were protected under which 2004 mechanism?",
+        "options": [
+          { "id": "A", "text": "RTI Act" },
+          { "id": "B", "text": "Public Interest Disclosure and Protection of Informers Resolution (PIDPI)" },
+          { "id": "C", "text": "CVC Act" },
+          { "id": "D", "text": "No protection existed before 2011" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Before the Whistleblower Protection Act, 2011, informers were given limited protection under the 2004 'Public Interest Disclosure and Protection of Informers Resolution (PIDPI)'. This followed the same pattern seen with CVC - starting as an informal resolution before becoming a full statutory Act."
+      },
+      "navigation": {
+        "next": "card_83_quiz_final_module_q3",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_83_quiz_final_module_q3",
+      "card_slug": "card_83_quiz_final_module_q3",
+      "type": "quiz",
+      "concept_id": "pca_pidpi_quiz",
+      "level": 5,
+      "progress": { "current": 83, "total": 89 },
+      "quiz_payload": {
+        "question": "Quiz 3/3: Which of the following correctly represents the SEQUENCE from complaint to punishment in the Lokpal system?",
+        "options": [
+          { "id": "A", "text": "Special Court → Complaint → Inquiry Wing → Prosecution Wing" },
+          { "id": "B", "text": "Complaint → Inquiry Wing → Prosecution Wing → Special Court (under PCA, 1988)" },
+          { "id": "C", "text": "Prosecution Wing → Complaint → Special Court → Inquiry Wing" },
+          { "id": "D", "text": "Complaint → Special Court → Inquiry Wing → Prosecution Wing" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The correct sequence is: Complaint filed → Inquiry Wing conducts preliminary inquiry → if evidence found, Prosecution Wing files case → Special Court conducts trial under the Prevention of Corruption Act, 1988. This entire process follows time-bound limits (60 days inquiry, 6 months investigation)."
+      },
+      "navigation": {
+        "next": "card_84_milestone_10",
+        "button_text": "Check Result ➔"
+      }
+    },
+    {
+      "card_id": "card_84_milestone_10",
+      "card_slug": "card_84_milestone_10",
+      "type": "milestone",
+      "concept_id": "module_10_complete",
+      "level": 5,
+      "progress": { "current": 84, "total": 89 },
+      "milestone_payload": {
+        "title": "📖 MODULE 10 COMPLETE!",
+        "badge_emoji": "🎓",
+        "completed_topic": "PCA 1988 & Whistleblower Ecosystem",
+        "xp_earned": 50,
+        "milestone_progress": "Module 10/10 Clear - ALL MODULES DONE!",
+        "motivational_quote": "Poora chapter clear ho gaya! Ab Officer-level final revision karte hain! 💪"
+      },
+      "navigation": {
+        "next": "card_85_summary",
+        "button_text": "Officer Revision Card ➔"
+      }
+    },
+    {
+      "card_id": "card_85_summary",
+      "card_slug": "card_85_summary",
+      "type": "summary",
+      "concept_id": "lokpal_cvc_full_revision",
+      "level": 5,
+      "progress": { "current": 85, "total": 89 },
+      "summary_payload": {
+        "title": "⚡ OFFICER QUICK REVISION - Lokpal & CVC",
+        "revision_points": [
+          {
+            "topic": "Origin & Naming (Multi-statement Trap)",
+            "point": "Statement I: ARC (1966, Chairman Morarji Desai) first recommended Lokpal/Lokayukta concept. Statement II: Dr. L.M. Singhvi coined the terms 'Lokpal' and 'Lokayukta'. BOTH statements are TRUE but represent DIFFERENT contributions - Idea vs Naming!"
+          },
+          {
+            "topic": "Lokpal Act Timeline",
+            "point": "First Bill: 1968 (lapsed 8 times till 2011) → Anna Hazare movement: 2011 → Act passed: 2013 → Enforced: 16 January 2014 → First Chairperson (Justice Pinaki Chandra Ghose) appointed: 2019 (5-year gap after enforcement!)."
+          },
+          {
+            "topic": "Lokpal Composition & PM Safeguards",
+            "point": "Chairperson + 8 members (50% Judicial, 50% from SC/ST/OBC/Minority/Women - TWO SEPARATE rules). PM covered EXCEPT for international relations/security/atomic energy/space matters; inquiry needs Full Bench + 2/3rd majority + in-camera hearing."
+          },
+          {
+            "topic": "CVC Timeline (Assertion-Reason Style)",
+            "point": "Assertion: CVC became statutory only in 2003. Reason: Supreme Court in Vineet Narain case (1997) directed statutory status after finding political interference in corruption probes. Both true, R correctly explains A. CVC originated 1964 (Santhanam Committee) as non-statutory body."
+          },
+          {
+            "topic": "Lokpal vs CVC - Key Differences",
+            "point": "Lokpal: 9 members, own Inquiry+Prosecution Wings, covers PM, term 5yr/70yr. CVC: 3 members max, only recommendatory/advisory (oversees CBI), no PM coverage, term 4yr/65yr. Lokpal >> CVC in power and scope."
+          },
+          {
+            "topic": "Bihar-Specific Facts (BPSC TRE Favorite)",
+            "point": "Bihar Lokayukta Act, 1973 (40 years before Central Act!). Bihar Special Court Act, 2009 - fast-track confiscation of disproportionate assets without full criminal trial. Maharashtra (1971-72) was first state overall with functional Lokayukta."
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_86_final_quiz_q1",
+        "button_text": "Final Master Quiz ➔"
+      }
+    },
+    {
+      "card_id": "card_86_final_quiz_q1",
+      "card_slug": "card_86_final_quiz_q1",
+      "type": "final_quiz",
+      "concept_id": "lokpal_cvc_final_master_quiz",
+      "level": 6,
+      "progress": { "current": 86, "total": 89 },
+      "quiz_payload": {
+        "question": "FINAL QUIZ 1/4 (BPSC Multi-Statement Level):\n\nStatement I: The Administrative Reforms Commission (1966) coined the term 'Lokpal'.\n\nStatement II: The Lokpal and Lokayuktas Act became fully enforceable in the same year it was passed by Parliament.\n\nWhich is correct?",
+        "options": [
+          { "id": "A", "text": "Only Statement I" },
+          { "id": "B", "text": "Only Statement II" },
+          { "id": "C", "text": "Both statements" },
+          { "id": "D", "text": "Neither statement" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Both statements are FALSE!\n\nStatement I: FALSE - ARC (1966) only recommended the CONCEPT of an Ombudsman-like body; it was Dr. L.M. Singhvi who actually COINED the term 'Lokpal'.\n\nStatement II: FALSE - The Act was passed by Parliament in 2013, but it only came into FORCE on 16 January 2014 (after Presidential assent on 1 January 2014) - a different year!\n\n⭐ BPSC Pattern: Testing precise distinction between 'idea vs naming' and 'passing vs enforcement'!"
+      },
+      "navigation": {
+        "next": "card_87_final_quiz_q2",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_87_final_quiz_q2",
+      "card_slug": "card_87_final_quiz_q2",
+      "type": "final_quiz",
+      "concept_id": "lokpal_cvc_final_master_quiz",
+      "level": 6,
+      "progress": { "current": 87, "total": 89 },
+      "quiz_payload": {
+        "question": "FINAL QUIZ 2/4 (NEET/UPSC-style Assertion-Reason):\n\nAssertion (A): An inquiry against the Prime Minister under the Lokpal Act cannot be initiated by a simple majority decision.\n\nReason (R): Matters concerning the Prime Minister always require the direct approval of the President of India before any Lokpal inquiry.\n\nChoose the correct option:",
+        "options": [
+          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
+          { "id": "B", "text": "Both A and R are true, but R is NOT the correct explanation of A" },
+          { "id": "C", "text": "A is true, but R is false" },
+          { "id": "D", "text": "A is false, but R is true" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Assertion is TRUE: An inquiry against the PM requires approval by the FULL BENCH with at least 2/3rd majority - not a simple majority.\n\nReason is FALSE: There is NO requirement for the President's direct approval before a Lokpal inquiry against the PM. The safeguard is INTERNAL to Lokpal (Full Bench + 2/3rd majority + in-camera hearing), not an external Presidential approval requirement.\n\n⭐ NEET/UPSC Trap: Tests whether students correctly identify WHO grants the safeguard approval - it's Lokpal's own Full Bench, not the President!"
+      },
+      "navigation": {
+        "next": "card_88_final_quiz_q3",
+        "button_text": "Next Question ➔"
+      }
+    },
+    {
+      "card_id": "card_88_final_quiz_q3",
+      "card_slug": "card_88_final_quiz_q3",
+      "type": "final_quiz",
+      "concept_id": "lokpal_cvc_final_master_quiz",
+      "level": 6,
+      "progress": { "current": 88, "total": 89 },
+      "quiz_payload": {
+        "question": "FINAL QUIZ 3/4 (UPSC Prelims Level):\n\nWhich of the following statements regarding CVC and Lokpal is/are CORRECT?\n\n1. CVC has its own independent Prosecution Wing like Lokpal.\n2. CVC's Selection Committee does NOT include a judicial member, unlike Lokpal's Selection Committee.\n3. Both CVC and Lokpal exercise some form of superintendence over CBI.\n4. Bihar established its Lokayukta before the Central Lokpal Act was even conceived.\n\nSelect the correct answer:",
+        "options": [
+          { "id": "A", "text": "1, 2 and 3 only" },
+          { "id": "B", "text": "2, 3 and 4 only" },
+          { "id": "C", "text": "1, 3 and 4 only" },
+          { "id": "D", "text": "All four statements" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statements 2, 3, and 4 are CORRECT:\n2. ✅ CVC's Selection Committee (PM, Home Minister, LoP) has NO judicial member; Lokpal's Selection Committee includes CJI/nominated judge.\n3. ✅ Both exercise superintendence over CBI's anti-corruption investigations in different capacities.\n4. ✅ Bihar Lokayukta Act (1973) predates the Central Lokpal Act (2013) by 40 years.\n\nStatement 1 is WRONG: CVC does NOT have its own Prosecution Wing - only Lokpal has dedicated Inquiry and Prosecution Wings. CVC is mainly recommendatory/advisory.\n\n⭐ UPSC Pattern: Multi-statement combining structural, comparative, and historical facts!"
+      },
+      "navigation": {
+        "next": "card_89_final_quiz_q4",
+        "button_text": "Last Question ➔"
+      }
+    },
+    {
+      "card_id": "card_89_final_quiz_q4",
+      "card_slug": "card_89_final_quiz_q4",
+      "type": "final_quiz",
+      "concept_id": "lokpal_cvc_final_master_quiz",
+      "level": 6,
+      "progress": { "current": 89, "total": 89 },
+      "quiz_payload": {
+        "question": "FINAL QUIZ 4/4 (SSC CGL/Railway Speed-Fact Matching):\n\nMatch the following correctly:\nA. Coined 'Lokpal' term - 1. Santhanam Committee\nB. Recommended CVC (1964) - 2. Dr. L.M. Singhvi\nC. Gave statutory status direction to CVC - 3. Anna Hazare\nD. Led 2011 movement for Jan Lokpal - 4. Vineet Narain case (SC)",
+        "options": [
+          { "id": "A", "text": "A-2, B-1, C-4, D-3" },
+          { "id": "B", "text": "A-1, B-2, C-3, D-4" },
+          { "id": "C", "text": "A-3, B-4, C-1, D-2" },
+          { "id": "D", "text": "A-4, B-3, C-2, D-1" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Correct Matching:\nA. Coined 'Lokpal' term → 2. Dr. L.M. Singhvi\nB. Recommended CVC (1964) → 1. Santhanam Committee\nC. Gave statutory status direction to CVC → 4. Vineet Narain case (Supreme Court, 1997)\nD. Led 2011 movement for Jan Lokpal → 3. Anna Hazare\n\n⭐ Railway/SSC Pattern: Terminology-personality matching tests overall conceptual clarity across the entire chapter - a classic speed-fact question style!"
+      },
+      "navigation": {
+        "next": "card_90_final_milestone",
+        "button_text": "Claim Your Trophy ➔"
+      }
+    },
+    {
+      "card_id": "card_90_final_milestone",
+      "card_slug": "card_90_final_milestone",
+      "type": "milestone",
+      "concept_id": "chapter_complete_lokpal_cvc",
+      "level": 6,
+      "progress": { "current": 89, "total": 89 },
+      "milestone_payload": {
+        "title": "👑 LOKPAL & CVC MASTERED! 👑",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Complete Anti-Corruption Machinery - Lokpal, Lokayukta & CVC",
+        "xp_earned": 380,
+        "milestone_progress": "100% Chapter Complete",
+        "motivational_quote": "🎉 Zabardast Raju! Tumne poora Lokpal-CVC chapter zero se Officer level tak master kar liya!\n\n✅ Ombudsman Origin & History\n✅ Complete Lokpal Composition & Jurisdiction\n✅ PM Safeguards & Special Powers\n✅ CVC History, Powers & Comparison\n✅ Bihar's Pioneering Anti-Corruption Laws\n\nAb BPSC/SSC/Railway/UPSC exams mein Lokpal-CVC se ek bhi sawal chhoot nahi sakta! Bihar SCERT aur NCERT dono ki concepts crystal clear hain. Keep learning, keep winning! 🚀🔥"
+      },
+      "navigation": {
+        "next": null,
+        "button_text": "Back to Dashboard 🏠"
+      }
+    }
+  ]
+}
