@@ -1,1765 +1,1538 @@
 
 {
-  "topic_id": "state_election_commission_polity_bihar",
-  "topic_title": "State Election Commission & Bihar SEC",
-  "target_exams": ["BPSC", "BPSC TRE", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims"],
-  "total_cards": 58,
+  "topic_id": "state_elections_indian_polity",
+  "topic_title": "State Elections in Indian Polity",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 98,
   "characters": {
-    "aman": {
-      "name": "Aman Sir",
-      "role": "teacher",
-      "avatar": "👨‍🏫"
-    },
-    "raju": {
-      "name": "Raju",
-      "role": "student",
-      "avatar": "👦"
-    }
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
   },
   "cards": [
     {
       "card_id": "card_01_intro",
       "card_slug": "card_01_intro",
       "type": "intro",
-      "concept_id": "sec_intro",
+      "concept_id": "chapter_intro",
       "level": 1,
-      "progress": {
-        "current": 1,
-        "total": 58
-      },
+      "progress": { "current": 1, "total": 98 },
       "intro_payload": {
-        "title": "🗳️ State Election Commission",
-        "subtitle": "Constitutional Body for Local Democracy",
-        "icon": "🏛️",
-        "target_exams": ["BPSC", "BPSC TRE", "BSSC", "SSC CGL", "UPSC Prelims"],
+        "title": "🗳️ State Elections in Indian Polity",
+        "subtitle": "Governor se leke Vidhan Parishad tak - Complete Officer-Level Mastery",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE"],
         "learning_outcomes": [
-          "Constitutional provisions (Article 243K & 243ZA)",
-          "Powers, functions & appointment of SEC",
-          "Difference between ECI and SEC",
-          "Bihar State Election Commission specifics",
-          "PYQ traps on tenure, removal & jurisdiction"
-        ],
-        "estimated_time": "18 minutes",
-        "total_modules": 6
+          "Governor - Niyukti, Powers, Discretion aur Removal (Articles 153-167)",
+          "Vidhan Sabha aur Vidhan Parishad - Composition, Tenure, Differences",
+          "State Council of Ministers - CM ki powers aur collective responsibility",
+          "Chief Minister - Niyukti, tenure aur President's Rule se sambandh",
+          "Election Commission aur State Elections ka poora process",
+          "Bihar-specific: Vidhan Sabha, Vidhan Parishad aur local elections"
+        ]
       },
-      "navigation": {
-        "next": "card_02_daily_life_hook",
-        "button_text": "Start Learning 🚀"
-      }
+      "navigation": { "next": "card_02_state_govt_hook", "button_text": "Start Learning ➔" }
     },
     {
-      "card_id": "card_02_daily_life_hook",
-      "card_slug": "card_02_daily_life_hook",
+      "card_id": "card_02_state_govt_hook",
+      "card_slug": "card_02_state_govt_hook",
       "type": "chat",
-      "concept_id": "daily_hook",
+      "concept_id": "state_govt_intro",
       "level": 1,
-      "progress": {
-        "current": 2,
-        "total": 58
-      },
+      "progress": { "current": 2, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, tumhare gaon mein Mukhiya aur Panch ka chunav hota hai na? Kabhi dekha hai?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Haan Sir! Hamare gaon mein har 5 saal mein Mukhiya chunav hota hai. Logo ke ghar-ghar jaake vote maangte hain!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Ab sawal ye hai — iss Mukhiya chunav ko kaun conduct karta hai? Election Commission of India (jo PM aur MLA ka chunav karati hai) ya koi aur?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Hain?? Maine to socha ECI hi sab elections karati hogi..."
-        }
+        { "speaker": "aman", "text": "Raju, jab tumhare gaon mein koi badi problem hoti hai - jaise school building toot gayi, ya road kharab ho gayi - to tum seedhe Delhi jaate ho shikayat karne?" },
+        { "speaker": "raju", "text": "Nahi sir, pehle MLA ke paas jaate hain ya Block Office mein! Delhi to bahut door hai." },
+        { "speaker": "aman", "text": "Bilkul sahi! Isliye India mein ek 'federal system' hai - do levels pe government karti hai. Ek central (Delhi mein) aur ek state level pe (jaise Patna mein Bihar ki sarkar). Aaj hum state level ki POORI machinery samjhenge - jo BPSC aur UPSC dono ke liye bahut zaroori hai." },
+        { "speaker": "raju", "text": "Achha! Matlab state government ek alag complete system hai, Centre ka copy nahi?" }
       ],
-      "navigation": {
-        "next": "card_03_two_election_bodies",
-        "button_text": "Agla Card ➔"
-      }
+      "navigation": { "next": "card_03_state_structure", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_03_two_election_bodies",
-      "card_slug": "card_03_two_election_bodies",
+      "card_id": "card_03_state_structure",
+      "card_slug": "card_03_state_structure",
       "type": "chat",
-      "concept_id": "two_bodies_intro",
+      "concept_id": "state_govt_intro",
       "level": 1,
-      "progress": {
-        "current": 3,
-        "total": 58
-      },
+      "progress": { "current": 3, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ye sabse bada confusion hai students ka! India mein do alag Election Bodies hain — (1) Election Commission of India (ECI) aur (2) State Election Commission (SEC)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Do alag alag?? Matlab kaam bhi alag hoga?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! ECI conduct karti hai Lok Sabha, Rajya Sabha, Vidhan Sabha, Vidhan Parishad ke elections. Jabki SEC sirf Local Body Elections — jaise Panchayat, Municipality, Nagar Palika — yeh sab karti hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ohh! Matlab Mukhiya chunav SEC karati hai, PM chunav ECI karti hai!"
-        }
+        { "speaker": "aman", "text": "Bilkul sahi observation! State government ki structure kuch had tak Centre jaisi hi hai - jaise Centre mein President aur PM hai, state mein Governor aur Chief Minister hai. Centre mein Parliament hai, state mein Vidhan Mandal (State Legislature) hai." },
+        { "speaker": "raju", "text": "Toh jaise Centre mein Lok Sabha aur Rajya Sabha hain, state mein bhi do sadan hote hain?" },
+        { "speaker": "aman", "text": "Nahi, aur yahi pehla bada trap hai! State mein HAMESHA do sadan nahi hote. Sirf kuch states mein do sadan hain - Vidhan Sabha (lower house) aur Vidhan Parishad (upper house). Baaki states mein sirf Vidhan Sabha hi hoti hai." },
+        { "speaker": "raju", "text": "Toh kitne states mein Vidhan Parishad hai, aur kaun se?" }
       ],
-      "navigation": {
-        "next": "card_04_constitutional_basis",
-        "button_text": "Samjha ➔"
-      }
+      "navigation": { "next": "card_04_vidhan_parishad_states", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_04_constitutional_basis",
-      "card_slug": "card_04_constitutional_basis",
+      "card_id": "card_04_vidhan_parishad_states",
+      "card_slug": "card_04_vidhan_parishad_states",
       "type": "chat",
-      "concept_id": "const_provision",
+      "concept_id": "state_govt_intro",
       "level": 1,
-      "progress": {
-        "current": 4,
-        "total": 58
-      },
+      "progress": { "current": 4, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab officer-level detail suno. Constitution mein State Election Commission ka provision hai Article 243K (for Panchayats) aur Article 243ZA (for Municipalities)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ye 243K aur 243ZA kab aaye Constitution mein?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Brilliant question! Ye dono Articles 1992 mein 73rd aur 74th Constitutional Amendment Act ke through add hue. Tab tak local elections state government hi karati thi — koi separate body nahi thi."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab 1992 se pehle SEC hi nahi tha??"
-        }
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Abhi sirf 6 states mein Vidhan Parishad hai - Andhra Pradesh, Bihar, Karnataka, Maharashtra, Telangana, aur Uttar Pradesh. Bihar mein Vidhan Parishad hai - ye BPSC mein baar-baar poochha jaata hai. Baaki sab states unicameral hain." },
+        { "speaker": "raju", "text": "Bihar mein dono sadan hain! To Bihar ki Legislature 'Bicameral' hai? Par sir ab start karte hain Governor se, jo sabse upar hai state mein?" },
+        { "speaker": "aman", "text": "Bilkul sahi socha! Governor hi state ka constitutional head hai - jaise President desh ka. To chalo pehle Governor ko poori tarah samjhte hain, kyunki iske baare mein exam mein sabse zyada traps aate hain." },
+        { "speaker": "raju", "text": "Okay sir, Governor pehle! Aur iska election kaise hota hai?" }
       ],
-      "navigation": {
-        "next": "card_05_73rd_74th_background",
-        "button_text": "History Jaano ➔"
-      }
+      "navigation": { "next": "card_05_quiz1_m1", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_05_73rd_74th_background",
-      "card_slug": "card_05_73rd_74th_background",
-      "type": "chat",
-      "concept_id": "amendment_background",
-      "level": 1,
-      "progress": {
-        "current": 5,
-        "total": 58
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Exactly! 1992 se pehle Panchayat aur Municipality elections state government ke hisaab se hote the — kabhi hote, kabhi postpone. Isliye 73rd Amendment (Panchayat) aur 74th Amendment (Municipality) laaye gaye taaki local democracy strong ho."
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur tab SEC bana independent body ke roop mein?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Har state ko apna State Election Commission banane ka constitutional duty diya gaya. Ab ye body state government se independent hai — bilkul jaise ECI Union Government se independent hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaaa! To har state ka alag SEC hoga?"
-        }
-      ],
-      "navigation": {
-        "next": "card_06_state_wise_sec",
-        "button_text": "Haan Bilkul ➔"
-      }
-    },
-    {
-      "card_id": "card_06_state_wise_sec",
-      "card_slug": "card_06_state_wise_sec",
-      "type": "chat",
-      "concept_id": "state_wise_sec",
-      "level": 1,
-      "progress": {
-        "current": 6,
-        "total": 58
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bilkul sahi! Har state ka apna SEC hota hai. Example: Bihar State Election Commission, UP State Election Commission, Maharashtra SEC, etc. — sabka apna office, staff aur budget."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ye to bahut zyada ho gaya! Itne sare bodies?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan, kyunki local elections ka responsibility state ka hai, Union ka nahi. Constitution ke Part IX (Panchayat) aur Part IX-A (Municipality) mein ye clearly mentioned hai ki State Legislature SEC ke liye law banayegi."
-        },
-        {
-          "speaker": "raju",
-          "text": "To SEC ek constitutional body hai lekin state-level par?"
-        }
-      ],
-      "navigation": {
-        "next": "card_07_quiz_1",
-        "button_text": "Pehla Quiz ➔"
-      }
-    },
-    {
-      "card_id": "card_07_quiz_1",
-      "card_slug": "card_07_quiz_1",
+      "card_id": "card_05_quiz1_m1",
+      "card_slug": "card_05_quiz1_m1",
       "type": "quiz",
-      "concept_id": "quiz_basic_1",
+      "concept_id": "state_govt_intro",
       "level": 1,
-      "progress": {
-        "current": 7,
-        "total": 58
-      },
+      "progress": { "current": 5, "total": 98 },
       "quiz_payload": {
-        "question": "State Election Commission ka provision Constitution ke kis Article mein hai (Panchayats ke liye)?",
+        "question": "Q1/3: Niche diye gaye states mein se kaun-sa state abhi Bicameral Legislature (Vidhan Sabha + Vidhan Parishad DONO) wala NAHI hai?",
         "options": [
-          { "id": "A", "text": "Article 324" },
-          { "id": "B", "text": "Article 243K" },
-          { "id": "C", "text": "Article 243ZA" },
-          { "id": "D", "text": "Article 356" }
+          { "id": "A", "text": "Bihar" },
+          { "id": "B", "text": "Uttar Pradesh" },
+          { "id": "C", "text": "Madhya Pradesh" },
+          { "id": "D", "text": "Karnataka" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Madhya Pradesh mein sirf Vidhan Sabha hai (Unicameral). Bicameral Legislature wale 6 states hain: Andhra Pradesh, Bihar, Karnataka, Maharashtra, Telangana, aur Uttar Pradesh."
+      },
+      "navigation": { "next": "card_06_quiz2_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_06_quiz2_m1",
+      "card_slug": "card_06_quiz2_m1",
+      "type": "quiz",
+      "concept_id": "state_govt_intro",
+      "level": 1,
+      "progress": { "current": 6, "total": 98 },
+      "quiz_payload": {
+        "question": "Q2/3: State Legislature mein 'Vidhan Sabha' kaunsa sadan hai?",
+        "options": [
+          { "id": "A", "text": "Upper House (Rajya Sabha ki tarah)" },
+          { "id": "B", "text": "Lower House (Lok Sabha ki tarah)" },
+          { "id": "C", "text": "Dono mein se koi nahi" },
+          { "id": "D", "text": "Ye sirf Bihar mein hota hai" }
         ],
         "correct_option_id": "B",
-        "explanation": "Article 243K mein Panchayats ke liye State Election Commission ka provision hai, jabki Article 243ZA mein Municipalities ke liye. Article 324 mein Election Commission of India (ECI) ka provision hai. BPSC PYQ Trap: 243K aur 243ZA mix karte hain!"
+        "explanation": "Vidhan Sabha State Legislature ka Lower House hai, jaise Centre mein Lok Sabha hai. Vidhan Parishad Upper House hai jaise Rajya Sabha - lekin ye sirf 6 states mein hai."
       },
-      "navigation": {
-        "next": "card_08_quiz_2",
-        "button_text": "Next Question ➔"
-      }
+      "navigation": { "next": "card_07_quiz3_m1", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_08_quiz_2",
-      "card_slug": "card_08_quiz_2",
+      "card_id": "card_07_quiz3_m1",
+      "card_slug": "card_07_quiz3_m1",
       "type": "quiz",
-      "concept_id": "quiz_basic_2",
+      "concept_id": "state_govt_intro",
       "level": 1,
-      "progress": {
-        "current": 8,
-        "total": 58
-      },
+      "progress": { "current": 7, "total": 98 },
       "quiz_payload": {
-        "question": "73rd aur 74th Constitutional Amendment kis saal mein pass hue?",
+        "question": "Q3/3: Centre mein President aur PM ka jo rishta hai, State mein waise hi kaun hai?",
         "options": [
-          { "id": "A", "text": "1989" },
-          { "id": "B", "text": "1991" },
-          { "id": "C", "text": "1992" },
-          { "id": "D", "text": "1993" }
+          { "id": "A", "text": "Speaker aur Deputy Speaker" },
+          { "id": "B", "text": "Governor aur Chief Minister" },
+          { "id": "C", "text": "Collector aur SP" },
+          { "id": "D", "text": "High Court aur District Court" }
         ],
-        "correct_option_id": "C",
-        "explanation": "73rd Amendment (Panchayat) aur 74th Amendment (Municipality) dono 1992 mein pass hue. Lekin inhe force mein 24 April 1993 se laya gaya. BPSC frequently year puchchta hai!"
+        "correct_option_id": "B",
+        "explanation": "Jaise Centre mein President constitutional head aur PM real executive head hai, state mein Governor constitutional head aur Chief Minister (CM) real executive head hota hai."
       },
-      "navigation": {
-        "next": "card_09_quiz_3",
-        "button_text": "Next Question ➔"
-      }
+      "navigation": { "next": "card_08_milestone1", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_09_quiz_3",
-      "card_slug": "card_09_quiz_3",
-      "type": "quiz",
-      "concept_id": "quiz_basic_3",
-      "level": 1,
-      "progress": {
-        "current": 9,
-        "total": 58
-      },
-      "quiz_payload": {
-        "question": "Election Commission of India (ECI) kis election ko conduct NAHI karti?",
-        "options": [
-          { "id": "A", "text": "Lok Sabha Election" },
-          { "id": "B", "text": "Vidhan Sabha Election" },
-          { "id": "C", "text": "Panchayat Election" },
-          { "id": "D", "text": "Rajya Sabha Election" }
-        ],
-        "correct_option_id": "C",
-        "explanation": "ECI sirf Parliament (Lok Sabha, Rajya Sabha) aur State Legislature (Vidhan Sabha, Vidhan Parishad) elections conduct karti hai. Panchayat aur Municipality elections State Election Commission (SEC) conduct karti hai. SSC aur BPSC ka favorite confusion!"
-      },
-      "navigation": {
-        "next": "card_10_milestone_intro",
-        "button_text": "Check Result ➔"
-      }
-    },
-    {
-      "card_id": "card_10_milestone_intro",
-      "card_slug": "card_10_milestone_intro",
+      "card_id": "card_08_milestone1",
+      "card_slug": "card_08_milestone1",
       "type": "milestone",
-      "concept_id": "milestone_1",
+      "concept_id": "state_govt_intro",
       "level": 1,
-      "progress": {
-        "current": 10,
-        "total": 58
-      },
+      "progress": { "current": 8, "total": 98 },
       "milestone_payload": {
-        "title": "🎯 MODULE 1 CLEARED!",
-        "badge_emoji": "🗳️",
-        "completed_topic": "Introduction to SEC & Constitutional Basis",
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "State Government - Introduction",
         "xp_earned": 50,
-        "milestone_progress": "Module 1/6 Complete",
-        "motivational_quote": "You've mastered the foundation! BPSC loves Article numbers — you're already ahead!"
+        "milestone_progress": "Module 1/11 Clear",
+        "motivational_quote": "Foundation pakki! Ab Governor ke saare exam traps ek ek karke todhte hain!"
       },
-      "navigation": {
-        "next": "card_11_appointment_intro",
-        "button_text": "Module 2 Shuru Karo ➔"
-      }
+      "navigation": { "next": "card_09_governor_appointment", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_11_appointment_intro",
-      "card_slug": "card_11_appointment_intro",
+      "card_id": "card_09_governor_appointment",
+      "card_slug": "card_09_governor_appointment",
       "type": "chat",
-      "concept_id": "appointment_who",
+      "concept_id": "governor",
       "level": 2,
-      "progress": {
-        "current": 11,
-        "total": 58
-      },
+      "progress": { "current": 9, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab aata hai sabse zyada PYQ-favorite topic — State Election Commissioner ko kaun appoint karta hai?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, mujhe lagta hai Governor appoint karta hoga, jaise state mein Governor hi sabkuch karta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Brilliant guess! Lekin yaad rakho — Governor appoint zaroor karta hai, BUT exactly kaise? Article 243K aur 243ZA mein likha hai: 'The Governor shall appoint the State Election Commissioner.'"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab Governor directly appoint kar deta hai? Koi recommendation nahi?"
-        }
+        { "speaker": "aman", "text": "Raju, Governor ko koi ELECT nahi karta - nahi janta, nahi Vidhan Sabha, nahi koi committee. Article 155 ke anusaar Governor ko PRESIDENT appoint karte hain. Aur Article 153 kehta hai - har state ke liye ek Governor hoga." },
+        { "speaker": "raju", "text": "Matlab Governor ek tarah se Centre ka 'representative' hai state mein?" },
+        { "speaker": "aman", "text": "Sahi pakda! Isi wajah se Governor ko 'Centre ka agent in the state' bhi kaha jaata hai. Ye ek controversial point hai politics mein - kyunki Centre jo party cheez hai, woh apne hisaab ka Governor laga sakti hai." },
+        { "speaker": "raju", "text": "Sir, Governor banne ke liye kya qualifications chahiye? Koi bhi ban sakta hai kya?" }
       ],
-      "navigation": {
-        "next": "card_12_governor_direct",
-        "button_text": "Confusion Clear Karo ➔"
-      }
+      "navigation": { "next": "card_10_governor_qualifications", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_12_governor_direct",
-      "card_slug": "card_12_governor_direct",
+      "card_id": "card_10_governor_qualifications",
+      "card_slug": "card_10_governor_qualifications",
       "type": "chat",
-      "concept_id": "appointment_direct",
+      "concept_id": "governor",
       "level": 2,
-      "progress": {
-        "current": 12,
-        "total": 58
-      },
+      "progress": { "current": 10, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ye twist hai! Constitution mein sirf likha hai 'Governor shall appoint' — but practically Governor appoint karta hai on the advice of Chief Minister & Council of Ministers. Kyunki Governor ek constitutional head hai, real power CM ke paas hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ohhh! To Governor rubber stamp ki tarah kaam karta hai yahan bhi?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! UPSC aur BPSC mein trap aata hai: 'State Election Commissioner is appointed BY the Governor' — ye technically sahi hai. Lekin 'appointed ON THE ADVICE OF CM' — ye practical reality hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir to exam mein kya likhun?"
-        }
+        { "speaker": "aman", "text": "Article 157 mein Governor ki qualifications di gayi hain: (1) Bharat ka nagrik hona chahiye, (2) 35 saal ya usse zyada umar honi chahiye. Bas! Koi degree, koi experience, koi special qualification nahi maangi." },
+        { "speaker": "raju", "text": "Sirf 35 saal?? Aur koi special degree nahi chahiye? Ye to bahut simple hai!" },
+        { "speaker": "aman", "text": "Aur ek important condition - Article 158(1) ke anusaar Governor Parliament ya State Legislature ka member NAHI ho sakta, aur agar ho to appointment ke time unhe wo membership chodni padti hai. Woh 'office of profit' bhi nahi rakh sakte." },
+        { "speaker": "raju", "text": "Matlab Governor banne ke liye pehle koi elected post chhodni padti hai? Interesting! Aur tenure kitne saal ka hota hai?" }
       ],
-      "navigation": {
-        "next": "card_13_exam_trap_answer",
-        "button_text": "Answer Batao ➔"
-      }
+      "navigation": { "next": "card_11_governor_tenure", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_13_exam_trap_answer",
-      "card_slug": "card_13_exam_trap_answer",
+      "card_id": "card_11_governor_tenure",
+      "card_slug": "card_11_governor_tenure",
       "type": "chat",
-      "concept_id": "exam_trap_appointment",
+      "concept_id": "governor",
       "level": 2,
-      "progress": {
-        "current": 13,
-        "total": 58
-      },
+      "progress": { "current": 11, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Agar statement hai 'State Election Commissioner is appointed by the Governor' — True. Agar statement hai 'appointed by the CM' — False (kyunki technically Governor appoint karta hai). Lekin agar 'on the advice of CM' likha hai, to True."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ye to bahut tricky hai Sir!"
-        },
-        {
-          "speaker": "aman",
-          "text": "BPSC ka favorite game! Ab ek aur twist — kya Governor kisi ko bhi SEC bana sakta hai? Ya koi eligibility criteria hai?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Eligibility criteria hogi na Sir? Jaise age limit, experience wagera?"
-        }
+        { "speaker": "aman", "text": "Article 156 ke anusaar Governor, President ki prasannata paryant (during pleasure of President) pad par rehta hai. Normally tenure 5 saal ka hota hai, lekin President kabhi bhi hata sakte hain. Isliye ye 'pleasure doctrine' bahut powerful hai." },
+        { "speaker": "raju", "text": "Matlab Governor ko koi security of tenure nahi hai, President chahe to kal hata de?" },
+        { "speaker": "aman", "text": "Bilkul sahi. Lekin ek baat dhyan do - Constitution mein Governor ko HATANE ki koi specific procedure ya grounds nahi diye gaye. Supreme Court ne B.P. Singhal case (2010) mein kaha ki bina wajah ya political reason se Governor ko nahi hataya ja sakta." },
+        { "speaker": "raju", "text": "Achha! Toh hata to sakte hain, lekin arbitrary nahi - kuch reason to chahiye! Aur ek Governor ek se zyada states ka bhi ho sakta hai?" }
       ],
-      "navigation": {
-        "next": "card_14_eligibility_sec",
-        "button_text": "Eligibility Seekho ➔"
-      }
+      "navigation": { "next": "card_12_governor_multi_state", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_14_eligibility_sec",
-      "card_slug": "card_14_eligibility_sec",
+      "card_id": "card_12_governor_multi_state",
+      "card_slug": "card_12_governor_multi_state",
       "type": "chat",
-      "concept_id": "eligibility_criteria",
+      "concept_id": "governor",
       "level": 2,
-      "progress": {
-        "current": 14,
-        "total": 58
-      },
+      "progress": { "current": 12, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Yahan sabse bada UPSC Prelims aur BPSC trap hai! Constitution mein State Election Commissioner ke liye KOI specific qualification, age limit, ya experience mention NAHI hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Kya?? Koi eligibility hi nahi??"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul nahi! Constitution ne ye State Legislature par chhod diya hai. Article 243K(2) aur 243ZA(2) kehte hain: 'Subject to the provisions of any law made by the State Legislature' — matlab state apni law banakar eligibility decide karegi."
-        },
-        {
-          "speaker": "raju",
-          "text": "To har state ki alag-alag eligibility ho sakti hai?"
-        }
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Haan! Article 153 ka proviso kehta hai ek hi vyakti do ya zyada states ka Governor ho sakta hai - isko 'Additional Governor' ya 'Common Governor' kehte hain. 7th Constitutional Amendment, 1956 ne ye provision joda tha." },
+        { "speaker": "raju", "text": "Wah! Ek vyakti do states sambhale? Ye to bahut interesting hai. Sir Governor apni state ka resident hona chahiye kya?" },
+        { "speaker": "aman", "text": "Nahi, aur yahi ek aur convention hai - generally kisi ko doosri state ka Governor banaya jaata hai, apni home state ka nahi. Isse Governor zyada neutral aur independent reh sakta hai. Par Constitution mein ye mandatory nahi hai." },
+        { "speaker": "raju", "text": "Samajh gaya sir, convention hai par rule nahi. Ab Governor ke powers batao - woh kya kya kar sakta hai?" }
       ],
-      "navigation": {
-        "next": "card_15_state_laws_eligibility",
-        "button_text": "Haan State Laws ➔"
-      }
+      "navigation": { "next": "card_13_quiz1_m2", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_15_state_laws_eligibility",
-      "card_slug": "card_15_state_laws_eligibility",
-      "type": "chat",
-      "concept_id": "state_law_eligibility",
-      "level": 2,
-      "progress": {
-        "current": 15,
-        "total": 58
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Yes! Different states ne apni State Election Commission Acts banaye hain. Usually states retired IAS/IPS officers ya retired High Court judges ko SEC banate hain — lekin ye constitutional compulsion nahi hai, sirf practice hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "⭐ Bihar mein kaun eligible hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC TRE Favorite: Bihar Panchayat Raj Act, 2006 aur Bihar Municipal Act ke under, usually retired senior bureaucrats (IAS rank) ya retired judges ko prefer kiya jata hai. Lekin strict legal eligibility mention nahi hai — Governor (on CM's advice) kisi bhi qualified person ko appoint kar sakta hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab flexibility hai appointment mein?"
-        }
-      ],
-      "navigation": {
-        "next": "card_16_quiz_appointment_1",
-        "button_text": "Quiz Time ➔"
-      }
-    },
-    {
-      "card_id": "card_16_quiz_appointment_1",
-      "card_slug": "card_16_quiz_appointment_1",
+      "card_id": "card_13_quiz1_m2",
+      "card_slug": "card_13_quiz1_m2",
       "type": "quiz",
-      "concept_id": "quiz_appointment_1",
+      "concept_id": "governor",
       "level": 2,
-      "progress": {
-        "current": 16,
-        "total": 58
-      },
+      "progress": { "current": 13, "total": 98 },
       "quiz_payload": {
-        "question": "State Election Commissioner ko kon appoint karta hai?",
+        "question": "Q1/3: Article 157 ke anusaar Governor banne ke liye minimum umar kya hai?",
         "options": [
-          { "id": "A", "text": "President of India" },
-          { "id": "B", "text": "Chief Minister" },
-          { "id": "C", "text": "Governor of the State" },
-          { "id": "D", "text": "Election Commission of India" }
+          { "id": "A", "text": "25 saal" },
+          { "id": "B", "text": "30 saal" },
+          { "id": "C", "text": "35 saal" },
+          { "id": "D", "text": "40 saal" }
         ],
         "correct_option_id": "C",
-        "explanation": "Article 243K aur 243ZA clearly kehte hain 'Governor shall appoint the State Election Commissioner'. Practically ye appointment CM ki advice par hoti hai, lekin constitutionally appointing authority Governor hai. BPSC/SSC frequently ye direct question puchte hain!"
+        "explanation": "Article 157 ke anusaar Governor ke liye do hi qualifications hain: (1) Bharat ka nagrik, (2) Minimum 35 saal ki umar. Lok Sabha (25 saal) aur Rajya Sabha (30 saal) se alag yad rakho."
       },
-      "navigation": {
-        "next": "card_17_quiz_appointment_2",
-        "button_text": "Agla Sawal ➔"
-      }
+      "navigation": { "next": "card_14_quiz2_m2", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_17_quiz_appointment_2",
-      "card_slug": "card_17_quiz_appointment_2",
+      "card_id": "card_14_quiz2_m2",
+      "card_slug": "card_14_quiz2_m2",
       "type": "quiz",
-      "concept_id": "quiz_appointment_2",
+      "concept_id": "governor",
       "level": 2,
-      "progress": {
-        "current": 17,
-        "total": 58
-      },
+      "progress": { "current": 14, "total": 98 },
       "quiz_payload": {
-        "question": "State Election Commissioner ke liye Constitutional qualification kya hai?",
+        "question": "Q2/3: Governor ki niyukti kis Article ke tehat karte hain, aur kaun karta hai?",
         "options": [
-          { "id": "A", "text": "Minimum 50 years age" },
-          { "id": "B", "text": "Retired IAS officer hona chahiye" },
-          { "id": "C", "text": "High Court Judge ka experience" },
-          { "id": "D", "text": "Constitution mein koi specific qualification mention nahi hai" }
+          { "id": "A", "text": "Article 153 - State Vidhan Sabha dwara elected" },
+          { "id": "B", "text": "Article 155 - President dwara appointed" },
+          { "id": "C", "text": "Article 163 - Chief Minister ki sifarish par President" },
+          { "id": "D", "text": "Article 174 - Directly public dwara elected" }
         ],
-        "correct_option_id": "D",
-        "explanation": "Ye UPSC Prelims ka classic trap hai! Constitution mein SEC ke liye koi age, qualification, ya experience specify nahi kiya gaya. Ye State Legislature ki law par depend karta hai. Actual practice mein retired bureaucrats ya judges prefer kiye jate hain."
+        "correct_option_id": "B",
+        "explanation": "Article 155 ke anusaar Governor ki niyukti President karte hain (warrant under hand and seal of President se) - nahi koi election, nahi koi committee."
       },
-      "navigation": {
-        "next": "card_18_quiz_appointment_3",
-        "button_text": "Last Question ➔"
-      }
+      "navigation": { "next": "card_15_quiz3_m2", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_18_quiz_appointment_3",
-      "card_slug": "card_18_quiz_appointment_3",
+      "card_id": "card_15_quiz3_m2",
+      "card_slug": "card_15_quiz3_m2",
       "type": "quiz",
-      "concept_id": "quiz_appointment_3",
+      "concept_id": "governor",
       "level": 2,
-      "progress": {
-        "current": 18,
-        "total": 58
-      },
+      "progress": { "current": 15, "total": 98 },
       "quiz_payload": {
-        "question": "⭐ Bihar State Election Commissioner ko appoint karne ki shakti kis Act ke under milti hai?",
+        "question": "Q3/3: B.P. Singhal case (2010) mein Supreme Court ne Governor ki removal ke baare mein kya kaha?",
         "options": [
-          { "id": "A", "text": "Bihar Panchayat Raj Act, 2006" },
-          { "id": "B", "text": "Representation of the People Act, 1951" },
-          { "id": "C", "text": "Article 324 of Constitution" },
-          { "id": "D", "text": "Election Commission Act, 1991" }
+          { "id": "A", "text": "President Governor ko kisi bhi wajah se, kabhi bhi, bina kisi reason ke hata sakte hain" },
+          { "id": "B", "text": "Governor ko sirf impeachment se hataya ja sakta hai" },
+          { "id": "C", "text": "Bina wajah ya sirf political reason se Governor ko nahi hataya ja sakta, aur ye judicial review ke daayre mein aata hai" },
+          { "id": "D", "text": "Governor ko sirf State Vidhan Sabha hata sakti hai" }
         ],
-        "correct_option_id": "A",
-        "explanation": "⭐ BPSC TRE Specific: Bihar Panchayat Raj Act, 2006 aur Bihar Municipal Corporation Act, 1956 (amended) ke under Bihar SEC appoint hota hai. Article 243K aur 243ZA constitutional provision dete hain, lekin state act operational framework provide karti hai."
+        "correct_option_id": "C",
+        "explanation": "B.P. Singhal vs Union of India (2010) mein SC ne kaha ki 'pleasure doctrine' ka iska matlab ye nahi ki arbitrary hataya jaaye - achha conduct ya bina wajah removal judicial review ke daayre mein aa sakti hai."
       },
-      "navigation": {
-        "next": "card_19_milestone_appointment",
-        "button_text": "Module Clear ➔"
-      }
+      "navigation": { "next": "card_16_milestone2", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_19_milestone_appointment",
-      "card_slug": "card_19_milestone_appointment",
+      "card_id": "card_16_milestone2",
+      "card_slug": "card_16_milestone2",
       "type": "milestone",
-      "concept_id": "milestone_2",
+      "concept_id": "governor",
       "level": 2,
-      "progress": {
-        "current": 19,
-        "total": 58
-      },
+      "progress": { "current": 16, "total": 98 },
       "milestone_payload": {
-        "title": "🎖️ MODULE 2 CONQUERED!",
-        "badge_emoji": "👨‍⚖️",
-        "completed_topic": "Appointment & Eligibility of SEC",
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏅",
+        "completed_topic": "Governor - Appointment & Basic Facts",
         "xp_earned": 60,
-        "milestone_progress": "Module 2/6 Complete",
-        "motivational_quote": "You just cleared BPSC's trickiest trap — Governor vs CM confusion! Officer-level clarity unlocked 🔥"
+        "milestone_progress": "Module 2/11 Clear",
+        "motivational_quote": "Governor ki basics pakki! Ab dekhte hain Governor ke powers aur discretion - exam ka sabse bada battleground!"
       },
-      "navigation": {
-        "next": "card_20_tenure_intro",
-        "button_text": "Tenure Padho ➔"
-      }
+      "navigation": { "next": "card_17_governor_powers_executive", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_20_tenure_intro",
-      "card_slug": "card_20_tenure_intro",
+      "card_id": "card_17_governor_powers_executive",
+      "card_slug": "card_17_governor_powers_executive",
       "type": "chat",
-      "concept_id": "tenure_intro",
+      "concept_id": "governor_powers",
       "level": 3,
-      "progress": {
-        "current": 20,
-        "total": 58
-      },
+      "progress": { "current": 17, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab aata hai next trap-zone — State Election Commissioner ka tenure kitna hota hai?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir mujhe lagta hai 5 saal hoga, jaise ECI ka hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Galat! Ye sabse common mistake hai. Constitution ne State Election Commissioner ke liye tenure FIX nahi kiya! Article 243K(2) kehta hai: 'Subject to the provisions of any law made by the State Legislature.'"
-        },
-        {
-          "speaker": "raju",
-          "text": "Hain?? To tenure state decide karegi?"
-        }
+        { "speaker": "aman", "text": "Raju, ab Governor ke powers samjhte hain - ye 4 categories mein hain: Executive, Legislative, Financial, aur Judicial. Sab exam mein aate hain." },
+        { "speaker": "raju", "text": "Sir, executive power matlab kya kya kar sakte hain Governor?" },
+        { "speaker": "aman", "text": "Article 154 ke tehat state ki saari executive power Governor ke naam se chalti hai. Wo Chief Minister ko appoint karta hai, aur CM ki salaah par baaki Ministers ko. High Court ke judges ki niyukti mein President Governor se consult karte hain. State ke Advocate General, SPSC Chairman/Members bhi Governor niyukt karte hain." },
+        { "speaker": "raju", "text": "Aur agar state mein koi coalition sarkar ho aur kisi ko clear majority na ho, tab Governor ka kya role hota hai?" }
       ],
-      "navigation": {
-        "next": "card_21_tenure_state_law",
-        "button_text": "Haan State Law ➔"
-      }
+      "navigation": { "next": "card_18_governor_discretion", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_21_tenure_state_law",
-      "card_slug": "card_21_tenure_state_law",
+      "card_id": "card_18_governor_discretion",
+      "card_slug": "card_18_governor_discretion",
       "type": "chat",
-      "concept_id": "tenure_state_law",
+      "concept_id": "governor_powers",
       "level": 3,
-      "progress": {
-        "current": 21,
-        "total": 58
-      },
+      "progress": { "current": 18, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Different states ne apne SEC Act mein alag-alag tenure fix kiya hai. Majority states mein 5 years ya 65 years age (jo bhi pehle ho) ka provision hai — lekin ye constitutional mandate nahi, state law hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "⭐ Bihar mein kya hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC TRE Favorite Fact: Bihar State Election Commissioner ka tenure 5 years ya 65 years of age (whichever is earlier) hai. Ye Bihar Panchayat Raj Act, 2006 mein mentioned hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "To exam mein agar puchhe 'Constitutional tenure of SEC' to kya answer hoga?"
-        }
+        { "speaker": "aman", "text": "Yahi Governor ka DISCRETION (vivek) hai! Article 163 kehta hai Governor CM ki salaah par kaam karega, par kuch matters mein wo apne 'discretion' se kaam kar sakta hai - jaise: CM ki niyukti (jab koi clear majority na ho), floor test karane ka aadesh dena, Vidhan Sabha bhang karna." },
+        { "speaker": "raju", "text": "Achha! Matlab jab hungama ho state mein, tab Governor ke paas real power aati hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Aur ek controversial power - Governor Article 356 ke tehat President ko report bhej sakta hai ki state mein constitutional machinery fail ho gayi hai - isi par President's Rule lagta hai. Isliye Governor ke is power ki bahut aaloochna hoti hai." },
+        { "speaker": "raju", "text": "Sir Governor ki legislative powers kya hain - Vidhan Sabha mein unka kya kaam hai?" }
       ],
-      "navigation": {
-        "next": "card_22_tenure_trap",
-        "button_text": "Trap Samjho ➔"
-      }
+      "navigation": { "next": "card_19_governor_legislative_powers", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_22_tenure_trap",
-      "card_slug": "card_22_tenure_trap",
+      "card_id": "card_19_governor_legislative_powers",
+      "card_slug": "card_19_governor_legislative_powers",
       "type": "chat",
-      "concept_id": "tenure_trap",
+      "concept_id": "governor_powers",
       "level": 3,
-      "progress": {
-        "current": 22,
-        "total": 58
-      },
+      "progress": { "current": 19, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Agar statement hai 'Constitution prescribes 5-year tenure for SEC' — FALSE! Kyunki Constitution mein tenure mention nahi hai. Agar statement hai 'Most states provide 5-year tenure' — TRUE, kyunki majority state laws mein 5 years hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur agar 'Bihar SEC has 5-year tenure' likha ho?"
-        },
-        {
-          "speaker": "aman",
-          "text": "TRUE — kyunki Bihar Panchayat Raj Act, 2006 specify karta hai. BPSC loves mixing constitutional provision aur state law — tumhe dono mein difference pata hona chahiye!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya Sir! Constitution ne flexibility di, states ne fix kiya!"
-        }
+        { "speaker": "aman", "text": "Article 174 ke tehat Governor Vidhan Sabha ka session summon, prorogue, aur address karta hai. Article 175 ke tehat Vidhan Sabha ko message bhi bhej sakta hai. State Vidhan Sabha se pass hue bills ko Governor assent deta hai - Article 200 ke tehat." },
+        { "speaker": "raju", "text": "Sir, President ki tarah Governor bhi bill wapas bhej sakte hain kya Vidhan Sabha ko?" },
+        { "speaker": "aman", "text": "Haan, aur yahan ek bada twist hai - Article 200 ke tehat Governor ke 4 options hain: (1) Assent dein, (2) Withhold karein, (3) Reconsideration ke liye wapas bhejein (Money Bill ke liye nahi), ya (4) Kuch bills President ke liye RESERVE kar sakte hain - ye President hi decide karega!" },
+        { "speaker": "raju", "text": "Ek bill President ke paas reserve kar sakte hain? Matlab bill State se Centre pohanch jaata hai? Ye to bahut interesting hai!" }
       ],
-      "navigation": {
-        "next": "card_23_removal_intro",
-        "button_text": "Removal Seekho ➔"
-      }
+      "navigation": { "next": "card_20_governor_ordinance_judicial", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_23_removal_intro",
-      "card_slug": "card_23_removal_intro",
+      "card_id": "card_20_governor_ordinance_judicial",
+      "card_slug": "card_20_governor_ordinance_judicial",
       "type": "chat",
-      "concept_id": "removal_intro",
+      "concept_id": "governor_powers",
       "level": 3,
-      "progress": {
-        "current": 23,
-        "total": 58
-      },
+      "progress": { "current": 20, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab sabse critical topic — State Election Commissioner ko kaun remove kar sakta hai? Ye UPSC aur BPSC ka all-time favorite!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, jisne appoint kiya ussi ne remove bhi karega — matlab Governor?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Brilliant logic, lekin WRONG! Yahan Constitution ne SEC ko protection diya hai — taaki state government apni marzi se hata na sake."
-        },
-        {
-          "speaker": "raju",
-          "text": "Hain?? To kaun hata sakta hai?"
-        }
+        { "speaker": "aman", "text": "Bilkul! Aur jaise President Ordinance jaari karta hai (Article 123), Governor bhi Ordinance jaari kar sakta hai - Article 213 ke tehat, jab Vidhan Sabha session mein na ho. Ye bhi 6 hafte mein approve hona chahiye ya lapse ho jaata hai." },
+        { "speaker": "raju", "text": "Governor ki judicial power kya hai sir?" },
+        { "speaker": "aman", "text": "Article 161 ke tehat Governor pardoning power rakhta hai - wo kisi convicted person ki saza maaf kar sakta hai, suspend kar sakta hai, ya commute kar sakta hai. Lekin ye power President se limited hai - Governor DEATH SENTENCE maaf NAHI kar sakta, sirf President kar sakte hain!" },
+        { "speaker": "raju", "text": "Achha! Governor death sentence maaf nahi kar sakta - ye to paka exam trap hai! Sirf President kar sakte hain death sentence maaf!" }
       ],
-      "navigation": {
-        "next": "card_24_removal_process",
-        "button_text": "Process Batao ➔"
-      }
+      "navigation": { "next": "card_21_quiz1_m3", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_24_removal_process",
-      "card_slug": "card_24_removal_process",
-      "type": "chat",
-      "concept_id": "removal_process",
-      "level": 3,
-      "progress": {
-        "current": 24,
-        "total": 58
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Article 243K(3) aur 243ZA(3) kehte hain: State Election Commissioner ko remove karne ka tarika SAME hai jaise High Court Judge ko remove karte hain — matlab Governor remove karega, BUT only after State Legislature ka address aur grounds of misbehaviour or incapacity ke saath."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab impeachment jaisa process?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! High Court Judge ki tarah — proved misbehaviour ya incapacity pe Legislature address pass karegi, tab Governor remove kar sakta hai. Ye independence ensure karta hai — CM aise hi nahi hata sakta!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wow! To SEC ko High Court Judge jaisa protection mila hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_25_removal_comparison",
-        "button_text": "Comparison Dekho ➔"
-      }
-    },
-    {
-      "card_id": "card_25_removal_comparison",
-      "card_slug": "card_25_removal_comparison",
-      "type": "chat",
-      "concept_id": "removal_comparison",
-      "level": 3,
-      "progress": {
-        "current": 25,
-        "total": 58
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Comparison yaad rakho: ECI Commissioner ko remove karne ka tarika = Supreme Court Judge jaisa (Parliament + President). SEC ko remove karne ka tarika = High Court Judge jaisa (State Legislature + Governor)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir lekin ek doubt — salary aur service conditions kaun decide karta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bahut important question! Constitution kehta hai: SEC ki salary aur service conditions Governor decide karega (on CM's advice). BUT ek baar appoint hone ke BAAD — salary aur conditions ko disadvantageous manner mein change NAHI kar sakte!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab protection hai ki government beech mein salary reduce na kare?"
-        }
-      ],
-      "navigation": {
-        "next": "card_26_salary_protection",
-        "button_text": "Salary Protection ➔"
-      }
-    },
-    {
-      "card_id": "card_26_salary_protection",
-      "card_slug": "card_26_salary_protection",
-      "type": "chat",
-      "concept_id": "salary_protection",
-      "level": 3,
-      "progress": {
-        "current": 26,
-        "total": 58
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Haan! Ye exactly High Court Judge ka protection model hai. Once appointed, SEC ki salary aur conditions ko worse nahi banaya ja sakta — ye independence ka guarantee hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "⭐ Bihar SEC ki current salary kya hai Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC TRE Detail: Bihar SEC ko Chief Secretary ke equivalent salary milti hai (approx ₹2.25 lakh per month). Plus allowances aur perks milte hain — lekin exact figure Government Orders ke through time-to-time revise hoti hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaaa! To high-level officer jaisa treatment!"
-        }
-      ],
-      "navigation": {
-        "next": "card_27_quiz_tenure_1",
-        "button_text": "Quiz Karo ➔"
-      }
-    },
-    {
-      "card_id": "card_27_quiz_tenure_1",
-      "card_slug": "card_27_quiz_tenure_1",
+      "card_id": "card_21_quiz1_m3",
+      "card_slug": "card_21_quiz1_m3",
       "type": "quiz",
-      "concept_id": "quiz_tenure_1",
+      "concept_id": "governor_powers",
       "level": 3,
-      "progress": {
-        "current": 27,
-        "total": 58
-      },
+      "progress": { "current": 21, "total": 98 },
       "quiz_payload": {
-        "question": "State Election Commissioner ka tenure Constitution mein fix hai ya nahi?",
+        "question": "Q1/3: Article 200 ke anusaar, State Legislature se pass bill ke sambandh mein Governor ke paas kitne options hain?",
         "options": [
-          { "id": "A", "text": "Haan, 5 years fix hai" },
-          { "id": "B", "text": "Haan, 6 years fix hai" },
-          { "id": "C", "text": "Nahi, tenure State Legislature decide karti hai" },
-          { "id": "D", "text": "Tenure President decide karta hai" }
+          { "id": "A", "text": "Sirf 2 - Assent ya Withhold" },
+          { "id": "B", "text": "3 - Assent, Withhold, Reconsideration" },
+          { "id": "C", "text": "4 - Assent, Withhold, Reconsideration ke liye wapas bheja, ya President ke liye Reserve karna" },
+          { "id": "D", "text": "5 - Parliament bhi involve hoti hai" }
         ],
         "correct_option_id": "C",
-        "explanation": "Constitution mein SEC ka tenure mention NAHI hai. Article 243K(2) kehta hai 'subject to the provisions of any law made by the State Legislature' — matlab tenure state law decide karegi. Majority states mein 5 years ya 65 years (whichever is earlier) hai. UPSC Prelims repeat trap!"
+        "explanation": "Article 200 ke tehat Governor ke paas 4 options hain: (1) Assent dena, (2) Withhold karna, (3) Money Bill ke alawa bill ko reconsideration ke liye wapas bhejna, (4) Certain bills President ke consideration ke liye reserve karna."
       },
-      "navigation": {
-        "next": "card_28_quiz_tenure_2",
-        "button_text": "Agla ➔"
-      }
+      "navigation": { "next": "card_22_quiz2_m3", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_28_quiz_tenure_2",
-      "card_slug": "card_28_quiz_tenure_2",
+      "card_id": "card_22_quiz2_m3",
+      "card_slug": "card_22_quiz2_m3",
       "type": "quiz",
-      "concept_id": "quiz_tenure_2",
+      "concept_id": "governor_powers",
       "level": 3,
-      "progress": {
-        "current": 28,
-        "total": 58
-      },
+      "progress": { "current": 22, "total": 98 },
       "quiz_payload": {
-        "question": "State Election Commissioner ko remove karne ka tarika kis constitutional functionary ke removal se SAME hai?",
+        "question": "Q2/3: Article 161 ke tehat Governor ki pardoning power ke baare mein kaunsa kathan GALAT hai?",
         "options": [
-          { "id": "A", "text": "Supreme Court Judge" },
-          { "id": "B", "text": "High Court Judge" },
-          { "id": "C", "text": "Chief Election Commissioner" },
-          { "id": "D", "text": "Chief Minister" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Article 243K(3) aur 243ZA(3) clearly specify karte hain: SEC ko remove karne ka manner SAME hai jaise High Court Judge ko remove karte hain — yaani State Legislature ka address + proved misbehaviour/incapacity + Governor ka order. BPSC ka most-asked comparison question!"
-      },
-      "navigation": {
-        "next": "card_29_quiz_tenure_3",
-        "button_text": "Last ➔"
-      }
-    },
-    {
-      "card_id": "card_29_quiz_tenure_3",
-      "card_slug": "card_29_quiz_tenure_3",
-      "type": "quiz",
-      "concept_id": "quiz_tenure_3",
-      "level": 3,
-      "progress": {
-        "current": 29,
-        "total": 58
-      },
-      "quiz_payload": {
-        "question": "State Election Commissioner ki salary aur service conditions appoint hone ke BAAD kaise change ho sakti hain?",
-        "options": [
-          { "id": "A", "text": "Governor kisi bhi time reduce kar sakta hai" },
-          { "id": "B", "text": "Sirf increase ki ja sakti hai, decrease nahi" },
-          { "id": "C", "text": "Disadvantageous manner mein change nahi ho sakti" },
-          { "id": "D", "text": "Chief Minister ki permission se change ho sakti hai" }
+          { "id": "A", "text": "Governor saza suspend kar sakta hai" },
+          { "id": "B", "text": "Governor saza commute kar sakta hai" },
+          { "id": "C", "text": "Governor Death Sentence maaf kar sakta hai" },
+          { "id": "D", "text": "Governor saza remit kar sakta hai" }
         ],
         "correct_option_id": "C",
-        "explanation": "Constitution guarantees karta hai ki SEC ki salary aur conditions ko appointment ke baad disadvantageous manner mein change nahi kiya ja sakta. Ye independence aur impartiality ensure karta hai — bilkul High Court Judge jaisa protection. UPSC loves this nuanced statement!"
+        "explanation": "Governor Death Sentence maaf NAHI kar sakta - ye sirf President ki power hai (Article 72). Governor ki pardoning power state law ke under convicted persons ke liye hai, par death sentence isse bahar hai."
       },
-      "navigation": {
-        "next": "card_30_milestone_tenure",
-        "button_text": "Module Done ➔"
-      }
+      "navigation": { "next": "card_23_quiz3_m3", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_30_milestone_tenure",
-      "card_slug": "card_30_milestone_tenure",
-      "type": "milestone",
-      "concept_id": "milestone_3",
-      "level": 3,
-      "progress": {
-        "current": 30,
-        "total": 58
-      },
-      "milestone_payload": {
-        "title": "🏆 MODULE 3 MASTERED!",
-        "badge_emoji": "⚖️",
-        "completed_topic": "Tenure, Removal & Salary Protection",
-        "xp_earned": 70,
-        "milestone_progress": "Module 3/6 Complete",
-        "motivational_quote": "You just cleared the toughest PYQ zone! High Court Judge comparison = BPSC gold 🥇"
-      },
-      "navigation": {
-        "next": "card_31_powers_intro",
-        "button_text": "Powers Padho ➔"
-      }
-    },
-    {
-      "card_id": "card_31_powers_intro",
-      "card_slug": "card_31_powers_intro",
-      "type": "chat",
-      "concept_id": "powers_intro",
-      "level": 4,
-      "progress": {
-        "current": 31,
-        "total": 58
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab aata hai functional part — State Election Commission ko kya-kya powers hain? Basically SEC kya kaam karti hai?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, local body elections conduct karati hai — Panchayat, Municipality wagera!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Correct! Lekin 'conduct' ka matlab sirf voting karwana nahi hai. SEC ka kaam shuru hota hai voter list se aur khatam hota hai election results declare karne tak — puri process ko supervise, direct aur control karna."
-        },
-        {
-          "speaker": "raju",
-          "text": "To ECI jaisa hi kaam karta hai SEC, sirf local level pe?"
-        }
-      ],
-      "navigation": {
-        "next": "card_32_powers_detail",
-        "button_text": "Powers Detail ➔"
-      }
-    },
-    {
-      "card_id": "card_32_powers_detail",
-      "card_slug": "card_32_powers_detail",
-      "type": "chat",
-      "concept_id": "powers_detail",
-      "level": 4,
-      "progress": {
-        "current": 32,
-        "total": 58
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bilkul! SEC ke main powers hain: (1) Electoral rolls taiyar karna, (2) Election schedule announce karna, (3) Candidates ki nominations scrutinize karna, (4) Polling stations aur staff deploy karna, (5) Code of Conduct enforce karna, (6) Results declare karna."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir to sabkuch SEC hi karti hai? State government kuch nahi karti?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Twist yahin hai! SEC elections conduct karti hai, lekin administrative machinery — police, teachers, staff — ye sab state government provide karti hai. SEC orders deti hai, state government execute karti hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ohh! To coordination zaroori hai dono mein?"
-        }
-      ],
-      "navigation": {
-        "next": "card_33_delimitation_power",
-        "button_text": "Delimitation Kya Hai ➔"
-      }
-    },
-    {
-      "card_id": "card_33_delimitation_power",
-      "card_slug": "card_33_delimitation_power",
-      "type": "chat",
-      "concept_id": "delimitation_power",
-      "level": 4,
-      "progress": {
-        "current": 33,
-        "total": 58
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab ek aur important power — Delimitation (ward boundaries fix karna). Panchayat wards ya Municipality wards ki boundaries kaun decide karta hai?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Mujhe lagta hai SEC karti hogi?"
-        },
-        {
-          "speaker": "aman",
-          "text": "WRONG! Ye common confusion hai. Delimitation ka kaam State Government (through State Delimitation Committee ya District Magistrate) karta hai, SEC nahi. SEC sirf delimited constituencies mein election conduct karti hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaaa! To SEC ka kaam election karwana hai, boundaries banana nahi?"
-        }
-      ],
-      "navigation": {
-        "next": "card_34_model_code",
-        "button_text": "Model Code Samjho ➔"
-      }
-    },
-    {
-      "card_id": "card_34_model_code",
-      "card_slug": "card_34_model_code",
-      "type": "chat",
-      "concept_id": "model_code_conduct",
-      "level": 4,
-      "progress": {
-        "current": 34,
-        "total": 58
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab aata hai Model Code of Conduct (MCC). Jaise ECI Lok Sabha elections mein MCC lagati hai (no new schemes, no transfers), waise hi SEC bhi Panchayat/Municipality elections mein MCC enforce karti hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "⭐ Bihar mein bhi SEC MCC laga sakti hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC TRE Favorite: Haan! Bihar SEC bhi Panchayat elections ke time MCC enforce karti hai — matlab CM, Ministers koi bhi government schemes announce nahi kar sakte, transfers nahi ho sakte, development inaugurations ban hoti hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Lekin Sir, MCC to sirf guideline hai na? Legal power nahi?"
-        }
-      ],
-      "navigation": {
-        "next": "card_35_mcc_status",
-        "button_text": "MCC Status ➔"
-      }
-    },
-    {
-      "card_id": "card_35_mcc_status",
-      "card_slug": "card_35_mcc_status",
-      "type": "chat",
-      "concept_id": "mcc_status",
-      "level": 4,
-      "progress": {
-        "current": 35,
-        "total": 58
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bilkul sahi! Model Code of Conduct constitutionally ya legally binding NAHI hai — na ECI ke liye, na SEC ke liye. Ye sirf guideline hai. Lekin Supreme Court ne kaha hai ki MCC ko seriously follow karna chahiye — aur violations pe action liya ja sakta hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "To MCC violate karne pe punishment nahi hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Directly punishment nahi, lekin SEC candidate ko disqualify kar sakti hai, ya election petition file ho sakta hai Court mein. Plus public pressure aur media trial hota hai. UPSC ka favorite trap: 'Is MCC legally enforceable?' — Answer: NO (legally), YES (practically followed)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya Sir! Guideline hai, lekin powerful guideline!"
-        }
-      ],
-      "navigation": {
-        "next": "card_36_quiz_powers_1",
-        "button_text": "Quiz Time ➔"
-      }
-    },
-    {
-      "card_id": "card_36_quiz_powers_1",
-      "card_slug": "card_36_quiz_powers_1",
+      "card_id": "card_23_quiz3_m3",
+      "card_slug": "card_23_quiz3_m3",
       "type": "quiz",
-      "concept_id": "quiz_powers_1",
-      "level": 4,
-      "progress": {
-        "current": 36,
-        "total": 58
-      },
+      "concept_id": "governor_powers",
+      "level": 3,
+      "progress": { "current": 23, "total": 98 },
       "quiz_payload": {
-        "question": "State Election Commission ke functions mein se KON SA function State Government ka hai, SEC ka nahi?",
+        "question": "Q3/3: Article 213 ke tehat Governor Ordinance jaari karne ki power kab use kar sakta hai?",
         "options": [
-          { "id": "A", "text": "Electoral rolls taiyar karna" },
-          { "id": "B", "text": "Delimitation of wards" },
-          { "id": "C", "text": "Election schedule declare karna" },
-          { "id": "D", "text": "Polling staff deploy karna" }
+          { "id": "A", "text": "Jab bhi chahe, kisi bhi samay" },
+          { "id": "B", "text": "Sirf jab Vidhan Sabha session mein na ho" },
+          { "id": "C", "text": "Sirf President ki permission se" },
+          { "id": "D", "text": "Sirf Emergency ke dauran" }
         ],
         "correct_option_id": "B",
-        "explanation": "Delimitation (ward boundaries fix karna) State Government ka kaam hai, SEC ka nahi. Baaki saare — electoral rolls, schedule, polling staff deployment — ye SEC ke functions hain. BPSC frequently delimitation aur SEC ko mix karta hai — dhyan se padho!"
+        "explanation": "Article 213 ke tehat Governor tab hi Ordinance jaari kar sakta hai jab Vidhan Sabha (ya koi bhi Sadan) session mein na ho, aur urgent legislation ki zaroorat ho."
       },
-      "navigation": {
-        "next": "card_37_quiz_powers_2",
-        "button_text": "Next ➔"
-      }
+      "navigation": { "next": "card_24_milestone3", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_37_quiz_powers_2",
-      "card_slug": "card_37_quiz_powers_2",
-      "type": "quiz",
-      "concept_id": "quiz_powers_2",
-      "level": 4,
-      "progress": {
-        "current": 37,
-        "total": 58
-      },
-      "quiz_payload": {
-        "question": "Model Code of Conduct (MCC) ki legal status kya hai?",
-        "options": [
-          { "id": "A", "text": "Constitutional provision hai" },
-          { "id": "B", "text": "Statutory law hai" },
-          { "id": "C", "text": "Legally enforceable guideline hai" },
-          { "id": "D", "text": "Legally binding nahi hai, lekin followed guideline hai" }
-        ],
-        "correct_option_id": "D",
-        "explanation": "Model Code of Conduct na constitutional hai, na statutory law hai. Ye sirf guideline hai jo Election Commission (ECI ya SEC) follow karati hai. Supreme Court ne emphasize kiya hai ki MCC ko seriously lena chahiye, lekin legally enforceable nahi hai. UPSC Prelims ka classic nuanced statement!"
-      },
-      "navigation": {
-        "next": "card_38_quiz_powers_3",
-        "button_text": "Last Question ➔"
-      }
-    },
-    {
-      "card_id": "card_38_quiz_powers_3",
-      "card_slug": "card_38_quiz_powers_3",
-      "type": "quiz",
-      "concept_id": "quiz_powers_3",
-      "level": 4,
-      "progress": {
-        "current": 38,
-        "total": 58
-      },
-      "quiz_payload": {
-        "question": "⭐ Bihar SEC kis election ko conduct NAHI karti?",
-        "options": [
-          { "id": "A", "text": "Gram Panchayat Election" },
-          { "id": "B", "text": "Panchayat Samiti Election" },
-          { "id": "C", "text": "Zila Parishad Election" },
-          { "id": "D", "text": "Vidhan Sabha Election" }
-        ],
-        "correct_option_id": "D",
-        "explanation": "⭐ BPSC TRE Specific: Bihar SEC conduct karti hai — Gram Panchayat, Panchayat Samiti, Zila Parishad, aur Municipal bodies (Nagar Palika, Nagar Parishad, Municipal Corporation) ke elections. Vidhan Sabha election ECI conduct karti hai, SEC nahi. Students frequently confuse!"
-      },
-      "navigation": {
-        "next": "card_39_milestone_powers",
-        "button_text": "Module Complete ➔"
-      }
-    },
-    {
-      "card_id": "card_39_milestone_powers",
-      "card_slug": "card_39_milestone_powers",
+      "card_id": "card_24_milestone3",
+      "card_slug": "card_24_milestone3",
       "type": "milestone",
-      "concept_id": "milestone_4",
-      "level": 4,
-      "progress": {
-        "current": 39,
-        "total": 58
-      },
+      "concept_id": "governor_powers",
+      "level": 3,
+      "progress": { "current": 24, "total": 98 },
       "milestone_payload": {
-        "title": "💪 MODULE 4 CLEARED!",
+        "title": "MODULE COMPLETED!",
         "badge_emoji": "⚡",
-        "completed_topic": "Powers & Functions of SEC",
-        "xp_earned": 75,
-        "milestone_progress": "Module 4/6 Complete",
-        "motivational_quote": "Delimitation trap dodged! MCC clarity achieved! You're becoming a Polity Officer 🎯"
+        "completed_topic": "Governor's Powers",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/11 Clear",
+        "motivational_quote": "Governor ke powers master ho gaye! Ab Vidhan Sabha - state ka asli decision making floor!"
       },
-      "navigation": {
-        "next": "card_40_sec_vs_eci",
-        "button_text": "Comparison Padho ➔"
-      }
+      "navigation": { "next": "card_25_vidhan_sabha_intro", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_40_sec_vs_eci",
-      "card_slug": "card_40_sec_vs_eci",
+      "card_id": "card_25_vidhan_sabha_intro",
+      "card_slug": "card_25_vidhan_sabha_intro",
       "type": "chat",
-      "concept_id": "sec_vs_eci_intro",
-      "level": 5,
-      "progress": {
-        "current": 40,
-        "total": 58
-      },
+      "concept_id": "vidhan_sabha",
+      "level": 3,
+      "progress": { "current": 25, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Ab sabse zyada PYQ-favorite comparison — State Election Commission (SEC) vs Election Commission of India (ECI). BPSC, SSC, UPSC — sabne isse 10 baar puchha hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir pehle se hi thoda confusion clear hai — ECI Parliament/State Legislature, SEC local bodies. Aur kya differences hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bahut saare! Chalo point-wise dekhte hain — (1) Constitutional Article, (2) Appointment, (3) Removal, (4) Composition, (5) Jurisdiction — sabmein difference hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Wow Sir! Itne differences? Chalo ek-ek karke samjhte hain!"
-        }
+        { "speaker": "aman", "text": "Raju, Vidhan Sabha State Legislature ka Lower House hai - jaise Lok Sabha Centre mein. Article 170 iski composition batata hai. Maximum strength 500 aur minimum 60 seats hoti hain." },
+        { "speaker": "raju", "text": "Sir sab states mein alag alag seats hain kya Vidhan Sabha mein?" },
+        { "speaker": "aman", "text": "Haan, population ke hisaab se! ⭐ Bihar Vidhan Sabha mein 243 seats hain. Goa mein sirf 40 seats hain (ye ek exception hai - Constitution mein 60 minimum ka rule hai, par Goa ko special status di gayi hai). UP ki Vidhan Sabha sabse badi hai - 403 seats." },
+        { "speaker": "raju", "text": "Bihar mein 243! Aur UP mein 403 - ye to bahut zyada hai sir. Aur member kaise chune jaate hain - seedha election hota hai?" }
       ],
-      "navigation": {
-        "next": "card_41_comparison_table_1",
-        "button_text": "Table Dekho ➔"
-      }
+      "navigation": { "next": "card_26_vidhan_sabha_election", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_41_comparison_table_1",
-      "card_slug": "card_41_comparison_table_1",
+      "card_id": "card_26_vidhan_sabha_election",
+      "card_slug": "card_26_vidhan_sabha_election",
       "type": "chat",
-      "concept_id": "comparison_constitutional",
-      "level": 5,
-      "progress": {
-        "current": 41,
-        "total": 58
-      },
+      "concept_id": "vidhan_sabha",
+      "level": 3,
+      "progress": { "current": 26, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Point 1 — Constitutional Provision:\n\nECI: Article 324\nSEC: Article 243K (Panchayat), 243ZA (Municipality)\n\nDono constitutional bodies hain, lekin alag-alag Articles mein."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Article 324 ka ek number hi hai, lekin SEC ke do Articles hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan kyunki ECI ek hi body hai sabke liye — Lok Sabha, Rajya Sabha, Vidhan Sabha, Vidhan Parishad sab. Lekin SEC ke liye Panchayat (Part IX) aur Municipality (Part IX-A) alag-alag Parts hain Constitution mein — isliye 243K aur 243ZA dono mention hote hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya! Ek unified, ek segregated!"
-        }
+        { "speaker": "aman", "text": "Bilkul! Vidhan Sabha ke members DIRECT ELECTION se chune jaate hain - wahi adult suffrage (18+ saal) system jo Lok Sabha ke liye hai. Har constituency se ek MLA (Member of Legislative Assembly) chuna jaata hai." },
+        { "speaker": "raju", "text": "Aur MLA banne ke liye kya qualifications chahiye sir?" },
+        { "speaker": "aman", "text": "Article 173 ke anusaar: (1) Bharat ka nagrik hona chahiye, (2) Minimum 25 saal umar, (3) State ke kisi constituency mein voter list mein naam hona chahiye. Kuch disqualifications bhi hain - office of profit, unsound mind, insolvent, videshi nagrikta." },
+        { "speaker": "raju", "text": "25 saal - yahi Lok Sabha ke liye bhi hai! Aur Vidhan Sabha ka tenure kya hota hai?" }
       ],
-      "navigation": {
-        "next": "card_42_comparison_table_2",
-        "button_text": "Appointment Dekho ➔"
-      }
+      "navigation": { "next": "card_27_vidhan_sabha_tenure", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_42_comparison_table_2",
-      "card_slug": "card_42_comparison_table_2",
+      "card_id": "card_27_vidhan_sabha_tenure",
+      "card_slug": "card_27_vidhan_sabha_tenure",
       "type": "chat",
-      "concept_id": "comparison_appointment",
-      "level": 5,
-      "progress": {
-        "current": 42,
-        "total": 58
-      },
+      "concept_id": "vidhan_sabha",
+      "level": 3,
+      "progress": { "current": 27, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Point 2 — Appointment:\n\nECI: Chief Election Commissioner (CEC) + 2 Election Commissioners → appointed by President\nSEC: Single State Election Commissioner → appointed by Governor"
-        },
-        {
-          "speaker": "raju",
-          "text": "To ECI mein 3 members hote hain, SEC mein sirf 1?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! ECI ek multi-member body hai (collegium system), jabki SEC single-member body hai. Lekin kuch states mein State Legislature ne provision rakha hai ki SEC ko additional commissioners mil sakte hain — lekin ye optional hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "⭐ Bihar mein single SEC hai ya multiple?"
-        }
+        { "speaker": "aman", "text": "Article 172 ke anusaar Vidhan Sabha ka tenure 5 saal hota hai, Lok Sabha ki tarah. Isse Governor dissolve bhi kar sakta hai CM ki salaah par. Emergency mein Parliament ek saal badhaa sakti hai tenure ko." },
+        { "speaker": "raju", "text": "Vidhan Sabha mein koi nominated member bhi hota hai kya, jaise Lok Sabha mein pehle Anglo-Indian hote the?" },
+        { "speaker": "aman", "text": "Haan! Article 333 ke tehat Governor Anglo-Indian community ka ek member nominate kar sakta tha Vidhan Sabha mein, agar wo community adequately represented nahi thi. Lekin 104th Amendment 2020 ne ye provision bhi khatam kar diya - bilkul Lok Sabha wale Anglo-Indian provision ki tarah." },
+        { "speaker": "raju", "text": "Achha! To 2020 ke baad ab koi nominated member Vidhan Sabha mein nahi hoga?" }
       ],
-      "navigation": {
-        "next": "card_43_bihar_sec_structure",
-        "button_text": "Bihar Detail ➔"
-      }
+      "navigation": { "next": "card_28_vidhan_sabha_speaker", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_43_bihar_sec_structure",
-      "card_slug": "card_43_bihar_sec_structure",
+      "card_id": "card_28_vidhan_sabha_speaker",
+      "card_slug": "card_28_vidhan_sabha_speaker",
       "type": "chat",
-      "concept_id": "bihar_sec_structure",
-      "level": 5,
-      "progress": {
-        "current": 43,
-        "total": 58
-      },
+      "concept_id": "vidhan_sabha",
+      "level": 3,
+      "progress": { "current": 28, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC TRE Favorite: Bihar mein single State Election Commissioner hota hai — koi multi-member commission nahi. Lekin SEC ke niche administrative staff, Deputy SECs, aur District Election Officers (DEOs) hote hain support ke liye."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaaa! To ek hi final decision-maker, baaki staff supportive role mein!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect understanding! Ab aate hain removal comparison pe — yahan sabse bada trap hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir pehle bhi padha tha — SEC ko High Court Judge jaisa remove karte hain?"
-        }
+        { "speaker": "aman", "text": "Bilkul sahi! 104th Amendment ne dono jagah se ye provision hataya. Ab Vidhan Sabha ka presiding officer - 'Speaker' (Article 178) - Vidhan Sabha khud apne members mein se chunti hai. Aur ek Deputy Speaker bhi hota hai." },
+        { "speaker": "raju", "text": "Kya Vidhan Sabha ka Speaker bhi waise hi vote karta hai jaise Lok Sabha Speaker - sirf tie hone par?" },
+        { "speaker": "aman", "text": "Bilkul! Wahi rule - Speaker normal voting mein nahi karti, sirf tie hone par casting vote karti hai. ⭐ Bihar Vidhan Sabha ki pehli mahila Speaker thi Rajwati Devi (kuch records mein 2015 ke baad ke liye). Speaker ka resignation Deputy Speaker ko hota hai aur Vice-versa." },
+        { "speaker": "raju", "text": "Wahi system Lok Sabha jaisa! Ab quiz de dijiye is module ka." }
       ],
-      "navigation": {
-        "next": "card_44_comparison_removal",
-        "button_text": "Removal Detail ➔"
-      }
+      "navigation": { "next": "card_29_quiz1_m4", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_44_comparison_removal",
-      "card_slug": "card_44_comparison_removal",
-      "type": "chat",
-      "concept_id": "comparison_removal",
-      "level": 5,
-      "progress": {
-        "current": 44,
-        "total": 58
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Point 3 — Removal Process:\n\nECI CEC: Parliament + President (Supreme Court Judge jaisa)\nECI other Commissioners: CEC ki recommendation par President remove kar sakta hai\nSEC: State Legislature + Governor (High Court Judge jaisa)"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab ECI CEC ko sabse zyada protection mila hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! CEC ko Supreme Court Judge level ka protection — bahut mushkil hai remove karna. Baaki Election Commissioners ko thoda kam protection — CEC recommend kare to President remove kar sakta hai. SEC ko High Court Judge level protection — medium difficulty."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ye to ranking ban gayi Sir — CEC > SEC > other ECs!"
-        }
-      ],
-      "navigation": {
-        "next": "card_45_comparison_jurisdiction",
-        "button_text": "Jurisdiction Comparison ➔"
-      }
-    },
-    {
-      "card_id": "card_45_comparison_jurisdiction",
-      "card_slug": "card_45_comparison_jurisdiction",
-      "type": "chat",
-      "concept_id": "comparison_jurisdiction",
-      "level": 5,
-      "progress": {
-        "current": 45,
-        "total": 58
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Point 4 — Jurisdiction (Elections Conducted):\n\nECI: Lok Sabha, Rajya Sabha, Vidhan Sabha, Vidhan Parishad, President, Vice-President\nSEC: Panchayats (Gram, Panchayat Samiti, Zila Parishad), Municipalities (Nagar Palika, Nagar Parishad, Municipal Corporation)"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ek doubt — Rajya Sabha to indirect election hai na? ECI kaise conduct karti hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Brilliant observation! Rajya Sabha ke members MLAs elect karte hain — but ye process bhi ECI supervise karti hai. Similarly President aur Vice-President bhi Electoral College se elect hote hain, lekin ECI hi conduct karti hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Achhaaaa! Matlab direct ho ya indirect, jab bhi koi constitutional post pe election ho, ECI involved hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_46_quiz_comparison_1",
-        "button_text": "Comparison Quiz ➔"
-      }
-    },
-    {
-      "card_id": "card_46_quiz_comparison_1",
-      "card_slug": "card_46_quiz_comparison_1",
+      "card_id": "card_29_quiz1_m4",
+      "card_slug": "card_29_quiz1_m4",
       "type": "quiz",
-      "concept_id": "quiz_comparison_1",
-      "level": 5,
-      "progress": {
-        "current": 46,
-        "total": 58
-      },
+      "concept_id": "vidhan_sabha",
+      "level": 3,
+      "progress": { "current": 29, "total": 98 },
       "quiz_payload": {
-        "question": "Election Commission of India (ECI) kis Article mein provision hai?",
+        "question": "Q1/3: Article 170 ke anusaar Vidhan Sabha ki maximum aur minimum strength kya hai?",
         "options": [
-          { "id": "A", "text": "Article 243K" },
-          { "id": "B", "text": "Article 243ZA" },
-          { "id": "C", "text": "Article 324" },
-          { "id": "D", "text": "Article 356" }
+          { "id": "A", "text": "Maximum 600, Minimum 100" },
+          { "id": "B", "text": "Maximum 500, Minimum 60" },
+          { "id": "C", "text": "Maximum 543, Minimum 25" },
+          { "id": "D", "text": "Maximum 250, Minimum 40" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 170 ke anusaar Vidhan Sabha ki maximum strength 500 aur minimum 60 hoti hai. Goa ki 40 seats ek special constitutional exception hai."
+      },
+      "navigation": { "next": "card_30_quiz2_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_30_quiz2_m4",
+      "card_slug": "card_30_quiz2_m4",
+      "type": "quiz",
+      "concept_id": "vidhan_sabha",
+      "level": 3,
+      "progress": { "current": 30, "total": 98 },
+      "quiz_payload": {
+        "question": "Q2/3: Bihar Vidhan Sabha mein kitni seats hain?",
+        "options": [
+          { "id": "A", "text": "200 seats" },
+          { "id": "B", "text": "225 seats" },
+          { "id": "C", "text": "243 seats" },
+          { "id": "D", "text": "294 seats" }
         ],
         "correct_option_id": "C",
-        "explanation": "Article 324 mein Election Commission of India (ECI) ka provision hai. Article 243K (Panchayat SEC) aur 243ZA (Municipality SEC) State Election Commission se related hain. Ye BPSC/SSC ka direct favorite trap hai — Article numbers mix karna!"
+        "explanation": "⭐ BPSC TRE Favorite: Bihar Vidhan Sabha mein 243 seats hain. UP (403) sabse badi Vidhan Sabha hai, Sikkim (32) sabse chhoti."
       },
-      "navigation": {
-        "next": "card_47_quiz_comparison_2",
-        "button_text": "Agla ➔"
-      }
+      "navigation": { "next": "card_31_quiz3_m4", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_47_quiz_comparison_2",
-      "card_slug": "card_47_quiz_comparison_2",
+      "card_id": "card_31_quiz3_m4",
+      "card_slug": "card_31_quiz3_m4",
       "type": "quiz",
-      "concept_id": "quiz_comparison_2",
-      "level": 5,
-      "progress": {
-        "current": 47,
-        "total": 58
-      },
+      "concept_id": "vidhan_sabha",
+      "level": 3,
+      "progress": { "current": 31, "total": 98 },
       "quiz_payload": {
-        "question": "ECI aur SEC mein se MULTI-MEMBER body kaun si hai?",
+        "question": "Q3/3: 104th Constitutional Amendment, 2020 ne State Vidhan Sabhaon ke sambandh mein kya badlav kiya?",
         "options": [
-          { "id": "A", "text": "Sirf ECI" },
-          { "id": "B", "text": "Sirf SEC" },
-          { "id": "C", "text": "Dono multi-member hain" },
-          { "id": "D", "text": "Dono single-member hain" }
+          { "id": "A", "text": "Speaker ki powers badhayi" },
+          { "id": "B", "text": "Anglo-Indian community ke liye Governor dwara nomination ka provision khatam kiya" },
+          { "id": "C", "text": "Vidhan Sabha ki seats badhayi" },
+          { "id": "D", "text": "Vidhan Sabhaon ko dissolve karna difficult banaya" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "104th Amendment, 2020 (effective 25 January 2020) ne Article 333 ke tehat State Vidhan Sabhaon mein Anglo-Indian community ke liye Governor dwara nominated seat ka provision khatam kar diya - jaise Lok Sabha mein Article 331 ka provision khatam hua."
+      },
+      "navigation": { "next": "card_32_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_32_milestone4",
+      "card_slug": "card_32_milestone4",
+      "type": "milestone",
+      "concept_id": "vidhan_sabha",
+      "level": 3,
+      "progress": { "current": 32, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🗳️",
+        "completed_topic": "Vidhan Sabha - The State Lower House",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/11 Clear",
+        "motivational_quote": "Vidhan Sabha pakki! Ab Vidhan Parishad ka special concept samjhte hain - woh jo sirf 6 states mein hai!"
+      },
+      "navigation": { "next": "card_33_vidhan_parishad_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_33_vidhan_parishad_intro",
+      "card_slug": "card_33_vidhan_parishad_intro",
+      "type": "chat",
+      "concept_id": "vidhan_parishad",
+      "level": 4,
+      "progress": { "current": 33, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, Vidhan Parishad State Legislature ka Upper House hai - jaise Rajya Sabha Centre mein permanent hoti hai, Vidhan Parishad bhi kabhi dissolve nahi hoti. Article 171 iski composition batata hai." },
+        { "speaker": "raju", "text": "Sir, maximum strength kitni hoti hai Vidhan Parishad ki?" },
+        { "speaker": "aman", "text": "Vidhan Parishad ki strength Vidhan Sabha ki total strength ke 1/3rd se ZYADA nahi ho sakti, aur minimum 40 honi chahiye. Members ka tenure 6 saal ka hota hai, aur har 2 saal mein 1/3rd retire karte hain - bilkul Rajya Sabha ki tarah." },
+        { "speaker": "raju", "text": "⭐ Bihar Vidhan Parishad mein kitni seats hain sir?" }
+      ],
+      "navigation": { "next": "card_34_vidhan_parishad_composition", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_34_vidhan_parishad_composition",
+      "card_slug": "card_34_vidhan_parishad_composition",
+      "type": "chat",
+      "concept_id": "vidhan_parishad",
+      "level": 4,
+      "progress": { "current": 34, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Bihar Vidhan Parishad mein 75 seats hain - Bihar Vidhan Sabha (243) ki 1/3rd se kam ya barabar. Ye ek frequently asked fact hai BPSC mein." },
+        { "speaker": "raju", "text": "Achha! Aur Vidhan Parishad ke members kaise chune jaate hain? Seedha election hota hai?" },
+        { "speaker": "aman", "text": "Nahi, Vidhan Parishad members INDIRECTLY chune jaate hain! Article 171(3) ke anusaar: 1/3rd MLA dwara chune jaate hain, 1/3rd local bodies (Panchayat, Municipalities) dwara, 1/12th teachers dwara (university-level), 1/12th graduates dwara, aur 1/6th Governor dwara nominated." },
+        { "speaker": "raju", "text": "Wah! Itne alag-alag groups se members aate hain! Governor ke nominated 1/6th members - inka kya hisab laga sakte hain Bihar ke liye?" }
+      ],
+      "navigation": { "next": "card_35_vidhan_parishad_creation", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_35_vidhan_parishad_creation",
+      "card_slug": "card_35_vidhan_parishad_creation",
+      "type": "chat",
+      "concept_id": "vidhan_parishad",
+      "level": 4,
+      "progress": { "current": 35, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bihar mein 75 ka 1/6th = 12.5, practically 12-13 Governor nominated members hote hain. Ab ek important rule - koi state Vidhan Parishad bana ya khatam kar sakti hai? Haan, Article 169 ke tehat Parliament kanoon banakar ye kar sakti hai, agar Vidhan Sabha apna resolution 2/3rd special majority se pass kare." },
+        { "speaker": "raju", "text": "Matlab Vidhan Sabha khud Vidhan Parishad khatam kar sakti hai apna hi Upper House?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Andhra Pradesh ne 1985 mein Vidhan Parishad abolish ki, phir 2007 mein dubara banaayi. Rajasthan, Assam, Tamilnadu ne bhi pehle Vidhan Parishad abolish ki thi. Abhi sirf 6 states mein hai, baaki abolish kar chuki hain." },
+        { "speaker": "raju", "text": "Interesting! Ab quiz chaho tum Vidhan Parishad ka?" }
+      ],
+      "navigation": { "next": "card_36_quiz1_m5", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_36_quiz1_m5",
+      "card_slug": "card_36_quiz1_m5",
+      "type": "quiz",
+      "concept_id": "vidhan_parishad",
+      "level": 4,
+      "progress": { "current": 36, "total": 98 },
+      "quiz_payload": {
+        "question": "Q1/3: Vidhan Parishad ki maximum aur minimum strength ke baare mein sahi kathan chuno.",
+        "options": [
+          { "id": "A", "text": "Maximum Vidhan Sabha ka 1/2, Minimum 50" },
+          { "id": "B", "text": "Maximum Vidhan Sabha ka 1/3rd (se zyada nahi), Minimum 40" },
+          { "id": "C", "text": "Maximum 250, Minimum 60" },
+          { "id": "D", "text": "Maximum Vidhan Sabha ka 1/4th, Minimum 30" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 171(1) ke anusaar Vidhan Parishad ki strength Vidhan Sabha ki kul seats ke 1/3rd se zyada nahi ho sakti, aur minimum 40 honi chahiye."
+      },
+      "navigation": { "next": "card_37_quiz2_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_37_quiz2_m5",
+      "card_slug": "card_37_quiz2_m5",
+      "type": "quiz",
+      "concept_id": "vidhan_parishad",
+      "level": 4,
+      "progress": { "current": 37, "total": 98 },
+      "quiz_payload": {
+        "question": "Q2/3: Bihar Vidhan Parishad mein kul kitni seats hain?",
+        "options": [
+          { "id": "A", "text": "40 seats" },
+          { "id": "B", "text": "60 seats" },
+          { "id": "C", "text": "75 seats" },
+          { "id": "D", "text": "81 seats" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC TRE Favorite: Bihar Vidhan Parishad mein 75 seats hain. Bihar Vidhan Sabha 243 seats ki hai, aur uska 1/3rd = 81, lekin Vidhan Parishad 75 seats ki hai."
+      },
+      "navigation": { "next": "card_38_quiz3_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_38_quiz3_m5",
+      "card_slug": "card_38_quiz3_m5",
+      "type": "quiz",
+      "concept_id": "vidhan_parishad",
+      "level": 4,
+      "progress": { "current": 38, "total": 98 },
+      "quiz_payload": {
+        "question": "Q3/3: Vidhan Parishad (Article 171) ke sadasyon ke chunav ke baare mein kaunsa kathan GALAT hai?",
+        "options": [
+          { "id": "A", "text": "1/3rd members MLA dwara chune jaate hain" },
+          { "id": "B", "text": "1/6th members Governor dwara nominate kiye jaate hain" },
+          { "id": "C", "text": "1/12th teachers dwara chune jaate hain" },
+          { "id": "D", "text": "Sab members DIRECT election se chune jaate hain" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "Vidhan Parishad ke members direct election se NAHI chune jaate - ye INDIRECT election se aate hain (MLA, local bodies, teachers, graduates) aur 1/6th Governor nominate karta hai."
+      },
+      "navigation": { "next": "card_39_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_39_milestone5",
+      "card_slug": "card_39_milestone5",
+      "type": "milestone",
+      "concept_id": "vidhan_parishad",
+      "level": 4,
+      "progress": { "current": 39, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📜",
+        "completed_topic": "Vidhan Parishad - State Upper House",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/11 Clear",
+        "motivational_quote": "Vidhan Parishad ka ek-ek number yaad ho gaya! Ab Chief Minister aur State Council of Ministers dekhte hain."
+      },
+      "navigation": { "next": "card_40_cm_appointment", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_40_cm_appointment",
+      "card_slug": "card_40_cm_appointment",
+      "type": "chat",
+      "concept_id": "chief_minister",
+      "level": 4,
+      "progress": { "current": 40, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, Chief Minister state ka REAL executive head hota hai - Governor sirf constitutional head hai. Article 164(1) ke anusaar CM ki niyukti GOVERNOR karta hai. Jo party/gathbandhan ke paas Vidhan Sabha mein bahumat hoga, uske leader ko CM banaya jaata hai." },
+        { "speaker": "raju", "text": "Sir, CM ke liye kya qualifications chahiye? PM jaisi hi hain kya?" },
+        { "speaker": "aman", "text": "Constitution mein CM ke liye SEPARATELY koi qualification nahi di gayi - ye bhi ek normal minister hi hota hai. Zaroori hai ki wo Parliament ya Vidhan Mandal ka member ho, agar nahi hai to 6 mahine mein member banna padega. Minimum 25 saal umar (MLA ke liye jo qualification hai)." },
+        { "speaker": "raju", "text": "Aur CM ka tenure kya hota hai? 5 saal fixed hai kya?" }
+      ],
+      "navigation": { "next": "card_41_cm_tenure_powers", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_41_cm_tenure_powers",
+      "card_slug": "card_41_cm_tenure_powers",
+      "type": "chat",
+      "concept_id": "chief_minister",
+      "level": 4,
+      "progress": { "current": 41, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "CM ka tenure FIXED nahi hai - wo tab tak rahega jab tak Vidhan Sabha mein uska bahumat hai. Governor ki prasannata paryant technically, par practically Vidhan Sabha ka confidence zaroori hai. Agar no-confidence motion pass ho, poori State CoM girni padegi." },
+        { "speaker": "raju", "text": "CM ke paas kya-kya powers hote hain sir?" },
+        { "speaker": "aman", "text": "CM ke powers bilkul PM jaise hain - State level par: Wo State CoM ka mukhiya hai, ministers ki niyukti, hataana, portfolio allocation sab kuch CM karta hai Governor ki madad se. State ka policy-making CM karta hai, Governor ko report karta hai state affairs ke baare mein (Article 167)." },
+        { "speaker": "raju", "text": "Toh CM = PM (state level par)! Aur CM Bihar se kaun-kaun se rahe hain sir?" }
+      ],
+      "navigation": { "next": "card_42_cm_bihar_connection", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_42_cm_bihar_connection",
+      "card_slug": "card_42_cm_bihar_connection",
+      "type": "chat",
+      "concept_id": "chief_minister",
+      "level": 4,
+      "progress": { "current": 42, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Bihar ke pehle CM the Dr. Srikrishna Sinha (1946-1961) - sabse lambe samay tak CM rehne wala record unka hai! Bihar se 2005 se Nitish Kumar CM hain (kai terms). Pehli mahila CM Bihar ki Rabri Devi (1997-2005) thin." },
+        { "speaker": "raju", "text": "Dr. Srikrishna Sinha pehle Bihar CM! Aur Rabri Devi pehli mahila CM - ye dono dates pakke yaad rakhne chahiye BPSC ke liye!" },
+        { "speaker": "aman", "text": "Bilkul! Ab ek aur important point - State CoM ki size limit. 91st Amendment, 2003 ne State CoM ke liye bhi limit lagaaya - CM samet kul ministers Vidhan Sabha ki kul sankhya ke 15% se zyada nahi honge, minimum 12 honge." },
+        { "speaker": "raju", "text": "Matlab Bihar mein 243 seats, to 15% = 36.45 - maximum lagbhag 36 ministers ho sakte hain CM samet!" }
+      ],
+      "navigation": { "next": "card_43_quiz1_m6", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_43_quiz1_m6",
+      "card_slug": "card_43_quiz1_m6",
+      "type": "quiz",
+      "concept_id": "chief_minister",
+      "level": 4,
+      "progress": { "current": 43, "total": 98 },
+      "quiz_payload": {
+        "question": "Q1/3: Bihar ke PEHLE Chief Minister kaun the, aur unka karyakaal kya tha?",
+        "options": [
+          { "id": "A", "text": "Jagannath Mishra, 1975-1977" },
+          { "id": "B", "text": "Dr. Srikrishna Sinha, 1946-1961" },
+          { "id": "C", "text": "Satish Prasad Singh, 1968" },
+          { "id": "D", "text": "Karpoori Thakur, 1977-1978" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Favorite: Dr. Srikrishna Sinha (Shri Babu) Bihar ke pehle CM the aur sabse lambe samay tak (1946-1961) CM rahe - lagbhag 15 saal ka record."
+      },
+      "navigation": { "next": "card_44_quiz2_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_44_quiz2_m6",
+      "card_slug": "card_44_quiz2_m6",
+      "type": "quiz",
+      "concept_id": "chief_minister",
+      "level": 4,
+      "progress": { "current": 44, "total": 98 },
+      "quiz_payload": {
+        "question": "Q2/3: 91st Amendment 2003 ke tehat State Council of Ministers ki maximum size kya hai?",
+        "options": [
+          { "id": "A", "text": "Vidhan Sabha strength ka 20%, minimum 15" },
+          { "id": "B", "text": "CM samet kul ministers Vidhan Sabha strength ke 15% se zyada nahi, minimum 12" },
+          { "id": "C", "text": "Maximum 50 ministers in any state" },
+          { "id": "D", "text": "Koi limit nahi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 164(1A), inserted by 91st Amendment 2003, ke anusaar CM samet State CoM ki total strength Vidhan Sabha ki kul sadasya sankhya ke 15% se zyada nahi hogi, minimum 12."
+      },
+      "navigation": { "next": "card_45_quiz3_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_45_quiz3_m6",
+      "card_slug": "card_45_quiz3_m6",
+      "type": "quiz",
+      "concept_id": "chief_minister",
+      "level": 4,
+      "progress": { "current": 45, "total": 98 },
+      "quiz_payload": {
+        "question": "Q3/3: Bihar ki PEHLI mahila Chief Minister kaun thin?",
+        "options": [
+          { "id": "A", "text": "Sushma Swaraj" },
+          { "id": "B", "text": "Rabri Devi (1997)" },
+          { "id": "C", "text": "Uma Bharti" },
+          { "id": "D", "text": "Anugrah Narayan Sinha" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Favorite: Rabri Devi Bihar ki pehli mahila Chief Minister thi - wo 1997 se 2005 tak (kai terms mein) CM rahi, Lalu Prasad ki RJD government ki taraf se."
+      },
+      "navigation": { "next": "card_46_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_46_milestone6",
+      "card_slug": "card_46_milestone6",
+      "type": "milestone",
+      "concept_id": "chief_minister",
+      "level": 4,
+      "progress": { "current": 46, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "👑",
+        "completed_topic": "Chief Minister & State CoM",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/11 Clear",
+        "motivational_quote": "CM ke saare records pakke! Ab President's Rule ka sabse important - aur controversial - topic!"
+      },
+      "navigation": { "next": "card_47_presidents_rule_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_47_presidents_rule_intro",
+      "card_slug": "card_47_presidents_rule_intro",
+      "type": "chat",
+      "concept_id": "presidents_rule",
+      "level": 5,
+      "progress": { "current": 47, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho agar kisi state mein poori sarkar fail ho jaaye - na koi CM ho, na koi Vidhan Sabha majority mile - aur state mein anar-vyavastha (chaos) ho, tab kya hoga?" },
+        { "speaker": "raju", "text": "State mein kisi ko to kaam karna padega sir... tab Central Government aake sambhaalti hai?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Isi ke liye Article 356 hai - 'State Emergency' ya 'President's Rule' ya 'Constitutional Emergency'. Agar Governor report kare ki state mein constitutional machinery fail ho gayi hai, to President state ki sarkar ko dismiss karke direct administration le sakta hai." },
+        { "speaker": "raju", "text": "Aur State Legislature ka kya hota hai President's Rule mein?" }
+      ],
+      "navigation": { "next": "card_48_presidents_rule_effect", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_48_presidents_rule_effect",
+      "card_slug": "card_48_presidents_rule_effect",
+      "type": "chat",
+      "concept_id": "presidents_rule",
+      "level": 5,
+      "progress": { "current": 48, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Vidhan Sabha ya to prorogued (suspended) ho jaati hai ya dissolved ho jaati hai. Governor khud ke paas Executive power aa jaati hai ya President direct central ministers se chalwata hai. Parliament, State Legislature ki jagah kanoon bana sakti hai." },
+        { "speaker": "raju", "text": "Kitne samay tak chal sakti hai President's Rule?" },
+        { "speaker": "aman", "text": "Pehle 2 mahine Parliament approve kare bina nahi chal sakti. Parliament approve kare to pehle 6 mahine tak. Maximum 3 SAAL tak chal sakti hai, lekin har 6 mahine pe Parliament se fresh approval chahiye, aur doosri 6-mahina ke baad ek special condition bhi lagti hai." },
+        { "speaker": "raju", "text": "Kaunsi special condition sir doosri 6-mahini ke baad?" }
+      ],
+      "navigation": { "next": "card_49_presidents_rule_44th_amendment", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_49_presidents_rule_44th_amendment",
+      "card_slug": "card_49_presidents_rule_44th_amendment",
+      "type": "chat",
+      "concept_id": "presidents_rule",
+      "level": 5,
+      "progress": { "current": 49, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "44th Amendment, 1978 ne Article 356 mein provision joda - 1 saal se zyada President's Rule sirf tab extend ho sakta hai jab: (a) National Emergency (Article 352) lagu ho poore India ya us state mein, ya (b) Election Commission certify kare ki election karwana sambhav nahi hai." },
+        { "speaker": "raju", "text": "Achha! Matlab sirf khatam hone ki zaroorat samajhkar 3 saal tak nahi laga sakte - conditions lagte hain!" },
+        { "speaker": "aman", "text": "Bilkul! Aur sabse important landmark case hai - S.R. Bommai vs Union of India (1994). Supreme Court ne kaha ki Article 356 ka misuse nahi hona chahiye, President's Rule lagne se pehle floor test hona chahiye Vidhan Sabha mein, aur ye judicial review ke daayre mein hai." },
+        { "speaker": "raju", "text": "S.R. Bommai case 1994 - ye to bahut famous case hai! BPSC mein zaroor poochhenge sir." }
+      ],
+      "navigation": { "next": "card_50_bihar_presidents_rule", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_50_bihar_presidents_rule",
+      "card_slug": "card_50_bihar_presidents_rule",
+      "type": "chat",
+      "concept_id": "presidents_rule",
+      "level": 5,
+      "progress": { "current": 50, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Bihar mein President's Rule kai baar laga hai - 1968, 1969, 1972, 1977, 1980, 1995, 1999, 2000, 2005 (do baar! - March aur November). 2005 mein February mein election hua par koi majority nahi mili, March mein President's Rule, phir November chunav mein Nitish Kumar CM bane." },
+        { "speaker": "raju", "text": "2005 mein do baar President's Rule?? Ye to bahut chaotic saal raha Bihar ke liye!" },
+        { "speaker": "aman", "text": "Haan, aur ye BPSC mein bahut poochha jaata hai! Bihar ka 2005 ka rajnitik itihasa exam mein frequently aata hai. Ab is module ka quiz karte hain." },
+        { "speaker": "raju", "text": "Ready sir! S.R. Bommai aur Bihar 2005 - dono pakke kar liye!" }
+      ],
+      "navigation": { "next": "card_51_quiz1_m7", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_51_quiz1_m7",
+      "card_slug": "card_51_quiz1_m7",
+      "type": "quiz",
+      "concept_id": "presidents_rule",
+      "level": 5,
+      "progress": { "current": 51, "total": 98 },
+      "quiz_payload": {
+        "question": "Q1/3: Article 356 ke tehat President's Rule ek baar mein kitne samay ke liye laga sakte hain, aur maximum kitne saal tak chal sakta hai?",
+        "options": [
+          { "id": "A", "text": "3 mahine, maximum 1 saal" },
+          { "id": "B", "text": "6 mahine ek baar mein, maximum 3 saal (special conditions ke saath)" },
+          { "id": "C", "text": "1 saal ek baar mein, maximum 5 saal" },
+          { "id": "D", "text": "6 mahine, maximum 1 saal" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "President's Rule: Parliament approval ke saath 6-6 mahine extend ho sakti hai, maximum 3 saal tak. 1 saal ke baad extension ke liye - ya National Emergency ho, ya Election Commission kehe ki election possible nahi (44th Amendment condition)."
+      },
+      "navigation": { "next": "card_52_quiz2_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_52_quiz2_m7",
+      "card_slug": "card_52_quiz2_m7",
+      "type": "quiz",
+      "concept_id": "presidents_rule",
+      "level": 5,
+      "progress": { "current": 52, "total": 98 },
+      "quiz_payload": {
+        "question": "Q2/3: S.R. Bommai vs Union of India (1994) mein Supreme Court ne Article 356 ke baare mein kya mahatvapurna (significant) decision diya?",
+        "options": [
+          { "id": "A", "text": "Article 356 kabhi use nahi ho sakta" },
+          { "id": "B", "text": "President's Rule lagne se pehle floor test hona chahiye, ye judicial review ke daayre mein aata hai, aur iska misuse nahi hona chahiye" },
+          { "id": "C", "text": "President's Rule sirf 6 mahine ka ho sakta hai" },
+          { "id": "D", "text": "Governor ka report challenge nahi kiya ja sakta" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "S.R. Bommai case (1994) - Article 356 ke baare mein landmark case - SC ne kaha: floor test hona chahiye pehle, Vidhan Sabha dissolve karna uchit nahi cabinet dismiss hone tak, aur ye judicial review ke daayre mein hai."
+      },
+      "navigation": { "next": "card_53_quiz3_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_53_quiz3_m7",
+      "card_slug": "card_53_quiz3_m7",
+      "type": "quiz",
+      "concept_id": "presidents_rule",
+      "level": 5,
+      "progress": { "current": 53, "total": 98 },
+      "quiz_payload": {
+        "question": "Q3/3: Bihar mein 2005 mein President's Rule ke baare mein sahi kathan chuno.",
+        "options": [
+          { "id": "A", "text": "2005 mein ek baar President's Rule laga tha" },
+          { "id": "B", "text": "2005 mein do baar President's Rule laga - ek March mein aur ek November chunav ke baad" },
+          { "id": "C", "text": "2005 mein koi President's Rule nahi tha" },
+          { "id": "D", "text": "2005 mein Bihar mein sirf 6 mahine ka President's Rule tha" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "⭐ BPSC TRE Favorite: 2005 mein Bihar mein DO BAAR President's Rule laga. Pehla: March 2005 mein (February chunav mein koi majority nahi). Doosra: briefly November chunav se pehle. November 2005 mein Nitish Kumar CM bane."
+      },
+      "navigation": { "next": "card_54_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_54_milestone7",
+      "card_slug": "card_54_milestone7",
+      "type": "milestone",
+      "concept_id": "presidents_rule",
+      "level": 5,
+      "progress": { "current": 54, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🚨",
+        "completed_topic": "President's Rule - Article 356",
+        "xp_earned": 60,
+        "milestone_progress": "Module 7/11 Clear",
+        "motivational_quote": "Article 356 ka complete picture pakka! Ab Election Commission aur State Elections ka actual process samjhte hain!"
+      },
+      "navigation": { "next": "card_55_election_commission_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_55_election_commission_intro",
+      "card_slug": "card_55_election_commission_intro",
+      "type": "chat",
+      "concept_id": "election_commission",
+      "level": 5,
+      "progress": { "current": 55, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, State Elections karwata kaun hai? Koi alag 'State Election Commission' hoti hai ya wahi ECI (Election Commission of India) hai?" },
+        { "speaker": "raju", "text": "Sir mujhe lagta tha ek hi Election Commission hoti hai poore desh ke liye!" },
+        { "speaker": "aman", "text": "Yahi sabse bada confusion hai! DO alag-alag bodies hain. ECI (Election Commission of India) - ye Article 324 ke tehat hai, Parliament (Lok Sabha) aur State Legislature (Vidhan Sabha/Parishad) ke elections karwata hai. Alag ek 'State Election Commission' - ye Article 243K ke tehat hai, sirf LOCAL BODY elections karwati hai (Panchayat aur Municipalities)." },
+        { "speaker": "raju", "text": "Hain!! Do alag Election Commissions hain?? ECI state Vidhan Sabha ke elections karwata hai, par local body elections ke liye alag SEC hai?!" }
+      ],
+      "navigation": { "next": "card_56_eci_structure", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_56_eci_structure",
+      "card_slug": "card_56_eci_structure",
+      "type": "chat",
+      "concept_id": "election_commission",
+      "level": 5,
+      "progress": { "current": 56, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi samjha! Ye ek bahut common exam trap hai. ECI mein ek Chief Election Commissioner (CEC) aur 2 Election Commissioners hote hain. CEC ko sirf Supreme Court judge ki tarah impeachment process se hataya ja sakta hai - bahut high security hai." },
+        { "speaker": "raju", "text": "Aur CEC aur Election Commissioners ki niyukti kaun karta hai?" },
+        { "speaker": "aman", "text": "President karta hai niyukti. 91st Amendment 2023 ne ek naya kanoon banaya - Chief Election Commissioner and Other Election Commissioners (Appointment, Conditions of Service and Term of Office) Act, 2023 - jisme ek selection committee bani: PM (chairperson), Leader of Opposition LS, aur ek Cabinet Minister." },
+        { "speaker": "raju", "text": "Sir, State Election Commission ka chairman kaun hota hai? Governor ya CM?" }
+      ],
+      "navigation": { "next": "card_57_state_election_commission", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_57_state_election_commission",
+      "card_slug": "card_57_state_election_commission",
+      "type": "chat",
+      "concept_id": "election_commission",
+      "level": 5,
+      "progress": { "current": 57, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "State Election Commission ka head hota hai 'State Election Commissioner' - jo Governor appoint karta hai (Article 243K). Use hatane ki procedure same hai High Court judge ki tarah (impeachment jaisi). Ye sirf LOCAL BODY elections dekhta hai - Panchayat, Block, Zila Parishad, Municipality." },
+        { "speaker": "raju", "text": "Achha! To Bihar ke Panchayat election karwata hai State Election Commission, par Bihar Vidhan Sabha election karwata hai ECI (Election Commission of India)!" },
+        { "speaker": "aman", "text": "Ekdum perfect samjha Raju! Ye distinction exam mein bahut baar galat ho jaata hai. Ek aur zaroori baat - Bihar mein State Election Commissioner Governor appoint karta hai, par unhe remove karne ka process High Court judge jaise hai - Governor akele nahi hata sakte." },
+        { "speaker": "raju", "text": "Ye independence maintain karne ke liye hai na - taaki CM ya Governor unhe pressure mein na kar paye!" }
+      ],
+      "navigation": { "next": "card_58_quiz1_m8", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_58_quiz1_m8",
+      "card_slug": "card_58_quiz1_m8",
+      "type": "quiz",
+      "concept_id": "election_commission",
+      "level": 5,
+      "progress": { "current": 58, "total": 98 },
+      "quiz_payload": {
+        "question": "Q1/3: State Vidhan Sabha ka election kaun karwata hai?",
+        "options": [
+          { "id": "A", "text": "State Election Commission (Article 243K)" },
+          { "id": "B", "text": "Election Commission of India (Article 324)" },
+          { "id": "C", "text": "Governor directly" },
+          { "id": "D", "text": "Home Ministry" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "State Vidhan Sabha, Vidhan Parishad, Lok Sabha - inke elections ECI (Election Commission of India, Article 324) karwata hai. State Election Commission (Article 243K) sirf Panchayat aur Municipal elections karwata hai."
+      },
+      "navigation": { "next": "card_59_quiz2_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_59_quiz2_m8",
+      "card_slug": "card_59_quiz2_m8",
+      "type": "quiz",
+      "concept_id": "election_commission",
+      "level": 5,
+      "progress": { "current": 59, "total": 98 },
+      "quiz_payload": {
+        "question": "Q2/3: State Election Commissioner ki niyukti kaun karta hai, aur use hatane ki procedure kya hai?",
+        "options": [
+          { "id": "A", "text": "CM appoint karta hai, kisi bhi samay hata sakta hai" },
+          { "id": "B", "text": "Governor appoint karta hai (Article 243K), High Court judge ki tarah process se hataya ja sakta hai" },
+          { "id": "C", "text": "President appoint karta hai, Supreme Court judge ki tarah hataya ja sakta hai" },
+          { "id": "D", "text": "Election Commission of India appoint karta hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 243K ke anusaar State Election Commissioner Governor appoint karta hai, aur use High Court judge ki tarah (address by state legislature ke through Governor) ki process se hataya ja sakta hai."
+      },
+      "navigation": { "next": "card_60_quiz3_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_60_quiz3_m8",
+      "card_slug": "card_60_quiz3_m8",
+      "type": "quiz",
+      "concept_id": "election_commission",
+      "level": 5,
+      "progress": { "current": 60, "total": 98 },
+      "quiz_payload": {
+        "question": "Q3/3: Chief Election Commissioner ko kaise hataya ja sakta hai?",
+        "options": [
+          { "id": "A", "text": "President direct hata sakte hain kisi bhi samay" },
+          { "id": "B", "text": "Supreme Court judge ki tarah impeachment process se - dono Houses of Parliament ke special majority resolution se" },
+          { "id": "C", "text": "PM ki sifarish par President hata sakte hain" },
+          { "id": "D", "text": "Koi bhi nahi hata sakta" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CEC ko Article 324 ke protection ke tehat, Supreme Court judge ki tarah same process se hi hataya ja sakta hai - Parliament ke dono Sadan se special majority resolution. Ye unki independence protect karta hai."
+      },
+      "navigation": { "next": "card_61_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_61_milestone8",
+      "card_slug": "card_61_milestone8",
+      "type": "milestone",
+      "concept_id": "election_commission",
+      "level": 5,
+      "progress": { "current": 61, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🗳️",
+        "completed_topic": "Election Commission - ECI vs SEC",
+        "xp_earned": 60,
+        "milestone_progress": "Module 8/11 Clear",
+        "motivational_quote": "ECI aur SEC ka confusion hamesha ke liye khatam! Ab Panchayati Raj aur Local Elections ka bada topic!"
+      },
+      "navigation": { "next": "card_62_panchayati_raj_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_62_panchayati_raj_intro",
+      "card_slug": "card_62_panchayati_raj_intro",
+      "type": "chat",
+      "concept_id": "panchayati_raj",
+      "level": 6,
+      "progress": { "current": 62, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, democracy sirf Delhi aur Patna tak limited nahi hai - hamari democratic system gaon-gaon tak pahunchti hai Panchayati Raj ke zariye. Tumhare gaon mein Mukhiya hai na?" },
+        { "speaker": "raju", "text": "Haan sir, Mukhiya aur Sarpanch - inka chunav bhi hota hai!" },
+        { "speaker": "aman", "text": "Bilkul! Yahi Panchayati Raj System hai. Ise 73rd Constitutional Amendment Act, 1992 ne constitutional darje diya - Article 243 se 243O tak. Isse pehle Panchayati Raj constitutional nahi tha, sirf ek policy thi." },
+        { "speaker": "raju", "text": "1992 mein constitutional hua! Aur kaunsa bal Balwant Rai Mehta wala related hai is topic se sir?" }
+      ],
+      "navigation": { "next": "card_63_panchayati_raj_history", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_63_panchayati_raj_history",
+      "card_slug": "card_63_panchayati_raj_history",
+      "type": "chat",
+      "concept_id": "panchayati_raj",
+      "level": 6,
+      "progress": { "current": 63, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Panchayati Raj ka itihas: Balwant Rai Mehta Committee (1957) ne 3-tier Panchayati Raj ka suggestion diya. Ashok Mehta Committee (1977-78) ne 2-tier ka. L.M. Singhvi Committee (1986) ne ise constitutional darje dene ki sifarish ki - jo finally 73rd Amendment se mila." },
+        { "speaker": "raju", "text": "Teen alag committees - Balwant Rai, Ashok Mehta, Singhvi - ye teen names pakke yaad karne hain!" },
+        { "speaker": "aman", "text": "Bilkul! Aur 73rd Amendment ne 11th Schedule add kiya Constitution mein - jisme 29 subjects Panchayat ko diye gaye. 74th Amendment ne Urban Local Bodies (Municipalities) ke liye 12th Schedule - 18 subjects." },
+        { "speaker": "raju", "text": "73rd = Panchayat = 11th Schedule = 29 subjects, 74th = Urban Bodies = 12th Schedule = 18 subjects - ye number pairs pakke kar liye!" }
+      ],
+      "navigation": { "next": "card_64_panchayat_structure", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_64_panchayat_structure",
+      "card_slug": "card_64_panchayat_structure",
+      "type": "chat",
+      "concept_id": "panchayati_raj",
+      "level": 6,
+      "progress": { "current": 63, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Panchayati Raj ka 3-tier structure samjho - Article 243B: Village level (Gram Panchayat), Intermediate level (Panchayat Samiti/Block), aur District level (Zila Parishad). Jis state mein 20 lakh se kam population ho, wahan intermediate tier optional hai." },
+        { "speaker": "raju", "text": "Bihar mein kaise hai ye structure sir? BPSC ke liye zaroori hai ye!" },
+        { "speaker": "aman", "text": "⭐ Bihar Panchayati Raj: Bihar mein 3-tier system hai - Gram Panchayat (mukhiya = head), Panchayat Samiti (Block level, Pramukh = head), Zila Parishad (district level, Adhyaksh = head). Bihar Panchayati Raj Act 2006 iske baad ban hai - ye Bihar ka apna kanoon hai." },
+        { "speaker": "raju", "text": "Bihar ka apna Panchayat Act 2006 - ye BPSC TRE mein poochh sakte hain! Aur elections kab hote hain in sab ke?" }
+      ],
+      "navigation": { "next": "card_65_panchayat_elections_reservation", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_65_panchayat_elections_reservation",
+      "card_slug": "card_65_panchayat_elections_reservation",
+      "type": "chat",
+      "concept_id": "panchayati_raj",
+      "level": 6,
+      "progress": { "current": 65, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Panchayat elections har 5 saal mein hote hain - Article 243E. Aur Article 243D mein reservation provision hai - SC/ST ke liye seats unki population proportion mein, aur OBC ke liye state legislature decide karti hai. Minimum 1/3rd seats WOMEN ke liye reserved hain." },
+        { "speaker": "raju", "text": "1/3rd women reservation? Bihar mein ye actually kya hai?" },
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Bihar mein Panchayati Raj mein mahilaon ke liye 50% reservation hai! Bihar pehle states mein tha jisne 2006 mein ye 50% reservation lagu kiya tha, ye constitutional minimum 1/3rd se zyada hai - Bihar ka apna decision." },
+        { "speaker": "raju", "text": "Bihar mein 50% women reservation Panchayat mein - national minimum 1/3rd se zyada! Ye to bahut important fact hai!" }
+      ],
+      "navigation": { "next": "card_66_quiz1_m9", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_66_quiz1_m9",
+      "card_slug": "card_66_quiz1_m9",
+      "type": "quiz",
+      "concept_id": "panchayati_raj",
+      "level": 6,
+      "progress": { "current": 66, "total": 98 },
+      "quiz_payload": {
+        "question": "Q1/3: 73rd Constitutional Amendment (1992) ne Panchayati Raj ke saath kaunsa Schedule Constitution mein joda, aur kitne subjects diye?",
+        "options": [
+          { "id": "A", "text": "11th Schedule - 29 subjects" },
+          { "id": "B", "text": "12th Schedule - 18 subjects" },
+          { "id": "C", "text": "10th Schedule - 52 subjects" },
+          { "id": "D", "text": "9th Schedule - 29 subjects" }
         ],
         "correct_option_id": "A",
-        "explanation": "ECI ek multi-member body hai — 1 Chief Election Commissioner + 2 Election Commissioners (total 3). Jabki SEC usually single-member body hai (kuch states mein additional commissioners ho sakte hain, lekin majority mein single). UPSC Prelims ne ye structural difference kayi baar puchha hai!"
+        "explanation": "73rd Amendment (1992) ne 11th Schedule jodha jisme 29 subjects Panchayats ko diye gaye. 74th Amendment ne 12th Schedule (Urban Local Bodies, 18 subjects) jodha."
       },
-      "navigation": {
-        "next": "card_48_quiz_comparison_3",
-        "button_text": "Last Comparison ➔"
-      }
+      "navigation": { "next": "card_67_quiz2_m9", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_48_quiz_comparison_3",
-      "card_slug": "card_48_quiz_comparison_3",
+      "card_id": "card_67_quiz2_m9",
+      "card_slug": "card_67_quiz2_m9",
       "type": "quiz",
-      "concept_id": "quiz_comparison_3",
-      "level": 5,
-      "progress": {
-        "current": 48,
-        "total": 58
-      },
+      "concept_id": "panchayati_raj",
+      "level": 6,
+      "progress": { "current": 67, "total": 98 },
       "quiz_payload": {
-        "question": "Chief Election Commissioner (CEC) ko remove karne ka tarika kis constitutional functionary se SAME hai?",
+        "question": "Q2/3: Article 243D ke anusaar Panchayat mein minimum kitne seats mahilaon ke liye reserved hain?",
         "options": [
-          { "id": "A", "text": "High Court Judge" },
-          { "id": "B", "text": "Supreme Court Judge" },
-          { "id": "C", "text": "State Election Commissioner" },
-          { "id": "D", "text": "Cabinet Secretary" }
+          { "id": "A", "text": "1/4th (25%)" },
+          { "id": "B", "text": "1/2 (50%) - sirf Bihar mein" },
+          { "id": "C", "text": "1/3rd (33%) - national minimum, Bihar mein 50%" },
+          { "id": "D", "text": "1/5th (20%)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 243D ke anusaar national minimum women reservation 1/3rd (33%) hai. Bihar, Uttarakhand, Rajasthan jaise states ne ise 50% kar diya hai apne state laws se."
+      },
+      "navigation": { "next": "card_68_quiz3_m9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_68_quiz3_m9",
+      "card_slug": "card_68_quiz3_m9",
+      "type": "quiz",
+      "concept_id": "panchayati_raj",
+      "level": 6,
+      "progress": { "current": 68, "total": 98 },
+      "quiz_payload": {
+        "question": "Q3/3: Kis committee ki sifarish par Panchayati Raj ko Constitutional darje dene ka prastaav aaya?",
+        "options": [
+          { "id": "A", "text": "Balwant Rai Mehta Committee (1957)" },
+          { "id": "B", "text": "Ashok Mehta Committee (1978)" },
+          { "id": "C", "text": "L.M. Singhvi Committee (1986)" },
+          { "id": "D", "text": "Sarkaria Commission (1987)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "L.M. Singhvi Committee (1986) ne sifarish ki ki Panchayati Raj ko Constitutional darja diya jaaye - isi ke baad 73rd Amendment 1992 aayi. Balwant Rai Mehta (1957) ne 3-tier system suggest kiya tha."
+      },
+      "navigation": { "next": "card_69_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_69_milestone9",
+      "card_slug": "card_69_milestone9",
+      "type": "milestone",
+      "concept_id": "panchayati_raj",
+      "level": 6,
+      "progress": { "current": 69, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌾",
+        "completed_topic": "Panchayati Raj & Local Elections",
+        "xp_earned": 60,
+        "milestone_progress": "Module 9/11 Clear",
+        "motivational_quote": "Panchayati Raj se Vidhan Sabha tak sab clear! Ab Urban Local Bodies ka chapter aur State Finance Commission!"
+      },
+      "navigation": { "next": "card_70_urban_local_bodies", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_70_urban_local_bodies",
+      "card_slug": "card_70_urban_local_bodies",
+      "type": "chat",
+      "concept_id": "urban_local_bodies",
+      "level": 6,
+      "progress": { "current": 70, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, jaise gaon mein Panchayat hai, sheher mein 'Urban Local Bodies' hoti hain - jaise Municipality, Nagar Panchayat, Municipal Corporation. Inhe 74th Constitutional Amendment, 1992 ne constitutional darja diya - Article 243P se 243ZG tak." },
+        { "speaker": "raju", "text": "Sir teeno ka kya difference hai? Municipality, Nagar Panchayat, aur Municipal Corporation?" },
+        { "speaker": "aman", "text": "Population ke hisaab se: Nagar Panchayat - chhote towns ke liye jo rural se urban transition mein hain, Municipal Council - medium size towns, Municipal Corporation - bade sheher. Patna Nagar Nigam (Patna Municipal Corporation) Bihar ka sabse bada hai." },
+        { "speaker": "raju", "text": "Achha! Patna Nagar Nigam Municipal Corporation category mein hai. Aur inhe kaun elect karta hai?" }
+      ],
+      "navigation": { "next": "card_71_urban_elections_ward", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_71_urban_elections_ward",
+      "card_slug": "card_71_urban_elections_ward",
+      "type": "chat",
+      "concept_id": "urban_local_bodies",
+      "level": 6,
+      "progress": { "current": 71, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Sheher ko 'Wards' mein divide kiya jaata hai, aur har ward se ek 'Ward Councillor' / 'Parshad' seedha janta elect karti hai. Municipal Corporation ka head 'Mayor' hota hai, Municipal Council ka head 'Adhyaksh' ya 'Chairman' hota hai." },
+        { "speaker": "raju", "text": "Bihar mein Mayor ka election kaise hota hai sir - seedha jaanta elect karti hai ya Councillors milkar?" },
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Bihar mein Municipal Corporation mein MAYOR seedha public dwara elected hota hai (Direct election) - ye Bihar ka apna provision hai Bihar Municipal Act ke under. Yahi rule Nagar Panchayat aur Municipal Council ke Mukhiya ke liye bhi hai Bihar mein." },
+        { "speaker": "raju", "text": "Wah! Bihar mein direct election se Mayor banta hai - ye khaas provision hai. Aur State Finance Commission ka kya kaam hai sir?" }
+      ],
+      "navigation": { "next": "card_72_state_finance_commission", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_72_state_finance_commission",
+      "card_slug": "card_72_state_finance_commission",
+      "type": "chat",
+      "concept_id": "urban_local_bodies",
+      "level": 6,
+      "progress": { "current": 72, "total": 98 },
+      "messages": [
+        { "speaker": "aman", "text": "Article 243I ke tehat har 5 saal mein ek State Finance Commission banayi jaati hai - Governor is commission ko appoint karta hai. Iska kaam hai: State ke tax, duties, tolls ka Panchayat aur Municipalities ke beech kaise baanta jaaye, ye decide karna." },
+        { "speaker": "raju", "text": "Ye Finance Commission wali concept to Centre mein bhi hai - Centre Finance Commission jo Centre-State ke beech paise baantta hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi parallel notice kiya! Centre mein Finance Commission (Article 280) Centre aur States ke beech, aur State mein State Finance Commission (Article 243I) State aur Local Bodies (Panchayat/Municipalities) ke beech paise ka bataara decide karta hai." },
+        { "speaker": "raju", "text": "Achha! Do level ke Finance Commission - ek Centre-State ke liye, ek State-LocalBody ke liye. Ab quiz dijiye sir!" }
+      ],
+      "navigation": { "next": "card_73_quiz1_m10", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_73_quiz1_m10",
+      "card_slug": "card_73_quiz1_m10",
+      "type": "quiz",
+      "concept_id": "urban_local_bodies",
+      "level": 6,
+      "progress": { "current": 73, "total": 98 },
+      "quiz_payload": {
+        "question": "Q1/3: 74th Constitutional Amendment, 1992 ne Urban Local Bodies ke sambandh mein Constitution mein kaunsa Schedule joda?",
+        "options": [
+          { "id": "A", "text": "11th Schedule - 29 subjects" },
+          { "id": "B", "text": "12th Schedule - 18 subjects" },
+          { "id": "C", "text": "10th Schedule - 52 subjects" },
+          { "id": "D", "text": "9th Schedule - 18 subjects" }
         ],
         "correct_option_id": "B",
-        "explanation": "CEC ko remove karne ka manner Supreme Court Judge ke removal jaisa hai — Parliament ka impeachment motion + President ka order + proved misbehaviour/incapacity. SEC ko High Court Judge jaisa remove karte hain. BPSC ka all-time favorite comparison — CEC = SC Judge, SEC = HC Judge!"
+        "explanation": "74th Constitutional Amendment (1992) ne 12th Schedule jodha jisme 18 subjects Urban Local Bodies (Municipalities) ko diye gaye, aur Article 243P se 243ZG tak add kiye."
       },
-      "navigation": {
-        "next": "card_49_milestone_comparison",
-        "button_text": "Module Done ➔"
-      }
+      "navigation": { "next": "card_74_quiz2_m10", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_49_milestone_comparison",
-      "card_slug": "card_49_milestone_comparison",
+      "card_id": "card_74_quiz2_m10",
+      "card_slug": "card_74_quiz2_m10",
+      "type": "quiz",
+      "concept_id": "urban_local_bodies",
+      "level": 6,
+      "progress": { "current": 74, "total": 98 },
+      "quiz_payload": {
+        "question": "Q2/3: State Finance Commission (Article 243I) ka mukhya kaam kya hai?",
+        "options": [
+          { "id": "A", "text": "Centre aur State ke beech funds ka bataara tay karna" },
+          { "id": "B", "text": "State aur Local Bodies (Panchayat/Municipalities) ke beech state ke taxes ka bataara tay karna" },
+          { "id": "C", "text": "State ka budget banana" },
+          { "id": "D", "text": "CM ki salary tay karna" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 243I ke tehat State Finance Commission, State ke tax/duties/tolls ka Panchayats aur Municipalities ke beech kaise bataara ho, ye Governor ko recommend karta hai."
+      },
+      "navigation": { "next": "card_75_quiz3_m10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_75_quiz3_m10",
+      "card_slug": "card_75_quiz3_m10",
+      "type": "quiz",
+      "concept_id": "urban_local_bodies",
+      "level": 6,
+      "progress": { "current": 75, "total": 98 },
+      "quiz_payload": {
+        "question": "Q3/3: Bihar mein Municipal Corporation ke Mayor ka chunav kaise hota hai?",
+        "options": [
+          { "id": "A", "text": "Ward Councillors milkar Mayor chunte hain" },
+          { "id": "B", "text": "Governor Mayor ko appoint karta hai" },
+          { "id": "C", "text": "Mayor seedha public dwara elected hota hai (Direct election)" },
+          { "id": "D", "text": "CM Mayor ko appoint karta hai" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "⭐ BPSC TRE Favorite: Bihar mein Municipal Corporation ka Mayor, Bihar Municipal Act ke under, seedha public dwara direct election se chuna jaata hai - ye Bihar ki khud ki provision hai."
+      },
+      "navigation": { "next": "card_76_milestone10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_76_milestone10",
+      "card_slug": "card_76_milestone10",
       "type": "milestone",
-      "concept_id": "milestone_5",
-      "level": 5,
-      "progress": {
-        "current": 49,
-        "total": 58
-      },
+      "concept_id": "urban_local_bodies",
+      "level": 6,
+      "progress": { "current": 76, "total": 98 },
       "milestone_payload": {
-        "title": "🔥 MODULE 5 CRUSHED!",
-        "badge_emoji": "⚔️",
-        "completed_topic": "SEC vs ECI — Complete Comparison",
-        "xp_earned": 80,
-        "milestone_progress": "Module 5/6 Complete",
-        "motivational_quote": "You've decoded the biggest PYQ comparison! ECI vs SEC clarity = Officer-level brain unlocked 🧠"
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏙️",
+        "completed_topic": "Urban Local Bodies & State Finance Commission",
+        "xp_earned": 60,
+        "milestone_progress": "Module 10/11 Clear",
+        "motivational_quote": "Gaon se sheher tak sab local elections pakke! Ab last module - State Elections ka actual process aur EVM/VVPAT!"
       },
-      "navigation": {
-        "next": "card_50_bihar_specific",
-        "button_text": "Bihar Specifics ➔"
-      }
+      "navigation": { "next": "card_77_election_process", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_50_bihar_specific",
-      "card_slug": "card_50_bihar_specific",
+      "card_id": "card_77_election_process",
+      "card_slug": "card_77_election_process",
       "type": "chat",
-      "concept_id": "bihar_sec_intro",
-      "level": 6,
-      "progress": {
-        "current": 50,
-        "total": 58
-      },
+      "concept_id": "election_process",
+      "level": 7,
+      "progress": { "current": 77, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ Ab aata hai BPSC TRE ka sabse important section — Bihar State Election Commission ki specific details. Ye sirf Bihar exams mein hi puchha jata hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Bihar SEC ka office kahan hai? Aur current Commissioner kaun hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ Bihar State Election Commission ka head office Patna mein hai (Vikas Bhawan complex ke paas). Current Commissioner ka naam exam mein dynamically change hota hai — isliye name ratt-na mat, framework samjho!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Bihar mein Panchayat elections kitne time pe hote hain?"
-        }
+        { "speaker": "aman", "text": "Raju, ab samjhte hain ki actually State Election kaise hota hai - step by step. Jab Vidhan Sabha ka karyakaal khatam hone wala ho, ya Government gir jaaye, to Governor ECI ko inform karta hai aur ECI election ki tayyari shuru karta hai." },
+        { "speaker": "raju", "text": "Sir election hone se pehle kya-kya hota hai?" },
+        { "speaker": "aman", "text": "Pehle Voter List tayar hoti hai (Article 326 - adult suffrage, 18+). Phir ECI election ki date announce karta hai. Model Code of Conduct (MCC) lagu ho jaati hai isi din se - sarkar koi naya bada faisla nahi le sakti, purani neetiyon ko implement karna band." },
+        { "speaker": "raju", "text": "MCC lagu hone ke baad sarkar bahut limited ho jaati hai - bilkul caretaker sarkar jaisi!" }
       ],
-      "navigation": {
-        "next": "card_51_bihar_elections",
-        "button_text": "Bihar Elections ➔"
-      }
+      "navigation": { "next": "card_78_nomination_process", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_51_bihar_elections",
-      "card_slug": "card_51_bihar_elections",
+      "card_id": "card_78_nomination_process",
+      "card_slug": "card_78_nomination_process",
       "type": "chat",
-      "concept_id": "bihar_elections_cycle",
-      "level": 6,
-      "progress": {
-        "current": 51,
-        "total": 58
-      },
+      "concept_id": "election_process",
+      "level": 7,
+      "progress": { "current": 78, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ Bihar mein Panchayat elections har 5 saal mein hote hain — ye mandatory hai 73rd Amendment ke under. Last Panchayat elections 2021 mein hue the, next 2026 mein expected hain. Municipality elections bhi 5-year cycle follow karte hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir Bihar mein kitne tiers hain Panchayati Raj ke?"
-        },
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC TRE Specific: Bihar mein 3-tier Panchayati Raj system hai —\n(1) Gram Panchayat (village level)\n(2) Panchayat Samiti (block level)\n(3) Zila Parishad (district level)\n\nTeeno ke elections Bihar SEC conduct karti hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur Sir, Bihar mein kitne Gram Panchayats hain total?"
-        }
+        { "speaker": "aman", "text": "Phir nomination (candidate) filing hoti hai - Returning Officer ke paas. Har candidate ko 'Election Deposit' jama karna padta hai - MLA ke liye Rs 10,000 (SC/ST ke liye Rs 5,000). Agar 1/6th vote nahi mile to deposit zabat ho jaata hai." },
+        { "speaker": "raju", "text": "Deposit zabat?! Matlab agar bahut kam vote mile to paisa bhi chala jaata hai!" },
+        { "speaker": "aman", "text": "Bilkul! Campaign phase aata hai, jisme 'Model Code of Conduct' lagu rehti hai. Voting EVM (Electronic Voting Machine) aur VVPAT (Voter Verifiable Paper Audit Trail) se hoti hai. EVM mein vote dene ke baad VVPAT se printed slip dikhti hai - transparency ke liye." },
+        { "speaker": "raju", "text": "EVM mein vote diya, aur VVPAT se slip dekhi ki sahi jagah gaya vote - Smart system hai! VVPAT kab shuru hua?" }
       ],
-      "navigation": {
-        "next": "card_52_bihar_numbers",
-        "button_text": "Bihar Stats ➔"
-      }
+      "navigation": { "next": "card_79_evm_vvpat_rop", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_52_bihar_numbers",
-      "card_slug": "card_52_bihar_numbers",
+      "card_id": "card_79_evm_vvpat_rop",
+      "card_slug": "card_79_evm_vvpat_rop",
       "type": "chat",
-      "concept_id": "bihar_stats",
-      "level": 6,
-      "progress": {
-        "current": 52,
-        "total": 58
-      },
+      "concept_id": "election_process",
+      "level": 7,
+      "progress": { "current": 79, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC TRE Numbers:\n\n• Gram Panchayats: ~8,000+\n• Panchayat Samitis (Blocks): 534\n• Zila Parishads (Districts): 38\n• Urban Local Bodies (Municipalities + Nagar Parishads + Municipal Corporations): ~200+\n\nYe approximate figures hain — census aur delimitation ke saath change hote hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir itne saare local bodies! SEC ka kaam kitna bada hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Bihar SEC har 5 saal mein lakhs candidates aur crores voters ke liye elections conduct karti hai. Isliye administrative machinery (teachers, police, clerks) sab deploy karna padta hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ek last doubt — agar state government delay kare elections mein, to kya hoga?"
-        }
+        { "speaker": "aman", "text": "VVPAT pehli baar Nagaland by-election 2013 mein use hua, aur 2019 Lok Sabha mein first time poore desh mein lagu hua. Aur election ke baad jo candidates jeet jaate hain, unhe 'Election Expenses' submit karne hoti hain ECI ko - ek limit hoti hai." },
+        { "speaker": "raju", "text": "Agar koi MLA baad mein resign kare ya unka seat vacant ho jaaye to?" },
+        { "speaker": "aman", "text": "Tab 'By-election' hota hai - sirf us ek vacant seat ke liye. Agar CM ya state government kisi wajah se fall ho jaaye aur Vidhan Sabha bhi dissolve ho jaaye, to 'Snap Election' hota hai poori Vidhan Sabha ke liye." },
+        { "speaker": "raju", "text": "By-election sirf ek seat ke liye, Snap election poori Vidhan Sabha ke liye! Aur RPA 1951 ka exam mein kya aata hai sir?" }
       ],
-      "navigation": {
-        "next": "card_53_sec_vs_govt_conflict",
-        "button_text": "Conflict Samjho ➔"
-      }
+      "navigation": { "next": "card_80_rpa_1951", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_53_sec_vs_govt_conflict",
-      "card_slug": "card_53_sec_vs_govt_conflict",
+      "card_id": "card_80_rpa_1951",
+      "card_slug": "card_80_rpa_1951",
       "type": "chat",
-      "concept_id": "sec_govt_conflict",
-      "level": 6,
-      "progress": {
-        "current": 53,
-        "total": 58
-      },
+      "concept_id": "election_process",
+      "level": 7,
+      "progress": { "current": 80, "total": 98 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Bahut important PYQ topic! Agar state government deliberately delay kare elections (funds nahi de, staff nahi de), to SEC Court ja sakti hai. Supreme Court aur High Courts ne kayi baar state governments ko direction diya hai timely elections conduct karne ke liye."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab Court SEC ko support karti hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Constitution mein 5-year election cycle mandatory hai — agar state government deliberately delay kare, to ye unconstitutional hai. SEC High Court mein petition file kar sakti hai, aur Court government ko order de sakti hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "⭐ Bihar mein kabhi aisa hua hai kya?"
-        }
+        { "speaker": "aman", "text": "Representation of the People Act, 1951 (RPA 1951) ek bahut important kanoon hai elections ke liye. Ye bataata hai: election ke liye candidate qualifications aur disqualifications, election expenses ki limits, corrupt practices kya hain (jaise bribery, undue influence, booth capturing)." },
+        { "speaker": "raju", "text": "RPA 1951 mein disqualification kya kya hain sir jisse MLA ban nahi sakte?" },
+        { "speaker": "aman", "text": "RPA 1951 Section 8 ke anusaar - agar kisi ko 2 saal ya usse zyada jail ki saza mili ho, to wo 6 saal tak election nahi lad sakta. Section 8A - election expenses violation par disqualification. Section 9 - government contract waale, Section 10 - managing agency waale." },
+        { "speaker": "raju", "text": "2 saal ya usse zyada jail = 6 saal disqualification - ye to RPA 1951 ka classic exam question hai!" }
       ],
-      "navigation": {
-        "next": "card_54_bihar_case",
-        "button_text": "Bihar Case Study ➔"
-      }
+      "navigation": { "next": "card_81_quiz1_m11", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_54_bihar_case",
-      "card_slug": "card_54_bihar_case",
-      "type": "chat",
-      "concept_id": "bihar_case_study",
-      "level": 6,
-      "progress": {
-        "current": 54,
-        "total": 58
+      "card_id": "card_81_quiz1_m11",
+      "card_slug": "card_81_quiz1_m11",
+      "type": "quiz",
+      "concept_id": "election_process",
+      "level": 7,
+      "progress": { "current": 81, "total": 98 },
+      "quiz_payload": {
+        "question": "Q1/3: VVPAT (Voter Verifiable Paper Audit Trail) pehli baar poore Bharat mein kab use hua?",
+        "options": [
+          { "id": "A", "text": "2013 - Nagaland By-election mein pehli baar, 2019 Lok Sabha mein first nationwide" },
+          { "id": "B", "text": "2009 Lok Sabha se poore desh mein" },
+          { "id": "C", "text": "2014 Lok Sabha mein pehli baar anywhere" },
+          { "id": "D", "text": "2004 mein hi shuru hua tha" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "VVPAT pehli baar Nagaland Noksen by-election (2013) mein use hua. Phir 2019 Lok Sabha elections mein pehli baar poore desh mein nationwide use hua."
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "⭐ BPSC TRE Case Study: Bihar mein past mein Panchayat elections delayed hue hain — kabhi funds ki kami, kabhi administrative reasons. Lekin Patna High Court ne repeatedly state government ko order diya hai timely elections conduct karne ke liye."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir to Court SEC ko protect karti hai government ke pressure se?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Judiciary SEC ki independence ensure karti hai. Ye checks and balances ka example hai — agar executive (government) apni marzi se elections delay kare, judiciary intervene karti hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya Sir! Ab puri clarity hai SEC ke baare mein!"
-        }
-      ],
-      "navigation": {
-        "next": "card_55_summary",
-        "button_text": "Summary Padho ➔"
-      }
+      "navigation": { "next": "card_82_quiz2_m11", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_55_summary",
-      "card_slug": "card_55_summary",
+      "card_id": "card_82_quiz2_m11",
+      "card_slug": "card_82_quiz2_m11",
+      "type": "quiz",
+      "concept_id": "election_process",
+      "level": 7,
+      "progress": { "current": 82, "total": 98 },
+      "quiz_payload": {
+        "question": "Q2/3: Representation of the People Act 1951 ke Section 8 ke anusaar, agar kisi ko 2 saal ya usse zyada ki jail saza mili ho, to wo kitne saal election nahi lad sakta?",
+        "options": [
+          { "id": "A", "text": "3 saal" },
+          { "id": "B", "text": "6 saal" },
+          { "id": "C", "text": "10 saal" },
+          { "id": "D", "text": "Hamesha ke liye" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "RPA 1951 Section 8 ke anusaar - saza bhogne ke baad bhi 6 saal tak election nahi lad sakta (jab saza 2 saal ya zyada ho). Aise member ko disqualify kar diya jaata hai."
+      },
+      "navigation": { "next": "card_83_quiz3_m11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_83_quiz3_m11",
+      "card_slug": "card_83_quiz3_m11",
+      "type": "quiz",
+      "concept_id": "election_process",
+      "level": 7,
+      "progress": { "current": 83, "total": 98 },
+      "quiz_payload": {
+        "question": "Q3/3: 'Model Code of Conduct' (MCC) kab se kab tak lagu rehti hai?",
+        "options": [
+          { "id": "A", "text": "Sirf voting ke din" },
+          { "id": "B", "text": "Election Date announcement se election result/government gathan tak" },
+          { "id": "C", "text": "Sirf campaign ke last 2 din" },
+          { "id": "D", "text": "Sirf nomination filing ke samay" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Model Code of Conduct tab lagu hoti hai jab ECI election dates announce karta hai, aur tab tak rehti hai jab tak results aa jaayein aur nai government ban na jaaye."
+      },
+      "navigation": { "next": "card_84_milestone11", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_84_milestone11",
+      "card_slug": "card_84_milestone11",
+      "type": "milestone",
+      "concept_id": "election_process",
+      "level": 7,
+      "progress": { "current": 84, "total": 98 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "State Election Process - EVM, VVPAT & RPA",
+        "xp_earned": 60,
+        "milestone_progress": "Module 11/11 Clear - ALL MODULES DONE!",
+        "motivational_quote": "Poora State Elections chapter conquer! Ab final Officer Revision aur Master Quiz!"
+      },
+      "navigation": { "next": "card_85_final_summary", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_85_final_summary",
+      "card_slug": "card_85_final_summary",
       "type": "summary",
-      "concept_id": "officer_revision",
-      "level": 6,
-      "progress": {
-        "current": 55,
-        "total": 58
-      },
+      "concept_id": "chapter_revision",
+      "level": 7,
+      "progress": { "current": 85, "total": 98 },
       "summary_payload": {
-        "title": "⚡ Quick Officer Revision — State Election Commission",
+        "title": "⚡ Quick Officer Revision - State Elections",
         "revision_points": [
           {
-            "topic": "Constitutional Provision",
-            "point": "Article 243K (Panchayat) & 243ZA (Municipality) — added by 73rd & 74th Amendment, 1992. Not mentioned before 1992!"
+            "topic": "Governor - Multi-Statement Trap",
+            "point": "Consider these: (1) Governor appointed by President (Article 155), (2) Minimum 35 years age required (Article 157), (3) Governor serves during pleasure of President BUT B.P. Singhal case (2010) says arbitrary removal is challengeable in court, (4) Same person can be Governor of multiple states (Article 153 proviso - 7th Amendment). All FOUR correct - classic BPSC trap."
           },
           {
-            "topic": "Appointment & Removal",
-            "point": "Appointed BY Governor (ON advice of CM). Removal: SAME as High Court Judge (State Legislature + Governor). Protection = independence."
+            "topic": "ECI vs State Election Commission",
+            "point": "ECI (Article 324) = Lok Sabha + State Legislature elections. State Election Commission (Article 243K) = Only Panchayat + Municipal elections. Bihar Vidhan Sabha election = ECI. Bihar Panchayat election = Bihar State Election Commission. This distinction is the most common exam trap."
           },
           {
-            "topic": "Tenure & Salary",
-            "point": "Tenure NOT fixed in Constitution — State law decides (mostly 5 years/65 age). Salary cannot be reduced disadvantageously after appointment."
+            "topic": "Bihar-Specific Numbers",
+            "point": "Bihar Vidhan Sabha = 243 seats. Bihar Vidhan Parishad = 75 seats. Bihar Lok Sabha seats = 40. Pehle CM = Dr. Srikrishna Sinha (1946-1961). Pehli mahila CM = Rabri Devi (1997). Panchayat mein 50% women reservation (national minimum 1/3rd se zyada). 2005 mein DO BAAR President's Rule."
           },
           {
-            "topic": "Powers & Jurisdiction",
-            "point": "Conducts Panchayat + Municipality elections. Does NOT do delimitation (state govt does). Model Code of Conduct = guideline, not legally binding."
+            "topic": "73rd vs 74th Amendment",
+            "point": "73rd Amendment (1992) = Panchayati Raj, Article 243-243O, 11th Schedule = 29 subjects, 3-tier structure (Gram Panchayat - Panchayat Samiti - Zila Parishad). 74th Amendment (1992) = Urban Local Bodies, Article 243P-243ZG, 12th Schedule = 18 subjects."
           },
           {
-            "topic": "ECI vs SEC",
-            "point": "ECI: Art 324, multi-member, Parliament/State elections, CEC = SC Judge protection. SEC: Art 243K/ZA, single-member, local elections, HC Judge protection."
-          },
-          {
-            "topic": "⭐ Bihar SEC Specifics",
-            "point": "Office: Patna. 3-tier Panchayati Raj. ~8000+ GPs, 534 Blocks, 38 ZPs. 5-year cycle. Bihar Panchayat Raj Act, 2006 governs SEC functions."
+            "topic": "Governor's Powers - Critical Differences",
+            "point": "Governor pardoning power (Article 161) - can suspend, commute, remit sentences BUT CANNOT pardon death sentence (sirf President - Article 72 kar sakta hai). Governor can reserve state bills for President (Article 200). Governor's Ordinance (Article 213) = 6 weeks mein Legislative approval chahiye."
           }
         ]
       },
-      "navigation": {
-        "next": "card_56_final_quiz",
-        "button_text": "Final Officer Quiz ➔"
-      }
+      "navigation": { "next": "card_86_final_quiz", "button_text": "Attempt Final Officer Quiz ➔" }
     },
     {
-      "card_id": "card_56_final_quiz",
-      "card_slug": "card_56_final_quiz",
+      "card_id": "card_86_final_quiz",
+      "card_slug": "card_86_final_quiz",
       "type": "final_quiz",
-      "concept_id": "final_quiz",
-      "level": 6,
-      "progress": {
-        "current": 56,
-        "total": 58
-      },
+      "concept_id": "chapter_final_assessment",
+      "level": 7,
+      "progress": { "current": 86, "total": 98 },
       "quiz_payload": {
-        "question": "Consider the following statements about State Election Commission (SEC):\n\n1. SEC is a constitutional body mentioned in Article 324.\n2. SEC is appointed by the Governor and removed in the same manner as a High Court Judge.\n3. SEC conducts elections for Panchayats, Municipalities, and Vidhan Sabha.\n4. Model Code of Conduct enforced by SEC is legally binding.\n\nWhich of the statements given above is/are correct?",
+        "question": "Niche diye gaye kathano par vichar karein:\n1. Vidhan Sabha elections karwata hai Election Commission of India (Article 324), jabki Panchayat elections karwata hai State Election Commission (Article 243K).\n2. Governor ko Article 161 ke tehat Death Sentence bhi maaf karne ki power hai.\n3. Vidhan Parishad ki maximum strength, Vidhan Sabha ki strength ke 1/3rd se zyada nahi ho sakti, aur minimum 40 honi chahiye.\n4. Bihar Panchayati Raj mein mahilaon ke liye 50% reservation hai, jo national constitutional minimum (1/3rd) se zyada hai.\n\nUpar diye gaye kathano mein se kaunse SAHI hain?",
         "options": [
-          { "id": "A", "text": "Only 2" },
-          { "id": "B", "text": "1 and 3 only" },
-          { "id": "C", "text": "2 and 4 only" },
-          { "id": "D", "text": "1, 2, and 4" }
+          { "id": "A", "text": "Sirf 1 aur 3" },
+          { "id": "B", "text": "1, 3 aur 4" },
+          { "id": "C", "text": "1, 2, 3 aur 4 teeno sahi hain" },
+          { "id": "D", "text": "Sirf 2 aur 4" }
         ],
-        "correct_option_id": "A",
-        "explanation": "BPSC/UPSC Multi-Statement Trap Analysis:\n\nStatement 1: FALSE — SEC is mentioned in Article 243K & 243ZA, NOT 324 (324 is ECI).\n\nStatement 2: TRUE — SEC appointed BY Governor, removed in SAME manner as HC Judge (State Legislature address + Governor order).\n\nStatement 3: FALSE — SEC conducts Panchayat + Municipality elections ONLY. Vidhan Sabha elections are conducted by ECI.\n\nStatement 4: FALSE — MCC is NOT legally binding, it is a guideline (though seriously followed).\n\nCorrect Answer: Only Statement 2 is correct. Classic BPSC Officer-level multi-statement question!"
+        "correct_option_id": "B",
+        "explanation": "Kathan 1 SAHI hai - ECI Vidhan Sabha, State EC Panchayat elections karwata hai. Kathan 2 GALAT hai - Governor Death Sentence NAHI maaf kar sakta, ye sirf President ki power hai (Article 72). Kathan 3 SAHI hai - Article 171 ke anusaar Vidhan Parishad maximum 1/3rd Vidhan Sabha ki strength, minimum 40. Kathan 4 SAHI hai - Bihar ne 2006 mein 50% women reservation Panchayat mein kiya, jo Constitution ke 33% minimum se zyada hai. Isliye 1, 3 aur 4 sahi hain - B sahi answer hai. Ye BPSC ka classic multi-statement trap pattern hai jisme ek obvious galat statement (Death Sentence waali) shaamil hai students ko confuse karne ke liye."
       },
-      "navigation": {
-        "next": "card_57_bonus_pyq",
-        "button_text": "Bonus PYQ ➔"
-      }
+      "navigation": { "next": "card_87_trophy", "button_text": "Complete Chapter ➔" }
     },
     {
-      "card_id": "card_57_bonus_pyq",
-      "card_slug": "card_57_bonus_pyq",
-      "type": "quiz",
-      "concept_id": "bonus_pyq",
-      "level": 6,
-      "progress": {
-        "current": 57,
-        "total": 58
-      },
-      "quiz_payload": {
-        "question": "⭐ BPSC PYQ: Assertion (A): The tenure of State Election Commissioner is NOT fixed in the Constitution.\n\nReason (R): The tenure and conditions of service are determined by State Legislature through law.\n\nSelect the correct answer:",
-        "options": [
-          { "id": "A", "text": "Both A and R are true, and R is the correct explanation of A" },
-          { "id": "B", "text": "Both A and R are true, but R is NOT the correct explanation of A" },
-          { "id": "C", "text": "A is true, but R is false" },
-          { "id": "D", "text": "A is false, but R is true" }
-        ],
-        "correct_option_id": "A",
-        "explanation": "⭐ BPSC TRE Favorite Assertion-Reason Pattern:\n\nAssertion (A) is TRUE — Constitution does NOT fix SEC tenure. Article 243K(2) says 'subject to the provisions of any law made by the State Legislature.'\n\nReason (R) is TRUE — State Legislature makes law to determine tenure (e.g., Bihar Panchayat Raj Act, 2006 fixes 5 years/65 age).\n\nR is the CORRECT EXPLANATION of A — kyunki constitutional flexibility ka reason hi ye hai ki state legislature law banayegi.\n\nAnswer: A — Both true, R explains A correctly. BPSC loves Assertion-Reason format for testing conceptual clarity!"
-      },
-      "navigation": {
-        "next": "card_58_completion",
-        "button_text": "Finish Chapter 🏆"
-      }
-    },
-    {
-      "card_id": "card_58_completion",
-      "card_slug": "card_58_completion",
+      "card_id": "card_87_trophy",
+      "card_slug": "card_87_trophy",
       "type": "milestone",
-      "concept_id": "chapter_completion",
-      "level": 6,
-      "progress": {
-        "current": 58,
-        "total": 58
-      },
+      "concept_id": "chapter_complete",
+      "level": 7,
+      "progress": { "current": 87, "total": 98 },
       "milestone_payload": {
-        "title": "🏆 CHAPTER COMPLETED!",
+        "title": "🏆 CHAPTER MASTERED!",
         "badge_emoji": "🎖️",
-        "completed_topic": "State Election Commission & Bihar SEC — Full Mastery",
-        "xp_earned": 100,
-        "milestone_progress": "6/6 Modules Cleared — 100% Complete",
-        "motivational_quote": "You've conquered Constitutional Bodies! From daily-life Mukhiya elections to UPSC-level Assertion-Reason traps — you're now an Officer-level Polity Expert! 🔥🇮🇳\n\n⭐ BPSC TRE ready ✅\n⭐ SSC CGL ready ✅\n⭐ UPSC Prelims ready ✅\n\nNext stop: State Public Service Commission / Governor's Powers! 🚀"
+        "completed_topic": "State Elections in Indian Polity - Officer Level Complete",
+        "xp_earned": 200,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Badhai ho Raju! Governor se Gram Panchayat tak, Vidhan Sabha se State Finance Commission tak - State Elections ka poora picture ab tumhare dimag mein crystal clear hai. BPSC/SSC/Railway exam mein ye chapter ab tumhara sabse mazboot hathiyaar hoga!"
       },
-      "navigation": {
-        "next": null,
-        "button_text": "Back to Dashboard 🏠"
-      }
+      "navigation": { "next": "card_01_intro", "button_text": "Restart Chapter 🔄" }
     }
   ]
 }
-
