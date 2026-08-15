@@ -89,7 +89,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     return clean.trim();
   }
 
-  // 🌐 MULTI-CDN UNBLOCKED FETCHER
+  // 🌐 ZERO-CACHE INSTANT FETCHER (No Stale Cache + Instant Live Commit Sync)
   Future<void> _fetchChapterJson() async {
     String rawPath = widget.jsonUrl ?? '';
     
@@ -97,12 +97,14 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
       rawPath = 'learn/biology/cell.json';
     }
 
-    // Extract relative path cleanly
+    // Extract pure relative path cleanly
     String cleanPath = rawPath
         .replaceAll('https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/', '')
         .replaceAll('https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/', '')
         .replaceAll('https://raw.githubusercontent.com/zxcty54/quiz/main/', '')
-        .replaceAll('https://raw.githubusercontent.com/zxcty54/quiz/refs/heads/main/', '');
+        .replaceAll('https://raw.githubusercontent.com/zxcty54/quiz/refs/heads/main/', '')
+        .replaceAll('https://cdn.statically.io/gh/zxcty54/quiz/main/', '')
+        .replaceAll('https://raw.githack.com/zxcty54/quiz/main/', '');
     
     if (cleanPath.startsWith('/')) cleanPath = cleanPath.substring(1);
     if (cleanPath.contains('?')) cleanPath = cleanPath.split('?').first;
@@ -110,18 +112,29 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     final int ts = DateTime.now().millisecondsSinceEpoch;
     String encodedPath = Uri.encodeFull(cleanPath);
 
+    // ⚡ 1. Background Instant Cache Purge
+    http.get(Uri.parse("https://purge.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath")).catchError((_) => http.Response('', 500));
+
+    // 🚀 2. Strict Sequential Order (Live GitHack Priority)
     List<String> mirrorUrls = [
+      // 1. GitHack Cloudflare Dev Gateway (Never Caches, 100% Live)
       "https://raw.githack.com/zxcty54/quiz/main/$encodedPath",
+      // 2. Fastly CDN with Fresh Timestamp
       "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
+      // 3. Core jsDelivr with Fresh Timestamp
       "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
-      "https://cdn.statically.io/gh/zxcty54/quiz/main/$encodedPath",
     ];
 
     for (String url in mirrorUrls) {
       try {
         final response = await http.get(
           Uri.parse(url),
-          headers: {'Accept': 'application/json, text/plain, */*'},
+          headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+            'Expires': '0',
+          },
         ).timeout(const Duration(seconds: 4));
 
         if (response.statusCode == 200) {
@@ -207,7 +220,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
       _saveProgress(prevIndex);
       setState(() {
         currentCardIndex = prevIndex;
-        // Pichle card par saare messages open milenge taaki baar baar tap na karna pade
         final prevCard = chapterData!.cardsList[prevIndex];
         visibleMessageCount = prevCard.messages?.length ?? 1;
         isTyping = false;
@@ -270,7 +282,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     }
 
     if (targetIndex != -1 && targetIndex < chapterData!.cardsList.length) {
-      // 📌 Push current card index into history stack before advancing
       _cardHistory.add(currentCardIndex);
 
       _saveProgress(targetIndex);
