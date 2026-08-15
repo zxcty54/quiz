@@ -1,0 +1,1341 @@
+
+{
+  "topic_id": "prime_minister_indian_polity",
+  "topic_title": "Prime Minister in Indian Polity",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 82,
+  "characters": {
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_intro",
+      "level": 1,
+      "progress": { "current": 1, "total": 82 },
+      "intro_payload": {
+        "title": "🧑‍💼 Prime Minister of India",
+        "subtitle": "Real Executive Head - Article 74 se 78 tak Complete Officer-Level Mastery",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "UPSC Prelims", "BPSC TRE"],
+        "learning_outcomes": [
+          "Article 74, 75, 78 - PM ki poori sanvaidhanik sthiti",
+          "PM ki niyukti - President ke discretion aur conventions",
+          "Council of Ministers pe PM ke exact powers",
+          "Collective vs Individual Responsibility ke traps",
+          "PM ke special roles - NITI Aayog, Inter-State Council",
+          "Deputy PM, Acting PM aur records - BPSC ka favorite factual zone"
+        ]
+      },
+      "navigation": { "next": "card_02_real_executive", "button_text": "Start Learning ➔" }
+    },
+    {
+      "card_id": "card_02_real_executive",
+      "card_slug": "card_02_real_executive",
+      "type": "chat",
+      "concept_id": "pm_intro",
+      "level": 1,
+      "progress": { "current": 2, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, tumhare ghar mein bade faisle - jaise beti ki shaadi ya zameen bechna - papa lete hain, lekin agar dada ji ghar ke sabse bade elder hain, to unse poochkar hi final hota hai na?" },
+        { "speaker": "raju", "text": "Haan sir, dada ji ka sammaan hai, lekin actual planning aur kaam to papa hi karte hain." },
+        { "speaker": "aman", "text": "Bilkul yehi cheez desh ke system mein bhi hai! President hamare desh ka 'dada ji' jaisa constitutional head hai - bahut sammanit, lekin actual roz-marra ka shasan chalane wala 'papa' Prime Minister hota hai." },
+        { "speaker": "raju", "text": "Achha! Matlab PM hi asli mein desh chalata hai, President sirf naam ke liye hai?" }
+      ],
+      "navigation": { "next": "card_03_article_74", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_article_74",
+      "card_slug": "card_03_article_74",
+      "type": "chat",
+      "concept_id": "pm_intro",
+      "level": 1,
+      "progress": { "current": 3, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "'Naam ke liye' kehna thoda galat hoga, President ke paas bhi important powers hain, lekin unka use PM ki salaah se hota hai. Ye likha hai Article 74(1) mein - President ki madad aur salaah dene ke liye ek Council of Ministers hogi, jiske MUKHIYA PM honge." },
+        { "speaker": "raju", "text": "Sir 'salaah' matlab President chahe to na maane?" },
+        { "speaker": "aman", "text": "Yahi bada twist hai! Pehle aisa hi tha, President salaah maanne ke liye bandhya nahi tha. Lekin 42nd Amendment, 1976 ne Article 74(1) mein badlav karke ise BINDING bana diya - ab President ko CoM ki salaah ke anusaar hi kaam karna PADTA hai." },
+        { "speaker": "raju", "text": "Toh ab President ke paas koi choice hi nahi bachi?" }
+      ],
+      "navigation": { "next": "card_04_reconsideration", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_reconsideration",
+      "card_slug": "card_04_reconsideration",
+      "type": "chat",
+      "concept_id": "pm_intro",
+      "level": 1,
+      "progress": { "current": 4, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ek chhota sa rasta bacha hai. 44th Amendment, 1978 ne ek proviso jodi - President ek baar us salaah ko PUNAR-VICHAR (reconsideration) ke liye wapas bhej sakte hain. Lekin agar CoM dobara wahi salaah bhejti hai, to President ko usse maanna hi padega." },
+        { "speaker": "raju", "text": "Achha! Matlab ek baar 'ruko, sochte hain' bol sakte hain, par final mein maanna hi padega!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Ye combination - 42nd Amendment (binding banaya) + 44th Amendment (reconsideration ka option diya) - BPSC ka classic multi-statement question hai." },
+        { "speaker": "raju", "text": "Samajh gaya sir. Ab batao ye PM banta kaise hai? Election hota hai kya PM ka seedhe?" }
+      ],
+      "navigation": { "next": "card_05_quiz1_m1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_quiz1_m1",
+      "card_slug": "card_05_quiz1_m1",
+      "type": "quiz",
+      "concept_id": "pm_intro",
+      "level": 1,
+      "progress": { "current": 5, "total": 82 },
+      "quiz_payload": {
+        "question": "Q1/3: Kaunsa Amendment ne President ke liye Council of Ministers ki salaah maanna BINDING (bandhankari) banaya?",
+        "options": [
+          { "id": "A", "text": "44th Amendment, 1978" },
+          { "id": "B", "text": "42nd Amendment, 1976" },
+          { "id": "C", "text": "91st Amendment, 2003" },
+          { "id": "D", "text": "52nd Amendment, 1985" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "42nd Constitutional Amendment Act, 1976 ne Article 74(1) mein badlav karke President ke liye CoM ki salaah maanna binding bana diya."
+      },
+      "navigation": { "next": "card_06_quiz2_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_06_quiz2_m1",
+      "card_slug": "card_06_quiz2_m1",
+      "type": "quiz",
+      "concept_id": "pm_intro",
+      "level": 1,
+      "progress": { "current": 6, "total": 82 },
+      "quiz_payload": {
+        "question": "Q2/3: 44th Amendment, 1978 ne Article 74(1) mein kya proviso jodi?",
+        "options": [
+          { "id": "A", "text": "President salaah ko poori tarah reject kar sakte hain" },
+          { "id": "B", "text": "President salaah ko ek baar reconsideration ke liye wapas bhej sakte hain, par dobara bheji gayi salaah maanni hi padegi" },
+          { "id": "C", "text": "PM ki salaah ab optional ho gayi" },
+          { "id": "D", "text": "President ab CoM ka gathan khud kar sakte hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "44th Amendment ne President ko ek baar reconsideration ka mauka diya, lekin agar CoM dobara wahi salaah bheje to President ko maanna hi padta hai - final power CoM/PM ke paas hi rehti hai."
+      },
+      "navigation": { "next": "card_07_quiz3_m1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_07_quiz3_m1",
+      "card_slug": "card_07_quiz3_m1",
+      "type": "quiz",
+      "concept_id": "pm_intro",
+      "level": 1,
+      "progress": { "current": 7, "total": 82 },
+      "quiz_payload": {
+        "question": "Q3/3: Article 74(1) ke anusaar Council of Ministers ka mukhiya kaun hota hai?",
+        "options": [
+          { "id": "A", "text": "President" },
+          { "id": "B", "text": "Speaker" },
+          { "id": "C", "text": "Prime Minister" },
+          { "id": "D", "text": "Chief Justice" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Article 74(1) saaf kehta hai ki President ko sahayta aur salaah dene ke liye ek Council of Ministers hogi, jiske pramukh (head) Prime Minister honge."
+      },
+      "navigation": { "next": "card_08_milestone1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_08_milestone1",
+      "card_slug": "card_08_milestone1",
+      "type": "milestone",
+      "concept_id": "pm_intro",
+      "level": 1,
+      "progress": { "current": 8, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🧑‍💼",
+        "completed_topic": "PM - The Real Executive Head",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/10 Clear",
+        "motivational_quote": "Foundation pakki ho gayi! Ab dekhते hain PM banta kaise hai."
+      },
+      "navigation": { "next": "card_09_appointment_hook", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_09_appointment_hook",
+      "card_slug": "card_09_appointment_hook",
+      "type": "chat",
+      "concept_id": "pm_appointment",
+      "level": 2,
+      "progress": { "current": 9, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho tumhari class mein sabse zyada votes leke koi Class Monitor bana - to Principal use seedha appoint kar denge na, koi alag se test nahi lenge?" },
+        { "speaker": "raju", "text": "Haan sir, jisko sabse zyada bacchon ne support kiya, wahi monitor banega." },
+        { "speaker": "aman", "text": "Bilkul waise hi - Article 75(1) ke tehat PM ki niyukti (appointment) PRESIDENT karte hain. Lekin convention ye hai ki jis party/gathbandhan ke paas Lok Sabha mein bahumat (majority) hai, uske leader ko hi PM banaya jaata hai." },
+        { "speaker": "raju", "text": "Sir, PM ke liye koi seedha 'PM ka chunav' nahi hota? Janta seedhe PM nahi chunti?" }
+      ],
+      "navigation": { "next": "card_10_no_direct_election", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_10_no_direct_election",
+      "card_slug": "card_10_no_direct_election",
+      "type": "chat",
+      "concept_id": "pm_appointment",
+      "level": 2,
+      "progress": { "current": 10, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda! India mein PM ka koi DIRECT election nahi hota - janta sirf apne local MP ko vote deti hai. Jo party jeetkar Lok Sabha mein bahumat paati hai, uska leader PM banta hai. Ye ek 'Parliamentary System' ki khaasiyat hai." },
+        { "speaker": "raju", "text": "Achha! Aur agar kisi ek party ko poora majority na mile, kai party milkar सरकार banaye to?" },
+        { "speaker": "aman", "text": "Tab President ka DISCRETION (viveक) kaam mein aata hai - ye woh area hai jaha President ko koi bandhankari salaah nahi hoti kyunki abhi CoM बनी hi नहीं hai! President largest party ya sabse mazboot gathbandhan ke leader ko सरकार banane ka mauka dete hain, aur usse tay samay mein floor test (bahumat sabit karna) karna padta hai." },
+        { "speaker": "raju", "text": "Ye to bahut baar hua hai India mein na sir? Koi example?" }
+      ],
+      "navigation": { "next": "card_11_hung_parliament_examples", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_hung_parliament_examples",
+      "card_slug": "card_11_hung_parliament_examples",
+      "type": "chat",
+      "concept_id": "pm_appointment",
+      "level": 2,
+      "progress": { "current": 11, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut baar hua hai - 1979, 1989, 1990, 1996-98, 1999 mein Hung Parliament ki sthiti aayi thi. Isi discretion ki wajah se 1996 mein President Shankar Dayal Sharma ne Atal Bihari Vajpayee ko PM banaya tha bina clear majority ke - jo sirf 13 din chal payi thi." },
+        { "speaker": "raju", "text": "13 din?? Itni jaldi sarkar gir gayi?" },
+        { "speaker": "aman", "text": "Haan, kyunki bahumat sabit nahi kar paye. Ab ek aur exam-favorite twist suno - kya PM banne ke liye pehle Lok Sabha ka member hona ZAROORI hai?" },
+        { "speaker": "raju", "text": "Haan sir, wo to obvious hai - PM Lok Sabha ka leader hi to hota hai na!" }
+      ],
+      "navigation": { "next": "card_12_rajya_sabha_pm_trap", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_rajya_sabha_pm_trap",
+      "card_slug": "card_12_rajya_sabha_pm_trap",
+      "type": "chat",
+      "concept_id": "pm_appointment",
+      "level": 2,
+      "progress": { "current": 12, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ruko, yahi sabse bada trap hai jo exam mein baar-baar aata hai! PM ko PARLIAMENT KE KISI BHI SADAN (LS ya RS) ka member hona chahiye - Lok Sabha hi zaroori nahi. Aur agar wo abhi member NAHI hai, to Article 75(5) ke tehat use 6 mahine ke andar kisi bhi Sadan ka member banna padega." },
+        { "speaker": "raju", "text": "Hain?? Matlab Rajya Sabha se bhi koi PM ban sakta hai?" },
+        { "speaker": "aman", "text": "Bilkul ban chuka hai! Indira Gandhi (1966 mein), H.D. Deve Gowda (1996-97), aur Dr. Manmohan Singh (2004-2014, poore 10 saal) - teeno Rajya Sabha ke member rehte hue PM bane the!" },
+        { "speaker": "raju", "text": "Manmohan Singh sir 10 saal PM rahe aur Rajya Sabha se the?! Ye to exam me pakka confuse karega!" }
+      ],
+      "navigation": { "next": "card_13_quiz1_m2", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_quiz1_m2",
+      "card_slug": "card_13_quiz1_m2",
+      "type": "quiz",
+      "concept_id": "pm_appointment",
+      "level": 2,
+      "progress": { "current": 13, "total": 82 },
+      "quiz_payload": {
+        "question": "Q1/3: Prime Minister ki niyukti Constitution ke kis Article ke tehat President karte hain?",
+        "options": [
+          { "id": "A", "text": "Article 74(1)" },
+          { "id": "B", "text": "Article 75(1)" },
+          { "id": "C", "text": "Article 78" },
+          { "id": "D", "text": "Article 356" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(1) ke anusaar President Prime Minister ki niyukti karte hain, aur baaki ministers ko PM ki salaah par appoint karte hain."
+      },
+      "navigation": { "next": "card_14_quiz2_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_14_quiz2_m2",
+      "card_slug": "card_14_quiz2_m2",
+      "type": "quiz",
+      "concept_id": "pm_appointment",
+      "level": 2,
+      "progress": { "current": 14, "total": 82 },
+      "quiz_payload": {
+        "question": "Q2/3: Niche diye gaye kaunse Prime Minister, PM bante samay RAJYA SABHA ke member the?",
+        "options": [
+          { "id": "A", "text": "Jawaharlal Nehru aur Lal Bahadur Shastri" },
+          { "id": "B", "text": "Indira Gandhi (1966), H.D. Deve Gowda aur Dr. Manmohan Singh" },
+          { "id": "C", "text": "Atal Bihari Vajpayee aur Rajiv Gandhi" },
+          { "id": "D", "text": "Charan Singh aur Morarji Desai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Indira Gandhi (1966), H.D. Deve Gowda (1996-97) aur Dr. Manmohan Singh (2004-2014) - teeno PM bante samay Rajya Sabha ke member the. Manmohan Singh poore das saal Rajya Sabha se hi PM rahe."
+      },
+      "navigation": { "next": "card_15_quiz3_m2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_quiz3_m2",
+      "card_slug": "card_15_quiz3_m2",
+      "type": "quiz",
+      "concept_id": "pm_appointment",
+      "level": 2,
+      "progress": { "current": 15, "total": 82 },
+      "quiz_payload": {
+        "question": "Q3/3: Agar koi vyakti PM bante samay Parliament ke kisi bhi Sadan ka member nahi hai, to Article 75(5) ke anusaar use kitne samay ke andar member banna zaroori hai?",
+        "options": [
+          { "id": "A", "text": "3 mahine" },
+          { "id": "B", "text": "6 mahine" },
+          { "id": "C", "text": "1 saal" },
+          { "id": "D", "text": "2 mahine" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(5) ke anusaar koi bhi minister (PM sahit) jo lagatar 6 mahine tak kisi bhi Sadan ka member nahi banta, uska mantri pad samapt (cease) ho jaata hai."
+      },
+      "navigation": { "next": "card_16_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_16_milestone2",
+      "card_slug": "card_16_milestone2",
+      "type": "milestone",
+      "concept_id": "pm_appointment",
+      "level": 2,
+      "progress": { "current": 16, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🗳️",
+        "completed_topic": "Appointment of Prime Minister",
+        "xp_earned": 60,
+        "milestone_progress": "Module 2/10 Clear",
+        "motivational_quote": "Appointment ka trap solve! Ab dekhte hain PM banne ki qualifications kya hain."
+      },
+      "navigation": { "next": "card_17_qualification_hook", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_17_qualification_hook",
+      "card_slug": "card_17_qualification_hook",
+      "type": "chat",
+      "concept_id": "pm_qualifications",
+      "level": 2,
+      "progress": { "current": 17, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ek zaroori baat - Constitution mein PM banne ke liye ALAG SE koi qualification list nahi di gayi hai! Kyunki PM khud ek Minister hi hai, isliye wahi shartein lagti hain jo ek saadhaaran MP ke liye hain." },
+        { "speaker": "raju", "text": "Matlab? PM ke liye koi special degree ya experience nahi chahiye?" },
+        { "speaker": "aman", "text": "Bilkul nahi! Bas 3 basic sharten: (1) Bharat ka nagrik hona chahiye, (2) Lok Sabha ka member banne layak ho (minimum 25 saal umar) ya Rajya Sabha ka (minimum 30 saal), (3) Parliament ke banaye anya kanoono ke anusaar qualified ho." },
+        { "speaker": "raju", "text": "Achha! Toh sabse chhoti umar mein PM banne wale kaun the sir?" }
+      ],
+      "navigation": { "next": "card_18_oath_ceremony", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_18_oath_ceremony",
+      "card_slug": "card_18_oath_ceremony",
+      "type": "chat",
+      "concept_id": "pm_qualifications",
+      "level": 2,
+      "progress": { "current": 18, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Rajiv Gandhi sabse kam umar (40 saal) mein PM bane the, 1984 mein. Aur sabse zyada umar mein PM banne wale the Morarji Desai - 81 saal ki umar mein, 1977 mein! Ab dekhte hain PM ko kaun oath dilata hai." },
+        { "speaker": "raju", "text": "Election Commission karayega kya oath?" },
+        { "speaker": "aman", "text": "Nahi Raju! PRESIDENT hi PM aur baaki sabhi ministers ko oath dilate hain - Article 75(4) aur Third Schedule ke anusaar do oath - 'Office ki shapath' aur 'Gopniyata ki shapath' (secrecy oath)." },
+        { "speaker": "raju", "text": "Do alag-alag oath hoti hain? Ek office ke liye aur ek secrecy ke liye?" }
+      ],
+      "navigation": { "next": "card_19_tenure_death", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_tenure_death",
+      "card_slug": "card_19_tenure_death",
+      "type": "chat",
+      "concept_id": "pm_qualifications",
+      "level": 2,
+      "progress": { "current": 19, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab PM ke tenure ki baat - Constitution mein koi FIXED tenure nahi likha, PM 'President ki prasannta paryant' (during pleasure of President) pad par rehta hai. Lekin practically wo tab tak rehta hai jab tak Lok Sabha mein uska bahumat rehta hai." },
+        { "speaker": "raju", "text": "Toh normally 5 saal chalta hai, Lok Sabha ke tenure ke barabar?" },
+        { "speaker": "aman", "text": "Haan, generally. Lekin agar beech mein resign kar de, no-confidence mein haar jaaye, ya death ho jaaye to pehle bhi khatam ho sakta hai. ⭐ 3 PM ne apne office mein hi death dekhi hai - Nehru (1964), Lal Bahadur Shastri (1966, Tashkent mein), aur Indira Gandhi (1984, assassination)." },
+        { "speaker": "raju", "text": "Sir, PM ka death ho jaaye ya wo resign kar de, to baaki Council of Ministers ka kya hota hai?" }
+      ],
+      "navigation": { "next": "card_20_quiz1_m3", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_quiz1_m3",
+      "card_slug": "card_20_quiz1_m3",
+      "type": "quiz",
+      "concept_id": "pm_qualifications",
+      "level": 2,
+      "progress": { "current": 20, "total": 82 },
+      "quiz_payload": {
+        "question": "Q1/3: Sabse kam umar mein Bharat ka PM kaun bana tha?",
+        "options": [
+          { "id": "A", "text": "Jawaharlal Nehru" },
+          { "id": "B", "text": "Rajiv Gandhi (40 saal ki umar mein)" },
+          { "id": "C", "text": "Atal Bihari Vajpayee" },
+          { "id": "D", "text": "Narendra Modi" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Rajiv Gandhi 1984 mein 40 saal ki umar mein PM bane the, jo abhi tak sabse kam umar mein PM banne ka record hai. Morarji Desai (81 saal, 1977) sabse zyada umar mein PM bane the."
+      },
+      "navigation": { "next": "card_21_quiz2_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_21_quiz2_m3",
+      "card_slug": "card_21_quiz2_m3",
+      "type": "quiz",
+      "concept_id": "pm_qualifications",
+      "level": 2,
+      "progress": { "current": 21, "total": 82 },
+      "quiz_payload": {
+        "question": "Q2/3: PM aur ministers ko oath kaun dilate hain, aur kis Schedule ke anusaar?",
+        "options": [
+          { "id": "A", "text": "Speaker, First Schedule" },
+          { "id": "B", "text": "President, Third Schedule" },
+          { "id": "C", "text": "Chief Justice, Second Schedule" },
+          { "id": "D", "text": "Vice President, Fourth Schedule" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(4) ke anusaar President hi PM aur ministers ko 'Office ki shapath' aur 'Gopniyata ki shapath' dilate hain, jo Third Schedule mein di gayi hain."
+      },
+      "navigation": { "next": "card_22_quiz3_m3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_22_quiz3_m3",
+      "card_slug": "card_22_quiz3_m3",
+      "type": "quiz",
+      "concept_id": "pm_qualifications",
+      "level": 2,
+      "progress": { "current": 22, "total": 82 },
+      "quiz_payload": {
+        "question": "Q3/3: Niche diye gaye mein se kaunse PM ne apne CARYAKAL (tenure) mein hi death dekhi?",
+        "options": [
+          { "id": "A", "text": "Jawaharlal Nehru, Lal Bahadur Shastri, Indira Gandhi" },
+          { "id": "B", "text": "Morarji Desai, Charan Singh" },
+          { "id": "C", "text": "Atal Bihari Vajpayee, Manmohan Singh" },
+          { "id": "D", "text": "Rajiv Gandhi, V.P. Singh" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Jawaharlal Nehru (1964), Lal Bahadur Shastri (1966, Tashkent mein), aur Indira Gandhi (1984, assassination) - teeno ki death office mein rehte hue hui thi."
+      },
+      "navigation": { "next": "card_23_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_23_milestone3",
+      "card_slug": "card_23_milestone3",
+      "type": "milestone",
+      "concept_id": "pm_qualifications",
+      "level": 2,
+      "progress": { "current": 23, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📜",
+        "completed_topic": "Qualifications, Oath & Tenure",
+        "xp_earned": 60,
+        "milestone_progress": "Module 3/10 Clear",
+        "motivational_quote": "PM banne ki poori journey samajh gaye! Ab dekhते hain PM apni Council of Ministers ko kaise control karta hai."
+      },
+      "navigation": { "next": "card_24_com_formation", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_24_com_formation",
+      "card_slug": "card_24_com_formation",
+      "type": "chat",
+      "concept_id": "pm_and_council",
+      "level": 3,
+      "progress": { "current": 24, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, jab tumhari class mein group project banta hai, group ka leader hi decide karta hai na ki kaun kya kaam karega?" },
+        { "speaker": "raju", "text": "Haan sir, leader hi divide karta hai kaam." },
+        { "speaker": "aman", "text": "Bilkul waise hi - PM apne Council of Ministers ka 'team leader' hota hai. Article 75(1) ke anusaar baaki sab ministers, PM ki SALAAH par hi President appoint karte hain. Matlab kis ko minister banana hai, ye PM hi decide karta hai." },
+        { "speaker": "raju", "text": "Toh President khud kisi ko minister nahi bana sakte, apni marzi se?" }
+      ],
+      "navigation": { "next": "card_25_portfolio_allocation", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_25_portfolio_allocation",
+      "card_slug": "card_25_portfolio_allocation",
+      "type": "chat",
+      "concept_id": "pm_and_council",
+      "level": 3,
+      "progress": { "current": 25, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Nahi, apni marzi se nahi. Sirf PM ki sifarish par hi hota hai. Ab ek aur PM ka power - 'Portfolio Allocation'. PM hi tay karta hai kaun sa minister kis ministry (jaise Finance, Defence, Home) ko sambhalega, aur PM chahe to kabhi bhi reshuffle (fer-badal) bhi kar sakta hai." },
+        { "speaker": "raju", "text": "Sir agar koi minister acha kaam nahi kar raha, to PM use hata sakta hai?" },
+        { "speaker": "aman", "text": "Bilkul! Agar PM chahe to us minister se resign maang sakta hai, ya President ko sifarish karke use dismiss karwa sakta hai. Article 75(2) ke anusaar ministers 'President ki prasannta paryant' pad par rehte hain, aur President ye action PM ki salaah par hi lete hain." },
+        { "speaker": "raju", "text": "Toh minister ka career poori tarah PM ke haath mein hai! Aur agar khud PM resign kar de ya mar jaaye, poori team ka kya hoga?" }
+      ],
+      "navigation": { "next": "card_26_pm_resignation_effect", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_26_pm_resignation_effect",
+      "card_slug": "card_26_pm_resignation_effect",
+      "type": "chat",
+      "concept_id": "pm_and_council",
+      "level": 3,
+      "progress": { "current": 26, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Yahi sabse important asymmetry hai jo exam mein poochi jaati hai! Agar PM resign kare ya mar jaaye, to POORI Council of Ministers AUTOMATICALLY bhang ho jaati hai. Lekin agar koi EK saadhaaran minister resign kare ya mar jaaye, to baaki CoM par koi asar nahi padta!" },
+        { "speaker": "raju", "text": "Hain?? Matlab PM 'foundation' jaisa hai - wo gaya to poori building gir jaati hai, par ek 'brick' (minister) hatne se building khadi rehti hai!" },
+        { "speaker": "aman", "text": "Bahut sundar analogy Raju! Isi wajah se PM ko 'keystone of the cabinet arch' (Cabinet-mehrab ki mukhya kadi) kaha jaata hai - ye ek famous quote hai jo BPSC bhi poochti hai." },
+        { "speaker": "raju", "text": "Achha! 'Keystone of the cabinet arch' - ye to yaad rakhna hi padega!" }
+      ],
+      "navigation": { "next": "card_27_quiz1_m4", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_27_quiz1_m4",
+      "card_slug": "card_27_quiz1_m4",
+      "type": "quiz",
+      "concept_id": "pm_and_council",
+      "level": 3,
+      "progress": { "current": 27, "total": 82 },
+      "quiz_payload": {
+        "question": "Q1/3: Agar Prime Minister resign kar dein ya unka dehant ho jaaye, to Council of Ministers par kya asar padta hai?",
+        "options": [
+          { "id": "A", "text": "Koi asar nahi padta, CoM chalti rehti hai" },
+          { "id": "B", "text": "Poori Council of Ministers automatically bhang ho jaati hai" },
+          { "id": "C", "text": "Sirf Finance Minister ko resign karna padta hai" },
+          { "id": "D", "text": "President naya PM khud chun lete hain bina kisi process ke" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "PM ke resign ya dehant hone par poori Council of Ministers automatically bhang ho jaati hai, kyunki CoM ka astitva hi PM ke astitva se juda hua hai - isi wajah se PM ko 'keystone of the cabinet arch' kaha jaata hai."
+      },
+      "navigation": { "next": "card_28_quiz2_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_28_quiz2_m4",
+      "card_slug": "card_28_quiz2_m4",
+      "type": "quiz",
+      "concept_id": "pm_and_council",
+      "level": 3,
+      "progress": { "current": 28, "total": 82 },
+      "quiz_payload": {
+        "question": "Q2/3: Baaki ministers ki niyukti President kis basis par karte hain?",
+        "options": [
+          { "id": "A", "text": "Apni khud ki marzi se" },
+          { "id": "B", "text": "PM ki salaah (sifarish) par" },
+          { "id": "C", "text": "Supreme Court ki sifarish par" },
+          { "id": "D", "text": "Chunav Aayog ki approval se" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(1) ke anusaar baaki sab ministers ki niyukti President, PM ki salaah (sifarish) par karte hain."
+      },
+      "navigation": { "next": "card_29_quiz3_m4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_29_quiz3_m4",
+      "card_slug": "card_29_quiz3_m4",
+      "type": "quiz",
+      "concept_id": "pm_and_council",
+      "level": 3,
+      "progress": { "current": 29, "total": 82 },
+      "quiz_payload": {
+        "question": "Q3/3: Agar ek saadhaaran (ordinary) minister resign kar de, to baaki Council of Ministers ka kya hota hai?",
+        "options": [
+          { "id": "A", "text": "Poori CoM bhang ho jaati hai" },
+          { "id": "B", "text": "Baaki CoM par koi asar nahi padta, chalti rehti hai" },
+          { "id": "C", "text": "PM ko bhi resign karna padta hai" },
+          { "id": "D", "text": "Lok Sabha automatically dissolve ho jaati hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ek saadhaaran minister ke resign ya death se baaki Council of Ministers par koi asar nahi padta - sirf PM ke resign/death se hi poori CoM bhang hoti hai."
+      },
+      "navigation": { "next": "card_30_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_30_milestone4",
+      "card_slug": "card_30_milestone4",
+      "type": "milestone",
+      "concept_id": "pm_and_council",
+      "level": 3,
+      "progress": { "current": 30, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "👥",
+        "completed_topic": "PM & Council of Ministers",
+        "xp_earned": 60,
+        "milestone_progress": "Module 4/10 Clear",
+        "motivational_quote": "'Keystone of the cabinet arch' concept pakka hua! Ab dekhте hain PM aur President ka rishta detail mein."
+      },
+      "navigation": { "next": "card_31_link_pm_president", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_31_link_pm_president",
+      "card_slug": "card_31_link_pm_president",
+      "type": "chat",
+      "concept_id": "pm_president_link",
+      "level": 3,
+      "progress": { "current": 31, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, agar office ka bada boss kisi field ke office mein baithne wale manager se seedha baat na kare, to unke beech mein koi messenger chahiye na jo dono taraf ki baatein pahunchaye?" },
+        { "speaker": "raju", "text": "Haan sir, jaise secretary ya PA hota hai." },
+        { "speaker": "aman", "text": "Bilkul waise hi PM, President aur Council of Ministers ke beech ek CONSTITUTIONAL LINK (kadi) ka kaam karta hai - ye duty Article 78 mein likhi hai." },
+        { "speaker": "raju", "text": "Article 78 mein kya-kya likha hai sir? Batao detail mein!" }
+      ],
+      "navigation": { "next": "card_32_article_78_details", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_32_article_78_details",
+      "card_slug": "card_32_article_78_details",
+      "type": "chat",
+      "concept_id": "pm_president_link",
+      "level": 3,
+      "progress": { "current": 32, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Article 78 mein PM ke 3 KARTAVYA (duties) hain: (a) Union ke shasan sambandhi CoM ke saare faislon aur naye kanoon ke prastaav President ko batana, (b) President jo bhi jaankari maange, wo dena, (c) agar President chahein, to kisi minister ne jo faisla akele liya hai (jo poori CoM ke saamne nahi aaya), use PURI Council of Ministers ke saamne vichar ke liye lana." },
+        { "speaker": "raju", "text": "Matlab President chahein to check kar sakte hain ki koi minister akele kuch bada faisla to nahi le raha?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ye ek balancing mechanism hai - President ko information ka adhikar hai, aur wo ensure kar sakte hain ki bade faisle akele nahi, poori Cabinet ke consensus se hon." },
+        { "speaker": "raju", "text": "Achha! Toh PM 'sirf messenger' nahi hai, balki ek CONSTITUTIONAL DUTY nibhata hai. Aur PM Parliament ke saath kya karta hai?" }
+      ],
+      "navigation": { "next": "card_33_leader_of_house", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_33_leader_of_house",
+      "card_slug": "card_33_leader_of_house",
+      "type": "chat",
+      "concept_id": "pm_president_link",
+      "level": 3,
+      "progress": { "current": 33, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "PM agar Lok Sabha ka member hai, to wo 'Leader of the House' hota hai - Sadan mein sarkar ka main spokesperson. Agar PM Rajya Sabha se hai (jaise Manmohan Singh), to LS mein koi senior Cabinet Minister Leader of the House banta hai." },
+        { "speaker": "raju", "text": "Achha! Aur Sadan ko bulana (summon karna) ya band karna (dissolve karna) - is mein PM ka role hai?" },
+        { "speaker": "aman", "text": "Bilkul, PM hi President ko salaah deta hai kab session bulaya jaaye ya kab Lok Sabha ko bhang kiya jaaye. President ye kaam khud nahi karte, PM ki hi salaah maante hain." },
+        { "speaker": "raju", "text": "Wah! Toh PM ek tarah se Parliament aur President dono ka 'pilot' hai!" }
+      ],
+      "navigation": { "next": "card_34_quiz1_m5", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_34_quiz1_m5",
+      "card_slug": "card_34_quiz1_m5",
+      "type": "quiz",
+      "concept_id": "pm_president_link",
+      "level": 3,
+      "progress": { "current": 34, "total": 82 },
+      "quiz_payload": {
+        "question": "Q1/3: Article 78 ke anusaar PM ka kartavya HAI:",
+        "options": [
+          { "id": "A", "text": "CoM ke faislon aur naye kanoon ke prastaav President ko batana" },
+          { "id": "B", "text": "Sadhaaran ministers ki niyukti khud karna" },
+          { "id": "C", "text": "Bina President ki jaankari ke faisla lena" },
+          { "id": "D", "text": "Supreme Court ke judges ki niyukti karna" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Article 78(a) ke anusaar PM ka kartavya hai ki Union ke shasan sambandhi CoM ke saare faisalon aur legislation ke prastaav President ko communicate kare."
+      },
+      "navigation": { "next": "card_35_quiz2_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_35_quiz2_m5",
+      "card_slug": "card_35_quiz2_m5",
+      "type": "quiz",
+      "concept_id": "pm_president_link",
+      "level": 3,
+      "progress": { "current": 35, "total": 82 },
+      "quiz_payload": {
+        "question": "Q2/3: Article 78(c) ke anusaar, agar President chahein to PM kya kar sakta hai?",
+        "options": [
+          { "id": "A", "text": "Kisi bhi minister ko turant dismiss kar sakta hai" },
+          { "id": "B", "text": "Kisi minister ne akele jo faisla liya hai (jo poori CoM ke saamne nahi aaya), use poori Council of Ministers ke vichar ke liye la sakta hai" },
+          { "id": "C", "text": "Lok Sabha ko bina koi karan bataye bhang kar sakta hai" },
+          { "id": "D", "text": "President ka faisla khaarij kar sakta hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 78(c) ke anusaar, agar President mangein, to PM kisi minister ke akele liye gaye faisle ko poori Council of Ministers ke saamne vichar ke liye rakhega."
+      },
+      "navigation": { "next": "card_36_quiz3_m5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_36_quiz3_m5",
+      "card_slug": "card_36_quiz3_m5",
+      "type": "quiz",
+      "concept_id": "pm_president_link",
+      "level": 3,
+      "progress": { "current": 36, "total": 82 },
+      "quiz_payload": {
+        "question": "Q3/3: Agar PM Rajya Sabha ka member hai (jaise Dr. Manmohan Singh), to Lok Sabha mein 'Leader of the House' kaun banta hai?",
+        "options": [
+          { "id": "A", "text": "Speaker khud" },
+          { "id": "B", "text": "Koi senior Cabinet Minister jo Lok Sabha ka member ho" },
+          { "id": "C", "text": "Vice President" },
+          { "id": "D", "text": "Koi bhi Opposition leader" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Jab PM Rajya Sabha se hote hain, tab Lok Sabha mein 'Leader of the House' ka pad kisi senior Cabinet Minister ko diya jaata hai jo Lok Sabha ka member ho - jaise Manmohan Singh ke daur mein Pranab Mukherjee ye role nibhate the."
+      },
+      "navigation": { "next": "card_37_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_37_milestone5",
+      "card_slug": "card_37_milestone5",
+      "type": "milestone",
+      "concept_id": "pm_president_link",
+      "level": 3,
+      "progress": { "current": 37, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔗",
+        "completed_topic": "PM as Link Between President & Parliament",
+        "xp_earned": 60,
+        "milestone_progress": "Module 5/10 Clear",
+        "motivational_quote": "PM ka 'link' role pakka hua! Ab PM ke andar-bahar ke saare EXTRA roles dekhte hain."
+      },
+      "navigation": { "next": "card_38_niti_aayog", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_38_niti_aayog",
+      "card_slug": "card_38_niti_aayog",
+      "type": "chat",
+      "concept_id": "pm_other_roles",
+      "level": 4,
+      "progress": { "current": 38, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ek interesting baat - PM ka kaam sirf CoM sambhalna nahi hai, wo kayi important bodies ka bhi PADEN-CHAIRMAN hota hai. Sabse bada naam hai NITI Aayog." },
+        { "speaker": "raju", "text": "NITI Aayog? Ye kya hai sir?" },
+        { "speaker": "aman", "text": "NITI Aayog (National Institution for Transforming India) 1 January 2015 ko bana, jisne purani PLANNING COMMISSION (1950 mein bani thi) ki jagah li. PM hi NITI Aayog ke EX-OFFICIO Chairman hote hain." },
+        { "speaker": "raju", "text": "Achha! Planning Commission ki jagah NITI Aayog aayi - ye date pakki yaad rakhni hogi: 1 January 2015!" }
+      ],
+      "navigation": { "next": "card_39_inter_state_council", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_39_inter_state_council",
+      "card_slug": "card_39_inter_state_council",
+      "type": "chat",
+      "concept_id": "pm_other_roles",
+      "level": 4,
+      "progress": { "current": 39, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Ab ek aur body - Inter-State Council. Ye Article 263 ke tehat 1990 mein bani thi (Sarkaria Commission ki sifarish par), aur PM hi iske Chairman hote hain. Iska kaam Centre-State aur State-State disputes discuss karna hai." },
+        { "speaker": "raju", "text": "Article 263? Ye to State List/Union List wale chapter mein bhi aata hai na!" },
+        { "speaker": "aman", "text": "Bilkul sahi observation! Ab PM ke kuch aur zaroori roles - wo Union Cabinet ki meetings ki adhyakshata (preside) karte hain, sarkar ke MUKHYA PRAVAKTA (Chief Spokesperson) hote hain, aur Nuclear Command Authority ki Political Council ke bhi Chairman hote hain (jo nuclear weapon use ka final faisla lene wala body hai)." },
+        { "speaker": "raju", "text": "Wow, PM ke haath mein to bahut saari zimmedariyan hain! Ye sab yaad rakhna padega."}
+      ],
+      "navigation": { "next": "card_40_national_integration_council", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_40_national_integration_council",
+      "card_slug": "card_40_national_integration_council",
+      "type": "chat",
+      "concept_id": "pm_other_roles",
+      "level": 4,
+      "progress": { "current": 40, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Haan, aur ek aakhri important body - National Integration Council (NIC), jo communal harmony aur national unity se related mudde discuss karti hai - iske bhi Chairman PM hi hote hain." },
+        { "speaker": "raju", "text": "Sir, ye NITI Aayog, Inter-State Council, NIC - inme se sabse jyada BPSC/SSC mein konsa poocha jaata hai?" },
+        { "speaker": "aman", "text": "⭐ NITI Aayog aur Planning Commission ka comparison SABSE jyada poocha jaata hai, khaaskar '1 January 2015' ki date. Inter-State Council ('Article 263', '1990', 'Sarkaria Commission') bhi bahut common hai." },
+        { "speaker": "raju", "text": "Theek hai sir, dono date aur reference yaad kar liye! Ab quiz de dijiye."}
+      ],
+      "navigation": { "next": "card_41_quiz1_m6", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_41_quiz1_m6",
+      "card_slug": "card_41_quiz1_m6",
+      "type": "quiz",
+      "concept_id": "pm_other_roles",
+      "level": 4,
+      "progress": { "current": 41, "total": 82 },
+      "quiz_payload": {
+        "question": "Q1/3: NITI Aayog kis tareekh ko bani thi, aur kis body ki jagah li?",
+        "options": [
+          { "id": "A", "text": "1 January 2015, Planning Commission (1950) ki jagah" },
+          { "id": "B", "text": "26 January 1950, Finance Commission ki jagah" },
+          { "id": "C", "text": "15 August 2014, National Development Council ki jagah" },
+          { "id": "D", "text": "1 April 2017, Inter-State Council ki jagah" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "NITI Aayog (National Institution for Transforming India) 1 January 2015 ko bani, jisne 1950 mein bani Planning Commission ki jagah li. PM hi NITI Aayog ke ex-officio Chairman hote hain."
+      },
+      "navigation": { "next": "card_42_quiz2_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_42_quiz2_m6",
+      "card_slug": "card_42_quiz2_m6",
+      "type": "quiz",
+      "concept_id": "pm_other_roles",
+      "level": 4,
+      "progress": { "current": 42, "total": 82 },
+      "quiz_payload": {
+        "question": "Q2/3: Inter-State Council Constitution ke kis Article ke tehat, aur kis commission ki sifarish par bani thi?",
+        "options": [
+          { "id": "A", "text": "Article 280, Finance Commission" },
+          { "id": "B", "text": "Article 263, Sarkaria Commission (1990)" },
+          { "id": "C", "text": "Article 356, Punchhi Commission" },
+          { "id": "D", "text": "Article 312, Second Administrative Reforms Commission" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Inter-State Council, Article 263 ke tehat 1990 mein Sarkaria Commission ki sifarish par bani, aur PM hi iske Chairman hote hain."
+      },
+      "navigation": { "next": "card_43_quiz3_m6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_43_quiz3_m6",
+      "card_slug": "card_43_quiz3_m6",
+      "type": "quiz",
+      "concept_id": "pm_other_roles",
+      "level": 4,
+      "progress": { "current": 43, "total": 82 },
+      "quiz_payload": {
+        "question": "Q3/3: Niche diye gaye mein se konsa role PM ka NAHI hai?",
+        "options": [
+          { "id": "A", "text": "Chairman, NITI Aayog" },
+          { "id": "B", "text": "Chairman, Union Cabinet meetings" },
+          { "id": "C", "text": "Chief Justice of India" },
+          { "id": "D", "text": "Chairman, Nuclear Command Authority's Political Council" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Chief Justice of India ek alag constitutional pad hai jo judiciary ka mukhiya hota hai - iska PM se koi lena-dena nahi. PM NITI Aayog, Cabinet meetings, aur Nuclear Command Authority ki Political Council ke Chairman hote hain."
+      },
+      "navigation": { "next": "card_44_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_44_milestone6",
+      "card_slug": "card_44_milestone6",
+      "type": "milestone",
+      "concept_id": "pm_other_roles",
+      "level": 4,
+      "progress": { "current": 44, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏢",
+        "completed_topic": "PM's Other Institutional Roles",
+        "xp_earned": 60,
+        "milestone_progress": "Module 6/10 Clear",
+        "motivational_quote": "PM ke saare 'side roles' pakke hue! Ab Collective aur Individual Responsibility ka bada topic samjhte hain."
+      },
+      "navigation": { "next": "card_45_collective_resp_hook", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_45_collective_resp_hook",
+      "card_slug": "card_45_collective_resp_hook",
+      "type": "chat",
+      "concept_id": "responsibility",
+      "level": 4,
+      "progress": { "current": 45, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho tumhari cricket team match haar gayi - kya sirf bowler ko dosh diya jayega ya poori team ko?" },
+        { "speaker": "raju", "text": "Poori team ko sir, kyunki match to team ne mil ke khela tha!" },
+        { "speaker": "aman", "text": "Bilkul yahi principle hai Article 75(3) mein - 'Collective Responsibility'. Poori Council of Ministers, milkar, LOK SABHA ke prati uttardai (responsible) hoti hai. Agar Lok Sabha 'No-Confidence Motion' paas kar de, to POORI CoM ko resign karna padta hai, sirf ek minister ko nahi." },
+        { "speaker": "raju", "text": "Poori CoM? Matlab Rajya Sabha wale ministers ko bhi resign karna padega, jinhone kabhi Lok Sabha mein vote hi nahi diya?" }
+      ],
+      "navigation": { "next": "card_46_collective_resp_detail", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_46_collective_resp_detail",
+      "card_slug": "card_46_collective_resp_detail",
+      "type": "chat",
+      "concept_id": "responsibility",
+      "level": 4,
+      "progress": { "current": 46, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi pakda! Ye BPSC ka favorite trap hai - Rajya Sabha ke members bhi Minister hone ki wajah se Lok Sabha ke prati collectively responsible hote hain, aur no-confidence pass hone par unhe bhi resign karna padta hai, bhale hi wo LS mein vote nahi karte." },
+        { "speaker": "raju", "text": "Achha! Aur agar Cabinet mein koi decision liya jaaye, jisse ek minister disagree kare, tab kya hoga?" },
+        { "speaker": "aman", "text": "Yahi 'Collective Responsibility' ka doosra pehlu hai - Cabinet ka faisla ek baar ho jaaye to SAB ministers usko public mein SUPPORT karne ke liye BADHYA hain, chahe unhone meeting mein virodh kiya ho. Agar wo public mein virodh karta hai, to use RESIGN karna padta hai." },
+        { "speaker": "raju", "text": "Toh minister apni marzi se public mein sarkar ke faisle ke khilaaf bol hi nahi sakta?" }
+      ],
+      "navigation": { "next": "card_47_individual_resp", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_47_individual_resp",
+      "card_slug": "card_47_individual_resp",
+      "type": "chat",
+      "concept_id": "responsibility",
+      "level": 4,
+      "progress": { "current": 47, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul nahi bol sakta, warna wo resign kar de ya use dismiss kar diya jayega - jaise 2012 mein ek Minister ko is wajah se resign karna pada tha. Ab 'INDIVIDUAL RESPONSIBILITY' samjho - Article 75(2) mein likha hai ministers 'President ki prasannta paryant' pad par rehte hain." },
+        { "speaker": "raju", "text": "Matlab yahan individual minister ki galti ki saza sirf usी ko milegi, poori team ko nahi?" },
+        { "speaker": "aman", "text": "Bilkul sahi! Agar PM ki salaah par President kisi individual minister ko dismiss karte hain, to sirf wahi minister jaata hai, baaki CoM chalti rehti hai. Isse 'Individual Responsibility' bolte hain." },
+        { "speaker": "raju", "text": "Achha! Toh Collective = team ki jimmedaari (Lok Sabha ke prati), Individual = akele minister ki jimmedaari (President ki prasannta ke prati)!" }
+      ],
+      "navigation": { "next": "card_48_quiz1_m7", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_48_quiz1_m7",
+      "card_slug": "card_48_quiz1_m7",
+      "type": "quiz",
+      "concept_id": "responsibility",
+      "level": 4,
+      "progress": { "current": 48, "total": 82 },
+      "quiz_payload": {
+        "question": "Q1/3: Article 75(3) ke anusaar Council of Ministers kis Sadan ke prati SAMUHIK ROOP SE (collectively) uttardai hoti hai?",
+        "options": [
+          { "id": "A", "text": "Rajya Sabha" },
+          { "id": "B", "text": "Lok Sabha" },
+          { "id": "C", "text": "Dono Sadan barabar" },
+          { "id": "D", "text": "President" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(3) ke anusaar Council of Ministers sirf LOK SABHA ke prati samuhik roop se uttardai hai - Rajya Sabha ke prati nahi, chahe kuch ministers RS se hi kyun na hon."
+      },
+      "navigation": { "next": "card_49_quiz2_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_49_quiz2_m7",
+      "card_slug": "card_49_quiz2_m7",
+      "type": "quiz",
+      "concept_id": "responsibility",
+      "level": 4,
+      "progress": { "current": 49, "total": 82 },
+      "quiz_payload": {
+        "question": "Q2/3: Agar Lok Sabha mein No-Confidence Motion pass ho jaaye, to kya hota hai?",
+        "options": [
+          { "id": "A", "text": "Sirf PM resign karta hai, baaki minister rehte hain" },
+          { "id": "B", "text": "Sirf Rajya Sabha wale ministers resign karte hain" },
+          { "id": "C", "text": "Poori Council of Ministers, Rajya Sabha wale ministers samet, resign karti hai" },
+          { "id": "D", "text": "Kuch nahi hota, sarkar chalti rehti hai" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "No-Confidence Motion pass hone par POORI Council of Ministers ko resign karna padta hai, chahe koi minister Rajya Sabha se hi kyun na ho, kyunki collective responsibility ka principle sabpar lagu hota hai."
+      },
+      "navigation": { "next": "card_50_quiz3_m7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_50_quiz3_m7",
+      "card_slug": "card_50_quiz3_m7",
+      "type": "quiz",
+      "concept_id": "responsibility",
+      "level": 4,
+      "progress": { "current": 50, "total": 82 },
+      "quiz_payload": {
+        "question": "Q3/3: Article 75(2) mein diya gaya 'Individual Responsibility' principle kya batata hai?",
+        "options": [
+          { "id": "A", "text": "Ministers Lok Sabha ke prati samuhik roop se uttardai hain" },
+          { "id": "B", "text": "Ministers 'President ki prasannta paryant' pad par rehte hain, aur individual minister ko akele bhi hataaya ja sakta hai" },
+          { "id": "C", "text": "PM kisi minister ko kabhi nahi hata sakte" },
+          { "id": "D", "text": "Ministers ka pad life-long hota hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(2) ke anusaar ministers 'President ki prasannta paryant' (during the pleasure of President) pad par rehte hain - matlab PM ki salaah par President kisi ek individual minister ko bhi hata sakte hain, bina poori CoM ko affect kiye."
+      },
+      "navigation": { "next": "card_51_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_51_milestone7",
+      "card_slug": "card_51_milestone7",
+      "type": "milestone",
+      "concept_id": "responsibility",
+      "level": 4,
+      "progress": { "current": 51, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚖️",
+        "completed_topic": "Collective & Individual Responsibility",
+        "xp_earned": 60,
+        "milestone_progress": "Module 7/10 Clear",
+        "motivational_quote": "Responsibility ka double-concept pakka hua! Ab Deputy PM aur Acting PM ka rochak topic dekhte hain."
+      },
+      "navigation": { "next": "card_52_deputy_pm_hook", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_52_deputy_pm_hook",
+      "card_slug": "card_52_deputy_pm_hook",
+      "type": "chat",
+      "concept_id": "deputy_acting_pm",
+      "level": 5,
+      "progress": { "current": 52, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, kabhi socha hai 'Deputy PM' ka pad Constitution mein hai bhi ya nahi? News mein sunte ho na 'Deputy Prime Minister'?" },
+        { "speaker": "raju", "text": "Haan sir, Sardar Patel ji ke baare mein padha tha ki wo Deputy PM the!" },
+        { "speaker": "aman", "text": "⭐ Yahi sabse bada surprise hai - Constitution mein 'Deputy Prime Minister' jaisa koi pad hi NAHI hai! Ye sirf ek RAJNITIK (political) practice hai. Jise Deputy PM banaya jaata hai, wo constitutionally sirf ek CABINET MINISTER hota hai, bas usse ek special title de diya jaata hai." },
+        { "speaker": "raju", "text": "Hain?? Toh Deputy PM ke paas koi extra POWER nahi hoti jo doosre Cabinet Ministers ke paas na ho?" }
+      ],
+      "navigation": { "next": "card_53_deputy_pm_examples", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_53_deputy_pm_examples",
+      "card_slug": "card_53_deputy_pm_examples",
+      "type": "chat",
+      "concept_id": "deputy_acting_pm",
+      "level": 5,
+      "progress": { "current": 53, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! Koi constitutional extra power nahi - bas ek senior aur prestigious title hai. Sardar Vallabhbhai Patel Bharat ke PEHLE Deputy PM the (1947-1950). Baad mein Morarji Desai, Charan Singh, Jagjivan Ram, Y.B. Chavan, Devi Lal, aur L.K. Advani (2002-2004) bhi Deputy PM bane." },
+        { "speaker": "raju", "text": "⭐ Sir, Bihar se related koi baat hai isme?" },
+        { "speaker": "aman", "text": "Haan! Babu Jagjivan Ram, jo 1977-1979 mein Deputy PM the, Bihar ke Sasaram (Rohtas) Lok Sabha seat se dashकों tak jeette rahe the - unka political karm-kshetra Bihar se gehra juda hua tha. ⭐ BPSC TRE Favorite fact hai ye." },
+        { "speaker": "raju", "text": "Achha! Aur agar PM khud kaam na kar paye (bimaar ho jaayein ya kuch aur), tab 'Acting PM' kaun banta hai?" }
+      ],
+      "navigation": { "next": "card_54_acting_pm", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_54_acting_pm",
+      "card_slug": "card_54_acting_pm",
+      "type": "chat",
+      "concept_id": "deputy_acting_pm",
+      "level": 5,
+      "progress": { "current": 54, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Bahut acha sawal! Ye bhi Constitution mein formally likha nahi hai, ye ek political convention se aata hai. Jab PM ka dehant ho jaata hai ya wo istifa de dete hain, tab senior-most Cabinet Minister ko 'ACTING PM' banaya jaata hai jab tak naya PM na chuna jaaye." },
+        { "speaker": "raju", "text": "Kya ye kabhi hua hai India mein?" },
+        { "speaker": "aman", "text": "⭐ Do baar hua - Gulzari Lal Nanda DO baar Acting PM bane! Pehli baar Nehru ke dehant (1964) ke baad, aur doosri baar Lal Bahadur Shastri ke dehant (1966) ke baad - dono baar wo us waqt senior-most Cabinet Minister the." },
+        { "speaker": "raju", "text": "Wah! Do baar Acting PM banne wale ek hi vyakti - Gulzari Lal Nanda! Ye to unique fact hai!" }
+      ],
+      "navigation": { "next": "card_55_quiz1_m8", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_55_quiz1_m8",
+      "card_slug": "card_55_quiz1_m8",
+      "type": "quiz",
+      "concept_id": "deputy_acting_pm",
+      "level": 5,
+      "progress": { "current": 55, "total": 82 },
+      "quiz_payload": {
+        "question": "Q1/3: 'Deputy Prime Minister' ke pad ke baare mein sahi kathan chuno.",
+        "options": [
+          { "id": "A", "text": "Ye Article 75 mein specifically define kiya gaya hai" },
+          { "id": "B", "text": "Ye Constitution mein kahin bhi nahi hai, sirf ek political practice hai - constitutionally wo ek Cabinet Minister hi hota hai" },
+          { "id": "C", "text": "Deputy PM automatically PM ban jaata hai jab PM na ho" },
+          { "id": "D", "text": "Deputy PM ke paas PM jaisi hi sab powers hoti hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Constitution mein 'Deputy Prime Minister' jaisa koi pad hi nahi hai. Ye sirf ek political-honorary title hai - constitutionally aisa vyakti ek saadhaaran Cabinet Minister hi hota hai, use koi extra constitutional power nahi milti."
+      },
+      "navigation": { "next": "card_56_quiz2_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_56_quiz2_m8",
+      "card_slug": "card_56_quiz2_m8",
+      "type": "quiz",
+      "concept_id": "deputy_acting_pm",
+      "level": 5,
+      "progress": { "current": 56, "total": 82 },
+      "quiz_payload": {
+        "question": "Q2/3: Bharat ke pehle Deputy Prime Minister kaun the?",
+        "options": [
+          { "id": "A", "text": "Morarji Desai" },
+          { "id": "B", "text": "Sardar Vallabhbhai Patel" },
+          { "id": "C", "text": "Jagjivan Ram" },
+          { "id": "D", "text": "L.K. Advani" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sardar Vallabhbhai Patel (1947-1950) Bharat ke pehle Deputy Prime Minister the, saath hi wo Home Minister bhi the."
+      },
+      "navigation": { "next": "card_57_quiz3_m8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_57_quiz3_m8",
+      "card_slug": "card_57_quiz3_m8",
+      "type": "quiz",
+      "concept_id": "deputy_acting_pm",
+      "level": 5,
+      "progress": { "current": 57, "total": 82 },
+      "quiz_payload": {
+        "question": "Q3/3: Kaun vyakti do baar Bharat ke ACTING Prime Minister bane (Nehru aur Shastri, dono ke dehant ke baad)?",
+        "options": [
+          { "id": "A", "text": "Morarji Desai" },
+          { "id": "B", "text": "Gulzari Lal Nanda" },
+          { "id": "C", "text": "Y.B. Chavan" },
+          { "id": "D", "text": "Jagjivan Ram" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Gulzari Lal Nanda do baar Acting PM bane - pehli baar Nehru ke dehant (1964) ke baad, aur doosri baar Lal Bahadur Shastri ke dehant (1966) ke baad, dono baar senior-most Cabinet Minister hone ki wajah se."
+      },
+      "navigation": { "next": "card_58_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_58_milestone8",
+      "card_slug": "card_58_milestone8",
+      "type": "milestone",
+      "concept_id": "deputy_acting_pm",
+      "level": 5,
+      "progress": { "current": 58, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🎭",
+        "completed_topic": "Deputy PM & Acting PM",
+        "xp_earned": 60,
+        "milestone_progress": "Module 8/10 Clear",
+        "motivational_quote": "Rochak trivia pakki hui! Ab Cabinet size limit ka important 91st Amendment wala rule dekhte hain."
+      },
+      "navigation": { "next": "card_59_cabinet_size_limit", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_59_cabinet_size_limit",
+      "card_slug": "card_59_cabinet_size_limit",
+      "type": "chat",
+      "concept_id": "cabinet_size_defection",
+      "level": 5,
+      "progress": { "current": 59, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, socho ek badi thali mein khaana banaya jaaye lekin usme khilaane wale hi 100 log ho jaayein - kaam theek se manage ho payega?" },
+        { "speaker": "raju", "text": "Nahi sir, itne log honge to confusion hi ho jaayega, kaam kharab ho sakta hai!" },
+        { "speaker": "aman", "text": "Bilkul yehi soch ke 91st Constitutional Amendment, 2003 ne Article 75 mein ek nayi clause 75(1A) jodi - PM samet total Council of Ministers ki sankhya, Lok Sabha ki KUL sadasya sankhya ke 15% se ZYADA nahi ho sakti." },
+        { "speaker": "raju", "text": "15%?? Matlab agar Lok Sabha mein 543 members hain, to maximum kitne minister ban sakte hain?" }
+      ],
+      "navigation": { "next": "card_60_cabinet_size_calc", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_60_cabinet_size_calc",
+      "card_slug": "card_60_cabinet_size_calc",
+      "type": "chat",
+      "concept_id": "cabinet_size_defection",
+      "level": 5,
+      "progress": { "current": 60, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "543 ka 15% hota hai lagbhag 81.45 - to practically maximum 81 Ministers (PM samet) ho sakte hain. Ye rule isliye laaya gaya taaki koi PM apni sarkar bachaane ke liye bahut zyada logon ko minister banakar 'khareed' na le." },
+        { "speaker": "raju", "text": "Achha! Matlab pehle koi limit hi nahi thi kya?" },
+        { "speaker": "aman", "text": "Nahi thi! Isi wajah se 1990s mein kuch sarkaron ne 70-80 se bhi zyada ministers bana diye the, sirf apna majority बचाने के लिए. 91st Amendment ne isी galat practice ko rokने के लिए ये size-limit rule lagaya." },
+        { "speaker": "raju", "text": "Aur wahi 91st Amendment jisne Anti-Defection wala 'Split' provision bhi hataya tha na sir?" }
+      ],
+      "navigation": { "next": "card_61_91st_amendment_disqual", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_61_91st_amendment_disqual",
+      "card_slug": "card_61_91st_amendment_disqual",
+      "type": "chat",
+      "concept_id": "cabinet_size_defection",
+      "level": 5,
+      "progress": { "current": 61, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi yaad rakha! 91st Amendment, 2003 ek hi baar mein DO badi cheezein le aaya - (1) Cabinet size 15% tak limit ki, aur (2) Article 75(1B) mein ye bhi jodh diya ki jo bhi member Anti-Defection Law (10th Schedule) ke tehat DISQUALIFY ho chuka hai, wo Minister BAN HI NAHI sakta!" },
+        { "speaker": "raju", "text": "Achha! Toh dono rules ek hi Amendment se aaye - ek 'kitna bada Cabinet' pe control, aur doosra 'kaun Minister nahi ban sakta' pe control!" },
+        { "speaker": "aman", "text": "Bilkul sahi samjhe! Ye connection BPSC ke multi-statement question mein bahut aata hai - dono clauses ek hi Amendment (91st, 2003) se aaye, ye yaad rakhna." },
+        { "speaker": "raju", "text": "Pakka yaad ho gaya sir! Ab quiz dijiye is module ka."}
+      ],
+      "navigation": { "next": "card_62_quiz1_m9", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_62_quiz1_m9",
+      "card_slug": "card_62_quiz1_m9",
+      "type": "quiz",
+      "concept_id": "cabinet_size_defection",
+      "level": 5,
+      "progress": { "current": 62, "total": 82 },
+      "quiz_payload": {
+        "question": "Q1/3: 91st Constitutional Amendment, 2003 ne Article 75(1A) mein Council of Ministers ki maximum sankhya kis tarah tay ki?",
+        "options": [
+          { "id": "A", "text": "Maximum 100 members" },
+          { "id": "B", "text": "Lok Sabha ki kul sadasya sankhya ke 15% se zyada nahi" },
+          { "id": "C", "text": "Rajya Sabha ki kul sankhya ke 10% se zyada nahi" },
+          { "id": "D", "text": "Koi limit nahi hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(1A), 91st Amendment 2003 dwara jodi gayi, ke anusaar PM samet total Council of Ministers ki sankhya, Lok Sabha ki kul sadasya sankhya ke 15% se zyada nahi ho sakti."
+      },
+      "navigation": { "next": "card_63_quiz2_m9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_63_quiz2_m9",
+      "card_slug": "card_63_quiz2_m9",
+      "type": "quiz",
+      "concept_id": "cabinet_size_defection",
+      "level": 5,
+      "progress": { "current": 63, "total": 82 },
+      "quiz_payload": {
+        "question": "Q2/3: Article 75(1B) ke anusaar, kaun vyakti Minister NAHI ban sakta?",
+        "options": [
+          { "id": "A", "text": "Rajya Sabha ka koi member" },
+          { "id": "B", "text": "Jo Anti-Defection Law (10th Schedule) ke tehat disqualify ho chuka ho" },
+          { "id": "C", "text": "Jo Lok Sabha ka member na ho" },
+          { "id": "D", "text": "Jo 50 saal se kam umar ka ho" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Article 75(1B), 91st Amendment 2003 se, ye tay karta hai ki jo bhi member Anti-Defection Law ke tehat disqualify ho chuka hai, wo Minister nahi ban sakta."
+      },
+      "navigation": { "next": "card_64_quiz3_m9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_64_quiz3_m9",
+      "card_slug": "card_64_quiz3_m9",
+      "type": "quiz",
+      "concept_id": "cabinet_size_defection",
+      "level": 5,
+      "progress": { "current": 64, "total": 82 },
+      "quiz_payload": {
+        "question": "Q3/3: Cabinet size limit (15%) laane ka MUKHYA (main) uddeshya kya tha?",
+        "options": [
+          { "id": "A", "text": "Ministers ki salary badhaane ke liye" },
+          { "id": "B", "text": "PM ko sarkar bachaane ke liye zaroorat se zyada ministers banaane se rokna" },
+          { "id": "C", "text": "Rajya Sabha ki power kam karne ke liye" },
+          { "id": "D", "text": "President ki power badhaane ke liye" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Isse pehle kuch sarkaron ne apna bahumat banaye rakhne ke liye 70-80 se bhi zyada ministers bana diye the. 91st Amendment ne isी galat practice ko rokने ke liye ye size-limit lagaya."
+      },
+      "navigation": { "next": "card_65_milestone9", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_65_milestone9",
+      "card_slug": "card_65_milestone9",
+      "type": "milestone",
+      "concept_id": "cabinet_size_defection",
+      "level": 5,
+      "progress": { "current": 65, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "📏",
+        "completed_topic": "Cabinet Size Limit (91st Amendment)",
+        "xp_earned": 60,
+        "milestone_progress": "Module 9/10 Clear",
+        "motivational_quote": "91st Amendment poori tarah pakki hui! Ab last module - PM records aur Bihar connection ke saath!"
+      },
+      "navigation": { "next": "card_66_first_pm", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_66_first_pm",
+      "card_slug": "card_66_first_pm",
+      "type": "chat",
+      "concept_id": "pm_records",
+      "level": 6,
+      "progress": { "current": 66, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, chalo ab last module - saare records ek saath yaad karte hain. Bharat ke pehle PM the Jawaharlal Nehru - 15 August 1947 se 27 May 1964 tak, jo sabse LAMBE samay tak PM rahe hain (lagbhag 17 saal)." },
+        { "speaker": "raju", "text": "Achha! Aur pehle non-Congress PM kaun the?" },
+        { "speaker": "aman", "text": "Morarji Desai - 1977 mein Janata Party ke PM bane, poore Congress-mukt daur ke pehle PM. Aur pehli MAHILA (woman) PM thi Indira Gandhi." },
+        { "speaker": "raju", "text": "Aur sabse KAM samay tak PM rehne ka record kiska hai sir?" }
+      ],
+      "navigation": { "next": "card_67_shortest_tenure", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_67_shortest_tenure",
+      "card_slug": "card_67_shortest_tenure",
+      "type": "chat",
+      "concept_id": "pm_records",
+      "level": 6,
+      "progress": { "current": 67, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ Atal Bihari Vajpayee ka pehla karyakaal (1996) sirf 13 DIN ka tha - bahumat sabit nahi kar paye the. Lekin wahi Vajpayee baad mein 1998-99 aur 1999-2004 mein PM bane aur ek poora tenure poora karne wale pehle NON-CONGRESS PM bane." },
+        { "speaker": "raju", "text": "Wah! Ek hi vyakti ka sabse chhota AUR ek poora tenure - dono record!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ab last important fact - Bihar ka connection. Dr. Rajendra Prasad, jo Bihar ke Zeradei (Siwan) se the, Bharat ke PEHLE PRESIDENT bane - lekin dhyan do, wo PRESIDENT the, PM nahi! Ye ek common confusion hai jo exam mein trap ban jaata hai." },
+        { "speaker": "raju", "text": "Ohh! Matlab Rajendra Prasad ji President the, PM nahi - isse mujhe confuse hi ho jaata tha!" }
+      ],
+      "navigation": { "next": "card_68_bihar_connection", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_68_bihar_connection",
+      "card_slug": "card_68_bihar_connection",
+      "type": "chat",
+      "concept_id": "pm_records",
+      "level": 6,
+      "progress": { "current": 68, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Aaj tak koi PM Bihar se nahi hua hai, lekin Bihar se juda ek bada naam hai - Babu Jagjivan Ram, jo Sasaram (Bihar) se decades tak Lok Sabha MP rahe aur 1977-79 mein Deputy PM bane, jo humne pichle module mein padha tha." },
+        { "speaker": "raju", "text": "Achha yaad hai sir! Ab ek aur baat - PM Office (PMO) kya hota hai?" },
+        { "speaker": "aman", "text": "PMO ek secretariat hai jo PM ke roz-marra ke kaam mein madad karta hai - files process karna, coordination karna. Ye Constitution mein nahi hai, ye ek administrative setup hai jo Cabinet Secretariat se alag kaam karta hai." },
+        { "speaker": "raju", "text": "Samajh gaya sir! Ab final quiz laga do is module ka!" }
+      ],
+      "navigation": { "next": "card_69_quiz1_m10", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_69_quiz1_m10",
+      "card_slug": "card_69_quiz1_m10",
+      "type": "quiz",
+      "concept_id": "pm_records",
+      "level": 6,
+      "progress": { "current": 69, "total": 82 },
+      "quiz_payload": {
+        "question": "Q1/3: Bharat ke pehle PM kaun the, aur wo kitne samay tak PM rahe?",
+        "options": [
+          { "id": "A", "text": "Lal Bahadur Shastri, 2 saal" },
+          { "id": "B", "text": "Jawaharlal Nehru, lagbhag 17 saal (1947-1964)" },
+          { "id": "C", "text": "Indira Gandhi, 15 saal" },
+          { "id": "D", "text": "Dr. Rajendra Prasad, 12 saal" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Jawaharlal Nehru Bharat ke pehle PM the (15 August 1947 - 27 May 1964), aur wo sabse lambe samay tak PM rehne ka record bhi rakhte hain - lagbhag 17 saal."
+      },
+      "navigation": { "next": "card_70_quiz2_m10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_70_quiz2_m10",
+      "card_slug": "card_70_quiz2_m10",
+      "type": "quiz",
+      "concept_id": "pm_records",
+      "level": 6,
+      "progress": { "current": 70, "total": 82 },
+      "quiz_payload": {
+        "question": "Q2/3: Atal Bihari Vajpayee ka 1996 wala pehla PM-tenure kitne dinon ka tha, aur kyun khatam hua?",
+        "options": [
+          { "id": "A", "text": "13 din, bahumat sabit nahi kar paye" },
+          { "id": "B", "text": "6 mahine, President ne dismiss kiya" },
+          { "id": "C", "text": "1 saal, No-Confidence mein haare" },
+          { "id": "D", "text": "30 din, khud resign kiya bina wajah bataye" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "1996 mein Atal Bihari Vajpayee sirf 13 din tak PM rahe kyunki wo Lok Sabha mein bahumat sabit nahi kar paye the, isliye resign karna pada."
+      },
+      "navigation": { "next": "card_71_quiz3_m10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_71_quiz3_m10",
+      "card_slug": "card_71_quiz3_m10",
+      "type": "quiz",
+      "concept_id": "pm_records",
+      "level": 6,
+      "progress": { "current": 71, "total": 82 },
+      "quiz_payload": {
+        "question": "Q3/3: Niche diye gaye kathan mein se sahi kathan chuno.",
+        "options": [
+          { "id": "A", "text": "Dr. Rajendra Prasad Bharat ke pehle Prime Minister the" },
+          { "id": "B", "text": "Dr. Rajendra Prasad (Bihar) Bharat ke pehle President the, PM nahi" },
+          { "id": "C", "text": "Babu Jagjivan Ram Bharat ke PM bane the" },
+          { "id": "D", "text": "Bihar se ek Prime Minister ban chuke hain" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Dr. Rajendra Prasad, jo Bihar (Zeradei, Siwan) se the, Bharat ke pehle PRESIDENT bane, PM nahi. Aaj tak koi PM Bihar se nahi hua hai, lekin Babu Jagjivan Ram (Deputy PM, Sasaram MP) Bihar se strongly juda naam hai."
+      },
+      "navigation": { "next": "card_72_milestone10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_72_milestone10",
+      "card_slug": "card_72_milestone10",
+      "type": "milestone",
+      "concept_id": "pm_records",
+      "level": 6,
+      "progress": { "current": 72, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🏅",
+        "completed_topic": "PM Records & Bihar Connection",
+        "xp_earned": 60,
+        "milestone_progress": "Module 10/10 Clear - ALL MODULES DONE!",
+        "motivational_quote": "Poora Prime Minister chapter conquer ho gaya Raju! Ab final Officer-level revision aur Master Quiz baaki hai!"
+      },
+      "navigation": { "next": "card_73_final_summary", "button_text": "Go to Final Revision ➔" }
+    },
+    {
+      "card_id": "card_73_final_summary",
+      "card_slug": "card_73_final_summary",
+      "type": "summary",
+      "concept_id": "chapter_revision",
+      "level": 7,
+      "progress": { "current": 73, "total": 82 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision - Prime Minister",
+        "revision_points": [
+          {
+            "topic": "Article 74 - Binding Advice",
+            "point": "Consider: (1) 42nd Amendment 1976 made President bound by CoM's advice, (2) 44th Amendment 1978 gave President a one-time reconsideration option, (3) After reconsideration, President must act as per the advice. All THREE statements are correct - a classic multi-statement BPSC trap."
+          },
+          {
+            "topic": "PM Membership Trap",
+            "point": "PM must be a member of EITHER House (not necessarily Lok Sabha). If not a member at appointment, must become one within 6 months (Article 75(5)). Indira Gandhi (1966), H.D. Deve Gowda, and Dr. Manmohan Singh (full 10 years) were all Rajya Sabha members while serving as PM."
+          },
+          {
+            "topic": "Keystone of Cabinet Arch",
+            "point": "PM's resignation/death automatically dissolves the ENTIRE Council of Ministers; but an individual minister's resignation/death does NOT affect the rest of CoM - this asymmetry is why PM is called the 'keystone of the cabinet arch'."
+          },
+          {
+            "topic": "91st Amendment, 2003 - Double Impact",
+            "point": "Article 75(1A): Total CoM size (including PM) cannot exceed 15% of Lok Sabha's total strength. Article 75(1B): A member disqualified under Anti-Defection Law (10th Schedule) cannot become a Minister. Both provisions came from the SAME amendment."
+          },
+          {
+            "topic": "Deputy PM & Acting PM",
+            "point": "'Deputy Prime Minister' has NO constitutional basis - it's purely a political title (Sardar Patel was the first, 1947-50). Similarly 'Acting PM' is a convention, not a constitutional post - Gulzari Lal Nanda served TWICE as Acting PM (after Nehru's death 1964 and Shastri's death 1966)."
+          }
+        ]
+      },
+      "navigation": { "next": "card_74_final_quiz", "button_text": "Attempt Final Officer Quiz ➔" }
+    },
+    {
+      "card_id": "card_74_final_quiz",
+      "card_slug": "card_74_final_quiz",
+      "type": "final_quiz",
+      "concept_id": "chapter_final_assessment",
+      "level": 7,
+      "progress": { "current": 74, "total": 82 },
+      "quiz_payload": {
+        "question": "Niche diye gaye kathano par vichar karein:\n1. Prime Minister ko Parliament ke kisi bhi Sadan (Lok Sabha ya Rajya Sabha) ka member hona chahiye.\n2. Agar PM niyukti ke samay kisi Sadan ka member nahi hai, to use 6 mahine ke andar kisi bhi Sadan ka sadasya banna zaroori hai, warna uska pad samapt ho jayega.\n3. Constitution mein 'Deputy Prime Minister' ke pad ka koi specific pravdhaan nahi hai.\n\nUpar diye gaye kathano mein se kaunse SAHI hain?",
+        "options": [
+          { "id": "A", "text": "Sirf 1 aur 2" },
+          { "id": "B", "text": "Sirf 2 aur 3" },
+          { "id": "C", "text": "1, 2 aur 3 teeno sahi hain" },
+          { "id": "D", "text": "Sirf 1 aur 3" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Teeno kathan sahi hain. (1) PM kisi bhi Sadan ka member ho sakta hai - Rajya Sabha se bhi (Manmohan Singh jaise example maujood hain). (2) Article 75(5) ke anusaar 6 mahine ke andar kisi Sadan ka member banna zaroori hai, warna mantri pad khatam ho jaata hai. (3) 'Deputy Prime Minister' Constitution mein kahin bhi define nahi hai, ye ek political title/practice hai jise 1947 mein Sardar Patel se shuru kiya gaya tha. Ye classic BPSC/UPSC multi-statement trap hai jo teeno alag-alag concepts ko combine karke poochta hai."
+      },
+      "navigation": { "next": "card_75_trophy", "button_text": "Complete Chapter ➔" }
+    },
+    {
+      "card_id": "card_75_trophy",
+      "card_slug": "card_75_trophy",
+      "type": "milestone",
+      "concept_id": "chapter_complete",
+      "level": 7,
+      "progress": { "current": 75, "total": 82 },
+      "milestone_payload": {
+        "title": "🏆 CHAPTER MASTERED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Prime Minister in Indian Polity - Officer Level Complete",
+        "xp_earned": 150,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Badhai ho Raju! Ab tum Article 74-78, PM ki appointment, powers, responsibility, Deputy PM, aur saare records Officer level pe jaante ho. BPSC/SSC/Railway exam mein ye chapter ab tumhara sabse strong point hoga!"
+      },
+      "navigation": { "next": "card_01_intro", "button_text": "Restart Chapter 🔄" }
+    }
+  ]
+}
