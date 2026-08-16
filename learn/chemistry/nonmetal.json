@@ -1,8 +1,9 @@
+
 {
   "topic_id": "non_metals_chemistry",
-  "topic_title": "Non-Metals in Chemistry",
-  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
-  "total_cards": 72,
+  "topic_title": "Non-Metals - Properties, Reactions & Important Elements",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
+  "total_cards": 82,
   "characters": {
     "aman": {
       "name": "Aman Sir",
@@ -20,1540 +21,1124 @@
       "card_id": "card_01_intro",
       "card_slug": "card_01_intro",
       "type": "intro",
-      "concept_id": "intro_non_metals",
+      "concept_id": "chapter_intro",
       "level": 1,
-      "progress": {
-        "current": 1,
-        "total": 72
-      },
+      "progress": { "current": 1, "total": 82 },
       "intro_payload": {
-        "title": "Non-Metals in Chemistry",
-        "icon": "⚗️",
-        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims"],
+        "chapter_title": "Non-Metals - From Air We Breathe to Fertilizers",
+        "icon": "🌬️",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "UPSC Prelims", "BPSC TRE"],
         "learning_outcomes": [
-          "Master physical & chemical properties of all non-metals",
-          "Understand oxygen, nitrogen, carbon, sulphur cycles completely",
-          "Learn allotropes with exact structures (graphite, diamond, ozone)",
-          "Crack PYQ patterns on halogens, noble gases, and their reactions",
-          "Memorize scientist names, years, industrial processes for BPSC/SSC"
-        ],
-        "estimated_time": "45 mins",
-        "total_modules": 8
+          "Physical properties of non-metals vs metals - key differences & exceptions",
+          "Chemical properties - reaction with oxygen, water, acids, hydrogen",
+          "Hydrogen - isotopes, uses, water gas, syngas",
+          "Oxygen - allotropes, ozone layer, uses",
+          "Carbon - allotropes (diamond, graphite, fullerene) with exam traps",
+          "Nitrogen - fixation, Haber process, fertilizers",
+          "Sulphur - allotropes, H2SO4 (contact process), uses",
+          "Phosphorus - white vs red, safety matches",
+          "Chlorine & Halogens - bleaching, HCl reactions",
+          "Noble gases - uses, discovery scientists",
+          "Bihar-specific fertilizer & agriculture context for BPSC TRE"
+        ]
       },
-      "navigation": {
-        "next": "card_02_daily_life",
-        "button_text": "Start Learning 🚀"
-      }
+      "navigation": { "next": "card_02_daily_nonmetal", "button_text": "Start Learning ➔" }
     },
     {
-      "card_id": "card_02_daily_life",
-      "card_slug": "card_02_daily_life",
+      "card_id": "card_02_daily_nonmetal",
+      "card_slug": "card_02_daily_nonmetal",
       "type": "chat",
-      "concept_id": "non_metals_intro",
+      "concept_id": "nonmetal_introduction",
       "level": 1,
-      "progress": {
-        "current": 2,
-        "total": 72
-      },
+      "progress": { "current": 2, "total": 82 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, tumne kabhi notice kiya ki jab mummy kitchen mein kuch jalati hain, to ek gas nikalti hai jo humein sans lene mein help karti hai?"
-        },
-        {
-          "speaker": "raju",
-          "text": "Haan Sir! Wo oxygen hai na? Par wo dikhti nahi hai..."
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul sahi! Oxygen ek non-metal hai. Dekho, metals jaise loha, tamba solid hote hain aur chamakte hain. Lekin non-metals bahut different hote hain - kuch gas (oxygen, nitrogen), kuch solid (carbon, sulphur), aur kuch liquid bhi (bromine). Inka nature bilkul alag hai metals se."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab non-metals ka koi fixed form nahi hota? Achhaaaa..."
-        }
+        { "speaker": "aman", "text": "Raju, subah uthke jo pehli cheez tum karte ho wo hai saans lena - us hawa me kya hota hai jisse tum jeete ho? Aur jab bijli jaati hai aur mombatti jalate ho, wo jalti kyon hai? Aur notebook jisme likhte ho, uski pencil kiske bani hai?" },
+        { "speaker": "raju", "text": "Sir hawa me oxygen hota hai, mombatti mein shayad wax aur... pencil me graphite hota hai na, maine suna hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Oxygen, Carbon (graphite) - ye dono hai Non-metals. Aur jaan lo - is duniya me jo 118 elements hain unme se sirf ~22 non-metals hain, lekin ye chhoti sankhya wale elements hi life, industry, aur atmosphere ke liye sabse zyada zaroori hain!" },
+        { "speaker": "raju", "text": "Sirf 22 non-metals aur itne important? Ye sochne wali baat hai sir!" }
       ],
-      "navigation": {
-        "next": "card_03_basic_properties",
-        "button_text": "Next ➔"
-      }
+      "navigation": { "next": "card_03_physical_properties", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_03_basic_properties",
-      "card_slug": "card_03_basic_properties",
+      "card_id": "card_03_physical_properties",
+      "card_slug": "card_03_physical_properties",
       "type": "chat",
-      "concept_id": "non_metal_properties",
+      "concept_id": "nonmetal_introduction",
       "level": 1,
-      "progress": {
-        "current": 3,
-        "total": 72
-      },
+      "progress": { "current": 3, "total": 82 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Non-metals ki kuch basic properties hoti hain jo metals se opposite hain. Pehli baat - non-metals generally DULL hote hain (chamakte nahi), brittle hote hain (tod diye jaa sakte hain, bend nahi hote), aur poor conductors of heat and electricity hote hain. Ek exception hai - graphite, jo carbon ka ek form hai, electricity conduct karta hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir par oxygen aur nitrogen to gas hain... unhe bend ya tod kaise kar sakte hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bahut smart question! Ye properties mainly solid non-metals ke liye hain jaise sulphur, phosphorus, carbon. Gaseous non-metals ki baat karein to wo room temperature pe gas form mein hote hain, colorless ya colored ho sakte hain. Oxygen colorless hai, chlorine greenish-yellow hai. Yaad rakho - har non-metal unique hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Haan Sir, samajh gaya! Toh non-metals mein variety bahut zyada hai..."
-        }
+        { "speaker": "aman", "text": "Ab pehle samjhte hain non-metals ki physical properties. Generally non-metals: No lustre (chamak nahi), Brittle (tootne wale), Poor conductors of heat and electricity, Low melting point, Low density. Ye sab metals se ULTA hai." },
+        { "speaker": "raju", "text": "Sir toh non-metals bilkul bekaar lagte hain - chamak nahi, conductor nahi, brittle hain!" },
+        { "speaker": "aman", "text": "Ruko Raju, yahi trap hai! Non-metals bhi gas, liquid, solid teeno states me milte hain - jaise Oxygen (gas), Bromine (liquid at room temperature), Sulphur (solid). Aur ek khaas baat - non-metals me kuch important EXCEPTIONS bhi hain jo exam me trap ki tarah aate hain!" },
+        { "speaker": "raju", "text": "Bromine liquid hai room temperature pe? Ye toh metals me mercury jaisa exception hai!" }
       ],
-      "navigation": {
-        "next": "card_04_classification",
-        "button_text": "Classification dekho ➔"
-      }
+      "navigation": { "next": "card_04_exceptions_nonmetal", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_04_classification",
-      "card_slug": "card_04_classification",
+      "card_id": "card_04_exceptions_nonmetal",
+      "card_slug": "card_04_exceptions_nonmetal",
       "type": "chat",
-      "concept_id": "non_metal_types",
+      "concept_id": "nonmetal_introduction",
       "level": 1,
-      "progress": {
-        "current": 4,
-        "total": 72
-      },
+      "progress": { "current": 4, "total": 82 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Non-metals ko teen categories mein divide kar sakte hain - (1) Reactive Non-metals jaise Oxygen, Nitrogen, Halogens (Fluorine, Chlorine, Bromine, Iodine) jo easily react karte hain. (2) Noble Gases jaise Helium, Neon, Argon jo almost react hi nahi karte. (3) Solid Non-metals jaise Carbon, Sulphur, Phosphorus. Ye classification NCERT aur competitive exams dono mein important hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir noble gases react kyun nahi karte?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Kyunki unka outermost shell completely filled hota hai - unhein electrons ki zaroorat nahi hoti! Isliye wo stable hain aur react nahi karte. Isko hum 'inert' nature kehte hain. Iska detail aage padhenge. Pehle reactive non-metals ko samajhte hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Okay Sir! Excited hoon jaanne ke liye!"
-        }
+        { "speaker": "aman", "text": "Haan! Ab kuch critical exceptions jo BPSC aur SSC dono me trap ki tarah aate hain: [[Iodine | I2, ek solid non-metal jisme metallic lustre (chamak) hoti hai - non-metal hote hue bhi shiny]] solid hai aur metallic lustre rakhta hai - ye ek non-metal hai jo chamakta hai! [[Graphite | Carbon ka ek allotrope jo electricity ka achha conductor hai, pencil me use hota hai]] - ye ek non-metal (Carbon) hai jo electricity conduct karta hai!" },
+        { "speaker": "raju", "text": "Hain?? Graphite non-metal hote hue bhi bijli conduct karta hai? Ye toh metals ki property hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi pakda - yahi exam trap hai! Graphite carbon ka ek form hai, aur ye single exception non-metal hai jisme electrical conductivity hoti hai. [[Diamond | Carbon ka ek aur allotrope, sabse hard padarth, bijli conduct nahi karta]] - same carbon ka doosra form Diamond - ye conductor NAHI hai. Same element, alag properties!" },
+        { "speaker": "raju", "text": "Diamond aur Graphite dono carbon hain - ek conduct karta hai, ek nahi - ye mix zaroor ho jaayega exam me!" }
       ],
-      "navigation": {
-        "next": "card_05_quiz_1",
-        "button_text": "Quick Test ➔"
-      }
+      "navigation": { "next": "card_05_quiz1", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_05_quiz_1",
-      "card_slug": "card_05_quiz_1",
+      "card_id": "card_05_quiz1",
+      "card_slug": "card_05_quiz1",
       "type": "quiz",
-      "concept_id": "intro_quiz_1",
+      "concept_id": "nonmetal_introduction",
       "level": 1,
-      "progress": {
-        "current": 5,
-        "total": 72
-      },
+      "progress": { "current": 5, "total": 82 },
       "quiz_payload": {
-        "question": "Which of the following is NOT a characteristic of non-metals?",
+        "question": "Which non-metal is liquid at room temperature? (Q1/3)",
         "options": [
-          { "id": "A", "text": "Dull appearance" },
-          { "id": "B", "text": "Brittle nature" },
-          { "id": "C", "text": "Good conductor of electricity" },
-          { "id": "D", "text": "Poor conductor of heat" }
-        ],
-        "correct_option_id": "C",
-        "explanation": "Non-metals are generally POOR conductors of electricity. However, graphite (a form of carbon) is an exception and can conduct electricity due to the presence of free electrons in its structure. This exception is frequently tested in BPSC and SSC exams."
-      },
-      "navigation": {
-        "next": "card_06_quiz_2",
-        "button_text": "Next Question (2/3) ➔"
-      }
-    },
-    {
-      "card_id": "card_06_quiz_2",
-      "card_slug": "card_06_quiz_2",
-      "type": "quiz",
-      "concept_id": "intro_quiz_2",
-      "level": 1,
-      "progress": {
-        "current": 6,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Which non-metal exists in liquid state at room temperature?",
-        "options": [
-          { "id": "A", "text": "Chlorine" },
-          { "id": "B", "text": "Iodine" },
+          { "id": "A", "text": "Iodine" },
+          { "id": "B", "text": "Chlorine" },
           { "id": "C", "text": "Bromine" },
-          { "id": "D", "text": "Fluorine" }
+          { "id": "D", "text": "Sulphur" }
         ],
         "correct_option_id": "C",
-        "explanation": "BROMINE is the only non-metal that exists in liquid state at room temperature. It is a reddish-brown fuming liquid. Among halogens, Fluorine and Chlorine are gases, Bromine is liquid, and Iodine is solid at room temperature. This is a common SSC and Railway exam question."
+        "explanation": "Bromine (Br2) is the only non-metal that is liquid at room temperature. Mercury is the only metal liquid at room temperature. Both are important exceptions frequently tested in SSC, Railway, and BPSC exams."
       },
-      "navigation": {
-        "next": "card_07_quiz_3",
-        "button_text": "Next Question (3/3) ➔"
-      }
+      "navigation": { "next": "card_06_quiz2", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_07_quiz_3",
-      "card_slug": "card_07_quiz_3",
+      "card_id": "card_06_quiz2",
+      "card_slug": "card_06_quiz2",
       "type": "quiz",
-      "concept_id": "intro_quiz_3",
+      "concept_id": "nonmetal_introduction",
       "level": 1,
-      "progress": {
-        "current": 7,
-        "total": 72
-      },
+      "progress": { "current": 6, "total": 82 },
       "quiz_payload": {
-        "question": "Noble gases are called 'inert' because:",
-        "options": [
-          { "id": "A", "text": "They are very heavy" },
-          { "id": "B", "text": "They have completely filled outermost shell" },
-          { "id": "C", "text": "They are radioactive" },
-          { "id": "D", "text": "They exist only in traces" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Noble gases (Helium, Neon, Argon, Krypton, Xenon, Radon) have completely filled outermost electron shells, making them extremely stable. They do not need to gain, lose, or share electrons, so they rarely participate in chemical reactions. This is why they are called 'inert' or 'noble'. This concept is fundamental for NEET and BPSC exams."
-      },
-      "navigation": {
-        "next": "card_08_milestone_1",
-        "button_text": "Check Results ➔"
-      }
-    },
-    {
-      "card_id": "card_08_milestone_1",
-      "card_slug": "card_08_milestone_1",
-      "type": "milestone",
-      "concept_id": "intro_complete",
-      "level": 1,
-      "progress": {
-        "current": 8,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "Foundation Strong! 🎯",
-        "badge_emoji": "🏆",
-        "completed_topic": "Non-Metals Introduction",
-        "xp_earned": 50,
-        "milestone_progress": "Module 1/8 Clear",
-        "motivational_quote": "Tumne non-metals ki basic properties master kar li! Ab oxygen - life ki saath - ko detail mein samajhte hain!"
-      },
-      "navigation": {
-        "next": "card_09_oxygen_intro",
-        "button_text": "Start Oxygen Module ➔"
-      }
-    },
-    {
-      "card_id": "card_09_oxygen_intro",
-      "card_slug": "card_09_oxygen_intro",
-      "type": "chat",
-      "concept_id": "oxygen_basics",
-      "level": 2,
-      "progress": {
-        "current": 9,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Oxygen - sabse important non-metal! Joseph Priestley ne 1774 mein isko discover kiya tha, lekin credit Carl Wilhelm Scheele ko bhi jaata hai jo 1772 mein discover kar chuke the par publish nahi kiya. Antoine Lavoisier ne iska naam 'Oxygen' rakha jo Greek word 'Oxys' (acid) aur 'Genes' (producer) se aaya - matlab 'acid producer'."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir scientist names aur years toh exam mein aate hain! Priestley 1774, Scheele 1772, Lavoisier ne naam diya..."
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! BPSC mein ye direct poochte hain. Ab properties dekho - Oxygen colorless, odorless, tasteless gas hai. Molecular formula O₂ hai (diatomic molecule). Ye air ka 21% volume occupy karta hai. Paramagnetic hai matlab magnet ki taraf attract hota hai. Aur sabse important - combustion (jalane) ke liye zaruri hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Hain?? Oxygen khud jalti nahi hai par dusri cheezon ko jalane mein help karti hai?"
-        }
-      ],
-      "navigation": {
-        "next": "card_10_oxygen_combustion",
-        "button_text": "Ye confusing point clear karo ➔"
-      }
-    },
-    {
-      "card_id": "card_10_oxygen_combustion",
-      "card_slug": "card_10_oxygen_combustion",
-      "type": "chat",
-      "concept_id": "oxygen_supporter",
-      "level": 2,
-      "progress": {
-        "current": 10,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Perfect doubt! Oxygen khud combustible nahi hai (matlab ye khud jalti nahi), lekin ye SUPPORTER OF COMBUSTION hai. Matlab jab kuch jalta hai to oxygen us reaction ko support karti hai. Candle ko match se jalao, phir uske upar glass rakh do - kuch time baad candle bujh jayegi kyunki oxygen khatam ho gayi!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Ohhh! Toh bina oxygen ke aag nahi jal sakti?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Isliye fire brigade paani dalti hai (oxygen supply cut kar deti hai) ya fire extinguisher use karti hai jo oxygen ko fuel se alag kar deta hai. Oxygen bahut reactive hai - almost sabhi elements ke saath react karti hai oxides banane ke liye. Jaise carbon ke saath react karke CO₂ banati hai: C + O₂ → CO₂"
-        },
-        {
-          "speaker": "raju",
-          "text": "Samajh gaya Sir! Oxygen reactive hai par supporter hai, combustible nahi!"
-        }
-      ],
-      "navigation": {
-        "next": "card_11_ozone",
-        "button_text": "Oxygen ka special form ➔"
-      }
-    },
-    {
-      "card_id": "card_11_ozone",
-      "card_slug": "card_11_ozone",
-      "type": "chat",
-      "concept_id": "ozone_allotrope",
-      "level": 2,
-      "progress": {
-        "current": 11,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Oxygen ke do allotropes hain - O₂ (normal oxygen jo hum breathe karte hain) aur O₃ (OZONE). Allotrope ka matlab same element ke different structural forms. Ozone ek triatomic molecule hai (teen oxygen atoms). Ye pale blue colored gas hai with pungent smell. Christian Friedrich Schönbein ne 1840 mein discover kiya tha."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ozone layer ke baare mein suna hai... wo protect karti hai na?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Stratosphere mein ozone layer hai jo harmful UV radiations ko absorb kar leti hai aur Earth ko protect karti hai. Lekin ground level pe ozone pollutant hai - respiratory problems cause karti hai. Yahi BPSC ka trap hai - 'Ozone good hai ya bad?' Answer: Depends on location! Upper atmosphere mein good, ground level pe bad."
-        },
-        {
-          "speaker": "raju",
-          "text": "Wow! Same substance location ke basis pe good ya bad... Interesting!"
-        }
-      ],
-      "navigation": {
-        "next": "card_12_oxygen_preparation",
-        "button_text": "Lab mein kaise banate hain ➔"
-      }
-    },
-    {
-      "card_id": "card_12_oxygen_preparation",
-      "card_slug": "card_12_oxygen_preparation",
-      "type": "chat",
-      "concept_id": "oxygen_lab_prep",
-      "level": 2,
-      "progress": {
-        "current": 12,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Lab mein oxygen banane ke liye sabse common method hai - Potassium chlorate (KClO₃) ko heat karna with Manganese dioxide (MnO₂) as catalyst. Reaction: 2KClO₃ → 2KCl + 3O₂ (heat ke saath). MnO₂ catalyst hai jo reaction speed up karta hai but khud change nahi hota. Industrial scale pe liquid air ka fractional distillation hota hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir catalyst ka matlab jo reaction ko fast kare par khud nahi badle?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect definition! Catalyst wahi hai. Oxygen ke uses bahut hain - hospitals mein medical oxygen cylinders, welding mein, rocket fuel oxidizer ke liye, steel manufacturing mein. Aur obviously saans lene ke liye! Atmosphere mein oxygen photosynthesis se continuously produce hoti hai: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ (sunlight mein)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh plants oxygen produce karte hain... Isliye 'Save Trees' important hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_13_quiz_oxygen_1",
-        "button_text": "Test your Oxygen knowledge ➔"
-      }
-    },
-    {
-      "card_id": "card_13_quiz_oxygen_1",
-      "card_slug": "card_13_quiz_oxygen_1",
-      "type": "quiz",
-      "concept_id": "oxygen_quiz_1",
-      "level": 2,
-      "progress": {
-        "current": 13,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Who is credited with the discovery of oxygen in 1774?",
-        "options": [
-          { "id": "A", "text": "Antoine Lavoisier" },
-          { "id": "B", "text": "Joseph Priestley" },
-          { "id": "C", "text": "Carl Wilhelm Scheele" },
-          { "id": "D", "text": "Christian Schönbein" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Joseph Priestley is credited with the discovery of oxygen in 1774. However, Carl Wilhelm Scheele had discovered it earlier in 1772 but did not publish his findings immediately. Antoine Lavoisier later named it 'Oxygen' from Greek words meaning 'acid producer'. This is a favorite BPSC and SSC question on scientist-discovery matching."
-      },
-      "navigation": {
-        "next": "card_14_quiz_oxygen_2",
-        "button_text": "Next Question (2/3) ➔"
-      }
-    },
-    {
-      "card_id": "card_14_quiz_oxygen_2",
-      "card_slug": "card_14_quiz_oxygen_2",
-      "type": "quiz",
-      "concept_id": "oxygen_quiz_2",
-      "level": 2,
-      "progress": {
-        "current": 14,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Ozone (O₃) in the stratosphere is beneficial because it:",
-        "options": [
-          { "id": "A", "text": "Increases oxygen supply" },
-          { "id": "B", "text": "Absorbs harmful UV radiation" },
-          { "id": "C", "text": "Causes rainfall" },
-          { "id": "D", "text": "Purifies air" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "The ozone layer in the stratosphere absorbs harmful ultraviolet (UV) radiation from the Sun, protecting life on Earth from its damaging effects. However, at ground level, ozone is a pollutant that causes respiratory problems. This dual nature of ozone is frequently tested in UPSC and BPSC environmental questions."
-      },
-      "navigation": {
-        "next": "card_15_quiz_oxygen_3",
-        "button_text": "Next Question (3/3) ➔"
-      }
-    },
-    {
-      "card_id": "card_15_quiz_oxygen_3",
-      "card_slug": "card_15_quiz_oxygen_3",
-      "type": "quiz",
-      "concept_id": "oxygen_quiz_3",
-      "level": 2,
-      "progress": {
-        "current": 15,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "In the laboratory, oxygen is commonly prepared by heating:",
-        "options": [
-          { "id": "A", "text": "Sodium chloride with MnO₂" },
-          { "id": "B", "text": "Potassium chlorate with MnO₂" },
-          { "id": "C", "text": "Calcium carbonate alone" },
-          { "id": "D", "text": "Hydrogen peroxide with water" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "In laboratory, oxygen is prepared by heating potassium chlorate (KClO₃) with manganese dioxide (MnO₂) as catalyst. The reaction is: 2KClO₃ → 2KCl + 3O₂. MnO₂ acts as a catalyst to speed up the reaction without itself being consumed. This is a standard NEET and Railway exam practical question."
-      },
-      "navigation": {
-        "next": "card_16_milestone_oxygen",
-        "button_text": "Check Results ➔"
-      }
-    },
-    {
-      "card_id": "card_16_milestone_oxygen",
-      "card_slug": "card_16_milestone_oxygen",
-      "type": "milestone",
-      "concept_id": "oxygen_complete",
-      "level": 2,
-      "progress": {
-        "current": 16,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "Oxygen Mastered! 💨",
-        "badge_emoji": "🌬️",
-        "completed_topic": "Oxygen & Ozone",
-        "xp_earned": 50,
-        "milestone_progress": "Module 2/8 Clear",
-        "motivational_quote": "Life ki saath oxygen clear ho gayi! Ab nitrogen - atmosphere ka 78% - ko detail mein samajhte hain!"
-      },
-      "navigation": {
-        "next": "card_17_nitrogen_intro",
-        "button_text": "Start Nitrogen Module ➔"
-      }
-    },
-    {
-      "card_id": "card_17_nitrogen_intro",
-      "card_slug": "card_17_nitrogen_intro",
-      "type": "chat",
-      "concept_id": "nitrogen_basics",
-      "level": 3,
-      "progress": {
-        "current": 17,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Nitrogen - atmosphere ka sabse zyada abundant element! 78% by volume. Daniel Rutherford ne 1772 mein discover kiya tha. Nitrogen colorless, odorless, tasteless, aur non-toxic gas hai. Molecular formula N₂ hai. Naam 'Nitre' (saltpetre) aur Greek 'genes' (producer) se aaya - 'nitre producer'."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir itna zyada nitrogen hai par oxygen se kam reactive kyun hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Brilliant observation! N₂ molecule mein triple bond hai (N≡N) jo bahut strong hai - todna mushkil hai. Isliye nitrogen room temperature pe relatively unreactive hai. Par high temperature ya pressure pe react kar sakta hai. Iska sabse famous industrial process hai Haber Process jo ammonia (NH₃) banata hai nitrogen aur hydrogen se."
-        },
-        {
-          "speaker": "raju",
-          "text": "Haber Process... ye naam suna hai Sir!"
-        }
-      ],
-      "navigation": {
-        "next": "card_18_haber_process",
-        "button_text": "Haber Process detail ➔"
-      }
-    },
-    {
-      "card_id": "card_18_haber_process",
-      "card_slug": "card_18_haber_process",
-      "type": "chat",
-      "concept_id": "haber_process",
-      "level": 3,
-      "progress": {
-        "current": 18,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Haber Process - Fritz Haber ne 1909 mein develop kiya, Carl Bosch ne 1913 mein industrialize kiya (isliye Haber-Bosch Process bhi kehte hain). Reaction: N₂ + 3H₂ ⇌ 2NH₃. Conditions: 450-500°C temperature, 200 atm pressure, Iron catalyst. Ye reversible reaction hai aur ammonia fertilizers banane ke liye crucial hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ye process itna important kyun hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Kyunki ammonia se hum fertilizers (ammonium nitrate, urea) banate hain jo agriculture ke liye essential hain. Bina Haber Process ke, world ki itni badi population ko feed karna impossible hota. Fritz Haber ko 1918 mein Chemistry Nobel Prize mila. Lekin controversy bhi hai kyunki unhone poison gas weapons bhi develop kiye the World War I mein."
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh same scientist good aur bad dono... Complex hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_19_nitrogen_cycle",
-        "button_text": "Nitrogen Cycle ➔"
-      }
-    },
-    {
-      "card_id": "card_19_nitrogen_cycle",
-      "card_slug": "card_19_nitrogen_cycle",
-      "type": "chat",
-      "concept_id": "nitrogen_cycle",
-      "level": 3,
-      "progress": {
-        "current": 19,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Nitrogen Cycle bahut important hai BPSC aur NEET mein! Steps hain - (1) Nitrogen Fixation: Atmospheric N₂ ko ammonia mein convert karna by bacteria (Rhizobium in legume roots) ya lightning. (2) Nitrification: Ammonia ko nitrites (NO₂⁻) phir nitrates (NO₃⁻) mein convert karna by nitrifying bacteria. (3) Assimilation: Plants nitrates absorb karte hain. (4) Ammonification: Dead organisms se ammonia release. (5) Denitrification: Nitrates wapas N₂ mein convert by denitrifying bacteria."
-        },
-        {
-          "speaker": "raju",
-          "text": "Ye cycle toh complicated lagti hai Sir... Yaad kaise rakhen?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Mnemonic: 'Fix Ni Ass Am De' - Fixation, Nitrification, Assimilation, Ammonification, Denitrification. Ye complete cycle nitrogen ko atmosphere se plants tak aur wapas atmosphere mein le jaata hai. Rhizobium bacteria ki symbiotic relationship legumes (dal, peas) ke saath bahut important point hai exams ke liye!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Fix Ni Ass Am De - got it Sir! Cycle clear hai ab!"
-        }
-      ],
-      "navigation": {
-        "next": "card_20_nitrogen_compounds",
-        "button_text": "Important Compounds ➔"
-      }
-    },
-    {
-      "card_id": "card_20_nitrogen_compounds",
-      "card_slug": "card_20_nitrogen_compounds",
-      "type": "chat",
-      "concept_id": "nitrogen_oxides",
-      "level": 3,
-      "progress": {
-        "current": 20,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Nitrogen ke important oxides: (1) Nitrous oxide (N₂O) - 'Laughing Gas', anaesthetic use. (2) Nitric oxide (NO) - colorless, air pollutant. (3) Nitrogen dioxide (NO₂) - brown gas, air pollutant, acid rain causes. (4) Dinitrogen tetroxide (N₂O₄). (5) Dinitrogen pentoxide (N₂O₅). NO aur NO₂ ko collectively NOx kehte hain - major atmospheric pollutants!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir laughing gas doctor ke paas use hoti hai na operation mein?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! N₂O mild anaesthetic hai - dentists use karte hain. Lekin greenhouse gas bhi hai - CO₂ se 300 guna zyada potent! NO₂ brown smog banata hai cities mein (vehicle exhaust se). Ye acid rain ka bhi major contributor hai: 4NO₂ + O₂ + 2H₂O → 4HNO₃ (nitric acid). UPSC environment section ka favorite topic hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Pollution aur environment questions mein important hai ye sab!"
-        }
-      ],
-      "navigation": {
-        "next": "card_21_quiz_nitrogen_1",
-        "button_text": "Test Nitrogen Knowledge ➔"
-      }
-    },
-    {
-      "card_id": "card_21_quiz_nitrogen_1",
-      "card_slug": "card_21_quiz_nitrogen_1",
-      "type": "quiz",
-      "concept_id": "nitrogen_quiz_1",
-      "level": 3,
-      "progress": {
-        "current": 21,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "The Haber Process is used for the industrial production of:",
-        "options": [
-          { "id": "A", "text": "Nitric acid" },
-          { "id": "B", "text": "Ammonia" },
-          { "id": "C", "text": "Nitrogen dioxide" },
-          { "id": "D", "text": "Urea" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "The Haber Process (or Haber-Bosch Process) is used for industrial production of AMMONIA (NH₃) from nitrogen and hydrogen: N₂ + 3H₂ ⇌ 2NH₃. The process requires 450-500°C temperature, 200 atm pressure, and iron catalyst. Fritz Haber developed it in 1909 and won Nobel Prize in 1918. This is a standard SSC and Railway exam question."
-      },
-      "navigation": {
-        "next": "card_22_quiz_nitrogen_2",
-        "button_text": "Next Question (2/3) ➔"
-      }
-    },
-    {
-      "card_id": "card_22_quiz_nitrogen_2",
-      "card_slug": "card_22_quiz_nitrogen_2",
-      "type": "quiz",
-      "concept_id": "nitrogen_quiz_2",
-      "level": 3,
-      "progress": {
-        "current": 22,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Which bacteria converts atmospheric nitrogen into ammonia in legume root nodules?",
-        "options": [
-          { "id": "A", "text": "Azotobacter" },
-          { "id": "B", "text": "Nitrosomonas" },
-          { "id": "C", "text": "Rhizobium" },
-          { "id": "D", "text": "Nitrobacter" }
-        ],
-        "correct_option_id": "C",
-        "explanation": "RHIZOBIUM bacteria live symbiotically in the root nodules of leguminous plants (like peas, beans, pulses) and convert atmospheric nitrogen (N₂) into ammonia through nitrogen fixation. Nitrosomonas and Nitrobacter are nitrifying bacteria, while Azotobacter is a free-living nitrogen-fixing bacteria. This is crucial for NEET and BPSC biology-chemistry interface questions."
-      },
-      "navigation": {
-        "next": "card_23_quiz_nitrogen_3",
-        "button_text": "Next Question (3/3) ➔"
-      }
-    },
-    {
-      "card_id": "card_23_quiz_nitrogen_3",
-      "card_slug": "card_23_quiz_nitrogen_3",
-      "type": "quiz",
-      "concept_id": "nitrogen_quiz_3",
-      "level": 3,
-      "progress": {
-        "current": 23,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Nitrous oxide (N₂O) is commonly known as:",
-        "options": [
-          { "id": "A", "text": "Laughing gas" },
-          { "id": "B", "text": "Tear gas" },
-          { "id": "C", "text": "Marsh gas" },
-          { "id": "D", "text": "Producer gas" }
-        ],
-        "correct_option_id": "A",
-        "explanation": "Nitrous oxide (N₂O) is commonly known as LAUGHING GAS because it produces euphoric effects when inhaled. It is used as a mild anaesthetic in dentistry and surgery. It is also a potent greenhouse gas, about 300 times more effective at trapping heat than CO₂. This nomenclature question is common in SSC and Railway exams."
-      },
-      "navigation": {
-        "next": "card_24_milestone_nitrogen",
-        "button_text": "Check Results ➔"
-      }
-    },
-    {
-      "card_id": "card_24_milestone_nitrogen",
-      "card_slug": "card_24_milestone_nitrogen",
-      "type": "milestone",
-      "concept_id": "nitrogen_complete",
-      "level": 3,
-      "progress": {
-        "current": 24,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "Nitrogen Champion! 🌾",
-        "badge_emoji": "🔬",
-        "completed_topic": "Nitrogen, Haber Process & Nitrogen Cycle",
-        "xp_earned": 50,
-        "milestone_progress": "Module 3/8 Clear",
-        "motivational_quote": "Atmosphere ke 78% nitrogen ko master kar liya! Ab carbon - life ka base element - ko explore karte hain!"
-      },
-      "navigation": {
-        "next": "card_25_carbon_intro",
-        "button_text": "Start Carbon Module ➔"
-      }
-    },
-    {
-      "card_id": "card_25_carbon_intro",
-      "card_slug": "card_25_carbon_intro",
-      "type": "chat",
-      "concept_id": "carbon_basics",
-      "level": 4,
-      "progress": {
-        "current": 25,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Carbon - sabse versatile element! Latin word 'Carbo' (coal) se naam aaya. Ye life ka base element hai - sabhi organic compounds mein carbon hota hai. Pure form mein ancient times se known hai (charcoal, soot). Atomic number 6 hai, tetravalent hai (4 electrons share kar sakta hai), isliye bahut saare compounds bana sakta hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir carbon ke kitne forms hote hain? Diamond aur graphite?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Carbon ke teen main ALLOTROPES hain - (1) DIAMOND - hardest natural substance, 3D structure, electrical insulator. (2) GRAPHITE - soft, slippery, 2D layered structure, electrical conductor. (3) FULLERENES - C₆₀ (Buckminsterfullerene), C₇₀, discovered in 1985 by Kroto, Curl, and Smalley (Nobel Prize 1996). Nanotubes bhi carbon allotrope hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Same element itne different properties ke saath? Mind-blowing!"
-        }
-      ],
-      "navigation": {
-        "next": "card_26_diamond_graphite",
-        "button_text": "Structure difference samjho ➔"
-      }
-    },
-    {
-      "card_id": "card_26_diamond_graphite",
-      "card_slug": "card_26_diamond_graphite",
-      "type": "chat",
-      "concept_id": "diamond_graphite_structure",
-      "level": 4,
-      "progress": {
-        "current": 26,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Diamond structure: Har carbon atom chaar neighbouring carbon atoms se covalently bonded hai forming tetrahedral 3D network. Saare electrons bonding mein use ho jaate hain - koi free electron nahi. Isliye diamond electrical insulator hai but thermal conductor (heat transfer achhe se hoti hai). Hardest natural material - cutting tools mein use hota hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Aur graphite Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Graphite structure: Har carbon atom teen neighbours se bonded (trigonal planar), forming hexagonal layers. Layers ke beech weak van der Waals forces - easily slide karte hain (isliye slippery, lubricant ke roop mein use). Fourth electron free hai - ye layers ke beech move karta hai, isliye GRAPHITE CONDUCTS ELECTRICITY! Pencil 'lead' actually graphite hai, not lead metal!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh structure hi properties decide karta hai! Same atoms, different arrangement!"
-        }
-      ],
-      "navigation": {
-        "next": "card_27_carbon_compounds",
-        "button_text": "Important Compounds ➔"
-      }
-    },
-    {
-      "card_id": "card_27_carbon_compounds",
-      "card_slug": "card_27_carbon_compounds",
-      "type": "chat",
-      "concept_id": "carbon_oxides",
-      "level": 4,
-      "progress": {
-        "current": 27,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Carbon ke do main oxides: (1) CARBON MONOXIDE (CO) - colorless, odorless, highly TOXIC gas. Incomplete combustion se banta hai. Blood mein haemoglobin ke saath strongly bind karta hai (oxygen se 200 guna zyada affinity), oxygen transport block kar deta hai - asphyxiation causes. (2) CARBON DIOXIDE (CO₂) - complete combustion se, non-toxic lekin greenhouse gas, photosynthesis mein use, soft drinks mein dissolved."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir CO itna dangerous kyun hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "CO haemoglobin ke saath CARBOXYHAEMOGLOBIN banata hai jo irreversible hai. Oxygen transport nahi ho pata, tissues ko oxygen nahi milta - death ho sakti hai. Isliye closed rooms mein coal/wood jalana dangerous hai. CO detector install karna chahiye. Ye NEET mein biology-chemistry interface ka important question hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Scary hai Sir! Colorless, odorless par deadly!"
-        }
-      ],
-      "navigation": {
-        "next": "card_28_carbon_cycle",
-        "button_text": "Carbon Cycle ➔"
-      }
-    },
-    {
-      "card_id": "card_28_carbon_cycle",
-      "card_slug": "card_28_carbon_cycle",
-      "type": "chat",
-      "concept_id": "carbon_cycle",
-      "level": 4,
-      "progress": {
-        "current": 28,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Carbon Cycle - UPSC ka favorite! Steps: (1) Atmosphere mein CO₂. (2) PHOTOSYNTHESIS - Plants CO₂ absorb karke glucose banate: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂. (3) Plants ko animals consume karte hain - carbon food chain mein transfer. (4) RESPIRATION - Animals aur plants dono CO₂ release karte: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + Energy. (5) DECOMPOSITION - Dead organisms decompose, CO₂ release. (6) COMBUSTION - Fossil fuels burning se CO₂. (7) Ocean absorption - CO₂ dissolves, shells/coral form (CaCO₃)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh ye cycle balance mein hona chahiye... Lekin abhi imbalance hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Fossil fuel burning se extra CO₂ add ho raha hai jo plants absorb nahi kar pa rahe. Result: Global Warming, Climate Change. Pre-industrial CO₂ level ~280 ppm tha, ab ~420 ppm hai. Deforestation se problem aur badh rahi hai. Paris Agreement (2015) aim hai temperature rise ko 1.5°C se neeche rakhna!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Current affairs bhi connected hai chemistry se!"
-        }
-      ],
-      "navigation": {
-        "next": "card_29_quiz_carbon_1",
-        "button_text": "Test Carbon Knowledge ➔"
-      }
-    },
-    {
-      "card_id": "card_29_quiz_carbon_1",
-      "card_slug": "card_29_quiz_carbon_1",
-      "type": "quiz",
-      "concept_id": "carbon_quiz_1",
-      "level": 4,
-      "progress": {
-        "current": 29,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Which allotrope of carbon is a good conductor of electricity?",
+        "question": "Which form of Carbon is a good conductor of electricity? (Q2/3)",
         "options": [
           { "id": "A", "text": "Diamond" },
-          { "id": "B", "text": "Graphite" },
-          { "id": "C", "text": "Charcoal" },
-          { "id": "D", "text": "Coal" }
+          { "id": "B", "text": "Fullerene" },
+          { "id": "C", "text": "Coal" },
+          { "id": "D", "text": "Graphite" }
         ],
-        "correct_option_id": "B",
-        "explanation": "GRAPHITE is a good conductor of electricity because it has free delocalized electrons that can move between its hexagonal layers. Each carbon atom in graphite uses only three electrons for bonding, leaving one electron free to move. Diamond, on the other hand, has all four electrons involved in bonding, making it an electrical insulator. This structural difference is a classic NEET and SSC question."
+        "correct_option_id": "D",
+        "explanation": "Graphite is the only non-metal that conducts electricity, due to its layered structure where one free electron per carbon atom is available for conduction. Diamond does NOT conduct electricity despite being the same element (Carbon)."
       },
-      "navigation": {
-        "next": "card_30_quiz_carbon_2",
-        "button_text": "Next Question (2/3) ➔"
-      }
+      "navigation": { "next": "card_07_quiz3", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_30_quiz_carbon_2",
-      "card_slug": "card_30_quiz_carbon_2",
+      "card_id": "card_07_quiz3",
+      "card_slug": "card_07_quiz3",
       "type": "quiz",
-      "concept_id": "carbon_quiz_2",
-      "level": 4,
-      "progress": {
-        "current": 30,
-        "total": 72
-      },
+      "concept_id": "nonmetal_introduction",
+      "level": 1,
+      "progress": { "current": 7, "total": 82 },
       "quiz_payload": {
-        "question": "Carbon monoxide is highly toxic because it:",
+        "question": "Statement 1: Non-metals are generally poor conductors of electricity. Statement 2: Iodine is a non-metal with metallic lustre. Which is correct? (Q3/3)",
         "options": [
-          { "id": "A", "text": "Reacts with lung tissues" },
-          { "id": "B", "text": "Forms carboxyhaemoglobin with blood" },
-          { "id": "C", "text": "Causes respiratory burns" },
-          { "id": "D", "text": "Dissolves oxygen in blood" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Carbon monoxide (CO) is highly toxic because it binds with haemoglobin in blood to form CARBOXYHAEMOGLOBIN, which prevents haemoglobin from transporting oxygen to body tissues. CO has about 200 times greater affinity for haemoglobin than oxygen. This leads to oxygen starvation (asphyxiation) and can cause death. This is an important NEET biology-chemistry interface question."
-      },
-      "navigation": {
-        "next": "card_31_quiz_carbon_3",
-        "button_text": "Next Question (3/3) ➔"
-      }
-    },
-    {
-      "card_id": "card_31_quiz_carbon_3",
-      "card_slug": "card_31_quiz_carbon_3",
-      "type": "quiz",
-      "concept_id": "carbon_quiz_3",
-      "level": 4,
-      "progress": {
-        "current": 31,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Buckminsterfullerene (C₆₀) was discovered in which year?",
-        "options": [
-          { "id": "A", "text": "1975" },
-          { "id": "B", "text": "1985" },
-          { "id": "C", "text": "1995" },
-          { "id": "D", "text": "2005" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Buckminsterfullerene (C₆₀) was discovered in 1985 by Robert Curl, Harold Kroto, and Richard Smalley, who were awarded the Nobel Prize in Chemistry in 1996 for this discovery. It is a spherical molecule consisting of 60 carbon atoms arranged in a soccer ball pattern. This discovery year is frequently tested in BPSC and SSC exams."
-      },
-      "navigation": {
-        "next": "card_32_milestone_carbon",
-        "button_text": "Check Results ➔"
-      }
-    },
-    {
-      "card_id": "card_32_milestone_carbon",
-      "card_slug": "card_32_milestone_carbon",
-      "type": "milestone",
-      "concept_id": "carbon_complete",
-      "level": 4,
-      "progress": {
-        "current": 32,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "Carbon Expert! 💎",
-        "badge_emoji": "⚫",
-        "completed_topic": "Carbon Allotropes & Carbon Cycle",
-        "xp_earned": 50,
-        "milestone_progress": "Module 4/8 Clear",
-        "motivational_quote": "Diamond se graphite tak - carbon ki versatility samajh li! Ab sulphur ki duniya mein chalte hain!"
-      },
-      "navigation": {
-        "next": "card_33_sulphur_intro",
-        "button_text": "Start Sulphur Module ➔"
-      }
-    },
-    {
-      "card_id": "card_33_sulphur_intro",
-      "card_slug": "card_33_sulphur_intro",
-      "type": "chat",
-      "concept_id": "sulphur_basics",
-      "level": 5,
-      "progress": {
-        "current": 33,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Sulphur - yellow colored solid non-metal! Sanskrit word 'Shulbari' aur Latin 'Sulphurium' se naam aaya. Ancient times se known - 'Brimstone' bhi kehte the (Bible mein mention). Atomic number 16, non-metallic solid at room temperature, burns with blue flame producing SO₂ (pungent smell). Volcano areas mein naturally milta hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir sulphur yellow kyun hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Sulphur ki crystal structure specific wavelengths of light absorb karti hai, yellow reflect karti hai. Sulphur ke bhi allotropes hain - Rhombic sulphur (α-sulphur, stable at room temperature), Monoclinic sulphur (β-sulphur, stable above 96°C), Plastic sulphur (amorphous). Industry mein mainly Frasch Process se extract karte hain underground deposits se."
-        },
-        {
-          "speaker": "raju",
-          "text": "Frasch Process... new term hai Sir!"
-        }
-      ],
-      "navigation": {
-        "next": "card_34_sulphur_extraction",
-        "button_text": "Frasch Process ➔"
-      }
-    },
-    {
-      "card_id": "card_34_sulphur_extraction",
-      "card_slug": "card_34_sulphur_extraction",
-      "type": "chat",
-      "concept_id": "frasch_process",
-      "level": 5,
-      "progress": {
-        "current": 34,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Frasch Process - Herman Frasch ne 1894 mein develop kiya. Underground sulphur deposits ko extract karne ke liye. Process: Superheated water (170°C) pipes se underground bheja jaata hai jo sulphur ko melt kar deta hai (melting point 115°C). Phir compressed air se molten sulphur ko upar pump kiya jaata hai. 99.5% pure sulphur milta hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh mining nahi karni padti, direct melt karke nikaal lete hain?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Exactly! Bahut efficient process hai. Sulphur ka 90% use sulphuric acid (H₂SO₄) banane mein hota hai - jo 'King of Chemicals' kehlata hai. Contact Process se sulphuric acid banta hai: Step 1: S + O₂ → SO₂, Step 2: 2SO₂ + O₂ → 2SO₃ (V₂O₅ catalyst), Step 3: SO₃ + H₂SO₄ → H₂S₂O₇, Step 4: H₂S₂O₇ + H₂O → 2H₂SO₄"
-        },
-        {
-          "speaker": "raju",
-          "text": "Contact Process bhi yaad rakhna padega... Steps bahut hain!"
-        }
-      ],
-      "navigation": {
-        "next": "card_35_sulphuric_acid",
-        "button_text": "King of Chemicals detail ➔"
-      }
-    },
-    {
-      "card_id": "card_35_sulphuric_acid",
-      "card_slug": "card_35_sulphuric_acid",
-      "type": "chat",
-      "concept_id": "sulphuric_acid_uses",
-      "level": 5,
-      "progress": {
-        "current": 35,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Sulphuric Acid (H₂SO₄) - 'King of Chemicals' kyunki iska use sabse zyada industries mein hota hai. Uses: (1) Fertilizer production (ammonium sulphate, superphosphate), (2) Petroleum refining, (3) Metal processing, (4) Battery acid (car batteries), (5) Chemical synthesis. Ek desh ki industrial development sulphuric acid consumption se measure hoti hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir ye itna dangerous acid hai na? Concentrated H₂SO₄?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Concentrated H₂SO₄ bahut corrosive hai, dehydrating agent hai (paani absorb kar leta hai - paper, sugar ko char kar deta hai). Dilution exothermic hai - acid ko ALWAYS paani mein add karna chahiye, never reverse! Rule: 'Add acid to water, never water to acid, otherwise you'll face disaster!' Ye safety rule exams mein puchte hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Add acid to water... Safety tip note kar liya!"
-        }
-      ],
-      "navigation": {
-        "next": "card_36_sulphur_dioxide",
-        "button_text": "SO₂ pollution ➔"
-      }
-    },
-    {
-      "card_id": "card_36_sulphur_dioxide",
-      "card_slug": "card_36_sulphur_dioxide",
-      "type": "chat",
-      "concept_id": "sulphur_dioxide_pollution",
-      "level": 5,
-      "progress": {
-        "current": 36,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Sulphur Dioxide (SO₂) - colorless gas with pungent, suffocating smell. Major air pollutant - coal burning aur volcanic eruptions se release hota hai. Health effects: Respiratory problems, asthma aggravation. Environmental impact: ACID RAIN - SO₂ atmosphere mein water ke saath react karke H₂SO₃ (sulphurous acid) banta hai jo acid rain causes karta hai: SO₂ + H₂O → H₂SO₃"
-        },
-        {
-          "speaker": "raju",
-          "text": "Acid rain toh monuments ko damage karti hai na Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Taj Mahal ka marble (CaCO₃) acid rain se react karke deteriorate ho raha hai - 'Marble Cancer' problem. Reaction: CaCO₃ + H₂SO₄ → CaSO₄ + H₂O + CO₂. Gypsum (CaSO₄) layer form hota hai jo surface ko damage karta hai. Supreme Court ne CNG use mandatory kiya Agra mein SO₂ reduce karne ke liye. UPSC ka classic environment question!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Chemistry aur heritage conservation connected hain!"
-        }
-      ],
-      "navigation": {
-        "next": "card_37_quiz_sulphur_1",
-        "button_text": "Test Sulphur Knowledge ➔"
-      }
-    },
-    {
-      "card_id": "card_37_quiz_sulphur_1",
-      "card_slug": "card_37_quiz_sulphur_1",
-      "type": "quiz",
-      "concept_id": "sulphur_quiz_1",
-      "level": 5,
-      "progress": {
-        "current": 37,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "The Frasch Process is used for extraction of:",
-        "options": [
-          { "id": "A", "text": "Gold" },
-          { "id": "B", "text": "Sulphur" },
-          { "id": "C", "text": "Aluminium" },
-          { "id": "D", "text": "Iron" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "The Frasch Process is used for extraction of SULPHUR from underground deposits. Developed by Herman Frasch in 1894, it involves pumping superheated water (170°C) underground to melt sulphur, then using compressed air to bring molten sulphur to the surface. This yields 99.5% pure sulphur. This is a standard SSC and Railway exam question."
-      },
-      "navigation": {
-        "next": "card_38_quiz_sulphur_2",
-        "button_text": "Next Question (2/3) ➔"
-      }
-    },
-    {
-      "card_id": "card_38_quiz_sulphur_2",
-      "card_slug": "card_38_quiz_sulphur_2",
-      "type": "quiz",
-      "concept_id": "sulphur_quiz_2",
-      "level": 5,
-      "progress": {
-        "current": 38,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Sulphuric acid is called 'King of Chemicals' because:",
-        "options": [
-          { "id": "A", "text": "It is the strongest acid" },
-          { "id": "B", "text": "It has maximum industrial applications" },
-          { "id": "C", "text": "It is most expensive" },
-          { "id": "D", "text": "It was discovered first" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Sulphuric acid (H₂SO₄) is called 'King of Chemicals' because it has MAXIMUM INDUSTRIAL APPLICATIONS including fertilizer production, petroleum refining, metal processing, battery acid, and chemical synthesis. A country's industrial development is often measured by its sulphuric acid consumption. This reasoning question is common in BPSC exams."
-      },
-      "navigation": {
-        "next": "card_39_quiz_sulphur_3",
-        "button_text": "Next Question (3/3) ➔"
-      }
-    },
-    {
-      "card_id": "card_39_quiz_sulphur_3",
-      "card_slug": "card_39_quiz_sulphur_3",
-      "type": "quiz",
-      "concept_id": "sulphur_quiz_3",
-      "level": 5,
-      "progress": {
-        "current": 39,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "When diluting concentrated sulphuric acid, the correct procedure is:",
-        "options": [
-          { "id": "A", "text": "Add water to acid slowly" },
-          { "id": "B", "text": "Add acid to water slowly" },
-          { "id": "C", "text": "Mix both simultaneously" },
-          { "id": "D", "text": "Heat first then add water" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "When diluting concentrated sulphuric acid, ALWAYS add acid to water slowly, never the reverse. This is because dilution is highly exothermic (releases heat). If water is added to concentrated acid, it may boil violently and splash acid out, causing severe burns. The safety rule is: 'Add acid to water, never water to acid'. This is a crucial NEET practical safety question."
-      },
-      "navigation": {
-        "next": "card_40_milestone_sulphur",
-        "button_text": "Check Results ➔"
-      }
-    },
-    {
-      "card_id": "card_40_milestone_sulphur",
-      "card_slug": "card_40_milestone_sulphur",
-      "type": "milestone",
-      "concept_id": "sulphur_complete",
-      "level": 5,
-      "progress": {
-        "current": 40,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "Sulphur Specialist! 🟡",
-        "badge_emoji": "🌋",
-        "completed_topic": "Sulphur, Frasch Process & H₂SO₄",
-        "xp_earned": 50,
-        "milestone_progress": "Module 5/8 Clear",
-        "motivational_quote": "Yellow sulphur se King of Chemicals tak ka journey complete! Ab halogens - reactive non-metals ka group!"
-      },
-      "navigation": {
-        "next": "card_41_halogens_intro",
-        "button_text": "Start Halogens Module ➔"
-      }
-    },
-    {
-      "card_id": "card_41_halogens_intro",
-      "card_slug": "card_41_halogens_intro",
-      "type": "chat",
-      "concept_id": "halogens_basics",
-      "level": 6,
-      "progress": {
-        "current": 41,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Halogens - Group 17 elements! Greek word 'Hals' (salt) aur 'Genes' (producer) se - 'salt producers'. Five members: Fluorine (F), Chlorine (Cl), Bromine (Br), Iodine (I), Astatine (At - radioactive, rare). Sabhi highly reactive non-metals hain, diatomic molecules hain (F₂, Cl₂, Br₂, I₂). Reactivity order: F > Cl > Br > I (upar se neeche kam hoti jaati hai)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir fluorine sabse zyada reactive kyun hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Kyunki fluorine ka atomic size sabse chhota hai halogens mein, electron affinity sabse zyada hai (electron attract karne ki tendency). Ye sabse electronegative element hai (4.0 Pauling scale pe). Itna reactive hai ki almost sabhi elements ke saath react karta hai, even noble gases! Glass ko bhi corrode kar deta hai, isliye teflon containers mein store karte hain."
-        },
-        {
-          "speaker": "raju",
-          "text": "Fluorine toh bahut aggressive lagta hai Sir!"
-        }
-      ],
-      "navigation": {
-        "next": "card_42_chlorine",
-        "button_text": "Chlorine detail ➔"
-      }
-    },
-    {
-      "card_id": "card_42_chlorine",
-      "card_slug": "card_42_chlorine",
-      "type": "chat",
-      "concept_id": "chlorine_properties",
-      "level": 6,
-      "progress": {
-        "current": 42,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Chlorine (Cl₂) - greenish-yellow gas with pungent, suffocating smell. Carl Wilhelm Scheele ne 1774 mein discover kiya, Sir Humphry Davy ne 1810 mein isko element confirm kiya aur naam diya (Greek 'Chloros' = greenish-yellow). Lab mein preparation: MnO₂ + 4HCl → MnCl₂ + Cl₂ + 2H₂O. Industrial: Electrolysis of brine (NaCl solution) - Chlor-alkali process."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir chlorine ka use kahan hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Major uses: (1) Water purification/disinfection (swimming pools, drinking water), (2) Bleaching agent (paper, textile industry), (3) PVC production, (4) Pesticides, (5) Pharmaceuticals. Lekin toxic bhi hai - World War I mein poison gas ke roop mein use hua tha. Ye double-edged sword hai - useful but dangerous if not handled properly!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh chlorine war mein bhi use hua... Sad history!"
-        }
-      ],
-      "navigation": {
-        "next": "card_43_bromine_iodine",
-        "button_text": "Bromine & Iodine ➔"
-      }
-    },
-    {
-      "card_id": "card_43_bromine_iodine",
-      "card_slug": "card_43_bromine_iodine",
-      "type": "chat",
-      "concept_id": "bromine_iodine",
-      "level": 6,
-      "progress": {
-        "current": 43,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "BROMINE (Br₂) - only non-metallic element that is LIQUID at room temperature! Reddish-brown colored, corrosive, toxic vapours. Antoine Jérôme Balard ne 1826 mein discover kiya. Sea water se extract hota hai. Uses: Flame retardants, pesticides, photography. IODINE (I₂) - violet-black solid, sublimes easily (direct solid se gas). Bernard Courtois ne 1811 mein seaweed se discover kiya."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir iodine toh tincture iodine mein hota hai na antiseptic?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Tincture iodine = iodine dissolved in alcohol, antiseptic use. Iodine essential nutrient bhi hai - thyroid gland ko zarurat hoti hai thyroxine hormone banane ke liye. Deficiency se GOITRE disease hota hai (neck swelling). Isliye iodized salt use karte hain (NaCl + KI/KIO₃). Ye public health chemistry ka important part hai - UPSC mein puchte hain!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Chemistry health se connected hai... Interesting!"
-        }
-      ],
-      "navigation": {
-        "next": "card_44_halogen_tests",
-        "button_text": "Identification tests ➔"
-      }
-    },
-    {
-      "card_id": "card_44_halogen_tests",
-      "card_slug": "card_44_halogen_tests",
-      "type": "chat",
-      "concept_id": "halogen_identification",
-      "level": 6,
-      "progress": {
-        "current": 44,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Halogens ko identify karne ke tests: (1) CHLORINE - bleaches litmus paper, greenish-yellow color, react with AgNO₃ to form white precipitate (AgCl). (2) BROMINE - reddish-brown vapours, react with AgNO₃ to form pale yellow precipitate (AgBr). (3) IODINE - violet vapours on heating, react with starch to give blue-black color (starch-iodine test), react with AgNO₃ to form yellow precipitate (AgI)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir starch-iodine test practical mein hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Bahut common practical test hai. Iodine starch ke saath blue-black complex banata hai. Ye test bahut sensitive hai - trace amounts of iodine bhi detect ho jaata hai. NEET practicals mein ye zaroor aata hai. Aur silver nitrate tests se different halides distinguish kar sakte ho - AgCl (white), AgBr (pale yellow), AgI (yellow)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Precipitate ka color important hai identification ke liye!"
-        }
-      ],
-      "navigation": {
-        "next": "card_45_quiz_halogens_1",
-        "button_text": "Test Halogens Knowledge ➔"
-      }
-    },
-    {
-      "card_id": "card_45_quiz_halogens_1",
-      "card_slug": "card_45_quiz_halogens_1",
-      "type": "quiz",
-      "concept_id": "halogens_quiz_1",
-      "level": 6,
-      "progress": {
-        "current": 45,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Which is the most reactive halogen?",
-        "options": [
-          { "id": "A", "text": "Chlorine" },
-          { "id": "B", "text": "Fluorine" },
-          { "id": "C", "text": "Bromine" },
-          { "id": "D", "text": "Iodine" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "FLUORINE is the most reactive halogen and the most electronegative element (electronegativity 4.0 on Pauling scale). Its high reactivity is due to its small atomic size and high electron affinity. Reactivity of halogens decreases down the group: F > Cl > Br > I. Fluorine can even react with noble gases, which is exceptional. This is a fundamental NEET and SSC concept."
-      },
-      "navigation": {
-        "next": "card_46_quiz_halogens_2",
-        "button_text": "Next Question (2/3) ➔"
-      }
-    },
-    {
-      "card_id": "card_46_quiz_halogens_2",
-      "card_slug": "card_46_quiz_halogens_2",
-      "type": "quiz",
-      "concept_id": "halogens_quiz_2",
-      "level": 6,
-      "progress": {
-        "current": 46,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Iodine deficiency causes which disease?",
-        "options": [
-          { "id": "A", "text": "Rickets" },
-          { "id": "B", "text": "Scurvy" },
-          { "id": "C", "text": "Goitre" },
-          { "id": "D", "text": "Anaemia" }
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both are correct" },
+          { "id": "D", "text": "Both are wrong" }
         ],
         "correct_option_id": "C",
-        "explanation": "Iodine deficiency causes GOITRE, characterized by swelling of the thyroid gland in the neck. Iodine is essential for the production of thyroid hormones (thyroxine). To prevent this, iodized salt (containing KI or KIO₃) is used. Rickets is caused by Vitamin D deficiency, Scurvy by Vitamin C deficiency, and Anaemia by iron deficiency. This is a common UPSC and BPSC public health question."
+        "explanation": "Both statements are correct. Non-metals are generally poor conductors (Graphite is the exception). Iodine (I2) is a solid non-metal with a shiny, metallic lustre - a commonly tested exception."
       },
-      "navigation": {
-        "next": "card_47_quiz_halogens_3",
-        "button_text": "Next Question (3/3) ➔"
-      }
+      "navigation": { "next": "card_08_milestone1", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_47_quiz_halogens_3",
-      "card_slug": "card_47_quiz_halogens_3",
-      "type": "quiz",
-      "concept_id": "halogens_quiz_3",
-      "level": 6,
-      "progress": {
-        "current": 47,
-        "total": 72
+      "card_id": "card_08_milestone1",
+      "card_slug": "card_08_milestone1",
+      "type": "milestone",
+      "concept_id": "nonmetal_introduction",
+      "level": 1,
+      "progress": { "current": 8, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌬️",
+        "completed_topic": "Non-Metal Introduction & Physical Properties",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/10 Clear",
+        "motivational_quote": "Non-metals ke exceptions pakad liye! Ab chemical reactions dekhte hain!"
       },
+      "navigation": { "next": "card_09_reaction_oxygen", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_09_reaction_oxygen",
+      "card_slug": "card_09_reaction_oxygen",
+      "type": "chat",
+      "concept_id": "chemical_reactions_nonmetals",
+      "level": 2,
+      "progress": { "current": 9, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab baat karte hain non-metals ki chemical properties ki. Pehla - non-metals + Oxygen → [[Acidic Oxide | Non-metals ka oxide jo paani me milne par acid banta hai]] banate hain. Ye metals ke bilkul ulta hai (metals basic oxide banate hain). Jaise C + O2 → CO2, S + O2 → SO2, 4P + 5O2 → P4O10." },
+        { "speaker": "raju", "text": "Toh CO2 ek acidic oxide hai? Ye toh hum saans bahar nikaalte hain, toh hamare andar bhi acid jaisi cheez banti hai!" },
+        { "speaker": "aman", "text": "Bilkul sahi socha! CO2 + H2O → H2CO3 (Carbonic Acid) - isliye aur is wajah se baarish ka paani thoda acidic hota hai, kyunki usme CO2 ghul jaata hai. Aur jab factories se SO2, NO2 nikalta hai, toh ye bhi baarish ke paani me ghulkar [[Acid Rain | Tezabee baarish - sulphuric acid aur nitric acid waali baarish jo imarton aur crops ko nuksaan pahunchati hai]] banata hai." },
+        { "speaker": "raju", "text": "Acid Rain! Factories ki wajah se - ye toh environment ka bada topic hai!" }
+      ],
+      "navigation": { "next": "card_10_reaction_water", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_10_reaction_water",
+      "card_slug": "card_10_reaction_water",
+      "type": "chat",
+      "concept_id": "chemical_reactions_nonmetals",
+      "level": 2,
+      "progress": { "current": 10, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Non-metals ka paani se reaction generally nahi hota, lekin kuch important exceptions hain. [[Chlorine | Cl2, ek peela-haara zeherela gas jo halogens family me hai]] paani me ghulkar ek special mixture banta hai: Cl2 + H2O → HCl + HOCl. Yahan HOCl yani [[Hypochlorous Acid | Chlorine ke paani me ghulne par bana weak acid jo bleaching karta hai]] hi bleaching aur disinfection ka kaam karta hai." },
+        { "speaker": "raju", "text": "Chlorine water pool me dete hain na sir? To wahi HOCl ka kaam hai?" },
+        { "speaker": "aman", "text": "Ekdum sahi! Swimming pool aur drinking water treatment me chlorine isliye use hoti hai. Ek aur important non-metal-water reaction: [[Fluorine | F2, sabse reactive non-metal, halogens me sabse upar]] bhi paani se react karta hai, lekin ye itna reactive hai ki sirf F2 hi O2 ko bhi displace kar sakta hai!" },
+        { "speaker": "raju", "text": "Fluorine O2 ko bhi hataa deta hai? Ye toh bahut powerful hai!" }
+      ],
+      "navigation": { "next": "card_11_reaction_hydrogen", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_11_reaction_hydrogen",
+      "card_slug": "card_11_reaction_hydrogen",
+      "type": "chat",
+      "concept_id": "chemical_reactions_nonmetals",
+      "level": 2,
+      "progress": { "current": 11, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek important pattern - Non-metals + Hydrogen → [[Hydride | Hydrogen aur non-metal se bana compound, jaise HCl, H2S, NH3]] banate hain. Jaise N2 + 3H2 → 2NH3 (Ammonia), S + H2 → H2S (Hydrogen Sulphide - ande ke sadne ki boo!), Cl2 + H2 → 2HCl (Hydrochloric Acid)." },
+        { "speaker": "raju", "text": "H2S se ande sadhne ki boo aati hai! Ab pata chala kyon andaa sadne par boo aata hai!" },
+        { "speaker": "aman", "text": "Haha! Bilkul sahi! Aur ek important reaction - non-metals khud oxidising agent ki tarah kaam karte hain, matlab they accept electrons. Jaise Chlorine ek strong [[Oxidising Agent | Jo electrons accept karta hai aur doosre ko oxidise karta hai]] hai - isliye bleaching karta hai, kyunki rang wale compounds se electrons kheench leta hai." },
+        { "speaker": "raju", "text": "Chlorine electrons kheench ke rang ud'a deta hai - isiliye bleach karta hai! Chemistry me itna logic hai!" }
+      ],
+      "navigation": { "next": "card_12_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_12_quiz1",
+      "card_slug": "card_12_quiz1",
+      "type": "quiz",
+      "concept_id": "chemical_reactions_nonmetals",
+      "level": 2,
+      "progress": { "current": 12, "total": 82 },
       "quiz_payload": {
-        "question": "The starch-iodine test produces which color?",
+        "question": "Acid rain is primarily caused by the dissolution of which gases in rainwater? (Q1/3)",
         "options": [
-          { "id": "A", "text": "Red" },
-          { "id": "B", "text": "Green" },
-          { "id": "C", "text": "Blue-black" },
-          { "id": "D", "text": "Yellow" }
+          { "id": "A", "text": "CO2 and O2" },
+          { "id": "B", "text": "SO2, NO2 and CO2" },
+          { "id": "C", "text": "N2 and O2" },
+          { "id": "D", "text": "Cl2 and HCl" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Acid rain is caused by SO2 (from burning fossil fuels/volcanoes) and NO2 (from vehicle exhaust) dissolving in rainwater to form H2SO4 and HNO3. CO2 also contributes mildly forming H2CO3."
+      },
+      "navigation": { "next": "card_13_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_13_quiz2",
+      "card_slug": "card_13_quiz2",
+      "type": "quiz",
+      "concept_id": "chemical_reactions_nonmetals",
+      "level": 2,
+      "progress": { "current": 13, "total": 82 },
+      "quiz_payload": {
+        "question": "Which compound is primarily responsible for the bleaching and disinfecting action of chlorine water? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "HCl (Hydrochloric Acid)" },
+          { "id": "B", "text": "HOCl (Hypochlorous Acid)" },
+          { "id": "C", "text": "H2SO4" },
+          { "id": "D", "text": "NaOH" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "When Cl2 dissolves in water: Cl2 + H2O → HCl + HOCl. It is the HOCl (Hypochlorous acid) that is the active bleaching and disinfecting agent, used in swimming pools and water treatment."
+      },
+      "navigation": { "next": "card_14_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_14_quiz3",
+      "card_slug": "card_14_quiz3",
+      "type": "quiz",
+      "concept_id": "chemical_reactions_nonmetals",
+      "level": 2,
+      "progress": { "current": 14, "total": 82 },
+      "quiz_payload": {
+        "question": "The smell of rotten eggs is due to which gas produced by sulphur reacting with hydrogen? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "SO2 (Sulphur Dioxide)" },
+          { "id": "B", "text": "H2S (Hydrogen Sulphide)" },
+          { "id": "C", "text": "H2SO4 (Sulphuric Acid)" },
+          { "id": "D", "text": "SO3 (Sulphur Trioxide)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "H2S (Hydrogen Sulphide) is produced when sulphur reacts with hydrogen and is responsible for the characteristic smell of rotten eggs. S + H2 → H2S."
+      },
+      "navigation": { "next": "card_15_milestone2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_15_milestone2",
+      "card_slug": "card_15_milestone2",
+      "type": "milestone",
+      "concept_id": "chemical_reactions_nonmetals",
+      "level": 2,
+      "progress": { "current": 15, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "⚗️",
+        "completed_topic": "Chemical Reactions of Non-Metals",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/10 Clear",
+        "motivational_quote": "Chemical reactions clear! Ab Hydrogen - the lightest element ka rahasya kholte hain!"
+      },
+      "navigation": { "next": "card_16_hydrogen_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_16_hydrogen_intro",
+      "card_slug": "card_16_hydrogen_intro",
+      "type": "chat",
+      "concept_id": "hydrogen",
+      "level": 3,
+      "progress": { "current": 16, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab padhte hain [[Hydrogen | H, sabse halka element, symbol H, atomic number 1, universe me sabse zyada paaya jaane wala element]] ke baare me. Hydrogen ek non-metal hai, lekin iska placement periodic table me controversial hai - kuch jagah Group 1 (metals ke saath) rakhte hain kyunki iska ek valence electron hai, lekin ye metal bilkul nahi hai!" },
+        { "speaker": "raju", "text": "Hydrogen metals ke saath? Ye toh confusing hai sir, ye non-metal hai na?" },
+        { "speaker": "aman", "text": "Haan ye non-metal hai! Ye sirf placement ki baat hai kyunki hydrogen ka electronic configuration alkali metals jaisa lagta hai. Hydrogen universe me sabse zyada abundant element hai - sun aur sab stars basically hydrogen se hi bane hain aur hydrogen ka fusion hi unhe jalaye rakhta hai." },
+        { "speaker": "raju", "text": "Suraj me hydrogen jalta hai? Toh hydrogen ek bahut powerful element hai!" }
+      ],
+      "navigation": { "next": "card_17_hydrogen_isotopes", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_17_hydrogen_isotopes",
+      "card_slug": "card_17_hydrogen_isotopes",
+      "type": "chat",
+      "concept_id": "hydrogen",
+      "level": 3,
+      "progress": { "current": 17, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Hydrogen ke 3 [[Isotopes | Ek hi element ke alag-alag forms jinme protons same hote hain lekin neutrons alag hote hain]] hote hain - ye bahut important exam topic hai: [[Protium | H, hydrogen ka sabse common isotope, koi neutron nahi]] (H - no neutron, most common), [[Deuterium | 2H ya D, hydrogen ka isotope jisme ek neutron hai, heavy water banata hai]] (D - 1 neutron, heavy water banata hai), aur [[Tritium | 3H ya T, hydrogen ka radioactive isotope, 2 neutrons]] (T - 2 neutrons, radioactive)." },
+        { "speaker": "raju", "text": "Heavy water kya hoti hai sir? Normal paani se alag hai kya?" },
+        { "speaker": "aman", "text": "Haan! [[Heavy Water | D2O - deuterium aur oxygen se bana paani, nuclear reactors me moderator ke roop me use hota hai]] (D2O) me normal hydrogen ki jagah Deuterium hota hai - ye nuclear reactors me [[Moderator | Nuclear reactor me neutrons ki speed kam karne wala padarth]] ki tarah use hoti hai. India ka Rajasthan Atomic Power Station aur Kaiga nuclear plants heavy water use karte hain." },
+        { "speaker": "raju", "text": "Nuclear reactors me! Heavy water ka use wahan - ye toh important connection hai!" }
+      ],
+      "navigation": { "next": "card_18_hydrogen_preparation_uses", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_18_hydrogen_preparation_uses",
+      "card_slug": "card_18_hydrogen_preparation_uses",
+      "type": "chat",
+      "concept_id": "hydrogen",
+      "level": 3,
+      "progress": { "current": 18, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Hydrogen ke kuch important mixtures aur uses: [[Water Gas | CO + H2 ka mixture jo steam ko coke se guzaar kar banaya jaata hai, fuel ke roop me use hota hai]] (CO + H2) aur [[Syngas | CO aur H2 ka mixture jise synthetic fuel aur chemicals banane me use kiya jaata hai]] jo industry me bahut important hai. Hydrogen khud ek bahut clean fuel hai kyunki jalne par sirf paani banta hai!" },
+        { "speaker": "raju", "text": "Hydrogen jalane par sirf paani banta hai? Ye toh ekdum clean energy hai - pollution nahi!" },
+        { "speaker": "aman", "text": "Bilkul! Isliye [[Hydrogen Economy | Hydrogen ko fuel ki tarah use karne ki future energy system]] ki concept aajkal bahut popular hai. Uses: Ammonia banane me (Haber process), Vegetable oils ko solid fat (vanaspati) banane me [[Hydrogenation | Unsaturated fat me hydrogen milake saturated solid fat banana, vanaspati ghee aise banta hai]], Rocket fuel, aur Welding (Oxyhydrogen flame, 2800°C tak)." },
+        { "speaker": "raju", "text": "Vanaspati ghee hydrogen se banta hai! Ye toh bilkul nahi pata tha sir!" }
+      ],
+      "navigation": { "next": "card_19_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_19_quiz1",
+      "card_slug": "card_19_quiz1",
+      "type": "quiz",
+      "concept_id": "hydrogen",
+      "level": 3,
+      "progress": { "current": 19, "total": 82 },
+      "quiz_payload": {
+        "question": "Heavy water (D2O) is used in nuclear reactors as: (Q1/3)",
+        "options": [
+          { "id": "A", "text": "Coolant only" },
+          { "id": "B", "text": "Moderator (to slow down neutrons)" },
+          { "id": "C", "text": "Fuel" },
+          { "id": "D", "text": "Catalyst" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Heavy water (D2O) is used as a moderator in nuclear reactors to slow down fast neutrons, making them more effective in sustaining the fission chain reaction. It can also act as a coolant."
+      },
+      "navigation": { "next": "card_20_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_20_quiz2",
+      "card_slug": "card_20_quiz2",
+      "type": "quiz",
+      "concept_id": "hydrogen",
+      "level": 3,
+      "progress": { "current": 20, "total": 82 },
+      "quiz_payload": {
+        "question": "Which isotope of Hydrogen is radioactive? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "Protium (H)" },
+          { "id": "B", "text": "Deuterium (D)" },
+          { "id": "C", "text": "Tritium (T)" },
+          { "id": "D", "text": "None are radioactive" }
         ],
         "correct_option_id": "C",
-        "explanation": "The starch-iodine test produces a BLUE-BLACK color when iodine reacts with starch to form a complex. This is a highly sensitive test used to detect the presence of iodine or starch. It is a standard laboratory test taught in NCERT and frequently appears in NEET practicals and SSC exams."
+        "explanation": "Tritium (T or 3H) has 2 neutrons and is radioactive. Protium (no neutron) and Deuterium (1 neutron) are stable isotopes. Tritium is used in nuclear fusion reactions."
       },
-      "navigation": {
-        "next": "card_48_milestone_halogens",
-        "button_text": "Check Results ➔"
-      }
+      "navigation": { "next": "card_21_quiz3", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_48_milestone_halogens",
-      "card_slug": "card_48_milestone_halogens",
-      "type": "milestone",
-      "concept_id": "halogens_complete",
-      "level": 6,
-      "progress": {
-        "current": 48,
-        "total": 72
-      },
-      "milestone_payload": {
-        "title": "Halogens Master! 🧪",
-        "badge_emoji": "💚",
-        "completed_topic": "Halogens - F, Cl, Br, I",
-        "xp_earned": 50,
-        "milestone_progress": "Module 6/8 Clear",
-        "motivational_quote": "Reactive halogens ko conquer kar liya! Ab noble gases - inert group ko samajhte hain!"
-      },
-      "navigation": {
-        "next": "card_49_noble_gases_intro",
-        "button_text": "Start Noble Gases Module ➔"
-      }
-    },
-    {
-      "card_id": "card_49_noble_gases_intro",
-      "card_slug": "card_49_noble_gases_intro",
-      "type": "chat",
-      "concept_id": "noble_gases_basics",
-      "level": 7,
-      "progress": {
-        "current": 49,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Noble Gases - Group 18 elements! 'Noble' kyunki ye doosre elements ke saath mix nahi hote (jaise royalty common people se nahi milti - isliye naam!). Members: Helium (He), Neon (Ne), Argon (Ar), Krypton (Kr), Xenon (Xe), Radon (Rn - radioactive). Sabke outermost shell completely filled hain - OCTET RULE satisfy karte hain (except Helium jo duplet hai)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir isliye ye react nahi karte - stable configuration hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Perfect! Isliye inhein 'inert gases' bhi kehte the. Lekin ab pata chala ki kuch noble gases react kar sakte hain under extreme conditions - Xenon ke compounds bante hain (XeF₂, XeF₄, XeF₆). Neil Bartlett ne 1962 mein pehla noble gas compound XePtF₆ banaya - ye chemistry mein revolutionary tha! Toh ab 'noble' prefer karte hain 'inert' se zyada."
-        },
-        {
-          "speaker": "raju",
-          "text": "Noble gases bhi react kar sakte hain? Interesting twist!"
-        }
-      ],
-      "navigation": {
-        "next": "card_50_helium_neon",
-        "button_text": "Helium & Neon ➔"
-      }
-    },
-    {
-      "card_id": "card_50_helium_neon",
-      "card_slug": "card_50_helium_neon",
-      "type": "chat",
-      "concept_id": "helium_neon_properties",
-      "level": 7,
-      "progress": {
-        "current": 50,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "HELIUM (He) - Greek 'Helios' (Sun) se naam, kyunki pehle Sun ke spectrum mein discover hua 1868 mein by Pierre Janssen during solar eclipse, Sir Norman Lockyer ne identify kiya. Earth pe William Ramsay ne 1895 mein discover kiya. Lightest noble gas, non-flammable, used in balloons, airships, deep-sea diving (with oxygen), cryogenics (liquid helium for superconductors)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir hydrogen balloons mein kyun nahi use karte?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Kyunki hydrogen flammable hai - Hindenburg disaster 1937 mein hydrogen airship explode ho gaya tha. Helium non-flammable hai, isliye safe hai balloons ke liye. NEON (Ne) - Greek 'Neos' (new) se naam. William Ramsay aur Morris Travers ne 1898 mein discover kiya. Glowing red-orange discharge tubes mein use hota hai - neon signs/lights! Advertising ke liye famous hai."
-        },
-        {
-          "speaker": "raju",
-          "text": "Neon lights! Toh wo red glow neon gas ki wajah se hai!"
-        }
-      ],
-      "navigation": {
-        "next": "card_51_argon_others",
-        "button_text": "Argon & Other Noble Gases ➔"
-      }
-    },
-    {
-      "card_id": "card_51_argon_others",
-      "card_slug": "card_51_argon_others",
-      "type": "chat",
-      "concept_id": "argon_krypton_xenon",
-      "level": 7,
-      "progress": {
-        "current": 51,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "ARGON (Ar) - Greek 'Argos' (lazy/inactive). Atmosphere mein 0.93% present hai - noble gases mein sabse abundant! Lord Rayleigh aur William Ramsay ne 1894 mein discover kiya (Nobel Prize 1904). Uses: Inert atmosphere in welding, light bulbs filling, semiconductors. KRYPTON (Kr) & XENON (Xe) - Greek 'Kryptos' (hidden) aur 'Xenos' (stranger). High-intensity lamps, flash photography, anaesthesia mein use."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir radon ka kya use hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "RADON (Rn) - radioactive noble gas, naturally occurring from uranium decay. Cancer treatment mein limited use tha pehle, lekin ab mostly avoided kyunki carcinogenic hai (cancer cause kar sakta hai). Radon gas accumulation basements mein health hazard hai. Ye unique hai kyunki radioactive hai. Discovery: Friedrich Ernst Dorn ne 1900 mein kiya."
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh radon dangerous hai par baaki noble gases safe hain!"
-        }
-      ],
-      "navigation": {
-        "next": "card_52_noble_gas_uses",
-        "button_text": "Applications summary ➔"
-      }
-    },
-    {
-      "card_id": "card_52_noble_gas_uses",
-      "card_slug": "card_52_noble_gas_uses",
-      "type": "chat",
-      "concept_id": "noble_gas_applications",
-      "level": 7,
-      "progress": {
-        "current": 52,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Noble gases ke uses summary: HELIUM - balloons, airships, diving gas mixture, MRI cooling, voice alteration (funny voice!). NEON - advertising signs, neon lamps. ARGON - welding shield, light bulb filling, preserve historical documents. KRYPTON - high-performance light bulbs, lasers. XENON - photographic flash, anaesthesia, ion propulsion (space). RADON - limited medical use (avoided now)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir helium se awaaz funny kyun ho jaati hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Kyunki helium bahut light hai (kam dense hai air se). Sound waves helium mein fast travel karte hain, vocal cord vibrations ka frequency change ho jaata hai - high-pitched sound nikalti hai! Lekin dangerous bhi hai - pure helium breathe karne se oxygen deficiency ho sakti hai. Fun experiment hai but safely karna chahiye!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Physics aur chemistry dono involved hain isme!"
-        }
-      ],
-      "navigation": {
-        "next": "card_53_quiz_noble_1",
-        "button_text": "Test Noble Gases ➔"
-      }
-    },
-    {
-      "card_id": "card_53_quiz_noble_1",
-      "card_slug": "card_53_quiz_noble_1",
+      "card_id": "card_21_quiz3",
+      "card_slug": "card_21_quiz3",
       "type": "quiz",
-      "concept_id": "noble_gases_quiz_1",
-      "level": 7,
-      "progress": {
-        "current": 53,
-        "total": 72
-      },
+      "concept_id": "hydrogen",
+      "level": 3,
+      "progress": { "current": 21, "total": 82 },
       "quiz_payload": {
-        "question": "Which noble gas is most abundant in Earth's atmosphere?",
+        "question": "The process of converting liquid vegetable oil into solid vanaspati ghee uses which gas? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Oxygen" },
+          { "id": "B", "text": "Nitrogen" },
+          { "id": "C", "text": "Hydrogen" },
+          { "id": "D", "text": "Chlorine" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Hydrogenation - Hydrogen gas is passed through liquid vegetable oil at high temperature and pressure in the presence of a Nickel catalyst, converting unsaturated fats into solid saturated fats (vanaspati ghee)."
+      },
+      "navigation": { "next": "card_22_milestone3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_22_milestone3",
+      "card_slug": "card_22_milestone3",
+      "type": "milestone",
+      "concept_id": "hydrogen",
+      "level": 3,
+      "progress": { "current": 22, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💧",
+        "completed_topic": "Hydrogen - Isotopes & Uses",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/10 Clear",
+        "motivational_quote": "Hydrogen master ho gaye! Ab hum saans lete hain Oxygen - next module!"
+      },
+      "navigation": { "next": "card_23_oxygen_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_23_oxygen_intro",
+      "card_slug": "card_23_oxygen_intro",
+      "type": "chat",
+      "concept_id": "oxygen",
+      "level": 4,
+      "progress": { "current": 23, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab sabse familiar non-metal - [[Oxygen | O2, ek colorless, odourless gas jo saans lene ke liye zaroori hai, Earth's atmosphere ka 21% hissa]] ki baat karte hain. Oxygen Earth's crust me sabse abundant element hai (46% by mass)! Aur atmosphere me 21% volume hai." },
+        { "speaker": "raju", "text": "Sir 21% atmosphere me hai - toh baki 79% kya hai?" },
+        { "speaker": "aman", "text": "Nitrogen! N2 - 78% atmosphere. Ye yaad rakhna bahut zaroori hai - O2 21%, N2 78%, baaki sab milake ~1% (Argon, CO2, etc.). Oxygen ke do important [[Allotropes | Ek hi element ke alag-alag physical forms jinke properties alag hote hain]] hain: O2 (diatomic, jo hum saans lete hain) aur [[Ozone | O3, oxygen ka teesra allotrope, UV rays absorb karta hai stratosphere me]] (O3)." },
+        { "speaker": "raju", "text": "Ozone! Ozone layer ka naam suna hai - stratosphere me hota hai na?" }
+      ],
+      "navigation": { "next": "card_24_ozone_layer", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_24_ozone_layer",
+      "card_slug": "card_24_ozone_layer",
+      "type": "chat",
+      "concept_id": "oxygen",
+      "level": 4,
+      "progress": { "current": 24, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul sahi! [[Stratosphere | Atmosphere ki wo paart jo 12-50 km upar hoti hai, jahan ozone layer hoti hai]] me 15-35 km ki unchaai par ozone layer hai jo [[UV Rays | Ultraviolet radiation - suraj se aane wali haankaarak kiranen jo skin cancer aur cataract ka karan ban sakti hain]] ko rokti hai. Lekin ozone layer ab theek nahi hai." },
+        { "speaker": "raju", "text": "Sir ozone layer kyun kharaab ho rahi hai?" },
+        { "speaker": "aman", "text": "[[CFC | Chloro Fluoro Carbons - refrigerators aur AC me use hone wala chemical jo ozone layer tod deta hai]] (Chloro Fluoro Carbons) - fridge, AC, spray cans me use hone wala chemical - ozone ko tod deta hai: CFC + UV → Cl* (radical), phir Cl* + O3 → ClO + O2 (chain reaction se ozone khatam hoti hai)." },
+        { "speaker": "raju", "text": "Hamare ghar ka fridge bhi ozone tod raha hai? Ye toh serious problem hai!" }
+      ],
+      "navigation": { "next": "card_25_ozone_uses_guess", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_25_ozone_uses_guess",
+      "card_slug": "card_25_ozone_uses_guess",
+      "type": "guess",
+      "concept_id": "oxygen",
+      "level": 4,
+      "progress": { "current": 25, "total": 82 },
+      "guess_payload": {
+        "question": "Ozone stratosphere me achha hai UV se bachata hai, lekin ground level ozone bhi hota hai. Kya ground level ozone faydemand hota hai?",
+        "options": [
+          { "id": "A", "text": "Haan, ground level bhi faydemand hai" },
+          { "id": "B", "text": "Nahi, ground level ozone ek pollutant hai jo naak, gala kharab karta hai" },
+          { "id": "C", "text": "Ground level ozone exist nahi karta" },
+          { "id": "D", "text": "Ground level ozone CO2 absorb karta hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Ozone at ground level (troposphere) is a pollutant and a major component of photochemical smog. It irritates the respiratory system. Only stratospheric ozone is protective. 'Good up high, bad nearby' is the standard rule."
+      },
+      "navigation": { "next": "card_26_quiz1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_26_quiz1",
+      "card_slug": "card_26_quiz1",
+      "type": "quiz",
+      "concept_id": "oxygen",
+      "level": 4,
+      "progress": { "current": 26, "total": 82 },
+      "quiz_payload": {
+        "question": "Percentage of Oxygen and Nitrogen in Earth's atmosphere respectively is: (Q1/3)",
+        "options": [
+          { "id": "A", "text": "O2: 78%, N2: 21%" },
+          { "id": "B", "text": "O2: 21%, N2: 78%" },
+          { "id": "C", "text": "O2: 50%, N2: 48%" },
+          { "id": "D", "text": "O2: 30%, N2: 65%" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Earth's atmosphere: N2 = 78%, O2 = 21%, Ar = ~0.9%, CO2 = ~0.04%, and trace amounts of other gases. This is one of the most frequently tested facts in SSC and Railway exams."
+      },
+      "navigation": { "next": "card_27_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_27_quiz2",
+      "card_slug": "card_27_quiz2",
+      "type": "quiz",
+      "concept_id": "oxygen",
+      "level": 4,
+      "progress": { "current": 27, "total": 82 },
+      "quiz_payload": {
+        "question": "Ozone layer depletion is mainly caused by which chemical compounds? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "Carbon dioxide (CO2)" },
+          { "id": "B", "text": "Chlorofluorocarbons (CFCs)" },
+          { "id": "C", "text": "Methane (CH4)" },
+          { "id": "D", "text": "Sulphur dioxide (SO2)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "CFCs (Chlorofluorocarbons) used in refrigerators, ACs, and aerosol sprays are the main cause of ozone depletion. CFC molecules release chlorine radicals in the stratosphere that destroy ozone in a chain reaction."
+      },
+      "navigation": { "next": "card_28_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_28_quiz3",
+      "card_slug": "card_28_quiz3",
+      "type": "quiz",
+      "concept_id": "oxygen",
+      "level": 4,
+      "progress": { "current": 28, "total": 82 },
+      "quiz_payload": {
+        "question": "Ozone (O3) and Oxygen (O2) are allotropes of the same element. Assertion: Ground level ozone is a harmful pollutant. Reason: Ozone at all levels is equally harmful. (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Both A and R true, R explains A" },
+          { "id": "B", "text": "A is true, R is false" },
+          { "id": "C", "text": "A is false, R is true" },
+          { "id": "D", "text": "Both false" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Assertion is correct - ground level ozone IS a harmful pollutant causing respiratory issues. Reason is WRONG - stratospheric ozone is BENEFICIAL as it absorbs harmful UV radiation. Hence A is true but R is false."
+      },
+      "navigation": { "next": "card_29_milestone4", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_29_milestone4",
+      "card_slug": "card_29_milestone4",
+      "type": "milestone",
+      "concept_id": "oxygen",
+      "level": 4,
+      "progress": { "current": 29, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌍",
+        "completed_topic": "Oxygen & Ozone Layer",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/10 Clear",
+        "motivational_quote": "Oxygen aur Ozone clear! Ab sabse versatile non-metal - Carbon ki duniya dekhte hain!"
+      },
+      "navigation": { "next": "card_30_carbon_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_30_carbon_intro",
+      "card_slug": "card_30_carbon_intro",
+      "type": "chat",
+      "concept_id": "carbon",
+      "level": 5,
+      "progress": { "current": 30, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, ek sawal - duniya ka sabse hard padarth aur ek bahut achha lubricant - dono ek hi element se bane hain. Soch sakte ho kaun hai wo element?" },
+        { "speaker": "raju", "text": "Ek hi element se itne alag cheezein? Mujhe koi idea nahi sir!" },
+        { "speaker": "aman", "text": "[[Carbon | C, atomic number 6, ek versatile non-metal jiska allotropy bahut famous hai - diamond, graphite, fullerene]] - ek hi element ke itne alag forms! Ise [[Allotropy | Ek hi element ke alag-alag physical forms jinke properties kaafi alag hote hain]] ka best example kehte hain. Carbon ke teen main allotropes hain: Diamond, Graphite, aur Fullerene." },
+        { "speaker": "raju", "text": "Diamond aur Graphite dono Carbon! Ek bahut hard, ek pencil me use hota hai - zabardast difference hai!" }
+      ],
+      "navigation": { "next": "card_31_diamond_properties", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_31_diamond_properties",
+      "card_slug": "card_31_diamond_properties",
+      "type": "chat",
+      "concept_id": "carbon",
+      "level": 5,
+      "progress": { "current": 31, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "[[Diamond | Carbon ka allotrope jisme har carbon 4 dusre carbons se tetrahedrally juda hai, sabse hard natural padarth, bijli conduct nahi karta]] me har carbon atom 4 dusre carbon atoms se [[Covalent Bond | Do atoms ke beech electrons share karne se bana bahut strong band]] se juda hai - ye 3D [[Tetrahedral | Char sides wali pyramid jaisi 3D structure]] structure banata hai. Isliye: Sabse hard natural substance, Very high melting point, Does NOT conduct electricity." },
+        { "speaker": "raju", "text": "Hard kyunki 3D structure hai - sab directions me strong bonds hain!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Diamond ke uses: Cutting tools (diamond cutter - kisi bhi cheez ko kat sakta hai), Jewellery (obviously!), Abrasive (grinding me). Ek interesting fact - [[Synthetic Diamond | Lab me banaya gaya diamond, asli diamond jaisi properties]] bhi ban sakta hai lab me by exposing graphite to very high temperature and pressure - ye BPSC me poocha jaata hai." },
+        { "speaker": "raju", "text": "Lab me bhi diamond ban sakta hai! Asli aur nakli me farak kaise pata chalega?" }
+      ],
+      "navigation": { "next": "card_32_graphite_fullerene", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_32_graphite_fullerene",
+      "card_slug": "card_32_graphite_fullerene",
+      "type": "chat",
+      "concept_id": "carbon",
+      "level": 5,
+      "progress": { "current": 32, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Graphite - yahan har carbon sirf 3 dusre carbons se juda hai - ye [[Hexagonal | Chhah-koni shape]] layers banata hai jo ek dusre par bich ke beech weak [[Van der Waals Forces | Molecules ke beech ki kamzor attraction forces]] se tikki hain. 4th electron free hai - isliye bijli conduct hoti hai, aur layers aasani se fisal sakti hain - isliye lubricant aur pencil me kaam aata hai." },
+        { "speaker": "raju", "text": "Graphite me layers hain jo fisal sakti hain - isiliye pencil likhti hai, layers kaagaz par chipakti hain!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Ab teesra allotrope - [[Fullerene | Carbon ka ek allotrope jo football jaisi spherical ya tubular shape me hota hai, C60 sabse famous hai]] - C60 (Buckminsterfullerene ya Buckyball) - football jaisi shape! 1985 me discover hua, Nobel Prize 1996 me mila. [[Carbon Nanotubes | Graphite ki sheet ko cylindrically roll karne par bana hollow tube, bahut strong aur conductor]] bhi hain - nanotechnology me revolutionary." },
+        { "speaker": "raju", "text": "Football wala carbon! C60 aur Nobel Prize 1996 - ye note kar liya sir!" }
+      ],
+      "navigation": { "next": "card_33_carbon_compounds_guess", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_33_carbon_compounds_guess",
+      "card_slug": "card_33_carbon_compounds_guess",
+      "type": "guess",
+      "concept_id": "carbon",
+      "level": 5,
+      "progress": { "current": 33, "total": 82 },
+      "guess_payload": {
+        "question": "Graphite use kiya jaata hai as lubricant. Lekin agar koi high-temperature machinery me lubricant chahiye jahan oil kaam na kare, toh graphite kyun better option hai?",
+        "options": [
+          { "id": "A", "text": "Kyunki graphite liquid ban jaata hai" },
+          { "id": "B", "text": "Kyunki graphite ka melting point bahut zyada hai, oil jal jaata hai lekin graphite nahi" },
+          { "id": "C", "text": "Graphite machinery me react karta hai" },
+          { "id": "D", "text": "Graphite sasta hai" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Graphite has an extremely high melting point (about 3500°C), so it remains solid and effective as a dry lubricant even at very high temperatures where oils would burn or vaporize. This makes it ideal as a high-temperature lubricant."
+      },
+      "navigation": { "next": "card_34_quiz1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_34_quiz1",
+      "card_slug": "card_34_quiz1",
+      "type": "quiz",
+      "concept_id": "carbon",
+      "level": 5,
+      "progress": { "current": 34, "total": 82 },
+      "quiz_payload": {
+        "question": "In Diamond, each carbon atom is bonded to how many other carbon atoms? (Q1/3)",
+        "options": [
+          { "id": "A", "text": "2" },
+          { "id": "B", "text": "3" },
+          { "id": "C", "text": "4" },
+          { "id": "D", "text": "6" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "In diamond, each carbon atom forms 4 covalent bonds with 4 other carbon atoms in a tetrahedral arrangement. This rigid 3D network structure makes diamond the hardest natural substance."
+      },
+      "navigation": { "next": "card_35_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_35_quiz2",
+      "card_slug": "card_35_quiz2",
+      "type": "quiz",
+      "concept_id": "carbon",
+      "level": 5,
+      "progress": { "current": 35, "total": 82 },
+      "quiz_payload": {
+        "question": "C60 (Buckminsterfullerene) was discovered in which year and received Nobel Prize in which year? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "Discovered 1985, Nobel Prize 1996" },
+          { "id": "B", "text": "Discovered 1990, Nobel Prize 2000" },
+          { "id": "C", "text": "Discovered 1985, Nobel Prize 1990" },
+          { "id": "D", "text": "Discovered 1980, Nobel Prize 1996" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Buckminsterfullerene (C60) was discovered in 1985 by Harold Kroto, Robert Curl, and Richard Smalley, for which they received the Nobel Prize in Chemistry in 1996."
+      },
+      "navigation": { "next": "card_36_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_36_quiz3",
+      "card_slug": "card_36_quiz3",
+      "type": "quiz",
+      "concept_id": "carbon",
+      "level": 5,
+      "progress": { "current": 36, "total": 82 },
+      "quiz_payload": {
+        "question": "Statement 1: Diamond does not conduct electricity because it has no free electrons. Statement 2: Graphite conducts electricity because it has one free electron per carbon atom. Which is correct? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both are correct" },
+          { "id": "D", "text": "Neither" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Both are correct. In diamond, all 4 valence electrons are used in covalent bonding, leaving no free electrons for conduction. In graphite, each carbon uses only 3 electrons in bonding, leaving 1 free electron that conducts electricity."
+      },
+      "navigation": { "next": "card_37_milestone5", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_37_milestone5",
+      "card_slug": "card_37_milestone5",
+      "type": "milestone",
+      "concept_id": "carbon",
+      "level": 5,
+      "progress": { "current": 37, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "💎",
+        "completed_topic": "Carbon & Its Allotropes",
+        "xp_earned": 50,
+        "milestone_progress": "Module 5/10 Clear",
+        "motivational_quote": "Carbon ka poora chakkar samajh gaye! Ab fasal badhane wala element - Nitrogen dekhte hain!"
+      },
+      "navigation": { "next": "card_38_nitrogen_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_38_nitrogen_intro",
+      "card_slug": "card_38_nitrogen_intro",
+      "type": "chat",
+      "concept_id": "nitrogen",
+      "level": 6,
+      "progress": { "current": 38, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, jab kisi ki fasal achhi nahi hoti toh wo kya deta hai khet me?" },
+        { "speaker": "raju", "text": "Urea ya khad dete hain sir - DAP wala! Gaon me bahut dete hain khet me." },
+        { "speaker": "aman", "text": "Bilkul! Aur un khado me sabse important element hai [[Nitrogen | N2, atmosphere ka 78% hissa, plants ke liye sabse zaroori element, protein banata hai]] - ye atmosphere me sabse zyada (78%) hai! Lekin paradox ye hai ki plants seedha N2 gas nahi le sakti - unhe usable form chahiye." },
+        { "speaker": "raju", "text": "Itna nitrogen hawa me hai phir bhi plants use nahi kar sakte? Ye toh ironic hai!" }
+      ],
+      "navigation": { "next": "card_39_nitrogen_fixation", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_39_nitrogen_fixation",
+      "card_slug": "card_39_nitrogen_fixation",
+      "type": "chat",
+      "concept_id": "nitrogen",
+      "level": 6,
+      "progress": { "current": 39, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Bilkul ironic hai! Isliye hota hai [[Nitrogen Fixation | N2 gas ko usable compounds (NH3, NO3-) me convert karna]] - N2 ko usable form me convert karna. Ye hota hai 3 ways se: Natural (lightning), Biological ([[Rhizobium | Leguminous plants ki jadon me rehne wala bacteria jo N2 ko fix karta hai]] bacteria - dalon ki jadon me), aur Industrial (Haber Process)." },
+        { "speaker": "raju", "text": "Bijli girne se bhi nitrogen fix hoti hai? Aur bacteria bhi karte hain? Interesting!" },
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: Rhizobium bacteria dalon (legumes - arhar, chana, moong, matar) ki jadon me rehte hain aur N2 ko ammonia me convert karte hain - ise [[Symbiotic Relationship | Aisa rishta jisme dono partners ko fayda ho]] kehte hain. Isliye dalon ki kheti karne ke baad us khet me N content badh jaati hai - ye [[Crop Rotation | Ek hi khet me baari-baari alag faslen ugana]] ka ek fayda hai." },
+        { "speaker": "raju", "text": "Bihar me arhar aur chana bahut hote hain - ab samajh aaya kyon ye mitti ke liye achhe hote hain!" }
+      ],
+      "navigation": { "next": "card_40_haber_process", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_40_haber_process",
+      "card_slug": "card_40_haber_process",
+      "type": "chat",
+      "concept_id": "nitrogen",
+      "level": 6,
+      "progress": { "current": 40, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab industrial method - [[Haber Process | N2 aur H2 ko milake ammonia banane ki industrial vidhi, Fritz Haber ne 1909 me develop ki, iron catalyst use hota hai]] Fritz Haber ne 1909 me develop kiya tha. Conditions: N2 + 3H2 ⇌ 2NH3, Temperature: 400-500°C, Pressure: 150-300 atm, Catalyst: Iron (Fe) with K2O and Al2O3 promoters." },
+        { "speaker": "raju", "text": "Fritz Haber 1909 - ye naam aur year yaad karna padega sir!" },
+        { "speaker": "aman", "text": "Haan! Haber Process se bana NH3 (Ammonia) hi fertilizers ka base hai - Urea (NH2CONH2) aur Ammonium Sulphate. ⭐ BPSC TRE Favorite: Bihar me [[Sindri Fertilizer Factory | Jharkhand ke Sindri me 1951 me bana India ka pehla bada fertilizer plant]] (ab Jharkhand me, pehle Bihar ka hissa) aur Barauni Fertilizer plant Bihar me famous hain." },
+        { "speaker": "raju", "text": "Barauni! Ye toh Bihar me hi hai! Fertilizer plant wahan se khad aati hai!" }
+      ],
+      "navigation": { "next": "card_41_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_41_quiz1",
+      "card_slug": "card_41_quiz1",
+      "type": "quiz",
+      "concept_id": "nitrogen",
+      "level": 6,
+      "progress": { "current": 41, "total": 82 },
+      "quiz_payload": {
+        "question": "The Haber Process is used to manufacture which compound, and what catalyst is used? (Q1/3)",
+        "options": [
+          { "id": "A", "text": "Nitric acid, Platinum catalyst" },
+          { "id": "B", "text": "Ammonia (NH3), Iron (Fe) catalyst" },
+          { "id": "C", "text": "Urea, Aluminium catalyst" },
+          { "id": "D", "text": "Ammonium sulphate, Nickel catalyst" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Haber Process: N2 + 3H2 ⇌ 2NH3 at 400-500°C, 150-300 atm pressure, using Iron (Fe) catalyst with K2O and Al2O3 as promoters. Developed by Fritz Haber in 1909."
+      },
+      "navigation": { "next": "card_42_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_42_quiz2",
+      "card_slug": "card_42_quiz2",
+      "type": "quiz",
+      "concept_id": "nitrogen",
+      "level": 6,
+      "progress": { "current": 42, "total": 82 },
+      "quiz_payload": {
+        "question": "Which bacteria living in root nodules of leguminous plants help in nitrogen fixation? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "E. coli" },
+          { "id": "B", "text": "Rhizobium" },
+          { "id": "C", "text": "Lactobacillus" },
+          { "id": "D", "text": "Clostridium" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Rhizobium bacteria live in root nodules of leguminous plants (like peas, beans, lentils) in a symbiotic relationship. They convert atmospheric N2 into ammonia (NH3) which the plant can use."
+      },
+      "navigation": { "next": "card_43_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_43_quiz3",
+      "card_slug": "card_43_quiz3",
+      "type": "quiz",
+      "concept_id": "nitrogen",
+      "level": 6,
+      "progress": { "current": 43, "total": 82 },
+      "quiz_payload": {
+        "question": "Statement 1: Nitrogen constitutes about 78% of Earth's atmosphere. Statement 2: Plants can directly absorb N2 gas from the air through leaves. Which is correct? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both" },
+          { "id": "D", "text": "Neither" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 1 is correct - N2 is 78% of atmosphere. Statement 2 is WRONG - plants CANNOT directly absorb N2 gas. They require nitrogen in fixed forms (NH4+ or NO3-) absorbed through roots. This is why nitrogen fixation is so essential."
+      },
+      "navigation": { "next": "card_44_milestone6", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_44_milestone6",
+      "card_slug": "card_44_milestone6",
+      "type": "milestone",
+      "concept_id": "nitrogen",
+      "level": 6,
+      "progress": { "current": 44, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🌾",
+        "completed_topic": "Nitrogen & Haber Process",
+        "xp_earned": 50,
+        "milestone_progress": "Module 6/10 Clear",
+        "motivational_quote": "Nitrogen aur farming connection samajh gaye! Ab Sulphur ka Chemistry dekhte hain!"
+      },
+      "navigation": { "next": "card_45_sulphur_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_45_sulphur_intro",
+      "card_slug": "card_45_sulphur_intro",
+      "type": "chat",
+      "concept_id": "sulphur",
+      "level": 7,
+      "progress": { "current": 45, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab baat karte hain [[Sulphur | S, ek peela solid non-metal jisme allotropy hoti hai, hawa me SO2 banakar jalti hai]] ki. Sulphur ko 'brimstone' bhi kehte hain (purana naam). Sulphur ke do main allotropes hain: [[Rhombic Sulphur | Sulphur ka stable room temperature allotrope, peela, diamond jaisi shape]] (room temperature par stable) aur [[Monoclinic Sulphur | Sulphur ka allotrope jo 96°C se upar stable hota hai]] (96°C se upar stable)." },
+        { "speaker": "raju", "text": "Sulphur ke bhi allotropes hain, carbon jaisi! Kya ye bhi conduct karte hain?" },
+        { "speaker": "aman", "text": "Nahi! Sulphur ke dono allotropes poor conductors hain. Aur ek interesting property - 96°C ko sulphur ka [[Transition Temperature | Wo temperature jis par ek allotrope doosre allotrope me convert hota hai]] kehte hain jahan rhombic monoclinic me convert hota hai. Sulphur paani me nahi ghulta, lekin carbon disulphide me ghulta hai." },
+        { "speaker": "raju", "text": "Sulphur ka transition temperature 96°C - ye fact pakka exam me aayega!" }
+      ],
+      "navigation": { "next": "card_46_h2so4_contact", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_46_h2so4_contact",
+      "card_slug": "card_46_h2so4_contact",
+      "type": "chat",
+      "concept_id": "sulphur",
+      "level": 7,
+      "progress": { "current": 46, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Sulphur ka sabse important use hai H2SO4 (Sulphuric Acid) banane me - jise 'King of Chemicals' ya 'Oil of Vitriol' bhi kehte hain. Ye [[Contact Process | H2SO4 banane ki industrial vidhi jisme SO3 banakar H2SO4 bana jaata hai, Vanadium Pentoxide catalyst use hota hai]] se banaya jaata hai." },
+        { "speaker": "raju", "text": "'King of Chemicals' - matlab H2SO4 sabse important acid hai industry me?" },
+        { "speaker": "aman", "text": "Bilkul! Contact Process ke steps: S → SO2 (sulphur jalane par), SO2 + O2 → SO3 ([[Vanadium Pentoxide | V2O5, contact process me catalyst, 450°C par kaam karta hai]] catalyst - V2O5, 450°C), phir SO3 + H2SO4 → [[Oleum | H2S2O7, SO3 aur H2SO4 ka reaction product, fir paani se dilute karke H2SO4 banta hai]] (Oleum/Fuming H2SO4), phir Oleum + H2O → H2SO4." },
+        { "speaker": "raju", "text": "Itne saare steps! V2O5 catalyst hai - Contact Process ka catalyst V2O5 yaad kar liya!" }
+      ],
+      "navigation": { "next": "card_47_h2so4_uses", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_47_h2so4_uses",
+      "card_slug": "card_47_h2so4_uses",
+      "type": "chat",
+      "concept_id": "sulphur",
+      "level": 7,
+      "progress": { "current": 47, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "H2SO4 ke uses: Lead acid batteries (car batteries!), Fertilizers (superphosphate), Detergents, Dyes, Drugs. Ek important property - concentrated H2SO4 ek powerful [[Dehydrating Agent | Jo paani kheench leta hai ya paani ki jagah le leta hai]] hai - ye paper ya wood ko blacken kar deta hai kyunki unse paani kheench leta hai." },
+        { "speaker": "raju", "text": "Car ki battery me H2SO4! Aur dehydrating agent bhi - paper ko blacken kar deta hai!" },
+        { "speaker": "aman", "text": "Aur ek important BPSC fact - H2SO4 ko paani se dilute karte time hamesha [[Acid Into Water | H2SO4 dilute karte time hamesha acid ko water me milao, kabhi paani ko acid me mat dalo]] karein - pehle paani lo, phir dhheere-dhheere acid milo. Ulta karne par itni garmi nikalni hai ki solution ubal sakta hai aur acid splash ho sakta hai!" },
+        { "speaker": "raju", "text": "Acid into water, kabhi water into acid nahi - safety rule hai ye!" }
+      ],
+      "navigation": { "next": "card_48_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_48_quiz1",
+      "card_slug": "card_48_quiz1",
+      "type": "quiz",
+      "concept_id": "sulphur",
+      "level": 7,
+      "progress": { "current": 48, "total": 82 },
+      "quiz_payload": {
+        "question": "The catalyst used in the Contact Process for manufacturing Sulphuric Acid is: (Q1/3)",
+        "options": [
+          { "id": "A", "text": "Iron (Fe)" },
+          { "id": "B", "text": "Nickel (Ni)" },
+          { "id": "C", "text": "Platinum (Pt)" },
+          { "id": "D", "text": "Vanadium Pentoxide (V2O5)" }
+        ],
+        "correct_option_id": "D",
+        "explanation": "In the Contact Process: SO2 + ½O2 → SO3 is catalysed by Vanadium Pentoxide (V2O5) at about 450°C. Note: Platinum was the older catalyst (Chamber Process), but V2O5 replaced it in the modern Contact Process."
+      },
+      "navigation": { "next": "card_49_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_49_quiz2",
+      "card_slug": "card_49_quiz2",
+      "type": "quiz",
+      "concept_id": "sulphur",
+      "level": 7,
+      "progress": { "current": 49, "total": 82 },
+      "quiz_payload": {
+        "question": "H2SO4 is called 'King of Chemicals'. Its most important industrial use is in: (Q2/3)",
+        "options": [
+          { "id": "A", "text": "Drinking water treatment" },
+          { "id": "B", "text": "Lead-acid batteries and fertilizer manufacturing" },
+          { "id": "C", "text": "Making common salt" },
+          { "id": "D", "text": "Food preservation" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "H2SO4's major industrial uses are: Lead-acid batteries (car batteries), manufacturing fertilizers (superphosphate), dyes, drugs, detergents, and as a dehydrating and oxidising agent."
+      },
+      "navigation": { "next": "card_50_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_50_quiz3",
+      "card_slug": "card_50_quiz3",
+      "type": "quiz",
+      "concept_id": "sulphur",
+      "level": 7,
+      "progress": { "current": 50, "total": 82 },
+      "quiz_payload": {
+        "question": "The transition temperature of Sulphur (where rhombic converts to monoclinic) is: (Q3/3)",
+        "options": [
+          { "id": "A", "text": "119°C" },
+          { "id": "B", "text": "96°C" },
+          { "id": "C", "text": "44°C" },
+          { "id": "D", "text": "200°C" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "The transition temperature of Sulphur is 96°C. Below 96°C, rhombic sulphur is the stable allotrope. Above 96°C, monoclinic sulphur becomes stable. Both allotropes exist at exactly 96°C."
+      },
+      "navigation": { "next": "card_51_milestone7", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_51_milestone7",
+      "card_slug": "card_51_milestone7",
+      "type": "milestone",
+      "concept_id": "sulphur",
+      "level": 7,
+      "progress": { "current": 51, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🔥",
+        "completed_topic": "Sulphur & H2SO4",
+        "xp_earned": 50,
+        "milestone_progress": "Module 7/10 Clear",
+        "motivational_quote": "H2SO4 ka King of Chemicals clear! Ab Phosphorus aur Halogens dekhte hain!"
+      },
+      "navigation": { "next": "card_52_phosphorus_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_52_phosphorus_intro",
+      "card_slug": "card_52_phosphorus_intro",
+      "type": "chat",
+      "concept_id": "phosphorus_halogens",
+      "level": 8,
+      "progress": { "current": 52, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab ek aur important non-metal - [[Phosphorus | P, ek non-metal jiske do main allotropes hain - white aur red phosphorus]] - jo fertilizers aur matches me use hota hai. Phosphorus ke do main allotropes: [[White Phosphorus | P4 form, bahut reactive, waxy solid, dark me glow karta hai, zeherela hai]] aur [[Red Phosphorus | Polymer form, zyada stable, safety matches me use hota hai, zeherela nahi]] - inme fark yaad rakhna bahut zaroori hai." },
+        { "speaker": "raju", "text": "White aur Red phosphorus dono ek hi element hai? White glow karta hai dark me!" },
+        { "speaker": "aman", "text": "Haan! White phosphorus bahut reactive aur toxic hai - ise paani me rakha jaata hai kyunki ye hawa me khud-ba-khud jal sakta hai (spontaneous combustion). Red phosphorus zyada stable aur less toxic hai. Safety matches ki side strip me [[Red Phosphorus | Safety matches ke side strip me, strike karne par white phosphorus pe ignite karta hai]] hota hai." },
+        { "speaker": "raju", "text": "White phosphorus ko paani me rakhte hain sodium jaisi! Aur matches me red phosphorus - interesting!" }
+      ],
+      "navigation": { "next": "card_53_halogens_intro", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_53_halogens_intro",
+      "card_slug": "card_53_halogens_intro",
+      "type": "chat",
+      "concept_id": "phosphorus_halogens",
+      "level": 8,
+      "progress": { "current": 53, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab baat karte hain [[Halogens | Periodic table ki Group 17 ke elements - F, Cl, Br, I, At - ye salt banane wali non-metals hain]] ki - Group 17 ke elements F, Cl, Br, I. Halogen ka matlab hai 'salt forming' (Greek: hals = salt, genes = forming). Order of reactivity: F > Cl > Br > I - Fluorine sabse zyada reactive." },
+        { "speaker": "raju", "text": "Halogens matlab salt banane wale - isiliye salt ka naam sodium chloride (NaCl) hai!" },
+        { "speaker": "aman", "text": "Bilkul! Ab kuch key halogen facts: Fluorine (F) - pale yellow gas, sabse electronegative element, sabse strong oxidising agent, glass ko bhi kha jaata hai! Chlorine (Cl) - yellow-green gas, WWI me war gas ki tarah use hua. Bromine (Br) - only liquid non-metal. Iodine (I) - solid, shiny, tincture of iodine wound par lagaate hain." },
+        { "speaker": "raju", "text": "Fluorine glass ko bhi toda deta hai? Toh glass containers nahi use hote fluorine ke liye!" }
+      ],
+      "navigation": { "next": "card_54_chlorine_uses", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_54_chlorine_uses",
+      "card_slug": "card_54_chlorine_uses",
+      "type": "chat",
+      "concept_id": "phosphorus_halogens",
+      "level": 8,
+      "progress": { "current": 54, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Chlorine ke important uses: Water purification, Bleaching (kapde aur paper), [[Bleaching Powder | CaOCl2 - calcium oxychloride, kapdo ko safed karne aur paani disinfect karne ke kaam aata hai]] (CaOCl2) banane me - jise lime + Cl2 se banate hain: Ca(OH)2 + Cl2 → CaOCl2 + H2O." },
+        { "speaker": "raju", "text": "Bleaching powder - ghar me bhi use hota hai na? Bathroom clean karne me?" },
+        { "speaker": "aman", "text": "Haan bilkul! Aur [[HCl | Hydrochloric Acid, ek strong acid jo stomach me bhi hota hai, H2 aur Cl2 ke direct combination se ya NaCl + H2SO4 se banta hai]] (Hydrochloric Acid) - ye stomach me pepsinogen activate karta hai (pichla chapter yaad karo!). Industrially HCl banane ke liye H2 + Cl2 → 2HCl ya NaCl + H2SO4 → NaHSO4 + HCl (thoda garam karne par)." },
+        { "speaker": "raju", "text": "HCl stomach me bhi hai aur industry me bhi - same chemical! Digestion wala chapter yaad aa gaya!" }
+      ],
+      "navigation": { "next": "card_55_iodine_uses_guess", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_55_iodine_uses_guess",
+      "card_slug": "card_55_iodine_uses_guess",
+      "type": "guess",
+      "concept_id": "phosphorus_halogens",
+      "level": 8,
+      "progress": { "current": 55, "total": 82 },
+      "guess_payload": {
+        "question": "Iodine ek non-metal hai. Guess karo - iodine ka sabse famous medical use kya hai?",
+        "options": [
+          { "id": "A", "text": "Dil ki bimari me" },
+          { "id": "B", "text": "Tincture of Iodine - ghav par antiseptic ke roop me aur thyroid ke liye" },
+          { "id": "C", "text": "BP control karne me" },
+          { "id": "D", "text": "Paani safed karne me" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Iodine is used as Tincture of Iodine (iodine in alcohol) as an antiseptic for wounds. Importantly, iodine is essential for thyroid hormone production - iodine deficiency causes goitre (ghengha). Iodised salt is mandatory in India because of this."
+      },
+      "navigation": { "next": "card_56_quiz1", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_56_quiz1",
+      "card_slug": "card_56_quiz1",
+      "type": "quiz",
+      "concept_id": "phosphorus_halogens",
+      "level": 8,
+      "progress": { "current": 56, "total": 82 },
+      "quiz_payload": {
+        "question": "White phosphorus is stored in water because: (Q1/3)",
+        "options": [
+          { "id": "A", "text": "It dissolves in water slowly" },
+          { "id": "B", "text": "It can spontaneously ignite in air (highly reactive with O2)" },
+          { "id": "C", "text": "Water makes it more reactive" },
+          { "id": "D", "text": "It melts in air" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "White phosphorus (P4) is so reactive that it undergoes spontaneous combustion in air (reacts with O2 at room temperature). Storing it under water prevents contact with atmospheric oxygen."
+      },
+      "navigation": { "next": "card_57_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_57_quiz2",
+      "card_slug": "card_57_quiz2",
+      "type": "quiz",
+      "concept_id": "phosphorus_halogens",
+      "level": 8,
+      "progress": { "current": 57, "total": 82 },
+      "quiz_payload": {
+        "question": "Bleaching Powder is chemically: (Q2/3)",
+        "options": [
+          { "id": "A", "text": "CaCl2" },
+          { "id": "B", "text": "CaO" },
+          { "id": "C", "text": "CaOCl2 (Calcium Oxychloride)" },
+          { "id": "D", "text": "Ca(OH)2" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Bleaching powder is CaOCl2 (Calcium Oxychloride), made by passing Cl2 gas over slaked lime Ca(OH)2. It releases Cl2 when mixed with water or acid, providing the bleaching action."
+      },
+      "navigation": { "next": "card_58_quiz3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_58_quiz3",
+      "card_slug": "card_58_quiz3",
+      "type": "quiz",
+      "concept_id": "phosphorus_halogens",
+      "level": 8,
+      "progress": { "current": 58, "total": 82 },
+      "quiz_payload": {
+        "question": "The reactivity order of Halogens (most to least reactive) is: (Q3/3)",
+        "options": [
+          { "id": "A", "text": "I > Br > Cl > F" },
+          { "id": "B", "text": "F > Cl > Br > I" },
+          { "id": "C", "text": "Cl > F > I > Br" },
+          { "id": "D", "text": "Br > Cl > I > F" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Halogens decrease in reactivity down the group: F > Cl > Br > I. Fluorine is the most reactive non-metal and the most electronegative element in the entire periodic table."
+      },
+      "navigation": { "next": "card_59_milestone8", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_59_milestone8",
+      "card_slug": "card_59_milestone8",
+      "type": "milestone",
+      "concept_id": "phosphorus_halogens",
+      "level": 8,
+      "progress": { "current": 59, "total": 82 },
+      "milestone_payload": {
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🧪",
+        "completed_topic": "Phosphorus & Halogens",
+        "xp_earned": 50,
+        "milestone_progress": "Module 8/10 Clear",
+        "motivational_quote": "Halogens ke properties clear! Ab sabse lazy elements - Noble Gases dekhte hain!"
+      },
+      "navigation": { "next": "card_60_noble_gases_intro", "button_text": "Start Next Module ➔" }
+    },
+    {
+      "card_id": "card_60_noble_gases_intro",
+      "card_slug": "card_60_noble_gases_intro",
+      "type": "chat",
+      "concept_id": "noble_gases",
+      "level": 9,
+      "progress": { "current": 60, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab padho [[Noble Gases | Group 18 ke elements - He, Ne, Ar, Kr, Xe, Rn - ye kisi se react nahi karte, isliye inert ya noble kehte hain]] - ek aisi family jinhe Inert Gases ya Rare Gases bhi kehte hain. Ye hain: Helium (He), Neon (Ne), Argon (Ar), Krypton (Kr), Xenon (Xe), Radon (Rn)." },
+        { "speaker": "raju", "text": "Noble matlab oonche darje ke log jo kisi se nahi milte - ye bhi kisi se react nahi karte!" },
+        { "speaker": "aman", "text": "Haha! Bilkul sahi analogy! Inki valence shell full hoti hai isliye ye kisi se react nahi karte. Atmosphere me Argon sabse zyada (0.93%) inert gas hai. Ye pehle 'Inert' kehte the lekin 1962 me Neil Bartlett ne XeF2 banaya - toh Xenon kuch compounds bana sakta hai - isliye ab 'Noble' bolte hain." },
+        { "speaker": "raju", "text": "1962 me Neil Bartlett - XeF2 bana diya! Toh 'completely inert' nahi hai!" }
+      ],
+      "navigation": { "next": "card_61_noble_gas_uses", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_61_noble_gas_uses",
+      "card_slug": "card_61_noble_gas_uses",
+      "type": "chat",
+      "concept_id": "noble_gases",
+      "level": 9,
+      "progress": { "current": 61, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab noble gases ke important uses jo exam me poocha jaata hai: [[Helium | He, sabse halka noble gas, hydroen se safer - balloons aur airships me, deep sea diving me]] - Balloons aur blimps me (hydrogen se safer kyunki ye flammable nahi hai), Deep sea diving me (oxygen ke saath mix karke)." },
+        { "speaker": "raju", "text": "Balloons me helium isliye use karte hain kyunki hydrogen se zyada safe hai - flammable nahi!" },
+        { "speaker": "aman", "text": "Bilkul! [[Neon | Ne, neon lights me orange-red glow - advertising boards me]] - advertising ki neon lights me orange-red glow. [[Argon | Ar, electric bulbs me tungsten filament ke saath, welding me inert atmosphere banata hai]] - electric bulbs me (tungsten filament ke saath, nitrogen ki jagah - zyada effective), aur welding me inert atmosphere banane me. [[Xenon | Xe, xenon lamp - movie projectors aur car headlights me]] - xenon lamps, [[Radon | Rn, radioactive noble gas, cancer treatment me]] - cancer treatment me (radioactive)." },
+        { "speaker": "raju", "text": "Argon bulbs me hai! Toh ordinary bulb me argon gas hoti hai - pehle nahi pata tha!" }
+      ],
+      "navigation": { "next": "card_62_noble_discovery", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_62_noble_discovery",
+      "card_slug": "card_62_noble_discovery",
+      "type": "chat",
+      "concept_id": "noble_gases",
+      "level": 9,
+      "progress": { "current": 62, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Noble gases ki discovery ka history bahut interesting hai aur BPSC me poocha jaata hai. Helium sabse pehle [[Sun | Suraj - jahan helium ki spectral lines 1868 me pehle dekhi gayi, phir Earth par 1895 me mili]] mein discover hua tha (Lockyer and Frankland, 1868) - pehle spectrum se, baad me Earth par (Ramsay and Cleve, 1895)!" },
+        { "speaker": "raju", "text": "Helium pehle suraj me discover hua! 'Helios' toh sun ka Greek name hai - isiliye Helium!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Helium ka naam Greek word 'Helios' (sun) se hai. Argon discover kiya [[Lord Rayleigh aur William Ramsay | 1894 me Argon discover karne wale scientists, Ramsay ko 1904 me Chemistry Nobel Prize mila]] ne 1894 me. William Ramsay ko 1904 me Chemistry Nobel Prize mila noble gases discover karne ke liye!" },
+        { "speaker": "raju", "text": "Ramsay 1904 Nobel Prize - ye yaad rakhna padega! Aur Helium sun se pehle discover hua!" }
+      ],
+      "navigation": { "next": "card_63_quiz1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_63_quiz1",
+      "card_slug": "card_63_quiz1",
+      "type": "quiz",
+      "concept_id": "noble_gases",
+      "level": 9,
+      "progress": { "current": 63, "total": 82 },
+      "quiz_payload": {
+        "question": "Helium is used in balloons instead of Hydrogen because: (Q1/3)",
+        "options": [
+          { "id": "A", "text": "Helium is heavier, giving more lift" },
+          { "id": "B", "text": "Helium is non-flammable (inert) and safer, though slightly less buoyant" },
+          { "id": "C", "text": "Helium is cheaper than hydrogen" },
+          { "id": "D", "text": "Helium makes balloons glow" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Helium is preferred over Hydrogen in balloons despite being slightly heavier because it is inert (non-flammable). Hydrogen's flammability makes it dangerous (e.g., Hindenburg disaster, 1937)."
+      },
+      "navigation": { "next": "card_64_quiz2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_64_quiz2",
+      "card_slug": "card_64_quiz2",
+      "type": "quiz",
+      "concept_id": "noble_gases",
+      "level": 9,
+      "progress": { "current": 64, "total": 82 },
+      "quiz_payload": {
+        "question": "Which noble gas is used to fill electric bulbs (along with tungsten filament)? (Q2/3)",
         "options": [
           { "id": "A", "text": "Helium" },
           { "id": "B", "text": "Neon" },
@@ -1561,579 +1146,351 @@
           { "id": "D", "text": "Krypton" }
         ],
         "correct_option_id": "C",
-        "explanation": "ARGON is the most abundant noble gas in Earth's atmosphere, comprising about 0.93% by volume. It was discovered by Lord Rayleigh and William Ramsay in 1894, for which they received the Nobel Prize in 1904. Argon is used in welding as an inert atmosphere and in light bulbs. This is a common SSC and Railway exam fact."
+        "explanation": "Argon (and sometimes nitrogen) is used to fill incandescent electric bulbs. Argon prevents the tungsten filament from burning out quickly by providing an inert atmosphere, extending bulb life."
       },
-      "navigation": {
-        "next": "card_54_quiz_noble_2",
-        "button_text": "Next Question (2/3) ➔"
-      }
+      "navigation": { "next": "card_65_quiz3", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_54_quiz_noble_2",
-      "card_slug": "card_54_quiz_noble_2",
+      "card_id": "card_65_quiz3",
+      "card_slug": "card_65_quiz3",
       "type": "quiz",
-      "concept_id": "noble_gases_quiz_2",
-      "level": 7,
-      "progress": {
-        "current": 54,
-        "total": 72
-      },
+      "concept_id": "noble_gases",
+      "level": 9,
+      "progress": { "current": 65, "total": 82 },
       "quiz_payload": {
-        "question": "Who synthesized the first noble gas compound in 1962?",
+        "question": "Helium was first discovered on the Sun (not Earth) by observing its spectral lines. This was in the year: (Q3/3)",
         "options": [
-          { "id": "A", "text": "William Ramsay" },
-          { "id": "B", "text": "Neil Bartlett" },
-          { "id": "C", "text": "Lord Rayleigh" },
-          { "id": "D", "text": "Norman Lockyer" }
+          { "id": "A", "text": "1894" },
+          { "id": "B", "text": "1868" },
+          { "id": "C", "text": "1895" },
+          { "id": "D", "text": "1904" }
         ],
         "correct_option_id": "B",
-        "explanation": "NEIL BARTLETT synthesized the first noble gas compound XePtF₆ in 1962, proving that noble gases are not completely inert and can form compounds under certain conditions. This was a revolutionary discovery in chemistry. Later, other xenon compounds like XeF₂, XeF₄, and XeF₆ were synthesized. This scientist-discovery match is important for BPSC exams."
+        "explanation": "Helium's spectral lines were first observed in the Sun's spectrum during the solar eclipse of 1868 by Lockyer and Frankland. It was only in 1895 that Ramsay and Cleve discovered it on Earth. 1904 is when Ramsay received the Nobel Prize."
       },
-      "navigation": {
-        "next": "card_55_quiz_noble_3",
-        "button_text": "Next Question (3/3) ➔"
-      }
+      "navigation": { "next": "card_66_milestone9", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_55_quiz_noble_3",
-      "card_slug": "card_55_quiz_noble_3",
-      "type": "quiz",
-      "concept_id": "noble_gases_quiz_3",
-      "level": 7,
-      "progress": {
-        "current": 55,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Helium is preferred over hydrogen in balloons because:",
-        "options": [
-          { "id": "A", "text": "Helium is cheaper" },
-          { "id": "B", "text": "Helium is non-flammable" },
-          { "id": "C", "text": "Helium is heavier" },
-          { "id": "D", "text": "Helium is more abundant" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Helium is preferred over hydrogen in balloons because helium is NON-FLAMMABLE, making it much safer. Hydrogen is highly flammable and can explode when exposed to flame or spark, as demonstrated in the Hindenburg disaster of 1937. Although hydrogen is lighter and cheaper than helium, safety concerns outweigh these advantages. This is a logical reasoning question common in NEET and SSC."
-      },
-      "navigation": {
-        "next": "card_56_milestone_noble",
-        "button_text": "Check Results ➔"
-      }
-    },
-    {
-      "card_id": "card_56_milestone_noble",
-      "card_slug": "card_56_milestone_noble",
+      "card_id": "card_66_milestone9",
+      "card_slug": "card_66_milestone9",
       "type": "milestone",
-      "concept_id": "noble_gases_complete",
-      "level": 7,
-      "progress": {
-        "current": 56,
-        "total": 72
-      },
+      "concept_id": "noble_gases",
+      "level": 9,
+      "progress": { "current": 66, "total": 82 },
       "milestone_payload": {
-        "title": "Noble Gases Expert! 🎈",
-        "badge_emoji": "⚗️",
-        "completed_topic": "Noble Gases - He to Rn",
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "✨",
+        "completed_topic": "Noble Gases & Their Uses",
         "xp_earned": 50,
-        "milestone_progress": "Module 7/8 Clear",
-        "motivational_quote": "Inert se reactive tak - noble gases ki journey complete! Ab phosphorus aur final concepts!"
+        "milestone_progress": "Module 9/10 Clear",
+        "motivational_quote": "Noble gases ka poora gyan le liya! Ek aur module aur phir final boss!"
       },
-      "navigation": {
-        "next": "card_57_phosphorus_intro",
-        "button_text": "Start Final Module ➔"
-      }
+      "navigation": { "next": "card_67_bihar_context", "button_text": "Start Next Module ➔" }
     },
     {
-      "card_id": "card_57_phosphorus_intro",
-      "card_slug": "card_57_phosphorus_intro",
+      "card_id": "card_67_bihar_context",
+      "card_slug": "card_67_bihar_context",
       "type": "chat",
-      "concept_id": "phosphorus_basics",
-      "level": 8,
-      "progress": {
-        "current": 57,
-        "total": 72
-      },
+      "concept_id": "bihar_nonmetal_context",
+      "level": 10,
+      "progress": { "current": 67, "total": 82 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Phosphorus - Greek 'Phosphoros' (light bearer) kyunki white phosphorus dark mein glow karta hai! Hennig Brand ne 1669 mein discover kiya (accidentally urine se!). Atomic number 15, Group 15 element. Pure form mein naturally nahi milta - mainly phosphate rocks mein as Ca₃(PO₄)₂. Allotropes: White phosphorus, Red phosphorus, Black phosphorus."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir urine se discover kiya? Kaise?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Brand alchemist tha, sona banane ki koshish kar raha tha! Usne urine ko boil kiya, residue ko heat kiya - glowing white substance nikla - wo phosphorus tha. Interesting history! White phosphorus bahut reactive aur toxic hai, spontaneously ignites in air. Red phosphorus comparatively safer hai - matchsticks ki side pe coating hota hai. Structure ka difference properties change kar deta hai!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Accidental discovery again! Chemistry ka history interesting hai!"
-        }
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite - Ab Bihar aur non-metals ka direct connection. Bihar me ek bahut important non-metal related industry hai - [[Barauni Fertilizer Plant | Bihar ke Begusarai jile me, urea aur ammonium sulphate banata hai, nitrogen fixation pe based]] Begusarai me, jo ammonia se urea fertilizer banata hai." },
+        { "speaker": "raju", "text": "Barauni toh bahut famous naam hai Bihar me! Wahan oil refinery bhi hai na?" },
+        { "speaker": "aman", "text": "Haan bilkul! Barauni me oil refinery bhi hai. Ab ek aur important Bihar context - [[Arsenic Contamination | Ganga ke maidan me groundwater me arsenic ka concentration - Bihar, West Bengal me serious problem]] - Bihar aur Bengal me groundwater me Arsenic (As) ek non-metal hai jo seriously contaminate ho gaya hai - especially Gangetic plains me. Ye ek public health crisis hai." },
+        { "speaker": "raju", "text": "Arsenic water me Bihar ke? Ye toh bahut serious problem hai - BPSC TRE me health topics se poocha jaata hoga!" }
       ],
-      "navigation": {
-        "next": "card_58_phosphorus_allotropes",
-        "button_text": "Allotropes detail ➔"
-      }
+      "navigation": { "next": "card_68_fluorosis_iodine", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_58_phosphorus_allotropes",
-      "card_slug": "card_58_phosphorus_allotropes",
+      "card_id": "card_68_fluorosis_iodine",
+      "card_slug": "card_68_fluorosis_iodine",
       "type": "chat",
-      "concept_id": "phosphorus_forms",
-      "level": 8,
-      "progress": {
-        "current": 58,
-        "total": 72
-      },
+      "concept_id": "bihar_nonmetal_context",
+      "level": 10,
+      "progress": { "current": 68, "total": 82 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "WHITE PHOSPHORUS (P₄): Waxy solid, yellowish-white, highly reactive, poisonous, glows in dark (chemiluminescence), spontaneously ignites at 35°C in air. Store under water! Used in smoke bombs, rat poison (banned now). RED PHOSPHORUS: Made by heating white phosphorus at 250°C without air. Dark red powder, non-poisonous, does not glow, ignites at 260°C. Used in matchsticks, fireworks. BLACK PHOSPHORUS: Least reactive form, made under high pressure, graphite-like structure."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir white phosphorus itna dangerous kyun hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "White phosphorus skin pe lag jaye to severe burns cause karta hai, vapours toxic hain. Ye P₄ molecules (tetrahedral) hain jo highly strained bonds ke saath hain - isliye unstable aur reactive. Red phosphorus polymeric structure hai (chains), zyada stable. Safety match invention (1844) major breakthrough tha - ab sirf matchbox ki rough surface pe hi ignite hota hai, accidentally nahi!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Safety match ka chemistry background pata chala!"
-        }
+        { "speaker": "aman", "text": "Aur ek health issue jo non-metals se juda hai aur Bihar-specific hai - [[Iodine Deficiency | Iodine ki kami se thyroid gland ka badhna (goitre/ghengha), pahadi aur kuch maidan ilaakon me zyada]] - Bihar aur Himalayan regions me historically iodine deficiency zyada rahi hai, isiliye government ne iodised salt mandatory kiya." },
+        { "speaker": "raju", "text": "Ghengha bimari! Gaon me dekha hai aisa - gala badh jaata hai. Ab pata chala wo iodine ki kami se hota hai!" },
+        { "speaker": "aman", "text": "⭐ BPSC TRE Favorite: [[Fluorosis | Fluorine ki adhik matra se hadiyon aur daanton ka damage - Rajasthan aur kuch Bihar areas me problem]] - Fluoride zyada pani me hone par bhi nuksaan karta hai danton aur hadiyon ko. Ye bi-directional problem hai - too little iodine bad, too much fluoride also bad. Bihar ke kuch districts me fluoride contamination bhi reported hai." },
+        { "speaker": "raju", "text": "Toh non-metals food aur paani me balance chahiye - kam bhi nuksaan, zyada bhi nuksaan!" }
       ],
-      "navigation": {
-        "next": "card_59_phosphorus_compounds",
-        "button_text": "Important compounds ➔"
-      }
+      "navigation": { "next": "card_69_rapid_fire_nonmetals", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_59_phosphorus_compounds",
-      "card_slug": "card_59_phosphorus_compounds",
+      "card_id": "card_69_rapid_fire_nonmetals",
+      "card_slug": "card_69_rapid_fire_nonmetals",
       "type": "chat",
-      "concept_id": "phosphorus_oxides_acids",
-      "level": 8,
-      "progress": {
-        "current": 59,
-        "total": 72
-      },
+      "concept_id": "bihar_nonmetal_context",
+      "level": 10,
+      "progress": { "current": 69, "total": 82 },
       "messages": [
-        {
-          "speaker": "aman",
-          "text": "Phosphorus pentoxide (P₂O₅ or P₄O₁₀): White powder, powerful dehydrating agent (paani absorb kar leta hai). Phosphoric acid banane mein use: P₄O₁₀ + 6H₂O → 4H₃PO₄. PHOSPHORIC ACID (H₃PO₄): Weak acid, non-toxic, used in soft drinks (cola drinks mein acidity ke liye), fertilizers (superphosphate), rust remover. Phosphates plants ke liye essential nutrients hain (NPK fertilizers mein P)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir cola drinks mein acid hota hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! Phosphoric acid cola drinks ko tangy taste deta hai. Lekin excess consumption teeth enamel ko damage kar sakta hai (acidic nature). Moderation important hai! Phosphorus biologically bhi crucial hai - DNA, RNA, ATP (energy molecule) mein phosphate groups hote hain. Bones aur teeth mein calcium phosphate (Ca₃(PO₄)₂) hota hai. Life ke liye essential element!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Toh phosphorus health ke liye zaruri bhi hai!"
-        }
+        { "speaker": "aman", "text": "Ab ek rapid fire of important non-metal facts: Carbon ka use radiocarbon dating me hota hai ([[Carbon Dating | C-14 isotope ki radioactivity se purani cheezoon ki age nikalna]]). Sulphur ka use gunpowder me (C+S+KNO3). Phosphorus ka use fertilizers (superphosphate) me. Silicon - semiconductors, solar cells. Nitrogen - liquid N2 me food preserve karte hain." },
+        { "speaker": "raju", "text": "Carbon dating! Ye toh archaeology me use hota hai na - purani cheezoon ki age nikalne ke liye!" },
+        { "speaker": "aman", "text": "Bilkul! Aur kuch more rapid facts: Fluorine - sabse electronegative element. Chlorine - war gas WWI me use hua (Fritz Haber ne banaaya tha - same person jo Haber process banaya!). Oxygen - liquid oxygen (LOX) rockets me use hoti hai. Nitrogen - liquid nitrogen (-196°C) cryogenic applications me." },
+        { "speaker": "raju", "text": "Fritz Haber ne Haber process bhi banaya aur war gas bhi - ek hi scientist ke do bilkul alag kaam!" }
       ],
-      "navigation": {
-        "next": "card_60_quiz_phosphorus_1",
-        "button_text": "Test Phosphorus Knowledge ➔"
-      }
+      "navigation": { "next": "card_70_quiz1", "button_text": "Next Card ➔" }
     },
     {
-      "card_id": "card_60_quiz_phosphorus_1",
-      "card_slug": "card_60_quiz_phosphorus_1",
+      "card_id": "card_70_quiz1",
+      "card_slug": "card_70_quiz1",
       "type": "quiz",
-      "concept_id": "phosphorus_quiz_1",
-      "level": 8,
-      "progress": {
-        "current": 60,
-        "total": 72
-      },
+      "concept_id": "bihar_nonmetal_context",
+      "level": 10,
+      "progress": { "current": 70, "total": 82 },
       "quiz_payload": {
-        "question": "Which allotrope of phosphorus is used in matchsticks?",
+        "question": "Goitre (Ghengha) disease is caused by the deficiency of which element? (Q1/3)",
         "options": [
-          { "id": "A", "text": "White phosphorus" },
-          { "id": "B", "text": "Red phosphorus" },
-          { "id": "C", "text": "Black phosphorus" },
-          { "id": "D", "text": "Yellow phosphorus" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "RED PHOSPHORUS is used in safety matchsticks. It is coated on the striking surface of the matchbox. Red phosphorus is less reactive and non-poisonous compared to white phosphorus. When the match head (containing potassium chlorate) is rubbed against the red phosphorus surface, friction generates heat that causes ignition. This is a standard SSC and Railway exam question."
-      },
-      "navigation": {
-        "next": "card_61_quiz_phosphorus_2",
-        "button_text": "Next Question (2/3) ➔"
-      }
-    },
-    {
-      "card_id": "card_61_quiz_phosphorus_2",
-      "card_slug": "card_61_quiz_phosphorus_2",
-      "type": "quiz",
-      "concept_id": "phosphorus_quiz_2",
-      "level": 8,
-      "progress": {
-        "current": 61,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "White phosphorus is stored under water because it:",
-        "options": [
-          { "id": "A", "text": "Dissolves in water" },
-          { "id": "B", "text": "Reacts with water" },
-          { "id": "C", "text": "Spontaneously ignites in air" },
-          { "id": "D", "text": "Absorbs moisture" }
+          { "id": "A", "text": "Fluorine" },
+          { "id": "B", "text": "Iron" },
+          { "id": "C", "text": "Iodine" },
+          { "id": "D", "text": "Calcium" }
         ],
         "correct_option_id": "C",
-        "explanation": "White phosphorus is stored under water because it SPONTANEOUSLY IGNITES in air at about 35°C due to its high reactivity. Water prevents contact with atmospheric oxygen, thus preventing ignition. White phosphorus does not react with water (it is insoluble). This safety measure is crucial for handling white phosphorus in laboratories. This is a common NEET practical question."
+        "explanation": "Goitre is caused by iodine deficiency, leading to enlargement of the thyroid gland. India has made iodised salt mandatory to prevent iodine deficiency disorders, particularly in regions like Bihar and the Himalayan belt."
       },
-      "navigation": {
-        "next": "card_62_quiz_phosphorus_3",
-        "button_text": "Next Question (3/3) ➔"
-      }
+      "navigation": { "next": "card_71_quiz2", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_62_quiz_phosphorus_3",
-      "card_slug": "card_62_quiz_phosphorus_3",
+      "card_id": "card_71_quiz2",
+      "card_slug": "card_71_quiz2",
       "type": "quiz",
-      "concept_id": "phosphorus_quiz_3",
-      "level": 8,
-      "progress": {
-        "current": 62,
-        "total": 72
-      },
+      "concept_id": "bihar_nonmetal_context",
+      "level": 10,
+      "progress": { "current": 71, "total": 82 },
       "quiz_payload": {
-        "question": "Phosphoric acid is used in:",
+        "question": "Carbon-14 isotope is used in: (Q2/3)",
         "options": [
-          { "id": "A", "text": "Vinegar preparation" },
-          { "id": "B", "text": "Soft drinks" },
-          { "id": "C", "text": "Milk of magnesia" },
-          { "id": "D", "text": "Antacids" }
+          { "id": "A", "text": "Nuclear power generation" },
+          { "id": "B", "text": "Carbon dating (determining age of ancient objects)" },
+          { "id": "C", "text": "Making diamonds" },
+          { "id": "D", "text": "Steel production" }
         ],
         "correct_option_id": "B",
-        "explanation": "Phosphoric acid (H₃PO₄) is used in SOFT DRINKS (like cola beverages) to provide a tangy, acidic taste. It is a weak, non-toxic acid. It is also used in fertilizer production and as a rust remover. Vinegar contains acetic acid, while milk of magnesia and antacids contain bases. This application-based question is common in SSC and UPSC exams."
+        "explanation": "Carbon-14 (C-14) is a radioactive isotope used in radiocarbon dating. Living organisms continuously exchange carbon with the atmosphere, but after death C-14 decays at a known rate. Measuring remaining C-14 tells us the age of organic material."
       },
-      "navigation": {
-        "next": "card_63_milestone_phosphorus",
-        "button_text": "Check Results ➔"
-      }
+      "navigation": { "next": "card_72_quiz3", "button_text": "Check Answer & Continue ➔" }
     },
     {
-      "card_id": "card_63_milestone_phosphorus",
-      "card_slug": "card_63_milestone_phosphorus",
+      "card_id": "card_72_quiz3",
+      "card_slug": "card_72_quiz3",
+      "type": "quiz",
+      "concept_id": "bihar_nonmetal_context",
+      "level": 10,
+      "progress": { "current": 72, "total": 82 },
+      "quiz_payload": {
+        "question": "Statement 1: Arsenic contamination in groundwater is a serious problem in the Gangetic plain including Bihar. Statement 2: Excess fluoride in drinking water is beneficial for bones and teeth. Which is correct? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both" },
+          { "id": "D", "text": "Neither" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 1 is correct - Arsenic contamination in Bihar's Gangetic plains is a documented public health crisis. Statement 2 is WRONG - While trace fluoride prevents tooth decay, EXCESS fluoride causes Fluorosis (damage to teeth and bones). This is a common exam trap."
+      },
+      "navigation": { "next": "card_73_milestone10", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_73_milestone10",
+      "card_slug": "card_73_milestone10",
       "type": "milestone",
-      "concept_id": "phosphorus_complete",
-      "level": 8,
-      "progress": {
-        "current": 63,
-        "total": 72
-      },
+      "concept_id": "bihar_nonmetal_context",
+      "level": 10,
+      "progress": { "current": 73, "total": 82 },
       "milestone_payload": {
-        "title": "Phosphorus Pro! 🔥",
-        "badge_emoji": "💡",
-        "completed_topic": "Phosphorus Allotropes & Compounds",
+        "title": "MODULE COMPLETED!",
+        "badge_emoji": "🗺️",
+        "completed_topic": "Bihar Context & Non-Metal Health Issues",
         "xp_earned": 50,
-        "milestone_progress": "Module 8/8 Clear - All Content Done!",
-        "motivational_quote": "White se red tak - phosphorus ki chemistry master kar li! Ab Officer-level revision aur final challenge!"
+        "milestone_progress": "Module 10/10 Clear",
+        "motivational_quote": "Sabhi 10 modules complete! Ab final officer level revision aur grand finale quiz!"
       },
-      "navigation": {
-        "next": "card_64_summary",
-        "button_text": "Officer Revision ➔"
-      }
+      "navigation": { "next": "card_74_rapid_fire2", "button_text": "Go to Final Revision ➔" }
     },
     {
-      "card_id": "card_64_summary",
-      "card_slug": "card_64_summary",
-      "type": "summary",
-      "concept_id": "officer_revision",
-      "level": 9,
-      "progress": {
-        "current": 64,
-        "total": 72
+      "card_id": "card_74_rapid_fire2",
+      "card_slug": "card_74_rapid_fire2",
+      "type": "chat",
+      "concept_id": "final_rapid_fire",
+      "level": 11,
+      "progress": { "current": 74, "total": 82 },
+      "messages": [
+        { "speaker": "aman", "text": "Chalo ek aur rapid fire karte hain exam ki final taiyari ke liye: Sabse electronegative element = Fluorine. Sabse reactive non-metal = Fluorine. Hardest natural substance = Diamond (Carbon). Softest natural substance? Talc (ek mineral, not a non-metal element per se). Only liquid non-metal = Bromine. Only solid noble gas? Radon bhi solid hai extreme low temperature par, lekin practically sabhi Noble gases gases hain." },
+        { "speaker": "raju", "text": "Fluorine - sabse electronegative, sabse reactive non-metal. Diamond - hardest. Bromine - liquid non-metal. Note kar liya sir!" },
+        { "speaker": "aman", "text": "Aur kuch aur: CO2 is a non-metal oxide that is a gas but can also be a solid - [[Dry Ice | Solid CO2 jo seedha sublimate hota hai, cooling agent ke roop me use hota hai]] (solid CO2, -78.5°C pe). N2O - [[Laughing Gas | Nitrous oxide, anesthetic ke roop me use, suunghne par haasi aati hai]] (Laughing Gas, anesthetic). NO2 - brown gas, photochemical smog ka karan. SO2 - bleaching agent (wet method, Cl2 dry method)." },
+        { "speaker": "raju", "text": "Dry ice CO2 hai - cool! Aur N2O laughing gas - chemistry ke kitne interesting uses hain!" }
+      ],
+      "navigation": { "next": "card_75_quiz_rapid1", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_75_quiz_rapid1",
+      "card_slug": "card_75_quiz_rapid1",
+      "type": "quiz",
+      "concept_id": "final_rapid_fire",
+      "level": 11,
+      "progress": { "current": 75, "total": 82 },
+      "quiz_payload": {
+        "question": "Dry Ice is the solid form of which substance? (Q1/3)",
+        "options": [
+          { "id": "A", "text": "Liquid Nitrogen" },
+          { "id": "B", "text": "Carbon Dioxide (CO2)" },
+          { "id": "C", "text": "Sulphur Dioxide" },
+          { "id": "D", "text": "Water Ice (H2O)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Dry Ice is solid CO2. At atmospheric pressure, it sublimes (directly converts to gas) at -78.5°C without becoming liquid, which is why it's called 'dry' ice - no liquid mess."
       },
+      "navigation": { "next": "card_76_quiz_rapid2", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_76_quiz_rapid2",
+      "card_slug": "card_76_quiz_rapid2",
+      "type": "quiz",
+      "concept_id": "final_rapid_fire",
+      "level": 11,
+      "progress": { "current": 76, "total": 82 },
+      "quiz_payload": {
+        "question": "Which non-metal oxide is known as 'Laughing Gas'? (Q2/3)",
+        "options": [
+          { "id": "A", "text": "NO (Nitric Oxide)" },
+          { "id": "B", "text": "NO2 (Nitrogen Dioxide)" },
+          { "id": "C", "text": "N2O (Nitrous Oxide)" },
+          { "id": "D", "text": "N2O5 (Nitrogen Pentoxide)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "N2O (Nitrous Oxide) is called Laughing Gas because inhaling it causes involuntary laughter. It is also used as an anesthetic. It is different from NO2 (brown poisonous gas) and NO (colourless gas)."
+      },
+      "navigation": { "next": "card_77_quiz_rapid3", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_77_quiz_rapid3",
+      "card_slug": "card_77_quiz_rapid3",
+      "type": "quiz",
+      "concept_id": "final_rapid_fire",
+      "level": 11,
+      "progress": { "current": 77, "total": 82 },
+      "quiz_payload": {
+        "question": "Statement 1: Fluorine is the most electronegative element in the periodic table. Statement 2: Chlorine was used as a chemical weapon in World War I. Which is correct? (Q3/3)",
+        "options": [
+          { "id": "A", "text": "Only Statement 1" },
+          { "id": "B", "text": "Only Statement 2" },
+          { "id": "C", "text": "Both are correct" },
+          { "id": "D", "text": "Neither" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Both are correct. Fluorine (F) is the most electronegative element (Pauling scale: 4.0). Chlorine gas was used as a chemical weapon (war gas) in WWI, notably at Ypres in 1915. Ironically, Fritz Haber, who developed the Haber process for agriculture, also led Germany's chemical weapons program."
+      },
+      "navigation": { "next": "card_78_milestone_rapid", "button_text": "Check Answer & Continue ➔" }
+    },
+    {
+      "card_id": "card_78_milestone_rapid",
+      "card_slug": "card_78_milestone_rapid",
+      "type": "milestone",
+      "concept_id": "final_rapid_fire",
+      "level": 11,
+      "progress": { "current": 78, "total": 82 },
+      "milestone_payload": {
+        "title": "RAPID FIRE CLEARED!",
+        "badge_emoji": "⚡",
+        "completed_topic": "Rapid Fire Non-Metal Facts",
+        "xp_earned": 75,
+        "milestone_progress": "Pre-Final Stage Clear",
+        "motivational_quote": "Excellent! Ab final officer revision aur grand quiz ke liye ready ho?"
+      },
+      "navigation": { "next": "card_79_summary", "button_text": "Final Revision ➔" }
+    },
+    {
+      "card_id": "card_79_summary",
+      "card_slug": "card_79_summary",
+      "type": "summary",
+      "concept_id": "revision",
+      "level": 12,
+      "progress": { "current": 79, "total": 82 },
       "summary_payload": {
-        "title": "⚡ Officer-Level Lightning Revision",
+        "title": "⚡ Quick Officer Revision - Non-Metals",
         "revision_points": [
           {
-            "topic": "Non-metal Exception",
-            "point": "Graphite (carbon allotrope) is the only non-metal that conducts electricity due to free delocalized electrons in its layered hexagonal structure. Diamond is an insulator."
+            "topic": "Physical Properties & Exceptions (Multi-statement Trap)",
+            "point": "Non-metals generally: no lustre, brittle, poor conductors. EXCEPTIONS: Iodine has metallic lustre (still non-metal). Graphite conducts electricity (carbon, non-metal). Bromine is the only liquid non-metal. Diamond is the hardest natural substance. Statement: 'All non-metals are poor conductors' is WRONG because of Graphite."
           },
           {
-            "topic": "Scientist-Discovery Match",
-            "point": "Oxygen: Priestley (1774), Scheele (1772), Lavoisier named it. Nitrogen: Rutherford (1772). Chlorine: Scheele (1774), Davy confirmed (1810). Noble gas compound: Neil Bartlett (1962)."
+            "topic": "Carbon Allotropes - Critical Comparison",
+            "point": "Diamond: 4 C-C bonds, tetrahedral 3D, hardest, NO conductor. Graphite: 3 C-C bonds + 1 free electron, hexagonal layers, conductor, lubricant. Fullerene C60: Buckminsterfullerene, football shape, Nobel Prize 1996 (discovered 1985). Synthetic diamond possible by high T+P on graphite."
           },
           {
-            "topic": "Supporter vs Combustible",
-            "point": "Oxygen is SUPPORTER of combustion (not combustible itself). CO is combustible and highly toxic (forms carboxyhaemoglobin). CO₂ is neither combustible nor supporter."
+            "topic": "Nitrogen & Haber Process",
+            "point": "Atmosphere: N2 78%, O2 21%, Ar 0.93%. Haber Process: N2+3H2→2NH3, 400-500°C, 150-300 atm, Fe catalyst - Fritz Haber, 1909. Rhizobium bacteria in legume root nodules fix N2 biologically. Barauni Fertilizer Plant (Bihar) uses ammonia for urea."
           },
           {
-            "topic": "Ozone Dual Nature",
-            "point": "Ozone in stratosphere: GOOD (absorbs UV radiation, protects life). Ozone at ground level: BAD (pollutant, causes respiratory problems). Location determines benefit/harm."
+            "topic": "H2SO4 & Contact Process",
+            "point": "H2SO4 = King of Chemicals / Oil of Vitriol. Contact Process: S→SO2→SO3 (V2O5 catalyst, 450°C)→Oleum→H2SO4. Always add ACID to WATER (not water to acid). H2SO4 is a strong dehydrating agent - chars sugar and paper. Used in lead-acid batteries."
           },
           {
-            "topic": "Haber Process",
-            "point": "N₂ + 3H₂ ⇌ 2NH₃. Conditions: 450-500°C, 200 atm, Fe catalyst. Fritz Haber (1909), Nobel 1918. Industrial ammonia production for fertilizers."
-          },
-          {
-            "topic": "Nitrogen Cycle Mnemonic",
-            "point": "'Fix Ni Ass Am De' - Fixation (Rhizobium bacteria in legumes), Nitrification, Assimilation, Ammonification, Denitrification. Complete biogeochemical cycle."
-          },
-          {
-            "topic": "Carbon Allotropes Structure",
-            "point": "Diamond: 3D tetrahedral, all electrons bonded, hardest, insulator. Graphite: 2D hexagonal layers, free electrons, conductor, slippery. Fullerenes: C₆₀ (Kroto, Curl, Smalley, 1985, Nobel 1996)."
-          },
-          {
-            "topic": "Acid Rain Chemistry",
-            "point": "SO₂ + H₂O → H₂SO₃ (sulphurous acid). 4NO₂ + O₂ + 2H₂O → 4HNO₃ (nitric acid). Damages Taj Mahal marble: CaCO₃ + H₂SO₄ → CaSO₄ (gypsum) + H₂O + CO₂."
-          },
-          {
-            "topic": "Frasch Process",
-            "point": "Sulphur extraction using superheated water (170°C) to melt underground sulphur (m.p. 115°C), then compressed air pumps molten sulphur up. Herman Frasch, 1894. 99.5% pure."
-          },
-          {
-            "topic": "H₂SO₄ Dilution Safety",
-            "point": "'Add acid to water, never water to acid' - dilution is highly exothermic. Water added to concentrated H₂SO₄ can boil violently and splash acid, causing severe burns."
-          },
-          {
-            "topic": "Halogen Reactivity",
-            "point": "F > Cl > Br > I (decreasing down group). Fluorine most reactive (highest electronegativity 4.0, smallest size). Only Bromine is liquid non-metal at room temperature."
-          },
-          {
-            "topic": "Iodine-Starch Test",
-            "point": "Iodine + Starch → Blue-black complex. Sensitive test for iodine detection. Iodine essential for thyroid hormone; deficiency causes goitre. Iodized salt contains KI/KIO₃."
-          },
-          {
-            "topic": "Noble Gas Compounds",
-            "point": "Neil Bartlett (1962) synthesized first noble gas compound XePtF₆, proving they're not completely inert. Other Xe compounds: XeF₂, XeF₄, XeF₆. Reactivity possible under extreme conditions."
-          },
-          {
-            "topic": "Argon Abundance",
-            "point": "Argon most abundant noble gas in atmosphere (0.93%). Discovered by Rayleigh & Ramsay (1894, Nobel 1904). Used in welding, light bulbs as inert atmosphere."
-          },
-          {
-            "topic": "Phosphorus Allotropes",
-            "point": "White P₄: toxic, glows in dark, spontaneously ignites at 35°C, stored under water. Red P: non-toxic, ignites at 260°C, used in safety matchsticks. Black P: least reactive, graphite-like."
+            "topic": "Bihar-Specific Non-Metal Health Issues (BPSC TRE)",
+            "point": "Arsenic groundwater contamination in Bihar's Gangetic plain = serious health crisis. Iodine deficiency = Goitre (Ghengha) - common in Bihar, mandatory iodised salt. Excess fluoride = Fluorosis (bone/teeth damage). Barauni Fertilizer Plant = Begusarai, makes urea from NH3. Sindri (Jharkhand, former Bihar) = first major fertilizer plant 1951."
           }
         ]
       },
-      "navigation": {
-        "next": "card_65_rapid_fire_1",
-        "button_text": "Rapid Fire Round ➔"
-      }
+      "navigation": { "next": "card_80_final_quiz", "button_text": "Take Final Officer Quiz ➔" }
     },
     {
-      "card_id": "card_65_rapid_fire_1",
-      "card_slug": "card_65_rapid_fire_1",
-      "type": "quiz",
-      "concept_id": "rapid_1",
-      "level": 9,
-      "progress": {
-        "current": 65,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Which process is used for industrial production of ammonia?",
-        "options": [
-          { "id": "A", "text": "Frasch Process" },
-          { "id": "B", "text": "Haber Process" },
-          { "id": "C", "text": "Contact Process" },
-          { "id": "D", "text": "Ostwald Process" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "HABER PROCESS is used for industrial production of ammonia from nitrogen and hydrogen. Contact Process is for sulphuric acid, Frasch for sulphur extraction, Ostwald for nitric acid."
-      },
-      "navigation": {
-        "next": "card_66_rapid_fire_2",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_66_rapid_fire_2",
-      "card_slug": "card_66_rapid_fire_2",
-      "type": "quiz",
-      "concept_id": "rapid_2",
-      "level": 9,
-      "progress": {
-        "current": 66,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "The hardest natural substance is:",
-        "options": [
-          { "id": "A", "text": "Graphite" },
-          { "id": "B", "text": "Diamond" },
-          { "id": "C", "text": "Quartz" },
-          { "id": "D", "text": "Iron" }
-        ],
-        "correct_option_id": "B",
-        "explanation": "DIAMOND is the hardest natural substance due to its strong 3D covalent network structure where each carbon is bonded to four others in tetrahedral geometry."
-      },
-      "navigation": {
-        "next": "card_67_rapid_fire_3",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_67_rapid_fire_3",
-      "card_slug": "card_67_rapid_fire_3",
-      "type": "quiz",
-      "concept_id": "rapid_3",
-      "level": 9,
-      "progress": {
-        "current": 67,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Laughing gas is chemically:",
-        "options": [
-          { "id": "A", "text": "Nitric oxide (NO)" },
-          { "id": "B", "text": "Nitrogen dioxide (NO₂)" },
-          { "id": "C", "text": "Nitrous oxide (N₂O)" },
-          { "id": "D", "text": "Ammonia (NH₃)" }
-        ],
-        "correct_option_id": "C",
-        "explanation": "Laughing gas is NITROUS OXIDE (N₂O), used as a mild anaesthetic in dentistry. It produces euphoric effects when inhaled but is also a potent greenhouse gas."
-      },
-      "navigation": {
-        "next": "card_68_rapid_fire_4",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_68_rapid_fire_4",
-      "card_slug": "card_68_rapid_fire_4",
-      "type": "quiz",
-      "concept_id": "rapid_4",
-      "level": 9,
-      "progress": {
-        "current": 68,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "The 'King of Chemicals' refers to:",
-        "options": [
-          { "id": "A", "text": "Hydrochloric acid" },
-          { "id": "B", "text": "Nitric acid" },
-          { "id": "C", "text": "Sulphuric acid" },
-          { "id": "D", "text": "Phosphoric acid" }
-        ],
-        "correct_option_id": "C",
-        "explanation": "SULPHURIC ACID (H₂SO₄) is called 'King of Chemicals' due to its extensive industrial applications. A country's industrial development is measured by its sulphuric acid consumption."
-      },
-      "navigation": {
-        "next": "card_69_rapid_fire_5",
-        "button_text": "Next ➔"
-      }
-    },
-    {
-      "card_id": "card_69_rapid_fire_5",
-      "card_slug": "card_69_rapid_fire_5",
-      "type": "quiz",
-      "concept_id": "rapid_5",
-      "level": 9,
-      "progress": {
-        "current": 69,
-        "total": 72
-      },
-      "quiz_payload": {
-        "question": "Which element is called 'light bearer'?",
-        "options": [
-          { "id": "A", "text": "Helium" },
-          { "id": "B", "text": "Neon" },
-          { "id": "C", "text": "Phosphorus" },
-          { "id": "D", "text": "Sulphur" }
-        ],
-        "correct_option_id": "C",
-        "explanation": "PHOSPHORUS is called 'light bearer' (Greek 'Phosphoros') because white phosphorus glows in the dark due to chemiluminescence. Discovered by Hennig Brand in 1669."
-      },
-      "navigation": {
-        "next": "card_70_final_quiz",
-        "button_text": "Final Challenge ➔"
-      }
-    },
-    {
-      "card_id": "card_70_final_quiz",
-      "card_slug": "card_70_final_quiz",
+      "card_id": "card_80_final_quiz",
+      "card_slug": "card_80_final_quiz",
       "type": "final_quiz",
-      "concept_id": "master_challenge",
-      "level": 10,
-      "progress": {
-        "current": 70,
-        "total": 72
-      },
+      "concept_id": "final_assessment",
+      "level": 12,
+      "progress": { "current": 80, "total": 82 },
       "quiz_payload": {
-        "question": "Consider the following statements about non-metals:\n\n1. Graphite conducts electricity due to free electrons in its structure.\n2. Ozone in the stratosphere is harmful to life on Earth.\n3. Carbon monoxide is more toxic than carbon dioxide.\n4. All noble gases are completely inert and cannot form compounds.\n\nHow many of the above statements are CORRECT?",
+        "question": "Consider the following statements about Non-Metals: 1) Graphite is a non-metal that conducts electricity because each carbon atom has one free electron. 2) Bromine is the only liquid non-metal at room temperature. 3) In the Haber Process, the catalyst used is Vanadium Pentoxide (V2O5). 4) Helium was first discovered on the Sun before it was found on Earth. How many of the above statements are CORRECT?",
         "options": [
           { "id": "A", "text": "Only one" },
           { "id": "B", "text": "Only two" },
           { "id": "C", "text": "Only three" },
           { "id": "D", "text": "All four" }
         ],
+        "correct_option_id": "C",
+        "explanation": "Statement 1 is CORRECT - Graphite conducts due to one free electron per carbon. Statement 2 is CORRECT - Bromine is the only liquid non-metal. Statement 3 is WRONG - V2O5 is the catalyst in the CONTACT PROCESS (for H2SO4), NOT the Haber Process. Haber Process uses Iron (Fe) catalyst! Statement 4 is CORRECT - Helium was spectroscopically discovered in the Sun in 1868, on Earth in 1895. So 3 statements (1, 2, 4) are correct."
+      },
+      "navigation": { "next": "card_81_bonus_quiz", "button_text": "Check Final Score ➔" }
+    },
+    {
+      "card_id": "card_81_bonus_quiz",
+      "card_slug": "card_81_bonus_quiz",
+      "type": "quiz",
+      "concept_id": "final_assessment",
+      "level": 12,
+      "progress": { "current": 81, "total": 82 },
+      "quiz_payload": {
+        "question": "Assertion (A): White Phosphorus is stored in water, similar to how Sodium is stored in kerosene. Reason (R): Both White Phosphorus and Sodium react vigorously with atmospheric oxygen and moisture. Which option is correct?",
+        "options": [
+          { "id": "A", "text": "Both A and R true, and R correctly explains A" },
+          { "id": "B", "text": "Both true, but R does NOT correctly explain A" },
+          { "id": "C", "text": "A is true, R is false" },
+          { "id": "D", "text": "A is false, R is true" }
+        ],
         "correct_option_id": "B",
-        "explanation": "Statement-wise analysis:\n\n1. CORRECT - Graphite conducts electricity because of delocalized free electrons in its hexagonal layered structure.\n\n2. INCORRECT - Ozone in stratosphere is BENEFICIAL as it absorbs harmful UV radiation. Ground-level ozone is harmful.\n\n3. CORRECT - Carbon monoxide (CO) is highly toxic as it forms carboxyhaemoglobin with blood, blocking oxygen transport. CO₂ is relatively non-toxic.\n\n4. INCORRECT - Neil Bartlett (1962) proved noble gases can form compounds (XePtF₆, XeF₂, etc.) under certain conditions.\n\nOnly TWO statements (1 and 3) are correct. This multi-statement format tests comprehensive understanding and is typical of BPSC/UPSC Prelims."
+        "explanation": "Both A and R are individually correct - White Phosphorus IS stored in water, and both White P and Na are highly reactive with air. BUT R does not correctly explain A because they are stored differently for different reasons: Na reacts with MOISTURE (so kerosene, which is anhydrous), while White P undergoes spontaneous combustion with O2 (so water deprives O2 but doesn't react with P). The reasons differ, making this a classic Assertion-Reason trap."
       },
-      "navigation": {
-        "next": "card_71_chapter_complete",
-        "button_text": "Complete Chapter ➔"
-      }
+      "navigation": { "next": "card_82_trophy", "button_text": "Check Answer & Finish ➔" }
     },
     {
-      "card_id": "card_71_chapter_complete",
-      "card_slug": "card_71_chapter_complete",
+      "card_id": "card_82_trophy",
+      "card_slug": "card_82_trophy",
       "type": "milestone",
-      "concept_id": "chapter_completion",
-      "level": 10,
-      "progress": {
-        "current": 71,
-        "total": 72
-      },
+      "concept_id": "chapter_complete",
+      "level": 12,
+      "progress": { "current": 82, "total": 82 },
       "milestone_payload": {
-        "title": "🏆 NON-METALS MASTERY ACHIEVED! 🏆",
-        "badge_emoji": "🎓",
-        "completed_topic": "Complete Non-Metals in Chemistry",
-        "xp_earned": 500,
-        "milestone_progress": "100% Chapter Complete",
-        "motivational_quote": "From oxygen to noble gases, from carbon allotropes to halogens - tumne NCERT se lekar BPSC/NEET level tak sab cover kar liya! Scientist names, years, processes, reactions, exceptions - sab tumhare control mein! Ab practice karo aur exam mein shine karo! 🌟"
+        "title": "🏆 NON-METALS CHAPTER MASTER TROPHY!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Non-Metals in Chemistry - Complete Chapter",
+        "xp_earned": 200,
+        "milestone_progress": "Chapter 100% Complete",
+        "motivational_quote": "Waah Raju! Tumne Non-Metals ki poori duniya conquer kar li - Physical properties ke exceptions se lekar Carbon allotropes, Hydrogen isotopes, Haber Process, Contact Process, Noble gases, aur Bihar-specific health hazards tak! BPSC, SSC, Railway, NEET - koi bhi non-metal ka sawal ab tumhara kuch nahi bigaad sakta! Agla chapter jeetne ke liye taiyar ho?"
       },
-      "navigation": {
-        "next": "card_72_thank_you",
-        "button_text": "Final Message ➔"
-      }
-    },
-    {
-      "card_id": "card_72_thank_you",
-      "card_slug": "card_72_thank_you",
-      "type": "chat",
-      "concept_id": "conclusion",
-      "level": 10,
-      "progress": {
-        "current": 72,
-        "total": 72
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Raju, tumne pura Non-Metals chapter complete kar liya! Oxygen se shuru karke noble gases tak, carbon allotropes se phosphorus tak - har important concept, scientist, reaction cover ho gaya. Ab revision karte raho aur PYQs solve karo!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Thank you Sir! Chemistry ab zyada interesting lag rahi hai. Practical applications, history, current affairs sab connected hai!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! Chemistry sirf equations nahi, life se connected hai. Remember - Haber Process ne billions ko feed kiya, Ozone layer humein protect karti hai, Noble gases ne chemistry ki definition change kar di. Tumhara syllabus complete, ab confidence ke saath exam face karo!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Ready hoon Sir! BPSC/SSC/NEET - sab mein Non-Metals ke questions crack karunga! 💪"
-        }
-      ],
-      "navigation": {
-        "next": null,
-        "button_text": "Back to Dashboard 🏠"
-      }
+      "navigation": { "next": "topic_selection_screen", "button_text": "Back to Topics ➔" }
     }
   ]
 }
