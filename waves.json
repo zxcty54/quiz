@@ -3,587 +3,900 @@
     "p_id": "bpsc_phys_m29_01",
     "qe": "Waves are broadly classified based on whether they require a material medium and how medium particles vibrate relative to energy propagation. Which statement accurately distinguishes mechanical waves from electromagnetic waves and matter waves?",
     "qh": "तरंगों को मोटे तौर पर इस आधार पर वर्गीकृत किया जाता है कि क्या उन्हें एक भौतिक माध्यम की आवश्यकता होती है और माध्यम के कण ऊर्जा संचरण के सापेक्ष कैसे कंपन करते हैं। कौन सा कथन यांत्रिक तरंगों को विद्युत चुंबकीय तरंगों और द्रव्य तरंगों (matter waves) से सटीक रूप से अलग करता है?",
-    "o": [
+    "oe": [
       "Mechanical waves do not require any material medium, whereas electromagnetic waves can only travel through elastic solids.",
       "Mechanical waves require a physical material medium to propagate, electromagnetic waves can travel through vacuum without a material medium, and matter waves are associated with moving subatomic particles.",
       "Electromagnetic waves consist of longitudinal compressions, while mechanical waves consist exclusively of de Broglie probability oscillations.",
       "Matter waves are mechanical sound waves that require high-density liquids for propagation."
     ],
+    "oh": [
+      "यांत्रिक तरंगों को किसी भौतिक माध्यम की आवश्यकता नहीं होती है, जबकि विद्युत चुंबकीय तरंगें केवल लोचदार ठोस पदार्थों के माध्यम से यात्रा कर सकती हैं।",
+      "यांत्रिक तरंगों को संचरण के लिए एक भौतिक माध्यम की आवश्यकता होती है, विद्युत चुंबकीय तरंगें बिना किसी माध्यम के निर्वात में यात्रा कर सकती हैं, और द्रव्य तरंगें गतिमान उप-परमाणु कणों से जुड़ी होती हैं।",
+      "विद्युत चुंबकीय तरंगों में अनुदैर्ध्य संपीड़न होते हैं, जबकि यांत्रिक तरंगों में विशेष रूप से डी ब्रोग्ली संभाव्यता दोलन होते हैं।",
+      "द्रव्य तरंगें यांत्रिक ध्वनि तरंगें हैं जिन्हें संचरण के लिए उच्च घनत्व वाले तरल पदार्थों की आवश्यकता होती है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely swaps the properties of mechanical and electromagnetic waves. Option 1 is correct because: <br>1. <b>Mechanical Waves</b> (e.g., sound waves, seismic waves) require an elastic physical material medium (solid, liquid, or gas) to transmit energy via particle oscillations. <br>2. <b>Electromagnetic Waves</b> (e.g., light, X-rays, radio waves) consist of oscillating electric and magnetic fields perpendicular to each other and do not require any material medium, allowing them to travel through a vacuum. <br>3. <b>Matter Waves</b> (de Broglie waves) are quantum wave phenomena associated with moving subatomic particles like electrons. <br>Option 2 incorrectly classifies electromagnetic waves as longitudinal and confuses matter waves with mechanical waves. Option 3 misidentifies matter waves as sound waves."
+    "ee": "1. Option 0 is incorrect because it completely reverses the fundamental nature of waves by falsely asserting that mechanical waves need no medium while electromagnetic waves require solids.\n2. Option 1 is correct because:\n   - **Mechanical Waves** (such as sound waves, water ripples, and seismic P/S waves) strictly require an elastic material medium (solid, liquid, or gas) possessing inertia and elasticity to transmit energy via physical particle oscillations;\n   - **Electromagnetic Waves** (such as visible light, X-rays, radio waves, and gamma rays) consist of mutually perpendicular oscillating electric and magnetic fields and do not require any material medium, propagating freely across a vacuum at the speed of light ($c \\approx 3 \\times 10^8\\text{ m/s}$);\n   - **Matter Waves (de Broglie waves)** originate from quantum wave-particle duality, wherein any microscopic moving material particle (like an electron or proton) exhibits wave characteristics with a wavelength $\\lambda = \\frac{h}{p}$.\n3. Option 2 is incorrect because electromagnetic waves are strictly transverse oscillations, not longitudinal compressions.\n4. Option 3 is incorrect because matter waves are quantum phenomena governed by probability amplitudes, distinct from acoustic mechanical waves.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि यह यांत्रिक और विद्युत चुंबकीय तरंगों के मूलभूत गुणों को आपस में बदल देता है।\n2. विकल्प 1 सही है क्योंकि:\n   - **यांत्रिक तरंगें (Mechanical Waves):** जैसे ध्वनि और भूकंपीय तरंगें, इन्हें ऊर्जा संचरण के लिए अनिवार्य रूप से एक प्रत्यास्थ भौतिक माध्यम (ठोस, द्रव या गैस) की आवश्यकता होती है;\n   - **विद्युत चुंबकीय तरंगें (Electromagnetic Waves):** जैसे प्रकाश, एक्स-किरणें और रेडियो तरंगें, ये परस्पर लंबवत दोलनशील विद्युत और चुंबकीय क्षेत्रों से बनती हैं तथा इन्हें किसी भौतिक माध्यम की आवश्यकता नहीं होती, ये निर्वात में भी $3 \\times 10^8\\text{ m/s}$ की चाल से गमन करती हैं;\n   - **द्रव्य तरंगें (Matter Waves):** डी ब्रोग्ली परिकल्पना के अनुसार गतिशील सूक्ष्म कणों (जैसे इलेक्ट्रॉन, प्रोटॉन) से जुड़ी क्वांटम यांत्रिक तरंगें होती हैं ($\\lambda = h/p$)।\n3. विकल्प 2 गलत है क्योंकि विद्युत चुंबकीय तरंगें अनुप्रस्थ होती हैं, अनुदैर्ध्य नहीं।\n4. विकल्प 3 गलत है क्योंकि द्रव्य तरंगें कोई यांत्रिक ध्वनि तरंगें नहीं हैं।"
   },
   {
     "p_id": "bpsc_phys_m29_02",
     "qe": "Mechanical waves propagate through material media via two distinct modes of particle vibration: longitudinal and transverse. Which statement correctly governs the medium requirements and structural components of these two wave types?",
     "qh": "यांत्रिक तरंगें कण कंपन के दो विशिष्ट तरीकों के माध्यम से भौतिक माध्यमों में संचरित होती हैं: अनुदैर्ध्य (longitudinal) और अनुप्रस्थ (transverse)। कौन सा कथन इन दो प्रकार की तरंगों के माध्यम की आवश्यकताओं और संरचनात्मक घटकों को सही ढंग से नियंत्रित करता है?",
-    "o": [
+    "oe": [
       "Transverse waves propagate through solids, liquids, and gases via compressions and rarefactions.",
       "Longitudinal waves vibrate parallel to wave direction and propagate through solids, liquids, and gases; Transverse waves vibrate perpendicular to wave direction and propagate through solids and on liquid surfaces via crests and troughs.",
       "Longitudinal waves can propagate exclusively through a vacuum, forming crests and troughs.",
       "Transverse waves consist of alternating high-pressure compressions and low-pressure rarefactions inside gases."
     ],
+    "oh": [
+      "अनुप्रस्थ तरंगें संपीड़न और विरलन के माध्यम से ठोस, तरल और गैसों में संचरित होती हैं।",
+      "अनुदैर्ध्य तरंगें तरंग की दिशा के समानांतर कंपन करती हैं और ठोस, तरल तथा गैसों के माध्यम से संचरित होती हैं; अनुप्रस्थ तरंगें तरंग की दिशा के लंबवत कंपन करती हैं और शीर्ष (श्रृंग) और गर्त के माध्यम से ठोसों में तथा तरल सतहों पर संचरित होती हैं।",
+      "अनुदैर्ध्य तरंगें केवल निर्वात के माध्यम से संचरित हो सकती हैं, जिससे शीर्ष और गर्त बनते हैं।",
+      "अनुप्रस्थ तरंगों में गैसों के अंदर बारी-बारी से उच्च दबाव वाले संपीड़न और निम्न दबाव वाले विरलन होते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misattributes compressions and rarefactions to transverse waves and claims they travel through gases. Option 1 is correct because: <br>1. <b>Longitudinal Waves:</b> Medium particles oscillate <b>parallel</b> to the direction of wave propagation, creating alternating regions of high density/pressure (<b>Compressions</b>) and low density/pressure (<b>Rarefactions</b>). Since all phases of matter (solids, liquids, and gases) possess volume elasticity (bulk modulus), longitudinal waves can travel through all three media. <br>2. <b>Transverse Waves:</b> Medium particles oscillate <b>perpendicular</b> to the direction of wave propagation, forming <b>crests</b> (positive displacement peaks) and <b>troughs</b> (negative displacement valleys). Transverse waves require shear rigidity, so they can only propagate through solids and along the free surface of liquids (due to surface tension), but not inside the bulk of liquids or gases. <br>Option 2 falsely claims longitudinal waves travel through a vacuum. Option 3 incorrectly mixes transverse waves with pressure variations in gases."
+    "ee": "1. Option 0 is incorrect because transverse waves travel via crests and troughs, and cannot propagate through the bulk of gases due to a lack of shear elasticity.\n2. Option 1 is correct because:\n   - **Longitudinal Waves**: The constituent particles of the medium oscillate **parallel** to the direction of wave propagation, generating alternating regions of high pressure/density (**Compressions**) and low pressure/density (**Rarefactions**). Because all states of matter (solids, liquids, and gases) possess volume elasticity (bulk modulus), longitudinal waves (like sound) propagate through all three states of matter.\n   - **Transverse Waves**: The particles of the medium oscillate **perpendicular** to the path of wave propagation, creating alternating displacement peaks (**Crests**) and valleys (**Troughs**). Transverse mechanical waves require shear elasticity (shape rigidity); therefore, they can propagate only through solids and along the surface of liquids (maintained by surface tension), but cannot travel inside the bulk of liquids or gases.\n3. Option 2 is incorrect because longitudinal waves are mechanical and cannot travel through a vacuum.\n4. Option 3 is incorrect because compressions and rarefactions characterize longitudinal waves in fluids, not transverse waves.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि अनुप्रस्थ तरंगें श्रृंग और गर्त बनाती हैं और गैसों के भीतर संचरित नहीं हो सकतीं।\n2. विकल्प 1 सही है क्योंकि:\n   - **अनुदैर्ध्य तरंगें (Longitudinal Waves):** माध्यम के कण तरंग संचरण की दिशा के **समानांतर** कंपन करते हैं, जिससे उच्च दाब वाले **संपीड़न (Compressions)** और निम्न दाब वाले **विरलन (Rarefactions)** बनते हैं। चूंकि ठोस, द्रव और गैस तीनों में आयतन प्रत्यास्थता होती है, इसलिए अनुदैर्ध्य तरंगें (जैसे ध्वनि) तीनों माध्यमों में चल सकती हैं।\n   - **अनुप्रस्थ तरंगें (Transverse Waves):** माध्यम के कण तरंग संचरण की दिशा के **लंबवत** कंपन करते हैं, जिससे **श्रृंग (Crests)** और **गर्त (Troughs)** बनते हैं। इनके लिए अपरूपण दृढ़ता आवश्यक है, अतः ये केवल ठोसों में तथा द्रवों की मुक्त सतह पर (पृष्ठ तनाव के कारण) संचरित हो सकती हैं, द्रवों या गैसों के भीतर नहीं।\n3. विकल्प 2 गलत है क्योंकि अनुदैर्ध्य तरंगें निर्वात में गति नहीं कर सकतीं।\n4. विकल्प 3 गलत है क्योंकि संपीड़न और विरलन अनुदैर्ध्य तरंगों का गुण है।"
   },
   {
     "p_id": "bpsc_phys_m29_03",
     "qe": "When a wave transitions from one medium into another with different physical properties, certain wave parameters change while others remain invariant. Which fundamental wave parameter remains strictly fixed and unchanged during refraction across different substances?",
     "qh": "जब कोई तरंग विभिन्न भौतिक गुणों वाले एक माध्यम से दूसरे माध्यम में प्रवेश करती है, तो कुछ तरंग पैरामीटर बदल जाते हैं जबकि अन्य अपरिवर्तित रहते हैं। विभिन्न पदार्थों में अपवर्तन के दौरान कौन सा मौलिक तरंग पैरामीटर सख्ती से तय और अपरिवर्तित रहता है?",
-    "o": [
+    "oe": [
       "Wavelength ($\\lambda$)",
       "Wave speed ($v$)",
       "Frequency ($\\nu$)",
       "Particle displacement amplitude ($A$)"
     ],
+    "oh": [
+      "तरंगदैर्घ्य ($\\lambda$)",
+      "तरंग की चाल ($v$)",
+      "आवृत्ति ($\\nu$)",
+      "कण विस्थापन आयाम ($A$)"
+    ],
     "a": 2,
-    "e": "<b>Explanation:</b> Options 0, 1, and 3 are variable parameters during wave refraction. Option 2 is correct because the <b>Frequency ($\\nu$)</b> of a wave is determined exclusively by the source that creates the vibration. Once a wave is generated, its frequency remains strictly fixed and <b>does not change when passing through different substances</b> or media. In contrast, wave speed ($v$) changes depending on the elasticity and density of the new medium, which forces the wavelength ($\\lambda$) to adjust proportionally according to $v = \\nu \\lambda$. Amplitude ($A$) also alters due to partial reflection or energy absorption at the medium boundary."
+    "ee": "1. Option 0 is incorrect because wavelength changes proportionally with wave velocity ($\\lambda = v/\\nu$) when entering a new medium.\n2. Option 1 is incorrect because wave speed ($v$) depends directly on the elasticity and inertial density of the medium ($v = \\sqrt{E/\\rho}$), and thus alters across boundaries.\n3. Option 2 is correct because **Frequency ($\\nu$ or $f$)** is determined solely by the vibrating source that creates the wave. Once a wave is emitted, its frequency—representing the number of wave cycles produced per second—remains **strictly invariant and unchanged** as it crosses into different media. When speed ($v$) increases or decreases upon refraction, the wavelength ($\\lambda$) automatically scales to keep the ratio $v/\\lambda = \\nu$ constant.\n4. Option 3 is incorrect because amplitude ($A$) decreases due to partial reflection and energy dissipation at the boundary interface.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि नए माध्यम में वेग बदलने पर तरंगदैर्घ्य ($\\lambda$) परिवर्तित हो जाता है।\n2. विकल्प 1 गलत है क्योंकि माध्यम के घनत्व और प्रत्यास्थता के अनुसार तरंग की चाल बदल जाती है।\n3. विकल्प 2 सही है क्योंकि तरंग की **आवृत्ति (Frequency, $\\nu$)** केवल मूल स्रोत के कंपन पर निर्भर करती है। जब कोई तरंग एक माध्यम से दूसरे माध्यम में अपवर्तित होती है, तो उसकी **आवृत्ति अपरिवर्तित रहती है**। चाल ($v$) और तरंगदैर्घ्य ($\\lambda$) दोनों एक ही अनुपात में बदल जाते हैं ताकि संबंध $v = \\nu \\lambda$ स्थिर बना रहे।\n4. विकल्प 3 गलत है क्योंकि माध्यम की सीमा पर आंशिक परावर्तन और अवशोषण के कारण आयाम ($A$) घट जाता है।"
   },
   {
     "p_id": "bpsc_phys_m29_04",
     "qe": "Evaluating the four core characteristics of sound—loudness, pitch, quality (timbre), and intensity—requires distinguishing between objective physical measurements and subjective human perception. Which choice correctly pairs a sound characteristic with its defining physical property and SI unit?",
     "qh": "ध्वनि की चार मुख्य विशेषताओं - प्रबलता (loudness), तारत्व (pitch), गुणवत्ता (quality/timbre), और तीव्रता (intensity) - का मूल्यांकन करने के लिए वस्तुनिष्ठ भौतिक मापों और व्यक्तिपरक मानवीय धारणा के बीच अंतर करने की आवश्यकता होती है। कौन सा विकल्प ध्वनि की विशेषता को उसकी परिभाषित भौतिक संपत्ति और SI इकाई के साथ सही ढंग से जोड़ता है?",
-    "o": [
+    "oe": [
       "Pitch depends on amplitude; measured in Decibels (dB).",
       "Intensity is the amount of sound energy passing per second through unit area; measured objectively in $\\text{Watt/m}^2$.",
       "Quality (Timbre) depends on the ratio of gas specific heats ($\\gamma$); measured in Hertz (Hz).",
       "Loudness is an objective physical constant independent of human ear sensitivity."
     ],
+    "oh": [
+      "तारत्व आयाम पर निर्भर करता है; डेसीबल (dB) में मापा जाता है।",
+      "तीव्रता प्रति सेकंड इकाई क्षेत्रफल से गुजरने वाली ध्वनि ऊर्जा की मात्रा है; इसे वस्तुनिष्ठ रूप से $\\text{वाट/मीटर}^2$ ($\\text{Watt/m}^2$) में मापा जाता है।",
+      "गुणवत्ता (टिम्बर) गैस विशिष्ट ऊष्मा के अनुपात ($\\gamma$) पर निर्भर करती है; हर्ट्ज़ (Hz) में मापा जाता है।",
+      "प्रबलता मानव कान की संवेदनशीलता से स्वतंत्र एक वस्तुनिष्ठ भौतिक स्थिरांक है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misattributes pitch to amplitude (pitch depends on frequency). Option 1 is correct because <b>Intensity</b> is an objective, measurable physical quantity defined as the sound energy passing per second through a unit area perpendicular to the direction of propagation: <br>$$\\text{Intensity} = \\frac{\\text{Power}}{\\text{Area}} = \\frac{\\text{Energy}}{\\text{Time} \\times \\text{Area}}$$ <br>Its SI unit is strictly <b>$\\text{Watt/m}^2$</b>. While Intensity is an objective physical metric, <b>Loudness</b> is a subjective psychological perception that depends on both intensity and the non-linear sensitivity of the listener's ear. Option 2 misidentifies the physical origin of timbre (which depends on waveform shape and harmonic overtones). Option 3 falsely claims loudness is independent of ear sensitivity."
+    "ee": "1. Option 0 is incorrect because pitch depends strictly on frequency (measured in Hertz), whereas loudness relates to amplitude.\n2. Option 1 is correct because **Intensity ($I$)** of sound is an objective physical quantity defined as the acoustic power transmitted per unit area perpendicular to the direction of sound propagation: $$\\text{Intensity} = \\frac{\\text{Energy}}{\\text{Time} \\times \\text{Area}} = \\frac{\\text{Power}}{\\text{Area}}$$\n   Its SI unit is strictly **$\\text{Watt/m}^2$**. Unlike subjective loudness, sound intensity is independent of human hearing capability and is directly proportional to the square of amplitude ($I \\propto A^2$) and frequency ($I \\propto \\nu^2$).\n3. Option 2 is incorrect because quality/timbre is determined by the waveform profile and harmonic overtone spectrum, not adiabatic gas constants.\n4. Option 3 is incorrect because loudness is a subjective sensation that depends both on intensity and the ear's non-linear frequency sensitivity.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि तारत्व (Pitch) आवृत्ति पर निर्भर करता है, आयाम पर नहीं।\n2. विकल्प 1 सही है क्योंकि **ध्वनि की तीव्रता (Intensity)** एक वस्तुनिष्ठ और मापन योग्य भौतिक राशि है, जो प्रति सेकंड ध्वनि संचरण की दिशा के लंबवत एकांक क्षेत्रफल से गुजरने वाली ऊर्जा के बराबर होती है ($I = P/A$)। इसका SI मात्रक **$\\text{वाट/मीटर}^2$ ($\\text{Watt/m}^2$)** होता है। तीव्रता आयाम के वर्ग के समानुपाती ($I \\propto A^2$) होती है और श्रोता के कान की संवेदनशीलता पर निर्भर नहीं करती।\n3. विकल्प 2 गलत है क्योंकि गुणवत्ता (Timbre) तरंग के आकार और सन्नादी संनादों (Harmonics) पर निर्भर करती है।\n4. विकल्प 3 गलत है क्योंकि प्रबलता (Loudness) एक व्यक्तिपरक अनुभूति है जो कान की संवेदनशीलता पर भी निर्भर करती है।"
   },
   {
     "p_id": "bpsc_phys_m29_05",
     "qe": "Everyday acoustic phenomena, such as a lion's roar versus a mosquito's hum, or distinguishing singers like Sonu Nigam and Lata Mangeshkar, illustrate specific sound characteristics. Which choice correctly explains these physiological auditory differences?",
     "qh": "दैनिक ध्वनिक परिघटनाएं, जैसे शेर की दहाड़ बनाम मच्छर की भनभनाहट, या सोनू निगम और लता मंगेशकर जैसे गायकों में अंतर करना, विशिष्ट ध्वनि विशेषताओं को दर्शाती हैं। कौन सा विकल्प इन शारीरिक श्रवण अंतरों की सही व्याख्या करता है?",
-    "o": [
+    "oe": [
       "A lion's roar has high pitch and low intensity; a mosquito's hum has low pitch and high intensity.",
       "A mosquito's hum has high pitch (high frequency) but low intensity (faint); a lion's roar has low pitch (low frequency) but high intensity (loudness).",
       "Distinguishing different singers or musical instruments of identical pitch and loudness is based on sound intensity differences alone.",
       "A woman's voice has lower frequency and lower pitch than a man's voice."
     ],
+    "oh": [
+      "शेर की दहाड़ में उच्च तारत्व और कम तीव्रता होती है; मच्छर की भनभनाहट में कम तारत्व और उच्च तीव्रता होती है।",
+      "मच्छर की भनभनाहट में उच्च तारत्व (उच्च आवृत्ति) लेकिन कम तीव्रता (धीमी) होती है; शेर की दहाड़ में कम तारत्व (कम आवृत्ति) लेकिन उच्च तीव्रता (प्रबलता) होती है।",
+      "समान तारत्व और प्रबलता वाले विभिन्न गायकों या संगीत वाद्ययंत्रों में अंतर करना केवल ध्वनि की तीव्रता के अंतर पर आधारित है।",
+      "महिला की आवाज में पुरुष की आवाज की तुलना में कम आवृत्ति और कम तारत्व होता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely reverses pitch and intensity between a lion and a mosquito. Option 1 is correct because: <br>1. <b>Pitch</b> is determined by frequency. A mosquito's wings vibrate at a very high frequency, producing a <b>high-pitched (sharp) sound</b>, but with small amplitude/energy, resulting in <b>low intensity (faint)</b>. A lion's vocal cords vibrate at a low frequency, producing a <b>low-pitched sound</b>, but with immense wave amplitude/energy, resulting in <b>high intensity (loudness)</b>. <br>2. <b>Quality or Timbre</b> allows the human ear to distinguish between two different sources (like singers or musical instruments) even if they produce sound at the exact same loudness and pitch, because their complex wave notes contain different mixtures of fundamental tones and harmonic overtones. <br>Option 2 misidentifies timbre as intensity. Option 3 incorrectly claims women's voices have lower frequency (female vocal cords are shorter and thinner, vibrating at higher frequencies to produce higher pitch)."
+    "ee": "1. Option 0 completely inverts the pitch and intensity parameters between a roar and a hum.\n2. Option 1 is correct because:\n   - **Pitch** is determined by frequency. A mosquito's wings vibrate rapidly, generating a high-frequency sound wave that the human ear perceives as **high pitch (shrill/sharp)**, but with low amplitude, rendering it **faint (low intensity)**.\n   - A lion's vocal cords vibrate at a lower fundamental frequency, producing a **low-pitch (deep/grave) sound**, but displace a massive volume of air with high amplitude, producing **high intensity (loudness)**.\n3. Option 2 is incorrect because distinguishing sources of identical pitch and loudness is governed by **Quality or Timbre** (differing overtone harmonics), not intensity.\n4. Option 3 is incorrect because female vocal cords are shorter and tenser, vibrating at higher frequencies to yield higher pitch than typical male voices.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि शेर की दहाड़ में उच्च प्रबलता और मच्छर की भिनभिनाहट में उच्च तारत्व होता है।\n2. विकल्प 1 सही है क्योंकि:\n   - **तारत्व (Pitch)** आवृत्ति पर निर्भर करता है: मच्छर के पंख बहुत तेजी से कंपन करते हैं, जिससे उच्च आवृत्ति के कारण उसकी भिनभिनाहट का **तारत्व उच्च (तीखी/पतली आवाज)** होता है, परंतु आयाम कम होने से **तीव्रता कम (धीमी)** होती है।\n   - शेर की दहाड़ में स्वर रज्जुओं की कंपन आवृत्ति कम होने से **तारत्व कम (भारी/गंभीर आवाज)** होता है, परंतु विशाल आयाम के कारण **तीव्रता (प्रबलता) अत्यधिक उच्च** होती है।\n3. विकल्प 2 गलत है क्योंकि समान तीव्रता और तारत्व वाली ध्वनियों में अंतर **गुणवत्ता (Timbre)** के आधार पर किया जाता है।\n4. विकल्प 3 गलत है क्योंकि महिलाओं की आवाज की आवृत्ति और तारत्व पुरुषों की तुलना में अधिक होता है।"
   },
   {
     "p_id": "bpsc_phys_m29_06",
     "qe": "Isaac Newton derived an initial formula for the speed of sound in a gaseous medium, which Pierre-Simon Laplace later corrected. What was Newton's initial thermodynamic assumption, and how did Laplace correct it?",
     "qh": "आइजैक न्यूटन ने गैसीय माध्यम में ध्वनि की चाल के लिए एक प्रारंभिक सूत्र निकाला, जिसे बाद में पियरे-साइमन लाप्लास ने संशोधित किया। न्यूटन की प्रारंभिक ऊष्मागतिकी धारणा क्या थी, और लाप्लास ने इसे कैसे सुधारा?",
-    "o": [
+    "oe": [
       "Newton assumed an adiabatic process ($v = \\sqrt{\\frac{\\gamma P}{d}}$); Laplace corrected it to an isothermal process ($v = \\sqrt{\\frac{P}{d}}$).",
       "Newton assumed an isothermal process ($v = \\sqrt{\\frac{P}{d}}$); Laplace established that sound compression/rarefaction occurs too rapidly for heat exchange, making it an adiabatic process ($v = \\sqrt{\\frac{\\gamma P}{d}}$).",
       "Newton assumed sound speed is independent of medium density; Laplace proved sound speed depends on gravity.",
       "Newton assumed sound propagation is isobaric; Laplace proved it is isochoric."
     ],
+    "oh": [
+      "न्यूटन ने एक रुद्धोष्म (adiabatic) प्रक्रिया ($v = \\sqrt{\\frac{\\gamma P}{d}}$) मानी; लाप्लास ने इसे समतापीय (isothermal) प्रक्रिया ($v = \\sqrt{\\frac{P}{d}}$) में सुधारा।",
+      "न्यूटन ने एक समतापीय प्रक्रिया ($v = \\sqrt{\\frac{P}{d}}$) मानी; लाप्लास ने स्थापित किया कि ध्वनि का संपीड़न/विरलन ऊष्मा विनिमय के लिए बहुत तेजी से होता है, जिससे यह एक रुद्धोष्म प्रक्रिया ($v = \\sqrt{\\frac{\\gamma P}{d}}$) बन जाती है।",
+      "न्यूटन ने माना कि ध्वनि की चाल माध्यम के घनत्व से स्वतंत्र है; लाप्लास ने सिद्ध किया कि ध्वनि की चाल गुरुत्वाकर्षण पर निर्भर करती है।",
+      "न्यूटन ने माना कि ध्वनि संचरण समदाबीय है; लाप्लास ने सिद्ध किया कि यह सम-आयतनिक है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely swaps Newton's assumption with Laplace's correction. Option 1 is correct because: <br>1. <b>Newton's Assumption:</b> Newton assumed that as sound travels through a gas, temperature fluctuations during compressions and rarefactions equalize immediately with the surroundings via heat transfer, making sound propagation an <b>Isothermal Process</b>. Under isothermal conditions, the bulk modulus of gas equals initial pressure ($B = P$), yielding Newton's formula: <br>$$v = \\sqrt{\\frac{B}{d}} = \\sqrt{\\frac{P}{d}}$$ <br>This formula calculated the speed of sound in air as $\\sim 280 \\text{ m/s}$ at STP, which was significantly lower than the experimental value ($\\sim 331 \\text{ m/s}$). <br>2. <b>Laplace's Correction:</b> Laplace realized that compressions and rarefactions occur extremely rapidly and air is a poor thermal conductor, preventing heat exchange with the surroundings. Thus, sound propagation is an <b>Adiabatic Process</b>. Under adiabatic conditions, the bulk modulus is $B = \\gamma P$ (where $\\gamma = \\frac{C_p}{C_v}$ is the ratio of specific heats), yielding Laplace's corrected formula: <br>$$v = \\sqrt{\\frac{\\gamma P}{d}}$$ <br>Option 2 and Option 3 present incorrect thermodynamic classifications."
+    "ee": "1. Option 0 inverts Newton's isothermal formula with Laplace's adiabatic formula.\n2. Option 1 is correct because:\n   - **Newton's Formulation (1687)**: Assumed temperature remains constant during sound wave transit (an **Isothermal Process**), where the isothermal bulk modulus equals atmospheric pressure ($B_{\\text{iso}} = P$). This yielded $v = \\sqrt{P/d} \\approx 280\\text{ m/s}$ in air at STP, which underestimated the experimental value ($331\\text{ m/s}$) by $\\approx 15\\%$.\n   - **Laplace's Correction (1816)**: Recognized that compressions produce localized heating and rarefactions produce localized cooling. Because acoustic oscillations occur extremely rapidly and air is a poor thermal conductor, no heat flows between regions. Hence, the process is **Adiabatic**, where the adiabatic bulk modulus is $B_{\\text{adia}} = \\gamma P$ (where $\\gamma = C_p/C_v \\approx 1.4$ for air). This gave $v = \\sqrt{\\frac{\\gamma P}{d}} \\approx 331.3\\text{ m/s}$, matching experimental measurements.\n3. Option 2 and Option 3 present invalid thermodynamic classifications.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि यह न्यूटन और लाप्लास के सूत्रों को उल्टा दर्शाता है।\n2. विकल्प 1 सही है क्योंकि:\n   - **न्यूटन का सिद्धांत:** न्यूटन ने माना कि गैसों में ध्वनि संचरण एक **समतापीय प्रक्रम (Isothermal process)** है, जिसमें आयतन प्रत्यास्थता गुणांक गैस के दाब के बराबर होता है ($B = P$)। इससे वायु में ध्वनि का वेग $v = \\sqrt{P/d} = 280\\text{ m/s}$ प्राप्त हुआ, जो प्रायोगिक मान ($331\\text{ m/s}$) से लगभग 15% कम था।\n   - **लाप्लास का संशोधन:** लाप्लास ने बताया कि संपीड़न और विरलन इतनी तेजी से होते हैं कि माध्यम को ऊष्मा के आदान-प्रदान का समय नहीं मिलता, अतः यह एक **रुद्धोष्म प्रक्रम (Adiabatic process)** है। इसमें रुद्धोष्म प्रत्यास्थता $B = \\gamma P$ होती है, जिससे संशोधित सूत्र $v = \\sqrt{\\frac{\\gamma P}{d}} = 331.3\\text{ m/s}$ बना, जो प्रायोगिक मान के बिल्कुल सटीक था।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि यह ऊष्मागतिकी के अमान्य सिद्धांत हैं।"
   },
   {
     "p_id": "bpsc_phys_m29_07",
     "qe": "The speed of sound in a gas is influenced by ambient physical parameters like temperature and pressure. Assuming temperature remains strictly constant, what is the effect of changing gas pressure on the speed of sound?",
     "qh": "किसी गैस में ध्वनि की चाल तापमान और दबाव जैसे परिवेशी भौतिक मापदंडों से प्रभावित होती है। यह मानते हुए कि तापमान सख्ती से स्थिर रहता है, गैस के दबाव को बदलने का ध्वनि की चाल पर क्या प्रभाव पड़ता है?",
-    "o": [
+    "oe": [
       "Increasing gas pressure increases the speed of sound proportionally.",
       "If temperature remains constant, changing gas pressure has no effect whatsoever on the speed of sound.",
       "Increasing gas pressure decreases the speed of sound inversely.",
       "Doubling the gas pressure quadruples the speed of sound."
     ],
+    "oh": [
+      "गैस का दबाव बढ़ाने से ध्वनि की चाल आनुपातिक रूप से बढ़ जाती है।",
+      "यदि तापमान स्थिर रहता है, तो गैस के दबाव को बदलने से ध्वनि की चाल पर कोई प्रभाव नहीं पड़ता है।",
+      "गैस का दबाव बढ़ाने से ध्वनि की चाल व्युत्क्रमानुपाती रूप से घट जाती है।",
+      "गैस के दबाव को दोगुना करने से ध्वनि की चाल चार गुना हो जाती है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly asserts a direct pressure dependence. Option 1 is correct because according to Laplace's formula $v = \\sqrt{\\frac{\\gamma P}{d}}$, for an ideal gas at constant temperature, pressure ($P$) and density ($d$) are directly proportional according to Boyle's Law ($P \\propto d \\implies \\frac{P}{d} = \\text{constant}$). Therefore, if the pressure of a gas is increased or decreased at constant temperature, its density changes in the exact same proportion, leaving the ratio $\\frac{P}{d}$ completely unchanged. Consequently, <b>pressure changes have zero net effect on the speed of sound in a gas</b> as long as temperature remains constant. Options 2 and 3 state false mathematical dependencies."
+    "ee": "1. Option 0 falsely assumes a direct proportional dependence of sound velocity on pressure.\n2. Option 1 is correct because according to Laplace's formula for the speed of sound in an ideal gas, $v = \\sqrt{\\frac{\\gamma P}{d}}$. According to Boyle's Law, at constant temperature, pressure is directly proportional to density ($P \\propto d$, meaning $P/d = \\text{constant} = \\frac{RT}{M}$). When the pressure of a gas is doubled, its volume halves and its density doubles in exact proportion. Consequently, the ratio $\\frac{P}{d}$ remains completely unchanged. Therefore, **variations in gas pressure have zero effect on the speed of sound as long as the temperature remains constant**.\n3. Option 2 and Option 3 state incorrect mathematical dependencies that ignore density adjustments under Boyle's law.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि दबाव बढ़ने पर घनत्व भी बढ़ जाता है जिससे वेग नहीं बढ़ता।\n2. विकल्प 1 सही है क्योंकि लाप्लास के सूत्रानुसार $v = \\sqrt{\\frac{\\gamma P}{d}}$ होता है। बॉयल के नियमानुसार स्थिर तापमान पर गैस का दाब उसके घनत्व के समानुपाती होता है ($P \\propto d$ अर्थात $P/d = \\text{स्थिरांक} = \\frac{RT}{M}$)। यदि तापमान स्थिर रहे और गैस का दाब दोगुना कर दिया जाए, तो उसका घनत्व भी दोगुना हो जाएगा, जिससे अनुपात $P/d$ पूर्णतः अपरिवर्तित रहेगा। अतः **स्थिर तापमान पर दाब में परिवर्तन करने से गैस में ध्वनि की चाल पर कोई प्रभाव नहीं पड़ता है**।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि ये दाब और घनत्व के पारस्परिक संतुलन की अनदेखी करते हैं।"
   },
   {
     "p_id": "bpsc_phys_m29_08",
     "qe": "Temperature directly affects the velocity of sound in gaseous media. What is the exact mathematical relationship between sound speed ($v$) and absolute temperature ($T$), and by how much does sound speed in air increase per degree Celsius rise in temperature?",
     "qh": "तापमान सीधे गैसीय माध्यम में ध्वनि के वेग को प्रभावित करता है। ध्वनि की चाल ($v$) और निरपेक्ष तापमान ($T$) के बीच सटीक गणितीय संबंध क्या है, और तापमान में प्रति डिग्री सेल्सियस वृद्धि पर हवा में ध्वनि की चाल में कितनी वृद्धि होती है?",
-    "o": [
+    "oe": [
       "$v \\propto T^2$; increases by $9.8 \\text{ m/s}$ per $1^\\circ\\text{C}$ rise.",
       "$v \\propto \\sqrt{T}$; increases roughly by $0.61 \\text{ m/s}$ per degree Celsius rise in temperature.",
       "$v \\propto \\frac{1}{\\sqrt{T}}$; decreases by $0.61 \\text{ m/s}$ per $1^\\circ\\text{C}$ rise.",
       "$v \\propto T$; increases by $3.0 \\text{ m/s}$ per $1^\\circ\\text{C}$ rise."
     ],
+    "oh": [
+      "$v \\propto T^2$; प्रति $1^\\circ\\text{C}$ वृद्धि पर $9.8 \\text{ m/s}$ बढ़ता है।",
+      "$v \\propto \\sqrt{T}$; तापमान में प्रति डिग्री सेल्सियस वृद्धि पर लगभग $0.61 \\text{ m/s}$ बढ़ता है।",
+      "$v \\propto \\frac{1}{\\sqrt{T}}$; प्रति $1^\\circ\\text{C}$ वृद्धि पर $0.61 \\text{ m/s}$ घटता है।",
+      "$v \\propto T$; प्रति $1^\\circ\\text{C}$ वृद्धि पर $3.0 \\text{ m/s}$ बढ़ता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 states a quadratic temperature dependence with acceleration due to gravity's magnitude. Option 1 is correct because the speed of sound in an ideal gas is given by $v = \\sqrt{\\frac{\\gamma R T}{M}}$, which proves that sound speed is directly proportional to the square root of absolute temperature: <br>$$v \\propto \\sqrt{T}$$ <br>Using the linear expansion approximation for air near room temperature ($T = 273 + t^\\circ\\text{C}$), the velocity of sound increases linearly by **approximately $0.61 \\text{ m/s}$ for every $1^\\circ\\text{C}$ rise in temperature** ($v_t \\approx v_0 + 0.61t$). For instance, sound speed in air is $324 \\text{ m/s}$ at $22^\\circ\\text{C}$ and increases to $341 \\text{ m/s}$ at $25^\\circ\\text{C}$. Options 2 and 3 state false mathematical dependencies."
+    "ee": "1. Option 0 assumes an incorrect quadratic relationship and uses the acceleration due to gravity ($9.8$).\n2. Option 1 is correct because the velocity of sound in an ideal gas is given by $v = \\sqrt{\\frac{\\gamma R T}{M}}$, where $T$ is the absolute temperature in Kelvin, proving that **$v \\propto \\sqrt{T}$**. For modest temperature changes near $0^\\circ\\text{C}$ ($T_0 = 273\\text{ K}$), applying the binomial expansion $v_t = v_0\\left(1 + \\frac{t}{273}\\right)^{1/2} \\approx v_0 + \\left(\\frac{v_0}{546}\\right)t$. Substituting $v_0 = 332\\text{ m/s}$ yields an increase of: $$\\Delta v = \\frac{332}{546} \\approx \\mathbf{0.61\\text{ m/s per } 1^\\circ\\text{C rise in temperature}}$$\n3. Option 2 and Option 3 state incorrect functional dependencies ($1/\\sqrt{T}$ or linear $T$).",
+    "eh": "1. विकल्प 0 गलत है क्योंकि ध्वनि का वेग तापमान के वर्ग के समानुपाती नहीं होता।\n2. विकल्प 1 सही है क्योंकि आदर्श गैस में ध्वनि की चाल $v = \\sqrt{\\frac{\\gamma R T}{M}}$ होती है, जो दर्शाती है कि ध्वनि का वेग **परम ताप के वर्गमूल के समानुपाती ($v \\propto \\sqrt{T}$)** होता है। $0^\\circ\\text{C}$ ($273\\text{ K}$) के निकट द्विपद प्रमेय के प्रसार ($v_t \\approx v_0 + 0.61t$) के अनुसार, वायु में तापमान में **प्रत्येक $1^\\circ\\text{C}$ की वृद्धि होने पर ध्वनि की चाल लगभग $0.61\\text{ m/s}$ (या 61 सेमी/सेकंड) बढ़ जाती है**।\n3. विकल्प 2 गलत है क्योंकि तापमान बढ़ने पर चाल घटती नहीं है।\n4. विकल्प 3 गलत है क्योंकि यह संबंध सीधे $T$ के समानुपाती नहीं बल्कि वर्गमूल के समानुपाती होता है।"
   },
   {
     "p_id": "bpsc_phys_m29_09",
     "qe": "Comparing the speed of sound across different states of matter (solids, liquids, and gases) reveals significant variations due to density and bulk elasticity. Based on standard measurements at $25^\\circ\\text{C}$, which sequence correctly orders substances by DECREASING speed of sound?",
     "qh": "पदार्थ की विभिन्न अवस्थाओं (ठोस, द्रव और गैस) में ध्वनि की चाल की तुलना करने पर घनत्व और आयतन प्रत्यास्थता (bulk elasticity) के कारण महत्वपूर्ण भिन्नताओं का पता चलता है। $25^\\circ\\text{C}$ पर मानक मापों के आधार पर, कौन सा क्रम घटती हुई ध्वनि की चाल के अनुसार पदार्थों को सही ढंग से व्यवस्थित करता है?",
-    "o": [
+    "oe": [
       "Air ($346 \\text{ m/s}$) > Water ($1498 \\text{ m/s}$) > Steel ($5960 \\text{ m/s}$) > Aluminium ($6420 \\text{ m/s}$)",
       "Aluminium ($6420 \\text{ m/s}$) > Steel/Iron ($5960 / 5950 \\text{ m/s}$) > Sea Water ($1531 \\text{ m/s}$) > Air ($346 \\text{ m/s}$)",
       "Helium ($965 \\text{ m/s}$) > Ethanol ($1207 \\text{ m/s}$) > Nickel ($6040 \\text{ m/s}$) > Hydrogen ($1284 \\text{ m/s}$)",
       "Distilled Water ($1498 \\text{ m/s}$) > Aluminium ($6420 \\text{ m/s}$) > Oxygen ($316 \\text{ m/s}$) > Iron ($5950 \\text{ m/s}$)"
     ],
+    "oh": [
+      "हवा ($346 \\text{ m/s}$) > पानी ($1498 \\text{ m/s}$) > स्टील ($5960 \\text{ m/s}$) > एल्युमिनियम ($6420 \\text{ m/s}$)",
+      "एल्युमिनियम ($6420 \\text{ m/s}$) > स्टील/लोहा ($5960 / 5950 \\text{ m/s}$) > समुद्री जल ($1531 \\text{ m/s}$) > हवा ($346 \\text{ m/s}$)",
+      "हीलियम ($965 \\text{ m/s}$) > इथेनॉल ($1207 \\text{ m/s}$) > निकल ($6040 \\text{ m/s}$) > हाइड्रोजन ($1284 \\text{ m/s}$)",
+      "आसुत जल ($1498 \\text{ m/s}$) > एल्युमिनियम ($6420 \\text{ m/s}$) > ऑक्सीजन ($316 \\text{ m/s}$) > लोहा ($5950 \\text{ m/s}$)"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely reverses the speed order (placing gases above solids). Option 1 is correct because sound travels fastest in elastic solids, slower in liquids, and slowest in compressible gases because solids possess vastly higher elastic moduli ($E$), which outweighs their higher density in $v = \\sqrt{\\frac{E}{\\rho}}$. Evaluating values at $25^\\circ\\text{C}$: <br>1. **Aluminium:** $6420 \\text{ m/s}$ <br>2. **Steel / Iron:** $5960 / 5950 \\text{ m/s}$ <br>3. **Sea Water:** $1531 \\text{ m/s}$ <br>4. **Air:** $346 \\text{ m/s}$ <br>Thus, $6420 > 5960 > 1531 > 346 \\text{ m/s}$ represents a correct decreasing sequence. Options 2 and 3 list jumbled speed values that violate the solid > liquid > gas progression."
+    "ee": "1. Option 0 arranges the media in increasing order rather than decreasing order.\n2. Option 1 is correct because the speed of sound is determined by elasticity and density ($v = \\sqrt{E/\\rho}$). Since solids have vastly greater elastic moduli than liquids, and liquids are less compressible than gases, the general speed hierarchy is **$\\text{Solids} > \\text{Liquids} > \\text{Gases}$**. At $25^\\circ\\text{C}$:\n   - **Aluminium (solid)**: $\\approx 6420\\text{ m/s}$\n   - **Steel / Iron (solid)**: $\\approx 5960\\text{ m/s} / 5950\\text{ m/s}$\n   - **Sea Water (liquid)**: $\\approx 1531\\text{ m/s}$ (faster than distilled water at $1498\\text{ m/s}$ due to salinity)\n   - **Air (gas)**: $\\approx 346\\text{ m/s}$\n   Thus, Aluminium > Steel > Sea Water > Air represents the accurate decreasing order.\n3. Option 2 and Option 3 mix up solids, liquids, and gases arbitrarily.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि यह घटते क्रम के बजाय बढ़ते क्रम में व्यवस्थित है।\n2. विकल्प 1 सही है क्योंकि ध्वनि की चाल माध्यम के प्रत्यास्थता गुणांक और घनत्व पर निर्भर करती है ($v = \\sqrt{E/\\rho}$)। ठोसों की प्रत्यास्थता द्रवों और गैसों से कहीं अधिक होती है, अतः सामान्य क्रम **ठोस > द्रव > गैस** होता है। $25^\\circ\\text{C}$ पर मानक मान:\n   - **एल्युमिनियम (ठोस):** $6420\\text{ m/s}$\n   - **स्टील / लोहा (ठोस):** $5960 / 5950\\text{ m/s}$\n   - **समुद्री जल (द्रव):** $1531\\text{ m/s}$ (लवणता के कारण आसुत जल $1498\\text{ m/s}$ से अधिक)\n   - **हवा (गैस):** $346\\text{ m/s}$\n   अतः एल्युमिनियम > स्टील > समुद्री जल > हवा सही घटता क्रम है।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि इनमें ठोस, द्रव और गैस का क्रम अनियमित है।"
   },
   {
     "p_id": "bpsc_phys_m29_10",
     "qe": "Environmental atmospheric parameters like humidity and wind velocity alter sound propagation speeds. How do humidity and wind direction influence the speed of sound in air?",
     "qh": "आर्द्रता और पवन वेग जैसे पर्यावरणीय वायुमंडलीय मापदंड ध्वनि संचरण की गति को बदलते हैं। आर्द्रता और हवा की दिशा हवा में ध्वनि की चाल को कैसे प्रभावित करती हैं?",
-    "o": [
+    "oe": [
       "Sound travels slower in humid air than in dry air; wind blowing in the direction of sound decreases its net speed.",
       "Sound travels faster in humid air than in dry air; wind blowing in the direction of sound increases its net speed.",
       "Humidity has zero effect on sound speed; wind direction affects light waves but not sound waves.",
       "Humid air decreases sound speed due to increased density of water droplets."
     ],
+    "oh": [
+      "ध्वनि शुष्क हवा की तुलना में आर्द्र हवा में धीमी गति से यात्रा करती है; ध्वनि की दिशा में बहने वाली हवा इसकी कुल गति को कम करती है।",
+      "ध्वनि शुष्क हवा की तुलना में आर्द्र (नम) हवा में तेजी से यात्रा करती है; ध्वनि की दिशा में बहने वाली हवा इसकी कुल गति को बढ़ाती है।",
+      "आर्द्रता का ध्वनि की चाल पर कोई प्रभाव नहीं पड़ता है; हवा की दिशा प्रकाश तरंगों को प्रभावित करती है लेकिन ध्वनि तरंगों को नहीं।",
+      "पानी की बूंदों के बढ़ते घनत्व के कारण आर्द्र हवा ध्वनि की चाल को कम करती है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states sound travels slower in humid air. Option 1 is correct because: <br>1. <b>Humidity Effect:</b> Water vapor (molecular mass $M_{\\text{H}_2\\text{O}} \\approx 18$) is lighter than dry air (average molecular mass $M_{\\text{dry air}} \\approx 29$). Consequently, humid air has a lower net density ($d$) than dry air at the same temperature and pressure. Since $v = \\sqrt{\\frac{\\gamma P}{d}}$, lower density causes sound to <b>travel faster in humid air than in dry air</b>. <br>2. <b>Wind Effect:</b> Wind represents the physical bulk transport of the medium itself. When wind blows in the direction of sound propagation with velocity $w$, the net speed of sound relative to a ground observer increases to <b>$v + w$</b>. Conversely, blowing against sound reduces net speed to $v - w$. Options 2 and 3 state false physical claims."
+    "ee": "1. Option 0 incorrectly states that humid air slows down sound waves.\n2. Option 1 is correct because:\n   - **Effect of Humidity**: The molecular weight of water vapor ($M_{\\text{H}_2\\text{O}} = 18$) is significantly less than that of dry air ($M_{\\text{air}} \\approx 29$). Adding moisture decreases the effective density of moist air relative to dry air at the same pressure ($d_{\\text{moist}} < d_{\\text{dry}}$). Since sound speed is inversely proportional to the square root of density ($v \\propto 1/\\sqrt{d}$), **sound travels faster in humid air than in dry air**.\n   - **Effect of Wind**: Wind is the macroscopic bulk motion of the medium. When wind travels with velocity $w$ at an angle $\\theta$ to the sound wave vector $v$, the resultant sound speed is $v_{\\text{eff}} = v + w\\cos\\theta$. In the direction of the wind ($\\theta = 0^\\circ$), the speed increases to **$v + w$**.\n3. Option 2 and Option 3 contradict aerodynamic and density physics.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि आर्द्र हवा में ध्वनि की चाल घटती नहीं, बल्कि बढ़ती है।\n2. विकल्प 1 सही है क्योंकि:\n   - **आर्द्रता का प्रभाव:** जलवाष्प का आणविक भार ($18$) शुष्क वायु के औसत आणविक भार ($29$) से कम होता है। इसलिए समान ताप और दाब पर आर्द्र (नम) वायु का घनत्व शुष्क वायु के घनत्व से कम होता है। सूत्र $v = \\sqrt{\\frac{\\gamma P}{d}}$ के अनुसार, घनत्व कम होने पर **आर्द्र वायु में ध्वनि की चाल शुष्क वायु की तुलना में अधिक होती है** (यही कारण है कि बारिश के मौसम में सीटी की आवाज अधिक दूर तक सुनाई देती है)।\n   - **वायु प्रवाह का प्रभाव:** जब हवा ध्वनि संचरण की दिशा में $w$ वेग से बहती है, तो ध्वनि का प्रभावी वेग बढ़कर **$v + w$** हो जाता है।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि आर्द्रता और पवन दोनों ध्वनि संचरण को सीधे प्रभावित करते हैं।"
   },
   {
     "p_id": "bpsc_phys_m29_11",
     "qe": "When an aircraft or projectile exceeds the speed of sound in air, it enters the supersonic regime and generates a violent acoustic phenomenon. What is this phenomenon called, and what causes its destructive impact?",
     "qh": "जब कोई विमान या प्रक्षेप्य हवा में ध्वनि की चाल से अधिक हो जाता है, तो वह पराध्वनिक (supersonic) क्षेत्र में प्रवेश करता है और एक हिंसक ध्वनिक परिघटना उत्पन्न करता है। इस परिघटना को क्या कहा जाता है, और इसके विनाशकारी प्रभाव का क्या कारण है?",
-    "o": [
+    "oe": [
       "Reverberation; caused by multiple overlapping echoes inside a closed hall.",
       "Sonic Boom; caused by high-energy cone-shaped pressure shock waves sweeping across the ground behind the supersonic object.",
       "Refraction; caused by thermal inversion layers bending sound upward.",
       "Acoustic Resonance; caused by matching the natural frequency of window glass."
     ],
+    "oh": [
+      "अनुरणन (Reverberation); एक बंद हॉल के अंदर कई अतिव्यापी प्रतिध्वनियों के कारण होता है।",
+      "सोनिक बूम (Sonic Boom); पराध्वनिक वस्तु के पीछे जमीन पर फैलने वाली उच्च-ऊर्जा शंकु के आकार की दबाव प्रघाती तरंगों (shock waves) के कारण होता है।",
+      "अपवर्तन; तापीय व्युत्क्रमण परतों के कारण ध्वनि ऊपर की ओर मुड़ती है।",
+      "ध्वनिक अनुनाद; खिड़की के कांच की प्राकृतिक आवृत्ति के मिलान के कारण होता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes acoustic prolongation in rooms. Option 1 is correct because when an object travels faster than the speed of sound in air ($v > v_{\\text{sound}}$, i.e., supersonic speed), it moves faster than the pressure waves it creates. The overlapping wavefronts construct a high-energy, conical pressure disturbance known as a <b>Shock Wave</b>. As this expanding shock wave cone intersects the ground, the sudden, extreme pressure jump produces a loud, explosive noise termed a <b>Sonic Boom</b>. The intense energy carried by sonic booms can rattle structures, shatter window glass, and damage buildings. Option 2 describes thermal refraction, and Option 3 describes frequency resonance."
+    "ee": "1. Option 0 describes reverberation in architectural room acoustics.\n2. Option 1 is correct because when a body moves through air at a supersonic speed (Mach number $> 1$, exceeding the local speed of sound), it travels faster than the pressure waves it creates. These sound wavefronts pile up behind the moving body to construct a conical envelope of sudden, extreme air compression known as a **Shock Wave**. When the trailing edge of this conical shock wave sweeps across the Earth's surface, the abrupt change in air pressure produces a thunder-like explosive blast termed a **Sonic Boom**. The high energy transmitted by shock waves can shake buildings and shatter glass panes.\n3. Option 2 describes thermal refraction in the atmosphere.\n4. Option 3 describes resonant structural failure, not supersonic shock phenomena.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि अनुरणन बंद कमरों में ध्वनि के परावर्तन से होने वाला गूंज प्रभाव है।\n2. विकल्प 1 सही है क्योंकि जब कोई जेट विमान या मिसाइल ध्वनि की चाल से भी तेज गति (**पराध्वनिक चाल / Supersonic Speed**, मैक संख्या $> 1$) से चलती है, तो वह अपने पीछे हवा में अत्यधिक तीव्र दबाव वाली शंकु के आकार की **प्रघाती तरंगें (Shock Waves)** छोड़ती है। जब इन प्रघाती तरंगों का शंक्वाकार आवरण पृथ्वी की सतह से टकराता है, तो भारी दबाव परिवर्तन के कारण बादलों की गड़गड़ाहट जैसी तीव्र आवाज सुनाई देती है, जिसे **'सोनिक बूम' (Sonic Boom)** कहते हैं। यह इतनी ऊर्जावान होती है कि खिड़कियों के शीशे तोड़ सकती है।\n3. विकल्प 2 गलत है क्योंकि यह वायुमंडलीय अपवर्तन का विवरण है।\n4. विकल्प 3 गलत है क्योंकि यह अनुनाद की स्थिति नहीं है।"
   },
   {
     "p_id": "bpsc_phys_m29_12",
     "qe": "Seeing a lightning flash several seconds before hearing the accompanying thunder rumble illustrates a fundamental disparity in wave propagation velocities. What is the physical origin of this observation?",
     "qh": "साथ में आने वाली गर्जना (thunder) को सुनने से कई सेकंड पहले बिजली की चमक (lightning flash) देखना तरंग संचरण वेगों में एक मौलिक असमानता को दर्शाता है। इस अवलोकन का भौतिक मूल क्या है?",
-    "o": [
+    "oe": [
       "Sound waves travel through vacuum, whereas light waves require an air medium.",
       "Light waves are electromagnetic waves traveling at an immense speed ($c \\approx 3 \\times 10^8 \\text{ m/s}$), whereas sound waves are mechanical waves traveling vastly slower ($v \\approx 346 \\text{ m/s}$ in air at $25^\\circ\\text{C}$).",
       "Thunder is produced several seconds after lightning occurs at the cloud origin.",
       "The human eye processes signals faster than the human auditory nerve."
     ],
+    "oh": [
+      "ध्वनि तरंगें निर्वात के माध्यम से यात्रा करती हैं, जबकि प्रकाश तरंगों को वायु माध्यम की आवश्यकता होती है।",
+      "प्रकाश तरंगें विद्युत चुंबकीय तरंगें हैं जो अत्यधिक गति ($c \\approx 3 \\times 10^8 \\text{ m/s}$) से यात्रा करती हैं, जबकि ध्वनि तरंगें यांत्रिक तरंगें हैं जो अत्यधिक धीमी गति से यात्रा करती हैं ($25^\\circ\\text{C}$ पर हवा में $v \\approx 346 \\text{ m/s}$)।",
+      "बादल मूल में बिजली गिरने के कई सेकंड बाद गड़गड़ाहट उत्पन्न होती है।",
+      "मानव आँख मानव श्रवण तंत्रिका की तुलना में संकेतों को तेजी से संसाधित करती है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 falsely claims sound travels in a vacuum and light requires air. Option 1 is correct because both light and sound are emitted simultaneously during a storm discharge in the atmosphere. However, **Light** is an electromagnetic wave that travels in air at approximately **$3 \\times 10^8 \\text{ m/s}$** ($300,000 \\text{ km/s}$), covering atmospheric distances almost instantaneously. In contrast, **Sound** is a mechanical longitudinal wave traveling in air at only **$\\sim 346 \\text{ m/s}$** at $25^\\circ\\text{C}$. Because light travels nearly a million times faster than sound in air, the optical flash reaches an observer almost immediately, whereas the acoustic shock wave takes several seconds to arrive. Option 2 incorrectly assumes a time delay at the source, and Option 3 misattributes the delay to neural processing."
+    "ee": "1. Option 0 reverses the medium propagation requirements of light and sound.\n2. Option 1 is correct because during an atmospheric thunderstorm electrical discharge, flash illumination (light) and shock expansion (thunder) are produced simultaneously. However:\n   - **Light** is a non-mechanical electromagnetic wave that propagates through air at $c \\approx 3 \\times 10^8\\text{ m/s}$ ($300,000\\text{ km/s}$), reaching terrestrial observers almost instantaneously ($t \\approx 0$).\n   - **Thunder (Sound)** is a mechanical longitudinal wave that travels through air at only $v \\approx 346\\text{ m/s}$ ($0.346\\text{ km/s}$). For a lightning strike occurring $1.7\\text{ km}$ away, light arrives in microseconds, whereas sound requires $t = \\frac{1700}{346} \\approx 5\\text{ seconds}$ to reach the observer.\n3. Option 2 is incorrect because plasma expansion and optical discharge are physically co-generated.\n4. Option 3 misattributes physical wave propagation times to neurological processing.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि प्रकाश निर्वात में चल सकता है जबकि ध्वनि नहीं।\n2. विकल्प 1 सही है क्योंकि बादलों में आकाशीय बिजली चमकने पर प्रकाश और ध्वनि दोनों एक ही क्षण में एक साथ उत्पन्न होते हैं। परंतु:\n   - **प्रकाश (विद्युत चुंबकीय तरंग)** की चाल वायु में लगभग **$3 \\times 10^8\\text{ m/s}$** ($3,00,000\\text{ किमी/सेकंड}$) होती है, जिससे बिजली की चमक तुरंत दिखाई दे जाती है।\n   - **ध्वनि (यांत्रिक तरंग)** की चाल वायु में मात्र **$\\approx 346\\text{ m/s}$** होती है। प्रकाश की चाल ध्वनि की चाल से लगभग दस लाख गुना अधिक होने के कारण, कई किलोमीटर की दूरी तय करने में ध्वनि को कुछ सेकंड का समय लग जाता है, जिससे गड़गड़ाहट बाद में सुनाई देती है।\n3. विकल्प 2 गलत है क्योंकि दोनों घटनाएं स्रोत पर एक साथ होती हैं।\n4. विकल्प 3 गलत है क्योंकि यह विशुद्ध रूप से तरंग संचरण वेग का अंतर है।"
   },
   {
     "p_id": "bpsc_phys_m29_13",
     "qe": "Hearing a clear, distinct echo requires satisfying specific physiological human auditory limits and minimum spatial distance boundaries. What is the human brain's persistence of hearing duration, and what is the minimum required distance between the sound source and reflecting obstacle in air?",
     "qh": "एक स्पष्ट, अलग प्रतिध्वनि (echo) सुनने के लिए विशिष्ट शारीरिक मानवीय श्रवण सीमाओं और न्यूनतम स्थानिक दूरी सीमाओं को पूरा करने की आवश्यकता होती है। मानव मस्तिष्क की श्रवण की निरंतरता (persistence of hearing) की अवधि क्या है, और हवा में ध्वनि स्रोत और परावर्तक बाधा के बीच न्यूनतम आवश्यक दूरी क्या है?",
-    "o": [
+    "oe": [
       "Persistence of hearing: $1.0 \\text{ second}$; Minimum distance: $34.4 \\text{ meters}$",
       "Persistence of hearing: $0.1 \\text{ second}$; Minimum distance: $17.2 \\text{ meters}$ (at standard room temperature)",
       "Persistence of hearing: $0.01 \\text{ second}$; Minimum distance: $1.72 \\text{ meters}$",
       "Persistence of hearing: $0.5 \\text{ second}$; Minimum distance: $85 \\text{ meters}$"
     ],
+    "oh": [
+      "श्रवण की निरंतरता: $1.0 \\text{ सेकंड}$; न्यूनतम दूरी: $34.4 \\text{ मीटर}$",
+      "श्रवण की निरंतरता: $0.1 \\text{ सेकंड}$; न्यूनतम दूरी: $17.2 \\text{ मीटर}$ (मानक कमरे के तापमान पर)",
+      "श्रवण की निरंतरता: $0.01 \\text{ सेकंड}$; न्यूनतम दूरी: $1.72 \\text{ मीटर}$",
+      "श्रवण की निरंतरता: $0.5 \\text{ सेकंड}$; न्यूनतम दूरी: $85 \\text{ मीटर}$"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 uses a 1-second retention time. Option 1 is correct because: <br>1. <b>Persistence of Hearing:</b> The human brain retains the sensation of any heard sound for approximately <b>$0.1 \\text{ seconds}$</b> (1/10th of a second). To hear a distinct echo, the reflected sound must reach the ear after this $0.1 \\text{ s}$ interval has elapsed, so the brain perceives it as a separate sound rather than a continuation. <br>2. <b>Minimum Distance Calculation:</b> Taking the speed of sound in air as $v \\approx 344 \\text{ m/s}$, the total two-way distance (to obstacle and back) traveled by sound in $0.1 \\text{ s}$ is: <br>$$\\text{Total Distance} = v \\times t = 344 \\text{ m/s} \\times 0.1 \\text{ s} = 34.4 \\text{ meters}$$ <br>Since this is a round trip, the minimum one-way distance between the source and the reflecting wall must be: <br>$$\\text{Minimum Distance} = \\frac{34.4}{2} = \\mathbf{17.2 \\text{ meters}}$$ <br>Options 2 and 3 state incorrect persistence times or calculated distances."
+    "ee": "1. Option 0 uses an incorrect persistence interval of 1 second.\n2. Option 1 is correct because:\n   - **Persistence of Hearing**: The human auditory sensation of an acoustic signal persists in the brain for approximately **$0.1\\text{ second}$ ($1/10\\text{th of a second}$)**. For an echo to be perceived distinctly, the reflected sound wave must arrive at the ear after an interval of at least $0.1\\text{ s}$.\n   - **Minimum Distance**: Taking the speed of sound in air at $20^\\circ\\text{C}$ as $v = 344\\text{ m/s}$, the round-trip distance traveled by sound in $0.1\\text{ s}$ is: $$\\text{Total Distance} = v \\times t = 344\\text{ m/s} \\times 0.1\\text{ s} = 34.4\\text{ meters}$$\n   Since the wave travels to the obstacle and reflects back ($2d = 34.4\\text{ m}$), the minimum one-way separation distance is: $$d = \\frac{34.4}{2} = \\mathbf{17.2\\text{ meters}}$$\n3. Option 2 and Option 3 list incorrect auditory thresholds and distances.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि कान पर ध्वनि का प्रभाव 1 सेकंड नहीं रहता।\n2. विकल्प 1 सही है क्योंकि:\n   - **श्रवण निर्बंध (Persistence of Hearing):** मानव कान पर किसी ध्वनि का प्रभाव लगभग **$0.1\\text{ सेकंड}$ ($1/10$ सेकंड)** तक बना रहता है। मूल ध्वनि और परावर्तित ध्वनि को अलग-अलग सुनने के लिए दोनों के बीच कम से कम $0.1\\text{ सेकंड}$ का समय अंतराल होना चाहिए।\n   - **न्यूनतम दूरी की गणना:** $20^\\circ\\text{C}$ पर वायु में ध्वनि का वेग $v = 344\\text{ m/s}$ मानने पर, $0.1\\text{ सेकंड}$ में ध्वनि द्वारा तय की गई कुल दूरी $344 \\times 0.1 = 34.4\\text{ मीटर}$ होगी। चूंकि ध्वनि को जाने और परावर्तित होकर लौटने में कुल दूरी तय करनी होती है ($2d = 34.4$), अतः स्रोत और परावर्तक सतह के बीच की **न्यूनतम दूरी $d = 34.4 / 2 = \\mathbf{17.2\\text{ मीटर}}$** होनी चाहिए।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि वे अमान्य गणनाएं प्रस्तुत करते हैं।"
   },
   {
     "p_id": "bpsc_phys_m29_14",
     "qe": "Multiple rapid reflections of sound off walls, ceiling, and floor in a large hall or auditorium can cause sound to persist long after the source stops vibrating. What is this prolonged acoustic phenomenon called, and how does it differ from a simple echo?",
     "qh": "एक बड़े हॉल या सभागार में दीवारों, छत और फर्श से ध्वनि के कई तीव्र परावर्तन ध्वनि स्रोत के कंपन बंद होने के लंबे समय बाद तक ध्वनि को बनाए रख सकते हैं। इस विस्तारित ध्वनिक परिघटना को क्या कहा जाता है, और यह एक साधारण प्रतिध्वनि से कैसे भिन्न है?",
-    "o": [
+    "oe": [
       "Refraction; it occurs when sound changes frequency across air layers.",
       "Reverberation; it is the prolonged persistence of sound caused by multiple continuous, overlapping reflections where individual echoes cannot be distinguished.",
       "Resonance; it occurs when sound matches the natural atomic frequency of air.",
       "Diffraction; it is the bending of sound waves around sharp corners without reflection."
     ],
+    "oh": [
+      "अपवर्तन; यह तब होता है जब ध्वनि हवा की परतों में आवृत्ति बदलती है।",
+      "अनुरणन (Reverberation); यह कई निरंतर, अतिव्यापी परावर्तनों के कारण ध्वनि का दीर्घकालिक बना रहना है जहाँ अलग-अलग प्रतिध्वनियों को अलग नहीं किया जा सकता है।",
+      "अनुनाद; यह तब होता है जब ध्वनि हवा की प्राकृतिक परमाणु आवृत्ति से मेल खाती है।",
+      "विवर्तन; यह बिना परावर्तन के तीखे कोनों के चारों ओर ध्वनि तरंगों का मुड़ना है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies room acoustics as refraction. Option 1 is correct because **Reverberation** is the repeated reflection of sound from surrounding surfaces in an enclosed space, causing the sound to persist even after the original source stops emitting. Unlike a clean **Echo** (where the reflected sound arrives after $0.1 \\text{ s}$ as a distinct, separated repetition), reverberation consists of **multiple overlapping reflections arriving at intervals shorter than $0.1 \\text{ s}$**, blending into a continuous, prolonged sound tail. Excessive reverberation causes speech overlap and distortion, requiring sound-absorbing materials (like acoustic curtains or fiberboard) on hall walls. Option 2 describes resonance, and Option 3 describes wave diffraction."
+    "ee": "1. Option 0 describes refraction, which is the bending of waves due to velocity gradients across media.\n2. Option 1 is correct because **Reverberation (अनुरणन)** is defined as the repeated, multiple reflection of sound waves from the boundaries (walls, roof, floor) of an enclosed hall, causing sound energy to decay slowly and persist after the original source ceases. Unlike a discrete **Echo** (which requires a time gap $> 0.1\\text{ s}$ and distance $\\ge 17.2\\text{ m}$ to hear a distinct repetition), reverberation consists of a dense continuum of reflections arriving at intervals **less than $0.1\\text{ second}$**, blending into a continuous, blurred acoustic tail.\n3. Option 2 describes resonance, which occurs when a driving frequency matches a system's natural frequency.\n4. Option 3 describes diffraction around obstacles.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि अपवर्तन तरंगों के मुड़ने की घटना है।\n2. विकल्प 1 सही है क्योंकि किसी बड़े हॉल या सभागार में स्रोत के बंद हो जाने के बाद भी दीवारों, फर्श और छत से बार-बार होने वाले परावर्तनों के कारण ध्वनि का कुछ समय तक गूंजते रहना **'अनुरणन' (Reverberation)** कहलाता है। प्रतिध्वनि (Echo) में परावर्तित ध्वनि $0.1\\text{ सेकंड}$ के बाद एक अलग ध्वनि के रूप में स्पष्ट सुनाई देती है, जबकि अनुरणन में परावर्तन $0.1\\text{ सेकंड}$ से भी कम अंतराल में लगातार होते हैं, जिससे मूल ध्वनि लंबी खिंच जाती है और अस्पष्ट हो जाती है।\n3. विकल्प 2 गलत है क्योंकि अनुनाद समान आवृत्तियों के मिलान से अधिकतम आयाम का कंपन है।\n4. विकल्प 3 गलत है क्योंकि विवर्तन तरंगों के कोनों से मुड़ने का गुण है।"
   },
   {
     "p_id": "bpsc_phys_m29_15",
     "qe": "Wave speed ($v$), frequency ($\\nu$), wavelength ($\\lambda$), and time period ($T$) are interconnected through fundamental kinematic relations. Which set of mathematical formulas correctly expresses these wave relationships?",
     "qh": "तरंग की चाल ($v$), आवृत्ति ($\\nu$), तरंगदैर्घ्य ($\\lambda$), और आवर्तकाल ($T$) मौलिक गतिक संबंधों के माध्यम से आपस में जुड़े हुए हैं। गणितीय सूत्रों का कौन सा समूह इन तरंग संबंधों को सही ढंग से व्यक्त करता है?",
-    "o": [
+    "oe": [
+      "$T = \\nu$; $v = \\frac{\\lambda}{\\nu}$",
+      "$T = \\frac{1}{\\nu}$; $v = \\nu \\cdot \\lambda = \\frac{\\lambda}{T}$",
+      "$T = \\nu^2$; $v = \\lambda^2 \\cdot T$",
+      "$T = \\frac{\\nu}{\\lambda}$; $v = \\frac{1}{\\nu \\cdot \\lambda}$"
+    ],
+    "oh": [
       "$T = \\nu$; $v = \\frac{\\lambda}{\\nu}$",
       "$T = \\frac{1}{\\nu}$; $v = \\nu \\cdot \\lambda = \\frac{\\lambda}{T}$",
       "$T = \\nu^2$; $v = \\lambda^2 \\cdot T$",
       "$T = \\frac{\\nu}{\\lambda}$; $v = \\frac{1}{\\nu \\cdot \\lambda}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states time period equals frequency. Option 1 is correct because: <br>1. <b>Time Period ($T$) and Frequency ($\\nu$):</b> Time period is the time taken for one complete wave cycle, which is mathematically the reciprocal of frequency: <br>$$T = \\frac{1}{\\nu}$$ <br>2. <b>Wave Speed Formula:</b> Speed is distance traveled per unit time. Since a wave travels a distance equal to one wavelength ($\\lambda$) in one time period ($T$): <br>$$v = \\frac{\\text{Distance}}{\\text{Time}} = \\frac{\\lambda}{T} = \\nu \\cdot \\lambda$$ <br>This fundamental relation ($v = \\nu \\lambda$) links wave speed directly to the product of frequency and wavelength. Options 2 and 3 state incorrect algebraic inversions."
+    "ee": "1. Option 0 incorrectly equates time period with frequency and inverts the velocity relation.\n2. Option 1 is correct because:\n   - **Time Period ($T$) and Frequency ($\\nu$)**: Frequency is the number of complete oscillations per second, and time period is the duration of one oscillation, making them exact reciprocals: $$T = \\frac{1}{\\nu} \\iff \\nu = \\frac{1}{T}$$\n   - **Wave Speed Formula**: A wave travels a distance equal to one wavelength ($\\lambda$) in one time period ($T$). By definition of speed ($\\text{Distance}/\\text{Time}$):\n   $$v = \\frac{\\lambda}{T} = \\lambda \\left(\\frac{1}{T}\\right) = \\mathbf{\\nu \\cdot \\lambda}$$\n   This fundamental wave equation applies universally to all mechanical and electromagnetic waves.\n3. Option 2 and Option 3 state dimensionally inconsistent formulas.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि आवर्तकाल आवृत्ति का व्युत्क्रम होता है, समान नहीं।\n2. विकल्प 1 सही है क्योंकि:\n   - **आवर्तकाल ($T$) और आवृत्ति ($\\nu$) का संबंध:** प्रति सेकंड होने वाले कंपनों की संख्या को आवृत्ति कहते हैं और एक कंपन पूरा करने में लगे समय को आवर्तकाल कहते हैं, अतः: $$T = \\frac{1}{\\nu} \\quad \\text{या} \\quad \\nu = \\frac{1}{T}$$\n   - **तरंग चाल सूत्र:** एक आवर्तकाल ($T$) में तरंग द्वारा तय की गई दूरी उसकी तरंगदैर्घ्य ($\\lambda$) कहलाती है। अतः चाल = दूरी / समय से:\n   $$v = \\frac{\\lambda}{T} = \\mathbf{\\nu \\cdot \\lambda}$$\n   यह सूत्र सभी प्रकार की यांत्रिक और प्रकाश तरंगों पर समान रूप से लागू होता है।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि ये विमीय रूप से अमान्य हैं।"
   },
-  
   {
     "p_id": "bpsc_phys_m30_01",
     "qe": "Evaluating auditorium acoustics requires balancing sound level enhancement with clarity. Why is a short reverberation time considered desirable in concert halls, whereas excessive reverberation is harmful?",
     "qh": "सभागार ध्वनिकी का मूल्यांकन करने के लिए स्पष्टता के साथ ध्वनि स्तर में वृद्धि को संतुलित करने की आवश्यकता होती है। कॉन्सर्ट हॉलों में कम प्रतिध्वनित काल (reverberation time) क्यों वांछनीय माना जाता है, जबकि अत्यधिक प्रतिध्वनित काल हानिकारक होता है?",
-    "o": [
+    "oe": [
       "Short reverberation completely eliminates all acoustic wave reflections; excessive reverberation converts sound waves into ultrasound.",
       "Short reverberation boosts the overall sound level pleasantly; excessive reverberation causes overlapping of successive acoustic signals, producing blurred and distorted sound.",
       "Short reverberation lowers the frequency of musical notes; excessive reverberation increases wave velocity beyond supersonic limits.",
       "Short reverberation is required for hearing distinct echoes; excessive reverberation destroys the ear's auditory drum."
     ],
+    "oh": [
+      "कम अनुरणन सभी ध्वनिक तरंग परावर्तनों को पूरी तरह से समाप्त करता है; अत्यधिक अनुरणन ध्वनि तरंगों को पराश्रव्य (अल्ट्रासाउंड) में बदल देता है।",
+      "कम अनुरणन समग्र ध्वनि स्तर को सुखद रूप से बढ़ाता है; अत्यधिक अनुरणन क्रमिक ध्वनिक संकेतों के अतिव्यापन का कारण बनता है, जिससे धुंधली और विकृत ध्वनि उत्पन्न होती है।",
+      "कम अनुरणन संगीतमय स्वरों की आवृत्ति को कम करता है; अत्यधिक अनुरणन तरंग वेग को पराध्वनिक सीमाओं से परे बढ़ा देता है।",
+      "अलग-अलग प्रतिध्वनियों को सुनने के लिए कम अनुरणन की आवश्यकता होती है; अत्यधिक अनुरणन कान के पर्दे को नष्ट कर देता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states that short reverberation eliminates all reflections (it requires controlled reflections). Option 1 is correct because: <br>1. <b>Desirable Short Reverberation:</b> A slight, controlled <b>reverberation</b> [the persistent prolongation of sound due to multiple successive reflections from room surfaces] reinforces the direct sound energy, boosting the acoustic power level without compromising musical note separation. <br>2. <b>Excessive Reverberation Harm:</b> If reflections persist too long, consecutive musical notes or speech syllables arrive at the listener's ear before preceding sounds decay. This constructive/destructive wave overlap produces <b>blurred, distorted, and confusing acoustic interference</b>. To curb excessive reverberation, sound-absorbing materials (heavy curtains, acoustic tiles) are deployed on hall surfaces. <br>Option 2 misattributes frequency and velocity shifts to room geometry. Option 3 confuses reverberation with discrete echoes."
+    "ee": "1. Option 0 is incorrect because anechoic rooms with zero reverberation sound dead/unpleasant, and reverberation cannot alter sound frequency into ultrasound.\n2. Option 1 is correct because:\n   - **Optimal Short Reverberation Time**: A small, controlled amount of reverberation (optimal reverberation time $\\approx 0.5\\text{ to }1.5\\text{ seconds}$) is desirable in auditoriums because successive reflections blend constructively, increasing overall acoustic loudness and giving musical notes depth and richness.\n   - **Harm of Excessive Reverberation**: If the reverberation time is too long ($> 2\\text{ seconds}$), preceding syllables or musical notes do not decay before subsequent ones arrive. These overlapping wavefronts create confusion, acoustic blurring, and unintelligibility. To optimize acoustics, architects install sound-absorbing materials like perforated acoustic boards, heavy draperies, and cushioned seating.\n3. Option 2 is incorrect because room reflections cannot alter wave frequency or accelerate sound past supersonic limits.\n4. Option 3 is incorrect because echoes require long spatial delays, not short reverberation times.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि शून्य अनुरणन वाला कमरा नीरस लगता है और यह ध्वनि को अल्ट्रासाउंड में नहीं बदल सकता।\n2. विकल्प 1 सही है क्योंकि:\n   - **कम अनुरणन समय की उपयोगिता:** किसी हॉल में थोड़ा सा नियंत्रित अनुरणन समय (लगभग 0.5 से 1.5 सेकंड) आवश्यक और सुखद होता है, क्योंकि यह ध्वनि की तीव्रता को बढ़ाता है और संगीत में निरंतरता व मिठास लाता है।\n   - **अत्यधिक अनुरणन की हानि:** यदि अनुरणन समय बहुत लंबा हो, तो पहले बोले गए शब्द या स्वर समाप्त होने से पहले ही नए शब्द शुरू हो जाते हैं, जिससे ध्वनियों का आपस में **अतिव्यापन (Overlapping)** हो जाता है और भाषण या संगीत अस्पष्ट, धुंधला और विकृत सुनाई देता है। इसे नियंत्रित करने के लिए दीवारों पर ध्वनिरोधक टाइलें और पर्दे लगाए जाते हैं।\n3. विकल्प 2 गलत है क्योंकि परावर्तन से ध्वनि की आवृत्ति या चाल नहीं बदलती।\n4. विकल्प 3 गलत है क्योंकि प्रतिध्वनि के लिए स्पष्ट समय अंतराल की आवश्यकता होती है।"
   },
   {
     "p_id": "bpsc_phys_m30_02",
     "qe": "Acoustic instruments and architectural designs utilize multiple reflection paths to direct sound energy. How does a concave sound board installed behind a speaker in a large conference hall improve sound distribution?",
     "qh": "ध्वनिक उपकरण और वास्तुकला डिज़ाइन ध्वनि ऊर्जा को निर्देशित करने के लिए बहु-परावर्तन पथों (multiple reflection paths) का उपयोग करते हैं। एक बड़े सम्मेलन कक्ष में वक्ता के पीछे स्थापित अवतल साउंड बोर्ड (concave sound board) ध्वनि वितरण में कैसे सुधार करता है?",
-    "o": [
+    "oe": [
       "It absorbs low-frequency background noise to produce pure ultrasonic waves.",
       "It reflects expanding sound waves in a controlled, parallel or broadly dispersed beam, distributing sound evenly across the entire width of the hall.",
       "It accelerates sound wave velocity past $340 \\text{ m/s}$ using concave compression.",
       "It converts transverse acoustic waves into longitudinal electrical signals."
     ],
+    "oh": [
+      "यह शुद्ध पराश्रव्य तरंगों का उत्पादन करने के लिए कम आवृत्ति वाले पृष्ठभूमि शोर को अवशोषित करता है।",
+      "यह फैलती ध्वनि तरंगों को एक नियंत्रित, समानांतर या व्यापक रूप से बिखरे हुए पुंज में परावर्तित करता है, जिससे हॉल की पूरी चौड़ाई में ध्वनि समान रूप से वितरित होती है।",
+      "यह अवतल संपीड़न का उपयोग करके ध्वनि तरंग के वेग को $340 \\text{ m/s}$ से आगे बढ़ाता है।",
+      "यह अनुप्रस्थ ध्वनिक तरंगों को अनुदैर्ध्य विद्युत संकेतों में परिवर्तित करता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies the board as an ultrasonic filter. Option 1 is correct because a <b>concave sound board</b> acts as a directional acoustic reflector placed at the focal plane behind a speaker. According to the laws of reflection, sound waves originating from the speaker strike the curved concave surface and bounce outward as a focused or broadly uniform wavefront. This prevents energy dissipation toward the back wall and <b>distributes acoustic energy evenly across the length and width of the auditorium</b>. Similarly, curved hall ceilings reflect sound downward to reach every corner. Option 2 falsely claims the board alters sound speed, and Option 3 misclassifies sound as transverse waves."
+    "ee": "1. Option 0 is incorrect because a soundboard is a passive reflector, not an electronic transducer or ultrasonic generator.\n2. Option 1 is correct because a **Soundboard** is a curved (concave) acoustic reflector placed vertically behind the podium or speaker. The speaker is positioned at the principal focus of the concave curved reflector. According to the laws of acoustic reflection, sound waves emanating outward from the focal point strike the concave surface and are reflected forward as a **collimated, uniform beam of sound**. This prevents acoustic energy from being wasted toward the rear and directs it evenly toward the audience across the entire length and breadth of the auditorium.\n3. Option 2 is incorrect because acoustic reflectors cannot alter the medium's inherent sound velocity.\n4. Option 3 is incorrect because soundboards reflect acoustic pressure waves without converting them into electrical currents.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि साउंड बोर्ड कोई पराश्रव्य फिल्टर नहीं है।\n2. विकल्प 1 सही है क्योंकि **अवतल साउंड बोर्ड (Concave Sound Board)** परावर्तन के नियमों पर कार्य करने वाला एक ध्वनिक परावर्तक है। जब वक्ता को इस अवतल बोर्ड के मुख्य फोकस पर रखा जाता है, तो वक्ता के मुख से निकलने वाली ध्वनि तरंगें अवतल पृष्ठ से टकराकर **समानांतर या एकसमान पुंज (Parallel Beam) के रूप में आगे की ओर परावर्तित होती हैं**। इससे ध्वनि ऊर्जा पीछे व्यर्थ नष्ट नहीं होती और पूरे सभागार में बैठे श्रोताओं तक स्पष्ट और समान रूप से पहुँचती है।\n3. विकल्प 2 गलत है क्योंकि परावर्तक ध्वनि की चाल को नहीं बढ़ा सकता।\n4. विकल्प 3 गलत है क्योंकि यह कोई माइक्रोफोन नहीं है जो विद्युत संकेत बनाए।"
   },
   {
     "p_id": "bpsc_phys_m29_03",
     "qe": "Atmospheric temperature gradients bend sound paths via acoustic refraction. Why can sound be heard over significantly larger distances on a cold winter night compared to a warm summer day?",
     "qh": "वायुमंडलीय तापमान प्रवणता (temperature gradients) ध्वनिक अपवर्तन (acoustic refraction) के माध्यम से ध्वनि पथों को मोड़ती है। गर्म ग्रीष्मकालीन दिन की तुलना में ठंडी सर्दियों की रात में काफी अधिक दूरी तक ध्वनि क्यों सुनी जा सकती है?",
-    "o": [
+    "oe": [
       "On a warm day, cold air near the ground refracts sound toward Earth; on a cold day, warm air refracts sound upward.",
       "On a warm day, air near the ground is hotter ($v_{\\text{sound}}$ is higher), bending sound rays upward away from Earth; on a cold day, ground air is colder ($v_{\\text{sound}}$ is lower), bending sound rays downward toward Earth.",
       "Cold air eliminates all acoustic damping, allowing sound to travel without energy decay.",
       "Warm air absorbs all sound frequencies above $20 \\text{ Hz}$."
     ],
+    "oh": [
+      "गर्म दिन में, जमीन के पास की ठंडी हवा ध्वनि को पृथ्वी की ओर अपवर्तित करती है; ठंडे दिन में, गर्म हवा ध्वनि को ऊपर की ओर अपवर्तित करती है।",
+      "गर्म दिन में, जमीन के पास की हवा अधिक गर्म होती है (ध्वनि की चाल अधिक होती है), जिससे ध्वनि किरणें ऊपर की ओर मुड़ जाती हैं; ठंडे दिन/रात में, जमीन के पास की हवा ठंडी होती है (ध्वनि की चाल कम होती है), जिससे ध्वनि किरणें नीचे पृथ्वी की ओर मुड़ जाती हैं।",
+      "ठंडी हवा सभी ध्वनिक अवमंदन को समाप्त कर देती है, जिससे ध्वनि बिना ऊर्जा क्षय के यात्रा कर सकती है।",
+      "गर्म हवा $20 \\text{ Hz}$ से ऊपर की सभी ध्वनि आवृत्तियों को अवशोषित कर लेती है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely swaps temperature profiles between warm and cold days. Option 1 is correct because sound speed depends directly on temperature ($v \\propto \\sqrt{T}$): <br>1. <b>Warm Day:</b> The air layer adjacent to the ground is warmer (higher sound speed) than the cooler air above (lower sound speed). As a sound wave travels horizontally, its lower portion moves faster than its upper portion, causing the wavefront to **refract (bend) upward away from the ground**, reducing ground-level hearing range. <br>2. <b>Cold Day / Night:</b> Thermal inversion occurs—air near the ground is colder (lower sound speed) than the warmer air layer above (higher sound speed). The upper portion of the wavefront travels faster than the lower portion, causing sound rays to **refract (bend) downward back toward Earth's surface**, enabling sound to travel much larger horizontal distances. <br>Options 2 and 3 state false environmental claims."
+    "ee": "1. Option 0 inverts the physical temperature and refractive profiles of warm days versus cold nights.\n2. Option 1 is correct because the speed of sound depends directly on temperature ($v \\propto \\sqrt{T}$):\n   - **On a Warm Day**: The Earth's surface heats the lowest air layer, making ground air hotter (higher speed) than the cooler upper layers (lower speed). The lower part of a sound wavefront moves faster than the upper part, causing the sound rays to **refract (bend) upward into the sky**, reducing audible range on the ground.\n   - **On a Cold Night / Winter Day**: Thermal inversion occurs—the ground cools rapidly, leaving a cold layer of air near the ground (lower speed) beneath a warmer upper air layer (higher speed). The upper portion of the sound wavefront travels faster than the base, **refracting (bending) the sound rays downward back toward the ground**, allowing sound to carry over much larger horizontal distances.\n3. Option 2 and Option 3 present unphysical damping and frequency absorption claims.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि यह गर्म और ठंडे दिनों की तापीय स्थिति को उल्टा बताता है।\n2. विकल्प 1 सही है क्योंकि ध्वनि की चाल तापमान के वर्गमूल के समानुपाती होती है ($v \\propto \\sqrt{T}$):\n   - **गर्म दिन में:** जमीन के संपर्क वाली वायु अधिक गर्म (अधिक चाल) होती है और ऊपर की परतें ठंडी (कम चाल) होती हैं। इससे ध्वनि तरंगाग्र का निचला हिस्सा तेजी से चलता है और ध्वनि किरणें **ऊपर आकाश की ओर अपवर्तित (मुड़) हो जाती हैं**, जिससे जमीन पर आवाज कम दूरी तक जाती है।\n   - **ठंडी रात / सर्दियों में:** तापीय व्युत्क्रमण (Temperature Inversion) के कारण जमीन के पास की हवा ठंडी (कम चाल) और ऊपर की हवा गर्म (अधिक चाल) होती है। इससे ऊपरी तरंगाग्र तेजी से आगे बढ़ता है और ध्वनि तरंगें **नीचे जमीन की ओर झुक जाती हैं (अपवर्तित होती हैं)**, जिससे आवाज बहुत दूर तक स्पष्ट सुनाई देती है।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि हवा में ऐसा कोई अस्वाभाविक अवशोषण नहीं होता।"
   },
   {
     "p_id": "bpsc_phys_m30_04",
     "qe": "Seismology and zoology observe animal behavior prior to major tectonic earthquakes. What specific acoustic frequency spectrum is generated by Earth during preliminary seismic shifts, and how does it affect animals?",
     "qh": "भूकंप विज्ञान और प्राणीशास्त्र प्रमुख विवर्तनिक (tectonic) भूकंपों से पहले जानवरों के व्यवहार का अवलोकन करते हैं। प्रारंभिक भूकंपीय परिवर्तनों के दौरान पृथ्वी द्वारा कौन सा विशिष्ट ध्वनिक आवृत्ति स्पेक्ट्रम उत्पन्न होता है, और यह जानवरों को कैसे प्रभावित करता है?",
-    "o": [
+    "oe": [
       "Earthquakes generate high-frequency Ultrasound ($> 20,000 \\text{ Hz}$) that blinds nocturnal animals.",
       "Earthquakes generate low-frequency Infrasound ($< 20 \\text{ Hz}$, typically $\\sim 5 \\text{ Hz}$) before main shockwaves begin, disturbing sensitive animals like elephants and rhinoceroses.",
       "Earthquakes emit audible music notes that soothe domestic pets.",
       "Earthquakes release electromagnetic gamma rays that alter animal inner ear fluid."
     ],
+    "oh": [
+      "भूकंप उच्च आवृत्ति वाले अल्ट्रासाउंड ($> 20,000 \\text{ Hz}$) उत्पन्न करते हैं जो निशाचर जानवरों को अंधा कर देते हैं।",
+      "मुख्य प्रघाती तरंगें (shockwaves) शुरू होने से पहले भूकंप कम आवृत्ति वाली अवश्रव्य ध्वनि (Infrasound, $< 20 \\text{ Hz}$, आमतौर पर $\\sim 5 \\text{ Hz}$) उत्पन्न करते हैं, जो हाथियों और गैंडों जैसे संवेदनशील जानवरों को विचलित कर देती है।",
+      "भूकंप श्रव्य संगीत स्वर उत्सर्जित करते हैं जो पालतू जानवरों को शांत करते हैं।",
+      "भूकंप विद्युत चुंबकीय गामा किरणें छोड़ते हैं जो जानवरों के आंतरिक कान के तरल पदार्थ को बदल देती हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies seismic pre-shocks as ultrasound. Option 1 is correct because preliminary tectonic rock ruptures and crustal shifts produce **Infrasonic Waves (Infrasound)** [acoustic waves with frequencies strictly lower than the human audible threshold of $20 \\text{ Hz}$, down to $\\sim 5 \\text{ Hz}$]. While humans cannot hear infrasound, large mammals (elephants, rhinoceroses, whales) communicate and detect sounds in this sub-audible spectrum. Detecting these low-frequency pre-shocks alerts animals seconds or minutes before high-amplitude shear shockwaves arrive, triggering panic and erratic movement. Options 2 and 3 state false physical mechanisms."
+    "ee": "1. Option 0 is incorrect because deep tectonic rock fractures generate sub-audible low-frequency waves, not high-frequency ultrasound.\n2. Option 1 is correct because prior to the arrival of high-amplitude destructive seismic surface shockwaves, initial sub-surface rock stresses and fault slips generate **Infrasonic Waves (Infrasound)**, which are mechanical acoustic waves with frequencies **strictly below the human auditory threshold of $20\\text{ Hz}$ (often as low as $1\\text{ to }5\\text{ Hz}$)**. Although humans cannot perceive infrasound, many animals—including elephants, rhinoceroses, whales, dogs, and birds—possess sensory anatomy capable of hearing or detecting low-frequency infrasonic vibrations. Detecting these precursory infrasound emissions causes animals to become restless, vocalize, and flee to open ground minutes before the earthquake is felt by humans.\n3. Option 2 and Option 3 present invalid biological and acoustic claims.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि भूकंपीय विवर्तनिक गतिविधियों से पराश्रव्य नहीं, बल्कि अवश्रव्य तरंगें बनती हैं।\n2. विकल्प 1 सही है क्योंकि भूकंप की मुख्य विनाशकारी झटके वाली तरंगें आने से पहले पृथ्वी की परतों में होने वाले शुरुआती घर्षण और टूटन से **कम आवृत्ति वाली अवश्रव्य तरंगें (Infrasonic waves, आवृत्ति $< 20\\text{ Hz}$, सामान्यतः 5 Hz के आसपास)** उत्पन्न होती हैं। मानव कान $20\\text{ Hz}$ से कम की ध्वनि नहीं सुन सकते, परंतु हाथी, गैंडे, कुत्ते और पक्षी इन अवश्रव्य सिस्मोग्राफिक सिग्नलों को आसानी से महसूस कर लेते हैं। यही कारण है कि भूकंप के झटके मनुष्यों को महसूस होने से कुछ समय पहले ही जानवर बेचैन होकर सुरक्षित स्थानों की ओर भागने लगते हैं।\n3. विकल्प 2 गलत है क्योंकि भूकंप से कोई मधुर संगीत नहीं निकलता।\n4. विकल्प 3 गलत है क्योंकि भूकंप यांत्रिक तरंगें हैं, गामा विकिरण नहीं।"
   },
   {
     "p_id": "bpsc_phys_m30_05",
     "qe": "Police canine units utilize specialized whistle devices (Galton's whistles) to command trained dogs without alerting human suspects. What frequency classification governs these acoustic signals?",
     "qh": "पुलिस श्वान दस्ते (Police canine units) मानव संदिग्धों को सतर्क किए बिना प्रशिक्षित कुत्तों को कमान देने के लिए विशेष सीटी उपकरणों (गैल्टन की सीटी) का उपयोग करते हैं। कौन सा आवृत्ति वर्गीकरण इन ध्वनिक संकेतों को नियंत्रित करता है?",
-    "o": [
+    "oe": [
       "Infrasonic waves below $10 \\text{ Hz}$ that vibrate ground soil.",
       "Ultrasonic waves above $20,000 \\text{ Hz}$ (dogs can hear up to $50,000 \\text{ Hz}$), which fall outside the human audible range ($20\\text{-}20,000 \\text{ Hz}$).",
       "Audible electromagnetic waves transmitted via radio frequencies.",
       "Pure transverse surface waves produced by mechanical friction."
     ],
+    "oh": [
+      "$10 \\text{ Hz}$ से नीचे की अवश्रव्य तरंगें जो जमीन की मिट्टी को कंपन करती हैं।",
+      "$20,000 \\text{ Hz}$ से ऊपर की पराश्रव्य तरंगें (कुत्ते $50,000 \\text{ Hz}$ तक सुन सकते हैं), जो मानव श्रव्य सीमा ($20\\text{-}20,000 \\text{ Hz}$) से बाहर हैं।",
+      "रेडियो आवृत्तियों के माध्यम से प्रसारित श्रव्य विद्युत चुंबकीय तरंगें।",
+      "यांत्रिक घर्षण द्वारा निर्मित शुद्ध अनुप्रस्थ सतह तरंगें।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies dog whistles as infrasonic. Option 1 is correct because the human hearing range spans $20 \\text{ Hz}$ to $20,000 \\text{ Hz}$. **Ultrasonic Sound (Ultrasound)** comprises longitudinal mechanical waves with frequencies **exceeding $20,000 \\text{ Hz}$ ($20 \\text{ kHz}$)**. Certain animals possess much wider auditory spectra—dogs can hear ultrasound up to $50,000 \\text{ Hz}$ ($50 \\text{ kHz}$), and bats up to $120 \\text{ kHz}$. Galton's whistles emit ultrasonic signals ($\\\\sim 25\\text{-}40 \\text{ kHz}$) clearly heard by dogs but completely silent to humans. Option 2 misclassifies sound as radio waves, and Option 3 misclassifies acoustic waves as transverse."
+    "ee": "1. Option 0 is incorrect because dog whistles emit high-frequency acoustic waves, not low-frequency infrasound.\n2. Option 1 is correct because:\n   - **Human Auditory Limit**: The normal human ear can perceive acoustic frequencies strictly within the **Audible Range of $20\\text{ Hz to }20,000\\text{ Hz}$ ($20\\text{ kHz}$)**.\n   - **Ultrasonic Whistle Mechanism**: **Galton's Whistle (silent dog whistle)** is engineered to produce **Ultrasonic Waves** with frequencies ranging from **$25,000\\text{ Hz to }40,000\\text{ Hz}$ ($> 20\\text{ kHz}$)**. Because canines possess an extended auditory range capable of hearing frequencies up to **$45,000-50,000\\text{ Hz}$**, dogs hear the whistle clearly, while human suspects hear nothing, enabling silent police signaling.\n3. Option 2 misclassifies acoustic pressure waves as radio waves.\n4. Option 3 is incorrect because airborne whistle sounds are longitudinal pressure waves.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि कुत्तों की सीटी अवश्रव्य तरंगों पर आधारित नहीं होती।\n2. विकल्प 1 सही है क्योंकि:\n   - **मानव श्रवण सीमा:** मनुष्य केवल **$20\\text{ Hz}$ से $20,000\\text{ Hz}$** के बीच की 'श्रव्य ध्वनि' (Audible sound) ही सुन सकता है।\n   - **गैल्टन की सीटी (Galton's Whistle):** यह सीटी **$20,000\\text{ Hz}$ से अधिक (लगभग 25,000 से 40,000 Hz) की 'पराश्रव्य तरंगें' (Ultrasonic Waves)** उत्पन्न करती है। चूंकि कुत्तों के कान $50,000\\text{ Hz}$ तक की उच्च आवृत्ति सुन सकते हैं, इसलिए वे सीटी की आवाज सुनकर तुरंत निर्देश समझ लेते हैं, जबकि यह ध्वनि मानव कानों के लिए पूरी तरह मूक (अश्रव्य) रहती है।\n3. विकल्प 2 गलत है क्योंकि यह ध्वनि तरंग है, रेडियो तरंग नहीं।\n4. विकल्प 3 गलत है क्योंकि हवा में सीटी की आवाज अनुदैर्ध्य तरंग होती है।"
   },
   {
     "p_id": "bpsc_phys_m30_06",
     "qe": "An electronic hearing aid assists individuals experiencing auditory impairment. What sequence of energy transformations occurs inside a battery-operated hearing aid?",
     "qh": "एक इलेक्ट्रॉनिक श्रवण यंत्र (hearing aid) श्रवण दोष का सामना कर रहे व्यक्तियों की सहायता करता है। बैटरी चालित श्रवण यंत्र के भीतर ऊर्जा परिवर्तनों का कौन सा क्रम होता है?",
-    "o": [
+    "oe": [
       "Electrical signal $\\to$ Optical laser $\\to$ Infrasonic vibration",
       "Acoustic Sound waves $\\to$ Electrical signals (Microphone) $\\to$ Amplified Electrical signals (Amplifier) $\\to$ Enhanced Acoustic Sound waves (Speaker)",
       "Chemical energy $\\to$ Thermal heat $\\to$ Ultrasonic frequency",
       "Mechanical motion $\\to$ Magnetic flux $\\to$ Static charge"
     ],
+    "oh": [
+      "विद्युत संकेत $\\to$ ऑप्टिकल लेजर $\\to$ अवश्रव्य कंपन",
+      "ध्वनि तरंगें $\\to$ विद्युत संकेत (माइक्रोफोन) $\\to$ प्रवर्धित विद्युत संकेत (एम्पलीफायर) $\\to$ संवर्धित ध्वनि तरंगें (स्पीकर)",
+      "रासायनिक ऊर्जा $\\to$ तापीय ऊष्मा $\\to$ पराश्रव्य आवृत्ति",
+      "यांत्रिक गति $\\to$ चुंबकीय प्रवाह $\\to$ स्थिर आवेश"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists laser transformation pathways not present in hearing aids. Option 1 is correct because a hearing aid operates via four integrated transducer stages: <br>1. **Microphone:** Receives incoming acoustic sound waves and converts them into proportional **electrical signals**. <br>2. **Amplifier:** Electronic circuitry increases the voltage/power amplitude of these electrical signals. <br>3. **Speaker (Receiver):** Converts amplified electrical signals back into high-intensity **acoustic sound waves**. <br>4. **Ear Canal Delivery:** Sends amplified sound into the user's auditory canal for clear perception. Options 2 and 3 state false energy transformation chains."
+    "ee": "1. Option 0 lists optical laser stages that do not exist in acoustic hearing aids.\n2. Option 1 is correct because an electronic **Hearing Aid** operates through a specific sequence of electroacoustic transformations:\n   - **Microphone**: Captures incoming mechanical sound waves from the environment and transduces them into corresponding electrical signals;\n   - **Amplifier Circuit**: Powered by a miniature battery, the amplifier increases the voltage and power amplitude of these electrical signals;\n   - **Speaker (Receiver)**: Transduces the amplified electrical signals back into high-intensity acoustic sound waves and delivers them directly into the user's ear canal, stimulating the tympanic membrane with sufficient amplitude for clear perception.\n3. Option 2 and Option 3 describe irrelevant physical and chemical processes.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि श्रवण यंत्र में लेजर का कोई उपयोग नहीं होता।\n2. विकल्प 1 सही है क्योंकि बैटरी चालित **इलेक्ट्रॉनिक श्रवण यंत्र (Hearing Aid)** में ऊर्जा रूपांतरण का सटीक क्रम इस प्रकार होता है:\n   - **माइक्रोफोन:** परिवेश की कमजोर **ध्वनि तरंगों** को ग्रहण करके उन्हें **विद्युत संकेतों** में बदलता है;\n   - **एम्पलीफायर (प्रवर्धक):** बैटरी की ऊर्जा से इन विद्युत संकेतों की तीव्रता/आयाम को **प्रवर्धित (Amplified)** करता है;\n   - **स्पीकर (रिसीवर):** प्रवर्धित विद्युत संकेतों को पुनः **उच्च तीव्रता वाली ध्वनि तरंगों** में परिवर्तित कर सीधे कान के पर्दे तक पहुँचाता है जिससे व्यक्ति को साफ सुनाई देता है।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि ये श्रवण यंत्र की कार्यप्रणाली से मेल नहीं खाते।"
   },
   {
     "p_id": "bpsc_phys_m30_07",
     "qe": "Ultrasonic waves are widely utilized in industrial cleaning for intricate components (e.g., spiral tubes, delicate electronic parts). What physical mechanism removes grease and dirt during ultrasonic bath immersion?",
     "qh": "जटिल घटकों (जैसे सर्पिल ट्यूब, नाज़ुक इलेक्ट्रॉनिक भाग) के औद्योगिक समाशोधन (cleaning) में पराश्रव्य तरंगों का व्यापक रूप से उपयोग किया जाता है। पराश्रव्य स्नान (ultrasonic bath) में डूबने के दौरान कौन सा भौतिक तंत्र ग्रीस और गंदगी को हटाता है?",
-    "o": [
+    "oe": [
       "High-frequency ultrasonic waves generate intense fluid agitation and rapid micro-vibrations, loosening dirt particles that detach into the cleaning solvent.",
       "Ultrasound chemically reacts with dirt to form water-soluble carbon gases.",
       "Ultrasonic waves heat the bath to $1,000^\\circ\\text{C}$, vaporizing foreign contaminants.",
       "Ultrasound demagnetizes dust particles, causing them to fall by gravity."
     ],
+    "oh": [
+      "उच्च आवृत्ति वाली पराश्रव्य तरंगें तीव्र तरल आंदोलन और तीव्र सूक्ष्म कंपन उत्पन्न करती हैं, जिससे गंदगी के कण ढीले होकर सफाई विलायक में अलग हो जाते हैं।",
+      "अल्ट्रासाउंड पानी में घुलनशील कार्बन गैसों को बनाने के लिए गंदगी के साथ रासायनिक रूप से प्रतिक्रिया करता है।",
+      "पराश्रव्य तरंगें स्नान को $1,000^\\circ\\text{C}$ तक गर्म करती हैं, जिससे विदेशी संदूषक वाष्पीकृत हो जाते हैं।",
+      "अल्ट्रासाउंड धूल के कणों को विचुंबकीय करता है, जिससे वे गुरुत्वाकर्षण द्वारा गिर जाते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 falsely claims ultrasound chemical conversion. Option 1 is correct because high-frequency **Ultrasonic Waves ($> 20 \\text{ kHz}$)** propagate through a liquid cleaning bath, inducing rapid pressure variations (cavitation and violent fluid agitation). The extreme acceleration and micro-vibrations imparted to liquid molecules cause attached dirt, oil, and grease particles to **vibrate vigorously, loosen, and detach completely from hard-to-reach internal surfaces**, falling into the solution. Option 2 describes thermal incineration, and Option 3 claims magnetic manipulation."
+    "ee": "1. Option 0 falsely describes a chemical gas conversion reaction.\n2. Option 1 is correct because in **Ultrasonic Cleaning Baths**, parts to be cleaned (such as intricate engine nozzles, electronic chips, or spiral pipes) are submerged in a cleaning liquid solution. High-frequency **Ultrasonic Waves ($> 20\\text{ kHz}$, typically $20-40\\text{ kHz}$)** sent into the liquid create rapid localized compression-rarefaction cycles that induce **Acoustic Cavitation**—the formation and violent collapse of millions of microscopic cavitation vapor bubbles. The resulting high-energy micro-jets and intense high-frequency vibrations scrub the surface, detaching grease, scale, and dust particles from the hardest-to-reach crevices into the solvent.\n3. Option 2 is incorrect because cleaning occurs near room temperature, not at $1,000^\\circ\\text{C}$.\n4. Option 3 is incorrect because dirt detachment is a mechanical fluid dynamics effect, not magnetic.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि अल्ट्रासाउंड कोई रासायनिक गैस नहीं बनाता।\n2. विकल्प 1 सही है क्योंकि **पराश्रव्य सफाई (Ultrasonic Cleaning)** में जब सफाई वाले घोल में उच्च आवृत्ति वाली **पराश्रव्य तरंगें ($> 20\\text{ kHz}$)** प्रवाहित की जाती हैं, तो तरल में तीव्र दबाव परिवर्तन से सूक्ष्म बुलबुले बनते और फूटते हैं (कैविटेशन प्रभाव)। इसके कारण घोल में अत्यधिक तीव्र गति से **सूक्ष्म कंपन और हलचल** उत्पन्न होती है, जिससे जटिल पुर्जों (जैसे बारीक सुराख वाली नलियों और घड़ी के पुर्जों) के कोनों में जमी धूल, तेल और ग्रीस के कण ढीले होकर छूट जाते हैं और वस्तु पूरी तरह साफ हो जाती है।\n3. विकल्प 2 गलत है क्योंकि यह प्रक्रिया सामान्य तापमान पर होती है।\n4. विकल्प 3 गलत है क्योंकि यह यांत्रिक प्रक्षालन है, चुंबकीय नहीं।"
   },
   {
     "p_id": "bpsc_phys_m30_08",
     "qe": "Medical Ultrasonography evaluates internal body organs and fetal development without invasive surgery. How does ultrasound image soft tissue structures inside the human body?",
     "qh": "चिकित्सा अल्ट्रासोनोग्राफी (Medical Ultrasonography) आक्रामक सर्जरी के बिना आंतरिक शरीर के अंगों और भ्रूण के विकास का मूल्यांकन करती है। अल्ट्रासाउंड मानव शरीर के भीतर नरम ऊतक संरचनाओं (soft tissue structures) की छवि कैसे बनाता है?",
-    "o": [
+    "oe": [
       "Ultrasound ionizing radiation alters cellular DNA to glow under X-ray cameras.",
       "Ultrasound waves penetrate tissues and reflect back from boundary interfaces where tissue density changes, converting reflected echoes into electrical signals for real-time visual display.",
       "Ultrasound selectively boils blood vessels to map arterial pathways.",
       "Ultrasound magnetized organ walls to align with external magnetic sensors."
     ],
+    "oh": [
+      "अल्ट्रासाउंड आयनीकरण विकिरण एक्स-रे कैमरों के तहत चमकने के लिए सेलुलर डीएनए को बदल देता है।",
+      "अल्ट्रासाउंड तरंगें ऊतकों में प्रवेश करती हैं और सीमा इंटरफेस से वापस परावर्तित होती हैं जहां ऊतक घनत्व बदलता है, वास्तविक समय के दृश्य प्रदर्शन के लिए परावर्तित प्रतिध्वनियों को विद्युत संकेतों में परिवर्तित करता है।",
+      "अल्ट्रासाउंड धमनी मार्गों का नक्शा बनाने के लिए रक्त वाहिकाओं को चुनिंदा रूप से उबालता है।",
+      "अल्ट्रासाउंड बाहरी चुंबकीय सेंसर के साथ संरेखित करने के लिए अंग की दीवारों को चुंबकीय बनाता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misattributes dangerous ionizing DNA disruption (characteristic of X-rays) to ultrasound. Option 1 is correct because **Ultrasonography** uses high-frequency acoustic waves ($1\\text{-}15 \\text{ MHz}$) that penetrate soft tissues safely. When an ultrasound pulse encounters an internal boundary between tissues of different acoustic impedances/densities (e.g., liver vs. gall bladder, or amniotic fluid vs. fetal bone), a portion of the wave **reflects back as an echo**. A piezoelectric transducer detects these reflected echoes, converting them into proportional electrical signals that a computer processes into real-time 2D/3D images. Option 2 describes thermal ablation, and Option 3 describes magnetic resonance principles."
+    "ee": "1. Option 0 confuses ultrasound with dangerous ionizing X-ray radiography (ultrasound uses non-ionizing mechanical sound waves and is completely safe for fetuses).\n2. Option 1 is correct because **Ultrasonography (Ultrasound Scanning / USG)** uses a piezoelectric probe to send high-frequency ultrasound pulses ($1\\text{ to }15\\text{ MHz}$) into human tissues. As the wave travels through the body, it encounters boundaries between internal organs of differing acoustic impedances/densities (e.g., between liver and gallbladder, or uterine wall and fetus). At each tissue interface, a portion of the wave is **reflected back as an echo**. The transducer captures these returning echoes, measuring their time delay and intensity, and computer software reconstructs them into real-time cross-sectional images.\n3. Option 2 describes thermal ablation, which does not occur during diagnostic imaging.\n4. Option 3 describes Magnetic Resonance Imaging (MRI), not ultrasonography.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि अल्ट्रासाउंड में कोई हानिकारक आयनकारी विकिरण नहीं होता, यह अजन्मे बच्चे के लिए पूर्णतः सुरक्षित है।\n2. विकल्प 1 सही है क्योंकि **चिकित्सा अल्ट्रासोनोग्राफी (USG)** में एक ट्रांसड्यूसर प्रोब द्वारा शरीर के अंदर उच्च आवृत्ति की पराश्रव्य तरंगें ($1$ से $15\\text{ MHz}$) भेजी जाती हैं। ये तरंगें जब शरीर के विभिन्न अंगों और ऊतकों के बीच की सीमाओं (जहाँ घनत्व बदलता है) से टकराती हैं, तो **आंशिक रूप से परावर्तित होकर प्रतिध्वनि (Echoes) के रूप में वापस लौटती हैं**। इन प्रतिध्वनियों के समय और तीव्रता को कंप्यूटर विद्युत संकेतों में बदलकर मॉनिटर पर आंतरिक अंगों (जैसे यकृत, गुर्दे, गर्भाशय में भ्रूण) की वास्तविक समय में स्पष्ट छवि बना देता है।\n3. विकल्प 2 गलत है क्योंकि डायग्नोस्टिक अल्ट्रासाउंड से कोई तापीय क्षति नहीं होती।\n4. विकल्प 3 गलत है क्योंकि चुंबकीय संरेखण MRI का सिद्धांत है।"
   },
   {
     "p_id": "bpsc_phys_m30_09",
     "qe": "SONAR (Sound Navigation and Ranging) measures underwater ocean depths and tracks submerged objects. Why are ultrasonic waves specifically chosen for SONAR applications over audible or infrasonic sound waves?",
     "qh": "सोनार (SONAR) समुद्र की गहराई मापता है और जलमग्न वस्तुओं को ट्रैक करता है। श्रव्य या अवश्रव्य ध्वनि तरंगों की तुलना में सोनार अनुप्रयोगों के लिए विशेष रूप से पराश्रव्य तरंगों को क्यों चुना जाता है?",
-    "o": [
+    "oe": [
       "Ultrasound travels slower in water, allowing accurate manual stopwatch timing.",
       "Ultrasound possesses high frequencies and short wavelengths, allowing pulses to travel long distances in concentrated directional beams without significant diffraction or bending around obstacles.",
       "Ultrasound converts ocean saltwater into pure electrical energy upon reflection.",
       "Ultrasound is absorbed completely by marine life, preventing echo interference."
     ],
+    "oh": [
+      "अल्ट्रासाउंड पानी में धीमी गति से यात्रा करता है, जिससे सटीक मैनुअल स्टॉपवॉच समय की अनुमति मिलती है।",
+      "अल्ट्रासाउंड में उच्च आवृत्तियां और छोटी तरंगदैर्ध्य होती हैं, जिससे दालें महत्वपूर्ण विवर्तन या बाधाओं के चारों ओर मुड़े बिना केंद्रित दिशात्मक बीम में लंबी दूरी तय कर सकती हैं।",
+      "अल्ट्रासाउंड परावर्तन पर समुद्र के खारे पानी को शुद्ध विद्युत ऊर्जा में परिवर्तित करता है।",
+      "अल्ट्रासाउंड समुद्री जीवन द्वारा पूरी तरह से अवशोषित कर लिया जाता है, जिससे प्रतिध्वनि हस्तक्षेप को रोका जा सकता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states ultrasound travels slower (all acoustic waves travel at identical sound speed in a given water medium). Option 1 is correct because **SONAR** relies on **Ultrasonic Waves ($> 20 \\text{ kHz}$)** because their high frequency corresponds to extremely **short wavelengths ($\\lambda = \\frac{v}{f}$)**. Short-wavelength waves travel in tight, narrow, directional beams that undergo minimal **diffraction** [the bending of waves around edges or obstacles], allowing them to penetrate deep ocean waters, reflect sharply off small targets (submarines, fish shoals, seabed), and return clear echoes. Option 2 and Option 3 state false physical claims."
+    "ee": "1. Option 0 is incorrect because all acoustic waves travel at the same velocity in a given water medium ($\\approx 1530\\text{ m/s}$ in seawater).\n2. Option 1 is correct because **SONAR (Sound Navigation and Ranging)** uses **Ultrasonic Waves ($> 20\\text{ kHz}$)** due to two primary wave-propagation advantages:\n   - **Short Wavelength ($\\lambda = v/f$)**: Because frequency is extremely high, wavelength is very short, which minimizes wave **Diffraction** (the bending of waves around edges), allowing ultrasound to form sharp, well-defined reflections off small obstacles (submarines, icebergs, fish shoals);\n   - **High Directionality**: Short wavelengths can be collimated into narrow, concentrated directional beams that penetrate deep ocean columns without substantial energy scattering, returning clean echo timing ($d = \\frac{v \\times t}{2}$) to determine exact ocean depth.\n3. Option 2 and Option 3 describe impossible physical mechanisms.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि जल में सभी ध्वनि तरंगों की चाल समान ($\approx 1530\\text{ m/s}$) होती है।\n2. विकल्प 1 सही है क्योंकि **सोनार (SONAR)** तकनीक में पराश्रव्य तरंगों का उपयोग इसलिए किया जाता है क्योंकि:\n   - उच्च आवृत्ति होने के कारण इनकी **तरंगदैर्घ्य ($\\lambda$) बहुत छोटी होती है**, जिससे इनका विवर्तन (किनारों से मुड़ना) नगण्य होता है और ये बिना बिखरे एक **संकीर्ण और केंद्रित किरण पुंज (Directional Beam)** के रूप में समुद्र की गहराई तक सीधी जा सकती हैं;\n   - छोटी तरंगदैर्घ्य के कारण ये जलमग्न छोटी वस्तुओं (जैसे पनडुब्बी, चट्टान, डूबे जहाज) से टकराकर स्पष्ट प्रतिध्वनि देती हैं, जिससे सूत्र $d = \\frac{v \\times t}{2}$ द्वारा दूरी या गहराई की सटीक गणना हो जाती है।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि यह असंगत दावे हैं।"
   },
   {
     "p_id": "bpsc_phys_m30_10",
     "qe": "Bats navigate dark caves and hunt fast-flying insects in complete darkness via Echolocation. What acoustic mechanism enables bats to determine prey distance and location accurately?",
     "qh": "चमगादड़ इकोलोकेशन (Echolocation) के माध्यम से अंधेरी गुफाओं में नेविगेट करते हैं और घने अंधेरे में उड़ने वाले कीड़ों का शिकार करते हैं। कौन सा ध्वनिक तंत्र चमगादड़ों को शिकार की दूरी और स्थिति का सटीक निर्धारण करने में सक्षम बनाता है?",
-    "o": [
+    "oe": [
       "They emit infrared light flashes that bounce off insect wings.",
       "They emit high-frequency ultrasonic squeaks (up to $120 \\text{ kHz}$) and process the time delay and frequency shift of echoes bouncing back from obstacles and prey.",
       "They produce low-frequency infrasound that paralyzes flying insects.",
       "They detect thermal air currents using specialized auditory ears."
     ],
+    "oh": [
+      "वे अवरक्त (infrared) प्रकाश की चमक उत्सर्जित करते हैं जो कीट के पंखों से उछलती है।",
+      "वे उच्च आवृत्ति वाली पराश्रव्य चीखें (120 kHz तक) उत्सर्जित करते हैं और बाधाओं और शिकार से वापस उछलने वाली प्रतिध्वनियों के समय अंतराल (time delay) और आवृत्ति परिवर्तन को संसाधित करते हैं।",
+      "वे कम आवृत्ति वाले इन्फ्रासाउंड का उत्पादन करते हैं जो उड़ने वाले कीड़ों को पंगु बना देता है।",
+      "वे विशेष श्रवण कानों का उपयोग करके तापीय वायु धाराओं का पता लगाते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies echolocation as optical infrared flashing. Option 1 is correct because bats practice **Echolocation** by emitting rapid, high-frequency **ultrasonic squeaks (frequencies up to $120 \\text{ kHz}$)**. These high-frequency pulses travel through air, strike nearby obstacles or insects, and bounce back as echoes. By processing the precise time interval between emission and echo return, along with subtle frequency variations, the bat's specialized auditory cortex constructs a detailed 3D spatial map of its surroundings, pinpointing prey location, distance, and speed. Option 2 describes infrasonic paralysis, and Option 3 describes thermal sensing."
+    "ee": "1. Option 0 is incorrect because bats rely on acoustic sound waves, not optical infrared emissions.\n2. Option 1 is correct because microchiropteran bats navigate and hunt via **Echolocation**: they emit rapid bursts of high-frequency **Ultrasonic Squeaks (ranging from $20\\text{ kHz up to }120\\text{ kHz}$)** through their mouth or nose. These high-frequency pulses strike prey (such as flying moths) or obstacles and reflect back as echoes to the bat's specialized, sensitive external ears. The bat's brain processes the **time delay** between emission and return to determine prey distance ($d = \\frac{vt}{2}$), the **binaural loudness difference** to calculate angular position, and the **Doppler frequency shift** to calculate the insect's flight speed and wing-beat frequency.\n3. Option 2 describes an unphysical infrasonic paralysis claim.\n4. Option 3 describes thermal updraft detection by gliding raptors, not bat echolocation.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि चमगादड़ प्रकाश नहीं, बल्कि ध्वनि तरंगों का उपयोग करते हैं।\n2. विकल्प 1 सही है क्योंकि चमगादड़ रात के घने अंधेरे में शिकार और उड़ान के लिए **इकोलोकेशन (प्रतिध्वनि निर्धारण)** का उपयोग करते हैं। वे अपने मुख या नाक से **अत्यधिक उच्च आवृत्ति वाली पराश्रव्य चीखें (20 kHz से 120 kHz तक)** उत्सर्जित करते हैं। ये तरंगें जब सामने उड़ रहे कीट या अवरोध से टकराकर प्रतिध्वनि के रूप में वापस लौटती हैं, तो चमगादड़ के कान उन्हें ग्रहण कर लेते हैं। चमगादड़ का मस्तिष्क प्रतिध्वनि के **लौटने के समय अंतराल से दूरी** का और **डॉप्लर आवृत्ति परिवर्तन से शिकार की गति व दिशा** का सटीक अनुमान लगा लेता है।\n3. विकल्प 2 गलत है क्योंकि चमगादड़ इन्फ्रासाउंड से शिकार को पंगु नहीं बनाते।\n4. विकल्प 3 गलत है क्योंकि यह ध्वनिक परावर्तन की प्रक्रिया है।"
   },
   {
     "p_id": "bpsc_phys_m30_11",
     "qe": "Superposition of counter-propagating waves produces Standing (Stationary) Waves in bounded media. What defines Nodes and Antinodes in a standing wave pattern, and what is the spatial distance between two consecutive nodes?",
     "qh": "प्रति-संचारी (counter-propagating) तरंगों का अध्यारोपण (superposition) परिबद्ध माध्यमों में अप्रगामी तरंगें (Standing Waves) उत्पन्न करता है। अप्रगामी तरंग पैटर्न में निस्पंद (Nodes) और प्रस्पंद (Antinodes) को क्या परिभाषित करता है, और दो लगातार निस्पंदों के बीच की स्थानिक दूरी क्या है?",
-    "o": [
+    "oe": [
       "Nodes = maximum displacement points; Antinodes = zero displacement points; Distance between consecutive nodes = $\\lambda$.",
       "Nodes = points of permanently zero vibration amplitude; Antinodes = points of maximum vibration amplitude; Distance between two consecutive nodes = $\\frac{\\lambda}{2}$.",
       "Nodes = pressure minimums; Antinodes = frequency maximums; Distance between consecutive nodes = $2\\lambda$.",
       "Nodes = continuous energy transfer points; Antinodes = energy destruction points; Distance = $\\frac{\\lambda}{4}$."
     ],
-    "a": 0,
-    "e": "<b>Explanation:</b> Option 0 completely swaps node and antinode definitions. Option 1 is correct because in a **Standing Wave**: <br>1. **Nodes:** Points along the bounded medium where destructive interference is complete, resulting in **permanently zero displacement amplitude**. <br>2. **Antinodes:** Points where constructive interference is maximum, producing **peak displacement amplitude**. <br>3. **Spatial Separation:** The distance between any two consecutive nodes (or two consecutive antinodes) is strictly equal to **half a wavelength ($\\frac{\\lambda}{2}$)**, while the distance between an adjacent node and antinode is $\\frac{\\lambda}{4}$. Option 2 and Option 3 state incorrect wave parameters."
+    "oh": [
+      "निस्पंद = अधिकतम विस्थापन बिंदु; प्रस्पंद = शून्य विस्थापन बिंदु; लगातार निस्पंदों के बीच की दूरी = $\\lambda$।",
+      "निस्पंद (Nodes) = स्थायी रूप से शून्य कंपन आयाम के बिंदु; प्रस्पंद (Antinodes) = अधिकतम कंपन आयाम के बिंदु; दो लगातार निस्पंदों के बीच की दूरी = $\\frac{\\lambda}{2}$।",
+      "निस्पंद = दबाव न्यूनतम; प्रस्पंद = आवृत्ति अधिकतम; लगातार निस्पंदों के बीच की दूरी = $2\\lambda$।",
+      "निस्पंद = निरंतर ऊर्जा हस्तांतरण बिंदु; प्रस्पंद = ऊर्जा विनाश बिंदु; दूरी = $\\frac{\\lambda}{4}$।"
+    ],
+    "a": 1,
+    "ee": "1. Option 0 inverts the physical definitions of nodes and antinodes.\n2. Option 1 is correct because when two identical periodic waves travel along the same line in opposite directions, their linear superposition forms a **Standing (Stationary) Wave**:\n   - **Nodes (निस्पंद)**: Points in the medium where destructive interference is complete, resulting in **permanently zero displacement amplitude** (and maximum pressure/strain variation);\n   - **Antinodes (प्रस्पंद)**: Points where constructive interference is maximized, resulting in **maximum displacement amplitude** (and minimum pressure/strain variation);\n   - **Spatial Separation**: The distance between any **two consecutive nodes (or two consecutive antinodes) is strictly $\\mathbf{\\frac{\\lambda}{2}}$** (half a wavelength), while the distance between an adjacent node and antinode is $\\frac{\\lambda}{4}$.\n3. Option 2 and Option 3 state incorrect spatial node separations.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि इसमें निस्पंद और प्रस्पंद की परिभाषाएं उलट दी गई हैं।\n2. विकल्प 1 सही है क्योंकि जब समान आयाम और आवृत्ति की दो प्रगामी तरंगें एक ही रेखा पर विपरीत दिशाओं में चलकर अध्यारोपित होती हैं, तो **अप्रगामी तरंग (Standing Wave)** बनती है:\n   - **निस्पंद (Nodes):** माध्यम के वे बिंदु जो हमेशा स्थिर रहते हैं और जहाँ **कंपन का आयाम शून्य** होता है;\n   - **प्रस्पंद (Antinodes):** माध्यम के वे बिंदु जहाँ कणों के **कंपन का आयाम अधिकतम** होता है;\n   - **स्थानिक दूरी:** किन्हीं **दो क्रमागत निस्पंदों (या दो क्रमागत प्रस्पंदों) के बीच की दूरी हमेशा आधी तरंगदैर्घ्य ($\\mathbf{\\frac{\\lambda}{2}}$)** के बराबर होती है (जबकि एक निस्पंद और निकटवर्ती प्रस्पंद के बीच की दूरी $\\frac{\\lambda}{4}$ होती है)।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि ये अशुद्ध दूरियां दर्शाते हैं।"
   },
   {
     "p_id": "bpsc_phys_m30_12",
     "qe": "A flexible string of length $L$ fixed rigidly at both ends is plucked to produce standing wave harmonics. What are the expressions for the fundamental frequency ($v_1$) and second harmonic ($v_2$) generated by the vibrating string?",
     "qh": "दोनों सिरों पर दृढ़ता से तय $L$ लंबाई की एक लचीली डोरी को अप्रगामी तरंग संनादी (harmonics) उत्पन्न करने के लिए खींचा (plucked) जाता है। कंपन करने वाली डोरी द्वारा उत्पन्न मूल आवृत्ति ($v_1$) और द्वितीय संनादी ($v_2$) के व्यंजक क्या हैं?",
-    "o": [
+    "oe": [
       "$v_1 = \\frac{v}{L}$; $v_2 = \\frac{v}{2L}$",
       "$v_1 = \\frac{v}{2L}$ (fundamental mode, $L = \\frac{\\lambda}{2}$); $v_2 = \\frac{v}{L} = 2 v_1$ (second harmonic, $L = \\lambda$)",
       "$v_1 = \\frac{2v}{L}$; $v_2 = \\frac{3v}{L}$",
       "$v_1 = \\frac{v}{4L}$; $v_2 = \\frac{3v}{4L}$"
     ],
+    "oh": [
+      "$v_1 = \\frac{v}{L}$; $v_2 = \\frac{v}{2L}$",
+      "$v_1 = \\frac{v}{2L}$ (मूल विधा / fundamental mode, $L = \\frac{\\lambda}{2}$); $v_2 = \\frac{v}{L} = 2 v_1$ (द्वितीय संनादी, $L = \\lambda$)",
+      "$v_1 = \\frac{2v}{L}$; $v_2 = \\frac{3v}{L}$",
+      "$v_1 = \\frac{v}{4L}$; $v_2 = \\frac{3v}{4L}$"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 reverses fundamental and second harmonic formulas. Option 1 is correct because for a stretched string of length $L$ fixed at both ends: <br>1. **Fundamental Mode (First Harmonic, $v_1$):** Forms a single loop with nodes at both fixed ends and one central antinode ($L = \\frac{\\lambda_1}{2} \\implies \\lambda_1 = 2L$). Substituting into $v = v_1 \\lambda_1$ gives: <b>$$v_1 = \\frac{v}{2L}$$</b> <br>2. **Second Mode (Second Harmonic / First Overtone, $v_2$):** Forms two loops ($L = \\lambda_2$). Substituting into $v = v_2 \\lambda_2$ gives: <b>$$v_2 = \\frac{v}{L} = 2 v_1$$</b> <br>The harmonic frequencies exist in integer ratios $v_1 : v_2 : v_3 = 1 : 2 : 3$, containing both even and odd harmonics. Options 2 and 3 list incorrect organ pipe or non-string frequency ratios."
+    "ee": "1. Option 0 inverts the fundamental and harmonic frequencies.\n2. Option 1 is correct because for a stretched string of length $L$ fixed at both ends (such as a guitar or sitar string):\n   - **Fundamental Mode (First Harmonic, $\\nu_1$)**: The string vibrates in a single loop with nodes at both ends and one central antinode. Thus, $L = \\frac{\\lambda_1}{2} \\implies \\lambda_1 = 2L$. Using $v = \\nu_1 \\lambda_1$:\n   $$\\mathbf{\\nu_1 = \\frac{v}{2L}}$$\n   - **Second Harmonic (First Overtone, $\\nu_2$)**: The string vibrates in two loops with three nodes and two antinodes, where $L = \\lambda_2$. Using $v = \\nu_2 \\lambda_2$:\n   $$\\mathbf{\\nu_2 = \\frac{v}{L} = 2\\nu_1}$$\n   The allowed standing frequencies form an integer harmonic series: $\\nu_1 : \\nu_2 : \\nu_3 = 1 : 2 : 3$, containing both even and odd harmonics.\n3. Option 2 lists incorrect fractional multiples.\n4. Option 3 lists the quarter-wave odd harmonic formulas characteristic of closed organ pipes.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि इसमें मूल आवृत्ति का सूत्र अशुद्ध है।\n2. विकल्प 1 सही है क्योंकि दोनों सिरों पर कसी हुई $L$ लंबाई की डोरी (जैसे सितार या गिटार का तार) में:\n   - **मूल विधा (प्रथम संनादी, $\\nu_1$):** तार एक लूप में कंपन करता है, जिसके दोनों सिरों पर निस्पंद और बीच में एक प्रस्पंद बनता है ($L = \\frac{\\lambda_1}{2}$ अर्थात $\\lambda_1 = 2L$)। अतः मूल आवृत्ति:\n   $$\\mathbf{\\nu_1 = \\frac{v}{2L}}$$\n   - **द्वितीय संनादी (प्रथम अधिस्वरक, $\\nu_2$):** तार दो लूपों में कंपन करता है ($L = \\lambda_2$)। अतः आवृत्ति:\n   $$\\mathbf{\\nu_2 = \\frac{v}{L} = 2\\nu_1}$$\n   कसी डोरी में आवृत्तियों का अनुपात $\\nu_1 : \\nu_2 : \\nu_3 = 1 : 2 : 3$ होता है, जिसमें सम और विषम दोनों संनादी उपस्थित होते हैं।\n3. विकल्प 2 गलत है क्योंकि यह अमान्य अनुपात है।\n4. विकल्प 3 गलत है क्योंकि यह बंद आर्गन पाइप का सूत्र है।"
   },
   {
     "p_id": "bpsc_phys_m30_13",
     "qe": "A Closed Organ Pipe (closed at one end, open at the other) produces musical sound via standing air columns. What harmonic frequency ratio is produced by a closed organ pipe, and which harmonics are present?",
     "qh": "एक बंद आर्गन पाइप (Closed Organ Pipe - एक सिरे पर बंद, दूसरे पर खुला) अप्रगामी वायु स्तंभों के माध्यम से संगीतमय ध्वनि उत्पन्न करता है। एक बंद आर्गन पाइप द्वारा कौन सा संनादी आवृत्ति अनुपात उत्पन्न होता है, और कौन से संनादी मौजूद होते हैं?",
-    "o": [
+    "oe": [
       "Frequency ratio $v_1 : v_2 : v_3 = 1 : 2 : 3$; contains both even and odd harmonics.",
       "Frequency ratio $v_1 : v_2 : v_3 = 1 : 3 : 5$; contains ONLY odd harmonics ($v_1 = \\frac{v}{4L}, v_2 = 3v_1, v_3 = 5v_1$).",
       "Frequency ratio $v_1 : v_2 : v_3 = 1 : 4 : 9$; contains quadratic even harmonics.",
       "Frequency ratio $v_1 : v_2 : v_3 = 2 : 4 : 6$; contains only even harmonics."
     ],
+    "oh": [
+      "आवृत्ति अनुपात $v_1 : v_2 : v_3 = 1 : 2 : 3$; सम और विषम दोनों संनादी शामिल हैं।",
+      "आवृत्ति अनुपात $v_1 : v_2 : v_3 = 1 : 3 : 5$; केवल विषम संनादी (odd harmonics) शामिल हैं ($v_1 = \\frac{v}{4L}, v_2 = 3v_1, v_3 = 5v_1$)।",
+      "आवृत्ति अनुपात $v_1 : v_2 : v_3 = 1 : 4 : 9$; द्विघात सम संनादी शामिल हैं।",
+      "आवृत्ति अनुपात $v_1 : v_2 : v_3 = 2 : 4 : 6$; केवल सम संनादी शामिल हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 gives the frequency ratio for an Open Organ Pipe (or stretched string). Option 1 is correct because in a **Closed Organ Pipe** of length $L$: <br>1. **Boundary Conditions:** A displacement node strictly forms at the closed end, while an antinode forms at the open end. <br>2. **Fundamental Frequency ($v_1$):** $L = \\frac{\\lambda_1}{4} \\implies v_1 = \\frac{v}{4L}$. <br>3. **Higher Modes:** The second mode forms at $L = \\frac{3\\lambda_2}{4} \\implies v_2 = 3v_1$ (third harmonic). The third mode forms at $v_3 = 5v_1$ (fifth harmonic). <br>Consequently, a closed organ pipe produces a frequency ratio of **$v_1 : v_2 : v_3 = 1 : 3 : 5$**, meaning **ONLY odd harmonics are present**. This missing even harmonic spectrum gives closed organ pipes a distinct, hollow acoustic timbre. Option 2 and Option 3 state incorrect mathematical progressions."
+    "ee": "1. Option 0 describes an open organ pipe (or stretched string) which contains all (even and odd) harmonics.\n2. Option 1 is correct because in a **Closed Organ Pipe** of length $L$ (closed at one end, open at the other):\n   - **Boundary Constraints**: Air molecules at the closed end are rigidly blocked, forming a displacement **Node**, while air molecules at the open boundary vibrate freely, forming an **Antinode**;\n   - **Fundamental Mode**: $L = \\frac{\\lambda_1}{4} \\implies \\mathbf{\\nu_1 = \\frac{v}{4L}}$;\n   - **Successive Modes**: The next resonance mode accommodates an extra node and antinode: $L = \\frac{3\\lambda_2}{4} \\implies \\nu_2 = 3\\left(\\frac{v}{4L}\\right) = \\mathbf{3\\nu_1}$ (3rd harmonic), and the third mode gives $\\nu_3 = 5\\left(\\frac{v}{4L}\\right) = \\mathbf{5\\nu_1}$ (5th harmonic);\n   - **Harmonic Series**: Frequencies exist strictly in the odd ratio **$\\mathbf{\\nu_1 : \\nu_2 : \\nu_3 = 1 : 3 : 5 : 7}$**, meaning **ONLY odd harmonics are present** (even harmonics $2\\nu_1, 4\\nu_1$ are absent).\n3. Option 2 and Option 3 list incorrect harmonic progressions.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि $1 : 2 : 3$ का अनुपात खुले आर्गन पाइप में होता है।\n2. विकल्प 1 सही है क्योंकि **बंद आर्गन पाइप (Closed Organ Pipe)** में (जो एक सिरे पर बंद और दूसरे पर खुला होता है):\n   - बंद सिरे पर हमेशा विस्थापन **निस्पंद (Node)** और खुले सिरे पर **प्रस्पंद (Antinode)** बनता है;\n   - **मूल आवृत्ति (प्रथम संनादी):** $L = \\frac{\\lambda_1}{4} \\implies \\mathbf{\\nu_1 = \\frac{v}{4L}}$;\n   - **अगले अधिस्वरक:** $\\nu_2 = 3\\nu_1$ (तृतीय संनादी) और $\\nu_3 = 5\\nu_1$ (पंचम संनादी) प्राप्त होते हैं;\n   - अतः बंद आर्गन पाइप में उत्पन्न आवृत्तियों का अनुपात **$\\mathbf{\\nu_1 : \\nu_2 : \\nu_3 = 1 : 3 : 5 : 7}$** होता है, अर्थात इसमें **केवल विषम संनादी (Only Odd Harmonics)** ही उत्पन्न होते हैं (सम संनादी पूर्णतः अनुपस्थित रहते हैं)।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि ये अमान्य अनुपात हैं।"
   },
   {
     "p_id": "bpsc_phys_m30_14",
     "qe": "Comparing open organ pipes (open at both ends) to closed organ pipes demonstrates distinct acoustic advantages for musical instrument quality. Why are Open Organ Pipes musically preferred over closed organ pipes?",
     "qh": "खुले आर्गन पाइपों (Open Organ Pipes - दोनों सिरों पर खुले) की बंद आर्गन पाइपों से तुलना करना संगीत वाद्ययंत्र की गुणवत्ता के लिए विशिष्ट ध्वनिक लाभों को दर्शाता है। बंद आर्गन पाइपों की तुलना में खुले आर्गन पाइपों को संगीतमय रूप से क्यों पसंद किया जाता है?",
-    "o": [
+    "oe": [
       "Open organ pipes produce only infrasonic frequencies below $5 \\text{ Hz}$.",
       "Open organ pipes produce both even and odd harmonics ($v_1 : v_2 : v_3 = 1 : 2 : 3$), generating a richer, more pleasant musical timbre than closed pipes.",
       "Open organ pipes eliminate all boundary antinodes, preventing sound dispersion.",
       "Open organ pipes operate without requiring air pressure."
     ],
+    "oh": [
+      "खुले आर्गन पाइप केवल $5 \\text{ Hz}$ से नीचे की अवश्रव्य आवृत्तियों का उत्पादन करते हैं।",
+      "खुले आर्गन पाइप सम और विषम दोनों संनादी ($v_1 : v_2 : v_3 = 1 : 2 : 3$) उत्पन्न करते हैं, जिससे बंद पाइपों की तुलना में अधिक समृद्ध और मधुर संगीतमय गुणवत्ता (timbre) उत्पन्न होती है।",
+      "खुले आर्गन पाइप सभी सीमा प्रस्पंदों (antinodes) को समाप्त करते हैं, जिससे ध्वनि फैलाव रुकता है।",
+      "खुले आर्गन पाइप बिना हवा के दबाव के काम करते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies open pipe output as infrasound. Option 1 is correct because in an **Open Organ Pipe** (open at both ends), antinodes form at both boundary ends. The fundamental frequency is $v_1 = \\frac{v}{2L}$, and successive harmonic modes occur at $v_2 = 2v_1$, $v_3 = 3v_1$, $v_4 = 4v_1$. Because open pipes generate **both even and odd harmonics ($1 : 2 : 3 : 4 \\dots$)**, the sound contains a complete spectrum of overtones, producing a much **richer, warmer, and more musically pleasant quality (timbre)** than closed organ pipes (which produce only odd harmonics $1 : 3 : 5 \\dots$). Option 2 falsely claims antinodes are eliminated, and Option 3 ignores fluid dynamics."
+    "ee": "1. Option 0 is incorrect because organ pipes produce clear audible musical frequencies, not deep infrasound.\n2. Option 1 is correct because in an **Open Organ Pipe** (open at both ends, such as a flute):\n   - Antinodes form at both open ends, giving a fundamental frequency of $\\nu_1 = \\frac{v}{2L}$ (twice as high as a closed pipe of the same length);\n   - Higher resonant modes occur at $\\nu_2 = 2\\nu_1, \\nu_3 = 3\\nu_1, \\nu_4 = 4\\nu_1, \\dots$, producing **both even and odd harmonics in the complete integer ratio $1 : 2 : 3 : 4 : 5$**;\n   - Because open pipes produce a complete series of harmonic overtones, the acoustic waveform is far richer, fuller, and more melodious than closed pipes (which lack all even harmonics $2\\nu_1, 4\\nu_1$ and sound hollow).\n3. Option 2 is incorrect because open ends strictly require antinodes to form.\n4. Option 3 is incorrect because acoustic standing waves are longitudinal air pressure oscillations.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि आर्गन पाइप श्रव्य संगीतमय स्वर उत्पन्न करते हैं।\n2. विकल्प 1 सही है क्योंकि **खुले आर्गन पाइप (Open Organ Pipe - जैसे बांसुरी)** में:\n   - दोनों खुले सिरों पर प्रस्पंद (Antinodes) बनते हैं, जिससे मूल आवृत्ति $\\nu_1 = \\frac{v}{2L}$ होती है;\n   - इसके बाद के संनादी $\\nu_2 = 2\\nu_1, \\nu_3 = 3\\nu_1, \\nu_4 = 4\\nu_1$ के रूप में निकलते हैं, अर्थात इसमें **सम और विषम दोनों संनादी ($1 : 2 : 3 : 4 : 5$) पूर्ण रूप से उपस्थित होते हैं**;\n   - सभी संनादी (Harmonics) मौजूद होने के कारण खुले आर्गन पाइप से निकलने वाली ध्वनि बंद पाइप की तुलना में **अधिक समृद्ध, मधुर और कर्णप्रिय (Rich Timbre)** होती है।\n3. विकल्प 2 गलत है क्योंकि खुले सिरों पर प्रस्पंद बनना अनिवार्य है।\n4. विकल्प 3 गलत है क्योंकि ध्वनि संचरण के लिए वायुदाब आवश्यक है।"
   },
   {
     "p_id": "bpsc_phys_m30_15",
     "qe": "Western musical instruments (like pianos and harmoniums) rely on the Tempered Scale to structure musical notes. What is the precise frequency ratio between any two successive notes in a 12-note Tempered Scale?",
     "qh": "पश्चिमी संगीत वाद्ययंत्र (जैसे पियानो और हरमोनियम) संगीतमय स्वरों (musical notes) को संरेखित करने के लिए टेम्पर्ड स्केल (Tempered Scale) पर निर्भर करते हैं। 12-नोट वाले टेम्पर्ड स्केल में किन्हीं दो लगातार नोटों के बीच सटीक आवृत्ति अनुपात क्या होता है?",
-    "o": [
-      "$\t2^{1/2}$",
+    "oe": [
+      "$2^{1/2}$",
+      "$2^{1/12}$",
+      "$12^2$",
+      "$\\frac{1}{12}$"
+    ],
+    "oh": [
+      "$2^{1/2}$",
       "$2^{1/12}$",
       "$12^2$",
       "$\\frac{1}{12}$"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 uses a square root factor ($2^{1/2}$). Option 1 is correct because the <b>Tempered Scale</b> divides an octave (where frequency doubles, $f_2 = 2f_1$) into 12 mathematically equal semitone intervals. To ensure that 12 equal multiplicative steps equal a factor of 2, the constant frequency ratio between any two adjacent successive notes is defined as: <b>$$r = 2^{1/12} \\approx 1.05946$$</b> Fixed-pitch instruments like the piano, harmonium, and accordion utilize this equal-temperament scale. Option 2 and Option 3 state incorrect arithmetic scaling ratios."
+    "ee": "1. Option 0 uses a square root factor ($2^{1/2} \\approx 1.414$), which spans an augmented fourth (tritone), not an adjacent semitone.\n2. Option 1 is correct because in Western equal-temperament tuning (the **12-Tone Equal Tempered Scale**), an octave (where frequency doubles, $f_{\\text{octave}} = 2 f_0$) is divided into **12 mathematically equal semitone intervals**. If $r$ represents the constant multiplicative frequency ratio between any two consecutive adjacent semitone notes, compounding $r$ across 12 equal semitone steps yields: $$r^{12} = 2 \\implies \\mathbf{r = 2^{1/12} \\approx 1.05946}$$\n   Instruments with fixed keyboards (such as the piano, harmonium, and organ) use this constant ratio ($2^{1/12}$) so that music can be played in any key without retuning.\n3. Option 2 and Option 3 represent incorrect mathematical operators.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि $2^{1/2}$ अर्ध-सप्तक का मान है, क्रमागत सुरों का नहीं।\n2. विकल्प 1 सही है क्योंकि पश्चिमी संगीत के **सम-स्वभाव वाले टेम्पर्ड स्केल (12-Note Equal Tempered Scale)** में एक पूरे सप्तक (जहाँ आवृत्ति दोगुनी होती है, $f_2 = 2f_1$) को **12 बराबर अर्ध-स्वरों (Semitones)** में विभाजित किया जाता है। यदि दो लगातार सुरों (Notes) के बीच का आवृत्ति अनुपात $r$ हो, तो 12 पदों के बाद आवृत्ति दोगुनी होने के नियम से: $$r^{12} = 2 \\implies \\mathbf{r = 2^{1/12} \\approx 1.05946}$$\n   पियानो और हारमोनियम जैसे वाद्ययंत्र इसी $2^{1/12}$ के निश्चित आवृत्ति अनुपात पर आधारित होते हैं।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि ये अमान्य गणितीय मान हैं।"
   },
   {
     "p_id": "bpsc_phys_m30_16",
     "qe": "Acoustic Interference between two sound sources of slightly different frequencies produces the phenomenon of Beats. What conditions are necessary to hear beats, and how is Beat Frequency ($f_{\\text{beat}}$) calculated?",
     "qh": "थोड़ी भिन्न आवृत्तियों वाले दो ध्वनि स्रोतों के बीच ध्वनिक व्यतिकरण (Acoustic Interference) बीट्स (Beats) की परिघटना उत्पन्न करता है। बीट्स सुनने के लिए कौन सी स्थितियां आवश्यक हैं, और बीट आवृत्ति ($f_{\\text{beat}}$) की गणना कैसे की जाती है?",
-    "o": [
+    "oe": [
       "Sources must have orthogonal polarizations; $f_{\\text{beat}} = f_1 + f_2$.",
       "Two sound waves must have equal amplitudes and nearly equal frequencies; Beat frequency equals the absolute difference between the two frequencies ($f_{\\text{beat}} = |f_1 - f_2|$).",
       "Sources must be ultrasonic; $f_{\\text{beat}} = \\frac{f_1 \\cdot f_2}{2}$.",
       "Waves must travel in opposite directions; $f_{\\text{beat}} = \\sqrt{f_1 \\cdot f_2}$."
     ],
+    "oh": [
+      "स्रोतों में ऑर्थोगोनल ध्रुवीकरण होना चाहिए; $f_{\\text{beat}} = f_1 + f_2$।",
+      "दो ध्वनि तरंगों में समान आयाम और लगभग समान आवृत्तियाँ होनी चाहिए; बीट आवृत्ति दोनों आवृत्तियों के बीच के पूर्ण अंतर के बराबर होती है ($f_{\\text{beat}} = |f_1 - f_2|$)।",
+      "स्रोत पराश्रव्य होने चाहिए; $f_{\\text{beat}} = \\frac{f_1 \\cdot f_2}{2}$।",
+      "तरंगों को विपरीत दिशाओं में यात्रा करनी चाहिए; $f_{\\text{beat}} = \\sqrt{f_1 \\cdot f_2}$।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 adds frequencies together. Option 1 is correct because **Beats** represent the periodic waxing and waning (rise and fall) of sound intensity resulting from the superposition of two sound waves traveling in the same direction. To produce clear beats: (1) The two waves must have nearly equal amplitudes; (2) Their frequencies ($f_1, f_2$) must be **slightly different** (typically differing by less than $10 \\text{ Hz}$). The number of intensity peaks heard per second is the **Beat Frequency**, given by: <b>$$f_{\\text{beat}} = |f_1 - f_2|$$</b> Option 2 uses a geometric mean, and Option 3 uses product division."
+    "ee": "1. Option 0 incorrectly sums the two frequencies together.\n2. Option 1 is correct because **Beats (विस्पंद)** is the periodic waxing and waning (rise and fall) in the resultant intensity of sound heard when **two sound waves of equal amplitude and slightly different frequencies ($f_1 \\approx f_2$) travel simultaneously in the same direction** through a medium. Due to constructive and destructive interference over time, the number of intensity maxima (or minima) heard per second is defined as the **Beat Frequency**: $$\\mathbf{f_{\\text{beat}} = |f_1 - f_2|}$$\n   Because the human ear has a persistence of hearing of $0.1\\text{ s}$, beats can be distinctly perceived only if the frequency difference $|f_1 - f_2| \\le 10\\text{ Hz}$.\n3. Option 2 uses an arithmetic product formulation.\n4. Option 3 describes standing waves (which require opposite directions) rather than beats.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि बीट आवृत्ति दोनों आवृत्तियों का योग नहीं होती।\n2. विकल्प 1 सही है क्योंकि **विस्पंद (Beats)** की घटना तब उत्पन्न होती है जब **समान आयाम और लगभग समान आवृत्तियों ($f_1 \\approx f_2$) वाली दो ध्वनि तरंगें एक ही दिशा में संचरित होकर अध्यारोपित होती हैं**। इससे ध्वनि की तीव्रता में आवधिक रूप से उतार-चढ़ाव (घटना-बढ़ना) होता है। प्रति सेकंड सुनाई देने वाले विस्पंदों की संख्या (**बीट आवृत्ति**) दोनों मूल आवृत्तियों के अंतर के बराबर होती है: $$\\mathbf{f_{\\text{beat}} = |f_1 - f_2|}$$\n   मानव कान के श्रवण निर्बंध ($0.1\\text{ s}$) के कारण, विस्पंदों को स्पष्ट रूप से तभी सुना जा सकता है जब आवृत्तियों का अंतर $10\\text{ Hz}$ से कम या उसके बराबर हो।\n3. विकल्प 2 गलत है क्योंकि यह अशुद्ध सूत्र है।\n4. विकल्प 3 गलत है क्योंकि विपरीत दिशा में चलने वाली तरंगें अप्रगामी तरंगें बनाती हैं।"
   },
   {
     "p_id": "bpsc_phys_m30_17",
     "qe": "Doppler's Effect describes frequency alterations resulting from relative motion in wave dynamics. What defines the Doppler Effect in sound, and what happens to the perceived pitch as a sounding train whistle approaches a stationary observer on a platform?",
     "qh": "डॉप्लर का प्रभाव (Doppler's Effect) तरंग गतिकी में सापेक्ष गति के परिणामस्वरूप होने वाले आवृत्ति परिवर्तनों का वर्णन करता है। ध्वनि में डॉप्लर प्रभाव को क्या परिभाषित करता है, और जैसे ही सीटी बजाती हुई ट्रेन प्लेटफॉर्म पर खड़े एक स्थिर पर्यवेक्षक की ओर बढ़ती है, तो महसूस की जाने वाली पिच (pitch) का क्या होता है?",
-    "o": [
+    "oe": [
       "Actual frequency changes at the source; pitch decreases continuously during approach.",
       "Apparent change in sound frequency (pitch) heard by an observer due to relative motion between source and observer; pitch increases (sounds higher) as the source approaches.",
       "Sound velocity doubles during motion; pitch remains strictly constant.",
       "Acoustic amplitude drops to zero; pitch converts into infrasound."
     ],
+    "oh": [
+      "स्रोत पर वास्तविक आवृत्ति बदलती है; ट्रेन पास आने पर पिच लगातार घटती है।",
+      "स्रोत और पर्यवेक्षक के बीच सापेक्ष गति के कारण पर्यवेक्षक द्वारा सुनी जाने वाली ध्वनि आवृत्ति (पिच) में आभासी परिवर्तन; जैसे-जैसे स्रोत पास आता है, पिच बढ़ जाती है (ध्वनि तीखी सुनाई देती है)।",
+      "गति के दौरान ध्वनि का वेग दोगुना हो जाता है; पिच बिल्कुल स्थिर रहती है।",
+      "ध्वनिक आयाम शून्य हो जाता है; पिच अवश्रव्य में बदल जाती है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states source frequency changes and pitch decreases during approach. Option 1 is correct because **Doppler's Effect** is the **apparent shift in frequency (pitch)** of a wave observed when there is relative motion between the wave source and the observer. As a sound source (train whistle) approaches a stationary observer, successive wavefronts are emitted closer together in space, shortening the effective wavelength. This causes more wave crests to reach the observer's ear per second, resulting in an **apparent increase in frequency (higher perceived pitch)**. As the source recedes, wavefronts spread apart, causing an apparent drop in pitch. Option 2 and Option 3 state false physical mechanisms."
+    "ee": "1. Option 0 is incorrect because the source's true vibration frequency remains constant; only the perceived arrival frequency changes.\n2. Option 1 is correct because Christian Doppler (1842) established that the **Doppler Effect** is the **apparent change in frequency (pitch)** observed whenever there is relative motion between a sound source and a listener:\n   - **When the source approaches a stationary observer** (source velocity $v_s$), wavefronts are compressed in space (shorter effective wavelength $\\lambda' = \\frac{v - v_s}{f}$), causing more wave crests to strike the observer's ear per second: $$f' = f \\left(\\frac{v}{v - v_s}\\right) > f$$\n   This manifests as an **apparent increase in frequency (higher pitch / shriller sound)**.\n   - **When the source recedes**, wavefronts stretch out, and apparent pitch drops ($f' < f$).\n3. Option 2 and Option 3 state false acoustic claims.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि स्रोत द्वारा उत्पन्न वास्तविक आवृत्ति नहीं बदलती, केवल आभासी आवृत्ति बदलती है।\n2. विकल्प 1 सही है क्योंकि **डॉप्लर प्रभाव (Doppler's Effect)** के अनुसार, जब ध्वनि स्रोत और श्रोता के बीच कोई **सापेक्ष गति** होती है, तो श्रोता द्वारा सुनी जाने वाली ध्वनि की आवृत्ति (तारत्व/Pitch) में आभासी परिवर्तन हो जाता है:\n   - **जब सीटी बजाती ट्रेन स्थिर श्रोता के निकट आती है:** तरंगदैर्घ्य सिकुड़ जाती है और प्रति सेकंड कान तक पहुँचने वाली तरंगों की संख्या बढ़ जाती है ($f' = f \\frac{v}{v - v_s}$), जिससे श्रोता को **आभासी आवृत्ति बढ़ी हुई (तीखा/उच्च तारत्व)** सुनाई देती है।\n   - **जब ट्रेन श्रोता से दूर जाती है:** आभासी आवृत्ति घट जाती है और आवाज भारी (कम तारत्व) सुनाई देती है।\n3. विकल्प 2 गलत है क्योंकि माध्यम में ध्वनि का वेग नहीं बदलता।\n4. विकल्प 3 गलत है क्योंकि आयाम शून्य नहीं होता।"
   },
   {
     "p_id": "bpsc_phys_m30_18",
     "qe": "The Diatonic Musical Scale (popularly known as 'Sargam' in Indian classical music) structures notes within an octave. How many main notes comprise the Diatonic Scale, and what is the 8th note called?",
     "qh": "डायटोनिक संगीतमय स्केल (भारतीय शास्त्रीय संगीत में 'सरगम' के रूप में लोकप्रिय) एक सप्तक के भीतर नोटों को संरेखित करता है। डायटोनिक स्केल में कितने मुख्य नोट होते हैं, और आठवें नोट को क्या कहा जाता है?",
-    "o": [
+    "oe": [
       "5 main notes; 8th note is called a Harmonic",
       "7 main notes (Sa, Re, Ga, Ma, Pa, Dha, Ni); the 8th note is called the Octave (upper Sa, possessing double the fundamental frequency)",
       "12 main notes; 8th note is called a Beat",
       "3 main notes; 8th note is called a Node"
     ],
+    "oh": [
+      "5 मुख्य सुर; 8वें सुर को संनादी (Harmonic) कहा जाता है।",
+      "7 मुख्य सुर (सा, रे, ग, म, प, ध, नि); 8वें सुर को अष्टक/सप्तक (Octave - ऊपरी 'सा', जिसकी आवृत्ति मूल आवृत्ति से दोगुनी होती है) कहा जाता है।",
+      "12 मुख्य सुर; 8वें सुर को बीट (Beat) कहा जाता है।",
+      "3 मुख्य सुर; 8वें सुर को निस्पंद (Node) कहा जाता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 uses a pentatonic scale structure. Option 1 is correct because the **Diatonic Scale ('Sargam')** consists of **7 main fundamental notes** (Sa, Re, Ga, Ma, Pa, Dha, Ni). The **8th note** completes the cycle and is called the **Octave** (upper 'Sa'). The frequency of the octave note is exactly **twice the frequency of the first note** ($f_{\\text{octave}} = 2 f_{\\text{base}}$). Option 2 describes the 12-semitone tempered scale, and Option 3 lists an incomplete count."
+    "ee": "1. Option 0 describes a pentatonic scale.\n2. Option 1 is correct because the **Diatonic Musical Scale** (corresponding directly to the natural Indian classical **'Sargam' / Saptak**):\n   - Consists of **7 primary fundamental musical notes (Swaras)**: **Sa (Shadja), Re (Rishabha), Ga (Gandhara), Ma (Madhyama), Pa (Panchama), Dha (Dhaivata), and Ni (Nishada)** (corresponding to Western Do, Re, Mi, Fa, Sol, La, Ti);\n   - The **8th note** completes the cycle and is called the **Octave (तार सप्तक का 'सा')**;\n   - The frequency of the 8th note (upper Sa) is exactly **twice the frequency of the first base note (Sa)**: $$f_{\\text{octave}} = 2 f_{\\text{base}}$$\n3. Option 2 describes the 12-semitone equal-temperament scale.\n4. Option 3 describes an incomplete acoustic classification.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि 5 सुरों वाला पैमाना 'पेंटाटोनिक' कहलाता है।\n2. विकल्प 1 सही है क्योंकि **डायटोनिक स्केल (Diatonic Scale)**, जो भारतीय शास्त्रीय संगीत के **'सरगम' (सप्तक)** के समतुल्य है:\n   - इसमें **7 मुख्य शुद्ध स्वर (Notes)** होते हैं: **सा (Shadja), रे (Rishabha), ग (Gandhara), म (Madhyama), प (Panchama), ध (Dhaivata), नि (Nishada)**;\n   - इसके बाद आने वाले आठवें स्वर को **अष्टक / सप्तक (Octave - तार सप्तक का 'सा')** कहा जाता है;\n   - इस आठवें स्वर की आवृत्ति पहले मूल स्वर ('सा') की आवृत्ति की ठीक **दोगुनी ($2f$)** होती है।\n3. विकल्प 2 गलत है क्योंकि 12 नोट टेम्पर्ड स्केल में होते हैं।\n4. विकल्प 3 गलत है क्योंकि यह अमान्य वर्गीकरण है।"
   },
   {
     "p_id": "bpsc_phys_m30_19",
     "qe": "A stethoscope allows physicians to listen to internal cardiac and pulmonary sounds inside the human body. What acoustic principle governs sound transmission through a stethoscope's flexible tubing?",
     "qh": "एक स्टेथोस्कोप डॉक्टरों को मानव शरीर के भीतर आंतरिक हृदय और फेफड़ों की ध्वनियों को सुनने की अनुमति देता है। स्टेथोस्कोप की लचीली ट्यूबिंग के माध्यम से ध्वनि संचरण को कौन सा ध्वनिक सिद्धांत नियंत्रित करता है?",
-    "o": [
+    "oe": [
       "Thermal conduction of pressure waves through rubber",
       "Multiple reflection of sound waves off the inner walls of the stethoscope tube, guiding acoustic energy to the doctor's ears without attenuation",
       "Quantum superposition of matter waves across metallic diaphragms",
       "Acoustic refraction through variable atmospheric density layers"
     ],
+    "oh": [
+      "रबर के माध्यम से दबाव तरंगों का तापीय चालन।",
+      "स्टेथोस्कोप ट्यूब की भीतरी दीवारों से ध्वनि तरंगों का बहु-परावर्तन (Multiple reflection), जो बिना क्षीणन के ध्वनिक ऊर्जा को डॉक्टर के कानों तक निर्देशित करता है।",
+      "धात्विक डायाफ्राम में द्रव्य तरंगों का क्वांटम अध्यारोपण।",
+      "परिवर्तनशील वायुमंडलीय घनत्व परतों के माध्यम से ध्वनिक अपवर्तन।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies acoustic transmission as heat conduction. Option 1 is correct because a **stethoscope** operates on the principle of **Multiple Reflection of Sound**. Weak acoustic vibrations originating from heart valves or lung air passages strike the stethoscope chest-piece diaphragm. These sound waves travel through the narrow hollow rubber/plastic tubing by undergoing **repeated continuous reflections off the tube's inner walls**. This confines the acoustic wavefronts inside the tube, preventing spatial energy dissipation and delivering high-intensity sound directly to the physician's earpieces. Options 2 and 3 state irrelevant physical principles."
+    "ee": "1. Option 0 is incorrect because sound propagation in tubing is acoustic wave reflection, not heat conduction.\n2. Option 1 is correct because a **Stethoscope** (invented by René Laennec in 1816) operates on the physical principle of **Multiple Reflection of Sound**:\n   - Faint acoustic vibrations produced by heart valves (lub/dub) or pulmonary air passages strike the chest-piece diaphragm;\n   - These localized sound waves enter the hollow narrow lumen of the rubber/plastic tubing and undergo **successive, repeated total reflections off the inner tube walls**;\n   - Because the sound energy is confined within the tubular waveguide rather than spreading spherically into open three-dimensional space, the wave travels with minimal amplitude attenuation, delivering reinforced acoustic signals directly to the physician's earpieces.\n3. Option 2 and Option 3 present irrelevant quantum and refractive concepts.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि यह तापीय चालन नहीं है।\n2. विकल्प 1 सही है क्योंकि **स्टेथोस्कोप (Stethoscope)** **ध्वनि के 'बहु-परावर्तन' (Multiple Reflection of Sound)** के सिद्धांत पर कार्य करता है:\n   - हृदय के कपाटों या फेफड़ों से उत्पन्न अत्यंत धीमी ध्वनियां जब स्टेथोस्कोप के चेस्ट-पीस के डायाफ्राम से टकराती हैं, तो वे कंपन उत्पन्न करती हैं;\n   - ये ध्वनि तरंगें स्टेथोस्कोप की संकरी रबर की नली के भीतर प्रवेश करती हैं और **नली की भीतरी दीवारों से बार-बार लगातार परावर्तित होकर** आगे बढ़ती हैं;\n   - नली के भीतर सीमित रहने के कारण ध्वनि ऊर्जा चारों तरफ फैलकर नष्ट नहीं होती, जिससे बिना किसी क्षीणता के स्पष्ट और तीव्र ध्वनि सीधे चिकित्सक के कानों तक पहुँच जाती है।\n3. विकल्प 2 गलत है क्योंकि द्रव्य तरंगें उप-परमाणु कणों से संबंधित हैं।\n4. विकल्प 3 गलत है क्योंकि यह अपवर्तन की परिघटना नहीं है।"
   },
   {
     "p_id": "bpsc_phys_m30_20",
     "qe": "Indian classical music categorizes pleasant sounds as 'Musical Sound' and unpleasant sounds as 'Noise'. What physical vibration property distinguishes a Musical Sound from Noise?",
     "qh": "भारतीय शास्त्रीय संगीत सुखद ध्वनियों को 'संगीतमय ध्वनि' (Musical Sound) और अप्रिय ध्वनियों को 'शोर' (Noise) के रूप में वर्गीकृत करता है। कौन सा भौतिक कंपन गुण एक संगीतमय ध्वनि को शोर से अलग करता है?",
-    "o": [
+    "oe": [
       "Musical sound is produced by irregular, non-periodic vibrations; Noise is produced by regular periodic vibrations.",
       "Musical sound is produced by regular, periodic vibrations featuring definite harmonics; Noise is produced by irregular, non-periodic, abrupt vibrations lacking defined frequency relationships.",
       "Musical sound travels at supersonic speeds; Noise travels at subsonic speeds.",
       "Musical sound consists exclusively of transverse waves; Noise consists exclusively of electromagnetic waves."
     ],
+    "oh": [
+      "संगीतमय ध्वनि अनियमित, गैर-आवधिक कंपनों द्वारा उत्पन्न होती है; शोर नियमित आवधिक कंपनों द्वारा उत्पन्न होता है।",
+      "संगीतमय ध्वनि निश्चित संनादी (harmonics) वाले नियमित, आवधिक (periodic) कंपनों द्वारा उत्पन्न होती है; शोर अनियमित, गैर-आवधिक (non-periodic), अचानक कंपनों द्वारा उत्पन्न होता है जिसमें निश्चित आवृत्ति संबंधों का अभाव होता है।",
+      "संगीतमय ध्वनि पराध्वनिक चाल से यात्रा करती है; शोर उपध्वनिक चाल से यात्रा करता है।",
+      "संगीतमय ध्वनि में विशेष रूप से अनुप्रस्थ तरंगें होती हैं; शोर में विशेष रूप से विद्युत चुंबकीय तरंगें होती हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely swaps vibration properties between music and noise. Option 1 is correct because: <br>1. **Musical Sound:** Produced by continuous, **regular, periodic vibrations** of a sounding body (like a stretched string, flute column, or vocal cord). It has a definite, pleasing frequency structure composed of fundamental tones and harmonic overtones. <br>2. **Noise:** Produced by discontinuous, **irregular, non-periodic, abrupt vibrations** (like a road drill, explosion, or slamming door). It consists of a sudden, chaotic mixture of unrelated frequencies without harmonic structure, producing an unpleasant auditory sensation. Options 2 and 3 present false velocity or wave type classifications."
+    "ee": "1. Option 0 completely inverts the periodic properties of music and noise.\n2. Option 1 is correct because acoustic physics distinguishes sound based on waveform regularity:\n   - **Musical Sound (संगीत)**: Produced by **regular, continuous, periodic vibrations** of an acoustic source (such as a violin string, flute air column, or vocal cord). Its waveform is smooth, continuous, and characterized by a fundamental frequency accompanied by harmonious integer overtones (harmonics), creating a pleasant auditory sensation.\n   - **Noise (शोर)**: Produced by **irregular, non-periodic, discontinuous, and abrupt vibrations** (such as traffic horns, explosions, or falling metal sheets). Its waveform displays chaotic, random fluctuations with sudden amplitude jumps and no harmonious harmonic relationship, creating an unpleasant, jarring sensation in the human ear.\n3. Option 2 and Option 3 state false velocity and wave-type distinctions.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि इसमें संगीत और शोर की कंपन प्रकृति को उल्टा लिखा गया है।\n2. विकल्प 1 सही है क्योंकि भौतिकी में तरंग के आकार और कंपन के आधार पर वर्गीकरण किया जाता है:\n   - **संगीतमय ध्वनि (Musical Sound):** यह किसी स्रोत (जैसे सितार, बांसुरी, सुरीली आवाज) के **नियमित, सतत और आवधिक (Regular and Periodic) कंपनों** से उत्पन्न होती है। इसकी तरंग का स्वरूप सुडौल होता है और इसमें मूल स्वर के साथ मधुर संनादी (Harmonics) जुड़े होते हैं, जो कानों को सुखद अनुभूति देते हैं।\n   - **शोर (Noise):** यह **अनियमित, गैर-आवधिक (Non-periodic) और अचानक होने वाले कंपनों** (जैसे पटाखों का फूटना, पत्थरों का गिरना, भारी मशीनों की आवाज) से बनता है। इसकी तरंग आकृति असंतुलित और अराजक होती है, जो कानों को अप्रिय और कष्टकारी लगती है।\n3. विकल्प 2 गलत है क्योंकि दोनों ही हवा में सामान्य ध्वनि की चाल से चलते हैं।\n4. विकल्प 3 गलत है क्योंकि दोनों यांत्रिक अनुदैर्ध्य तरंगें हैं।"
   },
-  
   {
     "p_id": "bpsc_phys_m31_01",
     "qe": "Electromagnetic waves span a vast spectrum categorized by frequency and generation mechanism. Which high-frequency electromagnetic radiation originates specifically from nuclear transformations within atomic nuclei (such as Uranium or Thorium) and is used in cancer radiation therapy?",
     "qh": "विद्युत चुंबकीय तरंगों में आवृत्ति और उत्पादन तंत्र द्वारा वर्गीकृत एक विशाल स्पेक्ट्रम शामिल है। कौन सा उच्च-आवृत्ति विद्युत चुंबकीय विकिरण परमाणु नाभिक (जैसे यूरेनियम या थोरियम) के भीतर नाभिकीय परिवर्तनों से विशेष रूप से उत्पन्न होता है और कैंसर विकिरण चिकित्सा में उपयोग किया जाता है?",
-    "o": [
+    "oe": [
       "X-Rays (Frequency: $10^{16}\\text{ to }10^{20}\\text{ Hz}$)",
       "Gamma Rays (Frequency: $10^{19}\\text{ to }10^{24}\\text{ Hz}$)",
       "Ultraviolet Rays (Frequency: $10^{15}\\text{ to }10^{17}\\text{ Hz}$)",
       "Infrared Waves (Frequency: $3.7 \\times 10^{14}\\text{ to }10^{11}\\text{ Hz}$)"
     ],
+    "oh": [
+      "एक्स-रे (आवृत्ति: $10^{16}\\text{ से }10^{20}\\text{ Hz}$)",
+      "गामा किरणें (आवृत्ति: $10^{19}\\text{ से }10^{24}\\text{ Hz}$)",
+      "पराबैंगनी किरणें (आवृत्ति: $10^{15}\\text{ से }10^{17}\\text{ Hz}$)",
+      "अवरक्त तरंगें (आवृत्ति: $3.7 \\times 10^{14}\\text{ से }10^{11}\\text{ Hz}$)"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes X-Rays, which originate from atomic electron shell transitions rather than nuclear disintegrations. Option 1 is correct because <b>Gamma Rays</b> possess the highest frequency range ($10^{19}\\text{ to }10^{24}\\text{ Hz}$) and shortest wavelength in the electromagnetic spectrum. Discovered by Becquerel and Curie, they originate directly from <b>intranuclear changes within radioactive atomic nuclei</b> (e.g., Uranium, Thorium). Due to their extreme penetrating power, they are deployed in medicine to destroy malignant cancer tumors and in the food industry to sterilize microorganisms. Option 2 describes UV rays produced by thermal arcs, and Option 3 describes IR thermal radiation."
+    "ee": "1. Option 0 describes X-rays, which originate from atomic electron transitions or electron deceleration in the electron cloud, not from the atomic nucleus.\n2. Option 1 is correct because **Gamma Rays ($\\gamma$-rays)** possess the highest frequencies ($10^{19}\\text{ to }10^{24}\\text{ Hz}$) and shortest wavelengths ($< 10^{-11}\\text{ m}$) in the electromagnetic spectrum. Discovered by Paul Villard and studied by Henri Becquerel and the Curies, they originate strictly from **intranuclear transitions and radioactive de-excitation inside unstable atomic nuclei** (e.g., Cobalt-60, Uranium, Thorium). Due to their extreme penetrating power and ionizing photon energy, gamma rays are deployed in oncology for **targeted radiotherapy to destroy malignant cancer cells** and for industrial food sterilization.\n3. Option 2 describes UV rays produced by thermal gas discharge arcs.\n4. Option 3 describes infrared thermal radiation emitted by warm molecular bodies.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि एक्स-किरणें भारी परमाणुओं के आंतरिक इलेक्ट्रॉनिक संक्रमणों से उत्पन्न होती हैं, नाभिक से नहीं।\n2. विकल्प 1 सही है क्योंकि **गामा किरणें ($\\gamma$-rays)** विद्युत चुंबकीय स्पेक्ट्रम में **सर्वाधिक आवृत्ति ($10^{19}\\text{ से }10^{24}\\text{ Hz}$)** और सबसे छोटी तरंगदैर्घ्य वाली किरणें हैं। इनकी उत्पत्ति रेडियोधर्मी परमाणुओं (जैसे यूरेनियम, थोरियम, कोबाल्ट-60) के **नाभिक के भीतर होने वाले परिवर्तनों और नाभिकीय विखंडन/क्षय** से होती है। अत्यधिक भेदन क्षमता और उच्च फोटॉन ऊर्जा के कारण इनका उपयोग चिकित्सा विज्ञान में **कैंसर की घातक ट्यूमर कोशिकाओं को नष्ट करने (रेडियोथेरेपी)** तथा चिकित्सा उपकरणों के जीवाणुनाशन में किया जाता है।\n3. विकल्प 2 गलत है क्योंकि पराबैंगनी किरणें विद्युत आर्क और सूर्य से उत्पन्न होती हैं।\n4. विकल्प 3 गलत है क्योंकि अवरक्त तरंगें तापीय विकिरण हैं।"
   },
   {
     "p_id": "bpsc_phys_m31_02",
     "qe": "X-rays are high-energy electromagnetic waves discovered by Röntgen. What exact physical interaction generates X-rays in specialized vacuum tubes?",
     "qh": "एक्स-किरणें रॉन्टजन द्वारा खोजी गई उच्च-ऊर्जा विद्युत चुंबकीय तरंगें हैं। विशेष वैक्यूम ट्यूबों में कौन सी सटीक भौतिक अंतःक्रिया एक्स-किरणें उत्पन्न करती है?",
-    "o": [
+    "oe": [
       "Low-speed protons interacting with liquid hydrogen fuel.",
       "Highly energetic electrons suddenly decelerated or stopped by a heavy metal target with a high melting point.",
       "Radioactive decay of unstable isotopes emitting alpha particles.",
       "Thermal glow of white-hot tungsten filaments at low pressure."
     ],
+    "oh": [
+      "कम गति वाले प्रोटॉन तरल हाइड्रोजन ईंधन के साथ परस्पर क्रिया करते हैं।",
+      "अत्यधिक ऊर्जावान इलेक्ट्रॉनों को उच्च गलनांक वाले भारी धातु लक्ष्य द्वारा अचानक धीमा या रोक दिया जाता है।",
+      "अस्थिर समस्थानिकों का रेडियोधर्मी क्षय जो अल्फा कणों का उत्सर्जन करता है।",
+      "कम दबाव पर सफेद-गर्म टंगस्टन फिलामेंट्स की तापीय चमक।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misidentifies protons and hydrogen. Option 1 is correct because <b>X-Rays</b> ($10^{16}\\text{ to }10^{20}\\text{ Hz}$) are produced via <i>Bremsstrahlung</i> (braking radiation) and characteristic atomic transitions when <b>fast-moving, highly energetic electrons strike and are abruptly stopped by a heavy metallic target possessing a high atomic number ($Z$) and high melting point</b> (such as Tungsten or Molybdenum). This rapid deceleration converts kinetic energy into X-ray photons used in medical radiography, engineering crack detection, and metro security scanners. Option 2 describes alpha radio-decay, and Option 3 describes visible light emission."
+    "ee": "1. Option 0 is incorrect because proton beams are used in specialized hadron therapy, not standard X-ray generation.\n2. Option 1 is correct because in a Coolidge X-ray vacuum tube, cathode electrons are accelerated under a high potential difference ($30\\text{ to }100+\\text{ kV}$) toward an anode target. When these **fast-moving, high-energy electrons strike a heavy metallic target possessing a high atomic number ($Z$) and high melting point** (such as Tungsten or Molybdenum), two physical processes occur:\n   - **Bremsstrahlung (Braking Radiation)**: Rapid deceleration of electrons in the strong Coulomb field of target nuclei converts kinetic energy into continuous X-ray photons;\n   - **Characteristic X-rays**: Ejection of target inner-shell electrons causes outer-shell electrons to drop down, emitting sharp characteristic X-ray photons ($10^{16}\\text{ to }10^{20}\\text{ Hz}$).\n3. Option 2 describes alpha particle decay.\n4. Option 3 describes incandescent visible light emission.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि एक्स-रे उत्पादन में प्रोटॉनों का उपयोग नहीं होता।\n2. विकल्प 1 सही है क्योंकि एक्स-रे ट्यूब (कूलिज ट्यूब) में कैथोड से निकलने वाले **अति-तीव्रगामी उच्च-ऊर्जा इलेक्ट्रॉनों को जब उच्च परमाणु क्रमांक ($Z$) और उच्च गलनांक वाली भारी धातु के लक्ष्य (जैसे टंगस्टन या मॉलिब्डेनम)** पर टकराकर अचानक रोका जाता है, तो इलेक्ट्रॉनों के मंदन से उनकी गतिज ऊर्जा विद्युत चुंबकीय विकिरण में बदल जाती है। इस प्रक्रिया (ब्रेम्सस्ट्रालुंग और विशिष्ट संक्रमण) से **एक्स-किरणें (X-Rays)** उत्पन्न होती हैं, जिनकी खोज 1895 में डब्ल्यू.सी. रॉन्टजन ने की थी।\n3. विकल्प 2 गलत है क्योंकि अल्फा क्षय एक प्राकृतिक नाभिकीय प्रक्रिया है।\n4. विकल्प 3 गलत है क्योंकि फिलामेंट का चमकना केवल दृश्य प्रकाश देता है।"
   },
   {
     "p_id": "bpsc_phys_m31_03",
     "qe": "Evaluating the core characteristics of Electromagnetic (EM) Waves reveals why they behave differently from mechanical waves in external force fields. Why are EM waves NOT deflected when passing through strong electric or magnetic fields?",
     "qh": "विद्युत चुंबकीय (EM) तरंगों की मूल विशेषताओं का मूल्यांकन यह उजागर करता है कि वे बाहरी बल क्षेत्रों में यांत्रिक तरंगों से भिन्न व्यवहार क्यों करती हैं। मजबूत विद्युत या चुंबकीय क्षेत्रों से गुजरते समय EM तरंगें विक्षेपित क्यों नहीं होती हैं?",
-    "o": [
+    "oe": [
       "Because EM waves travel faster than the speed of light in matter.",
       "Because EM waves are electrically uncharged (neutral), carrying coupled oscillating fields that experience zero net Lorentz force.",
       "Because EM waves possess zero energy and zero linear momentum.",
       "Because electric and magnetic fields only affect longitudinal sound waves."
     ],
+    "oh": [
+      "क्योंकि EM तरंगें पदार्थ में प्रकाश की गति से अधिक तेज यात्रा करती हैं।",
+      "क्योंकि EM तरंगें विद्युत रूप से अनावेशित (तटस्थ) होती हैं, जिनमें युग्मित दोलनशील क्षेत्र होते हैं जो शून्य शुद्ध लोरेंत्ज़ बल का अनुभव करते हैं।",
+      "क्योंकि EM तरंगों में शून्य ऊर्जा और शून्य रैखिक संवेग होता है।",
+      "क्योंकि विद्युत और चुंबकीय क्षेत्र केवल अनुदैर्ध्य ध्वनि तरंगों को प्रभावित करते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 states an impossible superluminal speed claim. Option 1 is correct because <b>Electromagnetic Waves</b> consist of self-sustaining, mutually perpendicular oscillating electric and magnetic field vectors. Because the wave packet carries <b>no net electric charge ($q = 0$)</b>, it experiences no deflection under external electrostatic or magnetic fields (Lorentz force $\\vec{F} = q(\\vec{E} + \\vec{v} \\times \\vec{B}) = 0$). Furthermore, EM waves carry both energy and linear momentum, exerting a non-zero **radiation pressure** upon surfaces. Option 2 falsely claims zero momentum, and Option 3 misattributes magnetic field responses to mechanical sound."
+    "ee": "1. Option 0 asserts an unphysical superluminal velocity claim.\n2. Option 1 is correct because **Electromagnetic Waves** consist of oscillating, mutually perpendicular electric ($\\vec{E}$) and magnetic ($\\vec{B}$) fields propagating across space. Photons and EM wave packets carry **zero net electric charge ($q = 0$)**. According to the Lorentz force equation: $$\\vec{F} = q(\\vec{E} + \\vec{v} \\times \\vec{B})$$\n   Because $q = 0$, external static electric or magnetic fields exert **zero deflecting force** on an EM beam (unlike charged cathode rays, beta particles, or alpha particles, which deflect sharply). Therefore, light, X-rays, and gamma rays pass straight through electromagnetic deflection plates without deviation.\n3. Option 2 is incorrect because EM waves carry energy ($E = h\\nu$) and momentum ($p = E/c$), exerting non-zero radiation pressure.\n4. Option 3 is incorrect because static electromagnetic fields do not deflect uncharged sound waves.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि कोई भी तरंग निर्वात में प्रकाश की चाल से तेज नहीं चल सकती।\n2. विकल्प 1 सही है क्योंकि **विद्युत चुंबकीय तरंगें (EM Waves)** परस्पर लंबवत दोलनशील विद्युत और चुंबकीय क्षेत्रों से बनी होती हैं, परंतु ये **विद्युत रूप से पूर्णतः उदासीन/अनावेशित ($q = 0$)** होती हैं। लोरेंत्ज़ बल सूत्र $\\vec{F} = q(\\vec{E} + \\vec{v} \\times \\vec{B})$ के अनुसार, आवेश शून्य होने के कारण किसी बाह्य विद्युत क्षेत्र या चुंबकीय क्षेत्र द्वारा इन पर कोई बल नहीं लगता। यही कारण है कि प्रकाश, एक्स-रे और गामा किरणें विद्युत और चुंबकीय क्षेत्रों से बिना किसी विक्षेपण के सीधी निकल जाती हैं (जबकि कैथोड और बीटा किरणें मुड़ जाती हैं)।\n3. विकल्प 2 गलत है क्योंकि विद्युत चुंबकीय तरंगों में ऊर्जा और संवेग दोनों उपस्थित होते हैं।\n4. विकल्प 3 गलत है क्योंकि ध्वनि तरंगें यांत्रिक हैं और वे भी चुंबकीय क्षेत्रों से अप्रभावित रहती हैं।"
   },
   {
     "p_id": "bpsc_phys_m31_04",
     "qe": "Fluorescence and Phosphorescence are light-emission phenomena driven by optical excitation. What primary operational mechanism distinguishes Phosphorescence from Fluorescence?",
     "qh": "प्रतिदीप्ति (Fluorescence) और स्फुरदीप्ति (Phosphorescence) प्रकाशीय उत्तेजना (optical excitation) द्वारा संचालित प्रकाश-उत्सर्जन परिघटनाएं हैं। कौन सा प्राथमिक परिचालन तंत्र स्फुरदीप्ति को प्रतिदीप्ति से अलग करता है?",
-    "o": [
+    "oe": [
       "Fluorescence continues emitting light for hours after the light source is removed, whereas phosphorescence stops instantly.",
       "Fluorescence emits light only while the illuminating high-frequency source is present; Phosphorescence continues emitting stored light for a prolonged duration after the exciting light source is completely removed.",
       "Fluorescence occurs exclusively in dark subterranean mines, whereas phosphorescence requires direct electric current.",
       "Fluorescence converts infrared heat into gamma radiation."
     ],
+    "oh": [
+      "प्रकाश स्रोत हटा दिए जाने के बाद प्रतिदीप्ति घंटों तक प्रकाश उत्सर्जित करती रहती है, जबकि स्फुरदीप्ति तुरंत बंद हो जाती है।",
+      "प्रतिदीप्ति (Fluorescence) केवल तभी तक प्रकाश उत्सर्जित करती है जब तक उत्तेजक उच्च-आवृत्ति स्रोत मौजूद रहता है; स्फुरदीप्ति (Phosphorescence) उत्तेजक प्रकाश स्रोत को पूरी तरह से हटा दिए जाने के बाद भी लंबे समय तक संग्रहीत प्रकाश का उत्सर्जन जारी रखती है।",
+      "प्रतिदीप्ति विशेष रूप से अंधेरी भूमिगत खदानों में होती है, जबकि स्फुरदीप्ति को प्रत्यक्ष विद्युत प्रवाह की आवश्यकता होती है।",
+      "प्रतिदीप्ति अवरक्त ऊष्मा को गामा विकिरण में परिवर्तित करती है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely swaps the temporal persistence of fluorescence and phosphorescence. Option 1 is correct because: <br>1. <b>Fluorescence:</b> A substance absorbs high-frequency light (blue or UV) and re-emits lower frequency visible light <i>strictly while the excitation source illuminates it</i> (ceasing instantly within $10^{-8}\\text{ s}$ when turned off), as seen in road signboards or barium platino-cyanide screens. <br>2. <b>Phosphorescence:</b> A substance absorbs radiation energy and stores it in metastable electronic energy states, continuing to <b>emit light for a prolonged period after the light source is removed</b>. This delayed emission enables glowing watch dials, clock faces, and luminescent dark-room switches. Options 2 and 3 present false physical mechanism claims."
+    "ee": "1. Option 0 reverses the temporal duration characteristics of fluorescence and phosphorescence.\n2. Option 1 is correct because:\n   - **Fluorescence (प्रतिदीप्ति)**: Occurs via singlet-singlet electronic transitions ($S_1 \\to S_0$). The material absorbs high-frequency radiation (like UV light) and immediately re-emits lower-frequency visible light **only while the incident exciting radiation is actively illuminating it**. Emission ceases virtually instantly (within $10^{-8}\\text{ seconds}$) when the exciting source is switched off (e.g., fluorescent tube lights, fluorite mineral, zinc sulfide screens under X-rays).\n   - **Phosphorescence (स्फुरदीप्ति)**: Occurs via intersystem crossing into triplet metastable states ($T_1 \\to S_0$), which are quantum-mechanically forbidden. Transition back to the ground state is slow, allowing the substance to **continue glowing and emitting visible light for minutes or hours after the excitation source has been completely removed** (e.g., glow-in-the-dark watch dials, zinc sulfide/strontium aluminate paints).\n3. Option 2 and Option 3 present invalid physical mechanisms.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि इसमें दोनों प्रक्रियाओं के समय-अंतराल को उल्टा लिखा गया है।\n2. विकल्प 1 सही है क्योंकि:\n   - **प्रतिदीप्ति (Fluorescence):** जब कोई पदार्थ उच्च आवृत्ति (जैसे पराबैंगनी प्रकाश) को अवशोषित कर दृश्य प्रकाश उत्सर्जित करता है, और यह उत्सर्जन **केवल तभी तक होता है जब तक उत्तेजक प्रकाश स्रोत चालू रहता है** (स्रोत हटाते ही $10^{-8}\\text{ s}$ में चमक बंद हो जाती है, जैसे ट्यूबलाइट या फ्लोराइड);\n   - **स्फुरदीप्ति (Phosphorescence):** जब पदार्थ विकिरण ऊर्जा को मेटास्टेबल (त्रिक) अवस्था में संचित कर लेता है और **बाहरी प्रकाश स्रोत को पूरी तरह हटा दिए जाने के बाद भी अंधेरे में लंबे समय (घंटों) तक मंद प्रकाश उत्सर्जित करता रहता है** (जैसे रात में चमकने वाली घड़ियों की सुइयां और खिलौने)।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि ये निराधार दावे हैं।"
   },
   {
     "p_id": "bpsc_phys_m31_05",
     "qe": "Sound waves diffract easily around standard doors and windows in residential buildings, allowing people in adjacent rooms to converse. Why does sound undergo prominent diffraction through ordinary household openings while visible light does not?",
     "qh": "आवासीय भवनों में मानक दरवाजों और खिड़कियों के चारों ओर ध्वनि तरंगें आसानी से विवर्तित (diffracted) हो जाती हैं, जिससे आस-पास के कमरों में लोग बातचीत कर सकते हैं। साधारण घरेलू उद्घाटनों (openings) से ध्वनि का प्रमुख विवर्तन क्यों होता है जबकि दृश्य प्रकाश का नहीं?",
-    "o": [
+    "oe": [
       "Because sound waves travel faster than visible light waves in atmospheric air.",
       "Because the wavelength of audible sound waves ($\\lambda \\sim 1\\text{ m}$) is of the same order of magnitude as door/window dimensions, satisfying optimal wave diffraction conditions.",
       "Because visible light waves are longitudinal pressure oscillations that cannot bend.",
       "Because household walls are transparent to acoustic waves but absorb all electromagnetic fields."
     ],
+    "oh": [
+      "क्योंकि वायुमंडलीय हवा में ध्वनि तरंगें दृश्य प्रकाश तरंगों की तुलना में तेजी से यात्रा करती हैं।",
+      "क्योंकि श्रव्य ध्वनि तरंगों की तरंगदैर्घ्य ($\\lambda \\sim 1\\text{ m}$) दरवाजे/खिड़की के आयामों के समान परिमाण की होती है, जो इष्टतम तरंग विवर्तन स्थितियों को पूरा करती है।",
+      "क्योंकि दृश्य प्रकाश तरंगें अनुदैर्ध्य दबाव दोलन हैं जो झुक नहीं सकती हैं।",
+      "क्योंकि घरेलू दीवारें ध्वनिक तरंगों के लिए पारदर्शी होती हैं लेकिन सभी विद्युत चुंबकीय क्षेत्रों को अवशोषित करती हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 incorrectly states sound is faster than light. Option 1 is correct because <b>Diffraction</b> [the bending and spreading of waves around obstacles or narrow openings] becomes prominent only when the width of the opening ($d$) is comparable to or of the same order of magnitude as the wavelength of the incident wave ($\\lambda \\approx d$). The wavelength of human speech/sound waves ranges from several centimeters to roughly **1 meter**, matching the physical dimensions of standard doors and windows ($d \\sim 1\\text{-}2\\text{ m}$). Conversely, visible light has an extremely tiny wavelength ($\\lambda \\sim 400\\text{-}700\\text{ nm}$), so its diffraction around large door openings is negligible, causing light to travel in straight rays. Options 2 and 3 state false optical/acoustic classifications."
+    "ee": "1. Option 0 is incorrect because light travels roughly a million times faster than sound in air.\n2. Option 1 is correct because **Diffraction** (the bending and spreading of waves around obstacles or through apertures) becomes pronounced and readily observable **only when the wavelength ($\\lambda$) of the wave is comparable to the physical dimension ($a$) of the opening or obstacle ($\\lambda \\approx a$)**:\n   - **Audible Sound Waves**: Have frequencies between $20-20,000\\text{ Hz}$, corresponding to wavelengths ranging from several centimeters to **$\\approx 1\\text{ to }3\\text{ meters}$**. This matches the spatial width of residential doors and windows ($1-2\\text{ m}$), causing sound waves to easily bend and spread around corners into adjacent rooms.\n   - **Visible Light Waves**: Have microscopic wavelengths of only **$400\\text{ to }700\\text{ nm}$ ($10^{-7}\\text{ m}$)**, which is vastly smaller than a $1\\text{ m}$ doorway ($a \\gg \\lambda$). Consequently, diffraction of light around doorways is imperceptibly tiny, causing light to travel in rectilinear rays and cast sharp shadows.\n3. Option 2 misclassifies transverse light as longitudinal pressure waves.\n4. Option 3 is incorrect because solid brick walls reflect and absorb sound rather than acting as transparent acoustic media.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि प्रकाश ध्वनि से कहीं अधिक तीव्र गति से चलता है।\n2. विकल्प 1 सही है क्योंकि तरंगों का **विवर्तन (Diffraction - किनारों से मुड़ना)** प्रभावी रूप से केवल तभी दिखाई देता है **जब अवरोध या छिद्र का आकार ($a$) तरंग की तरंगदैर्घ्य ($\\lambda$) की कोटि (आकार) के लगभग बराबर हो ($\\lambda \\approx a$)**:\n   - **श्रव्य ध्वनि तरंगों की तरंगदैर्घ्य ($\\lambda$):** लगभग **1 मीटर** (कुछ सेमी से लेकर मीटर तक) होती है, जो कमरों के दरवाजों और खिड़कियों की चौड़ाई (1-2 मीटर) के बिल्कुल बराबर होती है। इसलिए ध्वनि आसानी से दरवाजों से मुड़कर बगल के कमरे में पहुँच जाती है।\n   - **दृश्य प्रकाश की तरंगदैर्घ्य ($\\lambda$):** अत्यंत सूक्ष्म (लगभग $400-700\\text{ nm}$ या $10^{-7}\\text{ m}$) होती है, जो दरवाजे के आकार से लाखों गुना छोटी होती है। अतः प्रकाश का विवर्तन नगण्य होता है और वह सीधी रेखा में गमन करता हुआ छाया बनाता है।\n3. विकल्प 2 गलत है क्योंकि प्रकाश अनुप्रस्थ तरंग है।\n4. विकल्प 3 गलत है क्योंकि ईंट की दीवारें ध्वनि के लिए अपारदर्शी होती हैं।"
   },
   {
     "p_id": "bpsc_phys_m31_06",
     "qe": "Doppler's Effect in acoustics and optics explains frequency variations resulting from relative motion. Which choice correctly pairs a real-world application with its Doppler-based operation?",
     "qh": "ध्वनिकी और प्रकाशिकी में डॉप्लर का प्रभाव (Doppler's Effect) सापेक्ष गति से होने वाले आवृत्ति परिवर्तनों की व्याख्या करता है। कौन सा विकल्प डॉप्लर-आधारित संचालन के साथ वास्तविक दुनिया के अनुप्रयोग को सही ढंग से जोड़ता है?",
-    "o": [
+    "oe": [
       "Sterilizing surgical scalpels in medical operating theaters.",
       "Measuring star/planet velocities in astrophysics, guiding aircraft at airports, and monitoring cardiovascular blood flow in medical echocardiograms.",
       "Detecting hidden metallic landmines in agricultural soil.",
       "Cooking food inside insulated wooden boxes."
     ],
+    "oh": [
+      "मेडिकल ऑपरेटिंग थिएटरों में सर्जिकल स्कैलपेल को स्टरलाइज़ करना।",
+      "खगोल भौतिकी में तारे/ग्रह के वेग को मापना, हवाई अड्डों पर विमानों का मार्गदर्शन करना और मेडिकल इकोकार्डियोग्राम में हृदय संबंधी रक्त प्रवाह की निगरानी करना।",
+      "कृषि मिट्टी में छिपी धातु की बारूदी सुरंगों का पता लगाना।",
+      "इंसुलेटेड लकड़ी के बक्सों के अंदर खाना बनाना।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 describes UV sterilization. Option 1 is correct because **Doppler's Effect** (apparent frequency shift $\\Delta f$ due to relative source-observer motion) is applied across multiple disciplines: <br>1. **Astrophysics:** Analyzing spectral line redshift/blueshift measures the radial velocity of receding/approaching stars and distant galaxies. <br>2. **Aviation:** Airport Radar systems track approaching aircraft speed by measuring frequency shifts in reflected electromagnetic waves. <br>3. **Medicine:** Doppler Echocardiography and Ultrasound flowmeters measure cardiac wall motion and arterial blood flow velocity non-invasively. Option 2 describes mine sweeping detectors, and Option 3 describes solar cookers."
+    "ee": "1. Option 0 describes dry heat or autoclave steam sterilization.\n2. Option 1 is correct because the **Doppler Effect** (apparent shift in received frequency $\\Delta f$ due to relative motion between source and observer) is widely utilized across science and technology:\n   - **Astrophysics**: Measuring spectral line redshift (receding) or blueshift (approaching) determines the radial velocities of distant stars and confirms cosmic expansion;\n   - **Aviation & Traffic**: Police radar guns and airport RADAR systems bounce electromagnetic waves off moving targets to calculate aircraft and automobile speeds via $\\Delta f$;\n   - **Medicine**: **Color Doppler Echocardiography and Ultrasound Flowmeters** bounce sound waves off moving erythrocytes to evaluate cardiac valve performance and blood flow velocities non-invasively.\n3. Option 2 describes electromagnetic induction metal detectors.\n4. Option 3 describes solar cooker boxes.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि उपकरणों का जीवाणुनाशन ऊष्मा या गामा किरणों से होता है।\n2. विकल्प 1 सही है क्योंकि **डॉप्लर प्रभाव (Doppler's Effect)** के प्रमुख व्यावहारिक अनुप्रयोग निम्नलिखित हैं:\n   - **खगोल भौतिकी में:** तारों और आकाशगंगाओं से आने वाले प्रकाश के स्पेक्ट्रम में रेड-शिफ्ट (लाल विस्थापन) या ब्लू-शिफ्ट देखकर उनके वेग और ब्रह्मांड के विस्तार की गति मापी जाती है;\n   - **विमानन और यातायात में:** हवाई अड्डों पर रडार (RADAR) तथा पुलिस की स्पीड-गन द्वारा विमानों और तेज रफ्तार वाहनों के वेग की गणना परावर्तित तरंगों के डॉप्लर आवृत्ति परिवर्तन से की जाती है;\n   - **चिकित्सा विज्ञान में:** 'कलर डॉप्लर इकोकार्डियोग्राफी' द्वारा धमनियों में बहते रक्त के वेग और हृदय के वाल्वों की कार्यप्रणाली का सटीक गैर-आक्रामक परीक्षण किया जाता है।\n3. विकल्प 2 गलत है क्योंकि मेटल डिटेक्टर विद्युत-चुंबकीय प्रेरण पर कार्य करते हैं।\n4. विकल्प 3 गलत है क्योंकि यह सौर ऊर्जा का अनुप्रयोग है।"
   },
   {
     "p_id": "bpsc_phys_m31_07",
     "qe": "Electromagnetic radiation bands are categorized by specific frequency ranges and technological applications. Which choice correctly pairs an Electromagnetic Wave type with its discovered origin and primary application?",
     "qh": "विद्युत चुंबकीय विकिरण बैंड को विशिष्ट आवृत्ति सीमाओं और तकनीकी अनुप्रयोगों द्वारा वर्गीकृत किया जाता है। कौन सा विकल्प विद्युत चुंबकीय तरंग के प्रकार को उसकी खोज मूल और प्राथमिक अनुप्रयोग के साथ सही ढंग से जोड़ता है?",
-    "o": [
+    "oe": [
       "Radio Waves: Discovered by Newton; used exclusively in solar cookers.",
       "Infrared Waves: Discovered by Herschel; used in military satellite imaging, TV remote controls, and therapeutic heat treatment.",
       "Microwaves: Discovered by Röntgen; used to sterilize hospital operating rooms.",
       "Gamma Rays: Discovered by Hertz; used to broadcast AM/FM radio stations."
     ],
+    "oh": [
+      "रेडियो तरंगें: न्यूटन द्वारा खोजी गई; विशेष रूप से सौर कुकर में उपयोग की जाती हैं।",
+      "अवरक्त तरंगें (Infrared Waves): हर्षेल द्वारा खोजी गई; सैन्य उपग्रह इमेजिंग, टीवी रिमोट कंट्रोल और चिकित्सीय ताप उपचार में उपयोग की जाती हैं।",
+      "माइक्रोवेव: रॉन्टजन द्वारा खोजी गई; अस्पताल के ऑपरेटिंग रूम को स्टरलाइज़ करने के लिए उपयोग की जाती हैं।",
+      "गामा किरणें: हर्ट्ज द्वारा खोजी गई; AM/FM रेडियो स्टेशनों को प्रसारित करने के लिए उपयोग की जाती हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 misattributes radio waves to Newton (discovered by Marconi). Option 1 is correct because **Infrared Waves** ($3.7 \\times 10^{14}\\text{ to }10^{11}\\text{ Hz}$) were discovered by **William Herschel**. Emitted by warm bodies and illuminated lamp filaments, they are widely used in **military satellite thermal imaging, TV remote control signaling, solar cookers, and medical heat therapy**. Option 2 incorrectly credits Röntgen with microwaves (discovered by Hertz), and Option 3 credits Hertz with gamma rays (discovered by Becquerel and Curie)."
+    "ee": "1. Option 0 is incorrect because radio waves were experimentally generated and discovered by Heinrich Hertz and Guglielmo Marconi, not Isaac Newton.\n2. Option 1 is correct because **Infrared Radiation (IR Waves)** ($3.7 \\times 10^{14}\\text{ to }10^{11}\\text{ Hz}$, wavelength $700\\text{ nm to }1\\text{ mm}$) was discovered in 1800 by British astronomer **Sir William Herschel** using a prism and a blackened bulb thermometer. Emitted by all hot objects, infrared radiation is applied in:\n   - **Night-Vision & Military Satellite Thermal Imaging** (penetrates haze and darkness);\n   - **Consumer Electronics**: Handheld TV/AC infrared remote control transmitters;\n   - **Physical Therapy**: Infrared radiant heat lamps for soothing muscular spasms and arthritis;\n   - **Greenhouse Heating & Solar Cookers**.\n3. Option 2 is incorrect because Röntgen discovered X-rays in 1895, not microwaves.\n4. Option 3 is incorrect because gamma rays were discovered by Paul Villard/Becquerel, not Heinrich Hertz.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि रेडियो तरंगों की खोज मार्कोनी और हर्ट्ज ने की थी।\n2. विकल्प 1 सही है क्योंकि **अवरक्त किरणें (Infrared Waves)** की खोज 1800 में **विलियम हर्षेल** ने की थी। यह ऊष्मीय विकिरण है जो सभी गर्म वस्तुओं से उत्सर्जित होता है। इसके प्रमुख अनुप्रयोग हैं:\n   - **सैन्य एवं उपग्रह थर्मल इमेजिंग:** रात में देखने वाले नाइट-विज़न कैमरों और कोहरे में फोटोग्राफी में;\n   - **इलेक्ट्रॉनिक्स:** टीवी और एसी के रिमोट कंट्रोल सिग्नलों में;\n   - **चिकित्सा:** मांसपेशियों के दर्द और गठिया के इलाज के लिए सिकाई (Physiotherapy) में;\n   - सौर कुकर और ग्रीनहाउस में ऊष्मा बनाए रखने में।\n3. विकल्प 2 गलत है क्योंकि रॉन्टजन ने एक्स-रे की खोज की थी।\n4. विकल्प 3 गलत है क्योंकि गामा किरणों की खोज पॉल विलार्ड ने की थी।"
   },
   {
     "p_id": "bpsc_phys_m31_08",
     "qe": "Radar systems and speed measurement guns rely on specific intermediate electromagnetic frequencies. Which electromagnetic wave band ($10^{9}\\text{ to }10^{12}\\text{ Hz}$) discovered by Hertz is utilized in radar, long-distance communications, and vehicle velocity guns?",
     "qh": "राडार प्रणाली और गति मापने वाली बंदूकें (speed guns) विशिष्ट मध्यवर्ती विद्युत चुंबकीय आवृत्तियों पर निर्भर करती हैं। हर्ट्ज द्वारा खोजी गई कौन सी विद्युत चुंबकीय तरंग बैंड ($10^{9}\\text{ से }10^{12}\\text{ Hz}$) राडार, लंबी दूरी के संचार और वाहन वेग बंदूकों में उपयोग की जाती है?",
-    "o": [
+    "oe": [
       "Visible Light",
       "Microwaves",
       "Gamma Rays",
       "Ultraviolet Rays"
     ],
+    "oh": [
+      "दृश्य प्रकाश",
+      "माइक्रोवेव (Microwaves)",
+      "गामा किरणें",
+      "पराबैंगनी किरणें"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 covers the visible spectrum ($7.5 \\times 10^{14}\\text{ to }4 \\times 10^{14}\\text{ Hz}$). Option 1 is correct because <b>Microwaves</b> ($10^{9}\\text{ to }10^{12}\\text{ Hz}$), discovered by **Heinrich Hertz**, are generated by specialized electronic oscillator circuits (like klystrons or magnetrons). Due to their short wavelengths and high frequency penetration through atmospheric layers, microwaves are essential for **military Radar tracking, speed guns (measuring sports ball or traffic vehicle velocity), microwave ovens, and satellite communications**. Option 2 and Option 3 operate at vastly higher frequency bands."
+    "ee": "1. Option 0 spans $4 \\times 10^{14}\\text{ to }7.5 \\times 10^{14}\\text{ Hz}$ and is detected by the human retina.\n2. Option 1 is correct because **Microwaves (Short Radio Waves)** occupy the electromagnetic spectrum with frequencies between **$10^9\\text{ Hz (1 GHz) to }10^{12}\\text{ Hz (1 THz)}$** and wavelengths ranging from $1\\text{ mm to }0.3\\text{ m}$. Experimentally generated by Heinrich Hertz in 1888 using spark-gap oscillators (and produced by modern klystrons and magnetrons), microwaves are the optimal band for:\n   - **RADAR (Radio Detection and Ranging)**: Air traffic control and military aircraft tracking;\n   - **Speed Measurement Radar Guns**: Determining vehicle velocities on highways;\n   - **Telecommunications**: Line-of-sight satellite uplinks, Wi-Fi, and cellular networks;\n   - **Microwave Ovens**: Heating water molecules at $2.45\\text{ GHz}$.\n3. Option 2 ($10^{19}-10^{24}\\text{ Hz}$) and Option 3 ($10^{15}-10^{17}\\text{ Hz}$) operate at much higher frequencies with ionizing photon energies.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि दृश्य प्रकाश की आवृत्ति $4 \\times 10^{14}$ से $7.5 \\times 10^{14}\\text{ Hz}$ होती है।\n2. विकल्प 1 सही है क्योंकि **माइक्रोवेव (लघु रेडियो तरंगें)** की आवृत्ति **$10^9\\text{ Hz}$ (1 GHz) से $10^{12}\\text{ Hz}$** तथा तरंगदैर्घ्य 1 मिमी से 30 सेमी तक होती है। इनकी खोज हेनरिक हर्ट्ज ने की थी। कम तरंगदैर्घ्य के कारण वायुमंडलीय बाधाओं को पार करने और सीधी रेखा में चलने की क्षमता के कारण इनका उपयोग:\n   - हवाई अड्डों और रक्षा क्षेत्र में **रडार (RADAR)** प्रणाली में;\n   - पुलिस द्वारा वाहनों की गति नापने वाली **स्पीड-गन (Speed Radar Gun)** में;\n   - उपग्रह संचार, मोबाइल नेटवर्क और वाई-फाई में;\n   - **माइक्रोवेव ओवन** में भोजन पकाने में किया जाता है।\n3. विकल्प 2 और विकल्प 3 गलत हैं क्योंकि गामा और पराबैंगनी किरणें अत्यधिक उच्च ऊर्जा वाली आयनकारी किरणें हैं।"
   },
   {
     "p_id": "bpsc_phys_m31_09",
     "qe": "Seismology tracks crustal energy release during tectonic earthquakes. What terms define the internal subsurface origin point of an earthquake and the corresponding point directly above it on Earth's surface, respectively?",
     "qh": "भूकंप विज्ञान विवर्तनिक (tectonic) भूकंपों के दौरान भूपर्पटी ऊर्जा रिलीज को ट्रैक करता है। कौन से शब्द क्रमशः भूकंप के आंतरिक उपसतह उत्पत्ति बिंदु और पृथ्वी की सतह पर इसके ठीक ऊपर स्थित संबंधित बिंदु को परिभाषित करते हैं?",
-    "o": [
+    "oe": [
       "Epicenter (subsurface source) and Focus (surface point)",
       "Focus or Hypocenter (internal subsurface source point) and Epicenter (surface point directly above the focus)",
       "Seismograph (subsurface source) and Richter Scale (surface point)",
       "Fault Line (subsurface source) and Tsunami (surface point)"
     ],
+    "oh": [
+      "अधिकेंद्र (भूपर्पटीय स्रोत) और फोकस (सतह बिंदु)",
+      "फोकस या हाइपोसेंटर (आंतरिक उपसतह स्रोत बिंदु) और अधिकेंद्र/एपिसेंटर (फोकस के ठीक ऊपर सतह बिंदु)",
+      "सिस्मोग्राफ (भूपर्पटीय स्रोत) और रिक्टर स्केल (सतह बिंदु)",
+      "फॉल्ट लाइन (भूपर्पटीय स्रोत) और सुनामी (सतह बिंदु)"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 completely swaps the focus and epicenter positions. Option 1 is correct because: <br>1. **Focus (Hypocenter):** The actual point deep inside the Earth's crust where subterranean fault slipping or rock fracture originates, releasing seismic energy waves in all directions. <br>2. **Epicenter:** The point on the Earth's surface located **vertically directly above the focus**, where seismic shockwaves hit first and cause maximum destruction. Option 2 lists recording instruments/scales, and Option 3 lists geological fault lines and sea waves."
+    "ee": "1. Option 0 inverts the geographical positions of the focus and the epicenter.\n2. Option 1 is correct because seismology defines:\n   - **Focus (or Hypocenter / उद्गम केंद्र)**: The exact point deep inside the Earth's lithospheric crust or mantle where brittle rock fracture or fault rupture initiates, releasing stored elastic strain energy as seismic waves (P, S, and surface waves);\n   - **Epicenter (अधिकेंद्र)**: The point on the **Earth's surface situated vertically directly above the focus** (at $90^\\circ$). Because it is geographically closest to the subterranean source, seismic waves reach the epicenter first, making it the area of maximum ground shaking and structural damage.\n3. Option 2 lists the detection instrument (seismograph) and the mathematical magnitude scale (Richter scale).\n4. Option 3 lists a geological fault fracture and a seismic sea wave.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि इसमें फोकस और अधिकेंद्र के स्थानों को उल्टा लिखा गया है।\n2. विकल्प 1 सही है क्योंकि भूकंप विज्ञान (Seismology) के अनुसार:\n   - **भूकंप मूल / फोकस (Focus या Hypocenter):** पृथ्वी के भूगर्भ में स्थित वह वास्तविक आंतरिक बिंदु जहाँ विवर्तनिक प्लेटों के खिसकने या चट्टानों के टूटने से ऊर्जा मुक्त होती है और भूकंपीय तरंगें शुरू होती हैं;\n   - **अधिकेंद्र (Epicenter):** पृथ्वी की सतह पर स्थित वह बिंदु जो **फोकस के ठीक लंबवत (ऊर्ध्वाधर) ऊपर** होता है। भूकंपीय तरंगें सबसे पहले इसी स्थान पर पहुँचती हैं, इसलिए यहाँ भूकंप का प्रभाव और विनाश सर्वाधिक होता है।\n3. विकल्प 2 गलत है क्योंकि सिस्मोग्राफ मापने का यंत्र और रिक्टर पैमाना ऊर्जा मापने का स्केल है।\n4. विकल्प 3 गलत है क्योंकि सुनामी भूकंप से उत्पन्न समुद्री लहर है।"
   },
   {
     "p_id": "bpsc_phys_m31_10",
     "qe": "Evaluating earthquake intensity and magnitude relies on specialized seismic instrumentation and logarithmic energy scales. What instrument records earthquake waves, and what scale quantifies the energy released by an earthquake?",
     "qh": "भूकंप की तीव्रता और परिमाण का मूल्यांकन विशेष भूकंपीय तंत्र और लघुगणकीय (logarithmic) ऊर्जा पैमानों पर निर्भर करता है। कौन सा उपकरण भूकंप तरंगों को रिकॉर्ड करता है, और कौन सा पैमाना भूकंप द्वारा जारी ऊर्जा का परिमाण निर्धारित करता है?",
-    "o": [
+    "oe": [
       "Barometer records waves; Beaufort Scale quantifies energy.",
       "Seismograph records earthquake waves; Richter Scale quantifies the energy released.",
       "Thermometer records waves; Kelvin Scale quantifies energy.",
       "Odometer records waves; Decibel Scale quantifies energy."
     ],
+    "oh": [
+      "बैरोमीटर तरंगों को रिकॉर्ड करता है; ब्यूफोर्ट स्केल ऊर्जा का परिमाण निर्धारित करता है।",
+      "सिस्मोग्राफ (Seismograph) भूकंप तरंगों को रिकॉर्ड करता है; रिक्टर स्केल (Richter Scale) जारी ऊर्जा का परिमाण निर्धारित करता है।",
+      "थर्मामीटर तरंगों को रिकॉर्ड करता है; केल्विन स्केल ऊर्जा का परिमाण निर्धारित करता है।",
+      "ओडोमीटर तरंगों को रिकॉर्ड करता है; डेसीबल स्केल ऊर्जा का परिमाण निर्धारित करता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 0 lists atmospheric pressure instruments. Option 1 is correct because: <br>1. **Seismograph:** An inertial sensor/recording instrument that detects and plots seismic body/surface waves generated during an earthquake onto a seismogram. <br>2. **Richter Scale:** A logarithmic scale devised by **Charles F. Richter** to quantify the total mechanical energy released at the earthquake's focus. Each whole-number increase on the Richter scale represents a $\\sim 32$-fold increase in energy release. Option 2 measures temperature, and Option 3 measures distance and sound intensity."
+    "ee": "1. Option 0 lists a barometer (atmospheric pressure) and Beaufort scale (wind speed).\n2. Option 1 is correct because:\n   - **Seismograph (Seismometer)**: An inertial pendular recording instrument that detects, amplifies, and graphs the ground motion of seismic waves ($P, S, L$ waves), producing a visual trace called a **Seismogram**;\n   - **Richter Magnitude Scale ($M_L$)**: An open-ended base-10 logarithmic scale devised by **Charles F. Richter in 1935** to quantify the absolute energy released at an earthquake's focus. Because it is logarithmic, each whole-number increase in Richter magnitude represents a **10-fold increase in wave amplitude** and approximately a **$31.6\\text{-fold} \\approx 32\\text{-fold}$ increase in total radiated energy** (e.g., Magnitude 7 releases $\\approx 1000$ times more energy than Magnitude 5).\n3. Option 2 measures temperature.\n4. Option 3 measures vehicle distance and sound loudness.",
+    "eh": "1. विकल्प 0 गलत है क्योंकि बैरोमीटर वायुदाब और ब्यूफोर्ट स्केल हवा की गति नापता है।\n2. विकल्प 1 सही है क्योंकि:\n   - **सिस्मोग्राफ (Seismograph):** यह वह संवेदनशील वैज्ञानिक उपकरण है जो भूकंप के समय पृथ्वी में उत्पन्न होने वाली प्राथमिक ($P$), द्वितीयक ($S$) और धरातलीय ($L$) तरंगों को दर्ज करके ग्राफ (सिस्मोग्राम) बनाता है;\n   - **रिक्टर पैमाना (Richter Scale):** 1935 में चार्ल्स रिक्टर द्वारा विकसित यह एक लघुगणकीय (Logarithmic) पैमाना है, जो भूकंप के फोकस से मुक्त होने वाली **कुल ऊर्जा (परिमाण/Magnitude)** को मापता है। रिक्टर पैमाने पर प्रत्येक 1 अंक की वृद्धि आयाम में 10 गुना वृद्धि और **मुक्त ऊर्जा में लगभग 31.6 गुना (लगभग 32 गुना) की भारी वृद्धि** को दर्शाती है।\n3. विकल्प 2 गलत है क्योंकि थर्मामीटर तापमान मापता है।\n4. विकल्प 3 गलत है क्योंकि ओडोमीटर वाहन की दूरी और डेसीबल ध्वनि स्तर मापता है।"
   }
 ]
