@@ -125,7 +125,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     _fetchSubjectMappingLive();
   }
 
-  // 🌐 ZERO-API UNLIMITED LIVE FETCHER (Zero-Cache GitHack Proxy + Multi-CDN Shields)
+  // 🌐 DIRECT REALTIME FAST FETCHER (GitHub API for Testing + Multi-CDN Shields for Production)
   Future<dynamic> _fetchRobustJson(String path) async {
     String cleanPath = path.trim();
 
@@ -144,12 +144,40 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     final int ts = DateTime.now().millisecondsSinceEpoch;
     String encodedPath = Uri.encodeFull(cleanPath);
 
-    // 🚀 UNBLOCKED & ZERO-CACHE MIRRORS
+    // 🚀 STEP 1 (TESTING MODE): Direct GitHub Official Raw API (0-Second Live Sync & Zero-Cache)
+    final String apiUrl = "https://api.github.com/repos/zxcty54/quiz/contents/$encodedPath?ref=main&t=$ts";
+    try {
+      final apiRes = await http.get(
+        Uri.parse(apiUrl),
+        headers: {
+          'Accept': 'application/vnd.github.v3.raw',
+          'User-Agent': 'MockTesterApp-Flutter',
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+        },
+      ).timeout(const Duration(seconds: 4));
+
+      if (apiRes.statusCode == 200) {
+        String rawBody = utf8.decode(apiRes.bodyBytes).trim();
+
+        // 🧹 Strip BOM & Markdown
+        if (rawBody.startsWith('\uFEFF')) rawBody = rawBody.substring(1).trim();
+        rawBody = rawBody.replaceAll('```json', '').replaceAll('```', '').trim();
+
+        if (!rawBody.startsWith('<') && !rawBody.startsWith('<!DOCTYPE')) {
+          final dynamic parsed = jsonDecode(rawBody);
+          if (parsed != null) return parsed;
+        }
+      }
+    } catch (_) {}
+
+    // 🚀 STEP 2 (FALLBACK / PRODUCTION MIRRORS): GitHack + CDNs
     List<String> mirrorUrls = [
       "https://raw.githack.com/zxcty54/quiz/main/$encodedPath",
       "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
       "https://cdn.statically.io/gh/zxcty54/quiz/main/$encodedPath",
       "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
+      "https://raw.githubusercontent.com/zxcty54/quiz/main/$encodedPath?t=$ts",
     ];
 
     for (String url in mirrorUrls) {
@@ -166,18 +194,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         if (res.statusCode == 200) {
           String rawBody = utf8.decode(res.bodyBytes).trim();
 
-          // 🧹 Strip UTF-8 BOM Marker
-          if (rawBody.startsWith('\uFEFF')) {
-            rawBody = rawBody.substring(1).trim();
-          }
-          // 🧹 Strip Markdown Backticks
+          if (rawBody.startsWith('\uFEFF')) rawBody = rawBody.substring(1).trim();
           rawBody = rawBody.replaceAll('```json', '').replaceAll('```', '').trim();
 
           if (!rawBody.startsWith('<') && !rawBody.startsWith('<!DOCTYPE')) {
             final dynamic parsed = jsonDecode(rawBody);
-            if (parsed != null) {
-              return parsed;
-            }
+            if (parsed != null) return parsed;
           }
         }
       } catch (_) {
@@ -438,7 +460,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           List<Question> qList = [];
           for (var item in rawList) {
             if (item is Map) {
-              qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
+              try {
+                qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
+              } catch (_) {}
             }
           }
 
@@ -501,7 +525,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           List<Question> qList = [];
           for (var item in rawList) {
             if (item is Map) {
-              qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
+              try {
+                qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
+              } catch (_) {}
             }
           }
 
