@@ -1,5 +1,4 @@
 [
-  
   {
     "p_id": "bpsc_surface_v4_51",
     "qe": "What specific chemical phenomenon drives the formation of massive geographical deltas at estuarine regions where freshwater rivers meet the ocean?",
@@ -720,485 +719,484 @@
     "ee": "1. Option 0 describes thermoplastic polymerization, unrelated to electrokinetics.\n2. Option 1 is correct because all colloidal particles in a sol carry an electrical charge (either positive or negative). When an external direct-current electric field is applied across a colloidal solution placed in a U-tube, the **charged colloidal particles migrate through the stationary dispersion medium toward the electrode of opposite polarity**: $$\\text{Positively charged particles (e.g., } \\text{Fe(OH)}_3\\text{)} \\rightarrow \\text{Migrate toward the Negative Cathode (Cataphoresis)}$$ $$\\text{Negatively charged particles (e.g., } \\text{As}_2\\text{S}_3\\text{, Gold)} \\rightarrow \\text{Migrate toward the Positive Anode (Anaphoresis)}$$\n   This directional migration of colloidal particles under an electric potential gradient is termed **Electrophoresis (वैद्युतकणसंचलन)**. When particles reach the electrode, they discharge and coagulate.\n3. Option 2 and Option 3 describe organic acid reactions and surfactant arrays.",
     "eh": "1. विकल्प 0 गलत है क्योंकि यह प्लास्टिक निर्माण की प्रक्रिया है।\n2. विकल्प 1 सही है क्योंकि कोलाइडल विलयन में उपस्थित सभी कणों पर एक निश्चित विद्युत आवेश होता है। जब एक U-आकार की नली में भरे कोलाइडल सॉल पर बाह्य दिष्ट धारा (DC) विद्युत क्षेत्र लगाया जाता है, तो **आवेशित कोलाइडल कण परिक्षेपण माध्यम में से गति करते हुए अपने से विपरीत आवेश वाले इलेक्ट्रोड की ओर जाने लगते हैं**। इस परिघटना को **'वैद्युतकणसंचलन' (Electrophoresis)** कहते हैं:\n   - **धनावेशित कोलाइडल कण** (जैसे फेरिक हाइड्रोक्साइड) ऋणात्मक कैथोड की ओर गति करते हैं (Cataphoresis);\n   - **ऋणावेशित कोलाइडल कण** (जैसे आर्सेनियस सल्फाइड, गोल्ड सॉल) धनात्मक एनोड की ओर गति करते हैं (Anaphoresis)।\n   इलेक्ट्रोड पर पहुँचकर ये कण अपना आवेश खोकर अवक्षेपित हो जाते हैं।\n3. विकल्प 2 और 3 गलत हैं क्योंकि इनका विद्युत क्षेत्र में कणों के संचलन से कोई संबंध नहीं है।"
   },
-  
-{
-"p_id": "bpsc_surface_v4_57",
-"qe": "What mechanical boundary phenomenon drives the continuous, erratic zig-zag Brownian movement displayed by colloidal particles?",
-"qh": "कौन सी यांत्रिक घटना (mechanical boundary phenomenon) कोलाइडल कणों द्वारा प्रदर्शित निरंतर, अनियमित टेढ़े-मेढ़े ब्राउनियन गति (Brownian movement) को संचालित करती है?",
-"oe": [
-"The spontaneous magnetic attraction across the non-polar coordinate cells",
-"The unbalanced kinetic bombardment of the dispersed phase particles by the highly active molecules of the continuous dispersion medium",
-"The chemical cross-linking of linear intermediate resins around active sites",
-"The complete conversion of all carbonyl groups into volatile non-ionic ethers"
-],
-"oh": [
-"गैर-ध्रुवीय समन्वय कोशिकाओं में स्वतःस्फूर्त चुंबकीय आकर्षण",
-"निरंतर परिक्षेपण माध्यम के अत्यधिक सक्रिय अणुओं द्वारा परिक्षेपित प्रावस्था के कणों पर असंतुलित गतिज प्रहार",
-"सक्रिय स्थलों के चारों ओर रैखिक मध्यवर्ती रेजिन का रासायनिक क्रॉस-लिंकिंग",
-"सभी कार्बोनिल समूहों का वाष्पशील गैर-आयनिक ईथरों में पूर्ण रूपांतरण"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nBrownian motion is a fundamental kinetic property of colloidal systems, first observed under an ultramicroscope by botanist Robert Brown (1827) and later mathematically modeled by Albert Einstein (1905). It describes the continuous, erratic, and zig-zag physical motion of microscopic colloidal particles suspended within a continuous fluid medium.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Brownian movement is an entirely kinetic-mechanical transport phenomenon that operates independent of magnetic fields or coordinate cell structures.\n• Option 1 is Correct: The continuous erratic motion is caused by the random, uneven, and unbalanced kinetic bombardment of the colloidal particles by the rapidly moving thermal molecules of the dispersion medium. Because colloidal particles are microscopic ($1\text{ to }1000\text{ nm}$), the instantaneous net momentum transferred from colliding solvent molecules on opposite sides does not average to zero, generating continuous, random mechanical impulses that propel the particle along an irregular zig-zag trajectory.\n• Option 2 is Incorrect: Cross-linking of resins is an irreversible polymerization process observed during thermosetting resin curing, unrelated to kinetic particle dynamics.\n• Option 3 is Incorrect: Carbonyl-to-ether conversions describe functional group organic reductions, which play no role in colloidal physical kinetics.\n\nPart C: Key Takeaway / Value Addition\nBrownian motion provides kinetic stabilization to colloidal systems by generating an upward hydrodynamic agitation that directly counteracts the downward gravitational sedimentation of dispersed particles.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nब्राउनियन गति कोलाइडल निकायों का एक मूलभूत गतिज (kinetic) गुण है, जिसे सर्वप्रथम 1827 में वनस्पतिशास्त्री रॉबर्ट ब्राउन ने देखा था और 1905 में अल्बर्ट आइंस्टीन ने इसका गणितीय सिद्धांत प्रतिपादित किया था। यह किसी तरल परिक्षेपण माध्यम में निलंबित कोलाइडल कणों की निरंतर, अनियमित और टेढ़ी-मेढ़ी (zig-zag) गति को दर्शाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: ब्राउनियन गति एक विशुद्ध यांत्रिक-गतिज परिघटना है, इसका चुंबकीय बलों या सेल संरचनाओं से कोई संबंध नहीं है।\n• विकल्प 1 सही है: कोलाइडल कणों की यह अनियमित गति परिक्षेपण माध्यम (तरल विलायक) के निरंतर गतिशील तीव्र अणुओं द्वारा कोलाइडल कणों पर किए जाने वाले असंतुलित और अनियमित गतिज प्रहारों (Unbalanced Kinetic Bombardment) के कारण उत्पन्न होती है। कोलाइडल कणों का आकार अतिसूक्ष्म होने के कारण किसी क्षण विशेष पर सभी दिशाओं से लगने वाला बल शून्य नहीं हो पाता, जिससे कण लगातार टेढ़े-मेढ़े पथ पर गतिशील रहते हैं।\n• विकल्प 2 गलत है: रेजिन का क्रॉस-लिंकिंग बहुलक निर्माण से संबंधित है, इसका कणों की गतिज गति से कोई संबंध नहीं है।\n• विकल्प 3 गलत है: कार्बोनिल समूहों का ईथर में बदलना कार्बनिक अपचयन प्रक्रिया है, जो कोलाइडल भौतिकी से असंबंधित है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nब्राउनियन गति गुरुत्वाकर्षण बल के विरुद्ध कार्य करती है और कोलाइडल कणों को पेंदे में बैठने (Sedimentation) से रोककर कोलाइडल सॉल को दीर्घकालिक गतिज स्थायित्व प्रदान करती है।"
-},
-{
-"p_id": "bpsc_surface_v4_58",
-"qe": "When a small sample of iron(III) chloride ($FeCl_3$) is added into an excess volume of boiling water, what type of colloidal sol is synthesized?",
-"qh": "जब उबलते पानी की अत्यधिक मात्रा में आयरन(III) क्लोराइड ($FeCl_3$) का एक छोटा नमूना मिलाया जाता है, तो किस प्रकार का कोलाइडल सॉल संश्लेषित होता है?",
-"oe": [
-"A negatively charged sol stabilized by chloride anions",
-"A positively charged sol of hydrated ferric oxide due to preferential adsorption of $Fe^{3+}$ ions",
-"An uncharged non-ionic dynamic linear polyester polymer grid",
-"A three-dimensional cross-linked phenolic thermosetting net bar"
-],
-"oh": [
-"क्लोराइड ऋणायनों द्वारा स्थिर किया गया एक ऋणावेशित सॉल",
-"$Fe^{3+}$ आयनों के प्राथमिक अधिशोषण के कारण जलयोजित फेरिक ऑक्साइड का एक धनावेशित सॉल",
-"एक अनावेशित गैर-आयनिक गतिशील रैखिक पॉलिएस्टर बहुलक ग्रिड",
-"एक त्रि-आयामी क्रॉस-लिंक्ड फेनोलिक थर्मोसेटिंग नेट बार"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nColloidal particles acquire electrical surface charge during synthesis primarily via the preferential adsorption of common ions present in the surrounding dispersion medium (Paneth-Fajans-Hahn adsorption principle).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Adding $\text{FeCl}_3$ to boiling water produces a positively charged sol, whereas a negatively charged hydrated ferric oxide sol is formed when $\text{FeCl}_3$ is added to an excess of dilute aqueous $\text{NaOH}$ due to preferential adsorption of $\text{OH}^-$ ions.\n• Option 1 is Correct: When iron(III) chloride ($\text{FeCl}_3$) is added dropwise into boiling water, rapid chemical hydrolysis occurs:$$\text{FeCl}_3\text{(aq)} + 3\text{H}_2\text{O(l)} \xrightarrow{\Delta} \text{Fe}_2\text{O}_3 \cdot x\text{H}_2\text{O(s)} + 3\text{HCl(aq)}$$\nThe resulting colloidal particles of hydrated ferric oxide preferentially adsorb the common, highly charged ferric cations ($\text{Fe}^{3+}$) from the unhydrolyzed $\text{FeCl}_3$ present in the medium, forming a fixed positively charged inner Helmholtz layer ($[\text{Fe}_2\text{O}_3 \cdot x\text{H}_2\text{O}]\text{Fe}^{3+}$).\n• Option 2 is Incorrect: Polyester grids are synthetic organic condensation polymers, completely distinct from inorganic metal hydroxide sols.\n• Option 3 is Incorrect: Phenolic thermosetting nets refer to synthetic resins like Bakelite, not inorganic colloidal dispersions.\n\nPart C: Key Takeaway / Value Addition\nThe charge of a colloidal sol depends strictly on the reaction conditions: $\text{FeCl}_3 + \text{hot water} \to \text{Positive Sol}$, whereas $\text{FeCl}_3 + \text{excess NaOH} \to \text{Negative Sol}$ ($[\text{Fe}_2\text{O}_3 \cdot x\text{H}_2\text{O}]\text{OH}^-$).",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nकोलाइडल सॉल के कणों पर विद्युत आवेश की उत्पत्ति का मुख्य कारण निर्माण के समय माध्यम में उपस्थित उभयनिष्ठ आयनों का चयनात्मक या प्राथमिक अधिशोषण (Preferential Adsorption) होता है (पानेथ-फाजांस-हान नियम)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: उबलते पानी में $\text{FeCl}_3$ मिलाने से धनावेशित सॉल बनता है; ऋणावेशित सॉल तब बनता है जब $\text{FeCl}_3$ को अतिरिक्त तनु $\text{NaOH}$ में मिलाया जाए (जहाँ $\text{OH}^-$ आयनों का अधिशोषण होता है)।\n• विकल्प 1 सही है: जब फेरिक क्लोराइड ($\text{FeCl}_3$) को उबलते जल में मिलाया जाता है, तो तीव्र जल-अपघटन के फलस्वरूप जलयोजित फेरिक ऑक्साइड ($\text{Fe}_2\text{O}_3 \cdot x\text{H}_2\text{O}$) के कोलाइडल कण बनते हैं। ये कण माध्यम में उपस्थित अतिरिक्त $\text{Fe}^{3+}$ धनायनों का प्राथमिक अधिशोषण कर लेते हैं:$$[\text{Fe}_2\text{O}_3 \cdot x\text{H}_2\text{O}]\text{Fe}^{3+}$$जिससे यह एक धनावेशित कोलाइडल सॉल बन जाता है।\n• विकल्प 2 गलत है: पॉलिएस्टर ग्रिड कार्बनिक बहुलक संरचना है, अकार्बनिक सॉल नहीं।\n• विकल्प 3 गलत है: यह बैकेलाइट जैसे थर्मोसेटिंग रेजिन का लक्षण है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nकोलाइडल सॉल का आवेश विलायक के वातावरण पर निर्भर करता है: $\text{FeCl}_3 + \text{गर्म जल} \to \text{धनावेशित सॉल}$, जबकि $\text{FeCl}_3 + \text{अतिरिक्त NaOH} \to \text{ऋणावेशित सॉल}$ बनता है।"
-},
-{
-"p_id": "bpsc_surface_v4_59",
-"qe": "What physical consequence occurs if an excessive concentration of sodium chloride ($NaCl$) is mixed into a positively charged sol of hydrated ferric oxide?",
-"qh": "यदि हाइड्रेटेड फेरिक ऑक्साइड के धनात्मक रूप से आवेशित सॉल में सोडियम क्लोराइड ($NaCl$) की अत्यधिक सांद्रता मिला दी जाए तो क्या भौतिक परिणाम होता है?",
-"oe": [
-"The colloid turns completely transparent and fluidly volatile",
-"The negatively charged chloride ions ($Cl^-$) neutralize the positive surface charges, triggering rapid coagulation and precipitation",
-"The iron atoms undergo direct transformation into a chlorinated furanose sugar",
-"The framework dissolves into an open-chain aliphatic polyolefin tail matrix"
-],
-"oh": [
-"कोलाइड पूरी तरह से पारदर्शी और तरल रूप से वाष्पशील हो जाता है",
-"ऋणावेशित क्लोराइड आयन ($Cl^-$) धनात्मक सतह आवेशों को बेअसर करते हैं, जिससे तीव्र स्कंदन (Coagulation) और अवक्षेपण होता है",
-"लोहे के परमाणु सीधे क्लोरीनयुक्त फुरानोज शर्करा में परिवर्तित हो जाते हैं",
-"ढांचा एक खुली श्रृंखला वाले एलिफैटिक पॉलीओलेफिन टेल मैट्रिक्स में घुल जाता है"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nLyophobic colloidal sols rely entirely on electrostatic repulsion between similarly charged surface particles to prevent aggregation. Adding an electrolyte supplies mobile counter-ions that compress the electrical double layer and neutralize surface charges, causing coagulation.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Electrolyte-induced destabilization causes cloudiness, turbidity, and sedimentation, not transparent volatility.\n• Option 1 is Correct: Hydrated ferric oxide sol particles carry a net positive electrical surface charge due to adsorbed $\text{Fe}^{3+}$ ions ($[\text{Fe}_2\text{O}_3 \cdot x\text{H}_2\text{O}]\text{Fe}^{3+}$). According to the Hardy-Schulze Rule, coagulation of a positive sol is caused by negatively charged counter-ions (anions). When excess sodium chloride ($\text{NaCl}$) is introduced, the chloride anions ($\text{Cl}^-$) neutralize the positive surface charges. Without electrostatic repulsion, the uncharged colloidal particles coalesce and aggregate into larger macro-particles, causing rapid coagulation and precipitation.\n• Option 2 is Incorrect: Transition-metal iron cannot convert into organic furanose carbohydrate rings.\n• Option 3 is Incorrect: Polyolefin tail matrices describe surfactant hydrophobic tails in micelle chemistry, not metal oxide precipitation.\n\nPart C: Key Takeaway / Value Addition\nAccording to the Hardy-Schulze rule, the coagulating power of anions for a positive ferric hydroxide sol increases rapidly with increasing anionic valency: $\text{PO}_4^{3-} > \text{SO}_4^{2-} > \text{Cl}^-$.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nद्रवविरोधी (Lyophobic) कोलाइडल सॉल का स्थायित्व उनके कणों पर उपस्थित समान विद्युत आवेश के कारण होने वाले प्रतिकर्षण पर निर्भर करता है। जब इसमें कोई विद्युत-अपघट्य मिलाया जाता है, तो उसके विपरीत आवेशित आयन सॉल के आवेश को उदासीन कर स्कंदन (अवक्षेपण) करा देते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: विद्युत-अपघट्य मिलाने पर अवक्षेप बनता है, घोल पारदर्शी या वाष्पशील नहीं होता।\n• विकल्प 1 सही है: जलयोजित फेरिक ऑक्साइड सॉल एक धनावेशित सॉल है। हार्डी-शुल्त्स नियम (Hardy-Schulze Rule) के अनुसार, धनावेशित सॉल के स्कंदन के लिए ऋणावेशित आयन (Anions) उत्तरदायी होते हैं। जब इसमें सोडियम क्लोराइड ($\text{NaCl}$) मिलाया जाता है, तो ऋणावेशित क्लोराइड आयन ($\text{Cl}^-$) फेरिक ऑक्साइड के धनावेश को उदासीन कर देते हैं। प्रतिकर्षण बल समाप्त होते ही कण आपस में जुड़कर भारी गुच्छे बना लेते हैं और तेजी से स्कंदित (Coagulate/अवक्षेपित) होकर नीचे बैठ जाते हैं।\n• विकल्प 2 गलत है: अकार्बनिक लोहे का शर्करा में रूपांतरण रासायनिक रूप से असंभव है।\n• विकल्प 3 गलत है: यह बहुलक रसायन का असंबंधित विकल्प है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nहार्डी-शुल्त्स नियमानुसार, धनावेशित फेरिक ऑक्साइड सॉल के लिए ऋणायनों की स्कंदन क्षमता उनकी संयोजकता के साथ बढ़ती है: $\text{PO}_4^{3-} > \text{SO}_4^{2-} > \text{Cl}^-$।"
-},
-{
-"p_id": "bpsc_surface_v4_60",
-"qe": "Why do therapeutic drug formulations often exhibit dramatically enhanced operational efficacy when administered to a patient in a colloidal state?",
-"qh": "चिकित्सीय दवा फार्मूलेशन अक्सर कोलाइडल अवस्था (colloidal state) में रोगी को दिए जाने पर नाटकीय रूप से बढ़ी हुई परिचालन प्रभावकारिता क्यों प्रदर्शित करते हैं?",
-"oe": [
-"Because they completely lack any ionizable functional groups across their backbones",
-"Because the colloidal form provides an immense surface area that optimizes speed of assimilation and biological uptake within the body",
-"Because they convert internal stomach contents into highly stable non-ionic polyols",
-"Because they rely on strong covalent bonds that block all allosteric sites permanently"
-],
-"oh": [
-"क्योंकि उनकी मुख्य श्रृंखला में किसी भी आयनीकरण योग्य कार्यात्मक समूह का पूरी तरह से अभाव होता है",
-"क्योंकि कोलाइडल रूप एक विशाल पृष्ठीय क्षेत्रफल प्रदान करता है जो शरीर के भीतर अवशोषण और जैविक उपयोग की गति को अनुकूलित करता है",
-"क्योंकि वे आंतरिक पेट की सामग्री को अत्यधिक स्थिर गैर-आयनिक पॉलीओल्स में बदल देते हैं",
-"क्योंकि वे मजबूत सहसंयोजक बंधों पर निर्भर करते हैं जो सभी एलोस्टेरिक साइटों को स्थायी रूप से अवरुद्ध करते हैं"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nColloidal systems comprise particles ranging between $1\text{ nm and }1000\text{ nm}$ in diameter. Subdividing bulk active pharmaceutical ingredients into this nanoscale colloidal domain vastly enhances their surface-to-volume ratio.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Therapeutic efficacy relies on bio-chemical surface reactivity and dissolution kinetics, not the complete absence of ionizable functional groups.\n• Option 1 is Correct: The extremely small particle size of medicines in the colloidal state provides an immense specific surface area per unit mass. This vast active surface area dramatically accelerates dissolution rates, cellular membrane permeability, and biochemical interaction with target receptor sites in physiological fluids, enabling rapid metabolic absorption, superior bioavailability, and high therapeutic efficacy at significantly lower dosages.\n• Option 2 is Incorrect: Colloidal medicines target disease pathways without non-selectively converting gastric fluids into synthetic polyols.\n• Option 3 is Incorrect: Most pharmacological drug mechanisms rely on reversible, non-covalent receptor interactions rather than permanent covalent poisoning.\n\nPart C: Key Takeaway / Value Addition\nClassic examples of colloidal medicines in pharmacopeia include Argyrol (a protective silver sol used as an ophthalmic antiseptic lotion), Colloidal Gold (used in diagnostic immunoassays), and Milk of Magnesia (colloidal $\text{Mg(OH)}_2$ suspension used as an effective antacid).",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nकोलाइडल अवस्था में पदार्थ के कणों का आकार $1\text{ nm}$ से $1000\text{ nm}$ के बीच होता है। इस सूक्ष्म आकार के कारण दवाओं का पृष्ठीय क्षेत्रफल स्थूल (bulk) पदार्थों की तुलना में अत्यधिक बढ़ जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: दवाओं की प्रभावकारिता उनके विशाल पृष्ठीय क्षेत्रफल और जैव-उपलब्धता पर निर्भर करती है।\n• विकल्प 1 सही है: कोलाइडल अवस्था में उपस्थित दवाएं अपने सूक्ष्म आकार के कारण प्रति इकाई द्रव्यमान अत्यधिक विशाल पृष्ठीय क्षेत्रफल (Specific Surface Area) प्रदान करती हैं। बड़ा पृष्ठीय क्षेत्रफल होने के कारण दवा शरीर के पाचक रसों, रक्त और ऊतकों के संपर्क में बहुत तेजी से आती है, जिससे उसका अवशोषण, घुलनशीलता और जैविक उपयोग (Assimilation) अत्यंत तीव्र और प्रभावी हो जाता है।\n• विकल्प 2 गलत है: दवाएं पेट की सामग्री को पॉलीओल्स में परिवर्तित नहीं करती हैं।\n• विकल्प 3 गलत है: दवाएं सामान्यतः प्रतिवर्ती और नियंत्रित तरीके से कार्य करती हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nप्रमुख कोलाइडल औषधियों के उदाहरण: आर्जिरोल (Argyrol) - आंखों के संक्रमण का सिल्वर सॉल लोशन, कोलाइडल गोल्ड - अंतःपेशीय इंजेक्शन, और मिल्क ऑफ मैग्नीशिया [$\text{Mg(OH)}_2$ का निलंबन] - पेट की अम्लीयता दूर करने वाला एंटासिड।"
-},
-{
-"p_id": "bpsc_surface_v4_61",
-"qe": "Through what surface chemical phenomenon does raw animal hide transform into tough, hard, and resilient structural leather during commercial tanning processes?",
-"qh": "कच्ची पशु खाल (raw animal hide) किस सतही रासायनिक घटना के माध्यम से व्यावसायिक टैनिंग प्रक्रियाओं के दौरान सख्त, कठोर और लचीले संरचनात्मक चमड़े में बदल जाती है?",
-"oe": [
-"Continuous monomolecular liquid-liquid emulsification",
-"Mutual coagulation triggered when positively charged hide particles combine with negatively charged tannin colloids",
-"Hydrolytic ring-opening cleavage of cross-linked resin segments",
-"The step-growth condensation rate profile acceleration via basic mineral salts"
-],
-"oh": [
-"निरंतर एकल-आणविक द्रव-द्रव पायसीकरण (Liquid-liquid emulsification)",
-"पारस्परिक स्कंदन (Mutual coagulation) जो तब शुरू होता है जब धनावेशित खाल के कण ऋणावेशित टैनिन कोलाइड के साथ संयोजित होते हैं",
-"क्रॉस-लिंक्ड रेजिन खंडों का हाइड्रोलाइटिक रिंग-ओपनिंग विखंडन",
-"क्षारीय खनिज लवणों के माध्यम से चरण-वृद्धि संघनन दर प्रोफ़ाइल त्वरण"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nLeather tanning is a practical industrial application of colloid chemistry that converts soft, decomposable raw animal hides into durable, imputrescible leather via colloidal charge neutralization.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Tanning is an irreversible solid-phase mutual precipitation process, not a liquid-liquid emulsion.\n• Option 1 is Correct: Raw, un-tanned animal hide is a biological colloidal framework composed of proteinaceous collagen fibers that carry net positive electrical surface charges. Vegetable Tannin (obtained from plant barks) and synthetic chromium complexes form negatively charged colloidal dispersions. When raw hides are soaked in a tannin or chromium tanning bath, Mutual Coagulation (Mutual Precipitation) occurs between the positively charged collagen protein fibers and the negatively charged tannin colloids. This neutralizes their surface charges and cross-links the protein chains, transforming the soft, putrescible raw hide into tough, hard, water-resistant, and non-decomposable Leather.\n• Option 2 is Incorrect: Ring-opening reactions characterize nylon synthesis, not collagen cross-linking.\n• Option 3 is Incorrect: Step-growth condensation describes polymerizations like Dacron, unrelated to tanning baths.\n\nPart C: Key Takeaway / Value Addition\nModern commercial tanning uses both vegetable tannins and chrome tanning (using basic chromium sulfate salts, $\text{Cr(OH)SO}_4$), which produce mutual coagulation and chromium cross-linking with collagen carboxyl groups.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nचमड़े की टैनिंग (चर्मशोधन) कोलाइड रसायन का एक महत्वपूर्ण व्यावहारिक अनुप्रयोग है, जिसमें कच्ची पशु खाल को सड़ने से बचाकर टिकाऊ और लचीले चमड़े में बदला जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: टैनिंग कोई द्रव-द्रव पायसीकरण नहीं है।\n• विकल्प 1 सही है: कच्ची पशु खाल एक प्रोटीनयुक्त (कोलेजन) कोलाइडल संरचना होती है जिसके रेशों पर धनात्मक विद्युत आवेश होता है। दूसरी ओर, पौधों की छाल से प्राप्त टैनिन (Tannin) या क्रोमियम लवण ऋणावेशित कोलाइडल कण होते हैं। जब खाल को टैनिन के घोल में भिगोया जाता है, तो दोनों विपरीत आवेशित कोलाइड एक-दूसरे के आवेश को उदासीन कर देते हैं। इस पारस्परिक स्कंदन (Mutual Coagulation) के कारण कोलेजन रेशे आपस में दृढ़ता से बंध जाते हैं और मुलायम सड़नशील खाल एक अत्यधिक मजबूत, जल-प्रतिरोधी और टिकाऊ चमड़े (Leather) में बदल जाती है।\n• विकल्प 2 गलत है: रिंग-ओपनिंग बहुलकीकरण का चर्मशोधन से कोई संबंध नहीं है।\n• विकल्प 3 गलत है: यह डैक्रॉन जैसे सिंथेटिक बहुलकों के निर्माण की विधि है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nआधुनिक क्रोम टैनिंग में बेसिक क्रोमियम सल्फेट लवणों का उपयोग किया जाता है, जो कोलेजन प्रोटीन के साथ पारस्परिक स्कंदन और संकुल बंधन बनाकर चमड़े को मजबूत बनाते हैं।"
-},
-{
-"p_id": "bpsc_surface_v4_62",
-"qe": "How does an industrial Cottrell precipitator successfully remove toxic soot and carbon smoke particles from factory chimney exhaust emissions?",
-"qh": "एक औद्योगिक कॉटरेल अवक्षेपक (Cottrell precipitator) कारखाने की चिमनी के निकास उत्सर्जन से जहरीली कालिख और कार्बन धुएं के कणों को सफलतापूर्वक कैसे हटाता है?",
-"oe": [
-"By boiling the gas stream to convert carbon into volatile open-chain methane",
-"By passing the charged smoke particles through a high-voltage chamber containing oppositely charged plates, neutralizing and precipitating the soot",
-"By transforming the aerosol into a water-soluble non-ionic carbohydrate grid",
-"By deploying cross-linked phenolic thermosetting network resins inside the flue gas"
-],
-"oh": [
-"कार्बन को वाष्पशील खुली श्रृंखला वाले मीथेन में बदलने के लिए गैस स्ट्रीम को उबालकर",
-"आवेशित धुएं के कणों को विपरीत आवेशित प्लेटों वाले उच्च-वोल्टेज कक्ष से गुजारकर, कालिख को उदासीन और अवक्षेपित करके",
-"एरोसोल को पानी में घुलनशील गैर-आयनिक कार्बोहाइड्रेट ग्रिड में बदलकर",
-"फ्लू गैस के अंदर क्रॉस-लिंक्ड फेनोलिक थर्मोसेटिंग नेटवर्क रेजिन को तैनात करके"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nSmoke emitted from industrial factory chimneys is a solid-in-gas colloidal aerosol consisting of unburnt carbon (soot), fly ash, and dust particles suspended in hot flue gases. These particles carry an electrical charge (commonly negative).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Heating exhaust gas cannot convert solid carbon into methane gas without chemical hydrogenation reagents.\n• Option 1 is Correct: The Cottrell Smoke Precipitator utilizes electrostatic precipitation (electrophoresis followed by coagulation). The smoke stream is directed through a chamber containing high-voltage wire electrodes maintained at a potential difference of $30,000\text{ to }50,000\text{ Volts}$ opposite in polarity to the smoke particles. The intense electric field ionizes the gas; when the charged colloidal soot particles strike the oppositely charged collection electrode plates, they lose their electrical charge, coagulate, and precipitate under gravity to the hopper base, allowing clean, soot-free air to escape from the chimney stack.\n• Option 2 is Incorrect: Smoke cannot be chemically converted into water-soluble carbohydrates.\n• Option 3 is Incorrect: Thermosetting network resins like Bakelite are not deployed as flue gas precipitators.\n\nPart C: Key Takeaway / Value Addition\nInvented by Frederick Gardner Cottrell, electrostatic precipitators achieve over 99% collection efficiency for fine particulate matter ($\text{PM}_{2.5}$ and $\text{PM}_{10}$) in thermal power stations.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nकारखानों की चिमनियों से निकलने वाला धुआं हवा में परिक्षेपित कार्बन, कालिख और राख के कणों का एक आवेशित कोलाइडल एरोसोल (Colloidal Aerosol) होता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: चिमनी के धुएं को गर्म करके मीथेन में नहीं बदला जा सकता।\n• विकल्प 1 सही है: कॉटरेल अवक्षेपक (Cottrell Precipitator) स्थिरवैद्युत अवक्षेपण (Electrostatic Precipitation) के सिद्धांत पर कार्य करता है। चिमनी के निकास मार्ग में लगभग 30,000 से 50,000 वोल्ट के उच्च विभव वाली विपरीत आवेशित धातु की प्लेटें और इलेक्ट्रोड तार लगे होते हैं। जब आवेशित धुएं के कण इन इलेक्ट्रोडों के संपर्क में आते हैं, तो वे अपना विद्युत आवेश खोकर उदासीन हो जाते हैं और स्कंदित (Coagulate/Precipitate) होकर गुरुत्वाकर्षण द्वारा नीचे हॉपर में गिर जाते हैं, जिससे चिमनी से बाहर निकलने वाली गैस कालिख और प्रदूषण से मुक्त हो जाती है।\n• विकल्प 2 गलत है: धुआं कार्बोहाइड्रेट में परिवर्तित नहीं हो सकता।\n• विकल्प 3 गलत है: इसमें किसी प्लास्टिक या रेजिन का उपयोग नहीं होता।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nफ्रेडरिक कॉटरेल द्वारा आविष्कृत यह उपकरण थर्मल पावर प्लांटों और सीमेंट कारखानों में $\text{PM}_{2.5}$ और $\text{PM}_{10}$ जैसे सूक्ष्म कणों को 99% से अधिक दक्षता के साथ अवक्षेपित करता है।"
-},
-{
-"p_id": "bpsc_surface_v4_63",
-"qe": "Which analytical testing method allows a chemical technician to definitively determine which phase is the dispersed phase versus the dispersion medium inside an unknown emulsion sample?",
-"qh": "कौन सी विश्लेषणात्मक परीक्षण विधि एक रासायनिक तकनीशियन को निश्चित रूप से यह निर्धारित करने की अनुमति देती है कि एक अज्ञात पायस (emulsion) नमूने के भीतर कौन सा चरण बिखरा हुआ चरण (dispersed phase) बनाम फैलाव माध्यम (dispersion medium) है?",
-"oe": [
-"Subjecting the sample to fuming nitric acid distillation pathways",
-"Dilution testing: adding excess dispersion medium blends smoothly, while adding excess dispersed phase separates into a distinct isolated layer",
-"Measuring the cross-linking density of the methylene bridges under pressure",
-"Verifying if the material undergoes rapid free-radical coordination transformations"
-],
-"oh": [
-"नमूने को सधूम नाइट्रिक एसिड आसवन मार्गों के अधीन करना",
-"तनुकरण परीक्षण (Dilution testing): अतिरिक्त परिक्षेपण माध्यम मिलाने पर वह आसानी से मिल जाता है, जबकि अतिरिक्त परिक्षेपित प्रावस्था मिलाने पर वह एक अलग पृथक परत में विभाजित हो जाता है",
-"दबाव में मेथिलीन पुलों के क्रॉस-लिंकिंग घनत्व को मापना",
-"यह सत्यापित करना कि क्या सामग्री तेजी से मुक्त-कण समन्वय परिवर्तनों से गुजरती है"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nAn emulsion is a colloidal dispersion of one liquid in another immiscible liquid, categorized into Oil-in-Water (O/W, like milk) or Water-in-Oil (W/O, like butter/cold cream).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Fuming nitric acid is a destructive oxidizing agent that decomposes organic lipids rather than diagnosing emulsion type.\n• Option 1 is Correct: The Dilution Test is a diagnostic method based on phase continuity:\n  - An emulsion can be diluted to any extent by adding an additional volume of its continuous Dispersion Medium, which blends smoothly without breaking the emulsion;\n  - If the Dispersed Phase is added in excess, it cannot be homogeneously absorbed by the continuous phase and separates into a distinct, immiscible layer.\n  For example, adding water to an O/W emulsion (like milk) dilutes it smoothly, but adding oil creates a floating layer. Conversely, a W/O emulsion mixes homogeneously with added oil but separates if excess water is added.\n• Option 2 is Incorrect: Methylene bridge density applies to phenolic resins, not fluid emulsions.\n• Option 3 is Incorrect: Free-radical coordination relates to synthetic polymer kinetics.\n\nPart C: Key Takeaway / Value Addition\nOther standard tests to identify emulsion type include the Conductivity Test (O/W conducts electricity well due to the continuous aqueous phase; W/O is non-conductive) and the Dye Test (an oil-soluble dye like Sudan III colors W/O emulsions completely).",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nपायस (Emulsion) दो अमिश्रणीय द्रवों का कोलाइडल मिश्रण होता है, जिसे दो वर्गों—तेल-में-जल (O/W, जैसे दूध) अथवा जल-में-तेल (W/O, जैसे मक्खन) में विभाजित किया जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: सधूम नाइट्रिक एसिड पायस का रासायनिक विनाश कर देगा।\n• विकल्प 1 सही है: तनुकरण परीक्षण (Dilution Test) पायस की पहचान की सबसे प्रामाणिक विधि है:\n  - किसी भी पायस में उसके परिक्षेपण माध्यम (Dispersion Medium) की कितनी भी मात्रा मिलाने पर वह उसमें आसानी से घुलमिल जाता है और पायस स्थिर रहता है;\n  - परंतु यदि उसमें परिक्षेपित प्रावस्था (Dispersed Phase) की अतिरिक्त मात्रा मिलाई जाए, तो वह मिलती नहीं है बल्कि एक अलग स्वतंत्र परत बना लेती है।\n  उदाहरण के लिए, तेल-में-जल (O/W) पायस में जल मिलाने पर वह आसानी से तनु हो जाता है, परंतु तेल मिलाने पर तेल की अलग परत बन जाती है।\n• विकल्प 2 गलत है: मेथिलीन ब्रिज बैकेलाइट प्लास्टिक में पाए जाते हैं।\n• विकल्प 3 गलत है: यह बहुलकीकरण से संबंधित पद है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nपायस के प्रकार की पहचान के अन्य तरीके: चालकता परीक्षण (O/W पायस जल के कारण विद्युत का सुचालक होता है, जबकि W/O कुचालक होता है) तथा रंजक परीक्षण (सूडान-III रंजक केवल तेल-आधारित W/O पायस को रंगीन करता है)।"
-},
-{
-"p_id": "bpsc_surface_v4_64",
-"qe": "Why do physical adsorption (physisorption) and chemical adsorption (chemisorption) show opposite trends when the system operational temperature is raised?",
-"qh": "प्रणाली के परिचालन तापमान को बढ़ाने पर भौतिक अधिशोषण (physisorption) और रासायनिक अधिशोषण (chemisorption) विपरीत प्रवृत्तियाँ क्यों दिखाते हैं?",
-"oe": [
-"Physisorption is driven by strong ionic links that fracture under heat",
-"Physisorption relies on weak van der Waals forces that break easily at high temperatures, whereas chemisorption requires activation energy to form chemical bonds and is initially favored by heat",
-"Physisorption is an open open-chain carbohydrate mesh, while chemisorption is a phenolic network",
-"There is no operational difference; both follow identical exothermic thresholds"
-],
-"oh": [
-"भौतिक अधिशोषण मजबूत आयनिक बंधों द्वारा संचालित होता है जो गर्मी के तहत टूट जाते हैं",
-"भौतिक अधिशोषण कमजोर वांडर वाल्स बलों पर निर्भर करता है जो उच्च तापमान पर आसानी से टूट जाते हैं, जबकि रासायनिक अधिशोषण के लिए रासायनिक बंध बनाने हेतु सक्रियण ऊर्जा की आवश्यकता होती है और प्रारंभ में गर्मी इसके अनुकूल होती है",
-"भौतिक अधिशोषण एक खुली श्रृंखला कार्बोहाइड्रेट जाल है, जबकि रासायनिक अधिशोषण एक फेनोलिक नेटवर्क है",
-"कोई परिचालन अंतर नहीं है; दोनों समान ऊष्माक्षेपी सीमाओं का पालन करते हैं"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nAdsorption of gases on solid surfaces is classified into Physisorption (driven by non-specific van der Waals forces) and Chemisorption (driven by valence chemical bond formation).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Physisorption is characterized by weak non-ionic van der Waals interactions with low enthalpy ($20-40\text{ kJ/mol}$).\n• Option 1 is Correct: \n  - Physisorption: Involves weak, non-directional van der Waals forces and requires nearly zero activation energy. Because adsorption is exothermic ($\Delta H < 0$), according to Le Chatelier's Principle, raising the temperature increases the thermal kinetic energy of adsorbed gas molecules, promoting desorption. Thus, physisorption decreases continuously and monotonically with temperature.\n  - Chemisorption: Involves forming strong covalent or coordinate surface bonds ($\Delta H = 80-240\text{ kJ/mol}$). Like a chemical reaction, it requires a significant Activation Energy ($E_a$). Raising the temperature supplies thermal energy to overcome this activation barrier, causing chemisorption to initially increase to a peak before declining at very high temperatures due to desorption.\n• Option 2 and Option 3 describe invalid structural polymer claims and ignore activation thermodynamics.\n\nPart C: Key Takeaway / Value Addition\nThe isobaric plot of $\frac{x}{m}$ vs $T$ for physisorption shows a continuous downward slope, whereas chemisorption exhibits an initial rise followed by a decline, highlighting why chemisorption is termed 'Activated Adsorption'.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nठोस सतह पर गैसों का अधिशोषण दो प्रकार का होता है: भौतिक अधिशोषण (दुर्बल वांडर वाल्स बलों द्वारा) और रासायनिक अधिशोषण (रासायनिक बंधों के निर्माण द्वारा)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: भौतिक अधिशोषण में कोई आयनिक बंध नहीं बनते।\n• विकल्प 1 सही है:\n  - भौतिक अधिशोषण (Physisorption): इसमें गैस के अणु सतह से दुर्बल वांडर वाल्स आकर्षण बलों द्वारा जुड़े होते हैं और इसके लिए किसी सक्रियण ऊर्जा की आवश्यकता नहीं होती। तापमान बढ़ाने पर अणुओं की गतिज ऊर्जा बढ़ जाती है जिससे विशोषण (Desorption) तेज हो जाता है, अतः तापमान बढ़ने पर भौतिक अधिशोषण लगातार घटता है।\n  - रासायनिक अधिशोषण (Chemisorption): इसमें सतह पर वास्तविक रासायनिक बंध बनते हैं, जिसके लिए एक निश्चित संक्रियण ऊर्जा (Activation Energy, $E_a$) की आवश्यकता होती है। तापमान बढ़ाने पर प्रारंभ में अणुओं को संक्रियण ऊर्जा प्राप्त होती है, जिससे रासायनिक अधिशोषण पहले बढ़ता है और फिर बहुत उच्च तापमान पर विशोषण प्रभावी होने के कारण घटने लगता है।\n• विकल्प 2 और विकल्प 3 गलत हैं क्योंकि यह ऊष्मागतिकी के विरुद्ध है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nतापमान और अधिशोषण के ग्राफ (Adsorption Isobar) में भौतिक अधिशोषण का वक्र निरंतर नीचे गिरता है, जबकि रासायनिक अधिशोषण का वक्र पहले ऊपर उठता है और फिर नीचे गिरता है, इसलिए इसे 'सक्रियित अधिशोषण' (Activated Adsorption) भी कहते हैं।"
-},
-{
-"p_id": "bpsc_surface_v4_65",
-"qe": "What serious hazard occurs within a stable colloidal dispersion if the purification step known as dialysis is carried out for a prolonged period?",
-"qh": "यदि डायलिसिस (dialysis) के रूप में जाने जाने वाले शुद्धिकरण चरण को लंबे समय तक चलाया जाए तो एक स्थिर कोलाइडल फैलाव के भीतर क्या गंभीर खतरा पैदा होता है?",
-"oe": [
-"The individual ions convert into a highly branched cross-linked thermoplastic resin",
-"The trace stabilizing electrolytes are completely stripped away, destroying the surface charges and triggering rapid coagulation",
-"The entire mixture converts into an open-chain dicarboxylic acid fragment",
-"The continuous medium turns entirely volatile and boils away into gas"
-],
-"oh": [
-"व्यक्तिगत आयन एक अत्यधिक शाखित क्रॉस-लिंक्ड थर्मोप्लास्टिक राल में परिवर्तित होते हैं",
-"ट्रेस स्थिर करने वाले विद्युत-अपघट्य (electrolytes) पूरी तरह से छिन जाते हैं, जिससे सतह के आवेश नष्ट हो जाते हैं और तीव्र स्कंदन (coagulation) शुरू हो जाता है",
-"पूरा मिश्रण एक खुली श्रृंखला वाले डाइकार्बोक्सिलिक एसिड टुकड़े में बदल जाता है",
-"निरंतर माध्यम पूरी तरह से वाष्पशील हो जाता है और गैस में उबल जाता है"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nDialysis is a colloidal purification technique in which dissolved crystalloid electrolyte impurities diffuse out of a colloidal sol through a semi-permeable parchment or cellophane membrane.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Dialysis is a physical diffusion-based filtration process, unrelated to synthetic resin polymerization.\n• Option 1 is Correct: While excessive concentrations of electrolytes cause sol coagulation, a trace amount of dissolved electrolyte is fundamentally indispensable to maintain the electrical double layer, surface charge, and zeta potential that keep colloidal particles mutually repulsive and stable. If dialysis is carried out for an excessively prolonged period, even these essential trace stabilizing electrolytes diffuse out through the membrane. Deprived of their surface electrical charge, the colloidal particles lose electrostatic repulsion and aggregate, undergoing spontaneous coagulation, flocculation, and precipitation.\n• Option 2 is Incorrect: Dialytic diffusion does not cleave chemical bonds into dicarboxylic acid fragments.\n• Option 3 is Incorrect: Dialysis is conducted at ambient temperatures and does not cause solvent boiling.\n\nPart C: Key Takeaway / Value Addition\nElectrodialysis applies an external electric field to accelerate the removal of ionic impurities, but must also be carefully timed to avoid complete de-electrolyzation and sol destabilization.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nअपोहन (Dialysis) कोलाइडल विलयन के शुद्धिकरण की वह विधि है जिसमें अर्धपारगम्य झिल्ली (चर्मपत्र या सेलोफेन) द्वारा अवांछित घुलनशील विद्युत-अपघट्य अशुद्धियों को बाहर निकाला जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: अपोहन में कोई बहुलकीकरण या रेजिन निर्माण नहीं होता।\n• विकल्प 1 सही है: यद्यपि अतिरिक्त विद्युत-अपघट्य सॉल को नष्ट करते हैं, परंतु कोलाइडल कणों पर आवश्यक विद्युत आवेश और जीटा विभव बनाए रखने के लिए विद्युत-अपघट्य की एक न्यूनतम (ट्रेस) मात्रा का उपस्थित होना अनिवार्य होता है। यदि अपोहन की प्रक्रिया को अत्यधिक लंबे समय तक जारी रखा जाए, तो ये आवश्यक स्थिरकारी आयन भी पूरी तरह छनकर बाहर निकल जाते हैं। इसके परिणामस्वरूप कणों का विद्युत आवेश समाप्त हो जाता है, प्रतिकर्षण बल खत्म हो जाता है और पूरा कोलाइडल विलयन स्कंदित (Coagulate/अवक्षेपित) होकर नष्ट हो जाता है।\n• विकल्प 2 गलत है: यह अकार्बनिक शुद्धिकरण है, इसमें कोई अम्लीय विखंडन नहीं होता।\n• विकल्प 3 गलत है: अपोहन सामान्य तापमान पर होता है, इसमें विलायक वाष्पीकृत नहीं होता।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nविद्युत-अपोहन (Electrodialysis) में विद्युत क्षेत्र लगाकर अशुद्धियों को तेजी से हटाया जाता है, परंतु इसे भी निर्धारित समय तक ही किया जाता है ताकि आवश्यक ट्रेस आयन नष्ट न हों।"
-},
-{
-"p_id": "bpsc_surface_v4_66",
-"qe": "Why does a white precipitate of a silver halide turn into a colored solid mass when exposed to an aqueous solution containing the dye eosin?",
-"qh": "सिल्वर हैलाइड का एक सफेद अवक्षेप (white precipitate) ईोसिन डाई युक्त जलीय घोल के संपर्क में आने पर रंगीन ठोस द्रव्यमान में क्यों बदल जाता है?",
-"oe": [
-"Because the dye dissolves the silver lattice completely via basic mineral buffering",
-"Because the colored dye molecules undergo selective surface adsorption onto the silver halide crystal faces",
-"Because it forms a highly volatile open-chain carbohydrate mesh under heat",
-"Because the treatment converts the halide ions into narrow-spectrum antibiotics"
-],
-"oh": [
-"क्योंकि डाई बुनियादी खनिज बफरिंग के माध्यम से चांदी के जालक को पूरी तरह से घोल देती है",
-"क्योंकि रंगीन डाई के अणु सिल्वर हैलाइड क्रिस्टल चेहरों पर चयनात्मक सतही अधिशोषण (selective surface adsorption) से गुजरते हैं",
-"क्योंकि यह गर्मी के तहत अत्यधिक वाष्पशील खुली श्रृंखला कार्बोहाइड्रेट जाल बनाता है",
-"क्योंकि उपचार हैलाइड आयनों को संकीर्ण-स्पेक्ट्रम एंटीबायोटिक्स में परिवर्तित करता है"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nAdsorption indicators are organic dyes that change color upon reaching the stoichiometric equivalence point during precipitation titrations due to surface adsorption onto the precipitate lattice (Fajans' method).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: The silver halide crystal lattice remains intact as an insoluble precipitate and is not dissolved by the dye.\n• Option 1 is Correct: When silver ions are titrated against halide ions in the presence of an adsorption indicator like Eosin or Fluorescein, a white precipitate of silver halide (e.g., $\text{AgCl}$ or $\text{AgBr}$) forms. Just past the equivalence point, the precipitate particles adsorb excess $\text{Ag}^+$ ions, acquiring a positive surface charge. These positively charged crystal faces then selectively adsorb the colored organic anions of the eosin dye via electrostatic surface adsorption. This concentration of dye molecules on the crystal boundary alters the dye's chromophore resonance, turning the white precipitate into a distinct colored (pink/red) solid mass.\n• Option 2 and Option 3 describe unrelated carbohydrate or antibiotic transformations.\n\nPart C: Key Takeaway / Value Addition\nKasimir Fajans introduced adsorption indicators (Fluorescein, Eosin, Rhodamine) in argentometric precipitation titrations, relying entirely on surface adsorption dynamics.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nअधिशोषण संकेतक (Adsorption Indicators) वे कार्बनिक रंजक होते हैं जो अवक्षेपण अनुमापन (Precipitation Titration) के तुल्यता बिंदु पर अवक्षेप की सतह पर अधिशोषित होकर रंग परिवर्तन दर्शाते हैं (फैजांस विधि)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: रंजक अवक्षेप के क्रिस्टल जालक को घोलता नहीं है।\n• विकल्प 1 सही है: जब सिल्वर हैलाइड (जैसे $\text{AgCl}$ या $\text{AgBr}$) के अवक्षेपण के दौरान ईओसिन (Eosin) जैसे अधिशोषण संकेतक की उपस्थिति होती है, तो तुल्यता बिंदु के ठीक बाद अवक्षेप के कण अतिरिक्त $\text{Ag}^+$ आयनों को अधिशोषित कर धनावेशित हो जाते हैं। इसके बाद ईओसिन डाई के ऋणावेशित रंगीन अणु इन धनावेशित क्रिस्टल सतहों पर चयनात्मक सतही अधिशोषण (Selective Surface Adsorption) द्वारा चिपक जाते हैं। सतह पर डाई का संकेंद्रण होने से सफेद अवक्षेप का रंग बदलकर विशिष्ट गुलाबी या लाल रंग के ठोस द्रव्यमान में परिवर्तित हो जाता है।\n• विकल्प 2 और विकल्प 3 गलत हैं क्योंकि यह शुद्ध रूप से एक सतही परिघटना है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nकासिमिर फैजांस ने 1923 में अधिशोषण संकेतकों (जैसे फ्लोरेसिन, ईओसिन) का विकास किया था, जो सिल्वर हैलाइड अवक्षेपों के पृष्ठीय अधिशोषण पर आधारित हैं।"
-},
-{
-"p_id": "bpsc_surface_v4_67",
-"qe": "What surface chemical mechanism allows a moist lump of alum to quickly stop bleeding when rubbed over a minor skin cut?",
-"qh": "कौन सा सतही रासायनिक तंत्र फिटकरी (alum) के एक नम टुकड़े को मामूली त्वचा कटने पर रगड़ने से रक्तस्राव को जल्दी रोकने की अनुमति देता है?",
-"oe": [
-"The alum dissolves the red blood cells into a volatile gas phase configuration",
-"The highly charged aluminum cations in alum induce the rapid coagulation of the negatively charged colloidal blood particles, forming a clot plug",
-"It transforms the vascular boundary walls into unbranched synthetic polyolefins",
-"It alters the internal molecular weight of water molecules up to infinite thresholds"
-],
-"oh": [
-"फिटकरी लाल रक्त कोशिकाओं को वाष्पशील गैस चरण विन्यास में पूरी तरह से घोल देती है",
-"फिटकरी में मौजूद अत्यधिक आवेशित एल्युमिनियम धनायन ऋणावेशित कोलाइडल रक्त कणों के तेजी से स्कंदन (coagulation) को प्रेरित करते हैं, जिससे एक थक्का प्लग बनता है",
-"यह संवहनी सीमा दीवारों को अशाखित सिंथेटिक पॉलीओलेफ़िन में बदल देता है",
-"यह पानी के अणुओं के आंतरिक आणविक भार को अनंत सीमाओं तक बदल देता है"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nHuman blood is a negatively charged biological colloidal sol consisting of cellular elements (erythrocytes, leukocytes, platelets) and colloidal proteins (albumin, globulin, fibrinogen) suspended in plasma.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Alum does not chemically dissolve blood cells into gases; it causes them to aggregate and precipitate.\n• Option 1 is Correct: Potash Alum [$\text{K}_2\text{SO}_4 \cdot \text{Al}_2(\text{SO}_4)_3 \cdot 24\text{H}_2\text{O}$] and Ferric Chloride ($\text{FeCl}_3$) act as powerful styptic agents. When a moist lump of alum is applied to a bleeding cut, it dissolves locally to release trivalent Aluminium cations ($\text{Al}^{3+}$). According to the Hardy-Schulze Rule, because $\text{Al}^{3+}$ carries a high positive charge (valency of 3), it rapidly neutralizes the negative surface electrical charges on the colloidal blood proteins and cellular fragments. Stripped of electrostatic repulsion, the blood rapidly coagulates, forming an insoluble gelatinous fibrin clot that plugs the damaged capillary and arrests bleeding.\n• Option 2 and Option 3 describe impossible polymer and molecular weight claims.\n\nPart C: Key Takeaway / Value Addition\nThe coagulating efficiency of electrolytes on blood follows the Hardy-Schulze valency order: $\text{Al}^{3+} > \text{Fe}^{3+} > \text{Ca}^{2+} > \text{Na}^+$, explaining why alum ($\text{Al}^{3+}$) is far superior to table salt ($\text{Na}^+$) as a styptic agent.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nमानव रक्त एक प्राकृतिक जैविक कोलाइडल विलयन है, जिसमें प्लाज्मा में निलंबित रक्त कोशिकाएं (RBCs, WBCs, प्लेटलेट्स) और प्रोटीन कण ऋणात्मक विद्युत आवेश वहन करते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: फिटकरी रक्त कोशिकाओं को गैस में नहीं बदलती।\n• विकल्प 1 सही है: पोटाश फिटकरी [Alum, $\text{K}_2\text{SO}_4 \cdot \text{Al}_2(\text{SO}_4)_3 \cdot 24\text{H}_2\text{O}$] एक प्रसिद्ध रक्तस्तंभक (Styptic) पदार्थ है। जब इसे कटे हुए स्थान पर लगाया जाता है, तो यह घुलकर त्रिसंयोजी एल्युमिनियम धनायन ($\text{Al}^{3+}$) मुक्त करती है। हार्डी-शुल्त्स नियम के अनुसार, $\text{Al}^{3+}$ का उच्च धनावेश रक्त के ऋणावेशित कोलाइडल कणों और प्रोटीनों को तुरंत उदासीन कर देता है। आवेश समाप्त होते ही रक्त का तेजी से स्कंदन (Coagulation / थक्का निर्माण) हो जाता है और एक ठोस थक्का बनकर कटी हुई वाहिका को बंद कर देता है, जिससे रक्तस्राव तुरंत रुक जाता है।\n• विकल्प 2 गलत है: रक्त वाहिकाएं प्लास्टिक बहुलक में नहीं बदलतीं।\n• विकल्प 3 गलत है: जल का आणविक भार नियत रहता है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nरक्त के स्कंदन में धनायनों की प्रभावशीलता का क्रम: $\text{Al}^{3+} > \text{Fe}^{3+} > \text{Ca}^{2+} > \text{Na}^+$ होता है, इसी कारण फिटकरी ($\text{Al}^{3+}$) साधारण नमक ($\text{Na}^+$) की तुलना में रक्त का थक्का जमाने में अत्यधिक तीव्र होती है।"
-},
-{
-"p_id": "bpsc_surface_v4_68",
-"qe": "What happens to the internal mechanical structure of raw animal hides when they are soaked inside a chromium salt tanning bath?",
-"qh": "कच्ची पशु खाल (raw animal hides) की आंतरिक यांत्रिक संरचना का क्या होता है जब उन्हें क्रोमियम सॉल्ट टैनिंग बाथ के भीतर भिगोया जाता है?",
-"oe": [
-"The structural chains are broken completely down into single amino units",
-"The positively charged hide fibers undergo mutual coagulation with the tanning complexes, inducing robust cross-linking that hardens the matrix into leather",
-"The entire matrix converts into an amorphous non-ionic carbohydrate project",
-"The functional domains are reduced to water-soluble linear starch granules"
-],
-"oh": [
-"संरचनात्मक श्रृंखलाएं पूरी तरह से एकल अमीनो इकाइयों में टूट जाती हैं",
-"धनावेशित खाल के रेशे टैनिंग कॉम्प्लेक्स के साथ पारस्परिक स्कंदन (mutual coagulation) से गुजरते हैं, जिससे मजबूत क्रॉस-लिंकिंग प्रेरित होती है जो मैट्रिक्स को चमड़े में कठोर कर देती है",
-"पूरा मैट्रिक्स एक अनाकार गैर-आयनिक कार्बोहाइड्रेट परियोजना में परिवर्तित हो जाता है",
-"कार्यात्मक डोमेन पानी में घुलनशील रैखिक स्टार्च कणिकाओं में कम हो जाते हैं"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nLeather manufacturing relies on the colloidal principle of mutual coagulation, where oppositely charged colloidal systems are mixed to induce simultaneous charge neutralization and precipitation.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Tanning preserves and stabilizes collagen networks rather than hydrolyzing peptide chains into amino acids.\n• Option 1 is Correct: Raw animal hide is a colloidal matrix composed of proteinaceous collagen fibers that carry net positive electrical surface charges. Basic Chromium Salts (such as basic chromium sulfate, $\text{Cr(OH)SO}_4$, used in chrome tanning) and vegetable tannins form negatively charged coordination complexes or colloidal sols in water. When raw hides are immersed in the chromium tanning bath, Mutual Coagulation and Cross-linking occur between the positively charged collagen protein chains and the negatively charged chromium complexes. This cross-linking bridges the collagen triple-helices, transforming the soft, putrescible raw hide into tough, heat-resistant, and chemically durable Leather.\n• Option 2 and Option 3 describe non-protein carbohydrate transformations.\n\nPart C: Key Takeaway / Value Addition\nChrome tanning introduces coordinate covalent bridges between chromium(III) ions and the carboxylate ($-COO^-$) side chains of collagen, dramatically increasing hydrothermal stability (shrinkage temperature $> 100^\circ\text{C}$).",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nचमड़ा उद्योग पारस्परिक स्कंदन (Mutual Coagulation) के सिद्धांत पर आधारित है, जहाँ दो विपरीत आवेशित कोलाइडल प्रणालियों को मिलाकर उनका स्थायी अवक्षेपण किया जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: टैनिंग में प्रोटीन श्रृंखलाएं सुरक्षित और मजबूत होती हैं, टूटती नहीं।\n• विकल्प 1 सही है: जानवरों की कच्ची खाल एक प्रोटीनयुक्त (कोलेजन) कोलाइडल संरचना होती है जिसके रेशों पर धनात्मक विद्युत आवेश होता है। जब इसे बेसिक क्रोमियम सल्फेट लवणों के टैनिंग बाथ में डुबोया जाता है (जिसमें ऋणावेशित क्रोमियम संकुल होते हैं), तो ऋणावेशित क्रोमियम संकुल और धनावेशित कोलेजन रेशों के बीच पारस्परिक स्कंदन (Mutual Coagulation) होता है। क्रोमियम आयन कोलेजन प्रोटीन श्रृंखलाओं के बीच मजबूत क्रॉस-लिंक पुल बना देते हैं, जिससे मुलायम और सड़ने वाली कच्ची खाल एक अत्यधिक मजबूत, लचीले, जल-प्रतिरोधी और टिकाऊ चमड़े (Leather) में बदल जाती है।\n• विकल्प 2 और विकल्प 3 गलत हैं क्योंकि यह प्रोटीन से संबंधित प्रक्रिया है, कार्बोहाइड्रेट से नहीं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nक्रोम टैनिंग में क्रोमियम(III) आयन कोलेजन के कार्बोक्सिल समूहों के साथ उपसहसंयोजक बंध बनाते हैं, जिससे चमड़े का संकुचन तापमान (Shrinkage temperature) $100^\circ\text{C}$ से अधिक हो जाता है।"
-},
-{
-"p_id": "bpsc_surface_v4_69",
-"qe": "According to the Hardy-Schulze rule, why does a trivalent phosphate anion ($PO_4^{3-}$) exhibit a dramatically greater coagulating power than a monovalent chloride anion ($Cl^-$)?",
-"qh": "हार्डी-शुल्ज़ नियम के अनुसार, एक त्रिसंयोजक फॉस्फेट ऋणायन ($PO_4^{3-}$) एक एकसंयोजक क्लोराइड ऋणायन ($Cl^-$) की तुलना में नाटकीय रूप से अधिक स्कंदन क्षमता (coagulating power) क्यों प्रदर्शित करता है?",
-"oe": [
-"Phosphate contains an abundance of volatile ester functional groups",
-"The coagulating power scales sharply with the valency of the counter-ion, and the higher $-3$ charge of phosphate neutralizes sols far more efficiently than the $-1$ charge of chloride",
-"The phosphate ion completely lacks oxygen atoms within its framework",
-"The phosphate configuration is a natural biopolymer that dissolves instantly in water"
-],
-"oh": [
-"फॉस्फेट में वाष्पशील एस्टर कार्यात्मक समूहों की प्रचुरता होती है",
-"स्कंदन क्षमता विरोधी आयन (counter-ion) की संयोजकता के साथ तेजी से बढ़ती है, और फॉस्फेट का उच्च $-3$ आवेश क्लोराइड के $-1$ आवेश की तुलना में सॉल को अधिक कुशलता से उदासीन करता है",
-"फॉस्फेट आयन में इसके ढांचे के भीतर ऑक्सीजन परमाणुओं की पूरी तरह से कमी होती है",
-"फॉस्फेट विन्यास एक प्राकृतिक बायोपोलीमर है जो पानी में तुरंत घुल जाता है"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nThe coagulation or precipitation of a colloidal sol by an added electrolyte is governed by the Hardy-Schulze Rule, which defines the relationship between the ionic charge of the active counter-ion and its coagulating efficacy.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Inorganic orthophosphate ions ($\text{PO}_4^{3-}$) contain zero organic ester functional groups.\n• Option 1 is Correct: The Hardy-Schulze Rule establishes two key tenets:\n  1. The ion carrying charge opposite to that of the colloidal particles (the active counter-ion) is responsible for causing coagulation;\n  2. The coagulating (flocculating) power of an active ion is directly proportional to the fourth power of its valency (charge, $z$):$$\text{Coagulating Power} \propto z^4$$\n  For a positively charged sol (like hydrated ferric oxide sol), coagulation is driven by anions. Because the trivalent Phosphate anion ($\text{PO}_4^{3-}$, valency 3) carries a $-3$ charge compared to the monovalent Chloride anion ($\text{Cl}^-$, valency 1), its theoretical coagulating power is approximately $3^4 = 81\text{ times}$ greater than that of $\text{Cl}^-$. Thus, the minimum concentration (coagulation value) required for $\text{PO}_4^{3-}$ is far smaller.\n• Option 2 is Incorrect: The phosphate ion is $\text{PO}_4^{3-}$, containing four oxygen atoms.\n• Option 3 is Incorrect: Phosphate is a simple tetrahedral inorganic oxyanion, not a biopolymer.\n\nPart C: Key Takeaway / Value Addition\nThe coagulating power of anions for positive sols follows the sequence: $[\text{Fe}(\text{CN})_6]^{4-} > \text{PO}_4^{3-} > \text{SO}_4^{2-} > \text{Cl}^-$, whereas for negative sols (like $\text{As}_2\text{S}_3$), the cation sequence is $\text{Al}^{3+} > \text{Ba}^{2+} > \text{Na}^+$.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nविद्युत-अपघट्य द्वारा किसी कोलाइडल सॉल का अवक्षेपण या स्कंदन हार्डी-शुल्त्स नियम (Hardy-Schulze Rule) द्वारा नियंत्रित होता है, जो आयन की संयोजकता और उसकी स्कंदन क्षमता के संबंध को स्पष्ट करता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: अकार्बनिक फॉस्फेट में कोई एस्टर समूह नहीं होता।\n• विकल्प 1 सही है: हार्डी-शुल्त्स नियम के दो मुख्य बिंदु हैं:\n  1. सॉल का स्कंदन करने के लिए सॉल कणों के विपरीत आवेश वाला आयन (प्रभावी आयन) उत्तरदायी होता है;\n  2. प्रभावी आयन की स्कंदन क्षमता उसकी संयोजकता (आवेश, $z$) के चतुर्थ घात के समानुपाती होती है (स्कंदन क्षमता $\propto z^4$)।\n  धनावेशित सॉल (जैसे $\text{Fe(OH)}_3$) के स्कंदन के लिए ऋणायन कार्य करते हैं। त्रिसंयोजी फॉस्फेट आयन ($\text{PO}_4^{3-}$) पर $-3$ आवेश होता है जबकि एकसंयोजी क्लोराइड ($\text{Cl}^-$) पर $-1$ आवेश होता है। अतः फॉस्फेट की स्कंदन क्षमता क्लोराइड की तुलना में लगभग $3^4 = 81$ गुना अधिक होती है, जिसके कारण फॉस्फेट की बहुत कम मात्रा (Flocculation Value) ही सॉल को तुरंत स्कंदित कर देती है।\n• विकल्प 2 गलत है: फॉस्फेट आयन में 4 ऑक्सीजन परमाणु उपस्थित होते हैं।\n• विकल्प 3 गलत है: फॉस्फेट एक साधारण अकार्बनिक आयन है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nऋणायनों की स्कंदन क्षमता का क्रम: $[\text{Fe}(\text{CN})_6]^{4-} > \text{PO}_4^{3-} > \text{SO}_4^{2-} > \text{Cl}^-$ होता है, जबकि ऋणावेशित सॉल (जैसे $\text{As}_2\text{S}_3$) के लिए धनायनों का क्रम $\text{Al}^{3+} > \text{Ba}^{2+} > \text{Na}^+$ होता है।"
-},
-{
-"p_id": "bpsc_surface_v4_70",
-"qe": "What structural feature characterizes the continuous zig-zag path of colloidal particles observed under an ultra-microscope?",
-"qh": "अल्ट्रा-माइक्रोस्कोप के तहत देखे गए कोलाइडल कणों के निरंतर टेढ़े-मेढ़े मार्ग (continuous zig-zag path) की क्या संरचनात्मक विशेषता है?",
-"oe": [
-"It represents a single-stranded linear array of unbranched volatile oligomers",
-"It is the Brownian movement driven by the constant kinetic impact of highly active dispersion medium molecules against the colloidal cores",
-"It is an amorphous cross-linked three-dimensional network held by sulfur links",
-"It represents an open-chain carbohydrate mesh supported by glycosidic blocks"
-],
-"oh": [
-"यह अशाखित वाष्पशील ओलिगोमर्स की एकल-फंसे रैखिक सरणी का प्रतिनिधित्व करता है",
-"यह अत्यधिक सक्रिय परिक्षेपण माध्यम के अणुओं द्वारा कोलाइडल कोर पर निरंतर गतिज प्रभाव द्वारा संचालित ब्राउनियन गति (Brownian movement) है",
-"यह सल्फर लिंक द्वारा आयोजित एक अनाकार क्रॉस-लिंक्ड तीन-आयामी नेटवर्क है",
-"यह ग्लाइकोसिडिक ब्लॉकों द्वारा समर्थित एक खुली श्रृंखला कार्बोहाइड्रेट जाल का प्रतिनिधित्व करता है"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nWhen a colloidal solution is illuminated by a concentrated beam of light and observed under an ultramicroscope (Zsigmondy, 1903) perpendicular to the beam path, the colloidal particles appear as bright pinpoints of light executing a continuous, chaotic dance.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: The observed phenomenon is dynamic physical particle motion, not a stationary linear oligomeric array.\n• Option 1 is Correct: The continuous, erratic, and unpredictable zig-zag trajectory observed under the ultramicroscope is Brownian Movement. This physical motion does not depend on the chemical nature of the colloid, but is driven entirely by the continuous, random, and unbalanced kinetic collisions delivered by the fast-moving thermal molecules of the liquid dispersion medium against the colloidal cores. Because the impacts from all sides do not cancel out instantaneously on particles in the $1-1000\text{ nm}$ range, the particle is knocked about randomly. Smaller particle size and lower medium viscosity result in faster Brownian motion.\n• Option 2 describes vulcanized rubber networks.\n• Option 3 describes polysaccharide carbohydrate gels.\n\nPart C: Key Takeaway / Value Addition\nBrownian movement confirms the kinetic molecular theory of matter and explains why colloidal sols remain indefinitely suspended without settling out under gravity.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nजब किसी कोलाइडल विलयन को टिंडल प्रभाव के तहत डार्क-फील्ड अल्ट्रा-माइक्रोस्कोप (अतिसूक्ष्मदर्शी) से देखा जाता है, तो प्रकाश का प्रकीर्णन करने वाले कोलाइडल कण चमकीले बिंदुओं के रूप में निरंतर नाचते हुए दिखाई देते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: यह कणों की गतिक गति है, कोई बहुलक श्रृंखला नहीं।\n• विकल्प 1 सही है: अल्ट्रा-माइक्रोस्कोप में दिखाई देने वाला यह निरंतर, अनियमित और टेढ़ा-मेढ़ा मार्ग 'ब्राउनियन गति' (Brownian Movement) है। यह गति कोलाइड की रासायनिक प्रकृति पर निर्भर नहीं करती, बल्कि परिक्षेपण माध्यम (तरल) के तीव्र गतिमान अणुओं द्वारा कोलाइडल कणों पर सभी दिशाओं से किए जाने वाले असंतुलित गतिज प्रहारों (Kinetic Impacts) के कारण होती है। विलायक के अणुओं के लगातार असमान धक्कों के कारण कोलाइडल कण कभी स्थिर नहीं रहते और सदैव गतिमान रहते हैं।\n• विकल्प 2 गलत है: यह वल्केनीकृत रबर की संरचना है।\n• विकल्प 3 गलत है: यह कार्बोहाइड्रेट जालक है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nब्राउनियन गति पदार्थ के अणुगति सिद्धांत (Kinetic Theory) का प्रत्यक्ष प्रायोगिक प्रमाण प्रस्तुत करती है और कोलाइडल कणों को गुरुत्वाकर्षण के कारण नीचे बैठने से रोककर सॉल को स्थायी बनाए रखती है।"
-},
-{
-"p_id": "bpsc_surface_v4_71",
-"qe": "Which specific organic functional group is generated when the carboxyl group of one amino acid condenses with the amino group of an adjacent unit to build a protein?",
-"qh": "कौन सा विशिष्ट कार्बनिक कार्यात्मक समूह तब उत्पन्न होता है जब एक अमीनो एसिड का कार्बोक्सिल समूह प्रोटीन बनाने के लिए आसन्न इकाई के अमीनो समूह के साथ संघनित होता है?",
-"oe": [
-"Glycosidic connection bridging rings together",
-"Peptide linkage / Amide bond",
-"Phosphodiester coordinate bridge balancing frames",
-"Sulfur disulfide cross-link system anchoring paths"
-],
-"oh": [
-"ग्लाइकोसिडिक संबंध (Glycosidic connection) जो छल्लों को आपस में जोड़ता है",
-"पेप्टाइड लिंकेज / एमाइड बंध (Peptide linkage / Amide bond)",
-"फॉस्फोडिएस्टर समन्वय पुल जो फ्रेम को संतुलित करता है",
-"सल्फर डाइसल्फाइड क्रॉस-लिंक प्रणाली जो पथों को एंकर करती है"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nProteins are high-molecular-weight biological polymers constructed from linear chains of twenty standard $\alpha$-amino acids joined together through directional condensation reactions.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 describes glycosidic bonds ($-C-O-C-$), which connect monosaccharide units in carbohydrates (like starch and glycogen).\n• Option 1 is Correct: When the carboxylic acid group ($-COOH$) of one $\alpha$-amino acid reacts with the amino group ($-NH_2$) of an adjacent amino acid, a molecule of water ($H_2O$) is eliminated in a condensation process. The resulting covalent functional group formed between the two amino acid residues is an Amide Linkage ($-CO-NH-$), which in biochemistry is specifically designated as a Peptide Linkage (or Peptide Bond). Repeating this peptide condensation creates linear polypeptide backbones that fold into functional proteins.\n• Option 2 describes $3',5'$-phosphodiester bonds linking nucleotides in DNA/RNA.\n• Option 3 describes disulfide bridges ($-S-S-$) formed between cysteine residues in tertiary protein structures.\n\nPart C: Key Takeaway / Value Addition\nThe peptide bond has partial double-bond character ($\approx 40\\%$) due to resonance between the carbonyl oxygen and amide nitrogen, making the $-CO-NH-$ unit planar, rigid, and resistant to rotation.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nप्रोटीन $\alpha$-अमीनो अम्लों के बहुलक होते हैं, जिनमें कई अमीनो अम्ल इकाइयां एक विशिष्ट दिशात्मक संघनन अभिक्रिया द्वारा आपस में जुड़कर पॉलीपेप्टाइड श्रृंखला बनाती हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: ग्लाइकोसिडिक बंध कार्बोहाइड्रेट में शर्करा इकाइयों को जोड़ता है।\n• विकल्प 1 सही है: जब एक $\alpha$-अमीनो अम्ल का कार्बोक्सिलिक समूह ($-COOH$) दूसरे अमीनो अम्ल के अमीनो समूह ($-NH_2$) के साथ संघनित होता है, तो जल का एक अणु ($H_2O$) बाहर निकलता है और एक सहसंयोजक एमाइड बंध ($-CO-NH-$) बनता है। जैव रसायन में इस विशिष्ट एमाइड बंध को 'पेप्टाइड बंध' या 'पेप्टाइड लिंकेज' (Peptide Linkage) कहा जाता है। कई पेप्टाइड बंधों के निर्माण से पॉलीपेप्टाइड श्रृंखला और अंततः प्रोटीन का निर्माण होता है।\n• विकल्प 2 गलत है: फॉस्फोडिएस्टर बंध न्यूक्लिक अम्लों (DNA/RNA) में पाया जाता है।\n• विकल्प 3 गलत है: डाइसल्फाइड बंध प्रोटीन की तृतीयक संरचना में सिस्टीन के बीच बनता है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nअनुनाद (Resonance) के कारण पेप्टाइड बंध ($-CO-NH-$) में आंशिक द्वि-बंध (Double bond) के लक्षण होते हैं, जिससे यह पूरी तरह समतलीय (Planar) और घूर्णन के प्रति कठोर होता है।"
-},
-{
-"p_id": "bpsc_surface_v4_72",
-"qe": "What precise modern structural and chemical definition is assigned to the macro-class of materials known as carbohydrates?",
-"qh": "कार्बोहाइड्रेट के रूप में जाने जाने वाले सामग्रियों के व्यापक वर्ग को दी गई सटीक आधुनिक संरचनात्मक और रासायनिक परिभाषा क्या है?",
-"oe": [
-"Optically inactive linear aromatic hydrocarbons with single bonds",
-"Optically active polyhydroxy aldehydes or ketones, or compounds yielding them upon hydrolysis",
-"Unbranched non-ionic long-chain potassium fatty acid salts",
-"Suicidal competitive enzyme inhibitors with irreversible networks"
-],
-"oh": [
-"एकल बंध वाले प्रकाशिक रूप से अक्रिय रैखिक एरोमैटिक हाइड्रोकार्बन",
-"प्रकाशिक रूप से सक्रिय पॉलीहाइड्रॉक्सी एल्डिहाइड या कीटोन, या ऐसे यौगिक जो जल-अपघटन पर इन्हें उत्पन्न करते हैं",
-"अशाखित गैर-आयनिक लंबी श्रृंखला वाले पोटेशियम फैटी एसिड लवण",
-"अपरिवर्तनीय नेटवर्क के साथ आत्मघाती प्रतिस्पर्धी एंजाइम अवरोधक"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nThe historical definition of carbohydrates as 'hydrates of carbon' [$\text{C}_x(\text{H}_2\text{O})_y$] was abandoned because non-carbohydrates like acetic acid ($\text{C}_2\text{H}_4\text{O}_2$) fit the formula, while authentic carbohydrates like rhamnose ($\text{C}_6\text{H}_{12}\text{O}_5$) and deoxyribose ($\text{C}_5\text{H}_{10}\text{O}_4$) do not.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Carbohydrates are aliphatic oxygenated biomolecules containing multiple chiral carbon centers, making them optically active.\n• Option 1 is Correct: Modern biochemistry defines Carbohydrates (Saccharides) strictly based on functional structure as: Optically active polyhydroxy aldehydes (Aldoses, e.g., D-glucose) or polyhydroxy ketones (Ketoses, e.g., D-fructose), or complex substances that yield these basic units upon chemical/enzymatic hydrolysis (such as sucrose, maltose, starch, and cellulose). They contain multiple alcohol groups ($-OH$) and a carbonyl carbon ($-CHO$ or $>C=O$), with asymmetric carbons imparting optical activity.\n• Option 2 describes soft potassium soaps.\n• Option 3 describes irreversible enzyme poisons.\n\nPart C: Key Takeaway / Value Addition\nCarbohydrates are classified by complexity into Monosaccharides (cannot be hydrolyzed further), Oligosaccharides (yield 2–10 monosaccharide units), and Polysaccharides (yield hundreds to thousands of monosaccharide units upon complete hydrolysis).",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nकार्बोहाइड्रेट की पुरानी परिभाषा 'कार्बन के हाइड्रेट' [$\text{C}_x(\text{H}_2\text{O})_y$] अमान्य हो गई क्योंकि एसिटिक एसिड जैसे अ-कार्बोहाइड्रेट यौगिक इस सूत्र में आते हैं, जबकि रैम्नोज ($\text{C}_6\text{H}_{12}\text{O}_5$) जैसे वास्तविक कार्बोहाइड्रेट इसमें फिट नहीं बैठते।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: कार्बोहाइड्रेट एरोमैटिक नहीं होते और इनमें असममित कार्बन होने से ये प्रकाशिक सक्रिय होते हैं।\n• विकल्प 1 सही है: आधुनिक जैव रसायन में कार्बोहाइड्रेट की सबसे सटीक और वैज्ञानिक परिभाषा यह है कि वे 'प्रकाशिक रूप से सक्रिय पॉलीहाइड्रॉक्सी एल्डिहाइड (जैसे ग्लूकोज) या पॉलीहाइड्रॉक्सी कीटोन (जैसे फ्रुक्टोज) होते हैं, अथवा वे जटिल यौगिक होते हैं जो जल-अपघटन (Hydrolysis) के फलस्वरूप ऐसी इकाइयां उत्पन्न करते हैं' (जैसे सुक्रोज, स्टार्च और सेल्यूलोज)। इनमें कई $-OH$ समूह और कम से कम एक कार्बोनिल समूह उपस्थित होता है।\n• विकल्प 2 गलत है: यह पोटेशियम साबुन का विवरण है।\n• विकल्प 3 गलत है: यह एंजाइम विषैले पदार्थों का विवरण है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nजल-अपघटन के आधार पर कार्बोहाइड्रेट को मोनोसैकेराइड (जैसे ग्लूकोज), ओलिगोसैकेराइड (2 से 10 इकाइयां, जैसे सुक्रोज) और पॉलीसैकेराइड (सैकड़ों इकाइयां, जैसे स्टार्च व सेल्यूलोज) में बांटा जाता है।"
-},
-{
-"p_id": "bpsc_surface_v4_73",
-"qe": "What architectural spatial arrangement characterizes the alpha-helix conformation commonly encountered in the secondary structure of proteins?",
-"qh": "प्रोटीन की माध्यमिक संरचना में आमतौर पर सामना किए जाने वाले अल्फा-हेलिक्स विन्यास की कौन सी संरचनात्मक स्थानिक व्यवस्था विशेषता है?",
-"oe": [
-"Individual strands lying parallel to each other held by broad inter-chain linkages",
-"A continuous polypeptide chain coiled tightly into a right-handed screw geometry stabilized by hydrogen bonds",
-"An open open-chain carbohydrate mesh locked by loose glycosidic units",
-"A cross-linked network layer centered around a quaternary nitrogen group"
-],
-"oh": [
-"व्यापक अंतर-श्रृंखला लिंकेज द्वारा आयोजित एक दूसरे के समानांतर पड़ी व्यक्तिगत किस्में",
-"हाइड्रोजन बंधों द्वारा स्थिर एक दाहिने हाथ की पेंच (right-handed screw) जैसी ज्यामिति में कसकर कुंडलित एक सतत पॉलीपेप्टाइड श्रृंखला",
-"ढीली ग्लाइकोसिडिक इकाइयों द्वारा बंद एक खुली श्रृंखला कार्बोहाइड्रेट जाल",
-"चतुर्धातुक नाइट्रोजन समूह के आसपास केंद्रित एक क्रॉस-लिंक्ड नेटवर्क परत"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nThe secondary structure of proteins refers to the localized spatial conformation of the polypeptide backbone, predominantly folding into $\alpha$-helices or $\beta$-pleated sheets (Linus Pauling and Robert Corey, 1951).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 describes the $\beta$-pleated sheet conformation, where extended polypeptide chains lie side-by-side held by inter-chain hydrogen bonds.\n• Option 1 is Correct: In the $\alpha$-Helix conformation, a single linear polypeptide chain twists regularly into a tight, right-handed (clockwise) screw-like helical coil. This spatial geometry is stabilized by regular Intramolecular Hydrogen Bonds formed between the carbonyl oxygen ($-C=O$) of each amino acid residue ($n$) and the amide hydrogen ($-NH-$) of the fourth amino acid residue ($n+4$) along the spiral turn. Each turn of the $\alpha$-helix contains approximately 3.6 amino acid residues with a pitch of $0.54\text{ nm}$, and all bulky amino acid side chains ($R$-groups) project outward.\n• Option 2 describes polysaccharide carbohydrate chains like amylose.\n• Option 3 describes synthetic quaternary ammonium surfactant networks.\n\nPart C: Key Takeaway / Value Addition\nFibrous proteins like $\alpha$-keratin (found in hair, wool, and nails) consist almost entirely of right-handed $\alpha$-helices twisted together into protofibrils.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nप्रोटीन की द्वितीयक संरचना पॉलीपेप्टाइड रीढ़ के स्थानीय त्रिविमीय विन्यास को दर्शाती है, जिसके दो मुख्य रूप अल्फा-हेलिक्स ($\alpha$-Helix) और बीटा-प्लीटेड शीट ($\beta$-Sheet) हैं (लीनस पॉलिंग, 1951)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: समानांतर पट्टियों जैसी संरचना $\beta$-प्लीटेड शीट की विशेषता है, जहाँ अंतर-श्रृंखला हाइड्रोजन बंध होते हैं।\n• विकल्प 1 सही है: अल्फा-हेलिक्स ($\alpha$-Helix) विन्यास में एक अकेली पॉलीपेप्टाइड श्रृंखला दाहिने हाथ के पेंच (Right-handed screw) की भांति एक नियमित कुंडलित ज्यामिति में मुड़ती है। यह सर्पिलाकार संरचना आंतरिक हाइड्रोजन बंधों द्वारा अत्यधिक स्थिर होती है, जिसमें एक अमीनो अम्ल का कार्बोनिल ऑक्सीजन ($-C=O$) श्रृंखला में उससे 4 स्थान आगे स्थित अमीनो अम्ल के $-NH-$ समूह के हाइड्रोजन के साथ हाइड्रोजन बंध बनाता है। प्रत्येक घुमाव में लगभग 3.6 अमीनो अम्ल होते हैं।\n• विकल्प 2 गलत है: यह कार्बोहाइड्रेट संरचना का विवरण है।\n• विकल्प 3 गलत है: यह बहुलक रसायन का पद है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nबालों, ऊन और नाखूनों में पाया जाने वाला केराटिन प्रोटीन मुख्य रूप से अल्फा-हेलिक्स संरचना का बना होता है, जो इसे लोच और मजबूती प्रदान करता है।"
-},
-{
-"p_id": "bpsc_surface_v4_74",
-"qe": "Which specific organic compound is generated when D-glucose undergoes complete chemical reduction using hydrogen iodide ($HI$) under thermal conditions?",
-"qh": "जब D-गुकलोज थर्मल स्थितियों के तहत हाइड्रोजन आयोडाइड ($HI$) का उपयोग करके पूर्ण रासायनिक अपचयन से गुजरता है तो कौन सा विशिष्ट कार्बनिक यौगिक उत्पन्न होता है?",
-"oe": [
-"Saccharic acid containing terminal dicarboxylic groups",
-"n-Hexane unbranched straight-chain alkane",
-"Gluconic acid monocarboxylic derivative sheet",
-"Pentaacetylated glucose crystal matrix"
-],
-"oh": [
-"टर्मिनल डाइकार्बोक्सिलिक समूहों वाला सैकेरिक एसिड",
-"$n$-हेक्सेन ($n$-Hexane) अशाखित सीधी श्रृंखला वाला एल्केन",
-"ग्लूकोनिक एसिड मोनोकार्बोक्सिलिक व्युत्पन्न शीट",
-"पेंटाएसिटिलेटेड ग्लूकोज क्रिस्टल मैट्रिक्स"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nChemical reactions with specific reagents were historically used to deduce the open-chain structure of D-glucose (Emil Fischer).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 describes saccharic acid (a dicarboxylic acid), formed by strong oxidation of glucose with concentrated nitric acid ($\text{HNO}_3$).\n• Option 1 is Correct: When D-Glucose ($\text{C}_6\text{H}_{12}\text{O}_6$) is subjected to prolonged heating with concentrated Hydrogen Iodide ($\text{HI}$) in the presence of red phosphorus at $100^\circ\text{C}$ ($373\text{ K}$), it undergoes complete deoxygenation and chemical reduction:$$\text{CHO}-(\text{CHOH})_4-\text{CH}_2\text{OH} + 14\text{HI} \xrightarrow{\text{Red P}, \Delta} \text{CH}_3-\text{CH}_2-\text{CH}_2-\text{CH}_2-\text{CH}_2-\text{CH}_3\text{ (}n\text{-Hexane)} + 6\text{H}_2\text{O} + 7\text{I}_2$$\nThe formation of $n$-Hexane (a saturated, unbranched straight-chain 6-carbon alkane) provides definitive experimental proof that all six carbon atoms in glucose are linked together in a continuous, unbranched straight chain.\n• Option 2 describes gluconic acid, formed by mild oxidation of glucose with bromine water ($\text{Br}_2/\text{H}_2\text{O}$).\n• Option 3 describes glucose pentaacetate, formed by acetylation with acetic anhydride, confirming five $-OH$ groups.\n\nPart C: Key Takeaway / Value Addition\nKey diagnostic reactions of glucose: $\text{HI/P} \to n\text{-hexane}$ (straight chain proof); $\text{Br}_2\text{ water} \to \text{gluconic acid}$ (aldehyde group proof); $\text{Ac}_2\text{O} \to \text{pentaacetate}$ (five $-OH$ proof); $\text{HNO}_3 \to \text{saccharic acid}$ (primary alcohol proof).",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nग्लूकोज की खुली श्रृंखला संरचना को प्रमाणित करने के लिए विभिन्न विशिष्ट रासायनिक अभिकर्मकों के साथ अभिक्रियाओं का ऐतिहासिक रूप से उपयोग किया गया (एमिल फिशर द्वारा)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: सैकेरिक एसिड ग्लूकोज के सांद्र नाइट्रिक अम्ल ($\text{HNO}_3$) द्वारा तीव्र ऑक्सीकरण से बनता है।\n• विकल्प 1 सही है: जब D-ग्लूकोज को लाल फास्फोरस की उपस्थिति में हाइड्रोजन आयोडाइड (HI) के साथ लंबे समय तक गर्म किया जाता है, तो इसके सभी ऑक्सीजन युक्त समूह पूरी तरह अपचयित हो जाते हैं और 6 कार्बन वाला एक सीधी श्रृंखला का एल्केन $n$-हेक्सेन (n-Hexane) प्राप्त होता है:$$\text{ग्लूकोज} + 14\text{HI} \xrightarrow{\text{Red P}, \Delta} \text{CH}_3-(\text{CH}_2)_4-\text{CH}_3\text{ (}n\text{-हेक्सेन)} + 6\text{H}_2\text{O} + 7\text{I}_2$$\n$n$-हेक्सेन का बनना यह सिद्ध करता है कि ग्लूकोज के सभी 6 कार्बन परमाणु एक सीधी और अशाखित श्रृंखला में जुड़े होते हैं।\n• विकल्प 2 गलत है: ग्लूकोनिक एसिड ब्रोमीन जल द्वारा हल्के ऑक्सीकरण से बनता है (एल्डिहाइड समूह का प्रमाण)।\n• विकल्प 3 गलत है: पेंटाएसिटेट बनना यह दर्शाता है कि ग्लूकोज में 5 हाइड्रॉक्सिल ($-OH$) समूह हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nग्लूकोज की मुख्य संरचनात्मक अभिक्रियाएं: $\text{HI/Red P} \to n\text{-हेक्सेन}$ (सीधी श्रृंखला), $\text{Br}_2\text{ जल} \to \text{ग्लूकोनिक एसिड}$ ($-CHO$ समूह), $\text{एसिटिक एनहाइड्राइड} \to \text{पेंटाएसिटेट}$ (5 $-OH$ समूह)।"
-},
-{
-"p_id": "bpsc_surface_v4_75",
-"qe": "What happens to the structure of a carbohydrate like starch or cellulose when it undergoes complete biochemical digestion in a living organism?",
-"qh": "जब एक जीवित जीव में स्टार्च या सेलुलोज जैसे कार्बोहाइड्रेट का पूर्ण जैव रासायनिक पाचन होता है तो उसकी संरचना का क्या होता है?",
-"oe": [
-"It cross-links into an insoluble three-dimensional thermosetting network",
-"It undergoes hydrolytic cleavage of its glycosidic linkages to release single monosaccharide sugar units like glucose",
-"It converts into fuming nitric acid vapors inside cellular channels",
-"It forms a volatile uncharged non-polar polyolefin tail grid"
-],
-"oh": [
-"यह एक अघुलनशील तीन-आयामी थर्मोसेटिंग नेटवर्क में क्रॉस-लिंक करता है",
-"यह ग्लूकोज जैसी एकल मोनोसैकेराइड शर्करा इकाइयों को छोड़ने के लिए अपने ग्लाइकोसिडिक लिंकेज के हाइड्रोलाइटिक विखंडन (जल-अपघटन) से गुजरता है",
-"यह कोशिकीय चैनलों के अंदर सधूम नाइट्रिक एसिड वाष्प में परिवर्तित हो जाता है",
-"यह एक वाष्पशील अनावेशित गैर-ध्रुवीय पॉलीओलेफ़िन टेल ग्रिड बनाता है"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nComplex dietary carbohydrates (polysaccharides) function as energy reserves (starch in plants, glycogen in animals) or structural scaffolds (cellulose). They are polymers composed of repeating monosaccharide rings.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Digestion is a catabolic breakdown process, not an industrial thermosetting cross-linking reaction.\n• Option 1 is Correct: Starch and Cellulose are high-molecular-weight polysaccharides composed of thousands of D-glucose units joined by $\alpha$-1,4- (and $\alpha$-1,6-) or $\beta$-1,4-Glycosidic Bonds. During biochemical digestion, digestive hydrolytic enzymes (such as salivary/pancreatic amylase, maltase, and symbiotic cellulases in ruminants) catalyze the Hydrolytic Cleavage of these glycosidic linkages by adding water across the ether bridges:$$(\text{C}_6\text{H}_{10}\text{O}_5)_n + n\text{H}_2\text{O} \xrightarrow{\text{Enzymatic Hydrolysis}} n\text{C}_6\text{H}_{12}\text{O}_6\text{ (D-Glucose)}$$\nThis breaks the polymer down into individual monomeric D-glucose molecules, which enter glycolysis for cellular ATP production.\n• Option 2 and Option 3 describe impossible chemical decomposition pathways.\n\nPart C: Key Takeaway / Value Addition\nHumans can digest starch ($\alpha$-glycosidic bonds) using amylase, but cannot digest cellulose because human digestive enzymes lack cellulase to hydrolyze $\beta$-1,4-glycosidic linkages (acting instead as dietary fiber/roughage).",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nजटिल कार्बोहाइड्रेट (पॉलीसैकेराइड) ऊर्जा भंडारण (पादपों में स्टार्च) अथवा संरचनात्मक ढांचे (सेल्यूलोज) का कार्य करते हैं, जो ग्लूकोज इकाइयों के ग्लाइकोसिडिक बंधों द्वारा जुड़ने से बनते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: पाचन में बड़े अणु टूटते हैं, थर्मोसेटिंग बहुलक नहीं बनते।\n• विकल्प 1 सही है: स्टार्च और सेल्यूलोज जैसे जटिल पॉलीसैकेराइड हजारों ग्लूकोज इकाइयों के ग्लाइकोसिडिक बंधों (Glycosidic Linkages) द्वारा जुड़े होते हैं। पाचन तंत्र में पाचक एंजाइम (जैसे लार/अग्न्याशयी एमाइलेज, माल्टेज आदि) इन ग्लाइकोसिडिक बंधों का जल-अपघटन (Hydrolysis) कर देते हैं:$$(\text{C}_6\text{H}_{10}\text{O}_5)_n + n\text{H}_2\text{O} \xrightarrow{\text{एंजाइम}} n\text{C}_6\text{H}_{12}\text{O}_6\text{ (ग्लूकोज)}$$\nइससे जटिल पॉलीसैकेराइड टूटकर सरल मोनोसैकेराइड इकाइयों (D-ग्लूकोज) में बदल जाते हैं, जो आंत द्वारा अवशोषित होकर कोशिकीय श्वसन में ऊर्जा (ATP) उत्पन्न करते हैं।\n• विकल्प 2 और 3 गलत हैं क्योंकि पाचन में कोई एसिड वाष्प या प्लास्टिक ग्रिड नहीं बनता।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nमनुष्य स्टार्च ($\alpha$-बंध) का पाचन कर सकता है, परंतु सेल्यूलोज ($\beta$-1,4-बंध) का पाचन नहीं कर पाता क्योंकि मानव शरीर में सेल्यूलेज (Cellulase) एंजाइम नहीं होता; अतः सेल्यूलोज केवल आहारीय रेशे (रफेज) का कार्य करता है।"
-},
-{
-"p_id": "bpsc_surface_v4_76",
-"qe": "Which operational catalyst enzyme decomposes the disaccharide maltose into two clean units of D-glucose inside chemical channels?",
-"qh": "कौन सा परिचालन उत्प्रेरक एंजाइम रासायनिक चैनलों के भीतर डिसेकेराइड माल्टोज़ को डी-ग्लूकोज की दो स्वच्छ इकाइयों में विघटित (decomposes) करता है?",
-"oe": [
-"Invertase sugar clearing fluid",
-"Maltase",
-"Pepsin proteolytic enzyme",
-"Urease nitrogen clearing module"
-],
-"oh": [
-"इन्वर्टेज शर्करा शोधन तरल",
-"माल्टेस (Maltase)",
-"पेप्सिन प्रोटियोलिटिक एंजाइम",
-"यूरिएस नाइट्रोजन शोधन मॉड्यूल"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nDisaccharides are compound sugars composed of two monosaccharide units. Specific hydrolytic enzymes in the digestive tract and yeast cleave the glycosidic bonds linking these units.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Invertase (Sucrase) hydrolyzes sucrose into an equimolar mixture of D-glucose and D-fructose.\n• Option 1 is Correct: Maltase is the specialized biocatalytic enzyme produced in intestinal juice (succus entericus) and yeast that hydrolyzes Maltose (malt sugar, $\text{C}_{12}\text{H}_{22}\text{O}_{11}$). Maltose is a reducing disaccharide consisting of two $\alpha$-D-glucose units joined by an $\alpha(1\to 4)$ glycosidic bond. Maltase targets this bond specifically, cleaving one molecule of maltose into two identical molecules of D-Glucose:$$\text{C}_{12}\text{H}_{22}\text{O}_{11}\text{ (Maltose)} + \text{H}_2\text{O} \xrightarrow{\text{Maltase}} 2\text{C}_6\text{H}_{12}\text{O}_6\text{ (D-Glucose)}$$\n• Option 2 is Incorrect: Pepsin is a gastric protease that digests proteins into proteoses and peptones.\n• Option 3 is Incorrect: Urease hydrolyzes urea into ammonia and carbon dioxide.\n\nPart C: Key Takeaway / Value Addition\nCommon disaccharide digestive enzymes: Maltase (Maltose $\to$ Glucose + Glucose), Lactase (Lactose $\to$ Glucose + Galactose), and Sucrase/Invertase (Sucrose $\to$ Glucose + Fructose).",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nडाइसैकेराइड दो मोनोसैकेराइड इकाइयों से बने होते हैं। पाचन तंत्र और यीस्ट में उपस्थित विशिष्ट एंजाइम इनके बीच के ग्लाइकोसिडिक बंध को तोड़कर सरल शर्करा बनाते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: इन्वर्टेज (Invertase) सुक्रोज (गन्ने की चीनी) को ग्लूकोज और फ्रुक्टोज में तोड़ता है।\n• विकल्प 1 सही है: माल्टेस (Maltase) आंतों के रस और यीस्ट में पाया जाने वाला एक विशिष्ट पाचक एंजाइम है। यह माल्टोज ($\text{C}_{12}\text{H}_{22}\text{O}_{11}$) के $\alpha(1\to 4)$ ग्लाइकोसिडिक बंध का जल-अपघटन करके उसे D-ग्लूकोज की दो समान इकाइयों में विघटित कर देता है:$$\text{C}_{12}\text{H}_{22}\text{O}_{11}\text{ (माल्टोज)} + \text{H}_2\text{O} \xrightarrow{\text{Maltase}} 2\text{C}_6\text{H}_{12}\text{O}_6\text{ (ग्लूकोज)}$$\n• विकल्प 2 गलत है: पेप्सिन आमाशय में प्रोटीन का पाचन करने वाला एंजाइम है।\n• विकल्प 3 गलत है: यूरिएस यूरिया को अमोनिया और $\text{CO}_2$ में तोड़ता है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nडाइसैकेराइड पाचक एंजाइम: माल्टेस (माल्टोज $\to$ ग्लूकोज + ग्लूकोज), लैक्टेस (लैक्टोज $\to$ ग्लूकोज + गैलेक्टोज), और सुक्रोज/इन्वर्टेज (सुक्रोज $\to$ ग्लूकोज + फ्रुक्टोज)।"
-},
-{
-"p_id": "bpsc_surface_v4_77",
-"qe": "What direct mechanical change occurs to the native protein architecture inside an egg white when it undergoes thermal coagulation upon boiling?",
-"qh": "जब एक अंडे की सफेदी को उबालने पर थर्मल जमावट (thermal coagulation) होती है, तो उसके भीतर की प्राकृतिक प्रोटीन संरचना में क्या सीधा यांत्रिक परिवर्तन होता है?",
-"oe": [
-"The covalent peptide linkages are broken, returning the protein to single units",
-"The native hydrogen bonds are disrupted, causing structural globules to unfold and helices to uncoil, resulting in a loss of biological activity",
-"The carbon backbone converts into a volatile open-chain gas cloud",
-"The functional domains are reduced to non-ionic starch granules"
-],
-"oh": [
-"सहसंयोजक पेप्टाइड लिंकेज टूट जाते हैं, जिससे प्रोटीन एकल इकाइयों में लौट आता है",
-"प्राकृतिक हाइड्रोजन बंध टूट जाते हैं, जिससे संरचनात्मक ग्लोब्यूल्स खुल जाते हैं और हेलिक्स खुल जाते हैं, जिसके परिणामस्वरूप जैविक गतिविधि का नुकसान होता है (विकृतीकरण)",
-"कार्बन रीढ़ एक वाष्पशील खुली श्रृंखला वाली गैस क्लाउड में परिवर्तित हो जाती है",
-"कार्यात्मक डोमेन गैर-आयनिक स्टार्च कणिकाओं में कम हो जाते हैं"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nIn its native state, a protein has a unique, folded 3D conformation (secondary, tertiary, and quaternary levels) stabilized by weak non-covalent interactions like hydrogen bonds, ionic bonds, and van der Waals forces.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Denaturation does not cleave strong covalent peptide bonds ($-CO-NH-$); the primary amino acid sequence remains completely intact.\n• Option 1 is Correct: When egg white containing soluble globular Ovalbumin is boiled, thermal kinetic energy disrupts the delicate intramolecular hydrogen bonds and hydrophobic interactions. As a consequence, the tightly folded globular protein unfolds, the $\alpha$-helices and $\beta$-sheets uncoil, and the exposed linear polypeptide chains become randomly entangled. They cross-link into an insoluble, opaque, white solid gel coagulum (Denaturation of Protein), completely and irreversibly destroying its native biological activity.\n• Option 2 and Option 3 describe impossible chemical decompositions.\n\nPart C: Key Takeaway / Value Addition\nDuring protein denaturation (by heat, pH changes, or heavy metals), secondary and tertiary structures are destroyed, but the primary structure (peptide backbone) remains intact.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nअपनी प्राकृतिक अवस्था (Native state) में प्रोटीन की एक निश्चित मुड़ी हुई त्रिविमीय संरचना (द्वितीयक व तृतीयक स्तर) होती है, जो दुर्बल हाइड्रोजन बंधों और स्थिरवैद्युत आकर्षण द्वारा स्थिर रहती है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: विकृतीकरण में प्राथमिक पेप्टाइड बंध ($-CO-NH-$) कभी नहीं टूटते; प्राथमिक संरचना पूरी तरह सुरक्षित रहती है।\n• विकल्प 1 सही है: अंडे की सफेदी में उपस्थित मुख्य प्रोटीन एल्ब्यूमिन (Ovalbumin) एक जल-घुलनशील ग्लोबुलर प्रोटीन है। जब अंडे को उबाला जाता है, तो उच्च ताप के कारण प्रोटीन की कुंडलियों को बांधने वाले कमजोर हाइड्रोजन बंध टूट जाते हैं। इसके कारण मुड़े हुए ग्लोब्यूल्स खुल जाते हैं (Unfolding) और हेलिक्स सीधे हो जाते हैं। खुली हुई पॉलीपेप्टाइड श्रृंखलाएं आपस में उलझकर एक अघुलनशील, सफेद और कठोर थक्के में जम जाती हैं। इस प्रक्रिया को 'प्रोटीन का विकृतीकरण' (Denaturation of Proteins) कहते हैं, जिससे प्रोटीन की जैविक सक्रियता स्थायी रूप से समाप्त हो जाती है।\n• विकल्प 2 और विकल्प 3 गलत हैं क्योंकि प्रोटीन गैस या स्टार्च में नहीं बदलता।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nप्रोटीन के विकृतीकरण (ताप, अम्ल या क्षार द्वारा) में द्वितीयक और तृतीयक संरचनाएं नष्ट हो जाती हैं, परंतु प्राथमिक संरचना (अमीनो अम्ल क्रम) अपरिवर्तित रहती है।"
-},
-{
-"p_id": "bpsc_chem_v4_255",
-"qe": "What is the correct mathematical expression used to calculate the degree of dissociation ($\alpha$) of a weak electrolyte from its molar conductivity values?",
-"qh": "इलेक्ट्रोलाइट मानों से कमजोर इलेक्ट्रोलाइट के विघटन की डिग्री ($\alpha$) की गणना करने के लिए उपयोग किया जाने वाला सही गणितीय व्यंजक क्या है?",
-"oe": [
-"$\alpha = \Lambda_m \cdot \Lambda_m^\circ$",
-"$\alpha = \frac{\Lambda_m}{\Lambda_m^\circ}$",
-"$\alpha = \frac{\kappa \cdot 1000}{M}$",
-"$\alpha = nF E^\circ_{cell}$"
-],
-"oh": [
-"$\alpha = \Lambda_m \cdot \Lambda_m^\circ$",
-"$\alpha = \frac{\Lambda_m}{\Lambda_m^\circ}$",
-"$\alpha = \frac{\kappa \cdot 1000}{M}$",
-"$\alpha = nF E^\circ_{cell}$"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nWeak electrolytes (such as $\text{CH}_3\text{COOH}$ or $\text{NH}_4\text{OH}$) ionize only partially in solution. Arrhenius electrolytic theory and Kohlrausch's Law of Independent Migration of Ions relate ionic conductivity to the degree of dissociation.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is an incorrect product formula.\n• Option 1 is Correct: At any given molar concentration ($c$), the Degree of Dissociation ($\alpha$) of a weak electrolyte represents the fraction of electrolyte molecules that have split into free conducting ions. It is mathematically calculated as the ratio of the molar conductivity at that concentration ($\Lambda_m^c$) to the limiting molar conductivity at infinite dilution ($\Lambda_m^\circ$):$$\mathbf{\alpha = \frac{\Lambda_m^c}{\Lambda_m^\circ}}$$\nThis calculated value of $\alpha$ is substituted into Ostwald's Dilution Law ($K_a = \frac{c\alpha^2}{1-\alpha}$) to find the dissociation constant of the weak acid or base.\n• Option 2 is the formula for calculating molar conductivity ($\Lambda_m$) from specific conductivity ($\kappa$) and molarity ($M$).\n• Option 3 calculates the standard electrical work/free energy change ($\Delta G^\circ = -nFE^\circ$).\n\nPart C: Key Takeaway / Value Addition\nKohlrausch's Law allows the determination of $\Lambda_m^\circ$ for weak electrolytes (which cannot be obtained by direct graphical extrapolation) by summing the limiting molar conductivities of their constituent ions: $\Lambda_m^\circ(\text{CH}_3\text{COOH}) = \lambda^\circ(\text{H}^+) + \lambda^\circ(\text{CH}_3\text{COO}^-)$.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nदुर्बल विद्युत-अपघट्य (जैसे एसिटिक अम्ल, $\text{CH}_3\text{COOH}$) जल में केवल आंशिक रूप से आयनित होते हैं। कोलराउश के नियम और आरेनियस सिद्धांत की सहायता से चालकता मानों द्वारा इनके वियोजन की मात्रा ज्ञात की जाती है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है क्योंकि यह दोनों चालकताओं का गुणनफल दर्शाता है।\n• विकल्प 1 सही है: किसी दी गई सांद्रता ($c$) पर एक दुर्बल विद्युत-अपघट्य के वियोजन की मात्रा / विघटन की डिग्री (Degree of Dissociation, $\alpha$) उस सांद्रता पर मोलर चालकता ($\Lambda_m^c$) तथा अनंत तनुता पर सीमांत मोलर चालकता ($\Lambda_m^\circ$) के अनुपात के बराबर होती है:$$\mathbf{\alpha = \frac{\Lambda_m^c}{\Lambda_m^\circ}}$$\nइस प्रकार प्राप्त $\alpha$ के मान का उपयोग ओस्टवाल्ड के तनुता नियम ($K_a = \frac{c\alpha^2}{1-\alpha}$) में वियोजन स्थिरांक निकालने के लिए किया जाता है।\n• विकल्प 2 गलत है क्योंकि यह विशिष्ट चालकता से मोलर चालकता निकालने का सूत्र है।\n• विकल्प 3 गलत है क्योंकि यह विद्युत रासायनिक सेल के विभव और गिब्स मुक्त ऊर्जा का सूत्र है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nकोलराउश के आयनों के स्वतंत्र अभिगमन के नियम से दुर्बल विद्युत-अपघट्य की सीमांत मोलर चालकता ($\Lambda_m^\circ$) ज्ञात की जाती है: $\Lambda_m^\circ(\text{CH}_3\text{COOH}) = \lambda^\circ(\text{H}^+) + \lambda^\circ(\text{CH}_3\text{COO}^-)$।"
-},
-{
-"p_id": "bpsc_chem_v4_245",
-"qe": "What is the core mathematical formula used to calculate the Molar Conductivity ($\Lambda_m$) of a solution from its specific conductivity ($\kappa$) and molarity ($M$) in standard laboratory units?",
-"qh": "मानक प्रयोगशाला इकाइयों में समाधान की विशिष्ट चालकता ($\kappa$) और मोलरिटी ($M$) से उसकी मोलर चालकता ($\Lambda_m$) की गणना करने के लिए उपयोग किया जाने वाला मुख्य गणितीय सूत्र क्या है?",
-"oe": [
-"$\Lambda_m = \frac{M \cdot \kappa}{1000}$",
-"$\Lambda_m = \frac{1000 \cdot \kappa}{M}$",
-"$\Lambda_m = \kappa \cdot G^*$",
-"$\Lambda_m = \frac{\kappa \cdot R}{M}$"
-],
-"oh": [
-"$\Lambda_m = \frac{M \cdot \kappa}{1000}$",
-"$\Lambda_m = \frac{1000 \cdot \kappa}{M}$",
-"$\Lambda_m = \kappa \cdot G^*$",
-"$\Lambda_m = \frac{\kappa \cdot R}{M}$"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nMolar Conductivity ($\Lambda_m$) measures the total conducting power of all the ions produced by dissolving one mole of an electrolyte in a given volume of solution.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is an inverted ratio formula.\n• Option 1 is Correct: Molar conductivity is defined fundamentally as specific conductivity ($\kappa$) multiplied by the volume ($V$) containing one mole of electrolyte ($\Lambda_m = \kappa \cdot V$). In practical laboratory CGS units, when specific conductivity $\kappa$ is measured in $\text{S}\cdot\text{cm}^{-1}$ (or $\Omega^{-1}\text{cm}^{-1}$) and electrolytic concentration is given in Molarity ($M$, in $\text{mol/L}$), the volume containing 1 mole of electrolyte is $V = \frac{1000}{M}\text{ cm}^3$. Substituting this gives the standard working formula:$$\mathbf{\Lambda_m = \frac{\kappa \times 1000}{M}} \quad (\text{expressed in } \text{S}\cdot\text{cm}^2\cdot\text{mol}^{-1})$$\n• Option 2 calculates conductivity using cell constant $G^*$ ($\kappa = G \cdot G^*$).\n• Option 3 incorrectly multiplies by electrical resistance $R$.\n\nPart C: Key Takeaway / Value Addition\nIn SI units (where $\kappa$ is in $\text{S}\cdot\text{m}^{-1}$ and concentration $c$ is in $\text{mol}\cdot\text{m}^{-3}$), the conversion factor inverts: $\Lambda_m = \frac{\kappa}{1000 \times M}\text{ S}\cdot\text{m}^2\cdot\text{mol}^{-1}$.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nमोलर चालकता (Molar Conductivity, $\Lambda_m$) वह विद्युत चालकता है जो 1 मोल विद्युत-अपघट्य को किसी निश्चित आयतन वाले घोल में घोलने पर उपस्थित सभी आयनों द्वारा उत्पन्न होती है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है क्योंकि इसमें पदों का अनुपात उल्टा है।\n• विकल्प 1 सही है: मोलर चालकता मूल रूप से विशिष्ट चालकता ($\kappa$) और 1 मोल विद्युत-अपघट्य युक्त आयतन ($V$) के गुणनफल के बराबर होती है ($\Lambda_m = \kappa \times V$)।\nजब प्रयोगशाला में विशिष्ट चालकता $\kappa$ का मान $\text{S}\cdot\text{cm}^{-1}$ में हो और सांद्रता $M$ मोलरता (मोल/लीटर) में हो, तो 1 मोल युक्त आयतन $V = \frac{1000}{M}\text{ cm}^3$ होता है। अतः सही सूत्र है:$$\mathbf{\Lambda_m = \frac{1000 \times \kappa}{M}} \quad (\text{मात्रक: } \text{S}\cdot\text{cm}^2\cdot\text{mol}^{-1})$$\n• विकल्प 2 गलत है क्योंकि सेल स्थिरांक ($G^*$) का उपयोग $\kappa = G \times G^*$ में होता है।\n• विकल्प 3 गलत है क्योंकि इसमें प्रतिरोध $R$ का अनावश्यक गुणा किया गया है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nSI मात्रकों में (जहाँ $\kappa$ $\text{S}\cdot\text{m}^{-1}$ में हो और सांद्रता मोलरता में हो), सूत्र $\Lambda_m = \frac{\kappa}{1000 \times M}\text{ S}\cdot\text{m}^2\cdot\text{mol}^{-1}$ हो जाता है।"
-},
-{
-"p_id": "bpsc_biomol_v4_22",
-"qe": "What architectural spatial arrangement characterizes the alpha-helix conformation commonly encountered in the secondary structure of proteins?",
-"qh": "प्रोटीन की माध्यमिक संरचना में आमतौर पर सामना किए जाने वाले अल्फा-हेलिक्स विन्यास की कौन सी संरचनात्मक स्थानिक व्यवस्था विशेषता है?",
-"oe": [
-"Individual strands lying parallel to each other held by broad inter-chain linkages",
-"A continuous polypeptide chain coiled tightly into a right-handed screw geometry stabilized by hydrogen bonds",
-"An open open-chain carbohydrate mesh locked by loose glycosidic units",
-"A cross-linked network layer centered around a quaternary nitrogen group"
-],
-"oh": [
-"व्यापक अंतर-श्रृंखला लिंकेज द्वारा आयोजित एक दूसरे के समानांतर पड़ी व्यक्तिगत किस्में",
-"हाइड्रोजन बंधों द्वारा स्थिर एक दाहिने हाथ की पेंच (right-handed screw) जैसी ज्यामिति में कसकर कुंडलित एक सतत पॉलीपेप्टाइड श्रृंखला",
-"ढीली ग्लाइकोसिडिक इकाइयों द्वारा बंद एक खुली श्रृंखला कार्बोहाइड्रेट जाल",
-"चतुर्धातुक नाइट्रोजन समूह के आसपास केंद्रित एक क्रॉस-लिंक्ड नेटवर्क परत"
-],
-"a": 1,
-"ee": "Part A: Core Concept & Background\nThe secondary structure of proteins describes the regular, localized folding patterns of the polypeptide chain backbone, classified into $\alpha$-helices and $\beta$-pleated sheets (Linus Pauling and Robert Corey, 1951).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 describes the $\beta$-pleated sheet conformation, where extended polypeptide chains lie side by side held together by intermolecular hydrogen bonds.\n• Option 1 is Correct: In the $\alpha$-Helix conformation, a single continuous polypeptide chain is coiled tightly into a rigid, right-handed (clockwise) screw (helical) geometry. The helix is stabilized by regular Intramolecular Hydrogen Bonds formed between the carbonyl oxygen ($-C=O$) of each amino acid residue ($n$) and the amide hydrogen ($-NH-$) of the fourth amino acid residue ($n+4$) along the spiral turn. Each full helical turn contains approximately 3.6 amino acid residues with a pitch of $0.54\text{ nm}$, with all amino acid side chains ($R$-groups) projecting outward.\n• Option 2 describes polysaccharide chains like amylose.\n• Option 3 describes quaternary ammonium surfactant matrices.\n\nPart C: Key Takeaway / Value Addition\nAmino acids like Proline act as 'helix breakers' because their rigid cyclic pyrrolidine ring disrupts the regular backbone geometry and lacks an amide hydrogen for hydrogen bonding.",
-"eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nप्रोटीन की द्वितीयक संरचना पॉलीपेप्टाइड रीढ़ के स्थानीय त्रिविमीय विन्यास को दर्शाती है, जिसके दो प्रमुख रूप अल्फा-हेलिक्स ($\alpha$-Helix) और बीटा-प्लीटेड शीट ($\beta$-Sheet) हैं (लीनस पॉलिंग, 1951)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: समानांतर पट्टियों जैसी संरचना $\beta$-प्लीटेड शीट की विशेषता है, जहाँ अंतर-श्रृंखला हाइड्रोजन बंध होते हैं।\n• विकल्प 1 सही है: अल्फा-हेलिक्स ($\alpha$-Helix) विन्यास में एक अकेली पॉलीपेप्टाइड श्रृंखला दाहिने हाथ के पेंच (Right-handed screw) की भांति एक नियमित कुंडलित ज्यामिति में मुड़ती है। यह सर्पिलाकार संरचना आंतरिक हाइड्रोजन बंधों द्वारा अत्यधिक स्थिर होती है, जिसमें एक अमीनो अम्ल का कार्बोनिल ऑक्सीजन ($-C=O$) श्रृंखला में उससे 4 स्थान आगे स्थित अमीनो अम्ल के $-NH-$ समूह के हाइड्रोजन के साथ हाइड्रोजन बंध बनाता है। प्रत्येक घुमाव में लगभग 3.6 अमीनो अम्ल होते हैं।\n• विकल्प 2 गलत है: यह कार्बोहाइड्रेट संरचना का विवरण है।\n• विकल्प 3 गलत है: यह बहुलक रसायन का पद है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nप्रोलीन (Proline) अमीनो अम्ल को 'हेलिक्स ब्रेकर' कहा जाता है क्योंकि इसकी चक्रीय संरचना अल्फा-हेलिक्स के नियमित घुमाव को तोड़ देती है।"
-}
+  {
+    "p_id": "bpsc_surface_v4_57",
+    "qe": "What mechanical boundary phenomenon drives the continuous, erratic zig-zag Brownian movement displayed by colloidal particles?",
+    "qh": "कौन सी यांत्रिक घटना (mechanical boundary phenomenon) कोलाइडल कणों द्वारा प्रदर्शित निरंतर, अनियमित टेढ़े-मेढ़े ब्राउनियन गति (Brownian movement) को संचालित करती है?",
+    "oe": [
+      "The spontaneous magnetic attraction across the non-polar coordinate cells",
+      "The unbalanced kinetic bombardment of the dispersed phase particles by the highly active molecules of the continuous dispersion medium",
+      "The chemical cross-linking of linear intermediate resins around active sites",
+      "The complete conversion of all carbonyl groups into volatile non-ionic ethers"
+    ],
+    "oh": [
+      "गैर-ध्रुवीय समन्वय कोशिकाओं में स्वतःस्फूर्त चुंबकीय आकर्षण",
+      "निरंतर परिक्षेपण माध्यम के अत्यधिक सक्रिय अणुओं द्वारा परिक्षेपित प्रावस्था के कणों पर असंतुलित गतिज प्रहार",
+      "सक्रिय स्थलों के चारों ओर रैखिक मध्यवर्ती रेजिन का रासायनिक क्रॉस-लिंकिंग",
+      "सभी कार्बोनिल समूहों का वाष्पशील गैर-आयनिक ईथरों में पूर्ण रूपांतरण"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nBrownian motion is a fundamental kinetic property of colloidal systems, first observed under an ultramicroscope by botanist Robert Brown (1827) and later mathematically modeled by Albert Einstein (1905). It describes the continuous, erratic, and zig-zag physical motion of microscopic colloidal particles suspended within a continuous fluid medium.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Brownian movement is an entirely kinetic-mechanical transport phenomenon that operates independent of magnetic fields or coordinate cell structures.\n• Option 1 is Correct: The continuous erratic motion is caused by the random, uneven, and unbalanced kinetic bombardment of the colloidal particles by the rapidly moving thermal molecules of the dispersion medium. Because colloidal particles are microscopic ($1\text{ to }1000\text{ nm}$), the instantaneous net momentum transferred from colliding solvent molecules on opposite sides does not average to zero, generating continuous, random mechanical impulses that propel the particle along an irregular zig-zag trajectory.\n• Option 2 is Incorrect: Cross-linking of resins is an irreversible polymerization process observed during thermosetting resin curing, unrelated to kinetic particle dynamics.\n• Option 3 is Incorrect: Carbonyl-to-ether conversions describe functional group organic reductions, which play no role in colloidal physical kinetics.\n\nPart C: Key Takeaway / Value Addition\nBrownian motion provides kinetic stabilization to colloidal systems by generating an upward hydrodynamic agitation that directly counteracts the downward gravitational sedimentation of dispersed particles.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nब्राउनियन गति कोलाइडल निकायों का एक मूलभूत गतिज (kinetic) गुण है, जिसे सर्वप्रथम 1827 में वनस्पतिशास्त्री रॉबर्ट ब्राउन ने देखा था और 1905 में अल्बर्ट आइंस्टीन ने इसका गणितीय सिद्धांत प्रतिपादित किया था। यह किसी तरल परिक्षेपण माध्यम में निलंबित कोलाइडल कणों की निरंतर, अनियमित और टेढ़ी-मेढ़ी (zig-zag) गति को दर्शाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: ब्राउनियन गति एक विशुद्ध यांत्रिक-गतिज परिघटना है, इसका चुंबकीय बलों या सेल संरचनाओं से कोई संबंध नहीं है।\n• विकल्प 1 सही है: कोलाइडल कणों की यह अनियमित गति परिक्षेपण माध्यम (तरल विलायक) के निरंतर गतिशील तीव्र अणुओं द्वारा कोलाइडल कणों पर किए जाने वाले असंतुलित और अनियमित गतिज प्रहारों (Unbalanced Kinetic Bombardment) के कारण उत्पन्न होती है। कोलाइडल कणों का आकार अतिसूक्ष्म होने के कारण किसी क्षण विशेष पर सभी दिशाओं से लगने वाला बल शून्य नहीं हो पाता, जिससे कण लगातार टेढ़े-मेढ़े पथ पर गतिशील रहते हैं।\n• विकल्प 2 गलत है: रेजिन का क्रॉस-लिंकिंग बहुलक निर्माण से संबंधित है, इसका कणों की गतिज गति से कोई संबंध नहीं है।\n• विकल्प 3 गलत है: कार्बोनिल समूहों का ईथर में बदलना कार्बनिक अपचयन प्रक्रिया है, जो कोलाइडल भौतिकी से असंबंधित है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nब्राउनियन गति गुरुत्वाकर्षण बल के विरुद्ध कार्य करती है और कोलाइडल कणों को पेंदे में बैठने (Sedimentation) से रोककर कोलाइडल सॉल को दीर्घकालिक गतिज स्थायित्व प्रदान करती है।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_58",
+    "qe": "When a small sample of iron(III) chloride ($FeCl_3$) is added into an excess volume of boiling water, what type of colloidal sol is synthesized?",
+    "qh": "जब उबलते पानी की अत्यधिक मात्रा में आयरन(III) क्लोराइड ($FeCl_3$) का एक छोटा नमूना मिलाया जाता है, तो किस प्रकार का कोलाइडल सॉल संश्लेषित होता है?",
+    "oe": [
+      "A negatively charged sol stabilized by chloride anions",
+      "A positively charged sol of hydrated ferric oxide due to preferential adsorption of $Fe^{3+}$ ions",
+      "An uncharged non-ionic dynamic linear polyester polymer grid",
+      "A three-dimensional cross-linked phenolic thermosetting net bar"
+    ],
+    "oh": [
+      "क्लोराइड ऋणायनों द्वारा स्थिर किया गया एक ऋणावेशित सॉल",
+      "$Fe^{3+}$ आयनों के प्राथमिक अधिशोषण के कारण जलयोजित फेरिक ऑक्साइड का एक धनावेशित सॉल",
+      "एक अनावेशित गैर-आयनिक गतिशील रैखिक पॉलिएस्टर बहुलक ग्रिड",
+      "एक त्रि-आयामी क्रॉस-लिंक्ड फेनोलिक थर्मोसेटिंग नेट बार"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nColloidal particles acquire electrical surface charge during synthesis primarily via the preferential adsorption of common ions present in the surrounding dispersion medium (Paneth-Fajans-Hahn adsorption principle).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Adding $\text{FeCl}_3$ to boiling water produces a positively charged sol, whereas a negatively charged hydrated ferric oxide sol is formed when $\text{FeCl}_3$ is added to an excess of dilute aqueous $\text{NaOH}$ due to preferential adsorption of $\text{OH}^-$ ions.\n• Option 1 is Correct: When iron(III) chloride ($\text{FeCl}_3$) is added dropwise into boiling water, rapid chemical hydrolysis occurs:$$\text{FeCl}_3\text{(aq)} + 3\text{H}_2\text{O(l)} xrightarrow{Delta} \text{Fe}_2\text{O}_3 cdot x\text{H}_2\text{O(s)} + 3\text{HCl(aq)}$$\nThe resulting colloidal particles of hydrated ferric oxide preferentially adsorb the common, highly charged ferric cations ($\text{Fe}^{3+}$) from the unhydrolyzed $\text{FeCl}_3$ present in the medium, forming a fixed positively charged inner Helmholtz layer ($[\text{Fe}_2\text{O}_3 cdot x\text{H}_2\text{O}]\text{Fe}^{3+}$).\n• Option 2 is Incorrect: Polyester grids are synthetic organic condensation polymers, completely distinct from inorganic metal hydroxide sols.\n• Option 3 is Incorrect: Phenolic thermosetting nets refer to synthetic resins like Bakelite, not inorganic colloidal dispersions.\n\nPart C: Key Takeaway / Value Addition\nThe charge of a colloidal sol depends strictly on the reaction conditions: $\text{FeCl}_3 + \text{hot water} \to \text{Positive Sol}$, whereas $\text{FeCl}_3 + \text{excess NaOH} \to \text{Negative Sol}$ ($[\text{Fe}_2\text{O}_3 cdot x\text{H}_2\text{O}]\text{OH}^-$).",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nकोलाइडल सॉल के कणों पर विद्युत आवेश की उत्पत्ति का मुख्य कारण निर्माण के समय माध्यम में उपस्थित उभयनिष्ठ आयनों का चयनात्मक या प्राथमिक अधिशोषण (Preferential Adsorption) होता है (पानेथ-फाजांस-हान नियम)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: उबलते पानी में $\text{FeCl}_3$ मिलाने से धनावेशित सॉल बनता है; ऋणावेशित सॉल तब बनता है जब $\text{FeCl}_3$ को अतिरिक्त तनु $\text{NaOH}$ में मिलाया जाए (जहाँ $\text{OH}^-$ आयनों का अधिशोषण होता है)।\n• विकल्प 1 सही है: जब फेरिक क्लोराइड ($\text{FeCl}_3$) को उबलते जल में मिलाया जाता है, तो तीव्र जल-अपघटन के फलस्वरूप जलयोजित फेरिक ऑक्साइड ($\text{Fe}_2\text{O}_3 cdot x\text{H}_2\text{O}$) के कोलाइडल कण बनते हैं। ये कण माध्यम में उपस्थित अतिरिक्त $\text{Fe}^{3+}$ धनायनों का प्राथमिक अधिशोषण कर लेते हैं:$$[\text{Fe}_2\text{O}_3 cdot x\text{H}_2\text{O}]\text{Fe}^{3+}$$जिससे यह एक धनावेशित कोलाइडल सॉल बन जाता है।\n• विकल्प 2 गलत है: पॉलिएस्टर ग्रिड कार्बनिक बहुलक संरचना है, अकार्बनिक सॉल नहीं।\n• विकल्प 3 गलत है: यह बैकेलाइट जैसे थर्मोसेटिंग रेजिन का लक्षण है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nकोलाइडल सॉल का आवेश विलायक के वातावरण पर निर्भर करता है: $\text{FeCl}_3 + \text{गर्म जल} \to \text{धनावेशित सॉल}$, जबकि $\text{FeCl}_3 + \text{अतिरिक्त NaOH} \to \text{ऋणावेशित सॉल}$ बनता है।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_59",
+    "qe": "What physical consequence occurs if an excessive concentration of sodium chloride ($NaCl$) is mixed into a positively charged sol of hydrated ferric oxide?",
+    "qh": "यदि हाइड्रेटेड फेरिक ऑक्साइड के धनात्मक रूप से आवेशित सॉल में सोडियम क्लोराइड ($NaCl$) की अत्यधिक सांद्रता मिला दी जाए तो क्या भौतिक परिणाम होता है?",
+    "oe": [
+      "The colloid turns completely transparent and fluidly volatile",
+      "The negatively charged chloride ions ($Cl^-$) neutralize the positive surface charges, triggering rapid coagulation and precipitation",
+      "The iron atoms undergo direct transformation into a chlorinated furanose sugar",
+      "The framework dissolves into an open-chain aliphatic polyolefin tail matrix"
+    ],
+    "oh": [
+      "कोलाइड पूरी तरह से पारदर्शी और तरल रूप से वाष्पशील हो जाता है",
+      "ऋणावेशित क्लोराइड आयन ($Cl^-$) धनात्मक सतह आवेशों को बेअसर करते हैं, जिससे तीव्र स्कंदन (Coagulation) और अवक्षेपण होता है",
+      "लोहे के परमाणु सीधे क्लोरीनयुक्त फुरानोज शर्करा में परिवर्तित हो जाते हैं",
+      "ढांचा एक खुली श्रृंखला वाले एलिफैटिक पॉलीओलेफिन टेल मैट्रिक्स में घुल जाता है"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nLyophobic colloidal sols rely entirely on electrostatic repulsion between similarly charged surface particles to prevent aggregation. Adding an electrolyte supplies mobile counter-ions that compress the electrical double layer and neutralize surface charges, causing coagulation.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Electrolyte-induced destabilization causes cloudiness, turbidity, and sedimentation, not transparent volatility.\n• Option 1 is Correct: Hydrated ferric oxide sol particles carry a net positive electrical surface charge due to adsorbed $\text{Fe}^{3+}$ ions ($[\text{Fe}_2\text{O}_3 cdot x\text{H}_2\text{O}]\text{Fe}^{3+}$). According to the Hardy-Schulze Rule, coagulation of a positive sol is caused by negatively charged counter-ions (anions). When excess sodium chloride ($\text{NaCl}$) is introduced, the chloride anions ($\text{Cl}^-$) neutralize the positive surface charges. Without electrostatic repulsion, the uncharged colloidal particles coalesce and aggregate into larger macro-particles, causing rapid coagulation and precipitation.\n• Option 2 is Incorrect: Transition-metal iron cannot convert into organic furanose carbohydrate rings.\n• Option 3 is Incorrect: Polyolefin tail matrices describe surfactant hydrophobic tails in micelle chemistry, not metal oxide precipitation.\n\nPart C: Key Takeaway / Value Addition\nAccording to the Hardy-Schulze rule, the coagulating power of anions for a positive ferric hydroxide sol increases rapidly with increasing anionic valency: $\text{PO}_4^{3-} > \text{SO}_4^{2-} > \text{Cl}^-$.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nद्रवविरोधी (Lyophobic) कोलाइडल सॉल का स्थायित्व उनके कणों पर उपस्थित समान विद्युत आवेश के कारण होने वाले प्रतिकर्षण पर निर्भर करता है। जब इसमें कोई विद्युत-अपघट्य मिलाया जाता है, तो उसके विपरीत आवेशित आयन सॉल के आवेश को उदासीन कर स्कंदन (अवक्षेपण) करा देते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: विद्युत-अपघट्य मिलाने पर अवक्षेप बनता है, घोल पारदर्शी या वाष्पशील नहीं होता।\n• विकल्प 1 सही है: जलयोजित फेरिक ऑक्साइड सॉल एक धनावेशित सॉल है। हार्डी-शुल्त्स नियम (Hardy-Schulze Rule) के अनुसार, धनावेशित सॉल के स्कंदन के लिए ऋणावेशित आयन (Anions) उत्तरदायी होते हैं। जब इसमें सोडियम क्लोराइड ($\text{NaCl}$) मिलाया जाता है, तो ऋणावेशित क्लोराइड आयन ($\text{Cl}^-$) फेरिक ऑक्साइड के धनावेश को उदासीन कर देते हैं। प्रतिकर्षण बल समाप्त होते ही कण आपस में जुड़कर भारी गुच्छे बना लेते हैं और तेजी से स्कंदित (Coagulate/अवक्षेपित) होकर नीचे बैठ जाते हैं।\n• विकल्प 2 गलत है: अकार्बनिक लोहे का शर्करा में रूपांतरण रासायनिक रूप से असंभव है।\n• विकल्प 3 गलत है: यह बहुलक रसायन का असंबंधित विकल्प है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nहार्डी-शुल्त्स नियमानुसार, धनावेशित फेरिक ऑक्साइड सॉल के लिए ऋणायनों की स्कंदन क्षमता उनकी संयोजकता के साथ बढ़ती है: $\text{PO}_4^{3-} > \text{SO}_4^{2-} > \text{Cl}^-$।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_60",
+    "qe": "Why do therapeutic drug formulations often exhibit dramatically enhanced operational efficacy when administered to a patient in a colloidal state?",
+    "qh": "चिकित्सीय दवा फार्मूलेशन अक्सर कोलाइडल अवस्था (colloidal state) में रोगी को दिए जाने पर नाटकीय रूप से बढ़ी हुई परिचालन प्रभावकारिता क्यों प्रदर्शित करते हैं?",
+    "oe": [
+      "Because they completely lack any ionizable functional groups across their backbones",
+      "Because the colloidal form provides an immense surface area that optimizes speed of assimilation and biological uptake within the body",
+      "Because they convert internal stomach contents into highly stable non-ionic polyols",
+      "Because they rely on strong covalent bonds that block all allosteric sites permanently"
+    ],
+    "oh": [
+      "क्योंकि उनकी मुख्य श्रृंखला में किसी भी आयनीकरण योग्य कार्यात्मक समूह का पूरी तरह से अभाव होता है",
+      "क्योंकि कोलाइडल रूप एक विशाल पृष्ठीय क्षेत्रफल प्रदान करता है जो शरीर के भीतर अवशोषण और जैविक उपयोग की गति को अनुकूलित करता है",
+      "क्योंकि वे आंतरिक पेट की सामग्री को अत्यधिक स्थिर गैर-आयनिक पॉलीओल्स में बदल देते हैं",
+      "क्योंकि वे मजबूत सहसंयोजक बंधों पर निर्भर करते हैं जो सभी एलोस्टेरिक साइटों को स्थायी रूप से अवरुद्ध करते हैं"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nColloidal systems comprise particles ranging between $1\text{ nm and }1000\text{ nm}$ in diameter. Subdividing bulk active pharmaceutical ingredients into this nanoscale colloidal domain vastly enhances their surface-to-volume ratio.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Therapeutic efficacy relies on bio-chemical surface reactivity and dissolution kinetics, not the complete absence of ionizable functional groups.\n• Option 1 is Correct: The extremely small particle size of medicines in the colloidal state provides an immense specific surface area per unit mass. This vast active surface area dramatically accelerates dissolution rates, cellular membrane permeability, and biochemical interaction with target receptor sites in physiological fluids, enabling rapid metabolic absorption, superior bioavailability, and high therapeutic efficacy at significantly lower dosages.\n• Option 2 is Incorrect: Colloidal medicines target disease pathways without non-selectively converting gastric fluids into synthetic polyols.\n• Option 3 is Incorrect: Most pharmacological drug mechanisms rely on reversible, non-covalent receptor interactions rather than permanent covalent poisoning.\n\nPart C: Key Takeaway / Value Addition\nClassic examples of colloidal medicines in pharmacopeia include Argyrol (a protective silver sol used as an ophthalmic antiseptic lotion), Colloidal Gold (used in diagnostic immunoassays), and Milk of Magnesia (colloidal $\text{Mg(OH)}_2$ suspension used as an effective antacid).",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nकोलाइडल अवस्था में पदार्थ के कणों का आकार $1\text{ nm}$ से $1000\text{ nm}$ के बीच होता है। इस सूक्ष्म आकार के कारण दवाओं का पृष्ठीय क्षेत्रफल स्थूल (bulk) पदार्थों की तुलना में अत्यधिक बढ़ जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: दवाओं की प्रभावकारिता उनके विशाल पृष्ठीय क्षेत्रफल और जैव-उपलब्धता पर निर्भर करती है।\n• विकल्प 1 सही है: कोलाइडल अवस्था में उपस्थित दवाएं अपने सूक्ष्म आकार के कारण प्रति इकाई द्रव्यमान अत्यधिक विशाल पृष्ठीय क्षेत्रफल (Specific Surface Area) प्रदान करती हैं। बड़ा पृष्ठीय क्षेत्रफल होने के कारण दवा शरीर के पाचक रसों, रक्त और ऊतकों के संपर्क में बहुत तेजी से आती है, जिससे उसका अवशोषण, घुलनशीलता और जैविक उपयोग (Assimilation) अत्यंत तीव्र और प्रभावी हो जाता है।\n• विकल्प 2 गलत है: दवाएं पेट की सामग्री को पॉलीओल्स में परिवर्तित नहीं करती हैं।\n• विकल्प 3 गलत है: दवाएं सामान्यतः प्रतिवर्ती और नियंत्रित तरीके से कार्य करती हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nप्रमुख कोलाइडल औषधियों के उदाहरण: आर्जिरोल (Argyrol) - आंखों के संक्रमण का सिल्वर सॉल लोशन, कोलाइडल गोल्ड - अंतःपेशीय इंजेक्शन, और मिल्क ऑफ मैग्नीशिया [$\text{Mg(OH)}_2$ का निलंबन] - पेट की अम्लीयता दूर करने वाला एंटासिड।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_61",
+    "qe": "Through what surface chemical phenomenon does raw animal hide transform into tough, hard, and resilient structural leather during commercial tanning processes?",
+    "qh": "कच्ची पशु खाल (raw animal hide) किस सतही रासायनिक घटना के माध्यम से व्यावसायिक टैनिंग प्रक्रियाओं के दौरान सख्त, कठोर और लचीले संरचनात्मक चमड़े में बदल जाती है?",
+    "oe": [
+      "Continuous monomolecular liquid-liquid emulsification",
+      "Mutual coagulation triggered when positively charged hide particles combine with negatively charged tannin colloids",
+      "Hydrolytic ring-opening cleavage of cross-linked resin segments",
+      "The step-growth condensation rate profile acceleration via basic mineral salts"
+    ],
+    "oh": [
+      "निरंतर एकल-आणविक द्रव-द्रव पायसीकरण (Liquid-liquid emulsification)",
+      "पारस्परिक स्कंदन (Mutual coagulation) जो तब शुरू होता है जब धनावेशित खाल के कण ऋणावेशित टैनिन कोलाइड के साथ संयोजित होते हैं",
+      "क्रॉस-लिंक्ड रेजिन खंडों का हाइड्रोलाइटिक रिंग-ओपनिंग विखंडन",
+      "क्षारीय खनिज लवणों के माध्यम से चरण-वृद्धि संघनन दर प्रोफ़ाइल त्वरण"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nLeather tanning is a practical industrial application of colloid chemistry that converts soft, decomposable raw animal hides into durable, imputrescible leather via colloidal charge neutralization.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Tanning is an irreversible solid-phase mutual precipitation process, not a liquid-liquid emulsion.\n• Option 1 is Correct: Raw, un-tanned animal hide is a biological colloidal framework composed of proteinaceous collagen fibers that carry net positive electrical surface charges. Vegetable Tannin (obtained from plant barks) and synthetic chromium complexes form negatively charged colloidal dispersions. When raw hides are soaked in a tannin or chromium tanning bath, Mutual Coagulation (Mutual Precipitation) occurs between the positively charged collagen protein fibers and the negatively charged tannin colloids. This neutralizes their surface charges and cross-links the protein chains, transforming the soft, putrescible raw hide into tough, hard, water-resistant, and non-decomposable Leather.\n• Option 2 is Incorrect: Ring-opening reactions characterize nylon synthesis, not collagen cross-linking.\n• Option 3 is Incorrect: Step-growth condensation describes polymerizations like Dacron, unrelated to tanning baths.\n\nPart C: Key Takeaway / Value Addition\nModern commercial tanning uses both vegetable tannins and chrome tanning (using basic chromium sulfate salts, $\text{Cr(OH)SO}_4$), which produce mutual coagulation and chromium cross-linking with collagen carboxyl groups.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nचमड़े की टैनिंग (चर्मशोधन) कोलाइड रसायन का एक महत्वपूर्ण व्यावहारिक अनुप्रयोग है, जिसमें कच्ची पशु खाल को सड़ने से बचाकर टिकाऊ और लचीले चमड़े में बदला जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: टैनिंग कोई द्रव-द्रव पायसीकरण नहीं है।\n• विकल्प 1 सही है: कच्ची पशु खाल एक प्रोटीनयुक्त (कोलेजन) कोलाइडल संरचना होती है जिसके रेशों पर धनात्मक विद्युत आवेश होता है। दूसरी ओर, पौधों की छाल से प्राप्त टैनिन (Tannin) या क्रोमियम लवण ऋणावेशित कोलाइडल कण होते हैं। जब खाल को टैनिन के घोल में भिगोया जाता है, तो दोनों विपरीत आवेशित कोलाइड एक-दूसरे के आवेश को उदासीन कर देते हैं। इस पारस्परिक स्कंदन (Mutual Coagulation) के कारण कोलेजन रेशे आपस में दृढ़ता से बंध जाते हैं और मुलायम सड़नशील खाल एक अत्यधिक मजबूत, जल-प्रतिरोधी और टिकाऊ चमड़े (Leather) में बदल जाती है।\n• विकल्प 2 गलत है: रिंग-ओपनिंग बहुलकीकरण का चर्मशोधन से कोई संबंध नहीं है।\n• विकल्प 3 गलत है: यह डैक्रॉन जैसे सिंथेटिक बहुलकों के निर्माण की विधि है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nआधुनिक क्रोम टैनिंग में बेसिक क्रोमियम सल्फेट लवणों का उपयोग किया जाता है, जो कोलेजन प्रोटीन के साथ पारस्परिक स्कंदन और संकुल बंधन बनाकर चमड़े को मजबूत बनाते हैं।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_62",
+    "qe": "How does an industrial Cottrell precipitator successfully remove toxic soot and carbon smoke particles from factory chimney exhaust emissions?",
+    "qh": "एक औद्योगिक कॉटरेल अवक्षेपक (Cottrell precipitator) कारखाने की चिमनी के निकास उत्सर्जन से जहरीली कालिख और कार्बन धुएं के कणों को सफलतापूर्वक कैसे हटाता है?",
+    "oe": [
+      "By boiling the gas stream to convert carbon into volatile open-chain methane",
+      "By passing the charged smoke particles through a high-voltage chamber containing oppositely charged plates, neutralizing and precipitating the soot",
+      "By transforming the aerosol into a water-soluble non-ionic carbohydrate grid",
+      "By deploying cross-linked phenolic thermosetting network resins inside the flue gas"
+    ],
+    "oh": [
+      "कार्बन को वाष्पशील खुली श्रृंखला वाले मीथेन में बदलने के लिए गैस स्ट्रीम को उबालकर",
+      "आवेशित धुएं के कणों को विपरीत आवेशित प्लेटों वाले उच्च-वोल्टेज कक्ष से गुजारकर, कालिख को उदासीन और अवक्षेपित करके",
+      "एरोसोल को पानी में घुलनशील गैर-आयनिक कार्बोहाइड्रेट ग्रिड में बदलकर",
+      "फ्लू गैस के अंदर क्रॉस-लिंक्ड फेनोलिक थर्मोसेटिंग नेटवर्क रेजिन को तैनात करके"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nSmoke emitted from industrial factory chimneys is a solid-in-gas colloidal aerosol consisting of unburnt carbon (soot), fly ash, and dust particles suspended in hot flue gases. These particles carry an electrical charge (commonly negative).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Heating exhaust gas cannot convert solid carbon into methane gas without chemical hydrogenation reagents.\n• Option 1 is Correct: The Cottrell Smoke Precipitator utilizes electrostatic precipitation (electrophoresis followed by coagulation). The smoke stream is directed through a chamber containing high-voltage wire electrodes maintained at a potential difference of $30,000\text{ to }50,000\text{ Volts}$ opposite in polarity to the smoke particles. The intense electric field ionizes the gas; when the charged colloidal soot particles strike the oppositely charged collection electrode plates, they lose their electrical charge, coagulate, and precipitate under gravity to the hopper base, allowing clean, soot-free air to escape from the chimney stack.\n• Option 2 is Incorrect: Smoke cannot be chemically converted into water-soluble carbohydrates.\n• Option 3 is Incorrect: Thermosetting network resins like Bakelite are not deployed as flue gas precipitators.\n\nPart C: Key Takeaway / Value Addition\nInvented by Frederick Gardner Cottrell, electrostatic precipitators achieve over 99% collection efficiency for fine particulate matter ($\text{PM}_{2.5}$ and $\text{PM}_{10}$) in thermal power stations.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nकारखानों की चिमनियों से निकलने वाला धुआं हवा में परिक्षेपित कार्बन, कालिख और राख के कणों का एक आवेशित कोलाइडल एरोसोल (Colloidal Aerosol) होता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: चिमनी के धुएं को गर्म करके मीथेन में नहीं बदला जा सकता।\n• विकल्प 1 सही है: कॉटरेल अवक्षेपक (Cottrell Precipitator) स्थिरवैद्युत अवक्षेपण (Electrostatic Precipitation) के सिद्धांत पर कार्य करता है। चिमनी के निकास मार्ग में लगभग 30,000 से 50,000 वोल्ट के उच्च विभव वाली विपरीत आवेशित धातु की प्लेटें और इलेक्ट्रोड तार लगे होते हैं। जब आवेशित धुएं के कण इन इलेक्ट्रोडों के संपर्क में आते हैं, तो वे अपना विद्युत आवेश खोकर उदासीन हो जाते हैं और स्कंदित (Coagulate/Precipitate) होकर गुरुत्वाकर्षण द्वारा नीचे हॉपर में गिर जाते हैं, जिससे चिमनी से बाहर निकलने वाली गैस कालिख और प्रदूषण से मुक्त हो जाती है।\n• विकल्प 2 गलत है: धुआं कार्बोहाइड्रेट में परिवर्तित नहीं हो सकता।\n• विकल्प 3 गलत है: इसमें किसी प्लास्टिक या रेजिन का उपयोग नहीं होता।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nफ्रेडरिक कॉटरेल द्वारा आविष्कृत यह उपकरण थर्मल पावर प्लांटों और सीमेंट कारखानों में $\text{PM}_{2.5}$ और $\text{PM}_{10}$ जैसे सूक्ष्म कणों को 99% से अधिक दक्षता के साथ अवक्षेपित करता है।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_63",
+    "qe": "Which analytical testing method allows a chemical technician to definitively determine which phase is the dispersed phase versus the dispersion medium inside an unknown emulsion sample?",
+    "qh": "कौन सी विश्लेषणात्मक परीक्षण विधि एक रासायनिक तकनीशियन को निश्चित रूप से यह निर्धारित करने की अनुमति देती है कि एक अज्ञात पायस (emulsion) नमूने के भीतर कौन सा चरण बिखरा हुआ चरण (dispersed phase) बनाम फैलाव माध्यम (dispersion medium) है?",
+    "oe": [
+      "Subjecting the sample to fuming nitric acid distillation pathways",
+      "Dilution testing: adding excess dispersion medium blends smoothly, while adding excess dispersed phase separates into a distinct isolated layer",
+      "Measuring the cross-linking density of the methylene bridges under pressure",
+      "Verifying if the material undergoes rapid free-radical coordination transformations"
+    ],
+    "oh": [
+      "नमूने को सधूम नाइट्रिक एसिड आसवन मार्गों के अधीन करना",
+      "तनुकरण परीक्षण (Dilution testing): अतिरिक्त परिक्षेपण माध्यम मिलाने पर वह आसानी से मिल जाता है, जबकि अतिरिक्त परिक्षेपित प्रावस्था मिलाने पर वह एक अलग पृथक परत में विभाजित हो जाता है",
+      "दबाव में मेथिलीन पुलों के क्रॉस-लिंकिंग घनत्व को मापना",
+      "यह सत्यापित करना कि क्या सामग्री तेजी से मुक्त-कण समन्वय परिवर्तनों से गुजरती है"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nAn emulsion is a colloidal dispersion of one liquid in another immiscible liquid, categorized into Oil-in-Water (O/W, like milk) or Water-in-Oil (W/O, like butter/cold cream).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Fuming nitric acid is a destructive oxidizing agent that decomposes organic lipids rather than diagnosing emulsion type.\n• Option 1 is Correct: The Dilution Test is a diagnostic method based on phase continuity:\n  - An emulsion can be diluted to any extent by adding an additional volume of its continuous Dispersion Medium, which blends smoothly without breaking the emulsion;\n  - If the Dispersed Phase is added in excess, it cannot be homogeneously absorbed by the continuous phase and separates into a distinct, immiscible layer.\n  For example, adding water to an O/W emulsion (like milk) dilutes it smoothly, but adding oil creates a floating layer. Conversely, a W/O emulsion mixes homogeneously with added oil but separates if excess water is added.\n• Option 2 is Incorrect: Methylene bridge density applies to phenolic resins, not fluid emulsions.\n• Option 3 is Incorrect: Free-radical coordination relates to synthetic polymer kinetics.\n\nPart C: Key Takeaway / Value Addition\nOther standard tests to identify emulsion type include the Conductivity Test (O/W conducts electricity well due to the continuous aqueous phase; W/O is non-conductive) and the Dye Test (an oil-soluble dye like Sudan III colors W/O emulsions completely).",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nपायस (Emulsion) दो अमिश्रणीय द्रवों का कोलाइडल मिश्रण होता है, जिसे दो वर्गों—तेल-में-जल (O/W, जैसे दूध) अथवा जल-में-तेल (W/O, जैसे मक्खन) में विभाजित किया जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: सधूम नाइट्रिक एसिड पायस का रासायनिक विनाश कर देगा।\n• विकल्प 1 सही है: तनुकरण परीक्षण (Dilution Test) पायस की पहचान की सबसे प्रामाणिक विधि है:\n  - किसी भी पायस में उसके परिक्षेपण माध्यम (Dispersion Medium) की कितनी भी मात्रा मिलाने पर वह उसमें आसानी से घुलमिल जाता है और पायस स्थिर रहता है;\n  - परंतु यदि उसमें परिक्षेपित प्रावस्था (Dispersed Phase) की अतिरिक्त मात्रा मिलाई जाए, तो वह मिलती नहीं है बल्कि एक अलग स्वतंत्र परत बना लेती है।\n  उदाहरण के लिए, तेल-में-जल (O/W) पायस में जल मिलाने पर वह आसानी से तनु हो जाता है, परंतु तेल मिलाने पर तेल की अलग परत बन जाती है।\n• विकल्प 2 गलत है: मेथिलीन ब्रिज बैकेलाइट प्लास्टिक में पाए जाते हैं।\n• विकल्प 3 गलत है: यह बहुलकीकरण से संबंधित पद है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nपायस के प्रकार की पहचान के अन्य तरीके: चालकता परीक्षण (O/W पायस जल के कारण विद्युत का सुचालक होता है, जबकि W/O कुचालक होता है) तथा रंजक परीक्षण (सूडान-III रंजक केवल तेल-आधारित W/O पायस को रंगीन करता है)।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_64",
+    "qe": "Why do physical adsorption (physisorption) and chemical adsorption (chemisorption) show opposite trends when the system operational temperature is raised?",
+    "qh": "प्रणाली के परिचालन तापमान को बढ़ाने पर भौतिक अधिशोषण (physisorption) और रासायनिक अधिशोषण (chemisorption) विपरीत प्रवृत्तियाँ क्यों दिखाते हैं?",
+    "oe": [
+      "Physisorption is driven by strong ionic links that fracture under heat",
+      "Physisorption relies on weak van der Waals forces that break easily at high temperatures, whereas chemisorption requires activation energy to form chemical bonds and is initially favored by heat",
+      "Physisorption is an open open-chain carbohydrate mesh, while chemisorption is a phenolic network",
+      "There is no operational difference; both follow identical exothermic thresholds"
+    ],
+    "oh": [
+      "भौतिक अधिशोषण मजबूत आयनिक बंधों द्वारा संचालित होता है जो गर्मी के तहत टूट जाते हैं",
+      "भौतिक अधिशोषण कमजोर वांडर वाल्स बलों पर निर्भर करता है जो उच्च तापमान पर आसानी से टूट जाते हैं, जबकि रासायनिक अधिशोषण के लिए रासायनिक बंध बनाने हेतु सक्रियण ऊर्जा की आवश्यकता होती है और प्रारंभ में गर्मी इसके अनुकूल होती है",
+      "भौतिक अधिशोषण एक खुली श्रृंखला कार्बोहाइड्रेट जाल है, जबकि रासायनिक अधिशोषण एक फेनोलिक नेटवर्क है",
+      "कोई परिचालन अंतर नहीं है; दोनों समान ऊष्माक्षेपी सीमाओं का पालन करते हैं"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nAdsorption of gases on solid surfaces is classified into Physisorption (driven by non-specific van der Waals forces) and Chemisorption (driven by valence chemical bond formation).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Physisorption is characterized by weak non-ionic van der Waals interactions with low enthalpy ($20-40\text{ kJ/mol}$).\n• Option 1 is Correct: \n  - Physisorption: Involves weak, non-directional van der Waals forces and requires nearly zero activation energy. Because adsorption is exothermic ($Delta H < 0$), according to Le Chatelier's Principle, raising the temperature increases the thermal kinetic energy of adsorbed gas molecules, promoting desorption. Thus, physisorption decreases continuously and monotonically with temperature.\n  - Chemisorption: Involves forming strong covalent or coordinate surface bonds ($Delta H = 80-240\text{ kJ/mol}$). Like a chemical reaction, it requires a significant Activation Energy ($E_a$). Raising the temperature supplies thermal energy to overcome this activation barrier, causing chemisorption to initially increase to a peak before declining at very high temperatures due to desorption.\n• Option 2 and Option 3 describe invalid structural polymer claims and ignore activation thermodynamics.\n\nPart C: Key Takeaway / Value Addition\nThe isobaric plot of $\frac{x}{m}$ vs $T$ for physisorption shows a continuous downward slope, whereas chemisorption exhibits an initial rise followed by a decline, highlighting why chemisorption is termed 'Activated Adsorption'.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nठोस सतह पर गैसों का अधिशोषण दो प्रकार का होता है: भौतिक अधिशोषण (दुर्बल वांडर वाल्स बलों द्वारा) और रासायनिक अधिशोषण (रासायनिक बंधों के निर्माण द्वारा)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: भौतिक अधिशोषण में कोई आयनिक बंध नहीं बनते।\n• विकल्प 1 सही है:\n  - भौतिक अधिशोषण (Physisorption): इसमें गैस के अणु सतह से दुर्बल वांडर वाल्स आकर्षण बलों द्वारा जुड़े होते हैं और इसके लिए किसी सक्रियण ऊर्जा की आवश्यकता नहीं होती। तापमान बढ़ाने पर अणुओं की गतिज ऊर्जा बढ़ जाती है जिससे विशोषण (Desorption) तेज हो जाता है, अतः तापमान बढ़ने पर भौतिक अधिशोषण लगातार घटता है।\n  - रासायनिक अधिशोषण (Chemisorption): इसमें सतह पर वास्तविक रासायनिक बंध बनते हैं, जिसके लिए एक निश्चित संक्रियण ऊर्जा (Activation Energy, $E_a$) की आवश्यकता होती है। तापमान बढ़ाने पर प्रारंभ में अणुओं को संक्रियण ऊर्जा प्राप्त होती है, जिससे रासायनिक अधिशोषण पहले बढ़ता है और फिर बहुत उच्च तापमान पर विशोषण प्रभावी होने के कारण घटने लगता है।\n• विकल्प 2 और विकल्प 3 गलत हैं क्योंकि यह ऊष्मागतिकी के विरुद्ध है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nतापमान और अधिशोषण के ग्राफ (Adsorption Isobar) में भौतिक अधिशोषण का वक्र निरंतर नीचे गिरता है, जबकि रासायनिक अधिशोषण का वक्र पहले ऊपर उठता है और फिर नीचे गिरता है, इसलिए इसे 'सक्रियित अधिशोषण' (Activated Adsorption) भी कहते हैं।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_65",
+    "qe": "What serious hazard occurs within a stable colloidal dispersion if the purification step known as dialysis is carried out for a prolonged period?",
+    "qh": "यदि डायलिसिस (dialysis) के रूप में जाने जाने वाले शुद्धिकरण चरण को लंबे समय तक चलाया जाए तो एक स्थिर कोलाइडल फैलाव के भीतर क्या गंभीर खतरा पैदा होता है?",
+    "oe": [
+      "The individual ions convert into a highly branched cross-linked thermoplastic resin",
+      "The trace stabilizing electrolytes are completely stripped away, destroying the surface charges and triggering rapid coagulation",
+      "The entire mixture converts into an open-chain dicarboxylic acid fragment",
+      "The continuous medium turns entirely volatile and boils away into gas"
+    ],
+    "oh": [
+      "व्यक्तिगत आयन एक अत्यधिक शाखित क्रॉस-लिंक्ड थर्मोप्लास्टिक राल में परिवर्तित होते हैं",
+      "ट्रेस स्थिर करने वाले विद्युत-अपघट्य (electrolytes) पूरी तरह से छिन जाते हैं, जिससे सतह के आवेश नष्ट हो जाते हैं और तीव्र स्कंदन (coagulation) शुरू हो जाता है",
+      "पूरा मिश्रण एक खुली श्रृंखला वाले डाइकार्बोक्सिलिक एसिड टुकड़े में बदल जाता है",
+      "निरंतर माध्यम पूरी तरह से वाष्पशील हो जाता है और गैस में उबल जाता है"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nDialysis is a colloidal purification technique in which dissolved crystalloid electrolyte impurities diffuse out of a colloidal sol through a semi-permeable parchment or cellophane membrane.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Dialysis is a physical diffusion-based filtration process, unrelated to synthetic resin polymerization.\n• Option 1 is Correct: While excessive concentrations of electrolytes cause sol coagulation, a trace amount of dissolved electrolyte is fundamentally indispensable to maintain the electrical double layer, surface charge, and zeta potential that keep colloidal particles mutually repulsive and stable. If dialysis is carried out for an excessively prolonged period, even these essential trace stabilizing electrolytes diffuse out through the membrane. Deprived of their surface electrical charge, the colloidal particles lose electrostatic repulsion and aggregate, undergoing spontaneous coagulation, flocculation, and precipitation.\n• Option 2 is Incorrect: Dialytic diffusion does not cleave chemical bonds into dicarboxylic acid fragments.\n• Option 3 is Incorrect: Dialysis is conducted at ambient temperatures and does not cause solvent boiling.\n\nPart C: Key Takeaway / Value Addition\nElectrodialysis applies an external electric field to accelerate the removal of ionic impurities, but must also be carefully timed to avoid complete de-electrolyzation and sol destabilization.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nअपोहन (Dialysis) कोलाइडल विलयन के शुद्धिकरण की वह विधि है जिसमें अर्धपारगम्य झिल्ली (चर्मपत्र या सेलोफेन) द्वारा अवांछित घुलनशील विद्युत-अपघट्य अशुद्धियों को बाहर निकाला जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: अपोहन में कोई बहुलकीकरण या रेजिन निर्माण नहीं होता।\n• विकल्प 1 सही है: यद्यपि अतिरिक्त विद्युत-अपघट्य सॉल को नष्ट करते हैं, परंतु कोलाइडल कणों पर आवश्यक विद्युत आवेश और जीटा विभव बनाए रखने के लिए विद्युत-अपघट्य की एक न्यूनतम (ट्रेस) मात्रा का उपस्थित होना अनिवार्य होता है। यदि अपोहन की प्रक्रिया को अत्यधिक लंबे समय तक जारी रखा जाए, तो ये आवश्यक स्थिरकारी आयन भी पूरी तरह छनकर बाहर निकल जाते हैं। इसके परिणामस्वरूप कणों का विद्युत आवेश समाप्त हो जाता है, प्रतिकर्षण बल खत्म हो जाता है और पूरा कोलाइडल विलयन स्कंदित (Coagulate/अवक्षेपित) होकर नष्ट हो जाता है।\n• विकल्प 2 गलत है: यह अकार्बनिक शुद्धिकरण है, इसमें कोई अम्लीय विखंडन नहीं होता।\n• विकल्प 3 गलत है: अपोहन सामान्य तापमान पर होता है, इसमें विलायक वाष्पीकृत नहीं होता।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nविद्युत-अपोहन (Electrodialysis) में विद्युत क्षेत्र लगाकर अशुद्धियों को तेजी से हटाया जाता है, परंतु इसे भी निर्धारित समय तक ही किया जाता है ताकि आवश्यक ट्रेस आयन नष्ट न हों।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_66",
+    "qe": "Why does a white precipitate of a silver halide turn into a colored solid mass when exposed to an aqueous solution containing the dye eosin?",
+    "qh": "सिल्वर हैलाइड का एक सफेद अवक्षेप (white precipitate) ईोसिन डाई युक्त जलीय घोल के संपर्क में आने पर रंगीन ठोस द्रव्यमान में क्यों बदल जाता है?",
+    "oe": [
+      "Because the dye dissolves the silver lattice completely via basic mineral buffering",
+      "Because the colored dye molecules undergo selective surface adsorption onto the silver halide crystal faces",
+      "Because it forms a highly volatile open-chain carbohydrate mesh under heat",
+      "Because the treatment converts the halide ions into narrow-spectrum antibiotics"
+    ],
+    "oh": [
+      "क्योंकि डाई बुनियादी खनिज बफरिंग के माध्यम से चांदी के जालक को पूरी तरह से घोल देती है",
+      "क्योंकि रंगीन डाई के अणु सिल्वर हैलाइड क्रिस्टल चेहरों पर चयनात्मक सतही अधिशोषण (selective surface adsorption) से गुजरते हैं",
+      "क्योंकि यह गर्मी के तहत अत्यधिक वाष्पशील खुली श्रृंखला कार्बोहाइड्रेट जाल बनाता है",
+      "क्योंकि उपचार हैलाइड आयनों को संकीर्ण-स्पेक्ट्रम एंटीबायोटिक्स में परिवर्तित करता है"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nAdsorption indicators are organic dyes that change color upon reaching the stoichiometric equivalence point during precipitation titrations due to surface adsorption onto the precipitate lattice (Fajans' method).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: The silver halide crystal lattice remains intact as an insoluble precipitate and is not dissolved by the dye.\n• Option 1 is Correct: When silver ions are titrated against halide ions in the presence of an adsorption indicator like Eosin or Fluorescein, a white precipitate of silver halide (e.g., $\text{AgCl}$ or $\text{AgBr}$) forms. Just past the equivalence point, the precipitate particles adsorb excess $\text{Ag}^+$ ions, acquiring a positive surface charge. These positively charged crystal faces then selectively adsorb the colored organic anions of the eosin dye via electrostatic surface adsorption. This concentration of dye molecules on the crystal boundary alters the dye's chromophore resonance, turning the white precipitate into a distinct colored (pink/red) solid mass.\n• Option 2 and Option 3 describe unrelated carbohydrate or antibiotic transformations.\n\nPart C: Key Takeaway / Value Addition\nKasimir Fajans introduced adsorption indicators (Fluorescein, Eosin, Rhodamine) in argentometric precipitation titrations, relying entirely on surface adsorption dynamics.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nअधिशोषण संकेतक (Adsorption Indicators) वे कार्बनिक रंजक होते हैं जो अवक्षेपण अनुमापन (Precipitation Titration) के तुल्यता बिंदु पर अवक्षेप की सतह पर अधिशोषित होकर रंग परिवर्तन दर्शाते हैं (फैजांस विधि)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: रंजक अवक्षेप के क्रिस्टल जालक को घोलता नहीं है।\n• विकल्प 1 सही है: जब सिल्वर हैलाइड (जैसे $\text{AgCl}$ या $\text{AgBr}$) के अवक्षेपण के दौरान ईओसिन (Eosin) जैसे अधिशोषण संकेतक की उपस्थिति होती है, तो तुल्यता बिंदु के ठीक बाद अवक्षेप के कण अतिरिक्त $\text{Ag}^+$ आयनों को अधिशोषित कर धनावेशित हो जाते हैं। इसके बाद ईओसिन डाई के ऋणावेशित रंगीन अणु इन धनावेशित क्रिस्टल सतहों पर चयनात्मक सतही अधिशोषण (Selective Surface Adsorption) द्वारा चिपक जाते हैं। सतह पर डाई का संकेंद्रण होने से सफेद अवक्षेप का रंग बदलकर विशिष्ट गुलाबी या लाल रंग के ठोस द्रव्यमान में परिवर्तित हो जाता है।\n• विकल्प 2 और विकल्प 3 गलत हैं क्योंकि यह शुद्ध रूप से एक सतही परिघटना है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nकासिमिर फैजांस ने 1923 में अधिशोषण संकेतकों (जैसे फ्लोरेसिन, ईओसिन) का विकास किया था, जो सिल्वर हैलाइड अवक्षेपों के पृष्ठीय अधिशोषण पर आधारित हैं।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_67",
+    "qe": "What surface chemical mechanism allows a moist lump of alum to quickly stop bleeding when rubbed over a minor skin cut?",
+    "qh": "कौन सा सतही रासायनिक तंत्र फिटकरी (alum) के एक नम टुकड़े को मामूली त्वचा कटने पर रगड़ने से रक्तस्राव को जल्दी रोकने की अनुमति देता है?",
+    "oe": [
+      "The alum dissolves the red blood cells into a volatile gas phase configuration",
+      "The highly charged aluminum cations in alum induce the rapid coagulation of the negatively charged colloidal blood particles, forming a clot plug",
+      "It transforms the vascular boundary walls into unbranched synthetic polyolefins",
+      "It alters the internal molecular weight of water molecules up to infinite thresholds"
+    ],
+    "oh": [
+      "फिटकरी लाल रक्त कोशिकाओं को वाष्पशील गैस चरण विन्यास में पूरी तरह से घोल देती है",
+      "फिटकरी में मौजूद अत्यधिक आवेशित एल्युमिनियम धनायन ऋणावेशित कोलाइडल रक्त कणों के तेजी से स्कंदन (coagulation) को प्रेरित करते हैं, जिससे एक थक्का प्लग बनता है",
+      "यह संवहनी सीमा दीवारों को अशाखित सिंथेटिक पॉलीओलेफ़िन में बदल देता है",
+      "यह पानी के अणुओं के आंतरिक आणविक भार को अनंत सीमाओं तक बदल देता है"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nHuman blood is a negatively charged biological colloidal sol consisting of cellular elements (erythrocytes, leukocytes, platelets) and colloidal proteins (albumin, globulin, fibrinogen) suspended in plasma.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Alum does not chemically dissolve blood cells into gases; it causes them to aggregate and precipitate.\n• Option 1 is Correct: Potash Alum [$\text{K}_2\text{SO}_4 cdot \text{Al}_2(\text{SO}_4)_3 cdot 24\text{H}_2\text{O}$] and Ferric Chloride ($\text{FeCl}_3$) act as powerful styptic agents. When a moist lump of alum is applied to a bleeding cut, it dissolves locally to release trivalent Aluminium cations ($\text{Al}^{3+}$). According to the Hardy-Schulze Rule, because $\text{Al}^{3+}$ carries a high positive charge (valency of 3), it rapidly neutralizes the negative surface electrical charges on the colloidal blood proteins and cellular fragments. Stripped of electrostatic repulsion, the blood rapidly coagulates, forming an insoluble gelatinous fibrin clot that plugs the damaged capillary and arrests bleeding.\n• Option 2 and Option 3 describe impossible polymer and molecular weight claims.\n\nPart C: Key Takeaway / Value Addition\nThe coagulating efficiency of electrolytes on blood follows the Hardy-Schulze valency order: $\text{Al}^{3+} > \text{Fe}^{3+} > \text{Ca}^{2+} > \text{Na}^+$, explaining why alum ($\text{Al}^{3+}$) is far superior to table salt ($\text{Na}^+$) as a styptic agent.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nमानव रक्त एक प्राकृतिक जैविक कोलाइडल विलयन है, जिसमें प्लाज्मा में निलंबित रक्त कोशिकाएं (RBCs, WBCs, प्लेटलेट्स) और प्रोटीन कण ऋणात्मक विद्युत आवेश वहन करते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: फिटकरी रक्त कोशिकाओं को गैस में नहीं बदलती।\n• विकल्प 1 सही है: पोटाश फिटकरी [Alum, $\text{K}_2\text{SO}_4 cdot \text{Al}_2(\text{SO}_4)_3 cdot 24\text{H}_2\text{O}$] एक प्रसिद्ध रक्तस्तंभक (Styptic) पदार्थ है। जब इसे कटे हुए स्थान पर लगाया जाता है, तो यह घुलकर त्रिसंयोजी एल्युमिनियम धनायन ($\text{Al}^{3+}$) मुक्त करती है। हार्डी-शुल्त्स नियम के अनुसार, $\text{Al}^{3+}$ का उच्च धनावेश रक्त के ऋणावेशित कोलाइडल कणों और प्रोटीनों को तुरंत उदासीन कर देता है। आवेश समाप्त होते ही रक्त का तेजी से स्कंदन (Coagulation / थक्का निर्माण) हो जाता है और एक ठोस थक्का बनकर कटी हुई वाहिका को बंद कर देता है, जिससे रक्तस्राव तुरंत रुक जाता है।\n• विकल्प 2 गलत है: रक्त वाहिकाएं प्लास्टिक बहुलक में नहीं बदलतीं।\n• विकल्प 3 गलत है: जल का आणविक भार नियत रहता है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nरक्त के स्कंदन में धनायनों की प्रभावशीलता का क्रम: $\text{Al}^{3+} > \text{Fe}^{3+} > \text{Ca}^{2+} > \text{Na}^+$ होता है, इसी कारण फिटकरी ($\text{Al}^{3+}$) साधारण नमक ($\text{Na}^+$) की तुलना में रक्त का थक्का जमाने में अत्यधिक तीव्र होती है।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_68",
+    "qe": "What happens to the internal mechanical structure of raw animal hides when they are soaked inside a chromium salt tanning bath?",
+    "qh": "कच्ची पशु खाल (raw animal hides) की आंतरिक यांत्रिक संरचना का क्या होता है जब उन्हें क्रोमियम सॉल्ट टैनिंग बाथ के भीतर भिगोया जाता है?",
+    "oe": [
+      "The structural chains are broken completely down into single amino units",
+      "The positively charged hide fibers undergo mutual coagulation with the tanning complexes, inducing robust cross-linking that hardens the matrix into leather",
+      "The entire matrix converts into an amorphous non-ionic carbohydrate project",
+      "The functional domains are reduced to water-soluble linear starch granules"
+    ],
+    "oh": [
+      "संरचनात्मक श्रृंखलाएं पूरी तरह से एकल अमीनो इकाइयों में टूट जाती हैं",
+      "धनावेशित खाल के रेशे टैनिंग कॉम्प्लेक्स के साथ पारस्परिक स्कंदन (mutual coagulation) से गुजरते हैं, जिससे मजबूत क्रॉस-लिंकिंग प्रेरित होती है जो मैट्रिक्स को चमड़े में कठोर कर देती है",
+      "पूरा मैट्रिक्स एक अनाकार गैर-आयनिक कार्बोहाइड्रेट परियोजना में परिवर्तित हो जाता है",
+      "कार्यात्मक डोमेन पानी में घुलनशील रैखिक स्टार्च कणिकाओं में कम हो जाते हैं"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nLeather manufacturing relies on the colloidal principle of mutual coagulation, where oppositely charged colloidal systems are mixed to induce simultaneous charge neutralization and precipitation.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Tanning preserves and stabilizes collagen networks rather than hydrolyzing peptide chains into amino acids.\n• Option 1 is Correct: Raw animal hide is a colloidal matrix composed of proteinaceous collagen fibers that carry net positive electrical surface charges. Basic Chromium Salts (such as basic chromium sulfate, $\text{Cr(OH)SO}_4$, used in chrome tanning) and vegetable tannins form negatively charged coordination complexes or colloidal sols in water. When raw hides are immersed in the chromium tanning bath, Mutual Coagulation and Cross-linking occur between the positively charged collagen protein chains and the negatively charged chromium complexes. This cross-linking bridges the collagen triple-helices, transforming the soft, putrescible raw hide into tough, heat-resistant, and chemically durable Leather.\n• Option 2 and Option 3 describe non-protein carbohydrate transformations.\n\nPart C: Key Takeaway / Value Addition\nChrome tanning introduces coordinate covalent bridges between chromium(III) ions and the carboxylate ($-COO^-$) side chains of collagen, dramatically increasing hydrothermal stability (shrinkage temperature $> 100^circ\text{C}$).",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nचमड़ा उद्योग पारस्परिक स्कंदन (Mutual Coagulation) के सिद्धांत पर आधारित है, जहाँ दो विपरीत आवेशित कोलाइडल प्रणालियों को मिलाकर उनका स्थायी अवक्षेपण किया जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: टैनिंग में प्रोटीन श्रृंखलाएं सुरक्षित और मजबूत होती हैं, टूटती नहीं।\n• विकल्प 1 सही है: जानवरों की कच्ची खाल एक प्रोटीनयुक्त (कोलेजन) कोलाइडल संरचना होती है जिसके रेशों पर धनात्मक विद्युत आवेश होता है। जब इसे बेसिक क्रोमियम सल्फेट लवणों के टैनिंग बाथ में डुबोया जाता है (जिसमें ऋणावेशित क्रोमियम संकुल होते हैं), तो ऋणावेशित क्रोमियम संकुल और धनावेशित कोलेजन रेशों के बीच पारस्परिक स्कंदन (Mutual Coagulation) होता है। क्रोमियम आयन कोलेजन प्रोटीन श्रृंखलाओं के बीच मजबूत क्रॉस-लिंक पुल बना देते हैं, जिससे मुलायम और सड़ने वाली कच्ची खाल एक अत्यधिक मजबूत, लचीले, जल-प्रतिरोधी और टिकाऊ चमड़े (Leather) में बदल जाती है।\n• विकल्प 2 और विकल्प 3 गलत हैं क्योंकि यह प्रोटीन से संबंधित प्रक्रिया है, कार्बोहाइड्रेट से नहीं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nक्रोम टैनिंग में क्रोमियम(III) आयन कोलेजन के कार्बोक्सिल समूहों के साथ उपसहसंयोजक बंध बनाते हैं, जिससे चमड़े का संकुचन तापमान (Shrinkage temperature) $100^circ\text{C}$ से अधिक हो जाता है।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_69",
+    "qe": "According to the Hardy-Schulze rule, why does a trivalent phosphate anion ($PO_4^{3-}$) exhibit a dramatically greater coagulating power than a monovalent chloride anion ($Cl^-$)?",
+    "qh": "हार्डी-शुल्ज़ नियम के अनुसार, एक त्रिसंयोजक फॉस्फेट ऋणायन ($PO_4^{3-}$) एक एकसंयोजक क्लोराइड ऋणायन ($Cl^-$) की तुलना में नाटकीय रूप से अधिक स्कंदन क्षमता (coagulating power) क्यों प्रदर्शित करता है?",
+    "oe": [
+      "Phosphate contains an abundance of volatile ester functional groups",
+      "The coagulating power scales sharply with the valency of the counter-ion, and the higher $-3$ charge of phosphate neutralizes sols far more efficiently than the $-1$ charge of chloride",
+      "The phosphate ion completely lacks oxygen atoms within its framework",
+      "The phosphate configuration is a natural biopolymer that dissolves instantly in water"
+    ],
+    "oh": [
+      "फॉस्फेट में वाष्पशील एस्टर कार्यात्मक समूहों की प्रचुरता होती है",
+      "स्कंदन क्षमता विरोधी आयन (counter-ion) की संयोजकता के साथ तेजी से बढ़ती है, और फॉस्फेट का उच्च $-3$ आवेश क्लोराइड के $-1$ आवेश की तुलना में सॉल को अधिक कुशलता से उदासीन करता है",
+      "फॉस्फेट आयन में इसके ढांचे के भीतर ऑक्सीजन परमाणुओं की पूरी तरह से कमी होती है",
+      "फॉस्फेट विन्यास एक प्राकृतिक बायोपोलीमर है जो पानी में तुरंत घुल जाता है"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nThe coagulation or precipitation of a colloidal sol by an added electrolyte is governed by the Hardy-Schulze Rule, which defines the relationship between the ionic charge of the active counter-ion and its coagulating efficacy.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Inorganic orthophosphate ions ($\text{PO}_4^{3-}$) contain zero organic ester functional groups.\n• Option 1 is Correct: The Hardy-Schulze Rule establishes two key tenets:\n  1. The ion carrying charge opposite to that of the colloidal particles (the active counter-ion) is responsible for causing coagulation;\n  2. The coagulating (flocculating) power of an active ion is directly proportional to the fourth power of its valency (charge, $z$):$$\text{Coagulating Power} propto z^4$$\n  For a positively charged sol (like hydrated ferric oxide sol), coagulation is driven by anions. Because the trivalent Phosphate anion ($\text{PO}_4^{3-}$, valency 3) carries a $-3$ charge compared to the monovalent Chloride anion ($\text{Cl}^-$, valency 1), its theoretical coagulating power is approximately $3^4 = 81\text{ times}$ greater than that of $\text{Cl}^-$. Thus, the minimum concentration (coagulation value) required for $\text{PO}_4^{3-}$ is far smaller.\n• Option 2 is Incorrect: The phosphate ion is $\text{PO}_4^{3-}$, containing four oxygen atoms.\n• Option 3 is Incorrect: Phosphate is a simple tetrahedral inorganic oxyanion, not a biopolymer.\n\nPart C: Key Takeaway / Value Addition\nThe coagulating power of anions for positive sols follows the sequence: $[\text{Fe}(\text{CN})_6]^{4-} > \text{PO}_4^{3-} > \text{SO}_4^{2-} > \text{Cl}^-$, whereas for negative sols (like $\text{As}_2\text{S}_3$), the cation sequence is $\text{Al}^{3+} > \text{Ba}^{2+} > \text{Na}^+$.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nविद्युत-अपघट्य द्वारा किसी कोलाइडल सॉल का अवक्षेपण या स्कंदन हार्डी-शुल्त्स नियम (Hardy-Schulze Rule) द्वारा नियंत्रित होता है, जो आयन की संयोजकता और उसकी स्कंदन क्षमता के संबंध को स्पष्ट करता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: अकार्बनिक फॉस्फेट में कोई एस्टर समूह नहीं होता।\n• विकल्प 1 सही है: हार्डी-शुल्त्स नियम के दो मुख्य बिंदु हैं:\n  1. सॉल का स्कंदन करने के लिए सॉल कणों के विपरीत आवेश वाला आयन (प्रभावी आयन) उत्तरदायी होता है;\n  2. प्रभावी आयन की स्कंदन क्षमता उसकी संयोजकता (आवेश, $z$) के चतुर्थ घात के समानुपाती होती है (स्कंदन क्षमता $propto z^4$)।\n  धनावेशित सॉल (जैसे $\text{Fe(OH)}_3$) के स्कंदन के लिए ऋणायन कार्य करते हैं। त्रिसंयोजी फॉस्फेट आयन ($\text{PO}_4^{3-}$) पर $-3$ आवेश होता है जबकि एकसंयोजी क्लोराइड ($\text{Cl}^-$) पर $-1$ आवेश होता है। अतः फॉस्फेट की स्कंदन क्षमता क्लोराइड की तुलना में लगभग $3^4 = 81$ गुना अधिक होती है, जिसके कारण फॉस्फेट की बहुत कम मात्रा (Flocculation Value) ही सॉल को तुरंत स्कंदित कर देती है।\n• विकल्प 2 गलत है: फॉस्फेट आयन में 4 ऑक्सीजन परमाणु उपस्थित होते हैं।\n• विकल्प 3 गलत है: फॉस्फेट एक साधारण अकार्बनिक आयन है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nऋणायनों की स्कंदन क्षमता का क्रम: $[\text{Fe}(\text{CN})_6]^{4-} > \text{PO}_4^{3-} > \text{SO}_4^{2-} > \text{Cl}^-$ होता है, जबकि ऋणावेशित सॉल (जैसे $\text{As}_2\text{S}_3$) के लिए धनायनों का क्रम $\text{Al}^{3+} > \text{Ba}^{2+} > \text{Na}^+$ होता है।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_70",
+    "qe": "What structural feature characterizes the continuous zig-zag path of colloidal particles observed under an ultra-microscope?",
+    "qh": "अल्ट्रा-माइक्रोस्कोप के तहत देखे गए कोलाइडल कणों के निरंतर टेढ़े-मेढ़े मार्ग (continuous zig-zag path) की क्या संरचनात्मक विशेषता है?",
+    "oe": [
+      "It represents a single-stranded linear array of unbranched volatile oligomers",
+      "It is the Brownian movement driven by the constant kinetic impact of highly active dispersion medium molecules against the colloidal cores",
+      "It is an amorphous cross-linked three-dimensional network held by sulfur links",
+      "It represents an open-chain carbohydrate mesh supported by glycosidic blocks"
+    ],
+    "oh": [
+      "यह अशाखित वाष्पशील ओलिगोमर्स की एकल-फंसे रैखिक सरणी का प्रतिनिधित्व करता है",
+      "यह अत्यधिक सक्रिय परिक्षेपण माध्यम के अणुओं द्वारा कोलाइडल कोर पर निरंतर गतिज प्रभाव द्वारा संचालित ब्राउनियन गति (Brownian movement) है",
+      "यह सल्फर लिंक द्वारा आयोजित एक अनाकार क्रॉस-लिंक्ड तीन-आयामी नेटवर्क है",
+      "यह ग्लाइकोसिडिक ब्लॉकों द्वारा समर्थित एक खुली श्रृंखला कार्बोहाइड्रेट जाल का प्रतिनिधित्व करता है"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nWhen a colloidal solution is illuminated by a concentrated beam of light and observed under an ultramicroscope (Zsigmondy, 1903) perpendicular to the beam path, the colloidal particles appear as bright pinpoints of light executing a continuous, chaotic dance.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: The observed phenomenon is dynamic physical particle motion, not a stationary linear oligomeric array.\n• Option 1 is Correct: The continuous, erratic, and unpredictable zig-zag trajectory observed under the ultramicroscope is Brownian Movement. This physical motion does not depend on the chemical nature of the colloid, but is driven entirely by the continuous, random, and unbalanced kinetic collisions delivered by the fast-moving thermal molecules of the liquid dispersion medium against the colloidal cores. Because the impacts from all sides do not cancel out instantaneously on particles in the $1-1000\text{ nm}$ range, the particle is knocked about randomly. Smaller particle size and lower medium viscosity result in faster Brownian motion.\n• Option 2 describes vulcanized rubber networks.\n• Option 3 describes polysaccharide carbohydrate gels.\n\nPart C: Key Takeaway / Value Addition\nBrownian movement confirms the kinetic molecular theory of matter and explains why colloidal sols remain indefinitely suspended without settling out under gravity.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nजब किसी कोलाइडल विलयन को टिंडल प्रभाव के तहत डार्क-फील्ड अल्ट्रा-माइक्रोस्कोप (अतिसूक्ष्मदर्शी) से देखा जाता है, तो प्रकाश का प्रकीर्णन करने वाले कोलाइडल कण चमकीले बिंदुओं के रूप में निरंतर नाचते हुए दिखाई देते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: यह कणों की गतिक गति है, कोई बहुलक श्रृंखला नहीं।\n• विकल्प 1 सही है: अल्ट्रा-माइक्रोस्कोप में दिखाई देने वाला यह निरंतर, अनियमित और टेढ़ा-मेढ़ा मार्ग 'ब्राउनियन गति' (Brownian Movement) है। यह गति कोलाइड की रासायनिक प्रकृति पर निर्भर नहीं करती, बल्कि परिक्षेपण माध्यम (तरल) के तीव्र गतिमान अणुओं द्वारा कोलाइडल कणों पर सभी दिशाओं से किए जाने वाले असंतुलित गतिज प्रहारों (Kinetic Impacts) के कारण होती है। विलायक के अणुओं के लगातार असमान धक्कों के कारण कोलाइडल कण कभी स्थिर नहीं रहते और सदैव गतिमान रहते हैं।\n• विकल्प 2 गलत है: यह वल्केनीकृत रबर की संरचना है।\n• विकल्प 3 गलत है: यह कार्बोहाइड्रेट जालक है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nब्राउनियन गति पदार्थ के अणुगति सिद्धांत (Kinetic Theory) का प्रत्यक्ष प्रायोगिक प्रमाण प्रस्तुत करती है और कोलाइडल कणों को गुरुत्वाकर्षण के कारण नीचे बैठने से रोककर सॉल को स्थायी बनाए रखती है।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_71",
+    "qe": "Which specific organic functional group is generated when the carboxyl group of one amino acid condenses with the amino group of an adjacent unit to build a protein?",
+    "qh": "कौन सा विशिष्ट कार्बनिक कार्यात्मक समूह तब उत्पन्न होता है जब एक अमीनो एसिड का कार्बोक्सिल समूह प्रोटीन बनाने के लिए आसन्न इकाई के अमीनो समूह के साथ संघनित होता है?",
+    "oe": [
+      "Glycosidic connection bridging rings together",
+      "Peptide linkage / Amide bond",
+      "Phosphodiester coordinate bridge balancing frames",
+      "Sulfur disulfide cross-link system anchoring paths"
+    ],
+    "oh": [
+      "ग्लाइकोसिडिक संबंध (Glycosidic connection) जो छल्लों को आपस में जोड़ता है",
+      "पेप्टाइड लिंकेज / एमाइड बंध (Peptide linkage / Amide bond)",
+      "फॉस्फोडिएस्टर समन्वय पुल जो फ्रेम को संतुलित करता है",
+      "सल्फर डाइसल्फाइड क्रॉस-लिंक प्रणाली जो पथों को एंकर करती है"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nProteins are high-molecular-weight biological polymers constructed from linear chains of twenty standard $alpha$-amino acids joined together through directional condensation reactions.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 describes glycosidic bonds ($-C-O-C-$), which connect monosaccharide units in carbohydrates (like starch and glycogen).\n• Option 1 is Correct: When the carboxylic acid group ($-COOH$) of one $alpha$-amino acid reacts with the amino group ($-NH_2$) of an adjacent amino acid, a molecule of water ($H_2O$) is eliminated in a condensation process. The resulting covalent functional group formed between the two amino acid residues is an Amide Linkage ($-CO-NH-$), which in biochemistry is specifically designated as a Peptide Linkage (or Peptide Bond). Repeating this peptide condensation creates linear polypeptide backbones that fold into functional proteins.\n• Option 2 describes $3',5'$-phosphodiester bonds linking nucleotides in DNA/RNA.\n• Option 3 describes disulfide bridges ($-S-S-$) formed between cysteine residues in tertiary protein structures.\n\nPart C: Key Takeaway / Value Addition\nThe peptide bond has partial double-bond character ($approx 40\\%$) due to resonance between the carbonyl oxygen and amide nitrogen, making the $-CO-NH-$ unit planar, rigid, and resistant to rotation.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nप्रोटीन $alpha$-अमीनो अम्लों के बहुलक होते हैं, जिनमें कई अमीनो अम्ल इकाइयां एक विशिष्ट दिशात्मक संघनन अभिक्रिया द्वारा आपस में जुड़कर पॉलीपेप्टाइड श्रृंखला बनाती हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: ग्लाइकोसिडिक बंध कार्बोहाइड्रेट में शर्करा इकाइयों को जोड़ता है।\n• विकल्प 1 सही है: जब एक $alpha$-अमीनो अम्ल का कार्बोक्सिलिक समूह ($-COOH$) दूसरे अमीनो अम्ल के अमीनो समूह ($-NH_2$) के साथ संघनित होता है, तो जल का एक अणु ($H_2O$) बाहर निकलता है और एक सहसंयोजक एमाइड बंध ($-CO-NH-$) बनता है। जैव रसायन में इस विशिष्ट एमाइड बंध को 'पेप्टाइड बंध' या 'पेप्टाइड लिंकेज' (Peptide Linkage) कहा जाता है। कई पेप्टाइड बंधों के निर्माण से पॉलीपेप्टाइड श्रृंखला और अंततः प्रोटीन का निर्माण होता है।\n• विकल्प 2 गलत है: फॉस्फोडिएस्टर बंध न्यूक्लिक अम्लों (DNA/RNA) में पाया जाता है।\n• विकल्प 3 गलत है: डाइसल्फाइड बंध प्रोटीन की तृतीयक संरचना में सिस्टीन के बीच बनता है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nअनुनाद (Resonance) के कारण पेप्टाइड बंध ($-CO-NH-$) में आंशिक द्वि-बंध (Double bond) के लक्षण होते हैं, जिससे यह पूरी तरह समतलीय (Planar) और घूर्णन के प्रति कठोर होता है।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_72",
+    "qe": "What precise modern structural and chemical definition is assigned to the macro-class of materials known as carbohydrates?",
+    "qh": "कार्बोहाइड्रेट के रूप में जाने जाने वाले सामग्रियों के व्यापक वर्ग को दी गई सटीक आधुनिक संरचनात्मक और रासायनिक परिभाषा क्या है?",
+    "oe": [
+      "Optically inactive linear aromatic hydrocarbons with single bonds",
+      "Optically active polyhydroxy aldehydes or ketones, or compounds yielding them upon hydrolysis",
+      "Unbranched non-ionic long-chain potassium fatty acid salts",
+      "Suicidal competitive enzyme inhibitors with irreversible networks"
+    ],
+    "oh": [
+      "एकल बंध वाले प्रकाशिक रूप से अक्रिय रैखिक एरोमैटिक हाइड्रोकार्बन",
+      "प्रकाशिक रूप से सक्रिय पॉलीहाइड्रॉक्सी एल्डिहाइड या कीटोन, या ऐसे यौगिक जो जल-अपघटन पर इन्हें उत्पन्न करते हैं",
+      "अशाखित गैर-आयनिक लंबी श्रृंखला वाले पोटेशियम फैटी एसिड लवण",
+      "अपरिवर्तनीय नेटवर्क के साथ आत्मघाती प्रतिस्पर्धी एंजाइम अवरोधक"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nThe historical definition of carbohydrates as 'hydrates of carbon' [$\text{C}_x(\text{H}_2\text{O})_y$] was abandoned because non-carbohydrates like acetic acid ($\text{C}_2\text{H}_4\text{O}_2$) fit the formula, while authentic carbohydrates like rhamnose ($\text{C}_6\text{H}_{12}\text{O}_5$) and deoxyribose ($\text{C}_5\text{H}_{10}\text{O}_4$) do not.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Carbohydrates are aliphatic oxygenated biomolecules containing multiple chiral carbon centers, making them optically active.\n• Option 1 is Correct: Modern biochemistry defines Carbohydrates (Saccharides) strictly based on functional structure as: Optically active polyhydroxy aldehydes (Aldoses, e.g., D-glucose) or polyhydroxy ketones (Ketoses, e.g., D-fructose), or complex substances that yield these basic units upon chemical/enzymatic hydrolysis (such as sucrose, maltose, starch, and cellulose). They contain multiple alcohol groups ($-OH$) and a carbonyl carbon ($-CHO$ or $>C=O$), with asymmetric carbons imparting optical activity.\n• Option 2 describes soft potassium soaps.\n• Option 3 describes irreversible enzyme poisons.\n\nPart C: Key Takeaway / Value Addition\nCarbohydrates are classified by complexity into Monosaccharides (cannot be hydrolyzed further), Oligosaccharides (yield 2–10 monosaccharide units), and Polysaccharides (yield hundreds to thousands of monosaccharide units upon complete hydrolysis).",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nकार्बोहाइड्रेट की पुरानी परिभाषा 'कार्बन के हाइड्रेट' [$\text{C}_x(\text{H}_2\text{O})_y$] अमान्य हो गई क्योंकि एसिटिक एसिड जैसे अ-कार्बोहाइड्रेट यौगिक इस सूत्र में आते हैं, जबकि रैम्नोज ($\text{C}_6\text{H}_{12}\text{O}_5$) जैसे वास्तविक कार्बोहाइड्रेट इसमें फिट नहीं बैठते।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: कार्बोहाइड्रेट एरोमैटिक नहीं होते और इनमें असममित कार्बन होने से ये प्रकाशिक सक्रिय होते हैं।\n• विकल्प 1 सही है: आधुनिक जैव रसायन में कार्बोहाइड्रेट की सबसे सटीक और वैज्ञानिक परिभाषा यह है कि वे 'प्रकाशिक रूप से सक्रिय पॉलीहाइड्रॉक्सी एल्डिहाइड (जैसे ग्लूकोज) या पॉलीहाइड्रॉक्सी कीटोन (जैसे फ्रुक्टोज) होते हैं, अथवा वे जटिल यौगिक होते हैं जो जल-अपघटन (Hydrolysis) के फलस्वरूप ऐसी इकाइयां उत्पन्न करते हैं' (जैसे सुक्रोज, स्टार्च और सेल्यूलोज)। इनमें कई $-OH$ समूह और कम से कम एक कार्बोनिल समूह उपस्थित होता है।\n• विकल्प 2 गलत है: यह पोटेशियम साबुन का विवरण है।\n• विकल्प 3 गलत है: यह एंजाइम विषैले पदार्थों का विवरण है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nजल-अपघटन के आधार पर कार्बोहाइड्रेट को मोनोसैकेराइड (जैसे ग्लूकोज), ओलिगोसैकेराइड (2 से 10 इकाइयां, जैसे सुक्रोज) और पॉलीसैकेराइड (सैकड़ों इकाइयां, जैसे स्टार्च व सेल्यूलोज) में बांटा जाता है।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_73",
+    "qe": "What architectural spatial arrangement characterizes the alpha-helix conformation commonly encountered in the secondary structure of proteins?",
+    "qh": "प्रोटीन की माध्यमिक संरचना में आमतौर पर सामना किए जाने वाले अल्फा-हेलिक्स विन्यास की कौन सी संरचनात्मक स्थानिक व्यवस्था विशेषता है?",
+    "oe": [
+      "Individual strands lying parallel to each other held by broad inter-chain linkages",
+      "A continuous polypeptide chain coiled tightly into a right-handed screw geometry stabilized by hydrogen bonds",
+      "An open open-chain carbohydrate mesh locked by loose glycosidic units",
+      "A cross-linked network layer centered around a quaternary nitrogen group"
+    ],
+    "oh": [
+      "व्यापक अंतर-श्रृंखला लिंकेज द्वारा आयोजित एक दूसरे के समानांतर पड़ी व्यक्तिगत किस्में",
+      "हाइड्रोजन बंधों द्वारा स्थिर एक दाहिने हाथ की पेंच (right-handed screw) जैसी ज्यामिति में कसकर कुंडलित एक सतत पॉलीपेप्टाइड श्रृंखला",
+      "ढीली ग्लाइकोसिडिक इकाइयों द्वारा बंद एक खुली श्रृंखला कार्बोहाइड्रेट जाल",
+      "चतुर्धातुक नाइट्रोजन समूह के आसपास केंद्रित एक क्रॉस-लिंक्ड नेटवर्क परत"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nThe secondary structure of proteins refers to the localized spatial conformation of the polypeptide backbone, predominantly folding into $alpha$-helices or $\beta$-pleated sheets (Linus Pauling and Robert Corey, 1951).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 describes the $\beta$-pleated sheet conformation, where extended polypeptide chains lie side-by-side held by inter-chain hydrogen bonds.\n• Option 1 is Correct: In the $alpha$-Helix conformation, a single linear polypeptide chain twists regularly into a tight, right-handed (clockwise) screw-like helical coil. This spatial geometry is stabilized by regular Intramolecular Hydrogen Bonds formed between the carbonyl oxygen ($-C=O$) of each amino acid residue ($n$) and the amide hydrogen ($-NH-$) of the fourth amino acid residue ($n+4$) along the spiral turn. Each turn of the $alpha$-helix contains approximately 3.6 amino acid residues with a pitch of $0.54\text{ nm}$, and all bulky amino acid side chains ($R$-groups) project outward.\n• Option 2 describes polysaccharide carbohydrate chains like amylose.\n• Option 3 describes synthetic quaternary ammonium surfactant networks.\n\nPart C: Key Takeaway / Value Addition\nFibrous proteins like $alpha$-keratin (found in hair, wool, and nails) consist almost entirely of right-handed $alpha$-helices twisted together into protofibrils.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nप्रोटीन की द्वितीयक संरचना पॉलीपेप्टाइड रीढ़ के स्थानीय त्रिविमीय विन्यास को दर्शाती है, जिसके दो मुख्य रूप अल्फा-हेलिक्स ($alpha$-Helix) और बीटा-प्लीटेड शीट ($\beta$-Sheet) हैं (लीनस पॉलिंग, 1951)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: समानांतर पट्टियों जैसी संरचना $\beta$-प्लीटेड शीट की विशेषता है, जहाँ अंतर-श्रृंखला हाइड्रोजन बंध होते हैं।\n• विकल्प 1 सही है: अल्फा-हेलिक्स ($alpha$-Helix) विन्यास में एक अकेली पॉलीपेप्टाइड श्रृंखला दाहिने हाथ के पेंच (Right-handed screw) की भांति एक नियमित कुंडलित ज्यामिति में मुड़ती है। यह सर्पिलाकार संरचना आंतरिक हाइड्रोजन बंधों द्वारा अत्यधिक स्थिर होती है, जिसमें एक अमीनो अम्ल का कार्बोनिल ऑक्सीजन ($-C=O$) श्रृंखला में उससे 4 स्थान आगे स्थित अमीनो अम्ल के $-NH-$ समूह के हाइड्रोजन के साथ हाइड्रोजन बंध बनाता है। प्रत्येक घुमाव में लगभग 3.6 अमीनो अम्ल होते हैं।\n• विकल्प 2 गलत है: यह कार्बोहाइड्रेट संरचना का विवरण है।\n• विकल्प 3 गलत है: यह बहुलक रसायन का पद है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nबालों, ऊन और नाखूनों में पाया जाने वाला केराटिन प्रोटीन मुख्य रूप से अल्फा-हेलिक्स संरचना का बना होता है, जो इसे लोच और मजबूती प्रदान करता है।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_74",
+    "qe": "Which specific organic compound is generated when D-glucose undergoes complete chemical reduction using hydrogen iodide ($HI$) under thermal conditions?",
+    "qh": "जब D-गुकलोज थर्मल स्थितियों के तहत हाइड्रोजन आयोडाइड ($HI$) का उपयोग करके पूर्ण रासायनिक अपचयन से गुजरता है तो कौन सा विशिष्ट कार्बनिक यौगिक उत्पन्न होता है?",
+    "oe": [
+      "Saccharic acid containing terminal dicarboxylic groups",
+      "n-Hexane unbranched straight-chain alkane",
+      "Gluconic acid monocarboxylic derivative sheet",
+      "Pentaacetylated glucose crystal matrix"
+    ],
+    "oh": [
+      "टर्मिनल डाइकार्बोक्सिलिक समूहों वाला सैकेरिक एसिड",
+      "$n$-हेक्सेन ($n$-Hexane) अशाखित सीधी श्रृंखला वाला एल्केन",
+      "ग्लूकोनिक एसिड मोनोकार्बोक्सिलिक व्युत्पन्न शीट",
+      "पेंटाएसिटिलेटेड ग्लूकोज क्रिस्टल मैट्रिक्स"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nChemical reactions with specific reagents were historically used to deduce the open-chain structure of D-glucose (Emil Fischer).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 describes saccharic acid (a dicarboxylic acid), formed by strong oxidation of glucose with concentrated nitric acid ($\text{HNO}_3$).\n• Option 1 is Correct: When D-Glucose ($\text{C}_6\text{H}_{12}\text{O}_6$) is subjected to prolonged heating with concentrated Hydrogen Iodide ($\text{HI}$) in the presence of red phosphorus at $100^circ\text{C}$ ($373\text{ K}$), it undergoes complete deoxygenation and chemical reduction:$$\text{CHO}-(\text{CHOH})_4-\text{CH}_2\text{OH} + 14\text{HI} xrightarrow{\text{Red P}, Delta} \text{CH}_3-\text{CH}_2-\text{CH}_2-\text{CH}_2-\text{CH}_2-\text{CH}_3\text{ (}n\text{-Hexane)} + 6\text{H}_2\text{O} + 7\text{I}_2$$\nThe formation of $n$-Hexane (a saturated, unbranched straight-chain 6-carbon alkane) provides definitive experimental proof that all six carbon atoms in glucose are linked together in a continuous, unbranched straight chain.\n• Option 2 describes gluconic acid, formed by mild oxidation of glucose with bromine water ($\text{Br}_2/\text{H}_2\text{O}$).\n• Option 3 describes glucose pentaacetate, formed by acetylation with acetic anhydride, confirming five $-OH$ groups.\n\nPart C: Key Takeaway / Value Addition\nKey diagnostic reactions of glucose: $\text{HI/P} \to n\text{-hexane}$ (straight chain proof); $\text{Br}_2\text{ water} \to \text{gluconic acid}$ (aldehyde group proof); $\text{Ac}_2\text{O} \to \text{pentaacetate}$ (five $-OH$ proof); $\text{HNO}_3 \to \text{saccharic acid}$ (primary alcohol proof).",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nग्लूकोज की खुली श्रृंखला संरचना को प्रमाणित करने के लिए विभिन्न विशिष्ट रासायनिक अभिकर्मकों के साथ अभिक्रियाओं का ऐतिहासिक रूप से उपयोग किया गया (एमिल फिशर द्वारा)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: सैकेरिक एसिड ग्लूकोज के सांद्र नाइट्रिक अम्ल ($\text{HNO}_3$) द्वारा तीव्र ऑक्सीकरण से बनता है।\n• विकल्प 1 सही है: जब D-ग्लूकोज को लाल फास्फोरस की उपस्थिति में हाइड्रोजन आयोडाइड (HI) के साथ लंबे समय तक गर्म किया जाता है, तो इसके सभी ऑक्सीजन युक्त समूह पूरी तरह अपचयित हो जाते हैं और 6 कार्बन वाला एक सीधी श्रृंखला का एल्केन $n$-हेक्सेन (n-Hexane) प्राप्त होता है:$$\text{ग्लूकोज} + 14\text{HI} xrightarrow{\text{Red P}, Delta} \text{CH}_3-(\text{CH}_2)_4-\text{CH}_3\text{ (}n\text{-हेक्सेन)} + 6\text{H}_2\text{O} + 7\text{I}_2$$\n$n$-हेक्सेन का बनना यह सिद्ध करता है कि ग्लूकोज के सभी 6 कार्बन परमाणु एक सीधी और अशाखित श्रृंखला में जुड़े होते हैं।\n• विकल्प 2 गलत है: ग्लूकोनिक एसिड ब्रोमीन जल द्वारा हल्के ऑक्सीकरण से बनता है (एल्डिहाइड समूह का प्रमाण)।\n• विकल्प 3 गलत है: पेंटाएसिटेट बनना यह दर्शाता है कि ग्लूकोज में 5 हाइड्रॉक्सिल ($-OH$) समूह हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nग्लूकोज की मुख्य संरचनात्मक अभिक्रियाएं: $\text{HI/Red P} \to n\text{-हेक्सेन}$ (सीधी श्रृंखला), $\text{Br}_2\text{ जल} \to \text{ग्लूकोनिक एसिड}$ ($-CHO$ समूह), $\text{एसिटिक एनहाइड्राइड} \to \text{पेंटाएसिटेट}$ (5 $-OH$ समूह)।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_75",
+    "qe": "What happens to the structure of a carbohydrate like starch or cellulose when it undergoes complete biochemical digestion in a living organism?",
+    "qh": "जब एक जीवित जीव में स्टार्च या सेलुलोज जैसे कार्बोहाइड्रेट का पूर्ण जैव रासायनिक पाचन होता है तो उसकी संरचना का क्या होता है?",
+    "oe": [
+      "It cross-links into an insoluble three-dimensional thermosetting network",
+      "It undergoes hydrolytic cleavage of its glycosidic linkages to release single monosaccharide sugar units like glucose",
+      "It converts into fuming nitric acid vapors inside cellular channels",
+      "It forms a volatile uncharged non-polar polyolefin tail grid"
+    ],
+    "oh": [
+      "यह एक अघुलनशील तीन-आयामी थर्मोसेटिंग नेटवर्क में क्रॉस-लिंक करता है",
+      "यह ग्लूकोज जैसी एकल मोनोसैकेराइड शर्करा इकाइयों को छोड़ने के लिए अपने ग्लाइकोसिडिक लिंकेज के हाइड्रोलाइटिक विखंडन (जल-अपघटन) से गुजरता है",
+      "यह कोशिकीय चैनलों के अंदर सधूम नाइट्रिक एसिड वाष्प में परिवर्तित हो जाता है",
+      "यह एक वाष्पशील अनावेशित गैर-ध्रुवीय पॉलीओलेफ़िन टेल ग्रिड बनाता है"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nComplex dietary carbohydrates (polysaccharides) function as energy reserves (starch in plants, glycogen in animals) or structural scaffolds (cellulose). They are polymers composed of repeating monosaccharide rings.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Digestion is a catabolic breakdown process, not an industrial thermosetting cross-linking reaction.\n• Option 1 is Correct: Starch and Cellulose are high-molecular-weight polysaccharides composed of thousands of D-glucose units joined by $alpha$-1,4- (and $alpha$-1,6-) or $\beta$-1,4-Glycosidic Bonds. During biochemical digestion, digestive hydrolytic enzymes (such as salivary/pancreatic amylase, maltase, and symbiotic cellulases in ruminants) catalyze the Hydrolytic Cleavage of these glycosidic linkages by adding water across the ether bridges:$$(\text{C}_6\text{H}_{10}\text{O}_5)_n + n\text{H}_2\text{O} xrightarrow{\text{Enzymatic Hydrolysis}} n\text{C}_6\text{H}_{12}\text{O}_6\text{ (D-Glucose)}$$\nThis breaks the polymer down into individual monomeric D-glucose molecules, which enter glycolysis for cellular ATP production.\n• Option 2 and Option 3 describe impossible chemical decomposition pathways.\n\nPart C: Key Takeaway / Value Addition\nHumans can digest starch ($alpha$-glycosidic bonds) using amylase, but cannot digest cellulose because human digestive enzymes lack cellulase to hydrolyze $\beta$-1,4-glycosidic linkages (acting instead as dietary fiber/roughage).",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nजटिल कार्बोहाइड्रेट (पॉलीसैकेराइड) ऊर्जा भंडारण (पादपों में स्टार्च) अथवा संरचनात्मक ढांचे (सेल्यूलोज) का कार्य करते हैं, जो ग्लूकोज इकाइयों के ग्लाइकोसिडिक बंधों द्वारा जुड़ने से बनते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: पाचन में बड़े अणु टूटते हैं, थर्मोसेटिंग बहुलक नहीं बनते।\n• विकल्प 1 सही है: स्टार्च और सेल्यूलोज जैसे जटिल पॉलीसैकेराइड हजारों ग्लूकोज इकाइयों के ग्लाइकोसिडिक बंधों (Glycosidic Linkages) द्वारा जुड़े होते हैं। पाचन तंत्र में पाचक एंजाइम (जैसे लार/अग्न्याशयी एमाइलेज, माल्टेज आदि) इन ग्लाइकोसिडिक बंधों का जल-अपघटन (Hydrolysis) कर देते हैं:$$(\text{C}_6\text{H}_{10}\text{O}_5)_n + n\text{H}_2\text{O} xrightarrow{\text{एंजाइम}} n\text{C}_6\text{H}_{12}\text{O}_6\text{ (ग्लूकोज)}$$\nइससे जटिल पॉलीसैकेराइड टूटकर सरल मोनोसैकेराइड इकाइयों (D-ग्लूकोज) में बदल जाते हैं, जो आंत द्वारा अवशोषित होकर कोशिकीय श्वसन में ऊर्जा (ATP) उत्पन्न करते हैं।\n• विकल्प 2 और 3 गलत हैं क्योंकि पाचन में कोई एसिड वाष्प या प्लास्टिक ग्रिड नहीं बनता।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nमनुष्य स्टार्च ($alpha$-बंध) का पाचन कर सकता है, परंतु सेल्यूलोज ($\beta$-1,4-बंध) का पाचन नहीं कर पाता क्योंकि मानव शरीर में सेल्यूलेज (Cellulase) एंजाइम नहीं होता; अतः सेल्यूलोज केवल आहारीय रेशे (रफेज) का कार्य करता है।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_76",
+    "qe": "Which operational catalyst enzyme decomposes the disaccharide maltose into two clean units of D-glucose inside chemical channels?",
+    "qh": "कौन सा परिचालन उत्प्रेरक एंजाइम रासायनिक चैनलों के भीतर डिसेकेराइड माल्टोज़ को डी-ग्लूकोज की दो स्वच्छ इकाइयों में विघटित (decomposes) करता है?",
+    "oe": [
+      "Invertase sugar clearing fluid",
+      "Maltase",
+      "Pepsin proteolytic enzyme",
+      "Urease nitrogen clearing module"
+    ],
+    "oh": [
+      "इन्वर्टेज शर्करा शोधन तरल",
+      "माल्टेस (Maltase)",
+      "पेप्सिन प्रोटियोलिटिक एंजाइम",
+      "यूरिएस नाइट्रोजन शोधन मॉड्यूल"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nDisaccharides are compound sugars composed of two monosaccharide units. Specific hydrolytic enzymes in the digestive tract and yeast cleave the glycosidic bonds linking these units.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Invertase (Sucrase) hydrolyzes sucrose into an equimolar mixture of D-glucose and D-fructose.\n• Option 1 is Correct: Maltase is the specialized biocatalytic enzyme produced in intestinal juice (succus entericus) and yeast that hydrolyzes Maltose (malt sugar, $\text{C}_{12}\text{H}_{22}\text{O}_{11}$). Maltose is a reducing disaccharide consisting of two $alpha$-D-glucose units joined by an $alpha(1\to 4)$ glycosidic bond. Maltase targets this bond specifically, cleaving one molecule of maltose into two identical molecules of D-Glucose:$$\text{C}_{12}\text{H}_{22}\text{O}_{11}\text{ (Maltose)} + \text{H}_2\text{O} xrightarrow{\text{Maltase}} 2\text{C}_6\text{H}_{12}\text{O}_6\text{ (D-Glucose)}$$\n• Option 2 is Incorrect: Pepsin is a gastric protease that digests proteins into proteoses and peptones.\n• Option 3 is Incorrect: Urease hydrolyzes urea into ammonia and carbon dioxide.\n\nPart C: Key Takeaway / Value Addition\nCommon disaccharide digestive enzymes: Maltase (Maltose $\to$ Glucose + Glucose), Lactase (Lactose $\to$ Glucose + Galactose), and Sucrase/Invertase (Sucrose $\to$ Glucose + Fructose).",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nडाइसैकेराइड दो मोनोसैकेराइड इकाइयों से बने होते हैं। पाचन तंत्र और यीस्ट में उपस्थित विशिष्ट एंजाइम इनके बीच के ग्लाइकोसिडिक बंध को तोड़कर सरल शर्करा बनाते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: इन्वर्टेज (Invertase) सुक्रोज (गन्ने की चीनी) को ग्लूकोज और फ्रुक्टोज में तोड़ता है।\n• विकल्प 1 सही है: माल्टेस (Maltase) आंतों के रस और यीस्ट में पाया जाने वाला एक विशिष्ट पाचक एंजाइम है। यह माल्टोज ($\text{C}_{12}\text{H}_{22}\text{O}_{11}$) के $alpha(1\to 4)$ ग्लाइकोसिडिक बंध का जल-अपघटन करके उसे D-ग्लूकोज की दो समान इकाइयों में विघटित कर देता है:$$\text{C}_{12}\text{H}_{22}\text{O}_{11}\text{ (माल्टोज)} + \text{H}_2\text{O} xrightarrow{\text{Maltase}} 2\text{C}_6\text{H}_{12}\text{O}_6\text{ (ग्लूकोज)}$$\n• विकल्प 2 गलत है: पेप्सिन आमाशय में प्रोटीन का पाचन करने वाला एंजाइम है।\n• विकल्प 3 गलत है: यूरिएस यूरिया को अमोनिया और $\text{CO}_2$ में तोड़ता है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nडाइसैकेराइड पाचक एंजाइम: माल्टेस (माल्टोज $\to$ ग्लूकोज + ग्लूकोज), लैक्टेस (लैक्टोज $\to$ ग्लूकोज + गैलेक्टोज), और सुक्रोज/इन्वर्टेज (सुक्रोज $\to$ ग्लूकोज + फ्रुक्टोज)।"
+  },
+  {
+    "p_id": "bpsc_surface_v4_77",
+    "qe": "What direct mechanical change occurs to the native protein architecture inside an egg white when it undergoes thermal coagulation upon boiling?",
+    "qh": "जब एक अंडे की सफेदी को उबालने पर थर्मल जमावट (thermal coagulation) होती है, तो उसके भीतर की प्राकृतिक प्रोटीन संरचना में क्या सीधा यांत्रिक परिवर्तन होता है?",
+    "oe": [
+      "The covalent peptide linkages are broken, returning the protein to single units",
+      "The native hydrogen bonds are disrupted, causing structural globules to unfold and helices to uncoil, resulting in a loss of biological activity",
+      "The carbon backbone converts into a volatile open-chain gas cloud",
+      "The functional domains are reduced to non-ionic starch granules"
+    ],
+    "oh": [
+      "सहसंयोजक पेप्टाइड लिंकेज टूट जाते हैं, जिससे प्रोटीन एकल इकाइयों में लौट आता है",
+      "प्राकृतिक हाइड्रोजन बंध टूट जाते हैं, जिससे संरचनात्मक ग्लोब्यूल्स खुल जाते हैं और हेलिक्स खुल जाते हैं, जिसके परिणामस्वरूप जैविक गतिविधि का नुकसान होता है (विकृतीकरण)",
+      "कार्बन रीढ़ एक वाष्पशील खुली श्रृंखला वाली गैस क्लाउड में परिवर्तित हो जाती है",
+      "कार्यात्मक डोमेन गैर-आयनिक स्टार्च कणिकाओं में कम हो जाते हैं"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nIn its native state, a protein has a unique, folded 3D conformation (secondary, tertiary, and quaternary levels) stabilized by weak non-covalent interactions like hydrogen bonds, ionic bonds, and van der Waals forces.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Denaturation does not cleave strong covalent peptide bonds ($-CO-NH-$); the primary amino acid sequence remains completely intact.\n• Option 1 is Correct: When egg white containing soluble globular Ovalbumin is boiled, thermal kinetic energy disrupts the delicate intramolecular hydrogen bonds and hydrophobic interactions. As a consequence, the tightly folded globular protein unfolds, the $alpha$-helices and $\beta$-sheets uncoil, and the exposed linear polypeptide chains become randomly entangled. They cross-link into an insoluble, opaque, white solid gel coagulum (Denaturation of Protein), completely and irreversibly destroying its native biological activity.\n• Option 2 and Option 3 describe impossible chemical decompositions.\n\nPart C: Key Takeaway / Value Addition\nDuring protein denaturation (by heat, pH changes, or heavy metals), secondary and tertiary structures are destroyed, but the primary structure (peptide backbone) remains intact.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nअपनी प्राकृतिक अवस्था (Native state) में प्रोटीन की एक निश्चित मुड़ी हुई त्रिविमीय संरचना (द्वितीयक व तृतीयक स्तर) होती है, जो दुर्बल हाइड्रोजन बंधों और स्थिरवैद्युत आकर्षण द्वारा स्थिर रहती है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: विकृतीकरण में प्राथमिक पेप्टाइड बंध ($-CO-NH-$) कभी नहीं टूटते; प्राथमिक संरचना पूरी तरह सुरक्षित रहती है।\n• विकल्प 1 सही है: अंडे की सफेदी में उपस्थित मुख्य प्रोटीन एल्ब्यूमिन (Ovalbumin) एक जल-घुलनशील ग्लोबुलर प्रोटीन है। जब अंडे को उबाला जाता है, तो उच्च ताप के कारण प्रोटीन की कुंडलियों को बांधने वाले कमजोर हाइड्रोजन बंध टूट जाते हैं। इसके कारण मुड़े हुए ग्लोब्यूल्स खुल जाते हैं (Unfolding) और हेलिक्स सीधे हो जाते हैं। खुली हुई पॉलीपेप्टाइड श्रृंखलाएं आपस में उलझकर एक अघुलनशील, सफेद और कठोर थक्के में जम जाती हैं। इस प्रक्रिया को 'प्रोटीन का विकृतीकरण' (Denaturation of Proteins) कहते हैं, जिससे प्रोटीन की जैविक सक्रियता स्थायी रूप से समाप्त हो जाती है।\n• विकल्प 2 और विकल्प 3 गलत हैं क्योंकि प्रोटीन गैस या स्टार्च में नहीं बदलता।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nप्रोटीन के विकृतीकरण (ताप, अम्ल या क्षार द्वारा) में द्वितीयक और तृतीयक संरचनाएं नष्ट हो जाती हैं, परंतु प्राथमिक संरचना (अमीनो अम्ल क्रम) अपरिवर्तित रहती है।"
+  },
+  {
+    "p_id": "bpsc_chem_v4_255",
+    "qe": "What is the correct mathematical expression used to calculate the degree of dissociation ($alpha$) of a weak electrolyte from its molar conductivity values?",
+    "qh": "इलेक्ट्रोलाइट मानों से कमजोर इलेक्ट्रोलाइट के विघटन की डिग्री ($alpha$) की गणना करने के लिए उपयोग किया जाने वाला सही गणितीय व्यंजक क्या है?",
+    "oe": [
+      "$alpha = Lambda_m cdot Lambda_m^circ$",
+      "$alpha = \frac{Lambda_m}{Lambda_m^circ}$",
+      "$alpha = \frac{kappa cdot 1000}{M}$",
+      "$alpha = nF E^circ_{cell}$"
+    ],
+    "oh": [
+      "$alpha = Lambda_m cdot Lambda_m^circ$",
+      "$alpha = \frac{Lambda_m}{Lambda_m^circ}$",
+      "$alpha = \frac{kappa cdot 1000}{M}$",
+      "$alpha = nF E^circ_{cell}$"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nWeak electrolytes (such as $\text{CH}_3\text{COOH}$ or $\text{NH}_4\text{OH}$) ionize only partially in solution. Arrhenius electrolytic theory and Kohlrausch's Law of Independent Migration of Ions relate ionic conductivity to the degree of dissociation.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is an incorrect product formula.\n• Option 1 is Correct: At any given molar concentration ($c$), the Degree of Dissociation ($alpha$) of a weak electrolyte represents the fraction of electrolyte molecules that have split into free conducting ions. It is mathematically calculated as the ratio of the molar conductivity at that concentration ($Lambda_m^c$) to the limiting molar conductivity at infinite dilution ($Lambda_m^circ$):$$mathbf{alpha = \frac{Lambda_m^c}{Lambda_m^circ}}$$\nThis calculated value of $alpha$ is substituted into Ostwald's Dilution Law ($K_a = \frac{calpha^2}{1-alpha}$) to find the dissociation constant of the weak acid or base.\n• Option 2 is the formula for calculating molar conductivity ($Lambda_m$) from specific conductivity ($kappa$) and molarity ($M$).\n• Option 3 calculates the standard electrical work/free energy change ($Delta G^circ = -nFE^circ$).\n\nPart C: Key Takeaway / Value Addition\nKohlrausch's Law allows the determination of $Lambda_m^circ$ for weak electrolytes (which cannot be obtained by direct graphical extrapolation) by summing the limiting molar conductivities of their constituent ions: $Lambda_m^circ(\text{CH}_3\text{COOH}) = lambda^circ(\text{H}^+) + lambda^circ(\text{CH}_3\text{COO}^-)$.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nदुर्बल विद्युत-अपघट्य (जैसे एसिटिक अम्ल, $\text{CH}_3\text{COOH}$) जल में केवल आंशिक रूप से आयनित होते हैं। कोलराउश के नियम और आरेनियस सिद्धांत की सहायता से चालकता मानों द्वारा इनके वियोजन की मात्रा ज्ञात की जाती है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है क्योंकि यह दोनों चालकताओं का गुणनफल दर्शाता है।\n• विकल्प 1 सही है: किसी दी गई सांद्रता ($c$) पर एक दुर्बल विद्युत-अपघट्य के वियोजन की मात्रा / विघटन की डिग्री (Degree of Dissociation, $alpha$) उस सांद्रता पर मोलर चालकता ($Lambda_m^c$) तथा अनंत तनुता पर सीमांत मोलर चालकता ($Lambda_m^circ$) के अनुपात के बराबर होती है:$$mathbf{alpha = \frac{Lambda_m^c}{Lambda_m^circ}}$$\nइस प्रकार प्राप्त $alpha$ के मान का उपयोग ओस्टवाल्ड के तनुता नियम ($K_a = \frac{calpha^2}{1-alpha}$) में वियोजन स्थिरांक निकालने के लिए किया जाता है।\n• विकल्प 2 गलत है क्योंकि यह विशिष्ट चालकता से मोलर चालकता निकालने का सूत्र है।\n• विकल्प 3 गलत है क्योंकि यह विद्युत रासायनिक सेल के विभव और गिब्स मुक्त ऊर्जा का सूत्र है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nकोलराउश के आयनों के स्वतंत्र अभिगमन के नियम से दुर्बल विद्युत-अपघट्य की सीमांत मोलर चालकता ($Lambda_m^circ$) ज्ञात की जाती है: $Lambda_m^circ(\text{CH}_3\text{COOH}) = lambda^circ(\text{H}^+) + lambda^circ(\text{CH}_3\text{COO}^-)$।"
+  },
+  {
+    "p_id": "bpsc_chem_v4_245",
+    "qe": "What is the core mathematical formula used to calculate the Molar Conductivity ($Lambda_m$) of a solution from its specific conductivity ($kappa$) and molarity ($M$) in standard laboratory units?",
+    "qh": "मानक प्रयोगशाला इकाइयों में समाधान की विशिष्ट चालकता ($kappa$) और मोलरिटी ($M$) से उसकी मोलर चालकता ($Lambda_m$) की गणना करने के लिए उपयोग किया जाने वाला मुख्य गणितीय सूत्र क्या है?",
+    "oe": [
+      "$Lambda_m = \frac{M cdot kappa}{1000}$",
+      "$Lambda_m = \frac{1000 cdot kappa}{M}$",
+      "$Lambda_m = kappa cdot G^*$",
+      "$Lambda_m = \frac{kappa cdot R}{M}$"
+    ],
+    "oh": [
+      "$Lambda_m = \frac{M cdot kappa}{1000}$",
+      "$Lambda_m = \frac{1000 cdot kappa}{M}$",
+      "$Lambda_m = kappa cdot G^*$",
+      "$Lambda_m = \frac{kappa cdot R}{M}$"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nMolar Conductivity ($Lambda_m$) measures the total conducting power of all the ions produced by dissolving one mole of an electrolyte in a given volume of solution.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is an inverted ratio formula.\n• Option 1 is Correct: Molar conductivity is defined fundamentally as specific conductivity ($kappa$) multiplied by the volume ($V$) containing one mole of electrolyte ($Lambda_m = kappa cdot V$). In practical laboratory CGS units, when specific conductivity $kappa$ is measured in $\text{S}cdot\text{cm}^{-1}$ (or $Omega^{-1}\text{cm}^{-1}$) and electrolytic concentration is given in Molarity ($M$, in $\text{mol/L}$), the volume containing 1 mole of electrolyte is $V = \frac{1000}{M}\text{ cm}^3$. Substituting this gives the standard working formula:$$mathbf{Lambda_m = \frac{kappa \times 1000}{M}} quad (\text{expressed in } \text{S}cdot\text{cm}^2cdot\text{mol}^{-1})$$\n• Option 2 calculates conductivity using cell constant $G^*$ ($kappa = G cdot G^*$).\n• Option 3 incorrectly multiplies by electrical resistance $R$.\n\nPart C: Key Takeaway / Value Addition\nIn SI units (where $kappa$ is in $\text{S}cdot\text{m}^{-1}$ and concentration $c$ is in $\text{mol}cdot\text{m}^{-3}$), the conversion factor inverts: $Lambda_m = \frac{kappa}{1000 \times M}\text{ S}cdot\text{m}^2cdot\text{mol}^{-1}$.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nमोलर चालकता (Molar Conductivity, $Lambda_m$) वह विद्युत चालकता है जो 1 मोल विद्युत-अपघट्य को किसी निश्चित आयतन वाले घोल में घोलने पर उपस्थित सभी आयनों द्वारा उत्पन्न होती है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है क्योंकि इसमें पदों का अनुपात उल्टा है।\n• विकल्प 1 सही है: मोलर चालकता मूल रूप से विशिष्ट चालकता ($kappa$) और 1 मोल विद्युत-अपघट्य युक्त आयतन ($V$) के गुणनफल के बराबर होती है ($Lambda_m = kappa \times V$)।\nजब प्रयोगशाला में विशिष्ट चालकता $kappa$ का मान $\text{S}cdot\text{cm}^{-1}$ में हो और सांद्रता $M$ मोलरता (मोल/लीटर) में हो, तो 1 मोल युक्त आयतन $V = \frac{1000}{M}\text{ cm}^3$ होता है। अतः सही सूत्र है:$$mathbf{Lambda_m = \frac{1000 \times kappa}{M}} quad (\text{मात्रक: } \text{S}cdot\text{cm}^2cdot\text{mol}^{-1})$$\n• विकल्प 2 गलत है क्योंकि सेल स्थिरांक ($G^*$) का उपयोग $kappa = G \times G^*$ में होता है।\n• विकल्प 3 गलत है क्योंकि इसमें प्रतिरोध $R$ का अनावश्यक गुणा किया गया है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nSI मात्रकों में (जहाँ $kappa$ $\text{S}cdot\text{m}^{-1}$ में हो और सांद्रता मोलरता में हो), सूत्र $Lambda_m = \frac{kappa}{1000 \times M}\text{ S}cdot\text{m}^2cdot\text{mol}^{-1}$ हो जाता है।"
+  },
+  {
+    "p_id": "bpsc_biomol_v4_22",
+    "qe": "What architectural spatial arrangement characterizes the alpha-helix conformation commonly encountered in the secondary structure of proteins?",
+    "qh": "प्रोटीन की माध्यमिक संरचना में आमतौर पर सामना किए जाने वाले अल्फा-हेलिक्स विन्यास की कौन सी संरचनात्मक स्थानिक व्यवस्था विशेषता है?",
+    "oe": [
+      "Individual strands lying parallel to each other held by broad inter-chain linkages",
+      "A continuous polypeptide chain coiled tightly into a right-handed screw geometry stabilized by hydrogen bonds",
+      "An open open-chain carbohydrate mesh locked by loose glycosidic units",
+      "A cross-linked network layer centered around a quaternary nitrogen group"
+    ],
+    "oh": [
+      "व्यापक अंतर-श्रृंखला लिंकेज द्वारा आयोजित एक दूसरे के समानांतर पड़ी व्यक्तिगत किस्में",
+      "हाइड्रोजन बंधों द्वारा स्थिर एक दाहिने हाथ की पेंच (right-handed screw) जैसी ज्यामिति में कसकर कुंडलित एक सतत पॉलीपेप्टाइड श्रृंखला",
+      "ढीली ग्लाइकोसिडिक इकाइयों द्वारा बंद एक खुली श्रृंखला कार्बोहाइड्रेट जाल",
+      "चतुर्धातुक नाइट्रोजन समूह के आसपास केंद्रित एक क्रॉस-लिंक्ड नेटवर्क परत"
+    ],
+    "a": 1,
+    "ee": "Part A: Core Concept & Background\nThe secondary structure of proteins describes the regular, localized folding patterns of the polypeptide chain backbone, classified into $alpha$-helices and $\beta$-pleated sheets (Linus Pauling and Robert Corey, 1951).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 describes the $\beta$-pleated sheet conformation, where extended polypeptide chains lie side by side held together by intermolecular hydrogen bonds.\n• Option 1 is Correct: In the $alpha$-Helix conformation, a single continuous polypeptide chain is coiled tightly into a rigid, right-handed (clockwise) screw (helical) geometry. The helix is stabilized by regular Intramolecular Hydrogen Bonds formed between the carbonyl oxygen ($-C=O$) of each amino acid residue ($n$) and the amide hydrogen ($-NH-$) of the fourth amino acid residue ($n+4$) along the spiral turn. Each full helical turn contains approximately 3.6 amino acid residues with a pitch of $0.54\text{ nm}$, with all amino acid side chains ($R$-groups) projecting outward.\n• Option 2 describes polysaccharide chains like amylose.\n• Option 3 describes quaternary ammonium surfactant matrices.\n\nPart C: Key Takeaway / Value Addition\nAmino acids like Proline act as 'helix breakers' because their rigid cyclic pyrrolidine ring disrupts the regular backbone geometry and lacks an amide hydrogen for hydrogen bonding.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nप्रोटीन की द्वितीयक संरचना पॉलीपेप्टाइड रीढ़ के स्थानीय त्रिविमीय विन्यास को दर्शाती है, जिसके दो प्रमुख रूप अल्फा-हेलिक्स ($alpha$-Helix) और बीटा-प्लीटेड शीट ($\beta$-Sheet) हैं (लीनस पॉलिंग, 1951)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: समानांतर पट्टियों जैसी संरचना $\beta$-प्लीटेड शीट की विशेषता है, जहाँ अंतर-श्रृंखला हाइड्रोजन बंध होते हैं।\n• विकल्प 1 सही है: अल्फा-हेलिक्स ($alpha$-Helix) विन्यास में एक अकेली पॉलीपेप्टाइड श्रृंखला दाहिने हाथ के पेंच (Right-handed screw) की भांति एक नियमित कुंडलित ज्यामिति में मुड़ती है। यह सर्पिलाकार संरचना आंतरिक हाइड्रोजन बंधों द्वारा अत्यधिक स्थिर होती है, जिसमें एक अमीनो अम्ल का कार्बोनिल ऑक्सीजन ($-C=O$) श्रृंखला में उससे 4 स्थान आगे स्थित अमीनो अम्ल के $-NH-$ समूह के हाइड्रोजन के साथ हाइड्रोजन बंध बनाता है। प्रत्येक घुमाव में लगभग 3.6 अमीनो अम्ल होते हैं।\n• विकल्प 2 गलत है: यह कार्बोहाइड्रेट संरचना का विवरण है।\n• विकल्प 3 गलत है: यह बहुलक रसायन का पद है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nप्रोलीन (Proline) अमीनो अम्ल को 'हेलिक्स ब्रेकर' कहा जाता है क्योंकि इसकी चक्रीय संरचना अल्फा-हेलिक्स के नियमित घुमाव को तोड़ देती है।"
+  }
 ]
