@@ -146,13 +146,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
     // 🚀 UNBLOCKED & ZERO-CACHE MIRRORS
     List<String> mirrorUrls = [
-      // 1. GitHack Dev Proxy (Direct Live GitHub Pull, Never Caches)
       "https://raw.githack.com/zxcty54/quiz/main/$encodedPath",
-      // 2. Fastly CDN with Cache-Buster Timestamp
       "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
-      // 3. Statically Cloudflare Edge
       "https://cdn.statically.io/gh/zxcty54/quiz/main/$encodedPath",
-      // 4. Core jsDelivr with Timestamp
       "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
     ];
 
@@ -250,6 +246,31 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         backgroundColor: cardColor,
         elevation: 0,
         actions: [
+          // ⚡ TEST CACHE-KILL SWITCH (Instant Force Sync Button)
+          IconButton(
+            icon: const Icon(Icons.bolt_rounded, color: Colors.amber, size: 22),
+            tooltip: "Instant Force Update (Testing)",
+            onPressed: () async {
+              final prefs = await SharedPreferences.getInstance();
+              await prefs.remove('cached_subject_mapping_json');
+              await prefs.remove('cached_sectional_data_json');
+              await prefs.remove('persistent_subject_mapping_json');
+              await prefs.remove('persistent_sectional_data_json');
+
+              await _fetchSectionalDataLive();
+              await _fetchSubjectMappingLive();
+
+              if (context.mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('⚡ All Cache Purged! 100% Live JSON Fetched.'),
+                    backgroundColor: Color(0xFF16A34A),
+                    duration: Duration(seconds: 1),
+                  ),
+                );
+              }
+            },
+          ),
           IconButton(
             icon: const Icon(Icons.school_rounded, color: Color(0xFF075E54)),
             onPressed: () {
