@@ -2,9 +2,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+
 class RevisionTab extends StatefulWidget {
   final Map<String, dynamic> subjectMapping;
-  final Function(BuildContext, String, String) onLaunchPractice; 
+  final Function(BuildContext, String, String) onLaunchPractice;
 
   const RevisionTab({
     super.key,
@@ -72,6 +73,7 @@ class _RevisionTabState extends State<RevisionTab> {
       "https://raw.githack.com/zxcty54/quiz/main/subject_mapping.json",
       "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/subject_mapping.json?t=$ts",
       "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/subject_mapping.json?t=$ts",
+      "https://cdn.statically.io/gh/zxcty54/quiz/main/subject_mapping.json",
       "https://raw.githubusercontent.com/zxcty54/quiz/main/subject_mapping.json?t=$ts",
     ];
 
@@ -132,8 +134,9 @@ class _RevisionTabState extends State<RevisionTab> {
         physics: const AlwaysScrollableScrollPhysics(),
         padding: const EdgeInsets.all(16),
         children: [
-          // 🛡️ TRUST BANNER FOR REVISION HUB
+          // 🛡️ REVISION HUB HERO TRUST BANNER (Option B: 3x Fast Punch)
           Container(
+            width: double.infinity,
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -144,63 +147,146 @@ class _RevisionTabState extends State<RevisionTab> {
                 end: Alignment.bottomRight,
               ),
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: const Color(0xFF38BDF8).withOpacity(0.3), width: 1.2),
+              border: Border.all(color: const Color(0xFF38BDF8).withOpacity(0.35), width: 1.2),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(isDark ? 0.35 : 0.15),
+                  color: Colors.black.withOpacity(isDark ? 0.4 : 0.15),
                   blurRadius: 10,
                   offset: const Offset(0, 4),
-                )
+                ),
               ],
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // 1. Top Badge Row
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3.5),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF0284C7),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: const Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text('⚡ ', style: TextStyle(fontSize: 10)),
+                          Text(
+                            'SMART REVISION',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 10.5,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 0.5,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                     Row(
                       children: [
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFF0284C7),
-                            borderRadius: BorderRadius.circular(6),
-                          ),
-                          child: const Text(
-                            '🎯 100% EXAM ORIENTED',
-                            style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        const SizedBox(width: 8),
                         const Text(
-                          'BPSC • BSSC • SSC CGL',
-                          style: TextStyle(color: Colors.white70, fontSize: 10, fontWeight: FontWeight.bold),
+                          'BPSC • BSSC • SSC • RLY',
+                          style: TextStyle(
+                            color: Color(0xFF38BDF8),
+                            fontSize: 10.5,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
+                        if (_isLoading) ...[
+                          const SizedBox(width: 8),
+                          const SizedBox(
+                            width: 12,
+                            height: 12,
+                            child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white70),
+                          ),
+                        ],
                       ],
                     ),
-                    if (_isLoading)
-                      const SizedBox(
-                        width: 14,
-                        height: 14,
-                        child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white70),
-                      ),
                   ],
                 ),
                 const SizedBox(height: 12),
+
+                // 2. Main Punch Headline
                 const Text(
-                  'No Irrelevant Questions.\nPure TCS & State Commission Pattern.',
+                  '1 Question = Multiple Facts.\nHar Statement Ka Logic.',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 16,
+                    fontSize: 16.5,
                     fontWeight: FontWeight.bold,
-                    height: 1.3,
+                    height: 1.35,
                   ),
                 ),
-                const SizedBox(height: 6),
+                const SizedBox(height: 8),
+
+                // 3. Sub-headline / Descriptive Text
                 const Text(
-                  'Har chapter me wahi topics filter kiye gaye hain jo pichle 5 saalo me sabse zyada repeat hue hain.',
-                  style: TextStyle(color: Colors.white70, fontSize: 11.5, height: 1.4),
+                  'Sirf sahi answer nahi — galat option ke peeche ka reason samjho aur 3x tezi se revise karo.',
+                  style: TextStyle(
+                    color: Color(0xFFCBD5E1),
+                    fontSize: 12,
+                    height: 1.45,
+                  ),
+                ),
+                const SizedBox(height: 12),
+
+                // 4. Quick Micro-Feature Pills Row
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.06),
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Colors.white.withOpacity(0.1)),
+                  ),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.verified_rounded, color: Color(0xFF60A5FA), size: 14),
+                          SizedBox(width: 4),
+                          Text(
+                            '100% PYQ Base',
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 11,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.lightbulb_outline_rounded, color: Color(0xFFFBBF24), size: 14),
+                          SizedBox(width: 4),
+                          Text(
+                            'Trap Breakdown',
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 11,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.timer_outlined, color: Color(0xFF4ADE80), size: 14),
+                          SizedBox(width: 4),
+                          Text(
+                            'Fast Revision',
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 11,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
