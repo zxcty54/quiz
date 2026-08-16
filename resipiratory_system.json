@@ -1,618 +1,944 @@
-[  
+[
   {
     "p_id": "bpsc_resp_v1_01",
     "qe": "When the terminal phosphate linkage in an Adenosine Triphosphate (ATP) molecule is broken down using water, a fixed amount of energy is liberated to drive endothermic processes. What is the thermodynamic value of this energy release?",
     "qh": "जब एक एडेनोसिन ट्राइफॉस्फेट (ATP) अणु में टर्मिनल फॉस्फेट लिंकेज को पानी का उपयोग करके तोड़ा जाता है, तो एंडोथर्मिक प्रक्रियाओं को चलाने के लिए एक निश्चित मात्रा में ऊर्जा मुक्त होती है। इस ऊर्जा मुक्ति का ऊष्मागतिकीय (thermodynamic) मान क्या है?",
-    "o": [
+    "oe": [
+      "120 kJ/mol",
+      "30.5 kJ/mol",
+      "80 kJ/mol",
+      "4.1 kcal/g"
+    ],
+    "oh": [
       "120 kJ/mol",
       "30.5 kJ/mol",
       "80 kJ/mol",
       "4.1 kcal/g"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is a distractor that mimics systolic blood pressure values. Option 2 is correct because the source text explicitly provides the quantitative energy equivalent liberated during the hydrolysis of ATP. When the terminal high-energy phosphate bond is cleaved via water interaction, exactly 30.5 kJ/mol of energy is released. This fuels endothermic reactions [chemical reactions that absorb energy from their surroundings to proceed] within cellular domains. Option 3 mimics diastolic pressure metrics. Option 4 represents the gross calorific value of carbohydrates, not ATP bond thermodynamics."
+    "ee": "Part A: Core Concept & Background\nATP (Adenosine Triphosphate) cell ki primary energy currency hai. Jab cell ko kisi metabolic ya endothermic work (jaise muscle contraction, protein synthesis) ke liye energy chahiye hoti hai, toh ATP hydrolysis ke through terminal phosphate bond break hota hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: 120 kJ/mol ek unrelated arbitrary value hai jo systolic BP ke numeric metrics se match karti hai, bond energy se nahi.\n• Option 1 is Correct: Jab ATP ke terminal phosphoanhydride bond ko water molecule ke presence mein hydrolyze kiya jata hai (ATP + H2O -> ADP + Pi), tab exactly 30.5 kJ/mol (approx 7.3 kcal/mol) energy liberate hoti hai jo biological processes ko drive karti hai.\n• Option 2 is Incorrect: 80 kJ/mol diastolic pressure metric ka distractor hai.\n• Option 3 is Incorrect: 4.1 kcal/g carbohydrates ki gross calorific energy value hai, ATP bond cleavage ki thermodynamic value nahi.\n\nPart C: Key Takeaway / Value Addition\nATP ka structure adenine base, ribose sugar, aur 3 phosphate groups se banta hai; iske terminal do bonds high-energy phosphoanhydride bonds hote hain.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nएटीपी (Adenosine Triphosphate) कोशिकाओं की सार्वभौमिक ऊर्जा मुद्रा (energy currency) है। जब कोशिका को किसी अंतःऊष्मी (endothermic) या उपापचयी कार्य के लिए ऊर्जा की आवश्यकता होती है, तो जल-अपघटन (hydrolysis) द्वारा एटीपी का अंतिम फॉस्फेट बंध टूटता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: 120 kJ/mol एक भ्रामक मान है जो रक्तदाब के आंकड़ों से मिलता है, इसका एटीपी ऊर्जा से संबंध नहीं है।\n• विकल्प 1 सही है: जब एटीपी के अंतिम फॉस्फेट बंध को जल की उपस्थिति में तोड़ा जाता है (ATP + H2O -> ADP + Pi), तो प्रति मोल 30.5 kJ (लगभग 7.3 kcal/mol) ऊर्जा मुक्त होती है, जो कोशिकीय गतिविधियों को संचालित करती है।\n• विकल्प 2 गलत है: 80 kJ/mol डायस्टोलिक दबाव के संख्यात्मक मान से प्रेरित एक गलत विकल्प है।\n• विकल्प 3 गलत है: 4.1 kcal/g कार्बोहाइड्रेट का सकल कैलोरी मान (calorific value) है, एटीपी विखंडन का नहीं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nएटीपी अणु में एडेनिन, राइबोज शर्करा और तीन फॉस्फेट समूह होते हैं, जिनमें अंतिम दो फॉस्फेट बंध उच्च ऊर्जा वाले फॉस्फोएनहाइड्राइड बंध होते हैं।"
   },
   {
     "p_id": "bpsc_resp_v1_02",
     "qe": "Green plants modulate their gaseous exchange patterns based on diurnal cycles. Which statement accurately describes the major net exchange activity across leaf stomata during the night?",
     "qh": "हरे पौधे दैनिक चक्रों (diurnal cycles) के आधार पर अपने गैसीय विनिमय पैटर्न को बदलते हैं। कौन सा कथन रात के दौरान पत्ती के रंध्रों (stomata) में होने वाली प्रमुख शुद्ध विनिमय गतिविधि का सटीक वर्णन करता है?",
-    "o": [
+    "oe": [
       "Oxygen release is the primary event because solar photolysis continues in the dark.",
       "Carbon dioxide ($CO_2$) elimination is the major exchange activity because no photosynthesis occurs.",
       "Sucrose actively translocates outward through the stomatal opening to reduce root pressure.",
       "Nitrogenous waste gases are fixed into organic nitrites within the intercellular spaces."
     ],
+    "oh": [
+      "ऑक्सीजन का निकलना प्राथमिक घटना है क्योंकि अंधेरे में सौर फोटोलिसिस जारी रहता है।",
+      "कार्बन डाइऑक्साइड ($CO_2$) का निष्कासन प्रमुख विनिमय गतिविधि है क्योंकि प्रकाश संश्लेषण नहीं होता है।",
+      "मूल दाब को कम करने के लिए सुक्रोज रंध्रीय छिद्रों से सक्रिय रूप से बाहर निकलता है।",
+      "नाइट्रोजनयुक्त अपशिष्ट गैसें अंतरकोशिकीय स्थानों में कार्बनिक नाइट्राइट में स्थिर हो जाती हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because oxygen release only occurs during the day as a product of light-driven photolysis. Option 2 is correct because the direction of gas diffusion depends on environmental conditions and plant requirements. At night, in the complete absence of sunlight, photosynthesis halts, meaning no $CO_2$ is consumed. Consequently, $CO_2$ generated via continuous cellular respiration [the metabolic breakdown of glucose to generate ATP] is eliminated into the atmosphere, making $CO_2$ release the major net event. Option 3 describes vascular phloem transport, which does not pass through stomata. Option 4 describes prokaryotic nitrogen fixation configurations."
+    "ee": "Part A: Core Concept & Background\nPlants din aur raat mein alag-alag gas exchange pattern show karte hain kyunki photosynthesis sirf sunlight ki presence mein hoti hai jabki cellular respiration din-raat continuously chalta rehta hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Night mein sunlight na hone ki wajah se water ka photolysis aur O2 release completely stop ho jata hai.\n• Option 1 is Correct: Raat ke time photosynthesis nahi hota, isliye CO2 use nahi hoti. Plants mein continuous respiration chalne ke kaaran cell se CO2 produce hoti hai aur stomata ke through bahar eliminate hoti hai, isliye CO2 elimination raat ka major net event hai.\n• Option 2 is Incorrect: Sucrose phloem tissue ke through plant ke andar translocate hota hai, stomata se bahar nahi nikalta.\n• Option 3 is Incorrect: Nitrogenous gas fixation soil microbes karte hain, leaf stomata ka night respiration se iska koi relation nahi hai.\n\nPart C: Key Takeaway / Value Addition\nDin ke samay respiration se nikli CO2 photosynthesis mein consume ho jati hai, isliye din mein net gas release Oxygen (O2) hota hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nपादपों में गैसीय विनिमय का स्वरूप दिन और रात में भिन्न होता है क्योंकि प्रकाश संश्लेषण केवल सूर्य के प्रकाश में होता है, जबकि कोशिकीय श्वसन चौबीसों घंटे निरंतर चलता रहता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: रात्रि में सूर्य का प्रकाश न होने के कारण जल का प्रकाशीय अपघटन (photolysis) और ऑक्सीजन का निष्कासन पूरी तरह बंद रहता है।\n• विकल्प 1 सही है: रात के समय प्रकाश संश्लेषण न होने से CO2 का उपयोग नहीं होता है। पादपों में निरंतर श्वसन के कारण उत्पन्न होने वाली CO2 रंध्रों के माध्यम से वातावरण में छोड़ी जाती है, अतः CO2 का निष्कासन ही रात की मुख्य गतिविधि है।\n• विकल्प 2 गलत है: सुक्रोज का संवहन फ्लोएम द्वारा पादप के आंतरिक भागों में होता है, रंध्रों से इसका रिसाव नहीं होता।\n• विकल्प 3 गलत है: नाइट्रोजन स्थिरीकरण सूक्ष्मजीवों द्वारा होता है, यह पत्तियों के श्वसन विनिमय का हिस्सा नहीं है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nदिन के समय श्वसन में बनी CO2 प्रकाश संश्लेषण में प्रयुक्त हो जाती है, इसलिए दिन में शुद्ध गैसीय उत्पाद केवल ऑक्सीजन (O2) होता है।"
   },
   {
     "p_id": "bpsc_resp_v1_03",
     "qe": "An environmental biologist observes that aquatic organisms display a significantly higher rate of breathing compared to terrestrial organisms. What evolutionary constraint dictates this physiological acceleration?",
     "qh": "एक पर्यावरण जीवविज्ञानी ने देखा कि स्थलीय जीवों की तुलना में जलीय जीव सांस लेने की काफी उच्च दर (higher rate of breathing) प्रदर्शित करते हैं। कौन सी विकासवादी बाधा इस शारीरिक त्वरण को निर्धारित करती है?",
-    "o": [
+    "oe": [
       "The exceptionally high viscosity of water slowing the movement of flagellar axonemes.",
       "The concentration of dissolved oxygen in water being fairly low compared to the amount of oxygen in the air.",
       "The rapid accumulation of basic histones within the gill lamellae surfaces.",
       "The necessity to maintain a highly acidic duodenal fluid pH of 1.8 inside the gills."
     ],
+    "oh": [
+      "पानी की अत्यधिक उच्च श्यानता (viscosity) फ्लैजेलर एक्सोनेम की गति को धीमा कर देती है।",
+      "हवा में ऑक्सीजन की मात्रा की तुलना में पानी में घुली हुई ऑक्सीजन की सांद्रता काफी कम होना।",
+      "गिल लैमेली सतहों के भीतर क्षारीय हिस्टोन का तेजी से संचय होना।",
+      "गिल्स के अंदर 1.8 का अत्यधिक अम्लीय ग्रहणी द्रव pH बनाए रखने की आवश्यकता।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes hydrodynamic drag but is not the primary chemical driver of respiratory rate pacing. Option 2 is correct because air holds a high concentration of molecular oxygen, whereas the amount of dissolved oxygen [oxygen gas molecules trapped within water matrices] available to aquatic life is relatively low. To extract sufficient oxygen to sustain metabolic pathways, aquatic organisms like fish must process water rapidly, forcing it through their mouths and past the gills at an accelerated rate. Option 3 describes nuclear packaging proteins. Option 4 incorrectly links a gastric chemical parameter with respiratory gill tissue."
+    "ee": "Part A: Core Concept & Background\nAquatic aur terrestrial organisms ka respiratory medium completely different hota hai—terrestrial animals atmospheric air se O2 lete hain jabki aquatic animals water mein dissolved O2 par depend karte hain.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Water viscosity swimming ko affect karti hai, par respiration rate fast hone ka main biochemical reason oxygen availability hai.\n• Option 1 is Correct: Air mein lagbhag 21% oxygen hoti hai jabki water mein dissolved oxygen ki matra extremely low (approx <1% by volume) hoti hai. Apni metabolic O2 demand poori karne ke liye fishes aur aquatic animals ko bohot tezi se water gills ke through pass karna padta hai, isliye unka breathing rate high hota hai.\n• Option 2 is Incorrect: Histones DNA packaging proteins hain, gill surface respiration mein inka koi role nahi hai.\n• Option 3 is Incorrect: pH 1.8 stomach/gastric juice ka hota hai, respiratory organs (gills) se iska koi lena-dena nahi hai.\n\nPart C: Key Takeaway / Value Addition\nFishes mein counter-current exchange mechanism gills mein paya jata hai, jisse blood aur water ke beech maximum O2 diffusion ensure hota hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nजलीय और स्थलीय जीवों का श्वसन माध्यम भिन्न होता है—स्थलीय जीव वायुमंडलीय वायु से ऑक्सीजन लेते हैं, जबकि जलीय जीव जल में घुली ऑक्सीजन पर निर्भर रहते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: जल की श्यानता गति को प्रभावित कर सकती है, परंतु श्वसन दर के तीव्र होने का मुख्य कारण ऑक्सीजन की उपलब्धता है।\n• विकल्प 1 सही है: वायुमंडल में लगभग 21% ऑक्सीजन होती है, जबकि जल में घुलित ऑक्सीजन की मात्रा अत्यंत कम होती है। अपनी उपापचयी आवश्यकताओं को पूरा करने के लिए जलीय जीवों (जैसे मछलियों) को कम समय में अधिक जल गिल्स से गुजारना पड़ता है, जिससे उनकी श्वसन दर तेज होती है।\n• विकल्प 2 गलत है: हिस्टोन केंद्रक में डीएनए संवेष्टन प्रोटीन हैं, श्वसन सतह से इनका कोई संबंध नहीं है।\n• विकल्प 3 गलत है: 1.8 pH आमाशय के जठर रस का होता है, श्वसन गिल्स का नहीं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nमछलियों के गिल्स में 'प्रति-धारा विनिमय प्रणाली' (counter-current mechanism) पाई जाती है, जो जल से रक्त में अधिकतम ऑक्सीजन अवशोषण सुनिश्चित करती है।"
   },
   {
     "p_id": "bpsc_resp_v1_04",
     "qe": "Human respiratory passages are lined with rings of cartilage located in the throat region. What is the structural function of these cartilaginous architectures?",
     "qh": "मानव श्वसन मार्ग गले के क्षेत्र में स्थित उपास्थि के छल्लों (rings of cartilage) से सुसज्जित होते हैं। इन उपास्थि संरचनाओं का संरचनात्मक कार्य क्या है?",
-    "o": [
+    "oe": [
       "To physically secrete mucus layers that trap moving gaseous ions.",
       "To ensure that the air-passage does not collapse under changing pressure variants.",
       "To actively pump deoxygenated blood cells into the alveolar capillaries.",
       "To serve as a muscular valve regulating chyme entry into the windpipe."
     ],
+    "oh": [
+      "भौतिक रूप से बलगम की परतों को स्रावित करना जो गतिमान गैसीय आयनों को फंसाते हैं।",
+      "यह सुनिश्चित करना कि वायु-मार्ग बदलते दबाव रूपों में पिचके (ध्वस्त) नहीं।",
+      "वायुकोशीय केशिकाओं में विऑक्सीकृत रक्त कोशिकाओं को सक्रिय रूप से पंप करना।",
+      "श्वासनली में काइम के प्रवेश को नियंत्रित करने वाले एक पेशी वाल्व के रूप में कार्य करना।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because mucus is secreted by specialized epithelial cells, not by rigid structural cartilage. Option 2 is correct because during the negative pressure changes associated with ventilation [the mechanical movement of air in and out of the lungs], the trachea and throat passages experience structural stress. The rings of cartilage provide scaffolding that ensures the air-passage remains patent [open and unobstructed] and does not collapse. Option 3 describes cardiovascular dynamics managed by the heart. Option 4 scrambles stomach fluid terms with respiratory anatomy."
+    "ee": "Part A: Core Concept & Background\nHuman respiratory tract mein trachea aur primary/secondary bronchi ke around C-shaped cartilaginous rings present hoti hain jo windpipe ko mechanical support provide karti hain.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Mucus secretion goblet cells aur mucous glands ka function hai, hyaline cartilage rings ka nahi.\n• Option 1 is Correct: Inhalation aur exhalation ke dauran thoracic cavity aur air passage mein continuous pressure changes hote hain. Ye C-shaped incomplete cartilaginous rings trachea aur bronchi ko rigid support deti hain jisse air na hone par bhi windpipe collapse (pichakna) nahi hoti.\n• Option 2 is Incorrect: Blood pumping ka kaam heart karta hai, respiratory cartilage ka isse koi relation nahi hai.\n• Option 3 is Incorrect: Chyme digestive system ka part hai aur food ko windpipe mein jaane se epiglottis rokti hai, tracheal rings nahi.\n\nPart C: Key Takeaway / Value Addition\nTrachea mein ye rings 'Hyaline Cartilage' ki bani hoti hain aur dorsal side par incomplete (C-shaped) hoti hain taaki esophagus food bolus ke dauran easily expand ho sake.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nमानव श्वसन तंत्र में श्वासनली (trachea) और श्वसनियों के चारों ओर C-आकार के उपास्थि (cartilage) के छल्ले पाए जाते हैं, जो वायुमार्ग को संरचनात्मक आधार प्रदान करते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: श्लेष्मा (mucus) का स्राव गॉब्लेट कोशिकाओं और उपकला ग्रंथियों द्वारा होता है, उपास्थि द्वारा नहीं।\n• विकल्प 1 सही है: श्वसन के दौरान वायुमार्ग में वायुदाब में तीव्र उतार-चढ़ाव होता है। उपास्थि के ये छल्ले श्वासनली को मजबूती प्रदान करते हैं ताकि वायु की अनुपस्थिति में भी श्वासनली आपस में चिपककर अवरुद्ध (collapse) न हो।\n• विकल्प 2 गलत है: रक्त को पंप करने का कार्य हृदय करता है, उपास्थि के छल्लों का नहीं।\n• विकल्प 3 गलत है: भोजन को श्वासनली में जाने से रोकने का कार्य एपिग्लॉटिस (घांटी ढक्कन) करता है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nये छल्ले 'हायलिन उपास्थि' (Hyaline cartilage) के बने होते हैं और पृष्ठ भाग में अपूर्ण (C-आकार) होते हैं ताकि इसके ठीक पीछे स्थित ग्रासनली (esophagus) को फैलने की जगह मिल सके।"
   },
   {
     "p_id": "bpsc_resp_v1_05",
     "qe": "During the human breathing cycle, why do the lungs continuously maintain a specific 'residual volume' of air rather than evacuating the internal volume entirely?",
     "qh": "मानव श्वसन चक्र (breathing cycle) के दौरान, फेफड़े आंतरिक आयतन को पूरी तरह से खाली करने के बजाय लगातार हवा का एक विशिष्ट 'अवशिष्ट आयतन' (residual volume) क्यों बनाए रखते हैं?",
-    "o": [
+    "oe": [
       "To keep the gastro-oesophageal sphincter permanently open for gas evacuation.",
       "To ensure there is sufficient time for oxygen to be absorbed and for carbon dioxide to be released.",
       "To force chylomicrons out of the local capillaries into systemic blood lines.",
       "To allow the rapid mitotic replication of surrounding visceral mesothelium layers."
     ],
+    "oh": [
+      "गैस निकासी के लिए गैस्ट्रो-ओसोफेगल स्फिंक्टर को स्थायी रूप से खुला रखना।",
+      "यह सुनिश्चित करने के लिए कि ऑक्सीजन के अवशोषण और कार्बन डाइऑक्साइड के निष्कासन के लिए पर्याप्त समय उपलब्ध रहे।",
+      "काइलोमाइक्रोन को स्थानीय केशिकाओं से प्रणालीगत रक्त वाहिकाओं में धकेलना।",
+      "आसपास की आंत संबंधी मेसोथेलियम परतों के तेजी से समसूत्री विभाजन की अनुमति देना।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes a digestive valve mechanism that is completely separate from respiratory patterns. Option 2 is correct because gas exchange across the fine, delicate alveolar membrane requires constant contact. The lungs permanently retain a specific residual volume [the volume of air remaining in the lungs after a maximal forced expiration], ensuring that even during the transition between inhalation and exhalation, gas exchange does not stop. This provides a continuous temporal window for oxygen uptake and carbon dioxide release. Option 3 describes lipid absorption pathways. Option 4 describes a cell cycle mechanism."
+    "ee": "Part A: Core Concept & Background\nLungs kabhi bhi complete air evacuate nahi karte. Maximal forceful expiration ke baad bhi lungs ke andar jo air bachi rehti hai, usko Residual Volume (RV, approx 1100-1200 mL) kaha jata hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Gastro-oesophageal sphincter digestive canal ka valve hai, lungs ke air volume se iska connection nahi hai.\n• Option 1 is Correct: Residual volume lungs ke alveoli ko collapse hone se bachta hai aur ek continuous functional reservoir banata hai. Isse breathing cycles (inhalation aur exhalation) ke beech continuous gas exchange chalta rehta hai aur O2 absorption aur CO2 release ke liye sufficient time milta hai.\n• Option 2 is Incorrect: Chylomicrons lipid particles hain jo intestinal lacteals mein absorb hote hain, lung alveoli mein nahi.\n• Option 3 is Incorrect: Residual volume ka function gas diffusion mechanics se hai, mesothelium ke mitosis se nahi.\n\nPart C: Key Takeaway / Value Addition\nResidual Volume ko standard spirometer se directly measure nahi kiya ja sakta; iske liye helium dilution ya body plethysmography technique use hoti hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nफेफड़े कभी भी पूरी तरह हवा से खाली नहीं होते। बलपूर्वक अत्यधिक सांस बाहर निकालने के बाद भी फेफड़ों में बची रहने वाली वायु को अवशिष्ट आयतन (Residual Volume, लगभग 1100-1200 मिली) कहते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: गैस्ट्रो-ओसोफेगल स्फिंक्टर पाचन तंत्र का हिस्सा है, इसका श्वसन आयतन से कोई संबंध नहीं है।\n• विकल्प 1 सही है: अवशिष्ट आयतन यह सुनिश्चित करता है कि सांस लेने और छोड़ने के अंतराल में भी कूपिकाओं (alveoli) में गैसीय विनिमय निरंतर चलता रहे, जिससे O2 के अवशोषण और CO2 के निष्कासन के लिए पर्याप्त समय मिल सके और फेफड़े पिचकने से बच सकें।\n• विकल्प 2 गलत है: काइलोमाइक्रोन वसा के कण हैं जिनका संबंध आंतों में वसा अवशोषण से है।\n• विकल्प 3 गलत है: इसका कार्य गैसीय विसरण को बनाए रखना है, कोशिकाओं का विभाजन नहीं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nअवशिष्ट आयतन (RV) को साधारण स्पाइरोमीटर द्वारा सीधे नहीं मापा जा सकता; इसे हीलियम डाइल्यूशन या प्लेथिस्मोग्राफी विधि द्वारा मापा जाता है।"
   },
   {
     "p_id": "bpsc_resp_v1_06",
     "qe": "As the physical body size of animals increases, diffusion pressure alone becomes insufficient to deliver oxygen to distant tissues. How does the human physiological layout overcome this scale limitation?",
     "qh": "जैसे-जैसे जानवरों के शरीर का भौतिक आकार बढ़ता है, अकेले विसरण दाब (diffusion pressure) दूर के ऊतकों तक ऑक्सीजन पहुँचाने के लिए अपर्याप्त हो जाता है। मानव शारीरिक विन्यास इस पैमाने की सीमा को कैसे पार करता है?",
-    "o": [
+    "oe": [
       "By relying on the high water solubility of gaseous oxygen molecules within the plasma fluid.",
       "By utilizing the respiratory pigment haemoglobin localized within red blood corpuscles to bind and carry oxygen with high affinity.",
       "By accelerating the passive flow of lymph fluid through Meissner's sub-mucosal plexuses.",
       "By transforming local epithelial cells into non-permeable cellulosic cell wall plates."
     ],
+    "oh": [
+      "प्लाज्मा द्रव के भीतर गैसीय ऑक्सीजन अणुओं की उच्च जल घुलनशीलता पर भरोसा करके।",
+      "लाल रक्त कणिकाओं के भीतर स्थित श्वसन वर्णक हीमोग्लोबिन का उपयोग करके ऑक्सीजन को उच्च बंधुता के साथ बांधना और ले जाना।",
+      "मीस्नर के सब-म्यूकोसल प्लेक्सस के माध्यम से लसीका द्रव के निष्क्रिय प्रवाह को तेज करके।",
+      "स्थानीय उपकला कोशिकाओं को गैर-पारगम्य सेल्यूलोसिक कोशिका भित्ति प्लेटों में बदलकर।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because oxygen gas has very low solubility in water/plasma, which is why diffusion alone would take an estimated 3 years to move oxygen from the lungs to the toes. Option 2 is correct because human physiology uses the specialized respiratory metalloprotein haemoglobin [an iron-containing oxygen transport protein found in red blood cells] which exhibits a high chemical affinity for oxygen, binding it tightly in the lungs and rapidly distributing it to oxygen-deficient peripheral tissues. Option 3 describes enteric nerve plexuses that manage digestion. Option 4 describes plant structures that do not exist in humans."
+    "ee": "Part A: Core Concept & Background\nLarge multicellular organisms mein body surface se deep internal tissues tak simple diffusion se O2 deliver hona impossible hai (human body mein lungs se toe tak diffusion se O2 pahunchne mein approx 3 saal lag jayenge).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Oxygen ki solubility water/plasma mein bohot kam hoti hai (sirf 3% O2 dissolved form mein transport hoti hai), isliye plasma akele sufficient nahi hai.\n• Option 1 is Correct: Humans mein Red Blood Cells (RBCs) ke andar specialized respiratory pigment **Haemoglobin** present hota hai. Ek haemoglobin molecule 4 O2 molecules ke sath reversibly bind hoke oxyhaemoglobin banata hai aur high affinity ke sath tissues tak bulk oxygen transport karta hai.\n• Option 2 is Incorrect: Meissner's plexus gut wall ki enteric nervous system ka part hai, O2 transport se iska relation nahi hai.\n• Option 3 is Incorrect: Cellulosic cell walls plants mein hoti hain, human animal cells mein nahi.\n\nPart C: Key Takeaway / Value Addition\nHaemoglobin ek iron-containing tetrameric protein hai; 1 gram Hb lagbhag 1.34 mL oxygen carry karta hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nविशाल बहुकोशिकीय जीवों में केवल साधारण विसरण (diffusion) द्वारा शरीर के सभी अंगों तक ऑक्सीजन नहीं पहुंचाई जा सकती (विसरण द्वारा फेफड़ों से पैर के अंगूठे तक O2 पहुंचने में लगभग 3 वर्ष लग सकते हैं)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: जल या प्लाज्मा में ऑक्सीजन की घुलनशीलता बहुत कम होती है (केवल 3% O2 प्लाज्मा में घुलकर जाती है), अतः यह पर्याप्त नहीं है।\n• विकल्प 1 सही है: मानव शरीर में लाल रक्त कोशिकाओं (RBCs) में **हीमोग्लोबिन** नामक श्वसन वर्णक पाया जाता है। हीमोग्लोबिन की ऑक्सीजन के प्रति उच्च बंधुता (affinity) होती है; इसका एक अणु 4 O2 अणुओं से जुड़कर ऑक्सीहीमोग्लोबिन बनाता है और द्रुत गति से ऊतकों तक ऑक्सीजन पहुंचाता है।\n• विकल्प 2 गलत है: मीस्नर प्लेक्सस आंत की तंत्रिका प्रणाली का भाग है, इसका गैस परिवहन से कोई संबंध नहीं है।\n• विकल्प 3 गलत है: सेल्यूलोस की कोशिका भित्ति पादपों में पाई जाती है, जंतुओं में नहीं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nहीमोग्लोबिन लौह-युक्त टेट्रामेरिक प्रोटीन है; 1 ग्राम हीमोग्लोबिन लगभग 1.34 मिलीलीटर ऑक्सीजन का वहन करता है।"
   },
   {
     "p_id": "bpsc_resp_v1_07",
     "qe": "Carbon dioxide ($CO_2$) and oxygen ($O_2$) utilize distinct chemical modalities for transport within human blood. Which statement accurately describes the primary transport strategy of $CO_2$?",
     "qh": "मानव रक्त के भीतर परिवहन के लिए कार्बन डाइऑक्साइड ($CO_2$) और ऑक्सीजन ($O_2$) अलग-अलग रासायनिक तौर-तरीकों का उपयोग करते हैं। कौन सा कथन $CO_2$ की प्राथमिक परिवहन रणनीति का सटीक वर्णन करता है?",
-    "o": [
+    "oe": [
       "It binds exclusively to the central iron core of plasma chylomicrons.",
       "It is mostly transported in the dissolved form in blood because it is more soluble in water than oxygen is.",
       "It crystallizes directly into solid calcium carbonate inclusions within platelets.",
       "It relies entirely on the rapid mechanical beating of ciliary axonemes along veins."
     ],
+    "oh": [
+      "यह विशेष रूप से प्लाज्मा काइलोमाइक्रोन के केंद्रीय लौह कोर से बंधता है।",
+      "यह ज्यादातर रक्त में घुलित रूप में ले जाया जाता है क्योंकि यह ऑक्सीजन की तुलना में पानी में अधिक घुलनशील है।",
+      "यह प्लेटलेट्स के भीतर ठोस कैल्शियम कार्बोनेट समावेशन में सीधे क्रिस्टलीकृत होता है।",
+      "यह पूरी तरह से नसों के साथ सिलियरी एक्सोनेम के तेजी से यांत्रिक धड़कन पर निर्भर करता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 incorrectly associates lipid-transport chylomicrons with gas transport. Option 2 is correct because $CO_2$ exhibits a significantly higher chemical solubility in aqueous environments than oxygen does. Due to this high solubility, $CO_2$ is mostly transported back to the lungs in the dissolved form within the fluid plasma medium [the liquid extracellular matrix of blood], rather than being completely dependent on erythrocyte packaging. Option 3 is a minerals distractor. Option 4 describes ciliary movement structures."
+    "ee": "Part A: Core Concept & Background\nTissues mein metabolic activities ke dauran CO2 continuously produce hoti hai. CO2 ka transport blood plasma aur RBCs ke through multiple biochemical forms mein lungs tak hota hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Chylomicrons dietary fats ke transport droplets hain, inme koi iron core ya gas binding site nahi hoti.\n• Option 1 is Correct: Carbon dioxide ki water solubility Oxygen ke mukable 20-25 times higher hoti hai. Is high solubility aur chemical hydration ki wajah se CO2 majorly aqueous ionic state yaani Bicarbonate ions ($HCO_3^-$ approx 70%) aur dissolved plasma form (approx 7%) ke roop mein easily transport hoti hai.\n• Option 2 is Incorrect: CO2 platelets ke andar CaCO3 crystals ke roop mein store nahi hoti, ye blood buffering system mein dissolve hoti hai.\n• Option 3 is Incorrect: Ciliary beating cellular movement ya respiratory tract clearance mein kaam aati hai, veins ke andar gas transport mein nahi.\n\nPart C: Key Takeaway / Value Addition\nCO2 ka total transport breakdown: 70% as Bicarbonate ions ($HCO_3^-$), 20-25% as Carbamino-haemoglobin ($HbCO_2$), aur 7% dissolved in plasma.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nऊतकों में उपापचय के फलस्वरूप कार्बन डाइऑक्साइड उत्पन्न होती है। रक्त द्वारा CO2 को ऊतकों से फेफड़ों तक ले जाने के लिए विभिन्न रासायनिक रूपों का उपयोग किया जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: काइलोमाइक्रोन वसा का परिवहन करते हैं, इनका गैसीय परिवहन से कोई संबंध नहीं है।\n• विकल्प 1 सही है: कार्बन डाइऑक्साइड की जल में घुलनशीलता ऑक्सीजन की तुलना में 20-25 गुना अधिक होती है। इस उच्च घुलनशीलता के कारण यह रक्त में मुख्य रूप से घुलित/आयनिक अवस्था में (विशेष रूप से 70% बाइकार्बोनेट आयन के रूप में और 7% प्लाज्मा में घुलकर) आसानी से परिवहित होती है।\n• विकल्प 2 गलत है: CO2 रक्त में कैल्शियम कार्बोनेट के रूप में क्रिस्टलीकृत नहीं होती।\n• विकल्प 3 गलत है: रक्त वाहिकाओं में गैस संवहन सिलिया की गति पर निर्भर नहीं होता।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nरक्त में CO2 का परिवहन: 70% बाइकार्बोनेट आयनों ($HCO_3^-$) के रूप में, 20-25% कार्बेमिनो-हीमोग्लोबिन के रूप में और 7% प्लाज्मा में घुलित अवस्था में होता है।"
   },
-  
   {
     "p_id": "bpsc_resp_v4_01",
     "qe": "Anatomical structural tracking of the human respiratory tract identifies the level where the trachea bifurcates into the right and left primary bronchi. At which precise skeletal marker does this structural division occur?",
     "qh": "मानव श्वसन पथ की शारीरिक संरचनात्मक ट्रैकिंग उस स्तर की पहचान करती है जहां श्वासनाल (trachea) दाएं और बाएं प्राथमिक ब्रोंकाई में विभाजित होती है। यह संरचनात्मक विभाजन किस सटीक कंकाल मार्कर पर होता है?",
-    "o": [
+    "oe": [
       "At the level of the 5th cervical vertebra.",
       "At the level of the 5th thoracic vertebra.",
       "At the level of the 3rd lumbar vertebra.",
       "At the distal boundary of the gastro-oesophageal sphincter."
     ],
+    "oh": [
+      "5वीं ग्रीवा कशेरुका (5th cervical vertebra) के स्तर पर।",
+      "5वीं वक्ष कशेरुका (5th thoracic vertebra) के स्तर पर।",
+      "तीसरी काठ कशेरुका (3rd lumbar vertebra) के स्तर पर।",
+      "गैस्ट्रो-ओसोफेगल स्फिंक्टर की दूरस्थ सीमा पर।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 incorrectly places the bifurcation higher up in the neck region. Option 2 is correct because the text explicitly states that the trachea is a straight tube extending down into the mid-thoracic cavity, where it splits into the right and left primary bronchi precisely at the level of the 5th thoracic vertebra [the fifth bone segment of the upper-to-mid back spine supporting the rib cage]. This anatomical position is a critical landmark for clinical endotracheal intubation. Option 3 is too inferior, lying in the lower back region. Option 4 describes a muscular digestive valve at the entrance of the stomach."
+    "ee": "Part A: Core Concept & Background\nTrachea (windpipe) mid-thoracic cavity tak extend hone wali straight tube hai jo lungs ko atmospheric air supply karne ke liye right aur left primary bronchi mein divide hoti hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: 5th cervical vertebra (C5) neck region mein hota hai, jahan larynx/upper trachea start hoti hai, bifurcation nahi hota.\n• Option 1 is Correct: Standard human anatomy ke according, trachea mid-thoracic cavity mein travel karti hai aur **5th Thoracic Vertebra (T5)** ke level par (Carina point par) right aur left primary bronchi mein bifurcate ho jati hai.\n• Option 2 is Incorrect: 3rd lumbar vertebra (L3) lower back region mein hoti hai, jo abdominal cavity ka part hai.\n• Option 3 is Incorrect: Gastro-oesophageal sphincter stomach ke entrance par hota hai, respiratory airway bifurcation se iska koi relation nahi hai.\n\nPart C: Key Takeaway / Value Addition\nT5 vertebra ka level Sternal Angle (Angle of Louis) ke horizontally opposite hota hai, jo clinical medicine aur intubation mein critical landmark hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nश्वासनली (Trachea) मध्य-वक्षीय गुहा तक जाने वाली एक सीधी नली है, जो फेफड़ों में प्रवेश करने से पहले दाईं और बाईं प्राथमिक श्वसनी (primary bronchi) में विभाजित होती है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: 5वीं ग्रीवा कशेरुका (C5) गर्दन के क्षेत्र में स्थित होती है, जहाँ श्वासनली का विभाजन नहीं होता।\n• विकल्प 1 सही है: श्वासनली वक्ष गुहा के मध्य तक जाकर **5वीं वक्ष कशेरुका (5th Thoracic Vertebra - T5)** के स्तर पर दाईं और बाईं प्राथमिक श्वसनियों में विभाजित हो जाती है।\n• विकल्प 2 गलत है: तीसरी काठ कशेरुका (L3) पीठ के निचले हिस्से (उदर क्षेत्र) में पाई जाती है।\n• विकल्प 3 गलत है: यह आमाशय के द्वार पर स्थित पेशी वाल्व है, श्वसन मार्ग का हिस्सा नहीं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nT5 कशेरुका का स्तर उरोस्थि कोण (Sternal Angle of Louis) के सीध में होता है, जो चिकित्सीय परीक्षणों में एक प्रमुख शारीरिक मील का पत्थर है।"
   },
   {
     "p_id": "bpsc_resp_v4_02",
     "qe": "The human conducting zone performs multiple physiological treatments on incoming atmospheric air. Which of the following functions is *not* a standard operation of this zone?",
     "qh": "मानव चालन क्षेत्र (human conducting zone) आने वाली वायुमंडलीय हवा पर कई शारीरिक उपचार करता है। निम्नलिखित में से कौन सा कार्य इस क्षेत्र का एक मानक संचालन *नहीं* है?",
-    "o": [
+    "oe": [
       "Humidifying the incoming dry atmospheric air.",
       "Clearing the air column of foreign particulate matter.",
       "Executing the actual diffusion of gases across the three-layered basement substance.",
       "Bringing the temperature of inhaled air to normal body temperature."
     ],
+    "oh": [
+      "आने वाली शुष्क वायुमंडलीय हवा को नम (humidify) करना।",
+      "हवा के स्तंभ से बाहरी धूलकणों और अशुद्धियों को साफ करना।",
+      "तीन-स्तरीय आधार पदार्थ के पार गैसों के वास्तविक विसरण को निष्पादित करना।",
+      "सांस के साथ ली गई हवा के तापमान को शरीर के सामान्य तापमान पर लाना।"
+    ],
     "a": 2,
-    "e": "<b>Explanation:</b> Options 1, 2, and 4 are incorrect because they describe true functional properties of the conducting part [the anatomical pathway extending from the external nostrils up to the terminal bronchioles], which serves to warm, humidify, and filter air. Option 3 is correct because it represents a false statement regarding the conducting zone. The actual diffusion and exchange of gases ($O_2$ and $CO_2$) between the blood and atmospheric air occurs exclusively within the respiratory or exchange part [the zone comprising the alveoli and their immediate ducts], not the conducting tubes."
+    "ee": "Part A: Core Concept & Background\nHuman respiratory system functionally do parts mein divided hai: (1) Conducting zone (external nostrils se terminal bronchioles tak) aur (2) Respiratory/Exchange zone (alveoli aur alveolar ducts).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0, 1, and 3 are standard functions: Conducting zone atmospheric air ko transport karta hai, mucus aur cilia se dust particles ko filter karta hai, dry air ko humidify karta hai, aur incoming air ko body temperature par lata hai.\n• Option 2 is the correct answer (Not a function of conducting zone): Gas diffusion ($O_2$ aur $CO_2$ ka actual exchange) conducting zone ka kaam nahi hai; ye exclusively **Respiratory Zone** (Alveoli) mein 3-layered diffusion membrane ke through hota hai.\n\nPart C: Key Takeaway / Value Addition\nConducting zone anatomical dead space volume create karta hai, jiska average measure healthy adult mein approx 150 mL hota hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nमानव श्वसन तंत्र को दो कार्यात्मक भागों में बांटा गया है: (1) संवहन/चालन क्षेत्र (Conducting zone - नासाछिद्र से लेकर अंतस्थ श्वसनिकाओं तक) और (2) श्वसन/विनिमय क्षेत्र (Respiratory zone - कूपिकाएं एवं कूपिका नलिकाएं)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0, 1 और 3 चालन क्षेत्र के वास्तविक कार्य हैं: यह वायु को फेफड़ों तक ले जाता है, धूल-कणों को साफ करता है, वायु को नम बनाता है और उसका तापमान शरीर के अनुकूल करता है।\n• विकल्प 2 सही उत्तर है (जो इसका कार्य नहीं है): गैसों का वास्तविक विसरण (diffusion) चालन क्षेत्र में नहीं होता; यह कार्य केवल **श्वसन विनिमय क्षेत्र (कूपिकाओं/Alveoli)** की सूक्ष्म झिल्ली के आर-पार संपन्न होता है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nचालन क्षेत्र में उपस्थित वायु गैसीय विनिमय में भाग नहीं लेती, इसे 'एनाटोमिकल डेड स्पेस' कहा जाता है, जिसका आयतन लगभग 150 मिली होता है।"
   },
   {
     "p_id": "bpsc_resp_v4_03",
     "qe": "How does the structural composition of the structural scaffolding changes as the human airway networks branch from the trachea down to the final alveoli inlets?",
     "qh": "मानव वायुमार्ग नेटवर्क के श्वासनाल (trachea) से अंतिम एलीविओली (alveoli) इनलेट्स तक विभाजित होने पर संरचनात्मक मचान (structural scaffolding) का विन्यास कैसे बदलता है?",
-    "o": [
+    "oe": [
       "The entire network, including the final irregular-walled alveoli bags, is supported by complete rings of bone tissue.",
       "The tracheae, primary, secondary, and tertiary bronchi, along with initial bronchioles, are supported by incomplete cartilaginous rings, whereas terminal bronchioles give rise to thin, irregular-walled alveoli.",
       "Cartilage is present exclusively within the terminal bronchioles, leaving the upper trachea entirely soft.",
       "The walls transform entirely into an outer circular layer of thin visceral mesothelium layers."
     ],
+    "oh": [
+      "अंतिम अनियमित दीवार वाले वायुकोशीय थैलों सहित संपूर्ण नेटवर्क, अस्थि ऊतक के पूर्ण छल्लों द्वारा समर्थित है।",
+      "श्वासनाल, प्राथमिक, द्वितीयक और तृतीयक ब्रोंकाई, शुरुआती ब्रोंकियोल्स के साथ अपूर्ण उपास्थि छल्लों द्वारा समर्थित हैं, जबकि टर्मिनल ब्रोंकियोल्स पतली, अनियमित दीवार वाली कूपिकाओं (alveoli) को जन्म देते हैं।",
+      "उपास्थि विशेष रूप से टर्मिनल ब्रोंकियोल्स के भीतर मौजूद होती है, जिससे ऊपरी श्वासनली पूरी तरह से नरम हो जाती है।",
+      "दीवारें पूरी तरह से पतली आंत संबंधी मेसोथेलियम परतों की एक बाहरी गोलाकार परत में बदल जाती हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because bone tissue is absent from these elastic airway structures, and alveoli are delicate, thin bags that lack any rigid structural rings. Option 2 is correct because the structural integrity of the human airway changes systematically: the larger conducting channels—tracheae, primary, secondary, and tertiary bronchi, and initial bronchioles—are kept patent [open and non-collapsed] by C-shaped incomplete cartilaginous rings. As branching reaches the terminal bronchioles and down into the structural alveoli [vascularised bag-like clusters where exchange occurs], this rigid support is lost to allow maximum surface flexibility. Option 3 reverses this anatomical distribution. Option 4 describes outer tissue coats typical of gut serosa layers."
+    "ee": "Part A: Core Concept & Background\nAirway branching (tracheobronchial tree) trachea se start hoke micro-level alveoli tak continuous division karti hai. Structural support conducting tubes ko open rakhne ke liye essential hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Respiratory tract mein bone tissue rings nahi hoti, aur alveoli flexible vascular bags hote hain bina kisi ring ke.\n• Option 1 is Correct: Trachea, primary, secondary, tertiary bronchi aur initial bronchioles C-shaped **incomplete cartilaginous rings** se supported hote hain taaki wo collapse na hon. Jaise-jaise branching aage badhti hai, terminal bronchioles par cartilage disappear ho jati hai aur thin, vascularized, irregular-walled bag-like structures bante hain jinhe **Alveoli** kehte hain.\n• Option 2 is Incorrect: Cartilage upper airway mein thick hoti hai aur terminal ends par absent hoti hai.\n• Option 3 is Incorrect: Visceral mesothelium gut serosa ka component hai, respiratory wall structure ka nahi.\n\nPart C: Key Takeaway / Value Addition\nHuman lungs mein lagbhag 300 million alveoli present hoti hain, jo total mila kar approx 70-80 square meter ka surface area provide karti hain.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nश्वसन मार्ग (श्वासनली वृक्ष) श्वासनली से लेकर कूपिकाओं तक लगातार शाखाओं में बंटता है। वायुमार्ग को खुला रखने के लिए मार्ग में उपास्थि का विशिष्ट ढांचा उपस्थित होता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: श्वसन मार्ग में अस्थि के छल्ले नहीं होते और कूपिकाएं अत्यधिक पतली एवं लचीली होती हैं।\n• विकल्प 1 सही है: श्वासनली, प्राथमिक, द्वितीयक एवं तृतीयक श्वसनी तथा प्रारंभिक श्वसनिकाएं **अपूर्ण C-आकार के उपास्थि छल्लों** द्वारा सुरक्षित रहती हैं। विभाजन के अंतिम छोर पर टर्मिनल श्वसनिकाओं के बाद उपास्थि समाप्त हो जाती है और अत्यधिक पतली, संवहनी तथा अनियमित भित्ति वाली थैलीनुमा **कूपिकाएं (Alveoli)** बनती हैं।\n• विकल्प 2 गलत है: उपास्थि ऊपरी श्वासनली में होती है, न कि केवल अंतिम छोर पर।\n• विकल्प 3 गलत है: मेसोथेलियम पाचन तंत्र की परत है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nदोनों फेफड़ों में लगभग 30 करोड़ (300 मिलियन) कूपिकाएं पाई जाती हैं, जो गैसीय विनिमय के लिए लगभग 70-80 वर्ग मीटर का विस्तृत पृष्ठीय क्षेत्रफल देती हैं।"
   },
   {
     "p_id": "bpsc_resp_v4_04",
     "qe": "Inspiration requires the generation of a negative pressure gradient within the pulmonary cavity relative to the atmosphere. What coordinated skeletal and muscular movements initiate this pressure drop?",
     "qh": "अंतःश्वसन (Inspiration) के लिए वायुमंडल के सापेक्ष फुफ्फुसीय गुहा (pulmonary cavity) के भीतर एक नकारात्मक दबाव प्रवणता (negative pressure gradient) उत्पन्न करने की आवश्यकता होती है। कौन से समन्वित कंकाल और मांसपेशियों के आंदोलन इस दबाव गिरावट को शुरू करते हैं?",
-    "o": [
+    "oe": [
       "Relaxation of the diaphragm combined with the inward collapse of the sternum axis.",
       "Contraction of the diaphragm increasing volume in the antero-posterior axis, along with contraction of external intercostal muscles lifting the ribs and sternum to expand the dorso-ventral axis.",
       "The mass peristaltic downward surge of the abdominal oblique muscle sheets.",
       "The active closure of the cartilaginous epiglottis flap against the local glottis opening."
     ],
+    "oh": [
+      "उरोस्थि (sternum) अक्ष के अंदर की ओर पतन के साथ डायाफ्राम का शिथिलन (relaxation)।",
+      "डायाफ्राम का संकुचन अग्र-पश्च (antero-posterior) अक्ष में आयतन बढ़ाता है, साथ ही पसलियों और उरोस्थि को उठाकर पृष्ठीय-उदर (dorso-ventral) अक्ष का विस्तार करने के लिए बाहरी इंटरकोस्टल मांसपेशियों का संकुचन होता है।",
+      "पेट की तिरछी मांसपेशियों की परतों का सामूहिक क्रमाकुंचन नीचे की ओर बढ़ना।",
+      "स्थानीय ग्लोटिस उद्घाटन के खिलाफ उपास्थि एपिग्लॉटिस फ्लैप का सक्रिय बंद होना।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the mechanics of expiration, where volume drops and intra-pulmonary pressure rises above atmospheric pressure. Option 2 is correct because inspiration is an active process driven by volume expansions: contraction of the dome-shaped diaphragm pulls it downward, expanding the thoracic chamber along the antero-posterior axis [the vertical head-to-toe axis]. Concurrently, contraction of the external intercostal muscles [muscles positioned between the ribs] lifts the ribs and sternum outward, expanding the dorso-ventral axis [the front-to-back axis]. This combined increase in thoracic volume drops the intra-pulmonary pressure below atmospheric levels, sucking air into the lungs. Option 3 describes abdominal or bowel dynamics. Option 4 describes the protective throat gating mechanism during deglutition."
+    "ee": "Part A: Core Concept & Background\nInspiration ek active physical process hai jisme atmospheric air lungs ke andar tabhi enter karti hai jab intra-pulmonary pressure atmospheric pressure se kam (negative pressure gradient) ho jata hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Diaphragm ka relaxation aur sternum ka inward aana thoracic volume kam karta hai, jo expiration ka mechanism hai.\n• Option 1 is Correct: Inspiration initiate karne ke liye **Diaphragm contract** hoke flat hota hai, jisse thoracic cavity ka volume antero-posterior axis mein increase hota hai. Simultaneously, **External Intercostal Muscles contract** hoti hain jo ribs aur sternum ko lift karti hain, jisse dorso-ventral axis mein volume expand hota hai. Total thoracic volume badhne se Boyle's law ke according intra-pulmonary pressure drop hota hai aur air lungs mein suck ho jati hai.\n• Option 2 is Incorrect: Abdominal peristalsis gut digestion se related hai.\n• Option 3 is Incorrect: Epiglottis deglutition (food swallow) ke dauran close hoti hai, inspiration ke dauran airway open rehta hai.\n\nPart C: Key Takeaway / Value Addition\nNormal quiet breathing mein diaphragm 75% ventilation drive provide karta hai, isliye isse primary muscle of inspiration kaha jata hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nअंतःश्वसन (Inspiration) एक सक्रिय प्रक्रिया है, जिसमें वायुमंडल की वायु फेफड़ों में तभी प्रवेश करती है जब फेफड़ों के अंदर का दाब वायुमंडलीय दाब से कम (ऋणात्मक प्रवणता) हो जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: डायाफ्राम का शिथिलन वक्षीय आयतन को घटाता है, जो उच्छ्वसन (Expiration) का हिस्सा है।\n• विकल्प 1 सही है: अंतःश्वसन के समय **डायाफ्राम संकुचित** होकर चपटा हो जाता है, जिससे अग्र-पश्च अक्ष में आयतन बढ़ता है। साथ ही, **बाहरी इंटरकोस्टल पेशियों के संकुचन** से पसलियां और उरोस्थि (sternum) ऊपर और बाहर उठती हैं, जिससे पृष्ठ-अधर अक्ष में आयतन बढ़ता है। कुल वक्षीय आयतन बढ़ने से फेफड़ों का आंतरिक दाब घट जाता है और बाहरी वायु फेफड़ों में खिंच आती है।\n• विकल्प 2 गलत है: उदर क्रमाकुंचन का संबंध पाचन तंत्र से है।\n• विकल्प 3 गलत है: भोजन निगलते समय एपिग्लॉटिस बंद होता है, सांस लेते समय यह खुला रहता है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nसामान्य विश्राम अवस्था के श्वसन में डायाफ्राम लगभग 75% वायु प्रवाह के लिए जिम्मेदार होता है, इसलिए इसे प्राथमिक श्वसन पेशी कहा जाता है।"
   },
   {
     "p_id": "bpsc_resp_v4_05",
     "qe": "A pulmonologist utilizes spirometry to evaluate a patient's breathing parameters. If a healthy adult man has a normal Tidal Volume (TV) of 500 mL, what is his approximate total ventilation volume per minute?",
     "qh": "एक पल्मोनोलॉजिस्ट एक मरीज के श्वास मापदंडों का मूल्यांकन करने के लिए स्पाइरोमेट्री (spirometry) का उपयोग करता है। यदि एक स्वस्थ वयस्क पुरुष का सामान्य टाइडल वॉल्यूम (TV) 500 mL है, तो उसका प्रति मिनट अनुमानित कुल वेंटिलेशन वॉल्यूम क्या है?",
-    "o": [
+    "oe": [
       "1000 mL to 1100 mL per minute.",
       "6000 mL to 8000 mL per minute.",
       "2500 mL to 3000 mL per minute.",
       "180 L per minute."
     ],
+    "oh": [
+      "1000 mL से 1100 mL प्रति मिनट।",
+      "6000 mL से 8000 mL प्रति मिनट।",
+      "2500 mL से 3000 mL प्रति मिनट।",
+      "180 L प्रति मिनट।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 represents the Expiratory Reserve Volume (ERV) value for a single forced breath. Option 2 is correct because minute ventilation is calculated by multiplying Tidal Volume [the volume of air inspired or expired during a single normal respiration cycle, ~500 mL] by the average baseline respiration rate of a healthy human, which is 12-16 breaths per minute. Mathematically, $500\\text{ mL} \\times 12 = 6000\\text{ mL}$ and $500\\text{ mL} \\times 16 = 8000\\text{ mL}$, giving a operational baseline of 6000 to 8000 mL of air per minute. Option 3 represents the single-breath Inspiratory Reserve Volume (IRV). Option 4 represents the daily initial renal filtrate volume."
+    "ee": "Part A: Core Concept & Background\nMinute Ventilation Rate (Total Pulmonary Ventilation) wo total volume of gas hai jo ek person ek minute mein inhale ya exhale karta hai. Iska formula: Minute Volume = Tidal Volume x Breathing Rate.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: 1000-1100 mL Expiratory Reserve Volume (ERV) ka measure hai.\n• Option 1 is Correct: Ek healthy human adult normal breathing mein per breath approx 500 mL air inspire/expire karta hai (Tidal Volume = 500 mL). Normal adult breathing rate 12-16 breaths per minute hoti hai. Isliye minute volume calculate hota hai: $500\\text{ mL} \\times 12 = 6000\\text{ mL/min}$ se $500\\text{ mL} \\times 16 = 8000\\text{ mL/min}$ (yaani 6 se 8 Litres per minute).\n• Option 2 is Incorrect: 2500-3000 mL Inspiratory Reserve Volume (IRV) ka single breath value hai.\n• Option 3 is Incorrect: 180 L/day kidneys ka Glomerular Filtration Rate (GFR) metric hai.\n\nPart C: Key Takeaway / Value Addition\nTotal 6000-8000 mL/min mein se sirf 4200-5600 mL air alveolar gas exchange mein participate karti hai, baaki 150 mL per breath dead space mein reh jati hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nप्रति मिनट वेंटिलेशन (Minute Respiratory Volume) वह कुल वायु आयतन है जिसे कोई व्यक्ति एक मिनट में सांस द्वारा अंदर लेता या बाहर निकालता है। सूत्र: प्रति मिनट आयतन = ज्वारीय आयतन (TV) × श्वसन दर।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: 1000-1100 mL अनुपूरक उच्छ्वसन आयतन (ERV) का मान है।\n• विकल्प 1 सही है: एक स्वस्थ मनुष्य सामान्य रूप से प्रति सांस 500 मिलीलीटर वायु अंदर/बाहर लेता है (Tidal Volume = 500 mL)। सामान्य श्वसन दर 12 से 16 बार प्रति मिनट होती है। अतः प्रति मिनट कुल आयतन = $500 \\times 12 = 6000\\text{ mL}$ से $500 \\times 16 = 8000\\text{ mL}$ (अर्थात 6 से 8 लीटर प्रति मिनट) होता है।\n• विकल्प 2 गलत है: 2500-3000 mL प्रश्वसन आरक्षित आयतन (IRV) का मान है।\n• विकल्प 3 गलत है: 180 लीटर प्रति दिन वृक्क (kidney) का ग्लोमेरुलर निस्यंदन दर (GFR) होता है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\n6000-8000 मिली प्रति मिनट में से लगभग 150 मिली प्रति सांस 'एनाटोमिकल डेड स्पेस' में ही रह जाती है और विनिमय में भाग नहीं लेती।"
   },
   {
     "p_id": "bpsc_resp_v4_06",
     "qe": "A clinical diagnostic test evaluates the 'Functional Residual Capacity' (FRC) of a patient's lungs. Which two primary respiratory volumes must be added together to derive this value?",
     "qh": "एक नैदानिक परीक्षण एक मरीज के फेफड़ों की 'कार्यात्मक अवशिष्ट क्षमता' (FRC) का मूल्यांकन करता है। इस मान को प्राप्त करने के लिए किन दो प्राथमिक श्वसन आयतनों (respiratory volumes) को एक साथ जोड़ा जाना चाहिए?",
-    "o": [
+    "oe": [
       "Tidal Volume (TV) + Inspiratory Reserve Volume (IRV).",
       "Expiratory Reserve Volume (ERV) + Residual Volume (RV).",
       "Tidal Volume (TV) + Expiratory Reserve Volume (ERV).",
       "Vital Capacity (VC) + Residual Volume (RV)."
     ],
+    "oh": [
+      "टाइडल वॉल्यूम (TV) + इंस्पिरेटरी रिजर्व वॉल्यूम (IRV)।",
+      "एक्सपिरेटरी रिजर्व वॉल्यूम (ERV) + रेजिड्यूअल वॉल्यूम (RV)।",
+      "टाइडल वॉल्यूम (TV) + एक्सपिरेटरी रिजर्व वॉल्यूम (ERV)।",
+      "वाइटल कैपेसिटी (VC) + रेजिड्यूअल वॉल्यूम (RV)।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 defines the Inspiratory Capacity (IC). Option 2 is correct because Functional Residual Capacity (FRC) represents the total volume of air that remains trapped inside the pulmonary networks at the end of a normal, unforced expiration. It serves as an economic oxygen buffer and is derived by adding the Expiratory Reserve Volume [ERV, the additional air a person can forcefully expire, ~1000-1100 mL] and the Residual Volume [RV, the permanent air remaining after maximum forced expiration, ~1100-1200 mL]. Option 3 defines the Expiratory Capacity (EC). Option 4 defines the Total Lung Capacity (TLC)."
+    "ee": "Part A: Core Concept & Background\nPulmonary Capacities do ya do se zyada standard lung volumes ka combination hoti hain. FRC wo volume hai jo normal unforced expiration ke baad lungs mein bacha rehta hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: TV + IRV ko Inspiratory Capacity (IC) kaha jata hai.\n• Option 1 is Correct: **Functional Residual Capacity (FRC)** normal tidal expiration ke baad lungs mein remaining air volume hota hai. Normal breath release hone ke baad lungs mein Expiratory Reserve Volume (ERV $\\approx 1000-1100\\text{ mL}$) aur Residual Volume (RV $\\approx 1100-1200\\text{ mL}$) dono present rehte hain. Isliye $\\text{FRC} = \\text{ERV} + \\text{RV}$ (approx 2100 to 2300 mL).\n• Option 2 is Incorrect: TV + ERV milkar Expiratory Capacity (EC) banate hain.\n• Option 3 is Incorrect: VC + RV Total Lung Capacity (TLC) ko represent karta hai.\n\nPart C: Key Takeaway / Value Addition\nFRC ka main diagnostic role alveolar gas concentration ko constant rakhna aur breathing cycles ke dauran sudden blood oxygen fluctuations ko rokna hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nफुफ्फुसीय क्षमताएं (Pulmonary Capacities) दो या अधिक प्राथमिक श्वसन आयतनों का योग होती हैं। कार्यात्मक अवशिष्ट क्षमता (FRC) सामान्य सांस छोड़ने के बाद फेफड़ों में शेष बची वायु का माप है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: TV + IRV को 'प्रश्वसन क्षमता' (Inspiratory Capacity - IC) कहा जाता है।\n• विकल्प 1 सही है: एक सामान्य नि:श्वसन (normal expiration) के बाद फेफड़ों में बची रहने वाली वायु **कार्यात्मक अवशिष्ट क्षमता (FRC)** कहलाती है। इसमें अनुपूरक उच्छ्वसन आयतन (ERV $\\approx 1000-1100\\text{ mL}$) और अवशिष्ट आयतन (RV $\\approx 1100-1200\\text{ mL}$) शामिल होते हैं। अतः $\\text{FRC} = \\text{ERV} + \\text{RV}$ (लगभग 2100-2300 मिली)।\n• विकल्प 2 गलत है: TV + ERV को 'उच्छ्वसन क्षमता' (Expiratory Capacity - EC) कहते हैं।\n• विकल्प 3 गलत है: VC + RV कुल फेफड़ों की क्षमता (Total Lung Capacity - TLC) को दर्शाता है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nFRC कूपिकाओं में ऑक्सीजन की सांद्रता को स्थिर बनाए रखता है ताकि सांस छोड़ने के तुरंत बाद रक्त में ऑक्सीजन का स्तर न गिरे।"
   },
   {
     "p_id": "bpsc_resp_v4_07",
     "qe": "What quantitative definition and volume combinations constitute the 'Vital Capacity' (VC) of the human lungs?",
     "qh": "मानव फेफड़ों की 'महत्वपूर्ण क्षमता' या वाइटल कैपेसिटी (Vital Capacity - VC) को कौन सी मात्रात्मक परिभाषा और आयतन संयोजन (volume combinations) बनाते हैं?",
-    "o": [
+    "oe": [
       "The volume remaining after a normal baseline expiration, calculated as TV + RV.",
       "The maximum volume of air a person can breathe in after a forced expiration, or breathe out after a forced inspiration, combining ERV, TV, and IRV.",
       "The baseline capacity derived exclusively by multiplying stroke volume by heart rate.",
       "The single micro-volume trapped within the non-vascularised rings of cartilage."
     ],
+    "oh": [
+      "सामान्य आधारभूत समाप्ति के बाद शेष आयतन, जिसकी गणना TV + RV के रूप में की जाती है।",
+      "हवा की वह अधिकतम मात्रा जो एक व्यक्ति बलपूर्वक सांस छोड़ने के बाद सांस में ले सकता है, या बलपूर्वक सांस लेने के बाद बाहर छोड़ सकता है, जो ERV, TV और IRV को जोड़ती है।",
+      "स्ट्रोक वॉल्यूम को हृदय गति से गुणा करके प्राप्त आधारभूत क्षमता।",
+      "उपास्थि के गैर-संवहनी छल्लों के भीतर फंसा एकल सूक्ष्म आयतन।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes FRC but incorrectly substitutes TV for ERV. Option 2 is correct because Vital Capacity (VC) evaluates the maximum mechanical exchange limits of the respiratory apparatus. It represents either the maximum amount of air an individual can inhale following a complete, maximal forced exhalation, or the maximum amount they can exhale following a maximal forced inhalation. Mathematically, it combines the three exchangeable air components: Expiratory Reserve Volume (ERV) + Tidal Volume (TV) + Inspiratory Reserve Volume (IRV). Option 3 describes Cardiac Output calculations. Option 4 presents an anatomically invalid description."
+    "ee": "Part A: Core Concept & Background\nVital Capacity (VC) human respiratory system ka maximum dynamic ventilatory reserve hai, jo lungs ki overall physical fitness aur expansion capability ko reflect karta hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Ye FRC ko describe karta hai par galat formula (TV + RV) use karta hai.\n• Option 1 is Correct: **Vital Capacity (VC)** maximum volume of air hai jo ek insaan forceful expiration ke baad maximally inhale kar sakta hai, ya forceful inspiration ke baad maximally exhale kar sakta hai. Isme teeno exchangeable volumes include hote hain: $\\text{VC} = \\text{ERV} (\\approx 1100\\text{ mL}) + \\text{TV} (500\\text{ mL}) + \\text{IRV} (\\approx 2500-3000\\text{ mL})$, jiska total normal adult mein approx 4000-4600 mL hota hai.\n• Option 2 is Incorrect: Stroke volume x Heart rate Cardiac Output (cardiovascular system) ka formula hai.\n• Option 3 is Incorrect: Tracheal rings non-expandable cartilaginous framework hain, dynamic lung volume nahi.\n\nPart C: Key Takeaway / Value Addition\nAthletes aur swimmers mein Vital Capacity non-athletes ke comparison mein significantly higher hoti hai kyunki unke respiratory muscles ki strength aur chest compliance zyada hoti hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nजैव क्षमता या वाइटल कैपेसिटी (Vital Capacity - VC) फेफड़ों के अधिकतम वायु विनिमय की क्षमता को दर्शाती है और यह श्वसन तंत्र के स्वास्थ्य का मुख्य नैदानिक पैमाना है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: यह FRC का गलत रूप प्रस्तुत करता है।\n• विकल्प 1 सही है: **जैव क्षमता (Vital Capacity)** वायु का वह अधिकतम आयतन है जो एक व्यक्ति तीव्रतम उच्छ्वसन (forced expiration) के बाद फेफड़ों में भर सकता है, अथवा तीव्रतम प्रश्वसन (forced inspiration) के बाद बाहर निकाल सकता है। इसका सूत्र है: $\\text{VC} = \\text{ERV} + \\text{TV} + \\text{IRV}$ (लगभग 4000 से 4600 मिलीलीटर)।\n• विकल्प 2 गलत है: यह हृदय के कार्डियक आउटपुट का सूत्र है।\n• विकल्प 3 गलत है: उपास्थि के छल्ले वायुमार्ग को सहारा देते हैं, यह कोई वायु आयतन नहीं है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nधावकों और तैराकों में पसलियों और डायाफ्राम की पेशियों के अधिक मजबूत होने के कारण सामान्य व्यक्तियों की तुलना में वाइटल कैपेसिटी काफी अधिक होती है।"
   },
   {
     "p_id": "bpsc_resp_v4_08",
     "qe": "The rate of gas diffusion across the primary exchange surface is regulated by physical and chemical laws. Why does a unit difference in partial pressure drive a much higher volume of carbon dioxide ($CO_2$) across the membrane compared to oxygen ($O_2$)?",
     "qh": "प्राथमिक विनिमय सतह पर गैस विसरण (gas diffusion) की दर भौतिक और रासायनिक नियमों द्वारा नियंत्रित होती है। आंशिक दाब (partial pressure) में एक इकाई का अंतर ऑक्सीजन ($O_2$) की तुलना में कार्बन डाइऑक्साइड ($CO_2$) की बहुत अधिक मात्रा को झिल्ली के पार क्यों ले जाता है?",
-    "o": [
+    "oe": [
       "Because the total thickness of the diffusion membrane exceeds 5 millimeters for oxygen.",
       "Because the chemical solubility of $CO_2$ is 20-25 times higher than that of $O_2$.",
       "Because $O_2$ binds exclusively to the soluble albumin proteins of the basement membrane.",
       "Because the capillary endothelial cells completely lack pores for tracking oxygen gas."
     ],
+    "oh": [
+      "क्योंकि ऑक्सीजन के लिए विसरण झिल्ली की कुल मोटाई 5 मिलीमीटर से अधिक है।",
+      "क्योंकि $CO_2$ की रासायनिक घुलनशीलता $O_2$ की तुलना में 20-25 गुना अधिक है।",
+      "क्योंकि $O_2$ विशेष रूप से बेसमेंट झिल्ली के घुलनशील एल्ब्यूमिन प्रोटीन से बंधता है।",
+      "क्योंकि केशिका एंडोथेलियल कोशिकाओं में ऑक्सीजन गैस के लिए छिद्रों की पूरी तरह से कमी होती है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because the text establishes that the diffusion membrane thickness is exceptionally fine, measuring much less than a single millimeter to facilitate gas transit. Option 2 is correct because according to Fick's Law of Diffusion, the rate of net movement is directly proportional to gas solubility within the aqueous tissue phase. The text notes that the solubility of $CO_2$ is 20-25 times higher than that of $O_2$. Consequently, for any given partial pressure gradient, a significantly larger volume of $CO_2$ diffuses across the respiratory barrier per minute compared to $O_2$. Option 3 and Option 4 present incorrect protein-binding and cell structural distractors."
+    "ee": "Part A: Core Concept & Background\nAlveolar membrane par gas exchange Fick's Law of Diffusion follow karta hai, jisme diffusion rate partial pressure gradient, membrane thickness, aur gas ki solubility coefficient par depend karti hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Human diffusion membrane exceptionally thin hoti hai (total thickness < 1 mm, approx 0.2-0.5 micrometres), 5 mm nahi.\n• Option 1 is Correct: Respiratory membrane par **$CO_2$ ki solubility $O_2$ ke comparison mein 20 to 25 times higher** hoti hai. Isliye alveolar air aur blood ke beech $CO_2$ ka partial pressure gradient ($pCO_2$ difference sirf 5 mm Hg) bohot chota hone ke bawajood, $CO_2$ ka diffusion volume $O_2$ ke barabar ya usse zyada speed se membrane cross kar leta hai.\n• Option 2 is Incorrect: $O_2$ basement membrane ke albumin se bind nahi hoti; ye RBC ke haemoglobin se bind karti hai.\n• Option 3 is Incorrect: Capillary endothelium simple squamous cells se bani permeable layer hoti hai.\n\nPart C: Key Takeaway / Value Addition\nAlveoli mein $pO_2$ gradient 64 mm Hg ($104 - 40$) hota hai jabki $pCO_2$ gradient sirf 5-6 mm Hg ($45 - 40$) hota hai, fir bhi high solubility ki wajah se dono equilibrium achieve kar lete hain.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nकूपिका झिल्ली पर गैसों का आदान-प्रदान 'फिक के विसरण नियम' (Fick's Law) पर निर्भर करता है, जिसके अनुसार विसरण की दर आंशिक दाब की प्रवणता और गैस की घुलनशीलता के समानुपाती होती है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: मानव श्वसन झिल्ली की कुल मोटाई 1 मिलीमीटर से भी बहुत कम (लगभग 0.2 से 0.5 माइक्रोमीटर) होती है।\n• विकल्प 1 सही है: रक्त और जल में **कार्बन डाइऑक्साइड ($CO_2$) की घुलनशीलता ऑक्सीजन ($O_2$) की तुलना में 20 से 25 गुना अधिक** होती है। इसी कारण कूपिका और रक्त के मध्य $CO_2$ का आंशिक दाब अंतर (मात्र 5-6 mm Hg) कम होने के बावजूद, $CO_2$ बहुत तेजी से और अधिक मात्रा में झिल्ली के आर-पार विसरित हो जाती है।\n• विकल्प 2 गलत है: ऑक्सीजन बेसमेंट झिल्ली के एल्ब्यूमिन से नहीं, बल्कि आरबीसी के हीमोग्लोबिन से बंधती है।\n• विकल्प 3 गलत है: केशिका एंडोथीलियम पतली शल्की कोशिकाओं की बनी होती है जो गैसों के लिए पारगम्य है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nकूपिकाओं में ऑक्सीजन का दाब प्रवणता अंतर 64 mm Hg होता है जबकि CO2 का मात्र 5-6 mm Hg होता है, फिर भी उच्च घुलनशीलता के कारण CO2 का निष्कासन सरलता से हो जाता है।"
   },
   {
     "p_id": "bpsc_resp_v4_09",
     "qe": "Histological profiling of the mammalian lung diffusion membrane identifies three distinct microscopic strata. Which choice lists these strata in correct order from the alveolar air space to the capillary interior?",
     "qh": "स्तनधारी फेफड़ों की विसरण झिल्ली (diffusion membrane) का ऊतकीय प्रोफाइलिंग तीन अलग-अलग सूक्ष्म स्तरों की पहचान करता है। कौन सा विकल्प वायुकोशीय वायु स्थान (alveolar air space) से केशिका आंतरिक भाग (capillary interior) तक इन स्तरों को सही क्रम में सूचीबद्ध करता है?",
-    "o": [
+    "oe": [
       "Visceral pleura $\\rightarrow$ Oblique muscularis $\\rightarrow$ Squamous mesothelium.",
       "Thin squamous epithelium of alveoli $\\rightarrow$ acellular basement substance $\\rightarrow$ endothelium of alveolar capillaries.",
       "Sub-mucosal Brunner's glands $\\rightarrow$ lacteal channel $\\rightarrow$ tunica externa matrix.",
       "Tunica media smooth muscle $\\rightarrow$ Purkinje fiber array $\\rightarrow$ anti-Rh plasma coat."
     ],
+    "oh": [
+      "आंत संबंधी फुफ्फुस (Visceral pleura) $\\rightarrow$ तिरछी मस्कुलरिस $\\rightarrow$ स्क्वैमस मेसोथेलियम।",
+      "कूपिकाओं का पतला शल्की उपकला (Thin squamous epithelium) $\\rightarrow$ अकोशिकीय आधार पदार्थ (acellular basement substance) $\\rightarrow$ कूपिका केशिकाओं का एंडोथेलियम।",
+      "सब-म्यूकोसल ब्रूनर की ग्रंथियां $\\rightarrow$ लैक्टियल चैनल $\\rightarrow$ ट्यूनिका एक्सटर्ना मैट्रिक्स।",
+      "ट्यूनिका मीडिया चिकनी मांसपेशी $\\rightarrow$ पुरकिंजे फाइबर सरणी $\\rightarrow$ एंटी-Rh प्लाज्मा कोट।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 outlines lung covering and gut muscle terms that do not form the gas exchange barrier. Option 2 is correct because the respiratory gas exchange membrane consists of three thin layers: (1) the ultra-thin squamous epithelium lining the internal alveolar wall, (2) an acellular central basement substance [composed of a thin basement membrane supporting the alveolar epithelium fused with the basement membrane surrounding the capillary cells], and (3) the simple endothelial lining of the adjacent capillary wall. The total thickness of this three-layered structure is much less than a millimetre, optimized for simple diffusion. Option 3 and Option 4 present scrambled gastrointestinal, vascular, and cardiac structural terms."
+    "ee": "Part A: Core Concept & Background\nRespiratory membrane (diffusion boundary) wo ultra-thin microscopic barrier hai jahan alveolar air aur capillary blood ke beech actual $O_2$ aur $CO_2$ gas diffusion occur hota hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Pleura aur muscularis lung covers aur stomach layers hain, alveolar gas barrier nahi.\n• Option 1 is Correct: Alveolus se capillary blood ki taraf move karte hue diffusion membrane mein strictly three layers aati hain:\n  1. **Thin Squamous Epithelium** (Alveolar wall ki 1-cell thick layer);\n  2. **Acellular Basement Substance** (Alveolar epithelium aur capillary endothelium ke fused basement membranes ka ground substance);\n  3. **Endothelium** (Alveolar blood capillary ki inner single-cell lining).\n• Option 2 is Incorrect: Brunner's glands small intestine (duodenum) ka feature hain.\n• Option 3 is Incorrect: Purkinje fibers heart conduction system ke part hain.\n\nPart C: Key Takeaway / Value Addition\nIn teeno layers ki combined total thickness less than **0.5 micrometres (0.0005 mm)** hoti hai, jo rapid passive diffusion ke liye ideal hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nश्वसन विसरण झिल्ली (Respiratory Membrane) वह अत्यंत पतली सूक्ष्मदर्शीय परत है जिसके आर-पार कूपिका वायु और केशिका रक्त के बीच ऑक्सीजन तथा कार्बन डाइऑक्साइड का विसरण होता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: प्लूरा फेफड़ों का बाहरी आवरण है, यह विसरण झिल्ली का भाग नहीं है।\n• विकल्प 1 सही है: कूपिका वायु स्थान से केशिका के अंदर तक विसरण झिल्ली तीन सूक्ष्म परतों से मिलकर बनी होती है:\n  1. कूपिका की भित्ति बनाने वाला **पतला शल्की उपकला (Thin Squamous Epithelium)**;\n  2. दोनों झिल्लियों के बीच स्थित **अकोशिकीय आधार पदार्थ (Acellular Basement Substance)**;\n  3. रक्त केशिका की आंतरिक दीवार का **एंडोथीलियम (Endothelium)**।\n• विकल्प 2 गलत है: ब्रूनर ग्रंथियां छोटी आंत (ग्रहणी) में पाई जाती हैं।\n• विकल्प 3 गलत है: पुरकिंजे तंतु हृदय के विद्युत संवहन तंत्र का हिस्सा हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nइन तीनों परतों की कुल मोटाई 0.5 माइक्रोमीटर से भी कम होती है, जिससे गैसों का विसरण बिना किसी अवरोध के अत्यंत तीव्र गति से होता है।"
   },
   {
     "p_id": "bpsc_resp_v4_10",
     "qe": "Gas transport in human blood relies on specific distribution methods. What percentage of oxygen ($O_2$) and carbon dioxide ($CO_2$) is carried in a simple dissolved state within the fluid blood plasma?",
     "qh": "मानव रक्त में गैस परिवहन विशिष्ट वितरण विधियों पर निर्भर करता है। ऑक्सीजन ($O_2$) और कार्बन डाइऑक्साइड ($CO_2$) का कितना प्रतिशत तरल रक्त प्लाज्मा के भीतर एक सरल घुलनशील अवस्था (dissolved state) में ले जाया जाता है?",
-    "o": [
+    "oe": [
       "97% of $O_2$ and 70% of $CO_2$.",
       "3% of $O_2$ and 7% of $CO_2$.",
       "20-25% of $O_2$ and 97% of $CO_2$.",
       "7% of $O_2$ and 30.5% of $CO_2$."
     ],
+    "oh": [
+      "97% $O_2$ और 70% $CO_2$।",
+      "3% $O_2$ और 7% $CO_2$।",
+      "20-25% $O_2$ और 97% $CO_2$।",
+      "7% $O_2$ और 30.5% $CO_2$।",
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 lists the parameters for erythrocyte bound oxygen transport and bicarbonate-based carbon dioxide transport. Option 2 is correct because the text notes that the majority of gases utilize chemically bound states (97% of $O_2$ binds to erythrocyte haemoglobin; 70% of $CO_2$ converts to bicarbonate ions, and 20-25% binds as carbamino-haemoglobin). The minor fractions carried via physical solution within the fluid plasma phase are precisely 3 per cent for oxygen ($O_2$) and 7 per cent for carbon dioxide ($CO_2$). Option 3 and Option 4 present incorrect or inverted percentages. Option 4 also incorporates an ATP thermodynamic value as a distractor."
+    "ee": "Part A: Core Concept & Background\nBlood gases ($O_2$ aur $CO_2$) ka transport chemical bound forms (haemoglobin/bicarbonate) ke alawa blood plasma ke aqueous liquid phase mein physically dissolve hokar bhi hota hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: 97% $O_2$ RBC ke haemoglobin se bind hoti hai aur 70% $CO_2$ bicarbonate ion ke roop mein travel karti hai.\n• Option 1 is Correct: Low solubility ki wajah se **Oxygen ($O_2$) ka sirf 3%** part plasma mein dissolved state mein transport hota hai (baaki 97% RBCs mein Oxyhaemoglobin bankar jata hai). Comparatively high solubility hone ki wajah se **Carbon dioxide ($CO_2$) ka approx 7%** part plasma fluid mein simple physical solution ke roop mein transport hota hai.\n• Option 2 and 3 are Incorrect: Ye arbitrary combinations hain jo baki transport forms (20-25% carbamino-Hb) aur unrelated numbers ko mix karte hain.\n\nPart C: Key Takeaway / Value Addition\nHenry's Law ke according, kisi liquid mein gas ka dissolved volume uske partial pressure aur solubility coefficient ke directly proportional hota hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nरक्त द्वारा गैसों का परिवहन मुख्यतः रासायनिक यौगिकों (ऑक्सीहीमोग्लोबिन और बाइकार्बोनेट) के रूप में होता है, परंतु कुछ अंश प्लाज्मा के जल में भौतिक रूप से घुलकर भी परिवहित होता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: 97% $O_2$ हीमोग्लोबिन से जुड़कर जाती है और 70% $CO_2$ बाइकार्बोनेट के रूप में जाती है।\n• विकल्प 1 सही है: जल में कम घुलनशीलता के कारण **ऑक्सीजन ($O_2$) का केवल 3%** भाग प्लाज्मा में घुलकर परिवहित होता है (शेष 97% हीमोग्लोबिन द्वारा ले जाया जाता है)। जबकि उच्च घुलनशीलता के कारण **कार्बन डाइऑक्साइड ($CO_2$) का लगभग 7%** भाग प्लाज्मा में घुलित अवस्था में परिवहित होता है।\n• विकल्प 2 और 3 गलत हैं: ये अन्य रूपों के प्रतिशत आंकड़ों के भ्रामक संयोजन हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nहेनरी के नियमानुसार, प्लाज्मा में घुलित गैस की मात्रा सीधे उसके आंशिक दाब और विलेयता गुणांक पर निर्भर करती है।"
   },
   {
     "p_id": "bpsc_resp_v4_11",
     "qe": "The binding of molecular oxygen ($O_2$) to erythrocyte haemoglobin is a reversible chemical process. Which set of microenvironmental parameters inside systemic tissues favors the dissociation of oxygen from oxyhaemoglobin?",
     "qh": "एरिथ्रोसाइट हीमोग्लोबिन के साथ आणविक ऑक्सीजन ($O_2$) का जुड़ना एक प्रतिवर्ती रासायनिक प्रक्रिया है। प्रणालीगत ऊतकों (systemic tissues) के भीतर माइक्रोएन्वायरमेंटल मापदंडों का कौन सा सेट ऑक्सीहीमोग्लोबिन से ऑक्सीजन के पृथक्करण (dissociation) के पक्ष में काम करता है?",
-    "o": [
+    "oe": [
       "High $pO_2$, low $pCO_2$, lesser $H^+$ concentration, and lower temperature.",
       "Low $pO_2$, high $pCO_2$, high $H^+$ concentration, and higher temperature.",
       "An absolute reduction in systemic sodium ion conduction across the local serosa.",
       "The complete lack of active carbonic anhydrase within the tissue fluid space."
     ],
+    "oh": [
+      "उच्च $pO_2$, कम $pCO_2$, कम $H^+$ सांद्रता और कम तापमान।",
+      "कम $pO_2$, उच्च $pCO_2$, उच्च $H^+$ सांद्रता और उच्च तापमान।",
+      "स्थानीय सेरोसा में प्रणालीगत सोडियम आयन चालन में पूर्ण कमी।",
+      "ऊतक द्रव स्थान के भीतर सक्रिय कार्बोनिक एनहाइड्रेज़ की पूर्ण कमी।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the chemical microenvironment of the alveolar surface in the lungs, which promotes oxygen loading and oxyhaemoglobin formation. Option 2 is correct because the Oxygen Dissociation Curve [a sigmoid graphical plot showing the percentage saturation of haemoglobin against the partial pressure of oxygen] shifts its affinity based on local chemical conditions. In active, metabolizing peripheral tissues, cellular respiration creates a signature: low $pO_2$, high $pCO_2$, elevated $H^+$ ion concentration [low acidic pH, known as the Bohr Effect], and increased temperature. All these factors weaken the oxygen-haemoglobin bond, driving the dissociation of oxygen to supply tissue cells. Option 3 and Option 4 present irrelevant vascular layer and enzyme distribution parameters."
+    "ee": "Part A: Core Concept & Background\nOxygen Dissociation Curve (ODC) ek sigmoid curve hai jo haemoglobin ki O2 affinity ko represent karta hai. Tissues mein oxygen deliver karne ke liye oxyhaemoglobin ka dissociate hona zaroori hota hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: High $pO_2$, low $pCO_2$, low $H^+$ (high pH), aur low temperature lungs ke alveoli ki conditions hain, jo oxyhaemoglobin formation (association) ko favor karti hain.\n• Option 1 is Correct: Peripheral metabolizing tissues mein active cellular respiration ke kaaran **Low $pO_2$, High $pCO_2$, High $H^+$ concentration (Low acidic pH), aur High Temperature** develop hota hai. Ye specific chemical environment haemoglobin ke oxygen affinity ko reduce karta hai, jisse Oxygen curve right shift (Bohr's Effect) hota hai aur Oxyhaemoglobin se $O_2$ easily dissociate hoke tissues ko deliver ho jati hai.\n• Option 2 and 3 are Incorrect: Serosa membrane aur carbonic anhydrase presence oxygen-haemoglobin allosteric binding curve ko direct dissociate nahi karte.\n\nPart C: Key Takeaway / Value Addition\nHigh $H^+$ aur High $pCO_2$ ki wajah se curve ka right shift hona aur O2 ka release hona **Bohr Effect** kehlata hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nऑक्सीजन-हीमोग्लोबिन वियोजन वक्र (Oxygen Dissociation Curve) सिग्मॉइड (S-आकार) होता है। ऊतकों में उपापचयी क्रियाओं के लिए ऑक्सीहीमोग्लोबिन से ऑक्सीजन का अलग (वियोजित) होना आवश्यक है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: उच्च $pO_2$, कम $pCO_2$, कम $H^+$ और कम तापमान कूपिकाओं (फेफड़ों) की स्थिति है, जो ऑक्सीहीमोग्लोबिन बनने के अनुकूल है।\n• विकल्प 1 सही है: कार्यशील ऊतकों में उपापचय के कारण **कम $pO_2$, उच्च $pCO_2$, उच्च $H^+$ सांद्रता (अम्लीय/कम pH) और उच्च तापमान** की स्थिति बनती है। ये परिस्थितियां हीमोग्लोबिन की ऑक्सीजन से जुड़ने की क्षमता को घटा देती हैं, जिससे वक्र दाईं ओर विस्थापित होता है (बोहर प्रभाव) और ऑक्सीहीमोग्लोबिन से ऑक्सीजन आसानी से अलग होकर कोशिकाओं को मिल जाती है।\n• विकल्प 2 और 3 गलत हैं: इनका हीमोग्लोबिन वियोजन से सीधा संबंध नहीं है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\n$CO_2$ और $H^+$ आयनों की अधिकता के कारण ऑक्सीहीमोग्लोबिन से ऑक्सीजन के मुक्त होने की इस परिघटना को **बोहर प्रभाव (Bohr Effect)** कहा जाता है।"
   },
   {
     "p_id": "bpsc_resp_v4_12",
     "qe": "Quantitative homeostatic monitoring measures gas delivery across the circulatory system. Under normal physiological conditions, how much oxygen ($O_2$) is delivered to tissues by every 100 mL of oxygenated blood?",
     "qh": "मात्रात्मक समस्थापन निगरानी (Quantitative homeostatic monitoring) परिसंचरण तंत्र में गैस वितरण को मापती है। सामान्य शारीरिक परिस्थितियों में, प्रत्येक 100 mL ऑक्सीकृत रक्त (oxygenated blood) द्वारा ऊतकों को कितनी ऑक्सीजन ($O_2$) प्रदान की जाती है?",
-    "o": [
+    "oe": [
       "Approximately 70 mL",
       "Approximately 5 mL",
       "Approximately 4 mL",
       "Exactly 180 L"
     ],
+    "oh": [
+      "लगभग 70 mL",
+      "लगभग 5 mL",
+      "लगभग 4 mL",
+      "सटीक 180 L"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 mimics a standard ventricular stroke volume metric in milliliters. Option 2 is correct because the text notes that under baseline, resting metabolic conditions, every 100 mL of oxygenated blood departing from the lungs carries a full load of oxyhaemoglobin but only unloads a specific fraction, delivering around 5 mL of molecular oxygen ($O_2$) to systemic tissues. The remaining bound oxygen acts as a safety reserve. Option 3 represents the volume of $CO_2$ delivered by deoxygenated blood to the alveoli. Option 4 represents the daily renal filtration capacity."
+    "ee": "Part A: Core Concept & Background\nLungs se nikalne wala fully oxygenated blood peripheral tissues tak oxygen deliver karta hai. Normal resting conditions par blood apni saari oxygen surrender nahi karta balki ek safety reserve maintain karta hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: 70 mL heart ka normal Stroke Volume hota hai.\n• Option 1 is Correct: Every 100 mL of oxygenated blood approximately 20 mL of $O_2$ carry karta hai (at 97-98% saturation). Normal resting conditions par tissues ko is 20 mL mein se **approximately 5 mL of $O_2$ deliver** ki jati hai. Bacha hua 15 mL (approx 75% saturation) deoxygenated venous blood ke sath wapas lungs laut jata hai jo emergency reserve ka kaam karta hai.\n• Option 2 is Incorrect: 4 mL wo volume hai jo 100 mL deoxygenated blood alveoli ko $CO_2$ deliver karta hai.\n• Option 3 is Incorrect: 180 L kidneys ka per day filtration volume hai.\n\nPart C: Key Takeaway / Value Addition\nHeavy strenuous exercise ke dauran tissue demands badhne par ye delivery 5 mL se badhkar 15 mL tak ($O_2$ extraction ratio up to 75%) ho sakti hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nफेफड़ों से निकलने वाला शुद्ध (ऑक्सीकृत) रक्त ऊतकों को ऑक्सीजन की आपूर्ति करता है। सामान्य अवस्था में रक्त अपनी पूरी ऑक्सीजन ऊतकों को नहीं देता, बल्कि आपात स्थिति के लिए एक बड़ा हिस्सा सुरक्षित रखता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: 70 mL मानव हृदय का स्ट्रोक आयतन (Stroke Volume) है।\n• विकल्प 1 सही है: 100 mL ऑक्सीकृत रक्त में लगभग 20 mL ऑक्सीजन उपस्थित होती है। सामान्य विश्राम की अवस्था में, इस 20 mL में से **लगभग 5 mL ऑक्सीजन ऊतकों को दी जाती है**। शेष 15 mL ऑक्सीजन शिरापरक रक्त में आरक्षित बनी रहती है।\n• विकल्प 2 गलत है: 4 mL वह मात्रा है जो 100 mL विऑक्सीकृत रक्त द्वारा कूपिकाओं को $CO_2$ के रूप में दी जाती है।\n• विकल्प 3 गलत है: 180 L वृक्क द्वारा प्रतिदिन छाने जाने वाले आरंभिक निस्यंद की मात्रा है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nकठिन व्यायाम के समय ऊतकों की मांग बढ़ने पर ऑक्सीजन की आपूर्ति 5 mL से बढ़कर 15 mL प्रति 100 mL रक्त तक पहुंच सकती है।"
   },
   {
     "p_id": "bpsc_resp_v4_13",
     "qe": "Carbon dioxide is transported by red blood cells as carbamino-haemoglobin. What is the primary factor that regulates the chemical binding and release of $CO_2$ from this protein complex?",
     "qh": "कार्बन डाइऑक्साइड को लाल रक्त कोशिकाओं द्वारा कार्बामिनो-हीमोग्लोबिन (carbamino-haemoglobin) के रूप में ले जाया जाता है। कौन सा प्राथमिक कारक इस प्रोटीन परिसर से $CO_2$ के रासायनिक बंधन और रिलीज को नियंत्रित करता है?",
-    "o": [
+    "oe": [
       "The concentration of sub-mucosal Brunner's glands inside the local duodenum.",
       "The partial pressure of oxygen ($pO_2$), which acts as a major regulator affecting this binding.",
       "The total mass of suberin layers deposited along the venous endothelium.",
       "The automatic replication rate of B and T lymphocytes within the spleen."
     ],
+    "oh": [
+      "स्थानीय ग्रहणी के अंदर सब-म्यूकोसल ब्रूनर की ग्रंथियों की सांद्रता।",
+      "ऑक्सीजन का आंशिक दबाव ($pO_2$), जो इस बंधन को प्रभावित करने वाले एक प्रमुख नियामक के रूप में कार्य करता है।",
+      "शिरापरक एंडोथेलियम के साथ जमा सुबेरिन परतों का कुल द्रव्यमान।",
+      "प्लीहा के भीतर बी और टी लिम्फोसाइटों की स्वचालित प्रतिकृति दर।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes an intestinal digestive gland that has no influence on hemoglobin gas affinity. Option 2 is correct because while carbamino-haemoglobin formation depends on the partial pressure of $CO_2$, the partial pressure of oxygen ($pO_2$) functions as the primary master regulator [ Haldane Effect]. In systemic tissues where $pCO_2$ is high and $pO_2$ is low, carbon dioxide binding is favored. When this blood reaches the lungs where $pO_2$ is high and $pCO_2$ is low, the high oxygen level forces the dissociation of $CO_2$ from the haemoglobin amino groups, allowing the gas to be exhaled. Option 3 and Option 4 present irrelevant plant anatomical and leukocyte immune concepts."
+    "ee": "Part A: Core Concept & Background\nCarbamino-haemoglobin tab banta hai jab $CO_2$ haemoglobin ke globin protein part ke free amine ($-NH_2$) groups ke sath reversibly bind karti hai (approx 20-25% $CO_2$ transport is form mein hota hai).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Brunner's glands digestive duodenum mein alkaline mucus banati hain, blood gas chemistry se iska relation nahi hai.\n• Option 1 is Correct: $CO_2$ ka haemoglobin ke sath binding aur release primary roop se **Partial pressure of Oxygen ($pO_2$)** par depend karta hai (Haldane Effect). Tissues mein jab $pCO_2$ high aur $pO_2$ low hota hai, tab $CO_2$ haemoglobin se bind hoke carbamino-haemoglobin banati hai. Lungs ke alveoli mein jab $pO_2$ high aur $pCO_2$ low hota hai, toh oxygen binding haemoglobin se $CO_2$ ko displace karke release karwa deti hai.\n• Option 2 is Incorrect: Suberin plant cork cell walls mein hota hai, blood vessels mein nahi.\n• Option 3 is Incorrect: Lymphocyte proliferation adaptive immunity ka part hai.\n\nPart C: Key Takeaway / Value Addition\nOxyhaemoglobin ek stronger acid ki tarah behave karta hai jo carbamino-haemoglobin se $CO_2$ ko release karwane mein help karta hai; is effect ko **Haldane Effect** kehte hain.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nकार्बेमिनो-हीमोग्लोबिन का निर्माण तब होता है जब $CO_2$ हीमोग्लोबिन के ग्लोबिन भाग के अमीनो ($-NH_2$) समूह से प्रतिवर्ती रूप से जुड़ती है। रक्त में लगभग 20-25% $CO_2$ इसी रूप में ले जाई जाती है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: ब्रूनर ग्रंथियां ग्रहणी की पाचन ग्रंथियां हैं।\n• विकल्प 1 सही है: हीमोग्लोबिन के साथ $CO_2$ का जुड़ना और अलग होना मुख्य रूप से **ऑक्सीजन के आंशिक दाब ($pO_2$)** द्वारा नियंत्रित होता है (हाल्डेन प्रभाव)। ऊतकों में $pCO_2$ अधिक और $pO_2$ कम होने पर $CO_2$ हीमोग्लोबिन से जुड़ती है, जबकि फेफड़ों में $pO_2$ उच्च होने पर हीमोग्लोबिन से $CO_2$ मुक्त होकर कूपिकाओं में विसरित हो जाती है।\n• विकल्प 2 गलत है: सुबेरिन पादपों में पाया जाने वाला मोमी पदार्थ है।\n• विकल्प 3 गलत है: लिम्फोसाइट्स प्रतिरक्षा प्रणाली से संबंधित हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nऑक्सीजन युक्त हीमोग्लोबिन अधिक अम्लीय होता है जो हीमोग्लोबिन से $CO_2$ के निष्कासन को सुगम बनाता है; इस परिघटना को **हाल्डेन प्रभाव (Haldane Effect)** कहते हैं।"
   },
   {
     "p_id": "bpsc_resp_v4_14",
     "qe": "Erythrocytes contain a very high concentration of the zinc-containing metalloenzyme carbonic anhydrase. What physiological conversion does this enzyme facilitate at the tissue level?",
     "qh": "एरिथ्रोसाइट्स (Erythrocytes) में जिंक युक्त मेटालोएंजाइम कार्बोनिक एनहाइड्रेज़ (carbonic anhydrase) की बहुत अधिक सांद्रता होती है। यह एंजाइम ऊतक स्तर पर किस शारीरिक रूपांतरण की सुविधा प्रदान करता है?",
-    "o": [
+    "oe": [
       "The hydrolysis of starch into simple disaccharide maltose residues.",
       "The reversible reaction where $CO_2$ and $H_2O$ combine to form carbonic acid ($H_2CO_3$), which dissociates into bicarbonate ($HCO_3^-$) and $H^+$.",
       "The active loading of soluble sucrose molecules into local lacteal capillary tubes.",
       "The activation of inactive prothrombin zymogens into operational thrombin units."
     ],
+    "oh": [
+      "स्टार्च का सरल डिसैकराइड माल्टोज अवशेषों में जल-अपघटन।",
+      "प्रतिवर्ती प्रतिक्रिया जहां $CO_2$ और $H_2O$ मिलकर कार्बोनिक एसिड ($H_2CO_3$) बनाते हैं, जो बाइकार्बोनेट ($HCO_3^-$) और $H^+$ में वियोजित हो जाता है।",
+      "घुलनशील सुक्रोज अणुओं की स्थानीय लैक्टियल केशिका नलियों में सक्रिय लोडिंग।",
+      "निष्क्रिय प्रोथ्रोम्बिन जाइमोजेन का परिचालन थ्रोम्बिन इकाइयों में सक्रियण।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the digestive function of salivary amylase in the oral cavity. Option 2 is correct because carbonic anhydrase is a highly efficient enzyme that catalyzes the reversible hydration of carbon dioxide: $\\text{CO}_2 + \\text{H}_2\\text{O} \\rightleftharpoons \\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{HCO}_3^- + \\text{H}^+$. At peripheral tissue sites, high $pCO_2$ drives the reaction forward, trapping carbon dioxide as highly soluble bicarbonate ions ($70\\%$) for transport in the blood. In the lungs, where $pCO_2$ is low, the enzyme drives the reverse reaction to release gaseous $CO_2$ into the alveoli. Option 3 describes plant vascular and animal lipid transport pathways. Option 4 describes a step in the blood coagulation cascade."
+    "ee": "Part A: Core Concept & Background\nCarbonic Anhydrase (CA) biological world ke fastest enzymes mein se ek hai. Ye Zinc-containing metalloenzyme RBCs ke cytoplasm mein heavily concentrated hota hai aur plasma mein minute quantities mein present hota hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Starch ko maltose mein salivary/pancreatic amylase convert karta hai.\n• Option 1 is Correct: Tissue level par $pCO_2$ high hone ki wajah se Carbonic Anhydrase enzyme $CO_2$ aur $H_2O$ ke reaction ko accelerate karke Carbonic acid ($H_2CO_3$) banata hai, jo aage Bicarbonate ($HCO_3^-$) aur Hydrogen ions ($H^+$) mein dissociate ho jata hai: $$\\text{CO}_2 + \\text{H}_2\\text{O} \\xrightleftharpoons{\\text{Carbonic Anhydrase}} \\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{HCO}_3^- + \\text{H}^+$$\n  Alveolar site par pCO2 kam hone ki wajah se ye enzyme opposite direction mein reaction chala kar $CO_2$ gas release karwata hai.\n• Option 2 is Incorrect: Plant phloem loading aur lacteals ka enzyme se relation nahi hai.\n• Option 3 is Incorrect: Prothrombin ko thrombin mein Thrombokinase enzyme convert karta hai (blood clotting cascade).\n\nPart C: Key Takeaway / Value Addition\nRBC se $HCO_3^-$ ions plasma mein aane par ionic electrical balance maintain rakhne ke liye plasma se $Cl^-$ ions RBC ke andar chale jate hain, jisse **Chloride Shift ya Hamburger's Phenomenon** kehte hain.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nकार्बोनिक एनहाइड्रेज़ (Carbonic Anhydrase) मानव शरीर के सबसे तीव्रगामी एंजाइमों में से एक है। यह जिंक-युक्त (जस्ता) एंजाइम लाल रक्त कोशिकाओं (RBCs) में प्रचुर मात्रा में पाया जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: स्टार्च को माल्टोज में बदलने का कार्य एमाइलेज एंजाइम करता है।\n• विकल्प 1 सही है: ऊतक स्तर पर उच्च $pCO_2$ के कारण कार्बोनिक एनहाइड्रेज़ $CO_2$ और $H_2O$ के संयोजन को उत्प्रेरित करके कार्बोनिक अम्ल ($H_2CO_3$) बनाता है, जो तुरंत बाइकार्बोनेट आयन ($HCO_3^-$) और $H^+$ में टूट जाता है: $$\\text{CO}_2 + \\text{H}_2\\text{O} \\xrightleftharpoons{\\text{कार्बोनिक एनहाइड्रेज़}} \\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{HCO}_3^- + \\text{H}^+$$\n  फेफड़ों में यह एंजाइम इसी अभिक्रिया को उल्टी दिशा में चलाकर $CO_2$ को मुक्त करता है।\n• विकल्प 2 गलत है: यह पादप संवहन का विषय है।\n• विकल्प 3 गलत है: प्रोथ्रोम्बिन को थ्रोम्बिन में बदलने का कार्य थ्रोम्बोकाइनेज करता है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nजब $HCO_3^-$ आयन आरबीसी से प्लाज्मा में आते हैं, तो विद्युत तटस्थता बनाए रखने के लिए क्लोराइड आयन ($Cl^-$) प्लाज्मा से आरबीसी में प्रवेश करते हैं; इसे **क्लोराइड विस्थापन (Chloride Shift / Hamburger परिघटना)** कहते हैं।"
   },
   {
     "p_id": "bpsc_resp_v4_15",
     "qe": "Quantitative assessment evaluates waste gas removal at the respiratory surface. Every 100 mL of deoxygenated blood returning from systemic tissues delivers approximately how much carbon dioxide ($CO_2$) to the lung alveoli?",
     "qh": "मात्रात्मक मूल्यांकन श्वसन सतह पर अपशिष्ट गैस के निष्कासन का आकलन करता है। प्रणालीगत ऊतकों से लौटने वाला प्रत्येक 100 mL विऑक्सीकृत रक्त (deoxygenated blood) फेफड़ों के एलीविओली को लगभग कितनी कार्बन डाइऑक्साइड ($CO_2$) प्रदान करता है?",
-    "o": [
+    "oe": [
       "Exactly 500 mL representing the complete Tidal Volume shift.",
       "Approximately 4 mL.",
       "Approximately 120 mL matching the systolic pressure trace.",
       "Exactly 30.5 kJ/mol."
     ],
+    "oh": [
+      "सटीक 500 mL पूर्ण टाइडल वॉल्यूम शिफ्ट का प्रतिनिधित्व करता है।",
+      "लगभग 4 mL।",
+      "सिस्टोलिक दबाव ट्रेस से मेल खाने वाला लगभग 120 mL।",
+      "सटीक 30.5 kJ/mol।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because 500 mL represents the total volume of air inspired or expired during a single resting breath, not a vascular gas transport volume. Option 2 is correct because the text notes that every 100 mL of deoxygenated venous blood arriving at the pulmonary capillary network delivers approximately 4 mL of carbon dioxide ($CO_2$) into the alveolar air spaces for elimination. Option 3 uses a blood pressure value as a distractor. Option 4 represents the thermodynamic energy yield of ATP hydrolysis, measured in energy units rather than volume."
+    "ee": "Part A: Core Concept & Background\nVenous (deoxygenated) blood tissue metabolism ke waste products ko collect karke right heart ke through pulmonary circulation mein bhejta hai taaki alveolar gas exchange se $CO_2$ exhalation ke liye release ho sake.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: 500 mL normal tidal volume of air hai, blood gas transport volume nahi.\n• Option 1 is Correct: Quantitative physiological measures ke according, **har 100 mL deoxygenated blood alveoli ko approximately 4 mL $CO_2$ deliver** karta hai. Venous blood mein lagbhag 52 mL $CO_2$ per 100 mL hoti hai, aur alveolar transit ke baad arterial blood mein lagbhag 48 mL $CO_2$ bachti hai ($52 - 48 = 4\\text{ mL delivered}$). \n• Option 2 is Incorrect: 120 mm Hg blood pressure ka parameter hai.\n• Option 3 is Incorrect: 30.5 kJ/mol ATP hydrolysis ka thermodynamic bond energy value hai, volume nahi.\n\nPart C: Key Takeaway / Value Addition\nCompare karein: 100 mL oxygenated blood tissues ko **5 mL $O_2$** deta hai, jabki 100 mL deoxygenated blood alveoli ko **4 mL $CO_2$** deliver karta hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nशिरापरक (विऑक्सीकृत) रक्त ऊतकों से कार्बन डाइऑक्साइड को एकत्र कर फेफड़ों तक पहुंचाता है, जहाँ कूपिकाओं में विसरण द्वारा $CO_2$ को सांस के माध्यम से बाहर निकाल दिया जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: 500 mL सामान्य ज्वारीय आयतन (Tidal volume) है।\n• विकल्प 1 सही है: शारीरिक माप के अनुसार, **प्रत्येक 100 mL विऑक्सीकृत रक्त फेफड़ों की कूपिकाओं में लगभग 4 mL $CO_2$ मुक्त करता है**। शिरापरक रक्त में कुल 52 mL $CO_2$ प्रति 100 mL होती है, जो फेफड़ों से गुजरने के बाद घटकर 48 mL रह जाती है ($52 - 48 = 4\\text{ mL}$ निष्कासित)।\n• विकल्प 2 गलत है: 120 mm Hg रक्तचाप का सिस्टोलिक मान है।\n• विकल्प 3 गलत है: 30.5 kJ/mol एटीपी से प्राप्त ऊर्जा की इकाई है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nतुलनात्मक बिंदु: प्रति 100 mL रक्त ऊतकों को **5 mL $O_2$** प्रदान करता है, जबकि प्रति 100 mL विऑक्सीकृत रक्त कूपिकाओं को **4 mL $CO_2$** सौंपता है।"
   },
   {
     "p_id": "bpsc_resp_v4_16",
     "qe": "The core neural center responsible for initiating and maintaining the baseline rhythmic contractile pace of breathing is localized within which specific anatomical region of the brainstem?",
     "qh": "साँस लेने की बुनियादी लयबद्ध संकुचन गति (baseline rhythmic pace) को शुरू करने और बनाए रखने के लिए जिम्मेदार मुख्य तंत्रिका केंद्र मस्तिष्क स्तंभ (brainstem) के किस विशिष्ट शारीरिक क्षेत्र के भीतर स्थित होता है?",
-    "o": [
+    "oe": [
       "The specialized pneumotaxic center situated within the pons region.",
       "The respiratory rhythm centre located within the medulla region.",
       "The chemosensitive area embedded inside the local carotid artery walls.",
       "The autoexcitable sino-atrial node patch of the cardiac auricle."
     ],
+    "oh": [
+      "पोंस क्षेत्र के भीतर स्थित विशेष न्यूमोटैक्सिक केंद्र।",
+      "मेडुला क्षेत्र के भीतर स्थित श्वसन लय केंद्र (Respiratory rhythm centre)।",
+      "स्थानीय कैरोटिड धमनी की दीवारों के अंदर अंतर्निहित कीमोसेंसिटिव क्षेत्र।",
+      "कार्डियक अलिंद का ऑटो-उत्तेजक साइनो-एट्रियल नोड पैच।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the pneumotaxic center in the pons, which moderates and limits the duration of inspiration rather than initiating the baseline rhythm. Option 2 is correct because the primary regulation of respiration is managed by the central nervous system. A specialized cluster of neurons located within the medulla oblongata region of the brainstem, designated as the respiratory rhythm centre, is responsible for generating the baseline autonomic drive for breathing movements. Option 3 describes a peripheral receptor location that senses chemical changes but does not generate the motor rhythm. Option 4 describes the primary pacemaker of the heart, which controls heart rate rather than ventilation."
+    "ee": "Part A: Core Concept & Background\nBreathing ek involuntary rhythmic autonomic function hai jo central nervous system ke brainstem nuclei dwara generate aur modulate kiya jata hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Pneumotaxic centre pons mein hota hai, par iska role rhythm generate karna nahi balki inspiration ko switch off/moderate karna hai.\n• Option 1 is Correct: Brainstem ke **Medulla Oblongata** region mein specialized neuron group present hota hai jise **Respiratory Rhythm Centre (Medullary Rhythmicity Area)** kehte hain. Ye primary centre hai jo basic autonomic breathing rhythm (inspiration aur expiration ka cyclic pace) generate aur maintain karta hai.\n• Option 2 is Incorrect: Carotid artery chemoreceptors chemical changes detect karte hain, primary pace generate nahi karte.\n• Option 3 is Incorrect: Sino-atrial (SA) node heart rate ka pacemaker hai, respiration ka nahi.\n\nPart C: Key Takeaway / Value Addition\nMedulla ka rhythm centre phrenic nerve ke through diaphragm ko aur intercostal nerves ke through external intercostal muscles ko rhythmic motor signals bhejta hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nश्वसन की मूल लय एक अनैच्छिक क्रिया है, जिसे केंद्रीय तंत्रिका तंत्र के मस्तिष्क स्तंभ (Brainstem) में स्थित विशिष्ट केंद्र नियंत्रित करते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: न्यूमोटैक्सिक केंद्र पोंस में स्थित होता है और यह श्वसन दर को धीमा/तेज (स्विच ऑफ) करने का कार्य करता है, मूल लय उत्पन्न नहीं करता।\n• विकल्प 1 सही है: मस्तिष्क के **मेडुला ऑबलागेटा (Medulla Oblongata)** क्षेत्र में **श्वसन लय केंद्र (Respiratory Rhythm Centre)** स्थित होता है। यह प्राथमिक केंद्र है जो सामान्य श्वसन की मूल लयबद्ध गति (rhythm) को प्रारंभ करने और बनाए रखने के लिए मुख्य रूप से जिम्मेदार है।\n• विकल्प 2 गलत है: कैरोटिड धमनी के रिसेप्टर्स रक्त में रासायनिक परिवर्तन पहचानते हैं, मूल लय नहीं बनाते।\n• विकल्प 3 गलत है: एस.ए. नोड हृदय की धड़कन का पेसमेकर है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nमेडुला का यह केंद्र फ्रेनिक तंत्रिका द्वारा डायाफ्राम को और इंटरकोस्टल तंत्रिका द्वारा पसलियों की पेशियों को नियमित संकुचन सिग्नल भेजता है।"
   },
   {
     "p_id": "bpsc_resp_v4_17",
     "qe": "A neurology student maps the neural pathways that moderate breathing rates. What is the operational function of the pneumotaxic centre, and where is it located?",
     "qh": "एक न्यूरोलॉजी छात्र तंत्रिका मार्गों का मानचित्रण करता है जो श्वसन दर को नियंत्रित करते हैं। न्यूमोटैक्सिक केंद्र (pneumotaxic centre) का कार्यात्मक कार्य क्या है, और यह कहाँ स्थित है?",
-    "o": [
+    "oe": [
       "It is located in the medulla to directly increase ventricular contraction strength.",
       "It is located in the pons region of the brain and can reduce the duration of inspiration, thereby altering the overall respiratory rate.",
       "It is situated inside the stomach mucosa to stimulate gastrin hormone release.",
       "It is nested within the red bone marrow to regulate platelet fragmentation."
     ],
+    "oh": [
+      "यह निलय संकुचन शक्ति को सीधे बढ़ाने के लिए मेडुला में स्थित है।",
+      "यह मस्तिष्क के पोंस (pons) क्षेत्र में स्थित है और अंतःश्वसन (inspiration) की अवधि को कम कर सकता है, जिससे समग्र श्वसन दर में बदलाव होता है।",
+      "यह गैस्ट्रिन हार्मोन रिलीज को प्रोत्साहित करने के लिए पेट के म्यूकोसा के अंदर स्थित है।",
+      "यह प्लेटलेट विखंडन को विनियमित करने के लिए लाल अस्थि मज्जा के भीतर स्थित है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes a cardiovascular moderation function typical of sympathetic cardiac nerves, not a pontine respiratory center. Option 2 is correct because the text notes that the pneumotaxic centre is located within the pons region of the brainstem. Its primary function is to moderate the activity of the medullary respiratory rhythm center. Neural signals from this center act as an 'off-switch' for inspiration, shortening the inspiratory phase to increase the overall respiratory frequency and adapt ventilation to metabolic demands. Option 3 and Option 4 describe digestive mucosa and bone marrow functions."
+    "ee": "Part A: Core Concept & Background\nBrainstem ke alag-alag centres milkar breathing ko fine-tune karte hain. Medulla basic rhythm banata hai jabki Pons mein situated centres us rhythm ki duration aur depth ko modify karte hain.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Ventricular contraction cardiac sympathetic nerves se control hota hai, respiratory centers se nahi.\n• Option 1 is Correct: **Pneumotaxic Centre brainstem ke Pons Varolii** (dorsal pons) region mein located hota hai. Ye medullary rhythm centre ko inhibitory neural signals bhejta hai jo 'inspiratory switch-off' point ko set karta hai. Inspiration ki duration ko kam (shorten) karke ye overall breathing rate ko increase karta hai aur lungs ko over-inflation se bachta hai.\n• Option 2 is Incorrect: Gastrin hormone G-cells of stomach se nikalta hai.\n• Option 3 is Incorrect: Platelets bone marrow ke megakaryocytes se bante hain.\n\nPart C: Key Takeaway / Value Addition\nStrong pneumotaxic signal breathing rate ko 30-40 breaths/min tak badha sakta hai, jabki weak signal inspiration ko prolong karke rate kam kar deta hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nमस्तिष्क स्तंभ श्वसन की गति और गहराई को सूक्ष्मता से नियंत्रित करता है। मेडुला मूल लय तय करता है, जबकि पोंस क्षेत्र श्वसन चक्र की अवधि का नियमन करता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: हृदय के निलय का संकुचन स्वायत्त तंत्रिका तंत्र द्वारा नियंत्रित होता है।\n• विकल्प 1 सही है: **न्यूमोटैक्सिक केंद्र मस्तिष्क के पोंस (Pons Varolii)** क्षेत्र में स्थित होता है। यह मेडुला के लय केंद्र को तंत्रिका संकेत भेजकर अंतःश्वसन (Inspiration) की अवधि को कम कर सकता है। प्रश्वसन के समय को घटाकर यह श्वसन दर (Breathing rate) को बढ़ाने और फेफड़ों को अत्यधिक फूलने से रोकने का कार्य करता है।\n• विकल्प 2 गलत है: गैस्ट्रिन आमाशय की म्यूकोसा का हार्मोन है।\n• विकल्प 3 गलत है: प्लेटलेट्स का निर्माण अस्थि मज्जा में होता है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nन्यूमोटैक्सिक केंद्र से आने वाले तीव्र सिग्नल अंतःश्वसन को तुरंत रोककर श्वसन दर को बढ़ाकर 30-40 बार प्रति मिनट तक कर सकते हैं।"
   },
   {
     "p_id": "bpsc_resp_v4_18",
     "qe": "Chemical control of respiration relies on specialized receptor zones adjacent to the brainstem rhythm center. Which specific chemical triggers activate these chemosensitive areas?",
     "qh": "श्वसन का रासायनिक नियंत्रण मस्तिष्क स्तंभ लय केंद्र (rhythm center) के समीपवर्ती विशेष रिसेप्टर क्षेत्रों पर निर्भर करता है। कौन से विशिष्ट रासायनिक ट्रिगर इन रसोसंवेदी क्षेत्रों (chemosensitive areas) को सक्रिय करते हैं?",
-    "o": [
+    "oe": [
       "High concentrations of molecular dissolved oxygen gas ($O_2$).",
       "Increases in carbon dioxide ($CO_2$) and hydrogen ion ($H^+$) concentrations.",
       "The accumulation of protein-coated chylomicrons within tissue lymph.",
       "Fluctuations in sucrose osmotic pressure inside the local veins."
     ],
+    "oh": [
+      "आणविक घुलित ऑक्सीजन गैस ($O_2$) की उच्च सांद्रता।",
+      "कार्बन डाइऑक्साइड ($CO_2$) और हाइड्रोजन आयन ($H^+$) सांद्रता में वृद्धि।",
+      "ऊतक लसीका के भीतर प्रोटीन-लेपित काइलोमाइक्रोन का संचय।",
+      "स्थानीय नसों के अंदर सुक्रोज परासरणी दबाव में उतार-चढ़ाव।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because the role of oxygen in regulating the central respiratory rhythm is quite insignificant under normal physiology. Option 2 is correct because a specialized chemosensitive area lies adjacent to the medullary respiratory rhythm centre. This area is highly sensitive to shifts in blood chemistry, specifically reacting to increases in carbon dioxide ($CO_2$) and hydrogen ions ($H^+$) [which reflect respiratory acidosis]. When these substances accumulate, the chemosensitive area activates and signals the rhythm center to increase ventilation, accelerating the elimination of these waste ions. Option 3 and Option 4 present lipid absorption and plant carbohydrate transport metrics."
+    "ee": "Part A: Core Concept & Background\nRespiration ka chemical regulation body ke acid-base balance aur metabolic homeostasis ko maintain karne ke liye specialized chemoreceptors dwara monitor kiya jata hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Central respiratory chemoreceptors Oxygen ($O_2$) levels ke change ke prati almost insensitive hote hain; normal physiology mein $O_2$ ka role insignificant hota hai.\n• Option 1 is Correct: Medulla ke rhythm centre ke pass situated **Central Chemosensitive Area** blood aur CSF mein **$CO_2$ aur Hydrogen ions ($H^+$) ke concentration increase** hone par highly sensitive hota hai. Blood mein $pCO_2$ ya $H^+$ badhne par (acidosis) ye area activate hoke rhythm center ko signal bhejta hai, jisse ventilation rate aur depth badh jati hai aur excess $CO_2$ body se eliminate ho jati hai.\n• Option 2 and 3 are Incorrect: Chylomicrons aur sucrose plant/lipid transport se related hain, chemosensitive respiratory control se nahi.\n\nPart C: Key Takeaway / Value Addition\n$CO_2$ blood-brain barrier ko easily cross karke CSF mein carbonic acid banata hai jo $H^+$ release karta hai; yahi $H^+$ ions central chemoreceptors ke primary direct stimulators hain.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nश्वसन का रासायनिक नियंत्रण शरीर में अम्लीय-क्षारीय संतुलन और चयापचयी अपशिष्टों की स्थिति को बनाए रखने के लिए विशेष रसोसंवेदी (chemosensitive) केंद्रों द्वारा किया जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: सामान्य शारीरिक परिस्थितियों में केंद्रीय श्वसन केंद्र ऑक्सीजन ($O_2$) के परिवर्तनों के प्रति लगभग असंवेदनशील होते हैं।\n• विकल्प 1 सही है: मेडुला में लय केंद्र के पास स्थित **केंद्रीय रसोसंवेदी क्षेत्र (Central Chemosensitive Area)** रक्त और प्रमस्तिष्कमेरु द्रव (CSF) में **कार्बन डाइऑक्साइड ($CO_2$) और हाइड्रोजन आयनों ($H^+$) की सांद्रता में वृद्धि** के प्रति अत्यधिक संवेदनशील होता है। इनकी सांद्रता बढ़ते ही यह केंद्र सक्रिय होकर श्वसन दर को तेज कर देता है ताकि अतिरिक्त $CO_2$ को शरीर से बाहर निकाला जा सके।\n• विकल्प 2 और 3 गलत हैं: काइलोमाइक्रोन वसा से संबंधित हैं और सुक्रोज पादप परिसंचरण से।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\n$CO_2$ रक्त-मस्तिष्क बाधा (BBB) को पार कर CSF में $H^+$ आयन बनाती है, जो केंद्रीय रसोसंवेदकों को उत्तेजित करने वाले प्राथमिक कारक हैं।"
   },
   {
     "p_id": "bpsc_resp_v4_19",
     "qe": "Peripheral vascular receptors also participate in the chemical regulation of breathing. Where are these macro-vascular receptors located, and what changes do they recognize?",
     "qh": "परिधीय संवहनी रिसेप्टर्स (Peripheral vascular receptors) भी साँस लेने के रासायनिक नियमन में भाग लेते हैं। ये मैक्रो-संवहनी रिसेप्टर्स कहाँ स्थित होते हैं, और वे किन परिवर्तनों को पहचानते हैं?",
-    "o": [
+    "oe": [
       "They are located in the sub-mucosal Meissner's plexus, recognizing fluctuations in gastric pepsins.",
       "They are associated with the aortic arch and carotid artery, recognizing shifts in $CO_2$ and $H^+$ ion concentrations.",
       "They are situated within the lymphatic lacteals of the intestinal villi, tracking fat emulsification.",
       "They are localized within the cartilaginous rings of the larynx, tracking sound wave velocity."
     ],
+    "oh": [
+      "वे सब-म्यूकोसल मीस्नर के प्लेक्सस में स्थित हैं, जो गैस्ट्रिक पेप्सिन में उतार-चढ़ाव को पहचानते हैं।",
+      "वे महाधमनी चाप (aortic arch) और कैरोटिड धमनी (carotid artery) से जुड़े हैं, जो $CO_2$ और $H^+$ आयन सांद्रता में बदलाव को पहचानते हैं।",
+      "वे आंतों के विली के लसीका लैक्टियल्स के भीतर स्थित हैं, जो वसा पायसीकरण पर नज़र रखते हैं।",
+      "वे स्वरयंत्र के उपास्थि छल्लों के भीतर स्थानीयकृत हैं, जो ध्वनि तरंग वेग को ट्रैक करते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes enteric nervous system receptors that regulate gastrointestinal function, not blood chemistry. Option 2 is correct because in addition to central medullary chemoreceptors, the body utilizes peripheral chemoreceptors associated with major systemic arterial walls: the aortic arch [the curved superior segment of the main systemic artery leaving the heart] and the carotid arteries [the primary neck arteries supplying the brain]. These receptors monitor arterial blood, recognize elevations in $CO_2$ and hydrogen ion ($H^+$) concentrations, and send immediate neural signals to the medullary rhythm center to initiate remedial increases in breathing depth and rate. Option 3 and Option 4 describe lipid transport and upper respiratory cartilage structures."
+    "ee": "Part A: Core Concept & Background\nCentral chemoreceptors ke alawa circulatory system mein major arterial vessels par **Peripheral Chemoreceptors** present hote hain jo systemic arterial blood composition ko continuously monitor karte hain.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Meissner's plexus gut digestion ko regulate karta hai, vascular chemoreception ko nahi.\n• Option 1 is Correct: Peripheral chemoreceptors **Aortic Arch (Aortic bodies)** aur **Carotid Artery bifurcation (Carotid bodies)** par located hote hain. Ye arterial blood mein **$CO_2$ aur $H^+$ ion concentration ke increase (aur severe arterial $pO_2$ drop)** ko sense karte hain aur Vagus (CN X) aur Glossopharyngeal (CN IX) nerves ke through medullary rhythm centre ko corrective respiratory adjustments ke liye signals bhejte hain.\n• Option 2 is Incorrect: Lacteals dietary fat absorption ke channels hain.\n• Option 3 is Incorrect: Laryngeal cartilage vocalization aur airway open rakhne ke liye hai, chemical sensor nahi hai.\n\nPart C: Key Takeaway / Value Addition\nCarotid bodies body ki most vascularized tissues mein se ek hain (highest blood flow per gram tissue weight in the human body).",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nकेंद्रीय संवेदकों के अतिरिक्त, प्रमुख धमनी वाहिकाओं पर **परिधीय रसोसंवेदी (Peripheral Chemoreceptors)** पाए जाते हैं जो धमनी रक्त के रासायनिक संघटन पर निरंतर नजर रखते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: मीस्नर प्लेक्सस आंत की पाचन क्रियाओं को नियंत्रित करता है।\n• विकल्प 1 सही है: परिधीय रसोसंवेदी **महाधमनी चाप (Aortic bodies)** और **कैरोटिड धमनी (Carotid bodies)** में स्थित होते हैं। ये रक्त में **$CO_2$ और $H^+$ आयन की सांद्रता में वृद्धि** (तथा ऑक्सीजन की भारी कमी) को पहचानते हैं और वेगस तथा ग्लोसोफरीन्जियल तंत्रिकाओं द्वारा मेडुला के श्वसन केंद्र को सिग्नल भेजकर श्वसन दर को संतुलित करते हैं।\n• विकल्प 2 गलत है: लैक्टियल्स का संबंध आंतों में वसा अवशोषण से है।\n• विकल्प 3 गलत है: स्वरयंत्र की उपास्थि ध्वनि और वायु प्रवाह के लिए है, रासायनिक संवेदन के लिए नहीं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nकैरोटिड बॉडीज शरीर के सबसे अधिक संवहनी (vascularized) ऊतकों में से एक हैं, जहाँ प्रति ग्राम भार रक्त प्रवाह सर्वाधिक होता है।"
   },
   {
     "p_id": "bpsc_resp_v4_20",
     "qe": "Different animal groups utilize distinct structural methods for gas exchange based on their evolutionary organization. Which choice correctly pairs a lower invertebrate or invertebrate group with its primary respiratory adaptation?",
     "qh": "विभिन्न पशु समूह अपने विकासवादी संगठन के आधार पर गैस विनिमय के लिए अलग-अलग संरचनात्मक तरीकों का उपयोग करते हैं। कौन सा विकल्प एक निचले अकशेरुकी (lower invertebrate) या अकशेरुकी समूह को उसके प्राथमिक श्वसन अनुकूलन के साथ सटीक रूप से जोड़ता है?",
-    "o": [
+    "oe": [
       "Sponges, coelenterates, and flatworms $\\rightarrow$ use vascularised lungs inside an airtight thoracic chamber.",
       "Sponges, coelenterates, and flatworms $\\rightarrow$ exchange $O_2$ with $CO_2$ by simple diffusion over their entire body surface; Earthworms $\\rightarrow$ use their moist cuticle; Insects $\\rightarrow$ use a network of tracheal tubes.",
       "Insects $\\rightarrow$ utilize a two-chambered heart single circulation pathway; Earthworms $\\rightarrow$ use structural acini lobules.",
       "Aquatic molluscs $\\rightarrow$ rely entirely on cutaneous respiration across their dry skeletal shell."
     ],
+    "oh": [
+      "स्पंज, कोएलेंटरेट्स और चपटे कृमि $\\rightarrow$ एक वायुरोधी वक्ष गुहा के अंदर संवहनी फेफड़ों का उपयोग करते हैं।",
+      "स्पंज, कोएलेंटरेट्स और चपटे कृमि $\\rightarrow$ अपने पूरे शरीर की सतह पर सरल विसरण द्वारा $O_2$ और $CO_2$ का आदान-प्रदान करते हैं; केंचुए $\\rightarrow$ अपनी नम छल्ली (cuticle) का उपयोग करते हैं; कीड़े $\\rightarrow$ श्वासनली (tracheal tubes) के नेटवर्क का उपयोग करते हैं।",
+      "कीड़े $\\rightarrow$ दो-कक्षीय हृदय एकल परिसंचरण मार्ग का उपयोग करते हैं; केंचुए $\\rightarrow$ संरचनात्मक एसिनी लोब्यूल्स का उपयोग करते हैं।",
+      "जलीय मोलस्क $\\rightarrow$ अपने सूखे कंकाल के खोल में त्वचीय श्वसन पर पूरी तरह निर्भर करते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes mammalian respiratory infrastructure, which is absent in lower invertebrates. Option 2 is correct because respiratory strategies are shaped by habitat and organizational complexity: simple, thin lower invertebrates (sponges, cnidarians, flatworms) rely on simple diffusion across their outer membranes. Earthworms inhabit damp environments and use their highly vascularized, moist outer cuticle layer. Insects use an internal network of branching tracheal tubes to distribute air directly to tissues. Option 3 and Option 4 present incorrect circulatory configurations, pancreatic lobule terms, and shell descriptions that contradict invertebrate physiology."
+    "ee": "Part A: Core Concept & Background\nAnimal kingdom mein respiratory mechanisms habitats aur level of organization ke according evolve hue hain—primitive organisms direct diffusion use karte hain jabki complex animals specialized respiratory organs possess karte hain.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Vascularised lungs higher vertebrates (reptiles, birds, mammals) mein present hote hain, primitive sponges aur flatworms mein specialized lungs nahi hote.\n• Option 1 is Correct: Evolutionary hierarchy ke according:\n  1. **Sponges, Coelenterates, Flatworms** (lower invertebrates) body surface ke through **Simple Diffusion** se gas exchange karte hain;\n  2. **Earthworms (Annelids)** apni **Moist Cuticle** (cutaneous respiration) use karte hain;\n  3. **Insects (Arthropods)** specialized internal **Tracheal Tubes** (spiracles system) use karte hain;\n  4. Aquatic arthropods aur molluscs **Gills** (branchial respiration) use karte hain.\n• Option 2 and 3 are Incorrect: Invertebrates mein heart chambers aur shell respiration ke descriptions biologically invalid hain.\n\nPart C: Key Takeaway / Value Addition\nAmphibians jaise Frogs dual mode display karte hain—underwater moist skin (cutaneous) se aur on land lungs (pulmonary) tatha buccopharyngeal cavity se respiration karte hain.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nप्राणी जगत में श्वसन प्रणालियां आवास और शारीरिक संगठन के स्तर के अनुसार विकसित हुई हैं—सरल जीवों में सीधा विसरण होता है जबकि जटिल जीवों में विशिष्ट अंग पाए जाते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: फेफड़े उच्च कशेरुकियों (स्तनधारियों) में होते हैं, स्पंज और चपटे कृमियों में नहीं।\n• विकल्प 1 सही है: विकासवादी अनुक्रम के अनुसार:\n  1. **स्पंज, सीलेन्टरेटा और चपटे कृमि (Flatworms):** अपने पूरे **शरीर की सतह से सरल विसरण** द्वारा गैस विनिमय करते हैं;\n  2. **केंचुआ (Annelids):** अपनी **नम त्वचा/क्यूटिकल** (Cutaneous respiration) द्वारा सांस लेता है;\n  3. **कीट (Insects):** नलियों के **श्वासनाल तंत्र (Tracheal system)** का उपयोग करते हैं।\n• विकल्प 2 और 3 गलत हैं: ये परिसंचरण और कंकाल से जुड़े गलत दावे हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nमेंढक जैसे उभयचर जल में अपनी नम त्वचा द्वारा तथा थल पर फेफड़ों एवं मुख-ग्रसनी गुहा द्वारा त्रि-स्तरीय श्वसन प्रदर्शित करते हैं।"
   },
-  
   {
     "p_id": "bpsc_resp_v5_01",
     "qe": "A patient presenting with severe breathing difficulty and an audible wheezing sound is diagnosed with localized respiratory inflammation. Which specific structures within the lung airway are inflamed to produce these symptoms?",
     "qh": "सांस लेने में गंभीर कठिनाई और घरघराहट (wheezing) की आवाज वाले एक मरीज में स्थानीयकृत श्वसन सूजन (respiratory inflammation) का निदान किया जाता है। इन लक्षणों को उत्पन्न करने के लिए फेफड़ों के वायुमार्ग के भीतर कौन सी विशिष्ट संरचनाएं सूज जाती हैं?",
-    "o": [
+    "oe": [
       "The outer visceral and parietal pleural membranes.",
       "The bronchi and bronchioles.",
       "The acellular basement substance of the alveolar capillaries.",
       "The dorsal part of the pons Varolii nodes."
     ],
+    "oh": [
+      "बाहरी आंत और पार्श्विका फुफ्फुस झिल्लियां।",
+      "श्वसनी (bronchi) और श्वसनिकाएं (bronchioles)।",
+      "वायुकोशीय केशिकाओं का अकोशिकीय आधार पदार्थ।",
+      "पोंस वरोली नोड्स का पृष्ठीय भाग।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the pleural membranes, the inflammation of which causes pleurisy rather than airway wheezing. Option 2 is correct because the source text explicitly defines Asthma as a respiratory difficulty in breathing characterized by wheezing [a high-pitched whistling sound produced by turbulent airflow through narrowed pathways] caused due to the structural inflammation of the bronchi and bronchioles [the branching conducting tubes of the lower respiratory tract]. Option 3 describes a component of the ultra-thin gas diffusion barrier. Option 4 describes the location of the pneumotaxic brain center."
+    "ee": "Part A: Core Concept & Background\nAsthma ek allergic aur chronic obstructive respiratory disorder hai jo airway hyper-responsiveness aur inflammation ki wajah se breathing difficulty create karta hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Pleural membranes ki inflammation ko Pleurisy kehte hain, isme sharp chest pain hota hai par airway wheezing nahi hoti.\n• Option 1 is Correct: **Asthma** ek clinical condition hai jisme **Bronchi aur Bronchioles ki chronic inflammation aur smooth muscle spasm** ho jata hai. Airway lumen narrow hone aur excess mucus production ki wajah se turbulent air flow create hota hai, jisse expiration ke dauran audible whistling/wheezing sound aur severe dyspnea (difficulty in breathing) produce hoti hai.\n• Option 2 is Incorrect: Alveolar basement membrane inflammation Pneumonia ya ARDS mein occur karti hai.\n• Option 3 is Incorrect: Pons Varolii brainstem ka respiratory tuning center hai, airway spasm ka site nahi.\n\nPart C: Key Takeaway / Value Addition\nAsthma attacks ko relieve karne ke liye $\\beta_2$-adrenergic agonist bronchodilators (jaise Salbutamol/Albuterol) aur anti-inflammatory inhalers use kiye jaate hain.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nदमा (Asthma) एक एलर्जी-जनित और पुराना श्वसन विकार है, जिसमें वायुमार्ग के संकरे होने और सूजन के कारण सांस लेने में अत्यधिक कठिनाई होती है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: फुफ्फुस झिल्लियों (Pleura) की सूजन को प्लूरिसी कहते हैं, यह दमा नहीं है।\n• विकल्प 1 सही है: **दमा (Asthma)** में फेफड़ों की **श्वसनी (Bronchi) और श्वसनिकाओं (Bronchioles) में तीव्र सूजन और ऐंठन** हो जाती है। वायुमार्ग के संकरा हो जाने के कारण सांस छोड़ते समय घरघराहट (wheezing - सीटी जैसी आवाज) उत्पन्न होती है और सांस लेने में भारी तकलीफ होती है।\n• विकल्प 2 गलत है: कूपिका झिल्ली की सूजन निमोनिया में देखी जाती है।\n• विकल्प 3 गलत है: पोंस मस्तिष्क का तंत्रिका केंद्र है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nदमे के दौरे से राहत पाने के लिए ब्रोन्कोडायलेटर इनहेलर्स (जैसे साल्बुटामोल) का उपयोग किया जाता है जो श्वसनिकाओं की संकुचित पेशियों को शिथिल करते हैं।"
   },
   {
     "p_id": "bpsc_resp_v5_02",
     "qe": "A chronic smoker undergoes clinical evaluation revealing a major reduction in the total available surface area for gas exchange. What structural alteration within the lung tissue defines this disorder?",
     "qh": "एक क्रोनिक धूम्रपान करने वाले का नैदानिक मूल्यांकन किया जाता है जिससे गैस विनिमय के लिए कुल उपलब्ध सतह क्षेत्र में भारी कमी का पता चलता है। फेफड़ों के ऊतकों के भीतर कौन सा संरचनात्मक परिवर्तन इस विकार को परिभाषित करता है?",
-    "o": [
+    "oe": [
       "The proliferation of fibrous connective tissues leading to severe tracking scars.",
       "The structural destruction of the delicate alveolar walls, reducing the operational respiratory surface.",
       "The automatic calcification of the incomplete rings of cartilage.",
       "The selective accumulation of basic histones inside the visceral pleura."
     ],
+    "oh": [
+      "रेशेदार संयोजी ऊतकों का प्रसार जिससे गंभीर निशान बनते हैं।",
+      "नाजुक वायुकोशीय दीवारों (alveolar walls) का संरचनात्मक विनाश, जिससे कार्यात्मक श्वसन सतह कम हो जाती है।",
+      "उपास्थि के अपूर्ण छल्लों का स्वचालित कैल्सीकरण।",
+      "आंत के फुफ्फुस के अंदर क्षारीय हिस्टोन का चयनात्मक संचय।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes fibrosis, which is characteristic of occupational dust disorders rather than primary cigarette smoke emphysema. Option 2 is correct because the text notes that Emphysema is a chronic, progressive respiratory disorder predominantly caused by long-term cigarette smoking or toxic smoke inhalation. The pathophysiology involves the permanent destruction and distension of the delicate alveolar walls [the thin-walled air sacs where gas exchange occurs], which reduces the aggregate functional respiratory surface area, impairing oxygen uptake. Option 3 and Option 4 present structurally incorrect cartilage and protein distractors."
+    "ee": "Part A: Core Concept & Background\nEmphysema ek major chronic obstructive pulmonary disease (COPD) hai jo primarily long-term cigarette smoking aur severe air pollution ke toxic exposure se develop hoti hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Fibrous connective tissue proliferation Occupational Lung Disorders (Fibrosis) ka hallmark hai, Emphysema ka nahi.\n• Option 1 is Correct: **Emphysema** mein cigarette smoke mein present toxins aur excessive elastase enzyme release hone ke kaaran **delicate Alveolar walls permanently damage aur break down** ho jati hain. Multiple small alveoli fuse hoke large non-functional air pockets bana lete hain, jisse gas exchange ke liye available total **Respiratory Surface Area drastically reduce** ho jata hai aur lungs apni elastic recoil kho dete hain.\n• Option 2 is Incorrect: Tracheal cartilage calcification age-related hardening hai, alveolar surface area reduction se iska connection nahi hai.\n• Option 3 is Incorrect: Histone accumulation nuclear DNA property hai.\n\nPart C: Key Takeaway / Value Addition\nInherited Emphysema $\\alpha_1$-antitrypsin enzyme deficiency ki wajah se hota hai; $\\alpha_1$-antitrypsin protein elastase enzyme ko inhibit karke alveolar walls ko protect karta hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nवातस्फीति (Emphysema) फेफड़ों का एक गंभीर और दीर्घकालिक विकार (COPD) है, जिसका मुख्य कारण अत्यधिक सिगरेट पीना और जहरीले धुएं का सांस के साथ अंदर जाना है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: रेशेदार ऊतकों का बढ़ना सिलिकोसिस और एस्बेस्टोसिस (फाइब्रोसिस) का लक्षण है।\n• विकल्प 1 सही है: **वातस्फीति (Emphysema)** में धुएं के विषाक्त पदार्थों के कारण **कूपिका भित्तियां (Alveolar walls) क्षतिग्रस्त और नष्ट** हो जाती हैं। कूपिकाओं के टूटने से फेफड़ों की लोच समाप्त हो जाती है और गैसीय विनिमय के लिए उपलब्ध कुल **श्वसन पृष्ठीय क्षेत्रफल बहुत कम हो जाता है**, जिससे व्यक्ति में स्थायी सांस फूलने की समस्या हो जाती है।\n• विकल्प 2 गलत है: उपास्थि का कैल्सीकरण एक अलग बुढ़ापे की प्रक्रिया है।\n• विकल्प 3 गलत है: यह एक अमान्य आणविक विकल्प है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nआनुवंशिक रूप से एम्फाइजिमा $\\alpha_1$-एंटीट्रिप्सिन ($\\alpha_1$-antitrypsin) नामक प्रोटीन की कमी से भी होता है, जो कूपिकाओं को इलास्टेज एंजाइम के क्षरण से बचाता है।"
   },
   {
     "p_id": "bpsc_resp_v5_03",
     "qe": "Workers engaged in stone-breaking or industrial grinding industries are highly susceptible to serious long-term lung damage. What pathological phenomenon occurs when the body's defense mechanisms fail to clear this massive dust exposure?",
     "qh": "पत्थर तोड़ने या औद्योगिक पिसाई उद्योगों में लगे श्रमिकों में लंबे समय तक फेफड़ों को गंभीर नुकसान होने की अत्यधिक संभावना होती है। जब शरीर का रक्षा तंत्र इस भारी धूल के जोखिम को साफ करने में विफल रहता है तो कौन सी रोगजनक घटना घटित होती है?",
-    "o": [
+    "oe": [
       "The complete conversion of alveolar epithelial sheets into simple squamous serum.",
       "Inflammation leading to fibrosis, which represents the proliferation of fibrous connective tissues.",
       "The dynamic activation of the abdominal pneumotaxic centre at night.",
       "The mechanical expansion of the tricuspid and bicuspid cardiac valves."
     ],
+    "oh": [
+      "वायुकोशीय उपकला चादरों का साधारण शल्की सीरम में पूर्ण रूपांतरण।",
+      "सूजन जिसके कारण फाइब्रोसिस (fibrosis) होता है, जो रेशेदार संयोजी ऊतकों के प्रसार का प्रतिनिधित्व करता है।",
+      "रात में पेट के न्यूमोटैक्सिक केंद्र का गतिशील सक्रियण।",
+      "ट्राइकस्पिड और बाइकस्पिड कार्डियक वाल्व का यांत्रिक विस्तार।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 presents an impossible tissue transformation. Option 2 is correct because the text highlights Occupational Respiratory Disorders as conditions arising from industrial environments like grinding or stone-breaking. The continuous, massive production of dust overwhelms the pulmonary macrophage defense mechanisms. Long exposure triggers chronic inflammation leading to fibrosis [the pathological proliferation of excess fibrous connective tissues], causing irreversible lung stiffness and serious tissue damage. Option 3 and Option 4 present incorrect neuro-respiratory and cardiac valve distractors."
+    "ee": "Part A: Core Concept & Background\nOccupational Respiratory Disorders wo workplace-related lung diseases hain jo long-term harmful industrial dust particles (jaise silica, asbestos, coal dust) ke inhalation se cause hoti hain.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Epithelial sheets serum fluid mein convert nahi hoti.\n• Option 1 is Correct: Stone breaking, grinding, aur mining industries mein itni heavy silica/mineral dust generate hoti hai ki alveolar macrophage defense system completely overwhelm ho jata hai. Non-cleared particles chronic inflammation trigger karte hain, jisse **Fibrosis (proliferation of fibrous connective tissue / scarring of upper lungs)** ho jata hai. Lungs rigid aur stiff ho jate hain, causing irreversible lung damage (e.g., Silicosis, Asbestosis).\n• Option 2 and 3 are Incorrect: Abdominal pneumotaxic aur cardiac valve expansion completely fictitious options hain.\n\nPart C: Key Takeaway / Value Addition\nFactory Act regulations ke under in hazardous industries ke workers ke liye protective masks pehnna aur dust-suppression ventilation lagana statutory obligation hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nव्यावसायिक श्वसन विकार (Occupational Respiratory Disorders) वे फेफड़ों के रोग हैं जो पत्थर तोड़ने, खदानों और पिसाई कारखानों में उड़ने वाली हानिकारक धूल के लगातार सांस में जाने से होते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: ऊतक कभी सीरम में नहीं बदलते।\n• विकल्प 1 सही है: पत्थर तराशने और पीसने वाले उद्योगों में सिलिका और एस्बेस्टस की इतनी अत्यधिक धूल उड़ती है कि फेफड़ों की रक्षा प्रणाली उसे पूरी तरह साफ नहीं कर पाती। लंबे समय तक रहने वाली यह धूल फेफड़ों में स्थायी सूजन पैदा करती है, जिसके परिणामस्वरूप **फाइब्रोसिस (Fibrosis - रेशेदार संयोजी ऊतकों की असामान्य वृद्धि/निशान बनना)** हो जाता है, जिससे फेफड़े कठोर हो जाते हैं (जैसे सिलिकोसिस और एस्बेस्टोसिस)।\n• विकल्प 2 और 3 गलत हैं: इनका व्यावसायिक फेफड़ों की बीमारी से कोई संबंध नहीं है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nकारखाना अधिनियम के तहत ऐसे उद्योगों में काम करने वाले श्रमिकों के लिए सुरक्षात्मक मास्क पहनना और कार्यस्थल पर डस्ट-एक्स्ट्रैक्टर लगाना कानूनी रूप से अनिवार्य है।"
   },
   {
     "p_id": "bpsc_resp_v5_04",
     "qe": "Insects process atmospheric air using a network of internal tracheal tubes. Through which specific physical structures do their cells directly exchange oxygen and carbon dioxide?",
     "qh": "कीड़े आंतरिक श्वासनाल नलियों (tracheal tubes) के एक नेटवर्क का उपयोग करके वायुमंडलीय हवा को संसाधित करते हैं। उनकी कोशिकाएं किन विशिष्ट भौतिक संरचनाओं के माध्यम से सीधे ऑक्सीजन और कार्बन डाइऑक्साइड का विनिमय करती हैं?",
-    "o": [
+    "oe": [
       "Through the vascularised branchial membranes of local gills.",
       "Through the air present in the spiracles or directly with the tracheae openings on the body surface.",
       "Through the fluid-filled intercellular spaces of Meissner's plexus.",
       "Across a broad 80 meters squared double-layered visceral lining."
     ],
+    "oh": [
+      "स्थानीय गिल्स के संवहनी ब्रांकियल झिल्लियों के माध्यम से।",
+      "स्पिरैकल्स (श्वास रंध्र) में मौजूद हवा के माध्यम से या शरीर की सतह पर श्वासनाल (tracheae) के छिद्रों के साथ सीधे।",
+      "मीस्नर के प्लेक्सस के तरल पदार्थ से भरे अंतरकोशिकीय स्थानों के माध्यम से।",
+      "एक विस्तृत 80 वर्ग मीटर की दोहरी परत वाली आंतों की परत के पार।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes branchial respiration typical of aquatic arthropods and fish, not terrestrial insects. Option 2 is correct because the text establishes that insects possess a specialized tracheal system consisting of a network of tubes to transport atmospheric air directly within the body. External air enters through segmentally arranged openings called spiracles [valvular pores on the exoskeleton of insects], leading to the internal trachea where direct gas exchange occurs between the cells and the air column without requiring a vascular blood intermediate. Option 3 describes an enteric nerve plexus. Option 4 uses human lung surface area parameters as a distractor."
+    "ee": "Part A: Core Concept & Background\nInsects (Class Insecta, Phylum Arthropoda) terrestrial invertebrates hain jo respiratory blood pigment ke bina direct air-delivery tracheal system use karte hain.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Gills aquatic animals (fishes, prawns) mein present hote hain, terrestrial insects mein nahi.\n• Option 1 is Correct: Insects ki body surface par lateral paired openings present hoti hain jinhe **Spiracles (श्वास रंध्र)** kehte hain. Spiracles internal branching network yaani **Tracheal Tubes aur microscopic Tracheoles** mein open hote hain. Tracheoles directly individual tissue cells tak oxygen-rich air transport karte hain aur tissue fluid ke contact mein direct gas diffusion execute karte hain, bina circulatory blood ki involvement ke.\n• Option 2 and 3 are Incorrect: Meissner's plexus gut nerve layer hai aur 80 sq. meter human lung alveolar area metric hai.\n\nPart C: Key Takeaway / Value Addition\nInsects ka blood (haemolymph) colorless hota hai kyunki isme oxygen-carrying pigment haemoglobin absent hota hai; tracheal system oxygen transport ka pura kaam akele sambhalta hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nकीटों (Insects) में श्वसन के लिए रक्त में हीमोग्लोबिन नहीं होता; वे कोशिकाओं तक सीधे हवा पहुंचाने के लिए एक आंतरिक श्वासनलिका जाल (Tracheal System) का उपयोग करते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: गिल्स जलीय जीवों का श्वसन अंग हैं।\n• विकल्प 1 सही है: कीटों के शरीर के दोनों किनारों पर छोटे-छोटे छिद्र होते हैं जिन्हें **श्वास रंध्र (Spiracles)** कहा जाता है। ये छिद्र अंदर की ओर शाखित **श्वासनली (Trachea) और सूक्ष्म श्वासनिकाओं (Tracheoles)** के जाल में खुलते हैं, जो सीधे कोशिकाओं तक वायु पहुंचाते हैं और विसरण द्वारा गैसों का विनिमय करते हैं।\n• विकल्प 2 और 3 गलत हैं: मीस्नर प्लेक्सस आंत की तंत्रिका है और 80 वर्ग मीटर मानव फेफड़ों का क्षेत्रफल है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nकीटों का रक्त (हीमोलिम्फ) रंगहीन होता है क्योंकि उसमें ऑक्सीजन ले जाने वाले श्वसन वर्णक की आवश्यकता नहीं होती; यह कार्य सीधे श्वासनली तंत्र द्वारा होता है।"
   },
   {
     "p_id": "bpsc_resp_v5_05",
     "qe": "During a traumatic accident, a patient suffers a deep puncture wound to the chest wall, penetrating the thoracic cavity but leaving the lungs structurally intact. What is the immediate physiological consequence on breathing?",
     "qh": "एक दर्दनाक दुर्घटना के दौरान, एक मरीज की छाती की दीवार में गहरा घाव हो जाता है, जो थोरैसिक गुहा (thoracic cavity) में प्रवेश करता है लेकिन फेफड़ों को संरचनात्मक रूप से सुरक्षित छोड़ देता है। सांस लेने पर इसका तत्काल शारीरिक परिणाम क्या होगा?",
-    "o": [
+    "oe": [
       "An immediate increase in the chemical affinity of hemoglobin for carbon dioxide.",
       "The disruption of the pressure gradient between the lungs and the atmosphere, potentially causing the cessation of breathing.",
       "The rapid structural transformation of the inner pleural membrane into a skeletal bone ring.",
       "An automatic acceleration in the rate of active sucrose loading into the blood plasma."
     ],
+    "oh": [
+      "कार्बन डाइऑक्साइड के लिए हीमोग्लोबिन की रासायनिक बंधुता में तत्काल वृद्धि।",
+      "फेफड़ों और वायुमंडल के बीच दबाव प्रवणता (pressure gradient) का टूटना, जिससे सांस लेने में रुकावट आ सकती है।",
+      "आंतरिक फुफ्फुस झिल्ली का एक कंकाल अस्थि वलय में तेजी से संरचनात्मक रूपांतरण।",
+      "रक्त प्लाज्मा में सक्रिय सुक्रोज लोडिंग की दर में स्वचालित त्वरण।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes a hemoglobin chemical property that does not restore ventilation pressure loops. Option 2 is correct because the human lungs reside inside an air-tight thoracic chamber [the protective skeletal cage formed dorsally by vertebrae, ventrally by the sternum, laterally by ribs, and inferiorly by the diaphragm]. Because we cannot directly alter pulmonary tissue volume, ventilation depends entirely on pressure changes within this air-tight box. A puncture wound breaks the vacuum, destroying the pressure gradient between the lungs and the atmosphere, which makes it impossible to maintain negative intra-pulmonary pressure, leading to the collapse of the lung and the cessation of breathing. Option 3 and Option 4 present structurally impossible tissue and plant translocation distractors."
+    "ee": "Part A: Core Concept & Background\nHuman lungs air-tight thoracic chamber ke andar enclosed hote hain. Lungs ke paas koi intrinsic muscle tissue nahi hota jo unhe independently contract ya expand kar sake; pulmonary ventilation completely thoracic cavity ke negative pressure gradient par depend karti hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Hemoglobin affinity local gas pressures par depend karti hai, chest wall trauma se directly modulate nahi hoti.\n• Option 1 is Correct: Thoracic cavity ek sealed air-tight chamber hai. Agar chest wall puncture ho jati hai (Pneumothorax), toh atmospheric air pleural space mein rush kar jati hai, jisse negative intra-pleural pressure khatam ho jata hai ($0\\text{ mm Hg}$). Pressure gradient collapse hone ki wajah se lungs expand nahi ho paate aur elastic recoil ki wajah se collapse (atelectasis) ho jate hain, resulting in **cessation of breathing (respiratory failure)**.\n• Option 2 and 3 are Incorrect: Pleural membrane bone mein convert nahi hoti aur sucrose animal blood mein transport nahi hota.\n\nPart C: Key Takeaway / Value Addition\nNormal intra-pleural pressure hamesha sub-atmospheric (negative, approx -4 mm Hg) rehta hai jo lungs ko chest wall ke against inflated rakhta hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nमानव फेफड़े एक वायुरोधी वक्षीय गुहा (air-tight thoracic cavity) में स्थित होते हैं। फेफड़ों में स्वयं की कोई पेशियां नहीं होतीं; सांस लेना पूरी तरह वक्ष गुहा के ऋणात्मक दबाव पर निर्भर करता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: हीमोग्लोबिन की बंधुता का घाव से सीधा संबंध नहीं है।\n• विकल्प 1 सही है: वक्ष गुहा का वायुरोधी होना आवश्यक है। यदि छाती में गहरा छिद्र हो जाता है (न्यूमोथोरैक्स), तो बाहरी वायु फुफ्फुस गुहा में भर जाती है, जिससे फेफड़ों और वातावरण के बीच का **ऋणात्मक दबाव प्रवणता (Pressure gradient) नष्ट हो जाता है**। दबाव का अंतर खत्म होने से फेफड़े फूल नहीं पाते और पिचक जाते हैं, जिससे **सांस लेना पूरी तरह रुक सकता है**।\n• विकल्प 2 और 3 गलत हैं: यह शारीरिक रूप से असंभव और असंगत विकल्प हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nफेफड़ों को खुला रखने के लिए दोनों प्लूरा झिल्लियों के बीच का अंतःफुफ्फुसीय दबाव सदैव वायुमंडलीय दाब से कम (लगभग -4 mm Hg) बना रहता है।"
   },
   {
     "p_id": "bpsc_resp_v5_06",
     "qe": "Why is exposure to carbon monoxide ($CO$) highly toxic and lethal to animals, whereas the transport of carbon dioxide ($CO_2$) by haemoglobin is normally non-fatal?",
     "qh": "कार्बन मोनोऑक्साइड ($CO$) का जोखिम जानवरों के लिए अत्यधिक जहरीला और घातक क्यों होता है, जबकि हीमोग्लोबिन द्वारा कार्बन डाइऑक्साइड ($CO_2$) का परिवहन सामान्य रूप से गैर-घातक होता है?",
-    "o": [
+    "oe": [
       "Because $CO$ actively converts plasma water into basic histones within the bone marrow.",
       "Because the reaction between haemoglobin and $CO_2$ is easily reversible, whereas $CO$ binds with haemoglobin irreversibly to form an incredibly strong complex (carboxyhaemoglobin), causing the protein to lose its affinity for oxygen.",
       "Because $CO$ accelerates the activation of mucosal enterokinase into operational pepsin units.",
       "Because $CO$ forces the complete dilation of the sphincter of Oddi within the upper trachea."
     ],
+    "oh": [
+      "क्योंकि $CO$ सक्रिय रूप से अस्थि मज्जा के भीतर प्लाज्मा जल को बुनियादी हिस्टोन में परिवर्तित करता है।",
+      "क्योंकि हीमोग्लोबिन और $CO_2$ के बीच की प्रतिक्रिया आसानी से प्रतिवर्ती (reversible) होती है, जबकि $CO$ एक अविश्वसनीय रूप से मजबूत परिसर (कार्बोक्सीहीमोग्लोबिन) बनाने के लिए हीमोग्लोबिन के साथ अपरिवर्तनीय रूप से बंधता है, जिससे प्रोटीन ऑक्सीजन के लिए अपनी बंधुता खो देता है।",
+      "क्योंकि $CO$ परिचालन पेप्सिन इकाइयों में म्यूकोसल एंटरोकाइनेज के सक्रियण को तेज करता है।",
+      "क्योंकि $CO$ ऊपरी श्वासनली के भीतर ओड्डी के स्फिंक्टर के पूर्ण फैलाव को मजबूर करता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is a cytological distractor regarding nuclear proteins. Option 2 is correct because the text indicates that the binding between haemoglobin and $CO_2$ is a standard, easily reversible metabolic interaction [forming temporary carbamino compounds]. However, carbon monoxide ($CO$) interacts with the iron-containing heme core in an irreversible manner, forming an incredibly strong, stable complex designated as carboxyhaemoglobin. This binds up the oxygen-carrying sites, causing the molecule to lose its functional affinity for oxygen ($O_2$), quickly leading to cellular hypoxia, choking, and death. Option 3 and Option 4 present scrambled digestive enzyme and anatomical valve configurations."
+    "ee": "Part A: Core Concept & Background\nHaemoglobin respiratory gases ke sath coordinating complexes banata hai. $CO_2$ ka binding physiological aur completely reversible hota hai jabki Carbon Monoxide ($CO$) ek highly toxic competitor hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: $CO$ toxic gas hai jo heme iron se bind karti hai, histones se iska connection nahi hai.\n• Option 1 is Correct: $CO_2$ haemoglobin ke amino group se weak, reversible carbamino bonds banati hai jo lungs mein easily break ho jate hain. Lekin **Carbon Monoxide ($CO$) ki haemoglobin se binding affinity Oxygen ke comparison mein lagbhag 250 to 300 times higher** hoti hai. $CO$ heme iron ke sath tightly bind hoke **Carboxyhaemoglobin (HbCO)** banata hai, jo oxygen binding sites ko block kar deta hai aur oxygen delivery ko completely halt kar deta hai, causing cellular asphyxiation and death.\n• Option 2 and 3 are Incorrect: Enterokinase aur Sphincter of Oddi digestive system ke parts hain.\n\nPart C: Key Takeaway / Value Addition\nCarbon monoxide poisoning ke treatment ke liye patient ko 100% Hyperbaric Oxygen therapy di jati hai taaki high $pO_2$ pressure se $CO$ ko haemoglobin se displace kiya ja sake.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nहीमोग्लोबिन गैसों के साथ बंध बनाता है। $CO_2$ का जुड़ना एक सामान्य और प्रतिवर्ती (reversible) प्रक्रिया है, जबकि कार्बन मोनोऑक्साइड ($CO$) एक घातक विषैला यौगिक बनाती है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: $CO$ का संबंध हीमोग्लोबिन से है, हिस्टोन प्रोटीन से नहीं।\n• विकल्प 1 सही है: $CO_2$ हीमोग्लोबिन के साथ दुर्बल और प्रतिवर्ती बंध बनाती है जो फेफड़ों में आसानी से टूट जाती है। इसके विपरीत, **कार्बन मोनोऑक्साइड ($CO$) की हीमोग्लोबिन के प्रति बंधुता ऑक्सीजन की तुलना में लगभग 250-300 गुना अधिक होती है**। यह हीमोग्लोबिन के साथ अत्यंत दृढ़ता से जुड़कर **कार्बोक्सीहीमोग्लोबिन (Carboxyhaemoglobin)** बनाती है, जिससे हीमोग्लोबिन की ऑक्सीजन ले जाने की क्षमता समाप्त हो जाती है और दम घुटने से मृत्यु हो जाती है।\n• विकल्प 2 और 3 गलत हैं: एंटरोकाइनेज और ओड्डी का स्फिंक्टर पाचन तंत्र से संबंधित हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nकार्बन मोनोऑक्साइड विषाक्तता के उपचार के लिए रोगी को उच्च दाब पर 100% शुद्ध ऑक्सीजन (Hyperbaric Oxygen) दी जाती है ताकि $CO$ को हीमोग्लोबिन से अलग किया जा सके।"
   },
   {
     "p_id": "bpsc_resp_v5_07",
     "qe": "How do the energetic expenditures and muscle actions differentiate the phase of inspiration from the phase of expiration during normal resting breathing in humans?",
     "qh": "मनुष्यों में सामान्य विश्राम के दौरान सांस लेने की क्रिया में अंतःश्वसन (inspiration) और निःश्वसन (expiration) के चरणों को कौन से ऊर्जा व्यय और मांसपेशियों के कार्य अलग करते हैं?",
-    "o": [
+    "oe": [
       "Inspiration is a passive osmotic gradient process, while expiration is an active meiotic cycle.",
       "Inspiration is an active process driven by energy-consuming muscle contractions that create negative intra-pulmonary pressure, whereas expiration is a passive process where the muscles relax without using energy.",
       "Inspiration relies strictly on the relaxation of the external intercostals, while expiration actively pumps protons.",
       "Both phases are active processes requiring the continuous cleavage of high-energy sucrose lines.",
       "Both phases represent passive diffusion events coordinated entirely by the non-vascularised spleen."
     ],
+    "oh": [
+      "अंतःश्वसन एक निष्क्रिय परासरणी प्रवणता प्रक्रिया है, जबकि निःश्वसन एक सक्रिय अर्धसूत्रीविभाजन चक्र है।",
+      "अंतःश्वसन ऊर्जा की खपत करने वाले मांसपेशियों के संकुचन द्वारा संचालित एक सक्रिय प्रक्रिया है जो नकारात्मक अंतर-फुफ्फुसीय दबाव बनाती है, जबकि निःश्वसन एक निष्क्रिय प्रक्रिया है जहां मांसपेशियां ऊर्जा का उपयोग किए बिना शिथिल (relax) हो जाती हैं।",
+      "अंतःश्वसन पूरी तरह से बाहरी इंटरकोस्टल के विश्राम पर निर्भर करता है, जबकि निःश्वसन सक्रिय रूप से प्रोटॉन पंप करता है।",
+      "दोनों चरण सक्रिय प्रक्रियाएं हैं जिनके लिए उच्च-ऊर्जा सुक्रोज लाइनों के निरंतर विखंडन की आवश्यकता होती है।",
+      "दोनों चरण पूरी तरह से गैर-संवहनी प्लीहा द्वारा समन्वित निष्क्रिय विसरण घटनाओं का प्रतिनिधित्व करते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 and Option 3 present incorrect muscle actions and cell cycle descriptions. Option 2 is correct because normal human breathing utilizes alternating pressure loops: Inspiration is an active process because it requires metabolic energy to contract the diaphragm and external intercostal muscles, expanding the thoracic cavity to drop intra-pulmonary pressure below atmospheric levels. Conversely, normal Expiration is a passive process because the contracted muscles simply undergo elastic relaxation without consuming ATP, decreasing thoracic volume and raising internal pressure to force air out. Option 4 and Option 5 describe incorrect plant translocation and splenic regulatory mechanisms."
+    "ee": "Part A: Core Concept & Background\nNormal quiet breathing (Eupnea) mein ventilation mechanical forces aur muscle dynamics par depend karti hai, jisme energy requirement inspiration aur expiration mein completely different hoti hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0, 2, 3, and 4 are Incorrect: Inme meiotic division, proton pumps, sucrose cleavage, aur spleen coordination jaise biologically irrelevant mechanisms diye gaye hain.\n• Option 1 is Correct: Normal resting state mein:\n  - **Inspiration is an Active Process**: Isme metabolic ATP energy consume hoti hai kyunki diaphragm aur external intercostal muscles actively contract hoti hain;\n  - **Expiration is a Passive Process**: Normal expiration ke dauran koi muscle contraction nahi hota; contracted diaphragm aur intercostal muscles automatically relax ho jati hain aur lungs ki natural elastic recoil thoracic volume ko reduce karke air ko bahar push kar deti hai bina kisi direct energy consumption ke.\n\nPart C: Key Takeaway / Value Addition\nForced expiration (jaise exercise ya blowing balloon ke time) active process ban jati hai, jisme internal intercostal muscles aur abdominal muscles actively contract hoti hain.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nसामान्य विश्राम अवस्था के श्वसन (Eupnea) में अंतःश्वसन और निःश्वसन की प्रक्रियाएं ऊर्जा खपत के आधार पर एक-दूसरे से पूर्णतः भिन्न होती हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0, 2, 3 और 4 गलत हैं: इनमें अर्धसूत्रीविभाजन, प्रोटॉन पंप और सुक्रोज जैसे असंगत विकल्प दिए गए हैं।\n• विकल्प 1 सही है: सामान्य शांत श्वसन में:\n  - **अंतःश्वसन (Inspiration) एक सक्रिय प्रक्रिया (Active process) है**: इसमें डायाफ्राम और बाहरी इंटरकोस्टल पेशियों के संकुचन के लिए एटीपी ऊर्जा खर्च होती है;\n  - **निःश्वसन (Expiration) एक निष्क्रिय प्रक्रिया (Passive process) है**: इसमें किसी पेशी का संकुचन नहीं होता, बल्कि संकुचित पेशियां स्वतः शिथिल (relax) हो जाती हैं और फेफड़ों के प्रत्यास्थ खिंचाव (elastic recoil) के कारण बिना ऊर्जा खर्च किए वायु बाहर निकल जाती है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nबलपूर्वक सांस छोड़ना (Forced expiration) एक सक्रिय प्रक्रिया बन जाती है, जिसमें आंतरिक इंटरकोस्टल और उदर (abdominal) की पेशियों का संकुचन होता है।"
   },
   {
     "p_id": "bpsc_resp_v5_08",
     "qe": "A patient completely fills their lungs through a maximum forced inhalation immediately following a complete, forced exhalation. What specific pulmonary capacity value is evaluated by this measurement?",
     "qh": "एक मरीज एक पूर्ण, जबरन सांस छोड़ने (forced exhalation) के तुरंत बाद अधिकतम जबरन साँस (forced inhalation) के माध्यम से अपने फेफड़ों को पूरी तरह से भरता है। इस माप द्वारा किस विशिष्ट फुफ्फुसीय क्षमता (pulmonary capacity) मान का मूल्यांकन किया जाता है?",
-    "o": [
+    "oe": [
       "Tidal Volume (TV), averaging exactly 500 mL.",
       "Vital Capacity (VC), combining IRV + ERV + TV, with values varying from 3400 mL to 4800 mL.",
       "Inspiratory Capacity (IC), calculated strictly as the product of RV multiplied by heart rate.",
       "Residual Volume (RV), evaluating the permanent gas trapped within the local acini."
     ],
+    "oh": [
+      "टाइडल वॉल्यूम (TV), औसतन ठीक 500 mL।",
+      "वाइटल कैपेसिटी (VC), IRV + ERV + TV का संयोजन, जिसका मान 3400 mL से 4800 mL तक होता है।",
+      "इंस्पिरेटरी कैपेसिटी (IC), जिसकी गणना सख्ती से RV को हृदय गति से गुणा करके की जाती है।",
+      "रेजिड्यूअल वॉल्यूम (RV), स्थानीय एसिनी के भीतर फंसी स्थायी गैस का मूल्यांकन करना।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 evaluates a single unforced resting breath, not maximal forced limits. Option 2 is correct because the source text defines Vital Capacity (VC) as the maximum volume of air that a person can breathe in after a forced expiration, or conversely, breathe out after a forced inspiration. It is calculated by adding the three dynamic, exchangeable air layers: $\\text{VC} = \\text{IRV} + \\text{ERV} + \\text{TV}$ [Inspiratory Reserve Volume + Expiratory Reserve Volume + Tidal Volume], with clinical values normally ranging between 3400 mL and 4800 mL. Option 3 presents an invalid mathematical calculation. Option 4 represents the static air volume that cannot be forcefully expelled."
+    "ee": "Part A: Core Concept & Background\nSpirometry test mein patient ki maximum voluntary respiratory effort measure karke pulmonary health assess ki jati hai. Forced exhalation ke baad maximum inhalation Vital Capacity ko quantify karta hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Tidal volume (500 mL) unforced normal quiet breath ka measure hai.\n• Option 1 is Correct: **Vital Capacity (VC)** wo maximum air volume hai jo ek insaan forced expiration ke baad maximum effort se inhale kar sakta hai (ya forced inspiration ke baad maximum exhale kar sakta hai). Iska formula: $$\\text{VC} = \\text{IRV} + \\text{TV} + \\text{ERV}$$\n  Normal healthy adult male mein iski clinical range **3400 mL se 4800 mL** (approx 4.5 L) hoti hai.\n• Option 2 is Incorrect: Inspiratory capacity formula TV + IRV hota hai.\n• Option 3 is Incorrect: Residual volume wo gas hai jo maximum expiration ke baad bhi lungs mein bachi rehti hai.\n\nPart C: Key Takeaway / Value Addition\nTotal Lung Capacity (TLC) calculate karne ke liye Vital Capacity mein Residual Volume add kiya jata hai: $\\text{TLC} = \\text{VC} + \\text{RV}$ (approx 5800-6000 mL).",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nस्पाइरोमेट्री परीक्षण में फेफड़ों की कार्यक्षमता जांचने के लिए अधिकतम प्रयास द्वारा ली गई और छोड़ी गई वायु के आयतन को मापा जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: टाइडल वॉल्यूम (500 mL) सामान्य विश्राम अवस्था की एक सांस का आयतन है।\n• विकल्प 1 सही है: **जैव क्षमता या वाइटल कैपेसिटी (Vital Capacity - VC)** वायु की वह अधिकतम मात्रा है जो एक व्यक्ति पूर्ण बलपूर्वक सांस बाहर निकालने के बाद अधिकतम प्रयास से फेफड़ों में भर सकता है। इसका सूत्र है: $$\\text{VC} = \\text{IRV} + \\text{TV} + \\text{ERV}$$\n  एक स्वस्थ वयस्क में इसका सामान्य मान **3400 mL से 4800 mL** तक होता है।\n• विकल्प 2 गलत है: प्रश्वसन क्षमता (IC) का सूत्र TV + IRV होता है।\n• विकल्प 3 गलत है: अवशिष्ट आयतन (RV) वह वायु है जो कभी फेफड़ों से बाहर नहीं निकाली जा सकती।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nफेफड़ों की कुल क्षमता (Total Lung Capacity - TLC) प्राप्त करने के लिए जैव क्षमता में अवशिष्ट आयतन जोड़ा जाता है: $\\text{TLC} = \\text{VC} + \\text{RV}$ (लगभग 5.8 से 6 लीटर)।"
   },
   {
     "p_id": "bpsc_resp_v5_09",
     "qe": "The pons Varolii region of the brainstem hosts two distinct sub-centers that participate in modulating the respiratory cycle. What are these centers, and how do their regulatory inputs differ?",
     "qh": "मस्तिष्क स्तंभ (brainstem) का पोंस वरोली (pons varolii) क्षेत्र दो अलग-अलग उप-केंद्रों की मेजबानी करता है जो श्वसन चक्र को संशोधित करने में भाग लेते हैं। ये केंद्र कौन से हैं, और उनके नियामक इनपुट कैसे भिन्न हैं?",
-    "o": [
+    "oe": [
       "The Meissner's plexus which stimulates acid production and the Auerbach's plexus which halts it.",
       "The Pneumotaxic Centre in the dorsal pons which reduces the duration of inspiration to alter respiratory rate, and the Apneustic Centre in the lower pons which promotes the inspiration process.",
       "The Medullary Rhythm Centre which tracks dissolved fats and the Chemosensitive Centre which binds to red cells.",
       "The Sino-atrial Node which initiates muscle contractions and the Atrio-ventricular Node which blocks them."
     ],
+    "oh": [
+      "मीस्नर का प्लेक्सस जो एसिड उत्पादन को उत्तेजित करता है और ऑरबैक का प्लेक्सस जो इसे रोकता है।",
+      "पृष्ठीय पोंस में न्यूमोटैक्सिक केंद्र (Pneumotaxic Centre) जो श्वसन दर को बदलने के लिए अंतःश्वसन की अवधि को कम करता है, और निचले पोंस में एपन्यूस्टिक केंद्र (Apneustic Centre) जो अंतःश्वसन प्रक्रिया को बढ़ावा देता है।",
+      "मेडुला रिदम सेंटर जो घुली हुई वसा को ट्रैक करता है और केमोसेंसिटिव सेंटर जो लाल कोशिकाओं से बंधता है।",
+      "साइनो-एट्रियल नोड जो मांसपेशियों के संकुचन की शुरुआत करता है और एट्रियो-वेंट्रिकुलर नोड जो उन्हें अवरुद्ध करता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes enteric nervous system networks located within the walls of the gastrointestinal tract, not the brainstem. Option 2 is correct because the pons Varolii contains two complementary tuning centers: (1) the Pneumotaxic Centre localized in the dorsal pons region, which sends inhibitory signals to the medullary rhythm center to reduce the duration of inspiration, thereby accelerating the respiratory rate, and (2) the Apneustic Centre situated in the lower pons region, which acts to prolong or promote the inspiration phase. Option 3 and Option 4 present incorrect medullary cell locations and cardiac pacemaking structures."
+    "ee": "Part A: Core Concept & Background\nBrainstem ka Pons Varolii region respiration ke depth aur duration ko fine-tune karne ke liye two reciprocal sub-centers host karta hai: Pneumotaxic Center aur Apneustic Center.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Meissner's aur Auerbach's plexuses gastrointestinal tract ke enteric nerves hain.\n• Option 1 is Correct: Pons Varolii mein do centers function karte hain:\n  1. **Pneumotaxic Centre** (upper/dorsal pons): Ye medullary inspiratory area ko inhibitory signals bhejta hai, jisse inspiration duration short ho jati hai aur respiratory rate increase hoti hai;\n  2. **Apneustic Centre** (lower pons): Ye medullary inspiratory center ko stimulatory signals bhejta hai, jo deep, prolonged inspiration ko promote/maintain karta hai.\n• Option 2 and 3 are Incorrect: Medullary rhythm center fats monitor nahi karta aur SA/AV nodes heart cardiac conduction system ke parts hain.\n\nPart C: Key Takeaway / Value Addition\nPneumotaxic center apneustic center ke continuous inspiratory drive ko override (switch off) karta hai taaki normal rhythmic respiratory cycle smooth bani rahe.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nमस्तिष्क स्तंभ के पोंस वरोली (Pons Varolii) क्षेत्र में श्वसन की गहराई और अवधि को नियंत्रित करने वाले दो परस्पर विरोधी उप-केंद्र स्थित होते हैं: न्यूमोटैक्सिक केंद्र और एपन्यूस्टिक केंद्र।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: मीस्नर और ऑरबैक प्लेक्सस आंत की तंत्रिकाएं हैं।\n• विकल्प 1 सही है: पोंस वरोली में दो नियामक केंद्र कार्य करते हैं:\n  1. **न्यूमोटैक्सिक केंद्र (Pneumotaxic Centre - ऊपरी पोंस):** यह अंतःश्वसन को समाप्त (स्विच ऑफ) करने का संकेत भेजता है, जिससे सांस लेने की अवधि घटती है और श्वसन दर बढ़ती है;\n  2. **एपन्यूस्टिक केंद्र (Apneustic Centre - निचला पोंस):** यह अंतःश्वसन को लंबा और गहरा खींचने के लिए प्रेरक सिग्नल भेजता है।\n• विकल्प 2 और 3 गलत हैं: ये पाचन और हृदय संवहन से संबंधित गलत विकल्प हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nन्यूमोटैक्सिक केंद्र एपन्यूस्टिक केंद्र के प्रभाव को रोककर सांस को सामान्य लयबद्ध चक्र में बनाए रखने का कार्य करता है।"
   },
   {
     "p_id": "bpsc_resp_v5_10",
     "qe": "A clinic installs multiple diagnostic devices to evaluate physiological parameters. Which instrument is correctly paired with its specific operational function?",
     "qh": "एक क्लिनिक शारीरिक मापदंडों का मूल्यांकन करने के लिए कई नैदानिक उपकरण स्थापित करता है। कौन सा उपकरण अपने विशिष्ट परिचालन कार्य के साथ सटीक रूप से सुमेलित है?",
-    "o": [
+    "oe": [
       "Hygrometer $\\rightarrow$ used to track blood pressure variants inside the systemic veins.",
       "Spirometer $\\rightarrow$ used to measure the volume of air involved in breathing movements for the clinical assessment of pulmonary functions.",
       "Sphygmomanometer $\\rightarrow$ used to monitor moisture content in the atmospheric air columns.",
       "Stethoscope $\\rightarrow$ used exclusively to count the total mass of circulating platelets."
     ],
+    "oh": [
+      "हाइग्रोमीटर (Hygrometer) $\\rightarrow$ प्रणालीगत नसों के अंदर रक्तचाप के रूपों को ट्रैक करने के लिए उपयोग किया जाता है।",
+      "स्पाइरोमीटर (Spirometer) $\\rightarrow$ फुफ्फुसीय कार्यों के नैदानिक मूल्यांकन के लिए श्वास आंदोलनों में शामिल हवा की मात्रा को मापने के लिए उपयोग किया जाता है।",
+      "स्फिग्मोमैनोमीटर (Sphygmomanometer) $\\rightarrow$ वायुमंडलीय वायु स्तंभों में नमी की मात्रा की निगरानी के लिए उपयोग किया जाता है।",
+      "स्टेथोस्कोप (Stethoscope) $\\rightarrow$ विशेष रूप से परिसंचारी प्लेटलेट्स के कुल द्रव्यमान की गणना करने के लिए उपयोग किया जाता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because a hygrometer measures atmospheric humidity, not vascular blood pressure. Option 2 is correct because a Spirometer is a specialized medical device engineered to capture, measure, and log the volumes of air moved during inhalation and exhalation, providing vital data for the clinical assessment of pulmonary capacities and functions. Option 3 is incorrect because a sphygmomanometer is used to measure blood pressure, not humidity. Option 4 is incorrect because a stethoscope is an acoustic device used to listen to internal heart or lung sounds, not to count blood cells."
+    "ee": "Part A: Core Concept & Background\nMedical diagnostic testing mein specialized physical instruments use kiye jate hain jo different organ systems (respiratory, cardiovascular) ke functional parameters ko accurately measure karte hain.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Hygrometer atmospheric humidity (moisture) measure karne ka meteorological instrument hai, blood pressure ka nahi.\n• Option 1 is Correct: **Spirometer (Respirometer)** ek dedicated pulmonary diagnostic device hai jo patient dwara inhale aur exhale kiye gaye air volumes (TV, IRV, ERV, VC) aur flow rates ko measure karta hai taaki obstructive aur restrictive lung diseases diagnose ki ja sakein.\n• Option 2 is Incorrect: Sphygmomanometer arterial blood pressure measure karne ke liye use hota hai, atmospheric moisture ke liye nahi.\n• Option 3 is Incorrect: Stethoscope internal body acoustic sounds (heart beat, breath sounds) sunne ke liye use hota hai, platelet count ke liye nahi (jo hemocytometer se hota hai).\n\nPart C: Key Takeaway / Value Addition\nSpirometry pulmonary function tests (PFT) ka gold-standard tool hai jo asthma aur COPD jaise disorders ko differentiate karne mein help karta hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nचिकित्सा विज्ञान में विभिन्न अंग प्रणालियों (श्वसन, परिसंचरण) की कार्यप्रणाली की जांच के लिए विशिष्ट नैदानिक उपकरणों का उपयोग किया जाता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: हाइग्रोमीटर (Hygrometer) वायुमंडल की आर्द्रता (नमी) मापने का यंत्र है।\n• विकल्प 1 सही है: **स्पाइरोमीटर (Spirometer)** एक प्रमुख श्वसन नैदानिक उपकरण है, जिसका उपयोग सांस लेने की क्रिया में फेफड़ों द्वारा अंदर और बाहर ली जाने वाली वायु के विभिन्न आयतनों (जैसे TV, VC, ERV) को मापने और फेफड़ों के स्वास्थ्य के आकलन के लिए किया जाता है।\n• विकल्प 2 गलत है: स्फिग्मोमैनोमीटर (Sphygmomanometer) का उपयोग रक्तचाप (Blood Pressure) मापने के लिए किया जाता है।\n• विकल्प 3 गलत है: स्टेथोस्कोप हृदय और फेफड़ों की आंतरिक ध्वनियों को सुनने के लिए उपयोग किया जाता है, प्लेटलेट्स की गिनती के लिए नहीं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nस्पाइरोमीटर द्वारा 'पल्मोनरी फंक्शन टेस्ट' (PFT) किया जाता है, जो दमा (Asthma) और वातस्फीति (Emphysema) के निदान में अनिवार्य है।"
   },
   {
     "p_id": "bpsc_resp_v5_11",
     "qe": "What specific micro-anatomical structures comprise the double-layered barrier surrounding the human lungs, and what is the operational purpose of the fluid trapped between them?",
     "qh": "मानव फेफड़ों के चारों ओर दोहरी परत वाले अवरोध (double-layered barrier) में कौन सी विशिष्ट सूक्ष्म-शारीरिक संरचनाएं शामिल हैं, और उनके बीच फंसे तरल पदार्थ का परिचालन उद्देश्य क्या है?",
-    "o": [
+    "oe": [
       "The mucosal rugae layer; the fluid acts as a proteolytic enzyme to break down complex starches.",
       "The pleura, consisting of an outer pleural membrane in contact with the thoracic lining and an inner pleural membrane in contact with the lung surface; the pleural fluid reduces friction on the lung surface during ventilation movements.",
       "The Glisson's capsule sheath; the fluid maintains an alkaline pH of 8.6 to emulsify fats.",
       "The tunica media matrix; the fluid serves to actively plug leaks by forming dense fibrin clots."
     ],
+    "oh": [
+      "म्यूकोसल रूगे परत; यह तरल पदार्थ जटिल स्टार्च को तोड़ने के लिए एक प्रोटीयोलाइटिक एंजाइम के रूप में कार्य करता है।",
+      "प्लूरा (Pleura), जिसमें वक्षीय अस्तर के संपर्क में एक बाहरी फुफ्फुस झिल्ली और फेफड़ों की सतह के संपर्क में एक आंतरिक फुफ्फुस झिल्ली होती है; फुफ्फुस द्रव (pleural fluid) वेंटिलेशन आंदोलनों के दौरान फेफड़ों की सतह पर घर्षण को कम करता है।",
+      "ग्लिसन का कैप्सूल शीथ; यह तरल पदार्थ वसा को पायसीकृत करने के लिए 8.6 का क्षारीय pH बनाए रखता है।",
+      "ट्यूनिका मीडिया मैट्रिक्स; यह तरल पदार्थ घने फाइब्रिन के थक्के बनाकर रिसाव को सक्रिय रूप से रोकने का काम करता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes gastric wall folds and digestive fluid attributes. Option 2 is correct because the human lungs are enclosed within a protective, double-layered serous membrane called the pleura. The outer pleural membrane is anchored to the thoracic cavity lining, while the inner pleural membrane covers the lung parenchyma surface. The thin film of pleural fluid trapped between these two layers provides lubrication, minimizing mechanical friction on the lung surface as it expands and recoils during breathing. Option 3 describes a liver tissue connective sheath. Option 4 describes a vascular smooth muscle layer combined with a platelet function."
+    "ee": "Part A: Core Concept & Background\nHuman lungs delicate thoracic cage ke andar protected rehte hain. Inke friction-free expansion aur contraction ke liye lungs double-layered serous membrane se enclosed hote hain.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Rugae stomach ki inner mucosal folds hoti hain.\n• Option 1 is Correct: Lungs ko surround karne wali double-layered membrane ko **Pleura (फुफ्फुसावरण)** kehte hain:\n  1. **Outer Parietal Pleura**: Thoracic cavity lining aur ribs ke contact mein hoti hai;\n  2. **Inner Visceral Pleura**: Direct lung surface ke contact mein hoti hai;\n  Dono membranes ke beech **Pleural Cavity** mein **Pleural Fluid** present hota hai jo breathing movements ke dauran lung surface par mechanical friction ko reduce karta hai aur surface tension se lungs ko chest wall se attach rakhta hai.\n• Option 2 is Incorrect: Glisson's capsule liver lobules ka protective sheath hai.\n• Option 3 is Incorrect: Tunica media blood vessels ki muscular layer hai.\n\nPart C: Key Takeaway / Value Addition\nPleural fluid ka excessive accumulation ya bacterial infection se inflammation hona **Pleurisy** kehlata hai, jisme breathing ke dauran severe chest pain hota hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nमानव फेफड़े वक्ष गुहा में घर्षण-रहित गति कर सकें, इसके लिए वे एक सुरक्षात्मक दोहरी सीरस झिल्ली से घिरे होते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: रूगे आमाशय की आंतरिक सिलवटें हैं।\n• विकल्प 1 सही है: फेफड़ों के चारों ओर की दोहरी झिल्ली को **प्लूरा (Pleura / फुफ्फुसावरण)** कहा जाता है:\n  1. **बाहरी पैराइटल प्लूरा**: वक्ष गुहा की भीतरी दीवार के संपर्क में रहती है;\n  2. **आंतरिक विसरल प्लूरा**: फेफड़ों की बाहरी सतह से चिपकी रहती है;\n  इन दोनों झिल्लियों के बीच स्थित फुफ्फुसीय गुहा में **प्लूरो-द्रव (Pleural Fluid)** भरा होता है, जो सांस लेते समय फेफड़ों की सतह और वक्ष भित्ति के बीच होने वाले **घर्षण को न्यूनतम करता है**।\n• विकल्प 2 गलत है: ग्लिसन कैप्सूल यकृत की पालियों का आवरण है।\n• विकल्प 3 गलत है: ट्यूनिका मीडिया रक्त वाहिकाओं की परत है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nप्लूरा झिल्लियों में संक्रमण या सूजन के कारण होने वाले दर्दनाक विकार को **प्लूरिसी (Pleurisy)** कहा जाता है।"
   },
   {
     "p_id": "bpsc_resp_v5_12",
     "qe": "Carbon dioxide ($CO_2$) is transported within mammalian blood using three distinct chemical mechanisms. Which option accurately reflects the distribution and transport modalities of these pathways?",
     "qh": "स्तनधारियों के रक्त में कार्बन डाइऑक्साइड ($CO_2$) को तीन अलग-अलग रासायनिक तंत्रों का उपयोग करके ले जाया जाता है। कौन सा विकल्प इन मार्गों के वितरण और परिवहन के तौर-तरीकों को सटीक रूप से दर्शाता है?",
-    "o": [
+    "oe": [
       "97% as carbamino compounds, 3% dissolved in plasma, and 0% as bicarbonate ions.",
       "About 7% in a dissolved state via physical solution in plasma, about 20-23% carried as carbamino compounds bound to haemoglobin, and nearly 70% transported as bicarbonate ions.",
       "70% carried in a physical solution through the veins, and 30.5% fixed into solid calcium carbonate.",
       "Exclusively via the active transport of carrier ions managed by local ciliary axonemes."
     ],
+    "oh": [
+      "97% कार्बामाइनो यौगिकों के रूप में, 3% प्लाज्मा में घुलित, और 0% बाइकार्बोनेट आयनों के रूप में।",
+      "लगभग 7% प्लाज्मा में भौतिक घोल के माध्यम से घुलित अवस्था में, लगभग 20-23% हीमोग्लोबिन से बंधे कार्बामाइनो यौगिकों के रूप में, और लगभग 70% बाइकार्बोनेट आयनों के रूप में।",
+      "70% नसों के माध्यम से एक भौतिक घोल में ले जाया जाता है, और 30.5% ठोस कैल्शियम कार्बोनेट में तय होता है।",
+      "विशेष रूप से स्थानीय सिलियरी एक्सोनेम द्वारा प्रबंधित वाहक आयनों के सक्रिय परिवहन के माध्यम से।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 reverses the quantitative parameters, as the majority of carbon dioxide uses bicarbonate forms rather than carbamino structures. Option 2 is correct because $CO_2$ utilizes three distinct modalities: a minor fraction (around 7%) is carried via physical solution within the fluid plasma phase; a significant portion (about 20-25%, or 23% in specific cell lines) binds directly to the amino groups of the haemoglobin globin protein to form carbamino-haemoglobin; and the dominant fraction (nearly 70%) is chemically converted within erythrocytes into highly soluble bicarbonate ($HCO_3^-$) ions for stable systemic transport. Option 3 and Option 4 present incorrect mathematical percentages, mineral fixations, and ciliary transport distractors."
+    "ee": "Part A: Core Concept & Background\nCellular respiration se produce hone wali $CO_2$ highly acidic toxic byproduct hai jiska venous blood ke through lungs tak transport three distinct biochemical fractions mein split hota hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: 97% $O_2$ transport ka figure hai, $CO_2$ ka nahi.\n• Option 1 is Correct: Blood mein $CO_2$ transport ka accurate statistical breakdown hai:\n  1. **Dissolved in Plasma (approx 7%)**: Simple physical solution ke roop mein plasma water mein travel karta hai;\n  2. **Carbamino-haemoglobin (approx 20-25%, or 23%)**: Haemoglobin ke amine groups ke sath chemically bind hoke jata hai;\n  3. **Bicarbonate Ions ($HCO_3^-$, approx 70%)**: Carbonic anhydrase enzyme ki help se RBC ke andar bicarbonate ion ban kar plasma mein travel karta hai.\n• Option 2 and 3 are Incorrect: Solid CaCO3 formation aur ciliary transport biological transport mechanisms nahi hain.\n\nPart C: Key Takeaway / Value Addition\nBicarbonate ion transport blood ke physiological pH ($7.35-7.45$) ko buffer karne mein body ka primary acid-base regulation mechanism hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nकोशिकीय उपापचय से उत्पन्न $CO_2$ को रक्त द्वारा फेफड़ों तक ले जाने के लिए तीन प्रमुख रासायनिक प्रणालियां कार्य करती हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: 97% मान ऑक्सीजन के हीमोग्लोबिन परिवहन का है।\n• विकल्प 1 सही है: रक्त में $CO_2$ परिवहन का सही वैज्ञानिक विभाजन इस प्रकार है:\n  1. **प्लाज्मा में घुलित अवस्था में: लगभग 7%** (जल में घुलकर);\n  2. **कार्बामिनो-हीमोग्लोबिन के रूप में: लगभग 20 से 25%** (हीमोग्लोबिन के अमीनो समूह से जुड़कर);\n  3. **बाइकार्बोनेट आयनों ($HCO_3^-$) के रूप में: लगभग 70%** (आरबीसी के कार्बोनिक एनहाइड्रेज़ एंजाइम द्वारा निर्मित होकर)।\n• विकल्प 2 और 3 गलत हैं: रक्त में ठोस लवण नहीं बनते।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nबाइकार्बोनेट आयन के रूप में $CO_2$ का परिवहन रक्त के सामान्य pH ($7.35-7.45$) को स्थिर रखने वाले प्रमुख बफर तंत्र का कार्य भी करता है।"
   },
   {
     "p_id": "bpsc_resp_v5_13",
     "qe": "Inside the erythrocyte cytoplasm, the enzyme carbonic anhydrase drives the rapid formation of bicarbonate ions. What is the sequential path of this chemical equation?",
     "qh": "एरिथ्रोसाइट साइटोप्लाज्म के भीतर, कार्बोनिक एनहाइड्रेज़ एंजाइम बाइकार्बोनेट आयनों के तेजी से गठन को संचालित करता है। इस रासायनिक समीकरण का क्रमिक मार्ग क्या है?",
-    "o": [
+    "oe": [
+      "$\\text{CO}_2 + \\text{H}_2\\text{O} \\rightleftharpoons \\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$",
+      "$\\text{CO} + \\text{Hb} \\rightarrow \\text{HbCO} \\rightleftharpoons \\text{Glycogen} + \\text{Na}^+$",
+      "$\\text{Starch} + \\text{Amylase} \\rightarrow \\text{Maltose} \\rightleftharpoons \\text{Proteoses} + \\text{HCl}$",
+      "$\\text{Prothrombin} + \\text{Thrombokinase} \\rightarrow \\text{Thrombin} \\rightleftharpoons \\text{Fibrin}$"
+    ],
+    "oh": [
       "$\\text{CO}_2 + \\text{H}_2\\text{O} \\rightleftharpoons \\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$",
       "$\\text{CO} + \\text{Hb} \\rightarrow \\text{HbCO} \\rightleftharpoons \\text{Glycogen} + \\text{Na}^+$",
       "$\\text{Starch} + \\text{Amylase} \\rightarrow \\text{Maltose} \\rightleftharpoons \\text{Proteoses} + \\text{HCl}$",
       "$\\text{Prothrombin} + \\text{Thrombokinase} \\rightarrow \\text{Thrombin} \\rightleftharpoons \\text{Fibrin}$"
     ],
     "a": 0,
-    "e": "<b>Explanation:</b> Option 1 is correct because the source text explicitly outlines the multi-directional hydration reaction mediated by carbonic anhydrase within red blood cells: gaseous carbon dioxide ($\\text{CO}_2$) reacts with water ($\\text{H}_2\\text{O}$) to form carbonic acid ($\\text{H}_2\\text{CO}_3$), an unstable intermediate that rapidly dissociates into a hydrogen ion ($\\text{H}^+$) and a soluble bicarbonate ion ($\\text{HCO}_3^-$). At the lung alveoli, the low partial pressure of $CO_2$ causes the enzyme to drive this entire pathway in reverse to release free gaseous $CO_2$ for exhalation. Option 2 describes carboxyhaemoglobin toxicity mixed with sugar storage. Option 3 describes digestive hydrolysis. Option 4 outlines the blood clotting cascade."
+    "ee": "Part A: Core Concept & Background\nRBC cytoplasm mein present Carbonic Anhydrase enzyme carbon dioxide hydration aur dehydration dono steps ko million times accelerate karta hai, jo reversible equilibrium maintain karta hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Correct: Tissues par produce hone wali $\\text{CO}_2$ RBC mein enter karti hai. Carbonic anhydrase ki presence mein $\\text{CO}_2$ water ($\\text{H}_2\\text{O}$) se react karke Carbonic Acid ($\\text{H}_2\\text{CO}_3$) banati hai. Ye carbonic acid instantly Hydrogen ion ($\\text{H}^+$) aur Bicarbonate ion ($\\text{HCO}_3^-$) mein dissociate ho jata hai: $$\\text{CO}_2 + \\text{H}_2\\text{O} \\xrightleftharpoons{\\text{Carbonic Anhydrase}} \\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$$\n  Lungs mein pCO2 low hone par ye same equation reverse chal kar free $\\text{CO}_2$ release karti hai.\n• Option 1 is Incorrect: Ye carboxyhemoglobin aur glycogen ka invalid mix hai.\n• Option 2 is Incorrect: Ye carbohydrate digestion ki equation hai.\n• Option 3 is Incorrect: Ye blood coagulation cascade ki pathway hai.\n\nPart C: Key Takeaway / Value Addition\nIs reaction se liberate hone wale $H^+$ ions ko Deoxyhemoglobin bind kar leta hai, jo ek excellent protein buffer ki tarah act karta hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nआरबीसी के कोशिकाद्रव्य में उपस्थित कार्बोनिक एनहाइड्रेज़ एंजाइम कार्बन डाइऑक्साइड के जलयोजन की दिशा को दोनों तरफ अत्यधिक तीव्र गति से संचालित करता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 सही है: ऊतक स्तर पर $\\text{CO}_2$ आरबीसी में प्रवेश कर जल ($\\text{H}_2\\text{O}$) से जुड़ती है और कार्बोनिक एनहाइड्रेज़ की उपस्थिति में कार्बोनिक अम्ल ($\\text{H}_2\\text{CO}_3$) बनाती है। यह अम्ल तुरंत वियोजित होकर हाइड्रोजन आयन ($\\text{H}^+$) और बाइकार्बोनेट आयन ($\\text{HCO}_3^-$) देता है: $$\\text{CO}_2 + \\text{H}_2\\text{O} \\rightleftharpoons \\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$$\n  फेफड़ों में कूपिकाओं के स्तर पर यह अभिक्रिया विपरीत दिशा में चलकर $\\text{CO}_2$ गैस को मुक्त कर देती है।\n• विकल्प 1 गलत है: यह विषैले कार्बोक्सीहीमोग्लोबिन का असंगत समीकरण है।\n• विकल्प 2 गलत है: यह पाचन तंत्र में स्टार्च के अपघटन का समीकरण है।\n• विकल्प 3 गलत है: यह रक्त का थक्का जमने की प्रक्रिया है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nइस अभिक्रिया में बने $H^+$ आयनों को हीमोग्लोबिन अपने साथ जोड़ लेता है, जिससे यह रक्त के pH को स्थिर रखने वाले बफर का कार्य करता है।"
   },
   {
     "p_id": "bpsc_resp_v5_14",
     "qe": "What specific biochemical event takes place when deoxygenated blood arrives at the pulmonary alveoli where $pCO_2$ is low and $pO_2$ is high?",
     "qh": "जब विऑक्सीकृत रक्त फुफ्फुसीय एलीविओली (pulmonary alveoli) में पहुंचता है जहां $pCO_2$ कम और $pO_2$ उच्च होता है, तो कौन सी विशिष्ट जैव रासायनिक घटना घटित होती है?",
-    "o": [
+    "oe": [
       "The irreversible binding of carbon monoxide to form long carboxyhaemoglobin chains.",
       "The dissociation of carbon dioxide from carbamino-haemoglobin, causing $CO_2$ to be released into the alveoli.",
       "The rapid accumulation of basic histones along the endothelial capillaries.",
       "The physical conversion of soluble serum into an outer circular muscular layer."
     ],
+    "oh": [
+      "लंबी कार्बोक्सीहीमोग्लोबिन श्रृंखला बनाने के लिए कार्बन मोनोऑक्साइड का अपरिवर्तनीय बंधन।",
+      "कार्बामिनो-हीमोग्लोबिन से कार्बन डाइऑक्साइड का पृथक्करण (dissociation), जिससे $CO_2$ वायुकोशिकाओं (alveoli) में निकल जाती है।",
+      "एंडोथेलियल केशिकाओं के साथ बुनियादी हिस्टोन का तेजी से संचय।",
+      "घुलनशील सीरम का बाहरी गोलाकार पेशी परत में भौतिक रूपांतरण।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes toxic carbon monoxide poisoning, which is an abnormal pathway distinct from standard respiration. Option 2 is correct because the chemical binding of $CO_2$ to haemoglobin is driven by partial pressure gradients. In the peripheral tissues, high $pCO_2$ promotes carbamino-haemoglobin formation. When this blood reaches the pulmonary capillaries, it encounters a microenvironment with low $pCO_2$ and high $pO_2$. These gas pressures break the carbamino bond, causing the dissociation and release of carbon dioxide gas into the alveolar space for elimination. Option 3 and Option 4 present structurally incorrect cell biology and vascular layer distractors."
+    "ee": "Part A: Core Concept & Background\nAlveolar interface par gas exchange strict partial pressure gradients follow karta hai. Lungs mein air continuous ventilation se fresh $O_2$-rich aur low $CO_2$ maintain karti hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Carboxyhaemoglobin tab banta hai jab CO poison gas inhale ki jaye, normal pulmonary exchange mein nahi.\n• Option 1 is Correct: Jab deoxygenated venous blood pulmonary capillaries mein enter karta hai, wahan **Low $pCO_2$ ($40\\text{ mm Hg}$) aur High $pO_2$ ($104\\text{ mm Hg}$)** present hota hai. High $pO_2$ haemoglobin ko oxygenate karta hai, jisse **Carbamino-haemoglobin ($HbCO_2$) se $CO_2$ dissociate** ho jati hai aur Bicarbonate ions reverse enzymatic reaction se wapas gaseous $CO_2$ mein convert hoke alveoli mein diffuse out ho jate hain.\n• Option 2 and 3 are Incorrect: Histone proteins aur serum transformation respiratory gas exchange ka part nahi hain.\n\nPart C: Key Takeaway / Value Addition\nHigh $pO_2$ ki wajah se haemoglobin se $CO_2$ ka displace hona **Haldane Effect** kehlata hai, jo pulmonary capillary bed par gas offloading ko 2x efficient banata hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nफेफड़ों की कूपिकाओं में रक्त के पहुंचते ही गैसीय विनिमय आंशिक दाब की प्रवणता के अनुसार होता है। कूपिकाओं में $pO_2$ उच्च ($104\\text{ mm Hg}$) तथा $pCO_2$ कम ($40\\text{ mm Hg}$) होता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: कार्बोक्सीहीमोग्लोबिन $CO$ विषाक्तता में बनता है, सामान्य श्वसन में नहीं।\n• विकल्प 1 सही है: फेफड़ों की कूपिकाओं के पास पहुँचते ही उच्च $pO_2$ और निम्न $pCO_2$ के प्रभाव से **कार्बामिनो-हीमोग्लोबिन ($HbCO_2$) टूट जाता है और $CO_2$ मुक्त होकर कूपिकाओं में विसरित हो जाती है**। साथ ही प्लाज्मा के बाइकार्बोनेट आयन पुनः $CO_2$ गैस में बदलकर सांस द्वारा बाहर निकलने के लिए मुक्त हो जाते हैं।\n• विकल्प 2 और 3 गलत हैं: ये असंगत आणविक और ऊतकीय विकल्प हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nफेफड़ों में उच्च $pO_2$ द्वारा हीमोग्लोबिन से $CO_2$ को अलग करने की इस प्रक्रिया को **हाल्डेन प्रभाव (Haldane Effect)** कहते हैं।"
   },
   {
     "p_id": "bpsc_resp_v5_15",
     "qe": "A neurology specialist maps the central brain stem regulatory loops for breathing. Which center is primarily responsible for regulating the baseline respiratory rhythm?",
     "qh": "एक न्यूरोलॉजी विशेषज्ञ सांस लेने के लिए केंद्रीय मस्तिष्क स्तंभ नियामक छोरों (central brain stem regulatory loops) का मानचित्रण करता है। कौन सा केंद्र मुख्य रूप से बुनियादी श्वसन लय (baseline respiratory rhythm) को विनियमित करने के लिए जिम्मेदार है?",
-    "o": [
+    "oe": [
       "The sub-mucosal Meissner's plexus localized in the duodenum loop.",
       "The medullary inspiratory centre (respiratory rhythm centre) present in the medulla oblongata of the brain.",
       "The peripheral carotid artery chemo-receptors.",
       "The perpendicular protein core of the ciliary axoneme."
     ],
+    "oh": [
+      "ग्रहणी पाश में स्थानीयकृत सब-म्यूकोसल मीस्नर का प्लेक्सस।",
+      "मस्तिष्क के मेडुला ऑबलागेटा में मौजूद मड्यूलेरी इंस्पिरेटरी सेंटर (श्वसन लय केंद्र)।",
+      "परिधीय कैरोटिड धमनी कीमो-रिसेप्टर्स।",
+      "सिलियरी एक्सोनेम का लंबवत प्रोटीन कोर।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes an enteric neural network that controls gut secretions, not respiratory movements. Option 2 is correct because the source text establishes that the primary controller of baseline, automated breathing rhythm is the respiratory rhythm centre (medullary inspiratory centre) localized within the medulla oblongata region of the brainstem. This neural hub coordinates the motor signals sent to respiratory muscles. Option 3 describes peripheral sensory receptors that monitor blood chemistry rather than generating the primary motor rhythm. Option 4 describes an intracellular motility structure."
+    "ee": "Part A: Core Concept & Background\nHuman respiration primarily nervous system dwara regulate hoti hai. Brainstem ke medulla oblongata mein automatic breathing rhythm ko generate aur control karne wala principal master center present hota hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Meissner's plexus gastrointestinal secretions ko regulate karta hai.\n• Option 1 is Correct: **Medulla Oblongata** mein located **Respiratory Rhythm Centre (Medullary Inspiratory Centre)** primary pacemaker hai jo baseline respiratory rhythm ko regulate karta hai. Ye autonomous rhythmic nerve impulses send karta hai jo diaphragm aur intercostal muscles ko contract karwake normal quiet breathing cycle execute karti hain.\n• Option 2 is Incorrect: Carotid chemoreceptors sensory afferent feedback dete hain, baseline rhythm generate nahi karte.\n• Option 3 is Incorrect: Axoneme cellular flagella/cilia ka structural core hai.\n\nPart C: Key Takeaway / Value Addition\nMedulla mein do groups hote hain: Dorsal Respiratory Group (DRG - mainly inspiration control) aur Ventral Respiratory Group (VRG - forced inspiration aur expiration control).",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nमानव में श्वसन का नियंत्रण मुख्य रूप से तंत्रिका तंत्र द्वारा होता है। मस्तिष्क स्तंभ के मेडुला ऑबलागेटा में सांस की सामान्य लय को नियंत्रित करने वाला मुख्य केंद्र होता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: मीस्नर प्लेक्सस आंतों के स्राव का नियमन करता है।\n• विकल्प 1 सही है: मस्तिष्क के **मेडुला ऑबलागेटा में स्थित 'श्वसन लय केंद्र' (Respiratory Rhythm Centre / Inspiratory Centre)** मुख्य रूप से बुनियादी श्वसन लय को विनियमित करने के लिए जिम्मेदार है। यह केंद्र नियमित अंतराल पर तंत्रिका आवेग भेजकर डायाफ्राम में संकुचन कराता है।\n• विकल्प 2 गलत है: कैरोटिड रिसेप्टर्स केवल रासायनिक परिवर्तन का संदेश भेजते हैं, लय नहीं बनाते।\n• विकल्प 3 गलत है: एक्सोनेम सिलिया की आंतरिक संरचना है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nमेडुला के पृष्ठ श्वसन समूह (DRG) की कोशिकाएं सामान्य शांत अंतःश्वसन का नियमन करती हैं, जबकि अधर समूह (VRG) बलपूर्वक श्वसन को नियंत्रित करता है।"
   },
   {
     "p_id": "bpsc_resp_v5_16",
     "qe": "A chemosensitive neural area is situated adjacent to the medullary respiratory rhythm centre. What blood chemistry changes activate this area, and what pathogenetic response is triggered?",
     "qh": "एक रसोसंवेदी तंत्रिका क्षेत्र (chemosensitive neural area) मड्यूलेरी श्वसन लय केंद्र के समीप स्थित होता है। कौन से रक्त रासायनिक परिवर्तन इस क्षेत्र को सक्रिय करते हैं, और कौन सी प्रतिक्रिया शुरू होती है?",
-    "o": [
+    "oe": [
       "An increase in molecular oxygen ($O_2$) concentration, which signals the rhythm centre to halt all breathing.",
       "An increase in carbon dioxide ($CO_2$) and hydrogen ion ($H^+$) concentrations, which activates the center to signal the rhythm centre to adjust the respiratory process for their elimination.",
       "The accumulation of lipophilic chylomicrons, which triggers the contraction of the pyloric sphincter.",
       "A drop in plasma albumin levels, which induces the immediate mitosis of megakaryocytes."
     ],
+    "oh": [
+      "आणविक ऑक्सीजन ($O_2$) सांद्रता में वृद्धि, जो लय केंद्र को सभी सांस लेने से रोकने का संकेत देती है।",
+      "कार्बन डाइऑक्साइड ($CO_2$) और हाइड्रोजन आयन ($H^+$) सांद्रता में वृद्धि, जो केंद्र को उनके निष्कासन के लिए श्वसन प्रक्रिया को समायोजित करने के लिए लय केंद्र को संकेत देने के लिए सक्रिय करती है।",
+      "लिपोफिलिक काइलोमाइक्रोन का संचय, जो पाइलोरिक स्फिंक्टर के संकुचन को ट्रिगर करता है।",
+      "प्लाज्मा एल्ब्यूमिन के स्तर में गिरावट, जो मेगाकैरियोसाइट्स के तत्काल समसूत्री विभाजन को प्रेरित करती है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because central chemoreceptors are insensitive to oxygen elevations, and the role of $O_2$ in respiratory rhythm regulation is quite insignificant. Option 2 is correct because the central chemosensitive area is highly sensitive to changes in hydrogen ions ($H^+$) and carbon dioxide ($CO_2$) within the blood and cerebrospinal fluid. When their concentrations rise, this center is activated and sends regulatory signals to the adjacent medullary rhythm centre, increasing ventilation to eliminate these waste ions. Option 3 and Option 4 present incorrect digestive lipid and blood cell division distractors."
+    "ee": "Part A: Core Concept & Background\nMedullary rhythm centre ke bilkul adjacent ek specialized **Chemosensitive Area** situated hota hai jo blood aur CSF ke chemical composition ko continuously sense karta hai.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Oxygen ka increase central chemosensitive area ko activate nahi karta; respiratory drive primary roop se $CO_2/H^+$ se govern hoti hai.\n• Option 1 is Correct: Jab arterial blood mein **$CO_2$ aur Hydrogen ions ($H^+$) ki concentration badhti hai** (hypercapnia/acidosis), to ye central chemosensitive area highly stimulate ho jata hai. Ye area immediately adjacent respiratory rhythm centre ko signal bhejta hai, jisse ventilation rate aur tidal volume increase ho jata hai (hyperventilation) taaki excess $CO_2$ ko body se tezi se eliminate karke normal physiological pH restore kiya ja sake.\n• Option 2 and 3 are Incorrect: Chylomicrons lipid digestion se aur albumin liver/platelet functions se related hain.\n\nPart C: Key Takeaway / Value Addition\nArterial $pCO_2$ mein minor 2-5 mm Hg ka increase bhi alveolar ventilation ko double karne ke liye sufficient hota hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nमेडुला के श्वसन लय केंद्र के ठीक पास एक विशेष **रसोसंवेदी क्षेत्र (Chemosensitive Area)** पाया जाता है, जो प्रमस्तिष्कमेरु द्रव (CSF) और रक्त के रासायनिक संतुलन की निगरानी करता है।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: ऑक्सीजन की अधिकता से श्वसन केंद्र उत्तेजित नहीं होता।\n• विकल्प 1 सही है: जब रक्त में **कार्बन डाइऑक्साइड ($CO_2$) और हाइड्रोजन आयनों ($H^+$) की सांद्रता बढ़ती है** (अम्लीयता बढ़ना), तो यह रसोसंवेदी क्षेत्र अत्यधिक सक्रिय हो जाता है। यह तुरंत लय केंद्र को संकेत भेजता है जिससे सांस लेने की दर और गहराई बढ़ जाती है (हाइपरवेंटिलेशन), ताकि फेफड़ों द्वारा अतिरिक्त $CO_2$ को तेजी से बाहर निकालकर रक्त का सामान्य pH पुनः स्थापित किया जा सके।\n• विकल्प 2 और 3 गलत हैं: ये पाचन और रक्त कणिकाओं से संबंधित गलत विकल्प हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nधमनी रक्त में $pCO_2$ में मात्र 2 से 5 mm Hg की मामूली वृद्धि भी फेफड़ों के वेंटिलेशन को दोगुना करने के लिए पर्याप्त होती है।"
   },
   {
     "p_id": "bpsc_resp_v5_17",
     "qe": "The body utilizes macrovascular chemoreceptors to monitor systemic blood chemistry. Where are these receptors localized, and what ions do they recognize to signal the rhythm center?",
     "qh": "शरीर प्रणालीगत रक्त रसायन विज्ञान की निगरानी के लिए मैक्रोवैस्कुलर चेमोरेसेप्टर्स (macrovascular chemoreceptors) का उपयोग करता है। ये रिसेप्टर्स कहाँ स्थित होते हैं, और वे लय केंद्र को संकेत देने के लिए किन आयनों को पहचानते हैं?",
-    "o": [
+    "oe": [
       "In the inner circular layer of the stomach wall, tracking pepsinogen ions.",
       "Receptors associated with the aortic arch and carotid artery, which recognize changes in $CO_2$ and $H^+$ concentration.",
       "In the non-vascularised acini units of the pancreas, tracking insulin levels.",
       "Along the structural margins of the vestigial vermiform appendix, tracking symbiotic bacteria."
     ],
+    "oh": [
+      "पेट की दीवार की आंतरिक गोलाकार परत में, पेप्सिनोजेन आयनों पर नज़र रखना।",
+      "महाधमनी चाप (aortic arch) और कैरोटिड धमनी (carotid artery) से जुड़े रिसेप्टर्स, जो $CO_2$ और $H^+$ एकाग्रता में बदलाव को पहचानते हैं।",
+      "अग्न्याशय की गैर-संवहनी एसिनी इकाइयों में, इंसुलिन के स्तर पर नज़र रखना।",
+      "अवशेषी वर्मीफॉर्म अपेंडिक्स के संरचनात्मक हाशिये के साथ, सहजीवी बैक्टीरिया पर नज़र रखना।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes a stomach tissue layer that does not regulate blood chemistry. Option 2 is correct because peripheral chemoreception is managed by specialized vascular structures: the carotid bodies located near the carotid arteries [the major neck vessels supplying the brain] and the aortic bodies located along the aortic arch [the main arterial arch exiting the heart]. These receptors monitor arterial blood, detect elevations in $CO_2$ and hydrogen ion ($H^+$) concentrations, and transmit neural signals to the medullary respiratory rhythm centre to initiate corrective breathing changes. Option 3 and Option 4 describe pancreatic and appendix structures that are not involved in respiratory regulation."
+    "ee": "Part A: Core Concept & Background\nBrainstem ke central sensors ke alawa heart se nikalne wali main arteries par **Peripheral Chemoreceptors** present hote hain jo arterial blood chemistry mein hone wale chemical shifts ko detect karte hain.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Stomach wall enteric nervous system digestion handle karti hai.\n• Option 1 is Correct: Peripheral macrovascular chemoreceptors do locations par concentrated hote hain:\n  1. **Aortic Bodies**: Aortic Arch (heart se nikalne wali main systemic artery) ke walls par located;\n  2. **Carotid Bodies**: Common Carotid Artery ke bifurcation par located.\n  Ye receptors arterial blood mein **$CO_2$ aur $H^+$ ion concentration mein increase** ko (aur severe $pO_2$ hypoxia ko) detect karte hain aur Vagus (10th cranial nerve) aur Glossopharyngeal (9th cranial nerve) ke through medulla rhythm center ko remedial signals send karte hain.\n• Option 2 and 3 are Incorrect: Pancreas aur appendix respiratory chemoreception mein participate nahi karte.\n\nPart C: Key Takeaway / Value Addition\nCarotid bodies Aortic bodies ke comparison mein arterial chemical changes ($pH, pCO_2, pO_2$) ke prati significantly zyada sensitive hoti hain.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nमस्तिष्क के केंद्रीय संवेदकों के अतिरिक्त, मुख्य धमनी नलिकाओं पर **परिधीय रसोसंवेदी (Peripheral Chemoreceptors)** उपस्थित होते हैं, जो हृदय से निकलने वाले शुद्ध रक्त के रासायनिक स्तर की निगरानी करते हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: आमाशय की दीवार का रक्त रसायन संवेदन से संबंध नहीं है।\n• विकल्प 1 सही है: परिधीय रसोसंवेदी दो प्रमुख स्थानों पर पाए जाते हैं:\n  1. **एओर्टिक बॉडीज**: महाधमनी चाप (Aortic Arch) की दीवार पर;\n  2. **कैरोटिड बॉडीज**: कैरोटिड धमनी के विभाजन स्थल पर।\n  ये संवेदक धमनी रक्त में **$CO_2$ और $H^+$ आयनों की सांद्रता में वृद्धि** को पहचानते हैं और वेगस तथा ग्लोसोफरीन्जियल तंत्रिकाओं द्वारा मेडुला के लय केंद्र को आवश्यक सुधारात्मक कदम उठाने के लिए संदेश भेजते हैं।\n• विकल्प 2 और 3 गलत हैं: अग्न्याशय और अपेंडिक्स का श्वसन नियमन से कोई संबंध नहीं है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nकैरोटिड बॉडीज महाधमनी रिसेप्टर्स की तुलना में रक्त के pH और गैसों के उतार-चढ़ाव के प्रति अधिक तीव्र प्रतिक्रिया देती हैं।"
   },
   {
     "p_id": "bpsc_resp_v5_18",
     "qe": "During the mechanical phase of normal human inspiration, which muscle groups are actively stimulated to expand the thoracic cavity dimensions?",
     "qh": "सामान्य मानव अंतःश्वसन (inspiration) के यांत्रिक चरण के दौरान, थोरैसिक गुहा के आयामों का विस्तार करने के लिए कौन से मांसपेशी समूह सक्रिय रूप से उत्तेजित होते हैं?",
-    "o": [
+    "oe": [
       "The smooth muscle lining of the tunica media and the local frenulum strips.",
       "The diaphragm and a specialized set of external intercostal muscles between the ribs.",
       "The oblique smooth muscles of the pyloric fundus and the ciliary axoneme filaments.",
       "The longitudinal muscles of the colon combined with the anal sphincter valve."
     ],
+    "oh": [
+      "ट्यूनिका मीडिया की चिकनी पेशी अस्तर और स्थानीय फ्रेनुलम स्ट्रिप्स।",
+      "डायाफ्राम और पसलियों के बीच बाहरी इंटरकोस्टल मांसपेशियों (external intercostal muscles) का एक विशेष सेट।",
+      "पाइलोरिक फंडस की तिरछी चिकनी मांसपेशियां और सिलियरी एक्सोनेम फिलामेंट्स।",
+      "गुदा स्फिंक्टर वाल्व के साथ संयुक्त कोलन की अनुदैर्ध्य मांसपेशियां।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes blood vessel and tongue anchoring structures that are not involved in thoracic movement. Option 2 is correct because normal human ventilation requires active expansion of the chest cavity. The primary muscles involved are the diaphragm [the dome-shaped skeletal muscle partitioning the thorax and abdomen] and the external intercostal muscles [the skeletal muscle fibers layered between adjacent ribs]. Contraction of the diaphragm increases the vertical antero-posterior thoracic volume, while contraction of the external intercostals lifts the rib cage to expand the transverse dorso-ventral axis, lowering internal pressure to draw air into the lungs. Option 3 and Option 4 present incorrect gastrointestinal and smooth muscle distractors."
+    "ee": "Part A: Core Concept & Background\nInspiration ke dauran lungs ko inflate karne ke liye thoracic cavity ke volume ko increase karna padta hai. Is mechanical volume expansion ko primary respiratory skeletal muscles execute karti hain.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Tunica media blood vessels ki layer hai aur frenulum tongue ka attachment hai.\n• Option 1 is Correct: Normal quiet inspiration mein do main muscle groups actively contract hote hain:\n  1. **Diaphragm**: Contract hoke dome-shape se flat hota hai, jo thoracic cavity ko antero-posterior axis (vertically) mein expand karta hai;\n  2. **External Intercostal Muscles**: Ribs ke beech present ye muscles contract hoke ribs aur sternum ko upar aur bahar (outward/upward) lift karti hain, jo thoracic cavity ko dorso-ventral axis mein expand karta hai.\n• Option 2 and 3 are Incorrect: Stomach fundus, colon, aur anal sphincters digestive tract ke muscular components hain.\n\nPart C: Key Takeaway / Value Addition\nRibs ki outward movement bucket-handle motion aur pump-handle motion kehlati hai jo thoracic volume increase karti hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nसांस अंदर खींचने (अंतःश्वसन) के लिए वक्ष गुहा का आयतन बढ़ाना पड़ता है। इस यांत्रिक विस्तार को प्राथमिक श्वसन कंकाल पेशियां संकुचित होकर पूरा करती हैं।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: ट्यूनिका मीडिया रक्त वाहिकाओं की परत है और फ्रेनुलम जीभ का हिस्सा है।\n• विकल्प 1 सही है: सामान्य अंतःश्वसन के दौरान मुख्य रूप से दो पेशी समूह सक्रिय रूप से संकुचित होते हैं:\n  1. **डायाफ्राम**: संकुचित होकर चपटा होता है, जिससे वक्ष गुहा का आयतन ऊर्ध्वाधर (अग्र-पश्च अक्ष) बढ़ता है;\n  2. **बाहरी इंटरकोस्टल पेशियां**: पसलियों के बीच स्थित ये पेशियां संकुचित होकर पसलियों और उरोस्थि (sternum) को ऊपर और बाहर खींचती हैं, जिससे वक्ष गुहा का आयतन पृष्ठ-अधर अक्ष में बढ़ता है।\n• विकल्प 2 और 3 गलत हैं: ये पाचन तंत्र की पेशियां हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nपसलियों का ऊपर और बाहर उठना 'बाल्टी के हैंडल जैसी गति' (bucket-handle movement) कहलाता है, जिससे वक्ष गुहा का पार्श्व व्यास बढ़ता है।"
   },
   {
     "p_id": "bpsc_resp_v5_19",
     "qe": "Gas exchange occurs across two distinct systemic interfaces within the human body. What are these primary interfaces, and what physical mechanism drives the movement of gases across them?",
     "qh": "मानव शरीर के भीतर दो अलग-अलग प्रणालीगत इंटरफेस पर गैस विनिमय (gas exchange) होता है। ये प्राथमिक इंटरफेस कौन से हैं, और कौन सा भौतिक तंत्र उनके पार गैसों की गति को संचालित करता है?",
-    "o": [
+    "oe": [
       "Between the nostrils and the pharynx via active ATP-driven proton pumps.",
       "Between the lung alveoli and the blood, and between the blood and tissue cells, driven by simple diffusion based on partial pressure or concentration gradients.",
       "Between the sub-mucosal lacteals and the liver cords via mass peristaltic contraction waves.",
       "Between the corporate axoneme triplets and the chromatin fibers via meiotic cleavage."
     ],
+    "oh": [
+      "सक्रिय एटीपी-संचालित प्रोटॉन पंपों के माध्यम से नासिका छिद्रों और ग्रसनी के बीच।",
+      "फेफड़ों की कूपिकाओं और रक्त के बीच, तथा रक्त और ऊतक कोशिकाओं के बीच, जो आंशिक दबाव या सांद्रता प्रवणता पर आधारित सरल विसरण (simple diffusion) द्वारा संचालित होता है।",
+      "द्रव्यमान क्रमाकुंचन संकुचन तरंगों के माध्यम से सब-म्यूकोसल लैक्टियल्स और यकृत डोरियों के बीच।",
+      "अर्धसूत्रीविभाजन दरार के माध्यम से एक्सोनेम ट्रिपलेट्स और क्रोमैटिन फाइबर के बीच।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes upper airway tracts where bulk air movement occurs through pressure changes, not molecular diffusion driven by proton pumps. Option 2 is correct because respiratory gas exchange occurs at two primary biological boundaries: (1) the external respiratory interface between the lung alveoli and pulmonary capillaries, and (2) the internal respiratory interface between systemic tissue capillaries and tissue cells. The movement of oxygen ($O_2$) and carbon dioxide ($CO_2$) across these delicate membranes is driven entirely by simple diffusion [the passive physical movement of molecules down a gradient] based on partial pressure or concentration gradients. Option 3 and Option 4 present incorrect lipid transport and cell division distractors."
+    "ee": "Part A: Core Concept & Background\nHuman physiology mein respiration do continuous levels par execute hoti hai: External Respiration (Lungs par) aur Internal Respiration (Tissues par).\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: Nostrils aur pharynx bulk air passage hain, gas exchange membrane nahi, aur ATP pumps gas exchange mein use nahi hote.\n• Option 1 is Correct: Human body mein primary gas exchange do discrete anatomical interfaces par hota hai:\n  1. **Alveolar-Capillary Interface (External Respiration)**: Alveoli air aur pulmonary capillary blood ke beech ($O_2$ blood mein enter karti hai, $CO_2$ alveoli mein diffuse hoti hai);\n  2. **Capillary-Tissue Interface (Internal Respiration)**: Systemic capillary blood aur tissue cells ke beech ($O_2$ cells mein enter karti hai, $CO_2$ blood mein diffuse hoti hai).\n  Dono interfaces par gas movement purely **Simple Physical Diffusion** par depend karta hai, jo respective **Partial Pressure Gradients** ($pO_2$ aur $pCO_2$) se drive hota hai bina kisi energy expenditure ke.\n• Option 2 and 3 are Incorrect: Lacteals, liver cords, aur chromatin fibers digestive aur genetic cell biology ke terms hain.\n\nPart C: Key Takeaway / Value Addition\nAlveoli par $pO_2 = 104\\text{ mm Hg}$ vs Venous $pO_2 = 40\\text{ mm Hg}$ hota hai, jabki Tissue level par Arterial $pO_2 = 95\\text{ mm Hg}$ vs Tissue $pO_2 = 40\\text{ mm Hg}$ hota hai.",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nमानव शरीर में श्वसन गैसों का विनिमय दो अलग-अलग स्तरों पर होता है: बाह्य श्वसन (फेफड़ों में) और आंतरिक श्वसन (ऊतकों में)।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: नासाछिद्र और ग्रसनी केवल वायुमार्ग हैं, विनिमय सतह नहीं।\n• विकल्प 1 सही है: मानव शरीर में गैस विनिमय दो प्राथमिक अंतरापृष्ठों (interfaces) पर होता है:\n  1. **कूपिका और रक्त के बीच (बाह्य श्वसन)**: कूपिका वायु से ऑक्सीजन रक्त में और $CO_2$ कूपिका में जाती है;\n  2. **रक्त और ऊतक कोशिकाओं के बीच (आंतरिक श्वसन)**: रक्त से ऑक्सीजन कोशिकाओं में और उपापचयी $CO_2$ रक्त में आती है।\n  यह दोनों विनिमय बिना किसी ऊर्जा खर्च के केवल **आंशिक दाब प्रवणता (Partial Pressure Gradient) पर आधारित सरल विसरण (Simple Diffusion)** द्वारा संचालित होते हैं।\n• विकल्प 2 और 3 गलत हैं: ये पाचन और आनुवंशिकी से संबंधित भ्रामक विकल्प हैं।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nकूपिकाओं में $pO_2 = 104\\text{ mm Hg}$ से रक्त में विसरण होता है, जबकि ऊतकों में रक्त का $pO_2 = 95\\text{ mm Hg}$ से कोशिकाओं ($40\\text{ mm Hg}$) में विसरण होता है।"
   },
   {
     "p_id": "bpsc_resp_v5_20",
     "qe": "Every 100 mL of deoxygenated blood returning from metabolizing tissue beds delivers a specific volume of carbon dioxide ($CO_2$) to the pulmonary alveoli. What is this standard quantitative volume?",
     "qh": "चयापचय करने वाले ऊतकों से लौटने वाला प्रत्येक 100 mL विऑक्सीकृत रक्त (deoxygenated blood) फुफ्फुसीय एलीविओली को कार्बन डाइऑक्साइड ($CO_2$) का एक विशिष्ट आयतन प्रदान करता है। यह मानक मात्रात्मक आयतन (standard quantitative volume) क्या है?",
-    "o": [
+    "oe": [
       "Approximately 500 mL matching the total volume inspired per breath.",
       "Approximately 4 mL.",
       "Approximately 5 mL matching the total volume of oxygen delivered.",
       "Exactly 180 L representing the initial filtrate."
     ],
+    "oh": [
+      "लगभग 500 mL प्रति सांस प्रेरित कुल मात्रा से मेल खाता है।",
+      "लगभग 4 mL।",
+      "लगभग 5 mL वितरित ऑक्सीजन की कुल मात्रा से मेल खाता है।",
+      "सटीक 180 L प्रारंभिक निस्यंद का प्रतिनिधित्व करता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because 500 mL represents the resting Tidal Volume of ventilation, not a vascular gas transport volume. Option 2 is correct because the source text establishes that under normal resting physiological conditions, every 100 mL of deoxygenated blood traveling through the venous system delivers approximately 4 mL of carbon dioxide ($CO_2$) into the pulmonary alveoli for exhalation. Option 3 represents the volume of oxygen ($O_2$) delivered to systemic tissues by 100 mL of oxygenated blood. Option 4 represents the daily initial filtration volume within the kidneys."
+    "ee": "Part A: Core Concept & Background\nPeripheral tissues se right atrium aur pulmonary artery ke through lungs tak pahunchne wala deoxygenated blood alveolar air ko $CO_2$ unload karta hai taaki exhalation complete ho sake.\n\nPart B: Statement-by-Statement Breakdown\n• Option 0 is Incorrect: 500 mL normal single resting breath ka Tidal Volume (TV) hai.\n• Option 1 is Correct: Normal physiological conditions mein, **har 100 mL deoxygenated blood pulmonary alveoli ko approximately 4 mL of $CO_2$ deliver** karta hai. Venous blood mein total $CO_2$ concentration approx 52 mL per 100 mL hoti hai jo lungs se nikalte time ghat kar 48 mL reh jati hai ($52 - 48 = 4\\text{ mL delivered}$). \n• Option 2 is Incorrect: 5 mL wo oxygen volume hai jo 100 mL oxygenated blood tissues ko deliver karta hai.\n• Option 3 is Incorrect: 180 L kidneys ka per day initial glomerular filtration rate (GFR) volume hai.\n\nPart C: Key Takeaway / Value Addition\nRespiratory Quotient (RQ) carbohydrate metabolism ke liye $1.0$ hota hai (Volume of $CO_2$ evolved / Volume of $O_2$ consumed = $4\\text{ mL} / 5\\text{ mL} = 0.8$ on mixed diet).",
+    "eh": "भाग A: मुख्य अवधारणा एवं पृष्ठभूमि\nऊतकों से अशुद्ध रक्त जब फेफड़ों की कूपिकाओं में पहुँचता है, तो वह उपापचयी $CO_2$ को कूपिका वायु में छोड़ता है ताकि उसे उच्छ्वसन द्वारा बाहर निकाला जा सके।\n\nभाग B: कथन-दर-कथन विश्लेषण\n• विकल्प 0 गलत है: 500 mL ज्वारीय आयतन (Tidal volume) है।\n• विकल्प 1 सही है: सामान्य शारीरिक परिस्थितियों में, **प्रत्येक 100 mL विऑक्सीकृत रक्त फेफड़ों की कूपिकाओं को लगभग 4 mL $CO_2$ प्रदान करता है**। शिरापरक रक्त में $CO_2$ की मात्रा 52 mL/100 mL होती है, जो फेफड़ों से गुजरने के बाद 48 mL/100 mL रह जाती है ($52 - 48 = 4\\text{ mL}$ निष्कासित)।\n• विकल्प 2 गलत है: 5 mL वह ऑक्सीजन की मात्रा है जो 100 mL शुद्ध रक्त द्वारा ऊतकों को दी जाती है।\n• विकल्प 3 गलत है: 180 L वृक्क द्वारा प्रतिदिन छाने जाने वाले आरंभिक निस्यंद की मात्रा है।\n\nभाग C: मुख्य निष्कर्ष / परीक्षा उपयोगी तथ्य\nमिश्रित आहार पर सामान्य मानव का श्वसन गुणांक (Respiratory Quotient - RQ) लगभग 0.8 होता है (निष्कासित $CO_2$ / अवशोषित $O_2$ = $4\\text{ mL} / 5\\text{ mL}$). "
   }
 ]
-  
- 
