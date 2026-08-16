@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import '../models/question_model.dart';
 import '../services/ai_explainer_service.dart';
 import '../services/user_stats_service.dart';
@@ -14,6 +16,7 @@ class RevisionPracticeScreen extends StatefulWidget {
     required this.testTitle,
     required this.questions,
   });
+
   @override
   State<RevisionPracticeScreen> createState() => _RevisionPracticeScreenState();
 }
@@ -408,7 +411,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // ✨ PREMIUM VISUAL EXPLANATION BUILDER (Theme-Aware)
+  // ✨ PREMIUM VISUAL EXPLANATION BUILDER (Theme-Aware + Community Trick Box)
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
     List<String> rawParagraphs = rawExplanation
         .split('\n')
@@ -507,70 +510,79 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             padding: const EdgeInsets.all(14.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: rawParagraphs.map((para) {
-                bool isCorrectPoint = para.toLowerCase().contains('is correct') || para.contains('सही है');
-                bool isIncorrectPoint = para.toLowerCase().contains('is incorrect') || 
-                                        para.toLowerCase().contains('is false') || 
-                                        para.contains('गलत है');
+              children: [
+                ...rawParagraphs.map((para) {
+                  bool isCorrectPoint = para.toLowerCase().contains('is correct') || para.contains('सही है');
+                  bool isIncorrectPoint = para.toLowerCase().contains('is incorrect') || 
+                                          para.toLowerCase().contains('is false') || 
+                                          para.contains('गलत है');
 
-                Color stripBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
-                Color stripBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
-                Color badgeBg = const Color(0xFF64748B);
-                String badgeIcon = '📌';
+                  Color stripBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
+                  Color stripBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+                  Color badgeBg = const Color(0xFF64748B);
+                  String badgeIcon = '📌';
 
-                if (isCorrectPoint) {
-                  stripBg = isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4);
-                  stripBorder = isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0);
-                  badgeBg = const Color(0xFF16A34A);
-                  badgeIcon = '✓';
-                } else if (isIncorrectPoint) {
-                  stripBg = isDark ? const Color(0xFF450A0A) : const Color(0xFFFEF2F2);
-                  stripBorder = isDark ? const Color(0xFF991B1B) : const Color(0xFFFECDD3);
-                  badgeBg = const Color(0xFFDC2626);
-                  badgeIcon = '✕';
-                }
+                  if (isCorrectPoint) {
+                    stripBg = isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4);
+                    stripBorder = isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0);
+                    badgeBg = const Color(0xFF16A34A);
+                    badgeIcon = '✓';
+                  } else if (isIncorrectPoint) {
+                    stripBg = isDark ? const Color(0xFF450A0A) : const Color(0xFFFEF2F2);
+                    stripBorder = isDark ? const Color(0xFF991B1B) : const Color(0xFFFECDD3);
+                    badgeBg = const Color(0xFFDC2626);
+                    badgeIcon = '✕';
+                  }
 
-                return Container(
-                  width: double.infinity,
-                  margin: const EdgeInsets.only(bottom: 8.0),
-                  padding: const EdgeInsets.all(11.0),
-                  decoration: BoxDecoration(
-                    color: stripBg,
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: stripBorder, width: 1),
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: 20,
-                        height: 20,
-                        margin: const EdgeInsets.only(top: 1),
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: badgeBg,
-                          shape: BoxShape.circle,
-                        ),
-                        child: Text(
-                          badgeIcon,
-                          style: const TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Expanded(
-                        child: MathFormattedText(
-                          text: para,
-                          textStyle: TextStyle(
-                            fontSize: 13,
-                            color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF1E293B),
-                            height: 1.45,
+                  return Container(
+                    width: double.infinity,
+                    margin: const EdgeInsets.only(bottom: 8.0),
+                    padding: const EdgeInsets.all(11.0),
+                    decoration: BoxDecoration(
+                      color: stripBg,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: stripBorder, width: 1),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 20,
+                          height: 20,
+                          margin: const EdgeInsets.only(top: 1),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: badgeBg,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Text(
+                            badgeIcon,
+                            style: const TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.bold),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                );
-              }).toList(),
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: MathFormattedText(
+                            text: para,
+                            textStyle: TextStyle(
+                              fontSize: 13,
+                              color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF1E293B),
+                              height: 1.45,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                }).toList(),
+
+                // 💡 3. COMMUNITY SHORT-TRICK & DATA SUBMISSION (Telegram Bot)
+                RevisionTrickSubmitBox(
+                  testTitle: widget.testTitle,
+                  qIndex: _currentIndex,
+                  questionSnippet: currentQ.getText(_isHindi),
+                ),
+              ],
             ),
           ),
         ],
@@ -909,6 +921,202 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+// 💡 COMMUNITY TRICK / DATA SUBMISSION WIDGET (Direct to Telegram)
+class RevisionTrickSubmitBox extends StatefulWidget {
+  final String testTitle;
+  final int qIndex;
+  final String questionSnippet;
+
+  const RevisionTrickSubmitBox({
+    super.key,
+    required this.testTitle,
+    required this.qIndex,
+    required this.questionSnippet,
+  });
+
+  @override
+  State<RevisionTrickSubmitBox> createState() => _RevisionTrickSubmitBoxState();
+}
+
+class _RevisionTrickSubmitBoxState extends State<RevisionTrickSubmitBox> {
+  final TextEditingController _trickController = TextEditingController();
+  bool _isSubmitting = false;
+  bool _isSubmitted = false;
+  bool _isOpen = false;
+
+  static const String _botToken = "1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo";
+  static const String _chatId = "785009742";
+
+  Future<void> _submitTrickToTelegram() async {
+    final String trickText = _trickController.text.trim();
+    if (trickText.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('⚠️ Please write your trick or data first!')),
+      );
+      return;
+    }
+
+    setState(() => _isSubmitting = true);
+
+    final String cleanSnippet = widget.questionSnippet.length > 70
+        ? "${widget.questionSnippet.substring(0, 70)}..."
+        : widget.questionSnippet;
+
+    final String telegramMsg = """
+💡 *NEW TRICK / DATA SUBMITTED!*
+━━━━━━━━━━━━━━━━━━━━━
+📁 *Chapter:* ${widget.testTitle}
+❓ *Q#: * Q${widget.qIndex + 1}
+📝 *Snippet:* $cleanSnippet
+━━━━━━━━━━━━━━━━━━━━━
+✨ *User Trick/Logic:*
+$trickText
+""";
+
+    try {
+      final res = await http.post(
+        Uri.parse("https://api.telegram.org/bot$_botToken/sendMessage"),
+        headers: {"Content-Type": "application/json"},
+        body: jsonEncode({
+          "chat_id": _chatId,
+          "text": telegramMsg,
+          "parse_mode": "Markdown",
+        }),
+      );
+
+      if (res.statusCode == 200 && mounted) {
+        setState(() {
+          _isSubmitting = false;
+          _isSubmitted = true;
+        });
+      } else {
+        if (mounted) setState(() => _isSubmitting = false);
+      }
+    } catch (_) {
+      if (mounted) setState(() => _isSubmitting = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final bool isDark = Theme.of(context).brightness == Brightness.dark;
+
+    if (_isSubmitted) {
+      return Container(
+        margin: const EdgeInsets.only(top: 10),
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4),
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(color: isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0)),
+        ),
+        child: Row(
+          children: [
+            const Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 18),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Text(
+                '✅ Thank you! Trick/Data Telegram par bhej diya gaya hai.',
+                style: TextStyle(
+                  color: isDark ? const Color(0xFF86EFAC) : const Color(0xFF16A34A),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 11.5,
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return Container(
+      margin: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          InkWell(
+            onTap: () => setState(() => _isOpen = !_isOpen),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    const Text('💡 ', style: TextStyle(fontSize: 13)),
+                    Text(
+                      'Got a short-trick or better logic?',
+                      style: TextStyle(
+                        fontSize: 11.5,
+                        fontWeight: FontWeight.bold,
+                        color: isDark ? const Color(0xFF38BDF8) : const Color(0xFF0284C7),
+                      ),
+                    ),
+                  ],
+                ),
+                Text(
+                  _isOpen ? 'Close ▲' : 'Share ➔',
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.bold,
+                    color: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          if (_isOpen) ...[
+            const SizedBox(height: 8),
+            TextField(
+              controller: _trickController,
+              maxLines: 2,
+              style: TextStyle(fontSize: 12, color: isDark ? Colors.white : Colors.black87),
+              decoration: InputDecoration(
+                hintText: 'Apni trick, mnemonic code ya logic yahan likhein...',
+                hintStyle: TextStyle(fontSize: 11, color: isDark ? Colors.white38 : Colors.grey),
+                isDense: true,
+                filled: true,
+                fillColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide(color: isDark ? const Color(0xFF334155) : Colors.grey.shade300),
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Align(
+              alignment: Alignment.centerRight,
+              child: SizedBox(
+                height: 28,
+                child: ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF24A1DE),
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                  ),
+                  onPressed: _isSubmitting ? null : _submitTrickToTelegram,
+                  icon: _isSubmitting
+                      ? const SizedBox(width: 12, height: 12, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+                      : const Icon(Icons.send_rounded, size: 12),
+                  label: Text(
+                    _isSubmitting ? 'Sending...' : 'Send to Telegram',
+                    style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ],
       ),
     );
   }
