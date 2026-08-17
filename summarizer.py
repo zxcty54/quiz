@@ -65,11 +65,13 @@ Return strictly a valid JSON array of objects:
 # ============================================================
 
 def normalize_title(title):
+    # Common words jo match count ko distract karte hain unhe filter karein
+    stop_words = {"india", "indian", "union", "national", "state", "minister", "news", "under", "with", "from"}
     title = re.sub(r'[^a-zA-Z0-9\s]', '', str(title).lower())
-    return set(w for w in title.split() if len(w) > 3)
+    return set(w for w in title.split() if len(w) > 3 and w not in stop_words)
 
-
-def is_duplicate_story(new_title, existing_titles, threshold=0.55):
+def is_duplicate_story(new_title, existing_titles, threshold=0.42):
+    """Checks if the same news story has already been accepted"""
     new_words = normalize_title(new_title)
     if not new_words:
         return False
@@ -78,10 +80,13 @@ def is_duplicate_story(new_title, existing_titles, threshold=0.55):
         exist_words = normalize_title(exist_title)
         if not exist_words:
             continue
+        
         intersection = new_words.intersection(exist_words)
         union = new_words.union(exist_words)
         similarity = len(intersection) / len(union) if union else 0
-        if similarity >= threshold:
+
+        # Agar 3+ core technical words same hain ya Jaccard similarity >= 0.42 hai
+        if similarity >= threshold or len(intersection) >= 3:
             return True
 
     return False
