@@ -3,7 +3,8 @@ import json
 import time
 import re
 from datetime import datetime, timezone, timedelta
-from groq import Groq
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from groq import Groq, APIConnectionError, RateLimitError, APIStatusError
 
 # ============================================================
 # CONFIGURATION
@@ -106,34 +107,53 @@ def call_groq_api(user_prompt, max_retries=3):
             response = client.chat.completions.create(
                 model=MODEL_NAME,
                 messages=[
-                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "system", "content": SYSTEM_PROMPT + "\nCRITICAL: Respond ONLY with a valid JSON object. Do not include markdown codeblocks, thinking blocks, or conversational text."},
                     {"role": "user", "content": user_prompt}
                 ],
                 temperature=0.1,
                 max_tokens=600  # Prevents JSON truncation
             )
             
-            raw_text = response.choices[0].message.content.strip()
+            if not response.choices or not response.choices[0].message:
+                raise ValueError("Empty response object received from Groq API")
 
-            # Robust JSON extraction to prevent parsing errors
-            json_match = re.search(r'\{.*\}', raw_text, re.DOTALL)
-            if json_match:
-                return json.loads(json_match.group(0))
-            else:
+            raw_text = response.choices[0].message.content
+            if not raw_text or not raw_text.strip():
+                raise ValueError("Received empty content string from model")
+
+            raw_text = raw_text.strip()
+
+            # Clean potential thinking tags
+            raw_text = re.sub(r"<think>.*?</think>", "", raw_text, flags=re.DOTALL).strip()
+
+            # Clean potential Markdown code fences
+            if raw_text.startswith("```"):
+                raw_text = re.sub(r"^```(?:json)?\s*", "", raw_text)
+                raw_text = re.sub(r"\s*```$", "", raw_text)
+
+            # Robust JSON extraction
+            try:
                 return json.loads(raw_text)
+            except json.JSONDecodeError:
+                json_match = re.search(r"\{[\s\S]*\}", raw_text)
+                if json_match:
+                    return json.loads(json_match.group(0))
+                else:
+                    raise ValueError(f"Could not parse valid JSON: {raw_text[:80]}...")
 
+        except RateLimitError as e:
+            wait_time = (attempt + 1) * 8
+            print(f"⚠️ Rate/Token limit hit. Pausing {wait_time}s (Attempt {attempt + 1}/{max_retries})...")
+            time.sleep(wait_time)
+        except (APIConnectionError, APIStatusError) as e:
+            print(f"⚠️ Groq API Status/Connection Error on attempt {attempt + 1}: {e}")
+            time.sleep(2)
+        except json.JSONDecodeError as e:
+            print(f"⚠️ JSON Format error on attempt {attempt + 1}. Retrying...")
+            time.sleep(1)
         except Exception as e:
-            err_msg = str(e).lower()
-            if "429" in err_msg or "rate limit" in err_msg or "token" in err_msg:
-                wait_time = (attempt + 1) * 8
-                print(f"⚠️ Rate/Token limit hit. Pausing {wait_time}s (Attempt {attempt + 1}/{max_retries})...")
-                time.sleep(wait_time)
-            elif "400" in err_msg or "json_validate_failed" in err_msg:
-                print(f"⚠️ JSON Format error on attempt {attempt + 1}. Retrying...")
-                time.sleep(1)
-            else:
-                print(f"⚠️ Groq Error on attempt {attempt + 1}: {e}")
-                time.sleep(2)
+            print(f"⚠️ Groq Error on attempt {attempt + 1}: {e}")
+            time.sleep(2)
                 
     return None
 
@@ -195,6 +215,33 @@ def summarize_article(item, is_bihar=False):
     }
 
 
+def process_batch_parallel(news_list, is_bihar=False, max_workers=2):
+    """Summarizes 2 news articles simultaneously in parallel"""
+    results = []
+    total = len(news_list)
+    
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_item = {
+            executor.submit(summarize_article, item, is_bihar): (idx + 1, item)
+            for idx, item in enumerate(news_list)
+        }
+        
+        for future in as_completed(future_to_item):
+            idx, item = future_to_item[future]
+            t_short = item.get("title", "")[:40]
+            label = "Bihar" if is_bihar else "National"
+            print(f"[{label} {idx}/{total}] Processed: {t_short}...")
+            
+            try:
+                card_data = future.result()
+                if card_data:
+                    results.append(card_data)
+            except Exception as exc:
+                print(f"⚠️ Worker error on item {idx}: {exc}")
+                
+    return results
+
+
 def process_all_news():
     if not os.path.exists(INPUT_FILE):
         print(f"❌ {INPUT_FILE} not found!")
@@ -209,65 +256,53 @@ def process_all_news():
     print(f"🚀 Starting High-Throughput AI Summarization [{MODEL_NAME}]...")
     print(f"📦 Raw Inputs -> National: {len(national_raw)} | Bihar: {len(bihar_raw)}")
 
+    # ------------------------------------------------------------
+    # PROCESS NATIONAL NEWS (Parallel 2 Workers)
+    # ------------------------------------------------------------
+    print("\n🇮🇳 Processing National News (2 in parallel)...")
+    raw_national_cards = process_batch_parallel(national_raw, is_bihar=False, max_workers=2)
+
     national_cards = []
     seen_national_titles = []
+    for card_data in raw_national_cards:
+        c_title = card_data["title"]
+        if not is_duplicate_story(c_title, seen_national_titles):
+            seen_national_titles.append(c_title)
+            formatted_card = {
+                "id": f"nat_{len(national_cards) + 1:02d}",
+                "title": card_data["title"],
+                "category": card_data["category"],
+                "bullets": card_data["bullets"],
+                "exam_tag": card_data["exam_tag"],
+                "date": card_data["date"]
+            }
+            national_cards.append(formatted_card)
+        else:
+            print(f"  🧹 DROPPED DUPLICATE: {c_title[:45]}...")
+
+    # ------------------------------------------------------------
+    # PROCESS BIHAR NEWS (Parallel 2 Workers)
+    # ------------------------------------------------------------
+    print("\n🏛️ Processing Bihar News (2 in parallel)...")
+    raw_bihar_cards = process_batch_parallel(bihar_raw, is_bihar=True, max_workers=2)
 
     bihar_cards = []
     seen_bihar_titles = []
-
-    # Process National News
-    print("\n🇮🇳 Processing National News...")
-    nat_idx = 1
-    for item in national_raw:
-        print(f"[National {nat_idx}/{len(national_raw)}] Summarizing: {item.get('title', '')[:45]}...")
-        card_data = summarize_article(item, is_bihar=False)
-        
-        if card_data:
-            c_title = card_data["title"]
-            if not is_duplicate_story(c_title, seen_national_titles):
-                seen_national_titles.append(c_title)
-                formatted_card = {
-                    "id": f"nat_{len(national_cards) + 1:02d}",
-                    "title": card_data["title"],
-                    "category": card_data["category"],
-                    "bullets": card_data["bullets"],
-                    "exam_tag": card_data["exam_tag"],
-                    "date": card_data["date"]
-                }
-                national_cards.append(formatted_card)
-            else:
-                print(f"  🧹 DROPPED DUPLICATE: {c_title[:45]}...")
-
-            nat_idx += 1
-            
-        time.sleep(2.0)  # Optimal delay for rate limit safety
-
-    # Process Bihar News
-    print("\n🏛️ Processing Bihar News...")
-    bih_idx = 1
-    for item in bihar_raw:
-        print(f"[Bihar {bih_idx}/{len(bihar_raw)}] Summarizing: {item.get('title', '')[:45]}...")
-        card_data = summarize_article(item, is_bihar=True)
-
-        if card_data:
-            c_title = card_data["title"]
-            if not is_duplicate_story(c_title, seen_bihar_titles):
-                seen_bihar_titles.append(c_title)
-                formatted_card = {
-                    "id": f"bih_{len(bihar_cards) + 1:02d}",
-                    "title": card_data["title"],
-                    "category": card_data["category"],
-                    "bullets": card_data["bullets"],
-                    "exam_tag": card_data["exam_tag"],
-                    "date": card_data["date"]
-                }
-                bihar_cards.append(formatted_card)
-            else:
-                print(f"  🧹 DROPPED DUPLICATE: {c_title[:45]}...")
-
-            bih_idx += 1
-            
-        time.sleep(2.0)
+    for card_data in raw_bihar_cards:
+        c_title = card_data["title"]
+        if not is_duplicate_story(c_title, seen_bihar_titles):
+            seen_bihar_titles.append(c_title)
+            formatted_card = {
+                "id": f"bih_{len(bihar_cards) + 1:02d}",
+                "title": card_data["title"],
+                "category": card_data["category"],
+                "bullets": card_data["bullets"],
+                "exam_tag": card_data["exam_tag"],
+                "date": card_data["date"]
+            }
+            bihar_cards.append(formatted_card)
+        else:
+            print(f"  🧹 DROPPED DUPLICATE: {c_title[:45]}...")
 
     # ------------------------------------------------------------
     # 1. SAVE DAILY OVERWRITTEN FILE (finalnews.json)
