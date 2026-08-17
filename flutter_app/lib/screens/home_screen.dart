@@ -7,6 +7,7 @@ import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
+import '../services/ai_explainer_service.dart';
 import '../services/telegram_tracker.dart';
 import 'learn_hub_screen.dart';
 import 'profile_screen.dart';
@@ -57,6 +58,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
       _loadRealtimeProgress();
+      _fetchLiveAppConfig();
       _fetchSectionalDataLive();
       _fetchSubjectMappingLive();
     }
@@ -69,6 +71,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     try {
       final String configStr = await rootBundle.loadString('assets/data/app_config.json');
       _appConfig = jsonDecode(configStr);
+      AiExplainerService.updateModelFromConfig(_appConfig);
     } catch (e) {
       debugPrint("Error loading app_config.json: $e");
     }
@@ -121,6 +124,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
 
     // 2️⃣ Live Cloud Sync (Background Fresh Update)
+    _fetchLiveAppConfig();
     _fetchSectionalDataLive();
     _fetchSubjectMappingLive();
   }
@@ -209,6 +213,18 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return null;
   }
 
+  // 🎯 LIVE APP CONFIG SYNC (Root app_config.json) + DYNAMIC AI MODEL INJECTION
+  Future<void> _fetchLiveAppConfig() async {
+    final data = await _fetchRobustJson("app_config.json");
+    if (data != null && data is Map && mounted) {
+      setState(() {
+        _appConfig = Map<String, dynamic>.from(data);
+      });
+      AiExplainerService.updateModelFromConfig(_appConfig);
+      debugPrint("✅ Live Root app_config.json & AI Models Synced");
+    }
+  }
+
   // 🎯 LIVE SECTIONAL SYNC + AUTO PERSISTENT SAVE
   Future<void> _fetchSectionalDataLive() async {
     final data = await _fetchRobustJson("sectional_data.json");
@@ -279,6 +295,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               await prefs.remove('persistent_subject_mapping_json');
               await prefs.remove('persistent_sectional_data_json');
 
+              await _fetchLiveAppConfig();
               await _fetchSectionalDataLive();
               await _fetchSubjectMappingLive();
 
@@ -460,9 +477,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           List<Question> qList = [];
           for (var item in rawList) {
             if (item is Map) {
-              try {
-                qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
-              } catch (_) {}
+              qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
             }
           }
 
@@ -525,9 +540,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           List<Question> qList = [];
           for (var item in rawList) {
             if (item is Map) {
-              try {
-                qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
-              } catch (_) {}
+              qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
             }
           }
 
