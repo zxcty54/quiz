@@ -35,6 +35,19 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   final Map<int, int> _asksRemainingPerQuestion = {}; 
   final Map<int, List<Map<String, String>>> _aiChatHistory = {}; 
 
+  // ⏳ Global Anti-Spam Cooldown across all questions (15 Seconds)
+  static DateTime? _lastAiCallTime;
+  static const int _aiCooldownSeconds = 15;
+
+  int _getAiCooldownRemaining() {
+    if (_lastAiCallTime == null) return 0;
+    final int diff = DateTime.now().difference(_lastAiCallTime!).inSeconds;
+    if (diff < _aiCooldownSeconds) {
+      return _aiCooldownSeconds - diff;
+    }
+    return 0;
+  }
+
   @override
   void initState() {
     super.initState();
@@ -169,7 +182,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // 💬 BOTTOM SHEET DIALOG FOR AI DOUBT SOLVER (1 ASK & 100 CHARS)
+  // 💬 BOTTOM SHEET DIALOG FOR AI DOUBT SOLVER (1 ASK, 100 CHARS & 15s COOLDOWN)
   void _openAiDoubtDialog(Question currentQ, bool isDark) {
     int asksLeft = _asksRemainingPerQuestion[_currentIndex] ?? 1; // 🛑 STRICT 1 ASK LIMIT
     TextEditingController doubtController = TextEditingController();
@@ -185,6 +198,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         return StatefulBuilder(
           builder: (context, setModalState) {
             final history = _aiChatHistory[_currentIndex] ?? [];
+            final int cooldownLeft = _getAiCooldownRemaining();
 
             return Padding(
               padding: EdgeInsets.only(
@@ -299,9 +313,24 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                               ? null
                               : () async {
                                   if (doubtController.text.trim().isEmpty) return;
+
+                                  // ⏱️ Anti-Spam Cooldown Check
+                                  final int cooldown = _getAiCooldownRemaining();
+                                  if (cooldown > 0) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text('⏳ Please wait ${cooldown}s before asking AI again!'),
+                                        duration: const Duration(seconds: 2),
+                                        backgroundColor: const Color(0xFFDC2626),
+                                      ),
+                                    );
+                                    return;
+                                  }
+
                                   setModalState(() => isAsking = true);
 
                                   String userQuery = doubtController.text.trim();
+                                  _lastAiCallTime = DateTime.now(); // ⏱️ Reset timestamp
 
                                   String aiResp = await AiExplainerService.askCustomDoubt(
                                     question: currentQ.getText(_isHindi),
@@ -327,7 +356,11 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                           icon: isAsking
                               ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
                               : const Icon(Icons.send_rounded, size: 16),
-                          label: Text(isAsking ? 'Generating Deep Explanation...' : 'Get AI Explanation 🚀'),
+                          label: Text(
+                            isAsking
+                                ? 'Generating Deep Explanation...'
+                                : (cooldownLeft > 0 ? 'Wait ${cooldownLeft}s (Cooldown) ⏳' : 'Get AI Explanation 🚀'),
+                          ),
                         ),
                       )
                     ] else ...[
@@ -411,36 +444,13 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // ✨ SMART GROUPED & HINGLISH-AWARE EXPLANATION BUILDER
+  // ✨ PREMIUM VISUAL EXPLANATION BUILDER (Theme-Aware + Community Trick Box)
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
-    List<String> rawLines = rawExplanation
+    List<String> rawParagraphs = rawExplanation
         .split('\n')
         .map((p) => p.trim())
         .where((p) => p.isNotEmpty)
         .toList();
-
-    List<String> groupedPoints = [];
-    String currentBlock = "";
-
-    for (var line in rawLines) {
-      bool isNewHeader = line.startsWith('•') ||
-          line.startsWith('Option') ||
-          line.startsWith('📌') ||
-          line.startsWith('1.') ||
-          line.startsWith('2.');
-
-      if (isNewHeader && currentBlock.isNotEmpty) {
-        groupedPoints.add(currentBlock.trim());
-        currentBlock = line;
-      } else {
-        if (currentBlock.isEmpty) {
-          currentBlock = line;
-        } else {
-          currentBlock += "\n$line";
-        }
-      }
-    }
-    if (currentBlock.isNotEmpty) groupedPoints.add(currentBlock.trim());
 
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
     final Color cardBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
@@ -534,19 +544,11 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ...groupedPoints.map((para) {
-                  String lower = para.toLowerCase();
-
-                  bool isCorrectPoint = lower.contains('is correct') ||
-                      lower.contains('sahi hai') ||
-                      lower.contains('bilkul sahi') ||
-                      para.contains('सही है');
-
-                  bool isIncorrectPoint = lower.contains('is incorrect') ||
-                      lower.contains('is false') ||
-                      lower.contains('galat hai') ||
-                      lower.contains('ulta kar deta') ||
-                      para.contains('गलत है');
+                ...rawParagraphs.map((para) {
+                  bool isCorrectPoint = para.toLowerCase().contains('is correct') || para.contains('सही है');
+                  bool isIncorrectPoint = para.toLowerCase().contains('is incorrect') || 
+                                          para.toLowerCase().contains('is false') || 
+                                          para.contains('गलत है');
 
                   Color stripBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
                   Color stripBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
@@ -567,8 +569,8 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
                   return Container(
                     width: double.infinity,
-                    margin: const EdgeInsets.only(bottom: 9.0),
-                    padding: const EdgeInsets.all(12.0),
+                    margin: const EdgeInsets.only(bottom: 8.0),
+                    padding: const EdgeInsets.all(11.0),
                     decoration: BoxDecoration(
                       color: stripBg,
                       borderRadius: BorderRadius.circular(10),
@@ -578,9 +580,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          width: 22,
-                          height: 22,
-                          margin: const EdgeInsets.only(top: 2),
+                          width: 20,
+                          height: 20,
+                          margin: const EdgeInsets.only(top: 1),
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                             color: badgeBg,
@@ -588,7 +590,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                           ),
                           child: Text(
                             badgeIcon,
-                            style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
+                            style: const TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.bold),
                           ),
                         ),
                         const SizedBox(width: 10),
