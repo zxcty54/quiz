@@ -17,7 +17,7 @@ GROQ_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
 # High Capacity Model for Zero Rate Limit Errors (20,000 TPM Limit)
-MODEL_NAME = "llama-3.1-8b-instant"
+MODEL_NAME = "openai/gpt-oss-20b"
 
 IST = timezone(timedelta(hours=5, minutes=30))
 TODAY_DATE = datetime.now(IST).strftime("%d %b %Y")
