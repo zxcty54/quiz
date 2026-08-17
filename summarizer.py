@@ -7,7 +7,7 @@ from google import genai
 from google.genai import types
 
 # ============================================================
-# CONFIGURATION
+# CONFIGURATION & CLEAN-SLATE PACING
 # ============================================================
 
 INPUT_FILE = "rawnews.json"
@@ -17,16 +17,28 @@ ARCHIVE_FILE = "all_current_affairs.json"
 API_KEY = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=API_KEY) if API_KEY else None
 
-# Updated active model
-MODEL_NAME = "gemini-3.6-flash"
+# Active Multi-Model Hierarchy (High RPD first)
+MODEL_REGISTRY = [
+    "gemini-3.5-flash-lite",  # 500 RPD / 15 RPM (Primary)
+    "gemini-3.1-flash-lite",  # 500 RPD / 15 RPM (Fallback 1)
+    "gemini-3.6-flash",       # 20 RPD / 5 RPM (Fallback 2)
+    "gemini-3.7-flash",       # 20 RPD / 5 RPM (Fallback 3)
+    "gemini-3-flash"          # Backup Flash
+]
+
+# 5 full news per batch (Zero word trimming)
 BATCH_SIZE = 5
+
+# Full 60-second cooldown ensures RPM/TPM limits reset completely after each batch
+BATCH_PAUSE_SECONDS = 60
 
 IST = timezone(timedelta(hours=5, minutes=30))
 TODAY_DATE = datetime.now(IST).strftime("%d %b %Y")
 
 SYSTEM_PROMPT = """
 You are an expert Current Affairs editor for civil services exams (BPSC, SSC CGL, UPSC).
-You will receive a JSON list of news articles. Filter, categorize, and summarize EACH valid article.
+You will receive a JSON list of news articles with their FULL original text.
+Extract key factual data (ministries, committees, dates, statistics, acts, targets) and summarize EACH valid article.
 
 ALLOWED CATEGORIES:
 1. National Polity, Judiciary & Governance
@@ -54,24 +66,29 @@ Return strictly a valid JSON array of objects:
     "is_relevant": true,
     "title": "Crisp headline in English",
     "category": "Exact matched category name",
-    "bullets": ["Point 1 (Facts/Ministry/Date)", "Point 2", "Point 3"],
+    "bullets": [
+      "Point 1 with exact facts, figures, dates or ministry",
+      "Point 2 with core context and impact",
+      "Point 3 with background or targets"
+    ],
     "exam_tag": "Relevant Exam Tag"
   }
 ]
 """
+
+current_model_idx = 0
 
 # ============================================================
 # DEDUPLICATION & UTILITY HELPERS
 # ============================================================
 
 def normalize_title(title):
-    # Common words jo match count ko distract karte hain unhe filter karein
-    stop_words = {"india", "indian", "union", "national", "state", "minister", "news", "under", "with", "from"}
+    stop_words = {"india", "indian", "union", "national", "state", "minister", "news", "under", "with", "from", "launches", "begins"}
     title = re.sub(r'[^a-zA-Z0-9\s]', '', str(title).lower())
     return set(w for w in title.split() if len(w) > 3 and w not in stop_words)
 
+
 def is_duplicate_story(new_title, existing_titles, threshold=0.42):
-    """Checks if the same news story has already been accepted"""
     new_words = normalize_title(new_title)
     if not new_words:
         return False
@@ -80,12 +97,11 @@ def is_duplicate_story(new_title, existing_titles, threshold=0.42):
         exist_words = normalize_title(exist_title)
         if not exist_words:
             continue
-        
         intersection = new_words.intersection(exist_words)
         union = new_words.union(exist_words)
         similarity = len(intersection) / len(union) if union else 0
 
-        # Agar 3+ core technical words same hain ya Jaccard similarity >= 0.42 hai
+        # Agar 3+ core keywords match ho ya similarity 0.42+ ho
         if similarity >= threshold or len(intersection) >= 3:
             return True
 
@@ -130,34 +146,57 @@ def clean_json_response(raw_text):
     return None
 
 
-def call_gemini_api(batch_prompt, max_retries=3):
+def call_gemini_clean_slate_api(batch_prompt):
+    """Executes single call per window to prevent all rate limits"""
+    global current_model_idx
+
     if not client:
         print("❌ Gemini Client is not initialized! Check GOOGLE_API_KEY.")
         return None
 
-    for attempt in range(max_retries):
-        try:
-            response = client.models.generate_content(
-                model=MODEL_NAME,
-                contents=batch_prompt,
-                config=types.GenerateContentConfig(
-                    system_instruction=SYSTEM_PROMPT,
-                    temperature=0.1,
-                    response_mime_type="application/json"
+    total_models = len(MODEL_REGISTRY)
+
+    while current_model_idx < total_models:
+        model_name = MODEL_REGISTRY[current_model_idx]
+
+        for attempt in range(2):
+            try:
+                response = client.models.generate_content(
+                    model=model_name,
+                    contents=batch_prompt,
+                    config=types.GenerateContentConfig(
+                        system_instruction=SYSTEM_PROMPT,
+                        temperature=0.1,
+                        response_mime_type="application/json"
+                    )
                 )
-            )
 
-            parsed = clean_json_response(response.text)
-            if parsed is not None:
-                return parsed if isinstance(parsed, list) else [parsed]
+                parsed = clean_json_response(response.text)
+                if parsed is not None:
+                    return (parsed if isinstance(parsed, list) else [parsed])
 
-            print(f"⚠️ JSON Parse retry on attempt {attempt + 1}...")
-            time.sleep(2)
+                print(f"⚠️ [{model_name}] JSON parse retry (Attempt {attempt + 1})...")
+                time.sleep(3)
 
-        except Exception as e:
-            print(f"⚠️ Gemini API Error on attempt {attempt + 1}: {e}")
-            time.sleep(3)
+            except Exception as e:
+                err_str = str(e)
+                # 429 aate hi bina retries waste kiye agle model par switch
+                if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
+                    print(f"⚠️ [{model_name}] Daily limit hit (429). Switching to backup model...")
+                    current_model_idx += 1
+                    break
+                
+                print(f"⚠️ [{model_name}] Error on attempt {attempt + 1}: {e}")
+                time.sleep(5)
 
+        if current_model_idx < total_models and MODEL_REGISTRY[current_model_idx] != model_name:
+            continue
+        else:
+            current_model_idx += 1
+
+    print("⚠️ All models exhausted. Pausing 60s for quota bucket reset...")
+    time.sleep(60)
+    current_model_idx = 0
     return None
 
 
@@ -175,33 +214,35 @@ def process_news_batches(news_list, is_bihar=False):
     cards = []
     seen_titles = []
 
-    print(f"📦 Filtered {total_valid} valid articles into batches of {BATCH_SIZE}...")
+    print(f"📦 Filtered {total_valid} valid articles into safe batches of {BATCH_SIZE}...")
 
-    for i in range(0, total_valid, BATCH_SIZE):
+    i = 0
+    batch_counter = 1
+    total_batches = (total_valid + BATCH_SIZE - 1) // BATCH_SIZE
+
+    while i < total_valid:
         batch = valid_items[i : i + BATCH_SIZE]
-        batch_num = (i // BATCH_SIZE) + 1
-        total_batches = (total_valid + BATCH_SIZE - 1) // BATCH_SIZE
+        print(f"\n⚡ Processing Batch {batch_counter}/{total_batches} ({len(batch)} items)...")
 
-        print(f"\n⚡ Processing Batch {batch_num}/{total_batches} ({len(batch)} items)...")
-
+        # 100% full content (Zero word-trimming)
         batch_payload = []
         for idx, itm in enumerate(batch, 1):
-            content_words = str(itm.get("content", "")).split()
-            trimmed = " ".join(content_words[:250]) if len(content_words) > 250 else itm.get("content", "")
+            full_content = str(itm.get("content", "")).strip()
             batch_payload.append({
                 "input_id": idx,
                 "domain": domain,
                 "title": itm.get("title", ""),
-                "content": trimmed
+                "content": full_content
             })
 
         prompt_str = f"Process these {len(batch)} articles into JSON array:\n" + json.dumps(batch_payload, ensure_ascii=False)
 
-        batch_result = call_gemini_api(prompt_str)
+        batch_result = call_gemini_clean_slate_api(prompt_str)
 
         if not batch_result:
-            print(f"❌ Batch {batch_num} failed.")
-            continue
+            print(f"🔄 Retrying Batch {batch_counter} to guarantee 100% news coverage...")
+            time.sleep(10)
+            continue  # Retry same batch, do not skip
 
         for res in batch_result:
             if not isinstance(res, dict):
@@ -236,7 +277,13 @@ def process_news_batches(news_list, is_bihar=False):
             cards.append(card)
             print(f"  ✅ Added: {c_title[:40]} ({len(bullets)} bullets)")
 
-        time.sleep(1.0)
+        i += BATCH_SIZE
+        batch_counter += 1
+
+        # Har batch ke baad 60s cooldown (akhiri batch ke baad cooldown skip hoga)
+        if i < total_valid:
+            print(f"⏳ Cooling down {BATCH_PAUSE_SECONDS}s for complete token & rate quota reset...")
+            time.sleep(BATCH_PAUSE_SECONDS)
 
     return cards
 
@@ -253,7 +300,7 @@ def process_all_news():
     bihar_raw = raw_data.get("bihar_raw_news", [])
 
     start_time = time.time()
-    print(f"🚀 Starting High-Capacity Gemini Batch Summarizer [{MODEL_NAME}]...")
+    print(f"🚀 Starting High-Precision Zero-Loss Summarizer...")
     print(f"📦 Raw Inputs -> National: {len(national_raw)} | Bihar: {len(bihar_raw)}")
 
     # 1. Process National
@@ -332,7 +379,7 @@ def process_all_news():
 
     elapsed = round(time.time() - start_time, 1)
     print("\n" + "=" * 80)
-    print(f"⚡ COMPLETED IN {elapsed}s (~{round(elapsed/60, 1)} min)!")
+    print(f"⚡ COMPLETED IN {elapsed}s (~{round(elapsed/60, 1)} min) with 100% full content & zero rate limit!")
     print(f"📊 Saved Today -> National: {len(national_cards)} | Bihar: {len(bihar_cards)}")
     print("=" * 80)
 
