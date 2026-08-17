@@ -14,12 +14,11 @@ INPUT_FILE = "rawnews.json"
 OUTPUT_FILE = "finalnews.json"
 ARCHIVE_FILE = "all_current_affairs.json"
 
-# GitHub Secrets se GOOGLE_API_KEY read karega
 API_KEY = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=API_KEY) if API_KEY else None
 
-# Ultra-fast & high context model
-MODEL_NAME = "gemini-2.5-flash"
+# Updated active model
+MODEL_NAME = "gemini-3.6-flash"
 BATCH_SIZE = 5
 
 IST = timezone(timedelta(hours=5, minutes=30))
