@@ -411,13 +411,36 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // ✨ PREMIUM VISUAL EXPLANATION BUILDER (Theme-Aware + Community Trick Box)
+  // ✨ SMART GROUPED & HINGLISH-AWARE EXPLANATION BUILDER
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
-    List<String> rawParagraphs = rawExplanation
+    List<String> rawLines = rawExplanation
         .split('\n')
         .map((p) => p.trim())
         .where((p) => p.isNotEmpty)
         .toList();
+
+    List<String> groupedPoints = [];
+    String currentBlock = "";
+
+    for (var line in rawLines) {
+      bool isNewHeader = line.startsWith('•') ||
+          line.startsWith('Option') ||
+          line.startsWith('📌') ||
+          line.startsWith('1.') ||
+          line.startsWith('2.');
+
+      if (isNewHeader && currentBlock.isNotEmpty) {
+        groupedPoints.add(currentBlock.trim());
+        currentBlock = line;
+      } else {
+        if (currentBlock.isEmpty) {
+          currentBlock = line;
+        } else {
+          currentBlock += "\n$line";
+        }
+      }
+    }
+    if (currentBlock.isNotEmpty) groupedPoints.add(currentBlock.trim());
 
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
     final Color cardBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
@@ -511,11 +534,19 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ...rawParagraphs.map((para) {
-                  bool isCorrectPoint = para.toLowerCase().contains('is correct') || para.contains('सही है');
-                  bool isIncorrectPoint = para.toLowerCase().contains('is incorrect') || 
-                                          para.toLowerCase().contains('is false') || 
-                                          para.contains('गलत है');
+                ...groupedPoints.map((para) {
+                  String lower = para.toLowerCase();
+
+                  bool isCorrectPoint = lower.contains('is correct') ||
+                      lower.contains('sahi hai') ||
+                      lower.contains('bilkul sahi') ||
+                      para.contains('सही है');
+
+                  bool isIncorrectPoint = lower.contains('is incorrect') ||
+                      lower.contains('is false') ||
+                      lower.contains('galat hai') ||
+                      lower.contains('ulta kar deta') ||
+                      para.contains('गलत है');
 
                   Color stripBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
                   Color stripBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
@@ -536,8 +567,8 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
                   return Container(
                     width: double.infinity,
-                    margin: const EdgeInsets.only(bottom: 8.0),
-                    padding: const EdgeInsets.all(11.0),
+                    margin: const EdgeInsets.only(bottom: 9.0),
+                    padding: const EdgeInsets.all(12.0),
                     decoration: BoxDecoration(
                       color: stripBg,
                       borderRadius: BorderRadius.circular(10),
@@ -547,9 +578,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          width: 20,
-                          height: 20,
-                          margin: const EdgeInsets.only(top: 1),
+                          width: 22,
+                          height: 22,
+                          margin: const EdgeInsets.only(top: 2),
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                             color: badgeBg,
@@ -557,7 +588,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                           ),
                           child: Text(
                             badgeIcon,
-                            style: const TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.bold),
+                            style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
                           ),
                         ),
                         const SizedBox(width: 10),
