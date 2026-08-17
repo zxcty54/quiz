@@ -3,7 +3,8 @@ import json
 import time
 import re
 from datetime import datetime, timezone, timedelta
-from groq import Groq, APIConnectionError, RateLimitError, APIStatusError
+from google import genai
+from google.genai import types
 
 # ============================================================
 # CONFIGURATION
@@ -13,11 +14,13 @@ INPUT_FILE = "rawnews.json"
 OUTPUT_FILE = "finalnews.json"
 ARCHIVE_FILE = "all_current_affairs.json"
 
-GROQ_KEY = os.environ.get("GROQ_API_KEY")
-client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
+# GitHub Secrets se GOOGLE_API_KEY read karega
+API_KEY = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
+client = genai.Client(api_key=API_KEY) if API_KEY else None
 
-MODEL_NAME = "openai/gpt-oss-20b"
-BATCH_SIZE = 5  # 5 news per request = Only ~10-12 total requests for entire day!
+# Ultra-fast & high context model
+MODEL_NAME = "gemini-2.5-flash"
+BATCH_SIZE = 5
 
 IST = timezone(timedelta(hours=5, minutes=30))
 TODAY_DATE = datetime.now(IST).strftime("%d %b %Y")
@@ -45,7 +48,7 @@ STRICT REJECTION RULES: Set "is_relevant": false for:
 - Stock market movements, Sensex/Nifty, routine local crime, entertainment gossip.
 
 OUTPUT FORMAT REQUIREMENTS:
-Return strictly a valid JSON array of objects corresponding to input items:
+Return strictly a valid JSON array of objects:
 [
   {
     "input_id": 1,
@@ -59,7 +62,7 @@ Return strictly a valid JSON array of objects corresponding to input items:
 """
 
 # ============================================================
-# DEDUPLICATION & TEXT HELPERS
+# DEDUPLICATION & UTILITY HELPERS
 # ============================================================
 
 def normalize_title(title):
@@ -95,13 +98,10 @@ def is_junk_article(title):
 
 
 def clean_json_response(raw_text):
-    """Safely extracts JSON array or object from raw LLM output"""
     if not raw_text or not raw_text.strip():
         return None
 
     text = raw_text.strip()
-    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
-
     if text.startswith("```"):
         text = re.sub(r"^```(?:json)?\s*", "", text)
         text = re.sub(r"\s*```$", "", text)
@@ -109,15 +109,12 @@ def clean_json_response(raw_text):
     try:
         return json.loads(text)
     except json.JSONDecodeError:
-        # Regex fallback to find JSON array [ ... ]
         array_match = re.search(r"\[[\s\S]*\]", text)
         if array_match:
             try:
                 return json.loads(array_match.group(0))
             except Exception:
                 pass
-        
-        # Regex fallback for single object { ... }
         obj_match = re.search(r"\{[\s\S]*\}", text)
         if obj_match:
             try:
@@ -125,45 +122,37 @@ def clean_json_response(raw_text):
                 return [data] if isinstance(data, dict) else data
             except Exception:
                 pass
-                
+
     return None
 
 
-def call_groq_batch_api(batch_prompt, max_retries=3):
+def call_gemini_api(batch_prompt, max_retries=3):
     if not client:
-        print("❌ Groq Client is not initialized! Check GROQ_API_KEY.")
+        print("❌ Gemini Client is not initialized! Check GOOGLE_API_KEY.")
         return None
 
     for attempt in range(max_retries):
         try:
-            response = client.chat.completions.create(
+            response = client.models.generate_content(
                 model=MODEL_NAME,
-                messages=[
-                    {"role": "system", "content": SYSTEM_PROMPT + "\nCRITICAL: Respond ONLY with a valid JSON array. No explanations."},
-                    {"role": "user", "content": batch_prompt}
-                ],
-                temperature=0.1,
-                max_tokens=1500  # Ample space for 5 articles
+                contents=batch_prompt,
+                config=types.GenerateContentConfig(
+                    system_instruction=SYSTEM_PROMPT,
+                    temperature=0.1,
+                    response_mime_type="application/json"
+                )
             )
 
-            raw_text = response.choices[0].message.content
-            parsed = clean_json_response(raw_text)
+            parsed = clean_json_response(response.text)
             if parsed is not None:
                 return parsed if isinstance(parsed, list) else [parsed]
 
             print(f"⚠️ JSON Parse retry on attempt {attempt + 1}...")
             time.sleep(2)
 
-        except RateLimitError:
-            wait_time = 15
-            print(f"⚠️ Rate limit cooling down {wait_time}s (Attempt {attempt + 1}/{max_retries})...")
-            time.sleep(wait_time)
-        except (APIConnectionError, APIStatusError) as e:
-            print(f"⚠️ API status warning: {e}")
-            time.sleep(3)
         except Exception as e:
-            print(f"⚠️ API error: {e}")
-            time.sleep(2)
+            print(f"⚠️ Gemini API Error on attempt {attempt + 1}: {e}")
+            time.sleep(3)
 
     return None
 
@@ -191,7 +180,6 @@ def process_news_batches(news_list, is_bihar=False):
 
         print(f"\n⚡ Processing Batch {batch_num}/{total_batches} ({len(batch)} items)...")
 
-        # Prepare Batch Payload
         batch_payload = []
         for idx, itm in enumerate(batch, 1):
             content_words = str(itm.get("content", "")).split()
@@ -205,10 +193,10 @@ def process_news_batches(news_list, is_bihar=False):
 
         prompt_str = f"Process these {len(batch)} articles into JSON array:\n" + json.dumps(batch_payload, ensure_ascii=False)
 
-        batch_result = call_groq_batch_api(prompt_str)
+        batch_result = call_gemini_api(prompt_str)
 
         if not batch_result:
-            print(f"❌ Batch {batch_num} failed completely.")
+            print(f"❌ Batch {batch_num} failed.")
             continue
 
         for res in batch_result:
@@ -244,7 +232,7 @@ def process_news_batches(news_list, is_bihar=False):
             cards.append(card)
             print(f"  ✅ Added: {c_title[:40]} ({len(bullets)} bullets)")
 
-        time.sleep(4.0)  # 4s gap between batches guarantees zero 429 errors
+        time.sleep(1.0)
 
     return cards
 
@@ -261,7 +249,7 @@ def process_all_news():
     bihar_raw = raw_data.get("bihar_raw_news", [])
 
     start_time = time.time()
-    print(f"🚀 Starting High-Efficiency Batch Summarizer [{MODEL_NAME}]...")
+    print(f"🚀 Starting High-Capacity Gemini Batch Summarizer [{MODEL_NAME}]...")
     print(f"📦 Raw Inputs -> National: {len(national_raw)} | Bihar: {len(bihar_raw)}")
 
     # 1. Process National
@@ -340,7 +328,7 @@ def process_all_news():
 
     elapsed = round(time.time() - start_time, 1)
     print("\n" + "=" * 80)
-    print(f"⚡ ALL DONE IN {elapsed}s (~{round(elapsed/60, 1)} min)!")
+    print(f"⚡ COMPLETED IN {elapsed}s (~{round(elapsed/60, 1)} min)!")
     print(f"📊 Saved Today -> National: {len(national_cards)} | Bihar: {len(bihar_cards)}")
     print("=" * 80)
 
