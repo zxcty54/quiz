@@ -57,6 +57,7 @@ STRICT REJECTION RULES: Set "is_relevant": false for:
 - Local protests, student strikes, political party Bandhs, fact-checks, routine patrol vessels, UPI volume stats.
 - State-specific news of OTHER states (UP, MP, Delhi, Maharashtra, etc.) unless it is a Central policy.
 - Stock market movements, Sensex/Nifty, routine local crime, entertainment gossip.
+- Imd-india metrological alert should be rejected
 
 OUTPUT FORMAT REQUIREMENTS:
 Return strictly a valid JSON array of objects:
