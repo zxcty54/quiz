@@ -17,7 +17,7 @@ TARGET_FILE = "rawnews.json"
 IST = timezone(timedelta(hours=5, minutes=30))
 TIMEOUT = 15
 MAX_WORDS_PER_ARTICLE = 500
-MIN_WORDS_PER_ARTICLE = 50
+MIN_WORDS_PER_ARTICLE = 100
 
 # 3 Bihar Google Alerts Feeds
 BIHAR_FEEDS = [
