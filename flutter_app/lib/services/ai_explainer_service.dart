@@ -7,31 +7,81 @@ class AiExplainerService {
   static const String _googleApiKey = String.fromEnvironment('GOOGLE_API_KEY');
   static const String _groqApiKey = String.fromEnvironment('GROQ_API_KEY');
 
-  // 🎯 Google AI Studio Priority List
-  static const List<String> _googleEndpoints = [
-    "https://generativelanguage.googleapis.com/v1beta/models/gemma-4-26b-a4b-it:generateContent", // 1️⃣ Primary: Gemma 4 26B
-    "https://generativelanguage.googleapis.com/v1beta/models/gemma-4-31b-it:generateContent",     // 2️⃣ Fallback 1: Gemma 4 31B
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent", // 3️⃣ Fallback 2: Gemini Flash Lite
+  // 🌐 Dynamic Fallback Models (Cloud app_config.json se sync honge)
+  static List<String> activeModelHierarchy = [
+    "gemma-4-26b-a4b-it",
+    "llama-3.3-70b-versatile",
+    "gemini-2.0-flash",
+    "llama-3.1-8b-instant"
   ];
+  static bool isAiActive = true;
 
-  // 🔄 HYBRID ROUTING ENGINE (Google AI Studio -> Groq API Backup)
+  // 🔄 Dynamic Config Sync from GitHub app_config.json
+  static void updateModelFromConfig(Map<String, dynamic> config) {
+    if (config.containsKey('ai_config')) {
+      final dynamic aiCfg = config['ai_config'];
+      if (aiCfg is Map) {
+        List<String> loadedList = [];
+        if (aiCfg['primary_model'] != null && aiCfg['primary_model'].toString().isNotEmpty) {
+          loadedList.add(aiCfg['primary_model'].toString().trim());
+        }
+        if (aiCfg['fallback_model_1'] != null && aiCfg['fallback_model_1'].toString().isNotEmpty) {
+          loadedList.add(aiCfg['fallback_model_1'].toString().trim());
+        }
+        if (aiCfg['fallback_model_2'] != null && aiCfg['fallback_model_2'].toString().isNotEmpty) {
+          loadedList.add(aiCfg['fallback_model_2'].toString().trim());
+        }
+        if (aiCfg['fallback_model_3'] != null && aiCfg['fallback_model_3'].toString().isNotEmpty) {
+          loadedList.add(aiCfg['fallback_model_3'].toString().trim());
+        }
+
+        if (loadedList.isNotEmpty) {
+          activeModelHierarchy = loadedList;
+        }
+        if (aiCfg['is_ai_active'] != null) {
+          isAiActive = aiCfg['is_ai_active'] == true;
+        }
+        debugPrint("🤖 Updated AI Routing Chain: ${activeModelHierarchy.join(' ➔ ')}");
+      }
+    }
+  }
+
+  // 🔄 KEYWORD-BASED HYBRID ROUTING ENGINE (Google AI Studio + Groq API)
   static Future<String> _generateWithHybridRouting(
-    String prompt, {
+    String systemPrompt,
+    String userPrompt, {
     int maxTokens = 600,
     double temperature = 0.5,
   }) async {
-    // Step 1: Try Google AI Studio Models (Sequence: Gemma 26B -> Gemma 31B -> Gemini Flash Lite)
-    if (_googleApiKey.isNotEmpty) {
-      for (String url in _googleEndpoints) {
-        try {
+    if (!isAiActive) {
+      return "⚠️ AI Doubt service is temporarily paused for maintenance.";
+    }
+
+    final String fullPrompt = "$systemPrompt\n\n$userPrompt";
+
+    for (int i = 0; i < activeModelHierarchy.length; i++) {
+      final String model = activeModelHierarchy[i];
+      final String mLower = model.toLowerCase();
+
+      try {
+        debugPrint("⚡ AI Routing [${i + 1}/${activeModelHierarchy.length}] attempting: $model");
+
+        // 🟢 1. GOOGLE AI STUDIO (Keywords: gemini, gemma)
+        if (mLower.contains('gemini') || mLower.contains('gemma')) {
+          if (_googleApiKey.isEmpty) {
+            debugPrint("⚠️ Google API Key missing, skipping $model");
+            continue;
+          }
+
+          final url = "https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent?key=$_googleApiKey";
           final response = await http.post(
-            Uri.parse("$url?key=$_googleApiKey"),
+            Uri.parse(url),
             headers: {"Content-Type": "application/json; charset=utf-8"},
             body: jsonEncode({
               "contents": [
                 {
                   "parts": [
-                    {"text": prompt}
+                    {"text": fullPrompt}
                   ]
                 }
               ],
@@ -52,40 +102,45 @@ class AiExplainerService {
               }
             }
           } else {
-            debugPrint("Google AI Studio Status ${response.statusCode} on $url, trying next endpoint...");
+            debugPrint("Google AI Studio Status ${response.statusCode} on $model, trying next model...");
           }
-        } catch (e) {
-          debugPrint("Google AI Connection Error on $url: $e");
         }
-      }
-    }
+        // 🔵 2. GROQ API (Keywords: llama, mixtral, gpt-oss, qwen, etc.)
+        else {
+          if (_groqApiKey.isEmpty) {
+            debugPrint("⚠️ Groq API Key missing, skipping $model");
+            continue;
+          }
 
-    // Step 2: Fallback to Groq API (Llama 3.3 70B) if all Google models fail
-    if (_groqApiKey.isNotEmpty) {
-      try {
-        debugPrint("Routing to Groq API Backup (Llama 3.3 70B)...");
-        final response = await http.post(
-          Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
-          headers: {
-            "Authorization": "Bearer $_groqApiKey",
-            "Content-Type": "application/json; charset=utf-8",
-          },
-          body: jsonEncode({
-            "model": "llama-3.3-70b-versatile",
-            "messages": [
-              {"role": "user", "content": prompt}
-            ],
-            "max_tokens": maxTokens,
-            "temperature": temperature,
-          }),
-        ).timeout(const Duration(seconds: 12));
+          final response = await http.post(
+            Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
+            headers: {
+              "Authorization": "Bearer $_groqApiKey",
+              "Content-Type": "application/json; charset=utf-8",
+            },
+            body: jsonEncode({
+              "model": model,
+              "messages": [
+                {"role": "system", "content": systemPrompt},
+                {"role": "user", "content": userPrompt}
+              ],
+              "max_tokens": maxTokens,
+              "temperature": temperature,
+            }),
+          ).timeout(const Duration(seconds: 12));
 
-        if (response.statusCode == 200) {
-          final data = jsonDecode(utf8.decode(response.bodyBytes));
-          return data['choices'][0]['message']['content']?.toString().trim() ?? "Doubt resolve nahi ho paya.";
+          if (response.statusCode == 200) {
+            final data = jsonDecode(utf8.decode(response.bodyBytes));
+            final content = data['choices']?[0]?['message']?['content'];
+            if (content != null && content.toString().trim().isNotEmpty) {
+              return content.toString().trim();
+            }
+          } else {
+            debugPrint("Groq API Status ${response.statusCode} on $model, trying next model...");
+          }
         }
       } catch (e) {
-        debugPrint("Groq API Connection Error: $e");
+        debugPrint("AI Connection Error on $model: $e");
       }
     }
 
@@ -99,15 +154,8 @@ class AiExplainerService {
     required String correctAnswer,
     required String userDoubt,
   }) async {
-    final String prompt = """
+    const String systemPrompt = """
 You are a respectful, highly experienced, and friendly BPSC/BSSC Exam Professor from Patna explaining concepts in simple, everyday conversational Hinglish (the way students talk in daily life or chat).
-
-CONTEXT:
-Question: $question
-Options: ${options.join(', ')}
-Correct Answer: $correctAnswer
-
-STUDENT'S EXACT DOUBT: "$userDoubt"
 
 STRICT RULES:
 1. Speak DIRECTLY to the student in simple, clear, daily-life Hinglish.
@@ -119,7 +167,16 @@ STRICT RULES:
 7. Strictly NO Devanagari script. Use simple Roman Hinglish only.
 """;
 
-    return await _generateWithHybridRouting(prompt, maxTokens: 600, temperature: 0.7);
+    final String userPrompt = """
+CONTEXT:
+Question: $question
+Options: ${options.join(', ')}
+Correct Answer: $correctAnswer
+
+STUDENT'S EXACT DOUBT: "$userDoubt"
+""";
+
+    return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 600, temperature: 0.7);
   }
 
   // 2️⃣ DOCTOR DIAGNOSIS & PRESCRIPTION HEALTH AUDIT
@@ -139,16 +196,9 @@ STRICT RULES:
       return "- [Chapter: $chapter | User Tag: $tag] Q: $qText";
     }).toList();
 
-    final String prompt = """
+    const String systemPrompt = """
 You are an expert AI Study Doctor for BPSC & BSSC Exam Aspirants.
 Analyze the student's wrong questions vault like a medical diagnostic checkup.
-
-Tagged Metrics:
-- 🟡 50-50 Option Confusion Traps: $trap5050Count
-- 🔴 Knowledge/Concept Gaps: $conceptGapCount
-
-Questions Context:
-${qSummaries.join('\n')}
 
 STRICT RESPONSE FORMAT (Simple Roman Hinglish only, NO Devanagari Hindi text, BANNED: 'Aare', 'Dost'):
 
@@ -167,7 +217,16 @@ STRICT RESPONSE FORMAT (Simple Roman Hinglish only, NO Devanagari Hindi text, BA
 ⏱️ TOTAL REHAB TIME: Done in 25 Minutes
 """;
 
-    return await _generateWithHybridRouting(prompt, maxTokens: 600, temperature: 0.3);
+    final String userPrompt = """
+Tagged Metrics:
+- 🟡 50-50 Option Confusion Traps: $trap5050Count
+- 🔴 Knowledge/Concept Gaps: $conceptGapCount
+
+Questions Context:
+${qSummaries.join('\n')}
+""";
+
+    return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 600, temperature: 0.3);
   }
 
   // 3️⃣ LIVE DYNAMIC "WHY WRONG?" EXPLAINER (SIMPLE HINGLISH, 180-280 WORDS MAX)
@@ -193,13 +252,8 @@ STUDENT TAG: '🔴 DIDN'T KNOW / CONCEPT GAP'
 """;
     }
 
-    final String prompt = """
+    final String systemPrompt = """
 You are a senior, highly experienced BPSC/BSSC Exam Professor. Provide a concise, clear, and non-bookish breakdown for a student who got this question wrong.
-
-QUESTION: $question
-ALL OPTIONS: ${options.join(', ')}
-STUDENT CHOSE: "$userChoice"
-CORRECT ANSWER: "$correctAnswer"
 
 $tagInstruction
 
@@ -223,7 +277,14 @@ FORMAT YOUR RESPONSE IN THIS EXACT STRUCTURE:
 (Proactively clear 1-2 common sub-doubts related to this topic)
 """;
 
-    return await _generateWithHybridRouting(prompt, maxTokens: 700, temperature: 0.5);
+    final String userPrompt = """
+QUESTION: $question
+ALL OPTIONS: ${options.join(', ')}
+STUDENT CHOSE: "$userChoice"
+CORRECT ANSWER: "$correctAnswer"
+""";
+
+    return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 700, temperature: 0.5);
   }
 
   // 4️⃣ COMPATIBILITY METHOD FOR OLD WIDGETS
