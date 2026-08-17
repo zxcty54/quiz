@@ -17,7 +17,7 @@ TARGET_FILE = "rawnews.json"
 IST = timezone(timedelta(hours=5, minutes=30))
 TIMEOUT = 15
 MAX_WORDS_PER_ARTICLE = 500
-MIN_WORDS_PER_ARTICLE = 100
+MIN_WORDS_PER_ARTICLE = 50
 
 # 3 Bihar Google Alerts Feeds
 BIHAR_FEEDS = [
@@ -44,6 +44,59 @@ HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "hi-IN,hi;q=0.9,en-IN;q=0.8,en;q=0.7",
 }
+
+# ============================================================
+# COMPREHENSIVE REGEX FILTER (CRIME, ACCIDENTS, TENDERS, EVENTS)
+# ============================================================
+
+BANNED_TOPICS_REGEX = re.compile(
+    r'('
+    # 1. Corporate Deals, Private Tenders & Business Contracts
+    r'\bsecures?\s+order\b|\bbagged\s+order\b|\bsecures?\s+contract\b|\bwon\s+bid\b|'
+    r'\bquarterly\s+results?\b|\bshares?\s+(jump|surge|tank|fall|rise)\b|\brooftop\s+solar\s+order\b|'
+    r'\bmarket\s+cap\b|\bipo\b|\bq[1-4]\s+results?\b|\bpat\s+up\b|\bnet\s+profit\b|'
+    r'ऑर्डर\s+मिला|टेंडर|शेयर\s+बाजार|मुनाफा|कारोबार|कंपनी\s+को\s+मिला|'
+
+    
+
+    # 3. Crime, Violence, Murder, Legal Scandals
+    r'\bmurder\b|\bkilled\b|\bkilling\b|\brape\b|\bdead\b|\bdeath\b|\bdies\b|\bbody\s+found\b|'
+    r'\barrested?\b|\bloot\b|\brobbery\b|\btheft\b|\bkidnap\b|\bextortion\b|\bbribe\b|\bbribery\b|'
+    r'\bfraud\b|\bscam\b|\bshootout\b|\bfiring\b|\bencounter\b|\bsmuggling\b|\billicit\b|'
+    r'\bliquor\b|\bspurious\b|\bcyber\s+crime\b|\bgangster\b|\bcriminal\b|\bsuicide\b|'
+    r'हत्या|मर्डर|बलात्कार|मौत|शव|लाश|गिरफ्तार|हिरासत|गोलीबारी|गोली\s+मारी|लूट|चोरी|'
+    r'डकैती|अपहरण|फिरौती|धोखाधड़ी|घूस|रिश्वत|मुठभेड़|तस्करी|शराब\s+बरामद|जब्त|'
+    r'छापेमारी|दबोचा|बदमाश|अपराधी|आत्महत्या|'
+
+    # 4. Accidents, Disasters & Stampedes
+    r'\baccident\b|\bcrash\b|\bcollision\b|\bderail\b|\bderailment\b|\bdrowned\b|\bdrowning\b|'
+    r'\bfire\s+broke\b|\bcylinder\s+blast\b|\bexplosion\b|\bblast\b|\bboat\s+capsize\b|\bstampede\b|'
+    r'दुर्घटना|सड़क\s+हादसा|टक्कर|ट्रक|बस\s+हादसा|ट्रेन\s+हादसा|डूबने|डूबकर|'
+    r'आग\s+लगी|सिलेंडर\s+ब्लास्ट|धमाका|विस्फोट|नाव\s+पलटी|भगदड़|'
+
+    # 5. Local Politics, Protests, Strikes & March
+    r'\blathi-?charge\b|\bprotest\b|\bprotesters\b|\bstrike\b|\bhunger\s+strike\b|'
+    r'\bdharna\b|\bchakka\s+jam\b|\broad\s+block\b|\bclash\b|\bclashes\b|\bstone\s+pelting\b|\bviolence\b|'
+    r'\braj\s+bhavan\s+march\b|\bcalls?\s+out\b|\bhits?\s+out\b|'
+    r'लाठीचार्ज|प्रदर्शन|धरना|चक्का\s+जाम|सड़क\s+जाम|हड़ताल|भूख\s+हड़ताल|'
+    r'बवाल|हंगामा|पथराव|हिंसा|झड़प|राजभवन\s+मार्च|घेराव|'
+
+    # 6. Static Trivia, Horoscopes, Weather & Viral Content
+    r'\bhoroscope\b|\brashifal\b|\blottery\b|\bviral\s+video\b|\breels?\b|'
+    r'\bweather\s+today\b|\brain\s+batters\b|\bheavy\s+rain\b|'
+    r'राशिफल|लॉटरी|वायरल\s+वीडियो|मौसम\s+का\s+हाल|भारी\s+बारिश'
+    r')',
+    re.IGNORECASE | re.UNICODE
+)
+
+
+def is_unwanted_news(title, text=""):
+    """Check if title or snippet matches any banned negative topic regex"""
+    combined = f"{title} {text}"
+    if BANNED_TOPICS_REGEX.search(combined):
+        return True
+    return False
+
 
 # ============================================================
 # HELPER FUNCTIONS
@@ -133,10 +186,10 @@ def scrape_full_webpage_content(target_url):
 
 def process_and_append_bihar_alerts():
     print("\n" + "=" * 75)
-    print(f"🚀 STARTING STANDALONE BIHAR ALERTS SCRAPER [{now_ist().strftime('%Y-%m-%d %H:%M:%S IST')}]")
+    print(f"🚀 STARTING BIHAR ALERTS SCRAPER WITH SMART REGEX FILTER [{now_ist().strftime('%Y-%m-%d %H:%M:%S IST')}]")
     print("=" * 75)
 
-    # 1. Load existing rawnews.json if available
+    # 1. Load existing rawnews.json
     raw_data = {
         "generated_at": now_ist().strftime("%Y-%m-%d %H:%M:%S"),
         "bihar_raw_count": 0,
@@ -157,13 +210,13 @@ def process_and_append_bihar_alerts():
 
     existing_bihar = raw_data.get("bihar_raw_news", [])
     
-    # Existing titles aur URLs track karna for zero duplicates
     seen_urls = {item.get("url", "").strip() for item in existing_bihar if item.get("url")}
     seen_titles = {re.sub(r'[^a-zA-Z0-9\u0900-\u097f]+', '', item.get("title", "").lower()) for item in existing_bihar}
 
     new_bihar_items = []
+    dropped_count = 0
 
-    # 2. Scrape 3 Feeds
+    # 2. Scrape & Filter Feeds
     for feed_info in BIHAR_FEEDS:
         cat_name = feed_info["category"]
         feed_url = feed_info["url"]
@@ -183,9 +236,16 @@ def process_and_append_bihar_alerts():
             feed_snippet = entry.get("summary", "") or entry.get("content", [{}])[0].get("value", "")
 
             c_title = clean_title(raw_title)
+            clean_snippet = clean_text(feed_snippet)
             real_url = extract_real_url(raw_link)
 
             if not c_title or not real_url or len(c_title) < 15:
+                continue
+
+            # 🛑 REGEX FILTER: Reject corporate orders, roadshows, crimes, protests immediately
+            if is_unwanted_news(c_title, clean_snippet):
+                print(f"   ⏭️ REJECTED (Negative Filter): {c_title[:50]}...")
+                dropped_count += 1
                 continue
 
             # Duplicate Check
@@ -196,15 +256,20 @@ def process_and_append_bihar_alerts():
             seen_urls.add(real_url)
             seen_titles.add(norm_title)
 
-            print(f"   🌐 Scraping: {c_title[:45]}...")
+            print(f"   🌐 Scraping Content: {c_title[:45]}...")
             content = scrape_full_webpage_content(real_url)
 
             if not content:
-                clean_snippet = clean_text(feed_snippet)
                 if len(clean_snippet) > 40:
                     content = f"{c_title}. Details: {clean_snippet}"
                 else:
                     content = f"{c_title}. Official update regarding Bihar state governance and development."
+
+            # Double check full content body
+            if is_unwanted_news("", content[:250]):
+                print(f"   ⏭️ REJECTED (Body Content Filter): {c_title[:50]}...")
+                dropped_count += 1
+                continue
 
             words_total = len(content.split())
 
@@ -221,9 +286,9 @@ def process_and_append_bihar_alerts():
 
             new_bihar_items.append(item)
 
-    print(f"\n✅ Newly Scraped Bihar Articles: {len(new_bihar_items)}")
+    print(f"\n📊 Filter Summary -> Usable Added: {len(new_bihar_items)} | Dropped Junk/Tenders/Roadshows: {dropped_count}")
 
-    # 3. Append to existing list (Newest first)
+    # 3. Append to existing list
     updated_bihar_news = new_bihar_items + existing_bihar
     raw_data["bihar_raw_news"] = updated_bihar_news
     raw_data["bihar_raw_count"] = len(updated_bihar_news)
@@ -232,7 +297,6 @@ def process_and_append_bihar_alerts():
     raw_data["total_raw_count"] = national_count + len(updated_bihar_news)
     raw_data["generated_at"] = now_ist().strftime("%Y-%m-%d %H:%M:%S")
 
-    # Update Source Breakdown
     source_breakdown = raw_data.get("source_breakdown", {})
     source_breakdown["Bihar Google Alert"] = source_breakdown.get("Bihar Google Alert", 0) + len(new_bihar_items)
     raw_data["source_breakdown"] = source_breakdown
@@ -242,7 +306,7 @@ def process_and_append_bihar_alerts():
         json.dump(raw_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 75)
-    print(f"💾 Successfully appended to '{TARGET_FILE}'!")
+    print(f"💾 Successfully appended clean Bihar articles to '{TARGET_FILE}'!")
     print(f"📊 Bihar Total: {len(updated_bihar_news)} | National Total: {national_count} | All Total: {raw_data['total_raw_count']}")
     print("=" * 75)
 
