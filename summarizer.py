@@ -16,7 +16,7 @@ ARCHIVE_FILE = "all_current_affairs.json"
 GROQ_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
-# High Capacity Model for Zero Rate Limit Errors (20,000 TPM Limit)
+# High Capacity Model for Zero Rate Limit Errors (250,000 TPM Limit)
 MODEL_NAME = "openai/gpt-oss-20b"
 
 IST = timezone(timedelta(hours=5, minutes=30))
@@ -109,11 +109,18 @@ def call_groq_api(user_prompt, max_retries=3):
                     {"role": "system", "content": SYSTEM_PROMPT},
                     {"role": "user", "content": user_prompt}
                 ],
-                response_format={"type": "json_object"},
-                temperature=0.2,
-                max_tokens=450  # Compact tokens footprint
+                temperature=0.1,
+                max_tokens=600  # Prevents JSON truncation
             )
-            return json.loads(response.choices[0].message.content.strip())
+            
+            raw_text = response.choices[0].message.content.strip()
+
+            # Robust JSON extraction to prevent parsing errors
+            json_match = re.search(r'\{.*\}', raw_text, re.DOTALL)
+            if json_match:
+                return json.loads(json_match.group(0))
+            else:
+                return json.loads(raw_text)
 
         except Exception as e:
             err_msg = str(e).lower()
@@ -233,7 +240,7 @@ def process_all_news():
 
             nat_idx += 1
             
-        time.sleep(1.5)  # Optimal delay for 8b instant model
+        time.sleep(2.0)  # Optimal delay for rate limit safety
 
     # Process Bihar News
     print("\n🏛️ Processing Bihar News...")
@@ -260,7 +267,7 @@ def process_all_news():
 
             bih_idx += 1
             
-        time.sleep(1.5)
+        time.sleep(2.0)
 
     # ------------------------------------------------------------
     # 1. SAVE DAILY OVERWRITTEN FILE (finalnews.json)
