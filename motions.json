@@ -130,7 +130,7 @@
       "पिंड के गुरुत्वाकर्षण भार के बराबर एक बल"
     ],
     "a": 1,
-    "e": "Classical mechanics mein Newton ka First Law of Motion (Law of Inertia) kisi object ki natural state of motion ko define karta hai.\n\n• Option 0 purani Aristotelian fallacy ko darshata hai jisme motion ko maintain karne ke liye continuous force zaroori mana jata tha.\n• Option 1 bilkul sahi hai kyunki **Uniform Motion** ka arth hai constant velocity vector ($vec{v} = \\text{constant}$), jiska matlab acceleration strictly zero ($a = 0$) hota hai. Newton ke Second Law ($\\vec{F}_{\\text{net}} = m\\vec{a}$) ke mutabiq, jab $a = 0$ ho toh net external force strictly zero honi chahiye:\n$$\\sum \\vec{F} = 0$$\n• Option 2 curved circular motion ke liye aur Option 3 vertical gravitational equilibrium ke liye applicable hai."
+    "e": "Classical mechanics mein Newton ka First Law of Motion (Law of Inertia) kisi object ki natural state of motion ko define karta hai.\n\n• Option 0 purani Aristotelian fallacy ko darshata hai jisme motion ko maintain karne ke liye continuous force zaroori mana jata tha.\n• Option 1 bilkul sahi hai kyunki **Uniform Motion** ka arth hai constant velocity vector ($\\vec{v} = \\text{constant}$), jiska matlab acceleration strictly zero ($a = 0$) hota hai. Newton ke Second Law ($\\vec{F}_{\\text{net}} = m\\vec{a}$) ke mutabiq, jab $a = 0$ ho toh net external force strictly zero honi chahiye:\n$$\\sum \\vec{F} = 0$$\n• Option 2 curved circular motion ke liye aur Option 3 vertical gravitational equilibrium ke liye applicable hai."
   },
   {
     "p_id": "bpsc_phys_m23_08",
@@ -263,7 +263,7 @@
       "$u_x$ और $u_y$ दोनों क्षैतिज रूप से $+g$ की दर से त्वरित होते हैं।"
     ],
     "a": 1,
-    "e": "Projectile motion do mutually perpendicular aur independent 1D motions ka vector combination hota hai.\n\n• Option 0 galat hai kyunki apex par horizontal component kabhi zero nahi hota.\n• Option 1 bilkul sahi hai kyunki:\n1. **Horizontal Direction:** Horizontal axis par koi force nahi lagta ($F_x = 0 \\implies a_x = 0$), isliye **$$u_x = u\\cos\\theta$$ poori flight mein strictly constant** rehta hai.\n2. **Vertical Direction:** Downward gravity act karti hai ($a_y = -g$), isliye **$$u_y = u\\sin\\theta$$ continuously change** hota hai—ascent ke dauran ghat-ta hai, apex par $0$ hota hai, aur descent mein badhta hai.\n• Option 2 aur Option 3 horizontal direction mein fictitious forces assume karte hain jo physically galat hain."
+    "e": "Projectile motion do mutually perpendicular aur independent 1D motions ka vector combination hota hai.\n\n• Option 0 galat hai kyunki apex par horizontal component kabhi zero nahi hota.\n• Option 1 bilkul sahi hai kyunki:\n1. **Horizontal Direction:** Horizontal axis par koi force nahi lagta ($F_x = 0 \\implies a_x = 0$), isliye **$u_x = u\\cos\\theta$ poori flight mein strictly constant** rehta hai.\n2. **Vertical Direction:** Downward gravity act karti hai ($a_y = -g$), isliye **$u_y = u\\sin\\theta$ continuously change** hota hai—ascent ke dauran ghat-ta hai, apex par $0$ hota hai, aur descent mein badhta hai.\n• Option 2 aur Option 3 horizontal direction mein fictitious forces assume karte hain jo physically galat hain."
   },
   {
     "p_id": "bpsc_phys_m23_15",
