@@ -2,8 +2,8 @@ name: 1. Run Web Scraper Only
 
 on:
   schedule:
-    # 01:30 UTC = 07:00 AM IST (Daily)
-    - cron: '30 1 * * *'
+    # Har 4 ghante par chalega (At minute 0 of UTC 00, 04, 08, 12, 16, 20)
+    - cron: '0 */4 * * *'
   workflow_dispatch:
 
 concurrency:
