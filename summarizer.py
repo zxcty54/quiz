@@ -17,13 +17,14 @@ GROQ_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_KEY) if GROQ_KEY else None
 
 MODEL_NAME = "openai/gpt-oss-20b"
+BATCH_SIZE = 5  # 5 news per request = Only ~10-12 total requests for entire day!
 
 IST = timezone(timedelta(hours=5, minutes=30))
 TODAY_DATE = datetime.now(IST).strftime("%d %b %Y")
 
 SYSTEM_PROMPT = """
 You are an expert Current Affairs editor for civil services exams (BPSC, SSC CGL, UPSC).
-Analyze the title and text, then filter, categorize, and summarize into valid JSON.
+You will receive a JSON list of news articles. Filter, categorize, and summarize EACH valid article.
 
 ALLOWED CATEGORIES:
 1. National Polity, Judiciary & Governance
@@ -36,26 +37,29 @@ ALLOWED CATEGORIES:
 8. Awards, Appointments, Sports, Persons & Indexes
 9. Bihar Special Affairs
 
-STRICT REJECTION RULES (CRITICAL):
-- BANNED TOPICS BLOCK (STRICT DROP): Set "is_relevant": false for ALL news related to:
-  1. Corporate fraud, bribery, court lawsuits involving business personalities (e.g., Adani bribery/fraud cases, corporate scam court trials).
-  2. Foreign immigration rules, visa policy changes for other countries, US/UK/Canada immigration updates (unless directly related to Indian bilateral treaties).
-  3. Local protests, lathi-charge incidents, student strikes, hunger strikes, political party Bandhs, and political clashes, fact check, Patrol Vessel, UPI Transactions.
-- GARBAGE & NAVIGATION TITLES BLOCK: Set "is_relevant": false if the title/content contains website navigation phrases like "Skip to Main Content", "Accessibility Options", "Home", "Contact Us", etc.
-- OTHER STATES NEWS BLOCK: If the news is specifically about OTHER Indian states (e.g., Uttar Pradesh, Madhya Pradesh, Rajasthan, Delhi, Maharashtra, Punjab, Haryana, Tamil Nadu, Karnataka, etc.) and is NOT a Central/National scheme or decision, set "is_relevant": false.
-- Set "is_relevant": false if news is about stock market daily movements, fact check, Sensex/Nifty, Rupee fluctuations, local crime, accidents, viral videos, entertainment, gossip, or audio portal listings.
+STRICT REJECTION RULES: Set "is_relevant": false for:
+- Corporate fraud/bribery court trials (e.g., Adani court cases).
+- Foreign immigration/visa rules (unless bilateral Indian treaty).
+- Local protests, student strikes, political party Bandhs, fact-checks, routine patrol vessels, UPI volume stats.
+- State-specific news of OTHER states (UP, MP, Delhi, Maharashtra, etc.) unless it is a Central policy.
+- Stock market movements, Sensex/Nifty, routine local crime, entertainment gossip.
 
 OUTPUT FORMAT REQUIREMENTS:
-Output MUST be strictly valid JSON format with keys:
-- "is_relevant": true or false
-- "title": A crisp, factual headline in English
-- "category": Exact name matched from ALLOWED CATEGORIES
-- "bullets": Array of EXACTLY 2 to 3 exam-relevant factual points. NEVER leave this empty.
-- "exam_tag": Exam tag name
+Return strictly a valid JSON array of objects corresponding to input items:
+[
+  {
+    "input_id": 1,
+    "is_relevant": true,
+    "title": "Crisp headline in English",
+    "category": "Exact matched category name",
+    "bullets": ["Point 1 (Facts/Ministry/Date)", "Point 2", "Point 3"],
+    "exam_tag": "Relevant Exam Tag"
+  }
+]
 """
 
 # ============================================================
-# DEDUPLICATION HELPERS
+# DEDUPLICATION & TEXT HELPERS
 # ============================================================
 
 def normalize_title(title):
@@ -72,26 +76,60 @@ def is_duplicate_story(new_title, existing_titles, threshold=0.55):
         exist_words = normalize_title(exist_title)
         if not exist_words:
             continue
-        
         intersection = new_words.intersection(exist_words)
         union = new_words.union(exist_words)
         similarity = len(intersection) / len(union) if union else 0
-
         if similarity >= threshold:
             return True
 
     return False
 
 
-def trim_content_for_ai(text, max_words=300):
-    """Retains full factual depth (300 words is ample for any news summary)"""
-    if not text:
-        return ""
-    words = str(text).split()
-    return " ".join(words[:max_words]) if len(words) > max_words else str(text)
+def is_junk_article(title):
+    t_lower = str(title).lower()
+    junk_phrases = [
+        "skip to main content", "accessibility options", "screen reader access",
+        "home", "search", "audios: news", "translation disclaimer"
+    ]
+    return any(phrase in t_lower for phrase in junk_phrases)
 
 
-def call_groq_api(user_prompt, max_retries=3):
+def clean_json_response(raw_text):
+    """Safely extracts JSON array or object from raw LLM output"""
+    if not raw_text or not raw_text.strip():
+        return None
+
+    text = raw_text.strip()
+    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
+
+    if text.startswith("```"):
+        text = re.sub(r"^```(?:json)?\s*", "", text)
+        text = re.sub(r"\s*```$", "", text)
+
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        # Regex fallback to find JSON array [ ... ]
+        array_match = re.search(r"\[[\s\S]*\]", text)
+        if array_match:
+            try:
+                return json.loads(array_match.group(0))
+            except Exception:
+                pass
+        
+        # Regex fallback for single object { ... }
+        obj_match = re.search(r"\{[\s\S]*\}", text)
+        if obj_match:
+            try:
+                data = json.loads(obj_match.group(0))
+                return [data] if isinstance(data, dict) else data
+            except Exception:
+                pass
+                
+    return None
+
+
+def call_groq_batch_api(batch_prompt, max_retries=3):
     if not client:
         print("❌ Groq Client is not initialized! Check GROQ_API_KEY.")
         return None
@@ -101,104 +139,114 @@ def call_groq_api(user_prompt, max_retries=3):
             response = client.chat.completions.create(
                 model=MODEL_NAME,
                 messages=[
-                    {"role": "system", "content": SYSTEM_PROMPT + "\nCRITICAL: Respond ONLY with a valid JSON object. Do not include markdown backticks or extra text."},
-                    {"role": "user", "content": user_prompt}
+                    {"role": "system", "content": SYSTEM_PROMPT + "\nCRITICAL: Respond ONLY with a valid JSON array. No explanations."},
+                    {"role": "user", "content": batch_prompt}
                 ],
                 temperature=0.1,
-                max_tokens=650  # Generous size for complete 3 deep bullets
+                max_tokens=1500  # Ample space for 5 articles
             )
-            
-            if not response.choices or not response.choices[0].message:
-                raise ValueError("Empty response from Groq")
 
             raw_text = response.choices[0].message.content
-            if not raw_text or not raw_text.strip():
-                raise ValueError("Received empty string")
+            parsed = clean_json_response(raw_text)
+            if parsed is not None:
+                return parsed if isinstance(parsed, list) else [parsed]
 
-            raw_text = raw_text.strip()
-            raw_text = re.sub(r"<think>.*?</think>", "", raw_text, flags=re.DOTALL).strip()
-
-            if raw_text.startswith("```"):
-                raw_text = re.sub(r"^```(?:json)?\s*", "", raw_text)
-                raw_text = re.sub(r"\s*```$", "", raw_text)
-
-            try:
-                return json.loads(raw_text)
-            except json.JSONDecodeError:
-                json_match = re.search(r"\{[\s\S]*\}", raw_text)
-                if json_match:
-                    return json.loads(json_match.group(0))
-                else:
-                    raise ValueError("JSON regex extraction failed")
+            print(f"⚠️ JSON Parse retry on attempt {attempt + 1}...")
+            time.sleep(2)
 
         except RateLimitError:
-            wait_time = (attempt + 1) * 4
-            print(f"⚠️ Pacing pause {wait_time}s...")
+            wait_time = 15
+            print(f"⚠️ Rate limit cooling down {wait_time}s (Attempt {attempt + 1}/{max_retries})...")
             time.sleep(wait_time)
         except (APIConnectionError, APIStatusError) as e:
-            print(f"⚠️ API status issue on attempt {attempt + 1}: {e}")
-            time.sleep(2)
+            print(f"⚠️ API status warning: {e}")
+            time.sleep(3)
         except Exception as e:
-            print(f"⚠️ Error on attempt {attempt + 1}: {e}")
-            time.sleep(1.5)
-                
+            print(f"⚠️ API error: {e}")
+            time.sleep(2)
+
     return None
 
 
-def summarize_article(item, is_bihar=False):
-    title = item.get("title", "")
-    content = item.get("content", "")
+def process_news_batches(news_list, is_bihar=False):
+    valid_items = []
+    for item in news_list:
+        title = item.get("title", "")
+        if not is_junk_article(title):
+            valid_items.append(item)
+        else:
+            print(f"  ⏭️ SKIPPED (Junk/Navigation): {title[:40]}...")
 
-    # Fast junk filter before API
-    junk_phrases = ["skip to main content", "accessibility options", "screen reader access", "home", "search"]
-    if any(phrase in title.lower() for phrase in junk_phrases):
-        print(f"  ⏭️ SKIPPED (Nav Garbage): {title[:40]}...")
-        return None
+    domain = "Bihar State News" if is_bihar else "National Current Affairs"
+    total_valid = len(valid_items)
+    cards = []
+    seen_titles = []
 
-    if "audios:" in title.lower() or "news & current affairs" in title.lower():
-        print(f"  ⏭️ SKIPPED (Audio Archive): {title[:40]}...")
-        return None
+    print(f"📦 Filtered {total_valid} valid articles into batches of {BATCH_SIZE}...")
 
-    # Full context for deep points
-    trimmed_content = trim_content_for_ai(content, max_words=300)
-    news_type = "Bihar State News" if is_bihar else "National Current Affairs"
-    
-    user_prompt = (
-        f"Domain: {news_type}\n"
-        f"Title: {title}\n"
-        f"Content: {trimmed_content}\n\n"
-        "Return strictly valid JSON format with keys: is_relevant, title, category, bullets (array of 2-3 points), exam_tag."
-    )
+    for i in range(0, total_valid, BATCH_SIZE):
+        batch = valid_items[i : i + BATCH_SIZE]
+        batch_num = (i // BATCH_SIZE) + 1
+        total_batches = (total_valid + BATCH_SIZE - 1) // BATCH_SIZE
 
-    parsed = call_groq_api(user_prompt)
+        print(f"\n⚡ Processing Batch {batch_num}/{total_batches} ({len(batch)} items)...")
 
-    if not parsed:
-        print(f"❌ Skipping [{title[:30]}...] due to API failure.")
-        return None
+        # Prepare Batch Payload
+        batch_payload = []
+        for idx, itm in enumerate(batch, 1):
+            content_words = str(itm.get("content", "")).split()
+            trimmed = " ".join(content_words[:250]) if len(content_words) > 250 else itm.get("content", "")
+            batch_payload.append({
+                "input_id": idx,
+                "domain": domain,
+                "title": itm.get("title", ""),
+                "content": trimmed
+            })
 
-    if not parsed.get("is_relevant", True):
-        print(f"  ⏭️ SKIPPED (Irrelevant / Other State): {title[:40]}...")
-        return None
+        prompt_str = f"Process these {len(batch)} articles into JSON array:\n" + json.dumps(batch_payload, ensure_ascii=False)
 
-    assigned_category = parsed.get("category") or ("Bihar Special Affairs" if is_bihar else "National Polity, Judiciary & Governance")
-    default_prefix = "🏛️ Bihar Special" if is_bihar else "🎯 National Special"
-    exam_tag = parsed.get("exam_tag") or f"{default_prefix} / {assigned_category}"
+        batch_result = call_groq_batch_api(prompt_str)
 
-    bullets = parsed.get("bullets", [])
-    if not isinstance(bullets, list) or len(bullets) == 0:
-        clean_text_snippet = trimmed_content if len(trimmed_content) > 30 else title
-        bullets = [
-            f"Key update regarding {title[:60]}.",
-            f"Overview: {clean_text_snippet[:140]}..."
-        ]
+        if not batch_result:
+            print(f"❌ Batch {batch_num} failed completely.")
+            continue
 
-    return {
-        "title": parsed.get("title", title),
-        "category": assigned_category,
-        "bullets": bullets,
-        "exam_tag": exam_tag,
-        "date": TODAY_DATE
-    }
+        for res in batch_result:
+            if not isinstance(res, dict):
+                continue
+            if not res.get("is_relevant", True):
+                print(f"  ⏭️ SKIPPED (Irrelevant): {str(res.get('title', ''))[:40]}...")
+                continue
+
+            c_title = res.get("title") or "Current Affairs Update"
+            if is_duplicate_story(c_title, seen_titles):
+                print(f"  🧹 DROPPED DUPLICATE: {c_title[:40]}...")
+                continue
+
+            seen_titles.append(c_title)
+            assigned_category = res.get("category") or ("Bihar Special Affairs" if is_bihar else "National Polity, Judiciary & Governance")
+            default_prefix = "🏛️ Bihar Special" if is_bihar else "🎯 National Special"
+            exam_tag = res.get("exam_tag") or f"{default_prefix} / {assigned_category}"
+
+            bullets = res.get("bullets", [])
+            if not isinstance(bullets, list) or len(bullets) == 0:
+                bullets = [f"Key update regarding {c_title[:60]}."]
+
+            prefix = "bih" if is_bihar else "nat"
+            card = {
+                "id": f"{prefix}_{len(cards) + 1:02d}",
+                "title": c_title,
+                "category": assigned_category,
+                "bullets": bullets,
+                "exam_tag": exam_tag,
+                "date": TODAY_DATE
+            }
+            cards.append(card)
+            print(f"  ✅ Added: {c_title[:40]} ({len(bullets)} bullets)")
+
+        time.sleep(4.0)  # 4s gap between batches guarantees zero 429 errors
+
+    return cards
 
 
 def process_all_news():
@@ -213,72 +261,18 @@ def process_all_news():
     bihar_raw = raw_data.get("bihar_raw_news", [])
 
     start_time = time.time()
-    print(f"🚀 Starting Exam-Grade Summarization [{MODEL_NAME}]...")
+    print(f"🚀 Starting High-Efficiency Batch Summarizer [{MODEL_NAME}]...")
     print(f"📦 Raw Inputs -> National: {len(national_raw)} | Bihar: {len(bihar_raw)}")
 
-    # ------------------------------------------------------------
-    # 1. PROCESS NATIONAL NEWS
-    # ------------------------------------------------------------
-    print("\n🇮🇳 Processing National News...")
-    national_cards = []
-    seen_national_titles = []
+    # 1. Process National
+    print("\n" + "=" * 50 + "\n🇮🇳 PROCESSING NATIONAL NEWS\n" + "=" * 50)
+    national_cards = process_news_batches(national_raw, is_bihar=False)
 
-    for idx, item in enumerate(national_raw, 1):
-        print(f"[National {idx}/{len(national_raw)}] Summarizing: {item.get('title', '')[:40]}...")
-        card_data = summarize_article(item, is_bihar=False)
-        
-        if card_data:
-            c_title = card_data["title"]
-            if not is_duplicate_story(c_title, seen_national_titles):
-                seen_national_titles.append(c_title)
-                formatted_card = {
-                    "id": f"nat_{len(national_cards) + 1:02d}",
-                    "title": card_data["title"],
-                    "category": card_data["category"],
-                    "bullets": card_data["bullets"],
-                    "exam_tag": card_data["exam_tag"],
-                    "date": card_data["date"]
-                }
-                national_cards.append(formatted_card)
-                print(f"  ✅ Added ({len(card_data['bullets'])} factual bullets)")
-            else:
-                print(f"  🧹 DROPPED DUPLICATE: {c_title[:40]}...")
+    # 2. Process Bihar
+    print("\n" + "=" * 50 + "\n🏛️ PROCESSING BIHAR NEWS\n" + "=" * 50)
+    bihar_cards = process_news_batches(bihar_raw, is_bihar=True)
 
-        time.sleep(1.2)  # Stable pacing keeps you permanently under Groq's RPM quota
-
-    # ------------------------------------------------------------
-    # 2. PROCESS BIHAR NEWS
-    # ------------------------------------------------------------
-    print("\n🏛️ Processing Bihar News...")
-    bihar_cards = []
-    seen_bihar_titles = []
-
-    for idx, item in enumerate(bihar_raw, 1):
-        print(f"[Bihar {idx}/{len(bihar_raw)}] Summarizing: {item.get('title', '')[:40]}...")
-        card_data = summarize_article(item, is_bihar=True)
-
-        if card_data:
-            c_title = card_data["title"]
-            if not is_duplicate_story(c_title, seen_bihar_titles):
-                seen_bihar_titles.append(c_title)
-                formatted_card = {
-                    "id": f"bih_{len(bihar_cards) + 1:02d}",
-                    "title": card_data["title"],
-                    "category": card_data["category"],
-                    "bullets": card_data["bullets"],
-                    "exam_tag": card_data["exam_tag"],
-                    "date": card_data["date"]
-                }
-                bihar_cards.append(formatted_card)
-                print(f"  ✅ Added ({len(card_data['bullets'])} factual bullets)")
-            else:
-                print(f"  🧹 DROPPED DUPLICATE: {c_title[:40]}...")
-
-        time.sleep(1.2)
-
-    # ------------------------------------------------------------
-    # 3. SAVE DAILY OVERWRITTEN FILE (finalnews.json)
-    # ------------------------------------------------------------
+    # 3. Save finalnews.json
     output_data = {
         "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
         "national_count": len(national_cards),
@@ -293,9 +287,7 @@ def process_all_news():
 
     print(f"\n💾 Daily summary successfully saved to '{OUTPUT_FILE}'!")
 
-    # ------------------------------------------------------------
-    # 4. SAVE & APPEND TO MASTER ARCHIVE FILE (all_current_affairs.json)
-    # ------------------------------------------------------------
+    # 4. Save master archive all_current_affairs.json
     master_archive = {
         "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
         "total_national": 0,
@@ -348,7 +340,7 @@ def process_all_news():
 
     elapsed = round(time.time() - start_time, 1)
     print("\n" + "=" * 80)
-    print(f"⚡ Completed in {elapsed}s (~{round(elapsed/60, 1)} mins) with 100% full content quality!")
+    print(f"⚡ ALL DONE IN {elapsed}s (~{round(elapsed/60, 1)} min)!")
     print(f"📊 Saved Today -> National: {len(national_cards)} | Bihar: {len(bihar_cards)}")
     print("=" * 80)
 
