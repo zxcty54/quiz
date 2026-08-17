@@ -3,9 +3,32 @@ import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 class AiExplainerService {
-  // 🔐 Environment Variables Se Keys Fetch Ho Rahi Hain (GitHub Secrets Safe)
-  static const String _googleApiKey = String.fromEnvironment('GOOGLE_API_KEY');
-  static const String _groqApiKey = String.fromEnvironment('GROQ_API_KEY');
+  // 🔐 Environment Variables Se Keys Fetch Ho Rahi Hain (4 Keys Pool)
+  static const String _gKey1 = String.fromEnvironment('GOOGLE_API_KEY');
+  static const String _gKey2 = String.fromEnvironment('GOOGLE_API_KEY2');
+  static const String _groqKey1 = String.fromEnvironment('GROQ_API_KEY');
+  static const String _groqKey2 = String.fromEnvironment('GROQ_API_KEY2');
+
+  static int _gIndex = 0;
+  static int _groqIndex = 0;
+
+  // 🔄 Google Keys Auto-Rotator
+  static String _getGoogleApiKey() {
+    final validKeys = [_gKey1, _gKey2].where((k) => k.trim().isNotEmpty).toList();
+    if (validKeys.isEmpty) return "";
+    final key = validKeys[_gIndex % validKeys.length];
+    _gIndex++;
+    return key;
+  }
+
+  // 🔄 Groq Keys Auto-Rotator
+  static String _getGroqApiKey() {
+    final validKeys = [_groqKey1, _groqKey2].where((k) => k.trim().isNotEmpty).toList();
+    if (validKeys.isEmpty) return "";
+    final key = validKeys[_groqIndex % validKeys.length];
+    _groqIndex++;
+    return key;
+  }
 
   // 🌐 Dynamic Fallback Models (Cloud app_config.json se sync honge)
   static List<String> activeModelHierarchy = [
@@ -68,12 +91,13 @@ class AiExplainerService {
 
         // 🟢 1. GOOGLE AI STUDIO (Keywords: gemini, gemma)
         if (mLower.contains('gemini') || mLower.contains('gemma')) {
-          if (_googleApiKey.isEmpty) {
+          final googleKey = _getGoogleApiKey();
+          if (googleKey.isEmpty) {
             debugPrint("⚠️ Google API Key missing, skipping $model");
             continue;
           }
 
-          final url = "https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent?key=$_googleApiKey";
+          final url = "https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent?key=$googleKey";
           final response = await http.post(
             Uri.parse(url),
             headers: {"Content-Type": "application/json; charset=utf-8"},
@@ -107,7 +131,8 @@ class AiExplainerService {
         }
         // 🔵 2. GROQ API (Keywords: llama, mixtral, gpt-oss, qwen, etc.)
         else {
-          if (_groqApiKey.isEmpty) {
+          final groqKey = _getGroqApiKey();
+          if (groqKey.isEmpty) {
             debugPrint("⚠️ Groq API Key missing, skipping $model");
             continue;
           }
@@ -115,7 +140,7 @@ class AiExplainerService {
           final response = await http.post(
             Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
             headers: {
-              "Authorization": "Bearer $_groqApiKey",
+              "Authorization": "Bearer $groqKey",
               "Content-Type": "application/json; charset=utf-8",
             },
             body: jsonEncode({
