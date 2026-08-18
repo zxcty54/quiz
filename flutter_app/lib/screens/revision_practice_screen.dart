@@ -307,95 +307,78 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         clean.startsWith('• 4.');
   }
 
-// 🛡️ UNIVERSAL AUTO-CLEANING EXPLANATION PARSER (Zero Manual JSON Editing Needed)
+// ✨ COMPLETE UNIFIED GREEN BOX EXPLANATION FIX
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
-    // 1️⃣ Live Global Sanitization (Fixes Option 0, Part A/B labels, Escaped Slashing)
     String cleaned = rawExplanation
         .replaceAll(r'\n', '\n')
         .replaceAll(r'\\text', r'\text')
         .replaceAll(r'\\frac', r'\frac')
-        .replaceAll(RegExp(r'Part\s+[A-Z]\s*:\s*', caseSensitive: false), '') // Cleans Part A/B
-        .replaceAll(RegExp(r'\bOption\s+0\b', caseSensitive: false), 'Option A')
-        .replaceAll(RegExp(r'\bOption\s+1\b', caseSensitive: false), 'Option B')
-        .replaceAll(RegExp(r'\bOption\s+2\b', caseSensitive: false), 'Option C')
-        .replaceAll(RegExp(r'\bOption\s+3\b', caseSensitive: false), 'Option D')
-        .replaceAll(RegExp(r'•\s*Option\s+0', caseSensitive: false), '• Option A')
-        .replaceAll(RegExp(r'•\s*Option\s+1', caseSensitive: false), '• Option B')
-        .replaceAll(RegExp(r'•\s*Option\s+2', caseSensitive: false), '• Option C')
-        .replaceAll(RegExp(r'•\s*Option\s+3', caseSensitive: false), '• Option D')
-        .replaceAll(RegExp(r'^\s*1\.\s*Option\s+A', multiLine: true, caseSensitive: false), '• Option A')
-        .replaceAll(RegExp(r'^\s*2\.\s*Option\s+B', multiLine: true, caseSensitive: false), '• Option B')
-        .replaceAll(RegExp(r'^\s*3\.\s*Option\s+C', multiLine: true, caseSensitive: false), '• Option C')
-        .replaceAll(RegExp(r'^\s*4\.\s*Option\s+D', multiLine: true, caseSensitive: false), '• Option D');
+        .replaceAll(RegExp(r'\bOption 0\b', caseSensitive: false), 'Option A')
+        .replaceAll(RegExp(r'\bOption 1\b', caseSensitive: false), 'Option B')
+        .replaceAll(RegExp(r'\bOption 2\b', caseSensitive: false), 'Option C')
+        .replaceAll(RegExp(r'\bOption 3\b', caseSensitive: false), 'Option D')
+        .replaceAll(RegExp(r'•\s*Option 0', caseSensitive: false), '• Option A')
+        .replaceAll(RegExp(r'•\s*Option 1', caseSensitive: false), '• Option B')
+        .replaceAll(RegExp(r'•\s*Option 2', caseSensitive: false), '• Option C')
+        .replaceAll(RegExp(r'•\s*Option 3', caseSensitive: false), '• Option D');
 
-    // 2️⃣ Multi-Delimiter Smart Splitter
     List<String> rawLines = cleaned
         .split('\n')
         .map((p) => p.trim())
         .where((p) => p.isNotEmpty)
         .toList();
 
-    List<String> distinctPoints = [];
+    List<String> distinctBlocks = [];
+    String currentBlock = "";
+
+    // 1. Group multi-line explanation into structured blocks accurately
     for (String line in rawLines) {
-      if (line.contains('•') && line.indexOf('•') != line.lastIndexOf('•')) {
-        List<String> subParts = line
-            .split(RegExp(r'(?=•)'))
-            .map((s) => s.trim())
-            .where((s) => s.isNotEmpty)
-            .toList();
-        distinctPoints.addAll(subParts);
+      bool isNewBlockHeader = line.startsWith('•') ||
+          line.startsWith('-') ||
+          line.toLowerCase().startsWith('option') ||
+          line.toLowerCase().startsWith('statement') ||
+          line.startsWith('📌') ||
+          line.toLowerCase().startsWith('key takeaway') ||
+          RegExp(r'^\d+[\.\)]').hasMatch(line);
+
+      if (isNewBlockHeader && currentBlock.isNotEmpty) {
+        distinctBlocks.add(currentBlock.trim());
+        currentBlock = line;
       } else {
-        distinctPoints.add(line);
+        if (currentBlock.isEmpty) {
+          currentBlock = line;
+        } else {
+          currentBlock += "\n$line";
+        }
       }
     }
+    if (currentBlock.isNotEmpty) distinctBlocks.add(currentBlock.trim());
 
-    // Fallback: Single paragraph split by options or statements
-    if (distinctPoints.length <= 1) {
-      distinctPoints = cleaned
-          .split(RegExp(r'(?=•|\bOption\s+[A-D]|\bStatement\s+\d+|\([A-D0-9]\)|📌)'))
-          .map((s) => s.trim())
-          .where((s) => s.isNotEmpty)
-          .toList();
-    }
+    List<String> primaryCorrectBlocks = [];
+    List<String> trapOptionBlocks = [];
+    List<String> takeawayBlocks = [];
 
-    // 3️⃣ Question Type Detection
-    bool isStatementQuestion = (currentQ.sh != null && currentQ.sh!.isNotEmpty) ||
-        (currentQ.se != null && currentQ.se!.isNotEmpty) ||
-        cleaned.contains('Statement 1') ||
-        cleaned.contains('Statement 2');
+    for (String block in distinctBlocks) {
+      final String lower = block.toLowerCase();
 
-    List<String> correctPoints = [];
-    List<String> otherOptionPoints = [];
-    List<String> generalPoints = [];
-
-    for (String point in distinctPoints) {
-      final String lower = point.toLowerCase();
-
-      bool isCorrectOption = (lower.contains('is correct') ||
-              lower.contains('bilkul sahi') ||
-              lower.contains('correct hai') ||
-              lower.contains('sahi hai')) &&
-          _isOptionPoint(point);
-
-      bool isIncorrectOption = (lower.contains('incorrect') ||
+      bool isIncorrectTrap = (lower.contains('incorrect') ||
               lower.contains('galat') ||
               lower.contains('false') ||
-              lower.contains('sasta hai') ||
               lower.contains('trap assign')) &&
-          _isOptionPoint(point);
+          _isOptionPoint(block);
 
-      if (!isStatementQuestion && isCorrectOption) {
-        correctPoints.add(point);
-      } else if (!isStatementQuestion && isIncorrectOption) {
-        otherOptionPoints.add(point);
+      bool isTakeaway = lower.startsWith('key takeaway') ||
+          lower.startsWith('summary') ||
+          block.startsWith('📌');
+
+      if (isIncorrectTrap) {
+        trapOptionBlocks.add(block);
+      } else if (isTakeaway) {
+        takeawayBlocks.add(block);
       } else {
-        generalPoints.add(point);
+        // Correct reasoning + steps + formulas wrap fully inside here
+        primaryCorrectBlocks.add(block);
       }
-    }
-
-    // Agar koi specific point match na ho to first point ko core solution maanein
-    if (correctPoints.isEmpty && otherOptionPoints.isNotEmpty && !isStatementQuestion) {
-      correctPoints.add(otherOptionPoints.removeAt(0));
     }
 
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
@@ -420,7 +403,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header Strip
+          // 💡 Header
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
@@ -440,7 +423,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  _isHindi ? 'व्याख्या एवं विश्लेषण' : 'Detailed Solution',
+                  _isHindi ? 'मुख्य व्याख्या (Core Solution)' : 'Detailed Solution',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: isDark ? Colors.white : const Color(0xFF0F172A),
@@ -457,117 +440,55 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 🟢 1. Core Correct Logic Box
-                if (correctPoints.isNotEmpty) ...[
-                  ...correctPoints.map((point) => Container(
-                        width: double.infinity,
-                        margin: const EdgeInsets.only(bottom: 10),
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4),
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(
-                            color: isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0),
-                          ),
-                        ),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Padding(
-                              padding: EdgeInsets.only(top: 2),
-                              child: Icon(Icons.check_circle_rounded, size: 16, color: Color(0xFF16A34A)),
-                            ),
-                            const SizedBox(width: 8),
-                            Expanded(
-                              child: MathFormattedText(
-                                text: point,
-                                textStyle: TextStyle(
-                                  fontSize: 13.5,
-                                  fontWeight: FontWeight.w600,
-                                  color: isDark ? const Color(0xFF86EFAC) : const Color(0xFF14532D),
-                                  height: 1.45,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      )),
-                ],
-
-                // 📄 2. General / Statement Breakdown
-                ...generalPoints.map((point) {
-                  bool isStatement = point.toLowerCase().contains('statement');
-                  bool isStatementCorrect = isStatement &&
-                      (point.toLowerCase().contains('correct hai') ||
-                          point.toLowerCase().contains('sahi hai') ||
-                          point.contains('सही है'));
-                  bool isStatementIncorrect = isStatement &&
-                      (point.toLowerCase().contains('incorrect') ||
-                          point.toLowerCase().contains('galat') ||
-                          point.contains('गलत'));
-
-                  if (isStatement && (isStatementCorrect || isStatementIncorrect)) {
-                    Color borderC = isStatementCorrect
-                        ? (isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0))
-                        : (isDark ? const Color(0xFF991B1B) : const Color(0xFFFECDD3));
-                    Color bgC = isStatementCorrect
-                        ? (isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4))
-                        : (isDark ? const Color(0xFF450A0A) : const Color(0xFFFEF2F2));
-                    Color textC = isStatementCorrect
-                        ? (isDark ? const Color(0xFF86EFAC) : const Color(0xFF14532D))
-                        : (isDark ? const Color(0xFFFCA5A5) : const Color(0xFF991B1B));
-                    IconData iconD = isStatementCorrect ? Icons.check_circle_rounded : Icons.cancel_rounded;
-                    Color iconC = isStatementCorrect ? const Color(0xFF16A34A) : const Color(0xFFDC2626);
-
-                    return Container(
-                      width: double.infinity,
-                      margin: const EdgeInsets.only(bottom: 10),
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: bgC,
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: borderC),
-                      ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 2),
-                            child: Icon(iconD, size: 16, color: iconC),
-                          ),
-                          const SizedBox(width: 8),
-                          Expanded(
-                            child: MathFormattedText(
-                              text: point,
-                              textStyle: TextStyle(
-                                fontSize: 13.5,
-                                fontWeight: FontWeight.w500,
-                                color: textC,
-                                height: 1.45,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  }
-
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 8.0),
-                    child: MathFormattedText(
-                      text: point,
-                      textStyle: TextStyle(
-                        fontSize: 13,
-                        color: textColor,
-                        height: 1.45,
+                // 🟢 UNIFIED GREEN BOX: Holds ALL core solution lines & formulas
+                if (primaryCorrectBlocks.isNotEmpty)
+                  Container(
+                    width: double.infinity,
+                    margin: const EdgeInsets.only(bottom: 12),
+                    padding: const EdgeInsets.all(14),
+                    decoration: BoxDecoration(
+                      color: isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0),
                       ),
                     ),
-                  );
-                }),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: primaryCorrectBlocks.map((block) {
+                        return Padding(
+                          padding: const EdgeInsets.only(bottom: 6.0),
+                          child: MathFormattedText(
+                            text: block,
+                            textStyle: TextStyle(
+                              fontSize: 13.5,
+                              fontWeight: FontWeight.w500,
+                              color: isDark ? const Color(0xFF86EFAC) : const Color(0xFF14532D),
+                              height: 1.45,
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                    ),
+                  ),
 
-                // 🔽 3. Traps / Other Options Accordion
-                if (otherOptionPoints.isNotEmpty) ...[
-                  const SizedBox(height: 8),
+                // 📌 Key Takeaway / Summary (If present)
+                ...takeawayBlocks.map((point) => Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: MathFormattedText(
+                        text: point,
+                        textStyle: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600,
+                          color: textColor,
+                          height: 1.45,
+                        ),
+                      ),
+                    )),
+
+                // 🔽 Collapsible Option Traps
+                if (trapOptionBlocks.isNotEmpty) ...[
+                  const SizedBox(height: 6),
                   Theme(
                     data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
                     child: Container(
@@ -589,7 +510,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                             padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: otherOptionPoints.map((item) {
+                              children: trapOptionBlocks.map((item) {
                                 return Container(
                                   width: double.infinity,
                                   margin: const EdgeInsets.only(bottom: 8),
@@ -631,7 +552,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
                 const Divider(height: 24),
 
-                // Telegram Trick Submission Box
                 RevisionTrickSubmitBox(
                   testTitle: widget.testTitle,
                   qIndex: _currentIndex,
