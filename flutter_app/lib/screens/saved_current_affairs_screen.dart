@@ -94,23 +94,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
         pw.MultiPage(
           pageFormat: PdfPageFormat.a4,
           margin: const pw.EdgeInsets.all(24),
-          // 🛡️ 1. WATERMARK ON EVERY PAGE
-          buildBackground: (pw.Context context) {
-            return pw.Center(
-              child: pw.Transform.rotateBox(
-                angle: 0.5,
-                child: pw.Text(
-                  'MOCKTESTER.ONLINE',
-                  style: pw.TextStyle(
-                    fontSize: 42,
-                    color: PdfColor.fromHex('F1F5F9'),
-                    fontWeight: pw.FontWeight.bold,
-                  ),
-                ),
-              ),
-            );
-          },
-          // 🏷️ 2. TOP HEADER ON EVERY PAGE
+          // 🏷️ 1. TOP HEADER ON EVERY PAGE
           header: (pw.Context context) {
             return pw.Container(
               margin: const pw.EdgeInsets.only(bottom: 12),
@@ -133,7 +117,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
               ),
             );
           },
-          // 📌 3. FOOTER WITH PAGE NUMBER ON EVERY PAGE
+          // 📌 2. FOOTER WITH PAGE NUMBER ON EVERY PAGE
           footer: (pw.Context context) {
             return pw.Container(
               margin: const pw.EdgeInsets.only(top: 10),
@@ -156,7 +140,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
               ),
             );
           },
-          // 📋 4. NEWS CONTENT
+          // 📋 3. NEWS CONTENT
           build: (pw.Context context) {
             return [
               pw.Container(
@@ -219,7 +203,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
                       ...bullets.map((b) => pw.Padding(
                             padding: const pw.EdgeInsets.only(bottom: 3),
                             child: pw.Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: pw.CrossAxisAlignment.start,
                               children: [
                                 pw.Text('• ', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, color: PdfColors.blue700)),
                                 pw.Expanded(
@@ -240,6 +224,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
         ),
       );
 
+      // Open System Print / Download / Share Sheet
       await Printing.layoutPdf(
         onLayout: (PdfPageFormat format) async => doc.save(),
         name: 'MockTester_Saved_CA_Digest.pdf',
