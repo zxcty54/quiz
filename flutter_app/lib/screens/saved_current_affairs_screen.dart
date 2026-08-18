@@ -1,6 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:pdf/pdf.dart';
+import 'package:pdf/widgets.dart' as pw;
+import 'package:printing/printing.dart';
 
 class SavedCurrentAffairsScreen extends StatefulWidget {
   const SavedCurrentAffairsScreen({super.key});
@@ -13,6 +16,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
   List<dynamic> _savedNewsList = [];
   bool _isLoading = true;
   bool _isHindi = true;
+  bool _isGeneratingPdf = false;
 
   // Filter selection: 'ALL', 'BIHAR', 'NATIONAL'
   String _selectedFilter = 'ALL';
@@ -77,41 +81,178 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
     }
   }
 
-  // 🚀 GENERATE AI QUIZ FROM SAVED BULLETINS
-  void _generateAiQuiz(List<dynamic> filteredList) {
-    if (filteredList.isEmpty) return;
+  // 📄 EXPORT TO BRANDED PDF (mocktester.online On Every Page)
+  Future<void> _downloadBrandedPdf(List<dynamic> newsToExport) async {
+    if (newsToExport.isEmpty) return;
 
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (ctx) => AlertDialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        content: const Row(
-          children: [
-            CircularProgressIndicator(color: Color(0xFF4F46E5)),
-            SizedBox(width: 16),
-            Expanded(
-              child: Text(
-                "AI is creating Quiz from your Bookmarks... 🧠",
-                style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+    setState(() => _isGeneratingPdf = true);
+
+    try {
+      final doc = pw.Document();
+
+      doc.addPage(
+        pw.MultiPage(
+          pageFormat: PdfPageFormat.a4,
+          margin: const pw.EdgeInsets.all(24),
+          // 🛡️ 1. WATERMARK ON EVERY PAGE
+          buildBackground: (pw.Context context) {
+            return pw.Center(
+              child: pw.Transform.rotateBox(
+                angle: 0.5,
+                child: pw.Text(
+                  'MOCKTESTER.ONLINE',
+                  style: pw.TextStyle(
+                    fontSize: 42,
+                    color: PdfColor.fromHex('F1F5F9'),
+                    fontWeight: pw.FontWeight.bold,
+                  ),
+                ),
               ),
-            ),
-          ],
-        ),
-      ),
-    );
+            );
+          },
+          // 🏷️ 2. TOP HEADER ON EVERY PAGE
+          header: (pw.Context context) {
+            return pw.Container(
+              margin: const pw.EdgeInsets.only(bottom: 12),
+              padding: const pw.EdgeInsets.only(bottom: 6),
+              decoration: const pw.BoxDecoration(
+                border: pw.Border(bottom: pw.BorderSide(color: PdfColors.blue700, width: 1.5)),
+              ),
+              child: pw.Row(
+                mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                children: [
+                  pw.Text(
+                    'MockTester • Saved Current Affairs Magazine',
+                    style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold, color: PdfColors.blue800),
+                  ),
+                  pw.Text(
+                    '🌐 mocktester.online',
+                    style: pw.TextStyle(fontSize: 10, fontWeight: pw.FontWeight.bold, color: PdfColors.blue700),
+                  ),
+                ],
+              ),
+            );
+          },
+          // 📌 3. FOOTER WITH PAGE NUMBER ON EVERY PAGE
+          footer: (pw.Context context) {
+            return pw.Container(
+              margin: const pw.EdgeInsets.only(top: 10),
+              padding: const pw.EdgeInsets.only(top: 6),
+              decoration: const pw.BoxDecoration(
+                border: pw.Border(top: pw.BorderSide(color: PdfColors.grey300, width: 0.8)),
+              ),
+              child: pw.Row(
+                mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                children: [
+                  pw.Text(
+                    'For BPSC, BSSC & State Exams • www.mocktester.online',
+                    style: const pw.TextStyle(fontSize: 8.5, color: PdfColors.grey700),
+                  ),
+                  pw.Text(
+                    'Page ${context.pageNumber} of ${context.pagesCount}',
+                    style: pw.TextStyle(fontSize: 8.5, fontWeight: pw.FontWeight.bold, color: PdfColors.grey800),
+                  ),
+                ],
+              ),
+            );
+          },
+          // 📋 4. NEWS CONTENT
+          build: (pw.Context context) {
+            return [
+              pw.Container(
+                width: double.infinity,
+                padding: const pw.EdgeInsets.all(12),
+                margin: const pw.EdgeInsets.only(bottom: 14),
+                decoration: pw.BoxDecoration(
+                  color: PdfColors.blue50,
+                  borderRadius: pw.BorderRadius.circular(8),
+                  border: pw.Border.all(color: PdfColors.blue200),
+                ),
+                child: pw.Column(
+                  crossAxisAlignment: pw.CrossAxisAlignment.start,
+                  children: [
+                    pw.Text(
+                      '📌 SAVED CURRENT AFFAIRS DIGEST',
+                      style: pw.TextStyle(fontSize: 14, fontWeight: pw.FontWeight.bold, color: PdfColors.blue900),
+                    ),
+                    pw.SizedBox(height: 3),
+                    pw.Text(
+                      'Total Items: ${newsToExport.length} • Powered by MockTester (mocktester.online)',
+                      style: const pw.TextStyle(fontSize: 9, color: PdfColors.blue800),
+                    ),
+                  ],
+                ),
+              ),
+              ...newsToExport.map((news) {
+                final String title = news['title'] ?? 'Current Affairs Update';
+                final String tag = news['exam_tag'] ?? 'General Update';
+                final List bullets = (news['bullets'] as List?) ?? [];
 
-    Future.delayed(const Duration(seconds: 2), () {
+                return pw.Container(
+                  margin: const pw.EdgeInsets.only(bottom: 12),
+                  padding: const pw.EdgeInsets.all(10),
+                  decoration: pw.BoxDecoration(
+                    color: PdfColors.white,
+                    borderRadius: pw.BorderRadius.circular(6),
+                    border: pw.Border.all(color: PdfColors.grey300),
+                  ),
+                  child: pw.Column(
+                    crossAxisAlignment: pw.CrossAxisAlignment.start,
+                    children: [
+                      pw.Container(
+                        padding: const pw.EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        decoration: pw.BoxDecoration(
+                          color: PdfColors.amber100,
+                          borderRadius: pw.BorderRadius.circular(4),
+                        ),
+                        child: pw.Text(
+                          tag,
+                          style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold, color: PdfColors.amber900),
+                        ),
+                      ),
+                      pw.SizedBox(height: 5),
+                      pw.Text(
+                        title,
+                        style: pw.TextStyle(fontSize: 11, fontWeight: pw.FontWeight.bold, color: PdfColors.black),
+                      ),
+                      pw.SizedBox(height: 6),
+                      ...bullets.map((b) => pw.Padding(
+                            padding: const pw.EdgeInsets.only(bottom: 3),
+                            child: pw.Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                pw.Text('• ', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, color: PdfColors.blue700)),
+                                pw.Expanded(
+                                  child: pw.Text(
+                                    b.toString(),
+                                    style: const pw.TextStyle(fontSize: 9.5, height: 1.25, color: PdfColors.grey900),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )),
+                    ],
+                  ),
+                );
+              }),
+            ];
+          },
+        ),
+      );
+
+      await Printing.layoutPdf(
+        onLayout: (PdfPageFormat format) async => doc.save(),
+        name: 'MockTester_Saved_CA_Digest.pdf',
+      );
+    } catch (e) {
       if (mounted) {
-        Navigator.pop(context);
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text("⚡ AI Quiz Feature Ready! Questions Generated."),
-            backgroundColor: Color(0xFF059669),
-          ),
+          SnackBar(content: Text('⚠️ PDF generation failed: $e'), backgroundColor: Colors.red),
         );
       }
-    });
+    } finally {
+      if (mounted) setState(() => _isGeneratingPdf = false);
+    }
   }
 
   // 📍 BIHAR vs NATIONAL DETECTOR
@@ -168,8 +309,16 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFFF8FAFC),
       appBar: AppBar(
-        title: Text('📌 Saved CA Vault (${_savedNewsList.length})', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+        title: Text('📌 Saved CA (${_savedNewsList.length})', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
         actions: [
+          // 📄 DOWNLOAD BRANDED PDF BUTTON
+          IconButton(
+            icon: _isGeneratingPdf
+                ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF2563EB)))
+                : const Icon(Icons.picture_as_pdf_rounded, color: Color(0xFF2563EB)),
+            tooltip: "Download PDF",
+            onPressed: _isGeneratingPdf ? null : () => _downloadBrandedPdf(filteredList),
+          ),
           IconButton(
             icon: const Icon(Icons.delete_outline_rounded, color: Colors.red),
             tooltip: "Clear All",
@@ -194,42 +343,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          // ⚡ 1. GENERATE AI QUIZ CARD
-          Card(
-            color: const Color(0xFFECFDF5),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(14),
-              side: const BorderSide(color: Color(0xFF10B981), width: 1.2),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(14.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: Text(
-                      "⚡ ${filteredList.length} Saved Bulletins",
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: Color(0xFF065F46)),
-                    ),
-                  ),
-                  ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF059669),
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                    ),
-                    onPressed: () => _generateAiQuiz(filteredList),
-                    icon: const Icon(Icons.bolt_rounded, size: 16, color: Colors.amberAccent),
-                    label: const Text("Generate Quiz 🚀", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(height: 12),
-
-          // 🏷️ 2. FILTER CHIPS
+          // 🏷️ 1. FILTER CHIPS
           Row(
             children: [
               _filterChip('ALL', 'All (${_savedNewsList.length})'),
@@ -241,7 +355,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
           ),
           const SizedBox(height: 14),
 
-          // 📋 3. BULLETIN CARDS LIST
+          // 📋 2. BULLETIN CARDS LIST
           ...List.generate(filteredList.length, (index) {
             final news = filteredList[index];
             final List bullets = (news['bullets'] as List?) ?? [];
