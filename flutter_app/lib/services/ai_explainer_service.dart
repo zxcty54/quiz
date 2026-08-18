@@ -30,16 +30,16 @@ class AiExplainerService {
     return key;
   }
 
-  // 🌐 Dynamic Fallback Models (Cloud app_config.json se sync honge)
+  // 🌐 Dynamic Fallback Models (Cloud app_config.json aate hi replace ho jayenge)
   static List<String> activeModelHierarchy = [
-    "gemma-4-26b-a4b-it",
     "llama-3.3-70b-versatile",
-    "gemini-2.0-flash",
-    "llama-3.1-8b-instant"
+    "gemini-1.5-flash",
+    "llama-3.1-8b-instant",
+    "gemini-2.0-flash"
   ];
   static bool isAiActive = true;
 
-  // 🔄 Dynamic Config Sync from GitHub app_config.json
+  // 🔄 Dynamic Config Sync from GitHub root app_config.json
   static void updateModelFromConfig(Map<String, dynamic> config) {
     if (config.containsKey('ai_config')) {
       final dynamic aiCfg = config['ai_config'];
@@ -64,7 +64,7 @@ class AiExplainerService {
         if (aiCfg['is_ai_active'] != null) {
           isAiActive = aiCfg['is_ai_active'] == true;
         }
-        debugPrint("🤖 Updated AI Routing Chain: ${activeModelHierarchy.join(' ➔ ')}");
+        debugPrint("🤖 Updated AI Routing Chain from app_config: ${activeModelHierarchy.join(' ➔ ')}");
       }
     }
   }
@@ -73,7 +73,7 @@ class AiExplainerService {
   static Future<String> _generateWithHybridRouting(
     String systemPrompt,
     String userPrompt, {
-    int maxTokens = 600,
+    int maxTokens = 1200, // 🚀 1200 Tokens for Full Uncut Answers
     double temperature = 0.5,
   }) async {
     if (!isAiActive) {
@@ -114,7 +114,7 @@ class AiExplainerService {
                 "maxOutputTokens": maxTokens,
               }
             }),
-          ).timeout(const Duration(seconds: 10));
+          ).timeout(const Duration(seconds: 12));
 
           if (response.statusCode == 200) {
             final Map<String, dynamic> data = jsonDecode(utf8.decode(response.bodyBytes));
@@ -152,7 +152,7 @@ class AiExplainerService {
               "max_tokens": maxTokens,
               "temperature": temperature,
             }),
-          ).timeout(const Duration(seconds: 12));
+          ).timeout(const Duration(seconds: 14));
 
           if (response.statusCode == 200) {
             final data = jsonDecode(utf8.decode(response.bodyBytes));
@@ -188,8 +188,9 @@ STRICT RULES:
 3. STRICTLY BANNED WORDS: Do NOT use casual slangs like "Aare", "Dost", "Arey", "Bhai", "Bhaiya". Use professional, respectful words like "Dekhiye", "Is question me...", "Aapne yahan...".
 4. DO NOT use robotic template headers like 'Direct Answer:', 'Core Concept:', 'Section 1:'.
 5. ALWAYS use a practical, relatable daily-life comparison or analogy.
-6. Explain clearly why the student's doubt point is wrong or right and why the correct answer is accurate.
-7. Strictly NO Devanagari script. Use simple Roman Hinglish only.
+6. COMPLETENESS: Never leave your sentences or bullet points incomplete. Finish all explanations with a proper conclusion.
+7. Explain clearly why the student's doubt point is wrong or right and why the correct answer is accurate.
+8. Strictly NO Devanagari script. Use simple Roman Hinglish only.
 """;
 
     final String userPrompt = """
@@ -201,7 +202,7 @@ Correct Answer: $correctAnswer
 STUDENT'S EXACT DOUBT: "$userDoubt"
 """;
 
-    return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 600, temperature: 0.7);
+    return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 1000, temperature: 0.6);
   }
 
   // 2️⃣ DOCTOR DIAGNOSIS & PRESCRIPTION HEALTH AUDIT
@@ -251,10 +252,10 @@ Questions Context:
 ${qSummaries.join('\n')}
 """;
 
-    return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 600, temperature: 0.3);
+    return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 800, temperature: 0.3);
   }
 
-  // 3️⃣ LIVE DYNAMIC "WHY WRONG?" EXPLAINER (SIMPLE HINGLISH, 180-280 WORDS MAX)
+  // 3️⃣ LIVE DYNAMIC "WHY WRONG?" EXPLAINER (SIMPLE HINGLISH)
   static Future<String> explainWhyWrong({
     required String question,
     required List<String> options,
@@ -287,8 +288,8 @@ STRICT RULES:
 2. STRICTLY BANNED WORDS: 'Aare', 'Dost', 'Arey', 'Bhai', 'Bhaiya'. Use polite terms like "Dekhiye", "Is option me...", "Aapne yahan...".
 3. ABSOLUTELY NO NCERT or bookish copy-paste language.
 4. MUST include a relatable real-life analogy or daily object comparison.
-5. PROACTIVELY resolve common sub-doubts related to this topic so students don't need to ask again.
-6. TARGET LENGTH: Keep the complete response short, crisp, and to the point (Strictly between 180 to 280 words maximum).
+5. COMPLETENESS: Ensure full complete sentences without sudden cutoff.
+6. PROACTIVELY resolve common sub-doubts related to this topic so students don't need to ask again.
 
 FORMAT YOUR RESPONSE IN THIS EXACT STRUCTURE:
 
@@ -309,7 +310,7 @@ STUDENT CHOSE: "$userChoice"
 CORRECT ANSWER: "$correctAnswer"
 """;
 
-    return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 700, temperature: 0.5);
+    return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 1100, temperature: 0.5);
   }
 
   // 4️⃣ COMPATIBILITY METHOD FOR OLD WIDGETS
