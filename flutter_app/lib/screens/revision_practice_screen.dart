@@ -302,9 +302,8 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         clean.startsWith('option 3');
   }
 
-  // ✨ 2-STAGE PROFESSIONAL EXPLANATION: PRIMARY REASON + COLLAPSED TRAP ACCORDION
+// ✨ SMART GROUPED 2-STAGE EXPLANATION (Green Box holds ALL correct explanation text)
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
-    // 1. Sanitize text, LaTeX & auto-convert 0-based index to A,B,C,D
     String cleaned = rawExplanation
         .replaceAll(r'\n', '\n')
         .replaceAll(r'\\text', r'\text')
@@ -324,53 +323,56 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         .where((p) => p.isNotEmpty)
         .toList();
 
-    List<String> distinctPoints = [];
+    List<String> distinctBlocks = [];
+    String currentBlock = "";
 
+    // 1. Group multi-line explanation into structured blocks
     for (String line in rawLines) {
-      if (line.contains('•') && line.indexOf('•') != line.lastIndexOf('•')) {
-        List<String> subParts = line
-            .split(RegExp(r'(?=•)'))
-            .map((s) => s.trim())
-            .where((s) => s.isNotEmpty)
-            .toList();
-        distinctPoints.addAll(subParts);
+      bool isNewBlockHeader = line.startsWith('•') ||
+          line.startsWith('-') ||
+          line.toLowerCase().startsWith('option') ||
+          line.toLowerCase().startsWith('statement') ||
+          line.startsWith('📌') ||
+          line.startsWith('Key takeaway') ||
+          RegExp(r'^\d+\.').hasMatch(line);
+
+      if (isNewBlockHeader && currentBlock.isNotEmpty) {
+        distinctBlocks.add(currentBlock.trim());
+        currentBlock = line;
       } else {
-        distinctPoints.add(line);
+        if (currentBlock.isEmpty) {
+          currentBlock = line;
+        } else {
+          currentBlock += "\n$line";
+        }
       }
     }
+    if (currentBlock.isNotEmpty) distinctBlocks.add(currentBlock.trim());
 
-    if (distinctPoints.length <= 1 && cleaned.contains('Option')) {
-      distinctPoints = cleaned
-          .split(RegExp(r'(?=•|\bOption\s+[A-D0-9]|\bStatement\s+[A-D0-9]|\([A-D0-9]\)|📌)'))
-          .map((s) => s.trim())
-          .where((s) => s.isNotEmpty)
-          .toList();
-    }
+    List<String> primaryCorrectBlocks = [];
+    List<String> trapOptionBlocks = [];
+    List<String> takeawayBlocks = [];
 
-    List<String> correctPoints = [];
-    List<String> otherOptionPoints = [];
-    List<String> generalPoints = [];
+    for (String block in distinctBlocks) {
+      final String lower = block.toLowerCase();
 
-    for (String point in distinctPoints) {
-      final String lower = point.toLowerCase();
-      bool isCorrect = lower.contains('correct hai') ||
-          lower.contains('is correct') ||
-          lower.contains('bilkul sahi') ||
-          lower.contains('sahi hai') ||
-          point.contains('सही है');
+      bool isIncorrectTrap = (lower.contains('incorrect') ||
+              lower.contains('galat') ||
+              lower.contains('false') ||
+              lower.contains('trap assign')) &&
+          _isOptionPoint(block);
 
-      bool isIncorrect = lower.contains('incorrect hai') ||
-          lower.contains('is incorrect') ||
-          lower.contains('galat hai') ||
-          lower.contains('is false') ||
-          _paraStartsOption(point);
+      bool isTakeaway = lower.startsWith('key takeaway') ||
+          lower.startsWith('summary') ||
+          block.startsWith('📌');
 
-      if (isCorrect) {
-        correctPoints.add(point);
-      } else if (isIncorrect) {
-        otherOptionPoints.add(point);
+      if (isIncorrectTrap) {
+        trapOptionBlocks.add(block);
+      } else if (isTakeaway) {
+        takeawayBlocks.add(block);
       } else {
-        generalPoints.add(point);
+        // Correct logic + formulas + theoretical context
+        primaryCorrectBlocks.add(block);
       }
     }
 
@@ -396,7 +398,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🏆 1. TOP HEADER STRIP
+          // 🏆 1. HEADER STRIP
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
@@ -433,100 +435,56 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 🟢 1. ALWAYS VISIBLE: Core Concept & Correct Logic
-                if (correctPoints.isNotEmpty) ...[
-                  ...correctPoints.map((point) => Container(
-                        width: double.infinity,
-                        margin: const EdgeInsets.only(bottom: 10),
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4),
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(
-                            color: isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0),
-                          ),
-                        ),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Padding(
-                              padding: EdgeInsets.only(top: 2),
-                              child: Icon(Icons.check_circle_rounded, size: 16, color: Color(0xFF16A34A)),
-                            ),
-                            const SizedBox(width: 8),
-                            Expanded(
-                              child: MathFormattedText(
-                                text: point,
-                                textStyle: TextStyle(
-                                  fontSize: 13.5,
-                                  fontWeight: FontWeight.w600,
-                                  color: isDark ? const Color(0xFF86EFAC) : const Color(0xFF14532D),
-                                  height: 1.45,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      )),
-                ],
-
-                // 📄 General Background Notes & Equations (if any)
-                ...generalPoints.map((point) {
-                  bool isEquation = (point.contains(r'\rightarrow') ||
-                          point.contains(r'\xrightarrow') ||
-                          point.contains('=')) &&
-                      (point.contains('Cr') ||
-                          point.contains('SO_4') ||
-                          point.contains('CO_2') ||
-                          point.contains('+') ||
-                          point.contains('Diamond'));
-
-                  if (isEquation) {
-                    return Container(
-                      width: double.infinity,
-                      margin: const EdgeInsets.symmetric(vertical: 8),
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                      decoration: BoxDecoration(
-                        color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(
-                          color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
-                        ),
-                      ),
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        physics: const BouncingScrollPhysics(),
-                        child: ConstrainedBox(
-                          constraints: const BoxConstraints(minWidth: 260),
-                          child: MathFormattedText(
-                            text: point,
-                            textStyle: TextStyle(
-                              fontSize: 13.5,
-                              fontWeight: FontWeight.bold,
-                              color: isDark ? Colors.white : const Color(0xFF0F172A),
-                            ),
-                          ),
-                        ),
-                      ),
-                    );
-                  }
-
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 8.0),
-                    child: MathFormattedText(
-                      text: point,
-                      textStyle: TextStyle(
-                        fontSize: 13,
-                        color: textColor,
-                        height: 1.45,
+                // 🟢 1. UNIFIED COMPLETE GREEN BOX (Holds All Correct Text & Steps)
+                if (primaryCorrectBlocks.isNotEmpty) ...[
+                  Container(
+                    width: double.infinity,
+                    margin: const EdgeInsets.only(bottom: 12),
+                    padding: const EdgeInsets.all(14),
+                    decoration: BoxDecoration(
+                      color: isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0),
                       ),
                     ),
-                  );
-                }),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: primaryCorrectBlocks.map((block) {
+                        return Padding(
+                          padding: const EdgeInsets.only(bottom: 8.0),
+                          child: MathFormattedText(
+                            text: block,
+                            textStyle: TextStyle(
+                              fontSize: 13.5,
+                              fontWeight: FontWeight.w500,
+                              color: isDark ? const Color(0xFF86EFAC) : const Color(0xFF14532D),
+                              height: 1.45,
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                    ),
+                  ),
+                ],
 
-                // 🔽 2. COLLAPSIBLE ACCORDION: Other Options & Trap Breakdown
-                if (otherOptionPoints.isNotEmpty) ...[
-                  const SizedBox(height: 8),
+                // 📌 Key Takeaway / Summary Note
+                ...takeawayBlocks.map((point) => Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: MathFormattedText(
+                        text: point,
+                        textStyle: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600,
+                          color: textColor,
+                          height: 1.45,
+                        ),
+                      ),
+                    )),
+
+                // 🔽 2. COLLAPSIBLE ACCORDION FOR TRAPS / WRONG OPTIONS
+                if (trapOptionBlocks.isNotEmpty) ...[
+                  const SizedBox(height: 6),
                   Theme(
                     data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
                     child: Container(
@@ -548,7 +506,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                             padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: otherOptionPoints.map((item) {
+                              children: trapOptionBlocks.map((item) {
                                 return Container(
                                   width: double.infinity,
                                   margin: const EdgeInsets.only(bottom: 8),
@@ -590,7 +548,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
                 const Divider(height: 24),
 
-                // 💡 3. COMMUNITY SHORT-TRICK SUBMISSION WIDGET
+                // 💡 3. COMMUNITY SHORT-TRICK BOX
                 RevisionTrickSubmitBox(
                   testTitle: widget.testTitle,
                   qIndex: _currentIndex,
