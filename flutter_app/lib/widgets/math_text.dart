@@ -13,94 +13,93 @@ class MathFormattedText extends StatelessWidget {
     this.textAlign = TextAlign.start,
   });
 
-  // 🧹 1. Deep LaTeX & Chemistry Token Normalizer + OCR Sanitizer
+  // 🧹 1. UNIVERSAL COMPREHENSIVE PHYSICS & MATH SANITIZER
   static String sanitizeInput(String raw) {
     if (raw.isEmpty) return "";
     String s = raw;
 
-    // A. Fix escaped newlines & backslashes from JSON
+    // 1️⃣ Normalize JSON Escaping & HTML Entities
     s = s.replaceAll(r'\n', '\n');
     s = s.replaceAll(r'\\\\', r'\').replaceAll(r'\\', r'\');
-
-    // B. Fix HTML entities
     s = s.replaceAll('&nbsp;', ' ').replaceAll('&lt;', '<').replaceAll('&gt;', '>');
 
-    // C. Fix OCR forward slash mistakes (/frac -> \frac, /sqrt -> \sqrt)
+    // 2️⃣ Fix OCR Typo Slashes & Spacing
+    s = s.replaceAllMapped(RegExp(r'(?:^|\s)/([a-zA-Z]+)'), (m) => ' \\${m.group(1)}');
+    s = s.replaceAllMapped(RegExp(r'\\\s+([a-zA-Z]+)'), (m) => '\\${m.group(1)}');
+    s = s.replaceAllMapped(RegExp(r'\\frac\s*\(([^)]+)\)\s*\(([^)]+)\)'), (m) => '\\frac{${m.group(1)}}{${m.group(2)}}');
+    s = s.replaceAllMapped(RegExp(r'\\sqrt\s*\(([^)]+)\)'), (m) => '\\sqrt{${m.group(1)}}');
+
+    // 3️⃣ 🚨 CRITICAL: Fix Jammed/Glued Math & Words ($K$ya -> $K$ ya, $K > 1$hamesha -> $K > 1$ hamesha)
     s = s.replaceAllMapped(
-      RegExp(r'(?:^|\s)/([a-zA-Z]+)'),
-      (m) => ' \\${m.group(1)}',
+      RegExp(r'\$([^\$]+?)\$([a-zA-Z\u0900-\u097F]+)'),
+      (m) => '\$${m.group(1)}\$ ${m.group(2)}',
+    );
+    s = s.replaceAllMapped(
+      RegExp(r'([a-zA-Z\u0900-\u097F]+)\$([^\$]+?)\$'),
+      (m) => '${m.group(1)} \$${m.group(2)}\$',
     );
 
-    // D. Fix spaces after backslash (\ frac -> \frac, \ int -> \int, \ theta -> \theta)
+    // 4️⃣ 🚨 CRITICAL: Unwrap Math from Bold & HTML Tags (**$...$** -> $...$)
     s = s.replaceAllMapped(
-      RegExp(r'\\\s+([a-zA-Z]+)'),
-      (m) => '\\${m.group(1)}',
+      RegExp(r'\*\*\s*(\$\$[\s\S]*?\$\$|\$[^\$]+?\$)\s*\*\*'),
+      (m) => m.group(1) ?? '',
+    );
+    s = s.replaceAllMapped(
+      RegExp(r'<\s*b\s*>\s*(\$\$[\s\S]*?\$\$|\$[^\$]+?\$)\s*<\s*/\s*b\s*>', caseSensitive: false),
+      (m) => m.group(1) ?? '',
+    );
+    s = s.replaceAllMapped(
+      RegExp(r'<\s*strong\s*>\s*(\$\$[\s\S]*?\$\$|\$[^\$]+?\$)\s*<\s*/\s*strong\s*>', caseSensitive: false),
+      (m) => m.group(1) ?? '',
     );
 
-    // E. Fix split dollars and messy spaces: "$ \text{SO}_2$" -> "$\text{SO}_2$"
+    // 5️⃣ Fix Dollar Boundary Whitespaces ($ formula $ -> $formula$)
     s = s.replaceAllMapped(RegExp(r'\$\s+'), (m) => r'$');
     s = s.replaceAllMapped(RegExp(r'\s+\$'), (m) => r'$');
 
-    // F. Fix un-spaced chemical ions: Al^{3+}, Ca^{2+}, Na^+, Al^(3+)
-    s = s.replaceAllMapped(
-      RegExp(r'([A-Za-z]+)\^\{?([0-9]*[\+\-])\}?'),
-      (m) => '${m.group(1)}^{{${m.group(2)}}}',
-    );
-
-    // G. Split comma-separated multiple math terms inside single dollar sign:
-    // e.g. "$NaCl, KCl, CaCl_2$" -> "$NaCl$, $KCl$, $CaCl_2$"
+    // 6️⃣ Separate Comma-separated variables in single dollar ($NaCl, KCl$ -> $NaCl$, $KCl$)
     s = s.replaceAllMapped(RegExp(r'\$([^\$]+?)\$'), (match) {
       String inside = match.group(1)!;
-      if (inside.contains(',') && !inside.contains(r'\frac') && !inside.contains(r'\left')) {
+      if (inside.contains(',') && !inside.contains(r'\frac') && !inside.contains(r'\left') && !inside.contains('{')) {
         List<String> parts = inside.split(',').map((p) => p.trim()).toList();
         return parts.map((p) => p.isNotEmpty ? '\$$p\$' : '').join(', ');
       }
       return '\$$inside\$';
     });
 
-    // H. Fix OCR parentheses instead of braces: \frac(a)(b) -> \frac{a}{b}
+    // 7️⃣ Fix Multi-word Subscripts inside Math (E_{inside} -> E_{\text{inside}})
     s = s.replaceAllMapped(
-      RegExp(r'\\frac\s*\(([^)]+)\)\s*\(([^)]+)\)'),
-      (m) => '\\frac{${m.group(1)}}{${m.group(2)}}',
-    );
-    s = s.replaceAllMapped(
-      RegExp(r'\\sqrt\s*\(([^)]+)\)'),
-      (m) => '\\sqrt{${m.group(1)}}',
+      RegExp(r'_\{([a-zA-Z]{2,})\}'),
+      (m) => '_{\\text{${m.group(1)}}}',
     );
 
-    // I. Auto-wrap common floating chemistry subscripts if naked: e.g. SO_2, CO_2, H_2O, NH_3
-    final List<String> chemFormulas = [
+    // 8️⃣ Auto-wrap Common Naked Chemistry & Physics Subscripts
+    final List<String> nakedFormulas = [
       r'SO_2', r'CO_2', r'H_2O', r'NH_3', r'H_2', r'N_2', r'O_2',
-      r'CaCl_2', r'AlCl_3', r'Cr_2O_3', r'K_2Cr_2O_7', r'H_2SO_4', r'CH_4', r'CH_3OH'
+      r'CaCl_2', r'AlCl_3', r'Cr_2O_3', r'K_2Cr_2O_7', r'H_2SO_4', r'CH_4', r'CH_3OH',
+      r'T_c', r'E_0', r'E_p', r'V_{\text{surface}}', r'q_{\text{enclosed}}', r'q_{\text{in}}'
     ];
-    for (String chem in chemFormulas) {
+    for (String formula in nakedFormulas) {
       s = s.replaceAllMapped(
-        RegExp('(?<!\\\$)\\b' + RegExp.escape(chem) + '\\b(?!\\s*\\\$|\})'),
+        RegExp('(?<!\\\$)\\b' + RegExp.escape(formula) + '\\b(?!\\s*\\\$|\})'),
         (m) => '\$${m.group(0)}\$',
       );
-    }
-
-    // J. Auto-wrap floating naked LaTeX commands in $...$ if $ is missing
-    final List<String> mathKeywords = [
-      'frac', 'sqrt', 'int', 'sum', 'Delta', 'delta', 'alpha', 'beta', 'gamma',
-      'theta', 'lambda', 'mu', 'pi', 'sigma', 'omega', 'times', 'div', 'rightarrow',
-      'leftarrow', 'le', 'ge', 'ne', 'approx', 'pm', 'degree', 'circ', 'vec'
-    ];
-    final String pattern = r'(\\(?:' + mathKeywords.join('|') + r')(?:\{[^}]*\}|\s+[a-zA-Z0-9_]+|[a-zA-Z0-9_]*))';
-    if (!s.contains(r'$')) {
-      s = s.replaceAllMapped(RegExp(pattern), (m) => '\$${m.group(1)}\$');
     }
 
     return s;
   }
 
-  // 🧹 2. Graceful Unicode Fallback (Agar KaTeX syntax crash kare toh clean symbols dikhaye)
+  // 🧹 2. GRACEFUL UNICODE FALLBACK ENGINE (In case of extreme TeX syntax corruption)
   static String fallbackToUnicode(String input) {
     String res = input;
     res = res.replaceAllMapped(RegExp(r'\\text\{([^}]+)\}'), (m) => m[1] ?? '');
     res = res.replaceAllMapped(RegExp(r'\\frac\{([^}]+)\}\{([^}]+)\}'), (m) => '(${m[1]}/${m[2]})');
     res = res.replaceAllMapped(RegExp(r'\\sqrt\{([^}]+)\}'), (m) => '√(${m[1]})');
     res = res.replaceAll(r'\varepsilon_0', 'ε₀');
+    res = res.replaceAll(r'\varepsilon_r', 'εᵣ');
+    res = res.replaceAll(r'\varepsilon', 'ε');
+    res = res.replaceAll(r'\Phi', 'Φ');
+    res = res.replaceAll(r'\phi', 'ϕ');
     res = res.replaceAll(r'\Delta', 'Δ');
     res = res.replaceAll(r'\int', '∫');
     res = res.replaceAll(r'\le', '≤');
@@ -109,6 +108,8 @@ class MathFormattedText extends StatelessWidget {
     res = res.replaceAll(r'\times', '×');
     res = res.replaceAll(r'\pm', '±');
     res = res.replaceAll(r'\pi', 'π');
+    res = res.replaceAll(r'\infty', '∞');
+    res = res.replaceAll(r'\theta', 'θ');
     res = res.replaceAll(r'{', '').replaceAll(r'}', '').replaceAll(r'\', '').replaceAll(r'$', '');
     return res;
   }
@@ -127,10 +128,9 @@ class MathFormattedText extends StatelessWidget {
         );
 
     final String sanitized = sanitizeInput(text);
-
     final List<InlineSpan> spans = [];
 
-    // Master Matcher: Display Math ($$), Inline Math ($), Markdown Bold (**), HTML Bold (<b>/<strong>), Line Breaks (<br>)
+    // Master Matcher Regex
     final RegExp masterRegExp = RegExp(
       r'(\$\$[\s\S]*?\$\$|\$[^\$]+?\$|\*\*(.*?)\*\*|<br\s*/?>|<b>(.*?)<\/b>|<strong>(.*?)<\/strong>)',
       caseSensitive: false,
@@ -151,10 +151,6 @@ class MathFormattedText extends StatelessWidget {
       // 1️⃣ Display Math ($$...$$)
       if (fullMatch.startsWith(r'$$') && fullMatch.endsWith(r'$$')) {
         String mathContent = fullMatch.substring(2, fullMatch.length - 2).trim();
-        mathContent = mathContent.replaceAllMapped(
-          RegExp(r'_\{([a-zA-Z]{2,})\}'),
-          (m) => '_{\\text{${m.group(1)}}}',
-        );
 
         spans.add(WidgetSpan(
           alignment: PlaceholderAlignment.middle,
@@ -172,10 +168,6 @@ class MathFormattedText extends StatelessWidget {
       // 2️⃣ Inline Math ($...$)
       else if (fullMatch.startsWith(r'$') && fullMatch.endsWith(r'$')) {
         String mathContent = fullMatch.substring(1, fullMatch.length - 1).trim();
-        mathContent = mathContent.replaceAllMapped(
-          RegExp(r'_\{([a-zA-Z]{2,})\}'),
-          (m) => '_{\\text{${m.group(1)}}}',
-        );
 
         spans.add(WidgetSpan(
           alignment: PlaceholderAlignment.middle,
@@ -198,7 +190,7 @@ class MathFormattedText extends StatelessWidget {
           style: defaultStyle.copyWith(fontWeight: FontWeight.bold),
         ));
       }
-      // 4️⃣ HTML <b> or <strong> tags
+      // 4️⃣ HTML Bold Tags
       else if (fullMatch.toLowerCase().startsWith('<b>') || fullMatch.toLowerCase().startsWith('<strong>')) {
         final boldContent = match.group(3) ?? match.group(4) ?? '';
         spans.add(TextSpan(
@@ -206,7 +198,7 @@ class MathFormattedText extends StatelessWidget {
           style: defaultStyle.copyWith(fontWeight: FontWeight.bold),
         ));
       }
-      // 5️⃣ HTML Line break (<br> / <br/>)
+      // 5️⃣ Line Break Tags
       else if (fullMatch.toLowerCase().startsWith('<br')) {
         spans.add(const TextSpan(text: '\n'));
       }
