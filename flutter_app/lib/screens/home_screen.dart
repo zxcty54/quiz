@@ -133,7 +133,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   Future<dynamic> _fetchRobustJson(String path) async {
     String cleanPath = path.trim();
 
-    // 1. Strip all full URLs to pure relative path
     cleanPath = cleanPath
         .replaceAll('https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/', '')
         .replaceAll('https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/', '')
@@ -148,7 +147,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     final int ts = DateTime.now().millisecondsSinceEpoch;
     String encodedPath = Uri.encodeFull(cleanPath);
 
-    // 🚀 STEP 1 (TESTING MODE): Direct GitHub Official Raw API (0-Second Live Sync & Zero-Cache)
+    // 🚀 STEP 1 (TESTING MODE): Direct GitHub Official Raw API
     final String apiUrl = "https://api.github.com/repos/zxcty54/quiz/contents/$encodedPath?ref=main&t=$ts";
     try {
       final apiRes = await http.get(
@@ -164,7 +163,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       if (apiRes.statusCode == 200) {
         String rawBody = utf8.decode(apiRes.bodyBytes).trim();
 
-        // 🧹 Strip BOM & Markdown
         if (rawBody.startsWith('\uFEFF')) rawBody = rawBody.substring(1).trim();
         rawBody = rawBody.replaceAll('```json', '').replaceAll('```', '').trim();
 
@@ -213,7 +211,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return null;
   }
 
-  // 🎯 LIVE APP CONFIG SYNC (Root app_config.json) + DYNAMIC AI MODEL INJECTION
+  // 🎯 LIVE APP CONFIG SYNC
   Future<void> _fetchLiveAppConfig() async {
     final data = await _fetchRobustJson("app_config.json");
     if (data != null && data is Map && mounted) {
@@ -510,7 +508,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 🎯 UNIVERSAL REVISION PRACTICE LAUNCHER
+  // 🎯 SMART PROGRESS-AWARE REVISION LAUNCHER (With Resume & Restart Popup)
   void _launchRevisionPractice(BuildContext context, String title, String path) async {
     showDialog(
       context: context,
@@ -540,20 +538,105 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           List<Question> qList = [];
           for (var item in rawList) {
             if (item is Map) {
-              qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
+              try {
+                qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
+              } catch (_) {}
             }
           }
 
           if (context.mounted && qList.isNotEmpty) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (ctx) => RevisionPracticeScreen(
-                  testTitle: title,
-                  questions: qList,
+            // 💾 Clean Fixed Storage Key
+            String cleanKeyPath = path.split('?').first.replaceAll('/', '_').replaceAll('.', '_');
+            final String progKey = 'rev_prog_$cleanKeyPath';
+
+            final prefs = await SharedPreferences.getInstance();
+            final int savedIndex = prefs.getInt(progKey) ?? 0;
+
+            // Agar pehle se progress hai (Q.2 se lekar last question tak)
+            if (savedIndex > 0 && savedIndex < qList.length && context.mounted) {
+              showDialog(
+                context: context,
+                builder: (ctx) => AlertDialog(
+                  backgroundColor: const Color(0xFF1E293B),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                  title: Row(
+                    children: [
+                      const Text('⚡ ', style: TextStyle(fontSize: 18)),
+                      Expanded(
+                        child: Text(
+                          title,
+                          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                  content: Text(
+                    'Aapne pichli baar ${savedIndex + 1}/${qList.length} questions attempt kiye the. Kahan se continue karna hai?',
+                    style: const TextStyle(fontSize: 13, color: Color(0xFFCBD5E1), height: 1.4),
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () async {
+                        Navigator.pop(ctx);
+                        await prefs.remove(progKey); // 🗑️ Clear saved index
+                        if (context.mounted) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (c) => RevisionPracticeScreen(
+                                testTitle: title,
+                                questions: qList,
+                                initialIndex: 0,
+                                storageKey: progKey,
+                              ),
+                            ),
+                          );
+                        }
+                      },
+                      child: const Text('Restart (Q.1) 🔄', style: TextStyle(color: Colors.grey)),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF2563EB),
+                        foregroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      ),
+                      onPressed: () {
+                        Navigator.pop(ctx);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (c) => RevisionPracticeScreen(
+                              testTitle: title,
+                              questions: qList,
+                              initialIndex: savedIndex,
+                              storageKey: progKey,
+                            ),
+                          ),
+                        );
+                      },
+                      child: Text('Resume (Q.${savedIndex + 1}) ▶', style: const TextStyle(fontWeight: FontWeight.bold)),
+                    ),
+                  ],
                 ),
-              ),
-            );
+              );
+              return;
+            }
+
+            // Fresh Start agar koi progress saved na ho
+            if (context.mounted) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (ctx) => RevisionPracticeScreen(
+                    testTitle: title,
+                    questions: qList,
+                    initialIndex: 0,
+                    storageKey: progKey,
+                  ),
+                ),
+              );
+            }
             return;
           }
         } catch (e) {
