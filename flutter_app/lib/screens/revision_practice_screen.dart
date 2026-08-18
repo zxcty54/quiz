@@ -288,9 +288,23 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // ✨ SMART AUTO-FORMATTING & COLOR-CODED EXPLANATION BUILDER
+  // 🛡️ Helper to detect option points
+  bool _paraStartsOption(String line) {
+    String clean = line.trim().toLowerCase();
+    return clean.startsWith('• option') ||
+        clean.startsWith('option a') ||
+        clean.startsWith('option b') ||
+        clean.startsWith('option c') ||
+        clean.startsWith('option d') ||
+        clean.startsWith('option 0') ||
+        clean.startsWith('option 1') ||
+        clean.startsWith('option 2') ||
+        clean.startsWith('option 3');
+  }
+
+  // ✨ 2-STAGE PROFESSIONAL EXPLANATION: PRIMARY REASON + COLLAPSED TRAP ACCORDION
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
-    // 1. Sanitize text, escaped newlines, LaTeX & auto-convert 0-based index to A,B,C,D
+    // 1. Sanitize text, LaTeX & auto-convert 0-based index to A,B,C,D
     String cleaned = rawExplanation
         .replaceAll(r'\n', '\n')
         .replaceAll(r'\\text', r'\text')
@@ -302,11 +316,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         .replaceAll(RegExp(r'•\s*Option 0', caseSensitive: false), '• Option A')
         .replaceAll(RegExp(r'•\s*Option 1', caseSensitive: false), '• Option B')
         .replaceAll(RegExp(r'•\s*Option 2', caseSensitive: false), '• Option C')
-        .replaceAll(RegExp(r'•\s*Option 3', caseSensitive: false), '• Option D')
-        .replaceAll(RegExp(r'^\s*1\.\s*Option A', multiLine: true, caseSensitive: false), '• Option A')
-        .replaceAll(RegExp(r'^\s*2\.\s*Option B', multiLine: true, caseSensitive: false), '• Option B')
-        .replaceAll(RegExp(r'^\s*3\.\s*Option C', multiLine: true, caseSensitive: false), '• Option C')
-        .replaceAll(RegExp(r'^\s*4\.\s*Option D', multiLine: true, caseSensitive: false), '• Option D');
+        .replaceAll(RegExp(r'•\s*Option 3', caseSensitive: false), '• Option D');
 
     List<String> rawLines = cleaned
         .split('\n')
@@ -337,22 +347,48 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
           .toList();
     }
 
+    List<String> correctPoints = [];
+    List<String> otherOptionPoints = [];
+    List<String> generalPoints = [];
+
+    for (String point in distinctPoints) {
+      final String lower = point.toLowerCase();
+      bool isCorrect = lower.contains('correct hai') ||
+          lower.contains('is correct') ||
+          lower.contains('bilkul sahi') ||
+          lower.contains('sahi hai') ||
+          point.contains('सही है');
+
+      bool isIncorrect = lower.contains('incorrect hai') ||
+          lower.contains('is incorrect') ||
+          lower.contains('galat hai') ||
+          lower.contains('is false') ||
+          _paraStartsOption(point);
+
+      if (isCorrect) {
+        correctPoints.add(point);
+      } else if (isIncorrect) {
+        otherOptionPoints.add(point);
+      } else {
+        generalPoints.add(point);
+      }
+    }
+
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
     final Color cardBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
-    final Color headerBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
-    final Color headerText = isDark ? Colors.white : const Color(0xFF0F172A);
+    final Color textColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF1E293B);
 
     return Container(
       width: double.infinity,
-      margin: const EdgeInsets.only(top: 14),
+      margin: const EdgeInsets.only(top: 16),
       decoration: BoxDecoration(
         color: cardBg,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(16),
         border: Border.all(color: cardBorder, width: 1.2),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.3 : 0.04),
-            blurRadius: 10,
+            color: Colors.black.withOpacity(isDark ? 0.25 : 0.04),
+            blurRadius: 12,
             offset: const Offset(0, 4),
           )
         ],
@@ -360,12 +396,12 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🏆 1. HEADER STRIP
+          // 🏆 1. TOP HEADER STRIP
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
-              color: headerBg,
-              borderRadius: const BorderRadius.vertical(top: Radius.circular(13)),
+              color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+              borderRadius: const BorderRadius.vertical(top: Radius.circular(15)),
               border: Border(bottom: BorderSide(color: cardBorder)),
             ),
             child: Row(
@@ -376,15 +412,15 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                     color: isDark ? const Color(0xFF78350F) : const Color(0xFFFEF3C7),
                     borderRadius: BorderRadius.circular(6),
                   ),
-                  child: const Text('💡', style: TextStyle(fontSize: 14)),
+                  child: const Text('💡', style: TextStyle(fontSize: 13)),
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  _isHindi ? 'व्याख्या एवं विश्लेषण' : 'Detailed Solution',
+                  _isHindi ? 'मुख्य व्याख्या (Core Solution)' : 'Detailed Solution',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: headerText,
-                    fontSize: 13.5,
+                    color: isDark ? Colors.white : const Color(0xFF0F172A),
+                    fontSize: 14,
                     letterSpacing: 0.2,
                   ),
                 ),
@@ -392,111 +428,167 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
           ),
 
-          // 📖 2. SMART BREAKDOWN CARDS
           Padding(
-            padding: const EdgeInsets.all(14.0),
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ...distinctPoints.map((para) {
-                  final String lower = para.toLowerCase();
-
-                  bool isCorrectPoint = lower.contains('correct hai') ||
-                      lower.contains('is correct') ||
-                      lower.contains('sahi hai') ||
-                      lower.contains('bilkul sahi') ||
-                      para.contains('सही है');
-
-                  bool isIncorrectPoint = lower.contains('incorrect hai') ||
-                      lower.contains('is incorrect') ||
-                      lower.contains('is false') ||
-                      lower.contains('galat hai') ||
-                      lower.contains('galat') ||
-                      lower.contains('sasta hai') ||
-                      para.contains('गलत है');
-
-                  bool isPureEquation = (para.contains(r'\rightarrow') ||
-                          para.contains(r'\xrightarrow') ||
-                          para.contains('=')) &&
-                      (para.contains('Cr') ||
-                          para.contains('SO_4') ||
-                          para.contains('CO_2') ||
-                          para.contains('+') ||
-                          para.contains('Diamond'));
-
-                  Color stripBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
-                  Color stripBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
-                  Color badgeBg = const Color(0xFF64748B);
-                  String badgeIcon = '📌';
-
-                  if (isCorrectPoint) {
-                    stripBg = isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4);
-                    stripBorder = isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0);
-                    badgeBg = const Color(0xFF16A34A);
-                    badgeIcon = '✓';
-                  } else if (isIncorrectPoint) {
-                    stripBg = isDark ? const Color(0xFF450A0A) : const Color(0xFFFEF2F2);
-                    stripBorder = isDark ? const Color(0xFF991B1B) : const Color(0xFFFECDD3);
-                    badgeBg = const Color(0xFFDC2626);
-                    badgeIcon = '✕';
-                  } else if (isPureEquation) {
-                    stripBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9);
-                    stripBorder = isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1);
-                    badgeBg = const Color(0xFF2563EB);
-                    badgeIcon = '⚗️';
-                  }
-
-                  return Container(
-                    width: double.infinity,
-                    margin: const EdgeInsets.only(bottom: 9.0),
-                    padding: const EdgeInsets.all(12.0),
-                    decoration: BoxDecoration(
-                      color: stripBg,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: stripBorder, width: 1),
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          width: 22,
-                          height: 22,
-                          margin: const EdgeInsets.only(top: 2),
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            color: badgeBg,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Text(
-                            badgeIcon,
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 11,
-                              fontWeight: FontWeight.bold,
-                            ),
+                // 🟢 1. ALWAYS VISIBLE: Core Concept & Correct Logic
+                if (correctPoints.isNotEmpty) ...[
+                  ...correctPoints.map((point) => Container(
+                        width: double.infinity,
+                        margin: const EdgeInsets.only(bottom: 10),
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            color: isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0),
                           ),
                         ),
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: SingleChildScrollView(
-                            scrollDirection: isPureEquation ? Axis.horizontal : Axis.vertical,
-                            physics: isPureEquation
-                                ? const BouncingScrollPhysics()
-                                : const NeverScrollableScrollPhysics(),
-                            child: MathFormattedText(
-                              text: para,
-                              textStyle: TextStyle(
-                                fontSize: 13,
-                                color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF1E293B),
-                                height: 1.45,
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.only(top: 2),
+                              child: Icon(Icons.check_circle_rounded, size: 16, color: Color(0xFF16A34A)),
+                            ),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: MathFormattedText(
+                                text: point,
+                                textStyle: TextStyle(
+                                  fontSize: 13.5,
+                                  fontWeight: FontWeight.w600,
+                                  color: isDark ? const Color(0xFF86EFAC) : const Color(0xFF14532D),
+                                  height: 1.45,
+                                ),
                               ),
                             ),
+                          ],
+                        ),
+                      )),
+                ],
+
+                // 📄 General Background Notes & Equations (if any)
+                ...generalPoints.map((point) {
+                  bool isEquation = (point.contains(r'\rightarrow') ||
+                          point.contains(r'\xrightarrow') ||
+                          point.contains('=')) &&
+                      (point.contains('Cr') ||
+                          point.contains('SO_4') ||
+                          point.contains('CO_2') ||
+                          point.contains('+') ||
+                          point.contains('Diamond'));
+
+                  if (isEquation) {
+                    return Container(
+                      width: double.infinity,
+                      margin: const EdgeInsets.symmetric(vertical: 8),
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                      decoration: BoxDecoration(
+                        color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
+                        ),
+                      ),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        physics: const BouncingScrollPhysics(),
+                        child: ConstrainedBox(
+                          constraints: const BoxConstraints(minWidth: 260),
+                          child: MathFormattedText(
+                            text: point,
+                            textStyle: TextStyle(
+                              fontSize: 13.5,
+                              fontWeight: FontWeight.bold,
+                              color: isDark ? Colors.white : const Color(0xFF0F172A),
+                            ),
                           ),
                         ),
-                      ],
+                      ),
+                    );
+                  }
+
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: MathFormattedText(
+                      text: point,
+                      textStyle: TextStyle(
+                        fontSize: 13,
+                        color: textColor,
+                        height: 1.45,
+                      ),
                     ),
                   );
-                }).toList(),
+                }),
+
+                // 🔽 2. COLLAPSIBLE ACCORDION: Other Options & Trap Breakdown
+                if (otherOptionPoints.isNotEmpty) ...[
+                  const SizedBox(height: 8),
+                  Theme(
+                    data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: cardBorder),
+                      ),
+                      child: ExpansionTile(
+                        dense: true,
+                        tilePadding: const EdgeInsets.symmetric(horizontal: 12),
+                        leading: const Icon(Icons.alt_route_rounded, size: 18, color: Color(0xFF2563EB)),
+                        title: Text(
+                          _isHindi ? 'बाकी विकल्प गलत क्यों हैं? (Option Traps)' : 'Why other options are incorrect?',
+                          style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+                        ),
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: otherOptionPoints.map((item) {
+                                return Container(
+                                  width: double.infinity,
+                                  margin: const EdgeInsets.only(bottom: 8),
+                                  padding: const EdgeInsets.all(10),
+                                  decoration: BoxDecoration(
+                                    color: isDark ? const Color(0xFF1E293B) : Colors.white,
+                                    borderRadius: BorderRadius.circular(8),
+                                    border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+                                  ),
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      const Padding(
+                                        padding: EdgeInsets.only(top: 2),
+                                        child: Icon(Icons.cancel_outlined, size: 14, color: Colors.red),
+                                      ),
+                                      const SizedBox(width: 6),
+                                      Expanded(
+                                        child: MathFormattedText(
+                                          text: item,
+                                          textStyle: TextStyle(
+                                            fontSize: 12.5,
+                                            color: isDark ? Colors.grey.shade300 : const Color(0xFF334155),
+                                            height: 1.4,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              }).toList(),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+
+                const Divider(height: 24),
 
                 // 💡 3. COMMUNITY SHORT-TRICK SUBMISSION WIDGET
                 RevisionTrickSubmitBox(
@@ -820,7 +912,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               );
             }),
 
-            // 💡 4. DETAILED SOLUTION (COLOR-CODED SMART CARDS)
+            // 💡 4. DETAILED SOLUTION (2-STAGE COLLAPSIBLE ACCORDION)
             if (_isAnswered) ...[
               _buildEnhancedExplanation(currentExplanation, currentQ, isDark),
             ],
