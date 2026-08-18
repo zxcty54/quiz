@@ -288,12 +288,25 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // ✨ PROFESSIONAL UNIFIED EDTECH EXPLANATION CARD (Clean, Eye-Friendly & Scrollable Math)
+  // ✨ SMART AUTO-FORMATTING & COLOR-CODED EXPLANATION BUILDER
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
+    // 1. Sanitize text, escaped newlines, LaTeX & auto-convert 0-based index to A,B,C,D
     String cleaned = rawExplanation
         .replaceAll(r'\n', '\n')
         .replaceAll(r'\\text', r'\text')
-        .replaceAll(r'\\frac', r'\frac');
+        .replaceAll(r'\\frac', r'\frac')
+        .replaceAll(RegExp(r'\bOption 0\b', caseSensitive: false), 'Option A')
+        .replaceAll(RegExp(r'\bOption 1\b', caseSensitive: false), 'Option B')
+        .replaceAll(RegExp(r'\bOption 2\b', caseSensitive: false), 'Option C')
+        .replaceAll(RegExp(r'\bOption 3\b', caseSensitive: false), 'Option D')
+        .replaceAll(RegExp(r'•\s*Option 0', caseSensitive: false), '• Option A')
+        .replaceAll(RegExp(r'•\s*Option 1', caseSensitive: false), '• Option B')
+        .replaceAll(RegExp(r'•\s*Option 2', caseSensitive: false), '• Option C')
+        .replaceAll(RegExp(r'•\s*Option 3', caseSensitive: false), '• Option D')
+        .replaceAll(RegExp(r'^\s*1\.\s*Option A', multiLine: true, caseSensitive: false), '• Option A')
+        .replaceAll(RegExp(r'^\s*2\.\s*Option B', multiLine: true, caseSensitive: false), '• Option B')
+        .replaceAll(RegExp(r'^\s*3\.\s*Option C', multiLine: true, caseSensitive: false), '• Option C')
+        .replaceAll(RegExp(r'^\s*4\.\s*Option D', multiLine: true, caseSensitive: false), '• Option D');
 
     List<String> rawLines = cleaned
         .split('\n')
@@ -326,20 +339,20 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
     final Color cardBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
-    final Color textColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF1E293B);
-    final Color subTextColor = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
+    final Color headerBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
+    final Color headerText = isDark ? Colors.white : const Color(0xFF0F172A);
 
     return Container(
       width: double.infinity,
-      margin: const EdgeInsets.only(top: 16),
+      margin: const EdgeInsets.only(top: 14),
       decoration: BoxDecoration(
         color: cardBg,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(14),
         border: Border.all(color: cardBorder, width: 1.2),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.25 : 0.04),
-            blurRadius: 12,
+            color: Colors.black.withOpacity(isDark ? 0.3 : 0.04),
+            blurRadius: 10,
             offset: const Offset(0, 4),
           )
         ],
@@ -347,12 +360,12 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🏆 1. TOP HEADER STRIP
+          // 🏆 1. HEADER STRIP
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
             decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-              borderRadius: const BorderRadius.vertical(top: Radius.circular(15)),
+              color: headerBg,
+              borderRadius: const BorderRadius.vertical(top: Radius.circular(13)),
               border: Border(bottom: BorderSide(color: cardBorder)),
             ),
             child: Row(
@@ -363,15 +376,15 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                     color: isDark ? const Color(0xFF78350F) : const Color(0xFFFEF3C7),
                     borderRadius: BorderRadius.circular(6),
                   ),
-                  child: const Text('💡', style: TextStyle(fontSize: 13)),
+                  child: const Text('💡', style: TextStyle(fontSize: 14)),
                 ),
                 const SizedBox(width: 8),
                 Text(
                   _isHindi ? 'व्याख्या एवं विश्लेषण' : 'Detailed Solution',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: isDark ? Colors.white : const Color(0xFF0F172A),
-                    fontSize: 14,
+                    color: headerText,
+                    fontSize: 13.5,
                     letterSpacing: 0.2,
                   ),
                 ),
@@ -379,138 +392,111 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
           ),
 
-          // 📖 2. UNIFIED FLOWING CONTENT BODY
+          // 📖 2. SMART BREAKDOWN CARDS
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(14.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ...distinctPoints.map((line) {
-                  final String lower = line.toLowerCase();
+                ...distinctPoints.map((para) {
+                  final String lower = para.toLowerCase();
 
-                  bool isCorrect = lower.contains('correct hai') ||
+                  bool isCorrectPoint = lower.contains('correct hai') ||
                       lower.contains('is correct') ||
                       lower.contains('sahi hai') ||
                       lower.contains('bilkul sahi') ||
-                      line.contains('सही है');
+                      para.contains('सही है');
 
-                  bool isEquation = (line.contains(r'\rightarrow') ||
-                          line.contains(r'\xrightarrow') ||
-                          line.contains('=')) &&
-                      (line.contains('Cr') ||
-                          line.contains('SO_4') ||
-                          line.contains('CO_2') ||
-                          line.contains('+') ||
-                          line.contains('Diamond'));
+                  bool isIncorrectPoint = lower.contains('incorrect hai') ||
+                      lower.contains('is incorrect') ||
+                      lower.contains('is false') ||
+                      lower.contains('galat hai') ||
+                      lower.contains('galat') ||
+                      lower.contains('sasta hai') ||
+                      para.contains('गलत है');
 
-                  // 🟢 Case A: Correct Option Highlight Callout
-                  if (isCorrect) {
-                    return Container(
-                      width: double.infinity,
-                      margin: const EdgeInsets.only(bottom: 12),
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4),
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                          color: isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0),
-                        ),
-                      ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Padding(
-                            padding: EdgeInsets.only(top: 2),
-                            child: Icon(Icons.check_circle_rounded, size: 16, color: Color(0xFF16A34A)),
-                          ),
-                          const SizedBox(width: 8),
-                          Expanded(
-                            child: MathFormattedText(
-                              text: line,
-                              textStyle: TextStyle(
-                                fontSize: 13.5,
-                                fontWeight: FontWeight.w600,
-                                color: isDark ? const Color(0xFF86EFAC) : const Color(0xFF14532D),
-                                height: 1.45,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
+                  bool isPureEquation = (para.contains(r'\rightarrow') ||
+                          para.contains(r'\xrightarrow') ||
+                          para.contains('=')) &&
+                      (para.contains('Cr') ||
+                          para.contains('SO_4') ||
+                          para.contains('CO_2') ||
+                          para.contains('+') ||
+                          para.contains('Diamond'));
+
+                  Color stripBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
+                  Color stripBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+                  Color badgeBg = const Color(0xFF64748B);
+                  String badgeIcon = '📌';
+
+                  if (isCorrectPoint) {
+                    stripBg = isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4);
+                    stripBorder = isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0);
+                    badgeBg = const Color(0xFF16A34A);
+                    badgeIcon = '✓';
+                  } else if (isIncorrectPoint) {
+                    stripBg = isDark ? const Color(0xFF450A0A) : const Color(0xFFFEF2F2);
+                    stripBorder = isDark ? const Color(0xFF991B1B) : const Color(0xFFFECDD3);
+                    badgeBg = const Color(0xFFDC2626);
+                    badgeIcon = '✕';
+                  } else if (isPureEquation) {
+                    stripBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9);
+                    stripBorder = isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1);
+                    badgeBg = const Color(0xFF2563EB);
+                    badgeIcon = '⚗️';
                   }
 
-                  // ⚗️ Case B: Chemical / Math Equation (Scrollable Box)
-                  if (isEquation) {
-                    return Container(
-                      width: double.infinity,
-                      margin: const EdgeInsets.symmetric(vertical: 8),
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                      decoration: BoxDecoration(
-                        color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(
-                          color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
-                        ),
-                      ),
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        physics: const BouncingScrollPhysics(),
-                        child: ConstrainedBox(
-                          constraints: const BoxConstraints(minWidth: 260),
-                          child: MathFormattedText(
-                            text: line,
-                            textStyle: TextStyle(
-                              fontSize: 13.5,
-                              fontWeight: FontWeight.bold,
-                              color: isDark ? Colors.white : const Color(0xFF0F172A),
-                            ),
-                          ),
-                        ),
-                      ),
-                    );
-                  }
-
-                  // 📄 Case C: Standard Clean Paragraph / Bullet Point
-                  String displayLine = line;
-                  bool isBullet = displayLine.startsWith('•') || displayLine.startsWith('-');
-                  if (isBullet) {
-                    displayLine = displayLine.substring(1).trim();
-                  }
-
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 10),
+                  return Container(
+                    width: double.infinity,
+                    margin: const EdgeInsets.only(bottom: 9.0),
+                    padding: const EdgeInsets.all(12.0),
+                    decoration: BoxDecoration(
+                      color: stripBg,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: stripBorder, width: 1),
+                    ),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        if (isBullet) ...[
-                          Container(
-                            margin: const EdgeInsets.only(top: 7, right: 8),
-                            width: 5,
-                            height: 5,
-                            decoration: BoxDecoration(
-                              color: isDark ? const Color(0xFF38BDF8) : const Color(0xFF2563EB),
-                              shape: BoxShape.circle,
+                        Container(
+                          width: 22,
+                          height: 22,
+                          margin: const EdgeInsets.only(top: 2),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: badgeBg,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Text(
+                            badgeIcon,
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 11,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
-                        ],
+                        ),
+                        const SizedBox(width: 10),
                         Expanded(
-                          child: MathFormattedText(
-                            text: displayLine,
-                            textStyle: TextStyle(
-                              fontSize: 13.5,
-                              color: isBullet ? textColor : subTextColor,
-                              height: 1.5,
+                          child: SingleChildScrollView(
+                            scrollDirection: isPureEquation ? Axis.horizontal : Axis.vertical,
+                            physics: isPureEquation
+                                ? const BouncingScrollPhysics()
+                                : const NeverScrollableScrollPhysics(),
+                            child: MathFormattedText(
+                              text: para,
+                              textStyle: TextStyle(
+                                fontSize: 13,
+                                color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF1E293B),
+                                height: 1.45,
+                              ),
                             ),
                           ),
                         ),
                       ],
                     ),
                   );
-                }),
-
-                const SizedBox(height: 6),
-                const Divider(height: 20),
+                }).toList(),
 
                 // 💡 3. COMMUNITY SHORT-TRICK SUBMISSION WIDGET
                 RevisionTrickSubmitBox(
@@ -834,7 +820,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               );
             }),
 
-            // 💡 4. DETAILED SOLUTION (PROFESSIONAL UNIFIED CARD)
+            // 💡 4. DETAILED SOLUTION (COLOR-CODED SMART CARDS)
             if (_isAnswered) ...[
               _buildEnhancedExplanation(currentExplanation, currentQ, isDark),
             ],
