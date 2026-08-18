@@ -30,6 +30,19 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
   final Map<int, String> _whyWrongAiResponses = {};
   final Map<int, bool> _whyWrongLoading = {};
 
+  // ⏳ Global Anti-Spam Cooldown across all Vault AI Actions (15 Seconds)
+  static DateTime? _lastVaultAiCallTime;
+  static const int _vaultCooldownSeconds = 15;
+
+  int _getVaultCooldownRemaining() {
+    if (_lastVaultAiCallTime == null) return 0;
+    final int diff = DateTime.now().difference(_lastVaultAiCallTime!).inSeconds;
+    if (diff < _vaultCooldownSeconds) {
+      return _vaultCooldownSeconds - diff;
+    }
+    return 0;
+  }
+
   @override
   void initState() {
     super.initState();
@@ -47,6 +60,19 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
   }
 
   void _runAiAnalysis(List<Map<String, dynamic>> list) async {
+    final int cooldown = _getVaultCooldownRemaining();
+    if (cooldown > 0) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('⏳ Please wait ${cooldown}s before analyzing report again!'),
+          duration: const Duration(seconds: 2),
+          backgroundColor: const Color(0xFFDC2626),
+        ),
+      );
+      return;
+    }
+
+    _lastVaultAiCallTime = DateTime.now();
     setState(() => _isAnalyzing = true);
     String report = await AiExplainerService.analyzeWrongQuestions(list);
     if (mounted) {
@@ -234,7 +260,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     );
   }
 
-  // 💬 BOTTOM SHEET FOR VAULT QUESTION CUSTOM DOUBT (1 ASK & 100 CHARS LIMIT)
+  // 💬 BOTTOM SHEET FOR VAULT QUESTION CUSTOM DOUBT (15s COOLDOWN + RETRY PROTECTION)
   void _openVaultAiDoubtDialog(Question currentQ, int qIndex) {
     bool hasAsked = _vaultAskedStatus[qIndex] ?? false;
     TextEditingController doubtController = TextEditingController();
@@ -248,6 +274,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
         return StatefulBuilder(
           builder: (context, setModalState) {
             final history = _vaultAiChatHistory[qIndex] ?? [];
+            final int cooldownLeft = _getVaultCooldownRemaining();
 
             return Padding(
               padding: EdgeInsets.only(
@@ -341,7 +368,22 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                               ? null
                               : () async {
                                   if (doubtController.text.trim().isEmpty) return;
+
+                                  // ⏱️ ANTI-SPAM RETRY COOLDOWN CHECK
+                                  final int cooldown = _getVaultCooldownRemaining();
+                                  if (cooldown > 0) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text('⏳ Please wait ${cooldown}s before trying again!'),
+                                        duration: const Duration(seconds: 2),
+                                        backgroundColor: const Color(0xFFDC2626),
+                                      ),
+                                    );
+                                    return;
+                                  }
+
                                   setModalState(() => isAsking = true);
+                                  _lastVaultAiCallTime = DateTime.now(); // ⏱️ Reset timestamp
 
                                   String userQuery = doubtController.text.trim();
 
@@ -352,24 +394,49 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                     userDoubt: userQuery,
                                   );
 
-                                  setState(() {
-                                    _vaultAskedStatus[qIndex] = true;
-                                    _vaultAiChatHistory[qIndex] = [
-                                      ...history,
-                                      {'doubt': userQuery, 'response': aiResp}
-                                    ];
-                                  });
+                                  // 🛡️ SMART CHECK: Sirf genuine success par limit block hogi
+                                  bool isSuccess = aiResp.isNotEmpty && 
+                                                   !aiResp.contains("⚠️ AI Service busy hai") &&
+                                                   !aiResp.contains("Doubt resolve nahi ho paya");
 
-                                  setModalState(() {
-                                    hasAsked = true;
-                                    isAsking = false;
-                                    doubtController.clear();
-                                  });
+                                  if (isSuccess) {
+                                    setState(() {
+                                      _vaultAskedStatus[qIndex] = true;
+                                      _vaultAiChatHistory[qIndex] = [
+                                        ...history,
+                                        {'doubt': userQuery, 'response': aiResp}
+                                      ];
+                                    });
+
+                                    setModalState(() {
+                                      hasAsked = true;
+                                      isAsking = false;
+                                      doubtController.clear();
+                                    });
+                                  } else {
+                                    // Error ya Busy hone par block nahi hoga, user 15s baad retry kar sakega
+                                    setModalState(() {
+                                      isAsking = false;
+                                    });
+                                    if (context.mounted) {
+                                      ScaffoldMessenger.of(context).showSnackBar(
+                                        SnackBar(
+                                          content: Text(aiResp),
+                                          backgroundColor: Colors.red.shade800,
+                                          duration: const Duration(seconds: 3),
+                                        ),
+                                      );
+                                    }
+                                  }
                                 },
                           icon: isAsking
                               ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
                               : const Icon(Icons.send_rounded, size: 16),
-                          label: Text(isAsking ? 'Analyzing Deep Logic...' : 'Get AI Explanation 🚀'),
+                          label: Text(
+                            isAsking
+                                ? 'Analyzing Deep Logic...'
+                                : (cooldownLeft > 0 ? 'Wait ${cooldownLeft}s (Cooldown) ⏳' : 'Get AI Explanation 🚀'),
+                          ),
                         ),
                       )
                     ] else ...[
@@ -393,11 +460,24 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     );
   }
 
-  // 🎯 PURE LIVE AI TRIGGER FOR "WHY WRONG" WITH FREEZE PROTECTION & REAL OPTION PASSING
+  // 🎯 PURE LIVE AI TRIGGER FOR "WHY WRONG" (WITH 15s COOLDOWN PROTECTION)
   void _fetchWhyWrongAi(Question q, String userChoice, String userTag, int index) async {
-    // 🛑 Block execution if already analyzed or currently loading
     if (_whyWrongLoading[index] == true || _whyWrongAiResponses[index] != null) return;
 
+    // ⏱️ ANTI-SPAM RETRY COOLDOWN CHECK
+    final int cooldown = _getVaultCooldownRemaining();
+    if (cooldown > 0) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('⏳ Please wait ${cooldown}s before analyzing trap again!'),
+          duration: const Duration(seconds: 2),
+          backgroundColor: const Color(0xFFDC2626),
+        ),
+      );
+      return;
+    }
+
+    _lastVaultAiCallTime = DateTime.now(); // ⏱️ Reset timestamp
     setState(() => _whyWrongLoading[index] = true);
 
     String selectedOpt = userChoice.trim().isNotEmpty ? userChoice : "Attempted Option";
@@ -411,15 +491,31 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     );
 
     if (mounted) {
+      bool isSuccess = result.isNotEmpty && !result.contains("⚠️ AI Service busy hai");
+
       setState(() {
-        _whyWrongAiResponses[index] = result;
+        if (isSuccess) {
+          _whyWrongAiResponses[index] = result;
+        }
         _whyWrongLoading[index] = false;
       });
+
+      if (!isSuccess) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(result),
+            backgroundColor: Colors.red.shade800,
+            duration: const Duration(seconds: 3),
+          ),
+        );
+      }
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final int globalCooldown = _getVaultCooldownRemaining();
+
     return Scaffold(
       backgroundColor: const Color(0xFFF8FAFC),
       appBar: AppBar(
@@ -758,7 +854,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                       ],
                                     ),
                                   ),
-                                  // 🔒 FROZEN / DISABLED BUTTON WHEN ALREADY ANALYZED
+                                  // 🔒 ANALYZE TRAP BUTTON (Fail-Safe + Cooldown Support)
                                   InkWell(
                                     onTap: (isWhyWrongLoading || whyWrongAiText != null) 
                                         ? null 
@@ -774,7 +870,9 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                       child: isWhyWrongLoading
                                           ? const SizedBox(width: 12, height: 12, child: CircularProgressIndicator(strokeWidth: 1.5, color: Colors.white))
                                           : Text(
-                                              whyWrongAiText != null ? 'Analyzed ✓' : 'Analyze Trap ⚡',
+                                              whyWrongAiText != null 
+                                                  ? 'Analyzed ✓' 
+                                                  : (globalCooldown > 0 ? 'Wait ${globalCooldown}s' : 'Analyze Trap ⚡'),
                                               style: const TextStyle(fontSize: 9.5, color: Colors.white, fontWeight: FontWeight.bold),
                                             ),
                                     ),
