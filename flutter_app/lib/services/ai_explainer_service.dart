@@ -64,17 +64,17 @@ class AiExplainerService {
         if (aiCfg['is_ai_active'] != null) {
           isAiActive = aiCfg['is_ai_active'] == true;
         }
-        debugPrint("🤖 Updated AI Routing Chain from app_config: ${activeModelHierarchy.join(' ➔ ')}");
+        debugPrint("🤖 Updated AI Routing Chain: ${activeModelHierarchy.join(' ➔ ')}");
       }
     }
   }
 
-  // 🔄 KEYWORD-BASED HYBRID ROUTING ENGINE (Google AI Studio + Groq API)
+  // 🔄 KEYWORD-BASED HYBRID ROUTING ENGINE (With 1200 Max Tokens & Safe Buffer)
   static Future<String> _generateWithHybridRouting(
     String systemPrompt,
     String userPrompt, {
-    int maxTokens = 1200, // 🚀 1200 Tokens for Full Uncut Answers
-    double temperature = 0.5,
+    int maxTokens = 1200, // 🚀 Complete responses without truncation
+    double temperature = 0.4,
   }) async {
     if (!isAiActive) {
       return "⚠️ AI Doubt service is temporarily paused for maintenance.";
@@ -122,7 +122,8 @@ class AiExplainerService {
             if (candidates != null && candidates.isNotEmpty) {
               final parts = candidates[0]['content']['parts'] as List?;
               if (parts != null && parts.isNotEmpty) {
-                return parts[0]['text'].toString().trim();
+                String text = parts[0]['text'].toString().trim();
+                if (text.isNotEmpty) return text;
               }
             }
           } else {
@@ -172,7 +173,7 @@ class AiExplainerService {
     return "⚠️ AI Service busy hai. Kripya thodi der baad dobara try karein.";
   }
 
-  // 1️⃣ CUSTOM DOUBT SOLVER
+  // 1️⃣ SMART CUSTOM DOUBT SOLVER (With full sentence completion)
   static Future<String> askCustomDoubt({
     required String question,
     required List<String> options,
@@ -180,17 +181,15 @@ class AiExplainerService {
     required String userDoubt,
   }) async {
     const String systemPrompt = """
-You are a respectful, highly experienced, and friendly BPSC/BSSC Exam Professor from Patna explaining concepts in simple, everyday conversational Hinglish (the way students talk in daily life or chat).
+You are a senior, highly experienced BPSC/BSSC Exam Professor explaining concepts directly to an aspirant in clear, conversational Roman Hinglish (normal everyday Hindi-English blend).
 
 STRICT RULES:
-1. Speak DIRECTLY to the student in simple, clear, daily-life Hinglish.
-2. DO NOT use complex Sanskritized Shuddh Hindi words written in Roman script. Use normal English words wherever natural (e.g. use 'difficult', 'concept', 'reason', 'mistake', 'option', 'process' instead of tough Hindi vocabulary).
-3. STRICTLY BANNED WORDS: Do NOT use casual slangs like "Aare", "Dost", "Arey", "Bhai", "Bhaiya". Use professional, respectful words like "Dekhiye", "Is question me...", "Aapne yahan...".
-4. DO NOT use robotic template headers like 'Direct Answer:', 'Core Concept:', 'Section 1:'.
-5. ALWAYS use a practical, relatable daily-life comparison or analogy.
-6. COMPLETENESS: Never leave your sentences or bullet points incomplete. Finish all explanations with a proper conclusion.
-7. Explain clearly why the student's doubt point is wrong or right and why the correct answer is accurate.
-8. Strictly NO Devanagari script. Use simple Roman Hinglish only.
+1. Talk directly and respectfully to the student (Use "Dekhiye", "Is question me...", "Aapka doubt...").
+2. STRICTLY BANNED SLANGS: Never use words like 'Aare', 'Dost', 'Arey', 'Bhai', 'Bhaiya'.
+3. NO tough or Sanskritized Hindi words in Roman script. Use normal English words (like 'concept', 'mistake', 'reason', 'change', 'frequency', 'tilt').
+4. ALWAYS explain the exact scientific / logical reason behind the correct answer vs the doubt.
+5. COMPLETION GUARANTEE: Never leave sentences unfinished. Complete all points with a crisp summary at the end.
+6. Strictly NO Devanagari Hindi text. Only clean Roman Hinglish.
 """;
 
     final String userPrompt = """
@@ -199,10 +198,10 @@ Question: $question
 Options: ${options.join(', ')}
 Correct Answer: $correctAnswer
 
-STUDENT'S EXACT DOUBT: "$userDoubt"
+STUDENT'S DOUBT: "$userDoubt"
 """;
 
-    return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 1000, temperature: 0.6);
+    return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 1000, temperature: 0.5);
   }
 
   // 2️⃣ DOCTOR DIAGNOSIS & PRESCRIPTION HEALTH AUDIT
@@ -219,17 +218,17 @@ STUDENT'S EXACT DOUBT: "$userDoubt"
       if (tag == 'concept') conceptGapCount++;
 
       String chapter = q['chapterName'] ?? q['chapter'] ?? 'Sectional Mock';
-      return "- [Chapter: $chapter | User Tag: $tag] Q: $qText";
+      return "- [Chapter: $chapter | Tag: $tag] Q: $qText";
     }).toList();
 
     const String systemPrompt = """
 You are an expert AI Study Doctor for BPSC & BSSC Exam Aspirants.
-Analyze the student's wrong questions vault like a medical diagnostic checkup.
+Analyze the student's wrong questions vault like a medical diagnostic checkup in clean Roman Hinglish.
 
-STRICT RESPONSE FORMAT (Simple Roman Hinglish only, NO Devanagari Hindi text, BANNED: 'Aare', 'Dost'):
+STRICT RESPONSE FORMAT (Roman Hinglish only, BANNED: 'Aare', 'Dost'):
 
 🩺 CONCEPT HEALTH DIAGNOSIS
-- History: 🟥 Critical Weak (or 🟨 Average / 🟩 Healthy based on errors)
+- History: 🟥 Critical Weak (or 🟨 Average / 🟩 Healthy)
 - Science: 🟨 Average / Stable
 - Polity: 🟩 Healthy
 
@@ -245,72 +244,69 @@ STRICT RESPONSE FORMAT (Simple Roman Hinglish only, NO Devanagari Hindi text, BA
 
     final String userPrompt = """
 Tagged Metrics:
-- 🟡 50-50 Option Confusion Traps: $trap5050Count
-- 🔴 Knowledge/Concept Gaps: $conceptGapCount
+- 🟡 50-50 Traps: $trap5050Count
+- 🔴 Knowledge Gaps: $conceptGapCount
 
-Questions Context:
+Questions Summary:
 ${qSummaries.join('\n')}
 """;
 
     return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 800, temperature: 0.3);
   }
 
-  // 3️⃣ LIVE DYNAMIC "WHY WRONG?" EXPLAINER (SIMPLE HINGLISH)
+  // 3️⃣ SMART "WHY WRONG?" EXPLAINER (Fixed Hallucination & Clean Distractor Breakdown)
   static Future<String> explainWhyWrong({
     required String question,
     required List<String> options,
     required String userChoice,
     required String correctAnswer,
-    required String userTag, // '50-50' or 'concept'
+    required String userTag,
   }) async {
-    String tagInstruction = "";
-    if (userTag == '50-50') {
-      tagInstruction = """
-STUDENT TAG: '🟡 50-50 TRAP'
-- Student ne do options ke beech confuse hokar Option "$userChoice" choose kiya.
-- Detail me samjhayein ki Examiner ne Option "$userChoice" ko kaise 'distractor trap' ki tarah design kiya tha.
-""";
-    } else {
-      tagInstruction = """
-STUDENT TAG: '🔴 DIDN'T KNOW / CONCEPT GAP'
-- Student ko is question ka core concept nahi pata tha.
-- Concept ko zero-level se samjhayein simple daily-life example ke sath.
-""";
-    }
+    // 🛡️ ANTI-HALLUCINATION SANITIZATION:
+    // Agar choice empty ya generic ho, toh AI ko actual distractor analysis pe shift karo
+    bool hasSpecificChoice = userChoice.trim().isNotEmpty && 
+                             userChoice != "Attempted Option" && 
+                             userChoice != "Incorrect Option" &&
+                             userChoice != "No Option Selected";
+
+    String userChoiceContext = hasSpecificChoice
+        ? 'Student selected option: "$userChoice".'
+        : 'Student was confused among the incorrect options / distractor traps.';
+
+    String tagContext = (userTag == '50-50')
+        ? 'TAG: 🟡 50-50 Trap (Student narrowed down to 2 options but chose the distractor trap).'
+        : 'TAG: 🔴 Concept Gap (Student lacked the foundational concept).';
 
     final String systemPrompt = """
-You are a senior, highly experienced BPSC/BSSC Exam Professor. Provide a concise, clear, and non-bookish breakdown for a student who got this question wrong.
+You are a senior, highly experienced BPSC/BSSC Exam Professor. Provide a crisp, highly logical breakdown for a student who got this question wrong.
 
-$tagInstruction
-
-STRICT RULES:
-1. LANGUAGE: Use simple, everyday natural Hinglish (how students normally talk in daily life). Strictly DO NOT write tough or Sanskritized Shuddh Hindi words in Roman text. Use common English terms (like 'mistake', 'reason', 'difference', 'trap', 'concept') where natural.
-2. STRICTLY BANNED WORDS: 'Aare', 'Dost', 'Arey', 'Bhai', 'Bhaiya'. Use polite terms like "Dekhiye", "Is option me...", "Aapne yahan...".
-3. ABSOLUTELY NO NCERT or bookish copy-paste language.
-4. MUST include a relatable real-life analogy or daily object comparison.
-5. COMPLETENESS: Ensure full complete sentences without sudden cutoff.
-6. PROACTIVELY resolve common sub-doubts related to this topic so students don't need to ask again.
+CRITICAL INSTRUCTIONS:
+1. NEVER mention placeholder phrases like "Attempted Option" or treat generic words as exam options. Analyze the REAL given options: ${options.join(' | ')}.
+2. LANGUAGE: Use natural, conversational Roman Hinglish (e.g. "Dekhiye", "Is question me..."). STRICTLY BANNED: 'Aare', 'Dost', 'Arey', 'Bhai', 'Bhaiya'.
+3. NO bookish rote language. Use simple daily-life logic, analogies, or formulas.
+4. COMPLETENESS: Never cut your sentences in the middle. Complete all bullet points properly.
 
 FORMAT YOUR RESPONSE IN THIS EXACT STRUCTURE:
 
 🎯 AAPKI GALTI AUR EXAMINER KA TRAP:
-(Explain clearly why Option "$userChoice" was chosen by the student and the exact subtle word/logic trap in it)
+(Explain the exact trap in the options and why a student easily gets confused between similar-looking facts or numbers)
 
 ⚡ SAHI ANSWER KA CONCEPT & REAL-LIFE ANALOGY:
-(Explain why "$correctAnswer" is accurate using a simple, practical daily life example)
+(Explain why "$correctAnswer" is the accurate answer with a clear, practical fact or analogy)
 
 🔍 IS TOPIC KE COMMON DOUBTS & CONFUSIONS:
-(Proactively clear 1-2 common sub-doubts related to this topic)
+(Proactively clear 1 common confusion related to this topic so the student never makes this mistake again)
 """;
 
     final String userPrompt = """
 QUESTION: $question
-ALL OPTIONS: ${options.join(', ')}
-STUDENT CHOSE: "$userChoice"
-CORRECT ANSWER: "$correctAnswer"
+OPTIONS: ${options.join(', ')}
+CORRECT ANSWER: $correctAnswer
+$userChoiceContext
+$tagContext
 """;
 
-    return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 1100, temperature: 0.5);
+    return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 1100, temperature: 0.4);
   }
 
   // 4️⃣ COMPATIBILITY METHOD FOR OLD WIDGETS
