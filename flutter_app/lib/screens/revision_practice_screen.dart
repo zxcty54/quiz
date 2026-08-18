@@ -2,18 +2,24 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 import '../models/question_model.dart';
+import '../services/ai_explainer_service.dart';
 import '../services/user_stats_service.dart';
 import '../widgets/math_text.dart';
 
 class RevisionPracticeScreen extends StatefulWidget {
   final String testTitle;
   final List<Question> questions;
+  final int initialIndex;
+  final String? storageKey;
 
   const RevisionPracticeScreen({
     super.key,
     required this.testTitle,
     required this.questions,
+    this.initialIndex = 0,
+    this.storageKey,
   });
 
   @override
@@ -21,7 +27,7 @@ class RevisionPracticeScreen extends StatefulWidget {
 }
 
 class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
-  int _currentIndex = 0;
+  late int _currentIndex;
   int? _selectedOptionIndex;
   bool _isAnswered = false;
   bool _isHindi = false;
@@ -30,9 +36,27 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   Timer? _timer;
   int _timeLeft = 30; // ⏱️ 30 Seconds Timer
 
+  // 💬 AI Custom Doubt State Tracking
+  final Map<int, int> _asksRemainingPerQuestion = {}; 
+  final Map<int, List<Map<String, String>>> _aiChatHistory = {}; 
+
+  // ⏳ Global Anti-Spam Cooldown across all questions (15 Seconds)
+  static DateTime? _lastAiCallTime;
+  static const int _aiCooldownSeconds = 15;
+
+  int _getAiCooldownRemaining() {
+    if (_lastAiCallTime == null) return 0;
+    final int diff = DateTime.now().difference(_lastAiCallTime!).inSeconds;
+    if (diff < _aiCooldownSeconds) {
+      return _aiCooldownSeconds - diff;
+    }
+    return 0;
+  }
+
   @override
   void initState() {
     super.initState();
+    _currentIndex = widget.initialIndex;
     _startTimer();
     _checkBookmarkStatus();
   }
@@ -41,6 +65,67 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   void dispose() {
     _timer?.cancel();
     super.dispose();
+  }
+
+  // 💾 SAVE PROGRESS TO DISK
+  void _saveCurrentProgress(int index) async {
+    if (widget.storageKey == null) return;
+    final prefs = await SharedPreferences.getInstance();
+    if (index >= widget.questions.length - 1) {
+      await prefs.remove(widget.storageKey!); // Chapter complete -> Reset
+    } else {
+      await prefs.setInt(widget.storageKey!, index);
+    }
+  }
+
+  // 🔄 1-CLICK CLEAN RESTART CHAPTER TO Q.1
+  void _restartChapter() {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: const Row(
+          children: [
+            Text('🔄 ', style: TextStyle(fontSize: 18)),
+            Text('Restart Chapter?', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+          ],
+        ),
+        content: const Text(
+          'Kya aap is chapter ko wapas Question 1 se shuru karna chahte hain?',
+          style: TextStyle(fontSize: 13, color: Colors.black87),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF2563EB),
+              foregroundColor: Colors.white,
+            ),
+            onPressed: () async {
+              Navigator.pop(ctx);
+              
+              if (widget.storageKey != null) {
+                final prefs = await SharedPreferences.getInstance();
+                await prefs.remove(widget.storageKey!);
+              }
+
+              setState(() {
+                _currentIndex = 0;
+                _selectedOptionIndex = null;
+                _isAnswered = false;
+              });
+              
+              _startTimer();
+              _checkBookmarkStatus();
+            },
+            child: const Text('Restart (Q.1) 🚀'),
+          ),
+        ],
+      ),
+    );
   }
 
   // 📌 Check if current question is saved in Bookmarks
@@ -164,6 +249,210 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
+  // 💬 BOTTOM SHEET DIALOG FOR AI DOUBT SOLVER (1 ASK & 100 CHARS)
+  void _openAiDoubtDialog(Question currentQ, bool isDark) {
+    int asksLeft = _asksRemainingPerQuestion[_currentIndex] ?? 1;
+    TextEditingController doubtController = TextEditingController();
+    bool isAsking = false;
+    final currentOptions = currentQ.getOptions(_isHindi);
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      builder: (ctx) {
+        return StatefulBuilder(
+          builder: (context, setModalState) {
+            final history = _aiChatHistory[_currentIndex] ?? [];
+            final int cooldownLeft = _getAiCooldownRemaining();
+
+            return Padding(
+              padding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).viewInsets.bottom,
+                left: 16,
+                right: 16,
+                top: 16,
+              ),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            const Text('🤖', style: TextStyle(fontSize: 20)),
+                            const SizedBox(width: 6),
+                            Text(
+                              'Ask AI Custom Doubt',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15,
+                                color: isDark ? Colors.white : const Color(0xFF0F172A),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                          decoration: BoxDecoration(
+                            color: asksLeft > 0 
+                                ? (isDark ? const Color(0xFF14532D) : const Color(0xFFDCFCE7))
+                                : (isDark ? const Color(0xFF7F1D1D) : const Color(0xFFFEE2E2)),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Text(
+                            asksLeft > 0 ? '$asksLeft Ask Left' : '🔒 Limit Reached',
+                            style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.bold,
+                              color: asksLeft > 0 
+                                  ? (isDark ? const Color(0xFF86EFAC) : Colors.green.shade800)
+                                  : (isDark ? const Color(0xFFFCA5A5) : Colors.red.shade800),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+
+                    ...history.map((chat) => Container(
+                          margin: const EdgeInsets.only(bottom: 10),
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: isDark ? const Color(0xFF0F172A) : Colors.grey.shade100,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: isDark ? const Color(0xFF334155) : Colors.grey.shade300),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "❓ Your Doubt: ${chat['doubt']}",
+                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5, color: Color(0xFF38BDF8)),
+                              ),
+                              Divider(height: 12, color: isDark ? const Color(0xFF334155) : Colors.grey.shade300),
+                              MathFormattedText(
+                                text: chat['response']!,
+                                textStyle: TextStyle(
+                                  fontSize: 12.5,
+                                  height: 1.4,
+                                  color: isDark ? Colors.grey.shade200 : Colors.black87,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )),
+
+                    if (asksLeft > 0) ...[
+                      TextField(
+                        controller: doubtController,
+                        maxLength: 100,
+                        maxLines: 2,
+                        minLines: 1,
+                        style: TextStyle(color: isDark ? Colors.white : Colors.black87, fontSize: 13),
+                        decoration: InputDecoration(
+                          hintText: 'Type your exact doubt (Max 100 chars)...',
+                          hintStyle: TextStyle(fontSize: 12, color: isDark ? Colors.grey.shade400 : Colors.grey),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: isDark ? const Color(0xFF334155) : Colors.grey.shade400),
+                          ),
+                          focusedBorder: const OutlineInputBorder(
+                            borderSide: BorderSide(color: Color(0xFF2563EB), width: 1.5),
+                          ),
+                          contentPadding: const EdgeInsets.all(10),
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton.icon(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFF2563EB),
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                          ),
+                          onPressed: isAsking
+                              ? null
+                              : () async {
+                                  if (doubtController.text.trim().isEmpty) return;
+
+                                  final int cooldown = _getAiCooldownRemaining();
+                                  if (cooldown > 0) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text('⏳ Please wait ${cooldown}s before asking again!'),
+                                        duration: const Duration(seconds: 2),
+                                        backgroundColor: const Color(0xFFDC2626),
+                                      ),
+                                    );
+                                    return;
+                                  }
+
+                                  setModalState(() => isAsking = true);
+                                  _lastAiCallTime = DateTime.now();
+
+                                  String userQuery = doubtController.text.trim();
+
+                                  String aiResp = await AiExplainerService.askCustomDoubt(
+                                    question: currentQ.getText(_isHindi),
+                                    options: currentOptions,
+                                    correctAnswer: currentOptions[currentQ.answerIndex],
+                                    userDoubt: userQuery,
+                                  );
+
+                                  setState(() {
+                                    _asksRemainingPerQuestion[_currentIndex] = asksLeft - 1;
+                                    _aiChatHistory[_currentIndex] = [
+                                      ...history,
+                                      {'doubt': userQuery, 'response': aiResp}
+                                    ];
+                                  });
+
+                                  setModalState(() {
+                                    asksLeft--;
+                                    isAsking = false;
+                                    doubtController.clear();
+                                  });
+                                },
+                          icon: isAsking
+                              ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+                              : const Icon(Icons.send_rounded, size: 16),
+                          label: Text(
+                            isAsking 
+                                ? 'Generating Deep Explanation...' 
+                                : (cooldownLeft > 0 ? 'Wait ${cooldownLeft}s (Cooldown) ⏳' : 'Get AI Explanation 🚀'),
+                          ),
+                        ),
+                      )
+                    ] else ...[
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        alignment: Alignment.center,
+                        child: Text(
+                          '🔒 Question-wise 1 doubt limit complete ho chuki hai.',
+                          style: TextStyle(
+                            fontSize: 11.5,
+                            color: isDark ? Colors.grey.shade400 : Colors.grey,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      )
+                    ],
+                    const SizedBox(height: 16),
+                  ],
+                ),
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
   void _goToNextQuestion() {
     if (_currentIndex < widget.questions.length - 1) {
       setState(() {
@@ -171,6 +460,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       });
       _startTimer();
       _checkBookmarkStatus();
+      _saveCurrentProgress(_currentIndex);
     } else {
       _timer?.cancel();
       _showCompletionDialog();
@@ -184,6 +474,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       });
       _startTimer();
       _checkBookmarkStatus();
+      _saveCurrentProgress(_currentIndex);
     }
   }
 
@@ -220,13 +511,36 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // ✨ PREMIUM VISUAL EXPLANATION BUILDER (Clean Solution without Ask AI)
+  // ✨ SMART GROUPED & HINGLISH-AWARE EXPLANATION BUILDER
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
-    List<String> rawParagraphs = rawExplanation
+    List<String> rawLines = rawExplanation
         .split('\n')
         .map((p) => p.trim())
         .where((p) => p.isNotEmpty)
         .toList();
+
+    List<String> groupedPoints = [];
+    String currentBlock = "";
+
+    for (var line in rawLines) {
+      bool isNewHeader = line.startsWith('•') ||
+          line.startsWith('Option') ||
+          line.startsWith('📌') ||
+          line.startsWith('1.') ||
+          line.startsWith('2.');
+
+      if (isNewHeader && currentBlock.isNotEmpty) {
+        groupedPoints.add(currentBlock.trim());
+        currentBlock = line;
+      } else {
+        if (currentBlock.isEmpty) {
+          currentBlock = line;
+        } else {
+          currentBlock += "\n$line";
+        }
+      }
+    }
+    if (currentBlock.isNotEmpty) groupedPoints.add(currentBlock.trim());
 
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
     final Color cardBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
@@ -260,25 +574,56 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               border: Border(bottom: BorderSide(color: cardBorder)),
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  decoration: BoxDecoration(
-                    color: isDark ? const Color(0xFF78350F) : const Color(0xFFFEF3C7),
-                    borderRadius: BorderRadius.circular(6),
-                  ),
-                  child: const Text('💡', style: TextStyle(fontSize: 14)),
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        color: isDark ? const Color(0xFF78350F) : const Color(0xFFFEF3C7),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: const Text('💡', style: TextStyle(fontSize: 14)),
+                    ),
+                    const SizedBox(width: 8),
+                    Text(
+                      'Detailed Solution',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: headerText,
+                        fontSize: 13.5,
+                        letterSpacing: 0.2,
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(width: 8),
-                Text(
-                  'Detailed Solution',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: headerText,
-                    fontSize: 13.5,
-                    letterSpacing: 0.2,
+                InkWell(
+                  onTap: () => _openAiDoubtDialog(currentQ, isDark),
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
+                      ),
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color(0xFF2563EB).withOpacity(0.25),
+                          blurRadius: 4,
+                          offset: const Offset(0, 2),
+                        )
+                      ],
+                    ),
+                    child: const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text('🤖 Ask AI', style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
+                      ],
+                    ),
                   ),
-                ),
+                )
               ],
             ),
           ),
@@ -289,11 +634,19 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ...rawParagraphs.map((para) {
-                  bool isCorrectPoint = para.toLowerCase().contains('is correct') || para.contains('सही है');
-                  bool isIncorrectPoint = para.toLowerCase().contains('is incorrect') || 
-                                          para.toLowerCase().contains('is false') || 
-                                          para.contains('गलत है');
+                ...groupedPoints.map((para) {
+                  String lower = para.toLowerCase();
+
+                  bool isCorrectPoint = lower.contains('is correct') ||
+                      lower.contains('sahi hai') ||
+                      lower.contains('bilkul sahi') ||
+                      para.contains('सही है');
+
+                  bool isIncorrectPoint = lower.contains('is incorrect') ||
+                      lower.contains('is false') ||
+                      lower.contains('galat hai') ||
+                      lower.contains('ulta kar deta') ||
+                      para.contains('गलत है');
 
                   Color stripBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
                   Color stripBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
@@ -314,8 +667,8 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
                   return Container(
                     width: double.infinity,
-                    margin: const EdgeInsets.only(bottom: 8.0),
-                    padding: const EdgeInsets.all(11.0),
+                    margin: const EdgeInsets.only(bottom: 9.0),
+                    padding: const EdgeInsets.all(12.0),
                     decoration: BoxDecoration(
                       color: stripBg,
                       borderRadius: BorderRadius.circular(10),
@@ -325,9 +678,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          width: 20,
-                          height: 20,
-                          margin: const EdgeInsets.only(top: 1),
+                          width: 22,
+                          height: 22,
+                          margin: const EdgeInsets.only(top: 2),
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                             color: badgeBg,
@@ -335,7 +688,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                           ),
                           child: Text(
                             badgeIcon,
-                            style: const TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.bold),
+                            style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
                           ),
                         ),
                         const SizedBox(width: 10),
@@ -388,11 +741,27 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     return Scaffold(
       backgroundColor: bgColor,
       appBar: AppBar(
-        title: Text(widget.testTitle, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: textColor)),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(widget.testTitle, style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.bold, color: textColor)),
+            Text(
+              "Question ${_currentIndex + 1} / ${widget.questions.length}",
+              style: TextStyle(fontSize: 10.5, color: subTextColor),
+            ),
+          ],
+        ),
         backgroundColor: cardBg,
         elevation: 0,
         iconTheme: IconThemeData(color: textColor),
         actions: [
+          // 🔄 1-CLICK CLEAN RESTART BUTTON
+          IconButton(
+            icon: const Icon(Icons.restart_alt_rounded),
+            tooltip: "Restart from Q.1",
+            color: isDark ? Colors.grey.shade300 : const Color(0xFF475569),
+            onPressed: _restartChapter,
+          ),
           IconButton(
             icon: Icon(
               _isBookmarked ? Icons.bookmark : Icons.bookmark_outline,
@@ -661,7 +1030,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               );
             }),
 
-            // 💡 4. DETAILED SOLUTION CARD
+            // 💡 4. UPGRADED HIGH-CONTRAST DETAILED SOLUTION
             if (_isAnswered) ...[
               _buildEnhancedExplanation(currentExplanation, currentQ, isDark),
             ],
