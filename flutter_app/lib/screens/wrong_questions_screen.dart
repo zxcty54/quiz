@@ -138,7 +138,8 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
               ),
               content: SingleChildScrollView(
                 child: Column(
-                  mainAxisSize: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min, // 🟢 FIXED HERE
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     MathFormattedText(
                       text: q.getText(_isHindi),
@@ -343,7 +344,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                     if (!hasAsked) ...[
                       TextField(
                         controller: doubtController,
-                        maxLength: 100, // 🛑 STRICT 100 CHARACTERS LIMIT
+                        maxLength: 100,
                         maxLines: 2,
                         minLines: 1,
                         style: const TextStyle(color: Colors.black87),
@@ -368,7 +369,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                               : () async {
                                   if (doubtController.text.trim().isEmpty) return;
 
-                                  // ⏱️ ANTI-SPAM RETRY COOLDOWN CHECK
                                   final int cooldown = _getVaultCooldownRemaining();
                                   if (cooldown > 0) {
                                     ScaffoldMessenger.of(context).showSnackBar(
@@ -382,7 +382,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                   }
 
                                   setModalState(() => isAsking = true);
-                                  _lastVaultAiCallTime = DateTime.now(); // ⏱️ Reset timestamp
+                                  _lastVaultAiCallTime = DateTime.now();
 
                                   String userQuery = doubtController.text.trim();
 
@@ -393,7 +393,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                     userDoubt: userQuery,
                                   );
 
-                                  // 🛡️ SMART CHECK: Sirf genuine success par limit block hogi
                                   bool isSuccess = aiResp.isNotEmpty && 
                                                    !aiResp.contains("⚠️ AI Service busy hai") &&
                                                    !aiResp.contains("Doubt resolve nahi ho paya");
@@ -462,7 +461,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
   void _fetchWhyWrongAi(Question q, String userChoice, String userTag, int index) async {
     if (_whyWrongLoading[index] == true || _whyWrongAiResponses[index] != null) return;
 
-    // ⏱️ ANTI-SPAM RETRY COOLDOWN CHECK
     final int cooldown = _getVaultCooldownRemaining();
     if (cooldown > 0) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -475,7 +473,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
       return;
     }
 
-    _lastVaultAiCallTime = DateTime.now(); // ⏱️ Reset timestamp
+    _lastVaultAiCallTime = DateTime.now();
     setState(() => _whyWrongLoading[index] = true);
 
     String selectedOpt = (userChoice.trim().isNotEmpty && 
