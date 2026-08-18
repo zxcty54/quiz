@@ -54,7 +54,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     if (widget.storageKey == null) return;
     final prefs = await SharedPreferences.getInstance();
     if (index >= widget.questions.length - 1) {
-      await prefs.remove(widget.storageKey!); // Chapter complete -> Reset
+      await prefs.remove(widget.storageKey!);
     } else {
       await prefs.setInt(widget.storageKey!, index);
     }
@@ -288,10 +288,11 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // 🛡️ Helper to detect option points
-  bool _paraStartsOption(String line) {
+  // 🛡️ Helper method to identify option points
+  bool _isOptionPoint(String line) {
     String clean = line.trim().toLowerCase();
     return clean.startsWith('• option') ||
+        clean.startsWith('- option') ||
         clean.startsWith('option a') ||
         clean.startsWith('option b') ||
         clean.startsWith('option c') ||
@@ -299,10 +300,14 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         clean.startsWith('option 0') ||
         clean.startsWith('option 1') ||
         clean.startsWith('option 2') ||
-        clean.startsWith('option 3');
+        clean.startsWith('option 3') ||
+        clean.startsWith('• 1.') ||
+        clean.startsWith('• 2.') ||
+        clean.startsWith('• 3.') ||
+        clean.startsWith('• 4.');
   }
 
-// ✨ SMART GROUPED 2-STAGE EXPLANATION (Green Box holds ALL correct explanation text)
+  // ✨ SMART GROUPED 2-STAGE EXPLANATION (Green Box holds ALL correct explanation text)
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
     String cleaned = rawExplanation
         .replaceAll(r'\n', '\n')
@@ -326,7 +331,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     List<String> distinctBlocks = [];
     String currentBlock = "";
 
-    // 1. Group multi-line explanation into structured blocks
     for (String line in rawLines) {
       bool isNewBlockHeader = line.startsWith('•') ||
           line.startsWith('-') ||
@@ -371,7 +375,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       } else if (isTakeaway) {
         takeawayBlocks.add(block);
       } else {
-        // Correct logic + formulas + theoretical context
         primaryCorrectBlocks.add(block);
       }
     }
@@ -398,7 +401,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🏆 1. HEADER STRIP
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
@@ -435,7 +437,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 🟢 1. UNIFIED COMPLETE GREEN BOX (Holds All Correct Text & Steps)
+                // 🟢 1. UNIFIED COMPLETE GREEN BOX
                 if (primaryCorrectBlocks.isNotEmpty) ...[
                   Container(
                     width: double.infinity,
@@ -548,7 +550,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
                 const Divider(height: 24),
 
-                // 💡 3. COMMUNITY SHORT-TRICK BOX
                 RevisionTrickSubmitBox(
                   testTitle: widget.testTitle,
                   qIndex: _currentIndex,
