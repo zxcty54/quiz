@@ -460,7 +460,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     );
   }
 
-  // 🎯 PURE LIVE AI TRIGGER FOR "WHY WRONG" (WITH 15s COOLDOWN PROTECTION)
+  // 🎯 PURE LIVE AI TRIGGER FOR "WHY WRONG" (SANITIZED & ANTI-HALLUCINATION)
   void _fetchWhyWrongAi(Question q, String userChoice, String userTag, int index) async {
     if (_whyWrongLoading[index] == true || _whyWrongAiResponses[index] != null) return;
 
@@ -480,7 +480,12 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     _lastVaultAiCallTime = DateTime.now(); // ⏱️ Reset timestamp
     setState(() => _whyWrongLoading[index] = true);
 
-    String selectedOpt = userChoice.trim().isNotEmpty ? userChoice : "Attempted Option";
+    // 🛡️ CHOICE SANITIZATION (Never pass "Attempted Option" string)
+    String selectedOpt = (userChoice.trim().isNotEmpty && 
+                          userChoice != "Attempted Option" && 
+                          userChoice != "No Option Selected")
+        ? userChoice
+        : "";
 
     String result = await AiExplainerService.explainWhyWrong(
       question: q.getText(_isHindi),
@@ -695,6 +700,11 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                 bool isWhyWrongLoading = _whyWrongLoading[index] ?? false;
                 String? whyWrongAiText = _whyWrongAiResponses[index];
 
+                // Clean choice display check
+                bool hasSpecificChoice = userSelectedOpt.trim().isNotEmpty && 
+                                         userSelectedOpt != "Attempted Option" && 
+                                         userSelectedOpt != "No Option Selected";
+
                 return Card(
                   margin: const EdgeInsets.only(bottom: 12),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -840,7 +850,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                     child: Row(
                                       children: [
                                         const Text('❌ Why Wrong?', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: Color(0xFFBE123C))),
-                                        if (userSelectedOpt.isNotEmpty) ...[
+                                        if (hasSpecificChoice) ...[
                                           const SizedBox(width: 4),
                                           Expanded(
                                             child: Text(
