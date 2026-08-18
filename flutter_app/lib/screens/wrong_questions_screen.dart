@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import '../models/question_model.dart';
 import '../services/ai_explainer_service.dart';
@@ -138,8 +139,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
               ),
               content: SingleChildScrollView(
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: CrossAxisAlignment.start,
                   children: [
                     MathFormattedText(
                       text: q.getText(_isHindi),
@@ -414,7 +414,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                       doubtController.clear();
                                     });
                                   } else {
-                                    // Error ya Busy hone par block nahi hoga, user 15s baad retry kar sakega
                                     setModalState(() {
                                       isAsking = false;
                                     });
@@ -460,7 +459,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     );
   }
 
-  // 🎯 PURE LIVE AI TRIGGER FOR "WHY WRONG" (SANITIZED & ANTI-HALLUCINATION)
+  // 🎯 PURE LIVE AI TRIGGER FOR "WHY WRONG" (WITH 15s COOLDOWN PROTECTION)
   void _fetchWhyWrongAi(Question q, String userChoice, String userTag, int index) async {
     if (_whyWrongLoading[index] == true || _whyWrongAiResponses[index] != null) return;
 
@@ -480,7 +479,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     _lastVaultAiCallTime = DateTime.now(); // ⏱️ Reset timestamp
     setState(() => _whyWrongLoading[index] = true);
 
-    // 🛡️ CHOICE SANITIZATION (Never pass "Attempted Option" string)
     String selectedOpt = (userChoice.trim().isNotEmpty && 
                           userChoice != "Attempted Option" && 
                           userChoice != "No Option Selected")
@@ -700,7 +698,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                 bool isWhyWrongLoading = _whyWrongLoading[index] ?? false;
                 String? whyWrongAiText = _whyWrongAiResponses[index];
 
-                // Clean choice display check
                 bool hasSpecificChoice = userSelectedOpt.trim().isNotEmpty && 
                                          userSelectedOpt != "Attempted Option" && 
                                          userSelectedOpt != "No Option Selected";
@@ -714,6 +711,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        // Card Header: Pure Metadata (No direct Ask AI)
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -756,32 +754,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                               ),
                             ),
                             const SizedBox(width: 6),
-                            Row(
-                              children: [
-                                Text('📅 $dateStr', style: const TextStyle(fontSize: 9.5, color: Colors.grey)),
-                                const SizedBox(width: 6),
-                                InkWell(
-                                  onTap: () => _openVaultAiDoubtDialog(q, index),
-                                  child: Container(
-                                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
-                                    decoration: BoxDecoration(
-                                      color: const Color(0xFF2563EB),
-                                      borderRadius: BorderRadius.circular(6),
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        const Text('🤖', style: TextStyle(fontSize: 10)),
-                                        const SizedBox(width: 2),
-                                        Text(
-                                          hasAsked ? 'AI Ans' : 'Ask AI',
-                                          style: const TextStyle(color: Colors.white, fontSize: 9.5, fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                )
-                              ],
-                            )
+                            Text('📅 $dateStr', style: const TextStyle(fontSize: 9.5, color: Colors.grey)),
                           ],
                         ),
                         const SizedBox(height: 8),
@@ -897,6 +870,40 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                 MathFormattedText(
                                   text: whyWrongAiText,
                                   textStyle: const TextStyle(fontSize: 11.5, color: Color(0xFF881337), height: 1.35),
+                                ),
+
+                                // 🚀 PROGRESSIVE REVEAL: Sirf Analysis aane ke baad hi Ask AI Button Show hoga
+                                const SizedBox(height: 8),
+                                const Divider(height: 1, color: Color(0xFFFECDD3)),
+                                const SizedBox(height: 8),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    const Text(
+                                      "Still confused?",
+                                      style: TextStyle(fontSize: 11, fontStyle: FontStyle.italic, color: Colors.black54),
+                                    ),
+                                    InkWell(
+                                      onTap: () => _openVaultAiDoubtDialog(q, index),
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xFF2563EB),
+                                          borderRadius: BorderRadius.circular(6),
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            const Text('🤖', style: TextStyle(fontSize: 10)),
+                                            const SizedBox(width: 4),
+                                            Text(
+                                              hasAsked ? 'View Doubt Ans ✓' : 'Ask 1 Custom Doubt ➔',
+                                              style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ] else ...[
                                 const SizedBox(height: 6),
