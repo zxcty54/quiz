@@ -307,12 +307,24 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         clean.startsWith('• 4.');
   }
 
-// ✨ COMPLETE UNIFIED GREEN BOX EXPLANATION FIX
+// ✨ COMPLETE UNIFIED GREEN BOX & COMPREHENSIVE LATEX SANITIZER
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
+    // 1️⃣ Deep Clean LaTeX Delimiters, Subscripts & Nested Texts
     String cleaned = rawExplanation
         .replaceAll(r'\n', '\n')
         .replaceAll(r'\\text', r'\text')
         .replaceAll(r'\\frac', r'\frac')
+        // Fix split dollars like "$ \text{SO}_2$" or "$ \text{...}"
+        .replaceAllMapped(RegExp(r'\$\s*\\text\{([^}]+)\}([^$]*)\$'), (m) => r'$\text{' + (m.group(1) ?? '') + r'}' + (m.group(2) ?? '') + r'$')
+        // Clean remaining \text{...} units (e.g. \text{ K} -> \text{K} or plain text)
+        .replaceAll(r'\text{ K}', ' K')
+        .replaceAll(r'\text{K}', ' K')
+        .replaceAll(r'\text{ J}', ' J')
+        .replaceAll(r'\text{J}', ' J')
+        .replaceAll(r'\text{°C}', '°C')
+        .replaceAllMapped(RegExp(r'\$\\text\{([^}]+)\}\$'), (m) => m.group(1) ?? '')
+        .replaceAllMapped(RegExp(r'\\text\{([^}]+)\}'), (m) => m.group(1) ?? '')
+        // Clean 0-indexed options to standard alphabet options
         .replaceAll(RegExp(r'\bOption 0\b', caseSensitive: false), 'Option A')
         .replaceAll(RegExp(r'\bOption 1\b', caseSensitive: false), 'Option B')
         .replaceAll(RegExp(r'\bOption 2\b', caseSensitive: false), 'Option C')
@@ -331,7 +343,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     List<String> distinctBlocks = [];
     String currentBlock = "";
 
-    // 1. Group multi-line explanation into structured blocks accurately
+    // 2️⃣ Group into blocks
     for (String line in rawLines) {
       bool isNewBlockHeader = line.startsWith('•') ||
           line.startsWith('-') ||
@@ -376,7 +388,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       } else if (isTakeaway) {
         takeawayBlocks.add(block);
       } else {
-        // Correct reasoning + steps + formulas wrap fully inside here
         primaryCorrectBlocks.add(block);
       }
     }
@@ -403,7 +414,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 💡 Header
+          // Header Strip
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
@@ -440,7 +451,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 🟢 UNIFIED GREEN BOX: Holds ALL core solution lines & formulas
+                // 🟢 UNIFIED GREEN BOX
                 if (primaryCorrectBlocks.isNotEmpty)
                   Container(
                     width: double.infinity,
@@ -457,7 +468,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: primaryCorrectBlocks.map((block) {
                         return Padding(
-                          padding: const EdgeInsets.only(bottom: 6.0),
+                          padding: const EdgeInsets.only(bottom: 8.0),
                           child: MathFormattedText(
                             text: block,
                             textStyle: TextStyle(
@@ -472,7 +483,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                     ),
                   ),
 
-                // 📌 Key Takeaway / Summary (If present)
+                // 📌 Summary / Key Takeaways
                 ...takeawayBlocks.map((point) => Padding(
                       padding: const EdgeInsets.only(bottom: 8.0),
                       child: MathFormattedText(
@@ -564,7 +575,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       ),
     );
   }
-
   @override
   Widget build(BuildContext context) {
     final bool isDark = Theme.of(context).brightness == Brightness.dark;
