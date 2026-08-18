@@ -1,175 +1,104 @@
 [
+  
   {
     "p_id": "bpsc_phys_m37_01",
     "qe": "Evaluating the spatial distribution and geometric properties of magnetic field lines reveals crucial differences between magnetic fields and electrostatic fields. Which statement accurately describes the trajectory and boundary conditions of magnetic field lines?",
     "qh": "चुंबकीय क्षेत्र रेखाओं के स्थानिक वितरण और ज्यामितीय गुणों का मूल्यांकन चुंबकीय क्षेत्रों और इलेक्ट्रोस्टैटिक क्षेत्रों के बीच महत्वपूर्ण अंतरों को उजागर करता है। कौन सा कथन चुंबकीय क्षेत्र रेखाओं के प्रक्षेपवक्र (trajectory) और सीमा शर्तों का सटीक वर्णन करता है?",
-    "se": [
+    "oe": [
       "Magnetic field lines form continuous closed loops, emerging from the north pole and entering the south pole outside the magnet, while continuing from the south pole back to the north pole inside the magnet.",
       "Magnetic field lines originate at the north pole and terminate at the south pole, ending abruptly inside the magnetic material.",
       "Magnetic field lines intersect at right angles near the poles where the field strength is maximum.",
       "The tangent drawn at any point on a magnetic field line indicates the scalar magnetic potential value."
     ],
-    "sh": [
+    "oh": [
       "चुंबकीय क्षेत्र रेखाएं निरंतर बंद लूप बनाती हैं, चुंबक के बाहर उत्तरी ध्रुव से निकलकर दक्षिणी ध्रुव में प्रवेश करती हैं, जबकि चुंबक के अंदर दक्षिणी ध्रुव से उत्तरी ध्रुव की ओर जारी रहती हैं।",
       "चुंबकीय क्षेत्र रेखाएं उत्तरी ध्रुव पर उत्पन्न होती हैं और दक्षिणी ध्रुव पर समाप्त होती हैं, चुंबकीय सामग्री के अंदर अचानक समाप्त हो जाती हैं।",
       "चुंबकीय क्षेत्र रेखाएं ध्रुवों के पास समकोण पर प्रतिच्छेद करती हैं जहां क्षेत्र की शक्ति अधिकतम होती है।",
       "चुंबकीय क्षेत्र रेखा पर किसी भी बिंदु पर खींची गई स्पर्शरेखा अदिश चुंबकीय विभव मान को इंगित करती है।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 0,
-    "e": "Magnetic Field Lines — ye wo kaayal(imaginary) rekhaayein hain jo kisi magnet ke ird-gird magnetic field ki direction aur intensity ko visually represent karti hain.\n\nSabse important rule: Magnetic monopoles EXIST NAHI karte — matlab ek akela North ya South pole hoga hi nahi. Isliye magnetic field lines hamesha CLOSED LOOPS banati hain (mathematically: ∇·B = 0).\n\n• Statement 1 Sahi hai — Bahar se field lines North pole se nikalti hain aur South pole mein jaati hain. Lekin andar (magnet ke bheetar) ye South pole se North pole ki taraf wapas jaati hain — loop complete hota hai. Yahi ek electrostatic field se fundamental difference hai jahan lines charges par khatam ho jaati hain.\n\n• Statement 2 Galat hai — Ye TRAP hai! Electrostatic field lines charges par terminate hoti hain, lekin magnetic field lines kabhi bhi abruptly end NAHI hoti. Magnet ke andar bhi ye continuous rehti hain.\n\n• Statement 3 Galat hai — Field lines KABHI INTERSECT NAHI karti! Agar do lines ek point par milein, toh us point par field ki direction ek se zyada hogi — jo physically impossible hai.\n\n• Statement 4 Galat hai — Tangent at any point gives the VECTOR DIRECTION of B (magnetic force), not koi scalar potential value. Direction batana tangent ka kaam hai, potential nahi.\n\nAnswer: Statement 1 (index 0) sahi hai."
+    "e": "Magnetic Field Lines — ye wo imaginary rekhaayein hain jo kisi magnet ke ird-gird magnetic field ki direction aur intensity ko visually represent karti hain.\n\nSabse important rule: Magnetic monopoles EXIST NAHI karte — matlab ek akela North ya South pole hoga hi nahi. Isliye magnetic field lines hamesha CLOSED LOOPS banati hain (mathematically: $\\nabla \\cdot B = 0$).\n\n• Option A Sahi hai — Bahar se field lines North pole se nikalti hain aur South pole mein jaati hain. Lekin andar (magnet ke bheetar) ye South pole se North pole ki taraf wapas jaati hain — loop complete hota hai. Yahi ek electrostatic field se fundamental difference hai jahan lines charges par khatam ho jaati hain.\n\n• Option B Galat hai — Ye TRAP hai! Electrostatic field lines charges par terminate hoti hain, lekin magnetic field lines kabhi bhi abruptly end NAHI hoti. Magnet ke andar bhi ye continuous rehti hain.\n\n• Option C Galat hai — Field lines KABHI INTERSECT NAHI karti! Agar do lines ek point par milein, toh us point par field ki direction ek se zyada hogi — jo physically impossible hai.\n\n• Option D Galat hai — Tangent at any point gives the VECTOR DIRECTION of $B$ (magnetic force), not koi scalar potential value. Direction batana tangent ka kaam hai, potential nahi.\n\nAnswer: Option A sahi hai."
   },
   {
     "p_id": "bpsc_phys_m37_02",
     "qe": "A solenoid consists of a long helical coil of insulated copper wire wound closely into a cylindrical form. What characterizes the nature and geometry of the magnetic field inside and outside a long current-carrying solenoid?",
     "qh": "एक सोलेनोइड (solenoid) में एक बेलनाकार रूप में पास-पास लपेटी गई इंसुलेटेड तांबे के तार की एक लंबी सर्पिल कुंडली होती है। एक लंबे धारावाही सोलेनोइड के अंदर और बाहर चुंबकीय क्षेत्र की प्रकृति और ज्यामिति की क्या विशेषता है?",
-    "se": [
+    "oe": [
       "Inside the solenoid, the magnetic field is non-uniform and divergent; outside, it is extremely strong and uniform.",
       "Inside the solenoid, the magnetic field is uniform and strong, represented by parallel straight field lines; outside, the field is extremely weak and virtually zero.",
       "The magnetic field inside a solenoid vanishes completely due to destructive interference of adjacent loops.",
       "The magnetic field strength inside a solenoid is inversely proportional to the current flowing through it."
     ],
-    "sh": [
+    "oh": [
       "सोलेनोइड के अंदर, चुंबकीय क्षेत्र असमान और अपसारी है; बाहर, यह अत्यंत मजबूत और समान है।",
       "सोलेनोइड के अंदर, चुंबकीय क्षेत्र समान और मजबूत है, जिसे समानांतर सीधी क्षेत्र रेखाओं द्वारा दर्शाया गया है; बाहर, क्षेत्र अत्यंत कमजोर और वस्तुतः शून्य है।",
       "सोलेनोइड के अंदर चुंबकीय क्षेत्र आसन्न लूपों के विनाशकारी व्यतिकरण के कारण पूरी तरह से गायब हो जाता है।",
       "सोलेनोइड के अंदर चुंबकीय क्षेत्र की शक्ति इससे बहने वाली धारा के व्युत्क्रमानुपाती है।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Solenoid ek cylindrical coil hoti hai jisme insulated copper wire closely wind hoti hai. Jab isme current flow hoti hai toh ye ek bar magnet ki tarah behave karta hai.\n\n• Statement 1 Galat hai — Ye andar aur bahar ke properties ko SWAP kar deta hai. Ye classic examiner trap hai!\n\n• Statement 2 Sahi hai — Andar (inside): Har circular turn apna magnetic field produce karta hai. Jab turns closely wound hote hain, ye sab fields ek doosre ko reinforce karte hain — result: STRONG aur UNIFORM field jisme parallel straight field lines hoti hain (exactly like inside a bar magnet). Bahar (outside): Opposite sides ke fields cancel out ho jaate hain — result: extremely WEAK, virtually ZERO field. Formula: B = μ₀nI (directly proportional to current I aur turns per unit length n).\n\n• Statement 3 Galat hai — Adjacent loop fields CONSTRUCTIVELY add up karte hain, destructively nahi. Isliye field andar strong hota hai.\n\n• Statement 4 Galat hai — B = μ₀nI formula clearly dikhata hai ki field strength DIRECTLY proportional hai current ke — inversely nahi.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Solenoid ek cylindrical coil hoti hai jisme insulated copper wire closely wind hoti hai. Jab isme current flow hoti hai toh ye ek bar magnet ki tarah behave karta hai.\n\n• Option A Galat hai — Ye andar aur bahar ke properties ko SWAP kar deta hai. Ye classic examiner trap hai!\n\n• Option B Sahi hai — Andar (inside): Har circular turn apna magnetic field produce karta hai. Jab turns closely wound hote hain, ye sab fields ek doosre ko reinforce karte hain — result: STRONG aur UNIFORM field jisme parallel straight field lines hoti hain (exactly like inside a bar magnet). Bahar (outside): Opposite sides ke fields cancel out ho jaate hain — result: extremely WEAK, virtually ZERO field. Formula: $B = \\mu_0 n I$ (directly proportional to current $I$ aur turns per unit length $n$).\n\n• Option C Galat hai — Adjacent loop fields CONSTRUCTIVELY add up karte hain, destructively nahi. Isliye field andar strong hota hai.\n\n• Option D Galat hai — $B = \\mu_0 n I$ formula clearly dikhata hai ki field strength DIRECTLY proportional hai current ke — inversely nahi.\n\nAnswer: Option B sahi hai."
   },
   {
     "p_id": "bpsc_phys_m37_03",
     "qe": "A charged particle carrying charge $q$ enters a uniform magnetic field $B$ with a velocity $v$. Under what specific velocity orientation relative to the magnetic field lines does the charged particle experience strictly ZERO magnetic force?",
     "qh": "आवेश $q$ वाला एक आवेशित कण वेग $v$ के साथ एक समान चुंबकीय क्षेत्र $B$ में प्रवेश करता है। चुंबकीय क्षेत्र रेखाओं के सापेक्ष किस विशिष्ट वेग ओरिएंटेशन के तहत आवेशित कण सख्ती से शून्य चुंबकीय बल का अनुभव करता है?",
-    "se": [
-      "When the particle moves strictly perpendicular to the magnetic field lines (θ = 90°).",
-      "When the particle moves parallel or anti-parallel to the magnetic field lines (θ = 0° or θ = 180°).",
-      "When the particle moves at an angle of θ = 45° to the magnetic field lines.",
+    "oe": [
+      "When the particle moves strictly perpendicular to the magnetic field lines ($\\theta = 90^\\circ$).",
+      "When the particle moves parallel or anti-parallel to the magnetic field lines ($\\theta = 0^\\circ$ or $\\theta = 180^\\circ$).",
+      "When the particle moves at an angle of $\\theta = 45^\\circ$ to the magnetic field lines.",
       "When the particle is at rest inside a zero-gravity vacuum chamber."
     ],
-    "sh": [
-      "जब कण चुंबकीय क्षेत्र रेखाओं के सख्ती से लंबवत गति करता है (θ = 90°)।",
-      "जब कण चुंबकीय क्षेत्र रेखाओं के समानांतर या प्रति-समानांतर गति करता है (θ = 0° या θ = 180°)।",
-      "जब कण चुंबकीय क्षेत्र रेखाओं से θ = 45° के कोण पर गति करता है।",
+    "oh": [
+      "जब कण चुंबकीय क्षेत्र रेखाओं के सख्ती से लंबवत गति करता है ($\\theta = 90^\\circ$)।",
+      "जब कण चुंबकीय क्षेत्र रेखाओं के समानांतर या प्रति-समानांतर गति करता है ($\\theta = 0^\\circ$ या $\\theta = 180^\\circ$)।",
+      "जब कण चुंबकीय क्षेत्र रेखाओं से $\\theta = 45^\\circ$ के कोण पर गति करता है।",
       "जब कण शून्य-गुरुत्व निर्वात कक्ष के अंदर स्थिर होता है।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Lorentz magnetic force ka formula hai: F = qvB sinθ — jahan θ wo angle hai jo velocity vector aur magnetic field vector ke beech hota hai.\n\nIs formula mein sinθ ki value decide karti hai ki force kitna hoga.\n\n• Statement 1 Galat hai — θ = 90° par sin90° = 1, toh F = qvB — ye MAXIMUM force condition hai, zero nahi! Ye examiner ka classic trap hai.\n\n• Statement 2 Sahi hai — Jab particle field ke PARALLEL (θ = 0°) ya ANTI-PARALLEL (θ = 180°) move karta hai:\n  sin0° = 0 → F = qvB × 0 = 0\n  sin180° = 0 → F = qvB × 0 = 0\nDono cases mein force strictly ZERO hota hai. Particle seedha aage badhta rehta hai bina kisi deflection ke.\n\n• Statement 3 Galat hai — θ = 45° par sin45° = 1/√2, toh F = qvB/√2 — ye non-zero force hai.\n\n• Statement 4 Galat hai — Ruke hue particle par v = 0 hai, toh F = 0 — lekin ye zero-gravity se nahi, balki zero velocity ki wajah se hai. Ye alag scenario hai.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Lorentz magnetic force ka formula hai: $F = qvB \\sin\\theta$ — jahan $\\theta$ wo angle hai jo velocity vector aur magnetic field vector ke beech hota hai.\n\nIs formula mein $\\sin\\theta$ ki value decide karti hai ki force kitna hoga.\n\n• Option A Galat hai — $\\theta = 90^\\circ$ par $\\sin 90^\\circ = 1$, toh $F = qvB$ — ye MAXIMUM force condition hai, zero nahi! Ye examiner ka classic trap hai.\n\n• Option B Sahi hai — Jab particle field ke PARALLEL ($\\theta = 0^\\circ$) ya ANTI-PARALLEL ($\\theta = 180^\\circ$) move karta hai:\n  $\\sin 0^\\circ = 0 \\rightarrow F = qvB \\times 0 = 0$\n  $\\sin 180^\\circ = 0 \\rightarrow F = qvB \\times 0 = 0$\nDono cases mein force strictly ZERO hota hai. Particle seedha aage badhta rehta hai bina kisi deflection ke.\n\n• Option C Galat hai — $\\theta = 45^\\circ$ par $\\sin 45^\\circ = 1/\\sqrt{2}$, toh $F = qvB/\\sqrt{2}$ — ye non-zero force hai.\n\n• Option D Galat hai — Ruke hue particle par $v = 0$ hai, toh $F = 0$ — lekin ye zero-gravity se nahi, balki zero velocity ki wajah se hai. Ye alag scenario hai.\n\nAnswer: Option B sahi hai."
   },
   {
     "p_id": "bpsc_phys_m37_04",
     "qe": "Fleming's Left-Hand Rule and Fleming's Right-Hand Rule are fundamental directional tools in electromagnetism. Which physical parameters are indicated by the Thumb, Forefinger, and Middle Finger in Fleming's LEFT-HAND Rule?",
     "qh": "फ्लेमिंग का बायां हाथ का नियम (Fleming's Left-Hand Rule) और दायां हाथ का नियम विद्युत चुंबकत्व में मौलिक दिशात्मक उपकरण हैं। फ्लेमिंग के बाएं हाथ के नियम में अंगूठा (Thumb), तर्जनी (Forefinger) और मध्यमा (Middle Finger) द्वारा कौन से भौतिक पैरामीटर दर्शाए जाते हैं?",
-    "se": [
+    "oe": [
       "Forefinger: Motion/Force; Middle Finger: Magnetic Field; Thumb: Induced Current.",
       "Forefinger: Magnetic Field; Middle Finger: Electric Current; Thumb: Mechanical Force (or Motion of the conductor).",
       "Forefinger: Electric Field; Middle Finger: Mechanical Force; Thumb: Magnetic Flux.",
       "Forefinger: Magnetic Field; Middle Finger: Induced Voltage; Thumb: Resistance."
     ],
-    "sh": [
+    "oh": [
       "तर्जनी: गति/बल; मध्यमा: चुंबकीय क्षेत्र; अंगूठा: प्रेरित धारा।",
       "तर्जनी: चुंबकीय क्षेत्र; मध्यमा: विद्युत धारा; अंगूठा: यांत्रिक बल (या चालक की गति)।",
       "तर्जनी: विद्युत क्षेत्र; मध्यमा: यांत्रिक बल; अंगूठा: चुंबकीय फ्लक्स।",
       "तर्जनी: चुंबकीय क्षेत्र; मध्यमा: प्रेरित वोल्टेज; अंगूठा: प्रतिरोध।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Fleming's Left-Hand Rule electric MOTORS ke liye use hota hai — jahan supplied current aur magnetic field milkar mechanical motion produce karte hain.\n\nYaad rakhne ka easy trick: FBI mnemonic — F=Force (Thumb), B=Magnetic field (Forefinger), I=Current (Middle finger). Ya doosra: 'Father Mother Child' — Father=Force (Thumb), Mother=Magnetic field (Forefinger), Child=Current (Middle finger).\n\n• Statement 1 Galat hai — Is statement mein assignment bilkul jumbled hai. Motion/Force thumb par SAHI hai, lekin Forefinger Motion nahi, aur Middle finger Magnetic Field nahi hoti.\n\n• Statement 2 Sahi hai — Correct assignment:\n  → Forefinger = Magnetic Field (B) ki direction\n  → Middle Finger = Electric Current (I) ki direction\n  → Thumb = Mechanical Force / Motion (F) ki direction\nTeen fingers mutually perpendicular hongi.\n\n• Statement 3 Galat hai — 'Electric Field' aur 'Magnetic Flux' Fleming's Left-Hand Rule mein koi parameter nahi hain.\n\n• Statement 4 Galat hai — 'Induced Voltage' aur 'Resistance' Left-Hand Rule ke parameters nahi hain. Induced voltage Fleming's Right-Hand Rule (generators) se related hai.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Fleming's Left-Hand Rule electric MOTORS ke liye use hota hai — jahan supplied current aur magnetic field milkar mechanical motion produce karte hain.\n\nYaad rakhne ka easy trick: FBI mnemonic — $F = \\text{Force}$ (Thumb), $B = \\text{Magnetic field}$ (Forefinger), $I = \\text{Current}$ (Middle finger). Ya doosra: 'Father Mother Child' — $\\text{Father} = \\text{Force}$ (Thumb), $\\text{Mother} = \\text{Magnetic field}$ (Forefinger), $\\text{Child} = \\text{Current}$ (Middle finger).\n\n• Option A Galat hai — Is statement mein assignment bilkul jumbled hai. Motion/Force thumb par SAHI hai, lekin Forefinger Motion nahi, aur Middle finger Magnetic Field nahi hoti.\n\n• Option B Sahi hai — Correct assignment:\n  $\\rightarrow$ Forefinger = Magnetic Field ($B$) ki direction\n  $\\rightarrow$ Middle Finger = Electric Current ($I$) ki direction\n  $\\rightarrow$ Thumb = Mechanical Force / Motion ($F$) ki direction\nTeen fingers mutually perpendicular hongi.\n\n• Option C Galat hai — 'Electric Field' aur 'Magnetic Flux' Fleming's Left-Hand Rule mein koi parameter nahi hain.\n\n• Option D Galat hai — 'Induced Voltage' aur 'Resistance' Left-Hand Rule ke parameters nahi hain. Induced voltage Fleming's Right-Hand Rule (generators) se related hai.\n\nAnswer: Option B sahi hai."
   },
   {
     "p_id": "bpsc_phys_m37_05",
     "qe": "Ampere's Swimming Rule (recalled by the SNOW rule) predicts the deflection of a magnetic compass needle beneath a current-carrying wire. According to the SNOW rule, how does a compass needle behave when current flows from South to North in a wire placed OVER the needle?",
     "qh": "एम्पीयर का स्विमिंग नियम (SNOW नियम द्वारा याद किया गया) एक धारावाही तार के नीचे चुंबकीय कंपास सुई के विक्षेपण की भविष्यवाणी करता है। SNOW नियम के अनुसार, जब सुई के ऊपर (OVER) रखे तार में धारा दक्षिण (South) से उत्तर (North) की ओर बहती है तो कंपास सुई कैसा व्यवहार करती है?",
-    "se": [
+    "oe": [
       "The North pole of the magnetic needle deflects toward the East.",
       "The North pole of the magnetic needle deflects toward the West.",
       "The South pole of the magnetic needle deflects toward the West while the North pole remains stationary.",
       "The magnetic needle undergoes continuous 360° rotation."
     ],
-    "sh": [
+    "oh": [
       "चुंबकीय सुई का उत्तरी ध्रुव पूर्व की ओर विक्षेपित होता है।",
       "चुंबकीय सुई का उत्तरी ध्रुव पश्चिम की ओर विक्षेपित होता है।",
       "चुंबकीय सुई का दक्षिणी ध्रुव पश्चिम की ओर विक्षेपित होता है जबकि उत्तरी ध्रुव स्थिर रहता है।",
       "चुंबकीय सुई लगातार 360° घूर्णन करती है।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Oersted experiment (1820) ne pehli baar prove kiya ki current-carrying wire ke aas-paas magnetic field hota hai jo compass needle ko deflect karta hai. Ampere ne is observation ko formalize kiya.\n\nSNOW Rule ek mnemonic hai:\nS = South (current South se aata hai)\nN = North (current North ki taraf jaata hai)\nO = Over (wire needle ke UPAR rakhi hai)\nW = West (needle ka North pole West ki taraf deflect hoga)\n\n• Statement 1 Galat hai — EAST direction exactly OPPOSITE direction hai SNOW rule ke. East wali deflection tab hoti hai jab wire NEECHE (under) ho, upar nahi.\n\n• Statement 2 Sahi hai — SNOW rule clearly kehta hai: S→N current, Over position → North pole deflects toward West. Ye Oersted ke original experiment ka result hai.\n\n• Statement 3 Galat hai — Compass needle ek rigid dipole hai — jab North pole west jaata hai, South pole east jaata hai. South pole stationary rehna physically impossible hai.\n\n• Statement 4 Galat hai — Continuous 360° rotation tab hoti hai jab itna strong magnetic field ho ki Earth ka field overcome ho jaaye — normal wire current se aisa nahi hota.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Oersted experiment (1820) ne pehli baar prove kiya ki current-carrying wire ke aas-paas magnetic field hota hai jo compass needle ko deflect karta hai. Ampere ne is observation ko formalize kiya.\n\nSNOW Rule ek mnemonic hai:\nS = South (current South se aata hai)\nN = North (current North ki taraf jaata hai)\nO = Over (wire needle ke UPAR rakhi hai)\nW = West (needle ka North pole West ki taraf deflect hoga)\n\n• Option A Galat hai — EAST direction exactly OPPOSITE direction hai SNOW rule ke. East wali deflection tab hoti hai jab wire NEECHE (under) ho, upar nahi.\n\n• Option B Sahi hai — SNOW rule clearly kehta hai: S $\\rightarrow$ N current, Over position $\\rightarrow$ North pole deflects toward West. Ye Oersted ke original experiment ka result hai.\n\n• Option C Galat hai — Compass needle ek rigid dipole hai — jab North pole west jaata hai, South pole east jaata hai. South pole stationary rehna physically impossible hai.\n\n• Option D Galat hai — Continuous $360^\\circ$ rotation tab hoti hai jab itna strong magnetic field ho ki Earth ka field overcome ho jaaye — normal wire current se aisa nahi hota.\n\nAnswer: Option B sahi hai."
   },
   {
     "p_id": "bpsc_phys_m37_06",
     "qe": "Advanced medical diagnostic imaging relies on naturally generated internal biological magnetic fields. Which two primary organs in the human body produce significant magnetic fields that form the physiological basis of Magnetic Resonance Imaging (MRI)?",
     "qh": "उन्नत चिकित्सा नैदानिक इमेजिंग स्वाभाविक रूप से उत्पन्न आंतरिक जैविक चुंबकीय क्षेत्रों पर निर्भर करती है। मानव शरीर में कौन से दो प्राथमिक अंग महत्वपूर्ण चुंबकीय क्षेत्र उत्पन्न करते हैं जो चुंबकीय अनुनाद इमेजिंग (MRI) का शारीरिक आधार बनाते हैं?",
-    "se": [
-      "Lungs and Liver",
-      "Heart and Brain",
-      "Kidneys and Pancreas",
-      "Stomach and Spleen"
-    ],
-    "sh": [
-      "फेफड़े और यकृत",
-      "हृदय और मस्तिष्क",
-      "गुर्दे और अग्न्याशय",
-      "पेट और प्लीहा"
-    ],
     "oe": [
       "Lungs and Liver",
       "Heart and Brain",
@@ -183,86 +112,50 @@
       "पेट और प्लीहा"
     ],
     "a": 1,
-    "e": "Hamare body mein nerve cells (neurons) mein ions (Na⁺, K⁺) ka flow hota hai — ye essentially ek weak electric current hai. Aur jab bhi current flow hota hai, magnetic field zaroor banta hai (Oersted ka principle).\n\nIs biological magnetic field ka use MRI (Magnetic Resonance Imaging) mein hota hai — ek non-invasive imaging technique.\n\n• Statement 1 Galat hai — Lungs aur Liver mein major ionic electrical conduction pathways nahi hote. Ye metabolic organs hain, not major electrical conductors.\n\n• Statement 2 Sahi hai — Do primary organs measurable biological magnetic fields produce karte hain:\n  1. HEART — Cardiac conduction system (SA node → AV node → Bundle of His → Purkinje fibers) mein powerful ionic currents flow karte hain. Heart ka magnetic field ~10⁻¹⁰ Tesla hota hai. ECG isi ka electrical version hai, aur MCG (Magnetocardiography) iska magnetic version.\n  2. BRAIN — Neurons mein neural impulses (action potentials) mein Na⁺/K⁺ currents bahut active hote hain. Brain ka field ~10⁻¹³ Tesla hota hai. EEG iska electrical version, MEG (Magnetoencephalography) magnetic version hai.\n\n• Statements 3 aur 4 — Kidneys, Pancreas, Stomach, Spleen mein itne significant measurable magnetic fields nahi bante.\n\nAnswer: Statement 2 / Heart and Brain (index 1) sahi hai."
+    "e": "Hamare body mein nerve cells (neurons) mein ions ($Na^+$, $K^+$) ka flow hota hai — ye essentially ek weak electric current hai. Aur jab bhi current flow hota hai, magnetic field zaroor banta hai (Oersted ka principle).\n\nIs biological magnetic field ka use MRI (Magnetic Resonance Imaging) mein hota hai — ek non-invasive imaging technique.\n\n• Option A Galat hai — Lungs aur Liver mein major ionic electrical conduction pathways nahi hote. Ye metabolic organs hain, not major electrical conductors.\n\n• Option B Sahi hai — Do primary organs measurable biological magnetic fields produce karte hain:\n  1. HEART — Cardiac conduction system (SA node $\\rightarrow$ AV node $\\rightarrow$ Bundle of His $\\rightarrow$ Purkinje fibers) mein powerful ionic currents flow karte hain. Heart ka magnetic field $\\sim 10^{-10}\\text{ Tesla}$ hota hai. ECG isi ka electrical version hai, aur MCG (Magnetocardiography) iska magnetic version.\n  2. BRAIN — Neurons mein neural impulses (action potentials) mein $Na^+$/$K^+$ currents bahut active hote hain. Brain ka field $\\sim 10^{-13}\\text{ Tesla}$ hota hai. EEG iska electrical version, MEG (Magnetoencephalography) magnetic version hai.\n\n• Option C aur Option D Galat hain — Kidneys, Pancreas, Stomach, Spleen mein itne significant measurable magnetic fields nahi bante.\n\nAnswer: Option B sahi hai."
   },
   {
     "p_id": "bpsc_phys_m37_07",
     "qe": "Right-Hand Thumb Rule and Maxwell's Corkscrew Rule determine the directional geometry of magnetic field lines surrounding a straight current-carrying conductor. What is the spatial pattern of magnetic field lines around a long straight vertical wire?",
     "qh": "दाहिने हाथ के अंगूठे का नियम और मैक्सवेल का कॉर्कस्क्रू नियम एक सीधे धारावाही चालक के आसपास की चुंबकीय क्षेत्र रेखाओं की दिशात्मक ज्यामिति निर्धारित करते हैं। एक लंबे सीधे ऊर्ध्वाधर तार के चारों ओर चुंबकीय क्षेत्र रेखाओं का स्थानिक पैटर्न क्या है?",
-    "se": [
+    "oe": [
       "Parallel straight lines pointing vertically upwards.",
       "Concentric circles centered on the wire lying in a horizontal plane perpendicular to the conductor.",
       "Helical spirals radiating outwards into spherical space.",
       "Elliptical loops parallel to the conductor wire axis."
     ],
-    "sh": [
+    "oh": [
       "ऊर्ध्वाधर ऊपर की ओर इंगित करती समानांतर सीधी रेखाएं।",
       "चालक के लंबवत क्षैतिज तल में तार पर केंद्रित संकेंद्रित वृत्त।",
       "गोलाकार अंतरिक्ष में बाहर की ओर विकिरण करते सर्पिल।",
       "चालक तार अक्ष के समानांतर दीर्घवृत्ताकार लूप।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Oersted (1820) ne discover kiya ki straight current-carrying wire ke aas-paas magnetic field hota hai. Is field ki geometry samajhna bahut important hai.\n\nRight-Hand Thumb Rule: Apna right hand ka thumb current ki direction mein point karo — baaki curl hoti ungliyan magnetic field lines ki direction batati hain.\n\nMaxwell's Corkscrew Rule: Ek corkscrew (bottle opener) ko current direction mein screw karo — corkscrew ke rotation ki direction = magnetic field direction.\n\n• Statement 1 Galat hai — Parallel straight lines solenoid ke ANDAR ki field describe karti hain, straight wire ke aas-paas nahi.\n\n• Statement 2 Sahi hai — Ek straight vertical wire ke aas-paas magnetic field lines CONCENTRIC CIRCLES banti hain. Ye circles:\n  → Wire ko center maan kar\n  → Wire ke perpendicular horizontal planes mein hoti hain\n  → Wire se door jaane par circles badi hoti hain (field weak hota hai)\n  → Formula: B = μ₀I/2πr (distance r se inversely proportional)\n\n• Statement 3 Galat hai — Helical spirals solenoid ya helix wire ke aas-paas hoti hain, straight wire ke nahi.\n\n• Statement 4 Galat hai — Elliptical loops wire ke parallel nahi honge — agar wire vertical hai toh field lines horizontal planes mein hain, parallel nahi.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Oersted (1820) ne discover kiya ki straight current-carrying wire ke aas-paas magnetic field hota hai. Is field ki geometry samajhna bahut important hai.\n\nRight-Hand Thumb Rule: Apna right hand ka thumb current ki direction mein point karo — baaki curl hoti ungliyan magnetic field lines ki direction batati hain.\n\nMaxwell's Corkscrew Rule: Ek corkscrew (bottle opener) ko current direction mein screw karo — corkscrew ke rotation ki direction = magnetic field direction.\n\n• Option A Galat hai — Parallel straight lines solenoid ke ANDAR ki field describe karti hain, straight wire ke aas-paas nahi.\n\n• Option B Sahi hai — Ek straight vertical wire ke aas-paas magnetic field lines CONCENTRIC CIRCLES banti hain. Ye circles:\n  $\\rightarrow$ Wire ko center maan kar\n  $\\rightarrow$ Wire ke perpendicular horizontal planes mein hoti hain\n  $\\rightarrow$ Wire se door jaane par circles badi hoti hain (field weak hota hai)\n  $\\rightarrow$ Formula: $B = \\mu_0 I / (2\\pi r)$ (distance $r$ se inversely proportional)\n\n• Option C Galat hai — Helical spirals solenoid ya helix wire ke aas-paas hoti hain, straight wire ke nahi.\n\n• Option D Galat hai — Elliptical loops wire ke parallel nahi honge — agar wire vertical hai toh field lines horizontal planes mein hain, parallel nahi.\n\nAnswer: Option B sahi hai."
   },
   {
     "p_id": "bpsc_phys_m37_08",
     "qe": "The SI unit of magnetic field intensity is Tesla (T), while its CGS unit is Gauss (G). What is the precise mathematical equivalence linking 1 Tesla to Gauss?",
     "qh": "चुंबकीय क्षेत्र की तीव्रता की SI इकाई टेस्ला (T) है, जबकि इसकी CGS इकाई गॉस (G) है। 1 टेस्ला को गॉस से जोड़ने वाली सटीक गणितीय तुल्यता क्या है?",
-    "se": [
-      "1 Tesla = 10² Gauss",
-      "1 Tesla = 10⁴ Gauss (1 T = 10⁴ G)",
-      "1 Tesla = 10⁻⁴ Gauss",
-      "1 Tesla = 10⁸ Gauss"
-    ],
-    "sh": [
-      "1 टेस्ला = 10² गॉस",
-      "1 टेस्ला = 10⁴ गॉस (1 T = 10⁴ G)",
-      "1 टेस्ला = 10⁻⁴ गॉस",
-      "1 टेस्ला = 10⁸ गॉस"
-    ],
     "oe": [
-      "1 Tesla = 10² Gauss",
-      "1 Tesla = 10⁴ Gauss",
-      "1 Tesla = 10⁻⁴ Gauss",
-      "1 Tesla = 10⁸ Gauss"
+      "$1\\text{ Tesla} = 10^2\\text{ Gauss}$",
+      "$1\\text{ Tesla} = 10^4\\text{ Gauss}$ ($1\\text{ T} = 10^4\\text{ G}$)",
+      "$1\\text{ Tesla} = 10^{-4}\\text{ Gauss}$",
+      "$1\\text{ Tesla} = 10^8\\text{ Gauss}$"
     ],
     "oh": [
-      "1 टेस्ला = 10² गॉस",
-      "1 टेस्ला = 10⁴ गॉस",
-      "1 टेस्ला = 10⁻⁴ गॉस",
-      "1 टेस्ला = 10⁸ गॉस"
+      "$1\\text{ टेस्ला} = 10^2\\text{ गॉस}$",
+      "$1\\text{ टेस्ला} = 10^4\\text{ गॉस}$ ($1\\text{ T} = 10^4\\text{ G}$)",
+      "$1\\text{ टेस्ला} = 10^{-4}\\text{ गॉस}$",
+      "$1\\text{ टेस्ला} = 10^8\\text{ गॉस}$"
     ],
     "a": 1,
-    "e": "Magnetic field strength (B) do unit systems mein measure hota hai:\n1. SI system: Tesla (T) — Nikola Tesla ke naam par. 1T = 1 Weber/m² = 1 N/(A·m)\n2. CGS system: Gauss (G) — Carl Friedrich Gauss ke naam par.\n\nDono systems ka exact conversion yaad rakhna BPSC/UPSC ke liye important hai:\n\n• Statement 1 Galat hai — 10² = 100 Gauss — yeh bahut chhota factor hai. Real conversion se 100 guna kam.\n\n• Statement 2 Sahi hai — 1 Tesla = 10⁴ Gauss (ek Tesla = das hajar Gauss). Ulta: 1 Gauss = 10⁻⁴ Tesla.\n\nEk real-world example se samjho:\n  → Pृthvi ka surface magnetic field ≈ 0.5 Gauss = 5 × 10⁻⁵ Tesla\n  → MRI machine ka field ≈ 1.5 to 3 Tesla = 15,000 to 30,000 Gauss\n  → Refrigerator magnet ≈ 100 Gauss = 0.01 Tesla\n\n• Statement 3 Galat hai — 10⁻⁴ Gauss actually 1 Gauss = 10⁻⁴ Tesla ka ulta version hai — unit ko reverse kar diya.\n\n• Statement 4 Galat hai — 10⁸ Gauss unrealistically huge value hai — only neutron stars mein itna field hota hai.\n\nAnswer: Statement 2 / 1T = 10⁴ G (index 1) sahi hai."
+    "e": "Magnetic field strength ($B$) do unit systems mein measure hota hai:\n1. SI system: Tesla (T) — Nikola Tesla ke naam par. $1\\text{ T} = 1\\text{ Weber}/\\text{m}^2 = 1\\text{ N}/(\\text{A}\\cdot\\text{m})$\n2. CGS system: Gauss (G) — Carl Friedrich Gauss ke naam par.\n\nDono systems ka exact conversion yaad rakhna BPSC/UPSC ke liye important hai:\n\n• Option A Galat hai — $10^2 = 100\\text{ Gauss}$ — yeh bahut chhota factor hai. Real conversion se 100 guna kam.\n\n• Option B Sahi hai — $1\\text{ Tesla} = 10^4\\text{ Gauss}$ (ek Tesla = das hajar Gauss). Ulta: $1\\text{ Gauss} = 10^{-4}\\text{ Tesla}$.\n\nEk real-world example se samjho:\n  $\\rightarrow$ Prithvi ka surface magnetic field $\\approx 0.5\\text{ Gauss} = 5 \\times 10^{-5}\\text{ Tesla}$\n  $\\rightarrow$ MRI machine ka field $\\approx 1.5\\text{ to }3\\text{ Tesla} = 15,000\\text{ to }30,000\\text{ Gauss}$\n  $\\rightarrow$ Refrigerator magnet $\\approx 100\\text{ Gauss} = 0.01\\text{ Tesla}$\n\n• Option C Galat hai — $10^{-4}\\text{ Gauss}$ actually $1\\text{ Gauss} = 10^{-4}\\text{ Tesla}$ ka ulta version hai — unit ko reverse kar diya.\n\n• Option D Galat hai — $10^8\\text{ Gauss}$ unrealistically huge value hai — only neutron stars mein itna field hota hai.\n\nAnswer: Option B sahi hai."
   },
   {
     "p_id": "bpsc_phys_m37_09",
     "qe": "Fleming's Right-Hand Rule is specifically applied in electromagnetic devices to determine the direction of generated currents. In which electrical device is Fleming's RIGHT-HAND Rule primarily used?",
     "qh": "फ्लेमिंग का दाहिना हाथ का नियम (Fleming's Right-Hand Rule) विशेष रूप से उत्पन्न धाराओं की दिशा निर्धारित करने के लिए विद्युत चुम्बकीय उपकरणों में लागू किया जाता है। मुख्य रूप से किस विद्युत उपकरण में फ्लेमिंग के दाहिने हाथ के नियम का उपयोग किया जाता है?",
-    "se": [
-      "Electric Motor",
-      "Electric Generator (Dynamo)",
-      "Electric Heating Toaster",
-      "Moving Coil Loudspeaker"
-    ],
-    "sh": [
-      "विद्युत मोटर",
-      "विद्युत जनरेटर (डायनेमो)",
-      "विद्युत हीटिंग टोस्टर",
-      "मूविंग कॉइल लाउडस्पीकर"
-    ],
     "oe": [
       "Electric Motor",
       "Electric Generator (Dynamo)",
@@ -276,645 +169,406 @@
       "मूविंग कॉइल लाउडस्पीकर"
     ],
     "a": 1,
-    "e": "Fleming ke DO rules hain — aur inhe confuse karna exam mein bahut common mistake hai:\n\nFleming's LEFT-Hand Rule → Electric MOTOR ke liye\n(Electrical energy IN → Mechanical energy OUT)\nLogic: Current + Magnetic field → Force/Motion\n\nFleming's RIGHT-Hand Rule → Electric GENERATOR ke liye\n(Mechanical energy IN → Electrical energy OUT)\nLogic: Motion + Magnetic field → Induced Current\n\nEasy yaad rakhne ka trick:\n→ 'L' for Left = L for Motor (Motor ka L bhi hota hai mechanicaL)\n→ 'R' for Right = R for geneRatoR\n\n• Statement 1 Galat hai — Electric Motor mein Fleming's LEFT-Hand Rule use hota hai. Current diya jaata hai aur motion milta hai.\n\n• Statement 2 Sahi hai — Electric Generator (Dynamo) mein coil ko mechanically rotate kiya jaata hai (turbine se) aur isse induced current generate hoti hai. Is induced current ki direction find karne ke liye Fleming's RIGHT-Hand Rule use hota hai.\n\n• Statement 3 Galat hai — Electric Toaster sirf Joule heating (Q = I²Rt) pe kaam karta hai — koi Fleming's rule applicable nahi.\n\n• Statement 4 Galat hai — Loudspeaker motor effect use karta hai (Left-Hand Rule), Right-Hand Rule nahi.\n\nAnswer: Statement 2 / Electric Generator (index 1) sahi hai."
+    "e": "Fleming ke DO rules hain — aur inhe confuse karna exam mein bahut common mistake hai:\n\nFleming's LEFT-Hand Rule $\\rightarrow$ Electric MOTOR ke liye\n(Electrical energy IN $\\rightarrow$ Mechanical energy OUT)\nLogic: Current + Magnetic field $\\rightarrow$ Force/Motion\n\nFleming's RIGHT-Hand Rule $\\rightarrow$ Electric GENERATOR ke liye\n(Mechanical energy IN $\\rightarrow$ Electrical energy OUT)\nLogic: Motion + Magnetic field $\\rightarrow$ Induced Current\n\nEasy yaad rakhne ka trick:\n$\\rightarrow$ 'L' for Left = L for Motor (Motor ka L bhi hota hai mechanicaL)\n$\\rightarrow$ 'R' for Right = R for geneRatoR\n\n• Option A Galat hai — Electric Motor mein Fleming's LEFT-Hand Rule use hota hai. Current diya jaata hai aur motion milta hai.\n\n• Option B Sahi hai — Electric Generator (Dynamo) mein coil ko mechanically rotate kiya jaata hai (turbine se) aur isse induced current generate hoti hai. Is induced current ki direction find karne ke liye Fleming's RIGHT-Hand Rule use hota hai.\n\n• Option C Galat hai — Electric Toaster sirf Joule heating ($Q = I^2Rt$) pe kaam karta hai — koi Fleming's rule applicable nahi.\n\n• Option D Galat hai — Loudspeaker motor effect use karta hai (Left-Hand Rule), Right-Hand Rule nahi.\n\nAnswer: Option B sahi hai."
   },
   {
     "p_id": "bpsc_phys_m37_10",
     "qe": "Substances interact differently with external magnetic fields based on their atomic structure. Which choice correctly categorizes Magnetic Substances versus Non-magnetic Substances?",
     "qh": "पदार्थ अपनी परमाणु संरचना के आधार पर बाहरी चुंबकीय क्षेत्रों के साथ अलग-अलग अंतःक्रिया करते हैं। कौन सा विकल्प चुंबकीय पदार्थों (Magnetic Substances) बनाम अचुंबकीय पदार्थों (Non-magnetic Substances) को सही ढंग से वर्गीकृत करता है?",
-    "se": [
+    "oe": [
       "Magnetic: Iron, Nickel, Cobalt; Non-magnetic: Wood, Paper, Aluminium.",
       "Magnetic: Wood, Aluminium, Copper; Non-magnetic: Iron, Nickel, Steel.",
       "Magnetic: Paper, Glass, Rubber; Non-magnetic: Cobalt, Nickel, Iron.",
       "Magnetic: Gold, Silver, Platinum; Non-magnetic: Iron, Nickel, Cobalt."
     ],
-    "sh": [
+    "oh": [
       "चुंबकीय: लोहा, निकेल, कोबाल्ट; अचुंबकीय: लकड़ी, कागज, एल्युमीनियम।",
       "चुंबकीय: लकड़ी, एल्युमीनियम, तांबा; अचुंबकीय: लोहा, निकेल, इस्पात।",
       "चुंबकीय: कागज, कांच, रबर; अचुंबकीय: कोबाल्ट, निकेल, लोहा।",
       "चुंबकीय: सोना, चांदी, प्लेटिनम; अचुंबकीय: लोहा, निकेल, कोबाल्ट।"
     ],
-    "oe": [
-      "Magnetic: Iron, Nickel, Cobalt; Non-magnetic: Wood, Paper, Aluminium",
-      "Magnetic: Wood, Aluminium, Copper; Non-magnetic: Iron, Nickel, Steel",
-      "Magnetic: Paper, Glass, Rubber; Non-magnetic: Cobalt, Nickel, Iron",
-      "Magnetic: Gold, Silver, Platinum; Non-magnetic: Iron, Nickel, Cobalt"
-    ],
-    "oh": [
-      "चुंबकीय: लोहा, निकेल, कोबाल्ट; अचुंबकीय: लकड़ी, कागज, एल्युमीनियम",
-      "चुंबकीय: लकड़ी, एल्युमीनियम, तांबा; अचुंबकीय: लोहा, निकेल, इस्पात",
-      "चुंबकीय: कागज, कांच, रबर; अचुंबकीय: कोबाल्ट, निकेल, लोहा",
-      "चुंबकीय: सोना, चांदी, प्लेटिनम; अचुंबकीय: लोहा, निकेल, कोबाल्ट"
-    ],
     "a": 0,
-    "e": "Kisi bhi substance ka magnetic behaviour uski atomic structure se determine hota hai — specifically unpaired electrons ki sankhya se. Ferromagnetic materials mein unpaired electron spins ek domain mein align ho jaate hain.\n\nTeen main categories hain:\n1. Ferromagnetic: Strongly attracted (Iron, Nickel, Cobalt, Steel)\n2. Paramagnetic: Feebly attracted (Aluminium, Oxygen, Platinum)\n3. Diamagnetic: Feebly repelled (Copper, Gold, Water, Bismuth)\n\nColloquially, 'Magnetic' = Ferromagnetic; 'Non-magnetic' = everything else (day-to-day use mein).\n\n• Statement 1 Sahi hai — Iron (Fe), Nickel (Ni), Cobalt (Co) — ye teeno classic ferromagnetic materials hain jinhe magnets strongly attract karte hain. Wood, Paper, Aluminium — ye non-magnetic hain (normal conditions mein magnet se attract nahi hote).\n\n• Statement 2 Galat hai — Ye exactly ULTA hai! Wood, Aluminium, Copper non-magnetic hain; Iron, Nickel, Steel magnetic hain. Classic swap trap.\n\n• Statement 3 Galat hai — Paper, Glass, Rubber non-magnetic hain aur Cobalt, Nickel, Iron magnetic hain — phir se swap.\n\n• Statement 4 Galat hai — Gold, Silver, Platinum actually DIAMAGNETIC hain (feebly repelled) — ye magnetic nahi hain. Iron, Nickel, Cobalt magnetic hain.\n\nAnswer: Statement 1 (index 0) sahi hai."
+    "e": "Kisi bhi substance ka magnetic behaviour uski atomic structure se determine hota hai — specifically unpaired electrons ki sankhya se. Ferromagnetic materials mein unpaired electron spins ek domain mein align ho jaate hain.\n\nTeen main categories hain:\n1. Ferromagnetic: Strongly attracted (Iron, Nickel, Cobalt, Steel)\n2. Paramagnetic: Feebly attracted (Aluminium, Oxygen, Platinum)\n3. Diamagnetic: Feebly repelled (Copper, Gold, Water, Bismuth)\n\nColloquially, 'Magnetic' = Ferromagnetic; 'Non-magnetic' = everything else (day-to-day use mein).\n\n• Option A Sahi hai — Iron ($Fe$), Nickel ($Ni$), Cobalt ($Co$) — ye teeno classic ferromagnetic materials hain jinhe magnets strongly attract karte hain. Wood, Paper, Aluminium — ye non-magnetic hain (normal conditions mein magnet se attract nahi hote).\n\n• Option B Galat hai — Ye exactly ULTA hai! Wood, Aluminium, Copper non-magnetic hain; Iron, Nickel, Steel magnetic hain. Classic swap trap.\n\n• Option C Galat hai — Paper, Glass, Rubber non-magnetic hain aur Cobalt, Nickel, Iron magnetic hain — phir se swap.\n\n• Option D Galat hai — Gold, Silver, Platinum actually DIAMAGNETIC hain (feebly repelled) — ye magnetic nahi hain. Iron, Nickel, Cobalt magnetic hain.\n\nAnswer: Option A sahi hai."
   },
   {
     "p_id": "bpsc_phys_m38_01",
     "qe": "Evaluating the structural properties of magnets reveals fundamental laws governing magnetic poles. What occurs when a bar magnet is broken cleanly in half across its middle?",
     "qh": "चुंबक के संरचनात्मक गुणों का मूल्यांकन चुंबकीय ध्रुवों को नियंत्रित करने वाले मौलिक नियमों को उजागर करता है। क्या होता है जब एक बार चुंबक को उसके मध्य से साफ-साफ दो भागों में तोड़ दिया जाता है?",
-    "se": [
+    "oe": [
       "The North pole and South pole separate into two isolated magnetic monopoles.",
       "Two complete new magnets are formed, each possessing its own independent North and South pole pair.",
       "The magnetic field vanishes completely, leaving behind non-magnetic iron pieces.",
       "One piece retains pure North magnetism while the other piece becomes unmagnetized."
     ],
-    "sh": [
+    "oh": [
       "उत्तरी ध्रुव और दक्षिणी ध्रुव दो अलग-थलग चुंबकीय एकध्रुव (monopoles) में अलग हो जाते हैं।",
       "दो पूर्ण नए चुंबक बनते हैं, जिनमें से प्रत्येक के पास अपना स्वतंत्र उत्तरी और दक्षिणी ध्रुव युग्म होता है।",
       "चुंबकीय क्षेत्र पूरी तरह से गायब हो जाता है, पीछे गैर-चुंबकीय लोहे के टुकड़े छोड़ जाता है।",
       "एक टुकड़ा शुद्ध उत्तरी चुंबकत्व बनाए रखता है जबकि दूसरा टुकड़ा अचुंबकीय हो जाता है।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Magnetism ki ek fundamental property hai: Magnetic poles HAMESHA pairs mein exist karte hain. Isolated magnetic monopole (akela North ya akela South) abhi tak kabhi nahi mila — ye Maxwell's equations ka hissa hai (∇·B = 0).\n\nMagnetism actually atomic level par hota hai — electrons ke spin aur orbital motion se domains bante hain jo aligned rehte hain.\n\n• Statement 1 Galat hai — Ye SABSE COMMON trap hai! Bahut log sochte hain ki torna matlab North aur South ko alag kar dena. Lekin aisa NAHI hota. Magnetic monopoles exist nahi karte — ye ek unsolved physics problem bhi hai (Dirac monopole sirf theoretical hai).\n\n• Statement 2 Sahi hai — Jab magnet todte hain, fracture point par naye poles emerge ho jaate hain. Kyunki:\n  → Original N pole waala tukda: North (purana) + South (naya fracture par)\n  → Original S pole waala tukda: North (naya fracture par) + South (purana)\n  → Result: DO complete magnets, har ek ke paas apna N-S pair!\nIs process ko aap kitni baar bhi repeat karo — har baar do magnets milenge.\n\n• Statement 3 Galat hai — Magnetism atomic domains mein hota hai — todne se domains nahi detach hote, field vanish nahi hoti.\n\n• Statement 4 Galat hai — Ek tukde mein sirf North aur doosre mein unmagnetized — ye monopole scenario hai jo possible nahi.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Magnetism ki ek fundamental property hai: Magnetic poles HAMESHA pairs mein exist karte hain. Isolated magnetic monopole (akela North ya akela South) abhi tak kabhi nahi mila — ye Maxwell's equations ka hissa hai ($\\nabla \\cdot B = 0$).\n\nMagnetism actually atomic level par hota hai — electrons ke spin aur orbital motion se domains bante hain jo aligned rehte hain.\n\n• Option A Galat hai — Ye SABSE COMMON trap hai! Bahut log sochte hain ki torna matlab North aur South ko alag kar dena. Lekin aisa NAHI hota. Magnetic monopoles exist nahi karte — ye ek unsolved physics problem bhi hai (Dirac monopole sirf theoretical hai).\n\n• Option B Sahi hai — Jab magnet todte hain, fracture point par naye poles emerge ho jaate hain. Kyunki:\n  $\\rightarrow$ Original N pole waala tukda: North (purana) + South (naya fracture par)\n  $\\rightarrow$ Original S pole waala tukda: North (naya fracture par) + South (purana)\n  $\\rightarrow$ Result: DO complete magnets, har ek ke paas apna N-S pair!\nIs process ko aap kitni baar bhi repeat karo — har baar do magnets milenge.\n\n• Option C Galat hai — Magnetism atomic domains mein hota hai — todne se domains nahi detach hote, field vanish nahi hoti.\n\n• Option D Galat hai — Ek tukde mein sirf North aur doosre mein unmagnetized — ye monopole scenario hai jo possible nahi.\n\nAnswer: Option B sahi hai."
   },
   {
     "p_id": "bpsc_phys_m38_02",
-    "qe": "Earth's geomagnetic field is defined by three fundamental orientation elements: Angle of Declination (θ), Angle of Dip (δ), and Horizontal Component (B_H). What is the value of the Angle of Dip (δ) at Earth's magnetic poles and at Earth's magnetic equator?",
-    "qh": "पृथ्वी का भू-चुंबकीय क्षेत्र तीन मौलिक ओरिएंटेशन तत्वों द्वारा परिभाषित किया जाता है: दिपात कोण (Angle of Declination - θ), नमन कोण (Angle of Dip - δ), और क्षैतिज घटक (B_H)। पृथ्वी के चुंबकीय ध्रुवों और चुंबकीय भूमध्य रेखा (magnetic equator) पर नमन कोण (δ) का मान क्या है?",
-    "se": [
+    "qe": "Earth's geomagnetic field is defined by three fundamental orientation elements: Angle of Declination ($\\theta$), Angle of Dip ($\\delta$), and Horizontal Component ($B_H$). What is the value of the Angle of Dip ($\\delta$) at Earth's magnetic poles and at Earth's magnetic equator?",
+    "qh": "पृथ्वी का भू-चुंबकीय क्षेत्र तीन मौलिक ओरिएंटेशन तत्वों द्वारा परिभाषित किया जाता है: दिपात कोण (Angle of Declination - $\\theta$), नमन कोण (Angle of Dip - $\\delta$), और क्षैतिज घटक ($B_H$)। पृथ्वी के चुंबकीय ध्रुवों और चुंबकीय भूमध्य रेखा (magnetic equator) पर नमन कोण ($\\delta$) का मान क्या है?",
+    "oe": [
       "Dip is 0° at the magnetic poles and 90° at the magnetic equator.",
       "Dip is 90° at the magnetic poles and 0° at the magnetic equator.",
       "Dip is strictly 45° at both the magnetic poles and equator.",
       "Dip is 180° at the poles and 90° at the equator."
     ],
-    "sh": [
+    "oh": [
       "चुंबकीय ध्रुवों पर नमन कोण 0° और चुंबकीय भूमध्य रेखा पर 90° है।",
       "चुंबकीय ध्रुवों पर नमन कोण 90° और चुंबकीय भूमध्य रेखा पर 0° है।",
       "चुंबकीय ध्रुवों और भूमध्य रेखा दोनों पर नमन कोण सख्ती से 45° है।",
       "ध्रुवों पर नमन कोण 180° और भूमध्य रेखा पर 90° है।"
     ],
-    "oe": [
-      "Dip is 0° at poles and 90° at equator",
-      "Dip is 90° at poles and 0° at equator",
-      "Dip is 45° at both poles and equator",
-      "Dip is 180° at poles and 90° at equator"
-    ],
-    "oh": [
-      "ध्रुवों पर 0° और भूमध्य रेखा पर 90°",
-      "ध्रुवों पर 90° और भूमध्य रेखा पर 0°",
-      "ध्रुवों और भूमध्य रेखा दोनों पर 45°",
-      "ध्रुवों पर 180° और भूमध्य रेखा पर 90°"
-    ],
     "a": 1,
-    "e": "Angle of Dip (ya Magnetic Inclination) wo angle hai jo pृthvi ka TOTAL magnetic field vector (B) horizontal surface ke saath banata hai.\n\nSamjho is tarah: B_total ke do components hain:\n→ B_H = Horizontal component (compass needle align hota hai iske saath)\n→ B_V = Vertical component (dip needle isse measure karta hai)\ntanδ = B_V / B_H\n\n• Statement 1 Galat hai — Ye values SWAP kar deta hai — classic examiner trap! Poles par 0° aur Equator par 90° bilkul ulta hai.\n\n• Statement 2 Sahi hai:\n  AT MAGNETIC POLES (North/South pole):\n  → Earth ki field lines vertically enter/exit karti hain\n  → B_H = 0, B_V = maximum\n  → tanδ = B_V/0 = ∞ → δ = 90°\n  → Ek dip needle yahan vertically point karegi!\n\n  AT MAGNETIC EQUATOR:\n  → Earth ki field lines horizontal hoti hain, surface ke parallel\n  → B_V = 0, B_H = maximum\n  → tanδ = 0/B_H = 0 → δ = 0°\n  → Ek dip needle yahan horizontally point karegi!\n\n• Statement 3 Galat hai — 45° neither pole par na equator par hota hai. 45° tab hoga jab B_H = B_V.\n\n• Statement 4 Galat hai — 180° physically meaningful magnetic dip value nahi hai.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Angle of Dip (ya Magnetic Inclination) wo angle hai jo prithvi ka TOTAL magnetic field vector ($B$) horizontal surface ke saath banata hai.\n\nSamjho is tarah: $B_{\\text{total}}$ ke do components hain:\n$\\rightarrow B_H$ = Horizontal component (compass needle align hota hai iske saath)\n$\\rightarrow B_V$ = Vertical component (dip needle isse measure karta hai)\n$\\tan\\delta = B_V / B_H$\n\n• Option A Galat hai — Ye values SWAP kar deta hai — classic examiner trap! Poles par $0^\\circ$ aur Equator par $90^\\circ$ bilkul ulta hai.\n\n• Option B Sahi hai:\n  AT MAGNETIC POLES (North/South pole):\n  $\\rightarrow$ Earth ki field lines vertically enter/exit karti hain\n  $\\rightarrow B_H = 0$, $B_V = \\text{maximum}$\n  $\\rightarrow \\tan\\delta = B_V/0 = \\infty \\rightarrow \\delta = 90^\\circ$\n  $\\rightarrow$ Ek dip needle yahan vertically point karegi!\n\n  AT MAGNETIC EQUATOR:\n  $\\rightarrow$ Earth ki field lines horizontal hoti hain, surface ke parallel\n  $\\rightarrow B_V = 0$, $B_H = \\text{maximum}$\n  $\\rightarrow \\tan\\delta = 0/B_H = 0 \\rightarrow \\delta = 0^\\circ$\n  $\\rightarrow$ Ek dip needle yahan horizontally point karegi!\n\n• Option C Galat hai — $45^\\circ$ neither pole par na equator par hota hai. $45^\\circ$ tab hoga jab $B_H = B_V$.\n\n• Option D Galat hai — $180^\\circ$ physically meaningful magnetic dip value nahi hai.\n\nAnswer: Option B sahi hai."
   },
   {
     "p_id": "bpsc_phys_m38_03",
     "qe": "In magnetic field mapping, a Neutral Point is identified in space. What physical condition defines a Neutral Point near a bar magnet placed in Earth's field?",
     "qh": "चुंबकीय क्षेत्र मैपिंग में, अंतरिक्ष में एक उदासीन बिंदु (Neutral Point) की पहचान की जाती है। पृथ्वी के क्षेत्र में रखे गए एक बार चुंबक के पास एक उदासीन बिंदु को कौन सी भौतिक स्थिति परिभाषित करती है?",
-    "se": [
+    "oe": [
       "The point where the magnet's external field is infinitely magnified by solar wind.",
       "The point where the external magnetic field of the magnet is completely canceled out by the horizontal component of Earth's magnetic field (B_H), resulting in a net magnetic field of ZERO.",
       "The point where the vertical component of Earth's field equals 311 V.",
       "The point where a compass needle rotates continuously at supersonic speeds."
     ],
-    "sh": [
+    "oh": [
       "वह बिंदु जहां चुंबक का बाहरी क्षेत्र सौर पवन द्वारा अनंत रूप से बढ़ाया जाता है।",
       "वह बिंदु जहां चुंबक का बाहरी चुंबकीय क्षेत्र पृथ्वी के चुंबकीय क्षेत्र के क्षैतिज घटक (B_H) द्वारा पूरी तरह से रद्द कर दिया जाता है, जिसके परिणामस्वरूप शून्य का नेट चुंबकीय क्षेत्र होता है।",
       "वह बिंदु जहां पृथ्वी के क्षेत्र का ऊर्ध्वाधर घटक 311 V के बराबर है।",
       "वह बिंदु जहां एक कंपास सुई पराध्वनिक गति से लगातार घूमती है।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Jab ek bar magnet Earth ke magnetic field mein rakha jaata hai, toh aas-paas ke space mein do fields exist karti hain simultaneously:\n1. Magnet ka apna external field (Bmagnet)\n2. Earth ka horizontal component (BH)\n\nKuch specific points par ye dono fields equal magnitude ki hoti hain lekin exactly opposite direction mein — result: net field = ZERO. Aise points ko NEUTRAL POINTS kehte hain.\n\n• Statement 1 Galat hai — Solar wind field ko 'infinitely magnify' nahi karta. Solar wind Earth ke magnetosphere ko compress/distort karta hai — neutral points se uska koi seedha relation nahi.\n\n• Statement 2 Sahi hai — Neutral Point wahan hota hai jahan:\n  B_magnet + B_H = 0 (vector sum)\n  yaani B_magnet = B_H (magnitude equal, direction opposite)\n  Net B = ZERO\n\n  Practical implication: Agar compass needle neutral point par rakho, toh usse koi net aligning torque nahi milega — wo kisi bhi direction mein rest kar sakti hai. Isi property se neutral points identify kiye jaate hain.\n\n  Position of neutral points depends on magnet orientation:\n  → Magnet N-S aligned with Earth's field: Neutral points on equatorial line (sides)\n  → Magnet perpendicular to Earth's field: Neutral points on axial line\n\n• Statement 3 Galat hai — '311 V' electric voltage unit hai, magnetic field unit nahi. Ye deliberately confusing trap hai.\n\n• Statement 4 Galat hai — Compass needle neutral point par random direction mein rest karti hai, supersonic rotate nahi karti.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Jab ek bar magnet Earth ke magnetic field mein rakha jaata hai, toh aas-paas ke space mein do fields exist karti hain simultaneously:\n1. Magnet ka apna external field ($B_{\\text{magnet}}$)\n2. Earth ka horizontal component ($B_H$)\n\nKuch specific points par ye dono fields equal magnitude ki hoti hain lekin exactly opposite direction mein — result: net field = ZERO. Aise points ko NEUTRAL POINTS kehte hain.\n\n• Option A Galat hai — Solar wind field ko 'infinitely magnify' nahi karta. Solar wind Earth ke magnetosphere ko compress/distort karta hai — neutral points se uska koi seedha relation nahi.\n\n• Option B Sahi hai — Neutral Point wahan hota hai jahan:\n  $B_{\\text{magnet}} + B_H = 0$ (vector sum)\n  yaani $B_{\\text{magnet}} = B_H$ (magnitude equal, direction opposite)\n  Net $B$ = ZERO\n\n  Practical implication: Agar compass needle neutral point par rakho, toh usse koi net aligning torque nahi milega — wo kisi bhi direction mein rest kar sakti hai. Isi property se neutral points identify kiye jaate hain.\n\n  Position of neutral points depends on magnet orientation:\n  $\\rightarrow$ Magnet N-S aligned with Earth's field: Neutral points on equatorial line (sides)\n  $\\rightarrow$ Magnet perpendicular to Earth's field: Neutral points on axial line\n\n• Option C Galat hai — '$311\\text{ V}$' electric voltage unit hai, magnetic field unit nahi. Ye deliberately confusing trap hai.\n\n• Option D Galat hai — Compass needle neutral point par random direction mein rest karti hai, supersonic rotate nahi karti.\n\nAnswer: Option B sahi hai."
   },
   {
     "p_id": "bpsc_phys_m38_04",
-    "qe": "Magnetic materials respond differently when placed inside an external magnetic field. Which choice accurately contrasts Diamagnetic Substances against Ferromagnetic Substances based on magnetic susceptibility (χ), permeability (μ_r), and temperature response?",
-    "qh": "बाहरी चुंबकीय क्षेत्र में रखे जाने पर चुंबकीय पदार्थ अलग तरह से प्रतिक्रिया करते हैं। कौन सा विकल्प चुंबकीय सुग्राह्यता (susceptibility - χ), पारगम्यता (permeability - μ_r), और तापमान प्रतिक्रिया के आधार पर प्रतिचुंबकीय पदार्थों (Diamagnetic) की लौह-चुंबकीय पदार्थों (Ferromagnetic) से सटीक तुलना करता है?",
-    "se": [
-      "Diamagnetic: Susceptibility (χ) is large and positive, depends on temperature; Ferromagnetic: Susceptibility is negative, independent of temperature.",
-      "Diamagnetic: Susceptibility (χ) is small and negative, permeability μ_r < 1, independent of temperature; Ferromagnetic: Susceptibility is large and positive, permeability μ_r >> 1, magnetism decreases with temperature.",
+    "qe": "Magnetic materials respond differently when placed inside an external magnetic field. Which choice accurately contrasts Diamagnetic Substances against Ferromagnetic Substances based on magnetic susceptibility ($\\chi$), permeability ($\\mu_r$), and temperature response?",
+    "qh": "बाहरी चुंबकीय क्षेत्र में रखे जाने पर चुंबकीय पदार्थ अलग तरह से प्रतिक्रिया करते हैं। कौन सा विकल्प चुंबकीय सुग्राह्यता (susceptibility - $\\chi$), पारगम्यता (permeability - $\\mu_r$), और तापमान प्रतिक्रिया के आधार पर प्रतिचुंबकीय पदार्थों (Diamagnetic) की लौह-चुंबकीय पदार्थों (Ferromagnetic) से सटीक तुलना करता है?",
+    "oe": [
+      "Diamagnetic: Susceptibility ($\\chi$) is large and positive, depends on temperature; Ferromagnetic: Susceptibility is negative, independent of temperature.",
+      "Diamagnetic: Susceptibility ($\\chi$) is small and negative, permeability $\\mu_r < 1$, independent of temperature; Ferromagnetic: Susceptibility is large and positive, permeability $\\mu_r \\gg 1$, magnetism decreases with temperature.",
       "Diamagnetic: Strongly attracted to magnetic fields; Ferromagnetic: Feebly repelled by magnetic fields.",
       "Both Diamagnetic and Ferromagnetic materials become superconducting at Curie temperature."
     ],
-    "sh": [
-      "प्रतिचुंबकीय: सुग्राह्यता (χ) बड़ी और धनात्मक है, तापमान पर निर्भर करती है; लौह-चुंबकीय: सुग्राह्यता ऋणात्मक है, तापमान से स्वतंत्र।",
-      "प्रतिचुंबकीय: सुग्राह्यता (χ) छोटी और ऋणात्मक है, पारगम्यता μ_r < 1, तापमान से स्वतंत्र; लौह-चुंबकीय: सुग्राह्यता बड़ी और धनात्मक है, पारगम्यता μ_r >> 1, चुंबकत्व तापमान के साथ घटता है।",
+    "oh": [
+      "प्रतिचुंबकीय: सुग्राह्यता ($\\chi$) बड़ी और धनात्मक है, तापमान पर निर्भर करती है; लौह-चुंबकीय: सुग्राह्यता ऋणात्मक है, तापमान से स्वतंत्र।",
+      "प्रतिचुंबकीय: सुग्राह्यता ($\\chi$) छोटी और ऋणात्मक है, पारगम्यता $\\mu_r < 1$, तापमान से स्वतंत्र; लौह-चुंबकीय: सुग्राह्यता बड़ी और धनात्मक है, पारगम्यता $\\mu_r \\gg 1$, चुंबकत्व तापमान के साथ घटता है।",
       "प्रतिचुंबकीय: चुंबकीय क्षेत्रों की ओर दृढ़ता से आकर्षित; लौह-चुंबकीय: चुंबकीय क्षेत्रों द्वारा कमजोर रूप से प्रतिकर्षित।",
       "प्रतिचुंबकीय और लौह-चुंबकीय दोनों पदार्थ क्यूरी तापमान पर अतिचालक बन जाते हैं।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Teen main magnetic material categories ko ek comparison table mein samjho:\n\nDIAMAGNETIC (e.g., Gold, Copper, Bismuth, Water):\n→ χ = small NEGATIVE (field se repelled hote hain)\n→ μ_r slightly less than 1\n→ Stronger field se weaker field ki taraf move karte hain\n→ Temperature se INDEPENDENT (Pauli exclusion principle se arise)\nExample: Superconductors perfect diamagnets hain\n\nPARAMAGNETIC (e.g., Aluminium, Platinum, Oxygen):\n→ χ = small POSITIVE\n→ μ_r slightly more than 1\n→ Temperature DEPENDENT (Curie's Law: χ ∝ 1/T)\n\nFERROMAGNETIC (e.g., Iron, Nickel, Cobalt):\n→ χ = very LARGE POSITIVE (10³ to 10⁵)\n→ μ_r >> 1 (can be thousands)\n→ Strongly attracted\n→ Temperature pe strongly dependent — Curie temperature se upar paramagnetic ban jaata hai\n\n• Statement 1 Galat hai — Properties bilkul swap kar di hain — Diamagnetic ke liye 'large positive' likhna aur Ferromagnetic ke liye 'negative' likhna — dono galat.\n\n• Statement 2 Sahi hai — Exact properties correctly listed hain dono ke liye.\n\n• Statement 3 Galat hai — Diamagnetic REPELLED hote hain (attracted nahi), aur Ferromagnetic strongly ATTRACTED hote hain (repelled nahi).\n\n• Statement 4 Galat hai — Superconductivity alag phenomenon hai. Curie temperature par ferromagnetic → paramagnetic transition hoti hai, superconducting nahi.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Teen main magnetic material categories ko ek comparison table mein samjho:\n\nDIAMAGNETIC (e.g., Gold, Copper, Bismuth, Water):\n$\\rightarrow \\chi$ = small NEGATIVE (field se repelled hote hain)\n$\\rightarrow \\mu_r$ slightly less than 1\n$\\rightarrow$ Stronger field se weaker field ki taraf move karte hain\n$\\rightarrow$ Temperature se INDEPENDENT (Pauli exclusion principle se arise)\nExample: Superconductors perfect diamagnets hain\n\nPARAMAGNETIC (e.g., Aluminium, Platinum, Oxygen):\n$\\rightarrow \\chi$ = small POSITIVE\n$\\rightarrow \\mu_r$ slightly more than 1\n$\\rightarrow$ Temperature DEPENDENT (Curie's Law: $\\chi \\propto 1/T$)\n\nFERROMAGNETIC (e.g., Iron, Nickel, Cobalt):\n$\\rightarrow \\chi$ = very LARGE POSITIVE ($10^3\\text{ to }10^5$)\n$\\rightarrow \\mu_r \\gg 1$ (can be thousands)\n$\\rightarrow$ Strongly attracted\n$\\rightarrow$ Temperature pe strongly dependent — Curie temperature se upar paramagnetic ban jaata hai\n\n• Option A Galat hai — Properties bilkul swap kar di hain — Diamagnetic ke liye 'large positive' likhna aur Ferromagnetic ke liye 'negative' likhna — dono galat.\n\n• Option B Sahi hai — Exact properties correctly listed hain dono ke liye.\n\n• Option C Galat hai — Diamagnetic REPELLED hote hain (attracted nahi), aur Ferromagnetic strongly ATTRACTED hote hain (repelled nahi).\n\n• Option D Galat hai — Superconductivity alag phenomenon hai. Curie temperature par ferromagnetic $\\rightarrow$ paramagnetic transition hoti hai, superconducting nahi.\n\nAnswer: Option B sahi hai."
   },
   {
     "p_id": "bpsc_phys_m38_05",
     "qe": "A ferromagnetic substance undergoes a distinct phase transition when heated above a critical thermal threshold. What is this critical temperature called, and into what magnetic state does a ferromagnetic material transform when heated beyond it?",
     "qh": "एक लौह-चुंबकीय पदार्थ एक विशिष्ट चरण संक्रमण (phase transition) से गुजरता है जब इसे एक महत्वपूर्ण थर्मल सीमा से ऊपर गर्म किया जाता है। इस महत्वपूर्ण तापमान को क्या कहा जाता है, और इसके पार गर्म करने पर एक लौह-चुंबकीय पदार्थ किस चुंबकीय स्थिति में बदल जाता है?",
-    "se": [
+    "oe": [
       "Kelvin Temperature; transforms into a Diamagnetic substance.",
       "Curie Temperature (T_C); transforms into a Paramagnetic substance.",
       "Critical Transition Temperature; transforms into an Electromagnet.",
       "Absolute Zero; transforms into a Permanent Magnet."
     ],
-    "sh": [
+    "oh": [
       "केल्विन तापमान; एक प्रतिचुंबकीय पदार्थ में बदल जाता है।",
       "क्यूरी तापमान (T_C); एक अनुचुंबकीय पदार्थ में बदल जाता है।",
       "क्रांतिक संक्रमण तापमान; एक विद्युत चुंबक में बदल जाता है।",
       "परम शून्य; एक स्थायी चुंबक में बदल जाता है।"
     ],
-    "oe": [
-      "Kelvin Temperature; transforms into Diamagnetic",
-      "Curie Temperature (T_C); transforms into Paramagnetic",
-      "Critical Transition Temperature; transforms into Electromagnet",
-      "Absolute Zero; transforms into Permanent Magnet"
-    ],
-    "oh": [
-      "केल्विन तापमान; प्रतिचुंबकीय में बदलता है",
-      "क्यूरी तापमान (T_C); अनुचुंबकीय में बदलता है",
-      "क्रांतिक संक्रमण तापमान; विद्युत चुंबक में बदलता है",
-      "परम शून्य; स्थायी चुंबक में बदलता है"
-    ],
     "a": 1,
-    "e": "Ferromagnetic materials mein magnetism kyun hoti hai? Kyunki microscopic magnetic domains exist karte hain jisme millions of atoms ke spins aligned hote hain. Ye domain alignment = net macroscopic magnetism.\n\nJab temperature badhta hai, thermal agitation (vibration) in domains ki alignment distort karne lagti hai.\n\n• Statement 1 Galat hai — 'Kelvin Temperature' ek temperature scale hai, specific transition temperature nahi. Aur ferromagnetic → diamagnetic transition nahi hoti — ye physically wrong hai.\n\n• Statement 2 Sahi hai — Ek specific critical temperature par jise CURIE TEMPERATURE (T_C) kehte hain, thermal agitation itni strong ho jaati hai ki ferromagnetic domains ki coupling completely break ho jaati hai.\n\nResult: Ferromagnetic → PARAMAGNETIC transition\n\nCurie Temperatures (yaad karo):\n→ Iron (Fe): ~770°C (1043 K)\n→ Nickel (Ni): ~358°C (631 K)\n→ Cobalt (Co): ~1115°C (1388 K)\n\nAbove T_C: Curie-Weiss Law apply hoti hai: χ ∝ 1/(T - T_C)\n\nPractical implication: Agar iron magnet ko bahut zyada garam karo (>770°C), wo apni magnetism kho deta hai!\n\n• Statement 3 Galat hai — 'Electromagnet mein transform' karna koi magnetic phase transition nahi hai.\n\n• Statement 4 Galat hai — Absolute Zero par ferromagnetic material ZYADA magnetic hoti hai, permanent magnet mein convert nahi hoti.\n\nAnswer: Statement 2 / Curie Temperature → Paramagnetic (index 1) sahi hai."
+    "e": "Ferromagnetic materials mein magnetism kyun hoti hai? Kyunki microscopic magnetic domains exist karte hain jisme millions of atoms ke spins aligned hote hain. Ye domain alignment = net macroscopic magnetism.\n\nJab temperature badhta hai, thermal agitation (vibration) in domains ki alignment distort karne lagti hai.\n\n• Option A Galat hai — 'Kelvin Temperature' ek temperature scale hai, specific transition temperature nahi. Aur ferromagnetic $\\rightarrow$ diamagnetic transition nahi hoti — ye physically wrong hai.\n\n• Option B Sahi hai — Ek specific critical temperature par jise CURIE TEMPERATURE ($T_C$) kehte hain, thermal agitation itni strong ho jaati hai ki ferromagnetic domains ki coupling completely break ho jaati hai.\n\nResult: Ferromagnetic $\\rightarrow$ PARAMAGNETIC transition\n\nCurie Temperatures (yaad karo):\n$\\rightarrow$ Iron ($Fe$): $\\sim 770^\\circ\\text{C}$ ($1043\\text{ K}$)\n$\\rightarrow$ Nickel ($Ni$): $\\sim 358^\\circ\\text{C}$ ($631\\text{ K}$)\n$\\rightarrow$ Cobalt ($Co$): $\\sim 1115^\\circ\\text{C}$ ($1388\\text{ K}$)\n\nAbove $T_C$: Curie-Weiss Law apply hoti hai: $\\chi \\propto 1/(T - T_C)$\n\nPractical implication: Agar iron magnet ko bahut zyada garam karo ($> 770^\\circ\\text{C}$), wo apni magnetism kho deta hai!\n\n• Option C Galat hai — 'Electromagnet mein transform' karna koi magnetic phase transition nahi hai.\n\n• Option D Galat hai — Absolute Zero par ferromagnetic material ZYADA magnetic hoti hai, permanent magnet mein convert nahi hoti.\n\nAnswer: Option B sahi hai."
   },
+  
   {
     "p_id": "bpsc_phys_m38_06",
     "qe": "Electromagnets provide temporary, controllable magnetic fields used in industrial applications like Maglev trains and scrap cranes. What core material is used for making electromagnets, and why?",
     "qh": "इलेक्ट्रोमैग्नेट (Electromagnets) अस्थायी, नियंत्रणीय चुंबकीय क्षेत्र प्रदान करते हैं जिनका उपयोग मैग्लेव ट्रेनों और स्क्रैप क्रेन जैसे औद्योगिक अनुप्रयोगों में किया जाता है। इलेक्ट्रोमैग्नेट बनाने के लिए किस कोर सामग्री का उपयोग किया जाता है, और क्यों?",
-    "se": [
+    "oe": [
       "Hardened Steel, because it retains permanent magnetism even after current is switched off.",
       "Soft Iron, because it possesses high magnetic permeability and low retentivity/coercivity, gaining strong magnetism when current flows and losing it immediately when current stops.",
       "Copper metal, because it has zero electrical resistance.",
       "Bismuth crystal, because it repels external solar wind magnetic fields."
     ],
-    "sh": [
+    "oh": [
       "कठोर इस्पात (Hardened Steel), क्योंकि यह धारा बंद होने के बाद भी स्थायी चुंबकत्व बनाए रखता है।",
       "नरम लोहा (Soft Iron), क्योंकि इसमें उच्च चुंबकीय पारगम्यता और कम अवशिष्टता/प्रतिरोधकता होती है, धारा प्रवाहित होने पर मजबूत चुंबकत्व प्राप्त करता है और धारा रुकने पर इसे तुरंत खो देता है।",
       "तांबा धातु, क्योंकि इसका विद्युत प्रतिरोध शून्य है।",
       "बिस्मथ क्रिस्टल, क्योंकि यह बाहरी सौर पवन चुंबकीय क्षेत्रों को प्रतिकर्षित करता है।"
     ],
-    "oe": [
-      "Hardened Steel — retains permanent magnetism",
-      "Soft Iron — high permeability, low retentivity",
-      "Copper metal — zero electrical resistance",
-      "Bismuth crystal — repels solar wind fields"
-    ],
-    "oh": [
-      "कठोर इस्पात — स्थायी चुंबकत्व बनाए रखता है",
-      "नरम लोहा — उच्च पारगम्यता, कम अवशिष्टता",
-      "तांबा धातु — शून्य विद्युत प्रतिरोध",
-      "बिस्मथ क्रिस्टल — सौर पवन क्षेत्र को प्रतिकर्षित करता है"
-    ],
     "a": 1,
-    "e": "Electromagnet = Solenoid coil + Core material. Core material ka choice critical hai kyunki wo determine karta hai ki magnet kaise behave karta hai jab current ON/OFF hota hai.\n\nDo types ke magnetic core materials compare karo:\n\nSOFT IRON core:\n→ High magnetic permeability (field lines concentrate karta hai)\n→ LOW retentivity (thoda residual magnetism)\n→ LOW coercivity (aasaani se demagnetize hota hai)\n→ Current ON → Strong magnet; Current OFF → Immediately loses magnetism\n→ IDEAL for electromagnets!\n\nHARDENED STEEL core:\n→ High retentivity (strong residual magnetism rehti hai)\n→ High coercivity (demagnetize karna mushkil)\n→ Current OFF karo → Magnetism REMAIN karta hai\n→ IDEAL for permanent magnets!\n\n• Statement 1 Galat hai — Hardened Steel PERMANENT magnets ke liye use hota hai, electromagnets ke liye nahi. Electromagnet ko toh current off hone par magnetism instantly lose karni chahiye.\n\n• Statement 2 Sahi hai — Soft Iron perfect electromagnet core hai kyunki:\n  → High μ_r = field strongly concentrate hota hai = powerful magnet\n  → Low retentivity + Low coercivity = current band = magnetism turat khatam\n  Scrap crane mein: current on → iron pieces utha lo; current off → pieces gira do!\n\n• Statement 3 Galat hai — Copper electrically conductor hai lekin magnetically non-ferromagnetic hai — zero magnetic permeability hoti hai practically.\n\n• Statement 4 Galat hai — Bismuth diamagnetic hai (feebly repelled) — solar wind se koi relation nahi.\n\nAnswer: Statement 2 / Soft Iron (index 1) sahi hai."
+    "e": "Electromagnet = Solenoid coil + Core material. Core material ka choice critical hai kyunki wo determine karta hai ki magnet kaise behave karta hai jab current ON/OFF hota hai.\n\nDo types ke magnetic core materials compare karo:\n\nSOFT IRON core:\n→ High magnetic permeability (field lines concentrate karta hai)\n→ LOW retentivity (thoda residual magnetism)\n→ LOW coercivity (aasaani se demagnetize hota hai)\n→ Current ON → Strong magnet; Current OFF → Immediately loses magnetism\n→ IDEAL for electromagnets!\n\nHARDENED STEEL core:\n→ High retentivity (strong residual magnetism rehti hai)\n→ High coercivity (demagnetize karna mushkil)\n→ Current OFF karo → Magnetism REMAIN karta hai\n→ IDEAL for permanent magnets!\n\n• Option A is Incorrect because Hardened Steel PERMANENT magnets ke liye use hota hai, electromagnets ke liye nahi. Electromagnet ko toh current off hone par magnetism instantly lose karni chahiye.\n\n• Option B is Correct because Soft Iron perfect electromagnet core hai kyunki:\n  → High $\\mu_r$ = field strongly concentrate hota hai = powerful magnet\n  → Low retentivity + Low coercivity = current band = magnetism turat khatam\n  Scrap crane mein: current on → iron pieces utha lo; current off → pieces gira do!\n\n• Option C is Incorrect because Copper electrically conductor hai lekin magnetically non-ferromagnetic hai — zero magnetic permeability hoti hai practically.\n\n• Option D is Incorrect because Bismuth diamagnetic hai (feebly repelled) — solar wind se koi relation nahi.\n\nAnswer: Option B / Soft Iron (index 1) sahi hai."
   },
   {
     "p_id": "bpsc_phys_m38_07",
     "qe": "Permanent magnets must retain their ferromagnetic alignment for extended durations at room temperature without demagnetizing. What magnetic hysteresis properties and materials are required for fabricating strong Permanent Magnets?",
     "qh": "स्थायी चुंबकों (Permanent magnets) को कमरे के तापमान पर लंबे समय तक विचुंबकीय (demagnetizing) हुए बिना अपने लौह-चुंबकीय संरेखण को बनाए रखना चाहिए। मजबूत स्थायी चुंबकों के निर्माण के लिए कौन से चुंबकीय हिस्टैरिसीस गुणों और सामग्रियों की आवश्यकता होती है?",
-    "se": [
+    "oe": [
       "Low retentivity and low coercivity; fabricated from soft iron or pure copper.",
       "High retentivity (strong residual magnetism) and High coercivity (resistance to demagnetization); fabricated from Steel, Alnico, Cobalt, or Ticonal.",
       "Negative susceptibility and zero permeability; fabricated from bismuth and quartz.",
       "Infinite electrical conductivity; fabricated from liquid mercury."
     ],
-    "sh": [
+    "oh": [
       "कम अवशिष्टता और कम प्रतिरोधकता; नरम लोहे या शुद्ध तांबे से निर्मित।",
       "उच्च अवशिष्टता (मजबूत अवशिष्ट चुंबकत्व) और उच्च प्रतिरोधकता (विचुंबकीयकरण का प्रतिरोध); इस्पात, अलनिको, कोबाल्ट या टिकोनल से निर्मित।",
       "ऋणात्मक सुग्राह्यता और शून्य पारगम्यता; बिस्मथ और क्वार्ट्ज से निर्मित।",
       "अनंत विद्युत चालकता; तरल पारे से निर्मित।"
     ],
-    "oe": [
-      "Low retentivity and low coercivity — Soft iron or copper",
-      "High retentivity and high coercivity — Steel, Alnico, Cobalt, Ticonal",
-      "Negative susceptibility, zero permeability — Bismuth, quartz",
-      "Infinite electrical conductivity — Liquid mercury"
-    ],
-    "oh": [
-      "कम अवशिष्टता और कम प्रतिरोधकता — नरम लोहा या तांबा",
-      "उच्च अवशिष्टता और उच्च प्रतिरोधकता — इस्पात, अलनिको, कोबाल्ट, टिकोनल",
-      "ऋणात्मक सुग्राह्यता, शून्य पारगम्यता — बिस्मथ, क्वार्ट्ज",
-      "अनंत विद्युत चालकता — तरल पारा"
-    ],
     "a": 1,
-    "e": "Permanent magnet aur electromagnet ke requirements exactly opposite hoti hain — ye samajhna crucial hai:\n\nPERMANENT MAGNET ke liye chahiye:\n1. HIGH RETENTIVITY: External field hatane ke baad bhi strong residual magnetism bani rahe\n2. HIGH COERCIVITY: Stray external fields, temperature changes, ya mechanical shocks se easily demagnetize na ho — reverse field lagane ke liye bahut effort chahiye\n\nELECTROMAGNET ke liye chahiye:\n1. LOW RETENTIVITY: Current off → Immediately demagnetize\n2. LOW COERCIVITY: Aasaani se magnetize/demagnetize\n\nEk aur concept — Hysteresis Loop:\n→ Wide hysteresis loop = high retentivity + high coercivity = Permanent magnet\n→ Narrow hysteresis loop = low retentivity + low coercivity = Electromagnet\n\n• Statement 1 Galat hai — Low retentivity + Low coercivity = Electromagnet core (Soft iron) ke properties hain, Permanent magnet ke nahi.\n\n• Statement 2 Sahi hai — High retentivity + High coercivity = Perfect permanent magnet.\nMaterials:\n→ Steel (carbon steel)\n→ Alnico (Aluminium + Nickel + Cobalt alloy)\n→ Cobalt steel\n→ Ticonal (Ti-Co-Ni-Al alloy)\nModern: Neodymium magnets (Nd₂Fe₁₄B) — strongest permanent magnets\n\n• Statement 3 Galat hai — Negative susceptibility = Diamagnetic property. Diamagnetic materials permanent magnets nahi bante.\n\n• Statement 4 Galat hai — Liquid mercury koi ferromagnetic material nahi hai.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Permanent magnet aur electromagnet ke requirements exactly opposite hoti hain — ye samajhna crucial hai:\n\nPERMANENT MAGNET ke liye chahiye:\n1. HIGH RETENTIVITY: External field hatane ke baad bhi strong residual magnetism bani rahe\n2. HIGH COERCIVITY: Stray external fields, temperature changes, ya mechanical shocks se easily demagnetize na ho — reverse field lagane ke liye bahut effort chahiye\n\nELECTROMAGNET ke liye chahiye:\n1. LOW RETENTIVITY: Current off → Immediately demagnetize\n2. LOW COERCIVITY: Aasaani se magnetize/demagnetize\n\nEk aur concept — Hysteresis Loop:\n→ Wide hysteresis loop = high retentivity + high coercivity = Permanent magnet\n→ Narrow hysteresis loop = low retentivity + low coercivity = Electromagnet\n\n• Option A is Incorrect because Low retentivity + Low coercivity = Electromagnet core (Soft iron) ke properties hain, Permanent magnet ke nahi.\n\n• Option B is Correct because High retentivity + High coercivity = Perfect permanent magnet.\nMaterials:\n→ Steel (carbon steel)\n→ Alnico (Aluminium + Nickel + Cobalt alloy)\n→ Cobalt steel\n→ Ticonal (Ti-Co-Ni-Al alloy)\nModern: Neodymium magnets ($Nd_2Fe_{14}B$) — strongest permanent magnets\n\n• Option C is Incorrect because Negative susceptibility = Diamagnetic property. Diamagnetic materials permanent magnets nahi bante.\n\n• Option D is Incorrect because Liquid mercury koi ferromagnetic material nahi hai.\n\nAnswer: Option B (index 1) sahi hai."
   },
   {
     "p_id": "bpsc_phys_m38_08",
     "qe": "Maglev (Magnetic Levitation) trains achieve higher speeds and smoother rides than conventional rail tracks. What physical principle enables Maglev trains to operate without track friction?",
     "qh": "मैग्लेव (मैग्नेटिक लेविटेशन) ट्रेनें पारंपरिक रेल पटरियों की तुलना में अधिक गति और सुगम सवारी हासिल करती हैं। कौन सा भौतिक सिद्धांत मैग्लेव ट्रेनों को ट्रैक घर्षण के बिना संचालित करने में सक्षम बनाता है?",
-    "se": [
+    "oe": [
       "Hydrodynamic buoyancy caused by liquid mercury beneath the train.",
       "Electromagnetic levitation using powerful electromagnets to suspend the train above the track, completely eliminating physical track-wheel friction.",
       "Electrostatic shielding that cancels Earth's gravitational acceleration.",
       "Total internal reflection of light rays trapped inside optical tracks."
     ],
-    "sh": [
+    "oh": [
       "ट्रेन के नीचे तरल पारे के कारण जलगतिकीय उछाल।",
       "शक्तिशाली विद्युत चुंबकों का उपयोग करके विद्युत चुंबकीय उत्तोलन, ट्रेन को पटरी के ऊपर निलंबित करता है, भौतिक ट्रैक-पहिया घर्षण को पूरी तरह समाप्त करता है।",
       "इलेक्ट्रोस्टैटिक शील्डिंग जो पृथ्वी के गुरुत्वाकर्षण त्वरण को रद्द करती है।",
       "ऑप्टिकल ट्रैक के अंदर फंसी प्रकाश किरणों का पूर्ण आंतरिक परावर्तन।"
     ],
-    "oe": [
-      "Hydrodynamic buoyancy from liquid mercury",
-      "Electromagnetic levitation using powerful electromagnets",
-      "Electrostatic shielding cancelling gravity",
-      "Total internal reflection of light in optical tracks"
-    ],
-    "oh": [
-      "तरल पारे से जलगतिकीय उछाल",
-      "शक्तिशाली विद्युत चुंबकों द्वारा विद्युत चुंबकीय उत्तोलन",
-      "इलेक्ट्रोस्टैटिक शील्डिंग से गुरुत्वाकर्षण रद्द",
-      "ऑप्टिकल ट्रैक में प्रकाश का पूर्ण आंतरिक परावर्तन"
-    ],
     "a": 1,
-    "e": "Maglev train — Magnetic Levitation train — conventional rail ka upgraded version hai jisme wheels aur track ke beech physical contact hi nahi hota!\n\nConventional trains mein kya problem hai?\n→ Steel wheels aur steel tracks ke beech friction → speed limit ~300-400 km/h\n→ Noise, vibration, track wear\n\nMaglev mein solution kya hai?\n→ Train ko track ke upar magnetically float (levitate) karwa do\n→ Zero physical contact = Zero friction = Very high speeds possible!\n\n• Statement 1 Galat hai — Liquid mercury ka Maglev se koi connection nahi. Mercury ek liquid metal hai — train ke neeche mercury ka use practically impossible aur dangerous hoga.\n\n• Statement 2 Sahi hai — Maglev technology mein:\n  → Train ke neeche powerful ELECTROMAGNETS (often superconducting) lagaye jaate hain\n  → Track guideway mein bhi electromagnets hote hain\n  → Magnetic repulsion/attraction forces train ko track se 1-10 cm UPAR float karate hain\n  → Physical contact = ZERO → Friction = ZERO\n  → Result: Speeds exceed 500 km/h (Japan's SCMaglev: 603 km/h record!)\n\nTypes of Maglev:\n→ EMS (Electromagnetic Suspension): Attraction based\n→ EDS (Electrodynamic Suspension): Repulsion based (uses superconductors)\n\n• Statement 3 Galat hai — Electrostatic shielding gravity cancel nahi kar sakta. Gravity electromagnetic force nahi hai.\n\n• Statement 4 Galat hai — Total internal reflection optics aur fibre optics mein hota hai, train locomotion mein nahi.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Maglev train — Magnetic Levitation train — conventional rail ka upgraded version hai jisme wheels aur track ke beech physical contact hi nahi hota!\n\nConventional trains mein kya problem hai?\n→ Steel wheels aur steel tracks ke beech friction → speed limit $\\sim 300-400\\text{ km/h}$\n→ Noise, vibration, track wear\n\nMaglev mein solution kya hai?\n→ Train ko track ke upar magnetically float (levitate) karwa do\n→ Zero physical contact = Zero friction = Very high speeds possible!\n\n• Option A is Incorrect because Liquid mercury ka Maglev se koi connection nahi. Mercury ek liquid metal hai — train ke neeche mercury ka use practically impossible aur dangerous hoga.\n\n• Option B is Correct because Maglev technology mein:\n  → Train ke neeche powerful ELECTROMAGNETS (often superconducting) lagaye jaate hain\n  → Track guideway mein bhi electromagnets hote hain\n  → Magnetic repulsion/attraction forces train ko track se $1-10\\text{ cm}$ UPAR float karate hain\n  → Physical contact = ZERO → Friction = ZERO\n  → Result: Speeds exceed $500\\text{ km/h}$ (Japan's SCMaglev: $603\\text{ km/h}$ record!)\n\nTypes of Maglev:\n→ EMS (Electromagnetic Suspension): Attraction based\n→ EDS (Electrodynamic Suspension): Repulsion based (uses superconductors)\n\n• Option C is Incorrect because Electrostatic shielding gravity cancel nahi kar sakta. Gravity electromagnetic force nahi hai.\n\n• Option D is Incorrect because Total internal reflection optics aur fibre optics mein hota hai, train locomotion mein nahi.\n\nAnswer: Option B (index 1) sahi hai."
   },
   {
     "p_id": "bpsc_phys_m38_09",
-    "qe": "Magnetic Flux (Φ) quantifies the total number of magnetic lines of force crossing a given surface area A in a magnetic field B. What is the mathematical formula for magnetic flux, and under what surface orientation is magnetic flux strictly ZERO?",
-    "qh": "चुंबकीय फ्लक्स (Φ) एक चुंबकीय क्षेत्र B में दिए गए सतह क्षेत्र A को पार करने वाली चुंबकीय बल रेखाओं की कुल संख्या को परिमाणित करता है। चुंबकीय फ्लक्स का गणितीय सूत्र क्या है, और किस सतह ओरिएंटेशन के तहत चुंबकीय फ्लक्स सख्ती से शून्य होता है?",
-    "se": [
-      "Φ = BA sinθ; flux is zero when surface plane is perpendicular to field lines.",
-      "Φ = BA cosθ; flux is strictly ZERO when the surface plane lies parallel to magnetic field lines (i.e., area vector normal is perpendicular to field lines, θ = 90°).",
-      "Φ = B/A; flux is zero when magnetic field strength equals 1 Tesla.",
-      "Φ = BA tanθ; flux is zero when area vector is parallel to field lines."
-    ],
-    "sh": [
-      "Φ = BA sinθ; जब सतह तल क्षेत्र रेखाओं के लंबवत हो तो फ्लक्स शून्य होता है।",
-      "Φ = BA cosθ; फ्लक्स सख्ती से शून्य होता है जब सतह तल चुंबकीय क्षेत्र रेखाओं के समानांतर होता है (अर्थात् क्षेत्र सदिश अभिलंब क्षेत्र रेखाओं के लंबवत है, θ = 90°)।",
-      "Φ = B/A; जब चुंबकीय क्षेत्र की शक्ति 1 Tesla के बराबर हो तो फ्लक्स शून्य होता है।",
-      "Φ = BA tanθ; जब क्षेत्र सदिश क्षेत्र रेखाओं के समानांतर हो तो फ्लक्स शून्य होता है।"
-    ],
+    "qe": "Magnetic Flux ($\\Phi$) quantifies the total number of magnetic lines of force crossing a given surface area $A$ in a magnetic field $B$. What is the mathematical formula for magnetic flux, and under what surface orientation is magnetic flux strictly ZERO?",
+    "qh": "चुंबकीय फ्लक्स ($\\Phi$) एक चुंबकीय क्षेत्र $B$ में दिए गए सतह क्षेत्र $A$ को पार करने वाली चुंबकीय बल रेखाओं की कुल संख्या को परिमाणित करता है। चुंबकीय फ्लक्स का गणितीय सूत्र क्या है, और किस सतह ओरिएंटेशन के तहत चुंबकीय फ्लक्स सख्ती से शून्य होता है?",
     "oe": [
-      "Φ = BA sinθ; zero when surface perpendicular to field",
-      "Φ = BA cosθ; zero when surface parallel to field lines (θ = 90°)",
-      "Φ = B/A; zero when field = 1 Tesla",
-      "Φ = BA tanθ; zero when area vector parallel to field"
+      "$\\Phi = BA \\sin\\theta$; flux is zero when surface plane is perpendicular to field lines.",
+      "$\\Phi = BA \\cos\\theta$; flux is strictly ZERO when the surface plane lies parallel to magnetic field lines (i.e., area vector normal is perpendicular to field lines, $\\theta = 90^\\circ$).",
+      "$\\Phi = B/A$; flux is zero when magnetic field strength equals 1 Tesla.",
+      "$\\Phi = BA \\tan\\theta$; flux is zero when area vector is parallel to field lines."
     ],
     "oh": [
-      "Φ = BA sinθ; शून्य जब सतह क्षेत्र रेखाओं के लंबवत",
-      "Φ = BA cosθ; शून्य जब सतह क्षेत्र रेखाओं के समानांतर (θ = 90°)",
-      "Φ = B/A; शून्य जब क्षेत्र = 1 टेस्ला",
-      "Φ = BA tanθ; शून्य जब क्षेत्र सदिश क्षेत्र के समानांतर"
+      "$\\Phi = BA \\sin\\theta$; जब सतह तल क्षेत्र रेखाओं के लंबवत हो तो फ्लक्स शून्य होता है।",
+      "$\\Phi = BA \\cos\\theta$; फ्लक्स सख्ती से शून्य होता है जब सतह तल चुंबकीय क्षेत्र रेखाओं के समानांतर होता है (अर्थात् क्षेत्र सदिश अभिलंब क्षेत्र रेखाओं के लंबवत है, $\\theta = 90^\\circ$)।",
+      "$\\Phi = B/A$; जब चुंबकीय क्षेत्र की शक्ति 1 Tesla के बराबर हो तो फ्लक्स शून्य होता है।",
+      "$\\Phi = BA \\tan\\theta$; जब क्षेत्र सदिश क्षेत्र रेखाओं के समानांतर हो तो फ्लक्स शून्य होता है।"
     ],
     "a": 1,
-    "e": "Magnetic Flux (Φ) = kitni magnetic field lines kisi surface se THROUGH jaati hain. Ye ek scalar quantity hai.\n\nImportant concept: θ ka reference point\n→ θ = angle between B (magnetic field) and normal to the surface (area vector A)\n→ NAHI between B aur surface khud!\n\nYe confusion bahut common hai!\n\n• Statement 1 Galat hai — Φ = BAsinθ GALAT formula hai. Iska use force F = qvBsinθ mein hota hai jahan θ velocity aur B ke beech ka angle hota hai.\n\n  Aur condition bhi galat hai: Jab surface PERPENDICULAR to field lines hai, matlab surface normal PARALLEL to B hai → θ = 0° → cos0° = 1 → Φ = BA (MAXIMUM, zero nahi!)\n\n• Statement 2 Sahi hai — Correct formula:\n  Φ = B · A = BA cosθ\n  jahan θ = angle between B and area vector (normal to surface)\n\n  Flux = ZERO kab?\n  → Jab surface PARALLEL to field lines ho\n  → Iska matlab: field lines surface ko 'skim' kar ke nikal jaati hain, through nahi jaati\n  → Area vector (normal) field se 90° par hoga → cos90° = 0 → Φ = 0\n\n  SI unit of Flux: Weber (Wb) = Tesla × m²\n\n  Real example: Ek table top ko B field ke parallel rakho → zero flux. Table ko B ke perpendicular (normal) rakho → maximum flux.\n\n• Statement 3 Galat hai — Φ = B/A meaningless formula hai dimensionally bhi. Aur flux = 0 ka field strength = 1T se koi lena dena nahi.\n\n• Statement 4 Galat hai — tanθ formula magnetic flux ke liye exist hi nahi karta.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Magnetic Flux ($\\Phi$) = kitni magnetic field lines kisi surface se THROUGH jaati hain. Ye ek scalar quantity hai.\n\nImportant concept: $\\theta$ ka reference point\n→ $\\theta$ = angle between $B$ (magnetic field) and normal to the surface (area vector $A$)\n→ NAHI between $B$ aur surface khud!\n\nYe confusion bahut common hai!\n\n• Option A is Incorrect because $\\Phi = BA\\sin\\theta$ GALAT formula hai. Iska use force $F = qvB\\sin\\theta$ mein hota hai jahan $\\theta$ velocity aur $B$ ke beech ka angle hota hai.\n\n  Aur condition bhi galat hai: Jab surface PERPENDICULAR to field lines hai, matlab surface normal PARALLEL to $B$ hai → $\\theta = 0^\\circ \\rightarrow \\cos 0^\\circ = 1 \\rightarrow \\Phi = BA$ (MAXIMUM, zero nahi!)\n\n• Option B is Correct because Correct formula:\n  $\\Phi = B \\cdot A = BA \\cos\\theta$\n  jahan $\\theta$ = angle between $B$ and area vector (normal to surface)\n\n  Flux = ZERO kab?\n  → Jab surface PARALLEL to field lines ho\n  → Iska matlab: field lines surface ko 'skim' kar ke nikal jaati hain, through nahi jaati\n  → Area vector (normal) field se $90^\\circ$ par hoga → $\\cos 90^\\circ = 0 \\rightarrow \\Phi = 0$\n\n  SI unit of Flux: Weber (Wb) = $\\text{Tesla} \\times \\text{m}^2$\n\n  Real example: Ek table top ko $B$ field ke parallel rakho → zero flux. Table ko $B$ ke perpendicular (normal) rakho → maximum flux.\n\n• Option C is Incorrect because $\\Phi = B/A$ meaningless formula hai dimensionally bhi. Aur flux = 0 ka field strength = $1\\text{ T}$ se koi lena dena nahi.\n\n• Option D is Incorrect because $\\tan\\theta$ formula magnetic flux ke liye exist hi nahi karta.\n\nAnswer: Option B (index 1) sahi hai."
   },
   {
     "p_id": "bpsc_phys_m38_10",
     "qe": "Solar flares emit energetic streams of charged particles (solar wind) that interact with Earth's magnetosphere. What localized geophysical disturbance occurs when intense solar wind hits Earth's magnetic field?",
     "qh": "सौर ज्वालाएँ (Solar flares) आवेशित कणों (सौर हवा) की ऊर्जावान धाराओं को उत्सर्जित करती हैं जो पृथ्वी के मैग्नेटोस्फीयर के साथ अंतःक्रिया करती हैं। जब तीव्र सौर हवा पृथ्वी के चुंबकीय क्षेत्र से टकराती है तो कौन सा स्थानीय भू-भौतिकीय व्यवधान होता है?",
-    "se": [
+    "oe": [
       "Tectonic Earthquakes along subterranean fault lines.",
       "Magnetic Storms, causing severe localized fluctuations in Earth's magnetic field that disrupt radio communications and electrical grids.",
       "Total atmospheric refraction causing 24-hour continuous daylight.",
       "Complete collapse of Earth's rotational speed to zero."
     ],
-    "sh": [
+    "oh": [
       "भूमिगत दोष रेखाओं के साथ विवर्तनिक भूकंप।",
       "चुंबकीय तूफान, पृथ्वी के चुंबकीय क्षेत्र में गंभीर स्थानीय उतार-चढ़ाव पैदा करते हैं जो रेडियो संचार और विद्युत ग्रिड को बाधित करते हैं।",
       "कुल वायुमंडलीय अपवर्तन जिससे 24 घंटे निरंतर दिन का उजाला होता है।",
       "पृथ्वी की घूर्णन गति का पूर्ण पतन।"
     ],
-    "oe": [
-      "Tectonic Earthquakes along fault lines",
-      "Magnetic Storms disrupting radio and electrical grids",
-      "Total atmospheric refraction causing 24-hour daylight",
-      "Complete collapse of Earth's rotational speed"
-    ],
-    "oh": [
-      "दोष रेखाओं के साथ विवर्तनिक भूकंप",
-      "रेडियो और विद्युत ग्रिड को बाधित करने वाले चुंबकीय तूफान",
-      "24 घंटे दिन का उजाला पैदा करने वाला वायुमंडलीय अपवर्तन",
-      "पृथ्वी की घूर्णन गति का पूर्ण पतन"
-    ],
     "a": 1,
-    "e": "Solar Flare ek intense burst of radiation aur energetic charged particles (mainly protons aur electrons) hai jo Sun ki surface se emit hote hain. Ye particles Solar Wind ke roop mein space mein travel karte hain aur Earth tak ~1-3 days mein pahunch jaate hain.\n\nPृthvi ka magnetosphere (magnetic field bubble) normally in particles ko deflect karta hai — isliye life on Earth safe hai. Lekin intense solar storms mein...\n\n• Statement 1 Galat hai — Solar wind aur tectonic earthquakes mein koi physical causal link established nahi hai. Earthquakes tectonic plate movements se hote hain, solar wind se nahi.\n\n• Statement 2 Sahi hai — Jab bahut intense solar wind Earth's magnetosphere se interact karta hai:\n  → Rapid, violent fluctuations in Earth's B field → MAGNETIC STORM\n  \n  Effects of Magnetic Storms:\n  1. HF Radio communication disruption (ionosphere disturb hoti hai)\n  2. GPS satellite navigation errors\n  3. Power grid surges — induced EMF in long transmission lines (1989 Quebec blackout: 9 hours!)\n  4. Satellite damage\n  5. Aurora Borealis/Australis visible at lower latitudes (beautiful side effect!)\n\n  Positive effect: Northern/Southern Lights (Aurora) — solar wind particles magnetic poles ke paas atmosphere mein enter hote hain aur glow karte hain.\n\n• Statement 3 Galat hai — Atmospheric refraction solar wind se influence nahi hota. 24-hour daylight polar summer mein hota hai — solar storms se nahi.\n\n• Statement 4 Galat hai — Earth ki rotation solar wind se completely unaffected hai.\n\nAnswer: Statement 2 / Magnetic Storms (index 1) sahi hai."
+    "e": "Solar Flare ek intense burst of radiation aur energetic charged particles (mainly protons aur electrons) hai jo Sun ki surface se emit hote hain. Ye particles Solar Wind ke roop mein space mein travel karte hain aur Earth tak $\\sim 1-3\\text{ days}$ mein pahunch jaate hain.\n\nPrithvi ka magnetosphere (magnetic field bubble) normally in particles ko deflect karta hai — isliye life on Earth safe hai. Lekin intense solar storms mein...\n\n• Option A is Incorrect because Solar wind aur tectonic earthquakes mein koi physical causal link established nahi hai. Earthquakes tectonic plate movements se hote hain, solar wind se nahi.\n\n• Option B is Correct because Jab bahut intense solar wind Earth's magnetosphere se interact karta hai:\n  → Rapid, violent fluctuations in Earth's $B$ field → MAGNETIC STORM\n  \n  Effects of Magnetic Storms:\n  1. HF Radio communication disruption (ionosphere disturb hoti hai)\n  2. GPS satellite navigation errors\n  3. Power grid surges — induced EMF in long transmission lines (1989 Quebec blackout: 9 hours!)\n  4. Satellite damage\n  5. Aurora Borealis/Australis visible at lower latitudes (beautiful side effect!)\n\n  Positive effect: Northern/Southern Lights (Aurora) — solar wind particles magnetic poles ke paas atmosphere mein enter hote hain aur glow karte hain.\n\n• Option C is Incorrect because Atmospheric refraction solar wind se influence nahi hota. 24-hour daylight polar summer mein hota hai — solar storms se nahi.\n\n• Option D is Incorrect because Earth ki rotation solar wind se completely unaffected hai.\n\nAnswer: Option B / Magnetic Storms (index 1) sahi hai."
   },
   {
     "p_id": "bpsc_phys_m39_01",
     "qe": "Evaluating the laws of Electromagnetic Induction reveals the exact relationship between magnetic flux changes and induced electromotive force (emf). According to Faraday's and Lenz's laws, what determines the magnitude and direction of the induced emf (e) in a closed circuit?",
     "qh": "विद्युत चुंबकीय प्रेरण (Electromagnetic Induction) के नियमों का मूल्यांकन चुंबकीय फ्लक्स परिवर्तनों और प्रेरित विद्युत वाहक बल (emf) के बीच सटीक संबंध को उजागर करता है। फैराडे और लेंज के नियमों के अनुसार, बंद परिपथ में प्रेरित emf (e) के परिमाण और दिशा को क्या निर्धारित करता है?",
-    "se": [
+    "oe": [
       "The magnitude is proportional to the total static magnetic flux; direction aids the flux growth.",
-      "The magnitude is equal to the rate of change of magnetic flux (e = −dΦ/dt); the negative sign indicates that the induced emf opposes the change in flux that produces it.",
+      "The magnitude is equal to the rate of change of magnetic flux ($e = -d\\Phi/dt$); the negative sign indicates that the induced emf opposes the change in flux that produces it.",
       "The magnitude depends on wire resistance alone; direction is strictly parallel to the magnetic field vector.",
       "The magnitude is constant regardless of time variation; direction is determined by Coulomb's law."
     ],
-    "sh": [
+    "oh": [
       "परिमाण कुल स्थैतिक चुंबकीय फ्लक्स के समानुपाती है; दिशा फ्लक्स वृद्धि में सहायता करती है।",
-      "परिमाण चुंबकीय फ्लक्स के परिवर्तन की दर के बराबर है (e = −dΦ/dt); ऋणात्मक चिह्न इंगित करता है कि प्रेरित emf उस फ्लक्स परिवर्तन का विरोध करता है जो इसे उत्पन्न करता है।",
+      "परिमाण चुंबकीय फ्लक्स के परिवर्तन की दर के बराबर है ($e = -d\\Phi/dt$); ऋणात्मक चिह्न इंगित करता है कि प्रेरित emf उस फ्लक्स परिवर्तन का विरोध करता है जो इसे उत्पन्न करता है।",
       "परिमाण केवल तार प्रतिरोध पर निर्भर करता है; दिशा सख्ती से चुंबकीय क्षेत्र सदिश के समानांतर है।",
       "परिमाण समय भिन्नता के बावजूद स्थिर है; दिशा कूलम्ब के नियम द्वारा निर्धारित की जाती है।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Faraday ne 1831 mein discover kiya ki agar kisi closed circuit mein magnetic flux change hota hai toh EMF induce hoti hai. Ye Electromagnetic Induction ka foundation hai.\n\nDo laws mila ke complete picture banti hai:\n\nFaraday's Law (Magnitude):\n|e| = dΦ/dt = rate of change of magnetic flux\nAgar N turns hain: |e| = N × dΦ/dt\n\nLenz's Law (Direction):\nNegative sign explain karta hai direction:\ne = −dΦ/dt\nThe negative sign = induced emf OPPOSES the change that caused it.\n\nYaad rakhne ka trick: Lenz's Law = 'Nature resists change' — energy conservation ka ek expression.\n\n• Statement 1 Galat hai — Do mistakes:\n  1. 'Static magnetic flux' — EMF sirf flux ke CHANGE se induce hoti hai, static flux se nahi (dΦ/dt = 0 → e = 0)\n  2. 'Direction aids flux growth' — Ye Lenz's Law ka VIOLATION hai! Direction hamesha oppose karti hai.\n\n• Statement 2 Sahi hai — Perfect mathematical statement:\n  e = −dΦ/dt\n  → Magnitude = dΦ/dt (rate of flux change)\n  → Negative sign → Lenz's Law → opposes the flux change\n  Practical: Magnet ko coil mein tezi se daalo → zyada dΦ/dt → zyada EMF.\n\n• Statement 3 Galat hai — Wire resistance EMF determine nahi karta (EMF = flux change rate; current = EMF/R). Aur direction B ke parallel nahi hoti.\n\n• Statement 4 Galat hai — EMF constant nahi hoti; ye flux change rate par depend karti hai. Coulomb's law electrostatics ka hai, EMF direction se uska koi lena dena nahi.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Faraday ne 1831 mein discover kiya ki agar kisi closed circuit mein magnetic flux change hota hai toh EMF induce hoti hai. Ye Electromagnetic Induction ka foundation hai.\n\nDo laws mila ke complete picture banti hai:\n\nFaraday's Law (Magnitude):\n$|e| = d\\Phi/dt$ = rate of change of magnetic flux\nAgar $N$ turns hain: $|e| = N \\times d\\Phi/dt$\n\nLenz's Law (Direction):\nNegative sign explain karta hai direction:\n$e = -d\\Phi/dt$\nThe negative sign = induced emf OPPOSES the change that caused it.\n\nYaad rakhne ka trick: Lenz's Law = 'Nature resists change' — energy conservation ka ek expression.\n\n• Option A is Incorrect because Do mistakes:\n  1. 'Static magnetic flux' — EMF sirf flux ke CHANGE se induce hoti hai, static flux se nahi ($d\\Phi/dt = 0 \\rightarrow e = 0$)\n  2. 'Direction aids flux growth' — Ye Lenz's Law ka VIOLATION hai! Direction hamesha oppose karti hai.\n\n• Option B is Correct because Perfect mathematical statement:\n  $e = -d\\Phi/dt$\n  → Magnitude = $d\\Phi/dt$ (rate of flux change)\n  → Negative sign → Lenz's Law → opposes the flux change\n  Practical: Magnet ko coil mein tezi se daalo → zyada $d\\Phi/dt$ → zyada EMF.\n\n• Option C is Incorrect because Wire resistance EMF determine nahi karta (EMF = flux change rate; current = EMF/R). Aur direction $B$ ke parallel nahi hoti.\n\n• Option D is Incorrect because EMF constant nahi hoti; ye flux change rate par depend karti hai. Coulomb's law electrostatics ka hai, EMF direction se uska koi lena dena nahi.\n\nAnswer: Option B (index 1) sahi hai."
   },
   {
     "p_id": "bpsc_phys_m39_02",
     "qe": "Self-inductance and mutual inductance describe distinct electromagnetic induction behaviors in coils. Why is Self-Inductance fundamentally termed the 'Inertia of Electricity' in electrical circuits?",
     "qh": "स्व-प्रेरकत्व (Self-inductance) और अन्योन्य प्रेरकत्व (Mutual inductance) कुंडलियों में विशिष्ट विद्युत चुंबकीय प्रेरण व्यवहारों का वर्णन करते हैं। विद्युत परिपथों में स्व-प्रेरकत्व को मौलिक रूप से 'विद्युत का जड़त्व' (Inertia of Electricity) क्यों कहा जाता है?",
-    "se": [
+    "oe": [
       "Because it converts direct current into alternating current automatically.",
       "Because by virtue of inducing a back-emf in itself, the coil opposes both the growth of current when switched on and the decay of current when switched off.",
       "Because it increases the mechanical mass of the copper wire during conduction.",
       "Because it eliminates all internal electrical resistance inside the coil."
     ],
-    "sh": [
+    "oh": [
       "क्योंकि यह स्वचालित रूप से प्रत्यक्ष धारा को प्रत्यावर्ती धारा में परिवर्तित करता है।",
       "क्योंकि स्वयं में एक प्रति-विद्युत वाहक बल (back-emf) प्रेरित करने के कारण, कुंडली धारा चालू होने पर धारा की वृद्धि और धारा बंद होने पर धारा के क्षय दोनों का विरोध करती है।",
       "क्योंकि यह चालन के दौरान तांबे के तार के यांत्रिक द्रव्यमान को बढ़ाता है।",
       "क्योंकि यह कुंडली के अंदर सभी आंतरिक विद्युत प्रतिरोध को समाप्त कर देता है।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Self-Inductance (L) ek coil ki wo property hai jisme wo apne aap mein change in current hone par khud mein EMF induce karti hai — is induced EMF ko 'back-EMF' ya 'self-induced EMF' kehte hain.\n\nBack-EMF formula: e = −L × dI/dt\n\nMechanical inertia analogy:\nMechanics mein: Mass (inertia) body ki motion mein change ka oppose karta hai\n→ Ruki hui object chalana mushkil hai\n→ Chalti object rokna mushkil hai\n\nElectricity mein: Self-inductance (L) current mein change ka oppose karta hai\n→ Current badhana chahte ho → back-EMF oppose karta hai (growth resist)\n→ Current ghataana chahte ho → back-EMF maintain karta hai (decay resist)\nIsliye: L = 'Electrical Inertia'\n\n• Statement 1 Galat hai — Self-inductance DC to AC convert nahi karta. Ye inverter/oscillator circuit karta hai. Self-inductance energy store karti hai magnetic field mein.\n\n• Statement 2 Sahi hai — Perfect explanation:\n  → Switch ON: Current badhne lagti hai → dI/dt > 0 → e = −L(dI/dt) opposes growth\n  → Switch OFF: Current khatam hone lagti hai → dI/dt < 0 → e = −L(dI/dt) opposes decay (spark cause karta hai)\n  Ye exactly mechanical inertia jaisa behaviour hai!\n\n• Statement 3 Galat hai — Self-inductance wire ka physical mass increase nahi karta. Ye purely electromagnetic property hai.\n\n• Statement 4 Galat hai — Self-inductance resistance nahi eliminate karta. Ye alag phenomena hain. (Superconductivity resistance eliminate karti hai, inductance nahi.)\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Self-Inductance ($L$) ek coil ki wo property hai jisme wo apne aap mein change in current hone par khud mein EMF induce karti hai — is induced EMF ko 'back-EMF' ya 'self-induced EMF' kehte hain.\n\nBack-EMF formula: $e = -L \\times dI/dt$\n\nMechanical inertia analogy:\nMechanics mein: Mass (inertia) body ki motion mein change ka oppose karta hai\n→ Ruki hui object chalana mushkil hai\n→ Chalti object rokna mushkil hai\n\nElectricity mein: Self-inductance ($L$) current mein change ka oppose karta hai\n→ Current badhana chahte ho → back-EMF oppose karta hai (growth resist)\n→ Current ghataana chahte ho → back-EMF maintain karta hai (decay resist)\nIsliye: $L$ = 'Electrical Inertia'\n\n• Option A is Incorrect because Self-inductance DC to AC convert nahi karta. Ye inverter/oscillator circuit karta hai. Self-inductance energy store karti hai magnetic field mein.\n\n• Option B is Correct because Perfect explanation:\n  → Switch ON: Current badhne lagti hai → $dI/dt > 0 \\rightarrow e = -L(dI/dt)$ opposes growth\n  → Switch OFF: Current khatam hone lagti hai → $dI/dt < 0 \\rightarrow e = -L(dI/dt)$ opposes decay (spark cause karta hai)\n  Ye exactly mechanical inertia jaisa behaviour hai!\n\n• Option C is Incorrect because Self-inductance wire ka physical mass increase nahi karta. Ye purely electromagnetic property hai.\n\n• Option D is Incorrect because Self-inductance resistance nahi eliminate karta. Ye alag phenomena hain. (Superconductivity resistance eliminate karti hai, inductance nahi.)\n\nAnswer: Option B (index 1) sahi hai."
   },
   {
     "p_id": "bpsc_phys_m39_03",
     "qe": "Airport security metal detectors utilize electromagnetic induction to detect metallic objects carried by passengers. What physical mechanism triggers the alarm when a person carrying an iron object walks through a metal detector?",
     "qh": "एयरपोर्ट सुरक्षा मेटल डिटेक्टर यात्रियों द्वारा ले जाई जाने वाली धातु की वस्तुओं का पता लगाने के लिए विद्युत चुंबकीय प्रेरण का उपयोग करते हैं। जब कोई लोहे की वस्तु ले जाने वाला व्यक्ति मेटल डिटेक्टर से होकर गुजरता है तो कौन सा भौतिक तंत्र अलार्म को ट्रिगर करता है?",
-    "se": [
+    "oe": [
       "The metallic object blocks static radio signals, creating a vacuum gap.",
       "The metallic object alters the magnetic flux linked with the detector's current-carrying wire coil, inducing a current change that sets off the alarm circuit.",
       "The metallic object generates high-voltage X-rays that melt the detector wire.",
       "The metallic object neutralizes the electrostatic charge on the passenger's skin."
     ],
-    "sh": [
+    "oh": [
       "धातु की वस्तु स्थैतिक रेडियो संकेतों को अवरुद्ध करती है, एक वैक्यूम अंतराल बनाती है।",
       "धातु की वस्तु डिटेक्टर की धारावाही तार कुंडली से जुड़े चुंबकीय फ्लक्स को बदल देती है, एक धारा परिवर्तन प्रेरित करती है जो अलार्म सर्किट को चालू करती है।",
       "धातु की वस्तु उच्च-वोल्टेज X-किरणें उत्पन्न करती है जो डिटेक्टर के तार को पिघला देती हैं।",
       "धातु की वस्तु यात्री की त्वचा पर इलेक्ट्रोस्टैटिक आवेश को निष्प्रभावी कर देती है।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Metal detector airport security ka ek common example hai — aur ye Faraday's law of electromagnetic induction ka direct practical application hai.\n\nMetal Detector working principle:\n1. Detector ke andar ek COIL hoti hai jisme alternating current (AC) flow hoti hai\n2. Ye AC current ek alternating magnetic field create karti hai\n3. Ye field ek STABLE, CALIBRATED magnetic flux produce karta hai coil ke around\n4. Is stable state mein koi alarm nahi\n\nJab koi metal object paas aata hai:\n5. Metal object (especially ferromagnetic = iron, steel) ki HIGH magnetic permeability surrounding magnetic flux pattern ko DISTURB karti hai\n6. Flux mein sudden change → Faraday's law se: e = −dΦ/dt → Induced current\n7. Ye induced current change sensor detect karta hai → ALARM!\n\n• Statement 1 Galat hai — Metal detector radio signals block karne wala device nahi hai. Ye electromagnetic induction based hai, not radio blockage.\n\n• Statement 2 Sahi hai — Exact mechanism:\n  Metal object → alters magnetic flux (Φ changes) → dΦ/dt ≠ 0 → induced EMF → current change in coil → electronic circuit detects anomaly → ALARM\n  \n  Non-metals (plastic, wood, cloth) magnetic permeability practically nahi change karte → no flux change → no alarm.\n\n• Statement 3 Galat hai — Metal objects X-rays generate nahi karte. Airport X-ray machine alag equipment hai (baggage scanner). Metal detector electromagnetic induction use karta hai.\n\n• Statement 4 Galat hai — Electrostatic charge neutralization metal detection se bilkul alag phenomenon hai.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Metal detector airport security ka ek common example hai — aur ye Faraday's law of electromagnetic induction ka direct practical application hai.\n\nMetal Detector working principle:\n1. Detector ke andar ek COIL hoti hai jisme alternating current (AC) flow hoti hai\n2. Ye AC current ek alternating magnetic field create karti hai\n3. Ye field ek STABLE, CALIBRATED magnetic flux produce karta hai coil ke around\n4. Is stable state mein koi alarm nahi\n\nJab koi metal object paas aata hai:\n5. Metal object (especially ferromagnetic = iron, steel) ki HIGH magnetic permeability surrounding magnetic flux pattern ko DISTURB karti hai\n6. Flux mein sudden change → Faraday's law se: $e = -d\\Phi/dt$ → Induced current\n7. Ye induced current change sensor detect karta hai → ALARM!\n\n• Option A is Incorrect because Metal detector radio signals block karne wala device nahi hai. Ye electromagnetic induction based hai, not radio blockage.\n\n• Option B is Correct because Exact mechanism:\n  Metal object → alters magnetic flux ($\\Phi$ changes) → $d\\Phi/dt \\neq 0$ → induced EMF → current change in coil → electronic circuit detects anomaly → ALARM\n  \n  Non-metals (plastic, wood, cloth) magnetic permeability practically nahi change karte → no flux change → no alarm.\n\n• Option C is Incorrect because Metal objects X-rays generate nahi karte. Airport X-ray machine alag equipment hai (baggage scanner). Metal detector electromagnetic induction use karta hai.\n\n• Option D is Incorrect because Electrostatic charge neutralization metal detection se bilkul alag phenomenon hai.\n\nAnswer: Option B (index 1) sahi hai."
   },
   {
     "p_id": "bpsc_phys_m39_04",
     "qe": "Eddy currents (Foucault currents) are closed circulating loops of induced current set up in bulk metallic conductors exposed to changing magnetic fields. What structural plane do eddy currents occupy relative to the magnetic field, and what primary effects do they display?",
     "qh": "भंवर धाराएं (Eddy currents / Foucault currents) परिवर्तनशील चुंबकीय क्षेत्रों के संपर्क में आने वाले बल्क धात्विक चालकों में स्थापित प्रेरित धारा के बंद संचयी लूप हैं। चुंबकीय क्षेत्र के सापेक्ष भंवर धाराएं किस संरचनात्मक तल (plane) में स्थित होती हैं, और वे कौन से प्राथमिक प्रभाव प्रदर्शित करती हैं?",
-    "se": [
+    "oe": [
       "Parallel to the magnetic field lines; display zero thermal loss.",
       "Strictly perpendicular to the direction of the magnetic field; display both heating and magnetic damping effects.",
       "At a 45° inclination to the magnetic field; display chemical electrolysis.",
       "Along the outer surface only; convert AC into DC current."
     ],
-    "sh": [
+    "oh": [
       "चुंबकीय क्षेत्र रेखाओं के समानांतर; शून्य तापीय हानि प्रदर्शित करते हैं।",
       "चुंबकीय क्षेत्र की दिशा के सख्ती से लंबवत; ताप और चुंबकीय अवमंदन (damping) दोनों प्रभाव प्रदर्शित करते हैं।",
       "चुंबकीय क्षेत्र से 45° झुकाव पर; रासायनिक वैद्युत अपघटन प्रदर्शित करते हैं।",
       "केवल बाहरी सतह पर; AC को DC धारा में परिवर्तित करते हैं।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Eddy Currents (Foucault Currents) — Leon Foucault ne 1851 mein discover kiye — ye induced currents hain jo bulk metallic conductor mein hote hain jab changing magnetic field se guzte hain.\n\nNaam 'Eddy' isliye kyunki ye water eddies (bhawaron) jaisi circular pattern mein flow karti hain.\n\nKaise bante hain?\nChanging B → dΦ/dt ≠ 0 → Faraday's law → Induced EMF → Metal ke bheetar closed current loops → Eddy Currents\n\nGeometry:\nEddy currents PERPENDICULAR to B field direction mein circulate karti hain (planes where flux change occurs are perpendicular to B).\n\n• Statement 1 Galat hai — 'Parallel to field lines' wrong hai. Aur 'zero thermal loss' bhi wrong hai — eddy currents bahut significant Joule heating produce karti hain (I²R).\n\n• Statement 2 Sahi hai — Do primary effects:\n  1. JOULE HEATING (I²R): Industrial induction furnaces mein metals ko eddy currents se melt kiya jaata hai! MRI machines mein bhi eddy current heating hoti hai.\n  2. ELECTROMAGNETIC DAMPING: Eddy currents oppose the motion causing them (Lenz's law). Use: Magnetic brakes in trains, galvanometer damping, electromagnetic speedometers.\n\n• Statement 3 Galat hai — 45° inclination wrong hai. Aur chemical electrolysis completely alag electrochemical phenomenon hai.\n\n• Statement 4 Galat hai — Eddy currents 'outer surface only' mein nahi hote — ye bulk material mein hote hain. AC to DC conversion rectifiers karte hain, eddy currents nahi.\n\nEddy currents ko REDUCE kaise karte hain? → Laminated core use karke (thin insulated sheets) — transformers aur motors mein use hota hai.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Eddy Currents (Foucault Currents) — Leon Foucault ne 1851 mein discover kiye — ye induced currents hain jo bulk metallic conductor mein hote hain jab changing magnetic field se guzarte hain.\n\nNaam 'Eddy' isliye kyunki ye water eddies (bhawaron) jaisi circular pattern mein flow karti hain.\n\nKaise bante hain?\nChanging $B \\rightarrow d\\Phi/dt \\neq 0 \\rightarrow$ Faraday's law $\\rightarrow$ Induced EMF $\\rightarrow$ Metal ke bheetar closed current loops $\\rightarrow$ Eddy Currents\n\nGeometry:\nEddy currents PERPENDICULAR to $B$ field direction mein circulate karti hain (planes where flux change occurs are perpendicular to $B$).\n\n• Option A is Incorrect because 'Parallel to field lines' wrong hai. Aur 'zero thermal loss' bhi wrong hai — eddy currents bahut significant Joule heating produce karti hain ($I^2R$).\n\n• Option B is Correct because Do primary effects:\n  1. JOULE HEATING ($I^2R$): Industrial induction furnaces mein metals ko eddy currents se melt kiya jaata hai! MRI machines mein bhi eddy current heating hoti hai.\n  2. ELECTROMAGNETIC DAMPING: Eddy currents oppose the motion causing them (Lenz's law). Use: Magnetic brakes in trains, galvanometer damping, electromagnetic speedometers.\n\n• Option C is Incorrect because $45^\\circ$ inclination wrong hai. Aur chemical electrolysis completely alag electrochemical phenomenon hai.\n\n• Option D is Incorrect because Eddy currents 'outer surface only' mein nahi hote — ye bulk material mein hote hain. AC to DC conversion rectifiers karte hain, eddy currents nahi.\n\nEddy currents ko REDUCE kaise karte hain? → Laminated core use karke (thin insulated sheets) — transformers aur motors mein use hota hai.\n\nAnswer: Option B (index 1) sahi hai."
   },
   {
     "p_id": "bpsc_phys_m39_05",
     "qe": "A Commercial Electric Motor converts electrical energy into mechanical rotational work. Which structural enhancements distinguish a high-power Commercial Electric Motor from a basic permanent-magnet toy motor?",
     "qh": "एक वाणिज्यिक इलेक्ट्रिक मोटर (Commercial Electric Motor) विद्युत ऊर्जा को यांत्रिक घूर्णन कार्य में परिवर्तित करती है। कौन से संरचनात्मक संवर्द्धन एक उच्च-शक्ति वाणिज्यिक इलेक्ट्रिक मोटर को एक बुनियादी स्थायी-चुंबक खिलौना मोटर से अलग करते हैं?",
-    "se": [
+    "oe": [
       "Uses permanent bar magnets, a plastic core, and a single turn of copper wire.",
       "Uses an electromagnet instead of permanent magnets, a large number of wire turns in the armature coil, and a soft iron core.",
       "Uses direct battery current without an armature or commutator assembly.",
       "Uses glass insulation cores that eliminate magnetic torque completely."
     ],
-    "sh": [
+    "oh": [
       "स्थायी बार चुंबकों, एक प्लास्टिक कोर और तांबे के तार के एकल मोड़ का उपयोग करती है।",
       "स्थायी चुंबकों के बजाय एक विद्युत चुंबक, आर्मेचर कुंडली में तार के बड़ी संख्या में फेरे और एक नरम लोहे के कोर का उपयोग करती है।",
       "आर्मेचर या कम्यूटेटर असेंबली के बिना सीधे बैटरी करंट का उपयोग करती है।",
       "कांच के इन्सुलेशन कोर का उपयोग करती है जो चुंबकीय टॉर्क को पूरी तरह समाप्त कर देते हैं।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Electric Motor ka basic principle: Current-carrying conductor in magnetic field → Force (Fleming's Left-Hand Rule) → Rotation.\n\nToy Motor vs Commercial Motor comparison:\n\nTOY MOTOR:\n→ Weak permanent bar magnets (fixed field)\n→ Few turns of wire\n→ Plastic/thin coil frame\n→ Low torque, low power\n\nCOMMERCIAL MOTOR (washing machine, pump, industrial fan):\n→ ELECTROMAGNETS instead of permanent magnets (adjustable, much stronger field)\n→ LARGE NUMBER of wire turns (more turns → more force/torque: F ∝ nBIL)\n→ SOFT IRON CORE inside the coil (this coil + core = ARMATURE)\n  → Soft iron core concentrates magnetic flux lines massively\n  → Result: Dramatically higher magnetic torque\n→ Carbon brushes + commutator assembly\n\n• Statement 1 Galat hai — 'Permanent magnets + plastic core + single turn' = toy motor description, NOT commercial motor.\n\n• Statement 2 Sahi hai — Three key upgrades:\n  1. Electromagnets → Stronger, controllable field\n  2. Large number of turns → Greater torque (τ = nBIA)\n  3. Soft iron core (Armature) → Maximum flux concentration\n  Together: High power motor for heavy-duty applications.\n\n• Statement 3 Galat hai — No armature and no commutator = no rotation possible in DC motor. Commutator current direction reverse karta hai har half-rotation mein taaki torque ek hi direction mein rahe.\n\n• Statement 4 Galat hai — Glass core non-magnetic hota hai — ye magnetic torque eliminate kar dega, enhance nahi karega. Aisa motor kaam hi nahi karega.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Electric Motor ka basic principle: Current-carrying conductor in magnetic field → Force (Fleming's Left-Hand Rule) → Rotation.\n\nToy Motor vs Commercial Motor comparison:\n\nTOY MOTOR:\n→ Weak permanent bar magnets (fixed field)\n→ Few turns of wire\n→ Plastic/thin coil frame\n→ Low torque, low power\n\nCOMMERCIAL MOTOR (washing machine, pump, industrial fan):\n→ ELECTROMAGNETS instead of permanent magnets (adjustable, much stronger field)\n→ LARGE NUMBER of wire turns (more turns → more force/torque: $F \\propto nBIL$)\n→ SOFT IRON CORE inside the coil (this coil + core = ARMATURE)\n  → Soft iron core concentrates magnetic flux lines massively\n  → Result: Dramatically higher magnetic torque\n→ Carbon brushes + commutator assembly\n\n• Option A is Incorrect because 'Permanent magnets + plastic core + single turn' = toy motor description, NOT commercial motor.\n\n• Option B is Correct because Three key upgrades:\n  1. Electromagnets → Stronger, controllable field\n  2. Large number of turns → Greater torque ($\\tau = nBIA$)\n  3. Soft iron core (Armature) → Maximum flux concentration\n  Together: High power motor for heavy-duty applications.\n\n• Option C is Incorrect because No armature and no commutator = no rotation possible in DC motor. Commutator current direction reverse karta hai har half-rotation mein taaki torque ek hi direction mein rahe.\n\n• Option D is Incorrect because Glass core non-magnetic hota hai — ye magnetic torque eliminate kar dega, enhance nahi karega. Aisa motor kaam hi nahi karega.\n\nAnswer: Option B (index 1) sahi hai."
   },
   {
     "p_id": "bpsc_phys_m39_06",
     "qe": "Commutators maintain directional current flow in rotating generator armatures. What mechanical component distinguishes a Direct Current (DC) Dynamo/Generator from an Alternating Current (AC) Generator?",
     "qh": "कम्यूटेटर (Commutators) घूर्णन आर्मेचर कुंडलियों में दिशात्मक धारा प्रवाह बनाए रखते हैं। कौन सा यांत्रिक घटक एक दिष्ट धारा (DC) डायनेमो/जनरेटर को एक प्रत्यावर्ती धारा (AC) जनरेटर से अलग करता है?",
-    "se": [
+    "oe": [
       "AC generators use split-ring commutators; DC dynamos use continuous slip rings.",
-      "AC generators use continuous slip rings (R₁, R₂); DC dynamos use a split-ring type commutator.",
+      "AC generators use continuous slip rings ($R_1, R_2$); DC dynamos use a split-ring type commutator.",
       "DC dynamos require zero carbon brushes, whereas AC generators require three brushes.",
       "AC generators replace soft iron armatures with permanent ceramic magnets."
     ],
-    "sh": [
+    "oh": [
       "AC जनरेटर विभाजित-रिंग कम्यूटेटर का उपयोग करते हैं; DC डायनेमो निरंतर स्लिप रिंग का उपयोग करते हैं।",
-      "AC जनरेटर निरंतर स्लिप रिंग (R₁, R₂) का उपयोग करते हैं; DC डायनेमो एक विभाजित-रिंग प्रकार के कम्यूटेटर का उपयोग करते हैं।",
+      "AC जनरेटर निरंतर स्लिप रिंग ($R_1, R_2$) का उपयोग करते हैं; DC डायनेमो एक विभाजित-रिंग प्रकार के कम्यूटेटर का उपयोग करते हैं।",
       "DC डायनेमो को शून्य कार्बन ब्रश की आवश्यकता होती है, जबकि AC जनरेटर को तीन ब्रश की आवश्यकता होती है।",
       "AC जनरेटर नरम लोहे के आर्मेचर को स्थायी सिरेमिक चुंबकों से प्रतिस्थापित करते हैं।"
     ],
-    "oe": [
-      "AC: Split-ring commutators; DC: Continuous slip rings",
-      "AC: Continuous slip rings; DC: Split-ring commutator",
-      "DC: Zero carbon brushes; AC: Three brushes",
-      "AC generators use permanent ceramic magnets"
-    ],
-    "oh": [
-      "AC: विभाजित-रिंग कम्यूटेटर; DC: निरंतर स्लिप रिंग",
-      "AC: निरंतर स्लिप रिंग; DC: विभाजित-रिंग कम्यूटेटर",
-      "DC: शून्य कार्बन ब्रश; AC: तीन ब्रश",
-      "AC जनरेटर स्थायी सिरेमिक चुंबकों का उपयोग करते हैं"
-    ],
     "a": 1,
-    "e": "Dono generators mein working principle same hai — Faraday's electromagnetic induction — lekin output current ki nature mein difference ring assembly se aata hai.\n\nGenerator mein coil rotate hoti hai magnetic field mein → EMF induce hoti hai → current baahri circuit mein jaati hai via rings/brushes.\n\nAC GENERATOR (Alternator):\n→ Two CONTINUOUS full slip rings (R₁ aur R₂)\n→ Each ring coil ke ek end se connected hoti hai\n→ Rings coil ke saath rotate karti hain\n→ Carbon brushes fixed position mein rings ke saath contact mein rehte hain\n→ Jab coil half rotation karti hai → current direction reverse hoti hai → Alternating Current (AC) output\n→ Ghar mein aane wali 220V AC yahi hoti hai\n\nDC GENERATOR (Dynamo):\n→ SPLIT-RING COMMUTATOR (ek ring ko precisely beech mein split karo — do halves)\n→ Split rings coil ke saath rotate karti hain\n→ Key trick: Har half-rotation mein split ensure karta hai ki jo coil arm 'upward' ja raha hai wo hamesha SAME carbon brush se connect rahe\n→ Result: External circuit mein current hamesha EK HI DIRECTION mein → Direct Current (DC)!\n\n• Statement 1 Galat hai — SWAP hai! AC mein split-ring nahi, continuous slip rings hoti hain. DC mein split-ring hoti hai.\n\n• Statement 2 Sahi hai — Bilkul correct distinction.\n\n• Statement 3 Galat hai — Dono AC aur DC generators mein carbon brushes use hote hain (rings ke saath sliding contact ke liye). Zero brush ka matlab koi external current collection nahi.\n\n• Statement 4 Galat hai — Ceramic magnets koi special AC/DC distinction nahi create karte.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Dono generators mein working principle same hai — Faraday's electromagnetic induction — lekin output current ki nature mein difference ring assembly se aata hai.\n\nGenerator mein coil rotate hoti hai magnetic field mein → EMF induce hoti hai → current baahri circuit mein jaati hai via rings/brushes.\n\nAC GENERATOR (Alternator):\n→ Two CONTINUOUS full slip rings ($R_1$ aur $R_2$)\n→ Each ring coil ke ek end se connected hoti hai\n→ Rings coil ke saath rotate karti hain\n→ Carbon brushes fixed position mein rings ke saath contact mein rehte hain\n→ Jab coil half rotation karti hai → current direction reverse hoti hai → Alternating Current (AC) output\n→ Ghar mein aane wali $220\\text{ V}$ AC yahi hoti hai\n\nDC GENERATOR (Dynamo):\n→ SPLIT-RING COMMUTATOR (ek ring ko precisely beech mein split karo — do halves)\n→ Split rings coil ke saath rotate karti hain\n→ Key trick: Har half-rotation mein split ensure karta hai ki jo coil arm 'upward' ja raha hai wo hamesha SAME carbon brush se connect rahe\n→ Result: External circuit mein current hamesha EK HI DIRECTION mein → Direct Current (DC)!\n\n• Option A is Incorrect because SWAP hai! AC mein split-ring nahi, continuous slip rings hoti hain. DC mein split-ring hoti hai.\n\n• Option B is Correct because Bilkul correct distinction.\n\n• Option C is Incorrect because Dono AC aur DC generators mein carbon brushes use hote hain (rings ke saath sliding contact ke liye). Zero brush ka matlab koi external current collection nahi.\n\n• Option D is Incorrect because Ceramic magnets koi special AC/DC distinction nahi create karte.\n\nAnswer: Option B (index 1) sahi hai."
   },
   {
     "p_id": "bpsc_phys_m39_07",
     "qe": "Domestic electrical wiring schemes incorporate color-coded insulation covers and voltage potentials. What are the standardized insulation colors and potential values for Live, Neutral, and Earth wires in Indian domestic circuits?",
     "qh": "घरेलू विद्युत वायरिंग योजनाओं में रंग-कोडित इन्सुलेशन कवर और वोल्टेज विभव शामिल होते हैं। भारतीय घरेलू परिपथों में लाइव, न्यूट्रल और अर्थ तारों के लिए मानकीकृत इन्सुलेशन रंग और विभव मान क्या हैं?",
-    "se": [
-      "Live: Black (0 V); Neutral: Red (220 V); Earth: Green (110 V)",
-      "Live: Red insulation (220 V potential); Neutral: Black insulation (0 V potential); Earth: Green insulation (ground safety at 0 V potential).",
-      "Live: Green (220 V); Neutral: White (220 V); Earth: Red (0 V)",
-      "Live: Yellow (440 V); Neutral: Blue (110 V); Earth: Black (220 V)"
-    ],
-    "sh": [
-      "लाइव: काला (0 V); न्यूट्रल: लाल (220 V); अर्थ: हरा (110 V)",
-      "लाइव: लाल इन्सुलेशन (220 V विभव); न्यूट्रल: काला इन्सुलेशन (0 V विभव); अर्थ: हरा इन्सुलेशन (0 V विभव पर भू-सुरक्षा)।",
-      "लाइव: हरा (220 V); न्यूट्रल: सफेद (220 V); अर्थ: लाल (0 V)",
-      "लाइव: पीला (440 V); न्यूट्रल: नीला (110 V); अर्थ: काला (220 V)"
-    ],
     "oe": [
-      "Live: Black (0V); Neutral: Red (220V); Earth: Green (110V)",
-      "Live: Red (220V); Neutral: Black (0V); Earth: Green (0V)",
-      "Live: Green (220V); Neutral: White (220V); Earth: Red (0V)",
-      "Live: Yellow (440V); Neutral: Blue (110V); Earth: Black (220V)"
+      "Live: Black ($0\\text{ V}$); Neutral: Red ($220\\text{ V}$); Earth: Green ($110\\text{ V}$)",
+      "Live: Red insulation ($220\\text{ V}$ potential); Neutral: Black insulation ($0\\text{ V}$ potential); Earth: Green insulation (ground safety at $0\\text{ V}$ potential).",
+      "Live: Green ($220\\text{ V}$); Neutral: White ($220\\text{ V}$); Earth: Red ($0\\text{ V}$)",
+      "Live: Yellow ($440\\text{ V}$); Neutral: Blue ($110\\text{ V}$); Earth: Black ($220\\text{ V}$)"
     ],
     "oh": [
-      "लाइव: काला (0V); न्यूट्रल: लाल (220V); अर्थ: हरा (110V)",
-      "लाइव: लाल (220V); न्यूट्रल: काला (0V); अर्थ: हरा (0V)",
-      "लाइव: हरा (220V); न्यूट्रल: सफेद (220V); अर्थ: लाल (0V)",
-      "लाइव: पीला (440V); न्यूट्रल: नीला (110V); अर्थ: काला (220V)"
+      "लाइव: काला ($0\\text{ V}$); न्यूट्रल: लाल ($220\\text{ V}$); अर्थ: हरा ($110\\text{ V}$)",
+      "लाइव: लाल इन्सुलेशन ($220\\text{ V}$ विभव); न्यूट्रल: काला इन्सुलेशन ($0\\text{ V}$ विभव); अर्थ: हरा इन्सुलेशन ($0\\text{ V}$ विभव पर भू-सुरक्षा)।",
+      "लाइव: हरा ($220\\text{ V}$); न्यूट्रल: सफेद ($220\\text{ V}$); अर्थ: लाल ($0\\text{ V}$)",
+      "लाइव: पीला ($440\\text{ V}$); न्यूट्रल: नीला ($110\\text{ V}$); अर्थ: काला ($220\\text{ V}$)"
     ],
     "a": 1,
-    "e": "Indian domestic wiring mein teen wires hote hain — har ek ka alag color aur purpose hota hai. Ye safety ke liye standardized hai (BIS/IEC standards).\n\nTeen wires ka summary (Indian Standard):\n\nLIVE WIRE (Phase wire):\n→ Color: RED insulation\n→ Potential: 220V AC (50 Hz)\n→ Dangerous — ye wo wire hai jisme current actually flow karta hai\n→ 3-pin plug mein: Right pin se connected\n\nNEUTRAL WIRE:\n→ Color: BLACK insulation\n→ Potential: 0V (reference/return path)\n→ Current complete karta hai circuit ko\n→ 3-pin plug mein: Left pin se connected\n\nEARTH WIRE:\n→ Color: GREEN insulation (ya Green-Yellow striped)\n→ Potential: 0V (physically grounded to earth)\n→ Safety wire hai — leakage current ko seedha zameen mein bhej deta hai\n→ 3-pin plug mein: Top (longest) pin se connected\n→ Bijli ke jhatkhe se bachata hai!\n\n• Statement 1 Galat hai — Live-Neutral colors swap kar diye hain (Black-Red) aur Earth ko 110V show kiya hai — dono wrong.\n\n• Statement 2 Sahi hai — Exactly correct color-potential mapping:\n  Red=220V, Black=0V, Green=0V (safety ground)\n\n• Statement 3 Galat hai — Green Live ke liye nahi, White Neutral ke liye nahi (in Indian standard).\n\n• Statement 4 Galat hai — Yellow/Blue/440V/110V Indian domestic standards mein use nahi hote.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Indian domestic wiring mein teen wires hote hain — har ek ka alag color aur purpose hota hai. Ye safety ke liye standardized hai (BIS/IEC standards).\n\nTeen wires ka summary (Indian Standard):\n\nLIVE WIRE (Phase wire):\n→ Color: RED insulation\n→ Potential: $220\\text{ V}$ AC ($50\\text{ Hz}$)\n→ Dangerous — ye wo wire hai jisme current actually flow karta hai\n→ 3-pin plug mein: Right pin se connected\n\nNEUTRAL WIRE:\n→ Color: BLACK insulation\n→ Potential: $0\\text{ V}$ (reference/return path)\n→ Current complete karta hai circuit ko\n→ 3-pin plug mein: Left pin se connected\n\nEARTH WIRE:\n→ Color: GREEN insulation (ya Green-Yellow striped)\n→ Potential: $0\\text{ V}$ (physically grounded to earth)\n→ Safety wire hai — leakage current ko seedha zameen mein bhej deta hai\n→ 3-pin plug mein: Top (longest) pin se connected\n→ Bijli ke jhatkhe se bachata hai!\n\n• Option A is Incorrect because Live-Neutral colors swap kar diye hain (Black-Red) aur Earth ko $110\\text{ V}$ show kiya hai — dono wrong.\n\n• Option B is Correct because Exactly correct color-potential mapping:\n  Red=$220\\text{ V}$, Black=$0\\text{ V}$, Green=$0\\text{ V}$ (safety ground)\n\n• Option C is Incorrect because Green Live ke liye nahi, White Neutral ke liye nahi (in Indian standard).\n\n• Option D is Incorrect because Yellow/Blue/$440\\text{ V}$/$110\\text{ V}$ Indian domestic standards mein use nahi hote.\n\nAnswer: Option B (index 1) sahi hai."
   },
   {
     "p_id": "bpsc_phys_m39_08",
     "qe": "Circuit faults like Short-Circuiting and Overloading can cause severe electrical fires. What physical condition defines Short-Circuiting, and how does it differ from Overloading?",
     "qh": "शॉर्ट-सर्किटिंग (Short-Circuiting) और ओवरलोडिंग (Overloading) जैसे परिपथ दोष गंभीर विद्युत आग का कारण बन सकते हैं। कौन सी भौतिक स्थिति शॉर्ट-सर्किटिंग को परिभाषित करती है, और यह ओवरलोडिंग से कैसे भिन्न है?",
-    "se": [
+    "oe": [
       "Short-circuiting occurs when neutral wire touches earth wire; Overloading occurs when voltage drops to zero.",
       "Short-circuiting occurs when live and neutral wires touch directly, dropping circuit resistance to nearly zero and causing a massive current spike; Overloading occurs when too many high-power appliances are switched on simultaneously, drawing excessive current.",
       "Short-circuiting is caused by low power factor; Overloading occurs only during lightning strikes.",
       "Both short-circuiting and overloading increase circuit resistance to infinity."
     ],
-    "sh": [
+    "oh": [
       "शॉर्ट-सर्किटिंग तब होती है जब न्यूट्रल तार अर्थ तार को छूता है; ओवरलोडिंग तब होती है जब वोल्टेज शून्य हो जाता है।",
       "शॉर्ट-सर्किटिंग तब होती है जब लाइव और न्यूट्रल तार सीधे छूते हैं, परिपथ प्रतिरोध लगभग शून्य हो जाता है और एक बड़ा धारा स्पाइक होता है; ओवरलोडिंग तब होती है जब एक साथ बहुत अधिक उच्च-शक्ति उपकरण चालू किए जाते हैं, जिससे अत्यधिक धारा आती है।",
       "शॉर्ट-सर्किटिंग कम पावर फैक्टर के कारण होती है; ओवरलोडिंग केवल बिजली गिरने के दौरान होती है।",
       "शॉर्ट-सर्किटिंग और ओवरलोडिंग दोनों परिपथ प्रतिरोध को अनंत तक बढ़ा देती हैं।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Electrical safety ke do sabse important fault conditions:\n\nSHORT CIRCUIT:\nCause: Live wire (220V) directly neutral wire (0V) se touch ho jaaye — damaged insulation ki wajah se\nPhysics: V = IR → I = V/R\nR ≈ 0 (direct contact, no load) → I = 220/≈0 → HUGE current surge!\nResult: Intense Joule heating (Q = I²Rt) → Sparks → Fire!\nExample: Rat kaata insulation, purana taar expose hua → short circuit.\n\nOVERLOADING:\nCause: Ghar mein ek saath bahut zyada appliances chalana (AC + Fridge + Geyser + Iron)\nPhysics: Har appliance parallel mein connected hota hai → total current = sum of all individual currents\nI_total = I_AC + I_fridge + I_geyser + I_iron ...\nAgar I_total > rated capacity of wire → Wire overheats → Fire!\nExample: Sab log khane ke baad raat ko ek saath appliances chalate hain → grid overload.\n\n• Statement 1 Galat hai — Neutral touching Earth wire short circuit cause kar sakta hai lekin primary definition galat hai. Aur 'voltage drops to zero' overloading ka cause nahi, possible effect hai.\n\n• Statement 2 Sahi hai — Perfect distinction:\n  Short circuit = Live meets Neutral → R≈0 → I→∞ (sudden spike)\n  Overloading = Too many appliances → Gradual excess current buildup\n\n• Statement 3 Galat hai — 'Low power factor' industrial issue hai. Lightning alag phenomenon hai.\n\n• Statement 4 Galat hai — Short circuit DECREASES resistance to near zero (not infinity). 'Infinity resistance' means open circuit (break in wire).\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Electrical safety ke do sabse important fault conditions:\n\nSHORT CIRCUIT:\nCause: Live wire ($220\\text{ V}$) directly neutral wire ($0\\text{ V}$) se touch ho jaaye — damaged insulation ki wajah se\nPhysics: $V = IR \\rightarrow I = V/R$\n$R \\approx 0$ (direct contact, no load) $\\rightarrow I = 220/{\\approx 0} \\rightarrow$ HUGE current surge!\nResult: Intense Joule heating ($Q = I^2Rt$) → Sparks → Fire!\nExample: Rat kaata insulation, purana taar expose hua → short circuit.\n\nOVERLOADING:\nCause: Ghar mein ek saath bahut zyada appliances chalana (AC + Fridge + Geyser + Iron)\nPhysics: Har appliance parallel mein connected hota hai → total current = sum of all individual currents\n$I_{\\text{total}} = I_{\\text{AC}} + I_{\\text{fridge}} + I_{\\text{geyser}} + I_{\\text{iron}} \\dots$\nAgar $I_{\\text{total}} >$ rated capacity of wire → Wire overheats → Fire!\nExample: Sab log khane ke baad raat ko ek saath appliances chalate hain → grid overload.\n\n• Option A is Incorrect because Neutral touching Earth wire short circuit cause kar sakta hai lekin primary definition galat hai. Aur 'voltage drops to zero' overloading ka cause nahi, possible effect hai.\n\n• Option B is Correct because Perfect distinction:\n  Short circuit = Live meets Neutral $\\rightarrow R \\approx 0 \\rightarrow I \\rightarrow \\infty$ (sudden spike)\n  Overloading = Too many appliances $\\rightarrow$ Gradual excess current buildup\n\n• Option C is Incorrect because 'Low power factor' industrial issue hai. Lightning alag phenomenon hai.\n\n• Option D is Incorrect because Short circuit DECREASES resistance to near zero (not infinity). 'Infinity resistance' means open circuit (break in wire).\n\nAnswer: Option B (index 1) sahi hai."
   },
   {
     "p_id": "bpsc_phys_m39_09",
     "qe": "Electrical circuit protection devices include traditional wire Fuses and modern Miniature Circuit Breakers (MCBs). What operational advantage does an MCB offer over a standard lead-tin alloy fuse?",
     "qh": "विद्युत परिपथ सुरक्षा उपकरणों में पारंपरिक तार फ्यूज और आधुनिक मिनिएचर सर्किट ब्रेकर (MCB) शामिल हैं। एक मानक सीसा-टिन मिश्र धातु फ्यूज की तुलना में MCB क्या परिचालन लाभ प्रदान करता है?",
-    "se": [
+    "oe": [
       "MCBs generate free AC electricity during power outages.",
       "When heavy fault current flows, an MCB trips its switch off automatically in a fraction of a second without melting, allowing quick manual reset without wire replacement.",
       "MCBs withstand infinite current without interrupting power flow.",
       "MCBs step up 220 V household current to 11,000 V automatically."
     ],
-    "sh": [
+    "oh": [
       "MCB बिजली कटौती के दौरान मुफ्त AC बिजली उत्पन्न करते हैं।",
       "जब भारी गलती धारा प्रवाहित होती है, तो MCB बिना पिघले एक सेकंड के एक अंश में अपना स्विच स्वचालित रूप से बंद कर देता है, जिससे तार बदले बिना त्वरित मैनुअल रीसेट की अनुमति मिलती है।",
       "MCB बिजली प्रवाह को बाधित किए बिना अनंत धारा का सामना करते हैं।",
       "MCB स्वचालित रूप से 220 V घरेलू धारा को 11,000 V तक बढ़ा देते हैं।"
     ],
-    "oe": [
-      "Statement 1 only",
-      "Statement 2 only",
-      "Statement 3 only",
-      "Statement 4 only"
-    ],
-    "oh": [
-      "केवल कथन 1",
-      "केवल कथन 2",
-      "केवल कथन 3",
-      "केवल कथन 4"
-    ],
     "a": 1,
-    "e": "Circuit protection devices — Fuse aur MCB — dono excessive current se circuit/appliances ko protect karte hain. Lekin dono ka mechanism alag hai.\n\nFUSE (Traditional):\nMaterial: Lead-Tin alloy wire (75% Pb + 25% Sn)\nMelting point: ~200°C\nWorking: Excessive current → I²R heating → wire MELTS → circuit break!\nProblem: Har baar fault ke baad NEW fuse wire lagana padta hai. Time-consuming aur agar fuse nahi mila toh dangerous jugaad ho jaata hai.\nRating: 1A, 2A, 5A, 15A (different fuses for different circuits)\n\nMCB (Miniature Circuit Breaker):\nMechanism: Bimetallic strip (overload) + Electromagnetic coil (short circuit)\n→ Overload: Bimetallic strip garms hoti hai → bends → trips switch mechanically\n→ Short circuit: Huge current → electromagnetic force → instantly trips switch\nAdvantage: Trip hone ke baad simply switch FLIP karo → Reset! No wire replacement.\nSpeed: Trips in milliseconds.\n\n• Statement 1 Galat hai — MCB electricity generate nahi karta. Ye sirf protection device hai.\n\n• Statement 2 Sahi hai — MCB ke advantages over fuse:\n  1. Automatic tripping (no wire melting)\n  2. Fast response (fraction of a second)\n  3. Reusable — simply reset by flipping switch\n  4. More reliable trip ratings\n  5. Multiple protection mechanisms (thermal + electromagnetic)\n\n• Statement 3 Galat hai — MCB 'infinite current withstand' nahi karta — ye TOO MUCH current par TRIP karta hai (that's the whole point).\n\n• Statement 4 Galat hai — MCB voltage step-up nahi karta. Voltage step-up transformer karta hai.\n\nAnswer: Statement 2 (index 1) sahi hai."
+    "e": "Circuit protection devices — Fuse aur MCB — dono excessive current se circuit/appliances ko protect karte hain. Lekin dono ka mechanism alag hai.\n\nFUSE (Traditional):\nMaterial: Lead-Tin alloy wire ($75\\%\\text{ Pb} + 25\\%\\text{ Sn}$)\nMelting point: $\\sim 200^\\circ\\text{C}$\nWorking: Excessive current → $I^2R$ heating → wire MELTS → circuit break!\nProblem: Har baar fault ke baad NEW fuse wire lagana padta hai. Time-consuming aur agar fuse nahi mila toh dangerous jugaad ho jaata hai.\nRating: $1\\text{ A}, 2\\text{ A}, 5\\text{ A}, 15\\text{ A}$ (different fuses for different circuits)\n\nMCB (Miniature Circuit Breaker):\nMechanism: Bimetallic strip (overload) + Electromagnetic coil (short circuit)\n→ Overload: Bimetallic strip garms hoti hai → bends → trips switch mechanically\n→ Short circuit: Huge current → electromagnetic force → instantly trips switch\nAdvantage: Trip hone ke baad simply switch FLIP karo → Reset! No wire replacement.\nSpeed: Trips in milliseconds.\n\n• Option A is Incorrect because MCB electricity generate nahi karta. Ye sirf protection device hai.\n\n• Option B is Correct because MCB ke advantages over fuse:\n  1. Automatic tripping (no wire melting)\n  2. Fast response (fraction of a second)\n  3. Reusable — simply reset by flipping switch\n  4. More reliable trip ratings\n  5. Multiple protection mechanisms (thermal + electromagnetic)\n\n• Option C is Incorrect because MCB 'infinite current withstand' nahi karta — ye TOO MUCH current par TRIP karta hai (that's the whole point).\n\n• Option D is Incorrect because MCB voltage step-up nahi karta. Voltage step-up transformer karta hai.\n\nAnswer: Option B (index 1) sahi hai."
   },
   {
-  "p_id": "bpsc_phys_m39_10",
-  "qe": "Transformers alter AC voltage levels in distribution grids and industrial equipment. What fundamental operational rule governs transformer action, and why can a transformer NOT operate on Direct Current (DC)?",
-  "qh": "ट्रांसफॉर्मर वितरण ग्रिड और औद्योगिक उपकरणों में AC वोल्टेज स्तरों को बदलते हैं। कौन सा मौलिक परिचालन नियम ट्रांसफॉर्मर क्रिया को नियंत्रित करता है, और एक ट्रांसफॉर्मर दिष्ट धारा (DC) पर काम क्यों नहीं कर सकता है?",
-  "oe": [
-    "Transformers operate via electrostatic induction; DC current causes soft iron core melting.",
-    "Transformers operate on Mutual Induction, requiring continuously changing magnetic flux provided by AC; steady DC produces constant flux, inducing zero secondary voltage.",
-    "Transformers amplify total electric power; DC voltage lacks electron mass.",
-    "Step-up transformers require high frequency radio waves not present in DC."
-  ],
-  "oh": [
-    "ट्रांसफॉर्मर स्थिरवैद्युत प्रेरण (electrostatic induction) द्वारा कार्य करते हैं; DC धारा से सॉफ्ट आयरन कोर पिघल जाता है।",
-    "ट्रांसफॉर्मर अन्योन्य प्रेरण (Mutual Induction) पर कार्य करते हैं, जिसके लिए AC द्वारा प्रदान किया गया निरंतर परिवर्तनशील चुंबकीय फ्लक्स आवश्यक है; स्थिर DC स्थिर फ्लक्स उत्पन्न करती है, जिससे द्वितीयक कुंडली में शून्य वोल्टेज प्रेरित होता है।",
-    "ट्रांसफॉर्मर कुल विद्युत शक्ति को प्रवर्धित करते हैं; DC वोल्टेज में इलेक्ट्रॉन द्रव्यमान का अभाव होता है।",
-    "स्टेप-अप ट्रांसफॉर्मर को उच्च आवृत्ति रेडियो तरंगों की आवश्यकता होती है जो DC में उपस्थित नहीं होतीं।"
-  ],
-  "a": 1,
-  "e": "Transformer ek aisa device hai jo AC voltage ko step-up (badhata hai) ya step-down (ghatata hai) karta hai — bina frequency change kiye. Ye Faraday ke Electromagnetic Induction ke principle par kaam karta hai.\n\nSabse pehle samjhte hain transformer ki basic structure: isme do coils hoti hain — Primary Coil (jisme input AC dete hain) aur Secondary Coil (jisse output milta hai). Dono ek laminated soft iron core par wound hoti hain.\n\n• Option 1 (Correct Answer) — Transformer 'Mutual Induction' ke principle par kaam karta hai. Jab Primary coil mein AC current flow karta hai, toh har pal magnetic flux badh-ghad raha hota hai (dΦ/dt ≠ 0). Ye changing flux secondary coil mein ek induced emf paida karta hai — yahi transformer ka kaam hai. Formula hai: e = -N × (dΦ/dt). Ab DC ke saath kya hota hai? DC ek constant, steady current hai — iska magnetic field bhi constant rehta hai (dΦ/dt = 0). Faraday's Law ke anusaar, agar flux change hi nahi ho raha, toh secondary coil mein koi bhi induced voltage NAHI banega. Isliye transformer DC par kaam nahi kar sakta.\n\n• Option 0 (Galat) — Transformer ka kaam electrostatic induction se bilkul nahi hota. Ye electromagnetic induction ka phenomenon hai. DC se soft iron core pighlata nahi — ye bhi ek fabricated trap hai.\n\n• Option 2 (Galat) — Ye ek classic UPSC trap hai! Transformer power amplify NAHI karta. Ye sirf voltage aur current ke beech trade-off karta hai jabki total power conserve rehti hai (Pin ≈ Pout, ideal case mein). 'DC voltage lacks electron mass' — ye statement completely nonsensical physics hai.\n\n• Option 3 (Galat) — Step-up transformer ko radio waves ki zaroorat nahi hoti. Ye sirf AC supply chahta hai. Radio waves wali baat ek deliberately confusing distractor hai.\n\nEk important yaad rakhne wali cheez: Power grids mein AC isliye use hoti hai kyunki transformers sirf AC par kaam karte hain — aur long distance transmission ke liye high voltage (step-up) zaroori hai taaki current loss (I²R) minimize ho sake."
-}
+    "p_id": "bpsc_phys_m39_10",
+    "qe": "Transformers alter AC voltage levels in distribution grids and industrial equipment. What fundamental operational rule governs transformer action, and why can a transformer NOT operate on Direct Current (DC)?",
+    "qh": "ट्रांसफॉर्मर वितरण ग्रिड और औद्योगिक उपकरणों में AC वोल्टेज स्तरों को बदलते हैं। कौन सा मौलिक परिचालन नियम ट्रांसफॉर्मर क्रिया को नियंत्रित करता है, और एक ट्रांसफॉर्मर दिष्ट धारा (DC) पर काम क्यों नहीं कर सकता है?",
+    "oe": [
+      "Transformers operate via electrostatic induction; DC current causes soft iron core melting.",
+      "Transformers operate on Mutual Induction, requiring continuously changing magnetic flux provided by AC; steady DC produces constant flux, inducing zero secondary voltage.",
+      "Transformers amplify total electric power; DC voltage lacks electron mass.",
+      "Step-up transformers require high frequency radio waves not present in DC."
+    ],
+    "oh": [
+      "ट्रांसफॉर्मर स्थिरवैद्युत प्रेरण (electrostatic induction) द्वारा कार्य करते हैं; DC धारा से सॉफ्ट आयरन कोर पिघल जाता है।",
+      "ट्रांसफॉर्मर अन्योन्य प्रेरण (Mutual Induction) पर कार्य करते हैं, जिसके लिए AC द्वारा प्रदान किया गया निरंतर परिवर्तनशील चुंबकीय फ्लक्स आवश्यक है; स्थिर DC स्थिर फ्लक्स उत्पन्न करती है, जिससे द्वितीयक कुंडली में शून्य वोल्टेज प्रेरित होता है।",
+      "ट्रांसफॉर्मर कुल विद्युत शक्ति को प्रवर्धित करते हैं; DC वोल्टेज में इलेक्ट्रॉन द्रव्यमान का अभाव होता है।",
+      "स्टेप-अप ट्रांसफॉर्मर को उच्च आवृत्ति रेडियो तरंगों की आवश्यकता होती है जो DC में उपस्थित नहीं होतीं।"
+    ],
+    "a": 1,
+    "e": "Transformer ek aisa device hai jo AC voltage ko step-up (badhata hai) ya step-down (ghatata hai) karta hai — bina frequency change kiye. Ye Faraday ke Electromagnetic Induction ke principle par kaam karta hai.\n\nSabse pehle samjhte hain transformer ki basic structure: isme do coils hoti hain — Primary Coil (jisme input AC dete hain) aur Secondary Coil (jisse output milta hai). Dono ek laminated soft iron core par wound hoti hain.\n\n• Option B is Correct because Transformer 'Mutual Induction' ke principle par kaam karta hai. Jab Primary coil mein AC current flow karta hai, toh har pal magnetic flux badh-ghad raha hota hai ($d\\Phi/dt \\neq 0$). Ye changing flux secondary coil mein ek induced emf paida karta hai — yahi transformer ka kaam hai. Formula hai: $e = -N \\times (d\\Phi/dt)$. Ab DC ke saath kya hota hai? DC ek constant, steady current hai — iska magnetic field bhi constant rehta hai ($d\\Phi/dt = 0$). Faraday's Law ke anusaar, agar flux change hi nahi ho raha, toh secondary coil mein koi bhi induced voltage NAHI banega. Isliye transformer DC par kaam nahi kar sakta.\n\n• Option A is Incorrect because Transformer ka kaam electrostatic induction se bilkul nahi hota. Ye electromagnetic induction ka phenomenon hai. DC se soft iron core pighlata nahi — ye bhi ek fabricated trap hai.\n\n• Option C is Incorrect because Ye ek classic UPSC trap hai! Transformer power amplify NAHI karta. Ye sirf voltage aur current ke beech trade-off karta hai jabki total power conserve rehti hai ($P_{\\text{in}} \\approx P_{\\text{out}}$, ideal case mein). 'DC voltage lacks electron mass' — ye statement completely nonsensical physics hai.\n\n• Option D is Incorrect because Step-up transformer ko radio waves ki zaroorat nahi hoti. Ye sirf AC supply chahta hai. Radio waves wali baat ek deliberately confusing distractor hai.\n\nEk important yaad rakhne wali cheez: Power grids mein AC isliye use hoti hai kyunki transformers sirf AC par kaam karte hain — aur long distance transmission ke liye high voltage (step-up) zaroori hai taaki current loss ($I^2R$) minimize ho sake."
+  }
 ]
