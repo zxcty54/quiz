@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/question_model.dart';
-import '../services/ai_explainer_service.dart';
 import '../services/user_stats_service.dart';
 import '../widgets/math_text.dart';
 
@@ -35,23 +34,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
   Timer? _timer;
   int _timeLeft = 30; // ⏱️ 30 Seconds Timer
-
-  // 💬 AI Custom Doubt State Tracking
-  final Map<int, int> _asksRemainingPerQuestion = {}; 
-  final Map<int, List<Map<String, String>>> _aiChatHistory = {}; 
-
-  // ⏳ Global Anti-Spam Cooldown across all questions (15 Seconds)
-  static DateTime? _lastAiCallTime;
-  static const int _aiCooldownSeconds = 15;
-
-  int _getAiCooldownRemaining() {
-    if (_lastAiCallTime == null) return 0;
-    final int diff = DateTime.now().difference(_lastAiCallTime!).inSeconds;
-    if (diff < _aiCooldownSeconds) {
-      return _aiCooldownSeconds - diff;
-    }
-    return 0;
-  }
 
   @override
   void initState() {
@@ -191,7 +173,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
           _isAnswered = true;
         });
 
-        // ⏱️ Timeout counts as incorrect -> Save to Wrong Vault
         final currentQ = widget.questions[_currentIndex];
         UserStatsService.recordQuestionAttempt(
           isCorrect: false,
@@ -246,210 +227,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               'ee': currentQ.ee,
               'eh': currentQ.eh,
             },
-    );
-  }
-
-  // 💬 BOTTOM SHEET DIALOG FOR AI DOUBT SOLVER (1 ASK & 100 CHARS)
-  void _openAiDoubtDialog(Question currentQ, bool isDark) {
-    int asksLeft = _asksRemainingPerQuestion[_currentIndex] ?? 1;
-    TextEditingController doubtController = TextEditingController();
-    bool isAsking = false;
-    final currentOptions = currentQ.getOptions(_isHindi);
-
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-      builder: (ctx) {
-        return StatefulBuilder(
-          builder: (context, setModalState) {
-            final history = _aiChatHistory[_currentIndex] ?? [];
-            final int cooldownLeft = _getAiCooldownRemaining();
-
-            return Padding(
-              padding: EdgeInsets.only(
-                bottom: MediaQuery.of(context).viewInsets.bottom,
-                left: 16,
-                right: 16,
-                top: 16,
-              ),
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            const Text('🤖', style: TextStyle(fontSize: 20)),
-                            const SizedBox(width: 6),
-                            Text(
-                              'Ask AI Custom Doubt',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15,
-                                color: isDark ? Colors.white : const Color(0xFF0F172A),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                          decoration: BoxDecoration(
-                            color: asksLeft > 0 
-                                ? (isDark ? const Color(0xFF14532D) : const Color(0xFFDCFCE7))
-                                : (isDark ? const Color(0xFF7F1D1D) : const Color(0xFFFEE2E2)),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Text(
-                            asksLeft > 0 ? '$asksLeft Ask Left' : '🔒 Limit Reached',
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold,
-                              color: asksLeft > 0 
-                                  ? (isDark ? const Color(0xFF86EFAC) : Colors.green.shade800)
-                                  : (isDark ? const Color(0xFFFCA5A5) : Colors.red.shade800),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(height: 12),
-
-                    ...history.map((chat) => Container(
-                          margin: const EdgeInsets.only(bottom: 10),
-                          padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            color: isDark ? const Color(0xFF0F172A) : Colors.grey.shade100,
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: isDark ? const Color(0xFF334155) : Colors.grey.shade300),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "❓ Your Doubt: ${chat['doubt']}",
-                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5, color: Color(0xFF38BDF8)),
-                              ),
-                              Divider(height: 12, color: isDark ? const Color(0xFF334155) : Colors.grey.shade300),
-                              MathFormattedText(
-                                text: chat['response']!,
-                                textStyle: TextStyle(
-                                  fontSize: 12.5,
-                                  height: 1.4,
-                                  color: isDark ? Colors.grey.shade200 : Colors.black87,
-                                ),
-                              ),
-                            ],
-                          ),
-                        )),
-
-                    if (asksLeft > 0) ...[
-                      TextField(
-                        controller: doubtController,
-                        maxLength: 100,
-                        maxLines: 2,
-                        minLines: 1,
-                        style: TextStyle(color: isDark ? Colors.white : Colors.black87, fontSize: 13),
-                        decoration: InputDecoration(
-                          hintText: 'Type your exact doubt (Max 100 chars)...',
-                          hintStyle: TextStyle(fontSize: 12, color: isDark ? Colors.grey.shade400 : Colors.grey),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: isDark ? const Color(0xFF334155) : Colors.grey.shade400),
-                          ),
-                          focusedBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xFF2563EB), width: 1.5),
-                          ),
-                          contentPadding: const EdgeInsets.all(10),
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton.icon(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF2563EB),
-                            foregroundColor: Colors.white,
-                            padding: const EdgeInsets.symmetric(vertical: 10),
-                          ),
-                          onPressed: isAsking
-                              ? null
-                              : () async {
-                                  if (doubtController.text.trim().isEmpty) return;
-
-                                  final int cooldown = _getAiCooldownRemaining();
-                                  if (cooldown > 0) {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        content: Text('⏳ Please wait ${cooldown}s before asking again!'),
-                                        duration: const Duration(seconds: 2),
-                                        backgroundColor: const Color(0xFFDC2626),
-                                      ),
-                                    );
-                                    return;
-                                  }
-
-                                  setModalState(() => isAsking = true);
-                                  _lastAiCallTime = DateTime.now();
-
-                                  String userQuery = doubtController.text.trim();
-
-                                  String aiResp = await AiExplainerService.askCustomDoubt(
-                                    question: currentQ.getText(_isHindi),
-                                    options: currentOptions,
-                                    correctAnswer: currentOptions[currentQ.answerIndex],
-                                    userDoubt: userQuery,
-                                  );
-
-                                  setState(() {
-                                    _asksRemainingPerQuestion[_currentIndex] = asksLeft - 1;
-                                    _aiChatHistory[_currentIndex] = [
-                                      ...history,
-                                      {'doubt': userQuery, 'response': aiResp}
-                                    ];
-                                  });
-
-                                  setModalState(() {
-                                    asksLeft--;
-                                    isAsking = false;
-                                    doubtController.clear();
-                                  });
-                                },
-                          icon: isAsking
-                              ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                              : const Icon(Icons.send_rounded, size: 16),
-                          label: Text(
-                            isAsking 
-                                ? 'Generating Deep Explanation...' 
-                                : (cooldownLeft > 0 ? 'Wait ${cooldownLeft}s (Cooldown) ⏳' : 'Get AI Explanation 🚀'),
-                          ),
-                        ),
-                      )
-                    ] else ...[
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        alignment: Alignment.center,
-                        child: Text(
-                          '🔒 Question-wise 1 doubt limit complete ho chuki hai.',
-                          style: TextStyle(
-                            fontSize: 11.5,
-                            color: isDark ? Colors.grey.shade400 : Colors.grey,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      )
-                    ],
-                    const SizedBox(height: 16),
-                  ],
-                ),
-              ),
-            );
-          },
-        );
-      },
     );
   }
 
@@ -511,36 +288,37 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // ✨ SMART GROUPED & HINGLISH-AWARE EXPLANATION BUILDER
+  // ✨ SMART MULTI-POINT SPLITTER & COLOR-CODED EXPLANATION BUILDER (NO ASK AI)
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
     List<String> rawLines = rawExplanation
+        .replaceAll(r'\n', '\n')
         .split('\n')
         .map((p) => p.trim())
         .where((p) => p.isNotEmpty)
         .toList();
 
-    List<String> groupedPoints = [];
-    String currentBlock = "";
+    List<String> distinctPoints = [];
 
-    for (var line in rawLines) {
-      bool isNewHeader = line.startsWith('•') ||
-          line.startsWith('Option') ||
-          line.startsWith('📌') ||
-          line.startsWith('1.') ||
-          line.startsWith('2.');
-
-      if (isNewHeader && currentBlock.isNotEmpty) {
-        groupedPoints.add(currentBlock.trim());
-        currentBlock = line;
+    for (String line in rawLines) {
+      if (line.contains('•') && line.indexOf('•') != line.lastIndexOf('•')) {
+        List<String> subParts = line
+            .split(RegExp(r'(?=•)'))
+            .map((s) => s.trim())
+            .where((s) => s.isNotEmpty)
+            .toList();
+        distinctPoints.addAll(subParts);
       } else {
-        if (currentBlock.isEmpty) {
-          currentBlock = line;
-        } else {
-          currentBlock += "\n$line";
-        }
+        distinctPoints.add(line);
       }
     }
-    if (currentBlock.isNotEmpty) groupedPoints.add(currentBlock.trim());
+
+    if (distinctPoints.length <= 1 && rawExplanation.contains('Option')) {
+      distinctPoints = rawExplanation
+          .split(RegExp(r'(?=•|\bOption\s+[A-D0-9]|\bStatement\s+[A-D0-9]|\([A-D0-9]\)|📌)'))
+          .map((s) => s.trim())
+          .where((s) => s.isNotEmpty)
+          .toList();
+    }
 
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
     final Color cardBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
@@ -565,7 +343,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🏆 1. HEADER STRIP
+          // 🏆 1. HEADER STRIP (Pure Solution Title)
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
             decoration: BoxDecoration(
@@ -574,78 +352,48 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               border: Border(bottom: BorderSide(color: cardBorder)),
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                        color: isDark ? const Color(0xFF78350F) : const Color(0xFFFEF3C7),
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      child: const Text('💡', style: TextStyle(fontSize: 14)),
-                    ),
-                    const SizedBox(width: 8),
-                    Text(
-                      'Detailed Solution',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: headerText,
-                        fontSize: 13.5,
-                        letterSpacing: 0.2,
-                      ),
-                    ),
-                  ],
-                ),
-                InkWell(
-                  onTap: () => _openAiDoubtDialog(currentQ, isDark),
-                  borderRadius: BorderRadius.circular(8),
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                    decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                        colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
-                      ),
-                      borderRadius: BorderRadius.circular(8),
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color(0xFF2563EB).withOpacity(0.25),
-                          blurRadius: 4,
-                          offset: const Offset(0, 2),
-                        )
-                      ],
-                    ),
-                    child: const Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text('🤖 Ask AI', style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
-                      ],
-                    ),
+                Container(
+                  padding: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                    color: isDark ? const Color(0xFF78350F) : const Color(0xFFFEF3C7),
+                    borderRadius: BorderRadius.circular(6),
                   ),
-                )
+                  child: const Text('💡', style: TextStyle(fontSize: 14)),
+                ),
+                const SizedBox(width: 8),
+                Text(
+                  'Detailed Solution',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: headerText,
+                    fontSize: 13.5,
+                    letterSpacing: 0.2,
+                  ),
+                ),
               ],
             ),
           ),
 
-          // 📖 2. SMART BREAKDOWN POINTS
+          // 📖 2. SMART COLOR-CODED POINT CARDS
           Padding(
             padding: const EdgeInsets.all(14.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ...groupedPoints.map((para) {
-                  String lower = para.toLowerCase();
+                ...distinctPoints.map((para) {
+                  final String lower = para.toLowerCase();
 
-                  bool isCorrectPoint = lower.contains('is correct') ||
+                  bool isCorrectPoint = lower.contains('correct hai') ||
+                      lower.contains('is correct') ||
                       lower.contains('sahi hai') ||
                       lower.contains('bilkul sahi') ||
                       para.contains('सही है');
 
-                  bool isIncorrectPoint = lower.contains('is incorrect') ||
+                  bool isIncorrectPoint = lower.contains('incorrect hai') ||
+                      lower.contains('is incorrect') ||
                       lower.contains('is false') ||
                       lower.contains('galat hai') ||
-                      lower.contains('ulta kar deta') ||
                       para.contains('गलत है');
 
                   Color stripBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
@@ -688,7 +436,11 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                           ),
                           child: Text(
                             badgeIcon,
-                            style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 11,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                         const SizedBox(width: 10),
@@ -755,7 +507,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         elevation: 0,
         iconTheme: IconThemeData(color: textColor),
         actions: [
-          // 🔄 1-CLICK CLEAN RESTART BUTTON
           IconButton(
             icon: const Icon(Icons.restart_alt_rounded),
             tooltip: "Restart from Q.1",
@@ -1030,7 +781,1027 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               );
             }),
 
-            // 💡 4. UPGRADED HIGH-CONTRAST DETAILED SOLUTION
+            // 💡 4. DETAILED SOLUTION (PURE STATIC BREAKDOWN)
+            if (_isAnswered) ...[
+              _buildEnhancedExplanation(currentExplanation, currentQ, isDark),
+            ],
+            const SizedBox(height: 70),
+          ],
+        ),
+      ),
+
+      bottomSheet: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+        decoration: BoxDecoration(
+          color: cardBg,
+          boxShadow: [BoxShadow(color: Colors.black.withOpacity(isDark ? 0.3 : 0.05), blurRadius: 5)],
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            ElevatedButton.icon(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: isDark ? const Color(0xFF334155) : Colors.grey.shade200,
+                foregroundColor: isDark ? Colors.white : Colors.black87,
+              ),
+              onPressed: _currentIndex > 0 ? _goToPreviousQuestion : null,
+              icon: const Icon(Icons.arrow_back_ios_rounded, size: 14),
+              label: const Text('Previous'),
+            ),
+            ElevatedButton.icon(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF2563EB),
+                foregroundColor: Colors.white,
+              ),
+              onPressed: _goToNextQuestion,
+              label: Text(_currentIndex == widget.questions.length - 1 ? 'Finish 🏁' : 'Next ➔'),
+              icon: const Icon(Icons.arrow_forward_ios_rounded, size: 14),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// 💡 COMMUNITY TRICK / DATA SUBMISSION WIDGET (Direct to Telegram)
+class RevisionTrickSubmitBox extends StatefulWidget {
+  final String testTitle;
+  final int qIndex;
+  final String questionSnippet;
+
+  const RevisionTrickSubmitBox({
+    super.key,
+    required this.testTitle,
+    required this.qIndex,
+    required this.questionSnippet,
+  });
+
+  @override
+  State<RevisionTrickSubmitBox> createState() => _RevisionTrickSubmitBoxState();
+}
+
+class _RevisionTrickSubmitBoxState extends State<RevisionTrickSubmitBox> {
+  final TextEditingController _trickController = TextEditingController();
+  bool _isSubmitting = false;
+  bool _isSubmitted = false;
+  bool _isOpen = false;
+
+  static const String _botToken = "1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo";
+  static const String _chatId = "785009742";
+
+  Future<void> _submitTrickToTelegram() async {
+    final String trickText = _trickController.text.trim();
+    if (trickText.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('⚠️ Please write your trick or data first!')),
+      );
+      return;
+    }
+
+    setState(() => _isSubmitting = true);
+
+    final String cleanSnippet = widget.questionSnippet.length > 70
+        ? "${widget.questionSnippet.substring(0, 70)}..."
+        : widget.questionSnippet;
+
+    final String telegramMsg = """
+💡 *NEW TRICK / DATA SUBMITTED!*
+━━━━━━━━━━━━━━━━━━━━━
+📁 *Chapter:* ${widget.testTitle}
+❓ *Q#: * Q${widget.qIndex + 1}
+📝 *Snippet:* $cleanSnippet
+━━━━━━━━━━━━━━━━━━━━━
+✨ *User Trick/Logic:*
+$trickText
+""";
+
+    try {
+      final res = await http.post(
+        Uri.parse("https://api.telegram.org/bot$_botToken/sendMessage"),
+        headers: {"Content-Type": "application/json"},
+        body: jsonEncode({
+          "chat_id": _chatId,
+          "text": telegramMsg,
+          "parse_mode": "Markdown",
+        }),
+      );
+
+      if (res.statusCode == 200 && mounted) {
+        setState(() {
+          _isSubmitting = false;
+          _isSubmitted = true;
+        });
+      } else {
+        if (mounted) setState(() => _isSubmitting = false);
+      }
+    } catch (_) {
+      if (mounted) setState(() => _isSubmitting = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final bool isDark = Theme.of(context).brightness == Brightness.dark;
+
+    if (_isSubmitted) {
+      return Container(
+        margin: const EdgeInsets.only(top: 10),
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4),
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(color: isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0)),
+        ),
+        child: Row(
+          children: [
+            const Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 18),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Text(
+                '✅ Thank you! Trick/Data Telegram par bhej diya gaya hai.',
+                style: TextStyle(
+                  color: isDark ? const Color(0xFF86EFAC) : const Color(0xFF16A34A),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 11.5,
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return Container(
+      margin: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          InkWell(
+            onTap: () => setState(() => _isOpen = !_isOpen),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    const Text('💡 ', style: TextStyle(fontSize: 13)),
+                    Text(
+                      'Got a short-trick or better logic?',
+                      style: TextStyle(
+                        fontSize: 11.5,
+                        fontWeight: FontWeight.bold,
+                        color: isDark ? const Color(0xFF38BDF8) : const Color(0xFF0284C7),
+                      ),
+                    ),
+                  ],
+                ),
+                Text(
+                  _isOpen ? 'Close ▲' : 'Share ➔',
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.bold,
+                    color: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          if (_isOpen) ...[
+            const SizedBox(height: 8),
+            TextField(
+              controller: _trickController,
+              maxLines: 2,
+              style: TextStyle(fontSize: 12, color: isDark ? Colors.white : Colors.black87),
+              decoration: InputDecoration(
+                hintText: 'Apni trick, mnemonic code ya logic yahan likhein...',
+                hintStyle: TextStyle(fontSize: 11, color: isDark ? Colors.white38 : Colors.grey),
+                isDense: true,
+                filled: true,
+                fillColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide(color: isDark ? const Color(0xFF334155) : Colors.grey.shade300),
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Align(
+              alignment: Alignment.centerRight,
+              child: SizedBox(
+                height: 28,
+                child: ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF24A1DE),
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                  ),
+                  onPressed: _isSubmitting ? null : _submitTrickToTelegram,
+                  icon: _isSubmitting
+                      ? const SizedBox(width: 12, height: 12, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+                      : const Icon(Icons.send_rounded, size: 12),
+                  label: Text(
+                    _isSubmitting ? 'Sending...' : 'Send to Telegram',
+                    style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+}import 'dart:async';
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
+import '../models/question_model.dart';
+import '../services/user_stats_service.dart';
+import '../widgets/math_text.dart';
+
+class RevisionPracticeScreen extends StatefulWidget {
+  final String testTitle;
+  final List<Question> questions;
+  final int initialIndex;
+  final String? storageKey;
+
+  const RevisionPracticeScreen({
+    super.key,
+    required this.testTitle,
+    required this.questions,
+    this.initialIndex = 0,
+    this.storageKey,
+  });
+
+  @override
+  State<RevisionPracticeScreen> createState() => _RevisionPracticeScreenState();
+}
+
+class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
+  late int _currentIndex;
+  int? _selectedOptionIndex;
+  bool _isAnswered = false;
+  bool _isHindi = false;
+  bool _isBookmarked = false;
+
+  Timer? _timer;
+  int _timeLeft = 30; // ⏱️ 30 Seconds Timer
+
+  @override
+  void initState() {
+    super.initState();
+    _currentIndex = widget.initialIndex;
+    _startTimer();
+    _checkBookmarkStatus();
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  // 💾 SAVE PROGRESS TO DISK
+  void _saveCurrentProgress(int index) async {
+    if (widget.storageKey == null) return;
+    final prefs = await SharedPreferences.getInstance();
+    if (index >= widget.questions.length - 1) {
+      await prefs.remove(widget.storageKey!); // Chapter complete -> Reset
+    } else {
+      await prefs.setInt(widget.storageKey!, index);
+    }
+  }
+
+  // 🔄 1-CLICK CLEAN RESTART CHAPTER TO Q.1
+  void _restartChapter() {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: const Row(
+          children: [
+            Text('🔄 ', style: TextStyle(fontSize: 18)),
+            Text('Restart Chapter?', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+          ],
+        ),
+        content: const Text(
+          'Kya aap is chapter ko wapas Question 1 se shuru karna chahte hain?',
+          style: TextStyle(fontSize: 13, color: Colors.black87),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF2563EB),
+              foregroundColor: Colors.white,
+            ),
+            onPressed: () async {
+              Navigator.pop(ctx);
+              
+              if (widget.storageKey != null) {
+                final prefs = await SharedPreferences.getInstance();
+                await prefs.remove(widget.storageKey!);
+              }
+
+              setState(() {
+                _currentIndex = 0;
+                _selectedOptionIndex = null;
+                _isAnswered = false;
+              });
+              
+              _startTimer();
+              _checkBookmarkStatus();
+            },
+            child: const Text('Restart (Q.1) 🚀'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // 📌 Check if current question is saved in Bookmarks
+  void _checkBookmarkStatus() async {
+    final savedList = await UserStatsService.getSavedQuestions();
+    final currentQ = widget.questions[_currentIndex];
+    String currentText = currentQ.getText(_isHindi);
+
+    bool exists = savedList.any((item) {
+      String qText = item['qe'] ?? item['qh'] ?? '';
+      return qText == currentText || qText == currentQ.qe;
+    });
+
+    if (mounted) {
+      setState(() => _isBookmarked = exists);
+    }
+  }
+
+  // 📌 Toggle Bookmark Action
+  void _toggleBookmarkQuestion() async {
+    final currentQ = widget.questions[_currentIndex];
+    Map<String, dynamic> qJson = {
+      'qe': currentQ.qe,
+      'qh': currentQ.qh,
+      'se': currentQ.se,
+      'sh': currentQ.sh,
+      'oe': currentQ.oe,
+      'oh': currentQ.oh,
+      'options': currentQ.getOptions(_isHindi),
+      'answerIndex': currentQ.answerIndex,
+      'explanation': currentQ.getExplanation(_isHindi),
+      'ee': currentQ.ee,
+      'eh': currentQ.eh,
+    };
+
+    bool saved = await UserStatsService.toggleBookmark(qJson);
+
+    if (mounted) {
+      setState(() => _isBookmarked = saved);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(saved ? '📌 Question Saved to Bookmarks!' : '🗑️ Removed from Bookmarks'),
+          duration: const Duration(seconds: 1),
+        ),
+      );
+    }
+  }
+
+  void _startTimer() {
+    _timer?.cancel();
+    setState(() {
+      _timeLeft = 30; // ⏱️ Reset to 30 Seconds
+      _isAnswered = false;
+      _selectedOptionIndex = null;
+    });
+
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (_timeLeft > 0) {
+        setState(() => _timeLeft--);
+      } else {
+        _timer?.cancel();
+        setState(() {
+          _isAnswered = true;
+        });
+
+        final currentQ = widget.questions[_currentIndex];
+        UserStatsService.recordQuestionAttempt(
+          isCorrect: false,
+          chapterName: widget.testTitle,
+          chapterPath: '',
+          wrongQuestionJson: {
+            'qe': currentQ.qe,
+            'qh': currentQ.qh,
+            'se': currentQ.se,
+            'sh': currentQ.sh,
+            'oe': currentQ.oe,
+            'oh': currentQ.oh,
+            'options': currentQ.getOptions(_isHindi),
+            'answerIndex': currentQ.answerIndex,
+            'explanation': currentQ.getExplanation(_isHindi),
+            'ee': currentQ.ee,
+            'eh': currentQ.eh,
+          },
+        );
+      }
+    });
+  }
+
+  void _onOptionTap(int index) {
+    if (_isAnswered) return;
+    _timer?.cancel();
+
+    final currentQ = widget.questions[_currentIndex];
+    final bool isCorrect = index == currentQ.answerIndex;
+
+    setState(() {
+      _selectedOptionIndex = index;
+      _isAnswered = true;
+    });
+
+    UserStatsService.recordQuestionAttempt(
+      isCorrect: isCorrect,
+      chapterName: widget.testTitle,
+      chapterPath: '',
+      wrongQuestionJson: isCorrect
+          ? null
+          : {
+              'qe': currentQ.qe,
+              'qh': currentQ.qh,
+              'se': currentQ.se,
+              'sh': currentQ.sh,
+              'oe': currentQ.oe,
+              'oh': currentQ.oh,
+              'options': currentQ.getOptions(_isHindi),
+              'answerIndex': currentQ.answerIndex,
+              'explanation': currentQ.getExplanation(_isHindi),
+              'ee': currentQ.ee,
+              'eh': currentQ.eh,
+            },
+    );
+  }
+
+  void _goToNextQuestion() {
+    if (_currentIndex < widget.questions.length - 1) {
+      setState(() {
+        _currentIndex++;
+      });
+      _startTimer();
+      _checkBookmarkStatus();
+      _saveCurrentProgress(_currentIndex);
+    } else {
+      _timer?.cancel();
+      _showCompletionDialog();
+    }
+  }
+
+  void _goToPreviousQuestion() {
+    if (_currentIndex > 0) {
+      setState(() {
+        _currentIndex--;
+      });
+      _startTimer();
+      _checkBookmarkStatus();
+      _saveCurrentProgress(_currentIndex);
+    }
+  }
+
+  void _showCompletionDialog() {
+    final bool isDark = Theme.of(context).brightness == Brightness.dark;
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Text(
+          '🎉 Revision Complete!',
+          style: TextStyle(color: isDark ? Colors.white : const Color(0xFF0F172A), fontWeight: FontWeight.bold),
+        ),
+        content: Text(
+          'Aapne "${widget.testTitle}" ke saare ${widget.questions.length} questions revise kar liye hain.',
+          style: TextStyle(color: isDark ? Colors.grey.shade300 : const Color(0xFF334155)),
+        ),
+        actions: [
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF2563EB),
+              foregroundColor: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pop(ctx);
+              Navigator.pop(context);
+            },
+            child: const Text('Done & Go Back'),
+          )
+        ],
+      ),
+    );
+  }
+
+  // ✨ SMART MULTI-POINT SPLITTER & COLOR-CODED EXPLANATION BUILDER (NO ASK AI)
+  Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
+    List<String> rawLines = rawExplanation
+        .replaceAll(r'\n', '\n')
+        .split('\n')
+        .map((p) => p.trim())
+        .where((p) => p.isNotEmpty)
+        .toList();
+
+    List<String> distinctPoints = [];
+
+    for (String line in rawLines) {
+      if (line.contains('•') && line.indexOf('•') != line.lastIndexOf('•')) {
+        List<String> subParts = line
+            .split(RegExp(r'(?=•)'))
+            .map((s) => s.trim())
+            .where((s) => s.isNotEmpty)
+            .toList();
+        distinctPoints.addAll(subParts);
+      } else {
+        distinctPoints.add(line);
+      }
+    }
+
+    if (distinctPoints.length <= 1 && rawExplanation.contains('Option')) {
+      distinctPoints = rawExplanation
+          .split(RegExp(r'(?=•|\bOption\s+[A-D0-9]|\bStatement\s+[A-D0-9]|\([A-D0-9]\)|📌)'))
+          .map((s) => s.trim())
+          .where((s) => s.isNotEmpty)
+          .toList();
+    }
+
+    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final Color cardBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+    final Color headerBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
+    final Color headerText = isDark ? Colors.white : const Color(0xFF0F172A);
+
+    return Container(
+      width: double.infinity,
+      margin: const EdgeInsets.only(top: 14),
+      decoration: BoxDecoration(
+        color: cardBg,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: cardBorder, width: 1.2),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(isDark ? 0.3 : 0.04),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          )
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // 🏆 1. HEADER STRIP (Pure Solution Title)
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
+            decoration: BoxDecoration(
+              color: headerBg,
+              borderRadius: const BorderRadius.vertical(top: Radius.circular(13)),
+              border: Border(bottom: BorderSide(color: cardBorder)),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                    color: isDark ? const Color(0xFF78350F) : const Color(0xFFFEF3C7),
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: const Text('💡', style: TextStyle(fontSize: 14)),
+                ),
+                const SizedBox(width: 8),
+                Text(
+                  'Detailed Solution',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: headerText,
+                    fontSize: 13.5,
+                    letterSpacing: 0.2,
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          // 📖 2. SMART COLOR-CODED POINT CARDS
+          Padding(
+            padding: const EdgeInsets.all(14.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ...distinctPoints.map((para) {
+                  final String lower = para.toLowerCase();
+
+                  bool isCorrectPoint = lower.contains('correct hai') ||
+                      lower.contains('is correct') ||
+                      lower.contains('sahi hai') ||
+                      lower.contains('bilkul sahi') ||
+                      para.contains('सही है');
+
+                  bool isIncorrectPoint = lower.contains('incorrect hai') ||
+                      lower.contains('is incorrect') ||
+                      lower.contains('is false') ||
+                      lower.contains('galat hai') ||
+                      para.contains('गलत है');
+
+                  Color stripBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
+                  Color stripBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+                  Color badgeBg = const Color(0xFF64748B);
+                  String badgeIcon = '📌';
+
+                  if (isCorrectPoint) {
+                    stripBg = isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4);
+                    stripBorder = isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0);
+                    badgeBg = const Color(0xFF16A34A);
+                    badgeIcon = '✓';
+                  } else if (isIncorrectPoint) {
+                    stripBg = isDark ? const Color(0xFF450A0A) : const Color(0xFFFEF2F2);
+                    stripBorder = isDark ? const Color(0xFF991B1B) : const Color(0xFFFECDD3);
+                    badgeBg = const Color(0xFFDC2626);
+                    badgeIcon = '✕';
+                  }
+
+                  return Container(
+                    width: double.infinity,
+                    margin: const EdgeInsets.only(bottom: 9.0),
+                    padding: const EdgeInsets.all(12.0),
+                    decoration: BoxDecoration(
+                      color: stripBg,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: stripBorder, width: 1),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 22,
+                          height: 22,
+                          margin: const EdgeInsets.only(top: 2),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: badgeBg,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Text(
+                            badgeIcon,
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 11,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: MathFormattedText(
+                            text: para,
+                            textStyle: TextStyle(
+                              fontSize: 13,
+                              color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF1E293B),
+                              height: 1.45,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                }).toList(),
+
+                // 💡 3. COMMUNITY SHORT-TRICK & DATA SUBMISSION (Telegram Bot)
+                RevisionTrickSubmitBox(
+                  testTitle: widget.testTitle,
+                  qIndex: _currentIndex,
+                  questionSnippet: currentQ.getText(_isHindi),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final bool isDark = Theme.of(context).brightness == Brightness.dark;
+
+    final Color bgColor = isDark ? const Color(0xFF0B0F19) : const Color(0xFFF8FAFC);
+    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final Color textColor = isDark ? Colors.white : const Color(0xFF0F172A);
+    final Color subTextColor = isDark ? const Color(0xFF94A3B8) : Colors.grey.shade600;
+    final Color stmtBg = isDark ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC);
+    final Color stmtBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+    final Color dividerColor = isDark ? const Color(0xFF334155) : Colors.grey.shade300;
+
+    final currentQ = widget.questions[_currentIndex];
+    final List<String>? statements = _isHindi ? currentQ.sh : currentQ.se;
+    final List<String> currentOptions = currentQ.getOptions(_isHindi);
+    final String currentExplanation = currentQ.getExplanation(_isHindi);
+
+    return Scaffold(
+      backgroundColor: bgColor,
+      appBar: AppBar(
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(widget.testTitle, style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.bold, color: textColor)),
+            Text(
+              "Question ${_currentIndex + 1} / ${widget.questions.length}",
+              style: TextStyle(fontSize: 10.5, color: subTextColor),
+            ),
+          ],
+        ),
+        backgroundColor: cardBg,
+        elevation: 0,
+        iconTheme: IconThemeData(color: textColor),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.restart_alt_rounded),
+            tooltip: "Restart from Q.1",
+            color: isDark ? Colors.grey.shade300 : const Color(0xFF475569),
+            onPressed: _restartChapter,
+          ),
+          IconButton(
+            icon: Icon(
+              _isBookmarked ? Icons.bookmark : Icons.bookmark_outline,
+              color: _isBookmarked ? const Color(0xFF2563EB) : (isDark ? Colors.grey.shade400 : Colors.grey),
+            ),
+            onPressed: _toggleBookmarkQuestion,
+            tooltip: "Bookmark Question",
+          ),
+          IconButton(
+            icon: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+              decoration: BoxDecoration(
+                border: Border.all(color: const Color(0xFF2563EB)),
+                borderRadius: BorderRadius.circular(6),
+              ),
+              child: Text(
+                _isHindi ? 'हिंदी' : 'ENG',
+                style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+              ),
+            ),
+            onPressed: () => setState(() => _isHindi = !_isHindi),
+          ),
+          Container(
+            margin: const EdgeInsets.only(right: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+            decoration: BoxDecoration(
+              color: _timeLeft <= 5 
+                  ? (isDark ? const Color(0xFF7F1D1D) : Colors.red.shade100)
+                  : (isDark ? const Color(0xFF1E293B) : const Color(0xFFEFF6FF)),
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: _timeLeft <= 5 ? Colors.red : const Color(0xFF2563EB)),
+            ),
+            child: Row(
+              children: [
+                Icon(Icons.timer_outlined, size: 15, color: _timeLeft <= 5 ? Colors.red : const Color(0xFF2563EB)),
+                const SizedBox(width: 4),
+                Text(
+                  '${_timeLeft}s',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                    color: _timeLeft <= 5 ? Colors.red : const Color(0xFF2563EB),
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Question ${_currentIndex + 1} / ${widget.questions.length}',
+                  style: TextStyle(fontWeight: FontWeight.bold, color: subTextColor, fontSize: 13),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                  decoration: BoxDecoration(
+                    color: isDark ? const Color(0xFF1E1B4B) : const Color(0xFFE0E7FF),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Text(
+                    '⚡ REVISION MODE',
+                    style: TextStyle(
+                      fontSize: 9.5,
+                      fontWeight: FontWeight.bold,
+                      color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4F46E5),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(height: 8),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(4),
+              child: LinearProgressIndicator(
+                value: (_currentIndex + 1) / widget.questions.length,
+                minHeight: 5,
+                backgroundColor: isDark ? const Color(0xFF334155) : Colors.grey.shade200,
+                color: const Color(0xFF2563EB),
+              ),
+            ),
+            const SizedBox(height: 18),
+
+            // 🎯 1. MAIN QUESTION CARD
+            Card(
+              elevation: 1,
+              color: cardBg,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: MathFormattedText(
+                  text: currentQ.getText(_isHindi),
+                  textStyle: TextStyle(
+                    fontSize: 15.5,
+                    fontWeight: FontWeight.w600,
+                    height: 1.4,
+                    color: textColor,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
+
+            // 📋 2. DEDICATED SEPARATE STATEMENT CARDS (Numbered Badges)
+            if (statements != null && statements.isNotEmpty) ...[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: statements.asMap().entries.map((entry) {
+                  int index = entry.key + 1;
+                  String stmtText = entry.value.trim().replaceFirst(RegExp(r'^([\(\[]?\d+[\)\]\.]?|•|-)\s*'), '');
+
+                  return Container(
+                    width: double.infinity,
+                    margin: const EdgeInsets.only(bottom: 9.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 12.0),
+                    decoration: BoxDecoration(
+                      color: stmtBg,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: stmtBorder, width: 1.1),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
+                          decoration: BoxDecoration(
+                            color: isDark ? const Color(0xFF334155) : const Color(0xFF1E293B),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: Text(
+                            "($index)",
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 11,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: MathFormattedText(
+                            text: stmtText,
+                            textStyle: TextStyle(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.w500,
+                              color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF0F172A),
+                              height: 1.5,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                }).toList(),
+              ),
+
+              // 🌟 VISUAL DIVIDER & SEPARATION
+              Container(
+                margin: const EdgeInsets.only(top: 14, bottom: 16),
+                child: Row(
+                  children: [
+                    Expanded(child: Divider(color: dividerColor, thickness: 1)),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Text(
+                        _isHindi ? 'विकल्प चुनें' : 'SELECT OPTION',
+                        style: TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.w700,
+                          color: subTextColor,
+                          letterSpacing: 0.8,
+                        ),
+                      ),
+                    ),
+                    Expanded(child: Divider(color: dividerColor, thickness: 1)),
+                  ],
+                ),
+              ),
+            ] else ...[
+              const SizedBox(height: 14),
+            ],
+
+            // 🔘 3. BILINGUAL OPTIONS LIST
+            ...List.generate(currentOptions.length, (index) {
+              final optionText = currentOptions[index];
+              final isCorrect = index == currentQ.answerIndex;
+              final isSelected = index == _selectedOptionIndex;
+
+              Color optBorderColor = isDark ? const Color(0xFF334155) : Colors.grey.shade300;
+              Color optBgColor = cardBg;
+              Widget icon = const SizedBox.shrink();
+
+              if (_isAnswered) {
+                if (isCorrect) {
+                  optBorderColor = Colors.green;
+                  optBgColor = isDark ? const Color(0xFF052E16) : Colors.green.shade50;
+                  icon = const Icon(Icons.check_circle_rounded, color: Colors.green, size: 20);
+                } else if (isSelected) {
+                  optBorderColor = Colors.red;
+                  optBgColor = isDark ? const Color(0xFF450A0A) : Colors.red.shade50;
+                  icon = const Icon(Icons.cancel_rounded, color: Colors.red, size: 20);
+                }
+              }
+
+              return Container(
+                margin: const EdgeInsets.only(bottom: 10),
+                child: InkWell(
+                  onTap: () => _onOptionTap(index),
+                  borderRadius: BorderRadius.circular(10),
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 200),
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                    decoration: BoxDecoration(
+                      color: optBgColor,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: optBorderColor, width: _isAnswered && (isCorrect || isSelected) ? 2 : 1),
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 26,
+                          height: 26,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: _isAnswered && isCorrect
+                                ? Colors.green
+                                : (_isAnswered && isSelected 
+                                    ? Colors.red 
+                                    : (isDark ? const Color(0xFF334155) : Colors.grey.shade100)),
+                          ),
+                          child: Text(
+                            String.fromCharCode(65 + index),
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
+                              color: _isAnswered && (isCorrect || isSelected) 
+                                  ? Colors.white 
+                                  : (isDark ? Colors.white : Colors.black87),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: MathFormattedText(
+                            text: optionText,
+                            textStyle: TextStyle(
+                              fontSize: 13.5,
+                              fontWeight: FontWeight.w500,
+                              color: isDark ? Colors.white : const Color(0xFF0F172A),
+                            ),
+                          ),
+                        ),
+                        icon,
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            }),
+
+            // 💡 4. DETAILED SOLUTION (PURE STATIC BREAKDOWN)
             if (_isAnswered) ...[
               _buildEnhancedExplanation(currentExplanation, currentQ, isDark),
             ],
