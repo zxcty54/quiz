@@ -22,42 +22,65 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
     fetchLatestJobs();
   }
 
-  // 1. FETCH LIVE JOBS FROM STATICALLY CDN
+  // 1. FAST ZERO-CACHE MULTI-MIRROR LIVE FETCHER
   Future<void> fetchLatestJobs() async {
     final int timestamp = DateTime.now().millisecondsSinceEpoch;
-    final String url =
-        "https://cdn.statically.io/gh/zxcty54/quiz/main/sarkarijob.json?t=$timestamp";
 
-    try {
-      final res = await http.get(
-        Uri.parse(url),
-        headers: {
-          'Cache-Control': 'no-cache, no-store, must-revalidate',
-          'Pragma': 'no-cache',
-          'Expires': '0',
-          'User-Agent': 'Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36',
-        },
-      ).timeout(const Duration(seconds: 6));
+    // 🚀 Cache-Proof Mirrored Endpoints
+    final List<String> endpoints = [
+      "https://raw.githubusercontent.com/zxcty54/quiz/main/sarkarijob.json?t=$timestamp",
+      "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/sarkarijob.json?t=$timestamp",
+      "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/sarkarijob.json?t=$timestamp",
+      "https://raw.githack.com/zxcty54/quiz/main/sarkarijob.json",
+    ];
 
-      if (res.statusCode == 200) {
-        final data = jsonDecode(utf8.decode(res.bodyBytes));
-        if (mounted) {
-          setState(() {
-            if (data is Map && data.containsKey('latest_jobs')) {
-              _allJobs = data['latest_jobs'] as List;
-            } else if (data is List) {
-              _allJobs = data;
-            } else {
-              _allJobs = [];
+    for (String url in endpoints) {
+      try {
+        final res = await http.get(
+          Uri.parse(url),
+          headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+            'Expires': '0',
+          },
+        ).timeout(const Duration(seconds: 4));
+
+        if (res.statusCode == 200) {
+          String rawBody = utf8.decode(res.bodyBytes).trim();
+
+          // 🧹 Strip UTF-8 BOM Marker
+          if (rawBody.startsWith('\uFEFF')) {
+            rawBody = rawBody.substring(1).trim();
+          }
+
+          // 🧹 Strip Markdown wrapper if present
+          rawBody = rawBody.replaceAll('```json', '').replaceAll('```', '').trim();
+
+          if (!rawBody.startsWith('<') && !rawBody.startsWith('<!DOCTYPE')) {
+            final data = jsonDecode(rawBody);
+            if (mounted) {
+              setState(() {
+                if (data is Map && data.containsKey('latest_jobs')) {
+                  _allJobs = data['latest_jobs'] as List;
+                } else if (data is List) {
+                  _allJobs = data;
+                } else {
+                  _allJobs = [];
+                }
+                _isLoading = false;
+              });
             }
-            _isLoading = false;
-          });
+            return; // 🎯 Success -> Loop break
+          }
         }
-      } else {
-        if (mounted) setState(() => _isLoading = false);
+      } catch (_) {
+        continue;
       }
-    } catch (_) {
-      if (mounted) setState(() => _isLoading = false);
+    }
+
+    if (mounted) {
+      setState(() => _isLoading = false);
     }
   }
 
@@ -91,7 +114,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
     }).toList();
   }
 
-  // 3. LAUNCH EXTERNAL URL (FOR APPLY BUTTON)
+  // 3. LAUNCH EXTERNAL URL
   Future<void> _openLink(String link) async {
     if (link.isEmpty) return;
     final Uri uri = Uri.parse(link);
@@ -197,8 +220,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
 
     final cardBg = widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC);
     final textColor = widget.isDarkMode ? Colors.white : const Color(0xFF0F172A);
-    
-    // SIRF TOP 2 JOBS FOR HOME SCREEN
     final displayedJobs = _filteredJobs.take(2).toList();
 
     return Container(
@@ -215,7 +236,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 📢 HEADER WITH "Sarkari Job Alerts"
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -260,7 +280,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
           const SizedBox(height: 12),
 
-          // CATEGORY CHIPS
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -275,7 +294,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
           ),
           const SizedBox(height: 12),
 
-          // TOP 2 JOBS LIST (NO VERTICAL SCROLL CONFLICT)
           displayedJobs.isEmpty
               ? const Padding(
                   padding: EdgeInsets.symmetric(vertical: 20),
@@ -298,7 +316,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
 
           const SizedBox(height: 8),
 
-          // 📲 VIEW ALL JOBS IN-APP SCREEN TRIGGER
           InkWell(
             onTap: _showAllJobsBottomSheet,
             borderRadius: BorderRadius.circular(8),
