@@ -88,7 +88,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             onPressed: () async {
               Navigator.pop(ctx);
-              
+
               if (widget.storageKey != null) {
                 final prefs = await SharedPreferences.getInstance();
                 await prefs.remove(widget.storageKey!);
@@ -99,7 +99,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                 _selectedOptionIndex = null;
                 _isAnswered = false;
               });
-              
+
               _startTimer();
               _checkBookmarkStatus();
             },
@@ -289,7 +289,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   }
 
   // 🛡️ Helper method to identify option/statement points
-  bool _isOptionPoint(String line) {
+  bool _isOptionOrStatementPoint(String line) {
     String clean = line.trim().toLowerCase();
     return clean.startsWith('• option') ||
         clean.startsWith('- option') ||
@@ -297,26 +297,26 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         clean.startsWith('option b') ||
         clean.startsWith('option c') ||
         clean.startsWith('option d') ||
-        clean.startsWith('option 0') ||
-        clean.startsWith('option 1') ||
-        clean.startsWith('option 2') ||
-        clean.startsWith('option 3') ||
+        clean.startsWith('• statement') ||
+        clean.startsWith('- statement') ||
+        clean.startsWith('statement 1') ||
+        clean.startsWith('statement 2') ||
+        clean.startsWith('statement 3') ||
+        clean.startsWith('statement 4') ||
         clean.startsWith('• 1.') ||
         clean.startsWith('• 2.') ||
         clean.startsWith('• 3.') ||
         clean.startsWith('• 4.');
   }
 
-// ✨ COMPLETE UNIFIED GREEN BOX & COMPREHENSIVE LATEX SANITIZER
+  // ✨ COMPLETE UNIFIED GREEN BOX & COMPREHENSIVE LATEX SANITIZER
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
     // 1️⃣ Deep Clean LaTeX Delimiters, Subscripts & Nested Texts
     String cleaned = rawExplanation
         .replaceAll(r'\n', '\n')
         .replaceAll(r'\\text', r'\text')
         .replaceAll(r'\\frac', r'\frac')
-        // Fix split dollars like "$ \text{SO}_2$" or "$ \text{...}"
         .replaceAllMapped(RegExp(r'\$\s*\\text\{([^}]+)\}([^$]*)\$'), (m) => r'$\text{' + (m.group(1) ?? '') + r'}' + (m.group(2) ?? '') + r'$')
-        // Clean remaining \text{...} units (e.g. \text{ K} -> \text{K} or plain text)
         .replaceAll(r'\text{ K}', ' K')
         .replaceAll(r'\text{K}', ' K')
         .replaceAll(r'\text{ J}', ' J')
@@ -324,7 +324,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         .replaceAll(r'\text{°C}', '°C')
         .replaceAllMapped(RegExp(r'\$\\text\{([^}]+)\}\$'), (m) => m.group(1) ?? '')
         .replaceAllMapped(RegExp(r'\\text\{([^}]+)\}'), (m) => m.group(1) ?? '')
-        // Clean 0-indexed options to standard alphabet options
         .replaceAll(RegExp(r'\bOption 0\b', caseSensitive: false), 'Option A')
         .replaceAll(RegExp(r'\bOption 1\b', caseSensitive: false), 'Option B')
         .replaceAll(RegExp(r'\bOption 2\b', caseSensitive: false), 'Option C')
@@ -343,7 +342,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     List<String> distinctBlocks = [];
     String currentBlock = "";
 
-    // 2️⃣ Group into blocks
+    // 2️⃣ Group into structured blocks
     for (String line in rawLines) {
       bool isNewBlockHeader = line.startsWith('•') ||
           line.startsWith('-') ||
@@ -351,6 +350,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
           line.toLowerCase().startsWith('statement') ||
           line.startsWith('📌') ||
           line.toLowerCase().startsWith('key takeaway') ||
+          line.toLowerCase().startsWith('conclusion') ||
           RegExp(r'^\d+[\.\)]').hasMatch(line);
 
       if (isNewBlockHeader && currentBlock.isNotEmpty) {
@@ -377,7 +377,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               lower.contains('galat') ||
               lower.contains('false') ||
               lower.contains('trap assign')) &&
-          _isOptionPoint(block);
+          _isOptionOrStatementPoint(block);
 
       bool isTakeaway = lower.startsWith('key takeaway') ||
           lower.startsWith('summary') ||
@@ -497,7 +497,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                       ),
                     )),
 
-                // 🔽 Collapsible Option Traps
+                // 🔽 Collapsible Option Traps (Incorrect Statements / Options)
                 if (trapOptionBlocks.isNotEmpty) ...[
                   const SizedBox(height: 6),
                   Theme(
@@ -575,6 +575,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       ),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     final bool isDark = Theme.of(context).brightness == Brightness.dark;
@@ -641,7 +642,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             margin: const EdgeInsets.only(right: 12),
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: BoxDecoration(
-              color: _timeLeft <= 5 
+              color: _timeLeft <= 5
                   ? (isDark ? const Color(0xFF7F1D1D) : Colors.red.shade100)
                   : (isDark ? const Color(0xFF1E293B) : const Color(0xFFEFF6FF)),
               borderRadius: BorderRadius.circular(20),
@@ -725,7 +726,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 10),
 
-            // 📋 2. DEDICATED SEPARATE STATEMENT CARDS (Numbered Badges)
+            // 📋 2. DEDICATED SEPARATE STATEMENT CARDS
             if (statements != null && statements.isNotEmpty) ...[
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -849,8 +850,8 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                             shape: BoxShape.circle,
                             color: _isAnswered && isCorrect
                                 ? Colors.green
-                                : (_isAnswered && isSelected 
-                                    ? Colors.red 
+                                : (_isAnswered && isSelected
+                                    ? Colors.red
                                     : (isDark ? const Color(0xFF334155) : Colors.grey.shade100)),
                           ),
                           child: Text(
@@ -858,8 +859,8 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 12,
-                              color: _isAnswered && (isCorrect || isSelected) 
-                                  ? Colors.white 
+                              color: _isAnswered && (isCorrect || isSelected)
+                                  ? Colors.white
                                   : (isDark ? Colors.white : Colors.black87),
                             ),
                           ),
