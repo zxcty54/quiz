@@ -371,23 +371,32 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     List<String> takeawayBlocks = [];
 
     for (String block in distinctBlocks) {
-      final String lower = block.toLowerCase();
+      final String lower = block.trim().toLowerCase();
+      // 🎯 Sirf pehli line (Header) check karein, pure paragraph ka content nahi
+      final String firstLine = lower.split('\n').first;
 
-      bool isIncorrectTrap = (lower.contains('incorrect') ||
-              lower.contains('galat') ||
-              lower.contains('false') ||
-              lower.contains('trap assign')) &&
-          _isOptionOrStatementPoint(block);
+      bool isExplicitCorrect = firstLine.contains('is correct') ||
+          firstLine.contains('sahi hai') ||
+          firstLine.contains('bilkul sahi');
 
-      bool isTakeaway = lower.startsWith('key takeaway') ||
-          lower.startsWith('summary') ||
-          block.startsWith('📌');
+      bool isExplicitIncorrect = firstLine.contains('is incorrect') ||
+          firstLine.contains('galat hai') ||
+          firstLine.contains('is false') ||
+          firstLine.contains('trap');
 
-      if (isIncorrectTrap) {
-        trapOptionBlocks.add(block);
-      } else if (isTakeaway) {
+      bool isTakeaway = firstLine.startsWith('key takeaway') ||
+          firstLine.startsWith('summary') ||
+          firstLine.startsWith('📌') ||
+          firstLine.startsWith('exam takeaway') ||
+          firstLine.startsWith('conclusion');
+
+      if (isTakeaway) {
         takeawayBlocks.add(block);
+      } else if (!isExplicitCorrect && isExplicitIncorrect && _isOptionOrStatementPoint(block)) {
+        // 🔴 Sirf wahi options trap mein jayenge jinka header 'is incorrect' hai
+        trapOptionBlocks.add(block);
       } else {
+        // 🟢 Intro background + Option B (Correct) dono Green Box mein aayenge
         primaryCorrectBlocks.add(block);
       }
     }
@@ -726,7 +735,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 10),
 
-            // 📋 2. DEDICATED SEPARATE STATEMENT CARDS
+            // 📋 2. DEDICATED SEPARATE STATEMENT CARDS (Numbered Badges)
             if (statements != null && statements.isNotEmpty) ...[
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
