@@ -2,9 +2,9 @@ name: Auto Monthly Current Affairs MCQ Generator
 
 on:
   schedule:
-    # Daily raat 11:45 PM IST (18:15 UTC) par execute hoga
+    # Daily raat 11:45 PM IST (18:15 UTC) par chalega
     - cron: '15 18 * * *'
-  workflow_dispatch: # Manual trigger from GitHub UI
+  workflow_dispatch: # Manual trigger via GitHub UI
 
 jobs:
   generate-mcqs:
