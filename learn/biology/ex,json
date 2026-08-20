@@ -1537,7 +1537,39 @@
           "text": "180 Litre per day?? Sir agar roz 180 Litre peshab banega tab to insaan 2 ghante me sookh kar khatam ho jayega!"
         }
       ],
-     
+      "navigation": {
+        "next": "card_54_net_filtration_pressure",
+        "button_text": "Discover Net Filtration Pressure (NFP) ➔"
+      }
+    },
+    {
+      "card_id": "card_54_net_filtration_pressure",
+      "card_slug": "card_54_net_filtration_pressure",
+      "type": "chat",
+      "concept_id": "concept_nfp_pressures",
+      "level": 2,
+      "progress": {
+        "current": 54,
+        "total": 100
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Haha, 180 litre me se 99% wapas absorb ho jata hai! Par pehle ye samjho ki filtration ka pressure kaise banta hai. Glomerular Hydrostatic Pressure ($GHP$) lagbhag 60 mmHg hota hai jo blood ko bahar dhakelta hai."
+        },
+        {
+          "speaker": "raju",
+          "text": "Aur koi pressure isko rokne ki koshish nahi karta kya sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Do virodhi pressure hote hain: Blood Colloidal Osmotic Pressure ($BCOP \\approx 32\\text{ mmHg}$) aur Capsular Hydrostatic Pressure ($CHP \\approx 18\\text{ mmHg}$). Net pressure: $\\text{NFP} = GHP - (BCOP + CHP) = 60 - (32 + 18) = 10\\text{ mmHg}$!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab sirf $10\\text{ mmHg}$ ke net effective pressure se din bhar me 180 litre filtrate chhan jata hai!"
+        }
+      ],
       "navigation": {
         "next": "card_55_guess_gfr_volume",
         "button_text": "Test Your Numbers ➔"
