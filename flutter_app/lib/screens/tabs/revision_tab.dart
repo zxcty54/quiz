@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+import '../models/question_model.dart';
+import '../screens/revision_practice_screen.dart';
 
 class RevisionTab extends StatefulWidget {
   final Map<String, dynamic> subjectMapping;
@@ -91,14 +93,13 @@ class _RevisionTabState extends State<RevisionTab> {
         if (res.statusCode == 200) {
           String rawBody = utf8.decode(res.bodyBytes).trim();
 
-          // 🧹 Strip UTF-8 BOM & Markdown if any
           if (rawBody.startsWith('\uFEFF')) {
             rawBody = rawBody.substring(1).trim();
           }
           rawBody = rawBody.replaceAll('```json', '').replaceAll('```', '').trim();
 
           if (rawBody.startsWith('<') || rawBody.startsWith('<!DOCTYPE')) {
-            continue; // Skip HTML responses
+            continue;
           }
 
           final dynamic parsed = jsonDecode(rawBody);
@@ -108,7 +109,6 @@ class _RevisionTabState extends State<RevisionTab> {
               _isLoading = false;
             });
 
-            // 💾 Phone ke permanent disk storage mein save
             final prefs = await SharedPreferences.getInstance();
             await prefs.setString('persistent_subject_mapping_json', jsonEncode(parsed));
             return;
@@ -119,6 +119,93 @@ class _RevisionTabState extends State<RevisionTab> {
       }
     }
     if (mounted) setState(() => _isLoading = false);
+  }
+
+  // 📰 SPECIAL CURRENT AFFAIRS DIRECT LOADER (218 / 89 Questions)
+  Future<void> _openCurrentAffairsSection({
+    required bool isBihar,
+    required String title,
+    String jsonPath = "https://raw.githubusercontent.com/zxcty54/quiz/main/current_affair/august_2026.json",
+  }) async {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (ctx) => const Center(
+        child: Card(
+          child: Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                CircularProgressIndicator(strokeWidth: 2.5),
+                SizedBox(width: 16),
+                Text('Current Affairs लोड हो रहा है...'),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+
+    try {
+      final String fetchUrl = jsonPath.startsWith('http')
+          ? '$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}'
+          : 'https://raw.githubusercontent.com/zxcty54/quiz/main/$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}';
+
+      final res = await http.get(Uri.parse(fetchUrl)).timeout(const Duration(seconds: 10));
+
+      if (res.statusCode == 200) {
+        String body = utf8.decode(res.bodyBytes).trim();
+        if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
+
+        final Map<String, dynamic> data = jsonDecode(body);
+        final List<dynamic> rawList = isBihar
+            ? (data['bihar_questions'] ?? [])
+            : (data['national_questions'] ?? []);
+
+        final List<Question> qs = rawList.map((item) {
+          return Question(
+            qe: item['qe'] ?? '',
+            qh: item['qh'] ?? '',
+            oe: List<String>.from(item['oe'] ?? []),
+            oh: List<String>.from(item['oh'] ?? []),
+            answerIndex: item['a'] ?? 0,
+            ee: item['e'] ?? '',
+            eh: item['e'] ?? '',
+          );
+        }).toList();
+
+        if (mounted) {
+          Navigator.pop(context); // Close loading dialog
+
+          if (qs.isNotEmpty) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => RevisionPracticeScreen(
+                  testTitle: title,
+                  questions: qs,
+                  storageKey: isBihar ? "ca_bihar_aug_2026" : "ca_national_aug_2026",
+                ),
+              ),
+            );
+          } else {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('⚠️ कोई प्रश्न नहीं मिला!')),
+            );
+          }
+        }
+      } else {
+        throw Exception('HTTP ${res.statusCode}');
+      }
+    } catch (e) {
+      if (mounted) {
+        Navigator.pop(context);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('⚠️ लोड करने में त्रुटि: $e')),
+        );
+      }
+    }
   }
 
   @override
@@ -134,7 +221,7 @@ class _RevisionTabState extends State<RevisionTab> {
         physics: const AlwaysScrollableScrollPhysics(),
         padding: const EdgeInsets.all(16),
         children: [
-          // 🛡️ REVISION HUB HERO TRUST BANNER (Option B: 3x Fast Punch)
+          // 🛡️ REVISION HUB HERO TRUST BANNER
           Container(
             width: double.infinity,
             padding: const EdgeInsets.all(16),
@@ -159,7 +246,6 @@ class _RevisionTabState extends State<RevisionTab> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 1. Top Badge Row
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -208,8 +294,6 @@ class _RevisionTabState extends State<RevisionTab> {
                   ],
                 ),
                 const SizedBox(height: 12),
-
-                // 2. Main Punch Headline
                 const Text(
                   '1 Question = Multiple Facts.\nHar Statement Ka Logic.',
                   style: TextStyle(
@@ -220,8 +304,6 @@ class _RevisionTabState extends State<RevisionTab> {
                   ),
                 ),
                 const SizedBox(height: 8),
-
-                // 3. Sub-headline / Descriptive Text
                 const Text(
                   'Sirf sahi answer nahi — galat option ke peeche ka reason samjho aur 3x tezi se revise karo.',
                   style: TextStyle(
@@ -231,8 +313,6 @@ class _RevisionTabState extends State<RevisionTab> {
                   ),
                 ),
                 const SizedBox(height: 12),
-
-                // 4. Quick Micro-Feature Pills Row
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                   decoration: BoxDecoration(
@@ -247,42 +327,21 @@ class _RevisionTabState extends State<RevisionTab> {
                         children: [
                           Icon(Icons.verified_rounded, color: Color(0xFF60A5FA), size: 14),
                           SizedBox(width: 4),
-                          Text(
-                            '100% PYQ Base',
-                            style: TextStyle(
-                              color: Colors.white70,
-                              fontSize: 11,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
+                          Text('100% PYQ Base', style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600)),
                         ],
                       ),
                       Row(
                         children: [
                           Icon(Icons.lightbulb_outline_rounded, color: Color(0xFFFBBF24), size: 14),
                           SizedBox(width: 4),
-                          Text(
-                            'Trap Breakdown',
-                            style: TextStyle(
-                              color: Colors.white70,
-                              fontSize: 11,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
+                          Text('Trap Breakdown', style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600)),
                         ],
                       ),
                       Row(
                         children: [
                           Icon(Icons.timer_outlined, color: Color(0xFF4ADE80), size: 14),
                           SizedBox(width: 4),
-                          Text(
-                            'Fast Revision',
-                            style: TextStyle(
-                              color: Colors.white70,
-                              fontSize: 11,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
+                          Text('Fast Revision', style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600)),
                         ],
                       ),
                     ],
@@ -293,17 +352,12 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
 
           const SizedBox(height: 18),
-          Text(
-            '📚 Chapterwise Revision Hub',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: textColor),
-          ),
+          Text('📚 Chapterwise Revision Hub', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: textColor)),
           const SizedBox(height: 4),
-          Text(
-            'Subject par click karein aur direct chapter button dabakar revision shuru karein',
-            style: TextStyle(color: subTextColor, fontSize: 12),
-          ),
+          Text('Subject par click karein aur direct chapter button dabakar revision shuru karein', style: TextStyle(color: subTextColor, fontSize: 12)),
           const SizedBox(height: 14),
 
+          // 🔬 1. General Science
           _buildExpansionSubjectCategory(
             context: context,
             title: 'General Science',
@@ -319,6 +373,7 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
           const SizedBox(height: 12),
 
+          // 🏛️ 2. GK & Social Science
           _buildExpansionSubjectCategory(
             context: context,
             title: 'GK & Social Science',
@@ -335,18 +390,113 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
           const SizedBox(height: 12),
 
-          _buildExpansionSubjectCategory(
+          // 📰 3. Current Affairs 2026 (With 218 & 89 Direct Buttons)
+          _buildCurrentAffairsCategory(
             context: context,
-            title: 'Current Affairs 2026',
-            badgeText: '⚡ Latest Exam Bulletins',
-            icon: '📰',
-            color: const Color(0xFF7C3AED),
             isDark: isDark,
-            subSections: [
-              {'title': '📰 Monthly Sets & Bihar Special', 'key': 'current_mapping'},
-            ],
           ),
         ],
+      ),
+    );
+  }
+
+  // 📰 Dedicated Card for Current Affairs with Dual Option Chips
+  Widget _buildCurrentAffairsCategory({
+    required BuildContext context,
+    required bool isDark,
+  }) {
+    const Color color = Color(0xFF7C3AED);
+    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final Color subTitleColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF334155);
+
+    return Card(
+      color: cardBg,
+      elevation: 1.5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        side: BorderSide(
+          color: isDark ? color.withOpacity(0.4) : color.withOpacity(0.25),
+          width: 1.2,
+        ),
+      ),
+      child: Theme(
+        data: Theme.of(context).copyWith(
+          dividerColor: Colors.transparent,
+          unselectedWidgetColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+        ),
+        child: ExpansionTile(
+          initiallyExpanded: true,
+          iconColor: color,
+          collapsedIconColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+          leading: const Text('📰', style: TextStyle(fontSize: 22)),
+          title: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text('Current Affairs 2026', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: color)),
+              const SizedBox(height: 2),
+              Text(
+                '⚡ Latest Exam Bulletins',
+                style: TextStyle(
+                  fontSize: 10.5,
+                  color: isDark ? color.withOpacity(0.9) : color.withOpacity(0.8),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
+          childrenPadding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
+          expandedCrossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Divider(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0), height: 16),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 6.0),
+              child: Text(
+                '📅 August 2026 Special Sets',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: subTitleColor),
+              ),
+            ),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                ActionChip(
+                  elevation: 1,
+                  backgroundColor: isDark ? color.withOpacity(0.25) : const Color(0xFFF3E8FF),
+                  side: BorderSide(color: color.withOpacity(0.5)),
+                  label: const Text(
+                    "🌐 National & Global CA (218 Qs)",
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: color),
+                  ),
+                  onPressed: () {
+                    _openCurrentAffairsSection(
+                      isBihar: false,
+                      title: "🌐 National & Global CA (Aug 2026)",
+                    );
+                  },
+                ),
+                ActionChip(
+                  elevation: 1,
+                  backgroundColor: isDark ? const Color(0xFF065F46).withOpacity(0.3) : const Color(0xFFDCFCE7),
+                  side: BorderSide(color: isDark ? const Color(0xFF10B981) : const Color(0xFF059669)),
+                  label: Text(
+                    "🇮🇳 Bihar Special CA (89 Qs)",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      color: isDark ? const Color(0xFF6EE7B7) : const Color(0xFF047857),
+                    ),
+                  ),
+                  onPressed: () {
+                    _openCurrentAffairsSection(
+                      isBihar: true,
+                      title: "🇮🇳 Bihar Special CA (Aug 2026)",
+                    );
+                  },
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
