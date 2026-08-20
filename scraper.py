@@ -29,12 +29,8 @@ MAX_PER_SOURCE = 15
 
 MIN_CONTENT_CHARS = 400
 MIN_CONTENT_WORDS = 200
-MAX_CONTENT_WORDS = 700  # Strictly enforce max 500 words
+MAX_CONTENT_WORDS = 700
 MAX_CONTENT_CHARS = 25000
-
-# DUAL TIME WINDOW CONFIGURATION
-NATIONAL_AGE_HOURS = 24  # National News: Strict 24 Hours
-BIHAR_AGE_HOURS = 48     # Bihar News: 48 Hours (2 Days Coverage)
 
 SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "").strip()
 
@@ -138,7 +134,6 @@ def clean_text(text):
 def clean_title(title):
     title = clean_text(title)
 
-    # NAVIGATION & BOILERPLATE TITLES BLOCKING
     junk_titles = [
         "skip to main content", "skip to content", "home", "about us", 
         "contact us", "feedback", "sitemap", "disclaimer", "privacy policy",
@@ -227,7 +222,7 @@ def remove_common_boilerplate(text):
 
 
 # ============================================================
-# HYPER-FLEXIBLE DATE PARSER ENGINE WITH DUAL TIME WINDOW
+# HYPER-FLEXIBLE DATE PARSER ENGINE
 # ============================================================
 
 DATE_FORMATS = [
@@ -249,7 +244,7 @@ def parse_date(value):
     lower_val = value.lower()
     current_now = now_ist()
 
-    # Relative Time Parser (English & Hindi)
+    # Relative Time Parser
     if any(k in lower_val for k in ["ago", "today", "yesterday", "घंटे पहले", "दिन पहले", "आज", "कल"]):
         if "today" in lower_val or "आज" in lower_val:
             return current_now
@@ -345,22 +340,22 @@ def extract_date_from_soup(soup):
     return None
 
 
-def is_within_rolling_window(parsed_date, max_hours=24):
-    if not parsed_date:
-        return True  # Fallback
+# ============================================================
+# STRICT "TODAY'S DATE ONLY" CHECK
+# ============================================================
 
-    current_time = now_ist()
+def is_strictly_today(parsed_date):
+    """Returns True ONLY IF news date matches today's date in IST"""
+    if not parsed_date:
+        return False
+
     if parsed_date.tzinfo is None:
         parsed_date = parsed_date.replace(tzinfo=IST)
     else:
         parsed_date = parsed_date.astimezone(IST)
 
-    time_difference = current_time - parsed_date
-    hours_diff = time_difference.total_seconds() / 3600.0
-
-    if -2.0 <= hours_diff <= max_hours:
-        return True
-    return False
+    today_date_ist = now_ist().date()
+    return parsed_date.date() == today_date_ist
 
 
 # ============================================================
@@ -614,7 +609,7 @@ def fetch_generic_article_content(url, source=""):
 
 
 # ============================================================
-# ITEM BUILDER WITH DUAL TIME WINDOW VALIDATION
+# ITEM BUILDER WITH STRICT TODAY'S DATE VALIDATION
 # ============================================================
 
 def make_item(source, title, url, date=None, content="", item_type="Scraped", is_bihar=False):
@@ -630,39 +625,30 @@ def make_item(source, title, url, date=None, content="", item_type="Scraped", is
         warn(f"REJECTED CIRCULAR INDEX PAGE | {source} | {clean_title_str[:45]}")
         return None
 
-    # STRICT WORD COUNT CHECK: Discard short 20-30 word snippets
+    # STRICT WORD COUNT CHECK
     words_total = word_count(clean_content_str)
     if words_total < MIN_CONTENT_WORDS:
         warn(f"REJECTED TOO SHORT ({words_total} words < {MIN_CONTENT_WORDS}) | {source} | {clean_title_str[:45]}")
         return None
 
-    # Strictly enforce max words cap
     if words_total > MAX_CONTENT_WORDS:
         clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
         words_total = word_count(clean_content_str)
 
-    parsed_date = date or parse_date(clean_title_str) or now_ist()
-    if parsed_date.tzinfo is None:
-        parsed_date = parsed_date.replace(tzinfo=IST)
-    else:
-        parsed_date = parsed_date.astimezone(IST)
-
-    # Dynamic Rolling Window Filter: Bihar = 48 Hours | National = 24 Hours
-    max_age = BIHAR_AGE_HOURS if is_bihar else NATIONAL_AGE_HOURS
-    if not is_within_rolling_window(parsed_date, max_hours=max_age):
-        debug(
-            f"DATE OUTSIDE WINDOW REJECTED | {source} (Max {max_age}h) | "
-            f"article_time={parsed_date.strftime('%Y-%m-%d %H:%M IST')} | "
-            f"{clean_title_str[:100]}"
-        )
+    parsed_date = date or parse_date(clean_title_str)
+    
+    # 📅 STRICT TODAY'S DATE CHECK
+    if not parsed_date or not is_strictly_today(parsed_date):
+        pub_str = parsed_date.strftime("%d %b %Y") if parsed_date else "No Date Found"
+        debug(f"REJECTED NOT TODAY ({pub_str}) | {source} | {clean_title_str[:45]}")
         return None
 
-    # CONTENT BODY DATE VERIFICATION: Check for stale dates inside text
+    # CONTENT BODY DATE VERIFICATION
     dates_in_content = re.findall(r'\b\d{2}/\d{2}/\d{4}\b', clean_content_str[:300])
     if dates_in_content:
         for d_str in dates_in_content[:3]:
             d_parsed = parse_date(d_str)
-            if d_parsed and not is_within_rolling_window(d_parsed, max_hours=max_age):
+            if d_parsed and not is_strictly_today(d_parsed):
                 warn(f"REJECTED STALE BODY DATE ({d_str}) | {source} | {clean_title_str[:45]}")
                 return None
 
@@ -719,7 +705,7 @@ def deduplicate(items):
 # ACTIVE SCRAPER SOURCES
 # ============================================================
 
-# 1. NEWS ON AIR (National - 24 Hours)
+# 1. NEWS ON AIR
 NEWS_ON_AIR_URLS = [
     "https://newsonair.gov.in/",
     "https://newsonair.gov.in/category/news/",
@@ -728,7 +714,7 @@ NEWS_ON_AIR_URLS = [
 
 
 def scrape_news_on_air():
-    print("\n" + "=" * 70 + "\n📻 NEWS ON AIR\n" + "=" * 70)
+    print("\n" + "=" * 70 + "\n📻 NEWS ON AIR (Today's Date Only)\n" + "=" * 70)
     candidates = []
 
     for page_url in NEWS_ON_AIR_URLS:
@@ -778,13 +764,13 @@ def scrape_news_on_air():
 
     results = deduplicate(results)
     if not results:
-        debug("NEWS ON AIR: Recent rolling window ka koi data nahi mila.")
+        debug("NEWS ON AIR: Aaj ki date ka koi article nahi mila.")
 
     print(f"✅ News On AIR usable: {len(results)}")
     return results
 
 
-# 2. IPRD BIHAR (Bihar - 48 Hours)
+# 2. IPRD BIHAR
 IPRD_PAGES = [
     "https://state.bihar.gov.in/prdbihar/",
     "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8931",
@@ -794,7 +780,7 @@ IPRD_PAGES = [
 
 
 def scrape_iprd_bihar():
-    print("\n" + "=" * 70 + "\n📢 IPRD BIHAR (48 Hours Window)\n" + "=" * 70)
+    print("\n" + "=" * 70 + "\n📢 IPRD BIHAR (Today's Date Only)\n" + "=" * 70)
     candidates = []
 
     for page_url in IPRD_PAGES:
@@ -848,13 +834,13 @@ def scrape_iprd_bihar():
 
     results = deduplicate(results)
     if not results:
-        debug("IPRD BIHAR: Recent rolling window ka koi data nahi mila.")
+        debug("IPRD BIHAR: Aaj ki date ka koi article nahi mila.")
 
     print(f"✅ IPRD Bihar usable: {len(results)}")
     return results
 
 
-# 3. BIHAR CABINET (Bihar - 48 Hours)
+# 3. BIHAR CABINET
 CABINET_PAGES = [
     "https://state.bihar.gov.in/csd/",
     "https://state.bihar.gov.in/csd/CitizenHome.html",
@@ -865,7 +851,7 @@ CABINET_PAGES = [
 
 
 def scrape_bihar_cabinet():
-    print("\n" + "=" * 70 + "\n🏛️ BIHAR CABINET (48 Hours Window)\n" + "=" * 70)
+    print("\n" + "=" * 70 + "\n🏛️ BIHAR CABINET (Today's Date Only)\n" + "=" * 70)
     candidates = []
 
     for page_url in CABINET_PAGES:
@@ -919,13 +905,13 @@ def scrape_bihar_cabinet():
 
     results = deduplicate(results)
     if not results:
-        debug("BIHAR CABINET: Recent rolling window ka koi data nahi mila.")
+        debug("BIHAR CABINET: Aaj ki date ka koi article nahi mila.")
 
     print(f"✅ Bihar Cabinet usable: {len(results)}")
     return results
 
 
-# 4. INDIA.GOV.IN (National - 24 Hours)
+# 4. INDIA.GOV.IN
 INDIA_GOV_PAGES = [
     "https://www.india.gov.in/",
     "https://www.india.gov.in/news",
@@ -934,7 +920,7 @@ INDIA_GOV_PAGES = [
 
 
 def scrape_india_gov():
-    print("\n" + "=" * 70 + "\n🇮🇳 INDIA.GOV.IN\n" + "=" * 70)
+    print("\n" + "=" * 70 + "\n🇮🇳 INDIA.GOV.IN (Today's Date Only)\n" + "=" * 70)
     candidates = []
 
     for page_url in INDIA_GOV_PAGES:
@@ -988,18 +974,18 @@ def scrape_india_gov():
 
     results = deduplicate(results)
     if not results:
-        debug("INDIA.GOV.IN: Recent rolling window ka koi data nahi mila.")
+        debug("INDIA.GOV.IN: Aaj ki date ka koi article nahi mila.")
 
     print(f"✅ India.gov.in usable: {len(results)}")
     return results
 
 
-# 5. BIHAR CM PRESS RELEASE (Bihar - 48 Hours)
+# 5. BIHAR CM PRESS RELEASE
 BIHAR_CM_URL = "https://cm.bihar.gov.in/users/preessrelease.aspx"
 
 
 def scrape_bihar_cm():
-    print("\n" + "=" * 70 + "\n🏛️ BIHAR CM PRESS RELEASE (48 Hours Window)\n" + "=" * 70)
+    print("\n" + "=" * 70 + "\n🏛️ BIHAR CM PRESS RELEASE (Today's Date Only)\n" + "=" * 70)
     html = fetch_url(BIHAR_CM_URL)
     if not html:
         return []
@@ -1017,7 +1003,6 @@ def scrape_bihar_cm():
             if title and len(title) > 10:
                 content, date = fetch_generic_article_content(href, "CMO Bihar")
                 
-                # Use deep content or full press title context
                 if not content or word_count(content) < MIN_CONTENT_WORDS:
                     content = f"Official Press Release issued by Chief Minister Office (CMO) Bihar: {title}. Focuses on state development, administrative decisions, and public welfare execution."
 
@@ -1035,7 +1020,7 @@ def scrape_bihar_cm():
 
     results = deduplicate(results)
     if not results:
-        debug("BIHAR CM OFFICE: Recent rolling window ka koi data nahi mila.")
+        debug("BIHAR CM OFFICE: Aaj ki date ka koi article nahi mila.")
 
     print(f"✅ Bihar CM Office usable: {len(results)}")
     return results
@@ -1059,7 +1044,7 @@ def safe_source(name, function):
 # ============================================================
 
 def build_news():
-    print("\n" + "=" * 80 + "\n🚀 STARTING ALL NEWS SOURCES PIPELINE\n" + "=" * 80)
+    print("\n" + "=" * 80 + f"\n🚀 STARTING TODAY'S EXCLUSIVE NEWS PIPELINE [{now_ist().strftime('%d %b %Y')}]\n" + "=" * 80)
 
     all_results = []
     source_results = {}
@@ -1091,19 +1076,12 @@ def build_news():
         else:
             national.append(item)
 
-    print("\n" + "=" * 80 + "\n📊 FINAL SOURCE BREAKDOWN\n" + "=" * 80)
+    print("\n" + "=" * 80 + "\n📊 FINAL TODAY'S SOURCE BREAKDOWN\n" + "=" * 80)
     print(json.dumps(breakdown, ensure_ascii=False, indent=2))
 
-    print(f"\n🇮🇳 National / Other : {len(national)}")
-    print(f"🏛️ Bihar               : {len(bihar)}")
-    print(f"📰 Total                : {len(all_results)}")
-
-    print("\n⚠️ SOURCE ZERO REPORT")
-    for source, count in breakdown.items():
-        if count == 0:
-            print(f"❌ {source}: 0")
-        else:
-            print(f"✅ {source}: {count}")
+    print(f"\n🇮🇳 National Today : {len(national)}")
+    print(f"🏛️ Bihar Today    : {len(bihar)}")
+    print(f"📰 Total Today    : {len(all_results)}")
 
     return national, bihar, breakdown
 
@@ -1129,8 +1107,8 @@ def save_output(national, bihar, breakdown):
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 {OUTPUT_FILE} saved")
-    print(f"📦 Total records: {len(all_news)}")
+    print(f"💾 {OUTPUT_FILE} saved successfully.")
+    print(f"📦 Total today's records: {len(all_news)}")
     print("=" * 80)
 
 
