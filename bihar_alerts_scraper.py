@@ -17,9 +17,10 @@ TARGET_FILE = "rawnews.json"
 IST = timezone(timedelta(hours=5, minutes=30))
 TIMEOUT = 15
 
-# Strict Limits: Scraping fail ya < 150 words par direct rejection
 MIN_WORDS_PER_ARTICLE = 150
 MAX_WORDS_PER_ARTICLE = 500
+
+SCRAPINGANT_API_KEY = os.environ.get("SCRAPINGANT_API_KEY", "").strip()
 
 BIHAR_FEEDS = [
     {
@@ -172,19 +173,60 @@ def is_strictly_today(entry):
 
 
 # ============================================================
-# WEBPAGE SCRAPER (NO FALLBACK, STRICT BODY EXTRACTION)
+# WEBPAGE HTML FETCHERS (DIRECT + SCRAPINGANT API FALLBACK)
 # ============================================================
 
-def scrape_full_webpage_content(target_url):
-    try:
-        debug(f"FETCHING WEBPAGE: {target_url[:65]}...")
-        resp = requests.get(target_url, headers=HEADERS, timeout=TIMEOUT)
-        
-        if resp.status_code != 200:
-            warn(f"HTTP {resp.status_code} Error on {target_url[:50]}")
-            return "", 0
+def scrapingant_fetch(url):
+    """ScrapingAnt API call for protected or blocking news sites"""
+    if not SCRAPINGANT_API_KEY:
+        return None
 
-        soup = BeautifulSoup(resp.content, "html.parser")
+    try:
+        debug(f"Triggering ScrapingAnt API for: {url[:50]}...")
+        endpoint = "https://api.scrapingant.com/v2/general"
+        params = {
+            "url": url,
+            "x-api-key": SCRAPINGANT_API_KEY,
+            "browser": "false",
+        }
+        r = requests.get(endpoint, params=params, timeout=30)
+        if r.status_code == 200:
+            try:
+                data = r.json()
+                if isinstance(data, dict) and "content" in data:
+                    return data["content"]
+            except Exception:
+                pass
+            return r.text
+        else:
+            warn(f"ScrapingAnt API returned HTTP {r.status_code}")
+    except Exception as e:
+        warn(f"ScrapingAnt Fetch Error: {e}")
+    return None
+
+
+def fetch_raw_html(target_url):
+    """Tries Direct Fetch first, falls back to ScrapingAnt if blocked/failed"""
+    try:
+        resp = requests.get(target_url, headers=HEADERS, timeout=TIMEOUT)
+        if resp.status_code == 200 and len(resp.content) > 500:
+            return resp.content
+        else:
+            warn(f"Direct fetch got HTTP {resp.status_code}. Retrying with ScrapingAnt...")
+    except Exception as e:
+        warn(f"Direct request failed ({e}). Retrying with ScrapingAnt...")
+
+    # Fallback to ScrapingAnt
+    return scrapingant_fetch(target_url)
+
+
+def scrape_full_webpage_content(target_url):
+    raw_html = fetch_raw_html(target_url)
+    if not raw_html:
+        return "", 0
+
+    try:
+        soup = BeautifulSoup(raw_html, "html.parser")
 
         for tag in soup(["script", "style", "nav", "footer", "header", "aside", "form", "svg"]):
             tag.decompose()
@@ -212,7 +254,7 @@ def scrape_full_webpage_content(target_url):
             return "", total_words
 
     except Exception as e:
-        warn(f"Scrape Exception for {target_url[:40]}: {e}")
+        warn(f"HTML Parsing Error for {target_url[:40]}: {e}")
         return "", 0
 
 
@@ -223,7 +265,7 @@ def scrape_full_webpage_content(target_url):
 def process_and_append_bihar_alerts():
     today_str = now_ist().strftime("%d %b %Y")
     print("\n" + "=" * 80)
-    print(f"🚀 STARTING BIHAR ALERTS PIPELINE [{today_str}]")
+    print(f"🚀 STARTING BIHAR ALERTS PIPELINE WITH SCRAPING API [{today_str}]")
     print("=" * 80)
 
     raw_data = {
@@ -304,7 +346,7 @@ def process_and_append_bihar_alerts():
                 duplicate_count += 1
                 continue
 
-            # 4. 🌐 FULL WEBPAGE SCRAPE
+            # 4. 🌐 FULL WEBPAGE SCRAPE (WITH SCRAPINGANT FALLBACK)
             content, words_found = scrape_full_webpage_content(real_url)
 
             if not content or words_found < MIN_WORDS_PER_ARTICLE:
