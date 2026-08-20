@@ -46,7 +46,7 @@ HEADERS = {
 }
 
 # ============================================================
-# COMPREHENSIVE REGEX FILTER (CRIME, ACCIDENTS, TENDERS, EVENTS)
+# COMPREHENSIVE REGEX FILTER
 # ============================================================
 
 BANNED_TOPICS_REGEX = re.compile(
@@ -57,9 +57,7 @@ BANNED_TOPICS_REGEX = re.compile(
     r'\bmarket\s+cap\b|\bipo\b|\bq[1-4]\s+results?\b|\bpat\s+up\b|\bnet\s+profit\b|'
     r'ऑर्डर\s+मिला|टेंडर|शेयर\s+बाजार|मुनाफा|कारोबार|कंपनी\s+को\s+मिला|'
 
-    
-
-    # 3. Crime, Violence, Murder, Legal Scandals
+    # 2. Crime, Violence, Murder, Legal Scandals
     r'\bmurder\b|\bkilled\b|\bkilling\b|\brape\b|\bdead\b|\bdeath\b|\bdies\b|\bbody\s+found\b|'
     r'\barrested?\b|\bloot\b|\brobbery\b|\btheft\b|\bkidnap\b|\bextortion\b|\bbribe\b|\bbribery\b|'
     r'\bfraud\b|\bscam\b|\bshootout\b|\bfiring\b|\bencounter\b|\bsmuggling\b|\billicit\b|'
@@ -68,20 +66,20 @@ BANNED_TOPICS_REGEX = re.compile(
     r'डकैती|अपहरण|फिरौती|धोखाधड़ी|घूस|रिश्वत|मुठभेड़|तस्करी|शराब\s+बरामद|जब्त|'
     r'छापेमारी|दबोचा|बदमाश|अपराधी|आत्महत्या|'
 
-    # 4. Accidents, Disasters & Stampedes
+    # 3. Accidents, Disasters & Stampedes
     r'\baccident\b|\bcrash\b|\bcollision\b|\bderail\b|\bderailment\b|\bdrowned\b|\bdrowning\b|'
     r'\bfire\s+broke\b|\bcylinder\s+blast\b|\bexplosion\b|\bblast\b|\bboat\s+capsize\b|\bstampede\b|'
     r'दुर्घटना|सड़क\s+हादसा|टक्कर|ट्रक|बस\s+हादसा|ट्रेन\s+हादसा|डूबने|डूबकर|'
     r'आग\s+लगी|सिलेंडर\s+ब्लास्ट|धमाका|विस्फोट|नाव\s+पलटी|भगदड़|'
 
-    # 5. Local Politics, Protests, Strikes & March
+    # 4. Local Politics, Protests, Strikes & March
     r'\blathi-?charge\b|\bprotest\b|\bprotesters\b|\bstrike\b|\bhunger\s+strike\b|'
     r'\bdharna\b|\bchakka\s+jam\b|\broad\s+block\b|\bclash\b|\bclashes\b|\bstone\s+pelting\b|\bviolence\b|'
     r'\braj\s+bhavan\s+march\b|\bcalls?\s+out\b|\bhits?\s+out\b|'
     r'लाठीचार्ज|प्रदर्शन|धरना|चक्का\s+जाम|सड़क\s+जाम|हड़ताल|भूख\s+हड़ताल|'
     r'बवाल|हंगामा|पथराव|हिंसा|झड़प|राजभवन\s+मार्च|घेराव|'
 
-    # 6. Static Trivia, Horoscopes, Weather & Viral Content
+    # 5. Static Trivia, Horoscopes, Weather & Viral Content
     r'\bhoroscope\b|\brashifal\b|\blottery\b|\bviral\s+video\b|\breels?\b|'
     r'\bweather\s+today\b|\brain\s+batters\b|\bheavy\s+rain\b|'
     r'राशिफल|लॉटरी|वायरल\s+वीडियो|मौसम\s+का\s+हाल|भारी\s+बारिश'
@@ -91,7 +89,6 @@ BANNED_TOPICS_REGEX = re.compile(
 
 
 def is_unwanted_news(title, text=""):
-    """Check if title or snippet matches any banned negative topic regex"""
     combined = f"{title} {text}"
     if BANNED_TOPICS_REGEX.search(combined):
         return True
@@ -107,7 +104,6 @@ def now_ist():
 
 
 def extract_real_url(google_url):
-    """Google Alert redirect URL se original web link extract karta hai"""
     try:
         parsed = urlparse(google_url)
         query_params = parse_qs(parsed.query)
@@ -138,18 +134,30 @@ def clean_title(title):
     return t.strip()
 
 
-def parse_feed_date(entry):
+# ============================================================
+# STRICT CURRENT DATE FILTER
+# ============================================================
+
+def get_entry_datetime(entry):
+    """Extracts published/updated datetime converted to IST"""
     if hasattr(entry, 'published_parsed') and entry.published_parsed:
-        try:
-            dt = datetime(*entry.published_parsed[:6])
-            return dt.strftime("%a, %d %b %Y %H:%M:%S IST")
-        except Exception:
-            pass
-    return now_ist().strftime("%a, %d %b %Y %H:%M:%S IST")
+        utc_dt = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
+        return utc_dt.astimezone(IST)
+    elif hasattr(entry, 'updated_parsed') and entry.updated_parsed:
+        utc_dt = datetime(*entry.updated_parsed[:6], tzinfo=timezone.utc)
+        return utc_dt.astimezone(IST)
+    return None
+
+
+def is_strictly_today(entry):
+    """Checks if the Google Alert entry was published TODAY (IST)"""
+    entry_dt = get_entry_datetime(entry)
+    if not entry_dt:
+        return False
+    return entry_dt.date() == now_ist().date()
 
 
 def scrape_full_webpage_content(target_url):
-    """Target URL par visit karke full body text scrape karta hai"""
     try:
         resp = requests.get(target_url, headers=HEADERS, timeout=TIMEOUT)
         if resp.status_code == 200:
@@ -185,11 +193,11 @@ def scrape_full_webpage_content(target_url):
 # ============================================================
 
 def process_and_append_bihar_alerts():
+    today_str = now_ist().strftime("%d %b %Y")
     print("\n" + "=" * 75)
-    print(f"🚀 STARTING BIHAR ALERTS SCRAPER WITH SMART REGEX FILTER [{now_ist().strftime('%Y-%m-%d %H:%M:%S IST')}]")
+    print(f"🚀 STARTING BIHAR ALERTS SCRAPER (TODAY'S EXCLUSIVE: {today_str})")
     print("=" * 75)
 
-    # 1. Load existing rawnews.json
     raw_data = {
         "generated_at": now_ist().strftime("%Y-%m-%d %H:%M:%S"),
         "bihar_raw_count": 0,
@@ -204,19 +212,26 @@ def process_and_append_bihar_alerts():
         try:
             with open(TARGET_FILE, "r", encoding="utf-8") as f:
                 raw_data = json.load(f)
-            print(f"📦 Loaded existing {TARGET_FILE} (Current Bihar News: {len(raw_data.get('bihar_raw_news', []))})")
         except Exception as e:
-            print(f"⚠️ Could not load {TARGET_FILE}, initializing fresh structure: {e}")
+            print(f"⚠️ Could not load {TARGET_FILE}: {e}")
 
+    # Retain existing bihar items only if they belong to TODAY
     existing_bihar = raw_data.get("bihar_raw_news", [])
+    valid_existing_bihar = []
     
-    seen_urls = {item.get("url", "").strip() for item in existing_bihar if item.get("url")}
-    seen_titles = {re.sub(r'[^a-zA-Z0-9\u0900-\u097f]+', '', item.get("title", "").lower()) for item in existing_bihar}
+    for item in existing_bihar:
+        d_str = item.get("date", "")
+        # Agar item aaj ka hai toh retain rakho, kal ka flush kardo
+        if today_str in d_str:
+            valid_existing_bihar.append(item)
+    
+    seen_urls = {item.get("url", "").strip() for item in valid_existing_bihar if item.get("url")}
+    seen_titles = {re.sub(r'[^a-zA-Z0-9\u0900-\u097f]+', '', item.get("title", "").lower()) for item in valid_existing_bihar}
 
     new_bihar_items = []
     dropped_count = 0
+    old_date_skipped = 0
 
-    # 2. Scrape & Filter Feeds
     for feed_info in BIHAR_FEEDS:
         cat_name = feed_info["category"]
         feed_url = feed_info["url"]
@@ -242,13 +257,20 @@ def process_and_append_bihar_alerts():
             if not c_title or not real_url or len(c_title) < 15:
                 continue
 
-            # 🛑 REGEX FILTER: Reject corporate orders, roadshows, crimes, protests immediately
+            # 1. 📅 STRICT CURRENT DATE FILTER
+            if not is_strictly_today(entry):
+                entry_dt = get_entry_datetime(entry)
+                pub_d_str = entry_dt.strftime("%d %b %Y") if entry_dt else "Unknown"
+                old_date_skipped += 1
+                continue
+
+            # 2. 🛑 REGEX FILTER
             if is_unwanted_news(c_title, clean_snippet):
-                print(f"   ⏭️ REJECTED (Negative Filter): {c_title[:50]}...")
+                print(f"   ⏭️ REJECTED (Banned Topic): {c_title[:50]}...")
                 dropped_count += 1
                 continue
 
-            # Duplicate Check
+            # 3. Duplicate Check
             norm_title = re.sub(r'[^a-zA-Z0-9\u0900-\u097f]+', '', c_title.lower())
             if real_url in seen_urls or norm_title in seen_titles:
                 continue
@@ -256,7 +278,7 @@ def process_and_append_bihar_alerts():
             seen_urls.add(real_url)
             seen_titles.add(norm_title)
 
-            print(f"   🌐 Scraping Content: {c_title[:45]}...")
+            print(f"   🌐 Scraping Today's Article: {c_title[:45]}...")
             content = scrape_full_webpage_content(real_url)
 
             if not content:
@@ -265,19 +287,20 @@ def process_and_append_bihar_alerts():
                 else:
                     content = f"{c_title}. Official update regarding Bihar state governance and development."
 
-            # Double check full content body
             if is_unwanted_news("", content[:250]):
-                print(f"   ⏭️ REJECTED (Body Content Filter): {c_title[:50]}...")
+                print(f"   ⏭️ REJECTED (Body Filter): {c_title[:50]}...")
                 dropped_count += 1
                 continue
 
             words_total = len(content.split())
+            entry_dt = get_entry_datetime(entry)
+            formatted_date = entry_dt.strftime("%a, %d %b %Y %H:%M:%S IST")
 
             item = {
                 "source": "Bihar Google Alert",
                 "title": c_title,
                 "url": real_url,
-                "date": parse_feed_date(entry),
+                "date": formatted_date,
                 "content": content,
                 "content_chars": len(content),
                 "content_words": words_total,
@@ -285,11 +308,12 @@ def process_and_append_bihar_alerts():
             }
 
             new_bihar_items.append(item)
+            print(f"   ✅ Added Today's News: {c_title[:40]}")
 
-    print(f"\n📊 Filter Summary -> Usable Added: {len(new_bihar_items)} | Dropped Junk/Tenders/Roadshows: {dropped_count}")
+    print(f"\n📊 Summary -> Added: {len(new_bihar_items)} | Skipped Old Dates: {old_date_skipped} | Dropped Banned: {dropped_count}")
 
-    # 3. Append to existing list
-    updated_bihar_news = new_bihar_items + existing_bihar
+    # Merge newly scraped items with valid today's existing items
+    updated_bihar_news = new_bihar_items + valid_existing_bihar
     raw_data["bihar_raw_news"] = updated_bihar_news
     raw_data["bihar_raw_count"] = len(updated_bihar_news)
 
@@ -298,15 +322,14 @@ def process_and_append_bihar_alerts():
     raw_data["generated_at"] = now_ist().strftime("%Y-%m-%d %H:%M:%S")
 
     source_breakdown = raw_data.get("source_breakdown", {})
-    source_breakdown["Bihar Google Alert"] = source_breakdown.get("Bihar Google Alert", 0) + len(new_bihar_items)
+    source_breakdown["Bihar Google Alert"] = len(updated_bihar_news)
     raw_data["source_breakdown"] = source_breakdown
 
-    # 4. Save Back to rawnews.json
     with open(TARGET_FILE, "w", encoding="utf-8") as f:
         json.dump(raw_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 75)
-    print(f"💾 Successfully appended clean Bihar articles to '{TARGET_FILE}'!")
+    print(f"💾 Successfully saved TODAY'S Bihar articles to '{TARGET_FILE}'!")
     print(f"📊 Bihar Total: {len(updated_bihar_news)} | National Total: {national_count} | All Total: {raw_data['total_raw_count']}")
     print("=" * 75)
 
