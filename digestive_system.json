@@ -3,913 +3,1330 @@
     "p_id": "bpsc_dig_v1_01",
     "qe": "An analytical study of human dentition identifies the structural anchoring of teeth as thecodont. What architectural layout defines this term in human anatomy?",
     "qh": "मानव दंत विन्यास (human dentition) का एक विश्लेषणात्मक अध्ययन दांतों के संरचनात्मक एंकरिंग को थिकोडोंट (thecodont) के रूप में पहचानता है। मानव शरीर रचना विज्ञान में कौन सा संरचनात्मक विन्यास इस शब्द को परिभाषित करता है?",
-    "o": [
+    "oe": [
       "Teeth are loosely attached to a soft mucosal shelf within the inner pharynx.",
       "Each tooth is embedded in a rigid bony socket of the jaw bone.",
       "Temporary deciduous components fuse directly into the skeletal hard palate.",
       "The hard chewing surface completely lacks a boundary layer of enamel."
     ],
+    "oh": [
+      "दांत आंतरिक ग्रसनी के भीतर एक नरम श्लेष्म शेल्फ से शिथिल रूप से जुड़े होते हैं।",
+      "प्रत्येक दांत जबड़े की हड्डी के एक कठोर अस्थि सॉकेट (गर्तिका) में धंसा होता है।",
+      "अस्थायी पर्णपाती घटक सीधे कंकाल के कठोर तालू में विलीन हो जाते हैं।",
+      "कठोर चबाने वाली सतह में इनेमल की सीमा परत का पूरी तरह से अभाव होता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes an evolutionary primitive dentition found in fish, not mammalian configurations. Option 2 is correct because the source text explicitly defines thecodont attachment as the morphological layout where each individual tooth is embedded in a socket of the jaw bone. This structural anchoring allows humans and other mammals to withstand high mechanical forces during mastication [the process of chewing food particles into a manageable bolus]. Option 3 describes a solid skeletal fusion (ankylosis) that contradicts the definition of mammalian deciduous milk teeth replacement. Option 4 is incorrect because the chewing surface of human teeth is composed of enamel [the hardest mineralized substance in the human body], which covers and protects the inner structures."
+    "e": "Mammalian dentition ko unke jaw bone attachment ke basis par describe kiya jata hai, jahan thecodont condition mechanical strength provide karti hai.\n\n• Option A is Incorrect because pharynx mein mucosal attachment lower vertebrates ya fish type structures mein hota hai, mammals mein nahi.\n\n• Option B is Correct because human teeth jaw bone ke specific sockets (garth/alveoli) ke andar deeply embedded hote hain, is anatomical arrangement ko 'Thecodont' attachment kaha jata hai.\n\n• Option C is Incorrect because deciduous milk teeth jaw socket mein hote hain aur diphyodont nature show karte hain, hard palate se fuse nahi hote.\n\n• Option D is Incorrect because human teeth ka outer crown portion enamel (hardest mineralized tissue) se covered rehta hai."
   },
   {
     "p_id": "bpsc_dig_v1_02",
     "qe": "An adult human has 32 permanent teeth arranged according to a fixed dental formula. How is the internal arrangement organized within each individual half of the upper and lower jaws?",
     "qh": "एक वयस्क मानव में एक निश्चित दंत सूत्र (dental formula) के अनुसार 32 स्थायी दांत होते हैं। ऊपरी और निचले जबड़े के प्रत्येक आधे हिस्से (each half) के भीतर आंतरिक व्यवस्था कैसे व्यवस्थित होती है?",
-    "o": [
+    "oe": [
       "Three incisors, one canine, two premolars, and two molars in a linear row.",
       "Two incisors, one canine, two premolars, and three molars in consecutive order.",
       "One incisor, two canines, three premolars, and two molars forming the outer arc.",
       "Two incisors, two canines, one premolar, and three molars anchoring the frenulum."
     ],
+    "oh": [
+      "एक रैखिक पंक्ति में तीन कृंतक (incisors), एक रदनक (canine), दो अग्रचर्वणक (premolars), और दो चर्वणक (molars)।",
+      "लगातार क्रम में दो कृंतक, एक रदनक, दो अग्रचर्वणक, और तीन चर्वणक (2123)।",
+      "बाहरी चाप बनाते हुए एक कृंतक, दो रदनक, तीन अग्रचर्वणक, और दो चर्वणक।",
+      "फ्रेमुलम को सहारा देते हुए दो कृंतक, दो रदनक, एक अग्रचर्वणक, और तीन चर्वणक।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1, Option 3, and Option 4 present incorrect numerical tooth distributions that violate the mathematical constraints of the human heterodont formula. Option 2 is correct because the human dental formula is represented as $\\frac{2123}{2123}$. This algebraic formula states that in each symmetrical half of both the upper and lower jaw, the arrangement of teeth from anterior to posterior is precisely: 2 Incisors (I), 1 Canine (C), 2 Premolars (PM), and 3 Molars (M). Multiplying this configuration by four across all quadrants yields the total count of 32 permanent teeth in heterodont dentition [a dental profile featuring multiple structurally distinct types of teeth]."
+    "e": "Human dentition heterodont hoti hai, jisme shape aur function ke basis par char alag-alag types ke teeth present hote hain.\n\n• Option A is Incorrect because humans mein 3 incisors per quadrant nahi hote, adult formula 2123 follow karta hai.\n\n• Option B is Correct because adult human dental formula $\\frac{2123}{2123}$ hota hai, jiska matlab upper aur lower jaw ke har half quadrant mein anterior to posterior arrangement 2 Incisors (I), 1 Canine (C), 2 Premolars (PM), aur 3 Molars (M) hota hai (Total = $8 \\times 4 = 32$).\n\n• Option C is Incorrect because canine count sirf 1 hota hai per quadrant, 2 canines nahi hote.\n\n• Option D is Incorrect because 2 canines aur 1 premolar ka ratio human dentition mein mathematically aur biologically incorrect hai."
   },
   {
     "p_id": "bpsc_dig_v1_03",
     "qe": "During swallowing, what specific anatomical adaptation prevents the mechanical entry of a food bolus into the respiratory windpipe?",
     "qh": "निगलने (swallowing) के दौरान, कौन सा विशिष्ट शारीरिक अनुकूलन भोजन के ग्रास (food bolus) को श्वसन श्वास नलिका (respiratory windpipe) में यांत्रिक रूप से प्रवेश करने से रोकता है?",
-    "o": [
+    "oe": [
       "The active upward expansion of the J-shaped gastro-oesophageal sphincter.",
       "The closing action of a cartilaginous flap called the epiglottis over the glottis.",
       "The physical occlusion of the common pharynx by the muscular frenulum.",
       "The structural relaxation of the inner circular smooth muscle layer of the trachea."
     ],
+    "oh": [
+      "J-आकार के गैस्ट्रो-ओसोफेगल स्फिंक्टर का सक्रिय ऊपर की ओर विस्तार।",
+      "ग्लोटिस (घांटी) के ऊपर एपिग्लॉटिस (घांटी ढक्कन) नामक एक उपास्थिमय फ्लैप की बंद होने की क्रिया।",
+      "पेशीय फ्रेनुलम द्वारा सामान्य ग्रसनी का भौतिक अवरोध।",
+      "श्वासनली के आंतरिक वृत्ताकार चिकनी पेशी परत का संरचनात्मक विश्राम।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes a muscular valve at the stomach entrance, which has no physical role in protective pharyngeal gating. Option 2 is correct because the pharynx serves as a shared common passage for both food and air. To prevent aspiration or choking during deglutition [the physiological act of swallowing a bolus], a specialized flexible cartilaginous flap called the epiglottis moves down to cover the glottis [the structural opening of the trachea or windpipe], ensuring the bolus passes safely into the posterior oesophagus. Option 3 is incorrect because the frenulum attaches the tongue to the oral floor and does not occlude the pharynx. Option 4 describes tracheal dynamics that cannot prevent fluid entry."
+    "e": "Pharynx food aur air dono ke liye ek common passage hai, isliye deglutition ke dauraan respiratory pathway ka secure closure zaroori hota hai.\n\n• Option A is Incorrect because gastro-oesophageal sphincter stomach aur oesophagus ke junction par acid reflux control karta hai, windpipe protection se iska direct role nahi hai.\n\n• Option B is Correct because deglutition (swallowing) ke time larynx upar move karta hai aur elastic cartilaginous flap 'Epiglottis' glottis (windpipe opening) ko cover kar leta hai, jisse food bolus safely oesophagus mein chala jata hai.\n\n• Option C is Incorrect because frenulum tongue ko oral cavity ke floor se attach karta hai.\n\n• Option D is Incorrect because tracheal smooth muscle relaxation food particles ki entry ko mechanically block nahi kar sakta."
   },
   {
     "p_id": "bpsc_cell_v1_04",
     "qe": "A gastrointestinal specialist examines the precise gross anatomy of the human stomach. What are the four major structural regions of this organ, ordered from the oesophageal entrance to the duodenal exit?",
     "qh": "एक गैस्ट्रोइंटेस्टाइनल विशेषज्ञ मानव आमाशय (stomach) की सटीक शारीरिक रचना का परीक्षण करता है। इसके अन्नप्रणाली प्रवेश (oesophageal entrance) से ग्रहणी निकास (duodenal exit) तक व्यवस्थित चार प्रमुख संरचनात्मक क्षेत्र कौन से हैं?",
-    "o": [
+    "oe": [
       "Duodenum, jejunum, highly coiled ileum, and cecum sac.",
       "Cardiac portion, fundic region, body (main central region), and pyloric portion.",
       "Serosa coat, inner circular layer, submucosa plexus, and villi margins.",
       "Ascending branch, transverse arc, descending column, and sigmoid loops."
     ],
+    "oh": [
+      "ग्रहणी (Duodenum), अग्रक्षुद्रांत्र (jejunum), अत्यधिक कुंडलित क्षुद्रांत्र (ileum), और सीकम थैली।",
+      "कार्डियक भाग (हृदयी भाग), फंडिक क्षेत्र, काय/बॉडी (मुख्य केंद्रीय क्षेत्र), और पाइलोरिक भाग (जठरनिर्गमी भाग)।",
+      "सेरोसा आवरण, आंतरिक वृत्ताकार परत, सबम्यूकोसा प्लेक्सस, और विली मार्जिन।",
+      "आरोही शाखा, अनुप्रस्थ चाप, अवरोही स्तंभ, और सिग्मॉइड लूप।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 outlines the sequential segments of the small intestine and early large intestine, not the stomach. Option 2 is correct because the stomach is a J-shaped muscular bag located in the upper left portion of the abdominal cavity. It is divided into four major parts: the cardiac portion [the immediate upper region into which the oesophagus opens], the fundic region [the superior dome-shaped zone], the body [the main central region], and the pyloric portion [the terminal distal segment which opens into the small intestine via the pyloric sphincter]. Option 3 describes the histological tissue layers of the gut wall. Option 4 describes the regional anatomy of the colon."
+    "e": "Stomach ek J-shaped muscular bag hai jo abdominal cavity ke upper left portion mein located hota hai aur multiple anatomical subdivisions mein partitioned rehta hai.\n\n• Option A is Incorrect because duodenum, jejunum aur ileum small intestine ke anatomical divisions hain.\n\n• Option B is Correct because stomach ko 4 major regions mein divide kiya gaya hai: 1. Cardiac (jahan oesophagus open hota hai), 2. Fundus (superior dome-shaped region), 3. Body (main central region), aur 4. Pyloric portion (distal part jo duodenum mein open hota hai).\n\n• Option C is Incorrect because serosa, muscularis aur submucosa gut wall ki histological tissue layers hain.\n\n• Option D is Incorrect because ascending, transverse aur descending colon large intestine ke regional parts hain."
   },
   {
     "p_id": "bpsc_dig_v1_05",
     "qe": "The human large intestine displays a specialized structural layout. Which morphological segment hosts symbiotic micro-organisms and gives rise to the vestigial vermiform appendix?",
     "qh": "मानव बड़ी आंत एक विशिष्ट संरचनात्मक विन्यास प्रदर्शित करती है। कौन सा रूपात्मक खंड (morphological segment) सहजीवी सूक्ष्मजीवों (symbiotic micro-organisms) को आश्रय देता है और अवशेषी कृमिरूप एपेंडिक्स (vermiform appendix) को जन्म देता है?",
-    "o": [
+    "oe": [
       "The 'C' shaped duodenum loop.",
       "The caecum, which is a small blind sac.",
       "The highly coiled terminal ileum junction.",
       "The descending part of the colon opening into the rectum."
     ],
+    "oh": [
+      "'C' आकार का ग्रहणी (duodenum) लूप।",
+      "सीकम (उंडुक), जो एक छोटी अंधी थैली (small blind sac) है।",
+      "अत्यधिक कुंडलित अंतिम इलियम जंक्शन।",
+      "मलाशय (rectum) में खुलने वाला कोलन का अवरोही भाग।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the first part of the small intestine, which does not host these specific communities or the appendix. Option 2 is correct because the large intestine begins at the ileocecal junction and consists of the caecum, colon, and rectum. The caecum is a small blind sac that hosts specialized communities of symbiotic micro-organisms. Extending from this blind sac is a narrow, finger-like tubular projection termed the vermiform appendix, which functions as a vestigial organ [an evolutionary remnant that has lost its original ancestral function]. Option 3 is a small intestinal component. Option 4 is the distal segment of the colon that handles fecal transport rather than hosting the appendix."
+    "e": "Large intestine ileocaecal junction se start hoti hai aur iska initial pouch microbial symbiosis aur anatomical projections maintain karta hai.\n\n• Option A is Incorrect because duodenum small intestine ka proximal segment hai jo pancreatic aur bile juices receive karta hai.\n\n• Option B is Correct because 'Caecum' ek small blind sac hai jo symbiotic gut micro-organisms ko host karta hai, aur isi segment se narrow finger-like tubular vestigial structure 'Vermiform Appendix' arise hota hai.\n\n• Option C is Incorrect because ileum small intestine ka longest, highly coiled nutrient-absorbing part hai.\n\n• Option D is Incorrect because descending colon fecal matter ko rectum tak transport karne ka conduit function perform karta hai."
   },
   {
     "p_id": "bpsc_dig_v1_06",
     "qe": "Histological examination of the human alimentary canal wall from the oesophagus to the rectum reveals four distinct layers. Which option accurately lists these layers in order from outermost to innermost?",
     "qh": "अन्नप्रणाली से मलाशय तक मानव आहार नाल की दीवार का ऊतकीय परीक्षण (histological examination) चार अलग-अलग परतों को प्रकट करता है। कौन सा विकल्प इन परतों को सबसे बाहरी से सबसे भीतरी क्रम में सटीक रूप से सूचीबद्ध करता है?",
-    "o": [
-      "Mucosa $\\rightarrow$ Sub-mucosa $\\rightarrow$ Muscularis $\\rightarrow$ Serosa",
-      "Serosa $\\rightarrow$ Muscularis $\\rightarrow$ Sub-mucosa $\\rightarrow$ Mucosa",
-      "Mesothelium $\\rightarrow$ Mucosa $\\rightarrow$ Oblique muscle $\\rightarrow$ Rugae plexus",
-      "Sub-mucosa $\\rightarrow$ Lacteal layer $\\rightarrow$ Circular sheet $\\rightarrow$ Microvilli border"
+    "oe": [
+      "Mucosa -> Sub-mucosa -> Muscularis -> Serosa",
+      "Serosa -> Muscularis -> Sub-mucosa -> Mucosa",
+      "Mesothelium -> Mucosa -> Oblique muscle -> Rugae plexus",
+      "Sub-mucosa -> Lacteal layer -> Circular sheet -> Microvilli border"
+    ],
+    "oh": [
+      "म्यूकोसा -> सब-म्यूकोसा -> मस्कुलरिस -> सेरोसा",
+      "सेरोसा -> मस्कुलरिस -> सब-म्यूकोसा -> म्यूकोसा (बाहरी से भीतरी)",
+      "मेसोथेलियम -> म्यूकोसा -> तिरछी मांसपेशी -> रूगे प्लेक्सस",
+      "सब-म्यूकोसा -> लैक्टियल परत -> गोलाकार शीट -> माइक्रोविली बॉर्डर"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 presents the exact reverse orientation, ordering the layers from innermost to outermost. Option 2 is correct because the wall of the entire alimentary canal is built from four distinct concentric tissue tunics. In order from the external surface to the internal lumen, they are: (1) Serosa [the outermost layer made of thin visceral mesothelium and connective tissue], (2) Muscularis [smooth muscle arranged into an inner circular and outer longitudinal layer], (3) Sub-mucosa [loose connective tissue carrying nerves, blood, and lymph vessels], and (4) Mucosa [the innermost layer lining the operational lumen]. Option 3 and Option 4 present scrambled sub-components rather than the primary four wall layers."
+    "e": "Human gut wall oesophagus se rectum tak consistent histological architecture show karti hai, jisme char distinct concentric tissue tunics hoti hain.\n\n• Option A is Incorrect because yeh sequence innermost se outermost layer ka reverse arrangement hai.\n\n• Option B is Correct because outermost to innermost correct anatomical sequence hai: 1. Serosa (visceral mesothelium), 2. Muscularis (outer longitudinal, inner circular smooth muscles), 3. Sub-mucosa (loose connective tissue with nerves, blood and lymph vessels), aur 4. Mucosa (innermost luminal lining).\n\n• Option C is Incorrect because mesothelium serosa ka component hai aur oblique muscles sirf stomach muscularis mein present hote hain.\n\n• Option D is Incorrect because lacteals aur microvilli mucosal modifications hain, primary systemic layers nahi."
   },
   {
     "p_id": "bpsc_dig_v1_07",
     "qe": "A tissue biopsy reveals the presence of specialized digestive glands located specifically within the sub-mucosal layer rather than the mucosa. Which region of the alimentary canal was sampled?",
     "qh": "एक ऊतक बायोप्सी (tissue biopsy) म्यूकोसा के बजाय विशेष रूप से सब-म्यूकोसल परत (sub-mucosal layer) के भीतर स्थित विशिष्ट पाचक ग्रंथियों की उपस्थिति को प्रकट करती है। आहार नाल के किस क्षेत्र का नमूना लिया गया था?",
-    "o": [
+    "oe": [
       "The cardiac region of the stomach wall.",
       "The duodenum region of the small intestine.",
       "The highly coiled middle jejunum matrix.",
       "The terminal mucosal folds of the rectum."
     ],
+    "oh": [
+      "पेट की दीवार का कार्डियक क्षेत्र।",
+      "छोटी आंत का ग्रहणी (Duodenum) क्षेत्र।",
+      "अत्यधिक कुंडलित मध्य जेजुनम मैट्रिक्स।",
+      "मलाशय की अंतिम म्यूकोसल परतें।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because gastric glands are strictly localized within the inner mucosal layer of the stomach. Option 2 is correct because the text highlights a major histological exception: while most digestive glands of the gut are modifications of the mucosa, the duodenum contains specialized glands (known as Brunner's glands) located within the sub-mucosal layer [the loose connective tissue layer underlying the mucosa] to secrete protective alkaline fluids. Option 3 and Option 4 lack these specific sub-mucosal gland modifications."
+    "e": "Gastrointestinal tract ki most glands mucosal layer ki invaginations hoti hain, lekin duodenum ek major histological exception display karta hai.\n\n• Option A is Incorrect because stomach ki gastric glands strictly inner mucosal layer mein localized hoti hain.\n\n• Option B is Correct because small intestine ke 'Duodenum' region ki submucosa layer mein specialized branched tubular glands present hoti hain jinhe 'Brunner's Glands' kehte hain, jo acidic chyme ko neutralize karne ke liye alkaline mucous fluid secrete karti hain.\n\n• Option C is Incorrect because jejunum mein submucosal Brunner's glands completely absent hoti hain.\n\n• Option D is Incorrect because rectum mein submucosal glands absent hoti hain, sirf mucosal goblet cells hote hain."
   },
   {
     "p_id": "bpsc_dig_v1_08",
     "qe": "What structural modifications of the innermost mucosal layer create a brush border appearance in the small intestine, and what is their functional purpose?",
     "qh": "अंतरतम म्यूकोसल परत के कौन से संरचनात्मक रूपांतरण छोटी आंत में एक ब्रश बॉर्डर उपस्थिति (brush border appearance) बनाते हैं, और उनका कार्यात्मक उद्देश्य क्या है?",
-    "o": [
+    "oe": [
       "Irregular rugae folds designed to accommodate large volumes of air.",
       "Microscopic microvilli projections produced by the cells lining the finger-like villi, enormously expanding the functional surface area.",
       "Oblique smooth muscle strips that accelerate mechanical churning movements.",
       "Thick connective tissue sheaths called Glisson's capsules that limit nutrient loss."
     ],
+    "oh": [
+      "हवा की बड़ी मात्रा को समायोजित करने के लिए डिज़ाइन किए गए अनियमित रूगे सिलवटें।",
+      "उंगली जैसे विली को रेखांकित करने वाली कोशिकाओं द्वारा उत्पादित सूक्ष्म माइक्रोविली (सूक्ष्मांकुर) उभार, जो कार्यात्मक सतह क्षेत्र को अत्यधिक बढ़ाते हैं।",
+      "तिरछी चिकनी पेशी पट्टियाँ जो यांत्रिक मंथन गतिविधियों को तेज करती हैं।",
+      "ग्लिसन कैप्सूल नामक मोटे संयोजी ऊतक आवरण जो पोषक तत्वों के नुकसान को सीमित करते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes stomach wall modifications that flatten out during food entry, not intestinal structures. Option 2 is correct because the inner mucosal layer of the small intestine forms finger-like foldings called villi. The epithelial cells lining these villi produce numerous microscopic extensions called microvilli. This microscopic architecture forms a brush border appearance that enormously expands the functional absorptive surface area of the gut. Option 3 describes muscularis modifications in the stomach. Option 4 describes the connective tissue covering of hepatic lobules."
+    "e": "Intestinal mucosa absorption efficiency ko maximize karne ke liye extensive microscopic aur macroscopic folding patterns generate karti hai.\n\n• Option A is Incorrect because longitudinal rugae folds empty stomach ki inner wall par dekhe jaate hain, intestinal brush border mein nahi.\n\n• Option B is Correct because small intestine ki mucosa finger-like projections 'Villi' banati hai, aur in villi par present columnar epithelial cells ki apical surface par millions of microscopic projections 'Microvilli' hote hain jo absorptive surface area ko exponentially badha dete hain (Brush Border appearance).\n\n• Option C is Incorrect because oblique muscle layer stomach muscularis ka mechanical feature hai.\n\n• Option D is Incorrect because Glisson's capsule liver lobules ka protective fibrous connective tissue layer hai."
   },
   {
     "p_id": "bpsc_dig_v1_09",
     "qe": "The human liver is composed of structural and functional units known as hepatic lobules. What specific tissue architecture covers each individual lobule?",
     "qh": "मानव यकृत (human liver) संरचनात्मक और कार्यात्मक इकाइयों से बना है जिन्हें हेपेटिक लोब्यूल्स (hepatic lobules) कहा जाता है। कौन सी विशिष्ट ऊतक संरचना प्रत्येक व्यक्तिगत लोब्यूल को ढकती है?",
-    "o": [
+    "oe": [
       "A loose mucosal sheet lined with active goblet cells.",
       "A thin connective tissue sheath called the Glisson's capsule.",
       "An outer longitudinal smooth muscle layer containing lacteals.",
       "An impermeable layer of calcium carbonate minerals."
     ],
+    "oh": [
+      "सक्रिय गॉब्लेट कोशिकाओं से सजी एक ढीली श्लेष्म शीट।",
+      "ग्लिसन्स कैप्सूल (Glisson's capsule) नामक एक पतली संयोजी ऊतक आवरण।",
+      "लैक्टियल्स युक्त एक बाहरी अनुदैर्ध्य चिकनी पेशी परत।",
+      "कैल्शियम कार्बोनेट खनिजों की एक अभेद्य परत।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes a lubricating layer typical of the internal gastrointestinal mucosa, not solid organ lobules. Option 2 is correct because the liver is the largest gland in the body, containing hepatic cells arranged in the form of cords within hepatic lobules. The text highlights that each individual lobule is covered by a thin, protective connective tissue sheath designated as the Glisson's capsule. Option 3 describes a component of the muscularis tunic. Option 4 describes an algal cell wall component."
+    "e": "Liver human body ki largest gland hai jiska structural organization cords ke roop mein arranged hepatic cells par based hota hai.\n\n• Option A is Incorrect because goblet cells intestinal mucosa mein mucus secrete karte hain, liver lobules ko sheath nahi karte.\n\n• Option B is Correct because liver ke structural aur functional units 'Hepatic Lobules' hote hain (jisme hepatic cords central vein ke around radiate karti hain), aur har individual lobule ek thin connective tissue sheath se enclosed rehta hai jise 'Glisson's Capsule' kaha jata hai.\n\n• Option C is Incorrect because longitudinal smooth muscle aur lacteals intestinal villi aur gut wall ka part hain.\n\n• Option D is Incorrect because calcium carbonate mineral layer molluscan shells mein hoti hai, mammalian liver mein nahi."
   },
   {
     "p_id": "bpsc_dig_v1_10",
     "qe": "The common hepato-pancreatic duct empties both bile and pancreatic juice into the duodenum. Which muscular valve guards the opening of this duct?",
     "qh": "सामान्य हेपेटो-पैनक्रिएटिक डक्ट (common hepato-pancreatic duct) पित्त (bile) और अग्न्याशयी रस (pancreatic juice) दोनों को ग्रहणी में खाली करता है। कौन सा पेशीय वाल्व इस वाहिनी के खुलने के स्थान की रक्षा करता है?",
-    "o": [
+    "oe": [
       "The gastro-oesophageal muscular sphincter",
       "The pyloric sphincter of the stomach",
       "The sphincter of Oddi",
       "The ileo-caecal valve mechanism"
     ],
+    "oh": [
+      "जठर-ग्रासनली पेशीय स्फिंक्टर (Gastro-oesophageal sphincter)",
+      "आमाशय का पाइलोरिक स्फिंक्टर (Pyloric sphincter)",
+      "ओडी का स्फिंक्टर (Sphincter of Oddi)",
+      "इलियो-सीकल वाल्व तंत्र (Ileo-caecal valve)"
+    ],
     "a": 2,
-    "e": "<b>Explanation:</b> Option 1 regulates the entry of food from the oesophagus into the cardiac stomach. Option 2 controls the exit of chyme from the pyloric stomach into the duodenum. Option 3 is correct because the common bile duct (formed by the cystic and hepatic ducts) joins the pancreatic duct to form the common hepato-pancreatic duct. The opening of this joint conduit into the 'C' shaped duodenum is guarded by a specialized muscular valve called the sphincter of Oddi. Option 4 prevents the backflow of fecal matter from the caecum into the ileum."
+    "e": "Accessory digestive ducts duodenum mein secretions pour karne ke liye specialized muscular sphincters dwara tightly regulated hoti hain.\n\n• Option A is Incorrect because gastro-oesophageal sphincter oesophagus aur cardiac stomach ke junction par food entry aur reflux control karta hai.\n\n• Option B is Incorrect because pyloric sphincter stomach se chyme ki duodenal entry ko regulate karta hai.\n\n• Option C is Correct because common bile duct aur main pancreatic duct unite hokar 'Ampulla of Vater' (common hepato-pancreatic duct) banati hain, jinki duodenum mein opening ko muscular valve 'Sphincter of Oddi' guard karta hai.\n\n• Option D is Incorrect because ileo-caecal valve ileum aur caecum ke beech fecal backflow ko prevent karta hai."
   },
   {
     "p_id": "bpsc_dig_v1_11",
     "qe": "An enzyme analysis of fluids collected from the human oral cavity demonstrates active starch hydrolysis. What are the operational parameters of this chemical process?",
     "qh": "मानव मौखिक गुहा (oral cavity) से एकत्र किए गए तरल पदार्थों का एक एंजाइम विश्लेषण सक्रिय स्टार्च हाइड्रोलिसिस प्रदर्शित करता है। इस रासायनिक प्रक्रिया के परिचालन पैरामीटर (operational parameters) क्या हैं?",
-    "o": [
+    "oe": [
       "About 90 per cent of starch is converted into glucose at a highly alkaline pH of 8.8.",
       "About 30 per cent of starch is hydrolysed by salivary amylase at an optimum pH of 6.8 into maltose.",
       "Proteins are cleaved into proteoses by lysozymes under completely dry conditions.",
       "Lipids are emulsified into small micelle structures via active carrier proteins."
     ],
+    "oh": [
+      "8.8 के अत्यधिक क्षारीय पीएच पर लगभग 90 प्रतिशत स्टार्च ग्लूकोज में परिवर्तित हो जाता है।",
+      "लार एमाइलेज (टाइलिन) द्वारा 6.8 के इष्टतम पीएच पर लगभग 30 प्रतिशत स्टार्च माल्टोज में हाइड्रोलाइज्ड होता है।",
+      "पूरी तरह से सूखी परिस्थितियों में लाइसोजाइम द्वारा प्रोटीन को प्रोटीओस में विभाजित किया जाता है।",
+      "सक्रिय वाहक प्रोटीन के माध्यम से लिपिड छोटे मिसेल संरचनाओं में इमल्सीकृत होते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 presents incorrect percentage and pH values, as the oral cavity is near-neutral rather than strongly alkaline. Option 2 is correct because chemical digestion initiates in the oral cavity through the hydrolytic action of the carbohydrate-splitting enzyme salivary amylase. This enzyme breaks down approximately 30 per cent of dietary starch at an optimum pH of 6.8 into the disaccharide maltose. Option 3 is incorrect because lysozyme functions as an antibacterial agent, not a proteolytic enzyme. Option 4 describes fat emulsification by bile salts in the small intestine."
+    "e": "Carbohydrate digestion oral cavity ke buccal environment mein salivary enzymatic action se initiate hota hai.\n\n• Option A is Incorrect because 90% starch digestion mouth mein nahi hoti aur buccal cavity ka pH alkaline 8.8 nahi hota.\n\n• Option B is Correct because saliva mein present carbohydrate-splitting enzyme 'Salivary Amylase' (Ptyalin) slightly acidic optimum pH 6.8 par dietary starch ke approximately 30 per cent part ko hydrolyze karke disaccharide 'Maltose' (+ isomaltose/dextrins) mein convert karta hai.\n\n• Option C is Incorrect because lysozyme antibacterial agent hai jo bacterial cell wall breakdown karta hai, proteolytic cleavage nahi karta.\n\n• Option D is Incorrect because lipid micelle formation bile salts dwara duodenum mein perform hoti hai."
   },
   {
     "p_id": "bpsc_dig_v1_12",
     "qe": "A patient suffers from an autoimmune mutation that selectively destroys the parietal (oxyntic) cells of the gastric glands. Which of the following consequences will occur?",
     "qh": "एक रोगी एक ऑटोइम्यून उत्परिवर्तन से पीड़ित है जो गैस्ट्रिक ग्रंथियों की पार्श्वीय या ऑक्सीन्टिक कोशिकाओं (parietal or oxyntic cells) को चुनिंदा रूप से नष्ट कर देता है। निम्नलिखित में से कौन सा परिणाम होगा?",
-    "o": [
+    "oe": [
       "Complete failure to secrete the proenzyme pepsinogen.",
       "Deficient secretion of hydrochloric acid and intrinsic factor, directly impairing vitamin B12 absorption.",
       "An immediate overproduction of protective alkaline mucus neck fluids.",
       "The rapid structural transformation of the stomach lining into an intestinal brush border."
     ],
+    "oh": [
+      "प्रोएंजाइम पेप्सिनोजेन को स्रावित करने में पूर्ण विफलता।",
+      "हाइड्रोक्लोरिक एसिड ($HCl$) और आंतरिक कारक (Castle's Intrinsic Factor) का कम स्राव, जिससे विटामिन B12 का अवशोषण सीधे बाधित होता है।",
+      "सुरक्षात्मक क्षारीय श्लेष्म गर्दन तरल पदार्थ का तत्काल अतिउत्पादन।",
+      "पेट की परत का आंतों के ब्रश बॉर्डर में तेजी से संरचनात्मक रूपांतरण।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the loss of peptic or chief cells, which secrete the zymogen pepsinogen. Option 2 is correct because the gastric glands contain three primary cell types: mucus neck cells, peptic/chief cells, and parietal/oxyntic cells. The parietal/oxyntic cells are responsible for secreting hydrochloric acid ($HCl$) and intrinsic factor [a glycoprotein essential for the absorption of vitamin B12 in the lower intestine]. Destruction of these cells causes achlorhydria and impairs vitamin B12 absorption. Option 3 and Option 4 present inaccurate physiological outcomes."
+    "e": "Gastric mucosa specialized secretor cells contain karti hai jahan parietal cells gastric chemical environment aur erythropoiesis ke liye crucial factors produce karti hain.\n\n• Option A is Incorrect because proenzyme pepsinogen Peptic ya Chief cells (zymogenic cells) dwara secrete hota hai.\n\n• Option B is Correct because Parietal (Oxyntic) cells do primary secretions release karti hain: Hydrochloric Acid ($HCl$) jo gastric pH 1.8 maintain karta hai, aur Castle's Intrinsic Factor jo terminal ileum mein Vitamin $B_{12}$ absorption ke liye essential hota hai; in cells ke destroy hone se achlorhydria aur Pernicious Anemia develop hota hai.\n\n• Option C is Incorrect because mucus secretion Mucus Neck cells ka independent function hai.\n\n• Option D is Incorrect because autoimmune parietal damage metaplasia lead kar sakta hai par instant brush border formation nahi karta."
   },
   {
     "p_id": "bpsc_dig_v1_13",
     "qe": "How is the proenzyme pepsinogen activated within the stomach lumen, and what specific biochemical conversions does the active enzyme perform?",
     "qh": "आमाशय लुमेन (stomach lumen) के भीतर प्रोएंजाइम पेप्सिनोजेन (pepsinogen) कैसे सक्रिय होता है, और सक्रिय एंजाइम कौन से विशिष्ट जैव रासायनिक रूपांतरण करता है?",
-    "o": [
+    "oe": [
       "It is activated by enterokinase to convert complex lipids into diacylglycerols.",
       "It is activated on exposure to hydrochloric acid into active pepsin, which converts proteins into proteoses and peptones.",
       "It binds to alkaline pancreatic juices to split starch polymers into maltose units.",
       "It undergoes automatic structural cleavage by specialized salivary lysozymes."
     ],
+    "oh": [
+      "जटिल लिपिड को डायसिलग्लिसरॉल में बदलने के लिए यह एंटरोकाइनेज द्वारा सक्रिय होता है।",
+      "हाइड्रोक्लोरिक एसिड ($HCl$) के संपर्क में आने पर यह सक्रिय पेप्सिन में बदल जाता है, जो प्रोटीन को प्रोटीओस और पेप्टोन में परिवर्तित करता है।",
+      "स्टार्च पॉलिमर को माल्टोज इकाइयों में विभाजित करने के लिए यह क्षारीय अग्नाशयी रस से जुड़ता है।",
+      "यह विशेष लार लाइसोजाइम द्वारा स्वचालित संरचनात्मक दरार से गुजरता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes trypsinogen activation by enterokinase in the small intestine, not gastric pathways. Option 2 is correct because the stomach wall generates churning movements to mix food with acidic gastric secretions, forming chyme. The inactive proenzyme pepsinogen, when exposed to the low pH ($pH\\ 1.8$) provided by hydrochloric acid ($HCl$), undergoes a structural shift into the active proteolytic enzyme pepsin. Pepsin then hydrolyzes dietary proteins into smaller peptide fragments termed proteoses and peptones. Option 3 and Option 4 mix up unrelated pancreatic and salivary components."
+    "e": "Stomach lumen primary protein digestion ke liye acidic zymogen activation mechanism use karta hai.\n\n• Option A is Incorrect because enterokinase duodenal enzyme hai jo trypsinogen ko activate karta hai.\n\n• Option B is Correct because inactive zymogen 'Pepsinogen' jab gastric $HCl$ ($pH \\approx 1.8$) ke contact mein aata hai, toh autocatalytically active proteolytic enzyme 'Pepsin' mein convert ho jata hai; Pepsin intact dietary proteins ko hydrolyze karke smaller intermediate soluble fragments 'Proteoses' aur 'Peptones' (peptides) mein breakdown karta hai.\n\n• Option C is Incorrect because starch digestion amylases karte hain aur pepsin alkaline pancreatic juice mein denature ho jata hai.\n\n• Option D is Incorrect because lysozyme salivary bactericidal enzyme hai."
   },
   {
     "p_id": "bpsc_dig_v1_14",
     "qe": "The pancreatic juice contains multiple inactive zymogens. What specific biochemical trigger initiates the activation cascade of these proteolytic enzymes within the small intestine?",
     "qh": "अग्न्याशयी रस (pancreatic juice) में कई निष्क्रिय जाइमोजन होते हैं। कौन सा विशिष्ट जैव रासायनिक ट्रिगर छोटी आंत के भीतर इन प्रोटीयोलाइटिक एंजाइमों के सक्रियण कैस्केड (activation cascade) को शुरू करता है?",
-    "o": [
+    "oe": [
       "Hydrochloric acid activates chymotrypsinogen directly into operational carboxypeptidase.",
       "Enterokinase secreted by the intestinal mucosa activates trypsinogen into active trypsin, which then activates the other enzymes.",
       "Bile pigments physically split trypsinogen molecules into small lipid micelles.",
       "Brunner's sub-mucosal glands secrete active pepsin to cleave the proenzymes."
     ],
+    "oh": [
+      "हाइड्रोक्लोरिक एसिड काइमोट्रिप्सिनोजेन को सीधे परिचालन कार्बोक्सीपेप्टिडेस में सक्रिय करता है।",
+      "आंतों के म्यूकोसा द्वारा स्रावित एंटरोकाइनेज (Enterokinase) ट्रिप्सिनोजेन को सक्रिय ट्रिप्सिन में बदलता है, जो फिर अन्य एंजाइमों को सक्रिय करता है।",
+      "पित्त वर्णक भौतिक रूप से ट्रिप्सिनोजेन अणुओं को छोटे लिपिड मिसेल में विभाजित करते हैं।",
+      "ब्रूनर की सब-म्यूकोसल ग्रंथियां प्रोएंजाइम को साफ करने के लिए सक्रिय पेप्सिन का स्राव करती हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes stomach activation dynamics, not the small intestine environment. Option 2 is correct because the pancreas secretes inactive enzymes including trypsinogen, chymotrypsinogen, and procarboxypeptidases through the hepato-pancreatic duct. Once this mixture enters the duodenum, enterokinase [an enzyme secreted by the intestinal mucosal epithelium] converts trypsinogen into active trypsin. Trypsin then acts as the central activator, cleaving and activating the remaining chymotrypsinogen and procarboxypeptidases into their mature forms. Option 3 is incorrect because bile pigments are metabolic wastes that do not act as enzymes or activators. Option 4 is incorrect because pepsin is inactive in the alkaline intestine."
+    "e": "Pancreatic proteolytic zymogens autodigestion se protect karne ke liye inactive form mein release hote hain aur duodenal mucosa par cascade mechanism se activate hote hain.\n\n• Option A is Incorrect because gastric $HCl$ pancreatic enzymes ko activate nahi karta balki alkaline duodenal medium required hota hai.\n\n• Option B is Correct because intestinal mucosal epithelium se secrete hone wala enzyme 'Enterokinase' (enteropeptidase) inactive 'Trypsinogen' ko cleave karke active 'Trypsin' banata hai; active trypsin phir ek master activator ki tarah chymotrypsinogen aur procarboxypeptidase ko unke active forms (Chymotrypsin aur Carboxypeptidase) mein activate karta hai.\n\n• Option C is Incorrect because bile pigments (bilirubin/biliverdin) non-enzymatic waste excretory products hain.\n\n• Option D is Incorrect because Brunner's glands non-enzymatic alkaline mucus secrete karti hain."
   },
   {
     "p_id": "bpsc_dig_v1_15",
     "qe": "Biochemical analysis of a fluid sample collected from the human duodenum shows a complete absence of digestive enzymes, yet it successfully activates lipases and emulsifies neutral fats. Identify this secretion.",
     "qh": "मानव ग्रहणी (duodenum) से एकत्र किए गए तरल पदार्थ के नमूने का जैव रासायनिक विश्लेषण पाचक एंजाइमों की पूर्ण अनुपस्थिति दर्शाता है, फिर भी यह लाइपेस को सफलतापूर्वक सक्रिय करता है और वसा को इमल्सीकृत करता है। इस स्राव को पहचानें।",
-    "o": [
+    "oe": [
       "Pure alkaline pancreatic juice secretion",
       "Bile released into the duodenum",
       "Succus entericus derived from brush border cells",
       "Fluid sphaerosome discharge from the sub-mucosa"
     ],
+    "oh": [
+      "शुद्ध क्षारीय अग्नाशयी रस स्राव",
+      "ग्रहणी में जारी किया गया पित्त रस (Bile)",
+      "ब्रश बॉर्डर कोशिकाओं से प्राप्त सक्कस एंटेरिकस (आंत्र रस)",
+      "सब-म्यूकोसा से तरल स्फेरोसोम डिस्चार्ज"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because pancreatic juice contains enzymes like amylases, lipases, and nucleases. Option 2 is correct because the text notes that the bile released into the duodenum contains bile pigments (bilirubin and biliverdin), bile salts, cholesterol, and phospholipids, but *no enzymes*. Despite lacking intrinsic enzymatic activity, bile performs a crucial physical function by breaking down large fat aggregates into small micelles, a process termed emulsification [the suspension of lipid droplets in an aqueous phase]. Bile also activates lipases. Option 3 is incorrect because succus entericus is rich in disaccharidases and dipeptidases. Option 4 describes an intracellular plant organelle concept."
+    "e": "Bile ek unique digestive secretion hai jo digestion mein critically participate karta hai bina koi intrinsic digestive enzymes contain kiye.\n\n• Option A is Incorrect because pancreatic juice mein proteolytic, amylolytic, lipolytic aur nucleolytic active enzymes present hote hain.\n\n• Option B is Correct because liver se aane wale 'Bile' mein bile salts (sodium glycocholate/taurocholate), phospholipids aur cholesterol hote hain par *koi enzymes nahi hote*; yeh large fat globules ke surface tension ko reduce karke unhe small micelles mein breakdown (Emulsification) karta hai aur pancreatic lipase ko activate karta hai.\n\n• Option C is Incorrect because succus entericus disaccharidases, dipeptidases aur lipases jaise terminal digestive enzymes se rich hota hai.\n\n• Option D is Incorrect because sphaerosomes plant intracellular lipid storage organelles hain."
   },
   {
     "p_id": "bpsc_dig_v1_16",
     "qe": "What constituents make up the intestinal juice known as succus entericus, and what physiological microenvironment supports its enzymatic activities?",
     "qh": "कौन से घटक आंतों के रस (intestinal juice) को बनाते हैं जिसे सक्कस एंटेरिकस (succus entericus) कहा जाता है, और कौन सा शारीरिक सूक्ष्म वातावरण इसकी एंजाइमी गतिविधियों का समर्थन करता है?",
-    "o": [
+    "oe": [
       "Pure hydrochloric acid combined with peptic zymogens maintaining an acidic pH of 1.8.",
       "Secretions of the brush border cells along with goblet cell mucus, supported by pancreatic bicarbonates providing an alkaline pH of 7.8.",
       "Bilirubin and biliverdin crystals suspended within loose connective tissues.",
       "Salivary amylase complexes operating within the deep stacks of Golgi cisternae."
     ],
+    "oh": [
+      "1.8 का अम्लीय पीएच बनाए रखने वाले पेप्टिक जाइमोजेन के साथ संयुक्त शुद्ध हाइड्रोक्लोरिक एसिड।",
+      "गॉब्लेट सेल बलगम के साथ ब्रश बॉर्डर कोशिकाओं के स्राव, 7.8 का एक क्षारीय पीएच प्रदान करने वाले अग्नाशयी बाइकार्बोनेट द्वारा समर्थित।",
+      "ढीले संयोजी ऊतकों के भीतर निलंबित बिलीरुबिन और बिलीवार्डिन क्रिस्टल।",
+      "गोल्गी सिस्टर्न के गहरे ढेरों के भीतर काम करने वाले लार एमाइलेज कॉम्प्लेक्स।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the gastric juice microenvironment of the stomach. Option 2 is correct because the intestinal juice, or succus entericus, is composed of the secretions of the brush border cells of the mucosa combined with the lubricating mucus of the goblet cells. To protect the mucosa from acidic chyme and optimize enzyme performance, bicarbonates from the pancreas along with sub-mucosal Brunner's glands provide an alkaline microenvironment ($pH\\ 7.8$) where disaccharidases, dipeptidases, and lipases operate. Option 3 describes bile components that do not form succus entericus. Option 4 is an chemically invalid combination of salivary and organelle terms."
+    "e": "Succus entericus mucosal epithelial cells ki secretions aur protective lubricating mucus ka enzymatic cocktail hota hai.\n\n• Option A is Incorrect because $HCl$ aur pH 1.8 stomach ke gastric juice ka microenvironment banate hain.\n\n• Option B is Correct because intestinal juice ya 'Succus Entericus' mucosal brush border cells ke secretions (disaccharidases, dipeptidases, lipases, nucleosidases) aur goblet cells ke mucus se milkar banta hai; pancreatic bicarbonate ions aur Brunner's gland secretions ke sath yeh alkaline microenvironment ($pH \\approx 7.8$) create karta hai jo intestinal mucosa ko protect karta hai aur enzymatic actions facilitate karta hai.\n\n• Option C is Incorrect because bile pigments liver excretory metabolites hain jo succus entericus ka part nahi hain.\n\n• Option D is Incorrect because Golgi cisternae intracellular sorting organelles hain."
   },
   {
     "p_id": "bpsc_dig_v1_17",
     "qe": "A nutrition lab evaluates the energy yield of a food sample by burning 1 gram of pure fat inside a bomb calorimeter. What specific measurement value are they recording?",
     "qh": "एक पोषण प्रयोगशाला बॉम्ब कैलोरीमीटर (bomb calorimeter) के भीतर 1 ग्राम शुद्ध वसा को जलाकर एक भोजन के नमूने के ऊर्जा उत्पादन का मूल्यांकन करती है। वे कौन सा विशिष्ट मापन मान (measurement value) रिकॉर्ड कर रहे हैं?",
-    "o": [
+    "oe": [
       "The physiologic value, which will register exactly 9.0 kcal/g.",
       "The gross calorific value, which will register exactly 9.45 kcal/g.",
       "The metabolic calorie count, which will register exactly 4.1 kcal/g.",
       "The apparent energy index, which will register exactly 5.65 kcal/g."
     ],
+    "oh": [
+      "शारीरिक मान (Physiologic value), जो ठीक 9.0 kcal/g दर्ज करेगा।",
+      "सकल कैलोरी मान (Gross calorific value), जो ठीक 9.45 kcal/g दर्ज करेगा।",
+      "चयापचय कैलोरी गणना, जो ठीक 4.1 kcal/g दर्ज करेगी।",
+      "स्पष्ट ऊर्जा सूचकांक, जो ठीक 5.65 kcal/g दर्ज करेगा।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because the physiologic value [the actual net energy derived by the body after systemic digestion and heat loss] for fat is 9.0 kcal/g, but this is measured in vivo, not in a bomb calorimeter. Option 2 is correct because the text notes that the amount of heat liberated from the complete combustion of 1 g of food inside a bomb calorimeter [a closed metal chamber filled with compressed oxygen] is defined as its gross calorific value. For carbohydrates, proteins, and fats, these gross values are 4.1 kcal/g, 5.65 kcal/g, and 9.45 kcal/g, respectively. Option 3 and Option 4 represent carbohydrate and protein metrics or fabricated terms."
+    "e": "Nutritional energetics mein total heat liberation aur biological metabolic energy yield ke alag-alag standardized quantitative benchmarks hote hain.\n\n• Option A is Incorrect because 9.0 kcal/g fat ki physiological fuel value (in vivo actual biological yield) hai, bomb calorimeter gross value nahi.\n\n• Option B is Correct because bomb calorimeter (closed metal chamber with oxygen) ke andar 1 gram pure food ke complete laboratory combustion se release hone wali actual total heat ko 'Gross Calorific Value' kehte hain; Fats ke liye gross value $9.45\\text{ kcal/g}$ hoti hai (Carbohydrates = $4.1\\text{ kcal/g}$, Proteins = $5.65\\text{ kcal/g}$).\n\n• Option C is Incorrect because 4.1 kcal/g carbohydrate ka gross calorific value hai.\n\n• Option D is Incorrect because 5.65 kcal/g protein ka gross calorific value hota hai."
   },
   {
     "p_id": "bpsc_dig_v1_18",
     "qe": "What specific operational function is performed by the human large intestine during the final stages of the digestive cycle?",
     "qh": "पाचन चक्र के अंतिम चरणों के दौरान मानव बड़ी आंत (large intestine) द्वारा कौन सा विशिष्ट परिचालन कार्य किया जाता है?",
-    "o": [
+    "oe": [
       "The extensive enzymatic breakdown of biomacromolecules via nucleases.",
       "The absorption of some water, minerals, and certain drugs, alongside mucus secretion for waste lubrication.",
       "The active transport of monosaccharides across brush border villi.",
       "The complete conversion of simple sugar residues into glycogen particles."
     ],
+    "oh": [
+      "न्यूक्लीज़ के माध्यम से बायोमैक्रोमोलेक्यूल्स का व्यापक एंजाइमी टूटना।",
+      "अपशिष्ट स्नेहन के लिए बलगम स्राव के साथ-साथ कुछ पानी, खनिजों और कुछ दवाओं का अवशोषण।",
+      "ब्रश बॉर्डर विली के पार मोनोसेकेराइड का सक्रिय परिवहन।",
+      "साधारण शर्करा अवशेषों का ग्लाइकोजन कणों में पूर्ण रूपांतरण।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes duodenal digestion processes managed by pancreatic secretions. Option 2 is correct because the source text explicitly clarifies that no significant digestive activity occurs in the large intestine. Its physiological functions are restricted to: (1) the absorption of some water, mineral ions, and specific pharmaceutical drugs, and (2) the secretion of mucus to adhere undigested waste particles together and lubricate them for easy elimination through the rectum. Option 3 describes small intestinal absorption mechanics. Option 4 describes liver glycogenesis pathways."
+    "e": "Large intestine mein koi significant chemical digestive enzymatic activity nahi hoti, balki yeh compaction aur selective absorption handle karti hai.\n\n• Option A is Incorrect because biomacromolecule chemical digestion small intestine mein complete ho jati hai.\n\n• Option B is Correct because large intestine ke primary physiological functions hain: 1. Remaining water, minerals aur specific drugs ka absorption karna, aur 2. Mucus secrete karna jo undigested waste particles ko bind karta hai aur unke smooth rectal passage ke liye lubrication provide karta hai.\n\n• Option C is Incorrect because monosaccharide active absorption small intestinal villi mein complete ho jata hai.\n\n• Option D is Incorrect because glycogenesis liver aur skeletal muscle cells ka internal metabolic pathway hai."
   },
   {
     "p_id": "bpsc_dig_v1_19",
     "qe": "What physical structural mechanism prevents the abnormal backflow of fecal matter from the large intestine into the terminal segment of the small intestine?",
     "qh": "कौन सा विशिष्ट भौतिक संरचनात्मक तंत्र (structural mechanism) बड़ी आंत से मल पदार्थ के छोटी आंत के अंतिम खंड में असामान्य बैकफ्लो (उल्टा प्रवाह) को रोकता है?",
-    "o": [
+    "oe": [
       "The muscular pyloric sphincter at the duodenal exit.",
       "The ileo-caecal valve separating the ileum and caecum.",
       "The gastro-oesophageal muscular ring passing through the diaphragm.",
       "The tight connective tissue border of the vermiform appendix."
     ],
+    "oh": [
+      "ग्रहणी निकास पर पेशीय पाइलोरिक स्फिंक्टर।",
+      "इलियम और सीकम को अलग करने वाला इलियो-सीकल वाल्व (Ileo-caecal valve)।",
+      "डायाफ्राम से गुजरने वाली गैस्ट्रो-ओसोफेगल पेशी वलय।",
+      "कृमिरूप परिशेष (vermiform appendix) की तंग संयोजी ऊतक सीमा।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 controls exit from the stomach, not the lower bowel. Option 2 is correct because the undigested, unabsorbed waste material termed faeces passes from the small intestine's terminal segment (ileum) into the large intestine's first segment (caecum). The text notes that this transit is regulated by the ileo-caecal valve, which functions mechanically to prevent any backflow of fecal matter into the small intestine. Option 3 regulates the upper stomach entrance. Option 4 describes a vestigial appendix projection that has no valve gating capability."
+    "e": "Gastrointestinal tract ke alag-alag segments unidirectional flow maintain karne ke liye anatomical sphincters aur flap valves use karte hain.\n\n• Option A is Incorrect because pyloric sphincter stomach se duodenum mein chyme transit regulate karta hai.\n\n• Option B is Correct because small intestine ke terminal part (ileum) aur large intestine ke initial pouch (caecum) ke junction par 'Ileo-caecal Valve' present hota hai, jo undigested faeces ko caecum mein aane deta hai par ileum mein retrograde backflow ko strictly block karta hai.\n\n• Option C is Incorrect because gastro-oesophageal junction stomach entrance par located hota hai.\n\n• Option D is Incorrect because vermiform appendix blind-ended vestigial lymphoid pouch hai, valve nahi."
   },
   {
     "p_id": "bpsc_dig_v1_20",
     "qe": "A medical student tracks the absorption paths of monosaccharides like glucose and simple amino acids across the intestinal mucosa. What transport mechanisms manage these movements?",
     "qh": "एक मेडिकल छात्र आंतों के म्यूकोसा (intestinal mucosa) के पार ग्लूकोज जैसे मोनोसैकराइड और सरल अमीनो एसिड के अवशोषण पथों को ट्रैक करता है। कौन से परिवहन तंत्र इन गतियों को प्रबंधित करते हैं?",
-    "o": [
+    "oe": [
       "They are absorbed entirely via passive osmosis driven by thick calcium pectate sheaths.",
       "They can be absorbed by simple diffusion depending on concentration gradients, via facilitated transport utilizing carrier proteins, or through energy-dependent active transport.",
       "They undergo continuous extracellular conversion into lipid micelle vesicles before entry.",
       "They cross exclusively through the porous peripheral triplet fibrils of the local axoneme."
     ],
+    "oh": [
+      "वे पूरी तरह से मोटे कैल्शियम पेक्टेट शीथ द्वारा संचालित निष्क्रिय परासरण के माध्यम से अवशोषित होते हैं।",
+      "उन्हें सांद्रता प्रवणता के आधार पर सरल विसरण द्वारा, वाहक प्रोटीन का उपयोग करके सुगम परिवहन द्वारा, या ऊर्जा-निर्भर सक्रिय परिवहन (active transport) के माध्यम से अवशोषित किया जा सकता है।",
+      "वे प्रवेश से पहले लिपिड मिसेल पुटिकाओं में निरंतर बाह्यकोशिकीय रूपांतरण से गुजरते हैं।",
+      "वे विशेष रूप से स्थानीय एक्सोनेम के छिद्रपूर्ण परिधीय ट्रिप्लेट फाइब्रिल्स के माध्यम से पार करते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because osmosis is specific to water transport driven by osmotic gradients. Option 2 is correct because the text notes that absorption across the intestinal mucosa utilizes multiple transport pathways. Small amounts of glucose and amino acids can move via simple diffusion down concentration gradients. Alternatively, they can utilize carrier proteins in a process called facilitated transport, or move against concentration gradients via energy-dependent active transport [a process coupled with ATP hydrolysis that often moves solutes alongside $Na^+$ ions]. Option 3 describes fatty acid and glycerol processing. Option 4 describes ciliary internal structures that are irrelevant to mucosal transport mechanics."
+    "e": "Intestinal mucosa ke across nutrient absorption solute concentration gradient aur cellular metabolic transport channels par depend karti hai.\n\n• Option A is Incorrect because osmosis strictly water movement describe karta hai aur calcium pectate plant middle lamella ka cementing material hai.\n\n• Option B is Correct because small quantities of glucose, amino acids aur electrolytes ($Cl^-$) concentration gradient ke along simple diffusion se absorb ho sakte hain; fructose jaise substances carrier ions ki help se facilitated transport use karte hain; jabki bulk glucose aur amino acids $Na^+$-coupled active transport ($ATP$-driven) ke through absorption execute karte hain.\n\n• Option C is Incorrect because micelle formation insoluble fatty acids aur glycerol ke transport ke liye specific hai.\n\n• Option D is Incorrect because axoneme cilia/flagella ka internal core cytoskeleton structure hai."
   },
-  
   {
     "p_id": "bpsc_dig_v2_01",
     "qe": "Why must breakdown products of lipids, such as fatty acids and free glycerol, undergo conversion into chylomicrons within the mucosal cells before entering systemic circulation?",
     "qh": "वसा के टूटने वाले उत्पादों, जैसे कि फैटी एसिड और मुक्त ग्लिसरॉल, को प्रणालीगत परिसंचरण (systemic circulation) में प्रवेश करने से पहले म्यूकोसल कोशिकाओं के भीतर काइलोमाइक्रोन (chylomicrons) में परिवर्तित होना क्यों आवश्यक है?",
-    "o": [
+    "oe": [
       "They are highly water-soluble molecules that would otherwise undergo rapid chemical ionization within the blood stream.",
       "They are water-insoluble and cannot be absorbed directly into the blood capillaries, requiring dynamic transport via lacteals.",
       "They actively inhibit the secretion of local mucosal hormones required for active transport.",
       "They must be physically filtered by the rigid cellulosic cell wall of surrounding microvilli paths."
     ],
+    "oh": [
+      "वे अत्यधिक पानी में घुलनशील अणु हैं जो अन्यथा रक्त प्रवाह के भीतर तेजी से रासायनिक आयनीकरण से गुजरेंगे।",
+      "वे पानी में अघुलनशील हैं और सीधे रक्त केशिकाओं में अवशोषित नहीं हो सकते हैं, जिसके लिए लैक्टियल्स (Lacteals) के माध्यम से गतिशील परिवहन की आवश्यकता होती है।",
+      "वे सक्रिय परिवहन के लिए आवश्यक स्थानीय म्यूकोसल हार्मोन के स्राव को सक्रिय रूप से रोकते हैं।",
+      "उन्हें आसपास के माइक्रोविली पथों की कठोर सेल्युलोसिक कोशिका भित्ति द्वारा भौतिक रूप से फ़िल्टर किया जाना चाहिए।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because fatty acids and glycerol are non-polar lipophilic [lipid-loving, hydrophobic] molecules and are entirely water-insoluble. Option 2 is correct because the insoluble nature of fatty acids and glycerol prevents them from dissolving in the aqueous chyme or crossing directly into the blood capillaries. They are first incorporated into small water-soluble water-droplet aggregates called micelles [spherical aggregates of amphipathic lipids in aqueous solutions] that diffuse into the intestinal mucosa. Inside the mucosal cells, they are re-esterified and structuralized into very small, protein-coated fat globules called chylomicrons. These chylomicrons enter the specialized lymph vessels called lacteals [lymphatic capillaries of the small intestine villi] because their large size blocks direct blood entry, eventually reaching the blood stream via lymphatic drainage. Option 3 is a distractor regarding hormonal inhibition. Option 4 describes plant cell structural parameters that do not exist in animal cells."
+    "e": "Lipids hydrophobic non-polar biomolecules hote hain jinhe aqueous systemic circulation mein transport karne ke liye specialized lipo-protein packaging require hoti hai.\n\n• Option A is Incorrect because fatty acids water-insoluble lipophilic molecules hote hain, water-soluble nahi.\n\n• Option B is Correct because insoluble fatty acids aur glycerol pehle bile salts ke sath 'Micelles' banakar mucosal cells mein enter karte hain; wahan endoplasmic reticulum mein yeh triglycerides mein re-synthesize hokar protein-coated fat globules 'Chylomicrons' banate hain, jo capillaries ki jagah villi ke specialized lymph vessels 'Lacteals' mein release hote hain.\n\n• Option C is Incorrect because lipid digestion products enteric hormones ko paralyze nahi karte.\n\n• Option D is Incorrect because animal intestinal cells mein cellulosic cell walls absent hoti hain."
   },
   {
     "p_id": "bpsc_dig_v2_02",
     "qe": "Which of the following biological descriptions accurately characterizes the mechanical and regulatory nature of the defaecation process in humans?",
     "qh": "निम्नलिखित में से कौन सा जैविक विवरण मनुष्यों में मलत्याग (defaecation) की प्रक्रिया की यांत्रिक और नियामक प्रकृति को सटीक रूप से वर्गीकृत करता है?",
-    "o": [
+    "oe": [
       "A completely involuntary spinal reflex triggered by active hormonal tracking inside the duodenum.",
       "A voluntary mechanical process initiated by a neural reflex and executed by mass peristaltic movements.",
       "A passive osmotic clearance process driven by the calcium pectate middle lamella.",
       "An active transport mechanism managed by the 9+2 axoneme arrangement of mucosal cells."
     ],
+    "oh": [
+      "ग्रहणी के अंदर सक्रिय हार्मोनल ट्रैकिंग द्वारा शुरू की गई एक पूरी तरह से अनैच्छिक रीढ़ की हड्डी प्रतिवर्त।",
+      "एक स्वैच्छिक यांत्रिक प्रक्रिया (voluntary process) जो एक तंत्रिका प्रतिवर्त द्वारा शुरू की जाती है और बड़े पैमाने पर पेरिस्टाल्टिक गतिविधियों द्वारा निष्पादित की जाती है।",
+      "कैल्शियम पेक्टेट मध्य लैमेला द्वारा संचालित एक निष्क्रिय परासरणी निकासी प्रक्रिया।",
+      "म्यूकोसल कोशिकाओं की 9+2 एक्सोनेम व्यवस्था द्वारा प्रबंधित एक सक्रिय परिवहन तंत्र।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because defaecation is ultimately under conscious voluntary control, not completely involuntary or driven by duodenal hormones. Option 2 is correct because the text notes that when digestive wastes solidify into coherent faeces within the rectum, they stretch the rectal wall and initiate a neural reflex that causes an urge or desire for its removal. The final egestion to the outside through the anal opening is a voluntary process executed by coordinated mass peristaltic movements [intense, sweeping waves of smooth muscle contraction that propel waste over long distances in the colon]. Option 3 describes plant tissue cementing mechanisms. Option 4 describes microtubular ciliary movement machinery, which has no role in bulk bowel contractions."
+    "e": "Defaecation gastrointestinal waste elimination ka terminal event hai jo sensory neural stimulation aur somatic voluntary motor control ko integrate karta hai.\n\n• Option A is Incorrect because defaecation completely involuntary nahi hota balki external anal sphincter voluntary control provide karta hai.\n\n• Option B is Correct because fecal matter jab rectum ko distend karta hai toh neural reflex initiate hota hai jo urge produce karta hai; final egestion ek 'Voluntary process' hai jo abdominal contraction aur colon ki 'Mass Peristaltic movements' dwara execute hoti hai.\n\n• Option C is Incorrect because calcium pectate plant tissue cementing component hai.\n\n• Option D is Incorrect because 9+2 axoneme eukaryotic cilia aur flagella ka microtubule doublet organization pattern hai."
   },
   {
     "p_id": "bpsc_dig_v2_03",
     "qe": "A patient presents with a distinct yellow discoloration of both the skin and the sclera of the eyes. Which of the following internal organ dysfunctions explains this clinical deposit?",
     "qh": "एक मरीज की त्वचा और आंखों के श्वेतपटल (sclera) दोनों में एक विशिष्ट पीला रंग दिखाई देता है। निम्नलिखित में से किस आंतरिक अंग की शिथिलता (dysfunction) इस नैदानिक जमाव की व्याख्या करती है?",
-    "o": [
+    "oe": [
       "The failure of gastric chief cells to secrete active intrinsic factors.",
       "The dysfunction of the liver leading to abnormal systemic deposits of bile pigments.",
       "The rapid accumulation of non-staining satellite chromosomes within local muscle fibers.",
       "The structural occlusion of the gastro-oesophageal sphincter by dense mucosal rugae."
     ],
+    "oh": [
+      "सक्रिय आंतरिक कारकों को स्रावित करने में गैस्ट्रिक मुख्य (चीफ) कोशिकाओं की विफलता।",
+      "यकृत (Liver) की शिथिलता जिसके कारण पित्त वर्णक (Bile pigments) का असामान्य प्रणालीगत जमाव होता है।",
+      "स्थानीय मांसपेशी फाइबर के भीतर गैर-धुंधला उपग्रह गुणसूत्रों का तेजी से संचय।",
+      "घने म्यूकोसल रूगे द्वारा जठर-ग्रासनली स्फिंक्टर का संरचनात्मक रोध।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes a pathway leading to pernicious anemia, not pigment accumulation. Option 2 is correct because the symptom profile describes Jaundice, a metabolic or structural digestive disorder where the liver is primarily affected. This pathology causes an abnormal accumulation and systemic deposit of bile pigments [waste breakdown products of hemoglobin, namely bilirubin and biliverdin] within the skin, mucous membranes, and eyes, creating a yellowish appearance. Option 3 is an inaccurate genetics distractor. Option 4 describes structural stomach layers that do not regulate global systemic pigments."
+    "e": "Bilirubin clearance hepatobiliary metabolism ka critical marker hai jiska systemic retention clinical jaundice produce karta hai.\n\n• Option A is Incorrect because intrinsic factor parietal cells secrete karti hain aur iski deficiency pernicious anemia cause karti hai.\n\n• Option B is Correct because Jaundice (पीलिया) condition mein primary affected organ 'Liver' hota hai; hepatic dysfunction ya biliary obstruction ke karan bile pigments (Bilirubin aur Biliverdin) blood aur interstitial tissues mein abnormally accumulate ho jaate hain, causing yellow discoloration of skin aur sclera of eyes.\n\n• Option C is Incorrect because satellite chromosomes chromosomal cytogenetics ka topic hain.\n\n• Option D is Incorrect because gastro-oesophageal sphincter achalasia/reflux se related hai, systemic hyperbilirubinemia se nahi."
   },
   {
     "p_id": "bpsc_dig_v2_04",
     "qe": "The reflex action of vomiting involves the forceful expulsion of stomach contents through the mouth. Where is the physiological coordination center for this response located?",
     "qh": "उल्टी (vomiting) की प्रतिवर्त क्रिया (reflex action) में मुंह के माध्यम से आमाशय की सामग्री का बलपूर्वक बाहर निकलना शामिल है। इस प्रतिक्रिया के लिए शारीरिक समन्वय केंद्र (coordination center) कहाँ स्थित होता है?",
-    "o": [
+    "oe": [
       "The inner circular muscle layer of the cardiac fundus.",
       "The vomit centre located specifically inside the medulla.",
       "The specialized sub-mucosal Brunner's glands inside the duodenum.",
       "The proteinaceous hub of the perpendicular centrosome apparatus."
     ],
+    "oh": [
+      "कार्डियक फंडस की आंतरिक वृत्ताकार पेशी परत।",
+      "मस्तिष्क के मड्यूला (Medulla) के अंदर विशेष रूप से स्थित उल्टी केंद्र (Vomit centre)।",
+      "ग्रहणी के अंदर विशेष सब-म्यूकोसल ब्रूनर की ग्रंथियां।",
+      "लंबवत सेंट्रोसोम तंत्र का प्रोटीनयुक्त केंद्र।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes target tissues that execute the contraction, not the coordination hub. Option 2 is correct because vomiting is a highly coordinated complex reflex action controlled by the specialized vomit centre in the medulla [the terminal brainstem region responsible for autonomic homeostatic functions]. It is classically preceded by a subjective feeling of discomfort known as nausea. Option 3 describes bicarbonate-secreting tissue, not neural networks. Option 4 describes an intracellular cell-division structure."
+    "e": "Emesis (vomiting) autonomic brainstem reflex circuits dwara coordinated retrograde expulsion action hai.\n\n• Option A is Incorrect because fundic smooth muscle effector tissue hai jo motor command follow karta hai, coordinating center nahi hai.\n\n• Option B is Correct because Vomiting (stomach contents ka mouth ke through forceful reverse expulsion) brainstem ke 'Medulla Oblongata' mein situated specialized 'Vomit Centre' dwara control aur coordinate hoti hai, jisse pehle typically nausea ki subjective feeling hoti hai.\n\n• Option C is Incorrect because Brunner's glands duodenal submucosa mein alkaline mucus secrete karti hain.\n\n• Option D is Incorrect because centrosome apparatus cell division ke spindle fibers organize karta hai."
   },
   {
     "p_id": "bpsc_dig_v2_05",
     "qe": "A gastrointestinal specialist assesses a patient experiencing an abnormal frequency of bowel movements accompanied by highly liquid faecal discharge. What is the immediate physiological implication of this condition?",
     "qh": "एक गैस्ट्रोइंटेस्टाइनल विशेषज्ञ एक मरीज का आकलन करता है जो अत्यधिक तरल मल निकास के साथ आंतों की असामान्य आवृत्ति (abnormal frequency of bowel movements) का सामना कर रहा है। इस स्थिति का तत्काल शारीरिक प्रभाव क्या है?",
-    "o": [
+    "oe": [
       "An immediate acceleration in the rate of membrane biogenesis across the SER.",
       "A significant reduction in the overall absorption of nutrients and food.",
       "The continuous active storage of glycogen particles inside the aleuroplast core.",
       "The complete conversion of simple solutes into complex calcium carbonate crystals."
     ],
+    "oh": [
+      "एसईआर में झिल्ली बायोगेनेसिस की दर में तत्काल तेजी।",
+      "पोषक तत्वों और भोजन के समग्र अवशोषण में उल्लेखनीय कमी (Reduces the absorption of food)।",
+      "एल्यूरोप्लास्ट कोर के अंदर ग्लाइकोजन कणों का निरंतर सक्रिय भंडारण।",
+      "सरल विलेय का जटिल कैल्शियम कार्बोनेट क्रिस्टल में पूर्ण रूपांतरण।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes a cytological growth pathway, not a macroscopic fluid effect. Option 2 is correct because the described pathology is Diarrhoea [the abnormal frequency of bowel movement and increased liquidity of the faecal discharge]. The rapid movement of chyme through the alimentary canal reduces the transit time within the absorptive mucosa of the small intestine, significantly decreasing the overall absorption of food and water, leading to dehydration. Option 3 and Option 4 present inaccurate plant-organelle and cell-wall distractors."
+    "e": "Diarrhoeal hypermotility intestinal mucosal transit time ko drastically reduce kar deti hai.\n\n• Option A is Incorrect because smooth endoplasmic reticulum lipid synthesis karta hai, fecal liquidity se direct link nahi hai.\n\n• Option B is Correct because Diarrhoea (bowel movements ki abnormal frequency aur faecal discharge ki excessive liquidity) intestinal transit velocity badha deti hai, jisse absorptive mucosa ko sufficient contact time nahi mil pata aur overall food/water absorption drastically reduce ho jata hai, leading to dehydration.\n\n• Option C is Incorrect because aleuroplasts plant cells ke protein-storing leucoplasts hote hain.\n\n• Option D is Incorrect because mineral crystallization pathological stone formation mein hoti hai, diarrhoeal transit mein nahi."
   },
   {
     "p_id": "bpsc_dig_v2_06",
     "qe": "What specific operational parameters differentiate the digestive disorder known as Constipation from the condition classified as Indigestion?",
     "qh": "कौन से विशिष्ट परिचालन पैरामीटर कब्ज (Constipation) के रूप में जाने जाने वाले पाचन विकार को अपच (Indigestion) के रूप में वर्गीकृत स्थिति से अलग करते हैं?",
-    "o": [
+    "oe": [
       "Constipation involves an overproduction of intrinsic factors, while indigestion destroys the local mesothelium.",
       "In constipation, faeces are retained within the colon due to irregular bowel movements; in indigestion, food is not properly broken down, leading to a feeling of fullness.",
       "Constipation is caused strictly by inadequate enzyme secretion, while indigestion stems from parasites like hookworms.",
       "In constipation, chylomicrons accumulate in the blood stream; in indigestion, the vomit center is disabled."
     ],
+    "oh": [
+      "कब्ज में आंतरिक कारकों का अधिक उत्पादन शामिल है, जबकि अपच स्थानीय मेसोथेलियम को नष्ट कर देता है।",
+      "कब्ज में, अनियमित मल त्याग के कारण मल कोलन के भीतर ही रुक जाता है; अपच में, भोजन ठीक से पचता नहीं है, जिससे पेट भरा हुआ महसूस होता है।",
+      "कब्ज पूरी तरह से अपर्याप्त एंजाइम स्राव के कारण होता है, जबकि अपच हुकवर्म जैसे परजीवियों से उत्पन्न होता है।",
+      "कब्ज में, रक्त प्रवाह में काइलोमाइक्रोन जमा होते हैं; अपच में, उल्टी केंद्र अक्षम हो जाता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 and Option 3 present scrambled etiologies that contradict the text. Option 2 is correct because the source text explicitly draws a line between these conditions: Constipation is a motility disorder where the faeces are retained within the colon because the regular muscular bowel movements occur irregularly. Indigestion is a failure of functional processing where food is not properly digested, creating a subjective sensation of fullness, often caused by inadequate enzyme secretion, anxiety, food poisoning, overeating, or highly spicy food. Option 4 describes an absorption state and a neural reflex component that are unrelated to the definitions."
+    "e": "Gastrointestinal disorders motility issues aur enzymatic processing failures ke basis par differentially diagnose kiye jaate hain.\n\n• Option A is Incorrect because intrinsic factor production gastric parietal cells se related hai, colon motility se nahi.\n\n• Option B is Correct because 'Constipation' ek colonic motility issue hai jisme irregular bowel movements ke karan faeces colon ke andar retain ho jaate hain; jabki 'Indigestion' ek digestive processing failure hai jisme inadequate enzymes, anxiety, food poisoning ya spicy food ke karan food properly digest nahi hota aur continuous fullness feel hoti hai.\n\n• Option C is Incorrect because inadequate enzyme secretion indigestion ka primary cause hota hai, constipation ka nahi.\n\n• Option D is Incorrect because chylomicron clearance lipid transport ka physiological phase hai."
   },
   {
     "p_id": "bpsc_dig_v2_07",
     "qe": "A public health study tracks Protein-Energy Malnutrition (PEM) across specific developing regions experiencing severe environmental or geopolitical crises. Which historical pairing matches this pattern?",
     "qh": "एक सार्वजनिक स्वास्थ्य अध्ययन गंभीर पर्यावरणीय या भू-राजनीतिक संकटों का सामना कर रहे विशिष्ट विकासशील क्षेत्रों में प्रोटीन-ऊर्जा कुपोषण (PEM) को ट्रैक करता है। कौन सा ऐतिहासिक युग्म इस पैटर्न से मेल खाता है?",
-    "o": [
+    "oe": [
       "VERTERBRATE liver cell expansion during the 1950 electron microscopy era.",
       "Bangladesh during the liberation war and Ethiopia during the mid-eighties severe drought.",
       "The rapid evolution of social male honey bees during the 1906 Nobel prize investigations.",
       "Amphibian oocyte dictyate states monitored during South American monsoons."
     ],
+    "oh": [
+      "1950 के इलेक्ट्रॉन माइक्रोस्कोपी युग के दौरान कशेरुकी यकृत कोशिका विस्तार।",
+      "मुक्ति संग्राम के दौरान बांग्लादेश और अस्सी के दशक के मध्य के गंभीर सूखे के दौरान इथियोपिया (Bangladesh and Ethiopia)।",
+      "1906 के नोबेल पुरस्कार जांच के दौरान सामाजिक नर मधुमक्खियों का तेजी से विकास।",
+      "दक्षिण अमेरिकी मानसून के दौरान उभयचर अंडाणु डिक्टिएट राज्यों की निगरानी।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1, Option 3, and Option 4 present unrelated historical and biological milestones from earlier chapters. Option 2 is correct because the text notes that Protein-energy malnutrition (PEM) is a widespread dietary deficiency of proteins and total food calories that heavily impacts large sections of populations in underdeveloped nations during ecological or political turmoil. The text provides two specific historical examples: it affected large populations in Bangladesh during the liberation war and in Ethiopia during the severe drought in the mid-eighties. This malnutrition leads to clinical syndromes like Marasmus and Kwashiorkor."
+    "e": "Protein-Energy Malnutrition (PEM) developing countries mein famines, political instability aur droughts ke time epidemic proportions reach karta hai.\n\n• Option A is Incorrect because 1950s cytology cellular ultrastructure discoveries ka era hai.\n\n• Option B is Correct because NCERT ke according PEM ne massive human populations ko affect kiya tha: 1971 Liberation War ke dauraan 'Bangladesh' mein aur mid-1980s ke catastrophic severe drought ke time 'Ethiopia' mein, jahan infants aur children mein Marasmus aur Kwashiorkor massively prevalent hue the.\n\n• Option C is Incorrect because Camillo Golgi aur Ramon y Cajal ka 1906 Nobel prize neuroanatomy par tha.\n\n• Option D is Incorrect because dictyate arrest oogenesis meiotic physiology ka developmental phase hai."
   },
   {
     "p_id": "bpsc_dig_v2_08",
     "qe": "An infant under the age of one year develops severe emaciation, thinning of limbs, and dry, wrinkled skin due to an early replacement of mother's milk by foods poor in both protein and calories. Identify this disorder.",
     "qh": "एक वर्ष से कम उम्र के शिशु में मां के दूध के स्थान पर प्रोटीन और कैलोरी दोनों में कम पोषक तत्वों वाले खाद्य पदार्थों के शुरुआती उपयोग के कारण गंभीर क्षीणता (emaciation), अंगों का पतला होना और सूखी, झुर्रीदार त्वचा विकसित हो जाती है। इस विकार को पहचानें।",
-    "o": [
+    "oe": [
       "Kwashiorkor",
       "Marasmus",
       "Jaundice hyperbilirubinemia",
       "Syncytial coenocyte deficiency"
     ],
+    "oh": [
+      "क्वाशियोरकोर (Kwashiorkor)",
+      "मरास्मस (Marasmus)",
+      "पीलिया हाइपरबिलिरुबिनेमिया",
+      "सिनसाइटियल सिनोसाइट की कमी"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes a disorder found in older children (above one year) caused by a selective protein deficiency while calorie intake is sustained, which prevents extreme skin wrinkling and leaves some subcutaneous fat. Option 2 is correct because Marasmus is clinically defined by a simultaneous deficiency of both proteins and total food calories. It occurs primarily in infants less than a year old if breast milk is replaced too early by poor diets, which often happens if the mother undergoes a rapid second pregnancy while the older infant is still young. It results in a complete decline in growth rate, tissue protein breakdown, extreme emaciation [severe wasting of the body], thinning of limbs, wrinkled skin, and impaired brain development. Option 3 describes liver pigment retention. Option 4 describes an cell division state."
+    "e": "Infantile nutritional deprivation specific clinical wasting syndromes cause karti hai depending on whether calories, proteins ya dono absent hain.\n\n• Option A is Incorrect because Kwashiorkor exclusively protein deficiency se hota hai (calorie intake adequate rehta hai) aur yeh >1 year age group mein hota hai with visible oedema.\n\n• Option B is Correct because 'Marasmus' simultaneous deficiency of both Proteins aur Total Calories se hota hai, jo strictly infants (<1 year old) mein develop hota hai jab mother's milk premature unhygienic low-calorie diet se replace ho jata hai; isme severe emaciation, muscle wasting, ribs prominent hona aur skin dry/wrinkled ho jati hai without oedema.\n\n• Option C is Incorrect because Jaundice liver bile excretion failure hai.\n\n• Option D is Incorrect because syncytium multinucleated cellular condition hai."
   },
   {
     "p_id": "bpsc_dig_v2_09",
     "qe": "A child older than one year is diagnosed with Kwashiorkor. Which clinical presentation will distinguish this child from one suffering from Marasmus?",
     "qh": "एक वर्ष से अधिक उम्र के बच्चे में क्वाशियोरकोर (Kwashiorkor) का निदान किया जाता है। कौन सी नैदानिक प्रस्तुति (clinical presentation) इस बच्चे को मरास्मस से पीड़ित बच्चे से अलग करेगी?",
-    "o": [
+    "oe": [
       "The complete absence of all structural proteins within the nuclear envelope pores.",
       "The presence of some subcutaneous fat under the skin along with extensive oedema and swelling of body parts.",
       "The automatic transformation of liver cords into thin connective tissue capsules.",
       "The direct accumulation of basic histones within the fluid matrix of the gut lumen."
     ],
+    "oh": [
+      "परमाणु लिफाफे के छिद्रों के भीतर सभी संरचनात्मक प्रोटीनों का पूर्ण अभाव।",
+      "शरीर के अंगों की व्यापक सूजन और शोफ (Oedema) के साथ त्वचा के नीचे कुछ चमड़े के नीचे वसा (subcutaneous fat) की उपस्थिति।",
+      "यकृत डोरियों का पतले संयोजी ऊतक कैप्सूल में स्वचालित रूपांतरण।",
+      "आंत के लुमेन के द्रव मैट्रिक्स के भीतर बुनियादी हिस्टोन का प्रत्यक्ष संचय।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is a cytological distractor regarding nuclear pores. Option 2 is correct because Kwashiorkor is produced by a selective protein deficiency unaccompanied by a calorie deficiency, typically when a child older than one year is transitioned onto a high-calorie, low-protein diet. While it shares muscle wasting and growth failure with marasmus, it is distinguished because *some fat is still left under the skin* and the child demonstrates extensive oedema [abnormal fluid accumulation in interstitial spaces] and visible swelling of body parts. Option 3 and Option 4 present inaccurate physiological and tissue distractors."
+    "e": "Kwashiorkor aur Marasmus clinical presentation mein subcutaneous fat retention aur fluid accumulation ke basis par distinct hote hain.\n\n• Option A is Incorrect because nuclear pore complexes molecular cell biology ka universal component hain.\n\n• Option B is Correct because 'Kwashiorkor' mein calorie intake maintain rehta hai par protein severely deficient hota hai; isliye Marasmus ke opposite, Kwashiorkor wale child mein skin ke niche *some subcutaneous fat bachi rehti hai* aur severe hypoalbuminemia ke karan extensive 'Oedema' (swelling of body parts, pot belly) present rehta hai.\n\n• Option C is Incorrect because liver cords connective tissue mein convert nahi hote, par Kwashiorkor mein fatty liver dekha jata hai.\n\n• Option D is Incorrect because histones nuclear DNA-packaging proteins hain, gut lumen mein accumulate nahi hote."
   },
   {
     "p_id": "bpsc_dig_v2_10",
     "qe": "What specific developmental scenario commonly leads to the premature onset of Marasmus in a nursing infant under one year of age?",
     "qh": "कौन सा विशिष्ट विकासात्मक परिदृश्य (developmental scenario) आमतौर पर एक वर्ष से कम उम्र के स्तनपान करने वाले शिशु में मरास्मस (Marasmus) की समय से पहले शुरुआत का कारण बनता है?",
-    "o": [
+    "oe": [
       "The prolonged operational arrest of the maternal vomit center during adulthood.",
       "The mother having a second pregnancy or childbirth when the older infant is still too young.",
       "The structural conversion of intestinal lacteals into non-permeable blood capillaries.",
       "The dynamic colonization of the caecum by pathogenic anaerobic roundworms."
     ],
+    "oh": [
+      "वयस्कावस्था के दौरान मातृ उल्टी केंद्र की लंबी परिचालन गिरफ्तारी।",
+      "माँ की दूसरी गर्भावस्था या प्रसव तब होना जब पहला शिशु अभी बहुत छोटा हो (Second pregnancy when infant is too young)।",
+      "आंतों के लैक्टियल्स का गैर-पारगम्य रक्त केशिकाओं में संरचनात्मक रूपांतरण।",
+      "रोगजनक अवायवीय गोलकृमि द्वारा सीकम का गतिशील उपनिवेशीकरण।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes an autonomic reflex trait that does not regulate infant nutrition profiles. Option 2 is correct because the source text notes that the premature replacement of mother's milk by foods poor in both proteins and calories often occurs if the mother has a second pregnancy or subsequent childbirth when the older infant is still too young. This forces early weaning onto poor complementary diets, triggering simultaneous protein and calorie starvation (Marasmus). Option 3 describes an anatomically impossible tissue transformation. Option 4 describes a parasitic infection pathway, which is distinct from primary dietary protein-energy malnutrition."
+    "e": "Infantile PEM maternal reproductive spacing aur inadequate complementary feeding practices se directly associate hota hai.\n\n• Option A is Incorrect because maternal brainstem reflex arrest infant nutrition ko explain nahi karta.\n\n• Option B is Correct because jab mother ki rapid 'Second pregnancy ya childbirth' ho jaati hai jab purana infant abhi bahut chota (<1 year) hota hai, toh first infant ko breast milk se premature wean kar diya jata hai aur low-protein low-calorie diluted food diya jata hai, resulting in early onset of Marasmus.\n\n• Option C is Incorrect because lymphatic lacteals blood capillaries mein transform nahi hote.\n\n• Option D is Incorrect because helminthic roundworm infestation parasitic disease hai, primary maternal weaning failure nahi."
   },
-  
   {
     "p_id": "bpsc_dig_v3_01",
     "qe": "What physiological alteration occurs in the bile delivery system and subsequent digestive efficiency immediately following the surgical cholecystectomy of a patient?",
     "qh": "सर्जिकल कोलेसिस्टेक्टॉमी (cholecystectomy) के तुरंत बाद मरीज के पित्त वितरण तंत्र और उसके बाद की पाचन क्षमता में क्या शारीरिक परिवर्तन होता है?",
-    "o": [
+    "oe": [
       "Bile stops synthesizing altogether due to the absolute lack of localized G-cell stimulation.",
       "Bile runs in a continuous, unconcentrated stream directly from the liver into the intestine, reducing fat digestion efficiency.",
       "The hepato-pancreatic duct reverses its hydrostatic pressure, forcing pancreatic enzymes into the liver cords.",
       "Alkaline pancreatic juice drops to an acidic pH of 1.8 to compensate for missing bile salts."
     ],
+    "oh": [
+      "स्थानीय जी-सेल उत्तेजना की पूर्ण कमी के कारण पित्त पूरी तरह से बनना बंद हो जाता है।",
+      "पित्त यकृत से सीधे आंत में एक निरंतर, गैर-केंद्रीकृत (unconcentrated) धारा में बहता है, जिससे वसा पाचन क्षमता कम हो जाती है।",
+      "हेपेटो-अग्नाशयी वाहिनी अपने हाइड्रोस्टैटिक दबाव को उलट देती है, जिससे अग्नाशयी एंजाइम यकृत डोरियों में चले जाते हैं।",
+      "लापता पित्त लवण की भरपाई के लिए क्षारीय अग्नाशयी रस 1.8 के अम्लीय पीएच तक गिर जाता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because bile is continuously synthesized by the hepatic cells of the liver, not the gall bladder, and its primary synthesis does not depend on gastric G-cells. Option 2 is correct because the text notes that the removal of the gall bladder [a pear-shaped sac-like structure attached to the posterior surface of the liver that stores and concentrates hepatic bile] causes bile to run in a continuous stream directly from the liver into the intestine. Because this bile is not stored, it is not as concentrated as normal gall bladder bile. Consequently, fat digestion is significantly reduced, necessitating a clinically recommended low-fat diet. Option 3 describes a fluid reversal that is anatomically prevented by the sphincter of Oddi. Option 4 is incorrect because pancreatic juice remains alkaline ($pH\\ 8.4$) and cannot alter its genetic biochemical profile to copy gastric acid."
+    "e": "Gall bladder removal (Cholecystectomy) bile storage aur concentration phase ko eliminate kar deta hai.\n\n• Option A is Incorrect because bile synthesis liver hepatocytes mein continuous hoti hai, gall bladder remove hone se synthesis stop nahi hoti.\n\n• Option B is Correct because Gall Bladder ka primary role hepatic bile ko store aur 5-10 times concentrate karna hota hai; Cholecystectomy ke baad bile continuous diluted stream ke roop mein liver se directly duodenum mein girta hai, jisse high-fat meals ki emulsification efficiency reduce ho jati hai aur low-fat diet recommend ki jaati hai.\n\n• Option C is Incorrect because retrograde duct flow Sphincter of Oddi dwara physically prevent kiya jata hai.\n\n• Option D is Incorrect because pancreatic acini genetic biochemical program follow karte hain aur alkaline pH 8.4 maintain karte hain."
   },
   {
     "p_id": "bpsc_dig_v3_02",
     "qe": "The intrinsic enteric nervous system controls baseline gastrointestinal functions like secretion and motility. Which neural networks comprise this local regulatory framework, and where are they located?",
     "qh": "आंतरिक एंटरिक तंत्रिका तंत्र (enteric nervous system) स्राव और गतिशीलता जैसे आधारभूत गैस्ट्रोइंटेस्टाइनल कार्यों को नियंत्रित करता है। कौन से तंत्रिका नेटवर्क इस स्थानीय नियामक ढांचे को बनाते हैं, और वे कहाँ स्थित होते हैं?",
-    "o": [
+    "oe": [
       "The vagus plexus in the serosa layer and the sympathetic chain in the mesothelium matrix.",
       "Meissner’s plexus situated in the submucosa and Auerbach’s plexus situated in the muscular layer.",
       "The enteric hub localized inside the pericentriolar matrix of local goblet cells.",
       "The duodocrinin network lined exclusively within the primary cell plate of Brunner's glands."
     ],
+    "oh": [
+      "सेरोसा परत में वेगस प्लेक्सस और मेसोथेलियम मैट्रिक्स में सहानुभूति श्रृंखला।",
+      "सबम्यूकोसा में स्थित मीस्नर प्लेक्सस (Meissner’s plexus) और मस्कुलरिस परत में स्थित ऑरबैक प्लेक्सस (Auerbach’s plexus)।",
+      "स्थानीय गॉब्लेट कोशिकाओं के पेरिसेंट्रिओलर मैट्रिक्स के अंदर स्थानीयकृत एंटरिक हब।",
+      "ब्रूनर की ग्रंथियों की प्राथमिक सेल प्लेट के भीतर विशेष रूप से पंक्तिबद्ध डुओडोक्रिनिन नेटवर्क।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because the vagus nerve belongs to the extrinsic innervation system, not the intrinsic enteric layout. Option 2 is correct because the intrinsic neural system [also called the enteric neural system, an independent network of neurons nested within the gut wall] consists of two distinct components: (i) Meissner’s plexus [submucosal plexus] situated in the submucosa layer to regulate local glandular secretions, and (ii) Auerbach’s plexus [myenteric plexus] situated in the muscularis layer to control smooth muscle motility. Option 3 describes a centrosomal matrix component, which is an intracellular organelle part, not a tissue-level neural plexus. Option 4 describes a local mucosal hormone, not a nervous architecture."
+    "e": "Enteric Nervous System (ENS) gut wall ki intrinsic nerve supply hai jo autonomous glandular secretions aur peristalsis coordinate karti hai.\n\n• Option A is Incorrect because Vagus nerve aur sympathetic chain extrinsic autonomous autonomic nervous system ka part hain.\n\n• Option B is Correct because Intrinsic ENS do major networks se banta hai: 1. 'Meissner's Plexus' (Submucosal plexus) jo submucosa mein locate hokar local mucosal secretions aur blood flow control karta hai, aur 2. 'Auerbach's Plexus' (Myenteric plexus) jo circular aur longitudinal muscularis layers ke beech locate hokar GI tract motility/peristalsis regulate karta hai.\n\n• Option C is Incorrect because pericentriolar matrix centrosome organelle ka structural component hai.\n\n• Option D is Incorrect because duodocrinin duodenal mucosal hormone candidate hai, neural plexus network nahi."
   },
   {
     "p_id": "bpsc_dig_v3_03",
     "qe": "A gastrointestinal biopsy targets the rounded lobules of the exocrine pancreas. What are these structural units called, and what fluid profile do they secrete into the duodenal limbs?",
     "qh": "एक गैस्ट्रोइंटेस्टाइनल बायोप्सी अग्न्याशय (pancreas) के बहिःस्रावी (exocrine) गोल लोब्यूल्स को लक्षित करती है। इन संरचनात्मक इकाइयों को क्या कहा जाता है, और वे ग्रहणी में किस प्रकार के तरल पदार्थ का स्राव करती हैं?",
-    "o": [
+    "oe": [
       "Islets of Langerhans secreting glucagon and insulin at a highly acidic pH of 1.8.",
       "Acini lobules secreting an alkaline pancreatic juice with a baseline pH of 8.4.",
       "Glisson’s capsules releasing zymogenic prorennin into the luminal compartments.",
       "Crypts of Lieberkuhn discharging suberized lipases into the extra-luminal space."
     ],
+    "oh": [
+      "1.8 के अत्यधिक अम्लीय पीएच पर ग्लूकागन और इंसुलिन स्रावित करने वाले लैंगरहेंस के द्वीप समूह।",
+      "8.4 के क्षारीय पीएच के साथ अग्नाशयी रस को स्रावित करने वाले एसिनी लोब्यूल्स (Pancreatic Acini)।",
+      "ग्लिसन के कैप्सूल ल्यूमिनल डिब्बों में जाइमोजेनिक प्रोरेनिन छोड़ते हैं।",
+      "लीबरकुहन के क्रिप्ट्स एक्स्ट्रा-ल्यूमिनल स्पेस में सुबेराइज्ड लाइपेस का निर्वहन करते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the endocrine portion of the pancreas, which secretes hormones directly into the blood, not digestive fluids into the duodenum. Option 2 is correct because the internal structure of the pancreas is a compound organ containing two functional regions. The exocrine portion consists of rounded lobules called acini [the primary secretory units of exocrine glands] that secrete alkaline pancreatic juice with an operational pH of 8.4. This juice contains digestive enzymes for starch, proteins, fats, and nucleic acids. Option 3 describes a connective tissue sheath specific to liver lobules. Option 4 describes mucosal invaginational structures located between the bases of intestinal villi, not pancreatic lobules."
+    "e": "Pancreas ek heterocrine (mixed) gland hai jisme exocrine acini digestive enzymes banate hain aur endocrine islets hormones secrete karte hain.\n\n• Option A is Incorrect because Islets of Langerhans endocrine component hain jo insulin aur glucagon direct blood stream mein secrete karte hain, duodenal lumen mein nahi.\n\n• Option B is Correct because exocrine pancreas rounded secretory units 'Acini' (99% of pancreatic mass) se bana hota hai jo duct system ke through 'Alkaline Pancreatic Juice' ($pH \\approx 8.4$) secrete karte hain, jisme inactive zymogens (trypsinogen, chymotrypsinogen), pancreatic amylase, lipase aur nucleases present hote hain.\n\n• Option C is Incorrect because Glisson's capsule liver lobules ki connective tissue covering hai.\n\n• Option D is Incorrect because Crypts of Lieberkuhn intestinal mucosal glands hain."
   },
   {
     "p_id": "bpsc_dig_v3_04",
     "qe": "The human stomach is anatomically structuralized into distinct regional zones. Which regional component is commonly filled with air or gases under normal physiological conditions?",
     "qh": "मानव आमाशय (stomach) संरचनात्मक रूप से अलग-अलग क्षेत्रीय क्षेत्रों में विभाजित है। सामान्य शारीरिक परिस्थितियों में कौन सा क्षेत्रीय घटक आमतौर पर हवा या गैसों से भरा होता है?",
-    "o": [
+    "oe": [
       "The distal pylorus channel opening into the duodenum.",
       "The superior fundus region of the stomach.",
       "The immediate cardiac zone adjacent to the oesophagus opening.",
       "The muscular rugae lining the inner circular layer."
     ],
+    "oh": [
+      "ग्रहणी में खुलने वाला दूरस्थ पाइलोरस चैनल।",
+      "आमाशय का ऊपरी फंडस क्षेत्र (Superior Fundus region)।",
+      "अन्नप्रणाली के उद्घाटन के निकटवर्ती कार्डियक क्षेत्र।",
+      "आंतरिक गोलाकार परत को अस्तर करने वाले पेशीय रूगे।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because the pylorus is the narrow posterior region that handles chyme emptying. Option 2 is correct because the stomach has distinct subdivisions: (a) the cardiac portion into which the oesophagus opens, (b) the fundus [the upper dome-shaped curvature of the stomach], which is characteristically filled with swallowed air or generated gases under normal baseline physiology, and (c) the pylorus, which connects to the duodenum. Option 3 is the entry point for the bolus and does not act as a gas storage dome. Option 4 describes transient mucosal folds, not a regional macroscopic zone."
+    "e": "Stomach ki gross macroscopic curvature specific functional spaces divide karti hai jisme superior dome swallowed air collect karta hai.\n\n• Option A is Incorrect because pylorus distal canal hai jo chyme ko duodenum mein empty karta hai.\n\n• Option B is Correct because 'Fundus' stomach ka superior dome-shaped part hai jo cardiac orifice ke above elevated rehta hai; normal erect posture mein swallowed air aur generated metabolic gases naturally is fundic dome mein accumulate hoti hain (radiological X-ray par fundic gas bubble visible hota hai).\n\n• Option C is Incorrect because cardiac zone oesophagus opening receive karta hai.\n\n• Option D is Incorrect because rugae mucosal folding architecture hai, regional organ division nahi."
   },
   {
     "p_id": "bpsc_dig_v3_05",
     "qe": "Local hormones produced by the gastric and intestinal mucosa act as critical chemical regulators. Which hormone acts as a functional inhibitor of gastric secretion and motility?",
     "qh": "गैस्ट्रिक और आंतों के म्यूकोसा द्वारा उत्पादित स्थानीय हार्मोन महत्वपूर्ण रासायनिक नियामकों के रूप में कार्य करते हैं। कौन सा हार्मोन गैस्ट्रिक स्राव और गतिशीलता के एक कार्यात्मक अवरोधक (functional inhibitor) के रूप में कार्य करता है?",
-    "o": [
+    "oe": [
       "Gastrin secreted by G-cells in the pyloric region.",
       "Enterogastrone produced by the intestinal mucosa.",
       "Duodocrinin synthesized inside the sub-mucosal plexus.",
       "Enterokinase released by the brush border cells."
     ],
+    "oh": [
+      "पाइलोरिक क्षेत्र में जी-कोशिकाओं द्वारा स्रावित गैस्ट्रिन।",
+      "आंतों के म्यूकोसा द्वारा उत्पादित एंटरोगैस्ट्रोन (Enterogastrone / GIP)।",
+      "सब-म्यूकोसल प्लेक्सस के अंदर संश्लेषित डुओडोक्रिनिन।",
+      "ब्रश बॉर्डर कोशिकाओं द्वारा जारी एंटरोकाइनेज।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because gastrin is a classical metabolic stimulator that promotes the release of gastric juices and increases stomach motility. Option 2 is correct because the text notes that hormonal control of digestive juices relies on local mucosal regulators. Among these, enterogastrone [a hormone released by the duodenal mucosa in response to lipids] functions specifically to inhibit gastric secretion and slow down stomach motility, allowing more time for intestinal processing. Option 3 is incorrect because duodocrinin specifically stimulates the Brunner's glands of the duodenum. Option 4 is an enzyme that activates trypsinogen, not a regulatory hormone."
+    "e": "Duodenal mucosa fatty chyme enter hone par negative feedback hormones release karti hai taaki gastric emptying regulate ho sake.\n\n• Option A is Incorrect because Gastrin gastric $HCl$ secretion aur stomach motility ko stimulate/increase karta hai.\n\n• Option B is Correct because duodenal mucosa se secrete hone wala 'Enterogastrone' (Gastric Inhibitory Peptide / GIP) gastric glands ki acid secretion ko inhibit karta hai aur gastric motility/emptying ko slow down kar deta hai taaki small intestine ko lipid digestion ke liye sufficient time mil sake.\n\n• Option C is Incorrect because Duodocrinin Brunner's glands ki mucus secretion ko stimulate karta hai.\n\n• Option D is Incorrect because Enterokinase trypsinogen-activating enzyme hai, regulatory inhibitory hormone nahi."
   },
   {
     "p_id": "bpsc_dig_v3_06",
     "qe": "A patient experiences an inflammatory disorder localized within the large intestine, presenting with severe liquid stool containing visible blood and mucus, abdominal pain, and fever. Identify this pathology.",
     "qh": "एक मरीज बड़ी आंत के भीतर एक भड़काऊ विकार (inflammatory disorder) का अनुभव करता है, जिसके परिणामस्वरूप मल में स्पष्ट रक्त और बलगम (blood and mucus), पेट दर्द और बुखार के लक्षण दिखाई देते हैं। इस विकृति को पहचानें।",
-    "o": [
+    "oe": [
       "Systemic Jaundice infection",
       "Dysentery",
       "Functional Indigestion",
       "Somatic Tetanus spasm"
     ],
+    "oh": [
+      "प्रणालीगत पीलिया संक्रमण",
+      "पेचिश (Dysentery / अतिसार)",
+      "कार्यात्मक अपच (Indigestion)",
+      "दैहिक टेटनस ऐंठन"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes liver pigment accumulation presenting with yellowing parameters without severe bloody stool. Option 2 is correct because the text explicitly defines dysentery as an inflammatory disorder of the intestine, especially of the colon. Its diagnostic presentation includes severe diarrhoea containing blood and mucus in the faeces, along with localized abdominal pain and systemic fever, distinguishing it from simple functional diarrhoea. Option 3 describes a feeling of fullness due to inadequate enzymes or anxiety. Option 4 is a neurological/muscular disorder marked by prolonged skeletal muscle contractions, unrelated to the digestive tract."
+    "e": "Colonic mucosal inflammation specific invasive pathogens ke infection se bloody mucosal discharge produce karti hai.\n\n• Option A is Incorrect because Jaundice liver bile excretion failure hai jisme sclera aur skin yellow hoti hain.\n\n• Option B is Correct because 'Dysentery' (पेचिश) large intestine (specifically colon) ka inflammatory disorder hai (caused by *Entamoeba histolytica* ya *Shigella*); iske landmark clinical symptoms hote hain severe diarrhoea with blood and mucus in faeces, griping abdominal cramps aur fever.\n\n• Option C is Incorrect because Indigestion non-inflammatory functional fullness hoti hai.\n\n• Option D is Incorrect because Tetanus *Clostridium tetani* toxin se hone wala sustained skeletal muscle spasm disorder hai."
   },
   {
     "p_id": "bpsc_dig_v3_07",
     "qe": "The absorption profile of the stomach wall is highly selective. Which of the following substances can cross this barrier directly via the stomach lining before entering the small intestine?",
     "qh": "आमाशय की दीवार (stomach wall) का अवषोषण प्रोफाइल अत्यधिक चयनात्मक होता है। निम्नलिखित में से कौन सा पदार्थ छोटी आंत में प्रवेश करने से पहले आमाशय के अस्तर के माध्यम से सीधे पार हो सकता है?",
-    "o": [
+    "oe": [
       "Complex proteins, proteoses, and high-density circular DNA nucleotides.",
       "Water, simple sugars, alcohol, and some lipid-soluble drugs.",
       "Chylomicrons packaged within local lacteal vessels.",
       "Insoluble fat droplets emulsified by hepatic bile."
     ],
+    "oh": [
+      "जटिल प्रोटीन, प्रोटीओस, और उच्च घनत्व वाले परिपत्र डीएनए न्यूक्लियोटाइड।",
+      "पानी, साधारण शर्करा (Simple sugars), अल्कोहल (शराब), और कुछ दवाएं (Water, simple sugars, alcohol, and some drugs)।",
+      "स्थानीय लैक्टियल वाहिकाओं के भीतर पैक किए गए काइलोमाइक्रोन।",
+      "हेपेटिक पित्त द्वारा इमल्सीकृत अघुलनशील वसा की बूंदें।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because complex macromolecules must undergo chemical cleavage into monomers before absorption. Option 2 is correct because while maximum nutrient absorption is restricted to the small intestine, the stomach wall possesses a specific absorption profile that permits the direct passive uptake of water, simple sugars [monosaccharides], alcohol, and certain lipophilic, lipid-soluble drugs. Option 3 describes lipid transport globules inside intestinal villi, which do not cross the gastric wall. Option 4 describes lipids in the duodenal chyme prior to cellular processing."
+    "e": "Stomach wall par villi absent hoti hain aur tight junctions hote hain, par specific small non-ionized molecules directly absorb ho sakte hain.\n\n• Option A is Incorrect because complex macromolecules small intestine ke brush border par complete breakdown ke baad hi absorb hote hain.\n\n• Option B is Correct because stomach mucosa limited absorption profile display karti hai: yahan 'Water, Simple Monosaccharide Sugars, Alcohol (Ethanol), aur certain lipid-soluble drugs (jaise Aspirin)' gastric lining ke across directly blood capillaries mein diffuse ho jaate hain.\n\n• Option C is Incorrect because chylomicrons intestinal villi ke lacteals mein absorb hote hain.\n\n• Option D is Incorrect because emulsified fats duodenal mucosa par micelles ke through absorb hote hain."
   },
   {
     "p_id": "bpsc_dig_v3_08",
     "qe": "What specific biochemical alteration occurs in the oral cavity during the process of chewing food, and what component of saliva is responsible for this modification?",
     "qh": "भोजन चबाने की प्रक्रिया के दौरान मौखिक गुहा (oral cavity) में क्या विशिष्ट जैव रासायनिक परिवर्तन होता है, और लार (saliva) का कौन सा घटक इस परिवर्तन के लिए जिम्मेदार है?",
-    "o": [
+    "oe": [
       "About 30% of proteins are converted into dipeptides by salivary proteases.",
       "About 30% of starch is hydrolysed by salivary amylase into disaccharides like maltose.",
       "Lipids are immediately converted into chylomicrons via active Na+ carrier ions.",
       "Nucleic acids are cleaved into naked nucleosides by alkaline lysozymes."
     ],
+    "oh": [
+      "लार प्रोटीएज द्वारा लगभग 30% प्रोटीन डाइपेप्टाइड्स में परिवर्तित हो जाते हैं।",
+      "लार एमाइलेज (टाइलिन) द्वारा लगभग 30% स्टार्च माल्टोज जैसे डिसैकेराइड्स में हाइड्रोलाइज्ड होता है।",
+      "सक्रिय Na+ वाहक आयनों के माध्यम से लिपिड तुरंत काइलोमाइक्रोन में परिवर्तित हो जाते हैं।",
+      "क्षारीय लाइसोजाइम द्वारा न्यूक्लिक एसिड को नग्न न्यूक्लियोसाइड्स में बदल दिया जाता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because saliva lacks any protein-digesting enzymes. Option 2 is correct because digestion initiates in the buccal cavity where mastication mixes food with saliva. Saliva contains the carbohydrate-splitting enzyme salivary amylase, which hydrolyses approximately 30 per cent of dietary starch into simpler disaccharides such as maltose, isomaltose, and $\\alpha$-dextrins. Option 3 describes an advanced transport stage occurring in the intestinal mucosa. Option 4 is incorrect because lysozyme functions strictly as an antibacterial agent, not a nucleic acid-cleaving enzyme."
+    "e": "Mastication ke dauraan saliva food ke sath thoroughly mix hokar primary carbohydrate enzymatic breakdown execute karta hai.\n\n• Option A is Incorrect because human saliva mein koi proteolytic digestive enzymes present nahi hote.\n\n• Option B is Correct because saliva mein present enzyme 'Salivary Amylase' (Ptyalin) optimum pH 6.8 par dietary cooked starch ke lagbhag 30 per cent fraction ko hydrolyze karke disaccharides (Maltose, isomaltose, limit dextrins) mein convert karta hai.\n\n• Option C is Incorrect because chylomicron packaging intestinal enterocytes ke andar execute hoti hai.\n\n• Option D is Incorrect because lysozyme bactericidal enzyme hai, nuclease nahi."
   },
   {
     "p_id": "bpsc_dig_v3_09",
     "qe": "A cytogenetic specialist studies a non-digestive endocrine gland located at the anterior part of each kidney. Which gland is this, and what is its functional role?",
     "qh": "एक साइटोजेनेटिक विशेषज्ञ प्रत्येक गुर्दे (kidney) के अग्र भाग में स्थित एक गैर-पाचक अंतःस्रावी ग्रंथि (endocrine gland) का अध्ययन करता है। यह कौन सी ग्रंथि है, और इसकी कार्यात्मक भूमिका क्या है?",
-    "o": [
+    "oe": [
       "The compound exocrine Pancreas acini.",
       "The Adrenal gland, which regulates body growth and developmental mechanisms.",
       "The Glisson's lobe of the bilateral Liver capsule.",
       "The sub-lingual salivary tissue located outside the buccal floor."
     ],
+    "oh": [
+      "मिश्रित बहिःस्रावी अग्न्याशय एसिनी।",
+      "अधिवृक्क ग्रंथि (Adrenal gland), जो शरीर के विकास और विकासात्मक तंत्र को नियंत्रित करती है।",
+      "द्विपक्षीय यकृत कैप्सूल का ग्लिसन लोब।",
+      "मुंह के तल के बाहर स्थित उप-भाषाई (sub-lingual) लार ऊतक।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes a digestive gland located in the abdominal loop of the duodenum, not on the kidneys. Option 2 is correct because the source text notes a clear anatomical exception: the adrenal gland is not associated with the alimentary canal. Instead, it is situated at the anterior part of each kidney, acting as a vital endocrine gland [a ductless gland secreting regulatory molecules directly into the bloodstream] involved in coordinating body growth and developmental homeostatic mechanisms. Option 3 and Option 4 describe primary accessory digestive organs."
+    "e": "Human anatomy mein kidneys ke superior pole par dedicated suprarenal endocrine glands position hoti hain.\n\n• Option A is Incorrect because pancreas duodenal C-loop mein located mixed digestive gland hai.\n\n• Option B is Correct because har kidney ke anterior/superior pole par ek 'Adrenal Gland' (Suprarenal gland) located hoti hai; yeh non-digestive master endocrine organ hai jiska outer cortex (corticosteroids) aur inner medulla (catecholamines: adrenaline/noradrenaline) stress response, electrolyte balance aur development control karte hain.\n\n• Option C is Incorrect because Glisson's capsule liver ka structural component hai.\n\n• Option D is Incorrect because sublingual salivary glands tongue ke niche floor of mouth par hoti hain."
   },
   {
     "p_id": "bpsc_dig_v3_10",
     "qe": "During a laboratory assay of intestinal fluids, a scientist tracks the chemical conversion of dipeptides into free amino acids. Which enzyme catalyzes this final step, and where does it operate?",
     "qh": "आंतों के तरल पदार्थों के एक प्रयोगशाला परख (laboratory assay) के दौरान, एक वैज्ञानिक मुक्त अमीनो एसिड में डाइपेप्टाइड्स (dipeptides) के रासायनिक रूपांतरण को ट्रैक करता है। कौन सा एंजाइम इस अंतिम चरण को उत्प्रेरित करता है, और यह कहाँ कार्य करता है?",
-    "o": [
+    "oe": [
       "Pepsinogen operating inside the highly acidic chyme of the stomach.",
       "Dipeptidases, operating close to the mucosal epithelial cells of the small intestine.",
       "Trypsinogen activated by local sub-mucosal Brunner's glands.",
       "Carboxypeptidases acting within the non-membranous gas vacuoles."
     ],
+    "oh": [
+      "पेट के अत्यधिक अम्लीय काइम के अंदर काम करने वाला पेप्सिनोजेन।",
+      "डाइपेप्टिडेसेस (Dipeptidases), जो छोटी आंत की म्यूकोसल उपकला कोशिकाओं के करीब काम करते हैं।",
+      "स्थानीय सब-म्यूकोसल ब्रूनर की ग्रंथियों द्वारा सक्रिय ट्रिप्सिनोजेन।",
+      "गैर-झिल्लीदार गैस रसधानियों के भीतर काम करने वाले कार्बोक्सीपेप्टिडेस।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because pepsinogen is an inactive gastric zymogen that cleaves complex proteins into larger peptones, not dipeptides. Option 2 is correct because the breakdown of dipeptides into their constituent absorbable amino acids represents the final stage of protein digestion. This step is driven by the enzyme dipeptidase, a component of the intestinal juice or succus entericus, operating close to the mucosal epithelial cells of the small intestine. Option 3 is incorrect because trypsinogen is a pancreatic enzyme activated by mucosal enterokinase. Option 4 describes a prokaryotic buoyancy structure."
+    "e": "Protein digestion gastric aur pancreatic phases ke baad intestinal mucosal border par terminal monomeric units yield karti hai.\n\n• Option A is Incorrect because pepsinogen gastric zymogen hai jo proteins ko proteoses aur peptones mein cleave karta hai.\n\n• Option B is Correct because protein digestion ka final step succus entericus ke enzyme 'Dipeptidases' dwara catalyze hota hai; yeh mucosal epithelial brush border ke close operate karke dipeptides ko directly absorbable monomeric 'Free Amino Acids' ($R-CH(NH_2)-COOH$) mein convert kar deta hai.\n\n• Option C is Incorrect because trypsinogen pancreatic enzyme hai jo intestinal enterokinase se activate hota hai.\n\n• Option D is Incorrect because gas vacuoles prokaryotic buoyancy organelles hain."
   },
   {
     "p_id": "bpsc_dig_v3_11",
     "qe": "How do fructose and certain specific amino acids cross the intestinal mucosa into the blood stream when moving down a concentration gradient using carrier ions?",
     "qh": "वाहक आयनों (carrier ions) का उपयोग करके सांद्रता प्रवणता के अनुकूल चलते समय फ्रुक्टोज और कुछ विशिष्ट अमीनो एसिड आंतों के म्यूकोसा को पार करके रक्त प्रवाह में कैसे प्रवेश करते हैं?",
-    "o": [
+    "oe": [
       "Through passive osmosis across the water-insoluble lipid monolayer sheets.",
-      "Via facilitated transport with the help of carrier ions like $Na^+$.",
+      "Via facilitated transport with the help of carrier ions like Na+.",
       "Through direct incorporation into large protein-coated chylomicron globules.",
       "Through mechanical shifting governed by the 9+0 triplet fibrils of the local hub."
     ],
+    "oh": [
+      "जल-अघुलनशील लिपिड मोनोलेयर शीट्स के पार निष्क्रिय परासरण के माध्यम से।",
+      "Na+ जैसे वाहक आयनों की मदद से सुगम परिवहन (Facilitated transport) के माध्यम से।",
+      "बड़े प्रोटीन-लेपित काइलोमाइक्रोन कणिकाओं में सीधे समावेश के माध्यम से।",
+      "स्थानीय हब के 9+0 ट्रिपलेट फाइब्रिल्स द्वारा शासित यांत्रिक स्थानांतरण के माध्यम से।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes solvent water transport driven by osmotic pressure, not solute absorption. Option 2 is correct because the absorption of nutrients across the gut mucosa utilizes specific transport pathways. Fructose and certain amino acids utilize a mechanism termed facilitated transport [a type of mediated transport that assists polar molecules across a biological membrane without using metabolic ATP energy] with the help of specific carrier ions such as $Na^+$. Option 3 describes the absorption pathway unique to insoluble fats. Option 4 describes centriolar structural mechanics."
+    "e": "Intestinal mucosa ke across nutrients ka absorption concentration gradient aur specialized carrier transport proteins par depend karta hai.\n\n• Option A is Incorrect because Osmosis strictly water molecules ke movement ko describe karta hai, monosaccharides ya amino acid transport ko nahi.\n\n• Option B is Correct because Fructose aur specific amino acids bina direct metabolic ATP expenditure ke mucosal cell membrane ke across transport hote hain; yeh membrane carrier proteins aur $Na^+$ ions ki assistance se concentration gradient ke along move karte hain jise 'Facilitated Transport' kaha jata hai.\n\n• Option C is Incorrect because chylomicrons insoluble lipids (fatty acids aur glycerol) ke packaging aur lymphatic lacteal transport ke liye use hote hain.\n\n• Option D is Incorrect because 9+0 arrangement centrioles aur basal bodies ka microtubule organization pattern hai."
   },
   {
     "p_id": "bpsc_dig_v3_12",
     "qe": "The cells lining the gastric glands are highly specialized. Which cell type is correctly matched with its specific regulatory or biochemical secretion?",
     "qh": "गैस्ट्रिक ग्रंथियों (gastric glands) के अस्तर वाली कोशिकाएं अत्यधिक विशिष्ट होती हैं। कौन सा कोशिका प्रकार अपने विशिष्ट नियामक या जैव रासायनिक स्राव के साथ सटीक रूप से सुमेलित है?",
-    "o": [
-      "Peptic or Chief cells $\\rightarrow$ Secretion of mucus neck fluids to coat the inner circular rugae.",
-      "Parietal or oxyntic cells $\\rightarrow$ Secretion of HCl and Castle’s Intrinsic Factor (CIF).",
-      "Goblet cells $\\rightarrow$ Secretion of inactive trypsinogen and carboxypeptidases.",
-      "G-cells $\\rightarrow$ Secretion of alkaline enterokinase into the duodenal limbs."
+    "oe": [
+      "Peptic or Chief cells -> Secretion of mucus neck fluids to coat the inner circular rugae.",
+      "Parietal or oxyntic cells -> Secretion of HCl and Castle’s Intrinsic Factor (CIF).",
+      "Goblet cells -> Secretion of inactive trypsinogen and carboxypeptidases.",
+      "G-cells -> Secretion of alkaline enterokinase into the duodenal limbs."
+    ],
+    "oh": [
+      "पेप्टिक या मुख्य (Chief) कोशिकाएं -> आंतरिक गोलाकार रूगे को कोट करने के लिए म्यूकस नेक तरल पदार्थ का स्राव।",
+      "पार्श्वीय या ऑक्सीन्टिक कोशिकाएं (Parietal or oxyntic cells) -> HCl और कैसल के आंतरिक कारक (CIF) का स्राव।",
+      "गॉब्लेट कोशिकाएं -> निष्क्रिय ट्रिप्सिनोजेन और कार्बोक्सीपेप्टिडेस का स्राव।",
+      "जी-कोशिकाएं -> ग्रहणी के अंगों में क्षारीय एंटरोकाइनेज का स्राव।"
     ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because peptic or chief cells secrete the proteolytic zymogens pepsinogen and prorennin, not lubricating mucus. Option 2 is correct because parietal or oxyntic cells are localized on the side walls of gastric glands and are responsible for secreting hydrochloric acid ($HCl$, providing an optimum $pH\\ 1.8$ for pepsins) and Castle’s Intrinsic Factor [a vital regulatory glycoprotein required for the absorption of vitamin B12 in the ileum]. Option 3 describes a mucus-secreting cell type, whereas trypsinogen is produced by the exocrine pancreas. Option 4 describes enterokinase as a product of the intestinal mucosa, not gastric G-cells."
+    "e": "Stomach mucosa ki tubular gastric glands specialized secretor cells contain karti hain jo acidic aur enzymatic environment maintain karti hain.\n\n• Option A is Incorrect because Peptic ya Chief cells inactive proteolytic zymogen 'Pepsinogen' secrete karti hain, mucus nahi.\n\n• Option B is Correct because Parietal (Oxyntic) cells do major factors secrete karti hain: Hydrochloric acid ($HCl$, providing $pH \\sim 1.8$ for pepsin activation) aur Castle's Intrinsic Factor (glycoprotein jo ileum mein Vitamin $B_{12}$ absorption ke liye mandatory hai).\n\n• Option C is Incorrect because Goblet cells lubricating mucus secrete karti hain; trypsinogen exocrine pancreas produce karta hai.\n\n• Option D is Incorrect because G-cells Gastrin hormone secrete karti hain, jabki enterokinase duodenal mucosal brush border produce karta hai."
   },
   {
     "p_id": "bpsc_dig_v3_13",
     "qe": "What clinical symptom profile and descriptive criteria distinguish the digestive disorder known as Constipation from the condition classified as Indigestion?",
     "qh": "कौन सा नैदानिक लक्षण प्रोफ़ाइल (clinical symptom profile) और वर्णनात्मक मानदंड कब्ज (Constipation) के रूप में जाने जाने वाले पाचन विकार को अपच (Indigestion) के रूप में वर्गीकृत स्थिति से अलग करते हैं?",
-    "o": [
+    "oe": [
       "Constipation involves an abnormal frequency of loose bowel movements; Indigestion involves prolonged skeletal muscle spasms.",
       "In constipation, faeces are retained within the rectum as bowel movements occur irregularly; in indigestion, food is not properly digested, leading to a feeling of fullness.",
       "Constipation is caused strictly by inadequate enterokinase; Indigestion stems from a lack of dietary roughage.",
       "In constipation, skin and eyes turn yellow; in indigestion, the vomit center in the medulla is destroyed."
     ],
+    "oh": [
+      "कब्ज में ढीले मल त्याग की असामान्य आवृत्ति शामिल है; अपच में लंबे समय तक कंकाल की मांसपेशियों में ऐंठन शामिल है।",
+      "कब्ज में, अनियमित मल त्याग के कारण मल मलाशय (rectum) में ही रुक जाता है; अपच में, भोजन ठीक से पचता नहीं है, जिससे पेट भरा हुआ महसूस होता है।",
+      "कब्ज पूरी तरह से अपर्याप्त एंटरोकाइनेज के कारण होता है; अपच आहार में फाइबर की कमी से उत्पन्न होता है।",
+      "कब्ज में त्वचा और आंखें पीली हो जाती हैं; अपच में मड्यूला में उल्टी का केंद्र नष्ट हो जाता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes diarrhoea and tetanus symptoms, which are distinct from constipation. Option 2 is correct because the source text notes that Constipation is characterized by irregular bowel movements where the faeces are retained within the rectum due to water deficiency or lack of roughage. Indigestion is a separate condition where the food is not properly digested, leading to a subjective feeling of fullness, driven by factors like inadequate enzyme secretion, anxiety, food poisoning, or overeating. Option 3 presents reversed etiologies. Option 4 describes symptoms of jaundice and vomiting."
+    "e": "Gastrointestinal disorders colonic motility defect aur upper GI enzymatic processing failure ke basis par clinically differentiate kiye jaate hain.\n\n• Option A is Incorrect because loose bowel movements diarrhoea ka sign hai aur muscle spasm tetanus ka feature hai.\n\n• Option B is Correct because 'Constipation' ek colonic motility issue hai jisme irregular bowel movements ke karan faeces rectum/colon ke andar dry hokar retain ho jaate hain; jabki 'Indigestion' ek digestive processing failure hai jisme inadequate enzyme secretion, overeating, spicy food ya anxiety ke karan food properly digest nahi hota aur persistent fullness feel hoti hai.\n\n• Option C is Incorrect because enterokinase duodenal zymogen activator hai, constipation etiology se unrelated hai.\n\n• Option D is Incorrect because yellow pigmentation Jaundice ka landmark symptom hai."
   },
   {
     "p_id": "bpsc_dig_v3_14",
     "qe": "Intestinal villi possess structural modifications that maximize nutrient uptake. Which of the following features is *not* an attribute of these villi?",
     "qh": "आंतों के विली (intestinal villi) में संरचनात्मक रूपांतरण होते हैं जो पोषक तत्वों के अवशोषण को अधिकतम करते हैं। निम्नलिखित में से कौन सी विशेषता इन विली का गुण *नहीं* है?",
-    "o": [
+    "oe": [
       "They contain abundant blood capillaries and specialized lymph vessels called lacteals.",
       "They possess countless minute microvilli that further expand the overall absorptive surface area.",
       "They participate actively in the primary chemical digestion of complex fats into simple fatty acids.",
       "They facilitate the absorption of water, mineral salts, amino acids, and vitamins."
     ],
+    "oh": [
+      "इनमें प्रचुर मात्रा में रक्त केशिकाएं और लैक्टियल्स नामक विशेष लसीका वाहिकाएं होती हैं।",
+      "इनमें अनगिनत सूक्ष्म माइक्रोविली (सूक्ष्मांकुर) होते हैं जो समग्र अवशोषक सतह क्षेत्र को और बढ़ाते हैं।",
+      "वे जटिल वसा के सरल फैटी एसिड में प्राथमिक रासायनिक पाचन (chemical digestion) में सक्रिय रूप से भाग लेते हैं।",
+      "वे पानी, खनिज लवण, अमीनो एसिड और विटामिन के अवशोषण की सुविधा प्रदान करते हैं।"
+    ],
     "a": 2,
-    "e": "<b>Explanation:</b> Option 1, Option 2, and Option 4 are incorrect because they describe accurate physiological attributes of the intestinal villi, which are finger-like mucosal projections supplied with blood vessels and lacteals to absorb water, minerals, amino acids, and vitamins, and are covered in microvilli to expand surface area. Option 3 is correct because it represents a false statement. The text explicitly states that the villi *do not participate in the chemical digestion of fats*; they handle the physical absorption of lipids after they have been broken down by pancreatic and intestinal lipases into micelles."
+    "e": "Intestinal villi mucosa ke absorptive finger-like foldings hain jo nutrient uptake ke specialized structural hubs hote hain.\n\n• Option A is Incorrect (as an attribute) because villi rich vascular capillary networks aur central lymphatic lacteals contain karti hain.\n\n• Option B is Incorrect (as an attribute) because epithelial lining par present microvilli brush border banakar surface area ko massively multiply karte hain.\n\n• Option C is Correct (NOT an attribute) because villi structures physically nutrients ko absorb karti hain par *primary chemical fat digestion execute nahi karti*; fat breakdown luminal bile salts aur pancreatic lipases dwara chyme ke andar hota hai.\n\n• Option D is Incorrect (as an attribute) because villi water, minerals, amino acids, glucose aur vitamins ka primary mucosal absorption site hain."
   },
   {
     "p_id": "bpsc_dig_v3_15",
     "qe": "What precise biochemical pathway activates the central inactive pancreatic zymogen trypsinogen when it enters the small intestine lumen?",
     "qh": "जब केंद्रीय निष्क्रिय अग्न्याशयी जाइमोजन ट्रिप्सिनोजेन (trypsinogen) छोटी आंत के लुमेन में प्रवेश करता है, तो कौन सा सटीक जैव रासायनिक मार्ग इसे सक्रिय करता है?",
-    "o": [
+    "oe": [
       "It is directly cleaved by hydrochloric acid secreted from local parietal cells.",
       "It is activated into trypsin by the enzyme enterokinase, which is secreted by the intestinal mucosa.",
       "It binds to bile pigments like bilirubin to undergo automatic structural fusion.",
       "It undergoes degradation inside the acidic ground substance of gas vacuoles."
     ],
+    "oh": [
+      "यह स्थानीय पार्श्विका (parietal) कोशिकाओं से स्रावित हाइड्रोक्लोरिक एसिड द्वारा सीधे साफ किया जाता है।",
+      "यह आंतों के म्यूकोसा द्वारा स्रावित एंजाइम एंटरोकाइनेज (Enterokinase) द्वारा ट्रिप्सिन में सक्रिय होता है।",
+      "यह स्वचालित संरचनात्मक संलयन से गुजरने के लिए बिलीरुबिन जैसे पित्त वर्णक से जुड़ता है।",
+      "यह गैस रसधानियों के अम्लीय जमीनी पदार्थ के अंदर क्षरण से गुजरता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the activation pathway for pepsinogen inside the stomach, not trypsinogen in the intestine. Option 2 is correct because trypsinogen is an inactive pancreatic enzyme that must be activated upon reaching the duodenum. Enterokinase [an activating enzyme secreted by the intestinal mucosa] cleaves a protective peptide from trypsinogen to convert it into active trypsin. Active trypsin then acts as a master catalyst to activate the other inactive enzymes present in the pancreatic juice. Option 3 is incorrect because bile pigments are metabolic wastes and lack catalytic properties. Option 4 describes a prokaryotic architecture."
+    "e": "Pancreatic proteolytic zymogens duodenal mucosa ke local catalytic enzymes dwara sequential cascade mein activate hote hain.\n\n• Option A is Incorrect because gastric $HCl$ stomach mein pepsinogen ko activate karta hai, pancreatic enzymes ko nahi.\n\n• Option B is Correct because duodenal mucosal epithelium se secrete hone wala enzyme 'Enterokinase' (enteropeptidase) inactive 'Trypsinogen' se specific terminal hexapeptide cleave karke use active 'Trypsin' banata hai; active trypsin phir baaki inactive zymogens (chymotrypsinogen, procarboxypeptidase) ko autocatalytically activate karta hai.\n\n• Option C is Incorrect because bile pigments non-catalytic excretory waste byproducts hain.\n\n• Option D is Incorrect because gas vacuoles prokaryotic buoyancy organelles hain."
   },
   {
     "p_id": "bpsc_dig_v3_16",
     "qe": "A historical researcher reviews the development of the cell theory. Which scientist first established the vital link between cell division and the continuity of life through extensive structural evidence?",
     "qh": "एक ऐतिहासिक शोधकर्ता कोशिका सिद्धांत (cell theory) के विकास की समीक्षा करता है। किस वैज्ञानिक ने व्यापक संरचनात्मक साक्ष्यों के माध्यम से कोशिका विभाजन और जीवन की निरंतरता के बीच महत्वपूर्ण संबंध को सबसे पहले स्थापित किया था?",
-    "o": [
+    "oe": [
       "Anton Von Leeuwenhoek",
       "Rudolf Virchow",
       "Camillo Golgi",
       "George Palade"
     ],
+    "oh": [
+      "एंटोन वॉन लीउवेनहोएक (Anton Von Leeuwenhoek)",
+      "रुडोल्फ विरचो (Rudolf Virchow)",
+      "कैमिलो गोल्गी (Camillo Golgi)",
+      "जॉर्ज पैलेड (George Palade)"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because Leeuwenhoek first saw and described a live cell, but did not define cell lineage mechanics. Option 2 is correct because the source text establishes that Rudolf Virchow (1855) provided a major expansion to the classical Schleiden-Schwann cell theory by formulating the principle <i>'Omnis cellula e cellula'</i>, which demonstrates that all cells arise from pre-existing cells. Along with the early insights of Carl Nageli (1846), Virchow's work established cell division as the central phenomenon in the continuity of life. Option 3 discovered the Golgi apparatus using silver nitrate. Option 4 discovered ribosomes using electron microscopy."
+    "e": "Classical Cell Theory (Schleiden & Schwann, 1838-39) yeh explain nahi kar payi thi ki new cells originate kaise hoti hain.\n\n• Option A is Incorrect because Anton Von Leeuwenhoek ne first live mobile cells (bacteria, protozoa, sperms) discover aur observe kiye the.\n\n• Option B is Correct because Rudolf Virchow ne 1855 mein cell theory ko expand kiya aur historic biological generalization di: <i>'Omnis cellula-e-cellula'</i> (all living cells arise from pre-existing cells via division), jo cell division aur continuity of life ke beech primary link establish karta hai.\n\n• Option C is Incorrect because Camillo Golgi ne silver nitrate staining se Golgi apparatus discover kiya tha.\n\n• Option D is Incorrect because George Palade ne electron microscopy se Ribosomes (Palade particles) discover kiye the."
   },
   {
     "p_id": "bpsc_dig_v3_17",
     "qe": "The human stomach wall features structural modifications that allow it to mechanically process food. What are the irregular folds of the inner mucosal layer called, and what name is given to the food mixture after it has been thoroughly churned with acidic gastric juices?",
     "qh": "मानव आमाशय की दीवार में संरचनात्मक रूपांतरण होते हैं जो इसे भोजन को यांत्रिक रूप से संसाधित करने की अनुमति देते हैं। आंतरिक म्यूकोसल परत के अनियमित सिलवटों (irregular folds) को क्या कहा जाता है, और अम्लीय गैस्ट्रिक रसों के साथ पूरी तरह से मथने के बाद भोजन के मिश्रण को क्या नाम दिया जाता है?",
-    "o": [
+    "oe": [
       "Villi folds; forming a fluid bolus matrix.",
       "Rugae folds; forming a highly acidic mixture called chyme.",
       "Cisternae layers; forming a protein-coated chylomicron droplet.",
       "Thylakoid stacks; forming a neutral syncytium fluid."
     ],
+    "oh": [
+      "विली सिलवटें; एक द्रव बोलस मैट्रिक्स बनाना।",
+      "रूगे (Rugae) सिलवटें; काइम (Chyme) नामक अत्यधिक अम्लीय मिश्रण बनाना।",
+      "सिस्टर्नी परतें; प्रोटीन-लेपित काइलोमाइक्रोन छोटी बूंद बनाना।",
+      "थायलाकोइड ढेर; एक तटस्थ सिन्सिटियम तरल पदार्थ बनाना।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes small intestinal absorptive structures and oral food boluses. Option 2 is correct because the innermost mucosal layer of the stomach forms irregular folds called rugae that allow the wall to expand. When food is stored for 4-5 hours and thoroughly mixed with highly concentrated hydrochloric acid ($HCl$) via the churning movements of the muscularis wall, it is converted into a semi-liquid acidic mass called chyme. Option 3 describes Golgi apparatus parts and lipid transport particles. Option 4 describes chloroplast components."
+    "e": "Stomach internal gross anatomy mechanical reservoir aur churning chamber ke roop mein operate karti hai.\n\n• Option A is Incorrect because villi small intestine ki mucosal projections hain aur bolus oral cavity ka masticated food package hai.\n\n• Option B is Correct because empty stomach ki mucosal lining par longitudinal irregular folds present hote hain jinhe 'Rugae' kehte hain jo distension allow karte hain; 4-5 hours tak muscular churning movements ke dauraan food acidic gastric juice ke sath thoroughly mix hokar semi-fluid acidic paste banata hai jise 'Chyme' kaha jata hai.\n\n• Option C is Incorrect because cisternae Golgi/ER ke flattened sacs hain aur chylomicrons lipid transport packages hain.\n\n• Option D is Incorrect because thylakoids chloroplast ke internal membrane lamellae hain."
   },
   {
     "p_id": "bpsc_dig_v3_18",
     "qe": "During the physical sorting of cellular components in an analytical centrifuge, a biophysicist measures a sedimentation coefficient 'S' equal to exactly $10^{-13}$ seconds. What does this metric evaluate?",
     "qh": "एक विश्लेषणात्मक सेंट्रीफ्यूज में कोशिकीय घटकों के भौतिक छँटाई (physical sorting) के दौरान, एक जैव-भौतिक विज्ञानी ठीक $10^{-13}$ सेकंड के बराबर अवसादन गुणांक 'S' को मापता है। यह मीट्रिक किसका मूल्यांकन करता है?",
-    "o": [
+    "oe": [
       "The linear velocity of flagellar axoneme movement.",
       "The density and size of a macro-structural particle or ribosomal subunit.",
       "The exact thickness of the non-polar hydrophobic lipid bilayer leaflet.",
       "The absolute rate of glucose conversion into glycogen granules."
     ],
+    "oh": [
+      "फ्लैगेलर एक्सोनेम आंदोलन का रैखिक वेग।",
+      "एक स्थूल संरचनात्मक कण या राइबोसोमल सबयूनिट का घनत्व और आकार (Density and Size)।",
+      "गैर-ध्रुवीय हाइड्रोफोबिक लिपिड बाइलेयर लीफलेट की सटीक मोटाई।",
+      "ग्लूकोज के ग्लाइकोजन कणिकाओं में रूपांतरण की पूर्ण दर।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes motor protein metrics rather than sedimentation properties. Option 2 is correct because 'S' stands for Svedberg’s Unit for the sedimentation coefficient, which represents how fast a cell organelle or macromolecule sediments during ultracentrifugation. The absolute value of 1S is precisely equal to $10^{-13}$ seconds, serving as an indirect measure of the density and size of structures like the 70S and 80S ribosomal subunits. Option 3 describes membrane dimensions, which are tracked in nanometers. Option 4 describes metabolic conversion kinetics tracked in molarity over time."
+    "e": "Ultracentrifugation mein particles unke hydrodynamic mass aur buoyant density ke basis par sediment hote hain.\n\n• Option A is Incorrect because flagellar motility dynein ATPase kinetics aur sliding velocity par depend karti hai.\n\n• Option B is Correct because 'S' (Svedberg Unit) sedimentation coefficient ko represent karta hai jo unit centrifugal field ke under particle ke sedimentation rate ko measure karta hai; $1\\text{S} = 10^{-13}\\text{ seconds}$ hota hai, aur yeh indirect physical measure provide karta hai macromolecule ya ribosomal subunit ke 'Density aur Size' ka (jaise $70\\text{S}$ aur $80\\text{S}$ ribosomes).\n\n• Option C is Incorrect because lipid bilayer thickness (~$7.5\\text{ nm}$) electron microscopy/X-ray scattering se measure hoti hai.\n\n• Option D is Incorrect because glycogenesis rate enzyme kinetics (moles/time) mein express hota hai."
   },
   {
     "p_id": "bpsc_dig_v3_19",
     "qe": "A cytologist uses a basic stain to visualize chromosomal structures and nucleic acids, giving them a distinct pink color that differentiates them from other organelles. Identify this dye.",
     "qh": "एक कोशिकाविज्ञानी गुणसूत्र संरचनाओं और न्यूक्लिक एसिड को देखने के लिए एक बुनियादी रंजक (basic stain) का उपयोग करता है, जिससे वे एक विशिष्ट गुलाबी रंग के दिखाई देते हैं जो उन्हें अन्य अंगकों से अलग करता है। इस रंजक को पहचानें।",
-    "o": [
+    "oe": [
       "Janus Green B respiratory indicator",
       "Carmine basic dye",
       "Fast Green alkaline reagent",
       "Suberized safranin counterstain"
     ],
+    "oh": [
+      "जानूस ग्रीन बी (Janus Green B) श्वसन संकेतक",
+      "कार्मिन बेसिक डाई (Carmine basic dye)",
+      "फास्ट ग्रीन क्षारीय अभिकर्मक",
+      "सुबेराइज्ड सैफ्रानिन काउंटरस्टेन"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is an indicator dye that targets active mitochondria, turning blue in the presence of oxygen. Option 2 is correct because Carmine is a basic dye that carries a positive charge, allowing it to bind to negatively charged nucleic acids and chromatin fibres. This binding stains chromosomes a distinct pink color, highlighting them for morphological analysis under a light microscope. Option 3 is used to stain histone proteins after acid extraction. Option 4 is a counterstain used for plant cell walls or bacterial Gram procedures."
+    "e": "Cytological microtechnique specific biological macromolecules ko visualize karne ke liye cationic (basic) dyes use karti hai.\n\n• Option A is Incorrect because Janus Green B vital stain hai jo specifically mitochondria ko oxidize hokar greenish-blue stain karta hai.\n\n• Option B is Correct because 'Carmine' (Acetocarmine) ek cationic basic nuclear dye hai jo negatively charged DNA phosphate backbones aur chromatin fibers se bind hokar chromosomes ko light microscopy mein distinct pink/red color provide karti hai (frequently used in root-tip squash for mitosis study).\n\n• Option C is Incorrect because Fast Green acidic cytoplasmic counterstain hai jo histones/cytoplasm ko green stain karta hai.\n\n• Option D is Incorrect because Safranin plant lignified walls aur Gram-negative bacteria ko red stain karne ke liye standard counterstain hai."
   },
   {
     "p_id": "bpsc_dig_v3_20",
     "qe": "During fruit ripening in plants like *Capsicum*, specific intracellular structures undergo a series of color changes from green to red. What cellular transformation drives this phenomenon?",
     "qh": "*Capsicum* जैसे पौधों में फल पकने (fruit ripening) के दौरान, विशिष्ट अंतःकोशकीय संरचनाएं हरे से लाल रंग में बदलने की एक श्रृंखला से गुजरती हैं। कौन सा कोशिकीय रूपांतरण (cellular transformation) इस घटना को संचालित करता है?",
-    "o": [
+    "oe": [
       "The complete conversion of cellulose cell walls into non-polar lipid sheets.",
       "The conversion of green chloroplasts into pigment-rich chromoplasts, along with the degeneration of their lamellae.",
       "The rapid fusion of nuclear pores with outer rough endoplasmic channels.",
       "The structural replication of extrachromosomal circular plasmid DNA loops."
     ],
+    "oh": [
+      "सेल्युलोज कोशिका भित्तियों का गैर-ध्रुवीय लिपिड शीट में पूर्ण रूपांतरण।",
+      "हरे क्लोरोप्लास्ट का वर्णक-समृद्ध क्रोमोप्लास्ट (Chromoplasts) में रूपांतरण, साथ ही उनके लैमेली का क्षरण।",
+      "बाहरी खुरदरे एंडोप्लाज्मिक चैनलों के साथ परमाणु छिद्रों का तेजी से संलयन।",
+      "एक्स्ट्राक्रोमोसोमल गोलाकार प्लास्मिड डीएनए लूप का संरचनात्मक प्रतिकृति।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes a change in cell wall architecture that is biologically impossible and does not regulate color pigments. Option 2 is correct because the source text notes that plastids are interchangeable in their form depending upon developmental stages. During the ripening of fruits like tomatoes or chillies (*Capsicum*), green chloroplasts [which contain light-trapping chlorophyll] are transformed into carotenoid-rich chromoplasts [coloured plastids storing carotene and xanthophylls], which turn the tissue orange, yellow, or red. This color change is accompanied by the structural degeneration of their internal thylakoid lamellae. Option 3 and Option 4 describe nuclear and prokaryotic plasmid behaviors that do not regulate plant tissue pigmentation."
+    "e": "Plant plastids developmentally interchangeable semi-autonomous double-membraned organelles hote hain.\n\n• Option A is Incorrect because cell wall softening pectin hydrolysis se hoti hai, lipid conversion se nahi.\n\n• Option B is Correct because tomato aur *Capsicum* (chillies) ki ripening ke time green 'Chloroplasts' (chlorophyll-containing) degrade ho jaate hain, unki thylakoid lamellae disintegrate hoti hain aur lipid-soluble carotenoid pigments (Lycopene, Capsanthin) accumulate hokar unhe brightly colored 'Chromoplasts' mein transform kar dete hain (Green $\\rightarrow$ Red transition).\n\n• Option C is Incorrect because nuclear envelope fusion pigment transition induce nahi karta.\n\n• Option D is Incorrect because bacterial plasmid replication plant fruit ripening ka driver nahi hai."
   },
-  
   {
     "p_id": "bpsc_life_v1_01",
     "qe": "Why do living organisms continuously demand metabolic energy and raw materials even when resting in a state of absolute, motionless sleep?",
     "qh": "पूर्णतः गतिहीन नींद की अवस्था में आराम करते समय भी जीवित जीवों को लगातार चयापचय ऊर्जा (metabolic energy) और कच्चे माल की आवश्यकता क्यों होती है?",
-    "o": [
+    "oe": [
       "To drive the rapid crystallization of calcium carbonate minerals within local blood vessels.",
       "To continuously maintain a state of systemic order and counteract spontaneous cellular entropy.",
       "To trigger the voluntary splitting of 80S cytoplasmic ribosomal subunits into nucleoli.",
       "To accelerate the mechanical conversion of simple sugars into extracellular slime sheets."
     ],
+    "oh": [
+      "स्थानीय रक्त वाहिकाओं के भीतर कैल्शियम कार्बोनेट खनिजों के तेजी से क्रिस्टलीकरण को चलाने के लिए।",
+      "प्रणालीगत व्यवस्था (Order) की स्थिति को निरंतर बनाए रखने और स्वतःस्फूर्त कोशिकीय एन्ट्रापी (Entropy) का मुकाबला करने के लिए।",
+      "80S साइटोप्लाज्मिक राइबोसोमल सबयूनिट्स के न्यूक्लियोली में स्वैच्छिक विभाजन को ट्रिगर करने के लिए।",
+      "सरल शर्करा के बाह्यकोशिकीय स्लाइम शीट्स में यांत्रिक रूपांतरण में तेजी लाने के लिए।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes an abnormal vascular mineral deposition pathway, not a baseline resting requirement. Option 2 is correct because the text establishes that even when we are not doing any apparent activity, metabolic energy is continuously required to maintain a state of structural and chemical order in our body against cellular decay and entropy [the universal physical tendency of organized systems to slide into unorganized disorder]. Materials from outside are also needed to synthesize proteins and repair tissues. Option 3 is incorrect because ribosomal subunit dynamics are governed by active translation demands, not baseline macroscopic rest. Option 4 describes an algal or bacterial structural sheet synthesis that is absent in human metabolic physiology."
+    "e": "Living systems highly ordered, thermodynamically non-equilibrium states maintain karte hain jiske liye continuous energy input mandatory hota hai.\n\n• Option A is Incorrect because vascular mineral crystallization pathological calcification hai, normal resting physiology nahi.\n\n• Option B is Correct because jab organism resting ya asleep hota hai, tab bhi basal metabolic processes (heart beating, cellular respiration, active membrane potential maintenance, macromolecular repair) continuously operate karte hain taaki thermodynamic entropy (spontaneous breakdown of molecular order) ko counteract karke structural homeostasis maintain kiya ja sake.\n\n• Option C is Incorrect because ribosomal dynamics translation demand se regulate hote hain, baseline metabolic maintenance se nahi.\n\n• Option D is Incorrect because slime sheet synthesis bacterial biofilm feature hai, basal mammalian physiology nahi."
   },
   {
     "p_id": "bpsc_life_v1_02",
     "qe": "In autotrophic organisms like green plants, excess carbohydrates synthesized via light-driven pathways are stored as starch. In what specific form is this energy reserve localized within human somatic tissues?",
     "qh": "हरे पौधों जैसे स्वपोषी जीवों (autotrophic organisms) में, प्रकाश-संचालित मार्गों के माध्यम से संश्लेषित अतिरिक्त कार्बोहाइड्रेट स्टार्च के रूप में संग्रहीत होते हैं। मानव कायिक ऊतकों के भीतर यह ऊर्जा संचय किस विशिष्ट रूप में स्थित होता है?",
-    "o": [
+    "oe": [
       "Apolar saturated lipids stored in the central tonoplast sheath.",
       "Glycogen molecules distributed within the human body matrices.",
       "Linear double-stranded extragenomic chromatin fibres.",
       "Suberized proteinaceous inclusions accumulated inside the blood stream."
     ],
+    "oh": [
+      "केंद्रीय टोनोप्लास्ट आवरण में संग्रहीत अपोलर संतृप्त लिपिड।",
+      "मानव शरीर के ऊतकों (यकृत और मांसपेशियों) के भीतर वितरित ग्लाइकोजन (Glycogen) अणु।",
+      "रैखिक डबल-स्ट्रैंडेड एक्स्ट्राजीनोमिक क्रोमैटिन फाइबर।",
+      "रक्त प्रवाह के अंदर जमा सुबेराइज्ड प्रोटीनयुक्त समावेशन।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes vacuolar plant structures that do not exist in human physiology. Option 2 is correct because the source text notes a direct metabolic parallel between plant and animal energy reserves: while autotrophs store unused carbohydrates as starch, human beings store excess derived energy within their body tissues in the form of glycogen [a highly branched polysaccharide of glucose that serves as the primary short-term energy storage form in animals]. Option 3 describes nuclear genetic materials, not storage carbohydrates. Option 4 is a fabricated distractor combining unrelated structural terms."
+    "e": "Carbohydrate energy storage strategies evolutionary lines (Plants vs Animals) mein branched polysaccharide polymers ke roop mein diverge hoti hain.\n\n• Option A is Incorrect because tonoplast plant vacuole ki membrane hoti hai, animal tissues mein absent hoti hai.\n\n• Option B is Correct because green plants autotrophic glucose ko Starch ($alpha$-amylose aur amylopectin) ke roop mein store karte hain, jabki humans aur higher animals excess ingested glucose ko highly branched polysaccharide 'Glycogen' (animal starch) ke form mein primarily Liver aur Skeletal Muscles mein reserve energy store karte hain.\n\n• Option C is Incorrect because chromatin genetic information store karta hai, metabolic calories nahi.\n\n• Option D is Incorrect because suberin plant root casparian strips ka waterproof material hai."
   },
   {
     "p_id": "bpsc_life_v1_03",
     "qe": "Photosynthesis is traditionally taught as a series of tight sequential events. Which evolutionary exception demonstrated by desert plants breaks this continuous chronological sequence?",
     "qh": "प्रकाश संश्लेषण (Photosynthesis) को पारंपरिक रूप से तंग क्रमिक घटनाओं की एक श्रृंखला के रूप में पढ़ाया जाता है। मरुस्थलीय पौधों (desert plants) द्वारा प्रदर्शित कौन सा विकासवादी अपवाद इस निरंतर कालानुक्रमिक अनुक्रम को तोड़ता है?",
-    "o": [
+    "oe": [
       "They absorb photons at night to directly split water molecules into hydrogen and oxygen in the dark.",
       "They separate the cycles by taking up carbon dioxide at night to prepare a stable intermediate, which is then acted upon by energy absorbed by chlorophyll during the day.",
       "They bypass the reduction of carbon dioxide entirely, using mineral carbonates from soil instead.",
       "They actively synthesize active enterokinase within their green dot stomatal pores."
     ],
+    "oh": [
+      "वे अंधेरे में पानी के अणुओं को सीधे हाइड्रोजन और ऑक्सीजन में विभाजित करने के लिए रात में फोटॉन अवशोषित करते हैं।",
+      "वे रात में कार्बन डाइऑक्साइड ($CO_2$) ग्रहण करके एक मध्यवर्ती (Malic acid) तैयार करते हैं, जिस पर दिन के दौरान क्लोरोफिल द्वारा अवशोषित ऊर्जा द्वारा कार्य किया जाता है (CAM pathway)।",
+      "वे मिट्टी से खनिज कार्बोनेट का उपयोग करके कार्बन डाइऑक्साइड की कमी को पूरी तरह से बायपास करते हैं।",
+      "वे अपने हरे बिंदु वाले रंध्र छिद्रों के भीतर सक्रिय एंटरोकाइनेज का सक्रिय रूप से संश्लेषण करते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because the photolysis of water [the splitting of water molecules driven by light absorption] strictly requires active light energy and cannot proceed at night. Option 2 is correct because the text notes that the primary steps of photosynthesis do not have to take place one after the other immediately. Desert plants present a key adaptation: they open their stomata at night to take up carbon dioxide when transpirational water loss is low, turning it into a chemical intermediate. During the subsequent day, the energy captured by chlorophyll from sunlight acts upon this intermediate to finish carbohydrate synthesis. Option 3 is incorrect because carbon dioxide reduction remains mandatory for autotrophic carbon fixation. Option 4 describes an animal digestive mucosal enzyme."
+    "e": "Desert xerophytic plants transpirational water loss minimize karne ke liye temporal separation of photosynthetic steps (CAM pathway) evolve karte hain.\n\n• Option A is Incorrect because photolysis of water strictly light-dependent reaction hai jo darkness mein proceed nahi ho sakti.\n\n• Option B is Correct because desert plants (CAM plants jaise Cacti, Pineapple) night time mein scotoactive stomata open karke $CO_2$ absorb karte hain aur 4-carbon intermediate (Malic acid) banakar vacuoles mein store karte hain; din mein jab stomata closed hote hain, toh daylight mein trapped solar energy is intermediate ko cleave karke Calvin cycle complete karti hai.\n\n• Option C is Incorrect because $CO_2$ reduction organic carbohydrates synthesize karne ke liye universal step hai.\n\n• Option D is Incorrect because enterokinase animal intestinal mucosal enzyme hai."
   },
   {
     "p_id": "bpsc_life_v1_04",
     "qe": "Plants regulate stomatal pore opening and closing to balance carbon dioxide capture against transpirational water loss. What physiological mechanism governs this dynamic gating?",
     "qh": "पौधे वाष्पोत्सर्जन जनित जल हानि (transpirational water loss) के खिलाफ कार्बन डाइऑक्साइड कैप्चर को संतुलित करने के लिए रंध्र छिद्रों (stomatal pores) के खुलने और बंद होने को नियंत्रित करते हैं। कौन सा शारीरिक तंत्र इस गतिशील द्वार (dynamic gating) को नियंत्रित करता है?",
-    "o": [
+    "oe": [
       "The automatic expansion of the structural protein hub within the local ciliary axoneme.",
       "The swelling of guard cells when water flows into them to open the pore, and their subsequent shrinkage to close it.",
       "The active contraction of an inner circular smooth muscle sphincter lining the leaf surface.",
       "The chemical terminalisation of chiasmata linkages along the epidermal cell wall."
     ],
+    "oh": [
+      "स्थानीय रोमक एक्सोनेम के भीतर संरचनात्मक प्रोटीन हब का स्वचालित विस्तार।",
+      "रंध्र को खोलने के लिए रक्षक कोशिकाओं (Guard cells) में पानी के प्रवाह से उनका फूलना (Turgid होना), और छिद्र को बंद करने के लिए उनका सिकुड़ना (Flaccid होना)।",
+      "पत्ती की सतह पर एक आंतरिक गोलाकार चिकनी पेशी स्फिंक्टर का सक्रिय संकुचन।",
+      "एपिडर्मल कोशिका भित्ति के साथ चियास्मेटा लिंकेज का रासायनिक समापन।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes flagellar or ciliary locomotion cores, which have no role in leaf gas gating. Option 2 is correct because the opening and closing of the stomatal pore is a direct osmotic function of the specialized guard cells. When water flows into the guard cells from adjacent epidermal cells, their turgor pressure increases, causing them to swell and bow outward, which opens the pore. Conversely, when water leaves the guard cells, they shrink and become flaccid, causing the stomatal pore to close. Option 3 is incorrect because plants lack muscle tissues or sphincters. Option 4 describes a meiotic prophase chromosome event."
+    "e": "Stomatal pore kinetics specialized epidermal guard cells ke reversible turgor pressure changes par operate karti hain.\n\n• Option A is Incorrect because ciliary axoneme cell motility organelle hai, leaf stomata gating se unrelated hai.\n\n• Option B is Correct because jab subsidiary cells se water Guard Cells ke andar flow karta hai ($K^+$ influx ke karan), toh guard cells turgid/swell ho jaati hain aur unki thick inner wall aur thin outer elastic wall ke differential curvature ke karan stomatal pore open ho jata hai; water lose hone par guard cells flaccid hokar shrink hoti hain aur pore close ho jata hai.\n\n• Option C is Incorrect because plant tissues mein smooth muscular sphincters absent hote hain.\n\n• Option D is Incorrect because chiasmata terminalisation meiotic crossing over prophase-I ka event hai."
   },
   {
     "p_id": "bpsc_life_v1_05",
     "qe": "How do autotrophic green plants assimilate the essential element Nitrogen if they are completely unable to fix atmospheric gaseous nitrogen directly?",
     "qh": "स्वपोषी हरे पौधे आवश्यक तत्व नाइट्रोजन (Nitrogen) को कैसे आत्मसात (assimilate) करते हैं यदि वे वायुमंडलीय गैसीय नाइट्रोजन को सीधे स्थिर करने में पूरी तरह असमर्थ हैं?",
-    "o": [
+    "oe": [
       "They absorb it exclusively in the form of organic lipases through their stomatal pores.",
       "They take it up from the soil as inorganic nitrates or nitrites, or as organic compounds prepared by soil bacteria.",
       "They chemically convert localized glucose molecules into basic amino acids via solar photolysis.",
       "They extract it directly from the protein-coated chylomicrons circulating in their sap."
     ],
+    "oh": [
+      "वे इसे विशेष रूप से अपने रंध्र छिद्रों के माध्यम से कार्बनिक लाइपेस के रूप में अवशोषित करते हैं।",
+      "वे इसे मिट्टी से अकार्बनिक नाइट्रेट ($NO_3^-$) या नाइट्राइट ($NO_2^-$) के रूप में, या मिट्टी के बैक्टीरिया द्वारा तैयार कार्बनिक यौगिकों के रूप में लेते हैं।",
+      "वे सौर प्रकाश अपघटन के माध्यम से स्थानीयकृत ग्लूकोज अणुओं को मूल अमीनो एसिड में रासायनिक रूप से परिवर्तित करते हैं।",
+      "वे इसे सीधे अपने रस में परिसंचारी प्रोटीन-लेपित काइलोमाइक्रोन से निकालते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because lipases are lipid-cleaving digestive enzymes, not nitrogenous vectors, and stomata process gases rather than mineral salts. Option 2 is correct because nitrogen is a vital macro-element required for protein and nucleic acid synthesis. Plants absorb it passively or actively from the soil solution in the form of inorganic nitrates ($NO_3^-$) or nitrites ($NO_2^-$), or ingest it as complex organic nitrogenous compounds synthesized from atmospheric nitrogen ($N_2$) by mutualistic or free-living soil bacteria. Option 3 describes an chemically impossible conversion. Option 4 describes animal lipid transport packages."
+    "e": "Atmospheric inert dinitrogen ($N_2$) plants dwara directly absorb nahi ho sakti aur biochemical nitrogen fixation par rely karti hai.\n\n• Option A is Incorrect because lipases lipid-cleaving enzymes hain aur stomata gases exchange karte hain, mineral ions nahi.\n\n• Option B is Correct because Nitrogen amino acids, proteins aur nucleic acids ka essential constituent hai; plants root system dwara soil solution se inorganic oxidized forms yaani Nitrates ($NO_3^-$), Nitrites ($NO_2^-$), Ammonium ($NH_4^+$) ya nitrogen-fixing bacteria (*Rhizobium*, *Azotobacter*) dwara synthesized organic forms absorb karte hain.\n\n• Option C is Incorrect because solar photolysis water split karta hai, glucose ko amino acids mein convert nahi karta.\n\n• Option D is Incorrect because chylomicrons animal intestinal lymphatic lipid transport droplets hain."
   },
   {
     "p_id": "bpsc_life_v1_06",
     "qe": "Fungi such as bread moulds, yeast, and mushrooms display a specialized nutritional strategy. How do they access and ingest organic macromolecules?",
     "qh": "ब्रेड मोल्ड्स, यीस्ट और मशरूम जैसे कवक (Fungi) एक विशिष्ट पोषण रणनीति प्रदर्शित करते हैं। वे कार्बनिक मैक्रोमोलेक्यूल्स तक कैसे पहुँचते हैं और उन्हें कैसे ग्रहण करते हैं?",
-    "o": [
+    "oe": [
       "They utilize temporary finger-like pseudopodia to engulf solid material intact.",
       "They break down the food material outside the body using secreted enzymes and then absorb the simpler products.",
       "They reside as endoparasites inside the host windpipe to extract circular plasmid arrays.",
       "They rely completely on light-trapping carotenoids localized within their stroma lamellae."
     ],
+    "oh": [
+      "वे ठोस सामग्री को निगलने के लिए अस्थायी उंगली जैसे स्यूडोपोडिया (पादभ) का उपयोग करते हैं।",
+      "वे स्रावित एंजाइमों का उपयोग करके शरीर के बाहर खाद्य सामग्री को तोड़ते हैं (Extracellular digestion) और फिर सरल उत्पादों को अवशोषित करते हैं।",
+      "वे परिपत्र प्लाज्मिड सरणियों को निकालने के लिए मेजबान श्वासनली के अंदर एंडोपैरासाइट्स के रूप में रहते हैं।",
+      "वे अपने स्ट्रोमा लैमेली के भीतर स्थानीयकृत प्रकाश-फंसाने वाले कैरोटीनॉयड पर पूरी तरह से भरोसा करते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the phagocytic lifestyle of amoeboid protozoans, not saprophytic fungi. Option 2 is correct because fungi exhibit absorptive heterotrophic nutrition [saprophytic nutrition]. They secrete digestive enzymes directly onto their dead or decaying organic substrate, breaking down complex biomacromolecules into simpler, diffusible molecules *outside the body*, and subsequently absorb these processed nutrients across their cell membranes. Option 3 and Option 4 present inaccurate anatomical parasitism profiles and photosynthetic organelle concepts, as fungi lack plastids or chlorophyll."
+    "e": "Fungi non-photosynthetic eukaryotic heterotrophs hote hain jo absorptive saprophytic mode of nutrition follow karte hain.\n\n• Option A is Incorrect because phagocytic pseudopodial engulfment Amoeba jaise holozoic protozoans ka mechanism hai.\n\n• Option B is Correct because Fungi (jaise *Rhizopus*, *Saccharomyces*, *Agaricus*) dead organic substratum par extracellular digestive enzymes secrete karte hain jo complex polymers (cellulose, proteins) ko body ke bahar simple soluble monomers mein hydrolyze kar dete hain, jinhe fungal hyphae directly absorb kar lete hain (Saprophytic / Absorptive nutrition).\n\n• Option C is Incorrect because non-pathogenic fungi tracheal endoparasites nahi hote.\n\n• Option D is Incorrect because fungi achlorophyllous hote hain aur inme plastids/chloroplasts completely absent hote hain."
   },
   {
     "p_id": "bpsc_life_v1_07",
     "qe": "Which of the following organisms correctly lists a group that utilizes a strictly parasitic nutritive strategy, deriving sustenance from hosts without immediately killing them?",
     "qh": "निम्नलिखित में से कौन सा जीव सटीक रूप से ऐसे समूह को सूचीबद्ध करता है जो कड़ाई से एक परजीवी पोषण रणनीति (parasitic nutritive strategy) का उपयोग करता है, और मेजबानों को तुरंत मारे बिना उनसे पोषण प्राप्त करता है?",
-    "o": [
+    "oe": [
       "Amoeba, Paramoecium, and specialized green photosynthetic bacteria.",
       "Cuscuta (amar-bel), orchids, ticks, lice, leeches, and tape-worms.",
       "Bread moulds, edible mushrooms, and complex single-celled yeasts.",
       "Male honey bees, triploid endosperms, and vertebrate liver cells."
     ],
+    "oh": [
+      "अमीबा, पैरामीशियम और विशेष हरे प्रकाश संश्लेषक बैक्टीरिया।",
+      "अमरबेल (Cuscuta), ऑर्किड, किलनी (ticks), जूँ (lice), जोंक (leeches), और फीताकृमि (tape-worms)।",
+      "ब्रेड मोल्ड्स, खाद्य मशरूम, और जटिल एकल-कोशिका वाले यीस्ट।",
+      "नर मधुमक्खियां, ट्रिप्लाइड एंडोस्पर्म और कशेरुकी यकृत कोशिकाएं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes holozoic unicellular protozoans and autotrophic prokaryotes. Option 2 is correct because a parasitic strategy involves organisms living on or inside a host organism to extract nutrients directly at the host's expense, typically without causing immediate death. The source text explicitly lists Cuscuta (a non-photosynthetic parasitic plant), orchids [epiphytic/parasitic associations], external arthropod/annelid vectors like ticks, lice, and leeches, along with internal helminth parasites like tape-worms as primary examples. Option 3 describes saprophytic decomposers. Option 4 lists specific reproductive cell types and specialized tissues."
+    "e": "Parasitism ek interspecific ecological interaction hai jisme parasite living host se nutrition aur shelter derive karta hai bina use immediately kill kiye.\n\n• Option A is Incorrect because Amoeba/Paramoecium holozoic organisms hain aur green bacteria autotrophs hain.\n\n• Option B is Correct because parasitic nutrition plants aur animals dono mein prevalent hai: *Cuscuta* (Amar-bel) parasitic plant hai jo host plant se haustoria ke through nutrients suck karta hai; ectoparasites jaise ticks, lice, leeches animal blood feed karte hain; aur endoparasites jaise tapeworms (*Taenia*) host gut se pre-digested nutrients direct absorb karte hain.\n\n• Option C is Incorrect because bread moulds aur mushrooms saprophytic decomposers hain.\n\n• Option D is Incorrect because yeh reproductive cells aur internal tissues hain."
   },
   {
     "p_id": "bpsc_life_v1_08",
     "qe": "Unicellular organisms display distinct operational strategies to capture nutrients. What structural difference separates the food uptake mechanism of Amoeba from that of Paramoecium?",
     "qh": "एककोशकीय जीव पोषक तत्वों को ग्रहण करने के लिए अलग-अलग परिचालन रणनीतियाँ प्रदर्शित करते हैं। अमीबा की भोजन ग्रहण करने की क्रियाविधि को पैरामीशियम (Paramoecium) से कौन सा संरचनात्मक अंतर अलग करता है?",
-    "o": [
+    "oe": [
       "Amoeba absorbs nutrients via passive osmosis across its cell wall, while Paramoecium utilizes flagellar hooks.",
       "Amoeba utilizes temporary finger-like extensions that fuse over food, whereas Paramoecium has a definite shape and uses cilia to move food to a specific spot.",
       "Amoeba targets complex sugars inside a matrix of cisternae, while Paramoecium lacks a cytoplasm volume.",
       "Amoeba relies on internal gas vacuoles, whereas Paramoecium uses basic histone repressor octamers."
     ],
+    "oh": [
+      "अमीबा अपनी कोशिका भित्ति के पार निष्क्रिय परासरण के माध्यम से पोषक तत्वों को अवशोषित करता है, जबकि पैरामीशियम फ्लैजेलर हुक का उपयोग करता है।",
+      "अमीबा उंगली जैसी अस्थायी संरचनाओं (स्यूडोपोडिया) का उपयोग करता है जो भोजन को घेरती हैं, जबकि पैरामीशियम का एक निश्चित आकार होता है और सिलिया का उपयोग करके भोजन को एक विशिष्ट स्थान (Oral groove/Cytostome) तक ले जाता है।",
+      "अमीबा सिस्टर्नी के मैट्रिक्स के अंदर जटिल शर्करा को लक्षित करता है, जबकि पैरामीशियम में साइटोप्लाज्म की मात्रा की कमी होती है।",
+      "अमीबा आंतरिक गैस रसधानियों पर निर्भर करता है, जबकि पैरामीशियम बुनियादी हिस्टोन रिप्रेसर ऑक्टामर्स का उपयोग करता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because Amoeba lacks a cell wall and osmosis refers to water transport, not bulk holozoic food ingestion. Option 2 is correct because Amoeba captures food using flexible, temporary finger-like extensions of the cell surface [pseudopodia] which engulf the particle to form an internal fluid food-vacuole where digestion occurs. Paramoecium, conversely, possesses a rigid, definite cell shape with a specialized cytostome [cell mouth or specific spot]. It uses the coordinated beating of cilia covering its entire surface to move food particles directly to this spot. Option 3 and Option 4 present scrambled cell biology terms that violate the basic structures of these protozoans."
+    "e": "Protozoans cellular morphology ke basis par distinct holozoic phagotrophic mechanisms show karte hain.\n\n• Option A is Incorrect because Amoeba mein cell wall absent hoti hai aur Paramoecium cilia use karta hai, flagella nahi.\n\n• Option B is Correct because Amoeba irregular shape ka hota hai aur flexible temporary cell surface extensions 'Pseudopodia' (पादभ) banakar food particle ko engulf karke food vacuole form karta hai; jabki Paramoecium rigid definite slipper shape maintain karta hai aur thousands of coordinated 'Cilia' ki beating se food particles ko specific oral groove (Cytostome) tak sweep karta hai.\n\n• Option C is Incorrect because dono organisms eukaryotic cytoplasm aur organelles possess karte hain.\n\n• Option D is Incorrect because gas vacuoles prokaryotic cyanobacteria mein buoyancy regulate karti hain."
   },
   {
     "p_id": "bpsc_life_v1_09",
     "qe": "Why must a bolus of food be thoroughly wetted by a fluid called saliva inside the human oral cavity before deglutition occurs?",
     "qh": "निगलने (deglutition) से पहले मानव मौखिक गुहा के भीतर भोजन के ग्रास (bolus) को लार (saliva) नामक तरल पदार्थ द्वारा पूरी तरह से गीला करना क्यों आवश्यक है?",
-    "o": [
+    "oe": [
       "To decrease the baseline pH of the mouth to a highly acidic value of 1.8.",
       "To moisten the food and make its passage smooth because the inner lining of the alimentary canal is soft.",
       "To prevent the chemical conversion of starch molecules into operational maltose.",
       "To allow the rapid elongation of ciliary axonemes along the hard chewing enamel."
     ],
+    "oh": [
+      "मुंह के आधारभूत पीएच को 1.8 के अत्यधिक अम्लीय मान तक कम करने के लिए।",
+      "भोजन को नम करने और इसके मार्ग को सुगम बनाने के लिए क्योंकि आहार नाल का आंतरिक अस्तर कोमल और नाजुक होता है।",
+      "स्टार्च अणुओं के परिचालन माल्टोज में रासायनिक रूपांतरण को रोकने के लिए।",
+      "कठोर चबाने वाले इनेमल के साथ सिलिअरी एक्सोनेम के तेजी से बढ़ाव की अनुमति देने के लिए।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the acidic microenvironment of the stomach, whereas saliva maintains a near-neutral pH around 6.8. Option 2 is correct because the text notes that the inner mucosal lining of the human alimentary canal is soft and vulnerable to mechanical abrasion. Chewing crushes food to normalize its texture, while salivary glands secrete saliva to wet and lubricate the particles, forming a smooth bolus that passes safely down the pharynx during swallowing. Option 3 is incorrect because salivary amylase actively initiates starch breakdown into sugar. Option 4 describes ciliary locomotion components that are absent on teeth."
+    "e": "Oral mastication mechanical size reduction aur chemical lubrication ensure karti hai taaki soft mucosal linings ko damage na ho.\n\n• Option A is Incorrect because saliva slightly acidic neutral pH ~6.8 maintain karta hai, acidic 1.8 stomach gastric juice ka hota hai.\n\n• Option B is Correct because alimentary canal ki inner mucosal lining soft aur delicate hoti hai; chewing ke time salivary glands se secreted saliva (jisme mucin glycoproteins hote hain) crushed food particles ko wet aur lubricate karta hai, jisse uniform slippery 'Bolus' banta hai jo oesophagus ke through easily pass ho sake bina friction injury ke.\n\n• Option C is Incorrect because saliva mein present ptyalin actively starch ko maltose mein convert karna start karta hai.\n\n• Option D is Incorrect because dental enamel acellular mineralized tissue hai jisme ciliary axonemes absent hote hain."
   },
   {
     "p_id": "bpsc_life_v1_10",
     "qe": "What precise physiological mechanism ensures the regulated, downward movement of food particles along the entire length of the human digestive tube?",
     "qh": "कौन सा सटीक शारीरिक तंत्र (physiological mechanism) मानव पाचन नलिका की पूरी लंबाई के साथ भोजन के कणों की विनियमित, नीचे की ओर गति सुनिश्चित करता है?",
-    "o": [
+    "oe": [
       "The passive flow of fluid driven by hydrostatic osmotic gradients within the sub-mucosal lacteals.",
       "Rhythmic waves of muscular contraction and relaxation called peristaltic movements occurring all along the gut lining.",
       "The continuous active pumping of sodium and potassium ions through the nuclear pores.",
       "The sudden mechanical splitting of centromeres inside local somatic muscle sheets."
     ],
+    "oh": [
+      "सब-म्यूकोसल लैक्टियल्स के भीतर हाइड्रोस्टेटिक परासरणी प्रवणता द्वारा संचालित तरल पदार्थ का निष्क्रिय प्रवाह।",
+      "आहार नाल की दीवार में होने वाले लयबद्ध पेशी संकुचन और विश्राम की तरंगें जिन्हें क्रमाकुंचन गति (Peristaltic movements) कहा जाता है।",
+      "परमाणु छिद्रों के माध्यम से सोडियम और पोटेशियम आयनों की निरंतर सक्रिय पंपिंग।",
+      "स्थानीय दैहिक पेशी शीट के अंदर सेंट्रोमियर का अचानक यांत्रिक विभाजन।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes lymphatic lipid transport dynamics, which do not provide mechanical propulsion to the food column. Option 2 is correct because the lining of the alimentary canal contains smooth muscle layers that contract rhythmically in progressive waves. These organized muscular contractions are termed peristaltic movements [peristalsis], and they occur all along the gut to push the food forward in a regulated manner through successive digestive zones. Option 3 and Option 4 describe cell transport and mitotic segregation mechanisms that do not drive macroscopic tissue motility."
+    "e": "Gastrointestinal transport involuntary smooth muscle coordinated motor waves dwara manage hota hai.\n\n• Option A is Incorrect because lacteal fluid flow lymphatic drainage handle karta hai, macroscopic luminal bolus movement nahi.\n\n• Option B is Correct because entire alimentary canal ki muscularis layer (inner circular, outer longitudinal smooth muscles) Auerbach's myenteric plexus ke control mein rhythmic progressive waves generate karti hai jinhe 'Peristaltic movements' (क्रमाकुंचन) kehte hain, jo food bolus aur chyme ko unidirectional manner mein aage push karti hain.\n\n• Option C is Incorrect because nuclear pore transport sub-cellular level par nucleocytoplasmic exchange govern karta hai.\n\n• Option D is Incorrect because centromere splitting mitotic anaphase chromosome separation ka step hai."
   },
   {
     "p_id": "bpsc_life_v1_11",
     "qe": "What are the primary secretions released by the gastric glands nested within the stomach wall, and what is the function of the acid component?",
     "qh": "आमाशय की दीवार के भीतर स्थित गैस्ट्रिक ग्रंथियों द्वारा जारी प्राथमिक स्राव क्या हैं, और अम्लीय घटक का क्या कार्य है?",
-    "o": [
+    "oe": [
       "Trypsinogen, lipases, and alkaline bicarbonates; the acid denatures the enterokinase cascade.",
       "Hydrochloric acid, a protein-digesting enzyme called pepsin, and protective mucus; the acid creates an acidic medium that activates pepsin.",
       "Amylase, bile salts, and intrinsic factors; the acid alters the satellite positioning of DNA.",
       "Bile pigments, cholesterol, and secretin; the acid provides an alkaline pH of 7.8."
     ],
+    "oh": [
+      "ट्रिप्सिनोजेन, लाइपेस और क्षारीय बाइकार्बोनेट; एसिड एंटरोकाइनेज कैस्केड को विकृत करता है।",
+      "हाइड्रोक्लोरिक एसिड ($HCl$), पेप्सिन नामक एक प्रोटीन-पाचक एंजाइम, और श्लेष्मा (म्यूकस); एसिड एक अम्लीय माध्यम ($pH \\sim 1.8$) बनाता है जो पेप्सिन को सक्रिय करता है।",
+      "एमाइलेज, पित्त लवण, और आंतरिक कारक; एसिड डीएनए की उपग्रह स्थिति को बदलता है।",
+      "पित्त वर्णक, कोलेस्ट्रॉल, और सेक्रेटिन; एसिड 7.8 का एक क्षारीय पीएच प्रदान करता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes pancreatic juice components that function inside the alkaline small intestine. Option 2 is correct because the gastric glands embedded in the stomach wall release a mixture containing hydrochloric acid ($HCl$), the proteolytic zymogen pepsinogen (which forms the active protein-digesting enzyme pepsin), and lubricating mucus. The $HCl$ creates a highly acidic medium ($pH\\ 1.8$) that is essential to facilitate the structural activation and catalytic action of pepsin, while mucus protects the stomach's inner mucosal lining from acid excoriation. Option 3 and Option 4 contain scrambled terms that contradict gastric physiology."
+    "e": "Gastric juice stomach wall ke specialized secretory cells ka composite biochemical mixture hota hai.\n\n• Option A is Incorrect because trypsinogen aur lipases pancreatic juice ke alkaline secretions hain.\n\n• Option B is Correct because gastric glands teen main secretions release karti hain: 1. $HCl$ (parietal cells se), 2. Pepsinogen zymogen (chief cells se), aur 3. Mucus (mucus neck cells se); $HCl$ strong acidic medium ($pH \\approx 1.8$) create karke proenzyme pepsinogen ko active 'Pepsin' mein convert karta hai aur ingested harmful microbes ko kill karta hai, jabki mucus stomach epithelium ko autolysis/corrosion se shield karta hai.\n\n• Option C is Incorrect because bile salts liver banata hai aur amylase oral/pancreatic secretion hai.\n\n• Option D is Incorrect because bile pigments liver excretions hain aur gastric $HCl$ acidic hota hai, alkaline nahi."
   },
   {
     "p_id": "bpsc_life_v1_12",
     "qe": "A comparative zoologist measures the relative length of the small intestine across multiple mammal species. Which structural correlation will they observe regarding diet types?",
     "qh": "एक तुलनात्मक प्राणीविज्ञानी (comparative zoologist) कई स्तनधारी प्रजातियों में छोटी आंत की सापेक्ष लंबाई को मापता है। आहार के प्रकारों के संबंध में वे कौन सा संरचनात्मक संबंध देखेंगे?",
-    "o": [
+    "oe": [
       "Carnivores like tigers require a longer small intestine to maximize the synthesis of complex carbohydrates.",
       "Herbivores eating grass need a longer small intestine to allow cellulose to be digested, whereas carnivores have a shorter small intestine.",
       "Both diet types display identical physical lengths because intestine scaling depends strictly on the vomit center location.",
       "Herbivores possess a highly reduced, vestigial small intestine that opens directly into the anterior esophagus."
     ],
+    "oh": [
+      "बाघ जैसे मांसाहारी जीवों को जटिल कार्बोहाइड्रेट के संश्लेषण को अधिकतम करने के लिए एक लंबी छोटी आंत की आवश्यकता होती है।",
+      "घास खाने वाले शाकाहारी जीवों (Herbivores) को सेल्यूलोज को पचाने के लिए एक लंबी छोटी आंत की आवश्यकता होती है, जबकि मांसाहारी जीवों (Carnivores) की छोटी आंत छोटी होती है।",
+      "दोनों आहार प्रकार समान भौतिक लंबाई प्रदर्शित करते हैं क्योंकि आंत स्केलिंग पूरी तरह से उल्टी केंद्र के स्थान पर निर्भर करती है।",
+      "शाकाहारी जीवों में अत्यधिक छोटी, अवशेषी छोटी आंत होती है जो सीधे पूर्वकाल अन्नप्रणाली में खुलती है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 presents the reverse of the actual biological relationship, as meat is easier to digest than fibrous plant materials. Option 2 is correct because the length of the small intestine is an evolutionary adaptation tailored to the organism's diet. Herbivores ingest grass and other plant matter rich in cellulose [a structural homopolysaccharide of glucose that is highly resistant to chemical cleavage], requiring a longer small intestine to provide sufficient residence time and surface area for microbial and enzymatic breakdown. Carnivores consume meat, which is far easier to digest, and therefore possess a significantly shorter small intestine. Option 3 and Option 4 are anatomically false statements."
+    "e": "Gastrointestinal tract ki comparative anatomical length dietary composition aur digestion complexity ke anusar adapt hoti hai.\n\n• Option A is Incorrect because meat easily digestible protein-fat package hai jise digest karne ke liye lambi intestine nahi chahiye hoti.\n\n• Option B is Correct because Herbivores (jaise cows, deer) fibrous plant material (Cellulose) ingest karte hain jiska enzymatic aur microbial digestion slow hota hai, isliye unhe extensive surface area aur prolonged transit time provide karne ke liye 'Longer Small Intestine' ki zaroorat hoti hai; jabki Carnivores (jaise tigers, lions) meat consume karte hain jo easily digest ho jata hai, isliye unki small intestine significantly 'Shorter' hoti hai.\n\n• Option C is Incorrect because gut morphology dietary ecology ke according massively vary karti hai.\n\n• Option D is Incorrect because herbivores mein small intestine longest aur highly developed organ hoti hai."
   },
   {
     "p_id": "bpsc_life_v1_13",
     "qe": "Why must the acidic chyme departing from the stomach undergo a chemical shift into an alkaline state immediately upon entering the duodenum limb of the small intestine?",
     "qh": "आमाशय से निकलने वाले अम्लीय काइम (acidic chyme) को छोटी आंत के ग्रहणी (duodenum) अंग में प्रवेश करते ही तुरंत क्षारीय अवस्था (alkaline state) में रासायनिक परिवर्तन से क्यों गुजरना पड़ता है?",
-    "o": [
+    "oe": [
       "To prevent the spontaneous combustion of dietary fats into water-soluble chylomicrons.",
       "To create the necessary alkaline medium required for the pancreatic enzymes to function.",
       "To activate the protein-digesting gastric enzyme pepsin inside the lower jejunum.",
       "To allow the rigid cellulosic cell wall of the villi to undergo structural elongation."
     ],
+    "oh": [
+      "पानी में घुलनशील काइलोमाइक्रोन में आहार वसा के स्वतःस्फूर्त दहन को रोकने के लिए।",
+      "अग्न्याशयी एंजाइमों (Pancreatic enzymes) के कार्य करने के लिए आवश्यक क्षारीय माध्यम ($pH \\sim 7.8-8.4$) बनाने के लिए।",
+      "निचले जेजुनम के अंदर प्रोटीन-पाचक गैस्ट्रिक एंजाइम पेप्सिन को सक्रिय करने के लिए।",
+      "विली की कठोर सेल्यूलोसिक कोशिका भित्ति को संरचनात्मक बढ़ाव से गुजरने की अनुमति देने के लिए।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is a scientifically inaccurate distractor involving lipid chemistry. Option 2 is correct because the digestive enzymes secreted by the exocrine pancreas (such as trypsin, chymotrypsin, and pancreatic lipase) are denatured by acid and require an alkaline environment ($pH\\ 7.8$) to achieve active catalytic function. This neutralization and shift to alkalinity is accomplished by the alkaline secretions of the liver (bile juice) and pancreatic bicarbonates entering the duodenum. Option 3 is incorrect because pepsin is inactivated by alkaline conditions. Option 4 is incorrect because animal cells lack cell walls entirely."
+    "e": "Pancreatic aur intestinal digestive enzymes strict pH optimum range par operate karte hain jo acidic gastric conditions se completely opposite hoti hai.\n\n• Option A is Incorrect because chylomicrons intracellular protein-coated vesicles hain, combustion product nahi.\n\n• Option B is Correct because stomach se aane wala chyme highly acidic ($pH \\sim 1.8$) hota hai; exocrine pancreas ke enzymes (Trypsin, Chymotrypsin, Pancreatic Amylase, Lipase) acidic pH par denature aur inactive ho jaate hain aur unhe function karne ke liye alkaline medium ($pH \\approx 7.8\\text{--}8.4$) chahiye hota hai, jo Bile salts aur pancreatic bicarbonates dwara neutralize karke provide kiya jata hai.\n\n• Option C is Incorrect because pepsin acidic medium mein active rehta hai aur alkaline pH par permanently inactivate ho jata hai.\n\n• Option D is Incorrect because animal intestinal cells mein cell wall absent hoti hai."
   },
   {
     "p_id": "bpsc_life_v1_14",
     "qe": "What specific physical role is performed by bile salts inside the small intestine lumen during the processing of complex dietary lipids?",
     "qh": "जटिल आहार लिपिड (dietary lipids) के प्रसंस्करण के दौरान छोटी आंत के लुमेन के भीतर पित्त लवण (bile salts) द्वारा कौन सी विशिष्ट भौतिक भूमिका निभाई जाती है?",
-    "o": [
+    "oe": [
       "They act as active hormonal repressors that completely halt the expression of lipases.",
       "They break down large fat globules into smaller globules, enormously increasing the surface area for enzyme action.",
       "They chemically hydrolyze fatty acids directly into free glucose molecules.",
       "They bind to basic histone octamers to prevent the duplication of local centrioles."
     ],
+    "oh": [
+      "वे सक्रिय हार्मोनल रिप्रेसर के रूप में कार्य करते हैं जो लाइपेस की अभिव्यक्ति को पूरी तरह से रोकते हैं।",
+      "वे बड़े वसा ग्लोब्यूल्स को छोटे ग्लोब्यूल्स में तोड़ते हैं (Emulsification), जिससे एंजाइम क्रिया के लिए सतह क्षेत्र अत्यधिक बढ़ जाता है।",
+      "वे रासायनिक रूप से फैटी एसिड को सीधे मुक्त ग्लूकोज अणुओं में हाइड्रोलाइज करते हैं।",
+      "वे स्थानीय सेंट्रीओल्स के दोहराव को रोकने के लिए बुनियादी हिस्टोन ऑक्टामर्स से जुड़ते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 is incorrect because bile salts activate and assist lipases rather than repressing them. Option 2 is correct because dietary fats enter the duodenum as large, aggregated hydrophobic lipid globules, which limits the physical access of water-soluble lipase enzymes. Bile salts function mechanically like soaps to lower surface tension, breaking down these large masses into tiny, stabilized droplets through a process called emulsification [the physical suspension of small lipid droplets within an aqueous environment], which increases the surface area for lipase action. Option 3 is incorrect because fats cannot be broken down into glucose. Option 4 mixes up unrelated nuclear genetics terms."
+    "e": "Dietary lipids hydrophobic insoluble aggregates form karte hain jin par water-soluble lipases directly act nahi kar pate.\n\n• Option A is Incorrect because bile salts lipases ko activate aur facilitate karte hain, repress nahi karte.\n\n• Option B is Correct because Bile salts (Sodium glycocholate aur taurocholate) amphipathic molecules hote hain jo detergent/soap ki tarah act karke lipid droplets ke surface tension ko drop karte hain; yeh large insoluble fat globules ko tiny droplets mein disperse kar dete hain jise 'Emulsification' kehte hain, jo pancreatic lipases ke enzymatic action ke liye surface area exponentially badha deta hai.\n\n• Option C is Incorrect because lipids fatty acids aur glycerol mein cleave hote hain, direct glucose mein nahi.\n\n• Option D is Incorrect because histone octamers nuclear chromatin structuring mein aate hain."
   },
   {
     "p_id": "bpsc_life_v1_15",
     "qe": "Which of the following choices accurately matches a pancreatic enzyme with its primary substrate and the subsequent end products generated within the small intestine?",
     "qh": "निम्नलिखित में से कौन सा विकल्प एक अग्न्याशयी एंजाइम (pancreatic enzyme) को उसके प्राथमिक सबस्ट्रेट और छोटी आंत के भीतर उत्पन्न होने वाले बाद के अंतिम उत्पादों के साथ सटीक रूप से सुमेलित करता है?",
-    "o": [
+    "oe": [
       "Trypsin digesting proteins into amino acids; Lipase breaking down emulsified fats into fatty acids and glycerol.",
       "Amylase cleaving lipids into simple sugars; Pepsin splitting carbohydrates into dipeptides.",
       "Nuclease digesting complex starches into starch; Lacteal fluids hydrolyzing glycogen into nitrates.",
       "Enterokinase cleaving amino acids into proteins; Secretin transforming fats into mucus."
     ],
+    "oh": [
+      "ट्रिप्सिन प्रोटीन को पचाकर अमीनो एसिड/पेप्टाइड्स में बदलता है; लाइपेस इमल्सीकृत वसा को फैटी एसिड और ग्लिसरॉल में तोड़ता है।",
+      "एमाइलेज लिपिड को साधारण शर्करा में विभाजित करता है; पेप्सिन कार्बोहाइड्रेट को डाइपेप्टाइड्स में विभाजित करता है।",
+      "न्यूक्लीज़ जटिल स्टार्च को स्टार्च में पचाता है; लैक्टियल तरल पदार्थ ग्लाइकोजन को नाइट्रेट में हाइड्रोलाइज करते हैं।",
+      "एंटरोकाइनेज अमीनो एसिड को प्रोटीन में परिवर्तित करता है; सेक्रेटिन वसा को बलगम में बदलता है।"
+    ],
     "a": 0,
-    "e": "<b>Explanation:</b> Option 1 is correct because the text notes that the pancreas secretes pancreatic juice containing enzymes like trypsin [for protein digestion] and lipase [for breaking down emulsified fats]. Together with the terminal intestinal juice enzymes, these pathways complete the breakdown of proteins into amino acids, carbohydrates into glucose, and fats into fatty acids and glycerol. Option 2 is incorrect because amylase acts on carbohydrates, not lipids, and pepsin is a gastric enzyme, not a pancreatic one. Option 3 and Option 4 present scrambled substrate definitions that violate standard digestive biochemistry."
+    "e": "Pancreatic juice comprehensive enzyme suite deliver karta hai jo major biochemical food classes ko degrade karta hai.\n\n• Option A is Correct because Pancreatic juice ke primary enzymes correctly match karte hain: 'Trypsin/Chymotrypsin' proteins, peptones aur proteoses ko peptides/amino acids mein hydrolyze karte hain, jabki 'Pancreatic Lipase' (Steapsin) emulsified triglycerides ko diglycerides, monoglycerides aur ultimately free fatty acids tatha glycerol mein convert karta hai.\n\n• Option B is Incorrect because Amylase carbohydrates (starch) ko cleave karta hai aur Pepsin gastric juice ka proteinase enzyme hai.\n\n• Option C is Incorrect because Nucleases nucleic acids (DNA/RNA) ko nucleotides mein hydrolyze karte hain.\n\n• Option D is Incorrect because Enterokinase trypsinogen ko activate karta hai aur Secretin hormone pancreatic watery bicarbonate secretion stimulate karta hai."
   },
   {
     "p_id": "bpsc_life_v1_16",
     "qe": "The inner mucosal lining of the small intestine possesses numerous finger-like projections called villi. What is the precise anatomical and operational role of these structures?",
     "qh": "छोटी आंत के आंतरिक म्यूकोसल अस्तर में विली (villi) नामक कई उंगली जैसी संरचनाएं होती हैं। इन संरचनाओं की सटीक शारीरिक और परिचालन भूमिका क्या है?",
-    "o": [
+    "oe": [
       "They secrete highly concentrated hydrochloric acid to maintain a low pH of 1.8.",
       "They enormously increase the functional surface area for absorption and are richly supplied with blood vessels to distribute nutrients.",
       "They act as mechanical teeth to crush tough cellulose fibers into a bolus texture.",
       "They form a rigid connective capsule that anchors the vestigial appendix to the diaphragm."
     ],
+    "oh": [
+      "वे 1.8 का कम पीएच बनाए रखने के लिए अत्यधिक केंद्रित हाइड्रोक्लोरिक एसिड का स्राव करते हैं।",
+      "वे अवशोषण के लिए कार्यात्मक सतह क्षेत्र को अत्यधिक बढ़ाते हैं और पोषक तत्वों को वितरित करने के लिए रक्त वाहिकाओं और लैक्टियल्स के साथ समृद्ध रूप से आपूर्ति की जाती हैं।",
+      "वे कठोर सेल्युलोस फाइबर को एक बोलस बनावट में कुचलने के लिए यांत्रिक दांतों के रूप में कार्य करते हैं।",
+      "वे एक कठोर संयोजी कैप्सूल बनाते हैं जो अवशेषी एपेंडिक्स को डायाफ्राम से जोड़ता है।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the function of parietal cells in the gastric mucosa, not intestinal villi. Option 2 is correct because the villi are specialized structural adaptations of the small intestinal mucosa. By forming millions of macroscopic finger-like foldings, they enormously expand the surface area available for nutrient absorption. Furthermore, they are richly vascularized with networks of blood capillaries and large lymph vessels [lacteals] to pick up absorbed nutrients and distribute them to body tissues for energy, growth, and tissue repair. Option 3 describes oral dentition functions. Option 4 describes a localized anatomical location that is incorrect."
+    "e": "Small intestine terminal digestion aur bulk nutrient assimilation ka primary anatomical site hota hai.\n\n• Option A is Incorrect because $HCl$ stomach ke parietal cells secrete karte hain, intestinal villi nahi.\n\n• Option B is Correct because small intestine (jejunum aur ileum) ki mucosal lining par millions of microscopic finger-like projections 'Villi' present hote hain jo absorptive surface area ko manifold expand karte hain; har villus ke andar dense blood capillary network (water-soluble glucose, amino acids absorb karne ke liye) aur central lymphatic vessel 'Lacteal' (fatty chylomicrons absorb karne ke liye) present hoti hai.\n\n• Option C is Incorrect because mastication oral dentition ka mechanical process hai.\n\n• Option D is Incorrect because vermiform appendix caecum se attached pelvic organ hai, diaphragm se connected nahi hota."
   },
   {
     "p_id": "bpsc_life_v1_17",
     "qe": "A dental health tracking study identifies a patient suffering from gradual softening and demineralisation of their tooth enamel. What pathogenetic mechanism triggers this specific dental caries condition?",
     "qh": "एक दंत स्वास्थ्य ट्रैकिंग अध्ययन एक ऐसे मरीज की पहचान करता है जो अपने दांतों के इनेमल के क्रमिक नरम होने और विखनिजीकरण (demineralisation) से पीड़ित है। कौन सा रोगजनक तंत्र इस विशिष्ट दंत क्षय (dental caries) की स्थिति को ट्रिगर करता है?",
-    "o": [
+    "oe": [
       "The overproduction of basic salivary amylase fluids inside the medulla center.",
       "Bacteria acting on dietary sugars to produce acids that stick to the teeth alongside food particles, forming a protective plaque that shields the acid from neutralising saliva.",
       "The active migration of 70S ribosomes from the pulp cavity out to the hard surface.",
       "The continuous erosion of the tooth base caused by local duodenal enterogastrone hormones."
     ],
+    "oh": [
+      "मड्यूला केंद्र के अंदर बुनियादी लार एमाइलेज तरल पदार्थ का अधिक उत्पादन।",
+      "बैक्टीरिया (जैसे *Streptococcus mutans*) आहार शर्करा पर कार्य करके एसिड का उत्पादन करते हैं जो भोजन के कणों के साथ मिलकर 'डेंटल प्लाक' (Dental plaque) बनाते हैं, जो एसिड को लार द्वारा निष्क्रिय होने से रोकता है।",
+      "पल्प कैविटी से 70S राइबोसोम का कठोर सतह पर सक्रिय प्रवास।",
+      "स्थानीय ग्रहणी एंटरोगैस्ट्रोन हार्मोन के कारण दांत के आधार का निरंतर क्षरण।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes an salivary enzyme profile that does not cause tooth demineralization. Option 2 is correct because dental caries [tooth decay] initiates when acid-producing oral bacteria metabolize dietary sugars, generating localized organic acids that soften and demineralise the hard enamel and underlying dentine. When these bacterial masses combine with food particles and adhere to the tooth surface, they form a dense biofilm called dental plaque. This plaque layer physically blocks alkaline saliva from reaching the tooth surface to neutralize the trapped acid, leading to deep structural inflammation and pulp infection if untreated. Option 3 and Option 4 present scientifically inaccurate cellular and hormonal distractors."
+    "e": "Dental caries oral bacterial fermentation aur localized protective biofilm formation se develop hota hai.\n\n• Option A is Incorrect because salivary amylase carbohydrate digestion karta hai, enamel demineralisation cause nahi karta.\n\n• Option B is Correct because oral bacteria (jaise *Streptococcus mutans*) dietary sugars (sucrose) ko ferment karke organic acids (lactic acid) produce karte hain jo tooth enamel ke calcium hydroxyapatite ko demineralize kar dete hain; bacterial mass aur food debris tooth surface par adhere hokar dense layer 'Dental Plaque' banate hain jo alkaline saliva ko tooth surface tak pahunch kar acid neutralize karne se block kar deti hai.\n\n• Option C is Incorrect because bacterial ribosomes sub-cellular structures hain, enamel erosion cause nahi karte.\n\n• Option D is Incorrect because enterogastrone duodenal hormone hai jo oral cavity mein enter nahi karta."
   },
   {
     "p_id": "bpsc_life_v1_18",
     "qe": "During cellular respiration, what central metabolic process represents the common first step executed within the cytoplasm across both aerobic and anaerobic pathways?",
     "qh": "कोशिकीय श्वसन (cellular respiration) के दौरान, कौन सी केंद्रीय चयापचय प्रक्रिया साइटोप्लाज्म के भीतर निष्पादित होने वाले पहले सामान्य चरण का प्रतिनिधित्व करती है, चाहे वह वायवीय (aerobic) मार्ग हो या अवायवीय (anaerobic)?",
-    "o": [
+    "oe": [
       "The complete oxidative phosphorylation of pyruvate into three molecules of carbon dioxide.",
       "The breakdown of glucose, a six-carbon molecule, into a three-carbon molecule called pyruvate.",
       "The structural synthesis of circular double-stranded plasmid DNA vectors.",
       "The rapid accumulation of lactic acid within the matrix of the mitochondria."
     ],
+    "oh": [
+      "पाइरूवेट का कार्बन डाइऑक्साइड के तीन अणुओं में पूर्ण ऑक्सीडेटिव फॉस्फोराइलेशन।",
+      "ग्लूकोज (6-कार्बन अणु) का पाइरूवेट (3-कार्बन अणु) नामक दो अणुओं में विखंडन (Glycolysis)।",
+      "गोलाकार डबल-स्ट्रैंडेड प्लास्मिड डीएनए वैक्टर का संरचनात्मक संश्लेषण।",
+      "माइटोकॉन्ड्रिया के मैट्रिक्स के भीतर लैक्टिक एसिड का तेजी से संचय।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the subsequent aerobic pathway that takes place exclusively inside the mitochondria, not the universal cytoplasmic first step. Option 2 is correct because the initial phase of glucose catabolism is universal across diverse organisms: it involves glycolysis [the breakdown of glucose, a 6-carbon hexose sugar, into two molecules of pyruvate, a 3-carbon compound]. This initial pathway occurs entirely within the fluid cytoplasm and does not require molecular oxygen. Option 3 describes an independent prokaryotic genetic event. Option 4 describes an anaerobic muscle pathway that takes place in the cytoplasm during oxygen deprivation, not a mitochondrial matrix step."
+    "e": "Glycolysis universal cellular catabolic pathway hai jo sabhi living organisms ke cytoplasm mein operate hota hai bina molecular oxygen ki mandatory presence ke.\n\n• Option A is Incorrect because complete oxidative decarboxylation aur Krebs cycle strictly aerobic mitochondria ke andar hoti hai.\n\n• Option B is Correct because cellular respiration ka universal first step 'Glycolysis' (EMP pathway) hota hai jo cell ke Cytoplasm mein execute hota hai; isme ek 6-carbon hexose glucose molecule 10 enzyme-catalyzed reactions ke through split hokar do 3-carbon 'Pyruvate' (pyruvic acid) molecules aur net 2 ATP + 2 NADH generate karta hai.\n\n• Option C is Incorrect because plasmid replication genetic engineering ya bacterial reproduction ka event hai.\n\n• Option D is Incorrect because lactic acid fermentation cytoplasm mein hoti hai, mitochondrial matrix mein nahi."
   },
   {
     "p_id": "bpsc_life_v1_19",
     "qe": "What specific biochemical end products are generated when pyruvate undergoes anaerobic fermentation inside yeast cells, and how does the energy yield compare to aerobic pathways?",
     "qh": "जब यीस्ट कोशिकाओं के भीतर पाइरूवेट अवायवीय किण्वन (anaerobic fermentation) से गुजरता है तो कौन से विशिष्ट जैव रासायनिक अंतिम उत्पाद उत्पन्न होते हैं, और वायवीय मार्गों (aerobic pathways) की तुलना में ऊर्जा उत्पादन कैसा होता है?",
-    "o": [
+    "oe": [
       "Three molecules of carbon dioxide and water; releasing a vastly superior amount of energy.",
       "Ethanol and carbon dioxide; releasing an amount of energy that is a lot less than in the aerobic process.",
       "Lactic acid and pure glycogen strands; generating no cellular ATP fuel molecules.",
       "Inorganic nitrates and calcium carbonate crystals; yielding zero net metabolic heat."
     ],
+    "oh": [
+      "कार्बन डाइऑक्साइड और पानी के तीन अणु; ऊर्जा की अत्यधिक श्रेष्ठ मात्रा जारी करना।",
+      "एथेनॉल ($C_2H_5OH$) और कार्बन डाइऑक्साइड ($CO_2$); ऊर्जा की ऐसी मात्रा जारी करना जो वायवीय प्रक्रिया की तुलना में बहुत कम (lot less) है।",
+      "लैक्टिक एसिड और शुद्ध ग्लाइकोजन स्ट्रैंड्स; कोई सेलुलर एटीपी ईंधन अणु उत्पन्न नहीं करना।",
+      "अकार्बनिक नाइट्रेट और कैल्शियम कार्बोनेट क्रिस्टल; शून्य शुद्ध चयापचय गर्मी उत्पन्न करना।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 describes the complete oxidation products of aerobic respiration, which yields a much higher amount of ATP energy. Option 2 is correct because during anaerobic respiration [fermentation] in yeast, the 3-carbon pyruvate molecule is converted into ethanol [a 2-carbon alcohol] and carbon dioxide ($CO_2$) in the absence of oxygen. The text explicitly notes that the release of usable metabolic energy in this anaerobic pathway is a lot less than the substantial energy yield characteristic of complete mitochondrial aerobic respiration. Option 3 describes the anaerobic pathway that occurs in oxygen-deprived mammalian muscle cells during sudden activity, which causes cramps. Option 4 describes soil mineral structures and algal chemistry."
+    "e": "Anaerobic fermentation organic substrate ka incomplete oxidation execute karti hai jisme minimal ATP energy trap hoti hai.\n\n• Option A is Incorrect because complete conversion to $CO_2$ aur $H_2O$ with high ATP yield aerobic mitochondrial respiration ka pathway hai.\n\n• Option B is Correct because Yeast (*Saccharomyces cerevisiae*) mein oxygen ki absence mein alcoholic fermentation hoti hai jahan pyruvate decarboxylase aur alcohol dehydrogenase enzymes pyruvate (3C) ko 'Ethanol' ($C_2H_5OH$, 2C) aur 'Carbon Dioxide' ($CO_2$) mein convert karte hain; is anaerobic process mein energy yield aerobic respiration ($36\\text{--}38\\text{ ATP}$) ke comparison mein extremely low ($<7\\%$ of total glucose energy, net 2 ATP) hoti hai.\n\n• Option C is Incorrect because lactic acid fermentation anaerobic muscle cells aur lactic acid bacteria (*Lactobacillus*) mein hoti hai.\n\n• Option D is Incorrect because inorganic salt precipitation fermentation chemistry ka outcome nahi hai."
   },
   {
     "p_id": "bpsc_life_v1_20",
     "qe": "An athlete undergoes sudden intense physical exertion, causing their muscle cells to exhaust available oxygen supplies. What metabolic pathway is initiated, and what clinical symptom does it induce?",
     "qh": "एक एथलीट अचानक तीव्र शारीरिक परिश्रम करता है, जिससे उसकी मांसपेशियों की कोशिकाओं में उपलब्ध ऑक्सीजन की आपूर्ति समाप्त हो जाती है। कौन सा चयापचय मार्ग (metabolic pathway) शुरू होता है, और यह कौन सा नैदानिक लक्षण पैदा करता है?",
-    "o": [
+    "oe": [
       "Pyruvate is converted into ethanol inside the mitochondria, causing immediate tissue necrosis.",
       "Pyruvate is converted into lactic acid within the muscle cells, causing localized muscle cramps.",
       "Glucose undergoes immediate transformation into a 9+2 axoneme array, inducing severe joint inflammation.",
       "Adenosine triphosphate is entirely converted into inorganic nitrates, triggering autonomic vomiting reflexes."
     ],
+    "oh": [
+      "माइटोकॉन्ड्रिया के अंदर पाइरूवेट एथेनॉल में परिवर्तित हो जाता है, जिससे ऊतक परिगलन (necrosis) होता है।",
+      "मांसपेशियों की कोशिकाओं के भीतर पाइरूवेट लैक्टिक एसिड (Lactic acid) में परिवर्तित हो जाता है, जिससे स्थानीय मांसपेशियों में ऐंठन (Muscle cramps) होती है।",
+      "ग्लूकोज तुरंत 9+2 एक्सोनेम सरणी में बदल जाता है, जिससे जोड़ों में गंभीर सूजन आ जाती है।",
+      "एडेनोसिन ट्राइफॉस्फेट पूरी तरह से अकार्बनिक नाइट्रेट में परिवर्तित हो जाता है, जिससे स्वायत्त उल्टी रिफ्लेक्सिस शुरू हो जाते हैं।"
+    ],
     "a": 1,
-    "e": "<b>Explanation:</b> Option 1 incorrectly combines yeast fermentation products with mitochondrial necrosis. Option 2 is correct because when muscle tissue demands energy faster than blood can deliver oxygen during sudden, strenuous activity, the cells switch to anaerobic metabolism. Pyruvate is reduced into lactic acid [a 3-carbon organic acid] in the cytoplasm. The accumulation and build-up of this lactic acid shifts local cellular homeostasis, causing rapid muscle fatigue and localized painful cramps. Option 3 and Option 4 present structurally and chemically invalid distractors that combine unrelated anatomical and physiological terms."
+    "e": "Skeletal muscles strenuous exercise ke dauraan temporary anaerobic conditions create karti hain jab vascular oxygen delivery demand se piche reh jaati hai.\n\n• Option A is Incorrect because human mammalian muscle cells mein pyruvate decarboxylase absent hota hai isliye ethanol kabhi synthesize nahi hota.\n\n• Option B is Correct because jab skeletal muscles mein vigorous exercise ke time oxygen deficit (oxygen debt) develop hota hai, toh cellular glycolysis continue rakhne ke liye enzyme lactate dehydrogenase pyruvate ko reduce karke 'Lactic Acid' (3-carbon) banata hai; tissue mein lactic acid ka accumulation pH drop karta hai aur muscle fibers mein acute fatigue aur painful 'Muscle Cramps' induce karta hai.\n\n• Option C is Incorrect because 9+2 axoneme cilia/flagella ka internal structural framework hai.\n\n• Option D is Incorrect because ATP high-energy phosphate bonds ($ADP + P_i$) release karta hai, inorganic nitrates nahi banata."
   }
 ]
