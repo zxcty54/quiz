@@ -4,12 +4,11 @@ import json
 import time
 import hashlib
 import warnings
-import feedparser
 import ssl
 import html
 
 from datetime import datetime, timedelta, timezone
-from urllib.parse import urljoin, urlparse, parse_qs
+from urllib.parse import urljoin
 
 from curl_cffi import requests as curl_requests
 import requests as normal_requests
@@ -244,7 +243,6 @@ def parse_date(value):
     lower_val = value.lower()
     current_now = now_ist()
 
-    # Relative Time Parser
     if any(k in lower_val for k in ["ago", "today", "yesterday", "घंटे पहले", "दिन पहले", "आज", "कल"]):
         if "today" in lower_val or "आज" in lower_val:
             return current_now
@@ -345,7 +343,6 @@ def extract_date_from_soup(soup):
 # ============================================================
 
 def is_strictly_today(parsed_date):
-    """Returns True ONLY IF news date matches today's date in IST"""
     if not parsed_date:
         return False
 
@@ -359,7 +356,7 @@ def is_strictly_today(parsed_date):
 
 
 # ============================================================
-# SMART FETCH WITH GOV.IN RESILIENCE
+# SMART FETCH
 # ============================================================
 
 def gov_special_fetch(url):
@@ -620,12 +617,10 @@ def make_item(source, title, url, date=None, content="", item_type="Scraped", is
     if not clean_title_str or not clean_url_str:
         return None
 
-    # Block Generic Circular Table Index Pages
     if "order/circular/notification" in clean_title_str.lower() or "rowid=2951" in clean_url_str.lower():
         warn(f"REJECTED CIRCULAR INDEX PAGE | {source} | {clean_title_str[:45]}")
         return None
 
-    # STRICT WORD COUNT CHECK
     words_total = word_count(clean_content_str)
     if words_total < MIN_CONTENT_WORDS:
         warn(f"REJECTED TOO SHORT ({words_total} words < {MIN_CONTENT_WORDS}) | {source} | {clean_title_str[:45]}")
@@ -637,13 +632,11 @@ def make_item(source, title, url, date=None, content="", item_type="Scraped", is
 
     parsed_date = date or parse_date(clean_title_str)
     
-    # 📅 STRICT TODAY'S DATE CHECK
     if not parsed_date or not is_strictly_today(parsed_date):
         pub_str = parsed_date.strftime("%d %b %Y") if parsed_date else "No Date Found"
         debug(f"REJECTED NOT TODAY ({pub_str}) | {source} | {clean_title_str[:45]}")
         return None
 
-    # CONTENT BODY DATE VERIFICATION
     dates_in_content = re.findall(r'\b\d{2}/\d{2}/\d{4}\b', clean_content_str[:300])
     if dates_in_content:
         for d_str in dates_in_content[:3]:
@@ -840,78 +833,7 @@ def scrape_iprd_bihar():
     return results
 
 
-# 3. BIHAR CABINET
-CABINET_PAGES = [
-    "https://state.bihar.gov.in/csd/",
-    "https://state.bihar.gov.in/csd/CitizenHome.html",
-    "https://state.bihar.gov.in/csd/SectionInformation.html?editForm&rowId=2929",
-    "https://state.bihar.gov.in/csd/SectionInformation.html?editForm&rowId=1323",
-    "https://state.bihar.gov.in/csd/SectionInformation.html?editForm&rowId=4935",
-]
-
-
-def scrape_bihar_cabinet():
-    print("\n" + "=" * 70 + "\n🏛️ BIHAR CABINET (Today's Date Only)\n" + "=" * 70)
-    candidates = []
-
-    for page_url in CABINET_PAGES:
-        html = fetch_url(page_url)
-        if not html:
-            continue
-
-        soup = BeautifulSoup(html, "lxml")
-        for a in soup.find_all("a", href=True):
-            href = clean_url(urljoin(page_url, a.get("href")))
-            title = clean_title(a.get_text(" ", strip=True))
-
-            if not href or len(title) < 20:
-                continue
-            if "state.bihar.gov.in/csd" not in href.lower():
-                continue
-
-            low = title.lower()
-            if not any(x in low for x in ["cabinet", "decision", "decisions", "press", "approval", "approved"]):
-                continue
-
-            candidates.append((title, href))
-
-    unique = []
-    seen = set()
-    for title, url in candidates:
-        if url not in seen:
-            seen.add(url)
-            unique.append((title, url))
-
-    results = []
-    for title, url in unique:
-        content, date = fetch_generic_article_content(url, "Bihar Cabinet")
-        if not content:
-            continue
-
-        obj = make_item(
-            source="Bihar Cabinet",
-            title=title,
-            url=url,
-            date=date,
-            content=content,
-            item_type="Cabinet Decision",
-            is_bihar=True
-        )
-        if obj:
-            results.append(obj)
-
-        if len(results) >= MAX_PER_SOURCE:
-            break
-
-    results = deduplicate(results)
-    if not results:
-        debug("BIHAR CABINET: Aaj ki date ka koi article nahi mila.")
-
-    print(f"✅ Bihar Cabinet usable: {len(results)}")
-    return results
-
-
-# 4. INDIA.GOV.IN
+# 3. INDIA.GOV.IN
 INDIA_GOV_PAGES = [
     "https://www.india.gov.in/",
     "https://www.india.gov.in/news",
@@ -980,52 +902,6 @@ def scrape_india_gov():
     return results
 
 
-# 5. BIHAR CM PRESS RELEASE
-BIHAR_CM_URL = "https://cm.bihar.gov.in/users/preessrelease.aspx"
-
-
-def scrape_bihar_cm():
-    print("\n" + "=" * 70 + "\n🏛️ BIHAR CM PRESS RELEASE (Today's Date Only)\n" + "=" * 70)
-    html = fetch_url(BIHAR_CM_URL)
-    if not html:
-        return []
-
-    soup = BeautifulSoup(html, "html.parser")
-    results = []
-
-    for row in soup.find_all('tr')[:12]:
-        cols = row.find_all('td')
-        if len(cols) >= 2:
-            title = clean_title(cols[1].text.strip())
-            link_tag = cols[1].find('a') or row.find('a')
-            href = clean_url(urljoin(BIHAR_CM_URL, link_tag['href'])) if link_tag and link_tag.get('href') else BIHAR_CM_URL
-
-            if title and len(title) > 10:
-                content, date = fetch_generic_article_content(href, "CMO Bihar")
-                
-                if not content or word_count(content) < MIN_CONTENT_WORDS:
-                    content = f"Official Press Release issued by Chief Minister Office (CMO) Bihar: {title}. Focuses on state development, administrative decisions, and public welfare execution."
-
-                obj = make_item(
-                    source="Bihar CM Office",
-                    title=title,
-                    url=href,
-                    date=date or now_ist(),
-                    content=content,
-                    item_type="Press Release",
-                    is_bihar=True
-                )
-                if obj:
-                    results.append(obj)
-
-    results = deduplicate(results)
-    if not results:
-        debug("BIHAR CM OFFICE: Aaj ki date ka koi article nahi mila.")
-
-    print(f"✅ Bihar CM Office usable: {len(results)}")
-    return results
-
-
 # ============================================================
 # SOURCE RUNNER
 # ============================================================
@@ -1051,9 +927,7 @@ def build_news():
 
     source_results["News On AIR"] = safe_source("News On AIR", scrape_news_on_air)
     source_results["IPRD Bihar"] = safe_source("IPRD Bihar", scrape_iprd_bihar)
-    source_results["Bihar Cabinet"] = safe_source("Bihar Cabinet", scrape_bihar_cabinet)
     source_results["India.gov.in"] = safe_source("India.gov.in", scrape_india_gov)
-    source_results["Bihar CM Office"] = safe_source("Bihar CM Office", scrape_bihar_cm)
 
     breakdown = {}
 
@@ -1065,7 +939,7 @@ def build_news():
 
     all_results = deduplicate(all_results)
 
-    bihar_sources = {"IPRD Bihar", "Bihar Cabinet", "Bihar CM Office"}
+    bihar_sources = {"IPRD Bihar"}
     bihar = []
     national = []
 
@@ -1087,19 +961,49 @@ def build_news():
 
 
 # ============================================================
-# SAVE OUTPUT
+# SAVE OUTPUT (SMART MERGE & ACCUMULATE)
 # ============================================================
 
 def save_output(national, bihar, breakdown):
-    all_news = national + bihar
+    existing_national = []
+    existing_bihar = []
+
+    # 1. Read existing rawnews.json
+    if os.path.exists(OUTPUT_FILE):
+        try:
+            with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+                old_data = json.load(f)
+                existing_national = old_data.get("national_raw_news", [])
+                existing_bihar = old_data.get("bihar_raw_news", [])
+        except Exception:
+            pass
+
+    # 2. Smart Merge: Sirf AAJ ka data rakho, kal ka automatic delete
+    def merge_today_records(new_list, old_list):
+        merged = list(new_list)
+        seen_keys = {item.get("url") or item.get("title") for item in new_list}
+
+        for item in old_list:
+            key = item.get("url") or item.get("title")
+            parsed_d = parse_date(item.get("date", ""))
+            
+            # Agar news AAJ ki hai aur duplicate nahi hai, toh hi add karo
+            if is_strictly_today(parsed_d) and key not in seen_keys:
+                merged.append(item)
+                seen_keys.add(key)
+        return merged
+
+    final_national = merge_today_records(national, existing_national)
+    final_bihar = merge_today_records(bihar, existing_bihar)
+    all_news = final_national + final_bihar
 
     output = {
         "generated_at": now_ist().strftime("%Y-%m-%d %H:%M:%S"),
-        "bihar_raw_count": len(bihar),
-        "national_raw_count": len(national),
+        "bihar_raw_count": len(final_bihar),
+        "national_raw_count": len(final_national),
         "total_raw_count": len(all_news),
-        "bihar_raw_news": bihar,
-        "national_raw_news": national,
+        "bihar_raw_news": final_bihar,
+        "national_raw_news": final_national,
         "source_breakdown": breakdown,
     }
 
@@ -1107,8 +1011,8 @@ def save_output(national, bihar, breakdown):
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 {OUTPUT_FILE} saved successfully.")
-    print(f"📦 Total today's records: {len(all_news)}")
+    print(f"💾 {OUTPUT_FILE} updated (All runs merged for today).")
+    print(f"📦 Total today's stored records: {len(all_news)}")
     print("=" * 80)
 
 
