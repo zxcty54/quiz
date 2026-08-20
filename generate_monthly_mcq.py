@@ -253,6 +253,10 @@ def generate_monthly_mcqs_auto():
         "total_questions": 0,
         "national_total": 0,
         "bihar_total": 0,
+        "source_breakdown": {
+            "all_current_affairs": {"total_scanned": 0, "mcqs_created": 0, "dropped": 0},
+            "final_alerts_news": {"total_scanned": 0, "mcqs_created": 0, "dropped": 0}
+        },
         "national_questions": [],
         "bihar_questions": []
     }
@@ -274,8 +278,27 @@ def generate_monthly_mcqs_auto():
         for q in all_existing if q.get("qe")
     }
 
+    # Tracking metrics per source
+    metrics = {
+        "all_current_affairs": {
+            "total_scanned": 0,
+            "retrospective_dropped": 0,
+            "already_processed": 0,
+            "ai_evaluated": 0,
+            "ai_rejected": 0,
+            "mcqs_created": sum(1 for q in all_existing if q.get("source_file") == "all_current_affairs")
+        },
+        "final_alerts_news": {
+            "total_scanned": 0,
+            "retrospective_dropped": 0,
+            "already_processed": 0,
+            "ai_evaluated": 0,
+            "ai_rejected": 0,
+            "mcqs_created": sum(1 for q in all_existing if q.get("source_file") == "final_alerts_news")
+        }
+    }
+
     scanned_articles = []
-    dropped_retrospective = 0
     seen_titles = set()
 
     # 2. EXTRACT SOURCE 1: all_current_affairs.json
@@ -284,42 +307,47 @@ def generate_monthly_mcqs_auto():
             with open(MASTER_FILE, "r", encoding="utf-8") as f:
                 master_data = json.load(f)
 
+            # Bihar News
             for item in master_data.get("bihar_news", []):
                 t = item.get("title", "")
                 t_hash = generate_article_hash(t)
                 bullets = item.get("bullets", [])
 
                 if TARGET_MONTH_KEY in item.get("date", "") and t_hash not in seen_titles:
+                    metrics["all_current_affairs"]["total_scanned"] += 1
                     if is_old_retrospective_story(t, bullets):
-                        dropped_retrospective += 1
+                        metrics["all_current_affairs"]["retrospective_dropped"] += 1
                         continue
                     item["domain"] = "Bihar"
                     item["source_hash"] = t_hash
+                    item["source_file"] = "all_current_affairs"
                     scanned_articles.append(item)
                     seen_titles.add(t_hash)
 
+            # National News
             for item in master_data.get("national_news", []):
                 t = item.get("title", "")
                 t_hash = generate_article_hash(t)
                 bullets = item.get("bullets", [])
 
                 if TARGET_MONTH_KEY in item.get("date", "") and t_hash not in seen_titles:
+                    metrics["all_current_affairs"]["total_scanned"] += 1
                     if is_old_retrospective_story(t, bullets):
-                        dropped_retrospective += 1
+                        metrics["all_current_affairs"]["retrospective_dropped"] += 1
                         continue
                     item["domain"] = "National"
                     item["source_hash"] = t_hash
+                    item["source_file"] = "all_current_affairs"
                     scanned_articles.append(item)
                     seen_titles.add(t_hash)
 
-            print(f"📦 Loaded from {MASTER_FILE} | Month Matched: {len(scanned_articles)}")
+            print(f"📦 Loaded from {MASTER_FILE} | Month Matched: {metrics['all_current_affairs']['total_scanned']}")
         except Exception as e:
             print(f"⚠️ Error reading {MASTER_FILE}: {e}")
     else:
         print(f"⚠️ {MASTER_FILE} not found!")
 
     # 3. EXTRACT SOURCE 2: final_alerts_news.json
-    alerts_added = 0
     if os.path.exists(ALERTS_FILE):
         try:
             with open(ALERTS_FILE, "r", encoding="utf-8") as f:
@@ -339,12 +367,13 @@ def generate_monthly_mcqs_auto():
                 t_hash = generate_article_hash(t)
 
                 if TARGET_MONTH_KEY in date_str and t_hash not in seen_titles:
+                    metrics["final_alerts_news"]["total_scanned"] += 1
                     bullets = item.get("bullets", [])
                     if not bullets and item.get("content"):
                         bullets = [item.get("content")[:400]]
 
                     if is_old_retrospective_story(t, bullets):
-                        dropped_retrospective += 1
+                        metrics["final_alerts_news"]["retrospective_dropped"] += 1
                         continue
 
                     scanned_articles.append({
@@ -353,33 +382,38 @@ def generate_monthly_mcqs_auto():
                         "domain": "National",
                         "bullets": bullets,
                         "date": date_str,
-                        "source_hash": t_hash
+                        "source_hash": t_hash,
+                        "source_file": "final_alerts_news"
                     })
                     seen_titles.add(t_hash)
-                    alerts_added += 1
 
-            print(f"📦 Loaded from {ALERTS_FILE} | Newly added: {alerts_added}")
+            print(f"📦 Loaded from {ALERTS_FILE} | Month Matched: {metrics['final_alerts_news']['total_scanned']}")
         except Exception as e:
             print(f"⚠️ Error reading {ALERTS_FILE}: {e}")
     else:
         print(f"ℹ️ {ALERTS_FILE} not found (Skipped second source).")
 
-    # 4. Filter strictly UNPROCESSED articles via Hash Matching
-    fresh_articles_to_process = [
-        art for art in scanned_articles if art["source_hash"] not in processed_hashes
-    ]
+    # 4. Separate Unprocessed Articles by Source
+    fresh_articles_to_process = []
+    for art in scanned_articles:
+        src = art["source_file"]
+        if art["source_hash"] in processed_hashes:
+            metrics[src]["already_processed"] += 1
+        else:
+            metrics[src]["ai_evaluated"] += 1
+            fresh_articles_to_process.append(art)
 
-    print(f"\n📊 Total Month Articles Scanned     : {len(scanned_articles)}")
-    print(f"🚫 Retrospective/Old Audits Dropped: {dropped_retrospective}")
-    print(f"⏭️ Already Processed In Previous Run: {len(scanned_articles) - len(fresh_articles_to_process)}")
-    print(f"⚡ Fresh Articles Ready For AI Batching: {len(fresh_articles_to_process)}\n")
+    print("\n" + "-" * 80)
+    print("📊 PRE-EVALUATION SOURCE BREAKDOWN:")
+    for src, m in metrics.items():
+        print(f"   [{src}] -> Scanned: {m['total_scanned']} | Old Audits Dropped: {m['retrospective_dropped']} | Already Done: {m['already_processed']} | Fresh To AI: {m['ai_evaluated']}")
+    print("-" * 80 + "\n")
 
     if not fresh_articles_to_process:
         print("✅ All monthly articles are already processed. No new API calls needed!")
         return
 
     newly_created_mcqs = []
-    skipped_low_value = 0
     total_batches = (len(fresh_articles_to_process) + BATCH_SIZE - 1) // BATCH_SIZE
 
     # 5. Process in Batches of 12
@@ -405,9 +439,13 @@ def generate_monthly_mcqs_auto():
             for item in mcq_result:
                 if not isinstance(item, dict):
                     continue
-                
+
+                input_id = item.get("input_id", 1)
+                matched_news = batch[input_id - 1] if 0 < input_id <= len(batch) else batch[0]
+                item_src = matched_news.get("source_file", "all_current_affairs")
+
                 if not item.get("has_high_yield_mcq", True):
-                    skipped_low_value += 1
+                    metrics[item_src]["ai_rejected"] += 1
                     continue
 
                 qe_text = str(item.get("qe", "")).strip()
@@ -416,17 +454,16 @@ def generate_monthly_mcqs_auto():
 
                 if "consider the following" in qe_text.lower() or "which of the statements" in qe_text.lower():
                     print(f"   🛑 Skipped Statement Question: {qe_text[:40]}...")
-                    skipped_low_value += 1
+                    metrics[item_src]["ai_rejected"] += 1
                     continue
 
-                input_id = item.get("input_id", 1)
-                matched_news = batch[input_id - 1] if 0 < input_id <= len(batch) else batch[0]
                 item_domain = matched_news.get("domain", "National")
                 item_hash = matched_news.get("source_hash", "")
 
                 oe_opts = item.get("oe", [])
                 oh_opts = item.get("oh", [])
                 if len(oe_opts) != 4 or len(oh_opts) != 4 or not qe_text or not qh_text:
+                    metrics[item_src]["ai_rejected"] += 1
                     continue
 
                 if norm_q and norm_q not in seen_q_texts:
@@ -438,6 +475,7 @@ def generate_monthly_mcqs_auto():
 
                     clean_mcq = {
                         "source_hash": item_hash,
+                        "source_file": item_src,
                         "qe": qe_text,
                         "qh": qh_text,
                         "oe": oe_opts,
@@ -449,12 +487,14 @@ def generate_monthly_mcqs_auto():
                         "domain": item_domain
                     }
                     newly_created_mcqs.append(clean_mcq)
-                    print(f"   🏆 [{item_domain} Direct MCQ]: {qe_text[:45]}...")
+                    metrics[item_src]["mcqs_created"] += 1
+                    print(f"   🏆 [{item_src.upper()} | {item_domain}]: {qe_text[:45]}...")
                 else:
+                    metrics[item_src]["ai_rejected"] += 1
                     print(f"   🧹 Duplicate Question Dropped.")
         
         if b_idx + BATCH_SIZE < len(fresh_articles_to_process):
-            print(f"⏳ Sleeping {PAUSE_BETWEEN_BATCHES}s to strictly respect API limits...")
+            print(f"⏳ Sleeping {PAUSE_BETWEEN_BATCHES}s to respect API limits...")
             time.sleep(PAUSE_BETWEEN_BATCHES)
 
     # 6. Segregate and Merge into National & Bihar Arrays
@@ -476,12 +516,27 @@ def generate_monthly_mcqs_auto():
             q_copy["id"] = f"nat_q_{len(final_national) + 1:03d}"
             final_national.append(q_copy)
 
+    # Compute final source breakdown counts
+    source_summary = {
+        "all_current_affairs": {
+            "total_scanned": metrics["all_current_affairs"]["total_scanned"],
+            "mcqs_created": sum(1 for q in all_combined_mcqs if q.get("source_file") == "all_current_affairs"),
+            "total_dropped": metrics["all_current_affairs"]["retrospective_dropped"] + metrics["all_current_affairs"]["ai_rejected"]
+        },
+        "final_alerts_news": {
+            "total_scanned": metrics["final_alerts_news"]["total_scanned"],
+            "mcqs_created": sum(1 for q in all_combined_mcqs if q.get("source_file") == "final_alerts_news"),
+            "total_dropped": metrics["final_alerts_news"]["retrospective_dropped"] + metrics["final_alerts_news"]["ai_rejected"]
+        }
+    }
+
     final_payload = {
         "month": TARGET_MONTH_KEY,
         "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
         "total_questions": len(final_national) + len(final_bihar),
         "national_total": len(final_national),
         "bihar_total": len(final_bihar),
+        "source_breakdown": source_summary,
         "national_questions": final_national,
         "bihar_questions": final_bihar
     }
@@ -491,11 +546,13 @@ def generate_monthly_mcqs_auto():
 
     print("\n" + "=" * 80)
     print(f"💾 Selective Monthly Quiz Saved to: '{OUTPUT_QUIZ_FILE}'")
-    print(f"   ✅ Newly Added High-Yield : {len(newly_created_mcqs)}")
-    print(f"   ⏭️ Rejected Low-Yield News : {skipped_low_value}")
-    print(f"   🇮🇳 National Total         : {len(final_national)}")
-    print(f"   🏛️ Bihar Total            : {len(final_bihar)}")
-    print(f"   📊 Grand Total            : {len(final_national) + len(final_bihar)}")
+    print(f"   📊 Grand Total Active MCQs : {len(final_national) + len(final_bihar)}")
+    print(f"      • National : {len(final_national)}")
+    print(f"      • Bihar    : {len(final_bihar)}")
+    print("-" * 80)
+    print("📈 SOURCE BREAKDOWN SUMMARY:")
+    print(f"   1. all_current_affairs.json -> MCQs Created: {source_summary['all_current_affairs']['mcqs_created']} | Dropped: {source_summary['all_current_affairs']['total_dropped']}")
+    print(f"   2. final_alerts_news.json   -> MCQs Created: {source_summary['final_alerts_news']['mcqs_created']} | Dropped: {source_summary['final_alerts_news']['total_dropped']}")
     print("=" * 80)
 
 
