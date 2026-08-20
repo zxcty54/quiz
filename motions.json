@@ -1,22 +1,21 @@
-
 [
   {
     "p_id": "bpsc_phys_m23_01",
     "qe": "Categorizing physical motion depends on the minimum number of independent spatial coordinates required to specify an object's position over time. Which everyday scenario represents purely three-dimensional motion?",
     "qh": "भौतिक गति का वर्गीकरण समय के साथ किसी वस्तु की स्थिति को निर्दिष्ट करने के लिए आवश्यक स्वतंत्र स्थानिक निर्देशांकों की न्यूनतम संख्या पर निर्भर करता है। कौन सा दैनिक परिदृश्य विशुद्ध रूप से त्रि-आयामी गति का प्रतिनिधित्व करता है?",
     "oe": [
+      "A kite swaying and flying randomly in a turbulent sky",
       "A railway train running along a perfectly straight track",
       "A planet orbiting in an elliptical path around the Sun",
-      "A kite swaying and flying randomly in a turbulent sky",
       "A coin sliding across a smooth, flat carrom board surface"
     ],
     "oh": [
+      "अशांत आकाश में बेतरतीब ढंग से लहराती और उड़ती हुई पतंग",
       "एक बिल्कुल सीधी पटरी पर दौड़ती हुई रेलगाड़ी",
       "सूर्य के चारों ओर दीर्घवृत्ताकार पथ में परिक्रमा करता एक ग्रह",
-      "अशांत आकाश में बेतरतीब ढंग से लहराती और उड़ती हुई पतंग",
       "एक चिकने, समतल कैरम बोर्ड की सतह पर फिसलती हुई गोटी"
     ],
-    "a": 2,
+    "a": 0,
     "e": "Kinematics mein kisi object ki motion ko specify karne ke liye minimum number of independent position coordinates ($x, y, z$) ki zaroorat hoti hai.\n\n• Option 0 galat hai kyunki straight track par train ki motion ek single line ($x$-axis) ke along hoti hai, isliye yeh One-Dimensional (1D) ya Rectilinear motion hai.\n• Option 1 galat hai kyunki Sun ke charo taraf planet ka elliptical orbit ek single geometric plane ($x, y$) mein bounded hota hai, jo Two-Dimensional (2D) motion ka example hai.\n• Option 2 bilkul sahi hai kyunki hawa mein udti hui kite, bird ya gas molecules open 3D space mein move karte hain jahan unki instantaneous position track karne ke liye teeno independent coordinates ($x, y, z$) continuously change hote hain. Yeh Three-Dimensional (3D) motion hai.\n• Option 3 galat hai kyunki flat carrom board par coin ki motion strictly planar 2D space tak bounded hoti hai. Examiners aksar 2D orbital motion aur 3D random space motion ke beech confusing options banate hain."
   },
   {
@@ -43,18 +42,18 @@
     "qe": "An automobile instrument panel contains specialized meters for tracking vehicle motion metrics. What physical quantity is directly recorded by a vehicle's odometer?",
     "qh": "एक ऑटोमोबाइल उपकरण पैनल में वाहन गति मीट्रिक को ट्रैक करने के लिए विशेष मीटर होते हैं। वाहन के ओडोमीटर द्वारा सीधे किस भौतिक राशि को रिकॉर्ड किया जाता है?",
     "oe": [
-      "Instantaneous velocity vector",
-      "Total cumulative path length (distance traveled)",
+      "Average acceleration rate over time",
       "Net vector displacement from the garage origin",
-      "Average acceleration rate over time"
+      "Total cumulative path length (distance traveled)",
+      "Instantaneous velocity vector"
     ],
     "oh": [
-      "तात्कालिक वेग सदिश",
-      "कुल संचयी पथ लंबाई (तय की गई दूरी)",
+      "समय के साथ औसत त्वरण दर",
       "गैराज मूल बिंदु से शुद्ध सदिश विस्थापन",
-      "समय के साथ औसत त्वरण दर"
+      "कुल संचयी पथ लंबाई (तय की गई दूरी)",
+      "तात्कालिक वेग सदिश"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Automobile dashboards mein speed aur distance track karne ke liye do specialized instruments lagaye jate hain: Speedometer aur Odometer.\n\n• Option 0 galat hai kyunki instantaneous speed ko speedometer measure karta hai (woh bhi bina vector direction ke scalar magnitude mein).\n• Option 1 bilkul sahi hai kyunki Odometer ek mechanical ya digital recorder hai jo vehicle dwara travel ki gayi actual scalar **Total Distance (Path Length)** ko accumulate karta hai, chahe gadi kisi bhi direction mein ghoome ya reverse gear mein chale.\n• Option 2 galat hai kyunki odometer displacement calculate nahi karta; agar ek gadi round trip karke wapas initial point par aa jaye toh net displacement zero hoga par odometer reading continuously badhegi.\n• Option 3 galat hai kyunki acceleration measure karne ke liye accelerometer ka prayog hota hai."
   },
   {
@@ -63,17 +62,17 @@
     "qh": "किनेमैटिक्स के मूल्यांकन के लिए सदिश वेग को अदिश चाल से अलग करने की आवश्यकता होती है। किसी गतिमान पिंड के वेग को उसकी चाल पूर्णतः स्थिर रहने पर भी कैसे बदला जा सकता है?",
     "oe": [
       "Velocity can never change if speed remains strictly constant.",
-      "By changing its direction of motion continuously without changing its numerical speed.",
       "By increasing its total scalar path length while keeping time fixed.",
-      "By reversing the sign of gravitational acceleration."
+      "By reversing the sign of gravitational acceleration.",
+      "By changing its direction of motion continuously without changing its numerical speed."
     ],
     "oh": [
       "यदि चाल सख्ती से स्थिर रहती है तो वेग कभी नहीं बदल सकता।",
-      "संख्यात्मक चाल को बदले बिना गति की दिशा को लगातार बदलकर।",
       "समय को निश्चित रखते हुए इसकी कुल अदिश पथ लंबाई को बढ़ाकर।",
-      "गुरुत्वाकर्षण त्वरण के चिह्न को उलटकर।"
+      "गुरुत्वाकर्षण त्वरण के चिह्न को उलटकर।",
+      "संख्यात्मक चाल को बदले बिना गति की दिशा को लगातार बदलकर।"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Speed ek scalar quantity hai jisme keval magnitude hota hai, jabki Velocity ($\\vec{v}$) ek vector quantity hai jisme magnitude (speed) aur direction dono shamil hote hain.\n\n• Option 0 galat hai kyunki yeh velocity ko ek pure scalar quantity maan leta hai.\n• Option 1 bilkul sahi hai kyunki velocity vector change hone ke teen conditions hote hain: (1) speed badal jaye, (2) direction badal jaye, ya (3) dono badal jayein. Agar speed bilkul constant ($v = \\text{constant}$) rahe tab bhi continuously direction badalne se (jaise Uniform Circular Motion mein hota hai) velocity continuously change hoti rehti hai aur ek continuous centripetal acceleration generate hota hai.\n• Option 2 aur Option 3 invalid kinematics mechanisms prastut karte hain. Civil services exams mein circular motion ke constant speed vs variable velocity par analytical sawal bar-bar aate hain."
   },
   {
@@ -81,18 +80,18 @@
     "qe": "Relative velocity governs the apparent motion of one body observed from the moving reference frame of another. If two trains, A and B, move parallel to each other along adjacent tracks at velocities $v_A$ and $v_B$ in opposite directions, what is the relative velocity of train A with respect to train B ($v_{AB}$)?",
     "qh": "सापेक्ष वेग (Relative velocity) किसी अन्य गतिमान संदर्भ फ्रेम से देखे गए पिंड की आभासी गति को नियंत्रित करता है। यदि दो ट्रेनें, A और B, समानांतर पटरियों पर विपरीत दिशाओं में $v_A$ और $v_B$ वेग से गति कर रही हैं, तो ट्रेन B के सापेक्ष ट्रेन A का सापेक्ष वेग ($v_{AB}$) क्या है?",
     "oe": [
-      "$v_{AB} = v_A - v_B$",
       "$v_{AB} = v_A + v_B$",
-      "$v_{AB} = \\sqrt{v_A^2 + v_B^2}$",
-      "$v_{AB} = \\frac{v_A \\cdot v_B}{v_A + v_B}$"
+      "$v_{AB} = v_A - v_B$",
+      "$v_{AB} = \\frac{v_A \\cdot v_B}{v_A + v_B}$",
+      "$v_{AB} = \\sqrt{v_A^2 + v_B^2}$"
     ],
     "oh": [
-      "$v_{AB} = v_A - v_B$",
       "$v_{AB} = v_A + v_B$",
-      "$v_{AB} = \\sqrt{v_A^2 + v_B^2}$",
-      "$v_{AB} = \\frac{v_A \\cdot v_B}{v_A + v_B}$"
+      "$v_{AB} = v_A - v_B$",
+      "$v_{AB} = \\frac{v_A \\cdot v_B}{v_A + v_B}$",
+      "$v_{AB} = \\sqrt{v_A^2 + v_B^2}$"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Relative velocity ek moving frame of reference se doosre moving object ki observed velocity ko define karti hai: $\\vec{v}_{AB} = \\vec{v}_A - \\vec{v}_B$.\n\n• Option 0 tab valid hota hai jab dono bodies same direction mein move kar rahi hon.\n• Option 1 bilkul sahi hai kyunki jab do bodies opposite directions mein travel karti hain, toh vector sign convention ke anusar agar $\\vec{v}_A = +v_A$ hai, toh $\\vec{v}_B = -v_B$ hoga. Relative velocity ka formula apply karne par:\n$$v_{AB} = v_A - (-v_B) = v_A + v_B$$\nIsi mathematical reason se jab do trains opposite direction mein cross karti hain toh unki relative speed jud jati hai aur train bohot tezi se pass hoti hui appear hoti hai.\n• Option 2 perpendicular 2D relative motion ($90^\\circ$) ke liye use hota hai aur Option 3 invalid physical formulation hai."
   },
   {
@@ -100,18 +99,18 @@
     "qe": "Deceleration (retardation) describes a specific dynamic state of a particle moving in one dimension. What mathematical relationship between initial velocity ($u$) and final velocity ($v$) over a time interval defines negative acceleration?",
     "qh": "मंदन (Deceleration/Retardation) एक आयाम में गतिमान कण की एक विशिष्ट गतिक अवस्था का वर्णन करता है। किसी समयांतराल पर प्रारंभिक वेग ($u$) और अंतिम वेग ($v$) के बीच कौन सा गणितीय संबंध ऋणात्मक त्वरण को परिभाषित करता है?",
     "oe": [
-      "$v > u$ (velocity increases over time)",
-      "$v < u$ (velocity decreases over time)",
+      "$v = -u$ (particle moves at uniform speed in a circle)",
       "$v = u = 0$ (particle remains at rest)",
-      "$v = -u$ (particle moves at uniform speed in a circle)"
+      "$v < u$ (velocity decreases over time)",
+      "$v > u$ (velocity increases over time)"
     ],
     "oh": [
-      "$v > u$ (समय के साथ वेग बढ़ता है)",
-      "$v < u$ (समय के साथ वेग घटता है)",
+      "$v = -u$ (कण एक वृत्त में एकसमान चाल से चलता है)",
       "$v = u = 0$ (कण विराम अवस्था में रहता है)",
-      "$v = -u$ (कण एक वृत्त में एकसमान चाल से चलता है)"
+      "$v < u$ (समय के साथ वेग घटता है)",
+      "$v > u$ (समय के साथ वेग बढ़ता है)"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Acceleration ($a$) rate of change of velocity hota hai: $a = \\frac{v - u}{t}$. Jab velocity ka magnitude time ke sath kam hota hai, toh us dynamic state ko Retardation ya Deceleration kehte hain.\n\n• Option 0 positive acceleration ($a > 0$) ko represent karta hai jahan speed time ke sath badhti hai.\n• Option 1 bilkul sahi hai kyunki jab final velocity initial velocity se kam hoti hai ($v < u$), toh numerator negative ho jata hai:\n$$v < u \\implies a = \\frac{v - u}{t} < 0$$\nIs negative acceleration ki direction velocity vector ke theek opposite hoti hai, jisse body ki speed lagatar ghat-ti hai aur body brake lagane par stop ho jati hai.\n• Option 2 static rest condition hai aur Option 3 direction reversal ko indicate karta hai."
   },
   {
@@ -119,18 +118,18 @@
     "qe": "Translational kinematics classifies rectilinear motion based on force requirements and velocity consistency. What net force is required to maintain a body in pure uniform motion along a straight path?",
     "qh": "स्थानांतरणीय किनेमैटिक्स बल की आवश्यकताओं और वेग की निरंतरता के आधार पर सीधी रेखा की गति को वर्गीकृत करता है। एक सीधे पथ के साथ शुद्ध एकसमान गति (pure uniform motion) में किसी पिंड को बनाए रखने के लिए कितने शुद्ध बल (net force) की आवश्यकता होती है?",
     "oe": [
-      "A constant non-zero net force proportional to velocity",
       "Zero net force ($\\sum \\vec{F} = 0$)",
-      "A continuously increasing centripetal force",
-      "A force equal to the gravitational weight of the body"
+      "A force equal to the gravitational weight of the body",
+      "A constant non-zero net force proportional to velocity",
+      "A continuously increasing centripetal force"
     ],
     "oh": [
-      "वेग के समानुपाती एक स्थिर गैर-शून्य शुद्ध बल",
       "शून्य शुद्ध बल ($\\sum \\vec{F} = 0$)",
-      "लगातार बढ़ता हुआ अभिकेंद्रीय बल",
-      "पिंड के गुरुत्वाकर्षण भार के बराबर एक बल"
+      "पिंड के गुरुत्वाकर्षण भार के बराबर एक बल",
+      "वेग के समानुपाती एक स्थिर गैर-शून्य शुद्ध बल",
+      "लगातार बढ़ता हुआ अभिकेंद्रीय बल"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Classical mechanics mein Newton ka First Law of Motion (Law of Inertia) kisi object ki natural state of motion ko define karta hai.\n\n• Option 0 purani Aristotelian fallacy ko darshata hai jisme motion ko maintain karne ke liye continuous force zaroori mana jata tha.\n• Option 1 bilkul sahi hai kyunki **Uniform Motion** ka arth hai constant velocity vector ($\\vec{v} = \\text{constant}$), jiska matlab acceleration strictly zero ($a = 0$) hota hai. Newton ke Second Law ($\\vec{F}_{\\text{net}} = m\\vec{a}$) ke mutabiq, jab $a = 0$ ho toh net external force strictly zero honi chahiye:\n$$\\sum \\vec{F} = 0$$\n• Option 2 curved circular motion ke liye aur Option 3 vertical gravitational equilibrium ke liye applicable hai."
   },
   {
@@ -138,16 +137,16 @@
     "qe": "Analyzing displacement-time ($s-t$) graphs reveals the instantaneous kinematic state of an object. What structural feature on an $s-t$ graph indicates that an object is at rest?",
     "qh": "विस्थापन-समय ($s-t$) रेखाचित्रों का विश्लेषण किसी वस्तु की तात्कालिक गतिक अवस्था को उजागर करता है। $s-t$ ग्राफ पर कौन सी संरचनात्मक विशेषता यह दर्शाती है कि वस्तु विराम अवस्था में है?",
     "oe": [
-      "A straight line sloping upward at a $45^\\circ$ angle to the time axis",
-      "A straight line parallel to the time axis",
       "A parabolic curve bending toward the displacement axis",
-      "A vertical line parallel to the displacement axis"
+      "A straight line parallel to the time axis",
+      "A vertical line parallel to the displacement axis",
+      "A straight line sloping upward at a $45^\\circ$ angle to the time axis"
     ],
     "oh": [
-      "समय अक्ष पर $45^\\circ$ के कोण पर ऊपर की ओर झुकी हुई एक सीधी रेखा",
-      "समय अक्ष के समानांतर एक सीधी रेखा",
       "विस्थापन अक्ष की ओर झुकता हुआ एक परवलयिक वक्र",
-      "विस्थापन अक्ष के समानांतर एक ऊर्ध्वाधर रेखा"
+      "समय अक्ष के समानांतर एक सीधी रेखा",
+      "विस्थापन अक्ष के समानांतर एक ऊर्ध्वाधर रेखा",
+      "समय अक्ष पर $45^\\circ$ के कोण पर ऊपर की ओर झुकी हुई एक सीधी रेखा"
     ],
     "a": 1,
     "e": "Displacement-Time ($s-t$) graph ka slope $\\frac{ds}{dt}$ object ki instantaneous velocity ($v$) ko darshata hai.\n\n• Option 0 uniform non-zero constant velocity ko represent karta hai kyunki iska slope non-zero constant hai.\n• Option 1 bilkul sahi hai kyunki jab object rest par hota hai, toh time $t$ ke sath uska displacement position $s$ bilkul change nahi hota ($s = \\text{constant}$). Iska graph **time axis ke perfectly parallel ek horizontal straight line** banta hai, jiska slope zero hota hai ($v = \\frac{ds}{dt} = 0$).\n• Option 2 non-uniform accelerated motion ko darshata hai aur Option 3 infinite velocity represent karta hai jo physically impossible hai."
@@ -159,14 +158,14 @@
     "oe": [
       "Slope gives distance; Area gives acceleration.",
       "Slope gives Acceleration; Area under the curve gives Displacement or Distance traveled.",
-      "Slope gives force; Area gives power.",
-      "Slope gives impulse; Area gives momentum."
+      "Slope gives impulse; Area gives momentum.",
+      "Slope gives force; Area gives power."
     ],
     "oh": [
       "ढाल दूरी देती है; क्षेत्रफल त्वरण देता है।",
       "ढाल त्वरण (Acceleration) देती है; वक्र के अंतर्गत क्षेत्रफल विस्थापन (Displacement) या तय की गई दूरी देता है।",
-      "ढाल बल देती है; क्षेत्रफल शक्ति देता है।",
-      "ढाल आवेग देती है; क्षेत्रफल संवेग देता है।"
+      "ढाल आवेग देती है; क्षेत्रफल संवेग देता है।",
+      "ढाल बल देती है; क्षेत्रफल शक्ति देता है।"
     ],
     "a": 1,
     "e": "Velocity-Time ($v-t$) graph calculus ke differential aur integral principles par aadharit hota hai.\n\n• Option 0 slope aur area ke mathematical relationships ko ulta kar deta hai.\n• Option 1 bilkul sahi hai kyunki:\n1. **Slope (Derivative):** $v-t$ curve ka slope $\\frac{dv}{dt}$ rate of change of velocity yaani **Acceleration** ko represent karta hai.\n2. **Area under the Curve (Integral):** Velocity-time graph ke under ka area integrate karne par net **Displacement** milta hai:\n$$\\int v \\, dt = \\int \\frac{ds}{dt} \\, dt = \\Delta s$$\n(Agar pure curve ka scalar absolute area liya jaye toh total Distance nikalta hai).\n• Option 2 aur Option 3 non-kinematic force/power terms hain jo direct $v-t$ geometry se nahi aate."
@@ -176,18 +175,18 @@
     "qe": "An object launched vertically upward under gravity experiences linear retardation until reaching its apex. What are the velocity and acceleration of the object at its highest point?",
     "qh": "गुरुत्वाकर्षण के तहत लंबवत रूप से ऊपर की ओर फेंकी गई वस्तु अपने उच्चतम बिंदु (apex) तक पहुंचने तक रैखिक मंदन का अनुभव करती है। अपने उच्चतम बिंदु पर वस्तु का वेग और त्वरण क्या होता है?",
     "oe": [
-      "Velocity is zero; Acceleration is zero.",
-      "Velocity is zero; Acceleration is non-zero and directed vertically downward ($-g$).",
       "Velocity is maximum; Acceleration is zero.",
-      "Velocity is $-g$; Acceleration is $+g$."
+      "Velocity is $-g$; Acceleration is $+g$.",
+      "Velocity is zero; Acceleration is zero.",
+      "Velocity is zero; Acceleration is non-zero and directed vertically downward ($-g$)."
     ],
     "oh": [
-      "वेग शून्य है; त्वरण शून्य है।",
-      "वेग शून्य है; त्वरण गैर-शून्य है और लंबवत नीचे की ओर निर्देशित है ($-g$)।",
       "वेग अधिकतम है; त्वरण शून्य है।",
-      "वेग $-g$ है; त्वरण $+g$ है।"
+      "वेग $-g$ है; त्वरण $+g$ है।",
+      "वेग शून्य है; त्वरण शून्य है।",
+      "वेग शून्य है; त्वरण गैर-शून्य है और लंबवत नीचे की ओर निर्देशित है ($-g$)।"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Vertical motion under gravity mein Earth ka gravitational field continuously downward force ($F = mg$) exert karta hai.\n\n• Option 0 standard conceptual trap hai jisme candidates maante hain ki agar object momentarily ruka hai toh force aur acceleration bhi zero honge.\n• Option 1 bilkul sahi hai kyunki highest point (apex) par body direction reverse karne se pehle ek instant ke liye rukti hai, isliye **Instantaneous Velocity strictly Zero ($v = 0$)** hoti hai. Parantu Earth ka gravitational pull kabhi band nahi hota, isliye **Acceleration due to gravity non-zero aur continuously downward ($-g = -9.8\\text{ m/s}^2$)** bana rehta hai. Agar apex par acceleration bhi zero ho jata toh object hawa mein wahi latka reh jata.\n• Option 2 aur Option 3 physically incorrect statements hain."
   },
   {
@@ -195,18 +194,18 @@
     "qe": "Earth's gravitational field exerts a uniform downward acceleration ($g$) on falling bodies when air resistance is negligible. What initial condition and acceleration sign conventions govern a body dropped freely from rest?",
     "qh": "हवा के प्रतिरोध नगण्य होने पर पृथ्वी का गुरुत्वाकर्षण क्षेत्र गिरते हुए पिंडों पर एकसमान नीचे की ओर त्वरण ($g$) लगाता है। विराम अवस्था से स्वतंत्र रूप से छोड़े गए पिंड के लिए कौन सी प्रारंभिक स्थिति और त्वरण चिह्न परिपाटी (sign convention) लागू होती है?",
     "oe": [
-      "Initial velocity $u > 0$; Acceleration $a = 0$",
-      "Initial velocity $u = 0$; Acceleration due to gravity is taken as $+g$ (if downward direction is positive) as velocity increases.",
       "Initial velocity $u = -g$; Acceleration is variable.",
-      "Initial velocity $u = \\infty$; Acceleration $a = -g$"
+      "Initial velocity $u > 0$; Acceleration $a = 0$",
+      "Initial velocity $u = \\infty$; Acceleration $a = -g$",
+      "Initial velocity $u = 0$; Acceleration due to gravity is taken as $+g$ (if downward direction is positive) as velocity increases."
     ],
     "oh": [
-      "प्रारंभिक वेग $u > 0$; त्वरण $a = 0$",
-      "प्रारंभिक वेग $u = 0$; गुरुत्वाकर्षण के कारण त्वरण $+g$ लिया जाता है (यदि नीचे की दिशा धनात्मक है) क्योंकि वेग बढ़ता है।",
       "प्रारंभिक वेग $u = -g$; त्वरण परिवर्तनशील है।",
-      "प्रारंभिक वेग $u = \\infty$; त्वरण $a = -g$"
+      "प्रारंभिक वेग $u > 0$; त्वरण $a = 0$",
+      "प्रारंभिक वेग $u = \\infty$; त्वरण $a = -g$",
+      "प्रारंभिक वेग $u = 0$; गुरुत्वाकर्षण के कारण त्वरण $+g$ लिया जाता है (यदि नीचे की दिशा धनात्मक है) क्योंकि वेग बढ़ता है।"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Free fall motion under gravity mein body rest se drop hone par uniform gravitational field ($g$) ke prabhav mein accelerate hoti hai.\n\n• Option 0 galat hai kyunki 'dropped from rest' ka standard kinematic meaning initial velocity zero hona hota hai na ki non-zero.\n• Option 1 bilkul sahi hai kyunki jab object ko rest se drop kiya jata hai toh uski **Initial Velocity strictly Zero ($u = 0$)** hoti hai. Agar downward direction ko positive coordinate axis mana jaye, toh speed linearly increase hoti hai ($v = gt$) aur acceleration due to gravity **$+g$ ($+9.8\\text{ m/s}^2$)** liya jata hai.\n• Option 2 aur Option 3 non-physical initial velocity values assign karte hain."
   },
   {
@@ -214,18 +213,18 @@
     "qe": "In idealized free-fall motion near Earth's surface (ignoring atmospheric drag), symmetry governs ascent and descent trajectories. How does the time of ascent ($t_a$) to maximum height compare to the time of descent ($t_d$) back to projection level?",
     "qh": "पृथ्वी की सतह के पास आदर्श मुक्त-पतन गति (मुक्त-ऊर्ध्वपात) में (वायुमंडलीय ड्रैग को नजरअंदाज करते हुए), समरूपता आरोहण और अवरोहण के प्रक्षेपवक्र को नियंत्रित करती है। अधिकतम ऊंचाई तक आरोहण का समय ($t_a$) प्रक्षेपण स्तर पर वापस आने के अवरोहण के समय ($t_d$) से कैसे तुलना करता है?",
     "oe": [
-      "$t_a > t_d$ because gravity resists upward motion.",
-      "$t_a = t_d = \\frac{u \\sin \\theta}{g}$ (Time taken to rise equals time taken to fall).",
+      "$t_a = 2 t_d$ due to parabolic velocity splitting.",
       "$t_a < t_d$ because the object gains mass at the top.",
-      "$t_a = 2 t_d$ due to parabolic velocity splitting."
+      "$t_a = t_d = \\frac{u \\sin \\theta}{g}$ (Time taken to rise equals time taken to fall).",
+      "$t_a > t_d$ because gravity resists upward motion."
     ],
     "oh": [
-      "$t_a > t_d$ क्योंकि गुरुत्वाकर्षण ऊपर की ओर गति का विरोध करता है।",
-      "$t_a = t_d = \\frac{u \\sin \\theta}{g}$ (ऊपर उठने में लगा समय नीचे गिरने में लगे समय के बराबर होता है)।",
+      "$t_a = 2 t_d$ परवलयिक वेग विभाजन के कारण।",
       "$t_a < t_d$ क्योंकि वस्तु शीर्ष पर द्रव्यमान प्राप्त करती है।",
-      "$t_a = 2 t_d$ परवलयिक वेग विभाजन के कारण।"
+      "$t_a = t_d = \\frac{u \\sin \\theta}{g}$ (ऊपर उठने में लगा समय नीचे गिरने में लगे समय के बराबर होता है)।",
+      "$t_a > t_d$ क्योंकि गुरुत्वाकर्षण ऊपर की ओर गति का विरोध करता है।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Air resistance ke absence mein constant acceleration $g$ ke under vertical motion perfectly time-symmetric aur energy-conservative hoti hai.\n\n• Option 0 common misconception hai jo yeh maanta hai ki gravity upar jate waqt zyada time leti hai.\n• Option 1 bilkul sahi hai kyunki initial vertical velocity $u_y = u\\sin\\theta$ ko apex par zero hone mein laga time (Time of Ascent) $t_a = \\frac{u\\sin\\theta}{g}$ hota hai, aur apex se wapas ground par aane mein laga time (Time of Descent) $t_d = \\sqrt{\\frac{2H}{g}} = \\frac{u\\sin\\theta}{g}$ hota hai. Isliye:\n$$t_a = t_d = \\frac{u\\sin\\theta}{g}$$\n• Option 2 aur Option 3 Newtonian mechanics ke trajectory symmetry principles ko violate karte hain."
   },
   {
@@ -233,18 +232,18 @@
     "qe": "Projectile motion involves two-dimensional motion in a vertical plane under constant gravity. What geometric curve describes the actual trajectory followed by a projectile?",
     "qh": "प्रक्षेप्य गति (Projectile motion) में स्थिर गुरुत्वाकर्षण के तहत लंबवत समतल में दो-आयामी गति शामिल होती है। प्रक्षेप्य द्वारा तय किए गए वास्तविक पथ (trajectory) को कौन सा ज्यामितीय वक्र वर्णित करता है?",
     "oe": [
+      "A straight logarithmic spiral",
       "A perfect circle",
       "A parabolic curve",
-      "A hyperbola",
-      "A straight logarithmic spiral"
+      "A hyperbola"
     ],
     "oh": [
+      "एक सीधा लघुगणकीय सर्पिल",
       "एक पूर्ण वृत्त",
       "एक परवलयिक वक्र (A parabolic curve)",
-      "एक अतिपरवलय (hyperbola)",
-      "एक सीधा लघुगणकीय सर्पिल"
+      "एक अतिपरवलय (hyperbola)"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Jab kisi body ko horizontal se oblique angle par launch kiya jata hai, toh uski motion horizontal uniform motion aur vertical uniformly accelerated motion ka combination hoti hai.\n\n• Option 0 uniform circular motion ya central gravity orbit ko describe karta hai.\n• Option 1 bilkul sahi hai kyunki horizontal displacement $x = (u\\cos\\theta)t \\implies t = \\frac{x}{u\\cos\\theta}$ aur vertical displacement $y = (u\\sin\\theta)t - \\frac{1}{2}gt^2$ hota hai. Parameter $t$ ko eliminate karne par trajectory ki equation aati hai:\n$$y = x\\tan\\theta - \\frac{g}{2u^2\\cos^2\\theta}x^2$$\nYeh standard quadratic equation $y = ax - bx^2$ ke form mein hai, jo mathematically ek **Parabolic Curve (परवलय)** ko represent karti hai.\n• Option 2 aur Option 3 non-constant field trajectories hain."
   },
   {
@@ -252,18 +251,18 @@
     "qe": "Resolving initial projectile velocity $\\vec{u}$ into orthogonal components separates horizontal and vertical motion. Assuming zero air resistance, how do the horizontal ($u_x$) and vertical ($u_y$) velocity components behave throughout flight?",
     "qh": "प्रारंभिक प्रक्षेप्य वेग $\\vec{u}$ को लंबवत घटकों में विघटित करने से क्षैतिज और लंबवत गति अलग हो जाती है। शून्य वायु प्रतिरोध मानते हुए, पूरे उड़ान के दौरान क्षैतिज ($u_x$) और लंबवत ($u_y$) वेग घटक कैसे व्यवहार करते हैं?",
     "oe": [
-      "Both $u_x$ and $u_y$ decrease to zero at the highest point.",
       "$u_x = u \\cos \\theta$ remains strictly constant throughout flight, while $u_y = u \\sin \\theta$ changes continuously due to gravitational acceleration.",
-      "$u_x$ increases continuously, while $u_y$ remains constant.",
-      "Both $u_x$ and $u_y$ accelerate at a rate of $+g$ horizontally."
+      "Both $u_x$ and $u_y$ accelerate at a rate of $+g$ horizontally.",
+      "Both $u_x$ and $u_y$ decrease to zero at the highest point.",
+      "$u_x$ increases continuously, while $u_y$ remains constant."
     ],
     "oh": [
-      "उच्चतम बिंदु पर $u_x$ और $u_y$ दोनों घटकर शून्य हो जाते हैं।",
       "$u_x = u \\cos \\theta$ पूरी उड़ान के दौरान सख्ती से स्थिर रहता है, जबकि $u_y = u \\sin \\theta$ गुरुत्वाकर्षण त्वरण के कारण लगातार बदलता रहता है।",
-      "$u_x$ लगातार बढ़ता है, जबकि $u_y$ स्थिर रहता है।",
-      "$u_x$ और $u_y$ दोनों क्षैतिज रूप से $+g$ की दर से त्वरित होते हैं।"
+      "$u_x$ और $u_y$ दोनों क्षैतिज रूप से $+g$ की दर से त्वरित होते हैं।",
+      "उच्चतम बिंदु पर $u_x$ और $u_y$ दोनों घटकर शून्य हो जाते हैं।",
+      "$u_x$ लगातार बढ़ता है, जबकि $u_y$ स्थिर रहता है।"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Projectile motion do mutually perpendicular aur independent 1D motions ka vector combination hota hai.\n\n• Option 0 galat hai kyunki apex par horizontal component kabhi zero nahi hota.\n• Option 1 bilkul sahi hai kyunki:\n1. **Horizontal Direction:** Horizontal axis par koi force nahi lagta ($F_x = 0 \\implies a_x = 0$), isliye **$u_x = u\\cos\\theta$ poori flight mein strictly constant** rehta hai.\n2. **Vertical Direction:** Downward gravity act karti hai ($a_y = -g$), isliye **$u_y = u\\sin\\theta$ continuously change** hota hai—ascent ke dauran ghat-ta hai, apex par $0$ hota hai, aur descent mein badhta hai.\n• Option 2 aur Option 3 horizontal direction mein fictitious forces assume karte hain jo physically galat hain."
   },
   {
@@ -271,18 +270,18 @@
     "qe": "Real-world scenarios often display projectile motion dynamics. Which choice represents a classic real-world example of projectile motion?",
     "qh": "वास्तविक दुनिया के परिदृश्य अक्सर प्रक्षेप्य गति गतिकी को प्रदर्शित करते हैं। कौन सा विकल्प प्रक्षेप्य गति के एक उत्कृष्ट वास्तविक दुनिया के उदाहरण का प्रतिनिधित्व करता है?",
     "oe": [
+      "A charged particle moving parallel to a uniform magnetic field",
       "A commercial airliner cruising at constant altitude and uniform velocity",
-      "A bomb released from a horizontally flying airplane, or a bullet fired obliquely from a tank",
       "An elevator moving up a vertical shaft at constant speed",
-      "A charged particle moving parallel to a uniform magnetic field"
+      "A bomb released from a horizontally flying airplane, or a bullet fired obliquely from a tank"
     ],
     "oh": [
+      "एक समान चुंबकीय क्षेत्र के समानांतर गतिमान एक आवेशित कण",
       "एक वाणिज्यिक विमान जो स्थिर ऊंचाई और एकसमान वेग पर उड़ान भर रहा है",
-      "क्षैतिज रूप से उड़ते हवाई जहाज से गिराया गया बम, या टैंक से तिरछी दागी गई गोली",
       "एक लिफ्ट जो एकसमान चाल से ऊर्ध्वाधर शाफ्ट में ऊपर की ओर बढ़ रही है",
-      "एक समान चुंबकीय क्षेत्र के समानांतर गतिमान एक आवेशित कण"
+      "क्षैतिज रूप से उड़ते हवाई जहाज से गिराया गया बम, या टैंक से तिरछी दागी गई गोली"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Projectile motion tab hoti hai jab kisi object ko initial velocity dekar chhod diya jaye aur woh purely gravity ke influence mein curved path par move kare.\n\n• Option 0 uniform linear motion ko describe karta hai jahan continuous engine thrust drag ko balance karta hai.\n• Option 1 bilkul sahi hai kyunki horizontally flying airplane se drop kiya gaya bomb plane ki horizontal speed ($u_x$) retain karta hai aur vertical gravity ke under accelerate hokar curved parabolic trajectory banata hai. Isi tarah tank se nikli bullet release ke baad gravity ke under projectile ban jati hai.\n• Option 2 constrained 1D vertical motion hai aur Option 3 zero Lorentz force wali straight-line motion hai."
   },
   {
@@ -290,18 +289,18 @@
     "qe": "At the apex (maximum height) of a projectile's parabolic trajectory, its motion undergoes a specific vector reduction. What is the magnitude and direction of the projectile's net velocity at its highest point?",
     "qh": "किसी प्रक्षेप्य के परवलयिक पथ के शीर्ष (अधिकतम ऊंचाई) पर, इसकी गति एक विशिष्ट सदिश कमी से गुजरती है। इसके उच्चतम बिंदु पर प्रक्षेप्य के शुद्ध वेग का परिमाण और दिशा क्या होती है?",
     "oe": [
-      "Net velocity is zero in all directions.",
-      "Net velocity is non-zero, equal to its horizontal component $u \\cos \\theta$, directed horizontally.",
+      "Net velocity is $u \\sin \\theta$, directed at $45^\\circ$ to the horizontal.",
       "Net velocity is equal to initial projection velocity $u$, directed vertically downward.",
-      "Net velocity is $u \\sin \\theta$, directed at $45^\\circ$ to the horizontal."
+      "Net velocity is non-zero, equal to its horizontal component $u \\cos \\theta$, directed horizontally.",
+      "Net velocity is zero in all directions."
     ],
     "oh": [
-      "सभी दिशाओं में शुद्ध वेग शून्य है।",
-      "शुद्ध वेग गैर-शून्य है, जो इसके क्षैतिज घटक $u \\cos \\theta$ के बराबर है, और क्षैतिज रूप से निर्देशित है।",
+      "शुद्ध वेग $u \\sin \\theta$ है, जो क्षैतिज से $45^\\circ$ पर निर्देशित है।",
       "शुद्ध वेग प्रारंभिक प्रक्षेपण वेग $u$ के बराबर है, जो लंबवत नीचे की ओर निर्देशित है।",
-      "शुद्ध वेग $u \\sin \\theta$ है, जो क्षैतिज से $45^\\circ$ पर निर्देशित है।"
+      "शुद्ध वेग गैर-शून्य है, जो इसके क्षैतिज घटक $u \\cos \\theta$ के बराबर है, और क्षैतिज रूप से निर्देशित है।",
+      "सभी दिशाओं में शुद्ध वेग शून्य है।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Parabolic trajectory ke highest point par projectile ki velocity ka vector resolution ek specific kinematic property show karta hai.\n\n• Option 0 standard trap hai jo 1D vertical throw ke sath 2D projectile ko confuse karta hai.\n• Option 1 bilkul sahi hai kyunki apex par vertical velocity component momentarily vanish ho jata hai ($v_y = 0$), parantu horizontal velocity component unaltered rehta hai ($v_x = u\\cos\\theta$). Isliye apex par net velocity:\n$$v_{\\text{top}} = \\sqrt{v_x^2 + v_y^2} = \\sqrt{(u\\cos\\theta)^2 + 0} = u\\cos\\theta$$\nyeh non-zero hoti hai aur **purely horizontal direction** mein act karti hai.\n• Option 2 aur Option 3 mathematically invalid components assign karte hain."
   },
   {
@@ -310,17 +309,17 @@
     "qh": "एक वस्तु धनात्मक $x$-अक्ष के अनुदिश एकसमान रैखिक गति से गुजरती है। इसके त्वरण-समय ($a-t$) ग्राफ का आकार क्या होगा?",
     "oe": [
       "A straight line with a positive constant slope sloping upward",
-      "A straight line coinciding with the time axis ($a = 0$)",
+      "A vertical line parallel to the acceleration axis",
       "A parabolic curve opening upward",
-      "A vertical line parallel to the acceleration axis"
+      "A straight line coinciding with the time axis ($a = 0$)"
     ],
     "oh": [
       "ऊपर की ओर झुकी हुई एक सकारात्मक स्थिर ढाल वाली एक सीधी रेखा",
-      "समय अक्ष के साथ संपाती (coinciding) एक सीधी रेखा ($a = 0$)",
+      "त्वरण अक्ष के समानांतर एक ऊर्ध्वाधर रेखा",
       "ऊपर की ओर खुलने वाला एक परवलयिक वक्र",
-      "त्वरण अक्ष के समानांतर एक ऊर्ध्वाधर रेखा"
+      "समय अक्ष के साथ संपाती (coinciding) एक सीधी रेखा ($a = 0$)"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Uniform rectilinear motion ka basic physical definition constant velocity vector along a straight line hota hai.\n\n• Option 0 uniformly increasing acceleration (constant jerk) ko represent karta hai.\n• Option 1 bilkul sahi hai kyunki jab object uniform rectilinear motion mein hota hai, toh velocity constant rehti hai ($v = \\text{constant}$), jisse acceleration strictly zero ho jata hai ($a = \\frac{dv}{dt} = 0$). Consequently, **Acceleration-Time ($a-t$) graph time axis ke upar hi lay karta hai (coincides with time axis at $a = 0$)**.\n• Option 2 variable acceleration ko darshata hai aur Option 3 physically impossible instantaneous change ko indicate karta hai."
   },
   {
@@ -329,17 +328,17 @@
     "qh": "वेग-समय ($v-t$) ग्राफ का मूल्यांकन एक ऊपर की ओर झुकी हुई सीधी रेखा को दर्शाता है जो $t = 0$ पर मूल बिंदु के ऊपर से शुरू होती है। यह विशिष्ट ग्राफ किस गतिक अवस्था का प्रतिनिधित्व करता है?",
     "oe": [
       "Motion with zero initial velocity and non-uniform acceleration",
-      "Motion with a non-zero initial velocity ($u \\neq 0$) undergoing constant (uniform) positive acceleration",
+      "Uniform motion with zero net acceleration",
       "An object remaining permanently at rest",
-      "Uniform motion with zero net acceleration"
+      "Motion with a non-zero initial velocity ($u \\neq 0$) undergoing constant (uniform) positive acceleration"
     ],
     "oh": [
       "शून्य प्रारंभिक वेग और गैर-समान त्वरण के साथ गति",
-      "गैर-शून्य प्रारंभिक वेग ($u \\neq 0$) के साथ गति जो स्थिर (एकसमान) धनात्मक त्वरण से गुजर रही है",
+      "शून्य शुद्ध त्वरण के साथ एकसमान गति",
       "एक वस्तु जो स्थायी रूप से विराम में रहती है",
-      "शून्य शुद्ध त्वरण के साथ एकसमान गति"
+      "गैर-शून्य प्रारंभिक वेग ($u \\neq 0$) के साथ गति जो स्थिर (एकसमान) धनात्मक त्वरण से गुजर रही है"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Velocity-Time ($v-t$) graph ka intercept initial velocity ko aur uska constant slope uniform acceleration ko represent karta hai.\n\n• Option 0 origin se pass hone wali curve ko describe karta hai ($u = 0$).\n• Option 1 bilkul sahi hai kyunki:\n1. $t = 0$ par graph velocity axis ko origin se upar intersect karta hai, jiska matlab body ke paas **Non-Zero Initial Velocity ($u \\neq 0$)** hai.\n2. Upward straight line ka slope constant aur positive hai ($\\frac{dv}{dt} = a = \\text{constant} > 0$), jo **Uniform Positive Acceleration** ko darshata hai ($v = u + at$).\n• Option 2 time axis par lie karne wali line ($v = 0$) hai aur Option 3 horizontal straight line ($v = \\text{constant}$) hoti hai."
   },
   {
@@ -348,17 +347,17 @@
     "qh": "किसी प्रक्षेप्य की कुल उड़ान का समय ($T$) वह कुल समय है जब तक वह प्रक्षेपण तल पर लौटने से पहले हवा में रहता है। प्रारंभिक प्रक्षेपण चाल $u$, प्रक्षेपण कोण $\\theta$, और गुरुत्वाकर्षण $g$ के संदर्भ में $T$ को व्यक्त करने वाला सूत्र क्या है?",
     "oe": [
       "$T = \\frac{u \\cos \\theta}{g}$",
+      "$T = \\frac{u^2 \\sin 2\\theta}{g}$",
       "$T = t_a + t_d = \\frac{2 u \\sin \\theta}{g}$",
-      "$T = \\frac{u^2 \\sin^2 \\theta}{2g}$",
-      "$T = \\frac{u^2 \\sin 2\\theta}{g}$"
+      "$T = \\frac{u^2 \\sin^2 \\theta}{2g}$"
     ],
     "oh": [
       "$T = \\frac{u \\cos \\theta}{g}$",
+      "$T = \\frac{u^2 \\sin 2\\theta}{g}$",
       "$T = t_a + t_d = \\frac{2 u \\sin \\theta}{g}$",
-      "$T = \\frac{u^2 \\sin^2 \\theta}{2g}$",
-      "$T = \\frac{u^2 \\sin 2\\theta}{g}$"
+      "$T = \\frac{u^2 \\sin^2 \\theta}{2g}$"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Projectile ka total Time of Flight ($T$) launch point se landing point tak hawa mein bitae gaye kul time ko represent karta hai.\n\n• Option 0 vertical component ke bajaye horizontal component ko galat tarike se use karta hai.\n• Option 1 bilkul sahi hai kyunki vertical displacement zero ($y = 0$) hone par kinematic equation $y = (u\\sin\\theta)T - \\frac{1}{2}gT^2 = 0$ banti hai. Isse total time of flight nikalta hai:\n$$T = \\frac{2u\\sin\\theta}{g} = t_a + t_d$$\n• Option 2 Maximum Height ($H_{\\text{max}}$) ka formula hai aur Option 3 Horizontal Range ($R$) ka formula hai. Formula confusion BPSC/UPSC physics sections mein ek direct trap hota hai."
   },
   {
@@ -366,18 +365,18 @@
     "qe": "Reference frames provide the spatial coordinate origin for describing motion. When is an object formally defined to be in a state of motion?",
     "qh": "संदर्भ फ्रेम (Reference frames) गति का वर्णन करने के लिए स्थानिक निर्देशांक मूल बिंदु प्रदान करते हैं। किसी वस्तु को औपचारिक रूप से गति की अवस्था में कब माना जाता है?",
     "oe": [
-      "When its total mass continuously decreases over time",
-      "When its spatial position changes continuously with respect to a chosen fixed reference point (origin) as time passes",
       "Only when its temperature rises above ambient surroundings",
-      "When it travels in a closed circular loop at infinite speed"
+      "When it travels in a closed circular loop at infinite speed",
+      "When its total mass continuously decreases over time",
+      "When its spatial position changes continuously with respect to a chosen fixed reference point (origin) as time passes"
     ],
     "oh": [
-      "जब इसका कुल द्रव्यमान समय के साथ लगातार घटता है",
-      "जब समय बीतने के साथ चुने गए निश्चित संदर्भ बिंदु (मूल बिंदु) के संबंध में इसकी स्थानिक स्थिति लगातार बदलती है",
       "केवल तभी जब इसका तापमान परिवेश के वातावरण से ऊपर उठ जाता है",
-      "जब यह अनंत चाल से एक बंद वृत्ताकार लूप में यात्रा करता है"
+      "जब यह अनंत चाल से एक बंद वृत्ताकार लूप में यात्रा करता है",
+      "जब इसका कुल द्रव्यमान समय के साथ लगातार घटता है",
+      "जब समय बीतने के साथ चुने गए निश्चित संदर्भ बिंदु (मूल बिंदु) के संबंध में इसकी स्थानिक स्थिति लगातार बदलती है"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Rest aur Motion dono relative terms hain jo chosen frame of reference (coordinate origin) par depend karte hain.\n\n• Option 0 radioactive ya relativistic mass decay ko describe karta hai jo standard kinematics ka criterion nahi hai.\n• Option 1 bilkul sahi hai kyunki classical mechanics ke mutabiq agar kisi object ke spatial position coordinates ($x, y, z$) time ke sath chosen reference point ke respect mein continuously change ho rahe hain, toh object **State of Motion** mein kehlata hai. Agar coordinates constant rahein toh object at rest kehlata hai.\n• Option 2 thermodynamics se related hai aur Option 3 physical relativity ke laws ko violate karta hai."
   },
   {
@@ -385,16 +384,16 @@
     "qe": "Evaluating the trajectory parameters of a projectile launched obliquely at an angle $\\theta$ to the horizontal reveals specific relationships between range and maximum height. When a projectile is launched at an optimal angle of $45^\\circ$ to achieve maximum horizontal range ($R_{\\text{max}}$), what is the exact mathematical relationship between its maximum vertical height ($H$) and $R_{\\text{max}}$?",
     "qh": "क्षैतिज से $\\theta$ कोण पर तिरछे प्रक्षेपित प्रक्षेप्य के प्रक्षेपवक्र मापदंडों का मूल्यांकन सीमा और अधिकतम ऊंचाई के बीच विशिष्ट संबंधों को उजागर करता है। जब एक प्रक्षेप्य को अधिकतम क्षैतिज परास ($R_{\\text{max}}$) प्राप्त करने के लिए $45^\\circ$ के अनुकूलतम कोण पर प्रक्षेपित किया जाता है, तो इसकी अधिकतम ऊर्ध्वाधर ऊंचाई ($H$) और $R_{\\text{max}}$ के बीच सटीक गणितीय संबंध क्या है?",
     "oe": [
-      "$H = R_{\\text{max}}$",
+      "$H = \\frac{R_{\\text{max}}}{2}$",
       "$H = \\frac{R_{\\text{max}}}{4}$",
-      "$H = 2 R_{\\text{max}}$",
-      "$H = \\frac{R_{\\text{max}}}{2}$"
+      "$H = R_{\\text{max}}$",
+      "$H = 2 R_{\\text{max}}$"
     ],
     "oh": [
-      "$H = R_{\\text{max}}$",
+      "$H = \\frac{R_{\\text{max}}}{2}$",
       "$H = \\frac{R_{\\text{max}}}{4}$",
-      "$H = 2 R_{\\text{max}}$",
-      "$H = \\frac{R_{\\text{max}}}{2}$"
+      "$H = R_{\\text{max}}$",
+      "$H = 2 R_{\\text{max}}$"
     ],
     "a": 1,
     "e": "Projectile motion mein horizontal range $R$ aur maximum height $H$ trigonometric relations se aapas mein mathematically linked hote hain.\n\n• Option 0 vertical aur horizontal displacements ko equal assume karta hai jo $\\tan\\theta = 4$ ($76^\\circ$) par hi possible hai.\n• Option 1 bilkul sahi hai kyunki maximum height ka formula $H = \\frac{u^2\\sin^2\\theta}{2g}$ aur horizontal range ka formula $R = \\frac{u^2\\sin 2\\theta}{g}$ hota hai. Maximum range $\\theta = 45^\\circ$ par milti hai ($R_{\\text{max}} = \\frac{u^2}{g}$). $\\theta = 45^\\circ$ ko height formula mein substitute karne par:\n$$H = \\frac{u^2\\sin^2 45^\\circ}{2g} = \\frac{u^2 (1/\\sqrt{2})^2}{2g} = \\frac{u^2}{4g} = \\frac{R_{\\text{max}}}{4}$$\nMaximum range ke case mein height hamesha range ka ek-chauthai (one-fourth) hoti hai.\n• Option 2 aur Option 3 incorrect algebraic ratios hain."
@@ -404,18 +403,18 @@
     "qe": "Symmetry in trigonometric double-angle identities governs projectile horizontal range behavior across different launch angles. Given a constant initial launch velocity ($u$), which pair of launch angles yields an identical horizontal range ($R$)?",
     "qh": "त्रिकोणमितीय द्वि-कोण पहचान में समरूपता विभिन्न प्रक्षेपण कोणों पर प्रक्षेप्य क्षैतिज परास के व्यवहार को नियंत्रित करती है। स्थिर प्रारंभिक प्रक्षेपण वेग ($u$) दिए जाने पर, प्रक्षेपण कोणों का कौन सा युग्म समान क्षैतिज परास ($R$) प्रदान करता है?",
     "oe": [
-      "Complementary launch angles that add up to $90^\\circ$ (i.e., $\\theta$ and $90^\\circ - \\theta$)",
-      "Supplementary launch angles that add up to $180^\\circ$ (i.e., $\\theta$ and $180^\\circ - \\theta$)",
       "Identical launch angles separated by $45^\\circ$",
+      "Supplementary launch angles that add up to $180^\\circ$ (i.e., $\\theta$ and $180^\\circ - \\theta$)",
+      "Complementary launch angles that add up to $90^\\circ$ (i.e., $\\theta$ and $90^\\circ - \\theta$)",
       "Opposite angles differing by $180^\\circ$"
     ],
     "oh": [
-      "पूरक प्रक्षेपण कोण जिनका योग $90^\\circ$ होता है (अर्थात, $\\theta$ और $90^\\circ - \\theta$)",
-      "संपूरक प्रक्षेपण कोण जिनका योग $180^\\circ$ होता है (अर्थात, $\\theta$ और $180^\\circ - \\theta$)",
       "$45^\\circ$ से अलग समान प्रक्षेपण कोण",
+      "संपूरक प्रक्षेपण कोण जिनका योग $180^\\circ$ होता है (अर्थात, $\\theta$ और $180^\\circ - \\theta$)",
+      "पूरक प्रक्षेपण कोण जिनका योग $90^\\circ$ होता है (अर्थात, $\\theta$ और $90^\\circ - \\theta$)",
       "$180^\\circ$ से भिन्न विपरीत कोण"
     ],
-    "a": 0,
+    "a": 2,
     "e": "Projectile motion mein horizontal range trigonometric identity $\\sin(180^\\circ - 2\\theta) = \\sin 2\\theta$ ke karan symmetry exhibit karti hai.\n\n• Option 0 bilkul sahi hai kyunki horizontal range ka formula $R = \\frac{u^2\\sin 2\\theta}{g}$ hota hai. Agar launch angle ko $(90^\\circ - \\theta)$ kiya jaye, toh naya range formula banega:\n$$R' = \\frac{u^2\\sin[2(90^\\circ - \\theta)]}{g} = \\frac{u^2\\sin(180^\\circ - 2\\theta)}{g} = \\frac{u^2\\sin 2\\theta}{g} = R$$\nIsliye **Complementary Angles** (jaise $30^\\circ$ aur $60^\\circ$, ya $15^\\circ$ aur $75^\\circ$) par same launch speed ke liye horizontal range exactly identical hoti hai.\n• Option 1 supplementary angles ($180^\\circ$) ko galat apply karta hai aur Option 2/Option 3 physically invalid angle sets hain."
   },
   {
@@ -423,18 +422,18 @@
     "qe": "Athletes in field events like javelin throw and long jump optimize projectile kinematics to maximize horizontal coverage. What primary angle of projection do athletes target to achieve maximum distance, and what speed condition applies at the apex of flight?",
     "qh": "भाला फेंक (javelin throw) और लंबी कूद (long jump) जैसी मैदानी स्पर्धाओं में एथलीट क्षैतिज दूरी को अधिकतम करने के लिए प्रक्षेप्य किनेमैटिक्स का अनुकूलन करते हैं। अधिकतम दूरी प्राप्त करने के लिए एथलीट मुख्य रूप से किस प्रक्षेपण कोण को लक्षित करते हैं, और उड़ान के शीर्ष पर कौन सी चाल स्थिति लागू होती है?",
     "oe": [
+      "Projection angle close to $60^\\circ$; Speed at apex equals initial speed $u$.",
       "Projection angle close to $90^\\circ$; Speed at apex is zero.",
-      "Projection angle close to $45^\\circ$; Speed at apex is at its absolute minimum and equals $u \\cos \\theta$.",
       "Projection angle close to $0^\\circ$; Speed at apex is maximum and equals $u \\sin \\theta$.",
-      "Projection angle close to $60^\\circ$; Speed at apex equals initial speed $u$."
+      "Projection angle close to $45^\\circ$; Speed at apex is at its absolute minimum and equals $u \\cos \\theta$."
     ],
     "oh": [
+      "प्रक्षेपण कोण $60^\\circ$ के करीब; शीर्ष पर चाल प्रारंभिक चाल $u$ के बराबर होती है।",
       "प्रक्षेपण कोण $90^\\circ$ के करीब; शीर्ष पर चाल शून्य है।",
-      "प्रक्षेपण कोण $45^\\circ$ के करीब; शीर्ष पर चाल अपने पूर्ण न्यूनतम पर होती है और $u \\cos \\theta$ के बराबर होती है।",
       "प्रक्षेपण कोण $0^\\circ$ के करीब; शीर्ष पर चाल अधिकतम होती है और $u \\sin \\theta$ के बराबर होती है।",
-      "प्रक्षेपण कोण $60^\\circ$ के करीब; शीर्ष पर चाल प्रारंभिक चाल $u$ के बराबर होती है।"
+      "प्रक्षेपण कोण $45^\\circ$ के करीब; शीर्ष पर चाल अपने पूर्ण न्यूनतम पर होती है और $u \\cos \\theta$ के बराबर होती है।"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Sports kinematics mein maximum horizontal ground coverage prapt karne ke liye projectile trajectory parameters ko balance kiya jata hai.\n\n• Option 0 purely vertical throw ko describe karta hai jisme horizontal distance zero hota hai.\n• Option 1 bilkul sahi hai kyunki:\n1. Horizontal range $R = \\frac{u^2\\sin 2\\theta}{g}$ tab maximum hoti hai jab $\\sin 2\\theta = 1 \\implies \\theta = 45^\\circ$, isliye athletes **$45^\\circ$ ke aas-paas launch angle** target karte hain.\n2. Trajectory ke apex par vertical velocity component vanish ($v_y = 0$) ho jata hai, parantu horizontal component ($v_x = u\\cos\\theta$) maintain rehta hai. Consequently, apex par total speed apne **absolute minimum ($u\\cos\\theta$)** par hoti hai.\n• Option 2 aur Option 3 projectile velocity resolution ke basic rules ko violate karte hain."
   },
   {
@@ -442,16 +441,16 @@
     "qe": "Rotational kinematics establishes specific mathematical relationships between frequency, time period, and angular velocity for uniform circular motion. If an object completes $n$ full circular revolutions per second, what is its angular velocity ($\\omega$) in radians per second?",
     "qh": "घूर्णी किनेमैटिक्स एकसमान वृत्तीय गति के लिए आवृत्ति, आवर्तकाल और कोणीय वेग के बीच विशिष्ट गणितीय संबंध स्थापित करता है। यदि कोई वस्तु प्रति सेकंड $n$ पूर्ण वृत्तीय चक्कर पूरे करती है, तो रेडियन प्रति सेकंड में इसका कोणीय वेग ($\\omega$) क्या है?",
     "oe": [
-      "$\\omega = \\frac{n}{2\\pi}$",
+      "$\\omega = \\frac{1}{2\\pi n}$",
       "$\\omega = 2\\pi n = \\frac{2\\pi}{T}$",
-      "$\\omega = 2\\pi T$",
-      "$\\omega = \\frac{1}{2\\pi n}$"
+      "$\\omega = \\frac{n}{2\\pi}$",
+      "$\\omega = 2\\pi T$"
     ],
     "oh": [
-      "$\\omega = \\frac{n}{2\\pi}$",
+      "$\\omega = \\frac{1}{2\\pi n}$",
       "$\\omega = 2\\pi n = \\frac{2\\pi}{T}$",
-      "$\\omega = 2\\pi T$",
-      "$\\omega = \\frac{1}{2\\pi n}$"
+      "$\\omega = \\frac{n}{2\\pi}$",
+      "$\\omega = 2\\pi T$"
     ],
     "a": 1,
     "e": "Uniform circular motion mein angular displacement per unit time ko Angular Velocity ($\\omega$) kehte hain.\n\n• Option 0 angle factor $2\\pi$ ko invert kar deta hai.\n• Option 1 bilkul sahi hai kyunki ek complete revolution mein angular displacement $\\theta = 2\\pi\\text{ radians}$ hota hai. Agar object 1 second mein $n$ revolutions complete karta hai (frequency $n = \\frac{1}{T}$), toh time rate of angular displacement nikalta hai:\n$$\\omega = \\frac{\\theta}{t} = \\frac{2\\pi}{T} = 2\\pi n$$\nIska SI unit $\\text{rad/s}$ hota hai aur yeh rotational speed ko linear rotational frequency se link karta hai.\n• Option 2 time period $T$ se multiply kar deta hai jo galat hai aur Option 3 inverse reciprocal form hai."
@@ -461,19 +460,18 @@
     "qe": "Passengers riding in a bus traveling along a winding, hilly, or sloped road frequently experience motion sickness and nausea. What biomechanical mechanism accounts for this physiological discomfort during curved hill motion?",
     "qh": "मोड़दार, पहाड़ी या ढलान वाली सड़क पर चलने वाली बस में यात्रा करने वाले यात्री अक्सर मोशन सिकनेस (motion sickness) और उल्टी का अनुभव करते हैं। पहाड़ी घुमावदार गति के दौरान इस शारीरिक परेशानी के लिए कौन सा बायोटेक्निकल तंत्र जिम्मेदार है?",
     "oe": [
+      "Excessive buildup of carbon dioxide gas inside the vehicle engine.",
       "Rapid change in atmospheric pressure causing instant ear drum rupture.",
       "Rapid, continuous shifts in centripetal and tangential acceleration vectors causing fluid in the human stomach and inner ear vestibular system to struggle to adapt.",
-      "Complete loss of gravity inside the vehicle on curved slopes.",
-      "Excessive buildup of carbon dioxide gas inside the vehicle engine."
+      "Complete loss of gravity inside the vehicle on curved slopes."
     ],
     "oh": [
+      "वाहन के इंजन के अंदर कार्बन डाइऑक्साइड गैस का अत्यधिक संचय होना।",
       "वायुमंडलीय दबाव में तेजी से बदलाव के कारण कान का पर्दा तुरंत फट जाना।",
       "अभिकेंद्री और स्पर्शरेखीय त्वरण सदिशों में तेजी से, निरंतर बदलाव के कारण मानव पेट में तरल पदार्थ और आंतरिक कान वेस्टिबुलर प्रणाली अनुकूलन के लिए संघर्ष करती है।",
-      "घुमावदार ढलानों पर वाहन के अंदर गुरुत्वाकर्षण का पूरी तरह से खत्म होना।",
-      "वाहन के इंजन के अंदर कार्बन डाइऑक्साइड गैस का अत्यधिक संचय होना।"
+      "घुमावदार ढलानों पर वाहन के अंदर गुरुत्वाकर्षण का पूरी तरह से खत्म होना।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Winding hilly roads par travel karte samay bus continuously direction aur speed badalti hai, jisse non-inertial fluctuating acceleration fields create hote hain.\n\n• Option 0 motion sickness ko ear drum rupture se confuse karta hai jo altitude sickness ka extreme case ho sakta hai par standard motion sickness ka nahi.\n• Option 1 bilkul sahi hai kyunki sharp turns par **Centripetal Acceleration** (direction badalne se) aur **Tangential Acceleration** (braking/accelerating se) continuously vary karte hain. Yeh fluctuating acceleration forces human body ke **inner ear vestibular system (semicircular canals ke endolymph fluid)** aur stomach fluids ko disturb karte hain. Visual signals aur vestibular fluid signals ke beech sensory mismatch hone par brain nausea aur vomiting trigger karta hai.\n• Option 2 aur Option 3 physically absurd claims hain."
   }
 ]
-
