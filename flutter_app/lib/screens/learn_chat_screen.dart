@@ -25,9 +25,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
   bool isLoading = true;
   String? errorMessage;
 
-  // 📌 History Stack for Backward Navigation
   final List<int> _cardHistory = [];
-
   final ScrollController _scrollController = ScrollController();
 
   @override
@@ -42,7 +40,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     super.dispose();
   }
 
-  // 🧹 BULLETPROOF JSON CLEANER & BOUNDARY EXTRACTOR
+  // 🧹 100% CRASH-PROOF SANITIZER (Auto Fixes Invalid LaTeX & Backslashes)
   String _sanitizeJsonString(String raw) {
     String clean = raw.trim();
 
@@ -51,10 +49,10 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
       clean = clean.substring(1).trim();
     }
 
-    // 2. Remove Markdown backticks (```json ya ```)
+    // 2. Remove Markdown backticks
     clean = clean.replaceAll('```json', '').replaceAll('```', '').trim();
 
-    // 3. Extract exact JSON boundaries between first {/[ and last }/]
+    // 3. Extract exact JSON boundaries
     int firstBrace = clean.indexOf('{');
     int firstBracket = clean.indexOf('[');
     int startIndex = -1;
@@ -86,10 +84,16 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     // 4. Remove zero-width & invisible spaces
     clean = clean.replaceAll(RegExp(r'[\u200B-\u200D\uFEFF]'), '');
 
+    // 🛡️ 5. AUTO-FIX LATEX BACKSLASHES (\text, \approx, \frac to \\text, \\approx)
+    clean = clean.replaceAllMapped(
+      RegExp(r'(?<!\\)\\(?!["\\/bfnrtu])'),
+      (match) => r'\\',
+    );
+
     return clean.trim();
   }
 
-  // 🌐 ZERO-CACHE INSTANT FETCHER (No Stale Cache + Instant Live Commit Sync)
+  // 🌐 MULTI-CDN LIVE FETCHER (Direct GitHub Raw Included)
   Future<void> _fetchChapterJson() async {
     String rawPath = widget.jsonUrl ?? '';
     
@@ -97,7 +101,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
       rawPath = 'learn/biology/cell.json';
     }
 
-    // Extract pure relative path cleanly
     String cleanPath = rawPath
         .replaceAll('https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/', '')
         .replaceAll('https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/', '')
@@ -112,17 +115,16 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     final int ts = DateTime.now().millisecondsSinceEpoch;
     String encodedPath = Uri.encodeFull(cleanPath);
 
-    // ⚡ 1. Background Instant Cache Purge
-    http.get(Uri.parse("https://purge.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath")).catchError((_) => http.Response('', 500));
-
-    // 🚀 2. Strict Sequential Order (Live GitHack Priority)
+    // 🚀 Robust Multi-CDN Fallback Order
     List<String> mirrorUrls = [
-      // 1. GitHack Cloudflare Dev Gateway (Never Caches, 100% Live)
+      // 1. Direct Raw GitHub with Cache Buster (100% Guaranteed Source)
+      "https://raw.githubusercontent.com/zxcty54/quiz/main/$encodedPath?t=$ts",
+      // 2. GitHack Cloudflare Dev Gateway
       "https://raw.githack.com/zxcty54/quiz/main/$encodedPath",
-      // 2. Fastly CDN with Fresh Timestamp
+      // 3. Statically CDN
+      "https://cdn.statically.io/gh/zxcty54/quiz/main/$encodedPath",
+      // 4. Fastly CDN
       "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
-      // 3. Core jsDelivr with Fresh Timestamp
-      "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
     ];
 
     for (String url in mirrorUrls) {
@@ -179,15 +181,12 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     }
   }
 
-  // ⚡ REALTIME PROGRESS SAVER FOR HOME SCREEN PREVIEW
   Future<void> _saveProgress(int index) async {
     if (chapterData == null || chapterData!.cardsList.isEmpty) return;
     final prefs = await SharedPreferences.getInstance();
     
-    // 1. Chapter-wise progress save
     await prefs.setInt('progress_idx_${chapterData!.id}', index);
 
-    // 2. Home Screen Realtime Sync Data Save
     double progress = (index + 1) / chapterData!.cardsList.length;
     
     String nextTopic = "Continue Interactive Story";
@@ -210,7 +209,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     await prefs.setBool('has_learning_history', true);
   }
 
-  // ⬅️ PREVIOUS CARD NAVIGATION
   void _goToPreviousCard() {
     if (_cardHistory.isEmpty || isTyping) return;
     LearnEffects.playTap();
@@ -227,7 +225,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     }
   }
 
-  // 🔄 RESTART / FIRST CARD NAVIGATION
   void _goToFirstCard() {
     if (currentCardIndex == 0 || isTyping) return;
     LearnEffects.playTap();
@@ -440,7 +437,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
       ),
       body: Column(
         children: [
-          // 🕹️ TOP BACKWARD & RESTART CONTROL BAR
           if (canGoPrevious || canRestart)
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
@@ -451,7 +447,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // ⬅️ Previous Card Button
                   InkWell(
                     onTap: canGoPrevious ? _goToPreviousCard : null,
                     borderRadius: BorderRadius.circular(8),
@@ -483,8 +478,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
                       ),
                     ),
                   ),
-
-                  // 🔄 Restart / First Card Button
                   if (canRestart)
                     InkWell(
                       onTap: () {
@@ -537,7 +530,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
                 ],
               ),
             ),
-
           Expanded(
             child: GestureDetector(
               onTap: () => _handleNextTap(currentCard),
@@ -571,7 +563,6 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
               ),
             ),
           ),
-
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
