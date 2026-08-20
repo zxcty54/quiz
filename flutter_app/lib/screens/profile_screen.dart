@@ -7,6 +7,7 @@ import 'saved_questions_screen.dart';
 import 'wrong_questions_screen.dart';
 import 'saved_current_affairs_screen.dart';
 import '../widgets/donation_widget.dart';
+import '../widgets/app_global_feedback_dialog.dart';
 
 class ProfileScreen extends StatefulWidget {
   final bool isHindi;
@@ -337,6 +338,62 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
             // 🤝 COMMUNITY DONATION WIDGET
             DonationWidget(isDarkMode: isDark),
+            const SizedBox(height: 14),
+
+            // 💬 7. FEEDBACK & FEATURE ADVICE TILE (GITHUB INTEGRATION)
+            Card(
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+              child: ListTile(
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                leading: Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF2563EB).withOpacity(0.12),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Icon(
+                    Icons.rate_review_rounded,
+                    color: Color(0xFF2563EB),
+                    size: 22,
+                  ),
+                ),
+                title: Text(
+                  'Feedback & Feature Advice',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    color: headerTextColor,
+                  ),
+                ),
+                subtitle: Text(
+                  'App review dein ya naya feature suggest karein',
+                  style: TextStyle(
+                    fontSize: 11.5,
+                    color: subTextColor,
+                  ),
+                ),
+                trailing: Container(
+                  padding: const EdgeInsets.all(6),
+                  decoration: BoxDecoration(
+                    color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    size: 12,
+                    color: isDark ? Colors.grey.shade300 : const Color(0xFF475569),
+                  ),
+                ),
+                onTap: () {
+                  showDialog(
+                    context: context,
+                    builder: (ctx) => AppGlobalFeedbackDialog(
+                      isDarkMode: isDark,
+                    ),
+                  );
+                },
+              ),
+            ),
           ],
         );
       },
