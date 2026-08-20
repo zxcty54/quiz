@@ -4,7 +4,7 @@ on:
   schedule:
     # Daily raat 11:45 PM IST (18:15 UTC) par execute hoga
     - cron: '15 18 * * *'
-  workflow_dispatch: # Manual trigger via GitHub UI
+  workflow_dispatch:
 
 jobs:
   generate-mcqs:
@@ -16,7 +16,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Full history fetch taaki clean rebase ho sake
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -26,12 +26,14 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install google-genai requests
+          pip install google-genai openai requests
 
       - name: Run Monthly MCQ Generator
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROK_API_KEY: ${{ secrets.GROK_API_KEY }}
+          GROK_BASE_URL: ${{ secrets.GROK_BASE_URL }} # Optional: custom endpoint ya default x.ai
         run: |
           python generate_monthly_mcq.py
 
@@ -39,18 +41,11 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Stage target folder
           git add current_affair/*.json
-          
           if git diff --staged --quiet; then
             echo "Koi naya MCQ add nahi hua, commit skip kiya."
           else
             git commit -m "🤖 Auto-update Current Affairs MCQs: $(date +'%d-%b-%Y')"
-            
-            # Rebase remote changes before pushing to avoid conflicts
             git pull --rebase origin main
-            
-            # Safe push
             git push origin main
           fi
