@@ -2,8 +2,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
-import '../models/question_model.dart';
-import '../screens/revision_practice_screen.dart';
+
+// ✅ Safe & Explicit Imports to prevent build failures
+import '../../models/question_model.dart';
+import '../revision_practice_screen.dart';
 
 class RevisionTab extends StatefulWidget {
   final Map<String, dynamic> subjectMapping;
@@ -390,7 +392,7 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
           const SizedBox(height: 12),
 
-          // 📰 3. Current Affairs 2026 (With 218 & 89 Direct Buttons)
+          // 📰 3. Current Affairs 2026 (Professional EdTech Monthly Vault)
           _buildCurrentAffairsCategory(
             context: context,
             isDark: isDark,
@@ -400,22 +402,55 @@ class _RevisionTabState extends State<RevisionTab> {
     );
   }
 
-  // 📰 Dedicated Card for Current Affairs with Dual Option Chips
+  // 📰 PRO EDTECH CURRENT AFFAIRS MONTHLY VAULT
   Widget _buildCurrentAffairsCategory({
     required BuildContext context,
     required bool isDark,
   }) {
-    const Color color = Color(0xFF7C3AED);
+    const Color brandPurple = Color(0xFF7C3AED);
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
-    final Color subTitleColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF334155);
+    final Color subTextColor = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
+    final Color textColor = isDark ? Colors.white : const Color(0xFF0F172A);
+    final Color dividerColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+
+    // List of months (Live vs Locked / Upcoming)
+    final List<Map<String, dynamic>> monthlyVault = [
+      {
+        "month": "August 2026",
+        "badge": "🔥 LIVE NOW",
+        "isLive": true,
+        "total": 307,
+        "natCount": 218,
+        "biharCount": 89,
+        "jsonUrl": "https://raw.githubusercontent.com/zxcty54/quiz/main/current_affair/august_2026.json"
+      },
+      {
+        "month": "September 2026",
+        "badge": "🔒 COMING SOON",
+        "isLive": false,
+        "total": 0,
+        "natCount": 0,
+        "biharCount": 0,
+        "releaseDate": "1st October"
+      },
+      {
+        "month": "October 2026",
+        "badge": "🔒 UPCOMING",
+        "isLive": false,
+        "total": 0,
+        "natCount": 0,
+        "biharCount": 0,
+        "releaseDate": "1st November"
+      },
+    ];
 
     return Card(
       color: cardBg,
       elevation: 1.5,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(16),
         side: BorderSide(
-          color: isDark ? color.withOpacity(0.4) : color.withOpacity(0.25),
+          color: isDark ? brandPurple.withOpacity(0.4) : brandPurple.withOpacity(0.25),
           width: 1.2,
         ),
       ),
@@ -426,188 +461,112 @@ class _RevisionTabState extends State<RevisionTab> {
         ),
         child: ExpansionTile(
           initiallyExpanded: true,
-          iconColor: color,
+          iconColor: brandPurple,
           collapsedIconColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
-          leading: const Text('📰', style: TextStyle(fontSize: 22)),
+          leading: Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: brandPurple.withOpacity(isDark ? 0.25 : 0.12),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: const Text('📰', style: TextStyle(fontSize: 20)),
+          ),
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('Current Affairs 2026', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: color)),
+              Row(
+                children: [
+                  const Text(
+                    'Current Affairs Vault',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: brandPurple),
+                  ),
+                  const SizedBox(width: 8),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF16A34A).withOpacity(isDark ? 0.25 : 0.12),
+                      borderRadius: BorderRadius.circular(4),
+                      border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.4)),
+                    ),
+                    child: const Text(
+                      '2026 EDITION',
+                      style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Color(0xFF16A34A)),
+                    ),
+                  )
+                ],
+              ),
               const SizedBox(height: 2),
               Text(
-                '⚡ Latest Exam Bulletins',
-                style: TextStyle(
-                  fontSize: 10.5,
-                  color: isDark ? color.withOpacity(0.9) : color.withOpacity(0.8),
-                  fontWeight: FontWeight.w600,
-                ),
+                'Monthly curated MCQs with trap logic & fact breakdown',
+                style: TextStyle(fontSize: 11, color: subTextColor),
               ),
             ],
           ),
           childrenPadding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
           expandedCrossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Divider(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0), height: 16),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 6.0),
-              child: Text(
-                '📅 August 2026 Special Sets',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: subTitleColor),
-              ),
-            ),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: [
-                ActionChip(
-                  elevation: 1,
-                  backgroundColor: isDark ? color.withOpacity(0.25) : const Color(0xFFF3E8FF),
-                  side: BorderSide(color: color.withOpacity(0.5)),
-                  label: const Text(
-                    "🌐 National & Global CA (218 Qs)",
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: color),
-                  ),
-                  onPressed: () {
-                    _openCurrentAffairsSection(
-                      isBihar: false,
-                      title: "🌐 National & Global CA (Aug 2026)",
-                    );
-                  },
-                ),
-                ActionChip(
-                  elevation: 1,
-                  backgroundColor: isDark ? const Color(0xFF065F46).withOpacity(0.3) : const Color(0xFFDCFCE7),
-                  side: BorderSide(color: isDark ? const Color(0xFF10B981) : const Color(0xFF059669)),
-                  label: Text(
-                    "🇮🇳 Bihar Special CA (89 Qs)",
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      color: isDark ? const Color(0xFF6EE7B7) : const Color(0xFF047857),
+            Divider(color: dividerColor, height: 16),
+            
+            // Monthly Capsules List
+            ...monthlyVault.map((item) {
+              final bool isLive = item['isLive'] as bool;
+              final String monthTitle = item['month'] as String;
+              final String badge = item['badge'] as String;
+
+              if (isLive) {
+                // 🟢 ACTIVE MONTH CARD
+                return Container(
+                  margin: const EdgeInsets.only(bottom: 12),
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(
+                      color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                      width: 1.1,
                     ),
                   ),
-                  onPressed: () {
-                    _openCurrentAffairsSection(
-                      isBihar: true,
-                      title: "🇮🇳 Bihar Special CA (Aug 2026)",
-                    );
-                  },
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildExpansionSubjectCategory({
-    required BuildContext context,
-    required String title,
-    required String badgeText,
-    required String icon,
-    required Color color,
-    required bool isDark,
-    required List<Map<String, dynamic>> subSections,
-  }) {
-    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
-    final Color subTitleColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF334155);
-    final Color dividerColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
-
-    return Card(
-      color: cardBg,
-      elevation: 1.5,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-        side: BorderSide(
-          color: isDark ? color.withOpacity(0.4) : color.withOpacity(0.25),
-          width: 1.2,
-        ),
-      ),
-      child: Theme(
-        data: Theme.of(context).copyWith(
-          dividerColor: Colors.transparent,
-          unselectedWidgetColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
-        ),
-        child: ExpansionTile(
-          iconColor: color,
-          collapsedIconColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
-          leading: Text(icon, style: const TextStyle(fontSize: 22)),
-          title: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: color)),
-              const SizedBox(height: 2),
-              Text(
-                badgeText,
-                style: TextStyle(
-                  fontSize: 10.5,
-                  color: isDark ? color.withOpacity(0.9) : color.withOpacity(0.8),
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ],
-          ),
-          childrenPadding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
-          expandedCrossAxisAlignment: CrossAxisAlignment.start,
-          children: subSections.map((section) {
-            final String subTitle = section['title'];
-            final String mapKey = section['key'];
-
-            Map<String, dynamic> rawChapters = {};
-            if (_liveSubjectMapping.containsKey(mapKey) && _liveSubjectMapping[mapKey] is Map) {
-              rawChapters = Map<String, dynamic>.from(_liveSubjectMapping[mapKey]);
-            }
-
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Divider(color: dividerColor, height: 16),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 6.0),
-                  child: Text(
-                    subTitle,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: subTitleColor),
-                  ),
-                ),
-                rawChapters.isEmpty
-                    ? Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 6.0),
-                        child: Text(
-                          "Loading chapters...",
-                          style: TextStyle(fontSize: 11, color: isDark ? Colors.grey.shade500 : Colors.grey),
-                        ),
-                      )
-                    : Wrap(
-                        spacing: 8,
-                        runSpacing: 8,
-                        children: rawChapters.entries.map((entry) {
-                          String path = entry.value.toString();
-                          return ActionChip(
-                            elevation: 1,
-                            backgroundColor: isDark ? color.withOpacity(0.2) : color.withOpacity(0.08),
-                            side: BorderSide(
-                              color: isDark ? color.withOpacity(0.5) : color.withOpacity(0.3),
-                            ),
-                            label: Text(
-                              "📖 ${entry.key}",
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600,
-                                color: isDark ? Colors.white : color,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              const Icon(Icons.calendar_month_rounded, size: 16, color: Color(0xFF38BDF8)),
+                              const SizedBox(width: 6),
+                              Text(
+                                monthTitle,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                  color: textColor,
+                                ),
                               ),
+                            ],
+                          ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF16A34A),
+                              borderRadius: BorderRadius.circular(12),
                             ),
-                            onPressed: () {
-                              widget.onLaunchPractice(context, entry.key, path);
-                            },
-                          );
-                        }).toList(),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const Text('● ', style: TextStyle(color: Colors.white, fontSize: 8)),
+                                Text(
+                                  badge,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 9.5,
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 0.5,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
-              ],
-            );
-          }).toList(),
-        ),
-      ),
-    );
-  }
-}
