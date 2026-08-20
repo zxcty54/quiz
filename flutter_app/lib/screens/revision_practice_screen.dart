@@ -403,7 +403,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
     final Color cardBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
-    final Color textColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF1E293B);
+    final Color textColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF0F172A);
 
     return Container(
       width: double.infinity,
@@ -423,20 +423,25 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header Strip
+          // 🌿 Header Strip: हल्का green tint
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+              color: isDark ? const Color(0xFF064E3B).withOpacity(0.35) : const Color(0xFFECFDF5),
               borderRadius: const BorderRadius.vertical(top: Radius.circular(15)),
-              border: Border(bottom: BorderSide(color: cardBorder)),
+              border: Border(
+                bottom: BorderSide(
+                  color: isDark ? const Color(0xFF065F46) : const Color(0xFFA7F3D0),
+                  width: 1.0,
+                ),
+              ),
             ),
             child: Row(
               children: [
                 Container(
                   padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                    color: isDark ? const Color(0xFF78350F) : const Color(0xFFFEF3C7),
+                    color: isDark ? const Color(0xFF065F46) : const Color(0xFFD1FAE5),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: const Text('💡', style: TextStyle(fontSize: 13)),
@@ -446,7 +451,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                   _isHindi ? 'मुख्य व्याख्या (Core Solution)' : 'Detailed Solution',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: isDark ? Colors.white : const Color(0xFF0F172A),
+                    color: isDark ? const Color(0xFFA7F3D0) : const Color(0xFF065F46),
                     fontSize: 14,
                     letterSpacing: 0.2,
                   ),
@@ -460,23 +465,23 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 🟢 UNIFIED HIGH-CONTRAST GREEN BOX
+                // 🟢 UNIFIED GREEN BOX: White/Light background, Halka Green Border, Dark Navy Text
                 if (primaryCorrectBlocks.isNotEmpty)
                   Container(
                     width: double.infinity,
                     margin: const EdgeInsets.only(bottom: 12),
                     padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
-                      color: isDark ? const Color(0xFF064E3B).withOpacity(0.35) : const Color(0xFFECFDF5),
+                      color: isDark ? const Color(0xFF0F172A) : Colors.white, // White/Very light background
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                        color: isDark ? const Color(0xFF059669) : const Color(0xFFA7F3D0),
+                        color: isDark ? const Color(0xFF065F46) : const Color(0xFFA7F3D0), // बहुत हल्का green border
                         width: 1.2,
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: const Color(0xFF059669).withOpacity(isDark ? 0.18 : 0.06),
-                          blurRadius: 8,
+                          color: isDark ? Colors.black26 : const Color(0xFF059669).withOpacity(0.04),
+                          blurRadius: 6,
                           offset: const Offset(0, 2),
                         ),
                       ],
@@ -491,9 +496,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                             textStyle: TextStyle(
                               fontSize: 14.0,
                               fontWeight: FontWeight.w600,
-                              color: isDark ? const Color(0xFFECFDF5) : const Color(0xFF064E3B),
-                              height: 1.48,
-                              letterSpacing: 0.15,
+                              color: isDark ? const Color(0xFFF1F5F9) : const Color(0xFF0F172A), // Dark Navy Text
+                              height: 1.5,
+                              letterSpacing: 0.1,
                             ),
                           ),
                         );
