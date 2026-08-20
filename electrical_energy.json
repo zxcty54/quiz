@@ -4,18 +4,18 @@
     "qe": "Evaluating the fundamental properties of electric charge reveals distinct physical behaviors under motion and system operations. Which statement accurately describes charge behavior under motion and quantization rules?",
     "qh": "विद्युत आवेश के मौलिक गुणों का मूल्यांकन गति और प्रणाली संचालन के तहत विशिष्ट भौतिक व्यवहारों को उजागर करता है। कौन सा कथन गति और क्वॉंटीकरण (quantization) नियमों के तहत आवेश के व्यवहार का सटीक वर्णन करता है?",
     "oe": [
-      "The magnitude of an electric charge increases relativistically as its velocity approaches the speed of light.",
-      "Electric charge is relativistic invariant, meaning its magnitude remains strictly unchanged regardless of the velocity of the frame of reference or the body carrying it.",
+      "In a closed system, charge conservation permits the net creation of a single isolated positive charge during electron transfer.",
       "Charge quantization permits fractional values like $+1.5e$ for macroscopic conducting spheres during frictional contact.",
-      "In a closed system, charge conservation permits the net creation of a single isolated positive charge during electron transfer."
+      "The magnitude of an electric charge increases relativistically as its velocity approaches the speed of light.",
+      "Electric charge is relativistic invariant, meaning its magnitude remains strictly unchanged regardless of the velocity of the frame of reference or the body carrying it."
     ],
     "oh": [
-      "विद्युत आवेश का परिमाण सापेक्षिक रूप से बढ़ता है क्योंकि इसका वेग प्रकाश की चाल के करीब पहुंचता है।",
-      "विद्युत आवेश आपेक्षिकीय रूप से अपरिवर्तनीय (relativistic invariant) है, जिसका अर्थ है कि इसका परिमाण संदर्भ के फ्रेम या इसे ले जाने वाले पिंड के वेग की परवाह किए बिना सख्ती से अपरिवर्तित रहता है।",
+      "एक बंद प्रणाली में, आवेश संरक्षण इलेक्ट्रॉन स्थानांतरण के दौरान एक पृथक धनात्मक आवेश के शुद्ध निर्माण की अनुमति देता है।",
       "आवेश क्वॉंटीकरण घर्षण संपर्क के दौरान मैक्रोस्कोपिक चालक गोलों के लिए $+1.5e$ जैसे भिन्नात्मक मानों की अनुमति देता है।",
-      "एक बंद प्रणाली में, आवेश संरक्षण इलेक्ट्रॉन स्थानांतरण के दौरान एक पृथक धनात्मक आवेश के शुद्ध निर्माण की अनुमति देता है।"
+      "विद्युत आवेश का परिमाण सापेक्षिक रूप से बढ़ता है क्योंकि इसका वेग प्रकाश की चाल के करीब पहुंचता है।",
+      "विद्युत आवेश आपेक्षिकीय रूप से अपरिवर्तनीय (relativistic invariant) है, जिसका अर्थ है कि इसका परिमाण संदर्भ के फ्रेम या इसे ले जाने वाले पिंड के वेग की परवाह किए बिना सख्ती से अपरिवर्तित रहता है।"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Electric charge kisi bhi matter ka fundamental intrinsic property hai jo electromagnetic interactions generate aur experience karta hai.\n\n• Option A is Incorrect because charge ka magnitude velocity ke sath relativistic mass ($m = \\frac{m_0}{\\sqrt{1 - v^2/c^2}}$) ki tarah change nahi hota.\n\n• Option B is Correct because Charge Invariance physics ka fundamental rule hai: kisi charge ($q$) ka magnitude uske rest state ya high relativistic motion ($v \\approx c$) par strictly identical rehta hai ($q_{\\text{rest}} = q_{\\text{motion}}$).\n\n• Option C is Incorrect because Charge Quantization ($q = \\pm ne$) ke anusaar charge hamesha elementary electron charge ($e = 1.6 \\times 10^{-19}\\text{ C}$) ke integral multiples ($n = 1, 2, 3\\dots$) mein transfer hota hai, fractional values ($1.5e$) mein nahi.\n\n• Option D is Incorrect because Conservation of Charge isolated net charge creation ko strictly forbid karta hai.\n\nExaminers aksar Relativistic Mass variation aur Charge Invariance ko aapas mein swap karke trap set karte hain."
   },
   {
@@ -24,17 +24,17 @@
     "qh": "इलेक्ट्रोस्टैटिक शील्डिंग (Electrostatic shielding) का उपयोग संवेदनशील इलेक्ट्रॉनिक घटकों को बाहरी उच्च-वोल्टेज विद्युत व्यवधानों से बचाने के लिए किया जाता है। बिजली गिरने के दौरान धात्विक कार के अंदर यात्रियों की सुरक्षा कौन सा भौतिक तंत्र सुनिश्चित करता है?",
     "oe": [
       "The car's rubber tires conduct high voltage into the ground before it reaches the metallic frame.",
-      "The metallic body of the car acts as a hollow conductor inside which the static electric field is strictly zero, shielding the interior.",
       "The metallic frame increases the internal electric potential to cancel the external electric field lines.",
+      "The metallic body of the car acts as a hollow conductor inside which the static electric field is strictly zero, shielding the interior.",
       "Air inside the car undergoes breakdown polarization, absorbing electrical discharges completely."
     ],
     "oh": [
       "कार के रबर के टायर उच्च वोल्टेज को धातु के फ्रेम तक पहुंचने से पहले जमीन में संचालित करते हैं।",
-      "कार का धात्विक शरीर एक खोखले चालक (hollow conductor) के रूप में कार्य करता है जिसके अंदर स्थिर विद्युत क्षेत्र सख्ती से शून्य ($E = 0$) होता है, जो आंतरिक भाग को सुरक्षित रखता है।",
       "धात्विक फ्रेम बाहरी विद्युत क्षेत्र रेखाओं को रद्द करने के लिए आंतरिक विद्युत विभव को बढ़ाता है।",
+      "कार का धात्विक शरीर एक खोखले चालक (hollow conductor) के रूप में कार्य करता है जिसके अंदर स्थिर विद्युत क्षेत्र सख्ती से शून्य ($E = 0$) होता है, जो आंतरिक भाग को सुरक्षित रखता है।",
       "कार के अंदर की हवा ब्रेकडाउन ध्रुवीकरण से गुजरती है, जिससे विद्युत निर्वहन पूरी तरह से अवशोषित हो जाता है।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Electrostatic Shielding kisi sensitive space ya device ko external high-voltage electric fields se protect karne ka fundamental method hai.\n\n• Option A is Incorrect because lightning ke millions of volts par rubber tires dielectric breakdown undergo karte hain, wo primary safety reason nahi hain.\n\n• Option B is Correct because Electrostatic equilibrium ke dauran kisi bhi hollow conducting shell ya Faraday Cage ke saare excess charges uske outer surface par reside karte hain, jisse conductor ke interior cavity mein Electric Field strictly zero ($E_{\\text{inside}} = 0$) rehta hai. Car ki metallic body ek closed hollow conductor ki tarah behave karti hai, jisse lightning strike ka saara discharge bahar-bahar se ground ho jata hai aur andar baithe passengers safe rehte hain.\n\n• Option C is Incorrect because internal potential constant rehta hai, field lines ko cancel karne ke liye increase nahi hota.\n\n• Option D is Incorrect because air breakdown se sparks banti hain jo shielding ka mechanism nahi hai.\n\nExaminers ka classic misconception: 'Rubber tires insulate the car' jabki actual reason metallic shell ka Faraday Cage ($E=0$) effect hota hai."
   },
   {
@@ -42,18 +42,18 @@
     "qe": "Electric field lines map the spatial influence of static charges. Which property correctly dictates the geometrical behavior and spatial characteristics of electric field lines?",
     "qh": "विद्युत क्षेत्र रेखाएं स्थिर आवेशों के स्थानिक प्रभाव को दर्शाती हैं। कौन सा गुण विद्युत क्षेत्र रेखाओं के ज्यामितीय व्यवहार और स्थानिक विशेषताओं को सही ढंग से नियंत्रित करता है?",
     "oe": [
+      "Electric field lines are always perpendicular to the surface of a charged conductor and contract lengthwise to represent attraction between opposite charges.",
       "Electric field lines form continuous closed loops starting from positive charges and returning to positive charges.",
       "Electric field lines can intersect at right angles in regions where two equal positive charges overlap.",
-      "Electric field lines are always perpendicular to the surface of a charged conductor and contract lengthwise to represent attraction between opposite charges.",
       "The tangent to an electric field line at any point gives the direction of electric potential rather than field intensity."
     ],
     "oh": [
+      "विद्युत क्षेत्र रेखाएं हमेशा आवेशित चालक की सतह के लंबवत ($90^\\circ$) होती हैं और विपरीत आवेशों के बीच आकर्षण का प्रतिनिधित्व करने के लिए लंबाई में सिकुड़ती हैं।",
       "विद्युत क्षेत्र रेखाएं धनात्मक आवेशों से शुरू होकर धनात्मक आवेशों पर लौटने वाले निरंतर बंद लूप बनाती हैं।",
       "विद्युत क्षेत्र रेखाएं उन क्षेत्रों में समकोण पर प्रतिच्छेद कर सकती हैं जहां दो समान धनात्मक आवेश ओवरलैप होते हैं।",
-      "विद्युत क्षेत्र रेखाएं हमेशा आवेशित चालक की सतह के लंबवत ($90^\\circ$) होती हैं और विपरीत आवेशों के बीच आकर्षण का प्रतिनिधित्व करने के लिए लंबाई में सिकुड़ती हैं।",
       "किसी बिंदु पर विद्युत क्षेत्र रेखा की स्पर्शरेखा क्षेत्र की तीव्रता के बजाय विद्युत विभव की दिशा देती है।"
     ],
-    "a": 2,
+    "a": 0,
     "e": "Electric field lines imaginary smooth curves hoti hain jo space mein electric field vector ($\\vec{E}$) ki direction aur relative strength ko represent karti hain.\n\n• Option A is Incorrect because electrostatic field lines conservative nature ki wajah se kabhi closed loops nahi banati (yeh positive charge se start hokar negative charge par terminate hoti hain).\n\n• Option B is Incorrect because do electric field lines kabhi ek dusre ko intersect nahi kar sakti; intersection point par do tangents ban jayengi jiska matlab ek hi point par resultant electric field ki do conflicting directions hongi jo physically impossible hai.\n\n• Option C is Correct because electrostatic equilibrium mein conductor surface par surface currents avoid karne ke liye field lines surface ke strictly normal ($90^\\circ$) hoti hain, aur unlike charges ke beech longitudinal contraction (length-wise tension) attraction force ko explain karta hai.\n\n• Option D is Incorrect because tangent electric field vector $\\vec{E}$ ki direction deta hai, scalar electric potential $V$ ki nahi.\n\nMagnetic field lines (Closed continuous loops) aur Electrostatic field lines (Never form closed loops) ka basic contrast standard UPSC question hai."
   },
   {
@@ -61,18 +61,18 @@
     "qe": "A point charge $+q$ is placed at the geometric center of a hollow closed cube. According to Gauss's Theorem, what is the electric flux linked with a single face of this cube?",
     "qh": "एक बिंदु आवेश $+q$ को एक खोखले बंद घन (cube) के ज्यामितीय केंद्र पर रखा गया है। गॉस के प्रमेय के अनुसार, इस घन के केवल एक फलक (single face) से जुड़ा विद्युत फ्लक्स कितना है?",
     "oe": [
-      "$\\Phi_E = \\frac{q}{\\varepsilon_0}$",
-      "$\\Phi_E = \\frac{q}{6\\varepsilon_0}$",
       "$\\Phi_E = \\frac{q}{2\\varepsilon_0}$",
-      "$\\Phi_E = 0$"
+      "$\\Phi_E = \\frac{q}{\\varepsilon_0}$",
+      "$\\Phi_E = 0$",
+      "$\\Phi_E = \\frac{q}{6\\varepsilon_0}$"
     ],
     "oh": [
-      "$\\Phi_E = \\frac{q}{\\varepsilon_0}$",
-      "$\\Phi_E = \\frac{q}{6\\varepsilon_0}$",
       "$\\Phi_E = \\frac{q}{2\\varepsilon_0}$",
-      "$\\Phi_E = 0$"
+      "$\\Phi_E = \\frac{q}{\\varepsilon_0}$",
+      "$\\Phi_E = 0$",
+      "$\\Phi_E = \\frac{q}{6\\varepsilon_0}$"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Gauss's Law electrostatic flux aur enclosed electric charge ke beech geometric link establish karta hai.\n\n• Option A is Incorrect because $\\Phi_{\\text{total}} = \\frac{q}{\\varepsilon_0}$ pure closed cube ke sabhi 6 faces se nikalne wala total electric flux hai.\n\n• Option B is Correct because Gauss's Theorem ke mutabiq closed surface ka total flux $\\Phi = \\frac{q_{\\text{enclosed}}}{\\varepsilon_0}$ hota hai. Cube ke geometric center par charge hone ke karan, spatial symmetry se electric flux sabhi 6 identical square faces mein barabar divide hota hai. Isliye kisi single face se linked flux: $\\Phi_{\\text{face}} = \\frac{1}{6} \\Phi_{\\text{total}} = \\frac{q}{6\\varepsilon_0}$\n\n• Option C is Incorrect because yeh two faces ka combined flux ($q/3\\varepsilon_0$) se mismatch karta hai.\n\n• Option D is Incorrect because charge cube ke andar physically enclosed hai, net enclosed charge zero nahi hai.\n\nExaminers Total flux of cube ($\\frac{q}{\\varepsilon_0}$) aur Flux through one face ($\\frac{q}{6\\varepsilon_0}$) ya corner placement ($\\frac{q}{8\\varepsilon_0}$) ke conditions par numerical variations puchte hain."
   },
   {
@@ -80,18 +80,18 @@
     "qe": "Evaluating the electrostatic field ($E$) and electric potential ($V$) inside a uniformly charged hollow spherical conducting shell reveals distinct mathematical behaviors. What are the values of $E$ and $V$ at a point inside the shell at distance $r < R$ (where $R$ is the shell radius)?",
     "qh": "एक समान रूप से आवेशित खोखले गोलीय चालक कोश (conducting shell) के अंदर विद्युत क्षेत्र ($E$) और विद्युत विभव ($V$) का मूल्यांकन विशिष्ट गणितीय व्यवहार को उजागर करता है। कोश के अंदर त्रिज्या $R$ के लिए दूरी $r < R$ पर स्थित बिंदु पर $E$ और $V$ के मान क्या हैं?",
     "oe": [
-      "$E = 0$ and $V = 0$",
-      "$E = 0$ and $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$ (constant and equal to surface potential)",
+      "$E = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$ and $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{r}$",
       "$E = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{r^2}$ and $V = 0$",
-      "$E = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$ and $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{r}$"
+      "$E = 0$ and $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$ (constant and equal to surface potential)",
+      "$E = 0$ and $V = 0$"
     ],
     "oh": [
-      "$E = 0$ और $V = 0$",
-      "$E = 0$ और $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$ (स्थिर और सतह के विभव के बराबर)",
+      "$E = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$ और $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{r}$",
       "$E = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{r^2}$ और $V = 0$",
-      "$E = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$ और $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{r}$"
+      "$E = 0$ और $V = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$ (स्थिर और सतह के विभव के बराबर)",
+      "$E = 0$ और $V = 0$"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Conducting spherical shell par charge hamesha outer boundary par distribute hota hai, jisse internal field aur potential ke specific profiles bante hain.\n\n• Option A is Incorrect because shell ke andar Electric Potential zero nahi balki non-zero constant hota hai.\n\n• Option B is Correct because Gauss's Law ke anusaar shell ke andar kisi Gaussian surface ($r < R$) ke bheetar koi charge enclose nahi hota ($q_{\\text{in}} = 0$), isliye Electric Field $E_{\\text{inside}} = 0$. Relation $E = -\\frac{dV}{dr}$ ke mutabiq, jab $E = 0$ ho toh $\\frac{dV}{dr} = 0$, jiska matlab hai ki Electric Potential ($V$) poore shell ke volume mein constant rehta hai aur outer surface ke potential ke barabar hota hai: $V_{\\text{inside}} = V_{\\text{surface}} = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{R}$\n\n• Option C is Incorrect because internal field point charge formula follow nahi karta.\n\n• Option D is Incorrect because potential $r$ par inverse vary nahi karta.\n\nCommon student trap: $E=0$ dekh kar $V=0$ assume kar lena, jabki $E=0$ hone par $V$ constant (Surface value ke equal) hota hai."
   },
   {
@@ -100,17 +100,17 @@
     "qh": "समविभव पृष्ठ (Equipotential surfaces) अंतरिक्ष में समान विद्युत विभव वाले बिंदुओं को दर्शाते हैं। समविभव पृष्ठ पर एक परीक्षण आवेश $q_0$ को स्थानांतरित करने के लिए कार्य की कितनी मात्रा आवश्यक है, और इस पृष्ठ के सापेक्ष विद्युत क्षेत्र रेखाओं का ओरिएंटेशन क्या है?",
     "oe": [
       "Work done $W > 0$; electric field lines are parallel to the surface.",
+      "Work done depends on path length; electric field lines form closed circles on the surface.",
       "Work done $W = 0$; electric field lines are strictly perpendicular ($\\perp$) to the equipotential surface at every point.",
-      "Work done $W = q_0 V$; electric field lines intersect the surface at $45^\\circ$.",
-      "Work done depends on path length; electric field lines form closed circles on the surface."
+      "Work done $W = q_0 V$; electric field lines intersect the surface at $45^\\circ$."
     ],
     "oh": [
       "किया गया कार्य $W > 0$; विद्युत क्षेत्र रेखाएं सतह के समानांतर होती हैं।",
+      "किया गया कार्य पथ की लंबाई पर निर्भर करता है; विद्युत क्षेत्र रेखाएं सतह पर बंद वृत्त बनाती हैं।",
       "किया गया कार्य $W = 0$; विद्युत क्षेत्र रेखाएं हर बिंदु पर समविभव पृष्ठ के लंबवत ($\\perp$) होती हैं।",
-      "किया गया कार्य $W = q_0 V$; विद्युत क्षेत्र रेखाएं $45^\\circ$ पर सतह को काटती हैं।",
-      "किया गया कार्य पथ की लंबाई पर निर्भर करता है; विद्युत क्षेत्र रेखाएं सतह पर बंद वृत्त बनाती हैं।"
+      "किया गया कार्य $W = q_0 V$; विद्युत क्षेत्र रेखाएं $45^\\circ$ पर सतह को काटती हैं।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Equipotential surface ek aisa geometric locus hai jiske har point par electrostatic potential ($V$) identical hota hai.\n\n• Option A is Incorrect because potential difference zero hone ke karan work non-zero nahi ho sakta.\n\n• Option B is Correct because Equipotential surface par kisi bhi do points $A$ aur $B$ ke beech potential difference $\\Delta V = V_A - V_B = 0$ hota hai. Work done formula $W = q_0 \\Delta V$ se charge move karne mein kiya gaya net work hamesha ZERO ($W = 0$) hota hai. Sath hi, work formula $W = q_0 (\\vec{E} \\cdot d\\vec{r}) = q_0 E dr \\cos \\theta = 0$ hone ke liye $\\cos \\theta = 0 \\implies \\theta = 90^\\circ$, jiska matlab hai ki Electric field lines hamesha equipotential surface ke perpendicular ($90^\\circ$) hoti hain.\n\n• Option C is Incorrect because angled intersection electric potential symmetry ko tod dega.\n\n• Option D is Incorrect because conservative field mein equipotential motion path length se independent hoti hai.\n\nEquipotential rules: (1) Work done $= 0$; (2) Electric field lines are always normal ($90^\\circ$) to the surface; (3) Two equipotential surfaces never intersect."
   },
   {
@@ -119,17 +119,17 @@
     "qh": "दो-आवेश प्रणाली की इलेक्ट्रोस्टैटिक स्थितिज ऊर्जा ($U$) आवेशों $q_1$ और $q_2$ के चिह्नों पर निर्भर करती है। स्थितिज ऊर्जा का ऋणात्मक मान ($-U$) प्रणाली के बल गतिकी के बारे में क्या दर्शाता है?",
     "oe": [
       "The system consists of like charges experiencing strong repulsive forces.",
-      "The system consists of opposite charges ($q_1 q_2 < 0$) forming an attractive bound system; external work must be done to separate them to infinity.",
+      "The charges are moving at relativistic speeds, converting mass into energy.",
       "The system has zero net charge and experiences no electrostatic force.",
-      "The charges are moving at relativistic speeds, converting mass into energy."
+      "The system consists of opposite charges ($q_1 q_2 < 0$) forming an attractive bound system; external work must be done to separate them to infinity."
     ],
     "oh": [
       "प्रणाली में समान आवेश होते हैं जो मजबूत प्रतिकारक बलों का अनुभव करते हैं।",
-      "प्रणाली में विपरीत आवेश ($q_1 q_2 < 0$) शामिल हैं जो एक आकर्षक बाध्य प्रणाली (bound system) बनाते हैं; उन्हें अनंत तक अलग करने के लिए बाहरी कार्य किया जाना चाहिए।",
+      "आवेश आपेक्षिकीय गति से आगे बढ़ रहे हैं, जिससे द्रव्यमान ऊर्जा में परिवर्तित हो रहा है।",
       "प्रणाली में शून्य शुद्ध आवेश है और कोई इलेक्ट्रोस्टैटिक बल का अनुभव नहीं होता है।",
-      "आवेश आपेक्षिकीय गति से आगे बढ़ रहे हैं, जिससे द्रव्यमान ऊर्जा में परिवर्तित हो रहा है।"
+      "प्रणाली में विपरीत आवेश ($q_1 q_2 < 0$) शामिल हैं जो एक आकर्षक बाध्य प्रणाली (bound system) बनाते हैं; उन्हें अनंत तक अलग करने के लिए बाहरी कार्य किया जाना चाहिए।"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Electrostatic Potential Energy ($U$) do charges ko infinity se unke positions tak lane mein conservative electric field ke against kiye gaye work se define hoti hai.\n\n• Option A is Incorrect because like charges ($++$ ya $--$) ke case mein product $q_1 q_2 > 0$ hone se potential energy positive ($+U$) repulsive hoti hai.\n\n• Option B is Correct because Two-charge potential energy formula hai: $U = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q_1 q_2}{r}$. Jab charges opposite signs ke hote hain (ek $+q$ aur ek $-q$), toh product $q_1 q_2 < 0$ negative ho jata hai, jisse potential energy Negative ($-U$) banti hai. Negative potential energy ka matlab hai ki system Attractive Bound State mein hai aur in charges ko infinite separation tak pull karne ke liye external work supply karna padega.\n\n• Option C is Incorrect because opposite charges mutual Coulomb attraction exert karte hain.\n\n• Option D is Incorrect because potential energy electrostatics ka concept hai relativity conversion nahi.\n\nSign convention: Positive $U$ = Repulsive unstable system; Negative $U$ = Attractive bound stable system."
   },
   {
@@ -137,18 +137,18 @@
     "qe": "When a dielectric slab is inserted into a uniform external electric field $E_0$, an internal induced field reduces the net field inside. How is the Dielectric Constant ($K$) mathematically defined in terms of applied field $E_0$ and reduced internal field $E$?",
     "qh": "जब किसी परावैद्युत पट्टिका (dielectric slab) को एक समान बाहरी विद्युत क्षेत्र $E_0$ में डाला जाता है, तो एक आंतरिक प्रेरित क्षेत्र भीतर के कुल क्षेत्र को कम कर देता है। परावैद्युतांक (Dielectric Constant - $K$) को लागू क्षेत्र $E_0$ और कम आंतरिक क्षेत्र $E$ के संदर्भ में गणितीय रूप से कैसे परिभाषित किया जाता है?",
     "oe": [
-      "$K = \\frac{E}{E_0}$ (value is always less than 1)",
       "$K = \\frac{E_0}{E}$ (value is always greater than 1 for matter, and exactly 1 for vacuum)",
       "$K = E_0 - E$",
-      "$K = E_0 \\times E$"
+      "$K = E_0 \\times E$",
+      "$K = \\frac{E}{E_0}$ (value is always less than 1)"
     ],
     "oh": [
-      "$K = \\frac{E}{E_0}$ (मान हमेशा 1 से कम होता है)",
       "$K = \\frac{E_0}{E}$ (मान पदार्थ के लिए हमेशा 1 से अधिक, और निर्वात के लिए ठीक 1 होता है)",
       "$K = E_0 - E$",
-      "$K = E_0 \\times E$"
+      "$K = E_0 \\times E$",
+      "$K = \\frac{E}{E_0}$ (मान हमेशा 1 से कम होता है)"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Dielectric materials insulating substances hote hain jinme external electric field apply karne par internal dipole polarization induce hoti hai.\n\n• Option A is Incorrect because ratio invert karne se $K < 1$ ho jayega jo physical reality ke khilaf hai.\n\n• Option B is Correct because External field $E_0$ lagane par dielectric ke andar opposite direction mein induced polarization field $E_p$ develop hoti hai, jisse net internal field reduce hokar $E = E_0 - E_p$ ho jata hai. Dielectric Constant ($K$ ya $\\varepsilon_r$) applied vacuum field aur reduced internal field ka ratio hota hai: $K = \\frac{E_0}{E}$. Polarization ke karan $E < E_0$ rehta hai, isliye $K > 1$ hamesha physical matter ke liye hota hai ($K = 1$ strictly vacuum ke liye, aur $K = \\infty$ perfect conductors ke liye).\n\n• Option C is Incorrect because difference induced field $E_p$ deta hai, dimensionless constant $K$ nahi.\n\n• Option D is Incorrect because product dimensional consistency satisfy nahi karta.\n\nDielectric Constant values: Vacuum ($K=1$), Air ($K \\approx 1.0006$), Water ($K \\approx 81$), Metals/Conductors ($K = \\infty$)."
   },
   {
@@ -157,17 +157,17 @@
     "qh": "परावैद्युत (Dielectrics) को आणविक आवेश समरूपता के आधार पर ध्रुवीय और अध्रुवीय प्रकारों में वर्गीकृत किया जाता है। कौन सा विकल्प परावैद्युत सामग्रियों और उनके स्थायी द्विध्रुव आघूर्णों (permanent dipole moments) का सही वर्गीकरण करता है?",
     "oe": [
       "Non-polar dielectrics ($\\text{H}_2\\text{O}$, $\\text{NH}_3$) possess permanent dipole moments; Polar dielectrics ($\\text{N}_2$, $\\text{O}_2$) have zero dipole moment.",
-      "Polar dielectrics ($\\text{H}_2\\text{O}$, $\\text{NH}_3$, $\\text{HCl}$) have non-coinciding charge centers giving permanent molecular dipole moments; Non-polar dielectrics ($\\text{N}_2$, $\\text{O}_2$, $\\text{H}_2$, $\\text{CH}_4$) have coinciding charge centers with zero permanent dipole moment.",
       "Both polar and non-polar dielectrics possess identical permanent dipole moments in the absence of an electric field.",
-      "Non-polar dielectrics conduct electric current easily, whereas polar dielectrics behave as super-conductors."
+      "Non-polar dielectrics conduct electric current easily, whereas polar dielectrics behave as super-conductors.",
+      "Polar dielectrics ($\\text{H}_2\\text{O}$, $\\text{NH}_3$, $\\text{HCl}$) have non-coinciding charge centers giving permanent molecular dipole moments; Non-polar dielectrics ($\\text{N}_2$, $\\text{O}_2$, $\\text{H}_2$, $\\text{CH}_4$) have coinciding charge centers with zero permanent dipole moment."
     ],
     "oh": [
       "अध्रुवीय परावैद्युत ($\\text{H}_2\\text{O}$, $\\text{NH}_3$) में स्थायी द्विध्रुव आघूर्ण होते हैं; ध्रुवीय परावैद्युत ($\\text{N}_2$, $\\text{O}_2$) का द्विध्रुव आघूर्ण शून्य होता है।",
-      "ध्रुवीय परावैद्युत ($\\text{H}_2\\text{O}$, $\\text{NH}_3$, $\\text{HCl}$) में गैर-संपाती आवेश केंद्र होते हैं जो स्थायी आणविक द्विध्रुव आघूर्ण देते हैं; अध्रुवीय परावैद्युत ($\\text{N}_2$, $\\text{O}_2$, $\\text{H}_2$, $\\text{CH}_4$) में संपाती आवेश केंद्र होते हैं जिनका स्थायी द्विध्रुव आघूर्ण शून्य होता है।",
       "विद्युत क्षेत्र की अनुपस्थिति में ध्रुवीय और अध्रुवीय दोनों परावैद्युत समान स्थायी द्विध्रुव आघूर्ण रखते हैं।",
-      "अध्रुवीय परावैद्युत आसानी से विद्युत धारा का संचालन करते हैं, जबकि ध्रुवीय परावैद्युत अतिचालक के रूप में व्यवहार करते हैं।"
+      "अध्रुवीय परावैद्युत आसानी से विद्युत धारा का संचालन करते हैं, जबकि ध्रुवीय परावैद्युत अतिचालक के रूप में व्यवहार करते हैं।",
+      "ध्रुवीय परावैद्युत ($\\text{H}_2\\text{O}$, $\\text{NH}_3$, $\\text{HCl}$) में गैर-संपाती आवेश केंद्र होते हैं जो स्थायी आणविक द्विध्रुव आघूर्ण देते हैं; अध्रुवीय परावैद्युत ($\\text{N}_2$, $\\text{O}_2$, $\\text{H}_2$, $\\text{CH}_4$) में संपाती आवेश केंद्र होते हैं जिनका स्थायी द्विध्रुव आघूर्ण शून्य होता है।"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Dielectric molecules mein positive (nuclei) aur negative (electrons) charge centers ke spatial arrangement ke aadhar par polarity classify hoti hai.\n\n• Option A is Incorrect because yeh polar aur non-polar molecular examples ko ulta swap karta hai.\n\n• Option B is Correct because Polar Dielectrics (jaise $\\text{H}_2\\text{O}$, $\\text{NH}_3$, $\\text{HCl}$) mein molecular structure asymmetric hota hai, jisse positive aur negative charge centers coincide nahi karte aur unke paas Permanent Dipole Moment ($\\vec{p} \\neq 0$) hota hai. Non-polar Dielectrics (jaise $\\text{N}_2$, $\\text{O}_2$, $\\text{H}_2$, $\\text{CH}_4$) symmetric hote hain jahan positive aur negative charge centers coincide karte hain, jisse unka zero-field state mein Zero Permanent Dipole Moment ($\\vec{p} = 0$) hota hai.\n\n• Option C is Incorrect because non-polar molecules natural state mein dipole moment possess nahi karte.\n\n• Option D is Incorrect because dielectrics insulators hote hain, free current conduct nahi karte.\n\nExaminers aksar symmetric ($\\text{CO}_2, \\text{CH}_4, \\text{O}_2$) aur asymmetric ($\\text{H}_2\\text{O}, \\text{NH}_3$) molecules ke structural dipole behavior par traps set karte hain."
   },
   {
@@ -176,17 +176,17 @@
     "qh": "जेरॉक्स फोटोकॉपी मशीनें प्रिंट छवियों को कागज पर स्थानांतरित करने के लिए इलेक्ट्रोस्टैटिक बलों पर निर्भर करती हैं। इस प्रक्रिया में टोनर पाउडर और वाहक मोतियों (carrier beads) की परिचालन भूमिका क्या है?",
     "oe": [
       "Positively charged toner particles are repelled by a negatively charged image drum onto dry paper.",
+      "Carrier beads conduct high AC current to melt paper fibers electrostatically.",
       "Negatively charged black toner particles stick to tiny carrier beads via electrostatic forces and are attracted away to a rotating drum holding a positively charged image of the document.",
-      "Toner powder undergoes laser thermal fission to burn black ink onto metallic paper.",
-      "Carrier beads conduct high AC current to melt paper fibers electrostatically."
+      "Toner powder undergoes laser thermal fission to burn black ink onto metallic paper."
     ],
     "oh": [
       "धनात्मक रूप से आवेशित टोनर कण सूखे कागज पर ऋणात्मक रूप से आवेशित छवि ड्रम द्वारा प्रतिकर्षित होते हैं।",
+      "वाहक मोती कागज के रेशों को इलेक्ट्रोस्टैटिक रूप से पिघलाने के लिए उच्च AC धारा का संचालन करते हैं।",
       "ऋणात्मक रूप से आवेशित काले टोनर कण इलेक्ट्रोस्टैटिक बलों के माध्यम से छोटे वाहक मोतियों (carrier beads) से चिपकते हैं और दस्तावेज़ की धनात्मक रूप से आवेशित छवि वाले घूर्णन ड्रम की ओर आकर्षित होते हैं।",
-      "टोनर पाउडर धात्विक कागज पर काली स्याही जलाने के लिए लेजर थर्मल विखंडन से गुजरता है।",
-      "वाहक मोती कागज के रेशों को इलेक्ट्रोस्टैटिक रूप से पिघलाने के लिए उच्च AC धारा का संचालन करते हैं।"
+      "टोनर पाउडर धात्विक कागज पर काली स्याही जलाने के लिए लेजर थर्मल विखंडन से गुजरता है।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Xerography (electrophotography) Chester Carlson dwara invented electrostatic imaging process hai jo charge attraction par work karta hai.\n\n• Option A is Incorrect because toner negative hota hai aur drum positive latent image hold karta hai.\n\n• Option B is Correct because Photocopier mein: (1) Black toner powder particles friction se negative charge acquire karke carrier beads se stick karte hain; (2) Original document par light throw karne par photosensitive selenium drum par document ke dark text ke anuroop ek Positively charged latent image banti hai; (3) Drum ka positive charge carrier beads se negatively charged toner particles ko strongly attract karke apne upar chipka leta hai, jise baad mein heat aur pressure rollers se paper par permanently fuse kar diya jata hai.\n\n• Option C is Incorrect because thermal fission nuclear physics process hai xerography nahi.\n\n• Option D is Incorrect because carrier beads toner transport ke liye electrostatic carriers hain AC conductors nahi.\n\nCore principle of Xerography: Opposite electrostatic charge attraction (Negatively charged toner attracted to Positively charged image on drum)."
   },
   {
@@ -195,15 +195,15 @@
     "qh": "परावैद्युत सामर्थ्य (Dielectric strength) मजबूत विद्युत क्षेत्रों के अधीन इन्सुलेट सामग्री की परिचालन सीमाओं को परिभाषित करती है। हवा की अनुमानित परावैद्युत सामर्थ्य सीमा क्या है, और जब एक विद्युत क्षेत्र इस सीमा से अधिक हो जाता है तो क्या होता है?",
     "oe": [
       "Dielectric strength of air is $3 \\times 10^6\\text{ V/m}$; exceeding it causes ionization breakdown, turning air into a conductor (causing electric sparks).",
-      "Dielectric strength of air is $100\\text{ V/m}$; exceeding it converts air into pure ozone gas without sparking.",
+      "Dielectric strength of air is $3 \\times 10^8\\text{ V/m}$; exceeding it converts sound waves into light waves.",
       "Dielectric strength of air is infinite; air never undergoes electrical breakdown.",
-      "Dielectric strength of air is $3 \\times 10^8\\text{ V/m}$; exceeding it converts sound waves into light waves."
+      "Dielectric strength of air is $100\\text{ V/m}$; exceeding it converts air into pure ozone gas without sparking."
     ],
     "oh": [
       "हवा की परावैद्युत सामर्थ्य $3 \\times 10^6\\text{ V/m}$ है; इसे पार करने से आयनीकरण ब्रेकडाउन होता है, जिससे हवा एक चालक में बदल जाती है (विद्युत स्पार्क पैदा होते हैं)।",
-      "हवा की परावैद्युत सामर्थ्य $100\\text{ V/m}$ है; इसे पार करने से हवा बिना स्पार्किंग के शुद्ध ओजोन गैस में परिवर्तित हो जाती है।",
+      "हवा की परावैद्युत सामर्थ्य $3 \\times 10^8\\text{ V/m}$ है; इसे पार करने से ध्वनि तरंगें प्रकाश तरंगों में परिवर्तित हो जाती हैं।",
       "हवा की परावैद्युत सामर्थ्य अनंत है; हवा कभी भी विद्युत ब्रेकडाउन से नहीं गुजरती।",
-      "हवा की परावैद्युत सामर्थ्य $3 \\times 10^8\\text{ V/m}$ है; इसे पार करने से ध्वनि तरंगें प्रकाश तरंगों में परिवर्तित हो जाती हैं।"
+      "हवा की परावैद्युत सामर्थ्य $100\\text{ V/m}$ है; इसे पार करने से हवा बिना स्पार्किंग के शुद्ध ओजोन गैस में परिवर्तित हो जाती है।"
     ],
     "a": 0,
     "e": "Dielectric Strength kisi insulator ki wo maximum electric field intensity holding capacity hai jise wo bina electrical breakdown ke withstand kar sakta hai.\n\n• Option A is Correct because Standard dry atmospheric air ki dielectric strength lagbhag $3 \\times 10^6\\text{ V/m}$ (ya $3\\text{ kV/mm}$) hoti hai. Agar kisi localized region (jaise lightning cloud ya sharp conductor tip) mein electric field is threshold se zyada ho jaye, toh intense electric force air molecules se electrons strip kar deta hai (Dielectric/Ionization Breakdown), jisse insulating air conductive plasma ban jati hai aur electric spark ya lightning bolt form hota hai.\n\n• Option B is Incorrect because $100\\text{ V/m}$ standard household fields se bhi kam absurdly low value hai.\n\n• Option C is Incorrect because koi bhi material infinite dielectric strength possess nahi karta.\n\n• Option D is Incorrect because $3 \\times 10^8\\text{ m/s}$ speed of light hai, dielectric strength metric nahi.\n\nCorona discharge aur Lightning formation dono air ki dielectric breakdown limit ($3 \\times 10^6\\text{ V/m}$) exceed hone par occur karte hain."
@@ -213,18 +213,18 @@
     "qe": "An electric dipole consists of two equal and opposite point charges ($-q$ and $+q$) separated by a small distance $2a$. What is the electric flux passing through a closed Gaussian surface that completely encloses this electric dipole?",
     "qh": "एक विद्युत द्विध्रुव (electric dipole) में छोटे अंतर $2a$ द्वारा अलग किए गए दो समान और विपरीत बिंदु आवेश ($-q$ और $+q$) शामिल होते हैं। इस विद्युत द्विध्रुव को पूरी तरह से घेरने वाले बंद गॉसियन पृष्ठ से गुजरने वाला विद्युत फ्लक्स कितना है?",
     "oe": [
-      "$\\Phi_E = \\frac{2q}{\\varepsilon_0}$",
-      "$\\Phi_E = 0$",
+      "$\\Phi_E = \\frac{q^2}{\\varepsilon_0}$",
       "$\\Phi_E = \\frac{q}{4\\pi\\varepsilon_0 a^2}$",
-      "$\\Phi_E = \\frac{q^2}{\\varepsilon_0}$"
+      "$\\Phi_E = \\frac{2q}{\\varepsilon_0}$",
+      "$\\Phi_E = 0$"
     ],
     "oh": [
-      "$\\Phi_E = \\frac{2q}{\\varepsilon_0}$",
-      "$\\Phi_E = 0$",
+      "$\\Phi_E = \\frac{q^2}{\\varepsilon_0}$",
       "$\\Phi_E = \\frac{q}{4\\pi\\varepsilon_0 a^2}$",
-      "$\\Phi_E = \\frac{q^2}{\\varepsilon_0}$"
+      "$\\Phi_E = \\frac{2q}{\\varepsilon_0}$",
+      "$\\Phi_E = 0$"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Gauss's Theorem kisi bhi closed 3D surface se nikalne wale net electric flux ko total enclosed charge ke sum se correlate karta hai.\n\n• Option A is Incorrect because charges scalar algebra ke sath unke algebraic signs ke according add hote hain, absolute magnitude nahi.\n\n• Option B is Correct because Gauss's Law ke formula $\\Phi_E = \\frac{\\sum q_{\\text{enclosed}}}{\\varepsilon_0}$ ke mutabiq, jab koi Gaussian surface ek complete electric dipole ko enclose karta hai, toh total enclosed net charge $\\sum q = (+q) + (-q) = 0$ ho jata hai. Isliye closed surface se nikalne wala Net Electric Flux strictly ZERO ($\\Phi_E = 0$) hota hai (jitni field lines $+q$ se surface se bahar nikalti hain, utni hi field lines $-q$ par enter kar jati hain).\n\n• Option C is Incorrect because yeh dipole field formula ka modified form hai, flux nahi.\n\n• Option D is Incorrect because flux charge squared par depend nahi karta.\n\nConceptual difference: Dipole ke andar net charge zero hone se closed surface flux ZERO hota hai, lekin dipole ke ird-gird Electric Field ($E$) zero nahi hota."
   },
   {
@@ -252,17 +252,17 @@
     "qh": "विद्युत विभव ($V$) एक अदिश अवस्था फलन (scalar state function) है जो विद्युतीकरण की मात्रा को परिभाषित करता है। एक स्थिर विद्युत क्षेत्र के अंदर एक पूर्ण बंद वृत्ताकार लूप के चारों ओर एक $+1\\text{ C}$ परीक्षण आवेश को स्थानांतरित करने में किया गया कुल कार्य कितना है?",
     "oe": [
       "Work done depends on loop radius: $W = 2\\pi r E$.",
-      "Work done is strictly ZERO ($W = 0$) because electrostatic forces are conservative forces.",
+      "Work done is infinite due to continuous radial acceleration.",
       "Work done equals $1\\text{ Joule}$ per meter.",
-      "Work done is infinite due to continuous radial acceleration."
+      "Work done is strictly ZERO ($W = 0$) because electrostatic forces are conservative forces."
     ],
     "oh": [
       "किया गया कार्य लूप की त्रिज्या पर निर्भर करता है: $W = 2\\pi r E$।",
-      "किया गया कार्य सख्ती से शून्य ($W = 0$) है क्योंकि इलेक्ट्रोस्टैटिक बल संरक्षी बल (conservative forces) हैं।",
+      "निरंतर रेडियल त्वरण के कारण किया गया कार्य अनंत है।",
       "किया गया कार्य $1\\text{ Joule}$ प्रति मीटर के बराबर है।",
-      "निरंतर रेडियल त्वरण के कारण किया गया कार्य अनंत है।"
+      "किया गया कार्य सख्ती से शून्य ($W = 0$) है क्योंकि इलेक्ट्रोस्टैटिक बल संरक्षी बल (conservative forces) हैं।"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Static electric field ek conservative vector force field hota hai jo path-independent work properties follow karta hai.\n\n• Option A is Incorrect because conservative forces closed path mein circumference radius par depend nahi karte.\n\n• Option B is Correct because Electrostatic force ek Conservative Force hai. Conservative field ka fundamental mathematical condition hota hai ki kisi bhi closed path ke around electric field ka line integral zero hota hai: $\\oint \\vec{E} \\cdot d\\vec{r} = 0$. Isliye kisi bhi test charge ko ek point se start karke ghumakar wapas usi initial point par lane mein kiya gaya Net Work Done hamesha strictly ZERO ($W = 0$) hota hai, proving that electrostatic potential ek state function hai.\n\n• Option C is Incorrect because work zero hota hai, linear rate par nahi banta.\n\n• Option D is Incorrect because potential energy finite state function hoti hai.\n\nConservative fields (Electrostatic, Gravitational) $\\implies \\oint \\vec{F} \\cdot d\\vec{r} = 0$; Non-conservative fields (Friction, Induced Electric Field by changing magnetic flux) $\\implies \\oint \\vec{F} \\cdot d\\vec{r} \\neq 0$."
   },
   {
@@ -271,17 +271,17 @@
     "qh": "कूलॉम का नियम दूरी $r$ द्वारा अलग किए गए दो स्थिर बिंदु आवेशों $q_1$ और $q_2$ के बीच इलेक्ट्रोस्टैटिक बल को परिमाणित करता है। यदि आवेशों को स्थिर रखते हुए उनके बीच की दूरी को आधा ($r' = \\frac{r}{2}$) कर दिया जाए तो इलेक्ट्रोस्टैटिक बल कैसे बदलता है?",
     "oe": [
       "The electrostatic force is halved ($F' = \\frac{F}{2}$).",
-      "The electrostatic force increases by a factor of 4 ($F' = 4F$).",
+      "The electrostatic force decreases by a factor of 16 ($F' = \\frac{F}{16}$).",
       "The electrostatic force doubles ($F' = 2F$).",
-      "The electrostatic force decreases by a factor of 16 ($F' = \\frac{F}{16}$)."
+      "The electrostatic force increases by a factor of 4 ($F' = 4F$)."
     ],
     "oh": [
       "इलेक्ट्रोस्टैटिक बल आधा हो जाता है ($F' = \\frac{F}{2}$)।",
-      "इलेक्ट्रोस्टैटिक बल 4 के कारक से बढ़ जाता है ($F' = 4F$ / चार गुना हो जाता है)।",
+      "इलेक्ट्रोस्टैटिक बल 16 के कारक से घट जाता है ($F' = \\frac{F}{16}$)।",
       "इलेक्ट्रोस्टैटिक बल दोगुना हो जाता है ($F' = 2F$)।",
-      "इलेक्ट्रोस्टैटिक बल 16 के कारक से घट जाता है ($F' = \\frac{F}{16}$)।"
+      "इलेक्ट्रोस्टैटिक बल 4 के कारक से बढ़ जाता है ($F' = 4F$ / चार गुना हो जाता है)।"
     ],
-    "a": 1,
+    "a": 3,
     "e": "1785 mein Charles-Augustin de Coulomb ne do stationary point charges ke beech mutual electrostatic force ke liye inverse-square law formulate kiya tha.\n\n• Option A is Incorrect because distance decrease hone par attraction/repulsion force badhta hai, ghat-ta nahi.\n\n• Option B is Correct because Coulomb's Law ke mutabiq electrostatic force distance ke square ke inversely proportional hota hai: $F = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q_1 q_2}{r^2}$. Jab distance ko half ($r' = r/2$) kar diya jata hai: $F' = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q_1 q_2}{(r/2)^2} = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q_1 q_2}{r^2/4} = 4 \\times F$. Isliye distance half karne par electrostatic force 4 guna (quadruple) badh jata hai.\n\n• Option C is Incorrect because yeh linear inverse relation ($1/r$) assume karta hai jo galat hai.\n\n• Option D is Incorrect because 16-factor fourth power dependence par hota jo Coulomb law mein nahi hai.\n\nInverse-Square scaling: Distance $\\times 2 \\implies F / 4$; Distance $/ 2 \\implies F \\times 4$; Distance $\\times 3 \\implies F / 9$."
   },
   {
@@ -289,18 +289,18 @@
     "qe": "Electric field intensity ($E$) is defined as force per unit test charge ($E = \\frac{F}{q_0}$). What are the correct SI units for measuring electric field intensity?",
     "qh": "विद्युत क्षेत्र की तीव्रता ($E$) को प्रति इकाई परीक्षण आवेश बल के रूप में परिभाषित किया गया है ($E = \\frac{F}{q_0}$)। विद्युत क्षेत्र की तीव्रता को मापने के लिए सही SI इकाइयाँ क्या हैं?",
     "oe": [
+      "Watt per meter (W/m) or Ampere per Volt",
       "Joule per Coulomb (J/C) or Volt",
       "Newton per Coulomb (N/C) or Volt per meter (V/m)",
-      "Farad per meter (F/m) or Coulomb per square meter",
-      "Watt per meter (W/m) or Ampere per Volt"
+      "Farad per meter (F/m) or Coulomb per square meter"
     ],
     "oh": [
+      "वाट प्रति मीटर (W/m) या एम्पीयर प्रति वोल्ट",
       "जूल प्रति कूलॉम (J/C) या वोल्ट",
       "न्यूटन प्रति कूलॉम (N/C) या वोल्ट प्रति मीटर (V/m)",
-      "फैराड प्रति मीटर (F/m) या कूलॉम प्रति वर्ग मीटर",
-      "वाट प्रति मीटर (W/m) या एम्पीयर प्रति वोल्ट"
+      "फैराड प्रति मीटर (F/m) या कूलॉम प्रति वर्ग मीटर"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Electric Field Intensity space ke kisi point par rakhe unit positive test charge par lagne wale electrostatic force ko quantify karti hai.\n\n• Option A is Incorrect because Joule per Coulomb (J/C) ya Volt ($V = W/q$) Electric Potential ki unit hoti hai.\n\n• Option B is Correct because: (1) Force definition $E = \\frac{F}{q_0}$ se iski primary SI unit Newton per Coulomb (N/C) banti hai; (2) Potential gradient relation $E = -\\frac{dV}{dr}$ se iski equivalent standard SI unit Volt per meter (V/m) banti hai. Dono units dimensionally identical ($[M^1 L^1 T^{-3} A^{-1}]$) hain.\n\n• Option C is Incorrect because Farad per meter (F/m) permittivity ($\\varepsilon$) ki unit hai aur $\\text{C/m}^2$ surface charge density ($\\sigma$) ki unit hai.\n\n• Option D is Incorrect because Watt per meter power gradient represent karta hai.\n\nMatching units: Electric Field ($E$) $\\implies \\text{N/C}$ ya $\\text{V/m}$; Electric Potential ($V$) $\\implies \\text{J/C}$ ya $\\text{Volt}$."
   },
   {
@@ -309,17 +309,17 @@
     "qh": "इलेक्ट्रोस्टैटिक संतुलन के तहत, एक अनियमित रूप से आकार वाले ठोस धात्विक चालक पर रखा गया अतिरिक्त आवेश स्वयं को पुनर्वितरित करता है। यह अतिरिक्त आवेश कहाँ रहता है, और पृष्ठ आवेश घनत्व वक्रता पर कैसे निर्भर करता है?",
     "oe": [
       "Excess charge distributes uniformly throughout the inner volume of the conductor.",
+      "Excess charge leaks continuously into vacuum regardless of shape.",
       "Excess charge resides entirely on the outer surface, with higher surface charge density accumulating at sharper points (regions of smaller radius of curvature).",
-      "Excess charge concentrates strictly at the exact geometric center.",
-      "Excess charge leaks continuously into vacuum regardless of shape."
+      "Excess charge concentrates strictly at the exact geometric center."
     ],
     "oh": [
       "अतिरिक्त आवेश चालक के आंतरिक आयतन में समान रूप से वितरित होता है।",
+      "अतिरिक्त आवेश आकार की परवाह किए बिना निर्वात में लगातार लीक होता है।",
       "अतिरिक्त आवेश पूरी तरह से बाहरी सतह पर रहता है, जिसमें नुकीले बिंदुओं (वक्रता के छोटे त्रिज्या वाले क्षेत्रों) पर उच्च पृष्ठ आवेश घनत्व जमा होता है।",
-      "अतिरिक्त आवेश सख्ती से सटीक ज्यामितीय केंद्र पर केंद्रित होता है।",
-      "अतिरिक्त आवेश आकार की परवाह किए बिना निर्वात में लगातार लीक होता है।"
+      "अतिरिक्त आवेश सख्ती से सटीक ज्यामितीय केंद्र पर केंद्रित होता है।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Electrostatic equilibrium mein conductor ke free electrons mutual repulsion ko minimize karne ke liye surface par settle ho jaate hain.\n\n• Option A is Incorrect because conductor ke interior volume mein net charge density hamesha zero ($\\rho = 0$) hoti hai.\n\n• Option B is Correct because Conductor par diya gaya saara excess charge poori tarah se uski outer surface par reside karta hai. Surface charge density ($\\sigma$) local radius of curvature ($R$) ke inversely proportional hoti hai: $\\sigma \\propto \\frac{1}{R}$. Isliye conductor ke sharp points aur pointed needles ($R \\to 0$) par surface charge density bohot massive accumulate hoti hai, jo high localized electric field create karke air ionization aur Corona Discharge (Action of Points) cause karti hai.\n\n• Option C is Incorrect because center par electric field aur charge zero hote hain.\n\n• Option D is Incorrect because charge vacuum mein spontaneously leak nahi hota jab tak field field-emission threshold cross na kare.\n\nAction of Points principle: Lightning arresters (concentric pointed rods) building ke top par sharp points ke isi high $\\sigma$ property par work karte hain."
   },
   {
@@ -346,18 +346,18 @@
     "qe": "Electric flux ($\\Delta \\Phi_E$) across an area element $\\Delta s$ in an electric field $E$ is given by $\\Delta \\Phi_E = E \\Delta s \\cos \\theta$. Under what angular condition ($\\theta$) is the electric flux passing through a surface strictly ZERO?",
     "qh": "एक विद्युत क्षेत्र $E$ में क्षेत्रफल तत्व $\\Delta s$ से होकर गुजरने वाला विद्युत फ्लक्स ($\\Delta \\Phi_E$) $\\Delta \\Phi_E = E \\Delta s \\cos \\theta$ द्वारा दिया जाता है। किस कोणीय स्थिति ($\\theta$) के तहत किसी पृष्ठ से होकर गुजरने वाला विद्युत फ्लक्स सख्ती से शून्य होता है?",
     "oe": [
-      "$\\theta = 0^\\circ$ (area vector is parallel to electric field lines)",
       "$\\theta = 90^\\circ$ (area vector is perpendicular to electric field lines, meaning electric field lines run parallel to the surface plane)",
+      "$\\theta = 0^\\circ$ (area vector is parallel to electric field lines)",
       "$\\theta = 180^\\circ$ (area vector is anti-parallel to electric field lines)",
       "$\\theta = 45^\\circ$ (area vector is inclined at half a right angle)"
     ],
     "oh": [
-      "$\\theta = 0^\\circ$ (क्षेत्रफल सदिश विद्युत क्षेत्र रेखाओं के समानांतर है)",
       "$\\theta = 90^\\circ$ (क्षेत्रफल सदिश विद्युत क्षेत्र रेखाओं के लंबवत है, अर्थात विद्युत क्षेत्र रेखाएं पृष्ठ तल के समानांतर चलती हैं)",
+      "$\\theta = 0^\\circ$ (क्षेत्रफल सदिश विद्युत क्षेत्र रेखाओं के समानांतर है)",
       "$\\theta = 180^\\circ$ (क्षेत्रफल सदिश विद्युत क्षेत्र रेखाओं के प्रति-समानांतर है)",
       "$\\theta = 45^\\circ$ (क्षेत्रफल सदिश आधे समकोण पर झुका हुआ है)"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Electric flux surface se cross karne wali electric field lines ki quantitative measure ko represent karta hai.\n\n• Option A is Incorrect because $\\theta = 0^\\circ$ par $\\cos 0^\\circ = 1$ hone se flux maximum positive ($\\Phi_E = E \\Delta s$) hota hai.\n\n• Option B is Correct because Electric Flux scalar dot product se define hota hai: $\\Delta \\Phi_E = \\vec{E} \\cdot \\Delta \\vec{s} = E \\Delta s \\cos \\theta$. Jahan $\\theta$ electric field vector $\\vec{E}$ aur surface ke normal Area Vector $\\Delta \\vec{s}$ ke beech ka angle hai. Jab $\\theta = 90^\\circ$ hota hai, toh $\\cos 90^\\circ = 0$, jisse $\\Delta \\Phi_E = 0$ ho jata hai. Geometrically iska matlab yeh hai ki electric field lines surface ke parallel nikal jati hain aur surface ko penetrate karke cross nahi karti.\n\n• Option C is Incorrect because $\\theta = 180^\\circ$ par maximum negative flux ($\\cos 180^\\circ = -1$) hota hai.\n\n• Option D is Incorrect because $\\theta = 45^\\circ$ par non-zero flux $\\frac{E \\Delta s}{\\sqrt{2}}$ rehta hai.\n\nCommon angle trap: 'Field parallel to surface plane' ka matlab Area Vector ke sath angle $\\theta = 90^\\circ$ hota hai, jisse flux zero ho jata hai."
   },
   {
@@ -365,18 +365,18 @@
     "qe": "Two bodies $A$ and $B$ at different electric potentials ($V_A > V_B$) are brought into direct physical contact via a conducting wire. What governs the direction of free electron flow between them, and when does charge flow cease?",
     "qh": "विभिन्न विद्युत विभवों ($V_A > V_B$) पर दो पिंड $A$ और $B$ को एक प्रवाहकीय तार के माध्यम से सीधे भौतिक संपर्क में लाया जाता है। उनके बीच मुक्त इलेक्ट्रॉनों के प्रवाह की दिशा को क्या नियंत्रित करता है, और आवेश का प्रवाह कब रुकता है?",
     "oe": [
-      "Electrons flow from higher potential $A$ to lower potential $B$; flow stops when charges become equal.",
-      "Negative free electrons flow from lower potential $B$ to higher potential $A$ (conventional positive charge flows from $A$ to $B$); flow ceases when the electric potentials of both bodies become strictly EQUAL ($V_A' = V_B'$).",
+      "Electrons flow from smaller body to larger body until volumes match.",
       "Electrons flow endlessly regardless of potential values.",
-      "Electrons flow from smaller body to larger body until volumes match."
+      "Negative free electrons flow from lower potential $B$ to higher potential $A$ (conventional positive charge flows from $A$ to $B$); flow ceases when the electric potentials of both bodies become strictly EQUAL ($V_A' = V_B'$).",
+      "Electrons flow from higher potential $A$ to lower potential $B$; flow stops when charges become equal."
     ],
     "oh": [
-      "इलेक्ट्रॉन उच्च विभव $A$ से निम्न विभव $B$ की ओर प्रवाहित होते हैं; आवेश समान होने पर प्रवाह रुक जाता है।",
-      "ऋणात्मक मुक्त इलेक्ट्रॉन निम्न विभव $B$ से उच्च विभव $A$ की ओर प्रवाहित होते हैं (पारंपरिक धनात्मक आवेश $A$ से $B$ की ओर प्रवाहित होता है); जब दोनों पिंडों का विद्युत विभव पूरी तरह से समान ($V_A' = V_B'$) हो जाता है तो प्रवाह समाप्त हो जाता है।",
+      "इलेक्ट्रॉन छोटे पिंड से बड़े पिंड की ओर तब तक प्रवाहित होते हैं जब तक आयतन मेल न खा जाए।",
       "विभव मानों की परवाह किए बिना इलेक्ट्रॉन अंतहीन रूप से प्रवाहित होते हैं।",
-      "इलेक्ट्रॉन छोटे पिंड से बड़े पिंड की ओर तब तक प्रवाहित होते हैं जब तक आयतन मेल न खा जाए।"
+      "ऋणात्मक मुक्त इलेक्ट्रॉन निम्न विभव $B$ से उच्च विभव $A$ की ओर प्रवाहित होते हैं (पारंपरिक धनात्मक आवेश $A$ से $B$ की ओर प्रवाहित होता है); जब दोनों पिंडों का विद्युत विभव पूरी तरह से समान ($V_A' = V_B'$) हो जाता है तो प्रवाह समाप्त हो जाता है।",
+      "इलेक्ट्रॉन उच्च विभव $A$ से निम्न विभव $B$ की ओर प्रवाहित होते हैं; आवेश समान होने पर प्रवाह रुक जाता है।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Electric potential thermodynamics ke temperature ki tarah work karta hai jo charge flow ki natural direction decide karta hai.\n\n• Option A is Incorrect because electrons negative charge carry karte hain isliye wo higher to lower nahi balki lower to higher potential drift karte hain, aur charge flow charge equality par nahi balki potential equality par stop hota hai.\n\n• Option B is Correct because Conventional current higher potential ($V_A$) se lower potential ($V_B$) ki taraf flow karta hai. Chunki free electrons negative charge ($-e$) carry karte hain, isliye electrons lower potential $B$ se higher potential $A$ ki taraf move karte hain. Charge ka yeh transfer tab tak continue rehta hai jab tak dono bodies ka Electric Potential exactly EQUAL ($V_A' = V_B'$) nahi ho jata (Electrostatic Equilibrium).\n\n• Option C is Incorrect because equilibrium achieve hote hi net current zero ho jata hai.\n\n• Option D is Incorrect because body volume charge flow ka equilibrium criterion nahi hai.\n\nHeat vs Charge analogy: Heat flows from High Temp $\\to$ Low Temp until $T_1 = T_2$; Charge flows from High Potential $\\to$ Low Potential until $V_1 = V_2$ (not until charges or heat capacities match)."
   },
   {
@@ -384,16 +384,16 @@
     "qe": "Current density ($J$) and electric current ($I$) describe the flow of charge through a conductor. Which choice correctly contrasts their physical vector/scalar classifications and defining mathematical relationships?",
     "qh": "धारा घनत्व ($J$) और विद्युत धारा ($I$) एक चालक के माध्यम से आवेश के प्रवाह का वर्णन करते हैं। कौन सा विकल्प उनके भौतिक सदिश/अदिश वर्गीकरण और परिभाषित गणितीय संबंधों की सही तुलना करता है?",
     "oe": [
-      "Electric current is a vector quantity; Current density is a scalar quantity given by $J = I \\cdot A$.",
+      "Current density is a vector quantity defined as $J = I \\cdot R$ where $R$ is resistance.",
       "Electric current is a scalar quantity; Current density ($J$) is a vector quantity defined as $J = \\frac{I}{A}$ (current per unit cross-sectional area perpendicular to flow).",
-      "Both Electric current and Current density are scalar quantities measured in Amperes.",
-      "Current density is a vector quantity defined as $J = I \\cdot R$ where $R$ is resistance."
+      "Electric current is a vector quantity; Current density is a scalar quantity given by $J = I \\cdot A$.",
+      "Both Electric current and Current density are scalar quantities measured in Amperes."
     ],
     "oh": [
-      "विद्युत धारा एक सदिश राशि है; धारा घनत्व एक अदिश राशि है जो $J = I \\cdot A$ द्वारा दी गई है।",
+      "धारा घनत्व एक सदिश राशि है जिसे $J = I \\cdot R$ के रूप में परिभाषित किया गया है जहाँ $R$ प्रतिरोध है।",
       "विद्युत धारा एक अदिश राशि है; धारा घनत्व ($J$) एक सदिश राशि है जिसे $J = \\frac{I}{A}$ (प्रवाह के लंबवत इकाई अनुप्रस्थ काट क्षेत्रफल प्रति धारा) के रूप में परिभाषित किया गया है।",
-      "विद्युत धारा और धारा घनत्व दोनों ही एम्पीयर में मापी जाने वाली अदिश राशियाँ हैं।",
-      "धारा घनत्व एक सदिश राशि है जिसे $J = I \\cdot R$ के रूप में परिभाषित किया गया है जहाँ $R$ प्रतिरोध है।"
+      "विद्युत धारा एक सदिश राशि है; धारा घनत्व एक अदिश राशि है जो $J = I \\cdot A$ द्वारा दी गई है।",
+      "विद्युत धारा और धारा घनत्व दोनों ही एम्पीयर में मापी जाने वाली अदिश राशियाँ हैं।"
     ],
     "a": 1,
     "e": "Conductor mein electric charge transport macroscopic level par Current ($I$) aur microscopic point level par Current Density ($J$) se describe hota hai.\n\n• Option A is Incorrect because Electric current scalar hoti hai aur Current density vector hoti hai.\n\n• Option B is Correct because Electric Current ($I$) ek Scalar quantity hai kyunki direction hone ke bawajood yeh vector addition rules (Triangle law) follow nahi karti balki simple scalar algebra se add hoti hai. Current Density ($J$) ek Vector quantity hai jo conductor ke kisi point par unit normal cross-sectional area se pass hone wali current ko represent karti hai: $J = \\frac{I}{A} \\quad \\text{or} \\quad I = \\int \\vec{J} \\cdot d\\vec{A}$. Iski SI unit $\\text{A/m}^2$ hoti hai aur iski direction positive charge motion ki taraf hoti hai.\n\n• Option C is Incorrect because Current density scalar nahi vector metric hai.\n\n• Option D is Incorrect because resistance product Ohm's law voltage deta hai current density nahi.\n\nExam staple: Current ($I$) = Scalar (SI unit: A); Current Density ($J$) = Vector (SI unit: $\\text{A/m}^2$)."
@@ -403,18 +403,18 @@
     "qe": "Turning on a car's starter motor causes the vehicle's headlights to dim briefly. What internal battery mechanism causes this temporary voltage drop?",
     "qh": "कार के स्टार्टर मोटर को चालू करने से वाहन की हेडलाइट्स थोड़ी देर के लिए धीमी हो जाती हैं। किस आंतरिक बैटरी तंत्र के कारण यह अस्थायी वोल्टेज ड्रॉप होता है?",
     "oe": [
-      "The starter motor short-circuits the headlights by reversing the flow of electrons.",
       "The starter motor draws a massive initial current, producing a large internal voltage drop across the battery's internal resistance ($r$), which reduces terminal voltage available to the headlights.",
+      "The starter motor short-circuits the headlights by reversing the flow of electrons.",
       "The starter motor increases the internal resistance of the battery to infinity.",
       "The battery electrolyte freezes instantly due to sudden chemical depletion."
     ],
     "oh": [
-      "स्टार्टर मोटर इलेक्ट्रॉनों के प्रवाह को उलट कर हेडलाइट्स को शॉर्ट-सर्किट करती है।",
       "स्टार्टर मोटर एक विशाल प्रारंभिक धारा खींचती है, जिससे बैटरी के आंतरिक प्रतिरोध ($r$) पर एक बड़ा आंतरिक वोल्टेज ड्रॉप उत्पन्न होता है, जो हेडलाइट्स के लिए उपलब्ध टर्मिनल वोल्टेज को कम कर देता है।",
+      "स्टार्टर मोटर इलेक्ट्रॉनों के प्रवाह को उलट कर हेडलाइट्स को शॉर्ट-सर्किट करती है।",
       "स्टार्टर मोटर बैटरी के आंतरिक प्रतिरोध को अनंत तक बढ़ा देती है।",
       "अचानक रासायनिक कमी के कारण बैटरी इलेक्ट्रोलाइट तुरंत जम जाता है।"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Real chemical batteries mein internal electrolyte aur electrodes ka non-zero internal resistance ($r$) terminal voltage ko regulate karta hai.\n\n• Option A is Incorrect because starter motor parallel mein connected hoti hai reverse short-circuit nahi karti.\n\n• Option B is Correct because Car engine start karte waqt starter motor mechanical inertia overcome karne ke liye battery se bohot massive current ($I \\sim 100\\text{--}200\\text{ A}$) draw karti hai. Terminal voltage equation $V = E - I r$ ke mutabiq, is huge current $I$ ke karan battery ke internal resistance $r$ par heavy internal voltage drop ($I r$) create ho jata hai, jisse battery ka terminal potential difference ($V$) momentary drop ho jata hai aur parallel connected headlights temporarily dim ho jati hain.\n\n• Option C is Incorrect because internal resistance material property hai jo instant infinity nahi hoti.\n\n• Option D is Incorrect because electrolyte sudden freeze nahi hota.\n\nInternal resistance effect: High current draw ($I$) $\\implies$ High internal drop ($Ir$) $\\implies$ Lower Terminal Voltage ($V = E - Ir$)."
   },
   {
@@ -422,18 +422,18 @@
     "qe": "The resistance ($R$) and resistivity ($\\rho$) of a conducting wire govern its opposition to current flow. If a cylindrical metal wire is stretched to double its original length while keeping its density constant, what happens to its resistance ($R$) and resistivity ($\\rho$)?",
     "qh": "एक प्रवाहकीय तार का प्रतिरोध ($R$) और प्रतिरोधकता ($\\rho$) धारा प्रवाह के इसके विरोध को नियंत्रित करते हैं। यदि एक बेलनाकार धातु के तार को उसके घनत्व को स्थिर रखते हुए उसकी मूल लंबाई से दोगुना तक खींच दिया जाता है, तो इसके प्रतिरोध ($R$) और प्रतिरोधकता ($\\rho$) का क्या होता है?",
     "oe": [
+      "Resistance is halved ($\\frac{R}{2}$); Resistivity decreases by a factor of 4.",
       "Resistance quadruples ($4R$); Resistivity remains strictly unchanged ($\\rho$).",
       "Resistance doubles ($2R$); Resistivity doubles ($2\\rho$).",
-      "Resistance remains constant ($R$); Resistivity quadruples ($4\\rho$).",
-      "Resistance is halved ($\\frac{R}{2}$); Resistivity decreases by a factor of 4."
+      "Resistance remains constant ($R$); Resistivity quadruples ($4\\rho$)."
     ],
     "oh": [
+      "प्रतिरोध आधा हो जाता है ($\\frac{R}{2}$); प्रतिरोधकता 4 के कारक से घट जाती है।",
       "प्रतिरोध चार गुना ($4R$) हो जाता है; प्रतिरोधकता सख्ती से अपरिवर्तित ($\\rho$) रहती है।",
       "प्रतिरोध दोगुना ($2R$) हो जाता है; प्रतिरोधकता दोगुनी ($2\\rho$) हो जाती है।",
-      "प्रतिरोध स्थिर रहता है ($R$); प्रतिरोधकता चार गुना ($4\\rho$) हो जाती है।",
-      "प्रतिरोध आधा हो जाता है ($\\frac{R}{2}$); प्रतिरोधकता 4 के कारक से घट जाती है।"
+      "प्रतिरोध स्थिर रहता है ($R$); प्रतिरोधकता चार गुना ($4\\rho$) हो जाती है।"
     ],
-    "a": 0,
+    "a": 1,
     "e": "Conductor wire ka resistance geometric dimensions ($l, A$) par depend karta hai jabki resistivity intrinsic material property hoti hai.\n\n• Option A is Correct because: (1) Resistivity ($\\rho$): Material specific property hai jo temperature aur atomic composition par depend karti hai, length khinchne par $\\rho$ strictly unchanged rehti hai; (2) Resistance ($R$): Wire stretch karne par total volume constant rehta hai ($V = A \\cdot l = \\text{constant}$). Jab length double ($l' = 2l$) hogi, toh cross-sectional area half ($A' = A/2$) ho jayega. Formula mein substitute karne par: $R' = \\rho \\frac{l'}{A'} = \\rho \\frac{2l}{A/2} = 4 \\left(\\rho \\frac{l}{A}\\right) = 4R$. Isliye resistance 4 times (quadruple) badh jata hai.\n\n• Option B is Incorrect because stretching par area constant nahi rehta aur resistivity change nahi hoti.\n\n• Option C is Incorrect because resistance constant nahi reh sakta.\n\n• Option D is Incorrect because elongation resistance badhata hai ghatata nahi.\n\nRule for stretching wire: Agar length $n$ guna badhayi jaye, toh Resistance $n^2$ guna ($2^2 = 4R$) ho jata hai, jabki Resistivity $\\rho$ constant rehti hai."
   },
   {
@@ -441,18 +441,18 @@
     "qe": "Evaluating the temperature dependence of electrical resistance reveals contrasting behaviors between pure metals, alloys, and semiconductors. Which choice accurately describes these temperature coefficients?",
     "qh": "विद्युत प्रतिरोध की तापमान निर्भरता का मूल्यांकन शुद्ध धातुओं, मिश्र धातुओं और अर्धचालकों के बीच विपरीत व्यवहार को उजागर करता है। कौन सा विकल्प इन तापमान गुणांकों का सटीक वर्णन करता है?",
     "oe": [
-      "For semiconductors, resistance increases with temperature; for pure metals, resistance decreases with temperature.",
       "For pure metals, resistance increases with temperature; for alloys, the increase is very small; for semiconductors, resistance decreases (conductivity increases) as temperature rises.",
       "Temperature changes have zero effect on the resistivity of pure metals and semiconductors.",
-      "For alloys, resistance drops to zero at $100^\\circ\\text{C}$."
+      "For alloys, resistance drops to zero at $100^\\circ\\text{C}$.",
+      "For semiconductors, resistance increases with temperature; for pure metals, resistance decreases with temperature."
     ],
     "oh": [
-      "अर्धचालकों के लिए तापमान के साथ प्रतिरोध बढ़ता है; शुद्ध धातुओं के लिए तापमान के साथ प्रतिरोध घटता है।",
       "शुद्ध धातुओं के लिए तापमान बढ़ने पर प्रतिरोध बढ़ता है; मिश्र धातुओं के लिए यह वृद्धि बहुत कम होती है; अर्धचालकों के लिए तापमान बढ़ने पर प्रतिरोध घटता है (चालकता बढ़ती है)।",
       "तापमान परिवर्तन का शुद्ध धातुओं और अर्धचालकों की प्रतिरोधकता पर शून्य प्रभाव पड़ता है।",
-      "मिश्र धातुओं के लिए $100^\\circ\\text{C}$ पर प्रतिरोध गिरकर शून्य हो जाता है।"
+      "मिश्र धातुओं के लिए $100^\\circ\\text{C}$ पर प्रतिरोध गिरकर शून्य हो जाता है।",
+      "अर्धचालकों के लिए तापमान के साथ प्रतिरोध बढ़ता है; शुद्ध धातुओं के लिए तापमान के साथ प्रतिरोध घटता है।"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Temperature badhne par charge carriers ki lattice collision frequency aur carrier concentration materials mein unka resistance define karte hain.\n\n• Option A is Incorrect because yeh metals aur semiconductors ke temperature characteristics ko reverse karta hai.\n\n• Option B is Correct because: (1) Pure Metals: Positive temperature coefficient ($\\alpha > 0$) possess karte hain; temperature badhne se lattice ions vibrate karte hain jisse electron collisions badhte hain aur resistance badhta hai; (2) Alloys (Nichrome, Manganin, Constantan): Inka temperature coefficient extremely low hota hai, isliye temperature badhne par resistance mein negligible change aata hai (standard resistance coils mein use hote hain); (3) Semiconductors (Silicon, Germanium, Carbon): Negative temperature coefficient ($\\alpha < 0$) possess karte hain; heat covalent bonds tod kar free electron-hole pairs release karti hai, jisse resistance ghat-ta hai (conductivity badhti hai).\n\n• Option C is Incorrect because temperature resistivity ko deeply alter karta hai.\n\n• Option D is Incorrect because superconductivity cryogenic temperatures ($T < T_c$) par aati hai $100^\\circ\\text{C}$ par nahi.\n\nTemperature coefficient summary: Metals $\\implies$ Resistance $\\uparrow$ (PTC); Semiconductors $\\implies$ Resistance $\\downarrow$ (NTC); Alloys $\\implies$ Almost Constant."
   },
   {
@@ -461,17 +461,17 @@
     "qh": "जब तीन प्रतिरोधक $R_1, R_2,$ और $R_3$ एक वोल्टेज स्रोत $V$ के पार समानांतर संयोजन (Parallel Combination) में जुड़े होते हैं, तो वोल्टेज ड्रॉप, धारा वितरण और समतुल्य प्रतिरोध ($R_p$) को क्या नियंत्रित करता है?",
     "oe": [
       "Current through each resistor is identical; Voltage divides; $R_p = R_1 + R_2 + R_3$.",
+      "Current through each branch is directly proportional to its resistance.",
       "Voltage drop across each resistor is identical ($V$); Total current is $I = I_1 + I_2 + I_3$; Reciprocal equivalent resistance is $\\frac{1}{R_p} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3}$, making $R_p$ smaller than the smallest individual resistance.",
-      "Voltage drop is directly proportional to individual resistance; Total resistance is the geometric mean of individual resistances.",
-      "Current through each branch is directly proportional to its resistance."
+      "Voltage drop is directly proportional to individual resistance; Total resistance is the geometric mean of individual resistances."
     ],
     "oh": [
       "प्रत्येक प्रतिरोधक के माध्यम से धारा समान होती है; वोल्टेज विभाजित होता है; $R_p = R_1 + R_2 + R_3$।",
+      "प्रत्येक शाखा के माध्यम से धारा उसके प्रतिरोध के सीधे आनुपातिक होती है।",
       "प्रत्येक प्रतिरोधक के पार वोल्टेज ड्रॉप समान ($V$) होता है; कुल धारा $I = I_1 + I_2 + I_3$ है; व्युत्क्रम समतुल्य प्रतिरोध $\\frac{1}{R_p} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3}$ है, जिससे $R_p$ सबसे छोटे व्यक्तिगत प्रतिरोध से भी छोटा हो जाता है।",
-      "वोल्टेज ड्रॉप व्यक्तिगत प्रतिरोध के सीधे आनुपातिक है; कुल प्रतिरोध व्यक्तिगत प्रतिरोधों का ज्यामितीय माध्य है।",
-      "प्रत्येक शाखा के माध्यम से धारा उसके प्रतिरोध के सीधे आनुपातिक होती है।"
+      "वोल्टेज ड्रॉप व्यक्तिगत प्रतिरोध के सीधे आनुपातिक है; कुल प्रतिरोध व्यक्तिगत प्रतिरोधों का ज्यामितीय माध्य है।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Electric circuits mein multiple resistors ko unke branches ke across parallel connect karke equivalent network design kiya jata hai.\n\n• Option A is Incorrect because identical current aur additive resistance Series combination ki property hoti hai.\n\n• Option B is Correct because Parallel Combination mein: (1) Sabhi parallel branches dono common nodes ke beech connected hoti hain, isliye har resistor ke across Potential Difference strictly SAME ($V$) rehta hai; (2) Total current individual branches mein divide ho jati hai ($I = I_1 + I_2 + I_3$); (3) Equivalent resistance reciprocal formula se calculate hota hai: $\\frac{1}{R_p} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3}$. Jisse resultant resistance $R_p$ network ke sabse chhote resistor se bhi chhota ho jata hai (domestic wiring parallel mein hoti hai taaki har appliance ko full $220\\text{ V}$ mile).\n\n• Option C is Incorrect because geometric mean scaling circuits mein exist nahi karti.\n\n• Option D is Incorrect because current branch resistance ke inversely proportional ($I_k = V/R_k$) hoti hai.\n\nDomestic circuits are connected in Parallel: (1) Same $220\\text{ V}$ to all appliances; (2) Independent switches; (3) Overall circuit resistance minimizes."
   },
   {
@@ -479,18 +479,18 @@
     "qe": "Conductance and Conductivity measure a material's capacity to conduct electric charge. What are the correct SI units for Conductance and Conductivity, respectively?",
     "qh": "चालकता (Conductance) और विशिष्ट चालकता (Conductivity) विद्युत आवेश को संचालित करने की किसी सामग्री की क्षमता को मापते हैं। क्रमशः चालकता और विशिष्ट चालकता के लिए सही SI इकाइयाँ क्या हैं?",
     "oe": [
-      "Conductance: $\\Omega \\cdot \\text{m}$; Conductivity: $\\Omega$",
       "Conductance: Siemens (S) or $\\Omega^{-1}$ (mho); Conductivity: $\\text{Siemens}\\cdot\\text{m}^{-1}$ or $\\Omega^{-1}\\text{m}^{-1}$ (mho$\\cdot\\text{m}^{-1}$)",
-      "Conductance: Volt per Ampere; Conductivity: Ampere per Volt",
-      "Conductance: Watt; Conductivity: Joule per second"
+      "Conductance: $\\Omega \\cdot \\text{m}$; Conductivity: $\\Omega$",
+      "Conductance: Watt; Conductivity: Joule per second",
+      "Conductance: Volt per Ampere; Conductivity: Ampere per Volt"
     ],
     "oh": [
-      "चालकता: $\\Omega \\cdot \\text{m}$; विशिष्ट चालकता: $\\Omega$",
       "चालकता: सीमेंस (S) या $\\Omega^{-1}$ (mho); विशिष्ट चालकता: $\\text{सीमेंस}\\cdot\\text{m}^{-1}$ या $\\Omega^{-1}\\text{m}^{-1}$ (mho$\\cdot\\text{m}^{-1}$)",
-      "चालकता: वोल्ट प्रति एम्पीयर; विशिष्ट चालकता: एम्पीयर प्रति वोल्ट",
-      "चालकता: वाट; विशिष्ट चालकता: जूल प्रति सेकंड"
+      "चालकता: $\\Omega \\cdot \\text{m}$; विशिष्ट चालकता: $\\Omega$",
+      "चालकता: वाट; विशिष्ट चालकता: जूल प्रति सेकंड",
+      "चालकता: वोल्ट प्रति एम्पीयर; विशिष्ट चालकता: एम्पीयर प्रति वोल्ट"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Electrical conductivity parameters resistance aur resistivity ke reciprocal transport metrics ke roop mein defined hote hain.\n\n• Option A is Incorrect because $\\Omega \\cdot \\text{m}$ resistivity ki unit hai aur $\\Omega$ resistance ki unit hai.\n\n• Option B is Correct because: (1) Conductance ($G$): Resistance ka reciprocal hota hai ($G = 1/R$), isliye iski SI unit $\\Omega^{-1}$ (ohm$^{-1}$), mho, ya Siemens (S) hoti hai; (2) Conductivity ($\\sigma$): Resistivity ka reciprocal hota hai ($\\sigma = 1/\\rho$), isliye iski SI unit $\\Omega^{-1}\\text{m}^{-1}$, mho$\\cdot\\text{m}^{-1}$, ya $\\text{Siemens}\\cdot\\text{m}^{-1}$ (S/m) hoti hai.\n\n• Option C is Incorrect because Volt per Ampere Ohm (resistance) hota hai.\n\n• Option D is Incorrect because Watt aur Joule per second electric power ki units hain.\n\nPair matching: Resistance ($R$) $\\to \\Omega$; Resistivity ($\\rho$) $\\to \\Omega\\cdot\\text{m}$; Conductance ($G$) $\\to \\text{Siemens (S)}$; Conductivity ($\\sigma$) $\\to \\text{S/m}$."
   },
   {
@@ -499,17 +499,17 @@
     "qh": "अतिचालक (Superconductors) विद्युत भौतिकी में पदार्थ की एक विशिष्ट अवस्था का प्रतिनिधित्व करते हैं। जब कोई सामग्री अपने क्रांतिक तापमान ($T_c$) से नीचे अतिचालक अवस्था में प्रवेश करती है तो कौन सा परिभाषित विद्युत संक्रमण होता है?",
     "oe": [
       "Electrical resistance increases to infinity, stopping all current flow.",
-      "Electrical resistance drops strictly to zero ($R = 0$), allowing electric current to persist indefinitely without energy dissipation.",
       "Electrical potential difference across the material becomes infinite.",
-      "The material begins emitting intense X-ray radiation continuously."
+      "The material begins emitting intense X-ray radiation continuously.",
+      "Electrical resistance drops strictly to zero ($R = 0$), allowing electric current to persist indefinitely without energy dissipation."
     ],
     "oh": [
       "विद्युत प्रतिरोध अनंत तक बढ़ जाता है, जिससे सभी धारा प्रवाह रुक जाते हैं।",
-      "विद्युत प्रतिरोध सख्ती से शून्य ($R = 0$) तक गिर जाता है, जिससे विद्युत धारा बिना किसी ऊर्जा क्षय के अनिश्चित काल तक बनी रहती है।",
       "सामग्री के पार विद्युत विभवांतर अनंत हो जाता है।",
-      "सामग्री लगातार तीव्र एक्स-रे विकिरण उत्सर्जित करने लगती है।"
+      "सामग्री लगातार तीव्र एक्स-रे विकिरण उत्सर्जित करने लगती है।",
+      "विद्युत प्रतिरोध सख्ती से शून्य ($R = 0$) तक गिर जाता है, जिससे विद्युत धारा बिना किसी ऊर्जा क्षय के अनिश्चित काल तक बनी रहती है।"
     ],
-    "a": 1,
+    "a": 3,
     "e": "1911 mein Heike Kamerlingh Onnes ne liquid helium cooling experiment ke dauran Mercury ($4.2\\text{ K}$) mein Superconductivity discover ki thi.\n\n• Option A is Incorrect because infinite resistance insulator transformation hota hai superconductor nahi.\n\n• Option B is Correct because Superconductivity mein jab kisi conductor ko uske specific Critical Temperature ($T_c$) ke niche cool kiya jata hai, toh uska Electrical Resistance abruptly gir kar strictly ZERO ($R = 0$) ho jata hai. Zero resistance hone ke karan superconducting closed loop mein electric current bina kisi battery support aur bina kisi Joule heating energy loss ($I^2 R t = 0$) ke saalon tak persistently flow karta rehta hai (sath hi Meissner Effect ke tahat internal magnetic field $B = 0$ expulse ho jata hai).\n\n• Option C is Incorrect because zero resistance par potential drop $V = IR = 0$ zero ho jata hai.\n\n• Option D is Incorrect because superconductivity low-temperature macroscopic quantum state hai X-ray emitter nahi.\n\nSuperconductor hallmarks: (1) Zero Electrical Resistance ($R = 0$); (2) Perfect Diamagnetism / Meissner Effect ($B = 0$ inside)."
   },
   {
@@ -518,17 +518,17 @@
     "qh": "थर्मिस्टर (Thermistor) एक विशेष अर्धचालक उपकरण है जिसका विद्युत प्रतिरोध तापमान के साथ तेजी से बदलता है। कौन सा अनुप्रयोग अपनी संवेदनशील थर्मल प्रतिक्रिया के कारण थर्मिस्टर पर निर्भर करता है?",
     "oe": [
       "Building high-power transmission line cables to replace copper.",
+      "Generating magnetic levitation forces inside vacuum tubes.",
       "Detecting minute temperature changes, measuring very low temperatures, and protecting transformer or motor windings against overheating.",
-      "Converting sound waves into high-voltage direct current.",
-      "Generating magnetic levitation forces inside vacuum tubes."
+      "Converting sound waves into high-voltage direct current."
     ],
     "oh": [
       "तांबे को बदलने के लिए उच्च-शक्ति संचरण लाइन केबल का निर्माण करना।",
+      "वैक्यूम ट्यूबों के अंदर चुंबकीय उत्तोलन बल उत्पन्न करना।",
       "सूक्ष्म तापमान परिवर्तनों का पता लगाना, बहुत कम तापमान मापना, और ट्रांसफार्मर या मोटर वाइंडिंग को ओवरहीटिंग से बचाना।",
-      "ध्वनि तरंगों को उच्च-वोल्टेज प्रत्यक्ष धारा में परिवर्तित करना।",
-      "वैक्यूम ट्यूबों के अंदर चुंबकीय उत्तोलन बल उत्पन्न करना।"
+      "ध्वनि तरंगों को उच्च-वोल्टेज प्रत्यक्ष धारा में परिवर्तित करना।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Thermistor ('Thermal Resistor') ek temperature-sensitive semiconductor component hota hai jiska resistance temperature ke sath rapidly vary karta hai.\n\n• Option A is Incorrect because high resistance temperature variation ke karan thermistors transmission cables mein use nahi ho sakte.\n\n• Option B is Correct because Thermistors sintered metallic oxides (Manganese, Nickel, Cobalt) se bane hote hain aur high negative (NTC) ya positive (PTC) temperature coefficient exhibit karte hain. Temperature mein fractional change hone par bhi inka resistance massively change hota hai, isliye inka use: (1) Precision electronic thermometers mein minute temperature changes detect karne; (2) Cryogenic temperature sensors mein; (3) Overheating protection circuits mein transformers aur electric motors ki winding ko jalne se bachane ke liye thermostat cut-off ki tarah kiya jata hai.\n\n• Option C is Incorrect because acoustic conversion microphones/piezoelectrics karte hain.\n\n• Option D is Incorrect because magnetic levitation superconductors karte hain thermistors nahi.\n\nThermistor core characteristic: Extremely high sensitivity to temperature changes compared to standard metallic RTDs."
   },
   {
@@ -536,18 +536,18 @@
     "qe": "Electromotive force (EMF) and terminal potential difference ($V$) characterize electric cells. Under what condition does the terminal potential difference ($V$) across a cell strictly EQUAL its EMF ($E$)?",
     "qh": "विद्युत वाहक बल (EMF) और टर्मिनल विभवांतर ($V$) विद्युत सेलों की विशेषता बताते हैं। किस स्थिति में किसी सेल का टर्मिनल विभवांतर ($V$) उसके EMF ($E$) के सख्ती से बराबर होता है?",
     "oe": [
-      "When the cell is discharging maximum current through a zero-resistance wire.",
       "When no current is drawn from the cell (open-circuit condition, $I = 0$).",
-      "When the cell is being charged rapidly by an external power source.",
-      "When the internal resistance of the cell increases to infinity during current draw."
+      "When the internal resistance of the cell increases to infinity during current draw.",
+      "When the cell is discharging maximum current through a zero-resistance wire.",
+      "When the cell is being charged rapidly by an external power source."
     ],
     "oh": [
-      "जब सेल शून्य-प्रतिरोध तार के माध्यम से अधिकतम धारा का निर्वहन कर रहा हो।",
       "जब सेल से कोई धारा नहीं खींची जाती है (ओपन-सर्किट स्थिति, $I = 0$)।",
-      "जब सेल को किसी बाहरी शक्ति स्रोत द्वारा तेजी से चार्ज किया जा रहा हो।",
-      "जब धारा निकासी के दौरान सेल का आंतरिक प्रतिरोध अनंत तक बढ़ जाता है।"
+      "जब धारा निकासी के दौरान सेल का आंतरिक प्रतिरोध अनंत तक बढ़ जाता है।",
+      "जब सेल शून्य-प्रतिरोध तार के माध्यम से अधिकतम धारा का निर्वहन कर रहा हो।",
+      "जब सेल को किसी बाहरी शक्ति स्रोत द्वारा तेजी से चार्ज किया जा रहा हो।"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Electromotive Force (EMF, $E$) cell ke chemical electrodes ke beech ka maximum potential difference hota hai jab circuit operational load par na ho.\n\n• Option A is Incorrect because short-circuit ($R=0$) par maximum current $I = E/r$ flow hota hai aur terminal voltage drop hokar $V = 0$ ho jata hai.\n\n• Option B is Correct because Real cell ki circuit equation $V = E - I r$ hoti hai (jahan $r$ internal resistance hai). Jab cell Open Circuit ($I = 0$) condition mein hota hai (koi current circuit mein flow nahi ho rahi hoti), toh internal voltage drop $I r = 0$ ho jata hai, jisse terminal potential difference strictly EMF ke barabar ho jata hai ($V = E$).\n\n• Option C is Incorrect because charging ke dauran external voltage supply EMF se zyada hoti hai ($V = E + I r > E$).\n\n• Option D is Incorrect because current draw hone par $Ir$ drop hamesha $V < E$ bana deta hai.\n\nCell voltage conditions: (1) Discharging: $V = E - Ir < E$; (2) Charging: $V = E + Ir > E$; (3) Open Circuit ($I=0$): $V = E$."
   },
   {
@@ -555,18 +555,18 @@
     "qe": "Standard incandescent light bulbs frequently burn out (fuse) right at the instant they are switched on. What thermodynamic/electrical mechanism causes this switch-on failure?",
     "qh": "मानक तापदीप्त प्रकाश बल्ब (incandescent light bulbs) अक्सर चालू किए जाने के क्षण ही फ्यूज (जल) जाते हैं। कौन सा ऊष्मागतिकी/विद्युत तंत्र इस स्विच-ऑन विफलता का कारण बनता है?",
     "oe": [
-      "The switch creates an electrostatic shock wave that shatters the glass bulb.",
       "The cold tungsten filament has very low electrical resistance, causing a sudden massive current surge upon switching on that thermally snaps the wire.",
+      "The switch creates an electrostatic shock wave that shatters the glass bulb.",
       "Inactive nitrogen gas inside the bulb explodes due to instant oxidation.",
       "The bulb's internal resistance drops to zero, converting AC current into DC voltage."
     ],
     "oh": [
-      "स्विच एक इलेक्ट्रोस्टैटिक शॉक वेव बनाता है जो कांच के बल्ब को चकनाचूर कर देता है।",
       "ठंडे टंगस्टन फिलामेंट में बहुत कम विद्युत प्रतिरोध होता है, जिससे स्विच ऑन करने पर अचानक भारी धारा का प्रवाह होता है जो तार को तापीय रूप से तोड़ देता है।",
+      "स्विच एक इलेक्ट्रोस्टैटिक शॉक वेव बनाता है जो कांच के बल्ब को चकनाचूर कर देता है।",
       "बल्ब के अंदर की निष्क्रिय नाइट्रोजन गैस तुरंत ऑक्सीकरण के कारण फट जाती है।",
       "बल्ब का आंतरिक प्रतिरोध शून्य हो जाता है, जिससे AC धारा DC वोल्टेज में परिवर्तित हो जाती है।"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Incandescent electric bulbs metallic tungsten filament ke high-temperature Joule heating ($I^2 R t$) principle par work karte hain.\n\n• Option A is Incorrect because switch mechanical contact banata hai glass shattering shockwave nahi.\n\n• Option B is Correct because Tungsten metal positive temperature coefficient of resistance ($R \\propto T$) exhibit karta hai. Jab bulb band hota hai, toh room temperature par cold filament ka initial resistance ($R_{\\text{cold}}$) normal operating resistance se lagbhag 10 se 12 guna KAM hota hai. Switch ON karte hi low resistance ke karan achanak ek massive current surge ($I = V / R_{\\text{cold}}$) draw hota hai, jo aged ya thinned filament wire par sudden thermal mechanical stress daal kar use turant fuse (snap) kar deta hai.\n\n• Option C is Incorrect because nitrogen/argon inactive gases hain jo combustion ya explosion nahi karti.\n\n• Option D is Incorrect because AC/DC conversion rectifier se hota hai bulb resistance se nahi.\n\nPhysics reason behind bulb fusing at switch-on: Cold Filament $\\implies$ Very Low Resistance $\\implies$ Massive Current Surge ($I_{\\text{surge}}$) $\\implies$ Rapid Thermal Snapping."
   },
   {
@@ -575,17 +575,17 @@
     "qh": "लंबे समय तक उपयोग के बाद, तापदीप्त प्रकाश बल्ब कांच की आंतरिक दीवार का धीमा होना और काला होना प्रदर्शित करते हैं। कौन सी भौतिक प्रक्रिया ब्लैक कोटिंग और प्रकाश उत्पादन में कमी दोनों का कारण बनती है?",
     "oe": [
       "Argon gas inside the bulb breaks down into black carbon soot.",
+      "Electrons leak through the glass wall, leaving behind uncharged black ions.",
       "Tungsten slowly evaporates at high operating temperatures, depositing a dark metal coating on the glass wall while thinning the filament (increasing its resistance and lowering power output).",
-      "Glass reacts chemically with electric field lines to form lead oxide.",
-      "Electrons leak through the glass wall, leaving behind uncharged black ions."
+      "Glass reacts chemically with electric field lines to form lead oxide."
     ],
     "oh": [
       "बल्ब के अंदर की आर्गन गैस काले कार्बन कालिख में टूट जाती है।",
+      "इलेक्ट्रॉन कांच की दीवार से बाहर निकलते हैं, जिससे अनावेशित काले आयन पीछे रह जाते हैं।",
       "टंगस्टन उच्च परिचालन तापमान पर धीरे-धीरे वाष्पीकृत होता है, जिससे कांच की दीवार पर एक गहरे रंग की धातु की परत जम जाती है जबकि फिलामेंट पतला हो जाता है (इसका प्रतिरोध बढ़ जाता है और शक्ति उत्पादन कम हो जाता है)।",
-      "कांच लेड ऑक्साइड बनाने के लिए विद्युत क्षेत्र रेखाओं के साथ रासायनिक रूप से प्रतिक्रिया करता है।",
-      "इलेक्ट्रॉन कांच की दीवार से बाहर निकलते हैं, जिससे अनावेशित काले आयन पीछे रह जाते हैं।"
+      "कांच लेड ऑक्साइड बनाने के लिए विद्युत क्षेत्र रेखाओं के साथ रासायनिक रूप से प्रतिक्रिया करता है।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Incandescent bulb ka glowing filament $\\approx 2700^\\circ\\text{C}$ ke extreme temperature par operate karta hai jisse slow material degradation hota hai.\n\n• Option A is Incorrect because argon inert noble gas hai jo carbon soot form nahi kar sakti.\n\n• Option B is Correct because High operating temperature par tungsten metal slow thermal evaporation undergo karta hai. Evaporate hua tungsten vapor bulb ki cooler glass surface par condense hokar black metallic film deposit kar deta hai jo light ko absorb karti hai. Sath hi, metal loss hone se filament wire thin (chhota cross-sectional area $A$) ho jata hai; formula $R = \\rho \\frac{l}{A}$ se filament ka resistance badh jata hai, jisse power consumption $P = \\frac{V^2}{R}$ ghat jati hai aur bulb samay ke sath dim ho jata hai.\n\n• Option C is Incorrect because electric field lines chemical oxides manufacture nahi karti.\n\n• Option D is Incorrect because glass dielectric barrier hai charge ion soot nahi chhodta.\n\nDual aging effect in bulbs: Tungsten Evaporation $\\implies$ (1) Black inner deposit on glass (light absorption); (2) Thinner wire $\\implies R \\uparrow \\implies$ Power Output $P \\downarrow$ (Bulb dims)."
   },
   {
@@ -593,18 +593,18 @@
     "qe": "Tungsten is universally used as the filament material in incandescent electric bulbs. What two physical properties make tungsten uniquely suitable for high-temperature illumination?",
     "qh": "तापदीप्त बिजली के बल्बों में फिलामेंट सामग्री के रूप में टंगस्टन का सार्वभौमिक रूप से उपयोग किया जाता है। कौन से दो भौतिक गुण टंगस्टन को उच्च तापमान वाले प्रकाश के लिए विशिष्ट रूप से उपयुक्त बनाते हैं?",
     "oe": [
+      "Zero thermal expansion and magnetic repulsion",
       "Low melting point and low electrical resistivity",
-      "High melting point ($3380^\\circ\\text{C}$) and high electrical resistivity",
       "Infinite electrical conductivity and transparent optical clarity",
-      "Zero thermal expansion and magnetic repulsion"
+      "High melting point ($3380^\\circ\\text{C}$) and high electrical resistivity"
     ],
     "oh": [
+      "शून्य तापीय विस्तार और चुंबकीय प्रतिकर्षण",
       "कम गलनांक और कम विद्युत प्रतिरोधकता",
-      "उच्च गलनांक ($3380^\\circ\\text{C}$) और उच्च विद्युत प्रतिरोधकता",
       "अनंत विद्युत चालकता और पारदर्शी प्रकाशिक स्पष्टता",
-      "शून्य तापीय विस्तार और चुंबकीय प्रतिकर्षण"
+      "उच्च गलनांक ($3380^\\circ\\text{C}$) और उच्च विद्युत प्रतिरोधकता"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Incandescent lighting white-hot thermal radiation (incandescence) generate karne ke liye specialized refractory metals demand karti hai.\n\n• Option A is Incorrect because low melting point material high temperature par instantly melt hokar snap ho jayega.\n\n• Option B is Correct because Incandescent bulb filament ko bina pighle white-hot glow karne ke liye $\\approx 2700^\\circ\\text{C}$ tak reach karna hota hai. Tungsten (Wolfram, $W$) uniquely suitable hai kyunki: (1) Iska Melting Point extremely HIGH hota hai ($3380^\\circ\\text{C}$) jo metals mein highest hai; (2) Iski Electrical Resistivity high hoti hai, jisse compact coiled wire form mein substantial Joule heating ($I^2 R$) develop hoti hai (sath hi bulb mein Argon/Nitrogen fill karke oxidation prevent kiya jata hai).\n\n• Option C is Incorrect because infinite conductivity Joule heating zero kar degi ($I^2 R = 0$).\n\n• Option D is Incorrect because magnetic repulsion illumination physics ka requirement nahi hai.\n\nFilament selection criteria: High Melting Point ($3380^\\circ\\text{C}$) + High Resistivity + High Ductility (can be drawn into thin coils)."
   },
   {
@@ -612,18 +612,18 @@
     "qe": "Commercial electrical appliances like electric irons, toasters, and water heaters utilize heating elements made of alloys (such as Nichrome) rather than pure metals. Why are alloys preferred over pure metals for electrical heating elements?",
     "qh": "इलेक्ट्रिक आयरन, टोस्टर और वॉटर हीटर जैसे व्यावसायिक विद्युत उपकरण शुद्ध धातुओं के बजाय मिश्र धातुओं (जैसे नाइक्रोम) से बने हीटिंग तत्वों का उपयोग करते हैं। विद्युत हीटिंग तत्वों के लिए शुद्ध धातुओं की तुलना में मिश्र धातुओं को क्यों प्राथमिकता दी जाती है?",
     "oe": [
-      "Alloys have lower resistivity than pure metals and melt at room temperature.",
       "Alloys possess higher electrical resistivity than pure metals and do NOT oxidize (burn) easily at high operating temperatures.",
-      "Alloys act as superconductors when heated red-hot.",
-      "Alloys eliminate all internal potential differences in heating circuits."
+      "Alloys eliminate all internal potential differences in heating circuits.",
+      "Alloys have lower resistivity than pure metals and melt at room temperature.",
+      "Alloys act as superconductors when heated red-hot."
     ],
     "oh": [
-      "मिश्र धातुओं की प्रतिरोधकता शुद्ध धातुओं की तुलना में कम होती है और कमरे के तापमान पर पिघल जाती है।",
       "मिश्र धातुओं में शुद्ध धातुओं की तुलना में उच्च विद्युत प्रतिरोधकता होती है और वे उच्च परिचालन तापमान पर आसानी से ऑक्सीकृत (जलती) नहीं हैं।",
-      "लाल-गर्म गर्म होने पर मिश्र धातुएं अतिचालक के रूप में कार्य करती हैं।",
-      "मिश्र धातुएं हीटिंग सर्किट में सभी आंतरिक संभावित अंतरों को समाप्त करती हैं।"
+      "मिश्र धातुएं हीटिंग सर्किट में सभी आंतरिक संभावित अंतरों को समाप्त करती हैं।",
+      "मिश्र धातुओं की प्रतिरोधकता शुद्ध धातुओं की तुलना में कम होती है और कमरे के तापमान पर पिघल जाती है।",
+      "लाल-गर्म गर्म होने पर मिश्र धातुएं अतिचालक के रूप में कार्य करती हैं।"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Electric heating appliances (Heaters, Geysers, Toasters) electrical energy ko thermal Joule heat ($H = I^2 R t$) mein efficiently convert karne ke liye design hote hain.\n\n• Option A is Incorrect because alloys ki resistivity pure metals se zyada hoti hai aur melting point high hota hai.\n\n• Option B is Correct because Heating elements ke liye Nichrome ($80\\%\\text{ Ni} + 20\\%\\text{ Cr}$) jaise alloys ko use kiya jata hai kyunki: (1) Inki Resistivity ($\\rho$) pure copper ya aluminum se bohot zyada hoti hai, jisse compact length mein high resistance aur massive heat generate hoti hai; (2) Red-hot temperatures ($800\\text{--}1000^\\circ\\text{C}$) par continuous air exposure ke bawajood yeh easily Oxidize (burn/corrode) nahi hote, jo heating element ki long life ensure karta hai.\n\n• Option C is Incorrect because high temperature superconductivity destroy karta hai.\n\n• Option D is Incorrect because heating circuits potential drop par hi work karte hain.\n\nHeating Element requirements (Nichrome): High Resistivity + High Melting Point + High Oxidation Resistance (No burning at red-hot state)."
   },
   {
@@ -631,18 +631,18 @@
     "qe": "A Rheostat (or variable resistor) is incorporated into electrical testing circuits. What is the operational function of a rheostat in a circuit?",
     "qh": "एक रियोस्टैट (या परिवर्तनशील प्रतिरोधक) को विद्युत परीक्षण परिपथों में शामिल किया जाता है। एक परिपथ में रियोस्टैट का परिचालन कार्य क्या है?",
     "oe": [
-      "To change the main voltage source value continuously.",
-      "To regulate or change the electric current in a circuit by varying its resistance, without altering the primary voltage source.",
+      "To measure the absolute electric flux passing through a wire.",
       "To convert direct current (DC) into alternating current (AC).",
-      "To measure the absolute electric flux passing through a wire."
+      "To change the main voltage source value continuously.",
+      "To regulate or change the electric current in a circuit by varying its resistance, without altering the primary voltage source."
     ],
     "oh": [
-      "मुख्य वोल्टेज स्रोत मान को लगातार बदलना।",
-      "प्राथमिक वोल्टेज स्रोत को बदले बिना, अपने प्रतिरोध को बदलकर सर्किट में विद्युत धारा को विनियमित या परिवर्तित करना।",
+      "एक तार से गुजरने वाले पूर्ण विद्युत फ्लक्स को मापना।",
       "प्रत्यक्ष धारा (DC) को प्रत्यावर्ती धारा (AC) में परिवर्तित करना।",
-      "एक तार से गुजरने वाले पूर्ण विद्युत फ्लक्स को मापना।"
+      "मुख्य वोल्टेज स्रोत मान को लगातार बदलना।",
+      "प्राथमिक वोल्टेज स्रोत को बदले बिना, अपने प्रतिरोध को बदलकर सर्किट में विद्युत धारा को विनियमित या परिवर्तित करना।"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Electrical laboratory circuits mein current level dynamically adjust karne ke liye adjustable resistance mechanisms use kiye jaate hain.\n\n• Option A is Incorrect because voltage source (battery/generator) fixed rehta hai, rheostat circuit resistance alter karta hai.\n\n• Option B is Correct because Rheostat (Variable Resistor) ek do-terminal adjustable device hota hai jisme sliding contact ko move karke circuit mein involved resistance wire (Constantan/Manganin) ki effective length change ki jaati hai ($R = \\rho l/A$). Ohm's Law $I = V/R$ ke anusaar, fixed potential source ($V$) hone par resistance $R$ badha ya ghata kar circuit ke electric current ($I$) ko smoothly regulate kiya jata hai.\n\n• Option C is Incorrect because DC to AC conversion Inverter karta hai rheostat nahi.\n\n• Option D is Incorrect because flux measurement Fluxmeter karta hai.\n\nCircuit control: Rheostat alters Resistance ($R$) $\\implies$ Controls Current ($I$) under constant Voltage ($V$)."
   },
   {
@@ -650,18 +650,18 @@
     "qe": "Ohm's Law states that electric current flowing through a conductor is directly proportional to the applied potential difference ($V \\propto I$). Under what fundamental physical constraint does Ohm's Law strictly hold true?",
     "qh": "ओम का नियम बताता है कि एक चालक के माध्यम से बहने वाली विद्युत धारा लागू विभवांतर के सीधे आनुपातिक होती है ($V \\propto I$)। किस मौलिक भौतिक बाधा के तहत ओम का नियम सख्ती से लागू होता है?",
     "oe": [
+      "Provided the current flows at supersonic speeds.",
       "Provided the conductor is kept at absolute zero temperature in a vacuum.",
       "Provided physical conditions (such as temperature, mechanical strain, and pressure) of the conductor remain strictly constant.",
-      "Provided the current flows at supersonic speeds.",
       "Provided the conductor is made strictly of non-metallic semiconductor silicon."
     ],
     "oh": [
+      "बशर्ते धारा पराध्वनिक गति से प्रवाहित हो।",
       "बशर्ते चालक को निर्वात में परम शून्य तापमान पर रखा जाए।",
       "बशर्ते चालक की भौतिक स्थितियाँ (जैसे तापमान, यांत्रिक तनाव और दबाव) पूरी तरह स्थिर रहें।",
-      "बशर्ते धारा पराध्वनिक गति से प्रवाहित हो।",
       "बशर्ते चालक पूरी तरह से गैर-धात्विक अर्धचालक सिलिकॉन से बना हो।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "1827 mein Georg Simon Ohm ne electrical current aur potential difference ke proportional relationship ko establish kiya tha.\n\n• Option A is Incorrect because absolute zero cryogenic state Ohm's law applicability ki mandatory condition nahi hai.\n\n• Option B is Correct because Ohm's Law ($V = I R$) keval tabhi valid rehta hai jab conductor ka resistance $R$ strictly constant rahe. Chunki metallic resistance temperature ($R_T = R_0[1 + \\alpha \\Delta T]$), length aur mechanical tension par heavily depend karta hai, isliye Ohm's Law KEVAL tabhi hold karta hai jab physical conditions (Temperature, Pressure, Mechanical Strain) constant rahein. Agar high current se heating ho jaye, toh $V\\text{-}I$ graph curve hokar non-ohmic ho jata hai.\n\n• Option C is Incorrect because drift velocity of electrons extremely slow (fractions of mm/s) hoti hai.\n\n• Option D is Incorrect because semiconductors (Silicon, Germanium) inherently Non-Ohmic hote hain.\n\nOhm's Law constraint: Valid ONLY for metallic conductors under constant physical conditions (Temperature = Constant)."
   },
   {
@@ -669,16 +669,16 @@
     "qe": "Evaluating the direction of charge motion reveals differences between electron movement and conventional current. How do free electrons move inside a metallic wire connected across a DC voltage source?",
     "qh": "आवेश गति की दिशा का मूल्यांकन इलेक्ट्रॉन आंदोलन और पारंपरिक धारा के बीच अंतर को उजागर करता है। DC वोल्टेज स्रोत से जुड़े धात्विक तार के अंदर मुक्त इलेक्ट्रॉन कैसे चलते हैं?",
     "oe": [
-      "Electrons flow from higher potential (positive terminal) to lower potential (negative terminal).",
+      "Electrons move in circular orbits perpendicular to the wire axis.",
       "Electrons drift from a region of lower potential (negative terminal) toward higher potential (positive terminal); conventional current flows in the exact opposite direction.",
       "Electrons vibrate in place without any net spatial displacement.",
-      "Electrons move in circular orbits perpendicular to the wire axis."
+      "Electrons flow from higher potential (positive terminal) to lower potential (negative terminal)."
     ],
     "oh": [
-      "इलेक्ट्रॉन उच्च विभव (धनात्मक टर्मिनल) से निम्न विभव (ऋणात्मक टर्मिनल) की ओर प्रवाहित होते हैं।",
+      "इलेक्ट्रॉन तार अक्ष के लंबवत गोलाकार कक्षाओं में चलते हैं।",
       "इलेक्ट्रॉन निम्न विभव (ऋणात्मक टर्मिनल) के क्षेत्र से उच्च विभव (धनात्मक टर्मिनल) की ओर ड्रिफ्ट करते हैं; पारंपरिक धारा बिल्कुल विपरीत दिशा में प्रवाहित होती है।",
       "इलेक्ट्रॉन बिना किसी शुद्ध स्थानिक विस्थापन के अपने स्थान पर कंपन करते हैं।",
-      "इलेक्ट्रॉन तार अक्ष के लंबवत गोलाकार कक्षाओं में चलते हैं।"
+      "इलेक्ट्रॉन उच्च विभव (धनात्मक टर्मिनल) से निम्न विभव (ऋणात्मक टर्मिनल) की ओर प्रवाहित होते हैं।"
     ],
     "a": 1,
     "e": "Metallic conductors mein current conduction free conduction electrons ke directed drift velocity ($v_d$) se govern hota hai.\n\n• Option A is Incorrect because negatively charged electrons positive terminal ki taraf attract hote hain negative ki taraf nahi.\n\n• Option B is Correct because Metallic wire mein free electrons negative charge ($-e$) carry karte hain; jab electric field $\\vec{E}$ apply hota hai, toh electrostatic force $\\vec{F} = -e\\vec{E}$ field ke opposite lagta hai, jisse electrons Lower Potential (Negative terminal) se Higher Potential (Positive terminal) ki taraf drift karte hain. Historical convention ke anusaar, Conventional Current ko positive charge flow ki direction mein maana jata hai jo Higher Potential ($+$) se Lower Potential ($-$) ki taraf flow karta hai.\n\n• Option C is Incorrect because DC voltage applied hone par electrons net drift velocity ($v_d \\approx 10^{-4}\\text{ m/s}$) se displace hote hain.\n\n• Option D is Incorrect because electrons linear longitudinal electric field line ke along drift karte hain.\n\nDirection summary: Electron Drift = Negative Terminal $\\to$ Positive Terminal (Low $\\to$ High Potential); Conventional Current = Positive Terminal $\\to$ Negative Terminal (High $\\to$ Low Potential)."
@@ -707,18 +707,18 @@
     "qe": "When multiple resistors are connected end-to-end in a Series Combination, what remains CONSTANT through each resistor, and how is the total equivalent resistance ($R_s$) calculated?",
     "qh": "जब कई प्रतिरोधक एक श्रेणी संयोजन (Series Combination) में सिरों-से-सिरा जुड़े होते हैं, तो प्रत्येक प्रतिरोधक के माध्यम से क्या स्थिर रहता है, और कुल समतुल्य प्रतिरोध ($R_s$) की गणना कैसे की जाती है?",
     "oe": [
+      "Power dissipation across each resistor is identical regardless of resistance value.",
       "Voltage across each resistor remains constant; $R_s = \\frac{1}{R_1} + \\frac{1}{R_2}$.",
       "Electric current ($I$) remains strictly constant through each resistor; Total voltage is $V = V_1 + V_2 + V_3$; Equivalent resistance is maximum and equals the direct sum $R_s = R_1 + R_2 + R_3$.",
-      "Current divides inversely with resistance; Equivalent resistance is smaller than the smallest resistor.",
-      "Power dissipation across each resistor is identical regardless of resistance value."
+      "Current divides inversely with resistance; Equivalent resistance is smaller than the smallest resistor."
     ],
     "oh": [
+      "प्रतिरोध मान की परवाह किए बिना प्रत्येक प्रतिरोधक में शक्ति अपव्यय समान होता है।",
       "प्रत्येक प्रतिरोधक के पार वोल्टेज स्थिर रहता है; $R_s = \\frac{1}{R_1} + \\frac{1}{R_2}$।",
       "विद्युत धारा ($I$) प्रत्येक प्रतिरोधक के माध्यम से सख्ती से स्थिर रहती है; कुल वोल्टेज $V = V_1 + V_2 + V_3$ है; समतुल्य प्रतिरोध अधिकतम होता है और सीधे योग $R_s = R_1 + R_2 + R_3$ के बराबर होता है।",
-      "धारा प्रतिरोध के साथ व्युत्क्रमानुपाती रूप से विभाजित होती है; समतुल्य प्रतिरोध सबसे छोटे प्रतिरोधक से भी छोटा होता है।",
-      "प्रतिरोध मान की परवाह किए बिना प्रत्येक प्रतिरोधक में शक्ति अपव्यय समान होता है।"
+      "धारा प्रतिरोध के साथ व्युत्क्रमानुपाती रूप से विभाजित होती है; समतुल्य प्रतिरोध सबसे छोटे प्रतिरोधक से भी छोटा होता है।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Resistors ka series combination ek single sequential path provide karta hai jisme charge conservation current continuity maintain karta hai.\n\n• Option A is Incorrect because constant voltage parallel circuits ki property hai.\n\n• Option B is Correct because Series Combination mein: (1) Charges ke flow ke liye sirf ek single unbranched loop hota hai, isliye har resistor se pass hone wali Electric Current ($I$) strictly IDENTICAL rehti hai; (2) Total source voltage resistors ke beech divide ho jata hai ($V = V_1 + V_2 + V_3$); (3) Total combined equivalent resistance direct algebraic sum hota hai: $R_s = R_1 + R_2 + R_3$. Jisse resultant resistance network ke individual resistors se maximum badh jata hai.\n\n• Option C is Incorrect because current division parallel combinations mein hota hai.\n\n• Option D is Incorrect because series mein power dissipation $P = I^2 R$ resistance ke directly proportional hoti hai.\n\nSeries vs Parallel basics: Series $\\implies$ Current Constant, Resistance Sums Up ($R_s = \\sum R$); Parallel $\\implies$ Voltage Constant, Reciprocals Sum Up ($1/R_p = \\sum 1/R$)."
   },
   {
@@ -726,18 +726,18 @@
     "qe": "Electrical resistance ($R$) arises from microscopic internal interactions inside a current-carrying conductor. What is the fundamental physical origin of electrical resistance?",
     "qh": "विद्युत प्रतिरोध ($R$) एक धारावाही चालक के भीतर सूक्ष्म आंतरिक अंतःक्रियाओं से उत्पन्न होता है। विद्युत प्रतिरोध का मौलिक भौतिक मूल क्या है?",
     "oe": [
+      "Gravitational attraction pulling electrons toward the Earth's core.",
       "Repulsion between positive protons moving inside the lattice.",
       "Frequent collisions between drifting free electrons and vibrating fixed atoms/ions of the metallic conductor.",
-      "Friction between the outer wire surface and atmospheric air molecules.",
-      "Gravitational attraction pulling electrons toward the Earth's core."
+      "Friction between the outer wire surface and atmospheric air molecules."
     ],
     "oh": [
+      "गुरुत्वाकर्षण खिंचाव जो इलेक्ट्रॉनों को पृथ्वी के केंद्र की ओर खींचता है।",
       "जाली (lattice) के अंदर गतिमान धनात्मक प्रोटॉनों के बीच प्रतिकर्षण।",
       "ड्रिफ्टिंग मुक्त इलेक्ट्रॉनों और धात्विक चालक के कंपन करने वाले निश्चित परमाणुओं/आयनों के बीच बार-बार होने वाले टकराव।",
-      "तार की बाहरी सतह और वायुमंडलीय हवा के अणुओं के बीच घर्षण।",
-      "गुरुत्वाकर्षण खिंचाव जो इलेक्ट्रॉनों को पृथ्वी के केंद्र की ओर खींचता है।"
+      "तार की बाहरी सतह और वायुमंडलीय हवा के अणुओं के बीच घर्षण।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Drude-Lorentz electron transport model microscopic scale par electrical resistance ke origin ko explain karta hai.\n\n• Option A is Incorrect because solid conductors mein positive metallic ions rigid lattice positions par fixed hote hain drift nahi karte.\n\n• Option B is Correct because Jab conductor ke across electric field apply hota hai, toh free electrons accelerated drift karte hain. Apne raste mein yeh drifting electrons crystal lattice mein vibrate kar rahe fixed metal atoms/ions ke sath continuous frequent collisions undergo karte hain. Yeh micro-collisions electron forward momentum ko continuously obstruct karte hain aur kinetic energy ko thermal Joule heat mein convert kar dete hain, jo macroscopically Electrical Resistance ($R$) ke roop mein appear hota hai.\n\n• Option C is Incorrect because resistance bulk internal property hai surface air friction nahi.\n\n• Option D is Incorrect because gravitational force electromagnetic lattice forces ke mukable $10^{-36}$ times negligible hota hai.\n\nMicroscopic root: Lattice Ion Vibrations $\\to$ Frequent Electron Collisions $\\to$ Drifting Drift Obstruction = Electrical Resistance."
   },
   {
@@ -745,18 +745,18 @@
     "qe": "Evaluating current-voltage ($V\\text{-}I$) relationships categorizes conductors into Ohmic and Non-Ohmic devices. Which pair correctly identifies an Ohmic conductor and a Non-Ohmic device?",
     "qh": "धारा-वोल्टेज ($V\\text{-}I$) संबंधों का मूल्यांकन चालकों को ओमीय (Ohmic) और अन-ओमीय (Non-Ohmic) उपकरणों में वर्गीकृत करता है। कौन सी जोड़ी सही ढंग से एक ओमीय चालक और एक अन-ओमीय उपकरण की पहचान करती है?",
     "oe": [
-      "Ohmic: Semiconductor Diode; Non-Ohmic: Copper wire at constant temperature.",
       "Ohmic: Copper or Silver wire at constant temperature; Non-Ohmic: Semiconductor Diode, LED, or Vacuum Tube.",
+      "Ohmic: Semiconductor Diode; Non-Ohmic: Copper wire at constant temperature.",
       "Ohmic: Electrolyte solution; Non-Ohmic: Metallic resistors.",
       "Ohmic: Incandescent bulb filament; Non-Ohmic: Pure gold wire."
     ],
     "oh": [
-      "ओमीय: अर्धचालक डायोड; अन-ओमीय: स्थिर तापमान पर तांबे का तार।",
       "ओमीय: स्थिर तापमान पर तांबा या चांदी का तार; अन-ओमीय: सेमीकंडक्टर डायोड, एलईडी, या वैक्यूम ट्यूब।",
+      "ओमीय: अर्धचालक डायोड; अन-ओमीय: स्थिर तापमान पर तांबे का तार।",
       "ओमीय: इलेक्ट्रोलाइट समाधान; अन-ओमीय: धातु प्रतिरोधक।",
       "ओमीय: तापदीप्त बल्ब फिलामेंट; अन-ओमीय: शुद्ध सोने का तार।"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Electronic components unke $V\\text{-}I$ characteristic curves ki linearity ke aadhar par Ohmic aur Non-Ohmic categories mein divide hote hain.\n\n• Option A is Incorrect because yeh Ohmic aur Non-Ohmic examples ko ulta swap karta hai.\n\n• Option B is Correct because: (1) Ohmic Conductors: Jo Ohm's Law ($V = IR$) ko strictly obey karte hain aur jinka $V\\text{-}I$ graph origin se pass hone wali perfect straight line hota hai, jaise Copper, Silver, Aluminum wires constant temperature par; (2) Non-Ohmic Devices: Jinka $V\\text{-}I$ relation non-linear hota hai ya direction-dependent (unidirectional) hota hai, jaise Semiconductor Diodes (p-n junction), Transistors, LEDs, Vacuum Tubes (Triode/Diode), aur Electrolytes.\n\n• Option C is Incorrect because electrolytes non-linear dissociation curve show karte hain.\n\n• Option D is Incorrect because bulb filament self-heating ke karan temperature badhne par non-linear non-ohmic ban jata hai.\n\n$V\\text{-}I$ Curve rule: Linear straight line through origin $\\implies$ Ohmic; Curved or Asymmetric graph $\\implies$ Non-Ohmic."
   },
   {
@@ -764,16 +764,16 @@
     "qe": "An electric fuse acts as a protective current-limiting safety component in domestic wiring circuits. Which setup accurately describes how a fuse is connected and what material properties govern its operation?",
     "qh": "एक इलेक्ट्रिक फ्यूज घरेलू वायरिंग सर्किट में एक सुरक्षात्मक धारा-सीमित करने वाले सुरक्षा उपकरण के रूप में कार्य करता है। कौन सा सेटअप सटीक रूप से वर्णन करता है कि एक फ्यूज कैसे जुड़ा होता है और कौन से भौतिक गुण इसके संचालन को नियंत्रित करते हैं?",
     "oe": [
-      "Connected in parallel across the main supply; made of a high-melting-point tungsten wire.",
+      "Connected in parallel across individual electrical appliances; made of an infinite-resistance plastic polymer.",
       "Connected in series with the live main supply line; made of a low-melting-point wire (typically lead-tin alloy).",
-      "Connected in series with the neutral wire only; made of a high-resistance copper-zinc alloy.",
-      "Connected in parallel across individual electrical appliances; made of an infinite-resistance plastic polymer."
+      "Connected in parallel across the main supply; made of a high-melting-point tungsten wire.",
+      "Connected in series with the neutral wire only; made of a high-resistance copper-zinc alloy."
     ],
     "oh": [
-      "मुख्य आपूर्ति के समानांतर जुड़ा हुआ; उच्च गलनांक वाले टंगस्टन तार से बना होता है।",
+      "व्यक्तिगत विद्युत उपकरणों के समानांतर जुड़ा हुआ; अनंत-प्रतिरोध वाले प्लास्टिक पॉलिमर से बना होता है।",
       "लाइव मुख्य आपूर्ति लाइन के साथ श्रेणी (Series) में जुड़ा हुआ; कम गलनांक वाले तार (आमतौर पर लेड-टिन मिश्र धातु) से बना होता है।",
-      "केवल न्यूट्रल तार के साथ श्रेणी में जुड़ा हुआ; उच्च प्रतिरोध वाले तांबा-जस्ता मिश्र धातु से बना होता है।",
-      "व्यक्तिगत विद्युत उपकरणों के समानांतर जुड़ा हुआ; अनंत-प्रतिरोध वाले प्लास्टिक पॉलिमर से बना होता है।"
+      "मुख्य आपूर्ति के समानांतर जुड़ा हुआ; उच्च गलनांक वाले टंगस्टन तार से बना होता है।",
+      "केवल न्यूट्रल तार के साथ श्रेणी में जुड़ा हुआ; उच्च प्रतिरोध वाले तांबा-जस्ता मिश्र धातु से बना होता है।"
     ],
     "a": 1,
     "e": "Electric fuse domestic aur industrial wiring circuits ka primary over-current aur short-circuit protection device hai.\n\n• Option A is Incorrect because parallel mein fuse lagane par main supply current bypass ho jayegi aur tungsten pighlega nahi.\n\n• Option B is Correct because: (1) Series Connection with Live Wire: Fuse ko hamesha Live (Phase) Wire ke sath Series mein connect kiya jata hai taaki jab current safe limit ($5\\text{ A}, 15\\text{ A}$) se exceed kare toh saara current fuse wire se pass ho; (2) Low Melting Point Alloy: Fuse wire high resistivity aur Low Melting Point wale alloy (Lead $37\\% + \\text{Tin } 63\\%$) se bani hoti hai. Overloading ya short-circuit hote hi Joule heat ($H = I^2 R t$) wire ko instantly melt karke circuit break kar deti hai aur costly appliances safe rehte hain.\n\n• Option C is Incorrect because neutral wire par fuse lagane par circuit break hone ke baad bhi appliances live voltage par charged rehte hain jo shock hazard hai.\n\n• Option D is Incorrect because fuse conductive metal alloy hota hai polymer insulator nahi.\n\nSafety engineering rule: Fuse is ALWAYS in Series with the LIVE wire, NEVER with the Neutral or Earth wire."
@@ -783,18 +783,18 @@
     "qe": "Commercial electrical consumption is billed using the standard unit kilowatt-hour (kWh). What is the exact physical conversion of $1\\text{ kWh}$ into Joules (J), and what does $1\\text{ HP}$ equal in Watts?",
     "qh": "व्यावसायिक विद्युत खपत का बिल मानक इकाई किलोवाट-घंटा (kWh) का उपयोग करके बनाया जाता है। $1\\text{ kWh}$ का जूल (J) में सटीक भौतिक परिवर्तन क्या है, और $1\\text{ HP}$ वाट में किसके बराबर होता है?",
     "oe": [
-      "$1\\text{ kWh} = 3.6 \\times 10^3\\text{ Joules}$; $1\\text{ HP} = 1000\\text{ W}$",
       "$1\\text{ kWh} = 3.6 \\times 10^6\\text{ Joules}$; $1\\text{ HP} = 746\\text{ W}$",
-      "$1\\text{ kWh} = 1.0 \\times 10^6\\text{ Joules}$; $1\\text{ HP} = 500\\text{ W}$",
-      "$1\\text{ kWh} = 3.6 \\times 10^9\\text{ Joules}$; $1\\text{ HP} = 746\\text{ W}$"
+      "$1\\text{ kWh} = 3.6 \\times 10^9\\text{ Joules}$; $1\\text{ HP} = 746\\text{ W}$",
+      "$1\\text{ kWh} = 3.6 \\times 10^3\\text{ Joules}$; $1\\text{ HP} = 1000\\text{ W}$",
+      "$1\\text{ kWh} = 1.0 \\times 10^6\\text{ Joules}$; $1\\text{ HP} = 500\\text{ W}$"
     ],
     "oh": [
-      "$1\\text{ kWh} = 3.6 \\times 10^3\\text{ Joules}$; $1\\text{ HP} = 1000\\text{ W}$",
       "$1\\text{ kWh} = 3.6 \\times 10^6\\text{ Joules}$; $1\\text{ HP} = 746\\text{ W}$",
-      "$1\\text{ kWh} = 1.0 \\times 10^6\\text{ Joules}$; $1\\text{ HP} = 500\\text{ W}$",
-      "$1\\text{ kWh} = 3.6 \\times 10^9\\text{ Joules}$; $1\\text{ HP} = 746\\text{ W}$"
+      "$1\\text{ kWh} = 3.6 \\times 10^9\\text{ Joules}$; $1\\text{ HP} = 746\\text{ W}$",
+      "$1\\text{ kWh} = 3.6 \\times 10^3\\text{ Joules}$; $1\\text{ HP} = 1000\\text{ W}$",
+      "$1\\text{ kWh} = 1.0 \\times 10^6\\text{ Joules}$; $1\\text{ HP} = 500\\text{ W}$"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Commercial energy billing aur industrial power metrics mein standardized unit conversions use kiye jaate hain.\n\n• Option A is Incorrect because $10^3$ power factor seconds conversion ($3600\\text{ s}$) ko ignore karta hai.\n\n• Option B is Correct because: (1) Kilowatt-Hour (Commercial Unit of Electricity): $1\\text{ kWh}$ ka matlab hai $1000\\text{ Watts}$ ki power $1\\text{ hour}$ ($3600\\text{ seconds}$) tak consume hona: $1\\text{ kWh} = 1000\\text{ W} \\times 3600\\text{ s} = 3.6 \\times 10^6\\text{ Joules (or } 3.6\\text{ MJ)}$. (2) Horsepower (HP): Imperial mechanical power unit standard SI conversion ke mutabiq $1\\text{ HP} = 746\\text{ Watts}$ ke barabar hoti hai.\n\n• Option C is Incorrect because $1.0 \\times 10^6\\text{ J}$ aur $500\\text{ W}$ arbitrary non-standard conversions hain.\n\n• Option D is Incorrect because $10^9$ Gigajoules range hoti hai.\n\nDirect exam memory facts: $1\\text{ Unit (B.O.T. Unit)} = 1\\text{ kWh} = 3.6 \\times 10^6\\text{ Joules}$; $1\\text{ Horsepower (HP)} = 746\\text{ Watts}$."
   },
   {
@@ -802,18 +802,18 @@
     "qe": "Standard Indian domestic electricity supply operates on Alternating Current (AC) at $220\\text{ V}$ rms and $50\\text{ Hz}$. What is the peak voltage value ($V_{\\text{peak}}$) reached during an AC cycle, and what is the average AC voltage over one full cycle?",
     "qh": "मानक भारतीय घरेलू बिजली आपूर्ति $220\\text{ V}$ rms और $50\\text{ Hz}$ पर प्रत्यावर्ती धारा (AC) पर काम करती है। एक AC चक्र के दौरान reached शिखर वोल्टेज मान ($V_{\\text{peak}}$) क्या है, और एक पूरे चक्र में औसत AC वोल्टेज क्या है?",
     "oe": [
-      "Peak voltage is $220\\text{ V}$; Average full-cycle voltage is $220\\text{ V}$.",
-      "Peak voltage is approximately $311\\text{ V}$ ($V_{\\text{peak}} = V_{\\text{rms}} \\times \\sqrt{2}$); Average full-cycle voltage is strictly ZERO ($0\\text{ V}$).",
+      "Peak voltage is $155\\text{ V}$; Average full-cycle voltage is $311\\text{ V}$.",
       "Peak voltage is $440\\text{ V}$; Average full-cycle voltage is $110\\text{ V}$.",
-      "Peak voltage is $155\\text{ V}$; Average full-cycle voltage is $311\\text{ V}$."
+      "Peak voltage is approximately $311\\text{ V}$ ($V_{\\text{peak}} = V_{\\text{rms}} \\times \\sqrt{2}$); Average full-cycle voltage is strictly ZERO ($0\\text{ V}$).",
+      "Peak voltage is $220\\text{ V}$; Average full-cycle voltage is $220\\text{ V}$."
     ],
     "oh": [
-      "शिखर वोल्टेज $220\\text{ V}$ है; औसत पूर्ण-चक्र वोल्टेज $220\\text{ V}$ है।",
-      "शिखर वोल्टेज लगभग $311\\text{ V}$ है ($V_{\\text{peak}} = V_{\\text{rms}} \\times \\sqrt{2}$); पूर्ण चक्र में औसत वोल्टेज सख्ती से शून्य ($0\\text{ V}$) है।",
+      "शिखर वोल्टेज $155\\text{ V}$ है; औसत पूर्ण-चक्र वोल्टेज $311\\text{ V}$ है।",
       "शिखर वोल्टेज $440\\text{ V}$ है; औसत पूर्ण-चक्र वोल्टेज $110\\text{ V}$ है।",
-      "शिखर वोल्टेज $155\\text{ V}$ है; औसत पूर्ण-चक्र वोल्टेज $311\\text{ V}$ है।"
+      "शिखर वोल्टेज लगभग $311\\text{ V}$ है ($V_{\\text{peak}} = V_{\\text{rms}} \\times \\sqrt{2}$); पूर्ण चक्र में औसत वोल्टेज सख्ती से शून्य ($0\\text{ V}$) है।",
+      "शिखर वोल्टेज $220\\text{ V}$ है; औसत पूर्ण-चक्र वोल्टेज $220\\text{ V}$ है।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Sinusoidal Alternating Current (AC) continuously changing polarity aur magnitude ke sath oscillate karta hai.\n\n• Option A is Incorrect because $220\\text{ V}$ root-mean-square (rms) value hoti hai, peak amplitude nahi.\n\n• Option B is Correct because: (1) Peak Voltage ($V_0$ ya $V_{\\text{peak}}$): Quoted domestic voltage $220\\text{ V}$ RMS value hoti hai ($V_{\\text{rms}}$). Peak voltage formula $V_{\\text{peak}} = V_{\\text{rms}} \\times \\sqrt{2}$ se calculate hoti hai: $V_{\\text{peak}} = 220 \\times 1.414 \\approx 311.13\\text{ Volts}$. (2) Average Voltage over Full Cycle: AC wave half cycle positive ($+311\\text{ V}$) aur half cycle negative ($-311\\text{ V}$) symmetrical traverse karti hai, isliye ek complete full cycle ($360^\\circ$) mein net average AC voltage strictly ZERO ($0\\text{ V}$) hota hai.\n\n• Option C is Incorrect because $440\\text{ V}$ industrial 3-phase line-to-line voltage metric hai.\n\n• Option D is Incorrect because values swapped hain.\n\nWhy AC is more dangerous than DC of same voltage: $220\\text{ V}$ DC hamesha $220\\text{ V}$ rehta hai, jabki $220\\text{ V}$ AC cycle mein $+311\\text{ V}$ se $-311\\text{ V}$ peak touch karta hai."
   },
   {
@@ -821,18 +821,18 @@
     "qe": "Long-distance electrical power transmission relies heavily on high-voltage AC lines rather than low-voltage lines. Why is generated power stepped up to high voltages (like $132\\text{ kV}$) for grid transmission?",
     "qh": "लंबी दूरी का विद्युत शक्ति संचरण कम वोल्टेज लाइनों के बजाय उच्च-वोल्टेज AC लाइनों पर अत्यधिक निर्भर करता है। ग्रिड संचरण के लिए उत्पन्न शक्ति को उच्च वोल्टेज (जैसे $132\\text{ kV}$) तक क्यों बढ़ाया (stepped up) जाता है?",
     "oe": [
+      "Stepping up voltage converts AC directly into high-frequency DC without transformers.",
       "High voltage eliminates all magnetic field lines surrounding transmission towers.",
-      "Stepping up voltage lowers the transmission current ($I = \\frac{P}{V}$), exponentially reducing Joule heating losses ($I^2 R$) along long conductor cables.",
       "High voltage increases transmission wire resistance to zero.",
-      "Stepping up voltage converts AC directly into high-frequency DC without transformers."
+      "Stepping up voltage lowers the transmission current ($I = \\frac{P}{V}$), exponentially reducing Joule heating losses ($I^2 R$) along long conductor cables."
     ],
     "oh": [
+      "वोल्टेज को बढ़ाना ट्रांसफार्मर के बिना AC को सीधे उच्च-आवृत्ति DC में परिवर्तित करता है।",
       "उच्च वोल्टेज ट्रांसमिशन टावरों के आसपास की सभी चुंबकीय क्षेत्र रेखाओं को समाप्त करता है।",
-      "वोल्टेज बढ़ाने से ट्रांसमिशन करंट ($I = \\frac{P}{V}$) कम हो जाता है, जिससे लंबे कंडक्टर केबलों के साथ जूल हीटिंग नुकसान ($I^2 R$) तेजी से कम हो जाता है।",
       "उच्च वोल्टेज ट्रांसमिशन तार के प्रतिरोध को शून्य तक बढ़ा देता है।",
-      "वोल्टेज को बढ़ाना ट्रांसफार्मर के बिना AC को सीधे उच्च-आवृत्ति DC में परिवर्तित करता है।"
+      "वोल्टेज बढ़ाने से ट्रांसमिशन करंट ($I = \\frac{P}{V}$) कम हो जाता है, जिससे लंबे कंडक्टर केबलों के साथ जूल हीटिंग नुकसान ($I^2 R$) तेजी से कम हो जाता है।"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Power grids electrical energy ko generating power plants se remote cities tak hundreds of kilometers transmit karte hain.\n\n• Option A is Incorrect because magnetic fields current flow se banate hain voltage cancellation se nahi.\n\n• Option B is Correct because Transmitted electrical power constant hoti hai ($P = V I$). Step-up transformer se jab transmission voltage ($V$) ko kai guna high ($132\\text{ kV}$ ya $400\\text{ kV}$) badha diya jata hai, toh transmission lines mein current ($I = P/V$) drastically kam ho jati hai. Conductor cables mein transmission power loss Joule heat par depend karta hai ($P_{\\text{loss}} = I^2 R$); current kam hone se thermal $I^2 R$ energy losses squared proportion mein exponentially reduce ho jaate hain, jisse transmission efficiency maximum rehti hai aur cables over-heat hone se bachti hain.\n\n• Option C is Incorrect because cable resistance material geometry par depend karta hai zero nahi hota.\n\n• Option D is Incorrect because transformers AC voltage step-up/down karte hain DC conversion nahi.\n\nCore Grid rule: Higher Transmission Voltage ($V \\uparrow$) $\\implies$ Lower Current ($I \\downarrow$) $\\implies$ Minimum Thermal Loss ($I^2 R \\downarrow\\downarrow$)."
   },
   {
@@ -840,18 +840,18 @@
     "qe": "Comparing human physiological safety between Alternating Current (AC) and Direct Current (DC) shocks reveals distinct physiological threat profiles. Why is a high-voltage AC shock considered uniquely dangerous compared to a DC shock of equivalent voltage?",
     "qh": "प्रत्यावर्ती धारा (AC) और दिष्ट धारा (DC) के झटकों के बीच मानवीय शारीरिक सुरक्षा की तुलना करने पर विशिष्ट शारीरिक खतरे के प्रोफाइल का पता चलता है। समान वोल्टेज वाले DC के झटके की तुलना में उच्च-वोल्टेज वाले AC के झटके को विशिष्ट रूप से खतरनाक क्यों माना जाता है?",
     "oe": [
+      "AC shocks only affect external hair follicles without penetrating skin.",
       "AC shocks carry zero current, whereas DC shocks cause immediate tissue freezing.",
       "AC shocks induce continuous involuntary muscle tetany (locking up muscles onto the conductor) and feature a higher peak voltage ($311\\text{ V}$ for $220\\text{ V}$ rms), making them 'attractive' and difficult to release.",
-      "DC shocks alternate directions 50 times a second, causing heart fibrillation faster than AC.",
-      "AC shocks only affect external hair follicles without penetrating skin."
+      "DC shocks alternate directions 50 times a second, causing heart fibrillation faster than AC."
     ],
     "oh": [
+      "AC के झटके त्वचा में प्रवेश किए बिना केवल बाहरी बालों के रोम को प्रभावित करते हैं।",
       "AC के झटके शून्य धारा ले जाते हैं, जबकि DC के झटके तुरंत ऊतक जमने का कारण बनते हैं।",
       "AC के झटके निरंतर अनैच्छिक मांसपेशी टेटनी (मांसपेशियों को कंडक्टर पर लॉक करना) को प्रेरित करते हैं और उच्च शिखर वोल्टेज ($220\\text{ V}$ rms के लिए $311\\text{ V}$) प्रदर्शित करते हैं, जिससे वे 'आकर्षक' और छोड़ने में मुश्किल हो जाते हैं।",
-      "DC के झटके प्रति सेकंड 50 बार दिशा बदलते हैं, जिससे AC की तुलना में दिल का दौरा तेजी से पड़ता है।",
-      "AC के झटके त्वचा में प्रवेश किए बिना केवल बाहरी बालों के रोम को प्रभावित करते हैं।"
+      "DC के झटके प्रति सेकंड 50 बार दिशा बदलते हैं, जिससे AC की तुलना में दिल का दौरा तेजी से पड़ता है।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Human physiological system electro-biological impulses par operate karta hai jo external electric shocks se severely disrupt hota hai.\n\n• Option A is Incorrect because AC shock high lethal current conduct karta hai.\n\n• Option B is Correct because: (1) Muscle Tetany (The 'Let-go' Threshold): $50\\text{ Hz}$ AC ki alternating frequency biological nerve excitation rate se match karti hai, jisse muscles continuous involuntary contractions (Tetany) mein lock ho jaati hain aur victim wire ko chhod nahi pata (ise popular language mein 'shock ka chipakna' kehte hain); (2) Higher Peak Voltage: $220\\text{ V}$ AC ka actual peak voltage $311\\text{ V}$ hota hai jo equivalent $220\\text{ V}$ DC se peak-for-peak zyada damaging hota hai (DC shock usually victim ko violent single contraction se throw away karta hai).\n\n• Option C is Incorrect because directional alternation AC ki property hoti hai DC steady hota hai.\n\n• Option D is Incorrect because electric shocks deep internal heart muscles (ventricular fibrillation) ko attack karte hain.\n\nAC vs DC shock contrast: $50\\text{ Hz}$ AC causes rapid neuromuscular tetany (freezing victim's grip) + higher peak voltage ($311\\text{ V}$). Direct Current causes continuous electrochemical burns and singular muscle repulsion."
   },
   {
@@ -859,18 +859,18 @@
     "qe": "Fluorescent Tubes and Compact Fluorescent Lamps (CFLs) generate visible light via a two-stage luminescent mechanism. What primary radiation is generated inside the tube, and what material emits visible light?",
     "qh": "फ़्लोरसेंट ट्यूब और कॉम्पैक्ट फ़्लोरसेंट लैंप (CFL) एक दो-स्तरीय चमकदार तंत्र के माध्यम से दृश्य प्रकाश उत्पन्न करते हैं। ट्यूब के भीतर कौन सा प्राथमिक विकिरण उत्पन्न होता है, और कौन सी सामग्री दृश्य प्रकाश उत्सर्जित करती है?",
     "oe": [
-      "Infrared heat rays are emitted by low-pressure neon gas and reflected off metallic glass mirrors.",
-      "Low-pressure mercury vapor emits invisible Ultraviolet (UV) radiation when excited by current; a fluorescent phosphor coating inside the glass wall absorbs UV rays and re-emits visible light.",
+      "Visible white light is produced directly by glowing solid carbon filaments without internal coatings.",
       "Gamma rays are emitted by tungsten nuclear decay and absorbed by argon gas.",
-      "Visible white light is produced directly by glowing solid carbon filaments without internal coatings."
+      "Low-pressure mercury vapor emits invisible Ultraviolet (UV) radiation when excited by current; a fluorescent phosphor coating inside the glass wall absorbs UV rays and re-emits visible light.",
+      "Infrared heat rays are emitted by low-pressure neon gas and reflected off metallic glass mirrors."
     ],
     "oh": [
-      "कम दबाव वाली नियॉन गैस द्वारा अवरक्त ऊष्मा किरणें उत्सर्जित की जाती हैं और धातु के कांच के दर्पणों से परावर्तित होती हैं।",
-      "कम दबाव वाले पारे की वाष्प (mercury vapor) धारा द्वारा उत्तेजित होने पर अदृश्य पराबैंगनी (UV) विकिरण उत्सर्जित करती है; कांच की दीवार के अंदर एक फ्लोरोसेंट फॉस्फोर कोटिंग UV किरणों को अवशोषित करती है और दृश्य प्रकाश का पुनः उत्सर्जन करती है।",
+      "दृश्यमान सफेद प्रकाश बिना किसी आंतरिक कोटिंग के सीधे चमकते ठोस कार्बन फिलामेंट्स द्वारा निर्मित होता है।",
       "गामा किरणें टंगस्टन परमाणु क्षय द्वारा उत्सर्जित होती हैं और आर्गन गैस द्वारा अवशोषित होती हैं।",
-      "दृश्यमान सफेद प्रकाश बिना किसी आंतरिक कोटिंग के सीधे चमकते ठोस कार्बन फिलामेंट्स द्वारा निर्मित होता है।"
+      "कम दबाव वाले पारे की वाष्प (mercury vapor) धारा द्वारा उत्तेजित होने पर अदृश्य पराबैंगनी (UV) विकिरण उत्सर्जित करती है; कांच की दीवार के अंदर एक फ्लोरोसेंट फॉस्फोर कोटिंग UV किरणों को अवशोषित करती है और दृश्य प्रकाश का पुनः उत्सर्जन करती है।",
+      "कम दबाव वाली नियॉन गैस द्वारा अवरक्त ऊष्मा किरणें उत्सर्जित की जाती हैं और धातु के कांच के दर्पणों से परावर्तित होती हैं।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Fluorescent lighting discharge-excited gas atomic transitions aur photoluminescent coating ke combination par operate karti hai.\n\n• Option A is Incorrect because infrared thermal emission incandescent lamps ka characteristic hai fluorescent tubes ka nahi.\n\n• Option B is Correct because Tube/CFL ke glass enclosure mein low-pressure Mercury vapor ($Hg$) aur Argon gas bhari hoti hai. Electric current pass hone par moving electrons mercury atoms ko excite karte hain jo de-excite hokar Invisible Ultraviolet (UV) radiation emit karte hain. Glass tube ki inner surface par Fluorescent Phosphor Powder ki coating hoti hai, jo in high-energy UV photons ko absorb karke lower-frequency Visible White Light emit karti hai (Stokes' Law of fluorescence), jisse high energy-efficiency milti hai.\n\n• Option C is Incorrect because radioactive decay bulb illumination mein involve nahi hota.\n\n• Option D is Incorrect because carbon filament Thomas Edison ke early incandescent bulbs ka part tha.\n\nEnergy conversion in CFL/Fluorescent Tube: Electrical Energy $\\to$ UV Radiation (via Mercury discharge) $\\to$ Visible Light (via Phosphor coating)."
   },
   {
@@ -878,18 +878,18 @@
     "qe": "Despite their high energy efficiency and extended lifespan compared to incandescent bulbs, Compact Fluorescent Lamps (CFLs) present specific environmental disposal hazards. What hazardous toxic element inside CFLs requires controlled recycling?",
     "qh": "तापदीप्त बल्बों की तुलना में उनकी उच्च ऊर्जा दक्षता और विस्तारित जीवनकाल के बावजूद, कॉम्पैक्ट फ़्लोरसेंट लैंप (CFL) विशिष्ट पर्यावरणीय निपटान खतरों को प्रस्तुत करते हैं। CFL के भीतर किस खतरनाक जहरीले तत्व को नियंत्रित रीसाइक्लिंग की आवश्यकता होती है?",
     "oe": [
-      "Radioactive Uranium isotopes",
-      "Toxic Mercury (Hg) vapor",
+      "Gaseous Chlorine polymer",
       "Corrosive Lead-Acid liquid",
-      "Gaseous Chlorine polymer"
+      "Radioactive Uranium isotopes",
+      "Toxic Mercury (Hg) vapor"
     ],
     "oh": [
-      "रेडियोधर्मी यूरेनियम समस्थानिक",
-      "विषाक्त पारा (Mercury - Hg) वाष्प",
+      "गैसीय क्लोरीन पॉलिमर",
       "संक्षारक लेड-एसिड तरल",
-      "गैसीय क्लोरीन पॉलिमर"
+      "रेडियोधर्मी यूरेनियम समस्थानिक",
+      "विषाक्त पारा (Mercury - Hg) वाष्प"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Compact Fluorescent Lamps (CFLs) energy efficiency provide karte hain par unka chemical composition e-waste management challenges create karta hai.\n\n• Option A is Incorrect because CFLs mein koi radioactive fission material use nahi hota.\n\n• Option B is Correct because Har CFL tube ke andar electrical discharge aur UV generation ke liye lagbhag $3\\text{ to }5\\text{ mg}$ toxic Mercury (पारा - $Hg$) vapor sealed hota hai. Jab spent CFLs ko domestic landfills mein openly phenk diya jata hai ya wo break hoti hain, toh mercury soil aur ground water mein leach hokar bioaccumulate hota hai aur neurotoxic Methylmercury form karta hai jo nervous system ko damage karta hai; isi environmental hazard ki wajah se CFLs ko ab mercury-free Solid-State LED (Light Emitting Diode) bulbs se replace kiya ja chuka hai.\n\n• Option C is Incorrect because lead-acid liquid automotive wet batteries mein hota hai.\n\n• Option D is Incorrect because chlorine polymer insulation jackets mein hota hai tube gas mein nahi.\n\nEnvironmental Chemistry fact: CFLs contain Toxic Mercury ($Hg$) $\\to$ Bioaccumulation hazard $\\to$ Replaced by Eco-friendly LEDs."
   },
   {
@@ -897,18 +897,18 @@
     "qe": "Circuit diagrams utilize standardized electrical symbols to map component arrangements. Which choice correctly describes the symbolic representation of an Electric Cell, Rheostat, and Voltmeter?",
     "qh": "परिपथ आरेख घटक व्यवस्था को मैप करने के लिए मानकीकृत विद्युत प्रतीकों का उपयोग करते हैं। कौन सा विकल्प इलेक्ट्रिक सेल, रियोस्टैट और वोल्टमीटर के प्रतीकात्मक प्रतिनिधित्व का सही वर्णन करता है?",
     "oe": [
+      "Electric Cell: Double parallel thick lines; Rheostat: Triangle icon; Voltmeter: Curved arc.",
       "Electric Cell: A single circle labeled with 'C'; Rheostat: A looped wire filament; Voltmeter: A zigzag line.",
       "Electric Cell: Long line ($+$) and short thick line ($-$) pair; Rheostat: Zigzag line with an arrow running through/pointing to it; Voltmeter: Circle labeled 'V' connected in parallel.",
-      "Electric Cell: Open bracket pair; Rheostat: Solid black square; Voltmeter: Circle labeled 'A' in series.",
-      "Electric Cell: Double parallel thick lines; Rheostat: Triangle icon; Voltmeter: Curved arc."
+      "Electric Cell: Open bracket pair; Rheostat: Solid black square; Voltmeter: Circle labeled 'A' in series."
     ],
     "oh": [
+      "इलेक्ट्रिक सेल: डबल समानांतर मोटी रेखाएं; रियोस्टैट: त्रिकोण आइकन; वोल्टमीटर: घुमावदार चाप।",
       "इलेक्ट्रिक सेल: 'C' लेबल वाला एक वृत्त; रियोस्टैट: एक लूप वाला तार फिलामेंट; वोल्टमीटर: एक ज़िगज़ैग रेखा।",
       "इलेक्ट्रिक सेल: लंबी रेखा ($+$) और छोटी मोटी रेखा ($-$) जोड़ी; रियोस्टैट: ज़िगज़ैग रेखा जिसके माध्यम से/उसकी ओर इशारा करने वाला तीर है; वोल्टमीटर: समानांतर में जुड़ा हुआ 'V' लेबल वाला वृत्त।",
-      "इलेक्ट्रिक सेल: ओपन ब्रैकेट जोड़ी; रियोस्टैट: ठोस काला वर्ग; वोल्टमीटर: श्रृंखला में 'A' लेबल वाला वृत्त।",
-      "इलेक्ट्रिक सेल: डबल समानांतर मोटी रेखाएं; रियोस्टैट: त्रिकोण आइकन; वोल्टमीटर: घुमावदार चाप।"
+      "इलेक्ट्रिक सेल: ओपन ब्रैकेट जोड़ी; रियोस्टैट: ठोस काला वर्ग; वोल्टमीटर: श्रृंखला में 'A' लेबल वाला वृत्त।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Standard circuit schematics (IEC/Bureau of Indian Standards) electrical diagrams ko draw karne ke liye universal symbols define karte hain.\n\n• Option A is Incorrect because zigzag line resistor ki hoti hai voltmeter ki nahi.\n\n• Option B is Correct because: (1) Electric Cell: Do parallel vertical lines se represent hota hai—ek Long Thin line for Positive ($+$) terminal aur ek Short Thick line for Negative ($-$) terminal; (2) Rheostat (Variable Resistor): Standard resistance zigzag line ke upar ek diagonal arrow ya sliding arrow contact laga hota hai; (3) Voltmeter: Ek circle jiske andar 'V' likha hota hai aur ise measure kiye jane wale component ke parallel connect kiya jata hai.\n\n• Option C is Incorrect because circle labeled 'A' Ammeter ka symbol hota hai.\n\n• Option D is Incorrect because geometric icons circuit convention standards ko violate karte hain.\n\nStandard schematic recognition NCERT Class 10th aur State PSC general science papers ka fundamental objective testing area hai."
   },
   {
@@ -916,18 +916,18 @@
     "qe": "Direct Current (DC) and Alternating Current (AC) serve distinct industrial and chemical applications. Why CANNOT Alternating Current (AC) be used directly for industrial electroplating processes?",
     "qh": "दिष्ट धारा (DC) और प्रत्यावर्ती धारा (AC) विशिष्ट औद्योगिक और रासायनिक अनुप्रयोगों की सेवा करते हैं। औद्योगिक इलेक्ट्रोप्लेटिंग (electroplating) प्रक्रियाओं के लिए सीधे प्रत्यावर्ती धारा (AC) का उपयोग क्यों नहीं किया जा सकता है?",
     "oe": [
+      "Because AC voltage cannot enter liquid solutions due to surface tension.",
       "Because AC current travels at twice the speed of light in liquid electrolytes.",
       "Because AC continually reverses its directional polarity, causing metal ions deposited during one half-cycle to be stripped away during the subsequent reversed half-cycle.",
-      "Because AC decomposes liquid electrolytes into solid lead instantly.",
-      "Because AC voltage cannot enter liquid solutions due to surface tension."
+      "Because AC decomposes liquid electrolytes into solid lead instantly."
     ],
     "oh": [
+      "क्योंकि सतह तनाव के कारण AC वोल्टेज तरल समाधानों में प्रवेश नहीं कर सकता है।",
       "क्योंकि AC धारा तरल इलेक्ट्रोलाइट्स में प्रकाश की चाल से दोगुनी गति से यात्रा करती है।",
       "क्योंकि AC लगातार अपनी दिशात्मक ध्रुवीयता को उलट देता है, जिससे एक अर्ध-चक्र के दौरान जमा हुए धातु आयन बाद के उलटे अर्ध-चक्र के दौरान वापस घुल जाते हैं।",
-      "क्योंकि AC तरल इलेक्ट्रोलाइट्स को तुरंत ठोस सीसे में विघटित कर देता है।",
-      "क्योंकि सतह तनाव के कारण AC वोल्टेज तरल समाधानों में प्रवेश नहीं कर सकता है।"
+      "क्योंकि AC तरल इलेक्ट्रोलाइट्स को तुरंत ठोस सीसे में विघटित कर देता है।"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Electroplating Faraday's Laws of Electrolysis par based electrochemical deposition technique hai jisme metallic cations ka directed migration hota hai.\n\n• Option A is Incorrect because drift speed liquid ions mein extremely slow (cm/s) hoti hai.\n\n• Option B is Correct because Electroplating mein metal coating chadhane ke liye continuous unidirectional cation migration chahiye hota hai jahan metal ions cathode par permanently deposit hon. Agar $50\\text{ Hz}$ Alternating Current (AC) use kiya jaye, toh electrode polarity per second 50 baar reverse hogi; positive half-cycle mein deposit hua metal layer agle negative half-cycle mein anode ban kar wapas electrolyte mein dissolve ho jayega, jisse net metal deposition ZERO rehti hai. Isliye Electroplating, Battery Charging aur Electrotyping strictly Direct Current (DC) demand karte hain.\n\n• Option C is Incorrect because AC electrolysis chemical equilibrium preserve rakhti hai lead transformation nahi karti.\n\n• Option D is Incorrect because AC electrical fields liquid electrolytes mein easily penetrate karte hain.\n\nApplication rule: Electroplating, Electro-refining, aur Battery Charging $\\implies$ ONLY Direct Current (DC); Power Grid Transmission $\\implies$ Alternating Current (AC)."
   },
   {
@@ -935,18 +935,18 @@
     "qe": "Domestic electricity bills calculate total energy consumption in 'commercial units'. If an electric heater rated at $1000\\text{ W}$ operates for $5\\text{ hours}$ daily across a month of $30\\text{ days}$, how many commercial units (kWh) are consumed?",
     "qh": "घरेलू बिजली के बिल 'व्यावसायिक इकाइयों' में कुल ऊर्जा खपत की गणना करते हैं। यदि $1000\\text{ W}$ की दर वाला एक इलेक्ट्रिक हीटर $30\\text{ दिनों}$ के महीने में रोजाना $5\\text{ घंटे}$ चलता है, तो कितने व्यावसायिक इकाइयों (kWh) की खपत होती है?",
     "oe": [
-      "1500 units",
-      "150 units",
       "15 units",
-      "15000 units"
+      "1500 units",
+      "15000 units",
+      "150 units"
     ],
     "oh": [
-      "1500 इकाइयाँ",
-      "150 इकाइयाँ",
       "15 इकाइयाँ",
-      "15000 इकाइयाँ"
+      "1500 इकाइयाँ",
+      "15000 इकाइयाँ",
+      "150 इकाइयाँ"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Electricity utility boards domestic power billing calculate karne ke liye commercial energy units (Kilowatt-hours) use karte hain.\n\n• Option A is Incorrect because yeh direct product ($1000 \\times 5 \\times 30 / 100$) mein decimal error se aata hai.\n\n• Option B is Correct because Commercial Electrical Units ($1\\text{ Unit} = 1\\text{ kWh}$) ka calculation formula hai: $$\\text{Total Units (kWh)} = \\frac{\\text{Power (in Watts)} \\times \\text{Time (hours/day)} \\times \\text{Number of Days}}{1000}$$ Given values substitute karne par: $$\\text{Units} = \\frac{1000\\text{ W} \\times 5\\text{ hours/day} \\times 30\\text{ days}}{1000} = \\frac{150,000}{1000} = 150\\text{ Units (kWh)}$$\n\n• Option C is Incorrect because 15 units 3 days ka consumption hai 30 days ka nahi.\n\n• Option D is Incorrect because divide by 1000 conversion skip karne par $150,000\\text{ Watt-hours}$ banta hai.\n\nStandard BPSC/State PSC numerical formula: $\\text{Units} = \\frac{\\text{Watt} \\times \\text{Hours} \\times \\text{Days}}{1000}$."
   }
 ]
