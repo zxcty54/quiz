@@ -49,7 +49,7 @@ MODEL_REGISTRY = [
 ]
 
 BATCH_SIZE = 12            # 12 items batch for smart selection
-PAUSE_BETWEEN_BATCHES = 25 # 25s safe cooldown
+PAUSE_BETWEEN_BATCHES = 18 # 25s safe cooldown
 
 # ============================================================
 # STRICT SINGLE-QUESTION HIGH-INTELLIGENCE PROMPT
