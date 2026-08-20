@@ -460,18 +460,26 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 🟢 UNIFIED GREEN BOX
+                // 🟢 UNIFIED HIGH-CONTRAST GREEN BOX
                 if (primaryCorrectBlocks.isNotEmpty)
                   Container(
                     width: double.infinity,
                     margin: const EdgeInsets.only(bottom: 12),
                     padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
-                      color: isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4),
+                      color: isDark ? const Color(0xFF064E3B).withOpacity(0.35) : const Color(0xFFECFDF5),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                        color: isDark ? const Color(0xFF166534) : const Color(0xFFBBF7D0),
+                        color: isDark ? const Color(0xFF059669) : const Color(0xFFA7F3D0),
+                        width: 1.2,
                       ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color(0xFF059669).withOpacity(isDark ? 0.18 : 0.06),
+                          blurRadius: 8,
+                          offset: const Offset(0, 2),
+                        ),
+                      ],
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -481,10 +489,11 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                           child: MathFormattedText(
                             text: block,
                             textStyle: TextStyle(
-                              fontSize: 13.5,
-                              fontWeight: FontWeight.w500,
-                              color: isDark ? const Color(0xFF86EFAC) : const Color(0xFF14532D),
-                              height: 1.45,
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.w600,
+                              color: isDark ? const Color(0xFFECFDF5) : const Color(0xFF064E3B),
+                              height: 1.48,
+                              letterSpacing: 0.15,
                             ),
                           ),
                         );
