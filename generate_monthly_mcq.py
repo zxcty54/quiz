@@ -35,7 +35,7 @@ MODEL_REGISTRY = [
     "gemini-3.6-flash"        # Fallback 2
 ]
 
-BATCH_SIZE = 3             # 3 bilingual questions per API call
+BATCH_SIZE = 12             # 12 bilingual questions per API call
 PAUSE_BETWEEN_BATCHES = 15 # 15s safe cooldown to eliminate rate limit issues
 
 # ============================================================
