@@ -1,5 +1,4 @@
 [
- 
   {
     "p_id": "bpsc_mol_v4_01",
     "qe": "Who historically identified the presence of an acidic substance inside the cell nucleus in 1869, naming it 'nuclein'?",
@@ -741,7 +740,6 @@
     "a": 1,
     "e": "Enzyme-specific degradation molecular biology me biomolecules ke definitive genetic proof ke liye use hone wala primary tool tha.\n\n• Statement 2 is Correct: Avery, MacLeod aur McCarty ne heat-killed S-strain ke extract ko Proteases (protein digest karne wale enzymes) aur RNases (RNA digest karne wale enzymes) se treat kiya, par transformation continue raha. Lekin jab extract ko 'Deoxyribonuclease' (DNase, jo DNA ko break down karta hai) se treat kiya gaya, toh transformation process completely stop ho gayi. Isne prove kiya ki DNA hi transforming substance/genetic material hai.\n• Statement 1, 3 and 4 are Incorrect: Protease aur RNase treatment se transformation par koi effect nahi pada tha.\n• Common Pitfall: DNase (without 's') enzyme hai jo DNA ko digest karta hai, jabki DNAs (with small 's') plural form of DNA molecules hota hai; exam me spelling difference note karein."
   },
- 
   {
     "p_id": "bpsc_mol_v4_40",
     "qe": "What name is assigned to the historic radioactive tracking experiment conducted in 1952 that provided the final confirmation that DNA is the genetic material?",
@@ -1502,7 +1500,6 @@
     "a": 1,
     "e": "X-ray crystallography aur high-resolution biophysical studies tRNA ki actual physiological native folding reveal karti hain.\n\n• Statement 2 is Correct because actual cellular environment me tertiary folding (base stacking aur non-Watson Crick hydrogen bonding) ke baad functional tRNA 3-Dimensional plane me ek compact 'Inverted L-shape' (उल्टा L आकार) structure adopt karta hai, jisme ek सिरे par anticodon loop aur dusre perpendicular सिरे par 3'-CCA acceptor end positioned hota hai.\n• Statement 1 is Incorrect because Clover-leaf sirf 2D planar projection hai.\n• Common trap: Examiner aksar 2D aur 3D configuration interchange karke questions frame karta hai (2D = Clover leaf, 3D = Inverted L-shape)."
   },
-
   {
     "p_id": "bpsc_mol_v4_80",
     "qe": "What specific structural arrangement of nucleotides defines the amino acid acceptor stem interface found at the 3' end of a tRNA molecule?",
@@ -2078,102 +2075,15 @@
     "qe": "What enzyme is essential for the amplification of specific DNA sequences in a PCR reaction?",
     "qh": "पीसीआर (PCR) प्रतिक्रिया में विशिष्ट डीएनए अनुक्रमों के प्रवर्धन (amplification) के लिए कौन सा एंजाइम आवश्यक है?",
     "oe": [
-      ```json
-[
-  {
-    "p_id": "bpsc_mol_v4_80",
-    "qe": "What specific structural arrangement of nucleotides defines the amino acid acceptor stem interface found at the 3' end of a tRNA molecule?",
-    "qh": "न्यूक्लियोटाइड की कौन सी विशिष्ट संरचनात्मक व्यवस्था एक tRNA अणु के 3' छोर पर पाए जाने वाले अमीनो अम्ल स्वीकर्ता स्टेम इंटरफ़ेस (amino acid acceptor stem interface) को परिभाषित करती है?",
-    "oe": [
-      "An unbranched non-ionic polyolefin sequence",
-      "CCA-hydroxy terminal sequence",
-      "AUG initiation codon cluster matrix",
-      "UAA opel stop indicator sequence segment"
-    ],
-    "oh": [
-      "एक अशाखित गैर-आयनिक पॉलीओलेफिन अनुक्रम",
-      "CCA-हाइड्रॉक्सी टर्मिनल अनुक्रम (CCA सिरा)",
-      "AUG प्रारंभिक कोडन क्लस्टर मैट्रिक्स",
-      "UAA ओपल स्टॉप इंडिकेटर अनुक्रम खंड"
-    ],
-    "a": 1,
-    "e": "Transfer RNA (tRNA) protein synthesis ke dauran adapter molecule ki tarah act karta hai jo specific amino acids ko mRNA codons tak deliver karta hai.\n\n• Option 2 sahi hai kyunki har functional tRNA molecule ke 3' end par ek highly conserved, single-stranded 5'-CCA-3' terminal sequence hota hai. Is CCA sequence ke terminal Adenine (A) ke 3'-OH group par specific amino acid ester bond ke dwara covalently bind karta hai jise aminoacylation ya tRNA charging kehte hain.\n\n• Option 1 galat hai kyunki tRNA purely ribonucleic acid monomers (RNA nucleotides) se banta hai, kisi synthetic polyolefin polymer se nahi.\n\n• Option 3 galat hai kyunki AUG messenger RNA (mRNA) par paya jane wala universal start codon hai jo Methionine ko code karta hai, yeh tRNA ke amino acid acceptor stem par maujood nahi hota.\n\n• Option 4 galat hai kyunki UAA (ochre) ek stop codon hai jo translation terminate karta hai, yeh 3' acceptor stem ka part nahi hai.\n\nExaminers aksar 5' end aur 3' end ke specific modifications (jaise 5' terminal par guanine aur 3' terminal par CCA sequence) ke beech confusion create karke test karte hain."
-  },
-  {
-    "p_id": "bpsc_genetics_v4_01",
-    "qe": "In a standard DNA strand, what specific chemical linkage connects the nucleotide monomers to form a polynucleotide chain?",
-    "qh": "एक मानक डीएनए धागे (DNA strand) में, पॉलिन्यूक्लियोटाइड श्रृंखला बनाने के लिए न्यूक्लियोटाइड मोनोमर्स को कौन सा विशिष्ट रासायनिक बंधन (chemical linkage) जोड़ता है?",
-    "oe": [
-      "N-glycosidic bonds",
-      "3'-5' Phosphodiester bonds",
-      "Peptide bonds",
-      "Hydrogen bonds"
-    ],
-    "oh": [
-      "एन-ग्लाइकोसिडिक बंध",
-      "3'-5' फॉस्फोडिएस्टर बंध",
-      "पेप्टाइड बंध",
-      "हाइड्रोजन बंध"
-    ],
-    "a": 1,
-    "e": "DNA ek polynucleotide macromolecule hai jahan kai sare nucleotide subunits aapas mein judkar ek continuous strand banate hain.\n\n• Option 2 sahi hai kyunki do adjacent nucleotides ke beech phosphodiester bond banta hai. Ek nucleotide ke pentose sugar ka 3'-OH group agle nucleotide ke 5'-phosphate group ke sath ester linkage banata hai, jisse standard 3'-5' phosphodiester backbone taiyar hoti hai.\n\n• Option 1 galat hai kyunki N-glycosidic bond nitrogenous base ko pentose sugar ke 1' carbon se jodkar nucleoside banata hai, yeh puri chain ko link nahi karta.\n\n• Option 3 galat hai kyunki peptide bonds do amino acids ke beech bante hain jo proteins aur polypeptides ka primary structural feature hain.\n\n• Option 4 galat hai kyunki hydrogen bonds do complementary anti-parallel DNA strands ke bases ke beech bante hain (A=T aur G≡C), single strand ke sugar-phosphate backbone mein nahi.\n\nExaminer aksar hydrogen bond (inter-strand stability) aur phosphodiester bond (intra-strand covalent backbone) ke functioning mein trap set karte hain."
-  },
-  {
-    "p_id": "bpsc_genetics_v4_02",
-    "qe": "What structural component is missing in a nucleoside that defines its primary difference from a nucleotide?",
-    "qh": "न्यूक्लियोसाइड (nucleoside) में कौन सा संरचनात्मक घटक अनुपस्थित होता है जो इसे न्यूक्लियोटाइड से अलग बनाता है?",
-    "oe": [
-      "Nitrogenous base",
-      "Pentose sugar",
-      "Phosphate group",
-      "Hydroxyl group"
-    ],
-    "oh": [
-      "नाइट्रोजनी क्षार (Nitrogenous base)",
-      "पेंटोज़ शर्करा (Pentose sugar)",
-      "फॉस्फेट समूह (Phosphate group)",
-      "हाइड्रॉक्सिल समूह (Hydroxyl group)"
-    ],
-    "a": 2,
-    "e": "Nucleic acids (DNA/RNA) ke basic chemical building blocks nucleosides aur nucleotides hote hain jo cellular genetic storage aur energy transfer mein vital role play karte hain.\n\n• Option 3 sahi hai kyunki nucleoside sirf do components se milkar banta hai: Nitrogenous base (Purine/Pyrimidine) aur Pentose sugar (Ribose/Deoxyribose). Jab is nucleoside ke 5'-OH group ke sath phosphate group ester bond ke zariye attach hota hai, tab yeh ek complete 'Nucleotide' (Nucleoside monophosphate) ban jata hai. Isliye nucleoside mein phosphate group absent hota hai.\n\n• Option 1 galat hai kyunki nitrogenous base (Adenine, Guanine, Cytosine, Thymine/Uracil) nucleoside aur nucleotide dono ka mandatory structural part hai.\n\n• Option 2 galat hai kyunki pentose sugar dono mein present rehti hai aur central framework provide karti hai.\n\n• Option 4 galat hai kyunki sugar ring par free hydroxyl (-OH) groups nucleosides aur nucleotides dono mein naturally paye jate hain.\n\nCommon misconception yeh hoti hai ki candidates Nucleoside aur Nucleotide ke nomenclature ko confuse kar dete hain (Nucleotide = Nucleoside + Phosphate Group)."
-  },
-  {
-    "p_id": "bpsc_genetics_v4_03",
-    "qe": "To which chemical class of sugars do both deoxyribose and ribose belong, characterized by having five carbon atoms?",
-    "qh": "डीऑक्सीराइबोज़ और राइबोज़ दोनों शर्कराओं के किस रासायनिक वर्ग (chemical class) से संबंधित हैं, जिसमें पाँच कार्बन परमाणु होते हैं?",
-    "oe": [
-      "Trioses",
-      "Hexoses",
-      "Pentoses",
-      "Polysaccharides"
-    ],
-    "oh": [
-      "ट्रायोज़ (Trioses)",
-      "हेक्सोज़ (Hexoses)",
-      "पेंटोज़ (Pentoses)",
-      "पॉलीसैकराइड (Polysaccharides)"
-    ],
-    "a": 2,
-    "e": "Monosaccharides ko unke carbon atoms ki total sankhya ke aadhar par classify kiya jata hai, jo biological systems mein energy aur structural polymers ke main components hote hain.\n\n• Option 3 sahi hai kyunki Ribose (C5H10O5) aur 2-Deoxyribose (C5H10O4) dono mein 5 carbon atoms ki ring structure hoti hai, isliye yeh carbohydrates ke 'Pentose' class mein aate hain. Ribose RNA ka part hai aur Deoxyribose DNA ka constituent hai.\n\n• Option 1 galat hai kyunki Trioses mein 3 carbon atoms hote hain, jaise Glyceraldehyde aur Dihydroxyacetone.\n\n• Option 2 galat hai kyunki Hexoses 6-carbon sugars hoti hain, jaise Glucose, Fructose aur Galactose.\n\n• Option 4 galat hai kyunki Polysaccharides complex long-chain polymers hote hain jaise Starch, Cellulose aur Glycogen, jabki ribose simple monosaccharide units hain.\n\nCandidates ko dhyan rakhna chahiye ki DNA aur RNA dono 5-carbon pentose sugar par based hote hain, farq sirf 2' position par oxygen atom ki presence ya absence ka hota hai."
-  },
-  {
-    "p_id": "bpsc_genetics_v4_04",
-    "qe": "What physical structural characteristic of the DNA double helix is maintained by the specific pairing of purines with pyrimidines?",
-    "qh": "डीएनए डबल हेलिक्स की कौन सी भौतिक संरचनात्मक विशेषता प्यूरीन और पिरिमिडीन के विशिष्ट युग्मन (pairing) द्वारा बनाए रखी जाती है?",
-    "oe": [
-      "The antiparallel nature of the two strands",
-      "Uniform width throughout the DNA helix",
-      "The semi-conservative mode of replication",
-      "Uniform length across all distinct DNA types"
-    ],
-    "oh": [
-      "दोनों धागों की समानांतर-विरोधी (antiparallel) प्रकृति",
-      "पूरे डीएनए हेलिक्स में एकसमान चौड़ाई (Uniform width)",
-      "प्रतिकृतियन का अर्ध-संरक्षी (semi-conservative) तरीका",
-      "सभी विशिष्ट डीएनए प्रकारों में एकसमान लंबाई"
-    ],
-    "a": 1,
-    "e": "Watson aur Crick dwara 1953 mein diye gaye B-DNA model mein complementary base pairing helical structure ki spatial geometry ko stabilize karti hai.\n\n• Option 2 sahi hai kyunki Purines (Adenine, Guanine) double-ring structures hote hain jabki Pyrimidines (Thymine, Cytosine) single-ring structures hote hain. Ek strand ka bulky purine hamesha dusre strand ke smaller pyrimidine ke sath pair karta hai (A=T aur G≡C). Is precise combination ki wajah se dono sugar-phosphate backbones ke beech ka distance consistently 2.0 nm (approx 20 Å) rehta hai, jo pure DNA helix ko ek uniform width deta hai.\n\n• Option 1 galat hai kyunki antiparallel orientation phosphodiester bonds ki 5'→3' aur 3'→5' directional polarity ki wajah se hoti hai.\n\n• Option 3 galat hai kyunki semi-conservative replication mechanism complementary base-pairing sequence par depend karta hai, helix width par nahi.\n\n• Option 4 galat hai kyunki alag-alag organisms mein base pairs ki sankhya ke aadhar par DNA ki length alag-alag hoti hai.\n\nExaminer often purine-purine ya pyrimidine-pyrimidine pairing hypothetical cases par sawal banate hain jisse helix distorted (bulged/narrow) ho jata hai."
+      "",
+      "json\n[\n  {\n    \"p_id\": \"bpsc_mol_v4_80\",\n    \"qe\": \"What specific structural arrangement of nucleotides defines the amino acid acceptor stem interface found at the 3\" end of a tRNA molecule?\",\n    \"qh\": \"न्यूक्लियोटाइड की कौन सी विशिष्ट संरचनात्मक व्यवस्था एक tRNA अणु के 3\" छोर पर पाए जाने वाले अमीनो अम्ल स्वीकर्ता स्टेम इंटरफ़ेस (amino acid acceptor stem interface) को परिभाषित करती है?\",\n    \"oe\": [\n      \"An unbranched non-ionic polyolefin sequence\",\n      \"CCA-hydroxy terminal sequence\",\n      \"AUG initiation codon cluster matrix\",\n      \"UAA opel stop indicator sequence segment\"\n    ],\n    \"oh\": [\n      \"एक अशाखित गैर-आयनिक पॉलीओलेफिन अनुक्रम\",\n      \"CCA-हाइड्रॉक्सी टर्मिनल अनुक्रम (CCA सिरा)\",\n      \"AUG प्रारंभिक कोडन क्लस्टर मैट्रिक्स\",\n      \"UAA ओपल स्टॉप इंडिकेटर अनुक्रम खंड\"\n    ],\n    \"a\": 1,\n    \"e\": \"Transfer RNA (tRNA) protein synthesis ke dauran adapter molecule ki tarah act karta hai jo specific amino acids ko mRNA codons tak deliver karta hai.\n\n• Option 2 sahi hai kyunki har functional tRNA molecule ke 3\" end par ek highly conserved, single-stranded 5\"-CCA-3\" terminal sequence hota hai. Is CCA sequence ke terminal Adenine (A) ke 3\"-OH group par specific amino acid ester bond ke dwara covalently bind karta hai jise aminoacylation ya tRNA charging kehte hain.\n\n• Option 1 galat hai kyunki tRNA purely ribonucleic acid monomers (RNA nucleotides) se banta hai, kisi synthetic polyolefin polymer se nahi.\n\n• Option 3 galat hai kyunki AUG messenger RNA (mRNA) par paya jane wala universal start codon hai jo Methionine ko code karta hai, yeh tRNA ke amino acid acceptor stem par maujood nahi hota.\n\n• Option 4 galat hai kyunki UAA (ochre) ek stop codon hai jo translation terminate karta hai, yeh 3\" acceptor stem ka part nahi hai.\n\nExaminers aksar 5\" end aur 3\" end ke specific modifications (jaise 5\" terminal par guanine aur 3\" terminal par CCA sequence) ke beech confusion create karke test karte hain.\"\n  },\n  {\n    \"p_id\": \"bpsc_genetics_v4_01\",\n    \"qe\": \"In a standard DNA strand, what specific chemical linkage connects the nucleotide monomers to form a polynucleotide chain?\",\n    \"qh\": \"एक मानक डीएनए धागे (DNA strand) में, पॉलिन्यूक्लियोटाइड श्रृंखला बनाने के लिए न्यूक्लियोटाइड मोनोमर्स को कौन सा विशिष्ट रासायनिक बंधन (chemical linkage) जोड़ता है?\",\n    \"oe\": [\n      \"N-glycosidic bonds\",\n      \"3\"-5\" Phosphodiester bonds\",\n      \"Peptide bonds\",\n      \"Hydrogen bonds\"\n    ],\n    \"oh\": [\n      \"एन-ग्लाइकोसिडिक बंध\",\n      \"3\"-5\" फॉस्फोडिएस्टर बंध\",\n      \"पेप्टाइड बंध\",\n      \"हाइड्रोजन बंध\"\n    ],\n    \"a\": 1,\n    \"e\": \"DNA ek polynucleotide macromolecule hai jahan kai sare nucleotide subunits aapas mein judkar ek continuous strand banate hain.\n\n• Option 2 sahi hai kyunki do adjacent nucleotides ke beech phosphodiester bond banta hai. Ek nucleotide ke pentose sugar ka 3\"-OH group agle nucleotide ke 5\"-phosphate group ke sath ester linkage banata hai, jisse standard 3\"-5\" phosphodiester backbone taiyar hoti hai.\n\n• Option 1 galat hai kyunki N-glycosidic bond nitrogenous base ko pentose sugar ke 1\" carbon se jodkar nucleoside banata hai, yeh puri chain ko link nahi karta.\n\n• Option 3 galat hai kyunki peptide bonds do amino acids ke beech bante hain jo proteins aur polypeptides ka primary structural feature hain.\n\n• Option 4 galat hai kyunki hydrogen bonds do complementary anti-parallel DNA strands ke bases ke beech bante hain (A=T aur G≡C), single strand ke sugar-phosphate backbone mein nahi.\n\nExaminer aksar hydrogen bond (inter-strand stability) aur phosphodiester bond (intra-strand covalent backbone) ke functioning mein trap set karte hain.\"\n  },\n  {\n    \"p_id\": \"bpsc_genetics_v4_02\",\n    \"qe\": \"What structural component is missing in a nucleoside that defines its primary difference from a nucleotide?\",\n    \"qh\": \"न्यूक्लियोसाइड (nucleoside) में कौन सा संरचनात्मक घटक अनुपस्थित होता है जो इसे न्यूक्लियोटाइड से अलग बनाता है?\",\n    \"oe\": [\n      \"Nitrogenous base\",\n      \"Pentose sugar\",\n      \"Phosphate group\",\n      \"Hydroxyl group\"\n    ],\n    \"oh\": [\n      \"नाइट्रोजनी क्षार (Nitrogenous base)\",\n      \"पेंटोज़ शर्करा (Pentose sugar)\",\n      \"फॉस्फेट समूह (Phosphate group)\",\n      \"हाइड्रॉक्सिल समूह (Hydroxyl group)\"\n    ],\n    \"a\": 2,\n    \"e\": \"Nucleic acids (DNA/RNA) ke basic chemical building blocks nucleosides aur nucleotides hote hain jo cellular genetic storage aur energy transfer mein vital role play karte hain.\n\n• Option 3 sahi hai kyunki nucleoside sirf do components se milkar banta hai: Nitrogenous base (Purine/Pyrimidine) aur Pentose sugar (Ribose/Deoxyribose). Jab is nucleoside ke 5\"-OH group ke sath phosphate group ester bond ke zariye attach hota hai, tab yeh ek complete \"Nucleotide",
+      "(Nucleoside monophosphate) ban jata hai. Isliye nucleoside mein phosphate group absent hota hai.\\n\\n• Option 1 galat hai kyunki nitrogenous base (Adenine",
+      "Guanine",
+      "Cytosine",
+      "Thymine",
+      "/Uracil) nucleoside aur nucleotide dono ka mandatory structural part hai.\\n\\n• Option 2 galat hai kyunki pentose sugar dono mein present rehti hai aur central framework provide karti hai.\\n\\n• Option 4 galat hai kyunki sugar ring par free hydroxyl (-OH) groups nucleosides aur nucleotides dono mein naturally paye jate hain.\\n\\nCommon misconception yeh hoti hai ki candidates Nucleoside aur Nucleotide ke nomenclature ko confuse kar dete hain (Nucleotide = Nucleoside + Phosphate Group).\"\n  },\n  {\n    \"p_id\": \"bpsc_genetics_v4_03\",\n    \"qe\": \"To which chemical class of sugars do both deoxyribose and ribose belong, characterized by having five carbon atoms?\",\n    \"qh\": \"डीऑक्सीराइबोज़ और राइबोज़ दोनों शर्कराओं के किस रासायनिक वर्ग (chemical class) से संबंधित हैं, जिसमें पाँच कार्बन परमाणु होते हैं?\",\n    \"oe\": [\n      \"Trioses\",\n      \"Hexoses\",\n      \"Pentoses\",\n      \"Polysaccharides\"\n    ],\n    \"oh\": [\n      \"ट्रायोज़ (Trioses)\",\n      \"हेक्सोज़ (Hexoses)\",\n      \"पेंटोज़ (Pentoses)\",\n      \"पॉलीसैकराइड (Polysaccharides)\"\n    ],\n    \"a\": 2,\n    \"e\": \"Monosaccharides ko unke carbon atoms ki total sankhya ke aadhar par classify kiya jata hai, jo biological systems mein energy aur structural polymers ke main components hote hain.\\n\\n• Option 3 sahi hai kyunki Ribose (C5H10O5) aur 2-Deoxyribose (C5H10O4) dono mein 5 carbon atoms ki ring structure hoti hai, isliye yeh carbohydrates ke 'Pentose' class mein aate hain. Ribose RNA ka part hai aur Deoxyribose DNA ka constituent hai.\\n\\n• Option 1 galat hai kyunki Trioses mein 3 carbon atoms hote hain, jaise Glyceraldehyde aur Dihydroxyacetone.\\n\\n• Option 2 galat hai kyunki Hexoses 6-carbon sugars hoti hain, jaise Glucose, Fructose aur Galactose.\\n\\n• Option 4 galat hai kyunki Polysaccharides complex long-chain polymers hote hain jaise Starch, Cellulose aur Glycogen, jabki ribose simple monosaccharide units hain.\\n\\nCandidates ko dhyan rakhna chahiye ki DNA aur RNA dono 5-carbon pentose sugar par based hote hain, farq sirf 2' position par oxygen atom ki presence ya absence ka hota hai.\"\n  },\n  {\n    \"p_id\": \"bpsc_genetics_v4_04\",\n    \"qe\": \"What physical structural characteristic of the DNA double helix is maintained by the specific pairing of purines with pyrimidines?\",\n    \"qh\": \"डीएनए डबल हेलिक्स की कौन सी भौतिक संरचनात्मक विशेषता प्यूरीन और पिरिमिडीन के विशिष्ट युग्मन (pairing) द्वारा बनाए रखी जाती है?\",\n    \"oe\": [\n      \"The antiparallel nature of the two strands\",\n      \"Uniform width throughout the DNA helix\",\n      \"The semi-conservative mode of replication\",\n      \"Uniform length across all distinct DNA types\"\n    ],\n    \"oh\": [\n      \"दोनों धागों की समानांतर-विरोधी (antiparallel) प्रकृति\",\n      \"पूरे डीएनए हेलिक्स में एकसमान चौड़ाई (Uniform width)\",\n      \"प्रतिकृतियन का अर्ध-संरक्षी (semi-conservative) तरीका\",\n      \"सभी विशिष्ट डीएनए प्रकारों में एकसमान लंबाई\"\n    ],\n    \"a\": 1,\n    \"e\": \"Watson aur Crick dwara 1953 mein diye gaye B-DNA model mein complementary base pairing helical structure ki spatial geometry ko stabilize karti hai.\\n\\n• Option 2 sahi hai kyunki Purines (Adenine, Guanine) double-ring structures hote hain jabki Pyrimidines (Thymine, Cytosine) single-ring structures hote hain. Ek strand ka bulky purine hamesha dusre strand ke smaller pyrimidine ke sath pair karta hai (A=T aur G≡C). Is precise combination ki wajah se dono sugar-phosphate backbones ke beech ka distance consistently 2.0 nm (approx 20 Å) rehta hai, jo pure DNA helix ko ek uniform width deta hai.\\n\\n• Option 1 galat hai kyunki antiparallel orientation phosphodiester bonds ki 5'→3' aur 3'→5' directional polarity ki wajah se hoti hai.\\n\\n• Option 3 galat hai kyunki semi-conservative replication mechanism complementary base-pairing sequence par depend karta hai, helix width par nahi.\\n\\n• Option 4 galat hai kyunki alag-alag organisms mein base pairs ki sankhya ke aadhar par DNA ki length alag-alag hoti hai.\\n\\nExaminer often purine-purine ya pyrimidine-pyrimidine pairing hypothetical cases par sawal banate hain jisse helix distorted (bulged/",
+      "narrow) ho jata hai."
+    ]
   },
   {
     "p_id": "bpsc_genetics_v4_05",
@@ -2859,7 +2769,6 @@
     "a": 1,
     "e": "Agarose gel electrophoresis biotechnology laboratory analytics ki ek routine separation technique hai.\n\n• Option 2 sahi hai kyunki Gel Electrophoresis ka primary operational purpose restriction enzyme digestion ke baad prapt DNA fragments ko unke size/charge-to-mass ratio ke aadhar par spatially separate aur isolate karna hai. Matrix ke porous structure aur external electric field ke interplay se fragments separate bands ke roop mein align ho jate hain jinhe target extraction ke liye use kiya jata hai.\n\n• Option 1 galat hai kyunki DNA amplification ka primary objective Polymerase Chain Reaction (PCR) dwara execute hota hai.\n\n• Option 3 galat hai kyunki DNA cleavage Restriction Endonucleases ka task hai.\n\n• Option 4 galat hai kyunki DNA fragments ko join karna DNA Ligase enzyme ka role hai.\n\nClear technique mapping: DNA Cutting = Restriction Enzyme; DNA Joining = DNA Ligase; DNA Amplification = PCR; DNA Separation = Gel Electrophoresis."
   },
-
   {
     "p_id": "bpsc_mol_v4_141",
     "qe": "What specific terminology defines a DNA strand synthesized inside specific retroviruses using a viral RNA molecule as a template blueprint?",
@@ -3523,7 +3432,7 @@
       "$\\Lambda_m = \\frac{\\kappa \\cdot R}{M}$"
     ],
     "a": 1,
-    "e": "Electrochemistry me electrolytic solution ki conducting power uski molar conductivity se express hoti hai.\n\n• Option 2 is Correct because jab specific conductance (conductivity) $\\kappa$ $\\text{S}\\cdot\\text{cm}^{-1}$ me ho aur concentration Molarity $M$ $\\text{mol}\\cdot\\text{L}^{-1}$ me ho, to 1 liter solution ($1000\\text{ cm}^3$) ke unit conversion ke sath Molar Conductivity ka formula banta hai: $\\Lambda_m = \\frac{\\kappa \\times 1000}{M}$ (unit: $\\text{S}\\cdot\\text{cm}^2\\cdot\\text{mol}^{-1}$).\n• Option 1 me 1000 inverted position me hai.\n• Option 3 cell constant ($G^*$) ka relation hai conductivity ke sath ($\\kappa = G \\cdot G^*$).\n• Common Trap: Agar SI units ($\kappa$ in $\\text{S}\\cdot\\text{m}^{-1}$ aur concentration in $\\text{mol}\\cdot\\text{m}^{-3}$) use ho rahi ho to 1000 denominator me aata hai ($\\Lambda_m = \\frac{\\kappa}{1000 \\times M}$)."
+    "e": "Electrochemistry me electrolytic solution ki conducting power uski molar conductivity se express hoti hai.\n\n• Option 2 is Correct because jab specific conductance (conductivity) $\\kappa$ $\\text{S}\\cdot\\text{cm}^{-1}$ me ho aur concentration Molarity $M$ $\\text{mol}\\cdot\\text{L}^{-1}$ me ho, to 1 liter solution ($1000\\text{ cm}^3$) ke unit conversion ke sath Molar Conductivity ka formula banta hai: $\\Lambda_m = \\frac{\\kappa \\times 1000}{M}$ (unit: $\\text{S}\\cdot\\text{cm}^2\\cdot\\text{mol}^{-1}$).\n• Option 1 me 1000 inverted position me hai.\n• Option 3 cell constant ($G^*$) ka relation hai conductivity ke sath ($\\kappa = G \\cdot G^*$).\n• Common Trap: Agar SI units ($kappa$ in $\\text{S}\\cdot\\text{m}^{-1}$ aur concentration in $\\text{mol}\\cdot\\text{m}^{-3}$) use ho rahi ho to 1000 denominator me aata hai ($\\Lambda_m = \\frac{\\kappa}{1000 \\times M}$)."
   },
   {
     "p_id": "bpsc_mol_v4_176",
@@ -3561,7 +3470,7 @@
       "दूध लैक्टोज शर्करा के तत्काल सामान्य-आयन वर्षा को ट्रिगर करता है"
     ],
     "a": 1,
-    "e": "1997 me pehli transgenic cow 'Rosie' develop ki gayi thi jo humanized milk produce karti thi.\n\n• Option 2 is Correct because Rosie ke genome me human $\\alpha$-lactalbumin gene introduce kiya gaya tha. Iska milk $2.4\\text{ grams per liter}$ human protein ($\alpha$-lactalbumin) yield karta tha, jo normal cow milk ke comparison me human infants ke liye digestion aur nutrition wise significantly superior aur balanced alternative provide karta hai.\n• Option 1, 3 aur 4 are non-scientific statements.\n• Common Trap: Protein ka exact naam 'human alpha-lactalbumin' hai (na ki beta-lactoglobulin ya casein), jo exams me repeatedly test hota hai."
+    "e": "1997 me pehli transgenic cow 'Rosie' develop ki gayi thi jo humanized milk produce karti thi.\n\n• Option 2 is Correct because Rosie ke genome me human $\\alpha$-lactalbumin gene introduce kiya gaya tha. Iska milk $2.4\\text{ grams per liter}$ human protein ($alpha$-lactalbumin) yield karta tha, jo normal cow milk ke comparison me human infants ke liye digestion aur nutrition wise significantly superior aur balanced alternative provide karta hai.\n• Option 1, 3 aur 4 are non-scientific statements.\n• Common Trap: Protein ka exact naam 'human alpha-lactalbumin' hai (na ki beta-lactoglobulin ya casein), jo exams me repeatedly test hota hai."
   },
   {
     "p_id": "bpsc_mol_v4_178",
@@ -3618,7 +3527,7 @@
       "ग्लाइसिन का एक अणु और एमिनोकैप्रोइक एसिड का एक अणु"
     ],
     "a": 1,
-    "e": "Sucrose ($\text{C}_{12}\text{H}_{22}\text{O}_{11}$) ek non-reducing disaccharide hai jo cane sugar me abundantly paya jata hai.\n\n• Option 2 is Correct because jab sucrose dilute acid ya enzyme Invertase dwara hydrolyze hota hai, to iska $\alpha-1,2$-glycosidic bond break ho jata hai, producing an equimolar mixture of $\alpha\\text{-D-glucose}$ ($+52.5^\\circ$ dextrorotatory) aur $\beta\\text{-D-fructose}$ ($-92.4^\\circ$ levorotatory). Is mixture ka net optical rotation levorotatory hota hai, isliye is reaction product ko 'Invert Sugar' kehte hain.\n• Option 1 is Incorrect because Maltose do glucose deta hai, aur Lactose glucose + galactose deta hai.\n• Option 3 aur 4 are unrelated compounds.\n• Common Trap: Hydrolysis se pehle sucrose dextrorotatory ($+66.5^\\circ$) hota hai, par hydrolysis ke baad fructose ki strong levorotation ke karan overall mixture levorotatory ho jata hai (Inversion of cane sugar)."
+    "e": "Sucrose ($\text{C}_{12}\text{H}_{22}\text{O}_{11}$) ek non-reducing disaccharide hai jo cane sugar me abundantly paya jata hai.\n\n• Option 2 is Correct because jab sucrose dilute acid ya enzyme Invertase dwara hydrolyze hota hai, to iska $alpha-1,2$-glycosidic bond break ho jata hai, producing an equimolar mixture of $alpha\\text{-D-glucose}$ ($+52.5^\\circ$ dextrorotatory) aur $\beta\\text{-D-fructose}$ ($-92.4^\\circ$ levorotatory). Is mixture ka net optical rotation levorotatory hota hai, isliye is reaction product ko 'Invert Sugar' kehte hain.\n• Option 1 is Incorrect because Maltose do glucose deta hai, aur Lactose glucose + galactose deta hai.\n• Option 3 aur 4 are unrelated compounds.\n• Common Trap: Hydrolysis se pehle sucrose dextrorotatory ($+66.5^\\circ$) hota hai, par hydrolysis ke baad fructose ki strong levorotation ke karan overall mixture levorotatory ho jata hai (Inversion of cane sugar)."
   },
   {
     "p_id": "bpsc_mol_v4_181",
@@ -3696,7 +3605,6 @@
     "a": 1,
     "e": "Griffith ke 1928 transformation experiment me transforming principle ka biochemical chemical identity unknown tha.\n\n• Option 2 is Correct because 1933-1944 ke dauran Oswald Avery, Colin MacLeod aur Maclyn McCarty ne heat-killed $S$ strain cells se purified biomolecules (Proteins, RNA, Carbohydrates, DNA) isolate kiye. Unhone dekha ki Protease aur RNase treatment se transformation par koi asar nahi hua, par jab 'DNase' (DNA hydrolyzing enzyme) add kiya gaya, to transformation completely halt ho gaya. Is experiment ne definitively establish kiya ki DNA hi chemical transforming substance hai.\n• Option 1 DNA structural model se related hai.\n• Option 3 semi-conservative replication se related hai.\n• Common Trap: Avery, MacLeod, McCarty (1944) ne biochemical proof diya, jabki Hershey & Chase (1952) ne isotopic blender experiment se final unequivocal proof provide kiya tha."
   },
-
   {
     "p_id": "bpsc_mol_v4_185",
     "qe": "Why did introducing highly specific deoxyribonuclease (DNase) enzymes selectively halt the transformation of avirulent R-type bacteria into virulent S-type cells during Avery's validation trials?",
@@ -3866,7 +3774,7 @@
       "पूरे लेआउट में शून्य शुद्ध कार्यात्मक पैरामीटर"
     ],
     "a": 1,
-    "e": "Human genome me coding exons aur repetitive non-coding DNA ka proportion highly skewed hota hai.\n\n• Option 2 is Correct because Human Genome Project ke salient features ke anusaar, total human DNA ka 'Less than 2 percent' ($<2\%$) hissa hi functional proteins ko code karta hai; bacha hua 98%+ genome non-coding sequences, introns aur repetitive satellite DNA se bana hota hai.\n• Option 1 is Incorrect because 99.9% nucleotide bases sabhi human beings me identical hote hain, yeh coding percentage nahi hai.\n• Option 3 is Incorrect because 50% unknown function genes ka share hai.\n• Common Trap: 99.9% (human similarity) aur <2% (protein-coding proportion) ke beech ka difference civil services exams ka high-yield point hai."
+    "e": "Human genome me coding exons aur repetitive non-coding DNA ka proportion highly skewed hota hai.\n\n• Option 2 is Correct because Human Genome Project ke salient features ke anusaar, total human DNA ka 'Less than 2 percent' ($<2%$) hissa hi functional proteins ko code karta hai; bacha hua 98%+ genome non-coding sequences, introns aur repetitive satellite DNA se bana hota hai.\n• Option 1 is Incorrect because 99.9% nucleotide bases sabhi human beings me identical hote hain, yeh coding percentage nahi hai.\n• Option 3 is Incorrect because 50% unknown function genes ka share hai.\n• Common Trap: 99.9% (human similarity) aur <2% (protein-coding proportion) ke beech ka difference civil services exams ka high-yield point hai."
   },
   {
     "p_id": "bpsc_mol_v4_194",
@@ -4170,7 +4078,7 @@
       "यह एसिड-बेस बफर तंत्र के माध्यम से समाधान के बेसिफिकेशन मापदंडों को स्पष्ट करता है"
     ],
     "a": 1,
-    "e": "Free radical addition polymerization (jaise polythene ya polystyrene synthesis) initiation catalysts par depend karti hai.\n\n• Option 2 is Correct because Benzoyl peroxide ($[\\text{C}_6\\text{H}_5\\text{COO}]_2$) thermally unstable hota hai; heat ya light ki presence me iska peroxy ($-O-O-$) single bond homolytic cleavage undergo karta hai aur active Phenyl free radicals ($\dot{\\text{C}}_6\\text{H}_5$) generate karta hai, jo monomer ke double bond par attack karke chain growth initiate karte hain.\n• Option 1 is Incorrect because yeh filler material nahi hai.\n• Option 3 is Incorrect because radical inhibitors benzoquinone hote hain, benzoyl peroxide initiator hai.\n• Common Trap: Benzoyl peroxide chain terminator ya inhibitor nahi balki radical reaction ka primary Chain Initiator hota hai."
+    "e": "Free radical addition polymerization (jaise polythene ya polystyrene synthesis) initiation catalysts par depend karti hai.\n\n• Option 2 is Correct because Benzoyl peroxide ($[\\text{C}_6\\text{H}_5\\text{COO}]_2$) thermally unstable hota hai; heat ya light ki presence me iska peroxy ($-O-O-$) single bond homolytic cleavage undergo karta hai aur active Phenyl free radicals ($dot{\\text{C}}_6\\text{H}_5$) generate karta hai, jo monomer ke double bond par attack karke chain growth initiate karte hain.\n• Option 1 is Incorrect because yeh filler material nahi hai.\n• Option 3 is Incorrect because radical inhibitors benzoquinone hote hain, benzoyl peroxide initiator hai.\n• Common Trap: Benzoyl peroxide chain terminator ya inhibitor nahi balki radical reaction ka primary Chain Initiator hota hai."
   },
   {
     "p_id": "bpsc_mol_v4_210",
@@ -4322,7 +4230,7 @@
       "शटरप्रूफ हेटेरोसाइक्लिक ट्रायमाइन ग्रिड"
     ],
     "a": 1,
-    "e": "Recombinant DNA research aur industrial protein production me model host organisms use hote hain.\n\n• Option 2 is Correct because Gram-negative bacterium *Escherichia coli* (*E. coli*) molecular cloning aur recombinant protein expression (jaise Humulin insulin) ka universal gold standard host hai kyunki iska complete genome well-mapped hai, iska doubling time fast ($\sim 20\text{ min}$) hai, aur yeh plasmids ko easily accept karta hai.\n• Option 1 is Incorrect because *Thermus aquaticus* sirf thermostable Taq polymerase ka source hai.\n• Option 3 is Incorrect because Stanley Cohen aur Herbert Boyer ne initial 1972 experiment me *Salmonella* plasmid use kiya tha par standard host *E. coli* bana.\n• Common Trap: Cohen-Boyer ne first rDNA molecule *Salmonella typhimurium* ke plasmid se banaya tha, par standard expression host *E. coli* hai."
+    "e": "Recombinant DNA research aur industrial protein production me model host organisms use hote hain.\n\n• Option 2 is Correct because Gram-negative bacterium *Escherichia coli* (*E. coli*) molecular cloning aur recombinant protein expression (jaise Humulin insulin) ka universal gold standard host hai kyunki iska complete genome well-mapped hai, iska doubling time fast ($sim 20\text{ min}$) hai, aur yeh plasmids ko easily accept karta hai.\n• Option 1 is Incorrect because *Thermus aquaticus* sirf thermostable Taq polymerase ka source hai.\n• Option 3 is Incorrect because Stanley Cohen aur Herbert Boyer ne initial 1972 experiment me *Salmonella* plasmid use kiya tha par standard host *E. coli* bana.\n• Common Trap: Cohen-Boyer ne first rDNA molecule *Salmonella typhimurium* ke plasmid se banaya tha, par standard expression host *E. coli* hai."
   },
   {
     "p_id": "bpsc_mol_v4_218",
@@ -4855,9 +4763,5 @@
     ],
     "a": 1,
     "e": "Prokaryotic model bacterium *E. coli* ka single circular chromosome bacterial molecular genetics ka standard reference point hai.\n\n• Option 2 is Correct because *E. coli* bacterium ka circular double-stranded DNA genome approximately $4.6 \\times 10^6$ base pairs ($4.6\\text{ Mbp}$) contain karta hai; is pure genome ki physical length calculate karne par lagbhag $1.36\\text{ mm}$ aati hai jo replication fork dwara sirf 19-20 minutes me replicate ho jati hai.\n• Option 1 is Incorrect because 5386 nucleotides single-stranded $\\phi \\times 174$ bacteriophage ka genome size hai.\n• Option 3 is Incorrect because 48502 bp bacteriophage Lambda ka genome hai.\n• Option 4 is Incorrect because $3.3 \\times 10^9\\text{ bp}$ human haploid cell genome ka size hai.\n• Common Trap: Standard genome sizes comparison: $\\phi \\times 174 = 5386\\text{ nt}$, Lambda phage $= 48,502\\text{ bp}$, *E. coli* $= 4.6 \\times 10^6\\text{ bp}$, Human haploid $= 3.3 \\times 10^9\\text{ bp}$."
-  },
+  }
 ]
-
-
-
-
