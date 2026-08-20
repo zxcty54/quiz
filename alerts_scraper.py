@@ -45,7 +45,7 @@ HEADERS = {
 warnings.filterwarnings("ignore")
 
 # ============================================================
-# UTILITY FUNCTIONS
+# UTILITY FUNCTIONS & DEDUPLICATION HELPERS
 # ============================================================
 
 def now_ist():
@@ -59,6 +59,10 @@ def clean_text(text):
     text = text.replace("\xa0", " ").replace("\u200b", " ")
     return re.sub(r'\s+', ' ', text).strip()
 
+def normalize_title(title):
+    """Duplicates detect karne ke liye title ko clean & lowercase karta hai"""
+    return re.sub(r'[^a-zA-Z0-9\u0900-\u097f]+', '', clean_text(title).lower())
+
 def word_count(text):
     return len(re.findall(r'\S+', text)) if text else 0
 
@@ -69,7 +73,6 @@ def trim_words(text, max_words=500):
     return text
 
 def decode_google_alert_url(alert_url):
-    """Google Alerts ke redirect link se real publisher URL nikalta hai"""
     try:
         parsed = urlparse(alert_url)
         query_params = parse_qs(parsed.query)
@@ -84,7 +87,6 @@ def decode_google_alert_url(alert_url):
 # ============================================================
 
 def get_entry_datetime(entry):
-    """Extracts exact published datetime object converted to IST"""
     if hasattr(entry, 'published_parsed') and entry.published_parsed:
         utc_dt = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
         return utc_dt.astimezone(IST)
@@ -104,7 +106,6 @@ def get_entry_datetime(entry):
     return None
 
 def is_strictly_today(entry_dt):
-    """Checks if publication date matches TODAY'S DATE in IST"""
     if not entry_dt:
         return False
     return entry_dt.date() == now_ist().date()
@@ -167,22 +168,24 @@ def process_alerts():
     today_str = now_ist().strftime("%d %b %Y")
     print(f"🚀 Starting Google Alerts Scraper Engine (Strict Date: {today_str})...\n")
     
-    # 1. Load Existing File & Retain ONLY Today's News (Auto-Purge Yesterday)
+    # 1. Load Existing File & Build Seen Sets
     existing_articles = []
     if os.path.exists(OUTPUT_FILE):
         try:
             with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
                 old_data = json.load(f)
                 for item in old_data.get("articles", []):
-                    # Check if saved item belongs to today
                     if today_str in item.get("date", ""):
                         existing_articles.append(item)
         except Exception:
             pass
 
-    seen_urls = {item.get("url") for item in existing_articles if item.get("url")}
+    seen_urls = {item.get("url").strip() for item in existing_articles if item.get("url")}
+    seen_titles = {normalize_title(item.get("title", "")) for item in existing_articles if item.get("title")}
+
     new_articles = []
     skipped_old_dates = 0
+    skipped_duplicates = 0
 
     for feed_info in GOOGLE_ALERT_FEEDS:
         feed_name = feed_info["name"]
@@ -200,11 +203,18 @@ def process_alerts():
 
             clean_title_str = clean_text(raw_title)
             real_url = decode_google_alert_url(raw_link)
+            norm_title = normalize_title(clean_title_str)
 
-            if not real_url or real_url in seen_urls or len(clean_title_str) < 15:
+            if not real_url or len(clean_title_str) < 15:
                 continue
 
-            # 📅 STRICT CURRENT DATE FILTER (Checked BEFORE Network Call)
+            # 🛑 1. DEDUPLICATION CHECK (URL & TITLE)
+            if real_url in seen_urls or norm_title in seen_titles:
+                print(f"   🧹 Duplicate Skipped: {clean_title_str[:40]}...")
+                skipped_duplicates += 1
+                continue
+
+            # 📅 2. STRICT CURRENT DATE FILTER
             entry_dt = get_entry_datetime(entry)
             if not is_strictly_today(entry_dt):
                 pub_date_str = entry_dt.strftime("%d %b %Y") if entry_dt else "Unknown Date"
@@ -225,8 +235,11 @@ def process_alerts():
                     print(f"   ⚠️ Skipped (Low Content): {clean_title_str[:40]}...")
                     continue
 
-            formatted_date = entry_dt.strftime("%a, %d %b %Y %H:%M:%S IST")
+            # Register in seen sets
             seen_urls.add(real_url)
+            seen_titles.add(norm_title)
+
+            formatted_date = entry_dt.strftime("%a, %d %b %Y %H:%M:%S IST")
 
             item = {
                 "feed_name": feed_name,
@@ -240,7 +253,7 @@ def process_alerts():
             new_articles.append(item)
             print(f"   ✅ Saved Today's News: {clean_title_str[:45]}... ({word_count(article_text)} words)")
 
-    # 2. Merge Today's Runs
+    # 3. Merge Today's Runs
     all_today_articles = new_articles + existing_articles
 
     output_payload = {
@@ -254,9 +267,10 @@ def process_alerts():
 
     print("\n" + "=" * 70)
     print(f"💾 Output saved to '{OUTPUT_FILE}'!")
-    print(f"   ✅ Added Today     : {len(new_articles)}")
-    print(f"   ⏭️ Skipped Old Date: {skipped_old_dates}")
-    print(f"   📊 Total for Today : {len(all_today_articles)}")
+    print(f"   ✅ Added Today       : {len(new_articles)}")
+    print(f"   🧹 Duplicates Dropped: {skipped_duplicates}")
+    print(f"   ⏭️ Skipped Old Date  : {skipped_old_dates}")
+    print(f"   📊 Total for Today   : {len(all_today_articles)}")
     print("=" * 70)
 
 if __name__ == "__main__":
