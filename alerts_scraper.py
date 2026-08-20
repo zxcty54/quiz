@@ -5,7 +5,7 @@ import html
 import hashlib
 import warnings
 from datetime import datetime, timedelta, timezone
-from urllib.parse import urlparse, parse_qs, urljoin
+from urllib.parse import urlparse, parse_qs
 
 import feedparser
 from bs4 import BeautifulSoup
@@ -26,7 +26,6 @@ MAX_CONTENT_WORDS = 500
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
-# Apne Google Alert RSS Feeds ki URLs yahan add karein
 GOOGLE_ALERT_FEEDS = [
     {
         "name": "India Firsts & Tech Alerts",
@@ -81,6 +80,36 @@ def decode_google_alert_url(alert_url):
     return alert_url
 
 # ============================================================
+# STRICT CURRENT DATE PARSER
+# ============================================================
+
+def get_entry_datetime(entry):
+    """Extracts exact published datetime object converted to IST"""
+    if hasattr(entry, 'published_parsed') and entry.published_parsed:
+        utc_dt = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
+        return utc_dt.astimezone(IST)
+    elif hasattr(entry, 'updated_parsed') and entry.updated_parsed:
+        utc_dt = datetime(*entry.updated_parsed[:6], tzinfo=timezone.utc)
+        return utc_dt.astimezone(IST)
+    
+    published_str = getattr(entry, "published", "") or getattr(entry, "updated", "")
+    if published_str:
+        try:
+            dt = date_parser.parse(published_str)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=IST)
+            return dt.astimezone(IST)
+        except Exception:
+            pass
+    return None
+
+def is_strictly_today(entry_dt):
+    """Checks if publication date matches TODAY'S DATE in IST"""
+    if not entry_dt:
+        return False
+    return entry_dt.date() == now_ist().date()
+
+# ============================================================
 # FETCH & EXTRACTION
 # ============================================================
 
@@ -109,7 +138,6 @@ def extract_article_body(html_content):
     for tag in soup(["script", "style", "noscript", "svg", "canvas", "nav", "footer", "form", "aside", "header"]):
         tag.decompose()
 
-    # Priority article selectors
     selectors = [
         "[itemprop='articleBody']", "article", ".article-body", 
         ".story-content", ".entry-content", ".news-content", "main"
@@ -122,7 +150,6 @@ def extract_article_body(html_content):
             if word_count(txt) >= MIN_CONTENT_WORDS:
                 return trim_words(txt, MAX_CONTENT_WORDS)
 
-    # Paragraph fallback
     paragraphs = [clean_text(p.get_text(" ", strip=True)) for p in soup.find_all("p")]
     paragraphs = [p for p in paragraphs if len(p) > 25]
     if paragraphs:
@@ -137,9 +164,25 @@ def extract_article_body(html_content):
 # ============================================================
 
 def process_alerts():
-    print("🚀 Starting Google Alerts Scraper Engine...\n")
-    all_articles = []
-    seen_urls = set()
+    today_str = now_ist().strftime("%d %b %Y")
+    print(f"🚀 Starting Google Alerts Scraper Engine (Strict Date: {today_str})...\n")
+    
+    # 1. Load Existing File & Retain ONLY Today's News (Auto-Purge Yesterday)
+    existing_articles = []
+    if os.path.exists(OUTPUT_FILE):
+        try:
+            with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+                old_data = json.load(f)
+                for item in old_data.get("articles", []):
+                    # Check if saved item belongs to today
+                    if today_str in item.get("date", ""):
+                        existing_articles.append(item)
+        except Exception:
+            pass
+
+    seen_urls = {item.get("url") for item in existing_articles if item.get("url")}
+    new_articles = []
+    skipped_old_dates = 0
 
     for feed_info in GOOGLE_ALERT_FEEDS:
         feed_name = feed_info["name"]
@@ -154,7 +197,6 @@ def process_alerts():
             raw_title = getattr(entry, "title", "")
             raw_link = getattr(entry, "link", "")
             raw_content = getattr(entry, "content", [{}])[0].get("value", "") or getattr(entry, "summary", "")
-            published_str = getattr(entry, "published", "") or getattr(entry, "updated", "")
 
             clean_title_str = clean_text(raw_title)
             real_url = decode_google_alert_url(raw_link)
@@ -162,11 +204,19 @@ def process_alerts():
             if not real_url or real_url in seen_urls or len(clean_title_str) < 15:
                 continue
 
+            # 📅 STRICT CURRENT DATE FILTER (Checked BEFORE Network Call)
+            entry_dt = get_entry_datetime(entry)
+            if not is_strictly_today(entry_dt):
+                pub_date_str = entry_dt.strftime("%d %b %Y") if entry_dt else "Unknown Date"
+                print(f"   ⏭️ Skipped Old Date ({pub_date_str}): {clean_title_str[:40]}...")
+                skipped_old_dates += 1
+                continue
+
             # Fetch Deep Article Content
             html_raw = fetch_html(real_url)
             article_text = extract_article_body(html_raw)
 
-            # Fallback to feed content if webpage scraping failed
+            # Fallback to feed snippet if full scraping failed
             if word_count(article_text) < MIN_CONTENT_WORDS:
                 snippet_text = clean_text(raw_content)
                 if word_count(snippet_text) >= 100:
@@ -175,37 +225,39 @@ def process_alerts():
                     print(f"   ⚠️ Skipped (Low Content): {clean_title_str[:40]}...")
                     continue
 
-            # Parse Date
-            pub_date = now_ist()
-            if published_str:
-                try:
-                    dt = date_parser.parse(published_str)
-                    pub_date = dt.astimezone(IST)
-                except Exception:
-                    pass
-
+            formatted_date = entry_dt.strftime("%a, %d %b %Y %H:%M:%S IST")
             seen_urls.add(real_url)
-            all_articles.append({
+
+            item = {
                 "feed_name": feed_name,
                 "title": clean_title_str,
                 "url": real_url,
-                "date": pub_date.strftime("%a, %d %b %Y %H:%M:%S IST"),
+                "date": formatted_date,
                 "content": article_text,
                 "content_words": word_count(article_text)
-            })
+            }
 
-            print(f"   ✅ Saved: {clean_title_str[:50]}... ({word_count(article_text)} words)")
+            new_articles.append(item)
+            print(f"   ✅ Saved Today's News: {clean_title_str[:45]}... ({word_count(article_text)} words)")
+
+    # 2. Merge Today's Runs
+    all_today_articles = new_articles + existing_articles
 
     output_payload = {
         "generated_at": now_ist().strftime("%Y-%m-%d %H:%M:%S"),
-        "total_count": len(all_articles),
-        "articles": all_articles
+        "total_count": len(all_today_articles),
+        "articles": all_today_articles
     }
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(output_payload, f, ensure_ascii=False, indent=2)
 
-    print(f"\n💾 Output successfully saved to '{OUTPUT_FILE}' with {len(all_articles)} items!")
+    print("\n" + "=" * 70)
+    print(f"💾 Output saved to '{OUTPUT_FILE}'!")
+    print(f"   ✅ Added Today     : {len(new_articles)}")
+    print(f"   ⏭️ Skipped Old Date: {skipped_old_dates}")
+    print(f"   📊 Total for Today : {len(all_today_articles)}")
+    print("=" * 70)
 
 if __name__ == "__main__":
     process_alerts()
