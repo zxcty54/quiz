@@ -7,6 +7,12 @@ from datetime import datetime, timezone, timedelta
 from google import genai
 from google.genai import types
 
+# Grok / OpenAI-compatible SDK
+try:
+    from openai import OpenAI
+except ImportError:
+    OpenAI = None
+
 # ============================================================
 # CONFIGURATION & DYNAMIC DATE SETUP
 # ============================================================
@@ -16,7 +22,7 @@ ALERTS_FILE = "final_alerts_news.json"
 OUTPUT_DIR = "current_affair"
 IST = timezone(timedelta(hours=5, minutes=30))
 
-# Dynamic Month & Year Calculation
+# Dynamic Month & Year Calculation (IST)
 CURRENT_DT = datetime.now(IST)
 CURRENT_MONTH_STR = CURRENT_DT.strftime("%b")           # e.g., "Aug"
 CURRENT_FULL_MONTH = CURRENT_DT.strftime("%B").lower()  # e.g., "august"
@@ -26,67 +32,66 @@ TARGET_MONTH_KEY = f"{CURRENT_MONTH_STR} {CURRENT_YEAR_STR}" # "Aug 2026"
 # Output: current_affair/august_2026.json
 OUTPUT_QUIZ_FILE = os.path.join(OUTPUT_DIR, f"{CURRENT_FULL_MONTH}_{CURRENT_YEAR_STR}.json")
 
-API_KEY = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
-client = genai.Client(api_key=API_KEY) if API_KEY else None
+# Gemini Client
+GEMINI_API_KEY = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
+gemini_client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
 
+# Grok / OpenAI-compatible Client (Uses GROK_API_KEY or OPENAI_API_KEY)
+GROK_API_KEY = os.environ.get("GROK_API_KEY") or os.environ.get("OPENAI_API_KEY")
+GROK_BASE_URL = os.environ.get("GROK_BASE_URL", "https://api.x.ai/v1") # Default X.AI / Grok endpoint
+grok_client = OpenAI(api_key=GROK_API_KEY, base_url=GROK_BASE_URL) if (OpenAI and GROK_API_KEY) else None
+
+# 🎯 MODEL PRIORITY REGISTRY
+# 1st Priority: gemini-3.6-flash
+# 2nd Priority: grok (openai/gpt-oss-120b)
+# 3rd & 4th: Gemini Fallbacks
 MODEL_REGISTRY = [
-    "gemini-3.5-flash-lite",  # 500 RPD / 15 RPM (Primary)
-    "gemini-3.1-flash-lite",  # 500 RPD / 15 RPM (Fallback 1)
-    "gemini-3.6-flash"        # Fallback 2
+    {"provider": "gemini", "model": "gemini-3.6-flash"},       # 1st Priority (High Intelligence)
+    {"provider": "grok",   "model": "openai/gpt-oss-120b"},     # 2nd Priority (Grok Open Model)
+    {"provider": "gemini", "model": "gemini-3.5-flash-lite"},   # 3rd Priority (Backup)
+    {"provider": "gemini", "model": "gemini-3.1-flash-lite"}    # 4th Priority (Emergency Backup)
 ]
 
-BATCH_SIZE = 12            # 12 bilingual questions per API call
-PAUSE_BETWEEN_BATCHES = 20 # 15s safe cooldown
+BATCH_SIZE = 12            # 12 news articles per batch for deep comparative filtering
+PAUSE_BETWEEN_BATCHES = 25 # 25s safe cooldown (Strictly < 3 requests per minute)
 
 # ============================================================
-# HIGH-YIELD SYSTEM PROMPT (EXACT UNCHANGED SCHEMA)
+# STRICT SINGLE-QUESTION HIGH-INTELLIGENCE PROMPT
 # ============================================================
 
 SYSTEM_PROMPT = """
-You are the Chief Exam Moderator and Paper Setter for Civil Services & State PCS Examinations (BPSC, UPSC CSE, SSC CGL).
-Evaluate the incoming news batch and create rigorous, analytical, and conceptual MCQs.
-
-ALLOWED CATEGORIES:
-1. National Polity, Judiciary & Governance
-2. Govt Schemes, Policies & Social Welfare
-3. National Economy, Union Budget & Banking
-4. International Relations, Summits & Global Organizations
-5. Science, Technology, Defense & Space
-6. Agriculture, Environment, Climate & GI Tags
-7. Infrastructure, Energy & Digital Projects
-8. Awards, Appointments, Sports, Persons & Indexes
-9. Bihar Special Affairs
+You are an Elite Paper Setter for Civil Services and State Public Service Commissions (BPSC, SSC CGL, State PCS).
+You will review a batch of raw current affairs items and curate ONLY the most essential, high-value MCQs.
 
 ================================================================================
-CRITICAL EXAM QUESTION & EXPLANATION QUALITY RULES:
+CRITICAL SELECTION & FRAMING DIRECTIVES:
 ================================================================================
-1. CONCEPTUAL & TESTABLE FRAMING:
-   - DO NOT create shallow questions asking only for raw isolated budget digits (e.g. "What is the cost?") or conference edition numbers (e.g. "Which edition did Minister speak at?").
-   - Frame questions testing: Nodal Ministries, Strategic Objectives, Route/State Beneficiaries, Benchmark Targets, or Statutory Provisions.
-   - Combine multiple facts from one news into ONE rich question.
+1. AGGRESSIVE QUALITY FILTER (DO NOT CONVERT EVERY ARTICLE):
+   - Out of 12 items in a batch, typically only 2 to 4 articles are genuinely worthy of an exam question.
+   - Set "has_high_yield_mcq": false for ANY article that is routine, localized, political commentary, private commercial trade, or retrospective audit.
+   - Accept ONLY items with concrete national/state significance: statutory cabinet policies, constitutional appointments, target years, international treaties, major space/defense tests, or key Bihar milestones.
 
-2. SUBSTANTIAL FACTUAL EXPLANATIONS (NO LAZY PLACEHOLDERS):
-   - STRICTLY FORBIDDEN: Writing tautological explanations like "Option A is Incorrect because the target is not 2026-27" or "Option B is Incorrect because the cost is not 5,000".
-   - REQUIRED: In field "e", provide substantive factual reasons for why the correct option is right AND provide genuine factual context/definitions for why other options are distractor concepts.
+2. STRICTLY NO STATEMENT-BASED QUESTIONS:
+   - FORBIDDEN: Do NOT write multi-statement formats ("Consider the following statements: 1, 2, 3...", "Which of the above are correct?", "1 and 2 only").
+   - MANDATORY: Write a clean, direct, single-sentence formal question in English ("qe") and Hindi ("qh").
 
-3. BALANCED ANSWER DISTRIBUTION:
-   - Randomly and evenly distribute correct answers across 0 (A), 1 (B), 2 (C), and 3 (D). Do NOT bias towards Option C.
+3. QUESTION vs EXPLANATION DIVISION:
+   - Question ("qe" / "qh"): Crisp, direct, formal line asking for the specific statutory body, nodal ministry, project target, location, or objective.
+   - Explanation ("e"): Put the comprehensive news details, background context, numbers, and definitions inside the explanation for each option.
 
-4. REJECTION RULES (Set "has_high_yield_mcq": false):
-   - Speeches/political remarks without cabinet policy notifications.
-   - General highway/tunnel tender announcements without technological milestones.
-   - Retrospective performance reports/CAG audits discussing pre-2026 data.
+4. BALANCED CORRECT ANSWER INDEX:
+   - Distribute the correct answer index "a" evenly across 0 (A), 1 (B), 2 (C), and 3 (D).
 
 ================================================================================
-SCHEMA REQUIREMENTS (Strict JSON Array):
+OUTPUT SCHEMA (Strict JSON Array):
 ================================================================================
 Return strictly valid JSON with exact field structure:
 [
   {
     "input_id": 1,
     "has_high_yield_mcq": true,
-    "qe": "Question text in clear English",
-    "qh": "Question text in accurate formal Hindi (शुद्ध एवं स्पष्ट हिंदी)",
+    "qe": "Single direct formal question sentence in English?",
+    "qh": "शुद्ध, स्पष्ट एवं मानक एकल वाक्य में प्रश्न हिंदी में?",
     "oe": [
       "Option A text in English",
       "Option B text in English",
@@ -99,10 +104,10 @@ Return strictly valid JSON with exact field structure:
       "विकल्प C हिंदी में",
       "विकल्प D हिंदी में"
     ],
-    "a": 0,
-    "e": "• Option A is Correct because [substantive factual explanation with nodal body/target].\\n• Option B is Incorrect because [factual context].\\n• Option C is Incorrect because [factual context].\\n• Option D is Incorrect because [factual context].",
-    "category": "Exact category from list",
-    "exam_tag": "Relevant Exam Tag"
+    "a": 1,
+    "e": "• Option B is Correct because [core factual news context, nodal agency, and targets].\\n• Option A is Incorrect because [factual context].\\n• Option C is Incorrect because [factual context].\\n• Option D is Incorrect because [factual context].",
+    "category": "Exact matched category",
+    "exam_tag": "BPSC / SSC CGL / State PCS"
   },
   {
     "input_id": 2,
@@ -157,43 +162,79 @@ def clean_json_response(raw_text):
                 pass
     return None
 
+# ============================================================
+# MULTI-PROVIDER LLM CALL DISPATCHER
+# ============================================================
 
-def call_gemini_mcq_api(batch_prompt):
+def call_llm_mcq_api(batch_prompt):
     global current_model_idx
-    if not client:
-        print("❌ Gemini Client not initialized! Check GOOGLE_API_KEY / GEMINI_API_KEY.")
-        return None
-
     total_models = len(MODEL_REGISTRY)
 
     while current_model_idx < total_models:
-        model_name = MODEL_REGISTRY[current_model_idx]
+        entry = MODEL_REGISTRY[current_model_idx]
+        provider = entry["provider"]
+        model_name = entry["model"]
+
         try:
-            response = client.models.generate_content(
-                model=model_name,
-                contents=batch_prompt,
-                config=types.GenerateContentConfig(
-                    system_instruction=SYSTEM_PROMPT,
-                    temperature=0.1,
-                    response_mime_type="application/json"
+            # 1. GEMINI PROVIDER
+            if provider == "gemini":
+                if not gemini_client:
+                    print(f"⚠️ Gemini Client not configured. Skipping [{model_name}]...")
+                    current_model_idx += 1
+                    continue
+
+                response = gemini_client.models.generate_content(
+                    model=model_name,
+                    contents=batch_prompt,
+                    config=types.GenerateContentConfig(
+                        system_instruction=SYSTEM_PROMPT,
+                        temperature=0.1,
+                        response_mime_type="application/json"
+                    )
                 )
-            )
-            parsed = clean_json_response(response.text)
-            if parsed:
-                return parsed if isinstance(parsed, list) else [parsed]
+                parsed = clean_json_response(response.text)
+                if parsed:
+                    return parsed if isinstance(parsed, list) else [parsed]
+
+            # 2. GROK / OPENAI-COMPATIBLE PROVIDER
+            elif provider == "grok":
+                if not grok_client:
+                    print(f"⚠️ Grok/OpenAI Client not configured (missing GROK_API_KEY). Skipping [{model_name}]...")
+                    current_model_idx += 1
+                    continue
+
+                response = grok_client.chat.completions.create(
+                    model=model_name,
+                    messages=[
+                        {"role": "system", "content": SYSTEM_PROMPT},
+                        {"role": "user", "content": batch_prompt}
+                    ],
+                    temperature=0.1,
+                    response_format={"type": "json_object"}
+                )
+                raw_content = response.choices[0].message.content
+                parsed = clean_json_response(raw_content)
+                if parsed:
+                    # If model wraps array in a key like {"questions": [...]}
+                    if isinstance(parsed, dict):
+                        for k, v in parsed.items():
+                            if isinstance(v, list):
+                                return v
+                    return parsed if isinstance(parsed, list) else [parsed]
+
         except Exception as e:
             err_str = str(e)
-            if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
-                print(f"⚠️ [{model_name}] Quota hit (429). Switching to fallback model...")
+            if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "Rate limit" in err_str:
+                print(f"⚠️ [{provider.upper()} - {model_name}] Quota hit (429). Switching to next priority...")
                 current_model_idx += 1
                 continue
-            print(f"⚠️ [{model_name}] Error: {e}")
-            time.sleep(15)
+            print(f"⚠️ [{provider.upper()} - {model_name}] Error: {e}")
+            time.sleep(20)
 
         current_model_idx += 1
 
-    print("⚠️ All models exhausted. Pausing 30s...")
-    time.sleep(30)
+    print("⚠️ All models exhausted. Pausing 60s...")
+    time.sleep(60)
     current_model_idx = 0
     return None
 
@@ -204,8 +245,8 @@ def call_gemini_mcq_api(batch_prompt):
 
 def generate_monthly_mcqs_auto():
     print("=" * 80)
-    print(f"🚀 RUNNING QUALITY BILINGUAL MCQ GENERATOR [{TARGET_MONTH_KEY}]")
-    print(f"📁 Target Output: {OUTPUT_QUIZ_FILE}")
+    print(f"🚀 RUNNING SELECTIVE BILINGUAL MCQ GENERATOR [{TARGET_MONTH_KEY}]")
+    print(f"📁 Target Output File: {OUTPUT_QUIZ_FILE}")
     print("=" * 80)
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -340,21 +381,21 @@ def generate_monthly_mcqs_auto():
     print(f"\n📊 Total Month Articles Scanned     : {len(scanned_articles)}")
     print(f"🚫 Retrospective/Old Audits Dropped: {dropped_retrospective}")
     print(f"⏭️ Already Processed In Previous Run: {len(scanned_articles) - len(fresh_articles_to_process)}")
-    print(f"⚡ Fresh Articles Ready For AI Call: {len(fresh_articles_to_process)}\n")
+    print(f"⚡ Fresh Articles Ready For AI Batching: {len(fresh_articles_to_process)}\n")
 
     if not fresh_articles_to_process:
-        print("✅ All monthly articles are already up to date. No new AI calls needed!")
+        print("✅ All monthly articles are already processed. No new API calls needed!")
         return
 
     newly_created_mcqs = []
     skipped_low_value = 0
     total_batches = (len(fresh_articles_to_process) + BATCH_SIZE - 1) // BATCH_SIZE
 
-    # 5. Process Fresh Articles in Batches
+    # 5. Process Fresh Articles in Batches of 12
     for b_idx in range(0, len(fresh_articles_to_process), BATCH_SIZE):
         batch = fresh_articles_to_process[b_idx : b_idx + BATCH_SIZE]
         batch_num = (b_idx // BATCH_SIZE) + 1
-        print(f"⚡ Evaluating Batch {batch_num}/{total_batches} ({len(batch)} items)...")
+        print(f"⚡ Evaluating Batch {batch_num}/{total_batches} ({len(batch)} items in batch)...")
 
         batch_payload = []
         for idx, news in enumerate(batch, 1):
@@ -366,8 +407,8 @@ def generate_monthly_mcqs_auto():
                 "facts": news.get("bullets", [])
             })
 
-        prompt_str = f"Create high-standard bilingual MCQs matching the requested JSON schema for these {len(batch)} items:\n" + json.dumps(batch_payload, ensure_ascii=False)
-        mcq_result = call_gemini_mcq_api(prompt_str)
+        prompt_str = f"Filter and create high-yield single direct MCQs for this batch of {len(batch)} items:\n" + json.dumps(batch_payload, ensure_ascii=False)
+        mcq_result = call_llm_mcq_api(prompt_str)
 
         if mcq_result:
             for item in mcq_result:
@@ -378,9 +419,15 @@ def generate_monthly_mcqs_auto():
                     skipped_low_value += 1
                     continue
 
-                qe_text = item.get("qe", "").strip()
-                qh_text = item.get("qh", "").strip()
+                qe_text = str(item.get("qe", "")).strip()
+                qh_text = str(item.get("qh", "")).strip()
                 norm_q = re.sub(r'[^a-zA-Z0-9]+', '', qe_text.lower())
+
+                # Anti-statement question safety check
+                if "consider the following" in qe_text.lower() or "which of the statements" in qe_text.lower():
+                    print(f"   🛑 Skipped Statement Question: {qe_text[:40]}...")
+                    skipped_low_value += 1
+                    continue
 
                 input_id = item.get("input_id", 1)
                 matched_news = batch[input_id - 1] if 0 < input_id <= len(batch) else batch[0]
@@ -408,15 +455,16 @@ def generate_monthly_mcqs_auto():
                         "a": correct_idx,
                         "e": item.get("e", ""),
                         "category": item.get("category", "Current Affairs"),
-                        "exam_tag": item.get("exam_tag", "🎯 Exam Special"),
+                        "exam_tag": item.get("exam_tag", "🎯 BPSC / SSC CGL"),
                         "domain": item_domain
                     }
                     newly_created_mcqs.append(clean_mcq)
-                    print(f"   🏆 [{item_domain} MCQ]: {qe_text[:45]}...")
+                    print(f"   🏆 [{item_domain} Direct MCQ]: {qe_text[:45]}...")
                 else:
                     print(f"   🧹 Duplicate Question Dropped.")
         
         if b_idx + BATCH_SIZE < len(fresh_articles_to_process):
+            print(f"⏳ Sleeping {PAUSE_BETWEEN_BATCHES}s to strictly respect API RPM limits...")
             time.sleep(PAUSE_BETWEEN_BATCHES)
 
     # 6. Segregate and Merge into National & Bihar Arrays
@@ -452,10 +500,12 @@ def generate_monthly_mcqs_auto():
         json.dump(final_payload, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 Segregated Monthly Quiz Saved to: '{OUTPUT_QUIZ_FILE}'")
-    print(f"   🇮🇳 National Total : {len(final_national)}")
-    print(f"   🏛️ Bihar Total    : {len(final_bihar)}")
-    print(f"   📊 Grand Total    : {len(final_national) + len(final_bihar)}")
+    print(f"💾 Selective Monthly Quiz Saved to: '{OUTPUT_QUIZ_FILE}'")
+    print(f"   ✅ Newly Added High-Yield : {len(newly_created_mcqs)}")
+    print(f"   ⏭️ Rejected Low-Yield News : {skipped_low_value}")
+    print(f"   🇮🇳 National Total         : {len(final_national)}")
+    print(f"   🏛️ Bihar Total            : {len(final_bihar)}")
+    print(f"   📊 Grand Total            : {len(final_national) + len(final_bihar)}")
     print("=" * 80)
 
 
