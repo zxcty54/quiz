@@ -35,16 +35,16 @@ MODEL_REGISTRY = [
     "gemini-3.6-flash"        # Fallback 2
 ]
 
-BATCH_SIZE = 12             # 12 bilingual questions per API call
-PAUSE_BETWEEN_BATCHES = 15 # 15s safe cooldown to eliminate rate limit issues
+BATCH_SIZE = 12            # 12 bilingual questions per API call
+PAUSE_BETWEEN_BATCHES = 20 # 15s safe cooldown
 
 # ============================================================
-# STRICT BILINGUAL HIGH-YIELD SYSTEM PROMPT
+# HIGH-YIELD SYSTEM PROMPT (EXACT UNCHANGED SCHEMA)
 # ============================================================
 
 SYSTEM_PROMPT = """
-You are the Chief Exam Moderator and Paper Setter for Civil Services & Competitive Examinations (BPSC, UPSC, SSC CGL).
-Analyze the incoming news articles strictly on their direct factual testability.
+You are the Chief Exam Moderator and Paper Setter for Civil Services & State PCS Examinations (BPSC, UPSC CSE, SSC CGL).
+Evaluate the incoming news batch and create rigorous, analytical, and conceptual MCQs.
 
 ALLOWED CATEGORIES:
 1. National Polity, Judiciary & Governance
@@ -57,11 +57,29 @@ ALLOWED CATEGORIES:
 8. Awards, Appointments, Sports, Persons & Indexes
 9. Bihar Special Affairs
 
-STRICT FILTER CRITERIA:
-1. Set "has_high_yield_mcq": true ONLY IF the news contains testable statutory facts (Ministry, Target Year, Budget Outlay, Index Rank, Location, Exercise, Bihar milestone).
-2. Set "has_high_yield_mcq": false for routine political rallies, private corporate orders, editorials/opinions, and historical retrospective audits (CAG 2021-2025).
+================================================================================
+CRITICAL EXAM QUESTION & EXPLANATION QUALITY RULES:
+================================================================================
+1. CONCEPTUAL & TESTABLE FRAMING:
+   - DO NOT create shallow questions asking only for raw isolated budget digits (e.g. "What is the cost?") or conference edition numbers (e.g. "Which edition did Minister speak at?").
+   - Frame questions testing: Nodal Ministries, Strategic Objectives, Route/State Beneficiaries, Benchmark Targets, or Statutory Provisions.
+   - Combine multiple facts from one news into ONE rich question.
 
+2. SUBSTANTIAL FACTUAL EXPLANATIONS (NO LAZY PLACEHOLDERS):
+   - STRICTLY FORBIDDEN: Writing tautological explanations like "Option A is Incorrect because the target is not 2026-27" or "Option B is Incorrect because the cost is not 5,000".
+   - REQUIRED: In field "e", provide substantive factual reasons for why the correct option is right AND provide genuine factual context/definitions for why other options are distractor concepts.
+
+3. BALANCED ANSWER DISTRIBUTION:
+   - Randomly and evenly distribute correct answers across 0 (A), 1 (B), 2 (C), and 3 (D). Do NOT bias towards Option C.
+
+4. REJECTION RULES (Set "has_high_yield_mcq": false):
+   - Speeches/political remarks without cabinet policy notifications.
+   - General highway/tunnel tender announcements without technological milestones.
+   - Retrospective performance reports/CAG audits discussing pre-2026 data.
+
+================================================================================
 SCHEMA REQUIREMENTS (Strict JSON Array):
+================================================================================
 Return strictly valid JSON with exact field structure:
 [
   {
@@ -82,7 +100,7 @@ Return strictly valid JSON with exact field structure:
       "विकल्प D हिंदी में"
     ],
     "a": 0,
-    "e": "• Option A is Correct because [reason].\\n• Option B is Incorrect because [reason].\\n• Option C is Incorrect because [reason].\\n• Option D is Incorrect because [reason].",
+    "e": "• Option A is Correct because [substantive factual explanation with nodal body/target].\\n• Option B is Incorrect because [factual context].\\n• Option C is Incorrect because [factual context].\\n• Option D is Incorrect because [factual context].",
     "category": "Exact category from list",
     "exam_tag": "Relevant Exam Tag"
   },
@@ -117,7 +135,6 @@ def is_old_retrospective_story(title, bullets):
 # ============================================================
 
 def generate_article_hash(title):
-    """Generates an 8-character deterministic fingerprint for each article"""
     clean = re.sub(r'[^a-zA-Z0-9\u0900-\u097f]+', '', str(title).lower().strip())
     return hashlib.md5(clean.encode('utf-8')).hexdigest()[:8]
 
@@ -187,7 +204,7 @@ def call_gemini_mcq_api(batch_prompt):
 
 def generate_monthly_mcqs_auto():
     print("=" * 80)
-    print(f"🚀 RUNNING BILINGUAL MONTHLY MCQ GENERATOR [{TARGET_MONTH_KEY}]")
+    print(f"🚀 RUNNING QUALITY BILINGUAL MCQ GENERATOR [{TARGET_MONTH_KEY}]")
     print(f"📁 Target Output: {OUTPUT_QUIZ_FILE}")
     print("=" * 80)
 
@@ -349,7 +366,7 @@ def generate_monthly_mcqs_auto():
                 "facts": news.get("bullets", [])
             })
 
-        prompt_str = f"Create bilingual MCQs matching the requested JSON schema for these {len(batch)} items:\n" + json.dumps(batch_payload, ensure_ascii=False)
+        prompt_str = f"Create high-standard bilingual MCQs matching the requested JSON schema for these {len(batch)} items:\n" + json.dumps(batch_payload, ensure_ascii=False)
         mcq_result = call_gemini_mcq_api(prompt_str)
 
         if mcq_result:
