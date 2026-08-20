@@ -49,7 +49,7 @@ MODEL_REGISTRY = [
 ]
 
 BATCH_SIZE = 12            # 12 items batch for smart selection
-PAUSE_BETWEEN_BATCHES = 18 # 25s safe cooldown
+PAUSE_BETWEEN_BATCHES = 18 # 18s cooldown
 
 # ============================================================
 # STRICT SINGLE-QUESTION HIGH-INTELLIGENCE PROMPT
@@ -326,20 +326,16 @@ def generate_monthly_mcqs_auto():
                 alerts_data = json.load(f)
 
             alert_items = []
-            if isinstance(alerts_data, list):
+            if isinstance(alerts_data, dict):
+                alert_items = alerts_data.get("alert_news", [])
+            elif isinstance(alerts_data, list):
                 alert_items = alerts_data
-            elif isinstance(alerts_data, dict):
-                alert_items = (
-                    alerts_data.get("articles") or
-                    alerts_data.get("news") or
-                    alerts_data.get("national_news", []) + alerts_data.get("bihar_news", [])
-                )
 
             for item in alert_items:
                 if not isinstance(item, dict):
                     continue
-                t = item.get("title", "")
-                date_str = item.get("date", "")
+                t = item.get("title", "").strip()
+                date_str = str(item.get("date", ""))
                 t_hash = generate_article_hash(t)
 
                 if TARGET_MONTH_KEY in date_str and t_hash not in seen_titles:
@@ -353,7 +349,7 @@ def generate_monthly_mcqs_auto():
 
                     scanned_articles.append({
                         "title": t,
-                        "category": item.get("category") or item.get("feed_name") or "Special Alerts & Tech",
+                        "category": item.get("category", "Special Alerts & Tech"),
                         "domain": "National",
                         "bullets": bullets,
                         "date": date_str,
