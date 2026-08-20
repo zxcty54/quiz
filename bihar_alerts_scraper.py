@@ -16,8 +16,10 @@ from datetime import datetime, timezone, timedelta
 TARGET_FILE = "rawnews.json"
 IST = timezone(timedelta(hours=5, minutes=30))
 TIMEOUT = 15
+
+# Strict limits: Full article must have at least 150 words
+MIN_WORDS_PER_ARTICLE = 150
 MAX_WORDS_PER_ARTICLE = 500
-MIN_WORDS_PER_ARTICLE = 50
 
 # 3 Bihar Google Alerts Feeds
 BIHAR_FEEDS = [
@@ -96,7 +98,7 @@ def is_unwanted_news(title, text=""):
 
 
 # ============================================================
-# HELPER FUNCTIONS
+# HELPER FUNCTIONS & DATE CHECKS
 # ============================================================
 
 def now_ist():
@@ -134,10 +136,6 @@ def clean_title(title):
     return t.strip()
 
 
-# ============================================================
-# STRICT CURRENT DATE FILTER
-# ============================================================
-
 def get_entry_datetime(entry):
     """Extracts published/updated datetime converted to IST"""
     if hasattr(entry, 'published_parsed') and entry.published_parsed:
@@ -158,6 +156,7 @@ def is_strictly_today(entry):
 
 
 def scrape_full_webpage_content(target_url):
+    """Fetches and extracts full article body; returns empty if invalid or short"""
     try:
         resp = requests.get(target_url, headers=HEADERS, timeout=TIMEOUT)
         if resp.status_code == 200:
@@ -181,6 +180,7 @@ def scrape_full_webpage_content(target_url):
             cleaned = clean_text(text)
             words = cleaned.split()
 
+            # Enforce minimum word requirement on raw extracted body
             if len(words) >= MIN_WORDS_PER_ARTICLE:
                 return " ".join(words[:MAX_WORDS_PER_ARTICLE])
     except Exception:
@@ -195,7 +195,7 @@ def scrape_full_webpage_content(target_url):
 def process_and_append_bihar_alerts():
     today_str = now_ist().strftime("%d %b %Y")
     print("\n" + "=" * 75)
-    print(f"🚀 STARTING BIHAR ALERTS SCRAPER (TODAY'S EXCLUSIVE: {today_str})")
+    print(f"🚀 STARTING STRICT BIHAR ALERTS SCRAPER [{today_str}]")
     print("=" * 75)
 
     raw_data = {
@@ -217,20 +217,15 @@ def process_and_append_bihar_alerts():
 
     # Retain existing bihar items only if they belong to TODAY
     existing_bihar = raw_data.get("bihar_raw_news", [])
-    valid_existing_bihar = []
-    
-    for item in existing_bihar:
-        d_str = item.get("date", "")
-        # Agar item aaj ka hai toh retain rakho, kal ka flush kardo
-        if today_str in d_str:
-            valid_existing_bihar.append(item)
+    valid_existing_bihar = [item for item in existing_bihar if today_str in item.get("date", "")]
     
     seen_urls = {item.get("url", "").strip() for item in valid_existing_bihar if item.get("url")}
     seen_titles = {re.sub(r'[^a-zA-Z0-9\u0900-\u097f]+', '', item.get("title", "").lower()) for item in valid_existing_bihar}
 
     new_bihar_items = []
-    dropped_count = 0
-    old_date_skipped = 0
+    dropped_banned = 0
+    skipped_old = 0
+    failed_scrape = 0
 
     for feed_info in BIHAR_FEEDS:
         cat_name = feed_info["category"]
@@ -257,17 +252,15 @@ def process_and_append_bihar_alerts():
             if not c_title or not real_url or len(c_title) < 15:
                 continue
 
-            # 1. 📅 STRICT CURRENT DATE FILTER
+            # 1. Date Check (Today Only)
             if not is_strictly_today(entry):
-                entry_dt = get_entry_datetime(entry)
-                pub_d_str = entry_dt.strftime("%d %b %Y") if entry_dt else "Unknown"
-                old_date_skipped += 1
+                skipped_old += 1
                 continue
 
-            # 2. 🛑 REGEX FILTER
+            # 2. Banned Topics Check on Title/Snippet
             if is_unwanted_news(c_title, clean_snippet):
                 print(f"   ⏭️ REJECTED (Banned Topic): {c_title[:50]}...")
-                dropped_count += 1
+                dropped_banned += 1
                 continue
 
             # 3. Duplicate Check
@@ -275,22 +268,23 @@ def process_and_append_bihar_alerts():
             if real_url in seen_urls or norm_title in seen_titles:
                 continue
 
-            seen_urls.add(real_url)
-            seen_titles.add(norm_title)
-
-            print(f"   🌐 Scraping Today's Article: {c_title[:45]}...")
+            # 4. Strict Webpage Scraping (NO SNIPPET FALLBACK)
+            print(f"   🌐 Scraping Target Webpage: {c_title[:45]}...")
             content = scrape_full_webpage_content(real_url)
 
             if not content:
-                if len(clean_snippet) > 40:
-                    content = f"{c_title}. Details: {clean_snippet}"
-                else:
-                    content = f"{c_title}. Official update regarding Bihar state governance and development."
-
-            if is_unwanted_news("", content[:250]):
-                print(f"   ⏭️ REJECTED (Body Filter): {c_title[:50]}...")
-                dropped_count += 1
+                print(f"   🚫 REJECTED (Webpage scraping failed or < {MIN_WORDS_PER_ARTICLE} words): {c_title[:45]}...")
+                failed_scrape += 1
                 continue
+
+            # 5. Final Body Quality & Topic Check
+            if is_unwanted_news("", content[:250]):
+                print(f"   ⏭️ REJECTED (Body Topic Filter): {c_title[:50]}...")
+                dropped_banned += 1
+                continue
+
+            seen_urls.add(real_url)
+            seen_titles.add(norm_title)
 
             words_total = len(content.split())
             entry_dt = get_entry_datetime(entry)
@@ -308,11 +302,11 @@ def process_and_append_bihar_alerts():
             }
 
             new_bihar_items.append(item)
-            print(f"   ✅ Added Today's News: {c_title[:40]}")
+            print(f"   ✅ Successfully Scraped ({words_total} words): {c_title[:40]}")
 
-    print(f"\n📊 Summary -> Added: {len(new_bihar_items)} | Skipped Old Dates: {old_date_skipped} | Dropped Banned: {dropped_count}")
+    print(f"\n📊 Filter Summary -> Added: {len(new_bihar_items)} | Scraping Failed: {failed_scrape} | Banned: {dropped_banned} | Old: {skipped_old}")
 
-    # Merge newly scraped items with valid today's existing items
+    # Merge fresh items with valid today's existing items
     updated_bihar_news = new_bihar_items + valid_existing_bihar
     raw_data["bihar_raw_news"] = updated_bihar_news
     raw_data["bihar_raw_count"] = len(updated_bihar_news)
@@ -329,8 +323,8 @@ def process_and_append_bihar_alerts():
         json.dump(raw_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 75)
-    print(f"💾 Successfully saved TODAY'S Bihar articles to '{TARGET_FILE}'!")
-    print(f"📊 Bihar Total: {len(updated_bihar_news)} | National Total: {national_count} | All Total: {raw_data['total_raw_count']}")
+    print(f"💾 Successfully updated '{TARGET_FILE}' with verified full-article news!")
+    print(f"📊 Bihar Total: {len(updated_bihar_news)} | National Total: {national_count} | Grand Total: {raw_data['total_raw_count']}")
     print("=" * 75)
 
 
