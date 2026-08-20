@@ -11,9 +11,10 @@ from google.genai import types
 # ============================================================
 
 MASTER_FILE = "all_current_affairs.json"
+ALERTS_FILE = "final_alerts_news.json"
 IST = timezone(timedelta(hours=5, minutes=30))
 
-# 🎯 DYNAMIC CURRENT MONTH & YEAR (Auto-calculated, No Manual Change)
+# 🎯 DYNAMIC CURRENT MONTH & YEAR
 CURRENT_DT = datetime.now(IST)
 CURRENT_MONTH_STR = CURRENT_DT.strftime("%b")      # e.g., "Aug"
 CURRENT_YEAR_STR = CURRENT_DT.strftime("%Y")       # e.g., "2026"
@@ -150,17 +151,10 @@ def generate_monthly_mcqs_auto():
     print(f"📁 Target Output File: {OUTPUT_QUIZ_FILE}")
     print("=" * 80)
 
-    if not os.path.exists(MASTER_FILE):
-        print(f"❌ {MASTER_FILE} not found! Run summarizer first.")
-        return
-
-    with open(MASTER_FILE, "r", encoding="utf-8") as f:
-        master_data = json.load(f)
-
     # 1. Load Existing MCQs for this Month (to prevent duplicate generation & token burn)
     existing_quiz_payload = {
         "month": TARGET_MONTH_KEY,
-        "generated_at": now_ist().strftime("%Y-%m-%d %H:%M:%S"),
+        "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
         "total_questions": 0,
         "questions": []
     }
@@ -174,23 +168,86 @@ def generate_monthly_mcqs_auto():
 
     existing_questions = existing_quiz_payload.get("questions", [])
     seen_q_texts = {re.sub(r'[^a-zA-Z0-9]+', '', q.get("question", "").lower()) for q in existing_questions}
+    seen_article_titles = set()
 
-    # 2. Extract Target Month's News from Master Archive
     target_articles = []
 
-    for item in master_data.get("bihar_news", []):
-        if TARGET_MONTH_KEY in item.get("date", ""):
-            item["domain"] = "Bihar Special Affairs"
-            target_articles.append(item)
+    # 2. EXTRACT SOURCE 1: all_current_affairs.json
+    if os.path.exists(MASTER_FILE):
+        try:
+            with open(MASTER_FILE, "r", encoding="utf-8") as f:
+                master_data = json.load(f)
 
-    for item in master_data.get("national_news", []):
-        if TARGET_MONTH_KEY in item.get("date", ""):
-            item["domain"] = item.get("category", "National Current Affairs")
-            target_articles.append(item)
+            # Bihar News
+            for item in master_data.get("bihar_news", []):
+                t_norm = re.sub(r'[^a-zA-Z0-9]+', '', item.get("title", "").lower())
+                if TARGET_MONTH_KEY in item.get("date", "") and t_norm not in seen_article_titles:
+                    item["domain"] = "Bihar Special Affairs"
+                    target_articles.append(item)
+                    seen_article_titles.add(t_norm)
+
+            # National News
+            for item in master_data.get("national_news", []):
+                t_norm = re.sub(r'[^a-zA-Z0-9]+', '', item.get("title", "").lower())
+                if TARGET_MONTH_KEY in item.get("date", "") and t_norm not in seen_article_titles:
+                    item["domain"] = item.get("category", "National Current Affairs")
+                    target_articles.append(item)
+                    seen_article_titles.add(t_norm)
+
+            print(f"📦 Loaded from {MASTER_FILE} | Total matched: {len(target_articles)}")
+        except Exception as e:
+            print(f"⚠️ Could not read {MASTER_FILE}: {e}")
+    else:
+        print(f"⚠️ {MASTER_FILE} not found!")
+
+    # 3. EXTRACT SOURCE 2: final_alerts_news.json
+    alerts_added = 0
+    if os.path.exists(ALERTS_FILE):
+        try:
+            with open(ALERTS_FILE, "r", encoding="utf-8") as f:
+                alerts_data = json.load(f)
+
+            # Support list format or dict with "articles"/"news" keys
+            alert_items = []
+            if isinstance(alerts_data, list):
+                alert_items = alerts_data
+            elif isinstance(alerts_data, dict):
+                alert_items = (
+                    alerts_data.get("articles") or
+                    alerts_data.get("news") or
+                    alerts_data.get("national_news", []) + alerts_data.get("bihar_news", [])
+                )
+
+            for item in alert_items:
+                if not isinstance(item, dict):
+                    continue
+                date_str = item.get("date", "")
+                t_norm = re.sub(r'[^a-zA-Z0-9]+', '', item.get("title", "").lower())
+
+                if TARGET_MONTH_KEY in date_str and t_norm and t_norm not in seen_article_titles:
+                    bullets = item.get("bullets", [])
+                    if not bullets and item.get("content"):
+                        bullets = [item.get("content")[:400]]
+
+                    target_articles.append({
+                        "title": item.get("title", ""),
+                        "category": item.get("category") or item.get("feed_name") or "Special Alerts & Tech",
+                        "domain": "Alerts Special",
+                        "bullets": bullets,
+                        "date": date_str
+                    })
+                    seen_article_titles.add(t_norm)
+                    alerts_added += 1
+
+            print(f"📦 Loaded from {ALERTS_FILE} | Newly added: {alerts_added}")
+        except Exception as e:
+            print(f"⚠️ Could not read {ALERTS_FILE}: {e}")
+    else:
+        print(f"ℹ️ {ALERTS_FILE} not found (Skipped second source).")
 
     total_news = len(target_articles)
-    print(f"📦 Total Articles Found for {TARGET_MONTH_KEY}: {total_news}")
-    print(f"📑 Existing MCQs Already in File: {len(existing_questions)}\n")
+    print(f"\n📊 Total Combined Articles for {TARGET_MONTH_KEY}: {total_news}")
+    print(f"📑 Existing MCQs in Quiz File: {len(existing_questions)}\n")
 
     if total_news == 0:
         print(f"⚠️ No articles found for '{TARGET_MONTH_KEY}'. Skipping execution.")
@@ -200,7 +257,7 @@ def generate_monthly_mcqs_auto():
     skipped_low_value = 0
     total_batches = (total_news + BATCH_SIZE - 1) // BATCH_SIZE
 
-    # 3. Process in Micro-Batches
+    # 4. Process in Micro-Batches
     for b_idx in range(0, total_news, BATCH_SIZE):
         batch = target_articles[b_idx : b_idx + BATCH_SIZE]
         batch_num = (b_idx // BATCH_SIZE) + 1
@@ -250,13 +307,13 @@ def generate_monthly_mcqs_auto():
         if b_idx + BATCH_SIZE < total_news:
             time.sleep(PAUSE_BETWEEN_BATCHES)
 
-    # 4. Merge New MCQs with Existing Monthly File
+    # 5. Merge New MCQs with Existing Monthly File
     all_final_mcqs = existing_questions + newly_created_mcqs
 
     for idx, q in enumerate(all_final_mcqs, 1):
         q["id"] = f"q_{idx:03d}"
 
-    existing_quiz_payload["generated_at"] = now_ist().strftime("%Y-%m-%d %H:%M:%S")
+    existing_quiz_payload["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S")
     existing_quiz_payload["month"] = TARGET_MONTH_KEY
     existing_quiz_payload["total_questions"] = len(all_final_mcqs)
     existing_quiz_payload["questions"] = all_final_mcqs
