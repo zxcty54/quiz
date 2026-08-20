@@ -7,11 +7,11 @@ from datetime import datetime, timezone, timedelta
 from google import genai
 from google.genai import types
 
-# Grok / OpenAI-compatible SDK
+# Groq Official SDK
 try:
-    from openai import OpenAI
+    from groq import Groq
 except ImportError:
-    OpenAI = None
+    Groq = None
 
 # ============================================================
 # CONFIGURATION & DYNAMIC DATE SETUP
@@ -29,31 +29,27 @@ CURRENT_FULL_MONTH = CURRENT_DT.strftime("%B").lower()  # e.g., "august"
 CURRENT_YEAR_STR = CURRENT_DT.strftime("%Y")            # e.g., "2026"
 TARGET_MONTH_KEY = f"{CURRENT_MONTH_STR} {CURRENT_YEAR_STR}" # "Aug 2026"
 
-# Output: current_affair/august_2026.json
+# Output File: current_affair/august_2026.json
 OUTPUT_QUIZ_FILE = os.path.join(OUTPUT_DIR, f"{CURRENT_FULL_MONTH}_{CURRENT_YEAR_STR}.json")
 
 # Gemini Client
 GEMINI_API_KEY = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
 gemini_client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
 
-# Grok / OpenAI-compatible Client (Uses GROK_API_KEY or OPENAI_API_KEY)
-GROK_API_KEY = os.environ.get("GROK_API_KEY") or os.environ.get("OPENAI_API_KEY")
-GROK_BASE_URL = os.environ.get("GROK_BASE_URL", "https://api.x.ai/v1") # Default X.AI / Grok endpoint
-grok_client = OpenAI(api_key=GROK_API_KEY, base_url=GROK_BASE_URL) if (OpenAI and GROK_API_KEY) else None
+# Groq Client
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+groq_client = Groq(api_key=GROQ_API_KEY) if (Groq and GROQ_API_KEY) else None
 
 # 🎯 MODEL PRIORITY REGISTRY
-# 1st Priority: gemini-3.6-flash
-# 2nd Priority: grok (openai/gpt-oss-120b)
-# 3rd & 4th: Gemini Fallbacks
 MODEL_REGISTRY = [
-    {"provider": "gemini", "model": "gemini-3.6-flash"},       # 1st Priority (High Intelligence)
-    {"provider": "grok",   "model": "openai/gpt-oss-120b"},     # 2nd Priority (Grok Open Model)
-    {"provider": "gemini", "model": "gemini-3.5-flash-lite"},   # 3rd Priority (Backup)
+    {"provider": "gemini", "model": "gemini-3.6-flash"},       # 1st Priority (Gemini Flash)
+    {"provider": "groq",   "model": "openai/gpt-oss-120b"},     # 2nd Priority (Groq Engine)
+    {"provider": "gemini", "model": "gemini-3.5-flash-lite"},   # 3rd Priority (Fallback)
     {"provider": "gemini", "model": "gemini-3.1-flash-lite"}    # 4th Priority (Emergency Backup)
 ]
 
-BATCH_SIZE = 12            # 12 news articles per batch for deep comparative filtering
-PAUSE_BETWEEN_BATCHES = 25 # 25s safe cooldown (Strictly < 3 requests per minute)
+BATCH_SIZE = 12            # 12 items batch for smart selection
+PAUSE_BETWEEN_BATCHES = 25 # 25s safe cooldown
 
 # ============================================================
 # STRICT SINGLE-QUESTION HIGH-INTELLIGENCE PROMPT
@@ -66,7 +62,7 @@ You will review a batch of raw current affairs items and curate ONLY the most es
 ================================================================================
 CRITICAL SELECTION & FRAMING DIRECTIVES:
 ================================================================================
-1. AGGRESSIVE QUALITY FILTER (DO NOT CONVERT EVERY ARTICLE):
+1. AGGRESSIVE QUALITY FILTER:
    - Out of 12 items in a batch, typically only 2 to 4 articles are genuinely worthy of an exam question.
    - Set "has_high_yield_mcq": false for ANY article that is routine, localized, political commentary, private commercial trade, or retrospective audit.
    - Accept ONLY items with concrete national/state significance: statutory cabinet policies, constitutional appointments, target years, international treaties, major space/defense tests, or key Bihar milestones.
@@ -176,10 +172,10 @@ def call_llm_mcq_api(batch_prompt):
         model_name = entry["model"]
 
         try:
-            # 1. GEMINI PROVIDER
+            # 1. GEMINI CALL
             if provider == "gemini":
                 if not gemini_client:
-                    print(f"⚠️ Gemini Client not configured. Skipping [{model_name}]...")
+                    print(f"⚠️ Gemini Client not initialized. Skipping [{model_name}]...")
                     current_model_idx += 1
                     continue
 
@@ -196,14 +192,14 @@ def call_llm_mcq_api(batch_prompt):
                 if parsed:
                     return parsed if isinstance(parsed, list) else [parsed]
 
-            # 2. GROK / OPENAI-COMPATIBLE PROVIDER
-            elif provider == "grok":
-                if not grok_client:
-                    print(f"⚠️ Grok/OpenAI Client not configured (missing GROK_API_KEY). Skipping [{model_name}]...")
+            # 2. GROQ CALL
+            elif provider == "groq":
+                if not groq_client:
+                    print(f"⚠️ Groq Client not initialized (missing GROQ_API_KEY). Skipping [{model_name}]...")
                     current_model_idx += 1
                     continue
 
-                response = grok_client.chat.completions.create(
+                response = groq_client.chat.completions.create(
                     model=model_name,
                     messages=[
                         {"role": "system", "content": SYSTEM_PROMPT},
@@ -215,7 +211,6 @@ def call_llm_mcq_api(batch_prompt):
                 raw_content = response.choices[0].message.content
                 parsed = clean_json_response(raw_content)
                 if parsed:
-                    # If model wraps array in a key like {"questions": [...]}
                     if isinstance(parsed, dict):
                         for k, v in parsed.items():
                             if isinstance(v, list):
@@ -251,7 +246,7 @@ def generate_monthly_mcqs_auto():
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    # 1. Load Existing MCQs and Extract Processed Article Hashes
+    # 1. Load Existing MCQs
     existing_quiz_payload = {
         "month": TARGET_MONTH_KEY,
         "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
@@ -391,7 +386,7 @@ def generate_monthly_mcqs_auto():
     skipped_low_value = 0
     total_batches = (len(fresh_articles_to_process) + BATCH_SIZE - 1) // BATCH_SIZE
 
-    # 5. Process Fresh Articles in Batches of 12
+    # 5. Process in Batches of 12
     for b_idx in range(0, len(fresh_articles_to_process), BATCH_SIZE):
         batch = fresh_articles_to_process[b_idx : b_idx + BATCH_SIZE]
         batch_num = (b_idx // BATCH_SIZE) + 1
@@ -423,7 +418,6 @@ def generate_monthly_mcqs_auto():
                 qh_text = str(item.get("qh", "")).strip()
                 norm_q = re.sub(r'[^a-zA-Z0-9]+', '', qe_text.lower())
 
-                # Anti-statement question safety check
                 if "consider the following" in qe_text.lower() or "which of the statements" in qe_text.lower():
                     print(f"   🛑 Skipped Statement Question: {qe_text[:40]}...")
                     skipped_low_value += 1
@@ -464,7 +458,7 @@ def generate_monthly_mcqs_auto():
                     print(f"   🧹 Duplicate Question Dropped.")
         
         if b_idx + BATCH_SIZE < len(fresh_articles_to_process):
-            print(f"⏳ Sleeping {PAUSE_BETWEEN_BATCHES}s to strictly respect API RPM limits...")
+            print(f"⏳ Sleeping {PAUSE_BETWEEN_BATCHES}s to strictly respect API limits...")
             time.sleep(PAUSE_BETWEEN_BATCHES)
 
     # 6. Segregate and Merge into National & Bihar Arrays
