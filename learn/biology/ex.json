@@ -1,1 +1,1752 @@
+{
+  "topic_id": "cell_biology_complete_mastery",
+  "topic_title": "Cell: The Fundamental Unit of Life (कोशिका: जीवन की मौलिक इकाई)",
+  "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "BPSC TRE", "UPSC Prelims"],
+  "total_cards": 100,
+  "characters": {
+    "aman": { "name": "Aman Sir", "role": "teacher", "avatar": "👨‍🏫" },
+    "raju": { "name": "Raju", "role": "student", "avatar": "👦" }
+  },
+  "cards": [
+    {
+      "card_id": "card_01_intro",
+      "card_slug": "card_01_intro",
+      "type": "intro",
+      "concept_id": "chapter_overview",
+      "level": 1,
+      "progress": { "current": 1, "total": 100 },
+      "intro_payload": {
+        "chapter_title": "Cell Biology Master Track",
+        "chapter_icon": "🔬",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "BPSC TRE", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Part 1 (Cards 01-35): Historical Discoveries, Microscopy, Cell Theory, Cytology Foundations, Prokaryotic vs Eukaryotic Architecture, Cell Envelope, and Plasma Membrane Dynamics.",
+          "Part 2 (Cards 36-70): Endomembrane System (ER, Golgi, Lysosomes, Vacuoles), Semiautonomous Organelles (Mitochondria, Plastids), Cytoskeleton, and Centrosome Mechanics.",
+          "Part 3 (Cards 71-100): Nucleus Architecture, Chromatin, Cell Division Cycles (Mitosis & Meiosis checkpoints), Biomolecular Membrane Transport, and Pathological Deviations."
+        ]
+      },
+      "messages": [
+        { "speaker": "aman", "text": "Namaste Raju! Aaj hum biology ka bedrock shuru kar rahe hain: [[Cytology | कोशिका विज्ञान - कोशिकाओं की संरचना और कार्य का वैज्ञानिक अध्ययन]]. Yahan se har saal 3-5 direct questions aate hain." },
+        { "speaker": "raju", "text": "Sir, Robert Hooke se lekar modern electron microscopy tak ke sabhi facts cover honge na? BPSC TRE aur SSC CGL me deep facts puchte hain!" },
+        { "speaker": "aman", "text": "Bilkul! NCERT Class 8, 9, 11 aur Bihar SCERT ka 100% syllabus cover karenge without skipping a single discovery year or exception." },
+        { "speaker": "raju", "text": "Super Sir! Let's start with Module 1: Discovery & Cell Theory." }
+      ],
+      "navigation": { "next": "card_02_discovery_hooke", "button_text": "Start Module 1 ➔" }
+    },
+    {
+      "card_id": "card_02_discovery_hooke",
+      "card_slug": "card_02_discovery_hooke",
+      "type": "chat",
+      "concept_id": "cell_discovery_history",
+      "level": 1,
+      "progress": { "current": 2, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Dekho Raju, saal tha **1665**. English polymath [[Robert Hooke | वैज्ञानिक जिन्होंने 1665 में कॉर्क की पतली काट में मधुमक्खी के छत्ते जैसी मृत कोशिकाएं खोजीं]] ne primitive microscope ke niche bottle cork ka slice dekha." },
+        { "speaker": "raju", "text": "Sir, unhone jo dekha wo living cell thi ya non-living?" },
+        { "speaker": "aman", "text": "BPSC ka favorite trap suno! Hooke ne jo dekha wo actually dead [[Cell Wall | पादप कोशिका की बाहरी निर्जीव सुरक्षात्मक दीवार]] thi, unhone use 'Cellulae' (chhota kamra) kaha. Unki book ka naam tha **Micrographia**." },
+        { "speaker": "raju", "text": "Acha! To phir pehli zinda (live) cell kisne dekhi?" }
+      ],
+      "navigation": { "next": "card_03_discovery_leeuwenhoek", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_03_discovery_leeuwenhoek",
+      "card_slug": "card_03_discovery_leeuwenhoek",
+      "type": "chat",
+      "concept_id": "cell_discovery_history",
+      "level": 1,
+      "progress": { "current": 3, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Saal **1674** me Dutch businessman [[Anton van Leeuwenhoek | वैज्ञानिक जिन्होंने 1674 में उन्नत लेंस से तालाब के जल में पहली बार जीवित कोशिका देखी]] ne improve kiye hue microscope se pehli free living cell dekhi." },
+        { "speaker": "raju", "text": "Unhone kin-kin cheezon me cells dekhi thi sir?" },
+        { "speaker": "aman", "text": "Unhone pond water me Spirogyra/Protozoa, human semen me Sperm, aur dental scrapings me Bacteria dekhe, jinhe unhone **'Animalcules'** kaha." },
+        { "speaker": "raju", "text": "Iska matlab Father of Microbiology Leeuwenhoek hain!" }
+      ],
+      "navigation": { "next": "card_04_discovery_nucleus_protoplasm", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_04_discovery_nucleus_protoplasm",
+      "card_slug": "card_04_discovery_nucleus_protoplasm",
+      "type": "chat",
+      "concept_id": "cell_discovery_history",
+      "level": 1,
+      "progress": { "current": 4, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab timeline aage badhate hain: **1831** me Scottish botanist [[Robert Brown | 1831 में ऑर्किड की जड़ों की कोशिकाओं में केंद्रक (Nucleus) की खोज करने वाले वैज्ञानिक]] ne Orchid plant roots me **Nucleus** discover kiya." },
+        { "speaker": "raju", "text": "Aur sir jo cell ke andar fluid bhara hota hai, uska naam kisne diya?" },
+        { "speaker": "aman", "text": "**1839** me [[J.E. Purkinje | 1839 में कोशिका के जीवित तरल पदार्थ के लिए 'प्रोटोप्लाज्म' (जीवद्रव्य) शब्द देने वाले वैज्ञानिक]] ne cell ke living fluid substance ke liye **Protoplasm** (जीवद्रव्य) term coin kiya." },
+        { "speaker": "aman", "text": "Aur baad me **1868** me **T.H. Huxley** ne Protoplasm ko *'Physical basis of life'* (जीवन का भौतिक आधार) kaha. Ye direct SSC CGL/BPSC line hai!" }
+      ],
+      "navigation": { "next": "card_05_cell_theory_schleiden_schwann", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_05_cell_theory_schleiden_schwann",
+      "card_slug": "card_05_cell_theory_schleiden_schwann",
+      "type": "chat",
+      "concept_id": "cell_theory_foundations",
+      "level": 1,
+      "progress": { "current": 5, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab aate hain classical [[Cell Theory | कोशिका सिद्धांत - यह बताता है कि सभी जीवित जीव कोशिकाओं से बने हैं और कोशिका जीवन की मूल इकाई है]]: **1838** me German Botanist **Matthias Schleiden** ne plant tissues study kiye." },
+        { "speaker": "aman", "text": "Next year **1839** me British Zoologist **Theodore Schwann** ne animal cells study kiye aur bataya ki animal cell ke bahar ek thin layer hoti hai (Plasma Membrane), aur Cell wall plants ka unique character hai." },
+        { "speaker": "raju", "text": "To Schleiden aur Schwann ne milkar Cell Theory di, par kya unki theory complete thi?" },
+        { "speaker": "aman", "text": "Nahi! Wo ye nahi samjha paaye ki nayi cells aakhir banti kaise hain!" }
+      ],
+      "navigation": { "next": "card_06_cell_theory_virchow", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_06_cell_theory_virchow",
+      "card_slug": "card_06_cell_theory_virchow",
+      "type": "chat",
+      "concept_id": "cell_theory_foundations",
+      "level": 1,
+      "progress": { "current": 6, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Is theory ko complete kiya **1855** me [[Rudolf Virchow | 1855 में 'Omnis cellula-e cellula' का सिद्धांत देने वाले वैज्ञानिक, जिन्होंने बताया कि नई कोशिकाएं पूर्ववर्ती कोशिकाओं से बनती हैं]] ne ek famous aphorism dekar: **'Omnis cellula-e cellula'**." },
+        { "speaker": "raju", "text": "Matlab *'All cells arise from pre-existing cells'* (सभी नई कोशिकाएं पूर्व-मौजूद कोशिकाओं के विभाजन से बनती हैं)!" },
+        { "speaker": "aman", "text": "Bilkul sahi! Iske baad Cell Theory ke do main pillars bane: (1) All living organisms are composed of cells and their products. (2) All cells arise from pre-existing cells." },
+        { "speaker": "raju", "text": "Sir, kya is Cell Theory ka koi exception bhi hai jo exams me puchte hain?" }
+      ],
+      "navigation": { "next": "card_07_cell_theory_exceptions", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_07_cell_theory_exceptions",
+      "card_slug": "card_07_cell_theory_exceptions",
+      "type": "chat",
+      "concept_id": "cell_theory_exceptions",
+      "level": 1,
+      "progress": { "current": 7, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ruko! Yeh point 5-star mark kar lo. [[Virus | विषाणु - अकोशिकीय संरचना जो सजीव और निर्जीव के बीच की योजक कड़ी मानी जाती है]] Cell Theory ka sabse bada exception hai!" },
+        { "speaker": "raju", "text": "Kyunki Virus me koi cellular organization (cytoplasm ya organelle) nahi hota?" },
+        { "speaker": "aman", "text": "Ekdam right! Host cell ke bahar ye inert crystalline particle (non-living) hote hain, aur host ke andar aate hi living ban jate hain. Iske alawa [[Viroids | केवल संक्रामक RNA के बने कण]] aur [[Prions | केवल संक्रामक विकृत प्रोटीन कण]] bhi acellular hain." },
+        { "speaker": "raju", "text": "Super clear sir! Ab main quiz ke liye ready hoon." }
+      ],
+      "navigation": { "next": "card_08_quiz_discovery", "button_text": "Check Your Knowledge ➔" }
+    },
+    {
+      "card_id": "card_08_quiz_discovery",
+      "card_slug": "card_08_quiz_discovery",
+      "type": "quiz",
+      "concept_id": "cell_discovery_history",
+      "level": 1,
+      "progress": { "current": 8, "total": 100 },
+      "quiz_payload": {
+        "question": "Which of the following scientists first observed free living cells in pond water in 1674? (निम्नलिखित में से किस वैज्ञानिक ने 1674 में पहली बार तालाब के पानी में स्वतंत्र जीवित कोशिकाओं का अवलोकन किया था?) [BPSC Prelims/SSC CGL]",
+        "options": [
+          { "id": "A", "text": "Robert Hooke" },
+          { "id": "B", "text": "Anton van Leeuwenhoek" },
+          { "id": "C", "text": "Robert Brown" },
+          { "id": "D", "text": "Rudolf Virchow" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Anton van Leeuwenhoek ne 1674 me improved microscope ki madad se pond water me pehli baar live cells (protozoa, bacteria) dekhi thin. Robert Hooke ne 1665 me dead cork cells dekhi thin, jabki Robert Brown ne 1831 me Nucleus discover kiya tha."
+      },
+      "navigation": { "next": "card_09_quiz_virchow", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_09_quiz_virchow",
+      "card_slug": "card_09_quiz_virchow",
+      "type": "quiz",
+      "concept_id": "cell_theory_foundations",
+      "level": 1,
+      "progress": { "current": 9, "total": 100 },
+      "quiz_payload": {
+        "question": "The famous biological doctrine 'Omnis cellula-e cellula' was proposed by which scientist in 1855? ('ओम्निस सेल्युला-ए सेल्युला' का प्रसिद्ध सिद्धांत 1855 में किस वैज्ञानिक द्वारा प्रतिपादित किया गया था?) [NEET/BPSC TRE]",
+        "options": [
+          { "id": "A", "text": "Matthias Schleiden" },
+          { "id": "B", "text": "Theodore Schwann" },
+          { "id": "C", "text": "Rudolf Virchow" },
+          { "id": "D", "text": "Johannes Purkinje" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Rudolf Virchow (1855) ne pehli baar explain kiya tha ki cells divide hoti hain aur nayi cells pehle se maujood cells se banti hain ('Omnis cellula-e cellula'), jisse Schleiden aur Schwann ki Cell Theory complete hui."
+      },
+      "navigation": { "next": "card_10_quiz_exceptions", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_10_quiz_exceptions",
+      "card_slug": "card_10_quiz_exceptions",
+      "type": "quiz",
+      "concept_id": "cell_theory_exceptions",
+      "level": 1,
+      "progress": { "current": 10, "total": 100 },
+      "quiz_payload": {
+        "question": "Which of the following biological entities is considered an exception to the classical Cell Theory? (निम्नलिखित में से कौन सी जैविक संरचना शास्त्रीय कोशिका सिद्धांत का अपवाद मानी जाती है?) [RRB NTPC/UPSC]",
+        "options": [
+          { "id": "A", "text": "Bacteria (जीवाणु)" },
+          { "id": "B", "text": "Fungi (कवक)" },
+          { "id": "C", "text": "Viruses (विषाणु)" },
+          { "id": "D", "text": "Cyanobacteria (नील-हरित शैवाल)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Viruses acellular (अकोशिकीय) hote hain jinme koi cytoplasm, cell organelles ya autonomous metabolic machinery nahi hoti. Isliye ye classical Cell Theory ke sabse pramukh exception hain."
+      },
+      "navigation": { "next": "card_11_milestone_module1", "button_text": "Complete Module 1 ➔" }
+    },
+    {
+      "card_id": "card_11_milestone_module1",
+      "card_slug": "card_11_milestone_module1",
+      "type": "milestone",
+      "concept_id": "milestone_history_theory",
+      "level": 1,
+      "progress": { "current": 11, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE 1 COMPLETED!",
+        "badge_emoji": "🏆",
+        "completed_topic": "Cell Discovery & Cell Theory",
+        "xp_earned": 50,
+        "milestone_progress": "Module 1/8 Clear",
+        "motivational_quote": "Great start Raju! 1665 se 1855 tak ki puri cytology timeline ab aapke dimaag me lock ho chuki hai!"
+      },
+      "navigation": { "next": "card_12_dimensions_sizes", "button_text": "Start Module 2 ➔" }
+    },
+    {
+      "card_id": "card_12_dimensions_sizes",
+      "card_slug": "card_12_dimensions_sizes",
+      "type": "chat",
+      "concept_id": "cell_dimensions_and_shapes",
+      "level": 1,
+      "progress": { "current": 12, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab Module 2 me aate hain: **Cell Size and Shapes**. Exams me direct numerical facts puchte hain!" },
+        { "speaker": "raju", "text": "Sir, sabse chhoti aur sabse badi cell kaunsi hoti hai?" },
+        { "speaker": "aman", "text": "Dhyan se suno: Smallest cell hai [[Mycoplasma / PPLO | प्लूरोपन्यूमोनिया जैसे जीव - आकार लगभग 0.1 से 0.3 माइक्रोमीटर, बिना कोशिका भित्ति वाली सबसे छोटी कोशिका]] (0.3 µm length), jabki typical bacteria 3 to 5 µm hote hain." },
+        { "speaker": "aman", "text": "Largest isolated single cell hai **Ostrich ka egg** (15-18 cm diameter). Aur Human body me longest cell hai **Neuron / Nerve cell** (upto 90-100 cm)!" }
+      ],
+      "navigation": { "next": "card_13_human_cell_extremes", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_13_human_cell_extremes",
+      "card_slug": "card_13_human_cell_extremes",
+      "type": "chat",
+      "concept_id": "cell_dimensions_and_shapes",
+      "level": 1,
+      "progress": { "current": 13, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Human body ke andar ke 3 specific facts note karo:" },
+        { "speaker": "raju", "text": "Yes sir, batayiye!" },
+        { "speaker": "aman", "text": "1. **Longest Cell:** Nerve Cell (तंत्रिका कोशिका)\n2. **Largest Cell (by volume in females):** Ovum (अंडाणु / Egg cell, ~0.1 mm)\n3. **Smallest Cell:** Sperm cell (शुक्राणु) by volume, aur diameter me [[RBC | लाल रक्त कणिका - मानव आरबीसी का व्यास लगभग 7.0 माइक्रोमीटर होता है]] (7.0 µm)." },
+        { "speaker": "raju", "text": "Sir, RBC ka shape kaisa hota hai?" },
+        { "speaker": "aman", "text": "Human RBCs **Biconcave** (उभयावतल) aur **Enucleated** (mature state me nucleus-rahit) hoti hain taaki surface area/volume ratio maximize ho sake oxygen transport ke liye!" }
+      ],
+      "navigation": { "next": "card_14_cell_shapes_diversity", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_14_cell_shapes_diversity",
+      "card_slug": "card_14_cell_shapes_diversity",
+      "type": "chat",
+      "concept_id": "cell_dimensions_and_shapes",
+      "level": 1,
+      "progress": { "current": 14, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Cells ka shape unke function par depend karta hai. Dekho NCERT examples:\n- [[Amoeboid | अमीबा के समान अनिश्चित आकार जो आकार बदल सकता है]]: WBCs (White Blood Cells - leucocytes)\n- [[Columnar Epithelium | खंभाकार उपकला कोशिकाएं - लंबी और संकीर्ण]]: Intestinal lining cells\n- [[Tracheids | दारू वाहिनिकाएं - पौधों में जल संवहन के लिए लंबी नलिकाकार कोशिकाएं]]: Elongated xylem cells\n- [[Mesophyll cells | पर्णमध्योतक कोशिकाएं - पत्तियों में प्रकाश संश्लेषण करने वाली गोल या अंडाकार कोशिकाएं]]: Round and oval." },
+        { "speaker": "raju", "text": "Matlab form follows function! WBCs ko capillaries se bahar nikalne ke liye shape badalna padta hai (Diapedesis)." }
+      ],
+      "navigation": { "next": "card_15_quiz_smallest_cell", "button_text": "Check Your Knowledge ➔" }
+    },
+    {
+      "card_id": "card_15_quiz_smallest_cell",
+      "card_slug": "card_15_quiz_smallest_cell",
+      "type": "quiz",
+      "concept_id": "cell_dimensions_and_shapes",
+      "level": 1,
+      "progress": { "current": 15, "total": 100 },
+      "quiz_payload": {
+        "question": "What is the size of the smallest known living cellular organism (Mycoplasma)? (ज्ञात सबसे छोटे जीवित कोशिकीय जीव (माइकोप्लाज्मा) का आकार कितना होता है?) [SSC CGL/BPSC]",
+        "options": [
+          { "id": "A", "text": "0.02 to 0.2 µm" },
+          { "id": "B", "text": "0.1 to 0.3 µm" },
+          { "id": "C", "text": "3.0 to 5.0 µm" },
+          { "id": "D", "text": "10 to 20 µm" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NCERT ke anusaar Mycoplasma ka size lagbhag 0.3 µm (0.1-0.3 µm) hota hai. Ye bina cell wall ke sabse chhote living cells hain jo oxygen ke bina bhi survive kar sakte hain."
+      },
+      "navigation": { "next": "card_16_quiz_human_rbc", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_16_quiz_human_rbc",
+      "card_slug": "card_16_quiz_human_rbc",
+      "type": "quiz",
+      "concept_id": "cell_dimensions_and_shapes",
+      "level": 1,
+      "progress": { "current": 16, "total": 100 },
+      "quiz_payload": {
+        "question": "What is the average diameter of a normal human Red Blood Cell (RBC)? (सामान्य मानव लाल रक्त कोशिका (RBC) का औसत व्यास कितना होता है?) [NEET/BPSC TRE]",
+        "options": [
+          { "id": "A", "text": "2.5 µm" },
+          { "id": "B", "text": "7.0 µm" },
+          { "id": "C", "text": "12.0 µm" },
+          { "id": "D", "text": "20.0 µm" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Human Red Blood Cells (RBCs) ka diameter lagbhag 7.0 micrometer (µm) hota hai aur inka shape biconcave disc-like hota hai."
+      },
+      "navigation": { "next": "card_17_quiz_longest_cell", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_17_quiz_longest_cell",
+      "card_slug": "card_17_quiz_longest_cell",
+      "type": "quiz",
+      "concept_id": "cell_dimensions_and_shapes",
+      "level": 1,
+      "progress": { "current": 17, "total": 100 },
+      "quiz_payload": {
+        "question": "Which among the following is the longest cell in the human body? (निम्नलिखित में से मानव शरीर की सबसे लंबी कोशिका कौन सी है?) [RRB NTPC/BSSC CGL]",
+        "options": [
+          { "id": "A", "text": "Osteocyte (हड्डी कोशिका)" },
+          { "id": "B", "text": "Hepatocyte (यकृत कोशिका)" },
+          { "id": "C", "text": "Neuron / Nerve Cell (तंत्रिका कोशिका)" },
+          { "id": "D", "text": "Skeletal muscle fiber" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Human body me Neuron (Nerve Cell) sabse lambi cell hoti hai, jiski length kuch cases me 90 cm se 1 meter tak ho sakti hai (jaise sciatic nerve ke axons)."
+      },
+      "navigation": { "next": "card_18_milestone_module2", "button_text": "Complete Module 2 ➔" }
+    },
+    {
+      "card_id": "card_18_milestone_module2",
+      "card_slug": "card_18_milestone_module2",
+      "type": "milestone",
+      "concept_id": "milestone_dimensions",
+      "level": 1,
+      "progress": { "current": 18, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE 2 COMPLETED!",
+        "badge_emoji": "📏",
+        "completed_topic": "Cell Dimensions, Shapes & Extremes",
+        "xp_earned": 50,
+        "milestone_progress": "Module 2/8 Clear",
+        "motivational_quote": "Shabaash! Cell morphology aur numerical parameters ab clear hain. Ab aate hain Core Classification par!"
+      },
+      "navigation": { "next": "card_19_prokaryote_vs_eukaryote_intro", "button_text": "Start Module 3 ➔" }
+    },
+    {
+      "card_id": "card_19_prokaryote_vs_eukaryote_intro",
+      "card_slug": "card_19_prokaryote_vs_eukaryote_intro",
+      "type": "chat",
+      "concept_id": "cell_types_classification",
+      "level": 1,
+      "progress": { "current": 19, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Module 3: **Prokaryotes vs Eukaryotes**. Biology ka sabse fundamental division!" },
+        { "speaker": "raju", "text": "Sir, 'Prokaryote' aur 'Eukaryote' shabdon ka exact meaning kya hota hai?" },
+        { "speaker": "aman", "text": "- **Prokaryote**: *Pro* (Primitive / प्राथमिक) + *Karyon* (Nucleus / केंद्रक). Matlab aisi cells jinme true nucleus aur nuclear membrane nahi hoti.\n- **Eukaryote**: *Eu* (True / वास्तविक) + *Karyon* (Nucleus). Inme well-defined nuclear membrane aur membrane-bound organelles hote hain." },
+        { "speaker": "raju", "text": "Prokaryotes me kaun-kaun se organisms aate hain sir?" }
+      ],
+      "navigation": { "next": "card_20_prokaryotic_members", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_20_prokaryotic_members",
+      "card_slug": "card_20_prokaryotic_members",
+      "type": "chat",
+      "concept_id": "cell_types_classification",
+      "level": 1,
+      "progress": { "current": 20, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Kingdom [[Monera | मोनेरा जगत - सभी प्रोकैरियोटिक जीवों (जीवाणु, नील-हरित शैवाल) का समूह]] ke sabhi members Prokaryotes hain! Jaise:\n1. Bacteria (जीवाणु)\n2. Cyanobacteria ya BGA (Blue-Green Algae / नील-हरित शैवाल)\n3. Mycoplasma / PPLO\n4. Archaebacteria (प्राचीन जीवाणु)." },
+        { "speaker": "raju", "text": "Aur Eukaryotes me?" },
+        { "speaker": "aman", "text": "Baaki sabhi 4 Kingdoms: **Protista** (Amoeba, Paramecium), **Fungi** (Yeast, Mold), **Plantae** (All plants), aur **Animalia** (All animals)." }
+      ],
+      "navigation": { "next": "card_21_prokaryotic_cell_envelope", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_21_prokaryotic_cell_envelope",
+      "card_slug": "card_21_prokaryotic_cell_envelope",
+      "type": "chat",
+      "concept_id": "prokaryotic_architecture",
+      "level": 1,
+      "progress": { "current": 21, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "BPSC TRE aur NEET ka favourite question: **Prokaryotic Cell Envelope** me 3 tightly bound layers hoti hain (Outer to Inner):\n1. [[Glycocalyx | सबसे बाहरी परत - यदि ढीली हो तो स्लाइम लेयर और यदि मोटी-मजबूत हो तो कैप्सूल कहलाती है]]\n2. [[Cell Wall | मध्य परत - पेप्टिडोग्लाइकन से बनी जो कोशिका को संरचनात्मक मजबूती देती है]]\n3. [[Plasma Membrane | सबसे आंतरिक अर्धपारगम्य परत जो लिपिड और प्रोटीन से बनी होती है]]." },
+        { "speaker": "raju", "text": "Sir, Glycocalyx loose ho to kya kehte hain?" },
+        { "speaker": "aman", "text": "Loose sheath ho to **Slime layer**, aur thick & tough ho to **Capsule** kehte hain!" }
+      ],
+      "navigation": { "next": "card_22_gram_staining", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_22_gram_staining",
+      "card_slug": "card_22_gram_staining",
+      "type": "chat",
+      "concept_id": "prokaryotic_architecture",
+      "level": 1,
+      "progress": { "current": 22, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Saal **1884** me Danish bacteriologist [[Christian Gram | 1884 में ग्राम स्टेनिंग तकनीक विकसित करने वाले वैज्ञानिक]] ne bacteria ko stain karne ki method banayi." },
+        { "speaker": "raju", "text": "Gram positive aur Gram negative me kya farak hota hai sir?" },
+        { "speaker": "aman", "text": "- **Gram-Positive**: Crystal violet stain retain karte hain (purple/violet dikhte hain) kyunki inki cell wall me Peptidoglycan ki moti (thick) layer hoti hai.\n- **Gram-Negative**: Alcohol wash ke baad stain chhod dete hain aur counter-stain Safranin se pink/red dikhte hain (inki outer membrane me Lipopolysaccharide - LPS hota hai)." }
+      ],
+      "navigation": { "next": "card_23_prokaryotic_special_structures", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_23_prokaryotic_special_structures",
+      "card_slug": "card_23_prokaryotic_special_structures",
+      "type": "chat",
+      "concept_id": "prokaryotic_architecture",
+      "level": 1,
+      "progress": { "current": 23, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Prokaryotes ke 4 special structures rat lo:\n1. [[Mesosome | प्लाज्मा झिल्ली का आंतरिक विस्तार जो श्वसन, कोशिका भित्ति निर्माण और डीएनए प्रतिकृति में मदद करता है]] (Mitochondria ka analogue!).\n2. [[Nucleoid / Genophore | प्रोकैरियोट्स में बिना केंद्रक झिल्ली का नग्न वृत्ताकार डीएनए क्षेत्र]] (Naked double-stranded circular DNA without histone proteins).\n3. [[Plasmids | मुख्य जीनोम के बाहर छोटे स्वतंत्र वृत्ताकार डीएनए जो एंटीबायोटिक प्रतिरोध जीन ले जाते हैं]].\n4. [[70S Ribosome | प्रोकैरियोटिक राइबोसोम - 50S और 30S उप-इकाइयों से बना]]." },
+        { "speaker": "raju", "text": "Sir, prokaryotes me locomotion (chalne) ke liye kya hota hai?" },
+        { "speaker": "aman", "text": "**Flagella** (कशाभिका), jo **Flagellin** protein ka bana hota hai (Filament, Hook, aur Basal body)." }
+      ],
+      "navigation": { "next": "card_24_quiz_gram_staining", "button_text": "Check Your Knowledge ➔" }
+    },
+    {
+      "card_id": "card_24_quiz_gram_staining",
+      "card_slug": "card_24_quiz_gram_staining",
+      "type": "quiz",
+      "concept_id": "prokaryotic_architecture",
+      "level": 1,
+      "progress": { "current": 24, "total": 100 },
+      "quiz_payload": {
+        "question": "Which chemical component is uniquely found in the thick cell wall of Gram-positive bacteria that retains the crystal violet dye? (ग्राम-धनात्मक जीवाणुओं की मोटी कोशिका भित्ति में कौन सा घटक क्रिस्टल वॉयलेट डाई को बनाए रखने में मुख्य भूमिका निभाता है?) [NEET/UPSC]",
+        "options": [
+          { "id": "A", "text": "Cellulose" },
+          { "id": "B", "text": "Peptidoglycan / Murein" },
+          { "id": "C", "text": "Chitin" },
+          { "id": "D", "text": "Pectin" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Bacterial cell wall Peptidoglycan (Murein - NAG aur NAM chains cross-linked by amino acids) ki bani hoti hai. Gram-positive bacteria me iski layer kafi moti (20-80 nm) hoti hai."
+      },
+      "navigation": { "next": "card_25_quiz_mesosome", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_25_quiz_mesosome",
+      "card_slug": "card_25_quiz_mesosome",
+      "type": "quiz",
+      "concept_id": "prokaryotic_architecture",
+      "level": 1,
+      "progress": { "current": 25, "total": 100 },
+      "quiz_payload": {
+        "question": "The 'Mesosome' in prokaryotic cells is functionally analogous to which eukaryotic organelle? (प्रोकैरियोटिक कोशिकाओं में 'मीसोसोम' कार्यात्मक रूप से किस यूकैरियोटिक कोशिकांग के समतुल्य है?) [BPSC Prelims/SSC CGL]",
+        "options": [
+          { "id": "A", "text": "Golgi apparatus" },
+          { "id": "B", "text": "Mitochondria (माइटोकॉन्ड्रिया)" },
+          { "id": "C", "text": "Lysosome" },
+          { "id": "D", "text": "Endoplasmic reticulum" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Mesosome plasma membrane ka infolding extension hota hai jisme respiratory enzymes hote hain. Isliye ye cellular respiration aur ATP generation me eukaryotic mitochondria ke analogous karya karta hai."
+      },
+      "navigation": { "next": "card_26_quiz_plasmids", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_26_quiz_plasmids",
+      "card_slug": "card_26_quiz_plasmids",
+      "type": "quiz",
+      "concept_id": "prokaryotic_architecture",
+      "level": 1,
+      "progress": { "current": 26, "total": 100 },
+      "quiz_payload": {
+        "question": "What is a 'Plasmid' in bacterial genetics? (जीवाणु आनुवंशिकी में 'प्लास्मिड' क्या होता है?) [BPSC TRE/BSSC CGL]",
+        "options": [
+          { "id": "A", "text": "Main genomic linear DNA" },
+          { "id": "B", "text": "Extra-chromosomal circular self-replicating double-stranded DNA" },
+          { "id": "C", "text": "Protein coat of bacteria" },
+          { "id": "D", "text": "Storage granules for glycogen" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Plasmid bacteria me main chromosome ke alawa paya jane wala chhota, extra-chromosomal, circular double-stranded autonomous DNA molecule hai, jo antibiotic resistance jaise unique phenotypic characters provide karta hai."
+      },
+      "navigation": { "next": "card_27_milestone_module3", "button_text": "Complete Module 3 ➔" }
+    },
+    {
+      "card_id": "card_27_milestone_module3",
+      "card_slug": "card_27_milestone_module3",
+      "type": "milestone",
+      "concept_id": "milestone_prokaryote",
+      "level": 1,
+      "progress": { "current": 27, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE 3 COMPLETED!",
+        "badge_emoji": "🦠",
+        "completed_topic": "Prokaryotic Architecture & Plasmids",
+        "xp_earned": 50,
+        "milestone_progress": "Module 3/8 Clear",
+        "motivational_quote": "Awesome! Prokaryotes ka ek-ek layer aapne master kar liya. Now let's conquer Plant Cell Wall & Plasma Membrane!"
+      },
+      "navigation": { "next": "card_28_plant_cell_wall_composition", "button_text": "Start Module 4 ➔" }
+    },
+    {
+      "card_id": "card_28_plant_cell_wall_composition",
+      "card_slug": "card_28_plant_cell_wall_composition",
+      "type": "chat",
+      "concept_id": "cell_wall_and_membrane",
+      "level": 1,
+      "progress": { "current": 28, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Module 4: **Cell Wall & Plasma Membrane**. Pehle Cell Wall ki chemistry dekho across different kingdoms:" },
+        { "speaker": "raju", "text": "Sir, kya sabhi organisms me cell wall ek hi cheez ki bani hoti hai?" },
+        { "speaker": "aman", "text": "Bilkul nahi! Note karo:\n- **Plants (पादप)**: [[Cellulose | ग्लूकोज का बहुलक जो पादप कोशिका भित्ति का मुख्य घटक है]], Hemicellulose, Pectin aur Proteins.\n- **Algae (शैवाल)**: Cellulose, [[Galactans | गैलेक्टोज शर्करा के बहुलक]], Mannans aur Calcium Carbonate ($CaCO_3$).\n- **Fungi (कवक)**: [[Chitin | एन-एसिटाइल ग्लूकोसामाइन का बहुलक जो कवक भित्ति बनाता है]] (N-acetylglucosamine polymer).\n- **Bacteria**: Peptidoglycan." }
+      ],
+      "navigation": { "next": "card_29_middle_lamella_plasmodesmata", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_29_middle_lamella_plasmodesmata",
+      "card_slug": "card_29_middle_lamella_plasmodesmata",
+      "type": "chat",
+      "concept_id": "cell_wall_and_membrane",
+      "level": 1,
+      "progress": { "current": 29, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Do plant cells aapas me kaise chipki rehti hain? [[Middle Lamella | मध्य पटलिका - कैल्शियम और मैग्नीशियम पेक्टेट की बनी परत जो दो पड़ोसी पादप कोशिकाओं को जोड़ती है (Plant Cement)]] ke dwara!" },
+        { "speaker": "raju", "text": "Sir, kacha fal pakne par soft kyu ho jata hai?" },
+        { "speaker": "aman", "text": "Kyunki ripening ke dauran Pectinase enzyme Middle Lamella ke Pectate ko dissolve kar deta hai! Ye BPSC ka classic question hai." },
+        { "speaker": "aman", "text": "Aur do cells ke cytoplasm ko connect karne wale microscopic channels ko [[Plasmodesmata | जीवद्रव्य तंतु - पादप कोशिकाओं के बीच कोशिकाद्रव्यीय संबंध बनाने वाले सूक्ष्म चैनल]] kehte hain." }
+      ],
+      "navigation": { "next": "card_30_fluid_mosaic_model", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_30_fluid_mosaic_model",
+      "card_slug": "card_30_fluid_mosaic_model",
+      "type": "chat",
+      "concept_id": "plasma_membrane_structure",
+      "level": 1,
+      "progress": { "current": 30, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab aate hain **Plasma Membrane (कोशिका झिल्ली)** par. Saal **1972** me **Singer aur Nicolson** ne universally accepted [[Fluid Mosaic Model | तरल मोज़ेक मॉडल - जिसके अनुसार फॉस्फोलिपिड के अर्ध-तरल समुद्र में प्रोटीन बर्फ की तरह तैरते हैं]] diya." },
+        { "speaker": "raju", "text": "Is model me membrane kis cheez se bani hoti hai sir?" },
+        { "speaker": "aman", "text": "Membrane me **Phospholipid bilayer** hoti hai jisme polar hydrophilic heads bahar ki taraf aur non-polar hydrophobic fatty acid tails andar ki taraf hoti hain. Isme Proteins aur thode Carbohydrates (Glycoproteins/Glycolipids) embedded hote hain." }
+      ],
+      "navigation": { "next": "card_31_membrane_proteins_transport", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_31_membrane_proteins_transport",
+      "card_slug": "card_31_membrane_proteins_transport",
+      "type": "chat",
+      "concept_id": "plasma_membrane_structure",
+      "level": 1,
+      "progress": { "current": 31, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Membrane proteins 2 types ke hote hain: (1) **Peripheral / Extrinsic** (surface par) aur (2) **Integral / Intrinsic** (partially ya totally dhasse hue)." },
+        { "speaker": "raju", "text": "Sir, Human RBC membrane me protein aur lipid ka ratio kya hota hai?" },
+        { "speaker": "aman", "text": "NCERT exact data: Human RBC membrane me lagbhag **52% Protein** aur **40% Lipid** hota hai! Yeh NEET/BPSC me directly pucha gaya hai." },
+        { "speaker": "raju", "text": "Aur Plasma Membrane ka nature kaisa hota hai sir?" },
+        { "speaker": "aman", "text": "It is **Selectively Permeable** (चयनात्मक पारगम्य) - ye sirf chuni hui cheezon ko hi cross karne deti hai." }
+      ],
+      "navigation": { "next": "card_32_quiz_middle_lamella", "button_text": "Check Your Knowledge ➔" }
+    },
+    {
+      "card_id": "card_32_quiz_middle_lamella",
+      "card_slug": "card_32_quiz_middle_lamella",
+      "type": "quiz",
+      "concept_id": "cell_wall_and_membrane",
+      "level": 1,
+      "progress": { "current": 32, "total": 100 },
+      "quiz_payload": {
+        "question": "The Middle Lamella that cements adjacent plant cells together is primarily composed of which chemical compound? (पड़ोसी पादप कोशिकाओं को आपस में जोड़ने वाली मध्य पटलिका (मिडिल लैमेला) मुख्य रूप से किस रासायनिक यौगिक से बनी होती है?) [BPSC Prelims/BPSC TRE]",
+        "options": [
+          { "id": "A", "text": "Cellulose and Hemicellulose" },
+          { "id": "B", "text": "Calcium and Magnesium Pectate" },
+          { "id": "C", "text": "Lignin and Suberin" },
+          { "id": "D", "text": "Chitin and Glucan" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Middle Lamella main roop se Calcium Pectate aur Magnesium Pectate ki bani hoti hai, jise 'Plant Cement' bhi kaha jata hai. Fal pakne par pectin dissolve hone se fal soft ho jate hain."
+      },
+      "navigation": { "next": "card_33_quiz_fluid_mosaic", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_33_quiz_fluid_mosaic",
+      "card_slug": "card_33_quiz_fluid_mosaic",
+      "type": "quiz",
+      "concept_id": "plasma_membrane_structure",
+      "level": 1,
+      "progress": { "current": 33, "total": 100 },
+      "quiz_payload": {
+        "question": "In 1972, the widely accepted 'Fluid Mosaic Model' of the plasma membrane was proposed by: (1972 में कोशिका झिल्ली का सर्वमान्य 'तरल मोज़ेक मॉडल' किसके द्वारा प्रस्तावित किया गया था?) [SSC CGL/RRB NTPC/NEET]",
+        "options": [
+          { "id": "A", "text": "Davson and Danielli" },
+          { "id": "B", "text": "J.D. Robertson" },
+          { "id": "C", "text": "S.J. Singer and G.L. Nicolson" },
+          { "id": "D", "text": "Camillo Golgi" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Singer aur Nicolson ne 1972 me Fluid Mosaic Model propose kiya tha jiske mutabiq lipids ka quasi-fluid nature proteins ko bilayer ke andar lateral movement allow karta hai."
+      },
+      "navigation": { "next": "card_34_summary_part1", "button_text": "Part 1 Lightning Revision ➔" }
+    },
+    {
+      "card_id": "card_34_summary_part1",
+      "card_slug": "card_34_summary_part1",
+      "type": "summary",
+      "concept_id": "summary_foundations",
+      "level": 1,
+      "progress": { "current": 34, "total": 100 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision (Cards 01-34)",
+        "revision_points": [
+          {
+            "topic": "1. Discovery Milestones",
+            "point": "Hooke (1665, Dead cork cell), Leeuwenhoek (1674, Live cell), Brown (1831, Nucleus), Purkinje (1839, Protoplasm term)."
+          },
+          {
+            "topic": "2. Cell Theory Trinity",
+            "point": "Schleiden (1838, Botanist) + Schwann (1839, Zoologist) founded it; Rudolf Virchow (1855, 'Omnis cellula-e cellula') completed it. Viruses are primary acellular exceptions."
+          },
+          {
+            "topic": "3. Size Extremes",
+            "point": "Smallest: Mycoplasma (0.3 µm); Largest single cell: Ostrich egg; Longest human cell: Neuron (~90-100 cm); Human RBC: 7.0 µm biconcave disc."
+          },
+          {
+            "topic": "4. Prokaryote Specialities",
+            "point": "Envelope (Glycocalyx + Peptidoglycan Wall + Plasma membrane); Mesosomes for respiration; 70S ribosomes (50S + 30S); Plasmids (circular extra-chromosomal DNA)."
+          },
+          {
+            "topic": "5. Cell Boundaries",
+            "point": "Middle Lamella = Calcium/Magnesium Pectate; Plasmodesmata = Intercellular bridges; Singer-Nicolson (1972) Fluid Mosaic Model (RBC membrane: 52% Protein, 40% Lipid)."
+          }
+        ]
+      },
+      "navigation": { "next": "card_35_final_quiz_part1", "button_text": "Take Part 1 Master Quiz ➔" }
+    },
+    {
+      "card_id": "card_35_final_quiz_part1",
+      "card_slug": "card_35_final_quiz_part1",
+      "type": "final_quiz",
+      "concept_id": "mastery_test_part1",
+      "level": 1,
+      "progress": { "current": 35, "total": 100 },
+      "quiz_payload": {
+        "question": "Consider the following statements regarding cellular structures and discoveries:\n1. Robert Hooke discovered living free-floating cells in pond water in 1665.\n2. Rudolf Virchow contributed the principle 'Omnis cellula-e cellula' to Cell Theory.\n3. Human RBC membrane contains approximately 52% protein and 40% lipids.\n4. Fungal cell walls are predominantly composed of peptidoglycan.\nWhich of the statements given above are CORRECT? [UPSC Prelims / BPSC Combined Format]",
+        "options": [
+          { "id": "A", "text": "1 and 4 only" },
+          { "id": "B", "text": "2 and 3 only" },
+          { "id": "C", "text": "1, 2 and 3 only" },
+          { "id": "D", "text": "2, 3 and 4 only" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 is INCORRECT (Robert Hooke observed dead cork cells; Leeuwenhoek observed live cells in 1674). Statement 2 is CORRECT (Virchow added Omnis cellula-e cellula in 1855). Statement 3 is CORRECT (NCERT Class 11 exact ratio: 52% protein, 40% lipid). Statement 4 is INCORRECT (Fungal cell walls are made of Chitin; bacterial walls are made of Peptidoglycan). Hence, only statements 2 and 3 are correct."
+      },
+      "navigation": { "next": "card_36_part2_intro", "button_text": "Unlock Part 2 (Cards 36-70) ➔" }
+    },
+    {
+      "card_id": "card_36_part2_intro",
+      "card_slug": "card_36_part2_intro",
+      "type": "intro",
+      "concept_id": "part2_overview",
+      "level": 2,
+      "progress": { "current": 36, "total": 100 },
+      "intro_payload": {
+        "chapter_title": "Cell Organelles & Internal Machinery",
+        "chapter_icon": "⚡",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "BPSC TRE", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Endomembrane System: Endoplasmic Reticulum (RER/SER), Golgi Apparatus, Lysosomes, and Vacuoles.",
+          "Semiautonomous Organelles: Mitochondria (Oxidative Phosphorylation, Krebs Cycle site) and Plastids (Chloroplast, Chromoplast, Leucoplast).",
+          "Ribosomes (70S vs 80S, Svedberg Unit) & Cytoskeleton (Microtubules, Microfilaments, Cilia, Flagella, Centrosome mechanics)."
+        ]
+      },
+      "messages": [
+        { "speaker": "aman", "text": "Welcome to Part 2 Raju! Ab hum cell ke internal 'Power plants', 'Packaging factories', aur 'Suicide bags' ke deep mechanics me enter kar rahe hain." },
+        { "speaker": "raju", "text": "Sir, Endomembrane system me kaun-kaun se organelles aate hain? Isme students aksar confuse hote hain!" },
+        { "speaker": "aman", "text": "Super high-yield point! Endomembrane system me wahi organelles aate hain jinke functions coordinated hote hain: **ER, Golgi, Lysosomes, aur Vacuoles**." },
+        { "speaker": "raju", "text": "Mitochondria aur Chloroplast iska hissa kyu nahi hain sir?" },
+        { "speaker": "aman", "text": "Kyunki unke functions inke sath coordinated nahi hote! Let's start with Endoplasmic Reticulum." }
+      ],
+      "navigation": { "next": "card_37_endoplasmic_reticulum_types", "button_text": "Start Module 5 ➔" }
+    },
+    {
+      "card_id": "card_37_endoplasmic_reticulum_types",
+      "card_slug": "card_37_endoplasmic_reticulum_types",
+      "type": "chat",
+      "concept_id": "endoplasmic_reticulum",
+      "level": 2,
+      "progress": { "current": 37, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Saal **1945** me **Keith R. Porter, Albert Claude, aur Ernest F. Fullam** ne [[Endoplasmic Reticulum | अंतःप्रद्रव्यी जालिका - साइटोप्लाज्म में नलिकाओं का जटिल जाल जो परिवहन और संश्लेषण का कार्य करता है]] discover kiya tha." },
+        { "speaker": "raju", "text": "Sir, ER kitne types ka hota hai?" },
+        { "speaker": "aman", "text": "Do types ka hota hai:\n1. [[RER (Rough ER) | खुरदरी अंतःप्रद्रव्यी जालिका - जिसकी सतह पर राइबोसोम चिपके होते हैं, मुख्य कार्य प्रोटीन संश्लेषण है]].\n2. [[SER (Smooth ER) | चिकनी अंतःप्रद्रव्यी जालिका - राइबोसोम रहित, मुख्य कार्य लिपिड, स्टेरॉयड हार्मोन संश्लेषण और ड्रग डिटॉक्सिफिकेशन है]]." },
+        { "speaker": "raju", "text": "RER par ribosomes kis protein ki madad se chipakte hain sir?" },
+        { "speaker": "aman", "text": "NEET/BPSC TRE point: Ribosomes RER membrane par **Ribophorin I aur II** glycoproteins ke dwara judte hain!" }
+      ],
+      "navigation": { "next": "card_38_ser_special_functions", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_38_ser_special_functions",
+      "card_slug": "card_38_ser_special_functions",
+      "type": "chat",
+      "concept_id": "endoplasmic_reticulum",
+      "level": 2,
+      "progress": { "current": 38, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Smooth Endoplasmic Reticulum (SER) ke do most tested functions yaad rakho:" },
+        { "speaker": "aman", "text": "1. **Detoxification:** Liver hepatocytes me SER Cytochrome P450 enzymes ki madad se drugs, alcohol aur poisons ko detoxify karta hai.\n2. **Lipid & Steroid synthesis:** Estrogen, Progesterone, Testosterone jaise steroid hormones SER me bante hain." },
+        { "speaker": "raju", "text": "Sir, muscle cells me bhi SER hota hai kya?" },
+        { "speaker": "aman", "text": "Haan! Muscle cells me SER ko [[Sarcoplasmic Reticulum | पेशी कोशिकाओं में विशेष SER जो कैल्शियम आयनों (Ca2+) का भंडारण करता है]] kehte hain, jo muscle contraction ke liye $Ca^{2+}$ ions store karta hai." }
+      ],
+      "navigation": { "next": "card_39_golgi_apparatus", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_39_golgi_apparatus",
+      "card_slug": "card_39_golgi_apparatus",
+      "type": "chat",
+      "concept_id": "golgi_apparatus",
+      "level": 2,
+      "progress": { "current": 39, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Saal **1898** me Italian neurologist [[Camillo Golgi | 1898 में उल्लू की तंत्रिका कोशिकाओं में 'गॉल्जी काय' की खोज करने वाले वैज्ञानिक]] ne Silver nitrate stain se **Golgi Apparatus** discover kiya." },
+        { "speaker": "raju", "text": "Plants me Golgi apparatus ko kya kehte hain sir?" },
+        { "speaker": "aman", "text": "Plants me ye disconnected subunits me hota hai jise [[Dictyosome | पादप कोशिकाओं में पाए जाने वाले अलग-थलग गॉल्जी उपकरण के खंड]] kehte hain!" },
+        { "speaker": "aman", "text": "Golgi ke do faces hote hain: **Cis face** (Forming face - ER ki taraf jahan materials receive hote hain) aur **Trans face** (Maturing face - jahan se vesicles pack hokar release hoti hain)." }
+      ],
+      "navigation": { "next": "card_40_golgi_functions_glycosylation", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_40_golgi_functions_glycosylation",
+      "card_slug": "card_40_golgi_functions_glycosylation",
+      "type": "chat",
+      "concept_id": "golgi_apparatus",
+      "level": 2,
+      "progress": { "current": 40, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Golgi apparatus ko cell ka **'Director of Macromolecular Traffic'** ya **'Post Office'** kaha jata hai." },
+        { "speaker": "raju", "text": "Iske main biochemical functions kya hain sir?" },
+        { "speaker": "aman", "text": "1. [[Glycosylation | प्रोटीन और लिपिड के साथ शर्करा जोड़कर ग्लाइकोप्रोटीन और ग्लाइकोलिपिड बनाने की प्रक्रिया]] (Major site of Glycoprotein & Glycolipid synthesis).\n2. Sperm ke head par banne wala [[Acrosome | शुक्राणु के शीर्ष पर स्थित टोपी जैसी संरचना जो अंडे की दीवार भेदने वाले एंजाइम रखती है]] Golgi se hi banta hai.\n3. Plant cell division ke dauran [[Cell Plate / Phragmoplast | पादप कोशिका विभाजन में नई कोशिका भित्ति बनाने वाली प्रारंभिक प्लेट]] Golgi vesicles se banti hai." }
+      ],
+      "navigation": { "next": "card_41_lysosomes_suicide_bags", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_41_lysosomes_suicide_bags",
+      "card_slug": "card_41_lysosomes_suicide_bags",
+      "type": "chat",
+      "concept_id": "lysosomes_and_vacuoles",
+      "level": 2,
+      "progress": { "current": 41, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Saal **1955** me Belgian biochemist [[Christian de Duve | 1955 में लाइसोसोम (आत्मघाती थैली) की खोज करने वाले नोबेल पुरस्कार विजेता वैज्ञानिक]] ne **Lysosomes** discover kiye." },
+        { "speaker": "raju", "text": "Sir, inhe 'Suicidal Bags' (आत्मघाती थैली) kyu kehte hain?" },
+        { "speaker": "aman", "text": "Kyunki jab cell damaged ya old ho jati hai, to lysosome burst ho jata hai aur iske [[Hydrolytic Enzymes | अम्लीय पीएच (लगभग 4.5 - 5.0) पर सक्रिय जल-अपघटनीय पाचक एंजाइम jaise Lipases, Proteases, Nucleases]] puri cell ko digest kar dete hain (Autolysis)." },
+        { "speaker": "aman", "text": "Ye enzymes strictly **Acidic pH (~4.8 to 5.0)** par optimal kaam karte hain, jise maintain karne ke liye membrane par $H^+$ pump (proton pump) hota hai." }
+      ],
+      "navigation": { "next": "card_42_vacuoles_tonoplast", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_42_vacuoles_tonoplast",
+      "card_slug": "card_42_vacuoles_tonoplast",
+      "type": "chat",
+      "concept_id": "lysosomes_and_vacuoles",
+      "level": 2,
+      "progress": { "current": 42, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Plant cells me central space ek badi **Vacuole (रसधानी)** leti hai (cell volume ka upto 90%)." },
+        { "speaker": "raju", "text": "Vacuole ki outer boundary ko kya kehte hain sir?" },
+        { "speaker": "aman", "text": "Direct 10-time repeated exam question: Vacuole ki single membrane ko [[Tonoplast | रसधानी को घेरने वाली एकल चयनात्मक पारगम्य झिल्ली जो आयनों को सांद्रता प्रवणता के विरुद्ध पंप करती है]] kehte hain." },
+        { "speaker": "aman", "text": "- **Amoeba** me [[Contractile Vacuole | संकुचनशील रसधानी - परासरण नियंत्रण (Osmoregulation) और उत्सर्जन के लिए जिम्मेदार]].\n- Flower petals ka water-soluble purple/red pigment [[Anthocyanin | रसधानी में पाया जाने वाला जल-घुलनशील वर्णक]] vacuole ke andar ghula hota hai (Plastid me nahi!)." }
+      ],
+      "navigation": { "next": "card_43_quiz_endomembrane", "button_text": "Check Your Knowledge ➔" }
+    },
+    {
+      "card_id": "card_43_quiz_endomembrane",
+      "card_slug": "card_43_quiz_endomembrane",
+      "type": "quiz",
+      "concept_id": "endoplasmic_reticulum",
+      "level": 2,
+      "progress": { "current": 43, "total": 100 },
+      "quiz_payload": {
+        "question": "Which organelle is the primary site for lipid synthesis, steroid hormone production, and detoxification of drugs in liver cells? (यकृत कोशिकाओं में लिपिड संश्लेषण, स्टेरॉयड हार्मोन उत्पादन और दवाओं के विषहरण का मुख्य स्थल कौन सा कोशिकांग है?) [BPSC Prelims/SSC CGL]",
+        "options": [
+          { "id": "A", "text": "Rough Endoplasmic Reticulum (RER)" },
+          { "id": "B", "text": "Smooth Endoplasmic Reticulum (SER)" },
+          { "id": "C", "text": "Golgi Apparatus" },
+          { "id": "D", "text": "Peroxisome" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Smooth Endoplasmic Reticulum (SER) me ribosomes nahi hote. Ye lipids, phospholipids, steroid hormones ke synthesis aur liver me drugs va poisons ke detoxification ke liye zimmedar hota hai."
+      },
+      "navigation": { "next": "card_44_quiz_lysosome_enzymes", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_44_quiz_lysosome_enzymes",
+      "card_slug": "card_44_quiz_lysosome_enzymes",
+      "type": "quiz",
+      "concept_id": "lysosomes_and_vacuoles",
+      "level": 2,
+      "progress": { "current": 44, "total": 100 },
+      "quiz_payload": {
+        "question": "The hydrolytic enzymes present in lysosomes are optimally active at which of the following pH conditions? (लाइसोसोम में मौजूद जल-अपघटनीय (हाइड्रोलिटिक) एंजाइम किस पीएच परिस्थिति में सर्वाधिक सक्रिय होते हैं?) [NEET/BPSC TRE]",
+        "options": [
+          { "id": "A", "text": "Highly Alkaline pH (~8.5)" },
+          { "id": "B", "text": "Neutral pH (~7.0)" },
+          { "id": "C", "text": "Acidic pH (~4.5 to 5.0)" },
+          { "id": "D", "text": "Slightly Basic pH (~7.4)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Lysosomal enzymes (Acid hydrolases: lipases, proteases, carbohydrases, nucleases) optimally acidic pH (~4.5-5.0) par function karte hain, jo membrane par maujood proton pump ($H^+$-ATPase) maintain karta hai."
+      },
+      "navigation": { "next": "card_45_quiz_tonoplast", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_45_quiz_tonoplast",
+      "card_slug": "card_45_quiz_tonoplast",
+      "type": "quiz",
+      "concept_id": "lysosomes_and_vacuoles",
+      "level": 2,
+      "progress": { "current": 45, "total": 100 },
+      "quiz_payload": {
+        "question": "What is the semi-permeable membrane that bounds the central vacuole in plant cells called? (पादप कोशिकाओं में केंद्रीय रसधानी को घेरने वाली अर्धपारगम्य झिल्ली को क्या कहा जाता है?) [RRB NTPC/BSSC]",
+        "options": [
+          { "id": "A", "text": "Sarcolemma" },
+          { "id": "B", "text": "Tonoplast" },
+          { "id": "C", "text": "Plasmalemma" },
+          { "id": "D", "text": "Periderm" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Plant cells me central vacuole ko gherne wali single membrane ko 'Tonoplast' kehte hain. Ye cytoplasm se vacuole ke andar ions ko active transport ke jariye concentration gradient ke against transport karti hai."
+      },
+      "navigation": { "next": "card_46_milestone_module5", "button_text": "Complete Module 5 ➔" }
+    },
+    {
+      "card_id": "card_46_milestone_module5",
+      "card_slug": "card_46_milestone_module5",
+      "type": "milestone",
+      "concept_id": "milestone_endomembrane",
+      "level": 2,
+      "progress": { "current": 46, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE 5 COMPLETED!",
+        "badge_emoji": "📦",
+        "completed_topic": "Endomembrane System (ER, Golgi, Lysosome, Vacuole)",
+        "xp_earned": 50,
+        "milestone_progress": "Module 4/8 Clear",
+        "motivational_quote": "Brilliant! Endomembrane packaging network clear hai. Ab shuru karte hain Powerhouse: Mitochondria!"
+      },
+      "navigation": { "next": "card_47_mitochondria_discovery_structure", "button_text": "Start Module 6 ➔" }
+    },
+    {
+      "card_id": "card_47_mitochondria_discovery_structure",
+      "card_slug": "card_47_mitochondria_discovery_structure",
+      "type": "chat",
+      "concept_id": "mitochondria_structure_function",
+      "level": 2,
+      "progress": { "current": 47, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Module 6: **Mitochondria (सूत्रकणिका)**. Discovery history se 3 scientists ke naam aate hain:\n1. **1857 (Albert von Kölliker)**: Insect muscle cells me granules ke roop me pehli baar dekha.\n2. **1890 (Richard Altmann)**: Inhe '**Bioblasts**' kaha.\n3. **1898 (Carl Benda)**: Inhe final naam diya '**Mitochondria**'." },
+        { "speaker": "raju", "text": "Sir, mitochondria ko dekhne ke liye kaun sa special stain use hota hai?" },
+        { "speaker": "aman", "text": "NEET standard question: [[Janus Green B | माइटोकॉन्ड्रिया को देखने के लिए उपयोग किया जाने वाला विशिष्ट जीवित अभिरंजक]] use hota hai!" }
+      ],
+      "navigation": { "next": "card_48_mitochondria_membrane_cristae", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_48_mitochondria_membrane_cristae",
+      "card_slug": "card_48_mitochondria_membrane_cristae",
+      "type": "chat",
+      "concept_id": "mitochondria_structure_function",
+      "level": 2,
+      "progress": { "current": 48, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Mitochondria ek **Double Membrane** organelle hai:\n- **Outer Membrane**: Smooth aur porous hoti hai (Porin proteins ke karan).\n- **Inner Membrane**: Andar ki taraf multiple folds banati hai jinhe [[Cristae | माइटोकॉन्ड्रिया की आंतरिक झिल्ली के अंगुलीनुमा उभार जो एटीपी निर्माण के लिए सतह क्षेत्र बढ़ाते हैं]] kehte hain." },
+        { "speaker": "raju", "text": "Cristae par wo tennis racket jaise particles kya hote hain sir?" },
+        { "speaker": "aman", "text": "Inhe [[Oxysomes / F0-F1 Particles | आंतरिक झिल्ली पर स्थित टेनिस रैकेट जैसे कण जो एटीपी सिंथेस एंजाइम धारण करते हैं]] kehte hain! $F_0$ transmembrane channel banata hai aur $F_1$ ATP synthesis karta hai." }
+      ],
+      "navigation": { "next": "card_49_semiautonomous_nature", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_49_semiautonomous_nature",
+      "card_slug": "card_49_semiautonomous_nature",
+      "type": "chat",
+      "concept_id": "mitochondria_structure_function",
+      "level": 2,
+      "progress": { "current": 49, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Mitochondria aur Chloroplast ko [[Semiautonomous Organelles | अर्ध-स्वायत्त कोशिकांग - जिनके पास अपना वृत्ताकार डीएनए और 70S राइबोसोम होता है]] kyu kehte hain?" },
+        { "speaker": "raju", "text": "Kyunki inke paas khud ka DNA hota hai sir?" },
+        { "speaker": "aman", "text": "Exactly! Inke matrix me:\n1. Single, circular, naked **dsDNA** (high GC-content).\n2. **70S Ribosomes**.\n3. RNA aur protein synthesis machinery hoti hai.\nYeh binary fission se divide hote hain!" },
+        { "speaker": "aman", "text": "Isi wajah se [[Endosymbiotic Theory | यह सिद्धांत कि माइटोकॉन्ड्रिया और क्लोरोप्लास्ट प्राचीन प्रोकैरियोटिक बैक्टीरिया से विकसित हुए]] batati hai ki mitochondria aerobic bacteria (Rickettsia-like) ke endosymbiosis se bane." }
+      ],
+      "navigation": { "next": "card_50_mitochondria_biochemistry_atp", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_50_mitochondria_biochemistry_atp",
+      "card_slug": "card_50_mitochondria_biochemistry_atp",
+      "type": "chat",
+      "concept_id": "mitochondria_structure_function",
+      "level": 2,
+      "progress": { "current": 50, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Mitochondria ke biochemical chambers ko yaad rakho:\n- **Matrix**: Yahan par [[Krebs Cycle (TCA Cycle) | माइटोकॉन्ड्रिया के मैट्रिक्स में चलने वाला वायवीय श्वसन चक्र]] ke sabhi enzymes hote hain (Exception: *Succinate Dehydrogenase* inner membrane par hota hai!).\n- **Inner Membrane**: Yahan par [[ETS (Electron Transport System) | इलेक्ट्रॉनों का प्रवाह और ऑक्सीडेटिव फॉस्फोराइलेशन]] hota hai jahan ATP banti hai." },
+        { "speaker": "raju", "text": "Isi liye ise 'Powerhouse of the Cell' kehte hain!" }
+      ],
+      "navigation": { "next": "card_51_plastids_classification", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_51_plastids_classification",
+      "card_slug": "card_51_plastids_classification",
+      "type": "chat",
+      "concept_id": "plastids_chloroplast",
+      "level": 2,
+      "progress": { "current": 51, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Plastids (लवक) term **1866** me **Ernst Haeckel** ne diya tha. Saal **1883** me **A.F.W. Schimper** ne inhe 3 types me classify kiya:\n1. [[Leucoplast | रंगहीन लवक - भूमिगत तनों और जड़ों में भोजन संचय करने वाले लवक]].\n2. [[Chromoplast | रंगीन लवक - फल और फूलों को लाल, पीला, नारंगी रंग देने वाले कैरोटीनॉयड युक्त लवक]].\n3. [[Chloroplast | हरित लवक - पर्णहरित (क्लोरोफिल) युक्त लवक जो प्रकाश संश्लेषण करते हैं]]." },
+        { "speaker": "raju", "text": "Sir, Leucoplasts ke sub-types exams me bahut aate hain na?" }
+      ],
+      "navigation": { "next": "card_52_leucoplast_subtypes_pigments", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_52_leucoplast_subtypes_pigments",
+      "card_slug": "card_52_leucoplast_subtypes_pigments",
+      "type": "chat",
+      "concept_id": "plastids_chloroplast",
+      "level": 2,
+      "progress": { "current": 52, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Leucoplast ke 3 storage types direct note karo:\n- [[Amyloplast | स्टार्च (कार्बोहाइड्रेट) संचय करने वाले लवक - उदाहरण: आलू का कंद]]: Stores Starch.\n- [[Elaioplast / Oleoplast | वसा और तेल संचय करने वाले लवक - उदाहरण: अरंडी, सरसों बीज]]: Stores Fats and Oils.\n- [[Aleuroplast / Proteinoplast | प्रोटीन संचय करने वाले लवक - उदाहरण: मक्के के बीज की परत]]: Stores Proteins." },
+        { "speaker": "raju", "text": "Aur tomato ka red color kis pigment se hota hai sir?" },
+        { "speaker": "aman", "text": "Tomato aur Mirch ka laal rang Chromoplast me maujood [[Lycopene | टमाटर और तरबूज को गहरा लाल रंग देने वाला कैरोटीनॉयड वर्णक]] ke karan hota hai!" }
+      ],
+      "navigation": { "next": "card_53_chloroplast_ultrastructure", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_53_chloroplast_ultrastructure",
+      "card_slug": "card_53_chloroplast_ultrastructure",
+      "type": "chat",
+      "concept_id": "plastids_chloroplast",
+      "level": 2,
+      "progress": { "current": 53, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Chloroplast ka internal structure dekho:\n- Double membrane bounded organelle.\n- Andar fluid hota hai jise [[Stroma | हरित लवक का तरल मैट्रिक्स जहाँ प्रकाश संश्लेषण की अंधकार अभिक्रिया (Calvin Cycle / Dark Reaction) होती है]] kehte hain (Rubisco enzyme yahi hota hai).\n- Stroma me coins ke stack jaise thaili hoti hain jinhe [[Thylakoid | चपटी झिल्लीदार थैलियाँ जिनकी झिल्ली में क्लोरोफिल अणु और प्रकाशिक अभिक्रिया (Light Reaction) होती है]] kehte hain. Thylakoids ke stack ko **Granum** (plural: Grana) kehte hain." },
+        { "speaker": "raju", "text": "Chlorophyll ke core me kaun sa metal atom hota hai sir?" },
+        { "speaker": "aman", "text": "Universal question: Chlorophyll ke porphyrin ring ke center me **Magnesium ($Mg^{2+}$)** ion hota hai!" }
+      ],
+      "navigation": { "next": "card_54_quiz_cristae_function", "button_text": "Check Your Knowledge ➔" }
+    },
+    {
+      "card_id": "card_54_quiz_cristae_function",
+      "card_slug": "card_54_quiz_cristae_function",
+      "type": "quiz",
+      "concept_id": "mitochondria_structure_function",
+      "level": 2,
+      "progress": { "current": 54, "total": 100 },
+      "quiz_payload": {
+        "question": "What is the primary anatomical purpose of the infoldings (Cristae) of the inner mitochondrial membrane? (माइटोकॉन्ड्रिया की आंतरिक झिल्ली के अंतर्वलन (क्रिस्टी) का प्राथमिक शारीरिक उद्देश्य क्या है?) [SSC CGL/BPSC Prelims]",
+        "options": [
+          { "id": "A", "text": "To store extra genomic circular DNA" },
+          { "id": "B", "text": "To drastically increase the surface area for ATP synthesis" },
+          { "id": "C", "text": "To prevent entry of harmful cytoplasmic enzymes" },
+          { "id": "D", "text": "To assist in protein degradation" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Inner mitochondrial membrane me Cristae finger-like folds hote hain jo oxidative phosphorylation aur ATP generation ke liye surface area ko kayi guna badha dete hain."
+      },
+      "navigation": { "next": "card_55_quiz_amyloplast", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_55_quiz_amyloplast",
+      "card_slug": "card_55_quiz_amyloplast",
+      "type": "quiz",
+      "concept_id": "plastids_chloroplast",
+      "level": 2,
+      "progress": { "current": 55, "total": 100 },
+      "quiz_payload": {
+        "question": "A potato tuber stores large amounts of starch in which specialized type of leucoplast? (आलू का कंद किस विशिष्ट प्रकार के ल्यूकोप्लास्ट में बड़ी मात्रा में स्टार्च संग्रहीत करता है?) [BPSC TRE/BSSC CGL]",
+        "options": [
+          { "id": "A", "text": "Elaioplast" },
+          { "id": "B", "text": "Aleuroplast" },
+          { "id": "C", "text": "Amyloplast" },
+          { "id": "D", "text": "Chromoplast" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Amyloplast carbohydrate/starch store karne wale leucoplast hote hain (jaise potato me). Elaioplast fats/oils store karte hain aur Aleuroplast proteins store karte hain."
+      },
+      "navigation": { "next": "card_56_quiz_chlorophyll_metal", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_56_quiz_chlorophyll_metal",
+      "card_slug": "card_56_quiz_chlorophyll_metal",
+      "type": "quiz",
+      "concept_id": "plastids_chloroplast",
+      "level": 2,
+      "progress": { "current": 56, "total": 100 },
+      "quiz_payload": {
+        "question": "Which divalent metallic element forms the central coordination core of the chlorophyll pigment molecule? (कौन सा द्विसंयोजी धात्विक तत्व क्लोरोफिल वर्णक अणु के केंद्रीय समन्वय कोर का निर्माण करता है?) [RRB NTPC/NEET/BPSC]",
+        "options": [
+          { "id": "A", "text": "Iron ($Fe$)" },
+          { "id": "B", "text": "Magnesium ($Mg$)" },
+          { "id": "C", "text": "Manganese ($Mn$)" },
+          { "id": "D", "text": "Copper ($Cu$)" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Chlorophyll ke porphyrin ring ke center me Magnesium ($Mg^{2+}$) ion hota hai. Iski kami se plants me Chlorosis (पत्तियों का पीला पड़ना) ho jata hai."
+      },
+      "navigation": { "next": "card_57_milestone_module6", "button_text": "Complete Module 6 ➔" }
+    },
+    {
+      "card_id": "card_57_milestone_module6",
+      "card_slug": "card_57_milestone_module6",
+      "type": "milestone",
+      "concept_id": "milestone_energy_organelles",
+      "level": 2,
+      "progress": { "current": 57, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE 6 COMPLETED!",
+        "badge_emoji": "🔋",
+        "completed_topic": "Mitochondria & Plastids (Semiautonomous Hubs)",
+        "xp_earned": 50,
+        "milestone_progress": "Module 5/8 Clear",
+        "motivational_quote": "Sensational! Semiautonomous organelles ke sare enzymes aur pigment mechanisms ab aapki grip me hain!"
+      },
+      "navigation": { "next": "card_58_ribosomes_svedberg_unit", "button_text": "Start Module 7 ➔" }
+    },
+    {
+      "card_id": "card_58_ribosomes_svedberg_unit",
+      "card_slug": "card_58_ribosomes_svedberg_unit",
+      "type": "chat",
+      "concept_id": "ribosomes_protein_factory",
+      "level": 2,
+      "progress": { "current": 58, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Module 7: **Ribosomes & Cytoskeleton**. Saal **1955** me Romanian-American cell biologist [[George E. Palade | 1955 में इलेक्ट्रॉन सूक्ष्मदर्शी द्वारा राइबोसोम की खोज करने वाले नोबेल पुरस्कार विजेता]] ne electron microscope se Ribosomes dekhe, isliye inhe **Palade Particles** bhi kehte hain." },
+        { "speaker": "raju", "text": "Sir, 'S' ka matlab kya hota hai jaise 70S aur 80S me?" },
+        { "speaker": "aman", "text": "'S' stands for [[Svedberg Unit | अवसादन गुणांक (Sedimentation Coefficient) - जो सेंट्रीफ्यूज में कणों के आकार और घनत्व को मापता है]]." },
+        { "speaker": "aman", "text": "- **70S Ribosome** (Prokaryotes, Mitochondria, Chloroplast): Large subunit = **50S**, Small subunit = **30S**.\n- **80S Ribosome** (Eukaryotic cytoplasm): Large subunit = **60S**, Small subunit = **40S**." }
+      ],
+      "navigation": { "next": "card_59_ribosome_chemistry_polysome", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_59_ribosome_chemistry_polysome",
+      "card_slug": "card_59_ribosome_chemistry_polysome",
+      "type": "chat",
+      "concept_id": "ribosomes_protein_factory",
+      "level": 2,
+      "progress": { "current": 59, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ribosomes bina kisi membrane ke hote hain (Non-membranous organelle) aur ye **rRNA (Ribosomal RNA)** aur **Proteins** (Ribonucleoprotein) se bane hote hain." },
+        { "speaker": "raju", "text": "Sir, jab kayi saare ribosomes ek single mRNA par jud jate hain to use kya kehte hain?" },
+        { "speaker": "aman", "text": "Use [[Polysome / Polyribosome | एक ही mRNA धागे पर जुड़े हुए कई राइबोसोम की श्रृंखला जो एक साथ कई प्रोटीन प्रतियां बनाती है]] kehte hain!" },
+        { "speaker": "aman", "text": "Aur dono subunits ko aapas me judne ke liye **$Mg^{2+}$ ions** ki ek critical concentration (0.001 M) zaroori hoti hai." }
+      ],
+      "navigation": { "next": "card_60_cytoskeleton_filaments", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_60_cytoskeleton_filaments",
+      "card_slug": "card_60_cytoskeleton_filaments",
+      "type": "chat",
+      "concept_id": "cytoskeleton_elements",
+      "level": 2,
+      "progress": { "current": 60, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Eukaryotic cytoplasm me protein fibers ka ek internal network hota hai jise [[Cytoskeleton | कोशिका पंजर - कोशिका को यांत्रिक शक्ति, आकार और आंतरिक परिवहन प्रदान करने वाला प्रोटीन तंतुओं का जाल]] kehte hain." },
+        { "speaker": "raju", "text": "Cytoskeleton me kaun-kaun se fibers hote hain sir?" },
+        { "speaker": "aman", "text": "3 major types:\n1. [[Microtubules | ट्यूबुलिन प्रोटीन से बनी खोखली नलिकाएं (व्यास ~25 nm) - जो स्पिंडल फाइबर, सिलिया और सेंट्रियोल बनाती हैं]].\n2. [[Microfilaments | एक्टिन प्रोटीन से बने ठोस पतले तंतु (व्यास ~7 nm) - जो साइटोप्लाज्मिक स्ट्रीमिंग और पेशी संकुचन में मदद करते हैं]].\n3. [[Intermediate Filaments | केराटिन आदि प्रोटीनों से बने मध्यम तंतु (व्यास ~10 nm) - जो यांत्रिक मजबूती देते हैं]]." }
+      ],
+      "navigation": { "next": "card_61_cilia_flagella_structure", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_61_cilia_flagella_structure",
+      "card_slug": "card_61_cilia_flagella_structure",
+      "type": "chat",
+      "concept_id": "cilia_flagella_centrosome",
+      "level": 2,
+      "progress": { "current": 61, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Eukaryotic Cilia aur Flagella ka cross-section dekho. Inke internal core ko [[Axoneme | सिलिया और कशाभिका की केंद्रीय अक्षीय संरचना जिसमें सूक्ष्मनलिकाओं की 9+2 व्यवस्था होती है]] kehte hain." },
+        { "speaker": "raju", "text": "Sir, '9 + 2 arrangement' ka exact matlab kya hai?" },
+        { "speaker": "aman", "text": "Iska matlab:\n- **9 doublet microtubules** boundary (periphery) par arranged hote hain.\n- **2 single microtubules** center me hote hain.\n- Sabhi [[Dynein | सिलिया और कशाभिका में एटीपी ऊर्जा द्वारा गति उत्पन्न करने वाली मोटर प्रोटीन]] arms se judkar movement karte hain." }
+      ],
+      "navigation": { "next": "card_62_centrosome_centrioles", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_62_centrosome_centrioles",
+      "card_slug": "card_62_centrosome_centrioles",
+      "type": "chat",
+      "concept_id": "cilia_flagella_centrosome",
+      "level": 2,
+      "progress": { "current": 62, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Saal **1888** me **Theodor Boveri** ne [[Centrosome | तारककाय - मुख्य रूप से जंतु कोशिकाओं में पाया जाने वाला अंगक जिसमें दो बेलनाकार सेंट्रियोल 90 अंश के कोण पर स्थित होते हैं]] describe kiya tha." },
+        { "speaker": "raju", "text": "Sir, Centriole ka internal pattern kya hota hai?" },
+        { "speaker": "aman", "text": "Centriole me **Cartwheel structure** hota hai jisme **9 + 0 arrangement** hota hai (9 peripheral triplets of tubulin, center me koi microtubule nahi balki proteinaceous hub hota hai)." },
+        { "speaker": "aman", "text": "Centrioles animal cell division ke dauran **Spindle apparatus** banate hain aur higher plant cells me ye absent hote hain!" }
+      ],
+      "navigation": { "next": "card_63_microbodies_peroxisomes_glyoxysomes", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_63_microbodies_peroxisomes_glyoxysomes",
+      "card_slug": "card_63_microbodies_peroxisomes_glyoxysomes",
+      "type": "chat",
+      "concept_id": "microbodies_special_organelles",
+      "level": 2,
+      "progress": { "current": 63, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab 2 tiny single-membrane microbodies note karo jo exams me rank decider hote hain:" },
+        { "speaker": "aman", "text": "1. [[Peroxisomes | पराऑक्सीसोम - कैटालेज और यूरिकॉलेज एंजाइम युक्त अंगक जो $H_2O_2$ (हाइड्रोजन पेरोक्साइड) को तोड़ते हैं और पौधों में प्रकाश-श्वसन करते हैं]].\n2. [[Glyoxysomes | ग्लाइऑक्सीसोम - केवल तैलीय बीजों में पाए जाने वाले अंगक जो ग्लाइऑक्सीलेट चक्र द्वारा वसा को कार्बोहाइड्रेट में बदलते हैं]]." },
+        { "speaker": "raju", "text": "Matlab Castor seed ke germination ke dauran Glyoxysomes active hote hain!" },
+        { "speaker": "aman", "text": "Exact NEET/BPSC TRE question! Excellent connection Raju." }
+      ],
+      "navigation": { "next": "card_64_quiz_palade_particles", "button_text": "Check Your Knowledge ➔" }
+    },
+    {
+      "card_id": "card_64_quiz_palade_particles",
+      "card_slug": "card_64_quiz_palade_particles",
+      "type": "quiz",
+      "concept_id": "ribosomes_protein_factory",
+      "level": 2,
+      "progress": { "current": 64, "total": 100 },
+      "quiz_payload": {
+        "question": "Which cell organelle was discovered by George Palade in 1955 as dense ribonucleoprotein particles under electron microscopy? (इलेक्ट्रॉन माइक्रोस्कोपी के तहत 1955 में जॉर्ज पैलेड द्वारा घने राइबोन्यूक्लियोप्रोटीन कणों के रूप में किस कोशिकांग की खोज की गई थी?) [NEET/SSC CGL]",
+        "options": [
+          { "id": "A", "text": "Lysosomes" },
+          { "id": "B", "text": "Ribosomes (राइबोसोम)" },
+          { "id": "C", "text": "Peroxisomes" },
+          { "id": "D", "text": "Centrosomes" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "George Palade ne 1955 me ribosomes discover kiye the jinki non-membranous nature hoti hai aur ye rRNA aur proteins ke bane hote hain. Inhe Palade granules/particles bhi kaha jata hai."
+      },
+      "navigation": { "next": "card_65_quiz_axoneme_pattern", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_65_quiz_axoneme_pattern",
+      "card_slug": "card_65_quiz_axoneme_pattern",
+      "type": "quiz",
+      "concept_id": "cilia_flagella_centrosome",
+      "level": 2,
+      "progress": { "current": 65, "total": 100 },
+      "quiz_payload": {
+        "question": "What is the characteristic microtubular arrangement in the axoneme of eukaryotic cilia and flagella? (यूकैरियोटिक सिलिया और फ्लैगेला के अक्षसूत्र (एक्सोनीम) में विशिष्ट सूक्ष्मनलिका व्यवस्था क्या होती है?) [BPSC TRE/NEET/UPSC]",
+        "options": [
+          { "id": "A", "text": "9 + 0 arrangement (triplets)" },
+          { "id": "B", "text": "9 + 2 arrangement (doublets + central pair)" },
+          { "id": "C", "text": "7 + 2 arrangement" },
+          { "id": "D", "text": "9 + 4 arrangement" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Eukaryotic cilia aur flagella ke core (axoneme) me 9 peripheral doublets aur 2 central single microtubules hote hain, jise '9 + 2 pattern' kaha jata hai. Centriole me 9 + 0 pattern hota hai."
+      },
+      "navigation": { "next": "card_66_quiz_glyoxysomes", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_66_quiz_glyoxysomes",
+      "card_slug": "card_66_quiz_glyoxysomes",
+      "type": "quiz",
+      "concept_id": "microbodies_special_organelles",
+      "level": 2,
+      "progress": { "current": 66, "total": 100 },
+      "quiz_payload": {
+        "question": "Which specialized microbody contains enzymes of the glyoxylate cycle to convert stored lipids into carbohydrates during seed germination? (बीज अंकुरण के दौरान संग्रहीत वसा को कार्बोहाइड्रेट में बदलने के लिए ग्लाइऑक्सीलेट चक्र के एंजाइम किस विशिष्ट सूक्ष्मकाय (माइक्रोबॉडी) में होते हैं?) [NEET/BPSC Prelims]",
+        "options": [
+          { "id": "A", "text": "Peroxisome" },
+          { "id": "B", "text": "Glyoxysome" },
+          { "id": "C", "text": "Lysosome" },
+          { "id": "D", "text": "Spherosome" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Glyoxysomes germinating oil seeds (jaise castor, groundnut) me paye jate hain jo stored fatty acids ko gluconeogenesis dwara sugars me convert karte hain."
+      },
+      "navigation": { "next": "card_67_organelles_comparative_table", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_67_organelles_comparative_table",
+      "card_slug": "card_67_organelles_comparative_table",
+      "type": "chat",
+      "concept_id": "organelle_membrane_classification",
+      "level": 2,
+      "progress": { "current": 67, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, exams ka sabse common trap hota hai membrane boundaries ka number. Ye master breakdown dimag me chhap lo:" },
+        { "speaker": "aman", "text": "- **Double Membrane**: Mitochondria, Chloroplast, Nucleus.\n- **Single Membrane**: ER, Golgi Apparatus, Lysosome, Vacuole, Peroxisome, Glyoxysome.\n- **Membraneless (Zero membrane)**: Ribosome, Centrosome / Centriole, Nucleolus." },
+        { "speaker": "raju", "text": "Wah sir! Is classification se to match-the-column ke saare questions 5 second me solve ho jayenge." }
+      ],
+      "navigation": { "next": "card_68_plant_vs_animal_cell", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_68_plant_vs_animal_cell",
+      "card_slug": "card_68_plant_vs_animal_cell",
+      "type": "chat",
+      "concept_id": "plant_vs_animal_comparison",
+      "level": 2,
+      "progress": { "current": 68, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Plant Cell vs Animal Cell ke 4 definitive points revision karo:\n1. **Cell Wall**: Plants me Present (Cellulose); Animals me strictly Absent.\n2. **Plastids**: Plants me Present; Animals me Absent (Exception: *Euglena* has chloroplasts).\n3. **Vacuoles**: Plants me ek Large Central vacuole; Animals me small and temporary.\n4. **Centrosome/Centriole**: Higher plants me Absent; Animals me Present." },
+        { "speaker": "raju", "text": "Sir, animal cells me cytokinesis cleavage furrow se hoti hai aur plant cells me cell plate se!" },
+        { "speaker": "aman", "text": "Exactly! Centripetal vs Centrifugal division." }
+      ],
+      "navigation": { "next": "card_69_summary_part2", "button_text": "Part 2 Lightning Revision ➔" }
+    },
+    {
+      "card_id": "card_69_summary_part2",
+      "card_slug": "card_69_summary_part2",
+      "type": "summary",
+      "concept_id": "summary_organelles",
+      "level": 2,
+      "progress": { "current": 69, "total": 100 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision (Cards 36-68)",
+        "revision_points": [
+          {
+            "topic": "1. Endomembrane System",
+            "point": "ER (RER for protein synthesis via Ribophorins; SER for lipids & liver drug detox) + Golgi (Camillo Golgi 1898, glycosylation site) + Lysosomes (Christian de Duve 1955, acid hydrolases at pH ~5.0) + Vacuoles (Tonoplast single membrane)."
+          },
+          {
+            "topic": "2. Semiautonomous Organelles",
+            "point": "Mitochondria (Cristae, F0-F1 ATP synthase, Krebs cycle in matrix) and Chloroplast (Grana thylakoids for light reaction with Mg2+ in chlorophyll, Stroma for Calvin cycle). Both have 70S ribosomes and circular naked dsDNA."
+          },
+          {
+            "topic": "3. Plastid Classes",
+            "point": "Amyloplast (Starch/Potato), Elaioplast (Lipids/Oils), Aleuroplast (Proteins). Lycopene gives red color to tomatoes."
+          },
+          {
+            "topic": "4. Ribosomes & Cytoskeleton",
+            "point": "Ribosomes (George Palade 1955, Svedberg unit 'S'); Cilia/Flagella (9+2 axoneme with Dynein motor); Centrioles (9+0 cartwheel structure of tubulin triplets)."
+          },
+          {
+            "topic": "5. Microbodies & Boundaries",
+            "point": "Peroxisomes (Catalase, H2O2 degradation); Glyoxysomes (Fat to carbohydrate in germinating oil seeds); Double membrane = Mitochondria, Plastids, Nucleus; Non-membranous = Ribosomes, Centrosomes, Nucleolus."
+          }
+        ]
+      },
+      "navigation": { "next": "card_70_final_quiz_part2", "button_text": "Take Part 2 Master Quiz ➔" }
+    },
+    {
+      "card_id": "card_70_final_quiz_part2",
+      "card_slug": "card_70_final_quiz_part2",
+      "type": "final_quiz",
+      "concept_id": "mastery_test_part2",
+      "level": 2,
+      "progress": { "current": 70, "total": 100 },
+      "quiz_payload": {
+        "question": "Consider the following statements regarding eukaryotic cellular organelles:\n1. Smooth Endoplasmic Reticulum is the principal site for the synthesis of steroid hormones and detoxification of xenobiotics.\n2. Both mitochondria and chloroplasts contain 80S ribosomes in their internal matrix.\n3. The axoneme of eukaryotic cilia exhibits a 9+2 arrangement of microtubules.\n4. Lysosomal enzymes function optimally at an alkaline pH of 8.2.\nWhich of the statements given above are CORRECT? [UPSC Prelims / BPSC Combined Format]",
+        "options": [
+          { "id": "A", "text": "1 and 3 only" },
+          { "id": "B", "text": "2 and 4 only" },
+          { "id": "C", "text": "1, 2 and 3 only" },
+          { "id": "D", "text": "1, 3 and 4 only" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "Statement 1 is CORRECT (SER is the site for lipid/steroid synthesis and drug detoxification). Statement 2 is INCORRECT (Mitochondria and chloroplasts contain prokaryotic-like 70S ribosomes, not 80S). Statement 3 is CORRECT (Cilia/Flagella axoneme has 9 peripheral doublets and 2 central singlets = 9+2). Statement 4 is INCORRECT (Lysosomal hydrolases function optimally at acidic pH ~4.5-5.0, not alkaline). Therefore, only statements 1 and 3 are correct."
+      },
+      "navigation": { "next": "card_71_part3_intro", "button_text": "Unlock Part 3 (Cards 71-100) ➔" }
+    },
+   
+    {
+      "card_id": "card_71_part3_intro",
+      "card_slug": "card_71_part3_intro",
+      "type": "intro",
+      "concept_id": "part3_overview",
+      "level": 3,
+      "progress": { "current": 71, "total": 100 },
+      "intro_payload": {
+        "chapter_title": "Nucleus, Cell Division & Membrane Transport",
+        "chapter_icon": "🧬",
+        "target_exams": ["BPSC", "BSSC", "RRB NTPC", "SSC CGL", "NEET", "BPSC TRE", "UPSC Prelims"],
+        "learning_outcomes": [
+          "Nucleus Architecture: Nuclear Envelope, Nucleoplasm, Nucleolus (Ribosome factory), Chromatin, Histone Octamer, and Chromosome morphology (Centromere positions).",
+          "Cell Cycle & Division: Interphase ($G_1$, $S$, $G_2$, $G_0$), Mitosis stages (Prophase to Telophase), and Meiosis (Crossing over in Pachytene, Chiasmata, Reductional division).",
+          "Membrane Transport & Osmoregulation: Active vs Passive transport, Osmosis, Plasmolysis, Cell signaling deviations, and Final 100-Card Grand Synthesis."
+        ]
+      },
+      "messages": [
+        { "speaker": "aman", "text": "Welcome to the Final Lap (Part 3: Cards 71-100) Raju! Yahan hum Cell ke 'Control Room' yaani Nucleus, Chromosomes, Cell Cycle (Mitosis & Meiosis checkpoints), aur Membrane Transport ko comprehensively finish karenge." },
+        { "speaker": "raju", "text": "Sir, Cell Division ke stages (jaise Pachytene me Crossing over aur Anaphase me Centromere split) se har competitive exam me questions aate hain!" },
+        { "speaker": "aman", "text": "Bilkul! NCERT Class 11 Chapter 8 aur 10 ka ek-ek phase aur molecular event crystalline clear karenge. Chaliye shuru karte hain Nucleus architecture se." }
+      ],
+      "navigation": { "next": "card_72_nucleus_ultrastructure", "button_text": "Start Module 8 ➔" }
+    },
+    {
+      "card_id": "card_72_nucleus_ultrastructure",
+      "card_slug": "card_72_nucleus_ultrastructure",
+      "type": "chat",
+      "concept_id": "nucleus_architecture",
+      "level": 3,
+      "progress": { "current": 72, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Robert Brown ne 1831 me [[Nucleus | केंद्रक - कोशिका का नियंत्रण केंद्र जो आनुवंशिक सामग्री (डीएनए) और उपापचयी क्रियाओं को नियंत्रित करता है]] discover kiya tha." },
+        { "speaker": "raju", "text": "Sir, Nucleus ki boundary kaisi hoti hai?" },
+        { "speaker": "aman", "text": "Nucleus double membrane se bounded hota hai jiske beech 10-50 nm ka [[Perinuclear Space | दोनों केंद्रक झिल्लियों के बीच का संकीर्ण अवकाश]] hota hai. Outer membrane continuous hoti hai Rough Endoplasmic Reticulum (RER) ke sath." },
+        { "speaker": "aman", "text": "Dono membranes fuse hokar [[Nuclear Pore Complex | केंद्रक छिद्र संकुल - केंद्रक और कोशिकाद्रव्य के बीच आरएनए और प्रोटीन के द्विदिशीय परिवहन हेतु सूक्ष्म मार्ग]] banate hain." }
+      ],
+      "navigation": { "next": "card_73_nucleolus_ribosome_factory", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_73_nucleolus_ribosome_factory",
+      "card_slug": "card_73_nucleolus_ribosome_factory",
+      "type": "chat",
+      "concept_id": "nucleolus_structure",
+      "level": 3,
+      "progress": { "current": 73, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Saal **1781** me **Felice Fontana** ne [[Nucleolus | केंद्रिका - केंद्रक के भीतर पाई जाने वाली झिल्लीरहित सघन संरचना जो राइबोसोमल आरएनए (rRNA) के सक्रिय संश्लेषण का स्थल है]] discover kiya, aur **Bowman (1840)** ne ise naam diya." },
+        { "speaker": "raju", "text": "Sir, Nucleolus ko 'Ribosome factory' kyu kehte hain?" },
+        { "speaker": "aman", "text": "Kyunki yahan active [[rRNA Synthesis | राइबोसोमल आरएनए का निर्माण जो राइबोसोम की उप-इकाइयां बनाने में उपयोग होता है]] hota hai. Jin cells me active protein synthesis hoti hai (jaise liver hepatocytes, egg cells), unme nucleoli bade aur multiple hote hain." }
+      ],
+      "navigation": { "next": "card_74_chromatin_histones_packaging", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_74_chromatin_histones_packaging",
+      "card_slug": "card_74_chromatin_histones_packaging",
+      "type": "chat",
+      "concept_id": "chromatin_and_chromosomes",
+      "level": 3,
+      "progress": { "current": 74, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Saal **1879** me [[Walther Flemming | 1879 में क्षारीय रंजक (Basic dye) से केंद्रक के धागों को रंगकर 'क्रोमैटिन' नाम देने वाले वैज्ञानिक]] ne basic dye se stain karke **Chromatin** term diya." },
+        { "speaker": "raju", "text": "Chromatin kis cheez se bana hota hai sir?" },
+        { "speaker": "aman", "text": "Chromatin = **DNA + Basic Histone Proteins + Non-Histone proteins + RNA**. Histones basic proteins hoti hain jo **Lysine aur Arginine** amino acids se rich hoti hain aur positively charged hoti hain (negatively charged DNA ko lapetne ke liye)." },
+        { "speaker": "aman", "text": "- [[Euchromatin | ढीला लिपटा हुआ, हल्का रंजित और अनुलेखन रूप से सक्रिय (Transcriptionally active) क्रोमैटिन]].\n- [[Heterochromatin | सघन लिपटा हुआ, गहरा रंजित और अनुलेखन रूप से निष्क्रिय (Inactive) क्रोमैटिन]]." }
+      ],
+      "navigation": { "next": "card_75_chromosome_morphology_centromere", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_75_chromosome_morphology_centromere",
+      "card_slug": "card_75_chromosome_morphology_centromere",
+      "type": "chat",
+      "concept_id": "chromosome_types",
+      "level": 3,
+      "progress": { "current": 75, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Cell division ke dauran chromatin condenses hokar **Chromosomes** banata hai (Term by **W. Waldeyer, 1888**)." },
+        { "speaker": "raju", "text": "Centromere ki position ke hisaab se chromosomes kitne types ke hote hain sir?" },
+        { "speaker": "aman", "text": "NCERT Class 11 ke 4 types:\n1. [[Metacentric | मध्यकेंद्री - सेंट्रोमियर बिल्कुल बीच में, दोनों भुजाएं बराबर (V-shape)]]\n2. [[Sub-metacentric | उप-मध्यकेंद्री - सेंट्रोमियर मध्य से थोड़ा दूर, एक छोटी और एक लंबी भुजा (L-shape)]]\n3. [[Acrocentric | अग्रकेंद्री - सेंट्रोमियर लगभग सिरे के पास, एक अत्यंत छोटी और एक बहुत लंबी भुजा (J-shape)]]\n4. [[Telocentric | अंत्यकेंद्री - सेंट्रोमियर बिल्कुल अंतिम छोर पर (I-shape)]]." },
+        { "speaker": "aman", "text": "Centromere par disk-shaped protein plates hoti hain jinhe [[Kinetochore | सेंट्रोमियर की सतह पर स्थित प्रोटीन डिस्क जहाँ स्पिंडल फाइबर जुड़ते हैं]] kehte hain." }
+      ],
+      "navigation": { "next": "card_76_quiz_nucleolus_function", "button_text": "Check Your Knowledge ➔" }
+    },
+    {
+      "card_id": "card_76_quiz_nucleolus_function",
+      "card_slug": "card_76_quiz_nucleolus_function",
+      "type": "quiz",
+      "concept_id": "nucleolus_structure",
+      "level": 3,
+      "progress": { "current": 76, "total": 100 },
+      "quiz_payload": {
+        "question": "Which of the following cellular processes is primarily carried out in the Nucleolus of eukaryotic cells? (यूकैरियोटिक कोशिकाओं के केंद्रिका (न्यूक्लियोलस) में मुख्य रूप से कौन सी कोशिकीय प्रक्रिया संपन्न होती है?) [BPSC Prelims/SSC CGL]",
+        "options": [
+          { "id": "A", "text": "Lipid droplets storage" },
+          { "id": "B", "text": "Active synthesis of ribosomal RNA (rRNA)" },
+          { "id": "C", "text": "Oxidative phosphorylation" },
+          { "id": "D", "text": "Glycogen breakdown" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Nucleolus ek non-membrane bound dense structure hai jo actively ribosomal RNA (rRNA) synthesize karta hai. Ribosome ki assembly ke liye ye primary site hai, isliye ise 'Ribosome factory' bhi kaha jata hai."
+      },
+      "navigation": { "next": "card_77_quiz_histone_composition", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_77_quiz_histone_composition",
+      "card_slug": "card_77_quiz_histone_composition",
+      "type": "quiz",
+      "concept_id": "chromatin_and_chromosomes",
+      "level": 3,
+      "progress": { "current": 77, "total": 100 },
+      "quiz_payload": {
+        "question": "Histone proteins that package DNA into nucleosomes are exceptionally rich in which basic amino acid residues? (डीएनए को न्यूक्लियोसोम में पैक करने वाले हिस्टोन प्रोटीन किन बुनियादी अमीनो एसिड अवशेषों से अत्यधिक समृद्ध होते हैं?) [NEET/BPSC TRE]",
+        "options": [
+          { "id": "A", "text": "Valine and Proline" },
+          { "id": "B", "text": "Lysine and Arginine" },
+          { "id": "C", "text": "Tryptophan and Cysteine" },
+          { "id": "D", "text": "Alanine and Glycine" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Histones positively charged basic proteins hoti hain jo basic amino acids 'Lysine' aur 'Arginine' se rich hoti hain. Ye negatively charged DNA phosphate backbone ke sath strong electrostatic bonds banati hain."
+      },
+      "navigation": { "next": "card_78_quiz_chromosome_types", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_78_quiz_chromosome_types",
+      "card_slug": "card_78_quiz_chromosome_types",
+      "type": "quiz",
+      "concept_id": "chromosome_types",
+      "level": 3,
+      "progress": { "current": 78, "total": 100 },
+      "quiz_payload": {
+        "question": "A chromosome in which the centromere is situated close to its end, forming one extremely short arm and one very long arm, is termed as: (एक गुणसूत्र जिसमें सेंट्रोमियर उसके सिरे के बहुत पास स्थित होता है, जिससे एक अत्यंत छोटी और एक बहुत लंबी भुजा बनती है, कहलाता है:) [RRB NTPC/UPSC]",
+        "options": [
+          { "id": "A", "text": "Metacentric (मध्यकेंद्री)" },
+          { "id": "B", "text": "Sub-metacentric (उप-मध्यकेंद्री)" },
+          { "id": "C", "text": "Acrocentric (अग्रकेंद्री)" },
+          { "id": "D", "text": "Telocentric (अंत्यकेंद्री)" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Acrocentric chromosome me centromere terminal end ke bilkul nazdeek hota hai jisse ek extremely short (p-arm) aur ek long (q-arm) banti hai (J-shaped during anaphase). Telocentric me centromere exact tip par hota hai."
+      },
+      "navigation": { "next": "card_79_milestone_module8", "button_text": "Complete Module 8 ➔" }
+    },
+    {
+      "card_id": "card_79_milestone_module8",
+      "card_slug": "card_79_milestone_module8",
+      "type": "milestone",
+      "concept_id": "milestone_nucleus_genetics",
+      "level": 3,
+      "progress": { "current": 79, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE 8 COMPLETED!",
+        "badge_emoji": "🏛️",
+        "completed_topic": "Nucleus Architecture, Chromatin & Chromosomes",
+        "xp_earned": 50,
+        "milestone_progress": "Module 6/8 Clear",
+        "motivational_quote": "Superb! Master control architecture locked. Now entering the most dynamic topic: Cell Cycle & Division!"
+      },
+      "navigation": { "next": "card_80_cell_cycle_interphase_phases", "button_text": "Start Module 9 ➔" }
+    },
+    {
+      "card_id": "card_80_cell_cycle_interphase_phases",
+      "card_slug": "card_80_cell_cycle_interphase_phases",
+      "type": "chat",
+      "concept_id": "cell_cycle_interphase",
+      "level": 3,
+      "progress": { "current": 80, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Module 9: **Cell Cycle & Cell Division (कोशिका चक्र एवं विभाजन)**. Saal **1953** me **Howard aur Pelc** ne cell cycle ko divide kiya tha." },
+        { "speaker": "raju", "text": "Human cell ko divide hone me kitna time lagta hai sir?" },
+        { "speaker": "aman", "text": "Human cell culture me cycle **24 hours** ki hoti hai, jisme se **95% time (~23 hours)** [[Interphase | अंतरावस्था - विश्राम/तैयारी की अवस्था जिसमें कोशिका वृद्धि और डीएनए प्रतिकृति होती है]] me nikalta hai aur actual M-Phase (Mitosis) sirf 1 hour chalta hai! Yeast cell cycle sirf 90 minutes me complete hoti hai." }
+      ],
+      "navigation": { "next": "card_81_g1_s_g2_g0_phases", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_81_g1_s_g2_g0_phases",
+      "card_slug": "card_81_g1_s_g2_g0_phases",
+      "type": "chat",
+      "concept_id": "cell_cycle_interphase",
+      "level": 3,
+      "progress": { "current": 81, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Interphase ke 3 sub-stages dimag me set karo:\n1. [[G1 Phase (Gap 1) | प्रथम अंतराल अवस्था - कोशिका उपापचयी रूप से सक्रिय होती है और आरएनए व प्रोटीन बनाती है]].\n2. [[S Phase (Synthesis) | संश्लेषण अवस्था - डीएनए की मात्रा दोगुनी (2C से 4C) होती है, पर गुणसूत्र संख्या समान (2n) रहती है]]. Animal cell me centriole bhi cytoplasm me duplicate hota hai.\n3. [[G2 Phase (Gap 2) | द्वितीय अंतराल अवस्था - माइटोसिस के लिए ट्यूबुलिन प्रोटीन का निर्माण होता है]]." },
+        { "speaker": "raju", "text": "Sir, jo cells divide nahi karti (jaise Heart cells/Neurons) wo kahan jati hain?" },
+        { "speaker": "aman", "text": "Wo $G_1$ se exit hokar inactive stage me chali jati hain jise [[G0 Phase (Quiescent stage) | शांत अवस्था - जहां कोशिका विभाजित नहीं होती परंतु उपापचयी रूप से जीवित रहती है]] kehte hain!" }
+      ],
+      "navigation": { "next": "card_82_mitosis_prophase_metaphase", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_82_mitosis_prophase_metaphase",
+      "card_slug": "card_82_mitosis_prophase_metaphase",
+      "type": "chat",
+      "concept_id": "mitosis_equational_division",
+      "level": 3,
+      "progress": { "current": 82, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Ab aate hain **Mitosis (समसूत्री विभाजन)** par (Term by **Walther Flemming, 1882**). Ise *Equational Division* kehte hain kyunki chromosome number constant rehta hai." },
+        { "speaker": "raju", "text": "Prophase aur Metaphase ke key identifiers kya hain sir?" },
+        { "speaker": "aman", "text": "- **Prophase**: Chromatin condensation shuru, nuclear envelope aur nucleolus disappear hote hain.\n- **Metaphase**: Sabhi chromosomes equator par align ho jate hain jise [[Metaphase Plate | मध्यावस्था पट्टिका - भूमध्य रेखा पर गुणसूत्रों का पंक्तिबद्ध होना]] kehte hain. Chromosome morphology aur counting study karne ke liye best stage yahi hai!" }
+      ],
+      "navigation": { "next": "card_83_mitosis_anaphase_telophase", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_83_mitosis_anaphase_telophase",
+      "card_slug": "card_83_mitosis_anaphase_telophase",
+      "type": "chat",
+      "concept_id": "mitosis_equational_division",
+      "level": 3,
+      "progress": { "current": 83, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "- **Anaphase (पश्चावस्था)**: [[Centromere Splitting | सेंट्रोमियर का विभाजन जिससे दोनों सिस्टर क्रोमैटिड्स अलग होकर विपरीत ध्रुवों की ओर खिंचते हैं]]. Chromosome ka shape (V, L, J, I) isi stage me dekha jata hai!\n- **Telophase (अंत्यावस्था)**: Prophase ka opposite! Chromosomes decondense hokar chromatin banate hain, nuclear envelope aur nucleolus re-appear ho jate hain." },
+        { "speaker": "raju", "text": "Iske baad Cytoplasm ka division hota hai yaani Cytokinesis!" },
+        { "speaker": "aman", "text": "Agar karyokinesis ke baad cytokinesis na ho to multi-nucleated condition banti hai jise [[Syncytium / Coenocyte | बहुकेंद्रकीय स्थिति - जैसे नारियल का तरल भ्रूणपोष (Liquid Endosperm)]] kehte hain." }
+      ],
+      "navigation": { "next": "card_84_meiosis_prophase1_substages", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_84_meiosis_prophase1_substages",
+      "card_slug": "card_84_meiosis_prophase1_substages",
+      "type": "chat",
+      "concept_id": "meiosis_reductional_division",
+      "level": 3,
+      "progress": { "current": 84, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "**Meiosis (अर्धसूत्री विभाजन)** term **Farmer & Moore (1905)** ne diya tha. Ye gametes me hota hai jisse chromosome number half ($2n \\rightarrow n$) ho jata hai." },
+        { "speaker": "raju", "text": "Sir, Prophase-I ke 5 substages ka order kya hai?" },
+        { "speaker": "aman", "text": "Mnemonic yaad rakho: **L-Z-P-D-D**:\n1. **Leptotene**: Chromosomes condense hote hain (Bouquet stage).\n2. **Zygotene**: [[Synapsis | समजात गुणसूत्रों का जोड़ा बनना]] (Synaptonemal complex banta hai, Bivalents form hote hain).\n3. **Pachytene**: [[Crossing Over | गैर-बहन क्रोमैटिड्स के बीच आनुवंशिक पुनर्योजन]] (Recombinase enzyme ki madad se).\n4. **Diplotene**: [[Chiasmata | एक्स-आकार की संरचनाएं जहां क्रॉसिंग ओवर हुआ था, सिनेप्टोनिमल कॉम्प्लेक्स घुल जाता है]].\n5. **Diakinesis**: [[Terminalization | काएज्मेटा का सिरों की ओर खिसकना और समाप्त होना]]." }
+      ],
+      "navigation": { "next": "card_85_meiosis_significance_reduction", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_85_meiosis_significance_reduction",
+      "card_slug": "card_85_meiosis_significance_reduction",
+      "type": "chat",
+      "concept_id": "meiosis_reductional_division",
+      "level": 3,
+      "progress": { "current": 85, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Meiosis-I actual reductional division hai (Homologous chromosomes separate hote hain Anaphase-I me without centromere split)." },
+        { "speaker": "aman", "text": "Meiosis-II simple equational division hota hai (Mitosis jaisa, jahan Anaphase-II me centromere split hota hai)." },
+        { "speaker": "raju", "text": "Matlab 1 diploid ($2n$) cell se 4 haploid ($n$) daughter cells banti hain!" },
+        { "speaker": "aman", "text": "Aur Pachytene me Crossing over hone ke karan hi organisms me [[Genetic Variations | आनुवंशिक विभिन्नताएं जो जैव विकास (Evolution) का कच्चा माल हैं]] create hoti hain!" }
+      ],
+      "navigation": { "next": "card_86_quiz_s_phase_dna", "button_text": "Check Your Knowledge ➔" }
+    },
+    {
+      "card_id": "card_86_quiz_s_phase_dna",
+      "card_slug": "card_86_quiz_s_phase_dna",
+      "type": "quiz",
+      "concept_id": "cell_cycle_interphase",
+      "level": 3,
+      "progress": { "current": 86, "total": 100 },
+      "quiz_payload": {
+        "question": "During the Synthesis (S) phase of the eukaryotic cell cycle, what happens to the DNA amount and chromosome number in a diploid cell? (यूकैरियोटिक कोशिका चक्र के संश्लेषण (S) चरण के दौरान, द्विगुणित कोशिका में डीएनए की मात्रा और गुणसूत्र संख्या में क्या परिवर्तन होता है?) [NEET/BPSC TRE/SSC CGL]",
+        "options": [
+          { "id": "A", "text": "DNA amount doubles ($2C \\rightarrow 4C$), chromosome number remains same ($2n$)" },
+          { "id": "B", "text": "Both DNA amount and chromosome number double" },
+          { "id": "C", "text": "DNA amount remains same, chromosome number halves" },
+          { "id": "D", "text": "DNA amount doubles, chromosome number doubles ($2n \\rightarrow 4n$)" }
+        ],
+        "correct_option_id": "A",
+        "explanation": "S-phase me DNA replication hota hai jisse DNA content double ho jata hai ($2C$ se $4C$), lekin chromosome number bilkul same rehta hai ($2n$). Chromosome number sirf anaphase me badalta hai jab chromatids separate hote hain."
+      },
+      "navigation": { "next": "card_87_quiz_crossing_over_stage", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_87_quiz_crossing_over_stage",
+      "card_slug": "card_87_quiz_crossing_over_stage",
+      "type": "quiz",
+      "concept_id": "meiosis_reductional_division",
+      "level": 3,
+      "progress": { "current": 87, "total": 100 },
+      "quiz_payload": {
+        "question": "In which specific sub-stage of Prophase-I of Meiosis does the exchange of genetic material (Crossing Over) between non-sister chromatids take place? (अर्धसूत्रीविभाजन के प्रोफेज-I के किस विशिष्ट उप-चरण में गैर-बहन क्रोमैटिड्स के बीच आनुवंशिक सामग्री का आदान-प्रदान (क्रॉसिंग ओवर) होता है?) [BPSC Prelims/UPSC/NEET]",
+        "options": [
+          { "id": "A", "text": "Leptotene" },
+          { "id": "B", "text": "Zygotene" },
+          { "id": "C", "text": "Pachytene" },
+          { "id": "D", "text": "Diplotene" }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Pachytene stage me homologous chromosomes ke non-sister chromatids ke beech Recombinase enzyme-mediated Crossing Over hota hai, jo recombination nodules par genetic material exchange karta hai."
+      },
+      "navigation": { "next": "card_88_quiz_metaphase_morphology", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_88_quiz_metaphase_morphology",
+      "card_slug": "card_88_quiz_metaphase_morphology",
+      "type": "quiz",
+      "concept_id": "mitosis_equational_division",
+      "level": 3,
+      "progress": { "current": 88, "total": 100 },
+      "quiz_payload": {
+        "question": "Which mitotic stage is considered the best and most suitable for observing the morphology, size, and total number of chromosomes under a microscope? (सूक्ष्मदर्शी के तहत गुणसूत्रों की आकृति विज्ञान (मॉर्फोलॉजी), आकार और कुल संख्या का अवलोकन करने के लिए कौन सा समसूत्री चरण सबसे उपयुक्त माना जाता है?) [RRB NTPC/BSSC CGL]",
+        "options": [
+          { "id": "A", "text": "Prophase" },
+          { "id": "B", "text": "Metaphase (मध्यावस्था)" },
+          { "id": "C", "text": "Anaphase" },
+          { "id": "D", "text": "Telophase" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Metaphase me chromosomes maximum condense hokar equator (metaphase plate) par align hote hain, isliye chromosome counting aur external morphology study karne ke liye ye best stage hoti hai. Chromosome shape (V, L, J, I) Anaphase me study kiya jata hai."
+      },
+      "navigation": { "next": "card_89_milestone_module9", "button_text": "Complete Module 9 ➔" }
+    },
+    {
+      "card_id": "card_89_milestone_module9",
+      "card_slug": "card_89_milestone_module9",
+      "type": "milestone",
+      "concept_id": "milestone_cell_division",
+      "level": 3,
+      "progress": { "current": 89, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE 9 COMPLETED!",
+        "badge_emoji": "✂️",
+        "completed_topic": "Cell Cycle, Mitosis & Meiosis Stages",
+        "xp_earned": 50,
+        "milestone_progress": "Module 7/8 Clear",
+        "motivational_quote": "Sensational! Cell division ke complex checkpoints ab aapki ungliyon par hain. Let's conquer Membrane Transport!"
+      },
+      "navigation": { "next": "card_90_membrane_transport_passive_active", "button_text": "Start Module 10 ➔" }
+    },
+    {
+      "card_id": "card_90_membrane_transport_passive_active",
+      "card_slug": "card_90_membrane_transport_passive_active",
+      "type": "chat",
+      "concept_id": "membrane_transport_mechanisms",
+      "level": 3,
+      "progress": { "current": 90, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Module 10: **Membrane Transport & Tonicity Dynamics**. Cell membrane ke paar materials 2 main tariko se move karte hain:" },
+        { "speaker": "aman", "text": "1. [[Passive Transport | निष्क्रिय परिवहन - बिना किसी एटीपी ऊर्जा खर्च के उच्च सांद्रता से निम्न सांद्रता (ढाल के अनुरूप) की ओर पदार्थों का गमन]] (e.g., Simple diffusion, Facilitated diffusion via aquaporins/carrier proteins).\n2. [[Active Transport | सक्रिय परिवहन - एटीपी ऊर्जा खर्च करके सांद्रता प्रवणता के विरुद्ध (निम्न से उच्च सांद्रता) पंपों द्वारा परिवहन]] (e.g., $Na^+/K^+$ ATPase pump)." },
+        { "speaker": "raju", "text": "$Na^+/K^+$ pump har ATP break hone par kitne ions bahar aur andar bhejta hai sir?" },
+        { "speaker": "aman", "text": "Exact NEET/UPSC fact: $3\\ Na^+$ bahar pump hote hain aur $2\\ K^+$ andar aate hain!" }
+      ],
+      "navigation": { "next": "card_91_tonicity_osmosis_plasmolysis", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_91_tonicity_osmosis_plasmolysis",
+      "card_slug": "card_91_tonicity_osmosis_plasmolysis",
+      "type": "chat",
+      "concept_id": "tonicity_and_plasmolysis",
+      "level": 3,
+      "progress": { "current": 91, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Exams ka favorite topic: **Osmosis in Different Solutions**:\n- [[Hypotonic Solution | अल्पपरासारी विलयन - बाहर तनु घोल होने पर अंतःपरासरण (Endosmosis) होता है, जिससे जंतु कोशिका फट (Lysis) जाती है और पादप कोशिका स्फीत (Turgid) हो जाती है]].\n- [[Hypertonic Solution | अतिपरासारी विलयन - बाहर गाढ़ा घोल होने पर बहिःपरासरण (Exosmosis) होता है]]." },
+        { "speaker": "raju", "text": "Sir, plant cell ko Hypertonic solution me daalne par kya hota hai?" },
+        { "speaker": "aman", "text": "Plant cell ka protoplast contract hokar cell wall se alag ho jata hai, jise [[Plasmolysis | जीवद्रव्यकुंचन - पादप कोशिका से जल बाहर निकलने पर कोशिका झिल्ली का भित्ति से सिकुड़ जाना]] kehte hain! Achaar (Pickles) aur Jam isi principle par preserve hote hain." }
+      ],
+      "navigation": { "next": "card_92_bulk_transport_endocytosis", "button_text": "Next Card ➔" }
+    },
+    {
+      "card_id": "card_92_bulk_transport_endocytosis",
+      "card_slug": "card_92_bulk_transport_endocytosis",
+      "type": "chat",
+      "concept_id": "bulk_transport",
+      "level": 3,
+      "progress": { "current": 92, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Large macromolecules ke bulk transport ke 2 terms dekho:\n- [[Endocytosis | अंतःकोशिकता - झिल्ली द्वारा बाहरी पदार्थों को घेरकर पुटिकाओं (Vesicles) के रूप में कोशिका के भीतर लेना]]:\n  * Solid food lena = **Phagocytosis** (Cell eating, jaise Amoeba ya Macrophages).\n  * Liquid droplets lena = **Pinocytosis** (Cell drinking).\n- [[Exocytosis / Emeiocytosis | बहिःकोशिकता (Cell vomiting) - अपशिष्ट या स्रावित पदार्थों को पुटिकाओं द्वारा कोशिका से बाहर निकालना]]." },
+        { "speaker": "raju", "text": "Matlab WBCs bacteria ko Phagocytosis se hi khati hain!" }
+      ],
+      "navigation": { "next": "card_93_quiz_na_k_pump", "button_text": "Check Your Knowledge ➔" }
+    },
+    {
+      "card_id": "card_93_quiz_na_k_pump",
+      "card_slug": "card_93_quiz_na_k_pump",
+      "type": "quiz",
+      "concept_id": "membrane_transport_mechanisms",
+      "level": 3,
+      "progress": { "current": 93, "total": 100 },
+      "quiz_payload": {
+        "question": "For every molecule of ATP hydrolyzed, the primary active $Na^+/K^+$ ATPase pump transports: (एटीपी के प्रत्येक अणु के जल-अपघटन के लिए, प्राथमिक सक्रिय $Na^+/K^+$ एटीपीएज पंप स्थानांतरित करता है:) [NEET/UPSC Prelims]",
+        "options": [
+          { "id": "A", "text": "$2\\ Na^+$ out and $3\\ K^+$ in" },
+          { "id": "B", "text": "$3\\ Na^+$ out and $2\\ K^+$ in" },
+          { "id": "C", "text": "$3\\ Na^+$ in and $2\\ K^+$ out" },
+          { "id": "D", "text": "$2\\ Na^+$ in and $2\\ K^+$ out" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Active electrogenic $Na^+/K^+$ pump 1 ATP molecule use karke $3\\ Na^+$ ions ko cell ke bahar bhejta hai aur $2\\ K^+$ ions ko cell ke andar lata hai against their respective concentration gradients."
+      },
+      "navigation": { "next": "card_94_quiz_plasmolysis_condition", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_94_quiz_plasmolysis_condition",
+      "card_slug": "card_94_quiz_plasmolysis_condition",
+      "type": "quiz",
+      "concept_id": "tonicity_and_plasmolysis",
+      "level": 3,
+      "progress": { "current": 94, "total": 100 },
+      "quiz_payload": {
+        "question": "When a living plant cell is placed in a Hypertonic solution, the shrinkage of the protoplast away from the cell wall is termed as: (जब एक जीवित पादप कोशिका को अतिपरासारी (हाइपरटोनिक) घोल में रखा जाता है, तो कोशिका भित्ति से जीवद्रव्य का सिकुड़ना क्या कहलाता है?) [BPSC TRE/BSSC CGL]",
+        "options": [
+          { "id": "A", "text": "Imbibition" },
+          { "id": "B", "text": "Plasmolysis (जीवद्रव्यकुंचन)" },
+          { "id": "C", "text": "Deplasmolysis" },
+          { "id": "D", "text": "Guttation" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Hypertonic solution me rakhne par Exosmosis ke karan cell sap se paani bahar nikal jata hai, jisse plasma membrane protoplast ke sath cell wall se dur shrink ho jati hai. Is process ko Plasmolysis kehte hain."
+      },
+      "navigation": { "next": "card_95_quiz_cell_drinking", "button_text": "Next Question ➔" }
+    },
+    {
+      "card_id": "card_95_quiz_cell_drinking",
+      "card_slug": "card_95_quiz_cell_drinking",
+      "type": "quiz",
+      "concept_id": "bulk_transport",
+      "level": 3,
+      "progress": { "current": 95, "total": 100 },
+      "quiz_payload": {
+        "question": "The ingestion of liquid droplets into a cell by the inward budding of the plasma membrane is scientifically referred to as: (प्लाज्मा झिल्ली के आंतरिक मुड़ाव द्वारा कोशिका में तरल बूंदों के अंतर्ग्रहण को वैज्ञानिक रूप से क्या कहा जाता है?) [SSC CGL/RRB NTPC]",
+        "options": [
+          { "id": "A", "text": "Phagocytosis" },
+          { "id": "B", "text": "Pinocytosis (कोशिका पायनीकरण / Cell Drinking)" },
+          { "id": "C", "text": "Exocytosis" },
+          { "id": "D", "text": "Transcytosis" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Pinocytosis ko common language me 'Cell Drinking' kehte hain jisme cell extracellular fluid aur dissolved solutes ko invaginated vesicles ke roop me swallow karti hai. Solid particles ke ingestion ko Phagocytosis (Cell Eating) kehte hain."
+      },
+      "navigation": { "next": "card_96_milestone_module10", "button_text": "Complete Module 10 ➔" }
+    },
+    {
+      "card_id": "card_96_milestone_module10",
+      "card_slug": "card_96_milestone_module10",
+      "type": "milestone",
+      "concept_id": "milestone_transport",
+      "level": 3,
+      "progress": { "current": 96, "total": 100 },
+      "milestone_payload": {
+        "title": "MODULE 10 COMPLETED!",
+        "badge_emoji": "🌊",
+        "completed_topic": "Membrane Transport, Tonicity & Endocytosis",
+        "xp_earned": 50,
+        "milestone_progress": "Module 8/8 Clear",
+        "motivational_quote": "Incredible achievement Raju! You have successfully mastered all 10 modules of Cell Biology from Class 6 to Class 12 standard!"
+      },
+      "navigation": { "next": "card_97_master_synthesis_matrix", "button_text": "Master Synthesis ➔" }
+    },
+    {
+      "card_id": "card_97_master_synthesis_matrix",
+      "card_slug": "card_97_master_synthesis_matrix",
+      "type": "chat",
+      "concept_id": "master_synthesis_cell_biology",
+      "level": 3,
+      "progress": { "current": 97, "total": 100 },
+      "messages": [
+        { "speaker": "aman", "text": "Raju, Grand Revision ke liye ye Ultimate Organelle Function Table yaad rakhna:\n- **Nucleus**: Master genetic controller.\n- **Mitochondria**: Cellular respiration & ATP powerhouse.\n- **Chloroplast**: Photosynthesis (Solar to chemical energy).\n- **Ribosome**: Protein synthesis factory.\n- **Golgi**: Packaging, sorting & Glycosylation.\n- **RER/SER**: Protein/Lipid synthesis & liver detoxification.\n- **Lysosome**: Autolysis & intracellular digestion.\n- **Centrosome**: Spindle apparatus in animal cell division." },
+        { "speaker": "raju", "text": "Sir, is pure 100-card module se koi bhi question exam me bahar nahi jayega!" }
+      ],
+      "navigation": { "next": "card_98_summary_part3", "button_text": "Part 3 Lightning Revision ➔" }
+    },
+    {
+      "card_id": "card_98_summary_part3",
+      "card_slug": "card_98_summary_part3",
+      "type": "summary",
+      "concept_id": "summary_cell_cycle_transport",
+      "level": 3,
+      "progress": { "current": 98, "total": 100 },
+      "summary_payload": {
+        "title": "⚡ Quick Officer Revision (Cards 71-97)",
+        "revision_points": [
+          {
+            "topic": "1. Nucleus & Chromatin",
+            "point": "Robert Brown (1831, Nucleus); Fontana (1781, Nucleolus for rRNA synthesis); Walther Flemming (1879, Chromatin). Histones rich in basic Lysine and Arginine."
+          },
+          {
+            "topic": "2. Chromosome Morphology",
+            "point": "Centromere position determines Metacentric (V-shape), Sub-metacentric (L-shape), Acrocentric (J-shape), and Telocentric (I-shape)."
+          },
+          {
+            "topic": "3. Cell Cycle Checkpoints",
+            "point": "Interphase ($G_1, S, G_2$) takes 95% of cycle time. S-phase duplicates DNA ($2C \\rightarrow 4C$) while chromosome count ($2n$) stays constant. $G_0$ is quiescent metabolic state."
+          },
+          {
+            "topic": "4. Mitosis vs Meiosis Highlights",
+            "point": "Metaphase (best for chromosome morphology/counting); Anaphase (centromere splits, shape analysis). Meiosis Prophase-I: Zygotene (synapsis), Pachytene (crossing over via recombinase), Diplotene (chiasmata)."
+          },
+          {
+            "topic": "5. Membrane Transport & Osmosis",
+            "point": "Primary active $Na^+/K^+$ pump expels $3\\ Na^+$ and brings in $2\\ K^+$ per ATP. Hypertonic solution causes Plasmolysis (exosmosis in plant cells); Phagocytosis (cell eating) vs Pinocytosis (cell drinking)."
+          }
+        ]
+      },
+      "navigation": { "next": "card_99_final_quiz_part3", "button_text": "Take Part 3 Master Quiz ➔" }
+    },
+    {
+      "card_id": "card_99_final_quiz_part3",
+      "card_slug": "card_99_final_quiz_part3",
+      "type": "final_quiz",
+      "concept_id": "mastery_test_part3",
+      "level": 3,
+      "progress": { "current": 99, "total": 100 },
+      "quiz_payload": {
+        "question": "Consider the following statements regarding cell cycle, genetics, and transport:\n1. Crossing over between homologous chromosomes occurs during the Zygotene stage of Prophase-I.\n2. In the S-phase of interphase, the DNA amount doubles from 2C to 4C, but chromosome number remains 2n.\n3. The $Na^+/K^+$ ATPase pump actively transports $3\\ Na^+$ ions outward and $2\\ K^+$ ions inward per ATP molecule hydrolyzed.\n4. Nucleolus is bounded by a single unit membrane and is the site for lipid synthesis.\nWhich of the statements given above are CORRECT? [UPSC Prelims / BPSC Combined Format]",
+        "options": [
+          { "id": "A", "text": "1 and 4 only" },
+          { "id": "B", "text": "2 and 3 only" },
+          { "id": "C", "text": "2, 3 and 4 only" },
+          { "id": "D", "text": "1, 2 and 3 only" }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Statement 1 is INCORRECT (Synapsis occurs in Zygotene; Crossing Over occurs in Pachytene). Statement 2 is CORRECT (DNA replication doubles DNA content while chromosome number remains unchanged). Statement 3 is CORRECT ($3\\ Na^+$ out and $2\\ K^+$ in per ATP). Statement 4 is INCORRECT (Nucleolus is non-membranous and synthesizes rRNA, not lipids). Therefore, statements 2 and 3 are correct."
+      },
+      "navigation": { "next": "card_100_course_completion", "button_text": "Finish 100-Card Course ➔" }
+    },
+    {
+      "card_id": "card_100_course_completion",
+      "card_slug": "card_100_course_completion",
+      "type": "milestone",
+      "concept_id": "course_complete_mastery",
+      "level": 3,
+      "progress": { "current": 100, "total": 100 },
+      "milestone_payload": {
+        "title": "🎉 100-CARD CELL BIOLOGY MASTER ARCHIVE COMPLETED!",
+        "badge_emoji": "👑",
+        "completed_topic": "Cell Biology Full Syllabus Track (Cards 01-100)",
+        "xp_earned": 500,
+        "milestone_progress": "100/100 Cards Completed",
+        "motivational_quote": "Congratulations Officer Raju! You have systematically covered every single discovery, scientist, organelle ultrastructure, division checkpoint, and transport equation in cytology. You are now 100% exam ready for BPSC, BSSC, RRB NTPC, SSC CGL, NEET & UPSC Prelims!"
+      },
+      "navigation": { "next": "course_completed", "button_text": "Return to Dashboard 🎓" }
+    }
+  ]
+}
+  
+
 
