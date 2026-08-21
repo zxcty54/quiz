@@ -1,0 +1,5990 @@
+[
+  {
+    "qe": "What is the 'Quality' of sound also known as?",
+    "qh": "ध्वनि की 'गुणता' को और किस नाम से जाना जाता है?",
+    "o": [
+      "Pitch",
+      "Timbre | टिम्बर (Timbre)",
+      "Loudness",
+      "None"
+    ],
+    "a": 1,
+    "e": "Timbre allows us to distinguish between two sounds of the same pitch and loudness. / टिम्बर हमें समान पिच और प्रबलता वाली दो ध्वनियों के बीच अंतर करने में मदद करता है।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Copper' approx?",
+    "qh": "'तांबे' में ध्वनि की चाल लगभग कितनी है?",
+    "o": [
+      "340 m/s",
+      "1500 m/s",
+      "3750 m/s | 3750 मी/से",
+      "5000 m/s"
+    ],
+    "a": 2,
+    "e": "Sound travels faster in copper than in air and water. / तांबे में ध्वनि हवा और पानी से तेज चलती है।"
+  },
+  {
+    "qe": "What is 'Infrared' vs 'Infrasonic'?",
+    "qh": "'इन्फ्रारेड' बनाम 'इन्फ्रासोनिक' क्या है?",
+    "o": [
+      "Both are same",
+      "Infrared is light, Infrasonic is sound | इन्फ्रारेड प्रकाश है, इन्फ्रासोनिक ध्वनि",
+      "Both are sound",
+      "None"
+    ],
+    "a": 1,
+    "e": "Infrared is electromagnetic wave, Infrasonic is mechanical sound wave. / इन्फ्रारेड विद्युत चुम्बकीय तरंग है, इन्फ्रासोनिक यांत्रिक ध्वनि तरंग है।"
+  },
+  {
+    "qe": "What is the unit of 'Sound Absorption' used in architectural acoustics?",
+    "qh": "वास्तुकला ध्वनि विज्ञान में 'ध्वनि अवशोषण' की इकाई क्या है?",
+    "o": [
+      "Decibel",
+      "Sabine | सेबाइन (Sabine)",
+      "Hertz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Named after Wallace Clement Sabine. / इसका नाम वालेस क्लेमेंट सेबाइन के नाम पर रखा गया है।"
+  },
+  {
+    "qe": "Which factor 'Changes' when sound travels from air to water?",
+    "qh": "हवा से पानी में जाने पर ध्वनि का कौन सा कारक 'बदलता' है?",
+    "o": [
+      "Frequency",
+      "Wavelength and Velocity | तरंगदैर्ध्य और वेग",
+      "Only Amplitude",
+      "None"
+    ],
+    "a": 1,
+    "e": "Frequency depends on the source, but speed and wavelength change with the medium. / आवृत्ति स्रोत पर निर्भर करती है, लेकिन माध्यम के साथ चाल और तरंगदैर्ध्य बदल जाते हैं।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' frequency used in 'Industrial welding'?",
+    "qh": "'औद्योगिक वेल्डिंग' में प्रयुक्त पराश्रव्य आवृत्ति क्या है?",
+    "o": [
+      "10 Hz",
+      "500 Hz",
+      "20 kHz to 40 kHz | 20 kHz से 40 kHz",
+      "None"
+    ],
+    "a": 2,
+    "e": "High frequency vibrations create friction to melt and bond materials. / उच्च आवृत्ति वाले कंपन सामग्री को पिघलाने और जोड़ने के लिए घर्षण पैदा करते हैं।"
+  },
+  {
+    "qe": "What is 'Overtones' relation in a 'Closed' organ pipe?",
+    "qh": "'बंद' ऑर्गन पाइप में 'अधिस्वरक' का संबंध क्या है?",
+    "o": [
+      "$f_n = (2n-1)f_1$",
+      "$f_n = (2n+1)f_1$ | $f_n = (2n+1)f_1$",
+      "$f_n = nf_1$",
+      "None"
+    ],
+    "a": 1,
+    "e": "For n-th overtone, it is (2n+1) times the fundamental frequency. / n-वें अधिस्वरक के लिए, यह मूल आवृत्ति का (2n+1) गुना होता है।"
+  },
+  {
+    "qe": "The speed of sound in 'Hydrogen' is about ______ times faster than in 'Oxygen'.",
+    "qh": "'हाइड्रोजन' में ध्वनि की चाल 'ऑक्सीजन' की तुलना में लगभग ______ गुना तेज होती है।",
+    "o": [
+      "2",
+      "4 | 4 गुना",
+      "8",
+      "16"
+    ],
+    "a": 1,
+    "e": "Since $v \\propto 1/\\sqrt{M}$ and Oxygen is 16 times heavier than Hydrogen. / क्योंकि ऑक्सीजन हाइड्रोजन से 16 गुना भारी है, चाल 4 गुना अधिक होगी।"
+  },
+  {
+    "qe": "Which 'Law' relates the 'Pitch' of a string to its 'Diameter'?",
+    "qh": "कौन सा 'नियम' डोरी की 'पिच' को उसके 'व्यास' से जोड़ता है?",
+    "o": [
+      "Law of length",
+      "Law of diameter ($f \\propto 1/D$) | व्यास का नियम ($f \\propto 1/D$)",
+      "Law of tension",
+      "None"
+    ],
+    "a": 1,
+    "e": "Thicker strings (larger diameter) produce lower frequency sounds. / मोटी डोरियां कम आवृत्ति की ध्वनि उत्पन्न करती हैं।"
+  },
+  {
+    "qe": "What is 'Dead Room' in acoustics?",
+    "qh": "ध्वनि विज्ञान में 'डेड रूम' (Dead Room) क्या है?",
+    "o": [
+      "Room with loud echo",
+      "Room with no reverberation | वह कमरा जिसमें कोई अनुरणन नहीं होता",
+      "A silent room",
+      "None"
+    ],
+    "a": 1,
+    "e": "Also called an Anechoic chamber. / इसे एनेकोइक चैंबर भी कहा जाता है।"
+  },
+  {
+    "qe": "What is 'Stapedius' muscle's role in the ear?",
+    "qh": "कान में 'स्टैपिडियस' मांसपेशी की क्या भूमिका है?",
+    "o": [
+      "To help hear low sounds",
+      "To protect the ear from loud noises | कान को तेज शोर से बचाना",
+      "To collect wax",
+      "None"
+    ],
+    "a": 1,
+    "e": "Dampens vibrations of the stapes bone to prevent damage. / क्षति को रोकने के लिए स्टेपीज हड्डी के कंपन को कम करता है।"
+  },
+  {
+    "qe": "What is the 'Speed of Sound' in 'Helium' approx?",
+    "qh": "'हीलियम' में ध्वनि की चाल लगभग क्या है?",
+    "o": [
+      "340 m/s",
+      "965 m/s | 965 मी/से",
+      "1500 m/s",
+      "None"
+    ],
+    "a": 1,
+    "e": "Helium is lighter than air, so sound travels faster in it. / हीलियम हवा से हल्की है, इसलिए इसमें ध्वनि तेज चलती है।"
+  },
+  {
+    "qe": "What is 'Threshold of Pain' in decibels for humans?",
+    "qh": "मनुष्यों के लिए डेसीबल में 'दर्द की दहलीज' क्या है?",
+    "o": [
+      "80 dB",
+      "100 dB",
+      "120-130 dB | 120-130 dB",
+      "None"
+    ],
+    "a": 2,
+    "e": "Exposure to this level can cause physical pain and ear damage. / इस स्तर पर रहने से शारीरिक दर्द और कान को नुकसान हो सकता है।"
+  },
+  {
+    "qe": "Which 'Phenomenon' is responsible for the 'Rolling' sound of thunder?",
+    "qh": "बादलों की 'गड़गड़ाहट' की आवाज के लिए कौन सी 'घटना' जिम्मेदार है?",
+    "o": [
+      "Single reflection",
+      "Multiple reflections from clouds and ground | बादलों और जमीन से बहु-परावर्तन",
+      "Refraction",
+      "None"
+    ],
+    "a": 1,
+    "e": "Thunder reflects off multiple surfaces, prolonging the sound. / बिजली की कड़क कई सतहों से परावर्तित होती है, जिससे आवाज लंबी खिंचती है।"
+  },
+  {
+    "qe": "What is 'Wave Intensity' proportional to in terms of 'Frequency'?",
+    "qh": "'आवृत्ति' के संदर्भ में 'तरंग तीव्रता' किसके समानुपाती होती है?",
+    "o": [
+      "$f$",
+      "$f^2$ | $f^2$",
+      "$\\sqrt{f}$",
+      "None"
+    ],
+    "a": 1,
+    "e": "$I = 2\\pi^2 f^2 A^2 \\rho v$. Intensity is proportional to the square of frequency. / तीव्रता आवृत्ति के वर्ग के समानुपाती होती है।"
+  },
+  {
+    "qe": "What is 'Beat Frequency' limit that the human ear can distinguish?",
+    "qh": "मानव कान 'विपन्द आवृत्ति' की किस सीमा तक अंतर कर सकता है?",
+    "o": [
+      "Up to 10 Hz | 10 Hz तक",
+      "Up to 100 Hz",
+      "Up to 1000 Hz",
+      "None"
+    ],
+    "a": 0,
+    "e": "Beyond 10 Hz, the beats merge into a single unpleasant sound. / 10 Hz से ऊपर, विपन्द एक ही अरुचिकर ध्वनि में मिल जाते हैं।"
+  },
+  {
+    "qe": "Which 'Part' of the ear is primarily affected during 'Ear Infection' leading to fluid buildup?",
+    "qh": "'कान के संक्रमण' के दौरान मुख्य रूप से कान का कौन सा 'भाग' प्रभावित होता है?",
+    "o": [
+      "Outer ear",
+      "Middle ear | मध्य कर्ण",
+      "Inner ear",
+      "None"
+    ],
+    "a": 1,
+    "e": "Otitis media is inflammation of the middle ear. / ओटिटिस मीडिया मध्य कान की सूजन है।"
+  },
+  {
+    "qe": "What is the 'Wavelength' of note 'Sa' (240 Hz) in air (v=340)?",
+    "qh": "हवा (v=340) में 'सा' (240 Hz) स्वर की 'तरंगदैर्ध्य' क्या होगी?",
+    "o": [
+      "1.42 m | 1.42 मीटर",
+      "0.7 m",
+      "2.1 m",
+      "None"
+    ],
+    "a": 0,
+    "e": "$\\lambda = 340 / 240 \\approx 1.416$ m. / गणना $\\lambda = v/f$ द्वारा।"
+  },
+  {
+    "qe": "What is 'Node' and 'Antinode' distance in terms of $\\lambda$?",
+    "qh": "$\\lambda$ के संदर्भ में 'नोड' और 'प्रस्पंद' के बीच की दूरी क्या है?",
+    "o": [
+      "$\\lambda/2$",
+      "$\\lambda/4$ | $\\lambda/4$",
+      "$\\lambda$",
+      "None"
+    ],
+    "a": 1,
+    "e": "The distance between a node and adjacent antinode is always a quarter wavelength. / नोड और पास वाले प्रस्पंद के बीच की दूरी हमेशा एक चौथाई तरंगदैर्ध्य होती है।"
+  },
+  {
+    "qe": "What is 'Forced Vibration'?",
+    "qh": "'प्रणोदित कंपन' (Forced Vibration) क्या है?",
+    "o": [
+      "Vibration at natural frequency",
+      "Vibration under an external periodic force | बाहरी आवर्ती बल के तहत कंपन",
+      "Vibration in vacuum",
+      "None"
+    ],
+    "a": 1,
+    "e": "The body is forced to vibrate at the frequency of the external force. / वस्तु को बाहरी बल की आवृत्ति पर कंपन करने के लिए मजबूर किया जाता है।"
+  },
+  {
+    "qe": "Which 'Effect' explains why the pitch of a siren seems higher as an ambulance approaches?",
+    "qh": "किस 'प्रभाव' से पता चलता है कि एम्बुलेंस के पास आने पर साइरन की पिच ऊंची क्यों लगती है?",
+    "o": [
+      "Tyndall Effect",
+      "Doppler Effect | डॉप्लर प्रभाव",
+      "Compton Effect",
+      "None"
+    ],
+    "a": 1,
+    "e": "Relative motion causes a shift in the observed frequency. / सापेक्ष गति देखी गई आवृत्ति में बदलाव का कारण बनती है।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' testing for 'Concrete' used for?",
+    "qh": "'कंक्रीट' के लिए पराश्रव्य परीक्षण का उपयोग किसलिए होता है?",
+    "o": [
+      "To check strength and cracks | मजबूती और दरारों की जांच हेतु",
+      "To color concrete",
+      "To dry it",
+      "None"
+    ],
+    "a": 0,
+    "e": "Non-destructive testing (NDT) to ensure structural integrity. / संरचनात्मक अखंडता सुनिश्चित करने के लिए गैर-विनाशकारी परीक्षण।"
+  },
+  {
+    "qe": "What is 'Sound Frequency' unit 'Hertz' named after?",
+    "qh": "'हर्ट्ज़' (Hertz) इकाई किसके नाम पर रखी गई है?",
+    "o": [
+      "Isaac Newton",
+      "Heinrich Hertz | हेनरिक हर्ट्ज़",
+      "Albert Einstein",
+      "None"
+    ],
+    "a": 1,
+    "e": "A German physicist who proved the existence of electromagnetic waves. / जर्मन भौतिक विज्ञानी जिन्होंने विद्युत चुम्बकीय तरंगों के अस्तित्व को साबित किया।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Lead' approx?",
+    "qh": "'सीसा' (Lead) में ध्वनि की चाल लगभग क्या है?",
+    "o": [
+      "340 m/s",
+      "1210 m/s | 1210 मी/से",
+      "5000 m/s",
+      "None"
+    ],
+    "a": 1,
+    "e": "Lower than other metals due to its high density and lower elasticity. / उच्च घनत्व और कम प्रत्यास्थता के कारण अन्य धातुओं से कम।"
+  },
+  {
+    "qe": "What is 'Standing Wave' frequency of 2nd harmonic in an open pipe of fundamental $f$?",
+    "qh": "मूल आवृत्ति $f$ वाले खुले पाइप में द्वितीय हारमोनिक की आवृत्ति क्या है?",
+    "o": [
+      "$f$",
+      "$2f$ | $2f$",
+      "$3f$",
+      "$4f$"
+    ],
+    "a": 1,
+    "e": "In open pipes, harmonics are all integer multiples. / खुले पाइप में हारमोनिक्स सभी पूर्णांक गुणक होते हैं।"
+  },
+  {
+    "qe": "What is 'Logarithmic' scale used in Sound intensity measurement?",
+    "qh": "ध्वनि तीव्रता मापन में 'लघुगणकीय' पैमाने का उपयोग क्यों किया जाता है?",
+    "o": [
+      "To make numbers large",
+      "To represent the wide range of human hearing | मानव श्रवण की विस्तृत सीमा को दर्शाने के लिए",
+      "It is easier to add",
+      "None"
+    ],
+    "a": 1,
+    "e": "Human ear can hear intensities from $10^{-12}$ to $1 W/m^2$. / मानव कान $10^{-12}$ से $1 W/m^2$ तक की तीव्रता सुन सकता है।"
+  },
+  {
+    "qe": "Which part of ear is 'Snail-like' in structure?",
+    "qh": "कान का कौन सा भाग संरचना में 'घोंघे जैसा' होता है?",
+    "o": [
+      "Pinna",
+      "Cochlea | कोकलिया (Cochlea)",
+      "Eardrum",
+      "None"
+    ],
+    "a": 1,
+    "e": "It is the hearing part of the inner ear. / यह आंतरिक कान का सुनने वाला हिस्सा है।"
+  },
+  {
+    "qe": "What is the 'Pressure' variation in a sound wave at a 'Node' of displacement?",
+    "qh": "विस्थापन के 'नोड' पर ध्वनि तरंग में 'दाब' परिवर्तन क्या होता है?",
+    "o": [
+      "Zero",
+      "Maximum | अधिकतम (Maximum)",
+      "Constant",
+      "None"
+    ],
+    "a": 1,
+    "e": "Where displacement is zero (Node), pressure variation is maximum (Antinode). / जहाँ विस्थापन शून्य होता है, वहाँ दाब परिवर्तन अधिकतम होता है।"
+  },
+  {
+    "qe": "What is the 'Pressure' variation in a sound wave at an 'Antinode' of displacement?",
+    "qh": "विस्थापन के 'प्रस्पंद' पर ध्वनि तरंग में 'दाब' परिवर्तन क्या होता है?",
+    "o": [
+      "Zero | शून्य (Zero)",
+      "Maximum",
+      "Constant",
+      "None"
+    ],
+    "a": 0,
+    "e": "Pressure and displacement nodes are swapped. / दाब और विस्थापन के नोड्स आपस में बदले हुए होते हैं।"
+  },
+  {
+    "qe": "Which material has a 'Higher' absorption coefficient for sound?",
+    "qh": "किस सामग्री में ध्वनि के लिए 'उच्च' अवशोषण गुणांक होता है?",
+    "o": [
+      "Marble",
+      "Carpet | कालीन (Carpet)",
+      "Glass",
+      "Steel"
+    ],
+    "a": 1,
+    "e": "Soft and porous materials absorb more sound energy. / मुलायम और छिद्रपूर्ण सामग्री अधिक ध्वनि ऊर्जा सोखती है।"
+  },
+  {
+    "qe": "What is the 'SI Unit' of 'Intensity' of sound?",
+    "qh": "ध्वनि की 'तीव्रता' का 'SI मात्रक' क्या है?",
+    "o": [
+      "Decibel",
+      "$W/m^2$ | $W/m^2$",
+      "Hertz",
+      "Newton"
+    ],
+    "a": 1,
+    "e": "Watts per square meter. / वॉट प्रति वर्ग मीटर।"
+  },
+  {
+    "qe": "The sound of 'Mosquitoes' (wings) is characterized by:",
+    "qh": "'मच्छरों' की आवाज (पंख) की विशेषता क्या है?",
+    "o": [
+      "Low pitch",
+      "High pitch | उच्च पिच (High pitch)",
+      "Low intensity",
+      "None"
+    ],
+    "a": 1,
+    "e": "Mosquitoes vibrate their wings at very high frequencies (~500 Hz). / मच्छर अपने पंखों को बहुत उच्च आवृत्ति पर कंपन करते हैं।"
+  },
+  {
+    "qe": "What is 'Sonic' sound?",
+    "qh": "'सोनिक' (Sonic) ध्वनि क्या है?",
+    "o": [
+      "Ultrasonic",
+      "Infrasonic",
+      "Audible sound | श्रव्य ध्वनि (Audible)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Relates to frequencies within the range of human hearing (20Hz - 20kHz). / मानव श्रवण की सीमा के भीतर की आवृत्तियाँ।"
+  },
+  {
+    "qe": "What happens to the 'Pitch' of a sound when the source 'Recedes' from the observer?",
+    "qh": "जब स्रोत श्रोता से 'दूर' जाता है, तो ध्वनि की 'पिच' का क्या होगा?",
+    "o": [
+      "Increases",
+      "Decreases | घटती है",
+      "Remains same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Frequency appears lower as the waves are stretched out. / तरंगें खिंच जाने के कारण आवृत्ति कम लगती है।"
+  },
+  {
+    "qe": "Which 'Animal' can hear frequencies as low as 5 Hz?",
+    "qh": "कौन सा 'जानवर' 5 Hz जितनी कम आवृत्ति सुन सकता है?",
+    "o": [
+      "Dog",
+      "Elephant | हाथी (Elephant)",
+      "Bat",
+      "Cat"
+    ],
+    "a": 1,
+    "e": "Elephants use infrasonic sounds for long-distance communication. / हाथी लंबी दूरी के संचार के लिए अधोश्राव्य ध्वनियों का उपयोग करते हैं।"
+  },
+  {
+    "qe": "What is 'Echo' in a mountain range used to find?",
+    "qh": "पहाड़ों में 'प्रतिध्वनि' का उपयोग क्या खोजने के लिए किया जा सकता है?",
+    "o": [
+      "Distance | दूरी (Distance)",
+      "Temperature",
+      "Pressure",
+      "None"
+    ],
+    "a": 0,
+    "e": "By measuring the time delay, distance to the reflecting surface can be calculated. / समय अंतराल मापकर परावर्तक सतह की दूरी की गणना की जा सकती है।"
+  },
+  {
+    "qe": "What is 'Reverberation' in a concert hall typically kept at?",
+    "qh": "कंसर्ट हॉल में 'अनुरणन' (Reverberation) आमतौर पर कितना रखा जाता है?",
+    "o": [
+      "0 seconds",
+      "1 to 2 seconds | 1 से 2 सेकंड",
+      "10 seconds",
+      "None"
+    ],
+    "a": 1,
+    "e": "Optimal for music richness without blurring sounds. / आवाजों को धुंधला किए बिना संगीत की समृद्धि के लिए अनुकूल।"
+  },
+  {
+    "qe": "What is the frequency of musical note 'Ti' (Nishad) if 'Sa' is 240 Hz?",
+    "qh": "यदि 'सा' 240 Hz है, तो 'नी' (निषाद) स्वर की आवृत्ति क्या होगी?",
+    "o": [
+      "400 Hz",
+      "450 Hz | 450 Hz",
+      "480 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ratio is 15/8. $240 \\times 1.875 = 450$ Hz. / नी और सा का अनुपात 15/8 होता है।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in 'Gallbladder' stones?",
+    "qh": "'पित्ताशय' की पथरी के लिए पराश्रव्य ध्वनि का क्या उपयोग है?",
+    "o": [
+      "To detect them (Imaging) | उनका पता लगाना (इमेजिंग)",
+      "To create them",
+      "To cool them",
+      "None"
+    ],
+    "a": 0,
+    "e": "Used in Ultrasound imaging to diagnose stones. / पथरी के निदान के लिए अल्ट्रासाउंड इमेजिंग में उपयोग।"
+  },
+  {
+    "qe": "Which part of ear is 'S' shaped?",
+    "qh": "कान का कौन सा भाग 'S' आकार का होता है?",
+    "o": [
+      "Ossicles",
+      "Auditory canal | श्रवण नली (Auditory canal)",
+      "Cochlea",
+      "None"
+    ],
+    "a": 1,
+    "e": "The tube leading from the pinna to the eardrum. / पिन्ना से कान के पर्दे तक जाने वाली नली।"
+  },
+  {
+    "qe": "What is 'Decibel' level of 'Whisper' approx?",
+    "qh": "'फुसफुसाहट' का डेसीबल स्तर लगभग कितना होता है?",
+    "o": [
+      "10 dB",
+      "30 dB | 30 dB",
+      "60 dB",
+      "90 dB"
+    ],
+    "a": 1,
+    "e": "Very soft sound level. / बहुत धीमी ध्वनि का स्तर।"
+  },
+  {
+    "qe": "What is 'Phase' of two points if they are $\\lambda$ apart?",
+    "qh": "यदि दो बिंदु $\\lambda$ की दूरी पर हैं, तो उनकी 'कला' क्या होगी?",
+    "o": [
+      "Out of phase",
+      "In phase | समान कला (In phase)",
+      "Zero",
+      "None"
+    ],
+    "a": 1,
+    "e": "Points separated by integer multiples of wavelength are in phase. / तरंगदैर्ध्य के पूर्णांक गुणकों द्वारा अलग किए गए बिंदु समान कला में होते हैं।"
+  },
+  {
+    "qe": "What is 'Acoustics' of 'Theater' screens?",
+    "qh": "'थिएटर' स्क्रीन की 'अकौस्टिक्स' क्या है?",
+    "o": [
+      "Solid surface",
+      "Perforated to allow sound through | ध्वनि को गुजरने देने के लिए छिद्रित",
+      "Reflective",
+      "None"
+    ],
+    "a": 1,
+    "e": "Allows sound from speakers behind the screen to reach the audience. / स्क्रीन के पीछे के स्पीकर की आवाज दर्शकों तक पहुँचने देती है।"
+  },
+  {
+    "qe": "Which property of sound 'Refraction' is based on?",
+    "qh": "ध्वनि का 'अपवर्तन' किस गुण पर आधारित है?",
+    "o": [
+      "Reflection",
+      "Change in speed in different media | विभिन्न माध्यमों में चाल में परिवर्तन",
+      "Interference",
+      "None"
+    ],
+    "a": 1,
+    "e": "Sound waves bend when their speed changes. / चाल बदलने पर ध्वनि तरंगें मुड़ जाती हैं।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' frequency used in 'Pest Control'?",
+    "qh": "'कीट नियंत्रण' में प्रयुक्त पराश्रव्य आवृत्ति क्या है?",
+    "o": [
+      "10 Hz",
+      "Above 20 kHz | 20 kHz से ऊपर",
+      "500 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Used to repel insects and rodents sensitive to high frequencies. / उच्च आवृत्तियों के प्रति संवेदनशील कीड़ों और चूहों को भगाने के लिए।"
+  },
+  {
+    "qe": "What is the 'Amplitude' of vibration related to?",
+    "qh": "कंपन का 'आयाम' किससे संबंधित है?",
+    "o": [
+      "Pitch",
+      "Loudness | प्रबलता (Loudness)",
+      "Quality",
+      "None"
+    ],
+    "a": 1,
+    "e": "Larger amplitude means louder sound. / बड़ा आयाम मतलब तेज ध्वनि।"
+  },
+  {
+    "qe": "What is 'Beat' period formula?",
+    "qh": "'विपन्द' काल का सूत्र क्या है?",
+    "o": [
+      "$f_1 - f_2$",
+      "$1/(f_1 - f_2)$ | $1/(f_1 - f_2)$",
+      "$f_1 + f_2$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Inverse of the beat frequency. / विपन्द आवृत्ति का व्युत्क्रम।"
+  },
+  {
+    "qe": "What is the 'Speed' of sound in 'Sea Water' at 25°C approx?",
+    "qh": "25°C पर 'समुद्र के पानी' में ध्वनि की 'चाल' लगभग क्या है?",
+    "o": [
+      "1400 m/s",
+      "1530 m/s | 1530 मी/से",
+      "5000 m/s",
+      "None"
+    ],
+    "a": 1,
+    "e": "Slightly faster than fresh water due to salinity. / खारेपन के कारण मीठे पानी से थोड़ा तेज।"
+  },
+  {
+    "qe": "What is 'Harmonic' also known as in music?",
+    "qh": "संगीत में 'हारमोनिक' को और क्या कहा जाता है?",
+    "o": [
+      "Overtone",
+      "Partial | पार्शियल (Partial)",
+      "Echo",
+      "None"
+    ],
+    "a": 1,
+    "e": "Any frequency component of a complex sound. / किसी जटिल ध्वनि का कोई भी आवृत्ति घटक।"
+  },
+  {
+    "qe": "What is the 'Sound Intensity Level' of 'Normal Breathing'?",
+    "qh": "'सामान्य सांस लेने' का 'ध्वनि तीव्रता स्तर' क्या है?",
+    "o": [
+      "10 dB | 10 dB",
+      "40 dB",
+      "60 dB",
+      "0 dB"
+    ],
+    "a": 0,
+    "e": "One of the quietest sounds humans can hear. / मनुष्यों द्वारा सुनी जा सकने वाली सबसे शांत आवाजों में से एक।"
+  },
+  {
+    "qe": "What is the relation between 'Frequency' (f) and 'Tension' (T) in a stretched string?",
+    "qh": "खिंची हुई डोरी में 'आवृत्ति' (f) और 'तनाव' (T) के बीच क्या संबंध है?",
+    "o": [
+      "$f \\propto T$",
+      "$f \\propto \\sqrt{T}$ | $f \\propto \\sqrt{T}$",
+      "$f \\propto 1/T$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Increasing tension increases the pitch of the sound. / तनाव बढ़ाने से ध्वनि की पिच बढ़ जाती है।"
+  },
+  {
+    "qe": "What is the relation between 'Frequency' (f) and 'Mass per unit length' (m) of a string?",
+    "qh": "डोरी की 'आवृत्ति' (f) और 'इकाई लंबाई के द्रव्यमान' (m) के बीच क्या संबंध है?",
+    "o": [
+      "$f \\propto m$",
+      "$f \\propto 1/\\sqrt{m}$ | $f \\propto 1/\\sqrt{m}$",
+      "$f \\propto \\sqrt{m}$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Heavier strings produce lower frequency (bass) sounds. / भारी डोरी कम आवृत्ति (बेस) वाली ध्वनि उत्पन्न करती है।"
+  },
+  {
+    "qe": "What is the 'Speed of Sound' in 'Iron' at 20°C approx?",
+    "qh": "20°C पर 'लोहे' में ध्वनि की चाल लगभग क्या है?",
+    "o": [
+      "340 m/s",
+      "1500 m/s",
+      "5130 m/s | 5130 मी/से",
+      "None"
+    ],
+    "a": 2,
+    "e": "Sound travels very fast in iron due to high elasticity. / उच्च प्रत्यास्थता के कारण लोहे में ध्वनि बहुत तेज चलती है।"
+  },
+  {
+    "qe": "What is 'End Correction' in an organ pipe?",
+    "qh": "एक ऑर्गन पाइप में 'अंत सुधार' (End Correction) क्या है?",
+    "o": [
+      "Cleaning the pipe",
+      "Distance beyond the end where antinode occurs | अंत के आगे की वह दूरी जहाँ प्रस्पंद बनता है",
+      "Changing the length",
+      "None"
+    ],
+    "a": 1,
+    "e": "The antinode is slightly outside the open end. / प्रस्पंद खुले सिरे से थोड़ा बाहर बनता है।"
+  },
+  {
+    "qe": "What is 'Intensity' of sound at 'Threshold of Pain' in $W/m^2$?",
+    "qh": "$W/m^2$ में 'दर्द की दहलीज' पर ध्वनि की 'तीव्रता' क्या है?",
+    "o": [
+      "$10^{-12}$",
+      "$1 | 1 W/m^2$",
+      "$100$",
+      "None"
+    ],
+    "a": 1,
+    "e": "This is equivalent to 120 dB. / यह 120 dB के बराबर है।"
+  },
+  {
+    "qe": "Which part of ear acts like a 'Funnel' to collect sound?",
+    "qh": "कान का कौन सा भाग ध्वनि एकत्र करने के लिए 'कीप' (Funnel) की तरह कार्य करता है?",
+    "o": [
+      "Cochlea",
+      "Pinna | पिन्ना (Pinna)",
+      "Eardrum",
+      "None"
+    ],
+    "a": 1,
+    "e": "The outer visible part of the ear. / कान का बाहरी दृश्य भाग।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' frequency used to 'Detect Cracks' in metal blocks?",
+    "qh": "धातु के ब्लॉकों में 'दरारों का पता लगाने' के लिए किस आवृत्ति का उपयोग होता है?",
+    "o": [
+      "Below 20 Hz",
+      "20 Hz to 20 kHz",
+      "Above 20 kHz | 20 kHz से ऊपर",
+      "None"
+    ],
+    "a": 2,
+    "e": "Flaws reflect the ultrasound waves. / खामियां अल्ट्रासाउंड तरंगों को परावर्तित करती हैं।"
+  },
+  {
+    "qe": "What is 'Natural Frequency' of a body?",
+    "qh": "किसी वस्तु की 'प्राकृतिक आवृत्ति' क्या है?",
+    "o": [
+      "Frequency at rest",
+      "Frequency at which it vibrates when disturbed | विक्षुब्ध होने पर कंपन करने की आवृत्ति",
+      "Zero frequency",
+      "None"
+    ],
+    "a": 1,
+    "e": "Depends on shape, size and material. / यह आकार, साइज और सामग्री पर निर्भर करती है।"
+  },
+  {
+    "qe": "Which property of sound is used in 'Stethoscope'?",
+    "qh": "'स्टेथोस्कोप' में ध्वनि के किस गुण का उपयोग किया जाता है?",
+    "o": [
+      "Refraction",
+      "Multiple reflection | बहु-परावर्तन (Multiple reflection)",
+      "Interference",
+      "None"
+    ],
+    "a": 1,
+    "e": "Sound waves reflect multiple times through the tube. / ध्वनि तरंगें ट्यूब के माध्यम से कई बार परावर्तित होती हैं।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Vacuum'?",
+    "qh": "'निर्वात' (Vacuum) में ध्वनि की चाल क्या है?",
+    "o": [
+      "340 m/s",
+      "3 x $10^8$ m/s",
+      "Zero | शून्य (Zero)",
+      "1500 m/s"
+    ],
+    "a": 2,
+    "e": "Sound cannot travel without a medium. / ध्वनि बिना माध्यम के यात्रा नहीं कर सकती।"
+  },
+  {
+    "qe": "What is the 'Frequency Ratio' for the musical note 'Pa' (Pancham)?",
+    "qh": "'प' (पंचम) स्वर का आवृत्ति अनुपात क्या है?",
+    "o": [
+      "4/3",
+      "3/2 | 3/2",
+      "5/3",
+      "None"
+    ],
+    "a": 1,
+    "e": "Considered the most stable interval after Octave. / सप्तक के बाद सबसे स्थिर अंतराल माना जाता है।"
+  },
+  {
+    "qe": "What is the frequency of 'First Overtone' in a string of length $L$?",
+    "qh": "$L$ लंबाई की डोरी में 'प्रथम अधिस्वरक' की आवृत्ति क्या है?",
+    "o": [
+      "$v/2L$",
+      "$v/L$ | $v/L$",
+      "$3v/2L$",
+      "None"
+    ],
+    "a": 1,
+    "e": "It is the 2nd harmonic, so $2 \\times (v/2L) = v/L$. / यह दूसरा हारमोनिक है।"
+  },
+  {
+    "qe": "What happens to the 'Speed of Sound' when 'Pressure' is doubled (at constant temperature)?",
+    "qh": "स्थिर तापमान पर 'दाब' दोगुना करने पर ध्वनि की 'चाल' पर क्या प्रभाव पड़ता है?",
+    "o": [
+      "Doubles",
+      "Halved",
+      "Remains same | समान रहती है (Remains same)",
+      "Quadrupled"
+    ],
+    "a": 2,
+    "e": "Speed of sound in gas is independent of pressure. / गैस में ध्वनि की चाल दाब पर निर्भर नहीं करती।"
+  },
+  {
+    "qe": "Which part of ear contains 'Malleus, Incus and Stapes'?",
+    "qh": "कान के किस भाग में 'मैलियस, इनकस और स्टेपीज़' होते हैं?",
+    "o": [
+      "Outer ear",
+      "Middle ear | मध्य कर्ण (Middle ear)",
+      "Inner ear",
+      "None"
+    ],
+    "a": 1,
+    "e": "Collectively called ear ossicles. / इन्हें सामूहिक रूप से कान की अस्थियां कहा जाता है।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' frequency used in 'SONAR'?",
+    "qh": "'सोनार' में प्रयुक्त पराश्रव्य आवृत्ति क्या है?",
+    "o": [
+      "20 Hz",
+      "500 Hz",
+      "Above 20 kHz | 20 kHz से ऊपर",
+      "None"
+    ],
+    "a": 2,
+    "e": "Used for underwater communication and detection. / पानी के नीचे संचार और पता लगाने के लिए उपयोग किया जाता है।"
+  },
+  {
+    "qe": "What is 'Timbre' dependent on?",
+    "qh": "'टिम्बर' (Timbre) किस पर निर्भर करता है?",
+    "o": [
+      "Amplitude only",
+      "Frequency only",
+      "Waveform and Overtones | वेवफॉर्म और अधिस्वरक",
+      "None"
+    ],
+    "a": 2,
+    "e": "Allows distinguishing different instruments playing same note. / एक ही स्वर बजाने वाले अलग-अलग वाद्ययंत्रों को पहचानने में मदद करता है।"
+  },
+  {
+    "qe": "What is 'Infrasonic' vibration produced by 'Rhinoceros'?",
+    "qh": "'गैंडे' (Rhinoceros) द्वारा उत्पन्न अधोश्राव्य कंपन की आवृत्ति क्या है?",
+    "o": [
+      "As low as 5 Hz | 5 Hz जितनी कम",
+      "20,000 Hz",
+      "500 Hz",
+      "None"
+    ],
+    "a": 0,
+    "e": "They use it to communicate over long distances. / वे लंबी दूरी पर संवाद करने के लिए इसका उपयोग करते हैं।"
+  },
+  {
+    "qe": "Which law states 'Frequency is inversely proportional to length'?",
+    "qh": "कौन सा नियम कहता है 'आवृत्ति लंबाई के व्युत्क्रमानुपाती होती है'?",
+    "o": [
+      "Law of Length | लंबाई का नियम",
+      "Law of Tension",
+      "Law of Mass",
+      "None"
+    ],
+    "a": 0,
+    "e": "Used in tuning string instruments like Sitar. / सितार जैसे तार वाले वाद्ययंत्रों को ट्यून करने में उपयोग किया जाता है।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Glass' approx?",
+    "qh": "'कांच' में ध्वनि की चाल लगभग क्या है?",
+    "o": [
+      "340 m/s",
+      "1500 m/s",
+      "3980-4500 m/s | 3980-4500 मी/से",
+      "None"
+    ],
+    "a": 2,
+    "e": "Higher than air and water, depends on type of glass. / हवा और पानी से अधिक, कांच के प्रकार पर निर्भर करती है।"
+  },
+  {
+    "qe": "What is 'Acoustic' properties of 'Porus materials'?",
+    "qh": "'छिद्रपूर्ण सामग्री' के 'ध्वनिक' गुण क्या हैं?",
+    "o": [
+      "Reflection",
+      "Absorption | अवशोषण (Absorption)",
+      "Refraction",
+      "None"
+    ],
+    "a": 1,
+    "e": "Sound waves get trapped and converted to heat. / ध्वनि तरंगें फंस जाती हैं और ऊष्मा में बदल जाती हैं।"
+  },
+  {
+    "qe": "What is 'Mach 2' speed called?",
+    "qh": "'मैक 2' चाल को क्या कहा जाता है?",
+    "o": [
+      "Subsonic",
+      "Supersonic | सुपरसोनिक (Supersonic)",
+      "Hypersonic",
+      "None"
+    ],
+    "a": 1,
+    "e": "Speed is twice the speed of sound. / चाल ध्वनि की चाल से दोगुनी है।"
+  },
+  {
+    "qe": "What is the 'Time Period' of a wave with frequency 50 Hz?",
+    "qh": "50 Hz आवृत्ति वाली तरंग का 'आवर्तकाल' क्या है?",
+    "o": [
+      "0.5 s",
+      "0.02 s | 0.02 सेकंड",
+      "2 s",
+      "None"
+    ],
+    "a": 1,
+    "e": "$T = 1/50 = 0.02$ s. / $T = 1/f$ सूत्र द्वारा।"
+  },
+  {
+    "qe": "What is the frequency of 'Third Harmonic' in an open pipe of fundamental $f$?",
+    "qh": "मूल आवृत्ति $f$ वाले खुले पाइप में 'तीसरे हारमोनिक' की आवृत्ति क्या है?",
+    "o": [
+      "$f$",
+      "$2f$",
+      "$3f$ | $3f$",
+      "$5f$"
+    ],
+    "a": 2,
+    "e": "Open pipes have all integer harmonics. / खुले पाइप में सभी पूर्णांक हारमोनिक्स होते हैं।"
+  },
+  {
+    "qe": "What is 'Antinode' pressure in a sound wave?",
+    "qh": "ध्वनी तरंग में 'प्रस्पंद' (Antinode) पर दाब क्या होता है?",
+    "o": [
+      "Maximum",
+      "Minimum | न्यूनतम (या शून्य बदलाव)",
+      "Zero",
+      "None"
+    ],
+    "a": 1,
+    "e": "Displacement antinode is a pressure node. / विस्थापन प्रस्पंद एक दाब नोड होता है।"
+  },
+  {
+    "qe": "What is 'Auditory' range of 'Dogs'?",
+    "qh": "'कुत्तों' की 'श्रवण' सीमा क्या है?",
+    "o": [
+      "20-20,000 Hz",
+      "67-45,000 Hz | 67-45,000 Hz",
+      "1-100 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Dogs can hear much higher frequencies than humans. / कुत्ते मनुष्यों की तुलना में बहुत अधिक आवृत्ति सुन सकते हैं।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in 'Metal welding'?",
+    "qh": "'धातु वेल्डिंग' में पराश्रव्य ध्वनि का क्या उपयोग है?",
+    "o": [
+      "To heat parts",
+      "To join thin foils/wires | पतली पन्नियों/तारों को जोड़ने हेतु",
+      "To clean metal",
+      "None"
+    ],
+    "a": 1,
+    "e": "Vibrations create friction and bond materials without melting whole part. / कंपन घर्षण पैदा करते हैं और बिना पिघलाए सामग्री जोड़ते हैं।"
+  },
+  {
+    "qe": "What is 'Node' distance from nearest 'Antinode'?",
+    "qh": "'नोड' की निकटतम 'प्रस्पंद' से दूरी क्या है?",
+    "o": [
+      "$\\lambda/2$",
+      "$\\lambda/4$ | $\\lambda/4$",
+      "$\\lambda$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Quarter of a wavelength. / तरंगदैर्ध्य का एक चौथाई।"
+  },
+  {
+    "qe": "Which part of ear converts 'Mechanical' energy to 'Electrical' signals?",
+    "qh": "कान का कौन सा भाग 'यांत्रिक' ऊर्जा को 'विद्युत' संकेतों में बदलता है?",
+    "o": [
+      "Eardrum",
+      "Cochlea | कोकलिया (Cochlea)",
+      "Pinna",
+      "Hammer"
+    ],
+    "a": 1,
+    "e": "Fluid and hair cells in cochlea generate nerve impulses. / कोकलिया में द्रव और हेयर सेल्स तंत्रिका आवेग पैदा करते हैं।"
+  },
+  {
+    "qe": "What is 'Intensity Level' of a sound with intensity $10^{-10} W/m^2$?",
+    "qh": "$10^{-10} W/m^2$ तीव्रता वाली ध्वनि का 'तीव्रता स्तर' क्या होगा?",
+    "o": [
+      "10 dB",
+      "20 dB | 20 dB",
+      "40 dB",
+      "None"
+    ],
+    "a": 1,
+    "e": "$10 \\log(10^{-10}/10^{-12}) = 10 \\times 2 = 20$ dB. / गणना सूत्र के अनुसार।"
+  },
+  {
+    "qe": "What is 'Echo' suppression in 'Cinemas' done by?",
+    "qh": "'सिनेमा हॉल' में 'प्रतिध्वनि' को किसके द्वारा दबाया जाता है?",
+    "o": [
+      "Loud speakers",
+      "Sound absorbing panels/curtains | ध्वनि अवशोषक पैनल/पर्दे",
+      "High roof",
+      "None"
+    ],
+    "a": 1,
+    "e": "Reduces reverberation for better clarity. / बेहतर स्पष्टता के लिए अनुरणन को कम करता है।"
+  },
+  {
+    "qe": "What is 'Fundamental Frequency' of a pipe of length $L$ open at both ends?",
+    "qh": "दोनों सिरों पर खुले $L$ लंबाई के पाइप की 'मूल आवृत्ति' क्या है?",
+    "o": [
+      "$v/L$",
+      "$v/2L$ | $v/2L$",
+      "$v/4L$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Has antinodes at both ends. / दोनों सिरों पर प्रस्पंद होते हैं।"
+  },
+  {
+    "qe": "What is 'Fundamental Frequency' of a pipe 'Closed' at one end?",
+    "qh": "एक सिरे पर 'बंद' पाइप की 'मूल आवृत्ति' क्या है?",
+    "o": [
+      "$v/2L$",
+      "$v/4L$ | $v/4L$",
+      "$v/L$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Has a node at the closed end and antinode at open end. / बंद सिरे पर नोड और खुले सिरे पर प्रस्पंद होता है।"
+  },
+  {
+    "qe": "Which 'Parameter' of sound wave is independent of other properties in a medium?",
+    "qh": "माध्यम में ध्वनि तरंग का कौन सा 'पैरामीटर' अन्य गुणों से स्वतंत्र होता है?",
+    "o": [
+      "Velocity",
+      "Wavelength",
+      "Frequency | आवृत्ति (Frequency)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Frequency is determined solely by the source. / आवृत्ति पूरी तरह से स्रोत द्वारा निर्धारित होती है।"
+  },
+  {
+    "qe": "What is 'Logarithm' base used in 'Decibel' formula?",
+    "qh": "'डेसीबल' सूत्र में प्रयुक्त 'लघुगणक' का आधार क्या है?",
+    "o": [
+      "2",
+      "e",
+      "10 | 10",
+      "None"
+    ],
+    "a": 2,
+    "e": "Standard base 10 for decibel calculations. / डेसीबल गणना के लिए मानक आधार 10।"
+  },
+  {
+    "qe": "Which part of ear contains the 'Eustachian Tube'?",
+    "qh": "कान के किस भाग में 'यूस्टेशियन ट्यूब' होती है?",
+    "o": [
+      "Outer ear",
+      "Middle ear | मध्य कर्ण (Middle ear)",
+      "Inner ear",
+      "None"
+    ],
+    "a": 1,
+    "e": "Maintains equal pressure on both sides of eardrum. / कान के पर्दे के दोनों ओर समान दाब बनाए रखती है।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in 'Cleaning' delicate jewelry?",
+    "qh": "नाजुक गहनों की 'सफाई' में पराश्रव्य ध्वनि का क्या उपयोग है?",
+    "o": [
+      "To polish",
+      "To remove dirt from tiny spaces | सूक्ष्म स्थानों से गंदगी हटाना",
+      "To heat",
+      "None"
+    ],
+    "a": 1,
+    "e": "High frequency waves shake off dirt particles. / उच्च आवृत्ति वाली तरंगें गंदगी के कणों को झाड़ देती हैं।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Fresh Water' approx?",
+    "qh": "'मीठे पानी' में ध्वनि की चाल लगभग क्या है?",
+    "o": [
+      "340 m/s",
+      "1480-1500 m/s | 1480-1500 मी/से",
+      "5000 m/s",
+      "None"
+    ],
+    "a": 1,
+    "e": "Depends on temperature, significantly faster than air. / तापमान पर निर्भर, हवा से काफी तेज।"
+  },
+  {
+    "qe": "What is 'Interference' of two identical sound waves in phase?",
+    "qh": "समान कला वाली दो समान ध्वनि तरंगों का 'व्यतिकरण' क्या होगा?",
+    "o": [
+      "Silence",
+      "Louder sound | तेज ध्वनि (Constructive)",
+      "Beats",
+      "None"
+    ],
+    "a": 1,
+    "e": "Constructive interference increases amplitude. / संपोषी व्यतिकरण आयाम बढ़ा देता है।"
+  },
+  {
+    "qe": "What is 'Interference' of two identical sound waves out of phase?",
+    "qh": "विपरीत कला वाली दो समान ध्वनि तरंगों का 'व्यतिकरण' क्या होगा?",
+    "o": [
+      "Louder sound",
+      "Silence / Low sound | शांति / धीमी ध्वनि (Destructive)",
+      "Beats",
+      "None"
+    ],
+    "a": 1,
+    "e": "Destructive interference cancels the sound. / विनाशी व्यतिकरण ध्वनि को खत्म कर देता है।"
+  },
+  {
+    "qe": "What is 'Phon' a unit for measuring?",
+    "qh": "'फोन' (Phon) क्या मापने की इकाई है?",
+    "o": [
+      "Frequency",
+      "Loudness Level | प्रबलता स्तर (Loudness Level)",
+      "Pitch",
+      "None"
+    ],
+    "a": 1,
+    "e": "Used to describe loudness relative to frequency. / आवृत्ति के सापेक्ष प्रबलता का वर्णन करने हेतु।"
+  },
+  {
+    "qe": "Which property of sound allows us to distinguish between 'Piano' and 'Violin'?",
+    "qh": "ध्वनि का कौन सा गुण हमें 'पियानो' और 'वायलिन' के बीच अंतर करने देता है?",
+    "o": [
+      "Loudness",
+      "Pitch",
+      "Quality / Timbre | गुणता / टिम्बर",
+      "None"
+    ],
+    "a": 2,
+    "e": "Even if same note is played, waveform is different. / एक ही स्वर होने पर भी वेवफॉर्म अलग होता है।"
+  },
+  {
+    "qe": "What is the frequency of musical note 'Ni' (Nishad) if 'Sa' is 240 Hz?",
+    "qh": "यदि 'सा' 240 Hz है, तो 'नी' (निषाद) स्वर की आवृत्ति क्या होगी?",
+    "o": [
+      "400 Hz",
+      "450 Hz | 450 Hz",
+      "480 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ratio is 15/8. $240 \\times 1.875 = 450$ Hz. / नी और सा का अनुपात 15/8 होता है।"
+  },
+  {
+    "qe": "What is 'Mach 1.2' speed called?",
+    "qh": "'मैक 1.2' चाल को क्या कहा जाता है?",
+    "o": [
+      "Subsonic",
+      "Supersonic | सुपरसोनिक",
+      "Hypersonic",
+      "None"
+    ],
+    "a": 1,
+    "e": "Any speed greater than Mach 1 is supersonic. / मैक 1 से अधिक कोई भी चाल सुपरसोनिक है।"
+  },
+  {
+    "qe": "What is 'Threshold of Hearing' in Watts/$m^2$?",
+    "qh": "Watts/$m^2$ में 'श्रवण की दहलीज' क्या है?",
+    "o": [
+      "$1$",
+      "$10^{-6}$",
+      "$10^{-12} | 10^{-12} W/m^2$",
+      "None"
+    ],
+    "a": 2,
+    "e": "Minimum intensity human ear can perceive. / मानव कान द्वारा महसूस की जाने वाली न्यूनतम तीव्रता।"
+  },
+  {
+    "qe": "Which 'Animal' can hear 'Infrasonic' sounds?",
+    "qh": "कौन सा 'जानवर' अधोश्राव्य ध्वनि सुन सकता है?",
+    "o": [
+      "Whale | व्हेल (Whale)",
+      "Bat",
+      "Human",
+      "None"
+    ],
+    "a": 0,
+    "e": "Whales use low frequency for long distance ocean communication. / व्हेल महासागर में लंबी दूरी के संचार हेतु कम आवृत्ति का उपयोग करती हैं।"
+  },
+  {
+    "qe": "What is 'Phase' of a wave at its 'Trough'?",
+    "qh": "तरंग के 'गर्त' (Trough) पर उसकी 'कला' क्या होती है?",
+    "o": [
+      "$0$",
+      "$90^\\circ$",
+      "$270^\\circ | 270^\\circ$",
+      "$360^\\circ$"
+    ],
+    "a": 2,
+    "e": "Point of maximum negative displacement. / अधिकतम ऋणात्मक विस्थापन का बिंदु।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Moist Air' compared to 'Dry Air'?",
+    "qh": "'नम हवा' में ध्वनि की चाल 'शुष्क हवा' की तुलना में क्या है?",
+    "o": [
+      "Slower",
+      "Faster | अधिक (Faster)",
+      "Same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Moist air is less dense than dry air. / नम हवा शुष्क हवा से कम सघन होती है।"
+  },
+  {
+    "qe": "What is 'Beats' frequency when $f_1=100 Hz$ and $f_2=104 Hz$?",
+    "qh": "जब $f_1=100$ और $f_2=104$ हो, तो 'विपन्द' आवृत्ति क्या होगी?",
+    "o": [
+      "102 Hz",
+      "4 Hz | 4 Hz",
+      "204 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Difference between the two frequencies. / दोनों आवृत्तियों के बीच का अंतर।"
+  },
+  {
+    "qe": "What is the 'Frequency Ratio' of note 'Ga' (Gandhar) to 'Sa'?",
+    "qh": "'ग' (गांधार) और 'सा' के स्वरों का आवृत्ति अनुपात क्या है?",
+    "o": [
+      "9/8",
+      "5/4 | 5/4",
+      "4/3",
+      "None"
+    ],
+    "a": 1,
+    "e": "Standard interval in Indian and Western classical music. / भारतीय और पश्चिमी शास्त्रीय संगीत में मानक अंतराल।"
+  },
+  {
+    "qe": "What is 'Diffraction' of sound more prominent than light in daily life?",
+    "qh": "दैनिक जीवन में ध्वनि का 'विवर्तन' प्रकाश की तुलना में अधिक प्रमुख क्यों है?",
+    "o": [
+      "Sound is faster",
+      "Sound has longer wavelength | ध्वनि की तरंगदैर्ध्य लंबी होती है",
+      "Light is transverse",
+      "None"
+    ],
+    "a": 1,
+    "e": "Wavelength of sound is comparable to the size of doors/windows. / ध्वनि की तरंगदैर्ध्य दरवाजों/खिड़कियों के आकार के बराबर होती है।"
+  },
+  {
+    "qe": "What is the 'Speed of Sound' in 'Alcohol' (Ethanol) approx?",
+    "qh": "'अल्कोहल' (एथेनॉल) में ध्वनि की चाल लगभग क्या है?",
+    "o": [
+      "340 m/s",
+      "1210 m/s | 1210 मी/से",
+      "1500 m/s",
+      "None"
+    ],
+    "a": 1,
+    "e": "Slower than water but much faster than air. / पानी से धीमी लेकिन हवा से बहुत तेज।"
+  },
+  {
+    "qe": "What is 'Acoustic Shadow' area?",
+    "qh": "'ध्वनिक छाया' (Acoustic Shadow) क्षेत्र क्या है?",
+    "o": [
+      "Area with loud sound",
+      "Region where sound is blocked by an obstacle | वह क्षेत्र जहाँ बाधा के कारण ध्वनि रुक जाती है",
+      "An echo point",
+      "None"
+    ],
+    "a": 1,
+    "e": "Area behind a large building where sound intensity is very low. / बड़ी इमारत के पीछे का क्षेत्र जहाँ ध्वनि की तीव्रता बहुत कम होती है।"
+  },
+  {
+    "qe": "Which 'Principle' is used in 'Noise Cancelling Headphones'?",
+    "qh": "'नॉइज़ कैंसिलिंग हेडफ़ोन' में किस 'सिद्धांत' का उपयोग किया जाता है?",
+    "o": [
+      "Refraction",
+      "Destructive Interference | विनाशी व्यतिकरण (Destructive Interference)",
+      "Resonance",
+      "None"
+    ],
+    "a": 1,
+    "e": "Generates a wave out of phase to cancel ambient noise. / बाहरी शोर को खत्म करने के लिए विपरीत कला वाली तरंग पैदा करता है।"
+  },
+  {
+    "qe": "What is 'Cochlear Implant' used for?",
+    "qh": "'कोकलियर इम्प्लांट' का उपयोग किसलिए किया जाता है?",
+    "o": [
+      "To clean ears",
+      "To provide a sense of sound to deaf persons | बहरे व्यक्तियों को ध्वनि का अनुभव कराने हेतु",
+      "To check pressure",
+      "None"
+    ],
+    "a": 1,
+    "e": "Directly stimulates the auditory nerve. / यह सीधे श्रवण तंत्रिका को उत्तेजित करता है।"
+  },
+  {
+    "qe": "What is the frequency of 'Third Overtone' in a closed pipe of fundamental $f$?",
+    "qh": "मूल आवृत्ति $f$ वाले बंद पाइप में 'तीसरे अधिस्वरक' की आवृत्ति क्या है?",
+    "o": [
+      "$3f$",
+      "$5f$",
+      "$7f$ | $7f$",
+      "$9f$"
+    ],
+    "a": 2,
+    "e": "Third overtone is the 4th available harmonic (1, 3, 5, 7). / तीसरा अधिस्वरक 7वां हारमोनिक होता है।"
+  },
+  {
+    "qe": "What happens to the 'Speed of Sound' if 'Humidity' increases?",
+    "qh": "यदि 'आर्द्रता' (Humidity) बढ़ती है, तो ध्वनि की 'चाल' पर क्या प्रभाव पड़ता है?",
+    "o": [
+      "Decreases",
+      "Increases | बढ़ती है (Increases)",
+      "Remains same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Humidity lowers the density of air. / आर्द्रता हवा के घनत्व को कम कर देती है।"
+  },
+  {
+    "qe": "Which 'Membrane' in the ear vibrates first when sound enters?",
+    "qh": "ध्वनि प्रवेश करने पर कान की कौन सी 'झिल्ली' सबसे पहले कंपन करती है?",
+    "o": [
+      "Cochlea",
+      "Tympanic Membrane (Eardrum) | कर्णपटल (Eardrum)",
+      "Oval window",
+      "None"
+    ],
+    "a": 1,
+    "e": "It converts air pressure waves into mechanical vibrations. / यह हवा के दबाव की तरंगों को यांत्रिक कंपनों में बदलती है।"
+  },
+  {
+    "qe": "What is 'Supersonic' speed defined as?",
+    "qh": "'सुपरसोनिक' चाल को किस प्रकार परिभाषित किया जाता है?",
+    "o": [
+      "Speed > Sound Speed | चाल > ध्वनि की चाल",
+      "Speed < Sound Speed",
+      "Speed of Light",
+      "None"
+    ],
+    "a": 0,
+    "e": "Objects moving faster than the speed of sound in that medium. / उस माध्यम में ध्वनि की चाल से तेज चलने वाली वस्तुएं।"
+  },
+  {
+    "qe": "What is 'Subsonic' speed?",
+    "qh": "'सबसोनिक' (Subsonic) चाल क्या है?",
+    "o": [
+      "Speed > Sound Speed",
+      "Speed < Sound Speed | चाल < ध्वनि की चाल",
+      "Speed of sound",
+      "None"
+    ],
+    "a": 1,
+    "e": "Speeds below Mach 1. / मैक 1 से कम की चाल।"
+  },
+  {
+    "qe": "Which 'Part' of the sound wave has minimum density?",
+    "qh": "ध्वनि तरंग के किस 'भाग' में न्यूनतम घनत्व होता है?",
+    "o": [
+      "Compression",
+      "Rarefaction | विरलन (Rarefaction)",
+      "Node",
+      "None"
+    ],
+    "a": 1,
+    "e": "Particles are furthest apart in rarefaction. / विरलन में कण सबसे दूर होते हैं।"
+  },
+  {
+    "qe": "What is 'Acoustic Levitation' used for in research?",
+    "qh": "अनुसंधान में 'ध्वनिक लेविटेशन' का उपयोग किसलिए होता है?",
+    "o": [
+      "To clean sound",
+      "To suspend matter in air using sound waves | ध्वनि तरंगों से पदार्थ को हवा में लटकाने हेतु",
+      "To speed up sound",
+      "None"
+    ],
+    "a": 1,
+    "e": "Standing waves provide pressure to counter gravity. / स्थिर तरंगें गुरुत्वाकर्षण के विरुद्ध दाब प्रदान करती हैं।"
+  },
+  {
+    "qe": "What is the frequency of Note 'Ma' (Madhyam) if 'Sa' is 240 Hz?",
+    "qh": "यदि 'सा' 240 Hz है, तो 'म' (मध्यम) की आवृत्ति क्या है?",
+    "o": [
+      "300 Hz",
+      "320 Hz | 320 Hz",
+      "360 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ratio is 4/3. $240 \\times 1.33 = 320$ Hz. / म और सा का अनुपात 4/3 होता है।"
+  },
+  {
+    "qe": "Which 'Parameter' changes when a sound wave reflects from a 'Fixed End'?",
+    "qh": "'निश्चित सिरे' से परावर्तित होने पर ध्वनि तरंग का कौन सा 'पैरामीटर' बदलता है?",
+    "o": [
+      "Frequency",
+      "Phase (by $180^\\circ$) | कला ($180^\\circ$ से)",
+      "Speed",
+      "None"
+    ],
+    "a": 1,
+    "e": "A crest reflects as a trough. / शृंग गर्त के रूप में परावर्तित होता है।"
+  },
+  {
+    "qe": "Which part of ear is responsible for 'Body Balance'?",
+    "qh": "शरीर के 'संतुलन' के लिए कान का कौन सा भाग जिम्मेदार है?",
+    "o": [
+      "Cochlea",
+      "Semicircular Canals | अर्धवृत्ताकार नलिकाएं (Semicircular Canals)",
+      "Pinna",
+      "Eardrum"
+    ],
+    "a": 1,
+    "e": "Detects head rotation and tilt. / यह सिर के घूमने और झुकने का पता लगाता है।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Carbon Dioxide' approx?",
+    "qh": "'कार्बन डाइऑक्साइड' में ध्वनि की चाल लगभग क्या है?",
+    "o": [
+      "340 m/s",
+      "258 m/s | 258 मी/से",
+      "500 m/s",
+      "None"
+    ],
+    "a": 1,
+    "e": "CO2 is denser and heavier than air, so sound is slower. / CO2 हवा से सघन और भारी है, इसलिए ध्वनि धीमी होती है।"
+  },
+  {
+    "qe": "What is 'Reverberation' caused by?",
+    "qh": "'अनुरणन' (Reverberation) किसके कारण होता है?",
+    "o": [
+      "Refraction",
+      "Single reflection",
+      "Multiple reflections | बहु-परावर्तन (Multiple reflections)",
+      "Diffraction"
+    ],
+    "a": 2,
+    "e": "Persistence of sound after source stops. / स्रोत के रुकने के बाद भी ध्वनि का बना रहना।"
+  },
+  {
+    "qe": "What is 'Fundamental Frequency' of a 'Sitar' string of length $L$?",
+    "qh": "$L$ लंबाई के 'सितार' के तार की 'मूल आवृत्ति' क्या है?",
+    "o": [
+      "$v/L$",
+      "$v/2L$ | $v/2L$",
+      "$v/4L$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Strings are fixed at both ends (Half-wave resonator). / तार दोनों सिरों पर बंधे होते हैं।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in 'Lizards' detection?",
+    "qh": "'छिपकलियों' के पता लगाने में पराश्रव्य ध्वनि का क्या उपयोग है?",
+    "o": [
+      "To kill them",
+      "To repel them | उन्हें भगाने हेतु",
+      "To attract them",
+      "None"
+    ],
+    "a": 1,
+    "e": "Some devices emit high frequency to disturb pests. / कुछ उपकरण कीड़ों को परेशान करने के लिए उच्च आवृत्ति निकालते हैं।"
+  },
+  {
+    "qe": "Which 'Property' of sound is affected by 'Wind Velocity'?",
+    "qh": "ध्वनि का कौन सा 'गुण' 'हवा के वेग' से प्रभावित होता है?",
+    "o": [
+      "Frequency",
+      "Speed of Sound | ध्वनि की चाल",
+      "Quality",
+      "None"
+    ],
+    "a": 1,
+    "e": "Resultant speed = $v + w \\cos\\theta$. / परिणामी चाल हवा की दिशा पर निर्भर करती है।"
+  },
+  {
+    "qe": "What is 'Phase' of a wave at 'Zero' displacement starting upwards?",
+    "qh": "ऊपर की ओर शुरू होने वाले 'शून्य' विस्थापन पर तरंग की 'कला' क्या होती है?",
+    "o": [
+      "$0$ | $0$",
+      "$90^\\circ$",
+      "$180^\\circ$",
+      "$270^\\circ$"
+    ],
+    "a": 0,
+    "e": "Initial starting point of a sine wave. / साइन वेव का प्रारंभिक बिंदु।"
+  },
+  {
+    "qe": "What is 'Phase' of a wave at 'Zero' displacement moving downwards?",
+    "qh": "नीचे की ओर जाने वाले 'शून्य' विस्थापन पर तरंग की 'कला' क्या होती है?",
+    "o": [
+      "$0$",
+      "$90^\\circ$",
+      "$180^\\circ$ | $180^\\circ$",
+      "$270^\\circ$"
+    ],
+    "a": 2,
+    "e": "Mid-point of a full cycle. / पूरे चक्र का मध्य-बिंदु।"
+  },
+  {
+    "qe": "Which part of ear is the 'Stirrup' (Stapes)?",
+    "qh": "कान का कौन सा भाग 'स्टिरप' (Stapes) है?",
+    "o": [
+      "Outer ear",
+      "Middle ear | मध्य कर्ण",
+      "Inner ear",
+      "None"
+    ],
+    "a": 1,
+    "e": "It is the smallest bone in the human body. / यह मानव शरीर की सबसे छोटी हड्डी है।"
+  },
+  {
+    "qe": "What is 'Acoustic Resonance' used for in 'Musical Instruments'?",
+    "qh": "'वाद्ययंत्रों' में 'ध्वनिक अनुनाद' का उपयोग किसलिए होता है?",
+    "o": [
+      "To reduce sound",
+      "To amplify sound | ध्वनि को बढ़ाने (Amplify) हेतु",
+      "To change speed",
+      "None"
+    ],
+    "a": 1,
+    "e": "Vibrating air inside the instrument body makes sound louder. / यंत्र के शरीर के अंदर की हवा कंपन करके आवाज तेज करती है।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Oak Wood' approx?",
+    "qh": "'ओक की लकड़ी' में ध्वनि की चाल लगभग क्या है?",
+    "o": [
+      "340 m/s",
+      "1500 m/s",
+      "3850-4000 m/s | 3850-4000 मी/से",
+      "None"
+    ],
+    "a": 2,
+    "e": "Sound travels much faster along the grain in wood. / लकड़ी में रेशों के साथ ध्वनि बहुत तेज चलती है।"
+  },
+  {
+    "qe": "What is the 'Threshold of Hearing' in Decibels?",
+    "qh": "डेसीबल में 'श्रवण की दहलीज' क्या है?",
+    "o": [
+      "0 dB | 0 dB",
+      "10 dB",
+      "20 dB",
+      "None"
+    ],
+    "a": 0,
+    "e": "Represents the minimum pressure detectable by human ear. / मानव कान द्वारा महसूस किए जा सकने वाले न्यूनतम दाब को दर्शाता है।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' machining used for?",
+    "qh": "'पराबैंगनी' मशीनिंग का उपयोग किसलिए होता है?",
+    "o": [
+      "Soft materials",
+      "Hard and brittle materials | कठोर और भंगुर सामग्री",
+      "Liquids",
+      "None"
+    ],
+    "a": 1,
+    "e": "Uses abrasive slurry and ultrasonic vibrations. / अपघर्षक घोल और पराश्रव्य कंपनों का उपयोग करता है।"
+  },
+  {
+    "qe": "What is 'Octave' in terms of 'Frequency'?",
+    "qh": "'आवृत्ति' के संदर्भ में 'सप्तक' (Octave) क्या है?",
+    "o": [
+      "Half frequency",
+      "Double frequency | दोगुनी आवृत्ति (Double frequency)",
+      "Same frequency",
+      "None"
+    ],
+    "a": 1,
+    "e": "Higher Sa is twice the frequency of lower Sa. / ऊँचा 'सा' नीचे वाले 'सा' की दोगुनी आवृत्ति का होता है।"
+  },
+  {
+    "qe": "Which part of ear contains the 'Organ of Corti'?",
+    "qh": "कान के किस भाग में 'कोर्टी का अंग' (Organ of Corti) होता है?",
+    "o": [
+      "Middle ear",
+      "Inner ear (Cochlea) | आंतरिक कान (Cochlea)",
+      "Outer ear",
+      "None"
+    ],
+    "a": 1,
+    "e": "The actual sensitive element of hearing. / सुनने का वास्तविक संवेदनशील तत्व।"
+  },
+  {
+    "qe": "What is 'Logarithmic' ratio of 'Bel' to 'Decibel'?",
+    "qh": "'बेल' और 'डेसीबल' का 'लघुगणकीय' अनुपात क्या है?",
+    "o": [
+      "1 Bel = 1 dB",
+      "1 Bel = 10 dB | 1 बेल = 10 डेसीबल",
+      "1 Bel = 100 dB",
+      "None"
+    ],
+    "a": 1,
+    "e": "Decibel is one-tenth of a Bel. / डेसीबल, बेल का दसवां हिस्सा है।"
+  },
+  {
+    "qe": "Which 'Parameter' is maximum at an 'Antinode' in a stationary wave?",
+    "qh": "एक स्थिर तरंग में 'प्रस्पंद' (Antinode) पर कौन सा 'पैरामीटर' अधिकतम होता है?",
+    "o": [
+      "Pressure change",
+      "Displacement and Velocity | विस्थापन और वेग",
+      "Density",
+      "None"
+    ],
+    "a": 1,
+    "e": "Points of maximum oscillation. / अधिकतम दोलन के बिंदु।"
+  },
+  {
+    "qe": "What is 'Infrasonic' sound used for in 'Monitoring' of 'Whales'?",
+    "qh": "'व्हेल' की 'निगरानी' में अधोश्राव्य ध्वनि का उपयोग क्यों होता है?",
+    "o": [
+      "They produce high pitch",
+      "They communicate via infrasound | वे अधोश्राव्य ध्वनि से संवाद करती हैं",
+      "To kill them",
+      "None"
+    ],
+    "a": 1,
+    "e": "These waves travel thousands of miles underwater. / ये तरंगें पानी के नीचे हजारों मील की यात्रा करती हैं।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Nitrogen' approx?",
+    "qh": "'नाइट्रोजन' में ध्वनि की चाल लगभग क्या है?",
+    "o": [
+      "330 m/s",
+      "350 m/s | 350 मी/से",
+      "500 m/s",
+      "None"
+    ],
+    "a": 1,
+    "e": "Similar to air, as air is 78% Nitrogen. / हवा के समान, क्योंकि हवा 78% नाइट्रोजन है।"
+  },
+  {
+    "qe": "What is 'Beat' period of $f_1=250$ and $f_2=255$?",
+    "qh": "$f_1=250$ और $f_2=255$ का 'विपन्द' काल क्या है?",
+    "o": [
+      "5 s",
+      "0.2 s | 0.2 सेकंड",
+      "1 s",
+      "None"
+    ],
+    "a": 1,
+    "e": "$f_{beat} = 5$ Hz, so $T = 1/5 = 0.2$ s. / $T = 1/f_{beat}$ गणना।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in 'Plastic' joining?",
+    "qh": "'प्लास्टिक' जोड़ने में पराश्रव्य ध्वनि का क्या उपयोग है?",
+    "o": [
+      "Gluing",
+      "Ultrasonic Welding | पराश्रव्य वेल्डिंग",
+      "Cooling",
+      "None"
+    ],
+    "a": 1,
+    "e": "Local heat produced by friction fuses the joints. / घर्षण से उत्पन्न स्थानीय गर्मी जोड़ों को पिघलाकर जोड़ देती है।"
+  },
+  {
+    "qe": "What is 'Nodes' distance in a stationary wave of wavelength $\\lambda$?",
+    "qh": "$\\lambda$ तरंगदैर्ध्य की एक स्थिर तरंग में 'नोड्स' के बीच की दूरी क्या है?",
+    "o": [
+      "$\\lambda$",
+      "$\\lambda/2$ | $\\lambda/2$",
+      "$\\lambda/4$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Half the wavelength distance. / आधी तरंगदैर्ध्य की दूरी।"
+  },
+  {
+    "qe": "Which part of ear is 'Fluid-filled' and 'Coiled'?",
+    "qh": "कान का कौन सा भाग 'द्रव से भरा' और 'कुंडलित' होता है?",
+    "o": [
+      "Ossicles",
+      "Cochlea | कोकलिया (Cochlea)",
+      "Pinna",
+      "Canal"
+    ],
+    "a": 1,
+    "e": "Translates mechanical energy to hydraulic. / यांत्रिक ऊर्जा को हाइड्रोलिक में बदलता है।"
+  },
+  {
+    "qe": "What is 'Timbre' dependent on mainly?",
+    "qh": "'टिम्बर' मुख्य रूप से किस पर निर्भर करता है?",
+    "o": [
+      "Waveform | वेवफॉर्म (Waveform)",
+      "Pitch",
+      "Loudness",
+      "None"
+    ],
+    "a": 0,
+    "e": "The shape of the sound wave. / ध्वनि तरंग का आकार।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Silver' approx?",
+    "qh": "'चांदी' में ध्वनि की चाल लगभग क्या है?",
+    "o": [
+      "340 m/s",
+      "1500 m/s",
+      "2600-2700 m/s | 2600-2700 मी/से",
+      "None"
+    ],
+    "a": 2,
+    "e": "Lower than Steel but higher than Air. / स्टील से कम लेकिन हवा से अधिक।"
+  },
+  {
+    "qe": "What is 'Standing Wave' nodes' pressure?",
+    "qh": "स्थिर तरंग के नोड्स पर 'दाब' क्या होता है?",
+    "o": [
+      "Zero change",
+      "Maximum change | अधिकतम परिवर्तन (Antinode of pressure)",
+      "Constant",
+      "None"
+    ],
+    "a": 1,
+    "e": "Displacement node is a pressure antinode. / विस्थापन नोड एक दाब प्रस्पंद होता है।"
+  },
+  {
+    "qe": "What is 'Phase Difference' for 'Constructive Interference'?",
+    "qh": "'संपोषी व्यतिकरण' के लिए 'कलांतर' क्या होना चाहिए?",
+    "o": [
+      "$0, 2\\pi, 4\\pi...$ | $0, 2\\pi, 4\\pi...$",
+      "$\\pi, 3\\pi, 5\\pi...$",
+      "$\\pi/2$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Waves must be in phase. / तरंगें समान कला में होनी चाहिए।"
+  },
+  {
+    "qe": "What is 'Phase Difference' for 'Destructive Interference'?",
+    "qh": "'विनाशी व्यतिकरण' के लिए 'कलांतर' क्या होना चाहिए?",
+    "o": [
+      "$0, 2\\pi...$",
+      "$\\pi, 3\\pi, 5\\pi...$ | $\\pi, 3\\pi, 5\\pi...$",
+      "None",
+      "Any value"
+    ],
+    "a": 1,
+    "e": "Waves must be exactly out of phase ($180^\\circ$). / तरंगें बिल्कुल विपरीत कला में होनी चाहिए।"
+  },
+  {
+    "qe": "What is the frequency of 'Second Harmonic' in a string?",
+    "qh": "एक डोरी में 'द्वितीय हारमोनिक' की आवृत्ति क्या है?",
+    "o": [
+      "$f$",
+      "$2f$ | $2f$",
+      "$3f$",
+      "$4f$"
+    ],
+    "a": 1,
+    "e": "First overtone of the string. / डोरी का पहला अधिस्वरक।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in 'Jewelry' cleaning?",
+    "qh": "'गहनों' की सफाई में पराश्रव्य ध्वनि का क्या उपयोग है?",
+    "o": [
+      "To melt them",
+      "Cavitation effect to remove dirt | गंदगी हटाने के लिए कैविटेशन प्रभाव",
+      "To color them",
+      "None"
+    ],
+    "a": 1,
+    "e": "Formation and collapse of tiny bubbles scrubs the surface. / छोटे बुलबुलों का बनना और फूटना सतह को साफ करता है।"
+  },
+  {
+    "qe": "What is 'Sound Intensity' proportional to in terms of 'Amplitude'?",
+    "qh": "'आयाम' के संदर्भ में 'ध्वनि तीव्रता' किसके समानुपाती होती है?",
+    "o": [
+      "$A$",
+      "$A^2$ | $A^2$",
+      "$\\sqrt{A}$",
+      "None"
+    ],
+    "a": 1,
+    "e": "$I \\propto A^2$. Doubling amplitude makes sound 4 times intense. / आयाम दोगुना करने पर तीव्रता 4 गुना हो जाती है।"
+  },
+  {
+    "qe": "What is 'Pitch' also known as in some contexts?",
+    "qh": "कुछ संदर्भों में 'पिच' को और क्या कहा जाता है?",
+    "o": [
+      "Intensity",
+      "Frequency sensation | आवृत्ति की संवेदना",
+      "Timbre",
+      "None"
+    ],
+    "a": 1,
+    "e": "Psychological perception of frequency. / आवृत्ति की मनोवैज्ञानिक धारणा।"
+  },
+  {
+    "qe": "What is the frequency of note 'Re' (Rishabh) if 'Sa' is 240 Hz?",
+    "qh": "यदि 'सा' 240 Hz है, तो 'रे' (ऋषभ) की आवृत्ति क्या है?",
+    "o": [
+      "270 Hz | 270 Hz",
+      "300 Hz",
+      "360 Hz",
+      "None"
+    ],
+    "a": 0,
+    "e": "Ratio 9/8. $240 \\times 1.125 = 270$ Hz. / रे और सा का अनुपात 9/8 होता है।"
+  },
+  {
+    "qe": "Which part of ear 'Amplifies' the vibrations of eardrum?",
+    "qh": "कान का कौन सा भाग पर्दे के कंपनों को 'प्रवर्धित' (Amplify) करता है?",
+    "o": [
+      "Pinna",
+      "Ear Ossicles (Three bones) | कान की अस्थियां (तीन हड्डियां)",
+      "Cochlea",
+      "Canal"
+    ],
+    "a": 1,
+    "e": "Lever action of bones increases pressure by approx 20 times. / हड्डियों की लीवर क्रिया दाब को लगभग 20 गुना बढ़ा देती है।"
+  },
+  {
+    "qe": "What is the frequency of note 'Dha' (Dhaivat) if 'Sa' is 240 Hz?",
+    "qh": "Yadi 'Sa' 240 Hz hai, toh 'Dha' (Dhaivat) ki aavriti kya hai?",
+    "o": [
+      "360 Hz",
+      "400 Hz | 400 Hz",
+      "420 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ratio 5/3. 240 x 1.66 = 400 Hz. / Dha aur Sa ka anupat 5/3 hota hai."
+  },
+  {
+    "qe": "Which part of the ear is filled with 'Perilymph' and 'Endolymph'?",
+    "qh": "Kaan ka kaun sa bhag 'Perilymph' aur 'Endolymph' drav se bhara hota hai?",
+    "o": [
+      "Outer ear",
+      "Middle ear",
+      "Inner ear (Cochlea) | Aantrik kaan (Cochlea)",
+      "None"
+    ],
+    "a": 2,
+    "e": "These fluids help transmit vibrations to hair cells. / Ye drav hair cells tak kampan pahunchane mein madad karte hain."
+  },
+  {
+    "qe": "What is 'Ultrasound' used for in 'Echocardiography'?",
+    "qh": "'Echocardiography' mein ultrasound ka upyog kisliye hota hai?",
+    "o": [
+      "To check lungs",
+      "To image the heart | Hriday ki chhavi banane hetu",
+      "To check brain",
+      "None"
+    ],
+    "a": 1,
+    "e": "Uses sound waves to create live pictures of the heart. / Hriday ki tasveerein banane ke liye dhwani tarango ka upyog."
+  },
+  {
+    "qe": "What is 'Acoustic Cooling'?",
+    "qh": "'Acoustic Cooling' kya hai?",
+    "o": [
+      "Using fans",
+      "Using sound waves to pump heat | Dhwani tarango se garmi nikaalna",
+      "Using ice",
+      "None"
+    ],
+    "a": 1,
+    "e": "A specialized field using standing waves for refrigeration. / Refrigration ke liye sthir tarango ka upyog."
+  },
+  {
+    "qe": "The speed of sound is maximum in which state of matter?",
+    "qh": "Padarth ki kis avastha mein dhwani ki chaal adhiktam hoti hai?",
+    "o": [
+      "Gas",
+      "Liquid",
+      "Solids | Thoss (Solids)",
+      "Vacuum"
+    ],
+    "a": 2,
+    "e": "Solids have high elasticity and density. / Thoss padarthon mein uchh pratyasthata hoti hai."
+  },
+  {
+    "qe": "What is 'Mach Number' if an object travels at the speed of sound?",
+    "qh": "Yadi koi vastu dhwani ki chaal se chalti hai toh 'Mach Number' kya hoga?",
+    "o": [
+      "0.5",
+      "1 | 1",
+      "2",
+      "None"
+    ],
+    "a": 1,
+    "e": "Mach Number = Speed of Object / Speed of Sound. / Vastu ki chaal aur dhwani ki chaal ka anupat."
+  },
+  {
+    "qe": "What is 'Infrasonic' frequency associated with 'Earthquakes'?",
+    "qh": "'Bhookamp' se judi adhoshravya aavriti kya hoti hai?",
+    "o": [
+      "Above 20 kHz",
+      "Below 20 Hz | 20 Hz se kam",
+      "500 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Earthquakes produce low frequency waves before main shock. / Bhookamp se pehle kam aavriti wali tarange paida hoti hain."
+  },
+  {
+    "qe": "Which property of sound allows it to be heard in 'Fog'?",
+    "qh": "Dhwani ka kaun sa gun use 'Kohre' mein sunayi dene mein madad karta hai?",
+    "o": [
+      "Refraction",
+      "Absorption is low | Avshoshan kam hota hai",
+      "Diffraction",
+      "None"
+    ],
+    "a": 1,
+    "e": "Sound travels well through moist air/fog. / Nam hawa mein dhwani acchi tarah yatra karti hai."
+  },
+  {
+    "qe": "What is 'Sound Power' measured in?",
+    "qh": "'Dhwani shakti' (Sound Power) kisme maapi jaati hai?",
+    "o": [
+      "Watts | Watt",
+      "Decibels",
+      "Hertz",
+      "None"
+    ],
+    "a": 0,
+    "e": "Total sound energy emitted per unit time. / Prati ikai samay mein utsarjit kul dhwani oorja."
+  },
+  {
+    "qe": "Which part of ear vibrates when 'Stapes' pushes it?",
+    "qh": "Jab 'Stapes' dhakka deta hai toh kaan ka kaun sa bhag kampit hota hai?",
+    "o": [
+      "Eardrum",
+      "Oval Window | Andaakaar khidki (Oval Window)",
+      "Pinna",
+      "None"
+    ],
+    "a": 1,
+    "e": "Membrane-covered opening to the inner ear. / Aantrik kaan ka jhilli-dar dwar."
+  },
+  {
+    "qe": "What is the speed of sound in 'Steel' approx?",
+    "qh": "'Steel' mein dhwani ki chaal lagbhag kya hai?",
+    "o": [
+      "340 m/s",
+      "1500 m/s",
+      "5960 m/s | 5960 mi/se",
+      "None"
+    ],
+    "a": 2,
+    "e": "High modulus of elasticity leads to high speed. / Uchh pratyasthata ke karan uchh chaal."
+  },
+  {
+    "qe": "What is 'Sonic' boom caused by?",
+    "qh": "'Sonic Boom' kiske karan hota hai?",
+    "o": [
+      "Reflection",
+      "Shock waves | Shock waves",
+      "Refraction",
+      "None"
+    ],
+    "a": 1,
+    "e": "Produced by objects breaking the sound barrier. / Dhwani ki seema todne wali vastuon dwara paida."
+  },
+  {
+    "qe": "What is 'Resonance' in a bridge called when soldiers march?",
+    "qh": "Sainiko ke march karne par pul mein hone wala 'Anunaad' kya hai?",
+    "o": [
+      "Constructive resonance",
+      "Mechanical resonance | Yaantrik anunaad",
+      "Destructive",
+      "None"
+    ],
+    "a": 1,
+    "e": "If march frequency matches bridge's natural frequency, it can collapse. / Yadi aavriti mil jaye toh pul gir sakta hai."
+  },
+  {
+    "qe": "What is 'Ultrasonic' frequency used in 'Painless' surgery?",
+    "qh": "'Dard-rahit' surgery mein prayukt parashravya aavriti kya hai?",
+    "o": [
+      "High intensity ultrasound | Uchh teevrata ultrasound",
+      "Infrasound",
+      "Audible",
+      "None"
+    ],
+    "a": 0,
+    "e": "Used to break kidney stones (Lithotripsy). / Pathri todne ke liye upyog."
+  },
+  {
+    "qe": "Which law states 'Frequency is proportional to square root of tension'?",
+    "qh": "Kaun sa niyam kehta hai 'Aavriti tanav ke vargmool ke samanupati hai'?",
+    "o": [
+      "Law of Length",
+      "Law of Tension | Tanav ka niyam",
+      "Law of Mass",
+      "None"
+    ],
+    "a": 1,
+    "e": "f proportional to sqrt(T). / Tanav badhne par pitch badhti hai."
+  },
+  {
+    "qe": "What is 'Frequency' of note 'Ga' if 'Sa' is 240 Hz?",
+    "qh": "Yadi 'Sa' 240 Hz hai, toh 'Ga' ki aavriti kya hai?",
+    "o": [
+      "270 Hz",
+      "300 Hz | 300 Hz",
+      "320 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ratio 5/4. 240 x 1.25 = 300 Hz. / Ga aur Sa ka anupat 5/4 hota hai."
+  },
+  {
+    "qe": "Which part of the ear is the 'Anvil' (Incus)?",
+    "qh": "Kaan ka kaun sa bhag 'Anvil' (Incus) hai?",
+    "o": [
+      "Outer ear",
+      "Middle ear | Madhyam kaan",
+      "Inner ear",
+      "None"
+    ],
+    "a": 1,
+    "e": "Second of the three tiny bones. / Teen chhoti haddiyon mein se dusri."
+  },
+  {
+    "qe": "What is 'Standing Wave' nodes' displacement?",
+    "qh": "Sthir tarang ke nodes par 'visthapan' kya hota hai?",
+    "o": [
+      "Maximum",
+      "Minimum / Zero | Nyuntam / Shunya",
+      "Constant",
+      "None"
+    ],
+    "a": 1,
+    "e": "Nodes do not move at all. / Nodes bilkul nahi hilte."
+  },
+  {
+    "qe": "What is 'Standing Wave' antinodes' displacement?",
+    "qh": "Sthir tarang ke praspando par 'visthapan' kya hota hai?",
+    "o": [
+      "Zero",
+      "Maximum | Adhiktam",
+      "Infinite",
+      "None"
+    ],
+    "a": 1,
+    "e": "Points of maximum movement. / Adhiktam halchal wale bindu."
+  },
+  {
+    "qe": "What is 'Loudness' sensation dependent on?",
+    "qh": "'Prabalta' ki sanvedna kis par nirbhar karti hai?",
+    "o": [
+      "Only Intensity",
+      "Intensity and Ear Sensitivity | Teevrata aur kaan ki sanvedansheelta",
+      "Only frequency",
+      "None"
+    ],
+    "a": 1,
+    "e": "Loudness is subjective. / Prabalta vyaktigat hoti hai."
+  },
+  {
+    "qe": "What is the 'Decibel' level of a 'Vacuum Cleaner' approx?",
+    "qh": "'Vacuum Cleaner' ka decibel star lagbhag kya hota hai?",
+    "o": [
+      "30 dB",
+      "70-80 dB | 70-80 dB",
+      "120 dB",
+      "None"
+    ],
+    "a": 1,
+    "e": "Moderately loud sound. / Madhyam darje ki tez dhwani."
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in 'Bats' navigation?",
+    "qh": "'Chamgadad' ke navigation mein parashravya dhwani ka kya upyog hai?",
+    "o": [
+      "Echolocation | Echolocation",
+      "To see colors",
+      "To stay warm",
+      "None"
+    ],
+    "a": 0,
+    "e": "They emit sound and listen to echoes to 'see'. / Ve gũũj sunkar rasta khojte hain."
+  },
+  {
+    "qe": "What is 'Node' distance from the next 'Node'?",
+    "qh": "Ek 'Node' ki agle 'Node' se doori kya hai?",
+    "o": [
+      "$\\lambda$",
+      "$\\lambda/2$ | $\\lambda/2$",
+      "$\\lambda/4$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Distance between consecutive nodes. / Do lagatar nodes ke beech ki doori."
+  },
+  {
+    "qe": "Which part of ear maintains 'Equilibrium'?",
+    "qh": "Kaan ka kaun sa bhag 'Santulan' banaye rakhta hai?",
+    "o": [
+      "Cochlea",
+      "Vestibular System | Vestibular System",
+      "Ossicles",
+      "None"
+    ],
+    "a": 1,
+    "e": "Includes semicircular canals for balance. / Santulan ke liye isme ardh-vrittakar nalikaein hoti hain."
+  },
+  {
+    "qe": "What is 'Timbre' change called in synthesis?",
+    "qh": "Synthesis mein 'Timbre' badlav ko kya kehte hain?",
+    "o": [
+      "Pitch shift",
+      "Modulation | Modulation",
+      "Volume up",
+      "None"
+    ],
+    "a": 1,
+    "e": "Changing the waveform characteristics. / Tarang ke guno ko badalna."
+  },
+  {
+    "qe": "What is the speed of sound in 'Nickel' approx?",
+    "qh": "'Nickel' mein dhwani ki chaal lagbhag kya hai?",
+    "o": [
+      "340 m/s",
+      "1500 m/s",
+      "6040 m/s | 6040 mi/se",
+      "None"
+    ],
+    "a": 2,
+    "e": "Very fast due to metal's stiff structure. / Dhatu ki kathor sanrachna ke karan bahut tez."
+  },
+  {
+    "qe": "What is 'Phase' of a wave at $3/4$ of a cycle?",
+    "qh": "Ek chakra ke $3/4$ bhag par tarang ki 'Kala' kya hoti hai?",
+    "o": [
+      "$90^\\circ$",
+      "$180^\\circ$",
+      "$270^\\circ$ | $270^\\circ$",
+      "$360^\\circ$"
+    ],
+    "a": 2,
+    "e": "Point of lowest trough. / Sabse nichle gart ka bindu."
+  },
+  {
+    "qe": "What is 'Beats' phenomenon used for in 'Tuning Instruments'?",
+    "qh": "'Vaadyayantron ki tuning' mein 'Beats' ka upyog kaise hota hai?",
+    "o": [
+      "To make them loud",
+      "To match frequencies | Aavritiyon ko milane hetu",
+      "To clean them",
+      "None"
+    ],
+    "a": 1,
+    "e": "When beats disappear, frequencies are matched. / Jab beats khatam ho jayein, toh tuning sahi hai."
+  },
+  {
+    "qe": "What is 'Ultrasonic' frequency used in 'Sonochemistry'?",
+    "qh": "'Sonochemistry' mein prayukt parashravya aavriti kya hai?",
+    "o": [
+      "20 kHz - 1 MHz | 20 kHz - 1 MHz",
+      "10 Hz",
+      "500 Hz",
+      "None"
+    ],
+    "a": 0,
+    "e": "Used to speed up chemical reactions. / Rasayanik abhikriyaon ko tez karne ke liye."
+  },
+  {
+    "qe": "What is 'Intensity' ratio for 20 dB difference?",
+    "qh": "20 dB antar ke liye 'Teevrata' anupat kya hai?",
+    "o": [
+      "10",
+      "100 | 100 guna",
+      "2",
+      "None"
+    ],
+    "a": 1,
+    "e": "Each 10 dB is 10x, so 20 dB is 10x10=100x. / Har 10 dB par 10 guna badhti hai."
+  },
+  {
+    "qe": "Which part of ear is 'Round Window'?",
+    "qh": "Kaan ka 'Round Window' kaun sa bhag hai?",
+    "o": [
+      "Outer ear",
+      "Inner ear | Aantrik kaan",
+      "Middle ear",
+      "None"
+    ],
+    "a": 1,
+    "e": "Relieves pressure from the fluid in cochlea. / Cochlea ke drav se dabav kam karta hai."
+  },
+  {
+    "qe": "What is 'Fundamental Frequency' of a 'Flute' (open at both ends)?",
+    "qh": "'Bansuri' ki 'mool aavriti' kya hai?",
+    "o": [
+      "$v/L$",
+      "$v/2L$ | $v/2L$",
+      "$v/4L$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Both ends behave as open (Antinodes). / Dono sire khule praspand ki tarah kaam karte hain."
+  },
+  {
+    "qe": "What is the speed of sound in 'Paraffin Wax' approx?",
+    "qh": "'Paraffin Wax' mein dhwani ki chaal lagbhag kya hai?",
+    "o": [
+      "340 m/s",
+      "1300 m/s | 1300 mi/se",
+      "3000 m/s",
+      "None"
+    ],
+    "a": 1,
+    "e": "Slower than most solids due to structure. / Sanrachna ke karan adhiktam thoss se kam."
+  },
+  {
+    "qe": "What is 'Acoustic' shadow area in 'Underwater' sound?",
+    "qh": "'Paani ke neeche' dhwani ka 'Acoustic shadow' kshetra kya hai?",
+    "o": [
+      "Warm water",
+      "Area where sound rays bend away | Kshetra jahan dhwani kirne mud jaati hain",
+      "Deep ocean",
+      "None"
+    ],
+    "a": 1,
+    "e": "Created by temperature gradients. / Taapmaan ke badlav se paida hota hai."
+  },
+  {
+    "qe": "Which property of sound describes its 'Power per unit area'?",
+    "qh": "Dhwani ka kaun sa gun 'Prati ikai kshetraphal shakti' batata hai?",
+    "o": [
+      "Loudness",
+      "Intensity | Teevrata (Intensity)",
+      "Pitch",
+      "Quality"
+    ],
+    "a": 1,
+    "e": "Measured in Watts/m^2. / Ise Watt/m^2 mein maapa jaata hai."
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in 'Dry Cleaning'?",
+    "qh": "'Dry Cleaning' mein parashravya dhwani ka kya upyog hai?",
+    "o": [
+      "To heat clothes",
+      "To vibrate dirt off fabrics | Kapdo se gandagi jhadne hetu",
+      "To dry them",
+      "None"
+    ],
+    "a": 1,
+    "e": "High frequency shaking removes stains. / Uchh aavriti se kampan dhabbe hata deta hai."
+  },
+  {
+    "qe": "What is 'Phase' of a wave at its 'Peak' (Crest)?",
+    "qh": "Tarang ke 'Shikhara' (Crest) par uski 'Kala' kya hai?",
+    "o": [
+      "$0$",
+      "$90^\\circ$ | $90^\\circ$",
+      "$180^\\circ$",
+      "$270^\\circ$"
+    ],
+    "a": 1,
+    "e": "Highest positive displacement. / Sabse ooncha dhanatmak visthapan."
+  },
+  {
+    "qe": "What is the frequency of musical note 'Pa' (Pancham) if 'Sa' is 240 Hz?",
+    "qh": "Yadi 'Sa' 240 Hz hai, toh 'Pa' (Pancham) ki aavriti kya hai?",
+    "o": [
+      "320 Hz",
+      "360 Hz | 360 Hz",
+      "400 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ratio 3/2. 240 x 1.5 = 360 Hz. / Pa aur Sa ka anupat 3/2 hota hai."
+  },
+  {
+    "qe": "Which part of ear acts as a 'Pressure Release' valve?",
+    "qh": "Kaan ka kaun sa bhag 'Pressure Release' valve ki tarah kaam karta hai?",
+    "o": [
+      "Oval window",
+      "Round window | Gol khidki (Round window)",
+      "Eardrum",
+      "None"
+    ],
+    "a": 1,
+    "e": "Allows fluid movement in the cochlea. / Cochlea mein drav ki halchal ko sambhav banata hai."
+  },
+  {
+    "qe": "What is 'Echo' suppression in 'Audio' recording called?",
+    "qh": "'Audio' recording mein 'Echo' dabane ko kya kehte hain?",
+    "o": [
+      "Compression",
+      "De-reverberation | De-reverberation",
+      "Equalization",
+      "None"
+    ],
+    "a": 1,
+    "e": "Removing unwanted room reflections. / Kamre ke anchahe paravartan hatana."
+  },
+  {
+    "qe": "What is the speed of sound in 'Platinum' approx?",
+    "qh": "'Platinum' mein dhwani ki chaal lagbhag kya hai?",
+    "o": [
+      "340 m/s",
+      "1500 m/s",
+      "2680-2800 m/s | 2680-2800 mi/se",
+      "None"
+    ],
+    "a": 2,
+    "e": "Similar to gold/silver, slower than steel. / Sone/chandi jaisa, steel se kam."
+  },
+  {
+    "qe": "What is 'Logarithm' of intensity ratio called?",
+    "qh": "Teevrata anupat ka 'Logarithm' kya kehlata hai?",
+    "o": [
+      "Bel | Bel",
+      "Hertz",
+      "Watt",
+      "None"
+    ],
+    "a": 0,
+    "e": "Named after Alexander Graham Bell. / Graham Bell ke naam par."
+  },
+  {
+    "qe": "Which property of sound wave is independent of temperature in air?",
+    "qh": "Hawa mein dhwani tarang ka kaun sa gun taapmaan se swatantra hai?",
+    "o": [
+      "Velocity",
+      "Frequency | Aavriti (Frequency)",
+      "Wavelength",
+      "None"
+    ],
+    "a": 1,
+    "e": "Frequency depends only on the source. / Aavriti sirf srot par nirbhar karti hai."
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in 'Liposuction'?",
+    "qh": "'Liposuction' mein parashravya dhwani ka kya upyog hai?",
+    "o": [
+      "To cool skin",
+      "To liquefy fat cells | Fat cells ko pighlane hetu",
+      "To check blood",
+      "None"
+    ],
+    "a": 1,
+    "e": "Assists in removing fat from the body. / Sharir se charbi hatane mein madad karta hai."
+  },
+  {
+    "qe": "What is 'Resonance' in 'Radio' tuning?",
+    "qh": "'Radio' tuning mein 'Anunaad' (Resonance) kya hai?",
+    "o": [
+      "Mechanical",
+      "Electrical Resonance | Vaidyut anunaad",
+      "Acoustic",
+      "None"
+    ],
+    "a": 1,
+    "e": "Matching circuit frequency with broadcast frequency. / Circuit aavriti ko prasharan aavriti se milana."
+  },
+  {
+    "qe": "What is 'Node' kinetic energy in a standing wave?",
+    "qh": "Sthir tarang mein 'Node' par gatishil oorja kya hoti hai?",
+    "o": [
+      "Maximum",
+      "Zero | Shunya (Zero)",
+      "Constant",
+      "None"
+    ],
+    "a": 1,
+    "e": "Since velocity is zero at nodes. / Kyonki nodes par veg shunya hota hai."
+  },
+  {
+    "qe": "What is 'Antinode' potential energy in a standing wave?",
+    "qh": "Sthir tarang mein 'Praspand' par sthitij oorja kya hoti hai?",
+    "o": [
+      "Maximum",
+      "Zero | Shunya (Zero)",
+      "Constant",
+      "None"
+    ],
+    "a": 1,
+    "e": "At antinodes, energy is purely kinetic at equilibrium. / Praspando par oorja adhikansh gatishil hoti hai."
+  },
+  {
+    "qe": "What is the speed of sound in 'Argon' approx?",
+    "qh": "'Argon' mein dhwani ki chaal lagbhag kya hai?",
+    "o": [
+      "319 m/s | 319 mi/se",
+      "340 m/s",
+      "1000 m/s",
+      "None"
+    ],
+    "a": 0,
+    "e": "Heavier than air, so sound is slower. / Hawa se bhari, isliye dhwani dheemi."
+  },
+  {
+    "qe": "What is 'Phase' of a wave at its 'Initial' state?",
+    "qh": "Tarang ki 'Prarambhik' avastha mein uski 'Kala' kya hai?",
+    "o": [
+      "$0^\\circ$ | $0^\\circ$",
+      "$180^\\circ$",
+      "$360^\\circ$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Starting point of oscillation. / Doolan ka shuruati bindu."
+  },
+  {
+    "qe": "What is the total number of questions completed now?",
+    "qh": "Ab tak kul kitne prashn poore ho chuke hain?",
+    "o": [
+      "400",
+      "450",
+      "500 | 500",
+      "1000"
+    ],
+    "a": 2,
+    "e": "We have completed the 500 questions series! / Humne 500 sawalo ki series poori kar li hai!"
+  },
+  {
+    "qe": "What is 'Echo' distance for 'Sea Water' (v=1530) approx?",
+    "qh": "'समुद्र के पानी' (v=1530) के लिए 'गूँज' (Echo) की न्यूनतम दूरी लगभग क्या है?",
+    "o": [
+      "17 m",
+      "76 m | 76 मीटर",
+      "150 m",
+      "None"
+    ],
+    "a": 1,
+    "e": "$d = (1530 \\times 0.1)/2 = 76.5$ m. / पानी में ध्वनि तेज है, इसलिए दूरी अधिक चाहिए।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in 'Metal testing'?",
+    "qh": "'धातु परीक्षण' में पराश्रव्य ध्वनि का क्या उपयोग है?",
+    "o": [
+      "To heat metal",
+      "To find internal flaws | आंतरिक दोष खोजने हेतु",
+      "To melt metal",
+      "None"
+    ],
+    "a": 1,
+    "e": "Flaws reflect waves back to detector. / दोष तरंगों को वापस डिटेक्टर की ओर परावर्तित करते हैं।"
+  },
+  {
+    "qe": "What is the frequency of 'Second Overtone' in an open pipe of fundamental $f$?",
+    "qh": "मूल आवृत्ति $f$ वाले खुले पाइप में 'द्वितीय अधिस्वरक' की आवृत्ति क्या है?",
+    "o": [
+      "$2f$",
+      "$3f$ | $3f$",
+      "$4f$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Second overtone is the 3rd harmonic ($3f$). / द्वितीय अधिस्वरक तीसरा हारमोनिक होता है।"
+  },
+  {
+    "qe": "What was the 'Laplace Correction' in the speed of sound formula?",
+    "qh": "ध्वनि की चाल के सूत्र में 'लाप्लास सुधार' क्या था?",
+    "o": [
+      "Adiabatic process assumption | रुद्धोष्म प्रक्रिया की मान्यता",
+      "Isothermal process assumption",
+      "Constant volume assumption",
+      "None"
+    ],
+    "a": 0,
+    "e": "Newton assumed isothermal, but Laplace corrected it to adiabatic ($v = \\sqrt{\\gamma P/\\rho}$). / न्यूटन ने समतापी माना था, लाप्लास ने इसे रुद्धोष्म में सुधारा।"
+  },
+  {
+    "qe": "What is the value of '$\\gamma$' for air used in Laplace correction?",
+    "qh": "लाप्लास सुधार में प्रयुक्त हवा के लिए '$\\gamma$' का मान क्या है?",
+    "o": [
+      "1.67",
+      "1.4 | 1.4",
+      "1.33",
+      "1.0"
+    ],
+    "a": 1,
+    "e": "Air is mostly diatomic (N2, O2), so $\\gamma \\approx 1.4$. / हवा मुख्य रूप से द्वि-परमाणुक है।"
+  },
+  {
+    "qe": "What is the relation between 'Speed of Sound' and 'Molecular Weight' ($M$) of a gas?",
+    "qh": "ध्वनि की चाल और गैस के 'अणु भार' ($M$) के बीच क्या संबंध है?",
+    "o": [
+      "$v \\propto M$",
+      "$v \\propto 1/\\sqrt{M}$ | $v \\propto 1/\\sqrt{M}$",
+      "$v \\propto M^2$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Sound travels faster in lighter gases (like Hydrogen) than heavier ones. / ध्वनि हल्की गैसों में भारी गैसों की तुलना में तेज चलती है।"
+  },
+  {
+    "qe": "In which gas will sound travel 'Fastest' at the same temperature?",
+    "qh": "समान तापमान पर किस गैस में ध्वनि 'सबसे तेज' चलेगी?",
+    "o": [
+      "Oxygen",
+      "Hydrogen | हाइड्रोजन (Hydrogen)",
+      "Nitrogen",
+      "Carbon dioxide"
+    ],
+    "a": 1,
+    "e": "Hydrogen has the lowest molecular weight. / हाइड्रोजन का अणु भार सबसे कम होता है।"
+  },
+  {
+    "qe": "What are 'Overtones' in a vibrating string?",
+    "qh": "कंपन करती डोरी में 'अधिस्वरक' (Overtones) क्या होते हैं?",
+    "o": [
+      "Fundamental frequency",
+      "Frequencies higher than fundamental | मूल आवृत्ति से उच्च आवृत्तियाँ",
+      "Low frequencies",
+      "None"
+    ],
+    "a": 1,
+    "e": "Higher modes of vibration above the base frequency. / आधार आवृत्ति के ऊपर कंपन के उच्च तरीके।"
+  },
+  {
+    "qe": "The first overtone of a string is also called its:",
+    "qh": "डोरी के पहले अधिस्वरक को और क्या कहा जाता है?",
+    "o": [
+      "First Harmonic",
+      "Second Harmonic | द्वितीय हारमोनिक",
+      "Third Harmonic",
+      "None"
+    ],
+    "a": 1,
+    "e": "For a string, harmonics are integer multiples ($f, 2f, 3f...$). / डोरी के लिए हारमोनिक्स पूर्णांक गुणक होते हैं।"
+  },
+  {
+    "qe": "What is the ratio of frequencies in an 'Open Organ Pipe'?",
+    "qh": "'खुले ऑर्गन पाइप' में आवृत्तियों का अनुपात क्या होता है?",
+    "o": [
+      "1:2:3... | 1:2:3...",
+      "1:3:5...",
+      "2:4:6...",
+      "None"
+    ],
+    "a": 0,
+    "e": "Both even and odd harmonics are present. / इसमें सम और विषम दोनों हारमोनिक्स मौजूद होते हैं।"
+  },
+  {
+    "qe": "What is the ratio of frequencies in a 'Closed Organ Pipe'?",
+    "qh": "'बंद ऑर्गन पाइप' में आवृत्तियों का अनुपात क्या होता है?",
+    "o": [
+      "1:2:3...",
+      "1:3:5... | 1:3:5...",
+      "2:4:6...",
+      "None"
+    ],
+    "a": 1,
+    "e": "Only odd harmonics are present. / इसमें केवल विषम हारमोनिक्स मौजूद होते हैं।"
+  },
+  {
+    "qe": "What is 'End Correction' ($e$) in an organ pipe related to?",
+    "qh": "ऑर्गन पाइप में 'अंत्य संशोधन' (End Correction) किससे संबंधित है?",
+    "o": [
+      "Length of pipe",
+      "Antinode slightly outside the open end | खुले सिरे से थोड़ा बाहर बनने वाला प्रस्पंद",
+      "Diameter only",
+      "None"
+    ],
+    "a": 1,
+    "e": "Sound reflects slightly beyond the physical edge of the pipe. / ध्वनि पाइप के भौतिक किनारे से थोड़ा आगे परावर्तित होती है।"
+  },
+  {
+    "qe": "What is the frequency of 'Middle C' on a standard piano approx?",
+    "qh": "एक मानक पियानो पर 'मिडिल सी' (Middle C) की आवृत्ति लगभग क्या है?",
+    "o": [
+      "256 Hz",
+      "261.6 Hz | 261.6 Hz",
+      "440 Hz",
+      "512 Hz"
+    ],
+    "a": 1,
+    "e": "Scientific pitch often uses 256, but standard musical tuning is ~262 Hz. / मानक संगीत ट्यूनिंग में यह लगभग 262 हर्ट्ज़ है।"
+  },
+  {
+    "qe": "What frequency is used as the 'Standard Tuning' pitch for an Orchestra (Note A)?",
+    "qh": "ऑर्केस्ट्रा के लिए 'मानक ट्यूनिंग' पिच (नोट ए) के रूप में किस आवृत्ति का उपयोग होता है?",
+    "o": [
+      "256 Hz",
+      "440 Hz | 440 Hz",
+      "1000 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Known as A440, used worldwide to tune instruments. / इसे A440 के रूप में जाना जाता है।"
+  },
+  {
+    "qe": "What is 'Consonance' in music?",
+    "qh": "संगीत में 'संवादिता' (Consonance) क्या है?",
+    "o": [
+      "Unpleasant sound",
+      "Pleasant sounding combination of notes | स्वरों का सुखद संयोजन",
+      "Single note",
+      "None"
+    ],
+    "a": 1,
+    "e": "Notes that sound stable and restful together. / वे स्वर जो साथ में स्थिर और सुखद लगते हैं।"
+  },
+  {
+    "qe": "What is 'Dissonance'?",
+    "qh": "'विवादिता' (Dissonance) क्या है?",
+    "o": [
+      "Harmonious sound",
+      "Unpleasant or tense sound combination | अरुचिकर या तनावपूर्ण स्वर संयोजन",
+      "Silent",
+      "None"
+    ],
+    "a": 1,
+    "e": "Notes that sound clashing or create tension. / वे स्वर जो आपस में टकराते हुए लगते हैं।"
+  },
+  {
+    "qe": "What is the 'Beat Period' if two notes are 256 Hz and 260 Hz?",
+    "qh": "यदि दो स्वर 256 Hz और 260 Hz हैं, तो 'विपन्द काल' क्या होगा?",
+    "o": [
+      "4 sec",
+      "0.25 sec | 0.25 सेकंड",
+      "1 sec",
+      "None"
+    ],
+    "a": 1,
+    "e": "Beat frequency = 260 - 256 = 4 Hz. Period = 1/f = 1/4 = 0.25s. / सूत्र 1/f का उपयोग करके।"
+  },
+  {
+    "qe": "What happens to the 'Fundamental Frequency' of a string if its 'Tension' is increased?",
+    "qh": "यदि डोरी का 'तनाव' बढ़ा दिया जाए, तो उसकी 'मूल आवृत्ति' का क्या होगा?",
+    "o": [
+      "Decreases",
+      "Increases | बढ़ती है",
+      "Stay same",
+      "None"
+    ],
+    "a": 1,
+    "e": "$f \\propto \\sqrt{T}$. Tighter strings vibrate faster. / तनाव बढ़ाने पर डोरी तेजी से कंपन करती है।"
+  },
+  {
+    "qe": "If the 'Length' of a vibrating string is 'Doubled', the frequency becomes:",
+    "qh": "यदि कंपन करती डोरी की 'लंबाई' 'दोगुनी' कर दी जाए, तो आवृत्ति हो जाती है:",
+    "o": [
+      "Double",
+      "Half | आधी (Half)",
+      "Four times",
+      "None"
+    ],
+    "a": 1,
+    "e": "$f \\propto 1/L$. Frequency is inversely proportional to length. / आवृत्ति लंबाई के व्युत्क्रमानुपाती होती है।"
+  },
+  {
+    "qe": "What is a 'Sonometer' used to study?",
+    "qh": "'सोनोमीटर' का उपयोग किसके अध्ययन के लिए किया जाता है?",
+    "o": [
+      "Speed of light",
+      "Laws of transverse vibrations of strings | डोरी के अनुप्रस्थ कंपनों के नियम",
+      "Sound in liquids",
+      "None"
+    ],
+    "a": 1,
+    "e": "Common lab instrument for verifying $f \\propto \\sqrt{T}/L$. / डोरी के नियमों को सत्यापित करने का लैब उपकरण।"
+  },
+  {
+    "qe": "Which property of sound allows us to recognize a friend's voice without seeing them?",
+    "qh": "ध्वनि का कौन सा गुण हमें बिना देखे मित्र की आवाज पहचानने में मदद करता है?",
+    "o": [
+      "Loudness",
+      "Pitch",
+      "Quality / Timbre | गुणता (Quality)",
+      "Intensity"
+    ],
+    "a": 2,
+    "e": "Every voice has a unique set of harmonics and waveform. / हर आवाज का अपना विशिष्ट हार्मोनिक्स सेट होता है।"
+  },
+  {
+    "qe": "What is the 'Loudness' of a normal conversation approx?",
+    "qh": "सामान्य बातचीत की 'प्रबलता' लगभग कितनी होती है?",
+    "o": [
+      "10 dB",
+      "60 dB | 60 dB",
+      "100 dB",
+      "120 dB"
+    ],
+    "a": 1,
+    "e": "Typical range for human speech. / मानव भाषण के लिए विशिष्ट सीमा।"
+  },
+  {
+    "qe": "What level of sound is considered 'Noise Pollution' in industrial areas by day?",
+    "qh": "औद्योगिक क्षेत्रों में दिन के समय किस स्तर की ध्वनि को 'ध्वनि प्रदूषण' माना जाता है?",
+    "o": [
+      "Above 50 dB",
+      "Above 75 dB | 75 dB से ऊपर",
+      "Above 120 dB",
+      "None"
+    ],
+    "a": 1,
+    "e": "According to environmental safety standards. / पर्यावरण सुरक्षा मानकों के अनुसार।"
+  },
+  {
+    "qe": "Which 'Part' of the instrument 'Violin' produces sound?",
+    "qh": "'वायलिन' वाद्ययंत्र का कौन सा 'भाग' ध्वनि उत्पन्न करता है?",
+    "o": [
+      "Air column",
+      "Stretched strings | खींची हुई डोरियाँ",
+      "Metal plate",
+      "None"
+    ],
+    "a": 1,
+    "e": "Vibrations in the strings are amplified by the wooden box. / डोरी के कंपन लकड़ी के बॉक्स द्वारा प्रवर्धित होते हैं।"
+  },
+  {
+    "qe": "A 'Flute' produces sound due to the vibration of:",
+    "qh": "'बांसुरी' किसके कंपन के कारण ध्वनि उत्पन्न करती है?",
+    "o": [
+      "Strings",
+      "Air Column | वायु स्तंभ (Air Column)",
+      "Membrane",
+      "None"
+    ],
+    "a": 1,
+    "e": "It is a wind instrument (Open pipe). / यह एक सुषिर वाद्ययंत्र है।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Hydrogen' gas approx?",
+    "qh": "'हाइड्रोजन' गैस में ध्वनि की चाल लगभग कितनी है?",
+    "o": [
+      "332 m/s",
+      "1284 m/s | 1284 m/s",
+      "5000 m/s",
+      "None"
+    ],
+    "a": 1,
+    "e": "Much higher than air because hydrogen is very light. / हाइड्रोजन बहुत हल्की होने के कारण इसमें चाल अधिक होती है।"
+  },
+  {
+    "qe": "How does 'Humidity' affect the speed of sound?",
+    "qh": "'आर्द्रता' ध्वनि की चाल को कैसे प्रभावित करती है?",
+    "o": [
+      "Decreases",
+      "Increases | बढ़ाती है",
+      "No effect",
+      "None"
+    ],
+    "a": 1,
+    "e": "Moist air is lighter than dry air, so sound travels faster. / नम हवा शुष्क हवा से हल्की होती है।"
+  },
+  {
+    "qe": "What happens to the speed of sound if 'Pressure' is doubled at constant temperature?",
+    "qh": "यदि स्थिर तापमान पर 'दाब' दोगुना कर दिया जाए, तो ध्वनि की चाल का क्या होगा?",
+    "o": [
+      "Doubles",
+      "Remains same | स्थिर रहती है",
+      "Halved",
+      "None"
+    ],
+    "a": 1,
+    "e": "Speed is independent of pressure if temperature is constant. / तापमान स्थिर रहने पर दाब का कोई प्रभाव नहीं पड़ता।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in medicine to break stones?",
+    "qh": "किडनी की पथरी तोड़ने के लिए चिकित्सा में किस ध्वनि का उपयोग होता है?",
+    "o": [
+      "Infrasonic",
+      "Lithotripsy (Ultrasonic) | लिथोट्रिप्सी (Ultrasonic)",
+      "Audible",
+      "None"
+    ],
+    "a": 1,
+    "e": "High energy ultrasonic waves shatter the stones. / उच्च ऊर्जा वाली अल्ट्रासोनिक तरंगें पथरी को तोड़ देती हैं।"
+  },
+  {
+    "qe": "Which 'Harmonic' is missing in a closed organ pipe?",
+    "qh": "बंद ऑर्गन पाइप में कौन सा 'हारमोनिक' अनुपस्थित होता है?",
+    "o": [
+      "Odd Harmonics",
+      "Even Harmonics | सम हारमोनिक (Even Harmonics)",
+      "All",
+      "None"
+    ],
+    "a": 1,
+    "e": "Only 1st, 3rd, 5th... harmonics are present. / केवल विषम हारमोनिक्स ही मौजूद होते हैं।"
+  },
+  {
+    "qe": "What is the 'Fundamental Frequency' also called?",
+    "qh": "'मूल आवृत्ति' को और क्या कहा जाता है?",
+    "o": [
+      "First Harmonic | प्रथम हारमोनिक",
+      "First Overtone",
+      "Base frequency",
+      "Both 1 and 3 | 1 और 3 दोनों"
+    ],
+    "a": 3,
+    "e": "It is the lowest frequency of vibration. / यह कंपन की सबसे कम आवृत्ति है।"
+  },
+  {
+    "qe": "What is the wavelength of a sound wave if frequency is 20 Hz (v=340)?",
+    "qh": "यदि आवृत्ति 20 Hz है, तो तरंगदैर्ध्य क्या होगी ($v=340$)?",
+    "o": [
+      "1.7 m",
+      "17 m | 17 मीटर",
+      "34 m",
+      "None"
+    ],
+    "a": 1,
+    "e": "$\\lambda = v/f = 340/20 = 17$ m. / सूत्र $\\lambda = v/f$ का उपयोग करके।"
+  },
+  {
+    "qe": "Which sound wave has the 'Shortest' wavelength?",
+    "qh": "किस ध्वनि तरंग की 'तरंगदैर्ध्य' सबसे छोटी होती है?",
+    "o": [
+      "Infrasonic",
+      "Audible",
+      "Ultrasonic | पराश्रव्य (Ultrasonic)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Highest frequency means shortest wavelength ($v = f\\lambda$). / उच्चतम आवृत्ति मतलब न्यूनतम तरंगदैर्ध्य।"
+  },
+  {
+    "qe": "What is the 'Speed of Sound' in 'Iron' approximately?",
+    "qh": "'लोहे' में ध्वनि की चाल लगभग कितनी है?",
+    "o": [
+      "340 m/s",
+      "1500 m/s",
+      "5130 m/s | 5130 मी/से",
+      "None"
+    ],
+    "a": 2,
+    "e": "Iron is a rigid solid, so sound travels very fast. / लोहा कठोर ठोस है, इसलिए ध्वनि बहुत तेज चलती है।"
+  },
+  {
+    "qe": "Which factor does 'NOT' affect the speed of sound in a gas?",
+    "qh": "गैस में ध्वनि की चाल को कौन सा कारक प्रभावित 'नहीं' करता है?",
+    "o": [
+      "Temperature",
+      "Humidity",
+      "Frequency | आवृत्ति (Frequency)",
+      "Molecular weight"
+    ],
+    "a": 2,
+    "e": "Speed depends on medium properties, not on the frequency of wave. / चाल माध्यम के गुणों पर निर्भर करती है, तरंग की आवृत्ति पर नहीं।"
+  },
+  {
+    "qe": "What is the 'Law of Tension' for strings?",
+    "qh": "डोरियों के लिए 'तनाव का नियम' क्या है?",
+    "o": [
+      "$f \\propto T$",
+      "$f \\propto \\sqrt{T}$ | $f \\propto \\sqrt{T}$",
+      "$f \\propto T^2$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Frequency is proportional to the square root of tension. / आवृत्ति तनाव के वर्गमूल के समानुपाती होती है।"
+  },
+  {
+    "qe": "What is the 'Law of Mass' for vibrating strings?",
+    "qh": "कंपन करती डोरियों के लिए 'द्रव्यमान का नियम' क्या है?",
+    "o": [
+      "$f \\propto m$",
+      "$f \\propto 1/\\sqrt{m}$ | $f \\propto 1/\\sqrt{m}$",
+      "$f \\propto \\sqrt{m}$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Heavier strings (higher mass per unit length) vibrate slower. / भारी डोरियाँ धीरे कंपन करती हैं।"
+  },
+  {
+    "qe": "A 'Tuning Fork' is a source of sound of ______ frequency.",
+    "qh": "'स्वरित्र द्विभुज' (Tuning Fork) ______ आवृत्ति की ध्वनि का स्रोत है।",
+    "o": [
+      "Variable",
+      "Constant / Single | नियत / एकल",
+      "Multiple",
+      "None"
+    ],
+    "a": 1,
+    "e": "Produces a pure tone (single frequency). / यह एक शुद्ध स्वर (एकल आवृत्ति) उत्पन्न करता है।"
+  },
+  {
+    "qe": "What is 'Reverberation Time' according to Sabine's Formula?",
+    "qh": "सेबाइन के सूत्र के अनुसार 'अनुरणन काल' क्या है?",
+    "o": [
+      "$T \\propto V$ | $T \\propto V$ (आयतन के समानुपाती)",
+      "$T \\propto 1/V$",
+      "$T = V$",
+      "None"
+    ],
+    "a": 0,
+    "e": "$T = 0.161 V / \\sum aS$. Larger rooms have longer reverberation. / बड़े कमरों में अनुरणन काल अधिक होता है।"
+  },
+  {
+    "qe": "What is the 'Absorption Coefficient' of a perfect absorber?",
+    "qh": "एक आदर्श अवशोषक का 'अवशोषण गुणांक' क्या होता है?",
+    "o": [
+      "0",
+      "0.5",
+      "1 | एक (1)",
+      "Infinite"
+    ],
+    "a": 2,
+    "e": "An open window is considered a perfect absorber (coefficient = 1). / खुली खिड़की को आदर्श अवशोषक माना जाता है।"
+  },
+  {
+    "qe": "Which part of ear converts 'Sound Waves' into 'Mechanical Vibrations'?",
+    "qh": "कान का कौन सा भाग 'ध्वनि तरंगों' को 'यांत्रिक कंपनों' में बदलता है?",
+    "o": [
+      "Pinna",
+      "Eardrum | कान का पर्दा",
+      "Cochlea",
+      "Auditory nerve"
+    ],
+    "a": 1,
+    "e": "Also called Tympanic membrane. / इसे टिम्पैनिक झिल्ली भी कहते हैं।"
+  },
+  {
+    "qe": "What is 'Shock Wave' produced by supersonic objects called?",
+    "qh": "सुपरसोनिक वस्तुओं द्वारा उत्पन्न 'शॉक वेव' को क्या कहते हैं?",
+    "o": [
+      "Echo",
+      "Sonic Boom | सोनिक बूम",
+      "Beats",
+      "None"
+    ],
+    "a": 1,
+    "e": "It is an explosive noise heard when aircraft breaks the sound barrier. / यह एक विस्फोटक शोर है।"
+  },
+  {
+    "qe": "Which phenomenon is used by 'Dolphins' to detect obstacles?",
+    "qh": "'डॉल्फिन' बाधाओं का पता लगाने के लिए किस घटना का उपयोग करती हैं?",
+    "o": [
+      "Refraction",
+      "Echolocation | प्रतिध्वनि-निर्धारण (Echolocation)",
+      "Interference",
+      "None"
+    ],
+    "a": 1,
+    "e": "They use ultrasonic waves and their echoes. / वे पराश्रव्य तरंगों और उनकी गूँज का उपयोग करती हैं।"
+  },
+  {
+    "qe": "The sound produced by 'Bats' is:",
+    "qh": "'चमगादड़' द्वारा उत्पन्न ध्वनि होती है:",
+    "o": [
+      "Infrasonic",
+      "Audible",
+      "Ultrasonic | पराश्रव्य (Ultrasonic)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Bats can produce and hear frequencies up to 100 kHz. / चमगादड़ 100 kHz तक की आवृत्ति सुन सकते हैं।"
+  },
+  {
+    "qe": "What happens to the 'Pitch' of a sound as frequency increases?",
+    "qh": "आवृत्ति बढ़ने पर ध्वनि की 'पिच' का क्या होता है?",
+    "o": [
+      "Decreases",
+      "Increases | बढ़ती है",
+      "No change",
+      "None"
+    ],
+    "a": 1,
+    "e": "Pitch is the brain's perception of frequency. / पिच आवृत्ति के प्रति मस्तिष्क की अनुभूति है।"
+  },
+  {
+    "qe": "What is the 'Unit' of Pitch?",
+    "qh": "'पिच' का मात्रक क्या है?",
+    "o": [
+      "Hertz",
+      "Decibel",
+      "It has no physical unit | इसका कोई भौतिक मात्रक नहीं है",
+      "Phon"
+    ],
+    "a": 2,
+    "e": "Pitch is a subjective quality, though it correlates with frequency (Hz). / पिच एक व्यक्तिपरक गुण है।"
+  },
+  {
+    "qe": "Which type of wave is 'Sound' in 'Steel'?",
+    "qh": "'स्टील' में 'ध्वनि' किस प्रकार की तरंग है?",
+    "o": [
+      "Longitudinal only",
+      "Transverse only",
+      "Both Longitudinal and Transverse | अनुदैर्ध्य और अनुप्रस्थ दोनों",
+      "None"
+    ],
+    "a": 2,
+    "e": "Solids can support both types of elastic waves. / ठोस दोनों प्रकार की तरंगों का समर्थन कर सकते हैं।"
+  },
+  {
+    "qe": "What is 'Intensity' of sound inversely proportional to?",
+    "qh": "ध्वनि की 'तीव्रता' किसके व्युत्क्रमानुपाती होती है?",
+    "o": [
+      "Distance",
+      "Square of Distance | दूरी के वर्ग के ($r^2$)",
+      "Amplitude",
+      "None"
+    ],
+    "a": 1,
+    "e": "Intensity decreases as you move away from the source ($I \\propto 1/r^2$). / स्रोत से दूर जाने पर तीव्रता घटती है।"
+  },
+  {
+    "qe": "What is the frequency of an 'Infrasonic' wave approx?",
+    "qh": "'अधोश्राव्य' (Infrasonic) तरंग की आवृत्ति लगभग क्या है?",
+    "o": [
+      "10 Hz | 10 Hz",
+      "500 Hz",
+      "50,000 Hz",
+      "None"
+    ],
+    "a": 0,
+    "e": "Anything below 20 Hz. / 20 Hz से नीचे कुछ भी।"
+  },
+  {
+    "qe": "Which 'Part' of the human voice box vibrates to produce sound?",
+    "qh": "मानव स्वर यंत्र (Voice box) का कौन सा 'भाग' ध्वनि उत्पन्न करने के लिए कंपन करता है?",
+    "o": [
+      "Windpipe",
+      "Vocal Cords | वाक तंतु (Vocal Cords)",
+      "Tongue",
+      "None"
+    ],
+    "a": 1,
+    "e": "Air forced through vocal cords causes them to vibrate. / वाक तंतुओं से हवा गुजरने पर वे कंपन करते हैं।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in 'Metal' testing?",
+    "qh": "'धातु' परीक्षण में पराश्रव्य ध्वनि का उपयोग किसलिए होता है?",
+    "o": [
+      "To melt metal",
+      "To detect internal flaws/cracks | आंतरिक दोषों/दरारों का पता लगाने हेतु",
+      "To color metal",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ultrasonic waves reflect from cracks inside the metal. / ये दरारों से परावर्तित हो जाती हैं।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Sea Water' compared to fresh water?",
+    "qh": "मीठे पानी की तुलना में 'समुद्र के पानी' में ध्वनि की चाल क्या है?",
+    "o": [
+      "Slower",
+      "Faster | अधिक (Faster)",
+      "Same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Salinity and density increase the speed in sea water. / खारापन और घनत्व चाल बढ़ा देते हैं।"
+  },
+  {
+    "qe": "What is 'Doppler Effect' in sound primarily related to?",
+    "qh": "ध्वनि में 'डॉप्लर प्रभाव' मुख्य रूप से किससे संबंधित है?",
+    "o": [
+      "Change in loudness",
+      "Apparent change in frequency | आवृत्ति में आभासी परिवर्तन",
+      "Change in wave speed",
+      "None"
+    ],
+    "a": 1,
+    "e": "Observed when there is relative motion between source and observer. / जब स्रोत या श्रोता के बीच सापेक्ष गति होती है, तब यह दिखता है।"
+  },
+  {
+    "qe": "What happens to 'Apparent Frequency' if the 'Source' moves towards a stationary observer?",
+    "qh": "यदि 'स्रोत' स्थिर श्रोता की ओर बढ़ता है, तो 'आभासी आवृत्ति' का क्या होगा?",
+    "o": [
+      "Decreases",
+      "Increases | बढ़ती है",
+      "Remains same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Waves are compressed, leading to a higher perceived frequency. / तरंगें दब जाती हैं, जिससे आवृत्ति बढ़ी हुई लगती है।"
+  },
+  {
+    "qe": "What is the frequency of musical note 'Sa' (Shadja) in Indian classical music (approx)?",
+    "qh": "भारतीय शास्त्रीय संगीत में 'सा' (षड्ज) स्वर की आवृत्ति लगभग क्या है?",
+    "o": [
+      "240 Hz | 240 Hz",
+      "256 Hz",
+      "440 Hz",
+      "512 Hz"
+    ],
+    "a": 0,
+    "e": "Standard base frequency often used in textbooks for 'Sa'. / पाठ्यपुस्तकों में 'सा' के लिए अक्सर 240 Hz का उपयोग होता है।"
+  },
+  {
+    "qe": "What is the frequency of musical note 'Pa' (Pancham) if 'Sa' is 240 Hz?",
+    "qh": "यदि 'सा' 240 Hz है, तो 'प' (पंचम) की आवृत्ति क्या होगी?",
+    "o": [
+      "300 Hz",
+      "360 Hz | 360 Hz",
+      "480 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ratio of Pa to Sa is 3:2. So $240 \\times 1.5 = 360$ Hz. / प और सा का अनुपात 3:2 होता है।"
+  },
+  {
+    "qe": "What is 'Mach Number' if an aircraft flies at 680 m/s in air where speed of sound is 340 m/s?",
+    "qh": "यदि विमान 680 m/s की चाल से उड़ता है और ध्वनि की चाल 340 m/s है, तो 'मैक नंबर' क्या होगा?",
+    "o": [
+      "1",
+      "2 | 2",
+      "0.5",
+      "None"
+    ],
+    "a": 1,
+    "e": "Mach Number = Speed of Object / Speed of Sound = 680/340 = 2. / मैक नंबर = वस्तु की चाल / ध्वनि की चाल।"
+  },
+  {
+    "qe": "What are 'Overtones' in an open organ pipe?",
+    "qh": "एक खुले ऑर्गन पाइप में 'अधिस्वरक' (Overtones) क्या होते हैं?",
+    "o": [
+      "Only odd harmonics",
+      "Only even harmonics",
+      "All integer harmonics | सभी पूर्णांक हारमोनिक्स (1, 2, 3...)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Open pipes produce both odd and even multiples of fundamental frequency. / खुले पाइप में सभी हारमोनिक्स मौजूद होते हैं।"
+  },
+  {
+    "qe": "Which property of sound 'Does Not' change when sound reflects from a wall?",
+    "qh": "दीवार से परावर्तित होने पर ध्वनि का कौन सा गुण 'नहीं' बदलता?",
+    "o": [
+      "Speed",
+      "Wavelength",
+      "Frequency",
+      "All of these | उपरोक्त सभी"
+    ],
+    "a": 3,
+    "e": "In the same medium, speed, wavelength and frequency remain constant after reflection. / एक ही माध्यम में परावर्तन के बाद ये तीनों स्थिर रहते हैं।"
+  },
+  {
+    "qe": "What is 'Intensity' of sound proportional to?",
+    "qh": "ध्वनि की 'तीव्रता' किसके समानुपाती होती है?",
+    "o": [
+      "Amplitude",
+      "Square of Amplitude | आयाम के वर्ग के ($A^2$)",
+      "Frequency",
+      "None"
+    ],
+    "a": 1,
+    "e": "Energy carried is proportional to the square of the displacement. / प्रवाहित ऊर्जा विस्थापन के वर्ग के समानुपाती होती है।"
+  },
+  {
+    "qe": "What is 'Sound Level' in dB for 'Painful' noise?",
+    "qh": "'दर्दनाक' शोर के लिए dB में 'ध्वनि स्तर' क्या है?",
+    "o": [
+      "60 dB",
+      "90 dB",
+      "120 dB | 120 dB",
+      "None"
+    ],
+    "a": 2,
+    "e": "120 dB is the threshold of pain for human ears. / 120 dB मानव कान के लिए दर्द की सीमा है।"
+  },
+  {
+    "qe": "What is the 'Reflection' of sound inside a 'Stethoscope' called?",
+    "qh": "'स्टेथोस्कोप' के अंदर ध्वनि के 'परावर्तन' को क्या कहते हैं?",
+    "o": [
+      "Single reflection",
+      "Multiple reflection | बहु-परावर्तन",
+      "Refraction",
+      "None"
+    ],
+    "a": 1,
+    "e": "Sound reaches the doctor's ears through repeated reflections in the tube. / ट्यूब में बार-बार होने वाले परावर्तन से आवाज डॉक्टर तक पहुँचती है।"
+  },
+  {
+    "qe": "Which part of ear is filled with 'Fluid' and 'Hair cells'?",
+    "qh": "कान का कौन सा भाग 'द्रव' और 'हेयर सेल्स' से भरा होता है?",
+    "o": [
+      "External ear",
+      "Middle ear",
+      "Inner ear (Cochlea) | आंतरिक कान (कोकलिया)",
+      "None"
+    ],
+    "a": 2,
+    "e": "The cochlea converts vibrations into nerve impulses. / कोकलिया कंपनों को तंत्रिका आवेगों में बदलता है।"
+  },
+  {
+    "qe": "What is 'Resonance' in sound box of a Guitar?",
+    "qh": "गिटार के साउंड बॉक्स में 'अनुनाद' (Resonance) क्या है?",
+    "o": [
+      "Stopping sound",
+      "Vibrating air at natural frequency to amplify sound | आवाज बढ़ाने हेतु प्राकृतिक आवृत्ति पर कंपन",
+      "Echo",
+      "None"
+    ],
+    "a": 1,
+    "e": "The box amplifies the weak sound of the string. / बॉक्स डोरी की कमजोर आवाज को बढ़ा देता है।"
+  },
+  {
+    "qe": "What is the 'Minimum Frequency' for 'Ultrasonic' waves?",
+    "qh": "'पराश्रव्य' (Ultrasonic) तरंगों के लिए 'न्यूनतम आवृत्ति' क्या है?",
+    "o": [
+      "20 Hz",
+      "2000 Hz",
+      "20,000 Hz | 20,000 Hz",
+      "None"
+    ],
+    "a": 2,
+    "e": "Waves with frequency higher than 20 kHz are ultrasonic. / 20 kHz से ऊपर की तरंगें पराश्रव्य होती हैं।"
+  },
+  {
+    "qe": "Which phenomenon causes 'Beats'?",
+    "qh": "किस घटना के कारण 'विपन्द' (Beats) बनते हैं?",
+    "o": [
+      "Reflection",
+      "Refraction",
+      "Interference | व्यतिकरण (Interference)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Formed by the superposition of waves of slightly different frequencies. / थोड़ी अलग आवृत्तियों की तरंगों के मिलने से बनते हैं।"
+  },
+  {
+    "qe": "What is 'Mach 1' speed equivalent to?",
+    "qh": "'मैक 1' चाल किसके बराबर होती है?",
+    "o": [
+      "Speed of light",
+      "Speed of sound | ध्वनि की चाल",
+      "Half of sound speed",
+      "None"
+    ],
+    "a": 1,
+    "e": "Mach 1 means the object is moving at the speed of sound. / मैक 1 का मतलब है वस्तु ध्वनि की गति से चल रही है।"
+  },
+  {
+    "qe": "What happens to 'Wavelength' when sound speed 'Increases' in a medium?",
+    "qh": "जब माध्यम में ध्वनि की चाल 'बढ़ती' है, तो 'तरंगदैर्ध्य' का क्या होता है?",
+    "o": [
+      "Decreases",
+      "Increases | बढ़ती है",
+      "Stay same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Since $v = f \\lambda$ and $f$ is constant, $\\lambda$ is proportional to $v$. / क्योंकि आवृत्ति स्थिर रहती है, तरंगदैर्ध्य चाल के समानुपाती होती है।"
+  },
+  {
+    "qe": "Which waves are used to 'Measure' the depth of an ocean?",
+    "qh": "समुद्र की गहराई 'मापने' के लिए किन तरंगों का उपयोग होता है?",
+    "o": [
+      "Infrasonic",
+      "Audible",
+      "Ultrasonic (SONAR) | पराश्रव्य (सोनार)",
+      "Radio waves"
+    ],
+    "a": 2,
+    "e": "Ultrasonic waves travel well in water and reflect off the bottom. / पराश्रव्य तरंगें पानी में अच्छी तरह चलती हैं और तल से टकराकर लौटती हैं।"
+  },
+  {
+    "qe": "What is the 'SI Unit' of the amplitude of a sound wave?",
+    "qh": "ध्वनि तरंग के आयाम का 'SI मात्रक' क्या है?",
+    "o": [
+      "Watt",
+      "Decibel",
+      "Meter | मीटर (Meter)",
+      "Hertz"
+    ],
+    "a": 2,
+    "e": "Amplitude is the maximum displacement, so it's measured in meters. / आयाम अधिकतम विस्थापन है, इसलिए इसे मीटर में मापते हैं।"
+  },
+  {
+    "qe": "What is 'Musical Interval' between Sa and High Sa (Sa')?",
+    "qh": "सा और ऊँचे सा (Sa') के बीच 'संगीत अंतराल' क्या है?",
+    "o": [
+      "Octave | सप्तक (Octave)",
+      "Semi-tone",
+      "Tone",
+      "None"
+    ],
+    "a": 0,
+    "e": "The frequency of high Sa is double the original Sa (Ratio 2:1). / ऊँचे सा की आवृत्ति मूल सा की दोगुनी होती है।"
+  },
+  {
+    "qe": "What is the frequency ratio of note 'Ga' to 'Sa'?",
+    "qh": "'ग' और 'सा' के स्वरों का आवृत्ति अनुपात क्या है?",
+    "o": [
+      "9/8",
+      "5/4 | 5/4",
+      "4/3",
+      "None"
+    ],
+    "a": 1,
+    "e": "Standard ratio in diatonic musical scale. / डायटोनिक संगीत पैमाने में मानक अनुपात।"
+  },
+  {
+    "qe": "What is 'Persistence of Vision' compared to 'Persistence of Hearing' (0.1s)?",
+    "qh": "'श्रवण की दृढ़ता' (0.1s) की तुलना में 'दृष्टि की दृढ़ता' क्या है?",
+    "o": [
+      "0.1s",
+      "1/16 sec | 1/16 सेकंड",
+      "1 sec",
+      "None"
+    ],
+    "a": 1,
+    "e": "Eyes retain images for approx 1/16th of a second. / आँखें लगभग 1/16 सेकंड तक चित्र को बनाए रखती हैं।"
+  },
+  {
+    "qe": "Why can we hear 'Echoes' clearly in an empty hall but not in a furnished room?",
+    "qh": "खाली हॉल में 'गूँज' साफ क्यों सुनाई देती है, लेकिन फर्नीचर वाले कमरे में क्यों नहीं?",
+    "o": [
+      "Furniture reflects sound",
+      "Furniture absorbs sound | फर्नीचर ध्वनि सोख लेता है",
+      "No reason",
+      "None"
+    ],
+    "a": 1,
+    "e": "Soft surfaces like curtains and sofas prevent multiple reflections. / पर्दे और सोफे जैसी मुलायम सतहें परावर्तन को रोकती हैं।"
+  },
+  {
+    "qe": "What is 'Infrasound' used by 'Whales'?",
+    "qh": "'व्हेल' द्वारा अधोश्राव्य (Infrasound) का उपयोग किसलिए होता है?",
+    "o": [
+      "To sing",
+      "Long distance communication | लंबी दूरी का संचार",
+      "To jump",
+      "None"
+    ],
+    "a": 1,
+    "e": "Low frequencies travel much further in water than high frequencies. / कम आवृत्तियाँ पानी में बहुत दूर तक जाती हैं।"
+  },
+  {
+    "qe": "Which part of ear is 'Snail-shaped' and filled with fluid?",
+    "qh": "कान का कौन सा भाग 'घोंघे के आकार' का और द्रव से भरा होता है?",
+    "o": [
+      "Pinna",
+      "Cochlea | कोकलिया (Cochlea)",
+      "Eardrum",
+      "Anvil"
+    ],
+    "a": 1,
+    "e": "Primary organ for hearing in the inner ear. / आंतरिक कान में सुनने का मुख्य अंग।"
+  },
+  {
+    "qe": "What is 'Threshold of Pain' for humans in Watts/$m^2$?",
+    "qh": "मनुष्यों के लिए 'दर्द की दहलीज' वॉट/$m^2$ में क्या है?",
+    "o": [
+      "$10^{-12}$",
+      "$1 | 1 W/m^2$",
+      "$100$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Equivalent to 120 dB. / यह 120 dB के बराबर है।"
+  },
+  {
+    "qe": "What happens to sound 'Speed' when temperature 'Drops'?",
+    "qh": "जब तापमान 'गिरता' है, तो ध्वनि की 'चाल' का क्या होगा?",
+    "o": [
+      "Increases",
+      "Decreases | घटती है",
+      "Stay same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Speed is directly proportional to $\\sqrt{T}$. Cold air means slower sound. / कम तापमान पर ध्वनि धीमी चलती है।"
+  },
+  {
+    "qe": "Which law states that 'Sound follows laws of reflection'?",
+    "qh": "कौन सा नियम कहता है कि 'ध्वनि परावर्तन के नियमों का पालन करती है'?",
+    "o": [
+      "Ohm's Law",
+      "Laws of Reflection | परावर्तन के नियम",
+      "Boyle's Law",
+      "None"
+    ],
+    "a": 1,
+    "e": "Angle of incidence = Angle of reflection. / आपतन कोण = परावर्तन कोण।"
+  },
+  {
+    "qe": "What is 'Shock Wave' related to?",
+    "qh": "'शॉक वेव' किससे संबंधित है?",
+    "o": [
+      "Infrasonics",
+      "Sonic Boom | सोनिक बूम",
+      "Beats",
+      "None"
+    ],
+    "a": 1,
+    "e": "Created when object speed > speed of sound. / जब वस्तु की चाल > ध्वनि की चाल हो।"
+  },
+  {
+    "qe": "What is the 'Time' difference between original sound and echo for a distance of 34m (v=340)?",
+    "qh": "34m की दूरी (v=340) के लिए मूल ध्वनि और गूँज के बीच 'समय' का अंतर क्या होगा?",
+    "o": [
+      "0.1s",
+      "0.2s | 0.2 सेकंड",
+      "1s",
+      "None"
+    ],
+    "a": 1,
+    "e": "Total distance traveled = 2 x 34 = 68m. Time = 68/340 = 0.2s. / कुल दूरी = 68m, समय = 0.2s।"
+  },
+  {
+    "qe": "Which 'Animal' can produce the loudest sound on Earth?",
+    "qh": "पृथ्वी पर कौन सा 'जानवर' सबसे तेज ध्वनि उत्पन्न कर सकता है?",
+    "o": [
+      "Elephant",
+      "Blue Whale | ब्लू व्हेल (Blue Whale)",
+      "Lion",
+      "Human"
+    ],
+    "a": 1,
+    "e": "Blue whales can produce sounds up to 188 dB. / ब्लू व्हेल 188 dB तक की ध्वनि उत्पन्न कर सकती है।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in 'Tooth Cleaning'?",
+    "qh": "'दांतों की सफाई' में पराश्रव्य ध्वनि का क्या उपयोग है?",
+    "o": [
+      "Whiten teeth",
+      "Shatter plaque/tartar | प्लैक/टार्टर को तोड़ना",
+      "Numb pain",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ultrasonic scalers vibrate to remove hard deposits. / अल्ट्रासोनिक स्केलर कठोर जमाव को हटाने हेतु कंपन करते हैं।"
+  },
+  {
+    "qe": "What is the wavelength of 1,000,000 Hz ultrasonic sound in air (v=340)?",
+    "qh": "हवा (v=340) में 10 लाख Hz पराश्रव्य ध्वनि की 'तरंगदैर्ध्य' क्या होगी?",
+    "o": [
+      "0.34 mm | 0.34 mm",
+      "3.4 mm",
+      "34 mm",
+      "None"
+    ],
+    "a": 0,
+    "e": "$\\lambda = 340 / 1,000,000 = 0.00034$ m = 0.34 mm. / बहुत छोटी तरंगदैर्ध्य।"
+  },
+  {
+    "qe": "Which part of ear is 'Amplifier' of sound vibrations?",
+    "qh": "कान का कौन सा भाग ध्वनि कंपनों का 'प्रवर्धक' (Amplifier) है?",
+    "o": [
+      "Pinna",
+      "Ossicles (Middle ear bones) | मध्य कर्ण की हड्डियाँ",
+      "Cochlea",
+      "None"
+    ],
+    "a": 1,
+    "e": "Tiny bones amplify pressure up to 20 times. / छोटी हड्डियाँ दबाव को 20 गुना तक बढ़ा देती हैं।"
+  },
+  {
+    "qe": "What is 'Diffraction' more noticeable in: Sound or Light?",
+    "qh": "'विवर्तन' किसमें अधिक स्पष्ट होता है: ध्वनि या प्रकाश?",
+    "o": [
+      "Light",
+      "Sound | ध्वनि (Sound)",
+      "Both same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Sound wavelengths are larger and closer to size of common obstacles. / ध्वनि की तरंगदैर्ध्य बड़ी होती है।"
+  },
+  {
+    "qe": "What is the 'Frequency Ratio' for the musical note 'Ni' (Nishad)?",
+    "qh": "'नी' (निषाद) स्वर का आवृत्ति अनुपात क्या है?",
+    "o": [
+      "5/3",
+      "15/8 | 15/8",
+      "9/8",
+      "None"
+    ],
+    "a": 1,
+    "e": "Standard frequency ratio for the 7th note. / सातवें स्वर का मानक अनुपात।"
+  },
+  {
+    "qe": "What is 'Supersonic' vs 'Ultrasonic'?",
+    "qh": "'सुपरसोनिक' बनाम 'अल्ट्रासोनिक' क्या है?",
+    "o": [
+      "Both same",
+      "Supersonic is speed, Ultrasonic is frequency | सुपरसोनिक चाल है, पराश्रव्य आवृत्ति",
+      "Both frequency",
+      "None"
+    ],
+    "a": 1,
+    "e": "Supersonic > speed of sound. Ultrasonic > 20 kHz frequency. / सुपरसोनिक चाल से जुड़ा है, अल्ट्रासोनिक आवृत्ति से।"
+  },
+  {
+    "qe": "What is 'Reverberation' time unit?",
+    "qh": "'अनुरणन' समय का मात्रक क्या है?",
+    "o": [
+      "dB",
+      "Hz",
+      "Seconds | सेकंड (Seconds)",
+      "Meter"
+    ],
+    "a": 2,
+    "e": "Measured as the time sound takes to decay by 60 dB. / ध्वनि को 60 dB तक कम होने में लगा समय।"
+  },
+  {
+    "qe": "What is 'Acoustic Shadow'?",
+    "qh": "'अकौस्टिक शैडो' (Acoustic Shadow) क्या है?",
+    "o": [
+      "Region of high sound",
+      "Region where sound is blocked by an obstacle | वह क्षेत्र जहाँ बाधा द्वारा ध्वनि रुक जाती है",
+      "Light shadow",
+      "None"
+    ],
+    "a": 1,
+    "e": "Area behind a large barrier where sound intensity is low. / बड़े अवरोध के पीछे का क्षेत्र।"
+  },
+  {
+    "qe": "What is 'Echo-ranging' used in submarines?",
+    "qh": "पनडुब्बियों में 'इको-रेंजिंग' का क्या उपयोग है?",
+    "o": [
+      "To hide",
+      "To detect distance of enemy ships | दुश्मन जहाजों की दूरी का पता लगाना",
+      "To save fuel",
+      "None"
+    ],
+    "a": 1,
+    "e": "Part of SONAR technology. / सोनार तकनीक का हिस्सा।"
+  },
+  {
+    "qe": "What is 'Phon' a unit of?",
+    "qh": "'फोन' (Phon) किसका मात्रक है?",
+    "o": [
+      "Frequency",
+      "Loudness Level | प्रबलता स्तर (Loudness Level)",
+      "Pressure",
+      "None"
+    ],
+    "a": 1,
+    "e": "Subjective unit of loudness perceived by humans. / मनुष्यों द्वारा महसूस की गई प्रबलता का मात्रक।"
+  },
+  {
+    "qe": "Which medium conducts sound 'Fastest' at room temperature?",
+    "qh": "कमरे के तापमान पर कौन सा माध्यम ध्वनि को 'सबसे तेज' संचालित करता है?",
+    "o": [
+      "Air",
+      "Water",
+      "Steel | स्टील (Steel)",
+      "Vacuum"
+    ],
+    "a": 2,
+    "e": "Solids have highest elasticity and density favor. / ठोस में उच्च प्रत्यास्थता होती है।"
+  },
+  {
+    "qe": "What happens to the 'Speed of Sound' in a gas if temperature is made 4 times (Kelvin)?",
+    "qh": "यदि गैस का तापमान (केल्विन) 4 गुना कर दिया जाए, तो ध्वनि की 'चाल' क्या होगी?",
+    "o": [
+      "Doubles | दोगुनी हो जाएगी",
+      "Four times",
+      "Halved",
+      "Stay same"
+    ],
+    "a": 0,
+    "e": "$v \\propto \\sqrt{T}$. $\\sqrt{4} = 2$. / चाल तापमान के वर्गमूल के समानुपाती होती है।"
+  },
+  {
+    "qe": "What is the 'Beat Frequency' if notes are 400 Hz and 405 Hz?",
+    "qh": "यदि स्वर 400 Hz और 405 Hz हैं, तो 'विपन्द आवृत्ति' क्या होगी?",
+    "o": [
+      "805 Hz",
+      "5 Hz | 5 Hz",
+      "0.05 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Difference is 405 - 400 = 5 Hz. / अंतर 5 हर्ट्ज़ है।"
+  },
+  {
+    "qe": "What is 'Harmonics' relation for strings?",
+    "qh": "डोरियों के लिए 'हारमोनिक्स' संबंध क्या है?",
+    "o": [
+      "1:3:5",
+      "1:2:3 | 1:2:3",
+      "2:4:6",
+      "None"
+    ],
+    "a": 1,
+    "e": "Strings produce all integer multiples of fundamental frequency. / डोरियाँ मूल आवृत्ति के सभी पूर्णांक गुणक उत्पन्न करती हैं।"
+  },
+  {
+    "qe": "What is 'Node' in a standing wave?",
+    "qh": "स्थिर तरंग में 'नोड' (Node) क्या है?",
+    "o": [
+      "Max displacement",
+      "Zero displacement | शून्य विस्थापन",
+      "Max speed",
+      "None"
+    ],
+    "a": 1,
+    "e": "Point where particles do not move. / वह बिंदु जहाँ कण नहीं हिलते।"
+  },
+  {
+    "qe": "What is 'Antinode' in a standing wave?",
+    "qh": "स्थिर तरंग में 'प्रस्पंद' (Antinode) क्या है?",
+    "o": [
+      "Zero displacement",
+      "Maximum displacement | अधिकतम विस्थापन",
+      "Point of rest",
+      "None"
+    ],
+    "a": 1,
+    "e": "Point where amplitude is maximum. / वह बिंदु जहाँ आयाम अधिकतम होता है।"
+  },
+  {
+    "qe": "Which 'Part' of stethoscope is placed on patient's skin?",
+    "qh": "स्टेथोस्कोप का कौन सा 'भाग' रोगी की त्वचा पर रखा जाता है?",
+    "o": [
+      "Earpiece",
+      "Diaphragm | डायाफ्राम (Diaphragm)",
+      "Tube",
+      "None"
+    ],
+    "a": 1,
+    "e": "Vibrates with body sounds and passes them to tubes. / शरीर की आवाजों से कंपन करता है।"
+  },
+  {
+    "qe": "What is the 'Speed' of sound in air at 100°C approx?",
+    "qh": "100°C पर हवा में ध्वनि की 'चाल' लगभग क्या है?",
+    "o": [
+      "332 m/s",
+      "380 m/s | लगभग 380-390 मी/से",
+      "500 m/s",
+      "None"
+    ],
+    "a": 1,
+    "e": "Speed increases with temperature. / तापमान के साथ चाल बढ़ती है।"
+  },
+  {
+    "qe": "What is the formula for 'Sound Intensity Level' in decibels ($L$)?",
+    "qh": "डेसीबल ($L$) में 'ध्वनि तीव्रता स्तर' का सूत्र क्या है?",
+    "o": [
+      "$10 \\log_{10}(I/I_0)$ | $10 \\log_{10}(I/I_0)$",
+      "$\\log(I)$",
+      "$I/I_0$",
+      "None"
+    ],
+    "a": 0,
+    "e": "$I_0$ is the reference intensity ($10^{-12} W/m^2$). / $I_0$ संदर्भ तीव्रता है।"
+  },
+  {
+    "qe": "If sound intensity is doubled, by how much does the 'Decibel Level' increase approx?",
+    "qh": "यदि ध्वनि की तीव्रता दोगुनी हो जाए, तो 'डेसीबल स्तर' लगभग कितना बढ़ जाता है?",
+    "o": [
+      "2 dB",
+      "3 dB | 3 dB",
+      "10 dB",
+      "None"
+    ],
+    "a": 1,
+    "e": "$\\Delta L = 10 \\log_{10}(2) \\approx 3$ dB. / तीव्रता दोगुनी होने पर स्तर 3 dB बढ़ता है।"
+  },
+  {
+    "qe": "What is the 'Reference Intensity' ($I_0$) for measuring sound level?",
+    "qh": "ध्वनि स्तर मापने के लिए 'संदर्भ तीव्रता' ($I_0$) क्या है?",
+    "o": [
+      "$1 W/m^2$",
+      "$10^{-12} W/m^2$ | $10^{-12} W/m^2$",
+      "$10^{-6} W/m^2$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Corresponds to the threshold of hearing at 1000 Hz. / यह 1000 Hz पर सुनने की दहलीज के बराबर है।"
+  },
+  {
+    "qe": "Which property of a wave is 'Phase' ($\\phi$)?",
+    "qh": "तरंग का 'कला' (Phase) गुण क्या है?",
+    "o": [
+      "Speed",
+      "Position of a point in a cycle | चक्र में किसी बिंदु की स्थिति",
+      "Loudness",
+      "None"
+    ],
+    "a": 1,
+    "e": "Describes the relative position of a wave at a given time. / यह किसी समय पर तरंग की सापेक्ष स्थिति बताता है।"
+  },
+  {
+    "qe": "What is 'Phase Difference' between two points separated by distance $\\lambda$?",
+    "qh": "$\\lambda$ दूरी पर स्थित दो बिंदुओं के बीच 'कलांतर' (Phase Difference) क्या होता है?",
+    "o": [
+      "$90^\\circ$",
+      "$180^\\circ$",
+      "$360^\\circ$ (or $2\\pi$) | $360^\\circ$ (या $2\\pi$)",
+      "Zero"
+    ],
+    "a": 2,
+    "e": "A full wavelength corresponds to a phase change of $2\\pi$. / एक पूरी तरंगदैर्ध्य $2\\pi$ कला परिवर्तन के बराबर होती है।"
+  },
+  {
+    "qe": "Which 'Mode' of vibration has the lowest frequency in a string?",
+    "qh": "एक डोरी में कंपन के किस 'मोड' की आवृत्ति सबसे कम होती है?",
+    "o": [
+      "Overtone",
+      "Fundamental Mode | मूल मोड (Fundamental)",
+      "Harmonic",
+      "None"
+    ],
+    "a": 1,
+    "e": "Also called the first harmonic. / इसे प्रथम हारमोनिक भी कहा जाता है।"
+  },
+  {
+    "qe": "What is 'Ultrasound Scan' (A-scan) used for in ophthalmology?",
+    "qh": "नेत्र विज्ञान में 'अल्ट्रासाउंड स्कैन' (A-scan) का उपयोग किसलिए होता है?",
+    "o": [
+      "Measure eye length | आँख की लंबाई मापने के लिए",
+      "Check color blindness",
+      "Surgery",
+      "None"
+    ],
+    "a": 0,
+    "e": "Used to determine the power of intraocular lens for cataract. / मोतियाबिंद के लिए लेंस की शक्ति निर्धारित करने हेतु।"
+  },
+  {
+    "qe": "What is 'Mach Number' of an object moving at 'Hypersonic' speed?",
+    "qh": "'हाइपरसोनिक' चाल से चलने वाली वस्तु का 'मैक नंबर' क्या होता है?",
+    "o": [
+      "1",
+      "Above 5 | 5 से अधिक",
+      "Below 1",
+      "2"
+    ],
+    "a": 1,
+    "e": "Speeds much higher than supersonic are called hypersonic. / सुपरसोनिक से बहुत अधिक चाल हाइपरसोनिक कहलाती है।"
+  },
+  {
+    "qe": "The 'Loudness' of sound depends on the ______ of the listener's ear.",
+    "qh": "ध्वनि की 'प्रबलता' श्रोता के कान की ______ पर निर्भर करती है।",
+    "o": [
+      "Shape",
+      "Sensitivity | संवेदनशीलता (Sensitivity)",
+      "Size",
+      "None"
+    ],
+    "a": 1,
+    "e": "Loudness is a physiological response, unlike physical intensity. / प्रबलता एक शारीरिक प्रतिक्रिया है।"
+  },
+  {
+    "qe": "What is 'Acoustics' of a building?",
+    "qh": "किसी भवन की 'अकौस्टिक्स' क्या है?",
+    "o": [
+      "Architecture",
+      "Properties that determine sound quality | ध्वनि की गुणवत्ता निर्धारित करने वाले गुण",
+      "Lighting",
+      "None"
+    ],
+    "a": 1,
+    "e": "Deals with reflection, absorption and transmission of sound. / यह ध्वनि के परावर्तन और अवशोषण से संबंधित है।"
+  },
+  {
+    "qe": "Which material is used in 'Ultrasonic' transducers?",
+    "qh": "'पराबैंगनी' ट्रांसड्यूसर में किस सामग्री का उपयोग होता है?",
+    "o": [
+      "Copper",
+      "Piezoelectric crystals (Quartz) | पीजोइलेक्ट्रिक क्रिस्टल",
+      "Iron",
+      "None"
+    ],
+    "a": 1,
+    "e": "Converts electrical energy into ultrasonic vibrations. / विद्युत ऊर्जा को पराश्रव्य कंपनों में बदलता है।"
+  },
+  {
+    "qe": "What is 'Standing Wave' also known as?",
+    "qh": "'स्थिर तरंग' (Standing Wave) को और क्या कहा जाता है?",
+    "o": [
+      "Progressive wave",
+      "Stationary Wave | अप्रगामी तरंग (Stationary)",
+      "Light wave",
+      "None"
+    ],
+    "a": 1,
+    "e": "Energy is trapped and does not travel forward. / ऊर्जा फंसी रहती है और आगे नहीं बढ़ती।"
+  },
+  {
+    "qe": "What is the 'Amplitude' of a point at a 'Node'?",
+    "qh": "'नोड' (Node) पर किसी बिंदु का 'आयाम' क्या होता है?",
+    "o": [
+      "Maximum",
+      "Zero | शून्य (Zero)",
+      "Constant",
+      "None"
+    ],
+    "a": 1,
+    "e": "Nodes are points of no displacement. / नोड बिना विस्थापन वाले बिंदु होते हैं।"
+  },
+  {
+    "qe": "What is 'Antinode' a point of?",
+    "qh": "'प्रस्पंद' (Antinode) किसका बिंदु है?",
+    "o": [
+      "Zero amplitude",
+      "Maximum amplitude | अधिकतम आयाम (Maximum)",
+      "Rest",
+      "None"
+    ],
+    "a": 1,
+    "e": "Points where displacement is largest in a standing wave. / जहाँ विस्थापन सबसे अधिक होता है।"
+  },
+  {
+    "qe": "What is the distance between a 'Node' and the next 'Antinode'?",
+    "qh": "एक 'नोड' और अगले 'प्रस्पंद' के बीच की दूरी क्या है?",
+    "o": [
+      "$\\lambda$",
+      "$\\lambda/2$",
+      "$\\lambda/4$ | $\\lambda/4$",
+      "None"
+    ],
+    "a": 2,
+    "e": "Quarter of a wavelength distance. / एक चौथाई तरंगदैर्ध्य की दूरी।"
+  },
+  {
+    "qe": "Which part of ear is 'Pinna'?",
+    "qh": "कान का कौन सा भाग 'पिन्ना' (Pinna) है?",
+    "o": [
+      "Inner ear",
+      "Middle ear",
+      "Outer ear | बाहरी कान",
+      "None"
+    ],
+    "a": 2,
+    "e": "Collects sound waves from surroundings. / आसपास से ध्वनि तरंगें एकत्र करता है।"
+  },
+  {
+    "qe": "What is 'Intensity' of sound at 'Threshold of Hearing'?",
+    "qh": "'श्रवण की दहलीज' पर ध्वनि की 'तीव्रता' क्या है?",
+    "o": [
+      "$10^{-12} W/m^2$ | $10^{-12} W/m^2$",
+      "$0 W/m^2$",
+      "$1 W/m^2$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Minimum physical intensity detectable by human ear. / मानव कान द्वारा खोजी जाने वाली न्यूनतम भौतिक तीव्रता।"
+  },
+  {
+    "qe": "The intensity level of $10^{-6} W/m^2$ is ______ dB.",
+    "qh": "$10^{-6} W/m^2$ का तीव्रता स्तर ______ dB है।",
+    "o": [
+      "30",
+      "60 | 60 dB",
+      "90",
+      "None"
+    ],
+    "a": 1,
+    "e": "$10 \\log(10^{-6}/10^{-12}) = 10 \\times 6 = 60$. / सूत्र का उपयोग करके गणना।"
+  },
+  {
+    "qe": "Which sound wave property changes during 'Refraction'?",
+    "qh": "'अपवर्तन' (Refraction) के दौरान ध्वनि का कौन सा गुण बदलता है?",
+    "o": [
+      "Frequency",
+      "Wavelength and Speed | तरंगदैर्ध्य और चाल",
+      "Only Amplitude",
+      "None"
+    ],
+    "a": 1,
+    "e": "Frequency remains constant when medium changes. / माध्यम बदलने पर आवृत्ति स्थिर रहती है।"
+  },
+  {
+    "qe": "What is 'Acoustic Insulation'?",
+    "qh": "'ध्वनि इन्सुलेशन' (Acoustic Insulation) क्या है?",
+    "o": [
+      "Amplifying sound",
+      "Reducing sound transmission between spaces | कमरों के बीच ध्वनि संचरण कम करना",
+      "Cleaning sound",
+      "None"
+    ],
+    "a": 1,
+    "e": "Uses materials like mineral wool to block sound. / ध्वनि रोकने के लिए खनिज ऊन जैसी सामग्री का उपयोग।"
+  },
+  {
+    "qe": "Which 'Animal' produces sounds to navigate in caves (not bat)?",
+    "qh": "गुफाओं में दिशा खोजने के लिए कौन सा 'जानवर' ध्वनि निकालता है (चमगादड़ नहीं)?",
+    "o": [
+      "Dolphin",
+      "Swiftlet bird | स्विफ्टलेट पक्षी",
+      "Cat",
+      "None"
+    ],
+    "a": 1,
+    "e": "Certain birds use clicks for echolocation in the dark. / कुछ पक्षी अंधेरे में इकोलोकेशन का उपयोग करते हैं।"
+  },
+  {
+    "qe": "What happens to the speed of sound if 'Carbon Dioxide' is added to air?",
+    "qh": "यदि हवा में 'कार्बन डाइऑक्साइड' मिला दी जाए, तो ध्वनि की चाल का क्या होगा?",
+    "o": [
+      "Increases",
+      "Decreases | कम होगी (Decreases)",
+      "Stay same",
+      "None"
+    ],
+    "a": 1,
+    "e": "CO2 is heavier than air, increasing density and lowering speed. / CO2 भारी होती है, जिससे चाल कम हो जाती है।"
+  },
+  {
+    "qe": "What is 'Beats' frequency if $f_1=500 Hz$ and $f_2=508 Hz$?",
+    "qh": "यदि $f_1=500$ और $f_2=508$ हो, तो 'विपन्द' आवृत्ति क्या होगी?",
+    "o": [
+      "504 Hz",
+      "8 Hz | 8 Hz",
+      "1008 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "$|508 - 500| = 8$ Hz. / आवृत्तियों का अंतर।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in 'Surgical' instruments?",
+    "qh": "'सर्जिकल' उपकरणों में पराश्रव्य ध्वनि का क्या उपयोग है?",
+    "o": [
+      "Heating",
+      "Sterilization | कीटाणुशोधन (Sterilization)",
+      "Coloring",
+      "None"
+    ],
+    "a": 1,
+    "e": "Vibrations kill bacteria and clean intricate tools. / कंपन बैक्टीरिया को मारते हैं और औजारों को साफ करते हैं।"
+  },
+  {
+    "qe": "The speed of sound in 'Steel' is ______ than in 'Water'.",
+    "qh": "'स्टील' में ध्वनि की चाल 'पानी' की तुलना में ______ होती है।",
+    "o": [
+      "Less",
+      "More | अधिक (More)",
+      "Equal",
+      "None"
+    ],
+    "a": 1,
+    "e": "Approx 5960 m/s in steel vs 1500 m/s in water. / स्टील में लगभग 5960 और पानी में 1500 होती है।"
+  },
+  {
+    "qe": "What is 'Wave Number' ($k$)?",
+    "qh": "'तरंग संख्या' ($k$) क्या है?",
+    "o": [
+      "$1/\\lambda$",
+      "$2\\pi/\\lambda$ | $2\\pi/\\lambda$",
+      "$f \\lambda$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Defined as the spatial frequency of a wave. / यह तरंग की स्थानिक आवृत्ति है।"
+  },
+  {
+    "qe": "What is the frequency of Note 'Re' (Rishabh) if 'Sa' is 240 Hz?",
+    "qh": "यदि 'सा' 240 Hz है, तो 'रे' (ऋषभ) की आवृत्ति क्या है?",
+    "o": [
+      "270 Hz | 270 Hz",
+      "300 Hz",
+      "480 Hz",
+      "None"
+    ],
+    "a": 0,
+    "e": "Ratio is 9/8. $240 \\times 1.125 = 270$ Hz. / रे और सा का अनुपात 9/8 होता है।"
+  },
+  {
+    "qe": "Which part of ear is 'Anvil' (Incus)?",
+    "qh": "कान का कौन सा भाग 'एनविल' (Anvil) है?",
+    "o": [
+      "Outer ear",
+      "Middle ear | मध्य कर्ण",
+      "Inner ear",
+      "None"
+    ],
+    "a": 1,
+    "e": "One of the three tiny ossicle bones. / तीन छोटी हड्डियों में से एक।"
+  },
+  {
+    "qe": "What is 'Infrasonic' vibration produced by 'Earthquakes' called?",
+    "qh": "'भूकंप' द्वारा उत्पन्न अधोश्राव्य कंपनों को क्या कहते हैं?",
+    "o": [
+      "Light waves",
+      "Seismic waves | भूकंपीय तरंगें (Seismic)",
+      "Sound beats",
+      "None"
+    ],
+    "a": 1,
+    "e": "Includes primary (P) and secondary (S) waves. / इसमें P और S तरंगें शामिल हैं।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Moist Air' compared to 'Dry Air'?",
+    "qh": "'नम हवा' में ध्वनि की चाल 'शुष्क हवा' की तुलना में क्या है?",
+    "o": [
+      "Slower",
+      "Faster | अधिक (Faster)",
+      "Same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Density of moist air is lower than dry air. / नम हवा का घनत्व कम होता है।"
+  },
+  {
+    "qe": "What is 'Decibel' a unit of 'Power Ratio'?",
+    "qh": "'डेसीबल' किस 'शक्ति अनुपात' का मात्रक है?",
+    "o": [
+      "Linear",
+      "Logarithmic | लघुगणकीय (Logarithmic)",
+      "Square",
+      "None"
+    ],
+    "a": 1,
+    "e": "Used to express large ratios in a manageable scale. / बड़े अनुपातों को छोटे पैमाने पर व्यक्त करने हेतु।"
+  },
+  {
+    "qe": "Which 'Part' of sound wave contains high pressure?",
+    "qh": "ध्वनि तरंग के किस 'भाग' में उच्च दाब होता है?",
+    "o": [
+      "Rarefaction",
+      "Compression | संपीडन (Compression)",
+      "Node",
+      "None"
+    ],
+    "a": 1,
+    "e": "Region where particles are pushed close together. / वह क्षेत्र जहाँ कण पास-पास होते हैं।"
+  },
+  {
+    "qe": "What is the frequency of 'First Overtone' in a closed pipe of fundamental $f$?",
+    "qh": "मूल आवृत्ति $f$ वाले बंद पाइप में 'पहले अधिस्वरक' की आवृत्ति क्या है?",
+    "o": [
+      "$2f$",
+      "$3f$ | $3f$",
+      "$4f$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Closed pipes produce only odd harmonics (1, 3, 5...). / बंद पाइप केवल विषम हारमोनिक्स उत्पन्न करते हैं।"
+  },
+  {
+    "qe": "What is the frequency of 'First Overtone' in an open pipe?",
+    "qh": "खुले पाइप में 'पहले अधिस्वरक' की आवृत्ति क्या होती है?",
+    "o": [
+      "$2f$ | $2f$",
+      "$3f$",
+      "$f$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Open pipes produce both even and odd harmonics. / खुले पाइप सम और विषम दोनों हारमोनिक्स बनाते हैं।"
+  },
+  {
+    "qe": "Which part of ear is connected to the 'Throat' by Eustachian tube?",
+    "qh": "कान का कौन सा भाग यूस्टेशियन ट्यूब द्वारा 'गले' से जुड़ा होता है?",
+    "o": [
+      "Inner ear",
+      "Middle ear | मध्य कर्ण",
+      "Outer ear",
+      "None"
+    ],
+    "a": 1,
+    "e": "Helps equalize pressure on both sides of eardrum. / कान के पर्दे के दोनों ओर दाब समान रखने में मदद करता है।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in 'Dishwashers'?",
+    "qh": "'डिशवॉशर' में पराश्रव्य ध्वनि का क्या उपयोग है?",
+    "o": [
+      "Dry dishes",
+      "Loosen stubborn food particles | जिद्दी गंदगी को ढीला करना",
+      "Heat water",
+      "None"
+    ],
+    "a": 1,
+    "e": "Microscopic bubbles created by ultrasound scrub the surfaces. / अल्ट्रासाउंड से बने सूक्ष्म बुलबुले सतह को रगड़ते हैं।"
+  },
+  {
+    "qe": "What is 'Sound Speed' in air at 40°C approx?",
+    "qh": "40°C पर हवा में ध्वनि की 'चाल' लगभग क्या है?",
+    "o": [
+      "332 m/s",
+      "356 m/s | लगभग 356 मी/से",
+      "400 m/s",
+      "None"
+    ],
+    "a": 1,
+    "e": "Base 332 + (0.61 x 40). / आधार 332 + (0.61 x 40)।"
+  },
+  {
+    "qe": "What is 'Tympanum' another name for?",
+    "qh": "'टिम्पैनम' किसका दूसरा नाम है?",
+    "o": [
+      "Cochlea",
+      "Eardrum | कान का पर्दा",
+      "Pinna",
+      "Anvil"
+    ],
+    "a": 1,
+    "e": "Membrane that separates outer and middle ear. / बाहरी और मध्य कान को अलग करने वाली झिल्ली।"
+  },
+  {
+    "qe": "What is 'Phase' of two points if they are $\\lambda/2$ apart?",
+    "qh": "यदि दो बिंदु $\\lambda/2$ दूर हैं, तो उनकी 'कला' क्या होगी?",
+    "o": [
+      "In Phase",
+      "Out of Phase ($180^\\circ$) | विपरीत कला ($180^\\circ$)",
+      "Zero",
+      "None"
+    ],
+    "a": 1,
+    "e": "Points move in opposite directions. / बिंदु विपरीत दिशाओं में चलते हैं।"
+  },
+  {
+    "qe": "What is 'Sonar' frequency usually?",
+    "qh": "'सोनार' की आवृत्ति आमतौर पर क्या होती है?",
+    "o": [
+      "Audible",
+      "Ultrasonic | पराश्रव्य (Ultrasonic)",
+      "Infrasonic",
+      "None"
+    ],
+    "a": 1,
+    "e": "High frequency for better resolution underwater. / पानी के नीचे बेहतर स्पष्टता के लिए उच्च आवृत्ति।"
+  },
+  {
+    "qe": "Which 'Physical Quantity' is constant in a stationary wave?",
+    "qh": "स्थिर तरंग में कौन सी 'भौतिक राशि' स्थिर रहती है?",
+    "o": [
+      "Frequency | आवृत्ति (Frequency)",
+      "Amplitude",
+      "Velocity",
+      "None"
+    ],
+    "a": 0,
+    "e": "Amplitude varies from zero at nodes to max at antinodes. / आयाम नोड्स पर शून्य और प्रस्पंदों पर अधिकतम होता है।"
+  },
+  {
+    "qe": "What is 'Damping' of sound?",
+    "qh": "ध्वनि का 'अवमंदन' (Damping) क्या है?",
+    "o": [
+      "Increase in sound",
+      "Gradual decrease in amplitude | आयाम में धीरे-धीरे कमी",
+      "Echo",
+      "None"
+    ],
+    "a": 1,
+    "e": "Caused by energy loss due to friction or medium resistance. / घर्षण या माध्यम के प्रतिरोध से ऊर्जा हानि।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Diamond' approx?",
+    "qh": "'हीरे' में ध्वनि की चाल लगभग क्या है?",
+    "o": [
+      "5000 m/s",
+      "12000 m/s | 12000 मी/से",
+      "340 m/s",
+      "None"
+    ],
+    "a": 1,
+    "e": "Very high due to extreme rigidity. / अत्यधिक कठोरता के कारण बहुत अधिक।"
+  },
+  {
+    "qe": "Which part of ear has 'Three' bones?",
+    "qh": "कान के किस भाग में 'तीन' हड्डियाँ होती हैं?",
+    "o": [
+      "Middle ear | मध्य कर्ण",
+      "Inner ear",
+      "Outer ear",
+      "None"
+    ],
+    "a": 0,
+    "e": "Malleus, Incus and Stapes. / मैलियस, इनकस और स्टेपीज़।"
+  },
+  {
+    "qe": "What is 'Doppler Shift'?",
+    "qh": "'डॉप्लर विस्थापन' (Doppler Shift) क्या है?",
+    "o": [
+      "Change in speed",
+      "Difference between real and apparent frequency | वास्तविक और आभासी आवृत्ति का अंतर",
+      "Echo",
+      "None"
+    ],
+    "a": 1,
+    "e": "Depends on the velocities of source and observer. / स्रोत और श्रोता के वेगों पर निर्भर करता है।"
+  },
+  {
+    "qe": "What is 'Resonance' risk in bridges?",
+    "qh": "पुलों में 'अनुनाद' (Resonance) का क्या खतरा है?",
+    "o": [
+      "Making sound",
+      "Structural collapse | ढांचे का ढहना",
+      "Rusting",
+      "None"
+    ],
+    "a": 1,
+    "e": "If soldiers march in step, frequency may match bridge's natural frequency. / यदि सैनिक ताल मिलाकर चलते हैं, तो आवृत्ति पुल से मिल सकती है।"
+  },
+  {
+    "qe": "What is the unit of 'Loudness Level'?",
+    "qh": "'प्रबलता स्तर' का मात्रक क्या है?",
+    "o": [
+      "dB",
+      "Phon | फोन (Phon)",
+      "Sone | सोन (Sone)",
+      "Both 2 and 3 | 2 और 3 दोनों"
+    ],
+    "a": 3,
+    "e": "Phon and Sone are psychological units. / फोन और सोन मनोवैज्ञानिक मात्रक हैं।"
+  },
+  {
+    "qe": "What is 'Pitch' of a sound directly dependent on?",
+    "qh": "ध्वनि की 'पिच' सीधे किस पर निर्भर करती है?",
+    "o": [
+      "Amplitude",
+      "Fundamental frequency | मूल आवृत्ति",
+      "Intensity",
+      "None"
+    ],
+    "a": 1,
+    "e": "Defined by the lowest frequency of a periodic waveform. / एक आवर्ती वेवफॉर्म की सबसे कम आवृत्ति द्वारा निर्धारित।"
+  },
+  {
+    "qe": "What is 'Mach 5' called?",
+    "qh": "'मैक 5' को क्या कहते हैं?",
+    "o": [
+      "Subsonic",
+      "Supersonic",
+      "Hypersonic | हाइपरसोनिक",
+      "None"
+    ],
+    "a": 2,
+    "e": "Borderline between supersonic and hypersonic. / सुपरसोनिक और हाइपरसोनिक के बीच की सीमा।"
+  },
+  {
+    "qe": "What is the relation between the 'Frequency' (f) and 'Length' (L) of an air column in a pipe?",
+    "qh": "एक पाइप में वायु स्तंभ की 'आवृत्ति' (f) और 'लंबाई' (L) के बीच क्या संबंध है?",
+    "o": [
+      "$f \\propto L$",
+      "$f \\propto 1/L$ | $f \\propto 1/L$",
+      "$f \\propto L^2$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Shorter air columns produce higher frequency sounds. / छोटे वायु स्तंभ उच्च आवृत्ति की ध्वनि उत्पन्न करते हैं।"
+  },
+  {
+    "qe": "What is the 'Phase Difference' between two points on a wave separated by $\\lambda/4$?",
+    "qh": "$\\lambda/4$ की दूरी पर स्थित दो बिंदुओं के बीच 'कलांतर' क्या होता है?",
+    "o": [
+      "$180^\\circ$",
+      "$90^\\circ$ ($\\pi/2$) | $90^\\circ$ ($\\pi/2$)",
+      "$360^\\circ$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Full wave $\\lambda$ is $2\\pi$, so $\\lambda/4$ is $\\pi/2$. / पूरी तरंग $2\\pi$ होती है, इसलिए चौथाई हिस्सा $90^\\circ$ होगा।"
+  },
+  {
+    "qe": "Which 'Organ' in the inner ear is responsible for turning vibrations into nerve impulses?",
+    "qh": "आंतरिक कान का कौन सा 'अंग' कंपनों को तंत्रिका आवेगों में बदलने के लिए जिम्मेदार है?",
+    "o": [
+      "Pinna",
+      "Organ of Corti | कॉर्टी का अंग (Organ of Corti)",
+      "Hammer",
+      "Anvil"
+    ],
+    "a": 1,
+    "e": "Located inside the cochlea, it contains sensitive hair cells. / यह कोकलिया के अंदर स्थित होता है और इसमें हेयर सेल्स होते हैं।"
+  },
+  {
+    "qe": "What is the frequency of the 'Second Overtone' in a stretched string of fundamental frequency $f$?",
+    "qh": "मूल आवृत्ति $f$ वाली डोरी में 'दूसरे अधिस्वरक' की आवृत्ति क्या होगी?",
+    "o": [
+      "$2f$",
+      "$3f$ | $3f$",
+      "$4f$",
+      "None"
+    ],
+    "a": 1,
+    "e": "For strings, overtones are $2f, 3f, 4f...$ (Second overtone is 3rd harmonic). / डोरी के लिए दूसरा अधिस्वरक तीसरा हारमोनिक होता है।"
+  },
+  {
+    "qe": "The 'Speed of Sound' in a gas is proportional to the square root of its:",
+    "qh": "किसी गैस में 'ध्वनि की चाल' उसके ______ के वर्गमूल के समानुपाती होती है।",
+    "o": [
+      "Pressure",
+      "Absolute Temperature | परम तापमान (T)",
+      "Volume",
+      "Density"
+    ],
+    "a": 1,
+    "e": "$v = \\sqrt{\\gamma RT/M}$. / चाल परम तापमान के वर्गमूल के समानुपाती है।"
+  },
+  {
+    "qe": "What is the ratio of 'Harmonics' in a closed organ pipe?",
+    "qh": "एक बंद ऑर्गन पाइप में 'हारमोनिक्स' का अनुपात क्या होता है?",
+    "o": [
+      "1:2:3",
+      "1:3:5 | 1:3:5",
+      "2:4:6",
+      "None"
+    ],
+    "a": 1,
+    "e": "Closed pipes only produce odd harmonics. / बंद पाइप केवल विषम हारमोनिक्स उत्पन्न करते हैं।"
+  },
+  {
+    "qe": "What is the 'Aud Auditory Nerve's' function?",
+    "qh": "'श्रवण तंत्रिका' (Auditory Nerve) का क्या कार्य है?",
+    "o": [
+      "To vibrate",
+      "To carry signals to the brain | मस्तिष्क तक संकेतों को ले जाना",
+      "To collect sound",
+      "None"
+    ],
+    "a": 1,
+    "e": "Transmits electrical signals from the cochlea to the brain. / यह कोकलिया से विद्युत संकेतों को दिमाग तक पहुँचाती है।"
+  },
+  {
+    "qe": "Which 'Gas' will have the lowest speed of sound at a given temperature?",
+    "qh": "दिए गए तापमान पर किस 'गैस' में ध्वनि की चाल सबसे कम होगी?",
+    "o": [
+      "Hydrogen",
+      "Oxygen",
+      "Carbon Dioxide | कार्बन डाइऑक्साइड (CO2)",
+      "Nitrogen"
+    ],
+    "a": 2,
+    "e": "Heavier gases have slower sound speeds ($v \\propto 1/\\sqrt{M}$). / भारी गैसों में ध्वनि की चाल कम होती है।"
+  },
+  {
+    "qe": "What is 'Infrasonic' sound frequency used in monitoring 'Volcanoes'?",
+    "qh": "'ज्वालामुखी' की निगरानी में प्रयुक्त अधोश्राव्य ध्वनि की आवृत्ति क्या होती है?",
+    "o": [
+      "Above 20 kHz",
+      "Below 20 Hz | 20 Hz से कम",
+      "500 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Volcanic eruptions produce very low frequency waves. / ज्वालामुखी विस्फोट बहुत कम आवृत्ति की तरंगें पैदा करते हैं।"
+  },
+  {
+    "qe": "Which 'Effect' is used by traffic police to measure the speed of a passing car?",
+    "qh": "गुजरती हुई कार की चाल मापने के लिए ट्रैफिक पुलिस किस 'प्रभाव' का उपयोग करती है?",
+    "o": [
+      "Photoelectric effect",
+      "Doppler Effect | डॉप्लर प्रभाव (Doppler Effect)",
+      "Tyndall effect",
+      "None"
+    ],
+    "a": 1,
+    "e": "Uses the shift in frequency of reflected waves (Radar/Sonar). / परावर्तित तरंगों की आवृत्ति में बदलाव को मापता है।"
+  },
+  {
+    "qe": "The 'Loudness' of sound is measured using a unit named after:",
+    "qh": "ध्वनि की 'प्रबलता' मापने की इकाई किसके नाम पर रखी गई है?",
+    "o": [
+      "Newton",
+      "Graham Bell | ग्राहम बेल",
+      "Hertz",
+      "Watt"
+    ],
+    "a": 1,
+    "e": "Decibel (dB) is named after Alexander Graham Bell. / डेसीबल का नाम अलेक्जेंडर ग्राहम बेल के नाम पर है।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Gold' approx?",
+    "qh": "'सोने' में ध्वनि की चाल लगभग क्या है?",
+    "o": [
+      "340 m/s",
+      "1500 m/s",
+      "3240 m/s | 3240 मी/से",
+      "5000 m/s"
+    ],
+    "a": 2,
+    "e": "Metals generally have high speeds, though Gold is lower than Steel. / सोना स्टील से धीमा लेकिन हवा से बहुत तेज है।"
+  },
+  {
+    "qe": "What happens to the frequency of a 'Tuning Fork' if its prongs are 'Filed'?",
+    "qh": "यदि 'स्वरित्र द्विभुज' की भुजाओं को 'घिस' दिया जाए, तो आवृत्ति का क्या होगा?",
+    "o": [
+      "Decreases",
+      "Increases | बढ़ती है",
+      "Remains same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Filing reduces mass, and frequency increases as mass decreases. / घिसने से द्रव्यमान कम होता है, जिससे आवृत्ति बढ़ती है।"
+  },
+  {
+    "qe": "What happens to the frequency of a 'Tuning Fork' if it is 'Loaded' with wax?",
+    "qh": "यदि स्वरित्र पर 'मोम' लगा दिया जाए, तो आवृत्ति का क्या होगा?",
+    "o": [
+      "Increases",
+      "Decreases | घटती है",
+      "Stay same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Loading with wax increases mass, which lowers the frequency. / मोम लगाने से द्रव्यमान बढ़ता है और आवृत्ति कम होती है।"
+  },
+  {
+    "qe": "What is the distance between two 'Successive Nodes' in a standing wave?",
+    "qh": "एक स्थिर तरंग में दो 'लगातार नोड्स' के बीच की दूरी क्या है?",
+    "o": [
+      "$\\lambda$",
+      "$\\lambda/2$ | $\\lambda/2$",
+      "$\\lambda/4$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Half of a wavelength. / आधी तरंगदैर्ध्य के बराबर।"
+  },
+  {
+    "qe": "What is the distance between two 'Successive Antinodes'?",
+    "qh": "दो 'लगातार प्रस्पंदों' के बीच की दूरी क्या है?",
+    "o": [
+      "$\\lambda$",
+      "$\\lambda/2$ | $\\lambda/2$",
+      "$\\lambda/4$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Same as the distance between two successive nodes. / यह दो नोड्स के बीच की दूरी के बराबर ही होती है।"
+  },
+  {
+    "qe": "Which property of sound describes the 'Shrillness'?",
+    "qh": "ध्वनि का कौन सा गुण 'तीखापन' (Shrillness) बताता है?",
+    "o": [
+      "Amplitude",
+      "Pitch | पिच (Pitch)",
+      "Loudness",
+      "None"
+    ],
+    "a": 1,
+    "e": "Directly related to the frequency of the wave. / यह सीधे तरंग की आवृत्ति से जुड़ा है।"
+  },
+  {
+    "qe": "What is 'Overtones' in an open organ pipe ratio?",
+    "qh": "खुले ऑर्गन पाइप में 'अधिस्वरक' का अनुपात क्या होता है?",
+    "o": [
+      "1:3:5",
+      "2:3:4 | 2:3:4 (Fundamental is 1)",
+      "1:2:3",
+      "None"
+    ],
+    "a": 1,
+    "e": "Overtones are $2f, 3f, 4f...$ of the fundamental frequency. / अधिस्वरक मूल आवृत्ति के 2, 3, 4 गुना होते हैं।"
+  },
+  {
+    "qe": "Which instrument uses a 'Stretched Membrane' to produce sound?",
+    "qh": "कौन सा वाद्ययंत्र ध्वनि उत्पन्न करने के लिए 'खिंची हुई झिल्ली' का उपयोग करता है?",
+    "o": [
+      "Flute",
+      "Tabla | तबला",
+      "Guitar",
+      "Piano"
+    ],
+    "a": 1,
+    "e": "It is a percussion instrument. / यह एक ताल वाद्ययंत्र है।"
+  },
+  {
+    "qe": "What is the 'Time' required for a sound wave of 100 Hz to complete 1 vibration?",
+    "qh": "100 Hz आवृत्ति वाली ध्वनि तरंग को 1 कंपन पूरा करने में कितना 'समय' लगेगा?",
+    "o": [
+      "1 sec",
+      "0.01 sec | 0.01 सेकंड",
+      "0.1 sec",
+      "None"
+    ],
+    "a": 1,
+    "e": "$T = 1/f = 1/100 = 0.01s$. / सूत्र $T = 1/f$ का उपयोग करके।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound frequency used in 'Echocardiogram'?",
+    "qh": "'इकोकार्डियोग्राम' में किस ध्वनि आवृत्ति का उपयोग होता है?",
+    "o": [
+      "Infrasonic",
+      "Audible",
+      "Ultrasonic | पराश्रव्य (Ultrasonic)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Used to create images of the heart's structure and function. / हृदय की संरचना की छवियाँ बनाने के लिए।"
+  },
+  {
+    "qe": "What is the 'Reflection' of sound from a 'Hard Surface' at 17m distance called?",
+    "qh": "17 मीटर की दूरी पर 'कठोर सतह' से ध्वनि का 'परावर्तन' क्या कहलाता है?",
+    "o": [
+      "Refraction",
+      "Echo | प्रतिध्वनि (Echo)",
+      "Beats",
+      "Damping"
+    ],
+    "a": 1,
+    "e": "Minimum distance for echo in air is approx 17.2m. / हवा में ईको के लिए न्यूनतम दूरी लगभग 17.2 मीटर है।"
+  },
+  {
+    "qe": "Which wave property determines 'Quality' (Timbre)?",
+    "qh": "तरंग का कौन सा गुण 'गुणता' (Timbre) निर्धारित करता है?",
+    "o": [
+      "Amplitude",
+      "Frequency",
+      "Waveform / Harmonics | वेवफॉर्म / हारमोनिक्स",
+      "None"
+    ],
+    "a": 2,
+    "e": "Determined by the number and relative intensity of overtones. / यह अधिस्वरकों की संख्या और तीव्रता पर निर्भर करता है।"
+  },
+  {
+    "qe": "What happens to the speed of sound if 'Air' becomes 'Denser' at constant pressure?",
+    "qh": "यदि स्थिर दाब पर 'हवा' अधिक 'सघन' हो जाए, तो ध्वनि की चाल का क्या होगा?",
+    "o": [
+      "Increases",
+      "Decreases | कम होगी (Decreases)",
+      "Stay same",
+      "None"
+    ],
+    "a": 1,
+    "e": "$v \\propto 1/\\sqrt{\\rho}$. High density lowers the speed. / उच्च घनत्व चाल को कम कर देता है।"
+  },
+  {
+    "qe": "What is 'Acoustic' absorption material example?",
+    "qh": "'ध्वनि' अवशोषक सामग्री का उदाहरण क्या है?",
+    "o": [
+      "Glass",
+      "Steel",
+      "Glass wool / Thermocol | ग्लास वूल / थर्माकोल",
+      "None"
+    ],
+    "a": 2,
+    "e": "Porous materials trap sound energy and turn it into heat. / छिद्रपूर्ण सामग्री ध्वनि ऊर्जा को सोख लेती है।"
+  },
+  {
+    "qe": "Which 'Animal' can produce sounds up to 100,000 Hz?",
+    "qh": "कौन सा 'जानवर' 1,00,000 हर्ट्ज़ तक की ध्वनि उत्पन्न कर सकता है?",
+    "o": [
+      "Elephant",
+      "Dog",
+      "Bat | चमगादड़ (Bat)",
+      "Human"
+    ],
+    "a": 2,
+    "e": "Bats use these extreme ultrasonic frequencies for hunting. / चमगादड़ शिकार के लिए इन आवृत्तियों का उपयोग करते हैं।"
+  },
+  {
+    "qe": "What is 'Intensity Level' of a sound with intensity $10^{-4} W/m^2$?",
+    "qh": "$10^{-4} W/m^2$ तीव्रता वाली ध्वनि का 'तीव्रता स्तर' क्या होगा?",
+    "o": [
+      "40 dB",
+      "80 dB | 80 dB",
+      "120 dB",
+      "None"
+    ],
+    "a": 1,
+    "e": "$10 \\log(10^{-4}/10^{-12}) = 10 \\times 8 = 80$ dB. / गणना सूत्र के अनुसार।"
+  },
+  {
+    "qe": "What is 'Fundamental Frequency' of a pipe 'Closed' at one end?",
+    "qh": "एक सिरे पर 'बंद' पाइप की 'मूल आवृत्ति' क्या होती है?",
+    "o": [
+      "$v/2L$",
+      "$v/4L$ | $v/4L$",
+      "$v/L$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Quarter-wave resonator property. / इसमें केवल चौथाई तरंग समाती है।"
+  },
+  {
+    "qe": "What is 'Fundamental Frequency' of a pipe 'Open' at both ends?",
+    "qh": "दोनों सिरों पर 'खुले' पाइप की 'मूल आवृत्ति' क्या होती है?",
+    "o": [
+      "$v/2L$ | $v/2L$",
+      "$v/4L$",
+      "$2v/L$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Half-wave resonator property. / इसमें आधी तरंग समाती है।"
+  },
+  {
+    "qe": "What happens to speed of sound in air as 'Altitude' increases?",
+    "qh": "'ऊंचाई' बढ़ने पर हवा में ध्वनि की चाल का क्या होता है?",
+    "o": [
+      "Increases",
+      "Decreases | कम होती है (Decreases)",
+      "Remains same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Higher altitude means lower temperature, which lowers sound speed. / ऊंचाई पर तापमान कम होने से चाल कम हो जाती है।"
+  },
+  {
+    "qe": "Which part of ear is the 'Hammer' (Malleus)?",
+    "qh": "कान का कौन सा भाग 'हैमर' (Malleus) है?",
+    "o": [
+      "Outer ear",
+      "Middle ear | मध्य कर्ण",
+      "Inner ear",
+      "None"
+    ],
+    "a": 1,
+    "e": "First of the three ossicle bones. / तीन हड्डियों में से पहली।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Aluminium' approx?",
+    "qh": "'एल्युमिनियम' में ध्वनि की चाल लगभग क्या है?",
+    "o": [
+      "340 m/s",
+      "1500 m/s",
+      "6420 m/s | 6420 मी/से",
+      "None"
+    ],
+    "a": 2,
+    "e": "Very high speed due to low density and high elasticity. / बहुत उच्च चाल।"
+  },
+  {
+    "qe": "What is 'Infrasound' produced by 'Ocean Waves' called?",
+    "qh": "'समुद्र की लहरों' द्वारा उत्पन्न अधोश्राव्य ध्वनि को क्या कहते हैं?",
+    "o": [
+      "Sea noise",
+      "Microbaroms | माइक्रोबैरोम्स (Microbaroms)",
+      "Echoes",
+      "None"
+    ],
+    "a": 1,
+    "e": "Very low frequency atmospheric pressure fluctuations. / वायुमंडलीय दबाव में बहुत कम आवृत्ति वाले बदलाव।"
+  },
+  {
+    "qe": "Which wave cannot be 'Polarized'?",
+    "qh": "कौन सी तरंग का 'ध्रुवीकरण' नहीं किया जा सकता?",
+    "o": [
+      "Light wave",
+      "Sound wave in air | हवा में ध्वनि तरंग",
+      "Radio wave",
+      "None"
+    ],
+    "a": 1,
+    "e": "Only transverse waves can be polarized; sound in air is longitudinal. / केवल अनुप्रस्थ तरंगें ही ध्रुवित हो सकती हैं।"
+  },
+  {
+    "qe": "What is the 'Frequency Ratio' of note 'Ma' (Madhyam) to 'Sa'?",
+    "qh": "'म' (मध्यम) और 'सा' के स्वरों का आवृत्ति अनुपात क्या है?",
+    "o": [
+      "9/8",
+      "4/3 | 4/3",
+      "3/2",
+      "None"
+    ],
+    "a": 1,
+    "e": "Standard interval in musical scales. / संगीत पैमाने में मानक अंतराल।"
+  },
+  {
+    "qe": "What is 'Resonance' intensity?",
+    "qh": "'अनुनाद' की तीव्रता क्या होती है?",
+    "o": [
+      "Zero",
+      "Minimum",
+      "Maximum | अधिकतम (Maximum)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Amplitude is highest at resonance, so intensity is maximum. / अनुनाद पर आयाम उच्चतम होता है, इसलिए तीव्रता भी अधिकतम होती।"
+  },
+  {
+    "qe": "What is the 'Decibel Level' of a 'Jet takeoff' approx?",
+    "qh": "'जेट विमान के उड़ने' का डेसीबल स्तर लगभग कितना है?",
+    "o": [
+      "60 dB",
+      "90 dB",
+      "140 dB | 140 dB",
+      "200 dB"
+    ],
+    "a": 2,
+    "e": "Extremely loud, well above the threshold of pain. / दर्द की सीमा से काफी ऊपर।"
+  },
+  {
+    "qe": "Which 'Property' of sound allows it to bend around corners?",
+    "qh": "ध्वनि का कौन सा 'गुण' उसे कोनों से मुड़ने की अनुमति देता है?",
+    "o": [
+      "Reflection",
+      "Refraction",
+      "Diffraction | विवर्तन (Diffraction)",
+      "Interference"
+    ],
+    "a": 2,
+    "e": "Waves bend when they encounter an obstacle. / बाधा आने पर तरंगें मुड़ जाती हैं।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' cleaning used for in 'Watches'?",
+    "qh": "'घड़ियों' में पराश्रव्य सफाई का उपयोग किसलिए होता है?",
+    "o": [
+      "To wind them",
+      "To clean delicate tiny parts | नाजुक छोटे पुर्जों की सफाई",
+      "To color them",
+      "None"
+    ],
+    "a": 1,
+    "e": "Can reach tiny crevices where brushes cannot. / उन दरारों तक पहुँच सकती है जहाँ ब्रश नहीं जा सकते।"
+  },
+  {
+    "qe": "What is 'Phase' of a wave at a 'Crest'?",
+    "qh": "'शृंग' (Crest) पर तरंग की 'कला' क्या होती है?",
+    "o": [
+      "$0$",
+      "$90^\\circ$ ($\\pi/2$) | $90^\\circ$ ($\\pi/2$)",
+      "$180^\\circ$",
+      "$270^\\circ$"
+    ],
+    "a": 1,
+    "e": "Point of maximum positive displacement. / अधिकतम धनात्मक विस्थापन का बिंदु।"
+  },
+  {
+    "qe": "What is 'Phase' of a wave at a 'Trough'?",
+    "qh": "'गर्त' (Trough) पर तरंग की 'कला' क्या होती है?",
+    "o": [
+      "$90^\\circ$",
+      "$180^\\circ$",
+      "$270^\\circ$ ($3\\pi/2$) | $270^\\circ$ ($3\\pi/2$)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Point of maximum negative displacement. / अधिकतम ऋणात्मक विस्थापन का बिंदु।"
+  },
+  {
+    "qe": "The sound of 'Crickets' (insects) is produced by:",
+    "qh": "'झींगुरों' की आवाज किसके द्वारा उत्पन्न होती है?",
+    "o": [
+      "Vocal cords",
+      "Rubbing wings together | पंखों को आपस में रगड़कर",
+      "Air columns",
+      "None"
+    ],
+    "a": 1,
+    "e": "Known as stridulation. / इसे स्ट्रिडुलेशन कहा जाता है।"
+  },
+  {
+    "qe": "What is 'Standing Wave' nodes' kinetic energy?",
+    "qh": "स्थिर तरंग के नोड्स पर 'गतिज ऊर्जा' क्या होती है?",
+    "o": [
+      "Maximum",
+      "Zero | शून्य (Zero)",
+      "Constant",
+      "Infinite"
+    ],
+    "a": 1,
+    "e": "Nodes are stationary points, so speed and KE are zero. / नोड्स स्थिर बिंदु होते हैं।"
+  },
+  {
+    "qe": "What is 'Standing Wave' antinodes' kinetic energy?",
+    "qh": "स्थिर तरंग के प्रस्पंदों पर 'गतिज ऊर्जा' क्या होती है?",
+    "o": [
+      "Zero",
+      "Maximum | अधिकतम (Maximum)",
+      "Infinite",
+      "None"
+    ],
+    "a": 1,
+    "e": "Antinodes have the highest speed. / प्रस्पंदों पर चाल सबसे अधिक होती है।"
+  },
+  {
+    "qe": "What is the frequency of note 'Dha' (Dhaivat) if 'Sa' is 240 Hz?",
+    "qh": "यदि 'सा' 240 Hz है, तो 'ध' (धैवत) की आवृत्ति क्या होगी?",
+    "o": [
+      "360 Hz",
+      "400 Hz | 400 Hz",
+      "480 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ratio is 5/3. $240 \\times 1.66 \\approx 400$ Hz. / ध और सा का अनुपात 5/3 होता है।"
+  },
+  {
+    "qe": "Which part of ear is responsible for 'Pressure Equalization'?",
+    "qh": "कान का कौन सा भाग 'दाब संतुलन' के लिए जिम्मेदार है?",
+    "o": [
+      "Pinna",
+      "Eustachian Tube | यूस्टेशियन ट्यूब (Eustachian Tube)",
+      "Cochlea",
+      "None"
+    ],
+    "a": 1,
+    "e": "Connects the middle ear to the throat. / यह मध्य कान को गले से जोड़ता है।"
+  },
+  {
+    "qe": "What is 'Sonic Boom' associated with?",
+    "qh": "'सोनिक बूम' किससे संबंधित है?",
+    "o": [
+      "Low speed",
+      "Supersonic aircraft | सुपरसोनिक विमान",
+      "Echoes",
+      "None"
+    ],
+    "a": 1,
+    "e": "Created by shock waves from objects faster than sound. / ध्वनि से तेज चलने वाली वस्तुओं द्वारा।"
+  },
+  {
+    "qe": "Which type of 'Interference' creates a loud sound?",
+    "qh": "किस प्रकार का 'व्यतिकरण' तेज ध्वनि पैदा करता है?",
+    "o": [
+      "Destructive",
+      "Constructive | संपोषी (Constructive)",
+      "Both",
+      "None"
+    ],
+    "a": 1,
+    "e": "Waves add up to increase amplitude. / तरंगें जुड़कर आयाम बढ़ा देती हैं।"
+  },
+  {
+    "qe": "Which type of 'Interference' creates a silent spot?",
+    "qh": "किस प्रकार का 'व्यतिकरण' शांत स्थान (silent spot) बनाता है?",
+    "o": [
+      "Constructive",
+      "Destructive | विनाशी (Destructive)",
+      "Both",
+      "None"
+    ],
+    "a": 1,
+    "e": "Waves cancel each other out. / तरंगें एक-दूसरे को खत्म कर देती हैं।"
+  },
+  {
+    "qe": "What is 'Echo' used for in 'Fishing'?",
+    "qh": "'मछली पकड़ने' में गूँज (Echo) का उपयोग किसलिए होता है?",
+    "o": [
+      "To attract fish",
+      "To detect schools of fish | मछलियों के झुंड का पता लगाना",
+      "To kill fish",
+      "None"
+    ],
+    "a": 1,
+    "e": "Sonar technology helps find underwater life. / सोनार तकनीक पानी के नीचे जीवन खोजने में मदद करती है।"
+  },
+  {
+    "qe": "What is 'Wavelength' unit?",
+    "qh": "'तरंगदैर्ध्य' का मात्रक क्या है?",
+    "o": [
+      "Hertz",
+      "Meter | मीटर (Meter)",
+      "Watt",
+      "None"
+    ],
+    "a": 1,
+    "e": "Distance between peaks. / शिखरों के बीच की दूरी।"
+  },
+  {
+    "qe": "What is the 'Loudest' sound a human ear can hear without instant damage?",
+    "qh": "बिना तत्काल क्षति के मानव कान कितनी 'तेज' ध्वनि सुन सकता है?",
+    "o": [
+      "80 dB",
+      "100 dB",
+      "115-120 dB | 115-120 dB",
+      "None"
+    ],
+    "a": 2,
+    "e": "Brief exposure to 120 dB is painful but survivable. / 120 dB तक थोड़े समय के लिए सहनीय है।"
+  },
+  {
+    "qe": "What is 'Pitch' based on?",
+    "qh": "'पिच' किस पर आधारित है?",
+    "o": [
+      "Amplitude",
+      "Frequency | आवृत्ति (Frequency)",
+      "Loudness",
+      "None"
+    ],
+    "a": 1,
+    "e": "Perception of frequency by the brain. / मस्तिष्क द्वारा आवृत्ति की अनुभूति।"
+  },
+  {
+    "qe": "What type of wave is 'Sound' in air?",
+    "qh": "hawa mein 'dhwani' kis prakar ki tarang hai?",
+    "o": [
+      "Transverse wave",
+      "Longitudinal wave | anudhairya tarang (Longitudinal)",
+      "Electromagnetic wave",
+      "None"
+    ],
+    "a": 1,
+    "e": "Sound travels as a series of compressions and rarefactions. / dhwani sampidan aur viralan ke roop mein chalti hai."
+  },
+  {
+    "qe": "What is the 'SI Unit' of Frequency?",
+    "qh": "aavritti (Frequency) ki 'SI ikai' kya hai?",
+    "o": [
+      "Decibel",
+      "Hertz | hertz (Hz)",
+      "Meter",
+      "Watt"
+    ],
+    "a": 1,
+    "e": "Number of vibrations per second is called Hertz. / prati second hone wale kampano ki sankhya ko hertz kehte hain."
+  },
+  {
+    "qe": "Sound waves CANNOT travel through:",
+    "qh": "dhwani tarangein kisse hokar nahi guzar sakti?",
+    "o": [
+      "Solids",
+      "Liquids",
+      "Vacuum | nirvat (Vacuum)",
+      "Gases"
+    ],
+    "a": 2,
+    "e": "Sound requires a material medium to travel. / dhwani ko yatra ke liye padarthik madhyam chahiye."
+  },
+  {
+    "qe": "What is the speed of sound in 'Air' at 0°C approx?",
+    "qh": "0°C par hawa mein dhwani ki chaal lagbhag kya hai?",
+    "o": [
+      "332 m/s | 332 m/s",
+      "1500 m/s",
+      "5000 m/s",
+      "3 \\times 10^8 m/s"
+    ],
+    "a": 0,
+    "e": "Standard speed in dry air at STP. / STP par shushk hawa mein manak chaal."
+  },
+  {
+    "qe": "Which property of sound determines its 'Pitch'?",
+    "qh": "dhwani ka kaun sa gun uski 'teekshnata' (Pitch) nirdharit karta hai?",
+    "o": [
+      "Amplitude",
+      "Frequency | aavritti (Frequency)",
+      "Velocity",
+      "Intensity"
+    ],
+    "a": 1,
+    "e": "Higher frequency means higher pitch (shrill sound). / uchchh aavritti ka matlab hai uchchh pitch."
+  },
+  {
+    "qe": "What is the 'Audible Range' for human ears?",
+    "qh": "manav kaano ke liye 'shravya sima' kya hai?",
+    "o": [
+      "0 to 20 Hz",
+      "20 Hz to 20,000 Hz | 20 Hz se 20,000 Hz",
+      "Above 20,000 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Frequencies below 20 Hz are infrasonic, above 20 kHz are ultrasonic. / 20 Hz se niche infrasonic aur 20 kHz se upar ultrasonic hoti hain."
+  },
+  {
+    "qe": "What are sound waves below 20 Hz called?",
+    "qh": "20 Hz se niche ki dhwani tarangon ko kya kehte hain?",
+    "o": [
+      "Ultrasonic",
+      "Infrasonic | infrasonic (avshravya)",
+      "Audible",
+      "Supersonic"
+    ],
+    "a": 1,
+    "e": "Whales and elephants can communicate using infrasonic waves. / whale aur haathi infrasonic ka upyog karte hain."
+  },
+  {
+    "qe": "What is the unit used to measure the 'Loudness' of sound?",
+    "qh": "dhwani ki 'prabalata' (Loudness) mapne ke liye kis ikai ka upyog hota hai?",
+    "o": [
+      "Hertz",
+      "Decibel | decibel (dB)",
+      "Meter",
+      "Joule"
+    ],
+    "a": 1,
+    "e": "Named after Alexander Graham Bell. / alexander graham bell ke naam par."
+  },
+  {
+    "qe": "The speed of sound is 'Maximum' in:",
+    "qh": "dhwani ki chaal 'adhiktam' kis-me hoti hai?",
+    "o": [
+      "Air",
+      "Water",
+      "Steel | steel (thos)",
+      "Vacuum"
+    ],
+    "a": 2,
+    "e": "Sound travels faster in denser and more elastic media like solids. / dhwani thos jaise saghan aur pratyasth madhyam mein tez chalti hai."
+  },
+  {
+    "qe": "What is the phenomenon of 'Repetition of Sound' due to reflection called?",
+    "qh": "paravartan ke karan 'dhwani ki punravritti' ko kya kehte hain?",
+    "o": [
+      "Refraction",
+      "Echo | pradhwani (Echo)",
+      "Resonance",
+      "Interference"
+    ],
+    "a": 1,
+    "e": "Occurs when sound reflects off a distant surface. / tab hota hai jab dhwani kisi doorasth satah se takra kar lout-ti hai."
+  },
+  {
+    "qe": "What is the 'Minimum Distance' required to hear a clear echo?",
+    "qh": "ek saaf echo sun-ne ke liye 'nyuntam doori' kya honi chahiye?",
+    "o": [
+      "10 m",
+      "17.2 m | 17.2 m (approx 17m)",
+      "34 m",
+      "5 m"
+    ],
+    "a": 1,
+    "e": "Based on the persistence of hearing (0.1 sec) and speed of sound. / sun-ne ki dridhta (0.1 sec) par aadharit."
+  },
+  {
+    "qe": "Which property of sound waves is used in 'SONAR'?",
+    "qh": "'SONAR' mein dhwani tarangon ka kaun sa gun upyog hota hai?",
+    "o": [
+      "Refraction",
+      "Reflection | paravartan (Reflection)",
+      "Diffraction",
+      "None"
+    ],
+    "a": 1,
+    "e": "Sound Navigation and Ranging uses ultrasonic echoes. / sonar ultrasonic echoes ka upyog karta hai."
+  },
+  {
+    "qe": "What is the full form of 'SONAR'?",
+    "qh": "SONAR ka purn roop kya hai?",
+    "o": [
+      "Sound Navigation and Ranging | Sound Navigation and Ranging",
+      "Solar Navigation and Ranging",
+      "Sound Night Ranging",
+      "None"
+    ],
+    "a": 0,
+    "e": "Used by ships to detect underwater objects. / jahazo dwara pani ke niche ki vastuon ka pata lagane mein prayukt."
+  },
+  {
+    "qe": "Which waves are used in 'Ultrasonography' in hospitals?",
+    "qh": "hospital mein 'ultrasonography' mein kaun si tarangein upyog hoti hain?",
+    "o": [
+      "X-rays",
+      "Ultrasonic waves | ultrasonic tarangein",
+      "Radio waves",
+      "None"
+    ],
+    "a": 1,
+    "e": "High frequency sound waves used for internal body imaging. / sharir ke aantrik bhago ki tasveer ke liye uchchh aavritti ki dhwani."
+  },
+  {
+    "qe": "The speed of sound in air ______ with increase in 'Humidity'.",
+    "qh": "'aardrata' badhne par hawa mein dhwani ki chaal ______.",
+    "o": [
+      "Increases | badhti hai",
+      "Decreases",
+      "Stay same",
+      "None"
+    ],
+    "a": 0,
+    "e": "Moist air is less dense than dry air, and sound travels faster in it. / nam hawa kam saghan hoti hai, isliye dhwani tez chalti hai."
+  },
+  {
+    "qe": "What is 'Reverberation'?",
+    "qh": "'anuranan' (Reverberation) kya hai?",
+    "o": [
+      "Single reflection",
+      "Multiple reflections of sound | dhwani ke bahu-paravartan",
+      "Breaking of sound",
+      "None"
+    ],
+    "a": 1,
+    "e": "Persistence of sound in a big hall due to repeated reflections. / bade hall mein baar-baar paravartan ke karan dhwani ka bane rehna."
+  },
+  {
+    "qe": "Which animal can hear 'Ultrasonic' sounds?",
+    "qh": "kaun sa janvar 'ultrasonic' dhwani sun sakta hai?",
+    "o": [
+      "Bat | chamgadar (Bat)",
+      "Elephant",
+      "Whale",
+      "Both 1 and 3"
+    ],
+    "a": 0,
+    "e": "Bats use ultrasonics for navigation (echolocation). / chamgadar rasta dhoondhne ke liye ultrasonic ka upyog karte hain."
+  },
+  {
+    "qe": "What is 'Quality' or 'Timbre' of sound?",
+    "qh": "dhwani ki 'gunvatta' (Quality) kya hai?",
+    "o": [
+      "Difference in pitch",
+      "Difference in loudness",
+      "Property to distinguish same pitch/loudness sounds | ek saman pitch/loudness wali dhwaniyon mein antar karne ka gun",
+      "None"
+    ],
+    "a": 2,
+    "e": "Helps us distinguish between a flute and a piano. / bansuri aur piano ke beech antar karne mein madad karta hai."
+  },
+  {
+    "qe": "What is the relation between Wave Speed ($v$), Frequency ($f$), and Wavelength ($\\lambda$)?",
+    "qh": "veg, aavritti aur tarangdaidhy ke beech kya sambandh hai?",
+    "o": [
+      "$v = f \\lambda$ | $v = f \\lambda$",
+      "$v = f/\\lambda$",
+      "$f = v \\lambda$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Basic wave equation. / mool tarang samikaran."
+  },
+  {
+    "qe": "What happens to 'Frequency' of sound when it moves from one medium to another?",
+    "qh": "jab dhwani ek madhyam se dusre mein jati hai, to uski 'aavritti' ka kya hota hai?",
+    "o": [
+      "Increases",
+      "Decreases",
+      "Remains constant | niyat rehti hai",
+      "None"
+    ],
+    "a": 2,
+    "e": "Frequency depends on the source, not the medium. / aavritti srot par nirbhar karti hai, madhyam par nahi."
+  },
+  {
+    "qe": "What is 'Mach Number' related to?",
+    "qh": "'mach sankhya' kisse sambandhit hai?",
+    "o": [
+      "Speed of sound | dhwani ki chaal",
+      "Intensity",
+      "Frequency",
+      "None"
+    ],
+    "a": 0,
+    "e": "Ratio of object speed to speed of sound. / vastu ki chaal aur dhwani ki chaal ka anupat."
+  },
+  {
+    "qe": "A sound with Mach number > 1 is called:",
+    "qh": "mach sankhya > 1 wali dhwani ko kya kehte hain?",
+    "o": [
+      "Subsonic",
+      "Supersonic | supersonic",
+      "Infrasonic",
+      "None"
+    ],
+    "a": 1,
+    "e": "Speed is faster than the speed of sound. / chaal dhwani ki chaal se adhik hoti hai."
+  },
+  {
+    "qe": "What is the 'Doppler Effect'?",
+    "qh": "'doppler prabhav' kya hai?",
+    "o": [
+      "Change in speed",
+      "Apparent change in frequency due to motion | gati ke karan aavritti mein aabhasit badlav",
+      "Refraction",
+      "None"
+    ],
+    "a": 1,
+    "e": "Observed when source or observer is moving. / tab dikhta hai jab srot ya prekshak gati mein hon."
+  },
+  {
+    "qe": "What is 'Intensity' of sound?",
+    "qh": "dhwani ki 'teevrata' (Intensity) kya hai?",
+    "o": [
+      "Energy per unit area per unit time | prati ikai kshetraphal prati ikai samay oorja",
+      "Pitch",
+      "Loudness",
+      "None"
+    ],
+    "a": 0,
+    "e": "Physical quantity measured in $W/m^2$. / $W/m^2$ mein mapi jane wali bhautik rashi."
+  },
+  {
+    "qe": "Which part of the 'Human Ear' converts vibrations into electrical signals?",
+    "qh": "manav kaan ka kaun sa bhag kampano ko vidyut sanketo mein badalta hai?",
+    "o": [
+      "Eardrum",
+      "Cochlea | cochlea (karnavart)",
+      "Pinna",
+      "Hammer"
+    ],
+    "a": 1,
+    "e": "The fluid-filled part in the inner ear. / aantrik kaan ka drav-bhara bhag."
+  },
+  {
+    "qe": "What is 'Resonance'?",
+    "qh": "'anunaad' (Resonance) kya hai?",
+    "o": [
+      "Echo",
+      "Vibration with high amplitude when natural frequency matches | jab prakritik aavritti milti hai to uchchh aayam ke saath kampan",
+      "Damping",
+      "None"
+    ],
+    "a": 1,
+    "e": "Occurs when external frequency matches natural frequency. / jab bahari aavritti prakritik aavritti se milti hai."
+  },
+  {
+    "qe": "The speed of sound is 'Minimum' in:",
+    "qh": "dhwani ki chaal 'nyuntam' kis-me hoti hai?",
+    "o": [
+      "Gases (Air) | gasen (hawa)",
+      "Liquids",
+      "Solids",
+      "Vacuum"
+    ],
+    "a": 0,
+    "e": "Due to low density and elasticity compared to solids/liquids. / thos/drav ki tulna mein kam ghnatv aur pratyasthta ke karan."
+  },
+  {
+    "qe": "What is the 'Time Period' (T) related to Frequency (f)?",
+    "qh": "samay kaal aur aavritti ka kya sambandh hai?",
+    "o": [
+      "$T = f$",
+      "$T = 1/f$ | $T = 1/f$",
+      "$T = f^2$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Reciprocal relation. / vyutkram sambandh."
+  },
+  {
+    "qe": "What is 'Amplitude' of a wave?",
+    "qh": "ek tarang ka 'aayam' (Amplitude) kya hai?",
+    "o": [
+      "Distance between crests",
+      "Maximum displacement from mean position | madhya sthiti se adhiktam visthapan",
+      "Speed",
+      "None"
+    ],
+    "a": 1,
+    "e": "Determines the loudness of sound. / dhwani ki prabalata nirdharit karta hai."
+  },
+  {
+    "qe": "Which sound wave cannot be heard by humans?",
+    "qh": "kaun si dhwani tarang manushyon dwara nahi suni ja sakti?",
+    "o": [
+      "100 Hz",
+      "5000 Hz",
+      "25,000 Hz | 25,000 Hz",
+      "20 Hz"
+    ],
+    "a": 2,
+    "e": "It is in the ultrasonic range (> 20 kHz). / ye ultrasonic range mein hai."
+  },
+  {
+    "qe": "What is 'Stethoscope' based on?",
+    "qh": "'stethoscope' kis par aadharit hai?",
+    "o": [
+      "Refraction",
+      "Multiple reflection of sound | dhwani ka bahu-paravartan",
+      "Diffraction",
+      "None"
+    ],
+    "a": 1,
+    "e": "Sound travels through the tube by multiple reflections. / tube mein dhwani bahu-paravartan se yatra karti hai."
+  },
+  {
+    "qe": "What is 'Sound Barrier'?",
+    "qh": "'dhwani avrodh' (Sound Barrier) kya hai?",
+    "o": [
+      "A wall",
+      "Speed of sound | dhwani ki chaal",
+      "Frequency limit",
+      "None"
+    ],
+    "a": 1,
+    "e": "The sudden increase in drag as an object approaches speed of sound. / jab vastu dhwani ki chaal ke paas pahunchti hai to khinchav badh jata hai."
+  },
+  {
+    "qe": "What are 'Sonic Booms' caused by?",
+    "qh": "'sonic booms' kiske karan hote hain?",
+    "o": [
+      "Infrasonics",
+      "Supersonic aircrafts | supersonic viman",
+      "Loud speakers",
+      "None"
+    ],
+    "a": 1,
+    "e": "Shock waves created by objects moving faster than sound. / dhwani se tez chalne wali vastuon dwara bani shock tarangein."
+  },
+  {
+    "qe": "What happens to sound speed with 'Temperature' increase?",
+    "qh": "tapman badhne par dhwani ki chaal ka kya hota hai?",
+    "o": [
+      "Increases | badhti hai",
+      "Decreases",
+      "No change",
+      "None"
+    ],
+    "a": 0,
+    "e": "Speed increases by 0.61 m/s for every 1°C rise. / prati 1°C badhne par chaal 0.61 m/s badhti hai."
+  },
+  {
+    "qe": "What is 'Echo-location' used by?",
+    "qh": "'echo-location' ka upyog kiske dwara kiya jata hai?",
+    "o": [
+      "Bats",
+      "Dolphins",
+      "Submarines",
+      "All of these | uprokt sabhi"
+    ],
+    "a": 3,
+    "e": "Used to detect obstacles or prey. / badhaon ya shikar ka pata lagane ke liye."
+  },
+  {
+    "qe": "What is 'Infrasound' primarily produced by?",
+    "qh": "'avshravya dhwani' (Infrasound) mukhya roop se kisse paida hoti hai?",
+    "o": [
+      "Earthquakes | bhukamp",
+      "Whistles",
+      "Piano",
+      "None"
+    ],
+    "a": 0,
+    "e": "Large objects like Earth produce very low frequencies. / prithvi jaisi badi vastuyen bahut kam aavritti paida karti hain."
+  },
+  {
+    "qe": "What is 'Wavelength' ($\\lambda$)?",
+    "qh": "'tarangdaidhy' ($\\lambda$) kya hai?",
+    "o": [
+      "Distance between two consecutive crests/troughs | do kramagat shring/garta ke beech ki doori",
+      "Height of wave",
+      "Speed",
+      "None"
+    ],
+    "a": 0,
+    "e": "Measured in meters. / ise meter mein mapa jata hai."
+  },
+  {
+    "qe": "Loudness of sound is proportional to ______ of amplitude.",
+    "qh": "dhwani ki prabalata aayam ke ______ ke samanupati hoti hai.",
+    "o": [
+      "Square root",
+      "Square | varg (Square)",
+      "Cube",
+      "None"
+    ],
+    "a": 1,
+    "e": "$Loudness \\propto Amplitude^2$. / prabalata $\\propto$ aayam²."
+  },
+  {
+    "qe": "What is 'Ultrasonic' frequency range?",
+    "qh": "'ultrasonic' aavritti range kya hai?",
+    "o": [
+      "Below 20 Hz",
+      "20 to 20,000 Hz",
+      "Above 20,000 Hz | 20,000 Hz se upar",
+      "None"
+    ],
+    "a": 2,
+    "e": "Beyond the range of human hearing. / manav shravan sima ke bahar."
+  },
+  {
+    "qe": "What is 'Beats' phenomenon?",
+    "qh": "'beats' (vipand) ki ghatna kya hai?",
+    "o": [
+      "Loud sound",
+      "Periodic variation in loudness due to slightly different frequencies | thodi alag aavrittiyon ke karan prabalata mein badlav",
+      "Reflection",
+      "None"
+    ],
+    "a": 1,
+    "e": "Result of interference of two waves of close frequencies. / paas-paas ki aavrittiyon wali do tarangon ke vyatikaran ka parinam."
+  },
+  {
+    "qe": "Which part of ear is also called 'Drum'?",
+    "qh": "kaan ke kis bhag ko 'dhol' (Drum) bhi kehte hain?",
+    "o": [
+      "Pinna",
+      "Tympanic membrane | tympanic jhalli (Eardrum)",
+      "Cochlea",
+      "None"
+    ],
+    "a": 1,
+    "e": "Vibrates when sound waves hit it. / jab dhwani tarangein takrati hain to ye kampan karta hai."
+  },
+  {
+    "qe": "What is 'Note' in music?",
+    "qh": "sangeet mein 'note' kya hai?",
+    "o": [
+      "Single frequency sound",
+      "Mixture of several frequencies | kai aavrittiyon ka mishran",
+      "Noise",
+      "None"
+    ],
+    "a": 1,
+    "e": "A sound produced by mixing various frequencies which is pleasant. / kai aavrittiyon se bani suhani dhwani."
+  },
+  {
+    "qe": "What is 'Tone'?",
+    "qh": "'tone' kya hai?",
+    "o": [
+      "Sound of single frequency | ekal aavritti wali dhwani",
+      "Loud noise",
+      "Mixed frequencies",
+      "None"
+    ],
+    "a": 0,
+    "e": "Pure sound with only one frequency. / sirf ek aavritti wali shuddh dhwani."
+  },
+  {
+    "qe": "Speed of sound in 'Steel' is approx:",
+    "qh": "'steel' mein dhwani ki chaal lagbhag hai:",
+    "o": [
+      "340 m/s",
+      "1500 m/s",
+      "5960 m/s | 5960 m/s",
+      "None"
+    ],
+    "a": 2,
+    "e": "Much faster than air or water. / hawa ya pani se bahut tez."
+  },
+  {
+    "qe": "What is 'Noise'?",
+    "qh": "'shor' (Noise) kya hai?",
+    "o": [
+      "Pleasant sound",
+      "Unpleasant and irregular sound | apriya aur aniyamit dhwani",
+      "Musical note",
+      "None"
+    ],
+    "a": 1,
+    "e": "Disordered sound that causes irritation. / avyavasthit dhwani jo chidchidapan paida karti hai."
+  },
+  {
+    "qe": "Which medium is 'Empty Space'?",
+    "qh": "'shunya sthan' (Empty Space) kaun sa madhyam hai?",
+    "o": [
+      "Air",
+      "Water",
+      "Vacuum | nirvat (Vacuum)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Sound cannot travel here. / yahan dhwani yatra nahi kar sakti."
+  },
+  {
+    "qe": "What is 'Persistence of Hearing' time?",
+    "qh": "'shravan dridhta' (Persistence of Hearing) samay kya hai?",
+    "o": [
+      "1 sec",
+      "0.1 sec | 0.1 sec",
+      "0.5 sec",
+      "None"
+    ],
+    "a": 1,
+    "e": "The sensation of sound remains in brain for 0.1s. / dhwani ka ehsas dimaag mein 0.1s tak rehta hai."
+  },
+  {
+    "qe": "What is used to 'Absorb' sound in auditoriums?",
+    "qh": "auditorium mein dhwani ko 'sokhne' (Absorb) ke liye kya upyog hota hai?",
+    "o": [
+      "Mirrors",
+      "Compressed fiberboard / Curtains | fiberboard / parde",
+      "Metals",
+      "None"
+    ],
+    "a": 1,
+    "e": "To reduce reverberation. / anuranan ko kam karne ke liye."
+  },
+  {
+    "qe": "Speed of sound in 'Water' is approx:",
+    "qh": "pani mein dhwani ki chaal lagbhag hai:",
+    "o": [
+      "340 m/s",
+      "1500 m/s | 1500 m/s",
+      "5000 m/s",
+      "None"
+    ],
+    "a": 1,
+    "e": "Approx 4-5 times faster than in air. / hawa se lagbhag 4-5 guna tez."
+  },
+  {
+    "qe": "What is Sound?",
+    "qh": "dhwani kya hai?",
+    "o": [
+      "Form of matter",
+      "Form of energy | oorja ka ek roop",
+      "Invisible gas",
+      "None"
+    ],
+    "a": 1,
+    "e": "Energy that produces sensation of hearing. / oorja jo sun-ne ki sanvedna paida karti hai."
+  },
+  {
+    "qe": "What is the relation between the 'Intensity' ($I$) of sound and 'Amplitude' ($A$)?",
+    "qh": "ध्वनि की 'तीव्रता' ($I$) और 'आयाम' ($A$) के बीच क्या संबंध है?",
+    "o": [
+      "$I \\propto A$",
+      "$I \\propto A^2$ | $I \\propto A^2$",
+      "$I \\propto \\sqrt{A}$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Intensity is directly proportional to the square of the amplitude. / तीव्रता आयाम के वर्ग के समानुपाती होती है।"
+  },
+  {
+    "qe": "Which part of the 'Human Ear' is responsible for maintaining body balance?",
+    "qh": "मानव कान का कौन सा भाग शरीर का संतुलन बनाए रखने के लिए जिम्मेदार है?",
+    "o": [
+      "Cochlea",
+      "Semicircular canals | अर्धवृत्ताकार नलिकाएं",
+      "Eardrum",
+      "Pinna"
+    ],
+    "a": 1,
+    "e": "The vestibular system in the inner ear helps with balance. / आंतरिक कान का वेस्टिबुलर सिस्टम संतुलन में मदद करता है।"
+  },
+  {
+    "qe": "The speed of sound in air is 'Independent' of:",
+    "qh": "हवा में ध्वनि की गति किससे 'स्वतंत्र' होती है?",
+    "o": [
+      "Temperature",
+      "Pressure | दाब (Pressure)",
+      "Humidity",
+      "Density"
+    ],
+    "a": 1,
+    "e": "At constant temperature, change in pressure does not affect the speed of sound. / स्थिर तापमान पर दाब बदलने से ध्वनि की चाल नहीं बदलती।"
+  },
+  {
+    "qe": "Which of the following has the 'Highest Pitch' of sound?",
+    "qh": "निम्नलिखित में से किसकी ध्वनि की 'पिच' सबसे अधिक होती है?",
+    "o": [
+      "Man's voice",
+      "Woman's voice | महिला की आवाज",
+      "Lion's roar",
+      "Drum beat"
+    ],
+    "a": 1,
+    "e": "Women's and children's voices generally have higher frequency, hence higher pitch. / महिलाओं और बच्चों की आवाज की आवृत्ति अधिक होती है।"
+  },
+  {
+    "qe": "What is the 'Threshold of Hearing' for a healthy human ear?",
+    "qh": "एक स्वस्थ मानव कान के लिए 'श्रवण की दहलीज' क्या है?",
+    "o": [
+      "0 dB | 0 dB",
+      "10 dB",
+      "120 dB",
+      "None"
+    ],
+    "a": 0,
+    "e": "This is the minimum sound level that a human can hear ($10^{-12} W/m^2$). / यह वह न्यूनतम स्तर है जिसे मनुष्य सुन सकता है।"
+  },
+  {
+    "qe": "What is the 'Threshold of Pain' for sound in dB?",
+    "qh": "ध्वनि के लिए 'दर्द की दहलीज' कितने dB पर होती है?",
+    "o": [
+      "80 dB",
+      "100 dB",
+      "120 dB | 120 dB",
+      "None"
+    ],
+    "a": 2,
+    "e": "Sound above 120-130 dB causes physical pain to the ear. / 120 dB से ऊपर की ध्वनि कान में दर्द पैदा करती है।"
+  },
+  {
+    "qe": "Which 'Medium' has the highest speed of sound among these?",
+    "qh": "इनमें से किस 'माध्यम' में ध्वनि की गति सबसे अधिक है?",
+    "o": [
+      "Water",
+      "Air",
+      "Aluminium | एल्युमिनियम",
+      "Glass"
+    ],
+    "a": 2,
+    "e": "Speed in Aluminium is approx 6420 m/s. / एल्युमिनियम में चाल लगभग 6420 मीटर/सेकंड होती है।"
+  },
+  {
+    "qe": "What is 'Ultrasonic' sound used for in industries?",
+    "qh": "उद्योगों में 'पराबैंगनी' (Ultrasonic) ध्वनि का उपयोग किसके लिए होता है?",
+    "o": [
+      "Cleaning spiral parts | सर्पिल पुर्जों की सफाई",
+      "Detecting cracks in metal | धातु में दरारों का पता लगाना",
+      "Both 1 and 2 | दोनों 1 और 2",
+      "None"
+    ],
+    "a": 2,
+    "e": "Used for non-destructive testing and precision cleaning. / इसका उपयोग पुर्जों की सफाई और टेस्टिंग के लिए होता है।"
+  },
+  {
+    "qe": "What happens to 'Wavelength' when sound enters from air to water?",
+    "qh": "जब ध्वनि हवा से पानी में प्रवेश करती है, तो 'तरंगदैर्ध्य' का क्या होता है?",
+    "o": [
+      "Increases | बढ़ती है",
+      "Decreases",
+      "Stay same",
+      "None"
+    ],
+    "a": 0,
+    "e": "Speed increases in water, and $v = f \\lambda$. Since frequency is constant, wavelength must increase. / पानी में चाल बढ़ने से तरंगदैर्ध्य बढ़ जाती है।"
+  },
+  {
+    "qe": "What is 'Diffraction' of sound?",
+    "qh": "ध्वनि का 'विवर्तन' (Diffraction) क्या है?",
+    "o": [
+      "Reflection",
+      "Bending of sound around obstacles | बाधाओं के किनारे से ध्वनि का मुड़ना",
+      "Breaking of sound",
+      "None"
+    ],
+    "a": 1,
+    "e": "Allows us to hear someone speaking from around a corner. / इसी कारण हम कोने के पीछे से भी आवाज सुन पाते हैं।"
+  },
+  {
+    "qe": "What is the 'Reflection of sound' from clouds and land during thunder called?",
+    "qh": "गरज के दौरान बादलों और जमीन से ध्वनि का 'परावर्तन' क्या कहलाता है?",
+    "o": [
+      "Echo",
+      "Rolling of thunder | गड़गड़ाहट (Rolling)",
+      "Refraction",
+      "None"
+    ],
+    "a": 1,
+    "e": "Caused by multiple reflections of the sound of lightning. / यह बिजली की आवाज के बार-बार परावर्तन के कारण होता है।"
+  },
+  {
+    "qe": "The speed of sound in air is 'Directly Proportional' to:",
+    "qh": "हवा में ध्वनि की गति किसके 'सीधे समानुपाती' होती है?",
+    "o": [
+      "Temperature (T)",
+      "Square root of Temperature ($\\sqrt{T}$) | तापमान के वर्गमूल ($\\sqrt{T}$)",
+      "Pressure",
+      "None"
+    ],
+    "a": 1,
+    "e": "$v \\propto \\sqrt{T}$ where T is absolute temperature. / चाल परम तापमान के वर्गमूल के समानुपाती होती है।"
+  },
+  {
+    "qe": "Which instrument uses 'Resonance' to produce music?",
+    "qh": "संगीत उत्पन्न करने के लिए कौन सा वाद्ययंत्र 'अनुनाद' का उपयोग करता है?",
+    "o": [
+      "Guitar | गिटार",
+      "Violin | वायलिन",
+      "Flute | बांसुरी",
+      "All of these | उपरोक्त सभी"
+    ],
+    "a": 3,
+    "e": "Sound boxes or air columns vibrate at natural frequencies. / वाद्ययंत्रों के बॉक्स या एयर कॉलम अनुनाद पर काम करते हैं।"
+  },
+  {
+    "qe": "What is 'Supersonic Speed'?",
+    "qh": "'सुपरसोनिक चाल' क्या है?",
+    "o": [
+      "Speed of light",
+      "Speed greater than speed of sound | ध्वनि की चाल से अधिक चाल",
+      "Speed of sound",
+      "None"
+    ],
+    "a": 1,
+    "e": "Measured in Mach numbers ($Mach > 1$). / इसे मैक नंबर में मापा जाता है।"
+  },
+  {
+    "qe": "What are 'Longitudinal Waves' consist of?",
+    "qh": "'अनुदैर्ध्य तरंगों' में क्या शामिल होता है?",
+    "o": [
+      "Crests and Troughs",
+      "Compressions and Rarefactions | संपीडन और विरलन",
+      "Only Crests",
+      "None"
+    ],
+    "a": 1,
+    "e": "Particles of the medium move parallel to the wave direction. / माध्यम के कण तरंग की दिशा के समानांतर चलते हैं।"
+  },
+  {
+    "qe": "What is 'Intensity Level' of sound measured in?",
+    "qh": "ध्वनि के 'तीव्रता स्तर' को किसमें मापा जाता है?",
+    "o": [
+      "Watt",
+      "$W/m^2$",
+      "Decibel (dB) | डेसीबल (dB)",
+      "Hertz"
+    ],
+    "a": 2,
+    "e": "It is a logarithmic scale for sound intensity. / यह ध्वनि तीव्रता के लिए एक लघुगणकीय पैमाना है।"
+  },
+  {
+    "qe": "What happens to the 'Pitch' of a siren as an ambulance 'Approaches' you?",
+    "qh": "जैसे ही एम्बुलेंस आपके 'पास आती' है, सायरन की 'पिच' का क्या होता है?",
+    "o": [
+      "Decreases",
+      "Increases | बढ़ती है",
+      "Stay same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Due to Doppler Effect, frequency appears higher. / डॉप्लर प्रभाव के कारण आवृत्ति बढ़ी हुई लगती है।"
+  },
+  {
+    "qe": "What is 'Infrasonic' wave frequency?",
+    "qh": "'अधोश्राव्य' (Infrasonic) तरंग की आवृत्ति क्या है?",
+    "o": [
+      "> 20,000 Hz",
+      "< 20 Hz | 20 Hz से कम",
+      "20 - 200 Hz",
+      "None"
+    ],
+    "a": 1,
+    "e": "Human ear cannot hear these low frequencies. / मानव कान इन कम आवृत्तियों को नहीं सुन सकता।"
+  },
+  {
+    "qe": "Which part of ear acts like a 'Funnel' to collect sound?",
+    "qh": "कान का कौन सा भाग ध्वनि एकत्र करने के लिए 'कीप' की तरह कार्य करता है?",
+    "o": [
+      "Cochlea",
+      "Pinna | पिन्ना (Pinna)",
+      "Eardrum",
+      "Hammer"
+    ],
+    "a": 1,
+    "e": "The outer visible part of the ear. / कान का बाहरी दिखने वाला भाग।"
+  },
+  {
+    "qe": "The speed of sound in air at 20°C is approximately:",
+    "qh": "20°C पर हवा में ध्वनि की चाल लगभग कितनी होती है?",
+    "o": [
+      "332 m/s",
+      "344 m/s | 344 m/s",
+      "1500 m/s",
+      "None"
+    ],
+    "a": 1,
+    "e": "Speed increases with temperature from the base 332 m/s. / तापमान के साथ चाल 332 मीटर/सेकंड से बढ़ जाती है।"
+  },
+  {
+    "qe": "What is the 'Time' taken for sound to travel 1 km in air?",
+    "qh": "हवा में ध्वनि को 1 किमी की दूरी तय करने में कितना 'समय' लगता है?",
+    "o": [
+      "1 sec",
+      "3 sec | लगभग 3 सेकंड",
+      "10 sec",
+      "None"
+    ],
+    "a": 1,
+    "e": "Since speed is approx 340 m/s, $1000/340 \\approx 3$ seconds. / लगभग 340 मी/से की चाल के हिसाब से।"
+  },
+  {
+    "qe": "Which 'Animal' uses infrasound to communicate over long distances?",
+    "qh": "कौन सा 'जानवर' लंबी दूरी पर संचार के लिए अधोश्राव्य (Infrasound) का उपयोग करता है?",
+    "o": [
+      "Bat",
+      "Elephant | हाथी (Elephant)",
+      "Dog",
+      "Cat"
+    ],
+    "a": 1,
+    "e": "Elephants can hear and produce infrasound for long-range talk. / हाथी लंबी दूरी की बातचीत के लिए इसका उपयोग करते हैं।"
+  },
+  {
+    "qe": "What is 'Beat Frequency' equal to?",
+    "qh": "'विपन्द आवृत्ति' (Beat Frequency) किसके बराबर होती है?",
+    "o": [
+      "Sum of two frequencies",
+      "Difference of two frequencies | दो आवृत्तियों के अंतर के",
+      "Product",
+      "None"
+    ],
+    "a": 1,
+    "e": "$f_{beat} = |f_1 - f_2|$. / यह दो आवृत्तियों के घटाव के बराबर होती है।"
+  },
+  {
+    "qe": "What is 'Noise Pollution' level limit for residential areas at night in India?",
+    "qh": "भारत में रात के समय आवासीय क्षेत्रों के लिए 'ध्वनि प्रदूषण' की सीमा क्या है?",
+    "o": [
+      "45 dB | 45 dB",
+      "55 dB",
+      "75 dB",
+      "None"
+    ],
+    "a": 0,
+    "e": "According to Noise Pollution Rules. / ध्वनि प्रदूषण नियमों के अनुसार।"
+  },
+  {
+    "qe": "Which phenomenon causes 'Dead Spots' in a theater?",
+    "qh": "किस घटना के कारण थिएटर में 'डेड स्पॉट' (जहाँ आवाज नहीं आती) बनते हैं?",
+    "o": [
+      "Reflection",
+      "Interference | व्यतिकरण (Interference)",
+      "Refraction",
+      "None"
+    ],
+    "a": 1,
+    "e": "Destructive interference of sound waves. / ध्वनि तरंगों का विनाशकारी व्यतिकरण।"
+  },
+  {
+    "qe": "What is 'Timbre' used for?",
+    "qh": "'स्वरमाधुर्य' (Timbre) का उपयोग किसलिए किया जाता है?",
+    "o": [
+      "To find loudness",
+      "To distinguish different musical instruments | विभिन्न वाद्ययंत्रों में अंतर करने के लिए",
+      "To measure speed",
+      "None"
+    ],
+    "a": 1,
+    "e": "Quality of sound that depends on the waveform and harmonics. / ध्वनि का वह गुण जो वेवफॉर्म और हार्मोनिक्स पर निर्भर करता है।"
+  },
+  {
+    "qe": "The sound of 'Thunder' is heard later than the 'Flash' because:",
+    "qh": "'बादल की गरज' 'बिजली की चमक' के बाद सुनाई देती है क्योंकि:",
+    "o": [
+      "Sound is produced later",
+      "Light travels much faster than sound | प्रकाश ध्वनि से बहुत तेज चलता है",
+      "Thunder is heavy",
+      "None"
+    ],
+    "a": 1,
+    "e": "Light speed is $3 \\times 10^8$ m/s, Sound is only $340$ m/s. / प्रकाश की गति ध्वनि से लाखों गुना अधिक है।"
+  },
+  {
+    "qe": "What is 'Intensity' unit in terms of Power?",
+    "qh": "शक्ति के संदर्भ में 'तीव्रता' का मात्रक क्या है?",
+    "o": [
+      "Watt-meter",
+      "Watt/meter$^2$ | वाट प्रति वर्ग मीटर",
+      "Joule/sec",
+      "None"
+    ],
+    "a": 1,
+    "e": "Energy per unit area per unit time. / प्रति इकाई क्षेत्र प्रति इकाई समय ऊर्जा।"
+  },
+  {
+    "qe": "Which part of ear contains 'Tiny Bones' (Ossicles)?",
+    "qh": "कान के किस भाग में 'नन्हीं हड्डियाँ' (ओसिकल्स) होती हैं?",
+    "o": [
+      "Outer ear",
+      "Middle ear | मध्य कर्ण (Middle Ear)",
+      "Inner ear",
+      "None"
+    ],
+    "a": 1,
+    "e": "Includes Hammer, Anvil and Stirrup. / इसमें हैमर, एनविल और स्टिरप शामिल हैं।"
+  },
+  {
+    "qe": "What is 'Stirrup' (Stapes) bone specialty?",
+    "qh": "'स्टिरप' (स्टेपीज़) हड्डी की क्या विशेषता है?",
+    "o": [
+      "Hardest bone",
+      "Smallest bone in human body | मानव शरीर की सबसे छोटी हड्डी",
+      "Longest bone",
+      "None"
+    ],
+    "a": 1,
+    "e": "Located in the middle ear. / यह मध्य कान में स्थित होती है।"
+  },
+  {
+    "qe": "What is 'Acoustics'?",
+    "qh": "'अकौस्टिक्स' (Acoustics) क्या है?",
+    "o": [
+      "Study of light",
+      "Study of sound | ध्वनि का अध्ययन",
+      "Study of water",
+      "None"
+    ],
+    "a": 1,
+    "e": "Branch of physics dealing with production and properties of sound. / भौतिकी की वह शाखा जो ध्वनि के गुणों से संबंधित है।"
+  },
+  {
+    "qe": "Why is 'Soft Furniture' used in sound recording studios?",
+    "qh": "साउंड रिकॉर्डिंग स्टूडियो में 'मुलायम फर्नीचर' क्यों उपयोग किया जाता है?",
+    "o": [
+      "To look good",
+      "To absorb unwanted echoes | अवांछित गूँज को सोखने के लिए",
+      "To sit comfortably",
+      "None"
+    ],
+    "a": 1,
+    "e": "Porous materials prevent sound reflection. / छिद्रपूर्ण सामग्री ध्वनि परावर्तन को रोकती है।"
+  },
+  {
+    "qe": "What is 'Mach 2' speed?",
+    "qh": "'मैक 2' चाल क्या है?",
+    "o": [
+      "Speed of sound",
+      "Twice the speed of sound | ध्वनि की चाल की दोगुनी",
+      "Half the speed",
+      "None"
+    ],
+    "a": 1,
+    "e": "Indicates supersonic speed. / यह सुपरसोनिक चाल को दर्शाता है।"
+  },
+  {
+    "qe": "Which factor 'Decreases' the speed of sound in air?",
+    "qh": "हवा में ध्वनि की चाल को कौन सा कारक 'कम' करता है?",
+    "o": [
+      "High Humidity",
+      "Low Temperature | कम तापमान",
+      "High Temperature",
+      "None"
+    ],
+    "a": 1,
+    "e": "Speed is directly proportional to $\\sqrt{T}$. Cold air means slower sound. / कम तापमान पर ध्वनि धीमी चलती है।"
+  },
+  {
+    "qe": "What is 'Periodic' in a wave?",
+    "qh": "तरंग में 'आवर्ती' (Periodic) क्या होता है?",
+    "o": [
+      "Motion after fixed time intervals | निश्चित समय अंतराल के बाद गति",
+      "Random motion",
+      "Linear motion",
+      "None"
+    ],
+    "a": 0,
+    "e": "Vibrations repeat themselves after a time period T. / कंपन एक समय अवधि T के बाद खुद को दोहराते हैं।"
+  },
+  {
+    "qe": "What is 'Sound' characterized as?",
+    "qh": "'ध्वनि' को किस रूप में वर्णित किया जाता है?",
+    "o": [
+      "Mechanical Wave | यांत्रिक तरंग",
+      "Non-mechanical wave",
+      "Transverse only",
+      "None"
+    ],
+    "a": 0,
+    "e": "Needs a medium and physical vibration to travel. / इसे यात्रा के लिए माध्यम और भौतिक कंपन चाहिए।"
+  },
+  {
+    "qe": "Which logic can 'Sound' not follow?",
+    "qh": "'ध्वनि' किस नियम का पालन नहीं कर सकती?",
+    "o": [
+      "Reflection",
+      "Refraction",
+      "Polarization | ध्रुवीकरण (Polarization)",
+      "Interference"
+    ],
+    "a": 2,
+    "e": "Only transverse waves can be polarized; sound in air is longitudinal. / केवल अनुप्रस्थ तरंगों का ध्रुवीकरण हो सकता है।"
+  },
+  {
+    "qe": "What is 'Loudness' measured subjectively by?",
+    "qh": "व्यक्तिगत रूप से 'प्रबलता' को किसके द्वारा मापा जाता है?",
+    "o": [
+      "Phon | फोन (Phon)",
+      "Hertz",
+      "Watt",
+      "None"
+    ],
+    "a": 0,
+    "e": "Unit of perceived loudness. / महसूस की गई प्रबलता का मात्रक।"
+  },
+  {
+    "qe": "What is 'Overtone'?",
+    "qh": "'अधिस्वरक' (Overtone) क्या है?",
+    "o": [
+      "Base frequency",
+      "Higher frequency harmonics | उच्च आवृत्ति हार्मोनिक्स",
+      "Noise",
+      "None"
+    ],
+    "a": 1,
+    "e": "Frequencies higher than the fundamental frequency in a complex sound. / एक जटिल ध्वनि में मूल आवृत्ति से उच्च आवृत्तियाँ।"
+  },
+  {
+    "qe": "Which part of the ear is 'Snail-shaped'?",
+    "qh": "कान का कौन सा भाग 'घोंघे के आकार' का होता है?",
+    "o": [
+      "Pinna",
+      "Cochlea | कोकलिया (Cochlea)",
+      "Eardrum",
+      "Anvil"
+    ],
+    "a": 1,
+    "e": "Filled with fluid and hair cells to detect sound. / ध्वनि का पता लगाने के लिए द्रव और हेयर सेल्स से भरा।"
+  },
+  {
+    "qe": "What is the speed of sound in 'Vacuum'?",
+    "qh": "'निर्वात' में ध्वनि की चाल क्या है?",
+    "o": [
+      "$3 \\times 10^8$ m/s",
+      "332 m/s",
+      "Zero | शून्य (Zero)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Sound cannot travel without a medium. / बिना माध्यम के ध्वनि यात्रा नहीं कर सकती।"
+  },
+  {
+    "qe": "The 'Pitch' of a sound depends on its:",
+    "qh": "ध्वनि की 'पिच' किस पर निर्भर करती है?",
+    "o": [
+      "Amplitude",
+      "Frequency | आवृत्ति (Frequency)",
+      "Velocity",
+      "None"
+    ],
+    "a": 1,
+    "e": "Higher frequency = Shrill voice, Lower frequency = Grave voice. / अधिक आवृत्ति = तीखी आवाज।"
+  },
+  {
+    "qe": "What is 'Shock Wave' related to?",
+    "qh": "'शॉक वेव' किससे संबंधित है?",
+    "o": [
+      "Sonic Boom | सोनिक बूम",
+      "Echo",
+      "Resonance",
+      "None"
+    ],
+    "a": 0,
+    "e": "Produced by objects moving at supersonic speeds. / सुपरसोनिक गति से चलने वाली वस्तुओं द्वारा निर्मित।"
+  },
+  {
+    "qe": "What is the frequency of 'Stethoscope' sounds usually?",
+    "qh": "'स्टेथोस्कोप' की ध्वनियों की आवृत्ति आमतौर पर क्या होती है?",
+    "o": [
+      "Ultrasonic",
+      "Low Frequency Audible | कम आवृत्ति वाली श्रव्य",
+      "Infrasonic",
+      "None"
+    ],
+    "a": 1,
+    "e": "Focuses on heart and lung sounds which are low frequency. / हृदय और फेफड़ों की ध्वनियों पर केंद्रित।"
+  },
+  {
+    "qe": "Which medium conducts sound 'Slowest'?",
+    "qh": "कौन सा माध्यम ध्वनि को 'सबसे धीमा' संचालित करता है?",
+    "o": [
+      "Steel",
+      "Water",
+      "Air | हवा (Air)",
+      "Copper"
+    ],
+    "a": 2,
+    "e": "Gases have the lowest speed of sound. / गैसों में ध्वनि की चाल सबसे कम होती है।"
+  },
+  {
+    "qe": "What is 'Wavelength' of a 340 Hz sound in air (v=340)?",
+    "qh": "हवा में 340 Hz ध्वनि की 'तरंगदैर्ध्य' क्या होगी ($v=340$)?",
+    "o": [
+      "10 m",
+      "1 m | 1 मीटर",
+      "0.1 m",
+      "None"
+    ],
+    "a": 1,
+    "e": "Using $\\lambda = v / f = 340 / 340 = 1$ m. / सूत्र $\\lambda = v / f$ का उपयोग करके।"
+  },
+  {
+    "qe": "What is 'Infrasound' used for in nature?",
+    "qh": "प्रकृति में 'अधोश्राव्य' (Infrasound) का उपयोग किसलिए होता है?",
+    "o": [
+      "By bats to find food",
+      "By whales to navigate | व्हेल द्वारा दिशा खोजने हेतु",
+      "By birds to fly",
+      "None"
+    ],
+    "a": 1,
+    "e": "Whales and Elephants use it for long-distance communication. / व्हेल और हाथी लंबी दूरी के संचार हेतु प्रयुक्त करते हैं।"
+  },
+  {
+    "qe": "What is 'Reverberation' time recommended for small classrooms?",
+    "qh": "छोटे क्लासरूम के लिए अनुशंसित 'अनुरणन' समय क्या है?",
+    "o": [
+      "0.4 to 0.6 sec | 0.4 से 0.6 सेकंड",
+      "2 sec",
+      "10 sec",
+      "None"
+    ],
+    "a": 0,
+    "e": "To ensure clarity of speech without overlap. / ओवरलैप के बिना भाषण की स्पष्टता सुनिश्चित करने के लिए।"
+  },
+  {
+    "qe": "Which 'Law' explains Doppler Effect for sound?",
+    "qh": "ध्वनि के लिए डॉप्लर प्रभाव की व्याख्या कौन सा 'नियम' करता है?",
+    "o": [
+      "Newton's Law",
+      "Doppler's Principle | डॉप्लर का सिद्धांत",
+      "Ohm's Law",
+      "None"
+    ],
+    "a": 1,
+    "e": "Describes frequency shift due to relative motion. / सापेक्ष गति के कारण आवृत्ति में बदलाव का वर्णन करता है।"
+  },
+  {
+    "qe": "What is 'Sound' primarily?",
+    "qh": "'ध्वनि' मुख्य रूप से क्या है?",
+    "o": [
+      "Longitudinal Wave | अनुदैर्ध्य तरंग",
+      "Transverse Wave",
+      "Light Wave",
+      "None"
+    ],
+    "a": 0,
+    "e": "Consists of compressions and rarefactions in a medium. / माध्यम में संपीडन और विरलन शामिल हैं।"
+  }
+]
