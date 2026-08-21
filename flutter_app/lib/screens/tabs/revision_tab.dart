@@ -5,7 +5,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../models/question_model.dart';
 import '../revision_practice_screen.dart';
-import '../subject_directory_screen.dart';
 
 class RevisionTab extends StatefulWidget {
   final Map<String, dynamic> subjectMapping;
@@ -120,331 +119,784 @@ class _RevisionTabState extends State<RevisionTab> {
     if (mounted) setState(() => _isLoading = false);
   }
 
-  int _countChapters(List<Map<String, dynamic>> subSections) {
-    int count = 0;
-    for (var s in subSections) {
-      final key = s['key'];
-      if (_liveSubjectMapping.containsKey(key) && _liveSubjectMapping[key] is Map) {
-        count += (_liveSubjectMapping[key] as Map).length;
+  Future<void> _openCurrentAffairsSection({
+    required bool isBihar,
+    required String title,
+    String jsonPath = "https://raw.githubusercontent.com/zxcty54/quiz/main/current_affair/august_2026.json",
+  }) async {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (ctx) => const Center(
+        child: Card(
+          child: Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                CircularProgressIndicator(strokeWidth: 2.5),
+                SizedBox(width: 16),
+                Text('Current Affairs लोड हो रहा है...'),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+
+    try {
+      final String fetchUrl = jsonPath.startsWith('http')
+          ? '$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}'
+          : 'https://raw.githubusercontent.com/zxcty54/quiz/main/$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}';
+
+      final res = await http.get(Uri.parse(fetchUrl)).timeout(const Duration(seconds: 10));
+
+      if (res.statusCode == 200) {
+        String body = utf8.decode(res.bodyBytes).trim();
+        if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
+
+        final Map<String, dynamic> data = jsonDecode(body);
+        final List<dynamic> rawList = isBihar
+            ? (data['bihar_questions'] ?? [])
+            : (data['national_questions'] ?? []);
+
+        final List<Question> qs = rawList
+            .map<Question>((item) => Question.fromJson(Map<String, dynamic>.from(item)))
+            .toList();
+
+        if (mounted) {
+          Navigator.pop(context);
+
+          if (qs.isNotEmpty) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (ctx) => RevisionPracticeScreen(
+                  testTitle: title,
+                  questions: qs,
+                  storageKey: isBihar ? "ca_bihar_aug_2026" : "ca_national_aug_2026",
+                ),
+              ),
+            );
+          } else {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('⚠️ कोई प्रश्न नहीं मिला!')),
+            );
+          }
+        }
+      } else {
+        throw Exception('HTTP ${res.statusCode}');
+      }
+    } catch (e) {
+      if (mounted) {
+        Navigator.pop(context);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('⚠️ लोड करने में त्रुटि: $e')),
+        );
       }
     }
-    return count;
   }
 
   @override
   Widget build(BuildContext context) {
     final bool isDark = Theme.of(context).brightness == Brightness.dark;
-    final Color bgColor = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
-    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
-    final Color borderColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
     final Color textColor = isDark ? Colors.white : const Color(0xFF0F172A);
-    final Color subTextColor = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
+    final Color subTextColor = isDark ? const Color(0xFF94A3B8) : Colors.grey.shade600;
 
-    final scienceSections = [
-      {'title': 'Physics (TCS PYQs Focus)', 'key': 'phy_mapping'},
-      {'title': 'Biology (Repeat Concepts)', 'key': 'bio_mapping'},
-      {'title': 'Chemistry (Reactions & Formulas)', 'key': 'chem_mapping'},
-    ];
-
-    final gkSections = [
-      {'title': 'Indian Polity (Articles Focus)', 'key': 'polity_mapping'},
-      {'title': 'History (1857 & Modern)', 'key': 'history_mapping'},
-      {'title': 'Geography (Maps & Physical)', 'key': 'geo_mapping'},
-      {'title': 'Economy (Budget & Planning)', 'key': 'eco_mapping'},
-    ];
-
-    final staticSections = [
-      {'title': 'Physics (Static Sets)', 'key': 'static_phy_mapping'},
-      {'title': 'Biology (Static Sets)', 'key': 'static_bio_mapping'},
-      {'title': 'Chemistry (Static Sets)', 'key': 'static_chem_mapping'},
-      {'title': 'Polity (Static Sets)', 'key': 'static_polity_mapping'},
-      {'title': 'History (Static Sets)', 'key': 'static_history_mapping'},
-      {'title': 'Geography (Static Sets)', 'key': 'static_geo_mapping'},
-      {'title': 'Economy (Static Sets)', 'key': 'static_eco_mapping'},
-    ];
-
-    return Scaffold(
-      backgroundColor: bgColor,
-      appBar: AppBar(
-        backgroundColor: cardBg,
-        elevation: 0,
-        scrolledUnderElevation: 0,
-        title: Text(
-          'Revision Hub',
-          style: TextStyle(
-            fontSize: 17,
-            fontWeight: FontWeight.w700,
-            color: textColor,
-          ),
-        ),
-        actions: [
-          if (_isLoading)
-            const Padding(
-              padding: EdgeInsets.only(right: 16),
-              child: Center(
-                child: SizedBox(
-                  width: 14,
-                  height: 14,
-                  child: CircularProgressIndicator(strokeWidth: 2),
+    return RefreshIndicator(
+      color: const Color(0xFF2563EB),
+      onRefresh: _fetchLiveGitHubMapping,
+      child: ListView(
+        physics: const AlwaysScrollableScrollPhysics(),
+        padding: const EdgeInsets.all(16),
+        children: [
+          // 🛡️ PROMINENT REVISION HUB HERO TRUST BANNER
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                colors: [Color(0xFF0F172A), Color(0xFF1E293B)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: const Color(0xFF38BDF8).withOpacity(0.4), width: 1.2),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.25),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4),
                 ),
-              ),
+              ],
             ),
-        ],
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(1.0),
-          child: Container(color: borderColor, height: 1.0),
-        ),
-      ),
-      body: RefreshIndicator(
-        onRefresh: _fetchLiveGitHubMapping,
-        child: ListView(
-          padding: const EdgeInsets.all(16),
-          children: [
-            // 🔬 1. General Science
-            _buildSubjectCard(
-              title: 'General Science',
-              subtitle: 'Physics, Chemistry & Biology (PYQ Drill)',
-              icon: '🔬',
-              chapterCount: _countChapters(scienceSections),
-              accentColor: const Color(0xFF2563EB),
-              isDark: isDark,
-              cardBg: cardBg,
-              borderColor: borderColor,
-              textColor: textColor,
-              subTextColor: subTextColor,
-              onTap: () => _openDirectory(
-                title: 'General Science',
-                icon: '🔬',
-                accentColor: const Color(0xFF2563EB),
-                subSections: scienceSections,
-              ),
-            ),
-            const SizedBox(height: 10),
-
-            // 📚 2. GK & Social Science
-            _buildSubjectCard(
-              title: 'GK & Social Science',
-              subtitle: 'Polity, History, Geography & Economy',
-              icon: '📚',
-              chapterCount: _countChapters(gkSections),
-              accentColor: const Color(0xFF4F46E5),
-              isDark: isDark,
-              cardBg: cardBg,
-              borderColor: borderColor,
-              textColor: textColor,
-              subTextColor: subTextColor,
-              onTap: () => _openDirectory(
-                title: 'GK & Social Science',
-                icon: '📚',
-                accentColor: const Color(0xFF4F46E5),
-                subSections: gkSections,
-              ),
-            ),
-            const SizedBox(height: 10),
-
-            // 🎯 3. Static GK & Science Foundation
-            _buildSubjectCard(
-              title: 'Static GK & Foundation',
-              subtitle: 'Topic-wise one-liner concept sets',
-              icon: '🎯',
-              chapterCount: _countChapters(staticSections),
-              accentColor: const Color(0xFF0D9488),
-              isDark: isDark,
-              cardBg: cardBg,
-              borderColor: borderColor,
-              textColor: textColor,
-              subTextColor: subTextColor,
-              onTap: () => _openDirectory(
-                title: 'Static GK & Foundation',
-                icon: '🎯',
-                accentColor: const Color(0xFF0D9488),
-                subSections: staticSections,
-              ),
-            ),
-            const SizedBox(height: 10),
-
-            // 📰 4. Current Affairs Vault
-            _buildSubjectCard(
-              title: 'Current Affairs Vault',
-              subtitle: 'Monthly National & Bihar Special Capsules',
-              icon: '📰',
-              chapterCount: 307,
-              isQuestionCount: true,
-              accentColor: const Color(0xFF7C3AED),
-              isDark: isDark,
-              cardBg: cardBg,
-              borderColor: borderColor,
-              textColor: textColor,
-              subTextColor: subTextColor,
-              onTap: _openCurrentAffairs,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  void _openDirectory({
-    required String title,
-    required String icon,
-    required Color accentColor,
-    required List<Map<String, dynamic>> subSections,
-  }) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => SubjectDirectoryScreen(
-          title: title,
-          icon: icon,
-          accentColor: accentColor,
-          subSections: subSections,
-          subjectMapping: _liveSubjectMapping,
-          onLaunchPractice: widget.onLaunchPractice,
-        ),
-      ),
-    );
-  }
-
-  void _openCurrentAffairs() {
-    showModalBottomSheet(
-      context: context,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-      ),
-      builder: (ctx) => Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              '📰 August 2026 Edition',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 14),
-            ListTile(
-              leading: const Icon(Icons.public, color: Color(0xFF2563EB)),
-              title: const Text('National & Global (218 Qs)'),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: () {
-                Navigator.pop(ctx);
-                _fetchAndLaunchCA(false, 'National & Global (Aug 2026)');
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.location_on, color: Color(0xFF059669)),
-              title: const Text('Bihar Special (89 Qs)'),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: () {
-                Navigator.pop(ctx);
-                _fetchAndLaunchCA(true, 'Bihar Special (Aug 2026)');
-              },
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Future<void> _fetchAndLaunchCA(bool isBihar, String title) async {
-    const jsonPath = "https://raw.githubusercontent.com/zxcty54/quiz/main/current_affair/august_2026.json";
-    try {
-      final res = await http.get(Uri.parse('$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}'));
-      if (res.statusCode == 200) {
-        final Map<String, dynamic> data = jsonDecode(utf8.decode(res.bodyBytes));
-        final List rawList = isBihar ? (data['bihar_questions'] ?? []) : (data['national_questions'] ?? []);
-        final qs = rawList.map<Question>((i) => Question.fromJson(Map<String, dynamic>.from(i))).toList();
-        if (mounted && qs.isNotEmpty) {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (_) => RevisionPracticeScreen(
-                testTitle: title,
-                questions: qs,
-                storageKey: isBihar ? "ca_bihar_aug_2026" : "ca_nat_aug_2026",
-              ),
-            ),
-          );
-        }
-      }
-    } catch (_) {}
-  }
-
-  Widget _buildSubjectCard({
-    required String title,
-    required String subtitle,
-    required String icon,
-    required int chapterCount,
-    bool isQuestionCount = false,
-    required Color accentColor,
-    required bool isDark,
-    required Color cardBg,
-    required Color borderColor,
-    required Color textColor,
-    required Color subTextColor,
-    required VoidCallback onTap,
-  }) {
-    return Container(
-      decoration: BoxDecoration(
-        color: cardBg,
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: borderColor, width: 1.0),
-      ),
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(10),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-          child: Row(
-            children: [
-              Container(
-                width: 40,
-                height: 40,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Text(icon, style: const TextStyle(fontSize: 20)),
-              ),
-              const SizedBox(width: 14),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      title,
-                      style: TextStyle(
-                        fontSize: 14.5,
-                        fontWeight: FontWeight.w600,
-                        color: textColor,
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3.5),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF0284C7),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: const Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text('⚡ ', style: TextStyle(fontSize: 10)),
+                          Text(
+                            'SMART REVISION',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 10.5,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 0.5,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    const SizedBox(height: 2),
-                    Text(
-                      subtitle,
-                      style: TextStyle(fontSize: 11.5, color: subTextColor),
+                    Row(
+                      children: [
+                        const Text(
+                          'BPSC • BSSC • SSC • RLY',
+                          style: TextStyle(
+                            color: Color(0xFF38BDF8),
+                            fontSize: 10.5,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        if (_isLoading) ...[
+                          const SizedBox(width: 8),
+                          const SizedBox(
+                            width: 12,
+                            height: 12,
+                            child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white70),
+                          ),
+                        ],
+                      ],
                     ),
                   ],
                 ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    isQuestionCount ? '$chapterCount Qs' : '$chapterCount Sets',
-                    style: TextStyle(
-                      fontSize: 11.5,
-                      fontWeight: FontWeight.w600,
-                      color: accentColor,
-                    ),
+                const SizedBox(height: 12),
+                const Text(
+                  '1 Question = Multiple Facts.\nHar Statement Ka Logic.',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16.5,
+                    fontWeight: FontWeight.bold,
+                    height: 1.35,
                   ),
-                  const SizedBox(height: 2),
-                  Icon(Icons.chevron_right, size: 16, color: subTextColor),
+                ),
+                const SizedBox(height: 8),
+                const Text(
+                  'Sirf sahi answer nahi — galat option ke peeche ka reason samjho aur 3x tezi se revise karo.',
+                  style: TextStyle(
+                    color: Color(0xFFCBD5E1),
+                    fontSize: 12,
+                    height: 1.45,
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.06),
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Colors.white.withOpacity(0.1)),
+                  ),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.verified_rounded, color: Color(0xFF60A5FA), size: 14),
+                          SizedBox(width: 4),
+                          Text('100% PYQ Base', style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600)),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.lightbulb_outline_rounded, color: Color(0xFFFBBF24), size: 14),
+                          SizedBox(width: 4),
+                          Text('Trap Breakdown', style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600)),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.timer_outlined, color: Color(0xFF4ADE80), size: 14),
+                          SizedBox(width: 4),
+                          Text('Fast Revision', style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600)),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 18),
+          Text('📚 Chapterwise Revision Hub', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: textColor)),
+          const SizedBox(height: 4),
+          Text('Subject par click karein aur direct chapter button dabakar revision shuru karein', style: TextStyle(color: subTextColor, fontSize: 12)),
+          const SizedBox(height: 14),
+
+          // 🔬 1. General Science (BPSC Sets)
+          _buildExpansionSubjectCategory(
+            context: context,
+            title: 'General Science',
+            badgeText: '🔥 High Weightage (BSSC/SSC)',
+            icon: '🔬',
+            color: const Color(0xFF2563EB),
+            isDark: isDark,
+            subSections: [
+              {'title': '⚡ Physics (TCS PYQs Focus)', 'key': 'phy_mapping'},
+              {'title': '🧬 Biology (Repeat Concept Sets)', 'key': 'bio_mapping'},
+              {'title': '🧪 Chemistry (Formula & Reactions)', 'key': 'chem_mapping'},
+            ],
+          ),
+          const SizedBox(height: 12),
+
+          // 🏛️ 2. GK & Social Science (BPSC Sets)
+          _buildExpansionSubjectCategory(
+            context: context,
+            title: 'GK & Social Science',
+            badgeText: '🏛️ BPSC/BSSC Core Syllabus',
+            icon: '📚',
+            color: const Color(0xFF4F46E5),
+            isDark: isDark,
+            subSections: [
+              {'title': '📜 Indian Polity (Articles Special)', 'key': 'polity_mapping'},
+              {'title': '🏛️ History (1857 & Freedom Movement)', 'key': 'history_mapping'},
+              {'title': '🌍 Geography (Physical & Bihar Map Focus)', 'key': 'geo_mapping'},
+              {'title': '📈 Economy (Budget & Five Year Plans)', 'key': 'eco_mapping'},
+            ],
+          ),
+          const SizedBox(height: 12),
+
+          // 📰 3. Current Affairs Vault
+          _buildCurrentAffairsCategory(
+            context: context,
+            isDark: isDark,
+          ),
+          const SizedBox(height: 12),
+
+          // 🎯 4. STATIC GK & SCIENCE FOUNDATION (Separate Section)
+          _buildExpansionSubjectCategory(
+            context: context,
+            title: 'Static GK & Science Foundation',
+            badgeText: '📌 Core Concepts & One-Liner MCQs',
+            icon: '🎯',
+            color: const Color(0xFF0D9488),
+            isDark: isDark,
+            subSections: [
+              {'title': '⚡ Physics (Static Sets)', 'key': 'static_phy_mapping'},
+              {'title': '🧬 Biology (Static Sets)', 'key': 'static_bio_mapping'},
+              {'title': '🧪 Chemistry (Static Sets)', 'key': 'static_chem_mapping'},
+              {'title': '📜 Indian Polity (Static Sets)', 'key': 'static_polity_mapping'},
+              {'title': '🏛️ History (Static Sets)', 'key': 'static_history_mapping'},
+              {'title': '🌍 Geography (Static Sets)', 'key': 'static_geo_mapping'},
+              {'title': '📈 Economy (Static Sets)', 'key': 'static_eco_mapping'},
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildCurrentAffairsCategory({
+    required BuildContext context,
+    required bool isDark,
+  }) {
+    const Color brandPurple = Color(0xFF7C3AED);
+    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final Color subTextColor = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
+    final Color textColor = isDark ? Colors.white : const Color(0xFF0F172A);
+    final Color dividerColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+
+    final List<Map<String, dynamic>> monthlyVault = [
+      {
+        "month": "August 2026",
+        "badge": "🔥 LIVE NOW",
+        "isLive": true,
+        "total": 307,
+        "natCount": 218,
+        "biharCount": 89,
+        "jsonUrl": "https://raw.githubusercontent.com/zxcty54/quiz/main/current_affair/august_2026.json"
+      },
+      {
+        "month": "September 2026",
+        "badge": "🔒 COMING SOON",
+        "isLive": false,
+        "total": 0,
+        "natCount": 0,
+        "biharCount": 0,
+        "releaseDate": "1st October"
+      },
+      {
+        "month": "October 2026",
+        "badge": "🔒 UPCOMING",
+        "isLive": false,
+        "total": 0,
+        "natCount": 0,
+        "biharCount": 0,
+        "releaseDate": "1st November"
+      },
+    ];
+
+    return Card(
+      color: cardBg,
+      elevation: 1.5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+        side: BorderSide(
+          color: isDark ? brandPurple.withOpacity(0.4) : brandPurple.withOpacity(0.25),
+          width: 1.2,
+        ),
+      ),
+      child: Theme(
+        data: Theme.of(context).copyWith(
+          dividerColor: Colors.transparent,
+          unselectedWidgetColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+        ),
+        child: ExpansionTile(
+          initiallyExpanded: true,
+          iconColor: brandPurple,
+          collapsedIconColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+          leading: Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: brandPurple.withOpacity(isDark ? 0.25 : 0.12),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: const Text('📰', style: TextStyle(fontSize: 20)),
+          ),
+          title: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  const Text(
+                    'Current Affairs Vault',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: brandPurple),
+                  ),
+                  const SizedBox(width: 8),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF16A34A).withOpacity(isDark ? 0.25 : 0.12),
+                      borderRadius: BorderRadius.circular(4),
+                      border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.4)),
+                    ),
+                    child: const Text(
+                      '2026 EDITION',
+                      style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Color(0xFF16A34A)),
+                    ),
+                  )
                 ],
+              ),
+              const SizedBox(height: 2),
+              Text(
+                'Monthly curated MCQs with trap logic & fact breakdown',
+                style: TextStyle(fontSize: 11, color: subTextColor),
               ),
             ],
           ),
+          childrenPadding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
+          expandedCrossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Divider(color: dividerColor, height: 16),
+            ...monthlyVault.map<Widget>((item) {
+              final bool isLive = item['isLive'] as bool;
+              final String monthTitle = item['month'] as String;
+              final String badge = item['badge'] as String;
+
+              if (isLive) {
+                return Container(
+                  margin: const EdgeInsets.only(bottom: 12),
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(
+                      color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                      width: 1.1,
+                    ),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              const Icon(Icons.calendar_month_rounded, size: 16, color: Color(0xFF38BDF8)),
+                              const SizedBox(width: 6),
+                              Text(
+                                monthTitle,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                  color: textColor,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF16A34A),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const Text('● ', style: TextStyle(color: Colors.white, fontSize: 8)),
+                                Text(
+                                  badge,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 9.5,
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 0.5,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 10),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: InkWell(
+                              onTap: () {
+                                _openCurrentAffairsSection(
+                                  isBihar: false,
+                                  title: "🌐 National & Global ($monthTitle)",
+                                  jsonPath: item['jsonUrl'],
+                                );
+                              },
+                              borderRadius: BorderRadius.circular(10),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
+                                decoration: BoxDecoration(
+                                  color: isDark ? const Color(0xFF1E293B) : Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(
+                                    color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(isDark ? 0.2 : 0.03),
+                                      blurRadius: 4,
+                                    )
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        const Text('🌐', style: TextStyle(fontSize: 16)),
+                                        const Spacer(),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFF2563EB).withOpacity(0.12),
+                                            borderRadius: BorderRadius.circular(4),
+                                          ),
+                                          child: Text(
+                                            '${item['natCount']} Qs',
+                                            style: const TextStyle(
+                                              fontSize: 10,
+                                              fontWeight: FontWeight.bold,
+                                              color: Color(0xFF2563EB),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(height: 6),
+                                    Text(
+                                      'National & Global',
+                                      style: TextStyle(
+                                        fontSize: 12.5,
+                                        fontWeight: FontWeight.bold,
+                                        color: textColor,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 2),
+                                    Text(
+                                      'Awards, Sports, Schemes',
+                                      style: TextStyle(fontSize: 10, color: subTextColor),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: InkWell(
+                              onTap: () {
+                                _openCurrentAffairsSection(
+                                  isBihar: true,
+                                  title: "🇮🇳 Bihar Special ($monthTitle)",
+                                  jsonPath: item['jsonUrl'],
+                                );
+                              },
+                              borderRadius: BorderRadius.circular(10),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
+                                decoration: BoxDecoration(
+                                  color: isDark ? const Color(0xFF1E293B) : Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(
+                                    color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(isDark ? 0.2 : 0.03),
+                                      blurRadius: 4,
+                                    )
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        const Text('📍', style: TextStyle(fontSize: 16)),
+                                        const Spacer(),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFF059669).withOpacity(0.12),
+                                            borderRadius: BorderRadius.circular(4),
+                                          ),
+                                          child: Text(
+                                            '${item['biharCount']} Qs',
+                                            style: const TextStyle(
+                                              fontSize: 10,
+                                              fontWeight: FontWeight.bold,
+                                              color: Color(0xFF059669),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(height: 6),
+                                    Text(
+                                      'Bihar Special',
+                                      style: TextStyle(
+                                        fontSize: 12.5,
+                                        fontWeight: FontWeight.bold,
+                                        color: textColor,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 2),
+                                    Text(
+                                      'BPSC & State Exams',
+                                      style: TextStyle(fontSize: 10, color: subTextColor),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                );
+              } else {
+                return InkWell(
+                  onTap: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Row(
+                          children: [
+                            const Text('🔒 ', style: TextStyle(fontSize: 14)),
+                            Expanded(
+                              child: Text(
+                                '$monthTitle capsule editorial review mein hai. ${item['releaseDate']} ko unlock hoga!',
+                                style: const TextStyle(fontSize: 12),
+                              ),
+                            ),
+                          ],
+                        ),
+                        duration: const Duration(seconds: 2),
+                        backgroundColor: const Color(0xFF334155),
+                      ),
+                    );
+                  },
+                  borderRadius: BorderRadius.circular(12),
+                  child: Container(
+                    margin: const EdgeInsets.only(bottom: 8),
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                    decoration: BoxDecoration(
+                      color: isDark ? const Color(0xFF0F172A).withOpacity(0.5) : const Color(0xFFF1F5F9),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0),
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.lock_outline_rounded, size: 16, color: subTextColor.withOpacity(0.7)),
+                            const SizedBox(width: 8),
+                            Text(
+                              monthTitle,
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                                color: subTextColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
+                          decoration: BoxDecoration(
+                            color: isDark ? const Color(0xFF1E293B) : Colors.white,
+                            borderRadius: BorderRadius.circular(6),
+                            border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+                          ),
+                          child: Text(
+                            badge,
+                            style: TextStyle(
+                              fontSize: 9.5,
+                              fontWeight: FontWeight.bold,
+                              color: subTextColor,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              }
+            }),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildExpansionSubjectCategory({
+    required BuildContext context,
+    required String title,
+    required String badgeText,
+    required String icon,
+    required Color color,
+    required bool isDark,
+    required List<Map<String, dynamic>> subSections,
+  }) {
+    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final Color subTitleColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF334155);
+    final Color dividerColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+
+    return Card(
+      color: cardBg,
+      elevation: 1.5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        side: BorderSide(
+          color: isDark ? color.withOpacity(0.4) : color.withOpacity(0.25),
+          width: 1.2,
+        ),
+      ),
+      child: Theme(
+        data: Theme.of(context).copyWith(
+          dividerColor: Colors.transparent,
+          unselectedWidgetColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+        ),
+        child: ExpansionTile(
+          iconColor: color,
+          collapsedIconColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+          leading: Text(icon, style: const TextStyle(fontSize: 22)),
+          title: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: color)),
+              const SizedBox(height: 2),
+              Text(
+                badgeText,
+                style: TextStyle(
+                  fontSize: 10.5,
+                  color: isDark ? color.withOpacity(0.9) : color.withOpacity(0.8),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
+          childrenPadding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
+          expandedCrossAxisAlignment: CrossAxisAlignment.start,
+          children: subSections.map((section) {
+            final String subTitle = section['title'];
+            final String mapKey = section['key'];
+
+            Map<String, dynamic> rawChapters = {};
+            if (_liveSubjectMapping.containsKey(mapKey) && _liveSubjectMapping[mapKey] is Map) {
+              rawChapters = Map<String, dynamic>.from(_liveSubjectMapping[mapKey]);
+            }
+
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Divider(color: dividerColor, height: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6.0),
+                  child: Text(
+                    subTitle,
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: subTitleColor),
+                  ),
+                ),
+                rawChapters.isEmpty
+                    ? Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 6.0),
+                        child: Text(
+                          "Loading chapters...",
+                          style: TextStyle(fontSize: 11, color: isDark ? Colors.grey.shade500 : Colors.grey),
+                        ),
+                      )
+                    : Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
+                        children: rawChapters.entries.map((entry) {
+                          String path = entry.value.toString();
+                          return ActionChip(
+                            elevation: 1,
+                            backgroundColor: isDark ? color.withOpacity(0.2) : color.withOpacity(0.08),
+                            side: BorderSide(
+                              color: isDark ? color.withOpacity(0.5) : color.withOpacity(0.3),
+                            ),
+                            label: Text(
+                              "📖 ${entry.key}",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600,
+                                color: isDark ? Colors.white : color,
+                              ),
+                            ),
+                            onPressed: () {
+                              widget.onLaunchPractice(context, entry.key, path);
+                            },
+                          );
+                        }).toList(),
+                      ),
+              ],
+            );
+          }).toList(),
         ),
       ),
     );
