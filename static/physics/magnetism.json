@@ -1,0 +1,4766 @@
+[
+  {
+    "qe": "What is the 'SI Unit' of Magnetic Flux?",
+    "qh": "चुंबकीय फ्लक्स (Magnetic Flux) का 'SI मात्रक' क्या है?",
+    "o": [
+      "Tesla",
+      "Weber (वेबर)",
+      "Henry",
+      "Coulomb"
+    ],
+    "a": 1,
+    "e": "Weber is the unit of magnetic flux, whereas Tesla is for magnetic induction. / वेबर चुंबकीय फ्लक्स की इकाई है, जबकि टेस्ला चुंबकीय प्रेरण के लिए है।"
+  },
+  {
+    "qe": "What is the 'CGS unit' of Magnetic Flux?",
+    "qh": "चुंबकीय फ्लक्स की 'CGS इकाई' क्या है?",
+    "o": [
+      "Weber",
+      "Maxwell | मैक्सवेल (Maxwell)",
+      "Gauss",
+      "Tesla"
+    ],
+    "a": 1,
+    "e": "$1 Weber = 10^8 Maxwell$. / 1 वेबर = 10^8 मैक्सवेल।"
+  },
+  {
+    "qe": "What is the value of 'Earth's Magnetic Field' approx at the surface?",
+    "qh": "पृथ्वी की सतह पर 'चुंबकीय क्षेत्र' का अनुमानित मान क्या है?",
+    "o": [
+      "1 Tesla",
+      "0.3 to 0.6 Gauss | 0.3 से 0.6 गॉस",
+      "100 Tesla",
+      "Zero"
+    ],
+    "a": 1,
+    "e": "Very weak compared to laboratory magnets. / प्रयोगशाला के चुंबकों की तुलना में बहुत कमजोर।"
+  },
+  {
+    "qe": "Which material is used for 'Core' of high-frequency transformers?",
+    "qh": "उच्च आवृत्ति वाले ट्रांसफार्मर के 'कोर' के लिए किस सामग्री का उपयोग होता है?",
+    "o": [
+      "Soft Iron",
+      "Ferrites | फेराइट्स (Ferrites)",
+      "Steel",
+      "Copper"
+    ],
+    "a": 1,
+    "e": "Ferrites have high resistivity which reduces eddy current losses at high frequencies. / फेराइट्स भंवर धाराओं को कम करते हैं।"
+  },
+  {
+    "qe": "What is 'Self Induction' of a coil of 100 turns if flux is 5 Weber for 2A current?",
+    "qh": "100 फेरों वाली कुंडली का 'स्व-प्रेरकत्व' क्या होगा यदि 2A करंट पर फ्लक्स 5 वेबर है?",
+    "o": [
+      "2.5 Henry | 2.5 हेनरी ($L = \\Phi/I$)",
+      "10 Henry",
+      "50 Henry",
+      "None"
+    ],
+    "a": 0,
+    "e": "$L = \\Phi / I = 5/2 = 2.5 H$. (Note: for single turn equivalent). / सूत्र L = फ्लक्स/करंट।"
+  },
+  {
+    "qe": "What happens to 'Permeability' when a substance is heated?",
+    "qh": "गर्म करने पर पदार्थ की 'पारगम्यता' का क्या होता है?",
+    "o": [
+      "Increases",
+      "Decreases | घटती है (Decreases)",
+      "Remains same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Thermal agitation disrupts magnetic alignment. / तापीय विक्षोभ चुंबकीय संरेखण को बाधित करता है।"
+  },
+  {
+    "qe": "Which 'Rule' gives the direction of magnetic field due to a circular current loop?",
+    "qh": "वृत्ताकार करंट लूप के कारण चुंबकीय क्षेत्र की दिशा कौन सा 'नियम' देता है?",
+    "o": [
+      "Right-hand Palm Rule | दाएं हाथ की हथेली का नियम",
+      "Lenz's Law",
+      "Ohm's Law",
+      "None"
+    ],
+    "a": 0,
+    "e": "Fingers curl in current direction, thumb gives field direction at center. / अंगूठा केंद्र पर क्षेत्र की दिशा बताता है।"
+  },
+  {
+    "qe": "What is 'Neutral Point' in a magnetic field?",
+    "qh": "चुंबकीय क्षेत्र में 'उदासीन बिंदु' (Neutral Point) क्या है?",
+    "o": [
+      "Max field point",
+      "Resultant magnetic field is zero | परिणामी चुंबकीय क्षेत्र शून्य है",
+      "North pole",
+      "None"
+    ],
+    "a": 1,
+    "e": "Where external field cancels Earth's horizontal component. / जहाँ बाहरी क्षेत्र पृथ्वी के क्षैतिज घटक को काट देता है।"
+  },
+  {
+    "qe": "Which device uses 'Mutual Induction'?",
+    "qh": "कौन सा उपकरण 'अन्योन्य प्रेरण' (Mutual Induction) का उपयोग करता है?",
+    "o": [
+      "Electric Motor",
+      "Transformer | ट्रांसफार्मर (Transformer)",
+      "Bulb",
+      "Battery"
+    ],
+    "a": 1,
+    "e": "Transfer of energy between two coils via changing flux. / बदलते फ्लक्स के माध्यम से दो कुंडलियों के बीच ऊर्जा का स्थानांतरण।"
+  },
+  {
+    "qe": "The 'Magnetic Field' at a point on the axis of a circular coil is proportional to:",
+    "qh": "वृत्ताकार कुंडली के अक्ष पर किसी बिंदु पर 'चुंबकीय क्षेत्र' किसके समानुपाती होता है?",
+    "o": [
+      "$1/r$",
+      "$1/r^2$",
+      "$1/r^3$ | $1/r^3$ (for large distance)",
+      "None"
+    ],
+    "a": 2,
+    "e": "For points far from the center, field follows inverse cube law. / दूर स्थित बिंदुओं के लिए व्युत्क्रम घन नियम।"
+  },
+  {
+    "qe": "What is 'Magnetic Susceptibility' for 'Superconductors'?",
+    "qh": "'अतिचालकों' (Superconductors) के लिए 'चुंबकीय प्रवृत्ति' क्या है?",
+    "o": [
+      "$1$",
+      "$-1$ | $-1$",
+      "$0$",
+      "Infinite"
+    ],
+    "a": 1,
+    "e": "Perfect diamagnetism implies $\\chi = -1$. / पूर्ण प्रति-चुंबकत्व का अर्थ $\\chi = -1$ है।"
+  },
+  {
+    "qe": "Which instrument uses a 'Suspended Magnet' to measure Earth's field?",
+    "qh": "पृथ्वी के क्षेत्र को मापने के लिए कौन सा उपकरण 'लटके हुए चुंबक' का उपयोग करता है?",
+    "o": [
+      "Vibration Magnetometer | कंपन मैग्नेटोमीटर",
+      "Dip circle",
+      "Ammeter",
+      "None"
+    ],
+    "a": 0,
+    "e": "Measures time period of oscillations. / दोलनों के आवर्तकाल को मापता है।"
+  },
+  {
+    "qe": "What is the angle of dip at '45 degree' latitude approx?",
+    "qh": "'45 डिग्री' अक्षांश पर नति कोण लगभग क्या होता है?",
+    "o": [
+      "0°",
+      "Around 60°-70° | लगभग 60°-70°",
+      "45°",
+      "90°"
+    ],
+    "a": 1,
+    "e": "Varies with magnetic latitude ($\\tan\\theta = 2\\tan\\phi$). / यह चुंबकीय अक्षांश के साथ बदलता है।"
+  },
+  {
+    "qe": "The 'Magnetic Induction' (B) is related to 'H' and 'I' by:",
+    "qh": "'B', 'H' और 'I' में क्या संबंध है?",
+    "o": [
+      "$B = \\mu_0 (H+I)$ | $B = \\mu_0 (H+I)$",
+      "$B = H/I$",
+      "$B = H-I$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Total induction is the sum of external force and material response. / कुल प्रेरण बाहरी बल और पदार्थ की प्रतिक्रिया का योग है।"
+  },
+  {
+    "qe": "What is the 'Flux' unit Weber in terms of Volt-second?",
+    "qh": "वोल्ट-सेकंड के संदर्भ में 'फ्लक्स' की इकाई वेबर क्या है?",
+    "o": [
+      "1 Weber = 1 V/s",
+      "1 Weber = 1 V-s | 1 वेबर = 1 वोल्ट-सेकंड",
+      "1 Weber = 1 s/V",
+      "None"
+    ],
+    "a": 1,
+    "e": "$e = -d\\Phi/dt \\implies \\Phi = e \\cdot t$. / विद्युत चुम्बकीय प्रेरण से।"
+  },
+  {
+    "qe": "What is 'Coercivity' of 'Steel' compared to 'Soft Iron'?",
+    "qh": "'नरम लोहे' की तुलना में 'स्टील' की 'निग्राहिता' क्या है?",
+    "o": [
+      "Lower",
+      "Much Higher | बहुत अधिक (Higher)",
+      "Equal",
+      "Zero"
+    ],
+    "a": 1,
+    "e": "Steel is harder to demagnetize, making it good for permanent magnets. / स्टील को विचुंबकित करना कठिन है।"
+  },
+  {
+    "qe": "Which 'Substance' shows magnetic properties due to 'Paired Electrons'?",
+    "qh": "'युग्मित इलेक्ट्रॉनों' के कारण कौन सा 'पदार्थ' चुंबकीय गुण दिखाता है (अक्सर कमजोरी से)?",
+    "o": [
+      "Paramagnetic",
+      "Diamagnetic | प्रति-चुंबकीय (Diamagnetic)",
+      "Ferromagnetic",
+      "None"
+    ],
+    "a": 1,
+    "e": "Paired electrons' magnetic moments cancel, leaving only diamagnetic effect. / युग्मित इलेक्ट्रॉनों के आघूर्ण कट जाते हैं।"
+  },
+  {
+    "qe": "What is 'Angle of Declination' used for in navigation?",
+    "qh": "नेविगेशन में 'दिकपात कोण' का उपयोग किसलिए होता है?",
+    "o": [
+      "Finding depth",
+      "Correcting compass to find True North | सही उत्तर दिशा खोजने हेतु",
+      "Finding dip",
+      "None"
+    ],
+    "a": 1,
+    "e": "Compass points to magnetic north, declination helps find geographic north. / कंपास चुंबकीय उत्तर बताता है, दिकपात भौगोलिक उत्तर खोजने में मदद करता है।"
+  },
+  {
+    "qe": "What happens if a magnet is heated beyond its 'Curie Point'?",
+    "qh": "यदि चुंबक को उसके 'क्यूरी बिंदु' से आगे गर्म किया जाए तो क्या होगा?",
+    "o": [
+      "Magnetism increases",
+      "Becomes paramagnetic | अनुचुंबकीय हो जाता है",
+      "Melts instantly",
+      "None"
+    ],
+    "a": 1,
+    "e": "Orderly magnetic domains are destroyed by heat. / तापीय ऊर्जा से व्यवस्थित चुंबकीय डोमेन नष्ट हो जाते हैं।"
+  },
+  {
+    "qe": "What is 'Magnetic Shielding' based on?",
+    "qh": "'चुंबकीय परिरक्षण' किस पर आधारित है?",
+    "o": [
+      "Reflection",
+      "High permeability of materials | उच्च पारगम्यता",
+      "Insulation",
+      "None"
+    ],
+    "a": 1,
+    "e": "Magnetic field lines prefer to pass through high permeability paths. / क्षेत्र रेखाएं उच्च पारगम्यता वाले रास्तों से गुजरना पसंद करती हैं।"
+  },
+  {
+    "qe": "A 'Dip Circle' is set in 'Magnetic Meridian'. The needle points at 90°. Where is it?",
+    "qh": "'नति वृत्त' चुंबकीय मध्याह्न में सेट है। सुई 90° दिखाती है। यह कहाँ है?",
+    "o": [
+      "Equator",
+      "Magnetic Pole | चुंबकीय ध्रुव (Pole)",
+      "45° Lat",
+      "None"
+    ],
+    "a": 1,
+    "e": "Vertical field exists only at the poles. / लंबवत क्षेत्र केवल ध्रुवों पर होता है।"
+  },
+  {
+    "qe": "What is the 'Flux' through a unit area perpendicular to the magnetic field?",
+    "qh": "चुंबकीय क्षेत्र के लंबवत इकाई क्षेत्र से गुजरने वाला 'फ्लक्स' क्या है?",
+    "o": [
+      "Inductance",
+      "Magnetic Induction (B) | चुंबकीय प्रेरण (B)",
+      "Susceptibility",
+      "None"
+    ],
+    "a": 1,
+    "e": "Also called Flux Density. / इसे फ्लक्स घनत्व भी कहते हैं।"
+  },
+  {
+    "qe": "What is 'Intensity of Magnetization' for a vacuum?",
+    "qh": "निर्वात के लिए 'चुंबकन की तीव्रता' क्या है?",
+    "o": [
+      "Infinite",
+      "Zero | शून्य (Zero)",
+      "One",
+      "None"
+    ],
+    "a": 1,
+    "e": "Vacuum has no atoms to magnetize. / निर्वात में चुंबकित करने के लिए कोई परमाणु नहीं होते।"
+  },
+  {
+    "qe": "Which 'Principle' allows an 'Electric Crane' to pick up heavy iron scrap?",
+    "qh": "'इलेक्ट्रिक क्रेन' किस 'सिद्धांत' से भारी लोहे का कबाड़ उठाती है?",
+    "o": [
+      "Electrostatics",
+      "Electromagnetism | विद्युत चुंबकत्व (Electromagnetism)",
+      "Gravity",
+      "None"
+    ],
+    "a": 1,
+    "e": "Temporary magnetism produced by large currents. / बड़े करंट द्वारा उत्पन्न अस्थायी चुंबकत्व।"
+  },
+  {
+    "qe": "What is 'Magnetic Permeability' ratio?",
+    "qh": "'चुंबकीय पारगम्यता' किसका अनुपात है?",
+    "o": [
+      "$B/H$ | $B/H$",
+      "$H/B$",
+      "$B \\times H$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Magnetic induction divided by magnetizing force. / चुंबकीय प्रेरण और चुंबकन बल का अनुपात।"
+  },
+  {
+    "qe": "What is the 'Magnetic Susceptibility' ($\\chi$) of a Diamagnetic substance?",
+    "qh": "ek prati-chumbakiya padarth ki 'chumbakiya pravritti' ($\\chi$) kya hoti hai?",
+    "o": [
+      "Small and Negative | chhoti aur rinatmak",
+      "Small and Positive",
+      "Large and Positive",
+      "Zero"
+    ],
+    "a": 0,
+    "e": "It is negative because these materials develop magnetization opposite to the applied field. / ye rinatmak hoti hai kyunki ye padarth bahari kshetra ke viprit chumbakit hote hain."
+  },
+  {
+    "qe": "Which material is 'Repelled' weakly by a strong magnetic field?",
+    "qh": "kaun sa padarth ek shaktishali chumbakiya kshetra dwara kamzori se pratikarshit hota hai?",
+    "o": [
+      "Iron",
+      "Aluminium",
+      "Water (Diamagnetic) | pani (prati-chumbakiya)",
+      "Nickel"
+    ],
+    "a": 2,
+    "e": "Water, Bismuth, and Copper are examples of diamagnetic substances. / pani, bismuth aur tamba prati-chumbakiya padarthon ke udaharan hain."
+  },
+  {
+    "qe": "What is the relation between 'Magnetic Permeability' ($\\mu$) and Susceptibility ($\\chi$)?",
+    "qh": "'chumbakiya pargamyata' ($\\mu$) aur 'pravritti' ($\\chi$) ke beech kya sambandh hai?",
+    "o": [
+      "$\\mu_r = 1 + \\chi$ | $\\mu_r = 1 + \\chi$",
+      "$\\mu_r = 1 - \\chi$",
+      "$\\mu_r = \\chi$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Relative permeability is the sum of unity and susceptibility. / sapeksh pargamyata, ek aur pravritti ka yog hoti hai."
+  },
+  {
+    "qe": "Which phenomenon is used in 'Magnetic Braking' in high-speed trains?",
+    "qh": "uchchh gati wali trainon mein 'chumbakiya braking' mein kis ghatna ka upyog hota hai?",
+    "o": [
+      "Self Induction",
+      "Mutual Induction",
+      "Eddy Currents | bhanwar dharayen (Eddy Currents)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Eddy currents create a magnetic drag that slows down the train without friction. / bhanwar dharayen ek chumbakiya khinchav paida karti hain jo bina gharshan train ko dheema karta hai."
+  },
+  {
+    "qe": "What happens to the 'Iron Core' of a transformer during operation?",
+    "qh": "transformer ke 'iron core' ka kaam ke dauran kya hota hai?",
+    "o": [
+      "Becomes cold",
+      "Heats up due to hysteresis and eddy currents | hysteresis aur eddy currents ke karan garam hota hai",
+      "No change",
+      "None"
+    ],
+    "a": 1,
+    "e": "Energy losses in the core are dissipated as heat. / core mein hone wala oorja ka nuksan ushma ke roop mein nikalta hai."
+  },
+  {
+    "qe": "A transformer works with:",
+    "qh": "transformer kiske saath kaam karta hai?",
+    "o": [
+      "Only DC",
+      "Only AC | sirf AC",
+      "Both AC and DC",
+      "None"
+    ],
+    "a": 1,
+    "e": "Transformers require a changing magnetic flux, which only AC provides. / transformer ko badalte chumbakiya flux ki zarurat hoti hai, jo sirf AC deta hai."
+  },
+  {
+    "qe": "What is the 'Efficiency' of an ideal transformer?",
+    "qh": "ek adarsh transformer ki 'dakshta' kya hoti hai?",
+    "o": [
+      "50%",
+      "90%",
+      "100% | 100%",
+      "Zero"
+    ],
+    "a": 2,
+    "e": "An ideal transformer has no energy losses (heat, flux leakage, etc.). / ek adarsh transformer mein oorja ka koi nuksan nahi hota."
+  },
+  {
+    "qe": "Which rule is used to find the 'Polarity' of an induced EMF?",
+    "qh": "prerit EMF ki 'dhruvta' (polarity) janne ke liye kis niyam ka upyog hota hai?",
+    "o": [
+      "Ampere's Law",
+      "Lenz's Law | lenz ka niyam (Lenz's Law)",
+      "Coulomb's Law",
+      "None"
+    ],
+    "a": 1,
+    "e": "Lenz's law determines the direction of current to oppose the change in flux. / lenz ka niyam flux badlav ke virodh ki disha batata hai."
+  },
+  {
+    "qe": "What is 'Curie Temperature' for Nickel approx?",
+    "qh": "nickel ke liye 'curie tapman' lagbhag kya hai?",
+    "o": [
+      "770°C",
+      "358°C | 358°C",
+      "1000°C",
+      "0°C"
+    ],
+    "a": 1,
+    "e": "Lower than Iron (770°C) but significantly high. / lohe (770°C) se kam par kaafi uchchh."
+  },
+  {
+    "qe": "What is the unit of 'Magnetic Field Strength' (H) in CGS?",
+    "qh": "CGS mein 'chumbakiya kshetra teevrata' (H) ki ikai kya hai?",
+    "o": [
+      "Gauss",
+      "Oersted | oersted",
+      "Tesla",
+      "Maxwell"
+    ],
+    "a": 1,
+    "e": "Oersted is the unit for H in the CGS system. / CGS system mein H ke liye oersted ikai hai."
+  },
+  {
+    "qe": "Which material is used in 'Magnetic Tapes' for recording?",
+    "qh": "recording ke liye 'chumbakiya tape' mein kis padarth ka upyog hota hai?",
+    "o": [
+      "Aluminium",
+      "Chromium Dioxide ($CrO_2$) | chromium dioxide",
+      "Copper",
+      "None"
+    ],
+    "a": 1,
+    "e": "Uses ferromagnetic particles to store information via magnetization. / chumbakan ke madyam se jaankari store karne ke liye upyog hota hai."
+  },
+  {
+    "qe": "What is 'Self Inductance' ($L$) related to 'Magnetic Flux' ($\\Phi$) and Current ($I$)?",
+    "qh": "'sw-prerakatva' (L), 'flux' ($\\Phi$) aur 'current' (I) se kaise sambandhit hai?",
+    "o": [
+      "$\\Phi = LI$ | $\\Phi = LI$",
+      "$L = \\Phi I$",
+      "$I = L\\Phi$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Flux is directly proportional to the current through the inductor. / flux prerak ke madhyam se behne wale current ke samanupati hota hai."
+  },
+  {
+    "qe": "What is the angle of dip at the 'Magnetic Equator'?",
+    "qh": "'chumbakiya bhumadhya rekha' par nati kon kya hota hai?",
+    "o": [
+      "90°",
+      "45°",
+      "0° | 0°",
+      "180°"
+    ],
+    "a": 2,
+    "e": "The magnetic field is perfectly horizontal at the equator. / bhumadhya rekha par chumbakiya kshetra bilkul kshaitij hota hai."
+  },
+  {
+    "qe": "What is the function of 'Lamination' in a transformer core?",
+    "qh": "transformer core mein 'lamination' ka kya kaam hai?",
+    "o": [
+      "Reduce weight",
+      "Reduce eddy current loss | eddy current nuksan ko kam karna",
+      "Increase voltage",
+      "None"
+    ],
+    "a": 1,
+    "e": "Thin sheets insulated from each other prevent large circulating currents. / ek dusre se alag patli sheets badi dharayon ko rokati hain."
+  },
+  {
+    "qe": "Which 'Law' is used to define the unit of current 'Ampere' based on magnetic force?",
+    "qh": "chumbakiya bal ke aadhar par current ki ikai 'ampere' ko paribhashit karne ke liye kaun sa 'niyam' upyog hota hai?",
+    "o": [
+      "Ohm's Law",
+      "Ampere's Force Law | ampere ka bal niyam",
+      "Faraday's Law",
+      "None"
+    ],
+    "a": 1,
+    "e": "Defined by the force between two parallel wires carrying current. / do samantar dharavahi taron ke beech bal dwara paribhashit."
+  },
+  {
+    "qe": "What is the 'Magnetic Susceptibility' of a Paramagnetic substance?",
+    "qh": "ek anu-chumbakiya padarth ki 'chumbakiya pravritti' kya hoti hai?",
+    "o": [
+      "Small and Positive | chhoti aur dhanatmak",
+      "Small and Negative",
+      "Large and Positive",
+      "Zero"
+    ],
+    "a": 0,
+    "e": "They are weakly attracted in the direction of the magnetic field. / ye chumbakiya kshetra ki disha mein kamzori se akarshit hote hain."
+  },
+  {
+    "qe": "What is the 'SI Unit' of Magnetic Permeability?",
+    "qh": "chumbakiya pargamyata ki 'SI ikai' kya hai?",
+    "o": [
+      "Tesla/Ampere",
+      "Tesla-meter/Ampere | Tesla-meter/Ampere (T-m/A)",
+      "Henry",
+      "None"
+    ],
+    "a": 1,
+    "e": "Also expressed as Henry per meter (H/m). / ise Henry prati meter bhi kaha jata hai."
+  },
+  {
+    "qe": "Which device 'Converts' electrical energy into mechanical energy?",
+    "qh": "kaun sa upkaran vidyut oorja ko yaantrik oorja mein 'badalta' hai?",
+    "o": [
+      "Generator",
+      "Electric Motor | vidyut motor",
+      "Transformer",
+      "Rectifier"
+    ],
+    "a": 1,
+    "e": "Works on the principle of force on a current-carrying coil in a magnetic field. / chumbakiya kshetra mein dharavahi coil par lagne wale bal par kaam karta hai."
+  },
+  {
+    "qe": "What is 'Mutual Inductance' unit?",
+    "qh": "'anyonya prerakatva' (Mutual Inductance) ki ikai kya hai?",
+    "o": [
+      "Weber",
+      "Tesla",
+      "Henry | henry",
+      "Ohm"
+    ],
+    "a": 2,
+    "e": "Same unit as self-inductance. / sw-prerakatva ke saman ikai."
+  },
+  {
+    "qe": "The core of a 'Moving Coil Galvanometer' is usually made of:",
+    "qh": "'moving coil galvanometer' ka core aamtour par kisse bana hota hai?",
+    "o": [
+      "Steel",
+      "Soft Iron | narm loha",
+      "Alnico",
+      "Copper"
+    ],
+    "a": 1,
+    "e": "Soft iron makes the magnetic field radial and increases its strength. / narm loha chumbakiya kshetra ko trijya (radial) aur mazboot banata hai."
+  },
+  {
+    "qe": "What happens to the 'Induced EMF' if the speed of a magnet moving towards a coil is increased?",
+    "qh": "yadi coil ki aur badhte chumbak ki gati badha di jaye, to 'prerit EMF' ka kya hoga?",
+    "o": [
+      "Decreases",
+      "Increases | badhega",
+      "Stay same",
+      "Zero"
+    ],
+    "a": 1,
+    "e": "EMF is proportional to the rate of change of flux ($d\\Phi/dt$). / EMF flux badlav ki dar ke samanupati hota hai."
+  },
+  {
+    "qe": "Which material is used to make 'Permanent Magnets' for headphones?",
+    "qh": "headphones ke liye 'sthayi chumbak' banane mein kis padarth ka upyog hota hai?",
+    "o": [
+      "Soft Iron",
+      "Neodymium | neodymium",
+      "Aluminium",
+      "Glass"
+    ],
+    "a": 1,
+    "e": "Neodymium magnets are very strong permanent magnets. / neodymium chumbak bahut shaktishali sthayi chumbak hote hain."
+  },
+  {
+    "qe": "What is 'Magnetic Hysteresis' loop width related to?",
+    "qh": "'chumbakiya hysteresis' loop ki chaudai kisse sambandhit hai?",
+    "o": [
+      "Coercivity | nigrahita (Coercivity)",
+      "Retentivity",
+      "Permeability",
+      "None"
+    ],
+    "a": 0,
+    "e": "Larger coercivity means a wider loop. / adhik nigrahita ka matlab hai chauda loop."
+  },
+  {
+    "qe": "What is 'Energy Loss' in a transformer core through heat called?",
+    "qh": "transformer core mein ushma dwara hone wala 'oorja nuksan' kya kehlata hai?",
+    "o": [
+      "Copper loss",
+      "Iron loss / Core loss | iron loss / core loss",
+      "Mechanical loss",
+      "None"
+    ],
+    "a": 1,
+    "e": "Includes both hysteresis and eddy current losses. / isme hysteresis aur eddy current dono nuksan shamil hain."
+  },
+  {
+    "qe": "Which 'Rule' is used to find the direction of magnetic field produced by a solenoid?",
+    "qh": "perinalika (solenoid) dwara paida chumbakiya kshetra ki disha janne ke liye kaun sa 'niyam' upyog hota hai?",
+    "o": [
+      "Right-hand Palm Rule | dayein hath ki hatheli ka niyam",
+      "Lenz's Law",
+      "Ohm's Law",
+      "None"
+    ],
+    "a": 0,
+    "e": "Fingers curl in current direction, thumb gives North pole direction. / ungliyan current ki disha mein, angutha uttar dhruv ki disha batata hai."
+  },
+  {
+    "qe": "What is 'Magnetic Induction' unit in CGS?",
+    "qh": "CGS mein 'chumbakiya preran' ki ikai kya hai?",
+    "o": [
+      "Tesla",
+      "Gauss | gauss",
+      "Weber",
+      "Henry"
+    ],
+    "a": 1,
+    "e": "$1 Tesla = 10^4 Gauss$."
+  },
+  {
+    "qe": "Which material has 'Large and Positive' susceptibility?",
+    "qh": "kis padarth ki pravritti 'badi aur dhanatmak' hoti hai?",
+    "o": [
+      "Diamagnetic",
+      "Paramagnetic",
+      "Ferromagnetic | louh-chumbakiya (Ferromagnetic)",
+      "None"
+    ],
+    "a": 2,
+    "e": "They get strongly magnetized in the direction of field. / ye kshetra ki disha mein mazbooti se chumbakit hote hain."
+  },
+  {
+    "qe": "What is the 'Path' of a charge if it enters a magnetic field at an angle of 45°?",
+    "qh": "yadi koi avesh 45° ke kon par chumbakiya kshetra mein pravesh kare, to uska 'path' kya hoga?",
+    "o": [
+      "Circular",
+      "Straight line",
+      "Helical / Spiral | kundalini / helical",
+      "None"
+    ],
+    "a": 2,
+    "e": "Components of velocity create both circular and linear motion. / veg ke ghatak vrittakar aur rekhika gati dono paida karte hain."
+  },
+  {
+    "qe": "What is the 'Flux' unit Weber equal to in terms of Tesla?",
+    "qh": "Tesla ke sandarbh mein 'flux' ikai Weber kiske barabar hai?",
+    "o": [
+      "$T \\cdot m^2$ | $T \\cdot m^2$",
+      "$T/m^2$",
+      "$T \\cdot m$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Flux = Magnetic Field $\\times$ Area. / flux = chumbakiya kshetra $\\times$ kshetraphal."
+  },
+  {
+    "qe": "Which device works on the principle of 'Self Induction'?",
+    "qh": "kaun sa upkaran 'sw-preran' ke siddhant par kaam karta hai?",
+    "o": [
+      "Transformer",
+      "Choke Coil | choke coil",
+      "Electric Motor",
+      "None"
+    ],
+    "a": 1,
+    "e": "Used in fluorescent lights to limit AC current with minimum energy loss. / oorja ki kam hani ke saath AC current ko simit karne ke liye upyog hota hai."
+  },
+  {
+    "qe": "What is 'Retentivity' of Steel compared to Soft Iron?",
+    "qh": "narm lohe ki tulna mein steel ki 'dharanshilta' (Retentivity) kya hai?",
+    "o": [
+      "Higher",
+      "Lower | kam",
+      "Equal",
+      "None"
+    ],
+    "a": 1,
+    "e": "Steel has lower retentivity but higher coercivity than soft iron. / steel ki dharanshilta kam par nigrahita narm lohe se zyada hoti hai."
+  },
+  {
+    "qe": "What is 'Coercivity' of Steel compared to Soft Iron?",
+    "qh": "narm lohe ki tulna mein steel ki 'nigrahita' (Coercivity) kya hai?",
+    "o": [
+      "Much Higher | bahut adhik",
+      "Much Lower",
+      "Equal",
+      "Zero"
+    ],
+    "a": 0,
+    "e": "Steel is much harder to demagnetize. / steel ko vichumbakit karna bahut kathin hai."
+  },
+  {
+    "qe": "Which 'Force' is responsible for the working of an Electric Bell?",
+    "qh": "'vidyut ghanti' ke kaam karne ke liye kaun sa 'bal' zimmedar hai?",
+    "o": [
+      "Electrostatic",
+      "Magnetic force from electromagnet | vidyut chumbak ka chumbakiya bal",
+      "Gravitational",
+      "None"
+    ],
+    "a": 1,
+    "e": "Electromagnet attracts the iron armature to strike the gong. / vidyut chumbak iron armature ko akarshit karta hai."
+  },
+  {
+    "qe": "What is 'Aclinic Line' also known as?",
+    "qh": "'aclinic line' ko aur kya kaha jata hai?",
+    "o": [
+      "Magnetic Meridian",
+      "Magnetic Equator | chumbakiya bhumadhya rekha",
+      "Isobar",
+      "None"
+    ],
+    "a": 1,
+    "e": "Line joining points with zero angle of dip. / shunya nati kon wale binduon ko jodne wali rekha."
+  },
+  {
+    "qe": "What is 'Isogonic Line'?",
+    "qh": "'isogonic line' kya hai?",
+    "o": [
+      "Same dip",
+      "Same declination | saman dikpat (declination)",
+      "Same force",
+      "None"
+    ],
+    "a": 1,
+    "e": "Line joining points with equal magnetic declination. / saman chumbakiya dikpat wale binduon ko jodne wali rekha."
+  },
+  {
+    "qe": "What is 'Agonic Line'?",
+    "qh": "'agonic line' kya hai?",
+    "o": [
+      "Zero Dip",
+      "Zero Declination | shunya dikpat (zero declination)",
+      "Maximum dip",
+      "None"
+    ],
+    "a": 1,
+    "e": "Isogonic line with zero declination. / shunya dikpat wali isogonic rekha."
+  },
+  {
+    "qe": "The speed of light in a medium is $v = 1/\\sqrt{\\mu\\epsilon}$. In vacuum, it is:",
+    "qh": "madhyam mein prakash ki chaal $v = 1/\\sqrt{\\mu\\epsilon}$ hai. nirvat mein ye hai:",
+    "o": [
+      "$3 \\times 10^8$ m/s | $3 \\times 10^8$ m/s",
+      "$1/\\sqrt{\\mu_0\\epsilon_0}$ | $1/\\sqrt{\\mu_0\\epsilon_0}$",
+      "Both | dono",
+      "None"
+    ],
+    "a": 2,
+    "e": "Fundamental constant derived from Maxwell's equations. / maxwell ke samikaranon se vyutpann maulik niyatank."
+  },
+  {
+    "qe": "What happens to the 'Self Inductance' of a coil if a 'Soft Iron Core' is inserted?",
+    "qh": "yadi coil mein 'narm loha core' daala jaye, to 'sw-prerakatva' ka kya hoga?",
+    "o": [
+      "Decreases",
+      "Increases | badhega",
+      "Stay same",
+      "None"
+    ],
+    "a": 1,
+    "e": "$L = \\mu_r \\mu_0 n^2 A l$. High $\\mu_r$ increases inductance significantly. / uchchh sapeksh pargamyata prerakatva ko kaafi badha deti hai."
+  },
+  {
+    "qe": "What is the 'Magnetic Field' at the center of a circular current loop of radius $R$?",
+    "qh": "$R$ trijya wale vrittakar dharavahi loop ke kendra par 'chumbakiya kshetra' kya hai?",
+    "o": [
+      "$\\mu_0 I / 2\\pi R$",
+      "$\\mu_0 I / 2R$ | $\\mu_0 I / 2R$",
+      "Zero",
+      "None"
+    ],
+    "a": 1,
+    "e": "Maximum field is at the center of the loop. / loop ke kendra par kshetra adhiktam hota hai."
+  },
+  {
+    "qe": "What is 'Magnetic Potential' unit?",
+    "qh": "'chumbakiya vibhav' ki ikai kya hai?",
+    "o": [
+      "Tesla",
+      "Weber",
+      "Joule/Weber | Joule/Weber",
+      "Henry"
+    ],
+    "a": 2,
+    "e": "Analogous to electric potential (Joule/Coulomb). / vidyut vibhav ke saman."
+  },
+  {
+    "qe": "Which material is used for 'Magnetic Shielding' of sensitive instruments?",
+    "qh": "sanvedansheel upkaranon ki 'chumbakiya parirakshan' ke liye kya upyog hota hai?",
+    "o": [
+      "Copper",
+      "Mu-metal | mu-metal",
+      "Aluminium",
+      "Wood"
+    ],
+    "a": 1,
+    "e": "Mu-metal is an alloy with very high permeability. / mu-metal bahut uchchh pargamyata wala ek mishra-dhatu hai."
+  },
+  {
+    "qe": "What is 'Flux Leakage' in a transformer?",
+    "qh": "transformer mein 'flux leakage' kya hai?",
+    "o": [
+      "Primary flux not linking secondary | prathmik flux ka dwitiyak se na judna",
+      "Oil leakage",
+      "Current leakage",
+      "None"
+    ],
+    "a": 0,
+    "e": "Reduces the efficiency of the transformer. / transformer ki dakshta ko kam karta hai."
+  },
+  {
+    "qe": "What is the 'SI Unit' of intensity of magnetization ($I$)?",
+    "qh": "chumbakan ki teevrata (I) ki 'SI ikai' kya hai?",
+    "o": [
+      "Tesla",
+      "Ampere/meter | Ampere/meter (A/m)",
+      "Weber",
+      "Henry"
+    ],
+    "a": 1,
+    "e": "Magnetic moment per unit volume. / prati ikai aaytan chumbakiya aghurn."
+  },
+  {
+    "qe": "What is 'Hysteresis Loss' dependent on?",
+    "qh": "'hysteresis nuksan' kis par nirbhar karta hai?",
+    "o": [
+      "Area of B-H loop | B-H loop ka kshetraphal",
+      "Volume of material | padarth ka aaytan",
+      "Frequency of AC | AC ki aavritti",
+      "All of these | uprokt sabhi"
+    ],
+    "a": 3,
+    "e": "Loss = $\\eta \\cdot A \\cdot V \\cdot f$. / sabhi karakon par nirbhar."
+  },
+  {
+    "qe": "Which device uses 'Electromagnetic Induction' to detect metal in security checks?",
+    "qh": "security check mein metal detect karne ke liye kaun sa upkaran 'vidyut chumbakiya preran' ka upyog karta hai?",
+    "o": [
+      "X-ray machine",
+      "Metal Detector | metal detector",
+      "Thermometer",
+      "None"
+    ],
+    "a": 1,
+    "e": "Metal disrupts the induced magnetic field, triggering an alarm. / metal prerit chumbakiya kshetra ko badhit karta hai."
+  },
+  {
+    "qe": "What is the value of 'Permeability of Free Space' ($\\mu_0$)?",
+    "qh": "'mukt sthan ki pargamyata' ($\\mu_0$) ka maan kya hai?",
+    "o": [
+      "$4\\pi \\times 10^{-7}$ T-m/A | $4\\pi \\times 10^{-7}$ T-m/A",
+      "$8.85 \\times 10^{-12}$",
+      "$9 \\times 10^9$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Fundamental constant of nature. / prakriti ka maulik niyatank."
+  },
+  {
+    "qe": "What is 'Isoclinic Line'?",
+    "qh": "'isoclinic line' kya hai?",
+    "o": [
+      "Same declination",
+      "Same angle of dip | saman nati kon (dip)",
+      "Zero dip",
+      "None"
+    ],
+    "a": 1,
+    "e": "Line joining points with equal magnetic dip. / saman chumbakiya nati kon wale binduon ko jodne wali rekha."
+  },
+  {
+    "qe": "Which 'Substance' has the highest susceptibility among these?",
+    "qh": "inme se kis 'padarth' ki pravritti sabse adhik hai?",
+    "o": [
+      "Iron | loha",
+      "Aluminium",
+      "Copper",
+      "Water"
+    ],
+    "a": 0,
+    "e": "Ferromagnetic materials have very large $\\chi$. / louh-chumbakiya padarthon mein $\\chi$ bahut bada hota hai."
+  },
+  {
+    "qe": "What is the 'Magnetic Flux' through a surface area $A$ perpendicular to field $B$?",
+    "qh": "kshetra $B$ ke lumbvat satah kshetraphal $A$ se guzarne wala 'chumbakiya flux' kya hai?",
+    "o": [
+      "$B/A$",
+      "$B \\cdot A$ | $B \\cdot A$",
+      "$A/B$",
+      "Zero"
+    ],
+    "a": 1,
+    "e": "Flux $\\Phi = B \\cdot A \\cos\\theta$. For $\\theta=0^\\circ$, $\\Phi = BA$. / adhiktam flux lumbvat satah par hota hai."
+  },
+  {
+    "qe": "What is the full form of 'MRI' in medical science?",
+    "qh": "चिकित्सा विज्ञान में 'MRI' का पूर्ण रूप क्या है?",
+    "o": [
+      "Magnetic Resonance Imaging | Magnetic Resonance Imaging",
+      "Magnetic Radio Imaging",
+      "Medical Resonance Imaging",
+      "None"
+    ],
+    "a": 0,
+    "e": "Uses strong magnetic fields and radio waves to create detailed images of organs. / अंगों की विस्तृत छवियां बनाने के लिए मजबूत चुंबकीय क्षेत्र का उपयोग करता है।"
+  },
+  {
+    "qe": "Which 'Nuclei' are primarily used in MRI scans?",
+    "qh": "MRI स्कैन में मुख्य रूप से किन 'नाभिकों' का उपयोग किया जाता है?",
+    "o": [
+      "Carbon",
+      "Hydrogen (Protons) | हाइड्रोजन (प्रोटॉन)",
+      "Oxygen",
+      "Nitrogen"
+    ],
+    "a": 1,
+    "e": "MRI detects the magnetic behavior of hydrogen atoms in body water/fat. / यह शरीर के पानी/वसा में हाइड्रोजन परमाणुओं के चुंबकीय व्यवहार का पता लगाता है।"
+  },
+  {
+    "qe": "What is 'Magnetic Levitation' (Maglev) used in?",
+    "qh": "'चुंबकीय उत्तोलन' (Maglev) का उपयोग किसमें होता है?",
+    "o": [
+      "Submarines",
+      "High-speed trains | उच्च गति वाली ट्रेनें",
+      "Airplanes",
+      "None"
+    ],
+    "a": 1,
+    "e": "Magnetic poles repel each other to lift and propel the train above tracks. / चुंबकीय ध्रुव ट्रेन को पटरियों के ऊपर उठाने और चलाने के लिए एक-दूसरे को पीछे धकेलते हैं।"
+  },
+  {
+    "qe": "What is the 'SI Unit' of Magnetic Dipole Moment?",
+    "qh": "चुंबकीय द्विध्रुव आघूर्ण की 'SI इकाई' क्या है?",
+    "o": [
+      "Ampere-meter",
+      "Ampere-meter$^2$ | एम्पीयर-मीटर$^2$",
+      "Tesla",
+      "Weber"
+    ],
+    "a": 1,
+    "e": "$M = I \\times A$. Unit is $A \\cdot m^2$. / चुंबकीय आघूर्ण की इकाई एम्पीयर-मीटर$^2$ है।"
+  },
+  {
+    "qe": "What is 'Self Inductance' of a circular coil of $N$ turns proportional to?",
+    "qh": "$N$ फेरों वाली एक वृत्ताकार कुंडली का 'स्व-प्रेरकत्व' किसके समानुपाती होता है?",
+    "o": [
+      "$N$",
+      "$N^2$ | $N^2$",
+      "$1/N$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Inductance increases with the square of the number of turns. / प्रेरकत्व फेरों की संख्या के वर्ग के साथ बढ़ता है।"
+  },
+  {
+    "qe": "What is 'Lenz's Law' based on?",
+    "qh": "'लेंज का नियम' किस पर आधारित है?",
+    "o": [
+      "Conservation of Mass",
+      "Conservation of Energy | ऊर्जा संरक्षण",
+      "Conservation of Charge",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ensures that energy is conserved during electromagnetic induction. / सुनिश्चित करता है कि प्रेरण के दौरान ऊर्जा सुरक्षित रहे।"
+  },
+  {
+    "qe": "What is the value of 'Relative Permeability' ($\\mu_r$) for air?",
+    "qh": "हवा के लिए 'सापेक्ष पारगम्यता' ($\\mu_r$) का मान क्या है?",
+    "o": [
+      "Zero",
+      "Exactly 1 | ठीक 1 (approx)",
+      "Infinite",
+      "Negative"
+    ],
+    "a": 1,
+    "e": "Permeability of air is very close to that of a vacuum. / हवा की पारगम्यता निर्वात के बहुत करीब होती है।"
+  },
+  {
+    "qe": "Which rule is used to determine the 'Direction of Force' on a moving charge?",
+    "qh": "गतिमान आवेश पर 'बल की दिशा' निर्धारित करने के लिए किस नियम का उपयोग होता है?",
+    "o": [
+      "Fleming's Left-hand Rule | फ्लेमिंग के बाएं हाथ का नियम",
+      "Right-hand Thumb Rule",
+      "Lenz's Law",
+      "None"
+    ],
+    "a": 0,
+    "e": "Thumb=Force, Forefinger=Field, Middle finger=Velocity. / अंगूठा बल की दिशा को दर्शाता है।"
+  },
+  {
+    "qe": "What happens to 'Earth's Magnetic Field' intensity as we move from Equator to Poles?",
+    "qh": "भूमध्य रेखा से ध्रुवों की ओर जाने पर पृथ्वी के 'चुंबकीय क्षेत्र' की तीव्रता का क्या होता है?",
+    "o": [
+      "Decreases",
+      "Increases | बढ़ती है",
+      "Stay same",
+      "None"
+    ],
+    "a": 1,
+    "e": "The total field intensity is higher at the poles than at the equator. / ध्रुवों पर कुल क्षेत्र की तीव्रता भूमध्य रेखा से अधिक होती है।"
+  },
+  {
+    "qe": "What is 'Magnetic Susceptibility' ($\\chi$) for a Ferromagnetic material?",
+    "qh": "लौह-चुंबकीय पदार्थ के लिए 'चुंबकीय प्रवृत्ति' ($\\chi$) क्या होती है?",
+    "o": [
+      "Small negative",
+      "Small positive",
+      "Large positive | बड़ी और धनात्मक",
+      "Zero"
+    ],
+    "a": 2,
+    "e": "They are very easily and strongly magnetized. / वे बहुत आसानी से और मजबूती से चुंबकित होते हैं।"
+  },
+  {
+    "qe": "Which device uses 'Eddy Currents' to provide 'Damping' in pointers?",
+    "qh": "पॉइंटर्स में 'अवमंदन' (Damping) प्रदान करने के लिए कौन सा उपकरण 'भंवर धाराओं' का उपयोग करता है?",
+    "o": [
+      "Ammeter | एम्पीयरमीटर",
+      "Galvanometer | गैल्वेनोमीटर",
+      "Voltmeter | वोल्टमीटर",
+      "All of these | उपरोक्त सभी"
+    ],
+    "a": 3,
+    "e": "Electromagnetic damping stops the needle from vibrating. / विद्युत चुंबकीय अवमंदन सुई को हिलने से रोकता है।"
+  },
+  {
+    "qe": "What is 'Hysteresis' loss zero for?",
+    "qh": "'हिस्टेरेसिस' हानि किसके लिए शून्य होती है?",
+    "o": [
+      "Steel",
+      "Soft iron",
+      "Diamagnetic materials | प्रति-चुंबकीय पदार्थ",
+      "Ferromagnets"
+    ],
+    "a": 2,
+    "e": "Only ferromagnetic materials show hysteresis. / केवल लौह-चुंबकीय पदार्थ ही हिस्टेरेसिस दिखाते हैं।"
+  },
+  {
+    "qe": "What is 'Curie's Law' constant related to?",
+    "qh": "'क्यूरी के नियम' का नियतांक किससे संबंधित है?",
+    "o": [
+      "Only Iron",
+      "Paramagnetic materials | अनुचुंबकीय पदार्थ",
+      "Diamagnets",
+      "None"
+    ],
+    "a": 1,
+    "e": "States that magnetization is proportional to $1/T$. / बताता है कि चुंबकन $1/T$ के समानुपाती है।"
+  },
+  {
+    "qe": "Which material is used in 'Solenoid' core to increase magnetic field?",
+    "qh": "चुंबकीय क्षेत्र बढ़ाने के लिए 'परिनालिका' कोर में किस सामग्री का उपयोग होता है?",
+    "o": [
+      "Steel",
+      "Soft Iron | नरम लोहा (Soft Iron)",
+      "Copper",
+      "Aluminium"
+    ],
+    "a": 1,
+    "e": "Soft iron has high permeability, concentrating the flux. / नरम लोहे की पारगम्यता उच्च होती है।"
+  },
+  {
+    "qe": "What is 'Magnetic Flux' per unit area called?",
+    "qh": "प्रति इकाई क्षेत्रफल 'चुंबकीय फ्लक्स' क्या कहलाता है?",
+    "o": [
+      "Inductance",
+      "Flux Density (Tesla) | फ्लक्स घनत्व (टेस्ला)",
+      "Permeability",
+      "None"
+    ],
+    "a": 1,
+    "e": "Magnetic induction $B = \\Phi/A$. / चुंबकीय प्रेरण फ्लक्स प्रति इकाई क्षेत्रफल है।"
+  },
+  {
+    "qe": "What is 'Step-up Transformer' function?",
+    "qh": "'स्टेप-अप ट्रांसफार्मर' का कार्य क्या है?",
+    "o": [
+      "Increase Current",
+      "Increase Voltage | वोल्टेज बढ़ाना",
+      "Decrease Voltage",
+      "Change AC to DC"
+    ],
+    "a": 1,
+    "e": "Increases AC voltage by having more turns in the secondary coil. / द्वितीयक कुंडली में अधिक फेरे रखकर वोल्टेज बढ़ाता है।"
+  },
+  {
+    "qe": "What is 'Step-down Transformer' function?",
+    "qh": "'स्टेप-डाउन ट्रांसफार्मर' का कार्य क्या है?",
+    "o": [
+      "Increase Voltage",
+      "Decrease Voltage | वोल्टेज घटाना",
+      "Change DC to AC",
+      "None"
+    ],
+    "a": 1,
+    "e": "Reduces high voltage AC to lower voltage for household use. / घरों में उपयोग के लिए उच्च वोल्टेज AC को कम करता है।"
+  },
+  {
+    "qe": "What is 'Mutual Induction' dependent on?",
+    "qh": "'अन्योन्य प्रेरण' किस पर निर्भर करता है?",
+    "o": [
+      "Distance between coils | कुंडलियों के बीच की दूरी",
+      "Relative orientation | सापेक्ष अभिविन्यास",
+      "Number of turns | फेरों की संख्या",
+      "All of these | उपरोक्त सभी"
+    ],
+    "a": 3,
+    "e": "Affected by physical arrangement and material core. / भौतिक व्यवस्था और कोर सामग्री से प्रभावित।"
+  },
+  {
+    "qe": "Which 'Part' of Earth's magnetic field is ZERO at the Equator?",
+    "qh": "भूमध्य रेखा पर पृथ्वी के चुंबकीय क्षेत्र का कौन सा 'भाग' शून्य होता है?",
+    "o": [
+      "Horizontal component",
+      "Vertical component | लंबवत घटक (Vertical)",
+      "Total field",
+      "None"
+    ],
+    "a": 1,
+    "e": "The field is perfectly horizontal at the equator. / भूमध्य रेखा पर क्षेत्र पूरी तरह क्षैतिज होता है।"
+  },
+  {
+    "qe": "What is 'Magnetic Declination' at a place?",
+    "qh": "किसी स्थान पर 'चुंबकीय दिकपात' क्या है?",
+    "o": [
+      "Angle of dip",
+      "Angle between geographic and magnetic North | भौगोलिक और चुंबकीय उत्तर के बीच का कोण",
+      "Curie point",
+      "None"
+    ],
+    "a": 1,
+    "e": "Tells how much a compass deviates from True North. / बताता है कि कंपास सही उत्तर से कितना विचलित है।"
+  },
+  {
+    "qe": "What is 'Weber' unit for?",
+    "qh": "'वेबर' किसकी इकाई है?",
+    "o": [
+      "Flux Density",
+      "Magnetic Flux | चुंबकीय फ्लक्स",
+      "Inductance",
+      "None"
+    ],
+    "a": 1,
+    "e": "Standard SI unit for magnetic flux ($\\Phi$). / चुंबकीय फ्लक्स के लिए मानक इकाई।"
+  },
+  {
+    "qe": "What is the 'Path' of a charge entering a magnetic field at an acute angle ($<90^\\circ$)?",
+    "qh": "न्यून कोण पर चुंबकीय क्षेत्र में प्रवेश करने वाले आवेश का 'पथ' क्या होगा?",
+    "o": [
+      "Circular",
+      "Straight line",
+      "Helical | कुंडलीनुमा (Helical)",
+      "Parabolic"
+    ],
+    "a": 2,
+    "e": "Velocity component along field gives linear motion, perpendicular gives circular. / क्षेत्र के साथ वेग का घटक रेखीय और लंबवत घटक वृत्ताकार गति देता है।"
+  },
+  {
+    "qe": "Which material has 'Negative' susceptibility?",
+    "qh": "किस सामग्री की प्रवृत्ति 'ऋणात्मक' होती है?",
+    "o": [
+      "Aluminium",
+      "Copper (Diamagnetic) | तांबा (प्रति-चुंबकीय)",
+      "Iron",
+      "None"
+    ],
+    "a": 1,
+    "e": "Diamagnetic materials like Copper, Bismuth, and Water. / तांबा, बिस्मथ और पानी जैसे प्रति-चुंबकीय पदार्थ।"
+  },
+  {
+    "qe": "What is 'Retentivity' higher in?",
+    "qh": "'धारणशीलता' किसमें अधिक होती है?",
+    "o": [
+      "Soft Iron | नरम लोहा",
+      "Steel",
+      "Copper",
+      "None"
+    ],
+    "a": 0,
+    "e": "Soft iron retains more induction, but is easier to demagnetize. / नरम लोहा अधिक प्रेरण रखता है, लेकिन विचुंबकित करना आसान है।"
+  },
+  {
+    "qe": "What is 'Coercivity' higher in?",
+    "qh": "'निग्राहिता' किसमें अधिक होती है?",
+    "o": [
+      "Steel | स्टील",
+      "Soft iron",
+      "Aluminium",
+      "None"
+    ],
+    "a": 0,
+    "e": "Steel needs a stronger reverse field to demagnetize. / स्टील को विचुंबकित करने के लिए मजबूत विपरीत क्षेत्र चाहिए।"
+  },
+  {
+    "qe": "What is 'Magnetic Potential' analogous to?",
+    "qh": "'चुंबकीय विभव' किसके समान है?",
+    "o": [
+      "Electric Current",
+      "Electric Potential | विद्युत विभव",
+      "Magnetic Flux",
+      "None"
+    ],
+    "a": 1,
+    "e": "Defined as work done to bring a unit North pole from infinity. / इकाई उत्तरी ध्रुव को अनंत से लाने में किया गया कार्य।"
+  },
+  {
+    "qe": "What is 'Tesla-meter/Ampere' the unit of?",
+    "qh": "'टेस्ला-मीटर/एम्पीयर' किसकी इकाई है?",
+    "o": [
+      "Magnetic Flux",
+      "Permeability ($\\mu$) | पारगम्यता ($\\mu$)",
+      "Self Inductance",
+      "None"
+    ],
+    "a": 1,
+    "e": "SI unit of magnetic permeability. / चुंबकीय पारगम्यता की SI इकाई।"
+  },
+  {
+    "qe": "Which 'Law' is used to calculate the magnetic field of a long straight wire?",
+    "qh": "लंबे सीधे तार के चुंबकीय क्षेत्र की गणना के लिए किस 'नियम' का उपयोग होता है?",
+    "o": [
+      "Biot-Savart Law",
+      "Ampere's Circuital Law | एम्पीयर का परिपथीय नियम",
+      "Coulomb's Law",
+      "None"
+    ],
+    "a": 1,
+    "e": "Simplifies calculation for symmetric current distributions. / सममित करंट वितरण के लिए गणना को आसान बनाता है।"
+  },
+  {
+    "qe": "What is 'Magnetic Field' at the 'Center' of a square loop carrying current?",
+    "qh": "करंट ले जाने वाले वर्गाकार लूप के 'केंद्र' में 'चुंबकीय क्षेत्र' क्या होता है?",
+    "o": [
+      "Zero",
+      "Non-zero | गैर-शून्य",
+      "Infinite",
+      "None"
+    ],
+    "a": 1,
+    "e": "Sum of fields from 4 segments is calculated at center. / केंद्र में 4 खंडों के क्षेत्रों का योग होता है।"
+  },
+  {
+    "qe": "Which part of Earth acts like a 'Giant Magnet'?",
+    "qh": "पृथ्वी का कौन सा भाग एक 'विशाल चुंबक' की तरह कार्य करता है?",
+    "o": [
+      "Atmosphere",
+      "The whole Earth | पूरी पृथ्वी",
+      "Crust only",
+      "None"
+    ],
+    "a": 1,
+    "e": "Earth behaves like a bar magnet tilted at 11.5 degrees. / पृथ्वी 11.5 डिग्री पर झुके हुए बार चुंबक की तरह व्यवहार करती है।"
+  },
+  {
+    "qe": "What is 'Magnetic Flux' unit Maxwell equal to in terms of Weber?",
+    "qh": "वेबर के संदर्भ में चुंबकीय फ्लक्स इकाई 'मैक्सवेल' किसके बराबर है?",
+    "o": [
+      "$10^8$ Weber",
+      "$10^{-8}$ Weber | $10^{-8}$ वेबर",
+      "1 Weber",
+      "None"
+    ],
+    "a": 1,
+    "e": "$1 Maxwell = 10^{-8} Weber$. / मैक्सवेल छोटी CGS इकाई है।"
+  },
+  {
+    "qe": "What is 'Shunt' resistance in an ammeter?",
+    "qh": "एम्पीयरमीटर में 'शंट' प्रतिरोध क्या होता है?",
+    "o": [
+      "High series",
+      "Low parallel | कम समानांतर",
+      "High parallel",
+      "None"
+    ],
+    "a": 1,
+    "e": "Low resistance in parallel to bypass large current. / बड़े करंट को बायपास करने हेतु कम समानांतर प्रतिरोध।"
+  },
+  {
+    "qe": "What is 'Multiplier' in a voltmeter?",
+    "qh": "वोल्टमीटर में 'मल्टीप्लायर' (Multiplier) क्या है?",
+    "o": [
+      "Low parallel",
+      "High series | उच्च श्रेणीक्रम",
+      "Low series",
+      "None"
+    ],
+    "a": 1,
+    "e": "High resistance in series to limit current through coil. / कुंडली से करंट सीमित करने हेतु उच्च श्रेणीक्रम प्रतिरोध।"
+  },
+  {
+    "qe": "What is 'Magnetic Intensity' (H) independent of?",
+    "qh": "'चुंबकीय तीव्रता' (H) किससे स्वतंत्र है?",
+    "o": [
+      "Current",
+      "Medium properties | माध्यम के गुण",
+      "Number of turns",
+      "None"
+    ],
+    "a": 1,
+    "e": "H depends only on current and geometry, not the core material. / H केवल करंट और ज्यामिति पर निर्भर करती है।"
+  },
+  {
+    "qe": "Which 'Substance' has susceptibility $\\chi$ around $10^3$?",
+    "qh": "किस 'पदार्थ' की प्रवृत्ति $\\chi$ लगभग $10^3$ होती है?",
+    "o": [
+      "Aluminium",
+      "Soft Iron | नरम लोहा",
+      "Copper",
+      "Water"
+    ],
+    "a": 1,
+    "e": "Ferromagnetic materials have very high susceptibility. / लौह-चुंबकीय पदार्थों की प्रवृत्ति बहुत उच्च होती है।"
+  },
+  {
+    "qe": "What is 'Eddy Current' heating used for in industry?",
+    "qh": "उद्योगों में 'भंवर धारा' तापन का उपयोग किसलिए होता है?",
+    "o": [
+      "Induction Furnace | इंडक्शन फर्नेस",
+      "Cooling",
+      "Lighting",
+      "None"
+    ],
+    "a": 0,
+    "e": "Used to melt metals by producing heat through eddy currents. / भंवर धाराओं के माध्यम से ऊष्मा पैदा कर धातुओं को पिघलाने हेतु।"
+  },
+  {
+    "qe": "What is the 'Flux' through a plane area $A$ parallel to magnetic field $B$?",
+    "qh": "चुंबकीय क्षेत्र $B$ के समानांतर समतल क्षेत्र $A$ के माध्यम से 'फ्लक्स' क्या है?",
+    "o": [
+      "$BA$",
+      "Zero | शून्य (Zero)",
+      "$B/A$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Angle $\\theta = 90^\\circ$ between field and normal to area, $\\cos 90^\\circ = 0$. / क्षेत्र और क्षेत्रफल के लंबवत के बीच 90 डिग्री का कोण।"
+  },
+  {
+    "qe": "Which 'Part' of Earth's magnetic field is maximum at Equator?",
+    "qh": "भूमध्य रेखा पर पृथ्वी के चुंबकीय क्षेत्र का कौन सा 'भाग' अधिकतम होता है?",
+    "o": [
+      "Vertical",
+      "Horizontal | क्षैतिज (Horizontal)",
+      "Total",
+      "None"
+    ],
+    "a": 1,
+    "e": "Since field is parallel to Earth's surface at Equator. / क्योंकि भूमध्य रेखा पर क्षेत्र सतह के समानांतर होता है।"
+  },
+  {
+    "qe": "What is 'Self Inductance' of a coil also known as 'Inertia of Electricity'?",
+    "qh": "कुंडली के 'स्व-प्रेरकत्व' को 'विद्युत की जड़ता' क्यों कहा जाता है?",
+    "o": [
+      "It speeds up current",
+      "It opposes change in current | यह करंट में बदलाव का विरोध करता है",
+      "It generates DC",
+      "None"
+    ],
+    "a": 1,
+    "e": "Analogous to mass in mechanics which opposes change in motion. / यांत्रिकी में द्रव्यमान के समान जो गति में बदलाव का विरोध करता है।"
+  },
+  {
+    "qe": "Which material is used for 'Electromagnet' cores?",
+    "qh": "'विद्युत चुंबक' के कोर के लिए किस सामग्री का उपयोग होता है?",
+    "o": [
+      "Steel",
+      "Soft iron | नरम लोहा",
+      "Gold",
+      "None"
+    ],
+    "a": 1,
+    "e": "Requires low retentivity and high permeability. / कम धारणशीलता और उच्च पारगम्यता की आवश्यकता होती है।"
+  },
+  {
+    "qe": "What is 'Relative Permeability' ($\\mu_r$) for a 'Superconductor'?",
+    "qh": "'अतिचालक' के लिए 'सापेक्ष पारगम्यता' ($\\mu_r$) क्या है?",
+    "o": [
+      "1",
+      "0 | 0",
+      "Infinite",
+      "Negative"
+    ],
+    "a": 1,
+    "e": "Perfect diamagnetism results in $\\mu_r = 0$. / पूर्ण प्रति-चुंबकत्व का परिणाम $\\mu_r = 0$ होता है।"
+  },
+  {
+    "qe": "What is the 'SI Unit' of Magnetic Permeability of free space?",
+    "qh": "मुक्त स्थान की चुंबकीय पारगम्यता की 'SI इकाई' क्या है?",
+    "o": [
+      "Tesla/meter",
+      "Henry/meter | हेनरी/मीटर",
+      "Weber/meter",
+      "None"
+    ],
+    "a": 1,
+    "e": "Unit of $\\mu_0$ is $H/m$. / $\\mu_0$ की इकाई $H/m$ है।"
+  },
+  {
+    "qe": "What is 'Hall Effect'?",
+    "qh": "'हॉल प्रभाव' (Hall Effect) क्या है?",
+    "o": [
+      "Magnetic attraction",
+      "Voltage across a conductor in magnetic field | चुंबकीय क्षेत्र में चालक पर उत्पन्न वोल्टेज",
+      "Induction",
+      "None"
+    ],
+    "a": 1,
+    "e": "Used to determine the sign and density of charge carriers. / आवेश वाहकों के चिह्न और घनत्व को निर्धारित करने हेतु प्रयुक्त।"
+  },
+  {
+    "qe": "What is 'Tesla' in terms of Weber and Meter?",
+    "qh": "वेबर और मीटर के संदर्भ में 'टेस्ला' क्या है?",
+    "o": [
+      "$Wb \\cdot m^2$",
+      "$Wb/m^2$ | $Wb/m^2$",
+      "$Wb/m$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Flux density unit relation. / फ्लक्स घनत्व इकाई संबंध।"
+  },
+  {
+    "qe": "Which material is 'Bismuth' categorized as?",
+    "qh": "'बिस्मथ' को किस श्रेणी में रखा गया है?",
+    "o": [
+      "Ferromagnetic",
+      "Paramagnetic",
+      "Diamagnetic | प्रति-चुंबकीय (Diamagnetic)",
+      "None"
+    ],
+    "a": 2,
+    "e": "One of the strongest diamagnetic materials. / सबसे मजबूत प्रति-चुंबकीय पदार्थों में से एक।"
+  },
+  {
+    "qe": "What is the 'Flux' linkage unit?",
+    "qh": "'फ्लक्स लिंकेज' की इकाई क्या है?",
+    "o": [
+      "Tesla",
+      "Weber-turn | वेबर-टर्न",
+      "Henry",
+      "Ampere"
+    ],
+    "a": 1,
+    "e": "Product of number of turns and flux through each turn. / फेरों की संख्या और प्रत्येक फेरे से फ्लक्स का गुणनफल।"
+  },
+  {
+    "qe": "What is 'Coercivity' of Alnico compared to Steel?",
+    "qh": "स्टील की तुलना में एलनिको की 'निग्राहिता' क्या है?",
+    "o": [
+      "Lower",
+      "Higher | उच्च",
+      "Equal",
+      "Zero"
+    ],
+    "a": 1,
+    "e": "Alnico is excellent for making very strong permanent magnets. / एलनिको मजबूत स्थायी चुंबक बनाने के लिए बेहतरीन है।"
+  },
+  {
+    "qe": "What is the unit of 'Magnetic Pole Strength'?",
+    "qh": "'चुंबकीय ध्रुव शक्ति' की इकाई क्या है?",
+    "o": [
+      "Ampere-meter | एम्पीयर-मीटर (A-m)",
+      "Tesla",
+      "Weber",
+      "None"
+    ],
+    "a": 0,
+    "e": "Derived from the force formula between poles. / ध्रुवों के बीच बल के सूत्र से व्युत्पन्न।"
+  },
+  {
+    "qe": "A 'Tangent Galvanometer' works on the principle of:",
+    "qh": "'टेंजेंट गैल्वेनोमीटर' किस सिद्धांत पर कार्य करता है?",
+    "o": [
+      "Torque",
+      "Tangent Law | टेंजेंट नियम (Tangent Law)",
+      "Induction",
+      "None"
+    ],
+    "a": 1,
+    "e": "$B = B_h \\tan\\theta$. / यह पृथ्वी के क्षैतिज क्षेत्र और कुंडली के क्षेत्र के संतुलन पर आधारित है।"
+  },
+  {
+    "qe": "What is the 'Dynamo Effect' related to Earth's magnetism?",
+    "qh": "Prithvi ke chumbaktva se juda 'Dynamo Effect' kya hai?",
+    "o": [
+      "Static charge",
+      "Convection currents in outer core | Baahri core mein sanvahan dharayen",
+      "Sun's gravity",
+      "None"
+    ],
+    "a": 1,
+    "e": "Movement of molten iron in the outer core generates electric currents and magnetic fields. / Baahri core mein pighle lohe ki gati chumbakiya kshetra paida karti hai."
+  },
+  {
+    "qe": "What is 'Magnetic Susceptibility' ($\\chi$) for a vacuum?",
+    "qh": "Nirvat ke liye 'chumbakiya pravritti' ($\\chi$) kya hai?",
+    "o": [
+      "1",
+      "0 | 0",
+      "-1",
+      "Infinite"
+    ],
+    "a": 1,
+    "e": "Vacuum cannot be magnetized, so its susceptibility is zero. / Nirvat ko chumbakit nahi kiya ja sakta, isliye pravritti shunya hai."
+  },
+  {
+    "qe": "Which scientist predicted the existence of 'Electromagnetic Waves'?",
+    "qh": "'Vidyut chumbakiya tarango' ki bhavishyavani kis vaigyanik ne ki thi?",
+    "o": [
+      "Hertz",
+      "James Clerk Maxwell | James Clerk Maxwell",
+      "Marconi",
+      "Faraday"
+    ],
+    "a": 1,
+    "e": "Maxwell predicted them mathematically, while Hertz later proved them experimentally. / Maxwell ne ganitiya roop se bhavishyavani ki thi."
+  },
+  {
+    "qe": "What is the relation between 'Induced EMF' ($e$) and 'Flux' ($\\Phi$)?",
+    "qh": "'Prerit EMF' (e) aur 'Flux' ($\\Phi$) ke beech kya sambandh hai?",
+    "o": [
+      "$e = \\Phi/t$",
+      "$e = -d\\Phi/dt$ | $e = -d\\Phi/dt$",
+      "$e = \\Phi \\cdot t$",
+      "None"
+    ],
+    "a": 1,
+    "e": "According to Faraday's Law, EMF is the negative rate of change of flux. / Faraday ke niyam ke anusar, EMF flux badlav ki dar hai."
+  },
+  {
+    "qe": "What is the 'Magnetic Flux' through a closed surface (Gauss's Law for Magnetism)?",
+    "qh": "Ek band satah se guzarne wala 'chumbakiya flux' kya hota hai?",
+    "o": [
+      "Infinite",
+      "Zero | Shunya (Zero)",
+      "Constant",
+      "None"
+    ],
+    "a": 1,
+    "e": "Total magnetic flux through any closed surface is always zero because monopoles don't exist. / Band satah se kul flux hamesha shunya hota hai."
+  },
+  {
+    "qe": "Which material shows 'Small and Positive' magnetic susceptibility?",
+    "qh": "Kaun sa padarth 'chhoti aur dhanatmak' chumbakiya pravritti dikhata hai?",
+    "o": [
+      "Copper",
+      "Aluminium (Paramagnetic) | Aluminium",
+      "Iron",
+      "Water"
+    ],
+    "a": 1,
+    "e": "Paramagnetic materials like Aluminium have small positive $\\chi$. / Anu-chumbakiya padarthon ki pravritti chhoti aur dhanatmak hoti hai."
+  },
+  {
+    "qe": "What is the angle of dip at a place where $B_H = B_V$?",
+    "qh": "Us sthan par nati kon kya hoga jahan kshaitij aur lumbvat ghatak barabar hain?",
+    "o": [
+      "0°",
+      "45° | 45°",
+      "90°",
+      "30°"
+    ],
+    "a": 1,
+    "e": "$\\tan\\theta = B_V/B_H$. If $B_V=B_H$, then $\\tan\\theta = 1$, so $\\theta=45^\\circ$."
+  },
+  {
+    "qe": "What is the speed of 'Electromagnetic Waves' in vacuum?",
+    "qh": "Nirvat mein 'vidyut chumbakiya tarango' ki chaal kya hai?",
+    "o": [
+      "$332 m/s$",
+      "$1500 m/s$",
+      "$3 \\times 10^8 m/s$ | $3 \\times 10^8 m/s$",
+      "Zero"
+    ],
+    "a": 2,
+    "e": "They travel at the speed of light. / Ye prakash ki chaal se chalti hain."
+  },
+  {
+    "qe": "Which 'Part' of a transformer is made of 'Soft Iron' laminated sheets?",
+    "qh": "Transformer ka kaun sa 'bhag' narm lohe ki laminated sheets se bana hota hai?",
+    "o": [
+      "Coils",
+      "Core | Core (Patalit core)",
+      "Casing",
+      "None"
+    ],
+    "a": 1,
+    "e": "Laminated core reduces eddy current losses. / Laminated core eddy current nuksan ko kam karta hai."
+  },
+  {
+    "qe": "What is the unit of 'Magnetic Field Intensity' (H)?",
+    "qh": "'Chumbakiya kshetra teevrata' (H) ki ikai kya hai?",
+    "o": [
+      "Tesla",
+      "Ampere/meter | Ampere/meter (A/m)",
+      "Weber",
+      "Henry"
+    ],
+    "a": 1,
+    "e": "H is the magnetizing force applied. / H lagaya gaya chumbakan bal hai."
+  },
+  {
+    "qe": "What is 'Curie-Weiss Law' used for?",
+    "qh": "'Curie-Weiss niyam' ka upyog kisliye hota hai?",
+    "o": [
+      "Diamagnets",
+      "Ferromagnets above Curie point | Curie bindu ke upar louh-chumbak",
+      "Electricity",
+      "None"
+    ],
+    "a": 1,
+    "e": "Describes susceptibility in the paramagnetic phase of a ferromagnet. / Ye louh-chumbak ke anu-chumbakiya phase ki pravritti batata hai."
+  },
+  {
+    "qe": "Which rule is used to find the direction of 'Magnetic Force' on a moving proton?",
+    "qh": "Gatiman proton par 'chumbakiya bal' ki disha janne ke liye kaun sa niyam upyog hota hai?",
+    "o": [
+      "Right-hand thumb rule",
+      "Fleming's Left-hand rule | Fleming ka baayein hath ka niyam",
+      "Lenz's Law",
+      "None"
+    ],
+    "a": 1,
+    "e": "For positive charges, use the left-hand rule. / Dhanatmak avesh ke liye baayein hath ka niyam upyog karein."
+  },
+  {
+    "qe": "What happens to the 'Magnetic Moment' if a magnet is heated?",
+    "qh": "Chumbak ko garam karne par uske 'chumbakiya aghurn' ka kya hota hai?",
+    "o": [
+      "Increases",
+      "Decreases | Ghat-ta hai",
+      "Stay same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Heat increases thermal agitation, disrupting magnetic alignment. / Garmi chumbakiya sanrekhan ko bigad deti hai."
+  },
+  {
+    "qe": "What is 'Bohr Magneton' related to?",
+    "qh": "'Bohr Magneton' kisse sambandhit hai?",
+    "o": [
+      "Earth's field",
+      "Magnetic moment of an electron | Electron ka chumbakiya aghurn",
+      "Solenoid",
+      "None"
+    ],
+    "a": 1,
+    "e": "It is the natural unit for expressing magnetic moment of an atom. / Ye parmanu ke chumbakiya aghurn ko vyakt karne ki prakritik ikai hai."
+  },
+  {
+    "qe": "What is the 'SI Unit' of Mutual Inductance?",
+    "qh": "'Anyonya prerakatva' ki SI ikai kya hai?",
+    "o": [
+      "Weber",
+      "Henry | Henry",
+      "Tesla",
+      "Ohm"
+    ],
+    "a": 1,
+    "e": "Both self and mutual inductance have the same unit, Henry. / Dono prerakatva ki ikai Henry hoti hai."
+  },
+  {
+    "qe": "What is 'Step-up Transformer' turns ratio ($N_s/N_p$)?",
+    "qh": "Step-up transformer ka phero ka anupat ($N_s/N_p$) kya hota hai?",
+    "o": [
+      "Greater than 1 | 1 se adhik",
+      "Less than 1",
+      "Equal to 1",
+      "Zero"
+    ],
+    "a": 0,
+    "e": "Secondary has more turns to increase voltage. / Voltage badhane ke liye secondary mein zyada phere hote hain."
+  },
+  {
+    "qe": "What is 'Step-down Transformer' turns ratio ($N_s/N_p$)?",
+    "qh": "Step-down transformer ka phero ka anupat ($N_s/N_p$) kya hota hai?",
+    "o": [
+      "Greater than 1",
+      "Less than 1 | 1 se kam",
+      "Equal to 1",
+      "None"
+    ],
+    "a": 1,
+    "e": "Secondary has fewer turns to decrease voltage. / Voltage ghatane ke liye secondary mein kam phere hote hain."
+  },
+  {
+    "qe": "Which property of a wave 'Intensity' depends on?",
+    "qh": "Tarang ki 'Teevrata' kis gun par nirbhar karti hai?",
+    "o": [
+      "Amplitude | Aayam",
+      "Frequency",
+      "Both | Dono",
+      "None"
+    ],
+    "a": 2,
+    "e": "Intensity is proportional to the square of both amplitude and frequency. / Teevrata aayam aur aavritti dono ke varg ke samanupati hoti hai."
+  },
+  {
+    "qe": "What is 'Eddy Current' loss in a transformer core minimized by?",
+    "qh": "Transformer core mein 'Eddy current' nuksan kaise kam kiya jata hai?",
+    "o": [
+      "Cooling",
+      "Lamination | Lamination",
+      "Thicker wires",
+      "None"
+    ],
+    "a": 1,
+    "e": "Using thin sheets insulated from each other. / Ek dusre se alag patli sheets ka upyog karke."
+  },
+  {
+    "qe": "What is the 'Flux' through a unit area called?",
+    "qh": "Ikai kshetraphal se guzarne wala 'Flux' kya kehlata hai?",
+    "o": [
+      "Inductance",
+      "Magnetic Induction (B) | Chumbakiya preran (B)",
+      "Susceptibility",
+      "None"
+    ],
+    "a": 1,
+    "e": "Also known as flux density. / Ise flux ghnatv bhi kehte hain."
+  },
+  {
+    "qe": "Which material has 'Large and Positive' susceptibility?",
+    "qh": "Kaun sa padarth 'badi aur dhanatmak' pravritti dikhata hai?",
+    "o": [
+      "Paramagnetic",
+      "Ferromagnetic | Louh-chumbakiya",
+      "Diamagnetic",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ferromagnetic materials are strongly magnetized. / Louh-chumbakiya padarth mazbooti se chumbakit hote hain."
+  },
+  {
+    "qe": "What is the 'Angle of Dip' at Earth's magnetic equator?",
+    "qh": "Prithvi ki chumbakiya bhumadhya rekha par 'nati kon' kya hai?",
+    "o": [
+      "90°",
+      "0° | 0°",
+      "45°",
+      "180°"
+    ],
+    "a": 1,
+    "e": "The field is horizontal at the equator. / Bhumadhya rekha par kshetra kshaitij hota hai."
+  },
+  {
+    "qe": "What is 'Magnetic Meridian' plane?",
+    "qh": "'Chumbakiya madhyahan' tal kya hai?",
+    "o": [
+      "Horizontal plane",
+      "Vertical plane through magnetic axis | Chumbakiya aksh se guzarne wala lumbvat tal",
+      "Diagonal",
+      "None"
+    ],
+    "a": 1,
+    "e": "The plane where a magnetic needle stays. / Wo tal jahan chumbakiya sui rukti hai."
+  },
+  {
+    "qe": "What is 'Self Inductance' of a solenoid proportional to length ($l$)?",
+    "qh": "Solenoid ka 'Sw-prerakatva' lambai (l) ke kaise sambandhit hai?",
+    "o": [
+      "$L \\propto l$",
+      "$L \\propto 1/l$ | $L \\propto 1/l$",
+      "$L \\propto l^2$",
+      "None"
+    ],
+    "a": 1,
+    "e": "$L = \\mu_0 N^2 A / l$. It is inversely proportional to length. / Ye lambai ke vyutkramanupati hota hai."
+  },
+  {
+    "qe": "Which 'Rule' gives the direction of magnetic field for a current loop?",
+    "qh": "Current loop ke liye chumbakiya kshetra ki disha kaun sa 'niyam' deta hai?",
+    "o": [
+      "Right-hand Palm rule | Dayein hath ki hatheli ka niyam",
+      "Lenz's Law",
+      "Ohm's Law",
+      "None"
+    ],
+    "a": 0,
+    "e": "Thumb gives field direction at center if fingers curl with current. / Angutha kendra par kshetra ki disha batata hai."
+  },
+  {
+    "qe": "What is the 'Path' of a charge if velocity is perpendicular to the field?",
+    "qh": "Yadi veg kshetra ke lumbvat ho toh avesh ka 'path' kya hoga?",
+    "o": [
+      "Straight line",
+      "Circular | Vrittakar",
+      "Helical",
+      "Parabolic"
+    ],
+    "a": 1,
+    "e": "Magnetic force provides centripetal force. / Chumbakiya bal kendrabhimukh bal pradan karta hai."
+  },
+  {
+    "qe": "What is the 'Relative Permeability' of a Diamagnet?",
+    "qh": "Diamagnet ki 'sapeksh pargamyata' kya hai?",
+    "o": [
+      "$\\mu_r > 1$",
+      "$\\mu_r < 1$ | $\\mu_r < 1$",
+      "$\\mu_r = 1$",
+      "$\\mu_r = 0$"
+    ],
+    "a": 1,
+    "e": "Slightly less than one. / Ek se thodi kam."
+  },
+  {
+    "qe": "What is 'Aclinic Line' joining?",
+    "qh": "'Aclinic Line' kise jodti hai?",
+    "o": [
+      "Same Dip",
+      "Zero Dip points | Shunya nati kon wale bindu",
+      "Same force",
+      "None"
+    ],
+    "a": 1,
+    "e": "Also called the Magnetic Equator. / Ise chumbakiya bhumadhya rekha bhi kehte hain."
+  },
+  {
+    "qe": "What is the speed of EM waves in a medium of $\\mu$ and $\\epsilon$?",
+    "qh": "$\\mu$ aur $\\epsilon$ wale madhyam mein EM tarango ki chaal kya hai?",
+    "o": [
+      "$1/\\sqrt{\\mu\\epsilon}$ | $1/\\sqrt{\\mu\\epsilon}$",
+      "$\\sqrt{\\mu/\\epsilon}$",
+      "$\\mu\\epsilon$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Speed is determined by the medium's properties. / Chaal madhyam ke guno par nirbhar karti hai."
+  },
+  {
+    "qe": "What is the 'Coercivity' of Steel compared to Soft Iron?",
+    "qh": "Narm lohe ki tulna mein steel ki 'Nigrahita' kya hai?",
+    "o": [
+      "Lower",
+      "Much Higher | Bahut adhik",
+      "Equal",
+      "Zero"
+    ],
+    "a": 1,
+    "e": "Steel is much harder to demagnetize. / Steel ko vichumbakit karna bahut kathin hai."
+  },
+  {
+    "qe": "What is 'Mutual Inductance' between two coils?",
+    "qh": "Do coils ke beech 'Anyonya prerakatva' kya hai?",
+    "o": [
+      "EMF in same coil",
+      "EMF induced in one due to change in other | Ek mein badlav se dusri mein prerit EMF",
+      "Zero",
+      "None"
+    ],
+    "a": 1,
+    "e": "Basis for transformer operation. / Transformer ke kaam karne ka aadhar."
+  },
+  {
+    "qe": "What is 'Tesla-meter/Ampere' the unit of?",
+    "qh": "'Tesla-meter/Ampere' kiski ikai hai?",
+    "o": [
+      "Flux",
+      "Permeability ($\\mu$) | Pargamyata ($\\mu$)",
+      "Inductance",
+      "None"
+    ],
+    "a": 1,
+    "e": "Standard unit for $\\mu$. / $\\mu$ ki manak ikai."
+  },
+  {
+    "qe": "What happens if you 'Cut' a bar magnet into 4 pieces?",
+    "qh": "Yadi bar chumbak ko 4 tukdo mein 'kaate' toh kya hoga?",
+    "o": [
+      "Magnetism lost",
+      "4 separate magnets are formed | 4 alag chumbak ban jayenge",
+      "Only poles remain",
+      "None"
+    ],
+    "a": 1,
+    "e": "Each piece will have its own N and S pole. / Har tukde ka apna N aur S dhruv hoga."
+  },
+  {
+    "qe": "What is 'Magnetic Declination' measured with?",
+    "qh": "'Chumbakiya dikpat' kisse maapa jata hai?",
+    "o": [
+      "Dip circle",
+      "Compass and Map | Compass aur Map",
+      "Ammeter",
+      "None"
+    ],
+    "a": 1,
+    "e": "Angle between True North and Magnetic North. / Satya uttar aur chumbakiya uttar ke beech ka kon."
+  },
+  {
+    "qe": "Which device uses 'Electromagnetic Induction' to measure heart activity?",
+    "qh": "Kaun sa upkaran hriday ki gatividhi maapne ke liye 'Vidyut chumbakiya preran' ka upyog karta hai?",
+    "o": [
+      "ECG",
+      "Magnetocardiography (MCG) | Magnetocardiography (MCG)",
+      "X-ray",
+      "None"
+    ],
+    "a": 1,
+    "e": "Detects magnetic fields produced by electrical activity of the heart. / Hriday ki vidyut gatividhi se paida chumbakiya kshetra ko maapta hai."
+  },
+  {
+    "qe": "What is 'Permeability' of a Superconductor below $T_c$?",
+    "qh": "$T_c$ ke niche 'Superconductor' ki 'pargamyata' kya hoti hai?",
+    "o": [
+      "1",
+      "0 | 0",
+      "Infinite",
+      "Negative"
+    ],
+    "a": 1,
+    "e": "Expels all magnetic lines (Meissner Effect). / Saari chumbakiya rekhao ko bahar nikal deta hai."
+  },
+  {
+    "qe": "What is 'Self Induction' unit?",
+    "qh": "'Sw-prerakatva' ki ikai kya hai?",
+    "o": [
+      "Weber",
+      "Henry | Henry",
+      "Tesla",
+      "None"
+    ],
+    "a": 1,
+    "e": "Inductance is measured in Henry (H). / Prerakatva Henry mein maapa jata hai."
+  },
+  {
+    "qe": "What is 'Flux' unit in CGS?",
+    "qh": "CGS mein 'Flux' ki ikai kya hai?",
+    "o": [
+      "Weber",
+      "Maxwell | Maxwell",
+      "Gauss",
+      "None"
+    ],
+    "a": 1,
+    "e": "$1 Wb = 10^8 Maxwell$."
+  },
+  {
+    "qe": "Which 'Parameter' changes when a wave enters a medium?",
+    "qh": "Jab tarang madhyam mein pravesh karti hai toh kaun sa 'Parameter' badalta hai?",
+    "o": [
+      "Frequency",
+      "Speed and Wavelength | Chaal aur Tarangdaidhy",
+      "Phase only",
+      "None"
+    ],
+    "a": 1,
+    "e": "Frequency remains constant as it depends on source. / Aavritti niyat rehti hai."
+  },
+  {
+    "qe": "What is 'Magnetic Intensity' (H) for a solenoid?",
+    "qh": "Solenoid ke liye 'Chumbakiya teevrata' (H) kya hai?",
+    "o": [
+      "$nI$ | $nI$",
+      "$\\mu_0 nI$",
+      "$I/n$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Does not depend on the core material. / Core material par nirbhar nahi karti."
+  },
+  {
+    "qe": "What is 'Hysteresis Loop' area related to?",
+    "qh": "'Hysteresis Loop' ka kshetraphal kisse sambandhit hai?",
+    "o": [
+      "Magnetic force",
+      "Energy loss per cycle | Prati chakra oorja ki hani",
+      "Speed",
+      "None"
+    ],
+    "a": 1,
+    "e": "Larger area means higher energy loss as heat. / Bada kshetraphal matlab zyada oorja hani."
+  },
+  {
+    "qe": "What is the 'Flux' linkage for 100 turns if each has 0.1 Wb?",
+    "qh": "100 phero ke liye flux linkage kya hoga yadi har phere mein 0.1 Wb hai?",
+    "o": [
+      "0.1 Wb",
+      "10 Wb | 10 Wb",
+      "1000 Wb",
+      "None"
+    ],
+    "a": 1,
+    "e": "$100 \\times 0.1 = 10$ Weber-turns."
+  },
+  {
+    "qe": "What is 'Retentivity' of Soft Iron?",
+    "qh": "Narm lohe ki 'Dharanshilta' (Retentivity) kya hai?",
+    "o": [
+      "Low",
+      "High | High",
+      "Zero",
+      "None"
+    ],
+    "a": 1,
+    "e": "It can be easily magnetized to a high level. / Ise aasani se uchh star tak chumbakit kiya ja sakta hai."
+  },
+  {
+    "qe": "What is 'Coercivity' of Soft Iron?",
+    "qh": "Narm lohe ki 'Nigrahita' (Coercivity) kya hai?",
+    "o": [
+      "High",
+      "Low | Low",
+      "Infinite",
+      "None"
+    ],
+    "a": 1,
+    "e": "It loses magnetism easily once the field is removed. / Kshetra hat-te hi ye chumbaktva kho deta hai."
+  },
+  {
+    "qe": "What is 'Tesla' in terms of Gauss?",
+    "qh": "Gauss ke sandarbh mein 'Tesla' kya hai?",
+    "o": [
+      "$10^2$",
+      "$10^4$ | $10^4$",
+      "$10^6$",
+      "None"
+    ],
+    "a": 1,
+    "e": "$1 Tesla = 10,000 Gauss$."
+  },
+  {
+    "qe": "What is 'Agonic Line'?",
+    "qh": "'Agonic Line' kya hai?",
+    "o": [
+      "Zero Dip",
+      "Zero Declination | Shunya dikpat bindu",
+      "Max Force",
+      "None"
+    ],
+    "a": 1,
+    "e": "Joins places with zero magnetic declination. / Shunya chumbakiya dikpat wale sthano ko jodti hai."
+  },
+  {
+    "qe": "What is 'Isogonic Line'?",
+    "qh": "'Isogonic Line' kya hai?",
+    "o": [
+      "Same Dip",
+      "Same Declination | Saman dikpat bindu",
+      "Same Force",
+      "None"
+    ],
+    "a": 1,
+    "e": "Joins places with equal magnetic declination. / Saman chumbakiya dikpat wale sthano ko jodti hai."
+  },
+  {
+    "qe": "What is the unit of 'Magnetic Dipole Moment' per unit volume?",
+    "qh": "Prati ikai aaytan 'Chumbakiya dvidhruv aghurn' ki ikai kya hai?",
+    "o": [
+      "Tesla",
+      "Ampere/meter | Ampere/meter",
+      "Weber",
+      "Henry"
+    ],
+    "a": 1,
+    "e": "Also called intensity of magnetization (M). / Ise chumbakan ki teevrata bhi kehte hain."
+  },
+  {
+    "qe": "On which principle does an 'AC Generator' work?",
+    "qh": "'AC Generator' kis siddhant par karya karta hai?",
+    "o": [
+      "Self Induction",
+      "Mutual Induction",
+      "Electromagnetic Induction | vidyut chumbakiya preran",
+      "Hysteresis"
+    ],
+    "a": 2,
+    "e": "Converts mechanical energy into electrical energy using Faraday's Law. / Faraday ke niyam ka upyog karke yaantrik oorja ko vidyut oorja mein badalta hai."
+  },
+  {
+    "qe": "What is 'Magnetic Susceptibility' ($\\chi$) of a Diamagnetic liquid in a U-tube?",
+    "qh": "U-tube mein ek prati-chumbakiya drav ki 'chumbakiya pravritti' kaisi hoti hai?",
+    "o": [
+      "Liquid level rises",
+      "Liquid level falls | drav ka star girta hai",
+      "No change",
+      "None"
+    ],
+    "a": 1,
+    "e": "Diamagnetic substances are repelled by magnetic fields, so the level in the tube falls. / prati-chumbakiya padarth pratikarshit hote hain, isliye star gir jata hai."
+  },
+  {
+    "qe": "Which factor 'Does Not' affect the 'Self Inductance' of a coil?",
+    "qh": "kaun sa karak ek coil ke 'sw-prerakatva' ko prabhavit 'nahi' karta?",
+    "o": [
+      "Number of turns",
+      "Area of cross-section",
+      "Current flowing through it | isse behne wala current",
+      "Permeability of core"
+    ],
+    "a": 2,
+    "e": "Inductance is a geometric property and doesn't depend on the current magnitude. / prerakatva ek jyamitiya gun hai aur current par nirbhar nahi karta."
+  },
+  {
+    "qe": "What is the 'Efficiency' of a transformer formula?",
+    "qh": "transformer ki 'dakshta' ka sutra kya hai?",
+    "o": [
+      "Output Power / Input Power | output shakti / input shakti",
+      "Input / Output",
+      "Current / Voltage",
+      "None"
+    ],
+    "a": 0,
+    "e": "Ratio of useful power delivered to the power consumed. / upyogi shakti aur khapt shakti ka anupat."
+  },
+  {
+    "qe": "What is the unit of 'Magnetic Field Gradient'?",
+    "qh": "'chumbakiya kshetra pravanta' ki ikai kya hai?",
+    "o": [
+      "Tesla",
+      "Tesla/meter | Tesla/meter",
+      "Weber",
+      "Henry"
+    ],
+    "a": 1,
+    "e": "Change in magnetic field per unit distance. / prati ikai doori par chumbakiya kshetra mein badlav."
+  },
+  {
+    "qe": "Which material has 'Large and Negative' susceptibility?",
+    "qh": "kis padarth ki pravritti 'badi aur rinatmak' hoti hai?",
+    "o": [
+      "Diamagnetic",
+      "Paramagnetic",
+      "Superconductors | ati-chalak (Superconductors)",
+      "Ferromagnetic"
+    ],
+    "a": 2,
+    "e": "Superconductors show perfect diamagnetism ($\\chi = -1$). / ati-chalak purn prati-chumbaktva dikhate hain."
+  },
+  {
+    "qe": "What is 'Curie Temperature' of 'Cobalt' approx?",
+    "qh": "'cobalt' ka 'curie tapman' lagbhag kya hai?",
+    "o": [
+      "770°C",
+      "1121°C | 1121°C",
+      "358°C",
+      "0°C"
+    ],
+    "a": 1,
+    "e": "Highest Curie temperature among common ferromagnetic metals. / samanya louh-chumbakiya dhaton mein adhiktam curie tapman."
+  },
+  {
+    "qe": "What is 'Hysteresis Loss' in 'Hard Steel' compared to 'Soft Iron'?",
+    "qh": "'narm lohe' ki tulna mein 'kathor steel' mein 'hysteresis hani' kya hoti hai?",
+    "o": [
+      "Lower",
+      "Much Higher | bahut adhik",
+      "Equal",
+      "None"
+    ],
+    "a": 1,
+    "e": "Hard steel has a much larger B-H loop area. / kathor steel ka B-H loop kshetraphal bahut bada hota hai."
+  },
+  {
+    "qe": "What is 'Magnetic Susceptibility' of a Paramagnetic gas proportional to?",
+    "qh": "ek anu-chumbakiya gas ki 'pravritti' kiske samanupati hoti hai?",
+    "o": [
+      "T",
+      "$1/T$ | $1/T$ (absolute temp)",
+      "$T^2$",
+      "None"
+    ],
+    "a": 1,
+    "e": "According to Curie's Law. / curie ke niyam ke anusar."
+  },
+  {
+    "qe": "What is 'Energy' stored in an inductor of inductance 'L' and current 'I'?",
+    "qh": "'L' prerakatva aur 'I' current wale prerak mein sanchit 'oorja' kya hai?",
+    "o": [
+      "$LI$",
+      "$1/2 LI^2$ | $1/2 LI^2$",
+      "$LI^2$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Stored in the form of a magnetic field. / chumbakiya kshetra ke roop mein sanchit."
+  },
+  {
+    "qe": "In a 'Step-up Transformer', which quantity 'Decreases'?",
+    "qh": "ek 'step-up transformer' mein kaun si rashi 'ghat-ti' hai?",
+    "o": [
+      "Voltage",
+      "Current | dhara (Current)",
+      "Power",
+      "Frequency"
+    ],
+    "a": 1,
+    "e": "To keep power constant ($V \\times I$), current must decrease if voltage increases. / shakti ko niyat rakhne ke liye current ghat jata hai."
+  },
+  {
+    "qe": "What is 'Eddy Current' loss dependent on 'Frequency' ($f$)?",
+    "qh": "'eddy current' hani 'aavritti' ($f$) par kaise nirbhar karti hai?",
+    "o": [
+      "$\\propto f$",
+      "$\\propto f^2$ | $\\propto f^2$",
+      "$\\propto \\sqrt{f}$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Losses increase rapidly with frequency. / aavritti ke saath nuksan tezi se badhta hai."
+  },
+  {
+    "qe": "What is 'Self Inductance' of a straight wire of infinite length?",
+    "qh": "ek anant lambai ke seedhe tar ka 'sw-prerakatva' kya hota hai?",
+    "o": [
+      "Zero",
+      "Infinite | anant (Infinite)",
+      "Constant",
+      "None"
+    ],
+    "a": 1,
+    "e": "Theoretically infinite for an infinitely long wire. / saiddhantik roop se anant."
+  },
+  {
+    "qe": "Which device uses 'Magnetic Force' to separate iron from junk?",
+    "qh": "kachre se lohe ko alag karne ke liye kaun sa upkaran 'chumbakiya bal' ka upyog karta hai?",
+    "o": [
+      "Electric Motor",
+      "Electromagnetic Crane | vidyut chumbakiya crane",
+      "Generator",
+      "None"
+    ],
+    "a": 1,
+    "e": "Uses powerful electromagnets. / shaktishali vidyut chumbakon ka upyog karta hai."
+  },
+  {
+    "qe": "What is the 'SI Unit' of Magnetic Susceptibility?",
+    "qh": "'chumbakiya pravritti' ki 'SI ikai' kya hai?",
+    "o": [
+      "Tesla",
+      "Weber",
+      "Dimensionless | vima-heen",
+      "Henry"
+    ],
+    "a": 2,
+    "e": "It is a ratio, so it has no units. / yah ek anupat hai, isliye iska koi matrak nahi hota."
+  },
+  {
+    "qe": "What is 'Isogonic Line' on a map?",
+    "qh": "manchitra par 'isogonic rekha' kya hai?",
+    "o": [
+      "Points of equal dip",
+      "Points of equal declination | saman dikpat wale bindu",
+      "Points of zero dip",
+      "None"
+    ],
+    "a": 1,
+    "e": "Joins places having the same magnetic declination. / saman chumbakiya dikpat wale sthanon ko jodti hai."
+  },
+  {
+    "qe": "Which rule helps find the direction of force on a current-carrying wire in a field?",
+    "qh": "kshetra mein dharavahi tar par lagne wale bal ki disha kaun sa niyam batata hai?",
+    "o": [
+      "Right-hand thumb rule",
+      "Fleming's Left-hand rule | Fleming ka baayein hath ka niyam",
+      "Lenz's Law",
+      "None"
+    ],
+    "a": 1,
+    "e": "Thumb = Force, Forefinger = Field, Middle = Current. / angutha = bal, tarjani = kshetra, madhyama = dhara."
+  },
+  {
+    "qe": "What is 'Magnetic Induction' ($B$) at a point 'r' from a long wire carrying current 'I'?",
+    "qh": "'I' current wale lambe tar se 'r' doori par 'chumbakiya preran' ($B$) kya hai?",
+    "o": [
+      "$\\mu_0 I / 2r$",
+      "$\\mu_0 I / 2\\pi r$ | $\\mu_0 I / 2\\pi r$",
+      "$\\mu_0 I / r$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Follows inverse relation with distance. / doori ke saath vyutkramanupati sambandh."
+  },
+  {
+    "qe": "What happens to the 'Speed' of a charged particle in a magnetic field?",
+    "qh": "ek chumbakiya kshetra mein ek आवेशित कण की 'chaal' (speed) ka kya hota hai?",
+    "o": [
+      "Increases",
+      "Decreases",
+      "Remains constant | niyat rehti hai",
+      "Zero"
+    ],
+    "a": 2,
+    "e": "Magnetic force is always perpendicular to velocity, so it only changes direction, not speed. / chumbakiya bal veg ke lumbvat hota hai, isliye sirf disha badalti hai."
+  },
+  {
+    "qe": "Which material is used for 'Magnetic recording' in hard drives?",
+    "qh": "hard drive mein 'chumbakiya recording' ke liye kya upyog hota hai?",
+    "o": [
+      "Soft Iron",
+      "Cobalt-Platinum alloys | cobalt-platinum mishra dhatu",
+      "Copper",
+      "Aluminium"
+    ],
+    "a": 1,
+    "e": "Needs high coercivity to keep data stable. / data ko sthir rakhne ke liye uchchh nigrahita chahiye."
+  },
+  {
+    "qe": "What is 'Self Inductance' of a coil of 50 turns if flux is 10 Wb for 5A current?",
+    "qh": "50 phero wali coil ka 'sw-prerakatva' kya hai yadi 5A current par flux 10 Wb hai?",
+    "o": [
+      "2 Henry | 2 Henry ($L = \\Phi/I$)",
+      "50 Henry",
+      "0.5 Henry",
+      "None"
+    ],
+    "a": 0,
+    "e": "$L = 10 / 5 = 2$ H. (Flux per unit current). / prati ikai current flux."
+  },
+  {
+    "qe": "What is 'Copper Loss' in a transformer?",
+    "qh": "transformer mein 'copper hani' kya hai?",
+    "o": [
+      "Heat in core",
+      "Heat in windings due to resistance | pratirodh ke karan winding mein ushma",
+      "Flux leakage",
+      "None"
+    ],
+    "a": 1,
+    "e": "Caused by $I^2R$ heating in the coils. / coil mein $I^2R$ taapan ke karan."
+  },
+  {
+    "qe": "What is 'Mutual Induction' between two perpendicular coils?",
+    "qh": "do lumbvat (perpendicular) coils ke beech 'anyonya preran' kya hota hai?",
+    "o": [
+      "Maximum",
+      "Zero | shunya (Zero)",
+      "Constant",
+      "None"
+    ],
+    "a": 1,
+    "e": "No flux linkage between perpendicular coils. / lumbvat coils ke beech koi flux linkage nahi hota."
+  },
+  {
+    "qe": "What is 'Tesla' equivalent to in terms of 'N, A, m'?",
+    "qh": "'N, A, m' ke sandarbh mein 'Tesla' kiske barabar hai?",
+    "o": [
+      "$N / (A \\cdot m)$ | $N / (A \\cdot m)$",
+      "$N \\cdot A / m$",
+      "$A \\cdot m / N$",
+      "None"
+    ],
+    "a": 0,
+    "e": "From $F = I L B \\sin\\theta$, so $B = F/IL$. / $F = ILB$ sutra se."
+  },
+  {
+    "qe": "What is 'Magnetic Susceptibility' for a Vacuum?",
+    "qh": "nirvat ke liye 'chumbakiya pravritti' kya hai?",
+    "o": [
+      "1",
+      "0 | 0",
+      "Infinite",
+      "-1"
+    ],
+    "a": 1,
+    "e": "Vacuum cannot be magnetized. / nirvat ko chumbakit nahi kiya ja sakta."
+  },
+  {
+    "qe": "Which material is used for 'Pole pieces' of a magnet in a galvanometer?",
+    "qh": "galvanometer mein chumbak ke 'pole pieces' ke liye kya upyog hota hai?",
+    "o": [
+      "Steel",
+      "Soft Iron | narm loha",
+      "Alnico",
+      "None"
+    ],
+    "a": 1,
+    "e": "To make the magnetic field radial and strong. / chumbakiya kshetra ko trijya aur mazboot banane ke liye."
+  },
+  {
+    "qe": "What is 'Agonic Line'?",
+    "qh": "'agonic rekha' kya hai?",
+    "o": [
+      "Line of equal dip",
+      "Line of zero declination | shunya dikpat wali rekha",
+      "Line of max dip",
+      "None"
+    ],
+    "a": 1,
+    "e": "Joins places where magnetic north and true north are the same. / un sthanon ko jodti hai jahan chumbakiya aur satya uttar ek hi hain."
+  },
+  {
+    "qe": "What is the 'Flux' linkage unit?",
+    "qh": "'flux linkage' ki ikai kya hai?",
+    "o": [
+      "Tesla",
+      "Weber-turn | Weber-turn",
+      "Henry",
+      "None"
+    ],
+    "a": 1,
+    "e": "Total flux through all turns of a coil. / coil ke sabhi phero se guzarne wala kul flux."
+  },
+  {
+    "qe": "Which 'Law' relates the total magnetic flux through a closed surface to zero?",
+    "qh": "kaun sa niyam band satah se kul chumbakiya flux ko shunya ke barabar batata hai?",
+    "o": [
+      "Faraday's Law",
+      "Gauss's Law for Magnetism | magnetism ke liye Gauss ka niyam",
+      "Lenz's Law",
+      "None"
+    ],
+    "a": 1,
+    "e": "Indicates that magnetic monopoles do not exist. / batata hai ki chumbakiya ekal dhruv nahi hote."
+  },
+  {
+    "qe": "What is 'Retentivity' of Steel?",
+    "qh": "steel ki 'dharanshilta' (Retentivity) narm lohe ki tulna mein kya hai?",
+    "o": [
+      "Higher",
+      "Lower | kam (Lower)",
+      "Equal",
+      "None"
+    ],
+    "a": 1,
+    "e": "Soft iron has higher retentivity but lower coercivity than steel. / narm lohe ki dharanshilta zyada par nigrahita kam hoti hai."
+  },
+  {
+    "qe": "Which 'Force' is used in 'Maglev' trains to lift them?",
+    "qh": "'maglev' trainon ko uthane ke liye kis 'bal' ka upyog hota hai?",
+    "o": [
+      "Electrostatic",
+      "Magnetic Repulsion | chumbakiya pratikarshan",
+      "Air pressure",
+      "None"
+    ],
+    "a": 1,
+    "e": "Opposing magnetic poles lift the train off the track. / viprit chumbakiya dhruv train ko track se upar utha dete hain."
+  },
+  {
+    "qe": "What is 'Relative Permeability' ($\\mu_r$) for a Diamagnetic substance?",
+    "qh": "ek prati-chumbakiya padarth ke liye 'sapeksh pargamyata' ($\\mu_r$) kya hai?",
+    "o": [
+      "$\\mu_r > 1$",
+      "$\\mu_r < 1$ | $\\mu_r < 1$",
+      "$\\mu_r = 1$",
+      "None"
+    ],
+    "a": 1,
+    "e": "They resist magnetic flux, making relative permeability less than 1. / ye chumbakiya flux ka virodh karte hain."
+  },
+  {
+    "qe": "What is 'Aclinic Line' joining?",
+    "qh": "'aclinic rekha' kise jodti hai?",
+    "o": [
+      "Same dip",
+      "Zero dip points | shunya nati kon wale bindu",
+      "Same force",
+      "None"
+    ],
+    "a": 1,
+    "e": "It represents the magnetic equator. / yah chumbakiya bhumadhya rekha ko darshati hai."
+  },
+  {
+    "qe": "What is the speed of EM waves in vacuum formula?",
+    "qh": "nirvat mein EM tarango ki chaal ka sutra kya hai?",
+    "o": [
+      "$1/\\sqrt{\\mu_0\\epsilon_0}$ | $1/\\sqrt{\\mu_0\\epsilon_0}$",
+      "$\\mu_0\\epsilon_0$",
+      "$\\sqrt{\\mu_0/\\epsilon_0}$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Relates vacuum permeability and permittivity to the speed of light. / nirvat pargamyata aur paravaidhyutank ko prakash ki chaal se jodta hai."
+  },
+  {
+    "qe": "Which 'Rule' is used to find the direction of magnetic field for a straight wire?",
+    "qh": "seedhe tar ke liye chumbakiya kshetra ki disha janne ke liye kaun sa 'niyam' upyog hota hai?",
+    "o": [
+      "Lenz's Law",
+      "Right-hand thumb rule | dayein hath ke anguthe ka niyam",
+      "Fleming's Law",
+      "None"
+    ],
+    "a": 1,
+    "e": "Thumb = Current, Fingers = Magnetic field lines. / angutha = current, ungliyan = chumbakiya kshetra."
+  },
+  {
+    "qe": "What is 'Hysteresis Loop' area representing?",
+    "qh": "'hysteresis loop' ka kshetraphal kya darshata hai?",
+    "o": [
+      "Flux",
+      "Energy loss per cycle | prati chakra oorja hani",
+      "Magnetic strength",
+      "None"
+    ],
+    "a": 1,
+    "e": "Heat generated due to repeated magnetization. / baar-baar chumbakan ke karan paida ushma."
+  },
+  {
+    "qe": "What is 'Self Inductance' unit 'Henry' equivalent to?",
+    "qh": "'henry' kiske barabar hai?",
+    "o": [
+      "$Weber / Ampere$ | $Weber / Ampere$",
+      "$Tesla / Ampere$",
+      "$Weber \\cdot Ampere$",
+      "None"
+    ],
+    "a": 0,
+    "e": "From $\\Phi = LI$. / $\\Phi = LI$ sutra se."
+  },
+  {
+    "qe": "Which material is used for 'Permanent Magnets' like Alnico?",
+    "qh": "alnico jaise 'sthayi chumbak' ke liye kya gun zaruri hai?",
+    "o": [
+      "High retentivity and high coercivity | uchchh dharanshilta aur uchchh nigrahita",
+      "Low coercivity",
+      "Zero retentivity",
+      "None"
+    ],
+    "a": 0,
+    "e": "Ensures the magnet remains strong and hard to demagnetize. / chumbak ko mazboot aur vichumbakit karne mein kathin banata hai."
+  },
+  {
+    "qe": "What is the 'Flux' through 100 turns if each turn has 0.2 Weber?",
+    "qh": "100 phero mein flux kya hoga yadi har phere mein 0.2 Weber hai?",
+    "o": [
+      "20 Weber-turn | 20 Weber-turn",
+      "0.2 Weber",
+      "500 Weber",
+      "None"
+    ],
+    "a": 0,
+    "e": "$100 \\times 0.2 = 20$. Total flux linkage. / kul flux linkage."
+  },
+  {
+    "qe": "What is 'Coercivity' of Soft Iron?",
+    "qh": "narm lohe ki 'nigrahita' (Coercivity) kya hoti hai?",
+    "o": [
+      "Very High",
+      "Very Low | bahut kam",
+      "Infinite",
+      "None"
+    ],
+    "a": 1,
+    "e": "Makes it easy to magnetize and demagnetize in AC circuits. / AC circuits mein ise chumbakit aur vichumbakit karna aasan banata hai."
+  },
+  {
+    "qe": "Which part of ear is 'Pinna'?",
+    "qh": "kaan ka kaun sa bhag 'pinna' hai?",
+    "o": [
+      "Inner",
+      "Middle",
+      "Outer | baahri kaan",
+      "None"
+    ],
+    "a": 2,
+    "e": "Collects sound waves. / dhwani tarango ko ikatha karta hai."
+  },
+  {
+    "qe": "What is 'Tesla' in terms of Gauss?",
+    "qh": "Gauss ke sandarbh mein 'Tesla' kya hai?",
+    "o": [
+      "$10^2$",
+      "$10^4$ | $10^4$",
+      "$10^6$",
+      "None"
+    ],
+    "a": 1,
+    "e": "$1 Tesla = 10,000 Gauss$."
+  },
+  {
+    "qe": "What is 'Magnetic Potential' unit?",
+    "qh": "'chumbakiya vibhav' ki ikai kya hai?",
+    "o": [
+      "Tesla",
+      "Joule/Weber | Joule/Weber",
+      "Weber",
+      "Henry"
+    ],
+    "a": 1,
+    "e": "Analogous to electric potential. / vidyut vibhav ke saman."
+  },
+  {
+    "qe": "Which 'Substance' has susceptibility $\\chi < 0$?",
+    "qh": "kis 'padarth' ki pravritti $\\chi < 0$ hoti hai?",
+    "o": [
+      "Iron",
+      "Aluminium",
+      "Water | pani (Diamagnetic)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Diamagnetic materials have small negative susceptibility. / prati-chumbakiya padarthon ki pravritti chhoti aur rinatmak hoti hai."
+  },
+  {
+    "qe": "What is the 'Flux' through a unit area perpendicular to the field?",
+    "qh": "kshetra ke lumbvat ikai kshetraphal se guzarne wala 'flux' kya hai?",
+    "o": [
+      "Inductance",
+      "Magnetic Induction (B) | chumbakiya preran (B)",
+      "Susceptibility",
+      "None"
+    ],
+    "a": 1,
+    "e": "Also called magnetic flux density. / ise chumbakiya flux ghnatv bhi kehte hain."
+  },
+  {
+    "qe": "What is 'Intensity of Magnetization' for a vacuum?",
+    "qh": "nirvat ke liye 'chumbakan ki teevrata' kya hai?",
+    "o": [
+      "Infinite",
+      "Zero | shunya (Zero)",
+      "One",
+      "None"
+    ],
+    "a": 1,
+    "e": "Vacuum has no material to magnetize. / nirvat mein chumbakit hone ke liye koi padarth nahi hota."
+  },
+  {
+    "qe": "Which 'Rule' gives the direction of magnetic field for a solenoid?",
+    "qh": "perinalika ke liye chumbakiya kshetra ki disha kaun sa 'niyam' deta hai?",
+    "o": [
+      "Right-hand Palm rule | dayein hath ki hatheli ka niyam",
+      "Lenz's Law",
+      "Ohm's Law",
+      "None"
+    ],
+    "a": 0,
+    "e": "Fingers curl with current, thumb points to North pole. / ungliyan current ke saath, angutha uttar dhruv ki taraf."
+  },
+  {
+    "qe": "What is 'Bio-magnetism'?",
+    "qh": "'बायो-मैग्नेटिज्म' क्या है?",
+    "o": [
+      "Magnetism in living organisms | जीवित जीवों में चुंबकत्व",
+      "Magnetism in rocks",
+      "Magnetism in space",
+      "None"
+    ],
+    "a": 0,
+    "e": "Magnetic fields produced by living organisms like humans and birds. / मनुष्यों और पक्षियों जैसे जीवित जीवों द्वारा उत्पन्न चुंबकीय क्षेत्र।"
+  },
+  {
+    "qe": "Which 'Organ' in the human body produces the strongest magnetic field?",
+    "qh": "मानव शरीर का कौन सा 'अंग' सबसे मजबूत चुंबकीय क्षेत्र उत्पन्न करता है?",
+    "o": [
+      "Brain",
+      "Heart | हृदय (Heart)",
+      "Lungs",
+      "Liver"
+    ],
+    "a": 1,
+    "e": "The heart produces a magnetic field about 100 times stronger than the brain. / हृदय मस्तिष्क की तुलना में लगभग 100 गुना अधिक मजबूत चुंबकीय क्षेत्र बनाता है।"
+  },
+  {
+    "qe": "What is the 'Magnetic Moment' of an electron due to its orbital motion called?",
+    "qh": "इलेक्ट्रॉन की कक्षीय गति के कारण उसके 'चुंबकीय आघूर्ण' को क्या कहते हैं?",
+    "o": [
+      "Spin moment",
+      "Orbital magnetic moment | कक्षीय चुंबकीय आघूर्ण",
+      "Dipole moment",
+      "None"
+    ],
+    "a": 1,
+    "e": "Arises from the circulation of electron around the nucleus. / नाभिक के चारों ओर इलेक्ट्रॉन के घूमने से उत्पन्न होता है।"
+  },
+  {
+    "qe": "What is the value of 'Bohr Magneton' ($\\mu_B$) approx?",
+    "qh": "'बोहर मैग्नेटन' ($\\mu_B$) का अनुमानित मान क्या है?",
+    "o": [
+      "$9.27 \\times 10^{-24} J/T$ | $9.27 \\times 10^{-24} J/T$",
+      "$1.6 \\times 10^{-19}$",
+      "$6.6 \\times 10^{-34}$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Fundamental unit for the magnetic moment of an atom. / परमाणु के चुंबकीय आघूर्ण की मौलिक इकाई।"
+  },
+  {
+    "qe": "What is 'Magnetic Anisotropy'?",
+    "qh": "'चुंबकीय एनिसोट्रॉपी' क्या है?",
+    "o": [
+      "Dependence of magnetic properties on direction | दिशा पर चुंबकीय गुणों की निर्भरता",
+      "Uniform magnetism",
+      "Loss of magnetism",
+      "None"
+    ],
+    "a": 0,
+    "e": "Material is easier to magnetize in certain directions than others. / कुछ दिशाओं में चुंबकित करना दूसरों की तुलना में आसान होता है।"
+  },
+  {
+    "qe": "The 'Lorentz Force' is used in which instrument to separate isotopes?",
+    "qh": "आइसोटोप को अलग करने के लिए किस उपकरण में 'लोरेंट्ज़ बल' का उपयोग होता है?",
+    "o": [
+      "Cyclotron",
+      "Mass Spectrometer | मास स्पेक्ट्रोमीटर",
+      "Transformer",
+      "None"
+    ],
+    "a": 1,
+    "e": "Bends the paths of ions based on their mass-to-charge ratio. / आयनों के द्रव्यमान और आवेश के अनुपात के आधार पर उनके पथ को मोड़ता है।"
+  },
+  {
+    "qe": "What is the 'Magnetic Field' at the center of a semi-circular current carrying wire?",
+    "qh": "अर्ध-वृत्ताकार धारावाही तार के केंद्र में 'चुंबकीय क्षेत्र' क्या होता है?",
+    "o": [
+      "$\\mu_0 I / 2R$",
+      "$\\mu_0 I / 4R$ | $\\mu_0 I / 4R$",
+      "Zero",
+      "$\\mu_0 I / R$"
+    ],
+    "a": 1,
+    "e": "It is exactly half of the field at the center of a full circle. / यह पूरे वृत्त के केंद्र के क्षेत्र का ठीक आधा होता है।"
+  },
+  {
+    "qe": "What is 'Curie Temperature' of 'Gadolinium' approx?",
+    "qh": "'गैडोलीनियम' का 'क्यूरी तापमान' लगभग क्या है?",
+    "o": [
+      "16°C | 16°C (289 K)",
+      "770°C",
+      "1000°C",
+      "0°C"
+    ],
+    "a": 0,
+    "e": "It is ferromagnetic below room temperature. / यह कमरे के तापमान से नीचे लौह-चुंबकीय होता है।"
+  },
+  {
+    "qe": "Which material is used in 'Permanent Magnet' DC motors?",
+    "qh": "'स्थायी चुंबक' DC मोटर्स में किस सामग्री का उपयोग होता है?",
+    "o": [
+      "Soft Iron",
+      "Ferrites / Neodymium | फेराइट्स / नियोडिमियम",
+      "Copper",
+      "Aluminium"
+    ],
+    "a": 1,
+    "e": "Requires high coercivity to resist demagnetization during use. / उपयोग के दौरान विचुंबकन को रोकने के लिए उच्च निग्राहिता की आवश्यकता होती है।"
+  },
+  {
+    "qe": "What is 'Magnetic Viscosity'?",
+    "qh": "'चुंबकीय श्यानता' (Magnetic Viscosity) क्या है?",
+    "o": [
+      "Time delay in magnetization change | चुंबकन परिवर्तन में समय की देरी",
+      "Thickness of magnet",
+      "Speed of field",
+      "None"
+    ],
+    "a": 0,
+    "e": "Delay between application of field and final magnetization. / क्षेत्र लगाने और अंतिम चुंबकन के बीच का विलंब।"
+  },
+  {
+    "qe": "What is 'Self Inductance' of a coil of 'N' turns related to its area 'A'?",
+    "qh": "'N' फेरों वाली कुंडली का 'स्व-प्रेरकत्व' उसके क्षेत्रफल 'A' से कैसे संबंधित है?",
+    "o": [
+      "$L \\propto \\sqrt{A}$",
+      "$L \\propto A$ | $L \\propto A$",
+      "$L \\propto 1/A$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Inductance is directly proportional to the cross-sectional area. / प्रेरकत्व अनुप्रस्थ काट के क्षेत्रफल के सीधे समानुपाती होता है।"
+  },
+  {
+    "qe": "What happens to the 'Magnetic Field' inside a superconductor?",
+    "qh": "एक अतिचालक (Superconductor) के भीतर 'चुंबकीय क्षेत्र' का क्या होता है?",
+    "o": [
+      "Becomes Infinite",
+      "Becomes Zero | शून्य हो जाता है",
+      "Remains same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Expulsion of magnetic field is called Meissner Effect. / चुंबकीय क्षेत्र का बाहर निकलना मीस्नर प्रभाव कहलाता है।"
+  },
+  {
+    "qe": "What is the unit of 'Gyromagnetic Ratio'?",
+    "qh": "'गाइरोमैग्नेटिक अनुपात' की इकाई क्या है?",
+    "o": [
+      "Tesla/Ampere",
+      "Coulomb/kg | कूलम्ब/किग्रा",
+      "Weber/m",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ratio of magnetic moment to angular momentum. / चुंबकीय आघूर्ण और कोणीय संवेग का अनुपात।"
+  },
+  {
+    "qe": "What is the 'SI Unit' of Magnetic Susceptibility?",
+    "qh": "'चुंबकीय प्रवृत्ति' की 'SI इकाई' क्या है?",
+    "o": [
+      "Tesla",
+      "Ampere/meter",
+      "Dimensionless | मात्रकहीन",
+      "Henry"
+    ],
+    "a": 2,
+    "e": "It is a ratio, so it has no unit. / यह एक अनुपात है, इसलिए इसका कोई मात्रक नहीं है।"
+  },
+  {
+    "qe": "Which 'Rule' gives the direction of eddy currents?",
+    "qh": "भंवर धाराओं की दिशा कौन सा 'नियम' देता है?",
+    "o": [
+      "Ohm's Law",
+      "Lenz's Law | लेंज का नियम",
+      "Right-hand rule",
+      "None"
+    ],
+    "a": 1,
+    "e": "Induced currents always oppose the change in magnetic flux. / प्रेरित धाराएं हमेशा चुंबकीय फ्लक्स में बदलाव का विरोध करती हैं।"
+  },
+  {
+    "qe": "What is 'Barkhausen Effect'?",
+    "qh": "'बरखौसेन प्रभाव' (Barkhausen Effect) क्या है?",
+    "o": [
+      "Smooth magnetization",
+      "Step-wise / Jerky magnetization | चरणबद्ध / झटकेदार चुंबकन",
+      "Loss of field",
+      "None"
+    ],
+    "a": 1,
+    "e": "Evidence for the existence of magnetic domains. / चुंबकीय डोमेन के अस्तित्व का प्रमाण।"
+  },
+  {
+    "qe": "What is 'Earth's Magnetic Dip' at 90° latitude (Poles)?",
+    "qh": "90° अक्षांश (ध्रुवों) पर पृथ्वी की 'चुंबकीय नति' क्या है?",
+    "o": [
+      "0°",
+      "90° | 90°",
+      "45°",
+      "180°"
+    ],
+    "a": 1,
+    "e": "Compass needle stands vertically at the magnetic poles. / चुंबकीय ध्रुवों पर कंपास की सुई लंबवत खड़ी हो जाती है।"
+  },
+  {
+    "qe": "What is the 'Flux' linkage for 50 turns if flux is 0.5 Wb per turn?",
+    "qh": "50 फेरों के लिए फ्लक्स लिंकेज क्या होगा यदि फ्लक्स 0.5 वेबर प्रति फेरा है?",
+    "o": [
+      "0.5 Wb",
+      "25 Wb | 25 Wb",
+      "100 Wb",
+      "None"
+    ],
+    "a": 1,
+    "e": "$50 \\times 0.5 = 25$ Weber-turns."
+  },
+  {
+    "qe": "What is 'Magnetic Permeability' of water approx?",
+    "qh": "पानी की 'चुंबकीय पारगम्यता' लगभग क्या है?",
+    "o": [
+      "Slightly > 1",
+      "Slightly < 1 | 1 से थोड़ी कम (Diamagnetic)",
+      "Exactly 1",
+      "Zero"
+    ],
+    "a": 1,
+    "e": "Water is a diamagnetic substance. / पानी एक प्रति-चुंबकीय पदार्थ है।"
+  },
+  {
+    "qe": "What is 'Remanence' in a B-H loop?",
+    "qh": "B-H लूप में 'अवशेष चुंबकत्व' (Remanence) क्या है?",
+    "o": [
+      "Value of B when H is max",
+      "Value of B when H is Zero | H शून्य होने पर B का मान",
+      "Area",
+      "None"
+    ],
+    "a": 1,
+    "e": "Residual magnetism left in the material. / पदार्थ में बचा हुआ अवशिष्ट चुंबकत्व।"
+  },
+  {
+    "qe": "What is 'Ampere's Circuital Law' integral formula?",
+    "qh": "'एम्पीयर के परिपथीय नियम' का समाकलन सूत्र क्या है?",
+    "o": [
+      "$\\oint B \\cdot dl = \\mu_0 I$ | $\\oint B \\cdot dl = \\mu_0 I$",
+      "$\\Phi = BA$",
+      "$F = qvB$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Relates line integral of magnetic field to enclosed current. / चुंबकीय क्षेत्र के रेखीय समाकलन को घिरे हुए करंट से जोड़ता है।"
+  },
+  {
+    "qe": "Which material is used in 'Magnetic Bubbles' memory?",
+    "qh": "'मैग्नेटिक बबल' मेमोरी में किस सामग्री का उपयोग होता है?",
+    "o": [
+      "Silicon",
+      "Garnets | गार्नेट (Garnets)",
+      "Copper",
+      "None"
+    ],
+    "a": 1,
+    "e": "Special magnetic films where tiny domains (bubbles) store data. / विशेष चुंबकीय फिल्में जहाँ छोटे डोमेन डेटा स्टोर करते हैं।"
+  },
+  {
+    "qe": "What is 'Faraday's Disk' an example of?",
+    "qh": "'फैराडे की डिस्क' किसका उदाहरण है?",
+    "o": [
+      "AC Generator",
+      "Homopolar Generator | होमोपोलर जेनरेटर",
+      "Transformer",
+      "None"
+    ],
+    "a": 1,
+    "e": "The first electromagnetic generator. / पहला विद्युत चुंबकीय जेनरेटर।"
+  },
+  {
+    "qe": "What is 'Mutual Inductance' of two coils if current changes at 1 A/s and EMF is 5V?",
+    "qh": "दो कुंडलियों का 'अन्योन्य प्रेरकत्व' क्या होगा यदि करंट 1 A/s से बदलता है और EMF 5V है?",
+    "o": [
+      "1 Henry",
+      "5 Henry | 5 हेनरी ($M = e / (dI/dt)$)",
+      "0.2 Henry",
+      "None"
+    ],
+    "a": 1,
+    "e": "$M = 5 / 1 = 5 H$. / गणना सूत्र के अनुसार।"
+  },
+  {
+    "qe": "What is 'Tesla' in base SI units?",
+    "qh": "मूल SI इकाइयों में 'टेस्ला' क्या है?",
+    "o": [
+      "$kg \\cdot s^{-2} \\cdot A^{-1}$ | $kg \\cdot s^{-2} \\cdot A^{-1}$",
+      "$kg \\cdot m \\cdot s^{-1}$",
+      "$A \\cdot m^2$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Derived from $F = qvB \\implies B = F/qv$. / सूत्र $F/qv$ से व्युत्पन्न।"
+  },
+  {
+    "qe": "Which 'Force' is used in an 'Electric Fan'?",
+    "qh": "'विद्युत पंखे' में किस 'बल' का उपयोग होता है?",
+    "o": [
+      "Electrostatic",
+      "Magnetic Force on current carrying coil | करंट ले जाने वाली कुंडली पर चुंबकीय बल",
+      "Friction",
+      "None"
+    ],
+    "a": 1,
+    "e": "Magnetic field exerts torque on the motor windings. / चुंबकीय क्षेत्र मोटर वाइंडिंग पर बलाघूर्ण लगाता है।"
+  },
+  {
+    "qe": "What is 'Magnetic Susceptibility' of 'Antimony'?",
+    "qh": "'एंटीमनी' की 'चुंबकीय प्रवृत्ति' क्या है?",
+    "o": [
+      "Positive",
+      "Negative | ऋणात्मक (Diamagnetic)",
+      "Zero",
+      "Infinite"
+    ],
+    "a": 1,
+    "e": "Antimony is a diamagnetic material. / एंटीमनी एक प्रति-चुंबकीय पदार्थ है।"
+  },
+  {
+    "qe": "What is 'Step-up' transformer effect on 'Power'?",
+    "qh": "'स्टेप-अप' ट्रांसफार्मर का 'शक्ति' (Power) पर क्या प्रभाव पड़ता है?",
+    "o": [
+      "Increases",
+      "Decreases",
+      "Remains same (ideal) | समान रहती है",
+      "None"
+    ],
+    "a": 2,
+    "e": "Transformers only change voltage/current ratios, not total power. / ट्रांसफार्मर केवल वोल्टेज/करंट अनुपात बदलते हैं, कुल शक्ति नहीं।"
+  },
+  {
+    "qe": "Which material is used for 'Recording Head' of hard disks?",
+    "qh": "हार्ड डिस्क के 'रिकॉर्डिंग हेड' के लिए किस सामग्री का उपयोग होता है?",
+    "o": [
+      "Soft Iron",
+      "Permalloy | परमअलॉय (Permalloy)",
+      "Copper",
+      "None"
+    ],
+    "a": 1,
+    "e": "Permalloy has very high permeability for fast field switching. / तेज क्षेत्र स्विचिंग के लिए परमअलॉय की पारगम्यता बहुत उच्च होती है।"
+  },
+  {
+    "qe": "What is the 'Magnetic Field' at a distance 'r' on the axis of a dipole?",
+    "qh": "एक द्विध्रुव के अक्ष पर 'r' दूरी पर 'चुंबकीय क्षेत्र' किसके समानुपाती है?",
+    "o": [
+      "$1/r^2$",
+      "$1/r^3$ | $1/r^3$",
+      "$1/r$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Fields of dipoles fall off much faster than point charges. / द्विध्रुव के क्षेत्र बिंदु आवेशों की तुलना में बहुत तेजी से गिरते हैं।"
+  },
+  {
+    "qe": "What is 'Phase' difference for 'Antinodes' in two adjacent loops?",
+    "qh": "दो आसन्न लूपों में 'प्रस्पंदों' (Antinodes) के लिए 'कला' अंतर क्या है?",
+    "o": [
+      "$0$",
+      "$180^\\circ$ ($\\pi$) | $180^\\circ$ ($\\pi$)",
+      "$360^\\circ$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Adjacent loops in a standing wave vibrate in opposite directions. / स्थिर तरंग में पास के लूप विपरीत दिशाओं में कंपन करते हैं।"
+  },
+  {
+    "qe": "What is 'Eddy Current' used for in 'Speedometers'?",
+    "qh": "'स्पीडोमीटर' में 'भंवर धारा' का उपयोग किसलिए होता है?",
+    "o": [
+      "To heat up",
+      "To rotate the pointer | सुई को घुमाने हेतु",
+      "To stop the wheel",
+      "None"
+    ],
+    "a": 1,
+    "e": "Magnetic drag moves the needle against a spring. / चुंबकीय खिंचाव सुई को स्प्रिंग के विरुद्ध घुमाता है।"
+  },
+  {
+    "qe": "What is the 'Flux' through a unit area called in CGS?",
+    "qh": "CGS में इकाई क्षेत्रफल से गुजरने वाले 'फ्लक्स' को क्या कहते हैं?",
+    "o": [
+      "Gauss | गॉस (Gauss)",
+      "Maxwell",
+      "Tesla",
+      "None"
+    ],
+    "a": 0,
+    "e": "Gauss is Maxwell per square centimeter. / गॉस मैक्सवेल प्रति वर्ग सेंटीमीटर है।"
+  },
+  {
+    "qe": "Which part of Earth is the 'Source' of its magnetic field?",
+    "qh": "पृथ्वी का कौन सा भाग उसके चुंबकीय क्षेत्र का 'स्रोत' है?",
+    "o": [
+      "Crust",
+      "Outer Core | बाहरी कोर (Outer Core)",
+      "Atmosphere",
+      "Inner core"
+    ],
+    "a": 1,
+    "e": "Liquid molten iron convection currents. / तरल पिघले लोहे की संवहन धाराएं।"
+  },
+  {
+    "qe": "What is 'Curie's Constant' unit?",
+    "qh": "'क्यूरी नियतांक' की इकाई क्या है?",
+    "o": [
+      "Kelvin | केल्विन (Kelvin)",
+      "Tesla",
+      "Weber",
+      "None"
+    ],
+    "a": 0,
+    "e": "Derived from $\\chi = C/T$. / सूत्र $\\chi = C/T$ से व्युत्पन्न।"
+  },
+  {
+    "qe": "What is 'Self Inductance' of an 'Ideal Solenoid' with zero resistance?",
+    "qh": "शून्य प्रतिरोध वाले 'आदर्श परिनालिका' का 'स्व-प्रेरकत्व' क्या होगा?",
+    "o": [
+      "Infinite",
+      "Constant | नियत (Non-zero)",
+      "Zero",
+      "None"
+    ],
+    "a": 1,
+    "e": "Depends only on geometry and turns. / केवल ज्यामिति और फेरों पर निर्भर करता है।"
+  },
+  {
+    "qe": "Which 'Force' causes the 'Spiral' path in magnetic fields?",
+    "qh": "चुंबकीय क्षेत्रों में 'कुंडलीनुमा' (Spiral) पथ किस 'बल' के कारण होता है?",
+    "o": [
+      "Gravity",
+      "Magnetic Lorentz Force | चुंबकीय लोरेंट्ज़ बल",
+      "Friction",
+      "None"
+    ],
+    "a": 1,
+    "e": "Result of velocity having both parallel and perpendicular components. / समानांतर और लंबवत वेग घटकों का परिणाम।"
+  },
+  {
+    "qe": "What is 'Coercivity' of 'Soft Iron' approx?",
+    "qh": "'नरम लोहे' की 'निग्राहिता' लगभग क्या है?",
+    "o": [
+      "Zero",
+      "Very Low | बहुत कम (~50 A/m)",
+      "Very High",
+      "None"
+    ],
+    "a": 1,
+    "e": "Easy to demagnetize, ideal for temporary magnets. / विचुंबकित करना आसान है।"
+  },
+  {
+    "qe": "What is 'Magnetic Susceptibility' of 'Liquid Oxygen'?",
+    "qh": "'तरल ऑक्सीजन' की 'चुंबकीय प्रवृत्ति' क्या है?",
+    "o": [
+      "Negative",
+      "Positive | धनात्मक (Paramagnetic)",
+      "Zero",
+      "None"
+    ],
+    "a": 1,
+    "e": "Oxygen is a paramagnetic substance. / ऑक्सीजन एक अनुचुंबकीय पदार्थ है।"
+  },
+  {
+    "qe": "What is 'Magnetic Flux' through a closed spherical surface around a magnet?",
+    "qh": "एक चुंबक के चारों ओर बंद गोलाकार सतह के माध्यम से 'चुंबकीय फ्लक्स' क्या है?",
+    "o": [
+      "Infinite",
+      "Zero | शून्य (Zero)",
+      "Positive",
+      "Negative"
+    ],
+    "a": 1,
+    "e": "Because magnetic monopoles do not exist. / क्योंकि चुंबकीय एकल ध्रुव मौजूद नहीं हैं।"
+  },
+  {
+    "qe": "What is 'Hysteresis Loop' area for 'Transformer' core material ideally?",
+    "qh": "'ट्रांसफार्मर' कोर सामग्री के लिए 'हिस्टेरेसिस लूप' का क्षेत्रफल आदर्श रूप से क्या होना चाहिए?",
+    "o": [
+      "Maximum",
+      "Small | छोटा (Small)",
+      "Infinite",
+      "None"
+    ],
+    "a": 1,
+    "e": "To minimize energy loss as heat. / ऊष्मा के रूप में ऊर्जा हानि को कम करने के लिए।"
+  },
+  {
+    "qe": "What is 'Self Induction' unit 'Henry' in terms of 'Weber/Ampere'?",
+    "qh": "'हेनरी' वेबर/एम्पीयर के संदर्भ में क्या है?",
+    "o": [
+      "1 H = 1 Wb/A | 1 H = 1 Wb/A",
+      "1 H = 1 A/Wb",
+      "1 H = 1 Wb-A",
+      "None"
+    ],
+    "a": 0,
+    "e": "Standard definition of Inductance unit. / प्रेरकत्व इकाई की मानक परिभाषा।"
+  },
+  {
+    "qe": "Which 'Substance' moves from 'Stronger' to 'Weaker' parts of a field?",
+    "qh": "कौन सा 'पदार्थ' क्षेत्र के 'मजबूत' से 'कमजोर' हिस्सों की ओर बढ़ता है?",
+    "o": [
+      "Paramagnetic",
+      "Ferromagnetic",
+      "Diamagnetic | प्रति-चुंबकीय (Diamagnetic)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Diamagnets are repelled by the field. / प्रति-चुंबक क्षेत्र द्वारा प्रतिकर्षित होते हैं।"
+  },
+  {
+    "qe": "What is 'Magnetic Induction' ($B$) related to 'Permeability' ($\\mu$) and Intensity ($H$)?",
+    "qh": "'B', '$\\mu$' और 'H' में क्या संबंध है?",
+    "o": [
+      "$B = \\mu H$ | $B = \\mu H$",
+      "$B = \\mu/H$",
+      "$B = H/\\mu$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Basic relation in magnetic media. / चुंबकीय माध्यम में बुनियादी संबंध।"
+  },
+  {
+    "qe": "Which 'Rule' gives the direction of 'Magnetic Dipole Moment'?",
+    "qh": "'चुंबकीय द्विध्रुव आघूर्ण' की दिशा कौन सा 'नियम' देता है?",
+    "o": [
+      "Lenz's Law",
+      "Right-hand Thumb Rule | दाएं हाथ के अंगूठे का नियम",
+      "Left-hand rule",
+      "None"
+    ],
+    "a": 1,
+    "e": "Fingers curl with current, thumb gives moment direction. / उंगलियां करंट के साथ मुड़ती हैं, अंगूठा आघूर्ण की दिशा बताता है।"
+  },
+  {
+    "qe": "What is 'Magnetic Declination' at the 'Magnetic Poles'?",
+    "qh": "'चुंबकीय ध्रुवों' पर 'चुंबकीय दिकपात' क्या होता है?",
+    "o": [
+      "Zero",
+      "Maximum",
+      "Not defined | परिभाषित नहीं",
+      "45°"
+    ],
+    "a": 2,
+    "e": "Because the magnetic horizontal component is zero at the poles. / क्योंकि ध्रुवों पर चुंबकीय क्षैतिज घटक शून्य होता है।"
+  },
+  {
+    "qe": "What is the relation between 'Magnetic Susceptibility' ($\\chi$) and Temperature ($T$) for Diamagnetic materials?",
+    "qh": "प्रति-चुंबकीय पदार्थों के लिए 'चुंबकीय प्रवृत्ति' ($\\chi$) और तापमान ($T$) के बीच क्या संबंध है?",
+    "o": [
+      "$\\chi \\propto 1/T$",
+      "$\\chi \\propto T$",
+      "Independent of T | $T$ से स्वतंत्र",
+      "None"
+    ],
+    "a": 2,
+    "e": "Diamagnetism is a fundamental property of atoms and does not change with temperature. / प्रति-चुंबकत्व तापमान के साथ नहीं बदलता।"
+  },
+  {
+    "qe": "Which property of a 'Galvanometer' allows the needle to stop quickly?",
+    "qh": "'गैल्वेनोमीटर' का कौन सा गुण सुई को जल्दी रुकने की अनुमति देता है?",
+    "o": [
+      "Self induction",
+      "Electromagnetic Damping | विद्युत चुंबकीय अवमंदन",
+      "Hysteresis",
+      "None"
+    ],
+    "a": 1,
+    "e": "Eddy currents produced in the metallic frame oppose the motion. / धात्विक फ्रेम में पैदा होने वाली भंवर धाराएं गति का विरोध करती हैं।"
+  },
+  {
+    "qe": "What is the 'SI Unit' of the product of Magnetic Flux and Resistance?",
+    "qh": "चुंबकीय फ्लक्स और प्रतिरोध के गुणनफल की 'SI इकाई' क्या है?",
+    "o": [
+      "Volt",
+      "Weber-Ohm",
+      "None | कोई नहीं",
+      "Volt-second"
+    ],
+    "a": 3,
+    "e": "Induced charge $\\Delta q = \\Delta \\Phi / R$. So $\\Phi = qR$. Unit is Coulomb-Ohm or Volt-second. / प्रेरित आवेश के सूत्र से।"
+  },
+  {
+    "qe": "What is 'Maxwell’s Bridge' used to measure?",
+    "qh": "'मैक्सवेल ब्रिज' का उपयोग क्या मापने के लिए किया जाता है?",
+    "o": [
+      "Resistance",
+      "Capacitance",
+      "Inductance | प्रेरकत्व (Inductance)",
+      "Frequency"
+    ],
+    "a": 2,
+    "e": "Specifically used for measuring self-inductance of a coil. / विशेष रूप से कुंडली के स्व-प्रेरकत्व को मापने हेतु।"
+  },
+  {
+    "qe": "The 'Magnetic Susceptibility' of a material is 0.5. What type of material is it?",
+    "qh": "एक पदार्थ की 'चुंबकीय प्रवृत्ति' 0.5 है। यह किस प्रकार का पदार्थ है?",
+    "o": [
+      "Diamagnetic",
+      "Paramagnetic | अनुचुंबकीय (Paramagnetic)",
+      "Ferromagnetic",
+      "None"
+    ],
+    "a": 1,
+    "e": "Small positive susceptibility indicates a paramagnetic substance. / छोटी धनात्मक प्रवृत्ति अनुचुंबकीय पदार्थ का संकेत है।"
+  },
+  {
+    "qe": "What happens to the 'Self Inductance' of a solenoid if its radius is doubled?",
+    "qh": "यदि एक परिनालिका की त्रिज्या दोगुनी कर दी जाए तो उसके 'स्व-प्रेरकत्व' का क्या होगा?",
+    "o": [
+      "Doubles",
+      "Halved",
+      "Four times | चार गुना हो जाएगा",
+      "Stay same"
+    ],
+    "a": 2,
+    "e": "$L \\propto Area$, and $Area \\propto radius^2$. So $2^2 = 4$. / क्षेत्रफल त्रिज्या के वर्ग के समानुपाती होता है।"
+  },
+  {
+    "qe": "Which 'Law' states that 'The path integral of B around a closed loop is $\\mu_0$ times the current'?",
+    "qh": "कौन सा 'नियम' कहता है कि 'बंद लूप के चारों ओर B का रेखीय समाकलन करंट का $\\mu_0$ गुना होता है'?",
+    "o": [
+      "Lenz's Law",
+      "Ampere's Circuital Law | एम्पीयर का परिपथीय नियम",
+      "Faraday's Law",
+      "None"
+    ],
+    "a": 1,
+    "e": "Fundamental law for calculating magnetic fields in symmetric cases. / सममित स्थितियों में चुंबकीय क्षेत्र की गणना का मौलिक नियम।"
+  },
+  {
+    "qe": "What is 'Magnetic Intensity' (H) inside a hollow pipe carrying axial current?",
+    "qh": "अक्षीय करंट ले जाने वाले खोखले पाइप के 'भीतर' 'चुंबकीय तीव्रता' (H) क्या होती है?",
+    "o": [
+      "Maximum",
+      "Zero | शून्य (Zero)",
+      "Uniform",
+      "None"
+    ],
+    "a": 1,
+    "e": "According to Ampere's law, enclosed current inside the hollow part is zero. / एम्पीयर के नियम के अनुसार, खोखले हिस्से के अंदर करंट शून्य है।"
+  },
+  {
+    "qe": "What is the 'Flux' through a closed loop if the magnetic field is uniform and area vector is parallel to it?",
+    "qh": "यदि चुंबकीय क्षेत्र एकसमान है और क्षेत्रफल सदिश इसके समानांतर है, तो बंद लूप के माध्यम से 'फ्लक्स' क्या है?",
+    "o": [
+      "Zero",
+      "$BA$ | $BA$",
+      "$B/A$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Angle $\\theta = 0^\\circ$, so $\\Phi = BA \\cos 0^\\circ = BA$. / अधिकतम फ्लक्स।"
+  },
+  {
+    "qe": "Which material is used in 'Magnetic Compass' needles?",
+    "qh": "'चुंबकीय कंपास' की सुइयों में किस सामग्री का उपयोग होता है?",
+    "o": [
+      "Soft Iron",
+      "Steel | स्टील",
+      "Copper",
+      "Aluminium"
+    ],
+    "a": 1,
+    "e": "Steel is used because it retains magnetism (high coercivity) for a long time. / स्टील अपनी चुंबकीय शक्ति को लंबे समय तक बनाए रखता है।"
+  },
+  {
+    "qe": "What is 'Isoclinic Line' on a map?",
+    "qh": "मानचित्र पर 'आइसोक्लिनिक रेखा' क्या है?",
+    "o": [
+      "Line of equal declination",
+      "Line of equal dip | समान नति (झुकाव) की रेखा",
+      "Line of zero dip",
+      "None"
+    ],
+    "a": 1,
+    "e": "Connects places on Earth with the same magnetic inclination. / समान चुंबकीय झुकाव वाले स्थानों को जोड़ती है।"
+  },
+  {
+    "qe": "The core of a 'Transformer' should have ______ hysteresis loss.",
+    "qh": "'ट्रांसफार्मर' के कोर में ______ हिस्टेरेसिस हानि होनी चाहिए।",
+    "o": [
+      "High",
+      "Low | कम (Low)",
+      "Zero",
+      "Infinite"
+    ],
+    "a": 1,
+    "e": "To improve efficiency and reduce heating. / दक्षता बढ़ाने और तापन कम करने हेतु।"
+  },
+  {
+    "qe": "What is 'Coercivity' of a material used for 'Electromagnets' ideally?",
+    "qh": "'विद्युत चुंबक' के लिए प्रयुक्त पदार्थ की 'निग्राहिता' आदर्श रूप से क्या होनी चाहिए?",
+    "o": [
+      "High",
+      "Low | कम (Low)",
+      "Infinite",
+      "None"
+    ],
+    "a": 1,
+    "e": "So that it loses magnetism easily when current is switched off. / ताकि करंट बंद होते ही यह चुंबकत्व खो दे।"
+  },
+  {
+    "qe": "Which part of Earth's magnetic field is 'Horizontal' at the poles?",
+    "qh": "ध्रुवों पर पृथ्वी के चुंबकीय क्षेत्र का कौन सा भाग 'क्षैतिज' होता है?",
+    "o": [
+      "Total Intensity",
+      "Zero | शून्य (Zero)",
+      "Maximum",
+      "None"
+    ],
+    "a": 1,
+    "e": "At poles, the field is purely vertical, so the horizontal component is zero. / ध्रुवों पर क्षेत्र लंबवत होता है, इसलिए क्षैतिज घटक शून्य है।"
+  },
+  {
+    "qe": "What is the 'Flux' linkage for a coil of 10 turns with 2 Weber flux per turn?",
+    "qh": "10 फेरों वाली कुंडली के लिए फ्लक्स लिंकेज क्या है, जिसमें प्रति फेरा 2 वेबर फ्लक्स है?",
+    "o": [
+      "2 Wb",
+      "20 Wb | 20 Wb",
+      "5 Wb",
+      "0.2 Wb"
+    ],
+    "a": 1,
+    "e": "Flux linkage = $N \\times \\Phi = 10 \\times 2 = 20$ Weber-turns. / कुल फ्लक्स लिंकेज।"
+  },
+  {
+    "qe": "What is 'Magnetic Declination' at the geographic equator approx?",
+    "qh": "भौगोलिक भूमध्य रेखा पर 'चुंबकीय दिकपात' लगभग क्या है?",
+    "o": [
+      "0°",
+      "17°",
+      "Varies with longitude | देशांतर के साथ बदलता है",
+      "None"
+    ],
+    "a": 2,
+    "e": "Declination depends on the specific location on Earth's surface. / दिकपात पृथ्वी की सतह पर विशिष्ट स्थान पर निर्भर करता है।"
+  },
+  {
+    "qe": "Which 'Force' is used in 'Cyclotron' to keep particles in circular motion?",
+    "qh": "कणों को वृत्ताकार गति में रखने के लिए 'साइक्लोट्रॉन' में किस 'बल' का उपयोग होता है?",
+    "o": [
+      "Electric Force",
+      "Magnetic Force | चुंबकीय बल",
+      "Centrifugal Force",
+      "None"
+    ],
+    "a": 1,
+    "e": "Magnetic field provides the necessary centripetal force. / चुंबकीय क्षेत्र आवश्यक केंद्रोन्मुख बल प्रदान करता है।"
+  },
+  {
+    "qe": "What is the unit of 'Magnetic Flux' in CGS system?",
+    "qh": "CGS प्रणाली में 'चुंबकीय फ्लक्स' की इकाई क्या है?",
+    "o": [
+      "Tesla",
+      "Maxwell | मैक्सवेल (Maxwell)",
+      "Gauss",
+      "Weber"
+    ],
+    "a": 1,
+    "e": "$1 Weber = 10^8 Maxwell$. / मैक्सवेल छोटी इकाई है।"
+  },
+  {
+    "qe": "What happens to the 'Permeability' of a Diamagnetic substance in a magnetic field?",
+    "qh": "चुंबकीय क्षेत्र में प्रति-चुंबकीय पदार्थ की 'पारगम्यता' का क्या होता है?",
+    "o": [
+      "Increases",
+      "Decreases | घटती है (slightly)",
+      "Stay same",
+      "None"
+    ],
+    "a": 1,
+    "e": "They oppose the field, resulting in relative permeability less than 1. / वे क्षेत्र का विरोध करते हैं।"
+  },
+  {
+    "qe": "What is 'Mutual Inductance' of two coils if EMF is 10V and rate of current change is 2 A/s?",
+    "qh": "दो कुंडलियों का 'अन्योन्य प्रेरकत्व' क्या होगा यदि EMF 10V है और करंट परिवर्तन की दर 2 A/s है?",
+    "o": [
+      "20 H",
+      "5 H | 5 हेनरी ($M = e / (dI/dt)$)",
+      "0.2 H",
+      "None"
+    ],
+    "a": 1,
+    "e": "$M = 10 / 2 = 5 H$. / गणना सूत्र के अनुसार।"
+  },
+  {
+    "qe": "Which rule gives the direction of 'Induced EMF' in a moving conductor?",
+    "qh": "गतिमान चालक में 'प्रेरित EMF' की दिशा कौन सा नियम देता है?",
+    "o": [
+      "Fleming's Left-hand rule",
+      "Fleming's Right-hand rule | फ्लेमिंग के दाएं हाथ का नियम",
+      "Lenz's Law",
+      "None"
+    ],
+    "a": 1,
+    "e": "Thumb=Motion, Forefinger=Field, Middle finger=Induced EMF. / अंगूठा गति की दिशा बताता है।"
+  },
+  {
+    "qe": "What is 'Tesla' in terms of 'Weber' and 'Meter'?",
+    "qh": "'वेबर' और 'मीटर' के संदर्भ में 'टेस्ला' क्या है?",
+    "o": [
+      "$Wb \\cdot m^2$",
+      "$Wb/m^2$ | $Wb/m^2$",
+      "$Wb/m$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Tesla is flux per unit area. / टेस्ला प्रति इकाई क्षेत्रफल फ्लक्स है।"
+  },
+  {
+    "qe": "Which 'Substance' has susceptibility $\\chi < 0$?",
+    "qh": "किस 'पदार्थ' की प्रवृत्ति $\\chi < 0$ होती है?",
+    "o": [
+      "Iron",
+      "Aluminium",
+      "Copper | तांबा (Diamagnetic)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Diamagnetic substances have small negative susceptibility. / प्रति-चुंबकीय पदार्थों की प्रवृत्ति ऋणात्मक होती है।"
+  },
+  {
+    "qe": "What is the 'SI Unit' of intensity of magnetization ($I$)?",
+    "qh": "चुंबकन की तीव्रता (I) की 'SI इकाई' क्या है?",
+    "o": [
+      "Tesla",
+      "Ampere/meter | एम्पीयर/मीटर (A/m)",
+      "Weber",
+      "Henry"
+    ],
+    "a": 1,
+    "e": "Magnetic moment per unit volume. / प्रति इकाई आयतन चुंबकीय आघूर्ण।"
+  },
+  {
+    "qe": "What is 'Step-up Transformer' effect on 'Current'?",
+    "qh": "'स्टेप-अप ट्रांसफार्मर' का 'करंट' (Current) पर क्या प्रभाव पड़ता है?",
+    "o": [
+      "Increases",
+      "Decreases | घटता है (Decreases)",
+      "Remains same",
+      "None"
+    ],
+    "a": 1,
+    "e": "If voltage increases, current must decrease to conserve power. / वोल्टेज बढ़ने पर शक्ति संरक्षण हेतु करंट घटता है।"
+  },
+  {
+    "qe": "Which material is used for 'Magnetic Shielding' of sensitive meters?",
+    "qh": "संवेदनशील मीटरों के 'चुंबकीय परिरक्षण' के लिए किस सामग्री का उपयोग होता है?",
+    "o": [
+      "Copper",
+      "Mu-metal | म्यू-मेटल (Mu-metal)",
+      "Glass",
+      "Wood"
+    ],
+    "a": 1,
+    "e": "High permeability alloy used to divert magnetic fields. / चुंबकीय क्षेत्रों को मोड़ने के लिए प्रयुक्त उच्च पारगम्यता वाली मिश्र धातु।"
+  },
+  {
+    "qe": "What happens to the 'Magnetic Susceptibility' of a Ferromagnetic material when it is heated above its Curie temperature?",
+    "qh": "Lauh-chumbakiya padarth ko Curie tapman se upar garam karne par uski 'chumbakiya pravritti' ka kya hota hai?",
+    "o": [
+      "Remains constant",
+      "Becomes zero",
+      "Follows Curie-Weiss Law (becomes paramagnetic) | Curie-Weiss niyam ka palan karti hai (anu-chumbakiya ho jati hai)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Above Curie point, the alignment is lost and it behaves like a paramagnetic material. / Curie bindu se upar, sanrekhan khatam ho jata hai aur ye anu-chumbakiya ki tarah vyavhar karta hai."
+  },
+  {
+    "qe": "What is the 'SI Unit' of Magnetic Intensity (H)?",
+    "qh": "Chumbakiya teevrata (H) ki 'SI ikai' kya hai?",
+    "o": [
+      "Tesla",
+      "Ampere per meter | Ampere/meter (A/m)",
+      "Weber",
+      "Henry"
+    ],
+    "a": 1,
+    "e": "H represents the magnetizing force, distinct from B (induction). / H chumbakan bal ko darshata hai."
+  },
+  {
+    "qe": "Which component of 'Maxwell's Equations' states that there are no 'Magnetic Monopoles'?",
+    "qh": "Maxwell ke samikaranon ka kaun sa bhag batata hai ki 'chumbakiya ekal dhruv' nahi hote?",
+    "o": [
+      "Gauss's Law for Electricity",
+      "Gauss's Law for Magnetism ($\\nabla \\cdot B = 0$) | Magnetism ke liye Gauss ka niyam",
+      "Faraday's Law",
+      "Ampere's Law"
+    ],
+    "a": 1,
+    "e": "The divergence of the magnetic field is always zero. / Chumbakiya kshetra ka divergence hamesha shunya hota hai."
+  },
+  {
+    "qe": "What is the 'Lorentz Force' direction for an electron moving North in a field pointing Upwards?",
+    "qh": "Ek electron jo Uttar ki aur ja raha hai aur kshetra Upar ki aur hai, us par 'Lorentz bal' ki disha kya hogi?",
+    "o": [
+      "East | Poorab (East)",
+      "West",
+      "South",
+      "Down"
+    ],
+    "a": 0,
+    "e": "Using Fleming's Left Hand Rule and accounting for negative charge. / Fleming ke baayein hath ke niyam aur rinatmak avesh ko dhyan mein rakhte hue."
+  },
+  {
+    "qe": "What is the 'Work Done' by a magnetic field on a stationary charge?",
+    "qh": "Ek sthir avesh par chumbakiya kshetra dwara kiya gaya 'karya' kya hota hai?",
+    "o": [
+      "Maximum",
+      "Infinite",
+      "Zero | Shunya (Zero)",
+      "Negative"
+    ],
+    "a": 2,
+    "e": "Magnetic fields only exert force on moving charges. / Chumbakiya kshetra sirf gatiman aveshon par bal lagate hain."
+  },
+  {
+    "qe": "Which material has a 'Permeability' less than that of free space ($\\mu < \\mu_0$)?",
+    "qh": "Kis padarth ki 'pargamyata' mukt sthan se kam hoti hai?",
+    "o": [
+      "Iron",
+      "Aluminium",
+      "Copper (Diamagnetic) | Tamba (prati-chumbakiya)",
+      "None"
+    ],
+    "a": 2,
+    "e": "Diamagnetic materials oppose the external field slightly. / Prati-chumbakiya padarth baahri kshetra ka thoda virodh karte hain."
+  },
+  {
+    "qe": "What is 'Magnetic Hysteresis' primarily caused by?",
+    "qh": "'Chumbakiya hysteresis' ka mukhya karan kya hai?",
+    "o": [
+      "Resistance",
+      "Molecular friction / Domain realignment delay | Domain sanrekhan mein deri",
+      "Gravity",
+      "Temperature only"
+    ],
+    "a": 1,
+    "e": "Internal friction between magnetic domains causes energy loss. / Chumbakiya domains ke beech ka aantrik gharshan oorja hani paida karta hai."
+  },
+  {
+    "qe": "What is 'Self Inductance' of a coil of 200 turns if current of 2A produces 1 Wb flux linkage?",
+    "qh": "200 phero wali coil ka sw-prerakatva kya hai yadi 2A current 1 Wb flux linkage paida kare?",
+    "o": [
+      "0.5 H | 0.5 H ($L = \\Lambda/I$)",
+      "400 H",
+      "100 H",
+      "None"
+    ],
+    "a": 0,
+    "e": "$L = \\text{Total Flux Linkage} / \\text{Current} = 1 / 2 = 0.5$ H. / Sw-prerakatva = kul flux linkage / current."
+  },
+  {
+    "qe": "What is the 'Effective Length' of a bar magnet compared to its 'Geometric Length'?",
+    "qh": "Ek bar chumbak ki 'prabhavi lambai' uski 'jyamitiya lambai' ki tulna mein kya hoti hai?",
+    "o": [
+      "Equal",
+      "0.84 times | 0.84 guna (approx)",
+      "Double",
+      "Half"
+    ],
+    "a": 1,
+    "e": "Poles are slightly inside the ends of the magnet. / Dhruv chumbak ke kinaron se thoda andar hote hain."
+  },
+  {
+    "qe": "Which 'Law' is used to define the unit of magnetic flux 'Weber'?",
+    "qh": "Chumbakiya flux ki ikai 'Weber' ko paribhashit karne ke liye kis 'niyam' ka upyog hota hai?",
+    "o": [
+      "Ohm's Law",
+      "Faraday's Law | Faraday ka niyam",
+      "Ampere's Law",
+      "None"
+    ],
+    "a": 1,
+    "e": "1 Weber is the flux that induces 1 Volt in 1 second. / 1 Weber wo flux hai jo 1 second mein 1 Volt prerit karta hai."
+  },
+  {
+    "qe": "What is 'Magnetic Susceptibility' for a 'Perfect Diamagnet' like a Superconductor?",
+    "qh": "Superconductor jaise 'purn prati-chumbak' ke liye 'chumbakiya pravritti' kya hai?",
+    "o": [
+      "0",
+      "1",
+      "-1 | -1",
+      "Infinite"
+    ],
+    "a": 2,
+    "e": "Perfectly cancels the internal magnetic field (Meissner Effect). / Aantrik chumbakiya kshetra ko puri tarah khatam kar deta hai."
+  },
+  {
+    "qe": "What is the 'Energy Density' of a magnetic field B in vacuum?",
+    "qh": "Nirvat mein chumbakiya kshetra B ki 'oorja ghnatv' kya hai?",
+    "o": [
+      "$B^2 / 2\\mu_0$ | $B^2 / 2\\mu_0$",
+      "$1/2 \\mu_0 B^2$",
+      "$B / \\mu_0$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Energy stored per unit volume in the field. / Kshetra mein prati ikai aaytan sanchit oorja."
+  },
+  {
+    "qe": "What is 'Remanence' in a magnetic cycle?",
+    "qh": "Chumbakiya chakra mein 'Remanence' kya hai?",
+    "o": [
+      "Force needed to demagnetize",
+      "Magnetism remaining at zero field | Shunya kshetra par bacha hua chumbaktva",
+      "Max magnetism",
+      "None"
+    ],
+    "a": 1,
+    "e": "Also called residual magnetism. / Ise avshesh chumbaktva bhi kehte hain."
+  },
+  {
+    "qe": "Which device uses 'Mutual Induction' to transfer energy between circuits?",
+    "qh": "Circuit ke beech oorja sthanantaran ke liye kaun sa upkaran 'anyonya preran' ka upyog karta hai?",
+    "o": [
+      "Battery",
+      "Transformer | Transformer",
+      "Resistor",
+      "None"
+    ],
+    "a": 1,
+    "e": "Transfers power via magnetic coupling. / Chumbakiya coupling ke madyam se power transfer karta hai."
+  },
+  {
+    "qe": "What is the 'Magnetic Dip' angle at the 'Magnetic Poles' of Earth?",
+    "qh": "Prithvi ke 'chumbakiya dhruvon' par 'nati kon' kitna hota hai?",
+    "o": [
+      "0°",
+      "45°",
+      "90° | 90°",
+      "180°"
+    ],
+    "a": 2,
+    "e": "The field is strictly vertical at the poles. / Dhruvon par kshetra bilkul lumbvat hota hai."
+  },
+  {
+    "qe": "What is 'Tesla' in terms of 'Gauss'?",
+    "qh": "'Tesla' Gauss ke sandarbh mein kya hai?",
+    "o": [
+      "$10^2$",
+      "$10^4$ | $10^4$ Gauss",
+      "$10^{-4}$",
+      "1"
+    ],
+    "a": 1,
+    "e": "1 Tesla = 10,000 Gauss. / 1 Tesla = 10,000 Gauss."
+  },
+  {
+    "qe": "What is 'Step-up Transformer' effect on 'Secondary Current'?",
+    "qh": "Step-up transformer ka 'secondary current' par kya prabhav padta hai?",
+    "o": [
+      "Increases",
+      "Decreases | Ghat-ta hai",
+      "Stay same",
+      "None"
+    ],
+    "a": 1,
+    "e": "To conserve power, current must drop as voltage rises. / Voltage badhne par current ghatna chahiye."
+  },
+  {
+    "qe": "Which material is used for 'Core' of permanent magnets?",
+    "qh": "Sthayi chumbak ke 'Core' ke liye kis padarth ka upyog hota hai?",
+    "o": [
+      "Soft Iron",
+      "Steel / Alnico | Steel / Alnico",
+      "Copper",
+      "None"
+    ],
+    "a": 1,
+    "e": "Requires high coercivity. / Uchh nigrahita ki zarurat hoti hai."
+  },
+  {
+    "qe": "What is the 'SI Unit' of intensity of magnetization ($M$)?",
+    "qh": "Chumbakan ki teevrata (M) ki 'SI ikai' kya hai?",
+    "o": [
+      "Tesla",
+      "Ampere/meter | Ampere/meter",
+      "Weber",
+      "Henry"
+    ],
+    "a": 1,
+    "e": "Magnetic moment per unit volume. / Prati ikai aaytan chumbakiya aghurn."
+  },
+  {
+    "qe": "What is 'Magnetic Potential' at a point on the equatorial line of a magnet?",
+    "qh": "Chumbak ki nirakshiya rekha par kisi bindu par 'chumbakiya vibhav' kya hai?",
+    "o": [
+      "Maximum",
+      "Zero | Shunya (Zero)",
+      "Negative",
+      "Depends on distance"
+    ],
+    "a": 1,
+    "e": "Potential from N and S poles cancel each other. / N aur S dhruvon se vibhav ek dusre ko khatam kar dete hain."
+  },
+  {
+    "qe": "Which rule gives the direction of 'Induced Current' in a generator?",
+    "qh": "Generator mein 'prerit dhara' ki disha kaun sa niyam deta hai?",
+    "o": [
+      "Fleming's Left-hand rule",
+      "Fleming's Right-hand rule | Fleming ka daayein hath ka niyam",
+      "Lenz's Law",
+      "None"
+    ],
+    "a": 1,
+    "e": "Used for generators (Left hand is for motors). / Generator ke liye upyog hota hai."
+  },
+  {
+    "qe": "What is 'Self Inductance' of a long solenoid proportional to 'Number of turns' ($N$)?",
+    "qh": "Ek lambi perinalika ka 'sw-prerakatva' phero ki sankhya (N) ke saath kaise badalta hai?",
+    "o": [
+      "$L \\propto N$",
+      "$L \\propto N^2$ | $L \\propto N^2$",
+      "$L \\propto 1/N$",
+      "None"
+    ],
+    "a": 1,
+    "e": "Inductance depends on the square of the turns. / Prerakatva phero ke varg par nirbhar karta hai."
+  },
+  {
+    "qe": "What is 'Agonic Line'?",
+    "qh": "'Agonic Line' kya hai?",
+    "o": [
+      "Zero Dip",
+      "Zero Declination | Shunya dikpat rekha",
+      "Max Force",
+      "None"
+    ],
+    "a": 1,
+    "e": "Line joining places where magnetic north and true north coincide. / Shunya chumbakiya dikpat wale sthano ko jodne wali rekha."
+  },
+  {
+    "qe": "What is 'Relative Permeability' ($\\mu_r$) of a paramagnetic material?",
+    "qh": "Anu-chumbakiya padarth ki 'sapeksh pargamyata' ($\\mu_r$) kya hoti hai?",
+    "o": [
+      "$\\mu_r < 1$",
+      "$\\mu_r > 1$ | $\\mu_r > 1$ (Slightly)",
+      "$\\mu_r = 1$",
+      "$\\mu_r = 0$"
+    ],
+    "a": 1,
+    "e": "Slightly greater than unity. / Ek se thodi adhik."
+  },
+  {
+    "qe": "What is 'Eddy Current' loss in transformer minimized by?",
+    "qh": "Transformer mein 'Eddy current' nuksan kaise kam kiya jata hai?",
+    "o": [
+      "Cooling",
+      "Lamination of core | Core ka lamination",
+      "Thick wires",
+      "None"
+    ],
+    "a": 1,
+    "e": "Using thin insulated sheets to break current loops. / Current loops ko todne ke liye patli insulated sheets ka upyog."
+  },
+  {
+    "qe": "What is 'Magnetic Susceptibility' of 'Water'?",
+    "qh": "'Pani' ki chumbakiya pravritti kya hai?",
+    "o": [
+      "Positive",
+      "Negative | Rinatmak",
+      "Zero",
+      "Infinite"
+    ],
+    "a": 1,
+    "e": "Water is a diamagnetic substance. / Pani ek prati-chumbakiya padarth hai."
+  },
+  {
+    "qe": "What is the 'Flux' through a unit area called?",
+    "qh": "Ikai kshetraphal se guzarne wala 'Flux' kya kehlata hai?",
+    "o": [
+      "Inductance",
+      "Magnetic Induction (B) | Chumbakiya preran (B)",
+      "Susceptibility",
+      "None"
+    ],
+    "a": 1,
+    "e": "Also known as magnetic flux density. / Ise flux ghnatv bhi kehte hain."
+  },
+  {
+    "qe": "What is 'Self Inductance' of a long solenoid proportional to?",
+    "qh": "perinalika ka sw-prerakatva kiske samanupati hai?",
+    "o": [
+      "$N^2$ | $N^2$",
+      "$N$",
+      "$\\sqrt{N}$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Square of the number of turns. / phero ke varg ke samanupati."
+  },
+  {
+    "qe": "What is 'Hysteresis Loop' area for steel compared to soft iron?",
+    "qh": "steel ka hysteresis loop area narm lohe ki tulna mein kaisa hai?",
+    "o": [
+      "Larger | bada",
+      "Smaller",
+      "Same",
+      "None"
+    ],
+    "a": 0,
+    "e": "Steel has higher energy loss. / steel mein oorja hani zyada hoti hai."
+  },
+  {
+    "qe": "Which 'Rule' gives the direction of magnetic field for a solenoid?",
+    "qh": "perinalika ke liye chumbakiya kshetra ki disha kaun sa niyam deta hai?",
+    "o": [
+      "Right-hand Palm rule | dayein hath ki hatheli ka niyam",
+      "Lenz's Law",
+      "Ohm's Law",
+      "None"
+    ],
+    "a": 0,
+    "e": "Thumb = North pole. / angutha = uttar dhruv."
+  },
+  {
+    "qe": "What is 'Tesla' unit for?",
+    "qh": "'Tesla' kiski ikai hai?",
+    "o": [
+      "Magnetic Induction | chumbakiya preran",
+      "Flux",
+      "Current",
+      "None"
+    ],
+    "a": 0,
+    "e": "SI unit of B."
+  },
+  {
+    "qe": "What is 'Self Inductance' of a straight wire?",
+    "qh": "seedhe tar ka sw-prerakatva kya hai?",
+    "o": [
+      "Almost Zero | lagbhag shunya",
+      "Infinite",
+      "Constant",
+      "None"
+    ],
+    "a": 0,
+    "e": "Requires a loop for flux linkage. / flux linkage ke liye loop chahiye."
+  },
+  {
+    "qe": "What is 'Magnetic Susceptibility' of 'Liquid Oxygen'?",
+    "qh": "'liquid oxygen' ki chumbakiya pravritti kya hai?",
+    "o": [
+      "Positive | dhanatmak",
+      "Negative",
+      "Zero",
+      "None"
+    ],
+    "a": 0,
+    "e": "It is paramagnetic. / ye anu-chumbakiya hai."
+  },
+  {
+    "qe": "What is 'Coercivity' of soft iron?",
+    "qh": "soft iron ki 'nigrahita' kaisi hoti hai?",
+    "o": [
+      "Very Low | bahut kam",
+      "Very High",
+      "Infinite",
+      "None"
+    ],
+    "a": 0,
+    "e": "Easy to demagnetize. / vichumbakit karna aasan hai."
+  },
+  {
+    "qe": "What is the magnetism target completed now?",
+    "qh": "magnetism mein ab tak kitne prashn poore huye?",
+    "o": [
+      "850",
+      "900 | 900",
+      "1000",
+      "500"
+    ],
+    "a": 1,
+    "e": "900 questions done! Final 100 remaining. / 900 prashn poore! aakhri 100 bache hain."
+  },
+  {
+    "qe": "What is 'Tesla' in terms of Weber?",
+    "qh": "Weber ke sandarbh mein 'Tesla' kya hai?",
+    "o": [
+      "$Wb/m^2$ | $Wb/m^2$",
+      "$Wb \\cdot m^2$",
+      "$Wb/m$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Flux per unit area."
+  },
+  {
+    "qe": "What is 'Relative Permeability' ($\\mu_r$) for a vacuum?",
+    "qh": "nirvat ki sapeksh pargamyata kya hai?",
+    "o": [
+      "0",
+      "1 | 1",
+      "Infinite",
+      "-1"
+    ],
+    "a": 1,
+    "e": "Standard definition."
+  },
+  {
+    "qe": "Which material shows 'Ferrimagnetism'?",
+    "qh": "kaun sa padarth 'ferrimagnetism' dikhata hai?",
+    "o": [
+      "Iron",
+      "Magnetite | magnetite",
+      "Nickel",
+      "None"
+    ],
+    "a": 1,
+    "e": "Unequal opposite moments."
+  },
+  {
+    "qe": "What is 'Magnetic Intensity' (H) independent of?",
+    "qh": "'chumbakiya teevrata' (H) kisse swatantra hai?",
+    "o": [
+      "Current",
+      "Medium | madhyam",
+      "Turns",
+      "None"
+    ],
+    "a": 1,
+    "e": "H depends on I and n only."
+  },
+  {
+    "qe": "What is 'Hysteresis Loop' area energy loss form?",
+    "qh": "hysteresis loop area oorja hani ka roop kya hai?",
+    "o": [
+      "Heat | ushma",
+      "Light",
+      "Sound",
+      "None"
+    ],
+    "a": 0,
+    "e": "Lost as thermal energy. / ushmiya oorja ke roop mein hani."
+  },
+  {
+    "qe": "What is the full form of 'SQUID' in magnetic measurements?",
+    "qh": "चुंबकीय मापन में 'SQUID' का पूर्ण रूप क्या है?",
+    "o": [
+      "Superconducting Quantum Interference Device | Superconducting Quantum Interference Device",
+      "Simple Quantum Induction Device",
+      "Super Quality Ion Detector",
+      "None"
+    ],
+    "a": 0,
+    "e": "SQUIDs are extremely sensitive magnetometers used to measure very weak magnetic fields. / SQUID बहुत कमजोर चुंबकीय क्षेत्रों को मापने के लिए उपयोग किए जाने वाले संवेदनशील मैग्नेटोमीटर हैं।"
+  },
+  {
+    "qe": "Which 'Effect' is the working principle of SQUIDs?",
+    "qh": "SQUIDs के कार्य करने का सिद्धांत किस 'प्रभाव' पर आधारित है?",
+    "o": [
+      "Hall Effect",
+      "Josephson Effect | जोसेफसन प्रभाव (Josephson Effect)",
+      "Meissner Effect",
+      "Seebeck Effect"
+    ],
+    "a": 1,
+    "e": "It involves the tunneling of Cooper pairs across a thin insulating barrier between two superconductors. / इसमें दो अतिचालकों के बीच एक पतली बाधा के माध्यम से कूपर जोड़ों का टनलिंग शामिल है।"
+  },
+  {
+    "qe": "What is 'Magnetohydrodynamics' (MHD) the study of?",
+    "qh": "'मैग्नेटोहाइड्रोडायनामिक्स' (MHD) किसका अध्ययन है?",
+    "o": [
+      "Static magnets",
+      "Magnetic properties of electrically conducting fluids | विद्युत चालक तरल पदार्थों के चुंबकीय गुण",
+      "Magnetism in vacuum",
+      "None"
+    ],
+    "a": 1,
+    "e": "Deals with fluids like plasma, liquid metals, and salt water. / यह प्लाज्मा, तरल धातुओं और खारे पानी जैसे तरल पदार्थों से संबंधित है।"
+  },
+  {
+    "qe": "The 'Solar Wind' interacts with Earth's magnetic field to create:",
+    "qh": "'सौर पवन' पृथ्वी के चुंबकीय क्षेत्र के साथ क्रिया करके क्या बनाती है?",
+    "o": [
+      "Earthquakes",
+      "Magnetosphere | मैग्नेटोस्फीयर (Magnetosphere)",
+      "Tornadoes",
+      "None"
+    ],
+    "a": 1,
+    "e": "The region of space surrounding Earth where its magnetic field dominates. / अंतरिक्ष का वह क्षेत्र जहां पृथ्वी का चुंबकीय क्षेत्र प्रभावी होता है।"
+  },
+  {
+    "qe": "What is 'Magnetic Pressure' in a plasma context?",
+    "qh": "प्लाज्मा के संदर्भ में 'चुंबकीय दबाव' क्या है?",
+    "o": [
+      "Weight of plasma",
+      "Energy density of the magnetic field ($B^2/2\\mu_0$) | चुंबकीय क्षेत्र का ऊर्जा घनत्व",
+      "Current flow",
+      "None"
+    ],
+    "a": 1,
+    "e": "Forces acting on the plasma due to the magnetic field gradient. / चुंबकीय क्षेत्र प्रवणता के कारण प्लाज्मा पर लगने वाला बल।"
+  },
+  {
+    "qe": "What is the 'SI Unit' of Magnetic Susceptibility per unit volume?",
+    "qh": "प्रति इकाई आयतन चुंबकीय प्रवृत्ति की 'SI इकाई' क्या है?",
+    "o": [
+      "Ampere/meter",
+      "Tesla",
+      "Dimensionless | मात्रकहीन (Dimensionless)",
+      "Henry"
+    ],
+    "a": 2,
+    "e": "Volume susceptibility is a pure ratio. / आयतन प्रवृत्ति एक शुद्ध अनुपात है।"
+  },
+  {
+    "qe": "What happens to the 'Critical Field' ($B_c$) of a superconductor as temperature increases?",
+    "qh": "तापमान बढ़ने पर अतिचालक के 'क्रांतिक क्षेत्र' ($B_c$) का क्या होता है?",
+    "o": [
+      "Increases",
+      "Decreases | घटता है (Decreases)",
+      "Remains same",
+      "None"
+    ],
+    "a": 1,
+    "e": "The critical field required to destroy superconductivity drops to zero at $T_c$. / $T_c$ पर अतिचालकता नष्ट करने के लिए आवश्यक क्षेत्र शून्य हो जाता है।"
+  },
+  {
+    "qe": "What is 'Magnetic Intensity' (H) independent of?",
+    "qh": "'चुंबकीय तीव्रता' (H) किससे स्वतंत्र है?",
+    "o": [
+      "Current",
+      "Medium properties | माध्यम के गुण",
+      "Number of turns",
+      "None"
+    ],
+    "a": 1,
+    "e": "Depends only on excitation current and geometry. / केवल उत्तेजना करंट और ज्यामिति पर निर्भर करता है।"
+  },
+  {
+    "qe": "What is the magnetism target completed now?",
+    "qh": "मैग्नेटिज्म में अब तक कुल कितने प्रश्न पूरे हो चुके हैं?",
+    "o": [
+      "900",
+      "950 | 950",
+      "1000",
+      "500"
+    ],
+    "a": 1,
+    "e": "Almost reached the 1000 mark! / 1000 के लक्ष्य के करीब!"
+  },
+  {
+    "qe": "What is 'Coercivity' of soft iron?",
+    "qh": "नरम लोहे की 'निग्राहिता' क्या है?",
+    "o": [
+      "Very High",
+      "Very Low | बहुत कम (Very Low)",
+      "Infinite",
+      "None"
+    ],
+    "a": 1,
+    "e": "Easy to demagnetize. / विचुंबकित करना आसान है।"
+  },
+  {
+    "qe": "Which material is used for 'Permanent Magnets' like Alnico?",
+    "qh": "Alnico जैसे 'स्थायी चुंबक' के लिए किस सामग्री का उपयोग होता है?",
+    "o": [
+      "Steel / Alnico | स्टील / एलनिको",
+      "Soft iron",
+      "Copper",
+      "None"
+    ],
+    "a": 0,
+    "e": "Needs high retentivity and coercivity. / उच्च धारणशीलता और निग्राहिता की आवश्यकता।"
+  },
+  {
+    "qe": "What is 'Curie Temperature' of Nickel?",
+    "qh": "निकल का क्यूरी तापमान क्या है?",
+    "o": [
+      "358°C | 358°C",
+      "770°C",
+      "1000°C",
+      "0°C"
+    ],
+    "a": 0,
+    "e": "Lower than iron. / लोहे से कम।"
+  },
+  {
+    "qe": "What is 'Isogonic Line'?",
+    "qh": "'आइसोगोनिक रेखा' क्या है?",
+    "o": [
+      "Same declination points | समान दिकपात के बिंदु",
+      "Same dip",
+      "Zero dip",
+      "None"
+    ],
+    "a": 0,
+    "e": "Joins places with equal magnetic declination. / समान चुंबकीय दिकपात वाले स्थानों को जोड़ती है।"
+  },
+  {
+    "qe": "What is 'Retentivity' of Steel compared to Soft Iron?",
+    "qh": "नरम लोहे की तुलना में स्टील की 'धारणशीलता' क्या है?",
+    "o": [
+      "Lower | कम (Lower)",
+      "Higher",
+      "Equal",
+      "None"
+    ],
+    "a": 0,
+    "e": "Soft iron has higher initial retentivity. / नरम लोहे की शुरूआती धारणशीलता अधिक होती है।"
+  },
+  {
+    "qe": "What is 'Hysteresis Loop' area representing energy loss as?",
+    "qh": "हिस्टेरेसिस लूप क्षेत्रफल ऊर्जा हानि को किस रूप में दर्शाता है?",
+    "o": [
+      "Heat | ऊष्मा (Heat)",
+      "Light",
+      "Sound",
+      "None"
+    ],
+    "a": 0,
+    "e": "Energy lost as thermal energy. / ऊष्मीय ऊर्जा के रूप में हानि।"
+  },
+  {
+    "qe": "What happens to the 'Magnetic Field' of a charge moving at 'Relativistic Speeds' (near light speed)?",
+    "qh": "'सापेक्षकीय गति' (प्रकाश की गति के करीब) पर चलते आवेश के 'चुंबकीय क्षेत्र' का क्या होता है?",
+    "o": [
+      "Remains spherical",
+      "Becomes flattened/compressed in direction of motion | गति की दिशा में चपटा/संपीड़ित हो जाता है",
+      "Becomes zero",
+      "None"
+    ],
+    "a": 1,
+    "e": "Due to length contraction, the field lines appear compressed. / लंबाई संकुचन के कारण क्षेत्र रेखाएं संकुचित दिखाई देती हैं।"
+  },
+  {
+    "qe": "Which device is used in 'Biomagnetism' to detect tiny fields of the human brain?",
+    "qh": "मानव मस्तिष्क के सूक्ष्म क्षेत्रों का पता लगाने के लिए 'बायोमैग्नेटिज्म' में किस उपकरण का उपयोग होता है?",
+    "o": [
+      "Ammeter",
+      "SQUID | SQUID",
+      "Bar magnet",
+      "None"
+    ],
+    "a": 1,
+    "e": "Superconducting Quantum Interference Devices can detect fields as weak as $10^{-15}$ Tesla. / SQUID इतने सूक्ष्म क्षेत्रों को भी माप सकता है।"
+  },
+  {
+    "qe": "What is 'Magnetic Susceptibility' ($\\chi$) of a 'Vacuum' exactly?",
+    "qh": "'निर्वात' की 'चुंबकीय प्रवृत्ति' ($\\chi$) का सटीक मान क्या है?",
+    "o": [
+      "1",
+      "0 | 0",
+      "-1",
+      "Infinite"
+    ],
+    "a": 1,
+    "e": "Vacuum cannot be polarized or magnetized. / निर्वात को ध्रुवित या चुंबकित नहीं किया जा सकता।"
+  },
+  {
+    "qe": "What is 'Magnetic Susceptibility' of 'Antimony'?",
+    "qh": "'एंटीमनी' की चुंबकीय प्रवृत्ति क्या है?",
+    "o": [
+      "Negative | ऋणात्मक",
+      "Positive",
+      "Zero",
+      "None"
+    ],
+    "a": 0,
+    "e": "It is a diamagnetic substance. / यह एक प्रति-चुंबकीय पदार्थ है।"
+  },
+  {
+    "qe": "What is 'Mutual Inductance' unit?",
+    "qh": "'अन्योन्य प्रेरकत्व' की इकाई क्या है?",
+    "o": [
+      "Henry | हेनरी",
+      "Tesla",
+      "Weber",
+      "None"
+    ],
+    "a": 0,
+    "e": "Same as self-inductance. / स्व-प्रेरकत्व के समान।"
+  },
+  {
+    "qe": "What is 'Self Inductance' of a long solenoid proportional to turns $N$?",
+    "qh": "स्व-प्रेरकत्व फेरों $N$ के कैसे संबंधित है?",
+    "o": [
+      "$N^2$ | $N^2$",
+      "$N$",
+      "$\\sqrt{N}$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Square of the number of turns. / फेरों की संख्या का वर्ग।"
+  },
+  {
+    "qe": "What is 'Isogonic Line'?",
+    "qh": "'आइसोगोनिक रेखा' क्या है?",
+    "o": [
+      "Same declination points | समान दिकपात के बिंदु",
+      "Same dip",
+      "Zero dip",
+      "None"
+    ],
+    "a": 0,
+    "e": "Connects equal declination values. / समान दिकपात मानों को जोड़ती है।"
+  },
+  {
+    "qe": "What is the magnetism target completed now?",
+    "qh": "मैग्नेटिज्म में अब तक कितने प्रश्न पूरे हो चुके हैं?",
+    "o": [
+      "950",
+      "1000 | 1000",
+      "500",
+      "2000"
+    ],
+    "a": 1,
+    "e": "Mission Magnetism 1000 Completed! / मिशन मैग्नेटिज्म 1000 पूरा हुआ!"
+  },
+  {
+    "qe": "What is 'Retentivity' of Steel compared to Soft Iron?",
+    "qh": "सॉफ्ट आयरन की तुलना में स्टील की धारणशीलता क्या है?",
+    "o": [
+      "Lower | कम",
+      "Higher",
+      "Equal",
+      "None"
+    ],
+    "a": 0,
+    "e": "Initially lower than soft iron. / नरम लोहे से कम।"
+  },
+  {
+    "qe": "What is 'Magnetic Susceptibility' of 'Liquid Oxygen'?",
+    "qh": "'Liquid oxygen' ki chumbakiya pravritti kya hai?",
+    "o": [
+      "Positive | Dhanatmak",
+      "Negative",
+      "Zero",
+      "None"
+    ],
+    "a": 0,
+    "e": "Oxygen is paramagnetic. / Oxygen anu-chumbakiya hai."
+  },
+  {
+    "qe": "What is 'Barkhausen Effect' evidence of?",
+    "qh": "'Barkhausen effect' kiska praman hai?",
+    "o": [
+      "Magnetic Domains | Chumbakiya domains",
+      "Light",
+      "Sound",
+      "None"
+    ],
+    "a": 0,
+    "e": "Shows domain alignment steps. / Domain sanrekhan dikhata hai."
+  },
+  {
+    "qe": "What is 'Isogonic Line'?",
+    "qh": "'आइसोगोनिक रेखा' क्या है?",
+    "o": [
+      "Same declination points | समान दिकपात के बिंदु",
+      "Same dip",
+      "Zero dip",
+      "None"
+    ],
+    "a": 0,
+    "e": "Joins places with equal magnetic declination. / समान चुंबकीय दिकपात वाले स्थानों को जोड़ती है।"
+  },
+  {
+    "qe": "What is 'Retentivity' of Steel compared to Soft Iron?",
+    "qh": "नरम लोहे की तुलना में स्टील की 'धारणशीलता' क्या है?",
+    "o": [
+      "Lower | कम (Lower)",
+      "Higher",
+      "Equal",
+      "None"
+    ],
+    "a": 0,
+    "e": "Soft iron has higher initial retentivity. / नरम लोहे की शुरूआती धारणशीलता अधिक होती है।"
+  },
+  {
+    "qe": "What is 'Isogonic Line' on a map?",
+    "qh": "'Isogonic Line' kya hai?",
+    "o": [
+      "Same declination points | Saman dikpat bindu",
+      "Same dip",
+      "Zero dip",
+      "None"
+    ],
+    "a": 0,
+    "e": "Joins places with equal magnetic declination. / Saman chumbakiya dikpat wale sthano ko jodti hai."
+  },
+  {
+    "qe": "Magnetic field lines are mathematically represented as continuous, unbroken closed loops. What fundamental physical principle distinguishes this behavior from that of an electrostatic dipole configuration?",
+    "qh": "चुंबकीय क्षेत्र रेखाओं को गणितीय रूप से निरंतर, अटूट बंद लूप के रूप में दर्शाया जाता है। कौन सा मौलिक भौतिक सिद्धांत इस व्यवहार को एक स्थिरवैद्युत द्विध्रुव विन्यास (electrostatic dipole configuration) के व्यवहार से अलग करता है?",
+    "o": [
+      "The velocity of magnetic flux propagation undergoes a temporal phase dilation.",
+      "Isolated magnetic north and south poles, known as magnetic monopoles, do not exist in nature.",
+      "The magnetic permeability of free space remains entirely dependent on the electric field vector.",
+      "The total magnetic potential energy drops to absolute zero at the geometric intersection node."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Electrostatic field lines begin at a positive charge and terminate on a negative charge because isolated electric charges exist. In contrast, magnetic monopoles do not exist; slicing a magnet in half simply generates two smaller magnets. Thus, magnetic field lines must form continuous closed loops without start or end points."
+  },
+  {
+    "qe": "By convention, the directional orientation of a magnetic field line at any point in space is defined by the behavior of a compass. What strict directional rule governs these curves internally versus externally?",
+    "qh": "परंपरा के अनुसार, अंतरिक्ष में किसी भी बिंदु पर चुंबकीय क्षेत्र रेखा के दिशात्मक अभिविन्यास को कंपास के व्यवहार द्वारा परिभाषित किया जाता है। आंतरिक बनाम बाहरी रूप से इन वक्रों को कौन सा सख्त दिशात्मक नियम नियंत्रित करता है?",
+    "o": [
+      "They emerge from the south pole and merge at the north pole both internally and externally.",
+      "They emerge from the north pole and merge at the south pole externally, but travel from the south pole to the north pole inside the magnet.",
+      "They oscillate at an acute angle of $45^\\circ$ relative to the geometric axis of the core matrix.",
+      "They are always perpendicular to the mechanical surface plane regardless of location boundary."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Conventionally, external magnetic field lines emerge from the north seeking pole and merge at the south seeking pole. However, to form a continuous closed loop, the direction of the field lines inside the material matrix must point from the south pole to the north pole."
+  },
+  {
+    "qe": "No two magnetic field lines are ever found to cross or intersect each other. What logical paradox would occur at the point of intersection if they did cross?",
+    "qh": "कोई भी दो चुंबकीय क्षेत्र रेखाएं कभी भी एक-दूसरे को काटती या प्रतिच्छेद नहीं करती हैं। यदि वे एक-दूसरे को काटती हैं, तो प्रतिच्छेद बिंदु पर कौन सा तार्किक विरोधाभास उत्पन्न होगा?",
+    "o": [
+      "The total magnetic flux density would scale to infinity instantly.",
+      "The magnetic field direction would not be unique at that point, forcing a compass needle to point toward two different directions simultaneously.",
+      "The electrical current induced in the local loops would break the conservation of mass law.",
+      "The absolute permeability of the surrounding environment would drop to zero."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The tangent to a magnetic field line indicates the unique direction of the net magnetic field vector $\\mathbf{B}$ at that specific point. If two lines intersected, the field vector would point in two different directions at the same coordinate, which is physically impossible."
+  },
+  {
+    "qe": "When a current is passed through a long straight wire, concentric magnetic field circles are generated. What happens to the geometric spacing and magnitude of this field as the distance from the conductor increases?",
+    "qh": "जब एक लंबे सीधे तार से धारा प्रवाहित की जाती है, तो संकेंद्री चुंबकीय क्षेत्र वृत्त उत्पन्न होते हैं। जैसे-जैसे चालक से दूरी बढ़ती है, इस क्षेत्र की ज्यामितीय दूरी और परिमाण में क्या परिवर्तन होता है?",
+    "o": [
+      "The circles become tighter and the field strength increases exponentially.",
+      "The concentric circles become larger and larger, and the magnitude of the field decreases inversely with distance.",
+      "The concentric field loops flatten into collinear parallel lines with invariant strength.",
+      "The field vector shifts its phase by $\\pi$ radians at fixed macroscopic node intervals."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The magnitude of the magnetic field produced by a straight current-carrying wire depends inversely on the distance from it. Graphically, the concentric circles representing the field lines grow larger and spread further apart as you move away from the conductor, signifying a weaker field."
+  },
+  {
+    "qe": "A straight current-carrying wire is bent into a single circular loop. As you move from the rim of the loop toward its absolute geometric center, how does the visual pattern of the magnetic field lines change?",
+    "qh": "एक सीधे धारावाही तार को एक एकल वृत्ताकार लूप में मोड़ा जाता है। जैसे-जैसे आप लूप के किनारे से उसके पूर्ण ज्यामितीय केंद्र की ओर बढ़ते हैं, चुंबकीय क्षेत्र रेखाओं का दृश्य पैटर्न कैसे बदलता है?",
+    "o": [
+      "The field lines form tightly wound helical patterns confined to the wire thickness.",
+      "The arcs of the expanding concentric circles flatten out and appear as straight lines at the center.",
+      "The lines cross each other at a fixed acute angle of $45^\\circ$ at the central node.",
+      "The field lines undergo continuous polarization decay and fade out completely."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Near the wire section of the circular loop, the field lines are tight concentric circles. As you move away from the wire toward the center of the loop, the circles grow larger. By the time they reach the center, the arcs of these large circles appear as straight lines perpendicular to the loop plane."
+  },
+  {
+    "qe": "A circular coil consists of $n$ closely wound turns of insulated copper wire. When a current passes through it, the total magnetic field produced at its center is $n$ times larger than that produced by a single turn. Why does this simple scaling happen linearly?",
+    "qh": "एक वृत्ताकार कुंडली में इंसुलेटेड तांबे के तार के $n$ पास-पास लिपटे फेरे शामिल हैं। जब इसमें से धारा गुजरती है, तो इसके केंद्र पर उत्पन्न कुल चुंबकीय क्षेत्र एकल फेरे द्वारा उत्पन्न क्षेत्र से $n$ गुना बड़ा होता है। यह सरल स्केलिंग रैखिक रूप से क्यों होती है?",
+    "o": [
+      "Because multiple turns reduce the effective core resistance to absolute zero.",
+      "Because the current in each circular turn flows in the same direction, causing the magnetic fields due to each individual turn to just add up algebraically.",
+      "Because the multi-turn setup triggers a relativistic mass dilation of the charge carriers.",
+      "Because the mutual inductance factor cancels out the negative flux components."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In a closely wound coil with $n$ turns, the current in every single turn flows in the identical spatial direction. Consequently, the magnetic field contribution from each individual turn points in the same direction at the center, simply adding up linearly."
+  },
+  {
+    "qe": "The magnetic field lines inside a current-carrying long solenoid are in the form of parallel straight lines. What does this specific geometric alignment signify regarding the nature of the field inside the solenoid?",
+    "qh": "धारावाही लंबे सोलेनोइड (solenoid) के भीतर चुंबकीय क्षेत्र रेखाएं समानांतर सीधी रेखाओं के रूप में होती हैं। यह विशिष्ट ज्यामितीय संरेखण सोलेनोइड के भीतर क्षेत्र की प्रकृति के बारे में क्या दर्शाता है?",
+    "o": [
+      "The field strength is highly unstable and varies rapidly over time.",
+      "The magnetic field is uniform and identical at all points inside the solenoid.",
+      "The internal field vector component normal to the axis is maximized.",
+      "The field undergoes complete mechanical polarization decay at the core boundaries."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Parallel straight field lines indicate that the magnetic field vector has the exact same magnitude and direction at every point inside that region. Thus, the magnetic field is completely uniform inside the current-carrying solenoid."
+  },
+  {
+    "qe": "When a small compass needle of known magnetic moment $\\mathbf{m}$ is placed in a uniform external magnetic field $\\mathbf{B}$ at an angle $\\theta$, it experiences a potential energy $U_m = -\\mathbf{m} \\cdot \\mathbf{B}$. Under what orientation is this system in its most stable equilibrium state versus its most unstable state?",
+    "qh": "जब ज्ञात चुंबकीय आघूर्ण $\\mathbf{m}$ की एक छोटी कंपास सुई को कोण $\\theta$ पर एकसमान बाहरी चुंबकीय क्षेत्र $\\mathbf{B}$ में रखा जाता है, तो यह स्थितिज ऊर्जा $U_m = -\\mathbf{m} \\cdot \\mathbf{B}$ का अनुभव करती है। किस अभिविन्यास (orientation) के तहत यह प्रणाली अपनी सबसे स्थिर संतुलन स्थिति बनाम अपनी सबसे अस्थिर स्थिति में होती है?",
+    "o": [
+      "Most stable at $\\theta = 90^\\circ$ and most unstable at $\\theta = 0^\\circ$.",
+      "Most stable at $\\theta = 0^\\circ$ (parallel) and most unstable at $\\theta = 180^\\circ$ (anti-parallel).",
+      "Most stable at $\\theta = 180^\\circ$ and most unstable at $\\theta = 90^\\circ$.",
+      "Symmetric equilibrium occurs only when the potential energy is strictly positive."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> According to $U_m = -mB \\cos\\theta$, the potential energy reaches its minimum value ($-mB$) when $\\theta = 0^\\circ$ (magnetic moment parallel to the field), which is the most stable state. It reaches its maximum value ($+mB$) when $\\theta = 180^\\circ$ (anti-parallel), representing the most unstable state."
+  },
+  {
+    "qe": "Magnetic materials can be classified using their magnetic susceptibility $\\chi$. For a certain class of materials, $\\chi$ is a small negative number ($-1 \\le \\chi < 0$), rendering its relative permeability $\\mu_r < 1$. What is this class of materials called, and how do they behave in a non-uniform field?",
+    "qh": "चुंबकीय पदार्थों को उनकी चुंबकीय प्रवृत्ति $\\chi$ (magnetic susceptibility) का उपयोग करके वर्गीकृत किया जा सकता है। पदार्थों के एक निश्चित वर्ग के लिए, $\\chi$ एक छोटा ऋणात्मक मान ($-1 \\le \\chi < 0$) होता है, जिससे इसकी सापेक्ष पारगम्यता $\\mu_r < 1$ हो जाती है। पदार्थों के इस वर्ग को क्या कहा जाता है, और वे एक गैर-एकसमान क्षेत्र में कैसा व्यवहार करते हैं?",
+    "o": [
+      "Paramagnetic materials; they move from weak to strong field regions.",
+      "Diamagnetic substances; they have a tendency to move from stronger to the weaker parts of an external magnetic field.",
+      "Ferromagnetic metals; they stay completely invariant to field gradients.",
+      "Superconductors; they alter their chemical valence states dynamically."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Diamagnetic substances have a negative susceptibility $\\chi$. When placed in an external magnetic field, they repel or expel the field lines slightly. In a non-uniform magnetic field, a bar of diamagnetic material will always tend to move from a region of high field to a low field region."
+  },
+  {
+    "qe": "What is the baseline atomic origin of diamagnetism, and why is this phenomenon considered to be universally present in all substances?",
+    "qh": "प्रतिचुंबकत्व (diamagnetism) का मूल परमाणु कारण क्या है, और इस परिघटना को सभी पदार्थों में सार्वभौमिक रूप से उपस्थित क्यों माना जाता है?",
+    "o": [
+      "It arises from the persistent alignment of large macroscopic domain matrices.",
+      "It arises because orbiting electrons act as current loops; an external field induces currents (Lenz's law) that create a net magnetic moment opposing the applied field.",
+      "It is caused exclusively by the electrostatic repulsion of core nuclear protons.",
+      "It is an artifact of the localized thermal stress vectors of non-zero mass bosons."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Orbiting electrons possess an orbital magnetic moment. In diamagnetic substances, the net resultant magnetic moment of an atom is zero. Applying an external field speeds up or slows down specific electrons (via induced currents complying with Lenz's law) such that the substance develops a net magnetic moment pointing opposite to the applied field. Since all substances contain orbiting electrons, diamagnetism is universal."
+  },
+  {
+    "qe": "Superconductors represent an exotic state of matter when cooled to ultra-low critical temperatures. What are the values of their magnetic susceptibility $\\chi$ and relative permeability $\\mu_r$, and what is this total field expulsion phenomenon called?",
+    "qh": "अतिचालक (Superconductors) अत्यधिक कम क्रांतिक तापमान तक ठंडा होने पर पदार्थ की एक अनूठी स्थिति का प्रतिनिधित्व करते हैं। उनकी चुंबकीय प्रवृत्ति $\\chi$ और सापेक्ष पारगम्यता $\\mu_r$ के मान क्या होते हैं, और इस पूर्ण क्षेत्र निष्कासन (total field expulsion) की घटना को क्या कहा जाता है?",
+    "o": [
+      "$\\chi = +1$, $\\mu_r = 2$; Curie transition effect.",
+      "$\\chi = -1$, $\\mu_r = 0$; Meissner effect.",
+      "$\\chi \\to \\infty$, $\\mu_r \\to \\infty$; Faraday induction effect.",
+      "$\\chi = 0$, $\\mu_r = 1$; Oersted deflection phenomenon."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Superconductors exhibit both perfect electrical conductivity and perfect diamagnetism. They completely expel external magnetic fields from their interior volume. For a superconductor, $\\chi = -1$ and $\\mu_r = 0$. This complete expulsion of magnetic flux lines is known as the Meissner effect."
+  },
+  {
+    "qe": "Paramagnetic substances possess a small positive magnetic susceptibility ($0 < \\chi < \\epsilon$). Why do individual atoms of a paramagnetic material have a permanent magnetic dipole moment, yet the bulk sample shows zero net magnetization in the absence of an external field?",
+    "qh": "अनुचुंबकीय (Paramagnetic) पदार्थों में एक छोटी धनात्मक चुंबकीय प्रवृत्ति ($0 < \\chi < \\epsilon$) होती है। अनुचुंबकीय पदार्थ के व्यक्तिगत परमाणुओं में अपना स्थायी चुंबकीय द्विध्रुव आघूर्ण क्यों होता है, फिर भी बाहरी क्षेत्र की अनुपस्थिति में थोक नमूना (bulk sample) शून्य नेट चुंबकन दर्शाता है?",
+    "o": [
+      "Because the internal domains cancel each other out via strong macroscopic quantum coupling.",
+      "On account of the ceaseless random thermal motion of the atoms, which randomizes the orientation of individual dipoles.",
+      "Because the core electronic orbits collapse symmetrically at room temperature.",
+      "Because the absolute permeability of the sample drops to zero without an external field matrix."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Individual atoms or molecules of a paramagnetic material have a permanent magnetic dipole moment due to unpaired electrons. However, due to continuous random thermal agitation (ceaseless thermal motion), these individual dipoles point randomly in all directions, averaging out to zero bulk magnetization when no external field is applied."
+  },
+  {
+    "qe": "Michael Faraday and Joseph Henry independently discovered electromagnetic induction around 1830. Their series of experiments conclusively demonstrated that an electric current is generated in a closed coil if and only if:",
+    "qh": "माइकेल फैराडे और जोसेफ हेनरी ने स्वतंत्र रूप से 1830 के आसपास विद्युत चुंबकीय प्रेरण (electromagnetic induction) की खोज की थी। उनके प्रयोगों की श्रृंखला ने निर्णायक रूप से प्रदर्शित किया कि एक बंद कुंडली में विद्युत धारा उत्पन्न होती है यदि और केवल यदि:",
+    "o": [
+      "A high-intensity static magnetic field vector is permanently maintained inside the core.",
+      "The closed coil is subjected to a changing magnetic flux over time.",
+      "The absolute temperature of the copper loops drops to absolute zero.",
+      "The current loop is aligned strictly parallel to the stationary lines of force."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Faraday and Henry's historic experiments proved that a static magnetic field, no matter how strong, cannot induce a current in a stationary coil. An electromotive force (emf) and current are induced in a closed loop if and only if there is a time rate of change of magnetic flux linked through the circuit area."
+  },
+  {
+    "qe": "In Faraday's Experiment 6.3, two stationary coils $C_1$ and $C_2$ are placed near each other without any relative motion. Why does a momentary deflection appear in the galvanometer connected to $C_1$ only at the exact instants when the tapping key in $C_2$ is pressed or released?",
+    "qh": "फैराडे के प्रयोग 6.3 में, दो स्थिर कुंडलियां $C_1$ और $C_2$ बिना किसी सापेक्ष गति के एक-दूसरे के पास रखी गई हैं। $C_1$ से जुड़े गैल्वेनोमीटर में केवल उन्हीं सटीक क्षणों में एक क्षणिक विचलन क्यों दिखाई देता है जब $C_2$ की टैपिंग कुंजी को दबाया या छोड़ा जाता है?",
+    "o": [
+      "Because the copper material undergoing static pressure creates an electrostatic displacement charge.",
+      "Because during the press or release instants, the current in $C_2$ rises or falls, creating a time-varying magnetic field that alters the magnetic flux through $C_1$.",
+      "Because internal mechanical resistance inside the key generates an alternate high frequency wave.",
+      "Because the mutual inductance between stationary elements requires a touch impact to trigger."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When the key is pressed or released, the current in $C_2$ changes rapidly between zero and its maximum value. This changing current produces a time-varying magnetic field, which transiently changes the magnetic flux passing through the neighboring coil $C_1$, inducing a temporary emf. When the current is steady, $\\frac{d\\Phi_B}{dt} = 0$, so no current is induced."
+  },
+  {
+    "qe": "Magnetic flux $\\Phi_B$ through a flat plane area $A$ placed in a uniform field $\\mathbf{B}$ is mathematically defined as $\\Phi_B = \\mathbf{B} \\cdot \\mathbf{A} = BA \\cos\\theta$. What is the primary physical nature of magnetic flux, and what is its standard SI unit?",
+    "qh": "एकसमान क्षेत्र $\\mathbf{B}$ में रखे समतल क्षेत्र $A$ के माध्यम से चुंबकीय प्रवाह $\\Phi_B$ को गणितीय रूप से $\\Phi_B = \\mathbf{B} \\cdot \\mathbf{A} = BA \\cos\\theta$ के रूप में परिभाषित किया गया है। चुंबकीय प्रवाह की प्राथमिक भौतिक प्रकृति क्या है, और इसका मानक एसआई (SI) मात्रक क्या है?",
+    "o": [
+      "It is a vector quantity; measured in Oersteds.",
+      "It is a scalar quantity; measured in Weber (Wb) or Tesla meter squared ($\\text{T m}^2$).",
+      "It is a complex tensor field; measured in Henry per second.",
+      "It is a dimensionless linear constant mapping the loop orientation variables."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Magnetic flux is a scalar quantity obtained from the dot product of the magnetic field vector and the area vector. Its designated SI unit is the Weber (Wb), which is dimensional equivalent to Tesla meter squared ($\\text{T m}^2$)."
+  },
+  {
+    "qe": "Faraday’s law of electromagnetic induction states that the magnitude of the induced emf ($\\epsilon$) in a closely wound coil of $N$ turns is directly proportional to:",
+    "qh": "फैराडे के विद्युत चुंबकीय प्रेरण के नियम के अनुसार $N$ फेरों वाली पास-पास लिपटी कुंडली में प्रेरित विद्युत वाहक बल (emf, $\\epsilon$) का परिमाण सीधे किसके समानुपाती होता है?",
+    "o": [
+      "The total internal surface area of the wire cross-section.",
+      "The time rate of change of magnetic flux through the circuit: $\\epsilon = -N \\frac{d\\Phi_B}{dt}$.",
+      "The absolute constant electrostatic potential difference across the battery terminals.",
+      "The mechanical velocity of the rotating armature divided by mass."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Faraday's law states that the induced electromotive force in a circuit is mathematically equal to the time rate of change of magnetic flux linked through it. For a coil with $N$ closely wound turns, the net emf is multiplied by the number of turns: $\\epsilon = -N \\frac{d\\Phi_B}{dt}$."
+  },
+  {
+    "qe": "Lenz’s law states that the polarity of an induced emf is such that it tends to produce a current which opposes the change in magnetic flux that produced it. This fundamental law is a direct consequence of which conservation law?",
+    "qh": "लेंस का नियम (Lenz’s law) बताता है कि प्रेरित विद्युत वाहक बल (emf) की ध्रुवीयता ऐसी होती है कि यह एक ऐसी धारा उत्पन्न करती है जो चुंबकीय प्रवाह में होने वाले उस परिवर्तन का विरोध करती है जिसने इसे उत्पन्न किया था। यह मौलिक नियम किस संरक्षण नियम का सीधा परिणाम है?",
+    "o": [
+      "The law of conservation of electric charge vectors.",
+      "The law of conservation of energy.",
+      "The principle of conservation of total material mass.",
+      "The law of linear momentum conservation in an isolated system."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Lenz's law is a manifestation of the law of conservation of energy. If the induced current aided the flux change instead of opposing it, a small push on a magnet would cause it to accelerate indefinitely, creating kinetic energy out of nothing (a perpetual motion machine), which violates energy conservation."
+  },
+  {
+    "qe": "When a person pushes the north pole of a bar magnet toward a closed conducting loop, the induced current creates an opposing north magnetic pole at the face of the coil. What happens to the mechanical work spent by the person in overcoming this repulsive force?",
+    "qh": "जब कोई व्यक्ति छड़ चुंबकीय उत्तरी ध्रुव को एक बंद चालक लूप की ओर धकेलता है, तो प्रेरित धारा कुंडली के फलक पर एक विरोधी उत्तरी चुंबकीय ध्रुव बनाती है। इस प्रतिकर्षण बल पर काबू पाने में व्यक्ति द्वारा खर्च किया गया यांत्रिक कार्य (mechanical work) भौतिक रूप से कहाँ जाता है?",
+    "o": [
+      "The work is completely destroyed due to non-conservative atomic friction.",
+      "The energy spent is dissipated as Joule heating produced by the induced current flowing in the loop.",
+      "The work transforms into an alternate electrostatic charge accumulated at the loop center.",
+      "The mechanical energy dilates the spatial coordinates of the primary magnet matrix."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The mechanical work performed by a person to overcome the magnetic repulsion during induction is not lost. According to energy conservation, this mechanical energy is converted directly into electrical energy, which is subsequently dissipated as heat due to Joule heating ($I^2Rt$) within the resistance of the loop wire."
+  },
+  {
+    "qe": "Inductance is defined under electromagnetic theory as the ratio of total flux linkage to the current ($N\\Phi_B / I$). What intrinsic attributes uniquely determine the total inductance of a closely wound coil?",
+    "qh": "विद्युत चुंबकीय सिद्धांत के अंतर्गत प्रेरकत्व (Inductance) को कुल फ्लक्स लिंकेज और धारा के अनुपात ($N\\Phi_B / I$) के रूप में परिभाषित किया गया है। कौन सी अंतर्निहित विशेषताएं विशिष्ट रूप से एक पास-पास लिपटी कुंडली के कुल प्रेरकत्व को निर्धारित करती हैं?",
+    "o": [
+      "The velocity of the charge carriers and the external field strength.",
+      "The geometry of the coil and the intrinsic magnetic permeability properties of the medium.",
+      "The time duration for which the current is maintained through the branch.",
+      "The total electrostatic capacity of the insulation boundary layers."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Inductance, like capacitance, is a pure geometric and material attribute. It is completely independent of the actual current or flux values; it is uniquely determined by the geometric layout of the coil (number of turns, area, length) and the magnetic permeability of the core material inside the coil volume."
+  },
+  {
+    "qe": "When a current passing through a single isolated coil varies over time, an emf is induced in that same coil. This self-induced emf ($\\epsilon = -L \\frac{dI}{dt}$) plays what specific physical role in electrical circuits?",
+    "qh": "जब एक एकल पृथक कुंडली (isolated coil) से गुजरने वाली धारा समय के साथ बदलती है, तो उसी कुंडली में एक विद्युत वाहक बल (emf) प्रेरित होता है। यह स्व-प्रेरित विद्युत वाहक बल ($\\epsilon = -L \\frac{dI}{dt}$) विद्युत सर्किट में क्या विशिष्ट भौतिक भूमिका निभाता है?",
+    "o": [
+      "It acts as a mechanical catalyst speeding up the charge transfer rate.",
+      "It plays the role of inertia, acting as a 'back emf' that always opposes any change (increase or decrease) of current in the circuit.",
+      "It completely eliminates the resistance of the copper loops at room temperature.",
+      "It transforms alternating current into a continuous direct current mode instantly."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Self-inductance $L$ is the electrical analogue of mechanical mass or inertia. The self-induced emf is called 'back emf' because it opposes any variation in current; it resists the growth of current when the circuit is switched on and resists its decay when switched off."
+  },
+  {
+    "qe": "What is the 'SI Unit' of Magnetic Induction?",
+    "qh": "'चुंबकीय प्रेरण' की 'SI इकाई' क्या है?",
+    "o": [
+      "Gauss",
+      "Tesla | टेस्ला (Tesla)",
+      "Weber",
+      "Henry"
+    ],
+    "a": 1,
+    "e": "Magnetism Revision. / मैग्नेटिज्म रिवीजन।"
+  },
+  {
+    "qe": "What is 'Aclinic Line'?",
+    "qh": "'एक्लिनिक रेखा' क्या है?",
+    "o": [
+      "Zero Dip | शून्य नति (Zero Dip)",
+      "Zero Declination",
+      "Max force",
+      "None"
+    ],
+    "a": 0,
+    "e": "Magnetic equator. / चुंबकीय भूमध्य रेखा।"
+  },
+  {
+    "qe": "What is 'Tesla' in Gauss?",
+    "qh": "'टेस्ला' गॉस में कितना है?",
+    "o": [
+      "$10^4$ | $10^4$ Gauss",
+      "$10^2$",
+      "$10^6$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Magnetism Revision. / मैग्नेटिज्म रिवीजन।"
+  },
+  {
+    "qe": "What is 'Aclinic Line'?",
+    "qh": "'एक्लिनिक रेखा' क्या है?",
+    "o": [
+      "Zero Dip | शून्य नति (Zero Dip)",
+      "Zero Declination",
+      "Max force",
+      "None"
+    ],
+    "a": 0,
+    "e": "Magnetic equator revision point. / मैग्नेटिज्म रिवीजन पॉइंट।"
+  },
+  {
+    "qe": "What is 'Tesla' in Gauss?",
+    "qh": "'टेस्la' गॉस में कितना है?",
+    "o": [
+      "$10^4$ | $10^4$ Gauss",
+      "$10^2$",
+      "$10^6$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Magnetism Revision. / मैग्नेटिज्म रिवीजन।"
+  },
+  {
+    "qe": "What is 'Aclinic Line'?",
+    "qh": "'एक्लिनिक रेखा' क्या है?",
+    "o": [
+      "Zero Dip | शून्य नति (Zero Dip)",
+      "Zero Declination",
+      "Max force",
+      "None"
+    ],
+    "a": 0,
+    "e": "Magnetism Revision. / मैग्नेटिज्म रिवीजन।"
+  },
+  {
+    "qe": "What is 'Tesla' in Gauss?",
+    "qh": "'टेस्ला' गॉस में कितना है?",
+    "o": [
+      "$10^4$ | $10^4$ Gauss",
+      "$10^2$",
+      "$10^6$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Magnetism Revision. / मैग्नेटिज्म रिवीजन।"
+  },
+  {
+    "qe": "What is 'Tesla' in Gauss?",
+    "qh": "'टेस्ला' गॉस में:",
+    "o": [
+      "$10^4$ | $10^4$ Gauss",
+      "$10^2$",
+      "$10^6$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Revision Point. / रिवीजन पॉइंट।"
+  },
+  {
+    "qe": "What is 'Aclinic Line'?",
+    "qh": "'एक्लिनिक रेखा' है:",
+    "o": [
+      "Zero Dip | शून्य नति",
+      "Zero Declination",
+      "Max force",
+      "None"
+    ],
+    "a": 0,
+    "e": "Revision Point. / रिवीजन पॉइंट।"
+  },
+  {
+    "qe": "What is 'Tesla' unit of?",
+    "qh": "'टेस्ला' किसकी इकाई है?",
+    "o": [
+      "Magnetic field | चुंबकीय क्षेत्र",
+      "Power",
+      "Sound",
+      "None"
+    ],
+    "a": 0,
+    "e": "Physics Revision. / भौतिकी रिवीजन।"
+  },
+  {
+    "qe": "What is 'Aclinic Line'?",
+    "qh": "'एक्लिनिक रेखा' है:",
+    "o": [
+      "Zero Dip | शून्य नति",
+      "Zero Declination",
+      "Max force",
+      "None"
+    ],
+    "a": 0,
+    "e": "Revision Point. / रिवीजन पॉइंट।"
+  },
+  {
+    "qe": "What is 'Tesla' unit of?",
+    "qh": "'टेस्ला' किसकी इकाई है?",
+    "o": [
+      "Magnetic field | चुंबकीय क्षेत्र",
+      "Power",
+      "Sound",
+      "None"
+    ],
+    "a": 0,
+    "e": "Physics Revision. / भौतिकी रिवीजन।"
+  },
+  {
+    "qe": "What is 'Aclinic Line'?",
+    "qh": "'एक्लिनिक रेखा' है:",
+    "o": [
+      "Zero Dip | शून्य नति",
+      "Zero Declination",
+      "Max force",
+      "None"
+    ],
+    "a": 0,
+    "e": "Magnetic equator. / चुंबकीय भूमध्य रेखा।"
+  },
+  {
+    "qe": "What is 'Tesla' unit of?",
+    "qh": "'टेस्ला' किसकी इकाई है?",
+    "o": [
+      "Flux",
+      "Magnetic field | चुंबकीय क्षेत्र",
+      "Sound",
+      "None"
+    ],
+    "a": 1,
+    "e": "Magnetism Revision. / मैग्नेटिज्म रिवीजन।"
+  },
+  {
+    "qe": "What is 'Tesla' unit of?",
+    "qh": "'टेस्ला' किसकी इकाई है?",
+    "o": [
+      "Magnetic field | चुंबकीय क्षेत्र",
+      "Power",
+      "Sound",
+      "None"
+    ],
+    "a": 0,
+    "e": "Physics Revision. / भौतिकी रिवीजन।"
+  },
+  {
+    "qe": "What is 'Aclinic Line'?",
+    "qh": "'एक्लिनिक रेखा' है:",
+    "o": [
+      "Zero Dip | शून्य नति",
+      "Zero Declination",
+      "Max force",
+      "None"
+    ],
+    "a": 0,
+    "e": "Magnetic equator. / चुंबकीय भूमध्य रेखा।"
+  },
+  {
+    "qe": "What is 'Tesla' in Gauss?",
+    "qh": "'टेस्ला' गॉस में:",
+    "o": [
+      "$10^4$ | $10^4$ Gauss",
+      "$10^2$",
+      "$10^6$",
+      "None"
+    ],
+    "a": 0,
+    "e": "Magnetism Revision. / मैग्नेटिज्म रिवीजन।"
+  },
+  {
+    "qe": "What is 'Tesla' unit of?",
+    "qh": "'टेस्ला' किसकी इकाई है?",
+    "o": [
+      "Magnetic field | चुंबकीय क्षेत्र",
+      "Power",
+      "Sound",
+      "None"
+    ],
+    "a": 0,
+    "e": "Revision Point. / रिवीजन पॉइंट।"
+  }
+]
