@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -20,15 +19,10 @@ class ProPdfVaultCard extends StatefulWidget {
 
 class _ProPdfVaultCardState extends State<ProPdfVaultCard>
     with SingleTickerProviderStateMixin {
-  late final ScrollController _scrollController;
-  Timer? _rollingTimer;
   late final AnimationController _blinkController;
-  double _currentScrollOffset = 0.0;
-  static const double _itemHeight = 64.0; // Per item height + spacing
-
   static const String _defaultWebsiteUrl = "https://www.mocktester.online/pdf-notes";
 
-  // 📝 8 DEFAULT HIGH-VALUE ITEMS
+  // 📝 6 DEFAULT HIGH-VALUE ITEMS (Static Clean List)
   final List<Map<String, dynamic>> _fallbackDocs = [
     {
       'title': 'NCERT Science & GK 1-Liner Crux',
@@ -84,24 +78,6 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
       'color': 0xFF0284C7,
       'url': 'https://www.mocktester.online/pdf-notes',
     },
-    {
-      'title': 'Bihar Special GK, Census & Economic Survey Summary',
-      'tag': '🎯 BIHAR SPL',
-      'badge': 'ADDED TODAY',
-      'meta': '72 Pages • Special Compilations',
-      'reads': '16.9k reads',
-      'color': 0xFF16A34A,
-      'url': 'https://www.mocktester.online/pdf-notes',
-    },
-    {
-      'title': 'Quantitative Aptitude & Reasoning Shortcut Tricks',
-      'tag': '🔥 TRICK SHEET',
-      'badge': 'NEW ADDED',
-      'meta': '80 Pages • 500+ Solved Examples',
-      'reads': '15.3k reads',
-      'color': 0xFFEA580C,
-      'url': 'https://www.mocktester.online/pdf-notes',
-    },
   ];
 
   List<Map<String, dynamic>> _getDocList() {
@@ -137,47 +113,15 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
   @override
   void initState() {
     super.initState();
-    _scrollController = ScrollController();
-
+    // 💡 Smooth Blinking Badge Animation
     _blinkController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 800),
     )..repeat(reverse: true);
-
-    _startSmoothRolling();
-  }
-
-  void _startSmoothRolling() {
-    _rollingTimer?.cancel();
-    _rollingTimer = Timer.periodic(const Duration(milliseconds: 3200), (_) {
-      if (!_scrollController.hasClients) return;
-      final docs = _getDocList();
-      if (docs.isEmpty) return;
-
-      double maxScroll = _scrollController.position.maxScrollExtent;
-      _currentScrollOffset += _itemHeight;
-
-      if (_currentScrollOffset > maxScroll) {
-        _currentScrollOffset = 0.0;
-        _scrollController.animateTo(
-          0.0,
-          duration: const Duration(milliseconds: 600),
-          curve: Curves.easeOut,
-        );
-      } else {
-        _scrollController.animateTo(
-          _currentScrollOffset,
-          duration: const Duration(milliseconds: 600),
-          curve: Curves.easeInOut,
-        );
-      }
-    });
   }
 
   @override
   void dispose() {
-    _rollingTimer?.cancel();
-    _scrollController.dispose();
     _blinkController.dispose();
     super.dispose();
   }
@@ -279,134 +223,125 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
 
             const SizedBox(height: 12),
 
-            // 🔄 2. TALL 5-6 ITEM AUTO-ROLLING LIST CONTAINER (Height: 330)
-            SizedBox(
-              height: 330, // 👈 5-6 items ek sath screen par clearly visible rahenge
-              child: ListView.builder(
-                controller: _scrollController,
-                physics: const BouncingScrollPhysics(),
-                itemCount: docs.length,
-                itemBuilder: (context, index) {
-                  final doc = docs[index];
-                  final Color accent = Color(doc['color'] as int);
-                  final String badgeText = doc['badge'] ?? 'NEW ADDED';
-                  final String docUrl = doc['url'] ?? (widget.customWebsiteUrl ?? _defaultWebsiteUrl);
+            // 📋 2. STATIC DIRECT LIST (Zero Scroll Inside)
+            ...docs.map((doc) {
+              final Color accent = Color(doc['color'] as int);
+              final String badgeText = doc['badge'] ?? 'NEW ADDED';
+              final String docUrl = doc['url'] ?? (widget.customWebsiteUrl ?? _defaultWebsiteUrl);
 
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 8.0),
-                    child: InkWell(
-                      onTap: () => _launchUrl(docUrl),
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: InkWell(
+                  onTap: () => _launchUrl(docUrl),
+                  borderRadius: BorderRadius.circular(12),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                    decoration: BoxDecoration(
+                      color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
                       borderRadius: BorderRadius.circular(12),
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                        decoration: BoxDecoration(
-                          color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-                          borderRadius: BorderRadius.circular(12),
-                          border: Border.all(
-                            color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                      border: Border.all(
+                        color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        // 📄 PDF Icon Box
+                        Container(
+                          width: 36,
+                          height: 44,
+                          decoration: BoxDecoration(
+                            color: accent.withOpacity(0.12),
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(color: accent.withOpacity(0.3)),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Icon(Icons.picture_as_pdf_rounded, size: 16, color: Color(0xFFDC2626)),
+                              const SizedBox(height: 1),
+                              Text(
+                                'PDF',
+                                style: TextStyle(fontSize: 7.5, fontWeight: FontWeight.bold, color: accent),
+                              ),
+                            ],
                           ),
                         ),
-                        child: Row(
-                          children: [
-                            // 📄 PDF Icon Box
-                            Container(
-                              width: 36,
-                              height: 44,
-                              decoration: BoxDecoration(
-                                color: accent.withOpacity(0.12),
-                                borderRadius: BorderRadius.circular(8),
-                                border: Border.all(color: accent.withOpacity(0.3)),
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  const Icon(Icons.picture_as_pdf_rounded, size: 16, color: Color(0xFFDC2626)),
-                                  const SizedBox(height: 1),
-                                  Text(
-                                    'PDF',
-                                    style: TextStyle(fontSize: 7.5, fontWeight: FontWeight.bold, color: accent),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 10),
+                        const SizedBox(width: 10),
 
-                            // 📝 Item Info
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
+                        // 📝 Item Info
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Row(
                                 children: [
-                                  Row(
-                                    children: [
-                                      // ✨ Blinking Pulse Tag
-                                      FadeTransition(
-                                        opacity: Tween<double>(begin: 0.4, end: 1.0).animate(_blinkController),
-                                        child: Container(
-                                          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
-                                          decoration: BoxDecoration(
-                                            gradient: const LinearGradient(
-                                              colors: [Color(0xFFEA580C), Color(0xFFDC2626)],
-                                            ),
-                                            borderRadius: BorderRadius.circular(4),
-                                          ),
-                                          child: Text(
-                                            badgeText,
-                                            style: const TextStyle(
-                                              fontSize: 7.5,
-                                              fontWeight: FontWeight.w900,
-                                              color: Colors.white,
-                                            ),
-                                          ),
+                                  // ✨ Blinking Pulse Tag
+                                  FadeTransition(
+                                    opacity: Tween<double>(begin: 0.4, end: 1.0).animate(_blinkController),
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
+                                      decoration: BoxDecoration(
+                                        gradient: const LinearGradient(
+                                          colors: [Color(0xFFEA580C), Color(0xFFDC2626)],
+                                        ),
+                                        borderRadius: BorderRadius.circular(4),
+                                      ),
+                                      child: Text(
+                                        badgeText,
+                                        style: const TextStyle(
+                                          fontSize: 7.5,
+                                          fontWeight: FontWeight.w900,
+                                          color: Colors.white,
                                         ),
                                       ),
-                                      const SizedBox(width: 5),
-                                      Text(
-                                        doc['reads'],
-                                        style: TextStyle(
-                                          fontSize: 9.5,
-                                          color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(height: 2),
-                                  Text(
-                                    doc['title'],
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold,
-                                      color: isDark ? Colors.white : const Color(0xFF0F172A),
                                     ),
                                   ),
+                                  const SizedBox(width: 5),
                                   Text(
-                                    doc['meta'],
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
+                                    doc['reads'],
                                     style: TextStyle(
                                       fontSize: 9.5,
                                       color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                                      fontWeight: FontWeight.w500,
                                     ),
                                   ),
                                 ],
                               ),
-                            ),
-
-                            const SizedBox(width: 6),
-                            const Icon(Icons.download_for_offline_rounded, size: 22, color: Color(0xFF2563EB)),
-                          ],
+                              const SizedBox(height: 2),
+                              Text(
+                                doc['title'],
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  color: isDark ? Colors.white : const Color(0xFF0F172A),
+                                ),
+                              ),
+                              Text(
+                                doc['meta'],
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 9.5,
+                                  color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
 
-            const SizedBox(height: 10),
+                        const SizedBox(width: 6),
+                        const Icon(Icons.download_for_offline_rounded, size: 22, color: Color(0xFF2563EB)),
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            }),
+
+            const SizedBox(height: 4),
 
             // 🚀 3. DIRECT ACTION BUTTON
             InkWell(
