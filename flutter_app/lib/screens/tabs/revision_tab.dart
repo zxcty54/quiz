@@ -23,6 +23,7 @@ class RevisionTab extends StatefulWidget {
 class _RevisionTabState extends State<RevisionTab> {
   Map<String, dynamic> _liveSubjectMapping = {};
   bool _isLoading = false;
+  int _selectedStaticSubIndex = 0;
 
   @override
   void initState() {
@@ -200,7 +201,6 @@ class _RevisionTabState extends State<RevisionTab> {
   @override
   Widget build(BuildContext context) {
     final bool isDark = Theme.of(context).brightness == Brightness.dark;
-    
     final Color textColor = isDark ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A);
     final Color subTextColor = isDark ? const Color(0xFFCBD5E1) : const Color(0xFF334155);
 
@@ -386,30 +386,17 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
           const SizedBox(height: 12),
 
-          // 🎯 4. STATIC GK & SCIENCE FOUNDATION
-          _buildExpansionSubjectCategory(
+          // 🎯 4. STATIC GK & SCIENCE FOUNDATION (Minimal Segmented Switcher)
+          _buildStaticFoundationCategory(
             context: context,
-            title: 'Static GK & Science Foundation',
-            badgeText: '📌 Core Concepts & One-Liner MCQs',
-            icon: '🎯',
-            color: const Color(0xFF0D9488),
             isDark: isDark,
-            subSections: [
-              {'title': '⚡ Physics (Static Sets)', 'key': 'static_phy_mapping'},
-              {'title': '🧬 Biology (Static Sets)', 'key': 'static_bio_mapping'},
-              {'title': '🧪 Chemistry (Static Sets)', 'key': 'static_chem_mapping'},
-              {'title': '📜 Indian Polity (Static Sets)', 'key': 'static_polity_mapping'},
-              {'title': '🏛️ History (Static Sets)', 'key': 'static_history_mapping'},
-              {'title': '🌍 Geography (Static Sets)', 'key': 'static_geo_mapping'},
-              {'title': '📈 Economy (Static Sets)', 'key': 'static_eco_mapping'},
-            ],
           ),
         ],
       ),
     );
   }
 
-  // ✨ CLEAN & MINIMAL CURRENT AFFAIRS ACCORDION (Zero Clutter)
+  // ✨ MINIMAL CLEAN CURRENT AFFAIRS
   Widget _buildCurrentAffairsCategory({
     required BuildContext context,
     required bool isDark,
@@ -461,7 +448,7 @@ class _RevisionTabState extends State<RevisionTab> {
           unselectedWidgetColor: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
         ),
         child: ExpansionTile(
-          initiallyExpanded: false, // Default Band (Collapsed)
+          initiallyExpanded: false,
           iconColor: brandPurple,
           collapsedIconColor: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
           leading: const Text('📰', style: TextStyle(fontSize: 22)),
@@ -545,7 +532,6 @@ class _RevisionTabState extends State<RevisionTab> {
                       ),
                       const SizedBox(height: 4),
 
-                      // 1. National & Global Clean Row
                       _buildCleanCurrentRow(
                         context: context,
                         icon: '🌐',
@@ -569,7 +555,6 @@ class _RevisionTabState extends State<RevisionTab> {
 
                       const SizedBox(height: 8),
 
-                      // 2. Bihar Special Clean Row
                       _buildCleanCurrentRow(
                         context: context,
                         icon: '📍',
@@ -634,7 +619,6 @@ class _RevisionTabState extends State<RevisionTab> {
     );
   }
 
-  // 🔹 Minimal Reusable Single Row Widget
   Widget _buildCleanCurrentRow({
     required BuildContext context,
     required String icon,
@@ -718,6 +702,190 @@ class _RevisionTabState extends State<RevisionTab> {
     );
   }
 
+  // 🎯 STATIC FOUNDATION (MINIMAL HORIZONTAL SWITCHER)
+  Widget _buildStaticFoundationCategory({
+    required BuildContext context,
+    required bool isDark,
+  }) {
+    const Color brandTeal = Color(0xFF0D9488);
+    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final Color textColor = isDark ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A);
+    final Color subTextColor = isDark ? const Color(0xFFCBD5E1) : const Color(0xFF334155);
+
+    final List<Map<String, dynamic>> staticSubjects = [
+      {'title': '⚡ Physics', 'key': 'static_phy_mapping'},
+      {'title': '🧬 Biology', 'key': 'static_bio_mapping'},
+      {'title': '🧪 Chemistry', 'key': 'static_chem_mapping'},
+      {'title': '📜 Polity', 'key': 'static_polity_mapping'},
+      {'title': '🏛️ History', 'key': 'static_history_mapping'},
+      {'title': '🌍 Geography', 'key': 'static_geo_mapping'},
+      {'title': '📈 Economy', 'key': 'static_eco_mapping'},
+    ];
+
+    final currentSub = staticSubjects[_selectedStaticSubIndex];
+    final String activeKey = currentSub['key'];
+    
+    Map<String, dynamic> activeChapters = {};
+    if (_liveSubjectMapping.containsKey(activeKey) && _liveSubjectMapping[activeKey] is Map) {
+      activeChapters = Map<String, dynamic>.from(_liveSubjectMapping[activeKey]);
+    }
+
+    return Card(
+      color: cardBg,
+      elevation: 1.5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(14),
+        side: BorderSide(
+          color: isDark ? brandTeal.withOpacity(0.5) : brandTeal.withOpacity(0.3),
+          width: 1.2,
+        ),
+      ),
+      child: Theme(
+        data: Theme.of(context).copyWith(
+          dividerColor: Colors.transparent,
+          unselectedWidgetColor: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
+        ),
+        child: ExpansionTile(
+          initiallyExpanded: false,
+          iconColor: brandTeal,
+          collapsedIconColor: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
+          leading: const Text('🎯', style: TextStyle(fontSize: 22)),
+          title: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Static GK & Science Foundation',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.5, color: brandTeal),
+              ),
+              const SizedBox(height: 2),
+              Text(
+                '📌 Core Concepts & One-Liner MCQs',
+                style: TextStyle(fontSize: 11, color: isDark ? brandTeal.withOpacity(0.9) : brandTeal, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 14),
+          children: [
+            const Divider(height: 16),
+            
+            // Clean Pills Bar
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              physics: const BouncingScrollPhysics(),
+              child: Row(
+                children: List.generate(staticSubjects.length, (idx) {
+                  final item = staticSubjects[idx];
+                  final bool isSelected = _selectedStaticSubIndex == idx;
+
+                  return Padding(
+                    padding: const EdgeInsets.only(right: 8.0),
+                    child: ChoiceChip(
+                      selected: isSelected,
+                      showCheckmark: false,
+                      elevation: 0,
+                      label: Text(
+                        item['title'],
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: isSelected ? FontWeight.bold : FontWeight.w600,
+                          color: isSelected 
+                              ? Colors.white 
+                              : (isDark ? Colors.grey.shade300 : const Color(0xFF334155)),
+                        ),
+                      ),
+                      selectedColor: brandTeal,
+                      backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
+                      side: BorderSide(
+                        color: isSelected ? brandTeal : (isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+                      ),
+                      onSelected: (val) {
+                        if (val) {
+                          setState(() {
+                            _selectedStaticSubIndex = idx;
+                          });
+                        }
+                      },
+                    ),
+                  );
+                }),
+              ),
+            ),
+            
+            const SizedBox(height: 12),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "${currentSub['title']} Sets",
+                    style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: textColor),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: brandTeal.withOpacity(0.12),
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    child: Text(
+                      "${activeChapters.length} Chapters",
+                      style: const TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: brandTeal),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(height: 6),
+
+            // Chips
+            activeChapters.isEmpty
+                ? Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Text("Loading chapters...", style: TextStyle(fontSize: 11.5, color: subTextColor)),
+                  )
+                : Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: isDark ? const Color(0xFF0F172A).withOpacity(0.5) : const Color(0xFFF8FAFC),
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+                    ),
+                    child: Wrap(
+                      spacing: 8,
+                      runSpacing: 8,
+                      children: activeChapters.entries.map((entry) {
+                        String path = entry.value.toString();
+                        return ActionChip(
+                          elevation: 1,
+                          backgroundColor: isDark ? brandTeal.withOpacity(0.2) : Colors.white,
+                          side: BorderSide(
+                            color: isDark ? brandTeal.withOpacity(0.5) : brandTeal.withOpacity(0.35),
+                          ),
+                          label: Text(
+                            entry.key,
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                              color: isDark ? Colors.white : const Color(0xFF0F766E),
+                            ),
+                          ),
+                          onPressed: () {
+                            widget.onLaunchPractice(context, entry.key, path);
+                          },
+                        );
+                      }).toList(),
+                    ),
+                  ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // Standard BPSC Sections
   Widget _buildExpansionSubjectCategory({
     required BuildContext context,
     required String title,
