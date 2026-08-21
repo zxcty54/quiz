@@ -20,7 +20,7 @@ class ProPdfVaultCard extends StatefulWidget {
 class _ProPdfVaultCardState extends State<ProPdfVaultCard>
     with SingleTickerProviderStateMixin {
   late final AnimationController _blinkController;
-  static const String _defaultWebsiteUrl = "https://www.mocktester.online/pdf-notes";
+  static const String _defaultWebsiteUrl = "https://t.me/MockTester_Online";
 
   // 📝 6 DEFAULT HIGH-VALUE ITEMS (Static Clean List)
   final List<Map<String, dynamic>> _fallbackDocs = [
