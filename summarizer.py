@@ -21,7 +21,7 @@ client = genai.Client(api_key=API_KEY) if API_KEY else None
 MODEL_REGISTRY = [
     "gemini-3.6-flash",  # 500 RPD / 15 RPM (Primary)
     "gemini-3.5-flash-lite",  # 500 RPD / 15 RPM (Fallback 1)
-    "gemini-3.5-flash-lite",       # 20 RPD / 5 RPM (Fallback 2)
+    "gemini-3.1-flash-lite",       # 20 RPD / 5 RPM (Fallback 2)
     "gemini-3.7-flash",       # 20 RPD / 5 RPM (Fallback 3)
     "gemini-3-flash"          # Backup Flash
 ]
