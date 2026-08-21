@@ -31,7 +31,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
       'meta': '128 Pages • Complete Handnotes',
       'reads': '18.4k reads',
       'color': 0xFF2563EB,
-      'url': 'https://www.mocktester.online/pdf-notes',
+      'url': 'https://t.me/MockTester_Online',
     },
     {
       'title': 'BPSC & BSSC 3000+ TCS PYQ Formula Sheet',
@@ -40,7 +40,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
       'meta': '64 Pages • Quick Revision Chart',
       'reads': '12.1k reads',
       'color': 0xFFD97706,
-      'url': 'https://www.mocktester.online/pdf-notes',
+      'url': 'https://t.me/MockTester_Online',
     },
     {
       'title': '2026 Monthly Current Affairs Magazine (Aug Edition)',
@@ -49,7 +49,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
       'meta': 'Full Edition • Bihar & National',
       'reads': '9.8k reads',
       'color': 0xFF059669,
-      'url': 'https://www.mocktester.online/pdf-notes',
+      'url': 'https://t.me/MockTester_Online',
     },
     {
       'title': 'Indian Polity 100 Landmark Articles & Amendments',
@@ -58,7 +58,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
       'meta': '48 Pages • Table Summary',
       'reads': '14.2k reads',
       'color': 0xFF7C3AED,
-      'url': 'https://www.mocktester.online/pdf-notes',
+      'url': 'https://t.me/MockTester_Online',
     },
     {
       'title': 'Modern Indian History: Timeline & Governor Generals',
@@ -67,7 +67,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
       'meta': '52 Pages • Exam Ready Notes',
       'reads': '8.6k reads',
       'color': 0xFFDC2626,
-      'url': 'https://www.mocktester.online/pdf-notes',
+      'url': 'https://t.me/MockTester_Online',
     },
     {
       'title': 'General Science Physics & Chemistry Formula Sheet',
@@ -76,7 +76,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
       'meta': '36 Pages • All SI Units & Laws',
       'reads': '11.5k reads',
       'color': 0xFF0284C7,
-      'url': 'https://www.mocktester.online/pdf-notes',
+      'url': 'https://t.me/MockTester_Online',
     },
   ];
 
