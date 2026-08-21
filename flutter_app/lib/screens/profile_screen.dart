@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../main.dart'; // 👈 Global Theme Notifier access karne ke liye
+import '../main.dart';
 import '../services/user_stats_service.dart';
 import 'saved_questions_screen.dart';
 import 'wrong_questions_screen.dart';
@@ -37,7 +37,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     _loadSavedNewsCount();
   }
 
-  // 💾 FETCH SAVED CA COUNT FROM LOCAL STORAGE
   Future<void> _loadSavedNewsCount() async {
     final prefs = await SharedPreferences.getInstance();
     final String? savedJson = prefs.getString('saved_daily_bulletins');
@@ -165,7 +164,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 18),
 
-            // 📊 2. LEARNING DASHBOARD (LIVE STATS)
+            // 📊 2. LEARNING DASHBOARD
             Text('📊 Learning Dashboard', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             GridView.count(
@@ -184,7 +183,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 📈 3. RECENT PROGRESS (LIVE DYNAMIC BAR CHART)
+            // 📈 3. RECENT PROGRESS (7 DAYS)
             Text('📈 Recent Progress (Last 7 Days)', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             Card(
@@ -214,7 +213,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 📂 4. QUICK ACCESS REVISION ZONE
+            // 📂 4. QUICK ACCESS
             Text('📂 Quick Access', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             Card(
@@ -265,7 +264,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 🏆 5. DYNAMIC ACHIEVEMENTS BADGES
+            // 🏆 5. DYNAMIC ACHIEVEMENTS
             Text('🏆 Achievements', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             SizedBox(
@@ -306,7 +305,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
 
-            // ⚙️ 6. APP SETTINGS & TOGGLES (DIRECT GLOBAL THEME TRIGGER)
+            // ⚙️ 6. APP PREFERENCES
             Text('⚙️ Preferences', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 8),
             Card(
@@ -327,7 +326,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       final prefs = await SharedPreferences.getInstance();
                       await prefs.setBool('is_dark_mode', val);
 
-                      // 🚀 GLOBAL BROADCAST (Main.dart ko notify karega taaki sabhi screens dark ho jayein)
                       globalThemeNotifier.value = val ? ThemeMode.dark : ThemeMode.light;
                     },
                   ),
@@ -340,67 +338,152 @@ class _ProfileScreenState extends State<ProfileScreen> {
             DonationWidget(isDarkMode: isDark),
             const SizedBox(height: 14),
 
-            // 💬 7. FEEDBACK & FEATURE ADVICE TILE (GITHUB INTEGRATION)
-            Card(
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-              child: ListTile(
-                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                leading: Container(
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF2563EB).withOpacity(0.12),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Icon(
-                    Icons.rate_review_rounded,
-                    color: Color(0xFF2563EB),
-                    size: 22,
-                  ),
+            // 🌟 7. ATTENTION-GRABBING AMBER/GOLD FEEDBACK BANNER (DIRECT EMBEDDED)
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: isDark
+                      ? [const Color(0xFF1E293B), const Color(0xFF0F172A)]
+                      : [const Color(0xFFFFFBEB), const Color(0xFFFEF3C7)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
                 ),
-                title: Text(
-                  'Feedback & Feature Advice',
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                    color: headerTextColor,
-                  ),
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(
+                  color: isDark ? const Color(0xFFF59E0B).withOpacity(0.5) : const Color(0xFFF59E0B),
+                  width: 1.4,
                 ),
-                subtitle: Text(
-                  'App review dein ya naya feature suggest karein',
-                  style: TextStyle(
-                    fontSize: 11.5,
-                    color: subTextColor,
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.2 : 0.15),
+                    blurRadius: 12,
+                    offset: const Offset(0, 4),
                   ),
-                ),
-                trailing: Container(
-                  padding: const EdgeInsets.all(6),
-                  decoration: BoxDecoration(
-                    color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
-                    shape: BoxShape.circle,
-                  ),
-                  child: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    size: 12,
-                    color: isDark ? Colors.grey.shade300 : const Color(0xFF475569),
-                  ),
-                ),
-                onTap: () {
-                  showDialog(
-                    context: context,
-                    builder: (ctx) => AppGlobalFeedbackDialog(
-                      isDarkMode: isDark,
+                ],
+              ),
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(16),
+                  onTap: () {
+                    showDialog(
+                      context: context,
+                      builder: (ctx) => AppGlobalFeedbackDialog(isDarkMode: isDark),
+                    );
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 14.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 44,
+                          height: 44,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            gradient: const LinearGradient(
+                              colors: [Color(0xFFF59E0B), Color(0xFFD97706)],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
+                            borderRadius: BorderRadius.circular(12),
+                            boxShadow: [
+                              BoxShadow(
+                                color: const Color(0xFFF59E0B).withOpacity(0.4),
+                                blurRadius: 8,
+                                offset: const Offset(0, 2),
+                              ),
+                            ],
+                          ),
+                          child: const Text('💬', style: TextStyle(fontSize: 22)),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    'Share Idea / Feedback',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      color: isDark ? const Color(0xFFFDE68A) : const Color(0xFF92400E),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 6),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFF16A34A).withOpacity(0.18),
+                                      borderRadius: BorderRadius.circular(4),
+                                      border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.4)),
+                                    ),
+                                    child: const Text(
+                                      'DEV TEAM',
+                                      style: TextStyle(
+                                        fontSize: 8.5,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color(0xFF16A34A),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 3),
+                              Text(
+                                'Request features or report issue to developers',
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  color: isDark ? Colors.grey.shade400 : const Color(0xFFB45309),
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFD97706),
+                            borderRadius: BorderRadius.circular(8),
+                            boxShadow: [
+                              BoxShadow(
+                                color: const Color(0xFFD97706).withOpacity(0.3),
+                                blurRadius: 4,
+                                offset: const Offset(0, 2),
+                              ),
+                            ],
+                          ),
+                          child: const Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text(
+                                'Review',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 11.5,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(width: 3),
+                              Icon(Icons.arrow_forward_rounded, color: Colors.white, size: 12),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                  );
-                },
+                  ),
+                ),
               ),
             ),
+            const SizedBox(height: 20),
           ],
         );
       },
     );
   }
 
-  // 💡 HELPER LOGIC FOR USER LEVEL
   String _calculateLevel(int totalQs) {
     if (totalQs < 50) return '1 (Beginner)';
     if (totalQs < 200) return '2 (Learner)';
@@ -409,7 +492,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return '5 (Master)';
   }
 
-  // WIDGET HELPERS
   Widget _buildProfileStatTile(String label, String value, String emoji, Color color, bool isDark) {
     return Container(
       padding: const EdgeInsets.all(12),
