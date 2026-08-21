@@ -4,7 +4,8 @@ import '../../widgets/latest_jobs_widget.dart';
 import '../../widgets/daily_bulletin_widget.dart';
 import '../../widgets/first_in_india_widget.dart';
 import '../../widgets/trust_hero_banner.dart';
-import '../../widgets/launch_roadmap_card.dart'; // 👈 Launch Roadmap Widget Included
+import '../../widgets/launch_roadmap_card.dart';
+import '../../widgets/pro_pdf_vault_card.dart'; // 👈 Pro PDF Vault Card Import
 import '../sprint_challenge_screen.dart';
 
 class HomeTab extends StatefulWidget {
@@ -63,19 +64,19 @@ class _HomeTabState extends State<HomeTab> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // 1. TODAY TICKER (Short Version)
-if (widget.appConfig['today_update']?['show'] == true) ...[
-  TodayUpdateTickerWidget(
-    updateData: widget.appConfig['today_update'],
-    onTapUrl: widget.onTapUrl,
-  ),
-  const SizedBox(height: 16),
-],
+            if (widget.appConfig['today_update']?['show'] == true) ...[
+              TodayUpdateTickerWidget(
+                updateData: widget.appConfig['today_update'],
+                onTapUrl: widget.onTapUrl,
+              ),
+              const SizedBox(height: 16),
+            ],
 
             // 🛡️ 2. HERO TRUST BANNER WIDGET
             TrustHeroBannerWidget(isDarkMode: widget.isDarkMode),
             const SizedBox(height: 18),
             
-             // 👨‍🏫 3. LEARN PREVIEW CARD
+            // 👨‍🏫 3. LEARN PREVIEW CARD
             _buildLearnPreviewCard(context),
             const SizedBox(height: 18),
 
@@ -93,35 +94,40 @@ if (widget.appConfig['today_update']?['show'] == true) ...[
             ),
             const SizedBox(height: 18),
 
-            // 🏆 6. FIRST IN INDIA EXPRESS WIDGET (Sarkari Job ke theek niche)
+            // 🏆 6. FIRST IN INDIA EXPRESS WIDGET
             FirstInIndiaWidget(
               key: _firstInIndiaWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-           
+            // 📑 7. PRO STUDY MATERIAL & PDF VAULT CARD
+            ProPdfVaultCard(
+              isDarkMode: widget.isDarkMode,
+              customWebsiteUrl: "https://www.mocktester.online/pdf-notes", // 👈 apni website link
+            ),
+            const SizedBox(height: 18),
 
-            // ⚔️ 7. SPEED RUN DUEL CARD
+            // ⚔️ 8. SPEED RUN DUEL CARD
             _buildSpeedRunChallengeCard(context),
             const SizedBox(height: 18),
 
-            // 🌐 8. DYNAMIC WEB HUB
+            // 🌐 9. DYNAMIC WEB HUB
             _buildDynamicWebHubSection(context),
             const SizedBox(height: 18),
 
-            // 9. ELIGIBILITY CHECKER
+            // 10. ELIGIBILITY CHECKER
             EligibilityCheckerWidget(isDarkMode: widget.isDarkMode, onTapUrl: widget.onTapUrl),
             const SizedBox(height: 18),
 
-            // 📅 10. LAUNCH ROADMAP WIDGET (Included)
+            // 📅 11. LAUNCH ROADMAP WIDGET
             LaunchRoadmapCardWidget(
               appConfig: widget.appConfig,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 11. TELEGRAM COMMUNITY
+            // 12. TELEGRAM COMMUNITY
             const TelegramCreatorWidget(),
           ],
         ),
