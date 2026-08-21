@@ -467,7 +467,7 @@ class _RevisionTabState extends State<RevisionTab> {
           unselectedWidgetColor: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
         ),
         child: ExpansionTile(
-          initiallyExpanded: true,
+          initiallyExpanded: false,
           iconColor: brandPurple,
           collapsedIconColor: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
           leading: Container(
