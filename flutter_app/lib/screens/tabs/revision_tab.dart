@@ -136,7 +136,7 @@ class _RevisionTabState extends State<RevisionTab> {
               children: [
                 CircularProgressIndicator(strokeWidth: 2.5),
                 SizedBox(width: 16),
-                Text('Current Affairs लोड हो रहा है...'),
+                Text('Current Affairs लोड हो रहा है...', style: TextStyle(fontWeight: FontWeight.w600)),
               ],
             ),
           ),
@@ -200,8 +200,10 @@ class _RevisionTabState extends State<RevisionTab> {
   @override
   Widget build(BuildContext context) {
     final bool isDark = Theme.of(context).brightness == Brightness.dark;
-    final Color textColor = isDark ? Colors.white : const Color(0xFF0F172A);
-    final Color subTextColor = isDark ? const Color(0xFF94A3B8) : Colors.grey.shade600;
+    
+    // High-Contrast Colors (No Eye Strain)
+    final Color textColor = isDark ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A);
+    final Color subTextColor = isDark ? const Color(0xFFCBD5E1) : const Color(0xFF334155);
 
     return RefreshIndicator(
       color: const Color(0xFF2563EB),
@@ -210,7 +212,7 @@ class _RevisionTabState extends State<RevisionTab> {
         physics: const AlwaysScrollableScrollPhysics(),
         padding: const EdgeInsets.all(16),
         children: [
-          // 🛡️ PROMINENT REVISION HUB HERO TRUST BANNER
+          // 🛡️ HERO BANNER
           Container(
             width: double.infinity,
             padding: const EdgeInsets.all(16),
@@ -221,7 +223,7 @@ class _RevisionTabState extends State<RevisionTab> {
                 end: Alignment.bottomRight,
               ),
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: const Color(0xFF38BDF8).withOpacity(0.4), width: 1.2),
+              border: Border.all(color: const Color(0xFF38BDF8).withOpacity(0.5), width: 1.2),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(0.25),
@@ -264,7 +266,7 @@ class _RevisionTabState extends State<RevisionTab> {
                           'BPSC • BSSC • SSC • RLY',
                           style: TextStyle(
                             color: Color(0xFF38BDF8),
-                            fontSize: 10.5,
+                            fontSize: 11,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -273,7 +275,7 @@ class _RevisionTabState extends State<RevisionTab> {
                           const SizedBox(
                             width: 12,
                             height: 12,
-                            child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white70),
+                            child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
                           ),
                         ],
                       ],
@@ -294,18 +296,19 @@ class _RevisionTabState extends State<RevisionTab> {
                 const Text(
                   'Sirf sahi answer nahi — galat option ke peeche ka reason samjho aur 3x tezi se revise karo.',
                   style: TextStyle(
-                    color: Color(0xFFCBD5E1),
-                    fontSize: 12,
+                    color: Color(0xFFE2E8F0),
+                    fontSize: 12.5,
                     height: 1.45,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
                 const SizedBox(height: 12),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.06),
+                    color: Colors.white.withOpacity(0.08),
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: Colors.white.withOpacity(0.1)),
+                    border: Border.all(color: Colors.white.withOpacity(0.15)),
                   ),
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -314,21 +317,21 @@ class _RevisionTabState extends State<RevisionTab> {
                         children: [
                           Icon(Icons.verified_rounded, color: Color(0xFF60A5FA), size: 14),
                           SizedBox(width: 4),
-                          Text('100% PYQ Base', style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600)),
+                          Text('100% PYQ Base', style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
                         ],
                       ),
                       Row(
                         children: [
                           Icon(Icons.lightbulb_outline_rounded, color: Color(0xFFFBBF24), size: 14),
                           SizedBox(width: 4),
-                          Text('Trap Breakdown', style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600)),
+                          Text('Trap Breakdown', style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
                         ],
                       ),
                       Row(
                         children: [
                           Icon(Icons.timer_outlined, color: Color(0xFF4ADE80), size: 14),
                           SizedBox(width: 4),
-                          Text('Fast Revision', style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600)),
+                          Text('Fast Revision', style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
                         ],
                       ),
                     ],
@@ -341,10 +344,10 @@ class _RevisionTabState extends State<RevisionTab> {
           const SizedBox(height: 18),
           Text('📚 Chapterwise Revision Hub', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: textColor)),
           const SizedBox(height: 4),
-          Text('Subject par click karein aur direct chapter button dabakar revision shuru karein', style: TextStyle(color: subTextColor, fontSize: 12)),
+          Text('Subject par click karein aur direct chapter button dabakar revision shuru karein', style: TextStyle(color: subTextColor, fontSize: 12.5, fontWeight: FontWeight.w500)),
           const SizedBox(height: 14),
 
-          // 🔬 1. General Science (BPSC Sets)
+          // 🔬 1. General Science (BPSC Drill Sets)
           _buildExpansionSubjectCategory(
             context: context,
             title: 'General Science',
@@ -360,7 +363,7 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
           const SizedBox(height: 12),
 
-          // 🏛️ 2. GK & Social Science (BPSC Sets)
+          // 🏛️ 2. GK & Social Science (BPSC Drill Sets)
           _buildExpansionSubjectCategory(
             context: context,
             title: 'GK & Social Science',
@@ -377,14 +380,14 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
           const SizedBox(height: 12),
 
-          // 📰 3. Current Affairs Vault
+          // 📰 3. Current Affairs Vault (Multi-Month Scrollable)
           _buildCurrentAffairsCategory(
             context: context,
             isDark: isDark,
           ),
           const SizedBox(height: 12),
 
-          // 🎯 4. STATIC GK & SCIENCE FOUNDATION (Separate Section)
+          // 🎯 4. STATIC GK & SCIENCE FOUNDATION
           _buildExpansionSubjectCategory(
             context: context,
             title: 'Static GK & Science Foundation',
@@ -413,10 +416,11 @@ class _RevisionTabState extends State<RevisionTab> {
   }) {
     const Color brandPurple = Color(0xFF7C3AED);
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
-    final Color subTextColor = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
-    final Color textColor = isDark ? Colors.white : const Color(0xFF0F172A);
+    final Color subTextColor = isDark ? const Color(0xFFCBD5E1) : const Color(0xFF334155);
+    final Color textColor = isDark ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A);
     final Color dividerColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
 
+    // Multiple Months List (August + September + Upcoming Months smoothly render here)
     final List<Map<String, dynamic>> monthlyVault = [
       {
         "month": "August 2026",
@@ -453,23 +457,23 @@ class _RevisionTabState extends State<RevisionTab> {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
         side: BorderSide(
-          color: isDark ? brandPurple.withOpacity(0.4) : brandPurple.withOpacity(0.25),
+          color: isDark ? brandPurple.withOpacity(0.5) : brandPurple.withOpacity(0.3),
           width: 1.2,
         ),
       ),
       child: Theme(
         data: Theme.of(context).copyWith(
           dividerColor: Colors.transparent,
-          unselectedWidgetColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+          unselectedWidgetColor: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
         ),
         child: ExpansionTile(
           initiallyExpanded: true,
           iconColor: brandPurple,
-          collapsedIconColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+          collapsedIconColor: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
           leading: Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: brandPurple.withOpacity(isDark ? 0.25 : 0.12),
+              color: brandPurple.withOpacity(isDark ? 0.3 : 0.15),
               borderRadius: BorderRadius.circular(10),
             ),
             child: const Text('📰', style: TextStyle(fontSize: 20)),
@@ -481,19 +485,19 @@ class _RevisionTabState extends State<RevisionTab> {
                 children: [
                   const Text(
                     'Current Affairs Vault',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: brandPurple),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.5, color: brandPurple),
                   ),
                   const SizedBox(width: 8),
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF16A34A).withOpacity(isDark ? 0.25 : 0.12),
+                      color: const Color(0xFF16A34A).withOpacity(isDark ? 0.3 : 0.15),
                       borderRadius: BorderRadius.circular(4),
-                      border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.4)),
+                      border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.6)),
                     ),
                     child: const Text(
                       '2026 EDITION',
-                      style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Color(0xFF16A34A)),
+                      style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold, color: Color(0xFF16A34A)),
                     ),
                   )
                 ],
@@ -501,7 +505,7 @@ class _RevisionTabState extends State<RevisionTab> {
               const SizedBox(height: 2),
               Text(
                 'Monthly curated MCQs with trap logic & fact breakdown',
-                style: TextStyle(fontSize: 11, color: subTextColor),
+                style: TextStyle(fontSize: 11.5, color: subTextColor, fontWeight: FontWeight.w500),
               ),
             ],
           ),
@@ -522,8 +526,8 @@ class _RevisionTabState extends State<RevisionTab> {
                     color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
                     borderRadius: BorderRadius.circular(14),
                     border: Border.all(
-                      color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
-                      width: 1.1,
+                      color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
+                      width: 1.2,
                     ),
                   ),
                   child: Column(
@@ -534,13 +538,13 @@ class _RevisionTabState extends State<RevisionTab> {
                         children: [
                           Row(
                             children: [
-                              const Icon(Icons.calendar_month_rounded, size: 16, color: Color(0xFF38BDF8)),
+                              const Icon(Icons.calendar_month_rounded, size: 16, color: Color(0xFF0284C7)),
                               const SizedBox(width: 6),
                               Text(
                                 monthTitle,
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 14,
+                                  fontSize: 14.5,
                                   color: textColor,
                                 ),
                               ),
@@ -589,11 +593,11 @@ class _RevisionTabState extends State<RevisionTab> {
                                   color: isDark ? const Color(0xFF1E293B) : Colors.white,
                                   borderRadius: BorderRadius.circular(10),
                                   border: Border.all(
-                                    color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                                    color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
                                   ),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(isDark ? 0.2 : 0.03),
+                                      color: Colors.black.withOpacity(isDark ? 0.2 : 0.04),
                                       blurRadius: 4,
                                     )
                                   ],
@@ -608,13 +612,13 @@ class _RevisionTabState extends State<RevisionTab> {
                                         Container(
                                           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
                                           decoration: BoxDecoration(
-                                            color: const Color(0xFF2563EB).withOpacity(0.12),
+                                            color: const Color(0xFF2563EB).withOpacity(0.15),
                                             borderRadius: BorderRadius.circular(4),
                                           ),
                                           child: Text(
                                             '${item['natCount']} Qs',
                                             style: const TextStyle(
-                                              fontSize: 10,
+                                              fontSize: 10.5,
                                               fontWeight: FontWeight.bold,
                                               color: Color(0xFF2563EB),
                                             ),
@@ -626,7 +630,7 @@ class _RevisionTabState extends State<RevisionTab> {
                                     Text(
                                       'National & Global',
                                       style: TextStyle(
-                                        fontSize: 12.5,
+                                        fontSize: 13,
                                         fontWeight: FontWeight.bold,
                                         color: textColor,
                                       ),
@@ -634,7 +638,7 @@ class _RevisionTabState extends State<RevisionTab> {
                                     const SizedBox(height: 2),
                                     Text(
                                       'Awards, Sports, Schemes',
-                                      style: TextStyle(fontSize: 10, color: subTextColor),
+                                      style: TextStyle(fontSize: 10.5, color: subTextColor, fontWeight: FontWeight.w500),
                                     ),
                                   ],
                                 ),
@@ -658,11 +662,11 @@ class _RevisionTabState extends State<RevisionTab> {
                                   color: isDark ? const Color(0xFF1E293B) : Colors.white,
                                   borderRadius: BorderRadius.circular(10),
                                   border: Border.all(
-                                    color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                                    color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
                                   ),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(isDark ? 0.2 : 0.03),
+                                      color: Colors.black.withOpacity(isDark ? 0.2 : 0.04),
                                       blurRadius: 4,
                                     )
                                   ],
@@ -677,13 +681,13 @@ class _RevisionTabState extends State<RevisionTab> {
                                         Container(
                                           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
                                           decoration: BoxDecoration(
-                                            color: const Color(0xFF059669).withOpacity(0.12),
+                                            color: const Color(0xFF059669).withOpacity(0.15),
                                             borderRadius: BorderRadius.circular(4),
                                           ),
                                           child: Text(
                                             '${item['biharCount']} Qs',
                                             style: const TextStyle(
-                                              fontSize: 10,
+                                              fontSize: 10.5,
                                               fontWeight: FontWeight.bold,
                                               color: Color(0xFF059669),
                                             ),
@@ -695,7 +699,7 @@ class _RevisionTabState extends State<RevisionTab> {
                                     Text(
                                       'Bihar Special',
                                       style: TextStyle(
-                                        fontSize: 12.5,
+                                        fontSize: 13,
                                         fontWeight: FontWeight.bold,
                                         color: textColor,
                                       ),
@@ -703,7 +707,7 @@ class _RevisionTabState extends State<RevisionTab> {
                                     const SizedBox(height: 2),
                                     Text(
                                       'BPSC & State Exams',
-                                      style: TextStyle(fontSize: 10, color: subTextColor),
+                                      style: TextStyle(fontSize: 10.5, color: subTextColor, fontWeight: FontWeight.w500),
                                     ),
                                   ],
                                 ),
@@ -726,13 +730,13 @@ class _RevisionTabState extends State<RevisionTab> {
                             Expanded(
                               child: Text(
                                 '$monthTitle capsule editorial review mein hai. ${item['releaseDate']} ko unlock hoga!',
-                                style: const TextStyle(fontSize: 12),
+                                style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w500),
                               ),
                             ),
                           ],
                         ),
                         duration: const Duration(seconds: 2),
-                        backgroundColor: const Color(0xFF334155),
+                        backgroundColor: const Color(0xFF1E293B),
                       ),
                     );
                   },
@@ -741,10 +745,10 @@ class _RevisionTabState extends State<RevisionTab> {
                     margin: const EdgeInsets.only(bottom: 8),
                     padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
                     decoration: BoxDecoration(
-                      color: isDark ? const Color(0xFF0F172A).withOpacity(0.5) : const Color(0xFFF1F5F9),
+                      color: isDark ? const Color(0xFF0F172A).withOpacity(0.6) : const Color(0xFFF1F5F9),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                        color: isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0),
+                        color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
                       ),
                     ),
                     child: Row(
@@ -752,13 +756,13 @@ class _RevisionTabState extends State<RevisionTab> {
                       children: [
                         Row(
                           children: [
-                            Icon(Icons.lock_outline_rounded, size: 16, color: subTextColor.withOpacity(0.7)),
+                            Icon(Icons.lock_outline_rounded, size: 16, color: subTextColor),
                             const SizedBox(width: 8),
                             Text(
                               monthTitle,
                               style: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w600,
+                                fontSize: 13.5,
+                                fontWeight: FontWeight.bold,
                                 color: subTextColor,
                               ),
                             ),
@@ -769,7 +773,7 @@ class _RevisionTabState extends State<RevisionTab> {
                           decoration: BoxDecoration(
                             color: isDark ? const Color(0xFF1E293B) : Colors.white,
                             borderRadius: BorderRadius.circular(6),
-                            border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+                            border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1)),
                           ),
                           child: Text(
                             badge,
@@ -802,7 +806,7 @@ class _RevisionTabState extends State<RevisionTab> {
     required List<Map<String, dynamic>> subSections,
   }) {
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
-    final Color subTitleColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF334155);
+    final Color subTitleColor = isDark ? const Color(0xFFF1F5F9) : const Color(0xFF0F172A);
     final Color dividerColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
 
     return Card(
@@ -811,30 +815,30 @@ class _RevisionTabState extends State<RevisionTab> {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
         side: BorderSide(
-          color: isDark ? color.withOpacity(0.4) : color.withOpacity(0.25),
+          color: isDark ? color.withOpacity(0.5) : color.withOpacity(0.3),
           width: 1.2,
         ),
       ),
       child: Theme(
         data: Theme.of(context).copyWith(
           dividerColor: Colors.transparent,
-          unselectedWidgetColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+          unselectedWidgetColor: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
         ),
         child: ExpansionTile(
           iconColor: color,
-          collapsedIconColor: isDark ? Colors.grey.shade400 : Colors.grey.shade600,
+          collapsedIconColor: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
           leading: Text(icon, style: const TextStyle(fontSize: 22)),
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: color)),
+              Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.5, color: color)),
               const SizedBox(height: 2),
               Text(
                 badgeText,
                 style: TextStyle(
-                  fontSize: 10.5,
-                  color: isDark ? color.withOpacity(0.9) : color.withOpacity(0.8),
-                  fontWeight: FontWeight.w600,
+                  fontSize: 11,
+                  color: isDark ? color.withOpacity(0.95) : color.withOpacity(0.9),
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ],
@@ -858,7 +862,7 @@ class _RevisionTabState extends State<RevisionTab> {
                   padding: const EdgeInsets.symmetric(vertical: 6.0),
                   child: Text(
                     subTitle,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: subTitleColor),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: subTitleColor),
                   ),
                 ),
                 rawChapters.isEmpty
@@ -866,7 +870,7 @@ class _RevisionTabState extends State<RevisionTab> {
                         padding: const EdgeInsets.symmetric(vertical: 6.0),
                         child: Text(
                           "Loading chapters...",
-                          style: TextStyle(fontSize: 11, color: isDark ? Colors.grey.shade500 : Colors.grey),
+                          style: TextStyle(fontSize: 11.5, color: isDark ? Colors.grey.shade400 : Colors.grey.shade600),
                         ),
                       )
                     : Wrap(
@@ -876,15 +880,15 @@ class _RevisionTabState extends State<RevisionTab> {
                           String path = entry.value.toString();
                           return ActionChip(
                             elevation: 1,
-                            backgroundColor: isDark ? color.withOpacity(0.2) : color.withOpacity(0.08),
+                            backgroundColor: isDark ? color.withOpacity(0.25) : color.withOpacity(0.1),
                             side: BorderSide(
-                              color: isDark ? color.withOpacity(0.5) : color.withOpacity(0.3),
+                              color: isDark ? color.withOpacity(0.6) : color.withOpacity(0.4),
                             ),
                             label: Text(
                               "📖 ${entry.key}",
                               style: TextStyle(
                                 fontSize: 12,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.bold,
                                 color: isDark ? Colors.white : color,
                               ),
                             ),
