@@ -21,7 +21,7 @@ OUTPUT_FILE = "alerts_news.json"
 TIMEOUT = 20
 MAX_PER_FEED = 20
 
-MIN_CONTENT_WORDS = 80
+MIN_CONTENT_WORDS = 150
 MAX_CONTENT_WORDS = 500
 
 IST = timezone(timedelta(hours=5, minutes=30))
