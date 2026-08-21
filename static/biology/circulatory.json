@@ -1,0 +1,5174 @@
+[
+  {
+    "qe": "What is the function of 'Platelets' in human blood?",
+    "qh": "मानव रक्त में 'प्लेटलेट्स' का क्या कार्य है?",
+    "o": [
+      "Carry Oxygen",
+      "Fight Infection",
+      "Blood Clotting (रक्त का थक्का जमना)",
+      "Maintain pH"
+    ],
+    "a": 2,
+    "e": "Platelets help to stop bleeding by forming clots. / प्लेटलेट्स थक्के बनाकर रक्तस्राव को रोकने में मदद करते हैं।"
+  },
+  {
+    "qe": "The heart is covered by a protective membrane called:",
+    "qh": "हृदय एक सुरक्षात्मक झिल्ली से ढका होता है जिसे कहते हैं:",
+    "o": [
+      "Pleura",
+      "Pericardium (पेरीकार्डियम)",
+      "Meninges",
+      "Epidermis"
+    ],
+    "a": 1,
+    "e": "Pericardium is the fluid-filled sac that surrounds the heart. / पेरीकार्डियम वह द्रव से भरी थैली है जो हृदय को घेरे रहती है।"
+  },
+  {
+    "qe": "अवरुद्ध कोरोनरी धमनी के चारों ओर रक्त प्रवाह के लिए नया रास्ता बनाने वाली सर्जरी कौन सी है?",
+    "qh": "Which surgery involves creating a new path for blood flow around a blocked coronary artery?",
+    "o": [
+      "Angiography",
+      "Bypass Surgery | बाईपास सर्जरी",
+      "Dialysis",
+      "Biopsy"
+    ],
+    "a": 1,
+    "e": "Bypass surgery (CABG) uses a graft (like the mammary or radial artery) to bypass blocked heart vessels. / बाईपास सर्जरी हृदय की अवरुद्ध नलियों के बगल से नया रास्ता बनाती है।"
+  },
+  {
+    "qe": "'RL' (रिंगर लैक्टेट) की बोतल मुख्य रूप से किन रोगियों को दी जाती है?",
+    "qh": "The 'RL' (Ringer Lactate) bottle is primarily given to patients with ____.",
+    "o": [
+      "High Sugar",
+      "Low BP / Malnutrition | लो बीपी / कुपोषण",
+      "High Fever",
+      "Eye infection"
+    ],
+    "a": 1,
+    "e": "RL is a balanced solution used to restore electrolytes in cases of low BP or malnutrition. / आरएल का उपयोग लो बीपी या कुपोषण में इलेक्ट्रोलाइट्स संतुलित करने के लिए किया जाता है।"
+  },
+  {
+    "qe": "हृदय का कौन सा भाग अधिक महत्वपूर्ण है क्योंकि यह पूरे शरीर को रक्त पंप करता है?",
+    "qh": "Which part of the heart is more important as it pumps blood to the whole body?",
+    "o": [
+      "Right Atrium",
+      "Right Ventricle",
+      "Left Ventricle | बायाँ निलय",
+      "None"
+    ],
+    "a": 2,
+    "e": "The left side (left ventricle) handles systemic circulation, making it more critical. / हृदय का बायाँ हिस्सा पूरे शरीर में रक्त पहुँचाने का काम करता है।"
+  },
+  {
+    "qe": "रक्त में 'प्लेटलेट्स' की संख्या किस बीमारी में काफी कम हो जाती है?",
+    "qh": "In which disease does the 'Platelet' count significantly drop in the blood?",
+    "o": [
+      "Malaria",
+      "Dengue | डेंगू",
+      "TB",
+      "Cholera"
+    ],
+    "a": 1,
+    "e": "A major complication of Dengue is the drastic fall in blood platelet count. / डेंगू का एक मुख्य लक्षण प्लेटलेट काउंट में भारी गिरावट है।"
+  },
+  {
+    "qe": "हृदय में एक अतिरिक्त धमनी लगाने की सर्जिकल प्रक्रिया को क्या कहा जाता है?",
+    "qh": "What is the surgical process of grafting an extra artery to the heart called?",
+    "o": [
+      "Angiography",
+      "Bypass Surgery | बाईपास सर्जरी",
+      "Dialysis",
+      "Biopsy"
+    ],
+    "a": 1,
+    "e": "Bypass surgery creates a new path for blood flow when a coronary artery is blocked. / बाईपास सर्जरी अवरुद्ध धमनी के बगल से रक्त प्रवाह का नया रास्ता बनाती है।"
+  },
+  {
+    "qe": "चिकित्सा शब्दावली में, सर्जरी के दौरान 'IMA' (लीमा/रीमा) का उपयोग किस लिए किया जाता है?",
+    "qh": "In medical terms, what is 'IMA' (Internal Mammary Artery) used for during surgery?",
+    "o": [
+      "Brain repair",
+      "Heart Bypass Grafting | हार्ट बाईपास ग्राफ्टिंग",
+      "Kidney stones",
+      "Eye donation"
+    ],
+    "a": 1,
+    "e": "LIMA and RIMA are chest arteries used as grafts in heart bypass surgeries. / लीमा और रीमा छाती की धमनियां हैं जिनका उपयोग बाईपास सर्जरी में ग्राफ्ट के रूप में किया जाता है।"
+  },
+  {
+    "qe": "एक क्रिटिकल मरीज की धमनी में पीएच, ऑक्सीजन और पोटेशियम के स्तर की पुष्टि कौन सा टेस्ट करता है?",
+    "qh": "Which test confirms the pH, Oxygen, and Potassium levels in a critical patient's artery?",
+    "o": [
+      "CBC",
+      "ABG (Arterial Blood Gas) | एबीजी",
+      "KFT",
+      "Widal"
+    ],
+    "a": 1,
+    "e": "ABG measures blood gases and electrolytes directly from arterial blood for rapid diagnosis. / एबीजी धमनी के रक्त से गैसों और इलेक्ट्रोलाइट्स को मापता है।"
+  },
+  {
+    "qe": "शरीर में 'पोटेशियम' (K) की कमी मुख्य रूप से किस अंग को प्रभावित करती है?",
+    "qh": "The deficiency of 'Potassium' (K) in the body primarily affects which organ?",
+    "o": [
+      "Lungs",
+      "Heart | हृदय",
+      "Skin",
+      "Stomach"
+    ],
+    "a": 1,
+    "e": "Potassium balance is critical for heart rhythm; its imbalance can lead to cardiac arrest. / पोटेशियम का संतुलन हृदय की लय के लिए महत्वपूर्ण है।"
+  },
+  {
+    "qe": "मलेरिया परजीवी द्वारा मुख्य रूप से कौन सा अंग प्रभावित होता है?",
+    "qh": "Which organ is primarily affected by the Malaria parasite?",
+    "o": [
+      "Lungs",
+      "Kidney",
+      "Spleen (Pleeha) | प्लीहा (एस्पलीन)",
+      "Heart"
+    ],
+    "a": 2,
+    "e": "The malaria parasite attacks Red Blood Cells and the Spleen, leading to anemia and fever. / मलेरिया परजीवी RBC और प्लीहा पर हमला करता है।"
+  },
+  {
+    "qe": "मानव शरीर में 'WBC' का प्राथमिक कार्य क्या है?",
+    "qh": "What is the primary function of 'WBC' in the human body?",
+    "o": [
+      "Carrying oxygen",
+      "Blood clotting",
+      "Immunity/Fighting diseases | प्रतिरक्षा/बीमारियों से लड़ना",
+      "Digestion"
+    ],
+    "a": 2,
+    "e": "White Blood Cells are the defense system of the body against pathogens. / श्वेत रक्त कोशिकाएं शरीर की रक्षा प्रणाली हैं।"
+  },
+  {
+    "qe": "'रक्त का थक्का' जमने के लिए कौन सा विटामिन आवश्यक है?",
+    "qh": "Which vitamin is essential for 'Blood Clotting'?",
+    "o": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin K | विटामिन K",
+      "Vitamin E"
+    ],
+    "a": 2,
+    "e": "Vitamin K is critical for synthesizing proteins needed for blood coagulation. / रक्त के थक्के जमने के लिए विटामिन K आवश्यक है।"
+  },
+  {
+    "qe": "कौन सा विटामिन 'रक्त का थक्का' जमाने में मदद करता है और इसकी कमी से हेमरेज हो सकता है?",
+    "qh": "Which vitamin helps in 'Blood Clotting' and its deficiency can lead to Hemorrhage?",
+    "o": [
+      "Vitamin K (Phylloquinone) | विटामिन K",
+      "Vitamin A",
+      "Vitamin D",
+      "Vitamin C"
+    ],
+    "a": 0,
+    "e": "Vitamin K is essential for synthesizing clotting factors in the liver. / लीवर में क्लॉटिंग कारकों के संश्लेषण के लिए विटामिन K आवश्यक है।"
+  },
+  {
+    "qe": "क्रिटिकल केयर अस्पताल सेटिंग में 'ABG' का क्या अर्थ है?",
+    "qh": "What does 'ABG' stand for in a critical care hospital setting?",
+    "o": [
+      "Average Blood Glucose",
+      "Arterial Blood Gas | आर्टेरियल ब्लड गैस",
+      "All Blood Groups",
+      "Acid Base Ground"
+    ],
+    "a": 1,
+    "e": "ABG measures pH and gases (O2/CO2) from an artery to monitor critical patients. / ABG क्रिटिकल मरीजों की निगरानी के लिए धमनी से pH और गैसों (O2/CO2) को मापता है।"
+  },
+  {
+    "qe": "रक्त के किस भाग में 90% पानी और 10% प्रोटीन/खनिज होते हैं?",
+    "qh": "Which part of the blood consists of 90% water and 10% proteins/minerals?",
+    "o": [
+      "RBC",
+      "WBC",
+      "Plasma | प्लाज्मा",
+      "Platelets"
+    ],
+    "a": 2,
+    "e": "Plasma is the liquid part of blood, composed mainly of water. / प्लाज्मा रक्त का तरल भाग है, जो मुख्य रूप से पानी से बना है।"
+  },
+  {
+    "qe": "'RBC का कब्रिस्तान' किसे कहा जाता है?",
+    "qh": "What is the medical term for 'RBC Graveyard'?",
+    "o": [
+      "Liver",
+      "Bone Marrow",
+      "Spleen | प्लीहा (एस्पलीन)",
+      "Heart"
+    ],
+    "a": 2,
+    "e": "The spleen filters out and destroys old red blood cells. / प्लीहा पुराने आरबीसी को छानती और नष्ट करती है।"
+  },
+  {
+    "qe": "रक्तचाप के संबंध में एड्रिनल ग्रंथि का मुख्य कार्य क्या है?",
+    "qh": "What is the primary function of the Adrenal gland regarding blood pressure?",
+    "o": [
+      "Decrease BP",
+      "Control and increase BP during emergency | आपातकाल में बीपी को नियंत्रित और बढ़ाना",
+      "No effect on BP",
+      "Filter blood"
+    ],
+    "a": 1,
+    "e": "Adrenaline increases heart rate and blood pressure to provide extra energy. / एड्रिनलीन अतिरिक्त ऊर्जा प्रदान करने के लिए हृदय गति और रक्तचाप को बढ़ाता है।"
+  },
+  {
+    "qe": "RBC (लाल रक्त कोशिका) का औसत जीवनकाल कितने दिनों का होता है?",
+    "qh": "How many days is the average lifespan of an RBC (Red Blood Cell)?",
+    "o": [
+      "4 days",
+      "7 days",
+      "120 days | 120 दिन",
+      "1 year"
+    ],
+    "a": 2,
+    "e": "Red blood cells circulate for about 120 days before being destroyed in the spleen. / आरबीसी लगभग 120 दिनों तक प्रसारित होते हैं।"
+  },
+  {
+    "qe": "मानव रक्त समूहों का निर्धारण RBC की सतह पर मौजूद किस प्रोटीन के आधार पर किया जाता है?",
+    "qh": "Human blood groups are determined based on the presence of which protein on the surface of RBCs?",
+    "o": [
+      "Antibody",
+      "Antigen | एंटीजन",
+      "Hemoglobin",
+      "Insulin"
+    ],
+    "a": 1,
+    "e": "Antigens (A and B) found on RBCs determine the blood group (A, B, AB, or O). / RBC पर पाए जाने वाले एंटीजन (A और B) रक्त समूह निर्धारित करते हैं।"
+  },
+  {
+    "qe": "रक्त के किस भाग में 'एंटीबॉडी' (small a, small b) पाई जाती हैं?",
+    "qh": "In which part of the blood are 'Antibodies' (small a, small b) found?",
+    "o": [
+      "RBC",
+      "WBC",
+      "Plasma | प्लाज्मा",
+      "Platelets"
+    ],
+    "a": 2,
+    "e": "Antibodies circulate in the plasma, while antigens are attached to the RBC surface. / एंटीबॉडी प्लाज्मा में होती हैं, जबकि एंटीजन RBC की सतह पर होते हैं।"
+  },
+  {
+    "qe": "यदि किसी व्यक्ति का रक्त समूह 'A' है, तो उनके प्लाज्मा में कौन सी एंटीबॉडी होगी?",
+    "qh": "If a person has Blood Group 'A', which antibody will be present in their plasma?",
+    "o": [
+      "Antibody a",
+      "Antibody b | एंटीबॉडी b",
+      "Both a and b",
+      "No antibody"
+    ],
+    "a": 1,
+    "e": "Blood Group A has Antigen A and the opposite Antibody 'b'. / ब्लड ग्रुप A में एंटीजन A और विपरीत एंटीबॉडी 'b' होती है।"
+  },
+  {
+    "qe": "किस रक्त समूह को 'सर्वदाता' कहा जाता है क्योंकि इसमें कोई एंटीजन नहीं होता?",
+    "qh": "Which blood group is known as the 'Universal Donor' because it has no antigens?",
+    "o": [
+      "Group A",
+      "Group B",
+      "Group AB",
+      "Group O-negative | ग्रुप O-नेगेटिव"
+    ],
+    "a": 3,
+    "e": "Group O-negative has no A, B, or Rh antigens, making it safe for everyone. / ग्रुप O-नेगेटिव में कोई A, B या Rh एंटीजन नहीं होता, जिससे यह सबके लिए सुरक्षित है।"
+  },
+  {
+    "qe": "कौन सा रक्त समूह 'सर्वग्राही' है क्योंकि इसमें दोनों एंटीजन होते हैं लेकिन एंटीबॉडी नहीं होती?",
+    "qh": "Which blood group acts as a 'Universal Receiver' as it has both antigens but no antibodies?",
+    "o": [
+      "Group O",
+      "Group AB-positive | ग्रुप AB-पॉजिटिव",
+      "Group A",
+      "Group B"
+    ],
+    "a": 1,
+    "e": "Group AB-positive has A, B, and Rh antigens, so it recognizes all types as 'self'. / ग्रुप AB-पॉजिटिव में A, B और Rh एंटीजन होते हैं, इसलिए यह सभी प्रकारों को पहचान लेता है।"
+  },
+  {
+    "qe": "मानव रक्त में 'Rh फैक्टर' का नाम किस जानवर के नाम पर रखा गया है?",
+    "qh": "The 'Rh Factor' in human blood is named after which animal?",
+    "o": [
+      "Dog",
+      "Rat",
+      "Rhesus Monkey | रीसस बंदर",
+      "Cat"
+    ],
+    "a": 2,
+    "e": "Rh factor is a protein first discovered in Rhesus monkeys by Landsteiner and Wiener. / Rh फैक्टर एक प्रोटीन है जिसकी खोज लैंडस्टीनर और विनर ने रीसस बंदर में की थी।"
+  },
+  {
+    "qe": "नियमित रक्त जांच में 'CBC' का पूर्ण रूप क्या है?",
+    "qh": "What does 'CBC' stand for in a routine blood check-up?",
+    "o": [
+      "Common Blood Check",
+      "Complete Blood Count | कम्प्लीट ब्लड काउंट",
+      "Cellular Blood Control",
+      "Calcium Blood Check"
+    ],
+    "a": 1,
+    "e": "CBC measures RBC, WBC, Hemoglobin, and Platelets. / सीबीसी आरबीसी, डब्ल्यूबीसी, हीमोग्लोबिन और प्लेटलेट्स को मापता है।"
+  },
+  {
+    "qe": "लाल रक्त कोशिका (RBC) का जीवनकाल कितना होता है?",
+    "qh": "What is the lifespan of a Red Blood Cell (RBC)?",
+    "o": [
+      "4 days",
+      "7 days",
+      "120 days | 120 दिन",
+      "1 year"
+    ],
+    "a": 2,
+    "e": "RBCs circulate for about 120 days before being destroyed in the spleen. / आरबीसी लगभग 120 दिनों तक प्रसारित होते हैं।"
+  },
+  {
+    "qe": "मानव शरीर में 'ब्लड बैंक' और 'आरबीसी का कब्रिस्तान' ____ है।",
+    "qh": "The 'Blood Bank' and 'Graveyard of RBC' in the human body is ____.",
+    "o": [
+      "Liver",
+      "Heart",
+      "Spleen (Pleeha) | प्लीहा",
+      "Kidney"
+    ],
+    "a": 2,
+    "e": "The spleen stores extra blood and recycles old RBCs. / प्लीहा अतिरिक्त रक्त का भंडारण करती है और पुराने आरबीसी को पुनर्चक्रित करती है।"
+  },
+  {
+    "qe": "मानव रक्त का औसत पीएच मान कितना होता है?",
+    "qh": "What is the average PH value of human blood?",
+    "o": [
+      "6.4",
+      "7.4 | 7.4",
+      "8.2",
+      "5.5"
+    ],
+    "a": 1,
+    "e": "Blood is slightly alkaline with a normal PH of about 7.4. / रक्त थोड़ा क्षारीय होता है जिसका पीएच लगभग 7.4 होता है।"
+  },
+  {
+    "qe": "एक व्यक्ति से दूसरे व्यक्ति में रक्त स्थानांतरित करने की प्रक्रिया को ____ कहा जाता है।",
+    "qh": "The process of transferring blood or blood products from one person to another is called ____.",
+    "o": [
+      "Transfusion | आधान (Transfusion)",
+      "Digestion",
+      "Diffusion",
+      "Excretion"
+    ],
+    "a": 0,
+    "e": "Blood transfusion is the process of receiving blood intravenously. / ब्लड ट्रांसफ्यूजन नसों के माध्यम से रक्त प्राप्त करने की प्रक्रिया है।"
+  },
+  {
+    "qe": "भारतीय जनसंख्या का लगभग कितना प्रतिशत Rh पॉजिटिव (+) है?",
+    "qh": "Approximately what percentage of the Indian population is Rh Positive (+)?",
+    "o": [
+      "50%",
+      "75%",
+      "95% | 95 प्रतिशत",
+      "10%"
+    ],
+    "a": 2,
+    "e": "About 95% of Indians have the Rh factor (monkey protein) in their blood. / लगभग 95% भारतीयों के रक्त में Rh फैक्टर होता है।"
+  },
+  {
+    "qe": "कौन सा अंग रक्त से यूरिया जैसे अपशिष्ट उत्पादों को छानता और निकालता है?",
+    "qh": "Which organ filters and removes waste products like urea from the blood?",
+    "o": [
+      "Lungs",
+      "Kidney | किडनी",
+      "Heart",
+      "Stomach"
+    ],
+    "a": 1,
+    "e": "Kidneys are primary filtration organs that produce urine from waste. / किडनी प्राथमिक निस्पंदन अंग हैं।"
+  },
+  {
+    "qe": "भ्रूण (अजन्मे बच्चे) में रक्त का निर्माण कहाँ होता है?",
+    "qh": "In a fetus (unborn baby), where is the blood produced?",
+    "o": [
+      "Bone Marrow",
+      "Liver | यकृत (लीवर)",
+      "Spleen",
+      "Heart"
+    ],
+    "a": 1,
+    "e": "In embryos, blood production occurs in the liver and spleen until bones develop. / भ्रूण में रक्त का उत्पादन लीवर में होता है।"
+  },
+  {
+    "qe": "रक्त प्लाज्मा में कौन सा प्रोटीन कटने के दौरान 'थक्का' जमने में मदद करता है?",
+    "qh": "Which protein in the blood plasma helps in 'clotting' during a cut?",
+    "o": [
+      "Albumin",
+      "Fibrinogen | फाइब्रिनोजेन",
+      "Casein",
+      "Globin"
+    ],
+    "a": 1,
+    "e": "Fibrinogen is a clotting factor that activates upon contact with air. / फाइब्रिनोजेन एक क्लॉटिंग कारक है।"
+  },
+  {
+    "qe": "मानव रक्त समूहों (ABO सिस्टम) की खोज किसने की थी?",
+    "qh": "Who discovered the human Blood Groups (ABO system)?",
+    "o": [
+      "William Harvey",
+      "Karl Landsteiner | लैंडस्टीनर",
+      "Wiener",
+      "Robert Hooke"
+    ],
+    "a": 1,
+    "e": "Karl Landsteiner discovered the ABO blood group system in 1900. / कार्ल लैंडस्टीनर ने 1900 में ABO रक्त समूह प्रणाली की खोज की थी।"
+  },
+  {
+    "qe": "रक्त समूहों का निर्धारण RBC की सतह पर ____ की उपस्थिति के आधार पर किया जाता है।",
+    "qh": "Blood groups are determined based on the presence of ____ on the surface of RBCs.",
+    "o": [
+      "Antibodies",
+      "Antigens | एंटीजन",
+      "Platelets",
+      "Hormones"
+    ],
+    "a": 1,
+    "e": "Antigens are special proteins on RBCs that define whether a blood group is A, B, AB, or O. / एंटीजन RBC पर विशेष प्रोटीन होते हैं जो यह परिभाषित करते हैं कि रक्त समूह A, B, AB या O है।"
+  },
+  {
+    "qe": "रक्त में 'एंटीबॉडी' मुख्य रूप से कहाँ स्थित होती हैं?",
+    "qh": "Where are 'Antibodies' primarily located in the blood?",
+    "o": [
+      "Inside RBC",
+      "Plasma | प्लाज्मा",
+      "Platelets",
+      "Hemoglobin"
+    ],
+    "a": 1,
+    "e": "Antibodies circulate in the liquid part of the blood, known as plasma. / एंटीबॉडी रक्त के तरल भाग में घूमती हैं, जिसे प्लाज्मा कहा जाता है।"
+  },
+  {
+    "qe": "यदि किसी व्यक्ति का रक्त समूह 'A' है, तो उनके प्लाज्मा में कौन सी एंटीबॉडी मौजूद होगी?",
+    "qh": "If a person has Blood Group 'A', which antibody will be present in their plasma?",
+    "o": [
+      "Antibody a",
+      "Antibody b | एंटीबॉडी b",
+      "Both a and b",
+      "None"
+    ],
+    "a": 1,
+    "e": "The body contains the opposite antibody to the antigen present; Group A has antibody 'b'. / शरीर में मौजूद एंटीजन के विपरीत एंटीबॉडी होती है; समूह A में एंटीबॉडी 'b' होती है।"
+  },
+  {
+    "qe": "किस रक्त समूह को 'सर्वदाता' (Universal Donor) कहा जाता है?",
+    "qh": "Which blood group is known as the 'Universal Donor' (specifically O negative)?",
+    "o": [
+      "Group A",
+      "Group B",
+      "Group AB",
+      "Group O | ग्रुप O"
+    ],
+    "a": 3,
+    "e": "Group O has no antigens on RBCs, making it safe to donate to any other group. / ग्रुप O के RBC पर कोई एंटीजन नहीं होता है, जिससे यह किसी भी अन्य समूह को दान करने के लिए सुरक्षित हो जाता है।"
+  },
+  {
+    "qe": "कौन सा रक्त समूह 'सर्वग्राही' (Universal Receptor) है क्योंकि इसके प्लाज्मा में एंटीबॉडी की कमी होती है?",
+    "qh": "Which blood group is the 'Universal Receptor' because it lacks antibodies in the plasma?",
+    "o": [
+      "Group O",
+      "Group A",
+      "Group AB | ग्रुप AB",
+      "Group B"
+    ],
+    "a": 2,
+    "e": "Group AB has both A and B antigens but no antibodies, so it can receive any blood type. / ग्रुप AB में A और B दोनों एंटीजन होते हैं लेकिन कोई एंटीबॉडी नहीं होती, इसलिए यह कोई भी रक्त प्रकार प्राप्त कर सकता है।"
+  },
+  {
+    "qe": "'आरएच फैक्टर' (Rh Factor) की खोज सबसे पहले किस जानवर में हुई थी?",
+    "qh": "The 'Rh Factor' was first discovered in which animal?",
+    "o": [
+      "Dog",
+      "Rhesus Monkey | रीसस बंदर",
+      "Rat",
+      "Cat"
+    ],
+    "a": 1,
+    "e": "Rh factor is named after the Rhesus monkey where it was first identified by Landsteiner and Wiener. / Rh फैक्टर का नाम रीसस बंदर के नाम पर रखा गया है जहाँ इसे पहली बार पहचाना गया था।"
+  },
+  {
+    "qe": "ब्लड रिपोर्ट में 'Rh पॉजिटिव' (+) क्या दर्शाता है?",
+    "qh": "What does 'Rh Positive' (+) signify in a blood report?",
+    "o": [
+      "Presence of Rh antigen | Rh एंटीजन की उपस्थिति",
+      "Absence of Rh antigen",
+      "High Hemoglobin",
+      "Low WBC"
+    ],
+    "a": 0,
+    "e": "Rh positive means the specific protein (antigen) found in Rhesus monkeys is present in the blood. / Rh पॉजिटिव का अर्थ है कि रीसस बंदरों में पाया जाने वाला विशिष्ट प्रोटीन रक्त में मौजूद है।"
+  },
+  {
+    "qe": "लैंडस्टीनर के साथ आरएच फैक्टर की सह-खोज किस वैज्ञानिक ने की थी?",
+    "qh": "Which scientist co-discovered the Rh factor along with Landsteiner?",
+    "o": [
+      "William Harvey",
+      "Wiener | विनर",
+      "Robert Koch",
+      "Louis Pasteur"
+    ],
+    "a": 1,
+    "e": "Alexander Wiener and Karl Landsteiner discovered the Rh factor in 1940. / अलेक्जेंडर विनर और कार्ल लैंडस्टीनर ने 1940 में Rh फैक्टर की खोज की थी।"
+  },
+  {
+    "qe": "भारतीय जनसंख्या का लगभग कितना प्रतिशत Rh पॉजिटिव (+) है?",
+    "qh": "Approximately what percentage of the Indian population is Rh positive (+)?",
+    "o": [
+      "50%",
+      "75%",
+      "95% | 95 प्रतिशत",
+      "10%"
+    ],
+    "a": 2,
+    "e": "A vast majority (about 95%) of Indians have the Rh antigen in their blood. / भारतीयों के एक बड़े बहुमत (लगभग 95%) के रक्त में Rh एंटीजन होता है।"
+  },
+  {
+    "qe": "रक्त का कौन सा भाग संक्रमण से लड़ने के लिए जिम्मेदार है?",
+    "qh": "Which part of the blood is responsible for fighting infections?",
+    "o": [
+      "RBC",
+      "WBC (Leukocytes) | डब्ल्यूबीसी",
+      "Platelets",
+      "Plasma"
+    ],
+    "a": 1,
+    "e": "White Blood Cells are the primary defense mechanism against pathogens. / सफेद रक्त कोशिकाएं रोगजनकों के खिलाफ प्राथमिक रक्षा तंत्र हैं।"
+  },
+  {
+    "qe": "भ्रूण (अजन्मे बच्चे) में रक्त का निर्माण कहाँ होता है?",
+    "qh": "In a fetus (unborn baby), where is blood produced?",
+    "o": [
+      "Bone Marrow",
+      "Liver/Spleen | यकृत/प्लीहा",
+      "Heart",
+      "Lungs"
+    ],
+    "a": 1,
+    "e": "Since bones are not fully developed, the liver and spleen produce blood in the fetus. / चूँकि हड्डियाँ पूरी तरह से विकसित नहीं होती हैं, इसलिए भ्रूण में लीवर और प्लीहा रक्त का निर्माण करते हैं।"
+  },
+  {
+    "qe": "RBC का जीवनकाल ____ होता है।",
+    "qh": "The lifespan of an RBC is ____.",
+    "o": [
+      "4 days",
+      "7 days",
+      "120 days | 120 दिन",
+      "1 year"
+    ],
+    "a": 2,
+    "e": "Red blood cells circulate in the body for about 120 days before being recycled. / लाल रक्त कोशिकाएं पुनर्चक्रित होने से पहले लगभग 120 दिनों तक शरीर में प्रसारित होती हैं।"
+  },
+  {
+    "qe": "'प्लेटलेट्स' का जैविक नाम क्या है?",
+    "qh": "What is the biological name for 'Platelets'?",
+    "o": [
+      "Erythrocytes",
+      "Leukocytes",
+      "Thrombocytes | थ्रोम्बोसाइट्स",
+      "Monocytes"
+    ],
+    "a": 2,
+    "e": "Thrombocytes or platelets are essential for blood clotting. / थ्रोम्बोसाइट्स या प्लेटलेट्स रक्त के थक्के जमने के लिए आवश्यक हैं।"
+  },
+  {
+    "qe": "मानव रक्त का औसत पीएच मान कितना होता है?",
+    "qh": "What is the average PH value of human blood?",
+    "o": [
+      "6.4",
+      "7.4 | 7.4",
+      "8.2",
+      "5.5"
+    ],
+    "a": 1,
+    "e": "Human blood is slightly alkaline, with a normal PH of about 7.4. / मानव रक्त थोड़ा क्षारीय होता है, जिसका सामान्य पीएच लगभग 7.4 होता है।"
+  },
+  {
+    "qe": "आपात स्थिति में 'O नेगेटिव' रक्त को अत्यधिक महत्व क्यों दिया जाता है?",
+    "qh": "Why is 'O Negative' blood highly valued in emergencies?",
+    "o": [
+      "It has all antigens",
+      "It has no antigens to react with recipient's blood | इसमें कोई एंटीजन नहीं होता",
+      "It is very thick",
+      "It contains more iron"
+    ],
+    "a": 1,
+    "e": "Because it has no A, B, or Rh antigens, it won't be attacked by the receiver's immune system. / क्योंकि इसमें कोई ए, बी, या आरएच एंटीजन नहीं होता है, प्राप्तकर्ता का इम्यून सिस्टम इस पर हमला नहीं करेगा।"
+  },
+  {
+    "qe": "शरीर में 'आरबीसी का कब्रिस्तान' और 'ब्लड बैंक' किसे कहा जाता है?",
+    "qh": "The 'Graveyard of RBC' and 'Blood Bank' of the body is ____.",
+    "o": [
+      "Liver",
+      "Heart",
+      "Spleen (Pleeha) | प्लीहा (एस्पलीन)",
+      "Kidney"
+    ],
+    "a": 2,
+    "e": "The spleen filters out old RBCs and acts as a reservoir for blood. / प्लीहा पुराने आरबीसी को छानती है और रक्त के भंडार के रूप में कार्य करती है।"
+  },
+  {
+    "qe": "रक्त का कौन सा भाग थक्का जमने की प्रक्रिया शुरू करता है?",
+    "qh": "Which part of the blood initiates the clotting process?",
+    "o": [
+      "RBC",
+      "Plasma proteins (Fibrinogen) and Platelets | फाइब्रिनोजेन और प्लेटलेट्स",
+      "WBC",
+      "Water"
+    ],
+    "a": 1,
+    "e": "Fibrinogen and platelets work together to form a clot and stop bleeding. / फाइब्रिनोजेन और प्लेटलेट्स मिलकर थक्का बनाते हैं और रक्तस्राव रोकते हैं।"
+  },
+  {
+    "qe": "'Rh नेगेटिव' रक्त वाले व्यक्ति को आदर्श रूप से किस दाता से रक्त प्राप्त करना चाहिए?",
+    "qh": "A person with 'Rh Negative' blood should ideally receive blood from which donor?",
+    "o": [
+      "Rh Positive donor",
+      "Rh Negative donor | Rh नेगेटिव दाता",
+      "Any donor",
+      "Only O Positive"
+    ],
+    "a": 1,
+    "e": "To avoid immune reactions, Rh negative individuals should receive Rh negative blood. / प्रतिरक्षा प्रतिक्रियाओं से बचने के लिए, Rh नेगेटिव व्यक्तियों को Rh नेगेटिव रक्त प्राप्त करना चाहिए।"
+  },
+  {
+    "qe": "रक्त का थक्का जमने की प्रक्रिया को वैज्ञानिक रूप से क्या कहा जाता है?",
+    "qh": "The process of blood clotting is scientifically known as ____.",
+    "o": [
+      "Digestion",
+      "Cascading Process | कैस्केडिंग प्रोसेस",
+      "Oxidation",
+      "Respiration"
+    ],
+    "a": 1,
+    "e": "The series of chemical reactions that lead to blood clotting is called the cascading process. / रक्त का थक्का जमने वाली रासायनिक क्रियाओं की श्रृंखला को कैस्केडिंग प्रोसेस कहते हैं।"
+  },
+  {
+    "qe": "कटने के बाद सामान्यतः रक्त का थक्का जमने में कितना समय लगता है?",
+    "qh": "How much time does it normally take for blood to clot after a cut?",
+    "o": [
+      "10-15 minutes",
+      "4-5 minutes | 4 से 5 मिनट",
+      "1 hour",
+      "30 seconds"
+    ],
+    "a": 1,
+    "e": "Under normal conditions, blood takes about 4 to 5 minutes to form a clot. / सामान्य परिस्थितियों में रक्त को थक्का बनाने में लगभग 4 से 5 मिनट का समय लगता है।"
+  },
+  {
+    "qe": "क्लॉटिंग प्रक्रिया के दौरान रक्त का कौन सा घटक सबसे पहले सक्रिय होता है?",
+    "qh": "Which blood component is the first to activate during the clotting process?",
+    "o": [
+      "RBC",
+      "WBC",
+      "Platelets (Thrombocytes) | प्लेटलेट्स",
+      "Hemoglobin"
+    ],
+    "a": 2,
+    "e": "Platelets stick to the injured site (endothelium) to initiate the clotting process. / प्लेटलेट्स चोट वाली जगह (इंडोथैलियम) से चिपक कर क्लॉटिंग प्रक्रिया शुरू करते हैं।"
+  },
+  {
+    "qe": "स्वस्थ रक्त वाहिकाओं के अंदर रक्त को जमने से कौन रोकता है?",
+    "qh": "What prevents blood from clotting inside the healthy blood vessels?",
+    "o": [
+      "Fibrinogen",
+      "Vitamin K",
+      "Heparin | हेपेरिन",
+      "Calcium"
+    ],
+    "a": 2,
+    "e": "Heparin is an anti-coagulant that prevents internal blood clotting. / हेपेरिन एक एंटी-कोअगुलेंट है जो शरीर के अंदर रक्त को जमने से रोकता है।"
+  },
+  {
+    "qe": "प्लाज्मा का कौन सा प्रोटीन जाली बनाने के लिए 'फाइब्रिन' में बदल जाता है?",
+    "qh": "Which protein in the plasma is converted into 'Fibrin' to form a mesh?",
+    "o": [
+      "Albumin",
+      "Fibrinogen | फाइब्रिनोजेन",
+      "Insulin",
+      "Globulin"
+    ],
+    "a": 1,
+    "e": "Fibrinogen is a soluble protein that turns into insoluble fibrin threads to trap blood cells. / फाइब्रिनोजेन एक घुलनशील प्रोटीन है जो रक्त कोशिकाओं को फंसाने के लिए अघुलनशील फाइब्रिन धागों में बदल जाता है।"
+  },
+  {
+    "qe": "हवा के संपर्क में आने पर हेपेरिन का क्या होता है?",
+    "qh": "What happens to Heparin when it comes in contact with air?",
+    "o": [
+      "It activates",
+      "It dies/deactivates | यह निष्क्रिय हो जाता है/मर जाता है",
+      "It becomes stronger",
+      "No change"
+    ],
+    "a": 1,
+    "e": "Heparin is inactivated by air, allowing fibrinogen to start the clotting process. / हवा हेपेरिन को निष्क्रिय कर देती है, जिससे फाइब्रिनोजेन क्लॉटिंग प्रक्रिया शुरू कर पाता है।"
+  },
+  {
+    "qe": "चर्चा के अनुसार बाहरी ब्लीडिंग की तुलना में 'आंतरिक ब्लीडिंग' अधिक खतरनाक क्यों है?",
+    "qh": "Why is 'Internal Bliidng' more dangerous than external according to the discussion?",
+    "o": [
+      "Because air is present",
+      "Because air is absent and Heparin prevents clotting | क्योंकि हवा की अनुपस्थिति में हेपेरिन थक्का नहीं जमने देता",
+      "It causes fever",
+      "Bones break"
+    ],
+    "a": 1,
+    "e": "In internal bleeding, there is no air to kill Heparin, so blood doesn't clot and keeps leaking. / आंतरिक ब्लीडिंग में हेपेरिन को मारने के लिए हवा नहीं होती, इसलिए रक्त नहीं जमता और बहता रहता है।"
+  },
+  {
+    "qe": "रक्त वाहिकाओं की आंतरिक परत जहाँ प्लेटलेट्स चिपकते हैं, ____ कहलाती है।",
+    "qh": "The inner lining of blood vessels where platelets stick is called ____.",
+    "o": [
+      "Epicardium",
+      "Endothelium | एंडोथैलियम",
+      "Pericardium",
+      "Mucosa"
+    ],
+    "a": 1,
+    "e": "Platelets adhere to the damaged endothelium to start the repair process. / मरम्मत प्रक्रिया शुरू करने के लिए प्लेटलेट्स क्षतिग्रस्त एंडोथैलियम से चिपक जाते हैं।"
+  },
+  {
+    "qe": "शरीर का कौन सा अंग 'आरबीसी का कब्रिस्तान' है?",
+    "qh": "Which organ in the body is the primary 'Graveyard of RBC'?",
+    "o": [
+      "Liver",
+      "Heart",
+      "Spleen | प्लीहा (एस्पलीन)",
+      "Kidney"
+    ],
+    "a": 2,
+    "e": "The spleen filters out and destroys old or damaged red blood cells. / प्लीहा पुराने या क्षतिग्रस्त लाल रक्त कोशिकाओं को छानकर नष्ट कर देती है।"
+  },
+  {
+    "qe": "मानव रक्त का पीएच लगभग ____ होता है।",
+    "qh": "The PH of human blood is approximately ____.",
+    "o": [
+      "6.4",
+      "7.4 | 7.4",
+      "8.2",
+      "5.5"
+    ],
+    "a": 1,
+    "e": "Blood is slightly alkaline with a PH of 7.4. / रक्त थोड़ा क्षारीय होता है जिसका पीएच 7.4 होता है।"
+  },
+  {
+    "qe": "कीटाणुओं की पहचान करने के लिए रक्त के किस भाग में 'एंटीबॉडी' होती हैं?",
+    "qh": "Which part of the blood contains 'Antibodies' to identify germs?",
+    "o": [
+      "RBC",
+      "Plasma/Serum | प्लाज्मा/सीरम",
+      "Platelets",
+      "Bone Marrow"
+    ],
+    "a": 1,
+    "e": "Antibodies circulate in the liquid part (plasma/serum) to target pathogens. / एंटीबॉडी रोगजनकों को लक्षित करने के लिए तरल भाग में घूमती हैं।"
+  },
+  {
+    "qe": "रक्त प्लाज्मा में कौन सा प्रोटीन हवा के संपर्क में आने पर रक्त का थक्का जमाने के लिए जिम्मेदार है?",
+    "qh": "Which protein in blood plasma is responsible for blood clotting upon contact with air?",
+    "o": [
+      "Albumin",
+      "Fibrinogen | फाइब्रिनोजेन",
+      "Hemoglobin",
+      "Globulin"
+    ],
+    "a": 1,
+    "e": "Fibrinogen and Prothrombin are clotting factors that activate when exposed to air. / फाइब्रिनोजेन और प्रोथ्रोम्बिन क्लॉटिंग कारक हैं जो हवा के संपर्क में आने पर सक्रिय होते हैं।"
+  },
+  {
+    "qe": "चिकित्सा की भाषा में 'सीरम' (Serum) क्या है?",
+    "qh": "What is 'Serum' in medical terms?",
+    "o": [
+      "Liquid blood",
+      "Plasma without clotting factors | क्लॉटिंग कारक के बिना प्लाज्मा",
+      "Blood with WBC",
+      "Concentrated RBC"
+    ],
+    "a": 1,
+    "e": "When fibrinogen is removed from plasma, the remaining pale yellow liquid is called serum. / जब प्लाज्मा से फाइब्रिनोजेन हटा दिया जाता है, तो बचे हुए पीले तरल को सीरम कहते हैं।"
+  },
+  {
+    "qe": "'सफेद रक्त कोशिकाओं' (WBC) का जैविक नाम क्या है?",
+    "qh": "What is the biological name for 'White Blood Cells' (WBC)?",
+    "o": [
+      "Erythrocyte",
+      "Leukocyte | ल्यूकोसाइट",
+      "Thrombocyte",
+      "Adipocyte"
+    ],
+    "a": 1,
+    "e": "Leukocytes are the immune system cells that protect the body against infectious diseases. / ल्यूकोसाइट्स प्रतिरक्षा प्रणाली की कोशिकाएं हैं जो शरीर की रक्षा करती हैं।"
+  },
+  {
+    "qe": "'प्लेटलेट्स' (थ्रोम्बोसाइट्स) का प्राथमिक कार्य क्या है?",
+    "qh": "What is the primary function of 'Platelets' (Thrombocytes)?",
+    "o": [
+      "Oxygen transport",
+      "Blood clotting and thickening | रक्त का थक्का जमाना और गाढ़ा करना",
+      "Fighting viruses",
+      "Producing energy"
+    ],
+    "a": 1,
+    "e": "Platelets help in coagulation to stop bleeding from injured blood vessels. / प्लेटलेट्स घायल रक्त वाहिकाओं से रक्तस्राव को रोकने के लिए जमावट में मदद करते हैं।"
+  },
+  {
+    "qe": "कौन सा तंत्र ऊतकों से लीक हुए रक्त (15%) को वापस शिराओं में लौटाता है?",
+    "qh": "Which system returns leaked blood (15%) from tissues back to the veins?",
+    "o": [
+      "Digestive System",
+      "Lymphatic System | लसिका तंत्र",
+      "Excretory System",
+      "Nervous System"
+    ],
+    "a": 1,
+    "e": "The lymphatic system collects excess fluid (lymph) and drains it back into the bloodstream. / लसिका तंत्र अतिरिक्त तरल इकट्ठा करता है और उसे वापस रक्तप्रवाह में छोड़ देता है।"
+  },
+  {
+    "qe": "'लसिका गांठ' (Lymph Node) का क्या कार्य है?",
+    "qh": "What is the function of the 'Lymph Node'?",
+    "o": [
+      "Produce bile",
+      "Filter and kill germs | कीटाणुओं को छानना और मारना",
+      "Pump blood",
+      "Digest fat"
+    ],
+    "a": 1,
+    "e": "Lymph nodes are filtering centers where the body's first attack on germs occurs. / लसिका गांठें फिल्टरिंग केंद्र हैं जहाँ कीटाणुओं पर शरीर का पहला हमला होता है।"
+  },
+  {
+    "qe": "शरीर के किस भाग को 'आरबीसी का कब्रिस्तान' कहा जाता है?",
+    "qh": "Which part of the body is referred to as the 'RBC Graveyard'?",
+    "o": [
+      "Liver",
+      "Bone Marrow",
+      "Spleen (Pleeha) | प्लीहा",
+      "Heart"
+    ],
+    "a": 2,
+    "e": "The spleen filters out old and damaged red blood cells. / प्लीहा पुराने और क्षतिग्रस्त लाल रक्त कोशिकाओं को छानती है।"
+  },
+  {
+    "qe": "रक्त परिसंचरण तंत्र के अध्ययन को क्या कहा जाता है?",
+    "qh": "The study of the blood circulatory system is called ____.",
+    "o": [
+      "Hematology",
+      "Angiology | एंजियोलॉजी",
+      "Myology",
+      "Osteology"
+    ],
+    "a": 1,
+    "e": "Angiology deals with the study of the circulatory and lymphatic systems. / एंजियोलॉजी परिसंचरण और लसिका तंत्र के अध्ययन से संबंधित है।"
+  },
+  {
+    "qe": "मानव हृदय में कितने 'चेंबर' (कोष्ठक) होते हैं?",
+    "qh": "How many 'Chambers' are found in the human heart?",
+    "o": [
+      "2",
+      "3",
+      "4 | 4",
+      "13"
+    ],
+    "a": 2,
+    "e": "Humans have a 4-chambered heart: two atria and two ventricles. / मनुष्यों में 4 चेंबर वाला हृदय होता है: दो अलिंद और दो नीलय।"
+  },
+  {
+    "qe": "धमनियों और शिराओं के बीच की 'जोड़ने वाली कड़ी' ____ है।",
+    "qh": "The 'Connecting Link' between arteries and veins is ____.",
+    "o": [
+      "Aorta",
+      "Capillary | केशिका",
+      "Lymph",
+      "Vena Cava"
+    ],
+    "a": 1,
+    "e": "Capillaries are the site of exchange between blood and tissues. / केशिकाएं रक्त और ऊतकों के बीच विनिमय का स्थल हैं।"
+  },
+  {
+    "qe": "प्लाज्मा में कौन सा प्रोटीन मुख्य रूप से रक्त का थक्का जमने की प्रक्रिया शुरू करने के लिए जिम्मेदार है?",
+    "qh": "Which protein in the plasma is primarily responsible for starting the blood clotting process?",
+    "o": [
+      "Albumin",
+      "Fibrinogen | फाइब्रिनोजेन",
+      "Hemoglobin",
+      "Insulin"
+    ],
+    "a": 1,
+    "e": "Fibrinogen is a clotting factor in plasma that activates when it comes in contact with air. / फाइब्रिनोजेन प्लाज्मा में एक क्लॉटिंग कारक है जो हवा के संपर्क में आने पर सक्रिय होता है।"
+  },
+  {
+    "qe": "फाइब्रिनोजेन जैसे क्लॉटिंग कारकों को हटाने के बाद रक्त के तरल भाग को क्या कहा जाता है?",
+    "qh": "What is the liquid part of blood called after removing clotting factors like Fibrinogen?",
+    "o": [
+      "Lymph",
+      "Serum | सीरम",
+      "Plasma",
+      "Bile"
+    ],
+    "a": 1,
+    "e": "Serum is plasma without fibrinogen and is used for testing diseases. / सीरम फाइब्रिनोजेन के बिना प्लाज्मा है और इसका उपयोग बीमारियों की जांच के लिए किया जाता है।"
+  },
+  {
+    "qe": "एक स्वस्थ मानव शरीर में प्लेटलेट्स की सामान्य सीमा क्या होती है?",
+    "qh": "What is the normal range of platelets in a healthy human body?",
+    "o": [
+      "10,000 - 20,000",
+      "50,000 - 1 Lakh",
+      "2.5 Lakh - 4 Lakh | 2.5 लाख से 4 लाख",
+      "10 Lakh+"
+    ],
+    "a": 2,
+    "e": "A healthy person should ideally have between 2.5 to 4 lakh platelets per microliter of blood. / एक स्वस्थ व्यक्ति में आदर्श रूप से प्रति माइक्रोलीटर रक्त में 2.5 से 4 लाख प्लेटलेट्स होने चाहिए।"
+  },
+  {
+    "qe": "मानव शरीर का 'ब्लड बैंक' ____ है।",
+    "qh": "The 'Blood Bank' of the human body is ____.",
+    "o": [
+      "Heart",
+      "Liver",
+      "Spleen (Pleeha) | प्लीहा",
+      "Kidney"
+    ],
+    "a": 2,
+    "e": "The spleen stores extra blood and also acts as a graveyard for old RBCs. / प्लीहा अतिरिक्त रक्त का भंडारण करती है और पुराने आरबीसी के कब्रिस्तान के रूप में भी कार्य करती है।"
+  },
+  {
+    "qe": "कौन सा तंत्र ऊतकों से लीक हुए रक्त और तरल को वापस शिराओं (veins) में लौटाता है?",
+    "qh": "Which system returns leaked blood and fluid from tissues back to the veins?",
+    "o": [
+      "Digestive System",
+      "Lymphatic System | लसिका तंत्र",
+      "Excretory System",
+      "Skeletal System"
+    ],
+    "a": 1,
+    "e": "The lymphatic system collects excess fluid (lymph) and returns it to the blood circulation. / लसिका तंत्र अतिरिक्त तरल (लसिका) एकत्र करता है और उसे रक्त परिसंचरण में वापस लाता है।"
+  },
+  {
+    "qe": "'सफेद रक्त कोशिकाओं' का जैविक नाम ____ है।",
+    "qh": "The biological name for 'White Blood Cells' is ____.",
+    "o": [
+      "Erythrocyte",
+      "Leukocyte | ल्यूकोसाइट",
+      "Thrombocyte",
+      "Adipocyte"
+    ],
+    "a": 1,
+    "e": "Leukocytes are the immune cells of the blood. / ल्यूकोसाइट्स रक्त की प्रतिरक्षा कोशिकाएं हैं।"
+  },
+  {
+    "qe": "प्लेटलेट का जीवनकाल लगभग कितना होता है?",
+    "qh": "Approximately how long is the lifespan of a Platelet?",
+    "o": [
+      "120 days",
+      "4 days",
+      "7 days | 7 दिन",
+      "1 year"
+    ],
+    "a": 2,
+    "e": "Platelets have a short lifespan of about a week before being replaced. / प्लेटलेट्स का जीवनकाल बदलने से पहले लगभग एक सप्ताह का होता है।"
+  },
+  {
+    "qe": "____ की उपस्थिति के कारण शिराओं में रक्त केवल एक ही दिशा में बहता है।",
+    "qh": "Blood flows in only one direction in veins due to the presence of ____.",
+    "o": [
+      "High pressure",
+      "Valves | वाल्व",
+      "Thin walls",
+      "Oxygen"
+    ],
+    "a": 1,
+    "e": "Veins have valves to prevent the backflow of blood at low pressure. / कम दबाव पर रक्त के पीछे के बहाव को रोकने के लिए शिराओं में वाल्व होते हैं।"
+  },
+  {
+    "qe": "रक्तचाप मापने के लिए उपयोग किया जाने वाला उपकरण ____ है।",
+    "qh": "The instrument used to measure Blood Pressure is ____.",
+    "o": [
+      "Stethoscope",
+      "Sphygmomanometer | स्फेग्नोमैनोमीटर",
+      "Barometer",
+      "Hygrometer"
+    ],
+    "a": 1,
+    "e": "Sphygmomanometer is used to measure systolic and diastolic pressure. / स्फेग्नोमैनोमीटर का उपयोग सिस्टोलिक और डायस्टोलिक दबाव मापने के लिए किया जाता है।"
+  },
+  {
+    "qe": "मानव हृदय में कितने 'चेंबर' (कोष्ठक) पाए जाते हैं?",
+    "qh": "How many 'Chambers' are found in the human heart?",
+    "o": [
+      "2",
+      "3",
+      "4 | 4",
+      "13"
+    ],
+    "a": 2,
+    "e": "The human heart consists of two atria and two ventricles. / मानव हृदय में दो अलिंद और दो नीलय होते हैं।"
+  },
+  {
+    "qe": "'बाईपास सर्जरी' रक्त प्रवाह के लिए एक नया रास्ता बनाती है ताकि ____ को दरकिनार किया जा सके।",
+    "qh": "A 'Bypass Surgery' creates a new path for blood flow to bypass a ____.",
+    "o": [
+      "Broken bone",
+      "Blocked coronary artery | अवरुद्ध कोरोनरी धमनी",
+      "Stomach ulcer",
+      "Kidney stone"
+    ],
+    "a": 1,
+    "e": "Bypass surgery reroutes blood around clogged heart arteries to improve supply. / बाईपास सर्जरी आपूर्ति में सुधार के लिए बंद हृदय धमनियों के चारों ओर रक्त को पुन: निर्देशित करती है।"
+  },
+  {
+    "qe": "रक्त का कौन सा घटक कोशिकाओं तक ऑक्सीजन पहुँचाने के लिए जिम्मेदार है?",
+    "qh": "Which blood component is responsible for carrying Oxygen to the cells?",
+    "o": [
+      "WBC",
+      "Platelets",
+      "RBC (Erythrocytes) | आरबीसी",
+      "Plasma"
+    ],
+    "a": 2,
+    "e": "RBCs contain hemoglobin which binds with oxygen for transport. / आरबीसी में हीमोग्लोबिन होता है जो परिवहन के लिए ऑक्सीजन के साथ जुड़ता है।"
+  },
+  {
+    "qe": "'लाल रक्त कोशिकाओं' का जैविक नाम क्या है?",
+    "qh": "The biological name for 'Red Blood Cells' is ____.",
+    "o": [
+      "Leukocyte",
+      "Thrombocyte",
+      "Erythrocyte | एरिथ्रोसाइट",
+      "Adipocyte"
+    ],
+    "a": 2,
+    "e": "Erythrocytes are specialized for oxygen and carbon dioxide transport. / एरिथ्रोसाइट्स ऑक्सीजन और कार्बन डाइऑक्साइड परिवहन के लिए विशेषीकृत हैं।"
+  },
+  {
+    "qe": "रक्त का कितना प्रतिशत 'प्लाज्मा' नामक तरल भाग से बना होता है?",
+    "qh": "How much percentage of blood is composed of the liquid part called 'Plasma'?",
+    "o": [
+      "40%",
+      "50%",
+      "60% | 60 प्रतिशत",
+      "90%"
+    ],
+    "a": 2,
+    "e": "Blood consists of about 60% plasma and 40% formed elements (cells). / रक्त में लगभग 60% प्लाज्मा और 40% रक्त कणिकाएं होती हैं।"
+  },
+  {
+    "qe": "मानव शरीर में RBC का जीवनकाल कितना होता है?",
+    "qh": "What is the lifespan of an RBC in the human body?",
+    "o": [
+      "4 days",
+      "7 days",
+      "120 days | 120 दिन",
+      "1 year"
+    ],
+    "a": 2,
+    "e": "RBCs circulate for about 120 days before being filtered out by the spleen. / आरबीसी प्लीहा द्वारा छाने जाने से पहले लगभग 120 दिनों तक प्रसारित होते हैं।"
+  },
+  {
+    "qe": "शरीर के किस भाग को 'ब्लड बैंक' और 'आरबीसी का कब्रिस्तान' भी कहा जाता है?",
+    "qh": "Which part of the body is known as the 'Blood Bank' and also the 'Graveyard of RBC'?",
+    "o": [
+      "Liver",
+      "Heart",
+      "Spleen (Pleeha) | प्लीहा",
+      "Kidney"
+    ],
+    "a": 2,
+    "e": "The spleen stores blood and recycles iron from old red blood cells. / प्लीहा रक्त का भंडारण करती है और पुराने आरबीसी से आयरन को रिसाइकिल करती है।"
+  },
+  {
+    "qe": "चोट लगने पर रक्त का कौन सा घटक 'थक्का' जमने की प्रक्रिया शुरू करता है?",
+    "qh": "Which component of the blood triggers the 'clotting' process when you get a cut?",
+    "o": [
+      "RBC",
+      "WBC",
+      "Platelets (Thrombocytes) | प्लेटलेट्स",
+      "Antibody"
+    ],
+    "a": 2,
+    "e": "Platelets adhere to the site of injury and release factors for coagulation. / प्लेटलेट्स चोट वाली जगह पर चिपक जाते हैं और जमाव के लिए कारक मुक्त करते हैं।"
+  },
+  {
+    "qe": "एक स्वस्थ वयस्क में रक्त कोशिकाएं कहाँ बनती हैं?",
+    "qh": "Where are blood cells (RBC, WBC, Platelets) produced in a healthy adult?",
+    "o": [
+      "Heart",
+      "Liver",
+      "Bone Marrow | अस्थि मज्जा",
+      "Lungs"
+    ],
+    "a": 2,
+    "e": "Most blood cells are manufactured in the red bone marrow. / अधिकांश रक्त कोशिकाएं लाल अस्थि मज्जा में निर्मित होती हैं।"
+  },
+  {
+    "qe": "रक्त प्लाज्मा में कौन सा प्रोटीन रक्त जमाव के लिए आवश्यक है?",
+    "qh": "Which protein in blood plasma is essential for blood coagulation?",
+    "o": [
+      "Albumin",
+      "Insulin",
+      "Fibrinogen | फाइब्रिनोजेन",
+      "Hemoglobin"
+    ],
+    "a": 2,
+    "e": "Fibrinogen is a soluble protein that converts to insoluble fibrin during clotting. / फाइब्रिनोजेन एक घुलनशील प्रोटीन है जो थक्का जमने के दौरान अघुलनशील फाइब्रिन में बदल जाता है।"
+  },
+  {
+    "qe": "मानव रक्त का पीएच (PH) मान क्या है?",
+    "qh": "What is the PH value of human blood?",
+    "o": [
+      "6.4",
+      "7.4 | 7.4",
+      "8.2",
+      "5.5"
+    ],
+    "a": 1,
+    "e": "Human blood is slightly alkaline with a PH of ~7.4. / मानव रक्त लगभग 7.4 पीएच के साथ थोड़ा क्षारीय होता है।"
+  },
+  {
+    "qe": "कीटाणुओं की पहचान करने के लिए रक्त के किस भाग में 'एंटीबॉडी' होती हैं?",
+    "qh": "Which part of the blood contains 'Antibodies' to identify germs?",
+    "o": [
+      "Inside RBC",
+      "Plasma/Serum | प्लाज्मा/सीरम",
+      "Platelets",
+      "Bone Marrow"
+    ],
+    "a": 1,
+    "e": "Antibodies are proteins circulating in the plasma to recognize pathogens. / एंटीबॉडी रोगजनकों को पहचानने के लिए प्लाज्मा में घूमने वाले प्रोटीन हैं।"
+  },
+  {
+    "qe": "कौन सा अंग रक्त को छानता है और यूरिया जैसे अपशिष्ट उत्पादों को निकालता है?",
+    "qh": "Which organ filters blood and removes waste products like urea?",
+    "o": [
+      "Heart",
+      "Lungs",
+      "Kidney | किडनी",
+      "Liver"
+    ],
+    "a": 2,
+    "e": "The kidneys are the primary filtration organs of the body. / किडनी शरीर के प्राथमिक निस्पंदन अंग हैं।"
+  },
+  {
+    "qe": "एक औसत वयस्क पुरुष में कितना रक्त (लीटर में) होता है?",
+    "qh": "How much blood (in liters) does an average adult male have?",
+    "o": [
+      "2 Liters",
+      "3.5 Liters",
+      "5.5 Liters | 5.5 लीटर",
+      "10 Liters"
+    ],
+    "a": 2,
+    "e": "Adult males typically have about 5-6 liters of blood. / वयस्क पुरुषों में आमतौर पर लगभग 5-6 लीटर रक्त होता है।"
+  },
+  {
+    "qe": "रक्त का कौन सा भाग तरल होता है और इसके कुल आयतन का लगभग 60% बनाता है?",
+    "qh": "Which part of the blood is liquid and makes up about 60% of its total volume?",
+    "o": [
+      "RBC",
+      "WBC",
+      "Plasma | प्लाज्मा",
+      "Platelets"
+    ],
+    "a": 2,
+    "e": "Plasma is the yellowish liquid component of blood that holds the blood cells in whole blood in suspension. / प्लाज्मा रक्त का पीला तरल घटक है जो रक्त कोशिकाओं को निलंबन में रखता है।"
+  },
+  {
+    "qe": "प्लाज्मा में कौन से दो प्रोटीन मुख्य रूप से रक्त के थक्के जमने के लिए जिम्मेदार हैं?",
+    "qh": "Which two proteins in plasma are primarily responsible for blood clotting?",
+    "o": [
+      "Albumin and Globulin",
+      "Fibrinogen and Prothrombin | फाइब्रिनोजेन और प्रोथ्रोम्बिन",
+      "Hemoglobin and Myoglobin",
+      "Insulin and Glucagon"
+    ],
+    "a": 1,
+    "e": "Fibrinogen and Prothrombin are clotting factors found in plasma that activate upon contact with air. / फाइब्रिनोजेन और प्रोथ्रोम्बिन प्लाज्मा में पाए जाने वाले क्लॉटिंग कारक हैं जो हवा के संपर्क में आने पर सक्रिय हो जाते हैं।"
+  },
+  {
+    "qe": "फाइब्रिनोजेन के बिना प्लाज्मा को क्या कहा जाता है?",
+    "qh": "Plasma without Fibrinogen is called ____.",
+    "o": [
+      "Lymph",
+      "Serum | सीरम",
+      "Bile",
+      "Mucus"
+    ],
+    "a": 1,
+    "e": "Serum is the fluid that remains after blood has clotted and the fiber-forming proteins are removed. / सीरम वह तरल है जो रक्त के थक्के जमने और फाइबर बनाने वाले प्रोटीन के हटने के बाद बचता है।"
+  },
+  {
+    "qe": "'लाल रक्त कोशिकाओं' (RBC) का जैविक नाम क्या है?",
+    "qh": "What is the biological name for 'Red Blood Cells' (RBC)?",
+    "o": [
+      "Leukocyte",
+      "Erythrocyte | एरिथ्रोसाइट",
+      "Thrombocyte",
+      "Adipose"
+    ],
+    "a": 1,
+    "e": "Erythrocytes are the most common type of blood cell and deliver oxygen to the body tissues. / एरिथ्रोसाइट्स सबसे आम प्रकार की रक्त कोशिकाएं हैं और शरीर के ऊतकों तक ऑक्सीजन पहुँचाती हैं।"
+  },
+  {
+    "qe": "'सफेद रक्त कोशिकाओं' (WBC) का जैविक नाम क्या है?",
+    "qh": "What is the biological name for 'White Blood Cells' (WBC)?",
+    "o": [
+      "Erythrocyte",
+      "Leukocyte | ल्यूकोसाइट",
+      "Thrombocyte",
+      "Neuron"
+    ],
+    "a": 1,
+    "e": "Leukocytes are the cells of the immune system that are involved in protecting the body. / ल्यूकोसाइट्स प्रतिरक्षा प्रणाली की कोशिकाएं हैं जो शरीर की रक्षा करने में शामिल होती हैं।"
+  },
+  {
+    "qe": "मानव शरीर में RBC का औसत जीवनकाल कितना होता है?",
+    "qh": "What is the average lifespan of an RBC in the human body?",
+    "o": [
+      "4 days",
+      "7 days",
+      "120 days | 120 दिन",
+      "1 year"
+    ],
+    "a": 2,
+    "e": "Red blood cells circulate for about 120 days before being destroyed in the spleen. / लाल रक्त कोशिकाएं प्लीहा में नष्ट होने से पहले लगभग 120 दिनों तक प्रसारित होती हैं।"
+  },
+  {
+    "qe": "रक्त का कौन सा घटक संक्रमण से लड़ने और प्रतिरक्षा प्रदान करने के लिए जिम्मेदार है?",
+    "qh": "Which component of blood is responsible for fighting infections and providing immunity?",
+    "o": [
+      "RBC",
+      "WBC | डब्ल्यूबीसी (ल्यूकोसाइट)",
+      "Platelets",
+      "Plasma"
+    ],
+    "a": 1,
+    "e": "WBCs act as the defense system of the body against pathogens. / डब्ल्यूबीसी रोगजनकों के खिलाफ शरीर की रक्षा प्रणाली के रूप में कार्य करते हैं।"
+  },
+  {
+    "qe": "'प्लेटलेट्स' का जैविक नाम ____ है।",
+    "qh": "The biological name for 'Platelets' is ____.",
+    "o": [
+      "Erythrocyte",
+      "Leukocyte",
+      "Thrombocyte | थ्रोम्बोसाइट",
+      "Lymphocyte"
+    ],
+    "a": 2,
+    "e": "Thrombocytes are small cell fragments that help in blood coagulation/clotting. / थ्रोम्बोसाइट्स कोशिका के छोटे टुकड़े होते हैं जो रक्त के जमाव/थक्के में मदद करते हैं।"
+  },
+  {
+    "qe": "एक स्वस्थ मानव में लगभग कितने RBC मौजूद होते हैं (प्रति घन मिमी)?",
+    "qh": "Approximately how many RBCs are present in a healthy human (per cubic mm)?",
+    "o": [
+      "10,000",
+      "2 Lakh",
+      "50 Lakh | 50 लाख",
+      "1 Crore"
+    ],
+    "a": 2,
+    "e": "There are about 5 million (50 lakh) RBCs in a drop of blood. / रक्त की एक बूंद में लगभग 50 लाख आरबीसी होते हैं।"
+  },
+  {
+    "qe": "मानव शरीर में WBC की सामान्य संख्या क्या है?",
+    "qh": "What is the normal count of WBCs in a human body?",
+    "o": [
+      "5,000 - 10,000 | 5,000 - 10,000",
+      "50,000",
+      "3 Lakh",
+      "50 Lakh"
+    ],
+    "a": 0,
+    "e": "Normal WBC count ranges from 5,000 to 11,000 per microliter of blood. / सामान्य डब्ल्यूबीसी गणना 5,000 से 11,000 प्रति माइक्रोलीटर रक्त तक होती है।"
+  },
+  {
+    "qe": "एक वयस्क में सभी रक्त कोशिकाएं (RBC, WBC, प्लेटलेट्स) कहाँ बनती हैं?",
+    "qh": "Where are all blood cells (RBC, WBC, Platelets) produced in an adult?",
+    "o": [
+      "Heart",
+      "Liver",
+      "Bone Marrow | अस्थि मज्जा",
+      "Spleen"
+    ],
+    "a": 2,
+    "e": "Hematopoiesis occurs in the red bone marrow of large bones. / बड़ी हड्डियों के लाल अस्थि मज्जा में रक्त कोशिकाओं का निर्माण होता है।"
+  },
+  {
+    "qe": "किस अंग को 'RBC का कब्रिस्तान' और शरीर का 'ब्लड बैंक' कहा जाता है?",
+    "qh": "Which organ is known as the 'Graveyard of RBC' and the 'Blood Bank' of the body?",
+    "o": [
+      "Liver",
+      "Kidney",
+      "Spleen | प्लीहा (एस्पलीन)",
+      "Heart"
+    ],
+    "a": 2,
+    "e": "The spleen filters out old RBCs and acts as a reservoir for blood. / प्लीहा पुराने आरबीसी को छानता है और रक्त के भंडार के रूप में कार्य करता है।"
+  },
+  {
+    "qe": "मानव रक्त का पीएच क्या है, जो इसे थोड़ा क्षारीय बनाता है?",
+    "qh": "What is the PH of human blood, making it slightly alkaline?",
+    "o": [
+      "6.4",
+      "7.4 | 7.4",
+      "8.2",
+      "5.5"
+    ],
+    "a": 1,
+    "e": "Human blood is slightly basic with a normal PH range of 7.35 to 7.45. / मानव रक्त थोड़ा क्षारीय होता है जिसका सामान्य पीएच 7.35 से 7.45 के बीच होता है।"
+  },
+  {
+    "qe": "हीमोग्लोबिन का मुख्य कार्य क्या है?",
+    "qh": "What is the primary function of Hemoglobin?",
+    "o": [
+      "Fight germs",
+      "Clot blood",
+      "Transport Oxygen | ऑक्सीजन का परिवहन",
+      "Digest food"
+    ],
+    "a": 2,
+    "e": "Hemoglobin binds to oxygen in the lungs and carries it to the rest of the body. / हीमोग्लोबिन फेफड़ों में ऑक्सीजन से जुड़ता है और उसे शरीर के बाकी हिस्सों में ले जाता है।"
+  },
+  {
+    "qe": "हृदय के किस भाग में 'ट्राइकस्पिड वाल्व' स्थित होता है?",
+    "qh": "In which part of the heart is the 'Tricuspid Valve' located?",
+    "o": [
+      "Between Left Atrium/Ventricle",
+      "Between Right Atrium and Right Ventricle | दाहिने अलिंद और दाहिने नीलय के बीच",
+      "Inside Aorta",
+      "Inside Pulmonary Vein"
+    ],
+    "a": 1,
+    "e": "The tricuspid valve is on the right side of the heart, preventing backflow. / ट्राइकस्पिड वाल्व हृदय के दाहिने हिस्से में होता है, जो पीछे के बहाव को रोकता है।"
+  },
+  {
+    "qe": "तिलचट्टा और घोंघा जैसे जीवों में किस प्रकार का परिसंचरण तंत्र पाया जाता है?",
+    "qh": "Which type of circulatory system is found in creatures like Cockroach and Snail?",
+    "o": [
+      "Closed",
+      "Mixed",
+      "Open | खुला परिसंचरण तंत्र",
+      "None"
+    ],
+    "a": 2,
+    "e": "Creatures with an exoskeleton (external skeleton) usually have an open circulatory system where blood flows freely. / बाह्य कंकाल वाले जीवों में आमतौर पर खुला परिसंचरण तंत्र होता है जहाँ रक्त स्वतंत्र रूप से बहता है।"
+  },
+  {
+    "qe": "एक स्वस्थ वयस्क मनुष्य का सामान्य रक्तचाप (BP) कितना होता है?",
+    "qh": "What is the normal blood pressure (BP) of a healthy adult human?",
+    "o": [
+      "80/120 mmHg",
+      "120/80 mmHg | 120/80 mmHg",
+      "100/60 mmHg",
+      "150/90 mmHg"
+    ],
+    "a": 1,
+    "e": "120 mmHg is the Systolic (pumping) and 80 mmHg is the Diastolic (resting) pressure. / 120 mmHg सिस्टोलिक (पंपिंग) और 80 mmHg डायस्टोलिक (लौटने वाला) दबाव है।"
+  },
+  {
+    "qe": "रक्त एक प्रकार का ____ ऊतक है।",
+    "qh": "Blood is a type of ____ tissue.",
+    "o": [
+      "Epithelial",
+      "Nervous",
+      "Connective | संयोजी",
+      "Muscular"
+    ],
+    "a": 2,
+    "e": "Blood is a liquid connective tissue because it connects all parts of the body. / रक्त एक तरल संयोजी ऊतक है क्योंकि यह शरीर के सभी अंगों को जोड़ता है।"
+  },
+  {
+    "qe": "रक्त का कौन सा भाग कुल आयतन का लगभग 60% बनाता है और तरल होता है?",
+    "qh": "Which part of the blood makes up about 60% of its total volume and is liquid?",
+    "o": [
+      "RBC",
+      "WBC",
+      "Platelets",
+      "Plasma | प्लाज्मा"
+    ],
+    "a": 3,
+    "e": "Plasma is the liquid portion of blood, consisting mostly of water and proteins. / प्लाज्मा रक्त का तरल भाग है, जिसमें मुख्य रूप से पानी और प्रोटीन होते हैं।"
+  },
+  {
+    "qe": "रक्त और उसके विकारों के अध्ययन को क्या कहा जाता है?",
+    "qh": "The study of blood and its disorders is called ____.",
+    "o": [
+      "Osteology",
+      "Hematology | हेमेटोलॉजी",
+      "Myology",
+      "Oncology"
+    ],
+    "a": 1,
+    "e": "Hematology deals with the study of blood, blood-forming organs, and blood diseases. / हेमेटोलॉजी रक्त, रक्त बनाने वाले अंगों और रक्त रोगों के अध्ययन से संबंधित है।"
+  },
+  {
+    "qe": "मानव शरीर में रक्त कहाँ संचित रहता है, जो 'ब्लड बैंक' के रूप में कार्य करता है?",
+    "qh": "Where is blood stored in the human body, acting as a 'Blood Bank'?",
+    "o": [
+      "Heart",
+      "Liver",
+      "Spleen (Pleeha) | प्लीहा",
+      "Kidney"
+    ],
+    "a": 2,
+    "e": "The spleen acts as a reservoir for blood and is also known as the graveyard of RBCs. / प्लीहा रक्त के भंडार के रूप में कार्य करता है और इसे RBC का कब्रिस्तान भी कहा जाता है।"
+  },
+  {
+    "qe": "मानव रक्त का औसत पीएच (PH) मान कितना होता है?",
+    "qh": "What is the average PH value of human blood?",
+    "o": [
+      "6.4",
+      "7.4 | 7.4",
+      "8.4",
+      "5.4"
+    ],
+    "a": 1,
+    "e": "Human blood is slightly alkaline with a PH value of approximately 7.4. / मानव रक्त लगभग 7.4 पीएच मान के साथ थोड़ा क्षारीय होता है।"
+  },
+  {
+    "qe": "डॉक्टरों द्वारा रक्तचाप मापने के लिए किस उपकरण का उपयोग किया जाता है?",
+    "qh": "Which instrument is used by doctors to measure blood pressure?",
+    "o": [
+      "Stethoscope",
+      "Barometer",
+      "Sphygmomanometer | स्फेग्नोमैनोमीटर",
+      "Respirometer"
+    ],
+    "a": 2,
+    "e": "A sphygmomanometer is the standard medical tool for monitoring blood pressure. / स्फेग्नोमैनोमीटर रक्तचाप की निगरानी के लिए मानक चिकित्सा उपकरण है।"
+  },
+  {
+    "qe": "'उच्च रक्तचाप' के लिए किस चिकित्सा शब्द का उपयोग किया जाता है?",
+    "qh": "What is the medical term for 'High Blood Pressure'?",
+    "o": [
+      "Hypotension",
+      "Hypertension | हाइपरटेंशन",
+      "Anemia",
+      "Leukemia"
+    ],
+    "a": 1,
+    "e": "Hypertension refers to blood pressure consistently above the normal range. / हाइपरटेंशन का अर्थ है रक्तचाप का लगातार सामान्य सीमा से ऊपर रहना।"
+  },
+  {
+    "qe": "रक्त के किस भाग में बीमारियों से लड़ने के लिए 'एंटीबॉडी' होती हैं?",
+    "qh": "Which part of the blood contains 'Antibodies' to fight diseases?",
+    "o": [
+      "RBC",
+      "Platelets",
+      "Serum/Plasma | सीरम/प्लाज्मा",
+      "Bone marrow"
+    ],
+    "a": 2,
+    "e": "Antibodies are found in the plasma/serum to protect the body from pathogens. / एंटीबॉडी शरीर को रोगजनकों से बचाने के लिए प्लाज्मा/सीरम में पाई जाती हैं।"
+  },
+  {
+    "qe": "रक्त में 'हीमोग्लोबिन' का प्राथमिक कार्य क्या है?",
+    "qh": "What is the primary function of 'Hemoglobin' in blood?",
+    "o": [
+      "Fight bacteria",
+      "Clot blood",
+      "Transport Oxygen | ऑक्सीजन का परिवहन",
+      "Digest food"
+    ],
+    "a": 2,
+    "e": "Hemoglobin binds with oxygen and carries it from the lungs to the tissues. / हीमोग्लोबिन ऑक्सीजन के साथ जुड़ता है और उसे फेफड़ों से ऊतकों तक ले जाता है।"
+  },
+  {
+    "qe": "चोट लगने के दौरान रक्त का थक्का जमाने में कौन सा घटक मदद करता है?",
+    "qh": "Which component helps in blood clotting during an injury?",
+    "o": [
+      "RBC",
+      "WBC",
+      "Platelets | प्लेटलेट्स",
+      "Lymph"
+    ],
+    "a": 2,
+    "e": "Platelets prevent excessive bleeding by forming clots at the site of injury. / प्लेटलेट्स चोट वाली जगह पर थक्का बनाकर अत्यधिक रक्तस्राव को रोकते हैं।"
+  },
+  {
+    "qe": "'लव-डब' ध्वनि किस अंग से संबंधित है?",
+    "qh": "The sound 'Lubb-Dubb' is associated with which organ?",
+    "o": [
+      "Lungs",
+      "Heart | हृदय",
+      "Stomach",
+      "Brain"
+    ],
+    "a": 1,
+    "e": "Lubb-Dubb is the characteristic sound of the heart valves closing. / लव-डब हृदय के वाल्वों के बंद होने की विशिष्ट ध्वनि है।"
+  },
+  {
+    "qe": "हृदय के किस भाग में 'पेसमेकर' लगाया जाता है?",
+    "qh": "In which part of the heart is the 'Pacemaker' implanted?",
+    "o": [
+      "Left Ventricle",
+      "Right Atrium | दायां अलिंद",
+      "Aorta",
+      "Valve"
+    ],
+    "a": 1,
+    "e": "The natural pacemaker (SA Node) is in the right atrium; artificial one mimics it. / प्राकृतिक पेसमेकर दाएं अलिंद में होता है; कृत्रिम पेसमेकर इसकी नकल करता है।"
+  },
+  {
+    "qe": "'लसिका तंत्र' द्वारा एकत्र किया गया तरल अंततः किसमें मिला दिया जाता है?",
+    "qh": "The fluid collected by the 'Lymphatic System' is eventually mixed into ____.",
+    "o": [
+      "Arteries",
+      "Veins | सिरा (Veins)",
+      "Capillaries",
+      "Urine"
+    ],
+    "a": 1,
+    "e": "Lymph returns escaped fluids and nutrients back to the veins. / लसिका लीक हुए तरल पदार्थों और पोषक तत्वों को वापस शिराओं में लौटाती है।"
+  },
+  {
+    "qe": "'रक्त का थक्का' जमने की प्रक्रिया में मुख्य रूप से कौन सा खनिज शामिल है?",
+    "qh": "Which mineral is primarily involved in the 'Blood Clotting' process?",
+    "o": [
+      "Iron",
+      "Calcium | कैल्शियम",
+      "Sodium",
+      "Zinc"
+    ],
+    "a": 1,
+    "e": "Calcium ions are essential for the coagulation of blood. / रक्त के जमाव (Clotting) के लिए कैल्शियम आयन आवश्यक हैं।"
+  },
+  {
+    "qe": "ऑक्सीजन जोड़कर 'रक्त के शुद्धिकरण' की प्रक्रिया कहाँ होती है?",
+    "qh": "The process of 'Purdification of Blood' by adding oxygen occurs in ____.",
+    "o": [
+      "Kidney",
+      "Heart",
+      "Lungs | फेफड़े",
+      "Liver"
+    ],
+    "a": 2,
+    "e": "Lungs add oxygen to the blood, which is called purification. / फेफड़े रक्त में ऑक्सीजन मिलाते हैं, जिसे शुद्धिकरण कहा जाता है।"
+  },
+  {
+    "qe": "मानव हृदय में 'चेंबरों' की कुल संख्या ____ है।",
+    "qh": "The total number of 'Chambers' in a human heart is ____.",
+    "o": [
+      "2",
+      "3",
+      "4 | 4",
+      "13"
+    ],
+    "a": 2,
+    "e": "Human heart has two atria and two ventricles, totaling 4 chambers. / मानव हृदय में दो अलिंद और दो नीलय होते हैं, कुल 4 चेंबर।"
+  },
+  {
+    "qe": "एक स्वस्थ वयस्क मनुष्य का सामान्य रक्तचाप (Blood Pressure) कितना होता है?",
+    "qh": "What is the normal blood pressure of a healthy adult human?",
+    "o": [
+      "80/120 mmHg",
+      "120/80 mmHg | 120/80 mmHg",
+      "100/50 mmHg",
+      "150/90 mmHg"
+    ],
+    "a": 1,
+    "e": "Normal BP is 120 (Systolic) over 80 (Diastolic) mmHg. / सामान्य बीपी 120 (सिस्टोलिक) और 80 (डायस्टोलिक) होता है।"
+  },
+  {
+    "qe": "'उच्च रक्तचाप' (High BP) के लिए किस चिकित्सा शब्द का प्रयोग किया जाता है?",
+    "qh": "What is the medical term for 'High Blood Pressure'?",
+    "o": [
+      "Hypotension",
+      "Hyperglycemia",
+      "Hypertension | हाइपरटेंशन",
+      "Hypoxia"
+    ],
+    "a": 2,
+    "e": "Hypertension refers to a condition where the blood pressure is higher than normal. / हाइपरटेंशन उस स्थिति को कहते हैं जब रक्तचाप सामान्य से अधिक हो जाता है।"
+  },
+  {
+    "qe": "'निम्न रक्तचाप' (Low BP) के लिए किस चिकित्सा शब्द का प्रयोग किया जाता है?",
+    "qh": "What is the medical term for 'Low Blood Pressure'?",
+    "o": [
+      "Hypertension",
+      "Hypotension | हाइपोटेंशन",
+      "Anemia",
+      "Leukemia"
+    ],
+    "a": 1,
+    "e": "Hypotension is the term used for blood pressure that is lower than the normal range. / हाइपोटेंशन का अर्थ है सामान्य सीमा से कम रक्तचाप।"
+  },
+  {
+    "qe": "हृदय की कार्यप्रणाली के दौरान कौन सी ध्वनि उत्पन्न होती है?",
+    "qh": "Which sound is produced by the heart during its functioning?",
+    "o": [
+      "Dhak-Dhak",
+      "Lubb-Dubb | लव-डब",
+      "Tick-Tick",
+      "Shh-Shh"
+    ],
+    "a": 1,
+    "e": "The 'Lubb-Dubb' sound is caused by the closing of heart valves. / 'लव-डब' की आवाज हृदय के वाल्वों के बंद होने के कारण होती है।"
+  },
+  {
+    "qe": "हृदय एक बार धड़कने में कितना रक्त पंप करता है?",
+    "qh": "How much blood does the heart pump in a single beat (Stroke Volume)?",
+    "o": [
+      "500 ml",
+      "70-72 ml | 70-72 मिलीलीटर",
+      "5 Liters",
+      "1 Liter"
+    ],
+    "a": 1,
+    "e": "The heart pumps approximately 70-72 ml of blood per contraction. / हृदय प्रत्येक संकुचन में लगभग 70-72 मिलीलीटर रक्त पंप करता है।"
+  },
+  {
+    "qe": "रक्तचाप मापने वाले उपकरण को ____ कहा जाता है।",
+    "qh": "The device used to measure blood pressure is called ____.",
+    "o": [
+      "Barometer",
+      "Sphygmomanometer | स्फेग्नोमैनोमीटर",
+      "Respirometer",
+      "Lactometer"
+    ],
+    "a": 1,
+    "e": "A sphygmomanometer consists of an inflatable cuff and a mercury or digital pressure gauge. / स्फेग्नोमैनोमीटर में एक कफ और दबाव मापने वाला गेज होता है।"
+  },
+  {
+    "qe": "हृदय का कौन सा भाग धड़कन के लिए विद्युत आवेग (करंट) उत्पन्न करता है?",
+    "qh": "Which part of the heart generates the electrical impulse (current) for a heartbeat?",
+    "o": [
+      "Left Ventricle",
+      "SA Node (Right Atrium) | एसए नोड (दायां अलिंद)",
+      "Aorta",
+      "Mitral Valve"
+    ],
+    "a": 1,
+    "e": "The SA node acts as the natural pacemaker of the heart. / एसए नोड हृदय के प्राकृतिक पेसमेकर के रूप में कार्य करता है।"
+  },
+  {
+    "qe": "कोरोनरी धमनियों में ब्लॉकेज का पता लगाने के लिए कौन सा टेस्ट किया जाता है?",
+    "qh": "Which diagnostic test is used to detect blockages in the coronary arteries?",
+    "o": [
+      "ECG",
+      "Angiography | एंजियोग्राफी",
+      "Dialysis",
+      "Biopsy"
+    ],
+    "a": 1,
+    "e": "Angiography uses a special dye and X-rays to see how blood flows through your heart's arteries. / एंजियोग्राफी ब्लॉकेज देखने के लिए डाई और एक्स-रे का उपयोग करती है।"
+  },
+  {
+    "qe": "एक अवरुद्ध धमनी में तार-जाली वाली नली (स्टंट) लगाने की प्रक्रिया ____ है।",
+    "qh": "The procedure of placing a wire-mesh tube (Stent) in a blocked artery is ____.",
+    "o": [
+      "Bypass Surgery",
+      "Angioplasty | एंजियोप्लास्टी",
+      "Liposuction",
+      "MRI"
+    ],
+    "a": 1,
+    "e": "Angioplasty is the procedure to open narrow or blocked blood vessels using a stent. / एंजियोप्लास्टी स्टंट का उपयोग करके अवरुद्ध वाहिकाओं को खोलने की प्रक्रिया है।"
+  },
+  {
+    "qe": "एक सामान्य मानव हृदय का वजन कितना होता है?",
+    "qh": "What is the weight of a normal human heart?",
+    "o": [
+      "100 grams",
+      "300 grams | 300 ग्राम",
+      "500 grams",
+      "1 kg"
+    ],
+    "a": 1,
+    "e": "An adult human heart weighs approximately 250 to 350 grams. / एक वयस्क मानव हृदय का वजन लगभग 250 से 350 ग्राम होता है।"
+  },
+  {
+    "qe": "जब कोई धमनी पूरी तरह अवरुद्ध हो जाती है और नया रास्ता बनाया जाता है, तो कौन सी सर्जरी की जाती है?",
+    "qh": "Which type of surgery is performed when an artery is completely blocked and a new path is created?",
+    "o": [
+      "Angioplasty",
+      "Bypass Surgery | बाईपास सर्जरी",
+      "Dialysis",
+      "Endoscopy"
+    ],
+    "a": 1,
+    "e": "Bypass surgery redirects blood flow around a blocked part of an artery. / बाईपास सर्जरी अवरुद्ध हिस्से के चारों ओर रक्त प्रवाह को निर्देशित करती है।"
+  },
+  {
+    "qe": "जोड़ों को चिकना करने और हृदय की झिल्लियों के पास पाया जाने वाला द्रव ____ है।",
+    "qh": "The liquid used to lubricate joints and found near heart membranes is ____.",
+    "o": [
+      "Plasma",
+      "Synovial/Pericardial fluid | साइनोबियल/पेरिकार्डियल द्रव",
+      "Bile",
+      "Mucus"
+    ],
+    "a": 1,
+    "e": "Fluids like pericardial fluid protect the heart from friction. / पेरिकार्डियल द्रव जैसे तरल पदार्थ हृदय को घर्षण से बचाते हैं।"
+  },
+  {
+    "qe": "हृदय रोगियों के लिए 24 घंटे गहन निगरानी प्रदान करने वाली इकाई कौन सी है?",
+    "qh": "Which medical unit provides 24-hour intensive monitoring for heart patients?",
+    "o": [
+      "ICU",
+      "CCU (Cardiac Care Unit) | सीसीयू",
+      "OPD",
+      "General Ward"
+    ],
+    "a": 1,
+    "e": "CCU is specialized for patients with serious cardiac conditions. / सीसीयू गंभीर हृदय स्थितियों वाले रोगियों के लिए विशेषज्ञता रखता है।"
+  },
+  {
+    "qe": "हृदय का कौन सा भाग अधिक मांसल होता है: अलिंद या नीलय?",
+    "qh": "Which part of the heart is more muscular: Atrium or Ventricle?",
+    "o": [
+      "Atrium",
+      "Ventricle | नीलय",
+      "Both same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ventricles need more muscle to pump blood to the lungs and entire body. / नीलय को फेफड़ों और पूरे शरीर में रक्त पंप करने के लिए अधिक मांसपेशियों की आवश्यकता होती है।"
+  },
+  {
+    "qe": "मानव रक्त में 'प्लेटलेट्स' का प्राथमिक कार्य क्या है?",
+    "qh": "What is the primary function of 'Platelets' in human blood?",
+    "o": [
+      "Carry Oxygen",
+      "Blood Clotting | रक्त का थक्का जमाना",
+      "Fight bacteria",
+      "Store food"
+    ],
+    "a": 1,
+    "e": "Platelets help stop bleeding by forming clots at injury sites. / प्लेटलेट्स चोट वाली जगहों पर थक्के बनाकर रक्तस्राव को रोकने में मदद करते हैं।"
+  },
+  {
+    "qe": "दाहिने अलिंद और दाहिने नीलय के बीच कौन सा वाल्व स्थित होता है?",
+    "qh": "Which valve is located between the Right Atrium and the Right Ventricle?",
+    "o": [
+      "Mitral valve",
+      "Tricuspid valve | ट्राइकस्पिड वाल्व",
+      "Bicuspid valve",
+      "Aortic valve"
+    ],
+    "a": 1,
+    "e": "The tricuspid valve prevents the backflow of blood from the right ventricle to the right atrium. / ट्राइकस्पिड वाल्व दाहिने नीलय से दाहिने अलिंद में रक्त के वापस बहाव को रोकता है।"
+  },
+  {
+    "qe": "मिट्रल वाल्व (बाइकस्पिड वाल्व) किन दो चेंबरों के बीच स्थित होता है?",
+    "qh": "The Mitral valve (Bicuspid valve) is located between which two chambers?",
+    "o": [
+      "Right atrium and ventricle",
+      "Left atrium and Left ventricle | बायां अलिंद और बायां नीलय",
+      "Left ventricle and Aorta",
+      "Right ventricle and Lungs"
+    ],
+    "a": 1,
+    "e": "The Mitral valve is on the left side of the heart, allowing blood flow from the left atrium to the left ventricle. / मिट्रल वाल्व हृदय के बाईं ओर होता है, जो बाएं अलिंद से बाएं नीलय तक रक्त के प्रवाह की अनुमति देता है।"
+  },
+  {
+    "qe": "कौन सी नस/धमनी स्वयं हृदय की मांसपेशियों को रक्त की आपूर्ति करती है?",
+    "qh": "Which artery/vein provides blood supply to the muscles of the Heart itself?",
+    "o": [
+      "Pulmonary artery",
+      "Coronary Sinus/Artery | कोरोनरी साइनस/धमनी",
+      "Aorta",
+      "Vena cava"
+    ],
+    "a": 1,
+    "e": "Coronary arteries wrap around the entire heart to provide it with oxygenated blood. / कोरोनरी धमनियां पूरे हृदय के चारों ओर लिपटी होती हैं ताकि उसे ऑक्सीजन युक्त रक्त मिल सके।"
+  },
+  {
+    "qe": "हृदय की वाहिकाओं में ब्लॉकेज को देखने के लिए किस नैदानिक परीक्षण में 'कंट्रास्ट' डाई का उपयोग किया जाता है?",
+    "qh": "Which diagnostic test uses a 'Contrast' dye to visualize blockages in heart vessels?",
+    "o": [
+      "ECG",
+      "Angiography | एंजियोग्राफी",
+      "Biopsy",
+      "MRI"
+    ],
+    "a": 1,
+    "e": "Angiography uses X-rays and dye to detect narrowed or blocked arteries. / एंजियोग्राफी संकुचित या अवरुद्ध धमनियों का पता लगाने के लिए एक्स-रे और डाई का उपयोग करती है।"
+  },
+  {
+    "qe": "अवरुद्ध धमनी को खुला रखने के लिए इस्तेमाल की जाने वाली तार-जाली वाली नली को ____ कहा जाता है।",
+    "qh": "The wire-mesh tube used to keep a blocked artery open is called a ____.",
+    "o": [
+      "Stent | स्टंट",
+      "Catheter",
+      "Pacemaker",
+      "Ventilator"
+    ],
+    "a": 0,
+    "e": "A stent is a small mesh tube that’s used to treat narrow or weak arteries. / स्टंट एक छोटी जालीदार नली है जिसका उपयोग संकरी या कमजोर धमनियों के इलाज के लिए किया जाता है।"
+  },
+  {
+    "qe": "किस सर्जरी में हृदय में रक्त प्रवाह के लिए नया रास्ता बनाने हेतु पैर से नस ली जाती है?",
+    "qh": "In which surgery is a vein taken from the leg to create a new path for blood flow in the heart?",
+    "o": [
+      "Angioplasty",
+      "Bypass Surgery | बाईपास सर्जरी",
+      "Dialysis",
+      "Endoscopy"
+    ],
+    "a": 1,
+    "e": "Bypass surgery redirects blood around a section of a blocked or partially blocked artery. / बाईपास सर्जरी एक अवरुद्ध या आंशिक रूप से अवरुद्ध धमनी के एक हिस्से के चारों ओर रक्त को पुन: निर्देशित करती है।"
+  },
+  {
+    "qe": "'पेसमेकर' का मुख्य कार्य क्या है?",
+    "qh": "What is the primary function of a 'Pacemaker'?",
+    "o": [
+      "Filter blood",
+      "Regulate heartbeat | हृदय की धड़कन को नियंत्रित करना",
+      "Digest fat",
+      "Store oxygen"
+    ],
+    "a": 1,
+    "e": "A pacemaker is a small device that's placed under the skin to help control the heartbeat. / पेसमेकर एक छोटा उपकरण है जिसे दिल की धड़कन को नियंत्रित करने में मदद करने के लिए त्वचा के नीचे रखा जाता है।"
+  },
+  {
+    "qe": "हृदय के किस चेंबर की मांसपेशी दीवारें सबसे मोटी होती हैं?",
+    "qh": "Which chamber of the heart has the thickest muscular walls?",
+    "o": [
+      "Right Atrium",
+      "Right Ventricle",
+      "Left Atrium",
+      "Left Ventricle | बायां नीलय"
+    ],
+    "a": 3,
+    "e": "The left ventricle needs the most muscle to pump blood to the entire body. / बाएं नीलय को पूरे शरीर में रक्त पंप करने के लिए सबसे अधिक मांसपेशियों की आवश्यकता होती है।"
+  },
+  {
+    "qe": "हृदय के अध्ययन को क्या कहा जाता है?",
+    "qh": "What is the study of the heart called?",
+    "o": [
+      "Neurology",
+      "Cardiology | कार्डियोलॉजी",
+      "Hepatology",
+      "Osteology"
+    ],
+    "a": 1,
+    "e": "Cardiology is a branch of medicine that deals with disorders of the heart. / कार्डियोलॉजी चिकित्सा की एक शाखा है जो हृदय के विकारों से संबंधित है।"
+  },
+  {
+    "qe": "हृदय रोगियों के लिए कौन सी चिकित्सा इकाई 24 घंटे निगरानी प्रदान करती है?",
+    "qh": "Which medical unit provides 24-hour monitoring for heart patients?",
+    "o": [
+      "ICU",
+      "CCU (Cardiac Care Unit) | सीसीयू",
+      "OPD",
+      "General Ward"
+    ],
+    "a": 1,
+    "e": "CCU is a specialized hospital ward for people with serious or unstable heart conditions. / सीसीयू गंभीर या अस्थिर हृदय स्थिति वाले लोगों के लिए एक विशेष अस्पताल वार्ड है।"
+  },
+  {
+    "qe": "हृदय की दीवार कितनी 'परतों' से बनी होती है?",
+    "qh": "How many 'Layers' make up the heart wall?",
+    "o": [
+      "2",
+      "3 | 3",
+      "4",
+      "5"
+    ],
+    "a": 1,
+    "e": "The heart wall consists of the Epicardium, Myocardium, and Endocardium. / हृदय की दीवार एपिकार्डियम, मायोकार्डियम और एंडोकार्डियम से बनी होती है।"
+  },
+  {
+    "qe": "बैलून-टिप वाले कैथेटर के साथ एक अवरुद्ध धमनी को खोलने की प्रक्रिया ____ है।",
+    "qh": "The procedure of opening a blocked artery with a balloon-tipped catheter is ____.",
+    "o": [
+      "Biopsy",
+      "Angioplasty | एंजियोप्लास्टी",
+      "Dialysis",
+      "X-ray"
+    ],
+    "a": 1,
+    "e": "Angioplasty is a procedure to restore blood flow through the artery. / एंजियोप्लास्टी धमनी के माध्यम से रक्त प्रवाह को बहाल करने की एक प्रक्रिया है।"
+  },
+  {
+    "qe": "ऑक्सीजन रहित (CO2 युक्त) रक्त शरीर से हृदय में कहाँ प्रवेश करता है?",
+    "qh": "Where does deoxygenated (CO2-rich) blood enter the heart from the body?",
+    "o": [
+      "Left Atrium",
+      "Right Atrium | दायां अलिंद",
+      "Left Ventricle",
+      "Aorta"
+    ],
+    "a": 1,
+    "e": "The Right Atrium receives deoxygenated blood from the body through the Vena Cava. / दायां अलिंद महाशिरा के माध्यम से शरीर से अशुद्ध रक्त प्राप्त करता है।"
+  },
+  {
+    "qe": "कौन सी वाहिका हृदय से फेफड़ों तक रक्त ले जाती है?",
+    "qh": "Which vessel carries blood from the heart to the lungs?",
+    "o": [
+      "Aorta",
+      "Pulmonary Artery | फुफ्फुस धमनी",
+      "Pulmonary Vein",
+      "Jugular vein"
+    ],
+    "a": 1,
+    "e": "The pulmonary artery is the only artery that carries deoxygenated blood (to the lungs). / फुफ्फुस धमनी एकमात्र ऐसी धमनी है जो अशुद्ध रक्त (फेफड़ों तक) ले जाती है।"
+  },
+  {
+    "qe": "शिराओं में वाल्व मौजूद होते हैं क्योंकि ____।",
+    "qh": "Valves in the veins are present because ____.",
+    "o": [
+      "Blood pressure is high",
+      "Pressure is low and blood might flow back | दबाव कम है और रक्त वापस बह सकता है",
+      "To clean blood",
+      "To add oxygen"
+    ],
+    "a": 1,
+    "e": "Veins have valves to ensure that blood continues to flow toward the heart even at low pressure. / कम दबाव पर भी रक्त हृदय की ओर बहता रहे, यह सुनिश्चित करने के लिए शिराओं में वाल्व होते हैं।"
+  },
+  {
+    "qe": "'सेप्टम' (Septum) शब्द का तात्पर्य किससे है?",
+    "qh": "The term 'Septum' refers to ____.",
+    "o": [
+      "Heart attack",
+      "Wall separating heart chambers | हृदय के चेंबरों को अलग करने वाली दीवार",
+      "A type of valve",
+      "A heart disease"
+    ],
+    "a": 1,
+    "e": "The septum is the muscular wall that separates the left and right sides of the heart. / सेप्टम वह मांसपेशी दीवार है जो हृदय के बाएं और दाएं पक्षों को अलग करती।"
+  },
+  {
+    "qe": "हृदय प्रक्रियाओं के लिए कैथेटर प्रवेश कराने के लिए शरीर के किस भाग का अक्सर उपयोग किया जाता है?",
+    "qh": "Which part of the body is often used to enter a catheter for heart procedures?",
+    "o": [
+      "Neck",
+      "Groin/Thigh | जांघ",
+      "Head",
+      "Chest"
+    ],
+    "a": 1,
+    "e": "The femoral artery in the thigh is a common entry point for cardiac catheters. / जांघ में ऊरु धमनी कार्डियक कैथेटर के लिए एक सामान्य प्रवेश बिंदु है।"
+  },
+  {
+    "qe": "एक स्वस्थ मानव में सामान्य सिस्टोलिक/डायस्टोलिक रक्तचाप क्या है?",
+    "qh": "What is the normal systolic/diastolic blood pressure in a healthy human?",
+    "o": [
+      "80/120",
+      "120/80 | 120/80",
+      "100/50",
+      "150/90"
+    ],
+    "a": 1,
+    "e": "120 mmHg is the pumping pressure and 80 mmHg is the returning pressure. / 120 mmHg पंपिंग प्रेशर है और 80 mmHg लौटने वाला प्रेशर है।"
+  },
+  {
+    "qe": "सबसे छोटी रक्त वाहिकाएं जहां गैस विनिमय होता है, ____ हैं।",
+    "qh": "The smallest blood vessels where gas exchange occurs are ____.",
+    "o": [
+      "Arteries",
+      "Veins",
+      "Capillaries | केशिकाएं",
+      "Aorta"
+    ],
+    "a": 2,
+    "e": "Capillaries are tiny, thin-walled vessels that facilitate the exchange of gases and nutrients. / केशिकाएं छोटी, पतली दीवार वाली वाहिकाएं होती हैं जो गैसों और पोषक तत्वों के विनिमय की सुविधा प्रदान करती हैं।"
+  },
+  {
+    "qe": "मजबूती और सुरक्षा के लिए मानव हृदय में कितनी 'परतें' (Layers) होती हैं?",
+    "qh": "How many 'Layers' does the human heart have for protection and strength?",
+    "o": [
+      "2",
+      "3 | 3",
+      "4",
+      "5"
+    ],
+    "a": 1,
+    "e": "The heart has 3 layers: Epicardium, Myocardium, and Endocardium. / हृदय की तीन परतें होती हैं: एपिकार्डियम, मायोकार्डियम और एंडोकार्डियम।"
+  },
+  {
+    "qe": "कार्यप्रणाली के लिए मानव हृदय में कितने 'चेंबर' (कोष्ठक) होते हैं?",
+    "qh": "How many 'Chambers' are there in a human heart for its functioning?",
+    "o": [
+      "2",
+      "3",
+      "4 | 4",
+      "13"
+    ],
+    "a": 2,
+    "e": "Humans have a 4-chambered heart consisting of two atria and two ventricles. / मनुष्यों में 4 चेंबर वाला हृदय होता है जिसमें दो अलिंद और दो नीलय होते हैं।"
+  },
+  {
+    "qe": "हृदय का कौन सा भाग शरीर या फेफड़ों से रक्त 'प्राप्त' करने के लिए जिम्मेदार है?",
+    "qh": "Which part of the heart is responsible for 'Receiving' blood from the body or lungs?",
+    "o": [
+      "Ventricle",
+      "Atrium | अलिंद",
+      "Aorta",
+      "Valve"
+    ],
+    "a": 1,
+    "e": "Atria (upper chambers) are receiving chambers, while ventricles are pumping chambers. / अलिंद (ऊपरी कक्ष) रक्त प्राप्त करने वाले कक्ष हैं, जबकि नीलय पंप करने वाले कक्ष हैं।"
+  },
+  {
+    "qe": "हृदय का कौन सा भाग अधिक मांसल होता है और रक्त को 'पंप' करने के लिए जिम्मेदार है?",
+    "qh": "Which part of the heart is more muscular and responsible for 'Pumping' blood?",
+    "o": [
+      "Atrium",
+      "Ventricle | नीलय",
+      "Septum",
+      "Vena Cava"
+    ],
+    "a": 1,
+    "e": "Ventricles need more muscle thickness to generate pressure for pumping blood. / नीलय को रक्त पंप करने के लिए दबाव उत्पन्न करने हेतु अधिक मांसपेशियों की आवश्यकता होती है।"
+  },
+  {
+    "qe": "शरीर से फेफड़ों तक रक्त प्रवाह का सही क्रम क्या है?",
+    "qh": "What is the correct sequence of blood flow from the body to the lungs?",
+    "o": [
+      "Body -> Left Atrium -> Left Ventricle -> Lungs",
+      "Body -> Right Atrium -> Right Ventricle -> Lungs | शरीर -> दायां अलिंद -> दायां नीलय -> फेफड़े",
+      "Lungs -> Right Atrium -> Body",
+      "Body -> Ventricle -> Atrium"
+    ],
+    "a": 1,
+    "e": "Deoxygenated blood enters the Right Atrium, moves to the Right Ventricle, and is pumped to the Lungs. / अशुद्ध रक्त दाएं अलिंद में प्रवेश करता है, दाएं नीलय में जाता है और फिर फेफड़ों में पंप किया जाता है।"
+  },
+  {
+    "qe": "हृदय का कौन सा चेंबर 'पूरे शरीर' में ऑक्सीजन युक्त रक्त पंप करता है?",
+    "qh": "Which chamber of the heart pumps oxygenated blood to the 'Entire Body'?",
+    "o": [
+      "Right Atrium",
+      "Right Ventricle",
+      "Left Atrium",
+      "Left Ventricle | बायां नीलय"
+    ],
+    "a": 3,
+    "e": "The Left Ventricle pumps blood to the whole body through the aorta at 120 mmHg pressure. / बायां नीलय महाधमनी के माध्यम से 120 mmHg के दबाव पर पूरे शरीर में रक्त पंप करता है।"
+  },
+  {
+    "qe": "मानव शरीर की सबसे बड़ी और सबसे मोटी धमनी कौन सी है?",
+    "qh": "Which is the largest and thickest artery in the human body?",
+    "o": [
+      "Pulmonary Artery",
+      "Aorta (Mahadhamani) | महाधमनी",
+      "Renal Artery",
+      "Carotid Artery"
+    ],
+    "a": 1,
+    "e": "The Aorta is the main and largest artery that carries blood from the Left Ventricle to the body. / महाधमनी मुख्य और सबसे बड़ी धमनी है जो बाएं नीलय से शरीर तक रक्त ले जाती है।"
+  },
+  {
+    "qe": "किस संरचना में ऑक्सीजन युक्त और ऑक्सीजन रहित रक्त अंततः मिलते/बदलते हैं?",
+    "qh": "In which structure do oxygenated and deoxygenated blood finally meet/exchange?",
+    "o": [
+      "Artery",
+      "Vein",
+      "Capillary | केशिका",
+      "Heart"
+    ],
+    "a": 2,
+    "e": "Capillaries are microscopic vessels where gas exchange occurs at the tissue level. / केशिकाएं सूक्ष्म वाहिकाएं हैं जहां ऊतक स्तर पर गैस विनिमय होता है।"
+  },
+  {
+    "qe": "कौन सी रक्त वाहिका हृदय से फेफड़ों तक रक्त ले जाती है?",
+    "qh": "Which blood vessel carries blood from the Heart to the Lungs?",
+    "o": [
+      "Aorta",
+      "Pulmonary Artery | फुफ्फुस धमनी",
+      "Pulmonary Vein",
+      "Vena Cava"
+    ],
+    "a": 1,
+    "e": "The Pulmonary Artery carries deoxygenated blood to the lungs. / फुफ्फुस धमनी अशुद्ध रक्त को फेफड़ों तक ले जाती है।"
+  },
+  {
+    "qe": "मानव आँख के सफेद भाग में दिखाई देने वाली पतली वाहिकाएं ____ हैं।",
+    "qh": "The thin vessels visible in the white part of the human eye are ____.",
+    "o": [
+      "Arteries",
+      "Veins",
+      "Capillaries | केशिकाएं",
+      "Nerves"
+    ],
+    "a": 2,
+    "e": "Fine capillaries are responsible for the blood supply to the surface of the eye. / आँख की सतह पर रक्त की आपूर्ति के लिए बारीक केशिकाएं जिम्मेदार होती हैं।"
+  },
+  {
+    "qe": "रक्त के अध्ययन को क्या कहा जाता है?",
+    "qh": "What is the study of blood called?",
+    "o": [
+      "Osteology",
+      "Hematology | हेमेटोलॉजी",
+      "Angiology",
+      "Cytology"
+    ],
+    "a": 1,
+    "e": "Hematology is the branch of medicine concerned with the study of blood. / हेमेटोलॉजी चिकित्सा की वह शाखा है जो रक्त के अध्ययन से संबंधित है।"
+  },
+  {
+    "qe": "शिराओं में 'वाल्व' क्यों होते हैं जबकि धमनियों में नहीं?",
+    "qh": "Why do veins have 'Valves' while arteries do not?",
+    "o": [
+      "To increase pressure",
+      "To prevent backflow due to low pressure | कम दबाव के कारण पीछे के बहाव को रोकने के लिए",
+      "To filter blood",
+      "To add oxygen"
+    ],
+    "a": 1,
+    "e": "Low pressure (80 mmHg) in veins requires valves to keep blood moving toward the heart. / शिराओं में कम दबाव होने के कारण रक्त को हृदय की ओर ले जाने के लिए वाल्वों की आवश्यकता होती है।"
+  },
+  {
+    "qe": "कौन सा तरल पदार्थ लीक हुए पोषक तत्वों/तरल को वापस शिराओं में लौटाता है?",
+    "qh": "Which fluid returns escaped nutrients/fluid back to the veins?",
+    "o": [
+      "Bile",
+      "Plasma",
+      "Lymph | लसिका",
+      "Urine"
+    ],
+    "a": 2,
+    "e": "Lymph collects interstitial fluid and returns it to the blood circulation. / लसिका ऊतक द्रव को इकट्ठा करती है और उसे रक्त परिसंचरण में वापस लौटाती है।"
+  },
+  {
+    "qe": "मनुष्यों में 'रक्त परिसंचरण तंत्र' की खोज किसने की थी?",
+    "qh": "Who discovered the 'Blood Circulatory System' in humans?",
+    "o": [
+      "Robert Hooke",
+      "William Harvey | विलियम हार्वे",
+      "Karl Landsteiner",
+      "Watson"
+    ],
+    "a": 1,
+    "e": "William Harvey was the first to describe the systemic circulation of blood. / विलियम हार्वे ने सबसे पहले रक्त परिसंचरण की व्याख्या की थी।"
+  },
+  {
+    "qe": "मनुष्यों में किस प्रकार का परिसंचरण तंत्र पाया जाता है?",
+    "qh": "Which type of circulatory system is found in humans?",
+    "o": [
+      "Open",
+      "Closed | बंद परिसंचरण तंत्र",
+      "Mixed",
+      "None"
+    ],
+    "a": 1,
+    "e": "In humans, blood flows inside sealed vessels (arteries and veins), which is a closed system. / मनुष्यों में रक्त बंद नलिकाओं (धमनी और शिरा) में बहता है, जिसे बंद तंत्र कहते हैं।"
+  },
+  {
+    "qe": "मनुष्यों में रक्त के जाने (पंप) और आने का सामान्य दबाव कितना होता है?",
+    "qh": "What is the normal blood pressure during pumping and returning in humans?",
+    "o": [
+      "80/120",
+      "120/80 | 120/80",
+      "100/50",
+      "150/90"
+    ],
+    "a": 1,
+    "e": "Systolic pressure is 120 mmHg (pumping) and diastolic is 80 mmHg (returning). / सिस्टोलिक दबाव 120 (पंपिंग) और डायस्टोलिक 80 (लौटना) होता है।"
+  },
+  {
+    "qe": "कौन सी रक्त वाहिका हृदय से शरीर तक शुद्ध ऑक्सीजन युक्त रक्त ले जाती है?",
+    "qh": "Which blood vessel carries pure oxygenated blood from the heart to the body?",
+    "o": [
+      "Vein",
+      "Artery | धमनी",
+      "Capillary",
+      "Lymph"
+    ],
+    "a": 1,
+    "e": "Arteries carry oxygen-rich blood away from the heart at high pressure. / धमनियां उच्च दबाव पर हृदय से ऑक्सीजन युक्त रक्त ले जाती हैं।"
+  },
+  {
+    "qe": "कम दबाव के कारण रक्त को वापस लौटने से रोकने के लिए 'वाल्व' कहाँ पाया जाता है?",
+    "qh": "Where is the 'Valve' found to prevent the backflow of blood due to low pressure?",
+    "o": [
+      "Artery",
+      "Vein | शिरा",
+      "Capillary",
+      "Aorta"
+    ],
+    "a": 1,
+    "e": "Veins have valves because blood flows at a lower pressure (80) and may flow backward. / शिराओं में वाल्व होते हैं क्योंकि रक्त कम दबाव पर बहता है और वापस लौट सकता है।"
+  },
+  {
+    "qe": "एकमात्र ऐसी धमनी कौन सी है जो अशुद्ध (CO2 युक्त) रक्त ले जाती है?",
+    "qh": "Which is the ONLY artery that carries deoxygenated (impure) blood?",
+    "o": [
+      "Aorta",
+      "Pulmonary Artery | फुफ्फुस धमनी",
+      "Renal Artery",
+      "Hepatic Artery"
+    ],
+    "a": 1,
+    "e": "The pulmonary artery carries blood from the heart to the lungs for purification. / फुफ्फुस धमनी हृदय से फेफड़ों तक अशुद्ध रक्त ले जाती है।"
+  },
+  {
+    "qe": "एकमात्र ऐसी शिरा कौन सी है जो शुद्ध (ऑक्सीजन युक्त) रक्त ले जाती है?",
+    "qh": "Which is the ONLY vein that carries oxygenated (pure) blood?",
+    "o": [
+      "Vena Cava",
+      "Pulmonary Vein | फुफ्फुस शिरा",
+      "Jugular Vein",
+      "Portal Vein"
+    ],
+    "a": 1,
+    "e": "The pulmonary vein brings oxygen-rich blood from the lungs back to the heart. / फुफ्फुस शिरा फेफड़ों से ऑक्सीजन युक्त रक्त वापस हृदय में लाती है।"
+  },
+  {
+    "qe": "सबसे पतली रक्त वाहिका कौन सी है जहाँ गैसों का आदान-प्रदान होता है?",
+    "qh": "What is the thinnest blood vessel where exchange of gases takes place?",
+    "o": [
+      "Artery",
+      "Vein",
+      "Capillary | केशिका",
+      "Lymph"
+    ],
+    "a": 2,
+    "e": "Capillaries are microscopic vessels where arteries and veins meet. / केशिकाएं सूक्ष्म वाहिकाएं हैं जहां धमनियां और शिराएं मिलती हैं।"
+  },
+  {
+    "qe": "रक्त वाहिकाओं के बाहर लीक हुए पोषक तत्वों को कौन इकट्ठा करता है और कीटाणुओं से लड़ता है?",
+    "qh": "Which fluid collects leaked nutrients and fights germs outside the blood vessels?",
+    "o": [
+      "Plasma",
+      "Bile",
+      "Lymph | लसिका",
+      "Urine"
+    ],
+    "a": 2,
+    "e": "Lymph acts as a secondary system that filters bacteria and returns fluid to the veins. / लसिका एक द्वितीयक तंत्र है जो बैक्टीरिया को छानता है और तरल को शिराओं में वापस लाता है।"
+  },
+  {
+    "qe": "मानव हृदय में कितने 'चेंबर' (कोष्ठक) होते हैं?",
+    "qh": "How many 'Chambers' are there in a human heart?",
+    "o": [
+      "2",
+      "3",
+      "4 | 4",
+      "1"
+    ],
+    "a": 2,
+    "e": "The human heart has 4 chambers: two atria and two ventricles. / मानव हृदय में 4 चेंबर होते हैं: दो अलिंद और दो नीलय।"
+  },
+  {
+    "qe": "हृदय का कौन सा भाग रक्त को 'प्राप्त' (Receive) करने के लिए जिम्मेदार है?",
+    "qh": "Which part of the heart is responsible for 'Receiving' blood?",
+    "o": [
+      "Ventricle",
+      "Atrium | अलिंद",
+      "Valve",
+      "Septum"
+    ],
+    "a": 1,
+    "e": "Atria (upper chambers) receive blood from the body and lungs. / अलिंद (ऊपरी चेंबर) शरीर और फेफड़ों से रक्त प्राप्त करते हैं।"
+  },
+  {
+    "qe": "हृदय का कौन सा भाग रक्त को बाहर 'पंप' करने के लिए जिम्मेदार है?",
+    "qh": "Which part of the heart is responsible for 'Pumping' blood out?",
+    "o": [
+      "Atrium",
+      "Ventricle | नीलय",
+      "Aorta",
+      "Vena Cava"
+    ],
+    "a": 1,
+    "e": "Ventricles (lower chambers) pump blood to the lungs and the rest of the body. / नीलय (निचले चेंबर) फेफड़ों और शरीर के बाकी हिस्सों में रक्त पंप करते हैं।"
+  },
+  {
+    "qe": "अलिंद और नीलय में से कौन अधिक मांसल और मजबूत होता है?",
+    "qh": "Which is more muscular and stronger: Atrium or Ventricle?",
+    "o": [
+      "Atrium",
+      "Ventricle | नीलय",
+      "Both are same",
+      "None"
+    ],
+    "a": 1,
+    "e": "Ventricles need more strength to pump blood over long distances. / नीलय को लंबी दूरी तक रक्त पंप करने के लिए अधिक शक्ति की आवश्यकता होती है।"
+  },
+  {
+    "qe": "'लसिका गांठें' (जहाँ कीटाणुओं से लड़ा जाता है) मुख्य रूप से कहाँ स्थित होती हैं?",
+    "qh": "Where are the 'Lymph Nodes' (where germs are fought) primarily located?",
+    "o": [
+      "Inside Arteries",
+      "At junctions of lymph vessels | लसिका वाहिकाओं के जंक्शन पर",
+      "Inside the Heart",
+      "In the Lungs"
+    ],
+    "a": 1,
+    "e": "Lymph nodes are located along lymph vessels and act as filters for pathogens. / लसिका गांठें वाहिकाओं के साथ स्थित होती हैं और रोगजनकों के लिए फिल्टर का काम करती हैं।"
+  },
+  {
+    "qe": "मस्तिष्क में 'रक्तस्राव' (Hemorrhage) किसके फटने से होता है?",
+    "qh": "A 'Hemorrhage' in the brain is caused by the bursting of ____.",
+    "o": [
+      "Large Arteries",
+      "Capillaries | केशिकाएं",
+      "Nerves only",
+      "Bones"
+    ],
+    "a": 1,
+    "e": "Bursting of thin capillaries in the brain leads to internal bleeding (stroke). / मस्तिष्क में पतली केशिकाओं के फटने से आंतरिक रक्तस्राव होता है।"
+  },
+  {
+    "qe": "मनुष्यों में 'रक्त परिसंचरण तंत्र' की खोज किसने की थी?",
+    "qh": "Who discovered the 'Blood Circulatory System' in humans?",
+    "o": [
+      "Robert Hooke",
+      "William Harvey | विलियम हार्वे",
+      "Karl Landsteiner",
+      "Watson"
+    ],
+    "a": 1,
+    "e": "William Harvey was the first to describe the systemic circulation of blood in the human body. / विलियम हार्वे मानव शरीर में रक्त के व्यवस्थित परिसंचरण का वर्णन करने वाले पहले व्यक्ति थे।"
+  },
+  {
+    "qe": "रक्त परिसंचरण तंत्र के अध्ययन को क्या कहा जाता है?",
+    "qh": "What is the study of the blood circulatory system called?",
+    "o": [
+      "Hematology",
+      "Angiology | एंजियोलॉजी",
+      "Oncology",
+      "Myology"
+    ],
+    "a": 1,
+    "e": "Angiology is the study of the circulatory system and the lymphatic system. / एंजियोलॉजी परिसंचरण तंत्र और लसिका तंत्र का अध्ययन है।"
+  },
+  {
+    "qe": "कौन सी रक्त वाहिका हृदय से शरीर के अंगों तक ऑक्सीजन युक्त रक्त ले जाती है?",
+    "qh": "Which blood vessel carries oxygenated blood from the heart to the body parts?",
+    "o": [
+      "Vein",
+      "Artery | धमनी",
+      "Capillary",
+      "Lymph"
+    ],
+    "a": 1,
+    "e": "Arteries carry oxygen-rich blood away from the heart at high pressure (120 mmHg). / धमनियां उच्च दाब (120 mmHg) पर हृदय से ऑक्सीजन युक्त रक्त ले जाती हैं।"
+  },
+  {
+    "qe": "कौन सी रक्त वाहिका ऑक्सीजन रहित (CO2 युक्त) रक्त को वापस हृदय में लाती है?",
+    "qh": "Which blood vessel returns deoxygenated blood (CO2-rich) back to the heart?",
+    "o": [
+      "Artery",
+      "Vein | शिरा",
+      "Capillary",
+      "Nerve"
+    ],
+    "a": 1,
+    "e": "Veins carry CO2-rich blood back to the heart at a lower pressure (80 mmHg). / शिराएं कम दाब (80 mmHg) पर CO2 युक्त रक्त को वापस हृदय में ले जाती हैं।"
+  },
+  {
+    "qe": "धमनियों और शिराओं के मिलने वाले स्थान पर सबसे पतली रक्त वाहिकाओं को क्या कहा जाता है?",
+    "qh": "The thinnest blood vessels where arteries and veins meet are called ____.",
+    "o": [
+      "Aorta",
+      "Capillaries | केशिकाएं",
+      "Vena Cava",
+      "Lymph nodes"
+    ],
+    "a": 1,
+    "e": "Capillaries are tiny vessels where gas and nutrient exchange occurs between blood and tissues. / केशिकाएं छोटी वाहिकाएं होती हैं जहां रक्त और ऊतकों के बीच गैस और पोषक तत्वों का आदान-प्रदान होता है।"
+  },
+  {
+    "qe": "कौन सा तरल पदार्थ लीक हुए रक्त और पोषक तत्वों को इकट्ठा कर वापस शिराओं में मिलाता है?",
+    "qh": "Which fluid collects leaked blood and nutrients to return them to the veins?",
+    "o": [
+      "Plasma",
+      "Lymph | लसिका",
+      "Bile",
+      "Mucus"
+    ],
+    "a": 1,
+    "e": "Lymph acts as a secondary circulatory system, returning leaked fluids to the bloodstream. / लसिका एक द्वितीयक परिसंचरण तंत्र के रूप में कार्य करती है, जो लीक हुए तरल पदार्थों को रक्तप्रवाह में वापस लाती है।"
+  },
+  {
+    "qe": "'लसिका गांठों' (Lymph Nodes) का प्राथमिक कार्य क्या है?",
+    "qh": "What is the primary function of 'Lymph Nodes' (लसिका गांठें)?",
+    "o": [
+      "Pump blood",
+      "Filter pathogens/bacteria | कीटाणुओं/बैक्टीरिया को छानना",
+      "Store fat",
+      "Produce oxygen"
+    ],
+    "a": 1,
+    "e": "Lymph nodes trap and destroy bacteria and viruses to protect the body from infection. / लसिका गांठें शरीर को संक्रमण से बचाने के लिए बैक्टीरिया और वायरस को पकड़ती और नष्ट करती हैं।"
+  },
+  {
+    "qe": "मनुष्यों में किस प्रकार का परिसंचरण तंत्र पाया जाता है?",
+    "qh": "Humans have which type of circulatory system?",
+    "o": [
+      "Open",
+      "Closed | बंद परिसंचरण तंत्र",
+      "Mixed",
+      "None"
+    ],
+    "a": 1,
+    "e": "In a closed system, blood flows through a network of vessels (arteries/veins) under pressure. / एक बंद तंत्र में, रक्त दबाव में वाहिकाओं (धमनियों/शिराओं) के नेटवर्क के माध्यम से बहता है।"
+  },
+  {
+    "qe": "मनुष्यों में 'परिसंचरण तंत्र' की खोज किसने की थी?",
+    "qh": "Who discovered the 'Circulatory System' in humans?",
+    "o": [
+      "Robert Hooke",
+      "William Harvey | विलियम हार्वे",
+      "Aristotle",
+      "Karlsberg"
+    ],
+    "a": 1,
+    "e": "William Harvey was the first to describe the systemic circulation of blood. / विलियम हार्वे रक्त के व्यवस्थित परिसंचरण का वर्णन करने वाले पहले व्यक्ति थे।"
+  },
+  {
+    "qe": "रक्त को लाल रंग कौन सा वर्णक देता है और ऑक्सीजन का परिवहन करता है?",
+    "qh": "Which pigment gives the red color to blood and carries oxygen?",
+    "o": [
+      "Melanin",
+      "Hemocyanin",
+      "Hemoglobin | हीमोग्लोबिन",
+      "Chlorophyll"
+    ],
+    "a": 2,
+    "e": "Hemoglobin is an iron-rich protein in RBCs that binds with oxygen. / हीमोग्लोबिन आरबीसी में एक आयरन युक्त प्रोटीन है जो ऑक्सीजन के साथ जुड़ता है।"
+  },
+  {
+    "qe": "रक्त में कौन सा घटक संक्रमण से लड़ने के लिए जिम्मेदार है?",
+    "qh": "Which component in the blood is responsible for fighting infections?",
+    "o": [
+      "RBC",
+      "WBC | डब्ल्यूबीसी",
+      "Platelets",
+      "Hemoglobin"
+    ],
+    "a": 1,
+    "e": "White Blood Cells are the defense system of our body. / सफेद रक्त कोशिकाएं हमारे शरीर की रक्षा प्रणाली हैं।"
+  },
+  {
+    "qe": "रक्त में कौन सा वर्णक ऑक्सीजन ले जाने के लिए जिम्मेदार है?",
+    "qh": "Which pigment in the blood is responsible for carrying oxygen?",
+    "o": [
+      "Melanin",
+      "Chlorophyll",
+      "Hemoglobin | हीमोग्लोबिन",
+      "Bilirubin"
+    ],
+    "a": 2,
+    "e": "Hemoglobin binds with oxygen to transport it to cells. / हीमोग्लोबिन कोशिकाओं तक ले जाने के लिए ऑक्सीजन के साथ जुड़ता है।"
+  },
+  {
+    "qe": "ऑक्सीजन युक्त हीमोग्लोबिन के लिए क्या शब्द है?",
+    "qh": "What is the term for oxygen-rich hemoglobin?",
+    "o": [
+      "Carboxyhemoglobin",
+      "Oxyhemoglobin | ऑक्सीहीमोग्लोबिन",
+      "Methemoglobin",
+      "Plasma"
+    ],
+    "a": 1,
+    "e": "Oxygen binds to hemoglobin to form oxyhemoglobin during transport. / परिवहन के दौरान ऑक्सीजन हीमोग्लोबिन से जुड़कर ऑक्सीहीमोग्लोबिन बनाती है।"
+  },
+  {
+    "qe": "रक्त में कौन सा अणु कोशिकाओं तक ऑक्सीजन पहुँचाता है?",
+    "qh": "Which molecule in the blood transports oxygen to the cells?",
+    "o": [
+      "WBC",
+      "Hemoglobin | हीमोग्लोबिन",
+      "Platelets",
+      "Plasma"
+    ],
+    "a": 1,
+    "e": "Hemoglobin binds with oxygen to form oxyhemoglobin and carries it through the blood. / हीमोग्लोबिन ऑक्सीजन के साथ मिलकर ऑक्सीहीमोग्लोबिन बनाता है और उसे रक्त के माध्यम से ले जाता है।"
+  },
+  {
+    "qe": "हड्डी का कौन सा भाग रक्त कोशिकाओं (RBC/WBC) के निर्माण के लिए जिम्मेदार है?",
+    "qh": "Which part of the bone is responsible for producing blood cells (RBC/WBC)?",
+    "o": [
+      "Cartilage",
+      "Bone Marrow | अस्थि मज्जा",
+      "Osteoblast",
+      "Ligament"
+    ],
+    "a": 1,
+    "e": "Blood cells are synthesized in the red bone marrow. / रक्त कोशिकाओं का संश्लेषण लाल अस्थि मज्जा में होता है।"
+  },
+  {
+    "qe": "रक्त (Blood) को किस प्रकार के ऊतक के रूप में वर्गीकृत किया गया है?",
+    "qh": "Which type of tissue is Blood classified as?",
+    "o": [
+      "Nervous tissue",
+      "Connective tissue | संयोजी ऊतक",
+      "Muscular tissue",
+      "Epithelial tissue"
+    ],
+    "a": 1,
+    "e": "Blood is a fluid connective tissue because it connects all parts of the body. / रक्त एक तरल संयोजी ऊतक है क्योंकि यह शरीर के सभी अंगों को जोड़ता है।"
+  },
+  {
+    "qe": "वायरस और बैक्टीरिया जैसे बाहरी रोगजनकों से हमारे शरीर की रक्षा कौन करता है?",
+    "qh": "What protects our body against foreign pathogens like viruses and bacteria?",
+    "o": [
+      "Hormones",
+      "Antibodies | एंटीबॉडी",
+      "Enzymes",
+      "Red Blood Cells"
+    ],
+    "a": 1,
+    "e": "Antibodies are proteins produced by the immune system to neutralize pathogens. / एंटीबॉडी रोगजनकों को बेअसर करने के लिए प्रतिरक्षा प्रणाली द्वारा बनाए गए प्रोटीन हैं।"
+  },
+  {
+    "qe": "Which mineral is essential for the synthesis of Hemoglobin in the blood?",
+    "qh": "",
+    "o": [
+      "Calcium",
+      "Iron",
+      "Magnesium",
+      "Iodine"
+    ],
+    "a": 1,
+    "e": "Iron is a core component of the heme group in hemoglobin, which carries oxygen in the blood."
+  },
+  {
+    "qe": "What is the normal pH of human blood?",
+    "qh": "",
+    "o": [
+      "6.4",
+      "7.0",
+      "7.4",
+      "8.2"
+    ],
+    "a": 2,
+    "e": "Human blood is slightly alkaline, maintained precisely between 7.35 and 7.45."
+  },
+  {
+    "qe": "Which protein in the plasma is primarily responsible for 'Osmotic Balance'?",
+    "qh": "",
+    "o": [
+      "Fibrinogen",
+      "Albumin",
+      "Globulin",
+      "Hemoglobin"
+    ],
+    "a": 1,
+    "e": "Albumin prevents water from leaking out of blood vessels into surrounding tissues."
+  },
+  {
+    "qe": "The process of formation of Red Blood Cells (RBCs) is called:",
+    "qh": "",
+    "o": [
+      "Hemolysis",
+      "Erythropoiesis",
+      "Leukopoiesis",
+      "Thrombopoiesis"
+    ],
+    "a": 1,
+    "e": "Erythropoiesis occurs in the red bone marrow and is stimulated by the hormone erythropoietin."
+  },
+  {
+    "qe": "Which mineral is located at the center of the Hemoglobin molecule?",
+    "qh": "",
+    "o": [
+      "Magnesium",
+      "Iron (Fe2+)",
+      "Copper",
+      "Calcium"
+    ],
+    "a": 1,
+    "e": "Each heme group contains one iron atom in the ferrous state (Fe2+) which binds to one oxygen molecule."
+  },
+  {
+    "qe": "What is the average lifespan of a human Red Blood Cell?",
+    "qh": "",
+    "o": [
+      "10 days",
+      "120 days",
+      "200 days",
+      "5 days"
+    ],
+    "a": 1,
+    "e": "After 120 days, old RBCs become fragile and are destroyed in the spleen and liver."
+  },
+  {
+    "qe": "Which organ is known as the 'Graveyard of RBCs'?",
+    "qh": "",
+    "o": [
+      "Liver",
+      "Bone Marrow",
+      "Spleen",
+      "Kidney"
+    ],
+    "a": 2,
+    "e": "The spleen filters out old, damaged red blood cells from the circulation."
+  },
+  {
+    "qe": "A mature human RBC is 'Enucleated'. What does this mean?",
+    "qh": "",
+    "o": [
+      "It has two nuclei",
+      "It lacks a nucleus",
+      "The nucleus is very large",
+      "It has a circular nucleus"
+    ],
+    "a": 1,
+    "e": "Lacking a nucleus provides more space for hemoglobin, allowing the cell to carry more oxygen."
+  },
+  {
+    "qe": "Which type of White Blood Cell (WBC) is the most numerous in a healthy human?",
+    "qh": "",
+    "o": [
+      "Monocytes",
+      "Lymphocytes",
+      "Neutrophils",
+      "Eosinophils"
+    ],
+    "a": 2,
+    "e": "Neutrophils make up about 60-70% of total WBCs and are the first responders to infection."
+  },
+  {
+    "qe": "Which WBCs are responsible for producing 'Antibodies'?",
+    "qh": "",
+    "o": [
+      "T-Lymphocytes",
+      "B-Lymphocytes",
+      "Basophils",
+      "Monocytes"
+    ],
+    "a": 1,
+    "e": "B-cells transform into plasma cells which secrete antibodies to fight specific pathogens."
+  },
+  {
+    "qe": "Which vitamin is essential for the synthesis of clotting factors in the liver?",
+    "qh": "",
+    "o": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin K",
+      "Vitamin E"
+    ],
+    "a": 2,
+    "e": "Vitamin K is a co-factor for the enzyme that activates prothrombin and other clotting factors."
+  },
+  {
+    "qe": "The 'Universal Donor' blood group is:",
+    "qh": "",
+    "o": [
+      "A positive",
+      "B negative",
+      "O negative",
+      "AB positive"
+    ],
+    "a": 2,
+    "e": "O-negative blood lacks A, B, and Rh antigens, meaning it won't be attacked by the recipient's immune system."
+  },
+  {
+    "qe": "Which condition is characterized by a low count of Red Blood Cells or Hemoglobin?",
+    "qh": "",
+    "o": [
+      "Leukemia",
+      "Anemia",
+      "Polycythemia",
+      "Thrombosis"
+    ],
+    "a": 1,
+    "e": "Anemia results in reduced oxygen-carrying capacity, leading to fatigue and paleness."
+  },
+  {
+    "qe": "What is the function of 'Platelets' (Thrombocytes)?",
+    "qh": "",
+    "o": [
+      "Carry oxygen",
+      "Fight bacteria",
+      "Blood clotting",
+      "Produce hormones"
+    ],
+    "a": 2,
+    "e": "Platelets aggregate at the site of a wound to form a plug and initiate the clotting cascade."
+  },
+  {
+    "qe": "Which plasma protein is essential for 'Blood Coagulation'?",
+    "qh": "",
+    "o": [
+      "Albumin",
+      "Globulin",
+      "Fibrinogen",
+      "Heme"
+    ],
+    "a": 2,
+    "e": "Fibrinogen is converted into fibrin threads which trap blood cells to form a clot."
+  },
+  {
+    "qe": "The liquid part of blood without clotting factors is called:",
+    "qh": "",
+    "o": [
+      "Plasma",
+      "Serum",
+      "Lymph",
+      "Cytoplasm"
+    ],
+    "a": 1,
+    "e": "Serum = Plasma minus Fibrinogen (and other clotting factors)."
+  },
+  {
+    "qe": "Which instrument is used to measure 'Blood Pressure'?",
+    "qh": "",
+    "o": [
+      "Stethoscope",
+      "Sphygmomanometer",
+      "Thermometer",
+      "Spirometer"
+    ],
+    "a": 1,
+    "e": "It measures the force of blood against the walls of the arteries."
+  },
+  {
+    "qe": "What is the percentage of 'Plasma' in total blood volume?",
+    "qh": "",
+    "o": [
+      "45%",
+      "55%",
+      "90%",
+      "10%"
+    ],
+    "a": 1,
+    "e": "Blood is composed of roughly 55% plasma and 45% formed elements (cells)."
+  },
+  {
+    "qe": "Which WBCs release 'Histamine' during allergic reactions?",
+    "qh": "",
+    "o": [
+      "Neutrophils",
+      "Basophils",
+      "Monocytes",
+      "Lymphocytes"
+    ],
+    "a": 1,
+    "e": "Basophils and Mast cells release histamine which causes inflammation during an allergy."
+  },
+  {
+    "qe": "The 'Biconcave' shape of RBCs helps in:",
+    "qh": "",
+    "o": [
+      "Fast movement",
+      "Increasing surface area for gas exchange",
+      "Dividing faster",
+      "Killing bacteria"
+    ],
+    "a": 1,
+    "e": "The shape provides a high surface-area-to-volume ratio, making oxygen diffusion more efficient."
+  },
+  {
+    "qe": "What is 'Erythroblastosis Fetalis' related to?",
+    "qh": "",
+    "o": [
+      "ABO incompatibility",
+      "Rh factor incompatibility",
+      "Iron deficiency",
+      "Vitamin K lack"
+    ],
+    "a": 1,
+    "e": "It occurs when an Rh-negative mother carries an Rh-positive fetus for the second time."
+  },
+  {
+    "qe": "The double-walled membranous sac that encloses the heart is called:",
+    "qh": "",
+    "o": [
+      "Pleura",
+      "Pericardium",
+      "Peritoneum",
+      "Endocardium"
+    ],
+    "a": 1,
+    "e": "The pericardium protects the heart and anchors it in place while preventing over-expansion."
+  },
+  {
+    "qe": "Which chamber of the heart has the thickest muscular wall?",
+    "qh": "",
+    "o": [
+      "Right Atrium",
+      "Left Atrium",
+      "Right Ventricle",
+      "Left Ventricle"
+    ],
+    "a": 3,
+    "e": "The left ventricle must pump blood to the entire body (Systemic circulation), requiring more pressure."
+  },
+  {
+    "qe": "The 'Bicuspid Valve' (Mitral Valve) is located between:",
+    "qh": "",
+    "o": [
+      "Right atrium and Right ventricle",
+      "Left atrium and Left ventricle",
+      "Right ventricle and Pulmonary artery",
+      "Left ventricle and Aorta"
+    ],
+    "a": 1,
+    "e": "It prevents the backflow of oxygenated blood from the left ventricle into the left atrium."
+  },
+  {
+    "qe": "Which of the following is known as the 'Natural Pacemaker' of the heart?",
+    "qh": "",
+    "o": [
+      "AV Node",
+      "Bundle of His",
+      "SA Node",
+      "Purkinje Fibers"
+    ],
+    "a": 2,
+    "e": "The Sino-atrial (SA) node generates the electrical impulses that set the rhythm of the heart."
+  },
+  {
+    "qe": "The 'Lubb' sound of the heart is produced by the closure of:",
+    "qh": "",
+    "o": [
+      "Semilunar valves",
+      "AV valves (Tricuspid & Bicuspid)",
+      "Aortic valve",
+      "Pulmonary valve"
+    ],
+    "a": 1,
+    "e": "The first heart sound (S1) occurs when the ventricles contract and the AV valves close."
+  },
+  {
+    "qe": "Which blood vessel carries deoxygenated blood from the heart to the lungs?",
+    "qh": "",
+    "o": [
+      "Aorta",
+      "Pulmonary Vein",
+      "Pulmonary Artery",
+      "Vena Cava"
+    ],
+    "a": 2,
+    "e": "The Pulmonary Artery is the only artery in the body that carries deoxygenated blood."
+  },
+  {
+    "qe": "The normal duration of one 'Cardiac Cycle' in a healthy human is:",
+    "qh": "",
+    "o": [
+      "0.5 seconds",
+      "0.8 seconds",
+      "1.0 second",
+      "1.2 seconds"
+    ],
+    "a": 1,
+    "e": "At 72 beats per minute, each cycle (Atrial + Ventricular systole//diastole) takes 0.8 seconds."
+  },
+  {
+    "qe": "What is the function of 'Chordae Tendineae'?",
+    "qh": "",
+    "o": [
+      "Pump blood",
+      "Hold heart valves in place",
+      "Produce heart sounds",
+      "Filter blood"
+    ],
+    "a": 1,
+    "e": "These 'heart strings' prevent the AV valves from flipping back into the atria during ventricular contraction."
+  },
+  {
+    "qe": "Which node is called the 'Pace-setter' of the heart?",
+    "qh": "",
+    "o": [
+      "SA Node",
+      "AV Node",
+      "Sinus Node",
+      "Cortex"
+    ],
+    "a": 1,
+    "e": "The Atrio-ventricular (AV) node receives the signal from the SA node and delays it slightly before passing it to the ventricles."
+  },
+  {
+    "qe": "The average 'Stroke Volume' of a healthy adult heart is:",
+    "qh": "",
+    "o": [
+      "50 ml",
+      "70 ml",
+      "100 ml",
+      "150 ml"
+    ],
+    "a": 1,
+    "e": "Stroke volume is the amount of blood pumped by one ventricle in one single beat."
+  },
+  {
+    "qe": "In an ECG, the 'P-wave' represents:",
+    "qh": "",
+    "o": [
+      "Ventricular depolarization",
+      "Atrial depolarization",
+      "Ventricular repolarization",
+      "Atrial repolarization"
+    ],
+    "a": 1,
+    "e": "The P-wave signifies the electrical impulse spreading through the atria, causing them to contract."
+  },
+  {
+    "qe": "Which part of the brain regulates the 'Heart Rate'?",
+    "qh": "",
+    "o": [
+      "Cerebrum",
+      "Cerebellum",
+      "Medulla Oblongata",
+      "Thalamus"
+    ],
+    "a": 2,
+    "e": "The cardiovascular center in the medulla sends signals via the autonomic nervous system to adjust heart rate."
+  },
+  {
+    "qe": "The 'Coronary Artery' supplies blood to the:",
+    "qh": "",
+    "o": [
+      "Lungs",
+      "Liver",
+      "Heart Muscles",
+      "Brain"
+    ],
+    "a": 2,
+    "e": "Blockage in these arteries leads to a heart attack (Myocardial Infarction)."
+  },
+  {
+    "qe": "Which of the following describes 'Double Circulation'?",
+    "qh": "",
+    "o": [
+      "Blood flows through the heart twice in one cycle",
+      "Blood flows through the lungs twice",
+      "Heart has two chambers",
+      "Arteries have two layers"
+    ],
+    "a": 0,
+    "e": "Human circulation consists of Pulmonary circulation (to lungs) and Systemic circulation (to body)."
+  },
+  {
+    "qe": "Which valve is located at the base of the Aorta?",
+    "qh": "",
+    "o": [
+      "Tricuspid Valve",
+      "Mitral Valve",
+      "Aortic Semilunar Valve",
+      "Pulmonary Valve"
+    ],
+    "a": 2,
+    "e": "It ensures that blood doesn't flow back into the left ventricle after it is pumped out."
+  },
+  {
+    "qe": "What is 'Tachycardia'?",
+    "qh": "",
+    "o": [
+      "Slow heart rate",
+      "Fast heart rate",
+      "Irregular heart rhythm",
+      "Stop of heart beat"
+    ],
+    "a": 1,
+    "e": "Tachycardia is a heart rate exceeding 100 beats per minute at rest."
+  },
+  {
+    "qe": "Which blood vessel has the smallest diameter but the highest total surface area?",
+    "qh": "",
+    "o": [
+      "Arteries",
+      "Veins",
+      "Capillaries",
+      "Arterioles"
+    ],
+    "a": 2,
+    "e": "Capillaries are the site of gas and nutrient exchange between blood and tissues."
+  },
+  {
+    "qe": "The 'Hepatic Portal Vein' carries blood from the:",
+    "qh": "",
+    "o": [
+      "Liver to Heart",
+      "Intestine to Liver",
+      "Kidney to Heart",
+      "Heart to Liver"
+    ],
+    "a": 1,
+    "e": "It brings nutrient-rich blood from the digestive tract directly to the liver for processing."
+  },
+  {
+    "qe": "Which sound is produced by the closure of Semilunar valves?",
+    "qh": "",
+    "o": [
+      "Lubb",
+      "Dupp",
+      "Murmur",
+      "Click"
+    ],
+    "a": 1,
+    "e": "The second heart sound (S2) occurs at the beginning of ventricular diastole."
+  },
+  {
+    "qe": "What is the normal blood pressure of a healthy human?",
+    "qh": "",
+    "o": [
+      "100//60 mmHg",
+      "120//80 mmHg",
+      "140//90 mmHg",
+      "80//120 mmHg"
+    ],
+    "a": 1,
+    "e": "120 represents Systolic (contraction) and 80 represents Diastolic (relaxation) pressure."
+  },
+  {
+    "qe": "Which blood group is known as the 'Universal Recipient'?",
+    "qh": "",
+    "o": [
+      "O negative",
+      "AB positive",
+      "A positive",
+      "B negative"
+    ],
+    "a": 1,
+    "e": "AB positive blood has no antibodies against A, B, or Rh antigens, so it can receive blood from any group."
+  },
+  {
+    "qe": "The 'Rh Factor' in human blood is named after which animal?",
+    "qh": "",
+    "o": [
+      "Rat",
+      "Rhesus Monkey",
+      "Rabbit",
+      "Reindeer"
+    ],
+    "a": 1,
+    "e": "It was first discovered in the blood of Rhesus monkeys by Landsteiner and Wiener in 1940."
+  },
+  {
+    "qe": "What happens when an Rh-negative person receives Rh-positive blood for the first time?",
+    "qh": "",
+    "o": [
+      "Instant death",
+      "Nothing happens immediately, but antibodies are formed",
+      "The blood turns into water",
+      "The heart stops"
+    ],
+    "a": 1,
+    "e": "The first transfusion is usually safe, but the body 'sensitizes' and builds antibodies for the next time."
+  },
+  {
+    "qe": "A condition of 'High Blood Pressure' (above 140//90) is medically termed as:",
+    "qh": "",
+    "o": [
+      "Hypotension",
+      "Hypertension",
+      "Arrythmia",
+      "Angina"
+    ],
+    "a": 1,
+    "e": "Chronic hypertension can damage the heart, brain (stroke), and kidneys."
+  },
+  {
+    "qe": "What is 'Angina Pectoris'?",
+    "qh": "",
+    "o": [
+      "Heart attack",
+      "Chest pain due to low oxygen reaching heart muscles",
+      "Stop of heartbeat",
+      "Leukemia"
+    ],
+    "a": 1,
+    "e": "It is a symptom of coronary artery disease where the heart muscle doesn't get enough blood flow."
+  },
+  {
+    "qe": "Which of the following is known as 'Silent Killer'?",
+    "qh": "",
+    "o": [
+      "Low BP",
+      "High BP (Hypertension)",
+      "Anemia",
+      "Tachycardia"
+    ],
+    "a": 1,
+    "e": "Hypertension often has no visible symptoms until it causes serious damage to organs."
+  },
+  {
+    "qe": "The deposition of lipids (cholesterol) on the inner walls of arteries is called:",
+    "qh": "",
+    "o": [
+      "Arteriosclerosis",
+      "Atherosclerosis",
+      "Thrombosis",
+      "Embolism"
+    ],
+    "a": 1,
+    "e": "Atherosclerosis narrows the lumen of arteries, reducing blood flow."
+  },
+  {
+    "qe": "Which instrument is used to record the electrical activity of the heart?",
+    "qh": "",
+    "o": [
+      "Sphygmomanometer",
+      "Electrocardiograph (ECG)",
+      "EEG",
+      "Stethoscope"
+    ],
+    "a": 1,
+    "e": "ECG (or EKG) helps doctors detect irregular rhythms and heart muscle damage."
+  },
+  {
+    "qe": "In a standard ECG, the 'T-wave' represents:",
+    "qh": "",
+    "o": [
+      "Atrial contraction",
+      "Ventricular contraction",
+      "Ventricular relaxation (Repolarization)",
+      "Atrial relaxation"
+    ],
+    "a": 2,
+    "e": "The T-wave shows the recovery phase of the ventricles before the next beat."
+  },
+  {
+    "qe": "Which 'Blood Group' lacks both Antigen A and Antigen B on the surface of RBCs?",
+    "qh": "",
+    "o": [
+      "Group A",
+      "Group B",
+      "Group AB",
+      "Group O"
+    ],
+    "a": 3,
+    "e": "Blood group O has no surface antigens but contains both anti-A and anti-B antibodies in the plasma."
+  },
+  {
+    "qe": "What is the primary cause of 'Heart Failure'?",
+    "qh": "",
+    "o": [
+      "Heart stops beating",
+      "Heart doesn't pump blood effectively to meet body needs",
+      "Blockage in brain",
+      "Low RBC count"
+    ],
+    "a": 1,
+    "e": "Heart failure is often caused by long-term hypertension or previous heart attacks."
+  },
+  {
+    "qe": "The metal ion required for 'Blood Clotting' is:",
+    "qh": "",
+    "o": [
+      "Iron",
+      "Magnesium",
+      "Calcium (Ca2+)",
+      "Sodium"
+    ],
+    "a": 2,
+    "e": "Calcium ions are essential for almost every step of the blood clotting cascade."
+  },
+  {
+    "qe": "Which blood vessel carries oxygenated blood from the lungs to the heart?",
+    "qh": "",
+    "o": [
+      "Aorta",
+      "Pulmonary Artery",
+      "Pulmonary Vein",
+      "Superior Vena Cava"
+    ],
+    "a": 2,
+    "e": "The Pulmonary Vein is the only vein in the human body that carries oxygen-rich blood."
+  },
+  {
+    "qe": "What is 'Bradycardia'?",
+    "qh": "",
+    "o": [
+      "Heart rate above 100 bpm",
+      "Heart rate below 60 bpm",
+      "Normal heart rate",
+      "Irregular heart rate"
+    ],
+    "a": 1,
+    "e": "It refers to an abnormally slow resting heart rate."
+  },
+  {
+    "qe": "The 'Hepatic Portal System' connects the digestive tract to which organ?",
+    "qh": "",
+    "o": [
+      "Heart",
+      "Kidney",
+      "Liver",
+      "Lungs"
+    ],
+    "a": 2,
+    "e": "It allows the liver to process nutrients and detoxify blood before it reaches the rest of the body."
+  },
+  {
+    "qe": "Which type of WBC increases significantly during a 'Parasitic Infection'?",
+    "qh": "",
+    "o": [
+      "Neutrophils",
+      "Eosinophils",
+      "Basophils",
+      "Lymphocytes"
+    ],
+    "a": 1,
+    "e": "Eosinophils are specialized in fighting parasites and are also involved in allergic reactions."
+  },
+  {
+    "qe": "The amount of blood pumped by the heart per minute is called:",
+    "qh": "",
+    "o": [
+      "Stroke Volume",
+      "Cardiac Output",
+      "Heart Rate",
+      "Blood Pressure"
+    ],
+    "a": 1,
+    "e": "Cardiac Output = Stroke Volume × Heart Rate (Approx. 5 Liters//min in adults)."
+  },
+  {
+    "qe": "Which valve prevents the backflow of blood into the 'Right Atrium'?",
+    "qh": "",
+    "o": [
+      "Bicuspid Valve",
+      "Tricuspid Valve",
+      "Aortic Valve",
+      "Pulmonary Valve"
+    ],
+    "a": 1,
+    "e": "The tricuspid valve is located between the right atrium and the right ventricle."
+  },
+  {
+    "qe": "The 'Middle Man' of the body which helps in the exchange of materials between blood and tissues is:",
+    "qh": "",
+    "o": [
+      "Plasma",
+      "Lymph",
+      "Serum",
+      "Platelets"
+    ],
+    "a": 1,
+    "e": "Lymph acts as a bridge, carrying nutrients and oxygen from the blood to the cells and taking away waste."
+  },
+  {
+    "qe": "Which of the following is known as 'Blood without RBCs and certain proteins'?",
+    "qh": "",
+    "o": [
+      "Serum",
+      "Lymph",
+      "Plasma",
+      "Urine"
+    ],
+    "a": 1,
+    "e": "Lymph is a colorless fluid containing specialized lymphocytes but lacks red blood cells and large plasma proteins."
+  },
+  {
+    "qe": "The 'Bundle of His' is a network of fibers found only in the:",
+    "qh": "",
+    "o": [
+      "Atria",
+      "Ventricles",
+      "Aorta",
+      "Vena Cava"
+    ],
+    "a": 1,
+    "e": "The Bundle of His is part of the electrical system that transmits impulses from the AV node to the ventricles."
+  },
+  {
+    "qe": "What is the primary function of 'Lymph Nodes'?",
+    "qh": "",
+    "o": [
+      "Pump lymph",
+      "Filter pathogens and produce lymphocytes",
+      "Store RBCs",
+      "Destroy platelets"
+    ],
+    "a": 1,
+    "e": "Lymph nodes act as biological filters, trapping bacteria and viruses to be destroyed by white blood cells."
+  },
+  {
+    "qe": "Which mineral is essential for the contraction of heart muscles?",
+    "qh": "",
+    "o": [
+      "Iron",
+      "Calcium",
+      "Iodine",
+      "Fluorine"
+    ],
+    "a": 1,
+    "e": "Calcium ions trigger the sliding of filaments in cardiac muscle cells, causing the heart to beat."
+  },
+  {
+    "qe": "The condition where the heart rate is 'Irregular' (not a steady rhythm) is called:",
+    "qh": "",
+    "o": [
+      "Hypertension",
+      "Arrhythmia",
+      "Angina",
+      "Heart Failure"
+    ],
+    "a": 1,
+    "e": "Arrhythmia can be harmless or life-threatening, depending on the cause of the electrical disturbance."
+  },
+  {
+    "qe": "In which blood vessel is the 'Blood Pressure' the lowest?",
+    "qh": "",
+    "o": [
+      "Aorta",
+      "Arteries",
+      "Capillaries",
+      "Vena Cava"
+    ],
+    "a": 3,
+    "e": "Pressure drops as blood moves further from the heart, reaching its lowest point in the large veins returning to the heart."
+  },
+  {
+    "qe": "Which cells are responsible for the 'Clotting' of lymph?",
+    "qh": "",
+    "o": [
+      "RBCs",
+      "Lymphocytes",
+      "Platelets",
+      "None"
+    ],
+    "a": 1,
+    "e": "Lymph can clot, though more slowly than blood, using its own lymphocytes and fibrinogen content."
+  },
+  {
+    "qe": "What is the 'Lumen' of a blood vessel?",
+    "qh": "",
+    "o": [
+      "The outer wall",
+      "The muscular layer",
+      "The hollow space inside where blood flows",
+      "The valve"
+    ],
+    "a": 2,
+    "e": "Arteries have a narrow lumen to maintain high pressure, while veins have a wide lumen."
+  },
+  {
+    "qe": "The 'Vasa Vasorum' are tiny blood vessels that supply blood to:",
+    "qh": "",
+    "o": [
+      "Small capillaries",
+      "The walls of large blood vessels",
+      "The heart valves",
+      "The SA Node"
+    ],
+    "a": 1,
+    "e": "Large arteries and veins are so thick that they need their own internal blood supply system."
+  },
+  {
+    "qe": "Which hormone increases the 'Heart Rate' during an emergency?",
+    "qh": "",
+    "o": [
+      "Insulin",
+      "Adrenaline (Epinephrine)",
+      "Thyroxine",
+      "Gastrin"
+    ],
+    "a": 1,
+    "e": "Adrenaline is the 'Fight or Flight' hormone that speeds up the heart to provide more oxygen to muscles."
+  },
+  {
+    "qe": "The 'Pulse' is usually felt at which blood vessel?",
+    "qh": "",
+    "o": [
+      "Vein",
+      "Capillary",
+      "Artery",
+      "Vena Cava"
+    ],
+    "a": 2,
+    "e": "The pulse is the rhythmic expansion and recoil of an artery as the heart pumps blood into it."
+  },
+  {
+    "qe": "What is 'Myocardial Infarction' commonly known as?",
+    "qh": "",
+    "o": [
+      "High BP",
+      "Heart Attack",
+      "Stroke",
+      "Chest pain"
+    ],
+    "a": 1,
+    "e": "It occurs when a coronary artery is blocked, causing the death of heart muscle tissue due to lack of oxygen."
+  },
+  {
+    "qe": "Which part of the heart receives oxygenated blood from the 'Pulmonary Veins'?",
+    "qh": "",
+    "o": [
+      "Right Atrium",
+      "Left Atrium",
+      "Right Ventricle",
+      "Left Ventricle"
+    ],
+    "a": 1,
+    "e": "The left atrium is the entry point for freshly oxygenated blood coming from the lungs."
+  },
+  {
+    "qe": "The 'Foramen Ovale' is a hole found in the heart of:",
+    "qh": "",
+    "o": [
+      "Athletes",
+      "Old people",
+      "A Fetus (unborn baby)",
+      "Patients with heart failure"
+    ],
+    "a": 2,
+    "e": "In a fetus, this hole allows blood to bypass the lungs, as they are not yet used for breathing."
+  },
+  {
+    "qe": "Which type of circulation is responsible for carrying nutrients from the intestine to the liver?",
+    "qh": "",
+    "o": [
+      "Pulmonary",
+      "Systemic",
+      "Hepatic Portal",
+      "Coronary"
+    ],
+    "a": 2,
+    "e": "The Hepatic Portal System is a unique blood pathway that processes nutrients before they enter general circulation."
+  },
+  {
+    "qe": "What is the function of the 'Purkinje Fibers'?",
+    "qh": "",
+    "o": [
+      "Produce heart sounds",
+      "Contract the atria",
+      "Rapidly conduct impulses to the ventricular muscles",
+      "Close the valves"
+    ],
+    "a": 2,
+    "e": "These fibers ensure that the ventricles contract simultaneously from the bottom up."
+  },
+  {
+    "qe": "A 'Sphygmomanometer' measures pressure in which unit?",
+    "qh": "",
+    "o": [
+      "Celsius",
+      "mmHg (Millimeters of Mercury)",
+      "Pascal",
+      "Joules"
+    ],
+    "a": 1,
+    "e": "120//80 mmHg is the standard reading for healthy blood pressure."
+  },
+  {
+    "qe": "Which condition is characterized by the 'Hardening' of arteries due to calcium deposits?",
+    "qh": "",
+    "o": [
+      "Atherosclerosis",
+      "Arteriosclerosis",
+      "Thrombosis",
+      "Angina"
+    ],
+    "a": 1,
+    "e": "Arteriosclerosis is a general term for the loss of elasticity and thickening of arterial walls."
+  },
+  {
+    "qe": "Which enzyme converts 'Prothrombin' into 'Thrombin' during blood clotting?",
+    "qh": "",
+    "o": [
+      "Thrombokinase (Thromboplastin)",
+      "Fibrinogen",
+      "Pepsin",
+      "Renin"
+    ],
+    "a": 0,
+    "e": "Thrombokinase is released by damaged tissues and platelets to start the clotting cascade."
+  },
+  {
+    "qe": "What is the primary function of 'Fibrin' threads?",
+    "qh": "",
+    "o": [
+      "Carry oxygen",
+      "Form a mesh to trap blood cells and form a clot",
+      "Kill bacteria",
+      "Dissolve old clots"
+    ],
+    "a": 1,
+    "e": "Fibrin is an insoluble protein that acts like a net to stop bleeding."
+  },
+  {
+    "qe": "A genetic disorder where blood fails to clot normally is called:",
+    "qh": "",
+    "o": [
+      "Anemia",
+      "Leukemia",
+      "Hemophilia",
+      "Polycythemia"
+    ],
+    "a": 2,
+    "e": "Hemophilia is often called the 'Royal Disease' and is usually caused by a deficiency of Clotting Factor VIII or IX."
+  },
+  {
+    "qe": "The 'Serum' differs from 'Plasma' because it lacks:",
+    "qh": "",
+    "o": [
+      "Antibodies",
+      "Clotting Factors (like Fibrinogen)",
+      "Albumin",
+      "Water"
+    ],
+    "a": 1,
+    "e": "Serum is the liquid that remains after blood has clotted; therefore, it contains no fibrinogen."
+  },
+  {
+    "qe": "Which part of the heart is the first to receive the electrical impulse from the 'SA Node'?",
+    "qh": "",
+    "o": [
+      "Ventricles",
+      "Atria",
+      "Purkinje Fibers",
+      "Bundle of His"
+    ],
+    "a": 1,
+    "e": "The SA node is located in the right atrium, so the atria contract first."
+  },
+  {
+    "qe": "The 'Standard ECG' consists of how many leads in a typical clinical setup?",
+    "qh": "",
+    "o": [
+      "3",
+      "6",
+      "12",
+      "1"
+    ],
+    "a": 2,
+    "e": "A 12-lead ECG provides a complete 3D view of the heart's electrical activity."
+  },
+  {
+    "qe": "What is 'Systemic Circulation'?",
+    "qh": "",
+    "o": [
+      "Flow of blood between heart and lungs",
+      "Flow of blood between heart and the rest of the body",
+      "Flow of blood within the heart muscles",
+      "Flow of lymph"
+    ],
+    "a": 1,
+    "e": "Systemic circulation provides oxygen and nutrients to all body tissues."
+  },
+  {
+    "qe": "Which organ produces the majority of 'Plasma Proteins'?",
+    "qh": "",
+    "o": [
+      "Spleen",
+      "Kidney",
+      "Liver",
+      "Pancreas"
+    ],
+    "a": 2,
+    "e": "The liver synthesizes albumin, fibrinogen, and most globulins found in the blood."
+  },
+  {
+    "qe": "The 'Hematocrit' (Hct) value measures the percentage of:",
+    "qh": "",
+    "o": [
+      "White Blood Cells",
+      "Plasma",
+      "Red Blood Cells",
+      "Platelets"
+    ],
+    "a": 2,
+    "e": "Hematocrit is the volume percentage of RBCs in a sample of whole blood."
+  },
+  {
+    "qe": "Which antibody is found in the plasma of a person with 'Blood Group B'?",
+    "qh": "",
+    "o": [
+      "Anti-B",
+      "Anti-A",
+      "Both Anti-A and Anti-B",
+      "None"
+    ],
+    "a": 1,
+    "e": "A person with Group B antigens will naturally produce antibodies against Group A antigens."
+  },
+  {
+    "qe": "What is 'Phlebitis'?",
+    "qh": "",
+    "o": [
+      "Inflammation of an artery",
+      "Inflammation of a vein",
+      "Heart muscle death",
+      "Low platelet count"
+    ],
+    "a": 1,
+    "e": "Phlebitis often occurs in the legs and can lead to the formation of blood clots (Thrombophlebitis)."
+  },
+  {
+    "qe": "The 'Ductus Arteriosus' in a fetus connects the:",
+    "qh": "",
+    "o": [
+      "Right and Left Atria",
+      "Pulmonary Artery and Aorta",
+      "Umbilical Vein and Vena Cava",
+      "Liver and Heart"
+    ],
+    "a": 1,
+    "e": "It allows most of the blood from the right ventricle to bypass the fetus's fluid-filled, non-functioning lungs."
+  },
+  {
+    "qe": "Which type of 'Anemia' is caused by the lack of Vitamin B12 and Intrinsic Factor?",
+    "qh": "",
+    "o": [
+      "Iron Deficiency Anemia",
+      "Aplastic Anemia",
+      "Pernicious Anemia",
+      "Hemolytic Anemia"
+    ],
+    "a": 2,
+    "e": "Pernicious anemia is a megaloblastic anemia where RBCs do not mature properly."
+  },
+  {
+    "qe": "What is 'Diapedesis'?",
+    "qh": "",
+    "o": [
+      "Formation of RBCs",
+      "Process of WBCs squeezing through capillary walls to reach infection sites",
+      "Clotting of blood",
+      "Heart contraction"
+    ],
+    "a": 1,
+    "e": "WBCs use diapedesis to move out of the blood into tissues to fight pathogens."
+  },
+  {
+    "qe": "The 'Interventricular Septum' separates the:",
+    "qh": "",
+    "o": [
+      "Two Atria",
+      "Two Ventricles",
+      "Atria from Ventricles",
+      "Aorta from Pulmonary Artery"
+    ],
+    "a": 1,
+    "e": "This thick wall prevents the mixing of oxygenated and deoxygenated blood in the heart."
+  },
+  {
+    "qe": "Which chemical is added to blood bags to prevent 'Clotting' during storage?",
+    "qh": "",
+    "o": [
+      "Sodium Chloride",
+      "Sodium Citrate",
+      "Calcium Carbonate",
+      "Glucose"
+    ],
+    "a": 1,
+    "e": "Citrate binds with calcium ions ($Ca^{2+}$), which are necessary for the clotting process."
+  },
+  {
+    "qe": "What is 'Polycythemia'?",
+    "qh": "",
+    "o": [
+      "Abnormally low RBC count",
+      "Abnormally high RBC count",
+      "Low WBC count",
+      "Lack of platelets"
+    ],
+    "a": 1,
+    "e": "Polycythemia increases blood viscosity (thickness), which can lead to high blood pressure or clots."
+  },
+  {
+    "qe": "Which component of blood is responsible for 'Humoral Immunity'?",
+    "qh": "",
+    "o": [
+      "Neutrophils",
+      "T-cells",
+      "B-cells (Antibodies)",
+      "RBCs"
+    ],
+    "a": 2,
+    "e": "B-lymphocytes produce antibodies that circulate in 'humors' (body fluids)."
+  },
+  {
+    "qe": "The 'Mitral Valve' is another name for the:",
+    "qh": "",
+    "o": [
+      "Tricuspid Valve",
+      "Bicuspid Valve",
+      "Aortic Valve",
+      "Pulmonary Valve"
+    ],
+    "a": 1,
+    "e": "The bicuspid valve is the only heart valve with only two flaps (cusps)."
+  },
+  {
+    "qe": "Which of the following describes 'Laminar Flow' in blood vessels?",
+    "qh": "",
+    "o": [
+      "Turbulent flow with noise",
+      "Smooth, layered flow in the center of the vessel",
+      "Backward flow of blood",
+      "Flow through the heart valves only"
+    ],
+    "a": 1,
+    "e": "In healthy blood vessels, blood moves in layers, with the fastest flow occurring in the center of the lumen."
+  },
+  {
+    "qe": "The 'Spleen' is often referred to as the 'Blood Bank' because it:",
+    "qh": "",
+    "o": [
+      "Produces all RBCs",
+      "Stores a reserve of blood and platelets for emergencies",
+      "Filters urea",
+      "Secretes insulin"
+    ],
+    "a": 1,
+    "e": "The spleen acts as a reservoir for blood, which can be released into circulation during trauma or exercise."
+  },
+  {
+    "qe": "Which of the following is an example of 'Primary Lymphoid Organ'?",
+    "qh": "",
+    "o": [
+      "Spleen",
+      "Lymph nodes",
+      "Thymus",
+      "Tonsils"
+    ],
+    "a": 2,
+    "e": "Primary lymphoid organs (Bone Marrow and Thymus) are where lymphocytes are produced and matured."
+  },
+  {
+    "qe": "What is the function of 'Pre-capillary Sphincters'?",
+    "qh": "",
+    "o": [
+      "Pump blood to the brain",
+      "Regulate blood flow into specific capillary beds",
+      "Control heart rate",
+      "Prevent backflow in veins"
+    ],
+    "a": 1,
+    "e": "These muscular rings open or close to direct blood where it is needed most (e.g., to the gut after a meal)."
+  },
+  {
+    "qe": "The 'Pecquet's Reservoir' (Receptaculum Chyli) is related to which system?",
+    "qh": "",
+    "o": [
+      "Digestive",
+      "Circulatory (Lymphatic)",
+      "Excretory",
+      "Nervous"
+    ],
+    "a": 1,
+    "e": "It is a dilated sac at the lower end of the thoracic duct that collects lymph from the lower body."
+  },
+  {
+    "qe": "Which condition is characterized by 'Accumulation of Fluid' in the tissues, leading to swelling?",
+    "qh": "",
+    "o": [
+      "Anemia",
+      "Edema",
+      "Ischemia",
+      "Thrombosis"
+    ],
+    "a": 1,
+    "e": "Edema occurs when fluid leaks out of capillaries faster than the lymphatic system can remove it."
+  },
+  {
+    "qe": "What is 'Ischemia'?",
+    "qh": "",
+    "o": [
+      "High blood sugar",
+      "Reduced blood supply to a specific organ or tissue",
+      "Excessive bleeding",
+      "Increase in WBC count"
+    ],
+    "a": 1,
+    "e": "Ischemia leads to a lack of oxygen and nutrients, which can cause tissue death (infarction)."
+  },
+  {
+    "qe": "Which large lymph duct drains three-quarters of the body's lymph into the left subclavian vein?",
+    "qh": "",
+    "o": [
+      "Right Lymphatic Duct",
+      "Thoracic Duct",
+      "Cystic Duct",
+      "Hepatic Duct"
+    ],
+    "a": 1,
+    "e": "The Thoracic duct is the main collecting duct of the lymphatic system."
+  },
+  {
+    "qe": "The 'Starling's Law' of the heart states that:",
+    "qh": "",
+    "o": [
+      "Heart rate is constant",
+      "The force of contraction is proportional to the initial length of cardiac fibers",
+      "Blood pressure never changes",
+      "Valves open only once"
+    ],
+    "a": 1,
+    "e": "The more the heart is stretched (filled with blood), the more forcefully it contracts to pump it out."
+  },
+  {
+    "qe": "Which type of 'Aneurysm' involves a bulging of a weakened arterial wall?",
+    "qh": "",
+    "o": [
+      "Stroke",
+      "Aneurysm",
+      "Embolism",
+      "Varicose veins"
+    ],
+    "a": 1,
+    "e": "An aneurysm is a dangerous localized enlargement of an artery caused by a weakening of the artery wall."
+  },
+  {
+    "qe": "The 'Purkinje Shift' is related to vision, but 'Purkinje Fibers' in the heart are made of modified:",
+    "qh": "",
+    "o": [
+      "Nerve cells",
+      "Muscle cells",
+      "Connective tissue",
+      "Epithelial cells"
+    ],
+    "a": 1,
+    "e": "Purkinje fibers are specialized cardiac muscle cells that conduct electrical impulses very rapidly."
+  },
+  {
+    "qe": "Which of the following has the 'Thickest Tunica Media' (Muscular layer)?",
+    "qh": "",
+    "o": [
+      "Large Vein",
+      "Capillary",
+      "Artery",
+      "Venule"
+    ],
+    "a": 2,
+    "e": "Arteries have a thick muscular layer to withstand and maintain high blood pressure."
+  },
+  {
+    "qe": "What is 'Diastolic' blood pressure?",
+    "qh": "",
+    "o": [
+      "Pressure during heart contraction",
+      "Pressure during heart relaxation",
+      "Average pressure",
+      "Pulse pressure"
+    ],
+    "a": 1,
+    "e": "Diastolic pressure (the lower number) represents the pressure in arteries when the heart is resting between beats."
+  },
+  {
+    "qe": "The 'Circle of Willis' provides blood supply to the:",
+    "qh": "",
+    "o": [
+      "Heart",
+      "Liver",
+      "Brain",
+      "Kidneys"
+    ],
+    "a": 2,
+    "e": "It is a ring of interconnected arteries at the base of the brain that ensures constant blood flow."
+  },
+  {
+    "qe": "Which blood cell is 'Polymorphonuclear' (having multi-lobed nuclei)?",
+    "qh": "",
+    "o": [
+      "RBC",
+      "Neutrophil",
+      "Lymphocyte",
+      "Platelet"
+    ],
+    "a": 1,
+    "e": "Neutrophils are also called 'PMNs' because their nucleus can have 3 to 5 lobes."
+  },
+  {
+    "qe": "What is 'Thrombosis'?",
+    "qh": "",
+    "o": [
+      "Bleeding from a wound",
+      "Formation of a blood clot inside a blood vessel",
+      "Rupture of a vessel",
+      "High platelet count"
+    ],
+    "a": 1,
+    "e": "A thrombus can block blood flow, leading to conditions like a stroke or heart attack."
+  },
+  {
+    "qe": "The 'Coronary Sinus' carries deoxygenated blood from the:",
+    "qh": "",
+    "o": [
+      "Lungs",
+      "Heart muscles",
+      "Brain",
+      "Lower body"
+    ],
+    "a": 1,
+    "e": "It collects venous blood from the heart wall and delivers it to the right atrium."
+  },
+  {
+    "qe": "Which of the following increases 'Peripheral Resistance' to blood flow?",
+    "qh": "",
+    "o": [
+      "Vasodilation",
+      "Vasoconstriction",
+      "Anemia",
+      "Low viscosity"
+    ],
+    "a": 1,
+    "e": "Narrowing of the blood vessels (vasoconstriction) increases resistance and raises blood pressure."
+  },
+  {
+    "qe": "What is the 'Double Membrane' of the heart called?",
+    "qh": "",
+    "o": [
+      "Pleura",
+      "Pericardium",
+      "Meninges",
+      "Peritoneum"
+    ],
+    "a": 1,
+    "e": "The pericardium consists of an outer fibrous layer and an inner serous layer with fluid in between."
+  },
+  {
+    "qe": "Which of the following animals possesses a 'Two-chambered' heart (one atrium and one ventricle)?",
+    "qh": "",
+    "o": [
+      "Amphibians",
+      "Reptiles",
+      "Fish",
+      "Birds"
+    ],
+    "a": 2,
+    "e": "Fish have a simple circuit where the heart pumps deoxygenated blood to the gills for oxygenation."
+  },
+  {
+    "qe": "The 'Three-chambered' heart (two atria and one ventricle) is a characteristic of:",
+    "qh": "",
+    "o": [
+      "Mammals",
+      "Crocodiles",
+      "Amphibians",
+      "Fish"
+    ],
+    "a": 2,
+    "e": "In amphibians and most reptiles, oxygenated and deoxygenated blood mix in the single ventricle."
+  },
+  {
+    "qe": "Which reptile is an exception and possesses a 'Four-chambered' heart like birds and mammals?",
+    "qh": "",
+    "o": [
+      "Snake",
+      "Lizard",
+      "Crocodile",
+      "Turtle"
+    ],
+    "a": 2,
+    "e": "Crocodiles have a completely separated four-chambered heart, preventing the mixing of blood."
+  },
+  {
+    "qe": "What is the 'Foramen of Panizza'?",
+    "qh": "",
+    "o": [
+      "A hole in the human heart",
+      "A connection between the left and right aortas in crocodilians",
+      "A valve in the fish heart",
+      "A part of the brain"
+    ],
+    "a": 1,
+    "e": "This is a unique evolutionary feature in crocodiles that allows them to bypass their lungs while diving."
+  },
+  {
+    "qe": "In an ECG, if the 'P-R Interval' is abnormally long, it indicates a delay in:",
+    "qh": "",
+    "o": [
+      "Atrial contraction",
+      "Impulse conduction through the AV Node",
+      "Ventricular filling",
+      "Aortic pressure"
+    ],
+    "a": 1,
+    "e": "A prolonged P-R interval often suggests a 'heart block' where the signal from atria to ventricles is slowed."
+  },
+  {
+    "qe": "Which condition is characterized by the presence of a 'Blood Clot' that travels through the bloodstream and blocks a distant vessel?",
+    "qh": "",
+    "o": [
+      "Thrombus",
+      "Embolism",
+      "Aneurysm",
+      "Varicose veins"
+    ],
+    "a": 1,
+    "e": "A moving clot is called an embolus; when it gets stuck, it causes an embolism (e.g., Pulmonary Embolism)."
+  },
+  {
+    "qe": "What is the primary function of 'Atrial Natriuretic Factor' (ANF) secreted by the heart?",
+    "qh": "",
+    "o": [
+      "Increase blood pressure",
+      "Decrease blood pressure (Vasodilation)",
+      "Clot blood",
+      "Produce RBCs"
+    ],
+    "a": 1,
+    "e": "ANF is released when the atria are stretched; it promotes salt and water excretion by the kidneys to lower blood volume."
+  },
+  {
+    "qe": "The 'Vasa Vasorum' are literally translated as:",
+    "qh": "",
+    "o": [
+      "Valves of valves",
+      "Vessels of the vessels",
+      "Heart of hearts",
+      "Blood of life"
+    ],
+    "a": 1,
+    "e": "They are the tiny arteries that supply blood to the thick walls of large arteries and veins like the Aorta."
+  },
+  {
+    "qe": "Which phase of the Cardiac Cycle is the longest in duration?",
+    "qh": "",
+    "o": [
+      "Atrial Systole",
+      "Ventricular Systole",
+      "Joint Diastole",
+      "Isovolumetric contraction"
+    ],
+    "a": 2,
+    "e": "Joint Diastole (where all four chambers are relaxed) lasts about 0.4 seconds of the 0.8-second cycle."
+  },
+  {
+    "qe": "What is 'Venous Return'?",
+    "qh": "",
+    "o": [
+      "Blood flowing from arteries to veins",
+      "Volume of blood flowing back to the heart through the veins per minute",
+      "Blood pressure in the lungs",
+      "Backflow due to valve failure"
+    ],
+    "a": 1,
+    "e": "Venous return must match cardiac output to ensure the heart has enough blood to pump out."
+  },
+  {
+    "qe": "The 'Skeleton of the Heart' is made of:",
+    "qh": "",
+    "o": [
+      "Bone",
+      "Cartilage",
+      "Dense fibrous connective tissue (rings)",
+      "Calcium deposits"
+    ],
+    "a": 2,
+    "e": "Fibrous rings surround the valves, providing support and electrically isolating the atria from the ventricles."
+  },
+  {
+    "qe": "Which of the following describes 'Cardiac Tamponade'?",
+    "qh": "",
+    "o": [
+      "A type of heart surgery",
+      "Compression of the heart due to fluid accumulation in the pericardium",
+      "Fast heart rate",
+      "Leaking of the mitral valve"
+    ],
+    "a": 1,
+    "e": "Fluid buildup in the pericardial sac puts pressure on the heart, preventing it from filling properly."
+  },
+  {
+    "qe": "What is the role of 'Papillary Muscles'?",
+    "qh": "",
+    "o": [
+      "Pump blood into the aorta",
+      "Contract to pull on Chordae Tendineae and keep valves closed",
+      "Filter lymph",
+      "Regulate pulse"
+    ],
+    "a": 1,
+    "e": "These muscles in the ventricles prevent the AV valves from prolapsing (inverting) during contraction."
+  },
+  {
+    "qe": "Which heart sound is associated with the 'Rush of blood' into the ventricles (often heard in children or athletes)?",
+    "qh": "",
+    "o": [
+      "S1 (Lubb)",
+      "S2 (Dupp)",
+      "S3",
+      "S4"
+    ],
+    "a": 2,
+    "e": "S3 is a low-frequency sound occurring early in diastole during the rapid ventricular filling phase."
+  },
+  {
+    "qe": "The 'Fossa Ovalis' in the adult heart is a remnant of which fetal structure?",
+    "qh": "",
+    "o": [
+      "Ductus Arteriosus",
+      "Foramen Ovale",
+      "Ductus Venosus",
+      "Umbilical Artery"
+    ],
+    "a": 1,
+    "e": "It is the depression in the interatrial septum that marks where the fetal hole used to be."
+  },
+  {
+    "qe": "What is 'Blue Baby Syndrome' medically known as?",
+    "qh": "",
+    "o": [
+      "Anemia",
+      "Cyanosis (often due to Tetralogy of Fallot)",
+      "Jaundice",
+      "Rickets"
+    ],
+    "a": 1,
+    "e": "It occurs when deoxygenated blood mixes with oxygenated blood, often due to a 'hole in the heart' (septal defect)."
+  },
+  {
+    "qe": "Which wave in the ECG is usually used to calculate the 'Heart Rate'?",
+    "qh": "",
+    "o": [
+      "P-wave",
+      "R-wave (QRS complex)",
+      "T-wave",
+      "U-wave"
+    ],
+    "a": 1,
+    "e": "The distance between two consecutive R-waves (R-R interval) is the standard for measuring heart rate."
+  },
+  {
+    "qe": "Which type of blood vessel is 'Fenestrated' to allow for high filtration (e.g., in kidneys)?",
+    "qh": "",
+    "o": [
+      "Arteries",
+      "Veins",
+      "Capillaries",
+      "Arterioles"
+    ],
+    "a": 2,
+    "e": "Fenestrated capillaries have small pores (fenestrae) that increase their permeability."
+  },
+  {
+    "qe": "What is 'Orthostatic Hypotension'?",
+    "qh": "",
+    "o": [
+      "High BP while sleeping",
+      "A sudden drop in blood pressure when standing up",
+      "Irregular pulse",
+      "Blood clot in the brain"
+    ],
+    "a": 1,
+    "e": "Gravity pulls blood to the legs, and the heart must quickly adjust to maintain flow to the brain."
+  },
+  {
+    "qe": "The 'Windkessel Effect' is a term associated with the elasticity of the:",
+    "qh": "",
+    "o": [
+      "Capillaries",
+      "Aorta and Large Arteries",
+      "Veins",
+      "Atria"
+    ],
+    "a": 1,
+    "e": "Elastic arteries expand and recoil, smoothing out the pressure changes from the heart's pumping."
+  },
+  {
+    "qe": "Which 'Blood Group' is known as the 'Bombay Blood Group' (Hh phenotype)?",
+    "qh": "",
+    "o": [
+      "AB negative",
+      "O positive",
+      "A very rare group lacking the H-antigen",
+      "Common O group"
+    ],
+    "a": 2,
+    "e": "Discovered in Mumbai, people with this group can only receive blood from other Bombay Blood Group donors."
+  },
+  {
+    "qe": "What is 'Erythropoietin' (EPO)?",
+    "qh": "",
+    "o": [
+      "A type of RBC",
+      "A hormone that stimulates RBC production",
+      "A clotting factor",
+      "A waste product"
+    ],
+    "a": 1,
+    "e": "EPO is produced mainly by the kidneys in response to low oxygen levels in the blood."
+  },
+  {
+    "qe": "The 'T-wave' represents which electrical event?",
+    "qh": "",
+    "o": [
+      "Atrial contraction",
+      "Ventricular contraction",
+      "Ventricular relaxation (Repolarization)",
+      "SA node firing"
+    ],
+    "a": 2,
+    "e": "It represents the recovery phase of the ventricles as they prepare for the next contraction."
+  },
+  {
+    "qe": "Which of the following prevents 'Blood Clotting' inside our healthy blood vessels?",
+    "qh": "",
+    "o": [
+      "Vitamin K",
+      "Heparin",
+      "Fibrinogen",
+      "Thrombin"
+    ],
+    "a": 1,
+    "e": "Heparin is a natural anticoagulant produced by basophils and mast cells."
+  },
+  {
+    "qe": "What is 'Lymphedema'?",
+    "qh": "",
+    "o": [
+      "Heart attack",
+      "Swelling caused by blockage in the lymphatic system",
+      "High BP",
+      "Cancer of the blood"
+    ],
+    "a": 1,
+    "e": "It often occurs after surgery or infection where lymph nodes are damaged or removed."
+  },
+  {
+    "qe": "Which of the following acts as the 'Primary reservoir' for blood volume (60-70% of total blood)?",
+    "qh": "",
+    "o": [
+      "Arteries",
+      "Heart",
+      "Capillaries",
+      "Veins"
+    ],
+    "a": 3,
+    "e": "Veins are highly distensible and act as blood reservoirs, also called 'capacitance vessels'."
+  },
+  {
+    "qe": "The 'Left Coronary Artery' is often nicknamed the 'Widow-maker' because a blockage here affects the:",
+    "qh": "",
+    "o": [
+      "Right Atrium",
+      "Left Ventricle",
+      "Pulmonary Artery",
+      "Lungs"
+    ],
+    "a": 1,
+    "e": "It supplies the majority of the blood to the left ventricle, the heart's main pump."
+  },
+  {
+    "qe": "In which animal does 'Single Circulation' occur?",
+    "qh": "",
+    "o": [
+      "Frog",
+      "Fish",
+      "Bird",
+      "Human"
+    ],
+    "a": 1,
+    "e": "In fish, blood passes through the heart only once during a complete circuit of the body."
+  },
+  {
+    "qe": "What is 'P-wave' in ECG indicative of?",
+    "qh": "",
+    "o": [
+      "Ventricular Systole",
+      "Atrial Depolarization",
+      "Ventricular Diastole",
+      "Atrial Repolarization"
+    ],
+    "a": 1,
+    "e": "It represents the electrical impulse starting from the SA node and spreading through the atria."
+  },
+  {
+    "qe": "The 'Circulatory System' was first accurately described by which scientist?",
+    "qh": "",
+    "o": [
+      "Galen",
+      "William Harvey",
+      "Andreas Vesalius",
+      "Hippocrates"
+    ],
+    "a": 1,
+    "e": "In 1628, William Harvey published his findings proving that blood circulates in a closed circuit pumped by the heart."
+  },
+  {
+    "qe": "What is the 'Frank-Starling Law' of the heart primarily concerned with?",
+    "qh": "",
+    "o": [
+      "Heart rate regulation",
+      "Stroke volume and ventricular stretching",
+      "Blood pressure in veins",
+      "Oxygen levels in blood"
+    ],
+    "a": 1,
+    "e": "It states that the force of ventricular contraction is proportional to the initial length of the muscle fibers (preload)."
+  },
+  {
+    "qe": "Which of the following is the 'Universal Receiver' of plasma (not RBCs)?",
+    "qh": "",
+    "o": [
+      "AB positive",
+      "O negative",
+      "O positive",
+      "AB negative"
+    ],
+    "a": 1,
+    "e": "While AB+ is the universal receiver for RBCs, O- is the universal receiver for plasma because its plasma lacks A and B antibodies."
+  },
+  {
+    "qe": "The 'Bohr Effect' describes the shift in the oxygen-hemoglobin dissociation curve caused by:",
+    "qh": "",
+    "o": [
+      "Temperature",
+      "Carbon dioxide and pH",
+      "Nitrogen levels",
+      "Blood volume"
+    ],
+    "a": 1,
+    "e": "An increase in CO2 or a decrease in pH (acidity) causes hemoglobin to release oxygen more readily to tissues."
+  },
+  {
+    "qe": "Which structure in the fetal heart allows blood to flow from the 'Right Atrium' directly to the 'Left Atrium'?",
+    "qh": "",
+    "o": [
+      "Ductus Arteriosus",
+      "Foramen Ovale",
+      "Fossa Ovalis",
+      "Ductus Venosus"
+    ],
+    "a": 1,
+    "e": "The Foramen Ovale allows blood to bypass the non-functional fetal lungs. It closes at birth to become the Fossa Ovalis."
+  },
+  {
+    "qe": "The 'Haldane Effect' refers to the property of Hemoglobin where:",
+    "qh": "",
+    "o": [
+      "Oxygen binds to iron",
+      "Deoxygenation of blood increases its ability to carry CO2",
+      "Blood clots faster in cold",
+      "RBCs shrink in salt water"
+    ],
+    "a": 1,
+    "e": "When hemoglobin releases oxygen, it becomes a better carrier for carbon dioxide, helping in CO2 transport from tissues."
+  },
+  {
+    "qe": "Which chemical is the primary 'Vasodilator' released by the endothelium to lower blood pressure?",
+    "qh": "",
+    "o": [
+      "Adrenaline",
+      "Nitric Oxide (NO)",
+      "Serotonin",
+      "Endothelin"
+    ],
+    "a": 1,
+    "e": "Nitric oxide relaxes the smooth muscles of the blood vessels, increasing the lumen diameter."
+  },
+  {
+    "qe": "What is 'Pulse Pressure'?",
+    "qh": "",
+    "o": [
+      "The average of Systolic and Diastolic",
+      "The difference between Systolic and Diastolic pressure",
+      "The maximum pressure in the aorta",
+      "The rate of heart beat"
+    ],
+    "a": 1,
+    "e": "For a BP of 120//80, the pulse pressure is 40 mmHg (120 minus 80)."
+  },
+  {
+    "qe": "Which type of 'Shock' is caused by a massive loss of blood or fluids?",
+    "qh": "",
+    "o": [
+      "Cardiogenic shock",
+      "Hypovolemic shock",
+      "Anaphylactic shock",
+      "Septic shock"
+    ],
+    "a": 1,
+    "e": "Hypovolemic shock occurs when there isn't enough blood for the heart to pump to the organs."
+  },
+  {
+    "qe": "The 'S-A Node' is located in the wall of which heart chamber?",
+    "qh": "",
+    "o": [
+      "Left Atrium",
+      "Right Atrium",
+      "Left Ventricle",
+      "Right Ventricle"
+    ],
+    "a": 1,
+    "e": "It is situated in the upper wall of the right atrium, near the opening of the superior vena cava."
+  },
+  {
+    "qe": "Which of the following is a 'Negative Inotropic' agent (decreases heart contractility)?",
+    "qh": "",
+    "o": [
+      "Adrenaline",
+      "Calcium ions",
+      "Acetylcholine (Parasympathetic)",
+      "Glucagon"
+    ],
+    "a": 2,
+    "e": "Acetylcholine slows down the heart and reduces the force of contraction via the vagus nerve."
+  },
+  {
+    "qe": "What is the function of 'Carbonic Anhydrase' in the blood?",
+    "qh": "",
+    "o": [
+      "Clotting blood",
+      "Speeding up the reaction between CO2 and water",
+      "Carrying oxygen",
+      "Producing platelets"
+    ],
+    "a": 1,
+    "e": "Found mostly in RBCs, this enzyme is vital for transporting CO2 as bicarbonate ions."
+  },
+  {
+    "qe": "The 'Ejection Fraction' (EF) is a measurement of:",
+    "qh": "",
+    "o": [
+      "Blood entering the atria",
+      "Percentage of blood leaving the heart each time it contracts",
+      "Speed of blood in capillaries",
+      "Total blood volume"
+    ],
+    "a": 1,
+    "e": "A normal EF is 55-70%. Lower values often indicate heart failure."
+  },
+  {
+    "qe": "Which 'Clotting Factor' is also known as the 'Christmas Factor'?",
+    "qh": "",
+    "o": [
+      "Factor VIII",
+      "Factor IX",
+      "Factor X",
+      "Factor XII"
+    ],
+    "a": 1,
+    "e": "Deficiency of Factor IX causes Hemophilia B, also known as Christmas disease."
+  },
+  {
+    "qe": "What is 'Mean Arterial Pressure' (MAP)?",
+    "qh": "",
+    "o": [
+      "(Systolic + Diastolic) // 2",
+      "Diastolic + 1//3 (Pulse Pressure)",
+      "Systolic + 2 (Diastolic)",
+      "Pulse Pressure x 2"
+    ],
+    "a": 1,
+    "e": "MAP is the average pressure in a patient's arteries during one cardiac cycle; it is a better indicator of organ perfusion."
+  },
+  {
+    "qe": "Which vessel is used as the 'Golden Standard' for measuring venous pressure (CVP)?",
+    "qh": "",
+    "o": [
+      "Radial Artery",
+      "Superior Vena Cava",
+      "Femoral Vein",
+      "Aorta"
+    ],
+    "a": 1,
+    "e": "Central Venous Pressure (CVP) measures the pressure in the thoracic vena cava, near the right atrium."
+  },
+  {
+    "qe": "In an 'Isovolumetric Contraction', which valves are closed?",
+    "qh": "",
+    "o": [
+      "Only AV valves",
+      "Only Semilunar valves",
+      "All four valves (AV and Semilunar)",
+      "None of the valves"
+    ],
+    "a": 2,
+    "e": "This is a brief moment where the ventricles contract but blood hasn't moved yet because all valves are shut."
+  },
+  {
+    "qe": "What is the 'Cardiac Reserve'?",
+    "qh": "",
+    "o": [
+      "Blood stored in the spleen",
+      "The difference between resting and maximum cardiac output",
+      "The extra blood in the liver",
+      "The speed of the heart during sleep"
+    ],
+    "a": 1,
+    "e": "Athletes have a very high cardiac reserve, allowing them to increase output significantly during exercise."
+  },
+  {
+    "qe": "The 'Pecquet's Cistern' (Cisterna Chyli) drains lymph primarily from which part of the body?",
+    "qh": "",
+    "o": [
+      "Head and Neck",
+      "Right Arm",
+      "Lower limbs and Digestive organs",
+      "Heart"
+    ],
+    "a": 2,
+    "e": "It is the origin of the thoracic duct, collecting fatty lymph (chyle) from the intestines."
+  },
+  {
+    "qe": "Which 'Leukocyte' is responsible for the 'Graft vs Host' reaction in transplants?",
+    "qh": "",
+    "o": [
+      "Neutrophils",
+      "T-Lymphocytes",
+      "B-Lymphocytes",
+      "Basophils"
+    ],
+    "a": 1,
+    "e": "T-cells recognize foreign cells and initiate the immune attack that leads to transplant rejection."
+  },
+  {
+    "qe": "Which type of 'Hemophilia' is known as the 'Royal Disease' and is caused by a deficiency of Factor VIII?",
+    "qh": "",
+    "o": [
+      "Hemophilia A",
+      "Hemophilia B",
+      "Hemophilia C",
+      "Parahemophilia"
+    ],
+    "a": 0,
+    "e": "Hemophilia A is the most common form and is an X-linked recessive genetic disorder."
+  },
+  {
+    "qe": "What is the 'R-R Interval' in an ECG used to measure?",
+    "qh": "",
+    "o": [
+      "Blood pressure",
+      "Heart rate and rhythm regularity",
+      "Atrial contraction time",
+      "Oxygen saturation"
+    ],
+    "a": 1,
+    "e": "The time between two consecutive R-waves tells the doctor the duration of one full cardiac cycle."
+  },
+  {
+    "qe": "The 'Hereditary' transmission of Blood Groups follows which genetic principle?",
+    "qh": "",
+    "o": [
+      "Incomplete Dominance",
+      "Co-dominance and Multiple Alleles",
+      "Blending Inheritance",
+      "Recessive epistasis"
+    ],
+    "a": 1,
+    "e": "ABO blood groups show co-dominance (A and B are both expressed) and are governed by three alleles: I^A, I^B, and i."
+  },
+  {
+    "qe": "Which structure in the fetus becomes the 'Ligamentum Arteriosum' after birth?",
+    "qh": "",
+    "o": [
+      "Foramen Ovale",
+      "Ductus Arteriosus",
+      "Umbilical Vein",
+      "Ductus Venosus"
+    ],
+    "a": 1,
+    "e": "The Ductus Arteriosus closes within days of birth, leaving behind a fibrous ligament."
+  },
+  {
+    "qe": "A 'ST-segment Elevation' on an ECG is a classic clinical sign of:",
+    "qh": "",
+    "o": [
+      "Normal heart",
+      "Acute Myocardial Infarction (Heart Attack)",
+      "High blood sugar",
+      "Anemia"
+    ],
+    "a": 1,
+    "e": "ST-elevation (STEMI) indicates that heart muscle is currently being damaged due to total artery blockage."
+  },
+  {
+    "qe": "Which 'Blood Group' contains no antibodies in its plasma?",
+    "qh": "",
+    "o": [
+      "O positive",
+      "AB positive",
+      "A negative",
+      "B positive"
+    ],
+    "a": 1,
+    "e": "Since AB+ has A, B, and Rh antigens, it does not produce antibodies against any of them."
+  },
+  {
+    "qe": "What is the function of 'Plasmin' in the blood?",
+    "qh": "",
+    "o": [
+      "Form a clot",
+      "Dissolve a blood clot (Fibrinolysis)",
+      "Carry iron",
+      "Attack viruses"
+    ],
+    "a": 1,
+    "e": "Plasmin is an enzyme that breaks down fibrin mesh, preventing clots from growing too large."
+  },
+  {
+    "qe": "The 'Cardiac Index' (CI) relates the Cardiac Output to a person's:",
+    "qh": "",
+    "o": [
+      "Weight",
+      "Body Surface Area (BSA)",
+      "Age",
+      "Height"
+    ],
+    "a": 1,
+    "e": "CI = Cardiac Output // BSA. It helps doctors compare heart performance across different body sizes."
+  },
+  {
+    "qe": "Which condition is characterized by 'Microcytic Hypochromic' RBCs?",
+    "qh": "",
+    "o": [
+      "Vitamin B12 deficiency",
+      "Iron Deficiency Anemia",
+      "Leukemia",
+      "Malaria"
+    ],
+    "a": 1,
+    "e": "In iron deficiency, RBCs are smaller (microcytic) and paler (hypochromic) because they lack hemoglobin."
+  },
+  {
+    "qe": "The 'Hiss' sound or 'Murmur' heard through a stethoscope indicates:",
+    "qh": "",
+    "o": [
+      "Normal heart rhythm",
+      "Defective heart valves causing turbulent flow",
+      "High lung pressure",
+      "Fast pulse"
+    ],
+    "a": 1,
+    "e": "Heart murmurs are often caused by 'leaky' valves (regurgitation) or 'narrow' valves (stenosis)."
+  },
+  {
+    "qe": "Which 'Immunoglobulin' (Antibody) is small enough to cross the placenta from mother to fetus?",
+    "qh": "",
+    "o": [
+      "IgM",
+      "IgA",
+      "IgG",
+      "IgE"
+    ],
+    "a": 2,
+    "e": "IgG provides the newborn with passive immunity during the first few months of life."
+  },
+  {
+    "qe": "What is the 'PR Interval' and why is it checked?",
+    "qh": "",
+    "o": [
+      "Time for atria to contract",
+      "Time for impulse to travel from SA Node to Ventricles",
+      "Time for heart to rest",
+      "Total cycle time"
+    ],
+    "a": 1,
+    "e": "A prolonged PR interval indicates a first-degree AV block (conduction delay)."
+  },
+  {
+    "qe": "The 'Christmas Disease' is the other name for which disorder?",
+    "qh": "",
+    "o": [
+      "Hemophilia A",
+      "Hemophilia B",
+      "Thalassemia",
+      "Sickle Cell Anemia"
+    ],
+    "a": 1,
+    "e": "Named after Stephen Christmas, the first patient identified with Factor IX deficiency."
+  },
+  {
+    "qe": "Which chemical is the natural 'Antidote' to Heparin used in hospitals?",
+    "qh": "",
+    "o": [
+      "Vitamin K",
+      "Protamine Sulfate",
+      "Aspirin",
+      "Warfarin"
+    ],
+    "a": 1,
+    "e": "While Vitamin K reverses Warfarin, Protamine Sulfate is used to neutralize Heparin."
+  },
+  {
+    "qe": "In 'Sickle Cell Anemia', which amino acid is replaced by Valine in the hemoglobin chain?",
+    "qh": "",
+    "o": [
+      "Alanine",
+      "Glutamic Acid",
+      "Glycine",
+      "Lysine"
+    ],
+    "a": 1,
+    "e": "This single point mutation causes RBCs to distort into a sickle shape under low oxygen."
+  },
+  {
+    "qe": "What is 'Stroke Volume' (SV) in terms of mathematical formula?",
+    "qh": "",
+    "o": [
+      "EDV + ESV",
+      "EDV - ESV",
+      "Cardiac Output // HR",
+      "Both 1 and 2"
+    ],
+    "a": 1,
+    "e": "End-Diastolic Volume (full heart) minus End-Systolic Volume (remaining blood) equals Stroke Volume."
+  },
+  {
+    "qe": "Which heart chamber receives blood from the 'Coronary Sinus'?",
+    "qh": "",
+    "o": [
+      "Left Atrium",
+      "Right Atrium",
+      "Left Ventricle",
+      "Right Ventricle"
+    ],
+    "a": 1,
+    "e": "The coronary sinus collects deoxygenated blood from the heart wall and dumps it into the right atrium."
+  },
+  {
+    "qe": "What is the 'Intrinsic Factor's' primary role in hematology?",
+    "qh": "",
+    "o": [
+      "Help in iron absorption",
+      "Help in Vitamin B12 absorption",
+      "Stimulate WBC production",
+      "Form platelets"
+    ],
+    "a": 1,
+    "e": "Produced by the stomach, it is essential for the ileum to absorb B12 for RBC maturation."
+  },
+  {
+    "qe": "The 'Purkinje Fibers' conduct electrical impulses at which relative speed?",
+    "qh": "",
+    "o": [
+      "Very slow",
+      "Moderate",
+      "Fastest in the heart",
+      "Same as SA node"
+    ],
+    "a": 2,
+    "e": "Fast conduction ensures the ventricles contract as a single unit to maximize pumping force."
+  },
+  {
+    "qe": "Which condition is characterized by 'Target Cells' in a blood smear?",
+    "qh": "",
+    "o": [
+      "Iron deficiency",
+      "Thalassemia",
+      "Malaria",
+      "Leukemia"
+    ],
+    "a": 1,
+    "e": "Thalassemia is a genetic disorder affecting hemoglobin synthesis, showing characteristic target-shaped cells."
+  },
+  {
+    "qe": "What is the 'Apex' of the heart?",
+    "qh": "",
+    "o": [
+      "The top broad part",
+      "The pointed bottom part (Left Ventricle tip)",
+      "The right atrium",
+      "The valves"
+    ],
+    "a": 1,
+    "e": "The apex points downward and to the left, where the heartbeat is most easily felt (Apical pulse)."
+  },
+  {
+    "qe": "Which type of blood vessel contains 'Valves' to prevent backflow against gravity?",
+    "qh": "",
+    "o": [
+      "Arteries",
+      "Veins",
+      "Capillaries",
+      "Arterioles"
+    ],
+    "a": 1,
+    "e": "Veins have valves that work with skeletal muscles to push blood back up to the heart."
+  },
+  {
+    "qe": "The 'H-antigen' is the precursor for which blood groups?",
+    "qh": "",
+    "o": [
+      "Only O",
+      "Only AB",
+      "A, B, and AB",
+      "All blood groups"
+    ],
+    "a": 3,
+    "e": "Every person (except Bombay group) has H-antigen, which is converted to A or B antigens."
+  },
+  {
+    "qe": "What is 'Afterload'?",
+    "qh": "",
+    "o": [
+      "Blood filling the heart",
+      "The resistance the heart must pump against (Blood Pressure)",
+      "Heart rate during sleep",
+      "The pulse wave"
+    ],
+    "a": 1,
+    "e": "Higher blood pressure increases the 'afterload', forcing the heart to work harder to open the valves."
+  },
+  {
+    "qe": "Which hormone is the primary regulator of 'Erythropoiesis' (RBC production)?",
+    "qh": "",
+    "o": [
+      "Insulin",
+      "Erythropoietin (EPO)",
+      "Adrenaline",
+      "Thyroxine"
+    ],
+    "a": 1,
+    "e": "EPO is produced by the kidneys when they detect low oxygen levels (Hypoxia)."
+  },
+  {
+    "qe": "The 'Q-wave' in an ECG specifically represents:",
+    "qh": "",
+    "o": [
+      "Atrial depolarization",
+      "Initial septal depolarization",
+      "Ventricular relaxation",
+      "Aortic closure"
+    ],
+    "a": 1,
+    "e": "The Q-wave shows the electrical signal passing through the interventricular septum."
+  },
+  {
+    "qe": "Which 'Leukocyte' is the largest in size in a blood smear?",
+    "qh": "",
+    "o": [
+      "Lymphocyte",
+      "Monocyte",
+      "Neutrophil",
+      "Eosinophil"
+    ],
+    "a": 1,
+    "e": "Monocytes are the largest WBCs and eventually migrate into tissues to become Macrophages."
+  },
+  {
+    "qe": "The 'Hepatic Portal Vein' is unique because it starts and ends in:",
+    "qh": "",
+    "o": [
+      "Arteries",
+      "Capillaries",
+      "Veins",
+      "Heart"
+    ],
+    "a": 1,
+    "e": "It begins in the intestinal capillaries and ends in the liver capillaries (sinusoids)."
+  },
+  {
+    "qe": "What is 'Cardiac Output' for a heart rate of 70 and stroke volume of 70 ml?",
+    "qh": "",
+    "o": [
+      "140 ml",
+      "4900 ml (4.9 Liters)",
+      "1 ml",
+      "7000 ml"
+    ],
+    "a": 1,
+    "e": "Cardiac Output = HR x SV. 70 x 70 = 4900 ml//min."
+  },
+  {
+    "qe": "The 'Circulatory System' is a closed loop. Who proved this in 1628?",
+    "qh": "",
+    "o": [
+      "Galen",
+      "William Harvey",
+      "Robert Hooke",
+      "Landsteiner"
+    ],
+    "a": 1,
+    "e": "William Harvey's 'De Motu Cordis' correctly described the heart as a pump and blood as a circulating fluid."
+  },
+  {
+    "qe": "Which vitamin is most crucial for 'Blood Clotting'?",
+    "qh": "",
+    "o": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin K",
+      "Vitamin E"
+    ],
+    "a": 2,
+    "e": "Vitamin K is needed by the liver to synthesize four major clotting factors."
+  },
+  {
+    "qe": "A 'Thrombus' that breaks loose and travels in the blood is called an:",
+    "qh": "",
+    "o": [
+      "Embolus",
+      "Aneurysm",
+      "Ischemia",
+      "Infarct"
+    ],
+    "a": 0,
+    "e": "An embolus can eventually get stuck and block blood flow to a vital organ (Embolism)."
+  },
+  {
+    "qe": "What is the function of 'Albumins' in the plasma?",
+    "qh": "",
+    "o": [
+      "Blood clotting",
+      "Maintaining colloid osmotic pressure",
+      "Immunity",
+      "Oxygen transport"
+    ],
+    "a": 1,
+    "e": "Albumin keeps water inside the blood vessels; low albumin leads to swelling (Edema)."
+  },
+  {
+    "qe": "The 'Spleen' is considered the graveyard for:",
+    "qh": "",
+    "o": [
+      "WBCs",
+      "RBCs",
+      "Platelets",
+      "Hormones"
+    ],
+    "a": 1,
+    "e": "Old and damaged Red Blood Cells are trapped and broken down in the spleen."
+  },
+  {
+    "qe": "Which part of the heart is known as the 'Pace-setter'?",
+    "qh": "",
+    "o": [
+      "SA Node",
+      "AV Node",
+      "Bundle of His",
+      "Purkinje Fibers"
+    ],
+    "a": 1,
+    "e": "The Atrio-ventricular (AV) node receives and delays the signal from the SA node."
+  },
+  {
+    "qe": "In which blood vessel is the 'Velocity' of blood the lowest?",
+    "qh": "",
+    "o": [
+      "Aorta",
+      "Veins",
+      "Capillaries",
+      "Arterioles"
+    ],
+    "a": 2,
+    "e": "Blood moves slowest in capillaries to allow maximum time for nutrient and gas exchange."
+  },
+  {
+    "qe": "What is 'Tachycardia'?",
+    "qh": "",
+    "o": [
+      "Slow heart rate",
+      "Fast heart rate (>100 bpm)",
+      "Irregular rhythm",
+      "Normal beat"
+    ],
+    "a": 1,
+    "e": "Tachycardia can be caused by exercise, stress, or cardiac issues."
+  },
+  {
+    "qe": "Which organ receives oxygenated blood from the 'Hepatic Artery'?",
+    "qh": "",
+    "o": [
+      "Heart",
+      "Liver",
+      "Spleen",
+      "Kidney"
+    ],
+    "a": 1,
+    "e": "The liver is unique; it gets oxygen from an artery but most of its blood volume from a vein (Portal vein)."
+  },
+  {
+    "qe": "Which type of WBC is primarily involved in 'Allergic Reactions'?",
+    "qh": "",
+    "o": [
+      "Neutrophils",
+      "Eosinophils",
+      "Lymphocytes",
+      "Monocytes"
+    ],
+    "a": 1,
+    "e": "Eosinophil counts rise during allergic responses and parasitic infections."
+  },
+  {
+    "qe": "What is the 'Cardiac Cycle' duration at 75 beats per minute?",
+    "qh": "",
+    "o": [
+      "1.0 sec",
+      "0.8 sec",
+      "0.6 sec",
+      "1.2 sec"
+    ],
+    "a": 1,
+    "e": "60 seconds // 75 bpm = 0.8 seconds per cycle."
+  },
+  {
+    "qe": "The 'Bundle of His' divides into right and left branches within the:",
+    "qh": "",
+    "o": [
+      "Atrial walls",
+      "Interventricular septum",
+      "Aortic arch",
+      "Pericardium"
+    ],
+    "a": 1,
+    "e": "The branches run down the septum toward the apex of the heart."
+  },
+  {
+    "qe": "Which chamber of the heart pumps blood to the 'Lungs'?",
+    "qh": "",
+    "o": [
+      "Right Atrium",
+      "Right Ventricle",
+      "Left Atrium",
+      "Left Ventricle"
+    ],
+    "a": 1,
+    "e": "The right ventricle pumps deoxygenated blood through the pulmonary artery."
+  },
+  {
+    "qe": "The 'Lubb' sound (S1) is caused by the closure of:",
+    "qh": "",
+    "o": [
+      "Semilunar valves",
+      "AV valves",
+      "Aorta",
+      "Vena Cava"
+    ],
+    "a": 1,
+    "e": "It marks the start of ventricular systole."
+  },
+  {
+    "qe": "What is 'Hemolysis'?",
+    "qh": "",
+    "o": [
+      "Formation of blood",
+      "Breakdown of RBCs",
+      "Clotting of blood",
+      "Blood test"
+    ],
+    "a": 1,
+    "e": "Hemolysis releases hemoglobin into the plasma, often due to mismatched blood or toxins."
+  },
+  {
+    "qe": "Which element is essential for the function of 'Hemoglobin'?",
+    "qh": "",
+    "o": [
+      "Magnesium",
+      "Iron",
+      "Calcium",
+      "Zinc"
+    ],
+    "a": 1,
+    "e": "Iron in the ferrous state binds the oxygen molecule."
+  },
+  {
+    "qe": "The 'SA Node' is known as the heart's pacemaker because it:",
+    "qh": "",
+    "o": [
+      "Is the largest node",
+      "Has the fastest rate of spontaneous depolarization",
+      "Is connected to the brain",
+      "Has more muscle"
+    ],
+    "a": 1,
+    "e": "It fires 70-80 times per minute, overriding all other potential pacemakers."
+  },
+  {
+    "qe": "What is 'Atherosclerosis'?",
+    "qh": "",
+    "o": [
+      "Hardening of veins",
+      "Buildup of plaques in arteries",
+      "Lung disease",
+      "Blood cancer"
+    ],
+    "a": 1,
+    "e": "Plaques made of fat and cholesterol narrow the arteries and can cause heart attacks."
+  },
+  {
+    "qe": "Which blood vessel has 'Thin Walls' and valves?",
+    "qh": "",
+    "o": [
+      "Artery",
+      "Vein",
+      "Aorta",
+      "Arteriole"
+    ],
+    "a": 1,
+    "e": "Veins operate under low pressure and need valves to keep blood moving toward the heart."
+  },
+  {
+    "qe": "The 'Universal Donor' group O- can donate to O+ because:",
+    "qh": "",
+    "o": [
+      "O+ has antibodies",
+      "O- lacks A, B, and Rh antigens",
+      "O+ has Rh antigen",
+      "None of these"
+    ],
+    "a": 1,
+    "e": "Group O- blood is 'naked' and won't be rejected by any other group."
+  },
+  {
+    "qe": "What is the primary function of 'WBCs'?",
+    "qh": "",
+    "o": [
+      "Transport CO2",
+      "Immune Defense",
+      "Clotting",
+      "Energy production"
+    ],
+    "a": 1,
+    "e": "Leukocytes identify and destroy pathogens like bacteria and viruses."
+  },
+  {
+    "qe": "What is 'Infarction'?",
+    "qh": "",
+    "o": [
+      "Swelling of a vessel",
+      "Tissue death due to inadequate blood supply",
+      "Increase in blood pressure",
+      "A type of heart valve"
+    ],
+    "a": 1,
+    "e": "Myocardial infarction is the medical name for a heart attack caused by dead heart tissue."
+  },
+  {
+    "qe": "The first 'Heart Transplant' was performed by:",
+    "qh": "",
+    "o": [
+      "William Harvey",
+      "Christian Barnard",
+      "Landsteiner",
+      "Louis Pasteur"
+    ],
+    "a": 1,
+    "e": "Dr. Christian Barnard performed the world's first human-to-human heart transplant in 1967."
+  },
+  {
+    "qe": "What is the significance of the 'QRS Complex' in an ECG?",
+    "qh": "",
+    "o": [
+      "Atrial contraction",
+      "Ventricular contraction (Depolarization)",
+      "Ventricular relaxation",
+      "Atrial relaxation"
+    ],
+    "a": 1,
+    "e": "The QRS complex represents the large electrical impulse triggering the ventricles to pump."
+  },
+  {
+    "qe": "The 'Lacteal' in the intestinal villi helps in the absorption of:",
+    "qh": "",
+    "o": [
+      "Glucose",
+      "Amino Acids",
+      "Fats (Lipids)",
+      "Water"
+    ],
+    "a": 2,
+    "e": "Lacteals are specialized lymph vessels that transport absorbed fats into the lymphatic system."
+  },
+  {
+    "qe": "What is 'CAD' in the context of the circulatory system?",
+    "qh": "",
+    "o": [
+      "Calcium Artery Disease",
+      "Coronary Artery Disease",
+      "Cardiac Atrium Disorder",
+      "Circulatory Aid Device"
+    ],
+    "a": 1,
+    "e": "CAD is the narrowing of the arteries that supply blood to the heart muscle."
+  },
+  {
+    "qe": "In an 'AB positive' person, which antibodies are present in the plasma?",
+    "qh": "",
+    "o": [
+      "Anti-A and Anti-B",
+      "Only Anti-A",
+      "Only Anti-B",
+      "None"
+    ],
+    "a": 3,
+    "e": "Since they have A, B, and Rh antigens, they cannot have antibodies against them without attacking their own blood."
+  },
+  {
+    "qe": "Which pigment is responsible for the red color of human blood?",
+    "qh": "",
+    "o": [
+      "Chlorophyll",
+      "Hemoglobin",
+      "Myoglobin",
+      "Anthocyanin"
+    ],
+    "a": 1,
+    "e": "Hemoglobin is an iron-containing protein in red blood cells that binds with oxygen."
+  }
+]
