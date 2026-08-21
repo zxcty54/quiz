@@ -1,1 +1,503 @@
-
+{
+  "month": "Aug 2026",
+  "generated_at": "2026-08-21 19:13:58",
+  "total_questions": 20,
+  "national_total": 18,
+  "bihar_total": 2,
+  "source_breakdown": {
+    "all_current_affairs": {
+      "total_scanned": 14,
+      "mcqs_created": 5,
+      "total_dropped": 9
+    },
+    "final_alerts_news": {
+      "total_scanned": 44,
+      "mcqs_created": 15,
+      "total_dropped": 29
+    }
+  },
+  "national_questions": [
+    {
+      "source_hash": "db205efd",
+      "source_file": "all_current_affairs",
+      "qe": "For which Olympic year is the accelerated talent identification programme being planned by the Sports Authority of India?",
+      "qh": "किस वर्ष के लिए भारत में ओलंपिक प्रतिभा पहचान को तेज करने की योजना बनाई गई है?",
+      "oe": [
+        "2028",
+        "2032",
+        "2036",
+        "2040"
+      ],
+      "oh": [
+        "2028",
+        "2032",
+        "2036",
+        "2040"
+      ],
+      "a": 2,
+      "e": "• Option C is Correct because the SAI Governing Body meeting explicitly targeted the 2036 Olympic Games for building a robust athlete pool.\n• Option A is Incorrect; 2028 is the Los Angeles Olympics, not the focus of the current plan.\n• Option B is Incorrect; 2032 refers to the Brisbane Olympics, which is not mentioned.\n• Option D is Incorrect; 2040 is beyond the immediate horizon set by the meeting.",
+      "category": "Sports Policy",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_001"
+    },
+    {
+      "source_hash": "c20b5550",
+      "source_file": "all_current_affairs",
+      "qe": "Who is the chairperson of the five‑member High‑Powered Enquiry Committee constituted by the Supreme Court to probe student protest violence?",
+      "qh": "सुप्रीम कोर्ट ने छात्र विरोध हिंसा की जांच के लिए गठित पाँच सदस्यीय हाई‑पॉवर्ड एन्क्वायरी कमेटी के अध्यक्ष कौन हैं?",
+      "oe": [
+        "Justice N V Ramana",
+        "Justice R Subhash Reddy",
+        "Justice D Y Chandrachud",
+        "Justice S A Bobde"
+      ],
+      "oh": [
+        "न्यायाधीश एन.वी. रामना",
+        "न्यायाधीश आर. सुब्बाष रैड्डी",
+        "न्यायाधीश डी.वाई. चंद्राचुड़",
+        "न्यायाधीश एस.ए. बोडे"
+      ],
+      "a": 1,
+      "e": "• Option B is Correct because the committee is headed by former Supreme Court judge Justice R Subhash Reddy.\n• Option A is Incorrect; Justice N V Ramana is the Chief Justice, not the committee chair.\n• Option C is Incorrect; Justice D Y Chandrachud is a sitting Supreme Court judge but not appointed to this panel.\n• Option D is Incorrect; Justice S A Bobde is a former Chief Justice, not the chair of this enquiry committee.",
+      "category": "Judiciary / Governance",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_002"
+    },
+    {
+      "source_hash": "5f4040c0",
+      "source_file": "all_current_affairs",
+      "qe": "According to the Delhi Master Plan 2047, what is the projected population of Delhi by the year 2047?",
+      "qh": "दिल्ली मास्टर प्लान 2047 के अनुसार, वर्ष 2047 तक दिल्ली की अनुमानित जनसंख्या क्या होगी?",
+      "oe": [
+        "2.5 crore",
+        "3.2 crore",
+        "4.0 crore",
+        "5.0 crore"
+      ],
+      "oh": [
+        "2.5 करोड़",
+        "3.2 करोड़",
+        "4.0 करोड़",
+        "5.0 करोड़"
+      ],
+      "a": 1,
+      "e": "• Option B is Correct because the Delhi Master Plan 2047 envisions a population of about 3.2 crore (32 million) for the national capital by 2047.\n• Option A is Incorrect because the plan does not target 2.5 crore.\n• Option C is Incorrect as 4.0 crore exceeds the stated projection.\n• Option D is Incorrect; 5.0 crore is far beyond the plan’s estimate.",
+      "category": "National Polity, Judiciary & Governance",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_003"
+    },
+    {
+      "source_hash": "f6084c45",
+      "source_file": "final_alerts_news",
+      "qe": "What is the name of India's first mini electric passenger aircraft series being developed by AlphaX Aerospace?",
+      "qh": "अल्फाX एयरोस्पेस द्वारा विकसित भारत की पहली मिनी इलेक्ट्रिक पेसेंजर एयरोप्लेन श्रृंखला का नाम क्या है?",
+      "oe": [
+        "AeroLite",
+        "SkyWing",
+        "SkyRover",
+        "AeroJet"
+      ],
+      "oh": [
+        "एरोलाइट",
+        "स्कायविंग",
+        "स्कायरोवर",
+        "एरोजेट"
+      ],
+      "a": 2,
+      "e": "• Option C is Correct because the aircraft series is named **SkyRover**, a VTOL‑capable mini electric passenger aircraft with 800 km range.\n• Option A is Incorrect; AeroLite is not the name announced.\n• Option B is Incorrect; SkyWing refers to a different concept.\n• Option D is Incorrect; AeroJet is unrelated to this project.",
+      "category": "Aviation & Transport",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_004"
+    },
+    {
+      "source_hash": "692b0fdb",
+      "source_file": "final_alerts_news",
+      "qe": "In the Delhi High Court judgment on generative AI, which provision of the Indian Copyright Act was clarified?",
+      "qh": "दिल्ली हाई कोर्ट के जनरेटिव एआई संबंधी फैसले में भारतीय कॉपीराइट अधिनियम की कौन सी धारा स्पष्ट की गई?",
+      "oe": [
+        "Section 14",
+        "Section 31",
+        "Section 45",
+        "Section 52(1)(a)"
+      ],
+      "oh": [
+        "धारा 14",
+        "धारा 31",
+        "धारा 45",
+        "धारा 52(1)(a)"
+      ],
+      "a": 3,
+      "e": "• Option D is Correct because the judgment interpreted **Section 52(1)(a)** of the Copyright Act, dealing with fair dealing and the scope of copyright for AI‑generated content.\n• Option A is Incorrect; Section 14 deals with registration, not AI.\n• Option B is Incorrect; Section 31 concerns infringement remedies.\n• Option C is Incorrect; Section 45 pertains to moral rights, unrelated to the AI issue.",
+      "category": "Governance, Judiciary & Public Administration",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_005"
+    },
+    {
+      "source_hash": "0a8df1ea",
+      "source_file": "final_alerts_news",
+      "qe": "When is the Mumbai‑Ahmedabad high‑speed rail corridor expected to become operational?",
+      "qh": "मुंबई‑अहमदाबाद हाई‑स्पीड रेल कॉरिडोर के संचालन की अपेक्षित तिथि कब है?",
+      "oe": [
+        "2029",
+        "2030",
+        "2032",
+        "2035"
+      ],
+      "oh": [
+        "2029",
+        "2030",
+        "2032",
+        "2035"
+      ],
+      "a": 0,
+      "e": "• Option A is Correct because the 508 km Mumbai‑Ahmedabad bullet‑train corridor, built by NHSRCL, is slated to start commercial operations in **2029**.\n• Option B is Incorrect; 2030 is beyond the announced target.\n• Option C is Incorrect; 2032 is not mentioned in official timelines.\n• Option D is Incorrect; 2035 is far later than the projected date.",
+      "category": "Aviation & Transport",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_006"
+    },
+    {
+      "source_hash": "14b39519",
+      "source_file": "final_alerts_news",
+      "qe": "Which ministry is the nodal agency for the Guide to Grasslands and Other Open Natural Ecosystems launched on 17 August 2026?",
+      "qh": "17 अगस्त 2026 को लॉन्च किए गए घास के मैदानों और खुले प्राकृतिक पारिस्थितिक तंत्र गाइड के लिए कौन सा मंत्रालय नोडल एजेंसी है?",
+      "oe": [
+        "Ministry of Environment, Forest and Climate Change",
+        "Ministry of Agriculture and Farmers' Welfare",
+        "Ministry of Rural Development",
+        "Ministry of Housing and Urban Affairs"
+      ],
+      "oh": [
+        "पर्यावरण, वन और जलवायु परिवर्तन मंत्रालय",
+        "कृषि एवं किसान कल्याण मंत्रालय",
+        "ग्रामीण विकास मंत्रालय",
+        "गृह एवं शहरी मामलों का मंत्रालय"
+      ],
+      "a": 0,
+      "e": "• Option A is Correct because the guide is a national publication under the Wildlife Protection Act, Environment Protection Act and the National Biodiversity Action Plan and is administered by the Ministry of Environment, Forest and Climate Change. • Option B is Incorrect because agriculture ministry does not oversee wildlife‑grassland policy. • Option C is Incorrect because rural development deals with poverty‑alleviation programmes, not ecosystem guidelines. • Option D is Incorrect because housing ministry is unrelated to biodiversity management.",
+      "category": "Environment, Climate & Sustainability",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_007"
+    },
+    {
+      "source_hash": "1d6b8fd7",
+      "source_file": "final_alerts_news",
+      "qe": "Under which scheme were India's first domestic manufacturing of critical electronic components approved?",
+      "qh": "भारत में महत्वपूर्ण इलेक्ट्रॉनिक घटकों के प्रथम घरेलू निर्माण को किस योजना के तहत मंजूरी मिली?",
+      "oe": [
+        "Production‑Linked Incentive (PLI) Scheme",
+        "Electronics Component Manufacturing Scheme (ECMS)",
+        "Scheme for Promotion of Manufacturing of Electronic Components (SPMEC)",
+        "National Electronics Mission"
+      ],
+      "oh": [
+        "प्रोडक्शन‑लिंक्ड इंसेंटिव (PLI) योजना",
+        "इलेक्ट्रॉनिक्स कंपोनेंट मैन्युफैक्चरिंग स्कीम (ECMS)",
+        "इलेक्ट्रॉनिक घटकों के निर्माण को बढ़ावा देने की योजना (SPMEC)",
+        "राष्ट्रीय इलेक्ट्रॉनिक्स मिशन"
+      ],
+      "a": 1,
+      "e": "• Option B is Correct because the approvals for filters, coils, speakers, acetylene black and electrolyte additives were given under the Electronics Component Manufacturing Scheme (ECMS) of MeitY. • Option A is Incorrect as PLI scheme targets sectors like telecom, pharma, not component‑level approvals. • Option C is Incorrect; SPMEC is not an existing central scheme. • Option D is Incorrect; the National Electronics Mission is a broader policy, not the specific approval mechanism.",
+      "category": "Space, Science & Technology",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_008"
+    },
+    {
+      "source_hash": "476ee09d",
+      "source_file": "final_alerts_news",
+      "qe": "In which city is India’s first Vande Bharat sleeper‑train maintenance depot being set up?",
+      "qh": "भारत का पहला वंदे भारत स्लीपर ट्रेन रखरखाव डिपो किस शहर में स्थापित किया जा रहा है?",
+      "oe": [
+        "Bhopal",
+        "Surat",
+        "Jodhpur",
+        "Patna"
+      ],
+      "oh": [
+        "भोपाल",
+        "सूरत",
+        "जोधपुर",
+        "पटना"
+      ],
+      "a": 2,
+      "e": "• Option C is Correct because the depot dedicated to Vande Bharat sleeper trains is being constructed in Jodhpur under a joint venture with a Russian technology partner. • Option A is Incorrect; Bhopal hosts other railway projects but not this depot. • Option B is Incorrect; Surat is not mentioned in the announcement. • Option D is Incorrect; Patna is unrelated to the Vande Bharat sleeper depot.",
+      "category": "Aviation & Transport",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_009"
+    },
+    {
+      "source_hash": "b840ef38",
+      "source_file": "final_alerts_news",
+      "qe": "Which Indian state is establishing the country’s first government‑owned AI university?",
+      "qh": "कौन सा भारतीय राज्य देश का पहला सरकारी‑स्वामित्व वाला एआई विश्वविद्यालय स्थापित कर रहा है?",
+      "oe": [
+        "Maharashtra",
+        "Tamil Nadu",
+        "West Bengal",
+        "Karnataka"
+      ],
+      "oh": [
+        "महाराष्ट्र",
+        "तमिलनाडु",
+        "पश्चिम बंगाल",
+        "कर्नाटक"
+      ],
+      "a": 3,
+      "e": "• Option D is Correct because Karnataka announced the creation of India’s first government‑owned AI university in Bengaluru. • Option A is Incorrect; Maharashtra has AI initiatives but not the first government university. • Option B is Incorrect; Tamil Nadu’s AI efforts are private‑sector driven. • Option C is Incorrect; West Bengal has AI labs but no dedicated government university yet.",
+      "category": "Education & Research",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_010"
+    },
+    {
+      "source_hash": "efe70204",
+      "source_file": "final_alerts_news",
+      "qe": "Which country became the fourth nation to achieve a successful lunar landing with the Chandrayaan‑3 mission?",
+      "qh": "चंद्रयान‑3 मिशन के सफल लैंडिंग के साथ कौन सा देश चौथा राष्ट्र बना जिसने चंद्रमा पर लैंडिंग हासिल की?",
+      "oe": [
+        "United States",
+        "India",
+        "Russia",
+        "China"
+      ],
+      "oh": [
+        "संयुक्त राज्य अमेरिका",
+        "भारत",
+        "रूस",
+        "चीन"
+      ],
+      "a": 1,
+      "e": "• Option B is Correct because Chandrayaan‑3 landed on the Moon in 2023, making India the fourth country after the United States, Russia and China to achieve a soft lunar landing.\n• Option A is Incorrect because the United States achieved its first lunar landing in 1969 (Apollo 11).\n• Option C is Incorrect because Russia (formerly USSR) achieved its first lunar landing in 1970 (Luna 16).\n• Option D is Incorrect because China’s first lunar landing was in 2013 (Chang'e 3).",
+      "category": "Space, Science & Technology",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_011"
+    },
+    {
+      "source_hash": "482d49f3",
+      "source_file": "final_alerts_news",
+      "qe": "In which year was India's first satellite Aryabhata launched?",
+      "qh": "भारत का पहला उपग्रह आर्यभट्ट किस वर्ष लॉन्च किया गया था?",
+      "oe": [
+        "1972",
+        "1974",
+        "1975",
+        "1977"
+      ],
+      "oh": [
+        "1972",
+        "1974",
+        "1975",
+        "1977"
+      ],
+      "a": 2,
+      "e": "• Option C is Correct because Aryabhata was launched on 19 April 1975 from the Kapustin Yar launch site in the USSR.\n• Option A is Incorrect; 1972 saw no Indian satellite launch.\n• Option B is Incorrect; the launch occurred a year later.\n• Option D is Incorrect; the launch took place two years earlier.",
+      "category": "Space, Science & Technology",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_012"
+    },
+    {
+      "source_hash": "6958519e",
+      "source_file": "final_alerts_news",
+      "qe": "In which city will India's first government‑owned AI university be established?",
+      "qh": "भारत का पहला सरकारी‑स्वामित्व वाला एआई विश्वविद्यालय किस शहर में स्थापित होगा?",
+      "oe": [
+        "Mumbai",
+        "Hyderabad",
+        "Chennai",
+        "Bengaluru"
+      ],
+      "oh": [
+        "मुंबई",
+        "हैदराबाद",
+        "चेन्नई",
+        "बेंगलुरु"
+      ],
+      "a": 3,
+      "e": "• Option D is Correct because the Karnataka government announced that the AI university will be set up in Bengaluru.\n• Option A is Incorrect; Mumbai has no such announcement.\n• Option B is Incorrect; Hyderabad is not the chosen location.\n• Option C is Incorrect; Chennai is unrelated to this AI university project.",
+      "category": "Education & Research",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_013"
+    },
+    {
+      "source_hash": "bf17e15f",
+      "source_file": "final_alerts_news",
+      "qe": "What is the total payload capacity (in tonnes) of India's first Vande Bharat freight train?",
+      "qh": "भारत के पहले वंदे भारत फ्रेट ट्रेन की कुल पेलोड क्षमता (टन में) क्या है?",
+      "oe": [
+        "395 tonnes",
+        "300 tonnes",
+        "250 tonnes",
+        "420 tonnes"
+      ],
+      "oh": [
+        "395 टन",
+        "300 टन",
+        "250 टन",
+        "420 टन"
+      ],
+      "a": 0,
+      "e": "• Option A is Correct because official specifications state the prototype can carry up to 395 tonnes of cargo.\n• Option B is Incorrect; 300 tonnes is lower than the certified capacity.\n• Option C is Incorrect; 250 tonnes is not the declared figure.\n• Option D is Incorrect; 420 tonnes exceeds the current design limit.",
+      "category": "Aviation & Transport",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_014"
+    },
+    {
+      "source_hash": "077aea50",
+      "source_file": "final_alerts_news",
+      "qe": "Which international body designated Parichha Weir as India's first World Heritage Irrigation Structure?",
+      "qh": "कौन सा अंतर्राष्ट्रीय निकाय परिछा बांध को भारत का पहला विश्व धरोहर सिंचाई संरचना के रूप में मान्यता देता है?",
+      "oe": [
+        "UNESCO",
+        "International Commission on Irrigation and Drainage (ICID)",
+        "World Bank",
+        "Indian Council of Historical Research"
+      ],
+      "oh": [
+        "यूनेस्को",
+        "अंतर्राष्ट्रीय सिंचाई एवं जल निकासी आयोग (ICID)",
+        "विश्व बैंक",
+        "भारतीय इतिहास अनुसंधान परिषद"
+      ],
+      "a": 1,
+      "e": "• Option B is Correct because the International Commission on Irrigation and Drainage (ICID) conferred the World Heritage Irrigation Structure (WHIS) status on Parichha Weir, making it the first such designation in India.\n• Option A is Incorrect because UNESCO grants World Heritage Site status, not the specific WHIS category.\n• Option C is Incorrect as the World Bank does not award heritage designations.\n• Option D is Incorrect because the Indian Council of Historical Research deals with historical research, not irrigation heritage.",
+      "category": "Environment, Climate & Sustainability",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_015"
+    },
+    {
+      "source_hash": "c2dc843a",
+      "source_file": "final_alerts_news",
+      "qe": "By which year does Punjab Police plan to extend the Sadak Surakhya Force coverage to 6,000 km of state roads?",
+      "qh": "पंजाब पुलिस कब तक सड़क सुरक्षा बल (Sadak Surakhya Force) की कवरेज को 6,000 किमी तक बढ़ाने की योजना बना रही है?",
+      "oe": [
+        "2035",
+        "2040",
+        "2047",
+        "2050"
+      ],
+      "oh": [
+        "2035",
+        "2040",
+        "2047",
+        "2050"
+      ],
+      "a": 2,
+      "e": "• Option C is Correct because the Punjab Police's roadmap states that by 2047 the Sadak Surakhya Force will cover 6,000 km of state roads, creating a 3D policing ecosystem.\n• Option A is Incorrect; 2035 is earlier than the announced target.\n• Option B is Incorrect; 2040 is not the stated year.\n• Option D is Incorrect; 2050 exceeds the planned timeline.",
+      "category": "Internal Security & Emergency Services",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_016"
+    },
+    {
+      "source_hash": "d88a0e78",
+      "source_file": "final_alerts_news",
+      "qe": "Which Indian private company developed the country's first privately built orbital rocket named Vikram‑1?",
+      "qh": "विक्रम‑1 नामक भारत का पहला निजी निर्मित कक्षा रॉकेट किस भारतीय निजी कंपनी ने विकसित किया?",
+      "oe": [
+        "Skyroot Aerospace",
+        "Team Indus",
+        "Bellatrix Aerospace",
+        "Agnikul Cosmos"
+      ],
+      "oh": [
+        "स्काईरूट एयरोस्पेस",
+        "टीम इंडस",
+        "बेलैट्रिक्स एयरोस्पेस",
+        "अग्निकुल कॉस्मोस"
+      ],
+      "a": 0,
+      "e": "• Option A is Correct because Skyroot Aerospace, based in Hyderabad, successfully developed Vikram‑1, marking India's first privately built orbital launch vehicle.\n• Option B is Incorrect; Team Indus focuses on lunar missions, not orbital rockets.\n• Option C is Incorrect; Bellatrix Aerospace works on propulsion systems but has not launched an orbital rocket.\n• Option D is Incorrect; Agnikul Cosmos is developing a small launch vehicle, not Vikram‑1.",
+      "category": "Aviation & Transport",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_017"
+    },
+    {
+      "source_hash": "c7a9abf8",
+      "source_file": "final_alerts_news",
+      "qe": "What percentage of V.O.C. Port's total electricity consumption was met by renewable energy in the 2025‑26 financial year?",
+      "qh": "2025‑26 वित्तीय वर्ष में V.O.C. पोर्ट की कुल विद्युत खपत का कितना प्रतिशत नवीकरणीय ऊर्जा द्वारा पूरा किया गया?",
+      "oe": [
+        "85.5%",
+        "90.2%",
+        "97.1%",
+        "93.89%"
+      ],
+      "oh": [
+        "85.5%",
+        "90.2%",
+        "97.1%",
+        "93.89%"
+      ],
+      "a": 3,
+      "e": "• Option D is Correct because V.O.C. Port reported that renewable sources supplied 93.89% of its electricity consumption in FY 2025‑26, earning it Scope‑2 emission‑free status.\n• Option A is Incorrect; 85.5% is lower than the actual figure.\n• Option B is Incorrect; 90.2% does not match the reported value.\n• Option C is Incorrect; 97.1% exceeds the documented percentage.",
+      "category": "Maritime, Shipping & Defence Manufacturing",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_018"
+    }
+  ],
+  "bihar_questions": [
+    {
+      "source_hash": "7a00c833",
+      "source_file": "all_current_affairs",
+      "qe": "What was the total number of digital X‑ray machines deployed in Bihar's tuberculosis screening drive?",
+      "qh": "बिहार में ट्यूबरकुलोसिस स्क्रीनिंग अभियान में उपयोग किए गए डिजिटल एक्स‑रे मशीनों की कुल संख्या क्या थी?",
+      "oe": [
+        "321",
+        "89",
+        "562",
+        "491"
+      ],
+      "oh": [
+        "321",
+        "89",
+        "562",
+        "491"
+      ],
+      "a": 3,
+      "e": "• Option D is Correct because the State Health Society reported deployment of 491 digital X‑ray machines (including 140 AI‑powered handheld units) during the campaign.\n• Option A is Incorrect because 321 machines were not mentioned in the report.\n• Option B is Incorrect because 89 refers to the number of CBNAAT machines, not X‑ray units.\n• Option C is Incorrect because 562 is the count of Truenat machines, not digital X‑ray machines.",
+      "category": "Health / Public Health Initiative",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "Bihar",
+      "id": "bih_q_001"
+    },
+    {
+      "source_hash": "e1095e33",
+      "source_file": "all_current_affairs",
+      "qe": "Under which centrally sponsored scheme did the Union Government approve 11.18 lakh pucca houses for Bihar with an outlay of ₹13,427 crore?",
+      "qh": "कौन सी केंद्र सरकार की योजना के तहत केंद्र सरकार ने बिहार के लिए 11.18 लाख पक्के घरों को ₹13,427 करोड़ के बजट के साथ स्वीकृत किया?",
+      "oe": [
+        "Pradhan Mantri Awas Yojana (PMAY)",
+        "Pradhan Mantri Gram Sadak Yojana (PMGSY)",
+        "Pradhan Mantri Krishi Sinchai Yojana (PMKSY)",
+        "Pradhan Mantri Shram Yogi Maan‑Dhan"
+      ],
+      "oh": [
+        "प्रधानमंत्री आवास योजना",
+        "प्रधानमंत्री ग्राम सड़क योजना",
+        "प्रधानमंत्री कृषि सिंचाई योजना",
+        "प्रधानमंत्री श्रम योगी मानधन"
+      ],
+      "a": 0,
+      "e": "• Option A is Correct because the ₹13,427 crore housing package for 11.18 lakh pucca houses was approved under the Pradhan Mantri Awas Yojana.\n• Option B is Incorrect; PMGSY deals with rural road construction, not housing.\n• Option C is Incorrect; PMKSY focuses on irrigation infrastructure.\n• Option D is Incorrect; the Shram Yogi Maan‑Dhan scheme is a pension scheme for unorganised workers.",
+      "category": "Housing / Regional Languages",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "Bihar",
+      "id": "bih_q_002"
+    }
+  ]
+}
