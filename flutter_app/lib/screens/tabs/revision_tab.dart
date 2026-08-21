@@ -346,7 +346,7 @@ class _RevisionTabState extends State<RevisionTab> {
           Text('Subject par click karein aur direct chapter button dabakar revision shuru karein', style: TextStyle(color: subTextColor, fontSize: 12)),
           const SizedBox(height: 14),
 
-          // 🔬 1. General Science (BPSC Sets)
+          // 🔬 1. General Science (BPSC + Static Folders)
           _buildExpansionSubjectCategory(
             context: context,
             title: 'General Science',
@@ -355,14 +355,19 @@ class _RevisionTabState extends State<RevisionTab> {
             color: const Color(0xFF2563EB),
             isDark: isDark,
             subSections: [
-              {'title': '⚡ Physics (TCS PYQs Focus)', 'key': 'phy_mapping'},
-              {'title': '🧬 Biology (Repeat Concept Sets)', 'key': 'bio_mapping'},
-              {'title': '🧪 Chemistry (Formula & Reactions)', 'key': 'chem_mapping'},
+              // Static Folders
+              {'title': '⚡ Physics (Static Concept Sets)', 'key': 'static_phy_mapping'},
+              {'title': '🧬 Biology (Static Concept Sets)', 'key': 'static_bio_mapping'},
+              {'title': '🧪 Chemistry (Static Concept Sets)', 'key': 'static_chem_mapping'},
+              // BPSC Drill Folders
+              {'title': '🎯 Physics (BPSC Drill)', 'key': 'phy_mapping'},
+              {'title': '🎯 Biology (BPSC Drill)', 'key': 'bio_mapping'},
+              {'title': '🎯 Chemistry (BPSC Drill)', 'key': 'chem_mapping'},
             ],
           ),
           const SizedBox(height: 12),
 
-          // 🏛️ 2. GK & Social Science (BPSC Sets)
+          // 🏛️ 2. GK & Social Science (BPSC + Static Folders)
           _buildExpansionSubjectCategory(
             context: context,
             title: 'GK & Social Science',
@@ -371,38 +376,24 @@ class _RevisionTabState extends State<RevisionTab> {
             color: const Color(0xFF4F46E5),
             isDark: isDark,
             subSections: [
-              {'title': '📜 Indian Polity (Articles Special)', 'key': 'polity_mapping'},
-              {'title': '🏛️ History (1857 & Freedom Movement)', 'key': 'history_mapping'},
-              {'title': '🌍 Geography (Physical & Bihar Map Focus)', 'key': 'geo_mapping'},
-              {'title': '📈 Economy (Budget & Five Year Plans)', 'key': 'eco_mapping'},
-            ],
-          ),
-          const SizedBox(height: 12),
-
-          // 📰 3. Current Affairs Vault
-          _buildCurrentAffairsCategory(
-            context: context,
-            isDark: isDark,
-          ),
-          const SizedBox(height: 12),
-
-          // 🎯 4. STATIC GK & SCIENCE (FOLDER-WISE ACCORDION)
-          _buildExpansionSubjectCategory(
-            context: context,
-            title: 'Static GK & Science Foundation',
-            badgeText: '📌 Core Concepts & One-Liner MCQs',
-            icon: '🎯',
-            color: const Color(0xFF0D9488),
-            isDark: isDark,
-            subSections: [
-              {'title': '⚡ Physics (Static Sets)', 'key': 'static_phy_mapping'},
-              {'title': '🧬 Biology (Static Sets)', 'key': 'static_bio_mapping'},
-              {'title': '🧪 Chemistry (Static Sets)', 'key': 'static_chem_mapping'},
+              // Static Folders
               {'title': '📜 Indian Polity (Static Sets)', 'key': 'static_polity_mapping'},
               {'title': '🏛️ History (Static Sets)', 'key': 'static_history_mapping'},
               {'title': '🌍 Geography (Static Sets)', 'key': 'static_geo_mapping'},
               {'title': '📈 Economy (Static Sets)', 'key': 'static_eco_mapping'},
+              // BPSC Drill Folders
+              {'title': '🎯 Indian Polity (BPSC Drill)', 'key': 'polity_mapping'},
+              {'title': '🎯 History (BPSC Drill)', 'key': 'history_mapping'},
+              {'title': '🎯 Geography (BPSC Drill)', 'key': 'geo_mapping'},
+              {'title': '🎯 Economy (BPSC Drill)', 'key': 'eco_mapping'},
             ],
+          ),
+          const SizedBox(height: 12),
+
+          // 📰 3. Current Affairs 2026 Vault
+          _buildCurrentAffairsCategory(
+            context: context,
+            isDark: isDark,
           ),
         ],
       ),
@@ -794,7 +785,6 @@ class _RevisionTabState extends State<RevisionTab> {
     );
   }
 
-  // 📂 SUB-FOLDER ACCORDION CATEGORY BUILDER
   Widget _buildExpansionSubjectCategory({
     required BuildContext context,
     required String title,
@@ -805,14 +795,14 @@ class _RevisionTabState extends State<RevisionTab> {
     required List<Map<String, dynamic>> subSections,
   }) {
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
-    final Color subFolderBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
     final Color subTitleColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF334155);
+    final Color dividerColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
 
     return Card(
       color: cardBg,
       elevation: 1.5,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(12),
         side: BorderSide(
           color: isDark ? color.withOpacity(0.4) : color.withOpacity(0.25),
           width: 1.2,
@@ -842,7 +832,7 @@ class _RevisionTabState extends State<RevisionTab> {
               ),
             ],
           ),
-          childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
+          childrenPadding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
           expandedCrossAxisAlignment: CrossAxisAlignment.start,
           children: subSections.map((section) {
             final String subTitle = section['title'];
@@ -853,88 +843,51 @@ class _RevisionTabState extends State<RevisionTab> {
               rawChapters = Map<String, dynamic>.from(_liveSubjectMapping[mapKey]);
             }
 
-            return Container(
-              margin: const EdgeInsets.only(top: 8),
-              decoration: BoxDecoration(
-                color: subFolderBg,
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(
-                  color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
-                  width: 1.0,
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Divider(color: dividerColor, height: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6.0),
+                  child: Text(
+                    subTitle,
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: subTitleColor),
+                  ),
                 ),
-              ),
-              child: ExpansionTile(
-                dense: true,
-                tilePadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
-                leading: const Icon(Icons.folder_open_rounded, size: 20, color: Color(0xFFF59E0B)),
-                title: Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        subTitle,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 13,
-                          color: subTitleColor,
-                        ),
-                      ),
-                    ),
-                    if (rawChapters.isNotEmpty)
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                        decoration: BoxDecoration(
-                          color: color.withOpacity(0.12),
-                          borderRadius: BorderRadius.circular(6),
-                        ),
+                rawChapters.isEmpty
+                    ? Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 6.0),
                         child: Text(
-                          "${rawChapters.length} Sets",
-                          style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.bold,
-                            color: color,
-                          ),
+                          "Loading chapters...",
+                          style: TextStyle(fontSize: 11, color: isDark ? Colors.grey.shade500 : Colors.grey),
                         ),
+                      )
+                    : Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
+                        children: rawChapters.entries.map((entry) {
+                          String path = entry.value.toString();
+                          return ActionChip(
+                            elevation: 1,
+                            backgroundColor: isDark ? color.withOpacity(0.2) : color.withOpacity(0.08),
+                            side: BorderSide(
+                              color: isDark ? color.withOpacity(0.5) : color.withOpacity(0.3),
+                            ),
+                            label: Text(
+                              "📖 ${entry.key}",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600,
+                                color: isDark ? Colors.white : color,
+                              ),
+                            ),
+                            onPressed: () {
+                              widget.onLaunchPractice(context, entry.key, path);
+                            },
+                          );
+                        }).toList(),
                       ),
-                  ],
-                ),
-                childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
-                expandedCrossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  rawChapters.isEmpty
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 6.0),
-                          child: Text(
-                            "Loading chapters...",
-                            style: TextStyle(fontSize: 11, color: isDark ? Colors.grey.shade500 : Colors.grey),
-                          ),
-                        )
-                      : Wrap(
-                          spacing: 8,
-                          runSpacing: 8,
-                          children: rawChapters.entries.map((entry) {
-                            String path = entry.value.toString();
-                            return ActionChip(
-                              elevation: 1,
-                              backgroundColor: isDark ? color.withOpacity(0.2) : color.withOpacity(0.08),
-                              side: BorderSide(
-                                color: isDark ? color.withOpacity(0.5) : color.withOpacity(0.3),
-                              ),
-                              label: Text(
-                                "📖 ${entry.key}",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w600,
-                                  color: isDark ? Colors.white : color,
-                                ),
-                              ),
-                              onPressed: () {
-                                widget.onLaunchPractice(context, entry.key, path);
-                              },
-                            );
-                          }).toList(),
-                        ),
-                ],
-              ),
+              ],
             );
           }).toList(),
         ),
