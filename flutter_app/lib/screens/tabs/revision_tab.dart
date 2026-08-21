@@ -346,7 +346,7 @@ class _RevisionTabState extends State<RevisionTab> {
           Text('Subject par click karein aur direct chapter button dabakar revision shuru karein', style: TextStyle(color: subTextColor, fontSize: 12)),
           const SizedBox(height: 14),
 
-          // 🔬 1. General Science
+          // 🔬 1. General Science (BPSC + Static Folders)
           _buildExpansionSubjectCategory(
             context: context,
             title: 'General Science',
@@ -355,14 +355,19 @@ class _RevisionTabState extends State<RevisionTab> {
             color: const Color(0xFF2563EB),
             isDark: isDark,
             subSections: [
-              {'title': '⚡ Physics (TCS PYQs Focus)', 'key': 'phy_mapping'},
-              {'title': '🧬 Biology (Repeat Concept Sets)', 'key': 'bio_mapping'},
-              {'title': '🧪 Chemistry (Formula & Reactions)', 'key': 'chem_mapping'},
+              // Static Folders
+              {'title': '⚡ Physics (Static Concept Sets)', 'key': 'static_phy_mapping'},
+              {'title': '🧬 Biology (Static Concept Sets)', 'key': 'static_bio_mapping'},
+              {'title': '🧪 Chemistry (Static Concept Sets)', 'key': 'static_chem_mapping'},
+              // BPSC Drill Folders
+              {'title': '🎯 Physics (BPSC Drill)', 'key': 'phy_mapping'},
+              {'title': '🎯 Biology (BPSC Drill)', 'key': 'bio_mapping'},
+              {'title': '🎯 Chemistry (BPSC Drill)', 'key': 'chem_mapping'},
             ],
           ),
           const SizedBox(height: 12),
 
-          // 🏛️ 2. GK & Social Science
+          // 🏛️ 2. GK & Social Science (BPSC + Static Folders)
           _buildExpansionSubjectCategory(
             context: context,
             title: 'GK & Social Science',
@@ -371,10 +376,16 @@ class _RevisionTabState extends State<RevisionTab> {
             color: const Color(0xFF4F46E5),
             isDark: isDark,
             subSections: [
-              {'title': '📜 Indian Polity (Articles Special)', 'key': 'polity_mapping'},
-              {'title': '🏛️ History (1857 & Freedom Movement)', 'key': 'history_mapping'},
-              {'title': '🌍 Geography (Physical & Bihar Map Focus)', 'key': 'geo_mapping'},
-              {'title': '📈 Economy (Budget & Five Year Plans)', 'key': 'eco_mapping'},
+              // Static Folders
+              {'title': '📜 Indian Polity (Static Sets)', 'key': 'static_polity_mapping'},
+              {'title': '🏛️ History (Static Sets)', 'key': 'static_history_mapping'},
+              {'title': '🌍 Geography (Static Sets)', 'key': 'static_geo_mapping'},
+              {'title': '📈 Economy (Static Sets)', 'key': 'static_eco_mapping'},
+              // BPSC Drill Folders
+              {'title': '🎯 Indian Polity (BPSC Drill)', 'key': 'polity_mapping'},
+              {'title': '🎯 History (BPSC Drill)', 'key': 'history_mapping'},
+              {'title': '🎯 Geography (BPSC Drill)', 'key': 'geo_mapping'},
+              {'title': '🎯 Economy (BPSC Drill)', 'key': 'eco_mapping'},
             ],
           ),
           const SizedBox(height: 12),
