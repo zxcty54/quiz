@@ -1,0 +1,2270 @@
+[
+  {
+    "qe": "The 'Universal Law of Gravitation' was given by:",
+    "qh": "'गुरुत्वाकर्षण का सार्वत्रिक नियम' किसके द्वारा दिया गया था?",
+    "o": [
+      "Galileo",
+      "Newton (न्यूटन)",
+      "Kepler",
+      "Copernicus"
+    ],
+    "a": 1,
+    "e": "Sir Isaac Newton formulated the law in 1687. / सर आइजैक न्यूटन ने 1687 में यह नियम प्रतिपादित किया था।"
+  },
+  {
+    "qe": "What is the 'Escape Velocity' from the Moon's surface?",
+    "qh": "चंद्रमा की सतह से 'पलायन वेग' क्या है?",
+    "o": [
+      "11.2 km/s",
+      "2.38 km/s",
+      "5.0 km/s",
+      "1.6 km/s"
+    ],
+    "a": 1,
+    "e": "Moon's escape velocity is much lower than Earth's (11.2 km/s). / चंद्रमा का पलायन वेग पृथ्वी की तुलना में बहुत कम है।"
+  },
+  {
+    "qe": "In a standard Young's double-slit experiment setup, the condition for constructive interference at a point $P$ on the screen yields bright fringes. The linear distance $x_n$ of the $n$-th bright fringe from the central maximum is defined as:",
+    "qh": "एक मानक यंग के डबल-स्लिट प्रयोग सेटअप में, परदे पर एक बिंदु $P$ पर संपोषी व्यतिकरण की स्थिति से चमकीली फ्रिंज प्राप्त होती हैं। केंद्रीय उच्चिष्ट से $n$-वीं चमकीली फ्रिंज की रैखिक दूरी $x_n$ को किस रूप में परिभाषित किया गया है?",
+    "o": [
+      "$x_n = \\frac{ndD}{\\lambda}$",
+      "$x_n = \\frac{n\\lambda D}{d}$",
+      "$x_n = (n + \\frac{1}{2})\\frac{\\lambda D}{d}$",
+      "$x_n = \\frac{n\\lambda d}{D}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The position of the $n$-th bright fringe is mathematically derived as $x_n = \\frac{n\\lambda D}{d}$ where $n = 0, \\pm 1, \\pm 2...$, $D$ is the screen distance, and $d$ is the slit separation."
+  },
+  {
+    "qe": "According to the expressions derived for Young's double-slit experiment, the spatial separation between any two successive dark fringes or bright fringes is:",
+    "qh": "यंग के डबल-स्लिट प्रयोग के लिए व्युत्पन्न व्यंजकों के अनुसार, किन्हीं दो क्रमिक काली फ्रिंजों या चमकीली फ्रिंजों के बीच की स्थानिक दूरी (spatial separation) क्या होती है?",
+    "o": [
+      "Inversely proportional to the screen distance $D$.",
+      "Equally spaced and constant across the fringe field.",
+      "Dependent exponentially on the order number $n$.",
+      "Directly proportional to the slit width parameter $d$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The equations show that the fringe width $\\beta = \\frac{\\lambda D}{d}$ is identical for both consecutive bright and dark bands, meaning that the fringes are completely equally spaced."
+  },
+  {
+    "qe": "According to Newton's Universal Law of Gravitation, the gravitational force of attraction acts between any two masses in the universe. This force fundamentally operates along which geometric path?",
+    "qh": "न्यूटन के गुरुत्वाकर्षण के सार्वभौमिक नियम के अनुसार, ब्रह्मांड में किन्हीं भी दो द्रव्यमानों के बीच गुरुत्वाकर्षण बल कार्य करता है। यह बल मूल रूप से किस ज्यामितीय मार्ग के अनुदिश कार्य करता है?",
+    "o": [
+      "Along a curved trajectory determined by the smaller mass (छोटे द्रव्यमान द्वारा निर्धारित वक्राकार पथ पर)",
+      "Along the line joining the centers of the two objects (दोनों वस्तुओं के केंद्रों को जोड़ने वाली रेखा के अनुदिश)",
+      "Strictly horizontal to the surface plane (सतह के समतल के बिल्कुल क्षैतिज दिशा में)",
+      "Symmetrically opposite to the rotation axis (घूर्णन अक्ष के विपरीत दिशा में)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> न्यूटन का नियम स्पष्ट करता है कि दो पिंडों के बीच लगने वाला गुरुत्वाकर्षण बल हमेशा उनके केंद्रों को जोड़ने वाली सीधी रेखा (line joining the centers) के अनुदिश ही कार्य करता है।"
+  },
+  {
+    "qe": "Object A attracts Object B with a gravitational force $F$. According to Newton's third law of motion, with what force does Object B simultaneously attract Object A?",
+    "qh": "वस्तु A, वस्तु B को गुरुत्वाकर्षण बल $F$ से अपनी ओर आकर्षित करती है। न्यूटन के गति के तीसरे नियम के अनुसार, वस्तु B उसी क्षण वस्तु A को कितने बल से आकर्षित करती है?",
+    "o": [
+      "With a force strictly proportional to the surface area of B (B के पृष्ठीय क्षेत्रफल के समानुपाती बल से)",
+      "With an equal and opposite force $F$ (समान और विपरीत बल F से)",
+      "With a significantly smaller force because A is stationary (बहुत कम बल से क्योंकि A स्थिर है)",
+      "With zero force as only the larger mass can exert pull (शून्य बल से क्योंकि केवल बड़ा द्रव्यमान ही खींच सकता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> न्यूटन के तीसरे नियम के अनुसार प्रत्येक क्रिया की समान और विपरीत प्रतिक्रिया होती है। इसलिए, दोनों वस्तुएं एक-दूसरे पर बिल्कुल समान परिमाण का आकर्षण बल लगाती हैं।"
+  },
+  {
+    "qe": "What is the correct derived SI unit for the Universal Gravitational Constant ($G$)?",
+    "qh": "सार्वभौमिक गुरुत्वाकर्षण नियतांक ($G$) के लिए सही व्युत्पन्न एसआई (SI) मात्रक क्या है?",
+    "o": [
+      "$\\text{N m}^2 \\text{ kg}^{-2}$",
+      "$\\text{N m kg}^{-1}$",
+      "$\\text{N m}^{-2} \\text{ kg}^2$",
+      "$\\text{m s}^{-2}$"
+    ],
+    "a": 0,
+    "e": "<b>Explanation:</b> सूत्र $F = \\frac{G m_1 m_2}{d^2}$ से जब $G$ को पृथक किया जाता है, तो $G = \\frac{F d^2}{m_1 m_2}$ प्राप्त होता है, जिसका मात्रक $\\text{N m}^2 \\text{ kg}^{-2}$ बनता है।"
+  },
+  {
+    "qe": "Why do we not visibly feel or observe the gravitational force of attraction between ordinary everyday objects like two people or chairs sitting in a room?",
+    "qh": "हम किसी कमरे में बैठे दो व्यक्तियों या कुर्सियों जैसी सामान्य रोज़मर्रा की वस्तुओं के बीच गुरुत्वाकर्षण बल को प्रत्यक्ष रूप से क्यों महसूस या देख नहीं पाते हैं?",
+    "o": [
+      "Because the force exists only in the presence of liquid fluids (क्योंकि यह बल केवल तरल पदार्थों में ही मौजूद होता है)",
+      "Because the value of $G$ is extremely small, making the force negligible for small masses (क्योंकि G का मान अत्यंत छोटा है, जिससे छोटे द्रव्यमानों के लिए यह बल नगण्य हो जाता है)",
+      "Because ordinary objects do not contain non-zero mass (क्योंकि सामान्य वस्तुओं में द्रव्यमान नहीं होता)",
+      "Because atmospheric pressure cancels out the gravitation matrix (क्योंकि वायुमंडलीय दबाव गुरुत्वाकर्षण को रद्द कर देता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> सार्वभौमिक नियतांक $G$ का मान अत्यंत सूक्ष्म ($6.67 \\times 10^{-11}$) होता है। जब तक कि पिंडों का द्रव्यमान बहुत अधिक (जैसे ग्रह) न हो, यह बल व्यावहारिक रूप से महसूस नहीं होता।"
+  },
+  {
+    "qe": "The Inverse Square Law of gravitation implies that if the distance '$d$' between the centers of two stationary masses is altered, the force changes. If the distance is doubled, the force becomes:",
+    "qh": "गुरुत्वाकर्षण का व्युत्क्रम वर्ग नियम (Inverse Square Law) यह दर्शाता है कि यदि दो द्रव्यमानों के बीच की दूरी '$d$' को बदला जाए, तो बल बदलता है। यदि दूरी को दोगुना कर दिया जाए, तो बल कितना हो जाएगा?",
+    "o": [
+      "Doubled ($2F$)",
+      "One-fourth ($\\frac{1}{4}F$)",
+      "Four times ($4F$)",
+      "Remains completely unchanged (अपरिवर्तित रहेगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> गुरुत्वाकर्षण बल दूरी के वर्ग के व्युत्क्रमानुपाती ($F \\propto \\frac{1}{d^2}$) होता है। दूरी को दोगुना ($2d$) करने पर बल घटकर मूल मान का एक-चौथाई ($\\frac{1}{4}$) रह जाता है।"
+  },
+  {
+    "qe": "What happens to the gravitational force between two masses if the distance between their centers is reduced to exactly half?",
+    "qh": "यदि दो द्रव्यमानों के बीच उनके केंद्रों की दूरी को घटाकर ठीक आधा कर दिया जाए, तो उनके बीच गुरुत्वाकर्षण बल पर क्या प्रभाव पड़ेगा?",
+    "o": [
+      "It decreases to half (घटकर आधा हो जाएगा)",
+      "It increases to four times (बढ़कर चार गुना हो जाएगा)",
+      "It decreases to one-fourth (घटकर एक-चौथाई हो जाएगा)",
+      "It remains absolutely the same (बिल्कुल समान रहेगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दूरी को आधा ($\\frac{d}{2}$) करने पर, व्युत्क्रम वर्ग नियम के अनुसार बल का मान $2^2$ अर्थात् चार गुना ($4F$) बढ़ जाता है क्योंकि वस्तुएं एक-दूसरे के निकट आ गई हैं।"
+  },
+  {
+    "qe": "What is the primary significance of the centripetal force in the orbit of the Moon around the Earth?",
+    "qh": "पृथ्वी के चारों ओर चंद्रमा की कक्षा में अभिकेंद्र बल (Centripetal Force) का मुख्य सैद्धांतिक महत्व क्या है?",
+    "o": [
+      "It increases the mass of the Moon continuously (यह चंद्रमा के द्रव्यमान को बढ़ाता है)",
+      "It continuously changes the direction of motion of the Moon, keeping it in a circular path (यह लगातार चंद्रमा की गति की दिशा बदलता है, जिससे वह वृत्ताकार पथ पर बना रहता है)",
+      "It pushes the Moon directly into outer space away from gravity (यह चंद्रमा को अंतरिक्ष में बाहर धकेलता है)",
+      "It slows down the rotation of the Earth's axis (यह पृथ्वी के अक्ष के घूर्णन को धीमा करता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वृत्तीय गति में किसी वस्तु की दिशा हर क्षण बदलती है। अभिकेंद्र बल ही वह आवश्यक बल है जो दिशा बदलकर वस्तु को सीधे रैखिक मार्ग पर जाने के बजाय वृत्ताकार पथ पर बनाए रखता है।"
+  },
+  {
+    "qe": "In the case of the Moon revolving around the Earth, which actual force acts as the required centripetal force?",
+    "qh": "पृथ्वी के चक्कर लगाने वाले चंद्रमा के मामले में, कौन सा वास्तविक बल आवश्यक अभिकेंद्र बल (Centripetal Force) के रूप में कार्य करता है?",
+    "o": [
+      "Magnetic repulsion of the polar grids (ध्रुवीय ग्रिड का चुंबकीय प्रतिकर्षण)",
+      "The gravitational force of attraction between the Earth and the Moon (पृथ्वी और चंद्रमा के बीच का गुरुत्वाकर्षण आकर्षण बल)",
+      "Atmospheric friction of free space (मुक्त अंतरिक्ष का वायुमंडलीय घर्षण)",
+      "Electrostatic force of ionized particles (आयनीकृत कणों का स्थिरवैद्युत बल)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> अभिकेंद्र बल कोई नया बल नहीं है; वृत्तीय गति में उपस्थित कोई भी वास्तविक बल यह भूमिका निभा सकता है। यहाँ पृथ्वी का गुरुत्वाकर्षण बल ही अभिकेंद्र बल का कार्य करता है।"
+  },
+  {
+    "qe": "If the gravitational force between the Earth and the Moon suddenly vanished into zero, how would the Moon theoretically move?",
+    "qh": "यदि पृथ्वी और चंद्रमा के बीच का गुरुत्वाकर्षण बल अचानक शून्य होकर समाप्त हो जाए, तो चंद्रमा सैद्धांतिक रूप से कैसे गति करेगा?",
+    "o": [
+      "It would fall straight to the center of the Earth (यह सीधे पृथ्वी के केंद्र पर आकर गिरेगा)",
+      "It would fly off along a straight line tangent to its circular orbit (यह अपनी वृत्ताकार कक्षा की स्पर्श रेखा के अनुदिश एक सीधी रेखा में निकल जाएगा)",
+      "It would stop moving instantly and stay frozen (यह तुरंत रुक जाएगा और स्थिर हो जाएगा)",
+      "It would start moving in a smaller spiral counter-clockwise (यह छोटे सर्पिलाकार मार्ग पर घूमने लगेगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> न्यूटन के गति के प्रथम नियम (जड़त्व) के अनुसार, अभिकेंद्र बल हटने पर वस्तु अपनी दिशा को बनाए रखने के लिए उस बिंदु पर कक्षा की स्पर्श रेखा (tangent) के अनुदिश सीधी दिशा में आगे बढ़ जाएगी।"
+  },
+  {
+    "qe": "We observe that the Moon revolves around the Earth, but the Earth does not visibly accelerate toward the Moon. Why is the acceleration of the Earth negligible in this interaction?",
+    "qh": "हम देखते हैं कि चंद्रमा पृथ्वी के चक्कर लगाता है, लेकिन पृथ्वी चंद्रमा की ओर प्रत्यक्ष रूप से त्वरित नहीं होती है। इस अन्योन्यक्रिया में पृथ्वी का त्वरण नगण्य क्यों होता है?",
+    "o": [
+      "Because the Moon does not exert any force on the Earth (क्योंकि चंद्रमा पृथ्वी पर कोई बल नहीं लगाता)",
+      "Because the mass of the Earth is extremely large compared to the Moon, making its acceleration mathematically imperceptible (क्योंकि पृथ्वी का द्रव्यमान चंद्रमा की तुलना में बहुत अधिक है, जिससे इसका त्वरण नगण्य हो जाता है)",
+      "Because Earth is protected by its magnetic shield (क्योंकि पृथ्वी अपने चुंबकीय कवच द्वारा सुरक्षित है)",
+      "Because the velocity of Earth is absolute in vacuum (क्योंकि निर्वात में पृथ्वी का वेग परम होता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> सूत्र $a = \\frac{F}{m}$ के अनुसार, बल समान होने पर भी पृथ्वी का द्रव्यमान ($m$) बहुत अधिक होने के कारण उसका उत्पन्न त्वरण ($a$) इतना सूक्ष्म होता है कि वह दिखाई नहीं देता।"
+  },
+  {
+    "qe": "What is the scientific distinction between the 'Mass' of an object and its 'Weight'?",
+    "qh": "किसी वस्तु के 'द्रव्यमान' (Mass) और उसके 'भार' (Weight) के बीच वैज्ञानिक अंतर क्या है?",
+    "o": [
+      "Mass changes with location, Weight remains constant (द्रव्यमान स्थान के साथ बदलता है, भार स्थिर रहता है)",
+      "Mass is the measure of matter and remains constant everywhere, while Weight is the gravitational force acting on it and changes with location (द्रव्यमान पदार्थ की मात्रा है और हर जगह स्थिर रहता है, जबकि भार उस पर लगने वाला गुरुत्वाकर्षण बल है और स्थान के साथ बदलता है)",
+      "Both are vector quantities measuring coordinates (दोनों सदिश राशियां हैं)",
+      "Mass is measured in Newtons and Weight in Kilograms (द्रव्यमान न्यूटन में मापा जाता है और भार किलोग्राम में)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> द्रव्यमान वस्तु का एक बुनियादी अपरिवर्तनीय गुण है, जबकि भार $W = mg$ गुरुत्वीय त्वरण पर निर्भर करता है, जो स्थान बदलने पर बदल सकता है।"
+  },
+  {
+    "qe": "The standard SI unit for measuring the 'Weight' of an object is fundamentally identical to the unit of:",
+    "qh": "किसी वस्तु के 'भार' (Weight) को मापने का मानक एसआई (SI) मात्रक मूल रूप से किसके मात्रक के समान होता है?",
+    "o": [
+      "Mass (द्रव्यमान के)",
+      "Force (बल के)",
+      "Pressure (दाब के)",
+      "Density (घनत्व के)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> भार वास्तव में वह आकर्षण बल है जिससे पृथ्वी किसी वस्तु को अपने केंद्र की ओर खींचती है। बल होने के कारण इसका मात्रक भी न्यूटन (N) ही होता है।"
+  },
+  {
+    "qe": "Where is the value of acceleration due to gravity ($g$) maximum and minimum on the surface of the Earth?",
+    "qh": "पृथ्वी की सतह पर गुरुत्वीय त्वरण ($g$) का मान कहाँ अधिकतम और कहाँ न्यूनतम होता है?",
+    "o": [
+      "Maximum at the equator, minimum at the poles (भूमध्य रेखा पर अधिकतम, ध्रुवों पर न्यूनतम)",
+      "Maximum at the poles and minimum at the equator (ध्रुवों पर अधिकतम और भूमध्य रेखा पर न्यूनतम)",
+      "Zero everywhere on the surface plane (सतह पर हर जगह शून्य)",
+      "Depends strictly on the ocean tides matrix (पूरी तरह से समुद्री ज्वार पर निर्भर)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> पृथ्वी पूरी तरह गोल नहीं है; ध्रुवों पर त्रिज्या कम होने के कारण $g$ का मान अधिकतम होता है, और भूमध्य रेखा (equator) पर त्रिज्या अधिक होने के कारण $g$ का मान न्यूनतम होता है।"
+  },
+  {
+    "qe": "If a trader buys gold by weight at the poles of the Earth and sells it by weight at the equator using a highly sensitive spring balance, what financial outcome will occur?",
+    "qh": "यदि कोई व्यापारी पृथ्वी के ध्रुवों पर भार के अनुसार सोना खरीदता है और भूमध्य रेखा पर उसी संवेदनशील स्प्रिंग बैलेंस से भार के अनुसार बेचता है, तो उसे क्या वित्तीय परिणाम प्राप्त होगा?",
+    "o": [
+      "He will gain a huge profit because weight increases at the equator (उसे भारी लाभ होगा क्योंकि भूमध्य रेखा पर भार बढ़ता है)",
+      "He will experience a loss because the value of $g$ decreases at the equator, reducing the measured weight (उसे घाटा होगा क्योंकि भूमध्य रेखा पर g का मान कम होने से सोने का मापा गया भार घट जाएगा)",
+      "There will be no change since mass is absolute (कोई परिवर्तन नहीं होगा क्योंकि द्रव्यमान स्थिर है)",
+      "The spring balance will stop operating due to internal vacuum metrics (स्प्रिंग बैलेंस काम करना बंद कर देगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> स्प्रिंग बैलेंस भार ($mg$) मापता है। चूंकि ध्रुवों की तुलना में भूमध्य रेखा पर $g$ का मान कम होता है, इसलिए वहाँ सोने का मापा गया भार घट जाएगा, जिससे व्यापारी को नुकसान होगा।"
+  },
+  {
+    "qe": "How does the acceleration due to gravity ($g$) change as one moves deep inside a gold mine or high up into the atmosphere away from the Earth's surface?",
+    "qh": "जैसे-जैसे कोई व्यक्ति सोने की गहरी खदान के भीतर जाता है या पृथ्वी की सतह से दूर वायुमंडल में ऊपर जाता है, तो गुरुत्वीय त्वरण ($g$) के मान में क्या परिवर्तन होता है?",
+    "o": [
+      "It increases in both cases (दोनों ही स्थितियों में बढ़ता है)",
+      "It decreases in both cases (दोनों ही स्थितियों में घटता है)",
+      "It increases going up and decreases going down (ऊपर जाने पर बढ़ता है और नीचे जाने पर घटता है)",
+      "It remains absolutely constant at 9.8 (हमेशा 9.8 पर स्थिर रहता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> गुरुत्वीय त्वरण ($g$) का मान पृथ्वी की सतह पर अधिकतम होता है। सतह से ऊपर जाने पर या पृथ्वी के भीतर गहराई में जाने पर $g$ का मान हमेशा घटता है।"
+  },
+  {
+    "qe": "What is the theoretical value of the acceleration due to gravity at the absolute center of the Earth?",
+    "qh": "पृथ्वी के बिल्कुल केंद्र (Absolute Center) पर गुरुत्वीय त्वरण ($g$) का सैद्धांतिक मान कितना होता है?",
+    "o": [
+      "$9.8 \\text{ m/s}^2$",
+      "Zero (शून्य)",
+      "Infinite (अनंत)",
+      "Negative $9.8 \\text{ m/s}^2$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> पृथ्वी के केंद्र पर जाने पर चारों ओर का द्रव्यमान खिंचाव संतुलित हो जाता है, जिससे वहाँ कुल गुरुत्वाकर्षण बल और गुरुत्वीय त्वरण ($g$) का मान शून्य हो जाता है।"
+  },
+  {
+    "qe": "The acceleration due to gravity on the surface of the Moon relates to that on the Earth. How does the weight of an object change on the Moon?",
+    "qh": "चंद्रमा की सतह पर गुरुत्वीय त्वरण का पृथ्वी के त्वरण से एक निश्चित संबंध है। चंद्रमा पर किसी वस्तु का भार किस प्रकार बदलता है?",
+    "o": [
+      "It increases by six times (छह गुना बढ़ जाता है)",
+      "It becomes one-sixth ($\\frac{1}{6}$) of its weight on the Earth (यह पृथ्वी पर उसके भार का एक-छह (1/6) भाग रह जाता है)",
+      "It drops to absolute zero due to lack of air atmosphere (हवा न होने के कारण शून्य हो जाता है)",
+      "It doubles its mass coordinate value (इसका द्रव्यमान दोगुना हो जाता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> चंद्रमा का द्रव्यमान और त्रिज्या कम होने से वहाँ $g$ का मान पृथ्वी का $\\frac{1}{6}$ होता है, इसलिए वहाँ वस्तु का भार भी पृथ्वी के भार का ठीक $\\frac{1}{6}$ रह जाता है।"
+  },
+  {
+    "qe": "If an object has a mass of $60\\text{ kg}$ on the Earth, what will be its mass and weight when measured on the surface of the Moon? (Assume $g_{\\text{earth}} = 10\\text{ m/s}^2$)",
+    "qh": "यदि किसी वस्तु का द्रव्यमान पृथ्वी पर $60\\text{ kg}$ है, तो चंद्रमा की सतह पर मापने पर उसका द्रव्यमान और भार क्रमशः कितना होगा? (मानें $g_{\\text{earth}} = 10\\text{ m/s}^2$)",
+    "o": [
+      "$10\\text{ kg}$ and $100\\text{ N}$",
+      "$60\\text{ kg}$ and $100\\text{ N}$",
+      "$10\\text{ kg}$ and $600\\text{ N}$",
+      "$60\\text{ kg}$ and $600\\text{ N}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> द्रव्यमान ब्रह्मांड में हर जगह नियत रहता है, इसलिए चंद्रमा पर भी द्रव्यमान $60\\text{ kg}$ ही रहेगा। पृथ्वी पर भार $600\\text{ N}$ है, तो चंद्रमा पर भार $\\frac{1}{6}$ अर्थात् $100\\text{ N}$ होगा।"
+  },
+  {
+    "qe": "What is the physical state of an object undergoing 'Free Fall' towards the Earth under gravity alone in the absence of air resistance?",
+    "qh": "हवा के प्रतिरोध की अनुपस्थिति में केवल गुरुत्वाकर्षण के प्रभाव में पृथ्वी की ओर 'मुक्त पतन' (Free Fall) कर रही वस्तु की भौतिक स्थिति क्या होती है?",
+    "o": [
+      "It moves with a constant velocity (यह नियत वेग से गति करती है)",
+      "It moves with a constant acceleration of $9.8 \\text{ m/s}^2$ irrespective of its mass (यह अपने द्रव्यमान पर निर्भर किए बिना 9.8 मी/से² के नियत त्वरण से गति करती है)",
+      "Its weight increases exponentially every second (इसका भार हर सेकंड तेजी से बढ़ता है)",
+      "It undergoes continuous mechanical polarization (यह निरंतर यांत्रिक ध्रुवण से गुजरती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> मुक्त पतन में वस्तु पर केवल गुरुत्वीय त्वरण कार्य करता है, जो वस्तु के द्रव्यमान से स्वतंत्र होता है। इसलिए सभी वस्तुएं समान नियत त्वरण ($9.8\\text{ m/s}^2$) से नीचे गिरती हैं।"
+  },
+  {
+    "qe": "If a heavy iron hammer and a light bird feather are dropped simultaneously from the exact same height in a complete vacuum chamber, what will be observed?",
+    "qh": "यदि एक भारी लोहे के हथौड़े और एक हल्के पक्षी के पंख को एक पूर्ण निर्वात कक्ष (vacuum chamber) में बिल्कुल समान ऊंचाई से एक साथ छोड़ा जाए, तो क्या देखा जाएगा?",
+    "o": [
+      "The hammer will reach the bottom much faster because it is heavier (हथौड़ा भारी होने के कारण पहले नीचे पहुंचेगा)",
+      "Both will reach the bottom at the exact same time (दोनों बिल्कुल एक ही समय में नीचे पहुंचेंगे)",
+      "The feather will float upwards due to buoyancy matrix (पंख उत्प्लावन के कारण ऊपर तैरने लगेगा)",
+      "The velocity of both objects drops to absolute zero inside vacuum (निर्वात में दोनों का वेग शून्य हो जाएगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> निर्वात में वायु का प्रतिरोध (air resistance) शून्य होता है। चूंकि मुक्त पतन में त्वरण द्रव्यमान पर निर्भर नहीं करता, इसलिए दोनों वस्तुएं बिल्कुल समान दर से गिरकर एक ही समय में नीचे पहुंचेंगी।"
+  },
+  {
+    "qe": "Why does a flat sheet of paper fall slower than the same sheet of paper crumpled into a tight ball when dropped in a normal room with air?",
+    "qh": "सामान्य हवा वाले कमरे में छोड़ने पर कागज की एक समतल शीट उसी कागज को मोड़कर बनाई गई छोटी गेंद की तुलना में धीमी क्यों गिरती है?",
+    "o": [
+      "Because crumpling changes the mass of the paper (क्योंकि मोड़ने से कागज का द्रव्यमान बदल जाता है)",
+      "Because the flat sheet has a larger surface area and experiences greater air resistance (क्योंकि समतल शीट का पृष्ठीय क्षेत्रफल अधिक होता है और वह अधिक वायु प्रतिरोध का अनुभव करती है)",
+      "Because the crumpled ball gains extra gravitational constant (क्योंकि गेंद को अतिरिक्त गुरुत्वाकर्षण मिलता है)",
+      "Because flat shapes are repelled by the Earth's magnetic core (क्योंकि समतल आकारों को पृथ्वी का चुंबकीय कोर प्रतिकर्षित करता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वास्तविक दुनिया में हवा का प्रतिरोध गति का विरोध करता है। समतल शीट का क्षेत्रफल अधिक होने से उस पर लगने वाला वायु प्रतिरोध (air resistance) अधिक होता है, जो उसे धीमा कर देता है।"
+  },
+  {
+    "qe": "In physics, what is the core distinction between the terms 'Thrust' and 'Pressure'?",
+    "qh": "भौतिकी में 'प्रणोद' (Thrust) और 'दाब' (Pressure) शब्दों के बीच मुख्य अंतर क्या है?",
+    "o": [
+      "Thrust is a scalar quantity and Pressure is a vector vector (प्रणोद अदिश है और दाब सदिश है)",
+      "Thrust is the total perpendicular force acting on a surface, while Pressure is the thrust acting per unit area (प्रणोद सतह पर लगने वाला कुल लंबवत बल है, जबकि दाब प्रति इकाई क्षेत्रफल पर लगने वाला प्रणोद है)",
+      "Both measure the same parameters with identical units (दोनों समान मात्रक वाले पैरामीटर हैं)",
+      "Pressure does not depend on the surface area parameter (दाब सतह के क्षेत्रफल पर निर्भर नहीं करता)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> प्रणोद सतह पर लगने वाला कुल लंबवत बल (total perpendicular force) है, जबकि दाब इस बल का प्रति इकाई क्षेत्रफल प्रभाव ($P = \\frac{\\text{Thrust}}{\\text{Area}}$) होता है।"
+  },
+  {
+    "qe": "What is the derived SI unit of Pressure, and what is its alternative scientific name named after a famous physicist?",
+    "qh": "दाब (Pressure) का व्युत्पन्न एसआई (SI) मात्रक क्या है, और एक प्रसिद्ध भौतिकविद् के नाम पर इसका वैकल्पिक वैज्ञानिक नाम क्या है?",
+    "o": [
+      "Newtons per meter, Joule (न्यूटन प्रति मीटर, जूल)",
+      "Newtons per square meter ($\text{N/m}^2$), Pascal (PA) (न्यूटन प्रति वर्ग मीटर, पास्कल)",
+      "Kilograms per cubic meter, Hertz (किलोग्राम प्रति घन मीटर, हर्ट्ज़)",
+      "Watts per second, Newton (वाट प्रति सेकंड, न्यूटन)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दाब बल और क्षेत्रफल का अनुपात है, इसलिए इसका मात्रक $\\text{N/m}^2$ होता है। ब्लेज़ पास्कल के सम्मान में इसे पास्कल (Pa) भी कहा जाता है।"
+  },
+  {
+    "qe": "Why does a person sink deep into loose sand when standing on feet, but does not sink much when lying down on the same sand?",
+    "qh": "कोई व्यक्ति रेत पर पैरों के बल खड़ा होने पर उसमें गहरा धंस जाता है, लेकिन उसी रेत पर लेटने पर वह बहुत कम धंसता है। ऐसा क्यों होता है?",
+    "o": [
+      "Because the mass of the body decreases when lying down (क्योंकि लेटने पर शरीर का द्रव्यमान घट जाता है)",
+      "Because standing concentrates the weight on a smaller area creating higher pressure, while lying down spreads the force over a large area reducing pressure (खड़े होने पर भार कम क्षेत्रफल पर केंद्रित होता है जिससे दाब अधिक बनता है, जबकि लेटने पर बल बड़े क्षेत्रफल पर फैल जाता है जिससे दाब घट जाता है)",
+      "Because loose sand absorbs horizontal force components (क्योंकि रेत क्षैतिज बल को अवशोषित करती है)",
+      "Because gravity pull decreases in a horizontal posture (क्योंकि क्षैतिज मुद्रा में गुरुत्वाकर्षण खिंचाव कम हो जाता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दोनों स्थितियों में भार (बल) समान है। खड़े होने पर पैरों का क्षेत्रफल कम होने से दाब ($P = \\frac{F}{A}$) बहुत बढ़ जाता है, जिससे पैर रेत में धंस जाते हैं। लेटने पर क्षेत्रफल बढ़ने से दाब घट जाता है।"
+  },
+  {
+    "qe": "Why are heavy transport trucks designed with multiple wide and thick tires instead of thin normal tires?",
+    "qh": "भारी परिवहन ट्रकों को पतले सामान्य टायरों के बजाय कई चौड़े और मोटे टायरों के साथ क्यों डिज़ाइन किया जाता है?",
+    "o": [
+      "To increase the structural weight of the truck core (ट्रक का वजन बढ़ाने के लिए)",
+      "To increase the area of contact with the ground, thereby reducing the pressure exerted by the heavy weight on the road (जमीन के साथ संपर्क क्षेत्रफल बढ़ाने के लिए, जिससे सड़क पर भारी वजन द्वारा लगने वाला दाब कम हो जाता है)",
+      "To maximize the speed of the axle in vacuum (लेंस की एक्सल गति बढ़ाने के लिए)",
+      "To block the magnetic friction of the ground plane (जमीन के चुंबकीय घर्षण को रोकने के लिए)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> भारी ट्रकों का वजन बहुत अधिक होता है। चौड़े टायर जमीन के साथ संपर्क क्षेत्रफल (Area) बढ़ा देते हैं, जिससे सड़क पर लगने वाला दाब कम हो जाता है और सड़क धंसने या टूटने से बच जाती है।"
+  },
+  {
+    "qe": "Why do camels walk and run across loose desert sand much more comfortably compared to horses or humans?",
+    "qh": "घोड़ों या मनुष्यों की तुलना में ऊँट रेगिस्तान की ढीली रेत पर बहुत अधिक आराम से क्यों चल और दौड़ सकते हैं?",
+    "o": [
+      "Because camels possess zero mass configuration (क्योंकि ऊँटों में द्रव्यमान नहीं होता)",
+      "Because camels have wide, padded feet that increase the contact area and reduce the pressure on the sand (क्योंकि ऊँटों के पैर चौड़े और गद्देदार होते हैं जो संपर्क क्षेत्रफल बढ़ाते हैं और रेत पर दाब कम करते हैं)",
+      "Because camels are not affected by the Earth's gravity grid (क्योंकि ऊँटों पर गुरुत्वाकर्षण का प्रभाव नहीं पड़ता)",
+      "Because their skin absorbs thermal sand molecules (क्योंकि उनकी त्वचा रेत को अवशोषित करती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> ऊँटों के पैर चौड़े होने के कारण रेत पर उनके शरीर के भार द्वारा लगाया जाने वाला दाब काफी कम हो जाता है, जिससे उनके पैर रेत में नहीं धंसते और वे आसानी से दौड़ पाते हैं।"
+  },
+  {
+    "qe": "Cutting tools like knives, axes, and nails are explicitly manufactured with sharp edges or pointed ends. This geometric design aims to:",
+    "qh": "चाकू, कुल्हाड़ी और कील जैसे काटने वाले औजारों को जानबूझकर तेज किनारों (sharp edges) या नुकीले सिरों के साथ बनाया जाता है। इस ज्यामितीय डिज़ाइन का उद्देश्य क्या है?",
+    "o": [
+      "To maximize the surface area of contact (संपर्क के पृष्ठीय क्षेत्रफल को अधिकतम करना)",
+      "To minimize the contact area so that a small force produces a very large pressure to cut or pierce (संपर्क क्षेत्रफल को न्यूनतम करना ताकि एक छोटा बल भी काटने या छेदने के लिए बहुत बड़ा दाब उत्पन्न करे)",
+      "To change the chemical composition of the objects being cut (काटी जा रही वस्तुओं की रासायनिक संरचना बदलना)",
+      "To absorb the internal mechanical stress vectors (आंतरिक यांत्रिक तनाव को अवशोषित करना)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> नुकीला या तेज सिरा संपर्क क्षेत्रफल ($A$) को अत्यंत सूक्ष्म कर देता है। इसके कारण जब थोड़ा सा भी बल लगाया जाता है, तो दाब ($P = \\frac{F}{A}$) बहुत अधिक बनता है, जिससे वस्तु आसानी से कट जाती है।"
+  },
+  {
+    "qe": "Fluids (liquids and gases) exert pressure inside a closed container. Unlike solids, how do fluids transmit this pressure?",
+    "qh": "तरल पदार्थ (द्रव और गैस) एक बंद बर्तन के भीतर दाब लगाते हैं। ठोस पदार्थों के विपरीत, तरल पदार्थ इस दाब को किस प्रकार संचारित करते हैं?",
+    "o": [
+      "Only in the downward direction due to weight parameters (केवल नीचे की दिशा में अपने वजन के कारण)",
+      "Symmetrically in all directions, onto the base as well as against the walls of the container (सभी दिशाओं में समान रूप से, बर्तन के आधार पर और उसकी दीवारों के विरुद्ध भी)",
+      "Only along the vertical orientation vector lines (केवल ऊर्ध्वाधर रेखाओं के अनुदिश)",
+      "Fluids cannot exert any lateral pressure components (तरल पदार्थ दीवारों पर कोई दाब नहीं लगा सकते)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> ठोस केवल नीचे की ओर दाब लगाते हैं, परंतु तरल पदार्थों के अणु गति करने के लिए स्वतंत्र होते हैं। वे बर्तन के आधार के साथ-साथ उसकी दीवारों से भी टकराते हैं, अतः दाब सभी दिशाओं में लगता है।"
+  },
+  {
+    "qe": "How does the hydrostatic pressure inside a static liquid layer fundamentally change with the depth of the fluid?",
+    "qh": "एक स्थिर द्रव परत के भीतर द्रवस्थैतिक दाब (hydrostatic pressure) मूल रूप से द्रव की गहराई (Depth) के साथ किस प्रकार बदलता है?",
+    "o": [
+      "It decreases continuously as you go deeper (गहराई में जाने पर लगातार घटता है)",
+      "It increases continuously with depth due to the increasing weight of the liquid column above (गहराई के साथ लगातार बढ़ता है क्योंकि ऊपर के द्रव कॉलम का वजन बढ़ता जाता है)",
+      "It remains completely constant everywhere regardless of depth (गहराई के बावजूद हर जगह स्थिर रहता है)",
+      "It drops to zero at the exact center of the pool grid (तालाब के केंद्र में शून्य हो जाता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जैसे-जैसे हम द्रव में नीचे गहराई में जाते हैं, हमारे ऊपर स्थित द्रव की मात्रा (कॉलम का भार) बढ़ती जाती है। इस भार वृद्धि के कारण गहराई के साथ दाब भी लगातार बढ़ता जाता है।"
+  },
+  {
+    "qe": "Two distinct liquids, Liquid X (highly dense) and Liquid Y (less dense), are filled to the same height in identical tubes. Which liquid will exert more pressure at the base?",
+    "qh": "दो अलग-अलग द्रव, द्रव X (उच्च घनत्व) और द्रव Y (कम घनत्व), समान ऊंचाई तक दो समान नलियों में भरे गए हैं। कौन सा द्रव आधार पर अधिक दाब लगाएगा?",
+    "o": [
+      "Liquid Y, because less dense liquids move faster (द्रव Y, क्योंकि कम घनत्व वाले द्रव तेज चलते हैं)",
+      "Liquid X, because a liquid with more density exerts more pressure at a given depth (द्रव X, क्योंकि अधिक घनत्व वाला द्रव एक निश्चित गहराई पर अधिक दाब लगाता है)",
+      "Both will exert the exact same pressure since heights are equal (दोनों समान दाब लगाएंगे क्योंकि ऊंचाइयां बराबर हैं)",
+      "Neither liquid can exert pressure at the base matrix (कोई भी द्रव आधार पर दाब नहीं लगा सकता)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दाब द्रव के स्तंभ के भार पर निर्भर करता है। उच्च घनत्व (optically/mass denser) वाले द्रव का भार समान आयतन के लिए अधिक होगा, इसलिए वह आधार पर अधिक दाब लगाएगा।"
+  },
+  {
+    "qe": "What is the phenomenon of 'Buoyancy' or 'Upthrust' encountered when an object is immersed in a fluid?",
+    "qh": "जब किसी वस्तु को किसी तरल पदार्थ में डुबोया जाता है, तो सामने आने वाली 'उत्प्लावकता' (Buoyancy) या 'उत्प्लावन बल' (Upthrust) की घटना क्या है?",
+    "o": [
+      "A downward mechanical force pulling the object to the bottom (नीचे की ओर खींचने वाला बल)",
+      "The net upward force exerted by a fluid on any object immersed in it, opposing its weight (किसी तरल द्वारा उसमें डूबी वस्तु पर ऊपर की ओर लगाया जाने वाला नेट बल, जो उसके भार का विरोध करता है)",
+      "The surface tension breaking code at the liquid boundary (सतह के तनाव को तोड़ने वाला बल)",
+      "A horizontal drag slowing down the spatial vector velocity (वेग को धीमा करने वाला क्षैतिज खिंचाव)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब किसी वस्तु को तरल में डुबोया जाता है, तो तरल उस पर ऊपर की ओर एक नेट बल लगाता है। इस ऊर्ध्वाधर ऊपर की ओर लगने वाले बल को ही उत्प्लावन बल या अपथ्रस्ट कहते हैं।"
+  },
+  {
+    "qe": "An empty plastic bottle with its cap tightly sealed is pushed hard into a bucket of water. When released, it immediate jumps back to the surface. What force causes this behavior?",
+    "qh": "एक खाली प्लास्टिक की बोतल जिसका ढक्कन कसकर बंद है, पानी की बाल्टी में नीचे की ओर धकेली जाती है। छोड़ने पर वह तुरंत सतह पर वापस कूदती है। कौन सा बल इस व्यवहार का कारण बनता है?",
+    "o": [
+      "Gravitational pull of the upper cloud matrix (ऊपरी बादलों का गुरुत्वाकर्षण खिंचाव)",
+      "The upward buoyant force (upthrust) exerted by water which is greater than the weight of the empty bottle (पानी द्वारा लगाया गया ऊपर की ओर उत्प्लावन बल जो खाली बोतल के भार से बहुत अधिक है)",
+      "The electrostatic repulsion of plastic polymers (प्लास्टिक का स्थिरवैद्युत प्रतिकर्षण)",
+      "Atmospheric pressure pressing from the sides (दीवारों से दबाव)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> खाली बोतल का भार (नीचे की ओर बल) बहुत कम होता है, लेकिन पानी द्वारा उस पर लगाया जाने वाला उत्प्लावन बल (ऊपर की ओर बल) बहुत अधिक होता है। यह नेट ऊपर की ओर बल बोतल को सतह पर वापस भेज देता है।"
+  },
+  {
+    "qe": "What core discovery did the ancient scientist Archimedes state regarding the magnitude of the buoyant force acting on a body?",
+    "qh": "प्राचीन वैज्ञानिक आर्कमीडीज ने किसी पिंड पर कार्य करने वाले उत्प्लावन बल के परिमाण के संबंध में कौन सी मुख्य खोज बताई थी?",
+    "o": [
+      "The buoyant force is equal to the total mass of the object immersed (उत्प्लावन बल वस्तु के कुल द्रव्यमान के बराबर होता है)",
+      "The buoyant force experienced by a body immersed fully or partially in a fluid is exactly equal to the weight of the fluid displaced by it (किसी तरल में पूरी या आंशिक रूप से डूबी वस्तु द्वारा अनुभव किया जाने वाला उत्प्लावन बल उसके द्वारा हटाए गए तरल के भार के ठीक बराबर होता है)",
+      "The upthrust depends only on the color of the fluid matrix (उत्प्लावन बल केवल तरल के रंग पर निर्भर करता है)",
+      "The upward force is strictly zero inside clean vacuum spaces (साफ निर्वात में ऊपर की ओर बल शून्य होता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> आर्कमीडीज का सिद्धांत स्पष्ट करता है कि जब कोई पिंड किसी तरल में डूबा होता है, तो उस पर लगने वाला अपथ्रस्ट बल पिंड द्वारा हटाए गए (displaced) तरल के वास्तविक भार के बिल्कुल बराबर होता है।"
+  },
+  {
+    "qe": "According to Archimedes' principle, what factors directly determine the total magnitude of the upthrust experienced by an immersed object?",
+    "qh": "आर्कमीडीज के सिद्धांत के अनुसार, कौन से कारक डूबी हुई वस्तु द्वारा अनुभव किए जाने वाले उत्प्लावन बल के कुल परिमाण को सीधे निर्धारित करते हैं?",
+    "o": [
+      "The mass and color profile of the object substrate (वस्तु का द्रव्यमान और उसका रंग)",
+      "The volume of the object immersed inside the fluid and the density of that fluid (तरल के भीतर डूबी हुई वस्तु का आयतन और उस तरल का घनत्व)",
+      "The absolute atmospheric pressure outside the container (बर्तन के बाहर का वायुमंडलीय दबाव)",
+      "The depth of the pool floor from the surface plane (सतह से पूल के फर्श की गहराई)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> हटाए गए द्रव का भार उसके आयतन ($V$) और घनत्व ($\\rho$) पर निर्भर करता है ($W = V\\rho g$)। इसलिए डूबा हुआ आयतन जितना अधिक होगा और द्रव जितना घना होगा, उत्प्लावन बल उतना ही अधिक होगा।"
+  },
+  {
+    "qe": "Why is it historically much easier for a human body to float and swim in sea water compared to fresh water pools or rivers?",
+    "qh": "ताजे पानी के तालाबों या नदियों की तुलना में मानव शरीर के लिए समुद्र के पानी (Sea Water) में तैरना ऐतिहासिक रूप से बहुत आसान क्यों होता है?",
+    "o": [
+      "Because sea water contains no gravitational constant fields (क्योंकि समुद्र के पानी में गुरुत्वाकर्षण नहीं होता)",
+      "Because sea water contains dissolved salts which increase its density, thereby exerting a greater buoyant upthrust on the swimmer (क्योंकि समुद्र के पानी में घुले हुए नमक होते हैं जो इसका घनत्व बढ़ाते हैं, जिससे तैराक पर अधिक उत्प्लावन बल लगता है)",
+      "Because the waves of the sea always push everything upwards horizontally (क्योंकि समुद्र की लहरें क्षैतिज रूप से धक्का देती हैं)",
+      "Because sea water triggers a lower surface area coordinate (क्योंकि समुद्र का पानी पृष्ठीय क्षेत्रफल कम करता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> समुद्र के पानी में लवण घुले होने के कारण उसका घनत्व (density) साधारण नदी के पानी से अधिक होता है। आर्कमीडीज के नियमानुसार, अधिक घनत्व के कारण वह शरीर पर अधिक उत्प्लावन बल लगाता है, जिससे तैरना आसान हो जाता।"
+  },
+  {
+    "qe": "An iron nail sinks immediately when dropped in water, but a massive cargo ship constructed out of the same iron floats smoothly. Why does the massive ship float?",
+    "qh": "लोहे की एक कील पानी में तुरंत डूब जाती है, लेकिन उसी लोहे से बना एक विशाल मालवाहक जहाज आसानी से तैरता है। विशाल जहाज क्यों तैरता है?",
+    "o": [
+      "Because the ship alters the fundamental mass of the iron grid (क्योंकि जहाज लोहे का द्रव्यमान बदल देता है)",
+      "Because the ship is hollow and encloses a large volume of air, allowing it to displace a huge weight of water equal to or more than its own weight (क्योंकि जहाज खोखला होता है और उसमें हवा का बड़ा आयतन होता है, जिससे वह अपने भार के बराबर या उससे अधिक पानी का भारी वजन हटा पाता है)",
+      "Because large shapes are naturally repelled by water molecules (क्योंकि बड़े आकारों को पानी के अणु प्रतिकर्षित करते हैं)",
+      "Because the ship moves faster than the nail matrix (क्योंकि जहाज की गति कील से तेज होती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> लोहे की कील ठोस है, वह अपने भार से अधिक पानी नहीं हटा पाती। जहाज विशाल और भीतर से खोखला (hollow) होता है। बड़ा आयतन होने के कारण वह अपने कुल भार के बराबर पानी आसानी से विस्थापित कर देता है और तैरता है।"
+  },
+  {
+    "qe": "When you stand on a highly sensitive weighing machine in a room filled with air, the machine tracks your mass. How does this recorded reading compare to your actual true mass?",
+    "qh": "जब आप हवा से भरे कमरे में एक संवेदनशील वेइंग मशीन पर खड़े होते हैं, तो मशीन आपका द्रव्यमान रिकॉर्ड करती है। यह रिकॉर्ड की गई रीडिंग आपके वास्तविक सच्चे द्रव्यमान से किस प्रकार तुलना करती है?",
+    "o": [
+      "The machine shows exactly your true absolute mass (मशीन बिल्कुल आपका सच्चा द्रव्यमान दिखाती है)",
+      "The machine shows a slightly lower reading than your true mass because the surrounding air exerts a small upward buoyant force on your body (मशीन आपके वास्तविक द्रव्यमान से थोड़ा कम रीडिंग दिखाती है क्योंकि आसपास की हवा आपके शरीर पर थोड़ा ऊपर की ओर उत्प्लावन बल लगाती है)",
+      "The machine shows a highly exaggerated increased mass vector (मशीन बहुत बढ़ा हुआ द्रव्यमान दिखाती है)",
+      "The reading drops to zero due to atmospheric friction metrics (वायुमंडलीय घर्षण के कारण रीडिंग शून्य हो जाती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> हम हवा के सागर में डूबे हैं। हमारा शरीर जितनी हवा हटाता है, वह हवा हम पर ऊपर की ओर एक छोटा सा उत्प्लावन बल (upthrust) लगाती है। यह बल हमारे आभासी भार को कम कर देता है, जिससे मशीन थोड़ा कम मान दिखाती है।"
+  },
+  {
+    "qe": "If we compare $100\\text{ kg}$ of cotton and $100\\text{ kg}$ of iron measured on a standard spring balance exposed to air, which one possesses more actual true mass when evaluated in a vacuum?",
+    "qh": "यदि हम हवा में एक मानक स्प्रिंग बैलेंस पर मापे गए $100\\text{ kg}$ कपास (Cotton) और $100\\text{ kg}$ लोहे (Iron) की तुलना करें, तो निर्वात में मूल्यांकन करने पर किसके पास अधिक वास्तविक सच्चा द्रव्यमान होगा?",
+    "o": [
+      "Both will possess the exact identical true mass matrix (दोनों का सच्चा द्रव्यमान बिल्कुल समान होगा)",
+      "$100\\text{ kg}$ of cotton possesses more actual true mass because its large volume experiences a much greater upward buoyant force from air (100 किग्रा कपास में अधिक वास्तविक द्रव्यमान होगा क्योंकि इसका आयतन बड़ा होने से यह हवा से बहुत अधिक उत्प्लावन बल का अनुभव करता है)",
+      "$100\\text{ kg}$ of iron possesses more true mass because iron is dense (100 किग्रा लोहे में अधिक सच्चा द्रव्यमान होगा क्योंकि लोहा सघन है)",
+      "The true mass cannot be evaluated due to space constants breakdown (सच्चे द्रव्यमान का मूल्यांकन नहीं किया जा सकता)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> कपास का घनत्व बहुत कम होता है, इसलिए 100 किग्रा कपास का आयतन लोहे से बहुत विशाल होगा। बड़ा आयतन होने के कारण हवा उस पर बहुत अधिक उत्प्लावन बल लगाएगी। हवा में 100 किग्रा दिखने के लिए उसका वास्तविक द्रव्यमान लोहे से अधिक होना चाहिए।"
+  },
+  {
+    "qe": "What is the primary scientific criterion that determines whether a given solid object will float or sink when placed on the surface of a fluid?",
+    "qh": "वह मुख्य वैज्ञानिक मानदंड क्या है जो यह निर्धारित करता है कि कोई ठोस वस्तु किसी तरल की सतह पर रखने पर तैरेगी (Float) या डूब जाएगी (Sink)?",
+    "o": [
+      "The total absolute weight of the object regardless of size (वस्तु का कुल भार चाहे आकार कुछ भी हो)",
+      "The comparison between the density of the object and the density of the fluid (वस्तु के घनत्व और तरल के घनत्व के बीच की तुलना)",
+      "The total depth of the container substrate (बर्तन की कुल गहराई)",
+      "The chemical cross-action of surface polymers (सतह के पॉलीमर की रासायनिक क्रिया)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> यदि वस्तु का घनत्व तरल के घनत्व से अधिक ($\\rho_{\\text{object}} > \\rho_{\\text{fluid}}$) है, तो वह डूब जाएगी। यदि वस्तु का घनत्व तरल से कम है, तो वह तरल की सतह पर तैरेगी।"
+  },
+  {
+    "qe": "An object whose density is exactly equal to the density of the liquid is placed completely inside that liquid. What unique state of motion will it exhibit?",
+    "qh": "एक वस्तु जिसका घनत्व द्रव के घनत्व के बिल्कुल बराबर है, पूरी तरह से उस द्रव के भीतर रखी जाती है। वह गति की कौन सी अनूठी स्थिति प्रदर्शित करेगी?",
+    "o": [
+      "It will instantly shoot upwards and jump out of the surface (यह तुरंत ऊपर की ओर जाएगी और सतह से बाहर कूद जाएगी)",
+      "It will remain suspended and stay at whatever depth it is placed within the liquid (यह लिक्विड में निलंबित रहेगी और इसे द्रव में जिस गहराई पर भी छोड़ेंगे, यह वहीं बनी रहेगी)",
+      "It will immediately drop down to the bottom floor like a stone (यह पत्थर की तरह तुरंत नीचे फर्श पर गिर जाएगी)",
+      "It will start rotating along the center axis at infinite speed (यह अनंत गति से केंद्र अक्ष पर घूमने लगेगी)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब वस्तु और द्रव का घनत्व बिल्कुल बराबर होता है, तो वस्तु पर लगने वाला अपथ्रस्ट बल उसके भार को पूरी तरह संतुलित कर देता है। ऐसी वस्तु को द्रव में जहाँ भी छोड़ा जाता है, वह वहीं निलंबित (suspended) बनी रहती है।"
+  },
+  {
+    "qe": "When evaluating macroscopic motion over a finite time interval, the average speed of an object is generally greater than or equal to the magnitude of its average velocity. Under what strict kinematic condition do these two quantities become completely identical?",
+    "qh": "किसी निश्चित समयांतराल में, किसी वस्तु की औसत चाल (average speed) सामान्यतः उसके औसत वेग (average velocity) के परिमाण से अधिक या उसके बराबर होती है। किस कड़े गतिज प्रतिबंध के तहत ये दोनों राशियाँ पूर्णतः समान हो जाती हैं?",
+    "o": [
+      "When the object executes periodic motion with constant angular acceleration.",
+      "When the object moves strictly in a single straight line without changing its direction during the course of motion.",
+      "When the instantaneous acceleration vector remains permanently orthogonal to the velocity vector.",
+      "When the motion is completely confined to a boundary field where total displacement is zero."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Average speed equals total path length divided by time, whereas average velocity magnitude equals net displacement divided by time. Path length and displacement magnitude are identical if and only if the object moves in a straight line without changing its direction. In all other cases, the path length, and thus the average speed, is greater."
+  },
+  {
+    "qe": "In the foundational limits of calculus applied to kinematics, instantaneous speed at any precise moment is stated to be exactly equal to the magnitude of the instantaneous velocity at that instant. Why does the inequality that applies to their 'average' counterparts vanish in the instantaneous limit?",
+    "qh": "गतिकी में प्रयुक्त कलन (calculus) के मूलभूत सिद्धांतों के अनुसार, किसी विशिष्ट क्षण पर तात्कालिक चाल (instantaneous speed) का मान उस क्षण पर तात्कालिक वेग (instantaneous velocity) के परिमाण के ठीक बराबर होता है। इनके 'औसत' समकक्षों पर लागू होने वाली असमानता तात्कालिक सीमा में क्यों समाप्त हो जाती है?",
+    "o": [
+      "Because the path length undergoes quantum contraction in a vacuum.",
+      "Because over an infinitesimally small time interval ($\\Delta t \\to 0$), the object cannot change its direction of motion, making path length equal to the magnitude of displacement.",
+      "Because the acceleration vector drops to absolute zero during an instantaneous measurement.",
+      "Because instantaneous speed is a vector quantity that inherently accounts for spatial curvature."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Over an infinitesimally small time interval $\\Delta t \\to 0$, the direction of motion of an object cannot change. Consequently, the actual path length traveled becomes strictly equal to the magnitude of the displacement vector ($|\\Delta \\mathbf{r}| = \\Delta x$), causing the instantaneous speed to exactly match the magnitude of instantaneous velocity."
+  },
+  {
+    "qe": "Galileo Galilei conducted experiments on freely falling objects and objects sliding down inclined planes to establish the true nature of acceleration. What counter-intuitive fact did his studies unearth regarding a change in velocity?",
+    "qh": "गैलीलियो गैलीली ने त्वरण की वास्तविक प्रकृति को स्थापित करने के लिए मुक्त रूप से गिरती वस्तुओं और झुके हुए तलों पर फिसलने वाली वस्तुओं पर प्रयोग किए। उनके अध्ययनों ने वेग में परिवर्तन के संबंध में किस विरोधाभासी तथ्य को उजागर किया?",
+    "o": [
+      "The rate of change of velocity with distance is a permanent constant of motion.",
+      "The rate of change of velocity with time is a constant of motion for all objects in free fall, whereas the change in velocity with distance is not constant.",
+      "The velocity changes abruptly at distinct structural kinks without continuous transformation.",
+      "Acceleration due to gravity is directly proportional to the physical surface area of the falling mass."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Galileo's historic breakthrough established that for all freely falling objects, the rate of change of velocity with time is a constant of motion (constant acceleration). Conversely, the rate of change of velocity with distance is not constant; it systematically decreases as the distance of the fall increases."
+  },
+  {
+    "qe": "When analyzing a position-time ($x-t$) curve, how can one graphically deduce whether the moving object possesses a positive, negative, or zero acceleration?",
+    "qh": "एक स्थिति-समय ($x-t$) वक्र का विश्लेषण करते समय, कोई व्यक्ति ग्राफिकल रूप से कैसे निष्कर्ष निकाल सकता है कि गतिशील वस्तु का त्वरण धनात्मक, ऋणात्मक या शून्य है?",
+    "o": [
+      "By calculating the total physical area under the curve relative to the origin coordinate.",
+      "The curve bends upward for positive acceleration, bends downward for negative acceleration, and is a straight line for zero acceleration.",
+      "A vertical straight line represents positive acceleration, and a horizontal line represents negative acceleration.",
+      "By analyzing the sharp structural kinks on the time axis domain."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The text explicitly states that for motion with constant acceleration, the position-time graph curves upward (convex downward) for positive acceleration, curves downward (convex upward) for negative acceleration, and simplifies into a linear straight line for zero acceleration."
+  },
+  {
+    "qe": "In any realistic, physically achievable physical situation, the curves representing position ($x-t$) and velocity ($v-t$) as a function of time cannot have sharp kinks. What is the deep physical meaning behind this smooth, differentiable graph requirement?",
+    "qh": "किसी भी वास्तविक और भौतिक रूप से प्राप्त करने योग्य स्थिति में, समय के फलन के रूप में स्थिति ($x-t$) और वेग ($v-t$) को दर्शाने वाले वक्रों में तीखे मोड़ (sharp kinks) नहीं हो सकते। इस सुचारू और अवकलनीय (smooth and differentiable) ग्राफ की आवश्यकता के पीछे गहरा भौतिक अर्थ क्या है?",
+    "o": [
+      "The mechanical kinetic energy of a macroscopic mass must remain zero permanently.",
+      "Acceleration and velocity cannot change their values abruptly at an instant; changes are always continuous.",
+      "The position vector must remain entirely independent of the choice of coordinate origin.",
+      "The velocity vector must align perfectly parallel to the time axis at all measurement nodes."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In a realistic situation, the mathematical functions for velocity and position must be continuous and differentiable at all points. Physically, this means that an object's velocity or acceleration cannot jump or change values abruptly at an instant; transitions are always smooth and continuous."
+  },
+  {
+    "qe": "When plotting a velocity-time ($v-t$) curve, the area under the curve between two time coordinates yields a specific geometric value. What physical vector quantity is represented by this area, and how is its dimension justified?",
+    "qh": "वेग-समय ($v-t$) वक्र खींचते समय, दो समय निर्देशांकों के बीच वक्र के नीचे का क्षेत्र एक विशिष्ट ज्यामितीय मान देता है। यह क्षेत्र किस भौतिक सदिश राशि को दर्शाता है, और इसका आयाम कैसे सिद्ध होता है?",
+    "o": [
+      "It represents instantaneous acceleration, with dimensions of $\\text{L T}^{-2}$.",
+      "It represents net displacement, because the product of the coordinate dimensions $(\\text{m s}^{-1} \\times \\text{s})$ simplifies to meters $(\\text{L})$.",
+      "It represents total kinetic stress, with dimensions matching mass density variables.",
+      "It represents a dimensionless scalar constant mapping the trajectory field."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The area under a velocity-time curve represents the net displacement. By multiplying the dimensions of the quantities plotted on the two axes—velocity $(\\text{L T}^{-1})$ on the vertical axis and time $(\\text{T})$ on the horizontal axis—the units resolve to meters $(\\text{L})$, which is the dimension of displacement."
+  },
+  {
+    "qe": "Why are the standard kinematic equations for uniform acceleration (such as $v = v_0 + at$) strictly inapplicable to the analysis of uniform circular motion, even though the magnitude of acceleration remains completely constant in both cases?",
+    "qh": "एकसमान त्वरण वाले मानक गतिज समीकरण (जैसे $v = v_0 + at$) एकसमान वृत्तीय गति के विश्लेषण में कड़ाई से अनुपयुक्त क्यों हैं, भले ही दोनों मामलों में त्वरण का परिमाण पूरी तरह से नियत रहता है?",
+    "o": [
+      "Because uniform circular motion occurs exclusively in a non-inertial quantum vacuum field.",
+      "Because in uniform circular motion, the magnitude of acceleration is constant but its direction is continuously changing, violating the criteria of a constant vector.",
+      "Because the velocity vector in circular path fields must be a scalar constant.",
+      "Because circular trajectories are independent of time-dilation parameters."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The standard kinematic equations are derived on the strict condition that acceleration is a constant vector (constant in both magnitude and direction). In uniform circular motion, while the magnitude of centripetal acceleration is constant, its direction changes continuously (always pointing toward the center), rendering those equations invalid."
+  },
+  {
+    "qe": "The shape of the physical trajectory or path followed by a moving object is a fundamental observation in mechanics. According to physics principles, the shape of this trajectory is determined uniquely by:",
+    "qh": "किसी गतिशील वस्तु द्वारा तय किए गए भौतिक पथ या प्रक्षेपवक्र (trajectory) का आकार यांत्रिकी में एक मूलभूत अवलोकन है। भौतिकी के सिद्धांतों के अनुसार, इस प्रक्षेपवक्र का आकार विशिष्ट रूप से किसके द्वारा निर्धारित होता है?",
+    "o": [
+      "The acceleration vector alone acting on the mass matrix.",
+      "Neither acceleration nor velocity, depending entirely on the mass of the object.",
+      "Both the acceleration and the initial conditions of motion (initial position and initial velocity).",
+      "The strict choice of mutually perpendicular coordinate reference axes."
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> The trajectory of a moving object is not dictated by acceleration alone. It depends heavily on initial conditions. For instance, an object moving under identical constant acceleration due to gravity can follow a straight vertical line or a parabolic curve, depending entirely on its initial velocity direction."
+  },
+  {
+    "qe": "When an object moving in a two-dimensional plane is simultaneously subjected to two separate velocities $\\mathbf{v}_1$ and $\\mathbf{v}_2$, how is its resultant velocity vector defined in contrast to the relative velocity vector $\\mathbf{v}_{12}$ of object 1 with respect to object 2?",
+    "qh": "जब एक द्विविमीय तल में गतिशील वस्तु पर एक साथ दो अलग-अलग वेग $\\mathbf{v}_1$ और $\\mathbf{v}_2$ आरोपित होते हैं, तो इसके परिणामी वेग सदिश की परिभाषा, वस्तु 2 के सापेक्ष वस्तु 1 के सापेक्ष वेग सदिश $\\mathbf{v}_{12}$ से किस प्रकार भिन्न होती है?",
+    "o": [
+      "The resultant is $\\mathbf{v} = \\mathbf{v}_1 - \\mathbf{v}_2$, and the relative velocity is $\\mathbf{v}_{12} = \\mathbf{v}_1 + \\mathbf{v}_2$.",
+      "The resultant is $\\mathbf{v} = \\mathbf{v}_1 + \\mathbf{v}_2$, and the relative velocity is $\\mathbf{v}_{12} = \\mathbf{v}_1 - \\mathbf{v}_2$.",
+      "Both vectors are mathematically identical because subtraction is commutative in a plane.",
+      "The vectors depend strictly on whether the coordinate frame origin is localized or free."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> If an object experiences two physical velocities simultaneously, they add vectorially to yield a net resultant velocity: $\\mathbf{v} = \\mathbf{v}_1 + \\mathbf{v}_2$. Conversely, the relative velocity of one moving object with respect to another in a common frame is a vector difference: $\\mathbf{v}_{12} = \\mathbf{v}_1 - \\mathbf{v}_2$."
+  },
+  {
+    "qe": "A physical quantity in physics is classified strictly as a vector if it possesses both a magnitude and a direction. What is the third mandatory mathematical criterion that a quantity must satisfy to be validated as a vector?",
+    "qh": "भौतिकी में किसी भौतिक राशि को सख्ती से सदिश के रूप में वर्गीकृत किया जाता है यदि उसमें परिमाण और दिशा दोनों हों। किसी राशि को सदिश के रूप में मान्य होने के लिए तीसरी अनिवार्य गणितीय शर्त क्या पूरी करनी होगी?",
+    "o": [
+      "It must be completely independent of any chosen system of measurement units.",
+      "It must obey the triangle law of addition or equivalently the parallelogram law of addition.",
+      "Its absolute value must vary linearly as a function of the elapsed time interval.",
+      "It must be differentiable at sharp spatial kinks across a two-dimensional plane."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Having magnitude and direction is insufficient for a quantity to be a vector. It must strictly obey the vector laws of addition—specifically, the triangle law or the equivalent parallelogram law of addition. For example, electric current has magnitude and direction but adds scalarly, so it is not a vector."
+  },
+  {
+    "qe": "Consider two vectors $\\mathbf{A}$ and $\\mathbf{B}$ located in an open coordinate space. Under what specific condition can these two free vectors be mathematically declared as completely equal?",
+    "qh": "खुले समन्वय समष्टि (coordinate space) में स्थित दो सदिशों $\\mathbf{A}$ और $\\mathbf{B}$ पर विचार करें। किस विशिष्ट स्थिति के तहत इन दोनों मुक्त सदिशों (free vectors) को गणितीय रूप से पूरी तरह से समान घोषित किया जा सकता है?",
+    "o": [
+      "When they originate from the exact same physical localized coordinates on the plane.",
+      "If, and only if, they have the same magnitude and the same direction.",
+      "When their scalar dot product yields an absolute value tending to infinity.",
+      "When they point along parallel axes but possess inverted scalar multipliers."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Two vectors are equal if and only if they possess identical magnitudes and point in the exact same direction. Since free vectors can be shifted parallel to themselves without altering their physical value, their specific spatial location does not affect equality."
+  },
+  {
+    "qe": "What is the defining geometric characteristic of a null or zero vector ($\\mathbf{0}$), and what unique property does it exhibit when multiplied by an arbitrary non-zero vector $\\mathbf{A}$ or a real scalar number $\\lambda$?",
+    "qh": "एक शून्य सदिश (null or zero vector $\\mathbf{0}$) की परिभाषित ज्यामितीय विशेषता क्या है, और किसी मनमाने गैर-शून्य सदिश $\\mathbf{A}$ या एक वास्तविक अदिश संख्या $\\lambda$ से गुणा करने पर यह कौन सा अनूठा गुण प्रदर्शित करता है?",
+    "o": [
+      "It has a fixed vertical direction and yields $\\lambda \\mathbf{0} = \\lambda$.",
+      "It has zero magnitude, requires no specific direction specification, and satisfies $\\lambda \\mathbf{0} = \\mathbf{0}$ and $0 \\mathbf{A} = \\mathbf{0}$.",
+      "It aligns parallel to the horizontal time axis and drops the vector dimensions to meters.",
+      "It shifts the initial coordinate origin parallel to itself exponentially."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A null vector has zero magnitude, meaning its specific direction is indeterminate and need not be specified. Multiplying it by a scalar yields a null vector ($\\lambda\\mathbf{0} = \\mathbf{0}$), and multiplying the scalar number zero by any vector also results in a null vector ($0\\mathbf{A} = \\mathbf{0}$)."
+  },
+  {
+    "qe": "When an object executes motion in a two-dimensional plane, its position vector is plotted relative to an origin. The instantaneous velocity vector $\\mathbf{v}$ at any given moment relates geometrically to the object's physical path curve as:",
+    "qh": "जब कोई वस्तु द्विविमीय तल में गति करती है, तो उसका स्थिति सदिश मूल बिंदु के सापेक्ष खींचा जाता है। किसी भी क्षण तात्कालिक वेग सदिश $\\mathbf{v}$ ज्यामितीय रूप से वस्तु के भौतिक पथ वक्र से किस प्रकार संबंधित होता है?",
+    "o": [
+      "It always points perpendicular (orthogonal) to the path curve toward the origin.",
+      "It is always tangent to the curve representing the physical path of the object at that instant.",
+      "It points symmetrically opposite to the direction of the displacement vector.",
+      "It oscillates at a fixed acute angle of $45^\\circ$ relative to the acceleration vector axis."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In unit vector notation, as the time interval approaches zero, the displacement vector $\\Delta \\mathbf{r}$ aligns with the curve. Thus, the instantaneous velocity vector $\\mathbf{v} = \\frac{d\\mathbf{r}}{dt}$ is always tangentially aligned to the curve representing the object's path at that specific point."
+  },
+  {
+    "qe": "When a projectile is launched into flight with an initial velocity $\\mathbf{v}_0$ at an angle $\\theta_0$ with the horizontal axis, its net acceleration vector during the entire flight (neglecting air resistance) is:",
+    "qh": "जब एक प्रक्षेप्य (projectile) को क्षैतिज अक्ष के साथ $\\theta_0$ कोण पर प्रारंभिक वेग $\\mathbf{v}_0$ के साथ उड़ान में प्रक्षेपित किया जाता है, तो पूरी उड़ान के दौरान (वायु प्रतिरोध को नगण्य मानते हुए) उसका नेट त्वरण सदिश क्या होता है?",
+    "o": [
+      "Varies continuously as a function of the changing parabolic path coordinates.",
+      "Is directed vertically downward with a constant magnitude equal to $g$.",
+      "Becomes absolutely zero at the point of maximum trajectory height.",
+      "Points parallel to the instantaneous velocity vector at all measurement nodes."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Once projected, a projectile is a freely falling body subject exclusively to the force of gravity. Therefore, its horizontal acceleration component is permanently zero ($a_x = 0$), and its vertical acceleration component is a downward constant ($a_y = -g$)."
+  },
+  {
+    "qe": "Galileo Galilei made a profound declaration in 1632 regarding the physical components of projectile motion. In his 'Dialogue on the Great World Systems', he stated that:",
+    "qh": "गैलीलियो गैलीली ने 1632 में प्रक्षेप्य गति (projectile motion) के भौतिक घटकों के संबंध में एक गहन घोषणा की थी। अपने 'डायलॉग ऑन द ग्रेट वर्ल्ड सिस्टम्स' में उन्होंने उल्लेख किया था कि:",
+    "o": [
+      "The horizontal and vertical components of projectile motion are completely independent of each other.",
+      "A projectile cannot maintain a horizontal velocity component without an active mechanical thrust force.",
+      "The path trajectory is strictly a straight line in a relativistic coordinate system.",
+      "The time of flight depends exponentially on the mass density of the projected sphere."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Galileo was the first to explicitly state the core principle of independence of the horizontal and vertical components of projectile motion. The horizontal component stays constant due to zero acceleration, while the vertical component changes independently under constant gravitational acceleration."
+  },
+  {
+    "qe": "During the flight of a projectile, one of its velocity components remains completely constant throughout the journey, while the other changes continuously. Which component is invariant, and why?",
+    "qh": "किसी प्रक्षेप्य की उड़ान के दौरान, उसका एक वेग घटक पूरी यात्रा में पूरी तरह से नियत रहता है, जबकि दूसरा लगातार बदलता रहता है। कौन सा घटक अपरिवर्तित रहता है, और क्यों?",
+    "o": [
+      "The $y$-component remains constant because gravity acts horizontally.",
+      "The $x$-component (horizontal) remains constant because there is no acceleration acting in the horizontal direction.",
+      "Both components change symmetrically to maintain the parabolic path curvature.",
+      "The component tangent to the apex point stays constant due to mass conservation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Because gravity acts strictly in the vertically downward direction, there is no physical force or acceleration acting along the horizontal $x$-axis ($a_x = 0$). Thus, the horizontal velocity component $v_x = v_{0x} = v_0 \\cos\\theta_0$ remains constant throughout the entire motion."
+  },
+  {
+    "qe": "At the absolute highest point (apex) of a projectile's parabolic trajectory, what are the values of its velocity components?",
+    "qh": "किसी प्रक्षेप्य के परवलयिक प्रक्षेपवक्र (parabolic trajectory) के बिल्कुल उच्चतम बिंदु (शीर्ष) पर, इसके वेग घटकों के मान क्या होते हैं?",
+    "o": [
+      "Both the horizontal and vertical velocity components drop to absolute zero.",
+      "The vertical component $v_y$ is zero, and the horizontal component $v_x$ is equal to $v_0 \\cos\\theta_0$.",
+      "The horizontal component is zero, and the vertical component equals $v_0 \\sin\\theta_0$.",
+      "The velocity vector undergoes an abrupt phase inversion of $\\pi$ radians."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> At the peak of its trajectory, the projectile cannot ascend any further, meaning its vertical velocity component drops exactly to zero ($v_y = 0$). However, its horizontal velocity remains unaffected and is equal to $v_x = v_0 \\cos\\theta_0$."
+  },
+  {
+    "qe": "By eliminating the time variable '$t$' between the coordinate expressions for $x$ and $y$ of a projectile, we obtain the path equation: $y = (\\tan\\theta_0)x - \\frac{g}{2(v_0 \\cos\\theta_0)^2}x^2$. Mathematically, this specific function proves that the trajectory is a:",
+    "qh": "एक प्रक्षेप्य के $x$ और $y$ के समन्वय व्यंजकों के बीच समय चर '$t$' को समाप्त करके, हम पथ समीकरण प्राप्त करते हैं: $y = (\\tan\\theta_0)x - \\frac{g}{2(v_0 \\cos\\theta_0)^2}x^2$। गणितीय रूप से, यह विशिष्ट फलन यह सिद्ध करता है कि प्रक्षेपवक्र एक:",
+    "o": [
+      "Perfect circle with radius determined by initial speed.",
+      "Parabola, meaning the path followed is strictly parabolic.",
+      "Hyperbola mapping a symmetrical non-zero stress vector.",
+      "Straight line inclined at an angle $\\theta_0$ to the origin axis."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The derived path equation is of the standard mathematical form $y = ax + bx^2$, where $a$ and $b$ are constants. This quadratic profile is the algebraic equation of a parabola, proving that the flight trajectory is strictly a parabola."
+  },
+  {
+    "qe": "The total time of flight $T_f$ of a projectile is derived as $T_f = \\frac{2v_0 \\sin\\theta_0}{g}$. This total duration relates to the time taken to reach the maximum height $t_m$ as $T_f = 2t_m$. What physical attribute of the motion justifies this exact doubling?",
+    "qh": "एक प्रक्षेप्य की उड़ान का कुल समय $T_f$, $T_f = \\frac{2v_0 \\sin\\theta_0}{g}$ के रूप में व्युत्पन्न होता है। यह कुल अवधि अधिकतम ऊंचाई तक पहुंचने में लगे समय $t_m$ से $T_f = 2t_m$ के रूप में संबंधित है। गति का कौन सा भौतिक गुण इस सटीक दोगुने होने की पुष्टि करता है?",
+    "o": [
+      "The non-inertial properties of free space vacuum coordinates.",
+      "The structural symmetry of the parabolic path followed by the object.",
+      "The mass conservation parameter of the projected mass matrix.",
+      "The linear alignment of the unit vectors along the horizontal plane."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The relation $T_f = 2t_m$ is an expected kinematic result due to the perfect structural symmetry of the parabolic path under a constant, uniform downward acceleration field."
+  },
+  {
+    "qe": "For a projectile launched with a fixed initial speed $v_0$, the horizontal range $R$ depends heavily on the angle of projection $\\theta_0$. Under what condition does this horizontal range reach its absolute maximum value?",
+    "qh": "एक निश्चित प्रारंभिक गति $v_0$ के साथ प्रक्षेपित प्रक्षेप्य के लिए, क्षैतिज परास (horizontal range) $R$ प्रक्षेप कोण $\\theta_0$ पर बहुत अधिक निर्भर करता है। किस स्थिति में यह क्षैतिज परास अपने पूर्ण अधिकतम मान तक पहुँचता है?",
+    "o": [
+      "When the angle of projection is $\\theta_0 = 90^\\circ$ (vertical launch).",
+      "When the angle of projection is $\\theta_0 = 45^\\circ$.",
+      "When the projection angle matches the critical reflection index.",
+      "When the horizontal component of acceleration matches the vertical component."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The range formula contains the trigonometric term $\\sin 2\\theta_0$. The maximum value of the sine function is 1, which occurs when its argument is $90^\\circ$. Therefore, $2\\theta_0 = 90^\\circ$, which implies the projection angle must be exactly $\\theta_0 = 45^\\circ$."
+  },
+  {
+    "qe": "When a real scalar number $\\lambda$ is multiplied by a vector $\\mathbf{A}$, the result is a new vector. What dictates the magnitude and directional orientation of this resulting vector?",
+    "qh": "जब एक वास्तविक अदिश संख्या $\\lambda$ को एक सदिश $\\mathbf{A}$ से गुणा किया जाता है, तो परिणाम एक नया सदिश होता है। इस परिणामी सदिश के परिमाण और दिशात्मक अभिविन्यास को क्या निर्धारित करता है?",
+    "o": [
+      "The magnitude is unchanged, and direction rotates by $90^\\circ$ permanently.",
+      "The magnitude becomes $|\\lambda|$ times that of $\\mathbf{A}$, and the direction is identical or directly opposite depending on whether $\\lambda$ is positive or negative.",
+      "The dimension shifts from a vector to a scalar constant mapping the coordinate grid.",
+      "The path length drops linearly to zero irrespective of the sign of $\\lambda$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Multiplying a vector $\\mathbf{A}$ by a real number $\\lambda$ scales its magnitude by the absolute value of $\\lambda$. The direction remains the same if $\\lambda$ is positive, and points in the exact opposite direction if $\\lambda$ is a negative number."
+  },
+  {
+    "qe": "Vector addition can be achieved graphically using either the head-to-tail method or the parallelogram method. These geometric constructions demonstrate that vector addition is commutative, meaning:",
+    "qh": "सदिश योग (Vector addition) को ग्राफिकल रूप से हेड-टू-टेल विधि या समानांतर चतुर्भुज विधि का उपयोग करके प्राप्त किया जा सकता है। ये ज्यामितीय निर्माण दर्शाते हैं कि सदिश योग क्रमविनिमेय (commutative) है, जिसका अर्थ है:",
+    "o": [
+      "$(\\mathbf{A} + \\mathbf{B}) + \\mathbf{C} = \\mathbf{A} + (\\mathbf{B} + \\mathbf{C})$",
+      "$\\mathbf{A} + \\mathbf{B} = \\mathbf{B} + \\mathbf{A}$",
+      "$\\mathbf{A} - \\mathbf{B} = \\mathbf{B} - \\mathbf{A}$",
+      "$\\lambda(\\mathbf{A} + \\mathbf{B}) = \\lambda\\mathbf{A} + \\lambda\\mathbf{B}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The commutative property of vector addition states that the order in which two vectors are added does not alter the final resultant vector, written algebraically as $\\mathbf{A} + \\mathbf{B} = \\mathbf{B} + \\mathbf{A}$."
+  },
+  {
+    "qe": "The subtraction of a vector $\\mathbf{B}$ from a vector $\\mathbf{A}$ is mathematically defined in vector algebra as:",
+    "qh": "सदिश बीजगणित (vector algebra) में एक सदिश $\\mathbf{A}$ में से सदिश $\\mathbf{B}$ के घटाव (subtraction) को गणितीय रूप से किस प्रकार परिभाषित किया गया है?",
+    "o": [
+      "The scalar product of their absolute baseline magnitudes.",
+      "The vector sum of $\\mathbf{A}$ and the negative vector $-\\mathbf{B}$, written as $\\mathbf{A} + (-\\mathbf{B})$.",
+      "The geometric inversion of their plane component axes coordinates.",
+      "A cross-axis division process breaking down the unit scalars."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Vector subtraction is not a unique operation; it is formally defined as the vector addition of the negative of the vector to be subtracted: $\\mathbf{A} - \\mathbf{B} = \\mathbf{A} + (-\\mathbf{B})$."
+  },
+  {
+    "qe": "A unit vector associated with a given vector $\\mathbf{A}$ has a magnitude of exactly 1. What is its mukhya physical purpose, and how is it mathematically represented?",
+    "qh": "किसी दिए गए सदिश $\\mathbf{A}$ से जुड़े एक एकांक सदिश (unit vector) का परिमाण ठीक 1 होता है। इसका मुख्य भौतिक उद्देश्य क्या है, और इसे गणितीय रूप से कैसे दर्शाया जाता है?",
+    "o": [
+      "It scales the mass dimension, represented by $\\mathbf{\\hat{n}} = \\mathbf{A} \\times |\\mathbf{A}|$.",
+      "It specifies a unique direction in space without changing the dimensions, represented as $\\mathbf{\\hat{n}} = \\frac{\\mathbf{A}}{|\\mathbf{A}|}$.",
+      "It shifts the coordinate origin to a free orientation vector grid.",
+      "It eliminates the differentiation kinks across the horizontal baseline axis."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Unit vectors are dimensionless vectors used solely to specify a direction in space. They are denoted by a hat symbol over the letter and calculated by dividing the vector by its absolute magnitude: $\\mathbf{\\hat{n}} = \\frac{\\mathbf{A}}{A}$."
+  },
+  {
+    "qe": "In a right-handed Cartesian coordinate system, the symbols $\\mathbf{\\hat{i}}$, $\\mathbf{\\hat{j}}$, and $\\mathbf{\\hat{k}}$ represent unit vectors. What are their respective designated directions?",
+    "qh": "एक दक्षिणहस्त कार्तिकेय समन्वय प्रणाली (right-handed Cartesian coordinate system) में, संकेत $\\mathbf{\\hat{i}}$, $\\mathbf{\\hat{j}}$, और $\\mathbf{\\hat{k}}$ एकांक सदिशों को दर्शाते हैं। उनकी क्रमशः निर्दिष्ट दिशाएँ क्या हैं?",
+    "o": [
+      "They point along randomly changing non-orthogonal spatial vectors over time.",
+      "They point along the positive $x$-, $y$-, and $z$-axes, respectively.",
+      "They line up parallel to the changing trajectory velocity coordinates.",
+      "They designate the localized thermal stress axes of the medium matrix."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> By standard convention, $\\mathbf{\\hat{i}}$, $\\mathbf{\\hat{j}}$, and $\\mathbf{\\hat{k}}$ are orthogonal unit vectors pointing strictly along the positive directions of the $x$, $y$, and $z$ coordinate axes, respectively."
+  },
+  {
+    "qe": "If a vector $\\mathbf{A}$ lies in the $x$-$y$ plane and makes an angle $\\theta$ with the horizontal $x$-axis, its component vectors along the two axes are resolved as:",
+    "qh": "यदि एक सदिश $\\mathbf{A}$ $x$-$y$ तल में स्थित है और क्षैतिज $x$-अक्ष के साथ $\\theta$ कोण बनाता है, तो दोनों अक्षों के अनुदिश इसके घटक सदिशों को किस रूप में हल किया जाता है?",
+    "o": [
+      "$A_x = A \\sin\\theta$ and $A_y = A \\cos\\theta$",
+      "$A_x = A \\cos\\theta$ and $A_y = A \\sin\\theta$",
+      "$A_x = A^2 \\cos\\theta$ and $A_y = A^2 \\sin\\theta$",
+      "$A_x = \\frac{A}{\\cos\\theta}$ and $A_y = \\frac{A}{\\sin\\theta}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Using simple trigonometry on a right-angled vector triangle layout, the component adjacent to the angle is the cosine component ($A_x = A \\cos\\theta$), and the perpendicular component is the sine component ($A_y = A \\sin\\theta$)."
+  },
+  {
+    "qe": "The absolute magnitude of a two-dimensional vector $\\mathbf{A} = A_x\\mathbf{\\hat{i}} + A_y\\mathbf{\\hat{j}}$ is mathematically derived from its components using which relation?",
+    "qh": "एक द्विविमीय सदिश $\\mathbf{A} = A_x\\mathbf{\\hat{i}} + A_y\\mathbf{\\hat{j}}$ का निरपेक्ष परिमाण इसके घटकों से किस संबंध का उपयोग करके गणितीय रूप से निकाला जाता है?",
+    "o": [
+      "$A = A_x + A_y$",
+      "$A = \\sqrt{A_x^2 + A_y^2}$",
+      "$A = (A_x^2 + A_y^2)^2$",
+      "$A = \\frac{A_y}{A_x}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Based on the Pythagorean theorem applied to perpendicular vector components in a plane, the total magnitude is the square root of the sum of the squares of its individual components: $A = \\sqrt{A_x^2 + A_y^2}$."
+  },
+  {
+    "qe": "When an object undergoes a displacement $\\Delta \\mathbf{r}$ in a time interval $\\Delta t$, its average velocity is $\\mathbf{\\bar{v}} = \\frac{\\Delta \\mathbf{r}}{\\Delta t}$. What mathematical operation defines the transition from this average value to instantaneous velocity $\\mathbf{v}$?",
+    "qh": "जब कोई वस्तु समयांतराल $\\Delta t$ में विस्थापन $\\Delta \\mathbf{r}$ से गुजरती है, तो उसका औसत वेग $\\mathbf{\\bar{v}} = \\frac{\\Delta \\mathbf{r}}{\\Delta t}$ होता है। कौन सी गणितीय संक्रिया इस औसत मान से तात्कालिक वेग $\\mathbf{v}$ में संक्रमण को परिभाषित करती है?",
+    "o": [
+      "Taking the mathematical product of the displacement and elapsed time.",
+      "Taking the limiting value of the ratio as the time interval $\\Delta t$ approaches zero: $\\mathbf{v} = \\lim_{\\Delta t \\to 0} \\frac{\\Delta \\mathbf{r}}{\\Delta t} = \\frac{d\\mathbf{r}}{dt}$.",
+      "Integrating the acceleration function over an infinite spatial domain.",
+      "Squaring the component unit vectors across a right-handed system."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Instantaneous velocity is rigorously defined as the average velocity evaluated over an infinitesimally short time interval. Mathematically, this is the first derivative of position with respect to time, achieved by taking the calculus limit as $\\Delta t \\to 0$."
+  },
+  {
+    "qe": "In unit vector notation, the instantaneous acceleration vector $\\mathbf{a}$ of an object moving in space is written as $\\mathbf{a} = a_x\\mathbf{\\hat{i}} + a_y\\mathbf{\\hat{j}} + a_z\\mathbf{\\hat{k}}$. How are these scalar components $a_x$, $a_y$, and $a_z$ derived from velocity components?",
+    "qh": "एकांक सदिश संकेतन में, समष्टि में गतिमान किसी वस्तु के तात्कालिक त्वरण सदिश $\\mathbf{a}$ को $\\mathbf{a} = a_x\\mathbf{\\hat{i}} + a_y\\mathbf{\\hat{j}} + a_z\\mathbf{\\hat{k}}$ के रूप में लिखा जाता है। ये अदिश घटक $a_x$, $a_y$, और $a_z$ वेग घटकों से कैसे प्राप्त किए जाते हैं?",
+    "o": [
+      "$a_x = v_x \\times t$, $a_y = v_y \\times t$, $a_z = v_z \\times t$",
+      "$a_x = \\frac{dv_x}{dt}$, $a_y = \\frac{dv_y}{dt}$, $a_z = \\frac{dv_z}{dt}$",
+      "$a_x = v_x^2$, $a_y = v_y^2$, $a_z = v_z^2$",
+      "They represent the integrated displacement values over the axes parameters."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Instantaneous acceleration components are the first time derivatives of their respective instantaneous velocity components along each axis, represented as $a_x = \\frac{dv_x}{dt}$, $a_y = \\frac{dv_y}{dt}$, and $a_z = \\frac{dv_z}{dt}$."
+  },
+  {
+    "qe": "If an object is moving in a two-dimensional plane with a constant acceleration vector $\\mathbf{a} = a_x\\mathbf{\\hat{i}} + a_y\\mathbf{\\hat{j}}$, its position vector $\\mathbf{r}$ at any time '$t$' is derived as $\\mathbf{r} = \\mathbf{r}_0 + \\mathbf{v}_0t + \\frac{1}{2}\\mathbf{a}t^2$. What physical insight does this vector equation provide about motion in a plane?",
+    "qh": "यदि कोई वस्तु एक नियत त्वरण सदिश $\\mathbf{a} = a_x\\mathbf{\\hat{i}} + a_y\\mathbf{\\hat{j}}$ के साथ एक द्विविमीय तल में गति कर रही है, तो किसी भी समय '$t$' पर उसका स्थिति सदिश $\\mathbf{r}$ $\\mathbf{r} = \\mathbf{r}_0 + \\mathbf{v}_0t + \\frac{1}{2}\\mathbf{a}t^2$ के रूप में व्युत्पन्न होता है। यह सदिश समीकरण एक तल में गति के बारे में क्या भौतिक अंतर्दृष्टि प्रदान करता है?",
+    "o": [
+      "Motion in a plane is a single coupled one-dimensional relativistic phenomenon.",
+      "Motion in a plane can be treated as the superposition of two separate, simultaneous one-dimensional motions along two perpendicular directions.",
+      "The velocity vector must remain permanently parallel to the position vector origin.",
+      "The horizontal position coordinate $x$ depends exponentially on the vertical acceleration component."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A key principle of mechanics highlighted in the text is that two-dimensional motion with constant acceleration can be broken down into two completely independent, simultaneous one-dimensional linear motions along mutually perpendicular axes ($x$ and $y$)."
+  },
+  {
+    "qe": "Aristotle's law of motion states that an external force is always required to keep a body in uniform motion. What is the fundamental logical flaw in this argument according to Newtonian mechanics?",
+    "qh": "अरस्तू के गति के नियम के अनुसार किसी पिंड को एकसमान गति में रखने के लिए हमेशा एक बाहरी बल की आवश्यकता होती है। न्यूटनियन यांत्रिकी के अनुसार इस तर्क में मूलभूत तार्किक त्रुटि क्या है?",
+    "o": [
+      "It fails to consider that mass increases with uniform velocity.",
+      "It fails to recognize that a force applied by an external agency is actually required only to counter opposing frictional forces, not to maintain motion itself.",
+      "It assumes that acceleration is a scalar invariant in terrestrial systems.",
+      "It considers gravitational interaction to be a contact force instead of a field force."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Aristotle's flaw was coding everyday practical experience into a basic law. In uniform linear motion, the applied external force merely cancels out the opposing force of friction, resulting in a net external force of zero. If friction were completely absent, no external force would be required to maintain uniform velocity."
+  },
+  {
+    "qe": "Galileo’s idealised double inclined plane experiment led to a profound insight regarding horizontal motion. In the limiting case where the slope of the second plane is reduced to zero (horizontal surface), what happens to a rolling ball in a completely frictionless universe?",
+    "qh": "गैलीलियो के आदर्श डबल झुके हुए तल (double inclined plane) के प्रयोग ने क्षैतिज गति के संबंध में एक गहरा दृष्टिकोण दिया। उस सीमांत मामले में जहां दूसरे तल का ढाल शून्य (क्षैतिज सतह) कर दिया जाता है, पूरी तरह से घर्षण रहित ब्रह्मांड में लुढ़कती हुई गेंद के साथ क्या होगा?",
+    "o": [
+      "It will rapidly decelerate due to its internal inertia parameters.",
+      "It will continue to move with a constant velocity over an infinite distance without ceasing.",
+      "It will convert its translational kinetic energy entirely into mechanical polarization.",
+      "It will stop abruptly after covering a distance exactly proportional to its radius."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Galileo concluded that in an ideal frictionless scenario, a ball rolling down an incline will climb to the same initial height on the opposing incline. If the second plane is horizontal (slope = 0), the ball will travel an infinite distance trying to reach its original height, meaning its motion will never cease."
+  },
+  {
+    "qe": "Newton's first law of motion equates the state of mechanical rest with the state of uniform linear motion. What absolute parameter is identical in both states?",
+    "qh": "न्यूटन के गति का पहला नियम यांत्रिक विराम (mechanical rest) की अवस्था को एकसमान रैखिक गति (uniform linear motion) की अवस्था के समतुल्य मानता है। दोनों अवस्थाओं में कौन सा परम पैरामीटर बिल्कुल समान होता है?",
+    "o": [
+      "The spatial coordinate magnitude relative to the origin.",
+      "The net external force is zero, which strictly implies that acceleration is zero.",
+      "The kinetic energy matrix of the underlying point particles.",
+      "The instantaneous momentum vector relative to the environment."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Under Newton's first law, both a state of rest (velocity = 0) and a state of uniform linear motion (constant velocity) imply a state of zero acceleration ($a = 0$). This directly indicates that the net external force acting on the body is mathematically zero in both situations."
+  },
+  {
+    "qe": "Ancient Indian thinkers developed an elaborate system of ideas on motion. The concept of 'Vega' in the Vaisesika theory comes closest to which modern mechanical concept?",
+    "qh": "प्राचीन भारतीय विचारकों ने गति पर विचारों की एक विस्तृत प्रणाली विकसित की थी। वैशेषिक गति सिद्धांत में 'वेग' (Vega) की अवधारणा आधुनिक यांत्रिकी की किस अवधारणा के सबसे करीब है?",
+    "o": [
+      "The concept of Gravitational constant ($G$).",
+      "The concept of Inertia (resistance to change in state).",
+      "The concept of Viscous Drag coefficient.",
+      "The concept of Non-inertial Reference Frame transformation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In the Vaisesika theory of motion, 'Vega' is defined as the persistent tendency of a body to continue moving in a straight line, which is directly analogous to the modern scientific concept of inertia. It was also noted to be opposed by atmospheric contact, anticipating friction."
+  },
+  {
+    "qe": "A book rests flat on a stationary horizontal table. The downward force of gravity (weight, $W$) is balanced by the upward normal force ($R$) applied by the table. What is the scientifically correct reasoning for this equilibrium according to Newton's laws?",
+    "qh": "एक पुस्तक स्थिर क्षैतिज मेज पर रखी है। गुरुत्वाकर्षण का नीचे की ओर लगने वाला बल (भार, $W$) मेज द्वारा लगाए गए ऊपर की ओर सामान्य बल ($R$) द्वारा संतुलित होता है। न्यूटन के नियमों के अनुसार इस संतुलन का वैज्ञानिक रूप से सही तर्क क्या है?",
+    "o": [
+      "Since $W$ and $R$ form a action-reaction pair under the Third Law, they cancel out.",
+      "Since the book is observed to be at rest, the net external force must be zero according to the First Law, implying that the normal force $R$ is equal and opposite to $W$.",
+      "The forces cancel out because normal reaction is a non-material imaginary field.",
+      "The book remains at rest because internal forces overpower the external gravitational tensor."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The text highlights a common misconception: $W$ and $R$ are NOT action-reaction pairs (they act on the same body). The correct reasoning is that since the book is observed to be in an unaccelerated state (rest), the First Law mandates that the net external force is zero, meaning $R$ must be equal and opposite to $W$."
+  },
+  {
+    "qe": "A car accelerates from rest along a flat, smooth, straight road. What is the actual external force responsible for accelerating the car as a whole?",
+    "qh": "एक कार समतल, चिकनी, सीधी सड़क पर विराम अवस्था से त्वरित होती है। पूरी कार को त्वरित करने के लिए जिम्मेदार वास्तविक बाहरी बल कौन सा है?",
+    "o": [
+      "The internal force exerted by the engine on the chassis.",
+      "The force of friction exerted by the road on the tyres of the car.",
+      "The normal reaction vector pointing vertically upward from the surface.",
+      "The sudden expansion of exhaust gases exiting the tailpipe system."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Internal forces cannot cause a system's center of mass to accelerate. The acceleration of the car as a whole must be due to an external force. The only external force operating parallel to the road interface is the force of static friction exerted by the road surface on the car's tyres."
+  },
+  {
+    "qe": "When a stationary bus suddenly moves forward, a standing passenger gets thrown backward relative to the bus. This common experience occurs because:",
+    "qh": "जब एक स्थिर बस अचानक आगे बढ़ती है, तो खड़ा यात्री बस के सापेक्ष पीछे की ओर गिर जाता है। यह सामान्य अनुभव इसलिए होता है क्योंकि:",
+    "o": [
+      "An active pseudo-force acts on the upper body pulling it backward horizontally.",
+      "The feet move forward with the bus due to friction, while the rest of the body remains where it was due to inertia.",
+      "The body experiences an immediate shift in its fundamental mass center matrix.",
+      "The bus floor cancels out the passenger's gravitational weight vector completely."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Due to friction between the passenger's feet and the bus floor, the feet accelerate forward along with the bus. However, the upper body is deformable and tends to maintain its state of rest due to inertia, causing a relative backward displacement until muscular forces pull it forward."
+  },
+  {
+    "qe": "Newton's second law of motion establishes that the rate of change of momentum of a body is directly proportional to the applied force. In this context, if a fixed force is applied for an identical interval of time on two bodies of radically different masses initially at rest, what parameter will be identical for both at the end of that interval?",
+    "qh": "न्यूटन के गति का दूसरा नियम स्थापित करता है कि किसी पिंड के संवेग परिवर्तन की दर लगाए गए बल के सीधे समानुपाती होती है। इस संदर्भ में, यदि शुरुआत में विराम में स्थित दो अलग-अलग द्रव्यमानों वाले पिंडों पर समान समय के लिए एक निश्चित बल लगाया जाए, तो उस अंतराल के अंत में दोनों के लिए कौन सा पैरामीटर बिल्कुल समान होगा?",
+    "o": [
+      "Both bodies will acquire the exact same final speed.",
+      "Both bodies will acquire the exact same change in momentum vector.",
+      "The lighter body will experience less acceleration than the heavier mass.",
+      "The kinetic energy developed will be identical across both particle domains."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Newton's second law ($\\mathbf{F} = \\frac{\\Delta\\mathbf{p}}{\\Delta t}$) dictates that the change in momentum is the product of force and time duration (Impulse). Since the same force is applied for the same time interval on both masses, both bodies acquire the exact same change in momentum, irrespective of their masses."
+  },
+  {
+    "qe": "A seasoned cricketer draws his hands backward while catching a fast-moving cricket ball. What is the exact scientific reason behind this technique?",
+    "qh": "एक अनुभवी क्रिकेटर तेजी से आती हुई क्रिकेट गेंद को कैच करते समय अपने हाथों को पीछे की ओर खींचता है। इस तकनीक के पीछे का सटीक वैज्ञानिक कारण क्या है?",
+    "o": [
+      "It minimizes the total change in momentum vector of the ball.",
+      "It increases the time duration of the impact, thereby reducing the rate of change of momentum and minimizing the force exerted on the hands.",
+      "It alters the gravitational potential energy of the incoming projectile pulse.",
+      "It polarizes the mechanical waves travelling through the leather substrate."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The force experienced is inversely proportional to the time taken to bring about the change in momentum ($\\mathbf{F} = \\frac{\\Delta\\mathbf{p}}{\\Delta t}$). By drawing the hands backward, the cricketer extends the time interval $\\Delta t$ required to stop the ball, reducing the force of impact to prevent injury."
+  },
+  {
+    "qe": "If a force acting on a point particle is not parallel to its instantaneous velocity vector but makes an arbitrary angle with it, how does it alter the object's motion?",
+    "qh": "यदि किसी बिंदु कण पर कार्य करने वाला बल उसके तात्कालिक वेग सदिश के समानांतर नहीं है, बल्कि उसके साथ एक मनमाना कोण बनाता है, तो यह वस्तु की गति को कैसे बदलता है?",
+    "o": [
+      "It completely destroys the linear properties of the mass velocity matrix.",
+      "It changes only the component of velocity along the direction of the force, leaving the normal component completely unchanged.",
+      "It causes an instantaneous acceleration shift pointing strictly opposite to the net force vector.",
+      "It dialates the spatial dimensions of the particle trajectory field continuously."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Newton's second law is a vector law ($\\mathbf{F} = m\\mathbf{a}$). This implies that the component of force along a specific axis alters only the component of velocity along that corresponding direction; any component of velocity perpendicular (normal) to the force remains completely invariant."
+  },
+  {
+    "qe": "Newton's second law of motion ($\\mathbf{F} = m\\mathbf{a}$) is stated to be a 'local relation'. What is the precise physical meaning of this statement?",
+    "qh": "न्यूटन के गति के दूसरे नियम ($\\mathbf{F} = m\\mathbf{a}$) को एक 'स्थानीय संबंध' (local relation) कहा जाता है। इस कथन का सटीक भौतिक अर्थ क्या है?",
+    "o": [
+      "The force vector depends on the global macroscopic mass allocation layout.",
+      "The acceleration of a particle at a given point in space and instant of time depends strictly on the force acting at that point at that specific instant, carrying no memory of past history.",
+      "The equation is valid only in localized non-inertial reference systems.",
+      "The net force vector must vary as a function of the local gravitational field curvature."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A local relation means that the acceleration 'here and now' is uniquely determined by the net external force operating 'here and now'. It does not depend on the prior trajectory or history of the particle's motion; the moment an external force is removed, its associated acceleration vanishes instantly."
+  },
+  {
+    "qe": "A stone is dropped out of the window of a train that is accelerating forward horizontally. The moment after the stone is released, what is its horizontal acceleration, neglecting air resistance?",
+    "qh": "एक ट्रेन जो क्षैतिज रूप से आगे की ओर त्वरित हो रही है, उसकी खिड़की से एक पत्थर गिराया जाता है। पत्थर छोड़े जाने के ठीक अगले क्षण, वायु प्रतिरोध को नगण्य मानते हुए, उसका क्षैतिज त्वरण क्या होगा?",
+    "o": [
+      "It retains the identical horizontal acceleration value of the train due to kinetic memory.",
+      "It is zero, because there is no horizontal force acting on the stone once it is out of the train.",
+      "It drops to a negative value proportional to the forward speed of the compartment.",
+      "It becomes infinite momentarily before transforming into a parabolic vector."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Force is a local relation and cannot be carried by a body from its history. Once the stone leaves the train, there is no material agency to apply a horizontal force on it (neglecting air resistance). Therefore, its horizontal acceleration drops to zero instantly, and it experiences only the vertical force of gravity ($mg$)."
+  },
+  {
+    "qe": "Impulse is defined under mechanics as the product of force and its short time duration of action. What is the fundamental physical equivalent of impulse?",
+    "qh": "यांत्रिकी के अंतर्गत आवेग (Impulse) को बल और उसकी क्रिया की अल्प समयावधि के गुणनफल के रूप में परिभाषित किया गया है। आवेग का मूलभूत भौतिक समतुल्य क्या है?",
+    "o": [
+      "The net change in the kinetic energy tensor of the particle.",
+      "The net change in the momentum vector of the body.",
+      "The scalar product of mass and instantaneous positional displacement.",
+      "The rate at which total mechanical power is dissipated as thermal stress."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> According to the integrated form of the second law, Impulse = $\\mathbf{F} \\times \\Delta t = \\Delta\\mathbf{p}$. This means that impulse is mathematically and physically identical to the total change in the momentum vector of the body during the impact duration."
+  },
+  {
+    "qe": "Newton’s third law of motion states that to every action, there is always an equal and opposite reaction. What is a critical structural constraint regarding where these 'action' and 'reaction' forces act?",
+    "qh": "न्यूटन के गति के तीसरे नियम के अनुसार प्रत्येक क्रिया की हमेशा एक समान और विपरीत प्रतिक्रिया होती है। ये 'क्रिया' (action) और 'प्रतिक्रिया' (reaction) बल कहाँ कार्य करते हैं, इसके संबंध में एक महत्वपूर्ण संरचनात्मक प्रतिबंध क्या है?",
+    "o": [
+      "They must act on the exact same material point particle sequentially.",
+      "They always act on different bodies, never on the same body simultaneously.",
+      "They act on the environment frame only after a finite time delay $\\Delta t$.",
+      "They balance each other out completely within a single localized isolated mass particle."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Action and reaction forces are mutual simultaneous interactions between a PAIR of bodies. Therefore, they always act on two completely different bodies. Because they act on different systems, they never cancel each other out when analyzing the motion of an individual body."
+  },
+  {
+    "qe": "The law of conservation of momentum states that the total momentum of an isolated system of interacting particles is permanently conserved. For this law to apply strictly, what constraint must be satisfied?",
+    "qh": "संवेग संरक्षण का नियम बताता है कि परस्पर क्रिया करने वाले कणों के एक पृथक निकाय (isolated system) का कुल संवेग स्थायी रूप से संरक्षित रहता है। इस नियम को कड़ाई से लागू करने के लिए किस प्रतिबंध को पूरा किया जाना चाहिए?",
+    "o": [
+      "The collisions between internal particles must be perfectly elastic only.",
+      "The net external force acting on the chosen system must be strictly zero.",
+      "The velocity vectors of all constituent masses must remain parallel to each other.",
+      "The system must operate inside a zero-gravity quantum fields domain."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The conservation of total momentum is rooted in the absence of external agencies. In an isolated system, the net external force is zero ($\\mathbf{F}_{ext} = 0$). Internal mutual forces cancel out in pairs due to the Third Law, leaving the total momentum invariant, whether collisions are elastic or inelastic."
+  },
+  {
+    "qe": "When two macroscopic bodies undergo an inelastic collision in an isolated system, what is the status of their total momentum and total kinetic energy?",
+    "qh": "जब दो स्थूल पिंड एक पृथक निकाय (isolated system) में एक अप्रत्यास्थ (inelastic) टक्कर से गुजरते हैं, तो उनके कुल संवेग और कुल गतिज ऊर्जा की स्थिति क्या होती है?",
+    "o": [
+      "Both total momentum and total kinetic energy are strictly conserved.",
+      "Total momentum is strictly conserved, but total kinetic energy is not conserved.",
+      "Total kinetic energy is conserved, but total momentum undergoes linear decay.",
+      "Neither momentum nor kinetic energy can be conserved due to internal frictional stress."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The law of conservation of total momentum applies to all isolated systems ($\\mathbf{F}_{ext} = 0$) regardless of the collision type. Therefore, total final momentum equals total initial momentum. However, in an inelastic collision, a portion of the initial kinetic energy is dissipated into internal heat or deformation, so total kinetic energy is NOT conserved."
+  },
+  {
+    "qe": "In the context of standard classical mechanics, what does the term 'Equilibrium of a particle' mathematically signify?",
+    "qh": "मानक शास्त्रीय यांत्रिकी के संदर्भ में, 'कण का संतुलन' (Equilibrium of a particle) शब्द गणितीय रूप से क्या दर्शाता है?",
+    "o": [
+      "The particle must be permanently at a state of absolute spatial rest.",
+      "The vector sum of all external forces acting on the particle is strictly zero.",
+      "The scalar product of its mass and acceleration vector is a non-zero constant.",
+      "The internal energy bounds match the environmental potential matrix."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Equilibrium of a particle means that the net external force operating on that particle is zero ($\\sum\\mathbf{F} = 0$). According to the First Law, this implies that the particle is either permanently at rest OR moving with a uniform linear velocity (constant velocity vector)."
+  },
+  {
+    "qe": "All everyday macro-mechanical contact forces, such as friction, normal reaction, tension in a string, and viscous drag, fundamentally originate from which basic force of nature at a microscopic level?",
+    "qh": "सभी रोज़मर्रा के मैक्रो-मेकेनिकल संपर्क बल, जैसे कि घर्षण, सामान्य प्रतिक्रिया, डोरी में तनाव और श्यान खिंचाव (viscous drag), सूक्ष्म स्तर पर प्रकृति के किस मूल बल से उत्पन्न होते हैं?",
+    "o": [
+      "The weak nuclear decay force parameters.",
+      "The gravitational attraction field tensors of the underlying atoms.",
+      "The electrical forces operating between the charged constituents (nuclei and electrons) of different bodies.",
+      "The strong color-charge interactions binding the core quarks together."
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> At a microscopic scale, all materials are composed of charged entities (atomic nuclei and shielding electrons). Therefore, all contact forces—arising from intermolecular collisions, dynamic impacts, or elastic support stresses—can ultimately be traced to the fundamental electrical forces operating between these charged constituents."
+  },
+  {
+    "qe": "A body of mass $m$ rests on a flat horizontal table. A small horizontal force $F$ is applied, but the body remains completely stationary. Why does a small applied force fail to cause acceleration?",
+    "qh": "द्रव्यमान $m$ का एक पिंड एक सपाट क्षैतिज मेज पर रखा है। एक छोटा क्षैतिज बल $F$ लगाया जाता है, लेकिन पिंड पूरी तरह से स्थिर रहता है। छोटा लगाया गया बल त्वरण उत्पन्न करने में क्यों विफल रहता है?",
+    "o": [
+      "Because the applied force is converted entirely into vertical normal reaction.",
+      "Because a self-adjusting static frictional force ($f_s$) comes into play parallel to the interface, matching and canceling the applied force exactly.",
+      "Because the mass of a resting object becomes mathematically infinite until motion begins.",
+      "Because the force constant of the horizontal table plane drops to zero."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Static friction ($f_s$) is a self-adjusting force that does not have a fixed value. It comes into existence the moment an external force is applied. As the applied force $F$ increases, $f_s$ increases proportionally, remaining equal and opposite to $F$, keeping the net horizontal force zero until a maximum limit is crossed."
+  },
+  {
+    "qe": "What does the term 'impending motion' signify in the context of static friction mechanics?",
+    "qh": "स्थैतिक घर्षण यांत्रिकी (static friction mechanics) के संदर्भ में 'आसन्न गति' (impending motion) शब्द क्या दर्शाता है?",
+    "o": [
+      "The motion that occurs when kinetic friction reaches its absolute minimum value.",
+      "The motion that would take place under an applied force if friction were completely absent from the system interface.",
+      "The uniform circular rotation achieved after crossing the normal reaction cap.",
+      "The structural relaxation of long-chain polymer strings under load."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Static friction opposes what is termed 'impending motion'—the motion that is on the verge of taking place under the action of an applied external force, but does not actually happen because static friction balances the force completely."
+  },
+  {
+    "qe": "Experimentally, how does the limiting (maximum) value of static friction $(f_s)_{\\max}$ relate to the area of contact between the two solid surfaces?",
+    "qh": "प्रयोगात्मक रूप से, स्थैतिक घर्षण का सीमांत (अधिकतम) मान $(f_s_{\\max})$ दो ठोस सतहों के बीच संपर्क के क्षेत्रफल से किस प्रकार संबंधित होता है?",
+    "o": [
+      "It is directly proportional to the total microscopic area of contact.",
+      "It is completely independent of the macroscopic area of contact.",
+      "It decreases linearly as the overlapping surface geometry increases.",
+      "It varies as a function of the square of the contact profile dimensions."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A fundamental empirical law of friction states that the limiting value of static friction, written as $(f_s)_{\\max} = \\mu_s N$, is completely independent of the macroscopic area of contact between the surfaces. It depends solely on the normal reaction force $N$ and the nature of the materials."
+  },
+  {
+    "qe": "When an external applied force exceeds the maximum limiting static friction $(f_s)_{\\max}$, the body begins to slide. What happens to the frictional force at the interface the moment relative motion starts?",
+    "qh": "जब एक बाहरी लगाया गया बल अधिकतम सीमांत स्थैतिक घर्षण $(f_s_{\\max})$ से अधिक हो जाता है, तो पिंड फिसलने लगता है। सापेक्ष गति (relative motion) शुरू होते ही इंटरफ़ेस पर घर्षण बल का क्या होता है?",
+    "o": [
+      "It increases exponentially to match the sliding velocity vector.",
+      "It decreases from the maximum static value to a lower nearly constant value called kinetic friction ($f_k$).",
+      "It drops instantly to absolute zero due to dynamic thermal melting.",
+      "It transforms into an orthogonal force vector parallel to the normal reaction."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Once relative motion begins between the two surfaces, the interface friction shifts from static to kinetic friction ($f_k$). Experimental observations show that kinetic friction is slightly less than the maximum limiting value of static friction ($\\mu_k < \\mu_s$), causing a slight drop in resistance."
+  },
+  {
+    "qe": "Friction is defined as a component of the contact force parallel to the surfaces. What specific condition does the frictional force oppose?",
+    "qh": "घर्षण को सतहों के समानांतर संपर्क बल के एक घटक के रूप में परिभाषित किया गया है। घर्षण बल किस विशिष्ट स्थिति का विरोध करता है?",
+    "o": [
+      "It opposes the absolute motion of the body relative to the coordinate origin.",
+      "It opposes the relative motion or impending relative motion between the two surfaces in contact.",
+      "It opposes the normal reaction force vector pointing vertically.",
+      "It opposes the gravitational mass matrix transformation fields."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Friction does NOT oppose absolute motion; it strictly opposes *relative motion* (or impending relative motion) between the surfaces in contact. This is why friction can actually cause an object to move forward to prevent relative slip, as seen in a box resting inside an accelerating train."
+  },
+  {
+    "qe": "A box lies stationary on the floor of a train compartment that is accelerating forward. What force is directly responsible for accelerating the box along with the train?",
+    "qh": "एक बॉक्स एक ट्रेन के डिब्बे के फर्श पर स्थिर रखा है जो आगे की ओर त्वरित हो रही है। ट्रेन के साथ बॉक्स को त्वरित करने के लिए सीधे तौर पर कौन सा बल जिम्मेदार है?",
+    "o": [
+      "The internal inertia tensor of the box substrate matter.",
+      "The static frictional force ($f_s$) exerted by the train floor on the bottom surface of the box.",
+      "The normal reaction force acting vertically up from the train deck.",
+      "The horizontal kinetic force carried from the train's station history."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> If the floor were perfectly frictionless, the train would slide out from under the box, and the box would hit the back wall due to inertia. The impending relative motion (slipping backward) is opposed by static friction, which acts forward on the box, providing it with the exact same acceleration as the train."
+  },
+  {
+    "qe": "In an idealized mechanical universe, a perfectly rigid ring or sphere rolling without slipping over a horizontal plane would experience no friction. In practice, why does rolling friction always exist?",
+    "qh": "एक आदर्श यांत्रिक ब्रह्मांड में, एक क्षैतिज तल पर बिना फिसले लुढ़कने वाला एक पूरी तरह से कठोर छल्ला या गोला कोई घर्षण महसूस नहीं करेगा। व्यवहार में, रोलिंग घर्षण (rolling friction) हमेशा क्यों मौजूद होता है?",
+    "o": [
+      "Because the kinetic friction coefficient increases linearly with angular velocity.",
+      "Because the surfaces in contact undergo momentary structural deformation, resulting in a finite area of contact rather than a single mathematical point, creating a resisting contact component.",
+      "Because gravity pulls the rolling edge into a non-Euclidean path matrix.",
+      "Because the rolling body undergoes localized atomic decay at its rotation boundaries."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Rolling friction has a complex origin linked to material deformability. In reality, both the rolling body and the horizontal plane undergo slight, temporary deformations at the interface. This transforms the mathematical single point of contact into a finite area, generating a net contact force component that opposes the rolling motion."
+  },
+  {
+    "qe": "For a fixed weight and identical material interface, how does the magnitude of rolling friction compare to static or sliding friction?",
+    "qh": "एक निश्चित भार और समान सामग्री इंटरफ़ेस के लिए, रोलिंग घर्षण (rolling friction) के परिमाण की तुलना स्थैतिक या सर्पी (static or sliding) घर्षण से किस प्रकार की जाती है?",
+    "o": [
+      "Rolling friction is significantly larger than sliding friction by several orders of magnitude.",
+      "Rolling friction is much smaller, even by 2 or 3 orders of magnitude, than static or sliding friction.",
+      "They are exactly identical because both belong to the contact force family.",
+      "Rolling friction vanishes to absolute zero in all macroscopic environments."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Rolling friction is dramatically smaller than static or sliding friction—often by two to three orders of magnitude. This tremendous reduction in resistive force is why the invention of the wheel represents a critical milestone in human technological history."
+  },
+  {
+    "qe": "Lubricants and ball bearings are extensively utilized in industrial machinery. What is their core mechanical purpose from a wave/force perspective?",
+    "qh": "औद्योगिक मशीनरी में स्नेहक (lubricants) और बॉल बेयरिंग का बड़े पैमाने पर उपयोग किया जाता है। तरंग/बल के दृष्टिकोण से उनका मुख्य यांत्रिक उद्देश्य क्या है?",
+    "o": [
+      "To increase the structural normal reaction force coefficient.",
+      "To replace high-resistance kinetic/sliding friction with much smaller rolling friction, reducing power dissipation as heat.",
+      "To convert external forces into internal particle alignment arrays.",
+      "To completely eliminate the gravitational weight tensor of the moving parts."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Friction dissipates useful power into non-conservative thermal stress (heat). Ball bearings are placed between moving parts to convert sliding friction into rolling friction, which is orders of magnitude smaller, minimizing power loss and mechanical wear."
+  },
+  {
+    "qe": "When a car takes a sharp circular turn on a flat, level horizontal road, what specific real force serves as the mandatory centripetal force required to maintain its circular path?",
+    "qh": "जब एक कार एक सपाट, समतल क्षैतिज सड़क पर एक तीखा वृत्ताकार मोड़ लेती है, तो उसके वृत्ताकार पथ को बनाए रखने के लिए आवश्यक अनिवार्य अभिकेंद्र बल के रूप में कौन सा विशिष्ट वास्तविक बल कार्य करता है?",
+    "o": [
+      "The downward gravitational weight vector ($mg$).",
+      "The force of static friction between the road surface and the car tyres.",
+      "The vertical normal reaction force vector ($N$).",
+      "An active outward centrifugal force generated by the engine transmission."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Centripetal force is simply a structural name for any center-pointing force in circular motion. For a car turning on a level road, there is no banking component. The inward radial acceleration can only be provided by the static friction operating parallel to the road interface between the tyres and the asphalt."
+  },
+  {
+    "qe": "For a car executing a turn on a flat level horizontal road with a coefficient of static friction $\\mu_s$, the derived maximum safe speed $v_{\\max}$ is given by $v_{\\max} = \\sqrt{\\mu_s R g}$. What deep physical insight does this relation reveal regarding the mass of the car?",
+    "qh": "समतल क्षैतिज सड़क पर स्थैतिक घर्षण गुणांक $\\mu_s$ के साथ मोड़ लेने वाली कार के लिए, व्युत्पन्न अधिकतम सुरक्षित गति $v_{\\max}$, $v_{\\max} = \\sqrt{\\mu_s R g}$ द्वारा दी जाती है। यह संबंध कार के द्रव्यमान (mass) के संबंध में क्या गहरी भौतिक अंतर्दृष्टि प्रकट करता है?",
+    "o": [
+      "Heavy luxury cars can turn at much higher velocities safely than lightweight cars.",
+      "The maximum safe speed is completely independent of the mass of the vehicle.",
+      "The safe speed decreases linearly as a function of the total payload weight.",
+      "The vehicle mass shifts the critical path angle to a negative coordinate value."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The expression $v_{\\max} = \\sqrt{\\mu_s R g}$ contains no mass variable '$m$'. This proves that the maximum safe boundary speed for skidding on a level curved road is a geometric and material attribute, completely identical for a light car or a heavy loaded truck."
+  },
+  {
+    "qe": "When solving complex engineering systems in mechanics, a standard structured approach utilizes a 'free-body diagram'. What is the strict rule regarding what forces must be shubh shamil (included) in a free-body diagram?",
+    "qh": "यांत्रिकी में जटिल इंजीनियरिंग प्रणालियों को हल करते समय, एक मानक संरचित दृष्टिकोण 'फ्री-बॉडी आरेख' (free-body diagram) का उपयोग करता है। फ्री-बॉडी आरेख में कौन से बल शामिल किए जाने चाहिए, इसके संबंध में सख्त नियम क्या है?",
+    "o": [
+      "It must include all internal molecular forces holding the body particles together.",
+      "It must show the chosen system isolated, displaying all external forces exerted ON the system by the remaining environment, while excluding forces exerted BY the system on the environment.",
+      "It must show only the gravitational weight vector, completely ignoring contact points.",
+      "It must be constructed exclusively when the net resultant acceleration vector is zero."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A free-body diagram isolates a specific chosen part of an assembly (the system). It must map every single external force exerted ON that system by other components or fields. Crucially, it must completely omit any forces that this system exerts back on its environment to avoid mathematical doubling errors."
+  },
+  {
+    "qe": "A basic mechanical maxim states: 'Force is not always in the direction of motion.' Under what geometric configuration does the net force vector point perfectly perpendicular (normal) to the instantaneous velocity vector?",
+    "qh": "यांत्रिकी का एक मूल सिद्धांत बताता है: 'बल हमेशा गति की दिशा में नहीं होता है।' किस ज्यामितीय विन्यास के तहत नेट बल सदिश तात्कालिक वेग सदिश के बिल्कुल लंबवत (perpendicular) इंगित करता है?",
+    "o": [
+      "When an object undergoes uniform linear acceleration along a straight horizontal path.",
+      "When an object executes uniform circular motion at a constant speed.",
+      "When a moving car slows down uniformly after brakes are applied.",
+      "When a particle is momentarily at a state of absolute structural rest."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Force is always parallel to the acceleration vector ($\\mathbf{F} = m\\mathbf{a}$), not necessarily the velocity vector. In uniform circular motion, the speed is constant, so there is no tangential force component; the entire centripetal force points radially inward toward the center, which is strictly normal ($90^\\circ$) to the tangential velocity vector."
+  },
+  {
+    "qe": "When a ball thrown vertically upward reaches its maximum absolute height, its instantaneous velocity vector is zero ($v = 0$). What are the values of force and acceleration acting on the ball at that precise peak instant?",
+    "qh": "जब सीधे ऊपर की ओर फेंकी गई गेंद अपनी अधिकतम पूर्ण ऊंचाई पर पहुंचती है, तो उसका तात्कालिक वेग सदिश शून्य ($v = 0$) होता है। उस सटीक शीर्ष क्षण में गेंद पर कार्य करने वाले बल और त्वरण के मान क्या होते हैं?",
+    "o": [
+      "Both force and acceleration drop to absolute zero momentarily.",
+      "The force is zero, but the acceleration continues to be equal to $g$.",
+      "The net force continues to be its material weight $mg$, and its acceleration is not zero but equal to $g$ downward.",
+      "The acceleration inverts its sign to a positive value tending to infinity."
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> Having zero velocity does not imply zero force or acceleration. At the apex, the ball stops moving for an instant ($v=0$). However, the earth continues to exert a material gravitational force equal to its weight ($mg$). Therefore, the downward acceleration stays constant at $g$, which causes the velocity to change and the ball to descend."
+  },
+  {
+    "qe": "In the fundamental equation of motion $\\mathbf{F} = m\\mathbf{a}$, what does the term '$m\\mathbf{a}$' physically signify, and how should it be treated in a free-body layout?",
+    "qh": "गति के मूल समीकरण $\\mathbf{F} = m\\mathbf{a}$ में, '$m\\mathbf{a}$' पद भौतिक रूप से क्या दर्शाता है, और इसे फ्री-बॉडी लेआउट में कैसे माना जाना चाहिए?",
+    "o": [
+      "It represents an additional active inertial force external to the particle matter.",
+      "It is simply the inertial effect of the net external force $\\mathbf{F}$ on mass $m$, and must never be treated as an independent force in a free-body diagram.",
+      "It is a pseudo-vector field force tracking the choice of perpendicular coordinate axes.",
+      "It balances out the weight vector to maintain complete structural equilibrium."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> In $\\mathbf{F} = m\\mathbf{a}$, $\\mathbf{F}$ is the net sum of all real external material forces acting on the body. The term $m\\mathbf{a}$ is the kinematic *effect* of that net force on the mass. It is a common error to treat $m\\mathbf{a}$ as an independent material force acting on the body; it should never appear as a force arrow in an FBD."
+  },
+  {
+    "qe": "The familiar mechanical expression $mg = R$ is often written for a block resting on a level table. Under what strict kinematic constraint is this linear algebraic equality true?",
+    "qh": "मेज पर रखे ब्लॉक के लिए अक्सर परिचित यांत्रिक अभिव्यक्ति $mg = R$ लिखी जाती है। यह रैखिक बीजगणितीय तुल्यता किस कड़े गतिज प्रतिबंध के तहत सत्य होती है?",
+    "o": [
+      "It is a saarvabhaumik identity guaranteed by Newton's third law of motion.",
+      "It is true only if the body is in complete equilibrium along the vertical axis, with zero vertical acceleration.",
+      "It applies exclusively when the contact plane undergoes continuous kinetic sliding friction.",
+      "It is valid only when the material mass executes uniform motion inside an accelerated elevator."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The relation $mg = R$ is NOT a fundamental identities or a consequence of the third law. It is a local equilibrium condition derived from $\\sum F_y = 0$. If the system accelerates vertically (such as inside an accelerated lift or elevator), the normal reaction $R$ will change dynamically, rendering $mg = R$ false."
+  },
+  {
+    "qe": "When an external shear stress is applied to a fluid system at rest, how does its mechanical response differ fundamentally from that of a solid, and what is the scale of this property?",
+    "qh": "जब विराम अवस्था में किसी तरल निकाय (fluid system) पर एक बाहरी अपरूपण प्रतिबल (shear stress) लगाया जाता है, तो इसकी यांत्रिक प्रतिक्रिया एक ठोस से किस प्रकार भिन्न होती है, और इस गुण का पैमाना क्या है?",
+    "o": [
+      "Fluids store the shear stress as elastic potential energy symmetrically.",
+      "Fluids offer zero resistance to shear strain over time, and their shearing stress is about a million times smaller than that of solids.",
+      "Fluids undergo instantaneous volumetric expansion matching the stress vector.",
+      "Fluids execute transverse wave resonance to maintain their original shape boundary."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The text explicitly states that fluids offer very little resistance to shear stress. Their shape changes continuously with time by the application of a very small shear stress, and their shearing stress is about a million times smaller than that of solids."
+  },
+  {
+    "qe": "When an object is completely submerged in a fluid at rest, the fluid exerts a macroscopic force on the object's surface. What strict condition governs the orientation of this force vector, and why?",
+    "qh": "जब कोई वस्तु विराम अवस्था में किसी तरल में पूरी तरह से डूब जाती है, तो तरल वस्तु की सतह पर एक मैक्रोस्कोपिक बल लगाता है। इस बल सदिश (force vector) के अभिविन्यास को कौन सा सख्त प्रतिबंध संचालित करता है, और क्यों?",
+    "o": [
+      "The force is always parallel to the surface plane due to Newton's second law limits.",
+      "The force is always normal (perpendicular) to the object's surface because a fluid at rest cannot sustain any parallel force component without flowing.",
+      "The force acts at a fluctuating acute angle of $45^\\circ$ to clear the boundary layer friction.",
+      "The force vector points exclusively downward towards the earth's core matrix."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> If there were a component of force parallel to the surface, by Newton's third law, the fluid would experience an equal and opposite parallel force causing it to flow. Since the fluid is explicitly defined to be at rest, no parallel component can exist, meaning the force must be strictly normal to the surface."
+  },
+  {
+    "qe": "Pressure is defined under fluid mechanics in a limiting sense as the normal force component per unit area. What is the true tensor classification of pressure, and what false impression does its basic definition often generate?",
+    "qh": "तरल यांत्रिकी के अंतर्गत दाब (pressure) को प्रति इकाई क्षेत्रफल पर लगने वाले सामान्य बल घटक के रूप में एक सीमित अर्थ में परिभाषित किया गया है। दाब का वास्तविक वर्गीकरण क्या है, और इसकी मूल परिभाषा अक्सर क्या गलत धारणा पैदा करती है?",
+    "o": [
+      "It is a vector quantity because force is in the numerator.",
+      "It is a scalar quantity, although the phrase 'force per unit area' creates a false impression that it is a vector; it represents normal force component magnitude, not a vector direction.",
+      "It is a non-differentiable complex vector mapping the spatial coordinate kinks.",
+      "It is a localized localized tension parameter pointing strictly downward."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Pressure is a scalar quantity. The definition 'force per unit area' often creates a false impression that pressure is a vector. The force in the numerator is strictly the magnitude of the component of force normal to the area under consideration, meaning no vector direction can be assigned to pressure."
+  },
+  {
+    "qe": "When evaluating the absolute mass density ($\\rho$) of different phases of matter under varying external pressures, what counter-intuitive behavioral contrast is observed between liquids and gases?",
+    "qh": "विभिन्न बाहरी दाबों के तहत पदार्थ के विभिन्न चरणों के पूर्ण द्रव्यमान घनत्व (\\rho) का मूल्यांकन करते समय, द्रवों और गैसों के बीच कौन सा विरोधाभासी व्यवहार देखा जाता है?",
+    "o": [
+      "Liquids vary their densities exponentially with pressure changes while gases stay constant.",
+      "A liquid is largely incompressible, rendering its density nearly constant at all pressures, whereas gases exhibit a large variation in densities with pressure.",
+      "Both maintain identical, constant density values to satisfy mass conservation rules.",
+      "The density of a liquid drops to zero at high pressure due to the elastic energy breakdown."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Liquids are largely incompressible, meaning external pressure changes cause negligible changes in their volume, rendering their density nearly constant. Conversely, gases are highly compressible and show massive variations in density as pressure changes."
+  },
+  {
+    "qe": "Blaise Pascal formulated a fundamental law regarding the distribution of hydrostatic pressure inside a fluid at rest. According to Pascal's law, pressure is identical at all points if they are:",
+    "qh": "ब्लेज पास्कल ने विराम अवस्था में एक तरल के भीतर द्रवस्थैतिक दाब (hydrostatic pressure) के वितरण के संबंध में एक मौलिक नियम प्रतिपादित किया था। पास्कल के नियम के अनुसार, दाब सभी बिंदुओं पर समान होता है यदि वे:",
+    "o": [
+      "Aligned parallel along the vertical axis of gravity propagation.",
+      "Located at the exact same horizontal level (same height/depth) in a fluid at rest.",
+      "Confined to a container with perfectly symmetrical boundary walls.",
+      "Moving at a constant critical velocity through a non-viscous pipe configuration."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Pascal's law for a fluid at rest states that the hydrostatic pressure is identical at all points that lie at the same horizontal height or depth level, independent of the orientation or shape of the boundary container."
+  },
+  {
+    "qe": "Consider a fluid element in the form of a horizontal bar of uniform cross-section contained inside a liquid at rest. If the pressures at the two ends of this horizontal bar were not equal, what would occur?",
+    "qh": "विराम अवस्था में किसी द्रव के भीतर समान अनुप्रस्थ-काट (uniform cross-section) की एक क्षैतिज पट्टी के रूप में एक तरल तत्व पर विचार करें। यदि इस क्षैतिज पट्टी के दोनों सिरों पर दाब समान न हो, तो क्या होगा?",
+    "o": [
+      "The bar would undergo spontaneous mechanical polarization without spatial translation.",
+      "The fluid would immediately flow due to a net horizontal force, violating the condition of being a fluid at rest.",
+      "The absolute mass density would drop to zero at the low-pressure node.",
+      "The spring constant of the boundary layers would absorb the pressure difference symmetrically."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Since the fluid is at rest, every horizontal element must be in static equilibrium. If the horizontal forces (pressures) at the two ends were unbalanced, a net force would act on the fluid element, causing it to flow parallel to the plane. Thus, in the absence of flow, pressure must be identical everywhere in a horizontal plane."
+  },
+  {
+    "qe": "The mathematical expression for hydrostatic pressure difference between two points separated by a vertical distance $h$ is given as $P_2 - P_1 = \\rho gh$. What specific underlying condition must be strictly satisfied for this linear relation to hold true?",
+    "qh": "लंबवत दूरी $h$ द्वारा अलग किए गए दो बिंदुओं के बीच द्रवस्थैतिक दाब अंतर का गणितीय व्यंजक $P_2 - P_1 = \\rho gh$ दिया गया है। इस रैखिक संबंध को कड़ाई से सत्य होने के लिए किस विशिष्ट अंतर्निहित शर्त को पूरा किया जाना चाहिए?",
+    "o": [
+      "The fluid must be highly compressible with variable spatial velocities.",
+      "The fluid must be completely incompressible so that its mass density ($\\rho$) stays uniform and constant with height.",
+      "The total cross-sectional area of the liquid column must be infinitely large.",
+      "The container walls must be oriented at a fixed acute angle of $45^\\circ$ relative to gravity."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The expression $P_2 - P_1 = \\rho gh$ assumes that the mass density $\\rho$ of the fluid column is uniform and constant throughout the vertical distance. This holds true for liquids, which are largely incompressible, but fails for columns of compressible gases where density varies with height."
+  },
+  {
+    "qe": "The absolute pressure expression at a depth $h$ below the open surface of a liquid is $P = P_a + \\rho gh$. This equation demonstrates that the gauge pressure ($P - P_a$) depends strictly on:",
+    "qh": "किसी द्रव की खुली सतह से नीचे $h$ गहराई पर पूर्ण दाब का व्यंजक $P = P_a + \\rho gh$ है। यह समीकरण दर्शाता है कि गेज दाब ($P - P_a$) कड़ाई से किस पर निर्भर करता है?",
+    "o": [
+      "The total cross-sectional base area of the container vessel.",
+      "The geometric shape and orientation profile of the bounding walls.",
+      "The vertical height of the fluid column, fluid density, and acceleration due to gravity.",
+      "The total mass of the liquid contained inside the reservoir matrix."
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> The area of the cylinder or the shape of the container does not appear in the expression for gauge or absolute pressure. The hydrostatic pressure difference depends strictly on the vertical distance $h$, fluid mass density $\\rho$, and the local acceleration due to gravity $g$."
+  },
+  {
+    "qe": "The 'Hydrostatic Paradox' describes a counter-intuitive observation where three vessels of radically different shapes connected at the bottom hold different amounts of water but maintain an identical water level height. This occurs because:",
+    "qh": "'द्रवस्थैतिक विरोधाभास' (Hydrostatic Paradox) एक विरोधाभासी अवलोकन का वर्णन करता है जहाँ नीचे जुड़े हुए बिल्कुल अलग आकारों के तीन बर्तन पानी की अलग-अलग मात्रा रखते हैं लेकिन एक समान पानी के स्तर की ऊँचाई बनाए रखते हैं। ऐसा इसलिए होता है क्योंकि:",
+    "o": [
+      "The surface tension forces pull the liquid columns upward symmetrically.",
+      "The liquid pressure at the bottom depends strictly on the height of the fluid column and not on the shape or cross-sectional area of the vessel.",
+      "The atmospheric pressure vanishes inside asymmetrical boundary walls.",
+      "The mass density of water changes as a function of the local container volume."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Liquid pressure at the baseline is a function of depth ($h$) and density alone. Since all three interconnected vessels share a common horizontal pipe at the bottom, water flows until the pressure beneath each column is identical, which requires the fluid columns to reach the exact same vertical height, regardless of vessel shape."
+  },
+  {
+    "qe": "Evangelista Torricelli devised the first mercury barometer to measure atmospheric pressure ($P_a$). In his configuration, the space inside the inverted glass tube located above the column of mercury contains:",
+    "qh": "इवेंजेलिस्टा टॉरीसेली ने वायुमंडलीय दाब ($P_a$) को मापने के लिए पहले पारा बैरोमीटर का आविष्कार किया था। उनके विन्यास में, पारे के स्तंभ के ऊपर स्थित उल्टी कांच की नली के भीतर के स्थान में क्या होता है?",
+    "o": [
+      "Compressed atmospheric air at a standard pressure of 1 atm.",
+      "Only mercury vapour whose pressure is so small that it may be safely neglected, creating a near vacuum at the top.",
+      "Pure liquid nitrogen gas acting as a thermal stabilizer matrix.",
+      "A high-density oil layer preventing structural vacuum leaks."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The closed space above the mercury column in Torricelli's barometer contains only mercury vapour. At room temperature, its vapour pressure is infinitesimally small and can be completely neglected, rendering the pressure at the top point $A \\approx 0$ (Torricellian vacuum)."
+  },
+  {
+    "qe": "Another form of Pascal's law states that external pressure applied on any part of an enclosed fluid is transmitted undiminished and equally in all directions. Which daily life engineering device utilizes this principle as its baseline 'mechanical advantage'?",
+    "qh": "पास्कल के नियम का दूसरा रूप बताता है कि एक बंद तरल (enclosed fluid) के किसी भी हिस्से पर लगाया गया बाहरी दाब पूरे तरल और बर्तन की दीवारों पर बिना कम हुए और समान रूप से संचारित होता है। कौन सा दैनिक जीवन इंजीनियरिंग उपकरण इस सिद्धांत का अपने मुख्य 'यांत्रिक लाभ' (mechanical advantage) के रूप में उपयोग करता है?",
+    "o": [
+      "A mercury barometer tube system.",
+      "A hydraulic lift and hydraulic brakes system.",
+      "An open tube fluid manometer configuration.",
+      "A single-slit aerodynamic aerofoil structure."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Devices such as hydraulic lifts and hydraulic brakes utilize Pascal's law of pressure transmission. By exerting a small force $F_1$ on a small area $A_1$, the generated pressure $P$ is transmitted undiminished to a larger area $A_2$, creating a massive upward force $F_2 = P \\times A_2$."
+  },
+  {
+    "qe": "In fluid dynamics, the flow of a fluid is scientifically defined as 'steady' or 'streamline' if, at any given point in space:",
+    "qh": "तरल गतिकी (fluid dynamics) में, किसी तरल के प्रवाह को वैज्ञानिक रूप से 'स्थिर' (steady) या 'धारारेखीय' (streamline) परिभाषित किया जाता है यदि, समष्टि में किसी भी दिए गए बिंदु पर:",
+    "o": [
+      "The velocities of all fluid particles across the entire pipe are completely identical.",
+      "The velocity of each passing fluid particle at that specific point remains constant in time.",
+      "The fluid particles stop accelerating horizontally along the boundary limits.",
+      "The total kinetic energy drops to zero to maintain a stationary flow map."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Steady flow means that at any fixed point in space, the velocity of every fluid particle passing that point remains constant over time. It does not mean velocities at different points in space are identical; a single particle's velocity can change as it moves from one coordinate to another."
+  },
+  {
+    "qe": "A streamline is defined as a curve whose tangent at any point is in the direction of fluid velocity at that point. Why is it physically impossible for two streamlines to cross each other in a steady flow?",
+    "qh": "एक धारारेखा (streamline) को एक ऐसे वक्र के रूप में परिभाषित किया जाता है जिसकी किसी भी बिंदु पर स्पर्श रेखा (tangent) उस बिंदु पर तरल के वेग की दिशा में होती है। एक स्थिर प्रवाह में दो धारारेखाओं का एक-दूसरे को काटना भौतिक रूप से क्यों असंभव है?",
+    "o": [
+      "Because the fluid mass would turn negative at the intersection coordinate.",
+      "Because if they crossed, an oncoming fluid particle could move in two different directions at the intersection point, destroying the condition of steady flow.",
+      "Because the coefficient of viscosity would become infinite at the sharp kink point.",
+      "Because the local hydrostatic pressure would undergo spontaneous volumetric collapse."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> If two streamlines intersected, it would mean that at the point of intersection, a fluid particle would have two alternative directions of velocity simultaneously. This would mean the velocity at that fixed point is not unique or constant in time, violating the fundamental definition of steady flow."
+  },
+  {
+    "qe": "The equation of continuity ($Av = \\text{constant}$) for fluid flow through a pipe is a direct mathematical statement of which conservation law?",
+    "qh": "किसी नली से तरल प्रवाह के लिए सांतत्य समीकरण ($Av = \\text{constant}$) किस संरक्षण नियम का सीधा गणितीय कथन है?",
+    "o": [
+      "Law of conservation of linear momentum.",
+      "Statement of conservation of mass in the flow of incompressible fluids.",
+      "Law of conservation of total mechanical energy.",
+      "Statement of conservation of angular vector orientation."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The equation of continuity ($A_1v_1 = A_2v_2$) is derived from the principle that for a steady flow of an incompressible fluid, the mass of liquid flowing into a pipe section in time $\\Delta t$ must equal the mass flowing out in that same interval. It is a statement of conservation of mass."
+  },
+  {
+    "qe": "Based on the equation of continuity, what occurs to the velocity of fluid particles at the narrower portions of a pipe where the streamlines are closely spaced?",
+    "qh": "सांतत्य समीकरण के आधार पर, किसी नली के संकीर्ण भागों (narrower portions) में जहाँ धारारेखाएँ पास-पास होती हैं, तरल कणों के वेग का क्या होता है?",
+    "o": [
+      "The velocity drops to zero due to boundary layer friction restrictions.",
+      "The velocity increases inversely relative to the cross-sectional area contraction.",
+      "The velocity stays completely invariant while the fluid density drops.",
+      "The velocity vector undergoes an abrupt directional phase shift of $180^\\circ$."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Since $Av = \\text{constant}$, the cross-sectional area $A$ and fluid velocity $v$ are inversely proportional. At narrower portions where the pipe constricts ($A$ decreases) and streamlines get crowded, the fluid velocity must increase proportionally."
+  },
+  {
+    "qe": "The cross-section of an airplane wing is shaped like an aerofoil. When moving horizontally against the wind, how does this geometric shape generate an upward dynamic lift to balance the aircraft's weight?",
+    "qh": "हवाई जहाज के पंख का अनुप्रस्थ-काट एक एयरोफॉइल (aerofoil) जैसा होता है। जब यह हवा के विरुद्ध क्षैतिज रूप से गति करता है, तो यह ज्यामितीय आकार हवाई जहाज के वजन को संतुलित करने के लिए ऊपर की ओर गतिशील लिफ्ट (dynamic lift) कैसे उत्पन्न करता है?",
+    "o": [
+      "The wing edges compress the air matrix to create magnetic buoyancy.",
+      "The shape causes streamlines to crowd together more above the wing than below it, making flow speed higher on top and reducing pressure there relative to the bottom face.",
+      "The wing surface blocks the gravitational field photons locally.",
+      "The aerofoil geometry creates a uniform vacuum bubble beneath the chassis plane."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The aerofoil shape forces air streamlines to crowd together on the upper curved surface. According to the equation of continuity and Bernoulli's principle, the higher flow speed on top creates a low-pressure region relative to the bottom face, generating a net upward force (dynamic lift)."
+  },
+  {
+    "qe": "When a fluid is enclosed between two plates, the layer in contact with the fixed bottom plate is stationary, while the velocities of upper layers increase uniformly toward the top plate. This orderly type of fluid flow is known as:",
+    "qh": "जब कोई तरल दो पट्टियों के बीच बंद होता है, तो स्थिर निचली पट्टी के संपर्क में रहने वाली परत स्थिर होती है, जबकि ऊपरी परतों के वेग ऊपर की पट्टी की ओर समान रूप से बढ़ते हैं। इस व्यवस्थित प्रकार के तरल प्रवाह को क्या कहा जाता है?",
+    "o": [
+      "Turbulent eddy flow (विक्षुब्ध प्रवाह)",
+      "Laminar flow (पटलीय या धारारेखीय प्रवाह)",
+      "Rotational whirlpool rapid (घूर्णी भंवर प्रवाह)",
+      "Viscous singularity field (श्यान विलक्षणता प्रवाह)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> When fluid layers slide over one another smoothly like pages of a book, with a uniform velocity gradient from zero at the fixed wall to a maximum at the moving boundary, the flow is defined as laminar."
+  },
+  {
+    "qe": "Unlike a solid where shear stress depends directly on the shear strain, the shear stress in a flowing fluid is experimentally found to depend on the:",
+    "qh": "एक ठोस के विपरीत जहाँ अपरूपण प्रतिबल (shear stress) सीधे अपरूपण विकृति (shear strain) पर निर्भर करता है, एक बहते हुए तरल में अपरूपण प्रतिबल प्रयोगात्मक रूप से किस पर निर्भर पाया जाता है?",
+    "o": [
+      "Absolute volume parameter of the fluid vessel core.",
+      "Time rate of shearing strain or 'strain rate' ($\\frac{v}{l}$).",
+      "Total potential energy per unit volume grid constants.",
+      "Square of the contact surface area layout dimensions."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Fluids cannot sustain static shear strain. When a horizontal force is applied, the strain grows continuously with time. Thus, fluid shear stress depends on the velocity gradient or time rate of shearing strain (strain rate $\\frac{v}{l}$), and the ratio defines the coefficient of viscosity $\\eta$."
+  },
+  {
+    "qe": "What is the primary SI unit of the coefficient of viscosity ($\\eta$), and what are its dimensions?",
+    "qh": "श्यानता गुणांक (coefficient of viscosity, $\\eta$) का मुख्य एसआई (SI) मात्रक क्या है, और इसकी विमाएँ (dimensions) क्या हैं?",
+    "o": [
+      "Pascal per meter ($\text{Pa/m}$), with dimensions of $[\\text{M L T}^{-2}]$.",
+      "Poiseuille (Pl) or $\\text{Pa s}$, with dimensions of $[\\text{M L}^{-1}\\text{ T}^{-1}]$.",
+      "Newton meter per second, with dimensions matching kinetic energy.",
+      "Dimensionless scalar constant mapping the fluid layer limits."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The SI unit of viscosity is Poiseuille (Pl), equivalent to $\\text{N s m}^{-2}$ or $\\text{Pa s}$. Its dimensional formula is derived as $[\\text{M L}^{-1}\\text{ T}^{-1}]$ from the stress-to-strain-rate ratio."
+  },
+  {
+    "qe": "Sir George G. Stokes enunciated a law defining the viscous retarding drag force ($F$) acting on a spherical body falling through a fluid matrix. According to Stokes' law, this force is directly proportional to:",
+    "qh": "सर जॉर्ज जी. स्टोक्स ने एक श्यान माध्यम से गिरते हुए एक गोलीय पिंड पर कार्य करने वाले श्यान मंदक खिंचाव बल (viscous retarding drag force, $F$) को परिभाषित करने वाला एक नियम प्रतिपादित किया था। स्टोक्स के नियम के अनुसार, यह बल सीधे किसके समानुपाती होता है?",
+    "o": [
+      "The square of the acceleration due to gravity column.",
+      "The viscosity of the fluid, the radius of the sphere, and the velocity of the object ($F = 6\\pi\\eta av$).",
+      "The horizontal surface cross-sectional area of the fluid reservoir.",
+      "The inverse cube of the distance separating the falling layers."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Stokes' law states that a spherical body of radius $a$ moving with velocity $v$ through a fluid of viscosity $\\eta$ experiences an opposing viscous drag force expressed mathematically as $F = 6\\pi\\eta av$."
+  },
+  {
+    "qe": "When a raindrop falls through air, it initially accelerates due to gravity. Eventually, it achieves a constant, non-zero 'terminal velocity' ($v_t$) and stops accelerating. This equilibrium state is reached when:",
+    "qh": "जब बारिश की एक बूंद हवा से होकर गिरती है, तो शुरुआत में गुरुत्वाकर्षण के कारण वह त्वरित होती है। अंततः, वह एक नियत, गैर-शून्य 'अंतिम वेग' (terminal velocity, $v_t$) प्राप्त कर लेती है और उसका त्वरण शून्य हो जाता है। यह संतुलन स्थिति तब प्राप्त होती है जब:",
+    "o": [
+      "The mass density of the raindrop drops exactly to zero.",
+      "The opposing viscous drag force plus the buoyant force becomes exactly equal to the downward force due to gravity.",
+      "The air resistance pushes the drop into a horizontal parabolic flight track.",
+      "The elastic potential energy of the air layers completely undergoes thermal melting."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> As the velocity of the falling raindrop increases, the upward viscous drag force also increases linearly according to Stokes' law. When the sum of this upward viscous force and the buoyant force perfectly matches the downward weight of the drop, the net external force becomes zero, resulting in a constant terminal velocity."
+  },
+  {
+    "qe": "According to the derived expression, the terminal velocity ($v_t$) of a spherical sphere descending through a viscous medium depends on which geometric aspect of the sphere?",
+    "qh": "व्युत्पन्न व्यंजक के अनुसार, एक श्यान माध्यम से नीचे गिरते हुए एक गोलीय पिंड का अंतिम वेग ($v_t$) पिंड के किस ज्यामितीय पहलू पर निर्भर करता है?",
+    "o": [
+      "It depends linearly on the circumference of the boundary circle.",
+      "It depends directly on the square of the radius of the sphere ($v_t \\propto a^2$).",
+      "It is completely independent of the dimensions or size of the falling sphere.",
+      "It varies as an inverse function of the total surface area layout."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> The equation for terminal velocity is $v_t = \\frac{2a^2(\\rho-\\sigma)g}{9\\eta}$. This shows that the terminal velocity is directly proportional to the square of the radius ($a^2$) of the falling sphere and inversely proportional to the viscosity."
+  },
+  {
+    "qe": "Surface tension is a distinctive phenomenon observed in fluids. Why is surface tension concerned exclusively with liquid phases, failing to manifest inside gases?",
+    "qh": "पृष्ठ तनाव (Surface tension) तरल पदार्थों में देखा जाने वाला एक विशिष्ट लक्षण है। पृष्ठ तनाव का संबंध विशेष रूप से केवल द्रव चरणों (liquid phases) से क्यों है, और यह गैसों के भीतर क्यों प्रदर्शित नहीं होता है?",
+    "o": [
+      "Because gas molecules have a negative massRest value.",
+      "Because liquids acquire a free surface when poured in a container due to fixed volume, whereas gases do not possess free surfaces as they fill the entire volume.",
+      "Because the surface tension constant of all gases is strictly an imaginary number.",
+      "Because gas molecules cannot undergo intermolecular attraction forces."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Surface tension is a phenomenon fundamentally linked to the existence of a free surface interface. Because liquids have a definite volume but no fixed shape, they acquire a free boundary surface when poured into a vessel. Gases expand to fill any container completely and thus cannot possess a free surface."
+  },
+  {
+    "qe": "What is the baseline molecular origin of surface energy and surface tension inside a liquid medium?",
+    "qh": "किसी द्रव माध्यम के भीतर कड़ाई से पृष्ठ ऊर्जा (surface energy) और पृष्ठ तनाव का मूल आणविक कारण क्या होता है?",
+    "o": [
+      "The radioactive decay of unstable isotopes at the top surface layers.",
+      "Molecules on the liquid surface have excess potential energy because they are surrounded by fewer attracting liquid molecules compared to molecules in the interior bulk.",
+      "The sudden volumetric expansion of fluid molecules near the solid bounding walls.",
+      "The presence of a uniform electrostatic repulsion matrix across the meniscus plane."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A molecule inside the bulk liquid is attracted uniformly from all sides by surrounding molecules, keeping its average potential energy low (negative). A molecule on the surface is only surrounded by liquid molecules on its lower half. It experiences a net inward pull, giving it excess potential energy compared to the interior. The liquid minimizes this area to achieve low energy."
+  },
+  {
+    "qe": "When stretching a liquid film enclosed in a wire frame with a movable bar, work is done against an internal force. Surface tension ($S$) can be mathematically defined from this configuration as:",
+    "qh": "जब एक चल पट्टी (movable bar) वाले तार के फ्रेम में बंद एक द्रव की फिल्म को फैलाया जाता है, तो एक आंतरिक बल के विरुद्ध कार्य किया जाता है। इस विन्यास से पृष्ठ तनाव ($S$) को गणितीय रूप से कैसे परिभाषित किया जा सकता है?",
+    "o": [
+      "The product of applied force and the total surface area matrix.",
+      "The surface energy per unit area of the liquid interface, which is also equal to the force per unit length ($S = \\frac{F}{2l}$ because a film has two surfaces).",
+      "The ratio of viscous drag to the strain rate parameter across the interface.",
+      "A dimensionless scalar constant mapping the critical speed of the moving bar."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Surface tension $S$ is equal to the extra surface energy per unit area. For a liquid film, there are two separate liquid-air interfaces (two sides). Thus, the change in area is $2dl$. Work done $Fd = S(2dl)$, which gives the force per unit length magnitude as $S = \\frac{F}{2l}$."
+  },
+  {
+    "qe": "How does the coefficient of viscosity ($\\eta$) and the magnitude of surface tension ($S$) of a typical liquid change as its absolute temperature increases?",
+    "qh": "किसी विशिष्ट द्रव के तापमान में वृद्धि होने पर उसके श्यानता गुणांक (\\eta) और पृष्ठ तनाव (\\s) के मान में क्या परिवर्तन होता है?",
+    "o": [
+      "Both increase exponentially as molecules gain more kinetic energy.",
+      "Both the coefficient of viscosity and the surface tension of a liquid fall or decrease with an increase in temperature.",
+      "Viscosity increases while the surface tension falls to absolute zero.",
+      "They remain completely constant because they are intrinsic constants of the material phase."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> As temperature rises, thermal agitation increases, making atoms more mobile, which causes the coefficient of viscosity $\\eta$ to fall. Similarly, increased molecular motion weakens intermolecular attraction forces at the interface, causing the surface tension $S$ to decrease with temperature."
+  },
+  {
+    "qe": "The angle between the tangent to the liquid surface at the point of contact and the solid surface inside the liquid is defined as the angle of contact ($\\theta$). What physical condition nirdharit karta hai (determines) whether a liquid will form droplets or spread over a flat solid plane?",
+    "qh": "संपर्क बिंदु पर द्रव की सतह की स्पर्श रेखा और द्रव के भीतर ठोस की सतह के बीच के कोण को संपर्क कोण (\\theta) के रूप में परिभाषित किया जाता है। कौन सी भौतिक स्थिति यह निर्धारित करती है कि कोई द्रव बूंदें बनाएगा या एक समतल ठोस तल पर फैल जाएगा?",
+    "o": [
+      "The absolute mass density of the solid substrate matrix.",
+      "The value of $\\theta$; an acute angle causes spreading (wetting), while an obtuse angle causes droplet formation (non-wetting).",
+      "The total height of the liquid column open to the atmosphere.",
+      "The critical velocity of fluid particles along the baseline interface plane."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> If $\\theta$ is acute ($< 90^\\circ$), liquid molecules are strongly attracted to solid molecules (wetting agent), and the liquid spreads (e.g., water on glass). If $\\theta$ is obtuse ($> 90^\\circ$), liquid molecules attract each other strongly and solid weakly (non-wetting), causing droplet formation (e.g., water on lotus leaf, or mercury on glass)."
+  },
+  {
+    "qe": "Soaps, detergents, and dyeing substances are added to water during washing or processing. From a surface tension perspective, these wetting agents act by:",
+    "qh": "धुलाई या प्रसंस्करण के दौरान पानी में साबुन, डिटर्जेंट और रंगने वाले पदार्थ मिलाए जाते हैं। पृष्ठ तनाव के दृष्टिकोण से, ये भीगने वाले एजेंट (wetting agents) कैसे कार्य करते हैं?",
+    "o": [
+      "Increasing the surface tension of water to form giant stable bubbles.",
+      "Reducing the angle of contact between the water and the fabric fibers so that the liquid can penetrate well.",
+      "Converting the liquid phase into a high-density viscous gel layer.",
+      "Symmetrically blocking the hydrostatic gauge pressure inside the fabric holes."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> Wetting agents like soaps and detergents function by decreasing the surface tension of water and reducing the angle of contact $\\theta$. A smaller angle of contact allows the liquid to spread easily, wet the fabric fibers completely, and penetrate narrow pores effectively to clean dirt."
+  },
+  {
+    "qe": "One prominent consequence of surface tension is that free liquid drops and soap bubbles are always spherical when gravity is negligible. Why does a fluid mass naturally take a spherical shape?",
+    "qh": "पृष्ठ तनाव का एक प्रमुख परिणाम यह है कि गुरुत्वाकर्षण नगण्य होने पर मुक्त द्रव की बूंदें और साबुन के बुलबुले हमेशा गोल (spherical) होते हैं। एक तरल द्रव्यमान स्वाभाविक रूप से एक गोलाकार आकार क्यों लेता है?",
+    "o": [
+      "Because a sphere experiences the highest atmospheric pressure components.",
+      "Because for a given fixed volume, a sphere has the least surface area, minimizing its surface energy.",
+      "Because the coefficient of viscosity reaches its maximum value in a spherical boundary profile.",
+      "Because the hydrostatic gauge pressure drops to absolute zero inside a sphere."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A liquid-air interface possesses surface energy. To attain stable equilibrium, the liquid minimizes its surface potential energy by minimizing its surface area for a given volume. Geometrically, a sphere has the least surface area for a given volume, making drops and bubbles spherical."
+  },
+  {
+    "qe": "Due to the curved liquid-air interface of a spherical drop or bubble, there is a distinct pressure difference between its bheetar (inside) and bahar (outside). How does the excess pressure inside a soap bubble relate to that of a liquid drop of the same radius $r$?",
+    "qh": "एक गोलाकार बूंद या बुलबुले के घुमावदार द्रव-वायु इंटरफ़ेस के कारण, इसके भीतर (inside) और बाहर (outside) के बीच एक स्पष्ट दाब अंतर होता है। एक ही त्रिज्या $r$ के साबुन के बुलबुले के भीतर का अतिरिक्त दाब (excess pressure) द्रव की बूंद के अतिरिक्त दाब से किस प्रकार संबंधित होता है?",
+    "o": [
+      "They are exactly identical because both share the same curvature radius.",
+      "The excess pressure inside a soap bubble is twice that of a liquid drop ($P_i - P_o = \\frac{4S}{r}$ versus $\\frac{2S}{r}$) because a bubble has two free surfaces.",
+      "The excess pressure inside the bubble is zero due to air trapping inside.",
+      "The pressure difference varies inversely with the absolute mass density of the substrate fluid."
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> A liquid drop has only one single liquid-air interface, so its excess pressure is $P_i - P_o = \\frac{2S}{r}$. A soap bubble is a thin film enclosing air, meaning it possesses two separate free surfaces (inner and outer liquid-air boundaries). Therefore, its energy cost is doubled, making its excess pressure $P_i - P_o = \\frac{4S}{r}$."
+  },
+  {
+    "qe": "What is the escape velocity of Earth? / पृथ्वी का पलायन वेग (Escape Velocity) क्या है?",
+    "qh": "",
+    "o": [
+      "9.8 km/s",
+      "11.2 km/s",
+      "15.0 km/s",
+      "7.0 km/s"
+    ],
+    "a": 1,
+    "e": "It is the minimum velocity needed to leave Earth's gravity. / यह पृथ्वी के गुरुत्वाकर्षण को छोड़ने के लिए आवश्यक न्यूनतम वेग है।"
+  },
+  {
+    "qe": "Why are the states of rest and motion considered relative terms in physics?",
+    "qh": "भौतिकी में 'विराम' (Rest) और 'गति' (Motion) की अवस्थाओं को सापेक्ष (Relative) क्यों माना जाता है?",
+    "o": [
+      "Because the Earth is completely stationary at the center of the universe (क्योंकि पृथ्वी ब्रह्मांड के केंद्र में पूरी तरह स्थिर है)",
+      "Because the state of an object depends entirely on the observer's frame of reference (क्योंकि वस्तु की अवस्था पूरी तरह प्रेक्षक के संदर्भ बिंदु पर निर्भर करती है)",
+      "Because light travels at the same speed in all media (क्योंकि प्रकाश की चाल हर माध्यम में पूर्णतः नियत रहती है)",
+      "Because motion is only possible in a complete vacuum (क्योंकि गति केवल पूर्ण निर्वात में ही संभव है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> कोई भी वस्तु परम (Absolute) विराम या गति में नहीं होती। एक ही वस्तु एक प्रेक्षक के लिए गति में (जैसे बाहर खड़े व्यक्ति के लिए चलती बस) और दूसरे के लिए विराम में (जैसे सहयात्री के लिए) हो सकती है।"
+  },
+  {
+    "qe": "Which statement is always true regarding distance and the magnitude of displacement?",
+    "qh": "दूरी और विस्थापन के परिमाण के संदर्भ में निम्नलिखित में से कौन सा कथन सदैव सत्य होता है?",
+    "o": [
+      "Displacement is always greater than the total distance covered (विस्थापन हमेशा तय की गई कुल दूरी से अधिक होता है)",
+      "Distance is always equal to or greater than the magnitude of displacement (तय की गई दूरी हमेशा विस्थापन के परिमाण के बराबर या उससे अधिक होती है)",
+      "If an object moves, its distance covered can be zero (यदि कोई वस्तु गति करती है, तो उसकी दूरी शून्य हो सकती है)",
+      "Distance is a vector quantity while displacement is a scalar quantity (दूरी एक सदिश राशि है जबकि विस्थापन एक अदिश राशि है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दूरी वास्तविक पथ की लंबाई है, जबकि विस्थापन प्रारंभिक और अंतिम बिंदु के बीच की न्यूनतम दूरी है। इसलिए दूरी हमेशा विस्थापन के परिमाण से बड़ी या उसके बराबर ($\\text{दूरी} \\ge |\\text{विस्थापन}|$) होती है।"
+  },
+  {
+    "qe": "An athlete completes one full round of a circular track and returns to the starting point. What is the ratio of distance to displacement?",
+    "qh": "एक धावक किसी वृत्ताकार पथ का एक पूरा चक्कर लगाकर वापस अपने प्रारंभिक बिंदु पर पहुंचता है। उसकी दूरी और विस्थापन का अनुपात क्या होगा?",
+    "o": [
+      "The ratio is zero (अनुपात शून्य होगा)",
+      "The ratio is infinite because displacement is zero (अनुपात अनंत होगा, क्योंकि विस्थापन शून्य है)",
+      "The ratio is always exactly equal to 1 (अनुपात hamesha इकाई 1 के बराबर होगा)",
+      "The ratio is negative (अनुपात ऋणात्मक होगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> चूंकि धावक वापस उसी बिंदु पर आ गया है, इसलिए विस्थापन शून्य ($0$) होगा। किसी भी परिमित दूरी को शून्य से विभाजित करने पर परिणाम अनंत ($\\frac{\\text{दूरी}}{0} = \\infty$) प्राप्त होता है।"
+  },
+  {
+    "qe": "What is the primary difference between scalar and vector quantities, considering speed and velocity?",
+    "qh": "चाल (Speed) व वेग (Velocity) को ध्यान में रखते हुए, अदिश और सदिश राशियों के बीच मुख्य अंतर क्या है?",
+    "o": [
+      "Speed is a vector because it has direction, and velocity is scalar (चाल सदिश है और वेग अदिश है)",
+      "Speed is a scalar because it has only magnitude, while velocity is a vector because it has both magnitude and direction (चाल एक अदिश राशि है क्योंकि इसमें केवल परिमाण होता है, और वेग एक सदिश राशि है क्योंकि इसमें परिमाण के साथ दिशा भी होती है)",
+      "Both are vector quantities because both are related to motion (दोनों ही सदिश राशियां हैं क्योंकि दोनों गति से संबंधित हैं)",
+      "Both are scalar quantities because they share the same SI unit (दोनों अदिश राशियां हैं क्योंकि इनका मात्रक समान होता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> चाल केवल यह बताती है कि वस्तु कितनी तेज चल रही है (अदिश), जबकि वेग यह भी निर्दिष्ट करता है कि वस्तु किस निश्चित दिशा में गतिशील है (सदिश)।"
+  },
+  {
+    "qe": "In physics, what does 'negative displacement' physically mean?",
+    "qh": "भौतिकी में 'ऋणात्मक विस्थापन' (Negative Displacement) का वास्तविक अर्थ क्या होता है?",
+    "o": [
+      "The object has covered zero distance (वस्तु ने कोई दूरी तय नहीं की है)",
+      "The object has traveled in the opposite direction relative to the chosen reference direction (वस्तु ने तय किए गए संदर्भ बिंदु से विपरीत दिशा में दूरी तय की है)",
+      "The object's speed has exceeded the speed of light (वस्तु की गति प्रकाश की चाल से अधिक हो गई है)",
+      "The object has come to a state of complete rest (वस्तु स्थिर अवस्था में आ गई है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> विस्थापन एक सदिश राशि है। यदि संदर्भ बिंदु (Origin) से दाहिनी दिशा को धनात्मक माना जाए, तो बाईं (विपरीत) दिशा में तय की गई दूरी ऋणात्मक विस्थापन कहलाती है।"
+  },
+  {
+    "qe": "If an object is executing 'Uniform Motion', what can be inferred about its speed?",
+    "qh": "यदि कोई वस्तु 'एकसमान गति' (Uniform Motion) प्रदर्शित कर रही है, तो उसकी चाल (Speed) के संदर्भ में क्या निष्कर्ष निकाला जा सकता है?",
+    "o": [
+      "Its speed is continuously increasing (उसकी चाल लगातार बढ़ती जा रही है)",
+      "Its speed remains completely constant throughout the journey (उसकी चाल पूरी यात्रा के दौरान पूर्णतः नियत रहती है)",
+      "Its speed drops to zero every second (उसकी चाल हर सेकंड शून्य हो जाती है)",
+      "Its speed changes according to the density of the medium (उसकी चाल माध्यम के घनत्व के अनुसार बदलती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> एकसमान गति का अर्थ है कि वस्तु समान समयांतरालों में समान दूरी तय करे। ऐसा केवल तब संभव है जब वस्तु की चाल पूरी यात्रा में पूरी तरह नियत (constant) रहे।"
+  },
+  {
+    "qe": "During non-uniform motion, what happens to the velocity of an object over time?",
+    "qh": "असतत या असमान गति (Non-uniform Motion) के दौरान किसी वस्तु के वेग (Velocity) में क्या परिवर्तन दिखाई देता है?",
+    "o": [
+      "The velocity remains strictly constant (वेग hamesha अपरिवर्तित रहता है)",
+      "The velocity of the object changes continuously with time (वस्तु का वेग समय के साथ लगातार बदलता रहता है)",
+      "The magnitude of velocity is always zero (वेग का परिमाण hamesha शून्य रहता है)",
+      "The velocity can only increase in the positive direction (वेग केवल धनात्मक दिशा में ही बढ़ सकता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> असमान गति में वस्तु समान समयांतरालों में भिन्न-भिन्न दूरियां तय करती है, जिसका अर्थ है कि वस्तु का वेग समय के साथ लगातार घटता या बढ़ता (बदलता) रहता है।"
+  },
+  {
+    "qe": "What is the universal definition of Average Speed?",
+    "qh": "औसत चाल (Average Speed) का मूल सैद्धांतिक नियम क्या है, और इसे कैसे परिभाषित किया जाता है?",
+    "o": [
+      "It is the simple mathematical average of initial and final speed (यह केवल शुरुआती और अंतिम चाल का सामान्य औसत है)",
+      "It is the ratio of total distance traveled to the total time taken (यह वस्तु द्वारा तय की गई कुल दूरी और उसमें लगे कुल समय का अनुपात होता है)",
+      "It is always the product of displacement and time (यह hamesha विस्थापन और समय का गुणनफल होता है)",
+      "It is inversely proportional to the friction coefficient (यह माध्यम के घर्षण गुणांक के व्युत्क्रमानुपाती होती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> औसत चाल का सार्वभौमिक सिद्धांत यह है कि पूरी यात्रा के दौरान तय की गई कुल दूरी को कुल लगे समय से विभाजित किया जाए।"
+  },
+  {
+    "qe": "Under what condition will the magnitude of average speed be equal to average velocity?",
+    "qh": "किस विशेष परिस्थिति में किसी गतिशील वस्तु की औसत चाल और औसत वेग का परिमाण आपस में बिल्कुल बराबर होगा?",
+    "o": [
+      "When the object moves continuously in a circular path (जब वस्तु किसी वृत्ताकार पथ पर लगातार घूम रही हो)",
+      "When the object moves along a straight line without turning back (जब वस्तु एक सीधी सरल रेखा में बिना अपनी दिशा बदले गति करती है)",
+      "When the acceleration is always less than zero (जब वस्तु का त्वरण hamesha ऋणात्मक हो)",
+      "When the object is thrown vertically upwards under gravity (जब वस्तु गुरुत्वाकर्षण के प्रभाव में ऊपर की ओर फेंकी जाए)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब गति बिना मुड़े एक सीधी रेखा में होती है, तो दूरी और विस्थापन का परिमाण बराबर होता है, जिससे औसत चाल और औसत वेग भी बराबर हो जाते हैं।"
+  },
+  {
+    "qe": "How is 'Acceleration' defined in physics, and what does it indicate?",
+    "qh": "भौतिकी में 'त्वरण' (Acceleration) को किस प्रकार परिभाषित किया जाता है, और यह वस्तु के विषय में क्या बताता है?",
+    "o": [
+      "It is the rate of total distance covered by the object (यह केवल वस्तु द्वारा तय की गई कुल दूरी की दर है)",
+      "It is the rate of change of velocity with time (यह समय के साथ वस्तु के वेग में होने वाले परिवर्तन की दर है)",
+      "It is the change in mass of the body over time (यह वस्तु के द्रव्यमान में समय के साथ होने वाला बदलाव है)",
+      "It is the starting point of the object's position (यह केवल वस्तु की स्थिति का प्रारंभिक बिंदु होता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> त्वरण यह निर्दिष्ट करता है कि किसी वस्तु का वेग प्रति इकाई समय में कितना बदल रहा है ($a = \\frac{v-u}{t}$)। यह वेग में परिवर्तन की समय दर है।"
+  },
+  {
+    "qe": "If the acceleration of an object is positive, what is its theoretical effect on the motion?",
+    "qh": "यदि किसी वस्तु का त्वरण धनात्मक ($+$) है, तो वस्तु की गति पर इसका क्या सैद्धांतिक प्रभाव पड़ेगा?",
+    "o": [
+      "The velocity decreases and the object stops (वस्तु का वेग लगातार घटता जाएगा)",
+      "The velocity of the object increases in the direction of motion (वस्तु का वेग गति की दिशा में लगातार बढ़ता जाएगा)",
+      "The velocity becomes constant forever (वस्तु का वेग hamesha के लिए स्थिर हो जाएगा)",
+      "The path of the object becomes circular (वस्तु का पथ वृत्ताकार हो जाएगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> धनात्मक त्वरण का अर्थ है कि त्वरण की दिशा वेग (गति) की दिशा के अनुदिश है, जिसके कारण वस्तु की चाल या वेग समय के साथ बढ़ता जाता है।"
+  },
+  {
+    "qe": "What does 'Retardation' or 'Deceleration' signify, and what is its standard sign?",
+    "qh": "भौतिकी में 'मंदन' (Retardation) का क्या अर्थ है, और इसका मानक चिह्न क्या होता है?",
+    "o": [
+      "Increase in velocity with a positive sign (वेग का बढ़ना और धनात्मक चिह्न)",
+      "Decrease in velocity over time with a negative sign (समय के साथ वेग का घटना और इसका चिह्न ऋणात्मक होता है)",
+      "Infinite velocity with no specific sign (वस्तु का अनंत वेग और कोई चिह्न नहीं)",
+      "The property of staying at rest (केवल स्थिर अवस्था में रहने का गुण)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब किसी वस्तु का वेग समय के साथ कम होता जाता है (जैसे ब्रेक लगाने पर), तो वेग परिवर्तन की दर ऋणात्मक आती है, जिसे मंदन या ऋणात्मक त्वरण कहते हैं।"
+  },
+  {
+    "qe": "What is the best natural example of Uniformly Accelerated Motion?",
+    "qh": "एकसमान त्वरित गति (Uniformly Accelerated Motion) का सबसे उत्तम प्राकृतिक उदाहरण क्या है?",
+    "o": [
+      "A fish swimming in an irregular manner (एक तैरती हुई मछली की गति)",
+      "An object falling freely under the ideal influence of gravity (गुरुत्वाकर्षण के प्रभाव में स्वतंत्र रूप से गिरती हुई कोई वस्तु)",
+      "A rocket expanding its acceleration while burning fuel (रॉकेट की गति)",
+      "A car moving through heavy city traffic (भारी ट्रैफिक में चलती हुई कार की गति)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> मुक्त रूप से गिरती हुई वस्तु पर पृथ्वी का गुरुत्वीय त्वरण ($g \\approx 9.8\\text{ m/s}^2$) नियत रहता है, जिससे उसका वेग हर सेकंड समान दर से बढ़ता है।"
+  },
+  {
+    "qe": "What physical quantity is determined by the slope of a Distance-Time Graph?",
+    "qh": "एक दूरी-समय ग्राफ (Distance-Time Graph) की 'ढाल' (Slope) हमें किस भौतिक राशि का मान प्रदान करती है?",
+    "o": [
+      "Acceleration of the object (वस्तु के त्वरण का)",
+      "Speed of the object (वस्तु की चाल का)",
+      "Mass of the object (वस्तु के द्रव्यमान का)",
+      "Net force on the object (वस्तु पर लगने वाले कुल बल का)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दूरी-समय ग्राफ की ढाल का गणितीय अर्थ $\\frac{\\text{दूरी}}{\\text{समय}}$ ($\\frac{y}{x}$) होता है, जो चाल (Speed) को प्रदर्शित करता है।"
+  },
+  {
+    "qe": "If a distance-time graph shows a straight line parallel to the time axis, what is the state of the object?",
+    "qh": "यदि दूरी-समय ग्राफ में मिलने वाली रेखा समय अक्ष के बिल्कुल समानांतर एक सीधी रेखा है, तो वस्तु की अवस्था क्या होगी?",
+    "o": [
+      "The object is moving at an extremely high speed (वस्तु अत्यधिक तीव्र गति से चल रही है)",
+      "The object is at a state of rest (वस्तु विराम अवस्था में है)",
+      "The acceleration of the object is infinite (वस्तु का त्वरण अनंत है)",
+      "The object is moving in a circular path (वस्तु वृत्ताकार पथ पर गति कर रही है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> समय अक्ष के समानांतर रेखा का अर्थ है कि समय बढ़ रहा है लेकिन वस्तु की दूरी का मान बिल्कुल स्थिर है, अर्थात वस्तु चल नहीं रही है (चाल = ढाल = 0)।"
+  },
+  {
+    "qe": "What physical feature is obtained from the slope of a Velocity-Time Graph?",
+    "qh": "एक वेग-समय ग्राफ (Velocity-Time Graph) की ढाल (Slope) से हमें कौन सी भौतिक राशि प्राप्त होती है?",
+    "o": [
+      "Total distance covered (वस्तु द्वारा तय की गई कुल दूरी)",
+      "Acceleration of the object (वस्तु का त्वरण)",
+      "Initial displacement (वस्तु का प्रारंभिक विस्थापन)",
+      "Refractive index of the medium (माध्यम का अपवर्तनांक)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वेग-समय ग्राफ की ढाल का अर्थ $\\frac{\\text{वेग में परिवर्तन}}{\\text{समय}}$ ($\\frac{\\Delta v}{\\Delta t}$) होता है, जो सीधे त्वरण (Acceleration) को दर्शाता है।"
+  },
+  {
+    "qe": "What does the total area enclosed under a Velocity-Time graph represent?",
+    "qh": "वेग-समय ग्राफ (Velocity-Time Graph) के नीचे का कुल क्षेत्रफल (Area under the graph) हमें क्या प्रदान करता है?",
+    "o": [
+      "Final acceleration only (केवल वस्तु का अंतिम त्वरण)",
+      "Distance or Displacement (वस्तु द्वारा तय की गई दूरी या विस्थापन)",
+      "Square of the average velocity (वस्तु की औसत गति का वर्ग)",
+      "Total mass of the body (वस्तु का कुल द्रव्यमान)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वेग और समय का गुणनफल ($\\text{वेग} \\times \\text{समय}$) विस्थापन या दूरी को दर्शाता है, जो ग्राफिकल रूप में उसके नीचे घिरे क्षेत्रफल के बराबर होता है।"
+  },
+  {
+    "qe": "If the velocity-time graph of an object is a straight line parallel to the time axis, what does it mean?",
+    "qh": "यदि किसी वस्तु का वेग-समय ग्राफ समय अक्ष के बिल्कुल समानांतर एक सीधी रेखा है, तो इसका क्या अर्थ है?",
+    "o": [
+      "The acceleration is continuously increasing (वस्तु का त्वरण लगातार बढ़ रहा है)",
+      "The object moves with uniform velocity and its acceleration is zero (वस्तु एकसमान वेग से चल रही है और उसका त्वरण शून्य है)",
+      "The object is completely stationary at zero velocity (वस्तु शून्य वेग पर स्थिर खड़ी है)",
+      "The object is under constant retardation (वस्तु का मंदन हो रहा है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> समय अक्ष के समानांतर रेखा का मतलब है कि वेग का मान समय के साथ स्थिर (constant) है। चूंकि वेग बदल नहीं रहा, इसलिए त्वरण शून्य ($a=0$) होगा।"
+  },
+  {
+    "qe": "The three famous equations of motion ($v=u+at$, etc.) are strictly valid only under which condition?",
+    "qh": "गति के तीन प्रसिद्ध समीकरण ($v = u + at$, आदि) केवल किस मुख्य प्रतिबंध के तहत ही पूरी तरह मान्य होते हैं?",
+    "o": [
+      "When the acceleration is variable (जब त्वरण लगातार बदल रहा हो)",
+      "When the object moves in a straight line with uniform acceleration (जब वस्तु एक सरल रेखा में नियत या एकसमान त्वरण के साथ गति कर रही हो)",
+      "When the motion is strictly circular (जब गति केवल वृत्ताकार पथ पर हो)",
+      "When the object travels near the speed of light (जब वस्तु की चाल प्रकाश की चाल के बराबर हो)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> ये समीकरण रेखीय गति के लिए हैं जहाँ त्वरण ($a$) का मान पूरी गणना के दौरान एक नियत स्थिरांक (constant) बना रहता है।"
+  },
+  {
+    "qe": "Which of the following correctly pairs the symbols used in the equations of motion with their meanings?",
+    "qh": "गति के समीकरणों में प्रयुक्त संकेतों के अर्थ के संदर्भ में कौन सा विकल्प सही सुमेलित है?",
+    "o": [
+      "u = final velocity, v = initial velocity (u = अंतिम वेग, v = प्रारंभिक वेग)",
+      "u = initial velocity, v = final velocity, s = distance/displacement (u = प्रारंभिक वेग, v = अंतिम वेग, s = तय की गई दूरी या विस्थापन)",
+      "s = time, t = displacement (s = समय, t = विस्थापन)",
+      "a = average speed (a = औसत चाल)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> भौतिकी के मानक मानकों के अनुसार $u$ प्रारंभिक वेग, $v$ अंतिम वेग, $s$ दूरी/विस्थापन और $t$ समय को प्रदर्शित करता है।"
+  },
+  {
+    "qe": "If an object starts its motion 'from rest', which quantity is initially taken as zero?",
+    "qh": "यदि कोई वस्तु विराम अवस्था से अपनी गति प्रारंभ करती है (Starts from rest), तो किस राशि का प्रारंभिक मान शून्य ($0$) लिया जाएगा?",
+    "o": [
+      "Final velocity (v) (अंतिम वेग)",
+      "Initial velocity (u) (प्रारंभिक वेग)",
+      "Acceleration (a) (त्वरण)",
+      "Time (t) (समय)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> विराम अवस्था (Rest) का अर्थ ही यह है कि शुरुआत में वस्तु पूरी तरह स्थिर थी, अतः उसका प्रारंभिक वेग $u = 0$ माना जाता है।"
+  },
+  {
+    "qe": "When brakes are applied to a moving car and it comes to a complete stop, what are the states of final velocity ($v$) and acceleration ($a$)?",
+    "qh": "जब किसी गतिशील वाहन में अचानक ब्रेक लगाया जाता है और वह रुक जाता है, तो अंतिम वेग ($v$) और त्वरण ($a$) की स्थिति क्या होगी?",
+    "o": [
+      "Both will be positive (दोनों धनात्मक होंगे)",
+      "v = 0 and a = negative (mंदन) (v = 0 और a = ऋणात्मक)",
+      "v = negative and a = 0 (v = ऋणात्मक और a = 0)",
+      "Both will reach infinity (दोनों का मान अनंत हो जाएगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> चूंकि वाहन अंत में रुक जाता है, इसलिए अंतिम वेग $v = 0$ होगा। ब्रेक लगाने से गति कम होती है, इसलिए त्वरण ऋणात्मक ($-a$, मंदन) होगा।"
+  },
+  {
+    "qe": "What is unique about the velocity in a Uniform Circular Motion?",
+    "qh": "एकसमान वृत्तीय गति (Uniform Circular Motion) के संदर्भ में निम्नलिखित में से कौन सा कथन सत्य है?",
+    "o": [
+      "Both speed and velocity remain strictly constant (इसमें चाल और वेग दोनों स्थिर रहते हैं)",
+      "The speed remains constant but the velocity changes continuously due to the change in direction (इसमें चाल तो नियत रहती है, लेकिन दिशा बदलने के कारण वेग लगातार बदलता रहता है)",
+      "It is an example of a non-accelerated motion (यह एक गैर-त्वरित गति का उदाहरण है)",
+      "The displacement is always equal to the distance covered (इसमें विस्थापन hamesha दूरी के बराबर होता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वृत्तीय मार्ग पर प्रत्येक बिंदु पर गति की दिशा बदलती है। दिशा बदलने से सदिश राशि होने के कारण वेग (Velocity) निरंतर बदलता रहता है, भले ही चाल स्थिर हो।"
+  },
+  {
+    "qe": "Why is uniform circular motion considered an accelerated motion despite a constant speed?",
+    "qh": "एकसमान वृत्तीय गति को एक 'त्वरित गति' (Accelerated Motion) क्यों माना जाता है, भले ही उसकी चाल स्थिर हो?",
+    "o": [
+      "Because its mass changes continuously (क्योंकि इसका द्रव्यमान लगातार बदलता है)",
+      "Because the continuous change in direction causes a continuous change in velocity (क्योंकि गति की दिशा लगातार बदलने से वेग में निरंतर परिवर्तन होता है)",
+      "Because it violates the standard limits of light speed (क्योंकि यह प्रकाश की चाल के नियमों का उल्लंघन करती है)",
+      "Because the friction coefficient drops to zero (क्योंकि इसमें घर्षण बल का मान शून्य होता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वेग दिशा और परिमाण दोनों से बनता है। दिशा के लगातार बदलने से वेग में परिवर्तन होता है, और वेग में परिवर्तन की दर ही त्वरण (अभिकेंद्र त्वरण) कहलाती है।"
+  },
+  {
+    "qe": "If a stone tied to a string moving in a circular path is released suddenly, in which direction does it fly off?",
+    "qh": "यदि एक पत्थर को धागे से बांधकर वृत्ताकार पथ पर घुमाया जा रहा हो और धागा अचानक टूट जाए, तो पत्थर किस दिशा में भागता है?",
+    "o": [
+      "It moves straight towards the center of the circle (वह वृत्त के केंद्र की ओर सीधा आता है)",
+      "It flies off tangentially to the circular path (वह वृत्ताकार पथ के उस बिंदु पर खींची गई स्पर्श रेखा के अनुदिश सीधा निकल जाता है)",
+      "It continues to move in a spiral cloud (वह हवा में गोल-गोल घूमता रहेगा)",
+      "It comes to an immediate stop at that point (वह तुरंत अपनी जगह पर स्थिर रुक जाएगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जड़त्व के नियम के अनुसार, धागा टूटने पर केंद्र की ओर खींचने वाला बल समाप्त हो जाता है और पत्थर उस बिंदु पर वृत्ताकार पथ की स्पर्श रेखा (tangent) की दिशा में सीधा निकल जाता है।"
+  },
+  {
+    "qe": "The motion of the tip of a clock's hand is an example of:",
+    "qh": "घड़ी की सुई के सिरे की गति (Motion of the tip of a clock's hand) किस प्रकार की गति का उदाहरण है?",
+    "o": [
+      "Uniform linear motion (एकसमान रेखीय गति)",
+      "Uniform circular motion (एकसमान वृत्तीय गति)",
+      "Non-uniform accelerated linear motion (असमान त्वरित रेखीय गति)",
+      "State of absolute rest (विराम अवस्था का उदाहरण)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> घड़ी की सुई का सिरा एक निश्चित वृत्ताकार मार्ग पर बिना अपनी चाल बदले एक समान समय में चक्कर पूरा करता है, जो एकसमान वृत्तीय गति है।"
+  },
+  {
+    "qe": "What type of motion is depicted if the distance-time graph is a curved line sloping upwards?",
+    "qh": "दूरी-समय ग्राफ (Distance-Time Graph) में यदि रेखा एक वक्र रेखा (Curved Line) के रूप में ऊपर की ओर जा रही है, तो यह क्या प्रदर्शित करती है?",
+    "o": [
+      "Uniform linear motion (एकसमान रेखीय गति को)",
+      "Non-uniform motion (असमान गति को)",
+      "State of complete absolute rest (पूर्ण विराम अवस्था को)",
+      "Zero time interval condition (शून्य समय की स्थिति को)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दूरी-समय ग्राफ का वक्राकार होना यह दर्शाता है कि समय के साथ दूरी बदलने की दर (चाल) स्थिर नहीं है, जो कि असमान गति (Non-uniform motion) की परिभाषा है।"
+  },
+  {
+    "qe": "A straight line sloping downwards on a velocity-time graph indicates:",
+    "qh": "एक वेग-समय ग्राफ (Velocity-Time Graph) में यदि रेखा नीचे की ओर झुकी हुई एक सीधी सरल रेखा है, तो यह क्या सूचित करती है?",
+    "o": [
+      "Positive uniform acceleration (धनात्मक एकसमान त्वरण)",
+      "Uniform retardation / deceleration (एकसमान मंदन)",
+      "The body is completely stationary at rest (वस्तु पूरी तरह स्थिर खड़ी है)",
+      "The physical path is zig-zag (वस्तु का पथ टेढ़ा-मेढ़ा है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> नीचे गिरती सीधी रेखा का अर्थ है कि ग्राफ की ढाल ऋणात्मक और नियत (constant) है। ऋणात्मक नियत ढाल एकसमान मंदन (Uniform retardation) को व्यक्त करती है।"
+  },
+  {
+    "qe": "If the distance covered by an object is directly proportional to the square of time ($s \\propto t^2$), the acceleration of the object is:",
+    "qh": "यदि किसी वस्तु द्वारा तय की गई दूरी समय के वर्ग के समानुपाती ($s \\propto t^2$) है, तो वस्तु का त्वरण कैसा होगा?",
+    "o": [
+      "Zero (शून्य होगा)",
+      "Constant / Uniform (नियत या एकसमान होगा)",
+      "Continuously decreasing (लगातार घट रहा होगा)",
+      "The object is at rest (वस्तु विराम में होगी)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> गति के द्वितीय समीकरण ($s = ut + \\frac{1}{2}at^2$) के अनुसार, यदि $u=0$ हो, तो $s = \\frac{1}{2}at^2$ बनता है। यहाँ $s \\propto t^2$ तभी संभव है जब त्वरण ($a$) एक नियत स्थिरांक (constant) हो।"
+  },
+  {
+    "qe": "What is the relationship between linear velocity ($v$), radius ($r$), and time period ($T$) in a uniform circular motion?",
+    "qh": "एकसमान वृत्तीय गति में वस्तु का आवर्तकाल ($T$), रेखीय वेग ($v$) व त्रिज्या ($r$) के बीच क्या संबंध होता है?",
+    "o": [
+      "$v = \\frac{r}{T}$",
+      "$v = \\frac{2\\pi r}{T}$",
+      "$v = 2\\pi r \\times T$",
+      "$v = \\frac{T}{2\\pi r}$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वृत्ताकार पथ पर एक पूरा चक्कर लगाने में तय की गई दूरी वृत्त की परिधि ($2\\pi r$) होती है। अतः वेग = $\\frac{\\text{दूरी}}{\\text{समय}} = \\frac{2\\pi r}{T}$ होगा।"
+  },
+  {
+    "qe": "What instrument installed in vehicles measures the total distance traveled?",
+    "qh": "वाहनों के डैशबोर्ड पर लगा कौन सा यंत्र वाहन द्वारा तय की गई कुल दूरी (Total Distance) को मापता है?",
+    "o": [
+      "Speedometer (स्पीडोमीटर)",
+      "Odometer (ओडोमीटर)",
+      "Accelerometer (त्वरणमीटर)",
+      "Fuel Gauge (ईंधन गेज)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> ओडोमीटर (Odometer) वाहनों द्वारा तय की गई कुल दूरी को किलोमीटर (km) में रिकॉर्ड और प्रदर्शित करता है। स्पीडोमीटर तात्कालिक चाल मापता है।"
+  },
+  {
+    "qe": "If the displacement of an object is directly proportional to time ($s \\propto t$), the object is moving with:",
+    "qh": "यदि किसी वस्तु का विस्थापन समय के सीधे समानुपाती ($s \\propto t$) है, तो वस्तु की गति कैसी होगी?",
+    "o": [
+      "Increasing acceleration (बढ़ते हुए त्वरण से)",
+      "Constant / Uniform velocity (नियत या एकसमान वेग से)",
+      "Uniform deceleration (एकसमान मंदन से)",
+      "State of complete rest (पूर्ण विराम में)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> विस्थापन का समय के साथ सीधा रैखिक संबंध ($s = v \\times t$) यह दर्शाता है कि वेग ($v$) पूरी यात्रा में नियत (constant) है, जिससे त्वरण शून्य होता है।"
+  },
+  {
+    "qe": "On a velocity-time graph, if line B is steeper (has a larger angle with the time axis) than line A, which object has a higher acceleration?",
+    "qh": "वेग-समय ग्राफ पर यदि रेखा B का झुकाव समय अक्ष के साथ रेखा A से अधिक (अधिक कोण) है, तो किसका त्वरण अधिक होगा?",
+    "o": [
+      "Object A (वस्तु A का)",
+      "Object B because of its higher slope (झुकाव अधिक होने के कारण वस्तु B का)",
+      "Both have identical acceleration (दोनों का त्वरण बिल्कुल समान होगा)",
+      "Both have zero acceleration (दोनों का त्वरण शून्य होगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वेग-समय ग्राफ की ढाल (slope) ही त्वरण को व्यक्त करती है। समय अक्ष के साथ जिसका झुकाव या कोण जितना अधिक होगा, उसकी ढाल और त्वरण का मान उतना ही अधिक होगा।"
+  },
+  {
+    "qe": "Is it physically possible for a body to have a constant speed and still be accelerating?",
+    "qh": "क्या यह व्यावहारिक रूप से संभव है कि किसी वस्तु की चाल (Speed) नियत हो लेकिन फिर भी उसमें त्वरण (Acceleration) उपस्थित हो?",
+    "o": [
+      "No, it violates the basic kinematics principles (नही, यह सिद्धांतों के विपरीत है)",
+      "Yes, this is possible in a Uniform Circular Motion (हाँ, एकसमान वृत्तीय गति में ऐसा संभव है)",
+      "Yes, but only when the body is completely at rest (हाँ, केवल तब जब वस्तु विराम अवस्था में हो)",
+      "Yes, only during linear motion with heavy air resistance (हाँ, केवल भारी घर्षण वाले माध्यम में रेखीय गति के दौरान)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> हाँ, वृत्तीय गति में चाल नियत रहने पर भी दिशा बदलने के कारण वेग बदलता है, जिससे उसमें अभिकेंद्र त्वरण (centripetal acceleration) सदैव उपस्थित रहता है।"
+  },
+  {
+    "qe": "What does a vertical straight line perpendicular to the time axis on a distance-time graph physically imply?",
+    "qh": "यदि दूरी-समय ग्राफ पर एक सीधी रेखा समय अक्ष के ठीक लंबवत (Perpendicular) खड़ी हो, तो यह क्या प्रदर्शित करता है?",
+    "o": [
+      "The object moves with uniform speed (वस्तु एकसमान चाल से चल रही है)",
+      "It represents a physically impossible situation as it implies infinite speed (यह एक व्यावहारिक रूप से असंभव स्थिति है क्योंकि यह एक ही क्षण में अनंत चाल को दर्शाता है)",
+      "The object is at absolute rest (वस्तु विराम अवस्था में खड़ी है)",
+      "The object is dropping under gravity (वस्तु गुरुत्वाकर्षण के प्रभाव में गिर रही है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> समय अक्ष पर लंबवत खड़ी रेखा का मतलब है कि समय बिल्कुल नहीं बढ़ रहा ($t=0$) लेकिन दूरी अनंत रूप से बढ़ गई, जो कि व्यावहारिक रूप से असंभव (infinite speed) स्थिति है।"
+  },
+  {
+    "qe": "The SI unit 'meter per second squared' ($\\text{m/s}^2$) belongs to which of the following quantities?",
+    "qh": "मात्रक 'मीटर प्रति सेकंड स्क्वायर' ($\\text{m/s}^2$) निम्नलिखित में से किस भौतिक राशि का मानक मात्रक है?",
+    "o": [
+      "Velocity (वेग का)",
+      "Acceleration (त्वरण का)",
+      "Displacement (विस्थापन का)",
+      "Momentum (संवेग का)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> त्वरण वेग में परिवर्तन की समय दर है, अर्थात् $\\frac{\\text{वेग}}{\\text{समय}} = \\frac{\\text{m/s}}{\\text{s}} = \\text{m/s}^2$।"
+  },
+  {
+    "qe": "If the slope of a distance-time graph of a moving body is zero, the speed of the body is considered:",
+    "qh": "यदि किसी गतिशील वस्तु के दूरी-समय ग्राफ की ढाल (Slope) का मान शून्य है, तो वस्तु की चाल कितनी होगी?",
+    "o": [
+      "Maximum (अधिकतम)",
+      "Zero (शून्य होगी)",
+      "Constant but non-zero (स्थिर लेकिन गैर-शून्य)",
+      "Infinite (अनंत)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> दूरी-समय ग्राफ की ढाल चाल (Speed) को दर्शाती है। यदि ढाल शून्य है (रेखा क्षैतिज है), तो वस्तु की चाल भी शून्य है अर्थात वस्तु स्थिर है।"
+  },
+  {
+    "qe": "The rate of change of displacement with respect to time is defined as:",
+    "qh": "समय के साथ विस्थापन में होने वाले परिवर्तन की दर (Rate of change of displacement) को किस रूप में परिभाषित किया जाता है?",
+    "o": [
+      "Speed (चाल)",
+      "Velocity (वेग)",
+      "Acceleration (त्वरण)",
+      "Retardation (मंदन)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> विस्थापन में समय के साथ होने वाले परिवर्तन की दर को वेग (Velocity) कहते हैं। दूरी में परिवर्तन की दर को चाल कहते हैं।"
+  },
+  {
+    "qe": "A ball is thrown straight upwards. What is its velocity at the highest point of its motion?",
+    "qh": "जब किसी गेंद को सीधे ऊपर की ओर फेंका जाता है, तो उसके उच्चतम बिंदु (Highest Point) पर उसका वेग क्या होगा?",
+    "o": [
+      "Maximum (अधिकतम होगा)",
+      "Zero (शून्य होगा)",
+      "Equal to its initial throwing velocity (प्रारंभिक वेग के बराबर होगा)",
+      "Infinite (अनंत हो जाएगा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> ऊपर जाते समय गुरुत्वाकर्षण के कारण गेंद का वेग लगातार घटता है और उच्चतम बिंदु पर पहुँचकर एक क्षण के लिए शून्य ($0$) हो जाता है, जिसके बाद वह नीचे गिरने लगती है।"
+  },
+  {
+    "qe": "Which of the following physical quantities can have a net value of zero at the end of a trip despite continuous motion?",
+    "qh": "लगातार गति में रहने के बावजूद पूरी यात्रा के अंत में निम्नलिखित में से किस भौतिक राशि का कुल मान शून्य हो सकता है?",
+    "o": [
+      "Total distance covered (तय की गई कुल दूरी)",
+      "Net displacement (कुल विस्थापन)",
+      "Instantaneous speed (तात्कालिक चाल)",
+      "Mass of the moving body (गतिशील वस्तु का द्रव्यमान)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> यदि कोई वस्तु अपनी यात्रा समाप्त करके वापस अपने प्रारंभिक बिंदु पर लौट आती है, तो उसका कुल विस्थापन (Net displacement) शून्य हो जाता है, भले ही उसने कुछ दूरी तय की हो।"
+  },
+  {
+    "qe": "What type of motion is indicated by a straight line sloping upwards from the origin on a velocity-time graph?",
+    "qh": "एक वेग-समय ग्राफ पर मूल बिंदु से ऊपर की ओर जाती हुई एक सीधी सरल रेखा किस प्रकार की गति को प्रदर्शित करती है?",
+    "o": [
+      "Non-uniform acceleration (असतत त्वरण)",
+      "Uniform acceleration (एकसमान त्वरित गति)",
+      "Variable velocity at zero acceleration (शून्य त्वरण गति)",
+      "Uniform speed motion (एकसमान चाल गति)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वेग-समय ग्राफ की सीधी रेखा एक नियत ढाल को दर्शाती है। चूंकि इसकी ढाल त्वरण है, इसलिए स्थिर ढाल एकसमान त्वरित गति (Uniform acceleration) को निरूपित करती है।"
+  },
+  {
+    "qe": "A body moves in a circular path of radius $r$. What is its net displacement after completing a quarter ($1/4$) of the circle?",
+    "qh": "एक वस्तु $r$ त्रिज्या वाले वृत्ताकार पथ पर चल रही है। वृत्त का एक-चौथाई ($1/4$) चक्कर पूरा करने के बाद उसका नेट विस्थापन कितना होगा?",
+    "o": [
+      "$\\frac{\\pi r}{2}$",
+      "$\\sqrt{2}r$",
+      "Zero (शून्य)",
+      "$2r$"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> एक-चौथाई चक्कर पर प्रारंभिक और अंतिम बिंदु त्रिज्याओं के साथ $90^\\circ$ का कोण बनाते हैं। पाथागोरस प्रमेय के अनुसार उनके बीच की न्यूनतम सीधी दूरी (विस्थापन) $\\sqrt{r^2 + r^2} = \\sqrt{2}r$ होगी।"
+  },
+  {
+    "qe": "What does a horizontal line parallel to the time axis on a velocity-time graph physically mean?",
+    "qh": "वेग-समय ग्राफ (Velocity-Time Graph) पर समय अक्ष के समानांतर एक क्षैतिज सीधी रेखा का क्या अर्थ होता है?",
+    "o": [
+      "The object has uniform variable acceleration (वस्तु बदलते त्वरण से चल रही है)",
+      "The object is moving with constant velocity and its acceleration is zero (वस्तु नियत वेग से चल रही है और उसका त्वरण शून्य है)",
+      "The object is completely stationary at zero speed (वस्तु पूरी तरह स्थिर खड़ी है)",
+      "The velocity is dropping uniformly (वेग समान रूप से घट रहा है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> समय अक्ष के समानांतर रेखा का मतलब है कि वेग का मान समय के साथ स्थिर (constant) है, अर्थात वेग में कोई परिवर्तन नहीं हो रहा, इसलिए त्वरण शून्य है।"
+  },
+  {
+    "qe": "The numerical ratio of average velocity to average speed for a moving body is always:",
+    "qh": "किसी भी गतिशील वस्तु के लिए औसत वेग और औसत चाल का संख्यात्मक अनुपात हमेशा कैसा होता है?",
+    "o": [
+      "Always greater than 1 (हमेशा 1 से अधिक)",
+      "Equal to or less than 1 (1 के बराबर या 1 से कम)",
+      "Always exactly equal to 1 (हमेशा ठीक 1 के बराबर)",
+      "Always zero (हमेशा शून्य)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> चूंकि विस्थापन का परिमाण दूरी से कभी बड़ा नहीं हो सकता, इसलिए औसत वेग का परिमाण भी औसत चाल से बड़ा नहीं हो सकता। यह अनुपात हमेशा 1 से कम या उसके बराबर ($\\le 1$) होगा।"
+  },
+  {
+    "qe": "If a vehicle covers unequal distances in equal intervals of time, its motion is classified as:",
+    "qh": "यदि कोई वाहन समान समयांतरालों में असमान दूरी तय करता है, तो उसकी गति को किस श्रेणी में वर्गीकृत किया जाएगा?",
+    "o": [
+      "Uniform motion (एकसमान गति)",
+      "Non-uniform motion (असमान गति)",
+      "State of complete rest (पूर्ण विराम की अवस्था)",
+      "Constant velocity propagation (नियत वेग संचरण)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> जब कोई वस्तु समान समयांतरालों में अलग-अलग (असमान) दूरियां तय करती है, तो उसकी चाल स्थिर नहीं रहती। इसे असमान गति (Non-uniform motion) कहा जाता है।"
+  },
+  {
+    "qe": "The mathematical expression $v^2 - u^2 = 2as$ represents which equation of motion?",
+    "qh": "गणितीय व्यंजक $v^2 - u^2 = 2as$ गति के किस समीकरण को प्रदर्शित करता है?",
+    "o": [
+      "First equation of motion (प्रथम समीकरण)",
+      "Second equation of motion (द्वितीय समीकरण)",
+      "Third equation of motion (तृतीय समीकरण)",
+      "Universal momentum law (सार्वभौमिक संवेग नियम)"
+    ],
+    "a": 2,
+    "e": "<b>Explanation:</b> नियत त्वरण के तहत रेखीय गति के लिए, $v^2 - u^2 = 2as$ को गति का तीसरा (तृतीय) समीकरण कहा जाता है, जो वेग और स्थिति के संबंध को दर्शाता है।"
+  },
+  {
+    "qe": "If an object is moving with a constant negative acceleration, the slope of its velocity-time graph will be:",
+    "qh": "यदि कोई वस्तु एक नियत ऋणात्मक त्वरण (मंदन) से चल रही है, तो उसके वेग-समय ग्राफ की ढाल कैसी होगी?",
+    "o": [
+      "Horizontal parallel line (क्षैतिज समानांतर रेखा)",
+      "A straight line sloping downwards (नीचे की ओर झुकती हुई एक सीधी सरल रेखा)",
+      "A curve bending upwards (ऊपर की ओर मुड़ता हुआ एक वक्र)",
+      "Vertical straight line (ऊर्ध्वाधर खड़ी रेखा)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वेग-समय ग्राफ की ढाल त्वरण को दर्शाती है। ऋणात्मक नियत त्वरण का मतलब है कि ग्राफ की ढाल ऋणात्मक होगी, जो नीचे की ओर गिरती हुई सीधी रेखा के रूप में दिखती है।"
+  },
+  {
+    "qe": "What happens to the distance covered by an object when it undergoes uniform motion along a straight line?",
+    "qh": "जब कोई वस्तु किसी सीधी रेखा पर एकसमान गति करती है, तो समय के साथ उसकी तय दूरी में कैसा बदलाव आता है?",
+    "o": [
+      "Distance increases non-linearly (दूरी गैर-रैखिक रूप से बढ़ती है)",
+      "Distance increases linearly with time (दूरी समय के साथ रैखिक रूप से यानी सीधे समानुपात में बढ़ती है)",
+      "Distance remains completely constant (दूरी पूरी तरह स्थिर रहती है)",
+      "Distance drops to zero immediately (दूरी तुरंत शून्य हो जाती है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> एकसमान गति में चाल नियत होती है, जिससे वस्तु हर समान सेकंड में समान दूरी तय करती है। इसलिए दूरी समय के साथ सीधे रैखिक समानुपात ($s \\propto t$) में बढ़ती है।"
+  },
+  {
+    "qe": "Which velocity components change and which remain constant when a stone is whirled in a horizontal circle at a constant speed?",
+    "qh": "जब किसी पत्थर को एक धागे से बांधकर नियत चाल से क्षैतिज वृत्त में घुमाया जाता है, तो वेग का कौन सा घटक बदलता है?",
+    "o": [
+      "The magnitude changes, direction is constant (परिमाण बदलता है, दिशा स्थिर रहती है)",
+      "The direction changes continuously, changing the velocity vector (दिशा लगातार बदलती है, जिससे वेग सदिश बदलता है)",
+      "Both magnitude and direction remain constant (परिमाण और दिशा दोनों स्थिर रहते हैं)",
+      "The velocity instantly drops to zero (वेग तुरंत शून्य हो जाता है)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> नियत चाल से घूमने पर वेग का परिमाण स्थिर रहता है, लेकिन वृत्ताकार मार्ग के हर बिंदु पर गति की दिशा बदलने के कारण उसका वेग सदिश (Velocity vector) निरंतर बदलता रहता है।"
+  },
+  {
+    "qe": "The physical area of which mathematical graph helps in deriving the second equation of motion ($s = ut + \\frac{1}{2}at^2$)?",
+    "qh": "किस ग्राफ के नीचे घिरे कुल क्षेत्रफल की मदद से गति का द्वितीय समीकरण ($s = ut + \\frac{1}{2}at^2$) व्युत्पन्न किया जाता है?",
+    "o": [
+      "Distance-Time graph (दूरी-समय ग्राफ)",
+      "Velocity-Time graph (वेग-समय ग्राफ)",
+      "Acceleration-Distance graph (त्वरण-दूरी ग्राफ)",
+      "Position-Mass graph (स्थिति-द्रव्यमान ग्राफ)"
+    ],
+    "a": 1,
+    "e": "<b>Explanation:</b> वेग-समय ग्राफ (Velocity-Time Graph) के नीचे का कुल क्षेत्रफल विस्थापन/दूरी ($s$) को दर्शाता है। इसी क्षेत्रफल (आयत + त्रिभुज) की गणना से गति का दूसरा समीकरण प्राप्त होता है।"
+  }
+]
