@@ -7,7 +7,7 @@ from google import genai
 from google.genai import types
 
 # ============================================================
-# CONFIGURATION & CLEAN-SLATE PACING
+# CONFIGURATION & PACING
 # ============================================================
 
 INPUT_FILE = "rawnews.json"
@@ -17,16 +17,14 @@ ARCHIVE_FILE = "all_current_affairs.json" # Full Master Archive
 API_KEY = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=API_KEY) if API_KEY else None
 
-# Active Multi-Model Hierarchy (High RPD first)
 MODEL_REGISTRY = [
-    "gemini-3.6-flash",  # 500 RPD / 15 RPM (Primary)
-    "gemini-3.5-flash-lite",  # 500 RPD / 15 RPM (Fallback 1)
-    "gemini-3.1-flash-lite",       # 20 RPD / 5 RPM (Fallback 2)
-    "gemini-3.7-flash",       # 20 RPD / 5 RPM (Fallback 3)
-    "gemini-3-flash"          # Backup Flash
+    "gemini-3.6-flash",      # Primary
+    "gemini-3.5-flash-lite", # Fallback 1
+    "gemini-3.1-flash-lite", # Fallback 2
+    "gemini-3.7-flash",      # Fallback 3
+    "gemini-3-flash"         # Backup Flash
 ]
 
-# 5 full news per batch
 BATCH_SIZE = 4
 BATCH_PAUSE_SECONDS = 30
 
@@ -56,8 +54,8 @@ STRICT REJECTION RULES: Set "is_relevant": false for:
 - State-specific news of OTHER states (UP, MP, Delhi, Maharashtra, etc.) unless it is a Central policy.
 - Stock market movements, Sensex/Nifty, routine local crime, entertainment gossip.
 - IMD weather/cyclone routine forecasts and warnings.
--Traffic news,NTA,UGC,Indian Information Service (IIS), Indian Statistical Service (ISS),Employment growth.
--All India Radio,Startup,Prashant Kishor,Bihar School Examination Board,bsed,stet,ctet
+- Traffic news, NTA, UGC, Indian Information Service (IIS), Indian Statistical Service (ISS), Employment growth.
+- All India Radio, Startup, Prashant Kishor, Bihar School Examination Board, bseb, stet, ctet.
 
 OUTPUT FORMAT REQUIREMENTS:
 Return strictly a valid JSON array of objects:
@@ -84,17 +82,24 @@ current_model_idx = 0
 # ============================================================
 
 def normalize_title(title):
-    stop_words = {"india", "indian", "union", "national", "state", "minister", "news", "under", "with", "from", "launches", "begins"}
+    stop_words = {"india", "indian", "union", "national", "state", "minister", "news", "under", "with", "from", "launches", "begins", "approved", "announces"}
     title = re.sub(r'[^a-zA-Z0-9\s]', '', str(title).lower())
     return set(w for w in title.split() if len(w) > 3 and w not in stop_words)
 
 
 def is_duplicate_story(new_title, existing_titles, threshold=0.42):
+    new_clean = re.sub(r'[^a-zA-Z0-9]', '', str(new_title).lower())
     new_words = normalize_title(new_title)
     if not new_words:
         return False
 
     for exist_title in existing_titles:
+        # 1. Exact string match check
+        exist_clean = re.sub(r'[^a-zA-Z0-9]', '', str(exist_title).lower())
+        if new_clean == exist_clean:
+            return True
+
+        # 2. Fuzzy keyword overlap check
         exist_words = normalize_title(exist_title)
         if not exist_words:
             continue
@@ -147,7 +152,6 @@ def clean_json_response(raw_text):
 
 
 def parse_card_datetime(card):
-    """Safely extracts datetime for 24-hour retention checking"""
     ts = card.get("timestamp", 0)
     if ts and isinstance(ts, (int, float)) and ts > 0:
         return datetime.fromtimestamp(ts, tz=IST)
@@ -250,7 +254,6 @@ def process_news_batches(news_list, is_bihar=False):
             })
 
         prompt_str = f"Process these {len(batch)} articles into JSON array:\n" + json.dumps(batch_payload, ensure_ascii=False)
-
         batch_result = call_gemini_clean_slate_api(prompt_str)
 
         if not batch_result:
@@ -267,7 +270,7 @@ def process_news_batches(news_list, is_bihar=False):
 
             c_title = res.get("title") or "Current Affairs Update"
             if is_duplicate_story(c_title, seen_titles):
-                print(f"  🧹 DROPPED DUPLICATE: {c_title[:40]}...")
+                print(f"  🧹 DROPPED DUPLICATE IN BATCH: {c_title[:40]}...")
                 continue
 
             seen_titles.append(c_title)
@@ -328,7 +331,7 @@ def process_all_news():
     now_dt = datetime.now(IST)
     twenty_four_hours_ago = now_dt - timedelta(hours=24)
 
-    # 2. UPDATE ROLLING 24-HOUR FILE (finalnews.json)
+    # 2. UPDATE ROLLING 24-HOUR FILE (finalnews.json) WITH STRICT DEDUPLICATION
     existing_daily = {"national_news": [], "bihar_news": []}
     if os.path.exists(OUTPUT_FILE):
         try:
@@ -337,18 +340,17 @@ def process_all_news():
         except Exception:
             pass
 
-    # Merge & filter only items inside 24-hour window or today's date
     def merge_rolling_news(fresh_items, existing_items):
         merged = list(fresh_items)
-        seen = {item.get("title", "").strip().lower() for item in fresh_items}
+        seen_titles = [item.get("title", "") for item in fresh_items]
 
         for item in existing_items:
-            t = item.get("title", "").strip().lower()
+            t = item.get("title", "")
             item_dt = parse_card_datetime(item)
-            # Retain if within 24 hours and not duplicated by fresh batch
-            if item_dt >= twenty_four_hours_ago and t and t not in seen:
-                merged.append(item)
-                seen.add(t)
+            if item_dt >= twenty_four_hours_ago and t:
+                if not is_duplicate_story(t, seen_titles):
+                    merged.append(item)
+                    seen_titles.append(t)
         return merged
 
     rolling_national = merge_rolling_news(fresh_national, existing_daily.get("national_news", []))
@@ -375,7 +377,7 @@ def process_all_news():
 
     print(f"\n💾 24-Hour Rolling Bulletin saved to '{OUTPUT_FILE}'! (Total: {len(rolling_national) + len(rolling_bihar)} items)")
 
-    # 3. UPDATE MASTER ARCHIVE (all_current_affairs.json)
+    # 3. UPDATE MASTER ARCHIVE (all_current_affairs.json) WITH STRICT DEDUPLICATION
     master_archive = {
         "generated_at": now_dt.strftime("%Y-%m-%d %H:%M:%S"),
         "total_national": 0,
@@ -395,20 +397,22 @@ def process_all_news():
     existing_nat = master_archive.get("national_news", [])
     existing_bih = master_archive.get("bihar_news", [])
 
-    existing_nat_titles = {item.get("title", "").strip().lower() for item in existing_nat}
-    existing_bih_titles = {item.get("title", "").strip().lower() for item in existing_bih}
+    existing_nat_titles = [item.get("title", "") for item in existing_nat]
+    existing_bih_titles = [item.get("title", "") for item in existing_bih]
 
+    # Prepend unique fresh national news (deduplicated against full archive)
     for item in fresh_national:
-        t_clean = item.get("title", "").strip().lower()
-        if t_clean and t_clean not in existing_nat_titles:
+        new_t = item.get("title", "")
+        if new_t and not is_duplicate_story(new_t, existing_nat_titles):
             existing_nat.insert(0, item)
-            existing_nat_titles.add(t_clean)
+            existing_nat_titles.insert(0, new_t)
 
+    # Prepend unique fresh bihar news (deduplicated against full archive)
     for item in fresh_bihar:
-        t_clean = item.get("title", "").strip().lower()
-        if t_clean and t_clean not in existing_bih_titles:
+        new_t = item.get("title", "")
+        if new_t and not is_duplicate_story(new_t, existing_bih_titles):
             existing_bih.insert(0, item)
-            existing_bih_titles.add(t_clean)
+            existing_bih_titles.insert(0, new_t)
 
     for idx, item in enumerate(existing_nat, 1):
         item["id"] = f"nat_{idx:03d}"
@@ -429,7 +433,7 @@ def process_all_news():
     elapsed = round(time.time() - start_time, 1)
     print("\n" + "=" * 80)
     print(f"⚡ COMPLETED IN {elapsed}s (~{round(elapsed/60, 1)} min)!")
-    print(f"📊 24-Hour Rolling: {len(rolling_national) + len(rolling_bihar)} | Full Master: {len(existing_nat) + len(existing_bih)}")
+    print(f"📊 24-Hour Rolling: {len(rolling_national) + len(rolling_bihar)} | Full Master Archive: {len(existing_nat) + len(existing_bih)}")
     print("=" * 80)
 
 
