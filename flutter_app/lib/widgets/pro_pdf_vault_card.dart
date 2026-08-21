@@ -1,38 +1,194 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ProPdfVaultCard extends StatelessWidget {
+class ProPdfVaultCard extends StatefulWidget {
   final bool isDarkMode;
   final String? customWebsiteUrl;
+  final List<dynamic>? dynamicPdfItems; // 👈 JSON se 7-8 items aayenge
 
   const ProPdfVaultCard({
     super.key,
     required this.isDarkMode,
     this.customWebsiteUrl,
+    this.dynamicPdfItems,
   });
 
-  static const String _defaultWebsiteUrl = "https://yourwebsite.com/pdf-notes";
+  @override
+  State<ProPdfVaultCard> createState() => _ProPdfVaultCardState();
+}
 
-  Future<void> _launchWebsite(BuildContext context) async {
-    final String targetUrl = customWebsiteUrl ?? _defaultWebsiteUrl;
-    final Uri uri = Uri.parse(targetUrl);
-    try {
-      final bool launched = await launchUrl(uri, mode: LaunchMode.externalApplication);
-      if (!launched && context.mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('⚠️ Link open karne mein samasya aayi!'),
-            behavior: SnackBarBehavior.floating,
-          ),
+class _ProPdfVaultCardState extends State<ProPdfVaultCard>
+    with SingleTickerProviderStateMixin {
+  late final PageController _pageController;
+  Timer? _rollingTimer;
+  late final AnimationController _blinkController;
+  int _currentIndex = 0;
+
+  static const String _defaultWebsiteUrl = "https://www.mocktester.online/pdf-notes";
+
+  // 📝 8 DEFAULT HIGH-VALUE ITEMS (Jab tak JSON na mile)
+  final List<Map<String, dynamic>> _fallbackDocs = [
+    {
+      'title': 'NCERT Science & GK 1-Liner Crux',
+      'tag': '🔥 MOST READ',
+      'badge': 'ADDED TODAY',
+      'meta': '128 Pages • Complete Handnotes',
+      'reads': '18.4k reads',
+      'color': 0xFF2563EB,
+      'url': 'https://www.mocktester.online/pdf-notes',
+    },
+    {
+      'title': 'BPSC & BSSC 3000+ TCS PYQ Formula Sheet',
+      'tag': '⚡ HIGH YIELD',
+      'badge': 'NEW ADDED',
+      'meta': '64 Pages • Quick Revision Chart',
+      'reads': '12.1k reads',
+      'color': 0xFFD97706,
+      'url': 'https://www.mocktester.online/pdf-notes',
+    },
+    {
+      'title': '2026 Monthly Current Affairs Magazine (Aug Edition)',
+      'tag': '📌 LATEST',
+      'badge': 'ADDED TODAY',
+      'meta': 'Full Edition • Bihar & National',
+      'reads': '9.8k reads',
+      'color': 0xFF059669,
+      'url': 'https://www.mocktester.online/pdf-notes',
+    },
+    {
+      'title': 'Indian Polity 100 Landmark Articles & Amendments',
+      'tag': '📜 CRUCIAL',
+      'badge': 'NEW ADDED',
+      'meta': '48 Pages • Table Summary',
+      'reads': '14.2k reads',
+      'color': 0xFF7C3AED,
+      'url': 'https://www.mocktester.online/pdf-notes',
+    },
+    {
+      'title': 'Modern Indian History: Timeline & Governor Generals',
+      'tag': '🗺️ MAP CRUX',
+      'badge': 'ADDED TODAY',
+      'meta': '52 Pages • Exam Ready Notes',
+      'reads': '8.6k reads',
+      'color': 0xFFDC2626,
+      'url': 'https://www.mocktester.online/pdf-notes',
+    },
+    {
+      'title': 'General Science Physics & Chemistry Formula Sheet',
+      'tag': '⚡ FORMULA',
+      'badge': 'NEW ADDED',
+      'meta': '36 Pages • All SI Units & Laws',
+      'reads': '11.5k reads',
+      'color': 0xFF0284C7,
+      'url': 'https://www.mocktester.online/p/free-pdf.html',
+    },
+    {
+      'title': 'Bihar Special GK, Census & Economic Survey Summary',
+      'tag': '🎯 BIHAR SPL',
+      'badge': 'ADDED TODAY',
+      'meta': '72 Pages • Special Compilations',
+      'reads': '16.9k reads',
+      'color': 0xFF16A34A,
+      'url': 'https://www.mocktester.online/p/free-pdf.html',
+    },
+    {
+      'title': 'Quantitative Aptitude & Reasoning Shortcut Tricks',
+      'tag': '🔥 TRICK SHEET',
+      'badge': 'NEW ADDED',
+      'meta': '80 Pages • 500+ Solved Examples',
+      'reads': '15.3k reads',
+      'color': 0xFFEA580C,
+      'url': 'https://www.mocktester.online/p/free-pdf.html',
+    },
+  ];
+
+  List<Map<String, dynamic>> _getDocList() {
+    if (widget.dynamicPdfItems != null && widget.dynamicPdfItems!.isNotEmpty) {
+      return widget.dynamicPdfItems!.map<Map<String, dynamic>>((item) {
+        if (item is Map) {
+          return {
+            'title': item['title'] ?? 'PDF Document',
+            'tag': item['tag'] ?? '🔥 POPULAR',
+            'badge': item['badge'] ?? 'NEW ADDED',
+            'meta': item['meta'] ?? 'Free E-Book',
+            'reads': item['reads'] ?? '10k+ reads',
+            'color': item['color'] != null
+                ? int.tryParse(item['color'].toString()) ?? 0xFF2563EB
+                : 0xFF2563EB,
+            'url': item['url'] ?? _defaultWebsiteUrl,
+          };
+        }
+        return {
+          'title': item.toString(),
+          'tag': 'FREE PDF',
+          'badge': 'NEW',
+          'meta': 'Online Notes',
+          'reads': '5k+ reads',
+          'color': 0xFF2563EB,
+          'url': _defaultWebsiteUrl,
+        };
+      }).toList();
+    }
+    return _fallbackDocs;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController();
+
+    // 💡 Smooth Blinking Badge Animation
+    _blinkController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 800),
+    )..repeat(reverse: true);
+
+    // 🔄 Auto Vertical Rolling Timer (3.5 Seconds)
+    _startRolling();
+  }
+
+  void _startRolling() {
+    _rollingTimer?.cancel();
+    _rollingTimer = Timer.periodic(const Duration(milliseconds: 3500), (_) {
+      if (!_pageController.hasClients) return;
+      final docs = _getDocList();
+      if (docs.isEmpty) return;
+
+      int nextIndex = _currentIndex + 1;
+      if (nextIndex >= docs.length) {
+        nextIndex = 0;
+        _pageController.animateToPage(
+          0,
+          duration: const Duration(milliseconds: 650),
+          curve: Curves.easeInOut,
+        );
+      } else {
+        _pageController.nextPage(
+          duration: const Duration(milliseconds: 650),
+          curve: Curves.easeInOut,
         );
       }
+      setState(() => _currentIndex = nextIndex);
+    });
+  }
+
+  @override
+  void dispose() {
+    _rollingTimer?.cancel();
+    _pageController.dispose();
+    _blinkController.dispose();
+    super.dispose();
+  }
+
+  Future<void> _launchUrl(String targetUrl) async {
+    final Uri uri = Uri.parse(targetUrl);
+    try {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
     } catch (_) {
-      if (context.mounted) {
+      if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('⚠️ Browser launch error!'),
-            behavior: SnackBarBehavior.floating,
-          ),
+          const SnackBar(content: Text('⚠️ Link open nahi ho paya!')),
         );
       }
     }
@@ -40,34 +196,11 @@ class ProPdfVaultCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool isDark = isDarkMode;
-
-    final List<Map<String, dynamic>> featuredDocs = [
-      {
-        'title': 'NCERT Science & GK 1-Liner Crux',
-        'tag': '🔥 MOST READ',
-        'meta': '128 Pages • Free PDF',
-        'reads': '18.4k reads',
-        'color': const Color(0xFF2563EB),
-      },
-      {
-        'title': 'BPSC & BSSC 3000+ PYQ Formula Sheet',
-        'tag': '⚡ HIGH YIELD',
-        'meta': '64 Pages • Quick Revision',
-        'reads': '12.1k reads',
-        'color': const Color(0xFFD97706),
-      },
-      {
-        'title': '2026 Monthly Current Affairs Magazine',
-        'tag': '📌 LATEST',
-        'meta': 'Full August Edition',
-        'reads': '9.8k reads',
-        'color': const Color(0xFF059669),
-      },
-    ];
+    final bool isDark = widget.isDarkMode;
+    final docs = _getDocList();
 
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      width: double.infinity, // 👈 100% Screen width (Zero Side Margin)
       decoration: BoxDecoration(
         color: isDark ? const Color(0xFF1E293B) : Colors.white,
         borderRadius: BorderRadius.circular(18),
@@ -77,25 +210,25 @@ class ProPdfVaultCard extends StatelessWidget {
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.3 : 0.05),
+            color: Colors.black.withOpacity(isDark ? 0.35 : 0.06),
             blurRadius: 14,
             offset: const Offset(0, 4),
           ),
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(14.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🏆 1. Header with Badge
+            // 🏆 1. HEADER SECTION
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
                     Container(
-                      padding: const EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(7),
                       decoration: BoxDecoration(
                         color: const Color(0xFF2563EB).withOpacity(0.12),
                         borderRadius: BorderRadius.circular(10),
@@ -109,7 +242,7 @@ class ProPdfVaultCard extends StatelessWidget {
                         Text(
                           'Study Material & PDF Vault',
                           style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 14.5,
                             fontWeight: FontWeight.bold,
                             color: isDark ? Colors.white : const Color(0xFF0F172A),
                           ),
@@ -128,13 +261,13 @@ class ProPdfVaultCard extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF16A34A).withOpacity(0.12),
+                    color: const Color(0xFF16A34A).withOpacity(0.15),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: const Text(
                     '100% FREE',
                     style: TextStyle(
-                      fontSize: 10,
+                      fontSize: 9.5,
                       fontWeight: FontWeight.bold,
                       color: Color(0xFF16A34A),
                     ),
@@ -143,140 +276,173 @@ class ProPdfVaultCard extends StatelessWidget {
               ],
             ),
 
-            const SizedBox(height: 14),
+            const SizedBox(height: 12),
 
-            // 📄 2. Itemized Document Preview Cards
-            ...featuredDocs.map((doc) {
-              final Color accent = doc['color'] as Color;
-              return Container(
-                margin: const EdgeInsets.only(bottom: 10),
-                padding: const EdgeInsets.all(11),
-                decoration: BoxDecoration(
-                  color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                    color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      width: 38,
-                      height: 44,
+            // 🔄 2. AUTO-ROLLING VERTICAL DOCUMENT SLIDER (Height: 74)
+            SizedBox(
+              height: 74,
+              child: PageView.builder(
+                controller: _pageController,
+                scrollDirection: Axis.vertical, // 👈 Vertical Auto-Rolling
+                physics: const BouncingScrollPhysics(),
+                itemCount: docs.length,
+                onPageChanged: (idx) => _currentIndex = idx % docs.length,
+                itemBuilder: (context, index) {
+                  final doc = docs[index];
+                  final Color accent = Color(doc['color'] as int);
+                  final String badgeText = doc['badge'] ?? 'NEW ADDED';
+                  final String docUrl = doc['url'] ?? (widget.customWebsiteUrl ?? _defaultWebsiteUrl);
+
+                  return InkWell(
+                    onTap: () => _launchUrl(docUrl),
+                    borderRadius: BorderRadius.circular(12),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                       decoration: BoxDecoration(
-                        color: accent.withOpacity(0.12),
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: accent.withOpacity(0.3)),
+                        color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(
+                          color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                        ),
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      child: Row(
                         children: [
-                          const Icon(Icons.picture_as_pdf_rounded, size: 18, color: Color(0xFFDC2626)),
-                          const SizedBox(height: 2),
-                          Text(
-                            'PDF',
-                            style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold, color: accent),
+                          // 📄 PDF Icon Box
+                          Container(
+                            width: 36,
+                            height: 48,
+                            decoration: BoxDecoration(
+                              color: accent.withOpacity(0.12),
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(color: accent.withOpacity(0.3)),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Icon(Icons.picture_as_pdf_rounded, size: 16, color: Color(0xFFDC2626)),
+                                const SizedBox(height: 1),
+                                Text(
+                                  'PDF',
+                                  style: TextStyle(fontSize: 7.5, fontWeight: FontWeight.bold, color: accent),
+                                ),
+                              ],
+                            ),
                           ),
+                          const SizedBox(width: 10),
+
+                          // 📝 Rolling Document Info
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Row(
+                                  children: [
+                                    // ✨ Blinking Badge Tag
+                                    FadeTransition(
+                                      opacity: Tween<double>(begin: 0.4, end: 1.0).animate(_blinkController),
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
+                                        decoration: BoxDecoration(
+                                          gradient: const LinearGradient(
+                                            colors: [Color(0xFFEA580C), Color(0xFFDC2626)],
+                                          ),
+                                          borderRadius: BorderRadius.circular(4),
+                                        ),
+                                        child: Text(
+                                          badgeText,
+                                          style: const TextStyle(
+                                            fontSize: 7.5,
+                                            fontWeight: FontWeight.w900,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(width: 5),
+                                    Text(
+                                      doc['reads'],
+                                      style: TextStyle(
+                                        fontSize: 9.5,
+                                        color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 2),
+                                Text(
+                                  doc['title'],
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                    color: isDark ? Colors.white : const Color(0xFF0F172A),
+                                  ),
+                                ),
+                                Text(
+                                  doc['meta'],
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontSize: 9.5,
+                                    color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+
+                          const SizedBox(width: 6),
+                          const Icon(Icons.download_for_offline_rounded, size: 22, color: Color(0xFF2563EB)),
                         ],
                       ),
                     ),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
-                                decoration: BoxDecoration(
-                                  color: accent.withOpacity(0.15),
-                                  borderRadius: BorderRadius.circular(4),
-                                ),
-                                child: Text(
-                                  doc['tag'],
-                                  style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.bold, color: accent),
-                                ),
-                              ),
-                              const SizedBox(width: 6),
-                              Text(
-                                doc['reads'],
-                                style: TextStyle(
-                                  fontSize: 10,
-                                  color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
-                                ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 4),
-                          Text(
-                            doc['title'],
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              fontSize: 12.5,
-                              fontWeight: FontWeight.bold,
-                              color: isDark ? Colors.white : const Color(0xFF0F172A),
-                            ),
-                          ),
-                          const SizedBox(height: 2),
-                          Text(
-                            doc['meta'],
-                            style: TextStyle(
-                              fontSize: 10.5,
-                              color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(width: 6),
-                    const Icon(Icons.download_for_offline_rounded, size: 22, color: Color(0xFF2563EB)),
-                  ],
-                ),
-              );
-            }),
+                  );
+                },
+              ),
+            ),
 
-            const SizedBox(height: 4),
+            const SizedBox(height: 10),
 
-            // 🚀 3. High-CTR Direct Action CTA
+            // 🚀 3. DIRECT ACTION BUTTON
             InkWell(
-              onTap: () => _launchWebsite(context),
-              borderRadius: BorderRadius.circular(12),
+              onTap: () => _launchUrl(widget.customWebsiteUrl ?? _defaultWebsiteUrl),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 width: double.infinity,
-                padding: const EdgeInsets.symmetric(vertical: 12),
+                padding: const EdgeInsets.symmetric(vertical: 10),
                 decoration: BoxDecoration(
                   gradient: const LinearGradient(
                     colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
-                      color: const Color(0xFF2563EB).withOpacity(0.35),
-                      blurRadius: 8,
-                      offset: const Offset(0, 3),
+                      color: const Color(0xFF2563EB).withOpacity(0.3),
+                      blurRadius: 6,
+                      offset: const Offset(0, 2),
                     ),
                   ],
                 ),
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.lock_open_rounded, color: Colors.white, size: 16),
-                    SizedBox(width: 8),
+                    Icon(Icons.lock_open_rounded, color: Colors.white, size: 15),
+                    SizedBox(width: 6),
                     Text(
                       'Instant PDF Vault Access (Free Download)',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 13,
+                        fontSize: 12,
                         fontWeight: FontWeight.bold,
-                        letterSpacing: 0.2,
                       ),
                     ),
-                    SizedBox(width: 6),
-                    Icon(Icons.arrow_forward_rounded, color: Colors.white, size: 14),
+                    SizedBox(width: 4),
+                    Icon(Icons.arrow_forward_rounded, color: Colors.white, size: 13),
                   ],
                 ),
               ),
