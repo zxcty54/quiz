@@ -101,10 +101,11 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // 📑 7. PRO STUDY MATERIAL & PDF VAULT CARD
+            // 📑 7. PRO STUDY MATERIAL & PDF VAULT CARD (Auto-rolling with live JSON push)
             ProPdfVaultCard(
               isDarkMode: widget.isDarkMode,
-              customWebsiteUrl: "https://www.mocktester.online/pdf-notes", // 👈 apni website link
+              customWebsiteUrl: "https://www.mocktester.online/p/gkgscurrent-affair-mock-test.html",
+              dynamicPdfItems: widget.appConfig['pdf_vault_items'], // 👈 Connected with app_config.json
             ),
             const SizedBox(height: 18),
 
