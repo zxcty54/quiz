@@ -346,7 +346,7 @@ class _RevisionTabState extends State<RevisionTab> {
           Text('Subject par click karein aur direct chapter button dabakar revision shuru karein', style: TextStyle(color: subTextColor, fontSize: 12)),
           const SizedBox(height: 14),
 
-          // 🔬 1. General Science (BPSC Drill Sets)
+          // 🔬 1. General Science (BPSC Sets)
           _buildExpansionSubjectCategory(
             context: context,
             title: 'General Science',
@@ -362,7 +362,7 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
           const SizedBox(height: 12),
 
-          // 🏛️ 2. GK & Social Science (BPSC Drill Sets)
+          // 🏛️ 2. GK & Social Science (BPSC Sets)
           _buildExpansionSubjectCategory(
             context: context,
             title: 'GK & Social Science',
@@ -386,7 +386,7 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
           const SizedBox(height: 12),
 
-          // 🎯 4. STATIC GK & SCIENCE (SEPARATE DEDICATED SECTION)
+          // 🎯 4. STATIC GK & SCIENCE (FOLDER-WISE ACCORDION)
           _buildExpansionSubjectCategory(
             context: context,
             title: 'Static GK & Science Foundation',
@@ -794,6 +794,7 @@ class _RevisionTabState extends State<RevisionTab> {
     );
   }
 
+  // 📂 SUB-FOLDER ACCORDION CATEGORY BUILDER
   Widget _buildExpansionSubjectCategory({
     required BuildContext context,
     required String title,
@@ -804,14 +805,14 @@ class _RevisionTabState extends State<RevisionTab> {
     required List<Map<String, dynamic>> subSections,
   }) {
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final Color subFolderBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
     final Color subTitleColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF334155);
-    final Color dividerColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
 
     return Card(
       color: cardBg,
       elevation: 1.5,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(14),
         side: BorderSide(
           color: isDark ? color.withOpacity(0.4) : color.withOpacity(0.25),
           width: 1.2,
@@ -841,7 +842,7 @@ class _RevisionTabState extends State<RevisionTab> {
               ),
             ],
           ),
-          childrenPadding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
+          childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
           expandedCrossAxisAlignment: CrossAxisAlignment.start,
           children: subSections.map((section) {
             final String subTitle = section['title'];
@@ -852,51 +853,88 @@ class _RevisionTabState extends State<RevisionTab> {
               rawChapters = Map<String, dynamic>.from(_liveSubjectMapping[mapKey]);
             }
 
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Divider(color: dividerColor, height: 16),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 6.0),
-                  child: Text(
-                    subTitle,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: subTitleColor),
-                  ),
+            return Container(
+              margin: const EdgeInsets.only(top: 8),
+              decoration: BoxDecoration(
+                color: subFolderBg,
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(
+                  color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                  width: 1.0,
                 ),
-                rawChapters.isEmpty
-                    ? Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 6.0),
-                        child: Text(
-                          "Loading chapters...",
-                          style: TextStyle(fontSize: 11, color: isDark ? Colors.grey.shade500 : Colors.grey),
+              ),
+              child: ExpansionTile(
+                dense: true,
+                tilePadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
+                leading: const Icon(Icons.folder_open_rounded, size: 20, color: Color(0xFFF59E0B)),
+                title: Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        subTitle,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 13,
+                          color: subTitleColor,
                         ),
-                      )
-                    : Wrap(
-                        spacing: 8,
-                        runSpacing: 8,
-                        children: rawChapters.entries.map((entry) {
-                          String path = entry.value.toString();
-                          return ActionChip(
-                            elevation: 1,
-                            backgroundColor: isDark ? color.withOpacity(0.2) : color.withOpacity(0.08),
-                            side: BorderSide(
-                              color: isDark ? color.withOpacity(0.5) : color.withOpacity(0.3),
-                            ),
-                            label: Text(
-                              "📖 ${entry.key}",
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600,
-                                color: isDark ? Colors.white : color,
-                              ),
-                            ),
-                            onPressed: () {
-                              widget.onLaunchPractice(context, entry.key, path);
-                            },
-                          );
-                        }).toList(),
                       ),
-              ],
+                    ),
+                    if (rawChapters.isNotEmpty)
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        decoration: BoxDecoration(
+                          color: color.withOpacity(0.12),
+                          borderRadius: BorderRadius.circular(6),
+                        ),
+                        child: Text(
+                          "${rawChapters.length} Sets",
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold,
+                            color: color,
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
+                childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
+                expandedCrossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  rawChapters.isEmpty
+                      ? Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 6.0),
+                          child: Text(
+                            "Loading chapters...",
+                            style: TextStyle(fontSize: 11, color: isDark ? Colors.grey.shade500 : Colors.grey),
+                          ),
+                        )
+                      : Wrap(
+                          spacing: 8,
+                          runSpacing: 8,
+                          children: rawChapters.entries.map((entry) {
+                            String path = entry.value.toString();
+                            return ActionChip(
+                              elevation: 1,
+                              backgroundColor: isDark ? color.withOpacity(0.2) : color.withOpacity(0.08),
+                              side: BorderSide(
+                                color: isDark ? color.withOpacity(0.5) : color.withOpacity(0.3),
+                              ),
+                              label: Text(
+                                "📖 ${entry.key}",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  color: isDark ? Colors.white : color,
+                                ),
+                              ),
+                              onPressed: () {
+                                widget.onLaunchPractice(context, entry.key, path);
+                              },
+                            );
+                          }).toList(),
+                        ),
+                ],
+              ),
             );
           }).toList(),
         ),
