@@ -6,7 +6,6 @@
     "President, VP & PM": "President_VP_PM.json",
     "Governor, CM & COM": "Gover_CM_COM.json",
     "The Parlimaent": "parliament.json",
-    
     "SC, HC & Sub. Courts": "SC_HC_Gram.json",
     "Panchayati Raj & Municipalities": "Panchayati_Raj_Muncipal.json",
     "Constitutional Bodies": "EC_UPSC_SPSC_FC_CAG_AG.json",
@@ -26,9 +25,9 @@
     "National Movement (1905-18)": "nationalmov1905-18.json",
     "National Movement (1919-39)": "nationalmov1919-39.json",
     "Peasant Movements": "peasantmov.json",
-    "Sur Dynasaty":"sur_dynasty.json",
-    "Akbar & Rajputs":"akbar_rajput.json",
-    "Babur":"babur_humayun.json",
+    "Sur Dynasaty": "sur_dynasty.json",
+    "Akbar & Rajputs": "akbar_rajput.json",
+    "Babur": "babur_humayun.json",
     "Beginning of Struggle": "strugglebegin.json"
   },
   "geo_mapping": {
@@ -94,5 +93,76 @@
     "Mar 2026": "2026-03.json",
     "Apr 2026": "2026-04.json",
     "Bihar Special News": "bihar_news.json"
+  },
+  "static_phy_mapping": {
+    "⚡ Electricity & Circuits": "static/physics/electricity.json",
+    "💡 Light & Optics": "static/physics/light.json",
+    "🧲 Magnetism & Induction": "static/physics/magnetism.json",
+    "🏎️ Motion, Force & Work": "static/physics/motion.json",
+    "🔊 Sound & Waves": "static/physics/sound.json",
+    "📦 Physics Miscellaneous": "static/physics/misc.json"
+  },
+  "static_chem_mapping": {
+    "🧪 Atoms & Molecules": "static/chemistry/atoms.json",
+    "🧂 Acids, Bases & Salts": "static/chemistry/acidbase.json",
+    "💎 Carbon & its Compounds": "static/chemistry/carbon.json",
+    "🔥 Thermodynamics & Heat": "static/chemistry/heat.json",
+    "🏭 Industrial Chemistry": "static/chemistry/industrial_chem.json",
+    "🪙 Metals & Non-Metals": "static/chemistry/metals_nonmetals.json",
+    "☢️ Nuclear Chemistry": "static/chemistry/nuclear_chem.json",
+    "📊 Periodic Table": "static/chemistry/periodic_table.json",
+    "🔬 Physical Chemistry": "static/chemistry/physical_chem.json",
+    "📦 Chemistry Miscellaneous": "static/chemistry/misc.json"
+  },
+  "static_bio_mapping": {
+    "🧬 Cell Biology": "static/biology/cell.json",
+    "🌿 Botany & Plant Physiology": "static/biology/botony.json",
+    "🫀 Circulatory System": "static/biology/circulatory.json",
+    "🥗 Digestive System": "static/biology/digestive.json",
+    "🦠 Human Diseases & Health": "static/biology/disease.json",
+    "🩺 Endocrine & Hormones": "static/biology/endocrine.json",
+    "🫘 Excretory System": "static/biology/excreatory.json",
+    "🧬 Genetics & Evolution": "static/biology/genetics.json",
+    "🧠 Nervous System": "static/biology/nervous.json",
+    "🚼 Reproduction System": "static/biology/reproduction.json",
+    "🫁 Respiratory System": "static/biology/respiratory.json",
+    "📦 Biology Mix Set 1": "static/biology/misc.json",
+    "📦 Biology Mix Set 2": "static/biology/misc2.json"
+  },
+  "static_history_mapping": {
+    "🏛️ Ancient India History": "static/history/ancient.json",
+    "⚔️ Medieval India History": "static/history/medievel.json",
+    "🇮🇳 Modern India History": "static/history/modern.json",
+    "🔥 1857 Revolt & Freedom Movement": "static/history/1857.json"
+  },
+  "static_polity_mapping": {
+    "📜 Preamble & Features": "static/polity/preamble.json",
+    "⚖️ Fundamental Rights & Duties": "static/polity/rights.json",
+    "🏛️ Parliament & Union": "static/polity/parliament.json",
+    "👔 Executive & President": "static/polity/executive.json",
+    "⚖️ Supreme Court & Judiciary": "static/polity/judiciary.json",
+    "🏛️ State Legislature": "static/polity/state_legis.json",
+    "🗳️ Constitutional Bodies": "static/polity/consti_bodies.json",
+    "📑 Non-Constitutional Bodies": "static/polity/nonconsti_bodies.json",
+    "🏡 Panchayati Raj & Nagarpalika": "static/polity/panchayat.json",
+    "📦 Polity Miscellaneous": "static/polity/misc.json"
+  },
+  "static_geo_mapping": {
+    "🌍 Physical Geography": "static/geography/physicalgeo.json",
+    "🌦️ Climate & Monsoons": "static/geography/climate.json",
+    "🗺️ Indian & World Mapping": "static/geography/mapping.json",
+    "👥 Human & Economic Geography": "static/geography/humangeo.json"
+  },
+  "static_eco_mapping": {
+    "📈 Economic Sectors & GDP": "static/economy/sectors.json",
+    "💰 National Income & Growth": "static/economy/national_income.json",
+    "🏦 Banking System & RBI": "static/economy/banking.json",
+    "📊 Money & Capital Market": "static/economy/moneymarket.json",
+    "📉 Inflation & Price Index": "static/economy/inflation.json",
+    "📑 Union Budget & Fiscal Policy": "static/economy/budget.json",
+    "🌐 International Organizations": "static/economy/inter_org.json",
+    "🚀 Govt Schemes & Initiatives": "static/economy/schemes.json",
+    "🔥 Most Important Economy MCQs": "static/economy/mostimp.json",
+    "📦 Economy Miscellaneous": "static/economy/misc.json"
   }
 }
