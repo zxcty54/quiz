@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -9,8 +8,6 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
-import '../services/admin_telegram_alert.dart';
-import '../utils/security_content_guard.dart';
 import 'creator_profile_screen.dart';
 import 'sectional_cbt_screen.dart';
 
@@ -27,7 +24,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   bool _isLoading = true;
   String _activeFilter = 'All';
   final Map<int, int> _userVoteState = {};
-  final Map<int, int> _userPollSelections = {}; // post_id -> selected_option_idx
+  final Map<int, int> _userPollSelections = {};
   final Set<int> _savedPostIds = {};
 
   final List<String> _filters = [
@@ -217,7 +214,11 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           TextSpan(
             text: matchText,
             style: const TextStyle(color: Color(0xFF2563EB), decoration: TextDecoration.underline, fontWeight: FontWeight.w600),
-            recognizer: TapGestureRecognizer()..onTap = () => launchUrl(Uri.parse(matchText.startsWith('http') ? matchText : 'https://$matchText'), mode: LaunchMode.externalApplication),
+            recognizer: TapGestureRecognizer()
+              ..onTap = () => launchUrl(
+                    Uri.parse(matchText.startsWith('http') ? matchText : 'https://$matchText'),
+                    mode: LaunchMode.externalApplication,
+                  ),
           ),
         );
       } else if (matchText.startsWith('#')) {
@@ -262,6 +263,57 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
         ),
         children: spans,
+      ),
+    );
+  }
+
+  // 📄 Smart Document / Drive Link Card Resolver
+  Widget _buildDocumentLinkResolver(String content, bool isDark) {
+    final match = RegExp(r'https?:\/\/[^\s]+').firstMatch(content);
+    if (match == null) return const SizedBox.shrink();
+
+    final link = match.group(0)!;
+    String label = 'Open Study Material / Handout';
+    IconData docIcon = Icons.link_rounded;
+
+    if (link.contains('drive.google.com')) {
+      label = 'Google Drive PDF Notes';
+      docIcon = Icons.picture_as_pdf_rounded;
+    } else if (link.contains('t.me')) {
+      label = 'Telegram Channel Asset / File';
+      docIcon = Icons.telegram;
+    }
+
+    return Container(
+      margin: const EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.3)),
+      ),
+      child: Row(
+        children: [
+          Icon(docIcon, color: const Color(0xFF2563EB), size: 20),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Text(
+              label,
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5),
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF2563EB),
+              foregroundColor: Colors.white,
+              visualDensity: VisualDensity.compact,
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+            ),
+            onPressed: () => launchUrl(Uri.parse(link), mode: LaunchMode.externalApplication),
+            child: const Text('Open ↗', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+          ),
+        ],
       ),
     );
   }
@@ -360,199 +412,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
-  void _openCreatePostModal() {
-    final contentCtrl = TextEditingController();
-    String selectedTag = 'Doubts ❓';
-    File? selectedImage;
-    bool isUploading = false;
-    bool isPollMode = false;
-    final opControllers = [TextEditingController(), TextEditingController(), TextEditingController(), TextEditingController()];
-    final expCtrl = TextEditingController();
-    int correctPollIdx = 0;
-    final picker = ImagePicker();
-
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setModalState) => Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(isPollMode ? '⚡ Create Interactive Daily Quiz' : '✍️ Create Community Post', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
-                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
-                  ],
-                ),
-                const SizedBox(height: 8),
-
-                DropdownButtonFormField<String>(
-                  value: selectedTag,
-                  decoration: const InputDecoration(labelText: 'Exam / Subject Tag', isDense: true, border: OutlineInputBorder()),
-                  items: _filters.where((f) => f != 'All' && f != 'Saved 📌').map((t) => DropdownMenuItem(value: t, child: Text(t))).toList(),
-                  onChanged: (val) => setModalState(() => selectedTag = val ?? selectedTag),
-                ),
-                const SizedBox(height: 10),
-
-                TextField(
-                  controller: contentCtrl,
-                  maxLines: isPollMode ? 2 : 4,
-                  decoration: InputDecoration(
-                    hintText: isPollMode ? 'Type Question headline...' : 'Share updates, #bpsc70th, @mentor or ask doubt...',
-                    border: const OutlineInputBorder(),
-                  ),
-                ),
-                const SizedBox(height: 10),
-
-                if (isPollMode) ...[
-                  ...List.generate(4, (idx) => Padding(
-                        padding: const EdgeInsets.only(bottom: 6),
-                        child: Row(
-                          children: [
-                            GestureDetector(
-                              onTap: () => setModalState(() => correctPollIdx = idx),
-                              child: CircleAvatar(
-                                radius: 14,
-                                backgroundColor: correctPollIdx == idx ? const Color(0xFF16A34A) : Colors.grey.withOpacity(0.3),
-                                child: Text(String.fromCharCode(65 + idx), style: const TextStyle(fontSize: 12, color: Colors.white, fontWeight: FontWeight.bold)),
-                              ),
-                            ),
-                            const SizedBox(width: 8),
-                            Expanded(
-                              child: TextField(
-                                controller: opControllers[idx],
-                                decoration: InputDecoration(hintText: 'Option ${String.fromCharCode(65 + idx)}', isDense: true, border: const OutlineInputBorder()),
-                              ),
-                            ),
-                          ],
-                        ),
-                      )),
-                  TextField(
-                    controller: expCtrl,
-                    decoration: const InputDecoration(labelText: 'Short Solution / Explanation', isDense: true, border: OutlineInputBorder()),
-                  ),
-                  const SizedBox(height: 10),
-                ],
-
-                if (selectedImage != null && !isPollMode) ...[
-                  Stack(
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.file(selectedImage!, width: double.infinity, height: 150, fit: BoxFit.cover),
-                      ),
-                      Positioned(
-                        top: 6,
-                        right: 6,
-                        child: GestureDetector(
-                          onTap: () => setModalState(() => selectedImage = null),
-                          child: Container(
-                            padding: const EdgeInsets.all(4),
-                            decoration: const BoxDecoration(color: Colors.black54, shape: BoxShape.circle),
-                            child: const Icon(Icons.close, color: Colors.white, size: 16),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                ],
-
-                Row(
-                  children: [
-                    OutlinedButton.icon(
-                      icon: Icon(isPollMode ? Icons.chat : Icons.poll_outlined, size: 18),
-                      label: Text(isPollMode ? 'Normal Post' : '+ Add 4-Option Quiz'),
-                      onPressed: () => setModalState(() => isPollMode = !isPollMode),
-                    ),
-                    const SizedBox(width: 8),
-                    if (!isPollMode)
-                      IconButton(
-                        icon: const Icon(Icons.photo_library_outlined, color: Color(0xFF2563EB)),
-                        onPressed: () async {
-                          final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 75);
-                          if (picked != null) setModalState(() => selectedImage = File(picked.path));
-                        },
-                      ),
-                  ],
-                ),
-                const SizedBox(height: 12),
-
-                SizedBox(
-                  width: double.infinity,
-                  height: 44,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
-                    onPressed: isUploading
-                        ? null
-                        : () async {
-                            final text = contentCtrl.text.trim();
-                            if (text.isEmpty && selectedImage == null && !isPollMode) return;
-
-                            setModalState(() => isUploading = true);
-                            String? uploadedImageUrl;
-
-                            try {
-                              if (selectedImage != null) {
-                                final bytes = await selectedImage!.readAsBytes();
-                                final fileExt = selectedImage!.path.split('.').last;
-                                final fileName = 'post_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
-
-                                await Supabase.instance.client.storage
-                                    .from('post_images')
-                                    .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true));
-                                uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
-                              }
-
-                              Map<String, dynamic>? pollJson;
-                              if (isPollMode) {
-                                pollJson = {
-                                  'options': opControllers.map((c) => c.text.trim().isEmpty ? 'Option' : c.text.trim()).toList(),
-                                  'correct_idx': correctPollIdx,
-                                  'votes': [0, 0, 0, 0],
-                                  'exp': expCtrl.text.trim(),
-                                };
-                              }
-
-                              await Supabase.instance.client.from('community_posts').insert({
-                                'creator_id': 'user',
-                                'content': text,
-                                'tag': isPollMode ? 'Daily Quiz ⚡' : selectedTag,
-                                'image_url': uploadedImageUrl,
-                                'poll_data': pollJson,
-                                'views_count': 1,
-                              });
-
-                              if (context.mounted) {
-                                Navigator.pop(ctx);
-                                _fetchFeedPosts();
-                              }
-                            } catch (e) {
-                              debugPrint("Upload Error: $e");
-                              setModalState(() => isUploading = false);
-                            }
-                          },
-                    child: isUploading
-                        ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                        : const Text('Publish to Community 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
-                  ),
-                ),
-                const SizedBox(height: 16),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
@@ -571,13 +430,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         actions: [
           IconButton(icon: const Icon(Icons.refresh_rounded), onPressed: _fetchFeedPosts),
         ],
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: const Color(0xFF2563EB),
-        foregroundColor: Colors.white,
-        icon: const Icon(Icons.edit_rounded),
-        label: const Text('Post / Quiz', style: TextStyle(fontWeight: FontWeight.bold)),
-        onPressed: _openCreatePostModal,
       ),
       body: Column(
         children: [
@@ -606,7 +458,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 : RefreshIndicator(
                     onRefresh: _fetchFeedPosts,
                     child: filteredList.isEmpty
-                        ? const Center(child: Text('No posts yet in this category.\nBe the first to share!'))
+                        ? const Center(child: Text('No posts yet in this section.\nBe the first to share!'))
                         : ListView.separated(
                             padding: EdgeInsets.zero,
                             itemCount: filteredList.length,
@@ -679,6 +531,9 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                     const SizedBox(height: 10),
 
                                     _buildRichTextContent(item['content'] ?? ''),
+
+                                    // Auto-resolve drive or notes link
+                                    _buildDocumentLinkResolver(item['content'] ?? '', isDark),
 
                                     if (pollData != null)
                                       _buildInteractivePollCard(postId, pollData, isDark),
