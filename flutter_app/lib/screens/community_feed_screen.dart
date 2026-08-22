@@ -5,53 +5,12 @@ import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 import '../models/question_model.dart';
 import '../services/admin_telegram_alert.dart';
-import 'sectional_cbt_screen.dart';
+import '../utils/security_content_guard.dart';
 import 'creator_profile_screen.dart';
-
-// 🛡️ Domain & Keyword Filter
-class SecurityContentGuard {
-  static final List<String> _bannedWords = [
-    'porn', 'xxx', 'sex', 'nude', 'adult', 'casino', 'betting', 'dream11',
-    'rummy', 'earn money', 'free recharge', 'crypto', 'hack', 'mod apk',
-    'call girl', 'lottery', 'teen patti', 'satta'
-  ];
-
-  static final List<String> _allowedTlds = [
-    '.gov.in', '.nic.in', '.ac.in', '.edu.in', '.res.in',
-    '.com', '.in', '.online', '.org', '.net'
-  ];
-
-  static String? validateContent(String text) {
-    final lower = text.toLowerCase();
-
-    for (final bad in _bannedWords) {
-      if (lower.contains(bad)) {
-        return 'Post blocked: Inappropriate or promotional content detected.';
-      }
-    }
-
-    final urlRegex = RegExp(r'((https?:\/\/|www\.)[^\s]+)', caseSensitive: false);
-    final matches = urlRegex.allMatches(text);
-
-    for (final match in matches) {
-      final rawUrl = match.group(0)!;
-      final uri = Uri.tryParse(rawUrl.startsWith('http') ? rawUrl : 'https://$rawUrl');
-
-      if (uri != null && uri.host.isNotEmpty) {
-        final host = uri.host.toLowerCase().replaceAll('www.', '');
-        final bool isAllowed = _allowedTlds.any((tld) => host.endsWith(tld));
-
-        if (!isAllowed) {
-          return 'Link blocked: Only .gov.in, .nic.in, .com, .in, .online and official portals are allowed.';
-        }
-      }
-    }
-
-    return null;
-  }
-}
+import 'sectional_cbt_screen.dart';
 
 class CommunityFeedScreen extends StatefulWidget {
   final bool isDarkMode;
@@ -284,7 +243,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
-  // 🚨 Report Abuse Action (Triggers Telegram Alert on 4+ Reports)
   void _showReportDialog(int postId, String postContent, String authorHandle) {
     String selectedReason = 'Spam or Misleading';
     final reasons = [
@@ -350,7 +308,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
                   final int totalCount = (reportList as List).length;
 
-                  // 🚨 Send Telegram Alert on 4+ Reports
                   if (totalCount >= 4) {
                     await AdminTelegramAlert.sendAbuseAlert(
                       postId: postId,
@@ -886,7 +843,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    // 👤 Header: Avatar + Creator / Aspirant Tag
                                     Row(
                                       children: [
                                         GestureDetector(
@@ -1019,7 +975,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
                                     const SizedBox(height: 12),
 
-                                    // 🗳️ Action Row: Upvote + Reply + Views + Report Abuse Button (Directly Visible)
                                     Row(
                                       children: [
                                         Container(
@@ -1093,7 +1048,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                         ),
                                         const Spacer(),
 
-                                        // 🚩 Visible "Report Abuse" Button
+                                        // 🚩 Direct Visible Report Abuse Button
                                         InkWell(
                                           onTap: () => _showReportDialog(
                                             postId,
