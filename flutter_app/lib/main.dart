@@ -11,8 +11,8 @@ void main() async {
 
   // ⚡ Supabase Initialization
   await Supabase.initialize(
-    url: 'https://YOUR_PROJECT_ID.supabase.co', // Supabase Settings -> API se URL dalein
-    anonKey: 'YOUR_ANON_PUBLIC_KEY',             // Supabase Settings -> API se anon public key dalein
+    url: 'https://tglidhzsjxfppyrmlwxf.supabase.co', // Supabase Settings -> API se URL dalein
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRnbGlkaHpzanhmcHB5cm1sd3hmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODczNzA3ODEsImV4cCI6MjEwMjk0Njc4MX0.5re2plUdwg9pCIqi7jAYR3KIHTeZ-zG4ifltLScNsbk',             // Supabase Settings -> API se anon public key dalein
   );
 
   final prefs = await SharedPreferences.getInstance();
