@@ -14,27 +14,31 @@ class CommunityFeedScreen extends StatefulWidget {
 }
 
 class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
-  List<dynamic> _feedItems = [];
+  List<dynamic> _posts = [];
   bool _isLoading = true;
+  String _activeFilter = 'All';
+  final Map<int, int> _userVoteState = {}; // post_id -> 1 (up), -1 (down), 0 (none)
+
+  final List<String> _filters = ['All', 'Exam Gossip 🔥', 'Current Affairs 📰', 'Doubts ❓', 'Mock Tests ⚡'];
 
   @override
   void initState() {
     super.initState();
-    _fetchFeedData();
+    _fetchFeedPosts();
   }
 
-  Future<void> _fetchFeedData() async {
+  Future<void> _fetchFeedPosts() async {
     setState(() => _isLoading = true);
     try {
       final res = await Supabase.instance.client
-          .from('creator_mocks')
-          .select('*, creator_profiles!inner(name, handle_id, subject_specialty, telegram_handle, is_blocked)')
+          .from('community_posts')
+          .select('*, creator_profiles!inner(name, handle_id, subject_specialty, telegram_handle, followers_count, is_blocked), creator_mocks(*)')
           .eq('creator_profiles.is_blocked', false)
           .order('created_at', ascending: false);
 
       if (mounted) {
         setState(() {
-          _feedItems = res;
+          _posts = res;
           _isLoading = false;
         });
       }
@@ -43,7 +47,49 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     }
   }
 
-  void _startMock(Map<String, dynamic> mock) {
+  void _handleVote(int index, bool isUpvote) {
+    final post = _posts[index];
+    final int postId = post['id'];
+    int currentVote = _userVoteState[postId] ?? 0;
+    int upDelta = 0;
+    int downDelta = 0;
+
+    setState(() {
+      if (isUpvote) {
+        if (currentVote == 1) {
+          _userVoteState[postId] = 0;
+          upDelta = -1;
+        } else {
+          if (currentVote == -1) downDelta = -1;
+          _userVoteState[postId] = 1;
+          upDelta = 1;
+        }
+      } else {
+        if (currentVote == -1) {
+          _userVoteState[postId] = 0;
+          downDelta = -1;
+        } else {
+          if (currentVote == 1) upDelta = -1;
+          _userVoteState[postId] = -1;
+          downDelta = 1;
+        }
+      }
+
+      post['upvotes'] = (post['upvotes'] ?? 0) + upDelta;
+      post['downvotes'] = (post['downvotes'] ?? 0) + downDelta;
+    });
+
+    Supabase.instance.client
+        .from('community_posts')
+        .update({
+          'upvotes': post['upvotes'],
+          'downvotes': post['downvotes'],
+        })
+        .eq('id', postId)
+        .then((_) {});
+  }
+
+  void _launchAttachedMock(Map<String, dynamic> mock) {
     final List rawList = mock['questions_json'] ?? [];
     if (rawList.isEmpty) return;
 
@@ -56,18 +102,11 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
     if (qList.isEmpty) return;
 
-    // Increment Attempt count
-    Supabase.instance.client
-        .from('creator_mocks')
-        .update({'attempts_count': (mock['attempts_count'] ?? 0) + 1})
-        .eq('id', mock['id'])
-        .then((_) {});
-
     Navigator.push(
       context,
       MaterialPageRoute(
         builder: (_) => SectionalCbtScreen(
-          testTitle: mock['title'] ?? 'Community Mock',
+          testTitle: mock['title'] ?? 'Community Mock Drill',
           questions: qList,
           subFolder: (mock['subject'] ?? 'general').toString().toLowerCase(),
         ),
@@ -75,13 +114,65 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
-  void _openTelegram(String? urlOrHandle) async {
-    if (urlOrHandle == null || urlOrHandle.isEmpty) return;
-    String cleanUrl = urlOrHandle.startsWith('http') ? urlOrHandle : 'https://t.me/$urlOrHandle';
-    final uri = Uri.parse(cleanUrl);
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
-    }
+  void _openCreatePostModal() {
+    final contentCtrl = TextEditingController();
+    String selectedTag = 'Exam Gossip 🔥';
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setModalState) => Padding(
+          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text('✍️ Create Post / Gossip', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+              const SizedBox(height: 10),
+              DropdownButton<String>(
+                value: selectedTag,
+                isExpanded: true,
+                items: ['Exam Gossip 🔥', 'Current Affairs 📰', 'Doubts ❓', 'Strategy 💡']
+                    .map((t) => DropdownMenuItem(value: t, child: Text(t)))
+                    .toList(),
+                onChanged: (val) => setModalState(() => selectedTag = val ?? selectedTag),
+              ),
+              const SizedBox(height: 10),
+              TextField(
+                controller: contentCtrl,
+                maxLines: 5,
+                decoration: const InputDecoration(
+                  hintText: 'Share exam updates, cut-off discussion, notes or doubts...',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              const SizedBox(height: 14),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+                  onPressed: () async {
+                    if (contentCtrl.text.trim().isEmpty) return;
+                    Navigator.pop(ctx);
+                    await Supabase.instance.client.from('community_posts').insert({
+                      'creator_id': 'test', // Handle ID of active logged in creator
+                      'content': contentCtrl.text.trim(),
+                      'tag': selectedTag,
+                      'views_count': 1,
+                    });
+                    _fetchFeedPosts();
+                  },
+                  child: const Text('Post to Community 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                ),
+              ),
+              const SizedBox(height: 16),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   @override
@@ -89,159 +180,254 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     final isDark = widget.isDarkMode;
     final cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
 
+    final filteredList = _activeFilter == 'All'
+        ? _posts
+        : _posts.where((p) => p['tag'].toString().contains(_activeFilter.split(' ').first)).toList();
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Community & Creator Hub', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+        title: const Text('Community Feed', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh_rounded),
-            tooltip: 'Refresh Feed',
-            onPressed: _fetchFeedData,
+            onPressed: _fetchFeedPosts,
           ),
         ],
       ),
-      body: _isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : RefreshIndicator(
-              onRefresh: _fetchFeedData,
-              child: _feedItems.isEmpty
-                  ? const Center(
-                      child: Text('No community posts or tests yet.\nBe the first creator to post!'),
-                    )
-                  : ListView.builder(
-                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                      itemCount: _feedItems.length,
-                      itemBuilder: (context, idx) {
-                        final item = _feedItems[idx];
-                        final creator = item['creator_profiles'] ?? {};
-                        final List qList = item['questions_json'] ?? [];
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: const Color(0xFF2563EB),
+        foregroundColor: Colors.white,
+        icon: const Icon(Icons.edit_rounded),
+        label: const Text('Post', style: TextStyle(fontWeight: FontWeight.bold)),
+        onPressed: _openCreatePostModal,
+      ),
+      body: Column(
+        children: [
+          // 🏷️ Filter Chips Bar (Twitter/Reddit Tab style)
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            child: Row(
+              children: _filters.map((f) {
+                final isSelected = _activeFilter == f;
+                return Padding(
+                  padding: const EdgeInsets.only(right: 6),
+                  child: ChoiceChip(
+                    label: Text(f, style: TextStyle(fontSize: 12, fontWeight: isSelected ? FontWeight.bold : FontWeight.normal)),
+                    selected: isSelected,
+                    onSelected: (_) => setState(() => _activeFilter = f),
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
+          const Divider(height: 1),
 
-                        return Card(
-                          margin: const EdgeInsets.only(bottom: 14),
-                          color: cardBg,
-                          elevation: 2,
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-                          child: Padding(
-                            padding: const EdgeInsets.all(14),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    GestureDetector(
-                                      onTap: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (_) => CreatorProfileScreen(
-                                              creatorHandle: creator['handle_id'] ?? '',
-                                              isDarkMode: isDark,
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                      child: CircleAvatar(
-                                        radius: 20,
-                                        backgroundColor: const Color(0xFF2563EB),
-                                        child: Text(
-                                          (creator['name'] ?? 'E')[0].toUpperCase(),
-                                          style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(width: 10),
-                                    Expanded(
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+          Expanded(
+            child: _isLoading
+                ? const Center(child: CircularProgressIndicator())
+                : RefreshIndicator(
+                    onRefresh: _fetchFeedPosts,
+                    child: filteredList.isEmpty
+                        ? const Center(child: Text('No posts yet in this section.\nBe the first to share!'))
+                        : ListView.builder(
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                            itemCount: filteredList.length,
+                            itemBuilder: (context, idx) {
+                              final item = filteredList[idx];
+                              final creator = item['creator_profiles'] ?? {};
+                              final attachedMock = item['creator_mocks'];
+                              final postId = item['id'];
+                              final userVote = _userVoteState[postId] ?? 0;
+                              final int score = (item['upvotes'] ?? 0) - (item['downvotes'] ?? 0);
+
+                              return Card(
+                                margin: const EdgeInsets.only(bottom: 12),
+                                color: cardBg,
+                                elevation: 1.5,
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(12),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      // 👤 Author Details + Followers + Tag
+                                      Row(
                                         children: [
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (_) => CreatorProfileScreen(
-                                                    creatorHandle: creator['handle_id'] ?? '',
-                                                    isDarkMode: isDark,
-                                                  ),
+                                          GestureDetector(
+                                            onTap: () => Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (_) => CreatorProfileScreen(
+                                                  creatorHandle: creator['handle_id'] ?? '',
+                                                  isDarkMode: isDark,
                                                 ),
-                                              );
-                                            },
-                                            child: Text(
-                                              creator['name'] ?? 'Educator',
-                                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                                              ),
+                                            ),
+                                            child: CircleAvatar(
+                                              radius: 18,
+                                              backgroundColor: const Color(0xFF2563EB),
+                                              child: Text(
+                                                (creator['name'] ?? 'U')[0].toUpperCase(),
+                                                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                                              ),
                                             ),
                                           ),
-                                          Text(
-                                            creator['subject_specialty'] ?? 'Mentor',
-                                            style: TextStyle(color: Colors.grey[600], fontSize: 11),
+                                          const SizedBox(width: 8),
+                                          Expanded(
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      creator['name'] ?? 'Aspirant',
+                                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                                                    ),
+                                                    const SizedBox(width: 4),
+                                                    Text(
+                                                      '@${creator['handle_id'] ?? 'user'}',
+                                                      style: TextStyle(color: Colors.grey[500], fontSize: 11),
+                                                    ),
+                                                  ],
+                                                ),
+                                                Text(
+                                                  '${creator['followers_count'] ?? 0} Followers • ${creator['subject_specialty'] ?? 'Mentor'}',
+                                                  style: TextStyle(color: Colors.grey[600], fontSize: 10.5),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          Container(
+                                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                                            decoration: BoxDecoration(
+                                              color: const Color(0xFF2563EB).withOpacity(0.08),
+                                              borderRadius: BorderRadius.circular(6),
+                                            ),
+                                            child: Text(
+                                              item['tag'] ?? 'General',
+                                              style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold),
+                                            ),
                                           ),
                                         ],
                                       ),
-                                    ),
-                                    if (creator['telegram_handle'] != null && creator['telegram_handle'].toString().isNotEmpty)
-                                      IconButton(
-                                        icon: const Icon(Icons.telegram, color: Color(0xFF0088CC), size: 22),
-                                        tooltip: 'Join Channel',
-                                        onPressed: () => _openTelegram(creator['telegram_handle']),
+                                      const SizedBox(height: 10),
+
+                                      // 📝 Post Content (Twitter/Reddit Text)
+                                      Text(
+                                        item['content'] ?? '',
+                                        style: const TextStyle(fontSize: 14, height: 1.4),
                                       ),
-                                  ],
-                                ),
-                                const Divider(height: 18),
-                                Row(
-                                  children: [
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                                      decoration: BoxDecoration(
-                                        color: const Color(0xFF2563EB).withOpacity(0.12),
-                                        borderRadius: BorderRadius.circular(6),
-                                      ),
-                                      child: Text(
-                                        item['subject'] ?? 'General',
-                                        style: const TextStyle(color: Color(0xFF2563EB), fontSize: 11, fontWeight: FontWeight.bold),
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                    Row(
-                                      children: [
-                                        const Icon(Icons.people_outline, size: 14, color: Colors.grey),
-                                        const SizedBox(width: 4),
-                                        Text('${item['attempts_count'] ?? 0} Attempts', style: const TextStyle(fontSize: 11, color: Colors.grey)),
+                                      const SizedBox(height: 10),
+
+                                      // ⚡ Attached Mock Card (Agar mock test share kiya ho)
+                                      if (attachedMock != null) ...[
+                                        Container(
+                                          padding: const EdgeInsets.all(12),
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFF2563EB).withOpacity(0.05),
+                                            borderRadius: BorderRadius.circular(10),
+                                            border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.2)),
+                                          ),
+                                          child: Row(
+                                            children: [
+                                              const Icon(Icons.quiz_rounded, color: Color(0xFF2563EB), size: 28),
+                                              const SizedBox(width: 10),
+                                              Expanded(
+                                                child: Column(
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(attachedMock['title'] ?? 'Mock Drill', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                                                    Text('${(attachedMock['questions_json'] as List?)?.length ?? 0} Qs • ${attachedMock['duration_mins']} Mins', style: TextStyle(color: Colors.grey[600], fontSize: 11)),
+                                                  ],
+                                                ),
+                                              ),
+                                              ElevatedButton(
+                                                style: ElevatedButton.styleFrom(
+                                                  backgroundColor: const Color(0xFF2563EB),
+                                                  foregroundColor: Colors.white,
+                                                  visualDensity: VisualDensity.compact,
+                                                ),
+                                                onPressed: () => _launchAttachedMock(attachedMock),
+                                                child: const Text('Start', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        const SizedBox(height: 10),
                                       ],
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 8),
-                                Text(
-                                  item['title'] ?? 'Mock Test',
-                                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                                ),
-                                const SizedBox(height: 4),
-                                Text(
-                                  'Contains ${qList.length} Questions • ${item['duration_mins']} Minutes Test',
-                                  style: TextStyle(color: Colors.grey[600], fontSize: 12),
-                                ),
-                                const SizedBox(height: 14),
-                                SizedBox(
-                                  width: double.infinity,
-                                  height: 40,
-                                  child: ElevatedButton.icon(
-                                    icon: const Icon(Icons.play_arrow_rounded, size: 20),
-                                    label: const Text('Attempt Mock Drill', style: TextStyle(fontWeight: FontWeight.bold)),
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: const Color(0xFF2563EB),
-                                      foregroundColor: Colors.white,
-                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                                    ),
-                                    onPressed: () => _startMock(item),
+
+                                      // 🗳️ Bottom Actions: Reddit Upvote/Downvote + Views Seen
+                                      Row(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.grey.withOpacity(0.12),
+                                              borderRadius: BorderRadius.circular(20),
+                                            ),
+                                            child: Row(
+                                              children: [
+                                                IconButton(
+                                                  icon: Icon(
+                                                    Icons.arrow_upward_rounded,
+                                                    size: 18,
+                                                    color: userVote == 1 ? const Color(0xFFFF4500) : Colors.grey, // Reddit Orange
+                                                  ),
+                                                  onPressed: () => _handleVote(idx, true),
+                                                  visualDensity: VisualDensity.compact,
+                                                ),
+                                                Text(
+                                                  '$score',
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 12,
+                                                    color: userVote == 1
+                                                        ? const Color(0xFFFF4500)
+                                                        : (userVote == -1 ? const Color(0xFF7193FF) : null),
+                                                  ),
+                                                ),
+                                                IconButton(
+                                                  icon: Icon(
+                                                    Icons.arrow_downward_rounded,
+                                                    size: 18,
+                                                    color: userVote == -1 ? const Color(0xFF7193FF) : Colors.grey, // Reddit Periwinkle
+                                                  ),
+                                                  onPressed: () => _handleVote(idx, false),
+                                                  visualDensity: VisualDensity.compact,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          const SizedBox(width: 14),
+
+                                          // 👁️ Views / Seen Count
+                                          Row(
+                                            children: [
+                                              const Icon(Icons.remove_red_eye_outlined, size: 15, color: Colors.grey),
+                                              const SizedBox(width: 4),
+                                              Text('${item['views_count'] ?? 120}', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
+                                            ],
+                                          ),
+                                          const Spacer(),
+
+                                          // Share Icon
+                                          IconButton(
+                                            icon: const Icon(Icons.share_outlined, size: 18, color: Colors.grey),
+                                            onPressed: () {},
+                                            visualDensity: VisualDensity.compact,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
                                   ),
                                 ),
-                              ],
-                            ),
+                              );
+                            },
                           ),
-                        );
-                      },
-                    ),
-            ),
+                  ),
+          ),
+        ],
+      ),
     );
   }
 }
