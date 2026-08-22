@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
@@ -35,7 +36,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     try {
       final sixtyDaysAgo = DateTime.now().subtract(const Duration(days: 60)).toIso8601String();
 
-      // 🚨 Fix: Left join 'creator_profiles(...)' instead of '!inner' so Aspirants' posts also load!
       final res = await Supabase.instance.client
           .from('community_posts')
           .select('*, creator_profiles(name, handle_id, subject_specialty, telegram_handle, followers_count, is_blocked), creator_mocks(*)')
@@ -52,6 +52,111 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       debugPrint("Feed Fetch Error: $e");
       if (mounted) setState(() => _isLoading = false);
     }
+  }
+
+  Future<void> _launchExternalUrl(String url) async {
+    String cleanUrl = url.startsWith('http') ? url : 'https://$url';
+    final uri = Uri.parse(cleanUrl);
+    try {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    } catch (e) {
+      debugPrint("Could not launch $url: $e");
+    }
+  }
+
+  // 🔗 Clickable Links, #Hashtags & @Mentions RichText Builder
+  Widget _buildRichTextContent(String text, {double fontSize = 14.5}) {
+    final RegExp exp = RegExp(r'((https?:\/\/|www\.)[^\s]+)|(#[a-zA-Z0-9_]+)|(@[a-zA-Z0-9_]+)');
+    final matches = exp.allMatches(text);
+
+    if (matches.isEmpty) {
+      return Text(text, style: TextStyle(fontSize: fontSize, height: 1.45));
+    }
+
+    List<InlineSpan> spans = [];
+    int lastMatchEnd = 0;
+
+    for (final match in matches) {
+      if (match.start > lastMatchEnd) {
+        spans.add(TextSpan(text: text.substring(lastMatchEnd, match.start)));
+      }
+
+      final matchText = match.group(0)!;
+
+      if (matchText.startsWith('http') || matchText.startsWith('www.')) {
+        spans.add(
+          TextSpan(
+            text: matchText,
+            style: const TextStyle(color: Color(0xFF2563EB), decoration: TextDecoration.underline, fontWeight: FontWeight.w600),
+            recognizer: TapGestureRecognizer()..onTap = () => _launchExternalUrl(matchText),
+          ),
+        );
+      } else if (matchText.startsWith('#')) {
+        spans.add(
+          TextSpan(
+            text: matchText,
+            style: const TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold),
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Tag: $matchText')));
+              },
+          ),
+        );
+      } else if (matchText.startsWith('@')) {
+        final handle = matchText.substring(1);
+        spans.add(
+          TextSpan(
+            text: matchText,
+            style: const TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold),
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => CreatorProfileScreen(creatorHandle: handle, isDarkMode: widget.isDarkMode),
+                  ),
+                );
+              },
+          ),
+        );
+      }
+
+      lastMatchEnd = match.end;
+    }
+
+    if (lastMatchEnd < text.length) {
+      spans.add(TextSpan(text: text.substring(lastMatchEnd)));
+    }
+
+    return RichText(
+      text: TextSpan(
+        style: TextStyle(
+          fontSize: fontSize,
+          height: 1.45,
+          color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+        ),
+        children: spans,
+      ),
+    );
+  }
+
+  void _sendNotification({
+    required String receiverId,
+    required String senderName,
+    required int postId,
+    required String type,
+    required String message,
+  }) async {
+    if (receiverId.isEmpty || receiverId == 'user') return;
+    try {
+      await Supabase.instance.client.from('user_notifications').insert({
+        'receiver_id': receiverId,
+        'sender_name': senderName,
+        'post_id': postId,
+        'type': type,
+        'message': message,
+      });
+    } catch (_) {}
   }
 
   void _handleVote(int index, bool isUpvote) {
@@ -71,6 +176,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           if (currentVote == -1) downDelta = -1;
           _userVoteState[postId] = 1;
           upDelta = 1;
+
+          _sendNotification(
+            receiverId: post['creator_id'] ?? '',
+            senderName: 'An Aspirant',
+            postId: postId,
+            type: 'upvote',
+            message: 'upvoted your community post 🚀',
+          );
         }
       } else {
         if (currentVote == -1) {
@@ -180,7 +293,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
-  void _openCommentsSheet(int postId, String postTitle) {
+  void _openCommentsSheet(int postId, String postAuthorId) {
     final commentCtrl = TextEditingController();
     int? replyingToCommentId;
     String? replyingToName;
@@ -260,7 +373,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                   ],
                                 ),
                                 const SizedBox(height: 4),
-                                Text(c['content'] ?? '', style: const TextStyle(fontSize: 13)),
+                                _buildRichTextContent(c['content'] ?? '', fontSize: 13),
                               ],
                             ),
                           );
@@ -307,6 +420,15 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               'content': text,
                               'parent_comment_id': replyingToCommentId,
                             });
+
+                            _sendNotification(
+                              receiverId: postAuthorId,
+                              senderName: 'An Aspirant',
+                              postId: postId,
+                              type: 'reply',
+                              message: 'replied: "${text.length > 30 ? '${text.substring(0, 30)}...' : text}"',
+                            );
+
                             commentCtrl.clear();
                             setSheetState(() {
                               replyingToCommentId = null;
@@ -315,12 +437,11 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               isSubmitting = false;
                             });
                           } catch (e) {
-                            debugPrint("Comment Error: $e");
                             setSheetState(() => isSubmitting = false);
                           }
                         },
                         decoration: InputDecoration(
-                          hintText: replyingToName != null ? 'Reply to @$replyingToName...' : 'Add a helpful reply...',
+                          hintText: replyingToName != null ? 'Reply to @$replyingToName...' : 'Add a helpful reply or link...',
                           border: InputBorder.none,
                         ),
                       ),
@@ -343,6 +464,15 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                   'content': text,
                                   'parent_comment_id': replyingToCommentId,
                                 });
+
+                                _sendNotification(
+                                  receiverId: postAuthorId,
+                                  senderName: 'An Aspirant',
+                                  postId: postId,
+                                  type: 'reply',
+                                  message: 'replied: "${text.length > 30 ? '${text.substring(0, 30)}...' : text}"',
+                                );
+
                                 commentCtrl.clear();
                                 setSheetState(() {
                                   replyingToCommentId = null;
@@ -351,7 +481,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                   isSubmitting = false;
                                 });
                               } catch (e) {
-                                debugPrint("Comment Error: $e");
                                 setSheetState(() => isSubmitting = false);
                               }
                             },
@@ -414,7 +543,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                   controller: contentCtrl,
                   maxLines: 4,
                   decoration: const InputDecoration(
-                    hintText: 'Share exam updates, question doubt, cut-off gossip...',
+                    hintText: 'Share updates, #bpsc70th, @mentor or attach image...',
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -458,9 +587,13 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                       ),
                       onPressed: () async {
-                        final pickedFile = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
-                        if (pickedFile != null) {
-                          setModalState(() => selectedImage = File(pickedFile.path));
+                        try {
+                          final pickedFile = await picker.pickImage(source: ImageSource.gallery, imageQuality: 75);
+                          if (pickedFile != null) {
+                            setModalState(() => selectedImage = File(pickedFile.path));
+                          }
+                        } catch (e) {
+                          debugPrint("Image Pick Error: $e");
                         }
                       },
                     ),
@@ -469,9 +602,13 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                       icon: const Icon(Icons.camera_alt_outlined, color: Color(0xFF2563EB)),
                       tooltip: 'Take Photo',
                       onPressed: () async {
-                        final pickedFile = await picker.pickImage(source: ImageSource.camera, imageQuality: 80);
-                        if (pickedFile != null) {
-                          setModalState(() => selectedImage = File(pickedFile.path));
+                        try {
+                          final pickedFile = await picker.pickImage(source: ImageSource.camera, imageQuality: 75);
+                          if (pickedFile != null) {
+                            setModalState(() => selectedImage = File(pickedFile.path));
+                          }
+                        } catch (e) {
+                          debugPrint("Camera Pick Error: $e");
                         }
                       },
                     ),
@@ -506,16 +643,15 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
                             try {
                               if (selectedImage != null) {
+                                final fileName = 'doubt_${DateTime.now().millisecondsSinceEpoch}.jpg';
                                 final bytes = await selectedImage!.readAsBytes();
-                                final fileExt = selectedImage!.path.split('.').last;
-                                final fileName = 'post_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
 
                                 await Supabase.instance.client.storage
                                     .from('post_images')
                                     .uploadBinary(
                                       fileName,
                                       bytes,
-                                      fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true),
+                                      fileOptions: const FileOptions(contentType: 'image/jpeg', upsert: true),
                                     );
                                 uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
                               }
@@ -532,9 +668,18 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 Navigator.pop(ctx);
                                 _fetchFeedPosts();
                               }
-                            } catch (e) {
-                              debugPrint("Post Upload Error: $e");
+                            } catch (err) {
+                              debugPrint("Post Upload Failed: $err");
                               setModalState(() => isUploading = false);
+                              if (context.mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text('Upload Error: $err. Check if bucket "post_images" is Public in Supabase.'),
+                                    backgroundColor: Colors.red.shade800,
+                                    duration: const Duration(seconds: 4),
+                                  ),
+                                );
+                              }
                             }
                           },
                     child: isUploading
@@ -725,10 +870,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                     ),
                                     const SizedBox(height: 10),
 
-                                    Text(
-                                      item['content'] ?? '',
-                                      style: const TextStyle(fontSize: 14.5, height: 1.45),
-                                    ),
+                                    _buildRichTextContent(item['content'] ?? ''),
 
                                     if (imgUrl != null && imgUrl.isNotEmpty) ...[
                                       const SizedBox(height: 10),
@@ -827,7 +969,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                         const SizedBox(width: 12),
 
                                         InkWell(
-                                          onTap: () => _openCommentsSheet(postId, item['content'] ?? ''),
+                                          onTap: () => _openCommentsSheet(postId, item['creator_id'] ?? 'user'),
                                           borderRadius: BorderRadius.circular(20),
                                           child: Container(
                                             height: 32,
