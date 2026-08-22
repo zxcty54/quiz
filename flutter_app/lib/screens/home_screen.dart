@@ -314,64 +314,105 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         ],
       ),
       drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
+        child: Column(
           children: [
-            DrawerHeader(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: const [
-                  Text('MockTester', style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold)),
-                  SizedBox(height: 4),
-                  Text('Aspirants & Educators Hub', style: TextStyle(color: Colors.white70, fontSize: 13)),
+            Expanded(
+              child: ListView(
+                padding: EdgeInsets.zero,
+                children: [
+                  DrawerHeader(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: const [
+                        Text('MockTester', style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold)),
+                        SizedBox(height: 4),
+                        Text('Aspirants & Educators Hub', style: TextStyle(color: Colors.white70, fontSize: 13)),
+                      ],
+                    ),
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.edit_note_rounded, color: Color(0xFF2563EB)),
+                    title: const Text('Creator Studio / Mock Builder', style: TextStyle(fontWeight: FontWeight.bold)),
+                    subtitle: const Text('Create & Publish Mock Tests'),
+                    trailing: const Icon(Icons.arrow_forward_ios, size: 14),
+                    onTap: () {
+                      Navigator.pop(context);
+                      _openCreatorStudio();
+                    },
+                  ),
+                  const Divider(),
+                  ListTile(
+                    leading: const Icon(Icons.dynamic_feed_rounded, color: Color(0xFF2563EB)),
+                    title: const Text('Community Feed'),
+                    onTap: () {
+                      Navigator.pop(context);
+                      setState(() => _currentBottomIndex = 3);
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.school_outlined),
+                    title: const Text('Learn Hub'),
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const LearnHubScreen()),
+                      ).then((_) => _loadRealtimeProgress());
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.person_outline),
+                    title: const Text('My Profile'),
+                    onTap: () {
+                      Navigator.pop(context);
+                      setState(() => _currentBottomIndex = 4);
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.privacy_tip_outlined, color: Colors.grey),
+                    title: const Text('Privacy Policy', style: TextStyle(fontSize: 13.5)),
+                    onTap: () {
+                      Navigator.pop(context);
+                      _openWebsiteUrl('Privacy Policy', 'https://mocktester.online/privacy-policy.html');
+                    },
+                  ),
                 ],
               ),
             ),
-            ListTile(
-              leading: const Icon(Icons.edit_note_rounded, color: Color(0xFF2563EB)),
-              title: const Text('Creator Studio / Mock Builder', style: TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: const Text('Create & Publish Mock Tests'),
-              trailing: const Icon(Icons.arrow_forward_ios, size: 14),
-              onTap: () {
-                Navigator.pop(context);
-                _openCreatorStudio();
-              },
-            ),
-            const Divider(),
-            ListTile(
-              leading: const Icon(Icons.dynamic_feed_rounded, color: Color(0xFF2563EB)),
-              title: const Text('Community Feed'),
-              onTap: () {
-                Navigator.pop(context);
-                setState(() => _currentBottomIndex = 3);
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.school_outlined),
-              title: const Text('Learn Hub'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => const LearnHubScreen()),
-                ).then((_) => _loadRealtimeProgress());
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.person_outline),
-              title: const Text('My Profile'),
-              onTap: () {
-                Navigator.pop(context);
-                setState(() => _currentBottomIndex = 4);
-              },
+            // ⚖️ Google Play Store Mandatory Non-Government Disclaimer
+            Container(
+              margin: const EdgeInsets.all(12),
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: _isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: Colors.grey.withOpacity(0.2)),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Icon(Icons.info_outline_rounded, size: 16, color: Colors.amber),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      'Disclaimer: MockTester is an independent educational prep platform and is NOT affiliated with, endorsed by, or representing any government entity (BPSC, SSC, etc.).',
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: _isDarkMode ? Colors.white60 : Colors.black87,
+                        height: 1.3,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
