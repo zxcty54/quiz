@@ -3,7 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 class AdminTelegramAlert {
-  // 🔑 Apne Telegram Bot Token aur Admin Chat ID se replace karein
   static const String _botToken = "1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo";
   static const String _adminChatId = "785009742";
 
