@@ -9,7 +9,8 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
 import '../services/ai_explainer_service.dart';
 import '../services/telegram_tracker.dart';
-import 'creator_auth_screen.dart'; // 👈 Creator Login / Studio Screen
+import 'community_feed_screen.dart'; // 👈 Dedicated Community Feed
+import 'creator_auth_screen.dart';   // 👈 Creator Studio Portal
 import 'learn_hub_screen.dart';
 import 'profile_screen.dart';
 import 'revision_practice_screen.dart';
@@ -32,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
   Map<String, dynamic> _appConfig = {};
   Map<String, dynamic> _homeData = {};
-  Map<String, dynamic> _subjectMapping = {}; 
+  Map<String, dynamic> _subjectMapping = {};
   Map<String, dynamic> _sectionalData = {};
 
   String _lastLearnTitle = "Cell Biology & Organelles";
@@ -276,12 +277,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         backgroundColor: cardColor,
         elevation: 0,
         actions: [
-          // 🚀 CREATOR STUDIO BUTTON IN APPBAR
-          IconButton(
-            icon: const Icon(Icons.edit_note_rounded, color: Color(0xFF2563EB), size: 26),
-            tooltip: "Creator Studio / Mock Builder",
-            onPressed: _openCreatorStudio,
-          ),
           IconButton(
             icon: const Icon(Icons.bolt_rounded, color: Colors.amber, size: 22),
             tooltip: "Instant Force Update",
@@ -343,7 +338,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             ListTile(
               leading: const Icon(Icons.edit_note_rounded, color: Color(0xFF2563EB)),
               title: const Text('Creator Studio / Mock Builder', style: TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: const Text('Publish Mock Tests & Mnemonics'),
+              subtitle: const Text('Create & Publish Mock Tests'),
               trailing: const Icon(Icons.arrow_forward_ios, size: 14),
               onTap: () {
                 Navigator.pop(context);
@@ -352,11 +347,22 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             ),
             const Divider(),
             ListTile(
+              leading: const Icon(Icons.dynamic_feed_rounded, color: Color(0xFF2563EB)),
+              title: const Text('Community Feed'),
+              onTap: () {
+                Navigator.pop(context);
+                setState(() => _currentBottomIndex = 3);
+              },
+            ),
+            ListTile(
               leading: const Icon(Icons.school_outlined),
               title: const Text('Learn Hub'),
               onTap: () {
                 Navigator.pop(context);
-                setState(() => _currentBottomIndex = 3);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const LearnHubScreen()),
+                ).then((_) => _loadRealtimeProgress());
               },
             ),
             ListTile(
@@ -373,6 +379,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       body: IndexedStack(
         index: _currentBottomIndex,
         children: [
+          // Tab 0: Home
           HomeTab(
             appConfig: _appConfig,
             homeData: _homeData,
@@ -383,20 +390,33 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             lastNextTopic: _lastNextTopic,
             hasLearningHistory: _hasLearningHistory,
             onTapUrl: _openWebsiteUrl,
-            onNavigateToLearn: () => setState(() => _currentBottomIndex = 3),
+            onNavigateToLearn: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const LearnHubScreen()),
+              ).then((_) => _loadRealtimeProgress());
+            },
           ),
+
+          // Tab 1: Revision
           RevisionTab(
             key: ValueKey('rev_${_subjectMapping.keys.length}'),
             subjectMapping: _subjectMapping,
             onLaunchPractice: _launchRevisionPractice,
           ),
+
+          // Tab 2: Sectional
           SectionalTab(
             key: ValueKey('sec_${_sectionalData.keys.join('_')}'),
             sectionalData: _sectionalData,
             isDarkMode: _isDarkMode,
             onLaunchCbtMock: _launchCbtMock,
           ),
-          const LearnHubScreen(),
+
+          // Tab 3: Dedicated Community & Creator Feed Screen
+          CommunityFeedScreen(isDarkMode: _isDarkMode),
+
+          // Tab 4: Profile
           ProfileScreen(
             isHindi: _isHindi,
             isDarkMode: _isDarkMode,
@@ -414,11 +434,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           if (idx == 2) _fetchSectionalDataLive();
         },
         destinations: const [
-          NavigationDestination(icon: Icon(Icons.home_outlined), label: 'Home'),
-          NavigationDestination(icon: Icon(Icons.menu_book_outlined), label: 'Revision'),
-          NavigationDestination(icon: Icon(Icons.assignment_outlined), label: 'Sectional'),
-          NavigationDestination(icon: Icon(Icons.school_outlined), label: 'Learn'),
-          NavigationDestination(icon: Icon(Icons.person_outline_rounded), label: 'Profile'),
+          NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home_rounded), label: 'Home'),
+          NavigationDestination(icon: Icon(Icons.menu_book_outlined), selectedIcon: Icon(Icons.menu_book_rounded), label: 'Revision'),
+          NavigationDestination(icon: Icon(Icons.assignment_outlined), selectedIcon: Icon(Icons.assignment_rounded), label: 'Sectional'),
+          NavigationDestination(icon: Icon(Icons.dynamic_feed_outlined), selectedIcon: Icon(Icons.dynamic_feed_rounded), label: 'Community'),
+          NavigationDestination(icon: Icon(Icons.person_outline_rounded), selectedIcon: Icon(Icons.person_rounded), label: 'Profile'),
         ],
       ),
     );
