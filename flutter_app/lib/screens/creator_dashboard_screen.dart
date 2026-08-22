@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../services/admin_telegram_alert.dart';
 import 'creator_mock_builder_screen.dart';
 import 'creator_profile_screen.dart';
 
@@ -93,8 +94,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     }
   }
 
-  // 📢 Working Broadcast Modal (Daily Quiz, PDF Handouts, Exam Alerts)
-  void _openBroadcastModal(String type) {
+  // Creator Creation Modal (Daily Quiz & PDF Notes Only)
+  void _openCreationModal(String type) {
     final textCtrl = TextEditingController();
     final linkCtrl = TextEditingController();
     final expCtrl = TextEditingController();
@@ -128,9 +129,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      isPoll
-                          ? '⚡ Publish Daily Rapid Quiz'
-                          : (type == 'note' ? '📚 Share PDF Notes & Handouts' : '📢 Broadcast Exam Alert / Gossip'),
+                      isPoll ? '⚡ Publish Daily Rapid Quiz' : '📚 Share PDF Notes & Handouts',
                       style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5),
                     ),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
@@ -143,15 +142,13 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   decoration: InputDecoration(
                     hintText: isPoll
                         ? 'Type Quiz Question text here...'
-                        : (type == 'note'
-                            ? 'Explain topic or notes headline...'
-                            : 'Type official exam alert, syllabus change, or cut-off info...'),
+                        : 'Explain topic or notes headline...',
                     border: const OutlineInputBorder(),
                   ),
                 ),
                 const SizedBox(height: 10),
 
-                // Quiz Options Layout
+                // ⚡ 1. Daily Quiz Options Setup
                 if (isPoll) ...[
                   const Text('Options & Correct Answer (Tap letter to set correct):',
                       style: TextStyle(fontSize: 11, color: Colors.grey)),
@@ -204,7 +201,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   ),
                 ],
 
-                // Study Material Link
+                // 📚 2. PDF Handouts Link Setup
                 if (type == 'note') ...[
                   TextField(
                     controller: linkCtrl,
@@ -249,7 +246,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
                             String content = text;
                             if (type == 'note' && linkCtrl.text.trim().isNotEmpty) {
-                              content += '\n\n📄 Study Material: ${linkCtrl.text.trim()}';
+                              content += '\n\n${linkCtrl.text.trim()}';
                             }
 
                             Map<String, dynamic>? pollJson;
@@ -272,32 +269,41 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             }
 
                             try {
-                              String targetTag = isPoll
-                                  ? 'Daily Quiz ⚡'
-                                  : (type == 'note' ? 'Current Affairs 📰' : 'Exam Gossip 🔥');
-
+                              String targetTag = isPoll ? 'Daily Quiz ⚡' : 'Current Affairs 📰';
                               final authorName = _profile?['name'] ?? widget.creatorHandle;
 
-                              await Supabase.instance.client.from('community_posts').insert({
+                              // 1. Insert to Supabase with is_approved: false (Pre-moderation)
+                              final inserted = await Supabase.instance.client.from('community_posts').insert({
                                 'creator_id': widget.creatorHandle,
                                 'author_name': authorName,
                                 'content': content,
                                 'tag': targetTag,
                                 'poll_data': pollJson,
                                 'views_count': 1,
+                                'is_approved': false,
                                 'upvotes': 0,
                                 'downvotes': 0,
                                 'shares_count': 0,
                                 'bookmarks_count': 0,
-                              });
+                              }).select().single();
+
+                              // 2. 🚀 Send to Telegram for Interactive 1-Tap Moderation
+                              AdminTelegramAlert.sendForInteractiveApproval(
+                                postId: inserted['id'] ?? 0,
+                                authorName: authorName,
+                                authorHandle: widget.creatorHandle,
+                                tag: targetTag,
+                                content: content,
+                                hasPoll: isPoll,
+                              ).catchError((_) => false);
 
                               if (ctx.mounted) Navigator.pop(ctx);
 
                               if (mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(
-                                    content: Text('🚀 Published to Community Feed successfully!'),
-                                    backgroundColor: Color(0xFF16A34A),
+                                    content: Text('⏳ Post submitted! Awaiting Telegram approval.'),
+                                    backgroundColor: Color(0xFF2563EB),
                                   ),
                                 );
                                 _loadCompleteAnalytics();
@@ -317,7 +323,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             height: 20,
                             child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2),
                           )
-                        : const Text('Publish to Feed Now 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5)),
+                        : const Text('Submit for Review 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5)),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -399,7 +405,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 🚀 2. Creator Studio Creation Tools
+            // 🚀 2. Verified Creator Studio Creation Tools (Spam-Free)
             const Text('Creator Studio Tools', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 12),
 
@@ -421,7 +427,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
               subtitle: 'Post instant 4-option poll with solution directly to feed.',
               icon: Icons.poll_outlined,
               color: const Color(0xFF8B5CF6),
-              onTap: () => _openBroadcastModal('quiz'),
+              onTap: () => _openCreationModal('quiz'),
             ),
 
             _buildActionCard(
@@ -429,15 +435,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
               subtitle: 'Link Google Drive or Telegram notes without server upload load.',
               icon: Icons.picture_as_pdf_outlined,
               color: const Color(0xFF059669),
-              onTap: () => _openBroadcastModal('note'),
-            ),
-
-            _buildActionCard(
-              title: 'Broadcast Exam Alert / Strategy 📢',
-              subtitle: 'Send official notifications, syllabus guides, or cut-off gossip.',
-              icon: Icons.campaign_outlined,
-              color: const Color(0xFFD97706),
-              onTap: () => _openBroadcastModal('alert'),
+              onTap: () => _openCreationModal('note'),
             ),
           ],
         ),
