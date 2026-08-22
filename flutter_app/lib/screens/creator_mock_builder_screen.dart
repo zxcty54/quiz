@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_generative_ai/google_generative_ai.dart';
+import 'package:http/http.dart' as http;
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../services/ai_rate_limiter_service.dart';
 
 class CreatorMockBuilderScreen extends StatefulWidget {
   final String creatorHandle;
@@ -24,7 +25,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
   int _durationMins = 15;
   bool _isPublishing = false;
 
-  // List holding all dynamic question cards
   List<Map<String, dynamic>> _questions = [];
 
   @override
@@ -52,10 +52,28 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     });
   }
 
-  // ⚡ One-Shot AI Bulk Generator
+  // ⚡ Gemini REST Call (Uses existing http package, No SDK required)
   Future<void> _openAiStudioModal() async {
     final rawCtrl = TextEditingController();
     bool isAiProcessing = false;
+    String? validationMessage;
+    int charCount = 0;
+
+    final eligibility = await AiRateLimiterService.checkEligibility();
+    if (eligibility['allowed'] == false) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(eligibility['message']),
+            backgroundColor: Colors.red.shade800,
+            duration: const Duration(seconds: 4),
+          ),
+        );
+      }
+      return;
+    }
+
+    if (!mounted) return;
 
     showModalBottomSheet(
       context: context,
@@ -77,26 +95,55 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                       children: const [
                         Icon(Icons.auto_awesome, color: Colors.amber, size: 22),
                         SizedBox(width: 8),
-                        Text('AI Bulk Question Generator', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+                        Text('AI Studio Batch Generator', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5)),
                       ],
                     ),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
-                const Text(
-                  'Paste your whole 10, 20 or 50 questions document here. AI will structure all questions into editable cards instantly.',
-                  style: TextStyle(fontSize: 11.5, color: Colors.grey, height: 1.35),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      'Paste up to 15 questions per batch:',
+                      style: TextStyle(fontSize: 11.5, color: Colors.grey),
+                    ),
+                    Text(
+                      '$charCount / ${AiRateLimiterService.maxInputChars} chars',
+                      style: TextStyle(
+                        fontSize: 11,
+                        fontWeight: FontWeight.bold,
+                        color: charCount > AiRateLimiterService.maxInputChars ? Colors.red : Colors.grey,
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 8),
+
                 TextField(
                   controller: rawCtrl,
-                  maxLines: 9,
+                  maxLines: 8,
+                  maxLength: AiRateLimiterService.maxInputChars,
+                  onChanged: (val) {
+                    setModalState(() {
+                      charCount = val.length;
+                      validationMessage = null;
+                    });
+                  },
                   decoration: const InputDecoration(
-                    hintText: 'Paste rough notes, Hindi/English test series or scanned text...',
+                    hintText: 'Paste questions text (English, Hindi, or Mixed)...',
                     border: OutlineInputBorder(),
+                    counterText: '',
                   ),
                 ),
-                const SizedBox(height: 14),
+
+                if (validationMessage != null) ...[
+                  const SizedBox(height: 6),
+                  Text(validationMessage!, style: const TextStyle(color: Colors.redAccent, fontSize: 12)),
+                ],
+
+                const SizedBox(height: 12),
+
                 SizedBox(
                   width: double.infinity,
                   height: 46,
@@ -110,63 +157,103 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                         ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
                         : const Icon(Icons.bolt_rounded, color: Colors.amber),
                     label: Text(
-                      isAiProcessing ? 'AI Structuring Multi-Cards...' : 'Auto-Generate Cards with AI 🚀',
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
+                      isAiProcessing ? 'AI Structuring Cards...' : 'Generate Multi-Cards 🚀',
+                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
                     ),
                     onPressed: isAiProcessing
                         ? null
                         : () async {
                             final text = rawCtrl.text.trim();
-                            if (text.isEmpty) return;
+                            if (text.isEmpty) {
+                              setModalState(() => validationMessage = 'Please paste some text first.');
+                              return;
+                            }
+
+                            final check = await AiRateLimiterService.checkEligibility();
+                            if (check['allowed'] == false) {
+                              setModalState(() => validationMessage = check['message']);
+                              return;
+                            }
 
                             setModalState(() => isAiProcessing = true);
+
                             try {
-                              final model = GenerativeModel(
-                                model: 'gemini-1.5-flash',
-                                apiKey: 'YOUR_GEMINI_API_KEY', // Bind with your key
-                                generationConfig: GenerationConfig(responseMimeType: 'application/json', temperature: 0.1),
-                              );
+                              const apiKey = 'YOUR_GEMINI_API_KEY';
+                              final url = Uri.parse('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$apiKey');
 
                               final prompt = '''
-Parse the following test material into a JSON array of multiple choice questions:
+Extract multiple choice questions from this text into JSON array format:
 [
   {
     "question": "Question text in Hindi or English",
     "options": ["Option A", "Option B", "Option C", "Option D"],
-    "answer": 0, // Integer 0 for A, 1 for B, 2 for C, 3 for D
-    "explanation": "Concise explanation"
+    "answer": 0,
+    "explanation": "Short 1-line explanation"
   }
 ]
-Raw Data:
+Input Text:
 """
 $text
 """
 ''';
 
-                              final response = await model.generateContent([Content.text(prompt)]);
-                              final parsed = jsonDecode(response.text ?? '[]');
-
-                              if (parsed is List && parsed.isNotEmpty) {
-                                setState(() {
-                                  // Clean empty placeholder and populate generated cards
-                                  if (_questions.length == 1 && (_questions[0]['question'] as String).isEmpty) {
-                                    _questions.clear();
+                              final res = await http.post(
+                                url,
+                                headers: {'Content-Type': 'application/json'},
+                                body: jsonEncode({
+                                  'contents': [
+                                    {
+                                      'parts': [{'text': prompt}]
+                                    }
+                                  ],
+                                  'generationConfig': {
+                                    'responseMimeType': 'application/json',
+                                    'temperature': 0.1,
                                   }
-                                  _questions.addAll(List<Map<String, dynamic>>.from(parsed));
-                                });
+                                }),
+                              );
 
-                                if (context.mounted) {
-                                  Navigator.pop(ctx);
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      content: Text('✨ AI generated ${_questions.length} Question Cards!'),
-                                      backgroundColor: const Color(0xFF16A34A),
-                                    ),
-                                  );
+                              if (res.statusCode == 200) {
+                                final body = jsonDecode(res.body);
+                                final String rawJson = body['candidates'][0]['content']['parts'][0]['text'];
+                                final parsed = jsonDecode(rawJson);
+
+                                if (parsed is List && parsed.isNotEmpty) {
+                                  await AiRateLimiterService.recordSuccess();
+
+                                  setState(() {
+                                    if (_questions.length == 1 && (_questions[0]['question'] as String).isEmpty) {
+                                      _questions.clear();
+                                    }
+                                    _questions.addAll(List<Map<String, dynamic>>.from(parsed));
+                                  });
+
+                                  if (context.mounted) {
+                                    Navigator.pop(ctx);
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text('✨ Added ${parsed.length} Questions! (Remaining today: ${check['remainingToday']! - 1})'),
+                                        backgroundColor: const Color(0xFF16A34A),
+                                      ),
+                                    );
+                                  }
+                                } else {
+                                  setModalState(() {
+                                    isAiProcessing = false;
+                                    validationMessage = 'Could not parse questions properly.';
+                                  });
                                 }
+                              } else {
+                                setModalState(() {
+                                  isAiProcessing = false;
+                                  validationMessage = 'API Error: HTTP ${res.statusCode}';
+                                });
                               }
                             } catch (err) {
-                              setModalState(() => isAiProcessing = false);
+                              setModalState(() {
+                                isAiProcessing = false;
+                                validationMessage = 'Network Error: $err';
+                              });
                             }
                           },
                   ),
@@ -205,10 +292,9 @@ $text
         'attempts_count': 0,
       }).select().single();
 
-      // Also publish directly to Community Feed
       await Supabase.instance.client.from('community_posts').insert({
         'creator_id': widget.creatorHandle,
-        'content': '⚡ New Mock Drill Published: "$title". Click below to practice now!',
+        'content': '⚡ New Mock Drill Published: "$title". Tap below to attempt now!',
         'tag': 'Mock Tests ⚡',
         'mock_id': res['id'],
         'views_count': 1,
@@ -249,7 +335,6 @@ $text
       ),
       body: Column(
         children: [
-          // ⚙️ Header Config Row (Title, Subject, Duration)
           Container(
             padding: const EdgeInsets.all(12),
             color: cardBg,
@@ -292,7 +377,6 @@ $text
           ),
           const Divider(height: 1),
 
-          // 📜 Question Cards View
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.all(12),
@@ -384,7 +468,6 @@ $text
             ),
           ),
 
-          // 🚀 Bottom Action Row (Add Manual + Publish)
           Container(
             padding: const EdgeInsets.all(12),
             color: cardBg,
