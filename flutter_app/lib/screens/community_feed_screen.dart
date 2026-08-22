@@ -1,5 +1,7 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
@@ -107,7 +109,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
     if (qList.isEmpty) return;
 
-    // Increment Mock attempt count
     Supabase.instance.client
         .from('creator_mocks')
         .update({'attempts_count': (mock['attempts_count'] ?? 0) + 1})
@@ -130,6 +131,8 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     final commentCtrl = TextEditingController();
     int? replyingToCommentId;
     String? replyingToName;
+    int refreshKey = 0;
+    bool isSubmitting = false;
 
     showModalBottomSheet(
       context: context,
@@ -154,6 +157,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 const Divider(),
                 Expanded(
                   child: FutureBuilder<List<Map<String, dynamic>>>(
+                    key: ValueKey('comments_$refreshKey'),
                     future: Supabase.instance.client
                         .from('post_comments')
                         .select()
@@ -165,7 +169,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                       }
                       final comments = snapshot.data ?? [];
                       if (comments.isEmpty) {
-                        return const Center(child: Text('No comments yet. Start the discussion!'));
+                        return const Center(child: Text('No comments yet. Be the first to reply!'));
                       }
                       return ListView.builder(
                         itemCount: comments.length,
@@ -174,7 +178,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                           final bool isReply = c['parent_comment_id'] != null;
 
                           return Container(
-                            margin: EdgeInsets.only(left: isReply ? 28.0 : 0.0, bottom: 8),
+                            margin: EdgeInsets.only(left: isReply ? 24.0 : 0.0, bottom: 8),
                             padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               color: isReply ? (widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFF1F5F9)) : Colors.transparent,
@@ -237,6 +241,30 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                     Expanded(
                       child: TextField(
                         controller: commentCtrl,
+                        textInputAction: TextInputAction.send,
+                        onSubmitted: (_) async {
+                          final text = commentCtrl.text.trim();
+                          if (text.isEmpty || isSubmitting) return;
+                          setSheetState(() => isSubmitting = true);
+                          try {
+                            await Supabase.instance.client.from('post_comments').insert({
+                              'post_id': postId,
+                              'user_handle': 'user',
+                              'user_name': 'Aspirant',
+                              'content': text,
+                              'parent_comment_id': replyingToCommentId,
+                            });
+                            commentCtrl.clear();
+                            setSheetState(() {
+                              replyingToCommentId = null;
+                              replyingToName = null;
+                              refreshKey++;
+                              isSubmitting = false;
+                            });
+                          } catch (_) {
+                            setSheetState(() => isSubmitting = false);
+                          }
+                        },
                         decoration: InputDecoration(
                           hintText: replyingToName != null ? 'Reply to @$replyingToName...' : 'Add a helpful reply...',
                           border: InputBorder.none,
@@ -244,22 +272,34 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                       ),
                     ),
                     IconButton(
-                      icon: const Icon(Icons.send_rounded, color: Color(0xFF2563EB)),
-                      onPressed: () async {
-                        if (commentCtrl.text.trim().isEmpty) return;
-                        await Supabase.instance.client.from('post_comments').insert({
-                          'post_id': postId,
-                          'user_handle': 'user',
-                          'user_name': 'Aspirant',
-                          'content': commentCtrl.text.trim(),
-                          'parent_comment_id': replyingToCommentId,
-                        });
-                        commentCtrl.clear();
-                        setSheetState(() {
-                          replyingToCommentId = null;
-                          replyingToName = null;
-                        });
-                      },
+                      icon: isSubmitting
+                          ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2))
+                          : const Icon(Icons.send_rounded, color: Color(0xFF2563EB)),
+                      onPressed: isSubmitting
+                          ? null
+                          : () async {
+                              final text = commentCtrl.text.trim();
+                              if (text.isEmpty) return;
+                              setSheetState(() => isSubmitting = true);
+                              try {
+                                await Supabase.instance.client.from('post_comments').insert({
+                                  'post_id': postId,
+                                  'user_handle': 'user',
+                                  'user_name': 'Aspirant',
+                                  'content': text,
+                                  'parent_comment_id': replyingToCommentId,
+                                });
+                                commentCtrl.clear();
+                                setSheetState(() {
+                                  replyingToCommentId = null;
+                                  replyingToName = null;
+                                  refreshKey++;
+                                  isSubmitting = false;
+                                });
+                              } catch (_) {
+                                setSheetState(() => isSubmitting = false);
+                              }
+                            },
                     ),
                   ],
                 ),
@@ -274,59 +314,169 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
   void _openCreatePostModal() {
     final contentCtrl = TextEditingController();
-    String selectedTag = 'Exam Gossip 🔥';
+    String selectedTag = 'Doubts ❓';
+    File? selectedImage;
+    bool isUploading = false;
+    final picker = ImagePicker();
 
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
+      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setModalState) => Padding(
           padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text('✍️ Create Post / Gossip', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
-              const SizedBox(height: 10),
-              DropdownButton<String>(
-                value: selectedTag,
-                isExpanded: true,
-                items: ['Exam Gossip 🔥', 'Current Affairs 📰', 'Doubts ❓', 'Strategy 💡']
-                    .map((t) => DropdownMenuItem(value: t, child: Text(t)))
-                    .toList(),
-                onChanged: (val) => setModalState(() => selectedTag = val ?? selectedTag),
-              ),
-              const SizedBox(height: 10),
-              TextField(
-                controller: contentCtrl,
-                maxLines: 5,
-                decoration: const InputDecoration(
-                  hintText: 'Share exam updates, cut-off discussion, notes or doubts...',
-                  border: OutlineInputBorder(),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('✍️ Create Post / Ask Doubt', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                  ],
                 ),
-              ),
-              const SizedBox(height: 14),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
-                  onPressed: () async {
-                    if (contentCtrl.text.trim().isEmpty) return;
-                    Navigator.pop(ctx);
-                    await Supabase.instance.client.from('community_posts').insert({
-                      'creator_id': 'test',
-                      'content': contentCtrl.text.trim(),
-                      'tag': selectedTag,
-                      'views_count': 1,
-                    });
-                    _fetchFeedPosts();
-                  },
-                  child: const Text('Post to Community 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                const SizedBox(height: 10),
+
+                DropdownButtonFormField<String>(
+                  value: selectedTag,
+                  decoration: const InputDecoration(
+                    labelText: 'Category Tag',
+                    isDense: true,
+                    border: OutlineInputBorder(),
+                  ),
+                  items: ['Doubts ❓', 'Exam Gossip 🔥', 'Current Affairs 📰', 'Strategy 💡']
+                      .map((t) => DropdownMenuItem(value: t, child: Text(t)))
+                      .toList(),
+                  onChanged: (val) => setModalState(() => selectedTag = val ?? selectedTag),
                 ),
-              ),
-              const SizedBox(height: 16),
-            ],
+                const SizedBox(height: 12),
+
+                TextField(
+                  controller: contentCtrl,
+                  maxLines: 4,
+                  decoration: const InputDecoration(
+                    hintText: 'Share exam updates, question doubt, cut-off gossip...',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                const SizedBox(height: 12),
+
+                if (selectedImage != null) ...[
+                  Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.file(
+                          selectedImage!,
+                          width: double.infinity,
+                          height: 160,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Positioned(
+                        top: 6,
+                        right: 6,
+                        child: GestureDetector(
+                          onTap: () => setModalState(() => selectedImage = null),
+                          child: Container(
+                            padding: const EdgeInsets.all(4),
+                            decoration: const BoxDecoration(color: Colors.black54, shape: BoxShape.circle),
+                            child: const Icon(Icons.close, color: Colors.white, size: 16),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                ],
+
+                Row(
+                  children: [
+                    OutlinedButton.icon(
+                      icon: const Icon(Icons.photo_library_outlined, size: 18),
+                      label: const Text('Add Screenshot', style: TextStyle(fontSize: 12.5)),
+                      style: OutlinedButton.styleFrom(
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      ),
+                      onPressed: () async {
+                        final pickedFile = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
+                        if (pickedFile != null) {
+                          setModalState(() => selectedImage = File(pickedFile.path));
+                        }
+                      },
+                    ),
+                    const SizedBox(width: 8),
+                    IconButton(
+                      icon: const Icon(Icons.camera_alt_outlined, color: Color(0xFF2563EB)),
+                      tooltip: 'Take Photo',
+                      onPressed: () async {
+                        final pickedFile = await picker.pickImage(source: ImageSource.camera, imageQuality: 80);
+                        if (pickedFile != null) {
+                          setModalState(() => selectedImage = File(pickedFile.path));
+                        }
+                      },
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
+
+                SizedBox(
+                  width: double.infinity,
+                  height: 44,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF2563EB),
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    ),
+                    onPressed: isUploading
+                        ? null
+                        : () async {
+                            final text = contentCtrl.text.trim();
+                            if (text.isEmpty && selectedImage == null) return;
+
+                            setModalState(() => isUploading = true);
+                            String? uploadedImageUrl;
+
+                            try {
+                              if (selectedImage != null) {
+                                final fileName = 'doubt_${DateTime.now().millisecondsSinceEpoch}.jpg';
+                                await Supabase.instance.client.storage.from('post_images').upload(
+                                      fileName,
+                                      selectedImage!,
+                                      fileOptions: const FileOptions(cacheControl: '3600', upsert: false),
+                                    );
+                                uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
+                              }
+
+                              await Supabase.instance.client.from('community_posts').insert({
+                                'creator_id': 'test',
+                                'content': text,
+                                'tag': selectedTag,
+                                'image_url': uploadedImageUrl,
+                                'views_count': 1,
+                              });
+
+                              if (context.mounted) {
+                                Navigator.pop(ctx);
+                                _fetchFeedPosts();
+                              }
+                            } catch (_) {
+                              setModalState(() => isUploading = false);
+                            }
+                          },
+                    child: isUploading
+                        ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+                        : const Text('Post to Community 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                  ),
+                ),
+                const SizedBox(height: 16),
+              ],
+            ),
           ),
         ),
       ),
@@ -336,13 +486,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
-    final cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final bgSurface = isDark ? const Color(0xFF0F172A) : Colors.white;
 
     final filteredList = _activeFilter == 'All'
         ? _posts
         : _posts.where((p) => p['tag'].toString().contains(_activeFilter.split(' ').first)).toList();
 
     return Scaffold(
+      backgroundColor: bgSurface,
       appBar: AppBar(
         title: const Text('Community Feed', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
         actions: [
@@ -361,6 +512,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       ),
       body: Column(
         children: [
+          // 🏷️ Category Filter Ribbon
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -378,7 +530,9 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
               }).toList(),
             ),
           ),
-          const Divider(height: 1),
+          const Divider(height: 1, thickness: 1),
+
+          // 📜 Edge-to-Edge List
           Expanded(
             child: _isLoading
                 ? const Center(child: CircularProgressIndicator())
@@ -386,9 +540,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                     onRefresh: _fetchFeedPosts,
                     child: filteredList.isEmpty
                         ? const Center(child: Text('No posts yet in this section.\nBe the first to share!'))
-                        : ListView.builder(
-                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                        : ListView.separated(
+                            padding: EdgeInsets.zero,
                             itemCount: filteredList.length,
+                            separatorBuilder: (context, index) => Divider(
+                              height: 1,
+                              thickness: 1,
+                              color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                            ),
                             itemBuilder: (context, idx) {
                               final item = filteredList[idx];
                               final creator = item['creator_profiles'] ?? {};
@@ -398,206 +557,219 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               final int score = (item['upvotes'] ?? 0) - (item['downvotes'] ?? 0);
                               final String? imgUrl = item['image_url'];
 
-                              return Card(
-                                margin: const EdgeInsets.only(bottom: 12),
-                                color: cardBg,
-                                elevation: 1.5,
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(12),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      // 👤 Creator Header Bar with Tap to Profile
-                                      GestureDetector(
-                                        onTap: () => Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (_) => CreatorProfileScreen(
-                                              creatorHandle: creator['handle_id'] ?? '',
-                                              isDarkMode: isDark,
-                                            ),
+                              return Container(
+                                color: bgSurface,
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    // 👤 Header: Avatar + Creator Tag + Tap to Profile
+                                    GestureDetector(
+                                      onTap: () => Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (_) => CreatorProfileScreen(
+                                            creatorHandle: creator['handle_id'] ?? '',
+                                            isDarkMode: isDark,
                                           ),
-                                        ),
-                                        child: Row(
-                                          children: [
-                                            CircleAvatar(
-                                              radius: 18,
-                                              backgroundColor: const Color(0xFF2563EB),
-                                              child: Text(
-                                                (creator['name'] ?? 'U')[0].toUpperCase(),
-                                                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                                              ),
-                                            ),
-                                            const SizedBox(width: 8),
-                                            Expanded(
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Row(
-                                                    children: [
-                                                      Text(
-                                                        creator['name'] ?? 'Aspirant',
-                                                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
-                                                      ),
-                                                      const SizedBox(width: 4),
-                                                      Text(
-                                                        '@${creator['handle_id'] ?? 'user'}',
-                                                        style: TextStyle(color: Colors.grey[500], fontSize: 11),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  Text(
-                                                    '${creator['followers_count'] ?? 0} Followers • ${creator['subject_specialty'] ?? 'Mentor'}',
-                                                    style: TextStyle(color: Colors.grey[600], fontSize: 10.5),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                            Container(
-                                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                                              decoration: BoxDecoration(
-                                                color: const Color(0xFF2563EB).withOpacity(0.08),
-                                                borderRadius: BorderRadius.circular(6),
-                                              ),
-                                              child: Text(
-                                                item['tag'] ?? 'General',
-                                                style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold),
-                                              ),
-                                            ),
-                                          ],
                                         ),
                                       ),
-                                      const SizedBox(height: 10),
-                                      Text(
-                                        item['content'] ?? '',
-                                        style: const TextStyle(fontSize: 14, height: 1.4),
-                                      ),
-                                      if (imgUrl != null && imgUrl.isNotEmpty) ...[
-                                        const SizedBox(height: 10),
-                                        ClipRRect(
-                                          borderRadius: BorderRadius.circular(8),
-                                          child: Image.network(
-                                            imgUrl,
-                                            fit: BoxFit.cover,
-                                            width: double.infinity,
-                                            height: 180,
-                                            loadingBuilder: (ctx, child, progress) => progress == null
-                                                ? child
-                                                : Container(height: 180, color: Colors.grey.withOpacity(0.1), child: const Center(child: CircularProgressIndicator())),
-                                            errorBuilder: (ctx, err, stack) => const SizedBox.shrink(),
+                                      child: Row(
+                                        children: [
+                                          CircleAvatar(
+                                            radius: 18,
+                                            backgroundColor: const Color(0xFF2563EB),
+                                            child: Text(
+                                              (creator['name'] ?? 'U')[0].toUpperCase(),
+                                              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
+                                            ),
                                           ),
-                                        ),
-                                      ],
-                                      const SizedBox(height: 10),
-                                      if (attachedMock != null) ...[
-                                        Container(
-                                          padding: const EdgeInsets.all(12),
-                                          decoration: BoxDecoration(
-                                            color: const Color(0xFF2563EB).withOpacity(0.05),
-                                            borderRadius: BorderRadius.circular(10),
-                                            border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.2)),
-                                          ),
-                                          child: Row(
-                                            children: [
-                                              const Icon(Icons.quiz_rounded, color: Color(0xFF2563EB), size: 28),
-                                              const SizedBox(width: 10),
-                                              Expanded(
-                                                child: Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                          const SizedBox(width: 10),
+                                          Expanded(
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Row(
                                                   children: [
-                                                    Text(attachedMock['title'] ?? 'Mock Drill', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-                                                    Text('${(attachedMock['questions_json'] as List?)?.length ?? 0} Qs • ${attachedMock['duration_mins']} Mins', style: TextStyle(color: Colors.grey[600], fontSize: 11)),
+                                                    Text(
+                                                      creator['name'] ?? 'Aspirant',
+                                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                                                    ),
+                                                    const SizedBox(width: 4),
+                                                    const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
+                                                    const SizedBox(width: 6),
+                                                    Text(
+                                                      '@${creator['handle_id'] ?? 'user'}',
+                                                      style: TextStyle(color: Colors.grey[500], fontSize: 12),
+                                                    ),
                                                   ],
                                                 ),
-                                              ),
-                                              ElevatedButton(
-                                                style: ElevatedButton.styleFrom(
-                                                  backgroundColor: const Color(0xFF2563EB),
-                                                  foregroundColor: Colors.white,
-                                                  visualDensity: VisualDensity.compact,
-                                                ),
-                                                onPressed: () => _launchAttachedMock(attachedMock),
-                                                child: const Text('Start', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 10),
-                                      ],
-                                      Row(
-                                        children: [
-                                          Container(
-                                            decoration: BoxDecoration(
-                                              color: Colors.grey.withOpacity(0.12),
-                                              borderRadius: BorderRadius.circular(20),
-                                            ),
-                                            child: Row(
-                                              children: [
-                                                IconButton(
-                                                  icon: Icon(
-                                                    Icons.arrow_upward_rounded,
-                                                    size: 18,
-                                                    color: userVote == 1 ? const Color(0xFFFF4500) : Colors.grey,
-                                                  ),
-                                                  onPressed: () => _handleVote(idx, true),
-                                                  visualDensity: VisualDensity.compact,
-                                                ),
                                                 Text(
-                                                  '$score',
-                                                  style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 12,
-                                                    color: userVote == 1
-                                                        ? const Color(0xFFFF4500)
-                                                        : (userVote == -1 ? const Color(0xFF7193FF) : null),
-                                                  ),
-                                                ),
-                                                IconButton(
-                                                  icon: Icon(
-                                                    Icons.arrow_downward_rounded,
-                                                    size: 18,
-                                                    color: userVote == -1 ? const Color(0xFF7193FF) : Colors.grey,
-                                                  ),
-                                                  onPressed: () => _handleVote(idx, false),
-                                                  visualDensity: VisualDensity.compact,
+                                                  '${creator['followers_count'] ?? 0} Followers • ${creator['subject_specialty'] ?? 'Mentor'}',
+                                                  style: TextStyle(color: Colors.grey[600], fontSize: 11),
                                                 ),
                                               ],
                                             ),
                                           ),
-                                          const SizedBox(width: 10),
-                                          InkWell(
-                                            onTap: () => _openCommentsSheet(postId, item['content'] ?? ''),
-                                            borderRadius: BorderRadius.circular(16),
-                                            child: Padding(
-                                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-                                              child: Row(
-                                                children: const [
-                                                  Icon(Icons.chat_bubble_outline_rounded, size: 16, color: Colors.grey),
-                                                  SizedBox(width: 4),
-                                                  Text('Reply', style: TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w600)),
-                                                ],
-                                              ),
+                                          Container(
+                                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                            decoration: BoxDecoration(
+                                              color: const Color(0xFF2563EB).withOpacity(0.08),
+                                              borderRadius: BorderRadius.circular(4),
                                             ),
-                                          ),
-                                          const SizedBox(width: 10),
-                                          Row(
-                                            children: [
-                                              const Icon(Icons.remove_red_eye_outlined, size: 15, color: Colors.grey),
-                                              const SizedBox(width: 4),
-                                              Text('${item['views_count'] ?? 120}', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
-                                            ],
-                                          ),
-                                          const Spacer(),
-                                          IconButton(
-                                            icon: const Icon(Icons.share_outlined, size: 18, color: Colors.grey),
-                                            onPressed: () {},
-                                            visualDensity: VisualDensity.compact,
+                                            child: Text(
+                                              item['tag'] ?? 'General',
+                                              style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold),
+                                            ),
                                           ),
                                         ],
                                       ),
+                                    ),
+                                    const SizedBox(height: 10),
+
+                                    // 📝 Post Content Text
+                                    Text(
+                                      item['content'] ?? '',
+                                      style: const TextStyle(fontSize: 14.5, height: 1.45),
+                                    ),
+
+                                    // 🖼️ Edge Image (Twitter / Reddit style)
+                                    if (imgUrl != null && imgUrl.isNotEmpty) ...[
+                                      const SizedBox(height: 10),
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(12),
+                                        child: Image.network(
+                                          imgUrl,
+                                          fit: BoxFit.cover,
+                                          width: double.infinity,
+                                          height: 200,
+                                          errorBuilder: (ctx, err, stack) => const SizedBox.shrink(),
+                                        ),
+                                      ),
                                     ],
-                                  ),
+
+                                    // ⚡ Attached Mock Card
+                                    if (attachedMock != null) ...[
+                                      const SizedBox(height: 10),
+                                      Container(
+                                        padding: const EdgeInsets.all(12),
+                                        decoration: BoxDecoration(
+                                          color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+                                          borderRadius: BorderRadius.circular(10),
+                                          border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            const Icon(Icons.quiz_rounded, color: Color(0xFF2563EB), size: 26),
+                                            const SizedBox(width: 10),
+                                            Expanded(
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(attachedMock['title'] ?? 'Mock Drill', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
+                                                  Text('${(attachedMock['questions_json'] as List?)?.length ?? 0} Questions • ${attachedMock['duration_mins']} Mins', style: TextStyle(color: Colors.grey[600], fontSize: 11)),
+                                                ],
+                                              ),
+                                            ),
+                                            ElevatedButton(
+                                              style: ElevatedButton.styleFrom(
+                                                backgroundColor: const Color(0xFF2563EB),
+                                                foregroundColor: Colors.white,
+                                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                                                visualDensity: VisualDensity.compact,
+                                              ),
+                                              onPressed: () => _launchAttachedMock(attachedMock),
+                                              child: const Text('Start', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+
+                                    const SizedBox(height: 12),
+
+                                    // 🗳️ Action Row: Reddit Upvote Pill + Comment + Views + Share
+                                    Row(
+                                      children: [
+                                        Container(
+                                          height: 32,
+                                          decoration: BoxDecoration(
+                                            color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+                                            borderRadius: BorderRadius.circular(20),
+                                          ),
+                                          child: Row(
+                                            children: [
+                                              IconButton(
+                                                icon: Icon(
+                                                  Icons.arrow_upward_rounded,
+                                                  size: 16,
+                                                  color: userVote == 1 ? const Color(0xFFFF4500) : Colors.grey[600],
+                                                ),
+                                                onPressed: () => _handleVote(idx, true),
+                                                visualDensity: VisualDensity.compact,
+                                              ),
+                                              Text(
+                                                '$score',
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 12,
+                                                  color: userVote == 1
+                                                      ? const Color(0xFFFF4500)
+                                                      : (userVote == -1 ? const Color(0xFF7193FF) : null),
+                                                ),
+                                              ),
+                                              IconButton(
+                                                icon: Icon(
+                                                  Icons.arrow_downward_rounded,
+                                                  size: 16,
+                                                  color: userVote == -1 ? const Color(0xFF7193FF) : Colors.grey[600],
+                                                ),
+                                                onPressed: () => _handleVote(idx, false),
+                                                visualDensity: VisualDensity.compact,
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        const SizedBox(width: 12),
+
+                                        InkWell(
+                                          onTap: () => _openCommentsSheet(postId, item['content'] ?? ''),
+                                          borderRadius: BorderRadius.circular(20),
+                                          child: Container(
+                                            height: 32,
+                                            padding: const EdgeInsets.symmetric(horizontal: 12),
+                                            decoration: BoxDecoration(
+                                              color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+                                              borderRadius: BorderRadius.circular(20),
+                                            ),
+                                            child: Row(
+                                              children: const [
+                                                Icon(Icons.chat_bubble_outline_rounded, size: 15, color: Colors.grey),
+                                                SizedBox(width: 6),
+                                                Text('Reply', style: TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w600)),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        const SizedBox(width: 12),
+
+                                        Row(
+                                          children: [
+                                            const Icon(Icons.remove_red_eye_outlined, size: 15, color: Colors.grey),
+                                            const SizedBox(width: 4),
+                                            Text('${item['views_count'] ?? 120}', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
+                                          ],
+                                        ),
+                                        const Spacer(),
+
+                                        IconButton(
+                                          icon: const Icon(Icons.share_outlined, size: 18, color: Colors.grey),
+                                          onPressed: () {},
+                                          visualDensity: VisualDensity.compact,
+                                        ),
+                                      ],
+                                    ),
+                                  ],
                                 ),
                               );
                             },
