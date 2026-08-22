@@ -9,8 +9,9 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
 import '../services/ai_explainer_service.dart';
 import '../services/telegram_tracker.dart';
-import 'community_feed_screen.dart'; // 👈 Dedicated Community Feed
-import 'creator_auth_screen.dart';   // 👈 Creator Studio Portal
+import 'community_feed_screen.dart';
+import 'creator_auth_screen.dart';
+import 'creator_dashboard_screen.dart';
 import 'learn_hub_screen.dart';
 import 'profile_screen.dart';
 import 'revision_practice_screen.dart';
@@ -245,13 +246,30 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  void _openCreatorStudio() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => CreatorAuthScreen(isDarkMode: _isDarkMode),
-      ),
-    );
+  void _openCreatorStudio() async {
+    final prefs = await SharedPreferences.getInstance();
+    final String? loggedInHandle = prefs.getString('logged_in_creator_handle');
+
+    if (!mounted) return;
+
+    if (loggedInHandle != null && loggedInHandle.isNotEmpty) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => CreatorDashboardScreen(
+            creatorHandle: loggedInHandle,
+            isDarkMode: _isDarkMode,
+          ),
+        ),
+      );
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => CreatorAuthScreen(isDarkMode: _isDarkMode),
+        ),
+      );
+    }
   }
 
   @override
@@ -339,9 +357,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                     ),
                   ),
                   ListTile(
-                    leading: const Icon(Icons.edit_note_rounded, color: Color(0xFF2563EB)),
-                    title: const Text('Creator Studio / Mock Builder', style: TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: const Text('Create & Publish Mock Tests'),
+                    leading: const Icon(Icons.dashboard_customize_rounded, color: Color(0xFF2563EB)),
+                    title: const Text('Creator Studio & Analytics', style: TextStyle(fontWeight: FontWeight.bold)),
+                    subtitle: const Text('Dashboard, Quizzes, Notes & Mock Builder'),
                     trailing: const Icon(Icons.arrow_forward_ios, size: 14),
                     onTap: () {
                       Navigator.pop(context);
@@ -387,7 +405,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                 ],
               ),
             ),
-            // ⚖️ Google Play Store Mandatory Non-Government Disclaimer
             Container(
               margin: const EdgeInsets.all(12),
               padding: const EdgeInsets.all(10),
@@ -420,7 +437,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       body: IndexedStack(
         index: _currentBottomIndex,
         children: [
-          // Tab 0: Home
           HomeTab(
             appConfig: _appConfig,
             homeData: _homeData,
@@ -438,26 +454,18 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               ).then((_) => _loadRealtimeProgress());
             },
           ),
-
-          // Tab 1: Revision
           RevisionTab(
             key: ValueKey('rev_${_subjectMapping.keys.length}'),
             subjectMapping: _subjectMapping,
             onLaunchPractice: _launchRevisionPractice,
           ),
-
-          // Tab 2: Sectional
           SectionalTab(
             key: ValueKey('sec_${_sectionalData.keys.join('_')}'),
             sectionalData: _sectionalData,
             isDarkMode: _isDarkMode,
             onLaunchCbtMock: _launchCbtMock,
           ),
-
-          // Tab 3: Dedicated Community & Creator Feed Screen
           CommunityFeedScreen(isDarkMode: _isDarkMode),
-
-          // Tab 4: Profile
           ProfileScreen(
             isHindi: _isHindi,
             isDarkMode: _isDarkMode,
