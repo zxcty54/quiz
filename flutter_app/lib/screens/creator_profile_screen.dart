@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'sectional_cbt_screen.dart'; // Aapka existing CBT engine
+import '../models/question_model.dart';
+import 'sectional_cbt_screen.dart';
 
 class CreatorProfileScreen extends StatefulWidget {
   final String creatorHandle;
@@ -32,25 +33,25 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> {
     try {
       final client = Supabase.instance.client;
 
-      // 1. Fetch Creator Info
       final profileRes = await client
           .from('creator_profiles')
           .select()
           .eq('handle_id', widget.creatorHandle)
           .maybeSingle();
 
-      // 2. Fetch Creator Tests
       final mocksRes = await client
           .from('creator_mocks')
           .select()
           .eq('creator_id', widget.creatorHandle)
           .order('created_at', ascending: false);
 
-      setState(() {
-        _profile = profileRes;
-        _mocks = mocksRes;
-        _isLoading = false;
-      });
+      if (mounted) {
+        setState(() {
+          _profile = profileRes;
+          _mocks = mocksRes;
+          _isLoading = false;
+        });
+      }
     } catch (e) {
       if (mounted) setState(() => _isLoading = false);
     }
@@ -66,28 +67,34 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> {
   }
 
   void _startMockTest(Map<String, dynamic> mock) {
-    final List dynamicQuestions = mock['questions_json'] ?? [];
-    if (dynamicQuestions.isEmpty) {
+    final List rawList = mock['questions_json'] ?? [];
+    if (rawList.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('No questions in this test!')));
       return;
     }
 
-    // Attempts Count Increment
+    List<Question> parsedQuestions = [];
+    for (var item in rawList) {
+      if (item is Map) {
+        parsedQuestions.add(Question.fromJson(Map<String, dynamic>.from(item)));
+      }
+    }
+
+    if (parsedQuestions.isEmpty) return;
+
     Supabase.instance.client
         .from('creator_mocks')
         .update({'attempts_count': (mock['attempts_count'] ?? 0) + 1})
         .eq('id', mock['id'])
         .then((_) {});
 
-    // Existing CBT Screen launch
     Navigator.push(
       context,
       MaterialPageRoute(
         builder: (_) => SectionalCbtScreen(
-          title: mock['title'] ?? 'Mock Test',
-          durationMinutes: mock['duration_mins'] ?? 10,
-          directQuestionsList: dynamicQuestions,
-          isDarkMode: widget.isDarkMode,
+          testTitle: mock['title'] ?? 'Mock Test', // 👈 Fixed parameter name
+          questions: parsedQuestions,
+          subFolder: (mock['subject'] ?? 'general').toString().toLowerCase(),
         ),
       ),
     );
@@ -95,8 +102,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = widget.isDarkMode;
-
     if (_isLoading) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
@@ -115,7 +120,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Header Profile Card
             Card(
               elevation: 2,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -165,16 +169,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> {
               ),
             ),
             const SizedBox(height: 20),
-
-            // Tests Section Title
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Created Mock Tests (${_mocks.length})', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-              ],
-            ),
+            Text('Created Mock Tests (${_mocks.length})', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 12),
-
             if (_mocks.isEmpty)
               const Center(
                 child: Padding(
