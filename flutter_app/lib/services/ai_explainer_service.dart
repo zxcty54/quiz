@@ -262,8 +262,6 @@ ${qSummaries.join('\n')}
     required String correctAnswer,
     required String userTag,
   }) async {
-    // 🛡️ ANTI-HALLUCINATION SANITIZATION:
-    // Agar choice empty ya generic ho, toh AI ko actual distractor analysis pe shift karo
     bool hasSpecificChoice = userChoice.trim().isNotEmpty && 
                              userChoice != "Attempted Option" && 
                              userChoice != "Incorrect Option" &&
@@ -321,5 +319,59 @@ $tagContext
       correctAnswer: correctAnswer,
       userDoubt: "Mujhe is question ka conceptual logic aasan daily life example ke sath samjhayein.",
     );
+  }
+
+  // 5️⃣ 🚀 BULK QUESTIONS PARSER FOR CREATOR STUDIO (No 400 Error, Uses Full Model Pool)
+  static Future<List<Map<String, dynamic>>> parseBulkQuestionsWithAi(String rawText) async {
+    if (rawText.trim().isEmpty) return [];
+
+    const String systemPrompt = """
+You are an expert exam data extractor for Indian competitive exams (BPSC, SSC, UPSC, Railway).
+Parse the raw unstructured questions or notes text into a strict JSON Array format.
+
+Output ONLY a pure JSON array matching this exact schema:
+[
+  {
+    "question": "Question text in Hindi or English",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 0,
+    "explanation": "Short 1-line solution explanation"
+  }
+]
+
+RULES:
+1. Always return a valid JSON array. Do not include markdown wraps or conversational chatter.
+2. Ensure options list always contains exactly 4 options.
+3. If the answer is missing in raw text, deduce the logically correct answer index (0 to 3).
+""";
+
+    final String responseText = await _generateWithHybridRouting(
+      systemPrompt,
+      "Raw Questions Text:\n\"\"\"\n$rawText\n\"\"\"",
+      maxTokens: 2400,
+      temperature: 0.1,
+    );
+
+    try {
+      String cleanJson = responseText
+          .replaceAll('```json', '')
+          .replaceAll('```', '')
+          .trim();
+
+      // Find JSON array bounds if surrounded by extra text
+      final int startIdx = cleanJson.indexOf('[');
+      final int endIdx = cleanJson.lastIndexOf(']');
+      if (startIdx != -1 && endIdx != -1 && endIdx > startIdx) {
+        cleanJson = cleanJson.substring(startIdx, endIdx + 1);
+      }
+
+      final dynamic parsed = jsonDecode(cleanJson);
+      if (parsed is List) {
+        return List<Map<String, dynamic>>.from(parsed);
+      }
+    } catch (e) {
+      debugPrint("AI JSON Parse Error: $e\nResponse was: $responseText");
+    }
+    return [];
   }
 }
