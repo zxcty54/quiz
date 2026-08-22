@@ -127,6 +127,58 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
+  void _showReportDialog(int postId) {
+    String selectedReason = 'Spam or Misleading';
+    final reasons = [
+      'Spam or Misleading',
+      'Abusive or Harassing Content',
+      'Inappropriate / Adult Content',
+      'Copyright Infringement'
+    ];
+
+    showDialog(
+      context: context,
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setDlgState) => AlertDialog(
+          title: const Text('🚨 Report Post', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text('Why are you reporting this post?', style: TextStyle(fontSize: 13)),
+              const SizedBox(height: 10),
+              DropdownButton<String>(
+                value: selectedReason,
+                isExpanded: true,
+                items: reasons.map((r) => DropdownMenuItem(value: r, child: Text(r, style: const TextStyle(fontSize: 13)))).toList(),
+                onChanged: (val) => setDlgState(() => selectedReason = val ?? selectedReason),
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.redAccent, foregroundColor: Colors.white),
+              onPressed: () async {
+                Navigator.pop(ctx);
+                await Supabase.instance.client.from('post_reports').insert({
+                  'post_id': postId,
+                  'reason': selectedReason,
+                });
+                if (mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Thank you. Post reported and sent for review.')),
+                  );
+                }
+              },
+              child: const Text('Report'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   void _openCommentsSheet(int postId, String postTitle) {
     final commentCtrl = TextEditingController();
     int? replyingToCommentId;
@@ -422,7 +474,15 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 14),
+
+                // ⚖️ UGC Policy Notice
+                const Text(
+                  'By posting, you agree to our Community Guidelines. Spam, harassment, or abusive content will result in an immediate account ban.',
+                  style: TextStyle(fontSize: 10.5, color: Colors.grey, height: 1.3),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 12),
 
                 SizedBox(
                   width: double.infinity,
@@ -454,7 +514,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               }
 
                               await Supabase.instance.client.from('community_posts').insert({
-                                'creator_id': 'test',
+                                'creator_id': 'user',
                                 'content': text,
                                 'tag': selectedTag,
                                 'image_url': uploadedImageUrl,
@@ -512,7 +572,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       ),
       body: Column(
         children: [
-          // 🏷️ Category Filter Ribbon
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -532,7 +591,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           ),
           const Divider(height: 1, thickness: 1),
 
-          // 📜 Edge-to-Edge List
           Expanded(
             child: _isLoading
                 ? const Center(child: CircularProgressIndicator())
@@ -563,77 +621,109 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    // 👤 Header: Avatar + Creator Tag + Tap to Profile
-                                    GestureDetector(
-                                      onTap: () => Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (_) => CreatorProfileScreen(
-                                            creatorHandle: creator['handle_id'] ?? '',
-                                            isDarkMode: isDark,
+                                    // 👤 Header: Avatar + Creator Tag + Tap to Profile + 3 Dots Menu
+                                    Row(
+                                      children: [
+                                        GestureDetector(
+                                          onTap: () => Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (_) => CreatorProfileScreen(
+                                                creatorHandle: (creator['handle_id'] ?? item['creator_id'] ?? 'user').toString(),
+                                                isDarkMode: isDark,
+                                              ),
+                                            ),
                                           ),
-                                        ),
-                                      ),
-                                      child: Row(
-                                        children: [
-                                          CircleAvatar(
+                                          child: CircleAvatar(
                                             radius: 18,
-                                            backgroundColor: const Color(0xFF2563EB),
+                                            backgroundColor: (creator['name'] != null) ? const Color(0xFF2563EB) : const Color(0xFF64748B),
                                             child: Text(
-                                              (creator['name'] ?? 'U')[0].toUpperCase(),
+                                              ((creator['name'] ?? 'U')[0]).toUpperCase(),
                                               style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
                                             ),
                                           ),
-                                          const SizedBox(width: 10),
-                                          Expanded(
+                                        ),
+                                        const SizedBox(width: 10),
+                                        Expanded(
+                                          child: GestureDetector(
+                                            onTap: () => Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (_) => CreatorProfileScreen(
+                                                  creatorHandle: (creator['handle_id'] ?? item['creator_id'] ?? 'user').toString(),
+                                                  isDarkMode: isDark,
+                                                ),
+                                              ),
+                                            ),
                                             child: Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               children: [
                                                 Row(
                                                   children: [
                                                     Text(
-                                                      creator['name'] ?? 'Aspirant',
-                                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                                                      creator['name'] ?? 'Aspirant Candidate',
+                                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
                                                     ),
                                                     const SizedBox(width: 4),
-                                                    const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
+                                                    if (creator['name'] != null)
+                                                      const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
                                                     const SizedBox(width: 6),
                                                     Text(
-                                                      '@${creator['handle_id'] ?? 'user'}',
-                                                      style: TextStyle(color: Colors.grey[500], fontSize: 12),
+                                                      '@${creator['handle_id'] ?? item['creator_id'] ?? 'user'}',
+                                                      style: TextStyle(color: Colors.grey[500], fontSize: 11.5),
                                                     ),
                                                   ],
                                                 ),
                                                 Text(
-                                                  '${creator['followers_count'] ?? 0} Followers • ${creator['subject_specialty'] ?? 'Mentor'}',
-                                                  style: TextStyle(color: Colors.grey[600], fontSize: 11),
+                                                  (creator['name'] != null)
+                                                      ? '${creator['followers_count'] ?? 0} Followers • ${creator['subject_specialty'] ?? 'Mentor'}'
+                                                      : 'Aspirant • ${item['views_count'] ?? 120} views',
+                                                  style: TextStyle(color: Colors.grey[600], fontSize: 10.5),
                                                 ),
                                               ],
                                             ),
                                           ),
-                                          Container(
-                                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                            decoration: BoxDecoration(
-                                              color: const Color(0xFF2563EB).withOpacity(0.08),
-                                              borderRadius: BorderRadius.circular(4),
-                                            ),
-                                            child: Text(
-                                              item['tag'] ?? 'General',
-                                              style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold),
-                                            ),
+                                        ),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFF2563EB).withOpacity(0.08),
+                                            borderRadius: BorderRadius.circular(4),
                                           ),
-                                        ],
-                                      ),
+                                          child: Text(
+                                            item['tag'] ?? 'General',
+                                            style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold),
+                                          ),
+                                        ),
+                                        // 🚨 3-Dots UGC Report Button
+                                        PopupMenuButton<String>(
+                                          padding: EdgeInsets.zero,
+                                          icon: Icon(Icons.more_vert_rounded, size: 18, color: Colors.grey[500]),
+                                          onSelected: (val) {
+                                            if (val == 'report') _showReportDialog(postId);
+                                          },
+                                          itemBuilder: (ctx) => [
+                                            const PopupMenuItem(
+                                              value: 'report',
+                                              child: Row(
+                                                children: [
+                                                  Icon(Icons.flag_outlined, color: Colors.redAccent, size: 18),
+                                                  SizedBox(width: 8),
+                                                  Text('Report Post', style: TextStyle(fontSize: 13, color: Colors.redAccent)),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
                                     ),
                                     const SizedBox(height: 10),
 
-                                    // 📝 Post Content Text
                                     Text(
                                       item['content'] ?? '',
                                       style: const TextStyle(fontSize: 14.5, height: 1.45),
                                     ),
 
-                                    // 🖼️ Edge Image (Twitter / Reddit style)
                                     if (imgUrl != null && imgUrl.isNotEmpty) ...[
                                       const SizedBox(height: 10),
                                       ClipRRect(
@@ -648,7 +738,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                       ),
                                     ],
 
-                                    // ⚡ Attached Mock Card
                                     if (attachedMock != null) ...[
                                       const SizedBox(height: 10),
                                       Container(
@@ -688,7 +777,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
                                     const SizedBox(height: 12),
 
-                                    // 🗳️ Action Row: Reddit Upvote Pill + Comment + Views + Share
                                     Row(
                                       children: [
                                         Container(
