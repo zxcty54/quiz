@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
   Map<String, dynamic> _appConfig = {};
   Map<String, dynamic> _homeData = {};
-  Map<String, dynamic> _subjectMapping = {};
+  Map<String, dynamic> _subjectMapping = {}; 
   Map<String, dynamic> _sectionalData = {};
 
   String _lastLearnTitle = "Cell Biology & Organelles";
