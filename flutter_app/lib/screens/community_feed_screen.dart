@@ -39,6 +39,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     try {
       final sixtyDaysAgo = DateTime.now().subtract(const Duration(days: 60)).toIso8601String();
 
+      // Left Join with creator_profiles so normal aspirant posts don't get filtered out
       final res = await Supabase.instance.client
           .from('community_posts')
           .select('*, creator_profiles(name, handle_id, subject_specialty, telegram_handle, followers_count, is_blocked), creator_mocks(*)')
@@ -544,6 +545,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                   isSubmitting = false;
                                 });
                               } catch (e) {
+                                debugPrint("Comment Error: $e");
                                 setSheetState(() => isSubmitting = false);
                               }
                             },
@@ -712,15 +714,16 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
                             try {
                               if (selectedImage != null) {
-                                final fileName = 'doubt_${DateTime.now().millisecondsSinceEpoch}.jpg';
                                 final bytes = await selectedImage!.readAsBytes();
+                                final fileExt = selectedImage!.path.split('.').last;
+                                final fileName = 'doubt_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
 
                                 await Supabase.instance.client.storage
                                     .from('post_images')
                                     .uploadBinary(
                                       fileName,
                                       bytes,
-                                      fileOptions: const FileOptions(contentType: 'image/jpeg', upsert: true),
+                                      fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true),
                                     );
                                 uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
                               }
@@ -743,7 +746,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               if (context.mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
-                                    content: Text('Upload Error: $err. Check if bucket "post_images" is Public.'),
+                                    content: Text('Upload Error: $err'),
                                     backgroundColor: Colors.red.shade800,
                                     duration: const Duration(seconds: 4),
                                   ),
@@ -1048,7 +1051,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                         ),
                                         const Spacer(),
 
-                                        // 🚩 Direct Visible Report Abuse Button
+                                        // 🚩 Visible UGC Report Button
                                         InkWell(
                                           onTap: () => _showReportDialog(
                                             postId,
