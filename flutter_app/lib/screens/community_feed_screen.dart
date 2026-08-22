@@ -1,8 +1,10 @@
+import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -25,13 +27,31 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   bool _isLoading = true;
   String _activeFilter = 'All';
   final Map<int, int> _userVoteState = {};
+  final Map<int, int> _userPollSelections = {}; // post_id -> selected_option_idx
+  final Set<int> _savedPostIds = {};
 
-  final List<String> _filters = ['All', 'Exam Gossip 🔥', 'Current Affairs 📰', 'Doubts ❓', 'Mock Tests ⚡'];
+  final List<String> _filters = [
+    'All',
+    'Daily Quiz ⚡',
+    'Doubts ❓',
+    'BPSC 70th 🎯',
+    'BSSC CGL 📚',
+    'Exam Gossip 🔥',
+    'Current Affairs 📰',
+    'Saved 📌'
+  ];
 
   @override
   void initState() {
     super.initState();
+    _loadSavedCache();
     _fetchFeedPosts();
+  }
+
+  Future<void> _loadSavedCache() async {
+    final prefs = await SharedPreferences.getInstance();
+    final saved = prefs.getStringList('local_saved_post_ids') ?? [];
+    _savedPostIds.addAll(saved.map((e) => int.tryParse(e) ?? 0));
   }
 
   Future<void> _fetchFeedPosts() async {
@@ -39,7 +59,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     try {
       final sixtyDaysAgo = DateTime.now().subtract(const Duration(days: 60)).toIso8601String();
 
-      // Left Join with creator_profiles so normal aspirant posts don't get filtered out
       final res = await Supabase.instance.client
           .from('community_posts')
           .select('*, creator_profiles(name, handle_id, subject_specialty, telegram_handle, followers_count, is_blocked), creator_mocks(*)')
@@ -58,14 +77,121 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     }
   }
 
-  Future<void> _launchExternalUrl(String url) async {
-    String cleanUrl = url.startsWith('http') ? url : 'https://$url';
-    final uri = Uri.parse(cleanUrl);
-    try {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
-    } catch (e) {
-      debugPrint("Could not launch $url: $e");
+  void _toggleBookmark(int postId) async {
+    HapticFeedback.mediumImpact();
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      if (_savedPostIds.contains(postId)) {
+        _savedPostIds.remove(postId);
+      } else {
+        _savedPostIds.add(postId);
+      }
+    });
+
+    await prefs.setStringList('local_saved_post_ids', _savedPostIds.map((e) => e.toString()).toList());
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(_savedPostIds.contains(postId) ? '📌 Saved to Revision Notebook!' : 'Removed from Saved!'),
+          duration: const Duration(seconds: 1),
+          backgroundColor: const Color(0xFF2563EB),
+        ),
+      );
     }
+  }
+
+  void _handleVote(int index, bool isUpvote) {
+    HapticFeedback.lightImpact();
+    final post = _posts[index];
+    final int postId = post['id'];
+    int currentVote = _userVoteState[postId] ?? 0;
+    int upDelta = 0;
+    int downDelta = 0;
+
+    setState(() {
+      if (isUpvote) {
+        if (currentVote == 1) {
+          _userVoteState[postId] = 0;
+          upDelta = -1;
+        } else {
+          if (currentVote == -1) downDelta = -1;
+          _userVoteState[postId] = 1;
+          upDelta = 1;
+        }
+      } else {
+        if (currentVote == -1) {
+          _userVoteState[postId] = 0;
+          downDelta = -1;
+        } else {
+          if (currentVote == 1) upDelta = -1;
+          _userVoteState[postId] = -1;
+          downDelta = 1;
+        }
+      }
+
+      post['upvotes'] = (post['upvotes'] ?? 0) + upDelta;
+      post['downvotes'] = (post['downvotes'] ?? 0) + downDelta;
+    });
+
+    Supabase.instance.client
+        .from('community_posts')
+        .update({
+          'upvotes': post['upvotes'],
+          'downvotes': post['downvotes'],
+        })
+        .eq('id', postId)
+        .then((_) {});
+  }
+
+  void _submitPollVote(int postId, int optionIdx, Map<String, dynamic> pollData) {
+    if (_userPollSelections.containsKey(postId)) return;
+    HapticFeedback.heavyImpact();
+
+    setState(() {
+      _userPollSelections[postId] = optionIdx;
+      List votes = pollData['votes'] ?? [0, 0, 0, 0];
+      if (optionIdx < votes.length) {
+        votes[optionIdx] = (votes[optionIdx] as int) + 1;
+      }
+      pollData['votes'] = votes;
+    });
+
+    Supabase.instance.client
+        .from('community_posts')
+        .update({'poll_data': pollData})
+        .eq('id', postId)
+        .then((_) {});
+  }
+
+  void _launchAttachedMock(Map<String, dynamic> mock) {
+    final List rawList = mock['questions_json'] ?? [];
+    if (rawList.isEmpty) return;
+
+    List<Question> qList = [];
+    for (var item in rawList) {
+      if (item is Map) {
+        qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
+      }
+    }
+
+    if (qList.isEmpty) return;
+
+    Supabase.instance.client
+        .from('creator_mocks')
+        .update({'attempts_count': (mock['attempts_count'] ?? 0) + 1})
+        .eq('id', mock['id'])
+        .then((_) {});
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => SectionalCbtScreen(
+          testTitle: mock['title'] ?? 'Community Mock Drill',
+          questions: qList,
+          subFolder: (mock['subject'] ?? 'general').toString().toLowerCase(),
+        ),
+      ),
+    );
   }
 
   Widget _buildRichTextContent(String text, {double fontSize = 14.5}) {
@@ -91,7 +217,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           TextSpan(
             text: matchText,
             style: const TextStyle(color: Color(0xFF2563EB), decoration: TextDecoration.underline, fontWeight: FontWeight.w600),
-            recognizer: TapGestureRecognizer()..onTap = () => _launchExternalUrl(matchText),
+            recognizer: TapGestureRecognizer()..onTap = () => launchUrl(Uri.parse(matchText.startsWith('http') ? matchText : 'https://$matchText'), mode: LaunchMode.externalApplication),
           ),
         );
       } else if (matchText.startsWith('#')) {
@@ -99,10 +225,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           TextSpan(
             text: matchText,
             style: const TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold),
-            recognizer: TapGestureRecognizer()
-              ..onTap = () {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Tag: $matchText')));
-              },
+            recognizer: TapGestureRecognizer()..onTap = () => setState(() => _activeFilter = matchText),
           ),
         );
       } else if (matchText.startsWith('@')) {
@@ -143,420 +266,96 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
-  void _sendNotification({
-    required String receiverId,
-    required String senderName,
-    required int postId,
-    required String type,
-    required String message,
-  }) async {
-    if (receiverId.isEmpty || receiverId == 'user') return;
-    try {
-      await Supabase.instance.client.from('user_notifications').insert({
-        'receiver_id': receiverId,
-        'sender_name': senderName,
-        'post_id': postId,
-        'type': type,
-        'message': message,
-      });
-    } catch (_) {}
-  }
+  Widget _buildInteractivePollCard(int postId, Map<String, dynamic> pollData, bool isDark) {
+    final List options = pollData['options'] ?? [];
+    final int correctIdx = pollData['correct_idx'] ?? 0;
+    final List votes = pollData['votes'] ?? List.filled(options.length, 0);
+    final String explanation = pollData['exp'] ?? '';
+    final bool hasVoted = _userPollSelections.containsKey(postId);
+    final int? selectedIdx = _userPollSelections[postId];
 
-  void _handleVote(int index, bool isUpvote) {
-    HapticFeedback.lightImpact();
-    final post = _posts[index];
-    final int postId = post['id'];
-    int currentVote = _userVoteState[postId] ?? 0;
-    int upDelta = 0;
-    int downDelta = 0;
-
-    setState(() {
-      if (isUpvote) {
-        if (currentVote == 1) {
-          _userVoteState[postId] = 0;
-          upDelta = -1;
-        } else {
-          if (currentVote == -1) downDelta = -1;
-          _userVoteState[postId] = 1;
-          upDelta = 1;
-
-          _sendNotification(
-            receiverId: post['creator_id'] ?? '',
-            senderName: 'An Aspirant',
-            postId: postId,
-            type: 'upvote',
-            message: 'upvoted your community post 🚀',
-          );
-        }
-      } else {
-        if (currentVote == -1) {
-          _userVoteState[postId] = 0;
-          downDelta = -1;
-        } else {
-          if (currentVote == 1) upDelta = -1;
-          _userVoteState[postId] = -1;
-          downDelta = 1;
-        }
-      }
-
-      post['upvotes'] = (post['upvotes'] ?? 0) + upDelta;
-      post['downvotes'] = (post['downvotes'] ?? 0) + downDelta;
-    });
-
-    Supabase.instance.client
-        .from('community_posts')
-        .update({
-          'upvotes': post['upvotes'],
-          'downvotes': post['downvotes'],
-        })
-        .eq('id', postId)
-        .then((_) {});
-  }
-
-  void _launchAttachedMock(Map<String, dynamic> mock) {
-    final List rawList = mock['questions_json'] ?? [];
-    if (rawList.isEmpty) return;
-
-    List<Question> qList = [];
-    for (var item in rawList) {
-      if (item is Map) {
-        qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
-      }
+    int totalVotes = 0;
+    for (var v in votes) {
+      totalVotes += (v is int) ? v : (int.tryParse(v.toString()) ?? 0);
     }
+    if (totalVotes == 0) totalVotes = 1;
 
-    if (qList.isEmpty) return;
-
-    Supabase.instance.client
-        .from('creator_mocks')
-        .update({'attempts_count': (mock['attempts_count'] ?? 0) + 1})
-        .eq('id', mock['id'])
-        .then((_) {});
-
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => SectionalCbtScreen(
-          testTitle: mock['title'] ?? 'Community Mock Drill',
-          questions: qList,
-          subFolder: (mock['subject'] ?? 'general').toString().toLowerCase(),
-        ),
+    return Container(
+      margin: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.2)),
       ),
-    );
-  }
-
-  void _showReportDialog(int postId, String postContent, String authorHandle) {
-    String selectedReason = 'Spam or Misleading';
-    final reasons = [
-      'Spam or Misleading',
-      'Abusive, Harassment or Hate Speech',
-      'Adult / Inappropriate / Pornographic',
-      'Fraud, Phishing or Betting Link',
-      'Copyright Violation'
-    ];
-
-    showDialog(
-      context: context,
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setDlgState) => AlertDialog(
-          title: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
             children: const [
-              Icon(Icons.report_problem_rounded, color: Colors.redAccent, size: 20),
-              SizedBox(width: 8),
-              Text('Report Abuse', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+              Icon(Icons.bolt_rounded, color: Colors.amber, size: 18),
+              SizedBox(width: 4),
+              Text('Live Daily Quiz • Tap to Solve', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
             ],
           ),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Select reason for reporting this post to admin:',
-                style: TextStyle(fontSize: 13, height: 1.3),
+          const SizedBox(height: 8),
+          ...List.generate(options.length, (idx) {
+            final optText = options[idx];
+            final int optVotes = (idx < votes.length) ? (votes[idx] as int) : 0;
+            final double percent = (optVotes / totalVotes) * 100;
+            final bool isSelected = selectedIdx == idx;
+            final bool isCorrect = correctIdx == idx;
+
+            Color tileColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+            if (hasVoted) {
+              if (isCorrect) {
+                tileColor = const Color(0xFF16A34A).withOpacity(0.2);
+              } else if (isSelected) {
+                tileColor = Colors.redAccent.withOpacity(0.2);
+              }
+            }
+
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 6),
+              child: InkWell(
+                onTap: () => _submitPollVote(postId, idx, pollData),
+                borderRadius: BorderRadius.circular(8),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                  decoration: BoxDecoration(
+                    color: tileColor,
+                    borderRadius: BorderRadius.circular(8),
+                    border: hasVoted && isCorrect ? Border.all(color: const Color(0xFF16A34A), width: 1.5) : null,
+                  ),
+                  child: Row(
+                    children: [
+                      Text(String.fromCharCode(65 + idx), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                      const SizedBox(width: 10),
+                      Expanded(child: Text(optText, style: const TextStyle(fontSize: 13.5))),
+                      if (hasVoted)
+                        Text('${percent.toStringAsFixed(0)}%', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Colors.grey)),
+                    ],
+                  ),
+                ),
               ),
-              const SizedBox(height: 12),
-              DropdownButtonFormField<String>(
-                value: selectedReason,
-                isExpanded: true,
-                decoration: const InputDecoration(border: OutlineInputBorder(), isDense: true),
-                items: reasons.map((r) => DropdownMenuItem(value: r, child: Text(r, style: const TextStyle(fontSize: 12.5)))).toList(),
-                onChanged: (val) => setDlgState(() => selectedReason = val ?? selectedReason),
+            );
+          }),
+          if (hasVoted && explanation.isNotEmpty) ...[
+            const SizedBox(height: 6),
+            Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(color: Colors.blue.withOpacity(0.08), borderRadius: BorderRadius.circular(6)),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Icon(Icons.lightbulb_outline_rounded, size: 16, color: Color(0xFF2563EB)),
+                  const SizedBox(width: 6),
+                  Expanded(child: Text('Explanation: $explanation', style: const TextStyle(fontSize: 12, height: 1.35))),
+                ],
               ),
-            ],
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(ctx),
-              child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.redAccent,
-                foregroundColor: Colors.white,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-              ),
-              onPressed: () async {
-                Navigator.pop(ctx);
-                try {
-                  await Supabase.instance.client.from('post_reports').insert({
-                    'post_id': postId,
-                    'reason': selectedReason,
-                  });
-
-                  final reportList = await Supabase.instance.client
-                      .from('post_reports')
-                      .select('id')
-                      .eq('post_id', postId);
-
-                  final int totalCount = (reportList as List).length;
-
-                  if (totalCount >= 4) {
-                    await AdminTelegramAlert.sendAbuseAlert(
-                      postId: postId,
-                      postContent: postContent,
-                      authorHandle: authorHandle,
-                      totalReports: totalCount,
-                      lastReason: selectedReason,
-                    );
-                  }
-
-                  if (mounted) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('⚠️ Thank you. Post reported to admin for review.'),
-                        backgroundColor: Colors.black87,
-                      ),
-                    );
-                  }
-                } catch (e) {
-                  debugPrint("Report Error: $e");
-                }
-              },
-              child: const Text('Submit Report', style: TextStyle(fontWeight: FontWeight.bold)),
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  void _openCommentsSheet(int postId, String postAuthorId) {
-    final commentCtrl = TextEditingController();
-    int? replyingToCommentId;
-    String? replyingToName;
-    int refreshKey = 0;
-    bool isSubmitting = false;
-
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setSheetState) => Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
-          child: SizedBox(
-            height: MediaQuery.of(ctx).size.height * 0.70,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text('💬 Discussion & Replies', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
-                  ],
-                ),
-                const Divider(),
-                Expanded(
-                  child: FutureBuilder<List<Map<String, dynamic>>>(
-                    key: ValueKey('comments_${postId}_$refreshKey'),
-                    future: Supabase.instance.client
-                        .from('post_comments')
-                        .select()
-                        .eq('post_id', postId)
-                        .order('created_at', ascending: true),
-                    builder: (context, snapshot) {
-                      if (snapshot.connectionState == ConnectionState.waiting) {
-                        return const Center(child: CircularProgressIndicator());
-                      }
-                      final comments = snapshot.data ?? [];
-                      if (comments.isEmpty) {
-                        return const Center(child: Text('No comments yet. Be the first to reply!'));
-                      }
-                      return ListView.builder(
-                        itemCount: comments.length,
-                        itemBuilder: (context, cIdx) {
-                          final c = comments[cIdx];
-                          final bool isReply = c['parent_comment_id'] != null;
-
-                          return Container(
-                            margin: EdgeInsets.only(left: isReply ? 24.0 : 0.0, bottom: 8),
-                            padding: const EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              color: isReply ? (widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFF1F5F9)) : Colors.transparent,
-                              borderRadius: BorderRadius.circular(8),
-                              border: isReply ? const Border(left: BorderSide(color: Color(0xFF2563EB), width: 3)) : null,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Text(c['user_name'] ?? 'Aspirant', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
-                                    const SizedBox(width: 6),
-                                    if (c['is_creator'] == true)
-                                      const Icon(Icons.verified, color: Colors.blue, size: 14),
-                                    const Spacer(),
-                                    GestureDetector(
-                                      onTap: () {
-                                        setSheetState(() {
-                                          replyingToCommentId = c['id'];
-                                          replyingToName = c['user_name'] ?? 'Aspirant';
-                                        });
-                                      },
-                                      child: const Text('Reply', style: TextStyle(color: Color(0xFF2563EB), fontSize: 11, fontWeight: FontWeight.bold)),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 4),
-                                _buildRichTextContent(c['content'] ?? '', fontSize: 13),
-                              ],
-                            ),
-                          );
-                        },
-                      );
-                    },
-                  ),
-                ),
-                if (replyingToCommentId != null) ...[
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                    color: Colors.blue.withOpacity(0.1),
-                    child: Row(
-                      children: [
-                        Text('Replying to @$replyingToName', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
-                        const Spacer(),
-                        IconButton(
-                          icon: const Icon(Icons.close, size: 14),
-                          onPressed: () => setSheetState(() {
-                            replyingToCommentId = null;
-                            replyingToName = null;
-                          }),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-                const Divider(),
-                Row(
-                  children: [
-                    Expanded(
-                      child: TextField(
-                        controller: commentCtrl,
-                        textInputAction: TextInputAction.send,
-                        onSubmitted: (_) async {
-                          final text = commentCtrl.text.trim();
-                          if (text.isEmpty || isSubmitting) return;
-
-                          final validationError = SecurityContentGuard.validateContent(text);
-                          if (validationError != null) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(content: Text(validationError), backgroundColor: Colors.red.shade800),
-                            );
-                            return;
-                          }
-
-                          setSheetState(() => isSubmitting = true);
-                          try {
-                            await Supabase.instance.client.from('post_comments').insert({
-                              'post_id': postId,
-                              'user_handle': 'user',
-                              'user_name': 'Aspirant',
-                              'content': text,
-                              'parent_comment_id': replyingToCommentId,
-                            });
-
-                            _sendNotification(
-                              receiverId: postAuthorId,
-                              senderName: 'An Aspirant',
-                              postId: postId,
-                              type: 'reply',
-                              message: 'replied: "${text.length > 30 ? '${text.substring(0, 30)}...' : text}"',
-                            );
-
-                            commentCtrl.clear();
-                            setSheetState(() {
-                              replyingToCommentId = null;
-                              replyingToName = null;
-                              refreshKey++;
-                              isSubmitting = false;
-                            });
-                          } catch (e) {
-                            setSheetState(() => isSubmitting = false);
-                          }
-                        },
-                        decoration: InputDecoration(
-                          hintText: replyingToName != null ? 'Reply to @$replyingToName...' : 'Add a helpful reply or link...',
-                          border: InputBorder.none,
-                        ),
-                      ),
-                    ),
-                    IconButton(
-                      icon: isSubmitting
-                          ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2))
-                          : const Icon(Icons.send_rounded, color: Color(0xFF2563EB)),
-                      onPressed: isSubmitting
-                          ? null
-                          : () async {
-                              final text = commentCtrl.text.trim();
-                              if (text.isEmpty) return;
-
-                              final validationError = SecurityContentGuard.validateContent(text);
-                              if (validationError != null) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text(validationError), backgroundColor: Colors.red.shade800),
-                                );
-                                return;
-                              }
-
-                              setSheetState(() => isSubmitting = true);
-                              try {
-                                await Supabase.instance.client.from('post_comments').insert({
-                                  'post_id': postId,
-                                  'user_handle': 'user',
-                                  'user_name': 'Aspirant',
-                                  'content': text,
-                                  'parent_comment_id': replyingToCommentId,
-                                });
-
-                                _sendNotification(
-                                  receiverId: postAuthorId,
-                                  senderName: 'An Aspirant',
-                                  postId: postId,
-                                  type: 'reply',
-                                  message: 'replied: "${text.length > 30 ? '${text.substring(0, 30)}...' : text}"',
-                                );
-
-                                commentCtrl.clear();
-                                setSheetState(() {
-                                  replyingToCommentId = null;
-                                  replyingToName = null;
-                                  refreshKey++;
-                                  isSubmitting = false;
-                                });
-                              } catch (e) {
-                                debugPrint("Comment Error: $e");
-                                setSheetState(() => isSubmitting = false);
-                              }
-                            },
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 10),
-              ],
-            ),
-          ),
-        ),
+        ],
       ),
     );
   }
@@ -566,6 +365,10 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     String selectedTag = 'Doubts ❓';
     File? selectedImage;
     bool isUploading = false;
+    bool isPollMode = false;
+    final opControllers = [TextEditingController(), TextEditingController(), TextEditingController(), TextEditingController()];
+    final expCtrl = TextEditingController();
+    int correctPollIdx = 0;
     final picker = ImagePicker();
 
     showModalBottomSheet(
@@ -584,47 +387,66 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('✍️ Create Post / Ask Doubt', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                    Text(isPollMode ? '⚡ Create Interactive Daily Quiz' : '✍️ Create Community Post', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 8),
 
                 DropdownButtonFormField<String>(
                   value: selectedTag,
-                  decoration: const InputDecoration(
-                    labelText: 'Category Tag',
-                    isDense: true,
-                    border: OutlineInputBorder(),
-                  ),
-                  items: ['Doubts ❓', 'Exam Gossip 🔥', 'Current Affairs 📰', 'Strategy 💡']
-                      .map((t) => DropdownMenuItem(value: t, child: Text(t)))
-                      .toList(),
+                  decoration: const InputDecoration(labelText: 'Exam / Subject Tag', isDense: true, border: OutlineInputBorder()),
+                  items: _filters.where((f) => f != 'All' && f != 'Saved 📌').map((t) => DropdownMenuItem(value: t, child: Text(t))).toList(),
                   onChanged: (val) => setModalState(() => selectedTag = val ?? selectedTag),
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 10),
 
                 TextField(
                   controller: contentCtrl,
-                  maxLines: 4,
-                  decoration: const InputDecoration(
-                    hintText: 'Share updates, #bpsc70th, @mentor or attach image...',
-                    border: OutlineInputBorder(),
+                  maxLines: isPollMode ? 2 : 4,
+                  decoration: InputDecoration(
+                    hintText: isPollMode ? 'Type Question headline...' : 'Share updates, #bpsc70th, @mentor or ask doubt...',
+                    border: const OutlineInputBorder(),
                   ),
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 10),
 
-                if (selectedImage != null) ...[
+                if (isPollMode) ...[
+                  ...List.generate(4, (idx) => Padding(
+                        padding: const EdgeInsets.only(bottom: 6),
+                        child: Row(
+                          children: [
+                            GestureDetector(
+                              onTap: () => setModalState(() => correctPollIdx = idx),
+                              child: CircleAvatar(
+                                radius: 14,
+                                backgroundColor: correctPollIdx == idx ? const Color(0xFF16A34A) : Colors.grey.withOpacity(0.3),
+                                child: Text(String.fromCharCode(65 + idx), style: const TextStyle(fontSize: 12, color: Colors.white, fontWeight: FontWeight.bold)),
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: TextField(
+                                controller: opControllers[idx],
+                                decoration: InputDecoration(hintText: 'Option ${String.fromCharCode(65 + idx)}', isDense: true, border: const OutlineInputBorder()),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )),
+                  TextField(
+                    controller: expCtrl,
+                    decoration: const InputDecoration(labelText: 'Short Solution / Explanation', isDense: true, border: OutlineInputBorder()),
+                  ),
+                  const SizedBox(height: 10),
+                ],
+
+                if (selectedImage != null && !isPollMode) ...[
                   Stack(
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(10),
-                        child: Image.file(
-                          selectedImage!,
-                          width: double.infinity,
-                          height: 160,
-                          fit: BoxFit.cover,
-                        ),
+                        child: Image.file(selectedImage!, width: double.infinity, height: 150, fit: BoxFit.cover),
                       ),
                       Positioned(
                         top: 6,
@@ -646,43 +468,20 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 Row(
                   children: [
                     OutlinedButton.icon(
-                      icon: const Icon(Icons.photo_library_outlined, size: 18),
-                      label: const Text('Add Screenshot', style: TextStyle(fontSize: 12.5)),
-                      style: OutlinedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
-                      onPressed: () async {
-                        try {
-                          final pickedFile = await picker.pickImage(source: ImageSource.gallery, imageQuality: 75);
-                          if (pickedFile != null) {
-                            setModalState(() => selectedImage = File(pickedFile.path));
-                          }
-                        } catch (e) {
-                          debugPrint("Image Pick Error: $e");
-                        }
-                      },
+                      icon: Icon(isPollMode ? Icons.chat : Icons.poll_outlined, size: 18),
+                      label: Text(isPollMode ? 'Normal Post' : '+ Add 4-Option Quiz'),
+                      onPressed: () => setModalState(() => isPollMode = !isPollMode),
                     ),
                     const SizedBox(width: 8),
-                    IconButton(
-                      icon: const Icon(Icons.camera_alt_outlined, color: Color(0xFF2563EB)),
-                      tooltip: 'Take Photo',
-                      onPressed: () async {
-                        try {
-                          final pickedFile = await picker.pickImage(source: ImageSource.camera, imageQuality: 75);
-                          if (pickedFile != null) {
-                            setModalState(() => selectedImage = File(pickedFile.path));
-                          }
-                        } catch (e) {
-                          debugPrint("Camera Pick Error: $e");
-                        }
-                      },
-                    ),
+                    if (!isPollMode)
+                      IconButton(
+                        icon: const Icon(Icons.photo_library_outlined, color: Color(0xFF2563EB)),
+                        onPressed: () async {
+                          final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 75);
+                          if (picked != null) setModalState(() => selectedImage = File(picked.path));
+                        },
+                      ),
                   ],
-                ),
-                const SizedBox(height: 14),
-
-                const Text(
-                  'By posting, you agree to our Community Guidelines. Spam, harassment, or abusive content will result in an immediate account ban.',
-                  style: TextStyle(fontSize: 10.5, color: Colors.grey, height: 1.3),
-                  textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 12),
 
@@ -690,24 +489,12 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                   width: double.infinity,
                   height: 44,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF2563EB),
-                      foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                    ),
+                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
                     onPressed: isUploading
                         ? null
                         : () async {
                             final text = contentCtrl.text.trim();
-                            if (text.isEmpty && selectedImage == null) return;
-
-                            final validationError = SecurityContentGuard.validateContent(text);
-                            if (validationError != null) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text(validationError), backgroundColor: Colors.red.shade800),
-                              );
-                              return;
-                            }
+                            if (text.isEmpty && selectedImage == null && !isPollMode) return;
 
                             setModalState(() => isUploading = true);
                             String? uploadedImageUrl;
@@ -716,23 +503,30 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               if (selectedImage != null) {
                                 final bytes = await selectedImage!.readAsBytes();
                                 final fileExt = selectedImage!.path.split('.').last;
-                                final fileName = 'doubt_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
+                                final fileName = 'post_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
 
                                 await Supabase.instance.client.storage
                                     .from('post_images')
-                                    .uploadBinary(
-                                      fileName,
-                                      bytes,
-                                      fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true),
-                                    );
+                                    .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true));
                                 uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
+                              }
+
+                              Map<String, dynamic>? pollJson;
+                              if (isPollMode) {
+                                pollJson = {
+                                  'options': opControllers.map((c) => c.text.trim().isEmpty ? 'Option' : c.text.trim()).toList(),
+                                  'correct_idx': correctPollIdx,
+                                  'votes': [0, 0, 0, 0],
+                                  'exp': expCtrl.text.trim(),
+                                };
                               }
 
                               await Supabase.instance.client.from('community_posts').insert({
                                 'creator_id': 'user',
                                 'content': text,
-                                'tag': selectedTag,
+                                'tag': isPollMode ? 'Daily Quiz ⚡' : selectedTag,
                                 'image_url': uploadedImageUrl,
+                                'poll_data': pollJson,
                                 'views_count': 1,
                               });
 
@@ -740,23 +534,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 Navigator.pop(ctx);
                                 _fetchFeedPosts();
                               }
-                            } catch (err) {
-                              debugPrint("Post Upload Failed: $err");
+                            } catch (e) {
+                              debugPrint("Upload Error: $e");
                               setModalState(() => isUploading = false);
-                              if (context.mounted) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text('Upload Error: $err'),
-                                    backgroundColor: Colors.red.shade800,
-                                    duration: const Duration(seconds: 4),
-                                  ),
-                                );
-                              }
                             }
                           },
                     child: isUploading
                         ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                        : const Text('Post to Community 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                        : const Text('Publish to Community 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -775,24 +560,23 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
     final filteredList = _activeFilter == 'All'
         ? _posts
-        : _posts.where((p) => p['tag'].toString().contains(_activeFilter.split(' ').first)).toList();
+        : (_activeFilter == 'Saved 📌'
+            ? _posts.where((p) => _savedPostIds.contains(p['id'])).toList()
+            : _posts.where((p) => p['tag'].toString().contains(_activeFilter.split(' ').first)).toList());
 
     return Scaffold(
       backgroundColor: bgSurface,
       appBar: AppBar(
         title: const Text('Community Feed', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.refresh_rounded),
-            onPressed: _fetchFeedPosts,
-          ),
+          IconButton(icon: const Icon(Icons.refresh_rounded), onPressed: _fetchFeedPosts),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: const Color(0xFF2563EB),
         foregroundColor: Colors.white,
         icon: const Icon(Icons.edit_rounded),
-        label: const Text('Post', style: TextStyle(fontWeight: FontWeight.bold)),
+        label: const Text('Post / Quiz', style: TextStyle(fontWeight: FontWeight.bold)),
         onPressed: _openCreatePostModal,
       ),
       body: Column(
@@ -822,7 +606,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 : RefreshIndicator(
                     onRefresh: _fetchFeedPosts,
                     child: filteredList.isEmpty
-                        ? const Center(child: Text('No posts yet in this section.\nBe the first to share!'))
+                        ? const Center(child: Text('No posts yet in this category.\nBe the first to share!'))
                         : ListView.separated(
                             padding: EdgeInsets.zero,
                             itemCount: filteredList.length,
@@ -839,6 +623,8 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               final userVote = _userVoteState[postId] ?? 0;
                               final int score = (item['upvotes'] ?? 0) - (item['downvotes'] ?? 0);
                               final String? imgUrl = item['image_url'];
+                              final Map<String, dynamic>? pollData = item['poll_data'];
+                              final bool isSaved = _savedPostIds.contains(postId);
 
                               return Container(
                                 color: bgSurface,
@@ -848,64 +634,36 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                   children: [
                                     Row(
                                       children: [
-                                        GestureDetector(
-                                          onTap: () => Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (_) => CreatorProfileScreen(
-                                                creatorHandle: (creator['handle_id'] ?? item['creator_id'] ?? 'user').toString(),
-                                                isDarkMode: isDark,
-                                              ),
-                                            ),
-                                          ),
-                                          child: CircleAvatar(
-                                            radius: 18,
-                                            backgroundColor: (creator['name'] != null) ? const Color(0xFF2563EB) : const Color(0xFF64748B),
-                                            child: Text(
-                                              ((creator['name'] ?? 'U')[0]).toUpperCase(),
-                                              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
-                                            ),
+                                        CircleAvatar(
+                                          radius: 18,
+                                          backgroundColor: (creator['name'] != null) ? const Color(0xFF2563EB) : const Color(0xFF64748B),
+                                          child: Text(
+                                            ((creator['name'] ?? 'U')[0]).toUpperCase(),
+                                            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
                                           ),
                                         ),
                                         const SizedBox(width: 10),
                                         Expanded(
-                                          child: GestureDetector(
-                                            onTap: () => Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (_) => CreatorProfileScreen(
-                                                  creatorHandle: (creator['handle_id'] ?? item['creator_id'] ?? 'user').toString(),
-                                                  isDarkMode: isDark,
-                                                ),
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Text(creator['name'] ?? 'Aspirant Candidate', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
+                                                  const SizedBox(width: 4),
+                                                  if (creator['name'] != null)
+                                                    const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
+                                                  const SizedBox(width: 6),
+                                                  Text('@${creator['handle_id'] ?? item['creator_id'] ?? 'user'}', style: TextStyle(color: Colors.grey[500], fontSize: 11.5)),
+                                                ],
                                               ),
-                                            ),
-                                            child: Column(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                              children: [
-                                                Row(
-                                                  children: [
-                                                    Text(
-                                                      creator['name'] ?? 'Aspirant Candidate',
-                                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
-                                                    ),
-                                                    const SizedBox(width: 4),
-                                                    if (creator['name'] != null)
-                                                      const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
-                                                    const SizedBox(width: 6),
-                                                    Text(
-                                                      '@${creator['handle_id'] ?? item['creator_id'] ?? 'user'}',
-                                                      style: TextStyle(color: Colors.grey[500], fontSize: 11.5),
-                                                    ),
-                                                  ],
-                                                ),
-                                                Text(
-                                                  (creator['name'] != null)
-                                                      ? '${creator['followers_count'] ?? 0} Followers • ${creator['subject_specialty'] ?? 'Mentor'}'
-                                                      : 'Aspirant • ${item['views_count'] ?? 120} views',
-                                                  style: TextStyle(color: Colors.grey[600], fontSize: 10.5),
-                                                ),
-                                              ],
-                                            ),
+                                              Text(
+                                                (creator['name'] != null)
+                                                    ? '${creator['followers_count'] ?? 0} Followers • ${creator['subject_specialty'] ?? 'Mentor'}'
+                                                    : 'Aspirant • ${item['views_count'] ?? 120} views',
+                                                style: TextStyle(color: Colors.grey[600], fontSize: 10.5),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                         Container(
@@ -914,10 +672,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                             color: const Color(0xFF2563EB).withOpacity(0.08),
                                             borderRadius: BorderRadius.circular(4),
                                           ),
-                                          child: Text(
-                                            item['tag'] ?? 'General',
-                                            style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold),
-                                          ),
+                                          child: Text(item['tag'] ?? 'General', style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold)),
                                         ),
                                       ],
                                     ),
@@ -925,17 +680,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
                                     _buildRichTextContent(item['content'] ?? ''),
 
+                                    if (pollData != null)
+                                      _buildInteractivePollCard(postId, pollData, isDark),
+
                                     if (imgUrl != null && imgUrl.isNotEmpty) ...[
                                       const SizedBox(height: 10),
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(12),
-                                        child: Image.network(
-                                          imgUrl,
-                                          fit: BoxFit.cover,
-                                          width: double.infinity,
-                                          height: 200,
-                                          errorBuilder: (ctx, err, stack) => const SizedBox.shrink(),
-                                        ),
+                                        child: Image.network(imgUrl, fit: BoxFit.cover, width: double.infinity, height: 200),
                                       ),
                                     ],
 
@@ -957,17 +709,12 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
                                                   Text(attachedMock['title'] ?? 'Mock Drill', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
-                                                  Text('${(attachedMock['questions_json'] as List?)?.length ?? 0} Questions • ${attachedMock['duration_mins']} Mins', style: TextStyle(color: Colors.grey[600], fontSize: 11)),
+                                                  Text('${(attachedMock['questions_json'] as List?)?.length ?? 0} Qs • ${attachedMock['duration_mins']} Mins', style: TextStyle(color: Colors.grey[600], fontSize: 11)),
                                                 ],
                                               ),
                                             ),
                                             ElevatedButton(
-                                              style: ElevatedButton.styleFrom(
-                                                backgroundColor: const Color(0xFF2563EB),
-                                                foregroundColor: Colors.white,
-                                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                                                visualDensity: VisualDensity.compact,
-                                              ),
+                                              style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white, visualDensity: VisualDensity.compact),
                                               onPressed: () => _launchAttachedMock(attachedMock),
                                               child: const Text('Start', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                                             ),
@@ -982,37 +729,17 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                       children: [
                                         Container(
                                           height: 32,
-                                          decoration: BoxDecoration(
-                                            color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-                                            borderRadius: BorderRadius.circular(20),
-                                          ),
+                                          decoration: BoxDecoration(color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9), borderRadius: BorderRadius.circular(20)),
                                           child: Row(
                                             children: [
                                               IconButton(
-                                                icon: Icon(
-                                                  Icons.arrow_upward_rounded,
-                                                  size: 16,
-                                                  color: userVote == 1 ? const Color(0xFFFF4500) : Colors.grey[600],
-                                                ),
+                                                icon: Icon(Icons.arrow_upward_rounded, size: 16, color: userVote == 1 ? const Color(0xFFFF4500) : Colors.grey[600]),
                                                 onPressed: () => _handleVote(idx, true),
                                                 visualDensity: VisualDensity.compact,
                                               ),
-                                              Text(
-                                                '$score',
-                                                style: TextStyle(
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 12,
-                                                  color: userVote == 1
-                                                      ? const Color(0xFFFF4500)
-                                                      : (userVote == -1 ? const Color(0xFF7193FF) : null),
-                                                ),
-                                              ),
+                                              Text('$score', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: userVote == 1 ? const Color(0xFFFF4500) : (userVote == -1 ? const Color(0xFF7193FF) : null))),
                                               IconButton(
-                                                icon: Icon(
-                                                  Icons.arrow_downward_rounded,
-                                                  size: 16,
-                                                  color: userVote == -1 ? const Color(0xFF7193FF) : Colors.grey[600],
-                                                ),
+                                                icon: Icon(Icons.arrow_downward_rounded, size: 16, color: userVote == -1 ? const Color(0xFF7193FF) : Colors.grey[600]),
                                                 onPressed: () => _handleVote(idx, false),
                                                 visualDensity: VisualDensity.compact,
                                               ),
@@ -1021,54 +748,18 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                         ),
                                         const SizedBox(width: 8),
 
-                                        InkWell(
-                                          onTap: () => _openCommentsSheet(postId, item['creator_id'] ?? 'user'),
-                                          borderRadius: BorderRadius.circular(20),
-                                          child: Container(
-                                            height: 32,
-                                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                                            decoration: BoxDecoration(
-                                              color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-                                              borderRadius: BorderRadius.circular(20),
-                                            ),
-                                            child: Row(
-                                              children: const [
-                                                Icon(Icons.chat_bubble_outline_rounded, size: 14, color: Colors.grey),
-                                                SizedBox(width: 4),
-                                                Text('Reply', style: TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w600)),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                        const SizedBox(width: 8),
-
-                                        Row(
-                                          children: [
-                                            const Icon(Icons.remove_red_eye_outlined, size: 14, color: Colors.grey),
-                                            const SizedBox(width: 3),
-                                            Text('${item['views_count'] ?? 120}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
-                                          ],
+                                        IconButton(
+                                          icon: Icon(isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded, size: 20, color: isSaved ? const Color(0xFF2563EB) : Colors.grey),
+                                          onPressed: () => _toggleBookmark(postId),
+                                          tooltip: 'Save to Revision',
+                                          visualDensity: VisualDensity.compact,
                                         ),
                                         const Spacer(),
 
-                                        // 🚩 Visible UGC Report Button
-                                        InkWell(
-                                          onTap: () => _showReportDialog(
-                                            postId,
-                                            item['content'] ?? '',
-                                            creator['handle_id'] ?? item['creator_id'] ?? 'user',
-                                          ),
-                                          borderRadius: BorderRadius.circular(6),
-                                          child: Padding(
-                                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
-                                            child: Row(
-                                              children: const [
-                                                Icon(Icons.flag_outlined, size: 14, color: Colors.redAccent),
-                                                SizedBox(width: 3),
-                                                Text('Report', style: TextStyle(fontSize: 11, color: Colors.redAccent, fontWeight: FontWeight.bold)),
-                                              ],
-                                            ),
-                                          ),
+                                        IconButton(
+                                          icon: const Icon(Icons.share_outlined, size: 18, color: Colors.grey),
+                                          onPressed: () {},
+                                          visualDensity: VisualDensity.compact,
                                         ),
                                       ],
                                     ),
