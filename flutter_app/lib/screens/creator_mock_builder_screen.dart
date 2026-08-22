@@ -1,7 +1,5 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:http/http.dart' as http;
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../services/ai_explainer_service.dart';
 import '../services/ai_rate_limiter_service.dart';
@@ -165,77 +163,33 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                             setModalState(() => isAiProcessing = true);
 
                             try {
-                              // Use configured key from your service
-                              final apiKey = AiExplainerService.geminiApiKey;
-                              final url = Uri.parse('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$apiKey');
+                              // 🚀 Directly using AiExplainerService (Zero 400 errors, automatic 4-key rotation)
+                              final List<Map<String, dynamic>> parsedList =
+                                  await AiExplainerService.parseBulkQuestionsWithAi(text);
 
-                              final prompt = '''
-Convert the following exam questions into a JSON array. Follow this exact format strictly:
-[
-  {
-    "question": "Question text in Hindi or English",
-    "options": ["Option A", "Option B", "Option C", "Option D"],
-    "answer": 0,
-    "explanation": "Short solution"
-  }
-]
-Raw Text:
-"""
-$text
-"""
-''';
+                              if (parsedList.isNotEmpty) {
+                                await AiRateLimiterService.recordSuccess();
 
-                              final res = await http.post(
-                                url,
-                                headers: {'Content-Type': 'application/json'},
-                                body: jsonEncode({
-                                  "contents": [
-                                    {
-                                      "parts": [{"text": prompt}]
-                                    }
-                                  ],
-                                  "generationConfig": {
-                                    "responseMimeType": "application/json",
-                                    "temperature": 0.1
+                                setState(() {
+                                  if (_questions.length == 1 && (_questions[0]['question'] as String).isEmpty) {
+                                    _questions.clear();
                                   }
-                                }),
-                              );
+                                  _questions.addAll(parsedList);
+                                });
 
-                              if (res.statusCode == 200) {
-                                final body = jsonDecode(res.body);
-                                String rawJson = body['candidates'][0]['content']['parts'][0]['text'];
-                                rawJson = rawJson.replaceAll('```json', '').replaceAll('```', '').trim();
-                                final parsed = jsonDecode(rawJson);
-
-                                if (parsed is List && parsed.isNotEmpty) {
-                                  await AiRateLimiterService.recordSuccess();
-
-                                  setState(() {
-                                    if (_questions.length == 1 && (_questions[0]['question'] as String).isEmpty) {
-                                      _questions.clear();
-                                    }
-                                    _questions.addAll(List<Map<String, dynamic>>.from(parsed));
-                                  });
-
-                                  if (context.mounted) {
-                                    Navigator.pop(ctx);
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        content: Text('✨ Added ${parsed.length} Questions successfully!'),
-                                        backgroundColor: const Color(0xFF16A34A),
-                                      ),
-                                    );
-                                  }
-                                } else {
-                                  setModalState(() {
-                                    isAiProcessing = false;
-                                    validationMessage = 'Could not parse JSON. Check input text format.';
-                                  });
+                                if (context.mounted) {
+                                  Navigator.pop(ctx);
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text('✨ Added ${parsedList.length} Questions successfully!'),
+                                      backgroundColor: const Color(0xFF16A34A),
+                                    ),
+                                  );
                                 }
                               } else {
                                 setModalState(() {
                                   isAiProcessing = false;
-                                  validationMessage = 'API Error: ${res.statusCode} (${res.body})';
+                                  validationMessage = 'Could not parse questions. Ensure questions have options & answer.';
                                 });
                               }
                             } catch (err) {
