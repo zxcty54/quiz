@@ -96,9 +96,11 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     try {
       final sixtyDaysAgo = DateTime.now().subtract(const Duration(days: 60)).toIso8601String();
 
+      // Sirf Approved posts render hongi
       final res = await Supabase.instance.client
           .from('community_posts')
           .select('*, creator_profiles(name, handle_id, subject_specialty, telegram_handle, followers_count, is_blocked), creator_mocks(*)')
+          .eq('is_approved', true)
           .gte('created_at', sixtyDaysAgo)
           .order('created_at', ascending: false);
 
@@ -127,7 +129,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 $content
 
 ⚡ Solve this & practice 10,000+ BPSC/BSSC CBT Mock Questions:
-📲 Download Free: https://play.google.com/store/apps/details?id=com.mocktester.app
+📲 Download Free: https://play.google.com/store/apps/details?id=com.mocktester.online
 ''';
 
     Clipboard.setData(ClipboardData(text: shareText));
@@ -566,7 +568,7 @@ $content
     );
   }
 
-  // ✍️ Create Post Modal with Real-time Telegram Alert & Name Binding
+  // ✍️ Create Post Modal with Telegram Interactive Moderation
   void _openCreatePostModal() {
     final contentCtrl = TextEditingController();
     String selectedTag = 'Doubts ❓';
@@ -681,13 +683,14 @@ $content
                                 uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
                               }
 
-                              // 1. Insert to Supabase with custom name
+                              // 1. Insert to Supabase with is_approved: false (Pre-moderation)
                               final insertedPost = await Supabase.instance.client.from('community_posts').insert({
                                 'creator_id': 'user',
                                 'author_name': _customUserName,
                                 'content': text,
                                 'tag': selectedTag,
                                 'image_url': uploadedImageUrl,
+                                'is_approved': false,
                                 'views_count': 1,
                                 'upvotes': 0,
                                 'downvotes': 0,
@@ -695,23 +698,34 @@ $content
                                 'bookmarks_count': 0,
                               }).select().single();
 
-                              // 2. 🚀 Trigger Real-time Telegram Alert
-                              AdminTelegramAlert.notifyNewPost(
+                              // 2. 🚀 Send to Telegram with Interactive [Approve / Reject] buttons
+                              AdminTelegramAlert.sendForInteractiveApproval(
                                 postId: insertedPost['id'] ?? 0,
                                 authorName: _customUserName,
                                 authorHandle: 'candidate',
                                 tag: selectedTag,
                                 content: text,
                                 imageUrl: uploadedImageUrl,
-                              );
+                              ).catchError((_) => false);
 
                               if (context.mounted) {
                                 Navigator.pop(ctx);
                                 _fetchFeedPosts();
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                    content: Text('⏳ Post submitted! Awaiting Moderator Approval on Telegram.'),
+                                    backgroundColor: Color(0xFF2563EB),
+                                  ),
+                                );
                               }
                             } catch (e) {
                               debugPrint("Upload Error: $e");
                               setModalState(() => isUploading = false);
+                              if (context.mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(content: Text('Post error: $e'), backgroundColor: Colors.red),
+                                );
+                              }
                             }
                           },
                     child: isUploading
@@ -1006,7 +1020,7 @@ $content
                 : RefreshIndicator(
                     onRefresh: _fetchFeedPosts,
                     child: filteredList.isEmpty
-                        ? const Center(child: Text('No posts yet in this section.\nBe the first to share!'))
+                        ? const Center(child: Text('No approved posts yet in this section.'))
                         : ListView.separated(
                             padding: EdgeInsets.zero,
                             itemCount: filteredList.length,
