@@ -3,8 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 class AdminTelegramAlert {
-  static const String _botToken = 'YOUR_TELEGRAM_BOT_TOKEN';
-  static const String _adminChatId = 'YOUR_ADMIN_CHAT_ID';
+  static const String _botToken = '1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo';
+  static const String _adminChatId = '785009742';
 
   static Future<void> sendAbuseAlert({
     required int postId,
