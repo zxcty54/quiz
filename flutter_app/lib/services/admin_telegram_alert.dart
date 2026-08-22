@@ -14,8 +14,8 @@ class AdminTelegramAlert {
         .replaceAll('>', '&gt;');
   }
 
-  /// Real-time alert dispatch on every new post
-  static Future<bool> notifyNewPost({
+  /// 🚀 Send Interactive Post Approval Card to Telegram with Action Buttons
+  static Future<bool> sendForInteractiveApproval({
     required int postId,
     required String authorName,
     required String authorHandle,
@@ -34,7 +34,7 @@ class AdminTelegramAlert {
       final String imgNotice = (imageUrl != null && imageUrl.isNotEmpty) ? '\n🖼️ <b>Attachment:</b> Screenshot Image Attached' : '';
 
       final String message = '''
-🛡️ <b>NEW COMMUNITY POST SUBMITTED</b>
+🛡️ <b>NEW POST SUBMITTED FOR MODERATION</b>
 
 🆔 <b>Post ID:</b> <code>#$postId</code>
 👤 <b>Author:</b> $safeAuthor (@$safeHandle)
@@ -43,9 +43,18 @@ class AdminTelegramAlert {
 📝 <b>Content Preview:</b>
 <i>$safeContent</i>
 
-⚡ <b>Action:</b>
-Manage or purge instantly from Admin Control Suite in App.
+⏳ <i>Status: Awaiting Moderator decision...</i>
 ''';
+
+      // 🔘 Interactive Inline Buttons for 1-Tap Control
+      final inlineKeyboard = {
+        'inline_keyboard': [
+          [
+            {'text': '✅ Approve & Go Live', 'callback_data': 'approve_$postId'},
+            {'text': '🗑️ Reject & Delete', 'callback_data': 'reject_$postId'},
+          ]
+        ]
+      };
 
       final uri = Uri.parse('https://api.telegram.org/bot$_botToken/sendMessage');
       final res = await http.post(
@@ -55,14 +64,36 @@ Manage or purge instantly from Admin Control Suite in App.
           'chat_id': _adminChatId,
           'text': message,
           'parse_mode': 'HTML',
+          'reply_markup': inlineKeyboard,
         }),
       ).timeout(const Duration(seconds: 8));
 
-      debugPrint("Telegram Alert Response: ${res.statusCode} | ${res.body}");
+      debugPrint("Telegram Interactive Alert Response: ${res.statusCode} | ${res.body}");
       return res.statusCode == 200;
     } catch (e) {
       debugPrint("❌ Telegram Alert Error: $e");
       return false;
     }
+  }
+
+  /// Backward compatible alias
+  static Future<bool> notifyNewPost({
+    required int postId,
+    required String authorName,
+    required String authorHandle,
+    required String tag,
+    required String content,
+    String? imageUrl,
+    bool hasPoll = false,
+  }) {
+    return sendForInteractiveApproval(
+      postId: postId,
+      authorName: authorName,
+      authorHandle: authorHandle,
+      tag: tag,
+      content: content,
+      imageUrl: imageUrl,
+      hasPoll: hasPoll,
+    );
   }
 }
