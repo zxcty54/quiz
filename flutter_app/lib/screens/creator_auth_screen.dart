@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'creator_mock_builder_screen.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import 'creator_dashboard_screen.dart';
 
 class CreatorAuthScreen extends StatefulWidget {
   final bool isDarkMode;
@@ -12,66 +12,60 @@ class CreatorAuthScreen extends StatefulWidget {
 }
 
 class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
-  bool isLoginMode = true;
   final _handleCtrl = TextEditingController();
   final _pinCtrl = TextEditingController();
-  final _nameCtrl = TextEditingController();
-  final _subjectCtrl = TextEditingController();
-  final _telegramCtrl = TextEditingController();
-  bool _loading = false;
+  bool _isLoading = false;
+  String? _errorMessage;
 
-  Future<void> _handleAuth() async {
-    final handle = _handleCtrl.text.trim().toLowerCase();
+  Future<void> _verifyAndLogin() async {
+    final handle = _handleCtrl.text.trim().toLowerCase().replaceAll('@', '');
     final pin = _pinCtrl.text.trim();
 
     if (handle.isEmpty || pin.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Handle and PIN are required!')));
+      setState(() => _errorMessage = 'Handle ID aur Security PIN dono enter karein.');
       return;
     }
 
-    setState(() => _loading = true);
-    final client = Supabase.instance.client;
+    setState(() {
+      _isLoading = true;
+      _errorMessage = null;
+    });
 
     try {
-      if (isLoginMode) {
-        // LOGIN CHECK
-        final res = await client
-            .from('creator_profiles')
-            .select()
-            .eq('handle_id', handle)
-            .eq('secret_pin', pin)
-            .maybeSingle();
+      final res = await Supabase.instance.client
+          .from('creator_profiles')
+          .select()
+          .eq('handle_id', handle)
+          .maybeSingle();
 
-        if (res == null) {
-          throw 'Invalid Handle ID or PIN!';
-        }
-        if (res['is_blocked'] == true) {
-          throw 'This creator account is suspended.';
-        }
-
-        await _saveSession(handle, res['name']);
-      } else {
-        // REGISTER NEW CREATOR
-        if (_nameCtrl.text.trim().isEmpty) {
-          throw 'Please enter your Full Name';
-        }
-
-        await client.from('creator_profiles').insert({
-          'handle_id': handle,
-          'name': _nameCtrl.text.trim(),
-          'secret_pin': pin,
-          'subject_specialty': _subjectCtrl.text.trim(),
-          'telegram_handle': _telegramCtrl.text.trim(),
+      if (res == null) {
+        setState(() {
+          _isLoading = false;
+          _errorMessage = 'Handle "@$handle" registered nahi mila.';
         });
-
-        await _saveSession(handle, _nameCtrl.text.trim());
+        return;
       }
+
+      final String? storedPin = res['security_pin']?.toString();
+
+      // PIN check
+      if (storedPin != null && storedPin.isNotEmpty && storedPin != pin) {
+        setState(() {
+          _isLoading = false;
+          _errorMessage = 'Invalid PIN! Kripya sahi PIN enter karein.';
+        });
+        return;
+      }
+
+      // Save session
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('logged_in_creator_handle', handle);
 
       if (mounted) {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (_) => CreatorMockBuilderScreen(
+            builder: (_) => CreatorDashboardScreen(
               creatorHandle: handle,
               isDarkMode: widget.isDarkMode,
             ),
@@ -79,72 +73,118 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
         );
       }
     } catch (e) {
-      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error: $e')));
-    } finally {
-      if (mounted) setState(() => _loading = false);
+      setState(() {
+        _isLoading = false;
+        _errorMessage = 'Verification failed: $e';
+      });
     }
-  }
-
-  Future<void> _saveSession(String handle, String name) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString('saved_creator_handle', handle);
-    await prefs.setString('saved_creator_name', name);
   }
 
   @override
   Widget build(BuildContext context) {
+    final isDark = widget.isDarkMode;
+    final bgSurface = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
+    final cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+
     return Scaffold(
-      appBar: AppBar(title: Text(isLoginMode ? 'Creator Studio Login' : 'Become a Creator')),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            TextField(
-              controller: _handleCtrl,
-              decoration: const InputDecoration(labelText: 'Unique Handle ID (e.g. rakesh_maths)', border: OutlineInputBorder()),
+      backgroundColor: bgSurface,
+      appBar: AppBar(
+        title: const Text('Creator Studio Portal', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+      ),
+      body: Center(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24),
+          child: Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: cardBg,
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: Colors.grey.withOpacity(0.15)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.04),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4),
+                ),
+              ],
             ),
-            const SizedBox(height: 12),
-            TextField(
-              controller: _pinCtrl,
-              keyboardType: TextInputType.number,
-              obscureText: true,
-              decoration: const InputDecoration(labelText: '4-Digit Secret PIN', border: OutlineInputBorder()),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF2563EB).withOpacity(0.12),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Icon(Icons.verified_user_rounded, color: Color(0xFF2563EB), size: 28),
+                    ),
+                    const SizedBox(width: 12),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text('Educator Verification', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                        Text('Access Studio Dashboard & Tools', style: TextStyle(color: Colors.grey, fontSize: 12)),
+                      ],
+                    ),
+                  ],
+                ),
+                const Divider(height: 28),
+
+                TextField(
+                  controller: _handleCtrl,
+                  decoration: const InputDecoration(
+                    labelText: 'Creator Handle ID',
+                    hintText: 'e.g. mentor_rahul',
+                    prefixText: '@ ',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                const SizedBox(height: 14),
+
+                TextField(
+                  controller: _pinCtrl,
+                  obscureText: true,
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                    labelText: 'Security PIN',
+                    hintText: 'Enter 4 or 6 digit PIN',
+                    prefixIcon: Icon(Icons.lock_outline_rounded),
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                const SizedBox(height: 10),
+
+                if (_errorMessage != null) ...[
+                  Text(
+                    _errorMessage!,
+                    style: const TextStyle(color: Colors.redAccent, fontSize: 12.5),
+                  ),
+                  const SizedBox(height: 10),
+                ],
+
+                const SizedBox(height: 6),
+                SizedBox(
+                  width: double.infinity,
+                  height: 48,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF2563EB),
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    ),
+                    onPressed: _isLoading ? null : _verifyAndLogin,
+                    child: _isLoading
+                        ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+                        : const Text('Unlock Creator Studio 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                  ),
+                ),
+              ],
             ),
-            if (!isLoginMode) ...[
-              const SizedBox(height: 12),
-              TextField(
-                controller: _nameCtrl,
-                decoration: const InputDecoration(labelText: 'Display Name (e.g. Rakesh Sir)', border: OutlineInputBorder()),
-              ),
-              const SizedBox(height: 12),
-              TextField(
-                controller: _subjectCtrl,
-                decoration: const InputDecoration(labelText: 'Specialty (e.g. Science / Maths)', border: OutlineInputBorder()),
-              ),
-              const SizedBox(height: 12),
-              TextField(
-                controller: _telegramCtrl,
-                decoration: const InputDecoration(labelText: 'Telegram Handle / Channel Link', border: OutlineInputBorder()),
-              ),
-            ],
-            const SizedBox(height: 20),
-            SizedBox(
-              width: double.infinity,
-              height: 48,
-              child: ElevatedButton(
-                onPressed: _loading ? null : _handleAuth,
-                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
-                child: _loading
-                    ? const CircularProgressIndicator(color: Colors.white)
-                    : Text(isLoginMode ? 'Enter Creator Studio' : 'Register & Start Creating', style: const TextStyle(fontWeight: FontWeight.bold)),
-              ),
-            ),
-            const SizedBox(height: 12),
-            TextButton(
-              onPressed: () => setState(() => isLoginMode = !isLoginMode),
-              child: Text(isLoginMode ? "New teacher? Create Creator Profile" : "Already have PIN? Login here"),
-            ),
-          ],
+          ),
         ),
       ),
     );
