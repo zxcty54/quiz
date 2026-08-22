@@ -49,20 +49,20 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           .from('community_posts')
           .select('*, post_comments(id)')
           .eq('creator_id', widget.creatorHandle)
-          .order('views_count', ascending: false);
+          .order('created_at', ascending: false);
 
       final mocksRes = await client
           .from('creator_mocks')
           .select()
           .eq('creator_id', widget.creatorHandle)
-          .order('attempts_count', ascending: false);
+          .order('created_at', ascending: false);
 
       int views = 0;
       int upvotes = 0;
       int bookmarks = 0;
       int shares = 0;
 
-      for (var p in (postsRes as List)) {
+      for (var p in (postsRes as List? ?? [])) {
         views += (p['views_count'] as int? ?? 0);
         upvotes += (p['upvotes'] as int? ?? 0);
         bookmarks += (p['bookmarks_count'] as int? ?? 0);
@@ -70,15 +70,15 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
       }
 
       int attempts = 0;
-      for (var m in (mocksRes as List)) {
+      for (var m in (mocksRes as List? ?? [])) {
         attempts += (m['attempts_count'] as int? ?? 0);
       }
 
       if (mounted) {
         setState(() {
           _profile = profileRes;
-          _posts = postsRes;
-          _mocks = mocksRes;
+          _posts = postsRes ?? [];
+          _mocks = mocksRes ?? [];
           _totalViews = views;
           _totalUpvotes = upvotes;
           _totalBookmarks = bookmarks;
@@ -87,21 +87,24 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           _isLoading = false;
         });
       }
-    } catch (_) {
+    } catch (e) {
+      debugPrint("Analytics load error: $e");
       if (mounted) setState(() => _isLoading = false);
     }
   }
 
-  // Broadcast Modal (Daily Quiz, PDF Handouts, Strategy Alerts)
+  // 📢 Working Broadcast Modal (Daily Quiz, PDF Handouts, Exam Alerts)
   void _openBroadcastModal(String type) {
     final textCtrl = TextEditingController();
     final linkCtrl = TextEditingController();
+    final expCtrl = TextEditingController();
     final opCtrl1 = TextEditingController();
     final opCtrl2 = TextEditingController();
     final opCtrl3 = TextEditingController();
     final opCtrl4 = TextEditingController();
     int correctIdx = 0;
     bool isPoll = type == 'quiz';
+    bool isPublishing = false;
 
     showModalBottomSheet(
       context: context,
@@ -110,7 +113,12 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setModalState) => Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(ctx).viewInsets.bottom,
+            left: 16,
+            right: 16,
+            top: 16,
+          ),
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -122,8 +130,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                     Text(
                       isPoll
                           ? '⚡ Publish Daily Rapid Quiz'
-                          : (type == 'note' ? '📚 Share PDF Notes / Handout' : '📢 Broadcast Exam Alert'),
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                          : (type == 'note' ? '📚 Share PDF Notes & Handouts' : '📢 Broadcast Exam Alert / Gossip'),
+                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5),
                     ),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
@@ -133,15 +141,24 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   controller: textCtrl,
                   maxLines: isPoll ? 2 : 3,
                   decoration: InputDecoration(
-                    hintText: isPoll ? 'Type Question text here...' : (type == 'note' ? 'Explain topic or notes headline...' : 'Type official alert or cut-off gossip...'),
+                    hintText: isPoll
+                        ? 'Type Quiz Question text here...'
+                        : (type == 'note'
+                            ? 'Explain topic or notes headline...'
+                            : 'Type official exam alert, syllabus change, or cut-off info...'),
                     border: const OutlineInputBorder(),
                   ),
                 ),
                 const SizedBox(height: 10),
 
+                // Quiz Options Layout
                 if (isPoll) ...[
+                  const Text('Options & Correct Answer (Tap letter to set correct):',
+                      style: TextStyle(fontSize: 11, color: Colors.grey)),
+                  const SizedBox(height: 6),
                   ...List.generate(4, (idx) {
                     final controllers = [opCtrl1, opCtrl2, opCtrl3, opCtrl4];
+                    final isCorrect = correctIdx == idx;
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 6),
                       child: Row(
@@ -150,75 +167,157 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             onTap: () => setModalState(() => correctIdx = idx),
                             child: CircleAvatar(
                               radius: 14,
-                              backgroundColor: correctIdx == idx ? const Color(0xFF16A34A) : Colors.grey.withOpacity(0.3),
-                              child: Text(String.fromCharCode(65 + idx), style: const TextStyle(fontSize: 12, color: Colors.white, fontWeight: FontWeight.bold)),
+                              backgroundColor: isCorrect ? const Color(0xFF16A34A) : Colors.grey.withOpacity(0.3),
+                              child: Text(
+                                String.fromCharCode(65 + idx),
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: isCorrect ? Colors.white : Colors.black87,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                             ),
                           ),
                           const SizedBox(width: 8),
                           Expanded(
                             child: TextField(
                               controller: controllers[idx],
-                              decoration: InputDecoration(hintText: 'Option ${String.fromCharCode(65 + idx)}', isDense: true, border: const OutlineInputBorder()),
+                              decoration: InputDecoration(
+                                hintText: 'Option ${String.fromCharCode(65 + idx)}',
+                                isDense: true,
+                                border: const OutlineInputBorder(),
+                              ),
                             ),
                           ),
                         ],
                       ),
                     );
                   }),
-                ],
-
-                if (type == 'note')
+                  const SizedBox(height: 4),
                   TextField(
-                    controller: linkCtrl,
+                    controller: expCtrl,
                     decoration: const InputDecoration(
-                      labelText: 'Google Drive / Telegram PDF Link',
+                      labelText: 'Explanation (Optional)',
                       isDense: true,
                       border: OutlineInputBorder(),
                     ),
                   ),
+                ],
+
+                // Study Material Link
+                if (type == 'note') ...[
+                  TextField(
+                    controller: linkCtrl,
+                    decoration: const InputDecoration(
+                      labelText: 'Google Drive / Telegram PDF Link (https://...)',
+                      isDense: true,
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ],
 
                 const SizedBox(height: 14),
                 SizedBox(
                   width: double.infinity,
-                  height: 44,
+                  height: 46,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
-                    onPressed: () async {
-                      final text = textCtrl.text.trim();
-                      if (text.isEmpty) return;
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF2563EB),
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    ),
+                    onPressed: isPublishing
+                        ? null
+                        : () async {
+                            final text = textCtrl.text.trim();
+                            if (text.isEmpty) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Please enter content text!')),
+                              );
+                              return;
+                            }
 
-                      String content = text;
-                      if (type == 'note' && linkCtrl.text.trim().isNotEmpty) {
-                        content += '\n\n📄 Study Material: ${linkCtrl.text.trim()}';
-                      }
+                            if (isPoll &&
+                                (opCtrl1.text.trim().isEmpty || opCtrl2.text.trim().isEmpty)) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Please provide at least Option A and Option B!')),
+                              );
+                              return;
+                            }
 
-                      Map<String, dynamic>? pollJson;
-                      if (isPoll) {
-                        pollJson = {
-                          'options': [opCtrl1.text.trim(), opCtrl2.text.trim(), opCtrl3.text.trim(), opCtrl4.text.trim()],
-                          'correct_idx': correctIdx,
-                          'votes': [0, 0, 0, 0],
-                          'exp': 'Prepared by @${widget.creatorHandle}',
-                        };
-                      }
+                            setModalState(() => isPublishing = true);
 
-                      Navigator.pop(ctx);
-                      await Supabase.instance.client.from('community_posts').insert({
-                        'creator_id': widget.creatorHandle,
-                        'content': content,
-                        'tag': isPoll ? 'Daily Quiz ⚡' : (type == 'note' ? 'Current Affairs 📰' : 'Exam Gossip 🔥'),
-                        'poll_data': pollJson,
-                        'views_count': 1,
-                      });
+                            String content = text;
+                            if (type == 'note' && linkCtrl.text.trim().isNotEmpty) {
+                              content += '\n\n📄 Study Material: ${linkCtrl.text.trim()}';
+                            }
 
-                      if (mounted) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('🚀 Broadcast published to community!'), backgroundColor: Color(0xFF16A34A)),
-                        );
-                        _loadCompleteAnalytics();
-                      }
-                    },
-                    child: const Text('Publish to Community 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                            Map<String, dynamic>? pollJson;
+                            if (isPoll) {
+                              final rawOptions = [
+                                opCtrl1.text.trim(),
+                                opCtrl2.text.trim(),
+                                opCtrl3.text.trim(),
+                                opCtrl4.text.trim(),
+                              ].where((o) => o.isNotEmpty).toList();
+
+                              pollJson = {
+                                'options': rawOptions,
+                                'correct_idx': correctIdx < rawOptions.length ? correctIdx : 0,
+                                'votes': List.filled(rawOptions.length, 0),
+                                'exp': expCtrl.text.trim().isNotEmpty
+                                    ? expCtrl.text.trim()
+                                    : 'Explained by @${widget.creatorHandle}',
+                              };
+                            }
+
+                            try {
+                              String targetTag = isPoll
+                                  ? 'Daily Quiz ⚡'
+                                  : (type == 'note' ? 'Current Affairs 📰' : 'Exam Gossip 🔥');
+
+                              final authorName = _profile?['name'] ?? widget.creatorHandle;
+
+                              await Supabase.instance.client.from('community_posts').insert({
+                                'creator_id': widget.creatorHandle,
+                                'author_name': authorName,
+                                'content': content,
+                                'tag': targetTag,
+                                'poll_data': pollJson,
+                                'views_count': 1,
+                                'upvotes': 0,
+                                'downvotes': 0,
+                                'shares_count': 0,
+                                'bookmarks_count': 0,
+                              });
+
+                              if (ctx.mounted) Navigator.pop(ctx);
+
+                              if (mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                    content: Text('🚀 Published to Community Feed successfully!'),
+                                    backgroundColor: Color(0xFF16A34A),
+                                  ),
+                                );
+                                _loadCompleteAnalytics();
+                              }
+                            } catch (err) {
+                              setModalState(() => isPublishing = false);
+                              if (ctx.mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(content: Text('Publish error: $err')),
+                                );
+                              }
+                            }
+                          },
+                    child: isPublishing
+                        ? const SizedBox(
+                            width: 20,
+                            height: 20,
+                            child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2),
+                          )
+                        : const Text('Publish to Feed Now 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5)),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -276,11 +375,11 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(_profile?['name'] ?? 'Mentor', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                      Text(_profile?['name'] ?? 'Creator Hub', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                         decoration: BoxDecoration(color: const Color(0xFF16A34A).withOpacity(0.12), borderRadius: BorderRadius.circular(6)),
-                        child: const Text('PRO CREATOR', style: TextStyle(color: Color(0xFF16A34A), fontWeight: FontWeight.bold, fontSize: 11)),
+                        child: const Text('STUDIO', style: TextStyle(color: Color(0xFF16A34A), fontWeight: FontWeight.bold, fontSize: 11)),
                       ),
                     ],
                   ),
@@ -291,8 +390,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                     children: [
                       _buildMetricItem('Followers', '${_profile?['followers_count'] ?? 0}', Icons.people_alt_outlined),
                       _buildMetricItem('Total Views', '$_totalViews', Icons.remove_red_eye_outlined),
-                      _buildMetricItem('Test Attempts', '$_totalMockAttempts', Icons.bolt_rounded),
-                      _buildMetricItem('Revision Saves', '$_totalBookmarks', Icons.bookmark_border_rounded),
+                      _buildMetricItem('Attempts', '$_totalMockAttempts', Icons.bolt_rounded),
+                      _buildMetricItem('Notebook Saves', '$_totalBookmarks', Icons.bookmark_border_rounded),
                     ],
                   ),
                 ],
