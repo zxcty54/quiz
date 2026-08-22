@@ -3,8 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 class AdminTelegramAlert {
-  static const String _botToken = "1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo";
-  static const String _adminChatId = "785009742";
+  static const String _botToken = 'YOUR_TELEGRAM_BOT_TOKEN';
+  static const String _adminChatId = 'YOUR_ADMIN_CHAT_ID';
 
   static Future<void> sendAbuseAlert({
     required int postId,
@@ -13,46 +13,36 @@ class AdminTelegramAlert {
     required int totalReports,
     required String lastReason,
   }) async {
+    if (_botToken == 'YOUR_TELEGRAM_BOT_TOKEN' || _adminChatId == 'YOUR_ADMIN_CHAT_ID') {
+      debugPrint("Telegram Alert: Bot credentials not configured. Alert skipped.");
+      return;
+    }
+
     try {
-      final String messageText = """
-🚨 <b>URGENT: Post Reported 4+ Times!</b>
+      final message = '''
+🚨 <b>URGENT: Community Post Abuse Alert</b>
 
-🆔 <b>Post ID:</b> <code>$postId</code>
-👤 <b>Author:</b> @$authorHandle
-⚠️ <b>Total Reports:</b> $totalReports
-📝 <b>Reason:</b> $lastReason
+📌 <b>Post ID:</b> $postId
+👤 <b>Author Handle:</b> @$authorHandle
+📊 <b>Total Reports:</b> $totalReports
+⚠️ <b>Last Reported Reason:</b> $lastReason
 
-📄 <b>Content:</b>
-<i>"${postContent.length > 250 ? '${postContent.substring(0, 250)}...' : postContent}"</i>
+📝 <b>Content Preview:</b>
+<i>${postContent.length > 250 ? '${postContent.substring(0, 250)}...' : postContent}</i>
+''';
 
-👇 Action lene ke liye niche click karein:
-""";
-
-      final String deleteUrl = "https://mocktester.online/api/delete-post?post_id=$postId&key=SECRET_ADMIN_KEY";
-      final url = Uri.parse("https://api.telegram.org/bot$_botToken/sendMessage");
-
-      final response = await http.post(
-        url,
+      final uri = Uri.parse('https://api.telegram.org/bot$_botToken/sendMessage');
+      await http.post(
+        uri,
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'chat_id': _adminChatId,
-          'text': messageText,
+          'text': message,
           'parse_mode': 'HTML',
-          'reply_markup': {
-            'inline_keyboard': [
-              [
-                {'text': '🗑️ Delete Post Immediately', 'url': deleteUrl},
-              ]
-            ]
-          }
         }),
       );
-
-      if (response.statusCode != 200) {
-        debugPrint("Telegram Alert Failed: ${response.body}");
-      }
     } catch (e) {
-      debugPrint("Telegram Bot Error: $e");
+      debugPrint("Failed to send Telegram alert: $e");
     }
   }
 }
