@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'admin_control_hub_screen.dart';
 import 'creator_dashboard_screen.dart';
 
 class CreatorAuthScreen extends StatefulWidget {
@@ -32,6 +33,30 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
     });
 
     try {
+      // 🛡️ 1. Master Admin Bypass Check (admin / 998877)
+      final adminRes = await Supabase.instance.client
+          .from('admin_config')
+          .select()
+          .eq('admin_handle', handle)
+          .eq('master_pin', pin)
+          .maybeSingle();
+
+      if (adminRes != null) {
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setString('logged_in_creator_handle', 'admin');
+
+        if (mounted) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (_) => AdminControlHubScreen(isDarkMode: widget.isDarkMode),
+            ),
+          );
+        }
+        return;
+      }
+
+      // 👤 2. Regular Creator Verification
       final res = await Supabase.instance.client
           .from('creator_profiles')
           .select()
@@ -46,9 +71,18 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
         return;
       }
 
+      // Block/Ban Check
+      if (res['is_blocked'] == true) {
+        setState(() {
+          _isLoading = false;
+          _errorMessage = '🚫 Yeh account temporarily suspend/block kar diya gaya hai.';
+        });
+        return;
+      }
+
       final String? storedPin = res['security_pin']?.toString();
 
-      // PIN check
+      // PIN Check
       if (storedPin != null && storedPin.isNotEmpty && storedPin != pin) {
         setState(() {
           _isLoading = false;
@@ -126,7 +160,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text('Educator Verification', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                        Text('Verification Portal', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                         Text('Access Studio Dashboard & Tools', style: TextStyle(color: Colors.grey, fontSize: 12)),
                       ],
                     ),
@@ -137,8 +171,8 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                 TextField(
                   controller: _handleCtrl,
                   decoration: const InputDecoration(
-                    labelText: 'Creator Handle ID',
-                    hintText: 'e.g. mentor_rahul',
+                    labelText: 'Handle ID',
+                    hintText: 'e.g. mentor_rahul or admin',
                     prefixText: '@ ',
                     border: OutlineInputBorder(),
                   ),
@@ -179,7 +213,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                     onPressed: _isLoading ? null : _verifyAndLogin,
                     child: _isLoading
                         ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                        : const Text('Unlock Creator Studio 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                        : const Text('Unlock Studio / Admin Hub 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
                   ),
                 ),
               ],
