@@ -381,7 +381,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                     title: const Text('Privacy Policy', style: TextStyle(fontSize: 13.5)),
                     onTap: () {
                       Navigator.pop(context);
-                      _openWebsiteUrl('Privacy Policy', 'https://mocktester.online/privacy-policy.html');
+                      _openWebsiteUrl('Privacy Policy', 'https://www.mocktester.online/p/privacy.html');
                     },
                   ),
                 ],
