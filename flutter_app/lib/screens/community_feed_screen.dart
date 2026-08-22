@@ -26,6 +26,13 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   bool _isLoading = true;
   String _activeFilter = 'All';
   String _customUserName = 'Aspirant';
+  String _currentLoggedInHandle = 'user';
+  
+  // 🔍 Search Controls
+  bool _isSearching = false;
+  String _searchQuery = '';
+  final TextEditingController _searchCtrl = TextEditingController();
+
   final Map<int, int> _userVoteState = {};
   final Map<int, int> _userPollSelections = {};
   final Set<int> _savedPostIds = {};
@@ -50,12 +57,169 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
   Future<void> _loadUserPreferences() async {
     final prefs = await SharedPreferences.getInstance();
-    final saved = prefs.getStringList('local_saved_post_ids') ?? [];
+    final saved = prefs.getStringList('community_saved_posts_ids') ?? [];
     final name = prefs.getString('custom_aspirant_name') ?? 'Aspirant';
+    final handle = prefs.getString('logged_in_creator_handle') ?? 'user';
     setState(() {
       _savedPostIds.addAll(saved.map((e) => int.tryParse(e) ?? 0));
       _customUserName = name;
+      _currentLoggedInHandle = handle;
     });
+  }
+
+  Future<void> _fetchFeedPosts() async {
+    setState(() => _isLoading = true);
+    try {
+      final sixtyDaysAgo = DateTime.now().subtract(const Duration(days: 60)).toIso8601String();
+
+      final res = await Supabase.instance.client
+          .from('community_posts')
+          .select('*, creator_profiles(name, handle_id, subject_specialty, telegram_handle, followers_count, is_blocked), creator_mocks(*)')
+          .eq('is_approved', true)
+          .gte('created_at', sixtyDaysAgo)
+          .order('created_at', ascending: false);
+
+      if (mounted) {
+        setState(() {
+          _posts = res;
+          _isLoading = false;
+        });
+      }
+    } catch (e) {
+      debugPrint("Feed Fetch Error: $e");
+      if (mounted) setState(() => _isLoading = false);
+    }
+  }
+
+  // 🗑️ Delete Post (Own Post or Master Admin)
+  Future<void> _deletePost(int postId) async {
+    final confirm = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+        title: const Text('Delete Post?'),
+        content: const Text('Are you sure you want to permanently delete this post?'),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Cancel')),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.red, foregroundColor: Colors.white),
+            onPressed: () => Navigator.pop(ctx, true),
+            child: const Text('Delete'),
+          ),
+        ],
+      ),
+    );
+
+    if (confirm != true) return;
+
+    try {
+      await Supabase.instance.client.from('community_posts').delete().eq('id', postId);
+      setState(() {
+        _posts.removeWhere((p) => p['id'] == postId);
+      });
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('🗑️ Post deleted successfully!'), backgroundColor: Colors.red),
+        );
+      }
+    } catch (e) {
+      debugPrint("Delete error: $e");
+    }
+  }
+
+  // ✏️ Edit Post Modal
+  void _openEditPostModal(Map<String, dynamic> post) {
+    final editCtrl = TextEditingController(text: post['content'] ?? '');
+    String selectedTag = post['tag'] ?? 'Doubts ❓';
+    bool isSaving = false;
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setModalState) => Padding(
+          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text('✏️ Edit Post', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+                  IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                ],
+              ),
+              const SizedBox(height: 8),
+              DropdownButtonFormField<String>(
+                value: _filters.contains(selectedTag) ? selectedTag : 'Doubts ❓',
+                decoration: const InputDecoration(labelText: 'Category', isDense: true, border: OutlineInputBorder()),
+                items: _filters.where((f) => f != 'All' && f != 'Saved 📌').map((t) => DropdownMenuItem(value: t, child: Text(t))).toList(),
+                onChanged: (val) => setModalState(() => selectedTag = val ?? selectedTag),
+              ),
+              const SizedBox(height: 10),
+              TextField(
+                controller: editCtrl,
+                maxLines: 4,
+                decoration: const InputDecoration(border: OutlineInputBorder(), hintText: 'Update your question/doubt...'),
+              ),
+              const SizedBox(height: 14),
+              SizedBox(
+                width: double.infinity,
+                height: 44,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+                  onPressed: isSaving
+                      ? null
+                      : () async {
+                          final newText = editCtrl.text.trim();
+                          if (newText.isEmpty) return;
+
+                          setModalState(() => isSaving = true);
+                          try {
+                            // Edit updates content and resets approval for safety
+                            await Supabase.instance.client.from('community_posts').update({
+                              'content': newText,
+                              'tag': selectedTag,
+                              'is_approved': false, // Re-verify on edit
+                            }).eq('id', post['id']);
+
+                            AdminTelegramAlert.sendForInteractiveApproval(
+                              postId: post['id'],
+                              authorName: post['author_name'] ?? _customUserName,
+                              authorHandle: post['creator_id'] ?? 'user',
+                              tag: selectedTag,
+                              content: '$newText\n\n[✏️ EDITED POST]',
+                            ).catchError((_) => false);
+
+                            if (ctx.mounted) Navigator.pop(ctx);
+                            _fetchFeedPosts();
+
+                            if (mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Text('⏳ Post updated! Sent for quick Telegram re-approval.'),
+                                  backgroundColor: Color(0xFF2563EB),
+                                ),
+                              );
+                            }
+                          } catch (e) {
+                            setModalState(() => isSaving = false);
+                          }
+                        },
+                  child: isSaving
+                      ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+                      : const Text('Save & Update 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                ),
+              ),
+              const SizedBox(height: 16),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   Future<void> _editMyNameDialog() async {
@@ -89,31 +253,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         ],
       ),
     );
-  }
-
-  Future<void> _fetchFeedPosts() async {
-    setState(() => _isLoading = true);
-    try {
-      final sixtyDaysAgo = DateTime.now().subtract(const Duration(days: 60)).toIso8601String();
-
-      // Sirf Approved posts render hongi
-      final res = await Supabase.instance.client
-          .from('community_posts')
-          .select('*, creator_profiles(name, handle_id, subject_specialty, telegram_handle, followers_count, is_blocked), creator_mocks(*)')
-          .eq('is_approved', true)
-          .gte('created_at', sixtyDaysAgo)
-          .order('created_at', ascending: false);
-
-      if (mounted) {
-        setState(() {
-          _posts = res;
-          _isLoading = false;
-        });
-      }
-    } catch (e) {
-      debugPrint("Feed Fetch Error: $e");
-      if (mounted) setState(() => _isLoading = false);
-    }
   }
 
   void _sharePost(Map<String, dynamic> post) async {
@@ -162,7 +301,7 @@ $content
       }
     });
 
-    await prefs.setStringList('local_saved_post_ids', _savedPostIds.map((e) => e.toString()).toList());
+    await prefs.setStringList('community_saved_posts_ids', _savedPostIds.map((e) => e.toString()).toList());
     
     try {
       await Supabase.instance.client.from('community_posts').update({'bookmarks_count': post['bookmarks_count']}).eq('id', postId);
@@ -171,7 +310,7 @@ $content
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(isSaving ? '📌 Saved to Revision Notebook!' : 'Removed from Saved!'),
+          content: Text(isSaving ? '📌 Saved in Community tab!' : 'Removed from Saved!'),
           duration: const Duration(seconds: 1),
           backgroundColor: const Color(0xFF2563EB),
         ),
@@ -276,299 +415,6 @@ $content
     );
   }
 
-  void _openPostAnalyticsSheet(Map<String, dynamic> post) {
-    final int views = post['views_count'] ?? 120;
-    final int upvotes = post['upvotes'] ?? 0;
-    final int downvotes = post['downvotes'] ?? 0;
-    final int bookmarks = post['bookmarks_count'] ?? 0;
-    final int shares = post['shares_count'] ?? 0;
-    final attachedMock = post['creator_mocks'];
-    final int attempts = attachedMock?['attempts_count'] ?? 0;
-
-    final int totalVotes = upvotes + downvotes;
-    final double upvoteRatio = totalVotes > 0 ? ((upvotes / totalVotes) * 100) : 100.0;
-    final int totalInteractions = upvotes + bookmarks + shares + attempts;
-    final double engagementScore = views > 0 ? ((totalInteractions / views) * 100) : 0.0;
-
-    showModalBottomSheet(
-      context: context,
-      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-      builder: (ctx) => Padding(
-        padding: const EdgeInsets.all(18),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: const [
-                    Icon(Icons.insights_rounded, color: Color(0xFF2563EB), size: 20),
-                    SizedBox(width: 8),
-                    Text('Post Performance Insights', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                  ],
-                ),
-                IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
-              ],
-            ),
-            Text('Live interaction breakdown for this post:', style: TextStyle(fontSize: 11.5, color: Colors.grey[500])),
-            const SizedBox(height: 14),
-
-            Row(
-              children: [
-                _buildMiniMetricCard('Views / Seen 👁️', '$views', 'Total Impressions', Colors.blue),
-                const SizedBox(width: 8),
-                _buildMiniMetricCard('Saves 📌', '$bookmarks', 'Added to Notebooks', Colors.amber.shade800),
-              ],
-            ),
-            const SizedBox(height: 8),
-            Row(
-              children: [
-                _buildMiniMetricCard('Likes Ratio 🔼', '${upvoteRatio.toStringAsFixed(0)}%', '$upvotes Upvotes vs $downvotes Downvotes', Colors.green),
-                const SizedBox(width: 8),
-                _buildMiniMetricCard('Shares 🔗', '$shares', 'Shared External Link', Colors.indigo),
-              ],
-            ),
-
-            if (attachedMock != null) ...[
-              const SizedBox(height: 12),
-              Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFEFF6FF),
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: Colors.blue.withOpacity(0.2)),
-                ),
-                child: Row(
-                  children: [
-                    const Icon(Icons.bolt_rounded, color: Colors.amber, size: 22),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Mock Drill Conversion: $attempts Attempts', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
-                          Text('Aspirants completed this test drill', style: TextStyle(color: Colors.grey[500], fontSize: 10.5)),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-
-            const SizedBox(height: 12),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Engagement Quality Score:', style: TextStyle(fontSize: 12, color: Colors.grey[600])),
-                Text('${engagementScore.toStringAsFixed(1)}%', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFF16A34A))),
-              ],
-            ),
-            const SizedBox(height: 10),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildMiniMetricCard(String label, String value, String desc, Color color) {
-    return Expanded(
-      child: Container(
-        padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFF8FAFC),
-          borderRadius: BorderRadius.circular(8),
-          border: Border.all(color: Colors.grey.withOpacity(0.15)),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(label, style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.grey[600])),
-            const SizedBox(height: 3),
-            Text(value, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: color)),
-            Text(desc, style: TextStyle(fontSize: 9, color: Colors.grey[500]), maxLines: 1, overflow: TextOverflow.ellipsis),
-          ],
-        ),
-      ),
-    );
-  }
-
-  void _openCommentsSheet(int postId, String postAuthorId) {
-    final commentCtrl = TextEditingController();
-    int? replyingToCommentId;
-    String? replyingToName;
-    int refreshKey = 0;
-    bool isSubmitting = false;
-
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setSheetState) => Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
-          child: SizedBox(
-            height: MediaQuery.of(ctx).size.height * 0.70,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text('💬 Discussion & Solution Replies', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
-                  ],
-                ),
-                const Divider(),
-                Expanded(
-                  child: FutureBuilder<List<Map<String, dynamic>>>(
-                    key: ValueKey('comments_${postId}_$refreshKey'),
-                    future: Supabase.instance.client
-                        .from('post_comments')
-                        .select()
-                        .eq('post_id', postId)
-                        .order('created_at', ascending: true),
-                    builder: (context, snapshot) {
-                      if (snapshot.connectionState == ConnectionState.waiting) {
-                        return const Center(child: CircularProgressIndicator());
-                      }
-                      final comments = snapshot.data ?? [];
-                      if (comments.isEmpty) {
-                        return const Center(child: Text('No replies yet. Be the first to solve!'));
-                      }
-                      return ListView.builder(
-                        itemCount: comments.length,
-                        itemBuilder: (context, cIdx) {
-                          final c = comments[cIdx];
-                          final bool isReply = c['parent_comment_id'] != null;
-
-                          return Container(
-                            margin: EdgeInsets.only(left: isReply ? 24.0 : 0.0, bottom: 8),
-                            padding: const EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              color: isReply ? (widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFF1F5F9)) : Colors.transparent,
-                              borderRadius: BorderRadius.circular(8),
-                              border: isReply ? const Border(left: BorderSide(color: Color(0xFF2563EB), width: 3)) : null,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Text(c['user_name'] ?? 'Aspirant', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
-                                    const SizedBox(width: 6),
-                                    if (c['is_creator'] == true)
-                                      const Icon(Icons.verified, color: Colors.blue, size: 14),
-                                    const Spacer(),
-                                    GestureDetector(
-                                      onTap: () {
-                                        setSheetState(() {
-                                          replyingToCommentId = c['id'];
-                                          replyingToName = c['user_name'] ?? 'Aspirant';
-                                        });
-                                      },
-                                      child: const Text('Reply', style: TextStyle(color: Color(0xFF2563EB), fontSize: 11, fontWeight: FontWeight.bold)),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 4),
-                                _buildRichTextContent(c['content'] ?? '', fontSize: 13),
-                              ],
-                            ),
-                          );
-                        },
-                      );
-                    },
-                  ),
-                ),
-                if (replyingToCommentId != null) ...[
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                    color: Colors.blue.withOpacity(0.1),
-                    child: Row(
-                      children: [
-                        Text('Replying to @$replyingToName', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
-                        const Spacer(),
-                        IconButton(
-                          icon: const Icon(Icons.close, size: 14),
-                          onPressed: () => setSheetState(() {
-                            replyingToCommentId = null;
-                            replyingToName = null;
-                          }),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-                const Divider(),
-                Row(
-                  children: [
-                    Expanded(
-                      child: TextField(
-                        controller: commentCtrl,
-                        textInputAction: TextInputAction.send,
-                        decoration: InputDecoration(
-                          hintText: replyingToName != null ? 'Reply to @$replyingToName...' : 'Add solution or reply as $_customUserName...',
-                          border: InputBorder.none,
-                        ),
-                      ),
-                    ),
-                    IconButton(
-                      icon: isSubmitting
-                          ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2))
-                          : const Icon(Icons.send_rounded, color: Color(0xFF2563EB)),
-                      onPressed: isSubmitting
-                          ? null
-                          : () async {
-                              final text = commentCtrl.text.trim();
-                              if (text.isEmpty) return;
-
-                              final validationError = SecurityContentGuard.validateContent(text);
-                              if (validationError != null) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text(validationError), backgroundColor: Colors.red.shade800),
-                                );
-                                return;
-                              }
-
-                              setSheetState(() => isSubmitting = true);
-                              try {
-                                await Supabase.instance.client.from('post_comments').insert({
-                                  'post_id': postId,
-                                  'user_handle': 'user',
-                                  'user_name': _customUserName,
-                                  'content': text,
-                                  'parent_comment_id': replyingToCommentId,
-                                });
-
-                                commentCtrl.clear();
-                                setSheetState(() {
-                                  replyingToCommentId = null;
-                                  replyingToName = null;
-                                  refreshKey++;
-                                  isSubmitting = false;
-                                });
-                              } catch (e) {
-                                setSheetState(() => isSubmitting = false);
-                              }
-                            },
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 10),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  // ✍️ Create Post Modal with Telegram Interactive Moderation
   void _openCreatePostModal() {
     final contentCtrl = TextEditingController();
     String selectedTag = 'Doubts ❓';
@@ -683,9 +529,8 @@ $content
                                 uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
                               }
 
-                              // 1. Insert to Supabase with is_approved: false (Pre-moderation)
                               final insertedPost = await Supabase.instance.client.from('community_posts').insert({
-                                'creator_id': 'user',
+                                'creator_id': _currentLoggedInHandle,
                                 'author_name': _customUserName,
                                 'content': text,
                                 'tag': selectedTag,
@@ -698,11 +543,10 @@ $content
                                 'bookmarks_count': 0,
                               }).select().single();
 
-                              // 2. 🚀 Send to Telegram with Interactive [Approve / Reject] buttons
                               AdminTelegramAlert.sendForInteractiveApproval(
                                 postId: insertedPost['id'] ?? 0,
                                 authorName: _customUserName,
-                                authorHandle: 'candidate',
+                                authorHandle: _currentLoggedInHandle,
                                 tag: selectedTag,
                                 content: text,
                                 imageUrl: uploadedImageUrl,
@@ -713,19 +557,13 @@ $content
                                 _fetchFeedPosts();
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(
-                                    content: Text('⏳ Post submitted! Awaiting Moderator Approval on Telegram.'),
+                                    content: Text('⏳ Post submitted! Awaiting Telegram Moderator approval.'),
                                     backgroundColor: Color(0xFF2563EB),
                                   ),
                                 );
                               }
                             } catch (e) {
-                              debugPrint("Upload Error: $e");
                               setModalState(() => isUploading = false);
-                              if (context.mounted) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text('Post error: $e'), backgroundColor: Colors.red),
-                                );
-                              }
                             }
                           },
                     child: isUploading
@@ -777,7 +615,7 @@ $content
           TextSpan(
             text: matchText,
             style: const TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold),
-            recognizer: TapGestureRecognizer()..onTap = () => setState(() => _activeFilter = matchText),
+            recognizer: TapGestureRecognizer()..onTap = () => setState(() => _searchCtrl.text = matchText),
           ),
         );
       } else if (matchText.startsWith('@')) {
@@ -814,56 +652,6 @@ $content
           color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
         ),
         children: spans,
-      ),
-    );
-  }
-
-  Widget _buildDocumentLinkResolver(String content, bool isDark) {
-    final match = RegExp(r'https?:\/\/[^\s]+').firstMatch(content);
-    if (match == null) return const SizedBox.shrink();
-
-    final link = match.group(0)!;
-    String label = 'Open Study Material / Handout';
-    IconData docIcon = Icons.link_rounded;
-
-    if (link.contains('drive.google.com')) {
-      label = 'Google Drive PDF Notes';
-      docIcon = Icons.picture_as_pdf_rounded;
-    } else if (link.contains('t.me')) {
-      label = 'Telegram Channel Asset / File';
-      docIcon = Icons.telegram;
-    }
-
-    return Container(
-      margin: const EdgeInsets.only(top: 8),
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-      decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.3)),
-      ),
-      child: Row(
-        children: [
-          Icon(docIcon, color: const Color(0xFF2563EB), size: 20),
-          const SizedBox(width: 8),
-          Expanded(
-            child: Text(
-              label,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5),
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF2563EB),
-              foregroundColor: Colors.white,
-              visualDensity: VisualDensity.compact,
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-            ),
-            onPressed: () => launchUrl(Uri.parse(link), mode: LaunchMode.externalApplication),
-            child: const Text('Open ↗', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
-          ),
-        ],
       ),
     );
   }
@@ -967,17 +755,56 @@ $content
     final isDark = widget.isDarkMode;
     final bgSurface = isDark ? const Color(0xFF0F172A) : Colors.white;
 
-    final filteredList = _activeFilter == 'All'
-        ? _posts
-        : (_activeFilter == 'Saved 📌'
-            ? _posts.where((p) => _savedPostIds.contains(p['id'])).toList()
-            : _posts.where((p) => p['tag'].toString().contains(_activeFilter.split(' ').first)).toList());
+    // 🔍 Multi-layer Instant Filter (Category + Search Query)
+    final filteredList = _posts.where((p) {
+      // 1. Tag & Saved Filter
+      bool matchesFilter = true;
+      if (_activeFilter == 'Saved 📌') {
+        matchesFilter = _savedPostIds.contains(p['id']);
+      } else if (_activeFilter != 'All') {
+        matchesFilter = p['tag'].toString().contains(_activeFilter.split(' ').first);
+      }
+
+      if (!matchesFilter) return false;
+
+      // 2. Search Query Match
+      if (_searchQuery.trim().isEmpty) return true;
+      final q = _searchQuery.toLowerCase().trim();
+      final content = (p['content'] ?? '').toString().toLowerCase();
+      final author = (p['author_name'] ?? '').toString().toLowerCase();
+      final tag = (p['tag'] ?? '').toString().toLowerCase();
+
+      return content.contains(q) || author.contains(q) || tag.contains(q);
+    }).toList();
 
     return Scaffold(
       backgroundColor: bgSurface,
       appBar: AppBar(
-        title: const Text('Community Feed', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+        title: _isSearching
+            ? TextField(
+                controller: _searchCtrl,
+                autofocus: true,
+                style: TextStyle(color: isDark ? Colors.white : Colors.black87),
+                decoration: const InputDecoration(
+                  hintText: 'Search BPSC, questions, notes, #topics...',
+                  border: InputBorder.none,
+                ),
+                onChanged: (val) => setState(() => _searchQuery = val),
+              )
+            : const Text('Community Feed', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
         actions: [
+          IconButton(
+            icon: Icon(_isSearching ? Icons.close_rounded : Icons.search_rounded),
+            onPressed: () {
+              setState(() {
+                if (_isSearching) {
+                  _searchCtrl.clear();
+                  _searchQuery = '';
+                }
+                _isSearching = !_isSearching;
+              });
+            },
+          ),
           IconButton(
             icon: const Icon(Icons.badge_outlined),
             tooltip: 'Change My Display Name',
@@ -1020,7 +847,12 @@ $content
                 : RefreshIndicator(
                     onRefresh: _fetchFeedPosts,
                     child: filteredList.isEmpty
-                        ? const Center(child: Text('No approved posts yet in this section.'))
+                        ? Center(
+                            child: Text(
+                              _searchQuery.isNotEmpty ? 'No posts matching "$_searchQuery"' : 'No posts found in this section.',
+                              style: const TextStyle(color: Colors.grey),
+                            ),
+                          )
                         : ListView.separated(
                             padding: EdgeInsets.zero,
                             itemCount: filteredList.length,
@@ -1045,87 +877,91 @@ $content
                                   ? (creator['name'] ?? 'Verified Mentor')
                                   : (item['author_name'] ?? 'Aspirant');
 
+                              // 🔑 Ownership Check: Is this my post or am I master admin?
+                              final bool isMyPost = (item['creator_id'] == _currentLoggedInHandle && _currentLoggedInHandle != 'user') ||
+                                  (item['author_name'] == _customUserName) ||
+                                  (_currentLoggedInHandle == 'admin');
+
                               return Container(
                                 color: bgSurface,
                                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    GestureDetector(
-                                      onTap: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (_) => CreatorProfileScreen(
-                                              creatorHandle: authorHandle,
-                                              isDarkMode: isDark,
-                                            ),
+                                    Row(
+                                      children: [
+                                        CircleAvatar(
+                                          radius: 18,
+                                          backgroundColor: isVerifiedCreator ? const Color(0xFF2563EB) : const Color(0xFF64748B),
+                                          child: Text(
+                                            isVerifiedCreator ? ((creator['name'] ?? 'M')[0]).toUpperCase() : 'A',
+                                            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
                                           ),
-                                        );
-                                      },
-                                      child: Row(
-                                        children: [
-                                          CircleAvatar(
-                                            radius: 18,
-                                            backgroundColor: isVerifiedCreator ? const Color(0xFF2563EB) : const Color(0xFF64748B),
-                                            child: Text(
-                                              isVerifiedCreator ? ((creator['name'] ?? 'M')[0]).toUpperCase() : 'A',
-                                              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
-                                            ),
+                                        ),
+                                        const SizedBox(width: 10),
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Text(authorDisplayName, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
+                                                  const SizedBox(width: 4),
+                                                  if (isVerifiedCreator) const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
+                                                  const SizedBox(width: 6),
+                                                  Text('@$authorHandle', style: TextStyle(color: Colors.grey[500], fontSize: 11.5)),
+                                                ],
+                                              ),
+                                              Text(
+                                                isVerifiedCreator ? '🎓 ${creator['subject_specialty'] ?? 'Exam Mentor'}' : 'Aspirant • Community Member',
+                                                style: TextStyle(color: isVerifiedCreator ? const Color(0xFF2563EB) : Colors.grey[600], fontSize: 10.5),
+                                              ),
+                                            ],
                                           ),
-                                          const SizedBox(width: 10),
-                                          Expanded(
-                                            child: Column(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                              children: [
-                                                Row(
+                                        ),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                          decoration: BoxDecoration(color: const Color(0xFF2563EB).withOpacity(0.08), borderRadius: BorderRadius.circular(4)),
+                                          child: Text(item['tag'] ?? 'General', style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold)),
+                                        ),
+                                        // ⚙️ 3-Dot Control Menu (Edit / Delete)
+                                        if (isMyPost)
+                                          PopupMenuButton<String>(
+                                            icon: const Icon(Icons.more_vert_rounded, size: 18, color: Colors.grey),
+                                            onSelected: (val) {
+                                              if (val == 'edit') _openEditPostModal(item);
+                                              if (val == 'delete') _deletePost(postId);
+                                            },
+                                            itemBuilder: (ctx) => [
+                                              const PopupMenuItem(
+                                                value: 'edit',
+                                                child: Row(
                                                   children: [
-                                                    Text(
-                                                      authorDisplayName,
-                                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
-                                                    ),
-                                                    const SizedBox(width: 4),
-                                                    if (isVerifiedCreator)
-                                                      const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
-                                                    const SizedBox(width: 6),
-                                                    Text(
-                                                      '@$authorHandle',
-                                                      style: TextStyle(color: Colors.grey[500], fontSize: 11.5),
-                                                    ),
+                                                    Icon(Icons.edit_outlined, size: 16, color: Color(0xFF2563EB)),
+                                                    SizedBox(width: 8),
+                                                    Text('Edit Post', style: TextStyle(fontSize: 13)),
                                                   ],
                                                 ),
-                                                Text(
-                                                  isVerifiedCreator
-                                                      ? '🎓 ${creator['subject_specialty'] ?? 'Exam Mentor'} • ${creator['followers_count'] ?? 0} Followers'
-                                                      : 'Aspirant • Active Community Member',
-                                                  style: TextStyle(
-                                                    color: isVerifiedCreator ? const Color(0xFF2563EB) : Colors.grey[600],
-                                                    fontSize: 10.5,
-                                                    fontWeight: isVerifiedCreator ? FontWeight.bold : FontWeight.normal,
-                                                  ),
+                                              ),
+                                              const PopupMenuItem(
+                                                value: 'delete',
+                                                child: Row(
+                                                  children: [
+                                                    Icon(Icons.delete_outline_rounded, size: 16, color: Colors.red),
+                                                    SizedBox(width: 8),
+                                                    Text('Delete Post', style: TextStyle(fontSize: 13, color: Colors.red)),
+                                                  ],
                                                 ),
-                                              ],
-                                            ),
+                                              ),
+                                            ],
                                           ),
-                                          Container(
-                                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                            decoration: BoxDecoration(
-                                              color: const Color(0xFF2563EB).withOpacity(0.08),
-                                              borderRadius: BorderRadius.circular(4),
-                                            ),
-                                            child: Text(item['tag'] ?? 'General', style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold)),
-                                          ),
-                                        ],
-                                      ),
+                                      ],
                                     ),
                                     const SizedBox(height: 10),
 
                                     _buildRichTextContent(item['content'] ?? ''),
 
-                                    _buildDocumentLinkResolver(item['content'] ?? '', isDark),
-
-                                    if (pollData != null)
-                                      _buildInteractivePollCard(postId, pollData, isDark),
+                                    if (pollData != null) _buildInteractivePollCard(postId, pollData, isDark),
 
                                     if (imgUrl != null && imgUrl.isNotEmpty) ...[
                                       const SizedBox(height: 10),
@@ -1191,49 +1027,6 @@ $content
                                                 visualDensity: VisualDensity.compact,
                                               ),
                                             ],
-                                          ),
-                                        ),
-                                        const SizedBox(width: 8),
-
-                                        InkWell(
-                                          onTap: () => _openCommentsSheet(postId, item['creator_id'] ?? 'user'),
-                                          borderRadius: BorderRadius.circular(20),
-                                          child: Container(
-                                            height: 32,
-                                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                                            decoration: BoxDecoration(
-                                              color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-                                              borderRadius: BorderRadius.circular(20),
-                                            ),
-                                            child: Row(
-                                              children: const [
-                                                Icon(Icons.chat_bubble_outline_rounded, size: 14, color: Colors.grey),
-                                                SizedBox(width: 4),
-                                                Text('Reply', style: TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w600)),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                        const SizedBox(width: 8),
-
-                                        InkWell(
-                                          onTap: () => _openPostAnalyticsSheet(item),
-                                          borderRadius: BorderRadius.circular(20),
-                                          child: Container(
-                                            height: 32,
-                                            padding: const EdgeInsets.symmetric(horizontal: 8),
-                                            decoration: BoxDecoration(
-                                              color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-                                              borderRadius: BorderRadius.circular(20),
-                                              border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.2)),
-                                            ),
-                                            child: Row(
-                                              children: const [
-                                                Icon(Icons.insights_rounded, size: 13, color: Color(0xFF2563EB)),
-                                                SizedBox(width: 4),
-                                                Text('Stats', style: TextStyle(fontSize: 11.5, color: Color(0xFF2563EB), fontWeight: FontWeight.bold)),
-                                              ],
-                                            ),
                                           ),
                                         ),
                                         const SizedBox(width: 8),
