@@ -9,6 +9,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
 import '../services/ai_explainer_service.dart';
 import '../services/telegram_tracker.dart';
+import 'creator_auth_screen.dart'; // 👈 Creator Login / Studio Screen
 import 'learn_hub_screen.dart';
 import 'profile_screen.dart';
 import 'revision_practice_screen.dart';
@@ -67,7 +68,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   Future<void> _loadAllConfigs() async {
     await _loadRealtimeProgress();
 
-    // 1️⃣ Offline Assets Load (Instant UI Render)
     try {
       final String configStr = await rootBundle.loadString('assets/data/app_config.json');
       _appConfig = jsonDecode(configStr);
@@ -85,7 +85,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
     final prefs = await SharedPreferences.getInstance();
 
-    // 💾 Revision persistent storage check
     String? cachedMapping = prefs.getString('cached_subject_mapping_json');
     if (cachedMapping != null && cachedMapping.isNotEmpty) {
       try {
@@ -101,7 +100,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       }
     }
 
-    // 💾 Sectional persistent storage check
     String? persistentSectional = prefs.getString('persistent_sectional_data_json');
     if (persistentSectional != null && persistentSectional.isNotEmpty) {
       try {
@@ -123,16 +121,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       });
     }
 
-    // 2️⃣ Live Cloud Sync (Background Fresh Update)
     _fetchLiveAppConfig();
     _fetchSectionalDataLive();
     _fetchSubjectMappingLive();
   }
 
-  // 🌐 DIRECT REALTIME FAST FETCHER (GitHub API for Testing + Multi-CDN Shields for Production)
   Future<dynamic> _fetchRobustJson(String path) async {
     String cleanPath = path.trim();
-
     cleanPath = cleanPath
         .replaceAll('https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/', '')
         .replaceAll('https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/', '')
@@ -147,7 +142,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     final int ts = DateTime.now().millisecondsSinceEpoch;
     String encodedPath = Uri.encodeFull(cleanPath);
 
-    // 🚀 STEP 1 (TESTING MODE): Direct GitHub Official Raw API
     final String apiUrl = "https://api.github.com/repos/zxcty54/quiz/contents/$encodedPath?ref=main&t=$ts";
     try {
       final apiRes = await http.get(
@@ -162,10 +156,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
       if (apiRes.statusCode == 200) {
         String rawBody = utf8.decode(apiRes.bodyBytes).trim();
-
         if (rawBody.startsWith('\uFEFF')) rawBody = rawBody.substring(1).trim();
         rawBody = rawBody.replaceAll('```json', '').replaceAll('```', '').trim();
-
         if (!rawBody.startsWith('<') && !rawBody.startsWith('<!DOCTYPE')) {
           final dynamic parsed = jsonDecode(rawBody);
           if (parsed != null) return parsed;
@@ -173,7 +165,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       }
     } catch (_) {}
 
-    // 🚀 STEP 2 (FALLBACK / PRODUCTION MIRRORS): GitHack + CDNs
     List<String> mirrorUrls = [
       "https://raw.githack.com/zxcty54/quiz/main/$encodedPath",
       "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
@@ -195,10 +186,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
         if (res.statusCode == 200) {
           String rawBody = utf8.decode(res.bodyBytes).trim();
-
           if (rawBody.startsWith('\uFEFF')) rawBody = rawBody.substring(1).trim();
           rawBody = rawBody.replaceAll('```json', '').replaceAll('```', '').trim();
-
           if (!rawBody.startsWith('<') && !rawBody.startsWith('<!DOCTYPE')) {
             final dynamic parsed = jsonDecode(rawBody);
             if (parsed != null) return parsed;
@@ -211,7 +200,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return null;
   }
 
-  // 🎯 LIVE APP CONFIG SYNC
   Future<void> _fetchLiveAppConfig() async {
     final data = await _fetchRobustJson("app_config.json");
     if (data != null && data is Map && mounted) {
@@ -219,11 +207,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         _appConfig = Map<String, dynamic>.from(data);
       });
       AiExplainerService.updateModelFromConfig(_appConfig);
-      debugPrint("✅ Live Root app_config.json & AI Models Synced");
     }
   }
 
-  // 🎯 LIVE SECTIONAL SYNC + AUTO PERSISTENT SAVE
   Future<void> _fetchSectionalDataLive() async {
     final data = await _fetchRobustJson("sectional_data.json");
     if (data != null && data is Map && mounted) {
@@ -235,7 +221,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 🎯 LIVE REVISION SYNC + AUTO PERSISTENT SAVE
   Future<void> _fetchSubjectMappingLive() async {
     final data = await _fetchRobustJson("subject_mapping.json");
     if (data != null && data is Map && mounted) {
@@ -257,6 +242,15 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         _lastNextTopic = prefs.getString('last_next_topic') ?? "Start learning now";
       });
     }
+  }
+
+  void _openCreatorStudio() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => CreatorAuthScreen(isDarkMode: _isDarkMode),
+      ),
+    );
   }
 
   @override
@@ -282,10 +276,15 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         backgroundColor: cardColor,
         elevation: 0,
         actions: [
-          // ⚡ TEST CACHE-KILL SWITCH (Instant Force Sync Button)
+          // 🚀 CREATOR STUDIO BUTTON IN APPBAR
+          IconButton(
+            icon: const Icon(Icons.edit_note_rounded, color: Color(0xFF2563EB), size: 26),
+            tooltip: "Creator Studio / Mock Builder",
+            onPressed: _openCreatorStudio,
+          ),
           IconButton(
             icon: const Icon(Icons.bolt_rounded, color: Colors.amber, size: 22),
-            tooltip: "Instant Force Update (Testing)",
+            tooltip: "Instant Force Update",
             onPressed: () async {
               final prefs = await SharedPreferences.getInstance();
               await prefs.remove('cached_subject_mapping_json');
@@ -319,10 +318,61 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ),
         ],
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: const [
+                  Text('MockTester', style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold)),
+                  SizedBox(height: 4),
+                  Text('Aspirants & Educators Hub', style: TextStyle(color: Colors.white70, fontSize: 13)),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.edit_note_rounded, color: Color(0xFF2563EB)),
+              title: const Text('Creator Studio / Mock Builder', style: TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: const Text('Publish Mock Tests & Mnemonics'),
+              trailing: const Icon(Icons.arrow_forward_ios, size: 14),
+              onTap: () {
+                Navigator.pop(context);
+                _openCreatorStudio();
+              },
+            ),
+            const Divider(),
+            ListTile(
+              leading: const Icon(Icons.school_outlined),
+              title: const Text('Learn Hub'),
+              onTap: () {
+                Navigator.pop(context);
+                setState(() => _currentBottomIndex = 3);
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.person_outline),
+              title: const Text('My Profile'),
+              onTap: () {
+                Navigator.pop(context);
+                setState(() => _currentBottomIndex = 4);
+              },
+            ),
+          ],
+        ),
+      ),
       body: IndexedStack(
         index: _currentBottomIndex,
         children: [
-          // 🏡 Tab 0: Home Tab
           HomeTab(
             appConfig: _appConfig,
             homeData: _homeData,
@@ -335,26 +385,18 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             onTapUrl: _openWebsiteUrl,
             onNavigateToLearn: () => setState(() => _currentBottomIndex = 3),
           ),
-
-          // 📚 Tab 1: Revision Tab
           RevisionTab(
             key: ValueKey('rev_${_subjectMapping.keys.length}'),
             subjectMapping: _subjectMapping,
             onLaunchPractice: _launchRevisionPractice,
           ),
-
-          // 🎯 Tab 2: Sectional Tab
           SectionalTab(
             key: ValueKey('sec_${_sectionalData.keys.join('_')}'),
             sectionalData: _sectionalData,
             isDarkMode: _isDarkMode,
             onLaunchCbtMock: _launchCbtMock,
           ),
-
-          // 🎓 Tab 3: Learn Hub
           const LearnHubScreen(),
-
-          // 👤 Tab 4: Profile
           ProfileScreen(
             isHindi: _isHindi,
             isDarkMode: _isDarkMode,
@@ -408,7 +450,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     } catch (_) {}
   }
 
-  // 🎯 UNIVERSAL CBT MOCK LAUNCHER
   void _launchCbtMock(BuildContext context, String title, String path) async {
     showDialog(
       context: context,
@@ -508,7 +549,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 🎯 SMART PROGRESS-AWARE REVISION LAUNCHER (With Resume & Restart Popup)
   void _launchRevisionPractice(BuildContext context, String title, String path) async {
     showDialog(
       context: context,
@@ -545,14 +585,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           }
 
           if (context.mounted && qList.isNotEmpty) {
-            // 💾 Clean Fixed Storage Key
             String cleanKeyPath = path.split('?').first.replaceAll('/', '_').replaceAll('.', '_');
             final String progKey = 'rev_prog_$cleanKeyPath';
 
             final prefs = await SharedPreferences.getInstance();
             final int savedIndex = prefs.getInt(progKey) ?? 0;
 
-            // Agar pehle se progress hai (Q.2 se lekar last question tak)
             if (savedIndex > 0 && savedIndex < qList.length && context.mounted) {
               showDialog(
                 context: context,
@@ -578,7 +616,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                     TextButton(
                       onPressed: () async {
                         Navigator.pop(ctx);
-                        await prefs.remove(progKey); // 🗑️ Clear saved index
+                        await prefs.remove(progKey);
                         if (context.mounted) {
                           Navigator.push(
                             context,
@@ -623,7 +661,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               return;
             }
 
-            // Fresh Start agar koi progress saved na ho
             if (context.mounted) {
               Navigator.push(
                 context,
