@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../services/ai_explainer_service.dart';
 import '../services/ai_rate_limiter_service.dart';
 
 class CreatorMockBuilderScreen extends StatefulWidget {
@@ -52,7 +53,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     });
   }
 
-  // ⚡ Gemini REST Call (Uses existing http package, No SDK required)
   Future<void> _openAiStudioModal() async {
     final rawCtrl = TextEditingController();
     bool isAiProcessing = false;
@@ -95,7 +95,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                       children: const [
                         Icon(Icons.auto_awesome, color: Colors.amber, size: 22),
                         SizedBox(width: 8),
-                        Text('AI Studio Batch Generator', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5)),
+                        Text('AI Bulk Question Generator', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5)),
                       ],
                     ),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
@@ -104,12 +104,9 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
-                      'Paste up to 15 questions per batch:',
-                      style: TextStyle(fontSize: 11.5, color: Colors.grey),
-                    ),
+                    const Text('Paste raw test/notes (Max 15 Qs):', style: TextStyle(fontSize: 11.5, color: Colors.grey)),
                     Text(
-                      '$charCount / ${AiRateLimiterService.maxInputChars} chars',
+                      '$charCount / ${AiRateLimiterService.maxInputChars}',
                       style: TextStyle(
                         fontSize: 11,
                         fontWeight: FontWeight.bold,
@@ -119,7 +116,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                   ],
                 ),
                 const SizedBox(height: 8),
-
                 TextField(
                   controller: rawCtrl,
                   maxLines: 8,
@@ -131,19 +127,16 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                     });
                   },
                   decoration: const InputDecoration(
-                    hintText: 'Paste questions text (English, Hindi, or Mixed)...',
+                    hintText: 'Paste questions text in English or Hindi...',
                     border: OutlineInputBorder(),
                     counterText: '',
                   ),
                 ),
-
                 if (validationMessage != null) ...[
                   const SizedBox(height: 6),
                   Text(validationMessage!, style: const TextStyle(color: Colors.redAccent, fontSize: 12)),
                 ],
-
                 const SizedBox(height: 12),
-
                 SizedBox(
                   width: double.infinity,
                   height: 46,
@@ -157,7 +150,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                         ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
                         : const Icon(Icons.bolt_rounded, color: Colors.amber),
                     label: Text(
-                      isAiProcessing ? 'AI Structuring Cards...' : 'Generate Multi-Cards 🚀',
+                      isAiProcessing ? 'AI Structuring Multi-Cards...' : 'Generate Multi-Cards 🚀',
                       style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
                     ),
                     onPressed: isAiProcessing
@@ -169,29 +162,24 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                               return;
                             }
 
-                            final check = await AiRateLimiterService.checkEligibility();
-                            if (check['allowed'] == false) {
-                              setModalState(() => validationMessage = check['message']);
-                              return;
-                            }
-
                             setModalState(() => isAiProcessing = true);
 
                             try {
-                              const apiKey = 'YOUR_GEMINI_API_KEY';
+                              // Use configured key from your service
+                              final apiKey = AiExplainerService.geminiApiKey;
                               final url = Uri.parse('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$apiKey');
 
                               final prompt = '''
-Extract multiple choice questions from this text into JSON array format:
+Convert the following exam questions into a JSON array. Follow this exact format strictly:
 [
   {
     "question": "Question text in Hindi or English",
     "options": ["Option A", "Option B", "Option C", "Option D"],
     "answer": 0,
-    "explanation": "Short 1-line explanation"
+    "explanation": "Short solution"
   }
 ]
-Input Text:
+Raw Text:
 """
 $text
 """
@@ -201,21 +189,22 @@ $text
                                 url,
                                 headers: {'Content-Type': 'application/json'},
                                 body: jsonEncode({
-                                  'contents': [
+                                  "contents": [
                                     {
-                                      'parts': [{'text': prompt}]
+                                      "parts": [{"text": prompt}]
                                     }
                                   ],
-                                  'generationConfig': {
-                                    'responseMimeType': 'application/json',
-                                    'temperature': 0.1,
+                                  "generationConfig": {
+                                    "responseMimeType": "application/json",
+                                    "temperature": 0.1
                                   }
                                 }),
                               );
 
                               if (res.statusCode == 200) {
                                 final body = jsonDecode(res.body);
-                                final String rawJson = body['candidates'][0]['content']['parts'][0]['text'];
+                                String rawJson = body['candidates'][0]['content']['parts'][0]['text'];
+                                rawJson = rawJson.replaceAll('```json', '').replaceAll('```', '').trim();
                                 final parsed = jsonDecode(rawJson);
 
                                 if (parsed is List && parsed.isNotEmpty) {
@@ -232,7 +221,7 @@ $text
                                     Navigator.pop(ctx);
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       SnackBar(
-                                        content: Text('✨ Added ${parsed.length} Questions! (Remaining today: ${check['remainingToday']! - 1})'),
+                                        content: Text('✨ Added ${parsed.length} Questions successfully!'),
                                         backgroundColor: const Color(0xFF16A34A),
                                       ),
                                     );
@@ -240,19 +229,19 @@ $text
                                 } else {
                                   setModalState(() {
                                     isAiProcessing = false;
-                                    validationMessage = 'Could not parse questions properly.';
+                                    validationMessage = 'Could not parse JSON. Check input text format.';
                                   });
                                 }
                               } else {
                                 setModalState(() {
                                   isAiProcessing = false;
-                                  validationMessage = 'API Error: HTTP ${res.statusCode}';
+                                  validationMessage = 'API Error: ${res.statusCode} (${res.body})';
                                 });
                               }
                             } catch (err) {
                               setModalState(() {
                                 isAiProcessing = false;
-                                validationMessage = 'Network Error: $err';
+                                validationMessage = 'Error: $err';
                               });
                             }
                           },
@@ -294,7 +283,7 @@ $text
 
       await Supabase.instance.client.from('community_posts').insert({
         'creator_id': widget.creatorHandle,
-        'content': '⚡ New Mock Drill Published: "$title". Tap below to attempt now!',
+        'content': '⚡ New CBT Mock Test Published: "$title". Tap below to attempt now!',
         'tag': 'Mock Tests ⚡',
         'mock_id': res['id'],
         'views_count': 1,
@@ -416,7 +405,7 @@ $text
                           onChanged: (val) => q['question'] = val,
                         ),
                         const SizedBox(height: 10),
-                        const Text('Options & Correct Answer (Tap letter to select correct):', style: TextStyle(fontSize: 11, color: Colors.grey)),
+                        const Text('Options & Correct Answer (Tap letter to select):', style: TextStyle(fontSize: 11, color: Colors.grey)),
                         const SizedBox(height: 6),
                         ...List.generate(4, (oIdx) {
                           final isCorrect = currentAns == oIdx;
