@@ -118,12 +118,22 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     HapticFeedback.lightImpact();
     final postId = post['id'];
     final content = post['content'] ?? 'Check out this question on MockTester!';
-    final shareText = '$content\n\n📌 Solve on MockTester: https://mocktester.online/post/$postId';
+    final author = post['author_name'] ?? 'Aspirant';
+
+    final shareText = '''
+📝 *MockTester Study Drill*
+👤 *Shared by:* $author
+
+$content
+
+⚡ Solve this & practice 10,000+ BPSC/BSSC CBT Mock Questions:
+📲 Download Free: https://play.google.com/store/apps/details?id=com.mocktester.app
+''';
 
     Clipboard.setData(ClipboardData(text: shareText));
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
-        content: Text('📋 Post link copied to clipboard! Share on WhatsApp / Telegram.'),
+        content: Text('📋 Post copied! Share on WhatsApp / Telegram.'),
         backgroundColor: Color(0xFF2563EB),
       ),
     );
@@ -264,7 +274,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
-  // 📊 Individual Post Performance Analytics Modal
   void _openPostAnalyticsSheet(Map<String, dynamic> post) {
     final int views = post['views_count'] ?? 120;
     final int upvotes = post['upvotes'] ?? 0;
@@ -385,7 +394,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
-  // 💬 Interactive Comments & Solution Sheet
   void _openCommentsSheet(int postId, String postAuthorId) {
     final commentCtrl = TextEditingController();
     int? replyingToCommentId;
@@ -558,6 +566,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
+  // ✍️ Create Post Modal with Real-time Telegram Alert & Name Binding
   void _openCreatePostModal() {
     final contentCtrl = TextEditingController();
     String selectedTag = 'Doubts ❓';
@@ -672,19 +681,36 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
                               }
 
-                              await Supabase.instance.client.from('community_posts').insert({
+                              // 1. Insert to Supabase with custom name
+                              final insertedPost = await Supabase.instance.client.from('community_posts').insert({
                                 'creator_id': 'user',
+                                'author_name': _customUserName,
                                 'content': text,
                                 'tag': selectedTag,
                                 'image_url': uploadedImageUrl,
                                 'views_count': 1,
-                              });
+                                'upvotes': 0,
+                                'downvotes': 0,
+                                'shares_count': 0,
+                                'bookmarks_count': 0,
+                              }).select().single();
+
+                              // 2. 🚀 Trigger Real-time Telegram Alert
+                              AdminTelegramAlert.notifyNewPost(
+                                postId: insertedPost['id'] ?? 0,
+                                authorName: _customUserName,
+                                authorHandle: 'candidate',
+                                tag: selectedTag,
+                                content: text,
+                                imageUrl: uploadedImageUrl,
+                              );
 
                               if (context.mounted) {
                                 Navigator.pop(ctx);
                                 _fetchFeedPosts();
                               }
                             } catch (e) {
+                              debugPrint("Upload Error: $e");
                               setModalState(() => isUploading = false);
                             }
                           },
@@ -1001,6 +1027,9 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               final bool isSaved = _savedPostIds.contains(postId);
                               final bool isVerifiedCreator = creator['name'] != null && (item['creator_id'] != 'user');
                               final String authorHandle = (creator['handle_id'] ?? item['creator_id'] ?? 'user').toString();
+                              final String authorDisplayName = isVerifiedCreator
+                                  ? (creator['name'] ?? 'Verified Mentor')
+                                  : (item['author_name'] ?? 'Aspirant');
 
                               return Container(
                                 color: bgSurface,
@@ -1008,7 +1037,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    // 👤 Profile Header Row (Clickable Avatar + Name)
                                     GestureDetector(
                                       onTap: () {
                                         Navigator.push(
@@ -1039,7 +1067,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                                 Row(
                                                   children: [
                                                     Text(
-                                                      isVerifiedCreator ? (creator['name'] ?? 'Verified Mentor') : 'Aspirant',
+                                                      authorDisplayName,
                                                       style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
                                                     ),
                                                     const SizedBox(width: 4),
@@ -1130,10 +1158,8 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
                                     const SizedBox(height: 12),
 
-                                    // 📊 Complete Action & Metrics Bar
                                     Row(
                                       children: [
-                                        // 🔼 Upvote / Downvote Pill
                                         Container(
                                           height: 32,
                                           decoration: BoxDecoration(color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9), borderRadius: BorderRadius.circular(20)),
@@ -1155,7 +1181,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                         ),
                                         const SizedBox(width: 8),
 
-                                        // 💬 Reply / Comments Sheet Button
                                         InkWell(
                                           onTap: () => _openCommentsSheet(postId, item['creator_id'] ?? 'user'),
                                           borderRadius: BorderRadius.circular(20),
@@ -1177,7 +1202,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                         ),
                                         const SizedBox(width: 8),
 
-                                        // 📊 Individual Post Performance Analytics Button
                                         InkWell(
                                           onTap: () => _openPostAnalyticsSheet(item),
                                           borderRadius: BorderRadius.circular(20),
@@ -1200,7 +1224,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                         ),
                                         const SizedBox(width: 8),
 
-                                        // 👁️ Total Seen / Views Counter
                                         Row(
                                           children: [
                                             const Icon(Icons.remove_red_eye_outlined, size: 14, color: Colors.grey),
@@ -1210,7 +1233,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                         ),
                                         const SizedBox(width: 8),
 
-                                        // 📌 Bookmark with Counter
                                         InkWell(
                                           onTap: () => _toggleBookmark(postId, item),
                                           borderRadius: BorderRadius.circular(20),
@@ -1224,7 +1246,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                         ),
                                         const Spacer(),
 
-                                        // 🔗 Live Share Button with Counter
                                         InkWell(
                                           onTap: () => _sharePost(item),
                                           borderRadius: BorderRadius.circular(6),
