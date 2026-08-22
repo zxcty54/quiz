@@ -8,6 +8,8 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
+import '../services/admin_telegram_alert.dart';
+import '../utils/security_content_guard.dart';
 import 'creator_profile_screen.dart';
 import 'sectional_cbt_screen.dart';
 
@@ -23,6 +25,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   List<dynamic> _posts = [];
   bool _isLoading = true;
   String _activeFilter = 'All';
+  String _customUserName = 'Aspirant';
   final Map<int, int> _userVoteState = {};
   final Map<int, int> _userPollSelections = {};
   final Set<int> _savedPostIds = {};
@@ -41,14 +44,51 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   @override
   void initState() {
     super.initState();
-    _loadSavedCache();
+    _loadUserPreferences();
     _fetchFeedPosts();
   }
 
-  Future<void> _loadSavedCache() async {
+  Future<void> _loadUserPreferences() async {
     final prefs = await SharedPreferences.getInstance();
     final saved = prefs.getStringList('local_saved_post_ids') ?? [];
-    _savedPostIds.addAll(saved.map((e) => int.tryParse(e) ?? 0));
+    final name = prefs.getString('custom_aspirant_name') ?? 'Aspirant';
+    setState(() {
+      _savedPostIds.addAll(saved.map((e) => int.tryParse(e) ?? 0));
+      _customUserName = name;
+    });
+  }
+
+  Future<void> _editMyNameDialog() async {
+    final nameCtrl = TextEditingController(text: _customUserName);
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('👤 Edit Your Name', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+        content: TextField(
+          controller: nameCtrl,
+          decoration: const InputDecoration(
+            hintText: 'Enter your name / alias',
+            labelText: 'Display Name',
+            border: OutlineInputBorder(),
+          ),
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+            onPressed: () async {
+              final val = nameCtrl.text.trim();
+              if (val.isEmpty) return;
+              final prefs = await SharedPreferences.getInstance();
+              await prefs.setString('custom_aspirant_name', val);
+              setState(() => _customUserName = val);
+              Navigator.pop(ctx);
+            },
+            child: const Text('Save Name'),
+          ),
+        ],
+      ),
+    );
   }
 
   Future<void> _fetchFeedPosts() async {
@@ -74,22 +114,52 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     }
   }
 
-  void _toggleBookmark(int postId) async {
+  void _sharePost(Map<String, dynamic> post) async {
+    HapticFeedback.lightImpact();
+    final postId = post['id'];
+    final content = post['content'] ?? 'Check out this question on MockTester!';
+    final shareText = '$content\n\n📌 Solve on MockTester: https://mocktester.online/post/$postId';
+
+    Clipboard.setData(ClipboardData(text: shareText));
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('📋 Post link copied to clipboard! Share on WhatsApp / Telegram.'),
+        backgroundColor: Color(0xFF2563EB),
+      ),
+    );
+
+    try {
+      final currentShares = (post['shares_count'] ?? 0) + 1;
+      setState(() => post['shares_count'] = currentShares);
+      await Supabase.instance.client.from('community_posts').update({'shares_count': currentShares}).eq('id', postId);
+    } catch (_) {}
+  }
+
+  void _toggleBookmark(int postId, Map<String, dynamic> post) async {
     HapticFeedback.mediumImpact();
     final prefs = await SharedPreferences.getInstance();
+    final bool isSaving = !_savedPostIds.contains(postId);
+
     setState(() {
-      if (_savedPostIds.contains(postId)) {
-        _savedPostIds.remove(postId);
-      } else {
+      if (isSaving) {
         _savedPostIds.add(postId);
+        post['bookmarks_count'] = (post['bookmarks_count'] ?? 0) + 1;
+      } else {
+        _savedPostIds.remove(postId);
+        post['bookmarks_count'] = ((post['bookmarks_count'] ?? 1) - 1).clamp(0, 99999);
       }
     });
 
     await prefs.setStringList('local_saved_post_ids', _savedPostIds.map((e) => e.toString()).toList());
+    
+    try {
+      await Supabase.instance.client.from('community_posts').update({'bookmarks_count': post['bookmarks_count']}).eq('id', postId);
+    } catch (_) {}
+
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(_savedPostIds.contains(postId) ? '📌 Saved to Revision Notebook!' : 'Removed from Saved!'),
+          content: Text(isSaving ? '📌 Saved to Revision Notebook!' : 'Removed from Saved!'),
           duration: const Duration(seconds: 1),
           backgroundColor: const Color(0xFF2563EB),
         ),
@@ -173,9 +243,12 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
     if (qList.isEmpty) return;
 
+    final updatedAttempts = (mock['attempts_count'] ?? 0) + 1;
+    setState(() => mock['attempts_count'] = updatedAttempts);
+
     Supabase.instance.client
         .from('creator_mocks')
-        .update({'attempts_count': (mock['attempts_count'] ?? 0) + 1})
+        .update({'attempts_count': updatedAttempts})
         .eq('id', mock['id'])
         .then((_) {});
 
@@ -186,6 +259,300 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           testTitle: mock['title'] ?? 'Community Mock Drill',
           questions: qList,
           subFolder: (mock['subject'] ?? 'general').toString().toLowerCase(),
+        ),
+      ),
+    );
+  }
+
+  // 📊 Individual Post Performance Analytics Modal
+  void _openPostAnalyticsSheet(Map<String, dynamic> post) {
+    final int views = post['views_count'] ?? 120;
+    final int upvotes = post['upvotes'] ?? 0;
+    final int downvotes = post['downvotes'] ?? 0;
+    final int bookmarks = post['bookmarks_count'] ?? 0;
+    final int shares = post['shares_count'] ?? 0;
+    final attachedMock = post['creator_mocks'];
+    final int attempts = attachedMock?['attempts_count'] ?? 0;
+
+    final int totalVotes = upvotes + downvotes;
+    final double upvoteRatio = totalVotes > 0 ? ((upvotes / totalVotes) * 100) : 100.0;
+    final int totalInteractions = upvotes + bookmarks + shares + attempts;
+    final double engagementScore = views > 0 ? ((totalInteractions / views) * 100) : 0.0;
+
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      builder: (ctx) => Padding(
+        padding: const EdgeInsets.all(18),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: const [
+                    Icon(Icons.insights_rounded, color: Color(0xFF2563EB), size: 20),
+                    SizedBox(width: 8),
+                    Text('Post Performance Insights', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                  ],
+                ),
+                IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+              ],
+            ),
+            Text('Live interaction breakdown for this post:', style: TextStyle(fontSize: 11.5, color: Colors.grey[500])),
+            const SizedBox(height: 14),
+
+            Row(
+              children: [
+                _buildMiniMetricCard('Views / Seen 👁️', '$views', 'Total Impressions', Colors.blue),
+                const SizedBox(width: 8),
+                _buildMiniMetricCard('Saves 📌', '$bookmarks', 'Added to Notebooks', Colors.amber.shade800),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                _buildMiniMetricCard('Likes Ratio 🔼', '${upvoteRatio.toStringAsFixed(0)}%', '$upvotes Upvotes vs $downvotes Downvotes', Colors.green),
+                const SizedBox(width: 8),
+                _buildMiniMetricCard('Shares 🔗', '$shares', 'Shared External Link', Colors.indigo),
+              ],
+            ),
+
+            if (attachedMock != null) ...[
+              const SizedBox(height: 12),
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFEFF6FF),
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: Colors.blue.withOpacity(0.2)),
+                ),
+                child: Row(
+                  children: [
+                    const Icon(Icons.bolt_rounded, color: Colors.amber, size: 22),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Mock Drill Conversion: $attempts Attempts', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
+                          Text('Aspirants completed this test drill', style: TextStyle(color: Colors.grey[500], fontSize: 10.5)),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+
+            const SizedBox(height: 12),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Engagement Quality Score:', style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+                Text('${engagementScore.toStringAsFixed(1)}%', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFF16A34A))),
+              ],
+            ),
+            const SizedBox(height: 10),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMiniMetricCard(String label, String value, String desc, Color color) {
+    return Expanded(
+      child: Container(
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFF8FAFC),
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(color: Colors.grey.withOpacity(0.15)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(label, style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.grey[600])),
+            const SizedBox(height: 3),
+            Text(value, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: color)),
+            Text(desc, style: TextStyle(fontSize: 9, color: Colors.grey[500]), maxLines: 1, overflow: TextOverflow.ellipsis),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // 💬 Interactive Comments & Solution Sheet
+  void _openCommentsSheet(int postId, String postAuthorId) {
+    final commentCtrl = TextEditingController();
+    int? replyingToCommentId;
+    String? replyingToName;
+    int refreshKey = 0;
+    bool isSubmitting = false;
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setSheetState) => Padding(
+          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
+          child: SizedBox(
+            height: MediaQuery.of(ctx).size.height * 0.70,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('💬 Discussion & Solution Replies', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                  ],
+                ),
+                const Divider(),
+                Expanded(
+                  child: FutureBuilder<List<Map<String, dynamic>>>(
+                    key: ValueKey('comments_${postId}_$refreshKey'),
+                    future: Supabase.instance.client
+                        .from('post_comments')
+                        .select()
+                        .eq('post_id', postId)
+                        .order('created_at', ascending: true),
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return const Center(child: CircularProgressIndicator());
+                      }
+                      final comments = snapshot.data ?? [];
+                      if (comments.isEmpty) {
+                        return const Center(child: Text('No replies yet. Be the first to solve!'));
+                      }
+                      return ListView.builder(
+                        itemCount: comments.length,
+                        itemBuilder: (context, cIdx) {
+                          final c = comments[cIdx];
+                          final bool isReply = c['parent_comment_id'] != null;
+
+                          return Container(
+                            margin: EdgeInsets.only(left: isReply ? 24.0 : 0.0, bottom: 8),
+                            padding: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: isReply ? (widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFF1F5F9)) : Colors.transparent,
+                              borderRadius: BorderRadius.circular(8),
+                              border: isReply ? const Border(left: BorderSide(color: Color(0xFF2563EB), width: 3)) : null,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(c['user_name'] ?? 'Aspirant', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                                    const SizedBox(width: 6),
+                                    if (c['is_creator'] == true)
+                                      const Icon(Icons.verified, color: Colors.blue, size: 14),
+                                    const Spacer(),
+                                    GestureDetector(
+                                      onTap: () {
+                                        setSheetState(() {
+                                          replyingToCommentId = c['id'];
+                                          replyingToName = c['user_name'] ?? 'Aspirant';
+                                        });
+                                      },
+                                      child: const Text('Reply', style: TextStyle(color: Color(0xFF2563EB), fontSize: 11, fontWeight: FontWeight.bold)),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 4),
+                                _buildRichTextContent(c['content'] ?? '', fontSize: 13),
+                              ],
+                            ),
+                          );
+                        },
+                      );
+                    },
+                  ),
+                ),
+                if (replyingToCommentId != null) ...[
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                    color: Colors.blue.withOpacity(0.1),
+                    child: Row(
+                      children: [
+                        Text('Replying to @$replyingToName', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
+                        const Spacer(),
+                        IconButton(
+                          icon: const Icon(Icons.close, size: 14),
+                          onPressed: () => setSheetState(() {
+                            replyingToCommentId = null;
+                            replyingToName = null;
+                          }),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+                const Divider(),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        controller: commentCtrl,
+                        textInputAction: TextInputAction.send,
+                        decoration: InputDecoration(
+                          hintText: replyingToName != null ? 'Reply to @$replyingToName...' : 'Add solution or reply as $_customUserName...',
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                    IconButton(
+                      icon: isSubmitting
+                          ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2))
+                          : const Icon(Icons.send_rounded, color: Color(0xFF2563EB)),
+                      onPressed: isSubmitting
+                          ? null
+                          : () async {
+                              final text = commentCtrl.text.trim();
+                              if (text.isEmpty) return;
+
+                              final validationError = SecurityContentGuard.validateContent(text);
+                              if (validationError != null) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(content: Text(validationError), backgroundColor: Colors.red.shade800),
+                                );
+                                return;
+                              }
+
+                              setSheetState(() => isSubmitting = true);
+                              try {
+                                await Supabase.instance.client.from('post_comments').insert({
+                                  'post_id': postId,
+                                  'user_handle': 'user',
+                                  'user_name': _customUserName,
+                                  'content': text,
+                                  'parent_comment_id': replyingToCommentId,
+                                });
+
+                                commentCtrl.clear();
+                                setSheetState(() {
+                                  replyingToCommentId = null;
+                                  replyingToName = null;
+                                  refreshKey++;
+                                  isSubmitting = false;
+                                });
+                              } catch (e) {
+                                setSheetState(() => isSubmitting = false);
+                              }
+                            },
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+              ],
+            ),
+          ),
         ),
       ),
     );
@@ -214,7 +581,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('✍️ Post Doubt / Update', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+                    Text('✍️ Post as $_customUserName', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
@@ -230,7 +597,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                   controller: contentCtrl,
                   maxLines: 4,
                   decoration: const InputDecoration(
-                    hintText: 'Share exam updates, doubt screenshot, or question...',
+                    hintText: 'Share exam updates, question screenshot, or doubt...',
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -318,7 +685,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 _fetchFeedPosts();
                               }
                             } catch (e) {
-                              debugPrint("Upload Error: $e");
                               setModalState(() => isUploading = false);
                             }
                           },
@@ -572,10 +938,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       appBar: AppBar(
         title: const Text('Community Feed', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.badge_outlined),
+            tooltip: 'Change My Display Name',
+            onPressed: _editMyNameDialog,
+          ),
           IconButton(icon: const Icon(Icons.refresh_rounded), onPressed: _fetchFeedPosts),
         ],
       ),
-      // ✍️ Floating Action Button Restored
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: const Color(0xFF2563EB),
         foregroundColor: Colors.white,
@@ -630,6 +1000,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               final Map<String, dynamic>? pollData = item['poll_data'];
                               final bool isSaved = _savedPostIds.contains(postId);
                               final bool isVerifiedCreator = creator['name'] != null && (item['creator_id'] != 'user');
+                              final String authorHandle = (creator['handle_id'] ?? item['creator_id'] ?? 'user').toString();
 
                               return Container(
                                 color: bgSurface,
@@ -637,59 +1008,73 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Row(
-                                      children: [
-                                        CircleAvatar(
-                                          radius: 18,
-                                          backgroundColor: isVerifiedCreator ? const Color(0xFF2563EB) : const Color(0xFF64748B),
-                                          child: Text(
-                                            isVerifiedCreator ? ((creator['name'] ?? 'M')[0]).toUpperCase() : 'A',
-                                            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
+                                    // 👤 Profile Header Row (Clickable Avatar + Name)
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (_) => CreatorProfileScreen(
+                                              creatorHandle: authorHandle,
+                                              isDarkMode: isDark,
+                                            ),
                                           ),
-                                        ),
-                                        const SizedBox(width: 10),
-                                        Expanded(
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    isVerifiedCreator ? (creator['name'] ?? 'Verified Mentor') : 'Aspirant Candidate',
-                                                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
-                                                  ),
-                                                  const SizedBox(width: 4),
-                                                  if (isVerifiedCreator)
-                                                    const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
-                                                  const SizedBox(width: 6),
-                                                  Text(
-                                                    '@${isVerifiedCreator ? (creator['handle_id'] ?? 'mentor') : 'candidate'}',
-                                                    style: TextStyle(color: Colors.grey[500], fontSize: 11.5),
-                                                  ),
-                                                ],
-                                              ),
-                                              Text(
-                                                isVerifiedCreator
-                                                    ? '🎓 ${creator['subject_specialty'] ?? 'Exam Mentor'} • ${creator['followers_count'] ?? 0} Followers'
-                                                    : 'Aspirant • ${item['views_count'] ?? 120} views',
-                                                style: TextStyle(
-                                                  color: isVerifiedCreator ? const Color(0xFF2563EB) : Colors.grey[600],
-                                                  fontSize: 10.5,
-                                                  fontWeight: isVerifiedCreator ? FontWeight.bold : FontWeight.normal,
+                                        );
+                                      },
+                                      child: Row(
+                                        children: [
+                                          CircleAvatar(
+                                            radius: 18,
+                                            backgroundColor: isVerifiedCreator ? const Color(0xFF2563EB) : const Color(0xFF64748B),
+                                            child: Text(
+                                              isVerifiedCreator ? ((creator['name'] ?? 'M')[0]).toUpperCase() : 'A',
+                                              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
+                                            ),
+                                          ),
+                                          const SizedBox(width: 10),
+                                          Expanded(
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      isVerifiedCreator ? (creator['name'] ?? 'Verified Mentor') : 'Aspirant',
+                                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                                                    ),
+                                                    const SizedBox(width: 4),
+                                                    if (isVerifiedCreator)
+                                                      const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
+                                                    const SizedBox(width: 6),
+                                                    Text(
+                                                      '@$authorHandle',
+                                                      style: TextStyle(color: Colors.grey[500], fontSize: 11.5),
+                                                    ),
+                                                  ],
                                                 ),
-                                              ),
-                                            ],
+                                                Text(
+                                                  isVerifiedCreator
+                                                      ? '🎓 ${creator['subject_specialty'] ?? 'Exam Mentor'} • ${creator['followers_count'] ?? 0} Followers'
+                                                      : 'Aspirant • Active Community Member',
+                                                  style: TextStyle(
+                                                    color: isVerifiedCreator ? const Color(0xFF2563EB) : Colors.grey[600],
+                                                    fontSize: 10.5,
+                                                    fontWeight: isVerifiedCreator ? FontWeight.bold : FontWeight.normal,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                        Container(
-                                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                          decoration: BoxDecoration(
-                                            color: const Color(0xFF2563EB).withOpacity(0.08),
-                                            borderRadius: BorderRadius.circular(4),
+                                          Container(
+                                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                            decoration: BoxDecoration(
+                                              color: const Color(0xFF2563EB).withOpacity(0.08),
+                                              borderRadius: BorderRadius.circular(4),
+                                            ),
+                                            child: Text(item['tag'] ?? 'General', style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold)),
                                           ),
-                                          child: Text(item['tag'] ?? 'General', style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold)),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                     const SizedBox(height: 10),
 
@@ -726,7 +1111,10 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
                                                   Text(attachedMock['title'] ?? 'Mock Drill', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
-                                                  Text('${(attachedMock['questions_json'] as List?)?.length ?? 0} Qs • ${attachedMock['duration_mins']} Mins', style: TextStyle(color: Colors.grey[600], fontSize: 11)),
+                                                  Text(
+                                                    '${(attachedMock['questions_json'] as List?)?.length ?? 0} Qs • ${attachedMock['duration_mins']} Mins • ⚡ ${attachedMock['attempts_count'] ?? 0} Attempts',
+                                                    style: TextStyle(color: Colors.grey[600], fontSize: 11),
+                                                  ),
                                                 ],
                                               ),
                                             ),
@@ -742,8 +1130,10 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
                                     const SizedBox(height: 12),
 
+                                    // 📊 Complete Action & Metrics Bar
                                     Row(
                                       children: [
+                                        // 🔼 Upvote / Downvote Pill
                                         Container(
                                           height: 32,
                                           decoration: BoxDecoration(color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9), borderRadius: BorderRadius.circular(20)),
@@ -765,18 +1155,89 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                         ),
                                         const SizedBox(width: 8),
 
-                                        IconButton(
-                                          icon: Icon(isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded, size: 20, color: isSaved ? const Color(0xFF2563EB) : Colors.grey),
-                                          onPressed: () => _toggleBookmark(postId),
-                                          tooltip: 'Save to Revision',
-                                          visualDensity: VisualDensity.compact,
+                                        // 💬 Reply / Comments Sheet Button
+                                        InkWell(
+                                          onTap: () => _openCommentsSheet(postId, item['creator_id'] ?? 'user'),
+                                          borderRadius: BorderRadius.circular(20),
+                                          child: Container(
+                                            height: 32,
+                                            padding: const EdgeInsets.symmetric(horizontal: 10),
+                                            decoration: BoxDecoration(
+                                              color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+                                              borderRadius: BorderRadius.circular(20),
+                                            ),
+                                            child: Row(
+                                              children: const [
+                                                Icon(Icons.chat_bubble_outline_rounded, size: 14, color: Colors.grey),
+                                                SizedBox(width: 4),
+                                                Text('Reply', style: TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w600)),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        const SizedBox(width: 8),
+
+                                        // 📊 Individual Post Performance Analytics Button
+                                        InkWell(
+                                          onTap: () => _openPostAnalyticsSheet(item),
+                                          borderRadius: BorderRadius.circular(20),
+                                          child: Container(
+                                            height: 32,
+                                            padding: const EdgeInsets.symmetric(horizontal: 8),
+                                            decoration: BoxDecoration(
+                                              color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+                                              borderRadius: BorderRadius.circular(20),
+                                              border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.2)),
+                                            ),
+                                            child: Row(
+                                              children: const [
+                                                Icon(Icons.insights_rounded, size: 13, color: Color(0xFF2563EB)),
+                                                SizedBox(width: 4),
+                                                Text('Stats', style: TextStyle(fontSize: 11.5, color: Color(0xFF2563EB), fontWeight: FontWeight.bold)),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        const SizedBox(width: 8),
+
+                                        // 👁️ Total Seen / Views Counter
+                                        Row(
+                                          children: [
+                                            const Icon(Icons.remove_red_eye_outlined, size: 14, color: Colors.grey),
+                                            const SizedBox(width: 3),
+                                            Text('${item['views_count'] ?? 120}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
+                                          ],
+                                        ),
+                                        const SizedBox(width: 8),
+
+                                        // 📌 Bookmark with Counter
+                                        InkWell(
+                                          onTap: () => _toggleBookmark(postId, item),
+                                          borderRadius: BorderRadius.circular(20),
+                                          child: Row(
+                                            children: [
+                                              Icon(isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded, size: 16, color: isSaved ? const Color(0xFF2563EB) : Colors.grey),
+                                              const SizedBox(width: 2),
+                                              Text('${item['bookmarks_count'] ?? 0}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
+                                            ],
+                                          ),
                                         ),
                                         const Spacer(),
 
-                                        IconButton(
-                                          icon: const Icon(Icons.share_outlined, size: 18, color: Colors.grey),
-                                          onPressed: () {},
-                                          visualDensity: VisualDensity.compact,
+                                        // 🔗 Live Share Button with Counter
+                                        InkWell(
+                                          onTap: () => _sharePost(item),
+                                          borderRadius: BorderRadius.circular(6),
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+                                            child: Row(
+                                              children: [
+                                                const Icon(Icons.share_outlined, size: 16, color: Colors.grey),
+                                                const SizedBox(width: 3),
+                                                Text('${item['shares_count'] ?? 0}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
+                                              ],
+                                            ),
+                                          ),
                                         ),
                                       ],
                                     ),
