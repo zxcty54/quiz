@@ -191,6 +191,151 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
+  void _openCreatePostModal() {
+    final contentCtrl = TextEditingController();
+    String selectedTag = 'Doubts ❓';
+    File? selectedImage;
+    bool isUploading = false;
+    final picker = ImagePicker();
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setModalState) => Padding(
+          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('✍️ Post Doubt / Update', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                  ],
+                ),
+                const SizedBox(height: 8),
+                DropdownButtonFormField<String>(
+                  value: selectedTag,
+                  decoration: const InputDecoration(labelText: 'Category', isDense: true, border: OutlineInputBorder()),
+                  items: _filters.where((f) => f != 'All' && f != 'Saved 📌').map((t) => DropdownMenuItem(value: t, child: Text(t))).toList(),
+                  onChanged: (val) => setModalState(() => selectedTag = val ?? selectedTag),
+                ),
+                const SizedBox(height: 10),
+                TextField(
+                  controller: contentCtrl,
+                  maxLines: 4,
+                  decoration: const InputDecoration(
+                    hintText: 'Share exam updates, doubt screenshot, or question...',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                if (selectedImage != null) ...[
+                  Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.file(selectedImage!, width: double.infinity, height: 150, fit: BoxFit.cover),
+                      ),
+                      Positioned(
+                        top: 6,
+                        right: 6,
+                        child: GestureDetector(
+                          onTap: () => setModalState(() => selectedImage = null),
+                          child: Container(
+                            padding: const EdgeInsets.all(4),
+                            decoration: const BoxDecoration(color: Colors.black54, shape: BoxShape.circle),
+                            child: const Icon(Icons.close, color: Colors.white, size: 16),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                ],
+                Row(
+                  children: [
+                    OutlinedButton.icon(
+                      icon: const Icon(Icons.photo_library_outlined, size: 18),
+                      label: const Text('Add Screenshot'),
+                      onPressed: () async {
+                        final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 75);
+                        if (picked != null) setModalState(() => selectedImage = File(picked.path));
+                      },
+                    ),
+                    const SizedBox(width: 8),
+                    IconButton(
+                      icon: const Icon(Icons.camera_alt_outlined, color: Color(0xFF2563EB)),
+                      onPressed: () async {
+                        final picked = await picker.pickImage(source: ImageSource.camera, imageQuality: 75);
+                        if (picked != null) setModalState(() => selectedImage = File(picked.path));
+                      },
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                SizedBox(
+                  width: double.infinity,
+                  height: 44,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+                    onPressed: isUploading
+                        ? null
+                        : () async {
+                            final text = contentCtrl.text.trim();
+                            if (text.isEmpty && selectedImage == null) return;
+
+                            setModalState(() => isUploading = true);
+                            String? uploadedImageUrl;
+
+                            try {
+                              if (selectedImage != null) {
+                                final bytes = await selectedImage!.readAsBytes();
+                                final fileExt = selectedImage!.path.split('.').last;
+                                final fileName = 'post_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
+
+                                await Supabase.instance.client.storage
+                                    .from('post_images')
+                                    .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true));
+                                uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
+                              }
+
+                              await Supabase.instance.client.from('community_posts').insert({
+                                'creator_id': 'user',
+                                'content': text,
+                                'tag': selectedTag,
+                                'image_url': uploadedImageUrl,
+                                'views_count': 1,
+                              });
+
+                              if (context.mounted) {
+                                Navigator.pop(ctx);
+                                _fetchFeedPosts();
+                              }
+                            } catch (e) {
+                              debugPrint("Upload Error: $e");
+                              setModalState(() => isUploading = false);
+                            }
+                          },
+                    child: isUploading
+                        ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+                        : const Text('Post to Community 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                  ),
+                ),
+                const SizedBox(height: 16),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget _buildRichTextContent(String text, {double fontSize = 14.5}) {
     final RegExp exp = RegExp(r'((https?:\/\/|www\.)[^\s]+)|(#[a-zA-Z0-9_]+)|(@[a-zA-Z0-9_]+)');
     final matches = exp.allMatches(text);
@@ -267,7 +412,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
-  // 📄 Smart Document / Drive Link Card Resolver
   Widget _buildDocumentLinkResolver(String content, bool isDark) {
     final match = RegExp(r'https?:\/\/[^\s]+').firstMatch(content);
     if (match == null) return const SizedBox.shrink();
@@ -431,6 +575,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           IconButton(icon: const Icon(Icons.refresh_rounded), onPressed: _fetchFeedPosts),
         ],
       ),
+      // ✍️ Floating Action Button Restored
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: const Color(0xFF2563EB),
+        foregroundColor: Colors.white,
+        icon: const Icon(Icons.edit_rounded),
+        label: const Text('Post / Doubt', style: TextStyle(fontWeight: FontWeight.bold)),
+        onPressed: _openCreatePostModal,
+      ),
       body: Column(
         children: [
           SingleChildScrollView(
@@ -477,6 +629,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               final String? imgUrl = item['image_url'];
                               final Map<String, dynamic>? pollData = item['poll_data'];
                               final bool isSaved = _savedPostIds.contains(postId);
+                              final bool isVerifiedCreator = creator['name'] != null && (item['creator_id'] != 'user');
 
                               return Container(
                                 color: bgSurface,
@@ -488,9 +641,9 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                       children: [
                                         CircleAvatar(
                                           radius: 18,
-                                          backgroundColor: (creator['name'] != null) ? const Color(0xFF2563EB) : const Color(0xFF64748B),
+                                          backgroundColor: isVerifiedCreator ? const Color(0xFF2563EB) : const Color(0xFF64748B),
                                           child: Text(
-                                            ((creator['name'] ?? 'U')[0]).toUpperCase(),
+                                            isVerifiedCreator ? ((creator['name'] ?? 'M')[0]).toUpperCase() : 'A',
                                             style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
                                           ),
                                         ),
@@ -501,19 +654,29 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                             children: [
                                               Row(
                                                 children: [
-                                                  Text(creator['name'] ?? 'Aspirant Candidate', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
+                                                  Text(
+                                                    isVerifiedCreator ? (creator['name'] ?? 'Verified Mentor') : 'Aspirant Candidate',
+                                                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                                                  ),
                                                   const SizedBox(width: 4),
-                                                  if (creator['name'] != null)
+                                                  if (isVerifiedCreator)
                                                     const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
                                                   const SizedBox(width: 6),
-                                                  Text('@${creator['handle_id'] ?? item['creator_id'] ?? 'user'}', style: TextStyle(color: Colors.grey[500], fontSize: 11.5)),
+                                                  Text(
+                                                    '@${isVerifiedCreator ? (creator['handle_id'] ?? 'mentor') : 'candidate'}',
+                                                    style: TextStyle(color: Colors.grey[500], fontSize: 11.5),
+                                                  ),
                                                 ],
                                               ),
                                               Text(
-                                                (creator['name'] != null)
-                                                    ? '${creator['followers_count'] ?? 0} Followers • ${creator['subject_specialty'] ?? 'Mentor'}'
+                                                isVerifiedCreator
+                                                    ? '🎓 ${creator['subject_specialty'] ?? 'Exam Mentor'} • ${creator['followers_count'] ?? 0} Followers'
                                                     : 'Aspirant • ${item['views_count'] ?? 120} views',
-                                                style: TextStyle(color: Colors.grey[600], fontSize: 10.5),
+                                                style: TextStyle(
+                                                  color: isVerifiedCreator ? const Color(0xFF2563EB) : Colors.grey[600],
+                                                  fontSize: 10.5,
+                                                  fontWeight: isVerifiedCreator ? FontWeight.bold : FontWeight.normal,
+                                                ),
                                               ),
                                             ],
                                           ),
@@ -532,7 +695,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
                                     _buildRichTextContent(item['content'] ?? ''),
 
-                                    // Auto-resolve drive or notes link
                                     _buildDocumentLinkResolver(item['content'] ?? '', isDark),
 
                                     if (pollData != null)
