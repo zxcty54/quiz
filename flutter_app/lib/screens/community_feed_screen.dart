@@ -31,7 +31,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   Future<void> _fetchFeedPosts() async {
     setState(() => _isLoading = true);
     try {
-      // ⏳ 60 Days Retention Query Filter
       final sixtyDaysAgo = DateTime.now().subtract(const Duration(days: 60)).toIso8601String();
 
       final res = await Supabase.instance.client
@@ -108,6 +107,13 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
     if (qList.isEmpty) return;
 
+    // Increment Mock attempt count
+    Supabase.instance.client
+        .from('creator_mocks')
+        .update({'attempts_count': (mock['attempts_count'] ?? 0) + 1})
+        .eq('id', mock['id'])
+        .then((_) {});
+
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -122,6 +128,8 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
   void _openCommentsSheet(int postId, String postTitle) {
     final commentCtrl = TextEditingController();
+    int? replyingToCommentId;
+    String? replyingToName;
 
     showModalBottomSheet(
       context: context,
@@ -132,7 +140,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         builder: (ctx, setSheetState) => Padding(
           padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
           child: SizedBox(
-            height: MediaQuery.of(ctx).size.height * 0.65,
+            height: MediaQuery.of(ctx).size.height * 0.70,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -166,12 +174,12 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                           final bool isReply = c['parent_comment_id'] != null;
 
                           return Container(
-                            margin: EdgeInsets.only(left: isReply ? 28.0 : 0.0, bottom: 10),
+                            margin: EdgeInsets.only(left: isReply ? 28.0 : 0.0, bottom: 8),
                             padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               color: isReply ? (widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFF1F5F9)) : Colors.transparent,
                               borderRadius: BorderRadius.circular(8),
-                              border: isReply ? Border(left: BorderSide(color: Colors.blue.shade400, width: 3)) : null,
+                              border: isReply ? const Border(left: BorderSide(color: Color(0xFF2563EB), width: 3)) : null,
                             ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -182,6 +190,16 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                     const SizedBox(width: 6),
                                     if (c['is_creator'] == true)
                                       const Icon(Icons.verified, color: Colors.blue, size: 14),
+                                    const Spacer(),
+                                    GestureDetector(
+                                      onTap: () {
+                                        setSheetState(() {
+                                          replyingToCommentId = c['id'];
+                                          replyingToName = c['user_name'] ?? 'Aspirant';
+                                        });
+                                      },
+                                      child: const Text('Reply', style: TextStyle(color: Color(0xFF2563EB), fontSize: 11, fontWeight: FontWeight.bold)),
+                                    ),
                                   ],
                                 ),
                                 const SizedBox(height: 4),
@@ -194,14 +212,33 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                     },
                   ),
                 ),
+                if (replyingToCommentId != null) ...[
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                    color: Colors.blue.withOpacity(0.1),
+                    child: Row(
+                      children: [
+                        Text('Replying to @$replyingToName', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
+                        const Spacer(),
+                        IconButton(
+                          icon: const Icon(Icons.close, size: 14),
+                          onPressed: () => setSheetState(() {
+                            replyingToCommentId = null;
+                            replyingToName = null;
+                          }),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
                 const Divider(),
                 Row(
                   children: [
                     Expanded(
                       child: TextField(
                         controller: commentCtrl,
-                        decoration: const InputDecoration(
-                          hintText: 'Add a helpful reply...',
+                        decoration: InputDecoration(
+                          hintText: replyingToName != null ? 'Reply to @$replyingToName...' : 'Add a helpful reply...',
                           border: InputBorder.none,
                         ),
                       ),
@@ -215,9 +252,13 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                           'user_handle': 'user',
                           'user_name': 'Aspirant',
                           'content': commentCtrl.text.trim(),
+                          'parent_comment_id': replyingToCommentId,
                         });
                         commentCtrl.clear();
-                        setSheetState(() {});
+                        setSheetState(() {
+                          replyingToCommentId = null;
+                          replyingToName = null;
+                        });
                       },
                     ),
                   ],
@@ -367,19 +408,20 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Row(
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () => Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (_) => CreatorProfileScreen(
-                                                  creatorHandle: creator['handle_id'] ?? '',
-                                                  isDarkMode: isDark,
-                                                ),
-                                              ),
+                                      // 👤 Creator Header Bar with Tap to Profile
+                                      GestureDetector(
+                                        onTap: () => Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (_) => CreatorProfileScreen(
+                                              creatorHandle: creator['handle_id'] ?? '',
+                                              isDarkMode: isDark,
                                             ),
-                                            child: CircleAvatar(
+                                          ),
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            CircleAvatar(
                                               radius: 18,
                                               backgroundColor: const Color(0xFF2563EB),
                                               child: Text(
@@ -387,44 +429,44 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                                 style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                                               ),
                                             ),
-                                          ),
-                                          const SizedBox(width: 8),
-                                          Expanded(
-                                            child: Column(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                              children: [
-                                                Row(
-                                                  children: [
-                                                    Text(
-                                                      creator['name'] ?? 'Aspirant',
-                                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
-                                                    ),
-                                                    const SizedBox(width: 4),
-                                                    Text(
-                                                      '@${creator['handle_id'] ?? 'user'}',
-                                                      style: TextStyle(color: Colors.grey[500], fontSize: 11),
-                                                    ),
-                                                  ],
-                                                ),
-                                                Text(
-                                                  '${creator['followers_count'] ?? 0} Followers • ${creator['subject_specialty'] ?? 'Mentor'}',
-                                                  style: TextStyle(color: Colors.grey[600], fontSize: 10.5),
-                                                ),
-                                              ],
+                                            const SizedBox(width: 8),
+                                            Expanded(
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      Text(
+                                                        creator['name'] ?? 'Aspirant',
+                                                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                                                      ),
+                                                      const SizedBox(width: 4),
+                                                      Text(
+                                                        '@${creator['handle_id'] ?? 'user'}',
+                                                        style: TextStyle(color: Colors.grey[500], fontSize: 11),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  Text(
+                                                    '${creator['followers_count'] ?? 0} Followers • ${creator['subject_specialty'] ?? 'Mentor'}',
+                                                    style: TextStyle(color: Colors.grey[600], fontSize: 10.5),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
-                                          ),
-                                          Container(
-                                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                                            decoration: BoxDecoration(
-                                              color: const Color(0xFF2563EB).withOpacity(0.08),
-                                              borderRadius: BorderRadius.circular(6),
+                                            Container(
+                                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                                              decoration: BoxDecoration(
+                                                color: const Color(0xFF2563EB).withOpacity(0.08),
+                                                borderRadius: BorderRadius.circular(6),
+                                              ),
+                                              child: Text(
+                                                item['tag'] ?? 'General',
+                                                style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold),
+                                              ),
                                             ),
-                                            child: Text(
-                                              item['tag'] ?? 'General',
-                                              style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold),
-                                            ),
-                                          ),
-                                        ],
+                                          ],
+                                        ),
                                       ),
                                       const SizedBox(height: 10),
                                       Text(
@@ -435,7 +477,16 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                         const SizedBox(height: 10),
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(8),
-                                          child: Image.network(imgUrl, fit: BoxFit.cover, width: double.infinity, height: 180),
+                                          child: Image.network(
+                                            imgUrl,
+                                            fit: BoxFit.cover,
+                                            width: double.infinity,
+                                            height: 180,
+                                            loadingBuilder: (ctx, child, progress) => progress == null
+                                                ? child
+                                                : Container(height: 180, color: Colors.grey.withOpacity(0.1), child: const Center(child: CircularProgressIndicator())),
+                                            errorBuilder: (ctx, err, stack) => const SizedBox.shrink(),
+                                          ),
                                         ),
                                       ],
                                       const SizedBox(height: 10),
@@ -515,7 +566,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                             ),
                                           ),
                                           const SizedBox(width: 10),
-                                          // 💬 Discussion Button
                                           InkWell(
                                             onTap: () => _openCommentsSheet(postId, item['content'] ?? ''),
                                             borderRadius: BorderRadius.circular(16),
