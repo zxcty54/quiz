@@ -20,7 +20,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   List<dynamic> _posts = [];
   bool _isLoading = true;
   String _activeFilter = 'All';
-  final Map<int, int> _userVoteState = {}; // post_id -> 1 (up), -1 (down), 0 (none)
+  final Map<int, int> _userVoteState = {};
 
   final List<String> _filters = ['All', 'Exam Gossip 🔥', 'Current Affairs 📰', 'Doubts ❓', 'Mock Tests ⚡'];
 
@@ -35,10 +35,10 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     try {
       final sixtyDaysAgo = DateTime.now().subtract(const Duration(days: 60)).toIso8601String();
 
+      // 🚨 Fix: Left join 'creator_profiles(...)' instead of '!inner' so Aspirants' posts also load!
       final res = await Supabase.instance.client
           .from('community_posts')
-          .select('*, creator_profiles!inner(name, handle_id, subject_specialty, telegram_handle, followers_count, is_blocked), creator_mocks(*)')
-          .eq('creator_profiles.is_blocked', false)
+          .select('*, creator_profiles(name, handle_id, subject_specialty, telegram_handle, followers_count, is_blocked), creator_mocks(*)')
           .gte('created_at', sixtyDaysAgo)
           .order('created_at', ascending: false);
 
@@ -49,6 +49,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         });
       }
     } catch (e) {
+      debugPrint("Feed Fetch Error: $e");
       if (mounted) setState(() => _isLoading = false);
     }
   }
@@ -209,7 +210,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 const Divider(),
                 Expanded(
                   child: FutureBuilder<List<Map<String, dynamic>>>(
-                    key: ValueKey('comments_$refreshKey'),
+                    key: ValueKey('comments_${postId}_$refreshKey'),
                     future: Supabase.instance.client
                         .from('post_comments')
                         .select()
@@ -313,7 +314,8 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               refreshKey++;
                               isSubmitting = false;
                             });
-                          } catch (_) {
+                          } catch (e) {
+                            debugPrint("Comment Error: $e");
                             setSheetState(() => isSubmitting = false);
                           }
                         },
@@ -348,7 +350,8 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                   refreshKey++;
                                   isSubmitting = false;
                                 });
-                              } catch (_) {
+                              } catch (e) {
+                                debugPrint("Comment Error: $e");
                                 setSheetState(() => isSubmitting = false);
                               }
                             },
@@ -476,7 +479,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 ),
                 const SizedBox(height: 14),
 
-                // ⚖️ UGC Policy Notice
                 const Text(
                   'By posting, you agree to our Community Guidelines. Spam, harassment, or abusive content will result in an immediate account ban.',
                   style: TextStyle(fontSize: 10.5, color: Colors.grey, height: 1.3),
@@ -504,11 +506,16 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
                             try {
                               if (selectedImage != null) {
-                                final fileName = 'doubt_${DateTime.now().millisecondsSinceEpoch}.jpg';
-                                await Supabase.instance.client.storage.from('post_images').upload(
+                                final bytes = await selectedImage!.readAsBytes();
+                                final fileExt = selectedImage!.path.split('.').last;
+                                final fileName = 'post_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
+
+                                await Supabase.instance.client.storage
+                                    .from('post_images')
+                                    .uploadBinary(
                                       fileName,
-                                      selectedImage!,
-                                      fileOptions: const FileOptions(cacheControl: '3600', upsert: false),
+                                      bytes,
+                                      fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true),
                                     );
                                 uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
                               }
@@ -525,7 +532,8 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 Navigator.pop(ctx);
                                 _fetchFeedPosts();
                               }
-                            } catch (_) {
+                            } catch (e) {
+                              debugPrint("Post Upload Error: $e");
                               setModalState(() => isUploading = false);
                             }
                           },
@@ -621,7 +629,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    // 👤 Header: Avatar + Creator Tag + Tap to Profile + 3 Dots Menu
                                     Row(
                                       children: [
                                         GestureDetector(
@@ -695,7 +702,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                             style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold),
                                           ),
                                         ),
-                                        // 🚨 3-Dots UGC Report Button
                                         PopupMenuButton<String>(
                                           padding: EdgeInsets.zero,
                                           icon: Icon(Icons.more_vert_rounded, size: 18, color: Colors.grey[500]),
