@@ -6,10 +6,11 @@ import 'package:image_picker/image_picker.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
+import '../services/admin_telegram_alert.dart';
 import 'sectional_cbt_screen.dart';
 import 'creator_profile_screen.dart';
 
-// 🛡️ Security Guard: Keyword and Domain/Portal Filter
+// 🛡️ Domain & Keyword Filter
 class SecurityContentGuard {
   static final List<String> _bannedWords = [
     'porn', 'xxx', 'sex', 'nude', 'adult', 'casino', 'betting', 'dream11',
@@ -18,16 +19,8 @@ class SecurityContentGuard {
   ];
 
   static final List<String> _allowedTlds = [
-    '.gov.in',
-    '.nic.in',
-    '.ac.in',
-    '.edu.in',
-    '.res.in',
-    '.com',
-    '.in',
-    '.online',
-    '.org',
-    '.net'
+    '.gov.in', '.nic.in', '.ac.in', '.edu.in', '.res.in',
+    '.com', '.in', '.online', '.org', '.net'
   ];
 
   static String? validateContent(String text) {
@@ -35,7 +28,7 @@ class SecurityContentGuard {
 
     for (final bad in _bannedWords) {
       if (lower.contains(bad)) {
-        return 'Post blocked: Inappropriate, spam or promotional keyword detected.';
+        return 'Post blocked: Inappropriate or promotional content detected.';
       }
     }
 
@@ -51,7 +44,7 @@ class SecurityContentGuard {
         final bool isAllowed = _allowedTlds.any((tld) => host.endsWith(tld));
 
         if (!isAllowed) {
-          return 'Link blocked: Only .gov.in, .nic.in, .com, .in, .online and official educational portals are allowed.';
+          return 'Link blocked: Only .gov.in, .nic.in, .com, .in, .online and official portals are allowed.';
         }
       }
     }
@@ -291,51 +284,96 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
-  void _showReportDialog(int postId) {
+  // 🚨 Report Abuse Action (Triggers Telegram Alert on 4+ Reports)
+  void _showReportDialog(int postId, String postContent, String authorHandle) {
     String selectedReason = 'Spam or Misleading';
     final reasons = [
       'Spam or Misleading',
-      'Abusive or Harassing Content',
-      'Inappropriate / Adult Content',
-      'Copyright Infringement'
+      'Abusive, Harassment or Hate Speech',
+      'Adult / Inappropriate / Pornographic',
+      'Fraud, Phishing or Betting Link',
+      'Copyright Violation'
     ];
 
     showDialog(
       context: context,
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setDlgState) => AlertDialog(
-          title: const Text('🚨 Report Post', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+          title: Row(
+            children: const [
+              Icon(Icons.report_problem_rounded, color: Colors.redAccent, size: 20),
+              SizedBox(width: 8),
+              Text('Report Abuse', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            ],
+          ),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('Why are you reporting this post?', style: TextStyle(fontSize: 13)),
-              const SizedBox(height: 10),
-              DropdownButton<String>(
+              const Text(
+                'Select reason for reporting this post to admin:',
+                style: TextStyle(fontSize: 13, height: 1.3),
+              ),
+              const SizedBox(height: 12),
+              DropdownButtonFormField<String>(
                 value: selectedReason,
                 isExpanded: true,
-                items: reasons.map((r) => DropdownMenuItem(value: r, child: Text(r, style: const TextStyle(fontSize: 13)))).toList(),
+                decoration: const InputDecoration(border: OutlineInputBorder(), isDense: true),
+                items: reasons.map((r) => DropdownMenuItem(value: r, child: Text(r, style: const TextStyle(fontSize: 12.5)))).toList(),
                 onChanged: (val) => setDlgState(() => selectedReason = val ?? selectedReason),
               ),
             ],
           ),
           actions: [
-            TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+            TextButton(
+              onPressed: () => Navigator.pop(ctx),
+              child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
+            ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.redAccent, foregroundColor: Colors.white),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.redAccent,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+              ),
               onPressed: () async {
                 Navigator.pop(ctx);
-                await Supabase.instance.client.from('post_reports').insert({
-                  'post_id': postId,
-                  'reason': selectedReason,
-                });
-                if (mounted) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Thank you. Post reported and sent for review.')),
-                  );
+                try {
+                  await Supabase.instance.client.from('post_reports').insert({
+                    'post_id': postId,
+                    'reason': selectedReason,
+                  });
+
+                  final reportList = await Supabase.instance.client
+                      .from('post_reports')
+                      .select('id')
+                      .eq('post_id', postId);
+
+                  final int totalCount = (reportList as List).length;
+
+                  // 🚨 Send Telegram Alert on 4+ Reports
+                  if (totalCount >= 4) {
+                    await AdminTelegramAlert.sendAbuseAlert(
+                      postId: postId,
+                      postContent: postContent,
+                      authorHandle: authorHandle,
+                      totalReports: totalCount,
+                      lastReason: selectedReason,
+                    );
+                  }
+
+                  if (mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('⚠️ Thank you. Post reported to admin for review.'),
+                        backgroundColor: Colors.black87,
+                      ),
+                    );
+                  }
+                } catch (e) {
+                  debugPrint("Report Error: $e");
                 }
               },
-              child: const Text('Report'),
+              child: const Text('Submit Report', style: TextStyle(fontWeight: FontWeight.bold)),
             ),
           ],
         ),
@@ -651,9 +689,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                     OutlinedButton.icon(
                       icon: const Icon(Icons.photo_library_outlined, size: 18),
                       label: const Text('Add Screenshot', style: TextStyle(fontSize: 12.5)),
-                      style: OutlinedButton.styleFrom(
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                      ),
+                      style: OutlinedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
                       onPressed: () async {
                         try {
                           final pickedFile = await picker.pickImage(source: ImageSource.gallery, imageQuality: 75);
@@ -750,7 +786,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               if (context.mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
-                                    content: Text('Upload Error: $err. Check if bucket "post_images" is Public in Supabase.'),
+                                    content: Text('Upload Error: $err. Check if bucket "post_images" is Public.'),
                                     backgroundColor: Colors.red.shade800,
                                     duration: const Duration(seconds: 4),
                                   ),
@@ -850,6 +886,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
+                                    // 👤 Header: Avatar + Creator / Aspirant Tag
                                     Row(
                                       children: [
                                         GestureDetector(
@@ -923,25 +960,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                             style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold),
                                           ),
                                         ),
-                                        PopupMenuButton<String>(
-                                          padding: EdgeInsets.zero,
-                                          icon: Icon(Icons.more_vert_rounded, size: 18, color: Colors.grey[500]),
-                                          onSelected: (val) {
-                                            if (val == 'report') _showReportDialog(postId);
-                                          },
-                                          itemBuilder: (ctx) => [
-                                            const PopupMenuItem(
-                                              value: 'report',
-                                              child: Row(
-                                                children: [
-                                                  Icon(Icons.flag_outlined, color: Colors.redAccent, size: 18),
-                                                  SizedBox(width: 8),
-                                                  Text('Report Post', style: TextStyle(fontSize: 13, color: Colors.redAccent)),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
                                       ],
                                     ),
                                     const SizedBox(height: 10),
@@ -1001,6 +1019,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
                                     const SizedBox(height: 12),
 
+                                    // 🗳️ Action Row: Upvote + Reply + Views + Report Abuse Button (Directly Visible)
                                     Row(
                                       children: [
                                         Container(
@@ -1042,42 +1061,56 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                             ],
                                           ),
                                         ),
-                                        const SizedBox(width: 12),
+                                        const SizedBox(width: 8),
 
                                         InkWell(
                                           onTap: () => _openCommentsSheet(postId, item['creator_id'] ?? 'user'),
                                           borderRadius: BorderRadius.circular(20),
                                           child: Container(
                                             height: 32,
-                                            padding: const EdgeInsets.symmetric(horizontal: 12),
+                                            padding: const EdgeInsets.symmetric(horizontal: 10),
                                             decoration: BoxDecoration(
                                               color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
                                               borderRadius: BorderRadius.circular(20),
                                             ),
                                             child: Row(
                                               children: const [
-                                                Icon(Icons.chat_bubble_outline_rounded, size: 15, color: Colors.grey),
-                                                SizedBox(width: 6),
+                                                Icon(Icons.chat_bubble_outline_rounded, size: 14, color: Colors.grey),
+                                                SizedBox(width: 4),
                                                 Text('Reply', style: TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w600)),
                                               ],
                                             ),
                                           ),
                                         ),
-                                        const SizedBox(width: 12),
+                                        const SizedBox(width: 8),
 
                                         Row(
                                           children: [
-                                            const Icon(Icons.remove_red_eye_outlined, size: 15, color: Colors.grey),
-                                            const SizedBox(width: 4),
-                                            Text('${item['views_count'] ?? 120}', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
+                                            const Icon(Icons.remove_red_eye_outlined, size: 14, color: Colors.grey),
+                                            const SizedBox(width: 3),
+                                            Text('${item['views_count'] ?? 120}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
                                           ],
                                         ),
                                         const Spacer(),
 
-                                        IconButton(
-                                          icon: const Icon(Icons.share_outlined, size: 18, color: Colors.grey),
-                                          onPressed: () {},
-                                          visualDensity: VisualDensity.compact,
+                                        // 🚩 Visible "Report Abuse" Button
+                                        InkWell(
+                                          onTap: () => _showReportDialog(
+                                            postId,
+                                            item['content'] ?? '',
+                                            creator['handle_id'] ?? item['creator_id'] ?? 'user',
+                                          ),
+                                          borderRadius: BorderRadius.circular(6),
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+                                            child: Row(
+                                              children: const [
+                                                Icon(Icons.flag_outlined, size: 14, color: Colors.redAccent),
+                                                SizedBox(width: 3),
+                                                Text('Report', style: TextStyle(fontSize: 11, color: Colors.redAccent, fontWeight: FontWeight.bold)),
+                                              ],
+                                            ),
+                                          ),
                                         ),
                                       ],
                                     ),
