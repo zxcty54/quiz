@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class CreatorMockBuilderScreen extends StatefulWidget {
@@ -126,6 +127,19 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     }
   }
 
+  void _deleteCurrentQuestion() {
+    if (_savedQuestions.isEmpty) return;
+    if (_currentQuestionIndex < _savedQuestions.length) {
+      _savedQuestions.removeAt(_currentQuestionIndex);
+    }
+    if (_savedQuestions.isEmpty) {
+      _addNewQuestionDraft();
+    } else {
+      int nextIdx = _currentQuestionIndex > 0 ? _currentQuestionIndex - 1 : 0;
+      _loadQuestionIntoForm(nextIdx);
+    }
+  }
+
   void _saveCurrentToMemory() {
     if (_qCtrl.text.trim().isEmpty) return;
 
@@ -210,16 +224,33 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
 
     setState(() => _isSaving = true);
     try {
-      await Supabase.instance.client.from('creator_mocks').insert({
+      final client = Supabase.instance.client;
+
+      // 1. Insert into creator_mocks and get back created row (with UUID id)
+      final mockResponse = await client.from('creator_mocks').insert({
         'creator_id': widget.creatorHandle,
         'title': _titleCtrl.text.trim(),
         'subject': _subjectCtrl.text.trim().isEmpty ? 'General Studies' : _subjectCtrl.text.trim(),
         'duration_mins': int.tryParse(_timeCtrl.text.trim()) ?? 10,
         'questions_json': _savedQuestions,
+      }).select().single();
+
+      final createdMockId = mockResponse['id'];
+
+      // 2. 🚀 Automatically create an announcement post in Community Feed
+      await client.from('community_posts').insert({
+        'creator_id': widget.creatorHandle,
+        'content': '⚡ New High-Yield Mock Drill Published: "${_titleCtrl.text.trim()}". Contains ${_savedQuestions.length} questions. Attempt now!',
+        'tag': 'Mock Tests ⚡',
+        'mock_id': createdMockId,
+        'views_count': 1,
       });
 
       if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('🎉 Test Published Successfully!')));
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          content: Text('🎉 Test & Community Announcement Published!'),
+          backgroundColor: Color(0xFF16A34A),
+        ));
         Navigator.pop(context);
       }
     } catch (e) {
@@ -240,6 +271,12 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
             icon: const Icon(Icons.paste_rounded, color: Colors.amber),
             tooltip: 'Paste Full Question',
           ),
+          if (_savedQuestions.isNotEmpty)
+            IconButton(
+              onPressed: _deleteCurrentQuestion,
+              icon: const Icon(Icons.delete_outline_rounded, color: Colors.redAccent),
+              tooltip: 'Delete this question',
+            ),
         ],
       ),
       body: SingleChildScrollView(
