@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
@@ -30,10 +31,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   Future<void> _fetchFeedPosts() async {
     setState(() => _isLoading = true);
     try {
+      // ⏳ 60 Days Retention Query Filter
+      final sixtyDaysAgo = DateTime.now().subtract(const Duration(days: 60)).toIso8601String();
+
       final res = await Supabase.instance.client
           .from('community_posts')
           .select('*, creator_profiles!inner(name, handle_id, subject_specialty, telegram_handle, followers_count, is_blocked), creator_mocks(*)')
           .eq('creator_profiles.is_blocked', false)
+          .gte('created_at', sixtyDaysAgo)
           .order('created_at', ascending: false);
 
       if (mounted) {
@@ -48,6 +53,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   }
 
   void _handleVote(int index, bool isUpvote) {
+    HapticFeedback.lightImpact();
     final post = _posts[index];
     final int postId = post['id'];
     int currentVote = _userVoteState[postId] ?? 0;
@@ -114,6 +120,117 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
+  void _openCommentsSheet(int postId, String postTitle) {
+    final commentCtrl = TextEditingController();
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setSheetState) => Padding(
+          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
+          child: SizedBox(
+            height: MediaQuery.of(ctx).size.height * 0.65,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('💬 Discussion & Replies', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                  ],
+                ),
+                const Divider(),
+                Expanded(
+                  child: FutureBuilder<List<Map<String, dynamic>>>(
+                    future: Supabase.instance.client
+                        .from('post_comments')
+                        .select()
+                        .eq('post_id', postId)
+                        .order('created_at', ascending: true),
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return const Center(child: CircularProgressIndicator());
+                      }
+                      final comments = snapshot.data ?? [];
+                      if (comments.isEmpty) {
+                        return const Center(child: Text('No comments yet. Start the discussion!'));
+                      }
+                      return ListView.builder(
+                        itemCount: comments.length,
+                        itemBuilder: (context, cIdx) {
+                          final c = comments[cIdx];
+                          final bool isReply = c['parent_comment_id'] != null;
+
+                          return Container(
+                            margin: EdgeInsets.only(left: isReply ? 28.0 : 0.0, bottom: 10),
+                            padding: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: isReply ? (widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFF1F5F9)) : Colors.transparent,
+                              borderRadius: BorderRadius.circular(8),
+                              border: isReply ? Border(left: BorderSide(color: Colors.blue.shade400, width: 3)) : null,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(c['user_name'] ?? 'Aspirant', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                                    const SizedBox(width: 6),
+                                    if (c['is_creator'] == true)
+                                      const Icon(Icons.verified, color: Colors.blue, size: 14),
+                                  ],
+                                ),
+                                const SizedBox(height: 4),
+                                Text(c['content'] ?? '', style: const TextStyle(fontSize: 13)),
+                              ],
+                            ),
+                          );
+                        },
+                      );
+                    },
+                  ),
+                ),
+                const Divider(),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        controller: commentCtrl,
+                        decoration: const InputDecoration(
+                          hintText: 'Add a helpful reply...',
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.send_rounded, color: Color(0xFF2563EB)),
+                      onPressed: () async {
+                        if (commentCtrl.text.trim().isEmpty) return;
+                        await Supabase.instance.client.from('post_comments').insert({
+                          'post_id': postId,
+                          'user_handle': 'user',
+                          'user_name': 'Aspirant',
+                          'content': commentCtrl.text.trim(),
+                        });
+                        commentCtrl.clear();
+                        setSheetState(() {});
+                      },
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   void _openCreatePostModal() {
     final contentCtrl = TextEditingController();
     String selectedTag = 'Exam Gossip 🔥';
@@ -157,7 +274,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                     if (contentCtrl.text.trim().isEmpty) return;
                     Navigator.pop(ctx);
                     await Supabase.instance.client.from('community_posts').insert({
-                      'creator_id': 'test', // Handle ID of active logged in creator
+                      'creator_id': 'test',
                       'content': contentCtrl.text.trim(),
                       'tag': selectedTag,
                       'views_count': 1,
@@ -203,7 +320,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       ),
       body: Column(
         children: [
-          // 🏷️ Filter Chips Bar (Twitter/Reddit Tab style)
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -222,7 +338,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
             ),
           ),
           const Divider(height: 1),
-
           Expanded(
             child: _isLoading
                 ? const Center(child: CircularProgressIndicator())
@@ -240,6 +355,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               final postId = item['id'];
                               final userVote = _userVoteState[postId] ?? 0;
                               final int score = (item['upvotes'] ?? 0) - (item['downvotes'] ?? 0);
+                              final String? imgUrl = item['image_url'];
 
                               return Card(
                                 margin: const EdgeInsets.only(bottom: 12),
@@ -251,7 +367,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      // 👤 Author Details + Followers + Tag
                                       Row(
                                         children: [
                                           GestureDetector(
@@ -312,15 +427,18 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                         ],
                                       ),
                                       const SizedBox(height: 10),
-
-                                      // 📝 Post Content (Twitter/Reddit Text)
                                       Text(
                                         item['content'] ?? '',
                                         style: const TextStyle(fontSize: 14, height: 1.4),
                                       ),
+                                      if (imgUrl != null && imgUrl.isNotEmpty) ...[
+                                        const SizedBox(height: 10),
+                                        ClipRRect(
+                                          borderRadius: BorderRadius.circular(8),
+                                          child: Image.network(imgUrl, fit: BoxFit.cover, width: double.infinity, height: 180),
+                                        ),
+                                      ],
                                       const SizedBox(height: 10),
-
-                                      // ⚡ Attached Mock Card (Agar mock test share kiya ho)
                                       if (attachedMock != null) ...[
                                         Container(
                                           padding: const EdgeInsets.all(12),
@@ -356,8 +474,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                         ),
                                         const SizedBox(height: 10),
                                       ],
-
-                                      // 🗳️ Bottom Actions: Reddit Upvote/Downvote + Views Seen
                                       Row(
                                         children: [
                                           Container(
@@ -371,7 +487,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                                   icon: Icon(
                                                     Icons.arrow_upward_rounded,
                                                     size: 18,
-                                                    color: userVote == 1 ? const Color(0xFFFF4500) : Colors.grey, // Reddit Orange
+                                                    color: userVote == 1 ? const Color(0xFFFF4500) : Colors.grey,
                                                   ),
                                                   onPressed: () => _handleVote(idx, true),
                                                   visualDensity: VisualDensity.compact,
@@ -390,7 +506,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                                   icon: Icon(
                                                     Icons.arrow_downward_rounded,
                                                     size: 18,
-                                                    color: userVote == -1 ? const Color(0xFF7193FF) : Colors.grey, // Reddit Periwinkle
+                                                    color: userVote == -1 ? const Color(0xFF7193FF) : Colors.grey,
                                                   ),
                                                   onPressed: () => _handleVote(idx, false),
                                                   visualDensity: VisualDensity.compact,
@@ -398,9 +514,23 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                               ],
                                             ),
                                           ),
-                                          const SizedBox(width: 14),
-
-                                          // 👁️ Views / Seen Count
+                                          const SizedBox(width: 10),
+                                          // 💬 Discussion Button
+                                          InkWell(
+                                            onTap: () => _openCommentsSheet(postId, item['content'] ?? ''),
+                                            borderRadius: BorderRadius.circular(16),
+                                            child: Padding(
+                                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                                              child: Row(
+                                                children: const [
+                                                  Icon(Icons.chat_bubble_outline_rounded, size: 16, color: Colors.grey),
+                                                  SizedBox(width: 4),
+                                                  Text('Reply', style: TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w600)),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                          const SizedBox(width: 10),
                                           Row(
                                             children: [
                                               const Icon(Icons.remove_red_eye_outlined, size: 15, color: Colors.grey),
@@ -409,8 +539,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                             ],
                                           ),
                                           const Spacer(),
-
-                                          // Share Icon
                                           IconButton(
                                             icon: const Icon(Icons.share_outlined, size: 18, color: Colors.grey),
                                             onPressed: () {},
