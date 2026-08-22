@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'screens/home_screen.dart';
 
 // 🌓 Poore App ke liye Global Theme Controller
@@ -7,7 +8,13 @@ final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.lig
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
+  // ⚡ Supabase Initialization
+  await Supabase.initialize(
+    url: 'https://YOUR_PROJECT_ID.supabase.co', // Supabase Settings -> API se URL dalein
+    anonKey: 'YOUR_ANON_PUBLIC_KEY',             // Supabase Settings -> API se anon public key dalein
+  );
+
   final prefs = await SharedPreferences.getInstance();
   final bool isDark = prefs.getBool('is_dark_mode') ?? false;
   globalThemeNotifier.value = isDark ? ThemeMode.dark : ThemeMode.light;
