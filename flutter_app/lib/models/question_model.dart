@@ -63,9 +63,9 @@ class Question {
     return explanation.trim().isNotEmpty ? explanation : "Explanation not available.";
   }
 
-  // 🛡️ COMPATIBILITY GETTERS
+  // 🛡️ COMPATIBILITY GETTERS (Null-safe Return Types)
   String get question => qe.isNotEmpty ? qe : (qh ?? '');
-  String get questionHindi => qh;
+  String? get questionHindi => qh;
   String get questionText => getText(false);
   int get answer => answerIndex;
   int get correctOptionIndex => answerIndex;
@@ -121,7 +121,7 @@ class Question {
     );
   }
 
-  // 💾 SERIALIZER: Question -> JSON (Fixes Build Failure)
+  // 💾 SERIALIZER: Question -> JSON
   Map<String, dynamic> toJson() {
     return {
       'qe': qe,
