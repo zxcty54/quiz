@@ -1,15 +1,15 @@
 class Question {
-  final String qe; // English Question Text
-  final String? qh; // Hindi Question Text
-  final List<String>? se; // Statements English
-  final List<String>? sh; // Statements Hindi
-  final List<String>? oe; // Options English
-  final List<String>? oh; // Options Hindi
-  final List<String> options; // Options List (Legacy / Default Fallback)
-  final int answerIndex; // Correct Answer Index (0-based)
-  final String explanation; // Explanation / Solution (Fallback)
-  final String? ee; // English Detailed Explanation
-  final String? eh; // Hindi Detailed Explanation
+  final String qe;
+  final String? qh;
+  final List<String>? se;
+  final List<String>? sh;
+  final List<String>? oe;
+  final List<String>? oh;
+  final List<String> options;
+  final int answerIndex;
+  final String explanation;
+  final String? ee;
+  final String? eh;
 
   Question({
     required this.qe,
@@ -25,7 +25,6 @@ class Question {
     this.eh,
   });
 
-  // 🎯 SMART TEXT GETTER (Handles Bilingual Question Text)
   String getText(bool isHindi) {
     if (isHindi) {
       if (qh != null && qh!.trim().isNotEmpty) return qh!;
@@ -37,7 +36,6 @@ class Question {
     return "Question text not available.";
   }
 
-  // 🌐 SMART OPTIONS GETTER (Handles Bilingual Options oe & oh)
   List<String> getOptions(bool isHindi) {
     if (isHindi) {
       if (oh != null && oh!.isNotEmpty) return oh!;
@@ -49,7 +47,7 @@ class Question {
     return options.isNotEmpty ? options : ["Option text not available."];
   }
 
-  // 💡 SMART EXPLANATION GETTER (Handles Direct 'e' and Bilingual 'ee'/'eh')
+  // 💡 FIXED GETTER: Prioritizes direct 'e' field when 'ee'/'eh' are empty
   String getExplanation(bool isHindi) {
     if (isHindi) {
       if (eh != null && eh!.trim().isNotEmpty) return eh!;
@@ -63,7 +61,6 @@ class Question {
     return explanation.trim().isNotEmpty ? explanation : "Explanation not available.";
   }
 
-  // 🛡️ COMPATIBILITY GETTERS (Null-safe Return Types)
   String get question => qe.isNotEmpty ? qe : (qh ?? '');
   String? get questionHindi => qh;
   String get questionText => getText(false);
@@ -71,7 +68,6 @@ class Question {
   int get correctOptionIndex => answerIndex;
   String? get subject => null;
 
-  // 🚀 DESERIALIZER: JSON -> Question
   factory Question.fromJson(Map<String, dynamic> json) {
     String mainQe = json['qe'] ?? json['q'] ?? json['question'] ?? '';
     String? mainQh = json['qh'] ?? json['question_hindi'];
@@ -102,6 +98,7 @@ class Question {
       ansIdx = json['answer'] is int ? json['answer'] : int.tryParse(json['answer'].toString()) ?? 0;
     }
 
+    // 🚀 Exact 'e' parameter priority
     String exp = json['e'] ?? json['explanation'] ?? '';
     String? expE = json['ee'];
     String? expH = json['eh'];
@@ -121,7 +118,6 @@ class Question {
     );
   }
 
-  // 💾 SERIALIZER: Question -> JSON
   Map<String, dynamic> toJson() {
     return {
       'qe': qe,
